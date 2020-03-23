@@ -4,7 +4,7 @@ seo-title: Doel van Google Ad Manager
 description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 seo-description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 translation-type: tm+mt
-source-git-commit: d42e4d60d273b08824e177f9aca0f208578ff099
+source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
 
 ---
 
@@ -46,10 +46,10 @@ Voordat u de bestemming Google Ad Manager maakt in Adobe Real-time CDP, moet u c
 ## Doel maken
 
 1. Selecteer in **[!UICONTROL Verbindingen > Doelen]** de optie Google Ad Manager en selecteer **[!UICONTROL Doel]**maken.
-   ![Doel van Google Ad Manager verbinden](/help/rtcdp/destinations/assets/google-ad-manager-destination.png)
+   ![Doel van Google Ad Manager verbinden](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. In de Create bestemmingstovenaar, vul de BasisInformatie voor de bestemming in.
-   ![Basisinformatie Google Ad Manager](/help/rtcdp/destinations/assets/google-ad-manager-basic-information.png)
+   ![Basisinformatie Google Ad Manager](/help/rtcdp/destinations/assets/google-1-basic-information.png)
 * **Naam**: Vul de voorkeursnaam voor dit doel in.
 * **Omschrijving**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
 * **Accounttype**: Selecteer een optie, afhankelijk van uw account bij Google:
