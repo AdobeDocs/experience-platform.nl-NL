@@ -15,11 +15,11 @@ source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
 
 ## Doelen en bronnen
 
-Één van de kernfuncties van CDP in real time neemt uw eerste-partijgegevens op en activeert het voor uw bedrijfsbehoeften. De **[!UICONTROL Bronnen]** van het gebruik om gegevens in real time CDP en **[!UICONTROL Doelen]** in te voeren om gegevens van CDP in real time uit te voeren.
+Één van de kernfuncties van CDP in real time neemt uw eerste-partijgegevens op en activeert het voor uw bedrijfsbehoeften. Gebruik **[!UICONTROL Sources]** **[!UICONTROL Destinations]** om gegevens in real time CDP in te voeren en gegevens van CDP in real time uit te voeren.
 
 ## Doelstappen
 
-* Gebruik **[!UICONTROL Doelen]** om profielen of segmenten te [activeren](/help/rtcdp/destinations/activate-destinations.md) en te verzenden naar marketingautomatiseringsplatforms, digitale advertentieplatforms en meer.
+* Gebruik deze optie **[!UICONTROL Destinations]** om profielen of segmenten te [activeren](/help/rtcdp/destinations/activate-destinations.md) en naar marketingautomatiseringsplatforms, digitale advertentieplatforms en meer te verzenden.
 * Kies uit een [zelfbedieningencatalogus](/help/rtcdp/destinations/destinations-catalog.md) van alle bestemmingen beschikbaar in Echt - tijd CDP.
 * De gegevens van het programma voeren regelmatig naar uw aangewezen bestemmingen uit.
 
@@ -53,6 +53,6 @@ De doelen in de catalogus [](/help/rtcdp/destinations/destinations-catalog.md) D
 
 ## Doelen en toegangscontroles
 
-De functionaliteit **[!UICONTROL Doelen]** in CDP in real time werkt met de toegangsbeheertoestemmingen van het Platform van de Ervaring van Adobe. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Zie [Toegangsbeheer in het Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) en blader omlaag naar de onderkant van de pagina voor informatie over de individuele machtigingen.
+De **[!UICONTROL Destinations]** functionaliteit in CDP in real time werkt met de toegangsbeheertoestemmingen van het Platform van de Ervaring van Adobe. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Zie [Toegangsbeheer in het Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) en blader omlaag naar de onderkant van de pagina voor informatie over de individuele machtigingen.
 
 Voor meer informatie over toegangscontroles, zie de handleiding [van de controlegebruiker van de](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md)Toegang.
