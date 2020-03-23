@@ -154,7 +154,7 @@ Bijvoorbeeld, om de gegevens van CRM van Luma in te voeren, filter de catalogus 
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   Selecteer bijvoorbeeld **[!UICONTROL Contactpersonen]**. Er wordt automatisch een voorvertoning van de contactgegevens geladen, zodat u zeker weet dat alles er naar behoren uitziet.
+   Selecteer bijvoorbeeld **[!UICONTROL Contacts]**. Er wordt automatisch een voorvertoning van de contactgegevens geladen, zodat u zeker weet dat alles er naar behoren uitziet.
 
    Het Adobe Experience-platform haalt veel handmatige werk uit dit proces door standaardvelden automatisch toe te wijzen aan het XDM-profielschema (Experience Data Model).
 
@@ -231,7 +231,7 @@ Omdat Sarah een geschenk in het winkelwagentje heeft toegevoegd en het heeft ver
 
 Als je het segment &quot;Gift Giving Cart Abandoner&quot; hebt toegevoegd, kun je ruwweg zien hoeveel mensen deel uitmaken van dit segment. U kunt actie ondernemen en het beschikbaar maken voor verpersoonlijking over kanalen.
 
-Klik op **[!UICONTROL Verzenden naar doelen]**.
+Klik op **[!UICONTROL Send to destinations]**.
 
 In Adobe Real-time CDP kan Luma naadloos op hun publiekssegmenten voor verpersoonlijking handelen.\
 Hier ziet u alle bestemmingen die beschikbaar zijn voor Luma om deze bestemming naar te sturen, zowel Adobe- als niet-Adobe-oplossingen:
@@ -255,7 +255,7 @@ U kunt het segment ook plannen om op een bepaald tijdstip te beginnen of te eind
 >[!NOTE]
 >Als u in het datumveld klikt, wordt deze automatisch 90 dagen gepland.
 
-Klik op **[!UICONTROL Opslaan]** om naar de volgende pagina te gaan.
+Klik **[!UICONTROL Save]** om naar de volgende pagina te gaan.
 
 Wanneer een klant in dit publiek een aankoop doet, wordt zijn lidmaatschap aan dit publiek onderdrukt in real time. Ze komen niet meer in aanmerking omdat hun status is gewijzigd.
 
