@@ -45,7 +45,7 @@ Voordat u de bestemming Google Ad Manager maakt in Adobe Real-time CDP, moet u c
 
 ## Doel maken
 
-1. Selecteer in **[!UICONTROL Verbindingen > Doelen]** de optie Google Ad Manager en selecteer **[!UICONTROL Doel]**maken.
+1. Selecteer in **[!UICONTROL Connections > Destinations]** Google Ad Manager en selecteer **[!UICONTROL Create destination]**.
    ![Doel van Google Ad Manager verbinden](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. In de Create bestemmingstovenaar, vul de BasisInformatie voor de bestemming in.
