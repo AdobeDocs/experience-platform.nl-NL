@@ -19,11 +19,11 @@ Als u segmentgegevens wilt verzenden naar Adobe Campaign, moet u eerst een [verb
 
 ## Connect-doel {#connect-destination}
 
-1. Selecteer Adobe Campagne in **[!UICONTROL Verbindingen > Doelen]** en selecteer **[!UICONTROL Connect-doel]**.
+1. Selecteer in **[!UICONTROL Connections > Destinations]** Adobe Campaign en selecteer vervolgens **[!UICONTROL Connect destination]**.
 
    ![Verbinding maken met Adobe-campagne](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. Selecteer in de wizard Connect-bestemming het type **[!UICONTROL Verbinding]** voor uw opslaglocatie. Voor Adobe-campagne kunt u kiezen tussen **Amazon S3**, **SFTP met wachtwoord** en **SFTP met SSH-sleutel**. Vul de informatie hieronder in, afhankelijk van het verbindingstype en selecteer vervolgens **[!UICONTROL Connect]**.
+1. Selecteer in de Connect-doelwizard de locatie **[!UICONTROL Connection type]** voor uw opslaglocatie. Voor Adobe-campagne kunt u kiezen tussen **Amazon S3**, **SFTP met wachtwoord** en **SFTP met SSH-sleutel**. Vul de informatie hieronder in, afhankelijk van het verbindingstype en selecteer vervolgens **[!UICONTROL Connect]**.
 
    ![Wizard Campagne instellen](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
@@ -50,4 +50,4 @@ Wanneer u segmenten [](/help/rtcdp/destinations/activate-destinations.md) active
 
 ## Gegevensimport instellen in Adobe-campagne {#import-data-into-campaign}
 
-Nadat u CDP in realtime hebt verbonden met uw Amazon S3- of SFTP-opslag, moet u de gegevensimport instellen vanaf uw opslaglocatie naar de Adobe-campagne. Zie Gegevens [](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) importeren in de documentatie bij de Help van Adobe Campagne voor meer informatie over hoe u dit kunt bereiken.
+Nadat u CDP in realtime hebt verbonden met uw Amazon S3- of SFTP-opslag, moet u de gegevensimport instellen vanaf uw opslaglocatie naar de Adobe-campagne. Zie Gegevens [importeren in de documentatie bij de Help van Adobe Campagne voor meer informatie over het uitvoeren van dit](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) proces.
