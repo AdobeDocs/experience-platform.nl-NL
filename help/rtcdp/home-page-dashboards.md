@@ -40,13 +40,13 @@ De extra metriek-bijvoorbeeld voor profielen en segmenten-zijn beschikbaar in an
 
 ### Gegevenssets
 
-De **[!UICONTROL teller van Datasets]** toont het aantal datasets in het systeem en de hoeveelheid gegevens in Platform. Deze teller wordt bijgewerkt wanneer een dataset wordt gecreeerd.
+De **[!UICONTROL Datasets]** teller toont het aantal datasets in het systeem en de hoeveelheid gegevens in Platform. Deze teller wordt bijgewerkt wanneer een dataset wordt gecreeerd.
 
 Voor meer informatie over datasets, zie de Gegevens van de [Samenvatting in het Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)van de Ervaring van Adobe.
 
 ### Profielen
 
-Het aantal **[!UICONTROL profielen]** geeft het totale aantal personen met profielen weer in het realtime profiel van de klant. Het bevat geen profielfragmenten. Dit is uw totaal adresseerbare publiek.
+De **[!UICONTROL Profiles]** telling toont het totale aantal mensen met profielen in het Profiel van de Klant in real time. Het bevat geen profielfragmenten. Dit is uw totaal adresseerbare publiek.
 
 Deze telling gebruikt het standaardsamenvoegbeleid [](profile/merge-policies.md) zoals die in de configuratie van het fusiebeleid in Verenigd Profiel wordt geplaatst.
 
@@ -56,13 +56,13 @@ Voor meer informatie over profielen, zie [een verenigde mening van uw klant in r
 
 ### Segmenten
 
-**[!UICONTROL De segmenten]** tonen het totale aantal segmenten die voor de organisatie worden gecreeerd. Dit aantal wordt bijgewerkt wanneer de nieuwe segmenten worden gecreeerd.
+**[!UICONTROL Segments]** toont het totale aantal segmenten die voor de organisatie worden gecreeerd. Dit aantal wordt bijgewerkt wanneer de nieuwe segmenten worden gecreeerd.
 
 Voor meer informatie over segmenten, zie het overzicht [van de Dienst van de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)Segmentatie.
 
 ### Doelen
 
-**[!UICONTROL De bestemmingen]** tonen het totale aantal bestemmingen die voor de organisatie worden gecreeerd. Dit aantal wordt bijgewerkt wanneer de nieuwe bestemmingen worden gecreeerd.
+**[!UICONTROL Destinations]** toont het totale aantal bestemmingen die voor de organisatie worden gecreeerd. Dit aantal wordt bijgewerkt wanneer de nieuwe bestemmingen worden gecreeerd.
 
 Voor meer informatie over bestemmingen, zie het overzicht [van](destinations/destinations-overview.md)Doelen.
 
@@ -102,32 +102,32 @@ The number of failed profile records is updated hourly. -->
 
 ### Recente gegevensbestanden
 
-De **[!UICONTROL Recente datasets]** kaart toont de vijf meest recente datasets die binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe dataset wordt gecreeerd.
+De **[!UICONTROL Recent datasets]** kaart toont de vijf meest recente datasets die binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe dataset wordt gecreeerd.
 
-Klik een dataset om de details voor dat punt te bekijken, of allen **[!UICONTROL te]** bekijken om de lijst van datasets te zien. Hier kunt u op een specifieke bron klikken voor meer informatie.
+Klik een dataset om de details voor dat punt te bekijken, of de lijst van datasets **[!UICONTROL View all]** te zien. Hier kunt u op een specifieke bron klikken voor meer informatie.
 
 Voor meer informatie over datasets, zie de Gegevens van de [Samenvatting in het Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)van de Ervaring van Adobe.
 
 ### Recente bronnen
 
-De **[!UICONTROL Recente bronnen]** metrische kaart toont de vijf meest recente die bronnen binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe bron wordt gemaakt.
+De **[!UICONTROL Recent sources]** metrische kaart toont de vijf meest recente die bronnen binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe bron wordt gemaakt.
 
-Klik een bron om de details voor dat punt te bekijken, of allen **[!UICONTROL te]** bekijken om de lijst van bronnen te zien. Hier kunt u op een specifieke bron klikken voor meer informatie.
+Klik op een bron om de details van dat item weer te geven of **[!UICONTROL View all]** om de lijst met bronnen weer te geven. Hier kunt u op een specifieke bron klikken voor meer informatie.
 
 Voor meer informatie over bronnen, zie [Bronoverzicht](sources/sources-overview.md).
 
 ### Recente segmenten
 
-De **[!UICONTROL Recente segmenten]** metrische kaart toont de vijf meest recente segmenten die binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuw segment wordt gecreeerd.
+De **[!UICONTROL Recent segments]** metrische kaart toont de vijf meest recente segmenten binnen de organisatie worden gecreeerd die. Deze lijst wordt bijgewerkt wanneer een nieuw segment wordt gecreeerd.
 
-Klik een segment om de details voor dat punt te bekijken, of allen **[!UICONTROL te]** bekijken om informatie over meer segmenten te zien.
+Klik een segment om de details voor dat punt te bekijken, of informatie over meer segmenten **[!UICONTROL View all]** te zien.
 
 Voor meer informatie over segmenten, zie het overzicht [van de Dienst van de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)Segmentatie.
 
 ### Recente bestemmingen
 
-De **[!UICONTROL Recente bestemmingen]** metrische kaart toont de vijf meest recente bestemmingen binnen de organisatie worden gecreeerd die. Deze lijst wordt bijgewerkt wanneer een nieuwe bestemming wordt gecreeerd.
+De **[!UICONTROL Recent destinations]** metrische kaart toont de vijf meest recente bestemmingen binnen de organisatie worden gecreeerd die. Deze lijst wordt bijgewerkt wanneer een nieuwe bestemming wordt gecreeerd.
 
-Klik een bestemming om de details voor dat punt te bekijken, of allen **[!UICONTROL te]** bekijken om informatie over meer bestemmingen te zien.
+Klik een bestemming om de details voor dat punt te bekijken, of informatie over meer bestemmingen **[!UICONTROL View all]** te zien.
 
 Voor meer informatie over bestemmingen, zie het overzicht [van](destinations/destinations-overview.md)Doelen.
