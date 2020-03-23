@@ -19,11 +19,11 @@ Als u gesegmenteerde gegevens naar Oracle Eloqua wilt verzenden, moet u eerst de
 
 ## Verbinden met doel {#connect-destination}
 
-1. Selecteer vervolgens Oracle Eloqua in **[!UICONTROL Verbindingen > Doelen]** en selecteer **[!UICONTROL Connect-doel]**.
+1. Selecteer in **[!UICONTROL Connections > Destinations]** Oracle Eloqua de optie **[!UICONTROL Connect destination]**.
 
    ![Verbinden met Eloqua](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-1. Selecteer in de wizard Connect-bestemming het type **[!UICONTROL Verbinding]** voor uw opslaglocatie. Voor Oracle Eloqua kunt u kiezen tussen **SFTP met wachtwoord** en **SFTP met SSH-sleutel**. Vul de informatie hieronder in, afhankelijk van het verbindingstype en selecteer **[!UICONTROL Connect]**.
+1. Selecteer in de Connect-doelwizard de locatie **[!UICONTROL Connection type]** voor uw opslaglocatie. Voor Oracle Eloqua kunt u kiezen tussen **SFTP met wachtwoord** en **SFTP met SSH-sleutel**. Vul de informatie hieronder in, afhankelijk van uw verbindingstype, en selecteer **[!UICONTROL Connect]**.
 
    ![De wizard Eloqua instellen](/help/rtcdp/destinations/assets/eloqua-wizard.png)
 
