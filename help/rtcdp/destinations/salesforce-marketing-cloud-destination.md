@@ -19,11 +19,11 @@ Als u segmentgegevens naar Salesforce Marketing Cloud wilt verzenden, moet u eer
 
 ## Connect-doel {#connect-destination}
 
-1. Selecteer in **[!UICONTROL Verbindingen > Doelen]** de optie Salesforce Marketing Cloud en selecteer vervolgens de **[!UICONTROL Connect-bestemming]**.
+1. Selecteer **[!UICONTROL Connections > Destinations]** Salesforce Marketing Cloud in en selecteer vervolgens **[!UICONTROL Connect destination]**.
 
    ![Verbinding maken met Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-1. Selecteer in de wizard Connect-bestemming het type **[!UICONTROL Verbinding]** voor uw opslaglocatie. Voor de Marketing Cloud van Salesforce, kunt u tussen **SFTP met Wachtwoord** en **SFTP met de Sleutel** van SSH selecteren. Vul de informatie hieronder in, afhankelijk van het verbindingstype en selecteer **[!UICONTROL Connect]**.
+1. Selecteer in de Connect-doelwizard de locatie **[!UICONTROL Connection type]** voor uw opslaglocatie. Voor de Marketing Cloud van Salesforce, kunt u tussen **SFTP met Wachtwoord** en **SFTP met de Sleutel** van SSH selecteren. Vul de informatie hieronder in, afhankelijk van uw verbindingstype, en selecteer **[!UICONTROL Connect]**.
 
    ![De wizard Salesforce instellen](/help/rtcdp/destinations/assets/salesforce-step1.png)
 
