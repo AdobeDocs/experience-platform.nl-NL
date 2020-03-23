@@ -43,7 +43,7 @@ Voordat u de bestemming Google Display &amp; Video 360 maakt in Adobe Real-time 
 
 ## Doel maken
 
-1. Selecteer Google Display &amp; Video 360 in **[!UICONTROL Verbindingen > Doelen]** en selecteer **[!UICONTROL Doel]**maken.
+1. Selecteer in **[!UICONTROL Connections > Destinations]** Google Display &amp; Video 360 en selecteer **[!UICONTROL Create destination]**.
    ![Connect Google Display en Video 360-doel](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. In de Create bestemmingstovenaar, vul de BasisInformatie voor de bestemming in.
