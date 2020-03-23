@@ -25,4 +25,4 @@ Extensies
 
 > [!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
-Kies Bewerken > [!UICONTROL Verwerkingsregels] om iets te doen. Gebruik [!DNL Microsoft Visual Code].
+Kies Bewerken > [!UICONTROL Processing Rules] om iets te doen. Gebruik [!DNL Microsoft Visual Code].
