@@ -38,7 +38,7 @@ Wij adviseren één van de attributen om een [uniek herkenningsteken](/help/rtcd
 Voer de onderstaande stappen uit om bestaande activeringsstromen in CDP in real time te bewerken:
 
 1. Selecteer **Doelen** in de linkernavigatiebar, klik dan de **Browse** tabel, en klik de bestemmingsnaam.
-2. Selecteer Activering **** bewerken in de rechtertrack om te wijzigen welke segmenten naar de bestemming moeten worden verzonden.
+2. Selecteer **[!UICONTROL Edit activation]** in de rechterspoorlijn om te veranderen welke segmenten naar de bestemming te verzenden.
 
 ## Controleren of segmentactivering is gelukt {#verify-activation}
 
@@ -66,6 +66,6 @@ Controleer de respectieve advertentiebestemming u uw gegevens aan activeert. Als
 Volg onderstaande stappen om een bestaande activeringsstroom uit te schakelen:
 
 1. Selecteer **Doelen** in de linkernavigatiebar, klik dan de **Browse** tabel, en klik de bestemmingsnaam.
-2. Klik op het besturingselement **[!UICONTROL Ingeschakeld]** in de rechterrail om de activeringsstatus te wijzigen.
+2. Klik op het **[!UICONTROL Enabled]** besturingselement in de rechterrail om de activeringsstatus te wijzigen.
 3. Selecteer in het statusvenster **Gegevens bijwerken de optie** Bevestigen **** om de activeringsstroom uit te schakelen.
 
