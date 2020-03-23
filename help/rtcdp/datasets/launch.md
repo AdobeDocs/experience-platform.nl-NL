@@ -31,7 +31,7 @@ Deze zelfstudie bevat de volgende stappen:
 
 Installeer eerst de extensie Adobe Experience Platform Web SDK.
 
-1. Open in Launch het tabblad **[!UICONTROL Extensies]** .
+1. Open het **[!UICONTROL Extensions]** tabblad in Launch.
 
    ![image](assets/launch-overview.png)
 
@@ -48,13 +48,13 @@ Installeer eerst de extensie Adobe Experience Platform Web SDK.
    * **Configuratie-id:** Geef de configuratie-id op die u van uw Adobe-vertegenwoordiger hebt gekregen.
    * **Randdomein:** Geef het Edge-domein op dat u van uw Adobe-vertegenwoordiger hebt gekregen.
 
-1. Klik op **[!UICONTROL Opslaan]** en ga verder met de volgende stap.
+1. Klik op de volgende stap **[!UICONTROL Save]** en ga door.
 
 ## Maak een regel om te bepalen welke gegevens moeten worden verzonden bij Starten
 
 Maak vervolgens een regel om aan te geven welke gegevens u naar het Adobe Experience Platform wilt verzenden en wanneer u deze wilt verzenden.
 
-1. Configureer op het tabblad **[!UICONTROL Regels]** een gebeurtenis die op elke nieuwe pagina van de website wordt geactiveerd wanneer de bibliotheek Starten wordt geladen.
+1. Configureer onder het **[!UICONTROL Rules]** tabblad een gebeurtenis die op elke nieuwe pagina van de website wordt geactiveerd wanneer de bibliotheek Starten wordt geladen.
 
    ![image](assets/launch-make-a-rule.png)
 
@@ -66,7 +66,7 @@ Maak vervolgens een regel om aan te geven welke gegevens u naar het Adobe Experi
 
    Het gegevensvoorwerp u verzendt moet geldige XDM zijn die bevestiging tegen het schema zal overgaan dat door de dataset wordt gebruikt die met uw identiteitskaart van de Configuratie wordt verbonden.
 
-1. Klik op Wijzigingen **[!UICONTROL behouden]**.
+1. Klik op **[!UICONTROL Keep Changes]**.
 
 Voor meer informatie, zie [Regels](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html) in de documentatie van de Lancering.
 
