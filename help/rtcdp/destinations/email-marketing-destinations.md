@@ -21,11 +21,11 @@ Maak in de Connect-doelstroom, zoals beschreven in de onderstaande sectie, verbi
 
 ## Stap 1 - Verbind bestemming {#connect-destination}
 
-1. Selecteer in **[!UICONTROL Verbindingen > Doelen]** de e-mailmarketingbestemming waarmee u verbinding wilt maken en selecteer vervolgens de **[!UICONTROL Connect-bestemming]**.
+1. Selecteer in **[!UICONTROL Connections > Destinations]** de marketingbestemming voor de e-mail waarmee u verbinding wilt maken en selecteer vervolgens **[!UICONTROL Connect destination]**.
 
    ![Verbinden met doel](/help/rtcdp/destinations/assets/connect-destination.png)
 
-2. Selecteer in de wizard Connect het type **[!UICONTROL Verbinding]** voor uw opslaglocatie. U kunt kiezen tussen **Amazon S3**, **SFTP met wachtwoord**, **SFTP met SSH-sleutel**. Vul de informatie hieronder in, afhankelijk van het verbindingstype en selecteer vervolgens **[!UICONTROL Connect]**.
+2. Selecteer in de wizard Connect de locatie **[!UICONTROL Connection type]** voor uw opslag. U kunt kiezen tussen **Amazon S3**, **SFTP met wachtwoord**, **SFTP met SSH-sleutel**. Vul de informatie hieronder in, afhankelijk van het verbindingstype en selecteer vervolgens **[!UICONTROL Connect]**.
 
 Voor **S3 verbindingen**, moet u uw Zeer belangrijke identiteitskaart van de Toegang en Geheime Sleutel van de Toegang verstrekken.
 
