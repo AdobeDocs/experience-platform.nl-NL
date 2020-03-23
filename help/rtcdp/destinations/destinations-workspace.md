@@ -19,7 +19,7 @@ De werkruimte Doelen bestaat uit vier secties, **Catalogus**, **doorbladeren**, 
 
 ## Catalogus {#catalog}
 
-Op het tabblad **[!UICONTROL Catalogus]** wordt een lijst weergegeven met alle door Adobe aangeboden doelen waarnaar u gegevens kunt verzenden. Selecteer een bestemming in de catalogus om de rechterrail te openen. Hier, kunt u opstelling een verbinding aan de bestemming (**Connect bestemming**) of meer gedetailleerde informatie over elke bestemming door de documentatie (de documentatie **van de** Mening) te bekijken.
+Op het **[!UICONTROL Catalog]** tabblad wordt een lijst weergegeven met alle door Adobe aangeboden doelen waarnaar u gegevens kunt verzenden. Selecteer een bestemming in de catalogus om de rechterrail te openen. Hier, kunt u opstelling een verbinding aan de bestemming (**Connect bestemming**) of meer gedetailleerde informatie over elke bestemming door de documentatie (de documentatie **van de** Mening) te bekijken.
 
 ![Opties voor doelcatalogus](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
 
@@ -27,7 +27,7 @@ Voor meer informatie over bestemmingscategorieën en informatie over elke bestem
 
 ## Bladeren {#browse}
 
-Op het tabblad **[!UICONTROL Bladeren]** worden de doelen weergegeven waarmee u een verbinding hebt gemaakt. Doelen met ingeschakelde schakeloptie ingeschakeld stellen de bestemming in op actief en andersom. U kunt de bestemmingen ook bekijken waar u gegevens door **Segmenten > te selecteren doorbladert** en een segment selecteert te inspecteren. Zie de lijst hieronder voor alle informatie die voor elke bestemming in het Browse lusje wordt verstrekt:
+Het **[!UICONTROL Browse]** lusje toont de bestemmingen waarmee u een verbinding hebt gevestigd. Doelen met ingeschakelde schakeloptie ingeschakeld stellen de bestemming in op actief en andersom. U kunt de bestemmingen ook bekijken waar u gegevens door **Segmenten > te selecteren doorbladert** en een segment selecteert te inspecteren. Zie de lijst hieronder voor alle informatie die voor elke bestemming in het Browse lusje wordt verstrekt:
 
 ![Tabblad Bladeren](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -45,11 +45,11 @@ Klik op een doelrij om meer informatie over de bestemming in de juiste spoorstaa
 
 ![Doelrij klikken](/help/rtcdp/destinations/assets/click-destination-row.png)
 
-Selecteer de doelnaam om informatie over de segmenten te zien die aan deze bestemming worden geactiveerd. Klik op Activering **** bewerken om de segmenten die naar dit doel worden verzonden, te wijzigen of aan te vullen.
+Selecteer de doelnaam om informatie over de segmenten te zien die aan deze bestemming worden geactiveerd. Klik **[!UICONTROL Edit activation]** om te wijzigen of aan de segmenten toe te voegen die naar deze bestemming worden verzonden.
 
 ## Accounts {#accounts}
 
-Op het tabblad **[!UICONTROL Accounts]** kunt u meer informatie krijgen over de verbindingen die u met verschillende doelen hebt gemaakt. Zie de tabel hieronder voor alle informatie die u op elke bestemming kunt krijgen:
+In het **[!UICONTROL Accounts]** lusje, kunt u meer over de verbindingen leren die u met diverse bestemmingen hebt gevestigd. Zie de tabel hieronder voor alle informatie die u op elke bestemming kunt krijgen:
 
 ![Het tabblad Accounts](/help/rtcdp/destinations/assets/accounts-tab.png)
 
@@ -62,10 +62,10 @@ Op het tabblad **[!UICONTROL Accounts]** kunt u meer informatie krijgen over de 
 
 ## Gegevensstromen {#data-flows}
 
-Op het tabblad **[!UICONTROL Gegevensstromen]** wordt een grafische weergave weergegeven van de activeringsstromen die u hebt ingesteld in het Real-Time Customer Data Platform.
+Op het **[!UICONTROL Data flows]** tabblad ziet u een grafische weergave van de activeringsstromen die u hebt ingesteld in het Real-time Customer Data Platform.
 
 ![Data-flows1](/help/rtcdp/destinations/assets/data-flows1.png)
 
-Selecteer om het even welke bestemmingen die op de pagina worden getoond en druk de stromen **[!UICONTROL van de]** Mening om informatie over alle gegevensstromen te zien u opstelling voor elke bestemming hebt.
+Selecteer om het even welke bestemmingen die op de pagina worden getoond en druk **[!UICONTROL View flows]** om informatie over alle gegevensstromen te zien u opstelling voor elke bestemming hebt.
 
 ![Data-flows2](/help/rtcdp/destinations/assets/data-flows2.png)
