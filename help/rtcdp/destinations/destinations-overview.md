@@ -4,12 +4,14 @@ seo-title: Overzicht van doelen
 description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Platform van de Gegevens van de Klant van Adobe in real time gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 seo-description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Platform van de Gegevens van de Klant van Adobe in real time gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 translation-type: tm+mt
-source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
+source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
 
 ---
 
 
 # Overzicht van doelen
+
+![Overzicht van doelen banner](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
 **Doelen** zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt **Doelen** gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
