@@ -4,7 +4,7 @@ seo-title: Workflow voor opslagdoelen voor cloud
 description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 seo-description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 translation-type: tm+mt
-source-git-commit: c4f1c0a6ef4d16e5fe763826016d56506fdca5dc
+source-git-commit: 60b10aa823af55d6f38651308dc93eeb57a7fee6
 
 ---
 
@@ -32,9 +32,7 @@ Voeg voor Amazon S3-doelen de **[!UICONTROL Bucket name]** en de **[!UICONTROL F
 
    ![Verbinding maken met Amazon S3-bestemming voor cloudopslag - verificatiestap](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
 
-
-
-   <br>Voor bestemmingen SFTP, neem het **[!UICONTROL Folder path]**
+   Voor bestemmingen SFTP, neem **[!UICONTROL Folder path]** waar de dossiers zullen worden geleverd.
 
    ![Verbinding maken met SFTP-cloudopslagbestemming - verificatiestap](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
