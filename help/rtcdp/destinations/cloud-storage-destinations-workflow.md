@@ -4,7 +4,7 @@ seo-title: Workflow voor opslagdoelen voor cloud
 description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 seo-description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 translation-type: tm+mt
-source-git-commit: 60b10aa823af55d6f38651308dc93eeb57a7fee6
+source-git-commit: 7f6151535f30043413a2c111345b7e2c6367fd50
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 60b10aa823af55d6f38651308dc93eeb57a7fee6
 
 Op deze pagina wordt uitgelegd hoe u verbinding kunt maken met cloudopslaglocaties in het Adobe Real-time Customer Data Platform.
 
-1. Selecteer **[!UICONTROL Connections > Destinations]** in de optie de voorkeursbestemming voor cloudopslag en selecteer **[!UICONTROL Connect destination]**.
+1. Selecteer **[!UICONTROL Connections > Destinations]** in uw voorkeurslocatie voor cloudopslag de optie **[!UICONTROL Connect destination]**.
 
    ![Verbinding maken met bestemming voor cloudopslag](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
