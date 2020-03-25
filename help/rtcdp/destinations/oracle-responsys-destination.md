@@ -4,7 +4,7 @@ seo-title: Oracle Responsys-bestemming
 description: Responsys is een marketingtool voor e-mailberichten voor marketingcampagnes over meerdere kanalen die door Oracle worden aangeboden om interacties via e-mail, mobiele apparaten, displays en sociale media aan te passen.
 seo-description: Responsys is een marketingtool voor e-mailberichten voor marketingcampagnes over meerdere kanalen die door Oracle worden aangeboden om interacties via e-mail, mobiele apparaten, displays en sociale media aan te passen.
 translation-type: tm+mt
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+source-git-commit: fe56fe71c36e06f2eeed45436cb36b5a371d0484
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) is een marketingtool voor e-mailmarketing voor bedrijven die via verschillende kanalen marketingcampagnes aanbieden die Oracle aanbiedt om interacties te personaliseren voor e-mail, mobiele apparaten, displays en sociale media.
 
-Om segmentgegevens naar Oracle Responsys te verzenden, moet u eerst de bestemming [in het Platform van de Gegevens van de Klant van Adobe in real time](#connect-destination) verbinden, en dan [opstelling een gegevensimport](#import-data-into-responsys) van uw opslagplaats in Oracle Responsys.
+Om segmentgegevens naar Oracle Responsys te verzenden, moet u eerst [verbinding maken met de bestemming](#connect-destination) in het platform van de Gegevens van de Klant van Adobe Real-time, en dan [opstelling een gegevensimport](#import-data-into-responsys) van uw opslagplaats in Oracle Responsys.
 
 ## Connect-doel {#connect-destination}
 
@@ -23,23 +23,21 @@ Om segmentgegevens naar Oracle Responsys te verzenden, moet u eerst de bestemmin
 
    ![Verbinden met Responssys](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
-1. Selecteer in de Connect-doelwizard de locatie **[!UICONTROL Connection type]** voor uw opslaglocatie. Voor Oracle Responsys, kunt u tussen **SFTP met Wachtwoord** en **SFTP met SSH Sleutel** selecteren. Vul de informatie hieronder in, afhankelijk van uw verbindingstype, en selecteer **[!UICONTROL Connect]**.
-
-   ![De wizard Responsys instellen](/help/rtcdp/destinations/assets/responsys-wizard.png)
+1. Als u in de stap **Verificatie** eerder een verbinding met de bestemming voor cloudopslag hebt ingesteld, selecteert **[!UICONTROL Existing Account]** en selecteert u de bestaande verbinding. U kunt ook selecteren **[!UICONTROL New Account]** om een nieuwe verbinding in te stellen. Vul de verificatiereferenties van uw account in en selecteer **[!UICONTROL Connect to destination]**. Voor Oracle Responsys, kunt u tussen **SFTP met Wachtwoord** en **SFTP met SSH Sleutel** selecteren. Vul de informatie hieronder in, afhankelijk van uw verbindingstype, en selecteer **[!UICONTROL Connect to destination]**.
 
    Voor **SFTP met de verbindingen van het Wachtwoord** , moet u Domein, Haven, Gebruikersnaam, en Wachtwoord verstrekken.
 Voor **SFTP met SSH Zeer belangrijke** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Sleutel van SSH verstrekken.
 
-   ![Gegevens van Responsys invullen](/help/rtcdp/destinations/assets/responsys-step2.png)
+   ![Gegevens van Responsys invullen](/help/rtcdp/destinations/assets/responsys-authentication.png)
 
-1. Vul in **Basisinformatie** de relevante informatie voor uw bestemming in, zoals hieronder wordt getoond:
+1. In de stap van de **Opstelling** , vul de relevante informatie voor uw bestemming zoals hieronder getoond in:
    * **Naam**: Kies een relevante naam voor de bestemming.
    * **Omschrijving**: Voer een beschrijving in voor uw bestemming.
    * **Pad naar** map: Geef het pad op in de opslaglocatie waar CDP in realtime uw exportgegevens als CSV- of tabgescheiden bestanden indient.
    * **Bestandsindeling**: **CSV** of **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
    ![Basisinformatie van Responsys](/help/rtcdp/destinations/assets/responsys-basic-information.png)
 
-1. Klik op **Maken** nadat u de velden in de **basisinformatie** hebt ingevuld. Uw bestemming is nu verbonden en u kunt segmenten [aan de bestemming](/help/rtcdp/destinations/activate-destinations.md) activeren.
+1. Klik op Doelen **** maken nadat u de bovenstaande velden hebt ingevuld. Uw bestemming is nu verbonden en u kunt segmenten [aan de bestemming](/help/rtcdp/destinations/activate-destinations.md) activeren.
 
 ## Doelkenmerken {#destination-attributes}
 
