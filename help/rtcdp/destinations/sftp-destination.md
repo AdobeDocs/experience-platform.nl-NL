@@ -4,7 +4,7 @@ seo-title: SFTP-bestemming
 description: Creeer een levende uitgaande verbinding aan uw server SFTP om afgebakende gegevensdossiers van het Platform van de Ervaring periodiek uit te voeren.
 seo-description: Creeer een levende uitgaande verbinding aan uw server SFTP om afgebakende gegevensdossiers van het Platform van de Ervaring periodiek uit te voeren.
 translation-type: tm+mt
-source-git-commit: f3c6c27b7ad07ada0df18aabe0e8503253b38342
+source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ---
 
@@ -23,7 +23,6 @@ Zie de workflow voor [Cloudopslagdoelen ](/help/rtcdp/destinations/cloud-storage
 
 Voor bestemmingen SFTP, ga de volgende informatie in creeer bestemmingswerkschema, in de stap van de **Authentificatie** in:
 
-* **Host**
-* **Gebruikersnaam**
-* **Wachtwoord**
-
+* **Host**: het adres van uw opslagplaats SFTP
+* **Gebruikersnaam**: de gebruikersnaam die moet worden gebruikt om u aan te melden bij uw SFTP-opslaglocatie
+* **Wachtwoord**: het wachtwoord om u aan te melden bij uw SFTP-opslaglocatie
