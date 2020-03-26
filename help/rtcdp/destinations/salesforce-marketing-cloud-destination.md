@@ -4,7 +4,7 @@ seo-title: Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud is een digitale marketingsuite die voorheen ExactTarget werd genoemd en waarmee u ritten kunt maken en aanpassen voor bezoekers en klanten om hun ervaring aan te passen.
 seo-description: Salesforce Marketing Cloud is een digitale marketingsuite die voorheen ExactTarget werd genoemd en waarmee u ritten kunt maken en aanpassen voor bezoekers en klanten om hun ervaring aan te passen.
 translation-type: tm+mt
-source-git-commit: afe8032be1d96a63a3d43c5a552a0d6152e14552
+source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ---
 
@@ -23,21 +23,21 @@ Als u segmentgegevens naar Salesforce Marketing Cloud wilt verzenden, moet u eer
 
    ![Verbinding maken met Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-1. Als u in de stap **Verificatie** eerder een verbinding met de bestemming voor cloudopslag hebt ingesteld, selecteert **[!UICONTROL Existing Account]** en selecteert u de bestaande verbinding. U kunt ook selecteren **[!UICONTROL New Account]** om een nieuwe verbinding in te stellen. Vul de verificatiereferenties van uw account in en selecteer **[!UICONTROL Connect to destination]**. Voor de Marketing Cloud van Salesforce, kunt u tussen **SFTP met Wachtwoord** en **SFTP met de Sleutel** van SSH selecteren. Vul de informatie hieronder in, afhankelijk van uw verbindingstype, en selecteer **[!UICONTROL Connect to destination]**.
+2. Als u in de stap **Verificatie** eerder een verbinding met uw bestemming voor cloudopslag hebt ingesteld, selecteert **[!UICONTROL Existing Account]** en selecteert u een van uw bestaande verbindingen. U kunt ook selecteren **[!UICONTROL New Account]** om een nieuwe verbinding in te stellen. Vul de verificatiereferenties van uw account in en selecteer **[!UICONTROL Connect to destination]**. Voor de Marketing Cloud van Salesforce, kunt u tussen **SFTP met Wachtwoord** en **SFTP met de Sleutel** van SSH selecteren. Vul de informatie hieronder in, afhankelijk van uw verbindingstype, en selecteer **[!UICONTROL Connect to destination]**.
 
    Voor **SFTP met de verbindingen van het Wachtwoord** , moet u Domein, Haven, Gebruikersnaam, en Wachtwoord verstrekken.
 Voor **SFTP met SSH Zeer belangrijke** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Sleutel van SSH verstrekken.
 
    ![Salesforce-informatie invullen](/help/rtcdp/destinations/assets/salesforce-authenticate.png)
 
-1. In de stap van de **Opstelling** , vul de relevante informatie voor uw bestemming zoals hieronder getoond in:
+3. In de stap van de **Opstelling** , vul de relevante informatie voor uw bestemming zoals hieronder getoond in:
    * **Naam**: Kies een relevante naam voor de bestemming.
    * **Omschrijving**: Voer een beschrijving in voor uw bestemming.
    * **Pad naar** map: Geef het pad op in de opslaglocatie waar CDP in realtime uw exportgegevens als CSV- of tabgescheiden bestanden indient.
    * **Bestandsindeling**: **CSV** of **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
    ![Basisinformatie over Salesforce](/help/rtcdp/destinations/assets/salesforce-basic-information.png)
 
-1. Klik op Doel **** maken nadat u de velden in **Basisinformatie** hebt ingevuld. Uw bestemming is nu verbonden en u kunt segmenten [aan de bestemming](/help/rtcdp/destinations/activate-destinations.md) activeren.
+4. Klik op Doel **** maken nadat u de bovenstaande velden hebt ingevuld. Uw bestemming is nu verbonden en u kunt segmenten [aan de bestemming](/help/rtcdp/destinations/activate-destinations.md) activeren.
 
 ## Doelkenmerken {#destination-attributes}
 
