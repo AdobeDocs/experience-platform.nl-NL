@@ -4,7 +4,7 @@ seo-title: Bestemming voor Google-advertenties
 description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 seo-description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 translation-type: tm+mt
-source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -51,12 +51,12 @@ Voordat u de Google Ads-bestemming maakt in Adobe Real-time CDP, moet u contact 
 1. Selecteer in **[!UICONTROL Connections > Destinations]** Google Ads en selecteer **[!UICONTROL Create destination]**.
    ![Google Ads-doel verbinden](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. In de Create bestemmingstovenaar, vul de BasisInformatie voor de bestemming in.
+2. Vul in de doelworkflow Maken het [!UICONTROL Basic Information] formulier voor het doel in.
    ![Basisinformatie over Google Ads](/help/rtcdp/destinations/assets/google-2-basic-information.png)
-* **Naam**: Vul de voorkeursnaam voor dit doel in.
-* **Omschrijving**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
-* **Accounttype**: De enige beschikbare optie is AdvertentieWoorden.
-* **Account-id**: Vul je account-id in met Google Ads. De id-indeling heeft doorgaans de notatie 123-456-7890.
+* **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
+* **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
+* **[!UICONTROL Account Type]**: De enige beschikbare optie is AdvertentieWoorden.
+* **[!UICONTROL Account ID]**: Vul je account-id in met Google Ads. De id-indeling heeft doorgaans de notatie 123-456-7890.
 
 ## Segmenten activeren op Google Ads
 
