@@ -4,7 +4,7 @@ seo-title: Adobe-campagne
 description: De Campagne van Adobe is een reeks oplossingen die u helpen campagnes over al uw online en off-line kanalen personaliseren en leveren.
 seo-description: De Campagne van Adobe is een reeks oplossingen die u helpen campagnes over al uw online en off-line kanalen personaliseren en leveren.
 translation-type: tm+mt
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -23,25 +23,25 @@ Als u segmentgegevens wilt verzenden naar Adobe Campaign, moet u eerst een [verb
 
    ![Verbinding maken met Adobe-campagne](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. Selecteer in de Connect-doelwizard de locatie **[!UICONTROL Connection type]** voor uw opslaglocatie. Voor Adobe-campagne kunt u kiezen tussen **Amazon S3**, **SFTP met wachtwoord** en **SFTP met SSH-sleutel**. Vul de informatie hieronder in, afhankelijk van het verbindingstype en selecteer vervolgens **[!UICONTROL Connect]**.
+1. Selecteer in de Connect-doelworkflow de locatie **[!UICONTROL Connection type]** voor uw opslaglocatie. Voor Adobe-campagne kunt u kiezen tussen **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]** en **[!UICONTROL SFTP with SSH Key]**. Vul de informatie hieronder in, afhankelijk van het verbindingstype en selecteer vervolgens **[!UICONTROL Connect]**.
 
    ![Wizard Campagne instellen](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
-   Voor **S3** verbindingen, moet u uw Zeer belangrijke identiteitskaart van de Toegang en Geheime Sleutel van de Toegang verstrekken.
-Voor **SFTP met de verbindingen van het Wachtwoord** , moet u Domein, Haven, Gebruikersnaam, en Wachtwoord verstrekken.
-Voor **SFTP met SSH Zeer belangrijke** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Sleutel van SSH verstrekken.
+   Voor **[!UICONTROL Amazon S3]** verbindingen, moet u uw Zeer belangrijke identiteitskaart van de Toegang en Geheime Sleutel van de Toegang verstrekken.
+Voor **[!UICONTROL SFTP with Password]** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Wachtwoord verstrekken.
+Voor **[!UICONTROL SFTP with SSH Key]** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Sleutel SSH verstrekken.
 
    ![Campagnegegevens invullen](/help/rtcdp/destinations/assets/adobe-campaign-step2.png)
 
-1. Vul in **Basisinformatie** de relevante informatie voor uw bestemming in, zoals hieronder wordt getoond:
-   * **Naam**: Kies een relevante naam voor de bestemming.
-   * **Omschrijving**: Voer een beschrijving in voor uw bestemming.
-   * **Naam** emmertje: *Voor S3-verbindingen*. Ga de plaats van uw S3 emmer in waar CDP in real time uw uitvoergegevens als CSV of lusje-afgebakende dossiers zal neerleggen.
-   * **Pad naar** map: Geef het pad op in de opslaglocatie waar CDP in realtime uw exportgegevens als CSV- of tabgescheiden bestanden indient.
-   * **Bestandsindeling**: **CSV** of **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
+1. Vul in **[!UICONTROL Basic Information]**, zoals hieronder wordt getoond, de relevante informatie voor uw bestemming in:
+   * **[!UICONTROL Name]**: Kies een relevante naam voor de bestemming.
+   * **[!UICONTROL Description]**: Voer een beschrijving in voor uw bestemming.
+   * **[!UICONTROL Bucket Name]**: *Voor S3-verbindingen*. Ga de plaats van uw S3 emmer in waar CDP in real time uw uitvoergegevens als CSV of lusje-afgebakende dossiers zal neerleggen.
+   * **[!UICONTROL Folder Path]**: Geef het pad op in de opslaglocatie waar CDP in realtime uw exportgegevens als CSV- of tabgescheiden bestanden indient.
+   * **[!UICONTROL File Format]**: **CSV** of **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
    ![Basisinformatie over campagnes](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
 
-1. Klik op **Maken** nadat u de velden in de **basisinformatie** hebt ingevuld. Uw bestemming is nu verbonden en u kunt segmenten [aan de bestemming](/help/rtcdp/destinations/activate-destinations.md) activeren.
+1. Klik **[!UICONTROL Create]** nadat u de bovenstaande velden hebt ingevuld. Uw bestemming is nu verbonden en u kunt segmenten [aan de bestemming](/help/rtcdp/destinations/activate-destinations.md) activeren.
 
 ## Doelkenmerken {#destination-attributes}
 
