@@ -4,7 +4,7 @@ seo-title: Workflow voor opslagdoelen voor cloud
 description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 seo-description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 translation-type: tm+mt
-source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -19,7 +19,7 @@ Op deze pagina wordt uitgelegd hoe u verbinding kunt maken met cloudopslaglocati
 
    ![Verbinding maken met bestemming voor cloudopslag](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. Als u in de stap **Verificatie** eerder een verbinding met de bestemming voor cloudopslag hebt ingesteld, selecteert **[!UICONTROL Existing Account]** en selecteert u de bestaande verbinding. U kunt ook een nieuwe verbinding met de opslaglocatie van de cloud instellen **[!UICONTROL New Account]** . Vul de verificatiereferenties van uw account in en selecteer **[!UICONTROL Connect to destination]**. Zie de bestemming [van](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 en de bestemming [van](/help/rtcdp/destinations/sftp-destination.md) SFTP voor details rond geloofsbrieven input in de stap van de **Authentificatie** .
+2. Als u in de **[!UICONTROL Authentication]** stap eerder een verbinding met de bestemming voor cloudopslag hebt ingesteld, selecteert **[!UICONTROL Existing Account]** u de bestaande verbinding en selecteert u deze. U kunt ook een nieuwe verbinding met de opslaglocatie van de cloud instellen **[!UICONTROL New Account]** . Vul de verificatiereferenties van uw account in en selecteer **[!UICONTROL Connect to destination]**. Zie de bestemming [van](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 en de bestemming [van](/help/rtcdp/destinations/sftp-destination.md) SFTP voor details rond geloofsbrieven input in de stap van de **Authentificatie** .
 
    >[!NOTE]
    >
