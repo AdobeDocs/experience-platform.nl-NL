@@ -4,7 +4,7 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens die u in het Platform van de Gegevens van de Klant van Adobe in real time hebt door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens die u in het Platform van de Gegevens van de Klant van Adobe in real time hebt door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: 73925aa59f9981d8945fb0be6c4924e1831cf902
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -19,17 +19,17 @@ Om gegevens aan bestemmingen te activeren, moet u een bestemming [met succes heb
 
 ## Gegevens activeren {#activate-data}
 
-1. Kies in **Doelen > Bladeren** de bestemming waar u de segmenten wilt activeren.
+1. Selecteer **[!UICONTROL Destinations > Browse]** in de bestemming waar u de segmenten wilt activeren.
 2. Klik op de naam van het doel. Hiermee gaat u naar de flow Activeren.
-   ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)Merk op dat als een activeringsstroom reeds voor een bestemming bestaat, u de segmenten kunt zien die momenteel naar de bestemming worden verzonden. Selecteer Activering **** bewerken in de rechtertrack en voer de onderstaande stappen uit om de activeringsdetails te wijzigen.
-3. Selecteer **Activeren**;
-4. In **activeer bestemmingstovenaar** , op de **Uitgezochte pagina van Segmenten** , selecteer welke segmenten om naar de bestemming te verzenden.
+   ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)Merk op dat als een activeringsstroom reeds voor een bestemming bestaat, u de segmenten kunt zien die momenteel naar de bestemming worden verzonden. Selecteer **[!UICONTROL Edit activation]** in het rechterspoor en volg de onderstaande stappen om de activeringsdetails te wijzigen.
+3. Selecteren **[!UICONTROL Activate]**;
+4. Selecteer in de **[!UICONTROL Activate destination]** workflow op de **[!UICONTROL Select Segments]** pagina welke segmenten naar de bestemming moeten worden verzonden.
    ![segmenten-naar-bestemming](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Voorwaardelijk*. Deze stap is slechts voor segmenten van toepassing die aan e-mail marketing bestemmingen in kaart worden gebracht. <br> Selecteer op de pagina **Doelkenmerken** de optie Nieuw veld **** toevoegen en selecteer de kenmerken die u naar het doel wilt verzenden.
+5. *Voorwaardelijk*. Deze stap is slechts voor segmenten van toepassing die aan e-mail marketing bestemmingen in kaart worden gebracht. <br> Selecteer op de **[!UICONTROL Destination Attributes]** pagina de kenmerken die u naar het doel wilt verzenden **[!UICONTROL Add new field]** en selecteer deze.
 Wij adviseren één van de attributen om een [uniek herkenningsteken](/help/rtcdp/destinations/email-marketing-destinations.md#identity) van uw unieschema te zijn. Zie Identiteit in het artikel [E-mailmarketingdoelen](/help/rtcdp/destinations/email-marketing-destinations.md#identity) voor meer informatie over verplichte kenmerken.
    ![bestemmingskenmerken](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. Op de pagina van het **Programma** , kunt u de begindatum zien voor het verzenden van gegevens naar de bestemming, evenals de frequentie om gegevens naar de bestemming te verzenden.
-7. Op de pagina **Revisie** ziet u een overzicht van uw selectie. Selecteer **Annuleren** om de stroom te verbreken, **Terug** om uw instellingen te wijzigen of **Voltooien** om uw selectie te bevestigen en gegevens naar de bestemming te verzenden.
+6. Op de **[!UICONTROL Schedule]** pagina, kunt u de begindatum zien voor het verzenden van gegevens naar de bestemming, evenals de frequentie om gegevens naar de bestemming te verzenden.
+7. Op de **[!UICONTROL Review]** pagina ziet u een overzicht van uw selectie. Selecteer **[!UICONTROL Cancel]** om de stroom te verbreken, **[!UICONTROL Back]** **[!UICONTROL Finish]** om uw montages te wijzigen, of uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
 
 ![selectie bevestigen](/help/rtcdp/destinations/assets/confirm-selection.png)
 
@@ -37,7 +37,7 @@ Wij adviseren één van de attributen om een [uniek herkenningsteken](/help/rtcd
 
 Voer de onderstaande stappen uit om bestaande activeringsstromen in CDP in real time te bewerken:
 
-1. Selecteer **Doelen** in de linkernavigatiebar, klik dan de **Browse** tabel, en klik de bestemmingsnaam.
+1. Selecteer **[!UICONTROL Destinations]** in de linkernavigatiebalk, klik op het **[!UICONTROL Browse]** tabblad en klik op de doelnaam.
 2. Selecteer **[!UICONTROL Edit activation]** in de rechterspoorlijn om te veranderen welke segmenten naar de bestemming te verzenden.
 
 ## Controleren of segmentactivering is gelukt {#verify-activation}
@@ -65,7 +65,7 @@ Controleer de respectieve advertentiebestemming u uw gegevens aan activeert. Als
 
 Volg onderstaande stappen om een bestaande activeringsstroom uit te schakelen:
 
-1. Selecteer **Doelen** in de linkernavigatiebar, klik dan de **Browse** tabel, en klik de bestemmingsnaam.
+1. Selecteer **[!UICONTROL Destinations]** in de linkernavigatiebalk, klik op het **[!UICONTROL Browse]** tabblad en klik op de doelnaam.
 2. Klik op het **[!UICONTROL Enabled]** besturingselement in de rechterrail om de activeringsstatus te wijzigen.
 3. Selecteer in het statusvenster **Gegevens bijwerken de optie** Bevestigen **** om de activeringsstroom uit te schakelen.
 
