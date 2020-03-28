@@ -4,7 +4,7 @@ seo-title: Bestemming Google Display en Video 360
 description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
 seo-description: 'Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten. '
 translation-type: tm+mt
-source-git-commit: 810028edc662a7f52484e37cf0fbdfafe5db650f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -46,14 +46,14 @@ Voordat u de bestemming Google Display &amp; Video 360 maakt in Adobe Real-time 
 1. Selecteer in **[!UICONTROL Connections > Destinations]** Google Display &amp; Video 360 en selecteer **[!UICONTROL Create destination]**.
    ![Connect Google Display en Video 360-doel](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. In de Create bestemmingstovenaar, vul de BasisInformatie voor de bestemming in.
+2. Vul in de doelworkflow Maken het [!UICONTROL Basic Information] formulier voor het doel in.
    ![Basisinformatie over Google Display en Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
-* **Naam**: Vul de voorkeursnaam voor dit doel in.
-* **Omschrijving**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
-* **Accounttype**: Selecteer een optie, afhankelijk van uw account bij Google:
+* **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
+* **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
+* **[!UICONTROL Account Type]**: Selecteer een optie, afhankelijk van uw account bij Google:
    * Gebruik deze optie `Invite Advertiser` om het publiek alleen naar een specifiek merk in uw Display &amp; Video 360-account te laten delen.
    * Gebruik deze optie `Invite Partner` om het publiek te laten delen naar alle merken in uw Display &amp; Video 360-account.
-* **Account-id**: Vul uw **[!DNL Invite partner]** of **[!DNL Invite advertiser]** account-id in met Google. Dit is doorgaans een ID van zes of zeven cijfers.
+* **[!UICONTROL Account ID]**: Vul uw **[!DNL Invite partner]** of **[!DNL Invite advertiser]** account-id in met Google. Dit is doorgaans een ID van zes of zeven cijfers.
 
 >[!NOTE]
 >
