@@ -4,7 +4,7 @@ seo-title: Doel van Google Ad Manager
 description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 seo-description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 translation-type: tm+mt
-source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -48,14 +48,14 @@ Voordat u de bestemming Google Ad Manager maakt in Adobe Real-time CDP, moet u c
 1. Selecteer in **[!UICONTROL Connections > Destinations]** Google Ad Manager en selecteer **[!UICONTROL Create destination]**.
    ![Doel van Google Ad Manager verbinden](/help/rtcdp/destinations/assets/google-1-destination.png)
 
-2. In de Create bestemmingstovenaar, vul de BasisInformatie voor de bestemming in.
+2. Vul in de doelworkflow Maken het [!UICONTROL Basic Information] formulier voor het doel in.
    ![Basisinformatie Google Ad Manager](/help/rtcdp/destinations/assets/google-1-basic-information.png)
-* **Naam**: Vul de voorkeursnaam voor dit doel in.
-* **Omschrijving**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
-* **Accounttype**: Selecteer een optie, afhankelijk van uw account bij Google:
+* **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
+* **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
+* **[!UICONTROL Account Type]**: Selecteer een optie, afhankelijk van uw account bij Google:
    * Gebruiken `DFP by Google` voor DoubleClick voor uitgevers
    * Gebruiken `AdX buyer` voor Google AdX
-* **Account-id**: Vul uw account-id in met Google. Dit kan uw identiteitskaart van het Netwerk of uw identiteitskaart van de Verbinding van het publiek zijn. Dit is doorgaans een id van acht cijfers.
+* **[!UICONTROL Account ID]**: Vul uw account-id in met Google. Dit kan uw identiteitskaart van het Netwerk of uw identiteitskaart van de Verbinding van het publiek zijn. Dit is doorgaans een id van acht cijfers.
 
 >[!NOTE]
 >
