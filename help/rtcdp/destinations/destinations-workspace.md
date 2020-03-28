@@ -4,46 +4,46 @@ seo-title: Werkruimte Doelen
 description: In het Platform van de Gegevens van de Klant van Adobe In real time, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 seo-description: In het Platform van de Gegevens van de Klant van Adobe In real time, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 translation-type: tm+mt
-source-git-commit: e87ddff936da88b1b2b3cf71c2d6c24ed28b39ab
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
 
 # Werkruimte Doelen {#destinations-workspace}
 
-Selecteer in Adobe Real-time Customer Data Platform de optie **Doelen** in de linkernavigatiebalk voor toegang tot de werkruimte Doelen.
+Selecteer in Adobe Real-time Customer Data Platform **[!UICONTROL Destinations]** op de linkernavigatiebalk voor toegang tot de [!UICONTROL Destinations] werkruimte.
 
-De werkruimte Doelen bestaat uit vier secties, **Catalogus**, **doorbladeren**, **Rekeningen**, en **de Mening** van het Systeem, die in de hieronder secties worden beschreven.
+De [!UICONTROL Destinations] werkruimte bestaat uit vier secties, **[!UICONTROL Catalog]**, **[!UICONTROL Browse]**, **[!UICONTROL Accounts]**, en **[!UICONTROL System View]**, die in de hieronder secties worden beschreven.
 
 ![Overzicht van bestemmingen](/help/rtcdp/destinations/assets/destinations-overview.png)
 
-## Catalogus {#catalog}
+## [!UICONTROL Catalog] {#catalog}
 
 Op het **[!UICONTROL Catalog]** tabblad wordt een lijst weergegeven met alle door Adobe aangeboden doelen waarnaar u gegevens kunt verzenden.
 
 Gebruik de onderzoeksfunctionaliteit op de pagina om van een specifieke bestemming of filterbestemmingen de plaats te bepalen gebruikend de **[!UICONTROL Categories]** controle.
 
-Selecteer een bestemming in de catalogus om de rechterrail te openen. Hier, kunt u opstelling een verbinding aan de bestemming (**verbind bestemming**), bestaande bestemmingsverbindingen (**doorbladert bestemmingen**) bekijken of meer gedetailleerde informatie over elke bestemming leren door de documentatie (de documentatie **van de** Mening) te bekijken.
+Selecteer een bestemming in de catalogus om de rechterrail te openen. Hier, kunt u opstelling een verbinding aan de bestemming (**[!UICONTROL Connect destination]**), bestaande bestemmingsverbindingen (**[!UICONTROL Browse destinations]**) bekijken of meer gedetailleerde informatie over elke bestemming leren door de documentatie (**[!UICONTROL View documentation]**) te bekijken.
 
 ![Opties voor doelcatalogus](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
 
 Voor meer informatie over bestemmingscategorieën en informatie over elke bestemming, zie de Catalogus [van de](/help/rtcdp/destinations/destinations-catalog.md)Bestemming.
 
-## Bladeren {#browse}
+## [!UICONTROL Browse] {#browse}
 
-Het **[!UICONTROL Browse]** lusje toont de bestemmingen waarmee u een verbinding hebt gevestigd. Doelen waarvoor de **ingeschakelde** schakeloptie is ingeschakeld, stellen de bestemming in op actief en andersom. U kunt de bestemmingen ook bekijken waar u gegevens door **Segmenten > te selecteren doorbladert** en een segment selecteert te inspecteren. Zie de lijst hieronder voor alle informatie die voor elke bestemming in het Browse lusje wordt verstrekt:
+Het **[!UICONTROL Browse]** lusje toont de bestemmingen waarmee u een verbinding hebt gevestigd. Doelen waarvoor de **[!UICONTROL enabled]** schakeloptie is ingeschakeld, stellen de bestemming in op actief en andersom. U kunt de bestemmingen ook bekijken waar u gegevens hebt die door een segment te selecteren **[!UICONTROL Segments > Browse]** en te selecteren stromen. Zie de lijst hieronder voor alle informatie die voor elke bestemming in het Browse lusje wordt verstrekt:
 
 ![Tabblad Bladeren](/help/rtcdp/destinations/assets/browse-tab.png)
 
 | Element | Beschrijving |
 ---------|----------
 | Naam | De naam die u hebt opgegeven voor de activeringsstroom naar dit doel. |
-| Doel | Het doelplatform dat u hebt geselecteerd voor de activeringsstroom. |
-| Verbindingstype | Vertegenwoordigt het verbindingstype aan uw opslagemmer of bestemming. <ul><li>Voor e-mailmarketingdoelen: Kan S3 of FTP zijn.</li><li>Voor realtime advertentiebestemmingen: Server-naar-server</li></ul> |
-| Gebruikersnaam | De accountgegevens die u hebt geselecteerd voor de doelstroom. |
-| Segmenten | Het aantal segmenten dat aan deze bestemming wordt geactiveerd. |
-| Gemaakt | De datum en UTC-tijd waarop de activeringsstroom naar het doel is gemaakt. |
-| Status | `Active` of `Inactive`. Geeft aan of er momenteel gegevens op dit doel worden geactiveerd. Zie [Activering](/help/rtcdp/destinations/activate-destinations.md#disable-activation)uitschakelen om de status te bewerken. |
+| [!UICONTROL Destination] | Het doelplatform dat u hebt geselecteerd voor de activeringsstroom. |
+| [!UICONTROL Connection Type] | Vertegenwoordigt het verbindingstype aan uw opslagemmer of bestemming. <ul><li>Voor e-mailmarketingdoelen: Kan S3 of FTP zijn.</li><li>Voor realtime advertentiebestemmingen: Server-naar-server</li></ul> |
+| [!UICONTROL Username] | De accountgegevens die u hebt geselecteerd voor de doelstroom. |
+| [!UICONTROL Segments] | Het aantal segmenten dat aan deze bestemming wordt geactiveerd. |
+| [!UICONTROL Created] | De datum en UTC-tijd waarop de activeringsstroom naar het doel is gemaakt. |
+| [!UICONTROL Status] | `Active` of `Inactive`. Geeft aan of er momenteel gegevens op dit doel worden geactiveerd. Zie [Activering](/help/rtcdp/destinations/activate-destinations.md#disable-activation)uitschakelen om de status te bewerken. |
 
 Klik op een doelrij om meer informatie over de bestemming in de juiste spoorstaaf te tonen.
 
@@ -51,7 +51,7 @@ Klik op een doelrij om meer informatie over de bestemming in de juiste spoorstaa
 
 Selecteer de doelnaam om informatie over de segmenten te zien die aan deze bestemming worden geactiveerd. Klik **[!UICONTROL Edit activation]** om te wijzigen of aan de segmenten toe te voegen die naar deze bestemming worden verzonden.
 
-## Accounts {#accounts}
+## [!UICONTROL Accounts] {#accounts}
 
 In het **[!UICONTROL Accounts]** lusje, kunt u meer over de verbindingen leren die u met diverse bestemmingen hebt gevestigd. Zie de tabel hieronder voor alle informatie die u op elke bestemming kunt krijgen:
 
@@ -59,14 +59,14 @@ In het **[!UICONTROL Accounts]** lusje, kunt u meer over de verbindingen leren d
 
 | Element | Beschrijving |
 ---------|----------
-| Platform | Het doel waarvoor u de verbinding hebt ingesteld. |
-| Verbindingstype | Vertegenwoordigt het verbindingstype aan uw opslagemmer of bestemming. <ul><li>Voor e-mailmarketingdoelen: Kan S3 of FTP zijn.</li><li>Voor realtime advertentiebestemmingen: Server-naar-server</li><li>Voor Amazon S3 cloudopslagbestemmingen: Toegangstoets </li><li>Voor SFTP-cloudopslagdoelen: Basisverificatie voor SFTP</li></ul> |
-| Gebruikersnaam | De gebruikersnaam die u in de [Connect-doelwizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)hebt geselecteerd. |
-| Gegevensstromen | Vertegenwoordigt het aantal unieke succesvolle bestemmingsstromen die met basisinformatie worden verbonden die voor een bestemming wordt gecreeerd. |
-| Geautoriseerd | De datum waarop de verbinding met deze bestemming werd geautoriseerd. |
-| Status | `Active` of `Inactive`. Geeft aan of er momenteel gegevens op dit doel worden geactiveerd. Zie [Activering](/help/rtcdp/destinations/activate-destinations.md#disable-activation)uitschakelen om de status te bewerken. |
+| [!UICONTROL Platform] | Het doel waarvoor u de verbinding hebt ingesteld. |
+| [!UICONTROL Connection Type] | Vertegenwoordigt het verbindingstype aan uw opslagemmer of bestemming. <ul><li>Voor e-mailmarketingdoelen: Kan S3 of FTP zijn.</li><li>Voor realtime advertentiebestemmingen: Server-naar-server</li><li>Voor Amazon S3 cloudopslagbestemmingen: Toegangstoets </li><li>Voor SFTP-cloudopslagdoelen: Basisverificatie voor SFTP</li></ul> |
+| [!UICONTROL Username] | De gebruikersnaam die u in de [Connect-doelwizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)hebt geselecteerd. |
+| [!UICONTROL Data Flows] | Vertegenwoordigt het aantal unieke succesvolle bestemmingsstromen die met basisinformatie worden verbonden die voor een bestemming wordt gecreeerd. |
+| [!UICONTROL Authorized] | De datum waarop de verbinding met deze bestemming werd geautoriseerd. |
+| [!UICONTROL Status] | `Active` of `Inactive`. Geeft aan of er momenteel gegevens op dit doel worden geactiveerd. Zie [Activering](/help/rtcdp/destinations/activate-destinations.md#disable-activation)uitschakelen om de status te bewerken. |
 
-## Systeemweergave {#system-view}
+## [!UICONTROL System View] {#system-view}
 
 Op het **[!UICONTROL System View]** tabblad ziet u een grafische weergave van de activeringsstromen die u hebt ingesteld in het Real-time Customer Data Platform.
 
