@@ -1,0 +1,509 @@
+---
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+solution: Experience Platform
+title: Motoren
+topic: Developer guide
+translation-type: tm+mt
+source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+
+---
+
+
+# Motoren
+
+Motoren vormen de basis voor het leren van machines Modellen in de werkruimte van de wetenschap van gegevens. Zij bevatten machinaal leeralgoritmen die specifieke problemen oplossen, eigenschappijpleidingen om eigenschapengineering uit te voeren, of allebei.
+
+## Zoek uw registratie van de Docker
+
+Uw Docker-registergegevens zijn vereist voor het uploaden van een pakket Recipe-bestand, inclusief de URL van de Docker-host, gebruikersnaam en wachtwoord. U kunt deze informatie opzoeken door het volgende GET verzoek uit te voeren:
+
+**API-indeling**
+
+```http
+GET /engines/dockerRegistry
+```
+
+**Verzoek**
+
+```shell
+curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Antwoord**
+
+Een succesvolle reactie keert een nuttige lading terug die de details van uw registratie van de Dokker met inbegrip van de Docker URL (`host`), gebruikersbenaming (`username`), en wachtwoord (`password`) bevat.
+
+>[!NOTE] Het wachtwoord van de Docker verandert telkens wanneer uw `{ACCESS_TOKEN}` wordt bijgewerkt.
+
+```json
+{
+    "host": "docker_host.azurecr.io",
+    "username": "00000000-0000-0000-0000-000000000000",
+    "password": "password"
+}
+```
+
+## Een engine maken met Docker-URL&#39;s
+
+U kunt een engine maken door een POST-aanvraag uit te voeren en de bijbehorende metagegevens en een docker-URL op te geven die verwijst naar een Docker-afbeelding in meerdelige formulieren.
+
+**API-indeling**
+
+```http
+POST /engines
+```
+
+**Verzoek**
+
+```shell
+curl -X POST \
+    https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: multipart/form-data' \
+    -F 'engine={
+        "name": "A name for this Engine",
+        "description": "A description for this Engine",
+        "type": "Python",
+        "algorithm": "Classification",
+        "artifacts": {
+            "default": {
+                "image": {
+                    "location": "{DOCKER_URL}",
+                    "name": "An additional name for the Docker image",
+                    "executionType": "Python"
+                }
+            }
+        }
+    }' 
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `name` | De gewenste naam voor de engine. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als naam van de Ontvanger moet worden getoond. |
+| `description` | Een facultatieve beschrijving voor de motor. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als beschrijving van de Ontvanger moet worden getoond. Deze eigenschap is vereist. Als u geen beschrijving wilt opgeven, stelt u de waarde in op een lege tekenreeks. |
+| `type` | Het uitvoeringstype van de motor. Deze waarde komt overeen met de taal waarin de Docker-afbeelding is opgebouwd en kan &#39;Python&#39;, &#39;R&#39; of &#39;Tensorflow&#39; zijn. |
+| `algorithm` | Een tekenreeks die het type algoritme voor machinaal leren opgeeft. Tot de ondersteunde typen algoritmen behoren &#39;Classificatie&#39;, &#39;Regression&#39; of &#39;Aangepast&#39;. |
+| `artifacts.default.image.location` | De locatie van de Docker-afbeelding waarnaar een Docker-URL verwijst. |
+| `artifacts.default.image.executionType` | Het uitvoeringstype van de motor. Deze waarde komt overeen met de taal waarin de Docker-afbeelding is opgebouwd en kan &#39;Python&#39;, &#39;R&#39; of &#39;Tensorflow&#39; zijn. |
+
+
+**Antwoord**
+
+Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe engine, inclusief de unieke id (`id`) ervan.
+
+```json
+{
+    "id": "{ENGINE_ID}",
+    "name": "A name for this Engine",
+    "description": "A description for this Engine",
+    "type": "Python",
+    "algorithm": "Classification",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "{DOCKER_URL}",
+                "name": "An additional name for the Docker image",
+                "executionType": "Python",
+                "packagingType": "docker"
+            }
+        }
+    }
+}
+```
+
+## Een engine maken met binaire artefacten
+
+U kunt een Motor tot stand brengen gebruikend lokale `.jar` of `.egg` binaire artefacten door een POST- verzoek uit te voeren terwijl het verstrekken van zijn meta- gegevens en de weg van het artefact in meerdelige vormen.
+
+**API-indeling**
+
+```http
+POST /engines
+```
+
+**Verzoek**
+
+```shell
+curl -X POST \
+    https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: multipart/form-data' \
+    -F 'engine={
+        "name": "A name for this Engine",
+        "description": "A description for this Engine",
+        "algorithm": "Classification",
+        "type": "PySpark",
+    }' \
+    -F 'defaultArtifact=@path/to/binary/artifact/file.egg'
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `name` | De gewenste naam voor de engine. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als naam van de Ontvanger moet worden getoond. |
+| `description` | Een facultatieve beschrijving voor de motor. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als beschrijving van de Ontvanger moet worden getoond. Deze eigenschap is vereist. Als u geen beschrijving wilt opgeven, stelt u de waarde in op een lege tekenreeks. |
+| `algorithm` | Een tekenreeks die het type algoritme voor machinaal leren opgeeft. Tot de ondersteunde typen algoritmen behoren &#39;Classificatie&#39;, &#39;Regression&#39; of &#39;Aangepast&#39;. |
+| `type` | Het uitvoeringstype van de motor. Deze waarde correspondeert met de taal waarin het binaire artefact wordt gebouwd en of &quot;PySpark&quot;of &quot;Spark&quot;kan zijn. |
+
+
+**Antwoord**
+
+Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe engine, inclusief de unieke id (`id`) ervan.
+
+```json
+{
+    "id": "{ENGINE_ID}",
+    "name": "A name for this Engine",
+    "description": "A description for this Engine",
+    "type": "PySpark",
+    "algorithm": "Classification",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
+                "name": "file.egg",
+                "executionType": "PySpark",
+                "packagingType": "egg"
+            }
+        }
+    }
+}
+```
+
+## Creeer een motor van de eigenschappijpleiding gebruikend binaire artefacten
+
+U kunt een motor van de eigenschappijpleiding tot stand brengen gebruikend lokale `.jar` of `.egg` binaire artefacten door een POST- verzoek uit te voeren terwijl het verstrekken van zijn meta- gegevens en de wegen van het artefact in meerdelige vormen. Een PySpark of de Motor van de Vonk heeft de capaciteit om berekeningsmiddelen zoals het aantal kernen of de hoeveelheid geheugen te specificeren. Gelieve te verwijzen naar de bijlage sectie over [PySpark en de middelconfiguraties](./appendix.md#resource-config) van de Vonk voor meer informatie.
+
+**API-indeling**
+
+```http
+POST /engines
+```
+
+**Verzoek**
+
+```shell
+curl -X POST \
+    https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: multipart/form-data' \
+    -F 'engine={
+        "name": "Feature Pipeline Engine",
+        "description": "A feature pipeline Engine",
+        "algorithm":"fp",
+        "type": "PySpark"
+    }' \
+    -F 'featurePipelineOverrideArtifact=@path/to/binary/artifact/feature_pipeline.egg' \
+    -F 'defaultArtifact=@path/to/binary/artifact/feature_pipeline.egg'
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `name` | De gewenste naam voor de engine. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als naam van de Ontvanger moet worden getoond. |
+| `description` | Een facultatieve beschrijving voor de motor. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als beschrijving van de Ontvanger moet worden getoond. Deze eigenschap is vereist. Als u geen beschrijving wilt opgeven, stelt u de waarde in op een lege tekenreeks. |
+| `algorithm` | Een tekenreeks die het type algoritme voor machinaal leren opgeeft. Stel deze waarde in als &quot;fp&quot; om aan te geven dat dit ontwerp een engine voor kenmerkpijplijnen moet zijn. |
+| `type` | Het uitvoeringstype van de motor. Deze waarde correspondeert met de taal waarin de binaire artefacten worden voortgebouwd en kan &quot;PySpark&quot;of &quot;Vonk&quot;zijn. |
+
+**Antwoord**
+
+Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe engine, inclusief de unieke id (`id`) ervan.
+
+```json
+{
+    "id": "{ENGINE_ID}",
+    "name": "Feature Pipeline Engine",
+    "description": "A feature pipeline Engine",
+    "type": "PySpark",
+    "algorithm": "fp",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
+                "name": "file.egg",
+                "executionType": "PySpark",
+                "packagingType": "egg"
+            }
+        }
+    }
+}
+```
+
+## Een lijst met motoren ophalen
+
+U kunt een lijst van Motoren terugwinnen door één enkele GET verzoek uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+
+**API-indeling**
+
+```http
+GET /engines
+GET /engines?parameter_1=value_1
+GET /engines?parameter_1=value_1&parameter_2=value_2
+```
+
+**Verzoek**
+
+```shell
+curl -X GET \
+    https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Antwoord**
+
+Een succesvol antwoord retourneert een lijst met engines en hun details.
+
+```json
+{
+    "children": [
+        {
+            "id": "{ENGINE_ID}",
+            "name": "A name for this Engine",
+            "description": "A description for this Engine",
+            "type": "PySpark",
+            "algorithm": "Classification",
+            "created": "2019-01-01T00:00:00.000Z",
+            "createdBy": {
+                "userId": "Jane_Doe@AdobeID"
+            },
+            "updated": "2019-01-01T00:00:00.000Z"
+        },
+        {
+            "id": "{ENGINE_ID}",
+            "name": "A name for this Engine",
+            "description": "A description for this Engine",
+            "type": "Python",
+            "algorithm": "Classification",
+            "created": "2019-01-01T00:00:00.000Z",
+            "createdBy": {
+                "userId": "Jane_Doe@AdobeID"
+            },
+            "updated": "2019-01-01T00:00:00.000Z"
+        },
+        {
+            "id": "{ENGINE_ID}",
+            "name": "Feature Pipeline Engine",
+            "description": "A feature pipeline Engine",
+            "type": "PySpark",
+            "algorithm":"fp",
+            "created": "2019-01-01T00:00:00.000Z",
+            "createdBy": {
+                "userId": "Jane_Doe@AdobeID"
+            },
+            "updated": "2019-01-01T00:00:00.000Z"
+        }
+    ],
+    "_page": {
+        "property": "deleted==false",
+        "totalCount": 100,
+        "count": 3
+    }
+}
+```
+
+### Een specifieke engine ophalen {#retrieve-specific}
+
+U kunt de details van een specifieke Motor terugwinnen door een GET verzoek uit te voeren dat identiteitskaart van de gewenste Motor in de verzoekweg omvat.
+
+**API-indeling**
+
+```http
+GET /engines/{ENGINE_ID}
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `{ENGINE_ID}` | De id van een bestaande engine. |
+
+**Verzoek**
+
+```shell
+curl -X GET \
+    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Antwoord**
+
+Een succesvolle reactie keert een lading terug die de details van de gewenste Motor bevatten.
+
+```json
+{
+    "id": "{ENGINE_ID}",
+    "name": "A name for this Engine",
+    "description": "A description for this Engine",
+    "type": "PySpark",
+    "algorithm": "Classification",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "wasbs://artifact-location.blob.core.windows.net/{ENGINE_ID}/default.egg",
+                "name": "file.egg",
+                "executionType": "PySpark",
+                "packagingType": "egg"
+            }
+        }
+    }
+}
+```
+
+## Een engine bijwerken
+
+U kunt een bestaande Engine wijzigen en bijwerken door de eigenschappen ervan te overschrijven via een PUT-aanvraag die de id van de doelengine in het aanvraagpad bevat en een JSON-payload met bijgewerkte eigenschappen opgeeft.
+
+>[!NOTE] Om ervoor te zorgen dat dit PUT-verzoek succesvol is, wordt u aangeraden eerst een GET-aanvraag uit te voeren om de Engine op ID [op te](#retrieve-specific)halen. Vervolgens past u het geretourneerde JSON-object aan en werkt u dit bij en past u het gehele gewijzigde JSON-object toe als de payload voor de PUT-aanvraag.
+
+De volgende voorbeeld-API-aanroep werkt de naam en beschrijving van een engine bij terwijl deze in eerste instantie deze eigenschappen heeft:
+
+```json
+{
+    "name": "A name for this Engine",
+    "description": "A description for this Engine",
+    "type": "Python",
+    "algorithm": "Classification",
+    "artifacts": {
+        "default": {
+            "image": {
+                "executionType": "Python",
+                "packagingType": "docker"
+            }
+        }
+    }
+}
+```
+
+**API-indeling**
+
+```http
+PUT /engines/{ENGINE_ID}
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `{ENGINE_ID}` | De id van een bestaande engine. |
+
+**Verzoek**
+
+```shell
+curl -X PUT \
+    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
+    -d '{
+        "name": "An updated name for this Engine",
+        "description": "An updated description",
+        "type": "Python",
+        "algorithm": "Classification",
+        "artifacts": {
+            "default": {
+                "image": {
+                    "executionType": "Python",
+                    "packagingType": "docker"
+                }
+            }
+        }
+    }'
+```
+
+**Antwoord**
+
+Een succesvolle reactie keert een lading terug die de bijgewerkte details van de Motor bevat.
+
+```json
+{
+    "id": "{ENGINE_ID}",
+    "name": "An updated name for this Engine",
+    "description": "An updated description",
+    "type": "Python",
+    "algorithm": "Classification",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "displayName": "Jane Doe",
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-02T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "executionType": "Python",
+                "packagingType": "docker"
+            }
+        }
+    }
+}
+```
+
+## Een engine verwijderen
+
+U kunt een Motor schrappen door een verzoek van de SCHRAPPING uit te voeren terwijl het specificeren van identiteitskaart van de doelmotor in de verzoekweg. Als een engine wordt verwijderd, worden alle MLInstances die naar die engine verwijzen, met inbegrip van alle experimenten en experimentele tests die tot die MLInstances behoren, trapsgewijs verwijderd.
+
+**API-indeling**
+
+```http
+DELETE /engines/{ENGINE_ID}
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `{ENGINE_ID}` | De id van een bestaande engine. |
+
+**Verzoek**
+
+```shell
+curl -X DELETE \
+    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Antwoord**
+
+```json
+{
+    "title": "Success",
+    "status": 200,
+    "detail": "Engine deletion was successful"
+}
+```
