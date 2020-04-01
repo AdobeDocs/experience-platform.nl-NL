@@ -44,7 +44,7 @@ Voor alle POST-, PUT- en PATCH-aanvragen is een extra header vereist:
 
 ## Een exporttaak maken
 
-Voor het exporteren van profielgegevens moet u eerst een gegevensset maken waarin de gegevens worden geëxporteerd en vervolgens een nieuwe exporttaak starten. Beide stappen kunnen worden verwezenlijkt gebruikend het Platform APIs van de Ervaring, met het eerste gebruikend de Dienst API van de Catalogus en het tweede gebruikend Real-time het Profiel van de Klant. Gedetailleerde instructies voor het voltooien van elke stap worden beschreven in de volgende secties.
+Voor het exporteren van profielgegevens moet u eerst een gegevensset maken waarin de gegevens worden geëxporteerd en vervolgens een nieuwe exporttaak starten. Beide stappen kunnen worden verwezenlijkt gebruikend het Platform APIs van de Ervaring, met het eerste gebruikend de Dienst API van de Catalogus en het tweede gebruikend Real-time het Profiel van de Klant API. Gedetailleerde instructies voor het voltooien van elke stap worden beschreven in de volgende secties.
 
 - [Creeer een doeldataset](#create-a-target-dataset) - creeer een dataset om uitgevoerde gegevens te houden.
 - [Start een nieuwe exporttaak](#initiate-export-job) - Vul de gegevensset met XDM Individuele profielgegevens.
