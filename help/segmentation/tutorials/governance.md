@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Compatibiliteit van gegevensgebruik voor publiekssegmenten afdwingen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 76032cca825eb75f7a8056cbbbc230343bed27a0
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
@@ -52,7 +52,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 Dit werkschema begint door tot een bekend publiekssegment toegang te hebben. De segmenten die voor gebruik in het Profiel van de Klant in real time worden toegelaten bevatten een identiteitskaart van het fusiebeleid binnen hun segmentdefinitie. Dit samenvoegbeleid bevat informatie over welke datasets in het segment moeten worden omvat, die beurtelings om het even welke toepasselijke etiketten van het gegevensgebruik bevatten.
 
-Gebruikend de [Real-time API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)van het Profiel van de Klant, kunt u een segmentdefinitie door zijn identiteitskaart zoeken om zijn bijbehorend fusiebeleid te vinden.
+Gebruikend de [Segmentatie API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), kunt u een segmentdefinitie door zijn identiteitskaart zoeken om zijn bijbehorend fusiebeleid te vinden.
 
 **API-indeling**
 
