@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Muziek openen in Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
+source-git-commit: 689b4c7a96856e1167ee435a6740fed006136256
 
 ---
 
@@ -35,7 +35,7 @@ Klik vervolgens op Schema **** selecteren in de rechterbovenhoek van het scherm.
 
 ![zoeken naar een schema](./images/download-scores/edited_snowflake_2.png)
 
-## Raw-scores downloaden van Sneeuwvlok
+## Raw-scores downloaden
 
 Neem contact op met attributionai-support@adobe.com voor meer informatie over downloads van onbewerkte scores.
 
