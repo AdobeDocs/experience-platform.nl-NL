@@ -42,7 +42,7 @@ Voor alle POST-, PUT- en PATCH-aanvragen is een extra header vereist:
 
 ## Een segment evalueren
 
-Zodra u hebt ontwikkeld, getest, en uw segmentdefinitie bewaard, kunt u het segment door of geplande evaluatie of op bestelling evaluatie dan evalueren.
+Zodra u hebt ontwikkeld, getest en uw segmentdefinitie bewaard, kunt u het segment door of geplande evaluatie of op bestelling evaluatie dan evalueren.
 
 [De geplande evaluatie](#scheduled-evaluation) (die ook als &quot;geplande segmentatie&quot;wordt bekend) staat u toe om een terugkomende planning voor het runnen van een uitvoerbaan in een specifieke tijd tot stand te brengen, terwijl de [op bestelling evaluatie](#on-demand-evaluation) het creëren van een segmentbaan impliceert om het publiek onmiddellijk te bouwen. De stappen voor elk worden hieronder geschetst.
 
