@@ -1,43 +1,52 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Productdocumentatie van Adobe Experience Platform
+title: Overzicht van het Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 4eea32af108c8e2655639b3a2d6202d3b791b4e4
+source-git-commit: 51aa09e5eff86c480946bcf706f10864b82841d2
 
 ---
 
 
-# Adobe Experience Platform
+# Overzicht van het Adobe Experience Platform
 
-![](/help/assets/platform-banner-1.png)
+>[!NOTE]
+>De documentatie van het Adobe Experience Platform is onlangs verplaatst. Neem even de tijd om de nieuwe navigatie te bekijken en bestaande bladwijzers bij te werken.
 
-**[Met het overzicht](https://www.adobe.io/apis/experienceplatform/home/overview.html)**<br/>Experience Platform van het Adobe Experience Platform kunnen organisaties klantgegevens en -inhoud uit elk systeem centraliseren en standaardiseren en gegevens en computer learning toepassen om het ontwerp en de levering van rijke, persoonlijke ervaringen drastisch te verbeteren.
+Het Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten vergroten. Met het Experience Platform kunnen organisaties klantgegevens en -inhoud uit elk systeem centraliseren en standaardiseren en datamateriaal en computerleren toepassen om het ontwerp en de levering van rijke, persoonlijke ervaringen drastisch te verbeteren.
 
-## Referentiedocumenten
-
-* **[Opmerkingen bij de release](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)**<br/>Hiermee krijgt u informatie over de meest recente versie en kunt u eerdere releases controleren.
-
-* **[Verklarende woordenlijst](https://www.adobe.io/apis/experienceplatform/home/services/acp-glossary.html)**<br/>Bekijk de terminologie van het Adobe Experience Platform.
-
-* **[Handleiding voor](https://www.adobe.io/apis/experienceplatform/home/services/troubleshooting.html)**<br/>probleemoplossing: meer informatie over algemene fouten en resoluties.
+Het Experience Platform is gebaseerd op open API&#39;s en stelt de volledige functionaliteit van het systeem beschikbaar voor ontwikkelaars. Het ondersteunt de eenvoudige integratie van bedrijfsoplossingen met behulp van vertrouwde tools. Het Experience Platform ondersteunt ook partners om hun eigen producten en technologieën naar behoefte te ontwikkelen en te integreren. Dankzij deze kracht en flexibiliteit is het Experience Platform uniek op de markt. Het geeft partners, klanten, en een gemeenschap van ontwikkelaars een stichting waarop om innovaties te bouwen die de ErvingsZaken drijven: Het overschrijden van klantenverwachtingen door een voortdurend verbeterende, volledig-gepersonaliseerde ervaring te leveren die uit een 360 graadmening van de klant en hun individuele voorkeur wordt getrokken.
 
 ## documentatie bij Experience Platform
 
-* **[Met de documentatie](https://www.adobe.io/apis/experienceplatform/home/services.html)**<br/>van het Experience Platform van de services van Experience Platform kunt u profielen, gegevens, privacy en andere belangrijke onderdelen voor uw bedrijf beheren.
+De documentatie van het Platform van de ervaring wordt verstrekt in veelvoudige formaten voor een verscheidenheid van eigenschappen en de diensten. Voor meer informatie over de typen documentatie die beschikbaar zijn en voor een korte beschrijving van elk van de platformservices, raadpleegt u het documentatieoverzicht [van het](documentation/overview.md)ervaringsplatform. Of, om meer over een specifieke dienst van het Platform direct te leren, selecteer een gids van de alfabetische lijst in de linkernavigatie.
 
-* **[In real time CDP van het Platform](/help/rtcdp/overview.md)**<br/>van Gegevens van de Klant In real time combineert veelvoudige bronnen van ondernemingsgegevens om verenigde profielen in real time tot stand te brengen die kunnen worden gebruikt om één-aan-één gepersonaliseerde klantenervaring over alle kanalen en apparaten te verstrekken.
+## Zelfstudies voor het ervaringsplatform
 
-* **[API-naslaggegevens](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)**<br/>over elke API van het Experience Platform.
+Ga snel en eenvoudig aan de slag met Platform door stapsgewijze zelfstudies voor alles te volgen, van het voorbereiden van uw gegevens voor opname tot geavanceerde computerleeralgoritmen. Deze zelfstudies zijn ontworpen als aanvulling op de informatie in de documentatie van het ervaringsplatform, zodat u de documenten voor de beste resultaten ter beschikking kunt houden tijdens het voltooien van de zelfstudies. Ga naar de zelfstudies [van het](../tutorials/home.md) ervaringsplatform om aan de slag te gaan.
 
-* **[De lancering](https://docs.adobe.com/content/help/en/launch/using/overview.html)**<br/>van het Platform van de ervaring biedt klanten een eenvoudige manier om alle analyses, marketing, en reclame markeringen te opstellen en te beheren noodzakelijk om relevante klantenervaringen te drijven.
+## Referentiedocumenten en -bronnen
 
-* **[Ervaar de](https://docs.adobe.com/content/help/en/auditor/using/overview.html)**<br/>Auditor van het Platform uw implementatie van de Wolk van de Ervaring van Adobe en geef wijzers op hoe te om het te verbeteren. De Auditor helpt u meer waarde van uw producten van Adobe, individueel en collectief krijgen.
+* [**Release-aantekeningen **](../release-notes/latest/latest.md)<br/>Zoeken naar informatie over de meest recente release van het Experience Platform en de vorige releases.
 
-* **[Ervaar Cloud-foutopsporing](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)**<br/>De Adobe Experience Cloud Debugger-extensie voor Chrome onderzoekt uw webpagina&#39;s en helpt u problemen te vinden met de implementatie van uw Experience Cloud-oplossingen.
+* [**Verklarende woordenlijst **](glossary.md)<br/>Bekijk de terminologie van het Adobe Experience Platform.
 
-<!--
+* [**De gids van het Oplossen van problemen **](troubleshooting.md)<br/>vindt resoluties aan gemeenschappelijke fouten en antwoorden op vaak gestelde vragen.
+
+* [**API-basisbeginselen **](api-fundamentals.md)<br/>Leer de basisbeginselen van het werken met platform-API&#39;s.
+
+* [**API-naslaggids **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>Discover Experience Platform-API&#39;s, waaronder headers, parameters, voorbeeldaanvragen en reacties.*Deze documenten worden gehost op Adobe I/O.*
+
+
+
+
+
+
+
+
+
+<!-- 
 ## What's New
 
 * **[Privacy management](https://helpx.adobe.com/campaign/kb/campaign-privacy.html)**<br/>
@@ -106,5 +115,4 @@ Learn more about general guidelines for mobile deliveries.
 * [Technical notes](https://helpx.adobe.com/campaign/kb/acs-article-list.html)
 
 * [Adobe Campaign Standard Implementation guide](https://helpx.adobe.com/campaign/kb/campaign-standard-implementation-guide.html)
-
--->
+ -->
