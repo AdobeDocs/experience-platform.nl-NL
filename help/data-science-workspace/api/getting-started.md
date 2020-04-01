@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Sensei Machine Learning API
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 9e12c8087524f692a123b3389df4fdc324c4238d
+source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
 
 ---
 
@@ -37,10 +37,10 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 Zodra u de vereiste authentificatiegeloofsbrieven hebt verzameld, kunt u aan de verdere secties van deze ontwikkelaarsgids voor steekproefAPI vraag aan de volgende eindpuntgroepen te werk gaan:
 
-* [Motoren](engines.md)
-* [Experimenten](experiments.md)
-* [Inzichten](insights.md)
-* [MLInstances (Recipes)](mlinstances.md)
-* [MLServices](mlservices.md)
-* [Modellen](models.md)
-* [Aanhangsel](appendix.md)
+* [Motoren](./engines.md)
+* [Experimenten](./experiments.md)
+* [Inzichten](./insights.md)
+* [MLInstances (Recipes)](./mlinstances.md)
+* [MLServices](./mlservices.md)
+* [Modellen](./models.md)
+* [Aanhangsel](./appendix.md)
