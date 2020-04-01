@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Unies
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: fabaabc3cc5b82cba084bddd081f5bba670b89f0
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
@@ -31,7 +31,7 @@ De `timeSeriesEvents` array is een lijst met tijdreeksgebeurtenissen die betrekk
 
 ### Segmentlidmaatschapstoewijzing
 
-De `segmentMembership` kaart slaat de resultaten van segmentevaluaties op. Wanneer segmenttaken met succes worden uitgevoerd met de [Real-Time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml), wordt de kaart bijgewerkt. `segmentMembership` slaat ook om het even welke vooraf beoordeelde publiekssegmenten op die in Platform worden opgenomen, die voor integratie met andere oplossingen zoals de Manager van de Audience van Adobe toestaan.
+De `segmentMembership` kaart slaat de resultaten van segmentevaluaties op. Wanneer segmenttaken met succes worden uitgevoerd met de [segmentatie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), wordt de kaart bijgewerkt. `segmentMembership` slaat ook om het even welke vooraf beoordeelde publiekssegmenten op die in Platform worden opgenomen, die voor integratie met andere oplossingen zoals de Manager van de Audience van Adobe toestaan.
 
 Zie de zelfstudie over het [maken van segmenten met behulp van API&#39;s](../../segmentation/tutorials/create-a-segment.md) voor meer informatie.
 
