@@ -4,7 +4,7 @@ seo-title: Gegevensbeheer in het Real-Time Customer Data Platform
 description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 seo-description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 translation-type: tm+mt
-source-git-commit: f5fbb1434b7154dcdbef12de7882ecd3d2f18d52
+source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 ---
 
@@ -17,11 +17,11 @@ Met de gegevensbeheer van het Adobe Experience Platform kunt u klantgegevens beh
 
 CDP in real time wordt voortgebouwd bovenop het Platform van de Ervaring van Adobe, en daarom worden de meeste mogelijkheden van het Beleid van Gegevens behandeld in de documentatie van het Platform van de Ervaring. Dit document is bedoeld als aanvulling op het overzicht [van](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) gegevensbeheer voor het ervaringsplatform en geeft een overzicht van de bestuurskenmerken die beschikbaar zijn in real-time CDP. De volgende onderwerpen worden behandeld:
 
-* [Gebruikslabels toepassen op uw gegevens](#apply-usage-labels-to-your-data)
-* [Beleid voor gegevensgebruik beheren](#manage-data-usage-policies)
-* [Compatibiliteit met gegevensgebruik afdwingen](#enforce-data-usage-compliance)
+* [Gebruikslabels toepassen op uw gegevens](#labels)
+* [Beleid voor gegevensgebruik beheren](#policies)
+* [Compatibiliteit met gegevensgebruik afdwingen](#enforcement)
 
-## Gebruikslabels toepassen op uw gegevens
+## Gebruikslabels toepassen op uw gegevens {#labels}
 
 Met gegevensbeheer kunt u gebruikslabels op uw gegevens toepassen, op het niveau van de gegevensset of op het niveau van de gegevensset-velden. Met labels voor gegevensgebruik kunt u gegevens indelen op basis van het gebruiksbeleid dat op die gegevens van toepassing is.
 
@@ -34,7 +34,7 @@ U kunt beperkingen voor het gegevensgebruik op een bestemming instellen door mar
 Gebruiksgevallen voor marketing kunnen worden gedefinieerd tijdens de fase _Setup_ voor de workflow _Doel_ bewerken. Zie de doeldocumentatie voor meer informatie.
 
 
-## Beleid voor gegevensgebruik beheren
+## Beleid voor gegevensgebruik beheren {#policies}
 
 Om gegevensgebruikslabels effectief gegevensnaleving te steunen, moet het beleid van het gegevensgebruik worden bepaald en worden toegelaten. Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen CDP in real time mag uitvoeren. Zie het gedeelte Beleid voor gegevensgebruik in het overzicht [Data Governance-](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) gegevens van het ervaringsplatform voor meer informatie.
 
@@ -56,7 +56,7 @@ Wanneer een segment eerst wordt geactiveerd, controleert de Dienst van het Belei
 * De labels voor gegevensgebruik die worden toegepast op velden en gegevenssets binnen het segment dat moet worden geactiveerd.
 * Het marketingdoel van de bestemming.
 
-### Berichten over beleidsovertredingen
+### Berichten over beleidsovertredingen {#enforcement}
 
 Als een beleidsovertreding voorkomt in een poging om een segment te activeren (of [bewerkingen uit te voeren op een reeds geactiveerd segment](#policy-enforcement-for-activated-segments)), wordt de handeling voorkomen en wordt een pop-up weergegeven die aangeeft dat een of meer beleidsregels zijn overtreden. Selecteer een beleidsovertreding in de linkerkolom van de pop-up om details voor die schending te tonen.
 
