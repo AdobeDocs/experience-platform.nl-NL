@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Inzichten
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 71e257c85790a96b5017dea314b757ec4ee07bed
+source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 ---
 
@@ -15,7 +15,7 @@ Inzichten bevatten meetgegevens die worden gebruikt om een gegevenswetenschapper
 
 ## Een lijst met inzichten ophalen
 
-U kunt een lijst van Inzichten terugwinnen door één enkel GET verzoek aan het inzichten eindpunt uit te voeren.  Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](appendix.md#query).
+U kunt een lijst van Inzichten terugwinnen door één enkel GET verzoek aan het inzichten eindpunt uit te voeren.  Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
 
 **API-indeling**
 
@@ -105,7 +105,7 @@ Een geslaagde reactie retourneert een payload die een lijst met inzichten bevat 
 
 ## Een specifiek inzicht ophalen
 
-Om omhoog een bepaald inzicht te zoeken maak een GET verzoek en verstrek een geldig `{INSIGHT_ID}` in de verzoekweg. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](appendix.md#query).
+Om omhoog een bepaald inzicht te zoeken maak een GET verzoek en verstrek een geldig `{INSIGHT_ID}` in de verzoekweg. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
 
 **API-indeling**
 
