@@ -5,7 +5,7 @@ description: Deze zelfstudie bevat instructies voor het gebruik van AI (alfa) va
 seo-description: Deze zelfstudie bevat instructies voor het gebruik van AI (alfa) van de Klant
 index: false
 translation-type: tm+mt
-source-git-commit: 1118983ce8f5704ef3a347c8c316a9cc5cc62815
+source-git-commit: e0d11adb7f0ece9344efb118b4199ecb1fc37bb3
 
 ---
 
@@ -48,7 +48,7 @@ De workflow voor het maken van instanties wordt weergegeven, te beginnen bij de 
 
 Hieronder vindt u belangrijke informatie over waarden waarvoor u het exemplaar moet voorzien van:
 
-* De naam van het exemplaar wordt gebruikt op alle plaatsen waar de AI-score van de Klant wordt weergegeven. Daarom moeten namen beschrijven wat de voorspellingsscores bijvoorbeeld vertegenwoordigen, &quot;Likeliability to cancel magazine subscription&quot;.
+* De naam van het exemplaar wordt gebruikt op alle plaatsen waar de AI-score van de Klant wordt weergegeven. Daarom moeten de namen beschrijven wat de voorspellingsscores bijvoorbeeld vertegenwoordigen, &quot;Likeliability to cancel magazine subscription&quot;.
 
 * Het type van aandrijving bepaalt de intentie van de score en metrische polariteit. U kunt **Churn** of **Conversie** kiezen.
 
@@ -88,7 +88,7 @@ Sluit gebeurtenissen indien nodig uit en klik op **Voltooien** om de instantie t
 
 Als de instantie met succes wordt gecreeerd, zal een voorspelling in werking worden gesteld onmiddellijk en verdere degenen zullen volgens uw bepaald programma uitvoeren.
 
->   **Opmerking:** Afhankelijk van de grootte van de invoergegevens kan het voltooien van de voorspelling 24 uur duren.
+>[!NOTE] Afhankelijk van de grootte van de invoergegevens kan het voltooien van de voorspelling 24 uur duren.
 
 Door deze sectie te volgen, hebt u een geval van AI van de Klant gevormd en een voorspellingslooppas werd uitgevoerd. Als de uitvoering is voltooid, worden profielen met voorspelde scores automatisch gehydrateerd door ingesneden inzichten. Wacht 24 uur voordat u doorgaat naar de volgende sectie van deze zelfstudie.
 
