@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van de Data Science Workspace
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3190f2f01ae13d25cc3a3a540b83cc1fc0819f0a
+source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
 
 ---
 
@@ -213,5 +213,5 @@ Voor aanvullende informatie, zoals een volledige dagelijkse workflow, begint u m
 
 De volgende video is ontworpen om uw begrip van de Werkruimte van de Wetenschap van Gegevens te steunen.
 
->[!VIDEO](https://images-tv.adobe.com/mpcv3/2fbf62c1-44ed-4162-8eed-f47ab8599701_1578435939.1920x1080at3000_h264.mp4)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
 
