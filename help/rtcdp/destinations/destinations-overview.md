@@ -4,7 +4,7 @@ seo-title: Overzicht van doelen
 description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Platform van de Gegevens van de Klant van Adobe in real time gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 seo-description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Platform van de Gegevens van de Klant van Adobe in real time gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -33,7 +33,7 @@ Met de besturingselementen in de werkruimte [](/help/rtcdp/destinations/destinat
 * Gegevensstromen naar de doelen in de catalogus maken, bewerken, activeren en uitschakelen;
 * Maak een account in een opslaglocatie of koppel Real-time CDP aan de account in het doelplatform.
 * Selecteer welke segmenten moeten worden geactiveerd voor bestemmingen;
-* Selecteer welke XDM-velden ( [](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md) Experience Data Model) u wilt exporteren wanneer u segmenten activeert naar e-mailmarketingdoelen.
+* Selecteer welke XDM-velden ( [](../../xdm/home.md) Experience Data Model) u wilt exporteren wanneer u segmenten activeert naar e-mailmarketingdoelen.
 
 ## Doeltypen en -categorieën - video-overzicht
 
@@ -55,6 +55,6 @@ De doelen in de catalogus [](/help/rtcdp/destinations/destinations-catalog.md) D
 
 ## Doelen en toegangscontroles
 
-De bestemmingsfunctionaliteit in CDP in real time werkt met de toegangsbeheertoestemmingen van het Platform van de Ervaring van Adobe. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Zie [Toegangsbeheer in het Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) en blader omlaag naar de onderkant van de pagina voor informatie over de individuele machtigingen.
+De bestemmingsfunctionaliteit in CDP in real time werkt met de toegangsbeheertoestemmingen van het Platform van de Ervaring van Adobe. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Zie [Toegangsbeheer in het Adobe Experience Platform](../../access-control/home.md) en blader omlaag naar de onderkant van de pagina voor informatie over de individuele machtigingen.
 
-Voor meer informatie over toegangscontroles, zie de handleiding [van de controlegebruiker van de](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md)Toegang.
+Voor meer informatie over toegangscontroles, zie de handleiding [van de controlegebruiker van de](../../access-control/ui/overview.md)Toegang.
