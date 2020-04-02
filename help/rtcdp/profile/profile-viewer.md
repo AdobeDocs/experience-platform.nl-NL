@@ -4,7 +4,7 @@ seo-title: Gegevens in realtime klantprofiel weergeven op realtime klantgegevens
 description: Gegevens in realtime klantprofiel weergeven op realtime klantgegevensplatform
 seo-description: Gegevens in realtime klantprofiel weergeven op realtime klantgegevensplatform
 translation-type: tm+mt
-source-git-commit: f23a025336875adec1f4182fee451741833a1b63
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -15,4 +15,4 @@ Het profiel van de Klant in real time leidt tot een holistische mening van elk v
 
 Binnen de gebruikersinterface kunt u deze alleen-lezen profielen weergeven en belangrijke informatie over de individuele klant zien, zoals voorkeuren, gebeurtenissen uit het verleden en interacties en segmenten waartoe de individuele klant behoort.
 
-Aangezien het Real-Time Customer Data Platform is gebaseerd op het Adobe Experience Platform, kan CDP in realtime gebruikmaken van de mogelijkheden voor profielweergave die deel uitmaken van het Experience Platform. Raadpleeg de gebruikershandleiding van het [realtime-klantprofiel op de Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/profile-user-guide.md)voor een gedetailleerde handleiding voor het weergeven van klantprofielen in de gebruikersinterface van het platform.
+Aangezien het Real-Time Customer Data Platform is gebaseerd op het Adobe Experience Platform, kan CDP in realtime gebruikmaken van de mogelijkheden voor profielweergave die deel uitmaken van het Experience Platform. Raadpleeg de gebruikershandleiding [van het profiel van de](../../profile/ui/user-guide.md)real-time klant voor een gedetailleerde handleiding voor het weergeven van klantprofielen in de gebruikersinterface van het platform.
