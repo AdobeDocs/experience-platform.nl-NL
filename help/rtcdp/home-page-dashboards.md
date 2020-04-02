@@ -4,7 +4,7 @@ seo-title: Homepage en dashboards van het Klantgegevensplatform in real time
 description: Dashboards, Home Page en First-Time User Experience Platform
 seo-description: Dashboards, Home Page en First-Time User Experience Platform
 translation-type: tm+mt
-source-git-commit: 6c8d0757d7e7568b1976823d9c52221374e67cbb
+source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
 
 ---
 
@@ -42,7 +42,7 @@ De extra metriek-bijvoorbeeld voor profielen en segmenten-zijn beschikbaar in an
 
 De **[!UICONTROL Datasets]** teller toont het aantal datasets in het systeem en de hoeveelheid gegevens in Platform. Deze teller wordt bijgewerkt wanneer een dataset wordt gecreeerd.
 
-Voor meer informatie over datasets, zie de Gegevens van de [Samenvatting in het Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)van de Ervaring van Adobe.
+Voor meer informatie over datasets, zie het overzicht [van](../catalog/datasets/overview.md)datasets.
 
 ### Profielen
 
@@ -58,7 +58,7 @@ Voor meer informatie over profielen, zie [een verenigde mening van uw klant in r
 
 **[!UICONTROL Segments]** toont het totale aantal segmenten die voor de organisatie worden gecreeerd. Dit aantal wordt bijgewerkt wanneer de nieuwe segmenten worden gecreeerd.
 
-Voor meer informatie over segmenten, zie het overzicht [van de Dienst van de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)Segmentatie.
+Voor meer informatie over segmenten, zie het overzicht [van de Dienst van de](segmentation/segmentation-overview.md)Segmentatie.
 
 ### Doelen
 
@@ -106,7 +106,7 @@ De **[!UICONTROL Recent datasets]** kaart toont de vijf meest recente datasets d
 
 Klik een dataset om de details voor dat punt te bekijken, of de lijst van datasets **[!UICONTROL View all]** te zien. Hier kunt u op een specifieke bron klikken voor meer informatie.
 
-Voor meer informatie over datasets, zie de Gegevens van de [Samenvatting in het Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)van de Ervaring van Adobe.
+Voor meer informatie over datasets, zie het overzicht [van](../catalog/datasets/overview.md)datasets.
 
 ### Recente bronnen
 
@@ -122,7 +122,7 @@ De **[!UICONTROL Recent segments]** metrische kaart toont de vijf meest recente 
 
 Klik een segment om de details voor dat punt te bekijken, of informatie over meer segmenten **[!UICONTROL View all]** te zien.
 
-Voor meer informatie over segmenten, zie het overzicht [van de Dienst van de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)Segmentatie.
+Voor meer informatie over segmenten, zie het overzicht [van de Dienst van de](segmentation/segmentation-overview.md)Segmentatie.
 
 ### Recente bestemmingen
 
