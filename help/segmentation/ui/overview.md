@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding voor de gebruikersinterface van Segment Builder
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 91792f81a50d5752e46236d61b6ad645e3fda86c
 
 ---
 
@@ -173,6 +173,14 @@ Het toelaten van uw segmentdefinities voor het stromen kan worden gedaan gebruik
 ![](../images/segment-builder/enable-streaming-segmentation.png)
 
 Zodra het stromen segmentatie is toegelaten, moet een basislijn worden gevestigd (dit is de aanvankelijke looppas waarna het segment altijd bijgewerkt zal zijn). Het systeem behandelt automatisch baselining, echter dit is slechts mogelijk als de geplande segmentatie is toegelaten. Raadpleeg voor meer informatie over het inschakelen van geplande segmentatie [de vorige sectie in deze gebruikershandleiding](#enable-scheduled-segmentation).
+
+## Beleidsovertredingen DULE
+
+>[!NOTE] De DULE beleidsschendingen zijn slechts van toepassing als u een segment creeert dat aan een bestemming is toegewezen.
+
+Zodra u wordt gedaan creërend uw segment, zal het segment door de Governance van Gegevens worden geanalyseerd om ervoor te zorgen dat er geen beleidsschendingen binnen het segment zijn. Voor meer informatie over DULE en beleidsovertredingen raadpleegt u het overzicht [van de](../../data-governance/labels/overview.md)gegevensgebruikslabel.
+
+![](../images/segment-builder/segment-dule-policy-violations.png)
 
 ## Volgende stappen
 
