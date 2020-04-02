@@ -4,7 +4,7 @@ seo-title: Klantprofiel in real-time in realtime klantgegevensplatform
 description: Een overzicht van hoe het platform van de Gegevens van de Klant in real time u toelaat om gecoördineerde, verenigbare, relevante ervaringen voor uw klanten te drijven gebruikend de Profielen van de Klant in real time.
 seo-description: Gegevensplatform, profiel, gegevens, ervaringen, kanalen voor klanten in realtime
 translation-type: tm+mt
-source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -31,4 +31,4 @@ Met Platform kunt u eenvoudig klantprofielen bekijken en zoeken naar specifieke 
 
 ## Volgende stappen
 
-Na het lezen van dit overzicht, zou u nu moeten begrijpen hoe Real-time CDP het Profiel van de Klant in real time gebruikt om dwars-kanaalverpersoonlijking bij schaal te drijven. Door identiteiten uit verschillende bronnen te verenigen, kunt u een volledig beeld van elk van uw individuele klanten zien, die u toestaan om uw marketing campagnes op een volledig nieuw niveau te brengen. Raadpleeg de documentatie over het profiel van de [real-time klant op Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)voor meer gedetailleerde informatie, zoals best practices en zelfstudies voor het werken met gegevens van het realtime-klantprofiel in de gebruikersinterface en via API&#39;s.
+Na het lezen van dit overzicht, zou u nu moeten begrijpen hoe Real-time CDP het Profiel van de Klant in real time gebruikt om dwars-kanaalverpersoonlijking bij schaal te drijven. Door identiteiten uit verschillende bronnen te verenigen, kunt u een volledig beeld van elk van uw individuele klanten zien, die u toestaan om uw marketing campagnes op een volledig nieuw niveau te brengen. Raadpleeg de documentatie [van het profiel van de](../../profile/home.md)real-time klant voor meer gedetailleerde informatie, zoals best practices en zelfstudies voor het werken met gegevens van het realtime-klantprofiel in de gebruikersinterface en via API&#39;s.
