@@ -4,7 +4,7 @@ seo-title: Werken met samenvoegbeleidsregels in Real-Time Customer Data Platform
 description: Werken met samenvoegbeleidsregels in Real-Time Customer Data Platform
 seo-description: Werken met samenvoegbeleidsregels in Real-Time Customer Data Platform
 translation-type: tm+mt
-source-git-commit: f23a025336875adec1f4182fee451741833a1b63
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -15,5 +15,5 @@ Dankzij het Real-time Customer Data Platform, dat is gebaseerd op het Adobe Expe
 
 Via de gebruikersinterface kunt u nieuw samenvoegbeleid maken, bestaand beleid beheren en een standaardsamenvoegbeleid voor uw organisatie instellen. U kunt ook voorkeuren opgeven voor gegevensbronnen en bepalen welke gegevens prioriteit hebben bij een conflict tijdens het samenvoegen.
 
-U vindt stapsgewijze instructies voor het werken met samenvoegbeleidsregels via de gebruikersinterface van Adobe Experience Platform door de zelfstudie [Werken met samenvoegingsbeleid op Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/merge_policies/create-merge-policies.md)te volgen.
+U vindt stapsgewijze instructies voor het werken met samenvoegbeleidsregels in de gebruikersinterface van Adobe Experience Platform door de gebruikershandleiding voor [samenvoegingsbeleid](../../profile/ui/merge-policies.md)te volgen.
 
