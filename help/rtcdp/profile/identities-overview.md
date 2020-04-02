@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Identity Service
 description: beschrijving
 seo-description: seo beschrijving
 translation-type: tm+mt
-source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -17,7 +17,7 @@ Nu, in plaats van vijf afzonderlijke klanten die met uw merk over vijf verschill
 
 ## Identiteitsnaamruimten
 
-Identiteitsnaamruimten zijn een onderdeel van Identiteitsservice en dienen als indicatoren die aanvullende context bieden aan de identiteit van de klant. Een voorbeeld van een veelgebruikte naamruimte voor id is &#39;E-mail&#39;, waarbij u met hetzelfde e-mailadres voor meerdere websites verschillende identiteiten kunt samenvoegen, elk met een unieke klant-id, zoals u eigenlijk bij dezelfde klant hoort. Met Experience Platform kunt u naamruimten gebruiken om te zoeken naar afzonderlijke profielen in de gebruikersinterface. Zie het overzicht [van de](/help/rtcdp/profile/profile-viewer.md)profielviewer voor meer informatie over het weergeven van profielen. Meer informatie over naamruimten vindt u in het overzicht van naamruimten [in Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md).
+Identiteitsnaamruimten zijn een onderdeel van Identiteitsservice en dienen als indicatoren die aanvullende context bieden aan de identiteit van de klant. Een voorbeeld van een veelgebruikte naamruimte voor id is &#39;E-mail&#39;, waarbij u met hetzelfde e-mailadres voor meerdere websites verschillende identiteiten kunt samenvoegen, elk met een unieke klant-id, zoals u eigenlijk bij dezelfde klant hoort. Met Experience Platform kunt u naamruimten gebruiken om te zoeken naar afzonderlijke profielen in de gebruikersinterface. Zie het overzicht [van de](/help/rtcdp/profile/profile-viewer.md)profielviewer voor meer informatie over het weergeven van profielen. Zie het overzicht [van naamruimte voor](../../identity-service/namespaces.md)identiteiten voor meer informatie over naamruimten.
 
 ## Identiteitsgrafieken
 
@@ -27,4 +27,4 @@ De Dienst van de identiteit beheert een identiteitsgrafiek die door slechts uw o
 
 ## Volgende stappen
 
-De identiteiten, en de verhoudingen tussen hen, worden bepaald en gehandhaafd door de Dienst van de Identiteit en leveraged door het Profiel van de Klant in real time om een volledig beeld van elke individuele klant en hun interactie te bouwen. Ga voor meer informatie naar de documentatie bij [Identiteitsservice op de Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md).
+De identiteiten, en de verhoudingen tussen hen, worden bepaald en gehandhaafd door de Dienst van de Identiteit en leveraged door het Profiel van de Klant in real time om een volledig beeld van elke individuele klant en hun interactie te bouwen. Ga voor meer informatie naar de documentatie bij [Identiteitsservice](../../identity-service/home.md).
