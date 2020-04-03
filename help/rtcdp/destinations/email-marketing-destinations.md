@@ -4,7 +4,7 @@ seo-title: E-mailmarketingdoelen
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 seo-description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 translation-type: tm+mt
-source-git-commit: 463212a8fabb9dd5962b4d3f523a6f2d88bb1d9d
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -39,9 +39,9 @@ In deze stap selecteert u welke velden u wilt exporteren naar marketingdoelen pe
 
 ![Doelkenmerken](/help/rtcdp/destinations/assets/destination-attributes.png)
 
-### Identiteit {#identity}
+### Identity {#identity}
 
-Wij adviseren dat u een uniek herkenningsteken van uw [verenigingsschema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)selecteert. Dit is het veld waarvan de identiteit van uw gebruikers wordt weggefilterd. Meestal is dit veld het e-mailadres, maar het kan ook een id voor een loyaliteitsprogramma of een telefoonnummer zijn. Zie de onderstaande tabel voor de meest gebruikelijke unieke id&#39;s en hun XDM-veld in één schema.
+Wij adviseren dat u een uniek herkenningsteken van uw [verenigingsschema](../../profile/home.md#profile-fragments-and-union-schemas)selecteert. Dit is het veld waarvan de identiteit van uw gebruikers wordt weggefilterd. Meestal is dit veld het e-mailadres, maar het kan ook een id voor een loyaliteitsprogramma of een telefoonnummer zijn. Zie de onderstaande tabel voor de meest gebruikelijke unieke id&#39;s en hun XDM-veld in één schema.
 
 | Unieke id | XDM-veld in Unified Schema |
 ---------|----------
