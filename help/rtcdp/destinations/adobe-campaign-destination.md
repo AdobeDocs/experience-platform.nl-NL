@@ -50,4 +50,4 @@ Wanneer u segmenten [](/help/rtcdp/destinations/activate-destinations.md) active
 
 ## Gegevensimport instellen in Adobe-campagne {#import-data-into-campaign}
 
-Nadat u CDP in realtime hebt verbonden met uw Amazon S3- of SFTP-opslag, moet u de gegevensimport instellen vanaf uw opslaglocatie naar de Adobe-campagne. Zie Gegevens [](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) importeren in de documentatie bij de Help van Adobe Campagne voor meer informatie over hoe u dit kunt bereiken.
+Nadat u CDP in realtime hebt verbonden met uw Amazon S3- of SFTP-opslag, moet u de gegevensimport instellen vanaf uw opslaglocatie naar de Adobe-campagne. Zie Gegevens [importeren in de documentatie bij de Help van Adobe Campagne voor meer informatie over het uitvoeren van dit](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) proces.
