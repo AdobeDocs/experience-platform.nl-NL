@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een segment maken
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -53,7 +53,7 @@ De eerste stap in segmentatie is een segment te bepalen dat in een constructie w
 
 U kunt een nieuwe segmentdefinitie tot stand brengen door een POST- verzoek aan het `/segment/definitions` eindpunt in Real-time API van het Profiel van de Klant te doen. Het volgende voorbeeld schetst hoe te om een definitieverzoek te formatteren, die welke informatie wordt vereist opdat een segment met succes wordt bepaald.
 
-Segmentdefinities kunnen op twee manieren worden geëvalueerd: batchsegmentatie en streamingsegmentatie. De segmentatie van de partij evalueert segmenten die op een vooraf ingesteld programma worden gebaseerd of wanneer de evaluatie manueel teweeggebracht wordt, terwijl het stromen segmentatie segmenten evalueert zodra de gegevens in Platform worden opgenomen. Deze zelfstudie gebruikt **batchsegmentatie**. Lees het [overzicht over streamingsegmentatie](../ui/streaming-segmentation.md)voor meer informatie over streamingsegmentatie.
+Segmentdefinities kunnen op twee manieren worden geëvalueerd: batchsegmentatie en streamingsegmentatie. De segmentatie van de partij evalueert segmenten die op een vooraf ingesteld programma worden gebaseerd of wanneer de evaluatie manueel teweeggebracht wordt, terwijl het stromen segmentatie segmenten evalueert zodra de gegevens in Platform worden opgenomen. Deze zelfstudie gebruikt **batchsegmentatie**. Lees het [overzicht over streamingsegmentatie](../api/streaming-segmentation.md)voor meer informatie over streamingsegmentatie.
 
 **API-indeling**
 
@@ -132,7 +132,7 @@ Er zijn twee vereiste stappen om een voorvertoning van uw segment te bekijken of
 
 ### Hoe schattingen worden gegenereerd
 
-Gegevenssteekproeven worden gebruikt om segmenten te evalueren en het aantal kwalificerende profielen te schatten. De nieuwe gegevens worden geladen in geheugen elke ochtend (tussen 12AM-2AM PT, die 7-9AM UTC is), en alle segmenteringsvragen worden geschat gebruikend de steekproefgegevens van die dag. Dientengevolge zullen nieuwe toegevoegde velden of extra verzamelde gegevens de volgende dag in schattingen worden weerspiegeld.
+Gegevenssteekproeven worden gebruikt om segmenten te evalueren en het aantal kwalificerende profielen te schatten. De nieuwe gegevens worden geladen in geheugen elke ochtend (tussen 12AM-2AM PT, die 7-9AM UTC is), en alle segmenteringsvragen worden geschat gebruikend de steekproefgegevens van die dag. Bijgevolg zullen nieuwe toegevoegde velden of verzamelde aanvullende gegevens de volgende dag in schattingen worden weergegeven.
 
 De voorbeeldgrootte is afhankelijk van het totale aantal entiteiten in het profielarchief. Deze steekproefgrootte wordt vertegenwoordigd in de volgende lijst:
 
