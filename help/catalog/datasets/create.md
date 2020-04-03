@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een gegevensset maken met behulp van API's
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -454,7 +454,7 @@ Met de batch-id kunt u de API voor gegevenstoegang gebruiken om terug te lezen e
 
 U kunt de API voor gegevenstoegang ook gebruiken om de naam, grootte in bytes en een koppeling te retourneren om het bestand of de map te downloaden.
 
-Gedetailleerde stappen voor het werken met de API voor gegevenstoegang vindt u in de [handleiding](../../data-access/api.md)voor ontwikkelaars van gegevenstoegang.
+Gedetailleerde stappen voor het werken met de API voor gegevenstoegang vindt u in de [handleiding](../../data-access/home.md)voor ontwikkelaars van gegevenstoegang.
 
 ## Het schema van de gegevensset bijwerken
 
