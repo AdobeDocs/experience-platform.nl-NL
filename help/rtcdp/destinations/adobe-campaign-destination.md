@@ -4,7 +4,7 @@ seo-title: Adobe-campagne
 description: De Campagne van Adobe is een reeks oplossingen die u helpen campagnes over al uw online en off-line kanalen personaliseren en leveren.
 seo-description: De Campagne van Adobe is een reeks oplossingen die u helpen campagnes over al uw online en off-line kanalen personaliseren en leveren.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -45,9 +45,9 @@ Voor **[!UICONTROL SFTP with SSH Key]** verbindingen, moet u Domein, Haven, Gebr
 
 ## Doelkenmerken {#destination-attributes}
 
-Wanneer u segmenten [](/help/rtcdp/destinations/activate-destinations.md) activeert naar de bestemming van de Campagne van Adobe, adviseren wij dat u een uniek herkenningsteken van uw [verenigingsschema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Zie [Selecteren welke schemavelden u als doelkenmerken wilt gebruiken in uw geëxporteerde bestanden](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in E-mailmarketingdoelen voor meer informatie.
+Wanneer u segmenten [](/help/rtcdp/destinations/activate-destinations.md) activeert naar de bestemming van de Campagne van Adobe, adviseren wij dat u een uniek herkenningsteken van uw [verenigingsschema](../../profile/home.md#profile-fragments-and-union-schemas)selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Zie [Selecteren welke schemavelden u als doelkenmerken wilt gebruiken in uw geëxporteerde bestanden](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in E-mailmarketingdoelen voor meer informatie.
 
 
 ## Gegevensimport instellen in Adobe-campagne {#import-data-into-campaign}
 
-Nadat u CDP in realtime hebt verbonden met uw Amazon S3- of SFTP-opslag, moet u de gegevensimport instellen vanaf uw opslaglocatie naar de Adobe-campagne. Zie Gegevens [importeren in de documentatie bij de Help van Adobe Campagne voor meer informatie over het uitvoeren van dit](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) proces.
+Nadat u CDP in realtime hebt verbonden met uw Amazon S3- of SFTP-opslag, moet u de gegevensimport instellen vanaf uw opslaglocatie naar de Adobe-campagne. Zie Gegevens [](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) importeren in de documentatie bij de Help van Adobe Campagne voor meer informatie over hoe u dit kunt bereiken.
