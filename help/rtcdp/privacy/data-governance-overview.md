@@ -4,7 +4,7 @@ seo-title: Gegevensbeheer in het Real-Time Customer Data Platform
 description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 seo-description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
 ---
 
@@ -15,7 +15,7 @@ Het Real-time Platform van de Gegevens van de Klant (CDP in real time) brengt ge
 
 Met de gegevensbeheer van het Adobe Experience Platform kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een zeer belangrijke rol binnen CDP In real time, toestaand u om gebruiksbeleid te bepalen, uw gegevens te categoriseren die op dat beleid worden gebaseerd, en beleidsschendingen te controleren wanneer het uitvoeren van bepaalde marketing acties.
 
-CDP in real time wordt voortgebouwd bovenop het Platform van de Ervaring van Adobe, en daarom worden de meeste mogelijkheden van het Beleid van Gegevens behandeld in de documentatie van het Platform van de Ervaring. Dit document is bedoeld als aanvulling op het overzicht [van](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) gegevensbeheer voor het ervaringsplatform en geeft een overzicht van de bestuurskenmerken die beschikbaar zijn in real-time CDP. De volgende onderwerpen worden behandeld:
+CDP in real time wordt voortgebouwd bovenop het Platform van de Ervaring van Adobe, en daarom worden de meeste mogelijkheden van het Beleid van Gegevens behandeld in de documentatie van het Platform van de Ervaring. Dit document is bedoeld als aanvulling op het overzicht [van](../../data-governance/home.md) gegevensbeheer voor het ervaringsplatform en geeft een overzicht van de bestuurskenmerken die beschikbaar zijn in real-time CDP. De volgende onderwerpen worden behandeld:
 
 * [Gebruikslabels toepassen op uw gegevens](#labels)
 * [Beleid voor gegevensgebruik beheren](#policies)
@@ -25,7 +25,7 @@ CDP in real time wordt voortgebouwd bovenop het Platform van de Ervaring van Ado
 
 Met gegevensbeheer kunt u gebruikslabels op uw gegevens toepassen, op het niveau van de gegevensset of op het niveau van de gegevensset-velden. Met labels voor gegevensgebruik kunt u gegevens indelen op basis van het gebruiksbeleid dat op die gegevens van toepassing is.
 
-Raadpleeg de gebruikershandleiding bij [de labels voor](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md) gegevensgebruikslabels voor het Adobe Experience Platform voor meer informatie over het werken met labels voor gegevensgebruik.
+Raadpleeg de gebruikershandleiding bij [de labels voor](../../data-governance/labels/overview.md) gegevensgebruikslabels voor het Adobe Experience Platform voor meer informatie over het werken met labels voor gegevensgebruik.
 
 ## Beperkingen voor doelen instellen
 
@@ -36,9 +36,9 @@ Gebruiksgevallen voor marketing kunnen worden gedefinieerd tijdens de fase _Setu
 
 ## Beleid voor gegevensgebruik beheren {#policies}
 
-Om gegevensgebruikslabels effectief gegevensnaleving te steunen, moet het beleid van het gegevensgebruik worden bepaald en worden toegelaten. Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen CDP in real time mag uitvoeren. Zie het gedeelte Beleid voor gegevensgebruik in het overzicht [Data Governance-](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) gegevens van het ervaringsplatform voor meer informatie.
+Om gegevensgebruikslabels effectief gegevensnaleving te steunen, moet het beleid van het gegevensgebruik worden bepaald en worden toegelaten. Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen CDP in real time mag uitvoeren. Zie het gedeelte Beleid voor gegevensgebruik in het overzicht [Data Governance-](../../data-governance/home.md) gegevens van het ervaringsplatform voor meer informatie.
 
-Het Adobe Experience Platform biedt verschillende **basisbeleidsregels** voor veelvoorkomende gebruikssituaties voor klanten. Dit beleid kan worden bekeken door een verzoek aan de [DULE Dienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)van het Beleid, zoals aangetoond in de &quot;Lijst alle beleidsgebieden&quot;sectie in de [de ontwikkelaarsgids](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md)van de Dienst van het Beleid te doen. U kunt ook uw eigen **aangepaste beleid** maken om aangepaste gebruiksbeperkingen te modelleren, zoals in de sectie &quot;Een beleid maken&quot; in de handleiding voor ontwikkelaars wordt getoond.
+Het Adobe Experience Platform biedt verschillende **basisbeleidsregels** voor veelvoorkomende gebruikssituaties voor klanten. Dit beleid kan worden bekeken door een verzoek aan de [DULE Dienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)van het Beleid, zoals aangetoond in de &quot;Lijst alle beleidsgebieden&quot;sectie in de [de ontwikkelaarsgids](../../data-governance/policies/overview.md)van de Dienst van het Beleid te doen. U kunt ook uw eigen **aangepaste beleid** maken om aangepaste gebruiksbeperkingen te modelleren, zoals in de sectie &quot;Een beleid maken&quot; in de handleiding voor ontwikkelaars wordt getoond.
 
 ## (bèta) Naleving van gegevensgebruik afdwingen {#enforce-data-usage-compliance}
 
@@ -70,7 +70,7 @@ Klik op **Gegevenslijn** om de doelen, segmenten, samenvoegbeleidsregels of gege
 
 Nadat een schending heeft teweeggebracht, wordt de **sparen** knoop onbruikbaar gemaakt voor de activering tot de aangewezen componenten worden bijgewerkt om aan het beleid van het gegevensgebruik te voldoen.
 
-### Beleidshandhaving voor geactiveerde segmenten
+### Beleidshandhaving voor geactiveerde segmenten {#policy-enforcement-for-activated-segments}
 
 De handhaving van het beleid is nog op segmenten van toepassing nadat zij zijn geactiveerd, beperkt om het even welke veranderingen in een segment of zijn bestemming die in een beleidsschending zouden resulteren. Wegens de talrijke componenten betrokken bij het activeren van segmenten aan bestemmingen, kunnen om het even welke volgende acties potentieel een schending teweegbrengen:
 
@@ -83,4 +83,4 @@ Als een van de bovenstaande acties een schending veroorzaakt, wordt die actie ve
 
 ## Volgende stappen
 
-Nu u bent geïntroduceerd in de belangrijkste functies voor gegevensbeheer op CDP in real-time en hoe het Experience Platform deze functies inschakelt, gaat u verder met de [documentatie voor gegevensbeheer op het Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html). De documentatie verstrekt overzichten van essentiële concepten van het Beleid van Gegevens, evenals geleidelijke werkschema&#39;s voor het beheren van de etiketten en het beleid van het gegevensgebruik.
+Nu u bent geïntroduceerd in de belangrijkste functies voor gegevensbeheer op CDP in real-time en hoe het Experience Platform deze functies inschakelt, gaat u verder met de [documentatie voor gegevensbeheer op het Adobe Experience Platform](../../data-governance/home.md). De documentatie verstrekt overzichten van essentiële concepten van het Beleid van Gegevens, evenals geleidelijke werkschema&#39;s voor het beheren van de etiketten en het beleid van het gegevensgebruik.
