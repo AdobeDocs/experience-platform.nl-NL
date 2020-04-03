@@ -13,7 +13,7 @@ source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 Het Real-Time Customer Data Platform (Real-time CDP) helpt marketers gegevens van meerdere bedrijfssystemen samen te brengen, zodat ze hun klanten beter kunnen identificeren, begrijpen en betrekken. Adobe beschouwt de privacy van consumentengegevens als een fundamenteel ontwerpbeginsel en biedt verschillende besturingselementen om marketers te helpen de privacy van gegevens van hun klanten te beheren.
 
-De meeste CDP-mogelijkheden in realtime worden aangestuurd door het Adobe Experience Platform. Dit document biedt informatie over de verschillende technologieën voor privacyverbetering die worden ondersteund door Real-time CDP, met koppelingen naar de documentatie van Experience Platform voor meer informatie.
+De meeste CDP-mogelijkheden in realtime worden aangestuurd door het Adobe Experience Platform. Dit document biedt informatie over de verschillende technologieën voor privacyverbetering die worden ondersteund door Real-time CDP, met koppelingen naar de documentatie van het Experience Platform voor meer informatie.
 
 ## Privacy Service
 
