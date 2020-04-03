@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Segmentation Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -47,7 +47,7 @@ Voor informatie over het bouwen van segmentdefinities die API gebruiken, zie de 
 
 Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan het Profiel van de Klant in real time. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
 
-Lees de documentatie over [](./ui/streaming-segmentation.md)streamingsegmentatie voor meer informatie over streamingsegmentatie.
+Lees de documentatie over [](./api/streaming-segmentation.md)streamingsegmentatie voor meer informatie over streamingsegmentatie.
 
 ### Batchsegmentatie
 
