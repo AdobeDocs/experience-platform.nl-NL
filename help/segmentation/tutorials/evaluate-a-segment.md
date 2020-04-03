@@ -173,7 +173,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **Verzoek**
 
-In het volgende verzoek wordt de opmaak [van](http://jsonpatch.com/) JSON-patch gebruikt om de [uitsnijdexpressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor het schema bij te werken. In dit voorbeeld wordt het schema nu geactiveerd om 10:15:00 UTC.
+In het volgende verzoek wordt [JSON-patchopmaak](http://jsonpatch.com/) gebruikt om de [cron-expressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor het schema bij te werken. In dit voorbeeld wordt het schema nu geactiveerd om 10:15:00 UTC.
 
 ```shell
 curl -X POST \
