@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruikershandleiding voor de privacyservice
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
+source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
 
 ---
 
@@ -74,16 +74,18 @@ Als u de volledige taakgegevens als CSV-bestand wilt downloaden, klikt u op **Ex
 
 ## Een nieuw verzoek voor een privacytaak maken
 
+>[!NOTE] Als u een privacytaakverzoek wilt maken, moet u identiteitsgegevens opgeven voor de specifieke klanten van wie de gegevens moeten worden benaderd of verwijderd. Controleer het document over [identiteitsgegevens voor privacyverzoeken](../identity-data.md) voordat u doorgaat met deze sectie.
+
 De interface van de privacyservice biedt twee methoden om nieuwe taakaanvragen te maken:
 
-* De Request Builder gebruiken
-* Een JSON-bestand uploaden
+* [De Request Builder gebruiken](#request-builder)
+* [Een JSON-bestand uploaden](#json)
 
 De stappen voor het gebruiken van elk van deze methodes worden verstrekt in de volgende secties.
 
-### De Request Builder gebruiken
+### De Request Builder gebruiken {#request-builder}
 
-Met de Request Builder kunt u handmatig een nieuw verzoek voor een privacytaak maken in de gebruikersinterface. De Bouwer van het Verzoek wordt best gebruikt voor eenvoudigere en kleinere reeksen verzoeken, omdat de de grensverzoeken van de Bouwer van het Verzoek om slechts identiteitskaart type per gebruiker te hebben. Voor meer gecompliceerde verzoeken is het beter om een JSON-bestand [te](#upload-a-json-file) uploaden.
+Met de Request Builder kunt u handmatig een nieuw verzoek voor een privacytaak maken in de gebruikersinterface. De Bouwer van het Verzoek wordt best gebruikt voor eenvoudigere en kleinere reeksen verzoeken, omdat de de grensverzoeken van de Bouwer van het Verzoek om slechts identiteitskaart type per gebruiker te hebben. Voor meer gecompliceerde verzoeken is het beter om een JSON-bestand [te](#json) uploaden.
 
 Klik op Verzoek **** maken onder de widget Statusrapport aan de rechterkant van het scherm om de Request-builder te gaan gebruiken.
 
@@ -91,19 +93,31 @@ Klik op Verzoek **** maken onder de widget Statusrapport aan de rechterkant van 
 
 Het dialoogvenster *Aanvraag* maken wordt geopend en hierin worden de beschikbare opties weergegeven voor het indienen van een aanvraag voor een privacytaak voor het momenteel geselecteerde regulatietype.
 
-![](../images/user-guide/request-builder.png)
+<img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Selecteer het **Taaktype** van de aanvraag (&quot;Schrapping&quot;of &quot;Toegang&quot;) en één of meerdere beschikbare **Producten** van de lijst. Selecteer onder **Klantnamen** een id-type in de vervolgkeuzelijst (e-mail, ECID of HULP). Typ de id-waarden in het tekstvak rechts, waarbij u voor elke id op **\&lt;enter>** drukt om deze toe te voegen aan de lijst.
+Selecteer het **Taaktype** van de aanvraag (&quot;Schrapping&quot;of &quot;Toegang&quot;) en één of meerdere beschikbare **Producten** van de lijst.
 
-![](../images/user-guide/request-builder-fillout.png)
+<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-De id&#39;s in deze lijst ontvangen een kopie van eventuele e-mailmeldingen van de privacyservice die worden verzonden wanneer een taak is voltooid, voltooid is met fouten of time-out. Klik op **Maken** als u klaar bent.
+Selecteer onder *Type* Namespace het juiste naamruimtetype voor de klant-id&#39;s die naar de Privacy-service worden verzonden.
 
-![](../images/user-guide/request-builder-create.png)
+<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+
+Wanneer u het _standaardnaamruimtetype_ gebruikt, selecteert u een naamruimte in het keuzemenu (e-mail, ECID of AID) en typt u vervolgens de id-waarden in het tekstvak rechts, waarbij u op **\&lt;enter>** drukt voor elke id om deze toe te voegen aan de lijst.
+
+<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+
+Wanneer u het _aangepaste_ naamruimtetype gebruikt, moet u de naamruimte handmatig typen voordat u de onderstaande id-waarden opgeeft.
+
+<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+
+Klik op **Maken** als u klaar bent.
+
+<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
 Het dialoogvenster verdwijnt en de nieuwe taak (of taken) worden samen met de huidige verwerkingsstatus weergegeven in de widget Taakverzoeken.
 
-### Een JSON-bestand uploaden
+### Een JSON-bestand uploaden {#json}
 
 Wanneer u complexere aanvragen maakt, zoals aanvragen die meerdere id-typen gebruiken voor elke gegevenssubject die wordt verwerkt, kunt u een aanvraag maken door een JSON-bestand te uploaden.
 
@@ -113,12 +127,12 @@ Klik op de pijl naast Verzoek **** maken onder de widget Statusrapport aan de re
 
 Het dialoogvenster JSON ** uploaden wordt weergegeven en u krijgt een venster waarin u uw JSON-bestand kunt slepen en neerzetten.
 
-![](../images/user-guide/upload-json.png)
+<img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
 Als u geen JSON-bestand hebt om te uploaden, klikt u op Adobe-GDPR-Request.json **** downloaden om een sjabloon te downloaden dat u kunt vullen op basis van de waarden die u van de betrokkenen hebt verzameld.
 
 
-![](../images/user-guide/privacy-template.png)
+<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
 
 
 Zoek het JSON-bestand op uw computer en sleep het naar het dialoogvenster. Als het uploaden is voltooid, wordt de bestandsnaam weergegeven in het dialoogvenster. U kunt desgewenst meer JSON-bestanden toevoegen door deze naar het dialoogvenster te slepen.
