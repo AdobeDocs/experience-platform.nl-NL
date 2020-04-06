@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Gebruikershandleiding voor beleid samenvoegen
 topic: guide
 translation-type: tm+mt
-source-git-commit: 83c7ff45af7266904121b7ff6edcb0f9b0559fee
+source-git-commit: 3669d740b22b650d4079d83026f122ffee42b9a0
 
 ---
 
@@ -86,6 +86,15 @@ Nadat u de benodigde wijzigingen hebt aangebracht, klikt u op **Opslaan** om ter
 
 ![](../images/merge-policies/edited.png)
 
+## Schendingen van het beleid inzake gegevensbeheer
+
+Wanneer het creëren van of het bijwerken van een samenvoegbeleid, wordt een controle uitgevoerd om te bepalen als het fusiebeleid om het even welk beleid van het gegevensgebruik schendt dat door uw organisatie wordt bepaald. Beleid voor gegevensgebruik maakt deel uit van Data Governance in het Adobe Experience Platform. Dit zijn regels die de soorten marketingacties beschrijven die u kunt uitvoeren of waarvan u een beperking hebt opgelegd voor het uitvoeren van specifieke Platform-gegevens. Bijvoorbeeld, als een fusiebeleid werd gebruikt om een segment tot stand te brengen dat aan een derdebestemming activeerde, en uw organisatie een beleid van het gegevensgebruik had dat de uitvoer van specifieke gegevens naar derden verhindert, zou u een bericht &quot;van de het beleidsschending van Gegevens ontdekt&quot;wanneer het proberen om uw fusiebeleid te bewaren.
+
+Deze melding bevat een lijst met beleidsregels voor gegevensgebruik die zijn overtreden. U kunt de details van de schending bekijken door een beleid in de lijst te selecteren. Als u een overtreden beleid selecteert, biedt het tabblad *Gegevenskoppeling* de *reden voor schending* en de betreffende *activering*, elk met meer details over de manier waarop het beleid voor gegevensgebruik is overtreden.
+
+Als u meer wilt weten over de manier waarop gegevensbeheer wordt uitgevoerd in het Adobe Experience Platform, leest u eerst het overzicht [van](../../data-governance/home.md)gegevensbeheer.
+
+![](../images/merge-policies/policy-violation.png)
 
 ## Volgende stappen
 
