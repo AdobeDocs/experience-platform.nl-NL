@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Opmerkingen bij de release Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: d7aa1b4e3e697a504964d6eb485f536065c6718a
+source-git-commit: 682436b29df4696e98ef96fe5a65ab32221098ba
 
 ---
 
@@ -13,12 +13,22 @@ source-git-commit: d7aa1b4e3e697a504964d6eb485f536065c6718a
 
 Dit document bevat informatie over nieuwe functies voor de Adobe Experience Platform Privacy Service, en over verbeteringen en belangrijke correcties voor problemen.
 
+## 8 april 2020
+
+### Nieuwe functies
+
+| Functie | Beschrijving |
+| --- | --- |
+| PDPA-ondersteuning | De verzoeken van de privacy kunnen nu worden gecreeerd en worden gevolgd onder de Wet van de Bescherming van Persoonlijke Gegevens (PDPA) in Thailand. Wanneer u privacyverzoeken indient in de API, accepteert de `regulation` array de waarde &quot;pdpa_tha&quot;. |
+| Naamruimtetypen in de gebruikersinterface | U kunt nu verschillende naamruimtetypen opgeven in de Request Builder in de gebruikersinterface van de privacyservice. Raadpleeg de [gebruikershandleiding](ui/user-guide.md) voor meer informatie. |
+| Oude afleiding van eindpunt | Het oude API-eindpunt (`data/privacy/gdpr`) is vervangen. |
+
 ## 14 januari 2020
 
 ### Nieuwe functies
 
 | Functie | Beschrijving |
---- | ---
+| --- | --- |
 | Privacy Service opnieuw brandmerken | De voormalige naam &quot;GDPR Service&quot; is omgedoopt tot Privacy Service, aangezien de dienst is gegroeid om andere regels naast GDPR te ondersteunen. |
 | Nieuwe API-eindpunten | Het basispad voor de privacyservice-API is bijgewerkt van `/data/privacy/gdpr` naar `/data/core/privacy/jobs` |
 | Nieuwe vereiste `regulation` eigenschap | Bij het creëren van nieuwe banen in de Dienst API van de Privacy, moet een `regulation` bezit in de verzoeklading worden geleverd om te wijzen op welke verordening om de baan onder te volgen. Accepteerde waarden zijn `gdpr` en `ccpa`. Raadpleeg het document over [privacytaken](api/privacy-jobs.md) in de handleiding voor ontwikkelaars van de privacyservice voor meer informatie. |
@@ -35,7 +45,7 @@ Dit document bevat informatie over nieuwe functies voor de Adobe Experience Plat
 ### Nieuwe functies
 
 | Functie | Beschrijving |
---- | ---
+| --- | --- |
 | Metrische dashboard aanvragen | Het nieuwe dashboard Metrics in de UI van de Dienst van de Privacy verstrekt zicht in voorgelegde, geëiste, en voltooide GDPR- verzoeken. |
 | Request Builder | Aan de dienstorganisaties met zowel technische als niet-technische gebruikers die GDPR- verzoeken indienen, is een functionaliteit &quot;Create Verzoek&quot;toegevoegd aan UI. De mogelijkheid voor het indienen van JSON-bestanden is nog steeds beschikbaar in de interface van de privacyservice voor organisaties die deze functie liever blijven gebruiken. |
 | GDPR-berichten over taakgebeurtenissen | Gebeurtenismeldingen over GDPR-taakstatussen zijn voor veel workflows van essentieel belang. Hoewel meldingen eerder via afzonderlijke e-mailberichten zijn verzonden, zijn GDPR-gebeurtenismeldingen berichten die gebruikmaken van Adobe I/O-gebeurtenissen. Deze berichten worden verzonden naar een geconfigureerde webhaak die de automatisering van taakaanvragen vergemakkelijkt. Gebruikers van de privacyservice kunnen zich abonneren op Adobe I/O GDPR-gebeurtenissen om updates te ontvangen wanneer een product of de GDPR-taak is voltooid. |
