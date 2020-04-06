@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Source Connectors Help
+user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: e9b3ca0fa76456e2e6757bcc37cd813f3e64fbf7
+source-git-commit: 10893353215296546fffde109b6f87d90c4c1a55
 
 ---
 
@@ -11,10 +11,10 @@ source-git-commit: e9b3ca0fa76456e2e6757bcc37cd813f3e64fbf7
 # Bronaansluitingen {#source-connectors}
 
 - [Overzicht van bronconnectors](home.md)
-- UI voor bronconnectors {#ui}
-   - Adobe-toepassingen {#adobe-applications}
-      - [Gegevensconnector Analytics](ui/adobe-applications/analytics.md)
-      - [Toewijzingsvelden voor analysemogelijkheden](ui/adobe-applications/analytics-mapping.md)
-      - [Poortbeheeraansluiting](ui/adobe-applications/audience-manager.md)
-      - [Toewijzingsveld voor Audiontanager](ui/adobe-applications/audience-manager-mapping.md)
-      - [Doeltoewijzingsvelden](ui/adobe-applications/target-mapping.md)
+- Aansluitingen voor Adobe-toepassingen {#adobe-applications}
+   - [Adobe Analytics-connector](ui/adobe-applications/analytics.md)
+   - [Aansluiting voor Adobe Audience Manager](ui/adobe-applications/audience-manager.md)
+   - Verbindingsvelden voor Adobe-toepassingen toewijzen aan XDM-schema&#39;s
+      - [Adobe Analytics](ui/adobe-applications/analytics-mapping.md)
+      - [Adobe Audience Manager](ui/adobe-applications/audience-manager-mapping.md)
+      - [Adobe-doel](ui/adobe-applications/target-mapping.md)
