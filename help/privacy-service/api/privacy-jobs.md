@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Taken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 8102610e2733a75f22cf62d70c0408e3832d0803
+source-git-commit: cde7acc2fd112b9a5d0b86b40b3bc712c6505064
 
 ---
 
@@ -238,7 +238,7 @@ curl -X POST \
 | `expandIDs` | Een optionele eigenschap die, wanneer ingesteld op `true`, een optimalisatie vertegenwoordigt voor het verwerken van de id&#39;s in de toepassingen (momenteel alleen ondersteund door Analytics). Als deze waarde wordt weggelaten, wordt deze standaard ingesteld op `false`. |
 | `priority` | Een optionele eigenschap die wordt gebruikt door Adobe Analytics en die de prioriteit voor het verwerken van aanvragen instelt. Accepteerde waarden zijn `normal` en `low`. Als `priority` wordt weggelaten, is het standaardgedrag `normal`. |
 | `analyticsDeleteMethod` | Een optionele eigenschap die aangeeft hoe Adobe Analytics de persoonlijke gegevens moet verwerken. Voor dit kenmerk worden twee mogelijke waarden geaccepteerd: <ul><li>`anonymize`: Alle gegevens waarnaar door de opgegeven verzameling gebruikers-id&#39;s wordt verwezen, worden anoniem gemaakt. Als `analyticsDeleteMethod` wordt weggelaten, is dit het standaardgedrag.</li><li>`purge`: Alle gegevens worden volledig verwijderd.</li></ul> |
-| `regulation` **(Vereist)** | De verordening voor het verzoek (moet &quot;gdpr&quot; of &quot;ccpa&quot; zijn). |
+| `regulation` **(Vereist)** | De verordening voor het verzoek. Moet een van de volgende drie waarden zijn: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Antwoord**
 
