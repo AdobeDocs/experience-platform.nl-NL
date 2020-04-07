@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruiksaanwijzing voor labels voor gegevensgebruik
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: a19a9a31743002eb5fd3a5ecb6668b4c760faa9a
 
 ---
 
@@ -98,6 +98,8 @@ Het is belangrijk om te herinneren dat de overerving zich van top-level slechts 
 ## Volgende stappen
 
 Nu u de etiketten van het gegevensgebruik op de dataset en gebiedsniveau hebt toegevoegd, kunt u beginnen om gegevens in het Platform van de Ervaring in te voeren. Voor meer informatie begint u met het lezen van de [gegevensinvoerdocumentatie](../../ingestion/home.md).
+
+U kunt nu ook beleid voor gegevensgebruik definiëren op basis van de labels die u hebt toegepast. Zie het overzicht [van beleidsregels voor](../policies/overview.md)gegevensgebruik voor meer informatie.
 
 ## Aanvullende bronnen
 
