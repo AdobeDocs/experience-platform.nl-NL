@@ -4,7 +4,7 @@ seo-title: Documenttitel in Adobe Experience Platform
 description: beschrijving
 seo-description: seo beschrijving
 translation-type: tm+mt
-source-git-commit: cd7c10fa789cf749296144b36e805da2ed76be8b
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -17,12 +17,12 @@ Woorden en dingen
 
 Extensies
 
-> [!NOTE]
+>[!NOTE]
 > 
 > Dit is regel 1.
 >
 > Dit is regel 2.
 
-> [!VIDEO](https://youtu.be/ypS_CKym5NQ)
+>[!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
 Kies Bewerken > [!UICONTROL Processing Rules] om iets te doen. Gebruik [!DNL Microsoft Visual Code].
