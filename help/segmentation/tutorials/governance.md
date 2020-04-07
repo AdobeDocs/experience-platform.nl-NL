@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Compatibiliteit van gegevensgebruik voor publiekssegmenten afdwingen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -42,7 +42,7 @@ Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele 
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> [!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+>[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -253,7 +253,7 @@ Een succesvolle reactie keert een lijst van de etiketten van het gegevensgebruik
 
 ## Gegevensvelden filteren
 
-> [!NOTE] Deze stap is optioneel. Als u de gegevens in uw segment niet wilt aanpassen op basis van uw bevindingen in de vorige stap van het [opzoeken van labels](#lookup-data-usage-labels-for-the-source-datasets)voor gegevensgebruik, kunt u verdergaan met de laatste stap van het [evalueren van de gegevens voor beleidsovertredingen](#evaluate-data-for-policy-violations).
+>[!NOTE] Deze stap is optioneel. Als u de gegevens in uw segment niet wilt aanpassen op basis van uw bevindingen in de vorige stap van het [opzoeken van labels](#lookup-data-usage-labels-for-the-source-datasets)voor gegevensgebruik, kunt u verdergaan met de laatste stap van het [evalueren van de gegevens voor beleidsovertredingen](#evaluate-data-for-policy-violations).
 
 Als u wenst om de gegevens aan te passen inbegrepen in uw publiekssegment, kunt u dit doen gebruikend één van de volgende twee methodes:
 
