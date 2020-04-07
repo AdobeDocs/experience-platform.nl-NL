@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een beleid voor gegevensgebruik maken
 topic: policies
 translation-type: tm+mt
-source-git-commit: 04b2e07ba39df9f530c9c93c4bf1af9e2cf30169
+source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
 
 ---
 
@@ -409,6 +409,8 @@ Een geslaagde reactie retourneert HTTP-status 200 (OK) en de details van het bij
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een beleid DULE voor een marketing actie gecreeerd. U kunt nu doorgaan met de zelfstudie over het [afdwingen van DULE-beleid](../enforcement/api-enforcement.md) om te leren hoe u kunt controleren op beleidsovertredingen en deze kunt afhandelen in uw ervaringstoepassing.
+Aan de hand van deze zelfstudie hebt u een beleid voor gegevensgebruik voor een marketingactie gemaakt. U kunt nu doorgaan met de zelfstudie over het [afdwingen van beleid](../enforcement/api-enforcement.md) voor gegevensgebruik om te leren hoe u kunt controleren op beleidsovertredingen en deze kunt afhandelen in uw ervaringstoepassing.
 
-Voor meer informatie over de verschillende beschikbare verrichtingen in de Dienst API van het Beleid, zie de de ontwikkelaarsgids [van de Dienst van het](../api/getting-started.md)Beleid. Voor informatie over hoe te om DULE beleid voor de gegevens van het Profiel van de Klant in real time af te dwingen, zie de zelfstudie over het [afdwingen van de naleving van het gegevensgebruik voor publiekssegmenten](../../segmentation/tutorials/governance.md).
+Voor meer informatie over de verschillende beschikbare verrichtingen in de Dienst API van het Beleid, zie de de ontwikkelaarsgids [van de Dienst van het](../api/getting-started.md)Beleid. Voor informatie over hoe te om beleid voor de gegevens van het Profiel van de Klant in real time af te dwingen, zie de zelfstudie over het [afdwingen van de naleving van het gegevensgebruik voor publiekssegmenten](../../segmentation/tutorials/governance.md).
+
+Leer hoe te om gebruiksbeleid in het gebruikersinterface van het Platform van de Ervaring te beheren, zie de gids [van de](user-guide.md)beleidsgebruiker.
