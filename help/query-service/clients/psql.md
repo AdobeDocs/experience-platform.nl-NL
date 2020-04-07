@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verbinding maken met PSQL
 topic: connect
 translation-type: tm+mt
-source-git-commit: 8310204071375a55329f661c9ac678f96979a594
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -65,7 +65,7 @@ Klik op **kopie** voor &quot;PSQL-opdracht&quot;.
 
 ![Afbeelding](../images/clients/psql/connect-bi.png)
 
-> [!IMPORTANT]: Als u op PC bent, gebruik een tekstredacteur om de lijnonderbrekingen in het bevelkoord te verwijderen, dan kopieer het koord.
+>[!IMPORTANT]: Als u op PC bent, gebruik een tekstredacteur om de lijnonderbrekingen in het bevelkoord te verwijderen, dan kopieer het koord.
 
 Plak de opdrachttekenreeks in een terminal- of opdrachtvenster en druk op Enter.
 
