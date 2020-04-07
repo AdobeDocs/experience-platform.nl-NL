@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Governance Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: 42efd7295dd8002869694a146ea166ad21bd14bb
 
 ---
 
@@ -35,7 +35,7 @@ Gegevensstewards vormen de kern van gegevensbeheer. Deze rol is verantwoordelijk
 
 Marktdeelnemers zijn het eindpunt van gegevensbeheer. Ze vragen gegevens van de infrastructuur voor gegevensbeheer die is gemaakt door data stewards, wetenschappers en engineers. Marktdeelnemers omvatten een aantal verschillende specialiteiten onder de marketingparaplu, waaronder:
 
-* De analisten van de marketing verzoeken gegevens om begrip van klanten, zowel als individuen als in groepen (ook die als segmenten worden bekend) toe te laten.
+* De analisten van de marketing verzoeken gegevens om inzicht in klanten, zowel als individuen als in groepen (ook die als segmenten worden bekend) toe te laten.
 * De Specialisten van de marketing en Ontwerpers van de Ervaring gebruiken gegevens om nieuwe klantenervaringen te ontwerpen.
 
 
@@ -74,15 +74,11 @@ Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid
 
 Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naar een derdedienst uit te voeren. Als er een beleid is dat zegt dat de specifieke types van gegevens, zoals Persoonlijk Identificeerbare Informatie (PII), niet kunnen worden uitgevoerd en een &quot;I&quot;etiket (de Gegevens van de Identiteit) is toegepast op de dataset, zult u een reactie van de Dienst van het Beleid ontvangen die u vertelt dat een beleid van het gegevensgebruik is geschonden.
 
-### Beleid voor gegevensgebruik maken en gebruiken
+Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensstewards beleid tot stand brengen gebruikend de DULE Dienst API van het Beleid of de gebruikersinterface van het Platform van de Ervaring.
 
-Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevens stewards beleid tot stand brengen gebruikend de DULE Dienst API van het Beleid.
+Voor meer informatie bij het uitvoeren van de belangrijkste verrichtingen die door de DULE Dienst API van het Beleid worden verstrekt, zie de de ontwikkelaarsgids [van de Dienst van het](api/getting-started.md)Beleid. Voor geleidelijke instructies over het werken met DULE beleid, zie de zelfstudie over het [creëren van en het evalueren van DULE beleid gebruikend API](policies/create.md).
 
-Als gegevenssteward, kunt u de Dienst API van het Beleid gebruiken om beleid met betrekking tot marketing acties te beheren en te evalueren die op gegevens worden genomen die etiketten DULE bevatten. Met behulp van de API kunt u beleid maken en bijwerken, de status van een beleid bepalen en met marketingacties werken om te beoordelen of een specifieke actie een beleid voor gegevensgebruik schendt.
-
-Binnen de API van de Dienst van het Beleid, worden alle beleid en marketing acties bedoeld als of `core` of `custom` middelen. `core` bronnen worden gedefinieerd en onderhouden door Adobe, terwijl `custom` bronnen worden gemaakt en onderhouden door individuele klanten. De `custom` middelen zijn dus uniek en zijn alleen zichtbaar voor de organisatie die ze heeft gemaakt.
-
-Voor meer informatie bij het uitvoeren van de belangrijkste verrichtingen die door de DULE Dienst API van het Beleid worden verstrekt, zie de de ontwikkelaarsgids [van de Dienst van het](api/getting-started.md)Beleid. Voor geleidelijke instructies bij het werken met DULE beleid, zie de zelfstudie over het [creëren van en het evalueren van DULE beleid](policies/create.md).
+Voor informatie over hoe te om beleid in de UI van het Platform van de Ervaring te beheren, zie de gids [van de](policies/user-guide.md)beleidsgebruiker.
 
 ## Toekomstige releases
 
