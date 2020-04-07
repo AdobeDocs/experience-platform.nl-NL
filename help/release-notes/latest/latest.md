@@ -1,91 +1,73 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform
-description: Opmerkingen bij de release Experience Platform van 11 maart 2020
+description: Opmerkingen bij de release Experience Platform van 8 april 2020
 doc-type: release notes
-last-update: March 10, 2020
+last-update: April 7, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
 
 ---
 
 
 # Opmerkingen bij de release Adobe Experience Platform
 
-## Releasedatum: 11 maart 2020
+## Releasedatum: 8 april 2020
 
 ## Gegevensbeheer
 
-Het Platform van de ervaring staat bedrijven toe om gegevens van veelvoudige ondernemingssystemen samen te brengen om marketers beter toe te staan om, klanten te identificeren te begrijpen en in dienst te nemen. Het ervaringsplatform omvat een end-to-end infrastructuur voor gegevensbeheer, met inbegrip van de Etikettering en de Handhaving van het Gebruik van Gegevens (DULE), om het juiste gebruik van gegevens binnen Platform en wanneer het wordt gedeeld tussen systemen te verzekeren.
-
 Adobe Experience Platform Data Governance is een reeks strategieën en technologieën die worden gebruikt om klantgegevens te beheren en om ervoor te zorgen dat wordt voldaan aan de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik. Het speelt een sleutelrol binnen het ervaringsplatform op diverse niveaus, met inbegrip van catalogisering, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van de gegevenstoegang, en toegangscontrole over gegevens voor marketing acties.
 
-### Nieuwe functies
+Aan de slag met gegevensbeheer vereist een grondig inzicht in de verordeningen, de contractuele verplichtingen, en het collectieve beleid die op uw klantengegevens van toepassing zijn. Daarna kunnen gegevens worden geclassificeerd door de juiste labels voor gegevensgebruik toe te passen en kan het gebruik ervan worden geregeld door de definitie van beleid voor gegevensgebruik.
 
->[!NOTE]
->Enkele van de volgende nieuwe functies zijn momenteel in bèta beschikbaar en niet voor alle gebruikers. Beta-functies kunnen worden gewijzigd.
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Geautomatiseerde handhaving van het gegevensgebruiksbeleid voor het Real-time platform van de Gegevens van de Klant | Het beleid van het gegevensgebruik wordt nu afgedwongen in het werkschema van het activeren van gegevens aan bestemmingen. Het Beleid van gegevens wordt ook ingebed en afgedwongen wanneer het aanbrengen van veranderingen die bestaande activeringen (zoals veranderingen in datasetetiketten, fusiebeleid, segmentdefinities, en anderen) beïnvloeden. |
-| Gegevenslijn voor handhaving | Wanneer een beleid van het gegevensgebruik in real time CDP wordt geschonden, toont UI een bericht dat de informatie van de gegevenslijn bevat om de gebruiker te helpen begrijpen waarom het beleid werd geschonden en wat zij kunnen doen om de schending op te lossen. |
-
-
-### Bekende problemen
-
-* Geen
-
-Zie het overzicht [van](../../data-governance/home.md)gegevensbeheer voor meer informatie over gegevensbeheer.
-
-## Gegevensinname
-
-Adobe Experience Platform biedt een uitgebreide reeks functies voor het opnemen van elk type en elke vertraging van gegevens. Adobe Experience Platform Data Ingestie biedt meerdere alternatieven voor het opnemen van gegevens, zoals batch-API&#39;s, streaming API&#39;s, native Adobe-connectors, partners voor gegevensintegratie of de gebruikersinterface van het Adobe Experience Platform.
+Het DULE-framework vereenvoudigt en stroomlijnt het proces voor het indelen van gegevens en het maken van beleidsregels voor gegevensgebruik via de gebruikersinterface van het Experience Platform en de DULE Policy Service API.
 
 ### Nieuwe functies
 
 | Functie | Beschrijving |
-|------- | -----------|
-| Gedeeltelijke batch ingestie | Gedeeltelijke batch-opname is de mogelijkheid om gegevens met fouten in te voeren, tot een bepaalde drempel. Met deze functie kunnen gebruikers al hun juiste gegevens opnemen in het Adobe Experience Platform terwijl al hun onjuiste gegevens afzonderlijk worden opgeslagen. Er worden details toegevoegd aan batches die niet zijn gelukt om uit te leggen waarom deze niet zijn geslaagd voor de validatie. Meer informatie over gedeeltelijke batch-inname vindt u in de [documentatie](../../ingestion/batch-ingestion/partial.md)over gedeeltelijke batch-inname. |
+| -----------| ---------- |
+| Beleid voor gegevensgebruik beheren in de gebruikersinterface | Het beleid voor gegevensgebruik kan nu worden beheerd binnen de werkruimte _Beleid_ in de gebruikersinterface van het Experience Platform. Zie de gids [van de](../../data-governance/policies/user-guide.md) beleidsgebruiker voor meer informatie. |
 
-### Bekende problemen
+**Bekende problemen**
 
-* Geen
+* Geen.
 
-Meer over het opnemen van gegevens in Platform, bezoek de documentatie [van de Ingestie van](../../ingestion/home.md)Gegevens.
+Zie het overzicht [van](../../data-governance/home.md)gegevensbeheer voor meer informatie.
 
+## Intelligente services
 
-## Doelen
+Intelligente services stellen marketinganalisten en praktijkmensen in staat om gebruik te maken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen van de klantervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap. Daarnaast kunnen marketingprofessionals voorspellingen activeren in Adobe Experience Cloud, Adobe Experience Platform en toepassingen van derden.
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md)zijn doelen vooraf gebouwde integratie met doelplatforms die gegevens naadloos aan die partners activeren.
-
-### Nieuwe bestemmingen
-
-Er zijn nieuwe doelen beschikbaar waarmee u de gegevens van het Adobe Experience Platform kunt activeren. Zie hieronder voor meer informatie:
-
-| Doel | Beschrijving |
-|--- | ---|
-| Opslagdoelen voor cloud | Adobe Real-time CDP kan uw segmenten nu als gegevensbestanden leveren aan uw Amazon S3- of SFTP-cloudopslaglocaties. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV- of tabgescheiden bestanden. |
-| Reclamebestemmingen | De Google-doelkaart wordt nu gesplitst in drie doelkaarten voor de drie verschillende Google-platforms die momenteel worden ondersteund in Adobe Real-time CDP: Google Ads, Google Ad Manager, Google Display en Video 360. |
-
-Ga voor meer informatie naar het overzicht met [bestemmingen](../../rtcdp/destinations/destinations-overview.md)
-
-## Identiteitsservice
-
-Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van uw klant vereist. Dit wordt bemoeilijkt wanneer uw klantengegevens over verschillende systemen worden gefragmenteerd, die elke individuele klant ertoe brengen om veelvoudige &quot;identiteiten&quot;te hebben te schijnen.
-
-Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
-
-### Nieuwe functies
+**Belangrijkste kenmerken**
 
 | Functie | Beschrijving |
-| ------- | ----------- |
-| Verbeterde persoonlijke grafiek | De functionaliteit van de persoonlijke grafiek is verbeterd om de latentie van de grafiekgeneratie van een wekelijks partijproces aan een dagelijks vernieuwde grafiek te verminderen, die de klanten van de Dienst van de Identiteit toestaat om tot recentere identiteitsgrafieken en verbindingen toegang te hebben. |
+|---|---|
+| Customer AI | Klantenservice-AI biedt marketers de mogelijkheid om voorspellingen van klanten op individueel niveau te genereren met uitleg. Met behulp van invloedrijke factoren kan de AI van de Klant u vertellen wat een klant waarschijnlijk zal doen en waarom. Bovendien kunnen marketers profiteren van de voorspellingen en inzichten van de klant van AI om de ervaringen van klanten aan te passen door de meest geschikte aanbiedingen en berichten te bedienen. |
+| Attributie-AI | Attribution AI is een multi-channel, algoritmische attributiedienst die de invloed en de incrementele impact van klanteninteractie tegen gespecificeerde resultaten berekent. Met Attribution AI kunnen marketers marketing- en advertentiekosten meten en optimaliseren door de impact van elke afzonderlijke interactie van de klant in elke fase van de reizen van de klant te begrijpen. |
 
-### Bekende problemen
+**Bekende problemen**
+
+* Momenteel geen bekende problemen.
+
+Voor meer informatie over de Intelligente Diensten en wat het moet aanbieden, zie het Overzicht [van de](../../intelligent-services/home.md)Intelligente Diensten.
+
+## Privacy Service
+
+De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het recht om tot hun persoonlijke gegevens van uw gegevensopslag toegang te hebben of te schrappen op verzoek. Adobe Experience Platform Privacy Service biedt een RESTful API en een gebruikersinterface waarmee u deze gegevensaanvragen van uw klanten kunt beheren. Met de Privacy Service kunt u verzoeken om toegang tot persoonlijke of persoonlijke klantgegevens van Adobe Experience Cloud-toepassingen en deze verwijderen. Zo kunt u de automatische naleving van wettelijke en organisatorische privacyregels vereenvoudigen.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| PDPA-ondersteuning | De verzoeken van de privacy kunnen nu worden gecreeerd en worden gevolgd onder de Wet van de Bescherming van Persoonlijke Gegevens (PDPA) in Thailand. Wanneer u privacyverzoeken indient in de API, accepteert de `regulation` array de waarde &quot;pdpa_tha&quot;. |
+| Naamruimtetypen in de gebruikersinterface | U kunt nu verschillende naamruimtetypen opgeven in de Request Builder in de gebruikersinterface van de privacyservice. Raadpleeg de [gebruikershandleiding](../../privacy-service/ui/user-guide.md) voor meer informatie. |
+| Oude afleiding van eindpunt | Het oude API-eindpunt (`data/privacy/gdpr`) is vervangen. |
+
+Bekende problemen
 
 * Geen
 
-Voor meer informatie over de Dienst van de Identiteit, zie het overzicht [van de Dienst van de](../../identity-service/home.md)Identiteit.
+Voor meer informatie over de Dienst van de Privacy, gelieve te beginnen door het overzicht [van de Dienst van de](../../privacy-service/home.md)Privacy te lezen.
 
 ## Bronnen
 
@@ -97,12 +79,9 @@ Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Verouderde signalen voor de aansluiting van Adobe Audience Manager | Gegevens op signaalniveau van Audience Manger worden niet meer verzonden. Merk op dat segmentlidmaatschap voor Traits en Segmenten nog zal worden omvat. Als gevolg van deze wijziging worden er geen binnenkomende gegevenssets meer gegenereerd. |
-| Naam van gegevensset wijzigen | Datasets die door de schakelaar van de Manager van de Publiek worden geproduceerd zullen bijgewerkte namen en beschrijvingen hebben. |
-| Schakelen tussen profielen in Audience Manger inschakelen | De knevel van het profiel kan worden toegelaten of worden onbruikbaar gemaakt om dataset aan het Profiel van de Klant in real time te bevorderen. Schakelen wordt standaard ingeschakeld. |
-| UI-ondersteuning voor cloudopslagsystemen | Nieuwe bronaansluiting voor Azure Data Lake Storage Gen2 in de gebruikersinterface. |
-| UI-ondersteuning voor CRM-systemen | Nieuwe bronschakelaar voor HubSpot, de Wolk van de Dienst van Salesforce, en ServiceNow in UI. |
-| UI-ondersteuning voor databasesystemen | Nieuwe bronconnector voor AWS Redshift, Google BigQuery, MariaDB, Microsoft SQL Server en MySQL in de gebruikersinterface. |
+| API- en UI-ondersteuning voor databases | Nieuwe bronaansluitingen voor Apache Spark (op HDInsights), Azure Synapse Analytics, Azure Table Storage, Hive (op HDInsights) en Phoenix. |
+| API- en UI-ondersteuning voor op betalingen gebaseerde toepassingen | Nieuwe bronconnectors voor PayPal. |
+| API- en UI-ondersteuning voor op protocollen gebaseerde toepassingen | Nieuwe bronconnectors voor Generic OData. |
 
 ### Bekende problemen
 
