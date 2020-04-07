@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: c3166bea873572fe6ee2e63dfd13bc64d81e252b
 
 ---
 
@@ -14,30 +14,48 @@ source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
 
 ## Releasedatum: 8 april 2020
 
-## Toegangsbeheer
+## Privacy Service
 
-Experience Platform gebruikt [Adobe Admin Console](https://adminconsole.adobe.com) -productprofielen om gebruikers te koppelen aan machtigingen en sandboxen. De toestemmingen controleren toegang tot een verscheidenheid van de mogelijkheden van het Platform, met inbegrip van gegevensmodellering, profielbeheer, en zandbakbeleid.
+De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het recht om tot hun persoonlijke gegevens van uw gegevensopslag toegang te hebben of te schrappen op verzoek. Adobe Experience Platform Privacy Service biedt een RESTful API en een gebruikersinterface waarmee u deze gegevensaanvragen van uw klanten kunt beheren. Met de Privacy Service kunt u verzoeken om toegang tot persoonlijke of persoonlijke klantgegevens van Adobe Experience Cloud-toepassingen en deze verwijderen. Zo kunt u de automatische naleving van wettelijke en organisatorische privacyregels vereenvoudigen.
 
-### Belangrijkste kenmerken
-
-| Functie | Beschrijving |
-|--- | ---|
-| Machtigingen | In de beheerconsole kunt u op het tabblad _Machtigingen_ in een productprofiel van het platform aanpassen welke platformmogelijkheden beschikbaar zijn voor de gebruikers die aan dat profiel zijn gekoppeld. Beschikbare machtigingscategorieën zijn: Gegevensmodellering, gegevensbeheer, profielbeheer, identiteiten, gegevenscontrole, Sandbox-beheer, doelen, bronnen. |
-| Toegang tot sandboxen | Met het tabblad _Machtigingen_ in een productprofiel van het platform kunnen gebruikers toegang krijgen tot specifieke sandboxen. Zie de sectie over [sandboxen](#sandboxes) hieronder voor meer informatie. |
-
-Zie het overzicht [van](../../access-control/home.md)toegangsbeheer voor meer informatie.
-
-## Sandboxen
-
-Het Experience Platform is ontworpen om toepassingen voor digitale ervaringen wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen. Om aan deze behoefte tegemoet te komen, biedt het Experience Platform sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
-
-### Belangrijkste kenmerken
+**Nieuwe functies**
 
 | Functie | Beschrijving |
-|--- | ---|
-| Productiesandbox | Experience Platform beschikt over één productiesandbox die niet kan worden verwijderd of opnieuw ingesteld. |
-| Niet-productie sandboxen | Er kunnen meerdere niet-productiesandboxen worden gemaakt voor één platforminstantie, zodat u functies kunt testen, experimenten kunt uitvoeren en aangepaste configuraties kunt maken zonder dat dit van invloed is op uw productiesandbox. |
-| Sandboxschakelaar | In de gebruikersinterface van het Platform van de Ervaring, staat de zandbakschakelaar in de bovenkant-linkerhoek van het scherm u toe om tussen beschikbare zandbakken door een dropdown menu te schakelen. |
-| `x-sandbox-name` header | Alle aanroepen naar Experience Platform API&#39;s moeten nu de nieuwe `x-sandbox-name` header bevatten, waarvan de waarde verwijst naar het `name` kenmerk van de sandbox waarin de bewerking plaatsvindt. |
+| --- | --- |
+| PDPA-ondersteuning | De verzoeken van de privacy kunnen nu worden gecreeerd en worden gevolgd onder de Wet van de Bescherming van Persoonlijke Gegevens (PDPA) in Thailand. Wanneer u privacyverzoeken indient in de API, accepteert de `regulation` array de waarde &quot;pdpa_tha&quot;. |
+| Naamruimtetypen in de gebruikersinterface | U kunt nu verschillende naamruimtetypen opgeven in de Request Builder in de gebruikersinterface van de privacyservice. Raadpleeg de [gebruikershandleiding](../../privacy-service/ui/user-guide.md) voor meer informatie. |
+| Oude afleiding van eindpunt | Het oude API-eindpunt (`data/privacy/gdpr`) is vervangen. |
 
-Zie het [sandboxoverzicht](../../sandboxes/home.md)voor meer informatie.
+Bekende problemen
+
+* Geen
+
+Voor meer informatie over de Dienst van de Privacy, gelieve te beginnen door het overzicht [van de Dienst van de](../../privacy-service/home.md)Privacy te lezen.
+
+<!-- ## Access control
+
+Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration.
+
+### Key features
+
+|Feature | Description|
+|--- | ---|
+|Permissions | In the Admin Console, the _Permissions_ tab within a Platform product profile allows you customize which Platform capabilities are available for the users attached to that profile. Available permission categories include: Data Modeling, Data Management, Profile Management, Identities, Data Monitoring, Sandbox Administration, Destinations, Sources.|
+|Access to sandboxes | The _Permissions_ tab within a Platform product profile can grant users access to specific sandboxes. See the section on [sandboxes](#sandboxes) below for more information.|
+
+For more information, please see the [access control overview](../../access-control/home.md).
+
+## Sandboxes
+
+Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+
+### Key features
+
+|Feature | Description|
+|--- | ---|
+|Production sandbox | Experience Platform provides a single production sandbox, which cannot be deleted or reset.|
+|Non-production sandboxes | Multiple non-production sandboxes can be created for a single Platform instance, allowing you to test features, run experiments, and make custom configurations without impacting your production sandbox.|
+|Sandbox switcher | In the Experience Platform user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu.|
+|`x-sandbox-name` header | All calls to Experience Platform APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in.|
+
+For more information, please see the [sandboxes overview](../../sandboxes/home.md). -->
