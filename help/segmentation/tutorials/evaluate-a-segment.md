@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een segment evalueren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -30,11 +30,11 @@ Deze zelfstudie vereist ook dat u de [verificatiezelfstudie](../../tutorials/aut
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Verzoeken aan platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Voor aanvragen voor platform-API&#39;s is een header vereist die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> [!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+>[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
 
 Voor alle POST-, PUT- en PATCH-aanvragen is een extra header vereist:
 
@@ -42,7 +42,7 @@ Voor alle POST-, PUT- en PATCH-aanvragen is een extra header vereist:
 
 ## Een segment evalueren
 
-Zodra u hebt ontwikkeld, getest en uw segmentdefinitie bewaard, kunt u het segment door of geplande evaluatie of op bestelling evaluatie dan evalueren.
+Zodra u hebt ontwikkeld, getest, en uw segmentdefinitie bewaard, kunt u het segment door of geplande evaluatie of op bestelling evaluatie dan evalueren.
 
 [De geplande evaluatie](#scheduled-evaluation) (die ook als &quot;geplande segmentatie&quot;wordt bekend) staat u toe om een terugkomende planning voor het runnen van een uitvoerbaan in een specifieke tijd tot stand te brengen, terwijl de [op bestelling evaluatie](#on-demand-evaluation) het creëren van een segmentbaan impliceert om het publiek onmiddellijk te bouwen. De stappen voor elk worden hieronder geschetst.
 
@@ -52,7 +52,7 @@ Als u nog niet een segment [creeert creeert een segment gebruikend de Realtime l
 
 Via een geplande evaluatie kan uw IMS-organisatie een terugkerend schema maken om exporttaken automatisch uit te voeren.
 
-> [!NOTE] De geplande evaluatie kan voor zandbakken met een maximum van vijf (5) fusiebeleid voor Individueel Profiel XDM worden toegelaten. Als uw organisatie meer dan vijf samenvoegingsbeleid voor Individueel Profiel XDM binnen één enkele zandbakmilieu heeft, zult u geen geplande evaluatie kunnen gebruiken.
+>[!NOTE] De geplande evaluatie kan voor zandbakken met een maximum van vijf (5) fusiebeleid voor Individueel Profiel XDM worden toegelaten. Als uw organisatie meer dan vijf samenvoegingsbeleid voor Individueel Profiel XDM binnen één enkele zandbakmilieu heeft, zult u geen geplande evaluatie kunnen gebruiken.
 
 ### Een schema maken
 
@@ -173,7 +173,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **Verzoek**
 
-In het volgende verzoek wordt [JSON-patchopmaak](http://jsonpatch.com/) gebruikt om de [cron-expressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor het schema bij te werken. In dit voorbeeld wordt het schema nu geactiveerd om 10:15:00 UTC.
+In het volgende verzoek wordt de opmaak [van](http://jsonpatch.com/) JSON-patch gebruikt om de [uitsnijdexpressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor het schema bij te werken. In dit voorbeeld wordt het schema nu geactiveerd om 10:15:00 UTC.
 
 ```shell
 curl -X POST \
@@ -406,7 +406,7 @@ Een succesvolle reactie retourneert de details van de segmentatietaak en geeft v
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `segmentedProfileCounter` | Het totale aantal samengevoegde profielen dat voor het segment in aanmerking komt. |
-| `segmentedProfileByNamespaceCounter` | Een uitsplitsing van de profielen die in aanmerking komen voor het segment naar naamruimtecode van de identiteit. Een lijst met naamruimtecodes voor identiteiten vindt u in het overzicht [van de](../../identity-service/namespaces.md)naamruimte. |
+| `segmentedProfileByNamespaceCounter` | Een uitsplitsing van de profielen die in aanmerking komen voor het segment naar naamruimtecode van de identiteit. Een lijst met naamruimtecodes voor identiteiten vindt u in het overzicht [van de naamruimte](../../identity-service/namespaces.md)voor identiteiten. |
 
 ## Segmentresultaten interpreteren
 
