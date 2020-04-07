@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Data Governance Help
+user-guide-title: Help bij het Adobe Experience Platform voor gegevensbeheer
 translation-type: tm+mt
-source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
+source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
 
 ---
 
@@ -17,6 +17,7 @@ source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
    * [Ondersteunde labels voor gegevensgebruik](labels/reference.md)
 * Beleid voor gegevensgebruik {#policies}
    * [Overzicht van beleidsregels voor gegevensgebruik](policies/overview.md)
+   * [Gebruikershandleiding voor gegevensgebruiksbeleid](policies/user-guide.md)
    * [Creeer een beleid van het gegevensgebruik gebruikend de Dienst API van het Beleid](policies/create.md)
 * Beleidshandhaving {#enforcement}
    * [Overzicht van beleidshandhaving](enforcement/overview.md)
