@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
+source-git-commit: 3f3704cc1e11a4d11278a34800c8bfdc24a80753
 
 ---
 
@@ -13,6 +13,23 @@ source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
 # Opmerkingen bij de release Adobe Experience Platform
 
 ## Releasedatum: 8 april 2020
+
+## Intelligente services
+
+Intelligente services stellen marketinganalisten en praktijkmensen in staat om gebruik te maken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen van de klantervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap. Daarnaast kunnen marketingprofessionals voorspellingen activeren in Adobe Experience Cloud, Adobe Experience Platform en toepassingen van derden.
+
+**Belangrijkste kenmerken**
+
+| Functie | Beschrijving |
+|---|---|
+| Customer AI | Klantenservice-AI biedt marketers de mogelijkheid om voorspellingen van klanten op individueel niveau te genereren met uitleg. Met behulp van invloedrijke factoren kan de AI van de Klant u vertellen wat een klant waarschijnlijk zal doen en waarom. Bovendien kunnen marketers profiteren van de voorspellingen en inzichten van de klant van AI om de ervaringen van klanten aan te passen door de meest geschikte aanbiedingen en berichten te bedienen. |
+| Attributie-AI | Attribution AI is een multi-channel, algoritmische attributiedienst die de invloed en de incrementele impact van klanteninteractie tegen gespecificeerde resultaten berekent. Met Attribution AI kunnen marketers marketing- en advertentiekosten meten en optimaliseren door de impact van elke afzonderlijke interactie van de klant in elke fase van de reizen van de klant te begrijpen. |
+
+**Bekende problemen**
+
+* Momenteel geen bekende problemen.
+
+Voor meer informatie over de Intelligente Diensten en wat het moet aanbieden, zie het Overzicht [van de](../../intelligent-services/home.md)Intelligente Diensten.
 
 ## Privacy Service
 
