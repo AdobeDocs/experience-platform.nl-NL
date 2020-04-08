@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een segment evalueren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 8d77fc6c5b2824624ba308269f743a432a5288d2
 
 ---
 
@@ -173,7 +173,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **Verzoek**
 
-In het volgende verzoek wordt de opmaak [van](http://jsonpatch.com/) JSON-patch gebruikt om de [uitsnijdexpressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor het schema bij te werken. In dit voorbeeld wordt het schema nu geactiveerd om 10:15:00 UTC.
+In het volgende verzoek wordt [JSON-patchopmaak](http://jsonpatch.com/) gebruikt om de [cron-expressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor het schema bij te werken. In dit voorbeeld wordt het schema nu geactiveerd om 10:15:00 UTC.
 
 ```shell
 curl -X POST \
@@ -504,8 +504,7 @@ curl -X POST \
         "persisted": true,
         "containerFormat": "parquet",
         "format": "parquet"
-    },
-    "aspect": "production"
+    }
 }'
 ```
 
