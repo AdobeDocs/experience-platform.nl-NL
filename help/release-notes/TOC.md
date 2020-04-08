@@ -1,16 +1,17 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Release Notes
+user-guide-title: Opmerkingen bij de release Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: aeadd97af86d2f1177b815daaffe01794d410ae6
+source-git-commit: fa1c78ff7d9fd682d93e1feae510fc1823f2d998
 
 ---
 
 
 # Opmerkingen bij de release Adobe Experience Platform {#release-notes}
 
-* [maart 2020](latest/latest.md)
+* [april 2020](latest/latest.md)
+* [maart 2020](2020/march-2020.md)
 * [februari 2020](2020/february-2020.md)
 * [januari 2020](2020/january-2020.md)
 * 2019 {#2019}
