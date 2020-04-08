@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Veelgestelde vragen over privacyservice
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
+source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
 
 ---
 
@@ -15,9 +15,55 @@ Dit document bevat antwoorden op veelgestelde vragen over de privacyservice van 
 
 De Dienst van de privacy verstrekt RESTful API en gebruikersinterface om bedrijven te helpen verzoeken van de privacy van klantengegevens beheren. Met de Privacy Service kunt u verzoeken indienen om toegang te krijgen tot persoonlijke of persoonlijke klantgegevens en deze te verwijderen, waardoor u gemakkelijker kunt voldoen aan de regels van de organisatie en de wettelijke privacy.
 
+## Wat is het verschil tussen een gebruiker en een gebruiker-id wanneer u privacyverzoeken indient in de API? {#user-ids}
+
+Als u een nieuwe privacytaak in de API wilt maken, moet de JSON-payload van de aanvraag een `users` array bevatten met specifieke informatie voor elke gebruiker waarop de privacyaanvraag van toepassing is. Elk item in de `users` array is een object dat een bepaalde gebruiker vertegenwoordigt, geïdentificeerd door de `key` waarde ervan.
+
+Elk gebruikersobject (of `key`) bevat op zijn beurt een eigen `userIDs` array. Deze array bevat een lijst met specifieke id-waarden **voor die ene gebruiker**.
+
+Bekijk de volgende `users` voorbeeldarray:
+
+```json
+"users": [
+  {
+    "key": "DavidSmith",
+    "action": ["access"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "dsmith@acme.com",
+        "type": "standard"
+      }
+    ]
+  },
+  {
+    "key": "user12345",
+    "action": ["access", "delete"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "ajones@acme.com",
+        "type": "standard"
+      },
+      {
+        "namespace": "ECID",
+        "type": "standard",
+        "value":  "443636576799758681021090721276",
+        "isDeletedClientSide": false
+      }
+    ]
+  }
+]
+```
+
+De array bevat twee objecten die afzonderlijke gebruikers vertegenwoordigen die door hun `key` waarden worden geïdentificeerd (&quot;DavidSmith&quot; en &quot;user12345&quot;). &quot;DavidSmith&quot; heeft slechts één vermelde ID (hun e-mailadres), terwijl &quot;user12345&quot; twee ID (hun e-mailadres en ECID) heeft.
+
+Zie de handleiding over [identiteitsgegevens voor privacyverzoeken](identity-data.md)voor meer informatie over het verstrekken van identiteitsgegevens van gebruikers.
+
+
 ## Kan ik de privacyservice gebruiken om gegevens op te schonen die per ongeluk naar het platform zijn verzonden?
 
-Adobe biedt geen ondersteuning voor het gebruik van de Privacy Service voor het wissen van gegevens die per ongeluk naar een product zijn verzonden. De Dienst van de privacy wordt ontworpen om u bij het voldoen aan uw verplichtingen voor de toegang van het gegevenssubject (of consument) of schrappingsverzoeken te helpen. Deze verzoeken zijn tijdgevoelig en worden met betrekking tot het toepasselijke privacyrecht afgerond. De indiening van verzoeken die geen toegang tot of verwijderingsverzoeken voor betrokkenen/consumenten zijn, heeft gevolgen voor alle klanten van de privacydienst en voor de mogelijkheid voor de privacydienst om de juiste wettelijke termijnen te ondersteunen.
+Adobe biedt geen ondersteuning voor het gebruik van de Privacy Service voor het wissen van gegevens die per ongeluk naar een product zijn verzonden. De Dienst van de privacy wordt ontworpen om u bij het voldoen aan uw verplichtingen voor de toegang van het gegevenssubject (of consument) of schrapt verzoeken te helpen. Deze verzoeken zijn tijdgevoelig en worden met betrekking tot het toepasselijke privacyrecht afgerond. De indiening van verzoeken die geen toegang tot of verwijderingsverzoeken voor betrokkenen/consumenten zijn, heeft gevolgen voor alle klanten van de privacydienst en voor de mogelijkheid voor de privacydienst om de juiste wettelijke termijnen te ondersteunen.
 
 Neem contact op met uw accountmanager (CDM) om problemen met PII&#39;s of gegevens te coördineren en een inspanningsniveau te bieden.
 
