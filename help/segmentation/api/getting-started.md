@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Segmentatieservice
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 38762fa57188ed018c4347c07765f3d09daef2e6
+source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
 
 ---
 
@@ -40,7 +40,7 @@ Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele 
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->**Opmerking:** Raadpleeg de documentatie bij het overzicht van [sandboxen voor meer informatie over het werken met sandboxen in Experience Platform](../../sandboxes/home.md).
+>[!NOTE] Raadpleeg de documentatie bij het overzicht van [sandboxen voor meer informatie over het werken met sandboxen in Experience Platform](../../sandboxes/home.md).
 
 <!-- ## Estimates
 
