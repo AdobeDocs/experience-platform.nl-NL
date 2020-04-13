@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
+source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
 
 ---
 
@@ -34,6 +34,22 @@ Het DULE-framework vereenvoudigt en stroomlijnt het proces voor het indelen van 
 * Geen.
 
 Zie het overzicht [van](../../data-governance/home.md)gegevensbeheer voor meer informatie.
+
+
+## Doelen
+
+In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md)zijn doelen vooraf gebouwde integratie met doelplatforms die gegevens naadloos aan die partners activeren.
+
+### Nieuwe bestemmingen
+
+Adobe CDP in realtime ondersteunt nu gegevensactivering voor meer dan vijftig Experience Cloud Launch-extensies, waardoor analyses, personalisatie en andere gebruiksgevallen mogelijk zijn. Zie hieronder voor meer informatie:
+
+| Documentatie | Beschrijving |
+|--- | ---|
+| [Doeltypen en -categorieën](/help/rtcdp/destinations/destination-types.md) | Dit artikel verklaart het verschil tussen verbindingen en uitbreidingen in de interface van Adobe in real time CDP en adviseert wanneer om elk van deze bestemmingen te gebruiken. |
+| [Experience Platform Launch-extensies](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | Op deze pagina wordt uitgelegd wat extensies Starten zijn, worden gebruiksscenario&#39;s voor het gebruik van extensies vermeld en worden koppelingen naar documentatie voor elke extensie Starten in Adobe Real-time CDP weergegeven. |
+
+Zie het overzicht [](/help/rtcdp/destinations/destinations-overview.md)Doelen voor meer informatie.
 
 ## Intelligente services
 
