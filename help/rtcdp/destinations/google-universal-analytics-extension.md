@@ -4,7 +4,7 @@ seo-title: Google Universal Analytics-extensie
 description: De Google Universal Analytics-extensie is een analysedoel in Adobe Real-time Customer Data Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 seo-description: De Google Universal Analytics-extensie is een analysedoel in Adobe Real-time Customer Data Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ Met Google Universal Analytics kunt u uw ROI voor advertenties meten en uw Flash
 Google Universal Analytics is een uitbreiding voor analysemogelijkheden in het Adobe Real-time Customer Data Platform. Zie de extensiepagina op [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html)voor meer informatie over de extensiefunctionaliteit.
 
 Deze bestemming is een uitbreiding van de Lancering van het Platform van de Ervaring. Voor meer informatie over hoe de uitbreidingen van de Lancering in Adobe in real time CDP werken, zie het Overzicht [van de uitbreidingen van de Lancering van het Platform van de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Ervaring Platform.
+
+![Google Universal Analytics-extensie](/help/rtcdp/destinations/assets/google-universal-analytics-extension.png)
 
 
 ## Vereisten {#prerequisites}
