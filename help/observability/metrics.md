@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Beschikbare cijfers
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
+source-git-commit: ff299a69a81f00cad3e90a83f7411e4b15d4f850
 
 ---
 
@@ -18,7 +18,7 @@ De volgende lijsten maken een lijst van alle metriek die door de Inzichten van d
 In de volgende tabel worden de metriek voor gegevensinname van het Adobe Experience Platform beschreven. Metriek in **vet** zijn streaming ingestion metrics.
 
 | Metrische informatie | Beschrijving | ID-queryparameter |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | Het totale aantal gemaakte gegevenssets. | N.v.t. |
 | timeseries.ingestion.dataset.size | Cumulatieve grootte van alle gegevens die voor één dataset voor of alle datasets worden opgenomen. | Gegevensset-id (optioneel) |
 | timeseries.ingestion.dataset.dailysize | Grootte van gegevens die op een dagelijkse gebruiksbasis voor één dataset of voor alle datasets worden opgenomen. | Gegevensset-id (optioneel) |
@@ -46,7 +46,7 @@ In de volgende tabel worden de metriek voor gegevensinname van het Adobe Experie
 In de volgende tabel worden de metriek voor Adobe Experience Platform Identity Service beschreven.
 
 | Metrische informatie | Beschrijving | ID-queryparameter |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Aantal verslagen die aan hun gegevensbron door de Dienst van de Identiteit, voor één dataset of alle datasets worden geschreven. | Gegevensset-id (optioneel) |
 | timeseries.identity.dataset.recordfailed.count | Aantal verslagen die door de Dienst van de Identiteit, voor één dataset of voor alle datasets worden ontbroken. | Gegevensset-id (optioneel) |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Aantal identiteitsrecords dat is ingevoerd voor een naamruimte. | Naamruimte-id (**vereist**) |
@@ -62,7 +62,7 @@ In de volgende tabel worden de metriek voor Adobe Experience Platform Identity S
 In de volgende tabel worden de meetgegevens voor de Adobe Experience Platform Privacy Service weergegeven.
 
 | Metrische informatie | Beschrijving | ID-queryparameter |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.gdpr.jobs.totaljobs.count | Het totale aantal banen dat door de GDPR is gecreëerd. | ENV (**vereist**) |
 | timeseries.gdpr.jobs.completedjobs.count | Totaal aantal voltooide banen van GDPR. | ENV (**vereist**) |
 | timeseries.gdpr.jobs.errorjobs.count | Totaal aantal fouttaken van GDPR. | ENV (**vereist**) |
@@ -72,7 +72,7 @@ In de volgende tabel worden de meetgegevens voor de Adobe Experience Platform Pr
 In de volgende tabel worden de metriek voor Adobe Experience Platform Query Service beschreven.
 
 | Metrische informatie | Beschrijving | ID-queryparameter |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.queryservice.query.scheduleonce.count | Het totale aantal eenmalige geplande query&#39;s. | N.v.t. |
 | timeseries.queryservice.query.scheduledrecurring.count | Het totale aantal terugkerende geplande query&#39;s. | N.v.t. |
 | timeseries.queryservice.query.batchquery.count | Het totale aantal uitgevoerde batchquery&#39;s. | N.v.t. |
@@ -85,7 +85,7 @@ In de volgende tabel worden de metriek voor Adobe Experience Platform Query Serv
 De volgende lijst schetst metriek voor het Profiel van de Klant in real time.
 
 | Metrische informatie | Beschrijving | ID-queryparameter |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | Aantal verslagen die van het gegevensmeer door Profiel, voor één dataset of voor alle datasets worden gelezen. | Gegevensset-id (optioneel) |
 | timeseries.profiles.dataset.recordsuccess.count | Aantal verslagen die aan hun gegevensbron door Profiel, voor één dataset of voor alle datasets worden geschreven. | Gegevensset-id (optioneel) |
 | timeseries.profiles.dataset.recordfailed.count | Aantal verslagen door Profiel, voor één dataset of voor alle datasets ontbrak. | Gegevensset-id (optioneel) |
