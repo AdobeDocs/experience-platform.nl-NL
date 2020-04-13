@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Help
 translation-type: tm+mt
-source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -99,12 +99,12 @@ source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
          * [Gainsight (Experience Platform Launch-extensie)](/help/rtcdp/destinations/gainsight-extension.md)
          * [Kickfire (Experience Platform Launch-extensie)](/help/rtcdp/destinations/kickfire-extension.md)
          * [Marketo Web Personalization (Experience Platform Launch-extensie)](destinations/marketo-web-personalization-extension.md)
-      * Sociale netwerkbestemmingen{#social-network-destinations}
+      * Sociale netwerkbestemmingen{#social-destinations}
          * [Overzicht van sociale netwerkbestemmingen](/help/rtcdp/destinations/social-network-destinations.md)
          * [Verificatiestroom naar sociale netwerkdoelen](/help/rtcdp/destinations/social-network-destinations-workflow.md)
          * [Adobe LiveCycle (Experience Platform Launch-extensie)](/help/rtcdp/destinations/adobe-livefyre-extension.md)
          * [Facebook-bestemming](/help/rtcdp/destinations/facebook-destination.md)
-      * Onderzoeksbestemmingen {#surveys}
+      * Onderzoeksbestemmingen {#survey-destinations}
          * [Overzicht van de enquêtedoelen](/help/rtcdp/destinations/survey-destinations.md)
          * [Foresee (Experience Platform Launch-extensie)](/help/rtcdp/destinations/foresee-extension.md)
          * [InMoment (Experience Platform Launch-extensie)](/help/rtcdp/destinations/inmoment-extension.md)
