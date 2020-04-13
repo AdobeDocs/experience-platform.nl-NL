@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Help
 translation-type: tm+mt
-source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
+source-git-commit: ee2a490ebc802684a0761dc6589d6b30defc0398
 
 ---
 
@@ -133,7 +133,6 @@ source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
    * [Handleiding voor het maken van segmenten](segmentation/segment-builder-guide.md)
 * Bronnen {#sources}
    * [Overzicht van bronnen](sources/sources-overview.md)
-   * [Bronnen en zelfstudies](sources/sources-tutorials.md)
    * [Websitetags implementeren met Adobe Launch](sources/launch.md)
-* [Opmerkingen bij de release](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
-* [Verklarende woordenlijst](https://www.adobe.io/apis/experienceplatform/home/services/acp-glossary.html)
+* [Opmerkingen bij de release](https://www.adobe.com/go/platform-release-notes-en)
+* [Verklarende woordenlijst](https://www.adobe.com/go/platform-glossary-en)
