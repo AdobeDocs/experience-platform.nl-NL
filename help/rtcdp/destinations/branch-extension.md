@@ -4,7 +4,7 @@ seo-title: Vertakkingsextensie
 description: De extensie Branch is een advertentiedoel in het Adobe Real-time Customer Data Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 seo-description: De extensie Branch is een advertentiedoel in het Adobe Real-time Customer Data Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 2a94444b35cac0c002d729798d96fd54aaafbacd
 
 ---
 
@@ -18,6 +18,8 @@ De tak verstrekt krachtige verbindingen en oplossingen die u, over alle apparate
 Branch is een advertentie-extensie in het Adobe Real-time Customer Data Platform. Zie de pagina met [functies](https://branch.io/features/) op de website Branch voor meer informatie over de extensiefunctionaliteit.
 
 Deze bestemming is een uitbreiding van de Lancering van het Platform van de Ervaring. Voor meer informatie over hoe de uitbreidingen van de Lancering in Adobe in real time CDP werken, zie het Overzicht [van de uitbreidingen van de Lancering van het Platform van de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Ervaring Platform.
+
+![Vertakkingsextensie](assets/branch-extension.png)
 
 ## Vereisten {#prerequisites}
 
