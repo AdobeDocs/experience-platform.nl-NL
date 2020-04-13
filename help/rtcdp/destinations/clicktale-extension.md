@@ -4,7 +4,7 @@ seo-title: Clicktale extensie
 description: De Clicktale-extensie is een analysedoel in het Adobe Real-time Customer Data Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 seo-description: De Clicktale-extensie is een analysedoel in het Adobe Real-time Customer Data Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ De integratie van Clicktale met de Lancering van het Platform van de Ervaring st
 Clicktale is een uitbreiding voor analysemogelijkheden in het Adobe Real-time Customer Data Platform. Zie de extensiepagina op [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html)voor meer informatie over de extensiefunctionaliteit.
 
 Deze bestemming is een uitbreiding van de Lancering van het Platform van de Ervaring. Voor meer informatie over hoe de uitbreidingen van de Lancering in Adobe in real time CDP werken, zie het Overzicht [van de uitbreidingen van de Lancering van het Platform van de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Ervaring Platform.
+
+![Clicktale extensie](assets/clicktale-extension.png)
 
 
 ## Vereisten {#prerequisites}
