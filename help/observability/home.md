@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Observability Insights
 topic: overview
 translation-type: tm+mt
-source-git-commit: 947955403a270914437d9172bca458f9c49ccd8f
+source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 947955403a270914437d9172bca458f9c49ccd8f
 
 Observability Insights is een RESTful API waarmee u belangrijke waarneembaarheidsmetriek in het Platform van de Ervaring van Adobe kunt blootstellen. Deze metriek verstrekt inzicht in het gebruiksstatistieken van het Platform, gezondheid-controles voor de diensten van het Platform, historische tendensen, en prestatiesindicatoren voor diverse functies van het Platform.
 
-Dit document bevat een voorbeeld van een aanroep van de API Observability Insights en een lijst met belichte metriek die compatibel zijn met de service. Voor een volledige lijst van de eindpunten van de Waarnemelijkheid, gelieve te verwijzen naar de [Bron](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)van de Inzichten van de Observability API.
+In dit document wordt een voorbeeld gegeven van een aanroep van de API Observability Insights. Voor een volledige lijst van de eindpunten van de Waarnemelijkheid, gelieve te verwijzen naar de [Bron](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)van de Inzichten van de Observability API.
 
 ## Aan de slag
 
@@ -23,11 +23,9 @@ Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](..
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt. Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../sandboxes/home.md).
 
 * x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../sandboxes/home.md).
 
 ## Metrische waarden voor waarneembaarheid ophalen
 
@@ -48,7 +46,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{METRIC}` | De metrisch u wilt blootstellen. Wanneer het combineren van veelvoudige metriek in één enkele vraag, moet u ampersand (`&`) gebruiken om individuele metriek te scheiden. Bijvoorbeeld, `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | De id voor een bepaald middel van het Platform waarvan metriek u wilt blootstellen. Deze id kan optioneel, vereist of niet van toepassing zijn, afhankelijk van de gebruikte maatstaven. Zie het referentiedocument over de [beschikbare metriek](metrics.md) hieronder voor een lijst met beschikbare metriek en ondersteunde id&#39;s (zowel vereist als optioneel) voor elke meting. |
+| `{ID}` | De id voor een bepaald middel van het Platform waarvan metriek u wilt blootstellen. Deze id kan optioneel, vereist of niet van toepassing zijn, afhankelijk van de gebruikte maatstaven. Raadpleeg het referentiedocument over [beschikbare metriek](metrics.md)voor een lijst met beschikbare metriek en ondersteunde id&#39;s (zowel vereist als optioneel) voor elke meting. |
 | `{DATE_RANGE}` | Het datumbereik voor de metriek die u wilt weergeven, in de ISO 8601-indeling (bijvoorbeeld `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
 
 **Verzoek**
