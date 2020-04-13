@@ -4,12 +4,12 @@ seo-title: Adobe LiveCycle-extensie
 description: De Adobe LiveCyre-extensie is een sociale bestemming in het Adobe Real-time Customer Data Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
 
-# Adobe LiveCycle-extensie {#bing-ads-extension}
+# Adobe LiveCycle-extensie {#adobe-livefyre-extension}
 
 ## Overzicht {#overview}
 
