@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Help
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -30,11 +30,11 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
       * Adobe-doelen{#adobe-destinations}
          * [Overzicht van Adobe-doelen](destinations/adobe-destinations.md)
          * [Adobe-campagne](destinations/adobe-campaign-destination.md)
-      * Reclamebestemmingen{#advertiser-destinations}
+      * Reclamebestemmingen{#advertising-destinations}
          * [Overzicht van advertentiebestemmingen](destinations/advertising-destinations.md)
          * [Adobe Advertising Cloud (Experience Platform Launch-extensie)](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
-         * [Awin Adveritising Conversion Tag (Experience Platform Launch-extensie)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-         * [Awin Adveritising Mastertag (Experience Platform Launch-extensie)](/help/rtcdp/destinations/awin-mastertag-extension.md)
+         * [Awin Advertising Conversion-tag (Experience Platform Launch-extensie)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
+         * [Awin Advertising Mastertag (Experience Platform Launch-extensie)](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Beemray (Experience Platform Launch-extensie)](/help/rtcdp/destinations/beemray-extension.md)
          * [Branch (Experience Platform Launch-extensie)](/help/rtcdp/destinations/branch-extension.md)
          * [DoubleClick Floodlight (Experience Platform Launch-extensie)](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
