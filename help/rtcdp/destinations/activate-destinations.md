@@ -4,7 +4,7 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens die u in het Platform van de Gegevens van de Klant van Adobe in real time hebt door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens die u in het Platform van de Gegevens van de Klant van Adobe in real time hebt door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 
 ---
 
@@ -28,7 +28,14 @@ Om gegevens aan bestemmingen te activeren, moet u een bestemming [met succes heb
 5. *Voorwaardelijk*. Deze stap is slechts voor segmenten van toepassing die aan e-mail marketing bestemmingen in kaart worden gebracht. <br> Selecteer op de **[!UICONTROL Destination Attributes]** pagina de kenmerken die u naar het doel wilt verzenden **[!UICONTROL Add new field]** en selecteer deze.
 Wij adviseren één van de attributen om een [uniek herkenningsteken](/help/rtcdp/destinations/email-marketing-destinations.md#identity) van uw unieschema te zijn. Zie Identiteit in het artikel [E-mailmarketingdoelen](/help/rtcdp/destinations/email-marketing-destinations.md#identity) voor meer informatie over verplichte kenmerken.
    ![bestemmingskenmerken](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. Op de **[!UICONTROL Schedule]** pagina, kunt u de begindatum zien voor het verzenden van gegevens naar de bestemming, evenals de frequentie om gegevens naar de bestemming te verzenden.
+6. Op de **[!UICONTROL Segment schedule]** pagina, kunt u de begindatum zien voor het verzenden van gegevens naar de bestemming, evenals de frequentie om gegevens naar de bestemming te verzenden.
+
+   >[!IMPORTANT]
+   >
+   >Voor sociale bestemmingen, moet u de oorsprong van uw publiek in deze stap selecteren. U kunt pas verdergaan met de volgende stap nadat u een van de opties in de onderstaande afbeelding hebt geselecteerd.
+
+   ![oorsprong van gegevens kiezen](/help/rtcdp/destinations/assets/choose-data-origin.png)
+
 7. Op de **[!UICONTROL Review]** pagina ziet u een overzicht van uw selectie. Selecteer **[!UICONTROL Cancel]** om de stroom te verbreken, **[!UICONTROL Back]** **[!UICONTROL Finish]** om uw montages te wijzigen, of uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
 
 ![selectie bevestigen](/help/rtcdp/destinations/assets/confirm-selection.png)
@@ -60,6 +67,10 @@ De aanwezigheid van deze bestanden op de opslaglocatie bevestigt dat de activeri
 ### Reclamebestemmingen
 
 Controleer de respectieve advertentiebestemming u uw gegevens aan activeert. Als de activering is gelukt, worden de doelgroepen in uw advertentieplatform ingevuld.
+
+### Sociale netwerkbestemmingen
+
+Voor Facebook betekent een geslaagde activering dat er via de programmacode een aangepast publiek voor Facebook wordt gemaakt in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). Het lidmaatschap van een segment in het publiek zou worden toegevoegd en verwijderd aangezien de gebruikers voor de geactiveerde segmenten worden gekwalificeerd of worden uitgesloten.
 
 ## Activering uitschakelen {#disable-activation}
 
