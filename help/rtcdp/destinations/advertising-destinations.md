@@ -4,7 +4,7 @@ seo-title: Reclamebestemmingen
 description: Verbind uw platform van de Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, ad netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 seo-description: Verbind uw platform van de Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, ad netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -18,8 +18,8 @@ Wanneer het verbinden met een reclamebestemming, worden uw publiek verzonden als
 Momenteel, in real time CDP steunt de reclame hieronder vermelde bestemmingen. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
 
 * [Adobe Advertising Cloud (Experience Platform Launch-extensie)](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
-* [Awin Adveritising Conversion Tag (Experience Platform Launch-extensie)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-* [Awin Adveritising Mastertag (Experience Platform Launch-extensie)](/help/rtcdp/destinations/awin-mastertag-extension.md)
+* [Awin Advertising Conversion-tag (Experience Platform Launch-extensie)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
+* [Awin Advertising Mastertag (Experience Platform Launch-extensie)](/help/rtcdp/destinations/awin-mastertag-extension.md)
 * [Beemray (Experience Platform Launch-extensie)](beemray-extension.md)
 * [Bing Ads Universal Event Tracking (Experience Platform Launch-extensie)](/help/rtcdp/destinations/bing-ads-extension.md)
 * [Branch (Experience Platform Launch-extensie)](/help/rtcdp/destinations/branch-extension.md)
