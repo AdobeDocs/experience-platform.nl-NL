@@ -4,7 +4,7 @@ seo-title: Contentsquare-extensie
 description: De extensie Contentsquare is een analysedoel in Adobe Real-time Customer Data Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 seo-description: De extensie Contentsquare is een analysedoel in Adobe Real-time Customer Data Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ Visualiseer in-page gedrag, zie WAAROM klanten verlaten en hoe u kunt verbeteren
 ContentSquare is een analytics-extensie in Adobe Real-time Customer Data Platform. Zie de extensiepagina op [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html)voor meer informatie over de extensiefunctionaliteit.
 
 Deze bestemming is een uitbreiding van de Lancering van het Platform van de Ervaring. Voor meer informatie over hoe de uitbreidingen van de Lancering in Adobe in real time CDP werken, zie het Overzicht [van de uitbreidingen van de Lancering van het Platform van de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Ervaring Platform.
+
+![Contentsquare-extensie](assets/contentsquare-extension.png)
 
 
 ## Vereisten {#prerequisites}
