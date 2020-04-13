@@ -4,7 +4,7 @@ seo-title: Extensies bij opstarten platform beleven
 description: Starten is de volgende generatie mogelijkheden voor tagbeheer van Adobe. De lancering geeft klanten een eenvoudige manier om alle analytische, marketing, en reclame markeringen noodzakelijk om relevante klantenervaringen op te stellen en te beheren.
 seo-description: Starten is de volgende generatie mogelijkheden voor tagbeheer van Adobe. De lancering geeft klanten een eenvoudige manier om alle analytische, marketing, en reclame markeringen noodzakelijk om relevante klantenervaringen op te stellen en te beheren.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 2a082dc46b50eba1a38eb9d6946e17f851b2fd3f
 
 ---
 
@@ -16,6 +16,12 @@ Experience Platform Launch is de volgende generatie mogelijkheden voor tagbeheer
 Voor een inleiding aan de mogelijkheden van de Lancering van het Platform van de Ervaring, zie de middelen hieronder:
 * Experience Platform Launch- [documentatie](https://docs.adobe.com/content/help/en/launch/using/overview.html)
 * Ervaar de [snelstartvideo](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html)van Platform Launch. Begin met [Inleiding aan de Lancering](https://www.youtube.com/embed/rwqqkG1SERU) van het Platform en het [Publiceren procesoverzicht](https://helpx.adobe.com/analytics/how-to/adobe-launch-publishing-process.html), dan ga op de volgende concepten verder.
+
+## Hoe te om de uitbreidingen van de Lancering in de interface van Adobe in real time CDP te vinden
+
+Als u de extensies Starten wilt zoeken in de CDP-interface van Adobe Real-time, bladert u naar **[!UICONTROL Destinations > Catalog]** en selecteert u **[!UICONTROL Extensions]** in het **[!UICONTROL Types]** filter.
+
+![Extensies, filter in de interface](/help/rtcdp/destinations/assets/extensions-filter.png)
 
 ## Hoe werken extensies starten
 
