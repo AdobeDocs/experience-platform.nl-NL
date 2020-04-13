@@ -4,12 +4,12 @@ seo-title: Adobe Target v2-extensie
 description: De Adobe Target v2-extensie is een verpersoonlijkingsdoel in het Adobe Real-time Customer Data Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
 
 ---
 
 
-# Adobe Target v2-extensie (#adobe-target-v2-extension)
+# Adobe Target v2-extensie {#adobe-target-v2-extension}
 
 ## Overzicht {#overview}
 
