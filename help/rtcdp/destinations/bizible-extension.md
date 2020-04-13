@@ -4,7 +4,7 @@ seo-title: Bizible-extensie
 description: De Bizible-extensie is een e-maildoel in het Adobe Real-time Customer Data Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 seo-description: De Bizible-extensie is een e-maildoel in het Adobe Real-time Customer Data Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 2a94444b35cac0c002d729798d96fd54aaafbacd
 
 ---
 
@@ -18,6 +18,8 @@ Bizible is de toonaangevende B2B-attributieoplossing die u een ongekende zichtba
 Bizible is een e-mailextensie in Adobe Real-time Customer Data Platform. Zie de extensiepagina op [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html)voor meer informatie over de extensiefunctionaliteit.
 
 Deze bestemming is een uitbreiding van de Lancering van het Platform van de Ervaring. Voor meer informatie over hoe de uitbreidingen van de Lancering in Adobe in real time CDP werken, zie het Overzicht [van de uitbreidingen van de Lancering van het Platform van de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Ervaring Platform.
+
+![Bizible-extensie](assets/bizible-extension.png)
 
 ## Vereisten {#prerequisites}
 
