@@ -4,7 +4,7 @@ seo-title: Extensies bij opstarten platform beleven
 description: Starten is de volgende generatie mogelijkheden voor tagbeheer van Adobe. De lancering geeft klanten een eenvoudige manier om alle analytische, marketing, en reclame markeringen noodzakelijk om relevante klantenervaringen op te stellen en te beheren.
 seo-description: Starten is de volgende generatie mogelijkheden voor tagbeheer van Adobe. De lancering geeft klanten een eenvoudige manier om alle analytische, marketing, en reclame markeringen noodzakelijk om relevante klantenervaringen op te stellen en te beheren.
 translation-type: tm+mt
-source-git-commit: 2a082dc46b50eba1a38eb9d6946e17f851b2fd3f
+source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 
 ---
 
@@ -17,13 +17,13 @@ Voor een inleiding aan de mogelijkheden van de Lancering van het Platform van de
 * Experience Platform Launch- [documentatie](https://docs.adobe.com/content/help/en/launch/using/overview.html)
 * Ervaar de [snelstartvideo](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html)van Platform Launch. Begin met [Inleiding aan de Lancering](https://www.youtube.com/embed/rwqqkG1SERU) van het Platform en het [Publiceren procesoverzicht](https://helpx.adobe.com/analytics/how-to/adobe-launch-publishing-process.html), dan ga op de volgende concepten verder.
 
-## Hoe te om de uitbreidingen van de Lancering in de interface van Adobe in real time CDP te vinden
+## Hoe te om de uitbreidingen van de Lancering in de interface van Adobe in real time CDP te vinden {#how-to-find-extensions-in-interface}
 
 Als u de extensies Starten wilt zoeken in de CDP-interface van Adobe Real-time, bladert u naar **[!UICONTROL Destinations > Catalog]** en selecteert u **[!UICONTROL Extensions]** in het **[!UICONTROL Types]** filter.
 
 ![Extensies, filter in de interface](/help/rtcdp/destinations/assets/extensions-filter.png)
 
-## Hoe werken extensies starten
+## Hoe werken extensies starten {#how-extensions-work}
 
 Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen. Beschouw extensies als een **type bestemming voor doorsturen** van gebeurtenissen. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Gegineerde personalisatieuitbreiding](/help/rtcdp/destinations/gainsight-extension.md) of de [Bevestiging Stem van de uitbreiding](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)van de Klant.
 
@@ -31,7 +31,7 @@ Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschille
 
 ![De uitbreidingen van de Lancering van het Platform van de ervaring vergeleken met andere bestemmingen](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
-## Voordelen van het gebruik van Launch-extensies
+## Voordelen van het gebruik van Launch-extensies {#extensions-benefits}
 
 Experience Platform Launch is gratis voor bestaande Experience Cloud-klanten. Start vereenvoudigt de implementatie van tags op uw website via gebruiksvriendelijke extensies die u kunt installeren, configureren, bijwerken en verwijderen. Starten heeft een kleine voetafdruk op uw website en stelt u in staat om uw pagina&#39;s snel te laden.
 
@@ -41,7 +41,7 @@ Experience Platform Launch is gratis voor bestaande Experience Cloud-klanten. St
 
 U kunt *regels* maken die bepalen wanneer gebeurtenisgegevens naar extensies moeten worden doorgestuurd. Met deze krachtige functionaliteit kunt u gebeurtenisgegevens alleen in bepaalde situaties doorsturen, in tegenstelling tot het verzenden van gebeurtenisgegevens voor elke interactie. Lees voor meer informatie de regels in de documentatie [bij](https://docs.adobe.com/help/en/launch/using/reference/manage-resources/rules.html)Starten.
 
-## Voorbeelden van gebruiksscenario&#39;s voor extensies starten
+## Voorbeelden van gebruiksscenario&#39;s voor extensies starten {#extensions-use-cases}
 
 De uitbreidingen van de lancering laten u toe om diverse klantengebruiksgevallen tevreden te stellen. Voorbeelden hiervan zijn:
 
@@ -50,7 +50,7 @@ De uitbreidingen van de lancering laten u toe om diverse klantengebruiksgevallen
 * U kunt op het juiste moment een chatbox-app voor de client inschakelen op basis van de manier waarop uw gebruikers met uw pagina&#39;s werken, volgens de regels die u instelt bij Starten.
 
 
-## Extensiecategorieën
+## Extensiecategorieën {#extension-categories}
 
 Extensies starten kan onder de volgende categorieën vallen in Adobe Real-time CDP:
 
