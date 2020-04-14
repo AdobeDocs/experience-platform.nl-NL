@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
+source-git-commit: dc1c9b7dd9ff4c8b20de96e4ee123d90be4580cc
 
 ---
 
@@ -14,6 +14,28 @@ source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
 # Opmerkingen bij de release Adobe Experience Platform
 
 ## Releasedatum: 8 april 2020
+
+## XDM-systeem (Experience Data Model)
+
+Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter het ervaringsplatform. Experience Data Model (XDM), aangestuurd door Adobe, is een poging om gegevens over klantervaring te standaardiseren en schema&#39;s voor het beheer van klantervaring te definiëren.
+
+XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Deze biedt algemene structuren en definities waarmee toepassingen kunnen communiceren met services op het Adobe Experience Platform. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier levert. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+
+### Nieuwe functies
+
+| Functie | Beschrijving |
+| --- | --- |
+| Automatische alternatieve weergave-info | De Register van het Schema past automatisch de aangepaste titel en beschrijvingswaarden toe die in de `alternateDisplayInfo` beschrijver worden gevormd. |
+| Beperkingen voor scalaire velden | De Registratie van het Schema staat meer dan 6000 scalaire gebieden in één enkel schema niet toe. |
+| Overzicht van prestaties | Het register van het Schema is herzien om beter te presteren en aan de eisen van het Platform van de Ervaring te voldoen. |
+
+**Bugfixes**
+
+* Bijgewerkt XDM in XED geconverteerd om een schonere XED formaat voor genestelde gebieden van URI in standaardXDM te steunen.
+
+**Bekende problemen**
+
+* Bekend
 
 ## Gegevensbeheer
 
