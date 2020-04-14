@@ -4,7 +4,7 @@ seo-title: Typen bestemmingen en categorieën
 description: 'In het Platform van de Gegevens van de Klant van Adobe In real time, leggen de Profiel/de bestemmingen van de Uitvoer van het Segment gebeurtenisgegevens vast, combineren het met andere gegevensbronnen, passen segmentatie toe, en voeren segmenten en gekwalificeerde profielen naar bestemmingen uit. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen. '
 seo-description: In het Platform van de Gegevens van de Klant van Adobe In real time, leggen de Profiel/de bestemmingen van de Uitvoer van het Segment gebeurtenisgegevens vast, combineren het met andere gegevensbronnen, passen segmentatie toe, en voeren segmenten en gekwalificeerde profielen naar bestemmingen uit. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
 
 ---
 
@@ -23,7 +23,7 @@ In Adobe Real-time Customer Data Platform maken we onderscheid tussen twee doelt
 
 ### Verbindingen
 
-**De bestemmingen van de Uitvoer** en van het **Segment van het profiel van de Uitvoer** in het Platform van de Gegevens van de Klant van Adobe Real-time vangen gebeurtenisgegevens, combineren het met andere gegevensbronnen om het [real-time klantenprofiel](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html)te vormen, segmentatie toe te passen, en segmenten en gekwalificeerde profielen naar bestemmingen uit te voeren.
+**De bestemmingen van de Uitvoer** en van het **Segment van het profiel van de Uitvoer** in het Platform van de Gegevens van de Klant van Adobe Real-time vangen gebeurtenisgegevens, combineren het met andere gegevensbronnen om het [real-time klantenprofiel](/help/profile/home.md)te vormen, segmentatie toe te passen, en segmenten en gekwalificeerde profielen naar bestemmingen uit te voeren.
 
 <br> 
 
@@ -68,7 +68,7 @@ Extensies zijn handig wanneer gebeurtenisgegevens worden gebruikt om een handeli
 
 ## Doelcategorieën
 
-De bestemmingen en uitbreidingen in de [bestemmingscatalogus](https://platform.adobe.com/destination/catalog) worden gegroepeerd per bestemmingscategorie (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, enz.), afhankelijk van het marketinggeval dat zij u helpen bereiken. Raadpleeg de documentatie bij de [catalogus](/help/rtcdp/destinations/destinations-catalog.md)Doelen voor meer informatie over elk van de categorieën en over de bestemmingen die in elke categorie zijn opgenomen.
+De verbindingen en extensies in de [doelcatalogus](https://platform.adobe.com/destination/catalog) worden gegroepeerd op doelcategorie (**Advertising**, **Cloud storage**, **Survey-platforms**, **Email marketing**, enz.), afhankelijk van het marketinggeval dat deze u helpen te maken. Raadpleeg de documentatie bij de [catalogus](/help/rtcdp/destinations/destinations-catalog.md)Doelen voor meer informatie over elk van de categorieën en over de bestemmingen die in elke categorie zijn opgenomen.
 
-![Doelcategorieën](/help/rtcdp/destinations/assets/destination-categories.png)
+![Doelcategorieën](/help/rtcdp/destinations/assets/destination-categories-menu.png)
 
