@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -53,7 +53,7 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 | `name` | Vriendelijke naam waarmee het samenvoegbeleid kan worden geïdentificeerd in lijstweergaven. |
 | `imsOrgId` | Organisatie-id waartoe dit samenvoegbeleid behoort |
 | `identityGraph` | [Object in identiteitsgrafiek](#identity-graph) dat de identiteitsgrafiek aangeeft waarvan gerelateerde identiteiten worden verkregen. Profielfragmenten die voor alle verwante identiteiten worden gevonden, worden samengevoegd. |
-| `attributeMerge` | [Kenmerksamenvoegobject](#attribute-merge) dat aangeeft op welke manier in het samenvoegbeleid bij gegevensconflicten voorrang wordt gegeven aan profielkenmerkwaarden. |
+| `attributeMerge` | [Kenmerksamenvoegobject](#attribute-merge) dat aangeeft op welke manier in het samenvoegbeleid voorrang wordt gegeven aan profielkenmerkwaarden in het geval van gegevensconflicten. |
 | `schema` | Het [schemaobject](#schema) waarop het samenvoegbeleid kan worden gebruikt. |
 | `default` | Een Booleaanse waarde die aangeeft of dit samenvoegbeleid de standaardinstelling is voor het opgegeven schema. |
 | `version` | Door het platform bijgehouden versie van het samenvoegbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
@@ -418,7 +418,7 @@ Een geslaagde reactie retourneert de details van het nieuwe samenvoegbeleid.
 
 Zie de [componenten van de sectie van het samenvoegingsbeleid](#components-of-merge-policies) aan het begin van dit document voor details op elk van de individuele elementen die omhoog een fusiebeleid maken.
 
-## Een samenvoegingsbeleid bijwerken
+## Een samenvoegingsbeleid bijwerken {#update}
 
 U kunt een bestaand samenvoegingsbeleid wijzigen door individuele attributen (PATCH) uit te geven of door het volledige fusiebeleid met nieuwe attributen (PUT) te beschrijven. Hieronder worden voorbeelden van beide weergegeven.
 
