@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Compatibiliteit van gegevensgebruik voor publiekssegmenten afdwingen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
 
 ---
 
@@ -22,7 +22,9 @@ Voor deze zelfstudie is een goed begrip vereist van de volgende componenten van 
 - [Segmentatie](../home.md): Hoe het Profiel van de Klant in real time een grote groep individuen in de profielopslag in kleinere groepen verdeelt die gelijkaardige eigenschappen delen en op gelijkaardige wijze aan marketing strategieën zullen antwoorden.
 - [Gegevensbeheer](../../data-governance/home.md): Het Beheer van gegevens verstrekt de infrastructuur voor het etiketteren en de handhaving van het gegevensgebruik (DULE), gebruikend de volgende componenten:
    - [Labels](../../data-governance/labels/user-guide.md)voor gegevensgebruik: Etiketten die worden gebruikt om gegevenssets en velden te beschrijven in termen van het gevoeligheidsniveau waarmee hun respectieve gegevens worden verwerkt.
-   - [Beleid](../../data-governance/api/getting-started.md)voor gegevensgebruik: Configuraties die aangeven welke marketingacties zijn toegestaan op gegevens die zijn gecategoriseerd door bepaalde labels voor gegevensgebruik.
+   - [Beleid](../../data-governance/policies/overview.md)voor gegevensgebruik: Configuraties die aangeven welke marketingacties zijn toegestaan op gegevens die zijn gecategoriseerd door bepaalde labels voor gegevensgebruik.
+   - [Beleidshandhaving](../../data-governance/enforcement/overview.md): Hiermee kunt u beleid voor gegevensgebruik afdwingen en gegevensbewerkingen die beleidsovertredingen vormen, voorkomen.
+- [Sandboxen](../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Platform APIs te maken.
 
@@ -48,11 +50,11 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 - Inhoudstype: application/json
 
-## Een samenvoegbeleid voor een segmentdefinitie zoeken
+## Een samenvoegingsbeleid voor een segmentdefinitie opzoeken {#merge-policy}
 
 Dit werkschema begint door tot een bekend publiekssegment toegang te hebben. De segmenten die voor gebruik in het Profiel van de Klant in real time worden toegelaten bevatten een identiteitskaart van het fusiebeleid binnen hun segmentdefinitie. Dit samenvoegbeleid bevat informatie over welke datasets in het segment moeten worden omvat, die beurtelings om het even welke toepasselijke etiketten van het gegevensgebruik bevatten.
 
-Gebruikend de [Segmentatie API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), kunt u een segmentdefinitie door zijn identiteitskaart zoeken om zijn bijbehorend fusiebeleid te vinden.
+Gebruikend de [Segmentatie API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), kunt u omhoog een segmentdefinitie door zijn identiteitskaart kijken om zijn bijbehorend fusiebeleid te vinden.
 
 **API-indeling**
 
@@ -75,7 +77,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Reactie**
+**Antwoord**
 
 Een succesvolle reactie keert de details van de segmentdefinitie terug.
 
@@ -117,9 +119,9 @@ Een succesvolle reactie keert de details van de segmentdefinitie terug.
 | -------- | ----------- |
 | `mergePolicyId` | De id van het samenvoegbeleid dat voor de segmentdefinitie wordt gebruikt. Dit wordt in de volgende stap gebruikt. |
 
-## Vind de brondatasets van het fusiebeleid
+## Vind de brondatasets van het fusiebeleid {#datasets}
 
-Het beleid van de fusie bevat informatie over hun brondatasets, die beurtelings DULE etiketten bevatten. U kunt de details van een fusiebeleid opzoeken door identiteitskaart van het fusiebeleid in een GET verzoek aan het Profiel API te verstrekken.
+Het beleid van de fusie bevat informatie over hun brondatasets, die beurtelings de etiketten van het gegevensgebruik bevatten. U kunt de details van een fusiebeleid opzoeken door identiteitskaart van het fusiebeleid in een GET verzoek aan het Profiel API te verstrekken.
 
 **API-indeling**
 
@@ -129,7 +131,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{MERGE_POLICY_ID}` | De id van het samenvoegbeleid dat in de [vorige stap](#lookup-a-merge-policy-for-a-segment-definition)is verkregen. |
+| `{MERGE_POLICY_ID}` | De id van het samenvoegbeleid dat in de [vorige stap](#merge-policy)is verkregen. |
 
 **Verzoek**
 
@@ -142,7 +144,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Reactie**
+**Antwoord**
 
 Een succesvolle reactie retourneert de details van het samenvoegbeleid.
 
@@ -174,92 +176,195 @@ Een succesvolle reactie retourneert de details van het samenvoegbeleid.
 | `attributeMerge.type` | Het configuratietype van de gegevensbelangrijkheid voor het samenvoegbeleid. Als de waarde is `dataSetPrecedence`, zijn de datasets verbonden aan dit fusiebeleid vermeld onder `attributeMerge > data > order`. Als de waarde is `timestampOrdered`, dan worden alle datasets verbonden aan het schema binnen van verwijzingen voorzien `schema.name` gebruikt door het fusiebeleid. |
 | `attributeMerge.data.order` | Als `attributeMerge.type` is `dataSetPrecedence`, zal dit attribuut een serie die IDs van de datasets bevatten door dit fusiebeleid wordt gebruikt. Deze id&#39;s worden in de volgende stap gebruikt. |
 
-## De etiketten van het het gegevensgebruik van de opzoekopdracht voor de brondatasets
+## Gegevenssets evalueren voor beleidsovertredingen
 
-Zodra u IDs van de brondatasets van het fusiebeleid hebt verzameld, kunt u deze IDs gebruiken om de etiketten van het gegevensgebruik te zoeken die voor de datasets zelf en om het even welke specifieke gegevensgebieden worden gevormd die daarin.
+>[!NOTE]  In deze stap wordt ervan uitgegaan dat u ten minste één actief beleid voor gegevensgebruik hebt dat voorkomt dat specifieke marketingacties worden uitgevoerd op gegevens die bepaalde labels bevatten. Als u geen toepasselijk gebruiksbeleid voor de datasets hebt die worden geëvalueerd, gelieve het [beleidsscheppingsleerprogramma](../../data-governance/policies/create.md) te volgen om tot één te leiden alvorens met deze stap verder te gaan.
 
-De volgende vraag aan de [Dienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) van de Catalogus wint de etikettenvan het gegevensgebruik verbonden aan één enkele dataset door zijn identiteitskaart in de verzoekweg te verstrekken terug:
+Zodra u IDs van de brondatasets van het fusiebeleid hebt verkregen, kunt u de [DULE Dienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) van het Beleid gebruiken om die datasets tegen specifieke marketing acties te evalueren om op de schendingen van het beleid van het gegevensgebruik te controleren.
+
+Om de datasets te evalueren, moet u de naam van de marketing actie in de weg van een POST- verzoek verstrekken, terwijl het verstrekken van dataset IDs binnen het verzoeklichaam, zoals aangetoond in het voorbeeld hieronder.
 
 **API-indeling**
 
 ```http
-GET /dataSets/{DATASET_ID}/dule
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
 
-| Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `{DATASET_ID}` | Identiteitskaart van de dataset waarvan de etiketten van het gegevensgebruik u wilt opzoeken. |
+| Parameter | Beschrijving |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | De naam van de marketing actie verbonden aan het beleid van het gegevensgebruik u de datasets door evalueert. Afhankelijk van het feit of het beleid is gedefinieerd door Adobe of door uw organisatie, moet u respectievelijk gebruiken `/marketingActions/core` of `/marketingActions/custom`. |
 
 **Verzoek**
 
+Het volgende verzoek test de `exportToThirdParty` marketing actie tegen datasets die in de [vorige stap](#datasets)worden verkregen. De aanvraaglading is een serie die IDs van elke dataset bevat.
+
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b95b155419ec801e6eee780/dule \
+curl -X POST \
+  https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty/constraints
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '[
+    {
+      "entityType": "dataSet",
+      "entityId": "5b95b155419ec801e6eee780"
+    },
+    {
+      "entityType": "dataSet",
+      "entityId": "5b7c86968f7b6501e21ba9df"
+    }
+  ]'
 ```
 
-**Reactie**
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `entityType` | Elk item in de payload-array moet het type entiteit aangeven dat wordt gedefinieerd. Voor dit gebruik is de waarde altijd &quot;dataSet&quot;. |
+| `entityID` | Elk punt in de ladingsserie moet unieke identiteitskaart voor een dataset verstrekken. |
 
-Een succesvolle reactie keert een lijst van de etiketten van het gegevensgebruik verbonden aan de dataset als geheel, en om het even welke bepaalde gegevensgebieden verbonden aan het bronschema terug.
+**Antwoord**
+
+Een succesvolle reactie keert URI voor de marketing actie, de etiketten van het gegevensgebruik terug die uit de verstrekte datasets werden verzameld, en een lijst van om het even welk beleid van het gegevensgebruik dat als resultaat van het testen van de actie tegen die etiketten werd geschonden. In dit voorbeeld wordt het beleid Gegevens exporteren naar derden weergegeven in de `violatedPolicies` array om aan te geven dat de marketingactie een beleidsovertreding heeft veroorzaakt.
 
 ```json
 {
-    "connection": {},
-    "dataset": {
-        "identity": [],
-        "contract": [
-            "C3"
-        ],
-        "sensitive": [],
-        "contracts": [
-            "C3"
-        ],
-        "identifiability": [],
-        "specialTypes": []
+  "timestamp": 1556324277895,
+  "clientId": "{CLIENT_ID}",
+  "userId": "{USER_ID}",
+  "imsOrg": "{IMS_ORG}",
+  "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty",
+  "duleLabels": [
+    "C1",
+    "C2",
+    "C4",
+    "C5"
+  ],
+  "discoveredLabels": [
+    {
+      "entityType": "dataSet",
+      "entityId": "5b95b155419ec801e6eee780",
+      "dataSetLabels": {
+        "connection": {
+          "labels": []
+        },
+        "dataSet": {
+          "labels": [
+            "C5"
+          ]
+        },
+        "fields": [
+          {
+            "labels": [
+              "C2",
+            ],
+            "path": "/properties/_customer"
+          },
+          {
+            "labels": [
+              "C5"
+            ],
+            "path": "/properties/geoUnit"
+          },
+          {
+            "labels": [
+              "C1"
+            ],
+            "path": "/properties/identityMap"
+          }
+        ]
+      }
     },
-    "fields": [],
-    "schemaFields": [
-        {
-            "path": "/properties/personalEmail/properties/address",
-            "identity": [
-                "I1"
+    {
+      "entityType": "dataSet",
+      "entityId": "5b7c86968f7b6501e21ba9df",
+      "dataSetLabels": {
+        "connection": {
+          "labels": []
+        },
+        "dataSet": {
+          "labels": [
+            "C5"
+          ]
+        },
+        "fields": [
+          {
+            "labels": [
+              "C5"
             ],
-            "contract": [
-                "C2",
-                "C9"
+            "path": "/properties/createdByBatchID"
+          },
+          {
+            "labels": [
+              "C5"
             ],
-            "sensitive": [],
-            "contracts": [
-                "C2",
-                "C9"
-            ],
-            "identifiability": [
-                "I1"
-            ],
-            "specialTypes": []
+            "path": "/properties/faxPhone"
+          }
+        ]
+      }
+    }
+  ],
+  "violatedPolicies": [
+    {
+      "name": "Export Data to Third Party",
+      "status": "ENABLED",
+      "marketingActionRefs": [
+        "https://platform-stage.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty"
+      ],
+      "description": "Conditions under which data cannot be exported to a third party",
+      "deny": {
+        "operator": "OR",
+        "operands": [
+          {
+            "label": "C1"
+          },
+          {
+            "operator": "AND",
+            "operands": [
+              {
+                "label": "C3"
+              },
+              {
+                "label": "C7"
+              }
+            ]
+          }
+        ]
+      },
+      "imsOrg": "{IMS_ORG}",
+      "created": 1565651746693,
+      "createdClient": "{CREATED_CLIENT}",
+      "createdUser": "{CREATED_USER",
+      "updated": 1565723012139,
+      "updatedClient": "{UPDATED_CLIENT}",
+      "updatedUser": "{UPDATED_USER}",
+      "_links": {
+        "self": {
+          "href": "https://platform-stage.adobe.io/data/foundation/dulepolicy/policies/custom/5d51f322e553c814e67af1a3"
         }
-    ]
+      },
+      "id": "5d51f322e553c814e67af1a3"
+    }
+  ]
 }
 ```
 
 | Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `dataset` | Een object dat de labels voor gegevensgebruik bevat die op de gegevensset als geheel zijn toegepast. |
-| `schemaFields` | Een array met objecten die specifieke schemavelden vertegenwoordigen waarop labels voor gegevensgebruik zijn toegepast. |
-| `schemaFields.path` | Het pad van het schemaveld waarvan de labels voor gegevensgebruik in hetzelfde object worden vermeld. |
+| --- | --- |
+| `duleLabels` | Een lijst met gegevensgebruikslabels die uit de verstrekte datasets zijn geëxtraheerd. |
+| `discoveredLabels` | Een lijst van de datasets die in de verzoeklading werden verstrekt, tonend de datasetniveau en gebied-vlakke etiketten die in elk werden gevonden. |
+| `violatedPolicies` | Een array met vermelding van eventuele beleidsregels voor gegevensgebruik die zijn overtreden door de marketingactie (opgegeven in `marketingActionRef`) te testen op basis van de opgegeven actie `duleLabels`. |
+
+Met de gegevens die in de API-reactie worden geretourneerd, kunt u protocollen in uw ervaringstoepassing instellen om beleidsovertredingen op de juiste wijze af te dwingen.
 
 ## Gegevensvelden filteren
 
->[!NOTE] Deze stap is optioneel. Als u de gegevens in uw segment niet wilt aanpassen op basis van uw bevindingen in de vorige stap van het [opzoeken van labels](#lookup-data-usage-labels-for-the-source-datasets)voor gegevensgebruik, kunt u verdergaan met de laatste stap van het [evalueren van de gegevens voor beleidsovertredingen](#evaluate-data-for-policy-violations).
-
-Als u wenst om de gegevens aan te passen inbegrepen in uw publiekssegment, kunt u dit doen gebruikend één van de volgende twee methodes:
+Als uw publiekssegment geen evaluatie overgaat, kunt u de gegevens aanpassen inbegrepen in het segment door één van de twee hieronder geschetste methodes.
 
 ### Het samenvoegbeleid van de segmentdefinitie bijwerken
 
-Het bijwerken van het samenvoegbeleid van een segmentdefinitie zal de datasets en de gebieden aanpassen die zullen worden omvat wanneer de segmentbaan in werking wordt gesteld. Zie de sectie over het [bijwerken van een bestaand samenvoegingsbeleid](../../profile/api/merge-policies.md) in de zelfstudie van het fusiebeleid voor meer informatie.
+Het bijwerken van het samenvoegbeleid van een segmentdefinitie zal de datasets en de gebieden aanpassen die zullen worden omvat wanneer de segmentbaan in werking wordt gesteld. Zie de sectie over het [bijwerken van een bestaand samenvoegingsbeleid](../../profile/api/merge-policies.md#update) in de API zelfstudie voor samenvoegingsbeleid voor meer informatie.
 
 ### Specifieke gegevensvelden beperken bij het exporteren van het segment
 
@@ -267,11 +372,7 @@ Wanneer u een segment naar een dataset exporteert met de Real-Time Customer Prof
 
 Neem bijvoorbeeld een segment met gegevensvelden met de naam &quot;A&quot;, &quot;B&quot; en &quot;C&quot;. Als u alleen veld C wilt exporteren, bevat de `fields` parameter alleen veld C. Op deze manier worden de velden A en B bij het exporteren van het segment uitgesloten.
 
-Zie de sectie over het [exporteren van een segment](./evaluate-a-segment.md#export-a-segment) in de segmentatiezelfstudie voor meer informatie.
-
-## Gegevens evalueren voor beleidsovertredingen
-
-Nu u de etiketten van het gegevensgebruik verbonden aan uw publiekssegment hebt verzameld, kunt u deze etiketten tegen marketing acties testen om voor om het even welke schendingen van het beleid van het gegevensgebruik te evalueren. Voor gedetailleerde stappen op hoe te om beleidsevaluaties uit te voeren gebruikend de [DULE Dienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)van het Beleid, zie het document over [beleidsevaluatie](../../data-governance/enforcement/overview.md).
+Zie de sectie over het [exporteren van een segment](./evaluate-a-segment.md#export) in de segmentatiezelfstudie voor meer informatie.
 
 ## Volgende stappen
 
