@@ -4,7 +4,7 @@ seo-title: Typen bestemmingen en categorieën
 description: 'In het Platform van de Gegevens van de Klant van Adobe In real time, leggen de Profiel/de bestemmingen van de Uitvoer van het Segment gebeurtenisgegevens vast, combineren het met andere gegevensbronnen, passen segmentatie toe, en voeren segmenten en gekwalificeerde profielen naar bestemmingen uit. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen. '
 seo-description: In het Platform van de Gegevens van de Klant van Adobe In real time, leggen de Profiel/de bestemmingen van de Uitvoer van het Segment gebeurtenisgegevens vast, combineren het met andere gegevensbronnen, passen segmentatie toe, en voeren segmenten en gekwalificeerde profielen naar bestemmingen uit. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen.
 translation-type: tm+mt
-source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
+source-git-commit: 617cf1934402b9001647d7704fb24d6256069ff3
 
 ---
 
@@ -47,10 +47,11 @@ In de onderstaande video worden de bijzonderheden van de twee soorten doelen uit
 
 Adobe Real-time CDP maakt gebruik van de kracht en flexibiliteit van Experience Platform Launch om Launch-extensies op te nemen in de Adobe Real-time CDP-interface.
 
+>[!TIP]
+>
+>Voor gedetailleerde informatie over de uitbreidingen van de Lancering van het Platform van de Ervaring, met inbegrip van gebruiksgevallen en hoe te om hen in de interface te vinden, zie het overzicht [van de uitbreidingen van de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Lancering.
+
 Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen. Beschouw extensies als een **type bestemming voor doorsturen** van gebeurtenissen. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Gegineerde personalisatieuitbreiding](/help/rtcdp/destinations/gainsight-extension.md) of de [Bevestiging Stem van de uitbreiding](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)van de Klant.
-
-Voor gedetailleerde informatie over de uitbreidingen van de Lancering van het Platform van de Ervaring, zie het overzicht [van de Uitbreidingen van de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Lancering.
-
 
 ![De uitbreidingen van de Lancering van het Platform van de ervaring vergeleken met andere bestemmingen](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
