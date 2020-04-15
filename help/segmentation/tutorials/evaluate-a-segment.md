@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een segment evalueren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 8d77fc6c5b2824624ba308269f743a432a5288d2
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -173,7 +173,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **Verzoek**
 
-In het volgende verzoek wordt [JSON-patchopmaak](http://jsonpatch.com/) gebruikt om de [cron-expressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor het schema bij te werken. In dit voorbeeld wordt het schema nu geactiveerd om 10:15:00 UTC.
+In het volgende verzoek wordt de opmaak [van](http://jsonpatch.com/) JSON-patch gebruikt om de [uitsnijdexpressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor het schema bij te werken. In dit voorbeeld wordt het schema nu geactiveerd om 10:15:00 UTC.
 
 ```shell
 curl -X POST \
@@ -452,7 +452,7 @@ In de volgende secties worden deze opties gedetailleerder beschreven.
 
 Als u het specifieke profiel kent waartoe u toegang wilt hebben, kunt u dit doen gebruikend de Real-time API van het Profiel van de Klant. De volledige stappen voor toegang tot individuele profielen zijn beschikbaar in de gegevens van het Profiel van de Klant van de [Toegang in real time gebruikend het profiel API](../../profile/api/entities.md) leerprogramma.
 
-## Een segment exporteren
+## Een segment exporteren {#export}
 
 Nadat een segmentatietaak met succes is voltooid (de waarde van het `status` attribuut is &quot;SUCCEEDED&quot;), kunt u uw publiek naar een dataset uitvoeren waar het kan worden betreden en worden gehandeld.
 
