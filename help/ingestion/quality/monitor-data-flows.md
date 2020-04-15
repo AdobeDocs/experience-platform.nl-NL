@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Inname van gegevens controleren
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8577d9b93098d5d6ec778d549bf5fc1e29c32d86
+source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
 
 ---
 
@@ -21,15 +21,21 @@ In de UI [van het Platform van de](https://platform.adobe.com)Ervaring, klik **C
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-De *overzichtspagina voor streaming van begin tot einde* wordt weergegeven. Deze werkruimte biedt een grafiek waarin de snelheid van berichten wordt weergegeven die worden gestreamd en een gedetailleerde lijst met binnenkomende gegevens.
+De *overzichtspagina voor streaming van begin tot einde* wordt weergegeven. Deze werkruimte verstrekt een grafiek die het tarief van gestreamde gebeurtenissen toont die door Platform worden ontvangen, een grafiek die het tarief van gestroomde gebeurtenissen toont die met succes door het Profiel [van de Klant in](../../profile/home.md)real time, evenals een gedetailleerde lijst van inkomende gegevens werden verwerkt.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
-Standaard toont de grafiek de mate van inname in de afgelopen zeven dagen. U kunt dit datumbereik aanpassen om verschillende tijdsperioden weer te geven door op de gemarkeerde knop te klikken.
+Standaard toont de bovenste grafiek de mate van inname in de afgelopen zeven dagen. U kunt dit datumbereik aanpassen om verschillende tijdsperioden weer te geven door op de gemarkeerde knop te klikken.
 
-![](../images/quality/monitor-data-flows/list-streams-focus-on-graph.png)
+![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-Onder de grafiek bevindt zich een lijst met alle streaming opname-records die overeenkomen met het hierboven weergegeven datumbereik. Elke vermelde partij toont zijn identiteitskaart, datasetnaam, toen het het laatst werd bijgewerkt, het aantal verslagen in de partij, evenals het aantal fouten (als om het even welk bestaan). U kunt op een van de records klikken voor meer informatie over die record.
+In de onderste grafiek ziet u de snelheid van gestreamde gebeurtenissen die in de afgelopen zeven dagen zijn verwerkt door Profile. U kunt dit datumbereik aanpassen om verschillende tijdsperioden weer te geven door op de gemarkeerde knop te klikken.
+
+> [!NOTE] Gegevens die in deze grafiek worden weergegeven, moeten **expliciet** zijn ingeschakeld voor Profiel. Leer hoe te om het stromen gegevens voor Profiel toe te laten, lees de [datasets gebruikersgids](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+
+![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
+
+Onder de grafieken bevindt zich een lijst met alle streaming opname-records die overeenkomen met het hierboven weergegeven datumbereik. Elke vermelde partij toont zijn identiteitskaart, datasetnaam, toen het het laatst werd bijgewerkt, het aantal verslagen in de partij, evenals het aantal fouten (als om het even welk bestaan). U kunt op een van de records klikken voor meer informatie over die record.
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-streams.png)
 
