@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van gegevensverwerking in Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -35,7 +35,7 @@ Met het Experience Platform kunt u bronverbindingen instellen met verschillende 
 
 Bronverbindingen kunnen worden geconfigureerd om gegevens te verzamelen van andere Adobe-toepassingen (zoals Adobe Analytics en Adobe Audience Manager), bronnen voor cloudopslag van derden (zoals Azure Blob, Amazon S3, FTP-servers en SFTP-servers) en CRM-systemen van derden (zoals Microsoft Dynamics en Salesforce).
 
-Zie het [Bronoverzicht](../source-connectors/home.md) voor meer informatie.
+Zie het [Bronoverzicht](../sources/home.md) voor meer informatie.
 
 ## Volgende stappen
 
