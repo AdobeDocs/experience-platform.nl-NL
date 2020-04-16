@@ -1,0 +1,152 @@
+---
+product: experience-platform
+audience: user
+user-guide-title: Help bij Adobe Experience Platform Source Connectors
+translation-type: tm+mt
+source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
+
+---
+
+
+# Bronaansluitingen {#sources}
+
+- [Overzicht van bronconnectors](home.md)
+- Beschikbare bronconnectors {#connectors}
+   - Adobe-toepassingen {#adobe-applications}
+      - [Gegevensconnector Analytics](connectors/adobe-applications/analytics.md)
+      - [Poortbeheeraansluiting](connectors/adobe-applications/audience-manager.md)
+      - [Klantenkenmerkaansluiting](connectors/adobe-applications/customer-attributes.md)
+   - Reclame {#advertising}
+      - [Google AdWords-connector](connectors/advertising/ads.md)
+   - Cloud-opslag {#cloud-storage}
+      - [Azure Data Lake Storage Gen2-connector](connectors/cloud-storage/adls-gen2.md)
+      - [Azure Blob- en Amazon S3-connector](connectors/cloud-storage/blob-s3.md)
+      - [FTP- en SFTP-aansluiting](connectors/cloud-storage/ftp-sftp.md)
+      - [Google Cloud Storage-connector](connectors/cloud-storage/google-cloud-storage.md)
+   - CRM {#crm}
+      - [Microsoft Dynamics-connector](connectors/crm/ms-dynamics.md)
+      - [Salesforce-aansluiting](connectors/crm/salesforce.md)
+   - Klantsucces {#customer-success}
+      - [Salesforce Service Cloud-aansluiting](connectors/customer-success/salesforce-service-cloud.md)
+      - [ServiceNow-connector](connectors/customer-success/servicenow.md)
+   - Databases {#databases}
+      - [Amazon Redshift-connector](connectors/databases/redshift.md)
+      - [Apache Hive op Azure HDInsights-connector](connectors/databases/hive.md)
+      - [Apache Spark op Azure HDInsights-connector](connectors/databases/spark.md)
+      - [Azure Synapse Analytics-connector](connectors/databases/synapse-analytics.md)
+      - [Azure Table Storage-connector](connectors/databases/ats.md)
+      - [Google BigQuery-connector](connectors/databases/bigquery.md)
+      - [MariaDB-connector](connectors/databases/mariadb.md)
+      - [Microsoft SQL Server-aansluiting](connectors/databases/sql-server.md)
+      - [MySQL-connector](connectors/databases/mysql.md)
+      - [Phoenix-aansluiting](connectors/databases/phoenix.md)
+      - [PostgreSQL-connector](connectors/databases/postgres.md)
+   - Marketing automatiseren {#marketing-automation}
+      - [HubSpot-connector](connectors/marketing-automation/hubspot.md)
+   - Betalingen {#payments}
+      - [PayPal-connector](connectors/payments/paypal.md)
+   - Protocollen {#protocols}
+      - [Generic OData-connector](connectors/protocols/odata.md)
+- API-zelfstudies {#api-tutorials}
+   - Een bronaansluiting maken {#create}
+      - Reclame {#advertising}
+         - [Google Ads-connector](tutorials/api/create/advertising/ads.md)
+      - Cloud-opslag {#cloud-storage}
+         - [Amazon S3-connector](tutorials/api/create/cloud-storage/s3.md)
+         - [Azure Blob-connector](tutorials/api/create/cloud-storage/blob.md)
+         - [Azure Data Lake Storage Gen2-connector](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Google Cloud Storage-connector](tutorials/api/create/cloud-storage/google.md)
+         - [SFTP-aansluiting](tutorials/api/create/cloud-storage/sftp.md)
+      - CRM {#crm}
+         - [Google AdWords-connector](tutorials/api/create/crm/adwords.md)
+         - [HubSpot-connector](tutorials/api/create/crm/hubspot.md)
+         - [Microsoft Dynamics-connector](tutorials/api/create/crm/ms-dynamics.md)
+         - [Salesforce-aansluiting](tutorials/api/create/crm/salesforce.md)
+      - Klantsucces {#customer-success}
+         - [Salesforce Service Cloud-aansluiting](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+         - [ServiceNow-connector](tutorials/api/create/customer-success/servicenow.md)
+      - Databases {#databases}
+         - [Amazon Redshift-connector](tutorials/api/create/databases/redshift.md)
+         - [Apache Spark op Azure HDInsights-connector](tutorials/api/create/databases/spark.md)
+         - [Azure Synapse Analytics-connector](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azure Table Storage-connector](tutorials/api/create/databases/ats.md)
+         - [Google BigQuery-connector](tutorials/api/create/databases/bigquery.md)
+         - [Hive-aansluiting](tutorials/api/create/databases/hive.md)
+         - [MariaDB-connector](tutorials/api/create/databases/mariadb.md)
+         - [MySQL-connector](tutorials/api/create/databases/mysql.md)
+         - [Phoenix-aansluiting](tutorials/api/create/databases/phoenix.md)
+         - [PostgreSQL-connector](tutorials/api/create/databases/postgres.md)
+         - [SQL Server-aansluiting](tutorials/api/create/databases/sql-server.md)
+      - Marketing automatiseren {#marketing-automation}
+         - [HubSpot-connector](tutorials/api/create/marketing-automation/hubspot.md)
+      - Betalingen {#payments}
+         - [PayPal-connector](tutorials/api/create/payments/paypal.md)
+      - Protocollen {#protocols}
+         - [Generic OData-connector](tutorials/api/create/protocols/odata.md)
+   - Gegevens verkennen {#explore}
+      - [Reclamegegevens verkennen](tutorials/api/explore/advertising.md)
+      - [Gegevens over cloudopslag verkennen](tutorials/api/explore/cloud-storage.md)
+      - [CRM-gegevens verkennen](tutorials/api/explore/crm.md)
+      - [Ontdek de succesgegevens van klanten](tutorials/api/explore/customer-success.md)
+      - [Database- of NoSQL-gegevens verkennen](tutorials/api/explore/database-nosql.md)
+      - [Gegevens over marketingautomatisering verkennen](tutorials/api/explore/marketing-automation.md)
+      - [Betalingsgegevens verkennen](tutorials/api/explore/payments.md)
+      - [protocolgegevens verkennen](tutorials/api/explore/protocols.md)
+   - Gegevens verzamelen {#collect}
+      - [Reclamegegevens verzamelen](tutorials/api/collect/advertising.md)
+      - [Gegevens over cloudopslag verzamelen](tutorials/api/collect/cloud-storage.md)
+      - [CRM-gegevens verzamelen](tutorials/api/collect/crm.md)
+      - [Gegevens over succes van klanten verzamelen](tutorials/api/collect/customer-success.md)
+      - [Database- of NoSQL-gegevens verzamelen](tutorials/api/collect/database-nosql.md)
+      - [Gegevens over marketingautomatisering verzamelen](tutorials/api/collect/marketing-automation.md)
+      - [Betalingsgegevens verzamelen](tutorials/api/collect/payments.md)
+      - [protocolgegevens verzamelen](tutorials/api/collect/protocols.md)
+   - [Parketgegevens uit een cloudopslagsysteem van een andere fabrikant verzamelen](tutorials/api/create-dataset-base-connection.md)
+   - [Creeer een verbinding van de datasetbasis gebruikend de Dienst API van de Stroom](tutorials/api/cloud-storage-parquet.md)
+- UI-zelfstudies {#ui-tutorials}
+   - Een bronaansluiting maken {#create}
+      - Adobe-toepassingen {#adobe-applications}
+         - [Aansluiting voor Adobe Audience Manager](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Adobe Analytics-connector](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Klantenkenmerkaansluiting](tutorials/ui/create/adobe-applications/customer-attributes.md)
+      - Reclame {#create}
+         - [Google Ads-connector](tutorials/ui/create/advertising/ads.md)
+      - Cloud-opslag {#cloud-storage}
+         - [Azure Data Lake Storage Gen2-connector](tutorials/ui/create/cloud-storage/adls-gen2.md)
+         - [Azure Blob- en Amazon S3-connector](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [FTP- en SFTP-aansluiting](tutorials/ui/create/cloud-storage/ftp-sftp.md)
+         - [Google Cloud Storage-connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+      - CRM {#crm}
+         - [Microsoft Dynamics en Salesforce-connector](tutorials/ui/create/crm/dynamics-salesforce.md)
+      - Klant geslaagd {#customer-success}
+         - [Salesforce Service Cloud-aansluiting](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [ServiceNow-connector](tutorials/ui/create/customer-success/servicenow.md)
+      - Databases {#databases}
+         - [Amazon Redshift-connector](tutorials/ui/create/databases/redshift.md)
+         - [Azure Synapse Analytics-connector](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure Table Storage-connector](tutorials/ui/create/databases/ats.md)
+         - [Google Big Query-connector](tutorials/ui/create/databases/bigquery.md)
+         - [Hive-aansluiting](tutorials/ui/create/databases/hive.md)
+         - [MariaDB-connector](tutorials/ui/create/databases/mariadb.md)
+         - [Microsoft SQL Server-aansluiting](tutorials/ui/create/databases/sql-server.md)
+         - [MySQL-connector](tutorials/ui/create/databases/mysql.md)
+         - [Phoenix-aansluiting](tutorials/ui/create/databases/phoenix.md)
+         - [PostgreSQL-connector](tutorials/ui/create/databases/postgres.md)
+         - [Vonk](tutorials/ui/create/databases/spark.md)
+      - Marketing automatiseren {#marketing-automation}
+         - [HubSpot-connector](tutorials/ui/create/marketing-automation/hubspot.md)
+      - Betalingen {#payments}
+         - [PayPal-connector](tutorials/ui/create/payments/paypal.md)
+      - Protocollen {#protocols}
+         - [Generic OData-connector](tutorials/ui/create/protocols/odata.md)
+   - Een gegevensstroom configureren {#dataflow}
+      - [Een dataflow configureren voor een advertentieverbinding](tutorials/ui/dataflow/advertising.md)
+      - [Een gegevensstroom configureren voor een aansluiting voor cloudopslag](tutorials/ui/dataflow/cloud-storage.md)
+      - [Een gegevensstroom configureren voor een databaseverbinding](tutorials/ui/dataflow/databases.md)
+      - [Een gegevensstroom configureren voor een CRM-aansluiting](tutorials/ui/dataflow/crm.md)
+      - [Een dataflow configureren voor een klantsuccesconnector](tutorials/ui/dataflow/customer-success.md)
+      - [Een gegevensstroom configureren voor een marketingautomatiseringsaansluiting](tutorials/ui/dataflow/marketing-automation.md)
+      - [Een gegevensstroom configureren voor een betalingsaansluiting](tutorials/ui/dataflow/payments.md)
+      - [Vorm een dataflow voor een protocolschakelaar](tutorials/ui/dataflow/protocols.md)
+   - [Inkomende gegevens activeren om klantprofielen te vullen](tutorials/ui/profile.md)
+   - [Accounts en gegevenssetstromen bewaken](tutorials/ui/monitor.md)
