@@ -4,7 +4,7 @@ solution: Experience Platform
 title: XDM-schema's en -beschrijvingen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -23,7 +23,7 @@ De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk o
 
 ## Een ad-hocschema maken
 
-In specifieke omstandigheden, kan het noodzakelijk zijn om een schema van de Gegevens van de Ervaring van het Model (XDM) met gebieden tot stand te brengen die voor gebruik slechts door één enkele dataset worden genoemd. Dit wordt bedoeld als &quot;ad-hoc&quot;schema. Ad-hocschema&#39;s worden gebruikt in diverse [gegevensinnamegrajecten](../ingestion/home.md) voor het Platform van de Ervaring, met inbegrip van het opnemen van CSV-bestanden en het creëren van bepaalde soorten [bronverbindingen](../source-connectors/home.md). Het maken van een ad-hocschema wordt uitgevoerd met behulp van de Schemaregister-API en is bedoeld voor gebruik in combinatie met andere zelfstudies van het Experience Platform die het maken van een ad-hocschema vereisen als onderdeel van hun workflow. Als u een ad-hocschema wilt gaan maken, raadpleegt u de zelfstudie voor het [maken van een ad-hocschema met de API](../xdm/tutorials/ad-hoc.md).
+In specifieke omstandigheden, kan het noodzakelijk zijn om een schema van de Gegevens van de Ervaring van het Model (XDM) met gebieden tot stand te brengen die voor gebruik slechts door één enkele dataset worden genoemd. Dit wordt bedoeld als &quot;ad-hoc&quot;schema. Ad-hocschema&#39;s worden gebruikt in diverse [gegevensinnamegrajecten](../ingestion/home.md) voor het Platform van de Ervaring, met inbegrip van het opnemen van CSV-bestanden en het creëren van bepaalde soorten [bronverbindingen](../sources/home.md). Het maken van een ad-hocschema wordt uitgevoerd met behulp van de Schemaregister-API en is bedoeld voor gebruik in combinatie met andere zelfstudies van het Experience Platform die het maken van een ad-hocschema vereisen als onderdeel van hun workflow. Als u een ad-hocschema wilt gaan maken, raadpleegt u de zelfstudie voor het [maken van een ad-hocschema met de API](../xdm/tutorials/ad-hoc.md).
 
 ## Volgende stappen
 
