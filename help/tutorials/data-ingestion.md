@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Zelfstudies voor gegevensinsluiting
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
 
 # Gegevens verzamelen in Experience Platform
 
-Met het Adobe Experience Platform worden gegevens uit meerdere bronnen bijeengebracht om marketers te helpen het gedrag van hun klanten beter te begrijpen. De Ingestie van de Gegevens van het Platform van de Ervaring van Adobe vertegenwoordigt de veelvoudige methodes waardoor Platform gegevens uit deze bronnen opneemt, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door de stroomafwaartse diensten van het Platform worden voortgeduurd. De Ingestie van gegevens omvat partijingestie, het stromen ingestie, en ingestie gebruikend bronschakelaars. Meer leren, lees het overzicht [van de Ingestie van](../ingestion/home.md) Gegevens of ga direct aan de [Brondocumentatie](../source-connectors/home.md)te werk.
+Met het Adobe Experience Platform worden gegevens uit meerdere bronnen bijeengebracht om marketers te helpen het gedrag van hun klanten beter te begrijpen. De Ingestie van de Gegevens van het Platform van de Ervaring van Adobe vertegenwoordigt de veelvoudige methodes waardoor Platform gegevens uit deze bronnen opneemt, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door de stroomafwaartse diensten van het Platform worden voortgeduurd. De Ingestie van gegevens omvat partijingestie, het stromen ingestie, en ingestie gebruikend bronschakelaars. Meer leren, lees het overzicht [van de Ingestie van](../ingestion/home.md) Gegevens of ga direct aan de [Brondocumentatie](../sources/home.md)te werk.
 
 ## Een bronaansluiting maken in de gebruikersinterface en de API
 
-De bron schakelaars staan u toe om gegevens van veelvoudige bronnen in te voeren, waar het dan kan worden geëtiketteerd, gestructureerd, en worden verbeterd gebruikend de diensten van het Platform. Ga naar het [maken van een bronaansluiting in het overzicht](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)van de gebruikersinterface als u een aansluiting wilt maken met de gebruikersinterface. Als u bronconnectors wilt maken met de API, gaat u naar het [aanmaken van een bronaansluiting met behulp van het overzicht](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)van de Flow Service API.
+De bron schakelaars staan u toe om gegevens van veelvoudige bronnen in te voeren, waar het dan kan worden geëtiketteerd, gestructureerd, en worden verbeterd gebruikend de diensten van het Platform. Beginnen creërend een bronschakelaar, zie het [bronoverzicht](../sources/home.md).
 
 ## Gegevens van groep samenvoegen
 
