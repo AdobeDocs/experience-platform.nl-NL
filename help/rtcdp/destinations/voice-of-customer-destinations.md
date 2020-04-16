@@ -4,7 +4,7 @@ seo-title: Stem van de Doelen van de Klant
 description: De platforms van de stem verzamelen en verzamelen gegevens uit diverse bronnen met inbegrip van stemberichten, vraaggegevens en praatjegesprekken. De verzamelde informatie kan worden gefilterd en geanalyseerd om bedrijven in staat te stellen hun website te optimaliseren om aan hun vereisten te voldoen.
 seo-description: De platforms van de stem verzamelen en verzamelen gegevens uit diverse bronnen met inbegrip van stemberichten, vraaggegevens en praatjegesprekken. De verzamelde informatie kan worden gefilterd en geanalyseerd om bedrijven in staat te stellen hun website te optimaliseren om aan hun vereisten te voldoen.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
