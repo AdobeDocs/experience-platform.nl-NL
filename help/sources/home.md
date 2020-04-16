@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 translation-type: tm+mt
-source-git-commit: 92ba230d71e419e33567833ad562e6ffef996d0a
+source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
 
 ---
 
@@ -26,9 +26,10 @@ De bronnen in het Platform van de Ervaring worden gegroepeerd in de volgende cat
 Met het Experience Platform kunnen gegevens uit andere Adobe-toepassingen worden ingevoerd, zoals Adobe Analytics, Adobe Audience Manager en Experience Platform Launch. Zie de volgende verwante documenten voor meer informatie:
 
 - [Overzicht van de Adobe Audience Manager-connector](connectors/adobe-applications/audience-manager.md)
-- [Een Adobe Audience Manager-bronaansluiting maken in de gebruikersinterface](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)
+- [Een Adobe Audience Manager-bronaansluiting maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Overzicht gegevensconnector Adobe Analytics](connectors/adobe-applications/analytics.md)
-- [Een Adobe Analytics-bronconnector maken in de gebruikersinterface](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/adobe-analytics-ui-tutorial.md)
+- [Een Adobe Analytics-bronconnector maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Een bronconnector voor klantkenmerken in de gebruikersinterface maken](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### Reclame
 
