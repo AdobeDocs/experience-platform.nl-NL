@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -78,7 +78,7 @@ Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u 
 
 * Geen
 
-Voor meer informatie over bronnen, zie het [bronoverzicht](../../source-connectors/home.md)
+Voor meer informatie over bronnen, zie het [bronoverzicht](../../sources/home.md)
 
 ## Doelen
 
