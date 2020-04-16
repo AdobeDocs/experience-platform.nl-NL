@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Source Connectors
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -15,4 +15,4 @@ Met het Adobe Experience Platform kunnen gegevens uit externe bronnen worden ing
 
 Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u bronverbindingen aan diverse gegevensleveranciers met gemak laat plaatsen. Deze bronverbindingen laten u toe om uw opslagsystemen en de diensten van CRM voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
 
-Meer informatie over deze bronschakelaars kan in de documentatie [van](../source-connectors/home.md)bronschakelaars worden gevonden.
+Meer informatie over deze bronschakelaars kan in de documentatie [van](../sources/home.md)bronschakelaars worden gevonden.
