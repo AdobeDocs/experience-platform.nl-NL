@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 9bfb2ca8726421363c8446ecf581ed58d427eabf
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -36,7 +36,7 @@ Adobe maakt verbinding met een groot ecosysteem van partners, om nog maar te zwi
 Met CDP in real time, kunt u:
 
 * Zorg voor één weergave van uw klant met een stroomsgewijze verzameling van klantgegevens in de hele onderneming.
-* Profielen op verantwoordelijke wijze beheren met vertrouwde governance en privacyopties voor bekende en onbekende id&#39;s.
+* Beheer profielen op verantwoordelijke wijze met vertrouwde governance en privacycontroles voor bekende en onbekende id&#39;s.
 * Genereer activeerbare inzichten en schaal publiek met AI en machine leren aangedreven door Adobe Sensei en gebouwd voor marketers.
 * Lever gepersonaliseerde ervaringen in real time over alle kanalen en bestemmingen.
 
@@ -98,7 +98,7 @@ Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u 
 
 * Bronconnectors voor op cloud gebaseerde opslagsystemen ondersteunen het opnemen van gecomprimeerde bestanden niet.
 
-Voor meer informatie over bronnen, zie [Bronoverzicht](../../source-connectors/home.md).
+Voor meer informatie over bronnen, zie [Bronoverzicht](../../sources/home.md).
 
 ## Werkruimte voor gegevenswetenschap
 
