@@ -1,0 +1,185 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Een Google Cloud Storage-connector maken met de Flow Service API
+topic: overview
+translation-type: tm+mt
+source-git-commit: 96be7084d5d2efb86b7bba27f1a92bd9c0055fba
+
+---
+
+
+# Een Google Cloud Storage-connector maken met de Flow Service API
+
+De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+
+Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform te verbinden met een Google Cloud Storage-account.
+
+## Aan de slag
+
+Voor deze handleiding is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+
+* [Bronnen](../../../../home.md): Het Platform van de ervaring laat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [Sandboxen](../../../../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+
+De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met een Google Cloud Storage-account met de Flow Service API.
+
+### Vereiste referenties verzamelen
+
+Als u wilt dat Flow Service verbinding maakt met uw Google Cloud Storage-account, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+
+| Credentials | Beschrijving |
+| ---------- | ----------- |
+| `accessKeyId` | De toegangs sleutel-id voor uw Google Cloud Storage-account. |
+| `secretAccessKey` | De geheime toegangssleutel voor uw Google Cloud Storage-account. |
+
+Ga naar [dit Google Cloud-document](https://cloud.google.com/docs/authentication)voor informatie over aan de slag gaan.
+
+### API-voorbeeldaanroepen lezen
+
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+
+### Waarden verzamelen voor vereiste koppen
+
+Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../../../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+
+* Autorisatie: Drager `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
+* x-gw-ims-org-id: `{IMS_ORG}`
+
+Alle bronnen in het ervaringsplatform, inclusief die van de Flow Service, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+
+* x-sandbox-name: `{SANDBOX_NAME}`
+
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+
+* Inhoudstype: `application/json`
+
+## Verbindingsspecificaties opzoeken
+
+Voordat u het platform kunt verbinden met een Google Cloud Storage, moet u controleren of er verbindingsspecificaties bestaan voor Google Cloud Storage. Als er geen verbindingsspecificaties bestaan, kan geen verbinding worden gemaakt.
+
+Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor Google Cloud Storage opzoeken door een GET-aanvraag uit te voeren en queryparameters te gebruiken.
+
+**API-indeling**
+
+Het verzenden van een GET verzoek zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de query opnemen `property=name=="google-cloud"` voor informatie die specifiek bestemd is voor Google Cloud Storage.
+
+```http
+GET /connectionSpecs
+GET /connectionSpecs?property=name==google-cloud
+```
+
+**Verzoek**
+
+Met de volgende aanvraag worden de verbindingsspecificaties voor Google Cloud Storage opgehaald.
+
+```shell
+curl -X GET \
+    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="google-cloud"' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Antwoord**
+
+Een succesvol antwoord geeft de verbindingsspecificaties voor Google Cloud Storage, inclusief de unieke id (`id`). Deze id is vereist in de volgende stap om een basisverbinding te maken.
+
+```json
+{
+    "items": [
+        {
+            "id": "32e8f412-cdf7-464c-9885-78184cb113fd",
+            "name": "google-cloud",
+            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+            "version": "1.0",
+            "authSpec": [
+                {
+                    "name": "Basic Authentication for google-cloud",
+                    "type": "Basic Authentication",
+                    "spec": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "type": "object",
+                        "description": "defines auth params required for connecting to google-cloud storage connector.",
+                        "properties": {
+                            "accessKeyId": {
+                                "type": "string",
+                                "description": "Access Key Id for the user account"
+                            },
+                            "secretAccessKey": {
+                                "type": "string",
+                                "description": "Secret Access Key for the user account",
+                                "format": "password"
+                            }
+                        },
+                        "required": [
+                            "accessKeyId",
+                            "secretAccessKey"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
+```
+
+## Een basisverbinding maken
+
+Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Er is slechts één basisverbinding vereist per Google Cloud Storage-account, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het opnemen van verschillende gegevens.
+
+**API-indeling**
+
+```http
+POST /connections
+```
+
+**Verzoek**
+
+```shell
+curl -X POST \
+    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Google Cloud Storage base connection",
+        "description": "Base connector for Google Cloud Storage",
+        "auth": {
+            "specName": "Basic Authentication for google-cloud",
+            "params": {
+                "accessKeyId": "accessKeyId",
+                "secretAccessKey": "secretAccessKey"
+            }
+        },
+        "connectionSpec": {
+            "id": "32e8f412-cdf7-464c-9885-78184cb113fd",
+            "version": "1.0"
+        }
+    }'
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `auth.params.accessKeyId` | De toegangs sleutel-id die aan uw Google Cloud Storage-account is gekoppeld. |
+| `auth.params.secretAccessKey` | De geheime toegangssleutel die aan uw Google Cloud Storage-account is gekoppeld. |
+| `connectionSpec.id` | De verbindingsspecificatie `id` van uw Google Cloud Storage-account die u in de vorige stap hebt opgehaald. |
+
+**Antwoord**
+
+Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist voor het verkennen van uw gegevens voor cloudopslag in de volgende zelfstudie.
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
+## Volgende stappen
+
+Aan de hand van deze zelfstudie hebt u een Google Cloud Storage-verbinding gemaakt met behulp van API&#39;s en is een unieke id opgehaald als onderdeel van de responsstructuur. U kunt deze verbindings-id gebruiken om cloudopslag te [verkennen met de Flow Service API](../../explore/cloud-storage.md) of [ingest parketgegevens met de Flow Service API](../../cloud-storage-parquet.md).
