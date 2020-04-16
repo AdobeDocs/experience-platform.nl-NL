@@ -5,14 +5,14 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
 
 # Opmerkingen bij de release Adobe Experience Platform
 
-## Releasedatum: 12 december 2019
+## Releasedatum: 11 december 2019
 
 ## Segmenteringsservice
 
@@ -66,7 +66,7 @@ Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u 
 
 * Geen.
 
-Zie het [bronoverzicht](../../source-connectors/home.md)voor meer informatie over bronnen.
+Zie het [bronoverzicht](../../sources/home.md)voor meer informatie over bronnen.
 
 ## XDM-systeem (Experience Data Model)
 
