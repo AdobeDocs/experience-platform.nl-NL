@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Voorbeeldquery's
 topic: queries
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
 
 # Voorbeeldquery&#39;s voor Adobe Analytics-gegevens
 
-Gegevens uit geselecteerde Adobe Analytics-rapportreeksen worden getransformeerd in XDM ExperienceEvents en opgenomen in Adobe Experience Platform als datasets voor u. In dit document wordt een aantal gebruiksgevallen beschreven waarin Adobe Experience Platform Query Service van deze gegevens gebruikmaakt en de meegeleverde voorbeeldquery&#39;s zouden moeten werken met uw Adobe Analytics-gegevenssets. Zie de documentatie [van de het gebiedstoewijzing van](../../source-connectors/ui/adobe-applications/analytics-mapping.md) Analytics voor meer informatie over afbeelding aan XDM ExperienceEvents.
+Gegevens uit geselecteerde Adobe Analytics-rapportreeksen worden getransformeerd in XDM ExperienceEvents en opgenomen in Adobe Experience Platform als datasets voor u. In dit document wordt een aantal gebruiksgevallen beschreven waarin Adobe Experience Platform Query Service van deze gegevens gebruikmaakt en de meegeleverde voorbeeldquery&#39;s zouden moeten werken met uw Adobe Analytics-gegevenssets. Zie de documentatie [van de het gebiedstoewijzing van](../../sources/connectors/adobe-applications/analytics-mapping.md) Analytics voor meer informatie over afbeelding aan XDM ExperienceEvents.
 
 ## Aan de slag
 
