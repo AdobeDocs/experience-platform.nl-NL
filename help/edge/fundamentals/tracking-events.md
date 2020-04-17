@@ -4,7 +4,7 @@ seo-title: Gebeurtenissen van Adobe Experience Platform Web SDK bijhouden
 description: Leer hoe te om de gebeurtenissen van het Web SDK van het Platform van de Ervaring te volgen
 seo-description: Leer hoe te om de gebeurtenissen van het Web SDK van het Platform van de Ervaring te volgen
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -24,7 +24,7 @@ Gegevens die naar Adobe Experience Cloud worden verzonden, vallen in twee catego
 
 ## XDM-gegevens verzenden
 
-XDM-gegevens zijn een object waarvan de inhoud en structuur overeenkomen met een schema dat u hebt gemaakt in het Adobe Experience Platform. [Meer informatie over het maken van een schema.](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/schema_editor_tutorial/schema_editor_tutorial.md)
+XDM-gegevens zijn een object waarvan de inhoud en structuur overeenkomen met een schema dat u hebt gemaakt in het Adobe Experience Platform. [Meer informatie over het maken van een schema.](../../xdm/tutorials/create-schema-ui.md)
 
 Om het even welke gegevens XDM u deel van uw analyses, verpersoonlijking, publiek, of bestemmingen zou moeten worden verzonden gebruikend de `xdm` optie.
 
