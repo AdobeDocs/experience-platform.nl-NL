@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Poortbeheeraansluiting
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f0200af0310eafbcc1851b089cfc254cb34af8f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -19,7 +19,7 @@ De gegevensverbindingsstromen van de Manager van de Publiek van Adobe de gegeven
 
 De schakelaar van de Manager van de Publiek brengt deze gegevenscategorieën aan het schema van het Model van Gegevens van de Ervaring (XDM) in kaart en verzendt hen naar Platform. Realtime-gegevens en gegevens aan boord worden verzonden als XDM ExperienceEvent-gegevens, terwijl profielgegevens worden verzonden als XDM Individuele profielen.
 
-Voor instructies over het maken van een verbinding met Adobe Audience Manager met behulp van de platforminterface raadpleegt u de [zelfstudie](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)voor de aansluiting van Audience Manager.
+Voor instructies over het maken van een verbinding met Adobe Audience Manager met behulp van de platforminterface raadpleegt u de [zelfstudie](../../tutorials/ui/create/adobe-applications/audience-manager.md)voor de aansluiting van Audience Manager.
 
 ## Wat is het Model van de Gegevens van de Ervaring (XDM)?
 
@@ -66,7 +66,7 @@ Terwijl de gebruikers de capaciteit hebben om datasets onbruikbaar te maken, wor
 
 ### Verbindingen
 
-Adobe Audience Manager maakt één verbinding in Catalog: Verbinding met **Audience Manager**. Catalog is het systeem van de verslagen voor gegevensplaats en lijn binnen het Platform van de Ervaring van Adobe. Een verbinding is een voorwerp van de Catalogus dat een klant-specifiek geval van Verbindingen is. Zie het overzicht [van de](../../../catalog/home.md) Catalogusservice voor meer informatie over Catalogus, verbindingen en connectors.
+Adobe Audience Manager maakt één verbinding in Catalog: Verbinding met **Audience Manager**. Catalog is het systeem van de verslagen voor gegevensplaats en lijn binnen het Platform van de Ervaring van Adobe. Een verbinding is een voorwerp van de Catalogus dat een klant-specifiek geval van Connectors is. Zie het overzicht [van de](../../../catalog/home.md) Catalogusservice voor meer informatie over Catalogus, verbindingen en connectors.
 
 ## Wat is de verwachte latentie voor de Gegevens van de Manager van de Audience op Platform?
 
