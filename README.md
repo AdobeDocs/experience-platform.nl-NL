@@ -1,9 +1,9 @@
 ---
-source-git-commit: d6149bdf74ef8cec10264c414bd21bfdf3491bef
+source-git-commit: 792d6962154a8cdca74b3c4e72d6f7a7663cbd6f
 translation-type: tm+mt
 
 ---
-# Contribute-artikel
+# Inhoud bijdragen
 
 Wij verwelkomen de bijdragen van onze gemeenschap en medewerkers van Adobe buiten de documentatieteams.
 
@@ -11,7 +11,7 @@ Wij verwelkomen de bijdragen van onze gemeenschap en medewerkers van Adobe buite
 
 Dit project heeft de [Adobe-gedragscode voor open source](code-of-conduct.md) of de [.NET Foundation-gedragscode](https://dotnetfoundation.org/code-of-conduct) overgenomen. Zie het artikel [Bijdragen](contributing.md) voor meer informatie.
 
-## Over uw bijdragen aan Adobe-inhoud
+## Manieren om bij te dragen aan Adobe-inhoud
 
 Zie de [Adobe Docs Contributor Guide](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
 
@@ -33,26 +33,32 @@ Als u deel uitmaakt van de Adobe-community en een artikel wilt maken of belangri
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### Belangrijke wijzigingen van Adobe-medewerkers
+### Belangrijke wijzigingen of nieuwe artikelen van Adobe-medewerkers
 
-Als u een technisch schrijver, programmamanager of ontwikkelaar van het productteam bent voor een [!UICONTROL Adobe Experience Cloud] -oplossing en het uw taak is om bij te dragen aan technische artikelen of deze te schrijven, moet u de privéopslagruimte gebruiken op `https://git.corp.adobe.com/AdobeDocs`. Zie de [interne handleiding](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html)voor samenwerking.
+Als u een technisch schrijver, programmamanager of ontwikkelaar van het productteam bent voor een Adobe Experience Cloud-oplossing en het uw taak is om een bijdrage te leveren aan technische artikelen of om technische artikelen te schrijven, moet u de privéopslagruimte gebruiken op `https://git.corp.adobe.com/AdobeDocs`. Zie de [interne handleiding](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) voor samenwerking voor meer informatie.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
+## Contact opnemen met het documentatieteam van het Experience Platform
+
+Zoals hierboven vermeld, kunnen leden van de Adobe-gemeenschap een probleem indienen dat wordt toegewezen aan de juiste schrijver. Als u Adobe-medewerker bent, kunt u een probleem indienen of rechtstreeks contact opnemen met het documentatieteam van het Experience Platform. Raadpleeg de documentatiewiki voor het [Adobe Experience Platform voor meer informatie over een bepaald platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+
 ## Gereedschappen en instellen
+
+### GitHub UI
 
 Communautaire contribuanten kunnen GitHub UI voor basishet uitgeven of vork gebruiken het repo om belangrijke bijdragen te leveren.
 
 Zie de [Adobe Docs Contributor Guide](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) voor meer informatie.
 
-## Hoe te om prijsdaling te gebruiken om uw onderwerp te formatteren
+### Markering
 
 Alle artikelen in deze repository gebruiken GitHub gearomatiseerde prijsopgave. Als u niet vertrouwd bent met markering, zie:
 
 * [Grondbeginselen van markeringen](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 * [Afdrukbare opmaakmodel](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
-## Labels
+### Labels
 
 In de openbare bewaarplaats, worden de geautomatiseerde etiketten toegewezen om verzoeken te trekken om ons te helpen de werkschema van het trekkingsverzoek beheren en u te helpen laten weten wat aan de hand is uw trekkrachtverzoek:
 
