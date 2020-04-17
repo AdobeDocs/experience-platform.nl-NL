@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service en Experience Cloud-toepassingen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -30,7 +30,7 @@ Hieronder volgt een lijst met Experience Cloud-toepassingen die zijn geïntegree
 | Adobe Analytics | ✓ | ✓ | <ul><li>[Documentatie openen/verwijderen](https://marketing.adobe.com/resources/help/en_US/analytics/gdpr/index.html)</li><li>Analytics verwerkt opt-out-aanvragen met behulp van variabelen voor [privacyrapportage](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[Documentatie openen/verwijderen](https://marketing.adobe.com/resources/help/en_US/aam/aam-gdpr.html)</li><li>[Documentatie bij uitsluiting](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campagne Standard | ✓ | ✓ | <ul><li>[Documentatie openen/verwijderen](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[Documentatie bij uitsluiting](../segmentation/honoring-opt-outs.md)</li></ul> |
-| Adobe Experience Platform | ✓ | ✓ | <ul><li>[Toegang tot/verwijdering van documentatie voor het Data Lake](../catalog/privacy.md)</li><li>[Documentatie voor realtime-klantprofiel openen/verwijderen](../profile/privacy.md)</li><li>Het Platform van de ervaring neemt [opt-out verzoeken voor publiekssegmenten](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/honoring-opt-outs.md)in acht.</li></ul> |
+| Adobe Experience Platform | ✓ | ✓ | <ul><li>[Toegang tot/verwijdering van documentatie voor het Data Lake](../catalog/privacy.md)</li><li>[Documentatie voor realtime-klantprofiel openen/verwijderen](../profile/privacy.md)</li><li>Het Platform van de ervaring neemt [opt-out verzoeken voor publiekssegmenten](../segmentation/honoring-opt-outs.md)in acht.</li></ul> |
 | Adobe Primetime-verificatie | ✓ | N.v.t. | <ul><li>[Documentatie openen/verwijderen](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Primetime beschikt niet over de mogelijkheid om gegevens over te dragen, en daarom zijn aanvragen om te weigeren van verkoop niet van toepassing.</li></ul> |
 | Adobe-doel | ✓ | N.v.t. | <ul><li>[Documentatie openen/verwijderen](https://marketing.adobe.com/resources/help/en_US/target/target/privacy-and-general-data-protection-regulation.html)</li><li>Het doel beschikt niet over de mogelijkheid om gegevens over te dragen, zodat aanvragen om niet in de handel te worden genomen niet van toepassing zijn.</li></ul> |
 
