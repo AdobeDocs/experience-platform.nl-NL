@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruikershandleiding voor gegevensbestanden
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
 
 ---
 
@@ -50,7 +50,7 @@ Voor robuustere methodes om tot uw gegevens toegang te hebben, verleent het Plat
 * [Overzicht van Query Service](../../query-service/home.md)
 * [Gebruikershandleiding voor JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
 
-## Een gegevensset maken
+## Een gegevensset maken {#create}
 
 Om een nieuwe dataset tot stand te brengen, begin door **Create dataset** in het dashboard van *Datasets* te klikken.
 
