@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Intelligent Services Help
+user-guide-title: Help bij Intelligente services
 translation-type: tm+mt
-source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
+source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
 
 ---
 
@@ -11,6 +11,7 @@ source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
 # Adobe Intelligent Services {#intelligent-services}
 
 * [Overzicht van intelligente services](home.md)
+* [Gegevens voorbereiden voor gebruik in intelligente services](data-preparation.md)
 * Attributie-AI {#attribution-ai}
    * [Overzicht](attribution-ai/overview.md)
    * [Aan de slag met Attributie AI](attribution-ai/getting-started.md)
