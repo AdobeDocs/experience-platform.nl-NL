@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gegevensconnector Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f0200af0310eafbcc1851b089cfc254cb34af8f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -37,7 +37,7 @@ Zie het [XDM-systeemoverzicht](../../../xdm/home.md)voor meer informatie over XD
 
 ## Hoe worden velden van Adobe Analytics toegewezen aan XDM?
 
-Wanneer een bronverbinding tot stand is gebracht voor het overbrengen van analysegegevens naar het ervaringsplatform via de gebruikersinterface van het platform, worden gegevensvelden automatisch toegewezen en opgenomen in het realtime-klantprofiel binnen enkele minuten. Zie de zelfstudie over de gegevensaansluiting [Analytics voor instructies over het maken van een bronverbinding met Adobe Analytics via de interface van het platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/adobe-analytics-ui-tutorial.md).
+Wanneer een bronverbinding tot stand is gebracht voor het overbrengen van analysegegevens naar het ervaringsplatform via de gebruikersinterface van het platform, worden gegevensvelden automatisch toegewezen en opgenomen in het realtime-klantprofiel binnen enkele minuten. Zie de zelfstudie over de gegevensaansluiting [Analytics voor instructies over het maken van een bronverbinding met Adobe Analytics via de interface van het platform](../../tutorials/ui/create/adobe-applications/analytics.md).
 
 Voor gedetailleerde informatie over de veldmapping die plaatsvindt tussen Analytics en Experience Platform, raadpleegt u de [handleiding voor het toewijzen](./analytics-mapping.md) van veldgegevens in Adobe Analytics.
 
