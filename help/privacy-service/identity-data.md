@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identiteitsgegevens voor privacyverzoeken
 topic: overview
 translation-type: tm+mt
-source-git-commit: f2fe9c01c8355d0b312a0236f76085d1743aa8cc
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -23,7 +23,7 @@ Wanneer u bijvoorbeeld een verzoek om klantgegevens in de privacyservice afhande
 
 Daarom moet elke identiteit die naar de privacydienst wordt verzonden, vergezeld gaan van een **naamruimte** die context biedt door de identiteitswaarde te koppelen aan het systeem van oorsprong. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;E-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
 
-De identiteitsservice van Adobe Experience Platform bewaart een archief met wereldwijd gedefinieerde en door de gebruiker gedefinieerde naamruimten. Zie het overzicht [](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md)van naamruimten voor meer informatie over naamruimten. Voor een lijst van standaardnamespaces en namespace kwalificfiers die algemeen in de Dienst van de Privacy worden gebruikt, zie de [bijlage sectie](api/appendix.md) in de ontwikkelaarsgids.
+De identiteitsservice van Adobe Experience Platform bewaart een archief met wereldwijd gedefinieerde en door de gebruiker gedefinieerde naamruimten. Zie het overzicht [](../identity-service/namespaces.md)van naamruimten voor meer informatie over naamruimten. Voor een lijst van standaardnamespaces en namespace kwalificfiers die algemeen in de Dienst van de Privacy worden gebruikt, zie de [bijlage sectie](api/appendix.md) in de ontwikkelaarsgids.
 
 ## ECID en Opt-in Service
 
