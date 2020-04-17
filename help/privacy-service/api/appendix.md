@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Geaccepteerde naamruimten en kwalificatietekens
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
 
 ## Standaardnaamruimten
 
-Alle identiteiten die naar de Privacy Service worden verzonden moeten onder een specifieke naamruimte worden verstrekt. Identiteitsnaamruimten zijn een onderdeel van de [Adobe Experience Platform Identity Service](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md) dat de context aangeeft waarop een identiteit betrekking heeft.
+Alle identiteiten die naar de Privacy Service worden verzonden moeten onder een specifieke naamruimte worden verstrekt. Identiteitsnaamruimten zijn een onderdeel van de [Adobe Experience Platform Identity Service](../../identity-service/home.md) dat de context aangeeft waarop een identiteit betrekking heeft.
 
 In de volgende tabel worden diverse veelgebruikte, vooraf gedefinieerde identiteitstypen weergegeven die door het Experience Platform beschikbaar zijn gesteld, samen met de bijbehorende `namespace` waarden:
 
@@ -31,7 +31,7 @@ In de volgende tabel worden diverse veelgebruikte, vooraf gedefinieerde identite
 
 >[!NOTE] Elk identiteitstype heeft ook een `namespaceId` geheel-getalwaarde, die in plaats van het `namespace` koord kan worden gebruikt wanneer het plaatsen van het bezit van de identiteit aan &quot;namespaceId&quot; `type` . Zie de sectie over [naamruimtetekens](#namespace-qualifiers) voor meer informatie.
 
-U kunt een lijst van identiteitsnamespaces in gebruik door uw organisatie terugwinnen door een GET verzoek aan het `idnamespace/identities` eindpunt in de Dienst API van de Identiteit te doen. Zie de ontwikkelaarsgids [van de Dienst van de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_api.md) Identiteit voor meer informatie.
+U kunt een lijst van identiteitsnamespaces in gebruik door uw organisatie terugwinnen door een GET verzoek aan het `idnamespace/identities` eindpunt in de Dienst API van de Identiteit te doen. Zie de ontwikkelaarsgids [van de Dienst van de](../../identity-service/api/getting-started.md) Identiteit voor meer informatie.
 
 ## Naamruimtetekens
 
