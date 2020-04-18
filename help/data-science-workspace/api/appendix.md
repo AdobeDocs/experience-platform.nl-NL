@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aanhangsel
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0081cbd414e983d767b4a6f3aceed85d72a34816
+source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
 
 ---
 
@@ -67,7 +67,7 @@ Hieronder volgt een voorbeeldconfiguratie die het gebruik van een CPU voor train
 
 ## PySpark- en Spark-bronconfiguraties {#resource-config}
 
-PySpark en de Motoren van de Vonk hebben de capaciteit om computermiddelen voor opleiding en het scoren doeleinden te wijzigen, worden deze middelen beschreven in de volgende lijst:
+De Motoren van de Vonk hebben de capaciteit om computermiddelen voor opleiding en het scoren te wijzigen. Deze bronnen worden in de volgende tabel beschreven:
 
 | Resource | Beschrijving | Type |
 | -------- | ----------- | ---- |
