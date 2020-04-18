@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een recept maken met Jupyter-laptops
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 
 ---
 
@@ -38,9 +38,10 @@ U kunt een geheel nieuw recept maken in de Data Science Workspace. Ga om te begi
 
 Met de Recipe Builder-laptop kunt u trainingen en scoring uitvoeren in de laptop. Dit geeft u de flexibiliteit om veranderingen in hun `train()` en `score()` methodes tussen het runnen van experimenten op de opleiding en het scoren gegevens aan te brengen. Als u tevreden bent met de resultaten van de training en scoring, kunt u een recept maken voor gebruik in de Data Science Workspace met behulp van de laptop voor de receptionfunctionaliteit die is ingebouwd in de Recipe Builder-laptop.
 
->[!NOTE] De Recipe Builder-laptop ondersteunt het werken met alle bestandsindelingen, maar momenteel ondersteunt de functie Ontvanger maken alleen Python.
+>[!NOTE]
+>De Recipe Builder-laptop ondersteunt het werken met alle bestandsindelingen, maar momenteel ondersteunt de functie Ontvanger maken alleen Python.
 
-![](../images/jupyterlab/create-recipe/notebook_launcher.png)
+![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 Wanneer u klikt op de Recipe Builder-laptop van de draagtas, wordt de laptop geopend op het tabblad. Het model dat in de laptop wordt gebruikt, is de Python Retail Sales Forecasting Recipe die ook in [deze openbare opslagplaats te vinden is](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
@@ -50,7 +51,6 @@ U zult zien dat er op de werkbalk drie extra acties staan, namelijk **Trein**, *
 
 ## Bewerkingen uitvoeren om bestanden te recept
 
-<!-- Databricks update to recipe needed -->
 Als u de receptenbestanden wilt bewerken, navigeert u naar de cel in Jupyter die overeenkomt met het bestandspad. Als u bijvoorbeeld wijzigingen wilt aanbrengen in `evaluator.py`, zoekt u `%%writefile demo-recipe/evaluator.py`.
 
 Breng de benodigde wijzigingen in de cel aan en voer de cel uit als u klaar bent. Met de `%%writefile filename.py` opdracht wordt de inhoud van de cel naar de cel geschreven `filename.py`. U moet de cel voor elk bestand met wijzigingen handmatig uitvoeren.
@@ -69,9 +69,6 @@ Nu u de basisbeginselen van de JupyterLab-laptopomgeving kent, kunt u beginnen m
 - [Evaluatorbestand](#evaluator-file)
 - [Gegevensopslagbestand](#data-saver-file)
 
-
-
-
 ### Vereisten, bestand
 
 Het bestand requirements wordt gebruikt om extra bibliotheken te declareren die u in het recept wilt gebruiken. U kunt het versienummer specificeren als er een gebiedsdeel is. Ga naar https://anaconda.org als u meer bibliotheken wilt zoeken. De lijst met hoofdbibliotheken die al worden gebruikt, bevat:
@@ -84,9 +81,8 @@ numpy
 data_access_sdk_python
 ```
 
->[!NOTE] Bibliotheken of specifieke versies die u toevoegt, zijn mogelijk niet compatibel met de bovenstaande bibliotheken.
-
-
+>[!NOTE]
+>Bibliotheken of specifieke versies die u toevoegt, zijn mogelijk niet compatibel met de bovenstaande bibliotheken.
 
 ### Configuratiebestanden
 
@@ -101,9 +97,9 @@ Gebruikers moeten de volgende variabelen invullen voordat ze training en scoring
 
 Om dataset en schema IDs te vinden, ga naar het Lusje van Gegevens binnen notitieboeken op de linkernavigatiebar (onder het omslagpictogram).
 
-![](../images/jupyterlab/create-recipe/data_tab.png)
+![](../images/jupyterlab/create-recipe/datasets.png)
 
-Dezelfde informatie vindt u op het [Adobe Experience Platform](https://platform.adobe.com/) onder de tabbladen **[Schema](https://platform.adobe.com/schema)**en**[ Datasets](https://platform.adobe.com/dataset/overview)** .
+Dezelfde informatie vindt u op het [Adobe Experience Platform](https://platform.adobe.com/) onder de tabbladen **[Schema](https://platform.adobe.com/schema)**en**[Datasets](https://platform.adobe.com/dataset/overview)** .
 
 Standaard worden de volgende configuratieparameters voor u ingesteld wanneer u toegang krijgt tot gegevens:
 
@@ -111,8 +107,6 @@ Standaard worden de volgende configuratieparameters voor u ingesteld wanneer u t
 - `ML_FRAMEWORK_IMS_TOKEN`
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
-
-
 
 ## Opleidingsgegevensloader
 
@@ -129,7 +123,8 @@ In deze stap wordt het dataframe van de [pandas gebruikt](https://pandas.pydata.
 - [Platform SDK](#platform-sdk)
 - [Externe bronnen](#external-sources)
 
->[!NOTE] In de Recipe Builder-laptop worden gegevens geladen via de `platform_sdk` gegevenslader.
+>[!NOTE]
+>In de Recipe Builder-laptop worden gegevens geladen via de `platform_sdk` gegevenslader.
 
 ### Platform SDK
 
@@ -155,11 +150,10 @@ df = pd.read_json(data)
 
 Uw gegevens bevinden zich nu in het dataframe-object en kunnen in de [volgende sectie](#data-preparation-and-feature-engineering)worden geanalyseerd en gemanipuleerd.
 
-
-
 ### Van SDK voor gegevenstoegang (afgekeurd)
 
->[!CAUTION]  niet `data_access_sdk_python` meer aanbevolen. Zie [Gegevenstoegangscode converteren naar Platform SDK](../authoring/platform-sdk.md) voor een handleiding over het gebruik van de `platform_sdk` gegevenslader.
+>[!CAUTION]
+> `data_access_sdk_python` niet meer wordt aanbevolen, raadpleeg de [gegevenstoegangscode converteren naar Platform SDK](../authoring/platform-sdk.md) voor een handleiding over het gebruik van de `platform_sdk` gegevenslader.
 
 Gebruikers kunnen gegevens laden met de SDK voor gegevenstoegang. De bibliotheek kan boven aan de pagina worden geïmporteerd door de volgende regel op te nemen:
 
@@ -176,7 +170,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
                      ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
 ```
 
->[!NOTE] Zoals vermeld in de sectie [van het Dossier van de](#configuration-files)Configuratie, worden de volgende configuratieparameters geplaatst voor u wanneer u tot gegevens van het Platform van de Ervaring toegang hebt:
+>[!NOTE]
+>Zoals vermeld in de sectie [van het Dossier van de](#configuration-files)Configuratie, worden de volgende configuratieparameters geplaatst voor u wanneer u tot gegevens van het Platform van de Ervaring toegang hebt:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -297,17 +292,16 @@ df.dropna(0, inplace=True)
 
 De `load()` functie in uw het scoren gegevenslader zou met de het scoren dataset als output moeten voltooien.
 
-
-
 ### Pipetbestand
 
-Het `pipeline.py` bestand bevat logica voor training en scoring. We zullen beide in de volgende twee secties bespreken.
+Het `pipeline.py` bestand bevat logica voor training en scoring.
 
 ### Training
 
 Het doel van opleiding is een model te creëren gebruikend eigenschappen en etiketten in uw opleidingsdataset.
 
->[!NOTE]  De _eigenschappen_ verwijzen naar de inputvariabele die door het machine het leren model wordt gebruikt om de _etiketten_ te voorspellen.
+>[!NOTE]\
+>_Functies_ verwijzen naar de invoervariabele die door het model voor machinaal leren wordt gebruikt om de _labels_ te voorspellen.
 
 De `train()` functie moet het trainingsmodel bevatten en het getrainde model retourneren. Sommige voorbeelden van verschillende modellen zijn te vinden in de documentatie [van de](https://scikit-learn.org/stable/user_guide.html)handleiding van scikit-learn.
 
@@ -346,8 +340,6 @@ def train(configProperties, data):
 ```
 
 Afhankelijk van uw toepassing hebt u argumenten in uw `GradientBoostingRegressor()` functie. `xTrainingDataset` moet de functies bevatten die voor training worden gebruikt, maar moet ook uw labels `yTrainingDataset` bevatten.
-
-
 
 ### Scores
 
@@ -456,7 +448,6 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-
 ## Training en scores
 
 Wanneer u klaar bent met het aanbrengen van wijzigingen in uw laptop en uw recept wilt trainen, kunt u op de bijbehorende knoppen boven aan de balk klikken om een trainingsrun in de cel te maken. Nadat u op de knop hebt geklikt, wordt een logboek met opdrachten en uitvoer uit het trainingsscript weergegeven in het notitieblok (onder de `evaluator.py` cel). Conda installeert eerst alle gebiedsdelen, dan wordt de opleiding in werking gesteld.
@@ -467,7 +458,11 @@ Voor het zuiveren doeleinden, als u wenst om de verborgen output te zien, voeg a
 
 ## recept maken
 
-Als u klaar bent met het bewerken van het recept en tevreden bent met de trainings-/scoringuitvoer, kunt u een recept maken van de laptop door op Recipe **maken** te drukken. Nadat u op de knop hebt gedrukt, wordt u gevraagd een naam voor het recept in te voeren. Deze naam zal het daadwerkelijke recept vertegenwoordigen dat op Platform wordt gecreeerd.
+Als u klaar bent met het bewerken van het recept en tevreden bent met de trainings-/scoringuitvoer, kunt u een recept maken van de laptop door in de rechterbovenhoek op Recipe **maken** te drukken.
+
+![](../images/jupyterlab/create-recipe/create-recipe.png)
+
+Nadat u op de knop hebt gedrukt, wordt u gevraagd een naam voor het recept in te voeren. Deze naam staat voor het recept dat op Platform is gemaakt.
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
