@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruikershandleiding voor JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 700c927680d9b9ba4dabc2d2e068e4da3c801cce
+source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
 
 ---
 
@@ -56,7 +56,7 @@ In de volgende secties wordt informatie gegeven over de belangrijkste kenmerken 
 
 ### Access JupyterLab
 
-Klik in <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>op **Modellen** in de linkernavigatiekolom en klik vervolgens op **Laptops** in de bovenste navigatie om toegang te krijgen tot JupyterLab. Laat JupyterLab enige tijd volledig initialiseren.
+Selecteer in [Adobe Experience Platform](https://platform.adobe.com)de optie **Laptops** in de linkernavigatiekolom. Laat JupyterLab enige tijd volledig initialiseren.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -116,11 +116,9 @@ Vaak voorkomende celhandelingen worden hieronder beschreven:
 
 ### Kernels {#kernels}
 
-<!-- will need to edit this sparkmagic %% for data bricks not supported -->
-
 Notebookkernels zijn de taalspecifieke computerengines voor de verwerking van notebookcellen. Naast Python biedt JupyterLab extra taalondersteuning in R, PySpark en Spark. Wanneer u een notitieboekjectdocument opent, wordt de bijbehorende kernel gestart. Wanneer een laptopcel wordt uitgevoerd, voert de kernel de berekening uit en levert dit resultaten op die aanzienlijke CPU- en geheugenbronnen verbruiken. Let op: toegewezen geheugen wordt pas vrijgegeven wanneer de kernel wordt afgesloten.
 
->[!NOTE] PySpark- en Spark-functies worden ondersteund door <a href="https://github.com/jupyter-incubator/sparkmagic" target="_blank">Sparkmagic</a>.
+>[!IMPORTANT] JupyterLab Launcher bijgewerkt van Vonk 2.3 tot Vonk 2.4. Spark- en PySpark-kernels worden niet meer ondersteund in Spark 2.4-laptops.
 
 Bepaalde kenmerken en functies zijn beperkt tot bepaalde kernels zoals beschreven in de onderstaande tabel:
 
@@ -128,8 +126,9 @@ Bepaalde kenmerken en functies zijn beperkt tot bepaalde kernels zoals beschreve
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | Ja | <ul><li>Sensei ML Framework</li><li>Catalogusservice</li><li>Query-service</li></ul> |
 | **R** | Ja | <ul><li>Sensei ML Framework</li><li>Catalogusservice</li></ul> |
-| **PySpark** | Nee | <ul><li>Sensei ML Framework</li><li>Catalogusservice</li></ul> |
-| **Spark** | Nee | <ul><li>Sensei ML Framework</li><li>Catalogusservice</li></ul> |
+| **PySpark - afgekeurd** | Nee | <ul><li>Sensei ML Framework</li><li>Catalogusservice</li></ul> |
+| **Vonk - afgekeurd** | Nee | <ul><li>Sensei ML Framework</li><li>Catalogusservice</li></ul> |
+| **Scala** | Nee | <ul><li>Sensei ML Framework</li><li>Catalogusservice</li></ul> |
 
 ### Kernel-sessies
 
@@ -143,9 +142,23 @@ Als de kernel gedurende langere tijd wordt afgesloten of inactief is, dan **Geen
 
 ### PySpark/Spark-uitvoeringsbron {#execution-resource}
 
-<!-- need to update with databricks -->
+>[!IMPORTANT]
+>Met de overgang van Vonk 2.3 aan Vonk 2.4, zowel zijn de pitten van de Vonk als van PySpark verouderd.
+>
+>De nieuwe PySpark 3 (Spark 2.4) notebooks gebruiken de Python3 Kernel. Zie de handleiding voor de conversie van [Pyspark 3 (Spark 2.3) naar PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) voor een uitgebreide zelfstudie over het bijwerken van uw bestaande laptops.
+>
+>De nieuwe laptops van de Vonk zouden de Scala kernel moeten gebruiken. Raadpleeg de handleiding bij het converteren van [Spark 2.3 naar Scala (Spark 2.4)](../recipe-notebook-migration.md) voor een uitgebreide zelfstudie over het bijwerken van uw bestaande laptops.
 
 De pitten van PySpark en van de Vonk staan u toe om de clustermiddelen van de Vonk binnen uw PySpark of notitieboekje van de Vonk te vormen door te gebruiken vorm bevel (`%%configure`) en het verstrekken van een lijst van configuraties. Ideaal gezien, worden deze configuraties bepaald alvorens de toepassing van de Vonk wordt geïnitialiseerd. Als u de configuraties wijzigt terwijl de Spark-toepassing actief is, hebt u een extra markering voor kracht na de opdracht (`%%configure -f`) nodig waarmee de toepassing opnieuw wordt gestart om de wijzigingen toe te passen, zoals hieronder wordt getoond:
+
+>[!CAUTION]
+>Met PySpark 3 (Spark 2.4)- en Scala (Spark 2.4)-laptops wordt `%%` sparkmagic niet meer ondersteund. De volgende bewerkingen kunnen niet meer worden gebruikt:
+* `%%help`
+* `%%info`
+* `%%cleanup`
+* `%%delete`
+* `%%configure`
+* `%%local`
 
 ```python
 %%configure -f 
@@ -160,8 +173,6 @@ De pitten van PySpark en van de Vonk staan u toe om de clustermiddelen van de Vo
     }
 }
 ```
-
->[!TIP] Gebruik het hulpbevel (`%%help`) om alle beschikbare bevelen te bekijken.
 
 Alle configureerbare eigenschappen worden vermeld in de lijst hieronder:
 
@@ -183,8 +194,6 @@ Alle configureerbare eigenschappen worden vermeld in de lijst hieronder:
 | conf | Spark, configuratie-eigenschap | Kaart van key=val |
 
 ### Launcher
-
-<!-- Databricks update -->
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -242,7 +251,7 @@ Sommige laptopsjablonen zijn beperkt tot bepaalde kernels. De beschikbaarheid va
         <td >nee</td>
     </tr>
     <tr>
-        <th  ><strong>PySpark</strong></th>
+        <th  ><strong>PySpark 3 (Spark 2.3 - afgekeurd)</strong></th>
         <td >ja</td>
         <td >ja</td>
         <td >nee</td>
@@ -254,7 +263,31 @@ Sommige laptopsjablonen zijn beperkt tot bepaalde kernels. De beschikbaarheid va
         <td >nee</td>
     </tr>
     <tr>
-        <th ><strong>Spark</strong></th>
+        <th ><strong>Vonk (Vonk 2.3 - afgekeurd)</strong></th>
+        <td >ja</td>
+        <td >ja</td>
+        <td >nee</td>
+        <td >nee</td>
+        <td >nee</td>
+        <td >nee</td>
+        <td >nee</td>
+        <td >nee</td>
+        <td >ja</td>
+    </tr>
+      <tr>
+        <th  ><strong>PySpark 3 (Spark 2.4)</strong></th>
+        <td >nee</td>
+        <td >ja</td>
+        <td >nee</td>
+        <td >nee</td>
+        <td >nee</td>
+        <td >nee</td>
+        <td >ja</td>
+        <td >ja</td>
+        <td >nee</td>
+    </tr>
+    <tr>
+        <th ><strong>Scala</strong></th>
         <td >ja</td>
         <td >ja</td>
         <td >nee</td>
@@ -341,12 +374,21 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`: De unieke identiteit van de gegevensset waartoe toegang moet worden verkregen
 
-### Lees van een dataset in PySpark/Spark
+### Lees van een dataset in PySpark/Spark/Scala
+
+>[!IMPORTANT]
+>Met de overgang van Vonk 2.3 aan Vonk 2.4, zowel zijn de pitten van de Vonk als van PySpark verouderd.
+>
+>De nieuwe PySpark 3 (Spark 2.4) notebooks gebruiken de Python3 Kernel. Zie de gids bij het omzetten van [Pyspark 3 (Vonk 2.3) in PySpark 3 (Vonk 2.4)](../recipe-notebook-migration.md) als u bestaande code van de Vonk 2.3 wilt omzetten. Nieuwe laptops moeten het onderstaande voorbeeld van [PySpark 3 (Spark 2.4)](#pyspark2.4) volgen.
+>
+>De nieuwe laptops van de Vonk zouden de Scala kernel moeten gebruiken. Zie de gids bij het omzetten van [Vonk 2.3 in Scala (Vonk 2.4)](../recipe-notebook-migration.md) als u bestaande code van de Vonk 2.3 wilt omzetten. Nieuwe notebooks moeten het onderstaande [Scala-voorbeeld (Spark 2.4)](#spark2.4) volgen.
 
 Met een actieve PySpark of geopende notitieboekje van de Vonk, breid het lusje van de Ontdekkingsreiziger **van** Gegevens van linkerzijbalk uit en klik **Datasets** tweemaal om een lijst van beschikbare datasets te bekijken. Klik met de rechtermuisknop op de gegevensset die u wilt openen en klik op Gegevens **zoeken in laptop**. De volgende codecellen worden gegenereerd:
 
+#### PySpark (Spark 2.3 - afgekeurd)
+
 ```python
-# PySpark
+# PySpark 3 (Spark 2.3 - deprecated)
 
 pd0 = spark.read.format("com.adobe.platform.dataset").\
     option('orgId', "YOUR_IMS_ORG_ID@AdobeOrg").\
@@ -355,8 +397,22 @@ pd0.describe()
 pd0.show(10, False)
 ```
 
+#### PySpark (Spark 2.4) {#pyspark2.4}
+
+Met de introductie van Spark 2.4 wordt [`%dataset`](#magic) aangepaste magie geleverd.
+
+```python
+# PySpark 3 (Spark 2.4)
+
+%dataset read --datasetId {DATASET_ID} --dataFrame pd0
+pd0.describe()
+pd0.show(10, False)
+```
+
+#### Vonk (Vonk 2.3 - afgekeurd)
+
 ```scala
-// Spark
+// Spark (Spark 2.3 - deprecated)
 
 import com.adobe.platform.dataset.DataSetOptions
 val dataFrame = spark.read.
@@ -366,6 +422,54 @@ val dataFrame = spark.read.
 dataFrame.printSchema()
 dataFrame.show()
 ```
+
+#### Scala (park 2.4) {#spark2.4}
+
+```scala
+// Scala (Spark 2.4)
+
+// initialize the session
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = SparkSession.builder().master("local").getOrCreate()
+
+val dataFrame = spark.read.format("com.adobe.platform.query")
+    .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+    .option("ims-org", sys.env("IMS_ORG_ID"))
+    .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+    .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+    .option("mode", "batch")
+    .option("dataset-id", "{DATASET_ID}")
+    .load()
+dataFrame.printSchema()
+dataFrame.show()
+```
+
+>[!TIP]
+>In Scala, kunt u gebruiken `sys.env()` om een waarde van binnen te verklaren en terug te keren `option`.
+
+### Het gebruiken van de magie van %dataset in PySpark 3 (Vonk 2.4) laptops {#magic}
+
+Met de introductie van Spark 2.4 wordt `%dataset` aangepaste magie geleverd voor gebruik in nieuwe PySpark 3 (Spark 2.4) notebooks (Python 3 kernel).
+
+**Gebruik**
+
+`%dataset {action} --datasetId {id} --dataFrame {df}`
+
+**Beschrijving**
+
+Een toveropdracht voor aangepaste Data Science Workspace voor het lezen of schrijven van een gegevensset van een Python-laptop (Python 3-kernel).
+
+* **{action}**: Het type van actie op de dataset uit te voeren. Er zijn twee handelingen beschikbaar: &quot;read&quot; of &quot;write&quot;.
+* **—datasetId {id}**: Gebruikt om identiteitskaart van de dataset te leveren om te lezen of te schrijven. Dit is een verplicht argument.
+* **—dataFrame {df}**: Het dataframe van de pandas. Dit is een verplicht argument.
+   * Wanneer de handeling &quot;read&quot; is, is {df} de variabele waar de resultaten van de bewerking voor het lezen van de gegevensset beschikbaar zijn.
+   * Wanneer de actie &quot;schrijven&quot;is, wordt dit dataframe {df} geschreven aan de dataset.
+* **—modus (optioneel)**: Toegestane parameters zijn &quot;batch&quot; en &quot;interactief&quot;. De modus is standaard ingesteld op &quot;interactief&quot;. Het wordt aanbevolen de modus &quot;batch&quot; te gebruiken bij het lezen van grote hoeveelheden gegevens.
+
+**Voorbeelden**
+
+* **Voorbeeld** lezen: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
+* **Voorbeeld** schrijven: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
 ### De gegevens van de vraag gebruikend de Dienst van de Vraag in Python
 
@@ -453,12 +557,21 @@ df <- dataset_reader$
 
 ### Filter ExperienceEvent-gegevens in PySpark/Spark
 
+>[!IMPORTANT]
+>Met de overgang van Vonk 2.3 aan Vonk 2.4, zowel zijn de pitten van de Vonk als van PySpark verouderd.
+>
+>De nieuwe PySpark 3 (Spark 2.4) notebooks gebruiken de Python3 Kernel. Zie de gids bij het omzetten van [Pyspark 3 (Vonk 2.3) in PySpark 3 (Vonk 2.4)](../recipe-notebook-migration.md) voor meer informatie bij het omzetten van uw bestaande code. Als u een nieuwe PySpark notitieboekje creeert, gebruik [PySpark 3 (vonk 2.4)](#pyspark3-spark2.4) voorbeeld voor het filtreren van de gegevens van ExperienceEvent.
+>
+>De nieuwe laptops van de Vonk zouden de Scala kernel moeten gebruiken. Zie de gids bij het omzetten van [Vonk 2.3 in Scala (Vonk 2.4)](../recipe-notebook-migration.md) voor meer informatie bij het omzetten van uw bestaande code. Als u een nieuwe notitieboekje van de Vonk creeert, gebruik het [Scala (vonk 2.4)](#scala-spark) voorbeeld voor het filtreren van de gegevens van ExperienceEvent.
+
 De toegang tot van en het filtreren van een dataset ExperienceEvent in een PySpark of notitieboekje van de Vonk vereist u om de datasetidentiteit (`{DATASET_ID}`), de identiteit IMS van uw organisatie, en de filterregels te verstrekken die een specifieke tijdwaaier bepalen. Een het Filtreren tijdwaaier wordt bepaald door de functie te gebruiken `spark.sql()`, waar de functieparameter een SQL vraagkoord is.
 
 De volgende cellen filteren een dataset ExperienceEvent op gegevens die uitsluitend tussen 1 januari 2019 en eind december 2019 bestonden.
 
+#### PySpark 3 (Spark 2.3 - afgekeurd)
+
 ```python
-# PySpark
+# PySpark 3 (Spark 2.3 - deprecated)
 
 pd = spark.read.format("com.adobe.platform.dataset").\
     option("orgId", "YOUR_IMS_ORG_ID@AdobeOrg").\
@@ -473,8 +586,30 @@ timepd = spark.sql("""
 """)
 ```
 
+#### PySpark 3 (Spark 2.4) {#pyspark3-spark2.4}
+
+```python
+# PySpark 3 (Spark 2.4)
+
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.getOrCreate()
+
+%dataset read --datasetId {DATASET_ID} --dataFrame df
+
+df.createOrReplaceTempView("event")
+timepd = spark.sql("""
+    SELECT *
+    FROM event
+    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
+    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
+""")
+timepd.show()
+```
+
+#### Vonk (Vonk 2.3 - afgekeurd)
+
 ```scala
-// Spark
+// Spark (Spark 2.3 - deprecated)
 
 import com.adobe.platform.dataset.DataSetOptions
 val dataFrame = spark.read.
@@ -491,6 +626,53 @@ val timedf = spark.sql("""
 """)
 ```
 
+#### Scala (park 2.4) {#scala-spark}
+
+```scala
+// Spark (Spark 2.4)
+
+// Turn off extra logging
+import org.apache.log4j.{Level, Logger}
+Logger.getLogger("org").setLevel(Level.OFF)
+Logger.getLogger("com").setLevel(Level.OFF)
+
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = org.apache.spark.sql.SparkSession.builder().appName("Notebook")
+  .master("local")
+  .getOrCreate()
+
+// Stage Exploratory
+val dataSetId: String = "{DATASET_ID}"
+val orgId: String = sys.env("IMS_ORG_ID")
+val clientId: String = sys.env("PYDASDK_IMS_CLIENT_ID")
+val userToken: String = sys.env("PYDASDK_IMS_USER_TOKEN")
+val serviceToken: String = sys.env("PYDASDK_IMS_SERVICE_TOKEN")
+val mode: String = "batch"
+
+var df = spark.read.format("com.adobe.platform.query")
+  .option("user-token", userToken)
+  .option("ims-org", orgId)
+  .option("api-key", clientId)
+  .option("mode", mode)
+  .option("dataset-id", dataSetId)
+  .option("service-token", serviceToken)
+  .load()
+df.createOrReplaceTempView("event")
+val timedf = spark.sql("""
+    SELECT * 
+    FROM event 
+    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
+    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
+""")
+timedf.show()
+```
+
+>[!TIP]
+>In Scala, kunt u gebruiken `sys.env()` om een waarde van binnen te verklaren en terug te keren `option`. Dit elimineert de behoefte om variabelen te bepalen als u weet zij slechts één keer zullen worden gebruikt. In het volgende voorbeeld wordt uit het bovenstaande voorbeeld `val userToken` het voorbeeld opgehaald en inline gedeclareerd `option` als alternatief:
+> 
+```scala
+> .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+> ```
 
 ## Ondersteunde bibliotheken {#supported-libraries}
 
