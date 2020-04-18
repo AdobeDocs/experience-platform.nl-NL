@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Hulplijnen voor recept- en laptopmigratie
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 105317c0b9a7cf74d55e3436a49e1dc6eeb31b32
+source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
 
 ---
 
@@ -427,11 +427,11 @@ Met PySpark 3 (Vonk 2.4) `sc = spark.sparkContext` wordt bepaald in lading.
 
 ![Laden 1](./images/migration/pyspark-migration/2.4-load.png)
 
-**De ervaring van het laden kon gegevens van het Platform in PySpark 2.3 - verouderd**
+**Gegevens van het Cloud Platform laden in PySpark 2.3 - verouderd**
 
 ![Laden 2](./images/migration/pyspark-migration/2.3-load-alt.png)
 
-**Ladende ervaring kon gegevens in PySpark 2.4 Platform**
+**Gegevens van het Cloud Platform laden in PySpark 2.4**
 
 Met PySpark 3 (Vonk 2.4) te hoeven `org_id` en `dataset_id` niet meer worden bepaald. Bovendien `df = spark.read.format` is deze vervangen door een aangepaste magie [`%dataset`](#magic) om het lezen en schrijven van datasets te vereenvoudigen.
 
