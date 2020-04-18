@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een verpakt recept (UI) importeren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
 
 ---
 
@@ -15,7 +15,7 @@ Deze zelfstudie biedt inzicht in het configureren en importeren van een verpakt 
 
 ## Vereisten
 
-Deze zelfstudie vereist een verpakt recept in de vorm van een Docker-afbeeldings-URL of een binair bestand. Zie de zelfstudie over het [verpakken van bronbestanden in een recept](./package-source-files-recipe.md) voor meer informatie.
+Voor deze zelfstudie is een recept in een pakket nodig in de vorm van een URL voor een Docker-afbeelding. Zie de zelfstudie over het [verpakken van bronbestanden in een recept](./package-source-files-recipe.md) voor meer informatie.
 
 ## UI-workflow
 
@@ -23,10 +23,14 @@ Voor het importeren van een verpakt recept in de Data Science Workspace zijn spe
 
 De workflow voor het importeren van een pakketrecept bestaat uit de volgende stappen:
 - [Een recept configureren](#configure)
-- [Binair gebaseerd recept importeren - PySpark](#pyspark)
-- [Binair gebaseerd recept importeren - Scala Spark](#scala)
 - [Op docker gebaseerd recept importeren - Python](#python)
 - [Op Docker gebaseerde recept importeren - R](#r)
+- [Op docker gebaseerde recept importeren - PySpark](#pyspark)
+- [Op Docker gebaseerde recept importeren - Scala](#scala)
+
+Verouderde workflows:
+- [Binair gebaseerd recept importeren - PySpark](#pyspark-deprecated)
+- [Binair gebaseerd recept importeren - Scala Spark](#scala-deprecated)
 
 ### Een recept configureren {#configure}
 
@@ -115,7 +119,147 @@ Hieronder ziet u een voorbeeldconfiguratiebestand met standaardtraining en scori
 
 Voor dit leerprogramma, kunt u de standaardconfiguratiedossiers voor de Verkoop van de Detailhandel in de Verwijzing van de Werkruimte van de Wetenschap van Gegevens verlaten de manier zij zijn.
 
-### Binair gebaseerd recept importeren - PySpark {#pyspark}
+### Op docker gebaseerd recept importeren - Python {#python}
+
+Begin door te navigeren en **Werkschema** te selecteren die in de hoogste-linkerzijde van de UI van het Platform wordt gevestigd. Selecteer vervolgens *Importeren* en klik op **Starten**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven. Voer een naam en beschrijving voor het recept in en selecteer vervolgens **Volgende** in de rechterbovenhoek.
+
+![workflow configureren](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> In de brondossiers van het [Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Retailrecept van de Verkoop gebruikend Python brondossiers.
+
+Wanneer u zich op de *pagina Bron* selecteren bevindt, plakt u de URL van Docker die overeenkomt met het verpakte recept dat is gemaakt met Python-bronbestanden in het veld **Bron-URL** . Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Selecteer **Python** in de vervolgkeuzelijst *Runtime* en **Classificatie** in de vervolgkeuzelijst *Type* . Als alles is ingevuld, klikt u op **Volgende** in de rechterbovenhoek om door te gaan naar *Schema&#39;s* beheren.
+
+>[!NOTE]
+> *Type *ondersteunt **Classificatie**en **Regressie**. Selecteer **Aangepast**als uw model niet onder een van deze typen valt.
+
+![](../images/models-recipes/import-package-ui/recipe_source_python.png)
+
+Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie *leidt Schema*, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en de datasetzelfstudie](../models-recipes/create-retails-sales-dataset.md) .
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **Invoerfunctie** of **Doelfunctie** in het rechtervenster **Veldeigenschappen** . Voor deze zelfstudie stelt u **wekelijkseSales** in als de **doelfunctie** en alles als **invoerfunctie**. Klik op **Volgende** om uw nieuwe geconfigureerde recept te bekijken.
+
+Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **Voltooien** om het recept te maken.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Ga aan de [volgende stappen](#next-steps) te werk om te weten te komen hoe te om een Model in de Werkruimte van de Wetenschap van Gegevens tot stand te brengen gebruikend het onlangs gecreëerde Commerciële recept van de Verkoop.
+
+### Op Docker gebaseerde recept importeren - R {#r}
+
+Begin door te navigeren en **Werkschema** te selecteren die in de hoogste-linkerzijde van de UI van het Platform wordt gevestigd. Selecteer vervolgens *Importeren* en klik op **Starten**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven. Voer een naam en beschrijving voor het recept in en selecteer vervolgens **Volgende** in de rechterbovenhoek.
+
+![workflow configureren](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> In de brondossiers van het [Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Retailrecept van de Verkoop gebruikend de brondossiers van R.
+
+Wanneer u zich op de *Uitgezochte bronpagina* bevindt, plakt u de URL van Docker die overeenkomt met het verpakte recept dat is samengesteld met R-bronbestanden in het veld **Bron-URL** . Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Selecteer **R** in de vervolgkeuzelijst *Runtime* en **Classificatie** in de vervolgkeuzelijst *Type* . Als alles is ingevuld, klikt u op **Volgende** in de rechterbovenhoek om door te gaan naar *Schema&#39;s* beheren.
+
+>[!NOTE]
+> *Type *ondersteunt **Classificatie**en **Regressie**. Selecteer **Aangepast**als uw model niet onder een van deze typen valt.
+
+![](../images/models-recipes/import-package-ui/recipe_source_R.png)
+
+Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie *leidt Schema*, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en de datasetzelfstudie](../models-recipes/create-retails-sales-dataset.md) .
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **Invoerfunctie** of **Doelfunctie** in het rechtervenster **Veldeigenschappen** . Voor deze zelfstudie stelt u **wekelijkseSales** in als de **doelfunctie** en alles als **invoerfunctie**. Klik op **Volgende** om uw nieuwe geconfigureerde recept te bekijken.
+
+Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **Voltooien** om het recept te maken.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Ga aan de [volgende stappen](#next-steps) te werk om te weten te komen hoe te om een Model in de Werkruimte van de Wetenschap van Gegevens tot stand te brengen gebruikend het onlangs gecreëerde Commerciële recept van de Verkoop.
+
+### Op docker gebaseerde recept importeren - PySpark {#pyspark}
+
+Begin door te navigeren en **Werkschema** te selecteren die in de hoogste-linkerzijde van de UI van het Platform wordt gevestigd. Selecteer vervolgens *Importeren* en klik op **Starten**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven. Voer een naam en beschrijving voor het recept in en selecteer vervolgens **Volgende** in de rechterbovenhoek om door te gaan.
+
+![workflow configureren](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> In de brondossiers van het [Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Detailhandelrecept van de Verkoop gebruikend PySpark brondossiers.
+
+Zodra u op de *Uitgezochte bronpagina* bent, kleef de Docker URL die aan het verpakte recept beantwoordt dat gebruikend PySpark brondossiers in het **BronURL** gebied wordt gebouwd. Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Selecteer **PySpark** in de drop-down *Runtime* . Nadat de PySpark-runtime is geselecteerd, wordt het standaardartefact automatisch ingevuld in **Docker**. Selecteer vervolgens **Classificatie** in de vervolgkeuzelijst *Type* . Als alles is ingevuld, klikt u op **Volgende** in de rechterbovenhoek om door te gaan naar *Schema&#39;s* beheren.
+
+>[!NOTE]
+> *Type *ondersteunt **Classificatie**en **Regressie**. Selecteer **Aangepast**als uw model niet onder een van deze typen valt.
+
+![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
+
+Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie *leidt Schema*, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en de datasetzelfstudie](../models-recipes/create-retails-sales-dataset.md) .
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **Invoerfunctie** of **Doelfunctie** in het rechtervenster **Veldeigenschappen** . Voor deze zelfstudie stelt u **wekelijkseSales** in als de **doelfunctie** en alles als **invoerfunctie**. Klik op **Volgende** om uw nieuwe geconfigureerde recept te bekijken.
+
+Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **Voltooien** om het recept te maken.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Ga aan de [volgende stappen](#next-steps) te werk om te weten te komen hoe te om een Model in de Werkruimte van de Wetenschap van Gegevens tot stand te brengen gebruikend het onlangs gecreëerde Commerciële recept van de Verkoop.
+
+### Op Docker gebaseerde recept importeren - Scala {#scala}
+
+Begin door te navigeren en **Werkschema** te selecteren die in de hoogste-linkerzijde van de UI van het Platform wordt gevestigd. Selecteer vervolgens *Importeren* en klik op **Starten**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven. Voer een naam en beschrijving voor het recept in en selecteer vervolgens **Volgende** in de rechterbovenhoek om door te gaan.
+
+![workflow configureren](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> In de brondossiers van het [Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Detailhandelsrecept van de Verkoop gebruikend Scala (Vonk) brondossiers.
+
+Wanneer u zich op de *pagina Bron* selecteren bevindt, plakt u de URL van Docker die overeenkomt met het verpakte recept dat is samengesteld met de bronbestanden Scala in het veld *Bron-URL* . Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Selecteer **Vonk** in de drop-down *Runtime* . Zodra runtime van de Vonk wordt geselecteerd vult het standaardartefact automatisch aan **Docker**. Selecteer vervolgens **Regressie** in de vervolgkeuzelijst *Type* . Als alles is ingevuld, klikt u op **Volgende** in de rechterbovenhoek om door te gaan naar *Schema&#39;s* beheren.
+
+>[!NOTE]
+> *Type *ondersteunt **Classificatie**en **Regressie**. Selecteer **Aangepast**als uw model niet onder een van deze typen valt.
+
+![](../images/models-recipes/import-package-ui/scala-databricks.png)
+
+Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie *leidt Schema*, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en de datasetzelfstudie](../models-recipes/create-retails-sales-dataset.md) .
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **Invoerfunctie** of **Doelfunctie** in het rechtervenster **Veldeigenschappen** . Voor deze zelfstudie stelt u **wekelijkseSales** in als de **doelfunctie** en alles als **invoerfunctie**. Klik op **Volgende** om uw nieuwe geconfigureerde recept te bekijken.
+
+Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **Voltooien** om het recept te maken.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Ga aan de [volgende stappen](#next-steps) te werk om te weten te komen hoe te om een Model in de Werkruimte van de Wetenschap van Gegevens tot stand te brengen gebruikend het onlangs gecreëerde Commerciële recept van de Verkoop.
+
+## Volgende stappen
+
+Deze zelfstudie gaf inzicht in het configureren en importeren van een recept in de Data Science Workspace. U kunt nu een model maken, trainen en evalueren met het nieuwe recept.
+
+- [Een model trainen en evalueren in de gebruikersinterface](./train-evaluate-model-ui.md)
+- [Een model trainen en evalueren met behulp van de API](./train-evaluate-model-api.md)
+
+## Verouderde workflows
+
+>[!CAUTION]
+>Het invoeren van binaire gebaseerde recepten wordt niet meer gesteund in PySpark 3 (Vonk 2.4) en Scala (Vonk 2.4).
+
+### Binair gebaseerd recept importeren - PySpark {#pyspark-deprecated}
 
 In het [Pakket brondossiers in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een binair dossier van **EGG** gebouwd gebruikend de Retail PySpark brondossiers van de Verkoop.
 
@@ -128,14 +272,14 @@ U kunt het configuratiebestand ook importeren door te slepen en neer te zetten o
    ![](../images/models-recipes/import-package-ui/recipe_source.png)
 4. U kunt op dit punt fouten tegenkomen. Dit is normaal gedrag en dat valt te verwachten. Selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie **leidt Schema**, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en datasetleerprogramma](../models-recipes/create-retails-sales-dataset.md) .
    ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Onder de **sectie van het Beheer** van de Eigenschap, klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **Invoerfunctie** of **Doelfunctie** in het rechtervenster **Veldeigenschappen** . Voor deze zelfstudie stelt u **wekelijkseSales** in als de **doelfunctie** en alles als **invoerfunctie**. Klik op **Volgende** om uw nieuwe geconfigureerde recept te bekijken.
+Onder de sectie van het Beheer van de **Eigenschap** , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **Invoerfunctie** of **Doelfunctie** in het rechtervenster **Veldeigenschappen** . Voor deze zelfstudie stelt u **wekelijkseSales** in als de **doelfunctie** en alles als **invoerfunctie**. Klik op **Volgende** om uw nieuwe geconfigureerde recept te bekijken.
 5. Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **Voltooien** om het recept te maken.
    ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Gefeliciteerd, je hebt het winkelrecept gemaakt! Ga naar de [volgende stappen](#next-steps) om te weten te komen hoe te om een Model in de Werkruimte van de Wetenschap van Gegevens tot stand te brengen gebruikend het onlangs gecreëerde Commerciële recept van de Verkoop.
+Ga aan de [volgende stappen](#next-steps) te werk om te weten te komen hoe te om een Model in de Werkruimte van de Wetenschap van Gegevens tot stand te brengen gebruikend het onlangs gecreëerde Commerciële recept van de Verkoop.
 
 
-### Binair gebaseerd recept importeren - Scala Spark {#scala}
+### Binair gebaseerd recept importeren - Scala Spark {#scala-deprecated}
 
 In de [brondossiers van het Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een binair dossier **JAR** gebouwd gebruikend de Commerciële Scala van de Vonk van de Verkoop.
 
@@ -147,43 +291,8 @@ In de [brondossiers van het Pakket in een Recipe](./package-source-files-recipe.
    ![](../images/models-recipes/import-package-ui/recipe_source_scala.png)
 4. U kunt op dit punt fouten tegenkomen. Dit is normaal gedrag en dat valt te verwachten. Selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie **leidt Schema**, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en datasetleerprogramma](../models-recipes/create-retails-sales-dataset.md) .
    ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Onder de **sectie van het Beheer** van de Eigenschap, klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **Invoerfunctie** of **Doelfunctie** in het rechtervenster **Veldeigenschappen** . Voor deze zelfstudie stelt u **wekelijkseSales** in als de **doelfunctie** en alles als **invoerfunctie**. Klik op **Volgende** om uw nieuwe geconfigureerde recept te bekijken.
+Onder de sectie van het Beheer van de **Eigenschap** , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **Invoerfunctie** of **Doelfunctie** in het rechtervenster **Veldeigenschappen** . Voor deze zelfstudie stelt u **wekelijkseSales** in als de **doelfunctie** en alles als **invoerfunctie**. Klik op **Volgende** om uw nieuwe geconfigureerde recept te bekijken.
 5. Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **Voltooien** om het recept te maken.
    ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Gefeliciteerd, je hebt het winkelrecept gemaakt! Ga naar de [volgende stappen](#next-steps) om te weten te komen hoe te om een Model in de Werkruimte van de Wetenschap van Gegevens tot stand te brengen gebruikend het onlangs gecreëerde Commerciële recept van de Verkoop.
-
-### Op docker gebaseerd recept importeren - Python {#python}
-
-In de brondossiers van het [Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Retailrecept van de Verkoop gebruikend Python brondossiers.
-
-1. Plak de URL van Docker die overeenkomt met het verpakte recept dat is gemaakt met Python-bronbestanden in het veld **Bron-URL** . Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Klik op **Volgende** wanneer beide items zijn opgegeven.
-   ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
-2. Selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie **leidt Schema**, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en datasetleerprogramma](../models-recipes/create-retails-sales-dataset.md) .
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Onder de **sectie van het Beheer** van de Eigenschap, klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **Invoerfunctie** of **Doelfunctie** in het rechtervenster **Veldeigenschappen** . Voor deze zelfstudie stelt u **wekelijkseSales** in als de **doelfunctie** en alles als **invoerfunctie**. Klik op **Volgende** om uw nieuwe geconfigureerde recept te bekijken.
-3. Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **Voltooien** om het recept te maken.
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-Gefeliciteerd, je hebt het winkelrecept gemaakt! Ga naar de [volgende stappen](#next-steps) om te weten te komen hoe te om een Model in de Werkruimte van de Wetenschap van Gegevens tot stand te brengen gebruikend het onlangs gecreëerde Commerciële recept van de Verkoop.
-
-### Op Docker gebaseerde recept importeren - R {#r}
-
-In de brondossiers van het [Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Retailrecept van de Verkoop gebruikend de brondossiers van R.
-
-1. Plak de URL van Docker die overeenkomt met het verpakte recept dat is samengesteld met R-bronbestanden in het veld **Bron-URL** . Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Klik op **Volgende** wanneer beide items zijn opgegeven.
-   ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
-2. Selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie **leidt Schema**, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en datasetleerprogramma](../models-recipes/create-retails-sales-dataset.md) .
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Onder de **sectie van het Beheer** van de Eigenschap, klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **Invoerfunctie** of **Doelfunctie** in het rechtervenster **Veldeigenschappen** . Voor deze zelfstudie stelt u **wekelijkseSales** in als de **doelfunctie** en alles als **invoerfunctie**. Klik op **Volgende** om uw nieuwe geconfigureerde recept te bekijken.
-3. Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **Voltooien** om het recept te maken.
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-Gefeliciteerd, je hebt het winkelrecept gemaakt! Ga naar de [volgende stappen](#next-steps) om te weten te komen hoe te om een Model in de Werkruimte van de Wetenschap van Gegevens tot stand te brengen gebruikend het onlangs gecreëerde Commerciële recept van de Verkoop.
-
-## Volgende stappen
-
-Deze zelfstudie gaf inzicht in het configureren en importeren van een recept in de Data Science Workspace. U kunt nu een model maken, trainen en evalueren met het nieuwe recept.
-
-- [Een model trainen en evalueren in de gebruikersinterface](./train-evaluate-model-ui.md)
-- [Een model trainen en evalueren met behulp van de API](./train-evaluate-model-api.md)
+Ga aan de [volgende stappen](#next-steps) te werk om te weten te komen hoe te om een Model in de Werkruimte van de Wetenschap van Gegevens tot stand te brengen gebruikend het onlangs gecreëerde Commerciële recept van de Verkoop.
