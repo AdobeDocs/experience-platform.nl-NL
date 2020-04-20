@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Hulplijnen voor recept- en laptopmigratie
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
+source-git-commit: 61cf05b989bfbae4e26978fa915347f350d7364c
 
 ---
 
@@ -291,6 +291,10 @@ Recente wijzigingen in JupyterLab-laptops vereisen dat u uw bestaande PySpark- e
 
 - [PySpark 2.3 tot 2.4-migratiegids](#pyspark-notebook-migration)
 - [Spark 2.3 aan Vonk 2.4 (Scala) migratiegids](#spark-notebook-migration)
+
+De volgende video is ontworpen om meer inzicht te krijgen in de wijzigingen die vereist zijn voor JupyterLab-laptops:
+
+>[!VIDEO](https://video.tv.adobe.com/v/33444?quality=12&learn=on)
 
 ## PySpark 2.3 tot 2.4 laptopmigratiehandleiding {#pyspark-notebook-migration}
 
