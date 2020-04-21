@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
+source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
 
 ---
 
@@ -105,8 +105,8 @@ source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
 - UI-zelfstudies {#ui-tutorials}
    - Een bronaansluiting maken {#create}
       - Adobe-toepassingen {#adobe-applications}
-         - [Aansluiting voor Adobe Audience Manager](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Adobe Analytics-connector](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Adobe Analytics-connector](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Aansluiting voor Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Klantenkenmerkaansluiting](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Reclame {#create}
          - [Google Ads-connector](tutorials/ui/create/advertising/ads.md)
