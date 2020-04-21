@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een object verwijderen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 85b497d87fcfb54f390302036ce24c98c6dba6ff
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -21,9 +21,11 @@ U kunt een Catalog-object verwijderen door de id ervan op te geven in het pad va
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
+>[!IMPORTANT] Het `DELETE /batches/{ID}` eindpunt is afgekeurd. Als u een batch wilt verwijderen, moet u de [Batch Ingestie-API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)gebruiken.
+
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden verwijderd. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden verwijderd. Geldige objecten zijn: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**
