@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van labels voor gegevensgebruik
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4d817a439cbc277c3df03e08554d5003b9f68a76
+source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
 
 ---
 
@@ -25,4 +25,4 @@ Zie de handleiding over [ondersteunde labels](reference.md)voor gegevensgebruik 
 
 ## Volgende stappen
 
-Nu u de etiketten van het gegevensgebruik bent geïntroduceerd, kunt u de [gebruikersgids](user-guide.md) blijven lezen om te leren hoe te om etiketten in de UI van het Platform van de Ervaring te beheren.
+Nu u de etiketten van het gegevensgebruik bent geïntroduceerd, kunt u de [gebruikersgids](user-guide.md) blijven lezen om te leren hoe te om etiketten in de UI van het Platform van de Ervaring te beheren. Voor stappen op hoe te om etiketten te beheren die APIs gebruiken, zie de aangewezen sectie in de de ontwikkelaarsgids [van de Dienst van de](../../catalog/api/labels.md)Catalogus.
