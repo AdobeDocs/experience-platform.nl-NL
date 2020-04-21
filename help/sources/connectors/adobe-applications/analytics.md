@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gegevensconnector Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
@@ -39,7 +39,7 @@ Zie het [XDM-systeemoverzicht](../../../xdm/home.md)voor meer informatie over XD
 
 Wanneer een bronverbinding tot stand is gebracht voor het overbrengen van analysegegevens naar het ervaringsplatform via de gebruikersinterface van het platform, worden gegevensvelden automatisch toegewezen en opgenomen in het realtime-klantprofiel binnen enkele minuten. Zie de zelfstudie over de gegevensaansluiting [Analytics voor instructies over het maken van een bronverbinding met Adobe Analytics via de interface van het platform](../../tutorials/ui/create/adobe-applications/analytics.md).
 
-Voor gedetailleerde informatie over de veldmapping die plaatsvindt tussen Analytics en Experience Platform, raadpleegt u de [handleiding voor het toewijzen](./analytics-mapping.md) van veldgegevens in Adobe Analytics.
+Voor gedetailleerde informatie over de veldmapping die plaatsvindt tussen Analytics en Experience Platform, raadpleegt u de [handleiding voor het toewijzen](./mapping/analytics.md) van veldgegevens in Adobe Analytics.
 
 ## Wat is de verwachte latentie voor de Gegevens van Analytics op Platform?
 
