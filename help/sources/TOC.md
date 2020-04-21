@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
+source-git-commit: 2fb034dced679d48c90c41ab3254a30fc14b43e0
 
 ---
 
@@ -16,6 +16,10 @@ source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
       - [Gegevensconnector Analytics](connectors/adobe-applications/analytics.md)
       - [Poortbeheeraansluiting](connectors/adobe-applications/audience-manager.md)
       - [Klantenkenmerkaansluiting](connectors/adobe-applications/customer-attributes.md)
+      - Adobe-toepassingsvelden toewijzen {#mapping}
+         - [Toewijzingsvelden voor analysemogelijkheden](connectors/adobe-applications/mapping/analytics.md)
+         - [Toewijzingsvelden voor Auditiebeheer](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Doeltoewijzingsvelden](connectors/adobe-applications/mapping/target.md)
    - Reclame {#advertising}
       - [Google Ads-connector](connectors/advertising/ads.md)
    - Cloud-opslag {#cloud-storage}
