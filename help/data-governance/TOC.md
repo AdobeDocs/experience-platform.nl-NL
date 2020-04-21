@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij het Adobe Experience Platform voor gegevensbeheer
 translation-type: tm+mt
-source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
+source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 
 ---
 
@@ -13,7 +13,8 @@ source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
 * [Overzicht van gegevensbeheer](home.md)
 * Labels voor gegevensgebruik {#labels}
    * [Overzicht van labels voor gegevensgebruik](labels/overview.md)
-   * [Gebruiksaanwijzing voor labels voor gegevensgebruik](labels/user-guide.md)
+   * [Labels voor gegevensgebruik beheren in de gebruikersinterface](labels/user-guide.md)
+   * [Gegevensgebruikslabels beheren in de API](labels/api.md)
    * [Ondersteunde labels voor gegevensgebruik](labels/reference.md)
 * Beleid voor gegevensgebruik {#policies}
    * [Overzicht van beleidsregels voor gegevensgebruik](policies/overview.md)
