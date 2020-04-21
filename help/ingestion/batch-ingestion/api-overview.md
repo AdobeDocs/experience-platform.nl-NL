@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Batch Ingestieontwikkelaarshandleiding
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -54,7 +54,7 @@ Voor aanvragen die een payload (POST, PUT, PATCH) bevatten, is mogelijk een extr
 
 Bij het opnemen van gegevens is het belangrijk om te begrijpen hoe de schema&#39;s van het Gegevensmodel van de Ervaring (XDM) werken. Voor meer informatie over hoe de de gebiedstypes van XDM aan verschillende formaten in kaart brengen, te lezen gelieve de de ontwikkelaarsgids [van de Registratie van het](../../xdm/api/getting-started.md)Schema.
 
-Er is enige flexibiliteit bij het opnemen van gegevens - als een type niet aanpast wat in het doelschema is, zullen de gegevens in het uitgedrukt doeltype worden omgezet.  Als dit niet het geval is, zal het de partij met een `TypeCompatibilityException`.
+Er is enige flexibiliteit bij het opnemen van gegevens - als een type niet aanpast wat in het doelschema is, zullen de gegevens in het uitgedrukt doeltype worden omgezet. Als dit niet het geval is, zal het de partij met een `TypeCompatibilityException`.
 
 JSON en CSV hebben bijvoorbeeld geen datum- of datum-tijdtype. Dientengevolge, worden deze waarden uitgedrukt gebruikend [ISO 8061 geformatteerde koorden](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) of Unix Tijd geformatteerd in milliseconden (153126395999 000) en worden bij inname omgezet in het doel-XDM-type.
 
@@ -382,7 +382,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | Parameter | Beschrijving |
-| --------- | -----------  |
+| --------- | ----------- |
 | `{DATASET_ID}` | De id van het referentiegegevensbestand. |
 
 **Antwoord**
@@ -790,7 +790,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Een batch verwijderen
+## Een batch verwijderen {#delete-a-batch}
 
 Een partij kan worden geschrapt door het volgende POST- verzoek met de `action=REVERT` vraagparameter aan identiteitskaart van de partij uit te voeren u wenst om te schrappen. De partij is gemerkt als &quot;inactief&quot;, die het voor huisvuilinzameling in aanmerking laten komen. De partij wordt asynchroon verzameld, waarna de partij als &quot;geschrapt&quot;zal worden gemerkt.
 
