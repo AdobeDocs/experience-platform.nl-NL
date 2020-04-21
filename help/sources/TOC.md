@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
+source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
 
 ---
 
@@ -17,7 +17,7 @@ source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
       - [Poortbeheeraansluiting](connectors/adobe-applications/audience-manager.md)
       - [Klantenkenmerkaansluiting](connectors/adobe-applications/customer-attributes.md)
    - Reclame {#advertising}
-      - [Google AdWords-connector](connectors/advertising/ads.md)
+      - [Google Ads-connector](connectors/advertising/ads.md)
    - Cloud-opslag {#cloud-storage}
       - [Azure Data Lake Storage Gen2-connector](connectors/cloud-storage/adls-gen2.md)
       - [Azure Blob- en Amazon S3-connector](connectors/cloud-storage/blob-s3.md)
@@ -58,7 +58,6 @@ source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
          - [Google Cloud Storage-connector](tutorials/api/create/cloud-storage/google.md)
          - [SFTP-aansluiting](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [Google AdWords-connector](tutorials/api/create/crm/adwords.md)
          - [HubSpot-connector](tutorials/api/create/crm/hubspot.md)
          - [Microsoft Dynamics-connector](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce-aansluiting](tutorials/api/create/crm/salesforce.md)
