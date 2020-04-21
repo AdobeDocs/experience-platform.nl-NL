@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Poortbeheeraansluiting
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
@@ -43,7 +43,7 @@ Hieronder volgen voorbeelden van de structuur van Audience Manager die is toegew
 
 ## Hoe worden velden toegewezen van Adobe Audience Manager aan XDM?
 
-Zie de documentatie voor de toewijzingsvelden [van][audience-manager-mapping-fields] Audience Manager voor meer informatie.
+Zie de documentatie voor de toewijzingsvelden [van](./mapping/audience-manager.md) Audience Manager voor meer informatie.
 
 ## Gegevensbeheer op platform
 
@@ -66,7 +66,7 @@ Terwijl de gebruikers de capaciteit hebben om datasets onbruikbaar te maken, wor
 
 ### Verbindingen
 
-Adobe Audience Manager maakt één verbinding in Catalog: Verbinding met **Audience Manager**. Catalog is het systeem van de verslagen voor gegevensplaats en lijn binnen het Platform van de Ervaring van Adobe. Een verbinding is een voorwerp van de Catalogus dat een klant-specifiek geval van Connectors is. Zie het overzicht [van de](../../../catalog/home.md) Catalogusservice voor meer informatie over Catalogus, verbindingen en connectors.
+Adobe Audience Manager maakt één verbinding in Catalog: Verbinding met **Audience Manager**. Catalog is het systeem van de verslagen voor gegevensplaats en lijn binnen het Platform van de Ervaring van Adobe. Een verbinding is een voorwerp van de Catalogus dat een klant-specifiek geval van Verbindingen is. Zie het overzicht [van de](../../../catalog/home.md) Catalogusservice voor meer informatie over Catalogus, verbindingen en connectors.
 
 ## Wat is de verwachte latentie voor de Gegevens van de Manager van de Audience op Platform?
 
