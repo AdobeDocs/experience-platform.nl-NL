@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Adobe Analytics-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: ac1e5dbe435d9e85e8ce3ad90c60dd31ba9248ff
 
 ---
 
@@ -23,7 +23,7 @@ In het scherm *Bronactiviteit* worden alle eerder ingestelde verbindingen met Ad
 
 >[!NOTE] Er kunnen meerdere interne verbindingen met een bron worden gemaakt om verschillende gegevens in te voeren.
 
-![](../../../..//images/tutorials/create/analytics/AA-source_activity.png)
+![](/help/sources/images/tutorials/create/analytics/AA-source_activity.png)
 
 Van de lijst van beschikbare rapportreeksen, selecteer één u in Platform wilt brengen en **daarna** klikken.
 
