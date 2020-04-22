@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Edge Network Help
+user-guide-title: Help bij Adobe Experience Platform Edge Network
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -11,10 +11,10 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 # Adobe Experience Platform Edge Network {#edge}
 
 * [Overzicht van Edge Network](home.md)
-* Aan de slag {#get-started}
+* Getting started {#get-started}
    * [Snel starten met starten](getting-started/quick-start-with-launch.md)
    * [Alle producten implementeren](getting-started/deploying-all-products.md)
-* Grondbeginselen {#fundamentals}
+* Fundamentals {#fundamentals}
    * [De SDK installeren](fundamentals/installing-the-sdk.md)
    * [Opdrachten uitvoeren](fundamentals/executing-commands.md)
    * [De SDK configureren](fundamentals/configuring-the-sdk.md)
@@ -34,3 +34,4 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 * Referentie {#ref}
    * [Automatisch verzamelde gegevens](reference/automatic-information.md)
    * [Bibliotheekgegevens ophalen](reference/retrieving-library-information.md)
+* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
