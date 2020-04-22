@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Hulplijnen voor recept- en laptopmigratie
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5191eb9ba48cc6dd4e2d42bd2a50539be7ea163e
+source-git-commit: 057001b0b4488f578bdd07387a66c647a91798c8
 
 ---
 
@@ -53,24 +53,32 @@ Alvorens u het beeld van de Docker bouwt, herzie de voorbeelden voor het lezen v
 
 Deze sectie schetst de veranderingen die voor het lezen van een dataset nodig zijn en gebruikt het [helper.range](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) voorbeeld, die door Adobe wordt verstrekt.
 
-Met de updates aan de recepten van de Vonk, moet een aantal waarden worden toegevoegd en worden veranderd. Ten eerste wordt `DataSetOptions` het niet meer gebruikt. Vervangen `DataSetOptions` door `QSOption`. Daarnaast zijn nieuwe `option` parameters vereist. Zowel `QSOption.mode` als `QSOption.datasetId` zijn nodig. Tot slot `orgId` en `serviceApiKey` moeten we het veranderen in `imsOrg` en `apiKey`. Bekijk de volgende tabel voor een vergelijking bij het lezen van datasets:
+**Oude manier om een dataset te lezen**
 
-<table>
-  <th>Oude manier om een dataset te lezen</th>
-  <th>Nieuwe manier om een dataset te lezen</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-  var df = sparkSession.read.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, orgId) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.userToken, userToken) .option(DataSetOptions.serviceApiKey, apiKey Key) .load(dataSetId)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-import com.adobe.platform.query.QSOptionvar df = sparkSession.read.format("com.adobe.platform.query") .option(QSOption.userToken", {userToken}) .option(QSOption.serviceToken, {serviceToken}) .option(QSOption.imsOrg, {orgId}) .option(QSOption.apiKey, {apiKey}) .option(QSOption.mode, "interactive") .option(QSOption.datasetId, {dataSetId}) .load()
-  </pre>
-  </td>
-  </tr>
-</table>
+```scala
+ var df = sparkSession.read.format("com.adobe.platform.dataset")
+    .option(DataSetOptions.orgId, orgId)
+    .option(DataSetOptions.serviceToken, serviceToken)
+    .option(DataSetOptions.userToken, userToken)
+    .option(DataSetOptions.serviceApiKey, apiKey)
+    .load(dataSetId)
+```
+
+**Nieuwe manier om een dataset te lezen**
+
+Met de updates aan de recepten van de Vonk, moet een aantal waarden worden toegevoegd en worden veranderd. Ten eerste wordt `DataSetOptions` het niet meer gebruikt. Vervangen `DataSetOptions` door `QSOption`. Daarnaast zijn nieuwe `option` parameters vereist. Zowel `QSOption.mode` als `QSOption.datasetId` zijn nodig. Tot slot `orgId` en `serviceApiKey` moeten we het veranderen in `imsOrg` en `apiKey`. Bekijk het volgende voorbeeld voor een vergelijking bij het lezen van datasets:
+
+```scala
+import com.adobe.platform.query.QSOption
+var df = sparkSession.read.format("com.adobe.platform.query")
+  .option(QSOption.userToken", {userToken})
+  .option(QSOption.serviceToken, {serviceToken})
+  .option(QSOption.imsOrg, {orgId})
+  .option(QSOption.apiKey, {apiKey})
+  .option(QSOption.mode, "interactive")
+  .option(QSOption.datasetId, {dataSetId})
+  .load()
+```
 
 >[!TIP]
 > De interactieve wijzetijden uit als de vragen langer dan 10 minuten lopen. Als u meer dan een paar gigabytes aan gegevens opneemt, adviseert men dat u op &quot;partij&quot;wijze overschakelt. De batterijmodus duurt langer om te starten, maar kan grotere gegevenssets verwerken.
@@ -79,24 +87,31 @@ import com.adobe.platform.query.QSOptionvar df = sparkSession.read.format("com.a
 
 Deze sectie schetst de veranderingen nodig voor het schrijven van een dataset door het [ScoringDataSaver.range](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) voorbeeld te gebruiken, die door Adobe wordt verstrekt.
 
-Met de updates aan de recepten van de Vonk, moet een aantal waarden worden toegevoegd en worden veranderd. Ten eerste wordt `DataSetOptions` het niet meer gebruikt. Vervangen `DataSetOptions` door `QSOption`. Daarnaast zijn nieuwe `option` parameters vereist. `QSOption.datasetId` is vereist en vervangt de noodzaak om de `{dataSetId}` insteekmodule te laden `.save()`. Tot slot `orgId` en `serviceApiKey` moeten we het veranderen in `imsOrg` en `apiKey`. Herzie de volgende lijst voor een vergelijking over het schrijven van datasets:
+**Oude manier om een dataset te schrijven**
 
-<table>
-  <th>Oude manier om een dataset te schrijven</th>
-  <th>Nieuwe manier om een dataset te schrijven</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-  df.write.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, orgId) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.userToken, userToken) .option(DataSetOptions.serviceApiKey, apiKey) .save(scoring ResultatenDataSetId)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-import com.adobe.platform.query.QSOptiondf.write.format("com.adobe.platform.query") .option(QSOption.userToken", {userToken}) .option(QSOption.serviceToken, {serviceToken}) .option(QSOption.imsOrg, {orgId}) .option(QSOption.id .apiKey, {apiKey}) .option(QSOption.datasetId, {dataSetId}) .save()
-</pre>
-  </td>
-  </tr>
-</table>
+```scala
+df.write.format("com.adobe.platform.dataset")
+    .option(DataSetOptions.orgId, orgId)
+    .option(DataSetOptions.serviceToken, serviceToken)
+    .option(DataSetOptions.userToken, userToken)
+    .option(DataSetOptions.serviceApiKey, apiKey)
+    .save(scoringResultsDataSetId)
+```
+
+**Nieuwe manier om een dataset te schrijven**
+
+Met de updates aan de recepten van de Vonk, moet een aantal waarden worden toegevoegd en worden veranderd. Ten eerste wordt `DataSetOptions` het niet meer gebruikt. Vervangen `DataSetOptions` door `QSOption`. Daarnaast zijn nieuwe `option` parameters vereist. `QSOption.datasetId` is vereist en vervangt de noodzaak om de `{dataSetId}` insteekmodule te laden `.save()`. Tot slot `orgId` en `serviceApiKey` moeten we het veranderen in `imsOrg` en `apiKey`. Bekijk het volgende voorbeeld voor een vergelijking bij het schrijven van datasets:
+
+```scala
+import com.adobe.platform.query.QSOption
+df.write.format("com.adobe.platform.query")
+  .option(QSOption.userToken", {userToken})
+  .option(QSOption.serviceToken, {serviceToken})
+  .option(QSOption.imsOrg, {orgId})
+  .option(QSOption.apiKey, {apiKey})
+  .option(QSOption.datasetId, {dataSetId})
+  .save()
+```
 
 ### Op docker gebaseerde bronbestanden in pakketten (Spark) {#package-docker-spark}
 
@@ -174,24 +189,33 @@ Alvorens u het beeld van de Docker bouwt, herzie de voorbeelden voor het lezen v
 
 Deze sectie schetst de veranderingen nodig voor het lezen van een dataset door het [helper.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) voorbeeld te gebruiken, die door Adobe wordt verstrekt.
 
-Met de updates aan de recepten van de Vonk, moet een aantal waarden worden toegevoegd en worden veranderd. Ten eerste wordt `DataSetOptions` het niet meer gebruikt. Vervangen `DataSetOptions` door `qs_option`. Daarnaast zijn nieuwe `option` parameters vereist. Zowel `qs_option.mode` als `qs_option.datasetId` zijn nodig. Tot slot `orgId` en `serviceApiKey` moeten we het veranderen in `imsOrg` en `apiKey`. Bekijk de volgende tabel voor een vergelijking bij het lezen van datasets:
+**Oude manier om een dataset te lezen**
 
-<table>
-  <th>Oude manier om een dataset te lezen</th>
-  <th>Nieuwe manier om een dataset te lezen</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-dataset_options = get_dataset_options(spark.sparkContext)pd = spark.read.format("com.adobe.platform.dataset") .option(dataset_options.serviceToken(), service_token) .option(dataset_options.userToken(), user_token) .option(dataset_options.orgId(), org_id optie (dataset_options.serviceApiKey(), api_key) .load(dataset_id)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-qs_option = spark_context._jvm.com.adobe.platform.query.QSOptionpd = sparkSession.read.format("com.adobe.platform.query") .option(qs_option.userToken, {userToken}) .option(qs_option.serviceToken, {serviceToken}) .option(qs_option.imsOrg, {orgId}) .qs s_option.apiKey, {apiKey}) .option(qs_option.mode, "interactive") .option(qs_option.datasetId, {dataSetId}) .load()
-  </pre>
-  </td>
-  </tr>
-</table>
+```python
+dataset_options = get_dataset_options(spark.sparkContext)
+pd = spark.read.format("com.adobe.platform.dataset") 
+  .option(dataset_options.serviceToken(), service_token) 
+  .option(dataset_options.userToken(), user_token) 
+  .option(dataset_options.orgId(), org_id) 
+  .option(dataset_options.serviceApiKey(), api_key)
+  .load(dataset_id)
+```
+
+**Nieuwe manier om een dataset te lezen**
+
+Met de updates aan de recepten van de Vonk, moet een aantal waarden worden toegevoegd en worden veranderd. Ten eerste wordt `DataSetOptions` het niet meer gebruikt. Vervangen `DataSetOptions` door `qs_option`. Daarnaast zijn nieuwe `option` parameters vereist. Zowel `qs_option.mode` als `qs_option.datasetId` zijn nodig. Tot slot `orgId` en `serviceApiKey` moeten we het veranderen in `imsOrg` en `apiKey`. Bekijk het volgende voorbeeld voor een vergelijking bij het lezen van datasets:
+
+```python
+qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
+pd = sparkSession.read.format("com.adobe.platform.query") 
+  .option(qs_option.userToken, {userToken}) 
+  .option(qs_option.serviceToken, {serviceToken}) 
+  .option(qs_option.imsOrg, {orgId}) 
+  .option(qs_option.apiKey, {apiKey}) 
+  .option(qs_option.mode, "interactive") 
+  .option(qs_option.datasetId, {dataSetId}) 
+  .load()
+```
 
 >[!TIP]
 > De interactieve wijzetijden uit als de vragen langer dan 10 minuten lopen. Als u meer dan een paar gigabytes aan gegevens opneemt, adviseert men dat u op &quot;partij&quot;wijze overschakelt. De batterijmodus duurt langer om te starten, maar kan grotere gegevenssets verwerken.
@@ -200,24 +224,31 @@ qs_option = spark_context._jvm.com.adobe.platform.query.QSOptionpd = sparkSessio
 
 In deze sectie worden de wijzigingen beschreven die nodig zijn voor het schrijven van een gegevensset met behulp van het voorbeeld [data_saver.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) , dat wordt geleverd door Adobe.
 
-Met de updates aan PySpark recepten, moet een aantal waarden worden toegevoegd en worden veranderd. Ten eerste wordt `DataSetOptions` het niet meer gebruikt. Vervangen `DataSetOptions` door `qs_option`. Daarnaast zijn nieuwe `option` parameters vereist.  `qs_option.datasetId` is vereist en vervangt de noodzaak om de `{dataSetId}` in te laden `.save()` . Tot slot `orgId` en `serviceApiKey` moeten we het veranderen in `imsOrg` en `apiKey`. Bekijk de volgende tabel voor een vergelijking bij het lezen van datasets:
+**Oude manier om een dataset te schrijven**
 
-<table>
-  <th>Oude manier om een dataset te schrijven</th>
-  <th>Nieuwe manier om een dataset te schrijven</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-df.write.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, orgId) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.userToken, userToken) .option(DataSetOptions.serviceApiKey, apiKey) .save(scoring ResultatenDataSetId)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-qs_option = spark_context._jvm.com.adobe.platform.query.QSOptionscored_df.write.format("com.adobe.platform.query") .option(qs_option.userToken, {userToken}) .option(qs_option.serviceToken, {serviceToken}) .option(qs_option.imsOrg, {orgId}) .option(qs_s option.apiKey, {apiKey}) .option(qs_option.datasetId, {dataSetId}) .save()
-</pre>
-  </td>
-  </tr>
-</table>
+```python
+df.write.format("com.adobe.platform.dataset")
+  .option(DataSetOptions.orgId, orgId)
+  .option(DataSetOptions.serviceToken, serviceToken)
+  .option(DataSetOptions.userToken, userToken)
+  .option(DataSetOptions.serviceApiKey, apiKey)
+  .save(scoringResultsDataSetId)
+```
+
+**Nieuwe manier om een dataset te schrijven**
+
+Met de updates aan PySpark recepten, moet een aantal waarden worden toegevoegd en worden veranderd. Ten eerste wordt `DataSetOptions` het niet meer gebruikt. Vervangen `DataSetOptions` door `qs_option`. Daarnaast zijn nieuwe `option` parameters vereist.  `qs_option.datasetId` is vereist en vervangt de noodzaak om de `{dataSetId}` in te laden `.save()` . Tot slot `orgId` en `serviceApiKey` moeten we het veranderen in `imsOrg` en `apiKey`. Bekijk het volgende voorbeeld voor een vergelijking bij het lezen van datasets:
+
+```python
+qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
+scored_df.write.format("com.adobe.platform.query") 
+  .option(qs_option.userToken, {userToken}) 
+  .option(qs_option.serviceToken, {serviceToken}) 
+  .option(qs_option.imsOrg, {orgId}) 
+  .option(qs_option.apiKey, {apiKey}) 
+  .option(qs_option.datasetId, {dataSetId}) 
+  .save()
+```
 
 ### Op docker gebaseerde bronbestanden in pakketten (PySpark) {#pyspark-package-docker}
 
@@ -376,31 +407,22 @@ Een toveropdracht voor aangepaste Data Science Workspace voor het lezen of schri
 
 ## Laden in een dataframe in LocalContext
 
-Met de introductie van Spark 2.4 wordt [`%dataset`](#magic) aangepaste magie geleverd. De volgende lijst benadrukt de belangrijkste verschillen voor ladingsdataframe in PySpark (Vonk 2.3) en PySpark (Vonk 2.4) laptops:
+Met de introductie van Spark 2.4 wordt [`%dataset`](#magic) aangepaste magie geleverd. In het volgende voorbeeld worden de belangrijkste verschillen voor het laden van dataframe in de laptops PySpark (Spark 2.3) en PySpark (Spark 2.4) gemarkeerd:
 
-<table>
-  <th>Laptop</th>
-  <th>PySpark 3 (Spark 2.3 - afgekeurd)</th>
-  <th>PySpark 3 (Spark 2.4)</th>
-  <tr>
-  <th>Kernel</th>
-  <td align="center">PySpark 3</td>
-  <td align="center">Python 3</td>
-  </tr>
-  <tr>
-  <th>Code</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptionSpd0 = spark.read.format("com.adobe.platform.dataset") .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg") .load("5e6814134492718af9748 44 inch)
-</pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-%dataset read —datasetId 5e68141134492718af974844 —dataFrame pd0
-</pre>
-  </td>
-  </tr>
-</table>
+**Gebruikend PySpark 3 (Vonk 2.3 - afgekeurd) - PySpark 3 Kernel**
+
+```python
+dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
+pd0 = spark.read.format("com.adobe.platform.dataset")
+  .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg")
+  .load("5e68141134492718af974844")
+```
+
+**Werken met PySpark 3 (Spark 2.4) - Python 3 Kernel**
+
+```python
+%dataset read --datasetId 5e68141134492718af974844 --dataFrame pd0
+```
 
 | Element | Beschrijving |
 | ------- | ----------- |
@@ -504,29 +526,30 @@ Met PySpark 3 (Spark 2.4) wordt `%%sql` Sparkmagic niet meer ondersteund en is v
 
 Met de introductie van Spark 2.4 wordt [`%dataset`](#magic) aangepaste magie geleverd die het schrijven van datasets schoner maakt. Om aan een dataset te schrijven, gebruik het volgende voorbeeld van de Vonk 2.4:
 
-<table>
-  <th>Laptop</th>
-  <th>PySpark 3 (Spark 2.3 - afgekeurd)</th>
-  <th>PySpark 3 (Spark 2.4)</th>
-  <tr>
-  <th>Kernel</th>
-  <td align="center">PySpark 3</td>
-  <td align="center">Python 3</td>
-  </tr>
-  <tr>
-  <th>Code</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-userToken = spark.sparkContext.getConf().get("spark.aren.appMasterEnv.USER_TOKEN")serviceToken = spark.sparkContext.getConf().get("spark.gark.appMasterEnv.SERVICE_TOKEN")serviceApiKey = spark.sparkContext.appContext.SERVICE Conf().get("spark.garens.appMasterEnv.SERVICE_API_KEY")dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptionspd0.write.format("com.adobe.platform.dataset") .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg") .option(dataset_options.userToken(), userToken) .option(dataset_options.serviceToken(), serviceToken) .option(dataset_dataset options.serviceApiKey(), serviceApiKey() .save("5e6814134492718af974844")
-  </pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-%dataset write —datasetId 5e68141134492718af974844 —dataFrame pd0pd0.describe()pd0.show(10, False)
-</pre>
-  </td>
-  </tr>
-</table>
+**Gebruikend PySpark 3 (Vonk 2.3 - afgekeurd) - PySpark 3 Kernel**
+
+```python
+userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")
+serviceToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_TOKEN")
+serviceApiKey = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_API_KEY")
+
+dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
+
+pd0.write.format("com.adobe.platform.dataset")
+  .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg")
+  .option(dataset_options.userToken(), userToken)
+  .option(dataset_options.serviceToken(), serviceToken)
+  .option(dataset_options.serviceApiKey(), serviceApiKey)
+  .save("5e68141134492718af974844")
+```
+
+**Werken met PySpark 3 (Spark 2.4) - Python 3 Kernel**
+
+```python
+%dataset write --datasetId 5e68141134492718af974844 --dataFrame pd0
+pd0.describe()
+pd0.show(10, False)
+```
 
 | Element | beschrijving |
 | ------- | ----------- |
@@ -683,29 +706,30 @@ De Scala-kernel ondersteunt geen `%%sql` magie meer. Bestaande magische code moe
 
 In Vonk 2.3 moest u variabelen bepalen voor `option` waarden die worden gebruikt om gegevens te lezen of de ruwe waarden in de codecel te gebruiken. In Scala, kunt u gebruiken `sys.env("PYDASDK_IMS_USER_TOKEN")` om een waarde te verklaren en terug te keren, elimineert dit de behoefte om variabelen zoals `var userToken`te bepalen. In het Scala (Vonk 2.4) voorbeeld hieronder, `sys.env` wordt gebruikt om alle vereiste waarden te bepalen en terug te keren nodig voor het lezen van een dataset.
 
-<table>
-  <th>Laptop</th>
-  <th>Vonk (Vonk 2.3 - afgekeurd)</th>
-  <th>Scala (park 2.4)</th>
-  <tr>
-  <th>Kernel</th>
-  <td align="center">Spark</td>
-  <td align="center">Scala</td>
-  </tr>
-  <tr>
-  <th>code</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-import com.adobe.platform.dataset.DataSetOptionsvar df1 = spark.read.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg") .option(DataSetOptions.batchId, "dbe154d3-197a-4e6c-80i f8-9b7025eea2b9") .load("5e68141134492718af974844")
-</pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-import org.apache.spark.sql.{Dataset, SparkSession}val spark = SparkSession.builder().master("local").getOrCreate()val df1 = spark.read.format("com.adobe.platform.query") .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN") .option("ims-ims org", sys.env("IMS_ORG_ID") .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID") .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN") .option("mode", "interactive"), option( "dataset-id", "5e68141134492718af974844") .load()
-</pre>
-  </td>
-  </tr>
-</table>
+**Het gebruiken van Vonk (Vonk 2.3 - verouderd) - de Kernel van de Vonk**
+
+```scala
+import com.adobe.platform.dataset.DataSetOptions
+var df1 = spark.read.format("com.adobe.platform.dataset")
+  .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg")
+  .option(DataSetOptions.batchId, "dbe154d3-197a-4e6c-80f8-9b7025eea2b9")
+  .load("5e68141134492718af974844")
+```
+
+**Scala gebruiken (Vonk 2.4) - Scala Kernel**
+
+```scala
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = SparkSession.builder().master("local").getOrCreate()
+val df1 = spark.read.format("com.adobe.platform.query")
+  .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+  .option("ims-org", sys.env("IMS_ORG_ID"))
+  .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+  .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+  .option("mode", "interactive")
+  .option("dataset-id", "5e68141134492718af974844")
+  .load()
+```
 
 | element | beschrijving |
 | ------- | ----------- |
@@ -737,31 +761,41 @@ De Scala-laptop (Spark 2.4) gebruikt de Scala-kernel, waarvoor bij de installati
 
 ## Schrijven naar een gegevensset
 
-Net als bij het [lezen van een gegevensset](#notebook-read-dataset-spark), vereist het schrijven naar een gegevensset extra `option` waarden die in de onderstaande tabel worden beschreven. In Scala, kunt u gebruiken `sys.env("PYDASDK_IMS_USER_TOKEN")` om een waarde te verklaren en terug te keren, elimineert dit de behoefte om variabelen zoals `var userToken`te bepalen. In het Scala voorbeeld hieronder, `sys.env` wordt gebruikt om alle vereiste waarden te bepalen en terug te keren nodig om aan een dataset te schrijven.
+Net als bij het [lezen van een gegevensset](#notebook-read-dataset-spark), vereist het schrijven naar een gegevensset extra `option` waarden die in het onderstaande voorbeeld worden beschreven. In Scala, kunt u gebruiken `sys.env("PYDASDK_IMS_USER_TOKEN")` om een waarde te verklaren en terug te keren, elimineert dit de behoefte om variabelen zoals `var userToken`te bepalen. In het Scala voorbeeld hieronder, `sys.env` wordt gebruikt om alle vereiste waarden te bepalen en terug te keren nodig om aan een dataset te schrijven.
 
-<table>
-  <th>Laptop</th>
-  <th>Vonk (Vonk 2.3 - afgekeurd)</th>
-  <th>Scala (park 2.4)</th>
-  <tr>
-  <th>Kernel</th>
-  <td align="center">Spark</td>
-  <td align="center">Scala</td>
-  </tr>
-  <tr>
-  <th>code</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-import com.adobe.platform.dataset.DataSetOptionsvar userToken = spark.sparkContext.getConf.getOption("spark.garer.appMasterEnv.USER_TOKEN").getvar serviceToken = spark.sparkContext.getConf.getOption("spark.gars.appMasterEnv.SERVICE_TOKEN").getvar serviceApiKey = spark.sparkContext.getConf.getOption("spark.gark.appMasterEnv.SERVICE_API_KEY").getdf1.write.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg"), option(DataSetOptions.userToken, userToken) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.serviceApiKey, serviceApiKey) .save("5e6814134492718af974 844 inch)
-  </pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-import org.apache.spark.sql.{Dataset, SparkSession}val spark = SparkSession.builder().master("local").getOrCreate()df1.write.format("com.adobe.platform.query") .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN") .option("service-token", .env("PYDASDK_IMS_SERVICE_TOKEN") .option("ims-org", sys.env("IMS_ORG_ID") .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID") .option("mode", "interactive") .option("dataset id", "5e68141134492718af974844") .save()
-</pre>
-  </td>
-  </tr>
-</table>
+**Gebruikend Vonk (Vonk 2.3 - verouderd) - de Kernel van de Vonk**
+
+```scala
+import com.adobe.platform.dataset.DataSetOptions
+
+var userToken = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.USER_TOKEN").get
+var serviceToken = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.SERVICE_TOKEN").get
+var serviceApiKey = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.SERVICE_API_KEY").get
+
+df1.write.format("com.adobe.platform.dataset")
+  .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg")
+  .option(DataSetOptions.userToken, userToken)
+  .option(DataSetOptions.serviceToken, serviceToken)
+  .option(DataSetOptions.serviceApiKey, serviceApiKey)
+  .save("5e68141134492718af974844")
+```
+
+**Scala gebruiken (Vonk 2.4) - Scala Kernel**
+
+```scala
+import org.apache.spark.sql.{Dataset, SparkSession}
+
+val spark = SparkSession.builder().master("local").getOrCreate()
+
+df1.write.format("com.adobe.platform.query")
+  .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+  .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+  .option("ims-org", sys.env("IMS_ORG_ID"))
+  .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+  .option("mode", "interactive")
+  .option("dataset-id", "5e68141134492718af974844")
+  .save()
+```
 
 | element | beschrijving |
 | ------- | ----------- |
