@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding voor het oplossen van problemen in de Data Science Workspace
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: ef7c37438990d3bc42024e7fb106d781a5ebbd12
 
 ---
 
@@ -15,9 +15,9 @@ Dit document bevat antwoorden op veelgestelde vragen over de Data Science Worksp
 
 ## De JupyterLab-omgeving wordt niet geladen in Google Chrome
 
-Met de meest recente update van de Google Chrome-browser naar versie 80.x worden alle cookies van derden standaard geblokkeerd. Met dit nieuwe beleid kan worden voorkomen dat JupyterLab wordt geladen in het Adobe Experience Platform.
+>[!IMPORTANT] Dit probleem is opgelost, maar kan nog steeds voorkomen in de Google Chrome 80.x-browser. Controleer of uw Chrome-browser up-to-date is.
 
->[!NOTE] Dit is een tijdelijk probleem. De afhankelijkheid van cookies van derden wordt ingesteld om in een toekomstige release te worden verwijderd.
+Met Google Chrome versie 80.x worden alle cookies van derden standaard geblokkeerd. Met dit beleid kan worden voorkomen dat JupyterLab wordt geladen in het Adobe Experience Platform.
 
 Voer de volgende stappen uit om dit probleem op te lossen:
 
@@ -45,7 +45,19 @@ Na Stap 2, wordt u ertoe aangezet om uw browser opnieuw te lanceren. Nadat u het
 
 ## Waarom heb ik geen toegang tot JupyterLab in Safari?
 
-Safari schakelt cookies van derden standaard uit. Aangezien de Jupyter-instantie van de virtuele machine zich in een ander domein bevindt dan het bovenliggende frame, is het voor het Adobe Experience Platform momenteel vereist dat cookies van derden zijn ingeschakeld. Schakel cookies van derden in of schakel over naar een andere browser, zoals Google Chrome.
+Safari schakelt cookies van derden standaard uit in Safari &lt; 12. Aangezien de Jupyter-instantie van de virtuele machine zich in een ander domein bevindt dan het bovenliggende frame, is het voor het Adobe Experience Platform momenteel vereist dat cookies van derden zijn ingeschakeld. Schakel cookies van derden in of schakel over naar een andere browser, zoals Google Chrome.
+
+Voor Safari 12, moet u uw Agent van de Gebruiker op &quot;Chrome&quot;of &quot;Firefox&quot;schakelen. Om uw Agent van de Gebruiker te schakelen, begin door het menu van *Safari* te openen en **Voorkeur** te selecteren. Het voorkeurenvenster wordt weergegeven.
+
+![Safari-voorkeuren](./images/faq/preferences.png)
+
+Selecteer **Geavanceerd** in het voorkeurenvenster van Safari. Schakel vervolgens het menu Ontwikkelen *tonen in het vak van de menubalk* in. U kunt het voorkeurenvenster sluiten nadat deze stap is voltooid.
+
+![Safari, geavanceerd](./images/faq/advanced.png)
+
+Selecteer vervolgens in de bovenste navigatiebalk het menu **Ontwikkelen** . Houd de muisaanwijzer boven *Gebruikersagent* in het vervolgkeuzemenu *Ontwikkelen*. U kunt de tekenreeks **Chrome** of **Firefox** User Agent selecteren die u wilt gebruiken.
+
+![Ontwikkelen, menu](./images/faq/user-agent.png)
 
 ## Waarom zie ik een &#39;403 Verboden&#39; bericht bij het uploaden of verwijderen van een bestand in JupyterLab?
 
