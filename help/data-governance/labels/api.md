@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 'Gegevensgebruikslabels beheren met API''s '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cac6ab568f030cf86ee68a1df9e45a3ac9d421cb
+source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
 
 ---
 
@@ -143,8 +143,6 @@ Een succesvolle reactie keert de etiketten terug die aan de dataset zijn toegevo
 
 U kunt de etiketten schrappen die op een dataset door een verzoek van de SCHRAPPING worden toegepast.
 
->[!NOTE] U zou deze verrichting slechts moeten gebruiken wanneer het voorbereiden van de ouderdataset voor schrapping.
-
 **API-indeling**
 
 ```http
@@ -168,7 +166,7 @@ curl -X DELETE \
 
 **Antwoord**
 
-Een geslaagde HTTP-status 200 (OK) voor respons geeft aan dat de labels zijn verwijderd. U kunt de bestaande etiketten [voor de dataset in een afzonderlijke vraag](#lookup) omhoog kijken om dit te bevestigen.
+Een geslaagde HTTP-status 200 voor reacties (OK) die aangeeft dat de labels zijn verwijderd. U kunt de bestaande etiketten [voor de dataset in een afzonderlijke vraag](#lookup) omhoog kijken om dit te bevestigen.
 
 ## Volgende stappen
 
