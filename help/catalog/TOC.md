@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Catalog en Datasets
 translation-type: tm+mt
-source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
+source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
 
 ---
 
@@ -31,3 +31,4 @@ source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 * [Behandeling van een privacyverzoek in het Data Lake](privacy.md)
 * [Gegevensbescherming in het ervaringsplatform](data-protection.md)
 * [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
