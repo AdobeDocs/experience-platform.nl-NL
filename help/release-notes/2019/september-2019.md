@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
-source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
+source-git-commit: 26568ebbbe48b5a82e4f6b5cf035c354c11e8ed1
 
 ---
 
@@ -14,7 +14,13 @@ source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
 
 ## Releasedatum: 10 september 2019
 
-## Gegevensinname
+Updates voor bestaande functies in het Adobe Experience Platform:
+
+* [Gegevensinname](#ingestion)
+* [Werkruimte voor gegevenswetenschap](#dsw)
+* [Query-service](#query)
+
+## Gegevensinname {#ingestion}
 
 Adobe Experience Platform biedt een uitgebreide reeks functies voor het opnemen van elk type en elke vertraging van gegevens. Adobe Experience Platform Data Ingestie biedt meerdere alternatieven voor het opnemen van gegevens, zoals batch-API&#39;s, streaming API&#39;s, native Adobe-connectors, partners voor gegevensintegratie of de gebruikersinterface van het Adobe Experience Platform.
 
@@ -26,7 +32,7 @@ Adobe Experience Platform biedt een uitgebreide reeks functies voor het opnemen 
 
 Voor meer informatie, bezoek de documentatie [van de](../../ingestion/home.md)Ingestie van Gegevens.
 
-## Werkruimte voor gegevenswetenschap
+## Werkruimte voor gegevenswetenschap {#dsw}
 
 De Werkruimte van de Wetenschap van het Platform van de Gegevens van het Platform van de Ervaring van Adobe is een volledig beheerde dienst binnen het Platform van de Ervaring die gegevenswetenschappers toelaat om inzichten van gegevens en inhoud over de oplossingen van Adobe en derdesystemen naadloos te produceren door de Modellen van het Leren van de Machine te bouwen en in werking te stellen. De Werkruimte van de Wetenschap van Gegevens is strak geïntegreerd met Platform en machtigt de levenscyclus van de gegevenswetenschap van begin tot eind, met inbegrip van exploratie en voorbereiding van XDM gegevens, die door de ontwikkeling en de verrichting van Modellen wordt gevolgd om het Profiel van de Klant in real time met de Inzichten van het Leren van de Machine automatisch te verrijken.
 
@@ -46,7 +52,7 @@ De Werkruimte van de Wetenschap van het Platform van de Gegevens van het Platfor
 
 Voor meer informatie, bezoek het Overzicht [van de Werkruimte van de Wetenschap van](../../data-science-workspace/home.md)Gegevens.
 
-## Query-service
+## Query-service {#query}
 
 De Dienst van de vraag verstrekt de capaciteit om standaardSQL aan vraaggegevens in het Platform van de Ervaring van Adobe te gebruiken om een verscheidenheid van analyse en gegevensbeheer gebruiksgevallen te steunen. Het is een serverloos hulpmiddel dat u toestaat om zich bij datasets van het meer van Gegevens aan te sluiten en de vraagresultaten als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of voor opname in het Profiel van de Klant in real time te vangen.
 
