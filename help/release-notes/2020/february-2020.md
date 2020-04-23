@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+source-git-commit: 5199a344a66381ef9d7eea1ea8314e5de7152e3b
 
 ---
 
@@ -14,13 +14,17 @@ source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ## Releasedatum: 12 februari 2020
 
-## Bronnen
+Updates voor bestaande functies in het Adobe Experience Platform:
+
+* [Bronnen](#sources)
+
+## Bronnen {#sources}
 
 Met het Adobe Experience Platform kunt u gegevens uit externe bronnen ophalen en tegelijk die gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
 
 Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u bronverbindingen voor diverse gegevensleveranciers met gemak laat opzetten. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
-### Nieuwe functies
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
@@ -30,7 +34,7 @@ Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u 
 | API-ondersteuning voor cloudopslagsystemen | Nieuwe bronconnectors voor Azure Data Lake Service Gen 2 API en Google Cloud Storage API. |
 | UI-ondersteuning voor cloudopslagsystemen | Nieuwe bronconnector voor Google Cloud Storage in de gebruikersinterface. |
 
-### Bekende problemen
+**Bekende problemen**
 
 * Geen
 
