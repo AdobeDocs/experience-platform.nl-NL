@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Meerdere berichten streamen in één HTTP-aanvraag
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: cd251c0816a7e653596b6c3faaceb0cebad367ea
 
 ---
 
@@ -47,7 +47,7 @@ In plaats van een bestaande dataset te gebruiken, kunt u een nieuwe dataset tot 
 **API-indeling**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | Eigenschap | Beschrijving |
@@ -57,7 +57,7 @@ POST /collection/{CONNECTION_ID}
 **Verzoek**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
@@ -229,7 +229,7 @@ De request-payload is een array van JSON-objecten die de gebeurtenis in het XDM-
 **API-indeling**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | Eigenschap | Beschrijving |
@@ -239,7 +239,7 @@ POST /collection/{CONNECTION_ID}
 **Verzoek**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
