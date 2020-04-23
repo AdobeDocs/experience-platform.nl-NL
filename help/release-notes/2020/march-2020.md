@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 33ce1e83514d7aa3cdc5fcee66f444d2fd203097
+source-git-commit: e90dba1fb7419a77139c6b25c8701451bf20b14e
 
 ---
 
@@ -15,13 +15,21 @@ source-git-commit: 33ce1e83514d7aa3cdc5fcee66f444d2fd203097
 
 ## Releasedatum: 11 maart 2020
 
-## Gegevensbeheer
+Updates voor bestaande functies in het Adobe Experience Platform:
+
+* [Gegevensbeheer](#governance)
+* [Gegevensinname](#ingestion)
+* [Doelen](#destinations)
+* [Identiteitsservice](#identity)
+* [Bronnen](#sources)
+
+## Gegevensbeheer {#governance}
 
 Het Platform van de ervaring staat bedrijven toe om gegevens van veelvoudige ondernemingssystemen samen te brengen om marketers beter toe te staan om, klanten te identificeren te begrijpen en in dienst te nemen. Het ervaringsplatform omvat een end-to-end infrastructuur voor gegevensbeheer, met inbegrip van de Etikettering en de Handhaving van het Gebruik van Gegevens (DULE), om het juiste gebruik van gegevens binnen Platform en wanneer het wordt gedeeld tussen systemen te verzekeren.
 
 Adobe Experience Platform Data Governance is een reeks strategieën en technologieën die worden gebruikt om klantgegevens te beheren en om ervoor te zorgen dat wordt voldaan aan de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik. Het speelt een sleutelrol binnen het ervaringsplatform op diverse niveaus, met inbegrip van catalogisering, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van de gegevenstoegang, en toegangscontrole over gegevens voor marketing acties.
 
-### Nieuwe functies
+**Nieuwe functies**
 
 >[!NOTE] Enkele van de volgende nieuwe functies zijn momenteel in bèta beschikbaar en niet voor alle gebruikers. Beta-functies kunnen worden gewijzigd.
 
@@ -31,34 +39,34 @@ Adobe Experience Platform Data Governance is een reeks strategieën en technolog
 | Gegevenslijn voor handhaving | Wanneer een beleid van het gegevensgebruik in real time CDP wordt geschonden, toont UI een bericht dat de informatie van de gegevenslijn bevat om de gebruiker te helpen begrijpen waarom het beleid werd geschonden en wat zij kunnen doen om de schending op te lossen. |
 
 
-### Bekende problemen
+**Bekende problemen**
 
 * Geen
 
 Zie het overzicht [van](../../data-governance/home.md)gegevensbeheer voor meer informatie over gegevensbeheer.
 
-## Gegevensinname
+## Gegevensinname {#ingestion}
 
 Adobe Experience Platform biedt een uitgebreide reeks functies voor het opnemen van elk type en elke vertraging van gegevens. Adobe Experience Platform Data Ingestie biedt meerdere alternatieven voor het opnemen van gegevens, zoals batch-API&#39;s, streaming API&#39;s, native Adobe-connectors, partners voor gegevensintegratie of de gebruikersinterface van het Adobe Experience Platform.
 
-### Nieuwe functies
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 |------- | -----------|
 | Gedeeltelijke batch ingestie | Gedeeltelijke batch-opname is de mogelijkheid om gegevens met fouten in te voeren, tot een bepaalde drempel. Met deze functie kunnen gebruikers al hun juiste gegevens opnemen in het Adobe Experience Platform terwijl al hun onjuiste gegevens afzonderlijk worden opgeslagen. Er worden details toegevoegd aan batches die niet zijn gelukt om uit te leggen waarom deze niet zijn geslaagd voor de validatie. Meer informatie over gedeeltelijke batch-inname vindt u in de [documentatie](../../ingestion/batch-ingestion/partial.md)over gedeeltelijke batch-inname. |
 
-### Bekende problemen
+**Bekende problemen**
 
 * Geen
 
 Meer over het opnemen van gegevens in Platform, bezoek de documentatie [van de Ingestie van](../../ingestion/home.md)Gegevens.
 
 
-## Doelen
+## Doelen {#destinations}
 
 In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md)zijn doelen vooraf gebouwde integratie met doelplatforms die gegevens naadloos aan die partners activeren.
 
-### Nieuwe bestemmingen
+**Nieuwe bestemmingen**
 
 Er zijn nieuwe doelen beschikbaar waarmee u de gegevens van het Adobe Experience Platform kunt activeren. Zie hieronder voor meer informatie:
 
@@ -69,31 +77,31 @@ Er zijn nieuwe doelen beschikbaar waarmee u de gegevens van het Adobe Experience
 
 Ga voor meer informatie naar het overzicht met [bestemmingen](../../rtcdp/destinations/destinations-overview.md)
 
-## Identiteitsservice
+## Identiteitsservice {#identity}
 
 Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van uw klant vereist. Dit wordt bemoeilijkt wanneer uw klantengegevens over verschillende systemen worden gefragmenteerd, die elke individuele klant ertoe brengen om veelvoudige &quot;identiteiten&quot;te hebben te schijnen.
 
 Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 
-### Nieuwe functies
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Verbeterde persoonlijke grafiek | De functionaliteit van de persoonlijke grafiek is verbeterd om de latentie van de grafiekgeneratie van een wekelijks partijproces aan een dagelijks vernieuwde grafiek te verminderen, die de klanten van de Dienst van de Identiteit toestaat om tot recentere identiteitsgrafieken en verbindingen toegang te hebben. |
 
-### Bekende problemen
+**Bekende problemen**
 
 * Geen
 
 Voor meer informatie over de Dienst van de Identiteit, zie het overzicht [van de Dienst van de](../../identity-service/home.md)Identiteit.
 
-## Bronnen
+## Bronnen {#sources}
 
 Met het Adobe Experience Platform kunt u gegevens uit externe bronnen ophalen en tegelijk die gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
 
 Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u bronverbindingen voor diverse gegevensleveranciers met gemak laat opzetten. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
-### Nieuwe functies
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
@@ -104,7 +112,7 @@ Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u 
 | UI-ondersteuning voor CRM-systemen | Nieuwe bronschakelaar voor HubSpot, de Wolk van de Dienst van Salesforce, en ServiceNow in UI. |
 | UI-ondersteuning voor databasesystemen | Nieuwe bronconnector voor AWS Redshift, Google BigQuery, MariaDB, Microsoft SQL Server en MySQL in de gebruikersinterface. |
 
-### Bekende problemen
+**Bekende problemen**
 
 * Geen
 
