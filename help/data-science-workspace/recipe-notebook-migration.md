@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Hulplijnen voor recept- en laptopmigratie
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 057001b0b4488f578bdd07387a66c647a91798c8
+source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
 
 ---
 
@@ -144,12 +144,12 @@ COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 
 ### Afhankelijkheden wijzigen (Vonk) {#change-dependencies-spark}
 
-Als u een bestaand recept gebruikt, worden de veranderingen vereist in het pom.xml- dossier voor gebiedsdelen. Verander model-creatie-sdk gebiedsdeelversie in 1.0.0. Werk vervolgens de Spark-versie in het pomabestand bij naar versie 2.4.3 en de Scala-versie naar versie 2.11.12.
+Als u een bestaand recept gebruikt, worden de veranderingen vereist in het pom.xml- dossier voor gebiedsdelen. Verander model-creatie-sdk gebiedsdeelversie in 2.0.0. Werk vervolgens de Spark-versie in het pomabestand bij naar versie 2.4.3 en de Scala-versie naar versie 2.11.12.
 
 ```json
 <groupId>com.adobe.platform.ml</groupId>
 <artifactId>authoring-sdk_2.11</artifactId>
-<version>1.0.0</version>
+<version>2.0.0</version>
 <classifier>jar-with-dependencies</classifier>
 ```
 
@@ -706,7 +706,7 @@ De Scala-kernel ondersteunt geen `%%sql` magie meer. Bestaande magische code moe
 
 In Vonk 2.3 moest u variabelen bepalen voor `option` waarden die worden gebruikt om gegevens te lezen of de ruwe waarden in de codecel te gebruiken. In Scala, kunt u gebruiken `sys.env("PYDASDK_IMS_USER_TOKEN")` om een waarde te verklaren en terug te keren, elimineert dit de behoefte om variabelen zoals `var userToken`te bepalen. In het Scala (Vonk 2.4) voorbeeld hieronder, `sys.env` wordt gebruikt om alle vereiste waarden te bepalen en terug te keren nodig voor het lezen van een dataset.
 
-**Het gebruiken van Vonk (Vonk 2.3 - verouderd) - de Kernel van de Vonk**
+**Gebruikend Vonk (Vonk 2.3 - verouderd) - de Kernel van de Vonk**
 
 ```scala
 import com.adobe.platform.dataset.DataSetOptions
@@ -763,7 +763,7 @@ De Scala-laptop (Spark 2.4) gebruikt de Scala-kernel, waarvoor bij de installati
 
 Net als bij het [lezen van een gegevensset](#notebook-read-dataset-spark), vereist het schrijven naar een gegevensset extra `option` waarden die in het onderstaande voorbeeld worden beschreven. In Scala, kunt u gebruiken `sys.env("PYDASDK_IMS_USER_TOKEN")` om een waarde te verklaren en terug te keren, elimineert dit de behoefte om variabelen zoals `var userToken`te bepalen. In het Scala voorbeeld hieronder, `sys.env` wordt gebruikt om alle vereiste waarden te bepalen en terug te keren nodig om aan een dataset te schrijven.
 
-**Gebruikend Vonk (Vonk 2.3 - verouderd) - de Kernel van de Vonk**
+**Het gebruiken van Vonk (Vonk 2.3 - verouderd) - de Kernel van de Vonk**
 
 ```scala
 import com.adobe.platform.dataset.DataSetOptions
