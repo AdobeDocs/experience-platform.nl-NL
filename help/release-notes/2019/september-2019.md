@@ -5,14 +5,14 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
-source-git-commit: 26568ebbbe48b5a82e4f6b5cf035c354c11e8ed1
+source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 ---
 
 
 # Opmerkingen bij de release Adobe Experience Platform
 
-## Releasedatum: 10 september 2019
+**Releasedatum: 10 september 2019**
 
 Updates voor bestaande functies in het Adobe Experience Platform:
 
@@ -47,7 +47,7 @@ De Werkruimte van de Wetenschap van het Platform van de Gegevens van het Platfor
 **Bekende problemen**
 
 * Er is momenteel geen toegankelijke manier in de Galerij van de Dienst om een bestaande Dienst te schrappen. In de tussentijd raadpleegt u de API-naslaggids [voor het leren van](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) Sensei-machines om een bestaande service te verwijderen via API-aanroepen.
-* De galerie van de Dienst heeft geen pagineringssteun om de opleiding en het scoren van de Dienst looppas van de Dienst te filtreren.
+* De galerie van de Dienst heeft pagineringssteun niet om de opleiding en het scoren van de Dienst looppas van de Dienst te filtreren.
 * Wanneer het vormen van geplande opleiding of het scoren looppas door de Galerij van de Dienst, die de frequentie plaatst om het programma te verhinderen worden toegepast.
 
 Voor meer informatie, bezoek het Overzicht [van de Werkruimte van de Wetenschap van](../../data-science-workspace/home.md)Gegevens.
