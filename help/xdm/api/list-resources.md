@@ -4,18 +4,16 @@ solution: Experience Platform
 title: Bronnen weergeven
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
+source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
 
 ---
 
 
 # Bronnen weergeven
 
-U kunt een lijst van alle middelen (schema&#39;s, klassen, mixins, of gegevenstypes) binnen een container bekijken door één enkele GET verzoek uit te voeren.
+U kunt een lijst van alle middelen van de Registratie van het Schema van een bepaald type (klassen, mixins, schema&#39;s, gegevenstypes, of beschrijvers) binnen een container bekijken door één enkele GET verzoek uit te voeren.
 
 >[!NOTE] Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Als u bronnen buiten deze limiet wilt retourneren, moet u [pagineringsparameters](#paging)gebruiken. Men adviseert ook dat u vraagparameters gebruikt om resultaten [te](#filtering) filtreren en het aantal teruggekeerde middelen te verminderen.
->
-> Als u de limiet van 300 items volledig wilt overschrijven, moet u de header Accepteren gebruiken `application/vnd.adobe.xdm-v2+json` om alle resultaten in één aanvraag te retourneren.
 
 **API-indeling**
 
@@ -27,7 +25,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{CONTAINER_ID}` | De container waar de middelen worden gevestigd (&quot;globaal&quot;of &quot;huurder&quot;). |
-| `{RESOURCE_TYPE}` | Het type van middel om van de Bibliotheek van het Schema terug te winnen. Geldige typen zijn `datatypes`, `mixins`, `schemas`en `classes`. |
+| `{RESOURCE_TYPE}` | Het type van middel om van de Bibliotheek van het Schema terug te winnen. Geldige typen zijn `classes`, `mixins`, `schemas`, `datatypes`en `descriptors`. |
 | `{QUERY_PARAMS`} | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [vraagparameters](#query) voor meer informatie. |
 
 **Verzoek**
@@ -48,7 +46,7 @@ De responsindeling is afhankelijk van de Accept-header die in de aanvraag wordt 
 | ------- | ------------ |
 | application/vnd.adobe.xed-id+json | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
 | application/vnd.adobe.xed+json | Retourneert het volledige JSON-schema voor elke bron, met origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
-| application/vnd.adobe.xdm-v2+json | Retourneert het volledige JSON-schema voor alle resultaten in één aanvraag, waarbij de limiet van 300 items wordt genegeerd. |
+| application/vnd.adobe.xdm-v2+json | Wanneer het gebruiken van het `/descriptors` eindpunt, moet deze Accept kopbal worden gebruikt om het pagineren mogelijkheden te gebruiken. |
 
 **Antwoord**
 
