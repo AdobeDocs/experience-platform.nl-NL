@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Bronbestanden in een recept plaatsen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4001e4fd6a2e04a04e7ea594175d9e3e5c8a00d6
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -29,7 +29,7 @@ Concepten om te begrijpen:
 
 Het maken van recept begint met het verpakken van bronbestanden om een archiefbestand te maken. De brondossiers bepalen de machine het leren logica en de algoritmen die worden gebruikt om een specifiek probleem op te lossen bij de hand, en in of Python, R, PySpark, of Scala geschreven. Gebouwde archiefbestanden hebben de vorm van een Docker-afbeelding. Nadat het archiefbestand in het pakket is gemaakt, wordt het geïmporteerd in de Data Science Workspace om een recept te maken [in de gebruikersinterface](./import-packaged-recipe-ui.md) of [met de API](./import-packaged-recipe-api.md).
 
-### Ontwerpmodel gebaseerd op docker
+### Ontwerpmodel gebaseerd op docker {#docker-based-model-authoring}
 
 Met een Docker-afbeelding kan een ontwikkelaar een toepassing verpakken met alle benodigde onderdelen, zoals bibliotheken en andere afhankelijkheden, en deze als één pakket verzenden.
 
@@ -60,7 +60,7 @@ Selecteer de juiste *runtime* en kies een **classificatie** voor *Type*. Uw Azur
 Maak een notitie van de waarden voor *Docker Host*, *Gebruikersnaam* en *Wachtwoord*. Deze worden gebruikt om uw Docker-afbeelding samen te stellen en te duwen in de hieronder beschreven workflows.
 
 >[!NOTE]
->De bron-URL wordt opgegeven nadat de hieronder beschreven stappen zijn uitgevoerd. Het configuratiebestand wordt uitgelegd in volgende zelfstudies in de [volgende stappen](#next-steps).
+>De URL van de bron wordt opgegeven nadat de hieronder beschreven stappen zijn uitgevoerd. Het configuratiebestand wordt uitgelegd in volgende zelfstudies in de [volgende stappen](#next-steps).
 
 ### De bronbestanden verpakken
 
