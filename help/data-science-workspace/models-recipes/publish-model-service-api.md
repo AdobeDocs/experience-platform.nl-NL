@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een model publiceren als service (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -123,7 +123,7 @@ Afhankelijk van uw specifiek gebruiksgeval en vereisten, is het creëren van een
 
 Merk op dat de Dienst van XML kan worden gecreeerd gebruikend een Instantie van XML zonder enige opleiding of het scoren Experimenten te plannen. Met deze ML Service worden gewone Experimententiteiten en één enkele Experimentrun voor training en scoring gemaakt.
 
-### ML Service met gepland experiment voor scoring
+### ML Service met gepland experiment voor scoring {#ml-service-with-scheduled-experiment-for-scoring}
 
 Het creëren van een Dienst van ML door een Instantie van XML met geplande Runnen van de Experimenten voor het scoren te publiceren zal in de verwezenlijking van een gewone Experimententiteit voor opleiding resulteren. De resulterende serie trainingsexperimenten die wordt gegenereerd, worden gebruikt voor alle geplande evaluatiemodellen. Zorg ervoor dat u de `mlInstanceId`, `trainingDataSetId`en `scoringDataSetId` vereiste waarden hebt voor het maken van de XML-service en dat deze bestaan en geldige waarden zijn.
 
@@ -197,7 +197,7 @@ curl -X POST
 
 Uit het `JSON` antwoord, de sleutels `trainingExperimentId` en `scoringExperimentId` suggereert dat een nieuwe opleiding en het scoren van Deskundige entiteit voor deze Dienst van ML werd gecreeerd. De aanwezigheid van het `scoringSchedule` object verwijst naar details over het schema Experiment uitvoeren van scoring. De `id` sleutel in de reactie verwijst naar de Dienst van ML u enkel hebt gecreeerd.
 
-### ML Service met geplande experimenten voor training en scoring
+### ML Service met geplande experimenten voor training en scoring {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
 Om een bestaande Instantie van XML als Dienst van ML met geplande opleiding en het scoren de Loppen van de Experimenten te publiceren, moet u zowel opleidings als het scoren programma&#39;s verstrekken. Wanneer een Dienst van ML van deze configuratie wordt gecreeerd, worden de geplande entiteiten van de Experiment voor zowel opleiding als het scoren ook gecreeerd. Opleiding- en scoringprogramma&#39;s hoeven niet hetzelfde te zijn. Tijdens het uitvoeren van een scoring wordt het meest recente trainingsmodel dat door de geplande trainingsexperimentatierouts is gemaakt, opgehaald en gebruikt voor de geplande scoring.
 
@@ -281,7 +281,7 @@ curl -X POST "https://platform-int.adobe.io/data/sensei/mlServices"
 
 De toevoeging van `trainingExperimentId` en `scoringExperimentId` in het responsorgaan suggereert de oprichting van experimentele entiteiten voor zowel opleiding als scoring. De aanwezigheid van `trainingSchedule` en `scoringSchedule` suggereert dat de hierboven genoemde experimentele entiteiten voor opleiding en scoring geplande experimenten zijn. De `id` sleutel in de reactie verwijst naar de Dienst van ML u enkel hebt gecreeerd.
 
-## HTML-services ophalen
+## HTML-services ophalen {#retrieving-ml-services}
 
 Om de bestaande Dienst van ML terug te winnen is zo eenvoudig zoals het doen van een `GET` verzoek aan `/mlServices` eindpunt. Zorg ervoor dat u de identificatie van de Dienst van ML voor de specifieke Dienst van ML hebt u probeert terug te winnen.
 
