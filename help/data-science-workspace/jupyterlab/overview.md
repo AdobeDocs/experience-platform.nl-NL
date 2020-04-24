@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruikershandleiding voor JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
 
 JupyterLab is een webgebaseerde gebruikersinterface voor <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> en is nauw geïntegreerd in het Adobe Experience Platform. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens.
 
-Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies voor het uitvoeren van veelvoorkomende handelingen.
+Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies om algemene handelingen uit te voeren.
 
 ## JupyterLab op Experience Platform
 
@@ -51,16 +51,16 @@ In de volgende secties wordt informatie gegeven over de belangrijkste kenmerken 
 * [Codecellen](#code-cells)
 * [Kernels](#kernels)
 * [Kernel-sessies](#kernel-sessions)
-* [PySpark/Spark-uitvoeringsbron](#pysparkspark-execution-resource)
+* [PySpark/Spark-uitvoeringsbron](#execution-resource)
 * [Launcher](#launcher)
 
-### Access JupyterLab
+### Access JupyterLab {#access-jupyterlab}
 
 Selecteer in [Adobe Experience Platform](https://platform.adobe.com)de optie **Laptops** in de linkernavigatiekolom. Laat JupyterLab enige tijd volledig initialiseren.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
-### JupyterLab-interface
+### JupyterLab-interface {#jupyterlab-interface}
 
 De interface JupyterLab bestaat uit een menubalk, een opvouwbare linkerzijbalk en het hoofdwerkgebied met tabbladen met documenten en activiteiten.
 
@@ -98,7 +98,7 @@ Met het hoofdwerkgebied in JupyterLab kunt u documenten en andere activiteiten r
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
-### Codecellen
+### Codecellen {#code-cells}
 
 Codecellen zijn de belangrijkste inhoud van laptops. Ze bevatten broncode in de taal van de bijbehorende kernel van de laptop en de uitvoer als gevolg van het uitvoeren van de codecel. Rechts van elke codecel wordt een aantal uitvoeringen weergegeven die de volgorde van uitvoering ervan aangeven.
 
@@ -130,7 +130,7 @@ Bepaalde kenmerken en functies zijn beperkt tot bepaalde kernels zoals beschreve
 | **Vonk - afgekeurd** | Nee | <ul><li>Sensei ML Framework</li><li>Catalogusservice</li></ul> |
 | **Scala** | Nee | <ul><li>Sensei ML Framework</li><li>Catalogusservice</li></ul> |
 
-### Kernel-sessies
+### Kernel-sessies {#kernel-sessions}
 
 Elke actieve laptop of activiteit op JupyterLab maakt gebruik van een kernel-sessie. Alle actieve sessies kunt u vinden door het tabblad **Doorlopende terminals en kernels** vanuit de linkerzijbalk uit te vouwen. Het type en de toestand van de kernel voor een laptop kunnen worden geïdentificeerd door de laptop rechtsboven te volgen. In het onderstaande diagram is de bijbehorende kernel van de laptop **Python 3** en de huidige toestand wordt weergegeven door een grijze cirkel naar rechts. Een holle cirkel impliceert een nutteloze kernel en een stevige cirkel impliceert een bezige kernel.
 
@@ -193,7 +193,7 @@ Alle configureerbare eigenschappen worden vermeld in de lijst hieronder:
 | name | Naam van de aanvraag | string |
 | conf | Spark, configuratie-eigenschap | Kaart van key=val |
 
-### Launcher
+### Launcher {#launcher}
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -799,7 +799,7 @@ timedf.show()
 | python | 3.6.7 |
 | mkl-rt | 11.1 |
 
-## Optionele SQL-vlaggen voor Query Service
+## Optionele SQL-vlaggen voor Query Service {#optional-sql-flags-for-query-service}
 
 Deze lijst schetst de facultatieve SQL vlaggen die voor de Dienst van de Vraag kunnen worden gebruikt.
 
