@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Muziek downloaden in AI van klant
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -34,7 +34,7 @@ Er wordt een nieuw dialoogvenster weergegeven met een koppeling naar de document
 
 ![Dataset-id](./images/download-scores/access-scores.png)
 
-## Batch-id ophalen
+## Batch-id ophalen {#retrieve-your-batch-id}
 
 Gebruikend uw dataset identiteitskaart van de vorige stap, moet u een vraag aan de Catalogus API maken om een partijidentiteitskaart terug te winnen. Voor deze API-aanroep worden extra queryparameters gebruikt om één batch te retourneren in plaats van een lijst met batches die tot uw organisatie behoren. Voor meer informatie over de types van vraagparameters beschikbaar, bezoek de gids bij het [filtreren van de gegevens van de Catalogus gebruikend vraagparameters](../../catalog/api/filter-data.md).
 
@@ -98,7 +98,7 @@ Binnen het ID-object voor de muziekbatch is een `relatedObjects` array. Deze arr
 }
 ```
 
-## De volgende API-aanroep ophalen met uw batch-id
+## De volgende API-aanroep ophalen met uw batch-id {#retrieve-the-next-api-call-with-your-batch-id}
 
 Als je eenmaal een batch-id hebt, kun je een nieuwe GET aanvraag indienen bij `/batches`. De aanvraag retourneert een koppeling die wordt gebruikt als de volgende API-aanvraag.
 
@@ -152,7 +152,7 @@ Een geslaagde reactie retourneert een lading die een `_links` object bevat. Binn
 }
 ```
 
-## Bestanden ophalen
+## Bestanden ophalen {#retrieving-your-files}
 
 Gebruikend de `href` waarde u in de vorige stap als API vraag kreeg, doe een nieuw GET verzoek om uw dossierfolder terug te winnen.
 
