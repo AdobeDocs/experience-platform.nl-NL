@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een functiepijpleiding maken
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b9b0578a43182650b3cfbd71f46bcb817b3b0cda
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -14,17 +14,6 @@ source-git-commit: b9b0578a43182650b3cfbd71f46bcb817b3b0cda
 Met het Adobe Experience Platform kunt u aangepaste functiepijpleidingen maken en maken die op schaal functietechnieken kunnen uitvoeren via de Sensei Machine Learning Framework Runtime (hierna &quot;Runtime&quot; genoemd).
 
 Dit document beschrijft de diverse klassen die in een Pijpleiding van de Eigenschap worden gevonden, en verstrekt een geleidelijke zelfstudie voor het creëren van een pijpleiding van de Eigenschap van de douane die de [ModelAuthoring SDK](./sdk.md) in PySpark en Vonk gebruikt.
-
-De zelfstudie behandelt de volgende stappen:
-- [Voer uw klassen van de Pijpleiding van de Eigenschap uit](#implement-your-feature-pipeline-classes)
-   - [Variabelen definiëren in een configuratiebestand](#define-variables-in-the-configuration-json-file)
-   - [De invoergegevens voorbereiden met DataLoader](#prepare-the-input-data-with-dataloader)
-   - [Transformeer een dataset met DatasetTransformer](#transform-a-dataset-with-datasettransformer)
-   - [Gegevensfuncties van engineer met FeaturePipelineFactory](#engineer-data-features-with-featurepipelinefactory)
-   - [Sla uw eigenschapdataset met DataSaver op](#store-your-feature-dataset-with-datasaver)
-   - [Geef de geïmplementeerde klassenamen op in het toepassingsbestand](#specify-your-implemented-class-names-in-the-application-file)
-- [Bouw het binaire artefact](#build-the-binary-artifact)
-- [Een engine voor een functiepijpleiding maken met de API](#create-a-feature-pipeline-engine-using-the-api)
 
 ## Functiepijpklassen
 
@@ -44,11 +33,11 @@ Het volgende stroomschema toont de orde van uitvoering van Runtime:
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## Voer uw klassen van de Pijpleiding van de Eigenschap uit
+## Voer uw klassen van de Pijpleiding van de Eigenschap uit {#implement-your-feature-pipeline-classes}
 
 De volgende secties verstrekken details en voorbeelden bij het uitvoeren van de vereiste klassen voor een Pijpleiding van de Eigenschap.
 
-### Definieer variabelen in het JSON-configuratiebestand
+### Definieer variabelen in het JSON-configuratiebestand {#define-variables-in-the-configuration-json-file}
 
 Het configuratie-JSON-bestand bestaat uit sleutel-waardeparen en is bedoeld om alle variabelen op te geven die later tijdens de runtime moeten worden gedefinieerd. Deze sleutel-waarde paren kunnen eigenschappen zoals de plaats van de inputdataset, identiteitskaart van de outputdataset, huurder identiteitskaart, kolomkopballen, etc. bepalen.
 
@@ -96,7 +85,7 @@ val input_dataset_id: String = configProperties.get("datasetId")
 ```
 
 
-### De invoergegevens voorbereiden met DataLoader
+### De invoergegevens voorbereiden met DataLoader {#prepare-the-input-data-with-dataloader}
 
 DataLoader is verantwoordelijk voor het ophalen en filteren van invoergegevens. Uw implementatie van DataLoader moet de abstracte klasse uitbreiden `DataLoader` en de abstracte methode met voeten treden `load`.
 
@@ -200,7 +189,7 @@ class MyDataLoader extends DataLoader {
 
 
 
-### Transformeer een dataset met DatasetTransformer
+### Transformeer een dataset met DatasetTransformer {#transform-a-dataset-with-datasettransformer}
 
 Een DatasetTransformer verstrekt de logica voor het omzetten van een input DataFrame en keert een nieuwe afgeleide DataFrame terug. Deze klasse kan worden uitgevoerd om of samen met een FeaturePipelineFactory te werken, als enige component van de eigenschapengineering te werken, of u kunt verkiezen om deze klasse niet uit te voeren.
 
@@ -255,7 +244,7 @@ class MyDatasetTransformer extends DatasetTransformer {
 
 
 
-### Gegevensfuncties van engineer met FeaturePipelineFactory
+### Gegevensfuncties van engineer met FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
 
 Een FeaturePipelineFactory staat u toe om uw logica van de eigenschaptechniek uit te voeren door een reeks Transformers van de Vonk door een Pijpleiding van de Vonk te bepalen en samen te ketenen. Deze klasse kan worden uitgevoerd om of samen met een DatasetTransformer te werken, als enige component van de eigenschapengineering te werken, of u kunt verkiezen om deze klasse niet uit te voeren.
 
@@ -334,7 +323,7 @@ class MyFeaturePipelineFactory(uid:String) extends FeaturePipelineFactory(uid) {
 
 
 
-### Sla uw eigenschapdataset met DataSaver op
+### Sla uw eigenschapdataset met DataSaver op {#store-your-feature-dataset-with-datasaver}
 
 DataSaver is de oorzaak van het opslaan van uw resulterende eigenschapdatasets in een opslagplaats. Uw implementatie van DataSaver moet de abstracte klasse uitbreiden `DataSaver` en de abstracte methode met voeten treden `save`.
 
@@ -467,7 +456,7 @@ class MyDataSaver extends DataSaver {
 }
 ```
 
-### Geef de geïmplementeerde klassenamen op in het toepassingsbestand
+### Geef de geïmplementeerde klassenamen op in het toepassingsbestand {#specify-your-implemented-class-names-in-the-application-file}
 
 Nu uw klassen van de Pijl van de Eigenschap worden bepaald en uitgevoerd, moet u de namen van uw klassen in het toepassingsdossier specificeren.
 
@@ -515,7 +504,7 @@ feature.dataSaver=MyDataSaver
 
 
 
-## Bouw het binaire artefact
+## Bouw het binaire artefact {#build-the-binary-artifact}
 
 Nu uw uitgevoerde klassen van de Pijl van de Eigenschap, kunt u het in een binair artefact bouwen en compileren dat dan kan worden gebruikt om een Pijpleiding van de Eigenschap door API vraag tot stand te brengen.
 
@@ -543,11 +532,11 @@ mvn clean install
 
 De bouw van uw Pijpleiding van de Eigenschap zal met succes een `.jar` artefact in de `/dist` folder produceren, wordt dit artefact gebruikt om een Pijpleiding van de Eigenschap tot stand te brengen.
 
-## Een engine voor een functiepijpleiding maken met de API
+## Een engine voor een functiepijpleiding maken met de API {#create-a-feature-pipeline-engine-using-the-api}
 
 Nu u uw Pijpleiding van de Eigenschap hebt ontworpen en het binaire vervorming hebt gebouwd, kunt u een Motor van de Pijpleiding van de Eigenschap [tot stand brengen gebruikend de het Leren API](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts)van de Machine van Sensei. Als u een engine voor de functiepijpleiding maakt, ontvangt u een engine-id als onderdeel van de responsstructuur. Sla deze waarde op voordat u verdergaat met de volgende stappen.
 
-## Volgende stappen
+## Volgende stappen {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the Feature Pipeline Engine. Update this document once those tutorials are available)
 
