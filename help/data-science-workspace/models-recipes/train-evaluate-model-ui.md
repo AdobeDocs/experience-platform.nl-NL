@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een model trainen en evalueren (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -79,7 +79,7 @@ Voor deze zelfstudie is een bestaande ontvanger vereist. Als u geen Ontvanger he
 
 In deze zelfstudie werd u door het maken, trainen en evalueren van een model in de Data Science Workspace geleid. Zodra u bij een geoptimaliseerd Model bent aangekomen, kunt u het getrainde Model gebruiken om inzichten te produceren door de [Score een Model in het UI](./score-model-ui.md) leerprogramma te volgen.
 
-## Referentie
+## Referentie {#reference}
 
 ### Retail Sales Recipe-configuraties
 
