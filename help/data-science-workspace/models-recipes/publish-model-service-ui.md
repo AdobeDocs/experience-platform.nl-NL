@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een model publiceren als service (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: af491361c5c3518e9bcc0af41a5aa79022229a2d
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -26,32 +26,32 @@ Voor deze zelfstudie is een bestaand model met een geslaagde trainingsuitvoering
 
 Raadpleeg de [API-zelfstudie](./publish-model-service-api.md)als u een model wilt publiceren met gebruik van API&#39;s voor leren door Sensei-machines.
 
-## Een model publiceren
+## Een model publiceren {#publish-a-model}
 
-1. Klik in het Adobe Experience Platform op de koppeling **Modellen** in de linkernavigatiekolom om alle bestaande modellen weer te geven. Zoek en klik op de naam van het model dat als service moet worden gepubliceerd.
+1. Klik in het Adobe Experience Platform op de **[!UICONTROL Models]** koppeling in de linkernavigatiekolom om alle bestaande modellen weer te geven. Zoek en klik op de naam van het model dat als service moet worden gepubliceerd.
    ![](../images/models-recipes/publish-model/1_browse_model.png)
-1. Klik op **Publiceren** in de rechterbovenhoek van de overzichtspagina Model om een serviceproces te starten.
+2. Klik **[!UICONTROL Publish]** dichtbij het hoogste recht van de Model overzichtspagina om een proces van de verwezenlijking van de Dienst te beginnen.
    ![](../images/models-recipes/publish-model/2_view_training_runs.png)
-1. Voer een gewenste naam voor de service in en geef desgewenst een servicebeschrijving op en klik op **Volgende** als u klaar bent.
+3. Voer een gewenste naam voor de service in en geef desgewenst een servicebeschrijving op en klik **[!UICONTROL Next]** wanneer u klaar bent.
    ![](../images/models-recipes/publish-model/3_configure_service.png)
-1. Alle geslaagde trainingen voor het model worden weergegeven. De nieuwe Dienst zal training en het scoren configuraties van de geselecteerde trainingslooppas erven.
+4. Alle geslaagde trainingen voor het model worden weergegeven. De nieuwe Dienst zal training en het scoren configuraties van de geselecteerde trainingslooppas erven.
    ![](../images/models-recipes/publish-model/4_select_training_run.png)
-1. Klik op **Voltooien** om de service te maken en omleiding naar de **servicegalerie** om alle beschikbare services weer te geven, inclusief de zojuist gemaakte service.
+5. Klik **[!UICONTROL Finish]** om de Dienst tot stand te brengen en aan te leiden **[!UICONTROL Service Gallery]** om alle beschikbare Diensten, met inbegrip van de pas gecreëerde Dienst te tonen.
    ![](../images/models-recipes/publish-model/service_gallery.png)
 
-## Score met een service
+## Score met een service {#access-a-service}
 
-1. Klik in Adobe Experience Platform op het tabblad **Services** in de linkernavigatiekolom voor toegang tot de *servicegalerie*. Zoek de service die u wilt gebruiken en klik op **Score**.
+1. Klik in Adobe Experience Platform op het **[!UICONTROL Services]** tabblad in de linkernavigatiekolom voor toegang tot de *servicegalerie*. Zoek de service die u wilt gebruiken en klik op **[!UICONTROL Score]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
-1. Selecteer een aangewezen inputdataset voor de het scoren looppas, dan klik **daarna**.
+2. Selecteer een aangewezen inputdataset voor de scoring looppas, dan klik **[!UICONTROL Next]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
-1. Selecteer een geschikte uitvoerdataset voor de het scoren resultaten, dan klik **daarna**.
+3. Selecteer een geschikte uitvoerdataset voor de het scoren resultaten, dan klik **[!UICONTROL Next]**.
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
-1. Wanneer een Dienst wordt gecreeerd, erft het gebrek die configuraties scoring. U kunt deze configuraties bekijken en deze naar wens aanpassen door op de waarden te dubbelklikken. Als u tevreden bent met de configuraties, klikt u op **Voltooien** om de scoring uit te voeren.
+4. Wanneer een Dienst wordt gecreeerd, erft het gebrek die configuraties scoring. U kunt deze configuraties bekijken en deze naar wens aanpassen door op de waarden te dubbelklikken. Als u tevreden bent met de configuraties, klikt u **[!UICONTROL Finish]** om de scoring uit te voeren.
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-1. Op de *overzichtspagina* van de Dienst, worden de details van de nieuwe het scoren baan en zijn vooruitgang getoond. Nadat de taak is voltooid, wordt de **meest recente** scores-taak bijgewerkt.
+5. Op de *overzichtspagina* van de Dienst, worden de details van de nieuwe het scoren baan en zijn vooruitgang getoond. Nadat de taak is voltooid, wordt de **[!UICONTROL Most Recent]** scoretaak bijgewerkt.
    ![](../images/models-recipes/publish-model/score_pending.png)
 
-## Volgende stappen
+## Volgende stappen {#next-steps}
 
 Door deze zelfstudie te volgen, hebt u met succes een Model als toegankelijke Dienst gepubliceerd, en gegevens die de nieuwe Dienst door de Galerij *van de* Dienst worden gescoord. Ga verder met de volgende zelfstudie om te leren hoe u geautomatiseerde training en scoring op een service [kunt](./schedule-models-ui.md)plannen.
