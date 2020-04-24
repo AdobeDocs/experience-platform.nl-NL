@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een model plannen (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 541acd9e1df8a53ae372f71230a705fb6a95d92b
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -20,11 +20,11 @@ Dit leerprogramma doorloopt de stappen om opleiding en het schrapen programma&#3
 
 ## Aan de slag
 
-Als u deze zelfstudie wilt voltooien, hebt u toegang nodig tot Experience Platform. Als u geen toegang hebt tot een IMS-organisatie in het ervaringsplatform, neemt u contact op met uw systeembeheerder voordat u verdergaat.
+Als u deze zelfstudie wilt voltooien, hebt u toegang nodig tot Experience Platform. Als u geen toegang tot een IMS Organisatie in het Platform van de Ervaring hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
 
 Voor deze zelfstudie is een bestaande service vereist. Als u geen toegankelijke Dienst hebt om met te werken, kunt u tot stand brengen door uw Model als Dienst in het leerprogramma [te volgen UI](./publish-model-service-ui.md) publiceren.
 
-## Geplande scoring configureren
+## Geplande scoring configureren {#configure-scheduled-scoring}
 
 Model het scoren kan worden gevormd om een geautomatiseerd proces op een geplande basis te zijn. Zodra een Dienst wordt gecreeerd, kunt u de hieronder stappen volgen om een het scoren programma te vormen en toe te passen:
 
@@ -41,9 +41,9 @@ Model het scoren kan worden gevormd om een geautomatiseerd proces op een gepland
    ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
 
 
-## Geplande training configureren
+## Geplande training configureren {#configure-scheduled-training}
 
-Het vormen van geplande trainingslooppas op de Dienst zorgt ervoor dat het machine het leren Model aan de meest recente gegevenspatronen wordt bijgewerkt. Wanneer een geplande trainingsrun is voltooid, wordt het resulterende getrainde model gebruikt om de service aan te sturen tot de volgende geplande trainingsrun.
+Het vormen van geplande trainingslooppas op de Dienst zorgt ervoor dat het machine het leren Model aan de meest recente gegevenspatronen wordt bijgewerkt. Wanneer een geplande trainingsrun is voltooid, wordt het resulterende trainingsmodel gebruikt om de service aan te sturen tot de volgende geplande trainingsrun.
 
 Zodra een Dienst wordt gecreeerd, kunt u de hieronder stappen volgen om een trainingsprogramma te vormen en toe te passen:
 
