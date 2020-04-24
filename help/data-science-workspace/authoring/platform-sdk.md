@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Platform SDK-handleiding
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: a68aa62c3c3cc3e42083d6b0a1d1003f4137840f
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -17,7 +17,7 @@ Deze zelfstudie biedt u informatie over de omzetting `data_access_sdk_python` in
 - [Basislezen van gegevens](#basic-reading-of-data)
 - [Basisschrijven van gegevens](#basic-writing-of-data)
 
-## Verificatie opbouwen
+## Verificatie opbouwen {#build-authentication}
 
 Verificatie is vereist om aanroepen uit te voeren naar het Adobe Experience Platform. De id bestaat uit API Key, IMS Org ID, een gebruikerstoken en een servicetoken.
 
@@ -64,7 +64,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## Basislezen van gegevens
+## Basislezen van gegevens {#basic-reading-of-data}
 
 Met de nieuwe Platform SDK is de maximale leesgrootte 32 GB, met een maximale leestijd van 10 minuten.
 
@@ -99,7 +99,7 @@ df <- dataset_reader$read()
 df
 ```
 
-## Filteren op verschuiving en limiet
+## Filteren op verschuiving en limiet {#filter-by-offset-and-limit}
 
 Omdat het filtreren door partij ID niet meer wordt gesteund, om werkingsgebiedlezing van gegevens te bereiken, moet u gebruiken `offset` en `limit`.
 
@@ -117,7 +117,7 @@ df <- dataset_reader$limit(100L)$offset(1L)$read()
 df
 ```
 
-## Filteren op datum
+## Filteren op datum {#filter-by-date}
 
 De korreligheid van datum het filtreren wordt nu bepaald door timestamp, eerder dan wordt geplaatst tegen de dag.
 
@@ -153,7 +153,7 @@ De nieuwe Platform SDK steunt de volgende verrichtingen:
 | En (`&`) | `And()` |
 | Or (`|`) | `Or()` |
 
-## Filteren op geselecteerde kolommen
+## Filteren op geselecteerde kolommen {#filter-by-selected-columns}
 
 Als u het lezen van gegevens verder wilt verfijnen, kunt u ook filteren op kolomnaam.
 
@@ -169,7 +169,7 @@ df = dataset_reader.select(['column-a','column-b']).read()
 df <- dataset_reader$select(c('column-a','column-b'))$read() 
 ```
 
-## Gesorteerde resultaten ophalen
+## Gesorteerde resultaten ophalen {#get-sorted-results}
 
 De ontvangen resultaten kunnen door gespecificeerde kolommen van de doeldataset en in hun orde (asc/desc) respectievelijk worden gesorteerd.
 
@@ -187,7 +187,7 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## Basisschrijven van gegevens
+## Basisschrijven van gegevens {#basic-writing-of-data}
 
 >[!NOTE] De IMS-organisatie wordt ingesteld in de `client_context`map.
 
