@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aan de slag met Customer AI
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 0eeb41fa06864cc28b3a76c2a69c76ea5430d45a
+source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 
 ---
 
@@ -22,7 +22,7 @@ De gidsen voor AI van de Klant vereisen een werkend inzicht in de diverse dienst
 
 ## AI-scores van klanten downloaden
 
->[!NOTE] Als u geen onbewerkte scores hoeft te downloaden, kunt u deze stap overslaan en doorgaan naar de handleiding voor de gebruikersinterface.
+>[!NOTE] Als u geen onbewerkte scores hoeft te downloaden, kunt u deze stap overslaan en doorgaan naar de [configuratiegids](./user-guide/configure.md).
 
 Het downloaden van AI-scores van de Klant gebeurt via een combinatie van API-aanroepen. Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
 
@@ -42,4 +42,4 @@ Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken t
 
 ## Volgende stappen
 
-Zodra u klaar bent en al uw geloofsbrieven en schema&#39;s op zijn plaats hebt, begin door de gebruikersinterfacegids [van de](./user-guide.md)Klant te volgen AI. Deze gids begeleidt u door het creëren van een geval en het voorleggen van het voor opleiding en het scoren.
+Nadat u de in het bovenstaande document beschreven stappen hebt uitgevoerd, gaat u naar de documentatie bij [Invoer en Uitvoer](./input-output.md) . In dit document wordt een kort overzicht gegeven van de soorten gegevens die in de AI van de Klant worden gebruikt en geproduceerd.
