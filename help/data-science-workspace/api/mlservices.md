@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Services
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: dabeee04dd6ec2bbdd37a6987efcb54b285df7ca
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -15,7 +15,7 @@ Een dienst MLService is een gepubliceerd opgeleid model dat uw organisatie van d
 
 Geautomatiseerde trainings- en scoreschema&#39;s worden gedefinieerd met een begintijdstempel, een eindtijdstempel en een frequentie die wordt weergegeven als een <a href="https://en.wikipedia.org/wiki/Cron" target="_blank">uitsnijdexpressie</a>. U kunt planningen definiëren wanneer u een MLService [](#create-an-mlservice) maakt of toepassen door een bestaande MLService [bij te werken](#update-an-mlservice).
 
-## Een MLService maken
+## Een MLService maken {#create-an-mlservice}
 
 U kunt een dienst tot stand brengen MLService door een POST- verzoek en een lading uit te voeren die een naam voor de dienst en een geldige identiteitskaart MLInstance verstrekt. De MLInstance die wordt gebruikt om een dienst te creëren MLService wordt vereist geen bestaande trainingsexperimenten te hebben maar u kunt verkiezen om de dienst MLService met een bestaand opgeleid model tot stand te brengen door overeenkomstige Deskundige identiteitskaart en opleidingsuitloopidentiteitskaart te verstrekken.
 
@@ -103,7 +103,7 @@ Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe 
 }
 ```
 
-## Een lijst met MLServices ophalen
+## Een lijst met MLServices ophalen {#retrieve-a-list-of-mlservices}
 
 U kunt een lijst van diensten terugwinnen MLServices door één enkel GET verzoek uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
 
@@ -162,7 +162,7 @@ Een succesvolle reactie keert een lijst van diensten MLServices en hun details m
 }
 ```
 
-## Een specifieke MLService ophalen
+## Een specifieke MLService ophalen {#retrieve-a-specific-mlservice}
 
 U kunt de details van een specifieke Experiment terugwinnen door een GET verzoek uit te voeren dat gewenste identiteitskaart MLService in de verzoekweg omvat.
 
@@ -206,7 +206,7 @@ Een succesvolle reactie keert een lading terug die de details van de gevraagde M
 }
 ```
 
-## Een MLService bijwerken
+## Een MLService bijwerken {#update-an-mlservice}
 
 U kunt een bestaande dienst bijwerken MLService door zijn eigenschappen door een PUT verzoek te beschrijven die identiteitskaart van doelMLService in de verzoekweg omvat en een nuttige lading te verstrekken JSON die bijgewerkte eigenschappen bevat.
 
