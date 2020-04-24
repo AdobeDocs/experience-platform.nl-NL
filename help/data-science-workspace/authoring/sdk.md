@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding voor SDK-ontwikkelaars
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -13,18 +13,9 @@ source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
 
 De ModelAuthoring SDK stelt u in staat om aangepaste machines te ontwikkelen die Ontvangers en kenmerkpijplijnen leren die kunnen worden gebruikt in de Werkruimte van de Wetenschap van de Gegevens van het Platform van de Ervaring van Adobe, die uitvoerbare malplaatjes in PySpark en Vonk verstrekken.
 
-Dit document bevat informatie over de verschillende klassen in de ModelontwerpSDK:
+Dit document bevat informatie over de verschillende klassen in de ModelontwerpSDK.
 
-- [DataLoader](#dataloader)
-   - [Gegevens laden uit een gegevensset van een platform](#load-data-from-a-platform-dataset)
-- [DataSaver](#datasaver)
-   - [Gegevens opslaan naar een gegevensset voor een platform](#save-data-to-a-platform-dataset)
-- [DatasetTransformer](#datasettransformer)
-- [FeaturePipelineFactory](#featurepipelinefactory)
-- [PipelineFactory](#pipelinefactory)
-- [MLEvaluator](#mlevaluator)
-
-## DataLoader
+## DataLoader {#dataloader}
 
 Met de klasse DataLoader wordt alles ingekapseld wat te maken heeft met het ophalen, filteren en retourneren van onbewerkte invoergegevens. Voorbeelden van invoergegevens zijn bijvoorbeeld gegevens voor training, scoring of functietechniek. De laders van gegevens breiden de abstracte klasse uit `DataLoader` en moeten de abstracte methode met voeten treden `load`.
 
@@ -83,7 +74,7 @@ De volgende lijst beschrijft de abstracte methodes van een klasse van de Loader 
     </tbody>
 </table>
 
-### Gegevens laden uit een gegevensset van een platform
+### Gegevens laden uit een gegevensset van een platform {#load-data-from-a-platform-dataset}
 
 Het volgende voorbeeld wint de gegevens van het Platform door identiteitskaart terug en keert een DataFrame terug, waar dataset identiteitskaart (`datasetId`) een bepaalde bezit in het configuratiedossier is.
 
@@ -199,7 +190,7 @@ class MyDataLoader extends DataLoader {
 }
 ```
 
-## DataSaver
+## DataSaver {#datasaver}
 
 De klasse DataSaver kapselt om het even wat verwant met het opslaan van outputgegevens met inbegrip van die van het scoring of eigenschapengineering. Gegevensbesparing breidt de abstracte klasse uit `DataSaver` en moet de abstracte methode met voeten treden `save`.
 
@@ -258,7 +249,7 @@ In de volgende tabel worden de abstracte methoden van de klasse Spark Data Saver
     </tbody>
 </table>
 
-### Gegevens opslaan naar een gegevensset voor een platform
+### Gegevens opslaan naar een gegevensset voor een platform {#save-data-to-a-platform-dataset}
 
 Om gegevens op een dataset van het Platform op te slaan, moeten de eigenschappen of in het configuratiedossier worden verstrekt of worden bepaald:
 
@@ -398,7 +389,7 @@ class ScoringDataSaver extends DataSaver {
 }
 ```
 
-## DatasetTransformer
+## DatasetTransformer {#datasettransformer}
 
 De klasse DatasetTransformer wijzigt en transformeert de structuur van een dataset. Voor de Sensei Machine Learning-runtime hoeft deze component niet te worden gedefinieerd en deze wordt op basis van uw vereisten geïmplementeerd.
 
@@ -459,7 +450,7 @@ De volgende lijst beschrijft de abstracte methodes van een de transformatorklass
     </tbody>
 </table>
 
-## FeaturePipelineFactory
+## FeaturePipelineFactory {#featurepipelinefactory}
 
 De klasse FeaturePipelineFactory bevat eigenschappen extractiealgoritmen en bepaalt de stadia van een Pijpleiding van de Eigenschap van begin tot eind.
 
@@ -541,7 +532,7 @@ In de volgende tabel worden de klassemethoden van een Spark FeaturePipelineFacto
     </tbody>
 </table>
 
-## PipelineFactory
+## PipelineFactory {#pipelinefactory}
 
 De klasse PipelineFactory omvat methodes en definities voor modelopleiding en het scoren, waar de opleidingslogica en algoritmen in de vorm van een Pijpleiding van de Vonk worden bepaald.
 
@@ -650,7 +641,7 @@ In de volgende tabel worden de klassemethoden van een Spark PipelineFactory besc
     </tbody>
 </table>
 
-## MLEvaluator
+## MLEvaluator {#mlevaluator}
 
 De klasse MLEvaluator biedt methoden voor het definiëren van evaluatiemetriek en het bepalen van trainings- en testgegevenssets.
 
