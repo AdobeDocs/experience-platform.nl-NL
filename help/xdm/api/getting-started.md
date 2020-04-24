@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van de API voor schemaregister
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -52,7 +52,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 * Inhoudstype: application/json
 
-## Weet uw TENANT_ID {#know-your-tenant-id}
+## Weet uw TENANT_ID {#know-your-tenant_id}
 
 In deze handleiding ziet u verwijzingen naar een `TENANT_ID`. Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich in uw IMS-organisatie bevinden. Als u uw id niet kent, kunt u deze openen door het volgende GET verzoek uit te voeren:
 
