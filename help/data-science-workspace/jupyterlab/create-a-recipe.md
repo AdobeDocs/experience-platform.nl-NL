@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een recept maken met Jupyter-laptops
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -12,18 +12,6 @@ source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 # Een recept maken met Jupyter-laptops
 
 Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst, zult u een machine het leren model gebruikend een malplaatje binnen Notitieboekje JupyterLab creëren. Vervolgens gebruikt u de workflow voor het maken van een notebook naar het recept in JupyterLab om een recept te maken in de Data Science Workspace.
-- [Aan de slag met de JupyterLab-laptopomgeving](#get-started-with-the-jupyterlab-notebook-environment)
-- [Bewerkingen uitvoeren om bestanden te recept](#make-edits-to-recipe-files)
-- [Ga aan de slag met de Recipe Builder-laptop](#get-started-with-the-recipe-builder-notebook)
-   - [Vereisten, bestand](#requirements-file)
-   - [Configuratiebestanden](#configuration-files)
-   - [Opleidingsgegevensloader](#training-data-loader)
-   - [Scoregegevenslader](#scoring-data-loader)
-   - [Pipetbestand](#pipeline-file)
-   - [Evaluatorbestand](#evaluator-file)
-   - [Gegevensopslagbestand](#data-saver-file)
-- [Training en scores](#training-and-scoring)
-- [Een recept maken](#create-recipe)
 
 ## Ingevoerde concepten:
 
@@ -45,7 +33,7 @@ Met de Recipe Builder-laptop kunt u trainingen en scoring uitvoeren in de laptop
 
 Wanneer u klikt op de Recipe Builder-laptop van de draagtas, wordt de laptop geopend op het tabblad. Het model dat in de laptop wordt gebruikt, is de Python Retail Sales Forecasting Recipe die ook in [deze openbare opslagplaats te vinden is](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-U zult zien dat er op de werkbalk drie extra acties staan, namelijk **Trein**, **Score** en Ontvanger **maken**. Deze pictogrammen worden alleen weergegeven in het notebook met de functie Recipe Builder. Meer informatie over deze acties wordt besproken [in de sectie](#training-and-scoring) Training en score nadat u de Recipe hebt gemaakt in de laptop.
+U zult zien dat er op de werkbalk drie extra acties zijn, namelijk - **[!UICONTROL Train]**, **[!UICONTROL Score]** en **[!UICONTROL Create Recipe]**. Deze pictogrammen worden alleen weergegeven in het notebook met de functie Recipe Builder. Meer informatie over deze acties wordt besproken [in de sectie](#training-and-scoring) Training en score nadat u de Recipe hebt gemaakt in de laptop.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -69,7 +57,7 @@ Nu u de basisbeginselen van de JupyterLab-laptopomgeving kent, kunt u beginnen m
 - [Evaluatorbestand](#evaluator-file)
 - [Gegevensopslagbestand](#data-saver-file)
 
-### Vereisten, bestand
+### Vereisten, bestand {#requirements-file}
 
 Het bestand requirements wordt gebruikt om extra bibliotheken te declareren die u in het recept wilt gebruiken. U kunt het versienummer specificeren als er een gebiedsdeel is. Ga naar https://anaconda.org als u meer bibliotheken wilt zoeken. De lijst met hoofdbibliotheken die al worden gebruikt, bevat:
 
@@ -84,7 +72,7 @@ data_access_sdk_python
 >[!NOTE]
 >Bibliotheken of specifieke versies die u toevoegt, zijn mogelijk niet compatibel met de bovenstaande bibliotheken.
 
-### Configuratiebestanden
+### Configuratiebestanden {#configuration-files}
 
 De configuratiedossiers, `training.conf` en `scoring.conf`, worden gebruikt om de datasets te specificeren u voor opleiding en het scoren wenst te gebruiken evenals hyperparameters toe te voegen. Er zijn verschillende configuraties voor training en scoring.
 
@@ -108,7 +96,7 @@ Standaard worden de volgende configuratieparameters voor u ingesteld wanneer u t
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
 
-## Opleidingsgegevensloader
+## Opleidingsgegevensloader {#training-data-loader}
 
 Het doel van de trainingsgegevenslader is het instantiëren van gegevens die worden gebruikt voor het maken van het model voor machinaal leren. Er zijn doorgaans twee taken die de lader van de trainingsgegevens uitvoert:
 - Gegevens laden van platform
@@ -116,7 +104,7 @@ Het doel van de trainingsgegevenslader is het instantiëren van gegevens die wor
 
 De volgende twee secties gaan over het laden van gegevens en het voorbereiden van gegevens.
 
-### Gegevens laden
+### Gegevens laden {#loading-data}
 
 In deze stap wordt het dataframe van de [pandas gebruikt](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Gegevens kunnen worden geladen uit bestanden in het Adobe Experience Platform met behulp van de Platform SDK (`platform_sdk`) of uit externe bronnen die gebruikmaken van panda&#39;s `read_csv()` of `read_json()` -functies.
 
@@ -126,11 +114,11 @@ In deze stap wordt het dataframe van de [pandas gebruikt](https://pandas.pydata.
 >[!NOTE]
 >In de Recipe Builder-laptop worden gegevens geladen via de `platform_sdk` gegevenslader.
 
-### Platform SDK
+### Platform SDK {#platform-sdk}
 
 Voor een diepgaande zelfstudie over het gebruik van de `platform_sdk` gegevenslader gaat u naar de handleiding [van](../authoring/platform-sdk.md)Platform SDK. Dit leerprogramma verstrekt informatie over bouwstijlauthentificatie, basislezing van gegevens, en basisschrijven van gegevens.
 
-### Externe bronnen
+### Externe bronnen {#external-sources}
 
 In deze sectie ziet u hoe u een JSON- of CSV-bestand importeert naar een pandaobject. De officiële documentatie van de pandabibliotheek is te vinden op:
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
@@ -180,7 +168,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 
 Nu u uw gegevens hebt, kunt u beginnen met gegevensvoorbereiding en functietechniek.
 
-### Gegevensvoorbereiding en functietechniek
+### Gegevensvoorbereiding en functietechniek {#data-preparation-and-feature-engineering}
 
 Nadat de gegevens zijn geladen, worden de gegevens voorbereid en vervolgens gesplitst in de `train` gegevenssets en de `val` gegevensbestanden. De voorbeeldcode wordt hieronder weergegeven:
 
@@ -222,7 +210,7 @@ Deze gegevens worden opgesplitst tussen `train` en `val` gegevensset.
 
 De `load()` functie zou met de `train` en `val` dataset als output moeten voltooien.
 
-### Scoregegevenslader
+### Scoregegevenslader {#scoring-data-loader}
 
 De procedure voor het laden van gegevens voor scoring is vergelijkbaar met de trainingsgegevens voor het laden van de `split()` functie. We gebruiken de SDK voor gegevenstoegang om gegevens te laden uit de `scoringDataSetId` gegevens in ons `recipe.conf` bestand.
 
@@ -271,7 +259,7 @@ return df
 
 Aangezien het doel van ons model de toekomstige wekelijkse verkoop moet voorspellen, zult u een het scoren dataset moeten creëren die wordt gebruikt om te evalueren hoe goed de voorspelling van het model presteert.
 
-Dit doet de Recipe Builder-laptop door onze wekelijkse verkoop 7 dagen vooruit te compenseren. U ziet dat er elke week metingen worden uitgevoerd voor 45 winkels, zodat u de `weeklySales` waarden 45 gegevenssets naar een nieuwe kolom kunt verplaatsen, de zogenaamde `weeklySalesAhead`kolom.
+Dit doet de Recipe Builder-laptop door onze wekelijkse verkoop 7 dagen vooruit te compenseren. U ziet dat er elke week metingen worden uitgevoerd voor 45 winkels, zodat u de `weeklySales` waarden 45 gegevenssets kunt verplaatsen naar een nieuwe kolom met de naam `weeklySalesAhead`.
 
 ```PYTHON
 df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
@@ -292,11 +280,11 @@ df.dropna(0, inplace=True)
 
 De `load()` functie in uw het scoren gegevenslader zou met de het scoren dataset als output moeten voltooien.
 
-### Pipetbestand
+### Pipetbestand {#pipeline-file}
 
 Het `pipeline.py` bestand bevat logica voor training en scoring.
 
-### Training
+### Training {#training}
 
 Het doel van opleiding is een model te creëren gebruikend eigenschappen en etiketten in uw opleidingsdataset.
 
@@ -341,7 +329,7 @@ def train(configProperties, data):
 
 Afhankelijk van uw toepassing hebt u argumenten in uw `GradientBoostingRegressor()` functie. `xTrainingDataset` moet de functies bevatten die voor training worden gebruikt, maar moet ook uw labels `yTrainingDataset` bevatten.
 
-### Scores
+### Scores {#scoring}
 
 De `score()` functie moet het scorealgoritme bevatten en een meting retourneren om aan te geven hoe succesvol het model is. De `score()` functie gebruikt de het scoren datasetetiketten en het opgeleide model om een reeks voorspelde eigenschappen te produceren. Deze voorspelde waarden worden vervolgens vergeleken met de eigenlijke kenmerken in de gegevensset voor scoren. In dit voorbeeld gebruikt de `score()` functie het getrainde model om functies te voorspellen met de labels uit de scoredataset. De voorspelde functies worden geretourneerd.
 
@@ -363,11 +351,11 @@ def score(configProperties, data, model):
     return data
 ```
 
-### Evaluatorbestand
+### Evaluatorbestand {#evaluator-file}
 
 Het `evaluator.py` bestand bevat logica voor de manier waarop u uw getrainde recept wilt evalueren en voor de manier waarop uw trainingsgegevens moeten worden gesplitst. In het voorbeeld van de detailhandel wordt de logica voor het laden en voorbereiden van de trainingsgegevens opgenomen. We zullen de twee onderstaande secties doornemen.
 
-### De gegevensset splitsen
+### De gegevensset splitsen {#split-the-dataset}
 
 De fase van de gegevensvoorbereiding voor opleiding vereist opsplitsing van de gegevensset die voor opleiding en tests moet worden gebruikt. Deze `val` gegevens worden impliciet gebruikt om het model te evalueren nadat het is opgeleid. Dit proces staat los van scoring.
 
@@ -386,7 +374,7 @@ def split(self, configProperties={}, dataframe=None):
     return train, val
 ```
 
-### Evalueer het getrainde model
+### Evalueer het getrainde model {#evaluate-the-trained-model}
 
 De `evaluate()` functie wordt uitgevoerd nadat het model wordt opgeleid en zal metrisch terugkeren om erop te wijzen hoe succesvol het model presteert. De `evaluate()` functie gebruikt de het testen etiketten van de dataset en het Getrainde model om een reeks eigenschappen te voorspellen. Deze voorspelde waarden worden vervolgens vergeleken met de feitelijke kenmerken in de testdataset. Veelvoorkomende scoringsalgoritmen zijn:
 - [Gemiddelde absolute percentagefout (MAPE)](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
@@ -415,7 +403,7 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 De functie retourneert een `metric` object met een array van evaluatiemetriek. Deze metriek zal worden gebruikt om te evalueren hoe goed het opgeleide model presteert.
 
-### Gegevensopslagbestand
+### Gegevensopslagbestand {#data-saver-file}
 
 Het `datasaver.py` bestand bevat de `save()` functie waarmee u uw voorspelling kunt opslaan tijdens het testen van scoring. De `save()` functie gebruikt uw voorspelling en maakt gebruik van Experience Platform Catalog API&#39;s en schrijft de gegevens naar de `scoringResultsDataSetId` opgegeven gegevens in uw `scoring.conf` bestand.
 
@@ -448,17 +436,17 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-## Training en scores
+## Training en scores {#training-and-scoring}
 
 Wanneer u klaar bent met het aanbrengen van wijzigingen in uw laptop en uw recept wilt trainen, kunt u op de bijbehorende knoppen boven aan de balk klikken om een trainingsrun in de cel te maken. Nadat u op de knop hebt geklikt, wordt een logboek met opdrachten en uitvoer uit het trainingsscript weergegeven in het notitieblok (onder de `evaluator.py` cel). Conda installeert eerst alle gebiedsdelen, dan wordt de opleiding in werking gesteld.
 
-Let erop dat u minstens één keer training moet uitvoeren voordat u scoring kunt uitvoeren. Als u op de knop Scores **uitvoeren** klikt, wordt het getrainde model dat tijdens de training is gegenereerd, weergegeven. Het scorescript wordt onder `datasaver.py`weergegeven.
+Let erop dat u minstens één keer training moet uitvoeren voordat u scoring kunt uitvoeren. Als u op de **[!UICONTROL Run Scoring]** knop klikt, wordt het getrainde model weergegeven dat tijdens de training is gegenereerd. Het scorescript wordt onder `datasaver.py`weergegeven.
 
 Voor het zuiveren doeleinden, als u wenst om de verborgen output te zien, voeg aan het eind van de outputcel toe en stel het opnieuw in werking. `debug`
 
-## recept maken
+## recept maken {#create-recipe}
 
-Als u klaar bent met het bewerken van het recept en tevreden bent met de trainings-/scoringuitvoer, kunt u een recept maken van de laptop door in de rechterbovenhoek op Recipe **maken** te drukken.
+Als u klaar bent met het bewerken van het recept en tevreden bent met de trainings-/scoringuitvoer, kunt u een recept van de laptop maken door op de navigatie rechtsboven **[!UICONTROL Create Recipe]** te drukken.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -466,7 +454,7 @@ Nadat u op de knop hebt gedrukt, wordt u gevraagd een naam voor het recept in te
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Als u op **OK** drukt, kunt u naar het nieuwe recept navigeren op het [Adobe Experience Platform](https://platform.adobe.com/). U kunt op de **knoop van Ontvangers** van de Mening klikken om u aan het **Ontvangt** lusje onder de Modellen van **ML te nemen**
+Als u eenmaal op **[!UICONTROL Ok]** drukt, kunt u naar het nieuwe recept navigeren op het [Adobe Experience Platform](https://platform.adobe.com/). U kunt op de **[!UICONTROL View Recipes]** knop klikken om naar de **[!UICONTROL Recipes]** tab onder **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -480,13 +468,13 @@ Zodra het proces is voltooid, zal het recept er ongeveer als volgt uitzien:
 > - Geen recepten in verschillende notebooks tegelijk maken
 
 
-## Volgende stappen
+## Volgende stappen {#next-steps}
 
 Door deze zelfstudie te voltooien, hebt u geleerd hoe u een model voor computerleren kunt maken in de Recipe Builder-laptop. U hebt ook geleerd hoe u de workflow voor notebooks kunt gebruiken om een recept te maken in de Data Science Workspace.
 
 Als u wilt blijven leren werken met bronnen in de Data Science Workspace, gaat u naar de recepten en vervolgkeuzelijst voor de Data Science Workspace.
 
-## Aanvullende bronnen
+## Additional resources {#additional-resources}
 
 De volgende video is ontworpen om uw inzicht in het bouwen en implementeren van modellen te ondersteunen.
 
