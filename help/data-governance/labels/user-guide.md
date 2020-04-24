@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruiksaanwijzing voor labels voor gegevensgebruik
 topic: labels
 translation-type: tm+mt
-source-git-commit: a19a9a31743002eb5fd3a5ecb6668b4c760faa9a
+source-git-commit: 475e774d5e7ebac036b42aa94736ba8e22c7185f
 
 ---
 
@@ -15,7 +15,7 @@ In deze gebruikershandleiding worden de stappen beschreven voor het werken met l
 
 ## De etiketten van het gegevensgebruik op het datasetniveau beheren
 
-Om de etiketten van het gegevensgebruik op het datasetniveau te beheren, moet u een bestaande dataset selecteren of nieuwe creëren. Nadat u zich hebt aangemeld bij het Adobe Experience Platform, selecteert u **Datasets** in de linkernavigatie om de werkruimte _Datasets_ te openen. Deze pagina maakt een lijst van alle gecreeerde datasets die tot uw organisatie behoren, samen met nuttige details met betrekking tot elke dataset.
+Om de etiketten van het gegevensgebruik op het datasetniveau te beheren, moet u een bestaande dataset selecteren of nieuwe creëren. Nadat u zich hebt aangemeld bij het Adobe Experience Platform, selecteert u **[!UICONTROL Datasets]** de linkernavigatie om de werkruimte _Datasets_ te openen. Deze pagina maakt een lijst van alle gecreeerde datasets die tot uw organisatie behoren, samen met nuttige details met betrekking tot elke dataset.
 
 ![Tabblad Gegevensset in werkruimte Gegevens](../images/labels/datasets.png)
 
@@ -25,29 +25,29 @@ De volgende sectie verstrekt stappen voor het creëren van een nieuwe dataset om
 
 >[!NOTE] In dit voorbeeld, wordt een dataset gecreeerd gebruikend een vooraf gevormd schema van de Gegevens van de Ervaring van het Model (XDM). Voor meer informatie over schema&#39;s XDM, zie het [XDM Overzicht](../../xdm/home.md) van het Systeem en de [grondbeginselen van schemacompositie](../../xdm/schema/composition.md).
 
-Als u een nieuwe gegevensset wilt maken, klikt u op Gegevensset **** maken rechtsboven in de werkruimte _Datasets_ .
+Als u een nieuwe gegevensset wilt maken, klikt u **[!UICONTROL Create Dataset]** in de rechterbovenhoek van de _[!UICONTROL Datasets]_werkruimte.
 
 ![](../images/labels/create_dataset.png)
 
-Het scherm Gegevensset _maken_ wordt weergegeven. Klik hier op Gegevensset **maken van schema**.
+Het _[!UICONTROL Create Dataset]_scherm verschijnt. Klik hier **[!UICONTROL Create Dataset from Schema]**.
 
 ![Dataset maken van schema](../images/labels/dataset_create.png)
 
-Het _Uitgezochte scherm van het Schema_ verschijnt, dat van alle beschikbare schema&#39;s een lijst maakt die u voor het creëren van een dataset kunt gebruiken. Klik op het keuzerondje naast een schema om het te selecteren. In de sectie _Schema_ rechts ziet u aanvullende details over het geselecteerde schema. Als u een schema hebt geselecteerd, klikt u op **Volgende**.
+Het _[!UICONTROL Select Schema]_scherm verschijnt, dat van alle beschikbare schema&#39;s een lijst maakt die u voor het creëren van een dataset kunt gebruiken. Klik op het keuzerondje naast een schema om het te selecteren. In het_[!UICONTROL Schemas]_ gedeelte aan de rechterkant worden aanvullende gegevens over het geselecteerde schema weergegeven. Als u een schema hebt geselecteerd, klikt u op **[!UICONTROL Next]**.
 
 ![Datasetschema selecteren](../images/labels/dataset_schema.png)
 
-Het scherm Gegevensset _configureren_ wordt weergegeven. Geef een **naam** (vereist) en een **beschrijving** (optioneel, maar aanbevolen) voor de nieuwe gegevensset op en klik vervolgens op **Voltooien**.
+Het scherm Gegevensset _configureren_ wordt weergegeven. Geef een **naam** (vereist) en een **beschrijving** (optioneel, maar aanbevolen) voor de nieuwe gegevensset op en klik vervolgens op **[!UICONTROL Finish]**.
 
 ![Gegevensset configureren met naam en beschrijving](../images/labels/dataset_configure.png)
 
-De pagina Activiteit _van de_ Dataset verschijnt, tonend informatie over de pas gecreëerde dataset. In dit voorbeeld krijgt de dataset de naam &quot;Loyalty-leden&quot;. In de bovenste navigatie ziet u daarom _Datasets > Loyalty-leden_.
+De _[!UICONTROL Dataset Activity]_pagina wordt weergegeven met informatie over de nieuwe gegevensset. In dit voorbeeld krijgt de dataset de naam &quot;Loyalty-leden&quot;. In de bovenste navigatie ziet u daarom_ Datasets > Loyalty-leden _.
 
 ![Pagina Gegevensactiviteit](../images/labels/dataset_activity.png)
 
 ### Gegevensgebruikslabels toevoegen aan de gegevensset {#add-labels}
 
-Na het creëren van een nieuwe dataset of het selecteren van een bestaande dataset van de lijst in de werkruimte van _Datasets_ , klik **Gegevensbeheer** om de werkruimte van het Beheer van __ Gegevens te openen. De werkruimte staat u toe om de etiketten van het gegevensgebruik op het datasetniveau en gebiedsniveau te beheren.
+Na het creëren van een nieuwe dataset of het selecteren van een bestaande dataset van de lijst in de _[!UICONTROL Datasets]_werkruimte, klik **[!UICONTROL Data Governance]**om de_[!UICONTROL Data Governance]_ werkruimte te openen. De werkruimte staat u toe om de etiketten van het gegevensgebruik op het datasetniveau en gebiedsniveau te beheren.
 
 ![Tabblad Gegevensbeheer gegevensset](../images/labels/dataset_data_governance.png)
 
@@ -55,37 +55,37 @@ Om de etiketten van het gegevensgebruik op het datasetniveau uit te geven, begin
 
 ![Labels op gegevensniveau bewerken](../images/labels/dataset_labels_edit_button.png)
 
-Het dialoogvenster _Regellabels_ bewerken wordt geopend. Controleer in het dialoogvenster de vakken naast de labels die u op de gegevensset wilt toepassen. Herinner dat deze etiketten door alle gebieden binnen de dataset zullen worden geërft. De koptekst _Toegepaste labels_ wordt bijgewerkt terwijl u elk selectievakje inschakelt en de door u gekozen labels worden weergegeven. Als u de gewenste labels hebt geselecteerd, klikt u op Wijzigingen **** opslaan.
+Het _[!UICONTROL Edit Governance Labels]_dialoogvenster wordt geopend. Controleer in het dialoogvenster de vakken naast de labels die u op de gegevensset wilt toepassen. Herinner dat deze etiketten door alle gebieden binnen de dataset zullen worden geërft. De_[!UICONTROL Applied Labels]_ koptekst wordt bijgewerkt terwijl u elk selectievakje inschakelt. De labels die u hebt gekozen, worden weergegeven. Klik op de gewenste labels **[!UICONTROL Save Changes]**.
 
-<img alt="Regelgevingslabels toepassen op datumniveau" src="../images/labels/dataset_apply_labels.png" width="450"><br>
+<img alt="Regelgevingslabels toepassen op datumniveau" src="../images/labels/apply-labels-dataset.png" width="700"><br>
 
-De werkruimte _Gegevensbeheer_ verschijnt opnieuw, die de etiketten tonen die u op het datasetniveau hebt toegepast. U kunt ook zien dat de labels onderaan elk van de velden in de gegevensset worden overgeërfd.
+De _[!UICONTROL Data Governance]_werkruimte verschijnt opnieuw, tonend de etiketten die u op het datasetniveau hebt toegepast. U kunt ook zien dat de labels onderaan elk van de velden in de gegevensset worden overgeërfd.
 
 ![Labels voor gegevenssets die zijn overgeërfd door velden](../images/labels/dataset_inherited_labels.png)
 
 U ziet dat een &quot;x&quot; wordt weergegeven naast de labels op datasetniveau, zodat u de labels kunt verwijderen. De overgeërfde labels naast elk veld hebben geen &#39;x&#39; en worden &#39;grijs weergegeven&#39; zonder mogelijkheid om te verwijderen of te bewerken. Dit komt doordat **overgeërfde velden alleen**-lezen zijn, wat betekent dat ze niet op veldniveau kunnen worden verwijderd.
 
-De **Show Geërfte schakeloptie van Etiketten** is door gebrek, dat u toestaat om het even welke etiketten te zien die neer van de dataset aan zijn gebieden worden geërft. Als u de schakeloptie uitschakelt, worden alle overgeërfde labels in de gegevensset verborgen.
+De **[!UICONTROL Show Inherited Labels]** knevel is door gebrek, dat u toestaat om het even welke etiketten te zien die neer van de dataset aan zijn gebieden worden geërft. Als u de schakeloptie uitschakelt, worden alle overgeërfde labels in de gegevensset verborgen.
 
 ![Overerfde labels verbergen](../images/labels/hide_inherited_labels.png)
 
 ## De etiketten van het gegevensgebruik op het niveau van het datasetgebied beheren
 
-Als u doorgaat met de workflow voor het [toevoegen en bewerken van labels voor gegevensgebruik op het niveau](#add-labels)van de gegevensset, kunt u ook labels op veldniveau beheren in de werkruimte _Gegevensbeheer_ voor die gegevensset.
+Als u doorgaat met de workflow voor het [toevoegen en bewerken van labels voor gegevensgebruik op datasetniveau](#add-labels), kunt u ook labels op veldniveau binnen de _[!UICONTROL Data Governance]_werkruimte voor die dataset beheren.
 
-Als u gegevensgebruikslabels op een afzonderlijk veld wilt toepassen, schakelt u het selectievakje naast de veldnaam in en klikt u op **Regellabels** bewerken.
+Als u gegevensgebruikslabels op een afzonderlijk veld wilt toepassen, schakelt u het selectievakje naast de veldnaam in en klikt u op **[!UICONTROL Edit Governance Labels]**.
 
 ![Veldlabels bewerken](../images/labels/fields_single_field.png)
 
-Het dialoogvenster _Regellabels_ bewerken wordt weergegeven. In het dialoogvenster worden kopteksten weergegeven met de geselecteerde velden, toegepaste labels en overgeërfde labels. De overgeërfde labels (C2 en C5) worden grijs weergegeven in het dialoogvenster. Zij zijn read-only etiketten die van het datasetniveau worden geërft en zijn daarom slechts editable op het datasetniveau.
+Het _[!UICONTROL Edit Governance Labels]_dialoogvenster verschijnt. In het dialoogvenster worden kopteksten weergegeven met de geselecteerde velden, toegepaste labels en overgeërfde labels. De overgeërfde labels (C2 en C5) worden grijs weergegeven in het dialoogvenster. Zij zijn read-only etiketten die van het datasetniveau worden geërft en zijn daarom slechts editable op het datasetniveau.
 
-<img alt="Regellabels bewerken voor een afzonderlijk veld" src="../images/labels/fields_inherited_labels.png" width="450"><br>
+<img alt="Regellabels bewerken voor een afzonderlijk veld" src="../images/labels/field-label-inheritance.png" width="700"><br>
 
-Selecteer labels op veldniveau door op het selectievakje naast elk label te klikken dat u wilt gebruiken. Terwijl u labels selecteert, wordt de koptekst _Toegepaste labels_ bijgewerkt met labels die zijn toegepast op de velden die worden weergegeven in de koptekst _Geselecteerde velden_ . Als u klaar bent met het selecteren van labels op veldniveau, klikt u op Wijzigingen **** opslaan.
+Selecteer labels op veldniveau door op het selectievakje naast elk label te klikken dat u wilt gebruiken. Terwijl u labels selecteert, wordt de _[!UICONTROL Applied Labels]_koptekst bijgewerkt en worden labels weergegeven die zijn toegepast op de velden die in de_[!UICONTROL Selected Fields]_ koptekst worden weergegeven. Als u klaar bent met het selecteren van labels op veldniveau, klikt u op **[!UICONTROL Save Changes]**.
 
-<img alt="Labels op veldniveau toepassen" src="../images/labels/fields_field_level_label.png" width="450"><br>
+<img alt="Labels op veldniveau toepassen" src="../images/labels/apply-labels-field.png" width="700"><br>
 
-De werkruimte _Gegevensbeheer_ wordt opnieuw weergegeven, waardoor nu de geselecteerde labels op veldniveau in de rij naast de veldnaam worden weergegeven. Het label op veldniveau heeft een &#39;x&#39; naast het label, zodat u het label kunt verwijderen.
+De _[!UICONTROL Data Governance]_werkruimte verschijnt weer, waardoor nu de geselecteerde labels op veldniveau in de rij naast de veldnaam worden weergegeven. Het label op veldniveau heeft een &#39;x&#39; naast het label, zodat u het label kunt verwijderen.
 
 ![Veld dat labels op veldniveau weergeeft](../images/labels/fields_show_field_level_labels.png)
 
