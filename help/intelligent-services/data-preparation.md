@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gegevens voorbereiden voor gebruik in intelligente services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
+source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
 
 ---
 
@@ -19,6 +19,10 @@ Dit document verstrekt algemene begeleiding bij het in kaart brengen van uw mark
 
 Het schema Consumer ExperienceEvent beschrijft het gedrag van een individu aangezien het betrekking heeft op digitale marketing gebeurtenissen (web of mobiel) evenals online of off-line handelsactiviteit. Het gebruik van dit schema wordt vereist voor de Intelligente Diensten wegens zijn semantisch duidelijk bepaalde gebieden (kolommen), vermijdend om het even welke onbekende namen die anders de gegevens minder duidelijk zouden maken.
 
+De intelligente Diensten gebruiken verscheidene zeer belangrijke gebieden binnen dit schema om inzichten van uw marketing gebeurtenisgegevens te produceren, die allen op het wortelniveau kunnen worden gevonden en worden uitgebreid om hun vereiste subfields te tonen.
+
+![](./images/data-preparation/schema-expansion.gif)
+
 Net als alle XDM-schema&#39;s is de CEE-mix uitbreidbaar. Met andere woorden, extra velden kunnen worden toegevoegd aan de CEE-mix en verschillende variaties kunnen indien nodig worden opgenomen in meerdere schema&#39;s.
 
 Een volledig voorbeeld van de mix vindt u in de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)en moet worden gebruikt als referentie voor de belangrijkste velden die in de sectie hieronder worden beschreven.
@@ -30,6 +34,8 @@ In de onderstaande secties worden de belangrijkste velden in de CEE-mix gemarkee
 ### xdm:kanaal
 
 Dit gebied vertegenwoordigt het marketing kanaal met betrekking tot ExperienceEvent. Het veld bevat informatie over het kanaaltype, het mediatype en het locatietype. **Dit veld _moet_worden opgegeven voordat Attribution AI kan werken met uw gegevens**.
+
+![](./images/data-preparation/channel.png)
 
 **Voorbeeldschema**
 
@@ -63,25 +69,25 @@ In de volgende tabel staan enkele voorbeelden van marketingkanalen die zijn toeg
 
 Dit veld is een array van items die producten vertegenwoordigen die door een klant zijn geselecteerd, waaronder de SKU, naam, prijs en hoeveelheid van het product.
 
+![](./images/data-preparation/productListItems.png)
+
 **Voorbeeldschema**
 
 ```json
 [
   {
     "xdm:SKU": "1002352692",
-    "xdm:lineItemId": "12345678",
     "xdm:name": "24-Watt 8-Light Chrome Integrated LED Bath Light",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 159
+    "xdm:priceTotal": 159.45
   },
   {
     "xdm:SKU": "3398033623",
-    "xdm:lineItemId": "48693817",
     "xdm:name": "16ft RGB LED Strips",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 80
+    "xdm:priceTotal": 79.99
   }
 ]
 ```
@@ -91,6 +97,8 @@ Voor volledige informatie over elk van de vereiste subvelden voor `xdm:productLi
 ### xdm:handel
 
 Dit veld bevat handelspecifieke informatie over de ExperienceEvent, waaronder het inkoopordernummer en betalingsgegevens.
+
+![](./images/data-preparation/commerce.png)
 
 **Voorbeeldschema**
 
@@ -128,6 +136,8 @@ Voor volledige informatie over elk van de vereiste subvelden voor `xdm:commerce`
 
 In dit veld worden de webdetails weergegeven die betrekking hebben op de ExperienceEvent, zoals de interactie, paginagegevens en de referentie.
 
+![](./images/data-preparation/web.png)
+
 **Voorbeeldschema**
 
 ```json
@@ -155,6 +165,8 @@ Voor volledige informatie over elk van de vereiste subvelden voor `xdm:productLi
 ### xdm:marketing
 
 Dit veld bevat informatie over marketingactiviteiten die actief zijn met het aanraakpunt.
+
+![](./images/data-preparation/marketing.png)
 
 **Voorbeeldschema**
 
@@ -202,7 +214,7 @@ Na het creëren van een CEE schema en dataset, kunt u beginnen uw gegevenslijste
 
 ## Volgende stappen {#next-steps}
 
-Dit document bevat algemene richtlijnen voor het voorbereiden van gegevens voor gebruik in Intelligente services. Neem contact op met de Technische Ondersteuning van Adobe als u extra advies nodig hebt op basis van uw gebruikscase.
+Dit document bevat algemene richtlijnen voor het voorbereiden van uw gegevens voor gebruik in Intelligente services. Neem contact op met de Technische Ondersteuning van Adobe als u extra advies nodig hebt op basis van uw gebruikscase.
 
 Zodra u met succes een dataset met uw gegevens van de klantenervaring hebt bevolkt, kunt u de Intelligente Diensten gebruiken om inzichten te produceren. Raadpleeg de volgende documenten om aan de slag te gaan:
 
