@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een analyse van een model voor machinaal leren maken en publiceren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -28,7 +28,7 @@ Deze zelfstudie weerspiegelt de workflow van Data Science Workspace en behandelt
 
 Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldoen:
 
-* Toegang tot het Adobe Experience Platform. Als u geen toegang hebt tot een IMS-organisatie in het ervaringsplatform, neemt u contact op met uw systeembeheerder voordat u verdergaat.
+* Toegang tot het Adobe Experience Platform. Als u geen toegang tot een IMS Organisatie in het Platform van de Ervaring hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
 
 * Enablement assets. Neem contact op met uw accountvertegenwoordiger om de volgende items voor u beschikbaar te stellen.
    * Aanbevelingen ontvangen
@@ -47,7 +47,7 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
    * Batches: Datasets bestaan uit batches. Een batch is een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt.
    * JupyterLab: [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is een open-source webgebaseerde interface voor Project Jupyter en is nauw geïntegreerd in Experience Platform.
 
-## Uw gegevens voorbereiden
+## Uw gegevens voorbereiden {#prepare-your-data}
 
 Als u een model voor machinaal leren wilt maken dat gepersonaliseerde productaanbevelingen doet aan uw klanten, moeten eerdere aankopen van klanten op uw website worden geanalyseerd. In deze sectie wordt beschreven hoe deze gegevens via Adobe Analytics in Platform worden ingevoerd en hoe die gegevens worden omgezet in een gegevensset met functies die door het model voor machinaal leren moet worden gebruikt.
 
@@ -68,7 +68,7 @@ De andere datasets zijn vooraf gevuld met partijen voor het voorvertonen van doe
 | Aanbevelingen Gegevensset invoer | Aanbevelingen Invoerschema | De gegevens van Analytics worden omgezet in een opleidingsdataset gebruikend een eigenschappijpleiding. Deze gegevens worden gebruikt voor de training van het Product Recommendations Machine Learning Model. `itemid` en `userid` overeenkomen met een product dat door die klant is aangekocht. |
 | Gegevensset voor aanbevolen uitvoer | Uitvoerschema voor aanbevelingen | De dataset waarvoor het scoren resultaten worden opgeslagen, zal het de lijst van geadviseerde producten voor elke klant bevatten. |
 
-## Uw model ontwerpen
+## Uw model ontwerpen {#author-your-model}
 
 Het tweede onderdeel van de levenscyclus van de Data Science Workspace omvat het ontwerpen van recept en modellen. De Recipe van de Aanbevelingen van het Product wordt ontworpen om productaanbevelingen op schaal te produceren door vroegere aankoopgegevens en machine het leren te gebruiken.
 
@@ -85,7 +85,7 @@ Ontvangers vormen de basis voor een model aangezien zij machine het leren algori
 
 U hebt nu de invoer- en uitvoerschema&#39;s gecontroleerd die vereist zijn voor de Recipe voor productaanbevelingen. U kunt nu verdergaan naar de volgende sectie om te weten te komen hoe u een model van de Aanbevelingen van het Product creeert, opleidt en evalueert.
 
-## Uw model trainen en evalueren
+## Uw model trainen en evalueren {#train-and-evaluate-your-model}
 
 Nu uw gegevens zijn voorbereid en de recept klaar is om te worden gebruikt, kunt u uw model voor machinetolering maken, trainen en evalueren.
 
@@ -97,7 +97,7 @@ Een model is een instantie van een recept, waarmee u gegevens op schaal kunt tra
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Zoek en open de opgegeven Recipe **Recommendations** door op de naam ervan te klikken en de overzichtspagina van de ontvanger in te voeren. Klik op **Een model** maken in het midden (als er geen bestaande modellen zijn) of in de rechterbovenhoek van de pagina Overzicht van ontvangen.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Een lijst van beschikbare inputdatasets voor opleiding wordt getoond, wordt de uitgezochte Dataset **van de Invoer van** Aanbevelingen en klikt **daarna**.
+3. Een lijst van beschikbare inputdatasets voor opleiding wordt getoond, wordt de uitgezochte Dataset **van de Input van** Aanbevelingen en klikt **daarna**.
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
 4. Geef het model een naam, bijvoorbeeld &quot;Model met productaanbevelingen&quot;. De beschikbare configuraties voor het model worden vermeld, die montages voor het de standaardopleiding van het Model en het scoring gedrag bevatten. Er zijn geen wijzigingen nodig omdat deze configuraties specifiek zijn voor uw organisatie. Controleer de configuraties en klik op **Voltooien**.
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
@@ -130,7 +130,7 @@ Telkens als een trainingslooppas voltooit, kunt u de resulterende evaluatiemetri
 3. U kunt de dataset, het schema, en de configuratieparameters zien die voor elke opleiding op het juiste spoor worden gebruikt.
 4. Navigeer terug naar de modelpagina en identificeer de best presterende opleiding door hun evaluatiemetriek te observeren.
 
-## Uw model exploiteren
+## Uw model exploiteren {#operationalize-your-model}
 
 De laatste stap in de Data Science-workflow is het operationeel maken van uw model, zodat u uw gegevens kunt bijhouden en inzichten van uw gegevensarchief kunt gebruiken.
 
