@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analyse van de Data Science Workspace
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -45,7 +45,7 @@ In onze zelfstudie gebruiken we Python 3 in het Jupyter-notebook om te tonen hoe
 
 ![](./images/walkthrough/retail_sales.png)
 
-### Instellen
+### Instellen {#setup}
 
 Als de Retail Sales-laptop geopend is, is het eerste wat we doen, het laden van de bibliotheken die nodig zijn voor onze workflow. In de volgende lijst wordt een korte beschrijving gegeven van de doeleinden waarvoor elk wordt gebruikt:
 - **numpy** - wetenschappelijke computerbibliotheek die ondersteuning biedt voor grote, multidimensionale arrays en matrixen
@@ -55,7 +55,7 @@ Als de Retail Sales-laptop geopend is, is het eerste wat we doen, het laden van 
 - **sklearn** - machine het leren bibliotheek die classificatie, regressie, steunvector, en clusteralgoritmen kenmerkt
 - **waarschuwingen** - bibliotheek met waarschuwingsberichten
 
-### Gegevens verkennen
+### Gegevens verkennen {#exploring-data}
 
 #### Gegevens laden
 
@@ -129,7 +129,7 @@ Gebruikend de zelfde kleinhandelsdataset, kunnen wij de correlatiematrix produce
 
 Let op de diagonaal van de diagonalen in het midden. Dit toont aan dat wanneer het vergelijken van een variabele aan zich, het volledige positieve correlatie heeft. Sterke positieve correlatie zal een grootte dichter bij 1 hebben, terwijl zwakke correlaties dichter bij 0 liggen. Een negatieve correlatie wordt aangetoond met een negatieve coëfficiënt die een omgekeerde trend laat zien.
 
-### Functietechniek
+### Functietechniek {#feature-engineering}
 
 In deze sectie, zullen wij wijzigingen in onze Retaildataset aanbrengen. De volgende bewerkingen worden uitgevoerd:
 
@@ -177,7 +177,7 @@ Een samenvatting van de dataset na onze wijzigingen wordt getoond hieronder:
 
 ![](./images/walkthrough/df_info_new.png)
 
-### Training en verificatie
+### Training en verificatie {#training-and-verification}
 
 Nu is het tijd om een aantal modellen van de gegevens te maken en te selecteren welk model de best presterende is voor het voorspellen van toekomstige verkopen. We evalueren de volgende vijf algoritmen:
 
