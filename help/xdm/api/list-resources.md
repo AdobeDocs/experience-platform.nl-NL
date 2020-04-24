@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Bronnen weergeven
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
+source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
 
 ---
 
@@ -12,6 +12,10 @@ source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
 # Bronnen weergeven
 
 U kunt een lijst van alle middelen (schema&#39;s, klassen, mixins, of gegevenstypes) binnen een container bekijken door één enkele GET verzoek uit te voeren.
+
+>[!NOTE] Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Als u bronnen buiten deze limiet wilt retourneren, moet u [pagineringsparameters](#paging)gebruiken. Men adviseert ook dat u vraagparameters gebruikt om resultaten [te](#filtering) filtreren en het aantal teruggekeerde middelen te verminderen.
+>
+> Als u de limiet van 300 items volledig wilt overschrijven, moet u de header Accepteren gebruiken `application/vnd.adobe.xdm-v2+json` om alle resultaten in één aanvraag te retourneren.
 
 **API-indeling**
 
@@ -42,8 +46,9 @@ De responsindeling is afhankelijk van de Accept-header die in de aanvraag wordt 
 
 | Koptekst accepteren | Beschrijving |
 | ------- | ------------ |
-| application/vnd.adobe.xed-id+json | Hiermee wordt een korte samenvatting van elke bron geretourneerd, doorgaans de voorkeursheader voor vermelding |
-| application/vnd.adobe.xed+json | Retourneert het volledige JSON-schema voor elke bron, met origineel `$ref` en `allOf` inbegrepen |
+| application/vnd.adobe.xed-id+json | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
+| application/vnd.adobe.xed+json | Retourneert het volledige JSON-schema voor elke bron, met origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
+| application/vnd.adobe.xdm-v2+json | Retourneert het volledige JSON-schema voor alle resultaten in één aanvraag, waarbij de limiet van 300 items wordt genegeerd. |
 
 **Antwoord**
 
@@ -74,7 +79,7 @@ De Registratie van het Schema steunt het gebruik van vraagparameters aan pagina 
 
 >[!NOTE] Wanneer het combineren van veelvoudige vraagparameters, moeten zij door ampersands (`&`) worden gescheiden.
 
-### Paginering
+### Paginering {#paging}
 
 De gemeenschappelijkste vraagparameters voor het pagineren omvatten:
 
@@ -84,7 +89,7 @@ De gemeenschappelijkste vraagparameters voor het pagineren omvatten:
 | `limit` | Beperk het aantal geretourneerde bronnen. Voorbeeld: `limit=5` retourneert een lijst met vijf bronnen. |
 | `orderby` | Resultaten sorteren op een bepaalde eigenschap. Voorbeeld: De resultaten worden op titel in oplopende volgorde (A-Z) gesorteerd. `orderby=title` Als u een `-` vóór titel (`orderby=-title`) toevoegt, worden de items op titel gesorteerd in aflopende volgorde (Z-A). |
 
-### Filteren
+### Filteren {#filtering}
 
 U kunt resultaten filtreren door de `property` parameter te gebruiken, die wordt gebruikt om een specifieke exploitant op een bepaalde bezit JSON binnen de teruggewonnen middelen toe te passen. Tot de ondersteunde operatoren behoren:
 
