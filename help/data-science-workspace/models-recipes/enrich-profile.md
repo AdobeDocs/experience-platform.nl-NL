@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Klantprofiel in realtime verrijken met kennis van machinaal leren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -32,7 +32,7 @@ Naast de bovengenoemde documenten, wordt het ten zeerste geadviseerd dat u ook d
 * [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Beschrijft schema&#39;s XDM, bouwstenen, principes, en beste praktijken voor het samenstellen van schema&#39;s die in het Platform van de Ervaring moeten worden gebruikt.
 * [Zelfstudie](../../xdm/tutorials/create-schema-ui.md)Schema-editor: Verstrekt gedetailleerde instructies voor het creëren van schema&#39;s gebruikend de Redacteur van het Schema binnen het Platform van de Ervaring.
 
-## Een uitvoerschema en gegevensset maken
+## Een uitvoerschema en gegevensset maken {#create-an-output-schema-and-dataset}
 
 De eerste stap naar het verrijken van het Profiel van de Klant in real time met het scoren van inzichten is het weten van welk echt voorwerp (zoals een persoon) uw gegevens bepaalt. Dankzij een goed begrip van uw gegevens kunt u een structuur beschrijven en ontwerpen die betekenis heeft voor uw gegevens, vergelijkbaar met het ontwerpen van een relationele database.
 
@@ -73,7 +73,7 @@ Het samenstellen van een schema begint door een klasse toe te wijzen. De klassen
 
 Nu u een gecreeerd dataset van het outputschema hebt, bent u klaar aan de volgende sectie verder om hen voor de verrijking van het Profiel te vormen en toe te laten.
 
-## Een uitvoerschema en gegevensset configureren
+## Een uitvoerschema en gegevensset configureren {#configure-an-output-schema-and-dataset}
 
 Alvorens u een dataset voor Profiel kunt toelaten, moet u het schema van de dataset aan het hebben van een primair identiteitsgebied vormen en dan het schema voor Profiel toelaten. Als u een nieuw schema wilt creëren en toelaten, kunt u naar het leerprogramma verwijzen bij het [creëren van een schema gebruikend de Redacteur](../../xdm/tutorials/create-schema-ui.md)van het Schema. Volg anders de instructies hieronder om een bestaand schema en een dataset toe te laten.
 
@@ -97,7 +97,7 @@ Alvorens u een dataset voor Profiel kunt toelaten, moet u het schema van de data
 
 Wanneer gegevens in een profiel-Toegelaten dataset worden opgenomen, worden die zelfde gegevens ook opgenomen als verslagen van het Profiel. Nu uw schema en dataset wordt voorbereid, produceer sommige gegevens in de dataset door het uitvoeren van het scoren looppas gebruikend een aangewezen model, en ga met dit leerprogramma verder om inzicht tot segmenten te leiden gebruikend de Bouwer van het Segment.
 
-## Segmenten maken met de Segment Builder
+## Segmenten maken met de Segment Builder {#create-segments-using-the-segment-builder}
 
 Nu u inzichten in uw profiel-Toegelaten dataset hebt geproduceerd en opgenomen, kunt u die gegevens beheren door ondergroepen van verwante elementen te identificeren gebruikend de Bouwer van het Segment. Volg de onderstaande stappen om uw eigen segmenten te maken.
 
@@ -117,6 +117,6 @@ Nu u inzichten in uw profiel-Toegelaten dataset hebt geproduceerd en opgenomen, 
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
-## Volgende stappen
+## Volgende stappen {#next-steps}
 
 Dit document liep u door de stappen die worden vereist om een schema en dataset voor Profiel toe te laten, en toonde kort het werkschema voor het creëren van inzicht segmenten gebruikend de Bouwer van het Segment aan. Meer over segmenten en de Bouwer van het Segment leren, verwijs naar het de dienstoverzicht [van de](../../segmentation/home.md)Segmentatie.
