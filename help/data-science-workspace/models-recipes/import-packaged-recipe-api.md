@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een verpakt recept (API) importeren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: ebf7c883ce89fdf8b0d468ab21d1c3a1ba8aca06
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -46,7 +46,7 @@ Afhankelijk van de vorm van het pakketRecipe-bestand dat als onderdeel van de AP
 - [Een engine maken met een docker-URL](#create-an-engine-with-a-docker-url)
 - [Een engine maken met een binair artefact (afgekeurd)](#create-an-engine-with-a-binary-artifact-deprecated)
 
-### Een engine maken met een docker-URL
+### Een engine maken met een docker-URL {#create-an-engine-with-a-docker-url}
 
 Als u een engine wilt maken met een pakketbestand Recipe dat is opgeslagen in een Docker-container, moet u de docker-URL opgeven voor het pakketbestand Recipe.
 
@@ -199,11 +199,11 @@ Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe 
 
 Een succesvolle reactie toont een JSON nuttige lading met informatie betreffende de pas gecreëerde Motor. De `id` sleutel vertegenwoordigt het unieke herkenningsteken van de Motor en wordt vereist in het volgende leerprogramma om een MLInstance tot stand te brengen. Controleer of de engine-id is opgeslagen voordat u verdergaat met de volgende stappen.
 
-## Volgende stappen
+## Volgende stappen {#next-steps}
 
 U hebt een engine gemaakt met de API en er is een unieke engine-id verkregen als onderdeel van de responsstructuur. U kunt deze engine-id gebruiken in de volgende zelfstudie terwijl u leert hoe u een model kunt [maken, trainen en evalueren met behulp van de API](./train-evaluate-model-api.md).
 
-### Een engine maken met een binair artefact (afgekeurd)
+### Een engine maken met een binair artefact (afgekeurd) {#create-an-engine-with-a-binary-artifact-deprecated}
 
 <!-- Will need to remove binary artifact documentation once the old flags are turned off -->
 
