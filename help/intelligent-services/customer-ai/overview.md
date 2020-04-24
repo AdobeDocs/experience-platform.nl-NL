@@ -4,7 +4,7 @@ solution: Experience Platform
 title: AI-overzicht van klant
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
+source-git-commit: f4deee30f0f03b75dc7ee02152ceb6c519858c7c
 
 ---
 
@@ -31,7 +31,7 @@ AI van de klant is gebouwd aan:
 Klant is niet gebouwd op:
 
 - De AI van de klant mag niet worden gebruikt om dynamische prijzen te voorspellen, noch het prijspunt waarop de klant een aankoop gaat doen.
-- Klantenservice-AI kan niet bepalen of het aanbieden van een aanbieding de kans van de klant om een object te kopen zal vergroten. Hoewel u kunt besluiten kortingsvoorstellen te verzenden op basis van de score voor volheid, is het niet altijd de beste manier om die klanten om te zetten.
+- Klantenservice-AI kan niet bepalen of het aanbieden van een aanbieding de kans van de klant om een object te kopen zal vergroten. Hoewel u kunt besluiten kortingsvoorstellen te verzenden op basis van de score voor volheid, is het niet noodzakelijk de beste manier om die klanten om te zetten.
 - AI van de klant is geen hulpmiddel voor productaanbevelingen. Als u duizenden SKU&#39;s hebt, gebruik geen AI van de Klant als volmacht voor een echte oplossing van productaanbevelingen zoals Adobe Target.
 - Klantenservice-AI kan niet voorspellen in welke fase van de koopgedrag de klant zich bevindt, bijvoorbeeld in de fasen &quot;aware&quot;, &quot;achting&quot;, &quot;purchase&quot; of &quot;retentie&quot;.
 - Gebruik geen AI van de Klant om klanten te bepalen die waarschijnlijk een product kopen dat in de toekomst lanceert. Dit vereist bepaalde succesgebeurtenissen om in het verleden aanwezig te zijn voor de AI van de Klant om het systeemleeralgoritme op uw gegevens te trainen.
@@ -42,4 +42,4 @@ De AI van de klant werkt door bestaande gegevens van de Gebeurtenis van de Consu
 
 ## Volgende stappen
 
-U kunt beginnen met het volgen van de gids Aan de [slag](./getting-started.md) . Deze gids begeleidt u door vestiging alle vereiste pre-verzoeken voor AI van de Klant. Als u al uw referenties en gegevens hebt, gaat u naar de gebruikershandleiding [van de](./user-guide.md)Customer AI. Het biedt stappen voor het gebruik van Customer AI en demonstreert de creatie van klantsegmenten met behulp van propensiteitsscores.
+U kunt beginnen met het volgen van de gids Aan de [slag](./getting-started.md) . Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor AI van de Klant. Als u al uw referenties en gegevens hebt, gaat u naar het [configureren van een Customer AI-exemplaar](./user-guide/configure.md). Het biedt stappen voor het gebruik van AI van de Klant.
