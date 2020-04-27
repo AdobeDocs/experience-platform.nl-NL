@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK Help
 description: Leer wat Adobe Experience Platform Web SDK is en hoe deze kan worden gebruikt.
 seo-description: klanten van de Adobe Experience Cloud toestaan om te communiceren met de verschillende services in de Experience Cloud
 translation-type: tm+mt
-source-git-commit: 68361835437026c86af2402cc8400a3b3f32cb81
+source-git-commit: 6ad09df6f6867ebe057d0043dea4bc97de2b66b3
 
 ---
 
@@ -28,4 +28,4 @@ De volgende SDK&#39;s worden vervangen door de Adobe Experience Platform Web SDK
 
 Dit is niet alleen een omslag rond bestaande bibliotheken. Het is een volledige herschrijving. Het doel is een einde te maken aan uitdagingen waarbij tags in de juiste volgorde worden afgevuurd, inconsistentie met bibliotheekversioning en beter afhankelijkheidsbeheer. Het is een nieuwe manier om de Experience Cloud te implementeren.
 
-Naast een nieuwe bibliotheek is er een nieuw eindpunt dat de HTTP-aanvragen naar Adobe-oplossingen stroomlijnt. Vóór, stuurde Visitor.js een blokkerende vraag naar de dienst van bezoekersidentiteitskaart, toen AT.js een vraag naar Adobe Target verzond, stuurde DIL.js een vraag naar de Manager van het Publiek van Adobe, en tenslotte stuurde AppMeturement.js een vraag naar de Analytics van Adobe. Deze nieuwe bibliotheek en eindpunt kunnen een identiteitskaart terugwinnen, een ervaring van het Doel halen, gegevens verzenden naar de Manager van de Publiek, en de gegevens in het Platform van de Ervaring van Adobe in één enkele vraag overgaan.
+Naast een nieuwe bibliotheek is er een nieuw eindpunt dat de HTTP-aanvragen naar Adobe-oplossingen stroomlijnt. Vóór, stuurde Visitor.js een blokkerende vraag naar de dienst van bezoekersidentiteitskaart, toen AT.js een vraag naar Adobe Target verzond, stuurde DIL.js een vraag naar de Manager van het Publiek van Adobe, en tenslotte stuurde AppMeturement.js een vraag naar de Analytics van Adobe. Deze nieuwe bibliotheek en eindpunt kunnen een identiteitskaart terugwinnen, een ervaring van het Doel halen, gegevens verzenden naar de Manager van de Publiek, en de gegevens tot het Platform van de Ervaring van Adobe in één enkele vraag overgaan.
