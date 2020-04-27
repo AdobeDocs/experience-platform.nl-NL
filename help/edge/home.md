@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK Help
 description: Leer wat Adobe Experience Platform Web SDK is en hoe deze kan worden gebruikt.
 seo-description: klanten van de Adobe Experience Cloud toestaan om te communiceren met de verschillende services in de Experience Cloud
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 68361835437026c86af2402cc8400a3b3f32cb81
 
 ---
 
@@ -15,14 +15,14 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 >
 >De Adobe Experience Platform Web SDK is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
-Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van de Adobe Experience Cloud kunnen communiceren met de verschillende services in de Experience Cloud.
+Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van de Adobe Experience Cloud via het Adobe Experience Platform Edge Network kunnen communiceren met de verschillende services in de Experience Cloud.
 
 ## SDK&#39;s vervangen door Adobe Experience Platform Web SDK
 
 De volgende SDK&#39;s worden vervangen door de Adobe Experience Platform Web SDK:
 
 * Visitor.js
-* AppMeturement.js
+* AppMeasurement.js
 * AT.js
 * DIL.js
 
