@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruikershandleiding voor gegevensgebruiksbeleid
 topic: policies
 translation-type: tm+mt
-source-git-commit: 304a84b81758b2f2a343977533f9120857a1fb33
+source-git-commit: 235a43ad72dee45db1b3d35ae84ce9a1c4d729b8
 
 ---
 
@@ -66,4 +66,4 @@ U kunt beleid voor aangepast gegevensgebruik in- of uitschakelen op het *[!UICON
 
 ## Volgende stappen
 
-In dit document wordt een overzicht gegeven van de manier waarop beleidsregels voor gegevensgebruik in de gebruikersinterface van het Experience Platform kunnen worden beheerd. Zie de zelfstudie over het maken van [API-beleid voor meer informatie over het beheren van beleid met de DULE Policy API](./create.md). Voor informatie over hoe te om het beleid van het gegevensgebruik af te dwingen, zie het [beleidshandhavingsoverzicht](../enforcement/overview.md).
+In dit document wordt een overzicht gegeven van de manier waarop beleidsregels voor gegevensgebruik in de gebruikersinterface van het Experience Platform kunnen worden beheerd. Voor stappen op hoe te om beleid te beheren gebruikend DULE Beleid API, zie de [ontwikkelaarsgids](../api/getting-started.md). Voor informatie over hoe te om het beleid van het gegevensgebruik af te dwingen, zie het [beleidshandhavingsoverzicht](../enforcement/overview.md).
