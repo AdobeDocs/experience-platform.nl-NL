@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK Help
 seo-title: Adobe Experience Platform Web SDK Help
 description: Leer wat Adobe Experience Platform Web SDK is en hoe deze kan worden gebruikt.
-seo-description: klanten van de Adobe Experience Cloud toestaan om te communiceren met de verschillende services in de Experience Cloud
+seo-description: klanten van de Adobe Experience Cloud in staat stellen te communiceren met de verschillende services in de Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 6ad09df6f6867ebe057d0043dea4bc97de2b66b3
+source-git-commit: 5027ae2cd083631d7122346796ef93572c129d3f
 
 ---
 
