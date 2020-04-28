@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: bb7aad4de681316cc9f9fd1d9310695bd220adb1
 
 ---
 
@@ -136,7 +136,12 @@ curl -X POST \
       }'
 ```
 
-|Eigenschap|Beschrijving||`type` **(Vereist)** |Het type bestemming dat moet worden gecreëerd. De enige toegelaten waarde, &quot;EDGE&quot;, leidt tot een randbestemming.||`dataCenters` **(Vereist)** |Een tekenreeks die de randen opsomt waarnaar de projecties moeten worden gerouteerd. Kan een of meer van de volgende waarden bevatten: &quot;OR1&quot; - Western United States, &quot;VA5&quot; - Eastern United States, &quot;NLD1&quot; - EMEA.||`ttl` **(Vereist)** |Geeft aan dat de projectie vervalt. Geaccepteerd waardebereik: 600 tot 604800. Standaardwaarde: 3600.||`replicationPolicy` **(Vereist)** |Bepaalt het gedrag van de gegevensreplicatie van de hub aan de randen.  Ondersteunde waarden: PROACTIEF, REACTIEF. Standaardwaarde: REACTIEF.|
+| Eigenschap | Beschrijving |
+|---|---|
+| `type` **(Vereist)** | Het type doel dat moet worden gemaakt. De enige toegelaten waarde, &quot;EDGE&quot;, leidt tot een randbestemming. |
+| `dataCenters` **(Vereist)** | Een tekenreeks-array die de randen opsomt waarnaar projecties moeten worden gerouteerd. Kan een of meer van de volgende waarden bevatten: &quot;OR1&quot; - Western United States, &quot;VA5&quot; - Eastern United States, &quot;NLD1&quot; - EMEA. |
+| `ttl` **(Vereist)** | Geeft aan dat de projectie vervalt. Geaccepteerd waardebereik: 600 tot 604800. Standaardwaarde: 3600. |
+| `replicationPolicy` **(Vereist)** | Bepaalt het gedrag van de gegevensreplicatie van de hub aan de randen.  Ondersteunde waarden: PROACTIEF, REACTIEF. Standaardwaarde: REACTIEF. |
 
 **Antwoord**
 
