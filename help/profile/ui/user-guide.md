@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Gebruikershandleiding voor het profiel van de klant in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: b5412b891a9457fa5e801d1f0479fc59fb08bf1b
+source-git-commit: ab289f07475abcbe966c723423825fd392eb3615
 
 ---
 
