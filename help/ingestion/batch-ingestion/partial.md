@@ -4,19 +4,21 @@ solution: Experience Platform
 title: Overzicht van partiële batchverwerking in Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
 
 ---
 
 
 
-# Gedeeltelijke batch ingestie
+# Gedeeltelijke batch ingestie (Beta)
 
 Gedeeltelijke batch-opname is de mogelijkheid om gegevens met fouten in te voeren, tot een bepaalde drempel. Met deze functie kunnen gebruikers al hun correcte gegevens opnemen in het Adobe Experience Platform terwijl al hun onjuiste gegevens afzonderlijk worden opgeslagen, samen met de details over waarom de gegevens ongeldig zijn.
 
 Dit document bevat een zelfstudie voor het beheren van gedeeltelijke batch-opname.
 
-Daarnaast bevat de [bijlage bij](#partial-batch-ingestion-error-types) deze zelfstudie een verwijzing naar fouttypen voor gedeeltelijke batch-opname.
+Daarnaast bevat de [bijlage bij](#appendix) deze zelfstudie een verwijzing naar fouttypen voor gedeeltelijke batch-opname.
+
+>[!IMPORTANT] Deze functie bestaat alleen met de API. Neem contact op met uw team om toegang te krijgen tot deze functie.
 
 ## Aan de slag
 
@@ -47,7 +49,7 @@ Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele 
 
 ## Een dataset inschakelen voor gedeeltelijke batch-opname in de API
 
->[!NOTE] Deze sectie beschrijft het toelaten van een dataset voor gedeeltelijke partijingestie gebruikend API. Voor instructies bij het gebruiken van UI, te lezen gelieve een dataset voor gedeeltelijke partijopname in de stap UI [](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) toelaat.
+<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
 
 U kunt een nieuwe dataset tot stand brengen of een bestaande dataset wijzigen met gedeeltelijke toegelaten opname.
 
@@ -71,35 +73,35 @@ Op dezelfde manier om een bestaande dataset te wijzigen, volg de stappen in de d
 
 Binnen de dataset, zult u de hierboven beschreven markering moeten toevoegen.
 
-## Een dataset voor gedeeltelijke batch-opname inschakelen in de UI
+<!-- ## Enable a dataset for partial batch ingestion in the UI
 
->[!NOTE] Deze sectie beschrijft het toelaten van een dataset voor gedeeltelijke partijingestie gebruikend UI. Als u al een dataset voor gedeeltelijke partijopname gebruikend API hebt toegelaten, kunt u vooruit naar de volgende sectie overslaan.
+>[!NOTE] This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
 
-Om een dataset voor gedeeltelijke opname door Platform UI toe te laten, klik **Datasets** in de linkernavigatie. U kunt of een nieuwe dataset [](#create-a-new-dataset-with-partial-batch-ingestion-enabled) creëren of een bestaande dataset [](#modify-an-existing-dataset-to-enable-partial-batch-ingestion)wijzigen.
+To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
 
-### Creeer een nieuwe dataset met gedeeltelijk toegelaten partijingestie
+### Create a new dataset with partial batch ingestion enabled
 
-Om een nieuwe dataset tot stand te brengen, volg de stappen in de gids [van de](../../catalog/datasets/user-guide.md)datasetgebruiker. Zodra u de *Configure datasetstap* bereikt, neem nota van de *Gedeeltelijke Ingestie* en de gebieden van de Diagnose van de *Fout* .
+To create a new dataset, follow the steps in the [dataset user guide](../../catalog/datasets/user-guide.md). Once you reach the *Configure dataset* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-focus.png)
 
-Met de *optie Partiële* inname kunt u het gebruik van gedeeltelijke batch-inname in- of uitschakelen.
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-De schakeloptie *Foutdiagnose* wordt alleen weergegeven wanneer de schakeloptie *Partiële* inname is uitgeschakeld. Met deze functie kan Platform gedetailleerde foutberichten genereren over uw ingesloten batches. Als de *schakeloptie Partiële* inname is ingeschakeld, wordt de uitgebreide foutdiagnose automatisch afgedwongen.
+The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-partial-ingestion-focus.png)
 
-Met de *foutdrempel* kunt u het percentage acceptabele fouten instellen voordat de gehele batch mislukt. Deze waarde is standaard ingesteld op 5%.
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
-### Wijzig een bestaande dataset om gedeeltelijke partijingestie toe te laten
+### Modify an existing dataset to enable partial batch ingestion
 
-Om een bestaande dataset te wijzigen, selecteer de dataset u wilt wijzigen. De zijbalk rechts vult informatie over de gegevensset.
+To modify an existing dataset, select the dataset you want to modify. The sidebar on the right populates with information about the dataset. 
 
 ![](../images/batch-ingestion/partial-ingestion/modify-dataset-focus.png)
 
-Met de *optie Partiële* inname kunt u het gebruik van gedeeltelijke batch-inname in- of uitschakelen.
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-Met de *foutdrempel* kunt u het percentage acceptabele fouten instellen voordat de gehele batch mislukt. Deze waarde is standaard ingesteld op 5%.
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
 
 ## Fouten bij gedeeltelijke inname van batch ophalen
 
@@ -176,7 +178,7 @@ Als de batch een fout heeft en foutdiagnose is ingeschakeld, is de status &#39;g
 
 Dit leerprogramma behandelde hoe te om een dataset tot stand te brengen of te wijzigen om gedeeltelijke partijingestie toe te laten. Lees voor meer informatie over het in de partij innemen van de [partij de ontwikkelaarsgids](./api-overview.md).
 
-## Typen fout bij gedeeltelijk in batch opnemen
+## Typen fout bij gedeeltelijk in batch opnemen {#appendix}
 
 Gedeeltelijke batch-opname heeft vier verschillende fouttypen bij het opnemen van gegevens.
 
