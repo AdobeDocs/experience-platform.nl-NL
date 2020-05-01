@@ -4,7 +4,7 @@ solution: Experience Platform
 title: De verzoekverwerking van de privacy in Real-time Profiel van de Klant
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5f0e0deb4a2fae636ac4d2313a6541c25309c294
+source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
 
 ---
 
@@ -33,7 +33,7 @@ Voor meer informatie over identiteitsnaamruimten in het Platform van de Ervaring
 
 ## Verzoeken indienen {#submit}
 
->[!NOTE] Deze sectie behandelt hoe te om privacyverzoeken voor het meer van Gegevens te formatteren. Het wordt ten zeerste aanbevolen dat u de API [-documentatie](../privacy-service/api/getting-started.md) van de [privacyservice of de gebruikersinterface](../privacy-service/ui/overview.md) van deprivacyservice controleert voor volledige stappen over het verzenden van een privacytaak, waaronder het correct indelen van verzonden identiteitsgegevens van gebruikers in aanvragen.
+>[!NOTE] In deze sectie wordt beschreven hoe u privacyverzoeken kunt maken voor de profielgegevensopslag. Het wordt ten zeerste aanbevolen dat u de API [-documentatie](../privacy-service/api/getting-started.md) van de [privacyservice of de gebruikersinterface](../privacy-service/ui/overview.md) van deprivacyservice controleert voor volledige stappen over het verzenden van een privacytaak, waaronder het correct indelen van verzonden identiteitsgegevens van gebruikers in aanvragen.
 
 In de volgende sectie wordt beschreven hoe u privacyverzoeken voor Real-time klantprofiel en het Data Lake kunt indienen met behulp van de Privacy Service API of UI.
 
@@ -102,4 +102,4 @@ In toekomstige releases zal Platform een bevestiging sturen naar de Privacy Serv
 
 Door dit document te lezen, bent u geïntroduceerd in de belangrijke concepten betrokken bij de verwerking van privacyverzoeken in het Platform van de Ervaring. U wordt aangeraden de documentatie in deze handleiding te blijven lezen om meer inzicht te krijgen in de manier waarop u identiteitsgegevens kunt beheren en privacytaken kunt maken.
 
-Zie het document over de verwerking van [privacyverzoeken in het Datameer](../catalog/privacy.md)voor informatie over het verwerken van privacyverzoeken voor platformbronnen die niet worden gebruikt door het profiel.
+Zie het document over de verwerking van [privacyverzoeken in het Datameer](../catalog/privacy.md)voor informatie over het verwerken van privacyverzoeken voor platformbronnen die niet worden gebruikt door Profiel.
