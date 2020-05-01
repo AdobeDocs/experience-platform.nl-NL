@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Azure Table Storage-connector maken met behulp van de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 69ea79aff57ad82d8bc462984526b2126858c0b1
+source-git-commit: 9556b85b26e2eb3d4a2b3e41db5f0c3a14459d32
 
 ---
 
@@ -68,7 +68,6 @@ POST /connections
 **Verzoek**
 
 Als u een ATS-verbinding wilt maken, moet de unieke id van de verbindingsspecificatie worden opgegeven als onderdeel van de POST-aanvraag. De verbindingsspecificatie-id voor ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
-
 
 ```shell
 curl -X POST \
