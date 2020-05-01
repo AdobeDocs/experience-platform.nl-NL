@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Gegevens verzamelen van een externe database of een NoSQL-systeem via bronconnectors en API's
+title: Gegevens verzamelen van een database van derden via bronconnectors en API's
 topic: overview
 translation-type: tm+mt
-source-git-commit: 00764a59629eb8a5a06ac28ad446084b0bdb2293
+source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
 
 ---
 
 
-# Gegevens verzamelen van een externe database of een NoSQL-systeem via bronconnectors en API&#39;s
+# Gegevens verzamelen van een database van derden via bronconnectors en API&#39;s
 
 De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een database of een NoSQL-systeem en het opnemen ervan in Platform via bronconnectors en API&#39;s.
+Deze zelfstudie behandelt de stappen voor het ophalen van gegevens uit een database van derden en het opnemen ervan in Platform via bronconnectors en API&#39;s.
 
 ## Aan de slag
 
-Deze zelfstudie vereist dat u toegang hebt tot een database van derden of een NoSQL-systeem via een geldige basisverbinding en informatie over het bestand dat u in Platform wilt plaatsen, inclusief het pad en de structuur van het bestand. Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van een database of een NoSQL-systeem met behulp van de Flow Service API](../explore/database-nosql.md) voordat u deze zelfstudie probeert.
+Voor deze zelfstudie moet u beschikken over een geldige verbinding met een database van derden en over informatie over het bestand dat u in Platform wilt plaatsen (inclusief het pad en de structuur van het bestand). Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van een database met de Flow Service API](../explore/database-nosql.md) voordat u deze zelfstudie probeert.
 
 Voor deze zelfstudie hebt u ook een goed inzicht in de volgende componenten van het Adobe Experience Platform:
 
@@ -101,7 +101,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `baseConnectionId` | De id van een basisverbinding voor een database of een NoSQL-systeem. |
+| `baseConnectionId` | De id van een databaseverbinding. |
 | `data.schema.id` | Het `$id` ad-hoc XDM-schema. |
 | `params.path` | Het pad van het bronbestand. |
 | `connectionSpec.id` | De id van de verbindingsspecificatie voor een database of een NoSQL-systeem. |
@@ -463,7 +463,7 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing, inclusief de
 }
 ```
 
-## Specificaties voor gegevensstroom opzoeken {#specs}
+## Gegevensstroomspecificaties ophalen {#specs}
 
 Een gegevensstroom is verantwoordelijk voor het verzamelen van gegevens uit bronnen en het brengen van hen in Platform. Om een gegevensstroom tot stand te brengen, moet u eerst de dataflow specificaties verkrijgen door een GET verzoek aan de Dienst API van de Stroom uit te voeren. Dataflow-specificaties zijn verantwoordelijk voor het verzamelen van gegevens van een externe database of een NoSQL-systeem.
 
@@ -648,16 +648,6 @@ curl -X POST \
         ],
         "transformations": [
             {
-                "name": "Copy",
-                "params": {
-                    "deltaColumn": {
-                        "name": "updatedAt",
-                        "dateFormat": "YYYY-MM-DD",
-                        "timezone": "UTC"
-                    }
-                }
-            },
-            {
                 "name": "Mapping",
                 "params": {
                     "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
@@ -675,10 +665,10 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `flowSpec.id` | De gegevensstroomspecificatie-id die aan uw database of NoSQL-systeem is gekoppeld. |
-| `sourceConnectionIds` | De bronverbindings-id die aan uw database of NoSQL-systeem is gekoppeld. |
-| `targetConnectionIds` | De doel verbindings ID verbonden aan uw gegevensbestand of systeem NoSQL. |
-| `transformations.params.mappingId` | De toewijzing-id die aan uw database of NoSQL-systeem is gekoppeld. |
+| `flowSpec.id` | De gegevensstroomspecificatie-id die aan uw database is gekoppeld. |
+| `sourceConnectionIds` | De bronverbindings-id die aan uw database is gekoppeld. |
+| `targetConnectionIds` | De doel verbindings-id die aan uw database is gekoppeld. |
+| `transformations.params.mappingId` | De toewijzing-id die aan uw database is gekoppeld. |
 
 **Antwoord**
 
@@ -692,7 +682,30 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom.
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een bronschakelaar gecreeerd om gegevens van een gegevensbestand of systeem te verzamelen NoSQL op een geplande basis. De inkomende gegevens kunnen nu door de stroomafwaartse diensten van het Platform zoals het Profiel van de Klant in real time en de Werkruimte van de Wetenschap van Gegevens worden gebruikt. Raadpleeg de volgende documenten voor meer informatie:
+Door dit leerprogramma te volgen, hebt u een bronschakelaar gecreeerd om gegevens van een derdegegevensbestand op een geplande basis te verzamelen. De inkomende gegevens kunnen nu door de stroomafwaartse diensten van het Platform zoals het Profiel van de Klant in real time en de Werkruimte van de Wetenschap van Gegevens worden gebruikt. Raadpleeg de volgende documenten voor meer informatie:
 
 * [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
 * [Overzicht van de Data Science Workspace](../../../../data-science-workspace/home.md)
+
+## Aanhangsel
+
+In de volgende sectie worden de verschillende connectors voor bronnen voor cloudopslag en de bijbehorende verbindingsspecificaties weergegeven.
+
+### Verbindingsspecificatie
+
+| Naam van connector | Verbinding, specificatie-id |
+| -------------- | --------------- |
+| Amazon Redshift | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| Apache Hive op Azure HDInsights | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| Apache Spark op Azure HDInsights | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| Azure Data Explorer | `0479cc14-7651-4354-b233-7480606c2ac3` |
+| Azure Synapse Analytics | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
+| Azure Table Storage | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
+| Google BigQuery | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
+| IBM DB2 | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
+| MariaDB | `000eb99-cd47-43f3-827c-43caf170f015` |
+| Microsoft SQL Server | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |
+| MySQL | `26d738e0-8963-47ea-aadf-c60de735468a` |
+| Oracle | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
+| Phoenix | `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| PostgreSQL | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |
