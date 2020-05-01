@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Geaccepteerde naamruimten en kwalificatietekens
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
 
 ---
 
 
 # Aanhangsel
 
-## Standaardnaamruimten
+## Standaardnaamruimten {#standard-namespaces}
 
 Alle identiteiten die naar de Privacy Service worden verzonden moeten onder een specifieke naamruimte worden verstrekt. Identiteitsnaamruimten zijn een onderdeel van de [Adobe Experience Platform Identity Service](../../identity-service/home.md) dat de context aangeeft waarop een identiteit betrekking heeft.
 
