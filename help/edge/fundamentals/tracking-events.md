@@ -4,7 +4,7 @@ seo-title: Gebeurtenissen van Adobe Experience Platform Web SDK bijhouden
 description: Leer hoe te om de gebeurtenissen van het Web SDK van het Platform van de Ervaring te volgen
 seo-description: Leer hoe te om de gebeurtenissen van het Web SDK van het Platform van de Ervaring te volgen
 translation-type: tm+mt
-source-git-commit: 3c6f9663ef5b83ceeb93539171017e2b282a613f
+source-git-commit: 45ee1f79ac5953b7c407083b4352b2c751e8aec9
 
 ---
 
@@ -43,7 +43,7 @@ alloy("event", {
 });
 ```
 
->[!Nofferte]
+>[!NOTE]
 >Er geldt een limiet van 32 kB voor de gegevens die in elke gebeurtenis in het XDM-veld kunnen worden verzonden.
 
 ### Niet-XDM-gegevens verzenden
