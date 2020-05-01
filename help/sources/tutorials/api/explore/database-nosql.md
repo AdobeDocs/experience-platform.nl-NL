@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Een database of NoSQL-systeem verkennen met de Flow Service API
+title: Een database verkennen met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4c34ecdaeb4a0df1faf2dd54e8a264b9126f20b4
+source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
 
 ---
 
 
-# Een database of NoSQL-systeem verkennen met de Flow Service API
+# Een database verkennen met de Flow Service API
 
 De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de Flow Service API om databases of NoSQL-systemen te verkennen.
+Deze zelfstudie gebruikt de Flow Service API om de inhoud en de bestandsstructuur van een database van derden te verkennen.
 
 ## Aan de slag
 
@@ -22,23 +22,11 @@ Voor deze handleiding is een goed begrip vereist van de volgende componenten van
 * [Bronnen](../../../home.md): Het Platform van de ervaring laat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform.
 * [Sandboxen](../../../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met een gegevensbestand of systeem te verbinden NoSQL gebruikend de Dienst API van de Stroom.
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met een derdegegevensbestand gebruikend de Dienst API van de Stroom te verbinden.
 
-### Een basisverbinding verkrijgen
+### Vereiste referenties verzamelen
 
-Als u uw database of NoSQL-systeem wilt verkennen met Platform API&#39;s, moet u over een geldige basis-verbindings-id beschikken. Als u nog geen basisverbinding hebt voor de database of het NoSQL-systeem waarmee u wilt werken, kunt u een verbinding maken via de volgende zelfstudies:
-
-* [Amazon Redshift](../create/databases/redshift.md)
-* [Apache Spark op Azure HDInsights ](../create/databases/spark.md)
-* [Azure Synapse Analytics](../create/databases/synapse-analytics.md)
-* [Azure Table Storage](../create/databases/ats.md)
-* [Google BigQuery](../create/databases/bigquery.md)
-* [Hive](../create/databases/hive.md)
-* [MariaDB](../create/databases/mariadb.md)
-* [MySQL](../create/databases/mysql.md)
-* [Phoenix](../create/databases/phoenix.md)
-* [PostgreSQL](../create/databases/postgres.md)
-* [SQL Server](../create/databases/sql-server.md)
+Deze zelfstudie vereist dat u een geldige verbinding hebt met de database van derden waarvan u gegevens wilt invoeren. Een geldige verbinding heeft betrekking op de verbindingsspecificatie-id en de verbinding-id van uw database. Meer informatie over het creëren van een gegevensbestandverbinding en het terugwinnen van deze waarden kan in het overzicht [van](./../../../home.md#database)bronschakelaars worden gevonden.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -62,7 +50,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Uw gegevenstabellen verkennen
 
-Gebruikend de basisverbinding voor uw gegevensbestand of systeem NoSQL, kunt u uw gegevenslijsten onderzoeken door GET verzoeken uit te voeren. Gebruik de volgende vraag om de weg van de lijst te vinden u wenst om in Platform te inspecteren of in te gaan.
+Gebruikend verbindingsidentiteitskaart voor uw gegevensbestand, kunt u uw gegevenslijsten onderzoeken door GET verzoeken uit te voeren. Gebruik de volgende vraag om de weg van de lijst te vinden u wenst om in Platform te inspecteren of in te gaan.
 
 **API-indeling**
 
@@ -72,13 +60,13 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | De id van een database- of NoSQL-basisverbinding. |
+| `{BASE_CONNECTION_ID}` | De id van een databaseverbinding. |
 
 **Verzoek**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=root' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -87,7 +75,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert een serie van lijsten van uw gegevensbestand of systeem NoSQL terug. Zoek de lijst u in Platform wilt brengen en nota nemen van zijn `path` bezit, aangezien u het in de volgende stap moet verstrekken om zijn structuur te inspecteren.
+Een geslaagde reactie retourneert een array met tabellen uit uw database. Zoek de lijst u in Platform wilt brengen en nota nemen van zijn `path` bezit, aangezien u het in de volgende stap moet verstrekken om zijn structuur te inspecteren.
 
 ```json
 [
@@ -110,7 +98,7 @@ Een succesvolle reactie keert een serie van lijsten van uw gegevensbestand of sy
 
 ## De structuur van een tabel controleren
 
-Om de structuur van een lijst van uw gegevensbestand of systeem te inspecteren NoSQL, voer een GET verzoek uit terwijl het specificeren van de weg van een lijst als vraagparameter.
+Om de structuur van een lijst van uw gegevensbestand te inspecteren, voer een GET verzoek uit terwijl het specificeren van de weg van een lijst als vraagparameter.
 
 **API-indeling**
 
@@ -120,14 +108,14 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | De id van een database- of NoSQL-basisverbinding. |
+| `{BASE_CONNECTION_ID}` | De id van een databaseverbinding. |
 | `{TABLE_PATH}` | Het pad van een tabel. |
 
 **Verzoek**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=table&object=test1.Mytable' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=table&object=test1.Mytable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -164,4 +152,4 @@ Een geslaagde reactie retourneert de structuur van de opgegeven tabel. De detail
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u uw database of systeem NoSQL verkend, het pad van de tabel gevonden die u in Platform wilt opnemen, en hebt u informatie gekregen over de structuur ervan. U kunt deze informatie in de volgende zelfstudie gebruiken om gegevens te [verzamelen van uw database of NoSQL-systeem en deze over te brengen naar Platform](../collect/database-nosql.md).
+Door deze zelfstudie te volgen, hebt u uw database verkend, het pad gevonden van de tabel die u in Platform wilt opnemen en hebt u informatie gekregen over de structuur ervan. U kunt deze informatie in de volgende zelfstudie gebruiken om gegevens te [verzamelen van uw database en deze over te brengen naar Platform](../collect/database-nosql.md).
