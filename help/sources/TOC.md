@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
 
 ---
 
@@ -37,12 +37,15 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
       - [Amazon Redshift-connector](connectors/databases/redshift.md)
       - [Apache Hive op Azure HDInsights-connector](connectors/databases/hive.md)
       - [Apache Spark op Azure HDInsights-connector](connectors/databases/spark.md)
+      - [Azure Data Explorer-connector](connectors/databases/data-explorer.md)
       - [Azure Synapse Analytics-connector](connectors/databases/synapse-analytics.md)
       - [Azure Table Storage-connector](connectors/databases/ats.md)
       - [Google BigQuery-connector](connectors/databases/bigquery.md)
+      - [IBM DB2-connector](connectors/databases/ibm-db2.md)
       - [MariaDB-connector](connectors/databases/mariadb.md)
       - [Microsoft SQL Server-aansluiting](connectors/databases/sql-server.md)
       - [MySQL-connector](connectors/databases/mysql.md)
+      - [Oracle-connector](connectors/databases/oracle.md)
       - [Phoenix-aansluiting](connectors/databases/phoenix.md)
       - [PostgreSQL-connector](connectors/databases/postgres.md)
    - Marketing automatiseren {#marketing-automation}
@@ -70,13 +73,16 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
          - [ServiceNow-connector](tutorials/api/create/customer-success/servicenow.md)
       - Databases {#databases}
          - [Amazon Redshift-connector](tutorials/api/create/databases/redshift.md)
+         - [Apache Hive op Azure HDInsights-connector](tutorials/api/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights-connector](tutorials/api/create/databases/spark.md)
+         - [Azure Data Explorer-connector](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics-connector](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage-connector](tutorials/api/create/databases/ats.md)
          - [Google BigQuery-connector](tutorials/api/create/databases/bigquery.md)
-         - [Hive-aansluiting](tutorials/api/create/databases/hive.md)
+         - [IBM DB2-connector](tutorials/api/create/databases/ibm-db2.md)
          - [MariaDB-connector](tutorials/api/create/databases/mariadb.md)
          - [MySQL-connector](tutorials/api/create/databases/mysql.md)
+         - [Oracle-connector](tutorials/api/create/databases/oracle.md)
          - [Phoenix-aansluiting](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL-connector](tutorials/api/create/databases/postgres.md)
          - [SQL Server-aansluiting](tutorials/api/create/databases/sql-server.md)
@@ -126,16 +132,16 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
          - [ServiceNow-connector](tutorials/ui/create/customer-success/servicenow.md)
       - Databases {#databases}
          - [Amazon Redshift-connector](tutorials/ui/create/databases/redshift.md)
+         - [Apache Hive op Azure HDInsights-connector](tutorials/ui/create/databases/hive.md)
+         - [Apache Spark op Azure HDInsights-connector](tutorials/ui/create/databases/spark.md)
          - [Azure Synapse Analytics-connector](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage-connector](tutorials/ui/create/databases/ats.md)
          - [Google Big Query-connector](tutorials/ui/create/databases/bigquery.md)
-         - [Hive-aansluiting](tutorials/ui/create/databases/hive.md)
          - [MariaDB-connector](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Server-aansluiting](tutorials/ui/create/databases/sql-server.md)
          - [MySQL-connector](tutorials/ui/create/databases/mysql.md)
          - [Phoenix-aansluiting](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL-connector](tutorials/ui/create/databases/postgres.md)
-         - [Vonk](tutorials/ui/create/databases/spark.md)
       - Marketing automatiseren {#marketing-automation}
          - [HubSpot-connector](tutorials/ui/create/marketing-automation/hubspot.md)
       - Betalingen {#payments}
