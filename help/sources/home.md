@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 translation-type: tm+mt
-source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
+source-git-commit: 8ee88b27c79610827ff2627999e303b5fc43e1c6
 
 ---
 
@@ -67,12 +67,15 @@ Het Platform van de ervaring verleent steun voor het opnemen van gegevens van ee
 - [Amazon Redshift-connector](connectors/databases/redshift.md)
 - [Apache Hive op Azure HDInsights-connector](connectors/databases/hive.md)
 - [Apache Spark op Azure HDInsights-connector](connectors/databases/spark.md)
+- [Azure Data Explorer-connector](connectors/databases/data-explorer.md)
 - [Azure Synapse Analytics-connector](connectors/databases/synapse-analytics.md)
 - [Azure Table Storage-connector](connectors/databases/ats.md)
 - [Google BigQuery-connector](connectors/databases/bigquery.md)
+- [IBM DB2-connector](connectors/databases/ibm-db2.md)
 - [MariaDB-connector](connectors/databases/mariadb.md)
 - [Microsoft SQL Server-aansluiting](connectors/databases/sql-server.md)
 - [MySQL-connector](connectors/databases/mysql.md)
+- [Oracle-connector](connectors/databases/oracle.md)
 - [Phoenix-aansluiting](connectors/databases/phoenix.md)
 - [PostgreSQL-connector](connectors/databases/postgres.md)
 
