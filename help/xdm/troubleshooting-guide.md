@@ -4,7 +4,7 @@ solution: Experience Platform
 title: De gids van de het oplossen van problemen van het Systeem van de Gegevens van de Ervaring Model (XDM)
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: f7c87cc86bfc5017ec5c712d05e39be5c14a7147
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -49,7 +49,7 @@ Voor meer informatie over gebiedstypes, zie de [Defining XDM gebiedstypes](api/a
 
 ### Hoe definieer ik identiteiten voor mijn schema?
 
-In het ervaringsplatform worden identiteiten gebruikt om een onderwerp (doorgaans een individuele persoon) te identificeren, ongeacht de bronnen van gegevens die worden geïnterpreteerd. Ze worden in schema&#39;s gedefinieerd door de sleutelvelden als &quot;Identiteit&quot; te markeren. Veelgebruikte velden voor identiteiten zijn e-mailadres, telefoonnummer, [Experience Cloud ID (ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/), CRM-id en andere unieke id-velden.
+In het ervaringsplatform worden identiteiten gebruikt om een onderwerp (doorgaans een individuele persoon) te identificeren, ongeacht de bronnen van gegevens die worden geïnterpreteerd. Ze worden in schema&#39;s gedefinieerd door de sleutelvelden als &quot;Identiteit&quot; te markeren. Veelgebruikte velden voor identiteiten zijn e-mailadres, telefoonnummer, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM-id en andere unieke id-velden.
 
 Velden kunnen als id&#39;s worden gemarkeerd met de API of de gebruikersinterface.
 
