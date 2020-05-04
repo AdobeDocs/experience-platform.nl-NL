@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform ECID
 topic: overview
 translation-type: tm+mt
-source-git-commit: f005adc4dbb72d4f211e7dca56cd9011ecd3546d
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -19,9 +19,9 @@ De Experience Cloud Identifier (ECID) is de clientmodule die toegang biedt tot i
 
 Om uw onlinegebruikers te identificeren, moet u uw site of mobiele app van instrumentatie voorzien met de ECID, die een universele en permanente id biedt waarmee uw bezoekers op alle oplossingen in het Adobe Experience Platform kunnen worden geïdentificeerd.
 
-Als u met een website-implementatie werkt, verkent u de bronnen [hier](https://marketing.adobe.com/resources/help/en_US/mcvid).
+Als u met een website-implementatie werkt, verkent u de bronnen [hier](https://docs.adobe.com/content/help/en/id-service/using/home.html).
 
-Als u met een mobiele app werkt, kunt u zien hoe ECID wordt gebruikt om bezoekers te [volgen tussen een app en een mobiel web](https://marketing.adobe.com/resources/help/en_US/mobile/ios/hybrid_app.html).
+Als u met een mobiele app werkt, kunt u zien hoe ECID wordt gebruikt om bezoekers te [volgen tussen een app en een mobiel web](https://docs.adobe.com/content/help/en/mobile-services/ios/sdk-reference-ios/hybrid-app.html).
 
 Het implementeren van deze gereedschappen kan eenvoudig en eenvoudig te beheren zijn als u [Adobe Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)gebruikt.
 
