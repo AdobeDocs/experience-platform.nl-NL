@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een schema maken met de API voor schemaregistratie
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -951,7 +951,7 @@ Het uitvoeren van een GET verzoek om het schema op te zoeken toont nu de verwijz
 
 De schema&#39;s worden gebruikt voor het opnemen van gegevens in het Platform van de Ervaring. Dit gegeven wordt uiteindelijk gebruikt over de veelvoudige diensten om één enkele, verenigde mening van een individu tot stand te brengen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;Identiteit&quot;worden gemerkt en, bij gegevensinvoer, worden de gegevens in die gebieden opgenomen in de Grafiek van de Identiteit voor dat individu. De grafiekgegevens kunnen dan door het Profiel [van de Klant in](../../profile/home.md) real time en de andere diensten van het Platform van de Ervaring worden betreden om een gegeneerde samen mening van elke individuele klant te verstrekken.
 
-Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [Experience Cloud ID (ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/), CRM-id of andere unieke id-velden.
+Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM-id of andere unieke id-velden.
 
 Houd rekening met alle unieke id&#39;s die specifiek zijn voor uw organisatie, omdat dit ook goede identiteitsvelden kunnen zijn.
 
