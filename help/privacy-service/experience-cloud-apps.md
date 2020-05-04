@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service en Experience Cloud-toepassingen
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -27,12 +27,12 @@ Hieronder volgt een lijst met Experience Cloud-toepassingen die zijn geïntegree
 | Toepassing | Toegang/verwijderen | Uitschakelen van verkoop | Documentatie en overwegingen |
 --- | :---: | :---: | ---
 | Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Documentatie openen/verwijderen](https://docs.adobe.com/content/help/en/advertising-cloud/all/privacy/ad-cloud-gdpr.html) </li><li>Advertising Cloud maakt gebruik van bestaande wereldwijde opt-out-mogelijkheden van het Adobe Privacy Center. Zie de handleiding over het [maken van privacyverzoeken](https://docs.adobe.com/content/help/en/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests) voor gegevens voor meer informatie.</li></ul> |
-| Adobe Analytics | ✓ | ✓ | <ul><li>[Documentatie openen/verwijderen](https://marketing.adobe.com/resources/help/en_US/analytics/gdpr/index.html)</li><li>Analytics verwerkt opt-out-aanvragen met behulp van variabelen voor [privacyrapportage](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/consent-variables.html)</li></ul> |
-| Adobe Audience Manager | ✓ | ✓ | <ul><li>[Documentatie openen/verwijderen](https://marketing.adobe.com/resources/help/en_US/aam/aam-gdpr.html)</li><li>[Documentatie bij uitsluiting](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
-| Adobe Campagne Standard | ✓ | ✓ | <ul><li>[Documentatie openen/verwijderen](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[Documentatie bij uitsluiting](../segmentation/honoring-opt-outs.md)</li></ul> |
+| Adobe Analytics | ✓ | ✓ | <ul><li>[Documentatie openen/verwijderen](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>Analytics verwerkt opt-out-aanvragen met behulp van variabelen voor [privacyrapportage](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/consent-variables.html)</li></ul> |
+| Adobe Audience Manager | ✓ | ✓ | <ul><li>[Documentatie openen/verwijderen](https://docs.adobe.com/content/help/en/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentatie bij uitsluiting](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
+| Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Documentatie openen/verwijderen](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[Documentatie bij uitsluiting](../segmentation/honoring-opt-outs.md)</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | <ul><li>[Toegang tot/verwijdering van documentatie voor het Data Lake](../catalog/privacy.md)</li><li>[Documentatie voor realtime-klantprofiel openen/verwijderen](../profile/privacy.md)</li><li>Het Platform van de ervaring neemt [opt-out verzoeken voor publiekssegmenten](../segmentation/honoring-opt-outs.md)in acht.</li></ul> |
 | Adobe Primetime-verificatie | ✓ | N.v.t. | <ul><li>[Documentatie openen/verwijderen](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Primetime beschikt niet over de mogelijkheid om gegevens over te dragen, en daarom zijn aanvragen om te weigeren van verkoop niet van toepassing.</li></ul> |
-| Adobe-doel | ✓ | N.v.t. | <ul><li>[Documentatie openen/verwijderen](https://marketing.adobe.com/resources/help/en_US/target/target/privacy-and-general-data-protection-regulation.html)</li><li>Het doel beschikt niet over de mogelijkheid om gegevens over te dragen, zodat aanvragen om niet in de handel te worden genomen niet van toepassing zijn.</li></ul> |
+| Adobe-doel | ✓ | N.v.t. | <ul><li>[Documentatie openen/verwijderen](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>Het doel beschikt niet over de mogelijkheid om gegevens over te dragen, zodat aanvragen om niet in de handel te worden genomen niet van toepassing zijn.</li></ul> |
 
 <!-- (To include once access/delete documentation is available)
 Adobe Customer Attributes (CRS) | ✓ | N/A | <ul><li>Customer Attributes does not have the capability to transfer data, therefore opt-out-of-sale requests are not applicable.</li></ul>
@@ -45,8 +45,7 @@ Hieronder volgt een lijst met Experience Cloud-toepassingen die niet zijn geïnt
 | Toepassing | Documentatiebeschrijving |
 | ------- | ----------- |
 | [Adobe Campaign Classic](https://docs.campaign.adobe.com/doc/AC/getting_started/EN/ACC_GDPR.html) | Een overzicht van de GDPR-functies voor Adobe Campaign Classic. |
-| [Adobe Dynamic Tag Manager](https://marketing.adobe.com/resources/help/en_US/dtm/opt-in.html) | Stappen om te voorkomen dat Adobe-tags worden geactiveerd totdat de toestemming is verkregen. |
+| [Adobe Dynamic Tag Manager](https://docs.adobe.com/content/help/en/dtm/using/tools/opt-in.html) | Stappen om te voorkomen dat Adobe-tags worden geactiveerd totdat de toestemming is verkregen. |
 | [Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-4/managing/using/gdpr-compliance.html) | Een overzicht van hoe een beheerder van de klantenprivacy of beheerder AEM GDPR- verzoeken kan behandelen. |
-| [Adobe Experience Manager Live](https://marketing.adobe.com/resources/help/en_US/livefyre/c_gdpr_compliance.html) | Stappen voor het maken van GDPR toegang en schrapping verzoeken gebruikend Livefyre. |
+| [Adobe Experience Manager Live](https://docs.adobe.com/content/help/en/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Stappen voor het maken van GDPR toegang en schrapping verzoeken gebruikend Livefyre. |
 | [Adobe Experience Platform Launch](https://docs.adobelaunch.com/client-side-information/deploy-javascript-tags-to-opt-in-to-launch) | Hoe ontwikkelaars uitbreidingen en de regelbouwer kunnen gebruiken om opt-in en opt-out oplossingen te bepalen. |
-| [Adobe Social](https://marketing.adobe.com/resources/help/en_US/social/c_gdpr-request.html) | Stappen voor het gebruik van het GDPR-aanvraagformulier voor toegang tot of verwijdering van door Social verzamelde gegevens. |
