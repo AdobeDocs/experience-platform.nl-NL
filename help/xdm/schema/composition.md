@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Basisbeginselen van de schemacompositie
 topic: overview
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -60,7 +60,7 @@ De schema&#39;s worden gebruikt voor het opnemen van gegevens in het Platform va
 
 Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;Identiteit&quot;worden gemerkt. Bij gegevensinvoer worden de gegevens in die velden ingevoegd in de &quot;Identiteitsgrafiek&quot; voor die persoon. De grafiekgegevens kunnen dan door het Profiel [van de Klant in](../../profile/home.md) real time en de andere diensten van het Platform van de Ervaring worden betreden om een geneutraliseerde mening van elke individuele klant te verstrekken.
 
-Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [Experience Cloud ID (ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/), CRM-id of andere unieke id-velden. U moet ook rekening houden met eventuele unieke id&#39;s die specifiek zijn voor uw organisatie, omdat deze ook goede velden voor &#39;Identiteit&#39; kunnen zijn.
+Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM-id of andere unieke id-velden. U moet ook rekening houden met eventuele unieke id&#39;s die specifiek zijn voor uw organisatie, omdat deze ook goede velden voor &#39;Identiteit&#39; kunnen zijn.
 
 Het is belangrijk om over klantenidentiteiten tijdens de schema planningsfase te denken helpen ervoor zorgen de gegevens worden samengebracht om het meest robuuste profiel mogelijk te bouwen. Zie het overzicht [van de](../../identity-service/home.md) Identiteitsdienst voor meer informatie over hoe de identiteitsinformatie u kan helpen digitale ervaringen aan uw klanten leveren.
 
