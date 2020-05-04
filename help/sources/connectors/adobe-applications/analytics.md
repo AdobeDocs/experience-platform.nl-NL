@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gegevensconnector Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -23,9 +23,7 @@ Adobe Analytics is een krachtige engine waarmee u meer kunt leren over uw klante
 
 Op hoog niveau verzamelt Adobe Analytics gegevens via verschillende digitale kanalen en meerdere datacenters over de hele wereld. Zodra de gegevens zijn verzameld, worden de regels van Visitor Identification, Segmentation and Transformation Architecture (VISTA) en de verwerkingsregels toegepast om de inkomende gegevens vorm te geven. Nadat de ruwe gegevens door deze lichte verwerking zijn gegaan, wordt het dan beschouwd klaar voor consumptie door het Profiel van de Klant in real time. In een proces parallel aan het bovengenoemde, worden de zelfde verwerkte gegevens microbatched en opgenomen in de datasets van het Platform voor consumptie door de Werkruimte van de Wetenschap van Gegevens, de Dienst van de Vraag, en andere gegevens-ontdekkingstoepassingen.
 
-Zie de volgende documenten voor meer informatie over VISTA en verwerkingsregels:
-* [Overzicht van VISTA-regels](https://marketing.adobe.com/resources/help/en_US/reference/VISTA.html)
-* [Overzicht van verwerkingsregels](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules.html)
+Zie Overzicht [van](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules.html) verwerkingsregels voor meer informatie over verwerkingsregels.
 
 ## Experience Data Model (XDM)
 
