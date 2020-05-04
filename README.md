@@ -1,9 +1,14 @@
 ---
-source-git-commit: 792d6962154a8cdca74b3c4e72d6f7a7663cbd6f
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 translation-type: tm+mt
 
 ---
 # Inhoud bijdragen
+
+| Productie | Werkgebied |
+|---|---|
+| [![Status samenstellen](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/lastBuild) | [![Status samenstellen](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/lastBuild) |
+| [Uitvoerpod](https://docs.adobe.com/content/help/en/experience-platform/landing/home.html) | [Uitvoerinstelling](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/landing/home.html) |
 
 Wij verwelkomen de bijdragen van onze gemeenschap en medewerkers van Adobe buiten de documentatieteams.
 
