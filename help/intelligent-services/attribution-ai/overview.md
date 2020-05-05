@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht AI-kenmerken
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -22,6 +22,10 @@ Kenmerk-AI-uitvoer kan in verschillende dimensies worden gescheiden en kan in ve
 Attribution AI-gegevens kunnen afkomstig zijn van Adobe (bijvoorbeeld Analytics) of niet-Adobe-gegevensbronnen.
 
 Kenmerken-AI ondersteunt twee categorieën scores, algoritmische en op regels gebaseerde. Algoritmische scores omvatten incrementele en beïnvloede scores. Op regels gebaseerde scores zijn onder andere First touch, Last touch, Linear, U-shaped en Time-Decay.
+
+De volgende video is ontworpen om uw begrip van Attribution AI te steunen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
 
 ## Attributie AI-algoritmische scores
 
