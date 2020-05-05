@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Overzicht van intelligente services
 topic: Intelligent Services overview
 translation-type: tm+mt
-source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
+source-git-commit: c9d1fca0b14607f83657d5d8a751c2d0cc46bea0
 
 ---
 
 
 # Overzicht van intelligente services
 
-Intelligente services stellen marketinganalisten en praktijkmensen in staat om gebruik te maken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen van de klantervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap. Daarnaast kunnen marketingprofessionals voorspellingen activeren in Adobe Experience Cloud, Adobe Experience Platform en toepassingen van derden.
+Intelligente services stellen marketinganalisten en praktijkmensen in staat om gebruik te maken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen van de klantervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap. Daarnaast kunnen marketingmedewerkers voorspellingen activeren in Adobe Experience Cloud, Adobe Experience Platform en toepassingen van derden.
+
+De volgende video is ontworpen om uw begrip van de Intelligente Diensten te steunen. In deze video wordt met voorbeelden van gevallen van zakelijk gebruik een workflow op hoog niveau uitgelegd en worden de mogelijkheden van zowel Attribution AI als Customer AI beschreven.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
 ## Voordelen van intelligente services
 
