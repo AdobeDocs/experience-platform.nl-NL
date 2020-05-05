@@ -4,7 +4,7 @@ seo-title: Gebeurtenissen van Adobe Experience Platform Web SDK bijhouden
 description: Leer hoe te om de gebeurtenissen van het Web SDK van het Platform van de Ervaring te volgen
 seo-description: Leer hoe te om de gebeurtenissen van het Web SDK van het Platform van de Ervaring te volgen
 translation-type: tm+mt
-source-git-commit: 45ee1f79ac5953b7c407083b4352b2c751e8aec9
+source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
 
 ---
 
@@ -81,35 +81,6 @@ alloy("event", {
 });
 ```
 
-### Een weergave starten
-
-Wanneer een mening is begonnen, is het belangrijk om SDK op de hoogte te brengen door `viewStart` aan `true` binnen het `event` bevel te plaatsen. Dit geeft onder andere aan dat de SDK gepersonaliseerde inhoud moet ophalen en renderen. Zelfs als u momenteel geen verpersoonlijking gebruikt, vereenvoudigt het zeer het toelaten van verpersoonlijking of andere eigenschappen later omdat u niet zal worden vereist om code op pagina te wijzigen. Daarnaast is het nuttig om weergaven te volgen wanneer u analyserapporten weergeeft nadat gegevens zijn verzameld.
-
-De definitie van een weergave kan afhankelijk zijn van de context.
-
-* In een gewone website wordt elke webpagina doorgaans beschouwd als een unieke weergave. In dit geval moet een gebeurtenis met de `viewStart` instelling `true` zo snel mogelijk boven aan de pagina worden uitgevoerd.
-* In één paginatoepassing \(SPA\), is een mening minder bepaald. Dit betekent doorgaans dat de gebruiker binnen de toepassing is genavigeerd en dat de meeste inhoud is gewijzigd. Voor degenen die vertrouwd zijn met de technische grondslagen van toepassingen die uit één pagina bestaan, is dit doorgaans wanneer de toepassing een nieuwe route laadt. Wanneer een gebruiker naar een nieuwe weergave gaat, nochtans u verkiest om een _mening_ te bepalen, zou een gebeurtenis met `viewStart` reeks aan `true` moeten worden uitgevoerd.
-
-De gebeurtenis met `viewStart` set to `true` is het belangrijkste mechanisme voor het verzenden van gegevens naar de Adobe Experience Cloud en het aanvragen van inhoud van de Adobe Experience Cloud. Zo begint u een weergave:
-
-```javascript
-alloy("event", {
-  "viewStart": true,
-  "xdm": {
-    "commerce": {
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3",
-        "purchaseOrderNumber": "VAU3123",
-        "currencyCode": "USD",
-        "priceTotal": 999.98
-      }
-    }
-  }
-});
-```
-
-Nadat gegevens zijn verzonden, reageert de server onder andere met gepersonaliseerde inhoud. Deze gepersonaliseerde inhoud wordt automatisch gerenderd in uw weergave. Koppelingshandlers worden ook automatisch gekoppeld aan de inhoud van de nieuwe weergave.
-
 ## De sendBeacon-API gebruiken
 
 Het kan lastig zijn om gebeurtenisgegevens te verzenden vlak voordat de gebruiker van de webpagina weg is genavigeerd. Als de aanvraag te lang duurt, kan de browser de aanvraag annuleren. Sommige browsers hebben een webstandaard-API geïmplementeerd, die wordt aangeroepen `sendBeacon` om gegevens tijdens deze periode gemakkelijker te kunnen verzamelen. Wanneer `sendBeacon`de browser wordt gebruikt, wordt de webaanvraag uitgevoerd in de algemene browsercontext. Dit betekent browser maakt het bakenverzoek op de achtergrond en houdt niet de paginanavigatie op. Als u de Adobe Experience Platform Web SDK wilt laten gebruiken, voegt u de optie toe `sendBeacon``"documentUnloading": true` aan de gebeurtenisopdracht.  Hier volgt een voorbeeld:
@@ -138,7 +109,7 @@ Als u een reactie van een gebeurtenis wilt afhandelen, kunt u als volgt op de ho
 
 ```javascript
 alloy("event", {
-  "viewStart": true,
+  "renderDecisions": true,
   "xdm": {
     "commerce": {
       "order": {
@@ -149,7 +120,7 @@ alloy("event", {
       }
     }
   }
-}).then(function() {
+}).then(function(results) {
     // Tracking the event succeeded.
   })
   .catch(function(error) {
