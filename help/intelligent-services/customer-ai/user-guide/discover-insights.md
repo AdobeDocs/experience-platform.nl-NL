@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Informatie over inzichten met Customer AI
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -122,3 +122,9 @@ Als u het nieuwe segment wilt weergeven in de interface van het platform, klikt 
 ## Volgende stappen
 
 In dit document worden de inzichten geschetst die door een AI-serviceexemplaar van een klant worden verschaft. U kunt nu doorgaan met de zelfstudie over het [downloaden van scores in Customer AI](./download-scores.md) of door de andere gidsen van [Adobe Intelligent Services](../../home.md) bladeren die worden aangeboden.
+
+## Aanvullende bronnen
+
+In de volgende video wordt beschreven hoe u de uitvoer van de modellen en invloedrijke factoren kunt bekijken aan de hand van Customer AI.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)
