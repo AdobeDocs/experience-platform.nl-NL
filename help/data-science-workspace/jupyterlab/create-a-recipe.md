@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een recept maken met Jupyter-laptops
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -22,7 +22,7 @@ Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst, zult u een machine
 
 ## Aan de slag met de JupyterLab-laptopomgeving
 
-U kunt een geheel nieuw recept maken in de Data Science Workspace. Ga om te beginnen naar [Adobe Experience Platform](https://platform.adobe.com) en klik op het tabblad **ML-modellen** links om naar de Data Science Workspace te gaan. Van hier, klik op het sub-lusje van **Notities** en op het Jupyterlab lanceerscherm, creeer een nieuw notitieboekje door het Recipe malplaatje van de Bouwer te selecteren.
+U kunt een geheel nieuw recept maken in de Data Science Workspace. Navigeer naar het [Adobe Experience Platform](https://platform.adobe.com) en klik op het **[!UICONTROL Notebooks]** tabblad aan de linkerkant. Maak een nieuw notebook door de Recipe Builder-sjabloon te selecteren in de JupyterLauncher.
 
 Met de Recipe Builder-laptop kunt u trainingen en scoring uitvoeren in de laptop. Dit geeft u de flexibiliteit om veranderingen in hun `train()` en `score()` methodes tussen het runnen van experimenten op de opleiding en het scoren gegevens aan te brengen. Als u tevreden bent met de resultaten van de training en scoring, kunt u een recept maken voor gebruik in de Data Science Workspace met behulp van de laptop voor de receptionfunctionaliteit die is ingebouwd in de Recipe Builder-laptop.
 
@@ -474,7 +474,7 @@ Door deze zelfstudie te voltooien, hebt u geleerd hoe u een model voor computerl
 
 Als u wilt blijven leren werken met bronnen in de Data Science Workspace, gaat u naar de recepten en vervolgkeuzelijst voor de Data Science Workspace.
 
-## Additional resources {#additional-resources}
+## Aanvullende bronnen {#additional-resources}
 
 De volgende video is ontworpen om uw inzicht in het bouwen en implementeren van modellen te ondersteunen.
 
