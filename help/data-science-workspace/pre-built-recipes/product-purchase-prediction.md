@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Product kooprecept
 topic: overview
 translation-type: tm+mt
-source-git-commit: f548fb6431b7bc71c205a2b2b7ca3884e57340b1
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -56,6 +56,6 @@ In dit recept worden [XDM-schema&#39;s](../../xdm/home.md) gebruikt om de gegeve
 
 ## Algorithm
 
-Eerst, wordt de trainingsdataset in het **ProductPrediction** schema geladen. Van hier, wordt het model getraind gebruikend een [willekeurige bosclassificator](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random forest classifier is een type gecodeerd algoritme dat verwijst naar een algoritme dat meerdere algoritmen combineert om betere voorspellende prestaties te verkrijgen. Het idee achter het algoritme is dat de willekeurige bosclassificator veelvoudige besluitvormingsbomen bouwt en hen samenvoegt om een nauwkeurigere en stabielere voorspelling tot stand te brengen.
+Eerst, wordt de trainingsdataset in het *ProductPrediction* schema geladen. Van hier, wordt het model getraind gebruikend een [willekeurige bosclassificator](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random forest classifier is een type gecodeerd algoritme dat verwijst naar een algoritme dat meerdere algoritmen combineert om betere voorspellende prestaties te verkrijgen. Het idee achter het algoritme is dat de willekeurige bosclassificator veelvoudige besluitvormingsbomen bouwt en hen samenvoegt om een nauwkeurigere en stabielere voorspelling tot stand te brengen.
 
 Dit proces begint met het maken van een reeks beslissingsstructuren die willekeurig subsets van trainingsgegevens selecteren. Daarna wordt het gemiddelde van de resultaten van elke beslissingsboom genomen.
