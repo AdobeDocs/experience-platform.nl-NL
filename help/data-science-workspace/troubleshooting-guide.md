@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding voor het oplossen van problemen in de Data Science Workspace
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: ef7c37438990d3bc42024e7fb106d781a5ebbd12
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -37,7 +37,7 @@ Schakel ten slotte &quot;Cookies van derden blokkeren&quot; in op &quot;UIT&quot
 
 >[!NOTE] U kunt cookies en whitelist van derden ook uitschakelen [*.]ds.adobe.net
 
-Ga naar &quot;chrome://flags/&quot; op de adresbalk. U kunt de markering *&quot;SameSite by default cookies&quot;* zoeken en uitschakelen in het vervolgkeuzemenu rechts.
+Ga naar &quot;chrome://flags/&quot; op de adresbalk. U kunt de markering *&quot;SameSite door standaardcookies&quot;* zoeken en uitschakelen in het vervolgkeuzemenu rechts.
 
 ![markering samensite uitschakelen](./images/faq/samesite-flag.png)
 
@@ -103,4 +103,4 @@ U kunt bronnen configureren door het volgende blok toe te voegen aan de eerste c
 }
 ```
 
-Voor meer informatie over de het middelconfiguratie van de cluster van de Vonk, met inbegrip van de volledige lijst van configureerbare eigenschappen, zie de Gids [van de Gebruiker](./jupyterlab/overview.md#pyspark-spark-execution-resource)JupyterLab.
+Voor meer informatie over de het middelconfiguratie van de cluster van de Vonk, met inbegrip van de volledige lijst van configureerbare eigenschappen, zie de Gids [van de Gebruiker](./jupyterlab/overview.md#kernels)JupyterLab.
