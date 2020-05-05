@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van de Data Science Workspace
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -114,7 +114,7 @@ De Werkruimte van de Wetenschap van gegevens volgt waar de intelligente diensten
 
 ### Toegang tot nieuwe functies en datasets
 
-Gegevenswetenschappers kunnen profiteren van nieuwe technologieën en datasets zodra deze beschikbaar zijn via Adobe-services. Door regelmatige updates, doen wij het werk om datasets en technologieën in het platform te integreren, zodat moet u niet.
+Gegevenswetenschappers kunnen profiteren van nieuwe technologieën en gegevenssets zodra deze beschikbaar zijn via Adobe-services. Door regelmatige updates, doen wij het werk om datasets en technologieën in het platform te integreren, zodat moet u niet.
 
 ### Toegangsbeheer in de werkruimte voor gegevenswetenschap
 
@@ -172,7 +172,6 @@ Alle gegevens in het Adobe Experience Platform voldoen aan een gestandaardiseerd
 Als u niet onmiddellijk de gegevens vindt u wenst, maar het bestaat buiten het Platform van de Ervaring van Adobe, is het een vrij eenvoudige taak om extra datasets in te voeren, die ook in het gestandaardiseerde XDM schema zal omzetten.\
 U kunt Jupyter-laptop gebruiken om de verwerking van gegevens te vereenvoudigen, mogelijk te beginnen met een laptopsjabloon of een laptop die u eerder hebt gebruikt als koopkracht.
 
-<!-- databricks update-->
 ![](./images/home/notebook_templates.png)
 
 ### Auteur van het recept
