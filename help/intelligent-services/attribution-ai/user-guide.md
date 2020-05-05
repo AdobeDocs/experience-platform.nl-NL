@@ -4,7 +4,7 @@ solution: Experience Platform
 title: gebruikershandleiding voor Attributie AI
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
 
 ---
 
@@ -174,3 +174,9 @@ Als u uw trainingsvenster hebt geselecteerd, klikt u op **Voltooien** in de rech
 ## Volgende stappen
 
 Aan de hand van deze zelfstudie hebt u een service-instantie gemaakt in Attribution AI. Zodra de instantie het scoren heeft voltooid (maximaal 24 uur toestaan), bent u klaar om de Inzichten van Attribution AI te [ontdekken](./discover-insights.md). Als u de resultaten van uw scores wilt downloaden, gaat u ook naar de documentatie over het [downloaden van onbewerkte scores](./download-scores.md) .
+
+## Aanvullende bronnen
+
+In de volgende video wordt een end-to-end workflow beschreven voor het maken van een nieuwe instantie in Attribution AI.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
