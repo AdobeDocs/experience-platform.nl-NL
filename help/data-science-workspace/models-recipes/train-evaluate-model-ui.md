@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een model trainen en evalueren (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -17,48 +17,48 @@ Deze zelfstudie doorloopt de stappen voor het maken, trainen en evalueren van ee
 
 ## Aan de slag
 
-Als u deze zelfstudie wilt voltooien, hebt u toegang nodig tot Experience Platform. Als u geen toegang tot een IMS Organisatie in het Platform van de Ervaring hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
+Als u deze zelfstudie wilt voltooien, hebt u toegang nodig tot Experience Platform. Als u geen toegang hebt tot een IMS-organisatie in het ervaringsplatform, neemt u contact op met uw systeembeheerder voordat u verdergaat.
 
 Voor deze zelfstudie is een bestaande ontvanger vereist. Als u geen Ontvanger hebt, volg de [Invoer een verpakte Ontvanger in de zelfstudie UI](./import-packaged-recipe-ui.md) alvorens verder te gaan.
 
 ## Een model maken
 
-1. Klik in het Adobe Experience Platform op de koppeling **Modellen** in de linkernavigatiekolom om alle bestaande modellen weer te geven. Klik op Model **** maken rechtsboven op de pagina om een ontwerpproces te starten.
+1. Klik in het Adobe Experience Platform op de **[!UICONTROL Models]** koppeling in de linkernavigatiekolom om alle bestaande modellen weer te geven. Klik **[!UICONTROL Create Model]** rechtsboven op de pagina om een modelontwerpproces te starten.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Blader door de lijst met bestaande ontvangers, zoek en selecteer de ontvanger die u wilt gebruiken om het model te maken en klik op **Volgende**.
+2. Blader door de lijst met bestaande ontvangers, zoek en selecteer de ontvanger die u wilt gebruiken om het model te maken en klik **[!UICONTROL Next]**.
    ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-3. Selecteer een geschikte invoergegevensset en klik op **Volgende**. Hiermee wordt de standaardgegevensset voor de invoertraining voor het model ingesteld.
+3. Selecteer een juiste invoergegevensset en klik op **[!UICONTROL Next]**. Hiermee wordt de standaardgegevensset voor de invoertraining voor het model ingesteld.
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-4. Geef een naam op voor het model en bekijk de standaardmodelconfiguraties. De standaardconfiguraties zijn toegepast tijdens het maken van Recipe, herzie en wijzig de configuratiewaarden door op de waarden te dubbelklikken. Als u een nieuwe set configuraties wilt opgeven, klikt u op **Nieuwe configuratie** uploaden en sleept u een JSON-bestand met Modelconfiguraties naar het browservenster. Klik op **Voltooien** om het model te maken.
+4. Geef een naam op voor het model en bekijk de standaardmodelconfiguraties. De standaardconfiguraties zijn toegepast tijdens het maken van Recipe, herzie en wijzig de configuratiewaarden door op de waarden te dubbelklikken. Als u een nieuwe set configuraties wilt opgeven, klikt u op een JSON-bestand met modelconfiguraties **[!UICONTROL Upload New Config]** en sleept u dit naar het browservenster. Klik **[!UICONTROL Finish]** om het model te maken.
    >[!NOTE]Configuraties zijn uniek en specifiek voor de beoogde geadresseerde. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Recipe Product Recommendations. Zie de [verwijzingssectie](#reference) voor een lijst van de configuraties van de Ontvanger van de Verkoop Retail.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Een trainingsrun maken
 
-1. Klik in het Adobe Experience Platform op de koppeling **Modellen** in de linkernavigatiekolom om alle bestaande modellen weer te geven. Zoek en klik op de naam van het model dat u wilt opleiden.
+1. Klik in het Adobe Experience Platform op de **[!UICONTROL Models]** koppeling in de linkernavigatiekolom om alle bestaande modellen weer te geven. Zoek en klik op de naam van het model dat u wilt opleiden.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Alle bestaande trainingsprogramma&#39;s met hun huidige trainingsstatus worden weergegeven. Voor Modellen die worden gecreeerd gebruikend het gebruikersinterface van de Werkruimte van de Wetenschap van Gegevens, wordt een opleidingslooppas automatisch geproduceerd en uitgevoerd gebruikend de standaardconfiguraties en de dataset van de inputopleiding.
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-3. Maak een nieuwe training door op **Training** te klikken rechtsboven op de overzichtspagina Model.
+3. Maak een nieuwe training door **[!UICONTROL Train]** rechtsboven op de pagina Modeloverzicht te klikken.
    ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-4. Selecteer de dataset van de trainingsinput voor de trainingslooppas en klik **daarna**.
+4. Selecteer de dataset van de opleidingsinput voor de trainingslooppas en klik **[!UICONTROL Next]**.
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
-5. De standaardconfiguraties die tijdens de creatie van het Model worden verstrekt worden getoond, veranderen en wijzigen dienovereenkomstig door de waarden tweemaal te klikken. Klik op **Voltooien** om de trainingsrun te maken en uit te voeren.
+5. De standaardconfiguraties die tijdens de creatie van het Model worden verstrekt worden getoond, veranderen en wijzigen dienovereenkomstig door de waarden tweemaal te klikken. Klik **[!UICONTROL Finish]** om de trainingsrun te maken en uit te voeren.
    >[!NOTE]Configuraties zijn uniek en specifiek voor de beoogde geadresseerde. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Recipe Product Recommendations. Zie de [verwijzingssectie](#reference) voor een lijst van de configuraties van de Ontvanger van de Verkoop Retail.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## Het model evalueren
 
-1. Klik in het Adobe Experience Platform op de koppeling **Modellen** in de linkernavigatiekolom om alle bestaande modellen weer te geven. Zoek en klik op de naam van het te evalueren model.
+1. Klik in het Adobe Experience Platform op de **[!UICONTROL Models]** koppeling in de linkernavigatiekolom om alle bestaande modellen weer te geven. Zoek en klik op de naam van het te evalueren model.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Alle bestaande trainingsprogramma&#39;s met hun huidige trainingsstatus worden weergegeven. Met veelvoudige voltooide trainingslooppas, kunnen de evaluatiemetriek over verschillende opleidingslooppas in de Model beoordelinggrafiek worden vergeleken, selecteer evaluatiemetrisch gebruikend dropdown lijst boven de grafiek.
@@ -98,7 +98,7 @@ Aanvullende parameters bepalen de technische eigenschappen van het model:
 | `ACP_DSW_INPUT_FEATURES` | String | Lijst met door komma&#39;s gescheiden invoerschemakenmerken. |
 | `ACP_DSW_TARGET_FEATURES` | String | Lijst met door komma&#39;s gescheiden kenmerken van het uitvoerschema. |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Boolean | Hiermee wordt bepaald of invoer- en uitvoerfuncties kunnen worden gewijzigd |
-| `tenantId` | String | Deze id zorgt ervoor dat bronnen die u maakt, op de juiste wijze worden benoemd en zich binnen uw IMS-organisatie bevinden. [Volg de stappen hier](../../xdm/api/getting-started.md#know-your-tenant-id) om uw huurder te vinden identiteitskaart |
+| `tenantId` | String | Deze id zorgt ervoor dat bronnen die u maakt, op de juiste wijze worden benoemd en zich binnen uw IMS-organisatie bevinden. [Volg de stappen hier](../../xdm/api/getting-started.md#know-your-tenant_id) om uw huurder te vinden identiteitskaart |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | String | Het invoerschema dat wordt gebruikt voor het trainen van een model. |
 | `evaluation.labelColumn` | String | Kolomlabel voor evaluatievisualisaties. |
 | `evaluation.metrics` | String | Door komma&#39;s gescheiden lijst met evaluatiemetriek die moet worden gebruikt voor de evaluatie van een model. |
