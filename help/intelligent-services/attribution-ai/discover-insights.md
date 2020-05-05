@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Inzichten in Attributie AI opzoeken
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -152,3 +152,9 @@ De *bovenste campagnerekaart* geeft een overzicht van uw campagnes en hoe de cam
 ## Volgende stappen
 
 Wanneer u de gegevens hebt gefilterd en de juiste gegevens hebt kunnen weergeven, hebt u de mogelijkheid om toegang te krijgen tot de scores. Ga naar de [toegangsscores in de zelfstudie Attribution AI](./download-scores.md) voor een uitgebreide handleiding over het openen van uw scores. Bovendien kunt u de samenvattingsgegevens ook downloaden, zoals aangegeven in [meer acties](#more-actions). Als u Samenvattingsgegevens downloaden selecteert, worden de samengevoegde gegevens gedownload op datums.
+
+## Aanvullende bronnen
+
+De volgende video is ontworpen om u te helpen bij het leren hoe u de pagina Kenmerken AI-inzichten kunt gebruiken om inzicht te krijgen in de ROI van marketingkanalen en campagnes.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
