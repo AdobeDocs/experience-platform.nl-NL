@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK snel aan de slag met Starten
 description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Platform van de Ervaring om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Platform van de Ervaring om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
 
 ---
 
@@ -32,14 +32,11 @@ Om gegevens naar het Platform van de Ervaring van Adobe te kunnen verzenden, moe
 - Voeg de Adobe Experience Platform Web SDK-mix toe aan het schema dat u hebt gemaakt
 - [Creeer een dataset](https://platform.adobe.com/dataset/overview) met uw schema waar u de gegevens zou willen landen
 
-## Een configuratie-id aanvragen
+## Een configuratie-id maken
 
-U moet een configuratie-id hebben om de SDK te kunnen gebruiken. De configuratie-id zorgt ervoor dat uw gegevens naar de juiste plaats worden gerouteerd. U kunt een configuratie-id aanvragen bij uw consultant of via de klantenservice. Zij hebben de volgende informatie nodig:
+U kunt een configuratie-id maken met het gereedschap [](../fundamentals/edge-configuration.md) Edge-configuratie tijdens het opstarten.
 
-- **Org-id:** U kunt dit [hier vinden gebruikend instructies](https://docs.adobe.com/content/help/en/core-services/interface/manage-users-and-products/organizations.html)
-- **Gegevensset-id:** Dit is beschikbaar in de dataset UI wanneer u op een dataset klikt
-- **Schema-id:** Dit is beschikbaar in de URL van het scherm voor het maken van het schema
-- **Familienaam:** Dit is de vriendschappelijke naam die in toekomstige UIs voor deze configuratie zal worden gebruikt
+>Opmerking: Uw organisatie moet voor de eigenschap worden gewhitelisteerd. Neem contact op met uw CSM om op de lijst te komen voor eventuele whitelisting.
 
 ## SDK installeren in Launch
 
