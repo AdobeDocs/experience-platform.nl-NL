@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Bronbestanden in een recept plaatsen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -35,24 +35,24 @@ Met een Docker-afbeelding kan een ontwikkelaar een toepassing verpakken met alle
 
 De ingebouwde afbeelding van de Docker wordt geduwd aan het Azure Registratie van de Container gebruikend geloofsbrieven die aan u tijdens de het creatieve werkschema van het recept worden geleverd.
 
-Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>om uw Azure Container Registry-referenties te verkrijgen. Navigeer in de linkernavigatiekolom naar **Workflows**. Selecteer Recipe **importeren** , gevolgd door **Starten**. Zie de schermafbeelding hieronder ter referentie.
+Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>om uw Azure Container Registry-referenties te verkrijgen. Navigeer in de linkernavigatiekolom naar **[!UICONTROL Workflows]**. Selecteer **[!UICONTROL Import Recipe]** gevolgd door selectie **[!UICONTROL Launch]**. Zie de schermafbeelding hieronder ter referentie.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-De pagina *Configureren* wordt geopend. Geef een geschikte **recept-naam** op, bijvoorbeeld &quot;Retail Sales recipe&quot;, en geef desgewenst een beschrijving of documentatie-URL op. Klik op **Volgende** als de bewerking is voltooid.
+De pagina *Configureren* wordt geopend. Geef een geschikte *recept-naam* op, bijvoorbeeld &quot;Retail Sales recipe&quot;, en geef desgewenst een beschrijving of documentatie-URL op. Klik op **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Selecteer de juiste *runtime* en kies een **classificatie** voor *Type*. Uw Azure Container Registry-referenties worden gegenereerd zodra dit is voltooid.
+Selecteer de juiste *runtime* en kies een **[!UICONTROL Classification]** optie bij *Type*. Uw Azure Container Registry-referenties worden gegenereerd zodra dit is voltooid.
 
 >[!NOTE]
 >*Type *is het leerprobleem van de machine waarvoor het recept is ontworpen en wordt na training gebruikt om de trainingsrun op maat te maken of te evalueren.
 
 >[!TIP]
->- Selecteer bij Python-recepten de **Python** -runtime.
->- Selecteer voor R-recepten de **R** -runtime.
->- Voor PySpark-recepten selecteert u de **PySpark** -runtime. Een artefacttype dat automatisch wordt gevuld.
->- Selecteer voor Scala-recepten de **Spark** -runtime. Een artefacttype dat automatisch wordt gevuld.
+>- Selecteer de **[!UICONTROL Python]** runtime voor Python-recepten.
+>- Selecteer de **[!UICONTROL R]** runtime voor R-recepten.
+>- Selecteer de **[!UICONTROL PySpark]** runtime voor PySpark-recepten. Een artefacttype dat automatisch wordt gevuld.
+>- Selecteer de **[!UICONTROL Spark]** runtime voor Scala-recepten. Een artefacttype dat automatisch wordt gevuld.
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
@@ -189,7 +189,7 @@ Kopieer deze URL en ga naar de [volgende stappen](#next-steps).
 
 ## Volgende stappen {#next-steps}
 
-Deze zelfstudie ging over het verpakken van bronbestanden naar een recept, de noodzakelijke stap voor het importeren van een recept naar de werkruimte voor wetenschap van gegevens. U moet nu een Docker-afbeelding in het Azure Container-register hebben samen met de bijbehorende afbeelding-URL. U bent nu klaar om met de zelfstudie te beginnen over het **importeren van een verpakte recept in de werkruimte** van de wetenschap van gegevens. Selecteer een van de onderstaande koppelingen naar zelfstudies om aan de slag te gaan.
+Deze zelfstudie ging over het verpakken van bronbestanden naar een recept, de noodzakelijke stap voor het importeren van een recept naar de werkruimte voor wetenschap van gegevens. U moet nu een Docker-afbeelding in het Azure Container-register hebben samen met de bijbehorende afbeelding-URL. U kunt nu beginnen met de zelfstudie over het importeren van een verpakt recept in de Data Science Workspace. Selecteer een van de onderstaande koppelingen voor zelfstudie om aan de slag te gaan:
 
 - [Een gecomprimeerde ontvanger importeren in de gebruikersinterface](./import-packaged-recipe-ui.md)
 - [Een gecomprimeerde ontvanger importeren met de API](./import-packaged-recipe-api.md)
