@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aan de slag met Kenmerken AI
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 14d47f99f1edd7734245b25b7c39f3a71e7aac50
+source-git-commit: 6161f5a9ca0df341272a96a8a19ce6c34f6d5d3e
 
 ---
 
@@ -25,18 +25,26 @@ Kenmerk AI vereist datasets om met het schema van de Gebeurtenissen van de Ervar
 
 - **Aanraakpunt:** Elke digitale gebeurtenis of digitale interactie die klanten uitvoeren op het pad naar een doel. Voorbeelden hiervan zijn marketingactiviteiten vóór de aankoop, weergave van bekeken advertenties en betaalde zoekopdrachten.
 
-## Muziek openen en vragen
+## Kenmerken van AI-scores downloaden
 
->[!NOTE] Als u geen query&#39;s hoeft uit te voeren of toegang wilt krijgen tot onbewerkte scores, kunt u deze stap overslaan en doorgaan naar de handleiding voor de [gebruikersinterface](./user-guide.md).
+>[!NOTE] Als u geen onbewerkte scores wilt downloaden, kunt u deze stap overslaan en doorgaan met de [volgende stappen](#next-steps).
 
-De toegang tot en het vragen van scores voor Attributie AI wordt gedaan door Snowflake. U moet momenteel een e-mail sturen naar de ondersteuning van Adobe op attributionai-support@adobe.com om de aanmeldingsgegevens voor Snowflake in te stellen en deze naar uw lezeraccount te ontvangen of om onbewerkte gegevens in bulk te exporteren.
+Het downloaden van AI-scores van kenmerk wordt uitgevoerd via een combinatie van API-aanroepen. Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
 
-Nadat uw verzoek door Adobe-ondersteuning is verwerkt, ontvangt u een URL voor het lezeraccount voor Snowflake en de bijbehorende referenties hieronder:
+- Autorisatie: Drager `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
-- Sneeuwvlok-URL
-- Gebruikersnaam
-- Wachtwoord
+Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
-## Volgende stappen
+- x-sandbox-name: `{SANDBOX_NAME}`
+
+>[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+
+### API-voorbeeldaanroepen lezen
+
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+
+## Volgende stappen {#next-steps}
 
 Zodra u klaar bent en al uw geloofsbrieven en schema&#39;s op zijn plaats hebt, begin door de gebruikersinterfacegids [van](./user-guide.md)Attributie AI te volgen. Deze gids begeleidt u door het creëren van een geval en het voorleggen van het voor opleiding en het scoren.
