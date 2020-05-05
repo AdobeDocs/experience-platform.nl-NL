@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Query-service in Jupyter-laptop
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: d0596dc3c744e192c4d2ad04d6365846a0115371
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -13,16 +13,7 @@ source-git-commit: d0596dc3c744e192c4d2ad04d6365846a0115371
 
 Met het Adobe Experience Platform kunt u SQL (Structured Query Language) gebruiken in de Data Science Workspace door Query Service te integreren in JupyterLab als standaardfunctie.
 
-In deze zelfstudie worden de volgende voorbeeld-SQL-query&#39;s getoond voor veelvoorkomende gebruiksscenario&#39;s voor het verkennen, transformeren en analyseren van Adobe Analytics-gegevens:
-
-- [Access JupyterLab en Query Service](#access-jupyterlab-and-query-service)
-- [Uw gegevens opvragen](#query-your-data)
-   - [Aantal uren bezoeker](#hourly-visitor-count)
-   - [Aantal Uuractiviteit](#hourly-activity-count)
-   - [Aantal gebeurtenissen per bezoekerssessie](#number-of-events-per-visitor-session)
-   - [Populaire pagina&#39;s voor een bepaalde dag](#popular-pages-for-a-given-day)
-   - [Actieve gebruikers voor een bepaalde dag](#active-users-for-a-given-day)
-   - [Actieve steden per gebruikersactiviteit](#active-cities-by-user-activity)
+In deze zelfstudie worden voorbeelden van SQL-query&#39;s getoond voor veelvoorkomende gebruiksscenario&#39;s voor het verkennen, transformeren en analyseren van Adobe Analytics-gegevens.
 
 ## Aan de slag
 
@@ -38,25 +29,25 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
    - [SQL-syntaxis query-service](../../query-service/sql/overview.md)
    - Adobe Analytics
 
-## Access JupyterLab en Query Service
+## Access JupyterLab en Query Service {#access-jupyterlab-and-query-service}
 
-1. Navigeer in [Experience Platform](https://platform.adobe.com)naar **Modellen** in de linkernavigatiekolom. Klik op **Notebooks** in de bovenste header om JupyterLab te openen. Laat JupyterLab even laden.
+1. Navigeer in [Experience Platform](https://platform.adobe.com)naar **[!UICONTROL Notebooks]** de linkernavigatiekolom. Laat JupyterLab even laden.
 
-   ![](../images/jupyterlab/query/notebook_ui.png)
+   ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] Als er niet automatisch een nieuw tabblad Launcher wordt weergegeven, opent u een nieuw tabblad Launcher door te klikken op **Bestand > Nieuwe startpagina**.
+   > [!NOTE] Als er niet automatisch een nieuw tabblad Launcher wordt weergegeven, opent u een nieuw tabblad Launcher door op **[!UICONTROL File]** dat tabblad te klikken en vervolgens te selecteren **[!UICONTROL New Launcher]**.
 
-2. Klik op het tabblad Launcher op het pictogram **Lege** in een Python 3-omgeving om een lege laptop te openen.
+2. Klik op het tabblad Launcher op het **[!UICONTROL Blank]** pictogram in een Python 3-omgeving om een lege laptop te openen.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
    > [!NOTE] Python 3 is momenteel de enige ondersteunde omgeving voor Query Service in laptops.
 
-3. Klik in de linkerselectieregel op het pictogram **Gegevens** en dubbelklik op de map **Datasets** om alle gegevenssets weer te geven.
+3. Klik in de linkerselectieregel op het **[!UICONTROL Data]** pictogram en dubbelklik op de **[!UICONTROL Datasets]** directory om alle datasets weer te geven.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Zoek een dataset van de Analyse van Adobe om op de lijst te onderzoeken en met de rechtermuisknop aan te klikken, de Gegevens van de **Vraag in Notitie** om SQL vragen in de lege notitie te produceren.
+4. Zoek een dataset van de Analyse van Adobe om op de lijst te onderzoeken en met de rechtermuisknop aan te klikken, klik **[!UICONTROL Query Data in Notebook]** om SQL vragen in de lege notitie te produceren.
 
 5. Klik op de eerste cel die de functie bevat `qs_connect()` en voer deze uit door op de afspeelknop te klikken. Deze functie maakt een verbinding tussen uw notitieboekjectinstantie en de Query-service.
 
@@ -93,17 +84,17 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
    - `target_day` : De specifieke dag waarop de doelgegevens afkomstig zijn.
    >[!NOTE] U kunt deze waarden op elk gewenst moment wijzigen. Zorg er daarbij voor dat u de cel met variabelen uitvoert voor de wijzigingen die moeten worden toegepast.
 
-## Uw gegevens opvragen
+## Uw gegevens opvragen {#query-your-data}
 
-Voer de volgende SQL-query&#39;s in voor afzonderlijke laptopcellen. Voer een vraag uit door op zijn cel te klikken die door de **spelknoop** wordt gevolgd te klikken. De succesvolle vraagresultaten of foutenlogboeken worden getoond onder de uitgevoerde cel.
+Voer de volgende SQL-query&#39;s in voor afzonderlijke laptopcellen. Een query uitvoeren door op de cel van de query te klikken, gevolgd door op de **[!UICONTROL play]** knop te klikken. De succesvolle vraagresultaten of foutenlogboeken worden getoond onder de uitgevoerde cel.
 
-Wanneer een laptop gedurende langere tijd inactief is, kan de verbinding tussen de laptop en de Query-service verbroken zijn. Start in dergelijke gevallen JupyterLab opnieuw door op de knop **Aan/uit** in de rechterbovenhoek te klikken.
+Wanneer een laptop gedurende langere tijd inactief is, kan de verbinding tussen de laptop en de Query-service verbroken zijn. Start in dergelijke gevallen JupyterLab opnieuw door op de **[!UICONTROL Power]** knop in de rechterbovenhoek te klikken.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-De notebookkernel wordt opnieuw ingesteld, maar de cellen blijven, en **alle** cellen worden opnieuw uitgevoerd om verder te gaan waar u was weggegaan.
+De notebookkernel wordt opnieuw ingesteld, maar de cellen blijven staan en de cellen worden opnieuw uitgevoerd om door te gaan waar u was weggegaan. **[!UICONTROL all]**
 
-### Aantal uren bezoeker
+### Aantal uren bezoeker {#hourly-visitor-count}
 
 De volgende query retourneert het aantal bezoekers per uur voor een opgegeven datum:
 
@@ -144,7 +135,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-### Aantal Uuractiviteit
+### Aantal Uuractiviteit {#hourly-activity-count}
 
 De volgende query retourneert het aantal acties per uur voor een opgegeven datum:
 
@@ -195,7 +186,7 @@ Als u de gewijzigde query uitvoert, worden de resultaten opgeslagen `hourly_acti
 hourly_actions_date_rage.head()
 ```
 
-### Aantal gebeurtenissen per bezoekerssessie
+### Aantal gebeurtenissen per bezoekerssessie {#number-of-events-per-visitor-session}
 
 De volgende query retourneert het aantal gebeurtenissen per bezoekerssessie voor een opgegeven datum:
 
@@ -230,7 +221,7 @@ fig = go.Figure(data = data, layout = layout)
 iplot(fig)
 ```
 
-### Populaire pagina&#39;s voor een bepaalde dag
+### Populaire pagina&#39;s voor een bepaalde dag {#popular-pages-for-a-given-day}
 
 De volgende query retourneert de tien populairste pagina&#39;s voor een opgegeven datum:
 
@@ -249,7 +240,7 @@ ORDER  BY page_views DESC
 LIMIT  10;
 ```
 
-### Actieve gebruikers voor een bepaalde dag
+### Actieve gebruikers voor een bepaalde dag {#active-users-for-a-given-day}
 
 De volgende query retourneert de tien meest actieve gebruikers voor een opgegeven datum:
 
@@ -268,7 +259,7 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-### Actieve steden per gebruikersactiviteit
+### Actieve steden per gebruikersactiviteit {#active-cities-by-user-activity}
 
 De volgende vraag keert de tien steden terug die een meerderheid van gebruikersactiviteiten voor een gespecificeerde datum produceren:
 
