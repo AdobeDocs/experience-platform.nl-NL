@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een AI-instantie van de klant configureren
 topic: Instance creation
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -49,7 +49,7 @@ Klik op een veld in de vervolgkeuzelijst **[!UICONTROL Enter Field Name]** en se
 
 ![](../images/user-guide/goal.png)
 
-### Een schema configureren *(optioneel)*{#configure-a-schedule}
+### Een schema configureren *(optioneel)* {#configure-a-schedule}
 
 De *geavanceerde* stap wordt weergegeven. Deze facultatieve stap staat u toe om een programma te vormen om voorspellingslooppas te automatiseren, voorspellingsuitsluitingen te bepalen om bepaalde gebeurtenissen te filtreren, of te klikken **[!UICONTROL Finish]** als niets nodig is.
 
@@ -76,4 +76,10 @@ Door deze sectie te volgen, hebt u een geval van AI van de Klant gevormd en een 
 ## Volgende stappen {#next-steps}
 
 Door deze zelfstudie te volgen, hebt u met succes een exemplaar van de AI van de Klant en geproduceerde bezitsscores gevormd. U kunt er nu voor kiezen om de Segment Builder te gebruiken om klantsegmenten met voorspelde scores [te](./create-segment.md) maken of om inzichten met Customer AI [te](./discover-insights.md)ontdekken.
+
+## Aanvullende bronnen
+
+De volgende video is ontworpen ter ondersteuning van uw begrip van de configuratieworkflow voor AI van de klant. Daarnaast worden aanbevolen procedures en praktijkvoorbeelden gegeven.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
 
