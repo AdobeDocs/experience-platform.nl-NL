@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een analyse van een model voor machinaal leren maken en publiceren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -28,7 +28,7 @@ Deze zelfstudie weerspiegelt de workflow van Data Science Workspace en behandelt
 
 Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldoen:
 
-* Toegang tot het Adobe Experience Platform. Als u geen toegang tot een IMS Organisatie in het Platform van de Ervaring hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
+* Toegang tot het Adobe Experience Platform. Als u geen toegang hebt tot een IMS-organisatie in het ervaringsplatform, neemt u contact op met uw systeembeheerder voordat u verdergaat.
 
 * Enablement assets. Neem contact op met uw accountvertegenwoordiger om de volgende items voor u beschikbaar te stellen.
    * Aanbevelingen ontvangen
@@ -45,7 +45,7 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
    * [Gegevensmodel](../../xdm/home.md)van ervaring: De standaardiseringsinspanning die door Adobe wordt geleid om standaardschema&#39;s zoals Profiel en ExperienceEvent, voor het Beheer van de Ervaring van de Klant te bepalen.
    * Gegevenssets: Een opslag- en beheerconstructie voor werkelijke gegevens. Een fysieke instantie van een [XDM-schema](../../xdm/schema/field-dictionary.md).
    * Batches: Datasets bestaan uit batches. Een batch is een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt.
-   * JupyterLab: [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is een open-source webgebaseerde interface voor Project Jupyter en is nauw geïntegreerd in Experience Platform.
+   * JupyterLab: [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is een opensource webinterface voor Project Jupyter en is nauw geïntegreerd in het Experience Platform.
 
 ## Uw gegevens voorbereiden {#prepare-your-data}
 
@@ -53,9 +53,9 @@ Als u een model voor machinaal leren wilt maken dat gepersonaliseerde productaan
 
 ### Ontdek de gegevens en begrijp de schema&#39;s
 
-1. Meld u aan bij het [Adobe Experience Platform](https://platform.adobe.com/) en klik op **Datasets** om alle bestaande gegevenssets weer te geven en selecteer de gegevensset die u wilt verkennen. In dit geval, de dataset van Analytics **Golden Data Set postValues**.
+1. Meld u aan bij het [Adobe Experience Platform](https://platform.adobe.com/) en klik **[!UICONTROL Datasets]** om alle bestaande gegevenssets weer te geven en selecteer de gegevensset die u wilt verkennen. In dit geval, de dataset van Analytics **Golden Data Set postValues**.
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
-2. Selecteer Gegevensset **** voorvertoning rechtsboven om voorbeeldrecords te bekijken en klik op **Sluiten**.
+2. Selecteer **[!UICONTROL Preview Dataset]** in de rechterbovenhoek om de voorbeeldrecords te controleren en klik op **[!UICONTROL Close]**.
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
 3. Selecteer de verbinding onder Schema in het juiste spoor om het schema voor de dataset te bekijken, dan ga terug naar de pagina van de datasetdetails.&quot;
    ![](../images/models-recipes/model-walkthrough/golden_schema_110.png)
@@ -76,11 +76,11 @@ Ontvangers vormen de basis voor een model aangezien zij machine het leren algori
 
 ### Ontdek de Recipe voor productaanbevelingen
 
-1. In het Platform van de Ervaring van Adobe, navigeer aan **Modellen** van de linkernavigatiekolom, dan klik **Ontvangt** bij de bovenkant om een lijst van beschikbare Ontvangers voor uw organisatie te bekijken.
+1. Navigeer in het Adobe Experience Platform naar **[!UICONTROL Models]** de linkernavigatiekolom en klik vervolgens **[!UICONTROL Recipes]** bovenaan om een lijst met beschikbare Ontvangers voor uw organisatie weer te geven.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Zoek en open de opgegeven Recipe **Recommendations** door op de naam ervan te klikken.
+2. Zoek en open de opgegeven tekst **[!UICONTROL Recommendations Recipe]** door op de naam ervan te klikken.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Klik in het rechterspoor op **Aanbevelingen voor invoerschema** om het schema voor het recept weer te geven. De schemagebieden **itemId** en **userId** beantwoorden aan een product dat door die klant op een specifiek tijdstip (**timestamp**) wordt gekocht (**interactionType**). Voer dezelfde stappen uit om de velden voor het uitvoerschema voor **Aanbevelingen te controleren**.
+3. Klik in het rechterspoor **[!UICONTROL Recommendations Input Schema]** om het schema voor het recept weer te geven. De schemagebieden **[!UICONTROL itemId]** en **[!UICONTROL userId]** beantwoorden aan een product dat (**[!UICONTROL interactionType]**) door die klant op een specifiek tijdstip (**[!UICONTROL timestamp]**) wordt gekocht. Voer dezelfde stappen uit om de velden voor de **[!UICONTROL Recommendations Output Schema]**pagina te controleren.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 U hebt nu de invoer- en uitvoerschema&#39;s gecontroleerd die vereist zijn voor de Recipe voor productaanbevelingen. U kunt nu verdergaan naar de volgende sectie om te weten te komen hoe u een model van de Aanbevelingen van het Product creeert, opleidt en evalueert.
@@ -93,13 +93,13 @@ Nu uw gegevens zijn voorbereid en de recept klaar is om te worden gebruikt, kunt
 
 Een model is een instantie van een recept, waarmee u gegevens op schaal kunt trainen en scoren.
 
-1. In het Platform van de Ervaring van Adobe, navigeer aan **Modellen** van de linkernavigatiekolom, dan klik **Ontvangt** bij de bovenkant van de pagina om een lijst van alle beschikbare Ontvangers voor uw organisatie te tonen.
+1. Navigeer in het Adobe Experience Platform naar **[!UICONTROL Models]** de linkernavigatiekolom en klik vervolgens **[!UICONTROL Recipes]** boven aan de pagina om een lijst weer te geven met alle beschikbare Ontvangers voor uw organisatie.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Zoek en open de opgegeven Recipe **Recommendations** door op de naam ervan te klikken en de overzichtspagina van de ontvanger in te voeren. Klik op **Een model** maken in het midden (als er geen bestaande modellen zijn) of in de rechterbovenhoek van de pagina Overzicht van ontvangen.
+2. Zoek en open de opgegeven pagina **[!UICONTROL Recommendations Recipe]** door op de naam te klikken en de overzichtspagina van de ontvanger in te voeren. Klik **[!UICONTROL Create a Model]** of van het centrum (als er geen bestaande Modellen) of van het hoogste recht van de Recipe pagina van het Overzicht zijn.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Een lijst van beschikbare inputdatasets voor opleiding wordt getoond, wordt de uitgezochte Dataset **van de Input van** Aanbevelingen en klikt **daarna**.
+3. Een lijst van beschikbare inputdatasets voor opleiding wordt getoond, selecteert **[!UICONTROL Recommendations Input Dataset]** en klikt **[!UICONTROL Next]**.
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4. Geef het model een naam, bijvoorbeeld &quot;Model met productaanbevelingen&quot;. De beschikbare configuraties voor het model worden vermeld, die montages voor het de standaardopleiding van het Model en het scoring gedrag bevatten. Er zijn geen wijzigingen nodig omdat deze configuraties specifiek zijn voor uw organisatie. Controleer de configuraties en klik op **Voltooien**.
+4. Geef het model een naam, bijvoorbeeld &quot;Model met productaanbevelingen&quot;. De beschikbare configuraties voor het model worden vermeld, die montages voor het de standaardopleiding van het Model en het scoring gedrag bevatten. Er zijn geen wijzigingen nodig omdat deze configuraties specifiek zijn voor uw organisatie. Controleer de configuraties en klik op **[!UICONTROL Finish]**.
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
 5. Het model is nu gemaakt en de pagina *Overzicht* van het model wordt weergegeven in een nieuw gegenereerde trainingsreeks. Een trainingsrun wordt standaard gegenereerd wanneer een model wordt gemaakt.
    ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
@@ -108,13 +108,13 @@ U kunt ervoor kiezen te wachten totdat de trainingsreeks is voltooid of een nieu
 
 ### Het model trainen met aangepaste hyperparameters
 
-1. Voor de pagina van het Overzicht *van het* Model, klik **Lijn** bij het hoogste recht om een nieuwe trainingslooppas tot stand te brengen. Selecteer de zelfde inputdataset u toen het creëren van het Model gebruikte en klik **daarna**.
+1. Voor de pagina van het Overzicht *van het* Model, klik **[!UICONTROL Train]** dichtbij het hoogste recht om een nieuwe opleidingslooppas tot stand te brengen. Selecteer de invoergegevensset die u bij het maken van het model hebt gebruikt en klik op **[!UICONTROL Next]**.
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. De pagina *Configuratie* wordt weergegeven. Hier kunt u de waarde **num_recommendations** van de trainingslooppas vormen, die ook als Hyperparameter wordt bekend. Een getraind en geoptimaliseerd model zal de best-presterende Hyperparameters gebruiken die op de resultaten van de trainingslooppas worden gebaseerd.
+2. De pagina *Configuratie* wordt weergegeven. Hier kunt u de **[!UICONTROL num_recommendations]** waarde van de trainingsrun configureren, ook wel een hyperparameter genoemd. Een getraind en geoptimaliseerd model zal de best-presterende Hyperparameters gebruiken die op de resultaten van de trainingslooppas worden gebaseerd.
 
    Hyperparameters kunnen niet worden geleerd, daarom moeten zij worden toegewezen alvorens de opleidingslooppas voorkomt. Het aanpassen van Hyperparameters kan de nauwkeurigheid van het Getrainde Model veranderen. Aangezien het optimaliseren van een model een herhalend proces is, kunnen meerdere trainingen nodig zijn voordat een bevredigende evaluatie wordt uitgevoerd.
 
-   >[!TIP] Stel **num_recommendations** in op 10.
+   >[!TIP] Instellen **[!UICONTROL num_recommendations]** op 10.
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. Er verschijnt een extra gegevenspunt in het modelevaluatieschema wanneer de nieuwe trainingsrun is voltooid. Dit kan enkele minuten in beslag nemen.
@@ -137,12 +137,12 @@ De laatste stap in de Data Science-workflow is het operationeel maken van uw mod
 ### Score en genereren inzichten
 
 1. Voor de pagina van het ModelOverzicht ** van het ModelOverzicht van de productaanbevelingen, klik de naam van de best-presterende trainingslooppas, met de hoogste herinnering en precisienormen.
-2. Rechtsboven op de pagina met details voor de trainingsuitvoering klikt u op **Score**.
-3. Selecteer de Dataset **van de Input van** Aanbevelingen als het scoring inputdataset, die de zelfde dataset is u gebruikte toen u het Model creeerde en zijn trainingslooppas uitvoerde. Klik vervolgens op **Volgende**.
+2. Klik rechtsboven op de pagina met details voor de trainingsuitvoering op **[!UICONTROL Score]**.
+3. Selecteer de gegevensset **[!UICONTROL Recommendations Input Dataset]** als de gegevensset voor het noteren van de invoergegevens. Dit is dezelfde gegevensset die u hebt gebruikt toen u het Model hebt gemaakt en de trainingsreeks uitvoerde. Klik vervolgens op **[!UICONTROL Next]**.
    ![](../images/models-recipes/model-walkthrough/scoring_input.png)
-4. Selecteer de Dataset **van de Output van** Aanbevelingen als het schatten outputdataset. De resultaten van het noteren zullen in deze dataset als partij worden opgeslagen.
+4. Selecteer de gegevensset **[!UICONTROL Recommendations Output Dataset]** als de gegevensset voor het noteren van uitvoer. De resultaten van het noteren zullen in deze dataset als partij worden opgeslagen.
    ![](../images/models-recipes/model-walkthrough/scoring_output.png)
-5. Controleer de scoreconfiguraties. Deze parameters bevatten de input en outputdatasets die vroeger samen met de aangewezen schema&#39;s worden geselecteerd. Klik op **Voltooien** om de scoring uit te voeren. De uitvoering kan enkele minuten duren.
+5. Controleer de scoreconfiguraties. Deze parameters bevatten de input en outputdatasets die vroeger samen met de aangewezen schema&#39;s worden geselecteerd. Klik **[!UICONTROL Finish]** om de scoring uit te voeren. De uitvoering kan enkele minuten duren.
    ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
 
 
@@ -150,10 +150,12 @@ De laatste stap in de Data Science-workflow is het operationeel maken van uw mod
 
 Nadat de scoring is voltooid, kunt u een voorvertoning van de resultaten bekijken en de gegenereerde inzichten bekijken.
 
-1. Klik op de pagina met scoring-resultaten op de voltooide scoring-run en klik vervolgens op Gegevensset **met** voorvertoning van scores in de rechtertrack.
+1. Klik op de pagina waarop de scoring wordt uitgevoerd op de voltooide scoring en klik vervolgens op **[!UICONTROL Preview Scoring Results Dataset]** de rechterrail.
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. In de voorproeflijst, bevat elke rij productaanbevelingen voor een bepaalde klant, geëtiketteerd als **aanbevelingen** en **userId** respectievelijk. Aangezien de **num_recommendations** Hyperparameter aan 10 in de steekproefscreenshots werd geplaatst, kan elke rij van aanbevelingen tot 10 productidentiteiten bevatten die door een aantalteken (#) worden afgebakend.
+2. In de voorproeflijst, bevat elke rij productaanbevelingen voor een bepaalde klant, geëtiketteerd als **[!UICONTROL recommendations]** en **[!UICONTROL userId]** respectievelijk. Aangezien de **[!UICONTROL num_recommendations]** Hyperparameter aan 10 in de steekproefscreenshots werd geplaatst, kan elke rij van aanbevelingen tot 10 productidentiteiten bevatten die door een aantalteken (#) worden afgebakend.
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
+
+## Volgende stappen {#next-steps}
 
 Goed gedaan, hebt u met succes productaanbevelingen geproduceerd!
 
