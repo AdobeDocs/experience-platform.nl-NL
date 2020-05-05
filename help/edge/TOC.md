@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Edge Network
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
 
 ---
 
@@ -17,20 +17,24 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 * Fundamentals {#fundamentals}
    * [De SDK installeren](fundamentals/installing-the-sdk.md)
    * [Opdrachten uitvoeren](fundamentals/executing-commands.md)
+   * [De rand configureren](fundamentals/edge-configuration.md)
    * [De SDK configureren](fundamentals/configuring-the-sdk.md)
    * [Gebeurtenissen bijhouden](fundamentals/tracking-events.md)
    * [Gebeurtenisgegevens samenvoegen](fundamentals/merging-event-data.md)
    * [Foutopsporing](fundamentals/debugging.md)
    * [Interactie met meerdere eigenschappen](fundamentals/interacting-with-multiple-properties.md)
    * [Aangepaste inhoud renderen](fundamentals/rendering-personalization-content.md)
+   * [Flikkering beheren](fundamentals/managing-flicker.md)
    * [Ondersteunende toestemming](fundamentals/supporting-consent.md)
    * [Ondersteuning voor browsers in apps](fundamentals/supporting-in-app-browsers.md)
 * Uitvoeren {#implement}
    * [Producten](what-to-implement/commerce.md)
 * Oplossingsspecifieke overwegingen {#solutions}
-   * Analyse {#analytics}
+   * Analytics {#analytics}
       * [Overzicht van analysemogelijkheden](solution-specific/analytics/analytics-overview.md)
       * [Automatisch toegewezen variabelen](solution-specific/analytics/automatically-mapped-vars.md)
+   * Doel {#target}
+      * [Doeloverzicht](solution-specific/target/target-overview.md)
 * Referentie {#ref}
    * [Automatisch verzamelde gegevens](reference/automatic-information.md)
    * [Bibliotheekgegevens ophalen](reference/retrieving-library-information.md)
