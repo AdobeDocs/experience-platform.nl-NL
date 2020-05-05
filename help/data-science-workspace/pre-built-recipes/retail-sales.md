@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Detailhandelrecept
 topic: overview
 translation-type: tm+mt
-source-git-commit: f548fb6431b7bc71c205a2b2b7ca3884e57340b1
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -28,7 +28,7 @@ In het recept Verkoopprognose voor detailhandel wordt machinaal leren gebruikt o
 
 ## Hoe begin ik?
 
-U kunt aan de slag door deze [zelfstudie](../jupyterlab/create-a-recipe.md)te volgen.
+Aan de slag met deze [zelfstudie](../jupyterlab/create-a-recipe.md).
 
 Deze zelfstudie gaat over het maken van het recept voor detailhandel in een Jupyter-laptop en het gebruik van de workflow voor het recept voor laptops om het recept te maken in het Adobe Experience Platform.
 
@@ -53,7 +53,7 @@ In dit recept worden [XDM-schema&#39;s](../../xdm/schema/field-dictionary.md) ge
 
 ## Algorithm
 
-Eerst, wordt de opleidingsdataset in het schema **DSWRetailSales** geladen. Vanaf hier wordt het model getraind met behulp van een [verloopversterkeralgoritme](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Bij het verhogen van het verloop wordt ervan uitgegaan dat zwakke studenten (een die minstens iets beter is dan een willekeurige kans) een opvolging van studenten kunnen vormen die zich richten op het verbeteren van de zwakheden van de vorige leerling. Samen kunnen ze worden gebruikt om een krachtig voorspellend model te maken.
+Eerst, wordt de opleidingsdataset in het schema *DSWRetailSales* geladen. Vanaf hier wordt het model getraind met behulp van een [verloopversterkeralgoritme](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Bij het verhogen van het verloop wordt ervan uitgegaan dat zwakke studenten (een die minstens iets beter is dan een willekeurige kans) een opvolging van studenten kunnen vormen die zich richten op het verbeteren van de zwakheden van de vorige leerling. Samen kunnen ze worden gebruikt om een krachtig voorspellend model te maken.
 
 Het proces omvat drie elementen: een verliesfunctie, een zwakke leerling en een additief model.
 
