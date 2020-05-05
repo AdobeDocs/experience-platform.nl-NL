@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een model plannen (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -20,7 +20,7 @@ Dit leerprogramma doorloopt de stappen om opleiding en het schrapen programma&#3
 
 ## Aan de slag
 
-Als u deze zelfstudie wilt voltooien, hebt u toegang nodig tot Experience Platform. Als u geen toegang tot een IMS Organisatie in het Platform van de Ervaring hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
+Als u deze zelfstudie wilt voltooien, hebt u toegang nodig tot Experience Platform. Als u geen toegang hebt tot een IMS-organisatie in het ervaringsplatform, neemt u contact op met uw systeembeheerder voordat u verdergaat.
 
 Voor deze zelfstudie is een bestaande service vereist. Als u geen toegankelijke Dienst hebt om met te werken, kunt u tot stand brengen door uw Model als Dienst in het leerprogramma [te volgen UI](./publish-model-service-ui.md) publiceren.
 
@@ -28,13 +28,13 @@ Voor deze zelfstudie is een bestaande service vereist. Als u geen toegankelijke 
 
 Model het scoren kan worden gevormd om een geautomatiseerd proces op een geplande basis te zijn. Zodra een Dienst wordt gecreeerd, kunt u de hieronder stappen volgen om een het scoren programma te vormen en toe te passen:
 
-1. Klik in Adobe Experience Platform op het tabblad **Services** in de linkernavigatiekolom voor toegang tot de *servicegalerie*. Zoek de dienst u wenst om het scoren looppas te plannen en **Open** te klikken om zijn pagina van het *Overzicht* te bekijken.
+1. Klik in Adobe Experience Platform op het **[!UICONTROL Services]** tabblad in de linkernavigatiekolom voor toegang tot de *servicegalerie*. Zoek de Dienst u wenst om het scoren looppas te plannen en te klikken **[!UICONTROL Open]** om zijn pagina van het *Overzicht* te bekijken.
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. De overzichtspagina toont de het scoren van de Dienst informatie. Klik de verbinding van het Programma **van de** Update om een het scoren programma te vormen.
+2. De overzichtspagina toont de het scoren van de Dienst informatie. Klik op de **[!UICONTROL Update Schedule]** koppeling om een scoreschema te configureren.
    ![](../images/models-recipes/schedule/service_overview_score.png)
 
-3. Vorm de frequentie, begindatum, einddatum, inputdataset, en outputdataset voor het het scoren programma. Als u tevreden bent met de configuraties, klikt u op **Maken** om het scoreprogramma van de service bij te werken.
+3. Vorm de frequentie, begindatum, einddatum, inputdataset, en outputdataset voor het het scoren programma. Zodra u met de configuraties wordt tevredengesteld, klik **[!UICONTROL Create]** om het het scoren van de Dienst programma bij te werken.
    ![](../images/models-recipes/schedule/14_configure_scoring_schedule.png)
 
 4. Uw bijgewerkt het scoren programma wordt getoond in de *Overzicht* van de Dienst pagina.
@@ -43,17 +43,17 @@ Model het scoren kan worden gevormd om een geautomatiseerd proces op een gepland
 
 ## Geplande training configureren {#configure-scheduled-training}
 
-Het vormen van geplande trainingslooppas op de Dienst zorgt ervoor dat het machine het leren Model aan de meest recente gegevenspatronen wordt bijgewerkt. Wanneer een geplande trainingsrun is voltooid, wordt het resulterende trainingsmodel gebruikt om de service aan te sturen tot de volgende geplande trainingsrun.
+Het vormen van geplande trainingslooppas op de Dienst zorgt ervoor dat het machine het leren Model aan de meest recente gegevenspatronen wordt bijgewerkt. Wanneer een geplande trainingsrun is voltooid, wordt het resulterende getrainde model gebruikt om de service aan te sturen tot de volgende geplande trainingsrun.
 
 Zodra een Dienst wordt gecreeerd, kunt u de hieronder stappen volgen om een trainingsprogramma te vormen en toe te passen:
 
-1. Klik in Adobe Experience Platform op het tabblad **Services** in de linkernavigatiekolom voor toegang tot de *servicegalerie*. Zoek de Dienst u wenst om trainingslooppas te plannen en **Open** te klikken om zijn pagina van het *Overzicht* te bekijken.
+1. Klik in Adobe Experience Platform op het **[!UICONTROL Services]** tabblad in de linkernavigatiekolom voor toegang tot de *servicegalerie*. Zoek de Dienst u wenst om trainingslooppas te plannen en **[!UICONTROL Open]** te klikken om zijn pagina van het *Overzicht* te bekijken.
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. De overzichtspagina toont de de opleidingsinformatie van de Dienst. Klik op de koppeling **Update Schedule** om een trainingsprogramma te configureren.
+2. De overzichtspagina toont de de opleidingsinformatie van de Dienst. Klik op de **[!UICONTROL Update Schedule]** koppeling om een trainingsprogramma te configureren.
    ![](../images/models-recipes/schedule/service_overview_train.png)
 
-3. Vorm de frequentie, begindatum, einddatum, en inputdataset die voor het opleidingsprogramma wordt gebruikt. Als u tevreden bent met de configuraties, klikt u op **Maken** om het trainingsprogramma van de service bij te werken.
+3. Vorm de frequentie, begindatum, einddatum, en inputdataset die voor het opleidingsprogramma wordt gebruikt. Als u tevreden bent met de configuraties, klikt u **[!UICONTROL Create]** om het trainingsschema van de service bij te werken.
    ![](../images/models-recipes/schedule/12_configure_training_schedule.png)
 
 4. Uw bijgewerkte trainingsschema wordt weergegeven op de pagina *Overzicht* van de service.
