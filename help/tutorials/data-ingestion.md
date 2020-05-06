@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Zelfstudies voor gegevensinsluiting
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '516'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Als u CSV-gegevens wilt opnemen in het Adobe Experience Platform, moeten de gege
 
 ## Een streamingverbinding maken
 
-Als u wilt beginnen met streamen van gegevens naar Experience Platform, moet u eerst een streaming HTTP-verbinding maken. Wanneer u een streamingverbinding maakt, moet u belangrijke details opgeven, zoals de bron van streaminggegevens, en of u gegevens wilt verzenden van een vertrouwde (geverifieerde) of niet-vertrouwde (niet-geverifieerde) bron. Dit kan worden gedaan gebruikend het de gebruikersinterface van het Platform of Ervaar Platform APIs. Voor meer informatie volgt u de zelfstudies voor het [maken van een streamingverbinding met de gebruikersinterface](../ingestion/tutorials/create-streaming-connection-ui.md) of het [maken van een streamingverbinding met API&#39;s](../ingestion/tutorials/create-streaming-connection.md).
+Om het stromen gegevens aan het Platform van de Ervaring te beginnen, moet u eerst om een eindpunt van HTTP verzoeken. U hebt de optie om dit eindpunt te vormen om voor authentiek verklaard gedrag af te dwingen. Dit kan worden gedaan gebruikend het de gebruikersinterface van het Platform of Ervaar Platform APIs. Voor meer informatie volgt u de zelfstudies voor het [maken van een streamingverbinding met de gebruikersinterface](../ingestion/tutorials/create-streaming-connection-ui.md) of het [maken van een streamingverbinding met API&#39;s](../ingestion/tutorials/create-streaming-connection.md).
 
 ## Een geverifieerde streamingverbinding maken
 
@@ -39,7 +42,7 @@ Met een dataset en het zwerven verbindingen op zijn plaats, kunt u verslag of ti
 
 ## Meerdere berichten streamen in één HTTP-aanvraag
 
-Bij het streamen van gegevens naar het Adobe Experience Platform kan het maken van veel HTTP-oproepen duur zijn. Bijvoorbeeld, in plaats van het creëren van 200 HTTP- verzoeken met 1KB nuttige lading, is het veel efficiënter om 1 HTTP- verzoek met 200 berichten van 1KB elk, met één enkele lading van 200KB tot stand te brengen. Wanneer correct gebruikt, is het groeperen van veelvoudige berichten binnen één enkel verzoek een uitstekende manier om gegevens te optimaliseren die naar het Platform van de Ervaring worden verzonden. Leer hoe te om veelvoudige berichten naar het Platform van de Ervaring binnen één enkel HTTP- verzoek te verzenden gebruikend het stromen ingestie, volg het [verzenden van veelvoudige berichtzelfstudie](../ingestion/tutorials/streaming-multiple-messages.md).
+Bij het streamen van gegevens naar het Adobe Experience Platform kan het maken van veel HTTP-oproepen duur zijn. Bijvoorbeeld, in plaats van het creëren van 200 HTTP- verzoeken met 1KB nuttige lading, is het veel efficiënter om 1 HTTP- verzoek met 200 berichten van 1KB elk, met één enkele lading van 200KB tot stand te brengen. Wanneer correct gebruikt, is het groeperen van veelvoudige berichten binnen één enkel verzoek een uitstekende manier om gegevens te optimaliseren die naar het Platform van de Ervaring worden verzonden. Leer hoe te om veelvoudige berichten naar het Platform van de Ervaring binnen één enkel HTTP- verzoek te verzenden gebruikend het stromen ingestie, volg het [verzenden van veelvoudige berichten leerprogramma](../ingestion/tutorials/streaming-multiple-messages.md).
 
 
 
