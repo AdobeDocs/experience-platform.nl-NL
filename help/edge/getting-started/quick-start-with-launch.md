@@ -4,7 +4,10 @@ seo-title: Adobe Experience Platform Web SDK snel aan de slag met Starten
 description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Platform van de Ervaring om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Platform van de Ervaring om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
+source-git-commit: 51acb07efe624c7cf1dfaabc4b03f04c76ac88f8
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 0%
 
 ---
 
@@ -25,10 +28,7 @@ De Adobe Experience Platform Web SDK ondersteunt momenteel alleen het verzenden 
 
 Om gegevens naar het Platform van de Ervaring van Adobe te kunnen verzenden, moet u een schema XDM en een dataset tot stand brengen die dat schema gebruikt.
 
-- [Maak een schema](../../xdm/tutorials/create-schema-ui.md) met de volgende mixen:
-   - Implementatiegegevens van ExperienceEvent
-   - Details van de ExperienceEvent-omgeving
-   - Webdetails van ExperienceEvent
+- [Een schema maken](../../xdm/tutorials/create-schema-ui.md)
 - Voeg de Adobe Experience Platform Web SDK-mix toe aan het schema dat u hebt gemaakt
 - [Creeer een dataset](https://platform.adobe.com/dataset/overview) met uw schema waar u de gegevens zou willen landen
 
