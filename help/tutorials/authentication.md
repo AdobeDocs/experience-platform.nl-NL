@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Platform-API's verifiëren en openen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: fca15ebf87559b08dd09e63b5df5655b57ef5977
+source-git-commit: e1ba476fffc164b78decd7168192714993c791bc
+workflow-type: tm+mt
+source-wordcount: '849'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang t
 
 ## Verifiëren om API-aanroepen te maken
 
-Om de beveiliging van uw toepassingen en gebruikers te garanderen, moeten alle aanvragen voor Adobe I/O-API&#39;s worden geverifieerd en geautoriseerd aan de hand van standaarden zoals OAuth en JSON Web Tokens (JWT). JWT wordt dan gebruikt samen met cliënt specifieke informatie om uw persoonlijk toegangstoken te produceren.
+Om de beveiliging van uw toepassingen en gebruikers te garanderen, moeten alle aanvragen voor Adobe I/O-API&#39;s worden geverifieerd en geautoriseerd aan de hand van standaarden zoals OAuth en JSON Web Tokens (JWT). JWT wordt dan gebruikt samen met cliënt-specifieke informatie om uw persoonlijk toegangstoken te produceren.
 
 Deze zelfstudie behandelt de stappen van authentificatie door het creëren van een toegangstoken die in het volgende stroomschema wordt geschetst:
 ![](images/authentication/authentication-flowchart.png)
@@ -34,12 +37,11 @@ In de volgende secties vindt u instructies voor het maken van een Adobe-id en he
 
 Als u geen Adobe-id hebt, kunt u er een maken door de volgende stappen uit te voeren:
 
-1. Ga naar [Adobe I/O-console](https://console.adobe.io)
+1. Ga naar [Adobe Developer Console](https://console.adobe.io)
 2. Klik op Een nieuw account **maken**
 3. Voltooi het aanmeldingsproces
 
-
-### Word een ontwikkelaar en gebruiker voor het Platform van de Ervaring voor een organisatie
+## Word een ontwikkelaar en gebruiker voor het Platform van de Ervaring voor een organisatie
 
 Voordat u integraties maakt voor Adobe I/O, moet uw account ontwikkelaarsmachtigingen voor een product in een IMS-organisatie hebben. Gedetailleerde informatie over ontwikkelaarsaccounts in de beheerconsole vindt u in het [ondersteuningsdocument](https://helpx.adobe.com/enterprise/using/manage-developers.html) voor ontwikkelaars.
 
@@ -53,7 +55,7 @@ De beheerder moet u als ontwikkelaar toewijzen aan ten minste één productprofi
 
 ![](images/authentication/add-developer.png)
 
-Als u eenmaal als ontwikkelaar bent toegewezen, hebt u toegangsrechten om integraties te maken voor [Adobe I/O](https://console.adobe.io/). Deze integraties vormen een pijplijn van externe apps en services naar de Adobe API.
+Als u eenmaal als ontwikkelaar bent toegewezen, hebt u toegangsrechten om integraties te maken voor [Adobe I/O](https://www.adobe.com/go/devs_console_ui). Deze integraties vormen een pijplijn van externe apps en services naar de Adobe API.
 
 **Toegang tot gebruikers verkrijgen**
 
@@ -66,188 +68,54 @@ Net als bij het toevoegen van een ontwikkelaar moet de beheerder u toewijzen aan
 ![](images/authentication/assign-user-details.png)
 
 
-## Eenmalige installatie
+## Toegangsgegevens genereren in Adobe Developer Console
 
-De volgende stappen hoeven slechts eenmaal te worden uitgevoerd:
+Met Adobe Developer Console moet u de volgende drie toegangsreferenties genereren:
 
-* Aanmelden bij Adobe I/O-console
-* Integratie maken
-* Toegangswaarden voor Omlaag kopiëren
+* `{IMS_ORG}`
+* `{API_KEY}`
+* `{ACCESS_TOKEN}`
 
-Zodra u uw integratie en toegangswaarden hebt, zult u hen voor authentificatie in de toekomst kunnen opnieuw gebruiken. Elke stap wordt hieronder in detail behandeld.
+Uw `{IMS_ORG}` en `{API_KEY}` hoeven slechts eenmaal te worden gegenereerd en kunnen in toekomstige API-aanroepen van het platform opnieuw worden gebruikt. Uw `{ACCESS_TOKEN}` is echter tijdelijk en moet elke 24 uur opnieuw worden gegenereerd.
 
-### Aanmelden bij Adobe I/O-console
+De stappen worden hieronder in detail besproken.
 
-Ga naar [Adobe I/O-console](https://console.adobe.io/) en meld u aan met uw Adobe-id.
+### Eenmalige installatie
 
-Nadat u zich hebt aangemeld, klikt u op het tabblad **Integraties** boven aan het scherm. Een integratie is een de dienstrekening die voor de geselecteerde IMS Organisatie wordt gecreeerd. U mag alleen oproepen naar de IMS-organisatie waarin de integratie is gemaakt.
+Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe-id. Voer vervolgens de stappen uit die worden beschreven in de zelfstudie over het [maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.
 
->[!NOTE]
->Als uw account aan meerdere organisaties is gekoppeld, kunt u in het keuzemenu rechtsboven in het scherm gemakkelijk tussen de organisaties schakelen.
+Nadat u een nieuw project hebt gemaakt, klikt u op API **** toevoegen in het scherm _Projectoverzicht_ .
 
-### Integratie maken
+![](images/authentication/add-api-button.png)
 
-Klik op de pagina **Integraties** op **Nieuwe integratie** om het proces te starten. Het proces bestaat uit drie stappen:
-* Type integratie kiezen
-* Kies welke Adobe-service u wilt integreren
-* Integratiedetails, openbare sleutel en productprofiel toevoegen
+Het scherm _Een API_ toevoegen wordt weergegeven. Klik op het productpictogram voor Adobe Experience Platform en selecteer **[!UICONTROL Experience Platform API]** voordat u op **[!UICONTROL Volgende]** klikt.
 
-![](images/authentication/integrations.png)
+![](images/authentication/add-platform-api.png)
 
-#### Type integratie kiezen
+Zodra u het Platform van de Ervaring als API hebt geselecteerd die aan het project moet worden toegevoegd, volg de stappen die in het leerprogramma worden geschetst over het [toevoegen van API aan een project gebruikend een de dienstrekening (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (die van &quot;vormen API&quot;stap) beginnen om het proces te voltooien.
 
-In het volgende scherm wordt u gevraagd of u toegang wilt krijgen tot een API of gebeurtenissen in real-time wilt ontvangen. Selecteer **Toegang tot API** en **ga dan verder**.
+Zodra API aan het project is toegevoegd, toont de het overzichtspagina _van het_ Project de volgende geloofsbrieven die in alle vraag aan het Platform APIs van de Ervaring worden vereist:
 
-![](images/authentication/create-new-integration.png)
+* `{API_KEY}` (Client-id)
+* `{IMS_ORG}` (Organisatie-id)
 
-#### Kies welke Adobe-service u wilt integreren
+![](./images/authentication/api-key-ims-org.png)
 
-Als uw account aan meerdere IMS-organisaties is gekoppeld, kunt u tussen deze organisaties schakelen via het keuzemenu rechtsboven. Selecteer **Workshop** en **Experience Platform API** onder **Adobe Experience Platform** voor toegang tot de API&#39;s.
+### Verificatie voor elke sessie
 
-![](images/authentication/integration-select-service.png)
+De laatste vereiste referentie die u moet verzamelen, is uw `{ACCESS_TOKEN}`. In tegenstelling tot de waarden voor `{API_KEY}` en `{IMS_ORG}`, moet om de 24 uur een nieuw token worden gegenereerd om door te gaan met het gebruik van platform-API&#39;s.
 
-Klik op **Doorgaan** om naar de volgende sectie te gaan.
+Als u een nieuwe token `{ACCESS_TOKEN}`wilt genereren, volgt u de stappen om een JWT-token [te](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) genereren in de handleiding voor de aanmeldgegevens van de Developer Console.
 
-#### Integratiedetails, openbare sleutel en productprofiel toevoegen
+## Toegangsreferenties testen
 
-In het volgende scherm wordt u gevraagd uw integratiegegevens in te vullen, uw openbare-sleutelcertificaat in te voeren en een productprofiel te selecteren.
+Nadat u alle drie vereiste gegevens hebt verzameld, kunt u de volgende API-aanroep proberen te maken. Deze vraag zal van alle klassen van het Model van Gegevens van de Ervaring (XDM) binnen de container van de Registratie van het Schema een lijst maken: `global`
 
-![](images/authentication/integration-details.png)
+**API-indeling**
 
-Voer eerst uw integratiegegevens in. Selecteer vervolgens een productprofiel. De profielen van het product verlenen korrelige toegang tot een groep eigenschappen die tot de dienst behoren die u in vorige stappen selecteerde.
-
-Voor de certificaatsectie moet u een certificaat genereren:
-
-**Voor Mac OS- en Linux-platforms:**
-
-Open de opdrachtregel en voer de volgende opdracht uit:
-
-`openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub.crt`
-
-
-**Voor Windows-platforms:**
-
-1. Een open client downloaden om openbare certificaten te genereren (bijvoorbeeld de [OpenSl-vensterclient](https://bintray.com/vszakats/generic/download_file?file_path=openssl-1.1.1-win64-mingw.zip))
-
-1. Extraheer de map en kopieer deze naar C:/libs/ locatie.
-
-1. Opdrachtregelprompt openen en de volgende opdrachten uitvoeren:
-
-   `set OPENSSL_CONF=C:/libs/openssl-1.1.1-win64-mingw/openssl.cnf`
-
-   `cd C:/libs/openssl-1.1.1-win64-mingw/`
-
-   `openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub.crt`
-
-U krijgt een antwoord dat lijkt op het volgende: u wordt gevraagd om informatie over uzelf in te voeren:
-
+```http
+GET /global/classes
 ```
-Generating a 2048 bit RSA private key
-.................+++
-.......................................+++
-writing new private key to 'private.key'
------
-You are about to be asked to enter information that will be incorporated
-into your certificate request.
-What you are about to enter is what is called a Distinguished Name or a DN.
-There are quite a few fields but you can leave some blank
-For some fields there will be a default value,
-If you enter '.', the field will be left blank.
------
-Country Name (2 letter code) []:
-State or Province Name (full name) []:
-Locality Name (eg, city) []:
-Organization Name (eg, company) []:
-Organizational Unit Name (eg, section) []:
-Common Name (eg, fully qualified host name) []:
-Email Address []:
-```
-
-Nadat u de gegevens hebt ingevoerd, worden twee bestanden gegenereerd: `certificate_pub.crt` en `private.key`.
-
->[!NOTE]
->`certificate_pub.crt` verloopt over 365 dagen. U kunt de periode langer maken door de waarde van `days` in het `openssl` bevel hierboven te veranderen, maar het roteren van geloofsbrieven periodiek is een goede veiligheidspraktijk.
-
-Het `private.key` zal worden gebruikt om onze JWT in de recentere sectie te produceren.
-
-De sleutel `certificate_pub.crt` wordt gebruikt om een API-sleutel te maken. Ga terug naar de Adobe I/O-console en klik op **Selecteer een bestand** om uw `certificate_pub.crt` bestand te uploaden.
-
-Klik op Integratie **** maken om het proces te voltooien.
-
-### Toegangswaarden naar beneden kopiëren
-
-Nadat u de integratie hebt gemaakt, kunt u de details ervan bekijken. Klik op **Clientgeheim** ophalen en uw scherm ziet er ongeveer als volgt uit:
-
-![](images/authentication/access-values.png)
-
-Kopieer de waarden voor `{API KEY}`, `{IMS ORG}` namelijk de organisatie-id, en `{CLIENT SECRET}` zoals deze in de volgende stap worden gebruikt.
-
-## Verificatie voor elke sessie
-
-De laatste stap bestaat uit het genereren van uw API-aanroepen `{ACCESS_TOKEN}` die u wilt gebruiken voor verificatie. Het toegangstoken moet worden opgenomen in de machtigingheader van elke API-aanroep naar het Adobe Experience Platform. Toegangstokens verlopen na 24 uur, waarna nieuwe tokens moeten worden gegenereerd om de API&#39;s te kunnen blijven gebruiken.
-
-### JWT maken
-
-Navigeer in de detailpagina van uw integratie in de Adobe I/O-console naar het **tabblad JWT** :
-
-![](images/authentication/generate-jwt.png)
-
-Op de pagina wordt u gevraagd de pagina in te voeren die `private.key` u in de vorige sectie hebt gemaakt. Open de opdrachtregel om de inhoud van het `private.key` bestand weer te geven:
-
-```shell
-cat private.key
-```
-
-Uw uitvoer ziet er ongeveer als volgt uit:
-
-```shell
------BEGIN PRIVATE KEY-----
-MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCYjPj18NrVlmrc
-H+YUTuwWrlHTiPfkBGM0P1HbIOdwrlSTCmPhmaNNG5+mEiULJLWlrhQpx/7uQVNW
-......
-xbWgBWatJ2hUhU5/K2iFlNJBVXyNy7rN0XzOagLRJ1uS2CM6Hn3vBOqLbHRG4Pen
-J1LvEocGunT12UJekLdEaQR4AKodIyjv5opvewrzxUZhVvUIIgeU5vUpg9smCXai
-wPW5MQjmygodzCh7+eGLrg==
------END PRIVATE KEY-----
-```
-
-Kopieer de volledige uitvoer en plak deze in het tekstveld en klik vervolgens op **JWT** genereren. Kopieer de gegenereerde JWT-code naar beneden voor de volgende stap.
-
-![](images/authentication/generated-jwt.png)
-
-### Toegangstoken genereren
-
-U kunt een toegangstoken door een cURL bevel produceren. Als u geen cURL hebt geïnstalleerd, kunt u het installeren gebruikend `npm install curl`. Meer informatie over cURL [vindt u hier](https://curl.haxx.se/)
-
-Nadat cURL is geïnstalleerd, moet u de velden in de volgende opdracht vervangen door uw eigen opdracht `{API_KEY}`, `{CLIENT_SECRET}`en `{JWT_TOKEN}`:
-
-```SHELL
-curl -X POST "https://ims-na1.adobelogin.com/ims/exchange/jwt/" \
-  -F "client_id={API_KEY}" \
-  -F "client_secret={CLIENT_SECRET}" \
-  -F "jwt_token={JWT_TOKEN}"
-```
-
-Als dit lukt, ziet de uitvoer er ongeveer als volgt uit:
-
-```JSON
-{
-  "token_type":"bearer",
-  "access_token":"eyJ4NXUiOiJpbXNfbmExLXN0ZzEta2V5LT2VyIiwiYWxnIjoiUlMyNTYifQ.eyJpZCI6IjE1MjAzMDU0ODY5MDhfYzMwM2JkODMtMWE1My00YmRiLThhNjctMWDhhNDJiNTE1X3VlMSIsImNsaWVudF9pZCI6ImYwNjY2Y2M4ZGVhNzQ1MWNiYzQ2ZmI2MTVkMzY1YzU0IiwidXNlcl9pZCI6IjA0ODUzMkMwNUE5ODg2QUQwQTQ5NDEzOUB0ZWNoYWNjdC5hZG9iZS5jb20iLCJzdGF0ZSI6IntcInNlc3Npb25cIjpcImh0dHBzOi8vaW1zLW5hMS1zdGcxLmFkb2JlbG9naW4uY29tL2ltcy9zZXNzaW9uL3YxL05UZzJZemM1TVdFdFlXWTNaUzAwT1RWaUxUZ3lPVFl0WkdWbU5EUTVOelprT0dFeUxTMHdORGcxTXpKRPVGc0TmtGRU1FRTBPVFF4TXpsQWRHVmphR0ZqWTNRdVlXUnZZbVV1WTI5dFwifSIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJhcyI6Imltcy1uYTEtc3RnMSIsImZnIjoiU0hRUlJUQ0ZTWFJJTjdSQjVVQ09NQ0lBWVU9PT09PT0iLCJtb2kiOiJhNTYwOWQ5ZiIsImMiOiJMeksySTBuZ2F2M1BhWWIxV0J3d3FRPT0iLCJleHBpcmVzX2luIjoiODY0MDAwMDAiLCJzY29wZSI6Im9wZW5pZCxzZXNzaW9uLEFkb2JlSUQscmVhZF9vcmdhbml6YXRpb25zLGFkZGl0aW9uYWxfaW5mby5wcm9qZWN0ZWRQcm9kdWN0Q29udGV4dCIsImNyZWF0ZWRfYXQiOiIxNTIwMzA1NDg2OTA4In0.EBgpw0JyKVzbjIBmH6fHDZUvJpvNG8xf8HUHNCK2l-dnVJqXxdi0seOk_kjVodkIa3evC54V560N60vi_mzt7gef-g954VH6l3gFh6XQ7yqRJD2LMW7G1lhQGhga4hrQCnJlfSQoztvIp9hkar9Zcu-MYgyEB5UlwK3KtB3elu7vJGk35F3T9OnqVL4PFj0Ix6zcuN_4gikgQgmtoUjuXULinbtu9Bkmdf7so9FvhapUd5ZTUTTMrAfJ36gEOQPqsuzlu9oUQaYTAn8v4B9TgoS0Paslo6WIksc4f_rSVWsbO6_TSUqIOi0e_RyL6GkMBA1ELA-Dkgbs-jUdkw",
-  "expires_in":86399947
-}
-```
-
-Uw toegangstoken is de waarde onder de `access_token` sleutel. Deze toegangstoken `expires_in` 86399947 milliseconden (24 uren). Daarna, zult u een nieuw toegangstoken moeten produceren door de zelfde stappen hierboven te volgen.
-
-U kunt nu API-aanvragen indienen in het Adobe Experience Platform.
-
-### Toegangscode testen
-
-Om te testen of uw toegangstoken geldig is, kunt u proberen om de volgende API vraag te maken. Deze vraag zal van alle klassen binnen de `global` container een lijst maken:
-
->[!NOTE]
->`{API_KEY}` en `{IMS_ORG}` raadpleeg de waarden die u hierboven hebt gegenereerd.
 
 **Verzoek**
 
@@ -259,8 +127,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-
-Als uw reactie vergelijkbaar is met de hieronder weergegeven reactie, `access_token` is uw reactie geldig en werkt u. (Deze reactie is afgebroken voor de ruimte.)
+Als uw reactie vergelijkbaar is met de hieronder weergegeven reactie, zijn uw gegevens geldig en werken ze. (Deze reactie is afgebroken voor de ruimte.)
 
 **Antwoord**
 
@@ -286,3 +153,9 @@ Als uw reactie vergelijkbaar is met de hieronder weergegeven reactie, `access_to
 ## Postman gebruiken voor JWT-verificatie en API-aanroepen
 
 [Postman](https://www.getpostman.com/) is een populair hulpmiddel om met RESTful APIs te werken. In dit [standaardbericht](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) wordt beschreven hoe u een postman kunt instellen om automatisch JWT-verificatie uit te voeren en deze te gebruiken voor het gebruik van Adobe Experience Platform-API&#39;s.
+
+## Volgende stappen
+
+Door dit document te lezen, hebt u uw toegangsreferenties voor platform-API&#39;s verzameld en getest. U kunt nu de voorbeeld-API-aanroepen volgen die in de hele [documentatie](../landing/documentation/overview.md)zijn opgegeven.
+
+Naast de authentificatiewaarden u in dit leerprogramma hebt verzameld, vereisen vele Platform APIs ook geldig `{SANDBOX_NAME}` om als kopbal worden verstrekt. Zie het [sandboxoverzicht](../sandboxes/home.md) voor meer informatie.
