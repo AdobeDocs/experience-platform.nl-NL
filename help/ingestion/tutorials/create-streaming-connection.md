@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een streamingverbinding maken met de API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 181719e729748adcde62199c9406a97b7a807182
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '659'
+ht-degree: 0%
 
 ---
 
@@ -177,6 +180,6 @@ Deze sectie bevat aanvullende informatie over het maken van streamingverbindinge
 
 ### Geverifieerde streamingverbindingen
 
-Met geverifieerde gegevensverzameling kunnen services van het Adobe Experience Platform, zoals Real-time klantprofiel en Identity, onderscheid maken tussen records die afkomstig zijn van vertrouwde bronnen en niet-vertrouwde bronnen. Clients die PII (Personal Identified Information) willen verzenden, kunnen dit doen door IMS Access Tokens te verzenden als onderdeel van de POST-aanvraag - als het IMS-token geldig is, worden de records gemarkeerd als verzameld van geldige bronnen.
+Met geverifieerde gegevensverzameling kunnen services van het Adobe Experience Platform, zoals Real-time klantprofiel en Identity, onderscheid maken tussen records die afkomstig zijn van vertrouwde bronnen en niet-vertrouwde bronnen. Clients die PII (Personal Identified Information) willen verzenden, kunnen dit doen door IMS Access Tokens te verzenden als onderdeel van de POST-aanvraag - als de IMS Token geldig is, worden de records gemarkeerd als verzameld bij vertrouwde bronnen.
 
 Meer informatie over het maken van een geverifieerde streamingverbinding vindt u in de zelfstudie voor het [maken van een geverifieerde streamingverbinding](create-authenticated-streaming-connection.md).
