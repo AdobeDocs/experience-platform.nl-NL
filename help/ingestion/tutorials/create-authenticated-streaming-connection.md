@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een geverifieerde streamingverbinding maken
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: d9ce9506e43c4deed01f18e5913fda5a5c3cee84
+workflow-type: tm+mt
+source-wordcount: '649'
+ht-degree: 0%
 
 ---
 
@@ -194,11 +197,3 @@ Als de `Authorization` header niet aanwezig is of als een ongeldig/verlopen toeg
     }
 }
 ```
-
-### Berichten verzenden naar een niet-geverifieerde streamingverbinding met Autorisatie
-
-Als voor een streamingverbinding geen verificatie is ingeschakeld, kan de client nog steeds (optioneel) de `Authorization` header aan hun aanvraag toevoegen.
-
-Als de `Authorization` header niet aanwezig is of als een ongeldig/verlopen toegangstoken wordt verzonden, wordt een HTTP 401-reactie zonder toestemming geretourneerd, worden de gegevens nog wel gepubliceerd, maar met het `authenticatedRequest` veld ingesteld op `false`.
-
-Als de `Authorization` koptekst aanwezig en geldig is, worden de gegevens gepubliceerd met het `authenticatedRequest` veld ingesteld op `true`.
