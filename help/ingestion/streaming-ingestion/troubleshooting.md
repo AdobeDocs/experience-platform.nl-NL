@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Problemen met streaming opname oplossen
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '1046'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ De nuttige ladingen van het verzoek kunnen slechts worden geëvalueerd nadat zij
 
 Wanneer synchrone validatie niet wordt ondersteund voor de aangevraagde locatie, wordt een 501-foutreactie geretourneerd. Zie het [streamingvalidatieoverzicht](../quality/streaming-validation.md) voor meer informatie over synchrone validatie.
 
-### Hoe verifieer ik verzonden gegevens?
+### Hoe kan ik ervoor zorgen dat gegevens alleen worden verzameld van vertrouwde bronnen?
 
 Experience Platform ondersteunt beveiligde gegevensverzameling. Wanneer geverifieerde gegevensverzameling is ingeschakeld, moeten clients een JSON Web Token (JWT) en hun IMS-organisatie-id verzenden als aanvraagheaders. Voor meer informatie over hoe te om voor authentiek verklaarde gegevens naar Platform te verzenden, te zien gelieve de gids over [voor authentiek verklaarde gegevensinzameling](../tutorials/create-authenticated-streaming-connection.md).
 
