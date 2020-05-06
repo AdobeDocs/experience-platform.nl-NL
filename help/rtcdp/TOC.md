@@ -3,7 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Help
 translation-type: tm+mt
-source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
+source-git-commit: e0807f32ff5f3d16a6805074951e3b09723c5181
+workflow-type: tm+mt
+source-wordcount: '407'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
    * Interface Doelen {#destinations-interface}
       * [Werkruimte Doelen](destinations/destinations-workspace.md)
       * [Pagina met doeldetails](destinations/destination-details-page.md)
-   * Doelcatalogus {#destinations-cat}
+   * Doelcatalogus  {#destinations-cat}
       * [Overzicht van de doelcatalogus](destinations/destinations-catalog.md)
       * Adobe-doelen{#adobe-destinations}
          * [Overzicht van Adobe-doelen](destinations/adobe-destinations.md)
@@ -75,7 +78,7 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
          * [Workflow voor het maken van cloudopslagdoelen](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
          * [Amazon S3-bestemming](destinations/amazon-s3-destination.md)
          * [SFTP-bestemming](destinations/sftp-destination.md)
-      * Doelen van het Platform van het Gegevensbeheer {dmp-bestemmingen}
+      * Gebieden van het Platform voor gegevensbeheer {#dmp-destinations}
          * [Overzicht van doelen van het gegevensbeheerplatform](destinations/dmp-destinations.md)
          * [Publiek Manager DIL-extensie](/help/rtcdp/destinations/aam-dil-extension.md)
       * E-mailmarketingdoelen{#email-destinations}
@@ -134,5 +137,5 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
 * Bronnen {#sources}
    * [Overzicht van bronnen](sources/sources-overview.md)
    * [Websitetags implementeren met Adobe Launch](sources/launch.md)
-* [Opmerkingen bij de release](https://www.adobe.com/go/platform-release-notes-en)
+* [Releaseopmerkingen](https://www.adobe.com/go/platform-release-notes-en)
 * [Verklarende woordenlijst](https://www.adobe.com/go/platform-glossary-en)
