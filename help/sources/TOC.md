@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
+source-git-commit: de523ebef35564ebc2e5991ee14ae1c7284bf092
+workflow-type: tm+mt
+source-wordcount: '513'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [ServiceNow-connector](connectors/customer-success/servicenow.md)
    - Databases {#databases}
       - [Amazon Redshift-connector](connectors/databases/redshift.md)
-      - [Apache Cassandra-connector](connectors/databases/cassandra.md)
       - [Apache Hive op Azure HDInsights-connector](connectors/databases/hive.md)
       - [Apache Spark op Azure HDInsights-connector](connectors/databases/spark.md)
       - [Azure Data Explorer-connector](connectors/databases/data-explorer.md)
@@ -74,7 +76,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
          - [ServiceNow-connector](tutorials/api/create/customer-success/servicenow.md)
       - Databases {#databases}
          - [Amazon Redshift-connector](tutorials/api/create/databases/redshift.md)
-         - [Apache Cassandra-connector](tutorials/api/create/databases/cassandra.md)
          - [Apache Hive op Azure HDInsights-connector](tutorials/api/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights-connector](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorer-connector](tutorials/api/create/databases/data-explorer.md)
@@ -112,8 +113,8 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [Gegevens over marketingautomatisering verzamelen](tutorials/api/collect/marketing-automation.md)
       - [Betalingsgegevens verzamelen](tutorials/api/collect/payments.md)
       - [protocolgegevens verzamelen](tutorials/api/collect/protocols.md)
-   - [Parketgegevens uit een cloudopslagsysteem van een andere fabrikant verzamelen](tutorials/api/create-dataset-base-connection.md)
-   - [Creeer een verbinding van de datasetbasis gebruikend de Dienst API van de Stroom](tutorials/api/cloud-storage-parquet.md)
+   - [Parketgegevens uit een cloudopslagsysteem van een andere fabrikant verzamelen](tutorials/api/cloud-storage-parquet.md)
+   - [Creeer een verbinding van de datasetbasis gebruikend de Dienst API van de Stroom](tutorials/api/create-dataset-base-connection.md)
 - UI-zelfstudies {#ui-tutorials}
    - Een bronaansluiting maken {#create}
       - Adobe-toepassingen {#adobe-applications}
