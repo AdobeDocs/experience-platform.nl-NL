@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 translation-type: tm+mt
-source-git-commit: b58b933fce9d1abe658a908ec07f390e4991c5c6
+source-git-commit: eadf285ef5fd373eec54e6680b5f253b0b16dcf9
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 0%
 
 ---
 
@@ -65,7 +68,6 @@ Het Platform van de ervaring verleent steun voor het opnemen van gegevens van ee
 Het Platform van de ervaring verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [Amazon Redshift-connector](connectors/databases/redshift.md)
-- [Apache Cassandra-connector](connectors/databases/cassandra.md)
 - [Apache Hive op Azure HDInsights-connector](connectors/databases/hive.md)
 - [Apache Spark op Azure HDInsights-connector](connectors/databases/spark.md)
 - [Azure Data Explorer-connector](connectors/databases/data-explorer.md)
