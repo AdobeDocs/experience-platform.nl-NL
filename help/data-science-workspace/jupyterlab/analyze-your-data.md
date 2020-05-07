@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Analyseer uw gegevens met notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 3dc16c835cb6ab0949fc0d4bf18349d415d680ed
+source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+workflow-type: tm+mt
+source-wordcount: '1746'
+ht-degree: 0%
 
 ---
 
@@ -51,7 +54,7 @@ Het recept van de Verkoop van de Detailhandel is een standalone voorbeeld dat de
 
 We gaan over tot interne toegang tot gegevens via het Adobe Experience Platform en tot externe gegevens. Wij zullen de `data_access_sdk_python` bibliotheek gebruiken om tot interne gegevens zoals datasets en schema&#39;s toegang te hebben XDM. Voor externe gegevens gebruiken we de pandas Python-bibliotheek.
 
-#### Externe gegevens
+#### Externe gegevens {#external-data}
 
 Open de Retail Sales-laptop en zoek de header &quot;Load Data&quot;. De volgende Python-code gebruikt de gegevensstructuur van de pandas en de `DataFrame` read_csv() [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) -functie om de CSV te lezen die op Github wordt gehost in het DataFrame:
 
@@ -69,7 +72,7 @@ Tot slot kunnen we eens bekijken hoe onze gegevens eruit zien. Wij kunnen gebrui
 
 Nu gaan we over tot de toegang tot gegevens van het Experience Platform.
 
-##### Op gegevensset-id
+#### Op gegevensset-id
 
 Voor deze sectie, gebruiken wij de Detailhandel dataset van de Verkoop die de zelfde dataset is die in de de steekproefnotitie van de Verkoop wordt gebruikt.
 
@@ -145,7 +148,7 @@ Wanneer u de minimum- en maximumwaarden voor `store`bekijkt, ziet u dat er 45 un
 
 Dit betekent dat er 22 winkels zijn van `storeType` , `A`17 zijn `storeType` , en 6 zijn `B``storeType` `C`.
 
-#### Gegevensvisualisatie
+### Gegevensvisualisatie
 
 Nu we onze gegevenskaderwaarden kennen, willen we dit aanvullen met visualisaties om de dingen duidelijker en makkelijker te maken om patronen te identificeren. Grafieken zijn ook handig wanneer u resultaten naar een publiek verzendt. Enkele Python-bibliotheken die nuttig zijn voor visualisatie zijn onder andere:
 - [Matplotlib](https://matplotlib.org/)
@@ -164,7 +167,7 @@ In deze sectie gaan we snel over enkele voordelen voor het gebruik van elke bibl
 [ggplot](https://ggplot2.tidyverse.org/) is een pakket dat ook boven op matplotlib is gebouwd . Nochtans is het belangrijkste verschil dat het hulpmiddel een haven van gplot2 voor R is. Net als bij seaborn is het doel om matplotlib beter te krijgen. De gebruikers die met gplot2 voor R vertrouwd zijn zouden deze bibliotheek moeten overwegen.
 
 
-##### Grafieken gelijktrekken
+### Grafieken gelijktrekken
 
 Univariate grafieken zijn percelen van een individuele variabele. Een uniforme grafiek wordt gebruikt om uw gegevens te visualiseren is de doos en de whiskergrafiek.
 
@@ -174,7 +177,7 @@ Met behulp van onze detailhandelsdataset van voordien, kunnen wij de doos en de 
 
 Een doos en een whiskerplot worden gebruikt om de verspreiding van gegevens te tonen. De buitenlijnen van het waarnemingspunt tonen de bovenste en onderste kwartiel, terwijl de doos het interkwartielbereik beslaat. De regel in het vak markeert de mediaan. Alle gegevenspunten die meer dan 1,5 keer het bovenste of onderste kwartiel bedragen, worden als een cirkel gemarkeerd. Deze punten worden beschouwd als uitschieters.
 
-##### Meerdere grafieken
+### Meerdere grafieken
 
 Meerdere percelen worden gebruikt om de interactie tussen variabelen te zien. Met de visualisatie kunnen wetenschappers van data zien of er correlaties of patronen zijn tussen de variabelen. Een veelgebruikte multivariate grafiek is een correlatiematrix. Met een correlatiematrix worden de afhankelijkheden tussen meerdere variabelen gekwantificeerd aan de hand van de correlatiecoëfficiënt.
 
