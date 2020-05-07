@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij het Adobe Experience Platform Data Science Workspace
 translation-type: tm+mt
-source-git-commit: f38a2ba85248bbd12f5ef2487e8d8e6fe3319b32
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
@@ -29,12 +29,6 @@ ht-degree: 0%
    * [MLServices](api/mlservices.md)
    * [Inzichten](api/insights.md)
    * [Aanhangsel](api/appendix.md)
-* Machines in realtime leren (alfa) {#real-time-machine-learning}
-   * [Overzicht](real-time-machine-learning/home.md)
-   * [Aan de slag](real-time-machine-learning/getting-started.md)
-   * [Een real-time HTML-model trainen](real-time-machine-learning/training-ml-model.md)
-   * [Het scoren van een model van XML in real time](real-time-machine-learning/scoring-ml-model.md)
-   * [Referentiehandleiding knooppunt](real-time-machine-learning/node-reference.md)
 * Vooraf gebouwde recepten {#pre-built-recipes}
    * [Recept voor productaanbevelingen](pre-built-recipes/product-recommendations.md)
    * [Voorspelling van productaankoop](pre-built-recipes/product-purchase-prediction.md)
