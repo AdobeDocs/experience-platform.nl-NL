@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Gebruikershandleiding voor het profiel van de klant in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: ab289f07475abcbe966c723423825fd392eb3615
+source-git-commit: 667aadde831a1d010f8cbbbb20bd92f914558bd1
+workflow-type: tm+mt
+source-wordcount: '882'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,9 @@ U kunt de kenmerken die in de lijst worden weergegeven, aanpassen door op het pi
 
 Het aantal profielen geeft het totale aantal profielen weer dat uw organisatie heeft binnen het Experience Platform, nadat het standaard samenvoegbeleid van uw organisatie profielfragmenten heeft samengevoegd tot één profiel voor elke afzonderlijke klant. Met andere woorden, uw organisatie kan veelvoudige profielfragmenten met betrekking tot één enkele klant hebben die met uw merk over verschillende kanalen interactie heeft, maar deze fragmenten zouden samen (volgens het standaard fusiebeleid) worden samengevoegd en een telling van &quot;1&quot;profiel terugkeren omdat zij allen met het zelfde individu verwant zijn.
 
-Het aantal profielen omvat ook zowel profielen met kenmerken (recordgegevens) als profielen (zoals Adobe Analytics-profielen) die alleen tijdreeksgegevens (gebeurtenisgegevens) bevatten. De telling wordt regelmatig vernieuwd om een bijgewerkt totaal aantal profielen binnen Platform te verstrekken. Telkens wanneer een opname van profielen de telling met meer dan 5% verhoogt of vermindert, wordt een baan automatisch teweeggebracht om de telling bij te werken. Als uw organisatie streamingopname gebruikt, worden taken elk uur gepland om nieuwe gegevens op te halen.
+Het aantal profielen omvat ook zowel profielen met kenmerken (recordgegevens) als profielen die alleen tijdreeksgegevens (gebeurtenisgegevens) bevatten, zoals Adobe Analytics-profielen. Het aantal profielen wordt regelmatig vernieuwd om een up-to-date totaal aantal profielen binnen Platform te bieden.
+
+Wanneer de opname van profielen in de profielopslag de telling met meer dan 5% verhoogt of vermindert, wordt een baan teweeggebracht om de telling bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om het aantal profielen bij te werken. Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal profielen bij te werken als aan de drempel van 5% verhoging of verlaging is voldaan.
 
 ![](../images/user-guide/profile-count.png)
 
