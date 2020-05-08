@@ -4,21 +4,29 @@ solution: Experience Platform
 title: IBM DB2-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: e77dadb4257c16e19113f6224790fbb3b8207a52
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
 
 # IBM DB2-connector
 
-Met het Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+Het Adobe Experience Platform biedt native connectiviteit voor databaseproviders zoals Microsoft, MySQL en Azure. U kunt uw gegevens van deze systemen overbrengen naar Platform.
 
-Het Platform van de ervaring verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Het platform kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. Ondersteuning voor databaseproviders omvat IBM DB2.
+Verschillende soorten derdegegevensbestanden worden gesteund, met inbegrip van relationele, NoSQL, of gegevenspakhuizen. Ondersteuning voor databaseproviders omvat IBM DB2.
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding tussen IBM DB2 en Platform met behulp van API&#39;s:
+In de onderstaande documentatie vindt u informatie over de verbinding tussen IBM DB2 en Platform via API&#39;s of de gebruikersinterface:
 
 ## IBM DB2 met API&#39;s verbinden met platform
 
 - [Een IBM DB2-connector maken met de Flow Service API](../../tutorials/api/create/databases/ibm-db2.md)
 - [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
+
+## IBM DB2 met behulp van de gebruikersinterface verbinden met platform
+
+- [Een IBM DB2-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/databases/ibm-db2.md)
+- [Vorm een dataflow voor een gegevensbestandschakelaar in UI](../../tutorials/ui/dataflow/databases.md)
