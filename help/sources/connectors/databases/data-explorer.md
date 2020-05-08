@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azure Data Explorer-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+source-git-commit: 58cc359527a590fce3825f41682cbb32be88f8d1
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -28,5 +28,5 @@ De documentatie hieronder verstrekt informatie over hoe te om Azure de Ontdekkin
 
 ## Connect Azure Data Explorer naar Platform met behulp van de gebruikersinterface
 
-- [Een Azure Data Explorer-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/databases/ats.md)
+- [Een Azure Data Explorer-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/databases/data-explorer.md)
 - [Vorm een dataflow voor een gegevensbestandschakelaar in UI](../../tutorials/ui/dataflow/databases.md)
