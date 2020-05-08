@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: de523ebef35564ebc2e5991ee14ae1c7284bf092
+source-git-commit: 0e9b5e56ea40528446b69c1af6f6e0bbf17f8d08
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -140,6 +140,7 @@ ht-degree: 0%
          - [Azure Synapse Analytics-connector](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage-connector](tutorials/ui/create/databases/ats.md)
          - [Google Big Query-connector](tutorials/ui/create/databases/bigquery.md)
+         - [IBM DB2-connector](tutorials/ui/create/databases/ibm-db2.md)
          - [MariaDB-connector](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Server-aansluiting](tutorials/ui/create/databases/sql-server.md)
          - [MySQL-connector](tutorials/ui/create/databases/mysql.md)
