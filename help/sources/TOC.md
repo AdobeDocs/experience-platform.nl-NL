@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: e046054b871026c32858e06c022ea86f53fbafd5
+source-git-commit: b3512cd4d1e024597a47e1aa52a2e23e5fce5e44
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,7 @@ ht-degree: 0%
    - Cloud-opslag {#cloud-storage}
       - [Azure Data Lake Storage Gen2-connector](connectors/cloud-storage/adls-gen2.md)
       - [Azure Blob- en Amazon S3-connector](connectors/cloud-storage/blob-s3.md)
+      - [Azure File Storage-aansluiting](connectors/cloud-storage/azure-file-storage.md)
       - [FTP- en SFTP-aansluiting](connectors/cloud-storage/ftp-sftp.md)
       - [Google Cloud Storage-connector](connectors/cloud-storage/google-cloud-storage.md)
    - CRM {#crm}
@@ -65,6 +66,7 @@ ht-degree: 0%
          - [Amazon S3-connector](tutorials/api/create/cloud-storage/s3.md)
          - [Azure Blob-connector](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data Lake Storage Gen2-connector](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Azure File Storage-aansluiting](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google Cloud Storage-connector](tutorials/api/create/cloud-storage/google.md)
          - [SFTP-aansluiting](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -126,6 +128,7 @@ ht-degree: 0%
       - Cloud-opslag {#cloud-storage}
          - [Azure Data Lake Storage Gen2-connector](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure Blob- en Amazon S3-connector](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Azure File Storage-aansluiting](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTP- en SFTP-aansluiting](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Google Cloud Storage-connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}
