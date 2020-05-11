@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+source-git-commit: 33091568c850375b399435f375e854667493152c
+workflow-type: tm+mt
+source-wordcount: '2057'
+ht-degree: 0%
 
 ---
 
@@ -53,7 +56,7 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 | `name` | Vriendelijke naam waarmee het samenvoegbeleid kan worden geïdentificeerd in lijstweergaven. |
 | `imsOrgId` | Organisatie-id waartoe dit samenvoegbeleid behoort |
 | `identityGraph` | [Object in identiteitsgrafiek](#identity-graph) dat de identiteitsgrafiek aangeeft waarvan gerelateerde identiteiten worden verkregen. Profielfragmenten die voor alle verwante identiteiten worden gevonden, worden samengevoegd. |
-| `attributeMerge` | [Kenmerksamenvoegobject](#attribute-merge) dat aangeeft op welke manier in het samenvoegbeleid voorrang wordt gegeven aan profielkenmerkwaarden in het geval van gegevensconflicten. |
+| `attributeMerge` | [Kenmerksamenvoegobject](#attribute-merge) dat aangeeft op welke manier in het samenvoegbeleid bij gegevensconflicten voorrang wordt gegeven aan profielkenmerkwaarden. |
 | `schema` | Het [schemaobject](#schema) waarop het samenvoegbeleid kan worden gebruikt. |
 | `default` | Een Booleaanse waarde die aangeeft of dit samenvoegbeleid de standaardinstelling is voor het opgegeven schema. |
 | `version` | Door het platform bijgehouden versie van het samenvoegbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
@@ -170,7 +173,7 @@ Waar de waarde van `name` is de naam van de klasse XDM waarop het schema verbond
 
 ## Beleid voor samenvoegen openen {#access-merge-policies}
 
-Gebruikend het In real time API van het Profiel van de Klant, staat het `/config/mergePolicies` eindpunt u een raadplegingsverzoek toe om een specifiek fusiebeleid door zijn identiteitskaart te bekijken, of tot alle fusiebeleid in uw IMS Organisatie toegang te hebben, die door specifieke criteria wordt gefiltreerd.
+Gebruikend het In real time API van het Profiel van de Klant, staat het `/config/mergePolicies` eindpunt u een raadplegingsverzoek toe om een specifiek fusiebeleid door zijn identiteitskaart te bekijken, of tot alle fusiebeleid in uw IMS Organisatie toegang te hebben, die door specifieke criteria wordt gefiltreerd. U kunt het `/config/mergePolicies/bulk-get` eindpunt ook gebruiken om veelvoudige fusiebeleid door hun IDs terug te winnen. De stappen voor het uitvoeren van elk van deze vraag worden geschetst in de volgende secties.
 
 ### Heb toegang tot één enkel fusiebeleid door identiteitskaart
 
@@ -217,6 +220,99 @@ Een succesvolle reactie retourneert de details van het samenvoegbeleid.
     },
     "default": false,
     "updateEpoch": 1551127597
+}
+```
+
+Zie de [componenten van de sectie van het samenvoegingsbeleid](#components-of-merge-policies) aan het begin van dit document voor details op elk van de individuele elementen die omhoog een fusiebeleid maken.
+
+### Hiermee worden meerdere samenvoegbeleidsregels via de id&#39;s opgehaald
+
+U kunt veelvoudige fusiebeleid terugwinnen door een POST- verzoek aan het `/config/mergePolicies/bulk-get` eindpunt en met inbegrip van identiteitskaarts van het fusiebeleid te doen u in het verzoeklichaam wenst terug te winnen.
+
+**API-indeling**
+
+```http
+POST /config/mergePolicies/bulk-get
+```
+
+**Verzoek**
+
+De aanvraaginstantie bevat een array &#39;ids&#39; met afzonderlijke objecten die de &#39;id&#39; bevatten voor elk samenvoegbeleid waarvoor u details wilt ophalen.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/core/ups/config/mergePolicies/bulk-get' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "ids": [
+          {
+            "id": "0bf16e61-90e9-4204-b8fa-ad250360957b"
+          }
+          {
+            "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130"
+          }
+        ]
+      }'
+```
+
+**Antwoord**
+
+Een succesvolle reactie keert de Status 207 van HTTP (multi-Status) en de details van het fusiebeleid terug waarvan IDs in het POST- verzoek werd verstrekt.
+
+```json
+{
+    "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+    "name": "Profile Default Merge Policy",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "none"
+    },
+    "attributeMerge": {
+        "type": "timestampOrdered"
+    },
+    "default": true,
+    "updateEpoch": 1552086578
+},
+{
+    "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
+    "name": "Dataset Precedence Merge Policy",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "pdg"
+    },
+    "attributeMerge": {
+        "type": "dataSetPrecedence",
+        "order": [
+            "5b76f86b85d0e00000be5c8b",
+            "5b76f8d787a6af01e2ceda18"
+        ]
+    },
+    "default": false,
+    "updateEpoch": 1576099719
 }
 ```
 
