@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform - Veelgestelde vragen en handleiding voor probleemoplossing
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+workflow-type: tm+mt
+source-wordcount: '2001'
+ht-degree: 0%
 
 ---
 
@@ -85,11 +88,11 @@ Raadpleeg de documentatie bij de [API-naslaggids](https://www.adobe.io/apis/expe
 
 ## Wat is mijn IMS-organisatie? {#what-is-my-ims-organization}
 
-Een IMS-organisatie is een Adobe-representatie van een klant. Alle Adobe-oplossingen met licentie zijn geïntegreerd met deze klantenorganisatie. Wanneer een IMS-organisatie recht heeft op Experience Platform, kan zij toegang toewijzen aan ontwikkelaars. De IMS-organisatie-id (`x-gw-ims-org-id`) vertegenwoordigt de organisatie waarvoor een API-aanroep moet worden uitgevoerd en is daarom vereist als een header in alle API-aanvragen. Deze id kunt u vinden via de [Adobe I/O-console](https://console.adobe.io/): in het lusje van **Integraties** , navigeer aan de sectie van het **Overzicht** voor om het even welke bepaalde integratie om identiteitskaart onder de Geloofsbrieven **van de** Cliënt te vinden. Voor een geleidelijke analyse van hoe te in Platform voor authentiek te verklaren, zie het [authentificatieleerprogramma](../tutorials/authentication.md).
+Een IMS-organisatie is een Adobe-representatie van een klant. Alle Adobe-oplossingen met licentie zijn geïntegreerd met deze klantenorganisatie. Wanneer een IMS-organisatie recht heeft op Experience Platform, kan zij toegang toewijzen aan ontwikkelaars. De IMS-organisatie-id (`x-gw-ims-org-id`) vertegenwoordigt de organisatie waarvoor een API-aanroep moet worden uitgevoerd en is daarom vereist als een header in alle API-aanvragen. Deze id kunt u vinden via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in het lusje van **Integraties** , navigeer aan de sectie van het **Overzicht** voor om het even welke bepaalde integratie om identiteitskaart onder de Geloofsbrieven **van de** Cliënt te vinden. Voor een geleidelijke analyse van hoe te in Platform voor authentiek te verklaren, zie het [authentificatieleerprogramma](../tutorials/authentication.md).
 
 ## Waar kan ik mijn API-sleutel vinden? {#where-can-i-find-my-api-key}
 
-Een API-sleutel is vereist als een header in alle API-aanvragen. U vindt deze via de [Adobe I/O-console](https://console.adobe.io/). Binnen de console, op het lusje van **Integraties** , navigeer aan de sectie van het **Overzicht** voor een specifieke integratie en u zult de sleutel onder de Verantwoordelijkheden **van de** Cliënt vinden. Voor een geleidelijke analyse van hoe te om aan Platform voor authentiek te verklaren, zie het [authentificatieleerprogramma](../tutorials/authentication.md).
+Een API-sleutel is vereist als een header in alle API-aanvragen. U vindt deze via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Binnen de console, op het lusje van **Integraties** , navigeer aan de sectie van het **Overzicht** voor een specifieke integratie en u zult de sleutel onder de Verantwoordelijkheden **van de** Cliënt vinden. Voor een geleidelijke analyse van hoe te om aan Platform voor authentiek te verklaren, zie het [authentificatieleerprogramma](../tutorials/authentication.md).
 
 ## Hoe krijg ik een toegangstoken? {#how-do-i-get-an-access-token}
 
@@ -234,7 +237,7 @@ Dit foutbericht wordt weergegeven wanneer een POST-, PUT- of PATCH-aanvraag een 
 
 Hieronder volgt een lijst met probleemoplossingsgidsen en API-naslagdocumentatie voor Experience Platform-API&#39;s. Elke het oplossen van problemengids verstrekt antwoorden op vaak gestelde vragen en oplossingen aan problemen die voor de individuele diensten van het Platform specifiek zijn. De API verwijzingsdocumenten verstrekken een uitvoerige gids aan alle beschikbare eindpunten voor elke dienst, en tonen de instanties van de steekproefaanvraag, reacties, en foutencodes die u kunt ontvangen.
 
-| Service | API-naslag | Problemen oplossen |
+| Service | API-referentie | Problemen oplossen |
 --- | --- | ---
 | Toegangsbeheer | [API voor toegangsbeheer](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Handleiding voor probleemoplossing bij toegangsbeheer](../access-control/troubleshooting-guide.md) |
 | Catalogus | [Catalogusservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
