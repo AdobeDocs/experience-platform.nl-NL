@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Overzicht van gegevenstoegang
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+workflow-type: tm+mt
+source-wordcount: '488'
+ht-degree: 2%
 
 ---
 
@@ -237,7 +240,6 @@ Contents of the file
 
 Raadpleeg de zelfstudie over [gegevenstoegang](tutorials/dataset-data.md)voor meer voorbeelden.
 
-
 ## Abonneren op gebeurtenissen voor gegevensinvoer
 
-Platform maakt specifieke hoogwaardige gebeurtenissen beschikbaar voor abonnement via de [Adobe I/O-console](https://console.adobe.io/). U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Meer informatie over het gebruik van Adobe I/O Events vindt u in de gids [Aan de slag](https://www.adobe.io/apis/experienceplatform/events/docs.html).
+Platform maakt specifieke hoogwaardige gebeurtenissen beschikbaar voor abonnement via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie de zelfstudie over het [abonneren op meldingen](../ingestion/quality/subscribe-events.md) over gegevensinvoer voor meer informatie.
