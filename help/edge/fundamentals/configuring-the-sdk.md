@@ -4,7 +4,10 @@ seo-title: De Adobe Experience Platform Web SDK configureren
 description: Leer hoe te om het Platform van de Ervaring te vormen SDK van het Web
 seo-description: Leer hoe te om het Platform van de Ervaring te vormen SDK van het Web
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+workflow-type: tm+mt
+source-wordcount: '765'
+ht-degree: 0%
 
 ---
 
@@ -67,14 +70,6 @@ Geeft aan of foutopsporing moet worden ingeschakeld. Het plaatsen van dit config
 | String | Nee | `beta.adobedc.net` |
 
 Het domein dat wordt gebruikt voor interactie met Adobe Services. Dit wordt alleen gebruikt als u een domein van de eerste partij (CNAME) hebt dat proxy&#39;s aanvragen bij de Adobe Edge-infrastructuur.
-
-### `errorsEnabled`
-
-| **Type** | **Vereist** | **Standaardwaarde** |
-| -------- | ------------ | ----------------- |
-| Boolean | Nee | `true` |
-
-Geeft aan of fouten moeten worden onderdrukt. Zoals beschreven in het [Uitvoeren van Bevelen](executing-commands.md), worden de _uncaught_ fouten geregistreerd aan de ontwikkelaarsconsole, ongeacht of het zuiveren in het Web SDK van het Platform van de Ervaring van Adobe wordt toegelaten. Door `errorsEnabled` `false`aan te plaatsen, worden de beloftes teruggekeerd van het Web SDK van het Platform van de Ervaring van Adobe nooit verworpen, hoewel de fouten nog aan de console worden geregistreerd als het registreren in het Web SDK van het Platform van de Ervaring van Adobe wordt toegelaten.
 
 ### `orgId`
 
