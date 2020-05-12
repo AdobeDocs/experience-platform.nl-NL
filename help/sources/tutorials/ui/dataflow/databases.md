@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Vorm een dataflow voor een gegevensbestandschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: c55e48a90d57e538f3d096b31eae639a1cca882c
+source-git-commit: 415b59fc3fa20c09372549e92571c1b41006e540
+workflow-type: tm+mt
+source-wordcount: '1049'
+ht-degree: 0%
 
 ---
 
@@ -31,9 +34,9 @@ Nadat u de databaseverbinding hebt gemaakt, wordt de stap Gegevens ** selecteren
 - De linkerhelft van de interface is een browser die de lijst met databases van uw account weergeeft.
 - Met de rechterhelft van de interface kunt u maximaal 100 rijen met gegevens voorvertonen.
 
-Selecteer de database die u wilt gebruiken en klik op **Volgende**.
+Selecteer de database die u wilt gebruiken en klik op **[!UICONTROL Volgende]**.
 
-![](../../../images/tutorials/dataflow/databases/select-data-next.png)
+![](../../../images/tutorials/dataflow/databases/add-data.png)
 
 ## Gegevensvelden toewijzen aan een XDM-schema
 
@@ -43,33 +46,35 @@ Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U k
 
 ### Een bestaande gegevensset gebruiken
 
-Om gegevens in een bestaande dataset in te voeren, selecteer **Gebruik bestaande dataset**, dan klik het datasetpictogram.
+Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Bestaande dataset]**, dan klik het datasetpictogram.
 
-![](../../../images/tutorials/dataflow/databases/use-existing-dataset.png)
+![](../../../images/tutorials/dataflow/databases/existing-dataset.png)
 
-Het dialoogvenster _Gegevensset_ selecteren wordt geopend. Zoek de gegevensset die u wilt gebruiken, selecteer deze en klik op **Doorgaan**.
+Het dialoogvenster *[!UICONTROL Gegevensset]* selecteren wordt geopend. Zoek de gegevensset die u wilt gebruiken, selecteer deze en klik op **[!UICONTROL Doorgaan]**.
 
-![](../../../images/tutorials/dataflow/databases/select-dataset.png)
+![](../../../images/tutorials/dataflow/databases/select-existing-dataset.png)
 
 ### Een nieuwe gegevensset gebruiken
 
-Om gegevens in een nieuwe dataset in te voeren, **creeer nieuwe dataset** en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in. Klik vervolgens op het schemapictogram.
+Om gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL Nieuwe dataset]** en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in.
 
-![](../../../images/tutorials/dataflow/databases/use-new-dataset.png)
+U kunt een schemagebied vastmaken door een schemanaam in de **[!UICONTROL Uitgezochte bar van het schemaonderzoek]** te typen. U kunt ook het vervolgkeuzepictogram selecteren om een lijst met bestaande schema&#39;s weer te geven. U kunt ook **[!UICONTROL Geavanceerd zoeken]** selecteren in een scherm met bestaande schema&#39;s en de desbetreffende details.
 
-Het dialoogvenster Schema __ selecteren wordt geopend. Selecteer het schema u wenst om op de nieuwe dataset toe te passen, dan klik **Gedaan**.
+![](../../../images/tutorials/dataflow/databases/new-dataset.png)
 
-![](../../../images/tutorials/dataflow/databases/select-schema.png)
+Het dialoogvenster *[!UICONTROL Selecteer schema] wordt weergegeven. Selecteer het schema u wenst om op de nieuwe dataset toe te passen, dan klik **[!UICONTROL Gedaan]**.
+
+![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
 Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of mapperfuncties te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Raadpleeg de zelfstudie over het [toewijzen van CSV-gegevens aan XDM-schemavelden](../../../../ingestion/tutorials/map-a-csv-file.md)voor meer informatie over gegevenstoewijzing en mapperfuncties.
 
-Klik op **Volgende** als de brongegevens zijn toegewezen.
+Klik op **[!UICONTROL Volgende]** als de brongegevens zijn toegewezen.
 
-![](../../../images/tutorials/dataflow/databases/mapping-data.png)
+![](../../../images/tutorials/dataflow/databases/mapping.png)
 
 ## Planninguitvoering
 
-De *Plannende* stap verschijnt, toestaand u om een innameprogramma te vormen om de geselecteerde brongegevens automatisch in te nemen gebruikend de gevormde afbeeldingen. De volgende lijst schetst de verschillende configureerbare gebieden voor het plannen:
+De *[!UICONTROL Plannende]* stap verschijnt, toestaand u om een innameprogramma te vormen om de geselecteerde brongegevens automatisch in te nemen gebruikend de gevormde afbeeldingen. De volgende lijst schetst de verschillende configureerbare gebieden voor het plannen:
 
 | Veld | Beschrijving |
 | --- | --- |
@@ -77,48 +82,35 @@ De *Plannende* stap verschijnt, toestaand u om een innameprogramma te vormen om 
 | Interval | Een geheel getal dat het interval voor de geselecteerde frequentie instelt. |
 | Begintijd | Een UTC-tijdstempel waarvoor de eerste invoer wordt uitgevoerd. |
 | Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als *Backfill* is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Als *Backfill* is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de *begintijd* worden geladen. Bestanden die vóór het begin van het *starten* zijn geladen, worden niet opgenomen. |
+| Delta-kolom | Een optie met een gefilterde reeks gebieden van het bronschema van type, datum, of tijd. Dit veld wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
 
-Dataflows worden ontworpen om gegevens automatisch in te voeren op een geplande basis. Als u slechts één keer wilt opnemen via deze workflow, kunt u dit doen door de **Frequentie** in te stellen op &quot;Dag&quot; en een zeer groot aantal toe te passen voor het **Interval**, zoals 10000 of een vergelijkbaar aantal.
+Dataflows worden ontworpen om gegevens automatisch in te voeren op een geplande basis. Als u slechts één keer wilt opnemen via deze workflow, kunt u dit doen door de **[!UICONTROL Frequentie]** in te stellen op &quot;Dag&quot; en een zeer groot aantal toe te passen voor het **[!UICONTROL Interval]**, zoals 10000 of een vergelijkbaar aantal.
 
-Geef waarden op voor het schema en klik op **Volgende**.
+Geef waarden op voor het schema en selecteer **[!UICONTROL Volgende]**.
 
-![](../../../images/tutorials/dataflow/databases/scheduling.png)
+![](../../../images/tutorials/dataflow/databases/schedule.png)
 
 ## Geef uw gegevensstroom een naam
 
-De stap voor *naamstroom* wordt weergegeven. Hier moet u een naam en een optionele beschrijving voor de gegevensstroom opgeven. Klik op Volgende als u klaar bent.&quot;
+De stap met *[!UICONTROL details]* voor gegevensstroom wordt weergegeven. Hier moet u een naam en een optionele beschrijving voor de gegevensstroom opgeven. Selecteer **[!UICONTROL Volgende]** als u klaar bent.
 
-![](../../../images/tutorials/dataflow/databases/name-flow.png)
+![](../../../images/tutorials/dataflow/databases/dataflow-detail.png)
 
 ## Controleer uw gegevensstroom
 
-De stap *Revisie* wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
+De stap *[!UICONTROL Revisie]* wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-- *Verbindingsgegevens*: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
-- *Toewijzingsdetails*: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
-- *Details* schema: Toont de actieve periode, de frequentie, en het interval van het innameprogramma.
+- *Verbinding*: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
+- *Gegevensset- en kaartvelden* toewijzen: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
+- *Planning*: Toont de actieve periode, de frequentie, en het interval van het innameprogramma.
 
-Nadat u de gegevensstroom hebt gereviseerd, klikt u op **Voltooien** en laat u enige tijd over tot de gegevensstroom.
+Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Voltooien]** en laat u enige tijd over tot de gegevensstroom.
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
 ## Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voer de onderstaande stappen uit om toegang te krijgen tot de gegevenssetcontrole van een gegevensstroom.
-
-Klik in de werkruimte _Bronnen_ op het tabblad **Bladeren** om uw basisverbindingen weer te geven. Zoek in de weergegeven lijst naar de verbinding die de gegevensstroom bevat die u wilt controleren door op de naam ervan te klikken.
-
-![](../../../images/tutorials/dataflow/databases/browse-base-connectors.png)
-
-Het scherm *Bronactiviteit* wordt weergegeven. Van hier, klik de naam van een dataset waarvan activiteit u wilt controleren.
-
-![](../../../images/tutorials/dataflow/databases/select-dataflow-dataset.png)
-
-Het scherm *Dataset-activiteit* wordt weergegeven. Op deze pagina wordt de snelheid van berichten weergegeven die in de vorm van een grafiek worden gebruikt.
-
-![](../../../images/tutorials/dataflow/databases/dataset-activity.png)
-
-Voor meer informatie over het controleren van datasets en ingestie, verwijs naar het leerprogramma bij het [controleren van het stromen gegevens](../../../../ingestion/quality/monitor-data-flows.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voor meer informatie over hoe te om uw gegevensstromen te controleren, zie de zelfstudie over [rekeningen en gegevensstromen](../monitor.md).
 
 ## Volgende stappen
 
@@ -135,13 +127,13 @@ De volgende secties verstrekken extra informatie voor het werken met bronschakel
 
 Wanneer een gegevensstroom wordt gecreeerd, wordt het onmiddellijk actief en neemt gegevens volgens het programma op het werd gegeven. U kunt een actieve gegevensstroom op elk ogenblik onbruikbaar maken door de instructies hieronder te volgen.
 
-Klik in de _werkruimte Bronnen_ op het tabblad **Bladeren** . Klik vervolgens op de naam van de basisverbinding die is gekoppeld aan de gegevensstroom die u wilt uitschakelen.
+Binnen de *[!UICONTROL Bronwerkruimte]* , selecteer de **[!UICONTROL Dataflowss]** tabel. Selecteer vervolgens de gegevensstroom die u wilt uitschakelen.
 
-![](../../../images/tutorials/dataflow/databases/browse-base-connectors.png)
+![](../../../images/tutorials/dataflow/databases/list-of-dataflows.png)
 
-De pagina _Bronactiviteit_ wordt weergegeven. Selecteer de actieve gegevensstroom van de lijst om zijn kolom van *Eigenschappen* op de rechterkant van het scherm te openen, die een **Toegelaten** knevelknoop bevat. Klik op de schakeloptie om de gegevensstroom uit te schakelen. Dezelfde schakeloptie kan worden gebruikt om een gegevensstroom opnieuw in te schakelen nadat deze is uitgeschakeld.
+De kolom *Eigenschappen* wordt aan de rechterkant van het scherm weergegeven, inclusief een knop **[!UICONTROL Ingeschakeld]** . Selecteer de schakeloptie om de gegevensstroom uit te schakelen. Dezelfde schakeloptie kan worden gebruikt om een gegevensstroom opnieuw in te schakelen nadat deze is uitgeschakeld.
 
-![](../../../images/tutorials/dataflow/databases/toggle-enabled.png)
+![](../../../images/tutorials/dataflow/databases/disable.png)
 
 ### Inkomende gegevens activeren voor profielpopulatie
 
