@@ -4,7 +4,10 @@ seo-title: Adobe Experience Platform Web SDK-gebeurtenisgegevens samenvoegen
 description: Meer informatie over het samenvoegen van Experience Platform Web SDK-gebeurtenisgegevens
 seo-description: Meer informatie over het samenvoegen van Experience Platform Web SDK-gebeurtenisgegevens
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+workflow-type: tm+mt
+source-wordcount: '444'
+ht-degree: 0%
 
 ---
 
@@ -68,7 +71,7 @@ Zoals met alle bevelen, is een belofte teruggekeerd omdat u het bevel zou kunnen
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
 
-eventMergeIdPromise.then(function(eventMergeId) {
+eventMergeIdPromise.then(function(results) {
   alloy("event", {
     "xdm": {
       "commerce": {
@@ -80,13 +83,13 @@ eventMergeIdPromise.then(function(eventMergeId) {
         }
       }
     }
-    "mergeId": eventMergeId
+    "mergeId": results.eventMergeId
   });
 });
 
 // Time passes and more data becomes available
 
-eventMergeIdPromise.then(function(eventMergeId) {
+eventMergeIdPromise.then(function(results) {
   alloy("event", {
     "xdm": {
       "commerce": {
@@ -102,7 +105,7 @@ eventMergeIdPromise.then(function(eventMergeId) {
         }
       }
     }
-    "mergeId": eventMergeId
+    "mergeId": results.eventMergeId
   });
 });
 ```
@@ -112,9 +115,9 @@ Volg hetzelfde patroon als u om andere redenen toegang wilt tot de samenvoegen-i
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
 
-eventMergeIdPromise.then(function(eventMergeId) {
+eventMergeIdPromise.then(function(results) {
   // send event merge ID to a third-party provider
-  console.log(eventMergeId);
+  console.log(results.eventMergeId);
 });
 ```
 
