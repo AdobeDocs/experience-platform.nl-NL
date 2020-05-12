@@ -4,7 +4,10 @@ seo-title: Opdrachten van Adobe Experience Platform Web SDK uitvoeren
 description: Leer hoe u de opdrachten van Experience Platform Web SDK uitvoert
 seo-description: Leer hoe u de opdrachten van Experience Platform Web SDK uitvoert
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+workflow-type: tm+mt
+source-wordcount: '445'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ Elke keer dat een opdracht wordt uitgevoerd, wordt een belofte geretourneerd. De
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" is whatever the command returned
   })
@@ -59,12 +62,22 @@ Eveneens, als het weten wanneer het bevel niet belangrijk voor u is, kunt u de `
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" will be whatever the command returned
   })
 ```
 
-## Fouten onderdrukken
+### Responsobjecten
 
-Als de belofte wordt verworpen en u geen `catch` vraag hebt toegevoegd, de fout &quot;omhoog&quot;terugkomt en het programma geopend in de de ontwikkelaarsconsole van uw browser, ongeacht of het registreren in het Web SDK van het Platform van de Ervaring van Adobe wordt toegelaten. Als dit een probleem voor u is, kunt u de `suppressErrors` configuratieoptie plaatsen aan `true` zoals die in het [Vormen van SDK](configuring-the-sdk.md)wordt geschetst.
+Alle beloftes die door opdrachten worden geretourneerd, worden opgelost met een `result` object. Het resultaatobject bevat gegevens die afhankelijk zijn van de opdracht en de toestemming van de gebruiker. Bibliotheekinfo wordt bijvoorbeeld doorgegeven als een eigenschap van het resultaatobject in de volgende opdracht.
+
+```js
+alloy("getLibraryInfo").then(function(result) {
+  console.log(results.libraryInfo.version);
+});
+```
+
+### Toestemming
+
+Indien een gebruiker voor een bepaald doel geen toestemming heeft gegeven, wordt de belofte nog steeds opgelost; het reactieobject bevat echter alleen de informatie die kan worden verstrekt in de context van wat de gebruiker heeft toegestaan .
