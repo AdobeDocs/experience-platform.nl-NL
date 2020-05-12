@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een FTP- of SFTP-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+workflow-type: tm+mt
+source-wordcount: '513'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Voor deze zelfstudie is een goed begrip vereist van de volgende componenten van 
    * [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [Klantprofiel](../../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Als u al een geldige FTP- of SFTP-verbinding hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie over het [configureren van een gegevensstroom](../../dataflow/cloud-storage.md).
+Als u al een geldige FTP- of SFTP-verbinding hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie over het [configureren van een gegevensstroom](../../dataflow/batch/cloud-storage.md).
 
 ### Ondersteunde bestandsindelingen
 
@@ -54,4 +57,4 @@ Zodra een basisverbinding met uw FTP of server SFTP wordt gevestigd, kunt u op d
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw FTP- of SFTP-server. U kunt nu doorgaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens over te brengen naar Platform](../../dataflow/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw FTP- of SFTP-server. U kunt nu doorgaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens over te brengen naar Platform](../../dataflow/batch/cloud-storage.md).
