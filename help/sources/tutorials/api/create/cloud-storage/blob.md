@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een Azure Blob-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5c9bc1ec9170e4971a7d693038d12315aca616d5
+source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+workflow-type: tm+mt
+source-wordcount: '556'
+ht-degree: 0%
 
 ---
 
@@ -56,73 +59,9 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 * Inhoudstype: `application/json`
 
-## Verbindingsspecificaties opzoeken
+## Verbinding maken
 
-Voordat u Platform kunt verbinden met een blob-opslag, moet u controleren of er verbindingsspecificaties bestaan voor Blob. Als er geen verbindingsspecificaties bestaan, kan geen verbinding worden gemaakt.
-
-Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor Blob opzoeken door een GET verzoek uit te voeren en vraagparameters te gebruiken.
-
-**API-indeling**
-
-Het verzenden van een GET verzoek zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=name=="azure-blob"` om informatie specifiek voor Blob te verkrijgen.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="azure-blob"
-```
-
-**Verzoek**
-
-In het volgende verzoek worden de verbindingsspecificaties voor Blob opgehaald.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="azure-blob"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-Een geslaagde reactie retourneert de verbindingsspecificaties voor Blob, inclusief de unieke id (`id`). Deze id is vereist in de volgende stap om een basisverbinding te maken.
-
-```json
-{
-    "items": [
-        {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "name": "azure-blob",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "ConnectionString",
-                    "type": "ConnectionString",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Een basisverbinding maken
-
-Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per Blob-account is slechts één basisverbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per Blob-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
 
 **API-indeling**
 
@@ -141,8 +80,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Blob Base Connection",
-        "description": "Base connection for an Azure Blob account",
+        "name": "Blob Connection",
+        "description": "Cnnection for an Azure Blob account",
         "auth": {
             "specName": "ConnectionString",
             "params": {
@@ -159,11 +98,11 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `auth.params.connectionString` | De verbindingstekenreeks voor de blob-opslag. |
-| `connectionSpec.id` | De verbindingsspecificatie `id` van de blob-opslag die in de vorige stap is opgehaald. |
+| `connectionSpec.id` | De Klob-specificatie voor opslagverbinding ID: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **Antwoord**
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist om uw opslag te verkennen in de volgende zelfstudie.
+Een succesvolle reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw opslag te verkennen in de volgende zelfstudie.
 
 ```json
 {
