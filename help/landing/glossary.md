@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Productdocumentatie van Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
+source-git-commit: a5268c2d31d356ce479bdcc143050cd513259235
+workflow-type: tm+mt
+source-wordcount: '6973'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 ## A
 
-**Toegangsbeheer:** Met {#access-control} Toegangsbeheer voor het Experience Platform kunnen gebruikers toegang krijgen tot machtigingen en sandboxomgevingen via productprofielen in Adobe Admin Console.
+**Toegangsbeheer:** {#access-control} Met Toegangsbeheer voor Experience Platform kunnen gebruikers met toegangsmachtigingen en sandboxomgevingen toegang krijgen via productprofielen in Adobe Admin Console.
 
 **Toegangstoets-id:** Toegangstoets-id is een unieke id die is gekoppeld aan een geheime toegangssleutel van Amazon S3. De toegangs belangrijkste identiteitskaart en geheime toegangssleutel worden gebruikt samen om AWS- verzoeken te ondertekenen.
 
@@ -49,6 +52,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Kenmerken:** Kenmerken zijn opgegeven kenmerken die een profiel vertegenwoordigen.
 
+**Kenmerksamenvoeging:** De fusie van attributen bepaalt hoe een samenvoegbeleid profielkenmerkwaarde in het geval van gegevensconflicten voorrang geeft.
+
 **Attributie AI:** Attribution AI is een Adobe Sensei Service die algoritmische multichannel-attributiemogelijkheden biedt gedurende de gehele levenscyclus van de klant.
 
 **Publiek**: Een publiek is de resulterende reeks profielen die aan de criteria van een segmentdefinitie voldoen.
@@ -61,7 +66,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Backfill:** In het Platform van de Gegevens van de Klant in real time, in geplande bronverbindingen, laat de backfill inname van historische gegevens toe.
 
-**Backfill-periode:** is een optie om de tijdsduur voor het opnemen van historische gegevens van derden via een verbinding in te stellen. `Backfill period` Het selecteren van een backfill periode van voor altijd zal de volledige geschiedenis van de brongegevens aan het Platform van de Ervaring opnemen.
+**Backfill-periode:** `Backfill period` is een optie om de tijdsduur in te stellen voor het invoeren van historische gegevens van derden via een verbinding. Het selecteren van een backfill periode van voor altijd zal de volledige geschiedenis van de brongegevens aan het Platform van de Ervaring opnemen.
 
 **Batch:** Batch is een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt.
 
@@ -103,23 +108,23 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Contractgegevens &quot;C&quot;-labels:** Contractlabels worden gebruikt om gegevens te categoriseren die contractuele verplichtingen hebben of verband houden met het beleid van een klant inzake gegevensbeheer. `C`
 
-**C1-contractlabel:** Op het label voor het beheer van contractgegevens wordt aangegeven dat gegevens alleen vanuit Adobe Experience Cloud kunnen worden geëxporteerd in een geaggregeerde vorm zonder individuele of apparaatid&#39;s op te nemen. `C1` Bijvoorbeeld gegevens die afkomstig zijn van sociale netwerken.
+**C1-contractlabel:** `C1` op het label voor contractgegevensbeheer zijn opgegeven dat gegevens alleen vanuit Adobe Experience Cloud kunnen worden geëxporteerd in een geaggregeerde vorm zonder individuele of apparaatid&#39;s op te nemen. Bijvoorbeeld gegevens die afkomstig zijn van sociale netwerken.
 
-**C2-contractlabel:** Op het `C2` label voor contractgegevensbeheer worden gegevens vermeld die niet naar derden kunnen worden geëxporteerd. Sommige gegevensleveranciers hebben bedingen in hun contracten die de uitvoer van gegevens van waar het oorspronkelijk werd verzameld verbieden.  Sociale netwerkcontracten beperken bijvoorbeeld vaak de overdracht van gegevens die u van hen ontvangt. C2 is restrictiever dan C1, die slechts samenvoeging en anonieme gegevens vereist.
+**C2-contractlabel:** `C2` Op het label voor contractgegevensbeheer worden gegevens vermeld die niet naar derden kunnen worden geëxporteerd. Sommige gegevensleveranciers hebben bedingen in hun contracten die de uitvoer van gegevens van waar het oorspronkelijk werd verzameld verbieden.  Sociale netwerkcontracten beperken bijvoorbeeld vaak de overdracht van gegevens die u van hen ontvangt. C2 is restrictiever dan C1, die slechts samenvoeging en anonieme gegevens vereist.
 
-**C3 Contractlabel:** Op het `C3` etiket van contractgegevens wordt vermeld welke gegevens niet met rechtstreeks identificeerbare informatie kunnen worden gecombineerd of anderszins kunnen worden gebruikt. Sommige gegevensleveranciers hebben bedingen in hun contracten die het combineren of gebruiken van die gegevens met direct identificeerbare informatie verbieden.  Zo bevatten contracten voor gegevens die afkomstig zijn van advertentienetwerken, servers en externe gegevensleveranciers vaak specifieke contractuele verbodsbepalingen voor het gebruik van rechtstreeks identificeerbare gegevens.
+**C3 Contractlabel:** `C3` op het etiket van contractgegevens wordt vermeld welke gegevens niet met rechtstreeks identificeerbare informatie kunnen worden gecombineerd of anderszins kunnen worden gebruikt. Sommige gegevensleveranciers hebben bedingen in hun contracten die het combineren of gebruiken van die gegevens met direct identificeerbare informatie verbieden.  Zo bevatten contracten voor gegevens die afkomstig zijn van advertentienetwerken, servers en externe gegevensleveranciers vaak specifieke contractuele verbodsbepalingen voor het gebruik van rechtstreeks identificeerbare gegevens.
 
-**C4-contractlabel:** Op het `C4` label voor het beheer van contractgegevens worden gegevens vermeld die niet kunnen worden gebruikt voor advertenties of inhoud, op locatie of op andere locatie. C4 is het meest beperkende etiket aangezien het C5, C6, en C7 etiketten omvat.
+**C4-contractlabel:** `C4` op het label voor contractgegevensbeheer kunnen geen gegevens worden gebruikt voor advertenties of inhoud, op locatie of op andere locatie. C4 is het meest beperkende etiket aangezien het C5, C6, en C7 etiketten omvat.
 
-**C5-contractlabel:** Op het `C5` etiket van contractgegevensbeheer kunnen gegevens niet worden gebruikt voor op rente gebaseerde, cross-site gerichte adressering van inhoud of advertenties. Het op rente-gebaseerde richten, of verpersoonlijking, komt voor als de volgende drie voorwaarden worden vervuld:  De gegevens die ter plaatse worden verzameld, worden gebruikt om conclusies te trekken over de interesse van een gebruiker, worden in een andere context gebruikt, zoals op een andere site of een andere app, en worden gebruikt om te selecteren welke inhoud of advertenties op basis van die conclusies worden aangeboden.
+**C5-contractlabel:** `C5` op het etiket voor het beheer van contractgegevens kunnen gegevens niet worden gebruikt voor op rente gebaseerde, cross-site gerichte adressering van inhoud of advertenties. Het op rente-gebaseerde richten, of verpersoonlijking, komt voor als de volgende drie voorwaarden worden vervuld:  De gegevens die ter plaatse worden verzameld, worden gebruikt om conclusies te trekken over de interesse van een gebruiker, worden in een andere context gebruikt, zoals op een andere site of een andere app, en worden gebruikt om te selecteren welke inhoud of advertenties op basis van die conclusies worden aangeboden.
 
-**C6-contractlabel:** Op het `C6` label voor het beheer van contractgegevens worden gegevens vermeld die niet kunnen worden gebruikt voor on-site en doelgerichte toepassingen. Gegevens kunnen niet worden gebruikt voor doelgerichte advertenties ter plaatse, zoals de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten.  Hiertoe behoren het gebruik van eerder verzamelde onsite gegevens over het belang van de gebruiker bij het selecteren van advertenties, het verwerken van gegevens over welke advertenties werden weergegeven, het tijdstip en de plaats waar deze werden weergegeven en het nemen van maatregelen met betrekking tot de advertentie, zoals het klikken op een advertentie of het maken van een aankoop.
+**C6-contractlabel:** `C6` op het label voor contractgegevensbeheer worden gegevens vermeld die niet kunnen worden gebruikt voor on-site en doelgerichte toepassingen. Gegevens kunnen niet worden gebruikt voor doelgerichte advertenties ter plaatse, zoals de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten.  Hiertoe behoren het gebruik van eerder verzamelde onsite gegevens over het belang van de gebruiker bij het selecteren van advertenties, het verwerken van gegevens over welke advertenties werden weergegeven, het tijdstip en de plaats waar deze werden weergegeven en het nemen van maatregelen met betrekking tot de advertentie, zoals het klikken op een advertentie of het maken van een aankoop.
 
-**C7 Contractlabel:** Op het `C7` label voor contractgegevensbeheer worden gegevens vermeld die niet kunnen worden gebruikt voor het on-site maken van inhoud.  Gegevens kunnen niet worden gebruikt voor het maken van onsite inhoud die als doel heeft, zoals de selectie en levering van inhoud op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke inhoud te meten.  Dit omvat eerder verzamelde informatie over het belang van gebruikers om inhoud te selecteren, gegevens te verwerken over welke inhoud werd getoond, hoe vaak of hoe lang het werd getoond, wanneer en waar het werd getoond, en of de gebruikers om het even welke acties met betrekking tot de inhoud, met inbegrip van bijvoorbeeld het klikken op inhoud hebben ondernomen.
+**C7 Contractlabel:** `C7` op het label voor het beheer van contractgegevens worden gegevens vermeld die niet kunnen worden gebruikt voor het on-site maken van inhoud.  Gegevens kunnen niet worden gebruikt voor het maken van onsite inhoud die als doel heeft, zoals de selectie en levering van inhoud op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke inhoud te meten.  Dit omvat eerder verzamelde informatie over het belang van gebruikers om inhoud te selecteren, gegevens te verwerken over welke inhoud werd getoond, hoe vaak of hoe lang het werd getoond, wanneer en waar het werd getoond, en of de gebruikers om het even welke acties met betrekking tot de inhoud, met inbegrip van bijvoorbeeld het klikken op inhoud hebben ondernomen.
 
-**C8 Contractlabel:** Op het label voor contractgegevensbeheer worden gegevens opgegeven die niet kunnen worden gebruikt voor het meten van de websites of apps van uw organisatie. `C8` Gegevens kunnen niet worden gebruikt voor het meten, begrijpen en rapporteren van het gebruik van de sites of apps van uw organisatie door gebruikers. Dit omvat geen op rente-gebaseerde gericht richten, die de inzameling van informatie over uw gebruik van deze dienst is om inhoud en/of reclame in andere contexten te personaliseren.
+**C8 Contractlabel:** `C8` Op het label voor contractgegevensbeheer worden gegevens opgegeven die niet kunnen worden gebruikt voor het meten van de websites of apps van uw organisatie. Gegevens kunnen niet worden gebruikt voor het meten, begrijpen en rapporteren van het gebruik van de sites of apps van uw organisatie door gebruikers. Dit omvat geen op rente-gebaseerde gericht richten, die de inzameling van informatie over uw gebruik van deze dienst is om inhoud en/of reclame in andere contexten te personaliseren.
 
-**C9 Contractlabel:** Op het label voor contractgegevensbeheer worden gegevens vermeld die niet kunnen worden gebruikt in Data Science-workflows. `C9` In sommige contracten zijn expliciete verbodsbepalingen opgenomen voor gegevens die voor gegevenswetenschap worden gebruikt.  Soms worden deze termen omschreven in termen die het gebruik van gegevens voor kunstmatige intelligentie (AI), machine-leren (ML), of modellering verbieden.
+**C9 Contractlabel:** `C9` Op het label voor contractgegevensbeheer worden gegevens vermeld die niet kunnen worden gebruikt in Data Science-workflows. In sommige contracten zijn expliciete verbodsbepalingen opgenomen voor gegevens die voor gegevenswetenschap worden gebruikt.  Soms worden deze termen omschreven in termen die het gebruik van gegevens voor kunstmatige intelligentie (AI), machine-leren (ML), of modellering verbieden.
 
 **Aanmaakdatum kolom:** Het selecteren van een `Created Date` kolom is een optie wanneer het specificeren van derdegegevens via een verbinding. Wanneer toevoegt sparen strategie wordt geselecteerd en de dataset een veelvoudige data met betrekking tot schema bevat, moet de gebruiker van het beschikbare datum/tijdschema kiezen om een `Created Date` zeer belangrijke kolom te specificeren. `Created Date` is niet beschikbaar als de optie Opslaan overschrijven is geselecteerd.
 
@@ -145,14 +150,6 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Gegevensstroom:** Een gegevensstroom is een reeks of een inzameling van berichten die het zelfde schema delen en door de zelfde bron worden verzonden.
 
-**Gegevensset:** Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die schema (kolommen) en gebieden (rijen) bevat.
-
-**Gegevensstroom:** In het Platform van Gegevens van de Klant in real time, is een datasetstroom een visuele vertegenwoordiging van brondatasets die door het Profiel van de Klant in real time aan bestemmingen stromen.
-
-**Gegevensset-id:** Een door Adobe gegenereerde id voor een opgenomen gegevensset.
-
-**Dataset-uitvoer:** De output van de gegevensset verstrekt een mechanisme om te bepalen wat *Create Lijst als Uitgezochte* optie voor een bepaalde looppas van de Dienst van de Vraag zal worden gebruikt.
-
 **Gegevensbeheer:** Het beheer van gegevens omvat de strategieën en technologieën die worden gebruikt om ervoor te zorgen dat gegevens in overeenstemming zijn met de regelgeving en het organisatiebeleid met betrekking tot het gebruik van gegevens.
 
 **Labels voor gegevensbeheer:** Met labels voor gegevensbeheer kunnen gebruikers gegevens classificeren die privacygerelateerde overwegingen en contractuele voorwaarden weerspiegelen, zodat deze in overeenstemming zijn met de regelgeving en het bedrijfsbeleid. De etiketten van het gegevensbeheer die aan een dataset worden toegevoegd worden geërft neer of op alle gebieden binnen die dataset worden toegepast.  Labels voor gegevensbeheer kunnen ook rechtstreeks op velden worden toegepast.
@@ -171,6 +168,14 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Labels voor gegevensgebruik:** Met labels voor gegevensgebruik kunnen gebruikers gegevens categoriseren die privacygerelateerde overwegingen en contractuele voorwaarden weerspiegelen om te voldoen aan de regels en het bedrijfsbeleid.
 
+**Gegevensstroom:** In het Platform van Gegevens van de Klant in real time, is een dataflow een virtuele pijpleiding van gegevens die in Platform van een bron en uit aan bestemmingen stroomt.
+
+**Gegevensset:** Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die schema (kolommen) en gebieden (rijen) bevat.
+
+**Gegevensset-id:** Een door Adobe gegenereerde id voor een opgenomen gegevensset.
+
+**Dataset-uitvoer:** De output van de gegevensset verstrekt een mechanisme om te bepalen wat *Create Lijst als Uitgezochte* optie voor een bepaalde looppas van de Dienst van de Vraag zal worden gebruikt.
+
 **Gebeurtenis besluit:** Een beslissingsgebeurtenis wordt gebruikt om opmerkingen te maken over het resultaat en de context van een besluitvormingsactiviteit. De beslissingsgebeurtenis bevat informatie over de wijze waarop het besluit is genomen, toen het plaatsvond, welke opties werden voorgesteld (gekozen) en welke context-afhankelijke staat bestond die het besluit heeft beïnvloed of tijdens het besluitvormingsproces in acht kon worden genomen. De beslissingsgebeurtenis legt ook de propositie-id vast, een globaal unieke id die kan worden gebruikt om het besluit te correleren met andere gebeurtenissen.
 
 **Beslissingsregel:** In de Beslissingsdienst, is een besluitvormingsregel de logica die bepaalt en controleert wat, wanneer, waar, en hoe een aanbieding aan eindgebruikers wordt voorgesteld.
@@ -179,7 +184,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Deltakolom:** In het Platform van de Gegevens van de Klant in real time, laat delta kolom de selectie van het brongegevensgebied voor een timestamp voor stijgende opname toe
 
-**Opslagstrategie voor delta:** is een optie voor het invoeren van gegevens van derden via een verbinding. `Delta save strategy` De optie staat de gebruiker toe om te specificeren dat de nieuwe of veranderde rijen van brongegevens aan het Platform van de Ervaring worden opgenomen. De nieuwe rijen worden toegevoegd aan het eind van de dataset en de veranderde rijen worden bijgewerkt in de dataset op het Platform van de Ervaring.
+**Opslagstrategie voor delta:** `Delta save strategy` is een optie voor het invoeren van gegevens van derden via een verbinding. De optie staat de gebruiker toe om te specificeren dat de nieuwe of veranderde rijen van brongegevens aan het Platform van de Ervaring worden opgenomen. De nieuwe rijen worden toegevoegd aan het eind van de dataset en de veranderde rijen worden bijgewerkt in de dataset op het Platform van de Ervaring.
 
 **Doel:** In het Real-time Klantgegevensplatform is een doel een algemene term voor elk systeem, zoals een Adobe-toepassing, advertentieserver of advertentienetwerk waar een publiek wordt geactiveerd en geleverd.
 
@@ -189,21 +194,21 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Weergavenaam:** De naam van de vertoning is een gebruikersvriendelijke naam van een gebied dat in UI wordt getoond.
 
-**DULE:** DULE is an acronym for *Data Usage Labeling and Enforcement*. DULE is a key part of data governance and a collection of key features that allows for data usage labeling and applying data access policies for governance needs within an organization.
+**DULE:** DULE is een acroniem voor de Etikettering en de Handhaving *van het Gebruik van* Gegevens. DULE is een essentieel onderdeel van gegevensbeheer en een verzameling sleutelfuncties die labeling van gegevensgebruik en toepassing van beleid voor gegevenstoegang binnen een organisatie mogelijk maken voor beheerbehoeften.
 
 [Terug naar boven](#adobe-experience-platform-glossary)
 
 ## E
 
-**Error Diagnostics:** Error diagnostics enables the generation of detailed error messages for ingested batches. The Error threshold enables the configuration of the percentage of acceptable errors before the entire batch will fail.
+**Foutdiagnose:** Bij de diagnose van fouten kunnen gedetailleerde foutberichten voor ingesloten batches worden gegenereerd. De drempel van de Fout laat de configuratie van het percentage aanvaardbare fouten toe alvorens de volledige partij zal ontbreken.
 
 **In aanmerking komend voorstel:** In de beslissingsservice voldoet een in aanmerking komende aanbieding aan de beperkingen die stroomopwaarts zijn gedefinieerd en die consistent aan een profiel kunnen worden aangeboden.
 
-**Eligible Rules:** In the Decisioning Service, eligibility rules are applied to a profile related to calendar, schedule, and capping constraints.
+**Subsidiabele regels:** In de beslissingsservice worden de subsidiabiliteitsregels toegepast op een profiel dat betrekking heeft op kalender-, schema- en plafondbeperkingen.
 
 **Code insluiten:** In Experience Platform Launch is de insluitcode een scripttag die in de HTML op een site of omgeving is geplaatst. De insluitcode instrueert browser waar te om de bouwstijl terug te winnen.
 
-**Enumeration:** An enum is a list of values that represent the valid data for a field.
+**Opsomming:** Een opsomming is een lijst met waarden die de geldige gegevens voor een veld vertegenwoordigen.
 
 **Omgeving:** In de Lancering van het Platform van de Ervaring, is een milieu een reeks plaatsingsinstructies die de gastheerlevering en dossierformaat van een bouwstijl specificeert. Een bibliotheek moet met een milieu worden gecombineerd alvorens het kan worden gebouwd.
 
@@ -215,13 +220,15 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Introductie van Experience Platform:** Launch is een ecosysteem voor tags- en SDK-beheer dat is geïntegreerd met Experience Platform- en Experience Cloud-toepassingen. De lancering verstrekt hulpmiddelen om, analyses, marketing, en reclame integratie op te stellen te verenigen en te beheren die noodzakelijk zijn om relevante klantenervaringen op alle cliëntapparaten te drijven.
 
+**Extensies bij opstarten van platform beleven:** De uitbreidingen van de Lancering van het Platform van de ervaring laten levering van ruwe gebeurtenisgegevens aan de bestemmingen van het Platform van de Gegevens van de Klant in real time toe. Voor het installeren van Startenextensies hebt u toegang tot de Starteigenschappen nodig.
+
 **Experimenteer:** Een experiment is een proces om een getraind model tot stand te brengen door de instantie met een steekproefgedeelte van de levende productiegegevens te leiden.
 
-**Experimenten:** Experimenten zijn het proces waarbij een getraind model wordt toegepast op een klein deel van de live productiegegevens om de prestaties ervan te valideren. Dit is anders dan een getraind model dat tegen een holdout testdataset wordt getest. This is also different from the concept of an Experiment in some ML frameworks where it actually means a sample modeling project.
+**Experimenten:** Experimenten zijn het proces waarbij een getraind model wordt toegepast op een klein deel van de live productiegegevens om de prestaties ervan te valideren. Dit is anders dan een getraind model dat tegen een holdout testdataset wordt getest. Dit is ook anders dan het concept van een experiment in sommige kaders van ML waar het eigenlijk een project van de steekproefmodellering betekent.
 
 **ExperienceEvent:** ExperienceEvent is een standaardschema van het Platform van de Ervaring dat observaties, met inbegrip van het punt in tijd en de identiteit van het betrokken onderwerp vangt. De Gebeurtenissen van de ervaring zijn feitenverslagen van wat voorkwam, die wat vormde zonder samenvoeging of interpretatie.
 
-**Extension:** In Experience Platform Launch, an extension is a package of functionality added to a Launch property.  Een uitbreiding is gewoonlijk geconcentreerd rond een bepaalde marketing of analyseoplossing en verstrekt de hulpmiddelen nodig om die technologie in een cliëntmilieu op te stellen.
+**Extensie:** In de Lancering van het Platform van de Ervaring, is een uitbreiding een pakket van functionaliteit die aan een bezit van de Lancering wordt toegevoegd.  Een uitbreiding is gewoonlijk geconcentreerd rond een bepaalde marketing of analyseoplossing en verstrekt de hulpmiddelen nodig om die technologie in een cliëntmilieu op te stellen.
 
 **Extensiepakket:** In Experience Platform Launch is een extensiepakket een zip-bestand dat is gemaakt en geüpload door een extensieontwikkelaar die alles bevat wat nodig is om Launch-gebruikers de extensie binnen hun eigenschap te laten installeren.  Een extensiepakket bevat een manifest dat informatie bevat over de extensie, HTML en JavaScript die eindgebruikers nodig hebben om het gedrag van de extensie Launch en het uitvoerbare JavaScript dat aan de clientomgeving wordt geleverd, indien nodig te configureren.
 
@@ -231,15 +238,15 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Extra voorstellen:** In de Beslissingsdienst, is een reserveaanbieding de standaardaanbieding die wordt getoond wanneer een eindgebruiker niet verkiesbaar voor om het even welke aanbiedingen in de gebruikte inzameling is.
 
-**Feature Mapping:** Feature Mapping refers to the process of mapping features from data into input and target features that are required by a machine learning model.
+**Functietoewijzing:** De Toewijzing van de eigenschap verwijst naar het proces om eigenschappen van gegevens in input en doeleigenschappen toe te wijzen die door een machine het leren model worden vereist.
 
-**Field:** A field is the lowest level element of a dataset. Elk veld heeft een naam voor het verwijzen en een type om het type gegevens te identificeren dat het bevat. Field types can include, integer, number, string, Boolean and schema.
+**Veld:** Een gebied is het laagste niveauelement van een dataset. Elk veld heeft een naam voor het verwijzen en een type om het type gegevens te identificeren dat het bevat. Veldtypen kunnen bestaan uit: geheel getal, getal, tekenreeks, Boolean en schema.
 
 **Veldlabels:** Veldlabels zijn labels voor gegevensbeheer die zijn overgeërfd van een gegevensset of die rechtstreeks op een veld zijn toegepast.
 
 **Veldnaam:** Veld is een naam die wordt gebruikt om naar het veld in query&#39;s en services te verwijzen.
 
-**Frequency:** Frequency determines how often a recurring scheduled Query Service query will run.
+**Frequentie:** De frequentie bepaalt hoe vaak een terugkomende geplande vraag van de Dienst van de Vraag zal lopen.
 
 [Terug naar boven](#adobe-experience-platform-glossary)
 
@@ -263,7 +270,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Identiteit:** Identiteit is een id zoals een cookie-id, apparaat-id of e-mailid die een eindklant op unieke wijze vertegenwoordigt.
 
-**Gegevenslabels van identiteit &quot;I&quot;:** de `Identity I` etiketten worden gebruikt om gegevens te categoriseren die een specifieke persoon kunnen identificeren of contacteren.
+**Gegevenslabels van identiteit &quot;I&quot;:** `Identity I` de etiketten worden gebruikt om gegevens te categoriseren die een specifieke persoon kunnen identificeren of contacteren.
 
 **Identiteitsgrafiek:** Identiteitsgrafiek is een kaart van verhoudingen tussen verbonden en verbonden identiteiten, die dichtbij real time met klantenactiviteit bijwerkt.
 
@@ -274,6 +281,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 **Naamplaatje:** Identiteitstitching is het proces om gegevensfragmenten te identificeren en deze samen te voegen om een volledige record van een profiel te vormen.
 
 **Identiteitssymbool:** Het identiteitssymbool is een afkorting van een naamruimte identity die als referentie in API&#39;s kan worden gebruikt.
+
+**Identiteitswaarde:** De waarde van de identiteit is gegevens verbonden aan een toegewezen identiteit in het schema. Wanneer recordgegevens in profielfragmenten worden vergeleken, moeten zowel de identiteitswaarde als de naamruimte overeenkomen.
 
 **I1-gegevenslabel:** Het `I1` gegevensetiket wordt gebruikt om direct identificeerbare gegevens te classificeren die een specifieke persoon kunnen identificeren of contacteren eerder dan een apparaat.
 
@@ -347,7 +356,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Organisatie:** Een organisatie is de naam die wordt gebruikt om een bedrijf of een specifieke groep binnen een bedrijf over de producten van Adobe te identificeren. Beheerders kunnen de toegang tot en machtigingen voor functies voor gebruikers van een organisatie configureren en beheren.
 
-**Opslagstrategie overschrijven:** Opslagstrategie `Overwrite` is een optie voor het invoeren van gegevens van derden via een verbinding, waarbij de gebruiker opgeeft of ingesloten gegevens volgens een opgegeven planning worden overschreven. Het Platform van de ervaring zal de gespecificeerde dataset van de derdebron opnemen en zal de dataset op het Platform van de Ervaring beschrijven.
+**Opslagstrategie overschrijven:** `Overwrite` Opslagstrategie is een optie voor het invoeren van gegevens van derden via een verbinding, waarbij de gebruiker opgeeft of ingesloten gegevens volgens een bepaald schema worden overschreven. Het Platform van de ervaring zal de gespecificeerde dataset van de derdebron opnemen en zal de dataset op het Platform van de Ervaring beschrijven.
 
 [Terug naar boven](#adobe-experience-platform-glossary)
 
@@ -357,25 +366,27 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Parketbestanden:** Een parketbestand is een kolombestandsindeling met complexe geneste gegevensstructuren. De dossiers van de parket worden vereist voor het toevoegen van gegevens om een schemadataset te bevolken.
 
-**Personalized Offers:** In the Decisioning Service, a personalized offer is a customizable marketing message based on eligibility rules and constraints.
+**Persoonlijke aanbiedingen:** In de Beslissingsdienst, is een gepersonaliseerde aanbieding een klantgericht marketing bericht dat op geschiktheidsregels en beperkingen wordt gebaseerd.
 
 **Plaatsen:** In de beslissingsservice is een plaatsing de locatie en/of context waarin een aanbieding voor een eindgebruiker wordt weergegeven.
 
-**Policy:** A data usage policy is a rule that specifies marketing actions that are restricted based on the application of data usage labels on data in Experience Platform.
+**Beleid:** Een beleid van het gegevensgebruik is een regel die marketing acties specificeert die gebaseerd op de toepassing van de etiketten van het gegevensgebruik op gegevens in het Platform van de Ervaring worden beperkt.
 
 **Primaire sleutel:** De primaire sleutel is een aanwijzing in een schema om alle verslagen uniek te identificeren.
 
 **Prioriteit:** In de Beslissingsdienst, wordt de prioriteit gebruikt om aanbiedingen te rangschikken die aan alle beperkingen, zoals geschiktheid, kalender, en het maximum voldoen.
 
-**Private Identity Graph:** Private Identity Graph is a private map of relationships between stitched and linked identities that visible by only your organization and built based on your first-party data.
+**Persoonlijke identiteitsgrafiek:** De particuliere Grafiek van de Identiteit is een privé kaart van verhoudingen tussen vastgemaakte en verbonden identiteiten die door slechts uw organisatie zichtbaar en gebouwd op uw eerste-partijgegevens wordt gebaseerd.
 
-**Product Profile:** Product profiles enable administrators to grant user access to all or a subset of services associated with Experience Platform.
+**Productprofiel:** Met productprofielen kunnen beheerders gebruikers toegang geven tot alle services of een subset van services die aan het ervaringsplatform zijn gekoppeld.
 
-**Production Sandbox:** A production sandbox of isolating virtual data on Platform that can&#39;t be reset or deleted.
+**Productiesandbox:** Een productiesandbox van het isoleren van virtuele gegevens op Platform die niet kunnen worden teruggesteld of worden geschrapt.
 
-**Profile:** Profile is an Experience Platform standard data model used to define attributes of consumers. A profile can also be an aggregate of event data and attributes related to a person and or device.
+**Profiel:** Profiel is een standaardgegevensmodel van het ervaringsplatform dat wordt gebruikt om kenmerken van consumenten te definiëren. Een profiel kan ook een aggregaat zijn van gebeurtenisgegevens en -kenmerken die betrekking hebben op een persoon en/of apparaat.
 
 **Profiel exporteren:** De uitvoer van het profiel is één van de twee soorten bestemmingen in het Platform van de Gegevens van de Klant in real time. Profielexport genereert een bestand met profielen en kenmerken en gebruikt onbewerkte PII-gegevens met e-mail. Het wordt gebruikt voor integratie met marketing- en e-mailautomatiseringsplatforms.
+
+**Profielfragment:** Een profielfragment is de profielinformatie voor slechts één identiteit uit de lijst van identiteiten die voor een bepaalde gebruiker bestaan.
 
 **Profiel-id:** Een profiel-id is een automatisch gegenereerde id die is gekoppeld aan een identiteitstype en die een profiel vertegenwoordigt.
 
@@ -389,7 +400,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Query-editor:** De Redacteur van de vraag is een hulpmiddel om, SQL verklaringen in de Dienst van de Vraag te schrijven te bevestigen en voor te leggen.
 
-**Query Service voor Adobe Experience Platform:** Met de *Experience Platform Query Service* kunnen gegevensanalisten zoeken naar ExperienceEvents en XDMs voor gebruik in het leren van analysemogelijkheden en machines. Met de Dienst van de Vraag, zullen de gegevenswetenschappers en analisten al hun datasets kunnen trekken die in het Platform van de Ervaring worden opgeslagen - met inbegrip van gedragsgegevens evenals verkooppunt (POS), het beheer van de klantenverhouding (CRM), en meer - en die datasets vragen om specifieke vragen over de gegevens te beantwoorden.
+**Query Service voor Adobe Experience Platform:** *De dienst* van de Vraag van het Platform van de ervaring laat gegevensanalisten toe om ExperienceEvents en XDMs voor gebruik in analytics en machine het leren te vragen. Met de Dienst van de Vraag, zullen de gegevenswetenschappers en analisten al hun datasets kunnen trekken die in het Platform van de Ervaring worden opgeslagen - met inbegrip van gedragsgegevens evenals verkooppunt (POS), het beheer van de klantenverhouding (CRM), en meer - en die datasets vragen om specifieke vragen over de gegevens te beantwoorden.
 
 [Terug naar boven](#adobe-experience-platform-glossary)
 
@@ -421,7 +432,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 ## S
 
-**Sample Data:** Sample data is a preview of a data file, typically the first 100 rows, to provide a data scientist or engineer an idea of what schema or data is in the data file.
+**Voorbeeldgegevens:** Voorbeeldgegevens zijn een voorvertoning van een gegevensbestand, doorgaans de eerste 100 rijen, om een wetenschapper of engineer een idee te geven van welk schema of welke gegevens in het gegevensbestand staan.
 
 **Sandbox:** Een sandbox is een vorm van het isoleren van virtuele gegevens binnen een gebruikersorganisatie op Experience Platform.
 
@@ -441,23 +452,23 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Segment:** Een segment is een set regels die kenmerken en gebeurtenisgegevens bevatten die een aantal profielen kwalificeren om een publiek te worden.
 
-**Segment Builder:** Segment Builder is the visual development environment used to build segment definitions and serves as a common component of all applications using Real-time Customer Profile Segmentation on Experience Platform.
+**Segment Builder:** De Bouwer van het segment is de visuele ontwikkelomgeving die wordt gebruikt om segmentdefinities te bouwen en dient als gemeenschappelijke component van alle toepassingen die de Segmentatie van het Profiel van de Klant in real time op het Platform van de Ervaring gebruiken.
 
 **Segmentdefinitie:** De definitie van het segment is de regel die wordt geplaatst om zeer belangrijke eigenschappen of gedrag van een doelpubliek te beschrijven. Zodra geconceptualiseerd, worden de regels die in een segmentdefinitie worden geschetst gebruikt om kwalificerende publieksleden voor een segment te bepalen.
 
-**Segment Evaluation Method:** Segment scheduled evaluation enables a recurring schedule for running an export job at a specific time, whereas on-demand evaluation involves creating a segment job to build the audience immediately.
+**Evaluatiemethode segment:** De geplande evaluatie van het segment laat een terugkerend programma voor het runnen van een uitvoerbaan in een specifieke tijd toe, terwijl de evaluatie op bestelling het creëren van een segmentbaan impliceert om het publiek onmiddellijk te bouwen.
 
 **Segment exporteren:** De uitvoer van het segment is één van de twee soorten bestemmingen en verzendt de profielen die kwalificeren en aan de bestemming in kaart zijn gebracht. Gebruikt segment- en gebruikers-id&#39;s en pseudoniem-gegevens en integreert doorgaans met sociale netwerken en andere doelplatforms voor digitale media.
 
 **Segment-id:** Segment-id is een automatisch gegenereerde id die aan een segment is gekoppeld.
 
-**Segment Membership:** Segment membership displays which segment a profile is currently part of.
+**Lidmaatschap segment:** Het segmentlidmaatschap geeft aan welk segment een profiel momenteel deel uitmaakt van.
 
-**Segment Rules:** Segment rules are where and how the user defines what the profiles qualify for the segment.
+**Segmentregels:** De regels van het segment zijn waar en hoe de gebruiker bepaalt wat de profielen voor het segment kwalificeren.
 
 **Segmenttype:** Er zijn twee typen segmenten: Een segment is een segment dat dynamisch wordt bijgewerkt met de gegevenswijzigingen in het Experience Platform. Het andere segment is een publieksopname die alle regels van het vergaderingssegment van profielen vastlegt, en deze veranderen niet.
 
-**Segmentation:** Segmentation is the process of dividing a large group of customers, prospects, or consumers into smaller groups that share similar attributes and will respond similarly to marketing strategies.
+**Segmentatie:** De segmentatie is het proces om een grote groep klanten, vooruitzichten, of consumenten in kleinere groepen te verdelen die gelijkaardige eigenschappen delen en op gelijkaardige wijze aan marketing strategieën zullen antwoorden.
 
 **Sensei ML Framework:** Sensei ML Framework is een uniform computerleerframework voor heel Adobe dat gegevens over het Experience Platform gebruikt om gegevenswetenschappers in staat te stellen op een snellere, schaalbare en herbruikbare manier computerleergestuurde inlichtingendiensten te ontwikkelen.
 
@@ -465,9 +476,9 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Services:** Een krachtig raamwerk voor het operationeel maken van AI- en ML-services met behulp van Adobe Intelligent Services. De diensten leveren in real time, gepersonaliseerde klantenervaringen of operationeel douane intelligente diensten.
 
-**S1-gegevenslabel:** Het `S1` gegevenslabel wordt gebruikt om gegevens in te delen die breedte en lengte aangeven die kunnen worden gebruikt om de precieze locatie van een apparaat te bepalen.
+**S1-gegevenslabel:** `S1` het gegevensetiket wordt gebruikt om gegevens te classificeren die breedte en lengte specificeren die kunnen worden gebruikt om de nauwkeurige plaats van een apparaat te bepalen.
 
-**S2-gegevenslabel:** Het `S2` gegevensetiket wordt gebruikt om gegevens te classificeren die kunnen worden gebruikt om een breed bepaald geo-fence gebied te bepalen.
+**S2-gegevenslabel:** `S2` gegevenslabel wordt gebruikt voor de classificatie van gegevens die kunnen worden gebruikt om een breed gedefinieerd geo-fence-gebied te bepalen.
 
 **Bron:** De bron is een algemene termijn voor om het even welke inputschakelaar in het Platform van de Gegevens van de Klant in real time.
 
@@ -487,7 +498,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Streaming eindpunt-URL:** Een URL voor een streamingeindpunt is een uniek eindpunt dat door Adobe wordt verschaft en dat is gekoppeld aan de IMS-org van een klant om gegevens te streamen naar het Experience Platform.
 
-**Streaming segmentering:** Streaming segmentatie is een doorlopend proces voor gegevensselectie dat segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan het Profiel van de Klant in real time. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
+**Streaming segmentering:** Streaming segmentatie is een doorlopend proces voor gegevensselectie dat segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan het Profiel van de Klant in real time. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat uw doelgroep relevant blijft.
 
 **Symbool:** Symbool is een afkorting van een naamruimte voor identiteiten die kan worden gebruikt als referentie in API&#39;s.
 
@@ -501,7 +512,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Opgeleid model:** Een getraind model vertegenwoordigt de uitvoerbare output van een model opleidingsproces, waarin een reeks opleidingsgegevens werd toegepast op de modelinstantie. Een opgeleid model zal een verwijzing naar om het even welke Intelligente Dienst van het Web handhaven die van het wordt gecreeerd. Het getrainde model is geschikt voor het scoren en maken van een intelligente webservice. Wijzigingen in een getraind model kunnen als een nieuwe versie worden bijgehouden.
 
-**Token:** A token is a type of two-factor authentication security that can be used to authorize the use of computer services with Query Service.
+**Token:** Een teken is een type van twee-factor authentificatieveiligheid dat kan worden gebruikt om het gebruik van de computerdiensten met de Dienst van de Vraag toe te staan.
 
 **Type:** Type is de klasse van het probleem van het machinleren een recept wordt ontworpen voor en na opleiding gebruikt om de opleidingslooppas te helpen maken of evalueren.
 
@@ -527,11 +538,11 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **XDM DecisionEvent:** Een Beslissingsgebeurtenis wordt gebruikt om opmerkingen te maken over het resultaat en de context van een besluitvormingsactiviteit, met inbegrip van informatie over de wijze waarop het besluit is genomen, op het moment dat het plaatsvond, welke opties werden voorgesteld (en gekozen) en welke context er bestond die het besluit beïnvloedden of tijdens het besluitvormingsproces in acht konden worden genomen. Bij BesluitEvents wordt ook de propositie-id opgenomen, een wereldwijd unieke id die kan worden gebruikt om het besluit te correleren met andere gebeurtenissen. Beslissingsgebeurtenissen hebben niet alleen betrekking op gebeurtenissen die een beslissing hebben beïnvloed, maar ook op ExperienceEvents die een directe reactie op een voorstel vormen. Het is de verwachting dat de toepassingen verwijzen naar propositie identiteitskaart in elke ExperienceEvent die door de voorstellen werd beïnvloed. De propositie-reactie geschiedenis in een individueel profiel wordt gehandhaafd gebruikend voorstel IDs.
 
-**XDM ExperienceEvent:** An ExperienceEvent is a fact record of what occurred, including the point in time and identity of the individual involved. ExperienceEvents kunnen expliciete (direct waarneembare menselijke acties) of impliciete (opgewekte zonder directe menselijke actie) zijn en worden geregistreerd zonder aggregatie of interpretatie. They are critical for time-domain analytics as they allow for observation and analysis of changes that occur in a given window of time and the comparison between multiple windows of time to track trends.
+**XDM ExperienceEvent:** Een ExperienceEvent is een feitenverslag van wat voorkwam, met inbegrip van het tijdstip en de identiteit van het betrokken individu. ExperienceEvents kunnen expliciete (direct waarneembare menselijke acties) of impliciete (opgewekte zonder directe menselijke actie) zijn en worden geregistreerd zonder aggregatie of interpretatie. Zij zijn kritiek voor tijd-domein analyses aangezien zij voor waarneming en analyse van veranderingen toestaan die in een bepaald venster van tijd en de vergelijking tussen veelvoudige vensters van tijd voorkomen om tendensen te volgen.
 
-**XDM Individual Profile:** An XDM Individual Profile forms a singular representation of the attributes and interests of both identified and partially-identified individuals. Minder geïdentificeerde profielen kunnen alleen anonieme gedragssignalen bevatten, zoals browsercookies, terwijl zeer geïdentificeerde profielen gedetailleerde persoonlijke gegevens kunnen bevatten zoals naam, geboortedatum, locatie en e-mailadres. Naarmate een profiel groeit, wordt het een robuuste opslagplaats voor persoonlijke gegevens, identificatiegegevens, contactgegevens en communicatievoorkeuren voor een individu.
+**Afzonderlijk XDM-profiel:** Een individueel profiel XDM vormt een enkelvoudige vertegenwoordiging van de attributen en de belangen van zowel geïdentificeerde als gedeeltelijk-geïdentificeerde individuen. Minder geïdentificeerde profielen kunnen alleen anonieme gedragssignalen bevatten, zoals browsercookies, terwijl zeer geïdentificeerde profielen gedetailleerde persoonlijke gegevens kunnen bevatten zoals naam, geboortedatum, locatie en e-mailadres. Naarmate een profiel groeit, wordt het een robuuste opslagplaats voor persoonlijke gegevens, identificatiegegevens, contactgegevens en communicatievoorkeuren voor een individu.
 
-**XDM System:** XDM System is the infrastructure, data semantics, and workflow in Experience Platform that is powered by standard schemas.
+**XDM-systeem:** XDM System is de infrastructuur, de gegevenssemantiek, en het werkschema in het Platform van de Ervaring dat door standaardschema&#39;s wordt aangedreven.
 
 [Terug naar boven](#adobe-experience-platform-glossary)
 
