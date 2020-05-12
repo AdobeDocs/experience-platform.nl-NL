@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Azure File Storage-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5925c76ced3384e5eb3fc269dd8ffdbb2b820d2
+source-git-commit: aa1c6cb0f5702cfe444cb2046e4460e404f13e57
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Voor deze zelfstudie is een goed begrip vereist van de volgende componenten van 
    - [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [Klantprofiel](../../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Als u al een verbinding van de Opslag van het Dossier hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan bij het [vormen van een gegevensstroom](../../dataflow/cloud-storage.md).
+Als u al een verbinding van de Opslag van het Dossier hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan bij het [vormen van een gegevensstroom](../../dataflow/batch/cloud-storage.md).
 
 ### Vereiste referenties verzamelen
 
@@ -67,4 +67,4 @@ Als u een bestaande account wilt verbinden, selecteert u de Azure File Storage-a
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw Azure File Storage-account. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag over te brengen naar Platform](../../dataflow/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw Azure File Storage-account. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag over te brengen naar Platform](../../dataflow/batch/cloud-storage.md).
