@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een SFTP-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: a038abcdc411b638f41b94dea0140518c12f5600
+source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+workflow-type: tm+mt
+source-wordcount: '550'
+ht-degree: 0%
 
 ---
 
@@ -56,84 +59,9 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 * Inhoudstype: `application/json`
 
-## Verbindingsspecificaties opzoeken
+## Verbinding maken
 
-Om een verbinding tot stand te brengen SFTP, moet een reeks de verbindingsspecificaties van SFTP binnen de Dienst van de Stroom bestaan. De eerste stap in het verbinden van Platform met SFTP is deze specificaties terug te winnen.
-
-**API-indeling**
-
-Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor SFTP opzoeken door een GET verzoek uit te voeren en vraagparameters te gebruiken.
-
-Het verzenden van een GET verzoek zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=name=="sftp"` om informatie specifiek voor SFTP te verkrijgen.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="sftp"
-```
-
-**Verzoek**
-
-Met het volgende verzoek worden de verbindingsspecificaties voor een SFTP-server opgehaald.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="sftp"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-Een geslaagde reactie retourneert de verbindingsspecificatie voor de SFTP-server, inclusief de unieke id (`id`). Deze id is vereist in de volgende stap om een basisverbinding te maken.
-
-```json
-{
-    "items": [
-        {
-            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-            "name": "sftp",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for sftp",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to sftp",
-                        "properties": {
-                            "host": {
-                                "type": "string",
-                                "description": "Specify the name or IP address of the SFTP server."
-                            },
-                            "userName": {
-                                "type": "string",
-                                "description": "Specify the user who has access to the SFTP server."
-                            },
-                            "password": {
-                                "type": "string",
-                                "description": "Specify the password for the user (userName).",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "host",
-                            "userName",
-                            "password"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Een basisverbinding maken
-
-Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per SFTP-account is slechts één basisverbinding vereist omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per SFTP-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
 
 **API-indeling**
 
@@ -171,11 +99,11 @@ curl -X POST \
 | `auth.params.host` | De hostnaam van uw SFTP-server. |
 | `auth.params.username` | De gebruikersnaam die aan uw SFTP-server is gekoppeld. |
 | `auth.params.password` | Het wachtwoord dat aan uw SFTP-server is gekoppeld. |
-| `connectionSpec.id` | De verbindingsspecificatie `id` van uw SFTP-server die in de vorige stap is opgehaald. |
+| `connectionSpec.id` | De specificatie-id van de STFP-serververbinding: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe basisverbinding. Deze id is vereist om uw SFTP-server te verkennen in de volgende zelfstudie.
+Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe verbinding. Deze id is vereist om uw SFTP-server te verkennen in de volgende zelfstudie.
 
 ```json
 {
