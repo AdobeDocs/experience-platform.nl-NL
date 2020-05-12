@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azure File Storage-aansluiting
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5925c76ced3384e5eb3fc269dd8ffdbb2b820d2
+source-git-commit: 70c8f4657fcc54e87b91f7b263b7da9e1e3d9677
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
@@ -29,4 +29,4 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 ## Connect Azure File Storage naar Platform met behulp van de gebruikersinterface
 
 - [Een Azure File Storage-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/cloud-storage.md)
+- [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
