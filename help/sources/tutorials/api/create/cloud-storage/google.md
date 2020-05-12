@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een Google Cloud Storage-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 96be7084d5d2efb86b7bba27f1a92bd9c0055fba
+source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+workflow-type: tm+mt
+source-wordcount: '556'
+ht-degree: 0%
 
 ---
 
@@ -55,80 +58,9 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 * Inhoudstype: `application/json`
 
-## Verbindingsspecificaties opzoeken
+## Verbinding maken
 
-Voordat u het platform kunt verbinden met een Google Cloud Storage, moet u controleren of er verbindingsspecificaties bestaan voor Google Cloud Storage. Als er geen verbindingsspecificaties bestaan, kan geen verbinding worden gemaakt.
-
-Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor Google Cloud Storage opzoeken door een GET-aanvraag uit te voeren en queryparameters te gebruiken.
-
-**API-indeling**
-
-Het verzenden van een GET verzoek zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de query opnemen `property=name=="google-cloud"` voor informatie die specifiek bestemd is voor Google Cloud Storage.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name==google-cloud
-```
-
-**Verzoek**
-
-Met de volgende aanvraag worden de verbindingsspecificaties voor Google Cloud Storage opgehaald.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="google-cloud"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-Een succesvol antwoord geeft de verbindingsspecificaties voor Google Cloud Storage, inclusief de unieke id (`id`). Deze id is vereist in de volgende stap om een basisverbinding te maken.
-
-```json
-{
-    "items": [
-        {
-            "id": "32e8f412-cdf7-464c-9885-78184cb113fd",
-            "name": "google-cloud",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for google-cloud",
-                    "type": "Basic Authentication",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to google-cloud storage connector.",
-                        "properties": {
-                            "accessKeyId": {
-                                "type": "string",
-                                "description": "Access Key Id for the user account"
-                            },
-                            "secretAccessKey": {
-                                "type": "string",
-                                "description": "Secret Access Key for the user account",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "accessKeyId",
-                            "secretAccessKey"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Een basisverbinding maken
-
-Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Er is slechts één basisverbinding vereist per Google Cloud Storage-account, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het opnemen van verschillende gegevens.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Er is slechts één verbinding vereist per Google Cloud Storage-account, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het opnemen van verschillende gegevens.
 
 **API-indeling**
 
@@ -147,8 +79,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Google Cloud Storage base connection",
-        "description": "Base connector for Google Cloud Storage",
+        "name": "Google Cloud Storage connection",
+        "description": "Connector for Google Cloud Storage",
         "auth": {
             "specName": "Basic Authentication for google-cloud",
             "params": {
@@ -167,11 +99,11 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | De toegangs sleutel-id die aan uw Google Cloud Storage-account is gekoppeld. |
 | `auth.params.secretAccessKey` | De geheime toegangssleutel die aan uw Google Cloud Storage-account is gekoppeld. |
-| `connectionSpec.id` | De verbindingsspecificatie `id` van uw Google Cloud Storage-account die u in de vorige stap hebt opgehaald. |
+| `connectionSpec.id` | De specificatie-id voor Google Cloud Storage-verbinding: `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **Antwoord**
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist voor het verkennen van uw gegevens voor cloudopslag in de volgende zelfstudie.
+Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist voor het verkennen van uw gegevens voor cloudopslag in de volgende zelfstudie.
 
 ```json
 {
