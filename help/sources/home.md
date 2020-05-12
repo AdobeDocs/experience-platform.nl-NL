@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 translation-type: tm+mt
-source-git-commit: 492adad9b38c8850130931d3d393f28c67057d07
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,8 @@ Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform 
 
 - [Azure Data Lake Storage Gen2-connector](connectors/cloud-storage/adls-gen2.md)
 - [Azure Blob- en Amazon S3-connector](connectors/cloud-storage/blob-s3.md)
+- [Amazon Kinesis-connector](connectors/cloud-storage/kinesis.md)
+- [Azure Event Hubs-connector](connectors/cloud-storage/eventhub.md)
 - [Azure File Storage-aansluiting](connectors/cloud-storage/azure-file-storage.md)
 - [FTP- en SFTP-aansluiting](connectors/cloud-storage/ftp-sftp.md)
 - [Google Cloud Storage-connector](connectors/cloud-storage/google-cloud-storage.md)
