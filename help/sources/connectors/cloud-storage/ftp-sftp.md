@@ -4,18 +4,21 @@ solution: Experience Platform
 title: FTP- en SFTP-aansluiting
 topic: overview
 translation-type: tm+mt
-source-git-commit: ca3d2e7ac6d32b71e19e150f301f21b2d87c08ad
+source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
 # FTP- en SFTP-aansluiting
 
-Met het Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, Google Cloud Platform en Azure. U kunt uw gegevens van deze systemen overbrengen naar Platform.
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Ondersteuning voor leveranciers van cloudopslag omvat FTP- en SFTP-servers.
+Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met Platform kunt u gegevens van een FTP- of SFTP-server via batches inbrengen.
 
-In de onderstaande documentatie vindt u informatie over hoe u een FTP- of SFTP-server kunt verbinden met Platform via API&#39;s of de gebruikersinterface:
+De documentatie hieronder verstrekt informatie over hoe te om een FTP of een server te verbinden STFP met Platform gebruikend APIs of de gebruikersinterface:
 
 ## FTP en SFTP verbinden met platform met behulp van API&#39;s
 
@@ -26,4 +29,4 @@ In de onderstaande documentatie vindt u informatie over hoe u een FTP- of SFTP-s
 ## FTP of SFTP verbinden met Platform met behulp van UI
 
 - [Een FTP- of SFTP-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/ftp-sftp.md)
-- [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/cloud-storage.md)
+- [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
