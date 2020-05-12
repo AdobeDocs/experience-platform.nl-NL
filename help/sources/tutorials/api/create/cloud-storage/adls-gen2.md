@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Maak een Azure Data Lake Storage Gen2-connector met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 065076aee83990bcad0110f0d7704a60fac400c6
+source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+workflow-type: tm+mt
+source-wordcount: '571'
+ht-degree: 0%
 
 ---
 
@@ -57,89 +60,9 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 * Inhoudstype: `application/json`
 
-## Verbindingsspecificaties opzoeken
+## Verbinding maken
 
-Voordat u Platform kunt verbinden met ADLS Gen2, moet u controleren of er verbindingsspecificaties bestaan voor ADLS Gen2. Als er geen verbindingsspecificaties bestaan, kan geen verbinding worden gemaakt.
-
-Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor ADLS Gen2 opzoeken door een GET verzoek uit te voeren en vraagparameters te gebruiken.
-
-**API-indeling**
-
-Het verzenden van een GET verzoek zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=name=="adls-gen2"` om informatie specifiek voor ADLS Gen2 te verkrijgen.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="adls-gen2"
-```
-
-**Verzoek**
-
-Met het volgende verzoek worden de verbindingsspecificaties voor ADLS Gen2 opgehaald.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="adls-gen2"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-Een geslaagde reactie retourneert de verbindingsspecificaties voor ADLS Gen2, inclusief de unieke id (`id`). Deze id is vereist in de volgende stap om een basisverbinding te maken.
-
-```json
-{
-    "items": [
-        {
-            "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
-            "name": "adls-gen2",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for adls-gen2",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to adlsgen2 using service principal",
-                        "properties": {
-                            "url": {
-                                "type": "string",
-                                "description": "Endpoint for Azure Data Lake Storage Gen2."
-                            },
-                            "servicePrincipalId": {
-                                "type": "string",
-                                "description": "Service Principal Id to connect to ADLSGen2."
-                            },
-                            "servicePrincipalKey": {
-                                "type": "string",
-                                "description": "Service Principal Key to connect to ADLSGen2.",
-                                "format": "password"
-                            },
-                            "tenant": {
-                                "type": "string",
-                                "description": "Tenant information(domain name or tenant ID)."
-                            }
-                        },
-                        "required": [
-                            "url",
-                            "servicePrincipalId",
-                            "servicePrincipalKey",
-                            "tenant"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Een basisverbinding maken
-
-Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per ADLS Gen2-account is slechts één basisverbinding vereist omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per ADLS Gen2-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
 
 **API-indeling**
 
@@ -159,7 +82,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "adls-gen2",
-        "description": "base connection for adls-gen2",
+        "description": "Connection for adls-gen2",
         "auth": {
             "specName": "Basic Authentication for adls-gen2",
             "params": {
@@ -182,11 +105,11 @@ curl -X POST \
 | `auth.params.servicePrincipalId` | De service principal ID van uw ADLS Gen2-account. |
 | `auth.params.servicePrincipalKey` | De belangrijkste servicetoets van uw ADLS Gen2-account. |
 | `auth.params.tenant` | De huurdersinformatie van uw account van ADLS Gen2. |
-| `connectionSpec.id` | De verbindingsspecificatie `id` van uw ADLS Gen2-account die in de vorige stap is opgehaald. |
+| `connectionSpec.id` | De ID van de ADLS Gen2-verbindingsspecificatie: `0ed90a81-07f4-4586-8190-b40eccef1c5a1`. |
 
 **Antwoord**
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist om uw cloudopslag in de volgende stap te verkennen.
+Een succesvolle reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw cloudopslag in de volgende stap te verkennen.
 
 ```json
 {
