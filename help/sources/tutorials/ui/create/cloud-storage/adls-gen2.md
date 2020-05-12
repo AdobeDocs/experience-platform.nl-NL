@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Maak een Azure Data Lake Storage Gen2-bronconnector in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+workflow-type: tm+mt
+source-wordcount: '507'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Voor deze zelfstudie is een goed begrip vereist van de volgende componenten van 
    - [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [Klantprofiel](../../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Als u al een ADLS Gen2 basisverbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan bij het [vormen van een gegevensstroom](../../dataflow/cloud-storage.md).
+Als u al een ADLS Gen2 basisverbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan bij het [vormen van een gegevensstroom](../../dataflow/batch/cloud-storage.md).
 
 ### Vereiste referenties verzamelen
 
@@ -63,4 +66,4 @@ Als u een bestaande account wilt verbinden, selecteert u de ADLS Gen2-account wa
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een basisverbinding tot stand gebracht met uw account van ADLS Gen2. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag over te brengen naar Platform](../../dataflow/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u een basisverbinding tot stand gebracht met uw account van ADLS Gen2. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag over te brengen naar Platform](../../dataflow/batch/cloud-storage.md).
