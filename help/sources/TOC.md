@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: b3512cd4d1e024597a47e1aa52a2e23e5fce5e44
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,10 @@ ht-degree: 0%
    - Reclame {#advertising}
       - [Google Ads-connector](connectors/advertising/ads.md)
    - Cloud-opslag {#cloud-storage}
+      - [Amazon Kinesis-connector](connectors/cloud-storage/kinesis.md)
       - [Azure Data Lake Storage Gen2-connector](connectors/cloud-storage/adls-gen2.md)
       - [Azure Blob- en Amazon S3-connector](connectors/cloud-storage/blob-s3.md)
+      - [Azure Event Hubs-connector](connectors/cloud-storage/eventhub.md)
       - [Azure File Storage-aansluiting](connectors/cloud-storage/azure-file-storage.md)
       - [FTP- en SFTP-aansluiting](connectors/cloud-storage/ftp-sftp.md)
       - [Google Cloud Storage-connector](connectors/cloud-storage/google-cloud-storage.md)
@@ -159,7 +161,8 @@ ht-degree: 0%
          - [Generic OData-connector](tutorials/ui/create/protocols/odata.md)
    - Een gegevensstroom configureren {#dataflow}
       - [Een dataflow configureren voor een advertentieverbinding](tutorials/ui/dataflow/advertising.md)
-      - [Een gegevensstroom configureren voor een aansluiting voor cloudopslag](tutorials/ui/dataflow/cloud-storage.md)
+      - [Een dataflow configureren voor een batch-cloudopslagconnector](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [Een dataflow configureren voor een streamingaansluiting voor cloudopslag](tutorials/ui/dataflow/streaming/cloud-storage.md)
       - [Een gegevensstroom configureren voor een databaseverbinding](tutorials/ui/dataflow/databases.md)
       - [Een gegevensstroom configureren voor een CRM-aansluiting](tutorials/ui/dataflow/crm.md)
       - [Een dataflow configureren voor een klantsuccesconnector](tutorials/ui/dataflow/customer-success.md)
