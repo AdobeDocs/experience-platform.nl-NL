@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van het Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 96faba8d608d2fd057d256855b8b82af10558324
+source-git-commit: 7a36a3e3180c4ed4a9db23c0a33f6af3d7a3a5ec
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ De documentatie van het Platform van de ervaring wordt verstrekt in veelvoudige 
 >
 >* Koppelingen naar aanbevolen artikelen
 >* Contextrelevante documentatieaanbevelingen
->* De mogelijkheid om feedback te geven over de documentatie en rapportproblemen
+>* De mogelijkheid om feedback te geven over het ervaringsplatform en problemen te melden
 >* Verbeterde zoekresultaten, inclusief resultaten van communityforums en video-inhoud.
 >
 > 
