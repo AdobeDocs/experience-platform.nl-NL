@@ -1,18 +1,22 @@
 ---
-title: Azure Event Hubs-bestemming
-seo-title: Azure Event Hubs-bestemming
+title: (Beta) Azure Event Hubs-bestemming
+seo-title: (Beta) Azure Event Hubs-bestemming
 description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van het Platform van de Ervaring.
 seo-description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van het Platform van de Ervaring.
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
 
 
-# Azure Event Hubs-bestemming
+# (Beta) Azure Event Hubs-bestemming
+
+>[!IMPORTANT]
+>
+>De [!DNL Azure Event Hubs] bestemming in Echte Adobe CDP in tijd is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 ## Overzicht {#overview}
 
@@ -21,7 +25,7 @@ ht-degree: 0%
 U kunt een uitgaande verbinding in real time met uw [!DNL Azure Event Hubs] opslag maken om gegevens te streamen vanaf het Adobe Experience Platform.
 
 * Voor meer informatie over [!DNL Azure Event Hubs], zie de documentatie [van](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)Microsoft.
-* Zie de zelfstudie over de API- [!DNL Azure Event Hubs] streamingdoelen als u verbinding wilt maken met het [gebruik van API-aanroepen].
+* Zie de zelfstudie over de API- [!DNL Azure Event Hubs] streamingdoelen als u verbinding wilt maken met het [gebruik van API-aanroepen](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
 * Zie de onderstaande secties voor [!DNL Azure Event Hubs] het maken van een verbinding met de Adobe Real-Time CDP-gebruikersinterface.
 
 ![AWS Kinesis in de gebruikersinterface](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
@@ -89,6 +93,6 @@ De gegevens van uw geëxporteerde Experience Platform worden opgeslagen in [!DNL
 
 >[!MORELIKETHIS]
 >
->* Zelfstudie voor koppeling naar Azure Event Hubs API
+>* [Verbind met Azure Event Hubs en activeer gegevens gebruikend API vraag](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [AWS Kinesis-bestemming](/help/rtcdp/destinations/amazon-kinesis-destination.md)
 >* [Doeltypen en -categorieën](/help/rtcdp/destinations/destination-types.md)
