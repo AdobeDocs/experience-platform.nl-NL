@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Help
 translation-type: tm+mt
-source-git-commit: e0807f32ff5f3d16a6805074951e3b09723c5181
+source-git-commit: 72511172c07b79c485660d59595aa6c8fdd6bdaa
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '413'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
    * Interface Doelen {#destinations-interface}
       * [Werkruimte Doelen](destinations/destinations-workspace.md)
       * [Pagina met doeldetails](destinations/destination-details-page.md)
-   * Doelcatalogus  {#destinations-cat}
+   * Doelcatalogus {#destinations-cat}
       * [Overzicht van de doelcatalogus](destinations/destinations-catalog.md)
       * Adobe-doelen{#adobe-destinations}
          * [Overzicht van Adobe-doelen](destinations/adobe-destinations.md)
@@ -76,7 +76,9 @@ ht-degree: 1%
       * Opslagdoelen voor cloud{#cloud-storage}
          * [Overzicht van opslagdoelen voor cloud](destinations/cloud-storage-destinations.md)
          * [Workflow voor het maken van cloudopslagdoelen](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
+         * [Amazon Kinesis-bestemming](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Amazon S3-bestemming](destinations/amazon-s3-destination.md)
+         * [Azure EventHubs-bestemming](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [SFTP-bestemming](destinations/sftp-destination.md)
       * Gebieden van het Platform voor gegevensbeheer {#dmp-destinations}
          * [Overzicht van doelen van het gegevensbeheerplatform](destinations/dmp-destinations.md)
