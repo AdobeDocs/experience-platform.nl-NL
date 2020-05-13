@@ -4,7 +4,7 @@ seo-title: Gegevens verzenden naar Adobe Audience Manager met Adobe Experience P
 description: Leer hoe u gegevens naar Adobe Audience Manager kunt verzenden met Experience Platform Web SDK
 seo-description: Leer hoe u gegevens naar Adobe Audience Manager kunt verzenden met Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: cfb23e7fde246ca224d5e1f2688651aa7d992b2c
+source-git-commit: dfe9ea2889b3ba2e74f8b10296bfb2d123ad9d57
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 ---
 
 
-# (Beta) Audience MAnager op het Experience Platform Edge Network
+# (bèta) Audience Manager op het Experience Platform Edge Network
 
 >[!IMPORTANT]
 >
