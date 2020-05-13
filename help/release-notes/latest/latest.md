@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 9d4c645e830790a7d5430fe3d514464ca8bef025
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '875'
 ht-degree: 1%
 
 ---
@@ -19,9 +19,11 @@ ht-degree: 1%
 
 Updates voor bestaande functies in het Adobe Experience Platform:
 
-- [Werkruimte voor gegevenswetenschap](#dsw)
-- [Experience Platform Web SDK en Experience Platform Edge Network](#edge)
-- [Bronnen](#sources)
+- [Opmerkingen bij de release Adobe Experience Platform](#adobe-experience-platform-release-notes)
+   - [Werkruimte voor gegevenswetenschap {#dsw}](#data-science-workspace-dsw)
+   - [Doelen {#destinations}](#destinations-destinations)
+   - [Experience Platform Web SDK en Experience Platform Edge Network {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
+   - [Bronnen {#sources}](#sources-sources)
 
 ## Werkruimte voor gegevenswetenschap {#dsw}
 
@@ -38,6 +40,26 @@ De Werkruimte van de Wetenschap van gegevens gebruikt machine het leren en kunst
 
 Raadpleeg voor meer informatie over het migreren van uw laptops en recepten naar Spark 2.4 de [handleiding](../../data-science-workspace/recipe-notebook-migration.md)voor laptopmigratie. Voor meer algemene informatie over de Werkruimte van de Wetenschap van Gegevens, zie de [overzichtsdocumentatie](../../data-science-workspace/home.md).
 
+## Doelen {#destinations}
+
+In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md)zijn doelen vooraf gebouwde integratie met doelplatforms die gegevens naadloos aan die partners activeren.
+
+**Nieuwe bestemmingen**
+
+Adobe Real-time CDP ondersteunt nu gegevensactivering voor streaming cloudopslagdoelen, zodat u publieksgegevens en -gebeurtenissen in JSON-indeling kunt exporteren naar deze doelen. U kunt bedrijfslogica bovenop deze gebeurtenissen in uw bestemmingen dan beschrijven. Zie hieronder voor meer informatie:
+
+>[!NOTE]
+>
+>De [!DNL Amazon Kinesis] en de [!DNL Azure Event Hubs] bestemmingen in Echte Adobe CDP in tijd zijn momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
+
+| Documentatie | Beschrijving |
+|--- | ---|
+| [(bèta) Amazon Kinesis-bestemming](/help/rtcdp/destinations/amazon-kinesis-destination.md) | In dit artikel wordt uitgelegd hoe u een real-time uitgaande verbinding maakt met uw [!DNL Amazon Kinesis] opslag om gegevens te streamen van het Adobe Experience Platform. |
+| [(Beta) Azure Event Hubs-bestemming](/help/rtcdp/destinations/azure-event-hubs-destination.md) | In dit artikel wordt uitgelegd hoe u een real-time uitgaande verbinding maakt met uw [!DNL Azure Event Hubs] opslag om gegevens te streamen van het Adobe Experience Platform. |
+| [API-zelfstudie - Verbinding maken met streamingdoelen en gegevens activeren](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md) | Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw gegevens van het Adobe Experience Platform, een verbinding te maken met een streamingbestemming voor cloudopslag (Amazon Kinesis of Azure Event Hubs), een gegevensstroom te maken naar uw nieuwe gemaakte bestemming en gegevens te activeren voor uw nieuwe gemaakte bestemming. |
+
+Zie het overzicht [](/help/rtcdp/destinations/destinations-overview.md)Doelen voor meer informatie.
+
 ## Experience Platform Web SDK en Experience Platform Edge Network {#edge}
 
 Met de Experience Platform Web SDK en Experience Platform kunnen gebruikers gegevens verzenden naar het Adobe Experience Platform en andere Adobe Solutions in real-time voor eindgebruikersapparaten en browsers. De meest recente lijst met gebruiksgevallen vindt u in onze [openbare routekaart](https://github.com/adobe/alloy/projects/5) , die vaak wordt bijgewerkt.
@@ -51,7 +73,7 @@ Met de Experience Platform Web SDK en Experience Platform kunnen gebruikers gege
 | Adobe Experience Platform Web SDK Mixen | Een combinatie voor gebruik met het Web SDK van het Platform van de Ervaring die alle gesteunde gebieden omvat. |
 | Besturingselementen voor cursusinstemming | Biedt bedrijven controle over opt-in en opt-out van het Web SDK van het Platform van de Ervaring |
 | Ondersteuning voor foutopsporing aan de clientzijde in de nieuwe Experience Cloud Debugger Extension | Zie verzoeken van het Web SDK van het Platform van de Ervaring evenals randsporen om te zien hoe de gegevens door het systeem stromen. |
-| Adobe Analytics | Gegevens verzenden naar Analytics-rapportreeksen via de randconfiguratie. XDM wordt afgevlakt in contextgegevens, steunt multi-suite het etiketteren |
+| Adobe Analytics | Gegevens naar Analytics-rapportreeksen verzenden via de randconfiguratie. XDM wordt afgevlakt in contextgegevens, steunt multi-suite het etiketteren |
 | Adobe-doel | Ondersteuning voor Adobe Target. Inclusief VEC, Form based composer, A/B, XT, Automated Personalization, MVT |
 | Ondersteuning voor Adobe Audience Manager | Ondersteuning voor synchronisatie-id&#39;s van Audience Manager, URL-doelen en Cookie-doelen |
 | `synceIdnetity` | Naam gewijzigd `setCustomersIds` om het duidelijker `syncIdentity` te maken |
