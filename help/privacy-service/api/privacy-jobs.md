@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Taken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
+source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+workflow-type: tm+mt
+source-wordcount: '1669'
+ht-degree: 0%
 
 ---
 
 
 # Privacytaken
 
-De volgende secties lopen door vraag u het gebruiken van het worteleindpunt (`/`) in de Dienst API van de Privacy kunt maken. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+De volgende secties lopen door vraag u het gebruiken van het `/jobs` eindpunt in de Dienst API van de Privacy kunt maken. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
-## Een privacytaak maken
+## Een privacytaak maken {#create-job}
 
 Voordat u een nieuwe taakaanvraag maakt, moet u eerst identificatiegegevens verzamelen over de betrokkenen van wie u de gegevens wilt benaderen, verwijderen of niet wilt verkopen. Zodra u de vereiste gegevens hebt, moet het in de lading van een verzoek van de POST aan het worteleindpunt worden verstrekt.
 
@@ -33,7 +36,7 @@ In deze sectie ziet u hoe u een aanvraag voor een toegangs-/verwijdertaak uitvoe
 **API-indeling**
 
 ```http
-POST /
+POST /jobs
 ```
 
 **Verzoek**
@@ -157,7 +160,7 @@ Een succesvol antwoord geeft de details van de nieuwe banen terug.
 | --- | --- |
 | `jobId` | Een alleen-lezen, unieke door het systeem gegenereerde id voor een taak. Deze waarde wordt gebruikt in de volgende stap van het opzoeken van een specifieke taak. |
 
-Nadat de taakaanvraag is verzonden, kunt u doorgaan naar de volgende stap voor het [controleren van de status](#check-the-status-of-a-job)van de taak.
+Nadat de taakaanvraag is verzonden, kunt u doorgaan naar de volgende stap voor het [controleren van de status](#check-status)van de taak.
 
 ### Een opt-out-of-sales-taak maken {#opt-out}
 
@@ -166,7 +169,7 @@ In deze sectie wordt getoond hoe u met de API een aanvraag voor een opt-out-taak
 **API-indeling**
 
 ```http
-POST /
+POST /jobs
 ```
 
 **Verzoek**
@@ -281,7 +284,7 @@ Een succesvol antwoord geeft de details van de nieuwe banen terug.
 
 Nadat de taakaanvraag is verzonden, kunt u doorgaan naar de volgende stap om de status van de taak te controleren.
 
-## De status van een taak controleren
+## De status van een taak controleren {#check-status}
 
 Met een van de `jobId` waarden die in de vorige stap zijn geretourneerd, kunt u informatie over die taak ophalen, zoals de huidige verwerkingsstatus.
 
@@ -290,12 +293,12 @@ Met een van de `jobId` waarden die in de vorige stap zijn geretourneerd, kunt u 
 **API-indeling**
 
 ```http
-GET /{JOB_ID}
+GET /jobs/{JOB_ID}
 ```
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{JOB_ID}` | De id van de taak die u wilt opzoeken, wordt geretourneerd onder `jobId` de reactie van de [vorige stap](#create-a-job-request). |
+| `{JOB_ID}` | De id van de taak die u wilt opzoeken, wordt geretourneerd onder `jobId` de reactie van de [vorige stap](#create-job). |
 
 **Verzoek**
 
@@ -391,10 +394,10 @@ U kunt een lijst van alle beschikbare baanverzoeken binnen uw organisatie bekijk
 Dit verzoekformaat gebruikt een `regulation` vraagparameter op het wortel (`/`) eindpunt, daarom begint het met een vraagteken (`?`) zoals hieronder getoond. De reactie wordt gepagineerd, toestaand u om andere vraagparameters (`page` en `size`) te gebruiken om de reactie te filtreren. U kunt meerdere parameters scheiden met ampersands (`&`).
 
 ```http
-GET ?regulation={REGULATION}
-GET ?regulation={REGULATION}&page={PAGE}
-GET ?regulation={REGULATION}&size={SIZE}
-GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}
+GET /jobs?regulation={REGULATION}&page={PAGE}
+GET /jobs?regulation={REGULATION}&size={SIZE}
+GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 ```
 
 | Parameter | Beschrijving |
