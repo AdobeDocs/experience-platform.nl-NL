@@ -1,122 +1,63 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform
-description: Opmerkingen bij de release Experience Platform van 8 april 2020
+description: Opmerkingen bij de release Experience Platform van 13 mei 2020
 doc-type: release notes
-last-update: April 13, 2020
-author: ens71067
-keywords: release notes;
+last-update: May 13, 2020
+author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 43db1992ae45e27134bc0c4405963c405275750e
+source-git-commit: 9d4c645e830790a7d5430fe3d514464ca8bef025
+workflow-type: tm+mt
+source-wordcount: '664'
+ht-degree: 1%
 
 ---
 
 
 # Opmerkingen bij de release Adobe Experience Platform
 
-**Releasedatum: 8 april 2020**
+**Releasedatum: 13 mei 2020**
 
-Nieuwe functies in het Adobe Experience Platform:
-* [Intelligente services](#intelligent)
+Updates voor bestaande functies in het Adobe Experience Platform:
 
-Updates voor bestaande functies:
-* [Experience Data Model (XDM)](#xdm)
-* [Gegevensbeheer](#governance)
-* [Doelen](#destinations)
-* [Privacy Service](#privacy)
-* [Bronnen](#sources)
+- [Werkruimte voor gegevenswetenschap](#dsw)
+- [Experience Platform Web SDK en Experience Platform Edge Network](#edge)
+- [Bronnen](#sources)
 
-## Intelligente services {#intelligent}
+## Werkruimte voor gegevenswetenschap {#dsw}
 
-Intelligente services stellen marketinganalisten en praktijkmensen in staat om gebruik te maken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen van de klantervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap. Daarnaast kunnen marketingmedewerkers voorspellingen activeren in Adobe Experience Cloud, Adobe Experience Platform en toepassingen van derden.
-
-**Belangrijkste kenmerken**
-
-| Functie | Beschrijving |
-|---|---|
-| Customer AI | Klantenservice-AI biedt marketers de mogelijkheid om voorspellingen van klanten op individueel niveau te genereren met uitleg. Met behulp van invloedrijke factoren kan de AI van de Klant u vertellen wat een klant waarschijnlijk zal doen en waarom. Bovendien kunnen marketers profiteren van de voorspellingen en inzichten van de klant van AI om de ervaringen van klanten aan te passen door de meest geschikte aanbiedingen en berichten te bedienen. |
-| Attributie-AI | Attribution AI is een multi-channel, algoritmische attributiedienst die de invloed en de incrementele impact van klanteninteractie tegen gespecificeerde resultaten berekent. Met Attribution AI kunnen marketers marketing- en advertentiekosten meten en optimaliseren door de impact van elke afzonderlijke interactie van de klant in elke fase van de reizen van de klant te begrijpen. |
-
-**Bekende problemen**
-
-* Momenteel geen bekende problemen.
-
-Voor meer informatie over de Intelligente Diensten en wat het moet aanbieden, zie het Overzicht [van de](../../intelligent-services/home.md)Intelligente Diensten.
-
-## XDM-systeem (Experience Data Model) {#xdm}
-
-Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter het ervaringsplatform. Experience Data Model (XDM), aangestuurd door Adobe, is een poging om gegevens over klantervaring te standaardiseren en schema&#39;s voor het beheer van klantervaring te definiëren.
-
-XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Deze biedt algemene structuren en definities waarmee toepassingen kunnen communiceren met services op het Adobe Experience Platform. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier levert. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+De Werkruimte van de Wetenschap van gegevens gebruikt machine het leren en kunstmatige intelligentie om inzichten van uw gegevens te ontketenen. De Data Science Workspace is geïntegreerd in het Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor alle Adobe-oplossingen. Een van de manieren waarop de Werkruimte van de Wetenschap van Gegevens dit verwezenlijkt is door het gebruik van JupyterLab. JupyterLab is een webgebaseerde gebruikersinterface voor <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> en is nauw geïntegreerd in het Adobe Experience Platform. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
-| --- | --- |
-| Automatische alternatieve weergave-info | De Register van het Schema past automatisch de aangepaste titel en beschrijvingswaarden toe die in de `alternateDisplayInfo` beschrijver worden gevormd. |
-| Beperkingen voor scalaire velden | De Registratie van het Schema staat meer dan 6000 scalaire gebieden in één enkel schema niet toe. |
-| Overzicht van prestaties | Het register van het Schema is herzien om beter te presteren en aan de eisen van het Platform van de Ervaring te voldoen. |
-
-**Bugfixes**
-
-* Bijgewerkt XDM in XED geconverteerd om een schonere XED formaat voor genestelde gebieden van URI in standaardXDM te steunen.
-
-**Bekende problemen**
-
-* Bekend
-
-## Gegevensbeheer {#governance}
-
-Adobe Experience Platform Data Governance is een reeks strategieën en technologieën die worden gebruikt om klantgegevens te beheren en om ervoor te zorgen dat wordt voldaan aan de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik. Het speelt een sleutelrol binnen het ervaringsplatform op diverse niveaus, met inbegrip van catalogisering, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van de gegevenstoegang, en toegangscontrole over gegevens voor marketing acties.
-
-Aan de slag met gegevensbeheer vereist een grondig inzicht in de verordeningen, de contractuele verplichtingen, en het collectieve beleid die op uw klantengegevens van toepassing zijn. Daarna kunnen gegevens worden geclassificeerd door de juiste labels voor gegevensgebruik toe te passen en kan het gebruik ervan worden geregeld door de definitie van beleid voor gegevensgebruik.
-
-Het DULE-framework vereenvoudigt en stroomlijnt het proces voor het indelen van gegevens en het maken van beleidsregels voor gegevensgebruik via de gebruikersinterface van het Experience Platform en de DULE Policy Service API.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| -----------| ---------- |
-| Beleid voor gegevensgebruik beheren in de gebruikersinterface | Het beleid voor gegevensgebruik kan nu worden beheerd binnen de werkruimte _Beleid_ in de gebruikersinterface van het Experience Platform. Zie de gids [van de](../../data-governance/policies/user-guide.md) beleidsgebruiker voor meer informatie. |
-
-**Bekende problemen**
-
-* Geen.
-
-Zie het overzicht [van](../../data-governance/home.md)gegevensbeheer voor meer informatie.
-
-
-## Doelen {#destinations}
-
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md)zijn doelen vooraf gebouwde integratie met doelplatforms die gegevens naadloos aan die partners activeren.
-
-**Nieuwe bestemmingen**
-
-Adobe CDP in realtime ondersteunt nu gegevensactivering voor meer dan vijftig Experience Cloud Launch-extensies, waardoor analyses, personalisatie en andere gebruiksgevallen mogelijk zijn. Zie hieronder voor meer informatie:
-
-| Documentatie | Beschrijving |
 |--- | ---|
-| [Doeltypen en -categorieën](/help/rtcdp/destinations/destination-types.md) | Dit artikel verklaart het verschil tussen verbindingen en uitbreidingen in de interface van Adobe in real time CDP en adviseert wanneer om elk van deze bestemmingen te gebruiken. |
-| [Experience Platform Launch-extensies](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | Op deze pagina wordt uitgelegd wat extensies Starten zijn, worden gebruiksscenario&#39;s voor het gebruik van extensies vermeld en worden koppelingen naar documentatie voor elke extensie Starten in Adobe Real-time CDP weergegeven. |
+| JupyterLab Launcher | De JupyterLab Launcher bevat nu starters voor Spark 2.4-laptops. Starters voor Spark 2.3-laptops zijn nu gemarkeerd als verouderd en worden in een volgende release verwijderd. |
+| Vonk 2.4 | De nieuwe Scala (Vonk) en PySpark recepten gebruiken nu Vonk 2.4. |
+| Kernels | Scala-laptops (Spark) zijn nu ontworpen via de Scala-kernel. PySpark laptops zijn nu ontworpen via de Python Kernel. De kernel van de Vonk en van PySpark wordt afgekeurd en geplaatst om in een verdere versie worden verwijderd. |
+| Ontvangers | Nieuwe PySpark- en Spark-recepten volgen nu de Docker-workflow, vergelijkbaar met Python- en R-recepten. |
 
-Zie het overzicht [](/help/rtcdp/destinations/destinations-overview.md)Doelen voor meer informatie.
+Raadpleeg voor meer informatie over het migreren van uw laptops en recepten naar Spark 2.4 de [handleiding](../../data-science-workspace/recipe-notebook-migration.md)voor laptopmigratie. Voor meer algemene informatie over de Werkruimte van de Wetenschap van Gegevens, zie de [overzichtsdocumentatie](../../data-science-workspace/home.md).
 
-## Privacy Service {#privacy}
+## Experience Platform Web SDK en Experience Platform Edge Network {#edge}
 
-De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het recht om tot hun persoonlijke gegevens van uw gegevensopslag toegang te hebben of te schrappen op verzoek. Adobe Experience Platform Privacy Service biedt een RESTful API en een gebruikersinterface waarmee u deze gegevensaanvragen van uw klanten kunt beheren. Met de Privacy Service kunt u verzoeken om toegang tot persoonlijke of persoonlijke klantgegevens van Adobe Experience Cloud-toepassingen en deze verwijderen. Zo kunt u de automatische naleving van wettelijke en organisatorische privacyregels vereenvoudigen.
+Met de Experience Platform Web SDK en Experience Platform kunnen gebruikers gegevens verzenden naar het Adobe Experience Platform en andere Adobe Solutions in real-time voor eindgebruikersapparaten en browsers. De meest recente lijst met gebruiksgevallen vindt u in onze [openbare routekaart](https://github.com/adobe/alloy/projects/5) , die vaak wordt bijgewerkt.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
-| --- | --- |
-| PDPA-ondersteuning | De verzoeken van de privacy kunnen nu worden gecreeerd en worden gevolgd onder de Wet van de Bescherming van Persoonlijke Gegevens (PDPA) in Thailand. Wanneer u privacyverzoeken indient in de API, accepteert de `regulation` array de waarde &quot;pdpa_tha&quot;. |
-| Naamruimtetypen in de gebruikersinterface | U kunt nu verschillende naamruimtetypen opgeven in de Request Builder in de gebruikersinterface van de privacyservice. Raadpleeg de [gebruikershandleiding](../../privacy-service/ui/user-guide.md) voor meer informatie. |
-| Oude afleiding van eindpunt | Het oude API-eindpunt (`data/privacy/gdpr`) is vervangen. |
+|--- | ---|
+| Ondersteuning voor ECID | De SDK biedt ondersteuning voor ECID uit het vak zonder extra bibliotheken of informatie voor de installatie |
+| Configuratie-interface | Beheer uw montages van configuratieidentiteitskaart met de nieuwe UI van de randconfiguratie in Lancering, moet worden gewhitelisteerd om tot toegang te hebben |
+| Adobe Experience Platform Web SDK Mixen | Een combinatie voor gebruik met het Web SDK van het Platform van de Ervaring die alle gesteunde gebieden omvat. |
+| Besturingselementen voor cursusinstemming | Biedt bedrijven controle over opt-in en opt-out van het Web SDK van het Platform van de Ervaring |
+| Ondersteuning voor foutopsporing aan de clientzijde in de nieuwe Experience Cloud Debugger Extension | Zie verzoeken van het Web SDK van het Platform van de Ervaring evenals randsporen om te zien hoe de gegevens door het systeem stromen. |
+| Adobe Analytics | Gegevens verzenden naar Analytics-rapportreeksen via de randconfiguratie. XDM wordt afgevlakt in contextgegevens, steunt multi-suite het etiketteren |
+| Adobe-doel | Ondersteuning voor Adobe Target. Inclusief VEC, Form based composer, A/B, XT, Automated Personalization, MVT |
+| Ondersteuning voor Adobe Audience Manager | Ondersteuning voor synchronisatie-id&#39;s van Audience Manager, URL-doelen en Cookie-doelen |
+| `synceIdnetity` | Naam gewijzigd `setCustomersIds` om het duidelijker `syncIdentity` te maken |
+| XDM Object Builder | In de opstartextensie kunt u nu XDM-objecten bouwen als Data Elements |
 
-Bekende problemen
-
-* Geen
-
-Voor meer informatie over de Dienst van de Privacy, gelieve te beginnen door het overzicht [van de Dienst van de](../../privacy-service/home.md)Privacy te lezen.
+Raadpleeg de [documentatie](../../edge/home.md)voor meer informatie over Platform Web SDK en Edge Network.
 
 ## Bronnen {#sources}
 
@@ -128,12 +69,11 @@ Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| API- en UI-ondersteuning voor databases | Nieuwe bronaansluitingen voor Apache Spark (op HDInsights), Azure Synapse Analytics, Azure Table Storage, Hive (op HDInsights) en Phoenix. |
-| API- en UI-ondersteuning voor op betalingen gebaseerde toepassingen | Nieuwe bronconnectors voor PayPal. |
-| API- en UI-ondersteuning voor op protocollen gebaseerde toepassingen | Nieuwe bronconnectors voor Generic OData. |
+| Aanvullende API- en UI-ondersteuning voor cloudopslagsystemen | Nieuwe bronconnectors voor Azure File Storage. |
+| Aanvullende API- en UI-ondersteuning voor databases | Nieuwe bronconnectors voor Azure Data Explorer, IBM DB2 en Oracle DB. |
 
 **Bekende problemen**
 
-* Geen
+- Geen
 
 Zie het [bronoverzicht](../../sources/home.md)voor meer informatie over bronnen.
