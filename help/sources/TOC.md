@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 71080a1741ea0d660f63e2009f045c0e34f6c44b
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -65,9 +65,11 @@ ht-degree: 0%
       - Reclame {#advertising}
          - [Google Ads-connector](tutorials/api/create/advertising/ads.md)
       - Cloud-opslag {#cloud-storage}
+         - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3-connector](tutorials/api/create/cloud-storage/s3.md)
          - [Azure Blob-connector](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data Lake Storage Gen2-connector](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Azure Event Hubs-connector](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure File Storage-aansluiting](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google Cloud Storage-connector](tutorials/api/create/cloud-storage/google.md)
          - [SFTP-aansluiting](tutorials/api/create/cloud-storage/sftp.md)
@@ -128,8 +130,10 @@ ht-degree: 0%
       - Reclame {#create}
          - [Google Ads-connector](tutorials/ui/create/advertising/ads.md)
       - Cloud-opslag {#cloud-storage}
+         - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Azure Data Lake Storage Gen2-connector](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure Blob- en Amazon S3-connector](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Azure Event Hubs-connector](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure File Storage-aansluiting](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTP- en SFTP-aansluiting](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Google Cloud Storage-connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
