@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Platform-API's verifiëren en openen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: e1ba476fffc164b78decd7168192714993c791bc
+source-git-commit: 8c73363e88aab242ae258037deb80eeec872e519
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 0%
@@ -127,9 +127,9 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-Als uw reactie vergelijkbaar is met de hieronder weergegeven reactie, zijn uw gegevens geldig en werken ze. (Deze reactie is afgebroken voor de ruimte.)
-
 **Antwoord**
+
+Als uw reactie vergelijkbaar is met de hieronder weergegeven reactie, zijn uw gegevens geldig en werken ze. (Deze reactie is afgebroken voor de ruimte.)
 
 ```JSON
 {
