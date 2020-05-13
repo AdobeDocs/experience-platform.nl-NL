@@ -4,15 +4,20 @@ seo-title: Amazon Kinesis-bestemming
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens te streamen van het Adobe Experience Platform.
 seo-description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens te streamen van het Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
 
 
-# Amazon Kinesis-bestemming
+# (bèta) Amazon Kinesis-bestemming
+
+
+>[!IMPORTANT]
+>
+>De [!DNL Amazon Kinesis] bestemming in Echte Adobe CDP in tijd is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 ## Overzicht {#overview}
 
@@ -21,7 +26,7 @@ Met de [!DNL Kinesis Data Streams] service van Amazon Web Services kunt u grote 
 U kunt een uitgaande verbinding in real time met uw [!DNL Amazon Kinesis] opslag maken om gegevens te streamen vanaf het Adobe Experience Platform.
 
 * Raadpleeg de documentatie bij [!DNL Amazon Kinesis][Amazon voor meer informatie over](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)het programma.
-* Zie de zelfstudie over de API- [!DNL Amazon Kinesis] streamingdoelen als u verbinding wilt maken met het [gebruik van API-aanroepen].
+* Zie de zelfstudie over de API- [!DNL Amazon Kinesis] streamingdoelen als u verbinding wilt maken met het [gebruik van API-aanroepen](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
 * Zie de onderstaande secties voor [!DNL Amazon Kinesis] het maken van een verbinding met de Adobe Real-Time CDP-gebruikersinterface.
 
 ![Amazon Kinesis in de gebruikersinterface](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
@@ -97,7 +102,7 @@ De gegevens van uw geëxporteerde Experience Platform worden opgeslagen in [!DNL
 
 >[!MORELIKETHIS]
 >
->* Zelfstudie voor koppeling aan Amazon Kinesis API
+>* [Verbinding maken met Amazon Kinesis en gegevens activeren via API-aanroepen](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [Azure Event Hubs-bestemming](/help/rtcdp/destinations/azure-event-hubs-destination.md)
 >* [Doeltypen en -categorieën](/help/rtcdp/destinations/destination-types.md)
 
