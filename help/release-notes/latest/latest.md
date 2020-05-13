@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 0eca2f6e50024ec43c025dd75c34ca876d71c3f2
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 1%
+source-wordcount: '959'
+ht-degree: 2%
 
 ---
 
@@ -20,10 +20,21 @@ ht-degree: 1%
 Updates voor bestaande functies in het Adobe Experience Platform:
 
 - [Opmerkingen bij de release Adobe Experience Platform](#adobe-experience-platform-release-notes)
+   - [Updates van gebruikersinterface {#ux}](#user-interface-updates-ux)
    - [Werkruimte voor gegevenswetenschap {#dsw}](#data-science-workspace-dsw)
    - [Doelen {#destinations}](#destinations-destinations)
    - [Experience Platform Web SDK en Experience Platform Edge Network {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
    - [Bronnen {#sources}](#sources-sources)
+
+## Updates van gebruikersinterface {#ux}
+
+Adobe Experience Platform brengt updates uit voor het domein en de headerbalk om uw ervaring te verbeteren en te verenigen met andere Experience Cloud-toepassingen.
+
+- Eenvoudiger overschakelen tussen uw organisaties of op een andere applicatie
+- Verbeterde gebruikershulp, inclusief aanbevolen artikelen en contextrelevante documentatie in het menu Help
+- Mogelijkheid om feedback te geven over het Experience Platform en de tickets voor bestandsondersteuning
+
+De nieuwe ervaring wordt geleidelijk opgedaan. U kunt de ervaring bekijken op [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
 ## Werkruimte voor gegevenswetenschap {#dsw}
 
