@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Overzicht van labels voor gegevensgebruik
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
+source-git-commit: 4b6b9ca5ae7861f8e8b974550be14fbce6efdcf1
+workflow-type: tm+mt
+source-wordcount: '365'
+ht-degree: 0%
 
 ---
 
@@ -22,6 +25,14 @@ Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op b
 De etiketten van het gebruik van gegevens die op het datasetniveau worden toegepast worden verspreid aan alle gebieden binnen de dataset. De etiketten kunnen ook direct op individuele gebieden (kolomkopballen) in een dataset, zonder propagatie worden toegepast.
 
 Zie de handleiding over [ondersteunde labels](reference.md)voor gegevensgebruik voor meer informatie over beschikbare labels voor gegevensgebruik in het Experience Platform en het beleid dat deze vertegenwoordigen.
+
+## Labelovererving voor publiekssegmenten
+
+Alle publiekssegmenten die door de Segmentatieservice [van het Platform van de Ervaring van](../../segmentation/home.md) Adobe worden gecreeerd erven de gebruiksetiketten van hun overeenkomstige datasets. Dit staat toepassingen toe die bovenop het Platform van de Ervaring (zoals het Platform van de Gegevens van de Klant in real time) worden gebouwd om de automatische handhaving van het gegevensgebruiksbeleid te verstrekken wanneer het activeren van segmenten aan bestemmingen.
+
+Naast het erven van dataset-vlakke etiketten, erven de segmenten alle gebied-vlakke etiketten van hun bijbehorende datasets door gebrek. Afhankelijk van de manier waarop uw op platform-gebaseerde toepassing segmenten gebruikt, kunt u potentieel specificeren welke gebieden worden gebruikt, daardoor verhinderend het segment etiketten van uitgesloten gebieden erven.
+
+Voor meer informatie over hoe de automatische handhaving in Echt - tijd CDP werkt, zie het overzicht [van het Beheer van Gegevens](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)In real time CDP.
 
 ## Volgende stappen
 
