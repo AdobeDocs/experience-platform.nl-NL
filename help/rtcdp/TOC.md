@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Help
 translation-type: tm+mt
-source-git-commit: 72511172c07b79c485660d59595aa6c8fdd6bdaa
+source-git-commit: be885faf8c1408f372d2eb6cd8d6a8fa8fc69e14
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '439'
 ht-degree: 1%
 
 ---
@@ -122,9 +122,12 @@ ht-degree: 1%
          * [Invoc-tags, extensie](/help/rtcdp/destinations/invoca-extension.md)
          * [extensie Medallia](destinations/medallia-extension.md)
          * [URL-inbox-extensie Talk](destinations/talkurl-extension.md)
-   * Zelfstudies voor doelen {#dest-tutorials}
+   * Zelfstudies voor gebruikersinterface voor doelen {#dest-tutorials}
       * [Verbinding maken met een doel](/help/rtcdp/destinations/connect-destination.md)
       * [Profielen en segmenten naar een doel activeren](destinations/activate-destinations.md)
+   * Zelfstudies voor doel-API {api-zelfstudies}
+      * [Verbinding maken met streamingdoelen (AWS Kinesis en Azure Event Hubs) en gegevens activeren](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+      * [Verbinding maken met marketingdoelen en gegevens activeren](/help/tutorials/destinations/email-marketing-api.md)
 * Privacy en gegevensbeheer {#privacy}
    * [Privacyoverzicht](privacy/privacy-overview.md)
    * [Overzicht van gegevensbeheer](privacy/data-governance-overview.md)
