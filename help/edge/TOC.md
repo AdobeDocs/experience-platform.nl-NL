@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Edge Network
 translation-type: tm+mt
-source-git-commit: 1d864707226087d63a8f0afd9156efed0e369742
+source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 4%
@@ -27,7 +27,6 @@ ht-degree: 4%
    * [Foutopsporing](fundamentals/debugging.md)
    * [Interactie met meerdere eigenschappen](fundamentals/interacting-with-multiple-properties.md)
    * [Aangepaste inhoud renderen](fundamentals/rendering-personalization-content.md)
-   * [Flikkering beheren](fundamentals/managing-flicker.md)
    * [Ondersteunende toestemming](fundamentals/supporting-consent.md)
    * [Ondersteuning voor browsers in apps](fundamentals/supporting-in-app-browsers.md)
    * [Identiteit](fundamentals/identity.md)
@@ -41,6 +40,7 @@ ht-degree: 4%
       * [Overzicht van Auditiebeheer](solution-specific/audience-manager/audience-manager-overview.md)
    * Doel {#target}
       * [Doeloverzicht](solution-specific/target/target-overview.md)
+      * [Flickbeheer](solution-specific/target/flicker-management.md)
 * Referentie {#ref}
    * [Automatisch verzamelde gegevens](reference/automatic-information.md)
    * [Bibliotheekgegevens ophalen](reference/retrieving-library-information.md)
