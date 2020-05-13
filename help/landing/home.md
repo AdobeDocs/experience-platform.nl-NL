@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Overzicht van het Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 51aa09e5eff86c480946bcf706f10864b82841d2
+source-git-commit: 96faba8d608d2fd057d256855b8b82af10558324
+workflow-type: tm+mt
+source-wordcount: '503'
+ht-degree: 0%
 
 ---
 
@@ -21,6 +24,20 @@ Het Experience Platform is gebaseerd op open API&#39;s en stelt de volledige fun
 ## documentatie bij Experience Platform
 
 De documentatie van het Platform van de ervaring wordt verstrekt in veelvoudige formaten voor een verscheidenheid van eigenschappen en de diensten. Voor meer informatie over de typen documentatie die beschikbaar zijn en voor een korte beschrijving van elk van de platformservices, raadpleegt u het documentatieoverzicht [van het](documentation/overview.md)ervaringsplatform. Of, om meer over een specifieke dienst van het Platform direct te leren, selecteer een gids van de alfabetische lijst in de linkernavigatie.
+
+>[!NOTE]
+>
+>Vanaf mei 2020 wordt door Adobe een update van het domein en de headerbalk uitgevoerd om uw ervaring in alle Experience Cloud-toepassingen te verenigen en te verbeteren. Dit omvat een nieuw menu van de Hulp. Het nieuwe menu van de Hulp omvat het volgende:
+>
+>* Koppelingen naar aanbevolen artikelen
+>* Contextrelevante documentatieaanbevelingen
+>* De mogelijkheid om feedback te geven over de documentatie en rapportproblemen
+>* Verbeterde zoekresultaten, inclusief resultaten van communityforums en video-inhoud.
+>
+> 
+Van tijd tot tijd, zou u een onderzoek voor extra terugkoppelen kunnen ontvangen.
+>
+>Deze uitrol is geleidelijk, zodat zou u de veranderingen niet onmiddellijk kunnen zien. U kunt de bijgewerkte ervaring op elk ogenblik bekijken door naar [https://experience.adobe.com/platform](https://experience.adobe.com/platform)te gaan.
 
 ## Zelfstudies voor het ervaringsplatform
 
