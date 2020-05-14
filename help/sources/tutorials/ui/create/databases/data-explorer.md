@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Een Azure Data Explorer-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
 
 
 # Een Azure Data Explorer-bronconnector maken in de gebruikersinterface
+
+> [!NOTE]
+> De Azure Data Explorer-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
 
 De bronschakelaars in het Platform van de Ervaring van Adobe verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een Azure Data Explorer-bronconnector (hierna &quot;Data Explorer&quot; genoemd) via de gebruikersinterface van Platform.
 
