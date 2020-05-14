@@ -4,19 +4,15 @@ seo-title: Adobe Experience Platform Web SDK Experience Cloud ID ophalen
 description: Leer hoe u Adobe Experience Cloud ID kunt ophalen.
 seo-description: Leer hoe u Adobe Experience Cloud ID kunt ophalen.
 translation-type: tm+mt
-source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '398'
 ht-degree: 0%
 
 ---
 
 
-# (bètaversie) Experience Cloud ID ophalen
-
->[!IMPORTANT]
->
->De Adobe Experience Platform Web SDK is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Experience Cloud ID ophalen
 
 De Adobe Experience Platform Web SDK maakt gebruik van de [Adobe Identity Service](../../identity-service/ecid.md). Dit zorgt ervoor dat elk apparaat een unieke id heeft die op het apparaat blijft bestaan, zodat de activiteit tussen pagina&#39;s aan elkaar kan worden gekoppeld.
 
