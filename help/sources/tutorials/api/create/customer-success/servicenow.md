@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Creeer een schakelaar ServiceNow gebruikend de Dienst API van de Stroom
 topic: overview
 translation-type: tm+mt
-source-git-commit: 90f00d726c94f2f13e7c52991fa59e7e5d3ecd31
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '697'
+ht-degree: 0%
 
 ---
 
 
 # Creeer een schakelaar ServiceNow gebruikend de Dienst API van de Stroom
+
+>[!NOTE]
+>De aansluiting ServiceNow is in bèta. De functies en documentatie kunnen worden gewijzigd.
 
 De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
