@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Een Apache Hive maken op Azure HDInsights-bronconnector in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9bc9e369c7141ab70d7f7e6deffe9e0ad92ca92e
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '534'
+ht-degree: 0%
 
 ---
 
 
 # Een Apache Hive maken op Azure HDInsights-bronconnector in de gebruikersinterface
+
+> [!NOTE]
+> De Apache Hive op Azure HDInsights-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
 
 De bronschakelaars in het Platform van de Ervaring van Adobe verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een Apache Hive op Azure HDInsights-bronconnector met behulp van de Platform-gebruikersinterface.
 
