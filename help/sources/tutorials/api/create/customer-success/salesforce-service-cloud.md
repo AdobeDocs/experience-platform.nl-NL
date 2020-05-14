@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Een Salesforce Service Cloud-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: c5d0372f52b0c05746a92a18442fab158b7b99fe
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '701'
+ht-degree: 0%
 
 ---
 
 
 # Een Salesforce Service Cloud-connector maken met de Flow Service API
+
+>[!NOTE]
+>De Salesforce Service Cloud-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
 
 De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
