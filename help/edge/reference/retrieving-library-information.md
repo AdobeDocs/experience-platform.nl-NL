@@ -4,16 +4,15 @@ seo-title: Bibliotheekgegevens ophalen met Adobe Experience Platform Web SDK
 description: Leer hoe u informatie ophaalt over de bibliotheek die op de website is geladen
 seo-description: Leer hoe u automatisch informatie ophaalt over de bibliotheek die door de Adobe Experience Cloud SDK op de website is geladen
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
 
-# (bèta) Bibliotheekgegevens ophalen
-
->[!IMPORTANT]
->
->De Adobe Experience Platform Web SDK is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Bibliotheekgegevens ophalen
 
 Het is vaak handig om toegang te krijgen tot enkele details achter de bibliotheek die u op uw website hebt geladen. Hiervoor voert u de `getLibraryInfo` opdracht als volgt uit:
 
