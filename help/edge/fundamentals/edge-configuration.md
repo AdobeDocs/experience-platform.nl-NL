@@ -4,16 +4,15 @@ seo-title: Edge-configuratie voor de Web SDK van het Experience Platform
 description: 'Leer hoe te om het Netwerk van de Rand van het Platform van de Ervaring te vormen. '
 seo-description: 'Leer hoe te om het Netwerk van de Rand van het Platform van de Ervaring te vormen. '
 translation-type: tm+mt
-source-git-commit: efbc080117754cee01f21c9f9ec409204648e757
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '883'
+ht-degree: 0%
 
 ---
 
 
-# (bèta) Edge Configuration
-
->[!IMPORTANT]
->
->De Adobe Experience Platform Web SDK is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Edge-configuratie
 
 De configuratie voor het Adobe Experience Platform Web SDK is gesplitst naar twee locaties. Het [vormt bevel](configuring-the-sdk.md) in SDK controleert dingen die op de cliënt, zoals de `edgeDomain`. moeten worden behandeld. De randconfiguratie behandelt alle andere configuratie voor SDK. Wanneer een verzoek naar het Adobe Experience Platform Edge Network wordt verzonden, `edgeConfigId` wordt het gebruikt om naar de serverconfiguratie te verwijzen. Zo kunt u de configuratie bijwerken zonder dat u codewijzigingen op uw website hoeft aan te brengen.
 
@@ -39,17 +38,17 @@ De id die in de SDK als de id wordt gebruikt, `edgeConfigId` is een samengesteld
 
 Hieronder vindt u een van de instellingen die beschikbaar zijn voor een omgeving. De meeste secties kunnen worden in- of uitgeschakeld. Als deze optie is uitgeschakeld, worden de instellingen opgeslagen maar niet actief.
 
-#### [!UICONTROL Identity]
+#### [!UICONTROL Identiteit]
 
 Het identiteitsgedeelte is het enige gedeelte dat altijd ingeschakeld is. Er zijn twee beschikbare instellingen: ID Syncs Enabled en ID Sync Container ID.
 
 ![Het gedeelte Identiteit van de configuratie-interface](../../assets/edge_configuration_identity.png)
 
-##### [!UICONTROL ID Sync Enabled]
+##### [!UICONTROL ID-synchronisatie ingeschakeld]
 
 Bepaalt of de SDK identiteitssyncs uitvoert met partners van derden.
 
-##### [!UICONTROL ID Sync Container ID]
+##### [!UICONTROL ID Container-id synchroniseren]
 
 De syncs van identiteitskaart kunnen in containers worden gegroepeerd om verschillende syncs van identiteitskaart toe te laten om op verschillende tijden worden in werking gesteld. Dit controleert welke container van de syncs van identiteitskaart voor een bepaalde configuratieidentiteitskaart in werking wordt gesteld
 
@@ -63,13 +62,13 @@ Met de hier vermelde instellingen kunt u gegevens naar het Adobe Experience Plat
 
 Sandboxen zijn locaties in het Adobe Experience Platform waarmee klanten hun gegevens en implementaties van elkaar kunnen isoleren. Meer informatie over hoe ze werken vindt u in de documentatie bij [Sandboxen](../../sandboxes/home.md).
 
-##### [!UICONTROL Streaming Inlet]
+##### [!UICONTROL Streaming-ingang]
 
-Een streaminginlaat is een HTTP-bron in het Adobe Experience Platform. Deze worden onder het [!UICONTROL Sources] tabblad in het Adobe Experience Platform gemaakt als een HTTP-API.
+Een streaminginlaat is een HTTP-bron in het Adobe Experience Platform. Deze worden gemaakt als HTTP-API onder het tabblad [!UICONTROL Bronnen] in het Adobe Experience Platform.
 
-##### [!UICONTROL Event Dataset]
+##### [!UICONTROL Gebeurtenisgegevens]
 
-De configuraties van de rand steunen verzendend gegevens naar datasets die een schema van klasse hebben [!UICONTROL Experience Event].
+De configuraties van de rand steunen verzendend gegevens naar datasets die een schema van de Gebeurtenis [!UICONTROL van de]Ervaring van de klasse hebben.
 
 #### Adobe-doel
 
@@ -81,21 +80,21 @@ Als u Adobe Target wilt configureren, moet u een clientcode opgeven. De andere v
 >
 >De organisatie die is gekoppeld aan de clientcode, moet overeenkomen met de organisatie waar de configuratie-id is gemaakt.
 
-##### [!UICONTROL Client Code]
+##### [!UICONTROL Clientcode]
 
-De unieke id voor een doelaccount. Als u dit wilt zoeken, navigeert u naar [!UICONTROL Adobe Target] > [!UICONTROL Setup]> [!UICONTROL Implementation] > [!UICONTROL edit settings] naast de [!UICONTROL download] knop voor [!UICONTROL at.js] of [!UICONTROL mbox.js]
+De unieke id voor een doelaccount. Als u dit wilt zoeken, navigeert u naar [!UICONTROL Adobe Target] > [!UICONTROL Setup]> [!UICONTROL Implementatie] > [!UICONTROL Instellingen] bewerken naast de knop [!UICONTROL Downloaden]  [!UICONTROL voor ofwelat.jsofmbox.js]
 
-##### [!UICONTROL Property Token]
+##### [!UICONTROL Eigenschapstoken]
 
 Het doel staat klanten toe om toestemmingen door het gebruik van eigenschappen te controleren. De details kunnen in de sectie van de Toestemmingen [van de](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) Onderneming van de Documentatie van het Doel worden gevonden.
 
-Het eigenschapstoken vindt u in [!UICONTROL Adobe Target] > [!UICONTROL setup] > Eigenschappen [UICONTROL]
+Het eigenschapstoken vindt u in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [UICONTROL-eigenschappen]
 
-##### [!UICONTROL Target Environment ID]
+##### [!UICONTROL Id doelomgeving]
 
 [Met de omgevingen](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target kunt u uw implementatie in alle ontwikkelingsfasen beheren. Deze instelling geeft aan welke omgeving u voor elke omgeving wilt gebruiken.
 
-Adobe raadt u aan dit anders in te stellen voor elk van uw `dev`-, `stage`- en `prod` randconfiguratieomgevingen om de zaken eenvoudig te houden. Als u echter al een definitie hebt [!UICONTROL Adobe Target environments] opgegeven, kunt u deze gebruiken.
+Adobe raadt u aan dit anders in te stellen voor elk van uw `dev`-, `stage`- en `prod` randconfiguratieomgevingen om de zaken eenvoudig te houden. Als u echter al [!UICONTROL Adobe Target-omgevingen] hebt gedefinieerd, kunt u deze gebruiken.
 
 #### Adobe Audience Manager
 
@@ -103,11 +102,11 @@ U kunt deze sectie alleen inschakelen als u gegevens naar Adobe Audience Manager
 
 ![Instellingenblok Adobe Audience Manage](../../assets/edge_configuration_aam.png)
 
-##### [!UICONTROL Cookie Destinations Enabled]
+##### [!UICONTROL Cookie-doelen ingeschakeld]
 
 Staat SDK toe om segmentinformatie via de Doelen [van het](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) Koekje van de Manager van het Publiek te delen.
 
-##### [!UICONTROL URL Destinations Enabled]
+##### [!UICONTROL URL-doelen ingeschakeld]
 
 Staat SDK toe om segmentinformatie via Doelen [URL](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)te delen. Deze worden gevormd in de Manager van het Publiek.
 
@@ -117,6 +116,6 @@ Hiermee bepaalt u of gegevens naar Adobe Analytics worden verzonden. De extra de
 
 ![Adobe Analytics Settings Block](../../assets/edge_configuration_aa.png)
 
-##### [!UICONTROL Report Suite ID]
+##### [!UICONTROL ID van rapportsuite]
 
 De rapportsuite vindt u in de sectie Adobe Analytics Admin onder [!UICONTROL Admin > ReportSuites]. Als de veelvoudige rapportreeksen worden gespecificeerd, dan worden de gegevens gekopieerd aan elke rapportreeks.
