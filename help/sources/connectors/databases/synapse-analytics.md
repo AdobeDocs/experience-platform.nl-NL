@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Azure Synapse Analytics-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41aa36f146834537813fb7e05a17291dbd4f9d9b
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 0%
 
 ---
 
 
-# Azure Synapse Analytics-connector
+# (Beta) Azure Synapse Analytics-connector
 
 Met het Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
