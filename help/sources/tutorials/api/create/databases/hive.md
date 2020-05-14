@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Een Apache Hive maken op Azure HDInsights-connector met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: d9792bd87e6e0811e7a165bbde324a99a9cfd5c9
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '595'
+ht-degree: 0%
 
 ---
 
 
 # Een Apache Hive maken op Azure HDInsights-connector met de Flow Service API
+
+>[!NOTE]
+>De Apache Hive op Azure HDInsights-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
 
 De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
