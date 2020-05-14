@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Salesforce Service Cloud-aansluiting
 topic: overview
 translation-type: tm+mt
-source-git-commit: b5ab1bfc3d2b3ff69579f1745576938258ccbe75
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '167'
+ht-degree: 0%
 
 ---
 
 
-# Salesforce Service Cloud-aansluiting
+# (bèta) Salesforce Service Cloud-connector
 
 Met het Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
