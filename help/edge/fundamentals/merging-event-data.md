@@ -4,19 +4,19 @@ seo-title: Adobe Experience Platform Web SDK-gebeurtenisgegevens samenvoegen
 description: Meer informatie over het samenvoegen van Experience Platform Web SDK-gebeurtenisgegevens
 seo-description: Meer informatie over het samenvoegen van Experience Platform Web SDK-gebeurtenisgegevens
 translation-type: tm+mt
-source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
 
 
-# (bèta) Gebeurtenisgegevens samenvoegen
+# Gebeurtenisgegevens samenvoegen
 
 >[!IMPORTANT]
 >
->De Adobe Experience Platform Web SDK is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+>Deze functie is nog in ontwikkeling en dus kunnen niet alle oplossingen deze gegevens samenvoegen.
 
 Soms zijn niet alle gegevens beschikbaar wanneer een gebeurtenis plaatsvindt. U zou de gegevens kunnen willen vangen u _hebt_ zodat wordt het niet verloren als, bijvoorbeeld, de gebruiker browser sluit. Anderzijds kunt u ook gegevens opnemen die later beschikbaar komen.
 
