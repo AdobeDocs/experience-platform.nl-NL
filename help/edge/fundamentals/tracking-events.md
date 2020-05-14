@@ -4,16 +4,15 @@ seo-title: Gebeurtenissen van Adobe Experience Platform Web SDK bijhouden
 description: Leer hoe te om de gebeurtenissen van het Web SDK van het Platform van de Ervaring te volgen
 seo-description: Leer hoe te om de gebeurtenissen van het Web SDK van het Platform van de Ervaring te volgen
 translation-type: tm+mt
-source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 0%
 
 ---
 
 
 # Gebeurtenissen bijhouden
-
->[!IMPORTANT]
->
->De Adobe Experience Platform Web SDK is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 Gebruik de `event` opdracht om gebeurtenisgegevens naar de Adobe Experience Cloud te verzenden. Het `event` bevel is de primaire manier om gegevens naar de Wolk van de Ervaring te verzenden, en gepersonaliseerde inhoud, identiteiten, en publieksbestemmingen terug te winnen.
 
