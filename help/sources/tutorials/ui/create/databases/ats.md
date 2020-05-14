@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Een Azure Table Storage-bronconnector in de gebruikersinterface maken
 topic: overview
 translation-type: tm+mt
-source-git-commit: 899c4fbe8a1bb3fef24f606e77f13ef5184d1eda
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
 
 # Een Azure Table Storage-bronconnector in de gebruikersinterface maken
+
+>[!NOTE]
+>De Azure Table Storage-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
 
 De bronschakelaars in het Platform van de Ervaring van Adobe verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een Azure Table Storage-bronconnector (hierna &quot;ATS&quot; genoemd) via de gebruikersinterface van Platform.
 
