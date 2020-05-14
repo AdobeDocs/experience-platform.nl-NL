@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Maak een Apache Spark op de Azure HDInsights-bronconnector in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: ae059f93f09dbbae4f1ef46f68901071afba9729
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '534'
+ht-degree: 0%
 
 ---
 
 
 # Maak een Apache Spark op de Azure HDInsights-bronconnector in de gebruikersinterface
+
+> [!NOTE]
+> De Apache Spark op Azure HDInsights-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
 
 De bronschakelaars in het Platform van de Ervaring van Adobe verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een Apache Spark op de Azure HDInsights-bronconnector met behulp van de Platform-gebruikersinterface.
 
