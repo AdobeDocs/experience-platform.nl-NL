@@ -4,16 +4,15 @@ seo-title: De SDK van Adobe Experience Platform Web SDK installeren
 description: Leer hoe u de Experience Platform Web SDK installeert
 seo-description: Leer hoe u de Experience Platform Web SDK installeert
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '498'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) De SDK installeren
-
->[!IMPORTANT]
->
->De Adobe Experience Platform Web SDK is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# De SDK installeren
 
 De eerste stap bij de implementatie van de Adobe Experience Platform Web SDK is het zo hoog mogelijk kopiëren en plakken van de volgende &quot;basiscode&quot; in de `<head>` tag van uw HTML:
 
