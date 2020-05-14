@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK Persoonlijke inhoud renderen
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Platform van de Ervaring terug te geven
 seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Platform van de Ervaring terug te geven
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -21,7 +21,7 @@ De Adobe Experience Platform Web SDK ondersteunt het opvragen van de personalisa
 De SDK rendert automatisch gepersonaliseerde inhoud wanneer u een gebeurtenis naar de server verzendt en instelt `renderDecisions` op `true` als optie voor de gebeurtenis.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -43,7 +43,7 @@ Het renderen van gepersonaliseerde inhoud is asynchroon, dus er mag geen enkele 
 U kunt de lijst van besluiten verzoeken om als belofte op het `event` bevel te zijn teruggekeerd door te gebruiken `scopes`. Een werkingsgebied is een koord de laat de verpersoonlijkingsoplossing weten welk besluit u zou willen.
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
     xdm:{...},
     scopes:['demo-1', 'demo-2']
   }).then(function(result){
