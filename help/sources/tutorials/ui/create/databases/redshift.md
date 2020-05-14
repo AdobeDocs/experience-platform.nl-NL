@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Een Amazon Redshift-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '503'
+ht-degree: 0%
 
 ---
 
 
 # Een Amazon Redshift-bronconnector maken in de gebruikersinterface
+
+>De [!NOTE]
+>De Amazon Redshift-connector bevindt zich in bèta. De functies en documentatie kunnen worden gewijzigd.
 
 De bronschakelaars in het Platform van de Ervaring van Adobe verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een Amazon Redshift-bronconnector (hierna &quot;Redshift&quot; genoemd) via de gebruikersinterface van Platform.
 
