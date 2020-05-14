@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK snel aan de slag met Starten
 description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Platform van de Ervaring om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Platform van de Ervaring om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 2ccb2c17590780f7f1bd5e553164209763ab9e24
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -17,14 +17,16 @@ ht-degree: 0%
 In deze handleiding wordt uitgelegd hoe u de Adobe Experience Platform Web SDK in Launch instelt. Als u deze functie wilt gebruiken, moet u een whitelist hebben. Als u op de wachtlijst wilt krijgen gelieve uw CSM te bereiken.
 
 - Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als u al een CNAME voor Analytics hebt, zou u dat moeten gebruiken. Testen in ontwikkeling werkt zonder CNAME, maar u hebt er een nodig voordat u naar productie gaat
-- U kunt gebruikmaken van het Adobe Experience Platform Data Platform. Als u geen platform hebt gekocht, zullen wij u van de Stichting van de Diensten van de Gegevens van het Platform van de Ervaring voor gebruik met SDK voorzien.
+- U kunt gebruikmaken van het Adobe Experience Platform Data Platform. Als u Platform niet hebt aangeschaft, zullen wij u van de Stichting van de Diensten van de Gegevens van het Platform van de Ervaring voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
 - Gebruik de nieuwste versie van de service Bezoeker-id
 
 ## Een configuratie-id maken
 
 U kunt een configuratie-id maken met het gereedschap [](../fundamentals/edge-configuration.md) Edge-configuratie tijdens het opstarten. Hierdoor kunt u het Edge-netwerk inschakelen om gegevens naar de verschillende oplossingen te verzenden. Nadere informatie over het vinden van elke optie vindt u in de pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) .
 
->Opmerking: Uw organisatie moet voor de eigenschap worden gewhitelisteerd. Neem contact op met uw CSM om op de lijst te komen voor eventuele whitelisting.
+>[!NOTE]
+>
+>Uw organisatie moet voor de eigenschap worden gewhitelisteerd. Neem contact op met uw CSM om op de lijst te komen voor eventuele whitelisting.
 
 ## Een schema voorbereiden
 
@@ -56,6 +58,7 @@ Zie Gebeurtenissen [bijhouden voor meer informatie over het bijhouden van gebeur
 Zodra u gegevens hebt die stromen kunt u het volgende doen.
 
 - [Uw schema samenstellen](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- [Meer informatie over foutopsporing](../fundamentals/debugging.md)
 - Leer hoe u de ervaring kunt [aanpassen](../fundamentals/rendering-personalization-content.md)
 - Meer informatie over het verzenden van gegevens naar meerdere oplossingen
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
