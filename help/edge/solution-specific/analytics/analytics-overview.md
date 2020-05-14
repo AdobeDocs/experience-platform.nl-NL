@@ -4,16 +4,15 @@ seo-title: Gegevens verzenden naar Adobe Analytics met Adobe Experience Platform
 description: Meer informatie over het verzenden van gegevens naar Adobe Analytics met Experience Platform Web SDK
 seo-description: Meer informatie over het verzenden van gegevens naar Adobe Analytics met Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
 
-# (bèta) Gegevens verzenden naar Adobe Analytics
-
->[!IMPORTANT]
->
->De Adobe Experience Platform Web SDK is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Gegevens verzenden naar Adobe Analytics
 
 De Adobe Experience Platform Web SDK kan gegevens verzenden naar Adobe Analytics. Dit werkt door te vertalen `xdm` in een indeling die Adobe Analytics kan gebruiken.
 
