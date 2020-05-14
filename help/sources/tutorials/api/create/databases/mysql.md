@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Een MySQL-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: aa9e1e5ab345978e6f4727affb741ef69435e703
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '664'
+ht-degree: 0%
 
 ---
 
 
 # Een MySQL-connector maken met de Flow Service API
+
+>[!NOTE]
+>De MySQL-connector bevindt zich in bèta. De functies en documentatie kunnen worden gewijzigd.
 
 De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
