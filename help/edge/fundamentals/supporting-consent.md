@@ -4,16 +4,15 @@ seo-title: Voorkeuren voor de goedkeuring van Adobe Experience Platform Web SDK
 description: Leer hoe u voorkeuren voor toestemming ondersteunt met Experience Platform Web SDK
 seo-description: Leer hoe u voorkeuren voor toestemming ondersteunt met Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '518'
+ht-degree: 0%
 
 ---
 
 
-# (bèta) Ondersteunende toestemming
-
->[!IMPORTANT]
->
->De Adobe Experience Platform Web SDK is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Ondersteunende toestemming
 
 Om de privacy van uw gebruiker te respecteren, zou u om de toestemming van de gebruiker kunnen willen vragen alvorens SDK toe te staan om gebruiker-specifieke gegevens voor bepaalde doeleinden te gebruiken. Momenteel kunnen gebruikers met de SDK alleen voor alle doeleinden kiezen, maar in de toekomst hoopt Adobe meer gedetailleerde controle over specifieke doeleinden te kunnen uitoefenen.
 
