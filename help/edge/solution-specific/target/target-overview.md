@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK en Adobe Target gebruiken
 description: Leer hoe u persoonlijke inhoud kunt renderen met Experience Platform Web SDK met Adobe Target
 seo-description: Leer hoe u persoonlijke inhoud kunt renderen met Experience Platform Web SDK met Adobe Target
 translation-type: tm+mt
-source-git-commit: 9d66e926ff86f23b3dea34f37d3bb16ba97eb0ef
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 0%
@@ -42,7 +42,7 @@ De AEP Web SDK heeft de macht om uw ervaringen automatisch terug te geven die vi
 
 ```javascript
 alloy
-("event", 
+("sendEvent", 
   { 
   "renderDecisions": true, 
   "xdm": {
@@ -65,7 +65,7 @@ De Form-Based Experience Composer is een niet-visuele interface die nuttig is vo
 
 ```javascript
 alloy
-  ("event", { 
+  ("sendEvent", { 
     decisionScopes: [
       "foo", "bar"], 
       "xdm": {
@@ -91,7 +91,7 @@ alloy
 AEP Web SDK verstrekt een functionaliteit waar u acties kunt terugwinnen VEC zonder zich het verlaten van het Web SDK van AEP om de acties VEC voor u terug te geven. Verzend een gebeurtenis met `__view__` als een `decisionScopes`gedefinieerd item.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   decisionScopes: [“__view__”,"foo", "bar"], 
   "xdm": { 
     "web": { 
