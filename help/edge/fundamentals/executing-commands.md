@@ -4,19 +4,15 @@ seo-title: Opdrachten van Adobe Experience Platform Web SDK uitvoeren
 description: Leer hoe u de opdrachten van Experience Platform Web SDK uitvoert
 seo-description: Leer hoe u de opdrachten van Experience Platform Web SDK uitvoert
 translation-type: tm+mt
-source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
 
 
-# (bèta) Opdrachten uitvoeren
-
->[!IMPORTANT]
->
->De Adobe Experience Platform Web SDK is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Opdrachten uitvoeren
 
 Nadat de basiscode op uw webpagina is geïmplementeerd, kunt u beginnen met het uitvoeren van opdrachten met de SDK. U hoeft niet te wachten tot het externe bestand \(`alloy.js`\) van de server is geladen voordat u opdrachten uitvoert. Als het laden van de SDK nog niet is voltooid, worden opdrachten zo snel mogelijk in de wachtrij geplaatst en verwerkt door de SDK.
 
