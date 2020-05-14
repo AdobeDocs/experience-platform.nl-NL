@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Een Azure File Storage-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: aa1c6cb0f5702cfe444cb2046e4460e404f13e57
+source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
 
 
 # Een Azure File Storage-bronconnector maken in de gebruikersinterface
+
+>[!NOTE]
+>Azure Table Storage is in bèta. De functies en documentatie kunnen worden gewijzigd.
 
 De bronschakelaars in het Platform van de Ervaring van Adobe verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het verifiëren van een Azure File Storage-bronconnector met behulp van de Platform-gebruikersinterface.
 
