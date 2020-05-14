@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK-gebeurtenisgegevens samenvoegen
 description: Meer informatie over het samenvoegen van Experience Platform Web SDK-gebeurtenisgegevens
 seo-description: Meer informatie over het samenvoegen van Experience Platform Web SDK-gebeurtenisgegevens
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Soms zijn niet alle gegevens beschikbaar wanneer een gebeurtenis plaatsvindt. U 
 In dergelijke gevallen kunt u gegevens samenvoegen met eerdere gebeurtenissen door `eventMergeId` als volgt een optie aan `event` opdrachten door te geven:
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
@@ -39,7 +39,7 @@ alloy("event", {
 
 // Time passes and more data becomes available
 
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
@@ -72,7 +72,7 @@ Zoals met alle bevelen, is een belofte teruggekeerd omdat u het bevel zou kunnen
 var eventMergeIdPromise = alloy("createEventMergeId");
 
 eventMergeIdPromise.then(function(results) {
-  alloy("event", {
+  alloy("sendEvent", {
     "xdm": {
       "commerce": {
         "order": {
@@ -90,7 +90,7 @@ eventMergeIdPromise.then(function(results) {
 // Time passes and more data becomes available
 
 eventMergeIdPromise.then(function(results) {
-  alloy("event", {
+  alloy("sendEvent", {
     "xdm": {
       "commerce": {
         "order": {
@@ -126,7 +126,7 @@ eventMergeIdPromise.then(function(results) {
 Binnen het gebeurtenisbevel, `mergeId` wordt eigenlijk toegevoegd aan de `xdm` lading.  Indien gewenst, `mergeId` kan het als deel van de xdm optie in plaats daarvan, als dit worden verzonden:
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
