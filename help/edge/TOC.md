@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Edge Network
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
 workflow-type: tm+mt
-source-wordcount: '85'
+source-wordcount: '89'
 ht-degree: 4%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 4%
 * [Overzicht van Edge Network](home.md)
 * Getting started {#get-started}
    * [Snel starten met starten](getting-started/quick-start-with-launch.md)
+   * [Snel starten zonder starten](getting-started/quick-start-without-launch.md)
 * Fundamentals {#fundamentals}
    * [De SDK installeren](fundamentals/installing-the-sdk.md)
    * [Opdrachten uitvoeren](fundamentals/executing-commands.md)
