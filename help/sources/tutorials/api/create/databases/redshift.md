@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Een Amazon Redshift-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: d68b9d3082a8a9466f9d6329906be1c6938a4012
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '714'
+ht-degree: 0%
 
 ---
 
 
 # Een Amazon Redshift-connector maken met de Flow Service API
+
+>[!NOTE]
+>De Amazon Redshift-connector bevindt zich in bèta. De functies en documentatie kunnen worden gewijzigd.
 
 De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
