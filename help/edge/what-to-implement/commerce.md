@@ -4,16 +4,15 @@ seo-title: Producten ondersteunen met Adobe Experience Platform Web SDK
 description: Leer hoe te om gegevens toe te voegen als u producten of een het winkelwagentje met het Web SDK van het Platform van de Ervaring hebt
 seo-description: Leer hoe te om gegevens toe te voegen als u producten of een het winkelwagentje met het Web SDK van het Platform van de Ervaring hebt
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '1314'
+ht-degree: 1%
 
 ---
 
 
-# (bèta) Producten
-
->[!IMPORTANT]
->
->De Adobe Experience Platform Web SDK is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Producten
 
 Als u producten op uw site hebt, is dit een standaardset van dingen die u wilt verzenden om de meeste mogelijkheden van Adobe in te schakelen. Hoewel dit een suggestie is, biedt het vanaf het begin een zeer sterke set gegevens.
 
@@ -58,7 +57,7 @@ alloy("event", {
 
 Het handelsobject heeft ook een speciaal veld voor het verzamelen van opdrachtdetails `order`.
 
-| **Volgorde** | **Option** | **Aanbeveling** | **Beschrijving** |
+| **Volgorde** | **Optie** | **Aanbeveling** | **Beschrijving** |
 |---|---|---|---|
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) |  |  | De [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) -valuta voor het totaal van de orders. |
 | [betalingen[betalingspunten]](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpayments) |  |  | De lijst met betalingen op een bestelling. Een [betalingsobject](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#payment-item-schema) bevat het volgende. |
