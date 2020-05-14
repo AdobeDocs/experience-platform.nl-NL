@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0eca2f6e50024ec43c025dd75c34ca876d71c3f2
+source-git-commit: 53d72e6460c1ab3bc4459d8e108630f652b62dd6
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '961'
 ht-degree: 2%
 
 ---
@@ -87,7 +87,7 @@ Met de Experience Platform Web SDK en Experience Platform kunnen gebruikers gege
 | Adobe Analytics | Gegevens naar Analytics-rapportreeksen verzenden via de randconfiguratie. XDM wordt afgevlakt in contextgegevens, steunt multi-suite het etiketteren |
 | Adobe-doel | Ondersteuning voor Adobe Target. Inclusief VEC, Form based composer, A/B, XT, Automated Personalization, MVT |
 | Ondersteuning voor Adobe Audience Manager | Ondersteuning voor synchronisatie-id&#39;s van Audience Manager, URL-doelen en Cookie-doelen |
-| `synceIdnetity` | Naam gewijzigd `setCustomersIds` om het duidelijker `syncIdentity` te maken |
+| Identiteitssynchronisatie | Naam gewijzigd `setCustomersIds` om het duidelijker `syncIdentity` te maken |
 | XDM Object Builder | In de opstartextensie kunt u nu XDM-objecten bouwen als Data Elements |
 
 Raadpleeg de [documentatie](../../edge/home.md)voor meer informatie over Platform Web SDK en Edge Network.
