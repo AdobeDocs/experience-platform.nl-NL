@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruikershandleiding voor JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
 workflow-type: tm+mt
 source-wordcount: '3356'
 ht-degree: 3%
@@ -54,7 +54,7 @@ In de volgende secties wordt informatie gegeven over de belangrijkste kenmerken 
 * [Codecellen](#code-cells)
 * [Kernels](#kernels)
 * [Kernel-sessies](#kernel-sessions)
-* [PySpark/Spark-uitvoeringsbron](#pyspark-spark-execution-resource)
+* [PySpark/Spark-uitvoeringsbron](#execution-resource)
 * [Launcher](#launcher)
 
 ### Access JupyterLab {#access-jupyterlab}
@@ -143,7 +143,7 @@ Als de kernel gedurende langere tijd wordt afgesloten of inactief is, dan **Geen
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
-### PySpark/Spark-uitvoeringsbron {#pyspark-spark-execution-resource}
+### PySpark/Spark-uitvoeringsbron {#execution-resource}
 
 >[!IMPORTANT]
 >Met de overgang van Vonk 2.3 aan Vonk 2.4, zowel zijn de pitten van de Vonk als van PySpark verouderd.
