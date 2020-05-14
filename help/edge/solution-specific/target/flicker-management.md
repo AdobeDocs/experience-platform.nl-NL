@@ -1,11 +1,17 @@
 ---
-source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
-workflow-type: tm+mt
+title: Flicker beheren voor persoonlijke ervaringen
+seo-title: Adobe Experience Platform Web SDK voor het beheren van flikkering
+description: Leer hoe u flikkering kunt beheren op ervaringen van gebruikers
+seo-description: Leer hoe u flikkering beheert met de eigenschappen van Experience Platform Web SDK
 translation-type: tm+mt
-source-wordcount: '459'
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+workflow-type: tm+mt
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
+
+
 # Flikkering beheren
 
 Wanneer de SDK probeert om personalisatie-inhoud te renderen, moet deze ervoor zorgen dat er geen flikkering optreedt. De flikkering, ook FOOC genoemd (Flits van Originele Inhoud), is wanneer een originele inhoud kort wordt getoond alvorens het alternatief tijdens het testen/verpersoonlijken verschijnt. De SDK probeert CSS-stijlen toe te passen op elementen van de pagina om ervoor te zorgen dat deze elementen worden verborgen totdat de personalisatie-inhoud is gerenderd.
