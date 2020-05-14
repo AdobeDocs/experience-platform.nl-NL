@@ -4,19 +4,15 @@ seo-title: De Adobe Experience Platform Web SDK configureren
 description: Leer hoe te om het Platform van de Ervaring te vormen SDK van het Web
 seo-description: Leer hoe te om het Platform van de Ervaring te vormen SDK van het Web
 translation-type: tm+mt
-source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
 
 
-# (Beta) Het vormen SDK
-
->[!IMPORTANT]
->
->De Adobe Experience Platform Web SDK is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# De SDK configureren
 
 De configuratie voor SDK wordt gedaan met het `configure` bevel.
 
