@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Een FTP- of SFTP-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
 
 
 # Een FTP- of SFTP-bronconnector maken in de gebruikersinterface
+
+>[!NOTE]
+>De FTP- en SFTP-connectors bevinden zich in bèta. De functies en documentatie kunnen worden gewijzigd.
 
 De bronschakelaars in het Platform van de Ervaring van Adobe verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een FTP- of SFTP-bronconnector met behulp van de gebruikersinterface van het platform.
 
