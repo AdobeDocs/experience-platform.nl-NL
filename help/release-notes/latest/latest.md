@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 53d72e6460c1ab3bc4459d8e108630f652b62dd6
+source-git-commit: e6731b54840eaf9dd2cdaeff5205e14277e78a3b
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '1026'
 ht-degree: 2%
 
 ---
@@ -84,7 +84,7 @@ Met de Experience Platform Web SDK en Experience Platform kunnen gebruikers gege
 | Adobe Experience Platform Web SDK Mixen | Een combinatie voor gebruik met het Web SDK van het Platform van de Ervaring die alle gesteunde gebieden omvat. |
 | Besturingselementen voor cursusinstemming | Biedt bedrijven controle over opt-in en opt-out van het Web SDK van het Platform van de Ervaring |
 | Ondersteuning voor foutopsporing aan de clientzijde in de nieuwe Experience Cloud Debugger Extension | Zie verzoeken van het Web SDK van het Platform van de Ervaring evenals randsporen om te zien hoe de gegevens door het systeem stromen. |
-| Adobe Analytics | Gegevens naar Analytics-rapportreeksen verzenden via de randconfiguratie. XDM wordt afgevlakt in contextgegevens, steunt multi-suite het etiketteren |
+| Adobe Analytics | Gegevens verzenden naar Analytics-rapportreeksen via de randconfiguratie. XDM wordt afgevlakt in contextgegevens, steunt multi-suite het etiketteren |
 | Adobe-doel | Ondersteuning voor Adobe Target. Inclusief VEC, Form based composer, A/B, XT, Automated Personalization, MVT |
 | Ondersteuning voor Adobe Audience Manager | Ondersteuning voor synchronisatie-id&#39;s van Audience Manager, URL-doelen en Cookie-doelen |
 | Identiteitssynchronisatie | Naam gewijzigd `setCustomersIds` om het duidelijker `syncIdentity` te maken |
@@ -104,6 +104,7 @@ Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u 
 | ------- | ----------- |
 | Aanvullende API- en UI-ondersteuning voor cloudopslagsystemen | Nieuwe bronconnectors voor Azure File Storage. |
 | Aanvullende API- en UI-ondersteuning voor databases | Nieuwe bronconnectors voor Azure Data Explorer, IBM DB2 en Oracle DB. |
+| Adobe Audience Manager to Experience Platform Data sharing | Het inrichtingsproces voor de schakelaar van de Manager van de Publiek is bijgewerkt. De datasets van de Manager van het publiek voor het Profiel van de Klant in real time worden nu onbruikbaar gemaakt door gebrek. U kunt handmatig kiezen welke gegevenssets u wilt promoten naar Profiel. De nieuwe standaardinstellingen zijn niet retroactief en hebben alleen invloed op de provisioning voor nieuwe Audience Manager-connectors. Zie meer informatie in de de gebruikersgids [van](../../catalog/datasets/user-guide.md)Datasets. |
 
 **Bekende problemen**
 
