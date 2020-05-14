@@ -4,16 +4,15 @@ seo-title: Variabelen worden automatisch toegewezen in Analyses met Adobe Experi
 description: Leer welke Variabelen automatisch in Analytics met het Web SDK van het Platform van de Ervaring worden toegewezen
 seo-description: Leer welke Variabelen automatisch in Analytics met het Web SDK van het Platform van de Ervaring worden toegewezen
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 0%
 
 ---
 
 
-# (bèta) Variabelen worden automatisch toegewezen in Analytics
-
->[!IMPORTANT]
->
->De Adobe Experience Platform Web SDK is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Variabelen worden automatisch toegewezen in Analytics
 
 Hieronder volgt een lijst met variabelen die het Adobe Experience Platform Edge Network automatisch toewijst aan Analytics.
 
