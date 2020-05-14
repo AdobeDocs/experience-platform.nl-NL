@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een IBM DB2-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: e77dadb4257c16e19113f6224790fbb3b8207a52
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,9 @@ ht-degree: 0%
 
 
 # Een IBM DB2-bronconnector maken in de gebruikersinterface
+
+> [!NOTE]
+> De IBM DB2-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
 
 De bronschakelaars in het Platform van de Ervaring van Adobe verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een IBM DB2-bronconnector (hierna &quot;DB2&quot; genoemd) met behulp van de gebruikersinterface van het platform.
 
