@@ -4,19 +4,15 @@ seo-title: Adobe Experience Platform Web SDK Persoonlijke inhoud renderen
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Platform van de Ervaring terug te geven
 seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Platform van de Ervaring terug te geven
 translation-type: tm+mt
-source-git-commit: 938e0e56111c96f6b0b378c9e14fb92af70c5e10
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
 
 
-# (Bèta) Overzicht van de Opties van de Personalisatie
-
->[!IMPORTANT]
->
->De Adobe Experience Platform Web SDK is momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+# Overzicht van opties voor personalisatie
 
 De Adobe Experience Platform Web SDK ondersteunt het opvragen van de personalisatieoplossingen bij Adobe, waaronder Adobe Target. Er zijn twee wijzen voor verpersoonlijking: ophalen, inhoud die automatisch kan worden gerenderd en inhoud die de ontwikkelaar moet renderen. De SDK biedt ook mogelijkheden om flikkering te [beheren](../../edge/solution-specific/target/flicker-management.md).
 
