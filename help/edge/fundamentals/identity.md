@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK Experience Cloud ID ophalen
 description: Leer hoe u Adobe Experience Cloud ID kunt ophalen.
 seo-description: Leer hoe u Adobe Experience Cloud ID kunt ophalen.
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: a9dd5fd93397e57d0876bec334d54c517fa86939
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -77,6 +77,14 @@ De sleutel voor het object is het symbool [Identiteitsnaamruimte](../../identity
 | String | Ja | none |
 
 Dit is de id die u voor de opgegeven naamruimte wilt synchroniseren.
+
+#### `authenticationState`
+
+| **Type** | **Vereist** | **Standaardwaarde** | **Mogelijke waarden** |
+| -------- | ------------ | ----------------- | ------------------------------------ |
+| String | Ja | dubbelzinnig | ambigu, geverifieerd en gelogd |
+
+De verificatiestatus van de id.
 
 #### `primary`
 
