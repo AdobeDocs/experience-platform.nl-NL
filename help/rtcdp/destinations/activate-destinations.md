@@ -4,9 +4,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens die u in het Platform van de Gegevens van de Klant van Adobe in real time hebt door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens die u in het Platform van de Gegevens van de Klant van Adobe in real time hebt door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: 7dafdf0dd1ad3af2defab3bf6b784fd37e777062
+source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '775'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,12 @@ Om gegevens aan bestemmingen te activeren, moet u een bestemming [met succes heb
 3. Selecteer **[!UICONTROL Activeren]**;
 4. In het **[!UICONTROL Activate bestemmingswerkschema]** , op de **[!UICONTROL Uitgezochte pagina van Segmenten]** , selecteer welke segmenten om naar de bestemming te verzenden.
    ![segmenten-naar-bestemming](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Voorwaardelijk*. Deze stap is alleen van toepassing op segmenten die zijn toegewezen aan cloudopslagdoelen en e-mailmarketingdoelen. <br> Selecteer op de pagina **[!UICONTROL Doelkenmerken]** de optie Nieuw veld **** toevoegen en selecteer de kenmerken die u naar het doel wilt verzenden.
+5. *Voorwaardelijk*. Deze stap is afhankelijk van het type bestemming waar u de segmenten activeert. <br> Voor *e-mail marketing bestemmingen* en *wolkenopslagbestemmingen*, op de **[!UICONTROL Uitgezochte pagina van Attributen]** , selecteer **[!UICONTROL voeg nieuw gebied]** toe en selecteer de attributen die u naar de bestemming wilt verzenden.
 Wij adviseren één van de attributen om een [uniek herkenningsteken](/help/rtcdp/destinations/email-marketing-destinations.md#identity) van uw unieschema te zijn. Zie Identiteit in het artikel [E-mailmarketingdoelen](/help/rtcdp/destinations/email-marketing-destinations.md#identity) voor meer informatie over verplichte kenmerken.
-   ![bestemmingskenmerken](/help/rtcdp/destinations/assets/destination-attributes.png)
+   ![doel-attributen](/help/rtcdp/destinations/assets/select-attributes-step.png)voor *sociale netwerkbestemmingen*, in de het in kaart brengen **[!UICONTROL van de]** Identiteit stap, uitgezochte bronattributen om aan doelidentiteiten in kaart te brengen.
+   ![identiteitstoewijzing vóór het invullen van velden](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)In het onderstaande voorbeeld is het persoonlijke e-mailadres in het identiteitsschema hashing bij opname in het Experience Platform om te voldoen aan de Facebook-vereisten voor [e-](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)mailhashing. Druk op **[!UICONTROL Volgende]** nadat u de toewijzing hebt geselecteerd.
+   ![identiteitstoewijzing na invullen van velden](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+
 6. Op de **[!UICONTROL het programmapagina]** van het Segment, kunt u de begindatum zien voor het verzenden van gegevens naar de bestemming, evenals de frequentie om gegevens naar de bestemming te verzenden.
 
    >[!IMPORTANT]
@@ -75,6 +78,10 @@ Controleer de respectieve advertentiebestemming u uw gegevens aan activeert. Als
 
 Voor Facebook betekent een geslaagde activering dat er via de programmacode een aangepast publiek voor Facebook wordt gemaakt in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). Het lidmaatschap van een segment in het publiek zou worden toegevoegd en verwijderd aangezien de gebruikers voor de geactiveerde segmenten worden gekwalificeerd of worden uitgesloten.
 
+>[!TIP]
+>
+>De integratie tussen Adobe Real-time CDP en Facebook ondersteunt historische publieksbackfills. Alle historische segmentkwalificaties worden naar Facebook verzonden wanneer u de segmenten naar de bestemming activeert.
+
 ## Activering uitschakelen {#disable-activation}
 
 Volg onderstaande stappen om een bestaande activeringsstroom uit te schakelen:
@@ -83,3 +90,4 @@ Volg onderstaande stappen om een bestaande activeringsstroom uit te schakelen:
 2. Klik op het besturingselement **[!UICONTROL Ingeschakeld]** in de rechterrail om de activeringsstatus te wijzigen.
 3. Selecteer in het statusvenster **Gegevens bijwerken de optie** Bevestigen **** om de activeringsstroom uit te schakelen.
 
+In AWS Kinesis, produceer een toegangstoets - geheim toegangszeer belangrijke paar om Adobe in real time CDP toegang tot uw rekening van AWS Kinesis te verlenen. Meer informatie vindt u in de [documentatie](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)van AWS Kinesis.
