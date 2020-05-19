@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e6731b54840eaf9dd2cdaeff5205e14277e78a3b
+source-git-commit: d41952e5905d4ebc579a29ad3282a8f732b7c331
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1075'
 ht-degree: 2%
 
 ---
@@ -55,7 +55,15 @@ Raadpleeg voor meer informatie over het migreren van uw laptops en recepten naar
 
 In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md)zijn doelen vooraf gebouwde integratie met doelplatforms die gegevens naadloos aan die partners activeren.
 
-**Nieuwe bestemmingen**
+**Facebook**
+
+Adobe Real-time CDP ondersteunt nu gegevensactivering op Facebook, zodat u profielen voor uw Facebook-campagnes kunt activeren voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
+
+Raadpleeg de doelpagina van [Facebook voor meer informatie over de nieuwe functionaliteit](/help/rtcdp/destinations/facebook-destination.md) .
+
+<br> 
+
+**Amazon Kinesis en Azure Event Hubs streaming cloud storage bestemmingen**
 
 Adobe Real-time CDP ondersteunt nu gegevensactivering voor streaming cloudopslagdoelen, zodat u publieksgegevens en -gebeurtenissen in JSON-indeling kunt exporteren naar deze doelen. U kunt bedrijfslogica bovenop deze gebeurtenissen in uw bestemmingen dan beschrijven. Zie hieronder voor meer informatie:
 
@@ -84,7 +92,7 @@ Met de Experience Platform Web SDK en Experience Platform kunnen gebruikers gege
 | Adobe Experience Platform Web SDK Mixen | Een combinatie voor gebruik met het Web SDK van het Platform van de Ervaring die alle gesteunde gebieden omvat. |
 | Besturingselementen voor cursusinstemming | Biedt bedrijven controle over opt-in en opt-out van het Web SDK van het Platform van de Ervaring |
 | Ondersteuning voor foutopsporing aan de clientzijde in de nieuwe Experience Cloud Debugger Extension | Zie verzoeken van het Web SDK van het Platform van de Ervaring evenals randsporen om te zien hoe de gegevens door het systeem stromen. |
-| Adobe Analytics | Gegevens verzenden naar Analytics-rapportreeksen via de randconfiguratie. XDM wordt afgevlakt in contextgegevens, steunt multi-suite het etiketteren |
+| Adobe Analytics | Gegevens naar Analytics-rapportreeksen verzenden via de randconfiguratie. XDM wordt afgevlakt in contextgegevens, steunt multi-suite het etiketteren |
 | Adobe-doel | Ondersteuning voor Adobe Target. Inclusief VEC, Form based composer, A/B, XT, Automated Personalization, MVT |
 | Ondersteuning voor Adobe Audience Manager | Ondersteuning voor synchronisatie-id&#39;s van Audience Manager, URL-doelen en Cookie-doelen |
 | Identiteitssynchronisatie | Naam gewijzigd `setCustomersIds` om het duidelijker `syncIdentity` te maken |
