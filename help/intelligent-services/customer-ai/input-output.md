@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Invoer en uitvoer van AI van de klant
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
+source-git-commit: 5cab341138e809bae79623bb65e499ac6b955f27
+workflow-type: tm+mt
+source-wordcount: '828'
+ht-degree: 0%
 
 ---
 
@@ -16,6 +19,31 @@ In het volgende document worden de verschillende invoer- en uitvoerbestanden bes
 ## Invoergegevens van AI van de klant
 
 AI van de Klant gebruikt de gegevens van de Gebeurtenis van de Ervaring van de Consumenten om volheidsscores te berekenen. Voor meer informatie over de gebeurtenis Consumer Experience raadpleegt u de [Voorbereidende gegevens voor gebruik in de documentatie](../data-preparation.md)Intelligent Services.
+
+### Historische gegevens
+
+Klanten-AI hebben historische gegevens nodig voor modeltraining, maar de hoeveelheid vereiste gegevens is gebaseerd op twee sleutelelementen: resultaatvenster en in aanmerking komende populatie.
+
+Standaard zoekt de AI van de Klant naar een gebruiker die activiteit heeft gehad in de laatste 120 dagen als er tijdens de toepassingsconfiguratie geen definitie van de in aanmerking komende populatie is opgegeven. Naast de vereiste minimale hoeveelheid gegevens van de Consumer Experience Event, heeft de AI van de Klant ook een minimale hoeveelheid succesgebeurtenissen nodig op basis van een voorspelde doeldefinitie. Momenteel heeft de AI van de Klant minimaal 500 succesgebeurtenissen nodig.
+
+In de volgende voorbeelden wordt een eenvoudige formule gebruikt om u te helpen de minimale vereiste hoeveelheid gegevens te bepalen. Als u meer dan de minimumvereiste hebt, zal uw model waarschijnlijk nauwkeurigere resultaten verstrekken. Als u minder dan het vereiste minimumbedrag hebt, zal het model ontbreken aangezien er geen voldoende hoeveelheid gegevens voor modelopleiding is.
+
+**Formule**:
+
+Minimumlengte van de vereiste gegevens = subsidiabele populatie + resultaatvenster
+
+>[!NOTE]
+> 30 is het minimumaantal dagen dat vereist is voor de in aanmerking komende bevolking. Als dit niet wordt verstrekt is het gebrek 120 dagen.
+
+Voorbeelden :
+
+- U wilt voorspellen of een klant waarschijnlijk een horloge in de komende 30 dagen zal kopen. U wilt ook gebruikers scoren die de afgelopen 60 dagen enige internetactiviteit hebben gehad. In dat geval is de minimumlengte van de vereiste gegevens 60 dagen + 30 dagen. De in aanmerking komende populatie is 60 dagen en het resultaatvenster is 30 dagen in totaal 90 dagen.
+
+- U wilt voorspellen of de gebruiker waarschijnlijk de komende 7 dagen een horloge zal kopen. In dat geval is de minimumlengte van de vereiste gegevens 120 dagen + 7 dagen. De in aanmerking komende populatie staat standaard op 120 dagen en het resultaatvenster is 7 dagen in totaal 127 dagen.
+
+- U wilt voorspellen of de klant waarschijnlijk de komende 7 dagen een horloge zal kopen. U wilt ook gebruikers scoren die de afgelopen 7 dagen enige internetactiviteit hebben gehad. In dat geval is de minimumlengte van de vereiste gegevens 30 dagen + 7 dagen. De in aanmerking komende populatie duurt minimaal 30 dagen en de resultaatperiode bedraagt 7 dagen in totaal 37 dagen.
+
+Naast de minimaal vereiste gegevens, werkt de AI van de Klant ook het best met recente gegevens. In dit geval doet de AI van de Klant een prognose voor de toekomst op basis van recente gedragsgegevens van een gebruiker. Met andere woorden, recentere gegevens zullen waarschijnlijk een nauwkeurigere voorspelling opleveren.
 
 ## AI-uitvoergegevens van klant
 
