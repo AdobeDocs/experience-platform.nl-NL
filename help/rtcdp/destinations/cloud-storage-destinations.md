@@ -4,9 +4,9 @@ seo-title: Opslagdoelen voor cloud
 description: Adobe Real-time CDP kan uw segmenten als gegevensbestanden leveren aan uw Amazon S3-, AWS Kinesis-, Azure Event Hubs- of SFTP-cloudopslaglocaties.
 seo-description: Adobe Real-time CDP kan uw segmenten als gegevensbestanden leveren aan uw Amazon S3-, AWS Kinesis-, Azure Event Hubs- of SFTP-cloudopslaglocaties.
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
@@ -32,4 +32,4 @@ Voor informatie over hoe te om met de bestemmingen van de wolkenopslag te verbin
 ## Beschikbare streamingdoelen voor cloudopslag
 
 * [Amazon Kinesis-bestemming](/help/rtcdp/destinations/amazon-kinesis-destination.md)
-* [Azure EventHubs-bestemming](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+* [Azure Event Hubs-bestemming](/help/rtcdp/destinations/azure-event-hubs-destination.md)
