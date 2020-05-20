@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Abonneren op privacygebeurtenissen
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: e4cd042722e13dafc32b059d75fca2dab828df60
+source-git-commit: ab29c7771122267634dea24582b07f605abd7ed8
+workflow-type: tm+mt
+source-wordcount: '861'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ In dit document worden stappen beschreven voor het instellen van een integratie 
 
 ## Aan de slag
 
-Deze zelfstudie maakt gebruik van **ngrok**, een softwareproduct dat lokale servers via veilige tunnels toegankelijk maakt voor het publiek internet. Installeer voordat u deze zelfstudie start een [notitie](https://ngrok.com/download) om de zelfstudie te volgen en een webhaak voor uw lokale computer te maken. Deze handleiding vereist ook dat u een GIT-opslagplaats downloadt die een eenvoudige server bevat die in [Node.js](https://nodejs.org/)is geschreven.
+Deze zelfstudie maakt gebruik van **ngrok**, een softwareproduct dat lokale servers via veilige tunnels toegankelijk maakt voor het publiek internet. Installeer voordat u deze zelfstudie start een [notitie](https://ngrok.com/download) om de zelfstudie te volgen en een webhaak voor uw lokale computer te maken. Voor deze handleiding moet u ook een GIT-opslagplaats downloaden die een eenvoudige [Node.js](https://nodejs.org/) -server bevat.
 
 ## Een lokale server maken
 
@@ -57,71 +60,73 @@ Met deze opdrachten installeert u alle afhankelijkheden en initialiseert u de se
 
 ## Webhaak maken met notitie
 
-Typ de volgende opdracht in dezelfde map en in een nieuw opdrachtregelvenster:
+Open een nieuw opdrachtregelvenster en navigeer naar de map waarin u vroeger op de opdrachtregel hebt geïnstalleerd. Typ hier de volgende opdracht:
 
 ```shell
-ngrok http -bind-tls=true 3000
+./ngrok http -bind-tls=true 3000
 ```
 
 Een geslaagde uitvoer ziet er ongeveer als volgt uit:
 
 ![inktuitvoer](images/privacy-events/ngrok-output.png)
 
-Neem nota van `Forwarding` URL (`https://e142b577.ngrok.io`), aangezien dit zal worden gebruikt om uw webhaak de volgende stap te identificeren.
+Neem nota van `Forwarding` URL (`https://212d6cd2.ngrok.io`), aangezien dit zal worden gebruikt om uw webhaak de volgende stap te identificeren.
 
-## Een nieuwe integratie maken met Adobe I/O-console
+## Nieuw project maken in Adobe Developer Console
 
-Meld u aan bij de [Adobe I/O-console](https://console.adobe.io) en klik op het tabblad **Integraties** . Het venster _Integraties_ wordt weergegeven. Klik hier op **Nieuwe integratie**.
+Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe-id. Voer vervolgens de stappen uit die worden beschreven in de zelfstudie over het [maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.
 
-![Integraties weergeven in Adobe I/O-console](images/privacy-events/integrations.png)
+## Privacy-gebeurtenissen toevoegen aan het project
 
-Het *venster Een nieuwe integratie* maken wordt weergegeven. Selecteer Gebeurtenissen **in bijna real-** time ontvangen en klik op **Doorgaan**.
+Nadat u een nieuw project in de console hebt gemaakt, klikt u op **[!UICONTROL Gebeurtenis]** toevoegen in het scherm _Projectoverzicht_ .
 
-![Nieuwe integratie maken](images/privacy-events/new-integration.png)
+![](./images/privacy-events/add-event-button.png)
 
-In het volgende scherm vindt u opties waarmee u integratie kunt maken met verschillende gebeurtenissen, producten en services die beschikbaar zijn voor uw organisatie. Deze opties zijn gebaseerd op uw abonnementen, rechten en machtigingen. Voor deze integratie selecteert u **Privacy Service Events** en klikt u op **Doorgaan**.
+Het dialoogvenster Gebeurtenissen __ toevoegen wordt weergegeven. Selecteer **[!UICONTROL Experience Cloud]** om de lijst met beschikbare gebeurtenistypen op te geven en selecteer vervolgens **[!UICONTROL Privacy Service Events]** voordat u op **[!UICONTROL Volgende]** klikt.
 
-![Privacy-gebeurtenissen selecteren](images/privacy-events/privacy-events.png)
+![](./images/privacy-events/add-privacy-events.png)
 
-Het formulier *Integratiedetails* wordt weergegeven. Hierin moet u een naam en beschrijving voor de integratie opgeven, plus een certificaat met een openbare sleutel.
+Het dialoogvenster _Gebeurtenisregistratie_ configureren wordt weergegeven. Selecteer welke gebeurtenissen u wilt ontvangen door hun overeenkomstige checkboxes te selecteren. Gebeurtenissen die u selecteert, verschijnen onder _[!UICONTROL Geabonneerde Gebeurtenissen]_in de linkerkolom. Klik op**[!UICONTROL  Volgende ]**als u klaar bent.
 
-![Integratiegegevens](images/privacy-events/integration-details.png)
+![](./images/privacy-events/choose-subscriptions.png)
 
-Als u geen openbaar certificaat hebt, kunt u één produceren door het volgende eindbevel te gebruiken:
+In het volgende scherm wordt u gevraagd een openbare sleutel voor de gebeurtenisregistratie op te geven. U wordt gegeven de optie om een zeer belangrijk paar automatisch te produceren, of uw eigen openbare sleutel te uploaden die in de terminal wordt geproduceerd.
 
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
-```
+In deze zelfstudie wordt de eerste optie gevolgd. Klik op het optievak voor het **[!UICONTROL genereren van een sleutelpaar]** en klik vervolgens op de knop Hoofdpaar **** genereren in de rechterbenedenhoek.
 
-Nadat u een certificaat hebt gegenereerd, sleept u het bestand naar het vak **Certificaten** met openbare sleutels of klikt u op Bestand **** selecteren om door de bestandsmap te bladeren en het certificaat rechtstreeks te selecteren.
+![](./images/privacy-events/generate-key-value.png)
 
-Nadat u het certificaat hebt toegevoegd, wordt de optie *Gebeurtenisregistratie* weergegeven. Klik op **Gebeurtenisregistratie** toevoegen.
+Wanneer het sleutelpaar produceert, wordt het automatisch gedownload door browser. U moet dit bestand zelf opslaan omdat het niet wordt voortgezet in de Developer Console.
 
-![Gebeurtenisregistratie toevoegen](images/privacy-events/add-event-registration.png)
+In het volgende scherm kunt u de details van het nieuwe sleutelpaar bekijken. Klik op **[!UICONTROL Volgende]** om door te gaan.
 
-Het dialoogvenster wordt uitgebreid om extra besturingselementen weer te geven. Hier kunt u de gewenste gebeurtenistypen selecteren en uw webhaak registreren. Voer een naam in voor de gebeurtenisregistratie, de URL van de webhaak (het `Forwarding` adres dat wordt geretourneerd toen u de webhaak [voor het eerst](#create-a-webhook-using-ngrok)maakte) en een korte beschrijving. Selecteer ten slotte de gebeurtenistypen waarop u zich wilt abonneren en klik op **Opslaan**.
+![](./images/privacy-events/keypair-generated.png)
 
-![Registratieformulier voor gebeurtenissen](images/privacy-events/event-registration-form.png)
+Geef in het volgende scherm een naam en een beschrijving op voor de registratie van de gebeurtenis. De beste manier is om een unieke, gemakkelijk identificeerbare naam te maken om deze gebeurtenisregistratie te onderscheiden van andere registraties voor hetzelfde project.
 
-Nadat het registratieformulier voor gebeurtenissen is voltooid, klikt u op Integratie **** maken en de I/O-integratie is voltooid.
+![](./images/privacy-events/event-details.png)
 
-![Integratie maken](images/privacy-events/create-integration.png)
+Verderop op het zelfde scherm, krijgt u twee opties om te vormen hoe te om gebeurtenissen te ontvangen. Selecteer **[!UICONTROL Webhaak]** en geef de `Forwarding` URL op voor de bovenstaande webhaak die u eerder onder _[!UICONTROL Webhaak URL]_hebt gemaakt. Selecteer vervolgens de gewenste leveringsstijl (enkele of batch) voordat u op**[!UICONTROL  geconfigureerde gebeurtenissen ]**opslaan klikt om de gebeurtenisregistratie te voltooien.
+
+![](./images/privacy-events/webhook-details.png)
+
+De detailpagina voor uw project verschijnt opnieuw, met de Gebeurtenissen van de Privacy die onder _[!UICONTROL Gebeurtenissen]_in de linkernavigatie verschijnen.
 
 ## Gebeurtenisgegevens weergeven
 
-Nadat u de I/O-integratie en privacytaken hebt gemaakt, kunt u alle ontvangen meldingen voor die integratie weergeven. Navigeer op het tabblad **Integraties** in de I/O-console naar uw integratie en klik op **Weergave**.
+Nadat u privacygebeurtenissen hebt geregistreerd voor uw project en privacytaken zijn verwerkt, kunt u alle ontvangen meldingen voor die registratie weergeven. Selecteer op het tabblad **[!UICONTROL Projecten]** in Developer Console uw project in de lijst om de pagina met het overzicht _van het_ product te openen. Van hier, selecteer de Gebeurtenissen **[!UICONTROL van de]** Privacy van de linkernavigatie.
 
-![Integratie weergeven](images/privacy-events/view-integration.png)
+![](./images/privacy-events/events-left-nav.png)
 
-De detailpagina voor de integratie wordt weergegeven. Klik op **Gebeurtenissen** om de registraties van gebeurtenissen voor de integratie weer te geven. Zoek de registratie voor privacygebeurtenissen en klik op **Weergeven**.
+Het tabblad _Registratiedetails_ wordt weergegeven, zodat u meer informatie over de registratie kunt bekijken, de configuratie kunt bewerken of de werkelijke gebeurtenissen kunt bekijken die zijn ontvangen sinds u de webhaak hebt geactiveerd.
 
-![Gebeurtenisregistratie weergeven](images/privacy-events/view-registration.png)
+![](./images/privacy-events/registration-details.png)
 
-Het venster *Gebeurtenisdetails* wordt weergegeven, zodat u meer informatie over de registratie kunt bekijken, de configuratie kunt bewerken of de feitelijke gebeurtenissen kunt bekijken die zijn ontvangen sinds u de webhaak hebt geactiveerd. U kunt gebeurtenisdetails bekijken en aan de **Debug het Vinden optie** navigeren.
+Klik op het tabblad **[!UICONTROL Foutopsporing overtrekken]** om een lijst met ontvangen gebeurtenissen weer te geven. Klik op een vermelde gebeurtenis om de details ervan weer te geven.
 
-![Foutopsporing overtrekken](images/privacy-events/debug-tracing.png)
+![](images/privacy-events/debug-tracing.png)
 
-In de sectie **Payload** vindt u details over de geselecteerde gebeurtenis, inclusief het gebeurtenistype (`"com.adobe.platform.gdpr.productcomplete"`), zoals in het bovenstaande voorbeeld wordt aangegeven.
+In de sectie _[!UICONTROL Payload]_vindt u details over de geselecteerde gebeurtenis, inclusief het gebeurtenistype (`com.adobe.platform.gdpr.productcomplete`), zoals in het bovenstaande voorbeeld wordt aangegeven.
 
 ## Volgende stappen
 
