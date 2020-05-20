@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Azure Event Hubs-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: fdffdd34d1ccb61d6c82fecc249ddeb501d79d0e
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -38,9 +38,10 @@ Opdat de Dienst van de Stroom met uw Azure rekening van de Hubs van de Gebeurten
 | ---------- | ----------- |
 | `sasKeyName` | De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd. |
 | `sasKey` | De gegenereerde handtekening voor gedeelde toegang. |
-| `namespace` | De naamruimte van de EventHub waartoe u toegang hebt. |
+| `namespace` | De naamruimte van de gebeurtenishubs waartoe u toegang hebt. |
+| `connectionSpec.id` | De Azure Event Hubs-verbindingsspecificatie-id: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-Voor meer informatie over deze waarden, verwijs naar [dit document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)EventHub.
+Raadpleeg [dit Event Hubs-document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)voor meer informatie over deze waarden.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -86,10 +87,11 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for EventHub",
+            "specName": "Basic Authentication for Event Hubs",
             "params": {
                 "sasKeyName": "sasKeyName",
-                "sasKey": "sasKey"
+                "sasKey": "sasKey",
+                "namespace": "namespace"
             }
         },
         "connectionSpec": {
@@ -103,11 +105,12 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd. |
 | `auth.params.sasKey` | De gegenereerde handtekening voor gedeelde toegang. |
+| `namespace` | De naamruimte van de gebeurtenishubs waartoe u toegang hebt. |
 | `connectionSpec.id` | De Azure Event Hubs-verbindingsspecificatie-id: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist voor het verkennen van uw gegevens voor cloudopslag in de volgende zelfstudie.
+Een succesvolle reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist voor het verkennen van uw gegevens voor cloudopslag in de volgende zelfstudie.
 
 ```json
 {
