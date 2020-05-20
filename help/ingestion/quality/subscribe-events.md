@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Abonneren op gebeurtenissen voor gegevensinvoer
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 1498739d753bdb569e0d3e091e4160bdae40a32f
+workflow-type: tm+mt
+source-wordcount: '851'
+ht-degree: 0%
 
 ---
 
@@ -36,42 +39,54 @@ Hieronder vindt u een lijst met beschikbare gegevensinvoerstatusmeldingen waarop
 
 Het gebeurtenisschema voor gegevensinvoer is een XDM-schema (Experience Data Model) dat velden en waarden bevat die details bevatten over de status van de gegevens die worden ingevoerd. Gelieve te bezoeken de openbare reactie XDM GitHub om het recentste schema [van de](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)berichtlading te bekijken.
 
-## Abonneren op meldingen met de status van gegevensinsluiting
+## Abonneren op statusmeldingen voor gegevensinvoer
 
-Via [Adobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events.html)kunt u zich op meerdere berichttypen abonneren met behulp van websites. Meer informatie over websites en hoe u zich op Adobe I/O-gebeurtenissen kunt abonneren met behulp van webhaken vindt u in de [inleiding op de Adobe I/O Events Webhooks](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) -handleiding.
+Via [Adobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events.html)kunt u zich op meerdere berichttypen abonneren met behulp van websites. In de onderstaande secties vindt u een overzicht van de stappen voor het abonneren op platformberichten voor gegevensinsluitingsgebeurtenissen met behulp van Adobe Developer Console.
 
-### Een nieuwe integratie maken met Adobe I/O-console
+### Nieuw project maken in Adobe Developer Console
 
-Meld u aan bij de [Adobe I/O-console](https://console.adobe.io/home) en klik op het tabblad *Integraties* of klik op Integratie **** maken onder Snel starten. Wanneer het scherm *Integratie* verschijnt, klik **Nieuwe Integratie** aan het creëren van een nieuwe integratie.
+Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe-id. Voer vervolgens de stappen uit die worden beschreven in de zelfstudie over het [maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.
 
-![Nieuwe integratie maken](../images/quality/subscribe-events/create_integration_start.png)
+### Voeg de gebeurtenissen van het Platform van de Ervaring aan het project toe
 
-Het scherm *Nieuwe integratie* maken wordt weergegeven. Selecteer Gebeurtenissen **in bijna real-** time ontvangen en klik op **Doorgaan**.
+Nadat u een nieuw project hebt gemaakt, navigeert u naar het overzichtsscherm van dat project. Klik hier op **[!UICONTROL Gebeurtenis]** toevoegen.
 
-![Gebeurtenissen in bijna realtime ontvangen](../images/quality/subscribe-events/create_integration_receive_events.png)
+![](../images/quality/subscribe-events/add-event-button.png)
 
-In het volgende scherm vindt u opties waarmee u integratie kunt maken met verschillende gebeurtenissen, producten en services die beschikbaar zijn voor uw organisatie. Deze opties zijn gebaseerd op uw abonnementen, rechten en machtigingen. Selecteer voor deze integratie **Platform-meldingen** onder Experience Platform en klik op **Doorgaan**.
+Het dialoogvenster Gebeurtenissen __toevoegen wordt weergegeven. Klik op**[!UICONTROL  ervaringsplatform ]**om de lijst met beschikbare opties te filteren en klik vervolgens op**[!UICONTROL  Platformmeldingen ]**voordat u op**[!UICONTROL  Volgende ]**klikt.
 
-![Gebeurtenisprovider selecteren](../images/quality/subscribe-events/create_integration_select_provider.png)
+![](../images/quality/subscribe-events/select-platform-events.png)
 
-Het formulier *Integratiedetails* wordt weergegeven. Hierin moet u een naam en beschrijving voor de integratie opgeven, evenals een certificaat met openbare sleutel.
+In het volgende scherm wordt een lijst weergegeven met gebeurtenistypen waarop u zich wilt abonneren. Selecteer **[!UICONTROL Gegevensinvoer bericht]**, dan klik **[!UICONTROL daarna]**.
 
-Als u geen openbaar certificaat hebt, kunt u één in de terminal produceren door het volgende bevel te gebruiken:
+![](../images/quality/subscribe-events/choose-event-subscriptions.png)
 
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
-```
+In het volgende scherm wordt u gevraagd een JSON Web Token (JWT) te maken. U wordt gegeven de optie om een zeer belangrijk paar automatisch te produceren, of uw eigen openbare sleutel te uploaden die in de terminal wordt geproduceerd.
 
-Nadat u een certificaat hebt gegenereerd, sleept u het bestand naar het vak **Certificaten** met openbare sleutels of klikt u op Bestand **** selecteren om door de bestandsmap te bladeren en het certificaat rechtstreeks te selecteren.
+In deze zelfstudie wordt de eerste optie gevolgd. Klik op het optievak voor **[!UICONTROL Een sleutelpaar]** genereren en klik vervolgens op de knop **[!UICONTROL Keypair]** genereren in de rechterbenedenhoek.
 
-Nadat u het certificaat hebt toegevoegd, wordt de optie *Gebeurtenisregistratie* weergegeven. Klik op **Gebeurtenisregistratie** toevoegen.
+![](../images/quality/subscribe-events/generate-keypair.png)
 
-![integratiedetails](../images/quality/subscribe-events/create_integration_details.png)
+Wanneer het sleutelpaar produceert, wordt het automatisch gedownload door browser. U moet dit bestand zelf opslaan omdat het niet wordt voortgezet in de Developer Console.
 
-Het dialoogvenster *Gebeurtenisregistratiegegevens* wordt uitgebreid met extra besturingselementen. Hier kunt u de gewenste gebeurtenistypen selecteren en uw webhaak registreren. Voer een naam in voor de gebeurtenisregistratie, de URL van de webhaak *(optioneel)* en een korte beschrijving. Selecteer ten slotte de gebeurtenistypen waarop u zich wilt abonneren (gegevensinvoer-melding) en klik op **Opslaan**.
+In het volgende scherm kunt u de details van het nieuwe sleutelpaar bekijken. Klik op **[!UICONTROL Volgende]** om door te gaan.
 
-![Gebeurtenissen selecteren](../images/quality/subscribe-events/create_integration_select_event.png)
+![](../images/quality/subscribe-events/keypair-generated.png)
+
+Geef in het volgende scherm een naam en een beschrijving op voor de registratie van de gebeurtenis. De beste manier is om een unieke, gemakkelijk identificeerbare naam te maken om deze gebeurtenisregistratie te onderscheiden van andere registraties voor hetzelfde project.
+
+![](../images/quality/subscribe-events/registration-details.png)
+
+Verderop op het zelfde scherm, kunt u naar keuze vormen hoe te om gebeurtenissen te ontvangen. **[!UICONTROL Met WebHaak]** kunt u een aangepast webhaadres opgeven voor het ontvangen van gebeurtenissen, terwijl met **[!UICONTROL Runtime-actie]** u hetzelfde kunt doen met [Adobe I/O-runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+
+Deze zelfstudie slaat deze optionele configuratiestap over. Als u klaar bent, klikt u op **[!UICONTROL geconfigureerde gebeurtenissen]** opslaan om de gebeurtenisregistratie te voltooien.
+
+![](../images/quality/subscribe-events/receive-events.png)
+
+De detailspagina voor de pas gecreëerde gebeurtenisregistratie verschijnt, waar u ontvangen gebeurtenissen kunt herzien, zuivert het vinden uitvoeren, en zijn configuratie uitgeven.
+
+![](../images/quality/subscribe-events/registration-complete.png)
 
 ## Volgende stappen
 
-Zodra u uw I/O integratie hebt gecreeerd kunt u om het even welke ontvangen berichten voor die integratie bekijken. Raadpleeg de handleiding [OvertrekAdobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) voor gedetailleerde instructies over het overtrekken van gebeurtenissen.
+Zodra u de berichten van het Platform aan uw project hebt geregistreerd, kunt u ontvangen gebeurtenissen van het projectdashboard bekijken. Raadpleeg de handleiding [OvertrekAdobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) voor gedetailleerde instructies over het overtrekken van gebeurtenissen.
