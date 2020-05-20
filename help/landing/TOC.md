@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+source-git-commit: 2c95e34b56b322f7cfb098b27210dd5242128803
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 4%
 
 ---
 
@@ -25,7 +28,6 @@ source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
    * [Beslissingsservice](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
    * [Doelen](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
    * [ETL (Extraheren, Transformeren, Laden)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
-   * [Experience Platform Web SDK (bèta)](https://docs.adobe.com/content/help/en/experience-platform/edge/home.html)
    * [Identiteitsservice](https://docs.adobe.com/content/help/en/experience-platform/identity/home.html)
    * [Intelligente services](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
    * [Starten](https://docs.adobe.com/content/help/en/launch/using/overview.html)
@@ -37,9 +39,10 @@ source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
    * [Sandboxen](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html)
    * [Segmentering](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
    * [Bronnen (aansluitingen)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
+   * [Web SDK](https://docs.adobe.com/content/help/en/experience-platform/edge/home.html)
    * [XDM (Experience Data Model)](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html)
 * [Zelfstudies voor het ervaringsplatform](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html)
-* [Opmerkingen bij de release](https://docs.adobe.com/content/help/en/experience-platform/release-notes/latest.html)
+* [Releaseopmerkingen](https://docs.adobe.com/content/help/en/experience-platform/release-notes/latest.html)
 * [Verklarende woordenlijst](glossary.md)
 * [Handleiding voor probleemoplossing](troubleshooting.md)
 * [API-basisbeginselen](api-fundamentals.md)
