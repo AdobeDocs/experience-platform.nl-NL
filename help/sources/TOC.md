@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 71080a1741ea0d660f63e2009f045c0e34f6c44b
+source-git-commit: f23684ee152836bab85eeb8360436e4059f44417
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,8 @@ ht-degree: 0%
       - [Azure Synapse Analytics-connector](connectors/databases/synapse-analytics.md)
       - [Azure Table Storage-connector](connectors/databases/ats.md)
       - [Google BigQuery-connector](connectors/databases/bigquery.md)
+      - [GreenPlum-connector](connectors/databases/greenplum.md)
+      - [HP Vertica-connector](connectors/databases/hp-vertica.md)
       - [IBM DB2-connector](connectors/databases/ibm-db2.md)
       - [MariaDB-connector](connectors/databases/mariadb.md)
       - [Microsoft SQL Server-aansluiting](connectors/databases/sql-server.md)
@@ -88,6 +90,8 @@ ht-degree: 0%
          - [Azure Synapse Analytics-connector](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage-connector](tutorials/api/create/databases/ats.md)
          - [Google BigQuery-connector](tutorials/api/create/databases/bigquery.md)
+         - [GreenPlum-connector](tutorials/api/create/databases/greenplum.md)
+         - [HP Vertica-connector](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2-connector](tutorials/api/create/databases/ibm-db2.md)
          - [MariaDB-connector](tutorials/api/create/databases/mariadb.md)
          - [MySQL-connector](tutorials/api/create/databases/mysql.md)
@@ -150,6 +154,8 @@ ht-degree: 0%
          - [Azure Synapse Analytics-connector](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage-connector](tutorials/ui/create/databases/ats.md)
          - [Google Big Query-connector](tutorials/ui/create/databases/bigquery.md)
+         - [GreenPlum-connector](tutorials/ui/create/databases/greenplum.md)
+         - [HP Vertica-connector](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2-connector](tutorials/ui/create/databases/ibm-db2.md)
          - [MariaDB-connector](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Server-aansluiting](tutorials/ui/create/databases/sql-server.md)
