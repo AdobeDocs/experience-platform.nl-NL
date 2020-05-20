@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Amazon Kinesis-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: dcd6293a71178fee14647f5b2c8b56d03d1ec7df
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en select
 
 Selecteer in de categorie *Cloud Storage* de optie **Amazon Kinesis** en klik **op het plus-pictogram (+)** om een nieuwe Kinesis-connector te maken.
 
-![](../../../../images/tutorials/create/eventhub/catalog.png)
+![](../../../../images/tutorials/create/kinesis/catalog.png)
 
 Het dialoogvenster *Verbinding maken met Amazon Kinesis* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -58,13 +58,13 @@ Het dialoogvenster *Verbinding maken met Amazon Kinesis* wordt weergegeven. Op d
 
 Selecteer **Nieuw account** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw Kinesis-referenties op. Wanneer u klaar bent, selecteert u **Connect** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![](../../../../images/tutorials/create/eventhub/new.png)
+![](../../../../images/tutorials/create/kinesis/new.png)
 
 ### Bestaande account
 
 Als u een bestaande account wilt verbinden, selecteert u de Kinesis-account waarmee u verbinding wilt maken en selecteert u **Volgende** om door te gaan.
 
-![](../../../../images/tutorials/create/eventhub/existing.png)
+![](../../../../images/tutorials/create/kinesis/existing.png)
 
 ## Volgende stappen
 
