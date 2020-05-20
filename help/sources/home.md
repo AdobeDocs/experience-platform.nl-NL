@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
@@ -77,6 +77,8 @@ Het Platform van de ervaring verleent steun voor het opnemen van gegevens van ee
 - [Azure Synapse Analytics-connector](connectors/databases/synapse-analytics.md)
 - [Azure Table Storage-connector](connectors/databases/ats.md)
 - [Google BigQuery-connector](connectors/databases/bigquery.md)
+- [GreenPlum-connector](connectors/databases/greenplum.md)
+- [HP Vertica-connector](connectors/databases/hp-vertica.md)
 - [IBM DB2-connector](connectors/databases/ibm-db2.md)
 - [MariaDB-connector](connectors/databases/mariadb.md)
 - [Microsoft SQL Server-aansluiting](connectors/databases/sql-server.md)
