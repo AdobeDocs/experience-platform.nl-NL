@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Amazon Kinesis-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: dcd6293a71178fee14647f5b2c8b56d03d1ec7df
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -38,9 +38,10 @@ Als u wilt dat Flow Service verbinding maakt met uw Amazon Kinesis-account, moet
 | ---------- | ----------- |
 | `accessKeyId` | De toegangs sleutel-id voor uw Kinesis-account. |
 | `secretKey` | De geheime toegangstoets voor uw Kinesis-account. |
+| `region` |  | Het gebied voor uw Kinesis-account. |
 | `connectionSpec.id` | De Kinesis-verbindingsspecificatie-id: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
-Voor meer informatie over deze waarden, verwijs naar [dit document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)EventHub.
+Raadpleeg [dit Kinesis-document](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)voor meer informatie over deze waarden.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -103,6 +104,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | De toegangs sleutel-id voor uw Kinesis-account. |
 | `auth.params.secretKey` | De geheime toegangstoets voor uw Kinesis-account. |
+| `auth.params.region` | Het gebied voor uw Kinesis-account. |
 | `connectionSpec.id` | De Kinesis-verbindingsspecificatie-id: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Antwoord**
