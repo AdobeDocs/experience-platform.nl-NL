@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Poortbeheeraansluiting
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: fb4ffa2c95365905f5417586fa7ecf88523009a0
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 0%
 
 ---
 
@@ -51,7 +54,7 @@ Zie de documentatie voor de toewijzingsvelden [van](./mapping/audience-manager.m
 
 Datasets zijn een opslag- en beheerconstructie voor een verzameling gegevens, doorgaans een tabel, die schema (kolommen) en velden (rijen) bevat en beschikbaar wordt gesteld door een gegevensverbinding. De gegevens van de Manager van de publiek bestaan uit gegevens Realtime, Binnenkomende gegevens, en de gegevens van het Profiel. Om van uw datasets van de Manager van de Publiek de plaats te bepalen, gebruik de onderzoeksfunctie in UI met de verstrekte noemende overeenkomsten voor elk type van gegevens.
 
-Terwijl de gebruikers de capaciteit hebben om datasets onbruikbaar te maken, wordt het niet geadviseerd om datasets onbruikbaar te maken die voor segmentlidmaatschap in Profiel zullen worden gebruikt.
+De datasets van de Manager van de Publiek worden onbruikbaar gemaakt voor Profiel door gebrek en de gebruikers hebben de capaciteit om datasets toe te laten of onbruikbaar te maken die op hun gebruiksgevallen worden gebaseerd. Het wordt niet geadviseerd om datasets onbruikbaar te maken die voor segmentlidmaatschap in Profiel zullen worden gebruikt.
 
 | Naam gegevensset | Beschrijving |
 | ------------ | ----------- |
@@ -66,7 +69,7 @@ Terwijl de gebruikers de capaciteit hebben om datasets onbruikbaar te maken, wor
 
 ### Verbindingen
 
-Adobe Audience Manager maakt één verbinding in Catalog: Verbinding met **Audience Manager**. Catalog is het systeem van de verslagen voor gegevensplaats en lijn binnen het Platform van de Ervaring van Adobe. Een verbinding is een voorwerp van de Catalogus dat een klant-specifiek geval van Verbindingen is. Zie het overzicht [van de](../../../catalog/home.md) Catalogusservice voor meer informatie over Catalogus, verbindingen en connectors.
+Adobe Audience Manager maakt één verbinding in Catalog: **Poortbeheerverbinding**. Catalog is het systeem van de verslagen voor gegevensplaats en lijn binnen het Platform van de Ervaring van Adobe. Een verbinding is een voorwerp van de Catalogus dat een klant-specifiek geval van Connectors is. Zie het overzicht [van de](../../../catalog/home.md) Catalogusservice voor meer informatie over Catalogus, verbindingen en connectors.
 
 ## Wat is de verwachte latentie voor de Gegevens van de Manager van de Audience op Platform?
 
