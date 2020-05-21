@@ -4,9 +4,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens die u in het Platform van de Gegevens van de Klant van Adobe in real time hebt door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens die u in het Platform van de Gegevens van de Klant van Adobe in real time hebt door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
+source-git-commit: 237ca5fc950b46ae4718850ab1360cdf52b8b112
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '889'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,26 @@ Om gegevens aan bestemmingen te activeren, moet u een bestemming [met succes heb
    ![segmenten-naar-bestemming](/help/rtcdp/destinations/assets/select-segments.png)
 5. *Voorwaardelijk*. Deze stap is afhankelijk van het type bestemming waar u de segmenten activeert. <br> Voor *e-mail marketing bestemmingen* en *wolkenopslagbestemmingen*, op de **[!UICONTROL Uitgezochte pagina van Attributen]** , selecteer **[!UICONTROL voeg nieuw gebied]** toe en selecteer de attributen die u naar de bestemming wilt verzenden.
 Wij adviseren één van de attributen om een [uniek herkenningsteken](/help/rtcdp/destinations/email-marketing-destinations.md#identity) van uw unieschema te zijn. Zie Identiteit in het artikel [E-mailmarketingdoelen](/help/rtcdp/destinations/email-marketing-destinations.md#identity) voor meer informatie over verplichte kenmerken.
-   ![doel-attributen](/help/rtcdp/destinations/assets/select-attributes-step.png)voor *sociale netwerkbestemmingen*, in de het in kaart brengen **[!UICONTROL van de]** Identiteit stap, uitgezochte bronattributen om aan doelidentiteiten in kaart te brengen.
-   ![identiteitstoewijzing vóór het invullen van velden](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)In het onderstaande voorbeeld is het persoonlijke e-mailadres in het identiteitsschema hashing bij opname in het Experience Platform om te voldoen aan de Facebook-vereisten voor [e-](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)mailhashing. Druk op **[!UICONTROL Volgende]** nadat u de toewijzing hebt geselecteerd.
-   ![identiteitstoewijzing na invullen van velden](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+   ![bestemmingskenmerken](/help/rtcdp/destinations/assets/select-attributes-step.png)
+
+   <br> 
+
+   Voor *sociale bestemmingen*, in de het in kaart brengen **[!UICONTROL van de]** Identiteit stap, kunt u bronattributen selecteren om als doelidentiteiten in de bestemming in kaart te brengen. Deze stap is optioneel of verplicht, afhankelijk van de primaire identiteit die u in het schema gebruikt. <br> 
+
+   *E-mailadres als primaire identiteit*: Als u het e-mailadres als primaire identiteit in uw schema gebruikt, kunt u de stap Identiteitstoewijzing overslaan, zoals hieronder wordt getoond:
+
+   ![E-mailadres als identiteit](/help/rtcdp/destinations/assets/email-as-identity.gif)
+
+   <br> 
+
+   *Een andere id als primaire identiteit*: Als u een andere identiteitskaart, zoals *Uitkerings identiteitskaart* of identiteitskaart *van de* Loyalty, als primaire identiteit in uw schema gebruikt, moet u het e-mailadres van uw identiteitsschema als doelidentiteit in de sociale bestemming manueel in kaart brengen, zoals hieronder getoond:
+
+   ![Loyalty-id als identiteit](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
+
+
+   Selecteer deze optie `Email_LC_SHA256` als doel-id als u de e-mailadressen van klanten bij het invoeren van gegevens in het Adobe Experience Platform hebt gewijzigd volgens de vereisten [voor e-](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)mailhashing op Facebook. <br> Selecteer `Email` als doel-id als de e-mailadressen die u gebruikt geen hashing zijn. Adobe Real-time CDP hasht de e-mailadressen om aan de Facebook-vereisten te voldoen.
+
+   ![identiteitstoewijzing na invullen van velden](/help/rtcdp/destinations/assets/identity-mapping.png)
 
 6. Op de **[!UICONTROL het programmapagina]** van het Segment, kunt u de begindatum zien voor het verzenden van gegevens naar de bestemming, evenals de frequentie om gegevens naar de bestemming te verzenden.
 
