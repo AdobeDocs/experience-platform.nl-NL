@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Gegevens voorbereiden voor gebruik in intelligente services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
+source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
+workflow-type: tm+mt
+source-wordcount: '1445'
+ht-degree: 0%
 
 ---
 
@@ -30,6 +33,8 @@ Een volledig voorbeeld van de mix vindt u in de [openbare XDM-opslagplaats](http
 ## Hoofdvelden
 
 In de onderstaande secties worden de belangrijkste velden in de CEE-mix gemarkeerd die moeten worden gebruikt om intelligente services nuttige inzichten te laten genereren, waaronder beschrijvingen en koppelingen naar referentiedocumentatie voor meer voorbeelden.
+
+>[!IMPORTANT] Het `xdm:channel` veld (uitgelegd in de eerste sectie hieronder) is **vereist** om Attribution AI in staat te stellen met uw gegevens te werken, terwijl KlantAI geen verplichte velden heeft. Alle andere belangrijke velden worden sterk aanbevolen, maar niet verplicht.
 
 ### xdm:kanaal
 
@@ -63,7 +68,7 @@ In de volgende tabel staan enkele voorbeelden van marketingkanalen die zijn toeg
 | Interne referentie | https:/<span>/ns.adobe.com/xdm/channel-types/direct | eigendom | klikken |
 | WeergaveThrough weergeven | https:/<span>/ns.adobe.com/xdm/channel-types/display | betaald | indrukken |
 | Omleiding QR-code | https:/<span>/ns.adobe.com/xdm/channel-types/direct | eigendom | klikken |
-| Mobiel | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | eigendom | klikken |
+| Mobile | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | eigendom | klikken |
 
 ### xdm:productListItems
 
@@ -182,7 +187,9 @@ Voor volledige informatie over elk van de vereiste subvelden voor `xdm:productLi
 
 ## Gegevens toewijzen en opnemen
 
-Zodra u hebt bepaald of uw gegevens van de marketinggebeurtenissen aan het CEE schema kunnen worden in kaart gebracht, kunt u het proces beginnen om uw gegevens in de Intelligente Diensten te brengen. Neem contact op met de Adobe Consulting Services om u te helpen uw gegevens toe te wijzen aan het schema en deze in te voeren in de service.
+Zodra u hebt bepaald of uw gegevens van de marketinggebeurtenissen aan het CEE schema kunnen worden in kaart gebracht, is de volgende stap te bepalen welke gegevens u in de Intelligente Diensten moet brengen. Alle historische gegevens die in de Intelligente Diensten worden gebruikt moeten binnen het minimumtijdvenster van vier maanden van gegevens vallen, plus het aantal dagen voorgenomen als raadplegingsperiode.
+
+Nadat u het gegevensbereik hebt bepaald dat u wilt verzenden, neemt u contact op met de Adobe Consulting Services om uw gegevens toe te wijzen aan het schema en deze in te voeren in de service.
 
 Als u een abonnement op het Adobe Experience Platform hebt en u de gegevens zelf wilt toewijzen en invoeren, volgt u de stappen in de onderstaande sectie.
 
@@ -208,13 +215,85 @@ Zodra u het schema hebt gecreeerd en bewaard, kunt u een nieuwe dataset tot stan
 * [Creeer een dataset in UI](../catalog/datasets/user-guide.md#create) (volg het werkschema voor het gebruiken van een bestaand schema)
 * [Een gegevensset maken in de API](../catalog/datasets/create.md)
 
-#### Gegevens toewijzen en opnemen
+#### Een primaire naamruimte-tag toevoegen aan de gegevensset
+
+Als u gegevens ophaalt van Adobe Audience Manager, Adobe Analytics of een andere externe bron, moet u een `primaryIdentityNameSpace` tag toevoegen aan de gegevensset. Dit kan worden gedaan door een PATCH- verzoek aan de Dienst API van de Catalogus te doen.
+
+Als u gegevens uit een lokaal CSV-bestand opneemt, kunt u verdergaan met de volgende sectie over het [toewijzen en invoeren van gegevens](#ingest).
+
+Voordat u de voorbeeld-API-aanroep hieronder volgt, raadpleegt u de sectie [Aan de](../catalog/api/getting-started.md) slag in de handleiding voor ontwikkelaars van catalogi voor belangrijke informatie over vereiste koppen.
+
+**API-indeling**
+
+```http
+PATCH /dataSets/{DATASET_ID}
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `{DATASET_ID}` | De id van de gegevensset die u eerder hebt gemaakt. |
+
+**Verzoek**
+
+Afhankelijk van de bron waaruit u gegevens opgeeft, moet u de juiste waarden opgeven `primaryIdentityNamespace` en de juiste `sourceConnectorId` waarden opgeven in de payload van de aanvraag.
+
+In het volgende verzoek worden de juiste tagwaarden voor Audience Manager toegevoegd:
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["mcid"],
+          "sourceConnectorId": ["audiencemanager"],
+        }
+      }'
+```
+
+In het volgende verzoek worden de juiste tagwaarden voor Analytics toegevoegd:
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["aaid"],
+          "sourceConnectorId": ["analytics"],
+        }
+      }'
+```
+
+>[!NOTE] Zie het overzicht [van naamruimte voor](../identity-service/namespaces.md)identiteiten voor meer informatie over het werken met naamruimten in het platform.
+
+**Antwoord**
+
+Een succesvolle reactie keert een serie terug die identiteitskaart van de bijgewerkte dataset bevat. Deze id moet overeenkomen met de id die in de PATCH-aanvraag is verzonden.
+
+```json
+[
+    "@/dataSets/5ba9452f7de80400007fc52a"
+]
+```
+
+#### Gegevens toewijzen en opnemen {#ingest}
 
 Na het creëren van een CEE schema en dataset, kunt u beginnen uw gegevenslijsten aan het schema in kaart te brengen en die gegevens in Platform in te voeren. Zie de zelfstudie over het [toewijzen van een CSV-bestand aan een XDM-schema](../ingestion/tutorials/map-a-csv-file.md) voor stappen over het uitvoeren van dit bestand in de gebruikersinterface. Zodra een dataset is bevolkt, kan de zelfde dataset worden gebruikt om extra gegevensdossiers in te voeren.
 
+Als uw gegevens in een gesteunde derdetoepassing worden opgeslagen, kunt u ook verkiezen om een [bronschakelaar](../sources/home.md) tot stand te brengen om uw gegevens van marketinggebeurtenissen in real time in Platform in te voeren.
+
 ## Volgende stappen {#next-steps}
 
-Dit document bevat algemene richtlijnen voor het voorbereiden van uw gegevens voor gebruik in Intelligente services. Neem contact op met de Technische Ondersteuning van Adobe als u extra advies nodig hebt op basis van uw gebruikscase.
+Dit document bevat algemene richtlijnen voor het voorbereiden van gegevens voor gebruik in Intelligente services. Neem contact op met de Technische Ondersteuning van Adobe als u extra advies nodig hebt op basis van uw gebruikscase.
 
 Zodra u met succes een dataset met uw gegevens van de klantenervaring hebt bevolkt, kunt u de Intelligente Diensten gebruiken om inzichten te produceren. Raadpleeg de volgende documenten om aan de slag te gaan:
 
