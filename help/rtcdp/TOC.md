@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Help
 translation-type: tm+mt
-source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
+source-git-commit: fc8bdc6a46e0b64f29d89a36b0810f7312200616
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '439'
 ht-degree: 2%
 
 ---
@@ -125,7 +125,7 @@ ht-degree: 2%
    * Zelfstudies voor gebruikersinterface voor doelen {#dest-tutorials}
       * [Verbinding maken met een doel](/help/rtcdp/destinations/connect-destination.md)
       * [Profielen en segmenten naar een doel activeren](destinations/activate-destinations.md)
-   * Zelfstudies voor doel-API {api-zelfstudies}
+   * Zelfstudies voor doel-API {#api-tutorials}
       * [Verbinding maken met streamingdoelen (AWS Kinesis en Azure Event Hubs) en gegevens activeren](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
       * [Verbinding maken met marketingdoelen en gegevens activeren](/help/tutorials/destinations/email-marketing-api.md)
 * Privacy en gegevensbeheer {#privacy}
