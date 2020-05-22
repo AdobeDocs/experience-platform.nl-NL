@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: d41952e5905d4ebc579a29ad3282a8f732b7c331
+source-git-commit: db3acec75c24a0cb75d1d88e7aa2171e794abc4f
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1299'
 ht-degree: 2%
 
 ---
@@ -19,12 +19,12 @@ ht-degree: 2%
 
 Updates voor bestaande functies in het Adobe Experience Platform:
 
-- [Opmerkingen bij de release Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Updates van gebruikersinterface {#ux}](#user-interface-updates-ux)
-   - [Werkruimte voor gegevenswetenschap {#dsw}](#data-science-workspace-dsw)
-   - [Doelen {#destinations}](#destinations-destinations)
-   - [Experience Platform Web SDK en Experience Platform Edge Network {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
-   - [Bronnen {#sources}](#sources-sources)
+- [Updates van gebruikersinterface](#ux)
+- [Werkruimte voor gegevenswetenschap](#dsw)
+- [Doelen](#destinations)
+- [Experience Platform Web SDK en Experience Platform Edge Network](#edge)
+- [Klantprofiel in realtime](#profile)
+- [Bronnen](#sources)
 
 ## Updates van gebruikersinterface {#ux}
 
@@ -100,6 +100,29 @@ Met de Experience Platform Web SDK en Experience Platform kunnen gebruikers gege
 
 Raadpleeg de [documentatie](../../edge/home.md)voor meer informatie over Platform Web SDK en Edge Network.
 
+## Klantprofiel in realtime {#profile}
+
+Met het Adobe Experience Platform kunt u een gecoördineerde, consistente en relevante ervaring voor uw klanten ontwikkelen, ongeacht waar of wanneer ze met uw merk communiceren. Met het Profiel van de Klant in real time, kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. Het profiel staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| -----------| ---------- |
+| Nieuwe exportcijfers profiel | Toegevoegde metriek aan profieluitvoer banen die het totale aantal uitgevoerde profielen en aantal profielen in elke namespace tonen. |
+| New Observability Insights Metrics | De API voor observatiegegevens bevat nu de volgende meetgegevens voor het streamen van opname naar profiel: Binnenkomende verzoektarief, Succesvolle Ingestiesnelheid, Ingested Record Grootte. |
+| Eindpunt van plotselinge GET | Toegevoegde bulkGET eindpunt aan Real-time het Profiel van de Klant API om het terugwinnen van veelvoudige resultaten in één enkele API vraag toe te laten. U kunt nu bulksgewijs maximaal 100 IDs voor segmentdefinities, segmentbanen, en fusiebeleid nu OPHALEN. |
+| Bladeren door profiel op identiteit | In de interface van het Platform kunt u nu een naamruimte selecteren en een identiteitswaarde opgeven om door een profiel te bladeren. |
+
+**Bugfixes**
+
+- Geen.
+
+**Bekende problemen**
+
+- Geen.
+
+Lees het overzicht [van het profiel van de](../../profile/home.md)real-time klant voor meer informatie over het profiel in real-time, inclusief zelfstudies en best practices voor het werken met profielgegevens.
+
 ## Bronnen {#sources}
 
 Met het Adobe Experience Platform kunt u gegevens uit externe bronnen ophalen en tegelijk die gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
@@ -116,6 +139,6 @@ Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u 
 
 **Bekende problemen**
 
-- Geen
+- Geen.
 
 Zie het [bronoverzicht](../../sources/home.md)voor meer informatie over bronnen.
