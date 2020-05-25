@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Gegevens exporteren met API's
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: d0b9223aebca0dc510a7457e5a5c65ac4a567933
+workflow-type: tm+mt
+source-wordcount: '1953'
+ht-degree: 0%
 
 ---
 
@@ -169,6 +172,9 @@ curl -X POST \
     },
     "schema": {
       "name": "_xdm.context.profile"
+    },
+    "evaluationInfo": {
+        "segmentation": true
     }
   }'
 ```
@@ -180,7 +186,7 @@ curl -X POST \
 | `mergePolicy.id` | De id van het samenvoegbeleid. |
 | `mergePolicy.version` | De specifieke versie van het samenvoegbeleid dat moet worden gebruikt. Als u deze waarde weglaat, wordt standaard de meest recente versie gebruikt. |
 | `filter` | *(Optioneel)* Hiermee geeft u een of meer van de volgende filters op die u op het segment wilt toepassen voordat u het exporteert. |
-| `filter.segments` | *(Optioneel)* Hiermee geeft u de segmenten op die u wilt exporteren. Als u deze waarde weglaat, worden alle gegevens van alle profielen geëxporteerd. Accepteert een array van segmentobjecten die elk de volgende velden bevatten:<ul><li>`segmentId`: **(Vereist als u`segments`)** Segment-id gebruikt voor profielen die moeten worden geëxporteerd.</li><li>`segmentNs` *(Optioneel)* Segmentnaamruimte voor de opgegeven `segmentID`.</li><li>`status` *(Optioneel)* Een array van tekenreeksen die een statusfilter voor de tekenreeks `segmentID`. Standaard heeft `status` deze waarde de waarde `["realized", "existing"]` die alle profielen vertegenwoordigt die in het segment op het huidige tijdstip vallen. Mogelijke waarden zijn: `"realized"`, `"existing"`, en `"exited"`.</br></br>Raadpleeg de zelfstudie over het [maken van segmenten voor meer informatie](./create-a-segment.md).</li></ul> |
+| `filter.segments` | *(Optioneel)* Hiermee geeft u de segmenten op die u wilt exporteren. Als u deze waarde weglaat, worden alle gegevens van alle profielen geëxporteerd. Accepteert een array van segmentobjecten die elk de volgende velden bevatten:<ul><li>`segmentId`: **(Vereist bij gebruik van`segments`)** Segment-id voor profielen die moeten worden geëxporteerd.</li><li>`segmentNs` *(Optioneel)* Segmentnaamruimte voor de opgegeven `segmentID`.</li><li>`status` *(Optioneel)* Een array van tekenreeksen die een statusfilter voor de `segmentID`tekenreeks bieden. Standaard heeft `status` deze waarde de waarde `["realized", "existing"]` die alle profielen vertegenwoordigt die in het segment op het huidige tijdstip vallen. Mogelijke waarden zijn: `"realized"`, `"existing"`en `"exited"`.</br></br>Raadpleeg de zelfstudie over het [maken van segmenten voor meer informatie](./create-a-segment.md).</li></ul> |
 | `filter.segmentQualificationTime` | *(Optioneel)* Filter op basis van de kwalificatietijd van het segment. De begintijd en/of eindtijd kunnen worden opgegeven. |
 | `filter.segmentQualificationTime.startTime` | *(Optioneel)* Begintijd segmentkwalificatie voor een segment-id voor een bepaalde status. Er is geen filter voor de begintijd van een segment-id-kwalificatie opgegeven. Het tijdstempel moet worden opgegeven in de [RFC 339](https://tools.ietf.org/html/rfc3339) -indeling. |
 | `filter.segmentQualificationTime.endTime` | *(Optioneel)* Eindtijd segmentkwalificatie voor een segment-id voor een bepaalde status. Er is geen filter voor de eindtijd van een segment-id-kwalificatie opgegeven. Het tijdstempel moet worden opgegeven in de [RFC 339](https://tools.ietf.org/html/rfc3339) -indeling. |
@@ -189,6 +195,7 @@ curl -X POST \
 | `additionalFields.eventList` | *(Optioneel)* beheert de tijdreeksgebeurtenisvelden die worden geëxporteerd voor onderliggende of gekoppelde objecten door een of meer van de volgende instellingen op te geven:<ul><li>`eventList.fields`: Besturing van de velden die u wilt exporteren.</li><li>`eventList.filter`: Hiermee worden criteria opgegeven waarmee de resultaten van gekoppelde objecten worden beperkt. Hiermee wordt een minimumwaarde verwacht die vereist is voor het exporteren, meestal een datum.</li><li>`eventList.filter.fromIngestTimestamp`: Hiermee filtert u tijdreeksgebeurtenissen op de gebeurtenissen die na de opgegeven tijdstempel zijn ingevoegd. Dit is niet de tijd van de gebeurtenis zelf, maar de tijd van inname voor de gebeurtenissen.</li></ul> |
 | `destination` | **(Vereist)** Doelgegevens voor de geëxporteerde gegevens:<ul><li>`destination.datasetId`: **(Vereist)** De id van de gegevensset waarin gegevens moeten worden geëxporteerd.</li><li>`destination.segmentPerBatch`: *(Optioneel)* Een Booleaanse waarde die, indien niet opgegeven, standaard op `false`. Een waarde van `false` exporteert alle segment-id&#39;s naar één batch-id. Een waarde van `true` exporteert één segment-id naar één batch-id. Merk op dat het plaatsen van de te zijn waarde `true` de prestaties van de partijuitvoer kan beïnvloeden.</li></ul> |
 | `schema.name` | **(Vereist)** De naam van het schema dat is gekoppeld aan de gegevensset waarin gegevens moeten worden geëxporteerd. |
+| `evaluationInfo.segmentation` | *(Optioneel)* Een Booleaanse waarde die, indien niet opgegeven, standaard op `false`. Een waarde van `true` geeft aan dat segmentatie moet worden uitgevoerd op de exporttaak. |
 
 >[!NOTE] Als u alleen profielgegevens wilt exporteren, en geen gerelateerde ExperienceEvent-gegevens wilt opnemen, verwijdert u het object &quot;additionalFields&quot; uit de aanvraag.
 
