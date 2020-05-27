@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Oracle-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ De volgende secties bevatten aanvullende informatie die u moet weten om verbindi
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met Oracle. Het Oracle-verbindingspatroon is: `Host=<host>;Port=<port>;Sid=<sid>;User Id=<username>;Password=<password>`. |
+| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met Oracle. Het Oracle-verbindingspatroon is: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor Oracle is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 Raadpleeg [dit Oracle-document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)voor meer informatie over aan de slag gaan.
@@ -85,7 +85,7 @@ curl -X POST \
         "auth": {
             "specName": "ConnectionString",
             "params": {
-                    "connectionString": "{CONNECTION_STRING}"
+                    "connectionString": "Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}"
                 }
         },
         "connectionSpec": {
@@ -97,7 +97,7 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die aan uw Oracle-account is gekoppeld. |
+| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw Oracle-database. Het Oracle-verbindingspatroon is: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | De Oracle-verbindingsspecificatie-id: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 **Antwoord**
