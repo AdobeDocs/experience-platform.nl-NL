@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een PostgreSQL-bronconnector maken in de UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '482'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Als u toegang wilt krijgen tot uw PSQL-account op Platform, moet u de volgende w
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die aan uw PSQL-account is gekoppeld. |
+| `connectionString` | De verbindingstekenreeks die aan uw PSQL-account is gekoppeld. Het patroon van de PSQL-verbindingstekenreeks is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 
 Raadpleeg dit [PSQL-document](https://www.postgresql.org/docs/9.2/app-psql.html)voor meer informatie over aan de slag gaan.
 
