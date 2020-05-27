@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een PostSQL-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -36,9 +36,10 @@ Voor de Dienst van de Stroom om met PSQL te verbinden, moet u het volgende verbi
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die aan uw PSQL-account is gekoppeld. |
+| `connectionString` | De verbindingstekenreeks die aan uw PSQL-account is gekoppeld. Het patroon van de PSQL-verbindingstekenreeks is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | De id die wordt gebruikt om een verbinding te genereren. De vaste verbindingsspecificatie-id voor PSQL is `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
-Raadpleeg dit [PSQL-document](https://www.postgresql.org/docs/9.2/app-psql.html)voor meer informatie over aan de slag gaan.
+Raadpleeg [dit PSQL-document](https://www.postgresql.org/docs/9.2/app-psql.html)voor meer informatie over het verkrijgen van een verbindingstekenreeks.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -60,72 +61,9 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 * Inhoudstype: `application/json`
 
-## Verbindingsspecificaties opzoeken
+## Verbinding maken
 
-Om een verbinding tot stand te brengen PSQL, moet een reeks PSQL verbindingsspecificaties binnen de Dienst van de Stroom bestaan. De eerste stap in het verbinden van Platform met PSQL is deze specificaties terug te winnen.
-
-**API-indeling**
-
-Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. Het verzenden van een GET verzoek aan het `/connectionSpecs` eindpunt zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag ook omvatten `property=name=="postgre-sql"` om informatie specifiek voor PSQL te verkrijgen.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="postgre-sql"
-```
-
-**Verzoek**
-
-Het volgende verzoek wint de verbindingsspecificaties voor PSQL terug.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="postgre-sql"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-Een succesvolle reactie keert de verbindingsspecificaties voor PSQL, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een basisverbinding te maken.
-
-```json
-{
-    "items": [
-        {
-            "id": "74a1c565-4e59-48d7-9d67-7c03b8a13137",
-            "name": "postgre-sql",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for PostgreSQL",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to PostgreSQL",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "An ODBC connection string to connect to Azure Database for PostgreSQL.",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ],
-        }
-    ]
-}
-```
-
-## Een basisverbinding maken
-
-Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per PSQL-account is slechts één basisverbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per PSQL-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
 
 **API-indeling**
 
@@ -134,6 +72,8 @@ POST /connections
 ```
 
 **Verzoek**
+
+Als u een PSQL-verbinding wilt maken, moet de unieke specificatie-id van de verbinding worden opgegeven als onderdeel van de POST-aanvraag. De verbindingsspecificatie-id voor PSQL is `74a1c565-4e59-48d7-9d67-7c03b8a13137`.
 
 ```shell
 curl -X POST \
@@ -144,12 +84,12 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Base connection for PostgreSQL",
-        "description": "Base connection for PostgreSQL",
+        "name": "Test connection for PostgreSQL",
+        "description": "Test connection for PostgreSQL",
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -161,8 +101,8 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | ------------- | --------------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die aan uw PSQL-account is gekoppeld. |
-| `connectionSpec.id` | De verbindingsspecificatie `id` van uw PSQL-account die in de vorige stap is opgehaald. |
+| `auth.params.connectionString` | De verbindingstekenreeks die aan uw PSQL-account is gekoppeld. Het patroon van de PSQL-verbindingstekenreeks is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | De verbindingsspecificatie-id voor PSQL is: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 **Antwoord**
 
@@ -177,4 +117,4 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe basisverbind
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen hebt u een PSQL-basisverbinding gemaakt met de Flow Service API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze basis verbindings identiteitskaart in de volgende zelfstudie gebruiken aangezien u leert om gegevensbestanden of systemen te [onderzoeken NoSQL gebruikend de Dienst API](../../explore/database-nosql.md)van de Stroom.
+Door deze zelfstudie te volgen, hebt u een verbinding PSQL gebruikend de Dienst API van de Stroom gecreeerd, en hebt de unieke waarde van identiteitskaart van de verbinding verkregen. U kunt deze verbindingsID in de volgende zelfstudie gebruiken aangezien u leert hoe te om gegevensbestanden of systemen te [onderzoeken NoSQL gebruikend de Dienst API](../../explore/database-nosql.md)van de Stroom.
