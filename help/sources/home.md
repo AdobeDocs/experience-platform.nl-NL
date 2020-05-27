@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
+source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Met het Experience Platform kunnen gegevens uit andere Adobe-toepassingen worden
 
 Het Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde advertentiesysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [Google Ads-connector](connectors/advertising/ads.md)
+- [Google AdWords-connector](connectors/advertising/ads.md)
 
 ### Cloud Storage
 
