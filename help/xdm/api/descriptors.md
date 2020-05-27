@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Beschrijvers
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 599991af774e283d9fb60216e3d3bd5b17cf8193
+source-git-commit: c8cc57a8629f04c7af68b6f5cfee365527caa3c1
+workflow-type: tm+mt
+source-wordcount: '1499'
+ht-degree: 0%
 
 ---
 
@@ -301,20 +304,25 @@ Een identiteitsbeschrijving geeft aan dat de &quot;sourceProperty&quot; van de &
 
 #### Beschrijvende naam
 
-Met de beschrijvingen van uw vriendschappelijke naam kan een gebruiker de `title` en de `description` waarden van de kernvelden van het bibliotheekschema wijzigen. Dit is vooral handig wanneer u werkt met &quot;eVars&quot; en andere &quot;generieke&quot; velden die u wilt labelen voor informatie die specifiek is voor uw organisatie. De gebruikersinterface kan deze gebruiken om een vriendelijkere naam weer te geven of om alleen velden met een vriendelijke naam weer te geven.
+Met beschrijvende namen met een vriendelijke naam kan een gebruiker de `title`, `description`en `meta:enum` waarden van de kernvelden van het bibliotheekschema wijzigen. Dit is vooral handig wanneer u werkt met &quot;eVars&quot; en andere &quot;generieke&quot; velden die u wilt labelen voor informatie die specifiek is voor uw organisatie. De gebruikersinterface kan deze gebruiken om een vriendelijkere naam weer te geven of om alleen velden met een vriendelijke naam weer te geven.
 
 ```json
 {
   "@type": "xdm:alternateDisplayInfo",
   "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
-  "xdm:sourceVersion": 1
-  "xdm:sourceProperty": "/eVars/eVar1",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
   "xdm:title": {
-    "en_us":{"Loyalty ID"}
+    "en_us": "Event Type"
   },
   "xdm:description": {
-    "en_us":{"Unique ID of loyalty program member."}
+    "en_us": "The type of experience event detected by the system."
   },
+  "meta:enum": {
+    "click": "Mouse Click",
+    "addCart": "Add to Cart",
+    "checkout": "Cart Checkout"
+  }
 }
 ```
 
@@ -326,6 +334,7 @@ Met de beschrijvingen van uw vriendschappelijke naam kan een gebruiker de `title
 | `xdm:sourceProperty` | Het pad naar de specifieke eigenschap die de identiteit zal zijn. Het pad moet beginnen met een &quot;/&quot; en niet eindigen met een pad. Plaats geen &quot;eigenschappen&quot; in het pad (gebruik bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;) |
 | `xdm:title` | De nieuwe titel die u voor dit veld wilt weergeven, geschreven in Alles Beginhoofdletter. |
 | `xdm:description` | Een optionele beschrijving kan samen met de titel worden toegevoegd. |
+| `meta:enum` | Als het veld dat wordt aangegeven door een tekenreeksveld `xdm:sourceProperty` is, wordt de lijst met voorgestelde waarden voor het veld in de gebruikersinterface van het ervaringsplatform `meta:enum` bepaald. Het is belangrijk om op te merken dat `meta:enum` geen opsomming verklaart of om het even welke gegevensbevestiging voor het XDM gebied verstrekt.<br><br>Deze mag alleen worden gebruikt voor de belangrijkste XDM-velden die door Adobe zijn gedefinieerd. Als de broneigenschap een aangepast veld is dat door uw organisatie is gedefinieerd, moet u in plaats daarvan de `meta:enum` eigenschap van het veld rechtstreeks bewerken via een [PUT-aanvraag](./update-resource.md). |
 
 #### Relatiebeschrijving
 
