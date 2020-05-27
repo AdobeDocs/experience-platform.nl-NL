@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Real-time Machine Learning-overzicht
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Het leren van machines in real time is momenteel in alpha. De hieronder beschrev
 > Alfa-beperkingen:
 > - Momenteel worden alleen ONNX-modellen ondersteund.
 > - De functies die in knopen worden gebruikt kunnen niet in series worden vervaardigd. Bijvoorbeeld, een lambdafunctie die in een knoop van Pandas wordt gebruikt.
-> - Er is 60 seconden slaap nadat de plaatsing van de Rand manueel wordt gedaan.
+> - Er is 20 seconden slaap nadat de plaatsing van de Rand manueel wordt gedaan.
 > - Voor diep leren, moeten uw gegevens op een zodanige manier worden verzonden dat wanneer `df.values` wordt geroepen het een serie terugkeert die door uw model DL aanvaardbaar is. Dit komt doordat de ONNX model scoring node gebruikt `df.values` en de uitvoer naar de score verzendt tegen het model.
 
 
