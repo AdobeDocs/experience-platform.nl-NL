@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Azure Table Storage-bronconnector in de gebruikersinterface maken
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Als u toegang wilt krijgen tot uw ATS-account op Platform, moet u de volgende wa
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | Een verbindingstekenreeks waarmee u verbinding maakt met uw Azure Table Storage-instantie. |
+| `connectionString` | Een verbindingstekenreeks waarmee u verbinding maakt met uw Azure Table Storage-instantie. De verbindingstekenreeks waarmee verbinding moet worden gemaakt met een ATS-instantie. Het patroon van de verbindingstekenreeks voor ATS is `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 
 Raadpleeg [dit Azure Table Storage-document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)voor meer informatie over hoe u aan de slag gaat.
 
