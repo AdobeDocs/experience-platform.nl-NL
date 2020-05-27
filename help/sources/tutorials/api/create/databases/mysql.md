@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een MySQL-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -36,9 +36,10 @@ Opdat de Dienst van de Stroom met uw opslag MySQL verbindt, moet u de waarde voo
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De MySQL-verbindingstekenreeks die aan uw account is gekoppeld. |
+| `connectionString` | De MySQL-verbindingstekenreeks die aan uw account is gekoppeld. Het MySQL patroon van de verbindingstekenreeks is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | De id die wordt gebruikt om een verbinding te genereren. De vaste verbindingsspecificatie-id voor MySQL is `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
-U kunt meer leren over verbindingskoorden en hoe te om hen te verkrijgen door het document [te lezen](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)MySQL.
+Raadpleeg [dit MySQL-document](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)voor meer informatie over het verkrijgen van een verbindingstekenreeks.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -60,77 +61,9 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 * Inhoudstype: `application/json`
 
-## Verbindingsspecificaties opzoeken
+## Verbinding maken
 
-Om een verbinding te creëren MySQL, moet een reeks MySQL verbindingsspecificaties binnen de Dienst van de Stroom bestaan. De eerste stap in het verbinden van Platform met MySQL is deze specificaties terug te winnen.
-
-**API-indeling**
-
-Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. Het verzenden van een GET verzoek aan het `/connectionSpecs` eindpunt zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag ook omvatten `property=name=="mysql"` om informatie specifiek voor MySQL te verkrijgen.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="mysql"
-```
-
-**Verzoek**
-
-Het volgende verzoek wint de verbindingsspecificatie voor MySQL terug.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="mysql"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-Een succesvolle reactie keert de verbindingsspecificaties voor MySQL, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap voor het maken van een basisverbinding.
-
-```json
-{
-    "items": [
-        {
-            "id": "26d738e0-8963-47ea-aadf-c60de735468a",
-            "name": "mysql",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Connection String Based Authentication",
-                    "type": "connectionStringAuth",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to MySql",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "connection string to connect to any MySql instance.",
-                                "format": "password",
-                                "pattern": "^([sS]erver=)(.*)( ?;[pP]ort=)(.*)(; ?[dD]atabase=)(.*)(; ?[uU]id=)(.*)(; ?[pP]wd=)(.*)(;)",
-                                "examples": [
-                                    "Server=myserver.mysql.database.azure.com; Port=3306; Database=my_sql_db; Uid=username; Pwd=password; SslMode=Preferred;"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Een basisverbinding maken
-
-Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per MySQL-account is slechts één basisverbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Er is slechts één verbinding vereist per MySQL-account, omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
 
 **API-indeling**
 
@@ -139,6 +72,8 @@ POST /connections
 ```
 
 **Verzoek**
+
+Als u een MySQL-verbinding wilt maken, moet de unieke specificatie-id van de verbinding worden opgegeven als onderdeel van de POST-aanvraag. De verbindingsspecificatie-id voor MySQL is `26d738e0-8963-47ea-aadf-c60de735468a`.
 
 ```shell
 curl -X POST \
@@ -154,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -166,12 +101,12 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die aan uw MySQL-account is gekoppeld. |
-| `connectionSpec.id` | De id van de verbindingsspecificatie die is gekoppeld aan uw MySQL-account. |
+| `auth.params.connectionString` | De MySQL-verbindingstekenreeks die aan uw account is gekoppeld. Het MySQL patroon van de verbindingstekenreeks is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | De vaste verbindingsspecificatie-id voor MySQL: `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 **Antwoord**
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist om uw database te verkennen in de volgende zelfstudie.
 
 ```json
 {
@@ -182,4 +117,4 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een MySQL basisverbinding gebruikend de Dienst API van de Stroom gecreeerd, en hebt de unieke waarde van identiteitskaart van de verbinding verkregen. U kunt deze basis verbindings identiteitskaart in de volgende zelfstudie gebruiken aangezien u leert om gegevensbestanden of systemen te [onderzoeken NoSQL gebruikend de Dienst API](../../explore/database-nosql.md)van de Stroom.
+Door deze zelfstudie te volgen, hebt u een verbinding MySQL gebruikend de Dienst API van de Stroom gecreeerd, en hebt de unieke waarde van identiteitskaart van de verbinding verkregen. U kunt deze verbindingsID in de volgende zelfstudie gebruiken aangezien u leert hoe te om gegevensbestanden of systemen te [onderzoeken NoSQL gebruikend de Dienst API](../../explore/database-nosql.md)van de Stroom.
