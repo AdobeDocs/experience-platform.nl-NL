@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Azure Blob-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,10 @@ Voor de Dienst van de Stroom om met uw opslag van Blob te verbinden, moet u waar
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die is vereist voor toegang tot gegevens in de blob-opslag. |
+| `connectionString` | De verbindingstekenreeks die is vereist voor toegang tot gegevens in de blob-opslag. Het patroon van de Blob-verbindingstekenreeks is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor Blob is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-Voor meer informatie over aan de slag gaan, bezoek [dit Azure Blob-document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
+Raadpleeg [dit Azure Blob-document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)voor meer informatie over het verkrijgen van een verbindingstekenreeks.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -71,6 +72,8 @@ POST /connections
 
 **Verzoek**
 
+Als u een blob-verbinding wilt maken, moet de unieke id van de verbindingsspecificatie worden opgegeven als onderdeel van de POST-aanvraag. De verbindingsspecificatie-id voor Blob is `4c10e202-c428-4796-9208-5f1f5732b1cf`.
+
 ```shell
 curl -X POST \
     'http://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -85,7 +88,7 @@ curl -X POST \
         "auth": {
             "specName": "ConnectionString",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -97,8 +100,8 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks voor de blob-opslag. |
-| `connectionSpec.id` | De Klob-specificatie voor opslagverbinding ID: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | De verbindingstekenreeks die is vereist voor toegang tot gegevens in de blob-opslag. Het patroon van de Blob-verbindingstekenreeks is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | De Klob-specificatie voor de opslagverbinding is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **Antwoord**
 
