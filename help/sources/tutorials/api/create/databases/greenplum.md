@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een GreenPlum-aansluiting maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '566'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ De volgende secties verstrekken extra informatie die u zult moeten weten om met 
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw instantie GreenPlum. Het patroon van de verbindingstekenreeks voor GreenPlum is `HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw instantie GreenPlum. Het patroon van de verbindingstekenreeks voor GreenPlum is `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | De id die nodig is om een verbinding te maken. The fixed connection spec ID for GreenPlum is `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 Raadpleeg [dit GreenPlum-document](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn)voor meer informatie over het ophalen van een verbindingstekenreeks.
@@ -85,7 +85,7 @@ curl -X POST \
         "auth": {
             "specName": "Basic Authentication",
             "params": {
-                    "connectionString": "HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>"
+                    "connectionString": "HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}"
                 }
         },
         "connectionSpec": {
@@ -97,8 +97,8 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die is gekoppeld aan uw GreenPlum-account. |
-| `connectionSpec.id` | De ID van de DB2-verbindingsspecificatie: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met een GreenPlum-account. Het patroon van de verbindingstekenreeks is: `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | The GreenPlum connection spec ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 **Antwoord**
 
