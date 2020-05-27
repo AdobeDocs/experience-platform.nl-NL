@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruikershandleiding voor laptop in realtime leren van machines
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 695eba3885dc319a9b7f73eb710b2ada0b17d24d
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,8 @@ Begin met het laden van uw trainingsgegevens.
 >[!NOTE]
 >In het **Real-Time ML** malplaatje, wordt de [Csv- dataset](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) van de autoverzekering gegrabd van Github.
 
+![Trainingsgegevens laden](../images/rtml/load_training.png)
+
 Als u een gegevensset wilt gebruiken vanuit het Adobe Experience Platform, verwijdert u de commentaarmarkering uit de onderstaande cel. Vervolgens moet u deze vervangen door `DATASET_ID` de juiste waarde.
 
 ![rtml-gegevensset](../images/rtml/rtml-dataset.png)
@@ -114,7 +116,7 @@ Met de *Real-Time ML* -sjabloon moet u uw ML-model analyseren, vooraf verwerken,
 De *Echte cel van de Transformaties* van XML *malplaatjes van* Gegevens moet worden gewijzigd om met uw eigen dataset te werken. Doorgaans gaat het hier om het wijzigen van de naam van kolommen, rollup van gegevens en het voorbereiden en bewerken van gegevens.
 
 >[!NOTE]
->Het volgende voorbeeld is voor leesbaarheidsdoeleinden gecondenseerd met gebruik van `[ ... ]`. Gelieve te bekijken het malplaatje van *real-time ML* voor de volledige codecel.
+>Het volgende voorbeeld is voor leesbaarheidsdoeleinden gecondenseerd met gebruik van `[ ... ]`. Gelieve te bekijken en uit te breiden de sectie van de transformaties van de malplaatjegegevens in *real time van ML* voor de volledige codelel.
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -189,7 +191,7 @@ cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 
 df_final = pd.get_dummies(df_final, columns = cat_cols)
 ```
 
-Voer de opgegeven cel uit om een voorbeeldresultaat te zien. De outputlijst die van de `carinsurancedataset.csv` dataset is teruggekeerd keert de gedefinieerde wijzigingen terug.
+Voer de opgegeven cel uit om een voorbeeldresultaat te zien. De outputlijst die van de `carinsurancedataset.csv` dataset is teruggekeerd keert de wijzigingen terug u bepaalde.
 
 ![Voorbeeld van gegevenstransformaties](../images/rtml/table-return.png)
 
@@ -237,18 +239,23 @@ import skl2onnx, subprocess
 model.generate_onnx_resources()
 ```
 
+>[!NOTE]
+>Wijzig de `model_path` tekenreekswaarde (`model.onnx`) om de naam van het model te wijzigen.
+
 ```python
 model_path = "model.onnx"
+```
 
+>[!NOTE]
+>De volgende cel is niet bewerkbaar of kan worden verwijderd en is vereist voor het werken van uw toepassing voor het leren van machines in realtime.
+
+```python
 model = ModelUpload(params={'model_path': model_path})
 msg_model = model.process(None, 1)
 model_id = msg_model.model['model_id']
  
 print("Model ID : ", model_id)
 ```
-
->[!NOTE]
->Wijzig de `model_path` tekenreekswaarde om het model een naam te geven.
 
 ![ONNX-model](../images/rtml/onnx-model-rail.png)
 
@@ -272,7 +279,7 @@ Deze sectie schetst het creëren van een DSL. U gaat de knopen schrijven die om 
 ### Node authoring
 
 >[!NOTE]
-> U hebt waarschijnlijk meerdere knooppunten op basis van het type gegevens dat wordt gebruikt. Het volgende voorbeeld schetst slechts één enkele knoop in het malplaatje van *Real-time ML* . Gelieve te bekijken het malplaatje van *real-time ML* voor de volledige codecel.
+> U hebt waarschijnlijk meerdere knooppunten op basis van het type gegevens dat wordt gebruikt. Het volgende voorbeeld schetst slechts één enkele knoop in het malplaatje van *Real-time ML* . Bekijk de *Real-time sectie van HTML* malplaatjes *van de Authoring* van de Knoop voor de volledige codecel.
 
 Het knooppunt Pandas hieronder gebruikt `"import": "map"` om de methodenaam als een tekenreeks in de parameters te importeren, gevolgd door de parameters in te voeren als een kaartfunctie. In het onderstaande voorbeeld wordt dit gedaan met behulp van `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. Nadat u de kaart hebt geplaatst, hebt u de optie om te plaatsen `inplace` als `True` of `False`. Instellen `inplace` als `True` of `False` op basis van de vraag of u transformatie wilt toepassen. Standaard wordt een nieuwe kolom `"inplace": False` gemaakt. Ondersteuning voor het opgeven van een nieuwe kolomnaam is ingesteld om in een volgende release te worden toegevoegd. De laatste regel `cols` kan één kolomnaam of een lijst met kolommen zijn. Geef de kolommen op waarop u de transformatie wilt toepassen. In dit voorbeeld `leasing` wordt opgegeven. Voor meer informatie over de beschikbare knopen en hoe te om hen te gebruiken, bezoek de gids [van de](./node-reference.md)knoopverwijzing.
 
@@ -323,7 +330,7 @@ Sluit vervolgens de knooppunten aan op de randen. Elke tuple is een Edge-verbind
 edges = [(nodes[i], nodes[i+1]) for i in range(len(nodes)-1)]
 ```
 
-Maak de grafiek wanneer uw knooppunten zijn verbonden.
+Maak de grafiek wanneer uw knooppunten zijn verbonden. De onderstaande cel is verplicht en kan niet worden bewerkt of verwijderd.
 
 ```python
 dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
@@ -413,10 +420,33 @@ Gebruik de volgende cel binnen het malplaatje van *real time van XML* aan score 
 
 Zodra het scoren is voltooid, worden de Edge URL, Payload en de gescorde uitvoer van de Edge geretourneerd.
 
-## Een geïmplementeerde app verwijderen uit Edge (optioneel)
+## Maak een lijst met uw geïmplementeerde apps vanuit Edge
 
->!![CAUTION]
-Deze cel wordt gebruikt om uw geïmplementeerde Edge-toepassing te verwijderen. Gebruik de volgende cel alleen als u een geïmplementeerde Edge-toepassing moet verwijderen.
+Als u een lijst wilt genereren met de apps die u op dat moment aan de rand hebt geïmplementeerd, voert u de volgende codecel uit. Deze cel kan niet worden bewerkt of verwijderd.
+
+```python
+services = edge_utils.list_deployed_services()
+print(services)
+```
+
+De teruggekeerde reactie is een serie van uw opgestelde diensten.
+
+```json
+[
+    {
+        "created": "2020-05-25T19:18:52.731Z",
+        "deprecated": false,
+        "id": "40eq76c0-1c6f-427a-8f8f-54y9cdf041b7",
+        "type": "edge",
+        "updated": "2020-05-25T19:18:52.731Z"
+    }
+]
+```
+
+## Een geïmplementeerde app of service-id verwijderen uit de Edge (optioneel)
+
+>[!CAUTION]
+>Deze cel wordt gebruikt om uw geïmplementeerde Edge-toepassing te verwijderen. Gebruik de volgende cel alleen als u een geïmplementeerde Edge-toepassing moet verwijderen.
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
