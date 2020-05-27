@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Azure Table Storage-connector maken met behulp van de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
@@ -36,10 +36,10 @@ Voor de Dienst van de Stroom om met ATS te verbinden, moet u waarden voor de vol
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks voor verbinding met de Azure Table Storage-instantie. |
-| `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met een ATS-instantie. Het patroon van de verbindingstekenreeks voor ATS is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | De id die wordt gebruikt om een verbinding te genereren. De vaste verbindingsspecificatie-id voor ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
-Raadpleeg [dit ATS-document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)voor meer informatie over aan de slag gaan.
+Raadpleeg [dit ATS-document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)voor meer informatie over het verkrijgen van een verbindingstekenreeks.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -73,7 +73,7 @@ POST /connections
 
 **Verzoek**
 
-Als u een ATS-verbinding wilt maken, moet de unieke id van de verbindingsspecificatie worden opgegeven als onderdeel van de POST-aanvraag. De verbindingsspecificatie-id voor ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
+Als u een ATS-verbinding wilt maken, moet de unieke specificatie-id van de verbinding worden opgegeven als onderdeel van de POST-aanvraag. De verbindingsspecificatie-id voor ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
 
 ```shell
 curl -X POST \
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -101,8 +101,8 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die aan uw ATS-account is gekoppeld. |
-| `connectionSpec.id` | De ATS-specificatie-id: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met een ATS-instantie. Het patroon van de verbindingstekenreeks voor ATS is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | De specificatie-id van de ATS-verbinding is: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **Antwoord**
 
