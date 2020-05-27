@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Azure Blob- of Amazon S3-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -37,9 +37,22 @@ Het Experience Platform ondersteunt de volgende bestandsindelingen die in extern
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt tot uw blob-opslag op Platform, moet u een geldige **Azure Storage-verbindingstekenreeks** opgeven. U kunt meer over verbindingskoorden leren met inbegrip van manieren om hen door <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string" target="_blank">dit document</a>van Microsoft Azure te verkrijgen.
+Als u toegang wilt tot uw blob-opslag op Platform, moet u een geldige waarde opgeven voor de volgende referentie:
 
-Op dezelfde manier vereist de toegang tot van uw S3 emmertje op Platform u uw Sleutel **van de Toegang** S3 en **S3 Geheime Sleutel** te verstrekken. Raadpleeg <a href="https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/" target="_blank">dit AWS-document</a>voor meer informatie.
+| Credentials | Beschrijving |
+| ---------- | ----------- |
+| `connectionString` | De verbindingstekenreeks die is vereist voor toegang tot gegevens in de blob-opslag. Het patroon van de Blob-verbindingstekenreeks is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+
+Voor meer informatie over aan de slag gaan, bezoek [dit Azure Blob-document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
+
+Op dezelfde manier vereist de toegang tot van uw S3 emmertje op Platform u om uw geldige waarden voor de volgende geloofsbrieven te verstrekken:
+
+| Credentials | Beschrijving |
+| ---------- | ----------- |
+| `s3AccessKey` | De toegangs belangrijkste identiteitskaart voor uw S3 opslag. |
+| `s3SecretKey` | De geheime zeer belangrijke identiteitskaart voor uw S3 opslag. |
+
+Ga naar [dit AWS-document](https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/)voor meer informatie over aan de slag gaan.
 
 ## Sluit uw Blob- of S3-account aan
 
