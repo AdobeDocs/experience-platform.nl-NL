@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Microsoft SQL Server-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Om met SQL Server op Platform te verbinden, moet u het volgende verbindingsbezit
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die is gekoppeld aan uw SQL Server-account. |
+| `connectionString` | De verbindingstekenreeks die is gekoppeld aan uw SQL Server-account. Het patroon van de SQL-serververbindingstekenreeks is: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
 
 Gelieve te verwijzen naar [dit document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) voor meer informatie over het worden begonnen met SQL Server.
 
