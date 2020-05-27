@@ -1,19 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Een Google Ads-connector maken met de Flow Service API
+title: Een Google AdWords-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 950fa88ed6c9235bff98658763b662113bb76caa
+source-git-commit: 00f785577999d2ec3147a3cc2b8edd1028be2471
+workflow-type: tm+mt
+source-wordcount: '647'
+ht-degree: 0%
 
 ---
 
 
-# Een Google Ads-connector maken met de Flow Service API
+# Een Google AdWords-connector maken met de Flow Service API
 
 De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform te verbinden met Google Ads.
+Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform te verbinden met Google AdWords.
 
 ## Aan de slag
 
@@ -26,18 +29,18 @@ In de volgende secties vindt u aanvullende informatie die u nodig hebt om verbin
 
 ### Vereiste referenties verzamelen
 
-Voor de Dienst van de Stroom om met Advertenties te verbinden, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
+Voor de Dienst van de Stroom om met AdWords te verbinden, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
 
 | **Credentials** | **Beschrijving** |
 | -------------- | --------------- |
-| Klant-id klant | De klant-id van de client voor het account Advertentie. |
+| Klant-id klant | De klant-id van de client van het account AdWords. |
 | Developer Token | Het ontwikkelaarstoken verbonden aan de managerrekening. |
-| Token vernieuwen | Het vernieuwingstoken dat bij Google is verkregen voor het toestaan van toegang tot advertenties. |
+| Token vernieuwen | Het vernieuwingstoken dat bij Google is verkregen voor het toestaan van toegang tot AdWords. |
 | Client-id | De client-id van de Google-toepassing waarmee de vernieuwingstoken wordt aangeschaft. |
 | Clientgeheim | Het clientgeheim van de Google-toepassing die wordt gebruikt om het vernieuwingstoken te verkrijgen. |
-| Verbindingsspecificatie-id | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor Google Ads is: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| Verbindingsspecificatie-id | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor Google AdWords is: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
-Raadpleeg dit [Google Ads-document](https://developers.google.com/adwords/api/docs/guides/authentication)voor meer informatie over deze waarden.
+Raadpleeg dit [Google AdWords-document](https://developers.google.com/adwords/api/docs/guides/authentication)voor meer informatie over deze waarden.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -61,7 +64,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Verbinding maken
 
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Er is slechts één verbinding vereist per Google Ads-account, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het invoeren van verschillende gegevens.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Er is slechts één verbinding vereist per Google AdWords-account, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het invoeren van verschillende gegevens.
 
 **API-indeling**
 
@@ -71,7 +74,7 @@ POST /connections
 
 **Verzoek**
 
-Als u een Google Ads-verbinding wilt maken, moet de unieke id van de verbindingsspecificatie worden opgegeven als onderdeel van de POST-aanvraag. De verbindingsspecificatie-id voor Google Ads is `221c7626-58f6-4eec-8ee2-042b0226f03b`.
+Als u een Google AdWords-verbinding wilt maken, moet de unieke id van de verbindingsspecificatie worden opgegeven als onderdeel van de POST-aanvraag. De verbindingsspecificatie-id voor Google AdWords is `221c7626-58f6-4eec-8ee2-042b0226f03b`.
 
 ```shell
 curl -X POST \
@@ -82,8 +85,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "google-ads connection",
-        "description": "Connection for google-ads",
+        "name": "google-AdWords connection",
+        "description": "Connection for google-AdWords",
         "auth": {
             "specName": "Basic Authentication",
             "params": {
@@ -104,16 +107,16 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `auth.params.clientCustomerID` | De client-id van uw Ads-account. |
-| `auth.params.developerToken` | De ontwikkelaarstoken van uw Ads-account. |
-| `auth.params.refreshToken` | Het token Vernieuwen van uw Ads-account. |
-| `auth.params.clientID` | De client-id van uw advertentieaccount. |
-| `auth.params.clientSecret` | Het clientgeheim van je Ads-account. |
-| `connectionSpec.id` | De specificatie-id voor Google Ads: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `auth.params.clientCustomerID` | De client-id van uw AdWords-account. |
+| `auth.params.developerToken` | De ontwikkelaarstoken van uw account AdWords. |
+| `auth.params.refreshToken` | Het vernieuwingstoken van uw account AdWords. |
+| `auth.params.clientID` | De client-id van uw AdWords-account. |
+| `auth.params.clientSecret` | Het clientgeheim van uw AdWords-account. |
+| `connectionSpec.id` | De Google AdWords-verbindingsspecificatie-id: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
 ```json
 {
@@ -124,4 +127,4 @@ Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, in
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een Google Ads-verbinding gemaakt met de Flow Service API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken als u wilt leren [op welke manier u advertentiesystemen kunt verkennen met behulp van de Flow Service API](../../explore/advertising.md).
+Aan de hand van deze zelfstudie hebt u een Google AdWords-verbinding gemaakt met de Flow Service API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken als u wilt leren [op welke manier u advertentiesystemen kunt verkennen met behulp van de Flow Service API](../../explore/advertising.md).
