@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Segmentatieservice
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
+source-git-commit: e25ce403034a94d7024e8c244cb438bd9dfe0c5f
+workflow-type: tm+mt
+source-wordcount: '429'
+ht-degree: 0%
 
 ---
 
@@ -82,7 +85,11 @@ For more information on using this endpoint, please read the [segment definition
 
 De banen van het segment verwerken eerder vastgestelde segmentdefinities om een publiekssegment te produceren. U kunt het `/segment/jobs` eindpunt gebruiken om een lijst van segmentbanen terug te winnen, een nieuwe segmentbaan tot stand te brengen, details van een specifieke segmentbaan terug te winnen, of een specifieke segmentbaan te schrappen.
 
-Voor meer informatie bij het gebruiken van dit eindpunt, te lezen gelieve de gids [van de de](./segment-jobs.md)segmentbaanontwikkelaar.
+Voor meer informatie bij het gebruiken van dit eindpunt, te lezen gelieve de gids [van de](./segment-jobs.md)segmentbaanontwikkelaar.
+
+## Segmentzoekopdracht
+
+Het onderzoek van het segment wordt gebruikt aan onderzoek en index configureerbare gebieden die over diverse gegevensbronnen worden bevat en hen in bijna real time terugkeren. Zie de handleiding voor [zoekprogramma&#39;s voor meer informatie over het werken met segmentzoekopdrachten](segment-search.md)
 
 ## Volgende stappen
 
