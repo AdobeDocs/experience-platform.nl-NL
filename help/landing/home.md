@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van het Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 7a36a3e3180c4ed4a9db23c0a33f6af3d7a3a5ec
+source-git-commit: efc8598d14bcae9637ce80c25f1285d93aeee742
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 0%
 # Overzicht van het Adobe Experience Platform
 
 >[!NOTE]
+>
 >De documentatie van het Adobe Experience Platform is onlangs verplaatst. Neem even de tijd om de nieuwe navigatie te bekijken en bestaande bladwijzers bij te werken.
 
 Het Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten vergroten. Met het Experience Platform kunnen organisaties klantgegevens en -inhoud uit elk systeem centraliseren en standaardiseren en datamateriaal en computerleren toepassen om het ontwerp en de levering van rijke, persoonlijke ervaringen drastisch te verbeteren.
@@ -42,6 +43,10 @@ Van tijd tot tijd, zou u een onderzoek voor extra terugkoppelen kunnen ontvangen
 ## Zelfstudies voor het ervaringsplatform
 
 Ga snel en eenvoudig aan de slag met Platform door stapsgewijze zelfstudies voor alles te volgen, van het voorbereiden van uw gegevens voor opname tot geavanceerde computerleeralgoritmen. Deze zelfstudies zijn ontworpen als aanvulling op de informatie in de documentatie van het ervaringsplatform, zodat u de documenten voor de beste resultaten ter beschikking kunt houden tijdens het voltooien van de zelfstudies. Ga naar de zelfstudies [van het](../tutorials/home.md) ervaringsplatform om aan de slag te gaan.
+
+## Videozelfstudies
+
+Bekijk [videozelfstudies](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) voor een groot aantal verschillende onderwerpen in het Experience Platform.
 
 ## Referentiedocumenten en -bronnen
 
