@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creeer een MySQL bronschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Als u toegang wilt krijgen tot uw MySQL-account op Platform, moet u de volgende 
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De MySQL-verbindingstekenreeks die aan uw account is gekoppeld. |
+| `connectionString` | De MySQL-verbindingstekenreeks die aan uw account is gekoppeld. Het MySQL patroon van de verbindingstekenreeks is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
 U kunt meer leren over verbindingskoorden en hoe te om hen te verkrijgen door het document [te lezen](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)MySQL.
 
