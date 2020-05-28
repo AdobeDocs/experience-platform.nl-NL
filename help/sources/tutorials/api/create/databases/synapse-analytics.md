@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Azure Synapse Analytics-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -36,10 +36,10 @@ Voor de Dienst van de Stroom om met Synapse te verbinden, moet u waarden voor de
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks waarmee verbinding wordt gemaakt met Azure Synapse Analytics. |
+| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met Synapse. Het synchronisatiepatroon van de verbinding is `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 | `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor Synapse is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 
-Zie [dit Synapse-document](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell)voor meer informatie over aan de slag gaan.
+Raadpleeg [dit synapsdocument](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell)voor meer informatie over het verkrijgen van een verbindingstekenreeks.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30"
             }
         },
         "connectionSpec": {
@@ -101,12 +101,12 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die aan uw Synapse-account is gekoppeld. |
-| `connectionSpec.id` | The Synapse connection specification ID: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
+| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met Synapse. Het synchronisatiepatroon van de verbinding is `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
+| `connectionSpec.id` | De ID van de de verbindingsspecificatie van Synapse is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
 
 **Antwoord**
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw database te verkennen in de volgende zelfstudie.
 
 ```json
 {
