@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creeer HP Vertica bronschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -36,7 +36,7 @@ De volgende secties verstrekken extra informatie die u zult moeten weten om met 
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die wordt gebruikt om met uw instantie van HP Vertica te verbinden. Het patroon van de verbindingstekenreeks voor HP Vertica is `Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | De verbindingstekenreeks die wordt gebruikt om met uw instantie van HP Vertica te verbinden. Het patroon van de verbindingstekenreeks voor HP Vertica is `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
 Voor meer informatie over begonnen worden verwijs naar [dit document](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)van HP Vertica.
 
