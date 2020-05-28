@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Azure Synapse Analytics-bronconnector in de gebruikersinterface maken
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ U moet de volgende waarden opgeven om toegang te krijgen tot uw Synapse-account 
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die aan uw Synapse-verificatie is gekoppeld. |
+| `connectionString` | De verbindingstekenreeks die aan uw Synapse-verificatie is gekoppeld. Het synchronisatiepatroon van de verbinding is `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 
 Raadpleeg [dit Synapse-document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse)voor meer informatie over deze waarde.
 
