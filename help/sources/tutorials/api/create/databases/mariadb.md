@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een MariaDB-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om het Platform van de Ervaring aan Maria DB te verbinden.
+Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om het Platform van de Ervaring aan MariaDB te verbinden.
 
 ## Aan de slag
 
@@ -28,17 +28,18 @@ Voor deze handleiding is een goed begrip vereist van de volgende componenten van
 * [Bronnen](../../../../home.md): Het Platform van de ervaring laat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform.
 * [Sandboxen](../../../../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met Maria DB met behulp van de Flow Service API.
+De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met MariaDB met behulp van de Flow Service API.
 
 ### Vereiste referenties verzamelen
 
-Voor de Dienst van de Stroom om met Maria DB te verbinden, moet u het volgende verbindingsbezit verstrekken:
+Voor de Dienst van de Stroom om met MariaDB te verbinden, moet u het volgende verbindingsbezit verstrekken:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die is gekoppeld aan uw Maria DB-verificatie. |
+| `connectionString` | De verbindingstekenreeks die aan uw MariaDB-verificatie is gekoppeld. Het MariaDB-patroon van de verbindingstekenreeks is: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | De id die wordt gebruikt om een verbinding te genereren. De vaste verbinding-specificatie-id voor MariaDB is `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
-Raadpleeg [dit document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) voor meer informatie over hoe u aan de slag gaat met Maria DB.
+Raadpleeg [dit MariaDB-document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/)voor meer informatie over het verkrijgen van een verbindingstekenreeks.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -60,77 +61,9 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 * Inhoudstype: `application/json`
 
-## Verbindingsspecificaties opzoeken
+## Verbinding maken
 
-Om verbinding te maken met Maria DB, moet er een reeks Maria DB-verbindingsspecificaties bestaan binnen Flow Service. De eerste stap bij het verbinden van Platform met Maria DB is deze specificaties terug te winnen.
-
-**API-indeling**
-
-Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. Het verzenden van een GET verzoek aan het `/connectionSpecs` eindpunt zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=name=="maria-db"` om informatie specifiek voor Maria DB te verkrijgen.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="maria-db"
-```
-
-**Verzoek**
-
-In het volgende verzoek worden de verbindingsspecificaties voor Maria DB opgehaald.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="maria-db"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-Een geslaagde reactie retourneert de verbindingsspecificaties voor Maria DB, inclusief de unieke id (`id`). Deze id is vereist in de volgende stap om een basisverbinding te maken.
-
-```json
-{
-    "items": [
-        {
-            "id": "3000eb99-cd47-43f3-827c-43caf170f015",
-            "name": "maria-db",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Connection String Based Authentication",
-                    "type": "connectionStringAuth",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to Maria DB",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "connection string to connect to any Maria DB instance.",
-                                "format": "password",
-                                "pattern": "^(Server=)(.*)(;Port=)(.*)(;Database=)(.*)(;UID=)(.*)(;PWD=)(.*)",
-                                "examples": [
-                                    "Server=<host>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ],
-        }
-    ]
-}
-```
-
-## Een basisverbinding maken
-
-Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per Maria DB-account is slechts één basisverbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Er is slechts één verbinding vereist per MariaDB-account, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor verschillende gegevens.
 
 **API-indeling**
 
@@ -139,6 +72,8 @@ POST /connections
 ```
 
 **Verzoek**
+
+Als u een MariaDB-verbinding wilt maken, moet de unieke specificatie-id van de verbinding worden opgegeven als onderdeel van de POST-aanvraag. De verbindingsspecificatie-id voor MariaDB is `3000eb99-cd47-43f3-827c-43caf170f015`.
 
 ```shell
 curl -X POST \
@@ -149,12 +84,12 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "base connection for maria-db",
-        "description": "base connection for maria-db",
+        "name": "Test connection for maria-db",
+        "description": "Test connection for maria-db",
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -166,12 +101,12 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die is gekoppeld aan uw Maria DB-verificatie. |
-| `connectionSpec.id` | De verbindingsspecificatie (`id`) die in de vorige stap wordt verzameld. |
+| `auth.params.connectionString` | De verbindingstekenreeks die aan uw MariaDB-verificatie is gekoppeld. Het MariaDB-patroon van de verbindingstekenreeks is: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | De MariaDB-verbindings-specificatie-id is: `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
 **Antwoord**
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist om uw cloudopslag in de volgende stap te verkennen.
+Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist om uw database in de volgende stap te verkennen.
 
 ```json
 {
@@ -182,4 +117,4 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een Maria DB-basisverbinding gemaakt met de Flow Service API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze basis verbindings identiteitskaart in de volgende zelfstudie gebruiken aangezien u leert om gegevensbestanden of systemen te [onderzoeken NoSQL gebruikend de Dienst API](../../explore/database-nosql.md)van de Stroom.
+Aan de hand van deze zelfstudie hebt u een MariaDB-verbinding gemaakt met de Flow Service API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze verbindingsID in de volgende zelfstudie gebruiken aangezien u leert hoe te om gegevensbestanden of systemen te [onderzoeken NoSQL gebruikend de Dienst API](../../explore/database-nosql.md)van de Stroom.
