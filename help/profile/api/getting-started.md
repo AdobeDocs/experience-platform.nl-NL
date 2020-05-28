@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: 8449681a7fd0fc5dccf4837a1e8e512f1e2f2601
+workflow-type: tm+mt
+source-wordcount: '954'
+ht-degree: 0%
 
 ---
 
@@ -75,10 +78,6 @@ Wanneer het brengen van gegevens uit veelvoudige bronnen samen in het Platform v
 Met behulp van de Real-Time Customer Profile API kunt u een nieuw samenvoegbeleid maken, bestaand beleid beheren en een standaardsamenvoegbeleid voor uw organisatie instellen. Meer informatie over het werken met samenvoegbeleid die API gebruiken, gelieve te bezoeken de subgids [van het](merge-policies.md)fusiebeleid.
 
 Voor een gids aan het werken met samenvoegbeleid die de UI van het Platform gebruiken, te zien gelieve de de gebruikersgids [van het Beleid van de](../ui/merge-policies.md)Samenvoegen.
-
-## Profielzoekopdracht
-
-Het onderzoek van het profiel wordt gebruikt om configureerbare gebieden te zoeken en te indexeren die over diverse gegevensbronnen worden bevat en hen in bijna real time terug te keren. Zie de subhandleiding voor [zoekopdrachten voor informatie over het werken met het zoeken naar profielen](profile-search.md)
 
 ## Systeemtaken profiel
 
