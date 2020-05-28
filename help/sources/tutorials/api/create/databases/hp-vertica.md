@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creeer een schakelaar van HP Vertica gebruikend de Dienst API van de Stroom
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Opdat de Dienst van de Stroom met HP Vertica te verbinden, moet u waarden voor d
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die wordt gebruikt om met uw instantie van HP Vertica te verbinden. Het patroon van de verbindingstekenreeks voor HP Vertica is `Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | De verbindingstekenreeks die wordt gebruikt om met uw instantie van HP Vertica te verbinden. Het patroon van de verbindingstekenreeks voor HP Vertica is `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | De id die nodig is om een verbinding te maken. De vaste identiteitskaart van de verbindingsspecificatie voor HP Vertica is: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
 Voor meer informatie bij het verwerven van een verbindingskoord, verwijs naar [dit document](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)van HP Vertica.
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>"
+                "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -101,7 +101,7 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.connectionString` | Het verbindingskoord verbonden aan uw rekening van HP Vertica. |
+| `auth.params.connectionString` | Het verbindingskoord verbonden aan uw rekening van HP Vertica. Het patroon van het verbindingskoord voor HP Vertica is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | De HP Vertica verbinding specificatie-id: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **Antwoord**
