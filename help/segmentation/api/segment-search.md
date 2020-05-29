@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van segment-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 7c33ba8edc886d2b689e1125b5c378e16a487324
+source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1172'
 ht-degree: 0%
 
 ---
@@ -41,8 +41,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | Parameters | Beschrijving |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(Vereist)** Waar {SCHEMA} de schemaklasse vertegenwoordigt verbonden aan de onderzoeksvoorwerpen. Momenteel wordt alleen `_xdm.context.segmentdefinition` ondersteund. |
-| s={SEARCH_TERM} | *(Optioneel)* Waar {SEARCH_TERM} een query vertegenwoordigt die voldoet aan de Microsoft-implementatie van de zoeksyntaxis [van](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Als er geen zoekterm is opgegeven, worden alle records die aan deze zoekterm zijn gekoppeld, `schema.name` geretourneerd. Een meer gedetailleerde uitleg vindt u in het [aanhangsel](#appendix) van dit document. |
+| `schema.name={SCHEMA}` | **(Vereist)** Waar {SCHEMA} de schemaklasse vertegenwoordigt verbonden aan de onderzoeksvoorwerpen. Momenteel wordt alleen `_xdm.context.segmentdefinition` ondersteund. |
+| `s={SEARCH_TERM}` | *(Optioneel)* Waar {SEARCH_TERM} een query vertegenwoordigt die voldoet aan de Microsoft-implementatie van de zoeksyntaxis [van](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Als er geen zoekterm is opgegeven, worden alle records die aan deze zoekterm zijn gekoppeld, `schema.name` geretourneerd. Een meer gedetailleerde uitleg vindt u in het [aanhangsel](#appendix) van dit document. |
 
 **Verzoek**
 
@@ -65,18 +65,22 @@ Een succesvolle reactie retourneert HTTP status 200 met de volgende informatie.
 {
   "namespaces": [
     {
-      "name": "AAMTraits",
+      "namespace": "AAMTraits",
+      "displayName": "AAMTraits",
       "count": 45
     },
     {
-      "name": "AAMSegments",
+      "namespace": "AAMSegments",
+      "displayName": "AAMSegment",
       "count": 10
     },
     {
-      "name": "SegmentsAISegments",
+      "namespace": "SegmentsAISegments",
+      "displayName": "SegmentSAISegment",
       "count": 3
     }
   ],
+  "totalCount": 3,
   "status": {
     "message": "Success"
   }
@@ -97,12 +101,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameters | Beschrijving |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(Vereist)** Waar {SCHEMA} de schemaklasse bevat verbonden aan de onderzoeksvoorwerpen. Momenteel wordt alleen `_xdm.context.segmentdefinition` ondersteund. |
-| namespace={NAMESPACE} | **(Vereist)** Waar {NAMESPACE} de naamruimte bevat die u wilt doorzoeken. |
-| s={SEARCH_TERM} | *(Optioneel)* Waar {SEARCH_TERM} een query bevat die voldoet aan de Microsoft-implementatie van de zoeksyntaxis [van](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Als er geen zoekterm is opgegeven, worden alle records die aan deze zoekterm zijn gekoppeld, `schema.name` geretourneerd. Een meer gedetailleerde uitleg vindt u in het [aanhangsel](#appendix) van dit document. |
-| entiteitId={ENTITY_ID} | *(Optioneel)* Beperkt uw zoekopdracht tot in de toegewezen map, opgegeven met {ENTITY_ID}. |
-| limit={LIMIT} | *(Optioneel)* Waar {LIMIT} het aantal te retourneren zoekresultaten vertegenwoordigt. De standaardwaarde is 50. |
-| page={PAGE} | *(Optioneel)* Waar {PAGE} het paginanummer vertegenwoordigt dat wordt gebruikt voor pagineringsresultaten van de doorzochte query. Het paginanummer begint bij **0**. |
+| `schema.name={SCHEMA}` | **(Vereist)** Waar {SCHEMA} de schemaklasse bevat verbonden aan de onderzoeksvoorwerpen. Momenteel wordt alleen `_xdm.context.segmentdefinition` ondersteund. |
+| `namespace={NAMESPACE}` | **(Vereist)** Waar {NAMESPACE} de naamruimte bevat die u wilt doorzoeken. |
+| `s={SEARCH_TERM}` | *(Optioneel)* Waar {SEARCH_TERM} een query bevat die voldoet aan de Microsoft-implementatie van de zoeksyntaxis [van](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Als er geen zoekterm is opgegeven, worden alle records die aan deze zoekterm zijn gekoppeld, `schema.name` geretourneerd. Een meer gedetailleerde uitleg vindt u in het [aanhangsel](#appendix) van dit document. |
+| `entityId={ENTITY_ID}` | *(Optioneel)* Beperkt uw zoekopdracht tot in de toegewezen map, opgegeven met {ENTITY_ID}. |
+| `limit={LIMIT}` | *(Optioneel)* Waar {LIMIT} het aantal te retourneren zoekresultaten vertegenwoordigt. De standaardwaarde is 50. |
+| `page={PAGE}` | *(Optioneel)* Waar {PAGE} het paginanummer vertegenwoordigt dat wordt gebruikt voor pagineringsresultaten van de doorzochte query. Het paginanummer begint bij **0**. |
 
 
 **Verzoek**
@@ -168,9 +172,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameters | Beschrijving |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(Vereist)** Waar {SCHEMA} de schemaklasse bevat verbonden aan de onderzoeksvoorwerpen. Momenteel wordt alleen `_xdm.context.segmentdefinition` ondersteund. |
-| namespace={NAMESPACE} | **(Vereist)** Waar {NAMESPACE} de naamruimte bevat die u wilt doorzoeken. |
-| entiteitId={ENTITY_ID} | **(Vereist)** De id van het zoekobject waarover u de structuurgegevens wilt ophalen, opgegeven met {ENTITY_ID}. |
+| `schema.name={SCHEMA}` | **(Vereist)** Waar {SCHEMA} de schemaklasse bevat verbonden aan de onderzoeksvoorwerpen. Momenteel wordt alleen `_xdm.context.segmentdefinition` ondersteund. |
+| `namespace={NAMESPACE}` | **(Vereist)** Waar {NAMESPACE} de naamruimte bevat die u wilt doorzoeken. |
+| `entityId={ENTITY_ID}` | **(Vereist)** De id van het zoekobject waarover u de structuurgegevens wilt ophalen, opgegeven met {ENTITY_ID}. |
 
 **Verzoek**
 
