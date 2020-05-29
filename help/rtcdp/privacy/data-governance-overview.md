@@ -4,7 +4,10 @@ seo-title: Gegevensbeheer in het Real-Time Customer Data Platform
 description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 seo-description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 translation-type: tm+mt
-source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
+workflow-type: tm+mt
+source-wordcount: '946'
+ht-degree: 0%
 
 ---
 
@@ -84,3 +87,7 @@ Als een van de bovenstaande acties een schending veroorzaakt, wordt die actie ve
 ## Volgende stappen
 
 Nu u bent geïntroduceerd in de belangrijkste functies voor gegevensbeheer op CDP in real-time en hoe het Experience Platform deze functies inschakelt, gaat u verder met de [documentatie voor gegevensbeheer op het Adobe Experience Platform](../../data-governance/home.md). De documentatie verstrekt overzichten van essentiële concepten van het Beleid van Gegevens, evenals geleidelijke werkschema&#39;s voor het beheren van de etiketten en het beleid van het gegevensgebruik.
+
+De volgende video verstrekt een overzicht van de Governance van Gegevens in Echt - tijd CDP, met inbegrip van het gebruik van marketing gebruiksgevallen op bestemmingen en voorbeeldwerkschema&#39;s voor verschillende scenario&#39;s:
+
+>[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)
