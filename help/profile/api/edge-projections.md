@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: bb7aad4de681316cc9f9fd1d9310695bd220adb1
+source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+workflow-type: tm+mt
+source-wordcount: '1940'
+ht-degree: 0%
 
 ---
 
@@ -16,6 +19,9 @@ Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten
 ## Aan de slag
 
 De API eindpunten die in deze gids worden gebruikt maken deel uit van Real-time API van het Profiel van de Klant. Lees voordat u verdergaat de handleiding voor ontwikkelaars van [realtime klantprofiel](getting-started.md). Met name bevat de sectie [Aan de](getting-started.md#getting-started) slag van de handleiding voor ontwikkelaars van profielen koppelingen naar verwante onderwerpen, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar API&#39;s van het Experience Platform met succes uit te voeren.
+
+>[!NOTE]
+>Voor aanvragen die een payload (POST, PUT, PATCH) bevatten, is een `Content-Type` header vereist. In dit document `Content-Type` wordt meer dan één teken gebruikt. Gelieve te letten speciaal op de kopballen in de steekproefvraag om ervoor te zorgen u het correcte `Content-Type` voor elk verzoek gebruikt.
 
 ## Projectiebestemmingen
 
@@ -422,6 +428,9 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 **Verzoek**
 
+>[!NOTE]
+>Voor het POST-verzoek om een configuratie te maken is een specifieke `Content-Type` header nodig, zoals hieronder wordt weergegeven. Het gebruik van een onjuiste `Content-Type` header resulteert in een HTTP Status 415 (Unsupported Media Type)-fout.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
@@ -429,7 +438,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
+  -H 'Content-Type: application/vnd.adobe.platform.projectionConfig+json; version=1' \
   -d '{
         "selector": "emails,person(firstName)",
         "name": "my_test_projection",
