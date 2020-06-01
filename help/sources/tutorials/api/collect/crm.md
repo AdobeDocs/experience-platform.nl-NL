@@ -4,18 +4,23 @@ solution: Experience Platform
 title: CRM-gegevens verzamelen via bronconnectors en API's
 topic: overview
 translation-type: tm+mt
-source-git-commit: 88376a67e064208ab62dd339e820adb8e47d3c4e
+source-git-commit: 1fbc348f6355bbecf20616bb72193777b966b878
+workflow-type: tm+mt
+source-wordcount: '1623'
+ht-degree: 0%
 
 ---
 
 
 # CRM-gegevens verzamelen via bronconnectors en API&#39;s
 
-Dit leerprogramma behandelt de stappen om gegevens van een systeem van CRM terug te winnen en hen te brengen binnen aan Platform door bronschakelaars en APIs.
+De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+
+Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een extern CRM-systeem en het inbrengen van gegevens naar Platform via bronconnectors en API&#39;s.
 
 ## Aan de slag
 
-Deze zelfstudie vereist dat u toegang hebt tot een CRM-systeem via een geldige basisverbinding en informatie over de tabel die u in Platform wilt plaatsen, inclusief het pad en de structuur van de tabel. Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van CRM-systemen met behulp van de Flow Service API](../explore/crm.md) voordat u deze zelfstudie probeert.
+Deze zelfstudie vereist dat u toegang hebt tot een CRM-systeem van derden via een geldige verbinding en informatie over de tabel die u in Platform wilt plaatsen, inclusief het pad en de structuur van de tabel. Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van CRM-systemen met behulp van de Flow Service API](../explore/crm.md) voordat u deze zelfstudie probeert.
 
 Voor deze zelfstudie hebt u ook een goed inzicht in de volgende componenten van het Adobe Experience Platform:
 
@@ -54,11 +59,23 @@ Als u externe gegevens via bronconnectors wilt overbrengen naar Platform, moet u
 
 Als u een ad-hocklasse en -schema wilt maken, volgt u de stappen in de zelfstudie over het [ad-hocschema](../../../../xdm/tutorials/ad-hoc.md). Wanneer u een ad-hocklasse maakt, moeten alle velden in de brongegevens worden beschreven in de aanvraaginstantie.
 
-Ga door met het volgen van de stappen die in de ontwikkelaarsgids worden beschreven tot u een ad-hocschema hebt gecreeerd. Haal de unieke id (`$id`) van het ad-hocschema op en sla deze op. Ga vervolgens verder met de volgende stap van deze zelfstudie.
+Ga door met het volgen van de stappen die in de ontwikkelaarsgids worden beschreven tot u een ad-hocschema hebt gecreeerd. De unieke id (`$id`) van het ad-hocschema is vereist om door te gaan naar de volgende stap van deze zelfstudie.
 
 ## Een bronverbinding maken {#source}
 
-Als een ad-hoc XDM-schema is gemaakt, kan nu een bronverbinding worden gemaakt met een POST-aanvraag voor de Flow Service API. Een bronverbinding bestaat uit een basisverbinding, een brongegevensbestand, en een verwijzing naar het schema dat de brongegevens beschrijft.
+Als een ad-hoc XDM-schema is gemaakt, kan nu een bronverbinding worden gemaakt met een POST-aanvraag voor de Flow Service API. Een bronverbinding bestaat uit een verbindingsID, een brongegevensbestand, en een verwijzing naar het schema dat de brongegevens beschrijft.
+
+Als u een bronverbinding wilt maken, moet u ook een opsommingswaarde voor het kenmerk voor de gegevensindeling definiëren.
+
+Gebruik de volgende opsommingswaarden voor op **bestanden gebaseerde connectors**:
+
+| Data.format | Enumwaarde |
+| ----------- | ---------- |
+| Gescheiden bestanden | `delimited` |
+| JSON-bestanden | `json` |
+| Parketbestanden | `parquet` |
+
+Voor alle op **lijst-gebaseerde schakelaars** gebruik de enum waarde: `tabular`.
 
 **API-indeling**
 
@@ -70,7 +87,7 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -81,7 +98,7 @@ curl -X POST \
         "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
         "description": "Source Connection for a CRM system",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/140c03de81b959db95879033945cfd4c",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -118,17 +135,19 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `baseConnectionId` | De id van een basisverbinding voor een CRM-systeem. |
+| `baseConnectionId` | De unieke verbinding-id van het CRM-systeem van derden dat u benadert. |
 | `data.schema.id` | De id van het ad-hoc XDM-schema. |
 | `params.path` | Het pad van het bronbestand. |
+| `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan uw specifieke CRM-systeem van derden. Zie de [bijlage](#appendix) voor een lijst van verbindingsspecificaties - IDs. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Sla deze waarde op zoals deze in latere stappen is vereist voor het maken van een doelverbinding.
+Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbinding. Deze id is later vereist om een gegevensstroom te maken.
 
 ```json
 {
     "id": "9a603322-19d2-4de9-89c6-c98bd54eb184"
+    "etag": "\"4a00038b-0000-0200-0000-5ebc47fd0000\""
 }
 ```
 
@@ -180,7 +199,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert details van het nieuwe schema, inclusief de unieke id (`$id`). Sla deze id op zoals deze in latere stappen is vereist om een doeldataset, toewijzing en gegevensstroom te maken.
+Een geslaagde reactie retourneert details van het nieuwe schema, inclusief de unieke id (`$id`). Deze id wordt vereist in recentere stappen om een doeldataset, afbeelding, en dataflow tot stand te brengen.
 
 ```json
 {
@@ -220,7 +239,7 @@ Een geslaagde reactie retourneert details van het nieuwe schema, inclusief de un
 
 ## Een doelgegevensset maken
 
-Een doeldataset kan worden gecreeerd door een POST- verzoek aan de Dienst API van de Catalogus uit te voeren, die identiteitskaart van het doelschema binnen de nuttige lading verstrekken.
+Een doeldataset kan worden tot stand gebracht door een POST- verzoek aan de Dienst API [van de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalogus uit te voeren, die identiteitskaart van het doelschema binnen de lading verstrekken.
 
 **API-indeling**
 
@@ -253,7 +272,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert een serie terug die identiteitskaart van de pas gecreëerde dataset in het formaat bevat `"@/datasets/{DATASET_ID}"`. De dataset ID is een read-only, systeem-geproduceerde koord dat wordt gebruikt om de dataset in API vraag van verwijzingen te voorzien. Sla identiteitskaart van de doeldataset zoals het in recentere stappen wordt vereist om een doelverbinding en een dataflow tot stand te brengen.
+Een succesvolle reactie keert een serie terug die identiteitskaart van de pas gecreëerde dataset in het formaat bevat `"@/datasets/{DATASET_ID}"`. De dataset ID is een read-only, systeem-geproduceerde koord dat wordt gebruikt om de dataset in API vraag van verwijzingen te voorzien. De doel dataset identiteitskaart wordt vereist in recentere stappen om een doelverbinding en een dataflow tot stand te brengen.
 
 ```json
 [
@@ -261,15 +280,9 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de pas ge
 ]
 ```
 
-## Een databaseverbinding maken
-
-Om een doelverbinding tot stand te brengen en externe gegevens in Platform in te voeren, moet een datasetbasisverbinding eerst worden verworven.
-
-Om een verbinding van de datasetbasis tot stand te brengen, volg de stappen die in het [gegevensbestand van de basisverbinding](../create-dataset-base-connection.md)worden geschetst.
-
-Ga na de stappen die in de ontwikkelaarsgids worden geschetst verder tot u een verbinding van de datasetbasis hebt gecreeerd. Haal de unieke id (`$id`) van de basisverbinding op en sla deze op. Ga vervolgens verder met de volgende stap van deze zelfstudie.
-
 ## Een doelverbinding maken
+
+Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Als u een doelverbinding wilt maken, moet u de vaste specificatie-id voor de verbinding opgeven die is gekoppeld aan het datumpeer. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 U hebt nu de unieke herkenningstekens voor een gegevenssetbasisverbinding, een doelschema, en een doeldataset. Gebruikend deze herkenningstekens, kunt u een doelverbinding tot stand brengen gebruikend de Dienst API van de Stroom om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
 
@@ -283,18 +296,16 @@ POST /targetConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "d6c3988d-14ef-4000-8398-8d14ef000021",
-        "name": "Target Connection",
+        "name": "Target Connection for a CRM connector",
         "description": "Target Connection for CRM data",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
@@ -304,7 +315,7 @@ curl -X POST \
             "dataSetId": "5c8c3c555033b814b69f947f"
         },
         "connectionSpec": {
-            "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }
     }'
@@ -312,12 +323,9 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `baseConnectionId` | De id van de gegevenssetbasisverbinding. |
 | `data.schema.id` | Het `$id` doel-XDM-schema. |
 | `params.dataSetId` | De id van de doeldataset. |
-| `connectionSpec.id` | De identiteitskaart van de verbindingsspecificatie voor uw CRM. |
-
->[!NOTE] Wanneer het creëren van een doelverbinding, zorg ervoor om de waarde van de gegevenssetbasisverbinding voor de basisverbinding `id` in tegenstelling tot de basisverbinding van uw derdebronschakelaar te gebruiken.
+| `connectionSpec.id` | The fixed connection spec ID to data Lake. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
 {
@@ -386,7 +394,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert details van de nieuwe toewijzing, inclusief de unieke id (`id`). Sla deze waarde op zoals u deze later nodig hebt om een gegevensstroom te maken.
+Een geslaagde reactie retourneert details van de nieuwe toewijzing, inclusief de unieke id (`id`). Deze waarde is in een latere stap vereist om een gegevensstroom te maken.
 
 ```json
 {
@@ -456,7 +464,7 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing, inclusief de
 }
 ```
 
-## Specificaties voor gegevensstroom opzoeken {#specs}
+## Gegevensstroomspecificaties ophalen {#specs}
 
 Een dataflow is verantwoordelijk voor het verzamelen van gegevens uit bronnen, en het brengen van hen in Platform. Om een gegevensstroom tot stand te brengen, moet u eerst de dataflow specificaties verkrijgen die voor het verzamelen van de gegevens van CRM verantwoordelijk zijn.
 
@@ -478,7 +486,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert de details van de gegevensstroomspecificatie terug die voor het brengen van gegevens van uw systeem van CRM in Platform verantwoordelijk is. Sla de waarde van het `id` veld op zoals vereist in de volgende stap om een nieuwe gegevensstroom te maken.
+Een succesvolle reactie keert de details van de gegevensstroomspecificatie terug die voor het brengen van gegevens van uw systeem van CRM in Platform verantwoordelijk is. Deze id is vereist in de volgende stap om een nieuwe gegevensstroom te maken.
 
 ```json
 {
@@ -611,6 +619,8 @@ De laatste stap naar het verzamelen van CRM-gegevens is het maken van een gegeve
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een POST- verzoek uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
 
+Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd in seconden. Vervolgens moet u de frequentiewaarde instellen op een van de vijf opties: `once`, `minute`, `hour`, `day`, of `week`. De intervalwaarde geeft de periode tussen twee opeenvolgende inname aan en het maken van een eenmalige inname vereist geen interval dat moet worden ingesteld. Voor alle andere frequenties moet de intervalwaarde worden ingesteld op gelijk aan of groter dan `15`.
+
 **API-indeling**
 
 ```http
@@ -641,12 +651,6 @@ curl -X POST \
         ],
         "transformations": [
             {
-                "name": "Copy",
-                "params": {
-                    "mode": "append"
-                }
-            },
-            {
                 "name": "Mapping",
                 "params": {
                     "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea"
@@ -663,10 +667,13 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `flowSpec.id` | Dataflow-specificatie-id |
-| `sourceConnectionIds` | Bronverbinding-id |
-| `targetConnectionIds` | Doelverbinding-id |
-| `transformations.params.mappingId` | Toewijzing-id |
+| `flowSpec.id` | De flow-specificatie-id die in de vorige stap is opgehaald. |
+| `sourceConnectionIds` | De bronverbindings-id die in een eerdere stap is opgehaald. |
+| `targetConnectionIds` | De doel verbindings ID die in een vroegere stap wordt teruggewonnen. |
+| `transformations.params.mappingId` | De toewijzing-id die in een eerdere stap is opgehaald. |
+| `scheduleParams.startTime` | De begintijd voor de gegevensstroom in epoche tijd in seconden. |
+| `scheduleParams.frequency` | De volgende frequentiewaarden kunnen worden geselecteerd: `once`, `minute`, `hour`, `day`, of `week`. |
+| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie wordt ingesteld als `once` en groter dan of gelijk aan `15` andere frequentiewaarden moet zijn. |
 
 **Antwoord**
 
@@ -675,6 +682,8 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom.
 ```json
 {
     "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
+
 }
 ```
 
@@ -684,3 +693,14 @@ Door dit leerprogramma te volgen, hebt u een bronschakelaar gecreeerd om gegeven
 
 * [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
 * [Overzicht van de Data Science Workspace](../../../../data-science-workspace/home.md)
+
+## Aanhangsel
+
+De volgende sectie maakt een lijst van de verschillende bronschakelaars van CRM en hun verbindingsspecificaties.
+
+### Verbindingsspecificatie
+
+| Naam van connector | Verbindingsspecificatie |
+| -------------- | --------------- |
+| Microsoft Dynamics | `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| Salesforce | `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` |
