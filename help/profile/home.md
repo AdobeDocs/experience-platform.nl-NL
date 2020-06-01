@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Overzicht van het realtime klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
+source-git-commit: 86fe1f407afb24d7222cff51cf9937a42571fd54
+workflow-type: tm+mt
+source-wordcount: '1775'
+ht-degree: 0%
 
 ---
 
@@ -56,7 +59,7 @@ Wanneer het samenbrengen van gegevens uit veelvoudige bronnen en het combineren 
 >[!IMPORTANT]
 >De berekende kenmerkfunctionaliteit die in dit document wordt beschreven is in alpha. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
-Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op basis van andere waarden, berekeningen en expressies. De berekende attributen werken op het profielniveau, betekenend kunt u waarden over alle verslagen en gebeurtenissen bijeenvoegen. Elk berekend kenmerk bevat een expressie, of &#39;regel&#39;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. Zie de [subhandleiding Real-time Customer Profile API over berekende kenmerken](api/computed-attributes.md)voor meer informatie over berekende kenmerken en stapsgewijze instructies voor het werken met deze kenmerken. Deze handleiding geeft u een beter inzicht in de rol die berekende kenmerken spelen in het Adobe Experience Platform en bevat voorbeelden van API-aanroepen voor het uitvoeren van standaard CRUD-bewerkingen met behulp van de Real-time Customer Profile API.
+Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op basis van andere waarden, berekeningen en expressies. De berekende attributen werken op het profielniveau, betekenend kunt u waarden over alle verslagen en gebeurtenissen bijeenvoegen. Elk berekend kenmerk bevat een expressie, ofwel &quot;rule&quot;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. Zie de [subhandleiding Real-time Customer Profile API over berekende kenmerken](api/computed-attributes.md)voor meer informatie over berekende kenmerken en stapsgewijze instructies voor het werken met deze kenmerken. Deze handleiding geeft u een beter inzicht in de rol die berekende kenmerken spelen in het Adobe Experience Platform en bevat voorbeelden van API-aanroepen voor het uitvoeren van standaard CRUD-bewerkingen met behulp van de Real-time Customer Profile API.
 
 ## Realtime componenten
 
@@ -95,6 +98,37 @@ Het gegevensbeheer wordt op verschillende punten beheerd. Deze omvatten het bepa
 ### Verzoeken om opt-out en privacy van gegevens verwerken
 
 Met het Experience Platform kunnen uw klanten weigeren-aanvragen met betrekking tot het gebruik en de opslag van hun gegevens verzenden binnen het Real-time Klantprofiel. Raadpleeg de documentatie over het [naleven van opt-out-verzoeken](../segmentation/honoring-opt-outs.md)voor meer informatie over de manier waarop aanvragen vooropt-out worden afgehandeld.
+
+## Richtlijnen voor profielen
+
+Het ervaringsplatform heeft een aantal richtlijnen die moeten worden gevolgd om Profiel effectief te kunnen gebruiken.
+
+| Sectie | Grens |
+| ------- | -------- |
+| Samenvoegingsschema van profiel | Een maximum van **20** datasets kan tot het de unieschema van het Profiel bijdragen. |
+| Relaties met meerdere entiteiten | Er kunnen maximaal **5** relaties met meerdere entiteiten worden gemaakt. |
+| JSON-diepte voor associatie met meerdere entiteiten | De maximale JSON-diepte is **4**. |
+| Gegevens uit tijdreeksen | Gegevens uit tijdreeksen zijn **niet** toegestaan in Profiel voor entiteiten van derden. |
+| Schema-relaties van derden | Schema-relaties van derden zijn **niet** toegestaan. |
+| Profielfragment | De aanbevolen maximale grootte van een profielfragment is **10kB**.<br><br> De absolute maximumgrootte van een profielfragment is **1 MB**. |
+| Niet-persoonlijke entiteit | De maximale totale grootte voor één niet-persoonlijke entiteit is **200 MB**. |
+| Gegevensbestanden per niet-persoonlijke entiteit | Een maximum van **1** dataset kan aan een niet-persoonentiteit worden geassocieerd. |
+
+<!--
+| Section | Boundary | Enforcement |
+| ------- | -------- | ----------- |
+| Profile union schema | A maximum of **20** datasets can contribute to the Profile union schema. | A message stating you've reached the maximum number of datasets appears. You must either disable or clean up other obsolete datasets in order to create a new dataset. |
+| Multi-entity relationships | A maximum of **5** multi-entity relationship can be created. | A message stating all available mappings have been used appears when the fifth relationship is mapped. An error message letting you know you have exceeded the number of available mappings appears when attempting to map a sixth relationship. | 
+| JSON depth for multi-entity association | The maximum JSON depth is **4**. | When trying to use the relationship selector with a field that is more than four levels deep, an error message appears, stating it is ineligible for multi-entity association. |
+| Time series data | Time-series data is **not** permitted in Profile for non-people entities. | A message stating that this data cannot be enabled for Profile because it is of an unsupported type appears. |
+| Non-people schema relationships | Non-people schema relationships are **not** permitted. | Relationships between two non-people schemas cannot be created. The relationships checkbox will be disabled. |
+| Profile fragment | The recommended maximum size of a profile fragment is **10kB**.<br><br> The absolute maximum size of a profile fragment is **1MB**. | If you upload a fragment that is larger than 10kB, a warning appears, stating that performance may be degraded since the fragment exceeds the recommended maximum working size.<br><br> If you upload a fragment that is larger than 1MB, ingestion will fail, and an alert letting you know that records have failed will be sent. |
+| Non-person entity | The maximum total size for a single non-person entity is **200MB**. | If you load an object as a non-person entity that is larger than 200MB, an alert will appear, stating that the entity has exceeded the maximum allowable size and will not be useable for segmentation. |
+| Datasets per non-person entity | A maximum of **1** dataset can be associated to a non-person entity. | If you try to create a second dataset that is associated to the same non-person entity, an error appears, stating that only one dataset can be active per non-person entity. |
+
+--->
+
+>!![NOTE] Een niet-persoonlijke entiteit verwijst naar elke XDM-klasse die **geen** deel uitmaakt van Profiel.
 
 ## Volgende stappen en extra bronnen
 
