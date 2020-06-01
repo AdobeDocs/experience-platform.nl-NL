@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Betalingsgegevens verzamelen via bronconnectors en API's
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3d8682eb1a33b7678ed814e5d6d2cb54d233c03e
+source-git-commit: 577027e52041d642e03ca5abf5cb8b05c689b9f2
+workflow-type: tm+mt
+source-wordcount: '1663'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een betal
 
 ## Aan de slag
 
-Deze zelfstudie vereist dat u toegang hebt tot een betalingssysteem via een geldige basisverbinding, evenals informatie over het bestand dat u in Platform wilt plaatsen (inclusief het pad en de structuur van het bestand). Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van een betalingstoepassing met de Flow Service API](../explore/payments.md) voordat u deze zelfstudie probeert.
+Deze zelfstudie vereist dat u toegang hebt tot een betalingssysteem via een geldige verbinding, en dat u informatie hebt over het bestand dat u in Platform wilt plaatsen (inclusief het pad en de structuur van het bestand). Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van een betalingstoepassing met de Flow Service API](../explore/payments.md) voordat u deze zelfstudie probeert.
 
 Voor deze zelfstudie hebt u ook een goed inzicht in de volgende componenten van het Adobe Experience Platform:
 
@@ -62,6 +65,18 @@ Ga door met het volgen van de stappen die in de ontwikkelaarsgids worden beschre
 
 Als een ad-hoc XDM-schema is gemaakt, kan nu een bronverbinding worden gemaakt met een POST-aanvraag voor de Flow Service API. Een bronverbinding bestaat uit een verbindingsID, een brongegevensbestand, en een verwijzing naar het schema dat de brongegevens beschrijft.
 
+Als u een bronverbinding wilt maken, moet u ook een opsommingswaarde voor het kenmerk voor de gegevensindeling definiëren.
+
+Gebruik de volgende opsommingswaarden voor op **bestanden gebaseerde connectors**:
+
+| Data.format | Enumwaarde |
+| ----------- | ---------- |
+| Gescheiden bestanden | `delimited` |
+| JSON-bestanden | `json` |
+| Parketbestanden | `parquet` |
+
+Voor alle op **lijst-gebaseerde schakelaars** gebruik de enum waarde: `tabular`.
+
 **API-indeling**
 
 ```https
@@ -83,7 +98,7 @@ curl -X POST \
         "baseConnectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
         "description": "Paypal",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/396f583b57577b2f2fca79c2cb88e9254992f5fa70ce5f1a",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -101,7 +116,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `baseConnectionId` | De verbinding-id van uw betalingstoepassing |
+| `baseConnectionId` | De unieke verbindings-id van de betalingstoepassing van derden waartoe u toegang hebt. |
 | `data.schema.id` | Het `$id` ad-hoc XDM-schema. |
 | `params.path` | Het pad van het bronbestand. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van uw betalingstoepassing. |
@@ -275,17 +290,11 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de pas ge
 ]
 ```
 
-## Een databaseverbinding maken
-
-Om externe gegevens in Platform in te voeren, moet eerst een verbinding van de datasetbasis van het Platform van de Ervaring worden verworven.
-
-Om een verbinding van de datasetbasis tot stand te brengen, volg de stappen die in het [gegevensbestand van de basisverbinding](../create-dataset-base-connection.md)worden geschetst.
-
-Ga na de stappen die in de ontwikkelaarsgids worden geschetst verder tot u een verbinding van de datasetbasis hebt gecreeerd. Haal de unieke id (`$id`) op en sla deze op en ga door om deze te gebruiken als de verbindings-id in de volgende stap om een doelverbinding te maken.
-
 ## Een doelverbinding maken
 
-U hebt nu met u de unieke herkenningstekens voor een gegevenssetbasisverbinding, een doelschema, en een doeldataset. U kunt nu een doelverbinding tot stand brengen gebruikend de Dienst API van de Stroom om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
+Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Als u een doelverbinding wilt maken, moet u de vaste specificatie-id voor de verbinding opgeven die is gekoppeld aan het datumpeer. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+U hebt nu unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan gegevens meer. Gebruikend deze herkenningstekens, kunt u een doelverbinding tot stand brengen gebruikend de Dienst API van de Stroom om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
 
 **API-indeling**
 
@@ -304,11 +313,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "72c47da8-c225-40c0-847d-a8c22550c01b",
         "name": "Target Connection for payments",
         "description": "Target Connection for payments",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722"
             }
@@ -325,10 +332,9 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `baseConnectionId` | De id van de gegevenssetbasisverbinding. |
 | `data.schema.id` | Het `$id` doel-XDM-schema. |
 | `params.dataSetId` | De id van de doeldataset. |
-| `connectionSpec.id` | De id van de verbindingsspecificatie voor uw betalingstoepassing. |
+| `connectionSpec.id` | The fixed connection spec ID to data Lake. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwoord**
 
@@ -578,6 +584,8 @@ De laatste stap in de richting van het verzamelen van gegevens is het maken van 
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een POST- verzoek uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
 
+Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd in seconden. Vervolgens moet u de frequentiewaarde instellen op een van de vijf opties: `once`, `minute`, `hour`, `day`, of `week`. De intervalwaarde geeft de periode tussen twee opeenvolgende inname aan en het maken van een eenmalige inname vereist geen interval dat moet worden ingesteld. Voor alle andere frequenties moet de intervalwaarde worden ingesteld op gelijk aan of groter dan `15`.
+
 **API-indeling**
 
 ```https
@@ -627,11 +635,21 @@ curl -X POST \
         ],
         "scheduleParams": {
             "startTime": "1567411548",
-            "frequency":"minute",
+            "frequency": "minute",
             "interval":"30"
         }
     }'
 ```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `flowSpec.id` | De flow-specificatie-id die in de vorige stap is opgehaald. |
+| `sourceConnectionIds` | De bronverbindings-id die in een eerdere stap is opgehaald. |
+| `targetConnectionIds` | De doel verbindings ID die in een vroegere stap wordt teruggewonnen. |
+| `transformations.params.mappingId` | De toewijzing-id die in een eerdere stap is opgehaald. |
+| `scheduleParams.startTime` | De begintijd voor de gegevensstroom in epoche tijd in seconden. |
+| `scheduleParams.frequency` | De volgende frequentiewaarden kunnen worden geselecteerd: `once`, `minute`, `hour`, `day`, of `week`. |
+| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie wordt ingesteld als `once` en groter dan of gelijk aan `15` andere frequentiewaarden moet zijn. |
 
 **Antwoord**
 
@@ -639,7 +657,8 @@ Een geslaagde reactie retourneert de id `id` van de nieuwe gegevensstroom.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
