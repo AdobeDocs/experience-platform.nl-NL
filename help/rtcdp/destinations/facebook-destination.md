@@ -4,7 +4,7 @@ seo-title: Facebook-bestemming
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 seo-description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: 522014f8e5f3de0f553a69763d3a37482953b7c4
+source-git-commit: 79aecf4955507622ac7879c148cdcd23e893dd65
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 0%
@@ -35,8 +35,10 @@ Een online detailhandelaar wil bestaande klanten door sociale platforms bereiken
 
 
 Een luchtvaartmaatschappij heeft verschillende klantniveaus (Bronze, Silver en Gold) en wil elk niveau via sociale platforms voorzien van persoonlijke aanbiedingen. Niet alle klanten gebruiken echter de mobiele app van de luchtvaartmaatschappij en sommige van hen hebben zich niet aangemeld bij de website van het bedrijf. De enige id&#39;s die het bedrijf over deze klanten heeft, zijn id&#39;s voor lidmaatschap en e-mailadressen.
-Als ze zich op verschillende sociale media willen richten, kunnen ze de klantgegevens van hun CRM in Adobe Real-time CDP opnemen met de gehashte e-mailadressen als id&#39;s.
-Vervolgens kunnen ze hun offlinegegevens combineren met hun bestaande online activiteitsgegevens, om nieuwe publiekssegmenten te maken die ze via de Facebook-bestemming kunnen gebruiken.
+
+Als ze zich op sociale media willen richten, kunnen ze de klantgegevens van hun CRM in Adobe Real-time CDP opnemen, waarbij de e-mailadressen als id&#39;s worden gebruikt.
+
+Vervolgens kunnen ze hun offlinegegevens gebruiken, inclusief de bijbehorende id&#39;s voor lidmaatschap en klantlagen, om nieuwe publiekssegmenten te maken die ze via de Facebook-bestemming kunnen gebruiken.
 
 ## Doelspecificaties {#destination-specs}
 
