@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Gegevens verzamelen van een systeem met succesmeldingen van klanten via bronconnectors en API's
 topic: overview
 translation-type: tm+mt
-source-git-commit: c216e321fd913773578107df027d953f10d99a36
+source-git-commit: 6df2ccd06f506ada0be5805143c487edb853396b
+workflow-type: tm+mt
+source-wordcount: '1663'
+ht-degree: 0%
 
 ---
 
@@ -13,11 +16,11 @@ source-git-commit: c216e321fd913773578107df027d953f10d99a36
 
 De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een CS-systeem (Customer Success) en het opnemen ervan in Platform via bronconnectors en API&#39;s.
+Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een systeem van klantensucces en het opnemen van gegevens in Platform via bronconnectors en API&#39;s.
 
 ## Aan de slag
 
-Voor deze zelfstudie hebt u toegang tot een CS-systeem van derden via een geldige basisverbinding en informatie over het bestand dat u in Platform wilt plaatsen, inclusief het pad en de structuur van het bestand. Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van een database of een NoSQL-systeem met behulp van de Flow Service API](../explore/customer-success.md) voordat u deze zelfstudie probeert.
+Deze zelfstudie vereist dat u toegang hebt tot een systeem voor klantsucces van derden via een geldige verbinding en informatie over het bestand dat u in Platform wilt plaatsen, inclusief het pad en de structuur van het bestand. Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van een database of een NoSQL-systeem met behulp van de Flow Service API](../explore/customer-success.md) voordat u deze zelfstudie probeert.
 
 Voor deze zelfstudie hebt u ook een goed inzicht in de volgende componenten van het Adobe Experience Platform:
 
@@ -28,7 +31,7 @@ Voor deze zelfstudie hebt u ook een goed inzicht in de volgende componenten van 
 * [Inname](../../../../ingestion/batch-ingestion/overview.md)in batch: Met de API voor inname van batch kunt u gegevens als batchbestanden in het Experience Platform opnemen.
 * [Sandboxen](../../../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met een CS-systeem tot stand te brengen met behulp van de Flow Service API.
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met een systeem van de Klantsucces te verbinden gebruikend de Dienst API van de Stroom.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -56,11 +59,23 @@ Als u externe gegevens via bronconnectors wilt overbrengen naar Platform, moet u
 
 Als u een ad-hocklasse en -schema wilt maken, volgt u de stappen in de zelfstudie over het [ad-hocschema](../../../../xdm/tutorials/ad-hoc.md). Wanneer u een ad-hocklasse maakt, moeten alle velden in de brongegevens worden beschreven in de aanvraaginstantie.
 
-Ga door met het volgen van de stappen die in de ontwikkelaarsgids worden beschreven tot u een ad-hocschema hebt gecreeerd. Haal de unieke id (`$id`) van het ad-hocschema op en sla deze op. Ga vervolgens verder met de volgende stap van deze zelfstudie.
+Ga door met het volgen van de stappen die in de ontwikkelaarsgids worden beschreven tot u een ad-hocschema hebt gecreeerd. De unieke id (`$id`) van het ad-hocschema is vereist om door te gaan naar de volgende stap van deze zelfstudie.
 
 ## Een bronverbinding maken {#source}
 
-Als een ad-hoc XDM-schema is gemaakt, kan nu een bronverbinding worden gemaakt met een POST-aanvraag voor de Flow Service API. Een bronverbinding bestaat uit een basisverbinding, een brongegevensbestand, en een verwijzing naar het schema dat de brongegevens beschrijft.
+Als een ad-hoc XDM-schema is gemaakt, kan nu een bronverbinding worden gemaakt met een POST-aanvraag voor de Flow Service API. Een bronverbinding bestaat uit een verbindingsID, een brongegevensbestand, en een verwijzing naar het schema dat de brongegevens beschrijft.
+
+Als u een bronverbinding wilt maken, moet u ook een opsommingswaarde voor het kenmerk voor de gegevensindeling definiëren.
+
+Gebruik de volgende opsommingswaarden voor op **bestanden gebaseerde connectors**:
+
+| Data.format | Enumwaarde |
+| ----------- | ---------- |
+| Gescheiden bestanden | `delimited` |
+| JSON-bestanden | `json` |
+| Parketbestanden | `parquet` |
+
+Voor alle op **lijst-gebaseerde schakelaars** gebruik de enum waarde: `tabular`.
 
 **API-indeling**
 
@@ -79,13 +94,13 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Source connection for CS",
-        "baseConnectionId": "60a5c8b9-3c30-43ba-a5c8-b93c3093ba66",
-        "description": "Source Connection for CS to ingest Account",
+        "name": "Source connection for Customer Success",
+        "baseConnectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
+        "description": "Source connection for a Customer Success connector",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/classes/51dd6dce662f8aebe4353c74bbb49c77cb3cbcd6c6b29021",
+                "id": "https://ns.adobe.com/adobe_mcdp_connectors_stg/classes/5d032b2230d5495aef49437d04d1c5fac4788b17ae85bf93",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
             }
         },
@@ -93,18 +108,18 @@ curl -X POST \
             "path": "Account"
         },
         "connectionSpec": {
-            "id": "eb13cb25-47ab-407f-ba89-c0125281c563",
+            "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
             "version": "1.0"
-    }
-}'
+        }
+    }}'
 ```
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `baseConnectionId` | De id van een basisverbinding voor een CS-systeem |
+| `baseConnectionId` | De unieke verbindingsID van het systeem van de derdeklantensucces u toegang hebt. |
 | `data.schema.id` | Het `$id` ad-hoc XDM-schema. |
 | `params.path` | Het pad van het bronbestand. |
-| `connectionSpec.id` | De id van de verbindingsspecificatie voor een CS-systeem. |
+| `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan uw specifieke systeem voor succes bij externe klanten. Zie de [bijlage](#appendix) voor een lijst van verbindingsspecificaties - IDs. |
 
 **Antwoord**
 
@@ -112,8 +127,8 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 ```json
 {
-    "id": "01b7cbea-cf18-4552-b7cb-eacf18055294",
-    "etag": "\"2103ac94-0000-0200-0000-5e543ad70000\""
+    "id": "17faf955-2cf8-4b15-baf9-552cf88b1540",
+    "etag": "\"2900a761-0000-0200-0000-5ed18cea0000\""
 }
 ```
 
@@ -145,8 +160,8 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Target schema for CS",
-        "description": "Target schema for CS",
+        "title": "Target schema for a Customer Success connector",
+        "description": "Target schema for Database",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
@@ -158,6 +173,10 @@ curl -X POST \
                 "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
             }
         ],
+        "meta:containerId": "tenant",
+        "meta:resourceType": "schemas",
+        "meta:xdmType": "object",
+        "meta:class": "https://ns.adobe.com/xdm/context/profile"
     }'
 ```
 
@@ -167,13 +186,13 @@ Een geslaagde reactie retourneert details van het nieuwe schema, inclusief de un
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
-    "meta:altId": "_{TENANT_ID}.schemas.deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
+    "meta:altId": "_{TENANT_ID}.schemas.b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for CS",
+    "title": "Target schema for a Customer Success connector",
     "type": "object",
-    "description": "Target schema for CS",
+    "description": "Target schema for Database",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -208,13 +227,14 @@ Een geslaagde reactie retourneert details van het nieuwe schema, inclusief de un
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1582578764554,
-        "repo:lastModifiedDate": 1582578764554,
+        "repo:createdDate": 1590791550228,
+        "repo:lastModifiedDate": 1590791550228,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
         "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
         "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "213e4bf7cbac74e3a9e6f988da321e2f7353acacd9ea651a5652bd49b28b8d2a"
+        "eTag": "d730441903b95425145d9c742647ab4426d86549159182913e5f99cc904be5b1",
+        "meta:globalLibVersion": "1.10.4.2"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
@@ -229,7 +249,7 @@ Een doeldataset kan worden tot stand gebracht door een POST- verzoek aan de Dien
 **API-indeling**
 
 ```http
-POST /dataSets
+POST catalog/dataSets
 ```
 
 **Verzoek**
@@ -243,9 +263,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target Dataset for CS",
+        "name": "Target dataset for a Customer Success connector",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -261,21 +281,15 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de pas ge
 
 ```json
 [
-    "@/dataSets/5e543e8a60b15218ad44b95f"
+    "@/dataSets/5ed18e0f4f90b719196f44a9"
 ]
 ```
 
-## Een databaseverbinding maken
-
-Om externe gegevens in Platform in te voeren, moet eerst een verbinding van de datasetbasis van het Platform van de Ervaring worden verworven.
-
-Om een verbinding van de datasetbasis tot stand te brengen, volg de stappen die in het [gegevensbestand van de basisverbinding](../create-dataset-base-connection.md)worden geschetst.
-
-Ga na de stappen die in de ontwikkelaarsgids worden geschetst verder tot u een verbinding van de datasetbasis hebt gecreeerd. Haal de unieke id (`$id`) op en sla deze op en ga verder met het gebruik ervan als basis-verbindings-id in de volgende stap om een doelverbinding te maken.
-
 ## Een doelverbinding maken
 
-U hebt nu met u de unieke herkenningstekens voor een gegevenssetbasisverbinding, een doelschema, en een doeldataset. U kunt nu een doelverbinding tot stand brengen gebruikend de Dienst API van de Stroom om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
+Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Als u een doelverbinding wilt maken, moet u de vaste specificatie-id voor de verbinding opgeven die is gekoppeld aan het datumpeer. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+U hebt nu unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan gegevens meer. Gebruikend deze herkenningstekens, kunt u een doelverbinding tot stand brengen gebruikend de Dienst API van de Stroom om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
 
 **API-indeling**
 
@@ -314,10 +328,9 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `baseConnectionId` | De id van de gegevenssetbasisverbinding. |
 | `data.schema.id` | Het `$id` doel-XDM-schema. |
 | `params.dataSetId` | De id van de doeldataset. |
-| `connectionSpec.id` | De id van de verbindingsspecificatie voor het successysteem van uw klant. |
+| `connectionSpec.id` | The fixed connection spec ID to data Lake. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwoord**
 
@@ -325,8 +338,8 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe doelverbindi
 
 ```json
 {
-    "id": "5ebaf0b3-66dc-46bf-baf0-b366dc76bfd5",
-    "etag": "\"5d02211d-0000-0200-0000-5e543f0f0000\""
+    "id": "1f5af99c-f1ef-4076-9af9-9cf1ef507678",
+    "etag": "\"530013e2-0000-0200-0000-5ebc4c110000\""
 }
 ```
 
@@ -352,12 +365,20 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
-                "destinationXdmPath": "person.name",
+                "destinationXdmPath": "_id",
+                "sourceAttribute": "Id",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "person.name.fullName",
                 "sourceAttribute": "Name",
                 "identity": false,
                 "identityGroup": null,
@@ -365,16 +386,8 @@ curl -X POST \
                 "version": 0
             },
             {
-                "destinationXdmPath": "mobilePhone.number",
-                "sourceAttribute": "Phone",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "email",
+                "destinationXdmPath": "_repo.createDate",
+                "sourceAttribute": "CreatedDate",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -394,75 +407,18 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing, inclusief de
 
 ```json
 {
-    "id": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
-    "version": 1,
-    "createdDate": 1568047685000,
-    "modifiedDate": 1568047703000,
-    "inputSchemaRef": {
-        "id": null,
-        "contentType": null
-    },
-    "outputSchemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/efea012ad5deefcdf51afd23ceb3583f",
-        "contentType": "1.0"
-    },
-    "mappings": [
-        {
-            "id": "7bbea5c0f0ef498aa20aa2e2e5c22290",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "Id",
-            "destination": "_id",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "Id",
-            "destinationXdmPath": "_id"
-        },
-        {
-            "id": "def7fd7db2244f618d072e8315f59c05",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "FirstName",
-            "destination": "person.name.firstName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "FirstName",
-            "destinationXdmPath": "person.name.firstName"
-        },
-        {
-            "id": "e974986b28c74ed8837570f421d0b2f4",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "LastName",
-            "destination": "person.name.lastName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "LastName",
-            "destinationXdmPath": "person.name.lastName"
-        }
-    ],
-    "status": "PUBLISHED",
-    "xdmVersion": "1.0",
-    "schemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/2574494fdb01fa14c25b52d717ccb828",
-        "contentType": "1.0"
-    },
-    "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/2574494fdb01fa14c25b52d717ccb828"
+    "id": "7c3547d3cfc14f568a51c32b4c0ed739",
+    "version": 0,
+    "createdDate": 1590792069173,
+    "modifiedDate": 1590792069173,
+    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
 ```
 
-## Specificaties voor gegevensstroom opzoeken {#specs}
+## Gegevensstroomspecificaties ophalen {#specs}
 
-Een gegevensstroom is verantwoordelijk voor het verzamelen van gegevens uit bronnen en het brengen van hen in Platform. Om een gegevensstroom tot stand te brengen, moet u eerst de dataflow specificaties verkrijgen door een GET verzoek aan de Dienst API van de Stroom uit te voeren. Dataflow-specificaties zijn verantwoordelijk voor het verzamelen van gegevens van een externe database of een NoSQL-systeem.
+Een gegevensstroom is verantwoordelijk voor het verzamelen van gegevens uit bronnen en het brengen van hen in Platform. Om een gegevensstroom tot stand te brengen, moet u eerst de dataflow specificaties verkrijgen door een GET verzoek aan de Dienst API van de Stroom uit te voeren. Dataflow-specificaties zijn verantwoordelijk voor het verzamelen van gegevens van een systeem voor klantensucces van derden.
 
 **API-indeling**
 
@@ -482,7 +438,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert de details van de dataflow specificatie terug die voor het brengen van gegevens van uw systeem CS in Platform verantwoordelijk is. Deze id is vereist in de volgende stap om een nieuwe gegevensstroom te maken.
+Een succesvolle reactie keert de details van de dataflow specificatie terug die voor het brengen van gegevens van uw systeem van het klantensucces in Platform verantwoordelijk is. Deze id is vereist in de volgende stap om een nieuwe gegevensstroom te maken.
 
 ```json
 {
@@ -613,7 +569,7 @@ De laatste stap in de richting van het verzamelen van gegevens is het maken van 
 * [Toewijzing-id](#mapping)
 * [Dataflow-specificatie-id](#specs)
 
-Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een POST- verzoek uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
+Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd in seconden. Vervolgens moet u de frequentiewaarde instellen op een van de vijf opties: `once`, `minute`, `hour`, `day`, of `week`. De intervalwaarde geeft de periode tussen twee opeenvolgende inname aan en het maken van een eenmalige inname vereist geen interval dat moet worden ingesteld. Voor alle andere frequenties moet de intervalwaarde worden ingesteld op gelijk aan of groter dan `15`.
 
 **API-indeling**
 
@@ -631,41 +587,40 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow between database or NoSQL Platform",
-        "description": "Inbound data to Platform",
+        "name": "Creating a dataflow for a Customer Success connector",
+        "description": "Creating a dataflow for a Customer Success connector",
         "flowSpec": {
             "id": "14518937-270c-4525-bdec-c2ba7cce3860",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "01b7cbea-cf18-4552-b7cb-eacf18055294"
+            "17faf955-2cf8-4b15-baf9-552cf88b1540"
         ],
         "targetConnectionIds": [
-            "5ebaf0b3-66dc-46bf-baf0-b366dc76bfd5"
+            "bc36ecd6-3b04-4067-b6ec-d63b04b0673d"
         ],
         "transformations": [
             {
                 "name": "Copy",
                 "params": {
                     "deltaColumn": {
-                        "name": "updatedAt",
-                        "dateFormat": "YYYY-MM-DD",
-                        "timezone": "UTC"
+                        "name": "date-time"
                     }
                 }
             },
             {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
+                    "mappingId": "7c3547d3cfc14f568a51c32b4c0ed739",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1567411548",
-            "frequency":"minute",
-            "interval":"30"
+            "startTime": "1590792316",
+            "frequency": "minute",
+            "interval": "15",
+            "backfill": "true"
         }
     }'
 ```
@@ -676,13 +631,35 @@ Een geslaagde reactie retourneert de id `id` van de nieuwe gegevensstroom.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `flowSpec.id` | De flow-specificatie-id die in de vorige stap is opgehaald. |
+| `sourceConnectionIds` | De bronverbindings-id die in een eerdere stap is opgehaald. |
+| `targetConnectionIds` | De doel verbindings ID die in een vroegere stap wordt teruggewonnen. |
+| `transformations.params.mappingId` | De toewijzing-id die in een eerdere stap is opgehaald. |
+| `scheduleParams.startTime` | De begintijd voor de gegevensstroom in epoche tijd in seconden. |
+| `scheduleParams.frequency` | De volgende frequentiewaarden kunnen worden geselecteerd: `once`, `minute`, `hour`, `day`, of `week`. |
+| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie wordt ingesteld als `once` en groter dan of gelijk aan `15` andere frequentiewaarden moet zijn. |
+
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een bronschakelaar gecreeerd om gegevens van een systeem van CS op een geplande basis te verzamelen. De inkomende gegevens kunnen nu door de stroomafwaartse diensten van het Platform zoals het Profiel van de Klant in real time en de Werkruimte van de Wetenschap van Gegevens worden gebruikt. Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u een bronschakelaar gecreeerd om gegevens van een systeem van de klantensucces op een geplande basis te verzamelen. De inkomende gegevens kunnen nu door de stroomafwaartse diensten van het Platform zoals het Profiel van de Klant in real time en de Werkruimte van de Wetenschap van Gegevens worden gebruikt. Raadpleeg de volgende documenten voor meer informatie:
 
 * [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
 * [Overzicht van de Data Science Workspace](../../../../data-science-workspace/home.md)
+
+## Aanhangsel
+
+In de volgende sectie worden de verschillende connectors voor bronnen voor cloudopslag en de bijbehorende verbindingsspecificaties weergegeven.
+
+### Verbindingsspecificatie
+
+| Naam van connector | Verbindingsspecificatie |
+| -------------- | --------------- |
+| Salesforce Service Cloud | `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
+| ServiceNow | `eb13cb25-47ab-407f-ba89-c0125281c563` |
