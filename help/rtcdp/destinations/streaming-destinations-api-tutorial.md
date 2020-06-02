@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verbinding maken met streaming doelen en gegevens activeren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
 workflow-type: tm+mt
-source-wordcount: '1861'
+source-wordcount: '1847'
 ht-degree: 0%
 
 ---
@@ -263,7 +263,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{AUTHENTICATION_CREDENTIALS}`: Vul de naam van uw streaming bestemming in, bijvoorbeeld: `Amazon Kinesis authentication credentials` of `Azure Event Hubs authentication credentials`.
 * `{ACCESS_ID}`: *Voor Amazon Kinesis-verbindingen.* Uw toegangs-id voor de opslaglocatie van Amazon Kinesis.
 * `{SECRET_KEY}`: *Voor Amazon Kinesis-verbindingen.* Uw geheime sleutel voor uw opslaglocatie van Amazon Kinesis.
-* `{REGION}`: *Voor Amazon Kinesis-verbindingen.* Het gebied in uw Amazon Kinesis-account waar Adobe Real-time CDP uw gegevens streamt.
+* `{REGION}`: *Voor Amazon Kinesis-verbindingen.* Het gebied in uw Amazon Kinesis-account waarin Adobe Real-time CDP uw gegevens streamt.
 * `{SAS_KEY_NAME}`: *Voor Azure Event Hubs-verbindingen.* Vul uw SAS-sleutelnaam in. Meer informatie over verificatie [!DNL Azure Event Hubs] met SAS-toetsen vindt u in de documentatie [van](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
 * `{SAS_KEY}`: *Voor Azure Event Hubs-verbindingen.* Vul uw SAS-sleutel in. Meer informatie over verificatie [!DNL Azure Event Hubs] met SAS-toetsen vindt u in de documentatie [van](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
 * `{EVENT_HUB_NAMESPACE}`: *Voor Azure Event Hubs-verbindingen.* Vul de Azure Event Hubs-naamruimte in waar Adobe Real-time CDP uw gegevens streamt. Voor meer informatie, zie [Create een de hubs van de Gebeurtenis namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in de documentatie van Microsoft.
@@ -310,8 +310,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "region": "{REGION}"
     },
     "params": { // use these values for Azure Event Hubs connections
-        "eventHubName": "{EVENT_HUB_NAME}",
-        "namespace": "EVENT_HUB_NAMESPACE"
+        "eventHubName": "{EVENT_HUB_NAME}"
     }
 }'
 ```
@@ -321,7 +320,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{NAME_OF_DATA_STREAM}`: *Voor Amazon Kinesis-verbindingen.* Geef de naam van uw bestaande gegevensstroom op in uw Amazon Kinesis-account. Adobe Real-time CDP exporteert gegevens naar deze stream.
 * `{REGION}`: *Voor Amazon Kinesis-verbindingen.* Het gebied in uw Amazon Kinesis-account waarin Adobe Real-time CDP uw gegevens streamt.
 * `{EVENT_HUB_NAME}`: *Voor Azure Event Hubs-verbindingen.* Vul de Azure-naam van de gebeurtenishub in, waarbij Adobe Real-time CDP uw gegevens streamt. Voor meer informatie, zie [Create een gebeurtenishub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in de documentatie van Microsoft.
-* `{EVENT_HUB_NAMESPACE}`: *Voor Azure Event Hubs-verbindingen.* Vul de Azure Event Hubs-naamruimte in waar Adobe Real-time CDP uw gegevens streamt. Voor meer informatie, zie [Create een de hubs van de Gebeurtenis namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in de documentatie van Microsoft.
 
 **Antwoord**
 
@@ -376,7 +374,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: Gebruik de flow voor de streamingbestemming waarmee u verbinding wilt maken. Om de stroomspecificatie te krijgen, voer een GET verrichting op het `flowspecs` eindpunt uit. Zie hier de documentatie van Swagger: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. In de reactie, zoek `upsTo` en kopieer overeenkomstige identiteitskaart van de het stromen bestemming die u met wilt verbinden.
+* `{FLOW_SPEC_ID}`: De flow-specificatie-id voor op profielen gebaseerde doelen is `71471eba-b620-49e4-90fd-23f1fa0174d8`. Gebruik deze waarde in de vraag.
 * `{SOURCE_CONNECTION_ID}`: Gebruik de bronverbindings-id die u hebt verkregen in de stap [Verbinding maken met uw ervaringsplatform](#connect-to-your-experience-platform-data).
 * `{TARGET_CONNECTION_ID}`: Gebruik de doel-verbindings-id die u hebt verkregen in de stap [Verbinden met streamingdoel](#connect-to-streaming-destination).
 
@@ -392,7 +390,7 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom en e
 ```
 
 
-## Gegevens activeren naar uw nieuwe bestemming
+## Gegevens activeren naar uw nieuwe bestemming {#activate-data}
 
 ![Overzicht doelstappen 5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
 
@@ -451,6 +449,18 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "path": "{PROFILE_ATTRIBUTE}"
             }
         }
+    },
+        },
+        {
+        "op": "add",
+        "path": "/transformations/0/params/profileSelectors/selectors/-",
+        "value": {
+            "type": "JSON_PATH",
+            "value": {
+                "operator": "EXISTS",
+                "path": "{PROFILE_ATTRIBUTE}"
+            }
+        }
     }
 ]
 ```
@@ -458,7 +468,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 * `{DATAFLOW_ID}`: Gebruik de gegevensstroom die u in de vorige stap hebt verkregen.
 * `{ETAG}`: Gebruik het label dat u in de vorige stap hebt verkregen.
 * `{SEGMENT_ID}`: Geef de segment-id op die u naar dit doel wilt exporteren. Als u segment-id&#39;s wilt ophalen voor de segmenten die u wilt activeren, gaat u naar https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/, selecteert u **Segmenteringsservice-API** in het navigatiemenu links en zoekt u de `GET /segment/jobs` bewerking.
-* `{PROFILE_ATTRIBUTE}`: Bijvoorbeeld, `"person.lastName"`
+* `{PROFILE_ATTRIBUTE}`: Bijvoorbeeld, `personalEmail.address` of `person.lastName`
 
 **Antwoord**
 
@@ -503,8 +513,23 @@ De geretourneerde reactie moet in de `transformations` parameter de segmenten en
         "name": "GeneralTransform",
         "params": {
             "profileSelectors": {
-                "selectors": []
-            },
+                        "selectors": [
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "personalEmail.address",
+                                    "operator": "EXISTS"
+                                }
+                            },
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "person.lastname",
+                                    "operator": "EXISTS"
+                                }
+                            }
+                        ]
+                    },
             "segmentSelectors": {
                 "selectors": [
                     {
@@ -520,6 +545,50 @@ De geretourneerde reactie moet in de `transformations` parameter de segmenten en
         }
     }
 ],
+```
+
+**Geëxporteerde gegevens**
+
+>[!IMPORTANT]
+>
+> Naast de profielattributen en de segmenten in de stap [activeer gegevens aan uw nieuwe bestemming](#activate-data), zullen de uitgevoerde gegevens in Kinesis AWS en de Azure Gebeurtenishubs ook informatie over de identiteitskaart omvatten. Dit geeft de identiteiten van de geëxporteerde profielen aan (bijvoorbeeld [ECID](https://docs.adobe.com/content/help/en/id-service/using/intro/id-request.html), mobiele id, Google-id, e-mailadres, enz.). Zie een voorbeeld hieronder.
+
+```
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02": {
+        "lastQualificationTime": "2020-03-03T21:24:39Z",
+        "status": "exited"
+      },
+      "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
+        "lastQualificationTime": "2020-03-04T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
 
 ## Volgende stappen
