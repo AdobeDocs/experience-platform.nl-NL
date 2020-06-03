@@ -4,7 +4,10 @@ seo-title: Bestemming voor Google-advertenties
 description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 seo-description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '532'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijv
 
 Let op de volgende details die specifiek zijn voor Google Ads-doelen:
 
-* U kunt de volgende [identiteiten](../../identity-service/namespaces.md) naar de bestemmingen van Google Ads verzenden: Google-cookie-id, IDFA, GAID, Roku-id&#39;s, Microsoft-id&#39;s, Amazon Fire TV-id&#39;s ****.
+* U kunt de volgende [identiteiten](../../identity-service/namespaces.md) naar de bestemmingen van Google Ads verzenden: **Google-cookie-id, IDFA, GAID, Roku-id&#39;s, Microsoft-id&#39;s, Amazon Fire TV-id&#39;s**.
 * Geactiveerd publiek wordt via programmacode gemaakt in het Google-platform.
 * Adobe Real-time CDP bevat momenteel geen metrische waarde om succesvolle activering te valideren. Raadpleeg de tellingen van het publiek in Google om de integratie te valideren en inzicht te krijgen in doelgroepen.
 
@@ -48,15 +51,15 @@ Voordat u de Google Ads-bestemming maakt in Adobe Real-time CDP, moet u contact 
 
 ## Doel maken
 
-1. Selecteer in **[!UICONTROL Connections > Destinations]** Google Ads en selecteer **[!UICONTROL Create destination]**.
+1. Selecteer Google Ads in **[!UICONTROL Verbindingen > Doelen]** en selecteer **[!UICONTROL Doel]**maken.
    ![Google Ads-doel verbinden](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. Vul in de doelworkflow Maken het [!UICONTROL Basic Information] formulier voor het doel in.
+2. In het Create bestemmingswerkschema, vul de [!UICONTROL BasisInformatie] voor de bestemming in. <br>
    ![Basisinformatie over Google Ads](/help/rtcdp/destinations/assets/google-2-basic-information.png)
-* **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
-* **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
-* **[!UICONTROL Account Type]**: De enige beschikbare optie is AdvertentieWoorden.
-* **[!UICONTROL Account ID]**: Vul je account-id in met Google Ads. De id-indeling heeft doorgaans de notatie 123-456-7890.
+* **[!UICONTROL Naam]**: Vul de voorkeursnaam voor dit doel in.
+* **[!UICONTROL Omschrijving]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
+* **[!UICONTROL Accounttype]**: De enige beschikbare optie is AdvertentieWoorden.
+* **[!UICONTROL Account-id]**: Vul je account-id in met Google Ads. De id-indeling heeft doorgaans de notatie 123-456-7890.
 
 ## Segmenten activeren op Google Ads
 
