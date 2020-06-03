@@ -4,7 +4,10 @@ seo-title: Doel van Google Ad Manager
 description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 seo-description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '588'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick
 
 Let op de volgende details die specifiek zijn voor de doelen van Google Ad Manager:
 
-* U kunt de volgende [identiteiten](../../identity-service/namespaces.md) naar de bestemmingen van Google Ad Manager verzenden: Google-cookie-id, IDFA, GAID, Roku-id&#39;s, Microsoft-id&#39;s, Amazon Fire TV-id&#39;s ****.
+* U kunt de volgende [identiteiten](../../identity-service/namespaces.md) naar de bestemmingen van Google Ad Manager verzenden: **Google-cookie-id, IDFA, GAID, Roku-id&#39;s, Microsoft-id&#39;s, Amazon Fire TV-id&#39;s**.
 * Geactiveerd publiek wordt via programmacode gemaakt in het Google-platform.
 * Adobe Real-time CDP bevat momenteel geen metrische waarde om succesvolle activering te valideren. Raadpleeg de tellingen van het publiek in Google om de integratie te valideren en inzicht te krijgen in doelgroepen.
 
@@ -45,17 +48,17 @@ Voordat u de bestemming Google Ad Manager maakt in Adobe Real-time CDP, moet u c
 
 ## Doel maken
 
-1. Selecteer in **[!UICONTROL Connections > Destinations]** Google Ad Manager en selecteer **[!UICONTROL Create destination]**.
+1. Selecteer in **[!UICONTROL Verbindingen > Doelen]** de optie Google Ad Manager en selecteer **[!UICONTROL Doel]**maken.
    ![Doel van Google Ad Manager verbinden](/help/rtcdp/destinations/assets/google-1-destination.png)
 
-2. Vul in de doelworkflow Maken het [!UICONTROL Basic Information] formulier voor het doel in.
+2. In het Create bestemmingswerkschema, vul de [!UICONTROL BasisInformatie] voor de bestemming in. <br>
    ![Basisinformatie Google Ad Manager](/help/rtcdp/destinations/assets/google-1-basic-information.png)
-* **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
-* **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
-* **[!UICONTROL Account Type]**: Selecteer een optie, afhankelijk van uw account bij Google:
+* **[!UICONTROL Naam]**: Vul de voorkeursnaam voor dit doel in.
+* **[!UICONTROL Omschrijving]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
+* **[!UICONTROL Accounttype]**: Selecteer een optie, afhankelijk van uw account bij Google:
    * Gebruiken `DFP by Google` voor DoubleClick voor uitgevers
    * Gebruiken `AdX buyer` voor Google AdX
-* **[!UICONTROL Account ID]**: Vul uw account-id in met Google. Dit kan uw identiteitskaart van het Netwerk of uw identiteitskaart van de Verbinding van het publiek zijn. Dit is doorgaans een id van acht cijfers.
+* **[!UICONTROL Account-id]**: Vul uw account-id in met Google. Dit kan uw identiteitskaart van het Netwerk of uw identiteitskaart van de Verbinding van het publiek zijn. Dit is doorgaans een id van acht cijfers.
 
 >[!NOTE]
 >
