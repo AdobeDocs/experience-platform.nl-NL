@@ -4,7 +4,10 @@ seo-title: Bestemming Google Display en Video 360
 description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
 seo-description: 'Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten. '
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '574'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Display &amp; Video 360, voorheen bekend als DoubleClick Bid Manager, is een hul
 
 Let op de volgende details die specifiek zijn voor Google Display &amp; Video 360-doelen:
 
-* U kunt de volgende [identiteiten](../../identity-service/namespaces.md) naar de bestemmingen van Google Display &amp; Video 360 verzenden: Google-cookie-id, IDFA, GAID, Roku-id&#39;s, Microsoft-id&#39;s, Amazon Fire TV-id&#39;s ****.
+* U kunt de volgende [identiteiten](../../identity-service/namespaces.md) naar de bestemmingen van Google Display &amp; Video 360 verzenden: **Google-cookie-id, IDFA, GAID, Roku-id&#39;s, Microsoft-id&#39;s, Amazon Fire TV-id&#39;s**.
 * Geactiveerd publiek wordt via programmacode gemaakt in het Google-platform.
 * Adobe Real-time CDP bevat momenteel geen metrische waarde om succesvolle activering te valideren. Raadpleeg de tellingen van het publiek in Google om de integratie te valideren en inzicht te krijgen in doelgroepen.
 
@@ -43,17 +46,17 @@ Voordat u de bestemming Google Display &amp; Video 360 maakt in Adobe Real-time 
 
 ## Doel maken
 
-1. Selecteer in **[!UICONTROL Connections > Destinations]** Google Display &amp; Video 360 en selecteer **[!UICONTROL Create destination]**.
+1. Selecteer Google Display &amp; Video 360 in **[!UICONTROL Verbindingen > Doelen]** en selecteer **[!UICONTROL Doel]**maken.
    ![Connect Google Display en Video 360-doel](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. Vul in de doelworkflow Maken het [!UICONTROL Basic Information] formulier voor het doel in.
+2. In het Create bestemmingswerkschema, vul de [!UICONTROL BasisInformatie] voor de bestemming in. <br>
    ![Basisinformatie over Google Display en Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
-* **[!UICONTROL Name]**: Vul de voorkeursnaam voor dit doel in.
-* **[!UICONTROL Description]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
-* **[!UICONTROL Account Type]**: Selecteer een optie, afhankelijk van uw account bij Google:
+* **[!UICONTROL Naam]**: Vul de voorkeursnaam voor dit doel in.
+* **[!UICONTROL Omschrijving]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
+* **[!UICONTROL Accounttype]**: Selecteer een optie, afhankelijk van uw account bij Google:
    * Gebruik deze optie `Invite Advertiser` om het publiek alleen naar een specifiek merk in uw Display &amp; Video 360-account te laten delen.
    * Gebruik deze optie `Invite Partner` om het publiek te laten delen naar alle merken in uw Display &amp; Video 360-account.
-* **[!UICONTROL Account ID]**: Vul uw **[!DNL Invite partner]** of **[!DNL Invite advertiser]** account-id in met Google. Dit is doorgaans een ID van zes of zeven cijfers.
+* **[!UICONTROL Account-id]**: Vul uw **[!DNL Invite partner]** of **[!DNL Invite advertiser]** account-id in met Google. Dit is doorgaans een ID van zes of zeven cijfers.
 
 >[!NOTE]
 >
