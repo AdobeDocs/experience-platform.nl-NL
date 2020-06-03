@@ -4,7 +4,10 @@ seo-title: E-mailmarketingdoelen
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 seo-description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '498'
+ht-degree: 0%
 
 ---
 
@@ -21,11 +24,11 @@ Maak in de Connect-doelstroom, zoals beschreven in de onderstaande sectie, verbi
 
 ## Stap 1 - Verbind bestemming {#connect-destination}
 
-1. Selecteer in **[!UICONTROL Connections > Destinations]** de marketingbestemming voor de e-mail waarmee u verbinding wilt maken en selecteer vervolgens **[!UICONTROL Connect destination]**.
+1. Selecteer in **[!UICONTROL Verbindingen > Doelen]** de e-mailmarketingbestemming waarmee u verbinding wilt maken en selecteer vervolgens de **[!UICONTROL Connect-bestemming]**.
 
-   ![Verbinden met doel](/help/rtcdp/destinations/assets/connect-destination.png)
+   ![Verbinden met doel](/help/rtcdp/destinations/assets/connect-destination-1.png)
 
-2. Selecteer in de wizard Connect de locatie **[!UICONTROL Connection type]** voor uw opslag. U kunt kiezen tussen **Amazon S3**, **SFTP met wachtwoord**, **SFTP met SSH-sleutel**. Vul de informatie hieronder in, afhankelijk van het verbindingstype en selecteer vervolgens **[!UICONTROL Connect]**.
+2. Selecteer in de wizard Connect het type **[!UICONTROL Verbinding]** voor uw opslaglocatie. U kunt kiezen tussen **Amazon S3**, **SFTP met wachtwoord**, **SFTP met SSH-sleutel**. Vul de informatie hieronder in, afhankelijk van het verbindingstype en selecteer vervolgens **[!UICONTROL Connect]**.
 
 Voor **S3 verbindingen**, moet u uw Zeer belangrijke identiteitskaart van de Toegang en Geheime Sleutel van de Toegang verstrekken.
 
