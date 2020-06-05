@@ -4,7 +4,7 @@ solution: Experience Platform
 title: gebruikershandleiding voor Attributie AI
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Er zijn drie verschillende typen invoergegevens die worden gebruikt voor het def
 - **Venster Opzoeken:** Verstrekt een tijdkader erop wijst die hoeveel dagen vóór de conversiegebeurtenis aanraakpunten zouden moeten worden omvat.
 - **Aanraakpunten:** marketinggebeurtenissen op het niveau van de ontvanger, individu of cookie die worden gebruikt om de numerieke of op inkomsten gebaseerde impact van conversies te evalueren.
 
-### Conversiegebeurtenissen definiëren
+### Conversiegebeurtenissen definiëren {#define-conversion-events}
 
 Als u een conversiegebeurtenis wilt definiëren, moet u de gebeurtenis een naam geven en het gebeurtenistype selecteren door op het vervolgkeuzemenu Veldnaam **** invoeren te klikken.
 
@@ -144,7 +144,7 @@ Klik op het klokpictogram om de tijd van de dag te wijzigen die u wilt scoren. V
 
 ![klokpictogram](./images/user-guide/time_of_day.png)
 
-### Regionaal modelleren (optioneel)
+### Regionaal modelleren (optioneel) {#region-based-modeling-optional}
 
 Het gedrag van uw klanten kan per land en geografische regio aanzienlijk verschillen. Voor globale ondernemingen, die op land-gebaseerde of op regio-gebaseerde modellen gebruiken kan attributienauwkeurigheid verhogen. Elk toegevoegd gebied leidt tot een nieuw model met de gegevens van dat gebied.
 
