@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Microsoft SQL Server-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experi
 
 Onder de categorie *Databases* selecteert u **Microsoft SQL Server** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Selecteer **Connect-bron** als u een nieuwe binnenkomende basisverbinding wilt maken.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/sources-catalog.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
 De pagina *Verbinding maken met Microsoft SQL Server* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -56,13 +56,13 @@ De pagina *Verbinding maken met Microsoft SQL Server* wordt weergegeven. Op deze
 
 Selecteer **Nieuw account** als u nieuwe referenties gebruikt. Voor de inputvorm die verschijnt, verstrek de basisverbinding met een naam, een facultatieve beschrijving, en uw SQL geloofsbrieven van de Server. Als u klaar bent, selecteert u **Connect** en laat u de nieuwe basisverbinding enige tijd tot stand brengen.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/new-credentials.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 ### Bestaande account
 
 Als u een bestaande account wilt verbinden, selecteert u de SQL Server-account waarmee u verbinding wilt maken en selecteert u **Volgende** om door te gaan.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/existing-credentials.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 
 ## Volgende stappen
 
