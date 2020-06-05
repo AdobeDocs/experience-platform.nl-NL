@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruikershandleiding voor JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '3356'
+source-wordcount: '3349'
 ht-degree: 3%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 # Gebruikershandleiding voor JupyterLab
 
-JupyterLab is een webgebaseerde gebruikersinterface voor <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> en is nauw geïntegreerd in het Adobe Experience Platform. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens.
+JupyterLab is een webgebaseerde gebruikersinterface voor <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> en is nauw geïntegreerd in [!DNL Adobe Experience Platform]. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens.
 
-Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies om algemene handelingen uit te voeren.
+Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies voor het uitvoeren van veelvoorkomende handelingen.
 
 ## JupyterLab op Experience Platform
 
@@ -29,7 +29,7 @@ In de volgende lijst worden enkele functies beschreven die uniek zijn voor Jupyt
 | **Kernels** | Kernels bieden laptop en andere voorkant van JupyterLab de mogelijkheid om code in verschillende programmeertalen uit te voeren en in te voeren. Het Platform van de ervaring verstrekt extra kernels om ontwikkeling in Python, R, PySpark, en Vonk te steunen. Zie de sectie [Korrels](#kernels) voor meer informatie. |
 | **Toegang tot gegevens** | Toegang tot bestaande datasets rechtstreeks vanuit JupyterLab met volledige ondersteuning voor lees- en schrijfmogelijkheden. |
 | **Platformservice-integratie** | Dankzij de ingebouwde integratie kunt u andere platformservices rechtstreeks vanuit JupyterLab gebruiken. Een volledige lijst van gesteunde integratie wordt verstrekt in de sectie over [Integratie met andere diensten](#service-integration)van het Platform. |
-| **Verificatie** | Naast het ingebouwde beveiligingsmodel <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">van</a>JupyterLab wordt elke interactie tussen uw toepassing en het ervaringsplatform, inclusief de service-to-service-communicatie van het platform, gecodeerd en geverifieerd via het <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">Adobe Identity Management System (IMS)</a>. |
+| **Verificatie** | Naast het ingebouwde veiligheidsmodel <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">van</a>JupyterLab, wordt elke interactie tussen uw toepassing en het Platform van de Ervaring, met inbegrip van de dienst-aan-dienst van het Platform mededeling gecodeerd en voor authentiek verklaard door <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Ontwikkelingsbibliotheken** | In Experience Platform biedt JupyterLab vooraf geïnstalleerde bibliotheken voor Python, R en PySpark. Zie de [bijlage](#supported-libraries) voor een volledige lijst met ondersteunde bibliotheken. |
 | **Bibliotheekcontroller** | Wanneer de vooraf geïnstalleerde bibliotheken niet aan uw behoeften voldoen, kunnen extra bibliotheken voor Python en R worden geïnstalleerd en tijdelijk in geïsoleerde containers worden opgeslagen om de integriteit van Platform te handhaven en uw gegevens veilig te houden. Zie de sectie [Korrels](#kernels) voor meer informatie. |
 
