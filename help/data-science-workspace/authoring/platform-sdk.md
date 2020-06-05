@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Platform SDK-handleiding
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '451'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Deze zelfstudie biedt u informatie over de omzetting `data_access_sdk_python` in
 
 ## Verificatie opbouwen {#build-authentication}
 
-Verificatie is vereist om aanroepen uit te voeren naar het Adobe Experience Platform. De id bestaat uit API Key, IMS Org ID, een gebruikerstoken en een servicetoken.
+De authentificatie wordt vereist om vraag aan te maken [!DNL Adobe Experience Platform], en bestaat uit API Sleutel, IMS Org identiteitskaart, een gebruikerstoken, en een de dienstteken.
 
 ### Python
 
@@ -150,7 +153,7 @@ De nieuwe Platform SDK steunt de volgende verrichtingen:
 | Groter dan of gelijk aan (`>=`) | `ge()` |
 | Kleiner dan (`<`) | `lt()` |
 | Kleiner dan of gelijk aan (`<=`) | `le()` |
-| En (`&`) | `And()` |
+| And (`&`) | `And()` |
 | Or (`|`) | `Or()` |
 
 ## Filteren op geselecteerde kolommen {#filter-by-selected-columns}
