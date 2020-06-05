@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een FTP- of SFTP-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 46b57900d9323cffeb59a0a6250bf5a9f4ac64ab
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -42,22 +42,32 @@ Het Experience Platform ondersteunt de volgende bestandsindelingen die uit exter
 
 Als u toegang wilt tot uw FTP- of SFTP-server op Platform, moet u de **hostnaam** van de server, een **gebruikersnaam** en een **wachtwoord** opgeven.
 
-## Verbinding maken met uw server
+## Verbinding maken met uw FTP- of SFTP-server
 
-Als de referenties van uw server klaar zijn, kunt u de onderstaande stappen volgen om een nieuwe binnenkomende basisverbinding te maken om uw FTP- of SFTP-server te koppelen aan Platform.
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om een nieuwe FTP- of SFTP-account te maken waarmee u verbinding kunt maken met Platform.
 
-Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> en selecteer vervolgens **Bronnen** in de linkernavigatiebalk voor toegang tot de werkruimte Bronnen. In het scherm *Catalogus* worden diverse bronnen weergegeven waarvoor u binnenkomende basisverbindingen kunt maken met. Elke bron toont het aantal bestaande basisverbindingen dat aan deze verbindingen is gekoppeld.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Bronnen]* . In het scherm *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven waarmee u een binnenkomende account kunt maken. Elke bron toont het aantal bestaande accounts en gegevensstromen dat aan deze accounts is gekoppeld.
 
-Selecteer onder de categorie *Cloud Storage* de optie **FTP** of **SFTP** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het weergeven van de documentatie of het maken van een verbinding met de bron. Klik op **Verbindingsbron** om een nieuwe binnenkomende basisverbinding te maken.
+U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-![](../../../../images/tutorials/create/sftp/sftp_sources_catalog.png)
+Selecteer onder de categorie *[!UICONTROL Databases]* de optie **[!UICONTROL SFTP]** en klik **op het pictogram + (+)** om een nieuwe FTP- of SFTP-connector te maken.
 
-Geef in het invoerformulier een naam, een optionele beschrijving en uw FTP- of SFTP-referenties op voor de basisverbinding. Klik ten slotte op **Verbinden** en laat enige tijd de nieuwe basisverbinding tot stand brengen.
+![catalogus](../../../../images/tutorials/create/sftp/catalog.png)
 
-![](../../../../images/tutorials/create/sftp/sftp_credentials.png)
+De pagina *[!UICONTROL Verbinding maken met SFTP]* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
-Zodra een basisverbinding met uw FTP of server SFTP wordt gevestigd, kunt u op de volgende sectie verdergaan en een dataflow vormen om gegevens in Platform te brengen.
+### Nieuwe account
+
+Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven, de verbinding een naam, een optionele beschrijving en uw FTP- of SFTP-referenties. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe account enige tijd beginnen.
+
+![verbinden](../../../../images/tutorials/create/sftp/new.png)
+
+### Bestaande account
+
+Als u een bestaande account wilt verbinden, selecteert u de FTP- of SFTP-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
+
+![bestaand](../../../../images/tutorials/create/sftp/existing.png)
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw FTP- of SFTP-server. U kunt nu doorgaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens over te brengen naar Platform](../../dataflow/batch/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw FTP- of SFTP-account. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag over te brengen naar Platform](../../dataflow/batch/cloud-storage.md).
