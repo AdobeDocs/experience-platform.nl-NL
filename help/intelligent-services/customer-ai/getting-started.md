@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Aan de slag met Customer AI
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '532'
+ht-degree: 0%
 
 ---
 
@@ -13,10 +16,10 @@ source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 
 De gidsen voor AI van de Klant vereisen een werkend inzicht in de diverse diensten van het Platform betrokken bij het gebruiken van AI van de Klant. Lees de volgende documenten voordat u begint:
 
-- [XDM-systeemoverzicht](../../xdm/home.md)(Experience Data Model): XDM is het basisraamwerk dat Adobe Experience Cloud, aangedreven door Experience Platform, in staat stelt de juiste boodschap af te geven aan de juiste persoon, op het juiste kanaal, op precies het juiste moment. De methodologie waarop het Platform van de Ervaring wordt gebouwd, het Systeem van XDM, exploiteert de Modelschema&#39;s van de Gegevens van de Ervaring voor gebruik door de diensten van het Platform.
-- [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Dit document biedt een inleiding tot de schema&#39;s van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, principes, en beste praktijken voor het samenstellen van schema&#39;s die in het Platform van de Ervaring van Adobe moeten worden gebruikt.
+- [XDM-systeemoverzicht](../../xdm/home.md)(Experience Data Model): XDM is het grondkader dat, [!DNL Adobe Experience Cloud]aangedreven door het Platform van de Ervaring, toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op precies het juiste moment te leveren. De methodologie waarop het Platform van de Ervaring wordt gebouwd, het Systeem van XDM, exploiteert de Modelschema&#39;s van de Gegevens van de Ervaring voor gebruik door de diensten van het Platform.
+- [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Dit document verstrekt een inleiding aan de schema&#39;s van de Gegevens van de Ervaring van het Model (XDM) en de bouwstenen, beginselen, en beste praktijken voor het samenstellen van schema&#39;s die binnen moeten worden gebruikt [!DNL Adobe Experience Platform].
 - [Gebouwenschema&#39;s](../../xdm/tutorials/create-schema-ui.md): Deze zelfstudie behandelt de stappen voor het maken van een schema met behulp van de Schema-editor in het Experience Platform.
-- [Overzicht](../../rtcdp/overview.md)van realtime-klantprofiel: Adobe Real-time Customer Data Platform (CDP in realtime) is gebaseerd op het Adobe Experience Platform en helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren door middel van intelligente beslissingen tijdens de reis van de klant. CDP in real time combineert veelvoudige bronnen van ondernemingsgegevens om verenigde profielen in real time tot stand te brengen die kunnen worden gebruikt om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
+- [Overzicht](../../rtcdp/overview.md)van realtime-klantprofiel: Gebaseerd op [!DNL Adobe Experience Platform], [!DNL Adobe Real-time Customer Data Platform] (In real time CDP) helpt bedrijven bekende en onbekende gegevens samenbrengen om klantenprofielen met intelligente besluitvorming door de klantenreis te activeren. CDP in real time combineert veelvoudige bronnen van ondernemingsgegevens om verenigde profielen in real time tot stand te brengen die kunnen worden gebruikt om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
 - [Overzicht](../../segmentation/home.md)van de segmentatieservice: De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw profielopslag worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan. Met behulp van verschillende segmenten kunt u zich richten op uw verschillende doelgroepen en een meer aangepaste marketingervaring bieden.
 - [Gebruikershandleiding voor](../../segmentation/tutorials/create-a-segment.md)Segment Builder: Met Platform kunt u eenvoudig segmenten maken en openen en kunt u verschillende bouwstenen gebruiken om uw segmenten verder te karakteriseren.
 
