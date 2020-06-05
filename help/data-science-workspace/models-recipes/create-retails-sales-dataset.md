@@ -4,19 +4,22 @@ solution: Experience Platform
 title: Het detailhandelschema en de dataset maken
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 91c7b7e285a4745da20ea146f2334510ca11b994
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '526'
+ht-degree: 0%
 
 ---
 
 
 # Het detailhandelschema en de dataset maken
 
-Deze zelfstudie biedt u de vereisten en elementen die vereist zijn voor alle andere zelfstudies voor de Data Science Workspace van het Adobe Experience Platform. Na voltooiing, zullen het Retailschema en de datasets van de Verkoop voor u en leden van uw organisatie IMS op het Platform van de Ervaring beschikbaar zijn.
+Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere zelfstudies over de [!DNL Adobe Experience Platform] Data Science Workspace. Na voltooiing, zullen het Retailschema en de datasets van de Verkoop voor u en leden van uw organisatie IMS op het Platform van de Ervaring beschikbaar zijn.
 
 ## Aan de slag
 
 Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldoen:
-- Toegang tot het Adobe Experience Platform. Als u geen toegang tot een IMS Organisatie in het Platform van de Ervaring hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
+- Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang tot een IMS Organisatie in het Platform van de Ervaring hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
 - Toestemming voor het maken van API-aanroepen van Experience Platform. Voltooi de zelfstudie voor het [verifiëren en openen van de API&#39;s](../../tutorials/authentication.md) van het Adobe Experience Platform voor het verkrijgen van de volgende waarden om deze zelfstudie te voltooien:
    - Autorisatie: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
