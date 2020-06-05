@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Informatie over inzichten met Customer AI
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1059'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Om inzichten voor Klant AI te gebruiken, moet u een de dienstinstantie hebben me
 
 ## Overzicht van serviceexemplaar
 
-Klik in de gebruikersinterface van het Adobe Experience Platform op **[!UICONTROL Services]** de linkernavigatie. De browser van de *Diensten* verschijnt en toont beschikbare Intelligente Diensten. Klik in de container voor Customer AI **[!UICONTROL Open]**.
+Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **[!UICONTROL Services]** in de linkernavigatie. De browser van de *Diensten* verschijnt en toont beschikbare Intelligente Diensten. Klik in de container voor Customer AI op **[!UICONTROL Openen]**.
 
 ![Toegang tot uw exemplaar](../images/insights/navigate-to-service.png)
 
@@ -44,7 +47,7 @@ Vervolgens wordt de pagina met inzichten voor die service-instantie weergegeven,
 
 Er zijn twee manieren om de details van de de dienstinstantie te bekijken, eerste is van het dashboard en tweede van binnen de de dienstinstantie.
 
-Als u details wilt weergeven vanuit het dashboard, klikt u op een servicecontainer waarbij de hyperlink die aan de naam is gekoppeld, wordt vermeden. Hierdoor wordt een rechterspoor geopend dat aanvullende details biedt zoals de beschrijving, de scorefrequentie, het voorspellingsdoel en de in aanmerking komende bevolking. Bovendien kunt u kiezen om de instantie te bewerken en te verwijderen door te klikken **[!UICONTROL Edit]** of **[!UICONTROL Delete]**.
+Als u details wilt weergeven vanuit het dashboard, klikt u op een servicecontainer waarbij de hyperlink die aan de naam is gekoppeld, wordt vermeden. Hierdoor wordt een rechterspoor geopend dat aanvullende details biedt zoals de beschrijving, de scorefrequentie, het voorspellingsdoel en de in aanmerking komende bevolking. Daarnaast kunt u desgewenst het exemplaar bewerken en verwijderen door op **[!UICONTROL Bewerken]** of **[!UICONTROL Verwijderen]** te klikken.
 
 ![rechterspoor](../images/insights/success-run.png)
 
@@ -52,7 +55,7 @@ Als u details wilt weergeven vanuit het dashboard, klikt u op een servicecontain
 
 ![bericht voor mislukte uitvoering](../images/insights/failed-run.png)
 
-De tweede manier om extra details voor een de dienstinstantie te bekijken wordt gevestigd binnen de inzichten pagina. U kunt **[!UICONTROL Show more]** in het hoger-recht klikken om een drop-down te bevolken. De details worden vermeld zoals de score, toen het werd gecreeerd, en het type van dichtheid. Voor meer informatie over om het even welke vermelde eigenschappen, gelieve te bezoeken het [Vormen van een Instantie](./configure.md)van de Klant AI.
+De tweede manier om extra details voor een de dienstinstantie te bekijken wordt gevestigd binnen de inzichten pagina. U kunt op Meer **** tonen rechtsboven klikken om een vervolgkeuzelijst te vullen. De details worden vermeld zoals de score, toen het werd gecreeerd, en het type van dichtheid. Voor meer informatie over om het even welke vermelde eigenschappen, gelieve te bezoeken het [Vormen van een Instantie](./configure.md)van de Klant AI.
 
 ![meer weergeven](../images/insights/landing-show-more.png)
 
@@ -60,21 +63,21 @@ De tweede manier om extra details voor een de dienstinstantie te bekijken wordt 
 
 ### Een instantie bewerken
 
-Als u een instantie wilt bewerken, klikt u **[!UICONTROL Edit]** in de navigatie rechtsboven.
+Als u een instantie wilt bewerken, klikt u op **[!UICONTROL Bewerken]** in de navigatie rechtsboven.
 
 ![Klik op de knop Bewerken](../images/insights/edit-button.png)
 
-Het dialoogvenster Bewerken wordt geopend, waarin u de *beschrijving* en *scorefrequentie* van de instantie kunt bewerken. Klik in de rechterbenedenhoek om de wijzigingen te bevestigen en het dialoogvenster te sluiten. **[!UICONTROL Edit]**
+Het dialoogvenster Bewerken wordt geopend, waarin u de *beschrijving* en *scorefrequentie* van de instantie kunt bewerken. Klik in de rechterbenedenhoek op **[!UICONTROL Bewerken]** om de wijzigingen te bevestigen en het dialoogvenster te sluiten.
 
 ![popup bewerken](../images/insights/edit-instance.png)
 
 ### Meer handelingen
 
-De **[!UICONTROL More actions]** knop bevindt zich in de navigatie rechtsboven naast **[!UICONTROL Edit]**. Als u klikt, wordt een vervolgkeuzelijst geopend waarin u een van de volgende bewerkingen kunt selecteren: **[!UICONTROL More actions]**
+De knop **[!UICONTROL Meer handelingen]** bevindt zich in de navigatie rechtsboven naast **[!UICONTROL Bewerken]**. Klik op **[!UICONTROL Meer handelingen]** om een vervolgkeuzelijst te openen waarin u een van de volgende bewerkingen kunt selecteren:
 
-- **[!UICONTROL Delete]**: Hiermee wordt de instantie verwijderd.
-- **[!UICONTROL Access scores]**: Als u op *Toegangsscores* klikt, wordt een dialoogvenster geopend met een koppeling naar de [downloadscores voor de zelfstudie van Customer AI](./download-scores.md) . Het dialoogvenster bevat ook de id van de gegevensset die is vereist voor het uitvoeren van API-aanroepen.
-- **[!UICONTROL View run history]**: Er wordt een dialoogvenster weergegeven met een lijst van alle scores die zijn gekoppeld aan de service-instantie.
+- **[!UICONTROL Verwijderen]**: Hiermee wordt de instantie verwijderd.
+- **[!UICONTROL Toegangscores]**: Als u op *Toegangsscores* klikt, wordt een dialoogvenster geopend met een koppeling naar de [downloadscores voor de zelfstudie van Customer AI](./download-scores.md) . Het dialoogvenster bevat ook de id van de gegevensset die is vereist voor het uitvoeren van API-aanroepen.
+- **[!UICONTROL Runtimegeschiedenis]** weergeven: Er wordt een dialoogvenster weergegeven met een lijst van alle scores die zijn gekoppeld aan de service-instantie.
 
 ![meer acties](../images/insights/more-actions.png)
 
@@ -100,22 +103,22 @@ Voor elk scoreemmertje, wordt een kaart geproduceerd die de hoogste 10 invloedri
 
 ### Een segment maken
 
-Als u op de **[!UICONTROL Create Segment]** knop in een van de emmers voor Laag, Normaal en Hoog klikt, wordt u omgeleid naar de segmentbuilder.
+Als u klikt op de knop Segment **** maken in een van de emmers voor Laag, Normaal en Hoog, wordt u omgeleid naar de segmentbuilder.
 
 >[!NOTE]
->De **[!UICONTROL Create Segment]** knoop is slechts beschikbaar als het Profiel van de Klant in real time voor de dataset wordt toegelaten. Voor meer informatie over hoe te om het Profiel van de Klant in real time toe te laten, bezoek het overzicht [van het Profiel van de Klant in](../../../rtcdp/overview.md)real time.
+>De **[!UICONTROL Create knoop van het Segment]** is slechts beschikbaar als het Profiel van de Klant in real time voor de dataset wordt toegelaten. Voor meer informatie over hoe te om het Profiel van de Klant in real time toe te laten, bezoek het overzicht [van het Profiel van de Klant in](../../../rtcdp/overview.md)real time.
 
 ![Klikken om segment te maken](../images/insights/influential-factors-create-segment.png)
 
 ![Een segment maken](../images/insights/create-segment.png)
 
-De segmentbouwer wordt gebruikt om een segment te bepalen. Bij het selecteren **[!UICONTROL Create Segment]** van de pagina van Inzichten, voegt AI van de Klant automatisch de geselecteerde emmers informatie aan het segment toe. Als u klaar bent met het maken van uw segment, vult u gewoon de containers *Name* en *Description* in die zich in de rechterrail van de gebruikersinterface van de segmentbuilder bevinden. Nadat u een naam en een beschrijving voor het segment hebt gegeven, klikt u **[!UICONTROL Save]** in de rechterbovenhoek.
+De segmentbouwer wordt gebruikt om een segment te bepalen. Als u Segment **** maken selecteert op de pagina Insights, wordt automatisch de geselecteerde buckets-informatie toegevoegd aan het segment. Als u klaar bent met het maken van uw segment, vult u gewoon de containers *Name* en *Description* in die zich in de rechterrail van de gebruikersinterface van de segmentbuilder bevinden. Nadat u een naam en een beschrijving voor het segment hebt gegeven, klikt u rechtsboven op **[!UICONTROL Opslaan]** .
 
 >!![NOTE] Aangezien de eigenschapscores naar het individuele profiel worden geschreven, zijn ze net als andere profielkenmerken beschikbaar in de Segment Builder. Wanneer u aan de segmentbouwer navigeert om nieuwe segmenten tot stand te brengen kunt u alle diverse bezitsscores onder uw namespaceKlant AI zien.
 
 ![Segmentvulling in](../images/insights/segment-saving.png)
 
-Als u het nieuwe segment wilt weergeven in de interface van het platform, klikt u **[!UICONTROL Segments]** in de linkernavigatie. De pagina *Bladeren* wordt weergegeven met alle beschikbare segmenten.
+Klik op **[!UICONTROL Segmenten]** in de linkernavigatie om het nieuwe segment in de interface van het platform weer te geven. De pagina *Bladeren* wordt weergegeven met alle beschikbare segmenten.
 
 ![Alle segmenten](../images/insights/Segments-dashboard.png)
 
