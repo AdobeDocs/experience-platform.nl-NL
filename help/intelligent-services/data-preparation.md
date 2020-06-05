@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevens voorbereiden voor gebruik in intelligente services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1437'
 ht-degree: 0%
 
 ---
@@ -191,7 +191,7 @@ Zodra u hebt bepaald of uw gegevens van de marketinggebeurtenissen aan het CEE s
 
 Nadat u het gegevensbereik hebt bepaald dat u wilt verzenden, neemt u contact op met de Adobe Consulting Services om uw gegevens toe te wijzen aan het schema en deze in te voeren in de service.
 
-Als u een abonnement op het Adobe Experience Platform hebt en u de gegevens zelf wilt toewijzen en invoeren, volgt u de stappen in de onderstaande sectie.
+Als u een [!DNL Adobe Experience Platform] abonnement hebt en de gegevens zelf wilt toewijzen en invoeren, volgt u de stappen die in de onderstaande sectie worden beschreven.
 
 ### Adobe Experience Platform gebruiken
 
@@ -217,7 +217,7 @@ Zodra u het schema hebt gecreeerd en bewaard, kunt u een nieuwe dataset tot stan
 
 #### Een primaire naamruimte-tag toevoegen aan de gegevensset
 
-Als u gegevens ophaalt van Adobe Audience Manager, Adobe Analytics of een andere externe bron, moet u een `primaryIdentityNameSpace` tag toevoegen aan de gegevensset. Dit kan worden gedaan door een PATCH- verzoek aan de Dienst API van de Catalogus te doen.
+Als u gegevens uit [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]of een andere externe bron inbrengt, dan moet u een `primaryIdentityNameSpace` markering aan de dataset toevoegen. Dit kan worden gedaan door een PATCH- verzoek aan de Dienst API van de Catalogus te doen.
 
 Als u gegevens uit een lokaal CSV-bestand opneemt, kunt u verdergaan met de volgende sectie over het [toewijzen en invoeren van gegevens](#ingest).
 
