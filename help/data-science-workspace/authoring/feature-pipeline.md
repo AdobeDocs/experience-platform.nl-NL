@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Een functiepijpleiding maken
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '971'
+ht-degree: 0%
 
 ---
 
 
 # Een functiepijpleiding maken
 
-Met het Adobe Experience Platform kunt u aangepaste functiepijpleidingen maken en maken die op schaal functietechnieken kunnen uitvoeren via de Sensei Machine Learning Framework Runtime (hierna &quot;Runtime&quot; genoemd).
+[!DNL Adobe Experience Platform] staat u toe om de pijpleidingen van de Eigenschap van de douane te bouwen en tot stand te brengen om eigenschapstechniek bij schaal door Runtime van het Lerende Kader van de Machine van Sensei uit te voeren (verder genoemd als &quot;Runtime&quot;).
 
 Dit document beschrijft de diverse klassen die in een Pijpleiding van de Eigenschap worden gevonden, en verstrekt een geleidelijke zelfstudie voor het creëren van een pijpleiding van de Eigenschap van de douane die de [ModelAuthoring SDK](./sdk.md) in PySpark en Vonk gebruikt.
 
