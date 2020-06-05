@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een Salesforce-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: cc999ce1ab426f412c0cc2b69173a336a14024f3
+source-git-commit: 72c1d53295d5c4204c02959c857edc06f246534c
+workflow-type: tm+mt
+source-wordcount: '732'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centralisere
 
 Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Platform te verbinden met een Salesforce-account voor het verzamelen van CRM-gegevens.
 
-Als u het gebruikersinterface in het Platform van de Ervaring liever zou gebruiken, verstrekt de [Dynamica of het Bron Salesforce schakelaar UI leerprogramma](../../../ui/create/crm/dynamics-salesforce.md) geleidelijke instructies voor het uitvoeren van gelijkaardige acties.
+Als u de gebruikersinterface in het Platform van de Ervaring liever zou gebruiken, verstrekt de [Salesforce bron schakelaar UI leerprogramma](../../../ui/create/crm/salesforce.md) geleidelijke instructies voor het uitvoeren van gelijkaardige acties.
 
 ## Aan de slag
 
