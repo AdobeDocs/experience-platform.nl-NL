@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een Microsoft Dynamics-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6c86cec91774f3444dc90042cd7ad5c71429aabd
+source-git-commit: 72c1d53295d5c4204c02959c857edc06f246534c
+workflow-type: tm+mt
+source-wordcount: '729'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centralisere
 
 Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om Platform met een rekening van de Dynamiek van Microsoft (verder als &quot;Dynamica&quot;wordt bedoeld) te verbinden voor het verzamelen van de gegevens van CRM.
 
-Als u het gebruikersinterface in het Platform van de Ervaring liever zou gebruiken, verstrekt de [Dynamica of het Bron Salesforce schakelaar UI leerprogramma](../../../ui/create/crm/dynamics-salesforce.md) geleidelijke instructies voor het uitvoeren van gelijkaardige acties.
+Als u de gebruikersinterface in het Platform van de Ervaring liever zou gebruiken, verstrekt de UI-zelfstudie [van de bron van de](../../../ui/create/crm/dynamics.md) Dynamica geleidelijke instructies voor het uitvoeren van gelijkaardige acties.
 
 ## Aan de slag
 
