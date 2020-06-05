@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Inzichten in Attributie AI opzoeken
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Het dialoogvenster Bewerken wordt geopend, waarin u de beschrijving en de scores
 
 ![popup bewerken](./images/insights/edit-popover.png)
 
-### Meer handelingen
+### Meer handelingen {#more-actions}
 
 De knop *Meer handelingen* bevindt zich in de navigatie rechtsboven naast *Bewerken*. Klik op **Meer handelingen** om een vervolgkeuzelijst te openen waarin u een van de volgende bewerkingen kunt selecteren:
 
