@@ -4,7 +4,7 @@ seo-title: Foutopsporing in Adobe Experience Platform Web SDK
 description: Leer hoe u foutopsporing voor Web SDK van platform kunt gebruiken
 seo-description: Leer hoe u foutopsporing voor Web SDK van platform kunt gebruiken
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 31a527cb4ad1348262131f827c7e932404542c4b
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Wanneer het zuiveren wordt toegelaten, voert SDK berichten aan de browser consol
 Foutopsporing is standaard uitgeschakeld, maar u kunt deze op drie verschillende manieren in- en uitschakelen:
 
 * `configure` command
-* `debug` command
+* `setDebug` command
 * querytekenreeks, parameter
 
 ## Foutopsporing schakelen met de opdracht Configureren
@@ -42,7 +42,7 @@ alloy("configure", {
 Foutopsporing als volgt in-/uitschakelen met een aparte `debug` opdracht:
 
 ```javascript
-alloy("debug", {
+alloy("setDebug", {
   "enabled": true
 });
 ```
