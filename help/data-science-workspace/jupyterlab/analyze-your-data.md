@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analyseer uw gegevens met notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Deze zelfstudie richt zich op het gebruik van Jupyter-laptops, die zijn gemaakt 
 
 De volgende concepten worden geïntroduceerd:
 
-- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is de webinterface van de volgende generatie voor Project Jupyter en is nauw geïntegreerd in het Adobe Experience Platform.
+- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is de webinterface van de volgende generatie voor Project Jupyter en is nauw geïntegreerd in [!DNL Adobe Experience Platform].
 - **Batches:** Datasets bestaan uit batches. Een batch is een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt. Nieuwe batches worden gemaakt wanneer gegevens aan een gegevensset worden toegevoegd.
 - **SDK voor gegevenstoegang (afgekeurd):** De SDK voor gegevenstoegang is nu afgekeurd. Gebruik de handleiding [Platform SDK](../authoring/platform-sdk.md) .
 
@@ -38,7 +38,7 @@ Standaard werkt Tensorflow-recept in een GPU-cluster en Python in een CPU-cluste
 
 ### Een nieuw notebook maken
 
-Klik in de gebruikersinterface van het Adobe Experience Platform op het tabblad Data Science in het bovenste menu om naar de Data Science Workspace te gaan. Klik op het tabblad JupyterLab van deze pagina om de JupyterLab-startprogramma te openen. U zou een pagina moeten zien gelijkend op dit.
+In [!DNL Adobe Experience Platform] UI, klik op het lusje van de Wetenschap van Gegevens in het hoogste menu om u aan de Werkruimte van de Wetenschap van Gegevens te nemen. Klik op het tabblad JupyterLab van deze pagina om de JupyterLab-startprogramma te openen. U zou een pagina moeten zien gelijkend op dit.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ Het recept van de Verkoop van de Detailhandel is een standalone voorbeeld dat de
 
 >[!NOTE] Het `data_access_sdk_python` is afgekeurd en wordt niet meer aanbevolen. Raadpleeg de zelfstudie [voor het converteren van gegevens naar Platform SDK](../authoring/platform-sdk.md) voor het converteren van uw code naar Platform SDK. Voor deze zelfstudie gelden nog dezelfde stappen.
 
-We gaan over tot interne toegang tot gegevens via het Adobe Experience Platform en tot externe gegevens. Wij zullen de `data_access_sdk_python` bibliotheek gebruiken om tot interne gegevens zoals datasets en schema&#39;s toegang te hebben XDM. Voor externe gegevens gebruiken we de pandas Python-bibliotheek.
+We gaan over tot interne toegang tot gegevens van [!DNL Adobe Experience Platform] en externe gegevens. Wij zullen de `data_access_sdk_python` bibliotheek gebruiken om tot interne gegevens zoals datasets en schema&#39;s toegang te hebben XDM. Voor externe gegevens gebruiken we de pandas Python-bibliotheek.
 
 #### Externe gegevens
 
@@ -70,11 +70,11 @@ Tot slot kunnen we eens bekijken hoe onze gegevens eruit zien. Wij kunnen gebrui
 
 #### Experience Platform-gegevens
 
-Nu gaan we over tot de toegang tot gegevens van het Experience Platform.
+Nu gaan we verder met het openen van [!DNL Experience Platform] gegevens.
 
 ##### Op gegevensset-id
 
-Voor deze sectie, gebruiken wij de Detailhandel dataset van de Verkoop die de zelfde dataset is die in de de steekproefnotitie van de Verkoop wordt gebruikt.
+Voor deze sectie, gebruiken wij de Detailhandel dataset van de Verkoop die de zelfde dataset is in de de steekproefnotitie van de Verkoop wordt gebruikt.
 
 In ons Jupyter-notebook hebben we toegang tot onze gegevens via het tabblad **Gegevens** aan de linkerkant. Als u op het tabblad klikt, wordt een lijst met gegevenssets weergegeven.
 
@@ -96,7 +96,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-Als u met andere kernels werkt dan Python, raadpleegt u [deze pagina](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) voor toegang tot gegevens op het Adobe Experience Platform.
+Als u met andere kernels werkt dan Python, kunt u [deze pagina](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) raadplegen voor toegang tot gegevens op de [!DNL Adobe Experience Platform].
 
 Als u de cel van het uitvoerbare bestand selecteert en vervolgens op de afspeelknop op de werkbalk drukt, wordt de uitvoerbare code uitgevoerd. De output voor `head()` zal een lijst met de sleutels van uw dataset als kolommen en eerste n rijen in de dataset zijn. `head()` Accepteert een geheel argument om te specificeren hoeveel lijnen aan output. Standaard is dit 5.
 
@@ -190,7 +190,7 @@ Merk op dat 1 diagonaal naar beneden is. Dit toont aan dat wanneer het vergelijk
 
 ## Volgende stappen
 
-In deze zelfstudie wordt uitgelegd hoe u een nieuwe Jupyter-laptop maakt in de Data Science Workspace en hoe u toegang krijgt tot externe gegevens en via het Adobe Experience Platform. We hebben met name de volgende stappen doorlopen:
+In deze zelfstudie wordt uitgelegd hoe u een nieuwe Jupyter-laptop maakt in de Data Science Workspace en hoe u toegang krijgt tot gegevens zowel extern als vanuit [!DNL Adobe Experience Platform]. We hebben met name de volgende stappen doorlopen:
 - Nieuwe Jupyter-laptop maken
 - Gegevensbestanden en schema&#39;s voor toegang
 - Gegevenssets verkennen
