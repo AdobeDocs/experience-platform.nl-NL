@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Bronnen weergeven
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
+source-git-commit: b4d8a6f8006d55c7aac19d705c6880fec915c147
+workflow-type: tm+mt
+source-wordcount: '519'
+ht-degree: 1%
 
 ---
 
@@ -83,9 +86,9 @@ De gemeenschappelijkste vraagparameters voor het pagineren omvatten:
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `start` | Geef op waar de weergegeven resultaten moeten worden opgehaald. Voorbeeld: `start=2` vermeldt de resultaten van het derde geretourneerde object. |
-| `limit` | Beperk het aantal geretourneerde bronnen. Voorbeeld: `limit=5` retourneert een lijst met vijf bronnen. |
-| `orderby` | Resultaten sorteren op een bepaalde eigenschap. Voorbeeld: De resultaten worden op titel in oplopende volgorde (A-Z) gesorteerd. `orderby=title` Als u een `-` vóór titel (`orderby=-title`) toevoegt, worden de items op titel gesorteerd in aflopende volgorde (Z-A). |
+| `start` | Geef op waar de weergegeven resultaten moeten beginnen. Deze waarde kan uit het `_page.next` attribuut van een lijstreactie worden verkregen, en worden gebruikt om tot de volgende pagina van resultaten toegang te hebben. Als de `_page.next` waarde null is, is er geen extra pagina beschikbaar. |
+| `limit` | Beperk het aantal geretourneerde bronnen. Voorbeeld: `limit=5` zal een lijst van vijf middelen terugkeren. |
+| `orderby` | Resultaten sorteren op een bepaalde eigenschap. Voorbeeld: `orderby=title` sorteert de resultaten op titel in oplopende volgorde (A-Z). Als u een `-` vóór titel (`orderby=-title`) toevoegt, worden de items op titel gesorteerd in aflopende volgorde (Z-A). |
 
 ### Filteren {#filtering}
 
