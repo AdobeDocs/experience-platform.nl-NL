@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Azure Synapse Analytics-bronconnector in de gebruikersinterface maken
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experi
 
 Selecteer onder de categorie *Databases* de optie **Azure Synapse Analytics** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Selecteer **Connect-bron** als u een nieuwe binnenkomende basisverbinding wilt maken.
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/sources-catalog.png)
+![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
 De pagina *Connect to Azure Synapse Analytics* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -56,13 +56,13 @@ De pagina *Connect to Azure Synapse Analytics* wordt weergegeven. Op deze pagina
 
 Selecteer **Nieuw account** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven, aan de basisverbinding een naam, een optionele beschrijving en uw Synapse-referenties op. Als u klaar bent, selecteert u **Connect** en laat u de nieuwe basisverbinding enige tijd tot stand brengen.
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/new-credentials.png)
+![](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
 
 ### Bestaande account
 
 Als u een bestaande account wilt verbinden, selecteert u eerst de synchronisatieaccount waarmee u verbinding wilt maken en vervolgens **Volgende** om door te gaan.
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/existing-credentials.png)
+![](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
 
 ## Volgende stappen
 
