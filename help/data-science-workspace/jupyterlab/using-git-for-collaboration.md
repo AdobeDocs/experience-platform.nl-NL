@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Samenwerken in JupyterLab met behulp van Git
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 0134c21bc35c0cb1bde7f0201a33517a81addae3
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ De Data Science Workspace JupyterLab-omgeving is een gehoste omgeving en wordt n
 
 ## Verbind Git met de Werkruimte van de Wetenschap van Gegevens JupyterLab Notitieomgeving
 
-Start Adobe Experience Platform en navigeer naar de [JupyterLabs-laptopomgeving](https://platform.adobe.com/notebooks/jupyterLab) .
+Start door te navigeren naar [!DNL Adobe Experience Platform] de omgeving voor [JupyterLabs-laptops](https://platform.adobe.com/notebooks/jupyterLab) .
 
 Selecteer in JupyterLab de optie **[!UICONTROL Bestand]** en houd de muisaanwijzer boven **[!UICONTROL Nieuw]**. Van dropdown die verschijnt, uitgezochte **[!UICONTROL Terminal]**.
 
