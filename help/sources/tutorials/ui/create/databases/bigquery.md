@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Google Big Query-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experi
 
 Selecteer onder de categorie *Databases* de optie **Google Big Query** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Selecteer **Connect-bron** als u een nieuwe binnenkomende basisverbinding wilt maken.
 
-![](../../../../images/tutorials/create/google-big-query/sources-catalog.png)
+![](../../../../images/tutorials/create/google-big-query/catalog.png)
 
 De pagina *Verbinding maken met Google Big Query* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -59,13 +59,13 @@ De pagina *Verbinding maken met Google Big Query* wordt weergegeven. Op deze pag
 
 Selecteer **Nieuw account** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven, aan de basisverbinding een naam, een optionele beschrijving en uw GBQ-gegevens. Als u klaar bent, selecteert u **Connect** en laat u de nieuwe basisverbinding enige tijd tot stand brengen.
 
-![](../../../../images/tutorials/create/google-big-query/gbq-new-credentials.png)
+![](../../../../images/tutorials/create/google-big-query/new.png)
 
 ### Bestaande account
 
 Als u een bestaande account wilt verbinden, selecteert u de GBQ-account waarmee u verbinding wilt maken en selecteert u **Volgende** om door te gaan.
 
-![](../../../../images/tutorials/create/google-big-query/gbq-existing-credentials.png)
+![](../../../../images/tutorials/create/google-big-query/existing.png)
 
 ## Volgende stappen
 
