@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Google Cloud Storage-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -41,20 +41,30 @@ Als u toegang wilt krijgen tot uw GCS-gegevens op Platform, moet u een geldige G
 
 ## Sluit uw GCS-account aan
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om een nieuwe binnenkomende basisverbinding te maken waarmee u uw GCS-account kunt koppelen aan Platform.
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om een nieuwe GCS-account te maken voor verbinding met Platform.
 
-Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> en selecteer vervolgens **Bronnen** in de linkernavigatiebalk voor toegang tot de werkruimte *Bronnen* . In het scherm *Catalogus* worden diverse bronnen weergegeven waarvoor u binnenkomende basisverbindingen kunt maken met. Elke bron toont het aantal bestaande basisverbindingen dat aan deze verbindingen is gekoppeld.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Bronnen]* . In het scherm *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven waarmee u een binnenkomende account kunt maken. Elke bron toont het aantal bestaande accounts en gegevensstromen dat aan deze accounts is gekoppeld.
 
-Selecteer in de categorie *Cloudopslag* de optie **Google Cloud Storage** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van een verbinding met de bronweergave, de documentatie bij de bron of voor het tot stand brengen van een verbinding met de bron. Klik op **Verbindingsbron** om een nieuwe binnenkomende basisverbinding te maken.
+U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-![](../../../../images/tutorials/create/google-cloud-storage/sources-catalog.png)
+Selecteer in de categorie *[!UICONTROL Databases]* de optie **[!UICONTROL Google Cloud Storage]** en klik **op het plus-pictogram (+)** om een nieuwe GCS-connector te maken.
 
-Het dialoogvenster _Verbinding maken met Google Cloud Storage_ wordt weergegeven. Geef in het invoerformulier een naam, een optionele beschrijving en uw GCS-referenties op voor de basisverbinding. Wanneer u klaar bent, klikt u op **Connect** en laat u de nieuwe basisverbinding enige tijd tot stand brengen.
+![catalogus](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
-![](../../../../images/tutorials/create/google-cloud-storage/gcs-credentials.png)
+De pagina *[!UICONTROL Verbinding maken met Google Cloud Storage]* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
-Zodra een basisverbinding wordt gevestigd, kunt u op de volgende sectie verdergaan en een dataflow vormen om gegevens in Platform te brengen.
+### Nieuwe account
+
+Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven, de verbinding een naam, een optionele beschrijving en uw GCS-referenties. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe account enige tijd beginnen.
+
+![verbinden](../../../../images/tutorials/create/google-cloud-storage/connect.png)
+
+### Bestaande account
+
+Als u een bestaande account wilt verbinden, selecteert u de GCS-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
+
+![bestaand](../../../../images/tutorials/create/google-cloud-storage/existing.png)
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een basisverbinding met uw GCS-account tot stand gebracht. U kunt nu doorgaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens over te brengen naar Platform](../../dataflow/batch/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u een verbinding met uw GCS-account tot stand gebracht. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag over te brengen naar Platform](../../dataflow/batch/cloud-storage.md).
