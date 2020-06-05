@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Sensei Machine Learning API
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ Deze ontwikkelaarsgids verstrekt stappen om u te helpen beginnen de het Leren AP
 
 ## Aan de slag
 
-U moet de [verificatiezelfstudie](../../tutorials/authentication.md) hebben voltooid om toegang te hebben tot de volgende aanvraagheaders om aanroepen te kunnen uitvoeren naar API&#39;s van het Adobe Experience Platform:
+U moet de [autorisatiezelfstudie](../../tutorials/authentication.md) hebben voltooid om toegang te hebben tot de volgende aanvraagheaders om aanroepen van API&#39; [!DNL Adobe Experience Platform] s uit te voeren:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
