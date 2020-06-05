@@ -4,7 +4,10 @@ solution: Experience Platform
 title: gebruikershandleiding voor Attributie AI
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1430'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ Dit document fungeert als richtlijn voor interactie met Attribution AI in de Int
 
 ## Een instantie maken
 
-Klik in de gebruikersinterface van het Adobe Experience Platform op **Services** in de linkernavigatie. De browser *Services* wordt weergegeven met beschikbare intelligente Adobe-services. Klik in de container voor Kenmerken AI op **Openen**.
+Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **Services** in de linkernavigatie. De browser *Services* wordt weergegeven met beschikbare intelligente Adobe-services. Klik in de container voor Kenmerken AI op **Openen**.
 
 ![Toegang tot uw exemplaar](./images/user-guide/open_Attribution_ai.png)
 
