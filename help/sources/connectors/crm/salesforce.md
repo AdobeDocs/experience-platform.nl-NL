@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Salesforce-aansluiting
 topic: overview
 translation-type: tm+mt
-source-git-commit: f46e95b1e1af3ff5021561eb45f408e45c657834
+source-git-commit: 565c8c4b084343e5488a725a6a93d5d50d59fe66
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
@@ -25,5 +28,5 @@ In de onderstaande documentatie vindt u informatie over het tot stand brengen va
 
 ## Connect Salesforce aan Platform gebruikend UI
 
-- [Een Salesforce-bronaansluiting maken in de gebruikersinterface](../../tutorials/ui/create/crm/dynamics-salesforce.md)
+- [Een Salesforce-bronaansluiting maken in de gebruikersinterface](../../tutorials/ui/create/crm/salesforce.md)
 - [Vorm een dataflow voor een schakelaar van CRM in UI](../../tutorials/ui/dataflow/crm.md)
