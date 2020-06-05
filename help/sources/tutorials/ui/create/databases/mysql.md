@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creeer een MySQL bronschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experi
 
 Onder de categorie *Databases* selecteert u **MySQL** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Selecteer **Connect-bron** als u een nieuwe binnenkomende basisverbinding wilt maken.
 
-![](../../../../images/tutorials/create/my-sql/sources-catalog.png)
+![](../../../../images/tutorials/create/my-sql/catalog.png)
 
 De pagina *Verbinding maken met MySQL* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -56,13 +56,13 @@ De pagina *Verbinding maken met MySQL* wordt weergegeven. Op deze pagina kunt u 
 
 Selecteer **Nieuw account** als u nieuwe referenties gebruikt. Geef op het invoerformulier dat wordt weergegeven, de basisverbinding een naam, een optionele beschrijving en uw MySQL-referenties. Als u klaar bent, selecteert u **Connect** en laat u de nieuwe basisverbinding enige tijd tot stand brengen.
 
-![](../../../../images/tutorials/create/my-sql/new-credentials.png)
+![](../../../../images/tutorials/create/my-sql/new.png)
 
 ### Bestaande account
 
 Als u een bestaande account wilt verbinden, selecteert u de MySQL-account waarmee u verbinding wilt maken en selecteert u **Volgende** om door te gaan.
 
-![](../../../../images/tutorials/create/my-sql/existing-credentials.png)
+![](../../../../images/tutorials/create/my-sql/existing.png)
 
 ## Volgende stappen
 
