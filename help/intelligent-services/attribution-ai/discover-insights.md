@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Inzichten in Attributie AI opzoeken
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1164'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Om inzichten voor Attribution AI te gebruiken, moet u een de dienstinstantie heb
 
 ## Overzicht van inzichten in servicevergaderingen
 
-Klik in de gebruikersinterface van het Adobe Experience Platform op **Services** in de linkernavigatie. De browser *Services* wordt weergegeven en beschikbaar gesteld Adobe Intelligent Services. Klik in de container voor Kenmerken AI op **Openen**.
+Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **Services** in de linkernavigatie. De browser *Services* wordt weergegeven en beschikbaar gesteld Adobe Intelligent Services. Klik in de container voor Kenmerken AI op **Openen**.
 
 ![Toegang tot uw exemplaar](./images/insights/open_Attribution_ai.png)
 
