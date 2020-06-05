@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Klantprofiel in realtime verrijken met kennis van machinaal leren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1220'
+ht-degree: 0%
 
 ---
 
 
 # Klantprofiel in realtime verrijken met kennis van machinaal leren
 
-De Werkruimte van de Wetenschap van de Gegevens van het Platform van de Ervaring van Adobe verstrekt de hulpmiddelen en de middelen om machine het leren modellen tot stand te brengen te evalueren en te gebruiken om gegevensvoorspellingen en inzichten te produceren. Wanneer machinaal leerinzichten in een profiel-Toegelaten dataset worden opgenomen, worden die zelfde gegevens ook opgenomen als verslagen van het Profiel die dan in ondergroepen van verwante elementen kunnen worden gesegmenteerd door de Dienst van de Segmentatie van het Platform van de Ervaring te gebruiken.
+[!DNL Adobe Experience Platform] De Werkruimte van de Wetenschap van gegevens verstrekt de hulpmiddelen en de middelen om, machine het leren modellen tot stand te brengen te evalueren en te gebruiken om gegevensvoorspellingen en inzichten te produceren. Wanneer machinaal leerinzichten in een profiel-Toegelaten dataset worden opgenomen, worden die zelfde gegevens ook opgenomen als verslagen van het Profiel die dan in ondergroepen van verwante elementen kunnen worden gesegmenteerd door de Dienst van de Segmentatie van het Platform van de Ervaring te gebruiken.
 
 Dit document biedt een stapsgewijze zelfstudie om het realtime profiel van klanten te verrijken met inzichten in het leren van machines. De stappen worden in de volgende secties opgedeeld:
 
@@ -21,7 +24,7 @@ Dit document biedt een stapsgewijze zelfstudie om het realtime profiel van klant
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de verschillende aspecten van het Adobe Experience Platform die betrokken zijn bij het opnemen van profielgegevens en het maken van segmenten. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Deze zelfstudie vereist een goed begrip van de verschillende aspecten van [!DNL Adobe Experience Platform] het opnemen van profielgegevens en het maken van segmenten. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 * [Klantprofiel](../../rtcdp/overview.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [Identiteitsservice](../../identity-service/home.md): Laat het Profiel van de Klant in real time toe door identiteiten van ongelijke gegevensbronnen te overbruggen die in Platform worden opgenomen.
@@ -38,37 +41,38 @@ De eerste stap naar het verrijken van het Profiel van de Klant in real time met 
 
 Het samenstellen van een schema begint door een klasse toe te wijzen. De klassen bepalen de gedragsaspecten van de gegevens het schema (verslag of tijdreeks) zal bevatten. Deze sectie verstrekt basisinstructies om een schema tot stand te brengen gebruikend de schemabouwer. Voor een meer diepgaande zelfstudie raadpleegt u de zelfstudie over het [maken van een schema met de Schema-editor](../../xdm/tutorials/create-schema-ui.md).
 
-1. Klik op het tabblad **[!UICONTROL Schema]** van het Adobe Experience Platform om de schemabrowser te openen. Klik **[!UICONTROL Create Schema]** tot de Redacteur *van het*Schema, waar u schema&#39;s op elkaar inwerkend kunt bouwen en creëren.
+1. Klik op het tabblad **[!UICONTROL Schema]** op het Adobe Experience Platform om de schemabrowser te openen. Klik **[!UICONTROL creëren Schema]** toegang tot de Redacteur *van het*Schema, waar u schema&#39;s op elkaar inwerkend kunt bouwen en creëren.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. Klik in het venster *Compositie* om door de beschikbare klassen **[!UICONTROL Assign]** te bladeren.
-   * Als u een bestaande klasse wilt toewijzen, klikt u op de gewenste klasse en markeert u deze. Klik vervolgens **[!UICONTROL Assign Class]**op deze klasse.
+2. Klik in het venster *Compositie* op **[!UICONTROL Toewijzen]** om door de beschikbare klassen te bladeren.
+   * Als u een bestaande klasse wilt toewijzen, klikt u op de gewenste klasse en markeert u deze. Klik vervolgens op Klasse ****toewijzen.
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
-   * Als u een aangepaste klasse wilt maken, klikt u in het midden van het browservenster op de knop **[!UICONTROL Create New Class]** Zoeken. Geef een klassenaam, beschrijving en kies het gedrag van de klasse. Klik **[!UICONTROL Assign Class]** zodra u wordt gebeëindigd.
+   * Als u een aangepaste klasse wilt maken, klikt u op Nieuwe klasse **** maken in het midden van het browservenster. Geef een klassenaam, beschrijving en kies het gedrag van de klasse. Klik op Klasse **** toewijzen als u klaar bent.
       ![](../images/models-recipes/enrich-rtcdp/create_new_class.png)
+
    Op dit punt moet de structuur van uw schema enkele klassevelden bevatten en u kunt nu mixen toewijzen. Een mix is een groep van één of meerdere gebieden die een bepaald concept beschrijven.
 
-3. Klik in het venster *Compositie* op **[!UICONTROL Add]** de subsectie *Mixins* .
-   * Als u een bestaande mix wilt toewijzen, klikt u op de gewenste mix en markeert u deze. Klik vervolgens **[!UICONTROL Add Mixin]**op de gewenste mix. In tegenstelling tot klassen, kunnen de veelvoudige mengen aan één enkel schema worden toegewezen zolang het aangewezen is om dit te doen.
+3. Klik in het venster *Compositie* op **[!UICONTROL Toevoegen]** in de subsectie *Mixins* .
+   * Als u een bestaande mix wilt toewijzen, klikt u op de gewenste mix en markeert u deze. Klik vervolgens op **[!UICONTROL Mixin]**toevoegen. In tegenstelling tot klassen, kunnen de veelvoudige mengen aan één enkel schema worden toegewezen zolang het aangewezen is om dit te doen.
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
-   * Als u een nieuwe mix wilt maken, klikt u in het midden van het browservenster **[!UICONTROL Create New Mixin]** op de knop. Geef een naam en beschrijving voor de mix op en klik **[!UICONTROL Assign Mixin]** zodra u klaar bent.
+   * Als u een nieuwe mix wilt maken, klikt u op Nieuwe **[!UICONTROL mixin]** maken in het midden van het browservenster. Geef een naam en beschrijving voor de mix op en klik vervolgens op **[!UICONTROL Mixin]** toewijzen als u klaar bent.
       ![](../images/models-recipes/enrich-rtcdp/create_new_mixin.png)
 
-   * Als u mengvelden wilt toevoegen, klikt u op de naam van de mix in het venster *Compositie* . Vervolgens kunt u mengvelden toevoegen door **[!UICONTROL Add Field]** in het venster *Structuur* te klikken. Zorg ervoor dat u de eigenschappen voor mixen op basis hiervan opgeeft.
+   * Als u mengvelden wilt toevoegen, klikt u op de naam van de mix in het venster *Compositie* . Vervolgens kunt u mengvelden toevoegen door in het venster **[!UICONTROL Structuur]** op Veld ** toevoegen te klikken. Zorg ervoor dat u de eigenschappen voor mixen op basis hiervan opgeeft.
       ![](../images/models-recipes/enrich-rtcdp/mixin_properties.png)
 
-4. Zodra u klaar bent met het bouwen van uw schema, klik het hoogste niveaugebied van uw schema binnen het venster van de *Structuur* om de eigenschappen van het schema in het juiste bezitsvenster te tonen. Geef een naam en een beschrijving op en klik **[!UICONTROL Save]** om het schema te maken.
+4. Zodra u klaar bent met het bouwen van uw schema, klik het hoogste niveaugebied van uw schema binnen het venster van de *Structuur* om de eigenschappen van het schema in het juiste bezitsvenster te tonen. Geef een naam en een beschrijving op en klik op **[!UICONTROL Opslaan]** om het schema te maken.
    ![](../images/models-recipes/enrich-rtcdp/save_schema.png)
 
-5. Creeer een outputdataset gebruikend uw onlangs gecreeerd schema door **[!UICONTROL Datasets]** van de linkernavigatiekolom te klikken, dan klik **[!UICONTROL Create dataset]**. Kies in het volgende scherm **[!UICONTROL Create dataset from schema]**.
+5. Creeer een outputdataset gebruikend uw onlangs gecreeerd schema door **[!UICONTROL Datasets]** van de linkernavigatiekolom te klikken, dan de klik **[!UICONTROL leidt dataset]**. Kies in het volgende scherm de optie Gegevensset **[!UICONTROL maken van schema]**.
    ![](../images/models-recipes/enrich-rtcdp/dataset_overview.png)
 
-6. Zoek en selecteer het nieuwe schema met behulp van de schema-browser en klik vervolgens op **[!UICONTROL Next]**.
+6. Gebruikend schemabrowser, vind en selecteer het onlangs gecreeerd schema, dan klik **[!UICONTROL daarna]**.
    ![](../images/models-recipes/enrich-rtcdp/choose_schema.png)
 
-7. Geef een naam en een optionele beschrijving op en klik vervolgens **[!UICONTROL Finish]** om de gegevensset te maken.
+7. Geef een naam en een optionele beschrijving op en klik vervolgens op **[!UICONTROL Voltooien]** om de gegevensset te maken.
    ![](../images/models-recipes/enrich-rtcdp/configure_dataset.png)
 
 Nu u een gecreeerd dataset van het outputschema hebt, bent u klaar aan de volgende sectie verder om hen voor de verrijking van het Profiel te vormen en toe te laten.
@@ -83,16 +87,16 @@ Alvorens u een dataset voor Profiel kunt toelaten, moet u het schema van de data
 2. Breid de schemastructuur uit en vind een aangewezen gebied om als primaire herkenningsteken te plaatsen. Klik op het gewenste veld om de eigenschappen ervan weer te geven.
    ![](../images/models-recipes/enrich-rtcdp/schema_structure.png)
 
-3. Stel het veld in als de primaire identiteit door de **[!UICONTROL Identity]** eigenschap en de **[!UICONTROL Primary Identity]** eigenschap van het veld in te schakelen en vervolgens een toepasselijke id te selecteren **[!UICONTROL Identity Namespace]**. Klik **[!UICONTROL Apply]** zodra u de wijzigingen hebt aangebracht.
+3. Stel het veld in als de primaire identiteit door de eigenschap **[!UICONTROL Identiteit]** van het veld, de eigenschap **[!UICONTROL Primaire identiteit]** en vervolgens een geschikte **[!UICONTROL identiteitsnaamruimte]** in te schakelen. Klik op **[!UICONTROL Toepassen]** als u de wijzigingen hebt aangebracht.
    ![](../images/models-recipes/enrich-rtcdp/set_identity.png)
 
-4. Klik het top-level voorwerp van uw schemastructuur om de schemaeigenschappen te tonen en het schema voor Profiel toe te laten door de **[!UICONTROL Profile]** schakelaar van een knevel te voorzien. Klik **[!UICONTROL Save]** om uw veranderingen te voltooien, dataset die gebruikend dit schema werd gecreeerd kan nu voor Profiel worden toegelaten.
+4. Klik op het bovenste object van de schemastructuur om de schemaeigenschappen weer te geven en schakel het schema voor Profiel in door de **[!UICONTROL profielschakelaar]** in en uit te schakelen. Klik **[!UICONTROL sparen]** om uw veranderingen te voltooien, dataset die gebruikend dit schema werd gecreeerd kan nu voor Profiel worden toegelaten.
    ![](../images/models-recipes/enrich-rtcdp/enable_schema.png)
 
 5. Gebruik datasetbrowser om de dataset te vinden u wenst om Profiel toe te laten en zijn naam te klikken om tot zijn details toegang te hebben.
    ![](../images/models-recipes/enrich-rtcdp/datasets.png)
 
-6. Schakel de gegevensset voor Profiel in door de **[!UICONTROL Profile]** schakelaar in te schakelen die in de informatiekolom rechts wordt gevonden.
+6. Schakel de gegevensset voor Profiel in door te schakelen tussen de **[!UICONTROL profielschakelaar]** in de informatiekolom rechts.
    ![](../images/models-recipes/enrich-rtcdp/enable_dataset.png)
 
 Wanneer gegevens in een profiel-Toegelaten dataset worden opgenomen, worden die zelfde gegevens ook opgenomen als verslagen van het Profiel. Nu uw schema en dataset wordt voorbereid, produceer sommige gegevens in de dataset door het uitvoeren van het scoren looppas gebruikend een aangewezen model, en ga met dit leerprogramma verder om inzicht tot segmenten te leiden gebruikend de Bouwer van het Segment.
@@ -101,7 +105,7 @@ Wanneer gegevens in een profiel-Toegelaten dataset worden opgenomen, worden die 
 
 Nu u inzichten in uw profiel-Toegelaten dataset hebt geproduceerd en opgenomen, kunt u die gegevens beheren door ondergroepen van verwante elementen te identificeren gebruikend de Bouwer van het Segment. Volg de onderstaande stappen om uw eigen segmenten te maken.
 
-1. Klik op het **[!UICONTROL Segments]** **[!UICONTROL Create Segment]** tabblad van het Adobe Experience Platform op de Segment Builder.
+1. Klik op het tabblad **[!UICONTROL Segmenten]** op het Adobe Experience Platform, gevolgd door Segment **** maken voor toegang tot de Segment Builder.
    ![](../images/models-recipes/enrich-rtcdp/segments_overview.png)
 
 2. Binnen de Bouwer van het Segment, verleent de linkerspoorlijn toegang tot de kernbouwstenen van segmenten: kenmerken, gebeurtenissen en bestaande segmenten. Elke bouwsteen verschijnt in zijn eigen respectieve lusje. Selecteer de klasse tot waar uw profiel-toegelaten schema zich dan uitbreidt doorblader en vind de bouwstenen voor uw segment.
@@ -113,7 +117,7 @@ Nu u inzichten in uw profiel-Toegelaten dataset hebt geproduceerd en opgenomen, 
 4. Terwijl u uw segment bouwt, kunt u geschatte segmentresultaten voorvertonen door het deelvenster *Segmenteigenschappen* te observeren.
    ![](../images/models-recipes/enrich-rtcdp/preview_segment.gif)
 
-5. Selecteer een geschikt segment, geef een naam en een optionele beschrijving op en klik vervolgens **[!UICONTROL Merge Policy]****[!UICONTROL Save]** om het nieuwe segment te voltooien.
+5. Selecteer een geschikt **[!UICONTROL samenvoegbeleid]**, geef een naam en een optionele beschrijving op en klik vervolgens op **[!UICONTROL Opslaan]** om het nieuwe segment te voltooien.
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
