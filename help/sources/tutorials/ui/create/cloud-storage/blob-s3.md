@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Azure Blob- of Amazon S3-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 9fd00ec198f61843bb9a395103215e5441b23745
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '644'
 ht-degree: 0%
 
 ---
@@ -56,18 +56,30 @@ Ga naar [dit AWS-document](https://aws.amazon.com/blogs/security/wheres-my-secre
 
 ## Sluit uw Blob- of S3-account aan
 
-Met de gegevens voor uw cloudopslag kunt u de onderstaande stappen volgen om een nieuwe binnenkomende basisverbinding te maken waarmee uw Blob- of S3-account aan Platform wordt gekoppeld.
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om een nieuwe Blob- of S3-account te maken voor verbinding met Platform.
 
-Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> en selecteer vervolgens **Bronnen** in de linkernavigatiebalk voor toegang tot de werkruimte Bronnen. In het scherm *Catalogus* worden diverse bronnen weergegeven waarvoor u binnenkomende basisverbindingen kunt maken met. Elke bron toont het aantal bestaande basisverbindingen dat aan deze verbindingen is gekoppeld.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Bronnen]* . In het scherm *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven waarmee u een binnenkomende account kunt maken. Elke bron toont het aantal bestaande accounts en gegevensstromen dat aan deze accounts is gekoppeld.
 
-Selecteer onder de categorie *Cloud Storage* de optie **Azure Blob Storage** of **Amazon S3** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het weergeven van de documentatie of het maken van een verbinding met de bron. Klik op **Verbindingsbron** om een nieuwe binnenkomende basisverbinding te maken.
+U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-![](../../../../images/tutorials/create/s3/s3_sources_catalog.png)
+Selecteer onder de categorie *[!UICONTROL Databases]* de optie **[!UICONTROL Azure Blob Storage]** of **[!UICONTROL Amazon S3]** en klik **op het +-pictogram (+)** om een nieuwe Blob- of S3-connector te maken.
 
-Geef in het invoerformulier een naam, een optionele beschrijving en uw Blob- of S3-referenties op voor de basisverbinding. Klik ten slotte op **Verbinden** en laat enige tijd de nieuwe basisverbinding tot stand brengen.
+![catalogus](../../../../images/tutorials/create/blob/catalog.png)
 
-![](../../../../images/tutorials/create/s3/s3_credentials.png)
+De pagina *[!UICONTROL Connect to Azure Blob Storage]* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+
+### Nieuwe account
+
+Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Geef op het invoerformulier dat wordt weergegeven, de verbinding een naam, een optionele beschrijving en uw Blob- of S3-referenties. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe account enige tijd beginnen.
+
+![verbinden](../../../../images/tutorials/create/blob/new.png)
+
+### Bestaande account
+
+Als u een bestaande account wilt verbinden, selecteert u de Blob- of S3-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
+
+![bestaand](../../../../images/tutorials/create/blob/existing.png)
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een basisverbinding tot stand gebracht met uw Azure Blob- of Amazon S3-account. U kunt nu doorgaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens over te brengen naar Platform](../../dataflow/batch/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw Blob- of S3-account. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag over te brengen naar Platform](../../dataflow/batch/cloud-storage.md).
