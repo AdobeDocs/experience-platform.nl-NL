@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creeer een ServiceNow bronschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 0%
@@ -60,13 +60,13 @@ De pagina *Verbinding maken met ServiceNow* wordt weergegeven. Op deze pagina ku
 
 Selecteer **Nieuw account** als u nieuwe referenties gebruikt. Geef op het invoerformulier dat wordt weergegeven, de verbinding een naam, een optionele beschrijving en uw referenties ServiceNow. Als u klaar bent, selecteert u **Connect** en laat u de nieuwe account enige tijd beginnen.
 
-![](../../../../images/tutorials/create/servicenow/new-credentials.png)
+![](../../../../images/tutorials/create/servicenow/new.png)
 
 ### Bestaande account
 
 Als u een bestaande account wilt verbinden, selecteert u de ServiceNow-account waarmee u verbinding wilt maken en selecteert u **Volgende** om door te gaan.
 
-![](../../../../images/tutorials/create/servicenow/existing-credentials.png)
+![](../../../../images/tutorials/create/servicenow/existing.png)
 
 ## Volgende stappen
 
