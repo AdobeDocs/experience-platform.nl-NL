@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Overzicht AI-kenmerken
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '654'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Attributie-AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die tot 
 
 Kenmerk-AI-uitvoer kan in verschillende dimensies worden gescheiden en kan in verschillende stadia van de reis van de klant worden gebruikt. Dit wordt verwezenlijkt zonder het moeten bedrijfsbehoeften vertalen om het leren problemen van de machine, het kiezen van algoritmen, opleiding, of het opstellen van modellen te machineren.
 
-Attribution AI-gegevens kunnen afkomstig zijn van Adobe (bijvoorbeeld Analytics) of niet-Adobe-gegevensbronnen.
+Kenmerken AI-gegevens kunnen afkomstig zijn van Adobe (bijvoorbeeld [!DNL Analytics]) of niet-Adobe-gegevensbronnen.
 
 Kenmerken-AI ondersteunt twee categorieën scores, algoritmische en op regels gebaseerde. Algoritmische scores omvatten incrementele en beïnvloede scores. Op regels gebaseerde scores zijn onder andere First touch, Last touch, Linear, U-shaped en Time-Decay.
 
@@ -57,7 +60,7 @@ Kenmerken-AI kan worden gebruikt als hulpmiddel bij het volgende voorbeeldgebrui
 
 ### Extra functies
 
-Attribution AI biedt ook integratie met andere Adobe-oplossingen, zoals Adobe Analytics. Hierdoor kunt u deze oplossingen gebruiken om het aanpasbare algoritmische model te gebruiken voor het evalueren van de mediaprestaties en het bieden van analytische inzichten.
+Attribution AI biedt ook integratie met andere Adobe-oplossingen, zoals [!DNL Adobe Analytics]. Hierdoor kunt u deze oplossingen gebruiken om het aanpasbare algoritmische model te gebruiken voor het evalueren van de mediaprestaties en het bieden van analytische inzichten.
 
 ## Volgende stappen
 
