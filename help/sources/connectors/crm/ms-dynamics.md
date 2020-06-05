@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Microsoft Dynamics-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: f46e95b1e1af3ff5021561eb45f408e45c657834
+source-git-commit: 565c8c4b084343e5488a725a6a93d5d50d59fe66
+workflow-type: tm+mt
+source-wordcount: '151'
+ht-degree: 0%
 
 ---
 
@@ -25,5 +28,5 @@ De documentatie hieronder verstrekt informatie over hoe te om de Dynamica van Mi
 
 ## Microsoft Dynamics verbinden met Platform met behulp van de gebruikersinterface
 
-- [Creeer een de bronschakelaar van de Dynamica van Microsoft in UI](../../tutorials/ui/create/crm/dynamics-salesforce.md)
+- [Creeer een de bronschakelaar van de Dynamica van Microsoft in UI](../../tutorials/ui/create/crm/dynamics.md)
 - [Vorm een dataflow voor een schakelaar van CRM in UI](../../tutorials/ui/dataflow/crm.md)
