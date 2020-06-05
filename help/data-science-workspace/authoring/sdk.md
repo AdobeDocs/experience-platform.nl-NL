@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Handleiding voor SDK-ontwikkelaars
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '943'
+ht-degree: 0%
 
 ---
 
 
 # Handleiding voor SDK-ontwikkelaars
 
-De ModelAuthoring SDK stelt u in staat om aangepaste machines te ontwikkelen die Ontvangers en kenmerkpijplijnen leren die kunnen worden gebruikt in de Werkruimte van de Wetenschap van de Gegevens van het Platform van de Ervaring van Adobe, die uitvoerbare malplaatjes in PySpark en Vonk verstrekken.
+De ModelAuthoring SDK stelt u in staat om aangepaste machines te ontwikkelen die Ontvangers en kenmerkpijplijnen leren die kunnen worden gebruikt in de Werkruimte van de Wetenschap van Gegevens, die implementeerbare sjablonen in PySpark en Spark verstrekken. [!DNL Adobe Experience Platform]
 
 Dit document bevat informatie over de verschillende klassen in de ModelontwerpSDK.
 
