@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een recept maken met Jupyter-laptops
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '2330'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst, zult u een machine
 
 ## Aan de slag met de JupyterLab-laptopomgeving
 
-U kunt een geheel nieuw recept maken in de Data Science Workspace. Navigeer naar het [Adobe Experience Platform](https://platform.adobe.com) en klik op het **[!UICONTROL Notebooks]** tabblad aan de linkerkant. Maak een nieuw notebook door de Recipe Builder-sjabloon te selecteren in de JupyterLauncher.
+U kunt een geheel nieuw recept maken in de Data Science Workspace. Navigeer om te beginnen naar het [Adobe Experience Platform](https://platform.adobe.com) en klik op het tabblad **[!UICONTROL Laptops]** aan de linkerkant. Maak een nieuw notebook door de Recipe Builder-sjabloon te selecteren in de JupyterLauncher.
 
 Met de Recipe Builder-laptop kunt u trainingen en scoring uitvoeren in de laptop. Dit geeft u de flexibiliteit om veranderingen in hun `train()` en `score()` methodes tussen het runnen van experimenten op de opleiding en het scoren gegevens aan te brengen. Als u tevreden bent met de resultaten van de training en scoring, kunt u een recept maken voor gebruik in de Data Science Workspace met behulp van de laptop voor de receptionfunctionaliteit die is ingebouwd in de Recipe Builder-laptop.
 
@@ -33,7 +36,7 @@ Met de Recipe Builder-laptop kunt u trainingen en scoring uitvoeren in de laptop
 
 Wanneer u klikt op de Recipe Builder-laptop van de draagtas, wordt de laptop geopend op het tabblad. Het model dat in de laptop wordt gebruikt, is de Python Retail Sales Forecasting Recipe die ook in [deze openbare opslagplaats te vinden is](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-U zult zien dat er op de werkbalk drie extra acties zijn, namelijk - **[!UICONTROL Train]**, **[!UICONTROL Score]** en **[!UICONTROL Create Recipe]**. Deze pictogrammen worden alleen weergegeven in het notebook met de functie Recipe Builder. Meer informatie over deze acties wordt besproken [in de sectie](#training-and-scoring) Training en score nadat u de Recipe hebt gemaakt in de laptop.
+U zult zien dat er op de werkbalk drie extra acties staan, namelijk **[!UICONTROL Trein]**, **[!UICONTROL Score]** en Ontvanger **[!UICONTROL maken]**. Deze pictogrammen worden alleen weergegeven in het notebook met de functie Recipe Builder. Meer informatie over deze acties wordt besproken [in de sectie](#training-and-scoring) Training en score nadat u de Recipe hebt gemaakt in de laptop.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -106,7 +109,7 @@ De volgende twee secties gaan over het laden van gegevens en het voorbereiden va
 
 ### Gegevens laden {#loading-data}
 
-In deze stap wordt het dataframe van de [pandas gebruikt](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Gegevens kunnen worden geladen uit bestanden in het Adobe Experience Platform met behulp van de Platform SDK (`platform_sdk`) of uit externe bronnen die gebruikmaken van panda&#39;s `read_csv()` of `read_json()` -functies.
+In deze stap wordt het dataframe van de [pandas gebruikt](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Gegevens kunnen worden geladen uit bestanden in [!DNL Adobe Experience Platform] de SDK van het platform (`platform_sdk`) of uit externe bronnen die gebruikmaken van panda&#39;s `read_csv()` of `read_json()` functies.
 
 - [Platform SDK](#platform-sdk)
 - [Externe bronnen](#external-sources)
@@ -440,13 +443,13 @@ def save(configProperties, prediction):
 
 Wanneer u klaar bent met het aanbrengen van wijzigingen in uw laptop en uw recept wilt trainen, kunt u op de bijbehorende knoppen boven aan de balk klikken om een trainingsrun in de cel te maken. Nadat u op de knop hebt geklikt, wordt een logboek met opdrachten en uitvoer uit het trainingsscript weergegeven in het notitieblok (onder de `evaluator.py` cel). Conda installeert eerst alle gebiedsdelen, dan wordt de opleiding in werking gesteld.
 
-Let erop dat u minstens één keer training moet uitvoeren voordat u scoring kunt uitvoeren. Als u op de **[!UICONTROL Run Scoring]** knop klikt, wordt het getrainde model weergegeven dat tijdens de training is gegenereerd. Het scorescript wordt onder `datasaver.py`weergegeven.
+Let erop dat u minstens één keer training moet uitvoeren voordat u scoring kunt uitvoeren. Als u op de knop Scores **[!UICONTROL uitvoeren]** klikt, wordt het getrainde model dat tijdens de training is gegenereerd, weergegeven. Het scorescript wordt onder `datasaver.py`weergegeven.
 
 Voor het zuiveren doeleinden, als u wenst om de verborgen output te zien, voeg aan het eind van de outputcel toe en stel het opnieuw in werking. `debug`
 
 ## recept maken {#create-recipe}
 
-Als u klaar bent met het bewerken van het recept en tevreden bent met de trainings-/scoringuitvoer, kunt u een recept van de laptop maken door op de navigatie rechtsboven **[!UICONTROL Create Recipe]** te drukken.
+Als u klaar bent met het bewerken van het recept en tevreden bent met de trainings-/scoringuitvoer, kunt u een recept maken van de laptop door in de rechterbovenhoek op Recipe **[!UICONTROL maken]** te drukken.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -454,7 +457,7 @@ Nadat u op de knop hebt gedrukt, wordt u gevraagd een naam voor het recept in te
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Als u eenmaal op **[!UICONTROL Ok]** drukt, kunt u naar het nieuwe recept navigeren op het [Adobe Experience Platform](https://platform.adobe.com/). U kunt op de **[!UICONTROL View Recipes]** knop klikken om naar de **[!UICONTROL Recipes]** tab onder **[!UICONTROL ML Models]**
+Als u op **[!UICONTROL OK]** drukt, kunt u naar het nieuwe recept navigeren op het [Adobe Experience Platform](https://platform.adobe.com/). U kunt op de **[!UICONTROL knoop van Ontvangers]** van de Mening klikken om u aan het **[!UICONTROL Ontvangt]** lusje onder de Modellen van **[!UICONTROL ML te nemen]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
