@@ -4,7 +4,10 @@ solution: Experience Platform
 title: AI-overzicht van klant
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '487'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ Klant is niet gebouwd op:
 
 - De AI van de klant mag niet worden gebruikt om dynamische prijzen te voorspellen, noch het prijspunt waarop de klant een aankoop gaat doen.
 - Klantenservice-AI kan niet bepalen of het aanbieden van een aanbieding de kans van de klant om een object te kopen zal vergroten. Hoewel u kunt besluiten kortingsvoorstellen te verzenden op basis van de score voor volheid, is het niet noodzakelijk de beste manier om die klanten om te zetten.
-- AI van de klant is geen hulpmiddel voor productaanbevelingen. Als u duizenden SKU&#39;s hebt, gebruik geen AI van de Klant als volmacht voor een echte oplossing van productaanbevelingen zoals Adobe Target.
+- AI van de klant is geen hulpmiddel voor productaanbevelingen. Als u duizenden SKU&#39;s hebt, gebruik geen AI van de Klant als volmacht voor een echte oplossing van productaanbevelingen zoals [!DNL Adobe Target].
 - Klantenservice-AI kan niet voorspellen in welke fase van de koopgedrag de klant zich bevindt, bijvoorbeeld in de fasen &quot;aware&quot;, &quot;achting&quot;, &quot;purchase&quot; of &quot;retentie&quot;.
 - Gebruik geen AI van de Klant om klanten te bepalen die waarschijnlijk een product kopen dat in de toekomst lanceert. Dit vereist bepaalde succesgebeurtenissen om in het verleden aanwezig te zijn voor de AI van de Klant om het systeemleeralgoritme op uw gegevens te trainen.
 
