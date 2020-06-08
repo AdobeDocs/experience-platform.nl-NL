@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Motoren
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 45f310eb5747300e13f3c57b3f979c983a03d49d
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '1114'
+ht-degree: 0%
 
 ---
 
@@ -495,145 +498,5 @@ curl -X DELETE \
     "title": "Success",
     "status": 200,
     "detail": "Engine deletion was successful"
-}
-```
-
-## Vervangen aanvragen
-
->[!IMPORTANT]
->Binaire artefacten worden niet meer ondersteund en zijn ingesteld om later te worden verwijderd. Nieuwe PySpark- en Scala-recepten moeten nu de voorbeelden van de [dockerafbeelding](#docker-image) volgen om een engine te maken.
-
-## Een engine maken met binaire artefacten - afgekeurd
-
-U kunt een Motor tot stand brengen gebruikend lokale `.jar` of `.egg` binaire artefacten door een POST- verzoek uit te voeren terwijl het verstrekken van zijn meta- gegevens en de weg van het artefact in meerdelige vormen.
-
-**API-indeling**
-
-```https
-POST /engines
-```
-
-**Verzoek**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'content-type: multipart/form-data' \
-    -F 'engine={
-        "name": "A name for this Engine",
-        "description": "A description for this Engine",
-        "algorithm": "Classification",
-        "type": "PySpark",
-    }' \
-    -F 'defaultArtifact=@path/to/binary/artifact/file.egg'
-```
-
-| Eigenschap | Beschrijving |
-| --- | --- |
-| `name` | De gewenste naam voor de engine. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als naam van de Ontvanger moet worden getoond. |
-| `description` | Een facultatieve beschrijving voor de motor. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als beschrijving van de Ontvanger moet worden getoond. Deze eigenschap is vereist. Als u geen beschrijving wilt opgeven, stelt u de waarde in op een lege tekenreeks. |
-| `algorithm` | Een tekenreeks die het type algoritme voor machinaal leren opgeeft. Tot de ondersteunde typen algoritmen behoren &#39;Classificatie&#39;, &#39;Regression&#39; of &#39;Aangepast&#39;. |
-| `type` | Het uitvoeringstype van de motor. Deze waarde correspondeert met de taal waarin het binaire artefact wordt gebouwd en of &quot;PySpark&quot;of &quot;Spark&quot;kan zijn. |
-
-
-**Antwoord**
-
-Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe engine, inclusief de unieke id (`id`) ervan.
-
-```json
-{
-    "id": "{ENGINE_ID}",
-    "name": "A name for this Engine",
-    "description": "A description for this Engine",
-    "type": "PySpark",
-    "algorithm": "Classification",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "Jane_Doe@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
-                "name": "file.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
-}
-```
-
-## Creeer een motor van de eigenschappijpleiding gebruikend binaire artefacten - afgekeurd {#create-a-feature-pipeline-engine-using-binary-artifacts}
-
->[!IMPORTANT]
->Binaire artefacten worden niet meer ondersteund en zijn ingesteld om later te worden verwijderd.
-
-U kunt een motor van de eigenschappijpleiding tot stand brengen gebruikend lokale `.jar` of `.egg` binaire artefacten door een POST- verzoek uit te voeren terwijl het verstrekken van zijn meta-gegevens en de wegen van het artefact in meerdelige vormen. Een PySpark of de Motor van de Vonk heeft de capaciteit om berekeningsmiddelen zoals het aantal kernen of de hoeveelheid geheugen te specificeren. Gelieve te verwijzen naar de bijlage sectie over [PySpark en de middelconfiguraties](./appendix.md#resource-config) van de Vonk voor meer informatie.
-
-**API-indeling**
-
-```https
-POST /engines
-```
-
-**Verzoek**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'content-type: multipart/form-data' \
-    -F 'engine={
-        "name": "Feature Pipeline Engine",
-        "description": "A feature pipeline Engine",
-        "algorithm":"fp",
-        "type": "PySpark"
-    }' \
-    -F 'featurePipelineOverrideArtifact=@path/to/binary/artifact/feature_pipeline.egg' \
-    -F 'defaultArtifact=@path/to/binary/artifact/feature_pipeline.egg'
-```
-
-| Eigenschap | Beschrijving |
-| --- | --- |
-| `name` | De gewenste naam voor de engine. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als naam van de Ontvanger moet worden getoond. |
-| `description` | Een facultatieve beschrijving voor de motor. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als beschrijving van de Ontvanger moet worden getoond. Deze eigenschap is vereist. Als u geen beschrijving wilt opgeven, stelt u de waarde in op een lege tekenreeks. |
-| `algorithm` | Een tekenreeks die het type algoritme voor machinaal leren opgeeft. Stel deze waarde in als &quot;fp&quot; om aan te geven dat dit ontwerp een engine voor kenmerkpijplijnen moet zijn. |
-| `type` | Het uitvoeringstype van de motor. Deze waarde correspondeert met de taal waarin de binaire artefacten worden voortgebouwd en kan &quot;PySpark&quot;of &quot;Vonk&quot;zijn. |
-
-**Antwoord**
-
-Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe engine, inclusief de unieke id (`id`) ervan.
-
-```json
-{
-    "id": "{ENGINE_ID}",
-    "name": "Feature Pipeline Engine",
-    "description": "A feature pipeline Engine",
-    "type": "PySpark",
-    "algorithm": "fp",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "Jane_Doe@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
-                "name": "file.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
 }
 ```
