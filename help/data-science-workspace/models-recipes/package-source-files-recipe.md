@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Bronbestanden in een recept plaatsen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '1106'
+ht-degree: 0%
 
 ---
 
@@ -35,24 +38,24 @@ Met een Docker-afbeelding kan een ontwikkelaar een toepassing verpakken met alle
 
 De ingebouwde afbeelding van de Docker wordt geduwd aan het Azure Registratie van de Container gebruikend geloofsbrieven die aan u tijdens de het creatieve werkschema van het recept worden geleverd.
 
-Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>om uw Azure Container Registry-referenties te verkrijgen. Navigeer in de linkernavigatiekolom naar **[!UICONTROL Workflows]**. Selecteer **[!UICONTROL Import Recipe]** gevolgd door selectie **[!UICONTROL Launch]**. Zie de schermafbeelding hieronder ter referentie.
+Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>om uw Azure Container Registry-referenties te verkrijgen. Navigeer in de linkernavigatiekolom naar **[!UICONTROL Workflows]**. Selecteer Recipe **[!UICONTROL importeren]** , gevolgd door **[!UICONTROL Starten]**. Zie de schermafbeelding hieronder ter referentie.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-De pagina *Configureren* wordt geopend. Geef een geschikte *recept-naam* op, bijvoorbeeld &quot;Retail Sales recipe&quot;, en geef desgewenst een beschrijving of documentatie-URL op. Klik op **[!UICONTROL Next]**.
+De pagina *Configureren* wordt geopend. Geef een geschikte *recept-naam* op, bijvoorbeeld &quot;Retail Sales recipe&quot;, en geef desgewenst een beschrijving of documentatie-URL op. Klik op **[!UICONTROL Volgende]** als de bewerking is voltooid.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Selecteer de juiste *runtime* en kies een **[!UICONTROL Classification]** optie bij *Type*. Uw Azure Container Registry-referenties worden gegenereerd zodra dit is voltooid.
+Selecteer de juiste *runtime* en kies een **[!UICONTROL classificatie]** voor *Type*. Uw Azure Container Registry-referenties worden gegenereerd zodra dit is voltooid.
 
 >[!NOTE]
 >*Type *is het leerprobleem van de machine waarvoor het recept is ontworpen en wordt na training gebruikt om de trainingsrun op maat te maken of te evalueren.
 
 >[!TIP]
->- Selecteer de **[!UICONTROL Python]** runtime voor Python-recepten.
->- Selecteer de **[!UICONTROL R]** runtime voor R-recepten.
->- Selecteer de **[!UICONTROL PySpark]** runtime voor PySpark-recepten. Een artefacttype dat automatisch wordt gevuld.
->- Selecteer de **[!UICONTROL Spark]** runtime voor Scala-recepten. Een artefacttype dat automatisch wordt gevuld.
+>- Selecteer bij Python-recepten de **[!UICONTROL Python]** -runtime.
+>- Selecteer voor R-recepten de **[!UICONTROL R]** -runtime.
+>- Voor PySpark-recepten selecteert u de **[!UICONTROL PySpark]** -runtime. Een artefacttype dat automatisch wordt gevuld.
+>- Selecteer voor Scala-recepten de **[!UICONTROL Spark]** -runtime. Een artefacttype dat automatisch wordt gevuld.
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
@@ -193,46 +196,3 @@ Deze zelfstudie ging over het verpakken van bronbestanden naar een recept, de no
 
 - [Een gecomprimeerde ontvanger importeren in de gebruikersinterface](./import-packaged-recipe-ui.md)
 - [Een gecomprimeerde ontvanger importeren met de API](./import-packaged-recipe-api.md)
-
-## Bindingsbestanden maken (afgekeurd)
-
->[!CAUTION]
-> Binaire bestanden worden niet ondersteund in nieuwe PySpark- en Scala-recepten en worden ingesteld om in een toekomstige versie te worden verwijderd. Volg de [Docker-workflows](#docker-based-model-authoring) wanneer u werkt met PySpark en Scala. De volgende workflows zijn alleen van toepassing op Spark 2.3-recepten.
-
-### PySpark-binaire bestanden maken (afgekeurd)
-
-Als u dit nog niet hebt gedaan, kloont u de gegevensopslagruimte van de Glitb op uw lokale systeem met de volgende opdracht:
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-Navigeer naar de gekloonde opslagplaats op uw lokale systeem en voer de volgende opdrachten uit om het vereiste `.egg` bestand te maken voor het importeren van een PySpark-recept:
-
-```BASH
-cd recipes/pyspark
-./build.sh
-```
-
-Het `.egg` bestand wordt in de `dist` map gegenereerd.
-
-U kunt nu verdergaan naar de [volgende stappen](#next-steps).
-
-#### Schaalbinaire bestanden maken (afgekeurd)
-
-Als u dit nog niet hebt gedaan, voert u de volgende opdracht uit om de gegevensopslagruimte van Github naar uw lokale systeem te klonen:
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-Als u het `.jar` artefact wilt maken dat wordt gebruikt voor het importeren van een Scala-recept, navigeert u naar de gekloonde opslagplaats en volgt u de onderstaande stappen:
-
-```BASH
-cd recipes/scala/
-./build.sh
-```
-
-Het gegenereerde `.jar` artefact met afhankelijkheden vindt u in de `/target` map.
-
-U kunt nu verdergaan naar de [volgende stappen](#next-steps).
