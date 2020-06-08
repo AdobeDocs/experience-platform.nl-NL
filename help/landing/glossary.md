@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Productdocumentatie van Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: a5268c2d31d356ce479bdcc143050cd513259235
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '6973'
+source-wordcount: '6961'
 ht-degree: 0%
 
 ---
@@ -426,7 +426,7 @@ ht-degree: 0%
 
 **Regelcomponent:** In de Lancering van het Platform van de Ervaring, zijn de regelcomponenten de gebeurtenissen, de voorwaarden, en de acties die omhoog een regel maken.
 
-**Runtime:** Runtime specificeert een runtime milieu voor een machine het leren recept. De runtimes van de Vonk en van PySpark staan directe upload van een binair recept brondossier (.jar) toe. De runtimes Python, R en Tensorflow maken het mogelijk een URL in te voeren in een dockerafbeelding voor een receptenbron.
+**Runtime:** Runtime specificeert een runtime milieu voor een machine het leren recept. Met de runtimes Python, R, Spark, PySpark en Tensorflow kunt u een URL invoeren in een dockerafbeelding voor een verwerkingsbron.
 
 [Terug naar boven](#adobe-experience-platform-glossary)
 
@@ -498,7 +498,7 @@ ht-degree: 0%
 
 **Streaming eindpunt-URL:** Een URL voor een streamingeindpunt is een uniek eindpunt dat door Adobe wordt verschaft en dat is gekoppeld aan de IMS-org van een klant om gegevens te streamen naar het Experience Platform.
 
-**Streaming segmentering:** Streaming segmentatie is een doorlopend proces voor gegevensselectie dat segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan het Profiel van de Klant in real time. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat uw doelgroep relevant blijft.
+**Streaming segmentering:** Streaming segmentatie is een doorlopend proces voor gegevensselectie dat segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan het Profiel van de Klant in real time. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
 
 **Symbool:** Symbool is een afkorting van een naamruimte voor identiteiten die kan worden gebruikt als referentie in API&#39;s.
 
