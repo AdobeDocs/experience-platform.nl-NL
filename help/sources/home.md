@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 translation-type: tm+mt
-source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
+source-git-commit: f181d544e93f0924bf4c239fad93d78c974afdc0
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,7 @@ Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform 
 - [Azure File Storage-aansluiting](connectors/cloud-storage/azure-file-storage.md)
 - [FTP- en SFTP-aansluiting](connectors/cloud-storage/ftp-sftp.md)
 - [Google Cloud Storage-connector](connectors/cloud-storage/google-cloud-storage.md)
+- [HDFS-aansluiting](connectors/cloud-storage/hdfs.md)
 
 ### Customer Relationship Management (CRM)
 
@@ -76,6 +77,7 @@ Het Platform van de ervaring verleent steun voor het opnemen van gegevens van ee
 - [Azure Data Explorer-connector](connectors/databases/data-explorer.md)
 - [Azure Synapse Analytics-connector](connectors/databases/synapse-analytics.md)
 - [Azure Table Storage-connector](connectors/databases/ats.md)
+- [CouchBase-connector](connectors/databases/couchbase.md)
 - [Google BigQuery-connector](connectors/databases/bigquery.md)
 - [GreenPlum-connector](connectors/databases/greenplum.md)
 - [HP Vertica-connector](connectors/databases/hp-vertica.md)
