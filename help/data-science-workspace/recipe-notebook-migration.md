@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Hulplijnen voor recept- en laptopmigratie
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '3459'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
 # Hulplijnen voor recept- en laptopmigratie
 
 >[!NOTE]
->Laptops en recepten die gebruikmaken van Python/R blijven onaangetast. De migratie is alleen van toepassing op bestaande PySpark/Spark-recepten en -laptops.
+>Laptops en recepten die gebruikmaken van Python/R blijven onaangetast. De migratie is alleen van toepassing op recepten en notebooks van PySpark/Spark (2.3).
 
 In de volgende handleidingen worden de stappen en informatie beschreven die nodig zijn voor het migreren van bestaande recepten en laptops.
 
@@ -763,7 +766,7 @@ De Scala-laptop (Spark 2.4) gebruikt de Scala-kernel, waarvoor bij de installati
 
 Net als bij het [lezen van een gegevensset](#notebook-read-dataset-spark), vereist het schrijven naar een gegevensset extra `option` waarden die in het onderstaande voorbeeld worden beschreven. In Scala, kunt u gebruiken `sys.env("PYDASDK_IMS_USER_TOKEN")` om een waarde te verklaren en terug te keren, elimineert dit de behoefte om variabelen zoals `var userToken`te bepalen. In het Scala voorbeeld hieronder, `sys.env` wordt gebruikt om alle vereiste waarden te bepalen en terug te keren nodig om aan een dataset te schrijven.
 
-**Het gebruiken van Vonk (Vonk 2.3 - verouderd) - de Kernel van de Vonk**
+**Gebruikend Vonk (Vonk 2.3 - verouderd) - de Kernel van de Vonk**
 
 ```scala
 import com.adobe.platform.dataset.DataSetOptions
