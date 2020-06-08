@@ -4,9 +4,9 @@ solution: Experience Platform
 title: FTP- en SFTP-aansluiting
 topic: overview
 translation-type: tm+mt
-source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # (Beta) FTP- en SFTP-connector
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, Google Cloud Platform en Azure. U kunt uw gegevens van deze systemen overbrengen naar Platform.
+Het Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, Google Cloud Platform en Azure, zodat u uw gegevens van deze systemen kunt overbrengen.
 
 Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met Platform kunt u gegevens van een FTP- of SFTP-server via batches inbrengen.
 
