@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Azure File Storage-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3a882656f93b86093b356be5dbc12b3e4321cfb8
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,8 @@ POST /connections
 
 **Verzoek**
 
-Als u een Azure File Storage-verbinding wilt maken, moet de unieke id van de verbindingsspecificatie worden opgegeven als onderdeel van de POST-aanvraag. De verbindingsspecificatie-id voor Azure File Storage is `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`.
+Met het volgende verzoek wordt een nieuwe Azure File Storage-verbinding gemaakt, geconfigureerd door de eigenschappen die in de payload worden opgegeven:
+
 
 ```shell
 curl -X POST \
@@ -112,7 +113,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
 ```json
 {
