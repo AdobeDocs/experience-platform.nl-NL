@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 328b897c54453f23ad7b68fb2a288712cb4fe538
+source-git-commit: bfbaaf0367b601c4ad521f42cd5ff6bdd25a8274
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 0%
       - [Azure File Storage-aansluiting](connectors/cloud-storage/azure-file-storage.md)
       - [FTP- en SFTP-aansluiting](connectors/cloud-storage/ftp-sftp.md)
       - [Google Cloud Storage-connector](connectors/cloud-storage/google-cloud-storage.md)
+      - [HDFS-aansluiting](connectors/cloud-storage/hdfs.md)
    - CRM {#crm}
       - [Microsoft Dynamics-connector](connectors/crm/ms-dynamics.md)
       - [Salesforce-aansluiting](connectors/crm/salesforce.md)
@@ -46,6 +47,7 @@ ht-degree: 0%
       - [Azure Data Explorer-connector](connectors/databases/data-explorer.md)
       - [Azure Synapse Analytics-connector](connectors/databases/synapse-analytics.md)
       - [Azure Table Storage-connector](connectors/databases/ats.md)
+      - [CouchBase-connector](connectors/databases/couchbase.md)
       - [Google BigQuery-connector](connectors/databases/bigquery.md)
       - [GreenPlum-connector](connectors/databases/greenplum.md)
       - [HP Vertica-connector](connectors/databases/hp-vertica.md)
@@ -74,6 +76,7 @@ ht-degree: 0%
          - [Azure Event Hubs-connector](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure File Storage-aansluiting](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google Cloud Storage-connector](tutorials/api/create/cloud-storage/google.md)
+         - [HDFS-aansluiting](tutorials/api/create/cloud-storage/hdfs.md)
          - [SFTP-aansluiting](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [HubSpot-connector](tutorials/api/create/crm/hubspot.md)
@@ -89,6 +92,7 @@ ht-degree: 0%
          - [Azure Data Explorer-connector](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics-connector](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage-connector](tutorials/api/create/databases/ats.md)
+         - [CouchBase-connector](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery-connector](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum-connector](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica-connector](tutorials/api/create/databases/hp-vertica.md)
