@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gebruikershandleiding voor JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 440310339003bf23c9fcfc69a6ec1eacddc9f413
 workflow-type: tm+mt
-source-wordcount: '2773'
-ht-degree: 4%
+source-wordcount: '3672'
+ht-degree: 10%
 
 ---
 
@@ -37,13 +37,14 @@ In de volgende lijst worden enkele functies beschreven die uniek zijn voor Jupyt
 
 ## Integratie met andere platformdiensten {#service-integration}
 
-Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter het ervaringsplatform. De integratie van JupyterLab op Platform als ingebedde winde staat het toe om met andere diensten van het Platform in wisselwerking te staan, toelatend u om Platform aan zijn volledig potentieel te gebruiken. De volgende platformservices zijn beschikbaar in JupyterLab:
+Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform]. De integratie van JupyterLab op [!DNL Platform] als ingebedde winde staat het toe om met andere [!DNL Platform] diensten in wisselwerking te staan, toelatend u om aan zijn volledig potentieel [!DNL Platform] te gebruiken. De volgende [!DNL Platform] services zijn beschikbaar in JupyterLab:
 
 * **Catalogusservice:** Toegang tot en verken gegevenssets met lees- en schrijffuncties.
 * **Query-service:** Toegang tot en verken gegevenssets met SQL, waardoor u lagere gegevenstoegangsoverheadkosten krijgt wanneer u met grote hoeveelheden gegevens werkt.
 * **Sensei ML Framework:** Modelontwikkeling met de mogelijkheid om gegevens op te leiden en te scoren, en het maken van recept met één klik.
+* **Experience Data Model (XDM):** Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter het Adobe Experience Platform. [Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), aangestuurd door Adobe, is een poging om de gegevens van de klantervaring te standaardiseren en schema&#39;s voor het beheer van de klantervaring te definiëren.
 
->[!NOTE] Bepaalde integratie van platformservices in JupyterLab is beperkt tot specifieke kernels. Raadpleeg de sectie over [korrels](#kernels) voor meer informatie.
+>[!NOTE] Sommige [!DNL Platform] service-integratie op JupyterLab is beperkt tot specifieke kernels. Raadpleeg de sectie over [korrels](#kernels) voor meer informatie.
 
 ## Belangrijke functies en veelvoorkomende bewerkingen
 
@@ -230,6 +231,82 @@ Als u een nieuwe *Launcher* wilt openen, klikt u op **Bestand > Nieuwe startpagi
 
 Elke ondersteunde kernel biedt ingebouwde functies waarmee u de gegevens van het platform kunt lezen vanuit een gegevensset in een laptop. De ondersteuning voor pagineringsgegevens is echter beperkt tot Python- en R-laptops.
 
+### Gegevenslimieten voor laptops
+
+De volgende informatie definieert de maximale hoeveelheid gegevens die kan worden gelezen, het type gegevens dat is gebruikt en het geschatte tijdsbestek waarin de gegevens worden gelezen. Voor Python en R werd een notebookserver met een RAM van 40 GB gebruikt voor de benchmarks. Voor PySpark en Scala, werd een gegevensbestandcluster gevormd bij 64GB RAM, 8 kernen, 2 DBU met een maximum van 4 arbeiders gebruikt voor de hieronder vermelde benchmarks.
+
+De gegevens in het ExperienceEvent-schema die werden gebruikt, varieerden van 100 (1K) rijen die oplopen tot 1 miljard (1B) rijen. Merk op dat voor de metriek PySpark en van de Vonk, een datumspanwijdte van 10 dagen werd gebruikt voor de gegevens XDM.
+
+De ad-hocschemagegevens zijn vooraf verwerkt gebruikend de Dienst van de Vraag leidt Lijst zoals Uitgezochte (CTAS). Deze gegevens varieerden ook in grootte die van duizend (1K) rijen die zich tot één miljard (1B) rijen uitstrekten.
+
+#### Gegevenslimieten Python-laptop
+
+**XDM ExperienceEvent-schema:** U moet maximaal 2 miljoen rijen (~6.1 GB gegevens op schijf) XDM-gegevens in minder dan 22 minuten kunnen lezen. Als u extra rijen toevoegt, kunnen er fouten optreden.
+
+| Aantal rijen | 1K | 10K | 100K | 1M | 2M |
+| ----------------------- | ------ | ------ | ----- | ----- | ----- |
+| Grootte op schijf (MB) | 18.73 | 187.5 | 308 | 3000 | 6050 |
+| SDK (in seconden) | 20.3 | 86.8 | 63 | 659 | 1315 |
+
+**ad-hocschema:** U moet maximaal 5 miljoen rijen (~5,6 GB gegevens op schijf) niet-XDM (ad-hocgegevens) in minder dan 14 minuten kunnen lezen. Als u extra rijen toevoegt, kunnen er fouten optreden.
+
+| Aantal rijen | 1K | 10K | 100K | 1M | 2M | 3M | 5M |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
+| Grootte op schijf (in MB) | 1.21 | 11.72 | 115 | 1120 | 2250 | 3380 | 5630 |
+| SDK (in seconden) | 7.27 | 9.04 | 27.3 | 180 | 346 | 487 | 819 |
+
+#### R-laptopgegevenslimieten
+
+**XDM ExperienceEvent-schema:** U moet maximaal 1 miljoen rijen XDM-gegevens (3 GB gegevens op schijf) kunnen lezen in minder dan 13 minuten.
+
+| Aantal rijen | 1K | 10K | 100K | 1M |
+| ----------------------- | ------ | ------ | ----- | ----- |
+| Grootte op schijf (MB) | 18.73 | 187.5 | 308 | 3000 |
+| R Kernel (in seconden) | 14.03 | 69.6 | 86.8 | 775 |
+
+**ad-hocschema:** U moet maximaal 3 miljoen rijen ad-hocgegevens (293 MB gegevens op schijf) kunnen lezen in ongeveer 10 minuten.
+
+| Aantal rijen | 1K | 10K | 100K | 1M | 2M | 3M |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
+| Grootte op schijf (in MB) | 0.082 | 0.612 | 9.0 | 91 | 188 | 293 |
+| R SDK (in sec) | 7.7 | 4.58 | 35.9 | 233 | 470.5 | 603 |
+
+#### PySpark-laptopgegevenslimieten (Python kernel):
+
+**XDM ExperienceEvent-schema:** In de interactieve modus kunt u maximaal 5 miljoen rijen (~13,42 GB gegevens op schijf) XDM-gegevens lezen in ongeveer 20 minuten. De interactieve wijze steunt slechts tot 5 miljoen rijen. Als u wenst om grotere datasets te lezen, wordt het geadviseerd u op de wijze van de Partij over te schakelen. In de Batchmodus kunt u maximaal 500 miljoen rijen (~1,31 TB gegevens op schijf) met XDM-gegevens lezen in ongeveer 14 uur.
+
+| Aantal rijen | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
+|-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Grootte op schijf | 2.93MB | 4.38MB | 29.02 | 2.69GB | 5.39GB | 8.09GB | 13.42GB | 26.82GB | 134.24GB | 268.39GB | 1.31TB |
+| SDK (interactieve modus) | 33s | 32.4s | 55.1s | 253.5s | 489.2s | 729.6s | 1206.8s | - | - | - | - |
+| SDK (batchmodus) | 815.8s | 492.8s | 379.1s | 637.4s | 624.5s | 869.2s | 1104.1s | 1786s | 5387.2s | 10624.6s | 50547s |
+
+**ad-hocschema:** In de interactieve modus kunt u maximaal 1 miljard rijen (~1,05 TB gegevens op schijf) niet-XDM-gegevens lezen in minder dan 3 minuten. In de modus Batch kunt u maximaal 1 miljard rijen (ongeveer 1,05 TB gegevens op schijf) niet-XDM-gegevens lezen in ongeveer 18 minuten.
+
+| Aantal rijen | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
+|--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
+| Grootte op schijf | 1.12MB | 11.24MB | 109.48MB | 2.69GB | 2.14GB | 3.21GB | 5.36GB | 10.71GB | 53.58GB | 107.52GB | 535.88GB | 1.05TB |
+| Interactieve SDK-modus (in seconden) | 28.2s | 18.6s | 20.8s | 20.9s | 23.8s | 21.7s | 24.7s | 22s | 28.4s | 40s | 97.4s | 154.5s |
+| SDK-batchmodus (in seconden) | 428.8s | 578.8s | 641.4s | 538.5s | 630.9s | 467.3s | 411s | 675s | 702s | 719.2s | 1022.1s | 1122.3s |
+
+#### Grenswaarden voor Spark-laptops (Scala kernel):
+
+**XDM ExperienceEvent-schema:** In de interactieve modus kunt u maximaal 5 miljoen rijen (~13,42 GB gegevens op schijf) met XDM-gegevens lezen in ongeveer 18 minuten. De interactieve wijze steunt slechts tot 5 miljoen rijen. Als u wenst om grotere datasets te lezen, wordt het geadviseerd u op de wijze van de Partij over te schakelen. In de Batchmodus kunt u maximaal 500 miljoen rijen (~1,31 TB gegevens op schijf) met XDM-gegevens lezen in ongeveer 14 uur.
+
+| Aantal rijen | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
+|---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Grootte op schijf | 2.93MB | 4.38MB | 29.02 | 2.69GB | 5.39GB | 8.09GB | 13.42GB | 26.82GB | 134.24GB | 268.39GB | 1.31TB |
+| Interactieve SDK-modus (in seconden) | 37.9s | 22.7s | 45.6s | 231.7s | 444.7s | 660.6s | 1100s | - | - | - | - |
+| SDK-batchmodus (in seconden) | 374.4s | 398.5s | 527s | 487.9s | 588.9s | 829s | 939.1s | 1441s | 5473.2s | 10118.8 | 49207.6 |
+
+**ad-hocschema:** In de interactieve modus kunt u maximaal 1 miljard rijen (~1,05 TB gegevens op schijf) niet-XDM-gegevens lezen in minder dan 3 minuten. In de modus Batch kunt u maximaal 1 miljard rijen (ongeveer 1,05 TB gegevens op schijf) niet-XDM-gegevens lezen in ongeveer 16 minuten.
+
+| Aantal rijen | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
+|--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
+| Grootte op schijf | 1.12MB | 11.24MB | 109.48MB | 2.69GB | 2.14GB | 3.21GB | 5.36GB | 10.71GB | 53.58GB | 107.52GB | 535.88GB | 1.05TB |
+| Interactieve SDK-modus (in seconden) | 35.7s | 31s | 19.5s | 25.3s | 23s | 33.2s | 25.5s | 29.2s | 29.7s | 36.9s | 83.5s | 139s |
+| SDK-batchmodus (in seconden) | 448.8s | 459.7s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397s | 518.8s | 487.9s | 760.2s | 975.4s |
+
 ### Lezen uit een gegevensset in Python/R
 
 Met Python- en R-laptops kunt u gegevens pagineren wanneer u gegevenssets opent. De voorbeeldcode voor het lezen van gegevens met en zonder paginering wordt hieronder getoond.
@@ -296,7 +373,7 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`: De unieke identiteit van de gegevensset waartoe toegang moet worden verkregen
 
-### Lees van een dataset in PySpark/Scala
+### Lees van een dataset in PySpark/Spark/Scala
 
 Met een actieve PySpark of Opgezette Boek Scala, breid het lusje van de Ontdekkingsreiziger **van** Gegevens van linkerzijbalk uit en klik **Datasets** tweemaal om een lijst van beschikbare datasets te bekijken. Klik met de rechtermuisknop op de gegevensset die u wilt openen en klik op Gegevens **zoeken in laptop**. De volgende codecellen worden gegenereerd:
 
