@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een verpakt recept (API) importeren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '974'
+ht-degree: 0%
 
 ---
 
@@ -28,9 +31,8 @@ Een motor bevat machine het leren algoritmen en logica om specifieke problemen o
 
 ## Aan de slag
 
-Deze zelfstudie vereist een pakket Recipe-bestand in de vorm van een binair vervorming of een docker-URL. Volg de bronbestanden van het [Pakket in een Recipe](./package-source-files-recipe.md) -zelfstudie om een pakket Recipe-bestand te maken of uw eigen bestand te leveren.
+Voor deze zelfstudie is een Recipe-bestand in het pakket vereist in de vorm van een docker-URL. Volg de bronbestanden van het [Pakket in een Recipe](./package-source-files-recipe.md) -zelfstudie om een pakket Recipe-bestand te maken of uw eigen bestand te leveren.
 
-- Binair artefact (afgekeurd): Het binaire artefact (bijvoorbeeld JAR (EGG) gebruikt om een motor te creëren.
 - `{DOCKER_URL}`: Een adres URL aan een beeld van de Dokker van de intelligente dienst.
 
 Deze zelfstudie vereist dat u de zelfstudie [](../../tutorials/authentication.md) Verificatie bij Adobe Experience Platform hebt voltooid om oproepen naar platform-API&#39;s te kunnen uitvoeren. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
@@ -44,7 +46,6 @@ Deze zelfstudie vereist dat u de zelfstudie [](../../tutorials/authentication.md
 Afhankelijk van de vorm van het pakketRecipe-bestand dat als onderdeel van de API-aanvraag moet worden opgenomen, wordt een engine op twee manieren gemaakt:
 
 - [Een engine maken met een docker-URL](#create-an-engine-with-a-docker-url)
-- [Een engine maken met een binair artefact (afgekeurd)](#create-an-engine-with-a-binary-artifact-deprecated)
 
 ### Een engine maken met een docker-URL {#create-an-engine-with-a-docker-url}
 
@@ -202,72 +203,3 @@ Een succesvolle reactie toont een JSON nuttige lading met informatie betreffende
 ## Volgende stappen {#next-steps}
 
 U hebt een engine gemaakt met de API en er is een unieke engine-id verkregen als onderdeel van de responsstructuur. U kunt deze engine-id gebruiken in de volgende zelfstudie terwijl u leert hoe u een model kunt [maken, trainen en evalueren met behulp van de API](./train-evaluate-model-api.md).
-
-### Een engine maken met een binair artefact (afgekeurd) {#create-an-engine-with-a-binary-artifact-deprecated}
-
-<!-- Will need to remove binary artifact documentation once the old flags are turned off -->
-
->[!CAUTION]
-> Binaire artefacten worden gebruikt in oude PySpark en de recepten van de Vonk. De Werkruimte van de Wetenschap van gegevens steunt nu Docker URLs voor alle recepten. Met deze update worden alle engines nu gemaakt met een docker-URL. Zie de sectie [URL van](#create-an-engine-with-a-docker-url) Docker van dit document. Binaire artefacten worden geplaatst om in een verdere versie worden verwijderd.
-
-Als u een engine wilt maken met een lokaal verpakt `.jar` of `.egg` binair artefact, moet u het absolute pad naar het binaire artefactbestand in uw lokale bestandssysteem opgeven. Overweeg aan de folder navigerend die het binaire artefact in een Eind milieu bevatten, en voer het bevel van `pwd` Unix voor de absolute weg uit.
-
-De volgende vraag leidt tot een Motor met een binair artefact:
-
-**API-indeling**
-
-```http
-POST /engines
-```
-
-**Verzoek**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: {ACCESS_TOKEN}' \
-    -H 'X-API-KEY: {API_KEY}' \
-    -H 'content-type: multipart/form-data' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -F 'engine={
-        "name": "Retail Sales Engine PySpark",
-        "description": "A description for Retail Sales Engine, this Engines execution type is PySpark",
-        "type": "PySpark"
-    }' \
-    -F 'defaultArtifact=@path/to/binary/artifact/file/pysparkretailapp-0.1.0-py3.7.egg'
-```
-
-| Eigenschap | Beschrijving |
-| -------  | ----------- |
-| `engine.name` | De gewenste naam voor de engine. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in het gebruikersinterface van de Werkruimte van de Wetenschap van Gegevens als Recipe naam moet worden getoond. |
-| `engine.description` | Een facultatieve beschrijving voor de motor. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in het gebruikersinterface van de Werkruimte van de Wetenschap van Gegevens als beschrijving van de Ontvanger moet worden getoond. Verwijder deze eigenschap niet. Laat deze waarde een lege tekenreeks zijn als u geen beschrijving opgeeft. |
-| `engine.type` | Het uitvoeringstype van de motor. Deze waarde komt overeen met de taal waarin het binaire artefact is ontwikkeld. Wanneer het uploaden van een binair artefact om een Motor tot stand te brengen, `type` is of `Spark` of `PySpark`. |
-| `defaultArtifact` | Het absolute pad naar het binaire artefactbestand dat wordt gebruikt om de engine te maken. Zorg ervoor dat u het bestand opneemt `@` vóór het bestandspad. |
-
-**Antwoord**
-
-```JSON
-{
-    "id": "00000000-1111-2222-3333-abcdefghijkl",
-    "name": "Retail Sales Engine PySpark",
-    "description": "A description for Retail Sales Engine, this Engines execution type is PySpark",
-    "type": "PySpark",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "your_user_id@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://some-storage-location.net/some-path/your-uploaded-binary-artifact.egg",
-                "name": "pysparkretailapp-0.1.0-py3.7.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
-}
-```
-
-Een succesvolle reactie toont een JSON nuttige lading met informatie betreffende de pas gecreëerde Motor. De `id` sleutel vertegenwoordigt het unieke herkenningsteken van de Motor en wordt vereist in het volgende leerprogramma om een MLInstance tot stand te brengen. Controleer of de engine-id is opgeslagen voordat u verdergaat met de [volgende stappen](#next-steps).
