@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevens voor cloudopslag verzamelen via bronconnectors en API's
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a66be0b49bdcd765fd5dcbd0e646d35df54c7e4
+source-git-commit: 2a8e8f2deffca06782f0ad9b8154ee763c05f06d
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -668,7 +668,7 @@ Aan de hand van deze zelfstudie hebt u een bronaansluiting gemaakt om gegevens v
 - [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
 - [Overzicht van de Data Science Workspace](../../../../data-science-workspace/home.md)
 
-## Aanhangsel
+## Aanhangsel {#appendix}
 
 In de volgende sectie worden de verschillende connectors voor bronnen voor cloudopslag en de bijbehorende verbindingsspecificaties weergegeven.
 
@@ -683,4 +683,5 @@ In de volgende sectie worden de verschillende connectors voor bronnen voor cloud
 | Azure Event Hubs (Event Hubs) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | Azure-bestandsopslag | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | Google Cloud-opslag | `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| HDFS | `54e221aa-d342-4707-bcff-7a4bceef0001` |
 | SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
