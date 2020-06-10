@@ -4,9 +4,9 @@ seo-title: Bestemming voor Google-advertenties
 description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 seo-description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -34,15 +34,15 @@ Let op de volgende details die specifiek zijn voor Google Ads-doelen:
 
 ### Bestaande Google Ads-account
 
-Google heeft alle nieuwe Google Ads-integraties met externe leveranciers gepauzeerd. U moet een bestaande integratie met Google Ads hebben om de whitelingstappen in de volgende sectie te kunnen uitvoeren en een Google Ads-bestemming in Adobe Real-time CDP te kunnen creëren.
+Google heeft alle nieuwe Google Ads-integraties met externe leveranciers gepauzeerd. U moet een bestaande integratie met Google Ads hebben om de toegestane lijststappen in de volgende sectie te kunnen uitvoeren en een bestemming van de Advertentie van Google in Echte-tijd CDP van Adobe tot stand te brengen.
 
-### Whitelisting
+### Lijst toestaan
 
 >[!NOTE]
 >
->Whitelisting is verplicht voordat u uw eerste Google Ads-bestemming in Adobe Real-time CDP instelt. Controleer of het hieronder beschreven whitelistingproces door Google is voltooid voordat u een bestemming maakt.
+>De lijst Toestaan is verplicht voordat u uw eerste Google Ads-bestemming instelt in Adobe Real-time CDP. Controleer of Google het hieronder beschreven proces voor het toestaan van lijsten heeft voltooid voordat u een bestemming maakt.
 
-Voordat u de Google Ads-bestemming maakt in Adobe Real-time CDP, moet u contact opnemen met Google om Adobe te vragen om te worden gewhitelliseerd als gegevensaanbieder en om uw account te worden gewhitelisterd. Neem contact op met Google en geef de volgende informatie op:
+Voordat u de Google Ads-bestemming maakt in Adobe Real-time CDP, moet u contact opnemen met Google om Adobe op te nemen in de lijst met toegestane gegevensproviders en om uw account toe te voegen aan de lijst voor toestaan. Neem contact op met Google en geef de volgende informatie op:
 
 * **Account-id** : Dit is de account-id van Adobe bij Google. Neem contact op met de klantenservice van Adobe of uw Adobe-vertegenwoordiger voor deze id.
 * **Klant-id** : Dit is de Adobe-id voor de klantenaccount bij Google. Neem contact op met de klantenservice van Adobe of uw Adobe-vertegenwoordiger voor deze id.
@@ -55,6 +55,7 @@ Voordat u de Google Ads-bestemming maakt in Adobe Real-time CDP, moet u contact 
    ![Google Ads-doel verbinden](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. In het Create bestemmingswerkschema, vul de [!UICONTROL BasisInformatie] voor de bestemming in. <br>
+
    ![Basisinformatie over Google Ads](/help/rtcdp/destinations/assets/google-2-basic-information.png)
 * **[!UICONTROL Naam]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Omschrijving]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
