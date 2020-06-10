@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 translation-type: tm+mt
-source-git-commit: f181d544e93f0924bf4c239fad93d78c974afdc0
+source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Overzicht van bronconnectors
 
-Met het Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
 Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u bronverbindingen aan diverse gegevensleveranciers met gemak laat plaatsen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
 
@@ -47,11 +47,11 @@ Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform 
 - [Azure Data Lake Storage Gen2-connector](connectors/cloud-storage/adls-gen2.md)
 - [Azure Blob- en Amazon S3-connector](connectors/cloud-storage/blob-s3.md)
 - [Amazon Kinesis-connector](connectors/cloud-storage/kinesis.md)
+- [Apache HDFS-aansluiting](connectors/cloud-storage/hdfs.md)
 - [Azure Event Hubs-connector](connectors/cloud-storage/eventhub.md)
 - [Azure File Storage-aansluiting](connectors/cloud-storage/azure-file-storage.md)
 - [FTP- en SFTP-aansluiting](connectors/cloud-storage/ftp-sftp.md)
 - [Google Cloud Storage-connector](connectors/cloud-storage/google-cloud-storage.md)
-- [HDFS-aansluiting](connectors/cloud-storage/hdfs.md)
 
 ### Customer Relationship Management (CRM)
 
@@ -77,7 +77,7 @@ Het Platform van de ervaring verleent steun voor het opnemen van gegevens van ee
 - [Azure Data Explorer-connector](connectors/databases/data-explorer.md)
 - [Azure Synapse Analytics-connector](connectors/databases/synapse-analytics.md)
 - [Azure Table Storage-connector](connectors/databases/ats.md)
-- [CouchBase-connector](connectors/databases/couchbase.md)
+- [Koppelaansluiting](connectors/databases/couchbase.md)
 - [Google BigQuery-connector](connectors/databases/bigquery.md)
 - [GreenPlum-connector](connectors/databases/greenplum.md)
 - [HP Vertica-connector](connectors/databases/hp-vertica.md)
