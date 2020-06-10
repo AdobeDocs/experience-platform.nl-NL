@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: June 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: b6cfdf56c20065bdc3e8a9fedf6007ddd74eaeaa
+source-git-commit: 35af498a41d779cc155cff7f030cccb57f68b8fa
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 1%
+source-wordcount: '429'
+ht-degree: 2%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 1%
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [Werkruimte voor gegevenswetenschap](#dsw)
+- [Segmentering](#segmentation)
 - [Bronnen](#sources)
 
 ## Werkruimte voor gegevenswetenschap {#dsw}
@@ -35,6 +36,20 @@ Merk op dat het Leren van de machine in real time in alpha is en nog momenteel w
 | Starter van JupyterLab Launcher Real-time ML | De JupyterLab Launcher beschikt nu over een Python-laptop voor Real-time Machine Learning (Alpha). |
 
 Voor meer informatie over het Leren alfakanaal van de machine in real time, te zien gelieve het [Leren van de machine in real time overzicht](../../data-science-workspace/real-time-machine-learning/home.md).
+
+## Segmentering {#segmentation}
+
+Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en RESTful API waarmee u segmenten kunt samenstellen en doelgroepen kunt genereren op basis van uw gegevens in het realtime-klantprofiel. Deze segmenten worden centraal geconfigureerd en onderhouden op Platform, waardoor ze gemakkelijk toegankelijk zijn voor elke Adobe-toepassing.
+
+De Dienst van de segmentatie bepaalt een bepaalde ondergroep van profielen door de criteria te beschrijven die een verhandelbare groep mensen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Datumvelden | Er is een &#39;verjaardagsfunctie&#39; toegevoegd voor datumfuncties waarmee gebruikers datums zonder het jaar kunnen evalueren. |
+
+Zie het [segmentatieoverzicht voor meer informatie over segmentatie](../../segmentation/home.md)
 
 ## Bronnen {#sources}
 
