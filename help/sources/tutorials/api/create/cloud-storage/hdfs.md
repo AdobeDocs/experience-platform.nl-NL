@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Een HDFS-aansluiting maken met de Flow Service API
+title: Een Apache HDFS-aansluiting maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
 
 
-# Een HDFS-aansluiting maken met de Flow Service API
+# Een Apache HDFS-aansluiting maken met de Flow Service API
 
 >[!NOTE]
->De HDFS-aansluiting is in bèta. De functies en documentatie kunnen worden gewijzigd.
+>De Apache HDFS-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
 
-De Flow Service wordt gebruikt om klantgegevens van diverse verschillende bronnen te verzamelen en te centraliseren om deze over te brengen naar het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+De Flow Service wordt gebruikt om klantgegevens van diverse verschillende bronnen te verzamelen en te centraliseren om in Adobe Experience Platform te brengen. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om een gedistribueerd Hadoop-bestandssysteem (hierna &quot;HDFS&quot; genoemd) aan te sluiten op Experience Platform.
+Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om een Apache Hadoop Distributed File System (hierna &quot;HDFS&quot; genoemd) aan Experience Platform te koppelen.
 
 ## Aan de slag
 
-Voor deze handleiding is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [Bronnen](../../../../home.md): Het Platform van de ervaring laat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform.
 * [Sandboxen](../../../../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
