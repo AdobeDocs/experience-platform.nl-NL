@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Handleiding voor het oplossen van problemen in de Data Science Workspace
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: e77b76bdcfa5137d9bd77400b15f2fe8db3b7c0b
+workflow-type: tm+mt
+source-wordcount: '704'
+ht-degree: 0%
 
 ---
 
 
 # Handleiding voor het oplossen van problemen in de Data Science Workspace
 
-Dit document bevat antwoorden op veelgestelde vragen over de Data Science Workspace van het Adobe Experience Platform. Raadpleeg de handleiding voor het oplossen van problemen met de API&#39;s van het [Adobe Experience Platform voor vragen en het oplossen van problemen met platform-API&#39;s in het algemeen](../landing/troubleshooting.md).
+In dit document worden antwoorden gegeven op veelgestelde vragen over de Adobe Experience Platform Data Science Workspace. Raadpleeg de handleiding voor het oplossen van problemen met de [Adobe Experience Platform API&#39;s in het algemeen voor vragen en het oplossen van problemen met betrekking tot platform-API&#39;s](../landing/troubleshooting.md).
 
 ## De JupyterLab-omgeving wordt niet geladen in Google Chrome
 
 >[!IMPORTANT] Dit probleem is opgelost, maar kan nog steeds voorkomen in de Google Chrome 80.x-browser. Controleer of uw Chrome-browser up-to-date is.
 
-Met Google Chrome versie 80.x worden alle cookies van derden standaard geblokkeerd. Met dit beleid kan worden voorkomen dat JupyterLab wordt geladen in het Adobe Experience Platform.
+Met Google Chrome versie 80.x worden alle cookies van derden standaard geblokkeerd. Met dit beleid kan worden voorkomen dat JupyterLab wordt geladen in Adobe Experience Platform.
 
 Voer de volgende stappen uit om dit probleem op te lossen:
 
@@ -35,9 +38,9 @@ Schakel ten slotte &quot;Cookies van derden blokkeren&quot; in op &quot;UIT&quot
 
 ![chroom geavanceerd](./images/faq/toggle-off.png)
 
->[!NOTE] U kunt cookies en whitelist van derden ook uitschakelen [*.]ds.adobe.net
+>[!NOTE] U kunt cookies van derden uitschakelen en [* toevoegen.]ds.adobe.net aan toestaan lijst.
 
-Ga naar &quot;chrome://flags/&quot; op de adresbalk. U kunt de markering *&quot;SameSite door standaardcookies&quot;* zoeken en uitschakelen in het vervolgkeuzemenu rechts.
+Ga naar &quot;chrome://flags/&quot; op de adresbalk. U kunt de markering *&quot;SameSite by default cookies&quot;* zoeken en uitschakelen in het vervolgkeuzemenu rechts.
 
 ![markering samensite uitschakelen](./images/faq/samesite-flag.png)
 
@@ -45,7 +48,7 @@ Na Stap 2, wordt u ertoe aangezet om uw browser opnieuw te lanceren. Nadat u het
 
 ## Waarom heb ik geen toegang tot JupyterLab in Safari?
 
-Safari schakelt cookies van derden standaard uit in Safari &lt; 12. Aangezien de Jupyter-instantie van de virtuele machine zich in een ander domein bevindt dan het bovenliggende frame, is het voor het Adobe Experience Platform momenteel vereist dat cookies van derden zijn ingeschakeld. Schakel cookies van derden in of schakel over naar een andere browser, zoals Google Chrome.
+Safari schakelt cookies van derden standaard uit in Safari &lt; 12. Aangezien de Jupyter-instantie van de virtuele machine zich in een ander domein bevindt dan het bovenliggende frame, vereist Adobe Experience Platform momenteel dat cookies van derden zijn ingeschakeld. Schakel cookies van derden in of schakel over naar een andere browser, zoals Google Chrome.
 
 Voor Safari 12, moet u uw Agent van de Gebruiker op &quot;Chrome&quot;of &quot;Firefox&quot;schakelen. Om uw Agent van de Gebruiker te schakelen, begin door het menu van *Safari* te openen en **Voorkeur** te selecteren. Het voorkeurenvenster wordt weergegeven.
 
@@ -61,7 +64,7 @@ Selecteer vervolgens in de bovenste navigatiebalk het menu **Ontwikkelen** . Hou
 
 ## Waarom zie ik een &#39;403 Verboden&#39; bericht bij het uploaden of verwijderen van een bestand in JupyterLab?
 
-Als uw browser is ingeschakeld met software voor het blokkeren van advertenties, zoals Ghostery of AdBlock Plus, moet het domein &quot;\*.adobe.net&quot; voor JupyterLab worden weergegeven in elke software voor het blokkeren van advertenties. Dit komt doordat virtuele JupyterLab-machines op een ander domein worden uitgevoerd dan het Experience Platform-domein.
+Als uw browser is ingeschakeld met software voor het blokkeren van advertenties, zoals Ghostery of AdBlock Plus, moet het domein &quot;\*.adobe.net&quot; zijn toegestaan in elke software voor het blokkeren van advertenties, zodat JupyterLab normaal kan werken. Dit komt doordat virtuele JupyterLab-machines op een ander domein worden uitgevoerd dan het Experience Platform-domein.
 
 ## Waarom zien sommige onderdelen van mijn Jupyter-laptop er gescroleerd uit of worden ze niet weergegeven als code?
 
