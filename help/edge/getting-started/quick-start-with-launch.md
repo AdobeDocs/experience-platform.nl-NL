@@ -1,12 +1,12 @@
 ---
 title: Snel starten met starten
-seo-title: Adobe Experience Platform Web SDK snel aan de slag met Starten
+seo-title: Snelle start met Adobe Experience Platform Web SDK bij starten
 description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Platform van de Ervaring om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Platform van de Ervaring om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: 2ccb2c17590780f7f1bd5e553164209763ab9e24
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,10 @@ ht-degree: 0%
 
 # Welkom
 
-In deze handleiding wordt uitgelegd hoe u de Adobe Experience Platform Web SDK in Launch instelt. Als u deze functie wilt gebruiken, moet u een whitelist hebben. Als u op de wachtlijst wilt krijgen gelieve uw CSM te bereiken.
+Deze gids zal u door de verschillende stappen op hoe te opstelling de SDK van het Web van Adobe Experience Platform in Lancering nemen. Als u deze functie wilt kunnen gebruiken, moet u beschikken over machtigingen en in de lijst Toestaan staan. Als u op de wachtlijst wilt krijgen gelieve uw CSM te bereiken.
 
 - Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als u al een CNAME voor Analytics hebt, zou u dat moeten gebruiken. Testen in ontwikkeling werkt zonder CNAME, maar u hebt er een nodig voordat u naar productie gaat
-- U kunt gebruikmaken van het Adobe Experience Platform Data Platform. Als u Platform niet hebt aangeschaft, zullen wij u van de Stichting van de Diensten van de Gegevens van het Platform van de Ervaring voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
+- recht hebben op het Adobe Experience Platform-gegevensplatform. Als u Platform niet hebt aangeschaft, zullen wij u van de Stichting van de Diensten van de Gegevens van het Platform van de Ervaring voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
 - Gebruik de nieuwste versie van de service Bezoeker-id
 
 ## Een configuratie-id maken
@@ -26,14 +26,14 @@ U kunt een configuratie-id maken met het gereedschap [](../fundamentals/edge-con
 
 >[!NOTE]
 >
->Uw organisatie moet voor de eigenschap worden gewhitelisteerd. Neem contact op met uw CSM om op de lijst te komen voor eventuele whitelisting.
+>Uw organisatie moet in de lijst met toegestane items staan voor de functie. Neem contact op met uw CSM om de lijst voor toestaan weer te geven.
 
 ## Een schema voorbereiden
 
 Het Edge Network van het Platform van de Ervaring neemt gegevens als XDM. XDM is een gegevensformaat dat u schema&#39;s laat bepalen. Het schema bepaalt hoe het Netwerk van de Rand verwacht dat de gegevens worden geformatteerd. Om gegevens te verzenden zult u uw schema moeten bepalen.
 
 - [Een schema maken](../../xdm/tutorials/create-schema-ui.md)
-- Voeg de Adobe Experience Platform Web SDK-mix toe aan het schema dat u hebt gemaakt
+- Voeg de mix van de SDK van Adobe Experience Platform Web toe aan het schema dat u hebt gemaakt
 
 ## SDK installeren in Launch
 
@@ -63,4 +63,4 @@ Zodra u gegevens hebt die stromen kunt u het volgende doen.
 - Meer informatie over het verzenden van gegevens naar meerdere oplossingen
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
    - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
-   - [Adobe-doel](../solution-specific/target/target-overview.md)
+   - [Adobe Target](../solution-specific/target/target-overview.md)
