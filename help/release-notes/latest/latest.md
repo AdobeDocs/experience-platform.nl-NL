@@ -1,131 +1,44 @@
 ---
-title: Opmerkingen bij de release Adobe Experience Platform
-description: Opmerkingen bij de release Experience Platform van 13 mei 2020
+title: Opmerkingen bij de release van Adobe Experience Platform
+description: Opmerkingen bij de release Experience Platform van 10 juni 2020
 doc-type: release notes
-last-update: May 13, 2020
+last-update: June 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: db3acec75c24a0cb75d1d88e7aa2171e794abc4f
+source-git-commit: b6cfdf56c20065bdc3e8a9fedf6007ddd74eaeaa
 workflow-type: tm+mt
-source-wordcount: '1299'
-ht-degree: 2%
+source-wordcount: '306'
+ht-degree: 1%
 
 ---
 
 
-# Opmerkingen bij de release Adobe Experience Platform
+# Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 13 mei 2020**
+**Releasedatum: 10 juni 2020**
 
-Updates voor bestaande functies in het Adobe Experience Platform:
+Updates voor bestaande functies in Adobe Experience Platform:
 
-- [Updates van gebruikersinterface](#ux)
 - [Werkruimte voor gegevenswetenschap](#dsw)
-- [Doelen](#destinations)
-- [Experience Platform Web SDK en Experience Platform Edge Network](#edge)
-- [Klantprofiel in realtime](#profile)
 - [Bronnen](#sources)
-
-## Updates van gebruikersinterface {#ux}
-
-Adobe Experience Platform brengt updates uit voor het domein en de headerbalk om uw ervaring te verbeteren en te verenigen met andere Experience Cloud-toepassingen.
-
-- Eenvoudiger overschakelen tussen uw organisaties of op een andere applicatie
-- Verbeterde gebruikershulp, inclusief aanbevolen artikelen en contextrelevante documentatie in het menu Help
-- Mogelijkheid om feedback te geven over het Experience Platform en de tickets voor bestandsondersteuning
-
-De nieuwe ervaring wordt geleidelijk opgedaan. U kunt de ervaring bekijken op [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
 ## Werkruimte voor gegevenswetenschap {#dsw}
 
-De Werkruimte van de Wetenschap van gegevens gebruikt machine het leren en kunstmatige intelligentie om inzichten van uw gegevens te ontketenen. De Data Science Workspace is geïntegreerd in het Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor alle Adobe-oplossingen. Een van de manieren waarop de Werkruimte van de Wetenschap van Gegevens dit verwezenlijkt is door het gebruik van JupyterLab. JupyterLab is een webgebaseerde gebruikersinterface voor <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> en is nauw geïntegreerd in het Adobe Experience Platform. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens.
+De Werkruimte van de Wetenschap van gegevens gebruikt machine het leren en kunstmatige intelligentie om inzichten van uw gegevens te ontketenen. De Data Science Workspace is geïntegreerd in Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor alle Adobe-oplossingen.
 
-**Nieuwe functies**
+De Werkruimte van de Wetenschap van gegevens heeft aan nieuwe manieren gewerkt om betere ervaringen en voorspellingen toe te laten door het gebruik van het Leren van de machine in real time. Het leren van de machine in real time verstrekt de capaciteit om douane of ingevoerde vooraf opgeleide machine het leren modellen in industrie-standaard interoperabele modelformaten voor scoring/activering in real time via een API eindpunt te ontwerpen, te testen en op te stellen.
 
-| Functie | Beschrijving |
-|--- | ---|
-| JupyterLab Launcher | De JupyterLab Launcher bevat nu starters voor Spark 2.4-laptops. Starters voor Spark 2.3-laptops zijn nu gemarkeerd als verouderd en worden in een volgende release verwijderd. |
-| Vonk 2.4 | De nieuwe Scala (Vonk) en PySpark recepten gebruiken nu Vonk 2.4. |
-| Kernels | Scala-laptops (Spark) zijn nu ontworpen via de Scala-kernel. PySpark laptops zijn nu ontworpen via de Python Kernel. De kernel van de Vonk en van PySpark wordt afgekeurd en geplaatst om in een verdere versie worden verwijderd. |
-| Ontvangers | Nieuwe PySpark- en Spark-recepten volgen nu de Docker-workflow, vergelijkbaar met Python- en R-recepten. |
-
-Raadpleeg voor meer informatie over het migreren van uw laptops en recepten naar Spark 2.4 de [handleiding](../../data-science-workspace/recipe-notebook-migration.md)voor laptopmigratie. Voor meer algemene informatie over de Werkruimte van de Wetenschap van Gegevens, zie de [overzichtsdocumentatie](../../data-science-workspace/home.md).
-
-## Doelen {#destinations}
-
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md)zijn doelen vooraf gebouwde integratie met doelplatforms die gegevens naadloos aan die partners activeren.
-
-**Facebook**
-
-Adobe Real-time CDP ondersteunt nu gegevensactivering op Facebook, zodat u profielen voor uw Facebook-campagnes kunt activeren voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
-
-Raadpleeg de doelpagina van [Facebook voor meer informatie over de nieuwe functionaliteit](/help/rtcdp/destinations/facebook-destination.md) .
-
-<br> 
-
-**Amazon Kinesis en Azure Event Hubs streaming cloud storage bestemmingen**
-
-Adobe Real-time CDP ondersteunt nu gegevensactivering voor streaming cloudopslagdoelen, zodat u publieksgegevens en -gebeurtenissen in JSON-indeling kunt exporteren naar deze doelen. U kunt bedrijfslogica bovenop deze gebeurtenissen in uw bestemmingen dan beschrijven. Zie hieronder voor meer informatie:
-
->[!NOTE]
->
->De [!DNL Amazon Kinesis] en de [!DNL Azure Event Hubs] bestemmingen in Echte Adobe CDP in tijd zijn momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
-
-| Documentatie | Beschrijving |
-|--- | ---|
-| [(bèta) Amazon Kinesis-bestemming](/help/rtcdp/destinations/amazon-kinesis-destination.md) | In dit artikel wordt uitgelegd hoe u een real-time uitgaande verbinding maakt met uw [!DNL Amazon Kinesis] opslag om gegevens te streamen van het Adobe Experience Platform. |
-| [(Beta) Azure Event Hubs-bestemming](/help/rtcdp/destinations/azure-event-hubs-destination.md) | In dit artikel wordt uitgelegd hoe u een real-time uitgaande verbinding maakt met uw [!DNL Azure Event Hubs] opslag om gegevens te streamen van het Adobe Experience Platform. |
-| [API-zelfstudie - Verbinding maken met streamingdoelen en gegevens activeren](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md) | Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw gegevens van het Adobe Experience Platform, een verbinding te maken met een streamingbestemming voor cloudopslag (Amazon Kinesis of Azure Event Hubs), een gegevensstroom te maken naar uw nieuwe gemaakte bestemming en gegevens te activeren voor uw nieuwe gemaakte bestemming. |
-
-Zie het overzicht [](/help/rtcdp/destinations/destinations-overview.md)Doelen voor meer informatie.
-
-## Experience Platform Web SDK en Experience Platform Edge Network {#edge}
-
-Met de Experience Platform Web SDK en Experience Platform kunnen gebruikers gegevens verzenden naar het Adobe Experience Platform en andere Adobe Solutions in real-time voor eindgebruikersapparaten en browsers. De meest recente lijst met gebruiksgevallen vindt u in onze [openbare routekaart](https://github.com/adobe/alloy/projects/5) , die vaak wordt bijgewerkt.
-
-**Nieuwe functies**
+Merk op dat het Leren van de machine in real time in alpha is en nog momenteel wordt ontwikkeld.
 
 | Functie | Beschrijving |
 |--- | ---|
-| Ondersteuning voor ECID | De SDK biedt ondersteuning voor ECID uit het vak zonder extra bibliotheken of informatie voor de installatie |
-| Configuratie-interface | Beheer uw montages van configuratieidentiteitskaart met de nieuwe UI van de randconfiguratie in Lancering, moet worden gewhitelisteerd om tot toegang te hebben |
-| Adobe Experience Platform Web SDK Mixen | Een combinatie voor gebruik met het Web SDK van het Platform van de Ervaring die alle gesteunde gebieden omvat. |
-| Besturingselementen voor cursusinstemming | Biedt bedrijven controle over opt-in en opt-out van het Web SDK van het Platform van de Ervaring |
-| Ondersteuning voor foutopsporing aan de clientzijde in de nieuwe Experience Cloud Debugger Extension | Zie verzoeken van het Web SDK van het Platform van de Ervaring evenals randsporen om te zien hoe de gegevens door het systeem stromen. |
-| Adobe Analytics | Gegevens naar Analytics-rapportreeksen verzenden via de randconfiguratie. XDM wordt afgevlakt in contextgegevens, steunt multi-suite het etiketteren |
-| Adobe-doel | Ondersteuning voor Adobe Target. Inclusief VEC, Form based composer, A/B, XT, Automated Personalization, MVT |
-| Ondersteuning voor Adobe Audience Manager | Ondersteuning voor synchronisatie-id&#39;s van Audience Manager, URL-doelen en Cookie-doelen |
-| Identiteitssynchronisatie | Naam gewijzigd `setCustomersIds` om het duidelijker `syncIdentity` te maken |
-| XDM Object Builder | In de opstartextensie kunt u nu XDM-objecten bouwen als Data Elements |
+| Starter van JupyterLab Launcher Real-time ML | De JupyterLab Launcher beschikt nu over een Python-laptop voor Real-time Machine Learning (Alpha). |
 
-Raadpleeg de [documentatie](../../edge/home.md)voor meer informatie over Platform Web SDK en Edge Network.
-
-## Klantprofiel in realtime {#profile}
-
-Met het Adobe Experience Platform kunt u een gecoördineerde, consistente en relevante ervaring voor uw klanten ontwikkelen, ongeacht waar of wanneer ze met uw merk communiceren. Met het Profiel van de Klant in real time, kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. Het profiel staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| -----------| ---------- |
-| Nieuwe exportcijfers profiel | Toegevoegde metriek aan profieluitvoer banen die het totale aantal uitgevoerde profielen en aantal profielen in elke namespace tonen. |
-| New Observability Insights Metrics | De API voor observatiegegevens bevat nu de volgende meetgegevens voor het streamen van opname naar profiel: Binnenkomende verzoektarief, Succesvolle Ingestiesnelheid, Ingested Record Grootte. |
-| Eindpunt van plotselinge GET | Toegevoegde bulkGET eindpunt aan Real-time het Profiel van de Klant API om het terugwinnen van veelvoudige resultaten in één enkele API vraag toe te laten. U kunt nu bulksgewijs maximaal 100 IDs voor segmentdefinities, segmentbanen, en fusiebeleid nu OPHALEN. |
-| Bladeren door profiel op identiteit | In de interface van het Platform kunt u nu een naamruimte selecteren en een identiteitswaarde opgeven om door een profiel te bladeren. |
-
-**Bugfixes**
-
-- Geen.
-
-**Bekende problemen**
-
-- Geen.
-
-Lees het overzicht [van het profiel van de](../../profile/home.md)real-time klant voor meer informatie over het profiel in real-time, inclusief zelfstudies en best practices voor het werken met profielgegevens.
+Voor meer informatie over het Leren alfakanaal van de machine in real time, te zien gelieve het [Leren van de machine in real time overzicht](../../data-science-workspace/real-time-machine-learning/home.md).
 
 ## Bronnen {#sources}
 
-Met het Adobe Experience Platform kunt u gegevens uit externe bronnen ophalen en tegelijk die gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
 
 Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u bronverbindingen voor diverse gegevensleveranciers met gemak laat opzetten. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
@@ -133,12 +46,7 @@ Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Aanvullende API- en UI-ondersteuning voor cloudopslagsystemen | Nieuwe bronconnectors voor Azure File Storage. |
-| Aanvullende API- en UI-ondersteuning voor databases | Nieuwe bronconnectors voor Azure Data Explorer, IBM DB2 en Oracle DB. |
-| Adobe Audience Manager to Experience Platform Data sharing | Het inrichtingsproces voor de schakelaar van de Manager van de Publiek is bijgewerkt. De datasets van de Manager van het publiek voor het Profiel van de Klant in real time worden nu onbruikbaar gemaakt door gebrek. U kunt handmatig kiezen welke gegevenssets u wilt promoten naar Profiel. De nieuwe standaardinstellingen zijn niet retroactief en hebben alleen invloed op de provisioning voor nieuwe Audience Manager-connectors. Zie meer informatie in de de gebruikersgids [van](../../catalog/datasets/user-guide.md)Datasets. |
-
-**Bekende problemen**
-
-- Geen.
+| Aanvullende API- en UI-ondersteuning voor cloudopslagsystemen | Nieuwe bronaansluiting voor Apache HDFS |
+| Aanvullende API- en UI-ondersteuning voor databases | Nieuwe bronconnector voor Couchbase. |
 
 Zie het [bronoverzicht](../../sources/home.md)voor meer informatie over bronnen.
