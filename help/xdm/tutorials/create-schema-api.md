@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Een schema maken met de API voor schemaregistratie
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
+workflow-type: tm+mt
+source-wordcount: '2418'
+ht-degree: 0%
 
 ---
 
 
 # Een schema maken met de API voor schemaregistratie
 
-Het Schemaregister wordt gebruikt om toegang te krijgen tot de Schemabibliotheek binnen het Adobe Experience Platform. De Schemabibliotheek bevat bronnen die beschikbaar zijn gesteld door Adobe, Experience Platform-partners en leveranciers van wie u de toepassingen gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
+Het register van het Schema wordt gebruikt om tot de Bibliotheek van het Schema binnen Adobe Experience Platform toegang te hebben. De Schemabibliotheek bevat bronnen die beschikbaar zijn gesteld door Adobe, Experience Platform-partners en leveranciers van wie u de toepassingen gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
 
 Deze zelfstudie gebruikt de API voor schemaregistratie om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse. Als u de gebruikersinterface in het Platform van de Ervaring liever zou gebruiken, verstrekt de Zelfstudie [van de Redacteur van het](create-schema-ui.md) Schema geleidelijke instructies voor het uitvoeren van gelijkaardige acties in de schemaredacteur.
 
 ## Aan de slag
 
-Voor deze handleiding is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [XDM-systeem](../home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -1162,7 +1165,7 @@ Het antwoord is een gefilterde lijst van schema&#39;s die alleen schema&#39;s be
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een schema samengesteld gebruikend zowel standaardmengen als een mengeling die u bepaalde. Met dit schema kunt u nu een gegevensset maken en recordgegevens invoeren in het Adobe Experience Platform.
+Door deze zelfstudie te volgen, hebt u met succes een schema samengesteld gebruikend zowel standaardmengen als een mengeling die u bepaalde. U kunt dit schema nu gebruiken om een dataset tot stand te brengen en recordgegevens in Adobe Experience Platform in te voeren.
 
 Het volledige schema van de Leden van de Loyalty, zoals die door dit leerprogramma wordt gecreeerd, is beschikbaar in het bijlage dat volgt. Als u naar het schema kijkt, kunt u zien hoe de mixins bijdragen aan de algemene structuur en welke velden beschikbaar zijn voor gegevensinvoer.
 
@@ -1775,7 +1778,7 @@ In het volgende voorbeeld ziet u het voltooide schema Loyalty-leden in JSON-inde
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1850,7 +1853,7 @@ In het volgende voorbeeld ziet u het voltooide schema Loyalty-leden in JSON-inde
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1902,7 +1905,7 @@ In het volgende voorbeeld ziet u het voltooide schema Loyalty-leden in JSON-inde
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1967,7 +1970,7 @@ In het volgende voorbeeld ziet u het voltooide schema Loyalty-leden in JSON-inde
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -2032,7 +2035,7 @@ In het volgende voorbeeld ziet u het voltooide schema Loyalty-leden in JSON-inde
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
