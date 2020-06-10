@@ -4,9 +4,9 @@ seo-title: Doel van Google Ad Manager
 description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 seo-description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ Let op de volgende details die specifiek zijn voor de doelen van Google Ad Manag
 
 ## Vereisten
 
-### Whitelisting
+### Lijst toestaan
 
 >[!NOTE]
 >
->Whitelisting is verplicht voordat u de eerste bestemming van Google Ad Manager in Adobe Real-time CDP instelt. Controleer of het hieronder beschreven whitelistingproces door Google is voltooid voordat u een bestemming maakt.
+>De lijst Toestaan is verplicht voordat u de eerste bestemming van Google Ad Manager in Adobe Real-time CDP instelt. Controleer of Google het hieronder beschreven proces voor het toestaan van lijsten heeft voltooid voordat u een bestemming maakt.
 
-Voordat u de bestemming Google Ad Manager maakt in Adobe Real-time CDP, moet u contact opnemen met Google om te vragen dat Adobe wordt gewhitelisterd als gegevensaanbieder en dat uw account wordt gewhitelliseerd. Neem contact op met Google en geef de volgende informatie op:
+Voordat u de bestemming Google Ad Manager maakt in Adobe Real-time CDP, moet u contact opnemen met Google om Adobe op te nemen in de lijst met toegestane gegevensproviders en om uw account toe te voegen aan de lijst met toegestane gegevensproviders. Neem contact op met Google en geef de volgende informatie op:
 
 * **Account-id** : Dit is de account-id van Adobe bij Google. Neem contact op met de klantenservice van Adobe of uw Adobe-vertegenwoordiger voor deze id.
 * **Klant-id** : Dit is de Adobe-id voor de klantenaccount bij Google. Neem contact op met de klantenservice van Adobe of uw Adobe-vertegenwoordiger voor deze id.
@@ -52,6 +52,7 @@ Voordat u de bestemming Google Ad Manager maakt in Adobe Real-time CDP, moet u c
    ![Doel van Google Ad Manager verbinden](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. In het Create bestemmingswerkschema, vul de [!UICONTROL BasisInformatie] voor de bestemming in. <br>
+
    ![Basisinformatie Google Ad Manager](/help/rtcdp/destinations/assets/google-1-basic-information.png)
 * **[!UICONTROL Naam]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Omschrijving]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
