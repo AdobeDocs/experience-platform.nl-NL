@@ -4,9 +4,9 @@ seo-title: Bestemming Google Display en Video 360
 description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
 seo-description: 'Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten. '
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ Let op de volgende details die specifiek zijn voor Google Display &amp; Video 36
 
 ## Vereisten
 
-### Whitelisting
+### Lijst toestaan
 
 >[!NOTE]
 >
->Whitelisting is verplicht voordat u de eerste Google Display &amp; Video 360-bestemming instelt in Adobe Real-time CDP. Controleer of het hieronder beschreven whitelistingproces door Google is voltooid voordat u een bestemming maakt.
+>De lijst Toestaan is verplicht voordat u de eerste Google Display &amp; Video 360-bestemming instelt in Adobe Real-time CDP. Controleer of Google het hieronder beschreven proces voor het toestaan van lijsten heeft voltooid voordat u een bestemming maakt.
 
-Voordat u de bestemming Google Display &amp; Video 360 maakt in Adobe Real-time CDP, moet u contact opnemen met Google om te vragen dat Adobe wordt gewhitelliseerd als gegevensaanbieder en dat uw account wordt gewhitelist. Neem contact op met Google en geef de volgende informatie op:
+Voordat u de Google Display &amp; Video 360-bestemming maakt in Adobe Real-time CDP, moet u contact opnemen met Google om Adobe te vragen op de lijst met toegestane gegevensproviders te plaatsen en uw account toe te voegen aan de lijst met toegestane gegevens. Neem contact op met Google en geef de volgende informatie op:
 
 * **Account-id** : Dit is de account-id van Adobe bij Google. Neem contact op met de klantenservice van Adobe of uw Adobe-vertegenwoordiger voor deze id.
 * **Klant-id** : Dit is de Adobe-id voor de klantenaccount bij Google. Neem contact op met de klantenservice van Adobe of uw Adobe-vertegenwoordiger voor deze id.
@@ -50,6 +50,7 @@ Voordat u de bestemming Google Display &amp; Video 360 maakt in Adobe Real-time 
    ![Connect Google Display en Video 360-doel](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. In het Create bestemmingswerkschema, vul de [!UICONTROL BasisInformatie] voor de bestemming in. <br>
+
    ![Basisinformatie over Google Display en Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
 * **[!UICONTROL Naam]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Omschrijving]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
