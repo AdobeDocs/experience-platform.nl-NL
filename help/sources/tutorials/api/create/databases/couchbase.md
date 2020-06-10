@@ -1,41 +1,41 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Een CouchBase-connector maken met de Flow Service API
+title: Een Couchbase-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 566db28997dce2c7e1181d140f12adc4250f5e0d
+source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
 
 
-# Een CouchBase-connector maken met de Flow Service API
+# Een Couchbase-connector maken met de Flow Service API
 
 >[!NOTE]
->De CouchBase-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
+>De Couchbase-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
 
-De Flow Service wordt gebruikt om klantgegevens van diverse verschillende bronnen te verzamelen en te centraliseren om deze over te brengen naar het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+De Flow Service wordt gebruikt om klantgegevens van diverse verschillende bronnen te verzamelen en te centraliseren om in Adobe Experience Platform te brengen. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om CouchBase aan het Platform van de Ervaring te verbinden.
+Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Couchbase aan Experience Platform te koppelen.
 
 ## Aan de slag
 
-Voor deze handleiding is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [Bronnen](../../../../home.md): Het Platform van de ervaring laat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform.
 * [Sandboxen](../../../../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met CouchBase gebruikend de Dienst API van de Stroom te verbinden.
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met Couchbase gebruikend de Dienst API van de Stroom te verbinden.
 
 ### Vereiste referenties verzamelen
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw instantie CouchBase. Het patroon van de verbindingstekenreeks voor CouchBase is `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Raadpleeg [dit CouchBase-document](https://docs.couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview)voor meer informatie over het ophalen van een verbindingstekenreeks. |
-| `connectionSpec.id` | De id die nodig is om een verbinding te maken. De vaste connection spec ID voor CouchBase is `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met de instantie Couchbase. Het patroon van de verbindingstekenreeks voor Couchbase is `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Raadpleeg [dit document](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview)Couchbase voor meer informatie over het ophalen van een verbindingstekenreeks. |
+| `connectionSpec.id` | De id die nodig is om een verbinding te maken. De vaste verbindingsspecificatie-id voor Couchbase is `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 ### API-voorbeeldaanroepen lezen
 
@@ -59,7 +59,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Verbinding maken
 
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Slechts één schakelaar wordt vereist per rekening CouchBase aangezien het kan worden gebruikt om veelvoudige bronschakelaars tot stand te brengen om verschillende gegevens te brengen.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per Couchbase-account is slechts één connector vereist omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
 
 **API-indeling**
 
@@ -69,7 +69,7 @@ POST /connections
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een nieuwe verbinding CouchBase, die door de eigenschappen wordt gevormd die in de lading worden verstrekt:.
+Het volgende verzoek leidt tot een nieuwe verbinding Couchbase, die door de eigenschappen wordt gevormd die in de lading worden verstrekt:.
 
 ```shell
 curl -X POST \
@@ -80,8 +80,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "CouchBase test connection",
-        "description": "A test connection for a CouchBase source",
+        "name": "Couchbase test connection",
+        "description": "A test connection for a Couchbase source",
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
@@ -97,8 +97,8 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met een CouchBase-account. Het patroon van de verbindingstekenreeks is: `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
-| `connectionSpec.id` | De CouchBase-verbinding, specificatie-id: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met een Couchbase-account. Het patroon van de verbindingstekenreeks is: `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
+| `connectionSpec.id` | De Couchbase-verbindingsspecificatie-id: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 **Antwoord**
 
@@ -113,4 +113,4 @@ Een geslaagde reactie retourneert de details van de zojuist gemaakte verbinding,
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen hebt u een CouchBase-verbinding gemaakt met de Flow Service API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u databases kunt [verkennen met behulp van de Flow Service API](../../explore/database-nosql.md).
+Aan de hand van deze zelfstudie hebt u een Couchbase-verbinding gemaakt met de Flow Service API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u databases kunt [verkennen met behulp van de Flow Service API](../../explore/database-nosql.md).
