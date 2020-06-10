@@ -4,9 +4,9 @@ seo-title: Edge-configuratie voor de Web SDK van het Experience Platform
 description: 'Leer hoe te om het Netwerk van de Rand van het Platform van de Ervaring te vormen. '
 seo-description: 'Leer hoe te om het Netwerk van de Rand van het Platform van de Ervaring te vormen. '
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Edge-configuratie
 
-De configuratie voor het Adobe Experience Platform Web SDK is gesplitst naar twee locaties. Het [vormt bevel](configuring-the-sdk.md) in SDK controleert dingen die op de cliënt, zoals de `edgeDomain`. moeten worden behandeld. De randconfiguratie behandelt alle andere configuratie voor SDK. Wanneer een verzoek naar het Adobe Experience Platform Edge Network wordt verzonden, `edgeConfigId` wordt het gebruikt om naar de serverconfiguratie te verwijzen. Zo kunt u de configuratie bijwerken zonder dat u codewijzigingen op uw website hoeft aan te brengen.
+De configuratie voor het Adobe Experience Platform Web SDK is gesplitst naar twee locaties. Het [vormt bevel](configuring-the-sdk.md) in SDK controleert dingen die op de cliënt, zoals de `edgeDomain`. moeten worden behandeld. De randconfiguratie behandelt alle andere configuratie voor SDK. Wanneer een verzoek naar het Adobe Experience Platform Edge Network wordt verzonden, `edgeConfigId` wordt het gebruikt om naar de configuratie aan de serverzijde te verwijzen. Zo kunt u de configuratie bijwerken zonder dat u codewijzigingen op uw website hoeft aan te brengen.
 
 ## Een Edge-configuratie-id maken
 
@@ -24,7 +24,7 @@ De de configuratie IDs van de rand kan in Lancering worden gecreeerd gebruikend 
 
 >[!NOTE]
 >
->Het gereedschap voor randconfiguratie is beschikbaar voor klanten met een whitelist, ongeacht of ze Launch gebruiken als tagbeheer. Bovendien vereisen gebruikers ontwikkelmachtigingen in Launch. Zie het artikel [Gebruikersmachtigingen](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) in de documentatie bij Starten voor meer informatie.
+>Het gereedschap voor randconfiguratie is beschikbaar voor klanten in de lijst Toestaan, ongeacht of ze Launch gebruiken als tagbeheer. Bovendien vereisen gebruikers ontwikkelmachtigingen in Launch. Zie het artikel [Gebruikersmachtigingen](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) in de documentatie bij Starten voor meer informatie.
 
 U kunt een randconfiguratie tot stand brengen door op **[UICONTROL Nieuwe Configuratie]** van de Rand in het hoogste juiste gebied van het scherm te klikken. Nadat u een naam en een beschrijving hebt opgegeven, wordt u gevraagd om de standaardinstellingen voor elke omgeving.
 
@@ -54,23 +54,23 @@ De syncs van identiteitskaart kunnen in containers worden gegroepeerd om verschi
 
 #### Adobe Experience Platform
 
-Met de hier vermelde instellingen kunt u gegevens naar het Adobe Experience Platform verzenden. Schakel deze sectie alleen in als u het Adobe Experience Platform hebt aangeschaft.
+Met de hier vermelde instellingen kunt u gegevens naar de Adobe Experience Platform verzenden. Schakel deze sectie alleen in als u de Adobe Experience Platform hebt aangeschaft.
 
-![Instellingenblok van Adobe Experience Platform](../../assets/edge_configuration_aep.png)
+![Adobe Experience Platform-instellingenblok](../../assets/edge_configuration_aep.png)
 
 ##### [!UICONTROL Sandbox]
 
-Sandboxen zijn locaties in het Adobe Experience Platform waarmee klanten hun gegevens en implementaties van elkaar kunnen isoleren. Meer informatie over hoe ze werken vindt u in de documentatie bij [Sandboxen](../../sandboxes/home.md).
+Sandboxen zijn locaties in de Adobe Experience Platform die klanten in staat stellen hun gegevens en implementaties van elkaar te isoleren. Meer informatie over hoe ze werken vindt u in de documentatie bij [Sandboxen](../../sandboxes/home.md).
 
 ##### [!UICONTROL Streaming-ingang]
 
-Een streaminginlaat is een HTTP-bron in het Adobe Experience Platform. Deze worden gemaakt als HTTP-API onder het tabblad [!UICONTROL Bronnen] in het Adobe Experience Platform.
+Een streaminginlaat is een HTTP-bron in de Adobe Experience Platform. Deze worden onder het tabblad [!UICONTROL Bronnen] in de Adobe Experience Platform gemaakt als een HTTP-API.
 
 ##### [!UICONTROL Gebeurtenisgegevens]
 
 De configuraties van de rand steunen verzendend gegevens naar datasets die een schema van de Gebeurtenis [!UICONTROL van de]Ervaring van de klasse hebben.
 
-#### Adobe-doel
+#### Adobe Target
 
 Als u Adobe Target wilt configureren, moet u een clientcode opgeven. De andere velden zijn optioneel.
 
