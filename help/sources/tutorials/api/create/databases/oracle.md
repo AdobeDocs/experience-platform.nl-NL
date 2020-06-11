@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Oracle-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: c04106b42bef92344fb0474a986ec7dfd64a17d9
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 0%
@@ -17,13 +17,13 @@ ht-degree: 0%
 >[!NOTE]
 >De Oracle-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
 
-De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
 Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Oracle aan Experience Platform te koppelen.
 
 ## Aan de slag
 
-Voor deze handleiding is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [Bronnen](../../../../home.md): Het Platform van de ervaring laat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform.
 * [Sandboxen](../../../../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
@@ -32,7 +32,7 @@ De volgende secties bevatten aanvullende informatie die u moet weten om verbindi
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met Oracle. Het Oracle-verbindingspatroon is: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
+| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met Oracle. Het Oracle-verbindingspatroon is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor Oracle is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 Raadpleeg [dit Oracle-document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)voor meer informatie over aan de slag gaan.
@@ -97,7 +97,7 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw Oracle-database. Het Oracle-verbindingspatroon is: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
+| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw Oracle-database. Het Oracle-verbindingspatroon is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | De Oracle-verbindingsspecificatie-id: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 **Antwoord**
