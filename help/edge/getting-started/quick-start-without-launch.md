@@ -4,7 +4,7 @@ seo-title: 'Snelle start voor Adobe Experience Platform Web SDK '
 description: Snelle startgids voor het gebruiken van het Web SDK van het Platform van de Ervaring om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van het Web SDK van het Platform van de Ervaring om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
+source-git-commit: f401780aa6b11f230506bfca1a747839fc6ae389
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Geef vervolgens de SDK de configuratie op. Dit wordt gedaan gebruikend het `conf
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93:dev",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93:dev",
   "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 ```
