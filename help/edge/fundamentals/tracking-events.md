@@ -4,7 +4,7 @@ seo-title: Gebeurtenissen van Adobe Experience Platform Web SDK bijhouden
 description: Leer hoe te om de gebeurtenissen van het Web SDK van het Platform van de Ervaring te volgen
 seo-description: Leer hoe te om de gebeurtenissen van het Web SDK van het Platform van de Ervaring te volgen
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Gegevens die naar Adobe Experience Cloud worden verzonden, vallen in twee catego
 
 ## XDM-gegevens verzenden
 
-XDM-gegevens zijn een object waarvan de inhoud en structuur overeenkomen met een schema dat u hebt gemaakt in het Adobe Experience Platform. [Meer informatie over het maken van een schema.](../../xdm/tutorials/create-schema-ui.md)
+XDM-gegevens zijn een object waarvan de inhoud en structuur overeenkomen met een schema dat u in Adobe Experience Platform hebt gemaakt. [Meer informatie over het maken van een schema.](../../xdm/tutorials/create-schema-ui.md)
 
 Om het even welke gegevens XDM u deel van uw analyses, verpersoonlijking, publiek, of bestemmingen zou moeten worden verzonden gebruikend de `xdm` optie.
 
@@ -82,7 +82,7 @@ alloy("sendEvent", {
 
 ## De sendBeacon-API gebruiken
 
-Het kan lastig zijn om gebeurtenisgegevens te verzenden vlak voordat de gebruiker van de webpagina weg is genavigeerd. Als de aanvraag te lang duurt, kan de browser de aanvraag annuleren. Sommige browsers hebben een webstandaard-API geïmplementeerd, die wordt aangeroepen `sendBeacon` om gegevens tijdens deze periode gemakkelijker te kunnen verzamelen. Wanneer `sendBeacon`de browser wordt gebruikt, wordt de webaanvraag uitgevoerd in de algemene browsercontext. Dit betekent browser maakt het bakenverzoek op de achtergrond en houdt niet de paginanavigatie op. Als u de Adobe Experience Platform Web SDK wilt laten gebruiken, voegt u de optie toe `sendBeacon``"documentUnloading": true` aan de gebeurtenisopdracht.  Hier volgt een voorbeeld:
+Het kan lastig zijn om gebeurtenisgegevens te verzenden vlak voordat de gebruiker van de webpagina weg is genavigeerd. Als de aanvraag te lang duurt, kan de browser de aanvraag annuleren. Sommige browsers hebben een webstandaard-API geïmplementeerd, die wordt aangeroepen `sendBeacon` om gegevens tijdens deze periode gemakkelijker te kunnen verzamelen. Wanneer `sendBeacon`de browser wordt gebruikt, wordt de webaanvraag uitgevoerd in de algemene browsercontext. Dit betekent browser maakt het bakenverzoek op de achtergrond en houdt niet de paginanavigatie op. Om Adobe Experience Platform Web SDK te vertellen om te gebruiken `sendBeacon`, voeg de optie `"documentUnloading": true` aan het gebeurtenisbevel toe.  Hier volgt een voorbeeld:
 
 ```javascript
 alloy("sendEvent", {
@@ -100,7 +100,7 @@ alloy("sendEvent", {
 });
 ```
 
-Browsers hebben limieten ingesteld voor de hoeveelheid gegevens die `sendBeacon` tegelijk kan worden verzonden. In veel browsers is de limiet 64 kB. Als de browser de gebeurtenis afwijst omdat de lading te groot is, wordt de SDK van het Web van het Platform van de Ervaring van Adobe teruggezet naar het gebruiken van zijn normale vervoermethode (bijvoorbeeld, haal).
+Browsers hebben limieten ingesteld voor de hoeveelheid gegevens die `sendBeacon` tegelijk kan worden verzonden. In veel browsers is de limiet 64 kB. Als browser de gebeurtenis verwerpt omdat de nuttige lading te groot is, valt het Web SDK van Adobe Experience Platform terug naar het gebruiken van zijn normale vervoermethode (bijvoorbeeld, halen).
 
 ## Reacties van gebeurtenissen afhandelen
 
@@ -133,7 +133,7 @@ Als u velden wilt toevoegen aan, verwijderen uit of wijzigen uit de gebeurtenis,
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "onBeforeEventSend": function(event) {
     // Change existing values
