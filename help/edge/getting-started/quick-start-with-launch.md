@@ -4,9 +4,9 @@ seo-title: Snelle start met Adobe Experience Platform Web SDK bij starten
 description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Platform van de Ervaring om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Platform van de Ervaring om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 62b18ed8f70ad87b04f60ade5730ff30d8985415
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,6 @@ ht-degree: 0%
 Deze gids zal u door de verschillende stappen op hoe te opstelling de SDK van het Web van Adobe Experience Platform in Lancering nemen. Als u deze functie wilt kunnen gebruiken, moet u beschikken over machtigingen en in de lijst Toestaan staan. Als u op de wachtlijst wilt krijgen gelieve uw CSM te bereiken.
 
 - Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als u al een CNAME voor Analytics hebt, zou u dat moeten gebruiken. Testen in ontwikkeling werkt zonder CNAME, maar u hebt er een nodig voordat u naar productie gaat
-- recht hebben op het Adobe Experience Platform-gegevensplatform. Als u Platform niet hebt aangeschaft, zullen wij u van de Stichting van de Diensten van de Gegevens van het Platform van de Ervaring voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
 - Gebruik de nieuwste versie van de service Bezoeker-id
 
 ## Een configuratie-id maken
