@@ -4,20 +4,25 @@ solution: Experience Platform
 title: 'Gegevensgebruikslabels beheren met API''s '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
+source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
+workflow-type: tm+mt
+source-wordcount: '610'
+ht-degree: 0%
 
 ---
 
 
 # Gegevensgebruikslabels beheren met API&#39;s
 
-Dit document bevat stappen voor het beheren van labels voor gegevensgebruik op dataset- en veldniveau met behulp van de Catalogusservice-API.
+De dienst API van de Dataset staat u toe om gebruiksetiketten voor datasets programmatically te beheren. Deze klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API voor catalogusservice die metagegevens van gegevenssets beheert.
+
+Dit document verstrekt stappen op hoe te om de etiketten van het gegevensgebruik op dataset en gebied-niveau te beheren gebruikend de Dienst API van de Dataset.
 
 ## Aan de slag
 
-Alvorens u deze gids leest, adviseert men dat u het overzicht [van de Dienst van de](../../catalog/home.md) Catalogus voor een robuustere inleiding aan de dienst leest. Daarnaast moet u ook de stappen volgen die worden beschreven in de sectie [](../../catalog/api/getting-started.md) Aan de slag in de handleiding voor ontwikkelaars van catalogi om de vereiste referenties te verzamelen voor het oproepen van de API van Catalog.
+Voordat u deze handleiding leest, volgt u de stappen in de sectie [Aan de](../../catalog/api/getting-started.md) slag in de handleiding voor ontwikkelaars van catalogi om de vereiste gegevens te verzamelen voor het oproepen van [!DNL Platform] API&#39;s.
 
-Om vraag aan de eindpunten te maken die in de hieronder secties worden geschetst, moet u de unieke `id` waarde voor een specifieke dataset hebben. Als u deze waarde niet hebt, zie de sectie van de ontwikkelaarsgids bij het [vermelden van de voorwerpen](../../catalog/api/list-objects.md) van de Catalogus om identiteitskaarts van uw bestaande datasets te vinden.
+Om vraag aan de eindpunten te maken die in de hieronder secties worden geschetst, moet u de unieke `id` waarde voor een specifieke dataset hebben. Als u deze waarde niet hebt, raadpleegt u de handleiding bij het [weergeven van catalogusobjecten](../../catalog/api/list-objects.md) om de id&#39;s van uw bestaande gegevenssets te vinden.
 
 ## De etiketten van de raadpleging voor een dataset {#lookup}
 
@@ -26,7 +31,7 @@ U kunt de etiketten van het gegevensgebruik opzoeken die op een bestaande datase
 **API-indeling**
 
 ```http
-GET /dataSets/{DATASET_ID}/labels
+GET /datasets/{DATASET_ID}/labels
 ```
 
 | Parameter | Beschrijving |
@@ -37,7 +42,7 @@ GET /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -79,8 +84,8 @@ U kunt een reeks etiketten voor een dataset tot stand brengen door hen in de nut
 **API-indeling**
 
 ```http
-POST /dataSets/{DATASET_ID}/labels
-PUT /dataSets/{DATASET_ID}/labels
+POST /datasets/{DATASET_ID}/labels
+PUT /datasets/{DATASET_ID}/labels
 ```
 
 | Parameter | Beschrijving |
@@ -93,7 +98,7 @@ Het volgende POST- verzoek voegt een reeks etiketten aan de dataset, evenals een
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -146,7 +151,7 @@ U kunt de etiketten schrappen die op een dataset door een verzoek van de SCHRAPP
 **API-indeling**
 
 ```http
-DELETE /dataSets/{DATASET_ID}/labels
+DELETE /datasets/{DATASET_ID}/labels
 ```
 
 | Parameter | Beschrijving |
@@ -157,7 +162,7 @@ DELETE /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -173,3 +178,5 @@ Een geslaagde HTTP-status 200 voor reacties (OK) die aangeeft dat de labels zijn
 Nu u de etiketten van het gegevensgebruik op dataset en gebied-niveau hebt toegevoegd, kunt u beginnen om gegevens in het Platform van de Ervaring op te nemen. Voor meer informatie begint u met het lezen van de [gegevensinvoerdocumentatie](../../ingestion/home.md).
 
 U kunt nu ook beleid voor gegevensgebruik definiëren op basis van de labels die u hebt toegepast. Zie het overzicht [van beleidsregels voor](../policies/overview.md)gegevensgebruik voor meer informatie.
+
+Voor meer informatie bij het beheren van datasets in [!DNL Experience Platform], zie het [datasetoverzicht](../../catalog/datasets/overview.md).
