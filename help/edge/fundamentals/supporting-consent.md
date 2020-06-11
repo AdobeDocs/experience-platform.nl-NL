@@ -1,10 +1,10 @@
 ---
 title: Ondersteunende toestemming
-seo-title: Voorkeuren voor de goedkeuring van Adobe Experience Platform Web SDK
+seo-title: Voorkeuren voor Adobe Experience Platform Web SDK-toestemming ondersteunen
 description: Leer hoe u voorkeuren voor toestemming ondersteunt met Experience Platform Web SDK
 seo-description: Leer hoe u voorkeuren voor toestemming ondersteunt met Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: c86ae6d887f52d8bb4b78dadc06060791c7a02c0
 workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 0%
@@ -29,7 +29,7 @@ De gebruiker is standaard voor alle doeleinden ingeschakeld. Als u wilt voorkome
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "defaultConsent": { "general": "pending" }
 });
@@ -45,7 +45,13 @@ Als de gebruiker binnen kiest, voer het `setConsent` bevel met de `general` opti
 
 ```javascript
 alloy("setConsent", {
-  "general": "in"
+    consent: [{ 
+      standard: "Adobe",
+      version: "1.0",
+      value: { 
+        general: "in" 
+      }
+    }]
 });
 ```
 
@@ -55,7 +61,13 @@ Als de gebruiker ervoor kiest om te weigeren, voert u de `setConsent` opdracht u
 
 ```javascript
 alloy("setConsent", {
-  "general": "out"
+    consent: [{ 
+      standard: "Adobe",
+      version: "1.0",
+      value: { 
+        general: "out" 
+      }
+    }]
 });
 ```
 
