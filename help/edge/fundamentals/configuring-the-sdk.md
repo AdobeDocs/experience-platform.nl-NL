@@ -1,13 +1,13 @@
 ---
 title: De SDK configureren
-seo-title: De Adobe Experience Platform Web SDK configureren
+seo-title: De SDK van Adobe Experience Platform Web configureren
 description: Leer hoe te om het Platform van de Ervaring te vormen SDK van het Web
 seo-description: Leer hoe te om het Platform van de Ervaring te vormen SDK van het Web
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
 workflow-type: tm+mt
 source-wordcount: '739'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ De configuratie voor SDK wordt gedaan met het `configure` bevel.
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 ```
@@ -30,13 +30,13 @@ Er zijn vele opties die tijdens configuratie kunnen worden geplaatst. Alle optie
 
 ## Algemene opties
 
-### `configId`
+### `edgeConfigId`
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
 | String | Ja | none |
 
-Uw toegewezen configuratie-id, die de SDK koppelt aan de juiste accounts en configuratie.  Wanneer het vormen van veelvoudige instanties binnen één enkele pagina, moet u een verschillende `configId` voor elke instantie vormen.
+Uw toegewezen configuratie-id, die de SDK koppelt aan de juiste accounts en configuratie.  Wanneer het vormen van veelvoudige instanties binnen één enkele pagina, moet u een verschillende `edgeConfigId` voor elke instantie vormen.
 
 ### `context`
 
