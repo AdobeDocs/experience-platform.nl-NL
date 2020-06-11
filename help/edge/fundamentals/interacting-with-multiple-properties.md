@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK Interactie met meerdere eigenschapp
 description: Leer hoe te met de veelvoudige eigenschappen van SDK van het Web van het Platform van de Ervaring in wisselwerking staan
 seo-description: Leer hoe te met de veelvoudige eigenschappen van SDK van het Web van het Platform van de Ervaring in wisselwerking staan
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -40,7 +40,7 @@ In het volgende voorbeeld kunt u als volgt opdrachten uitvoeren met elk van de i
 
 ```javascript
 mycustomname1("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
@@ -51,7 +51,7 @@ mycustomname1("sendEvent", {
 });
 
 mycustomname2("configure", {
-  "configId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
+  "edgeConfigId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
   "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
@@ -66,4 +66,4 @@ Zorg ervoor dat u de `configure` opdracht voor elke instantie uitvoert voordat u
 
 ## Beperkingen
 
-Om conflicten met cookies te voorkomen, kan slechts één exemplaar van de Adobe Experience Platform Web SDK op een pagina een bepaalde versie hebben `configId`.  Op dezelfde manier kan slechts één exemplaar van Adobe Experience Platform Web SDK een bepaalde versie hebben `orgId`.
+Om conflicten met cookies te voorkomen, kan slechts één instantie van Adobe Experience Platform Web SDK binnen een pagina een bepaalde versie hebben `edgeConfigId`.  Op dezelfde manier kan slechts één geval van het Web SDK van Adobe Experience Platform een bepaalde hebben `orgId`.
