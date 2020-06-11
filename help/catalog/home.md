@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Overzicht van Catalog Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 0%
 
 ---
 
 
 # Overzicht van Catalog Service
 
-Catalog Service is het recordsysteem voor gegevenslocatie en -lijn in het Adobe Experience Platform. Terwijl alle gegevens die in het Platform van de Ervaring worden opgenomen in het meer van Gegevens als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
+Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens en de verbinding in Adobe Experience Platform. Terwijl alle gegevens die in het Platform van de Ervaring worden opgenomen in het meer van Gegevens als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
 
 Eenvoudig gezet, werkt Catalog als meta-gegevensopslag of &quot;catalogus&quot;waar u informatie over uw gegevens binnen het Platform van de Ervaring kunt vinden. U kunt Catalog gebruiken om de volgende vragen te beantwoorden:
 
@@ -55,7 +58,7 @@ In de volgende tabel worden de verschillende objecttypen weergegeven die door Ca
 | Batch | `/batches` | Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. Een partijvoorwerp in Catalogus schetst de innamemetriek van de partij (zoals het aantal verwerkte verslagen of grootte op schijf) en kan verbindingen aan datasets, meningen, en andere middelen omvatten die door de partijverrichting werden beïnvloed. |
 | Verbinding | `/connections` | Een verbinding is één enkel geval van een bronschakelaar, uniek aan uw organisatie en gevormd gebruikend de aangewezen authentificatiereferenties voor het schakelaartype. |
 | Connector | `/connectors` | Connectors definiëren hoe bronverbindingen gegevens moeten verzamelen van andere Adobe-toepassingen (zoals Adobe Analytics en Adobe Audience Manager), bronnen voor cloudopslag van derden (zoals Azure Blob, Amazon S3, FTP-servers en SFTP-servers) en CRM-systemen van derden (zoals Microsoft Dynamics en Salesforce). |
-| Gegevensset | `/dataSets` | Een dataset is een opslag en beheersconstructie die voor de inzameling van gegevens (typisch een lijst) wordt gebruikt die een schema (kolommen) en gebieden (rijen) bevat. |
+| Gegevensset | `/dataSets` | Een dataset is een opslag en beheersconstructie die voor de inzameling van gegevens (typisch een lijst) wordt gebruikt die een schema (kolommen) en gebieden (rijen) bevat. Zie het overzicht [van](./datasets/overview.md) gegevenssets voor meer informatie. |
 | Gegevensbestand | `/datasetFiles` | Gegevensbestanden vertegenwoordigen gegevensblokken die zijn opgeslagen op het platform. Als verslagen van letterlijke dossiers, zijn deze waar u de grootte van het dossier, het aantal verslagen kunt vinden het bevat, en een verwijzing naar de partij die het dossier opnam. |
 
 ## Volgende stappen
