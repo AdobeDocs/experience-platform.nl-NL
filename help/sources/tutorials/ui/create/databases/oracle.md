@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Oracle DB-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: c04106b42bef92344fb0474a986ec7dfd64a17d9
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 0%
@@ -17,11 +17,11 @@ ht-degree: 0%
 > [!NOTE]
 > De Oracle-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
 
-De bronschakelaars in het Platform van de Ervaring van Adobe verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een Oracle-bronconnector met behulp van de gebruikersinterface van Platform.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een Oracle-bronconnector met behulp van de gebruikersinterface van Platform.
 
 ## Aan de slag
 
-Voor deze zelfstudie is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -36,7 +36,7 @@ Als u toegang wilt tot uw Oracle-account op Platform, moet u de volgende waarden
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met Oracle. Het Oracle-verbindingspatroon is: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
+| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met Oracle. Het Oracle-verbindingspatroon is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor Oracle is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 Raadpleeg [dit Oracle-document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)voor meer informatie over aan de slag gaan.
