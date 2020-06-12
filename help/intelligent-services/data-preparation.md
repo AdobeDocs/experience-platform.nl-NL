@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevens voorbereiden voor gebruik in intelligente services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 9a2e6f7db441b804f17ec91d06d359439c3d5da5
 workflow-type: tm+mt
-source-wordcount: '1437'
+source-wordcount: '1595'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,26 @@ Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te on
 
 Dit document verstrekt algemene begeleiding bij het in kaart brengen van uw marketing gebeurtenisgegevens van veelvoudige kanalen aan dit schema, schetsend informatie over belangrijke gebieden binnen het schema om u te helpen bepalen hoe te om uw gegevens aan zijn structuur effectief in kaart te brengen.
 
-## Het CEE-schema
+## Overzicht van workflow
+
+Het voorbereidingsproces varieert afhankelijk van het feit of uw gegevens in het Adobe Experience Platform of extern worden opgeslagen. Deze sectie vat de noodzakelijke stappen samen u, gegeven één van beide scenario&#39;s moet nemen.
+
+### Externe gegevensvoorbereiding
+
+Als uw gegevens buiten [!DNL Experience Platform]zijn opgeslagen, voert u de volgende stappen uit:
+
+1. Neem contact op met de Adobe Consulting Services om toegangsreferenties aan te vragen voor een specifieke Azure Blob Storage-container.
+1. Upload uw gegevens naar de Blob-container met uw toegangsgegevens.
+1. Werk met Adobe Consulting Services om uw gegevens toe te wijzen aan het [Consumer ExperienceEvent-schema](#cee-schema) en deze in te voeren in Intelligente services.
+
+### [!DNL Experience Platform] gegevensvoorbereiding
+
+Voer de onderstaande stappen uit als uw gegevens al zijn opgeslagen in [!DNL Platform]:
+
+1. Controleer de structuur van het schema [](#cee-schema) Consumer ExperienceEvent en bepaal of uw gegevens kunnen worden toegewezen aan de velden.
+1. Neem contact op met de Adobe Consulting Services om u te helpen uw gegevens toe te wijzen aan het schema en deze in te voeren in Intelligente services. U kunt ook de stappen in deze handleiding [](#mapping) volgen als u de gegevens zelf wilt toewijzen.
+
+## Het CEE-schema {#cee-schema}
 
 Het schema Consumer ExperienceEvent beschrijft het gedrag van een individu aangezien het betrekking heeft op digitale marketing gebeurtenissen (web of mobiel) evenals online of off-line handelsactiviteit. Het gebruik van dit schema wordt vereist voor de Intelligente Diensten wegens zijn semantisch duidelijk bepaalde gebieden (kolommen), vermijdend om het even welke onbekende namen die anders de gegevens minder duidelijk zouden maken.
 
@@ -185,7 +204,7 @@ Dit veld bevat informatie over marketingactiviteiten die actief zijn met het aan
 
 Voor volledige informatie over elk van de vereiste subvelden voor `xdm:productListItems`, gelieve te verwijzen naar de specificatie van het [marketingdossier](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) .
 
-## Gegevens toewijzen en opnemen
+## Gegevens toewijzen en opnemen (#mapping)
 
 Zodra u hebt bepaald of uw gegevens van de marketinggebeurtenissen aan het CEE schema kunnen worden in kaart gebracht, is de volgende stap te bepalen welke gegevens u in de Intelligente Diensten moet brengen. Alle historische gegevens die in de Intelligente Diensten worden gebruikt moeten binnen het minimumtijdvenster van vier maanden van gegevens vallen, plus het aantal dagen voorgenomen als raadplegingsperiode.
 
@@ -195,9 +214,9 @@ Als u een [!DNL Adobe Experience Platform] abonnement hebt en de gegevens zelf w
 
 ### Adobe Experience Platform gebruiken
 
->[!NOTE] Voor de onderstaande stappen is een abonnement op Experience Platform vereist. Als u geen toegang hebt tot Platform, gaat u verder met de [volgende sectie](#next-steps) voor stappen.
+>[!NOTE] Voor de onderstaande stappen is een abonnement op Experience Platform vereist. Als u geen toegang tot Platform hebt, gaat u verder met de sectie [Volgende stappen](#next-steps) .
 
-In deze sectie wordt de workflow beschreven voor het toewijzen en invoeren van gegevens in het Experience Platform voor gebruik in Intelligente services, inclusief koppelingen naar zelfstudies voor gedetailleerde stappen.
+Deze sectie schetst de werkschema voor het in kaart brengen van en het opnemen van gegevens in Experience Platform voor gebruik in de Intelligente Diensten, met inbegrip van verbindingen aan leerprogramma&#39;s voor gedetailleerde stappen.
 
 #### Een CEE-schema en gegevensset maken
 
@@ -273,7 +292,7 @@ curl -X PATCH \
       }'
 ```
 
->[!NOTE] Zie het overzicht [van naamruimte voor](../identity-service/namespaces.md)identiteiten voor meer informatie over het werken met naamruimten in het platform.
+>[!NOTE] Zie het overzicht [van naamruimte voor](../identity-service/namespaces.md)identiteiten voor meer informatie over het werken met naamruimten in het Platform.
 
 **Antwoord**
 
@@ -289,11 +308,11 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de bijgew
 
 Na het creëren van een CEE schema en dataset, kunt u beginnen uw gegevenslijsten aan het schema in kaart te brengen en die gegevens in Platform in te voeren. Zie de zelfstudie over het [toewijzen van een CSV-bestand aan een XDM-schema](../ingestion/tutorials/map-a-csv-file.md) voor stappen over het uitvoeren van dit bestand in de gebruikersinterface. Zodra een dataset is bevolkt, kan de zelfde dataset worden gebruikt om extra gegevensdossiers in te voeren.
 
-Als uw gegevens in een gesteunde derdetoepassing worden opgeslagen, kunt u ook verkiezen om een [bronschakelaar](../sources/home.md) tot stand te brengen om uw gegevens van marketinggebeurtenissen in real time in Platform in te voeren.
+Als uw gegevens in een gesteunde derdetoepassing worden opgeslagen, kunt u ook verkiezen om een [bronschakelaar](../sources/home.md) tot stand te brengen om uw gegevens van marketinggebeurtenissen in Platform in real time in te voeren.
 
 ## Volgende stappen {#next-steps}
 
-Dit document bevat algemene richtlijnen voor het voorbereiden van gegevens voor gebruik in Intelligente services. Neem contact op met de Technische Ondersteuning van Adobe als u extra advies nodig hebt op basis van uw gebruikscase.
+Dit document bevat algemene richtlijnen voor het voorbereiden van uw gegevens voor gebruik in Intelligente services. Neem contact op met de Technische Ondersteuning van Adobe als u extra advies nodig hebt op basis van uw gebruikscase.
 
 Zodra u met succes een dataset met uw gegevens van de klantenervaring hebt bevolkt, kunt u de Intelligente Diensten gebruiken om inzichten te produceren. Raadpleeg de volgende documenten om aan de slag te gaan:
 
