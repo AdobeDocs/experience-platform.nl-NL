@@ -1,30 +1,34 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Gebruikershandleiding voor de privacyservice
+title: Gebruikershandleiding voor Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
+source-git-commit: 9fc95dd9194dca0fada603643c3de949764b2f17
+workflow-type: tm+mt
+source-wordcount: '1088'
+ht-degree: 0%
 
 ---
 
 
-# Gebruikershandleiding voor de privacyservice
+# Gebruikershandleiding voor Privacy Service
 
-Dit document bevat stappen voor het maken en beheren van privacyverzoeken via de gebruikersinterface van de privacyservice.
+Dit document bevat stappen voor het maken en beheren van privacyverzoeken via de gebruikersinterface van de Privacy Service.
 
-## Bladeren in het UI-dashboard voor privacyservice
+## Bladeren in het UI-dashboard voor Privacy Service
 
-Het dashboard voor de UI van de Dienst van de Privacy verstrekt twee widgets die u toestaan om de status van uw privacybanen te bekijken: **Statusrapport** en **Taakverzoeken**. Op het dashboard wordt ook de huidige geselecteerde regelgeving voor de weergegeven taken weergegeven.
+Het dashboard voor de gebruikersinterface van de Privacy Service bevat twee widgets waarmee u de status van uw privacytaken kunt weergeven: **Statusrapport** en **taakverzoeken**. Op het dashboard wordt ook de huidige geselecteerde regelgeving voor de weergegeven taken weergegeven.
 
 ![UI-dashboard](../images/user-guide/dashboard.png)
 
 ### Type verordening
 
-De Privacy Service steunt baanverzoeken voor twee regulatietypen:
+Privacy Service steunt verzoeken om werk voor drie soorten regelgeving:
 
-* De algemene gegevensbeschermingsverordening (GDPR)
-* The California Consumer Privacy Act (CCPA).
+* De algemene gegevensbeschermingsverordening van de Europese Unie
+* The California Consumer Privacy Act (CCPA)
+* Thaise wet op de bescherming van persoonsgegevens (PDPA_THA)
 
 Taken voor elk type regelgeving worden afzonderlijk bijgehouden. Als u wilt schakelen tussen regelgevingstypen, klikt u op het vervolgkeuzemenu **Type** regelgeving en selecteert u de gewenste regeling in de lijst.
 
@@ -76,7 +80,7 @@ Als u de volledige taakgegevens als CSV-bestand wilt downloaden, klikt u op **Ex
 
 >[!NOTE] Als u een privacytaakverzoek wilt maken, moet u identiteitsgegevens opgeven voor de specifieke klanten van wie de gegevens moeten worden benaderd of verwijderd. Controleer het document over [identiteitsgegevens voor privacyverzoeken](../identity-data.md) voordat u doorgaat met deze sectie.
 
-De interface van de privacyservice biedt twee methoden om nieuwe taakaanvragen te maken:
+De gebruikersinterface van de Privacy Service biedt twee methoden om nieuwe taakaanvragen te maken:
 
 * [De Request Builder gebruiken](#request-builder)
 * [Een JSON-bestand uploaden](#json)
@@ -99,7 +103,7 @@ Selecteer het **Taaktype** van de aanvraag (&quot;Schrapping&quot;of &quot;Toega
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Selecteer onder *Type* Namespace het juiste naamruimtetype voor de klant-id&#39;s die naar de Privacy-service worden verzonden.
+Selecteer onder *Type* naamruimte het juiste naamruimtetype voor de klant-id&#39;s die naar de Privacy Service worden verzonden.
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -141,6 +145,6 @@ Klik op **Maken** als u klaar bent. Het dialoogvenster verdwijnt en de nieuwe ta
 
 ### Volgende stappen
 
-Door dit document te lezen, hebt u geleerd hoe u de gebruikersinterface van de privacyservice kunt gebruiken om een privacytaak te maken, de gegevens van een taak te bekijken en de verwerkingsstatus van de taak te controleren en de resultaten te downloaden zodra deze zijn voltooid.
+Door dit document te lezen, hebt u geleerd hoe u de gebruikersinterface van de Privacy Service kunt gebruiken om een privacytaak te maken, de gegevens van een taak te bekijken en de verwerkingsstatus van de taak te controleren en de resultaten te downloaden zodra deze zijn voltooid.
 
-Raadpleeg de handleiding voor [ontwikkelaars voor informatie over het programmatisch uitvoeren van deze bewerkingen met de API van de privacyservice](../api/getting-started.md).
+Raadpleeg de handleiding voor [ontwikkelaars voor informatie over het programmatisch uitvoeren van deze bewerkingen met de Privacy Service-API](../api/getting-started.md).
