@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Experimenten
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 63a128202826ec39911e70d34dda9dfb2bc585b2
+workflow-type: tm+mt
+source-wordcount: '744'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 Modelontwikkeling en -training vinden plaats op het niveau van de experimenten, waarbij een experiment bestaat uit een MLInstance, trainingsrun en scoring run.
 
-## Een experiment maken
+## Een experiment maken {#create-an-experiment}
 
 U kunt een Experiment tot stand brengen door een POST- verzoek uit te voeren terwijl het verstrekken van een naam en een geldige identiteitskaart MLInstance in de verzoeklading.
 
@@ -64,7 +67,7 @@ Een geslaagde reactie retourneert een payload die de details bevat van het nieuw
 }
 ```
 
-## Een training of scores maken en uitvoeren
+## Een training of scores maken en uitvoeren {#experiment-training-scoring}
 
 U kunt trainings- of scoring-runtime maken door een POST-aanvraag uit te voeren en een geldige experimenteerid op te geven en de uitvoertaak op te geven. Er kunnen alleen scores worden gemaakt als het Experimentprogramma een bestaande en geslaagde training heeft. Met succes zal het creëren van een trainingslooppas de model opleidingsprocedure initialiseren en zijn succesvolle voltooiing zal een getraind model produceren. Het genereren van getrainde modellen vervangt alle eerder bestaande modellen, zodat een expert op elk moment slechts één getraind model kan gebruiken.
 
@@ -95,7 +98,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `{TASK}` | Geeft de taak van de uitvoering aan. Plaats deze waarde als of `train` voor opleiding, `score` voor het scoren, of `fp` voor eigenschappijpleiding. |
+| `{TASK}` | Geeft de taak van de uitvoering aan. Plaats deze waarde als of `train` voor opleiding, `score` voor het scoren, of `featurePipeline` voor eigenschappijpleiding. |
 
 **Antwoord**
 
@@ -216,7 +219,6 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **Antwoord**
 
@@ -366,7 +368,7 @@ Een geslaagde reactie retourneert een lading die de bijgewerkte gegevens van de 
 
 ## Een experiment verwijderen
 
-U kunt één Experiment verwijderen door een DELETE-aanvraag uit te voeren die de id van de doelexpert in het aanvraagpad bevat.
+U kunt één Experiment verwijderen door een DELETE aanvraag uit te voeren die de id van de doelexpert in het aanvraagpad bevat.
 
 **API-indeling**
 
@@ -401,7 +403,7 @@ curl -X DELETE \
 
 ## Experimenten door MLInstance ID verwijderen
 
-U kunt alle Experimenten schrappen die tot een bepaalde instantie behoren door een verzoek uit te voeren DELETE dat identiteitskaart MLInstance als vraagparameter omvat.
+U kunt alle Experimenten schrappen die tot een bepaalde instantie behoren MLI door een DELETE verzoek uit te voeren dat identiteitskaart MLInstance als vraagparameter omvat.
 
 **API-indeling**
 
