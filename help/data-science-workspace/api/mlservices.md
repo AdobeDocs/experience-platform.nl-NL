@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Services
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 33f8c424c208bb61319b49e7ecb30e3144ef108a
+workflow-type: tm+mt
+source-wordcount: '811'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 Een dienst MLService is een gepubliceerd opgeleid model dat uw organisatie van de capaciteit voorziet om tot eerder ontwikkelde modellen toegang te hebben en te hergebruiken. Een belangrijk kenmerk van MLServices is de mogelijkheid om training en scoring op een geplande basis te automatiseren. De geplande trainingslooppas kan helpen de efficiency en nauwkeurigheid van een model handhaven, terwijl de geplande scoring looppas kan ervoor zorgen dat de nieuwe inzichten constant worden geproduceerd.
 
-Geautomatiseerde trainings- en scoreschema&#39;s worden gedefinieerd met een begintijdstempel, een eindtijdstempel en een frequentie die wordt weergegeven als een <a href="https://en.wikipedia.org/wiki/Cron" target="_blank">uitsnijdexpressie</a>. U kunt planningen definiëren wanneer u een MLService [](#create-an-mlservice) maakt of toepassen door een bestaande MLService [bij te werken](#update-an-mlservice).
+Geautomatiseerde trainings- en scoreschema&#39;s worden gedefinieerd met een begintijdstempel, een eindtijdstempel en een frequentie die wordt weergegeven als een [uitsnijdexpressie](https://en.wikipedia.org/wiki/Cron). U kunt planningen definiëren wanneer u een MLService [](#create-an-mlservice) maakt of toepassen door een bestaande MLService [bij te werken](#update-an-mlservice).
 
 ## Een MLService maken {#create-an-mlservice}
 
@@ -38,10 +41,10 @@ curl -X POST \
     -d '{
         "name": "A name for this MLService",
         "description": "A description for this MLService",
-        "mlInstanceId": "{MLINSTANCE_ID}",
-        "trainingDataSetId": "{DATASET_ID}",
-        "trainingExperimentId": "{TRAINING_ID}",
-        "trainingExperimentRunId": "{RUN_ID}",
+        "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
+        "trainingDataSetId": "5ee3cd7f2d34011913c56941",
+        "trainingExperimentId": "014d8acf-08fb-421c-8b65-760c8799c627",
+        "trainingExperimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
         "trainingSchedule": {
             "startTime": "2019-01-01T00:00",
             "endTime": "2019-12-31T00:00",
@@ -78,13 +81,13 @@ Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe 
 
 ```json
 {
-    "id": "{MLSERVICE_ID}",
+    "id": "68d936d8-17e6-44ef-a4b6-c7502055638b",
     "name": "A name for this MLService",
     "description": "A description for this MLService",
-    "mlInstanceId": "{MLINSTANCE_ID}",
-    "trainingExperimentId": "{TRAINING_ID}",
-    "trainingDataSetId": "{DATASET_ID}",
-    "scoringExperimentId": "{SCORING_ID}",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
+    "trainingExperimentId": "014d8acf-08fb-421c-8b65-760c8799c627",
+    "trainingDataSetId": "5ee3cd7f2d34011913c56941",
+    "scoringExperimentId": "76c2b1b-fad7-4b31-8c54-19ecc18b1ea0",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -126,7 +129,7 @@ Het volgende verzoek bevat een vraag en wint een lijst van diensten terug MLS di
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/sensei/mlServices?property=mlInstanceId=={MLINSTANCE_ID}' \
+    'https://platform.adobe.io/data/sensei/mlServices?property=mlInstanceId==46986c8f-7739-4376-8509-0178bdf32cda' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -141,12 +144,12 @@ Een succesvolle reactie keert een lijst van diensten MLServices en hun details m
 {
     "children": [
         {
-            "id": "{MLSERVICE_ID}",
+            "id": "68d936d8-17e6-44ef-a4b6-c7502055638b",
             "name": "A service created in UI",
-            "mlInstanceId": "{MLINSTANCE_ID}",
-            "trainingExperimentId": "{TRAINING_ID}",
-            "trainingDataSetId": "{DATASET_ID}",
-            "scoringExperimentId": "{SCORING_ID}",
+            "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
+            "trainingExperimentId": "014d8acf-08fb-421c-8b65-760c8799c627",
+            "trainingDataSetId": "5ee3cd7f2d34011913c56941",
+            "scoringExperimentId": "76c2b1b-fad7-4b31-8c54-19ecc18b1ea0",
             "created": "2019-01-01T00:00:00.000Z",
             "createdBy": {
                 "displayName": "Jane Doe",
@@ -156,7 +159,7 @@ Een succesvolle reactie keert een lijst van diensten MLServices en hun details m
         }
     ],
     "_page": {
-        "property": "mlInstanceId=={MLINSTANCE_ID},deleted==false",
+        "property": "mlInstanceId==46986c8f-7739-4376-8509-0178bdf32cda,deleted==false",
         "count": 1
     }
 }
@@ -178,7 +181,7 @@ GET /mlServices/{MLSERVICE_ID}
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/sensei/mlServices/{MLSERVICE_ID} \
+    https://platform.adobe.io/data/sensei/mlServices/68d936d8-17e6-44ef-a4b6-c7502055638b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -191,13 +194,13 @@ Een succesvolle reactie keert een lading terug die de details van de gevraagde M
 
 ```json
 {
-    "id": "{MLSERVICE_ID}",
+    "id": "68d936d8-17e6-44ef-a4b6-c7502055638b",
     "name": "A name for this MLService",
     "description": "A description for this MLService",
-    "mlInstanceId": "{MLINSTANCE_ID}",
-    "trainingExperimentId": "{TRAINING_ID}",
-    "trainingDataSetId": "{DATASET_ID}",
-    "scoringExperimentId": "{SCORING_ID}",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
+    "trainingExperimentId": "014d8acf-08fb-421c-8b65-760c8799c627",
+    "trainingDataSetId": "5ee3cd7f2d34011913c56941",
+    "scoringExperimentId": "76c2b1b-fad7-4b31-8c54-19ecc18b1ea0",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -224,7 +227,7 @@ PUT /mlServices/{MLSERVICE_ID}
 
 ```shell
 curl -X PUT \
-    https://platform.adobe.io/data/sensei/mlServices/{MLSERVICE_ID} \
+    https://platform.adobe.io/data/sensei/mlServices/68d936d8-17e6-44ef-a4b6-c7502055638b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -233,10 +236,10 @@ curl -X PUT \
     -d '{
         "name": "A name for this MLService",
         "description": "A description for this MLService",
-        "mlInstanceId": "{MLINSTANCE_ID}",
-        "trainingExperimentId": "{TRAINING_ID}",
-        "trainingDataSetId": "{DATASET_ID}",
-        "scoringExperimentId": "{SCORING_ID}",
+        "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
+        "trainingExperimentId": "014d8acf-08fb-421c-8b65-760c8799c627",
+        "trainingDataSetId": "5ee3cd7f2d34011913c56941",
+        "scoringExperimentId": "76c2b1b-fad7-4b31-8c54-19ecc18b1ea0",
         "trainingSchedule": {
             "startTime": "2019-01-01T00:00",
             "endTime": "2019-12-31T00:00",
@@ -256,13 +259,13 @@ Een succesvolle reactie keert een lading terug die de bijgewerkte details van ML
 
 ```json
 {
-    "id": "{MLSERVICE_ID}",
+    "id": "68d936d8-17e6-44ef-a4b6-c7502055638b",
     "name": "A name for this MLService",
     "description": "A description for this MLService",
-    "mlInstanceId": "{MLINSTANCE_ID}",
-    "trainingExperimentId": "{TRAINING_ID}",
-    "trainingDataSetId": "{DATASET_ID}",
-    "scoringExperimentId": "{SCORING_ID}",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
+    "trainingExperimentId": "014d8acf-08fb-421c-8b65-760c8799c627",
+    "trainingDataSetId": "5ee3cd7f2d34011913c56941",
+    "scoringExperimentId": "76c2b1b-fad7-4b31-8c54-19ecc18b1ea0",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -283,7 +286,7 @@ Een succesvolle reactie keert een lading terug die de bijgewerkte details van ML
 
 ## Een MLService verwijderen
 
-U kunt één enkele dienst schrappen MLService door een verzoek uit te voeren DELETE dat identiteitskaart van doelMLService in de verzoekweg omvat.
+U kunt één enkele dienst schrappen MLService door een DELETE verzoek uit te voeren die identiteitskaart van doelMLService in de verzoekweg omvat.
 
 **API-indeling**
 
@@ -299,7 +302,7 @@ DELETE /mlServices/{MLSERVICE_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/mlServices/{MLSERVICE_ID} \
+    https://platform.adobe.io/data/sensei/mlServices/68d936d8-17e6-44ef-a4b6-c7502055638b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -318,7 +321,7 @@ curl -X DELETE \
 
 ## MLServices verwijderen op MLInstance ID
 
-U kunt alle diensten schrappen MLServices die tot een bepaalde MLInstance behoren door een verzoek uit te voeren DELETE dat een identiteitskaart MLInstance als vraagparameter specificeert.
+U kunt alle diensten schrappen MLServices die tot een bepaalde instantie behoren door een DELETE verzoek uit te voeren dat een identiteitskaart MLInstance als vraagparameter specificeert.
 
 **API-indeling**
 
@@ -328,13 +331,13 @@ DELETE /mlServices?mlInstanceId={MLINSTANCE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{MLSERVICE_ID}` | Een geldige MLService-id. |
+| `{MLINSTANCE_ID}` | Een geldige MLInstance ID. |
 
 **Verzoek**
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/mlServices?mlInstanceId={MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/mlServices?mlInstanceId=46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
