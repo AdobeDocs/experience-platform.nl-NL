@@ -1,30 +1,59 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Overzicht van het Adobe Experience Platform
+title: Overzicht van Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: efc8598d14bcae9637ce80c25f1285d93aeee742
+source-git-commit: 19b67b57fa277c7ff85646a341cfb5dba1dd92e1
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
-# Overzicht van het Adobe Experience Platform
+# Overzicht van Adobe Experience Platform
 
 >[!NOTE]
 >
->De documentatie van het Adobe Experience Platform is onlangs verplaatst. Neem even de tijd om de nieuwe navigatie te bekijken en bestaande bladwijzers bij te werken.
+>De documentatie van het Adobe Experience Platform is onlangs bewogen. Neem even de tijd om de nieuwe navigatie te bekijken en bestaande bladwijzers bij te werken.
 
-Het Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten vergroten. Met het Experience Platform kunnen organisaties klantgegevens en -inhoud uit elk systeem centraliseren en standaardiseren en datamateriaal en computerleren toepassen om het ontwerp en de levering van rijke, persoonlijke ervaringen drastisch te verbeteren.
+Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van de klant bevorderen. Experience Platform stelt organisaties in staat om klantgegevens en -inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
 
-Het Experience Platform is gebaseerd op open API&#39;s en stelt de volledige functionaliteit van het systeem beschikbaar voor ontwikkelaars. Het ondersteunt de eenvoudige integratie van bedrijfsoplossingen met behulp van vertrouwde tools. Het Experience Platform ondersteunt ook partners om hun eigen producten en technologieën naar behoefte te ontwikkelen en te integreren. Dankzij deze kracht en flexibiliteit is het Experience Platform uniek op de markt. Het geeft partners, klanten, en een gemeenschap van ontwikkelaars een stichting waarop om innovaties te bouwen die de ErvingsZaken drijven: Het overschrijden van klantenverwachtingen door een voortdurend verbeterende, volledig-gepersonaliseerde ervaring te leveren die uit een 360 graadmening van de klant en hun individuele voorkeur wordt getrokken.
+Experience Platform is gebaseerd op open API&#39;s en stelt de volledige functionaliteit van het systeem beschikbaar voor ontwikkelaars, zodat bedrijfsoplossingen eenvoudig kunnen worden geïntegreerd met behulp van vertrouwde tools. Experience Platform ondersteunt ook partners om hun eigen producten en technologieën naar behoefte op te bouwen en te integreren. Deze kracht en flexibiliteit maken Experience Platform uniek op de markt. Het geeft partners, klanten, en een gemeenschap van ontwikkelaars een stichting waarop om innovaties te bouwen die de ErvingsZaken drijven: Het overschrijden van klantenverwachtingen door een voortdurend verbeterende, volledig-gepersonaliseerde ervaring te leveren die uit een 360 graadmening van de klant en hun individuele voorkeur wordt getrokken.
 
-## documentatie bij Experience Platform
+## Taalondersteuning
 
-De documentatie van het Platform van de ervaring wordt verstrekt in veelvoudige formaten voor een verscheidenheid van eigenschappen en de diensten. Voor meer informatie over de typen documentatie die beschikbaar zijn en voor een korte beschrijving van elk van de platformservices, raadpleegt u het documentatieoverzicht [van het](documentation/overview.md)ervaringsplatform. Of, om meer over een specifieke dienst van het Platform direct te leren, selecteer een gids van de alfabetische lijst in de linkernavigatie.
+De gebruikersinterface en documentatie van het Adobe Experience Platform zijn beschikbaar in meerdere talen.
+
+### Talen gebruikersinterface
+
+De gebruikersinterface van het Adobe Experience Platform is huidig beschikbaar in de volgende talen:
+
+* Engels
+* Frans
+* Duits
+* Japans
+
+De standaardtaal van de gebruikersinterface wordt bepaald door het gebied dat in uw gebruikersprofiel is opgegeven. De taal wijzigen:
+
+>[!NOTE]
+>
+> De taal en inhoud op Adobe.com worden bepaald door een gebied te selecteren.
+
+1. Klik op de huidige taal in de voettekst van de interface van het Experience Platform.
+1. Klik in de profielinstellingen op Gebied **** wijzigen.
+1. Selecteer uw gebied.
+
+### Documentatietalen
+
+De documentatie van het Adobe Experience Platform is beschikbaar in verscheidene talen. Als u de taal wilt wijzigen, klikt u op de vervolgkeuzelijst Taal en selecteert u de gewenste taal.
+
+![afbeelding](assets/lang.jpg)
+
+## Documentatie Experience Platform
+
+De documentatie van het Experience Platform wordt verstrekt in veelvoudige formaten voor een verscheidenheid van eigenschappen en de diensten. Voor meer informatie over de typen documentatie die beschikbaar zijn en voor een korte beschrijving van elk van de services van het Platform, raadpleegt u het documentatieoverzicht [van het](documentation/overview.md)Experience Platform. Of, om meer over een specifieke dienst van het Platform direct te leren, selecteer een gids van de alfabetische lijst in de linkernavigatie.
 
 >[!NOTE]
 >
@@ -32,33 +61,35 @@ De documentatie van het Platform van de ervaring wordt verstrekt in veelvoudige 
 >
 >* Koppelingen naar aanbevolen artikelen
 >* Contextrelevante documentatieaanbevelingen
->* De mogelijkheid om feedback te geven over het ervaringsplatform en problemen te melden
+>* De mogelijkheid om feedback te geven over het Experience Platform en problemen te melden
 >* Verbeterde zoekresultaten, inclusief resultaten van communityforums en video-inhoud.
+
 >
 > 
 Van tijd tot tijd, zou u een onderzoek voor extra terugkoppelen kunnen ontvangen.
 >
 >Deze uitrol is geleidelijk, zodat zou u de veranderingen niet onmiddellijk kunnen zien. U kunt de bijgewerkte ervaring op elk ogenblik bekijken door naar [https://experience.adobe.com/platform](https://experience.adobe.com/platform)te gaan.
 
-## Zelfstudies voor het ervaringsplatform
+## Zelfstudies voor Experience Platforms
 
-Ga snel en eenvoudig aan de slag met Platform door stapsgewijze zelfstudies voor alles te volgen, van het voorbereiden van uw gegevens voor opname tot geavanceerde computerleeralgoritmen. Deze zelfstudies zijn ontworpen als aanvulling op de informatie in de documentatie van het ervaringsplatform, zodat u de documenten voor de beste resultaten ter beschikking kunt houden tijdens het voltooien van de zelfstudies. Ga naar de zelfstudies [van het](../tutorials/home.md) ervaringsplatform om aan de slag te gaan.
+Ga snel en eenvoudig aan de slag met Platform door stapsgewijze zelfstudies voor alles te volgen, van het voorbereiden van uw gegevens voor opname tot geavanceerde computerleeralgoritmen. Deze zelfstudies zijn ontworpen als aanvulling op de informatie in de documentatie van het Experience Platform, zodat u de documenten voor de beste resultaten bij de voltooiing van de lesbestanden kunt bewaren. Ga naar de zelfstudies voor [Experience Platforms](../tutorials/home.md) om aan de slag te gaan.
 
 ## Videozelfstudies
 
-Bekijk [videozelfstudies](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) voor een groot aantal verschillende onderwerpen in het Experience Platform.
+Bekijk [videozelfstudies](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) voor een groot aantal verschillende onderwerpen over Experience Platforms.
 
 ## Referentiedocumenten en -bronnen
 
-* [**Release-aantekeningen **](../release-notes/latest/latest.md)<br/>Zoeken naar informatie over de meest recente release van het Experience Platform en de vorige releases.
+* [**Opmerkingen bij de release **](../release-notes/latest/latest.md)<br/>Zoeken naar informatie over de meest recente release van het Experience Platform en eerdere releases.
 
-* [**Verklarende woordenlijst **](glossary.md)<br/>Bekijk de terminologie van het Adobe Experience Platform.
+* [**Woordenlijst **](glossary.md)<br/>De terminologie van het Adobe Experience Platform controleren.
 
 * [**De gids van het Oplossen van problemen **](troubleshooting.md)<br/>vindt resoluties aan gemeenschappelijke fouten en antwoorden op vaak gestelde vragen.
 
-* [**API-basisbeginselen **](api-fundamentals.md)<br/>Leer de basisbeginselen van het werken met platform-API&#39;s.
+* [**API-basisbeginselen **](api-fundamentals.md)<br/>Leer de basisbeginselen van het werken met Platform-API&#39;s.
 
-* [**API-naslaggids **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>Discover Experience Platform-API&#39;s, waaronder headers, parameters, voorbeeldaanvragen en reacties.*Deze documenten worden gehost op Adobe I/O.*
+* [**API-naslaggids **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>Ontdek Experience Platform-API&#39;s, waaronder headers, parameters, voorbeeldaanvragen en reacties.
+*Deze documenten worden gehost op Adobe I/O.*
 
 
 
