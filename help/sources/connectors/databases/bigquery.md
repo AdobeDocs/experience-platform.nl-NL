@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google BigQuery-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,12 @@ ht-degree: 0%
 
 # (Beta) Google BigQuery-connector
 
-Met het Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+>[!NOTE]
+>De Google BigQuery is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Het Platform van de ervaring verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Het platform kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. Tot de ondersteuning voor databaseproviders behoort Google BigQuery.
+Adobe Experience Platform staat gegevens toe om van externe bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+
+Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Platform kan verbinding maken met verschillende typen databases, zoals relationeel, NoSQL of data warehouse. Tot de ondersteuning voor databaseproviders behoort Google BigQuery.
 
 In de onderstaande documentatie vindt u informatie over hoe u Google BigQuery kunt verbinden met Platform via API&#39;s of de gebruikersinterface:
 
