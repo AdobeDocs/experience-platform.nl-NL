@@ -4,9 +4,9 @@ solution: Experience Platform
 title: IBM DB2-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '151'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # (Beta) IBM DB2-connector
 
-Het Adobe Experience Platform biedt native connectiviteit voor databaseproviders zoals Microsoft, MySQL en Azure. U kunt uw gegevens van deze systemen overbrengen naar Platform.
+>[!NOTE]
+>De IBM DB2-connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Verschillende soorten derdegegevensbestanden worden gesteund, met inbegrip van relationele, NoSQL, of gegevenspakhuizen. Ondersteuning voor databaseproviders omvat IBM DB2.
+Adobe Experience Platform biedt native connectiviteit voor databaseproviders zoals Microsoft, MySQL en Azure. U kunt uw gegevens van deze systemen in Platform brengen.
 
-In de onderstaande documentatie vindt u informatie over de verbinding tussen IBM DB2 en Platform via API&#39;s of de gebruikersinterface:
+Verschillende typen databases van derden worden ondersteund, waaronder relationele databases, NoSQL-databases of data warehouse. Ondersteuning voor databaseproviders omvat IBM DB2.
 
-## IBM DB2 met API&#39;s verbinden met platform
+In de onderstaande documentatie vindt u informatie over hoe u IBM DB2 met API&#39;s of de gebruikersinterface kunt verbinden met Platform:
+
+## IBM DB2 met API&#39;s verbinden met Platform
 
 - [Een IBM DB2-connector maken met de Flow Service API](../../tutorials/api/create/databases/ibm-db2.md)
 - [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## IBM DB2 met behulp van de gebruikersinterface verbinden met platform
+## IBM DB2 verbinden met Platform via de gebruikersinterface
 
 - [Een IBM DB2-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/databases/ibm-db2.md)
 - [Vorm een dataflow voor een gegevensbestandschakelaar in UI](../../tutorials/ui/dataflow/databases.md)
