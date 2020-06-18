@@ -4,9 +4,9 @@ solution: Experience Platform
 title: GreenPlum-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 400c80e589c25ed1eefe262e3ad3404599eb1337
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '125'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,16 @@ ht-degree: 0%
 
 # (Beta) GreenPlum-connector
 
-Het Adobe Experience Platform biedt native connectiviteit voor databaseproviders zoals Microsoft, MySQL en Azure. U kunt uw gegevens van deze systemen overbrengen naar Platform.
+>[!NOTE]
+>De GreenPlum-connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Verschillende soorten derdegegevensbestanden worden gesteund, met inbegrip van relationele, NoSQL, of gegevenspakhuizen. De steun voor gegevensbestandleveranciers omvat GreenPlum.
+Adobe Experience Platform biedt native connectiviteit voor databaseproviders zoals Microsoft, MySQL en Azure. U kunt uw gegevens van deze systemen in Platform brengen.
+
+Verschillende typen databases van derden worden ondersteund, waaronder relationele databases, NoSQL-databases of data warehouse. De steun voor gegevensbestandleveranciers omvat GreenPlum.
 
 De documentatie hieronder verstrekt informatie over hoe te om GreenPlum aan Platform te verbinden gebruikend APIs of de gebruikersinterface:
 
-## Connect GreenPlum to Platform met API&#39;s
+## GreenPlum met Platform verbinden gebruikend APIs
 
 - [Een GreenPlum-aansluiting maken met de Flow Service API](../../tutorials/api/create/databases/greenplum.md)
 - [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
