@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Couchbase-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: adb9c46e7337897e2336971e58ebc90b0e497ea0
+source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # Een Couchbase-bronconnector maken in de gebruikersinterface
 
 > [!NOTE]
-> De Couchbase-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
+> De Couchbase-connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 De bronschakelaars in [!DNL Adobe Experience Platform] verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een Couchbase-bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
 
@@ -42,7 +42,7 @@ Om uw Couchbase bronschakelaar voor authentiek te verklaren, moet u waarden voor
 
 Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om een nieuwe account voor Couchbase te maken waarmee u verbinding kunt maken [!DNL Platform].
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Bronnen]* . Het scherm van de *[!UICONTROL Catalogus]* toont een verscheidenheid van bronnen waarvoor u een binnenkomende rekening met kunt tot stand brengen, en elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
+Login aan [Adobe Experience Platform](https://platform.adobe.com) en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatiebar om tot de werkruimte van *[!UICONTROL Bronnen]* toegang te hebben. Het scherm van de *[!UICONTROL Catalogus]* toont een verscheidenheid van bronnen waarvoor u een binnenkomende rekening met kunt tot stand brengen, en elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -66,4 +66,4 @@ Als u een bestaande account wilt verbinden, selecteert u de Couchbase-account wa
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw account Couchbase. U kunt nu doorgaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens over te brengen naar Platform](../../dataflow/databases.md).
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw account Couchbase. U kunt nu verdergaan aan het volgende leerprogramma en een dataflow [vormen om gegevens in Platform](../../dataflow/databases.md)te brengen.
