@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Sensei Machine Learning API
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 4f74acdc41d5049c1aa8eb3dfcef4e9d75c785ca
 workflow-type: tm+mt
 source-wordcount: '206'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
 # Handleiding voor ontwikkelaars van Sensei Machine Learning API
 
-De Sensei Machine Learning-API biedt een mechanisme voor gegevenswetenschappers om services voor machinaal leren te organiseren en te beheren, van algoritme voor instappen tot experimenteren en implementatie van services.
+De Sensei Machine Learning-API biedt een mechanisme voor gegevenswetenschappers om leerservices voor machines te organiseren en te beheren, van algoritme aan boord tot experimenteren en implementatie van services.
 
 Deze ontwikkelaarsgids verstrekt stappen om u te helpen beginnen de het Leren API [van de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)Sensei Machine te gebruiken, en toont API vraag voor het uitvoeren van verrichtingen CRUD op diverse middelen van de Werkruimte van de Wetenschap van Gegevens aan.
 
@@ -26,7 +26,7 @@ U moet de [autorisatiezelfstudie](../../tutorials/authentication.md) hebben volt
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
