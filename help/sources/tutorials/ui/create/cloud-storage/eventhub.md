@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creeer een Azure de bronschakelaar van de Hubs van de Gebeurtenis in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 # Creeer een Azure de bronschakelaar van de Hubs van de Gebeurtenis in UI
 
 >[!NOTE]
-> De Azure Event Hubs-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
+> De Azure Event Hubs-connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De bronschakelaars in het Platform van de Ervaring van Adobe verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het verifiëren van een Azure Event Hubs-bronconnector (hierna &quot;Event Hubs&quot; genoemd) met behulp van de gebruikersinterface van het platform.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het verifiëren van een Azure Event Hubs-bronconnector (hierna &quot;Event Hubs&quot; genoemd) die de gebruikersinterface van het Platform gebruikt.
 
 ## Aan de slag
 
-Voor deze zelfstudie is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe Experience Platform:
 
-- [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
+- [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    - [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    - [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [Klantprofiel](../../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
@@ -46,7 +46,7 @@ Raadpleeg [dit Event Hubs-document](https://docs.microsoft.com/en-us/azure/event
 
 Zodra u uw vereiste geloofsbrieven hebt verzameld, kunt u de stappen hieronder volgen om uw rekening van de Hubs van de Gebeurtenis aan Platform te verbinden.
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **Bronnen** in de linkernavigatiebalk voor toegang tot de werkruimte *Bronnen* . Op het tabblad *Catalogus* worden diverse bronnen weergegeven die u kunt verbinden met Platform. Elke bron toont het aantal bestaande rekeningen verbonden aan hen.
+Login aan [Adobe Experience Platform](https://platform.adobe.com) en selecteer dan **Bronnen** van de linkernavigatiebar om tot de werkruimte van *Bronnen* toegang te hebben. Op het tabblad *Catalogus* worden diverse bronnen weergegeven die met het Platform kunnen worden verbonden. Elke bron toont het aantal bestaande rekeningen verbonden aan hen.
 
 Selecteer onder de categorie *Cloud Storage* de optie **Azure Event Hubs** en klik **op het plusteken (+)** om een nieuwe Event Hubs-connector te maken.
 
@@ -68,4 +68,4 @@ Als u een bestaande account wilt verbinden, selecteert u de Event Hubs-account w
 
 ## Volgende stappen
 
-Door dit leerprogramma te volgen, hebt u uw rekening van de Hubs van de Gebeurtenis aan Platform aangesloten. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag over te brengen naar Platform](../../dataflow/streaming/cloud-storage.md).
+Door dit leerprogramma te volgen, hebt u uw rekening van de Hubs van de Gebeurtenis met Platform verbonden. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag naar het Platform](../../dataflow/streaming/cloud-storage.md)te brengen.
