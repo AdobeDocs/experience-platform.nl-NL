@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gebruikershandleiding voor JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 440310339003bf23c9fcfc69a6ec1eacddc9f413
+source-git-commit: 49f0678cf8bf4349d0b63f3525a1f707f725ede9
 workflow-type: tm+mt
-source-wordcount: '3672'
-ht-degree: 10%
+source-wordcount: '3782'
+ht-degree: 9%
 
 ---
 
@@ -16,26 +16,26 @@ ht-degree: 10%
 
 JupyterLab is een webgebaseerde gebruikersinterface voor <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> en is nauw geïntegreerd in [!DNL Adobe Experience Platform]. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens.
 
-Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies voor het uitvoeren van veelvoorkomende handelingen.
+Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies om algemene handelingen uit te voeren.
 
 ## JupyterLab op Experience Platform
 
-De JupyterLab-integratie van het Experience Platform gaat gepaard met architectuurwijzigingen, ontwerpoverwegingen, aangepaste laptopextensies, vooraf geïnstalleerde bibliotheken en een interface op Adobe-basis.
+De JupyterLab-integratie van Experience Platform gaat gepaard met architectuurwijzigingen, ontwerpoverwegingen, aangepaste laptopextensies, vooraf geïnstalleerde bibliotheken en een Adobe-interface.
 
 In de volgende lijst worden enkele functies beschreven die uniek zijn voor JupyterLab op Platform:
 
 | Functie | Beschrijving |
 | --- | --- |
-| **Kernels** | Kernels bieden laptop en andere voorkant van JupyterLab de mogelijkheid om code in verschillende programmeertalen uit te voeren en in te voeren. Het Platform van de ervaring verstrekt extra kernels om ontwikkeling in Python, R, PySpark, en Vonk te steunen. Zie de sectie [Korrels](#kernels) voor meer informatie. |
+| **Kernels** | Kernels bieden laptop en andere voorkant van JupyterLab de mogelijkheid om code in verschillende programmeertalen uit te voeren en in te voeren. Experience Platform verstrekt extra kernels om ontwikkeling in Python, R, PySpark, en Vonk te steunen. Zie de sectie [Korrels](#kernels) voor meer informatie. |
 | **Toegang tot gegevens** | Toegang tot bestaande datasets rechtstreeks vanuit JupyterLab met volledige ondersteuning voor lees- en schrijfmogelijkheden. |
-| **Platformservice-integratie** | Dankzij de ingebouwde integratie kunt u andere platformservices rechtstreeks vanuit JupyterLab gebruiken. Een volledige lijst van gesteunde integratie wordt verstrekt in de sectie over [Integratie met andere diensten](#service-integration)van het Platform. |
-| **Verificatie** | Naast het ingebouwde veiligheidsmodel <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">van</a>JupyterLab, wordt elke interactie tussen uw toepassing en het Platform van de Ervaring, met inbegrip van de dienst-aan-dienst van het Platform mededeling gecodeerd en voor authentiek verklaard door <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| **Integratie van Platform-services** | Dankzij de ingebouwde integratie kunt u rechtstreeks vanuit JupyterLab andere services voor Platforms gebruiken. Een volledige lijst van gesteunde integratie wordt verstrekt in de sectie over [Integratie met andere diensten](#service-integration)van de Platform. |
+| **Verificatie** | Naast het ingebouwde veiligheidsmodel <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">van</a>JupyterLab, wordt elke interactie tussen uw toepassing en Experience Platform, met inbegrip van de dienst-aan-dienst van het Platform mededeling gecodeerd en voor authentiek verklaard door <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Ontwikkelingsbibliotheken** | In Experience Platform biedt JupyterLab vooraf geïnstalleerde bibliotheken voor Python, R en PySpark. Zie de [bijlage](#supported-libraries) voor een volledige lijst met ondersteunde bibliotheken. |
-| **Bibliotheekcontroller** | Wanneer de vooraf geïnstalleerde bibliotheken niet aan uw behoeften voldoen, kunnen extra bibliotheken voor Python en R worden geïnstalleerd en tijdelijk in geïsoleerde containers worden opgeslagen om de integriteit van Platform te handhaven en uw gegevens veilig te houden. Zie de sectie [Korrels](#kernels) voor meer informatie. |
+| **Bibliotheekcontroller** | Wanneer de vooraf geïnstalleerde bibliotheken niet geschikt zijn voor uw behoeften, kunnen extra bibliotheken voor Python en R worden geïnstalleerd en tijdelijk in geïsoleerde containers worden opgeslagen om de integriteit van het Platform te handhaven en uw gegevens veilig te houden. Zie de sectie [Korrels](#kernels) voor meer informatie. |
 
 >[!NOTE] Aanvullende bibliotheken zijn alleen beschikbaar voor de sessie waarin ze zijn geïnstalleerd. Wanneer u nieuwe sessies start, moet u alle extra bibliotheken die u nodig hebt opnieuw installeren.
 
-## Integratie met andere platformdiensten {#service-integration}
+## Integratie met andere diensten van de Platform {#service-integration}
 
 Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform]. De integratie van JupyterLab op [!DNL Platform] als ingebedde winde staat het toe om met andere [!DNL Platform] diensten in wisselwerking te staan, toelatend u om aan zijn volledig potentieel [!DNL Platform] te gebruiken. De volgende [!DNL Platform] services zijn beschikbaar in JupyterLab:
 
@@ -60,7 +60,7 @@ In de volgende secties wordt informatie gegeven over de belangrijkste kenmerken 
 
 ### Access JupyterLab {#access-jupyterlab}
 
-Selecteer in [Adobe Experience Platform](https://platform.adobe.com)de optie **Laptops** in de linkernavigatiekolom. Laat JupyterLab enige tijd volledig initialiseren.
+In [Adobe Experience Platform](https://platform.adobe.com), uitgezochte **Notities** van de linkernavigatiekolom. Laat JupyterLab enige tijd volledig initialiseren.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -124,7 +124,7 @@ Notebookkernels zijn de taalspecifieke computerengines voor de verwerking van no
 
 Bepaalde kenmerken en functies zijn beperkt tot bepaalde kernels zoals beschreven in de onderstaande tabel:
 
-| Kernel | Ondersteuning voor bibliotheekinstallatie | Platformintegratie |
+| Kernel | Ondersteuning voor bibliotheekinstallatie | Integratie van Platforms |
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | Ja | <ul><li>Sensei ML Framework</li><li>Catalogusservice</li><li>Query-service</li></ul> |
 | **R** | Ja | <ul><li>Sensei ML Framework</li><li>Catalogusservice</li></ul> |
@@ -227,9 +227,18 @@ Als u een nieuwe *Launcher* wilt openen, klikt u op **Bestand > Nieuwe startpagi
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
-## Toegang tot platformgegevens met behulp van laptops
+### GPU- en geheugenserverconfiguratie in Python/R
 
-Elke ondersteunde kernel biedt ingebouwde functies waarmee u de gegevens van het platform kunt lezen vanuit een gegevensset in een laptop. De ondersteuning voor pagineringsgegevens is echter beperkt tot Python- en R-laptops.
+Selecteer in de [!DNL JupyterLab] rechterbovenhoek het tandwielpictogram om de configuratie *van de* notebookserver te openen. Met de schuifregelaar kunt u de GPU in- en uitschakelen en de benodigde hoeveelheid geheugen toewijzen. De hoeveelheid geheugen die u kunt toewijzen, is afhankelijk van de hoeveelheid geheugen die uw organisatie heeft ingericht. Selecteer Configs **[!UICONTROL bijwerken]** om op te slaan.
+
+>[!NOTE]
+>Per organisatie is slechts één GPU beschikbaar voor laptops. Als de GPU in gebruik is, moet u wachten op de gebruiker die momenteel de GPU heeft gereserveerd om deze vrij te geven. Dit kan worden gedaan door uit te loggen of GPU in een nutteloze staat voor vier of meer uren te verlaten.
+
+![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
+
+## Toegang tot Platform-gegevens met laptops
+
+Elke ondersteunde kernel biedt ingebouwde functies waarmee u gegevens van een Platform in een notitieboekje kunt lezen. De ondersteuning voor pagineringsgegevens is echter beperkt tot Python- en R-laptops.
 
 ### Gegevenslimieten voor laptops
 
