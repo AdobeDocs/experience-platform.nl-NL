@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Generic OData-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 7328226b8349ffcdddadbd27b74fc54328b78dc5
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 # Een Generic OData-bronconnector maken in de gebruikersinterface
 
 > [!NOTE]
-> De Generic OData-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
+> De Generic OData-connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De bronschakelaars in het Platform van de Ervaring van Adobe verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een algemene bronconnector van het Open Data Protocol (hierna &quot;OData&quot; genoemd) met behulp van de gebruikersinterface van het Platform.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een algemene bronconnector van het Open Data Protocol (hierna &quot;OData&quot; genoemd) met behulp van de gebruikersinterface van het Platform.
 
 ## Aan de slag
 
-Voor deze zelfstudie is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe Experience Platform:
 
-* [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
+* [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [Klantprofiel](../../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
@@ -32,7 +32,7 @@ Als u reeds een geldige verbinding OData hebt, kunt u de rest van dit document o
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt krijgen tot uw OData-account in Platform, moet u de volgende waarden opgeven:
+Om tot uw rekening OData in Platform toegang te hebben, moet u de volgende waarden verstrekken:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -44,7 +44,7 @@ Raadpleeg [dit OData-document](https://www.odata.org/getting-started/basic-tutor
 
 Zodra u uw vereiste geloofsbrieven hebt verzameld, kunt u de stappen volgen hieronder om een nieuwe rekening te creëren OData om met Platform te verbinden.
 
-Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> en selecteer vervolgens **Bronnen** in de linkernavigatiebalk voor toegang tot de werkruimte *Bronnen* . In het scherm *Catalogus* worden diverse bronnen weergegeven waarvoor u een binnenkomende account kunt maken. Elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
+Login aan <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> en selecteer dan **Bronnen** van de linkernavigatiebar om tot de werkruimte van *Bronnen* toegang te hebben. In het scherm *Catalogus* worden diverse bronnen weergegeven waarvoor u een binnenkomende account kunt maken. Elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
