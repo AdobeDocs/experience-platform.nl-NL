@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Azure Data Explorer-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # (Beta) Azure Data Explorer-connector
 
-Het Adobe Experience Platform biedt native connectiviteit voor databaseproviders zoals Microsoft, MySQL en Azure. U kunt uw gegevens van deze systemen overbrengen naar Platform.
+>[!NOTE]
+>De Azure Data Explorer-connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Verschillende soorten derdegegevensbestanden worden gesteund, met inbegrip van relationele, NoSQL, of gegevenspakhuizen. De steun voor gegevensbestandleveranciers omvat de Azure Ontdekkingsreiziger van Gegevens.
+Adobe Experience Platform biedt native connectiviteit voor databaseproviders zoals Microsoft, MySQL en Azure. U kunt uw gegevens van deze systemen in Platform brengen.
+
+Verschillende typen databases van derden worden ondersteund, waaronder relationele databases, NoSQL-databases of data warehouse. De steun voor gegevensbestandleveranciers omvat de Azure Ontdekkingsreiziger van Gegevens.
 
 De documentatie hieronder verstrekt informatie over hoe te om Azure de Ontdekkingsreiziger van Gegevens aan Platform te verbinden gebruikend APIs of de gebruikersinterface:
 
-## Azure Data Explorer verbinden met Platform met behulp van API&#39;s
+## Azure Data Explorer aansluiten op Platform met behulp van API&#39;s
 
 - [Een Azure Data Explorer-connector maken met de Flow Service API](../../tutorials/api/create/databases/data-explorer.md)
 - [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## Connect Azure Data Explorer naar Platform met behulp van de gebruikersinterface
+## Connect Azure Data Explorer naar Platform via de gebruikersinterface
 
 - [Een Azure Data Explorer-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/databases/data-explorer.md)
 - [Vorm een dataflow voor een gegevensbestandschakelaar in UI](../../tutorials/ui/dataflow/databases.md)
