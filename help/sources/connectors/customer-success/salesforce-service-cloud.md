@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Salesforce Service Cloud-aansluiting
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # (bèta) Salesforce Service Cloud-connector
 
-Met het Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+>[!NOTE]
+>De Salesforce Service Cloud-connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Het Platform van de ervaring verleent steun voor het opnemen van gegevens van een systeem van het de succes van de derdeklant. Tot de ondersteuning voor leveranciers van succesmeldingen van klanten behoort onder andere Salesforce Service Cloud.
+Adobe Experience Platform staat gegevens toe om van externe bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen Salesforce Service Cloud en Platform via API&#39;s of de gebruikersinterface:
+Experience Platform biedt ondersteuning voor het opnemen van gegevens van een systeem voor succes bij een klant van een andere fabrikant. Tot de ondersteuning voor leveranciers van succesmeldingen van klanten behoort onder andere Salesforce Service Cloud.
 
-## Connect Salesforce Service Cloud aan Platform met API&#39;s
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen de Salesforce Service Cloud en het Platform via API&#39;s of de gebruikersinterface:
+
+## De Salesforce Service Cloud aansluiten op een Platform met behulp van API&#39;s
 
 - [Een Salesforce Service Cloud-connector maken met de Flow Service API](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
 - [Ontdek een systeem voor klantensucces met behulp van de Flow Service API](../../tutorials/api/explore/customer-success.md)
 - [Gegevens verzamelen van een systeem voor klantensucces met behulp van de Flow Service API](../../tutorials/api/collect/customer-success.md)
 
-## Connect Salesforce Service Cloud naar Platform via de gebruikersinterface
+## De Salesforce Service Cloud aansluiten op het Platform via de gebruikersinterface
 
 - [Een Salesforce Service Cloud-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/customer-success/salesforce-service-cloud.md)
 - [Gegevensstroom voor een schakelaar van het klantensucces in UI vormen](../../tutorials/ui/dataflow/customer-success.md)
