@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 translation-type: tm+mt
-source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
+source-git-commit: a9ce046d6ee8622e23f31edbbf777b045109c13b
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '906'
 ht-degree: 0%
 
 ---
@@ -14,35 +14,35 @@ ht-degree: 0%
 
 # Overzicht van bronconnectors
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat gegevens toe om van externe bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
-Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u bronverbindingen aan diverse gegevensleveranciers met gemak laat plaatsen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
+Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
 
-Met het Platform van de Ervaring, kunt u gegevens centraliseren u uit verschillende bronnen verzamelt en de inzichten gebruikt die uit het worden verkregen om meer te doen.
+Met Experience Platform, kunt u gegevens centraliseren u uit verschillende bronnen verzamelt en de inzichten gebruiken die uit het worden verkregen om meer te doen.
 
 ## Typen bronnen
 
-De bronnen in het Platform van de Ervaring worden gegroepeerd in de volgende categorieën:
+Bronnen in Experience Platform worden gegroepeerd in de volgende categorieën:
 
 ### Adobe-toepassingen
 
-Met het Experience Platform kunnen gegevens uit andere Adobe-toepassingen worden ingevoerd, zoals Adobe Analytics, Adobe Audience Manager en Experience Platform Launch. Zie de volgende verwante documenten voor meer informatie:
+Met Experience Platform kunnen gegevens uit andere Adobe-toepassingen worden ingevoerd, zoals Adobe Analytics, Adobe Audience Manager en Experience Platform Launch. Zie de volgende verwante documenten voor meer informatie:
 
-- [Overzicht van de Adobe Audience Manager-connector](connectors/adobe-applications/audience-manager.md)
-- [Een Adobe Audience Manager-bronaansluiting maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Overzicht gegevensconnector Adobe Analytics](connectors/adobe-applications/analytics.md)
-- [Een Adobe Analytics-bronconnector maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Overzicht van de Adobe Audience Manager-aansluiting](connectors/adobe-applications/audience-manager.md)
+- [Creeer een Adobe Audience Manager bronschakelaar in UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Overzicht van de Adobe Analytics-gegevensconnector](connectors/adobe-applications/analytics.md)
+- [Een Adobe Analytics-bronaansluiting maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Een bronconnector voor klantkenmerken in de gebruikersinterface maken](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### Reclame
 
-Het Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde advertentiesysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [Google AdWords-connector](connectors/advertising/ads.md)
 
 ### Cloud Storage
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
+Met bronnen voor cloudopslag kunt u uw eigen gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
 
 - [Azure Data Lake Storage Gen2-connector](connectors/cloud-storage/adls-gen2.md)
 - [Azure Blob- en Amazon S3-connector](connectors/cloud-storage/blob-s3.md)
@@ -55,21 +55,21 @@ Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform 
 
 ### Customer Relationship Management (CRM)
 
-De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen bouwen, die beurtelings, loyaliteit creëren en klantenbehoud drijven. Het Platform van de ervaring verleent steun voor het opnemen van de gegevens van CRM van de Dynamica 365 van Microsoft en Salesforce. Zie de volgende verwante documenten voor meer informatie:
+De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen bouwen, die beurtelings, loyaliteit creëren en klantenbehoud drijven. Experience Platform verleent steun voor het opnemen van de gegevens van CRM van de Dynamica 365 van Microsoft en Salesforce. Zie de volgende verwante documenten voor meer informatie:
 
 - [Microsoft Dynamics-connector](connectors/crm/ms-dynamics.md)
 - [Salesforce-aansluiting](connectors/crm/salesforce.md)
 
 ### Klant geslaagd
 
-Het Platform van de ervaring verleent steun voor het opnemen van gegevens van een derde toepassing van het klantensucces. Zie de volgende verwante documenten voor meer informatie:
+Experience Platform biedt ondersteuning voor het opnemen van gegevens van een toepassing voor klantsucces van derden. Zie de volgende verwante documenten voor meer informatie:
 
 - [Salesforce Service Cloud-aansluiting](connectors/customer-success/salesforce-service-cloud.md)
 - [ServiceNow-connector](connectors/customer-success/servicenow.md)
 
 ### Database
 
-Het Platform van de ervaring verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [Amazon Redshift-connector](connectors/databases/redshift.md)
 - [Apache Hive op Azure HDInsights-connector](connectors/databases/hive.md)
@@ -97,19 +97,19 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van een de
 
 ### Betalingen
 
-Het Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een betalingssysteem van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een betalingssysteem van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [PayPal-connector](connectors/payments/paypal.md)
 
 ### Protocollen
 
-Het Platform van de ervaring verleent steun voor het opnemen van gegevens van een systeem van derdeprotocollen. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+Experience Platform verleent steun voor het opnemen van gegevens van een systeem van derdeprotocollen. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [Generic OData-connector](connectors/protocols/odata.md)
 
 ## Toegangsbeheer voor bronnen bij gegevensinvoer
 
-Rechten voor bronnen bij gegevensinvoer kunnen worden beheerd in de Adobe Admin Console. U hebt toegang tot machtigingen via het tabblad *Machtigingen* in een bepaald productprofiel. Via het deelvenster **Machtigingen** bewerken hebt u toegang tot de machtigingen voor bronnen via de menuvermelding voor *gegevensinvoer* . De toestemming van de Bronnen **van de** Mening verleent read-only toegang tot beschikbare bronnen in het lusje van de *Catalogus* en voor authentiek verklaarde bronnen op het *Browse* lusje, terwijl de machtiging **Manage Bronnen** volledige toegang verleent om te lezen, tot stand te brengen, uit te geven, en bronnen onbruikbaar te maken.
+Machtigingen voor bronnen in gegevensinvoer kunnen worden beheerd in de Adobe-Admin Console. U hebt toegang tot machtigingen via het tabblad *Machtigingen* in een bepaald productprofiel. Via het deelvenster **Machtigingen** bewerken hebt u toegang tot de machtigingen voor bronnen via de menuvermelding voor *gegevensinvoer* . De toestemming van de Bronnen **van de** Mening verleent read-only toegang tot beschikbare bronnen in het lusje van de *Catalogus* en voor authentiek verklaarde bronnen op het *Browse* lusje, terwijl de machtiging **Manage Bronnen** volledige toegang verleent om te lezen, tot stand te brengen, uit te geven, en bronnen onbruikbaar te maken.
 
 De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combinaties van deze toestemmingen:
 
@@ -119,4 +119,14 @@ De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combin
 | **Bronnen** beheren op | Naast de functies die zijn opgenomen in **Bronnen** weergeven, verleent u toegang tot de optie *Bron* verbinden in de *catalogus* en *Gegevens* selecteren in *Bladeren*. **Beheer Bronnen** staat u ook toe om *DataFlows* toe te laten of onbruikbaar te maken en hun programma&#39;s uit te geven. |
 | **Bronnen** weergeven en bronnen **** beheren uitgeschakeld | Alle toegang tot bronnen intrekken. |
 
-Voor meer informatie over de beschikbare toestemmingen die door de Console Admin, met inbegrip van die vier bronnen worden verleend, zie het overzicht [van de](../access-control/home.md)toegangscontrole.
+Voor meer informatie over de beschikbare toestemmingen die door de Admin Console, met inbegrip van die vier bronnen worden verleend, zie het overzicht [van de](../access-control/home.md)toegangscontrole.
+
+## Voorwaarden en bepalingen {#terms-and-conditions}
+
+Door een van de bronnen te gebruiken die als bèta (&quot;Beta&quot;) worden gelabeld, erkent u hierbij dat de bètaversie ***&quot;as is&quot; wordt geleverd zonder enige*** garantie.
+
+Adobe is niet verplicht het bètaprogramma te onderhouden, te corrigeren, bij te werken, te wijzigen, te wijzigen of anderszins te ondersteunen. U wordt aangeraden voorzichtig te zijn en op geen enkele wijze te vertrouwen op de juiste werking of prestaties van dergelijke bèta en/of begeleidende materialen. De bètaversie wordt beschouwd als vertrouwelijke informatie van Adobe.
+
+Alle &quot;Feedback&quot; (informatie over de bètaversie, inclusief maar niet beperkt tot problemen of fouten die u tegenkomt bij het gebruik van de bètaversie, suggesties, verbeteringen en aanbevelingen) die u aan Adobe hebt gegeven, worden hierbij aan Adobe toegewezen, inclusief alle rechten, titels en interesse in en voor dergelijke feedback.
+
+Verzend Open Feedback of maak een Support Ticket om uw suggesties te delen of een bug te melden en een functieverbetering te zoeken.
