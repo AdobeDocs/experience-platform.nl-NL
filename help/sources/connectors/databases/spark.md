@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Apache Spark op Azure HDInsights-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,14 @@ ht-degree: 0%
 
 # (Beta) Apache Spark op Azure HDInsights-connector
 
-Met het Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+>[!NOTE]
+>De Apache Spark op Azure HDInsights-connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Het Platform van de ervaring verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Het platform kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. Tot de ondersteuning voor databaseproviders behoort Apache Spark op Azure HDInsights.
+Adobe Experience Platform staat gegevens toe om van externe bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
-De onderstaande documentatie biedt informatie over hoe u Apache Spark op Azure HDInsights kunt aansluiten op Platform met behulp van API&#39;s of de gebruikersinterface:
+Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Platform kan verbinding maken met verschillende typen databases, zoals relationeel, NoSQL of data warehouse. Tot de ondersteuning voor databaseproviders behoort Apache Spark op Azure HDInsights.
+
+In de onderstaande documentatie vindt u informatie over hoe u Apache Spark op Azure HDInsights kunt aansluiten op Platform met behulp van API&#39;s of de gebruikersinterface:
 
 ## Connect Apache Spark op Azure HDInsights to Platform using APIs
 
@@ -26,7 +29,7 @@ De onderstaande documentatie biedt informatie over hoe u Apache Spark op Azure H
 - [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## Connect Apache Spark op Azure HDInsights to Platform met behulp van de gebruikersinterface
+## Connect Apache Spark op Azure HDInsights to Platform using the UI
 
 - [Een Apache Spark maken op de Azure HDInsights-bronconnector in de gebruikersinterface](../../tutorials/ui/create/databases/spark.md)
 - [Vorm een dataflow voor een gegevensbestandschakelaar in UI](../../tutorials/ui/dataflow/databases.md)
