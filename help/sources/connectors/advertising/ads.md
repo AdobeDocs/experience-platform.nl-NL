@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google AdWords-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: f344b69ac7fc2c87880baf2ba47dce68b5a697f2
+source-git-commit: b9e9207741044f118d53ab8eb3d3d6cd7451132d
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,16 @@ ht-degree: 0%
 
 # Google AdWords-connector
 
-Met het Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+>[!NOTE]
+>De Google AdWords-connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Het Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde advertentiesysteem. Onder andere Google AdWords wordt ondersteund door reclamebureaus.
+Adobe Experience Platform staat gegevens toe om van externe bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
-In de onderstaande documentatie vindt u informatie over hoe u Google AdWords kunt verbinden met Platform via API&#39;s of de gebruikersinterface:
+Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Onder andere Google AdWords wordt ondersteund door reclamebureaus.
 
-## Google AdWords verbinden met Platform met behulp van API&#39;s
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen Google AdWords en Platform via API&#39;s of de gebruikersinterface:
+
+## Google AdWords verbinden met Platform via API&#39;s
 
 - [Een Google AdWords-connector maken met de Flow Service API](../../tutorials/api/create/advertising/ads.md)
 - [Een reclamesysteem verkennen met de Flow Service API](../../tutorials/api/explore/advertising.md)
