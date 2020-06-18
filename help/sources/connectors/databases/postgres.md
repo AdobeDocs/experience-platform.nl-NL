@@ -4,9 +4,9 @@ solution: Experience Platform
 title: PostgreSQL-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # (Beta) PostgreSQL-connector
 
-Met het Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+>[!NOTE]
+>De PostgreSQL-connector bevindt zich in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Het Platform van de ervaring verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Het platform kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. Tot de ondersteuning voor databaseproviders behoren onder andere PostgreSQL.
+Adobe Experience Platform staat gegevens toe om van externe bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+
+Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Platform kan verbinding maken met verschillende typen databases, zoals relationeel, NoSQL of data warehouse. Tot de ondersteuning voor databaseproviders behoren onder andere PostgreSQL.
 
 De documentatie hieronder verstrekt informatie over hoe te om PostSQL met Platform te verbinden gebruikend APIs of de gebruikersinterface:
 
-## Connect PostgreSQL naar Platform met API&#39;s
+## Connect PostgreSQL met Platform via API&#39;s
 
 - [Een PostSQL-connector maken met de Flow Service API](../../tutorials/api/create/databases/postgres.md)
 - [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## Connect PostgreSQL naar Platform via de gebruikersinterface
+## Connect PostgreSQL aan Platform gebruikend UI
 
 - [Een PostgreSQL-bronconnector maken in de UI](../../tutorials/ui/create/databases/postgres.md)
 - [Vorm een dataflow voor een gegevensbestandschakelaar in UI](../../tutorials/ui/dataflow/databases.md)
