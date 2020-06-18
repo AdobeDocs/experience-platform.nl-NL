@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Generic OData-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: 7328226b8349ffcdddadbd27b74fc54328b78dc5
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,12 @@ ht-degree: 0%
 
 # (Beta) Generic OData-connector
 
-Met het Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+>[!NOTE]
+>De Generic OData-connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Het Platform van de ervaring verleent steun voor het opnemen van gegevens van een toepassing van derdeprotocollen. De steun voor protocolleveranciers omvat Generic OData.
+Adobe Experience Platform staat gegevens toe om van externe bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+
+Experience Platform verleent steun voor het opnemen van gegevens van een toepassing van derdeprotocollen. De steun voor protocolleveranciers omvat Generic OData.
 
 De documentatie hieronder verstrekt informatie over hoe te om Generic OData aan Platform te verbinden gebruikend APIs of de gebruikersinterface:
 
@@ -26,7 +29,7 @@ De documentatie hieronder verstrekt informatie over hoe te om Generic OData aan 
 - [Een protocoltoepassing verkennen met de Flow Service API](../../tutorials/api/explore/protocols.md)
 - [Gegevens verzamelen van een protocoltoepassing met behulp van de Flow Service API](../../tutorials/api/collect/protocols.md)
 
-## Connect Generic OData to Platform via de gebruikersinterface
+## Generic OData verbinden met Platform via de gebruikersinterface
 
 - [Een Generic OData-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/protocols/odata.md)
 - [Vorm een dataflow voor een protocolschakelaar in UI](../../tutorials/ui/dataflow/protocols.md)
