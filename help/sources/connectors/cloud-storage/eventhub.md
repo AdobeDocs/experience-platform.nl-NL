@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Azure Event Hubs-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '196'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,12 @@ ht-degree: 0%
 
 # (Beta) Azure Event Hubs-connector
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, Google Cloud Platform en Azure. U kunt uw gegevens van deze systemen overbrengen naar Platform.
+>[!NOTE]
+>De Azure Event Hubs-connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met Platform kunt u gegevens van Azure Event Hubs in real-time invoeren.
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, Google Cloud Platform en Azure. U kunt uw gegevens van deze systemen in Platform brengen.
+
+Met bronnen voor cloudopslag kunt u uw eigen gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met Platform kunt u gegevens van Azure Event Hubs in real-time invoeren.
 
 De documentatie hieronder verstrekt informatie over hoe te om Azure Event Hubs aan Platform te verbinden gebruikend APIs of de gebruikersinterface:
 
