@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Maak een SQL Server-aansluiting met behulp van de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: e4ed6ae3ee668cd0db741bd07d2fb7be593db4c9
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -15,18 +15,18 @@ ht-degree: 0%
 # Een Microsoft SQL Server-connector maken met de Flow Service API
 
 >[!NOTE]
->De Microsoft SQL Server-connector bevindt zich in bèta. De functies en documentatie kunnen worden gewijzigd.
+>De Microsoft SQL Server-connector bevindt zich in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+De Dienst van de stroom wordt gebruikt om klantengegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om het Platform van de Ervaring met een Server van Microsoft te verbinden SQL (verder die als &quot;SQL Server&quot;wordt bedoeld).
+Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om Experience Platform met een Server van Microsoft te verbinden SQL (verder die als &quot;SQL Server&quot;wordt bedoeld).
 
 ## Aan de slag
 
-Voor deze handleiding is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): Het Platform van de ervaring laat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [Sandboxen](../../../../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met SQL Server te verbinden gebruikend de Dienst API van de Stroom.
 
@@ -43,17 +43,17 @@ Voor meer informatie over het verkrijgen van een verbindingskoord, verwijs naar 
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../../../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform, inclusief die van de Flow Service, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in Experience Platform, inclusief die van de Flow Service, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -105,7 +105,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw database te verkennen in de volgende zelfstudie.
+Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw database te verkennen in de volgende zelfstudie.
 
 ```json
 {
