@@ -4,21 +4,17 @@ solution: Experience Platform
 title: Een model optimaliseren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+workflow-type: tm+mt
+source-wordcount: '1242'
+ht-degree: 0%
 
 ---
 
 
-# Een model optimaliseren
+# Een model optimaliseren met behulp van het Model Insights-framework
 
-
-Deze zelfstudie gaat over:
-
-- Ontvangercode configureren
-- Aangepaste maateenheden definiëren
-- Vooraf gebouwde evaluatiemetriek en visualisatiekaarten gebruiken
-
-Tegen het eind van dit leerprogramma, zou u recept code moeten kunnen vormen, douanemetriek bepalen, pre-gebouwde evaluatiemetriek en standaard visualisatiekaarten gebruiken.
+Het Model Insights Framework biedt de gegevenswetenschapper hulpmiddelen in de Data Science Workspace om snelle en geïnformeerde keuzes te maken voor optimale modellen voor machinaal leren op basis van experimenten. Het kader zal de snelheid en doeltreffendheid van de werkstroom voor machinaal leren verbeteren en het gebruiksgemak voor gegevenswetenschappers verbeteren. Dit wordt gedaan door een standaardmalplaatje voor elk machine het leren algoritme type te verstrekken om met model het stemmen bij te wonen. Dankzij het eindresultaat kunnen wetenschappers op het gebied van gegevens en burgergegevens betere modeloptimalisatiebeslissingen maken voor hun eindgebruikers.
 
 ## Wat zijn metriek?
 
@@ -27,10 +23,6 @@ Na het implementeren en trainen van een model, zou een wetenschapper de volgende
 - Oppervlak onder curve
 - Verfusiematrix
 - Classificatieverslag
-
-## Wat is het Model Insights Framework?
-
-Het Model Insights Framework biedt de gegevenswetenschapper hulpmiddelen in de Data Science Workspace om snelle en geïnformeerde keuzes te maken voor optimale modellen voor machinaal leren op basis van experimenten. Het kader zal de snelheid en doeltreffendheid van de werkstroom voor machinaal leren verbeteren en het gebruiksgemak voor gegevenswetenschappers verbeteren. Dit wordt gedaan door een standaardmalplaatje voor elk machine het leren algoritme type te verstrekken om met model het stemmen bij te wonen. Dankzij het eindresultaat kunnen wetenschappers op het gebied van gegevens en burgergegevens betere modeloptimalisatiebeslissingen maken voor hun eindgebruikers.
 
 ## Code voor recept configureren
 
@@ -171,4 +163,4 @@ Het Sensei Model Insights Framework ondersteunt één standaardsjabloon voor elk
 | Clustering (zonder waarheid op de grond) | - Inertia<br>- Silhouette coëfficiënt<br>- CHI (Calinski-Harabaz index)<br>- DBI (Davies-Bouldin index)<br>- Dunn index | Clusters tekenen clusters en centroïden met relatieve clustergrootten die de gegevenspunten weergeven die binnen een cluster vallen |
 | Aanbeveling | -Gemiddelde gemiddelde precisie (MAP) <br>-genormaliseerde, gedisconteerde cumulatieve winst <br>- Gemiddelde Ware Rank <br>-Metrische K | TBD |
 | Gebruiksgevallen van TensorFlow | TensorFlow Model Analysis (TFMA) | Vergelijking van neurale netwerkmodellen/visualisatie ongedaan maken |
-| Ander/fout-vastlegmechanisme | De metrische logica van de douane (en overeenkomstige evaluatiekaarten) die door modelauteur worden bepaald. Handige foutafhandeling in geval van niet-overeenkomende sjablonen | Lijst met zeer belangrijke paren voor evaluatiemetriek |
+| Ander/fout-vastlegmechanisme | De metrische logica van de douane (en overeenkomstige evaluatiekaarten) die door modelauteur worden bepaald. Handige foutafhandeling in geval van niet-overeenkomende sjabloon | Lijst met zeer belangrijke paren voor evaluatiemetriek |
