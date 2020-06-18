@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Amazon Kinesis-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: dcd6293a71178fee14647f5b2c8b56d03d1ec7df
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '454'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 # Een Amazon Kinesis-bronconnector maken in de gebruikersinterface
 
 >[!NOTE]
-> De Amazon Kinesis-connector is in bèta. De functies en documentatie kunnen worden gewijzigd.
+>De Amazon Kinesis-connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De bronschakelaars in het Platform van de Ervaring van Adobe verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het verifiëren van een Amazon Kinesis-bronconnector (hierna &quot;Kinesis&quot; genoemd) via de gebruikersinterface van Platform.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om extern gesourceerde gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het verifiëren van een Amazon Kinesis-bronconnector (hierna &quot;Kinesis&quot; genoemd) via de gebruikersinterface van het Platform.
 
 ## Aan de slag
 
-Voor deze zelfstudie is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe Experience Platform:
 
-- [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
+- [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    - [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    - [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [Klantprofiel](../../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
@@ -44,9 +44,9 @@ Raadpleeg [dit Kinesis-document](https://docs.aws.amazon.com/streams/latest/dev/
 
 ## Uw Kinesis-account verbinden
 
-Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw Kinesis-account te koppelen aan Platform.
+Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw Kinesis-account te koppelen aan het Platform.
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **Bronnen** in de linkernavigatiebalk voor toegang tot de werkruimte *Bronnen* . Op het tabblad *Catalogus* worden diverse bronnen weergegeven die u kunt verbinden met Platform. Elke bron toont het aantal bestaande rekeningen verbonden aan hen.
+Login aan [Adobe Experience Platform](https://platform.adobe.com) en selecteer dan **Bronnen** van de linkernavigatiebar om tot de werkruimte van *Bronnen* toegang te hebben. Op het tabblad *Catalogus* worden diverse bronnen weergegeven die met het Platform kunnen worden verbonden. Elke bron toont het aantal bestaande rekeningen verbonden aan hen.
 
 Selecteer in de categorie *Cloud Storage* de optie **Amazon Kinesis** en klik **op het plus-pictogram (+)** om een nieuwe Kinesis-connector te maken.
 
@@ -68,4 +68,4 @@ Als u een bestaande account wilt verbinden, selecteert u de Kinesis-account waar
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u verbinding gemaakt met uw Kinesis-account met Platform. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag over te brengen naar Platform](../../dataflow/streaming/cloud-storage.md).
+Door deze zelfstudie te volgen, hebt u verbinding gemaakt met uw Kinesis-account met Platform. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag naar het Platform](../../dataflow/streaming/cloud-storage.md)te brengen.
