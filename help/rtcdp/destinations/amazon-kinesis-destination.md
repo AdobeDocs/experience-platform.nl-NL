@@ -1,10 +1,10 @@
 ---
 title: Amazon Kinesis-bestemming
 seo-title: Amazon Kinesis-bestemming
-description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens te streamen van het Adobe Experience Platform.
-seo-description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens te streamen van het Adobe Experience Platform.
+description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens te streamen vanaf het Adobe Experience Platform.
+seo-description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens te streamen vanaf het Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
+source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Met de [!DNL Kinesis Data Streams] service van Amazon Web Services kunt u grote stromen gegevensrecords in real-time verzamelen en verwerken.
 
-U kunt een uitgaande verbinding in real time met uw [!DNL Amazon Kinesis] opslag maken om gegevens te streamen vanaf het Adobe Experience Platform.
+U kunt een uitgaande verbinding in real time aan uw [!DNL Amazon Kinesis] opslag tot stand brengen aan stroomgegevens van Adobe Experience Platform.
 
 * Raadpleeg de documentatie bij [!DNL Amazon Kinesis][Amazon voor meer informatie over](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)het programma.
 * Zie de zelfstudie over de API- [!DNL Amazon Kinesis] streamingdoelen als u verbinding wilt maken met het [gebruik van API-aanroepen](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
@@ -44,20 +44,20 @@ Zie de workflow voor [Cloud-opslagdoelen ](/help/rtcdp/destinations/cloud-storag
 
 Voor [!DNL Amazon Kinesis] bestemmingen, ga de volgende informatie in creeer bestemmingswerkschema in:
 
-### In de stap Account {#account-step}
+### In de stap Verificatie {#authentication-step}
 
 * **Toegangssleutel en geheime sleutel** voor Amazon Web Services: In [!DNL Amazon Web Services], produceer een toegangstoets - geheim toegangszeer belangrijke paar om Adobe in real time CDP toegang tot uw [!DNL Amazon Kinesis] rekening te verlenen. Meer informatie vindt u in de documentatie [van](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon Web Services.
 * **regio**: Geef aan naar welk [!DNL Amazon Web Services] gebied gegevens moeten worden gestreamd.
 
 ![Invoervelden in de stap van de account](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
 
-### In de stap Verificatie {#authentication-step}
+### In de stap Setup {#setup-step}
 
 * **Naam**: Geef een naam op voor uw verbinding met [!DNL Amazon Kinesis]
 * **Omschrijving**: Geef een beschrijving op voor de verbinding met [!DNL Amazon Kinesis].
-* **stream**: Geef de naam op van de bestaande gegevensstroom in uw [!DNL Amazon Kinesis] account. Adobe Real-time CDP exporteert gegevens naar deze stream.
+* **stream**: Geef de naam op van een bestaande gegevensstroom in uw [!DNL Amazon Kinesis] account. Adobe Real-time CDP exporteert gegevens naar deze stream.
 
-![Invoervelden in de verificatiestap](/help/rtcdp/destinations/assets/aws-kinesis-authentication-step.png)
+![Invoervelden in de verificatiestap](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
 
 <!--
 
@@ -73,7 +73,7 @@ Zie Profielen en segmenten [activeren naar een doel](/help/rtcdp/destinations/ac
 
 ## Geëxporteerde gegevens {#exported-data}
 
-De gegevens van uw geëxporteerde Experience Platform worden opgeslagen in [!DNL Amazon Kinesis] de JSON-indeling. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn ECID en e-mail.
+De geëxporteerde gegevens van het Experience Platform worden in JSON- [!DNL Amazon Kinesis] indeling opgeslagen. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn ECID en e-mail.
 
 ```
 {
