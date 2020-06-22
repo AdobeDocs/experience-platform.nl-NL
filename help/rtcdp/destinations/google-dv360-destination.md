@@ -4,9 +4,9 @@ seo-title: Bestemming Google Display en Video 360
 description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
 seo-description: 'Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten. '
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Let op de volgende details die specifiek zijn voor Google Display &amp; Video 36
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming wilt maken met Google Display en Video 360 en in het verleden de functionaliteit [voor](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) id-synchronisatie niet hebt ingeschakeld in Experience Cloud ID Service (met Adobe Audience Manager of andere toepassingen), neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder Google-integratie hebt ingesteld in Audience Manager, worden de id-synchronisaties die u hebt ingesteld, overgedragen naar Adobe Real-time CDP.
+>Als u uw eerste bestemming wilt maken met Google Display &amp; Video 360 en in het verleden (met Adobe Audience Manager of andere toepassingen) de functionaliteit [voor het synchroniseren van](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) id&#39;s niet hebt ingeschakeld in de Experience Cloud ID Service, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder Google-integraties in Audience Manager had ingesteld, worden de synchronisaties van de id die u had ingesteld overgedragen naar Adobe Real-time CDP.
 
 ## Vereisten
 
@@ -49,15 +49,15 @@ Voordat u de Google Display &amp; Video 360-bestemming maakt in Adobe Real-time 
 1. Selecteer Google Display &amp; Video 360 in **[!UICONTROL Verbindingen > Doelen]** en selecteer **[!UICONTROL Doel]**maken.
    ![Connect Google Display en Video 360-doel](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. In het Create bestemmingswerkschema, vul de [!UICONTROL BasisInformatie] voor de bestemming in. <br>
-
-   ![Basisinformatie over Google Display en Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
+2. In de stap van de **Opstelling** van creeer bestemmingswerkschema, vul de [!UICONTROL BasisInformatie] voor de bestemming, evenals de marketing gebruiksgevallen in die op deze bestemming zouden moeten van toepassing zijn. <br>
+   ![Basisinformatie over Google Display en Video 360](/help/rtcdp/destinations/assets/dv360-setup-step.png)
 * **[!UICONTROL Naam]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Omschrijving]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
 * **[!UICONTROL Accounttype]**: Selecteer een optie, afhankelijk van uw account bij Google:
    * Gebruik deze optie `Invite Advertiser` om het publiek alleen naar een specifiek merk in uw Display &amp; Video 360-account te laten delen.
    * Gebruik deze optie `Invite Partner` om het publiek te laten delen naar alle merken in uw Display &amp; Video 360-account.
 * **[!UICONTROL Account-id]**: Vul uw **[!DNL Invite partner]** of **[!DNL Invite advertiser]** account-id in met Google. Dit is doorgaans een ID van zes of zeven cijfers.
+* **[!UICONTROL Geval]** voor gebruik bij het in de handel brengen: Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde gevallen voor marketinggebruik of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het op de markt brengen van gebruiksgevallen, zie de [Governance van Gegevens in Echte tijd CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) pagina. Zie het overzicht [van het beleid voor](/help/data-governance/policies/overview.md#core-actions)gegevensgebruik voor informatie over de afzonderlijke door Adobe gedefinieerde gevallen van marketinggebruik.
 
 >[!NOTE]
 >
