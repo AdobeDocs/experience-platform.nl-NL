@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Gebruikershandleiding voor het profiel van de klant in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: da3793a528fa919633e777423d77e7be9cbc0154
+source-git-commit: 4589d0cdca36992feea208850abdda1a9dc246c0
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -32,19 +32,21 @@ Klik in de gebruikersinterface [van het](http://platform.adobe.com)Experience Pl
 
 ![](../images/user-guide/profiles-overview.png)
 
-## Bladeren door profiel
+## Bladeren
 
-Klik op het tabblad **Bladeren** om door profielen te bladeren op basis van identiteit.
+Selecteer het tabblad *Bladeren* om door profielen te bladeren op basis van identiteit.
+
+![](../images/user-guide/profiles-browse.png)
 
 ### Profielafmetingen {#profile-metrics}
 
-Rechts op het tabblad **Bladeren** staan verschillende belangrijke profielmaatstaven die betrekking hebben op uw profielgegevens, zoals het totale aantal [](#profile-count) profielen en een lijst met [profielen per naamruimte](#profiles-by-namespace).
+Aan de rechterkant van het tabblad *Bladeren* staan verschillende belangrijke metingen voor uw profielgegevens, zoals het totale aantal [](#profile-count) profielen en een lijst met [profielen per naamruimte](#profiles-by-namespace).
 
 Deze profielmetriek worden geëvalueerd gebruikend het standaardsamenvoegbeleid van uw organisatie. Voor meer informatie bij het werken met fusiebeleid, met inbegrip van hoe te om een standaardfusiebeleid te bepalen, zie de de gebruikersgids [van het Beleid van de](merge-policies.md)Fusie.
 
 Naast deze metriek, verstrekt de sectie van profielmetriek ook een *Laatst bijgewerkte* datum en tijd, die tonen wanneer de metriek het laatst werden geëvalueerd.
 
-![](../images/user-guide/profiles-browse.png)
+![](../images/user-guide/profiles-profile-metrics.png)
 
 ### Aantal profielen {#profile-count}
 
@@ -92,13 +94,13 @@ Als u de **profiel-id** selecteert, wordt het tabblad _Details_ geopend. Deze pa
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-U kunt aanvullende informatie met betrekking tot het profiel weergeven, zoals kenmerken, gebeurtenissen en segmenten waarvan het profiel lid is.
+U kunt aanvullende informatie over het profiel weergeven, zoals *Kenmerken*, *Gebeurtenissen* en *Segmenten* waarbij het profiel een lid is.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Beleid samenvoegen
 
-Klik op **Beleid** samenvoegen om een lijst weer te geven met samenvoegbeleid dat tot uw organisatie behoort. Elk vermeld beleid toont zijn naam, al dan niet het standaardsamenvoegbeleid, en het schema dat het op van toepassing is.
+Selecteer het tabblad *Samenvoegen van beleidsregels* om een lijst weer te geven met samenvoegingsbeleid dat tot uw organisatie behoort. Elk vermeld beleid toont zijn naam, al dan niet het standaardsamenvoegbeleid, en het schema dat het op van toepassing is.
 
 Voor meer informatie over fusiebeleid, zie de de gebruikersgids [van het Beleid van de](merge-policies.md)Fusie.
 
@@ -106,7 +108,7 @@ Voor meer informatie over fusiebeleid, zie de de gebruikersgids [van het Beleid 
 
 ## Unieschema
 
-Klik op **Verenigingsschema** om de samenvoegingsschema&#39;s voor uw profielarchief weer te geven. Een verenigingsschema is een samenvoeging van alle gebieden van het Model van de Gegevens van de Ervaring (XDM) onder de zelfde klasse, de waarvan schema&#39;s voor gebruik in het Profiel van de Klant in real time zijn toegelaten. Klik op een klasse in de lijst links om de structuur van het samenvoegingsschema op het canvas weer te geven.
+Selecteer het tabblad *Unieschema* om de samenvoegingsschema&#39;s voor uw profielarchief weer te geven. Een verenigingsschema is een samenvoeging van alle gebieden van het Model van de Gegevens van de Ervaring (XDM) onder de zelfde klasse, de waarvan schema&#39;s voor gebruik in het Profiel van de Klant in real time zijn toegelaten. Selecteer een klasse in de linkerlijst om de structuur van zijn unieschema in het canvas te bekijken.
 
 Als u bijvoorbeeld &quot;XDM-profiel&quot; selecteert, wordt het samenvoegingsschema voor de klasse Individueel profiel XDM weergegeven.
 
