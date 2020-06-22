@@ -4,9 +4,9 @@ seo-title: Doel van Google Ad Manager
 description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 seo-description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Let op de volgende details die specifiek zijn voor de doelen van Google Ad Manag
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming wilt maken met Google Ad Manager en in het verleden (met Audience Manager of andere toepassingen) de functionaliteit [voor het synchroniseren van](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) id&#39;s niet hebt ingeschakeld in Experience Cloud ID Service, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder Google-integratie hebt ingesteld in Audience Manager, worden de id-synchronisaties die u hebt ingesteld, overgedragen naar Adobe Real-time CDP.
+>Als u uw eerste bestemming wilt maken met Google Ad Manager en in het verleden (met Audience Manager of andere toepassingen) de functionaliteit [voor het synchroniseren van](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) id&#39;s niet hebt ingeschakeld in de Experience Cloud ID Service, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder Google-integraties in Audience Manager had ingesteld, worden de synchronisaties van de id die u had ingesteld overgedragen naar Adobe Real-time CDP.
 
 ## Vereisten
 
@@ -51,19 +51,20 @@ Voordat u de bestemming Google Ad Manager maakt in Adobe Real-time CDP, moet u c
 1. Selecteer in **[!UICONTROL Verbindingen > Doelen]** de optie Google Ad Manager en selecteer **[!UICONTROL Doel]**maken.
    ![Doel van Google Ad Manager verbinden](/help/rtcdp/destinations/assets/google-1-destination.png)
 
-2. In het Create bestemmingswerkschema, vul de [!UICONTROL BasisInformatie] voor de bestemming in. <br>
+2. In de stap van de **Opstelling** van creeer bestemmingswerkschema, vul de [!UICONTROL BasisInformatie] voor de bestemming in. <br>
 
-   ![Basisinformatie Google Ad Manager](/help/rtcdp/destinations/assets/google-1-basic-information.png)
+   ![Basisinformatie Google Ad Manager](/help/rtcdp/destinations/assets/ad-manager-setup-step.png)
 * **[!UICONTROL Naam]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Omschrijving]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
 * **[!UICONTROL Accounttype]**: Selecteer een optie, afhankelijk van uw account bij Google:
    * Gebruiken `DFP by Google` voor DoubleClick voor uitgevers
    * Gebruiken `AdX buyer` voor Google AdX
 * **[!UICONTROL Account-id]**: Vul uw account-id in met Google. Dit kan uw identiteitskaart van het Netwerk of uw identiteitskaart van de Verbinding van het publiek zijn. Dit is doorgaans een id van acht cijfers.
+* **[!UICONTROL Geval]** voor gebruik bij het in de handel brengen: Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde gevallen voor marketinggebruik of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het op de markt brengen van gebruiksgevallen, zie de [Governance van Gegevens in Echte tijd CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) pagina. Zie het overzicht [van het beleid voor](/help/data-governance/policies/overview.md#core-actions)gegevensgebruik voor informatie over de afzonderlijke door Adobe gedefinieerde gevallen van marketinggebruik.
 
->[!NOTE]
+> [!NOTE]
 >
->Wanneer u een Google Ad Manager-bestemming instelt, werkt u samen met uw Google-accountmanager of Adobe-vertegenwoordiger om te weten welk accounttype u hebt.
+> Wanneer u een Google Ad Manager-bestemming instelt, werkt u samen met uw Google-accountmanager of Adobe-vertegenwoordiger om te weten welk accounttype u hebt.
 
 ## Segmenten activeren op Google Ad Manager
 
