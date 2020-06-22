@@ -1,10 +1,10 @@
 ---
 title: (Beta) Azure Event Hubs-bestemming
 seo-title: (Beta) Azure Event Hubs-bestemming
-description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van het Platform van de Ervaring.
-seo-description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van het Platform van de Ervaring.
+description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van Experience Platform.
+seo-description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van Experience Platform.
 translation-type: tm+mt
-source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
+source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 [!DNL Azure Event Hubs] is een groot platform voor gegevensstreaming en service voor het opnemen van gebeurtenissen. Het kan miljoenen gebeurtenissen per seconde ontvangen en verwerken. Gegevens die naar een gebeurtenishub worden verzonden, kunnen worden getransformeerd en opgeslagen met behulp van een realtime analyseprovider of batchadapters.
 
-U kunt een uitgaande verbinding in real time met uw [!DNL Azure Event Hubs] opslag maken om gegevens te streamen vanaf het Adobe Experience Platform.
+U kunt een uitgaande verbinding in real time aan uw [!DNL Azure Event Hubs] opslag tot stand brengen aan stroomgegevens van Adobe Experience Platform.
 
 * Voor meer informatie over [!DNL Azure Event Hubs], zie de documentatie [van](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)Microsoft.
 * Zie de zelfstudie over de API- [!DNL Azure Event Hubs] streamingdoelen als u verbinding wilt maken met het [gebruik van API-aanroepen](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
@@ -42,20 +42,20 @@ Zie de workflow voor [Cloud-opslagdoelen ](/help/rtcdp/destinations/cloud-storag
 
 Voor [!DNL Azure Event Hubs] bestemmingen, ga de volgende informatie in creeer bestemmingswerkschema in:
 
-### In de stap Account {#account-step}
+### In de stap Verificatie {#authentication-step}
 
 * **[!UICONTROL SAS-sleutelnaam]** en **[!UICONTROL SAS-sleutel]**: Vul uw SAS-sleutelnaam en -sleutel in. Meer informatie over verificatie [!DNL Azure Event Hubs] met SAS-toetsen vindt u in de documentatie [van](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
 * **[!UICONTROL Naamruimte]**: Vul de [!DNL Azure Event Hubs] naamruimte in. Meer informatie over [!DNL Azure Event Hubs] naamruimten vindt u in de documentatie [van](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)Microsoft.
 
-![Invoer vereist in de verificatiestap](/help/rtcdp/destinations/assets/event-hubs-account-step.png)
+![Invoer vereist in de verificatiestap](/help/rtcdp/destinations/assets/event-hubs-authentication.png)
 
-### In de stap Verificatie {#authentication-step}
+### In de stap Setup {#setup-step}
 
 * **[!UICONTROL Naam]**: Geef een naam op voor de verbinding met [!DNL Azure Event Hubs].
 * **[!UICONTROL Omschrijving]**: Geef een beschrijving van de verbinding op.  Voorbeelden: &quot;Klanten met de hoogste rang&quot;, &quot;Males die geïnteresseerd zijn in keukenvorming&quot;.
 * **[!UICONTROL eventHubName]**: Geef een naam voor de stream op naar het [!DNL Azure Event Hubs] doel.
 
-![Gegevens vereist in de installatiestap](/help/rtcdp/destinations/assets/event-hubs-authentication-step.png)
+![Gegevens vereist in de installatiestap](/help/rtcdp/destinations/assets/event-hubs-setup-step.png)
 
 ## Segmenten activeren {#activate-segments}
 
@@ -64,7 +64,7 @@ Zie Profielen en segmenten [activeren naar een doel](/help/rtcdp/destinations/ac
 
 ## Geëxporteerde gegevens {#exported-data}
 
-De gegevens van uw geëxporteerde Experience Platform worden opgeslagen in [!DNL Azure Event Hubs] de JSON-indeling. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn ECID en e-mail.
+De geëxporteerde gegevens van het Experience Platform worden in JSON- [!DNL Azure Event Hubs] indeling opgeslagen. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn ECID en e-mail.
 
 ```
 {
