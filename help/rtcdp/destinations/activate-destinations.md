@@ -1,12 +1,12 @@
 ---
 title: Profielen en segmenten naar een doel activeren
 seo-title: Profielen en segmenten naar een doel activeren
-description: Activeer de gegevens die u in het Platform van de Gegevens van de Klant van Adobe in real time hebt door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
-seo-description: Activeer de gegevens die u in het Platform van de Gegevens van de Klant van Adobe in real time hebt door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
+description: Activeer de gegevens in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
+seo-description: Activeer de gegevens in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: 24e4746b28620210c138a1e803b6afadff79ab30
+source-git-commit: b1f8cbe245f73e31a8941fc45cefcee595968a70
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '1019'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Profielen en segmenten naar een doel activeren
 
-Activeer de gegevens die u in het Platform van de Gegevens van de Klant van Adobe in real time hebt door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
+Activeer de gegevens in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
 
 ## Vereisten {#prerequisites}
 
-Om gegevens aan bestemmingen te activeren, moet u een bestemming [met succes hebben](/help/rtcdp/destinations/assets/connect-destination-1.png)verbonden. Als u dit niet reeds hebt gedaan, ga naar de [bestemmingscatalogus](/help/rtcdp/destinations/destinations-catalog.md), doorblader de gesteunde bestemmingen, en opstelling één of meerdere bestemmingen.
+Om gegevens aan bestemmingen te activeren, moet u een bestemming [met succes hebben](/help/rtcdp/destinations/connect-destination.md)verbonden. Als u dit niet reeds hebt gedaan, ga naar de [bestemmingscatalogus](/help/rtcdp/destinations/destinations-catalog.md), doorblader de gesteunde bestemmingen, en opstelling één of meerdere bestemmingen.
 
 ## Gegevens activeren {#activate-data}
 
@@ -27,9 +27,19 @@ Om gegevens aan bestemmingen te activeren, moet u een bestemming [met succes heb
    ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)Merk op dat als een activeringsstroom reeds voor een bestemming bestaat, u de segmenten kunt zien die momenteel naar de bestemming worden verzonden. Selecteer Activering **** bewerken in de rechtertrack en voer de onderstaande stappen uit om de activeringsdetails te wijzigen.
 3. Selecteer **[!UICONTROL Activeren]**;
 4. In het **[!UICONTROL Activate bestemmingswerkschema]** , op de **[!UICONTROL Uitgezochte pagina van Segmenten]** , selecteer welke segmenten om naar de bestemming te verzenden.
-   ![segmenten-naar-bestemming](/help/rtcdp/destinations/assets/select-segments.png)
+   ![segmenten-naar-bestemming](/help/rtcdp/destinations/assets/email-select-segments.png)
 5. *Voorwaardelijk*. Deze stap is afhankelijk van het type bestemming waar u de segmenten activeert. <br> Voor *e-mail marketing bestemmingen* en *wolkenopslagbestemmingen*, op de **[!UICONTROL Uitgezochte pagina van Attributen]** , selecteer **[!UICONTROL voeg nieuw gebied]** toe en selecteer de attributen die u naar de bestemming wilt verzenden.
 Wij adviseren één van de attributen om een [uniek herkenningsteken](/help/rtcdp/destinations/email-marketing-destinations.md#identity) van uw unieschema te zijn. Zie Identiteit in het artikel [E-mailmarketingdoelen](/help/rtcdp/destinations/email-marketing-destinations.md#identity) voor meer informatie over verplichte kenmerken.
+
+   >[!NOTE]
+   > 
+   >Als er labels voor gegevensgebruik zijn toegepast op bepaalde velden in een gegevensset (in plaats van op de gehele gegevensset), wordt de toepassing van die labels op veldniveau bij activering uitgevoerd onder de volgende voorwaarden:
+   >* De velden worden gebruikt in de segmentdefinitie.
+   >* De velden worden geconfigureerd als geprojecteerde kenmerken voor de doelbestemming.
+
+   >
+   > Bekijk de onderstaande schermafbeelding. Als, bijvoorbeeld, het gebied bepaalde etiketten van het gegevensgebruik `person.name.first.Name` had die met de marketing van de bestemming gebruiksgeval in conflict waren, zou u een schending van het beleid van het gegevensgebruik in de overzichtsstap (stap 7) worden getoond. Voor meer informatie, zie de Governance van [Gegevens in Echt - tijd CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations)
+
    ![bestemmingskenmerken](/help/rtcdp/destinations/assets/select-attributes-step.png)
 
    <br> 
@@ -47,7 +57,7 @@ Wij adviseren één van de attributen om een [uniek herkenningsteken](/help/rtcd
    ![Loyalty-id als identiteit](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Selecteer deze optie `Email_LC_SHA256` als doel-id als u de e-mailadressen van klanten bij het invoeren van gegevens in het Adobe Experience Platform hebt gewijzigd volgens de vereisten [voor e-](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)mailhashing op Facebook. <br> Selecteer `Email` als doel-id als de e-mailadressen die u gebruikt geen hashing zijn. Adobe Real-time CDP hasht de e-mailadressen om aan de Facebook-vereisten te voldoen.
+   Selecteer deze optie `Email_LC_SHA256` als doel als u de e-mailadressen van klanten bij het invoeren van gegevens in het Adobe Experience Platform hebt gewijzigd volgens de vereisten [voor e-](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)mailhashing van Facebook. <br> Selecteer `Email` als doel-id als de e-mailadressen die u gebruikt geen hashing zijn. Adobe Real-time CDP hasht de e-mailadressen om aan de Facebook-vereisten te voldoen.
 
    ![identiteitstoewijzing na invullen van velden](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -61,7 +71,17 @@ Wij adviseren één van de attributen om een [uniek herkenningsteken](/help/rtcd
 
 7. Op de pagina **[!UICONTROL Revisie]** ziet u een overzicht van uw selectie. Selecteer **[!UICONTROL Annuleren]** om de stroom te verbreken, **[!UICONTROL Terug]** om uw instellingen te wijzigen of **[!UICONTROL Voltooien]** om uw selectie te bevestigen en gegevens naar de bestemming te verzenden.
 
+   >[!IMPORTANT]
+   >
+   >In deze stap, CDP in real time controleert op de schendingen van het beleid van het gegevensgebruik. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor segmentactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe te om beleidsschendingen op te lossen, zie [Beleidshandhaving](/help/rtcdp/privacy/data-governance-overview.md#enforcement) in de sectie van de documentatie van het gegevensbeheer.
+
+![selectie bevestigen](/help/rtcdp/destinations/assets/data-policy-violation.png)
+
+Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Voltooien]** om uw selectie te bevestigen en gegevens naar de bestemming te verzenden.
+
 ![selectie bevestigen](/help/rtcdp/destinations/assets/confirm-selection.png)
+
+
 
 ## Activering bewerken {#edit-activation}
 
@@ -106,5 +126,3 @@ Volg onderstaande stappen om een bestaande activeringsstroom uit te schakelen:
 1. Selecteer **[!UICONTROL Doelen]** in de linkernavigatiebar, klik dan de **[!UICONTROL Browse]** tabel, en klik de bestemmingsnaam.
 2. Klik op het besturingselement **[!UICONTROL Ingeschakeld]** in de rechterrail om de activeringsstatus te wijzigen.
 3. Selecteer in het statusvenster **Gegevens bijwerken de optie** Bevestigen **** om de activeringsstroom uit te schakelen.
-
-In AWS Kinesis, produceer een toegangstoets - geheim toegangszeer belangrijke paar om Adobe in real time CDP toegang tot uw rekening van AWS Kinesis te verlenen. Meer informatie vindt u in de [documentatie](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)van AWS Kinesis.
