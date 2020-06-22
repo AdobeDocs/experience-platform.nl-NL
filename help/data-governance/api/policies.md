@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Beleid
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+workflow-type: tm+mt
+source-wordcount: '866'
+ht-degree: 0%
 
 ---
 
 
 # Beleid
 
-Het beleid van het gebruik van gegevens is regels uw organisatie goedkeurt die de soorten marketing acties beschrijven die u, of beperkt van, op gegevens binnen het Platform van de Ervaring mag uitvoeren.
+Het beleid van het gebruik van gegevens is regels uw organisatie goedkeurt die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen Experience Platform mag uitvoeren.
 
 Het `/policies` eindpunt wordt gebruikt voor alle API-aanroepen met betrekking tot het weergeven, maken, bijwerken of verwijderen van beleidsregels voor gegevensgebruik.
 
@@ -130,7 +133,7 @@ De reactie omvat een &quot;telling&quot;die het totale aantal beleid binnen de g
 }
 ```
 
-## Specifiek beleid opzoeken
+## Een beleid opzoeken
 
 Elk beleid bevat een `id` gebied dat kan worden gebruikt om de details van een specifiek beleid te verzoeken. Als het `id` van een beleid onbekend is, kan het worden gevonden gebruikend het lijst (KRIJGEN) verzoek om van alle beleid binnen een specifieke container (`core` of `custom`) een lijst te maken zoals aangetoond in de vorige stap.
 
@@ -503,7 +506,7 @@ Een succesvol updateverzoek zal een Status 200 van HTTP (O.K.) terugkeren en het
 
 ## Een beleid verwijderen
 
-Als u een beleid moet verwijderen dat u hebt gecreeerd, kunt u dit doen door een verzoek van de SCHRAPPING aan de `id` van het beleid uit te geven u wenst om te schrappen. Het is beste praktijken om een raadpleging (GET) verzoek eerst uit te voeren om het beleid te bekijken en het te bevestigen is het correcte beleid u wenst om te verwijderen. **Nadat beleidsregels zijn verwijderd, kunnen ze niet meer worden hersteld.**
+Als u een beleid moet verwijderen dat u hebt gecreeerd, kunt u dit doen door een DELETE verzoek aan de `id` van het beleid uit te geven u wenst om te schrappen. Het is beste praktijken om een raadpleging (GET) verzoek eerst uit te voeren om het beleid te bekijken en het te bevestigen is het correcte beleid u wenst om te verwijderen. **Nadat beleidsregels zijn verwijderd, kunnen ze niet meer worden hersteld.**
 
 **API-indeling**
 
