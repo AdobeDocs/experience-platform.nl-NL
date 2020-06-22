@@ -4,9 +4,9 @@ seo-title: Workflow voor opslagdoelen voor cloud
 description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 seo-description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 translation-type: tm+mt
-source-git-commit: 37c51435ce8330dbd61857bda408df03ff21a491
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Overzicht
 
-Op deze pagina wordt uitgelegd hoe u verbinding kunt maken met cloudopslaglocaties in het Adobe Real-time Customer Data Platform.
+Op deze pagina wordt uitgelegd hoe u verbinding kunt maken met cloudopslaglocaties in Adobe Real-time Customer Data Platform.
 
 1. Kies in **[!UICONTROL Verbindingen > Doelen]** de gewenste bestemming voor cloudopslag en selecteer **[!UICONTROL Verbindingsbestemming]**.
 
@@ -31,13 +31,22 @@ Op deze pagina wordt uitgelegd hoe u verbinding kunt maken met cloudopslaglocati
    ![Verbinding maken met bestemming voor cloudopslag - verificatiestap](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
 3. Voer in de stap **[!UICONTROL Setup]** een **[!UICONTROL naam]** en een **[!UICONTROL beschrijving]** in voor de activeringsstroom. <br>
+Ook in deze stap kunt u elke **[!UICONTROL Gebruikszaak]** voor marketingdoeleinden selecteren die op deze bestemming moet worden toegepast. Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde gevallen voor marketinggebruik of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het op de markt brengen van gebruiksgevallen, zie de [Governance van Gegevens in Echte tijd CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) pagina. Zie het overzicht [van het beleid voor](/help/data-governance/policies/overview.md#core-actions)gegevensgebruik voor informatie over de afzonderlijke door Adobe gedefinieerde gevallen van marketinggebruik. <br>
 Voor Amazon S3-doelen voegt u de naam **[!UICONTROL van de]** emmertje en het pad naar de **[!UICONTROL map]** in de opslaglocatie van de cloud in waar de bestanden worden geleverd. Selecteer Doel **** maken nadat u de bovenstaande velden hebt ingevuld.
 
-   ![Verbinding maken met Amazon S3-bestemming voor cloudopslag - verificatiestap](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
+   ![Verbinding maken met Amazon S3-bestemming voor cloudopslag - verificatiestap](/help/rtcdp/destinations/assets/amazon-s3-setup-step.png)
 
-   Voeg voor SFTP-doelen het **[!UICONTROL mappad]** in waarin de bestanden worden geleverd.
+   Voeg voor SFTP-doelen het **[!UICONTROL mappad]** in waarin de bestanden worden geleverd. Selecteer Doel **** maken nadat u de bovenstaande velden hebt ingevuld.
 
    ![Verbinding maken met SFTP-cloudopslagbestemming - verificatiestap](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
+
+   Geef voor Amazon Kinesis-doelen de naam van uw bestaande gegevensstroom op in uw [!DNL Amazon Kinesis] account. Adobe Real-time CDP exporteert gegevens naar deze stream. Selecteer Doel **** maken nadat u de bovenstaande velden hebt ingevuld.
+
+   ![Verbinding maken met bestemming Kinesis-cloudopslag - verificatiestap](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
+
+   Geef voor Azure Event Hubs-bestemmingen de naam van uw bestaande gegevensstroom op in uw [!DNL Amazon Kinesis] account. Adobe Real-time CDP exporteert gegevens naar deze stream. Selecteer Doel **** maken nadat u de bovenstaande velden hebt ingevuld.
+
+   ![Verbinding maken met bestemming Kinesis-cloudopslag - verificatiestap](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
 4. Uw doel is nu gemaakt. U kunt **[!UICONTROL Opslaan en afsluiten]** selecteren als u segmenten later wilt activeren of u kunt **[!UICONTROL Volgende]** selecteren om de workflow voort te zetten en segmenten te selecteren om te activeren. In beide gevallen raadpleegt u de volgende sectie Segmenten [](#activate-segments)activeren voor de rest van de workflow om gegevens te exporteren.
 
