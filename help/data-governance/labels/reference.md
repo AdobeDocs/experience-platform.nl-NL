@@ -4,20 +4,21 @@ solution: Experience Platform
 title: Ondersteunde labels voor gegevensgebruik
 topic: labels
 translation-type: tm+mt
-source-git-commit: 5aa0325a051d9e6e6dd65234db27ab251cfb2d9e
+source-git-commit: 2f8da8688897476f89ca1b176e0c988d6e79264b
+workflow-type: tm+mt
+source-wordcount: '1882'
+ht-degree: 1%
 
 ---
 
 
 # Ondersteunde labels voor gegevensgebruik
 
-Het Adobe Experience Platform beschikt over infrastructuur voor gegevensbeheer, waarbij de nadruk ligt op Etikettering en handhaving van gegevensgebruik (DULE).  De eigenschappen DULE laten de toepassing van de etiketten van het gegevensgebruik op datasets en gebieden toe om gegevens volgens het type van gebruiksbeleid te categoriseren dat op die gegevens van toepassing is.
+Adobe Experience Platform omvat infrastructuren voor gegevensbeheer, waarbij de Etikettering en de Handhaving van het Gebruik van Gegevens (DULE) centraal staan.  De eigenschappen DULE laten de toepassing van de etiketten van het gegevensgebruik op datasets en gebieden toe om gegevens volgens het type van gebruiksbeleid te categoriseren dat op die gegevens van toepassing is.
 
-In de volgende lijst worden alle labels voor gegevensgebruik weergegeven die momenteel worden ondersteund door het Experience Platform.
+In dit document worden alle labels voor gegevensgebruik beschreven die momenteel door het Experience Platform worden ondersteund. Meer informatie over gegevensbeheer en DULE vindt u in het overzicht [van](../home.md)gegevensbeheer.
 
-Meer informatie over gegevensbeheer en DULE vindt u in het overzicht [van](../home.md)gegevensbeheer.
-
-## Labels verkleinen
+## Contractlabels
 
 De etiketten van het contract &quot;C&quot;worden gebruikt om gegevens te categoriseren die contractuele verplichtingen hebben of met het beleid van het gegevensbeheer van uw organisatie verwant zijn.
 
@@ -32,6 +33,7 @@ De etiketten van het contract &quot;C&quot;worden gebruikt om gegevens te catego
 | **C7** | Gegevens kunnen niet worden gebruikt voor het on-site maken van inhoud. [Meer informatie...](#c7) |
 | **C8** | Gegevens kunnen niet worden gebruikt voor het meten van de websites of apps van uw organisatie. [Meer informatie...](#c8) |
 | **C9** | Gegevens kunnen niet worden gebruikt in Data Science-workflows. [Meer informatie...](#c9) |
+| **C10** | Gegevens kunnen niet worden gebruikt voor activering van een gestikte identiteit. [Meer informatie...](#c10) |
 
 ## Identiteitslabels
 
@@ -53,28 +55,31 @@ Eén type gegevens dat u als gevoelig kunt aanmerken, kan verschillende typen ge
 | **S1** | Gegevens die breedte- en lengtegraad aangeven die kunnen worden gebruikt om de precieze locatie van een apparaat te bepalen. |
 | **S2** | Gegevens die kunnen worden gebruikt om een breed gedefinieerd geofence-gebied te bepalen. |
 
+## Aanhangsel
 
-## Meer informatie
+In de onderstaande secties vindt u aanvullende informatie over beschikbare labels voor gegevensgebruik.
 
-In het volgende gedeelte wordt gedetailleerde informatie gegeven over de implementatie van specifieke labels.
+### Details contractlabel
 
-### C1 {#c1}
+De volgende secties bevatten gedetailleerde informatie over de uitvoering van specifieke &quot;C&quot;-labels voor contracten.
+
+#### C1 {#c1}
 
 Sommige gegevens kunnen alleen vanuit Adobe Experience Cloud worden geëxporteerd in een geaggregeerd formulier zonder individuele of apparaatid&#39;s op te nemen. Bijvoorbeeld gegevens die afkomstig zijn van sociale netwerken.
 
-### C2 {#c2}
+#### C2 {#c2}
 
 Sommige gegevensleveranciers hebben bedingen in hun contracten die de uitvoer van gegevens van waar het oorspronkelijk werd verzameld verbieden. Sociale netwerkcontracten beperken bijvoorbeeld vaak de overdracht van gegevens die u van hen ontvangt. Het label C2 is restrictiever dan [C1](#c1), dat slechts samenvoeging en anonieme gegevens vereist.
 
-### C3 {#c3}
+#### C3 {#c3}
 
 Sommige gegevensleveranciers hebben bedingen in hun contracten die het combineren of gebruiken van die gegevens met direct identificeerbare informatie verbieden. In contracten voor gegevens die afkomstig zijn van advertentienetwerken, servers en externe gegevensleveranciers zijn bijvoorbeeld vaak specifieke contractuele verbodsbepalingen opgenomen betreffende het gebruik van dergelijke gegevens met rechtstreeks identificeerbare gegevens.
 
-### C4 {#c4}
+#### C4 {#c4}
 
 C4 is het meest beperkende etiket - het omvat etiketten [C5](#c5), [C6](#c6), en [C7](#c7).
 
-### C5 {#c5}
+#### C5 {#c5}
 
 Het op rente-gebaseerde richten, of verpersoonlijking, komt voor als de volgende drie voorwaarden worden vervuld: De ter plaatse verzamelde gegevens worden (1) gebruikt om conclusies te trekken over de belangen van de gebruikers, (2) wordt gebruikt in een andere context, zoals op een andere site of een andere app (off-site) EN (3) wordt gebruikt om te selecteren welke inhoud of advertenties op basis van die conclusies worden aangeboden.
 
@@ -90,7 +95,7 @@ IAB: Personalisatie. Het verzamelen en verwerken van informatie over uw gebruik 
 
 DAA: Online gedragsreclame. Gegevens van een bepaalde computer of een bepaald apparaat verzamelen met betrekking tot webweergavegedrag in de loop van de tijd en op niet-gelieerde websites, met als doel deze gegevens te gebruiken om gebruikersvoorkeuren of -belangen te voorspellen voor het aanbieden van reclame op die computer of dat apparaat op basis van voorkeuren of interesses die uit dergelijk webviewergedrag zijn afgeleid.
 
-### C6 {#c6}
+#### C6 {#c6}
 
 Advertenties zijn berichten of meldingen, met inbegrip van tekst en afbeeldingen, die op een website of app verschijnen en die voornamelijk bedoeld zijn om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van dergelijke berichten of berichten te bepalen. Advertenties staan los van on-site inhoud, die onder label [C7](#c7)valt. Gegevens met een C6-label kunnen niet worden gebruikt voor on-site advertenties, zoals de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. Dit omvat het gebruik van eerder verzamelde onsite gegevens over de belangen van de gebruikers om advertenties te selecteren, gegevens te verwerken over welke advertenties werden weergegeven, wanneer en waar deze werden weergegeven en of de gebruikers actie hebben ondernomen in verband met de advertentie, zoals het klikken op een advertentie of het maken van een aankoop. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de onsite activiteiten van die gebruikers en het vervolgens gebruiken van die voorkeuren in on-site en doelgericht gebruik niet als op rente gebaseerde doelgerichtheid (ook wel personalisatie genoemd) worden aangemerkt, aangezien het niet aan alle drie de vereisten zou voldoen die nodig zijn voor op rente gebaseerde doelgerichtheid. _[Zie label C5 voor deze vereisten.](#c5)_
 
@@ -100,7 +105,7 @@ IAB: 3. Advertentieselectie, levering, rapportage: Het verzamelen van informatie
 
 DAA: Online gedragsreclame omvat niet de activiteiten van de eerste partijen, Ad Delivery of Ad Reporting of contextuele reclame (d.w.z. reclame op basis van de inhoud van de webpagina die wordt bezocht, het huidige bezoek van een consument aan een webpagina of een zoekopdracht).
 
-### C7 {#c7}
+#### C7 {#c7}
 
 Onsite inhoud is tekst en afbeeldingen die zijn ontworpen om te informeren, te onderwijzen of te vermaken, en die niet zijn gemaakt om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van de inhoud te bepalen, met inbegrip van of de inhoud als inheemse reclame zou kwalificeren. Het label C7 is niet bedoeld voor onsite advertenties die onder het label [C6](#c6)vallen. Gegevens met een C7-label kunnen niet worden gebruikt voor het bepalen van inhoud op locatie, inclusief de selectie en levering van inhoud op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke inhoud te meten. Dit omvat eerder verzamelde informatie over de belangen van gebruikers in bepaalde inhoud, het verwerken van gegevens over welke inhoud werd getoond, hoe vaak of hoe lang het werd getoond, wanneer en waar het werd getoond, en of de gebruikers om het even welke acties met betrekking tot de inhoud, met inbegrip van bijvoorbeeld, het klikken op inhoud hebben ondernomen. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de activiteiten ter plaatse van die gebruikers en het vervolgens gebruiken van deze voorkeuren bij het gericht maken van inhoud ter plaatse niet als op rente-gebaseerd richten (ook wel personalisatie genoemd) kwalificeren, aangezien het niet aan alle drie vereisten zou voldoen die voor op rente-gebaseerde gericht richten noodzakelijk zijn. _[Zie label C5 voor deze vereisten.](#c5)_
 
@@ -110,10 +115,14 @@ IAB: 4. Inhoud selecteren, leveren, rapporteren: Het verzamelen van informatie, 
 
 DAA: Online gedragsreclame omvat niet de activiteiten van Eerste Partijen, Ad Delivery of Ad Reporting, of contextuele reclame (d.w.z. reclame gebaseerd op de inhoud van de webpagina die wordt bezocht, het huidige bezoek van een consument aan een Web-pagina, of een zoekopdracht).
 
-### C8 {#c8}
+#### C8 {#c8}
 
 Gegevens kunnen niet worden gebruikt voor het meten, begrijpen en rapporteren van het gebruik van de sites of apps van uw organisatie door gebruikers. Dit omvat niet op rente-gebaseerde richten (het dwars-plaats richten), die de inzameling van informatie over uw gebruik van deze dienst is om inhoud en/of reclame voor u in andere contexten, d.w.z. op andere diensten, zoals websites of apps, in tijd te personaliseren.
 
-### C9 {#c9}
+#### C9 {#c9}
 
 Sommige contracten bevatten expliciete verbodsbepalingen voor het gebruik van gegevens voor gegevenswetenschap. Soms worden deze termen gedefinieerd in termen die het gebruik van gegevens voor kunstmatige intelligentie (AI), machinaal leren (ML) of modellering verbieden.
+
+#### C10 {#c10}
+
+Sommige beleidsregels voor gegevensgebruik beperken het gebruik van verankerde identiteitsgegevens voor personalisatie. Het label C10 wordt automatisch toegepast op segmenten als in het samenvoegbeleid de optie &quot;particuliere grafiek&quot; wordt gebruikt.
