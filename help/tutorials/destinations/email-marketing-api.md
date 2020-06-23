@@ -4,16 +4,19 @@ solution: Experience Platform
 title: E-mailmarketingdoelen maken
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7ee83b5bf14ec802801cfbc17141c02ceeaccd82
+source-git-commit: ed9d6eadeb00db51278ea700f7698a1b5590632f
+workflow-type: tm+mt
+source-wordcount: '1670'
+ht-degree: 0%
 
 ---
 
 
-# Maak e-mailmarketingdoelen en activeer gegevens in het realtime klantgegevensplatform van Adobe
+# Maak e-mailmarketingdoelen en activeer gegevens in het realtime Platform voor klantgegevens van Adobe
 
-Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met gegevens van het Adobe Experience Platform, een [e-mailmarketingbestemming](../../rtcdp/destinations/email-marketing-destinations.md)te maken, een gegevensstroom te maken naar uw nieuwe gemaakte bestemming en gegevens te activeren voor uw nieuwe gemaakte bestemming.
+Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw Adobe Experience Platform-gegevens, een [e-mailmarketingbestemming](../../rtcdp/destinations/email-marketing-destinations.md)te maken, een gegevensstroom te maken naar uw nieuwe gemaakte bestemming en gegevens te activeren voor uw nieuwe gemaakte bestemming.
 
-In deze zelfstudie wordt in alle voorbeelden de bestemming Adobe Campaign gebruikt, maar de stappen zijn identiek voor alle marketingdoelen per e-mail.
+In deze zelfstudie wordt de Adobe Campaign-bestemming in alle voorbeelden gebruikt, maar de stappen zijn identiek voor alle marketingdoelen per e-mail.
 
 ![Overzicht - de stappen om een bestemming tot stand te brengen en segmenten te activeren](../images/destinations/flow-api-destinations-steps-overview.png)
 
@@ -21,11 +24,11 @@ Raadpleeg de zelfstudies voor het [verbinden van een doel](../../rtcdp/destinati
 
 ## Aan de slag
 
-Voor deze handleiding is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
-* [XDM-systeem](../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
-* [Catalogusservice](../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen het Platform van de Ervaring.
-* [Sandboxen](../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [XDM-systeem](../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [Catalogusservice](../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen Experience Platform.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om gegevens aan e-mail marketing bestemmingen in Adobe in real time CDP te activeren.
 
@@ -38,17 +41,17 @@ Om de stappen in dit leerprogramma te voltooien, zou u de volgende geloofsbrieve
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste en optionele koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-De middelen in het Platform van de Ervaring kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor platform-API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
+De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor Platform-API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -77,7 +80,7 @@ Before starting this tutorial, familiarize yourself with the following terms whi
 
 ### Documentatie voor de wagenbak
 
-In deze zelfstudie in Swagger vindt u begeleidende referentiedocumentatie voor alle API-aanroepen. Zie https://platform.adobe.io/data/foundation/flowservice/swagger#/. We raden u aan deze zelfstudie en de documentatiepagina van Swagger parallel te gebruiken.
+In deze zelfstudie in Swagger vindt u begeleidende referentiedocumentatie voor alle API-aanroepen. Zie de documentatie van de [Flow Service API op Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We raden u aan deze zelfstudie en de documentatiepagina van Swagger parallel te gebruiken.
 
 ## Krijg de lijst van beschikbare bestemmingen {#get-the-list-of-available-destinations}
 
@@ -131,17 +134,17 @@ Een succesvolle reactie bevat een lijst met beschikbare bestemmingen en hun unie
 }
 ```
 
-## Verbinding maken met uw gegevens van het Experience Platform {#connect-to-your-experience-platform-data}
+## Verbinden met uw Experience Platform gegevens {#connect-to-your-experience-platform-data}
 
 ![Overzicht doelstappen 2](../images/destinations/flow-api-destinations-step2.png)
 
-Vervolgens moet u verbinding maken met de gegevens van het Experience Platform, zodat u profielgegevens kunt exporteren en activeren op de gewenste bestemming. Deze bestaat uit twee substappen die hieronder worden beschreven.
+Vervolgens moet u verbinding maken met de gegevens van uw Experience Platform, zodat u profielgegevens kunt exporteren en activeren op de gewenste bestemming. Deze bestaat uit twee substappen die hieronder worden beschreven.
 
-1. Eerst, moet u een vraag uitvoeren om toegang tot uw gegevens in het Platform van de Ervaring toe te staan, door een basisverbinding te vestigen.
-2. Dan, gebruikend identiteitskaart van de basisverbinding, zult u een andere vraag maken waarin u een bronverbinding creeert, die de verbinding aan uw gegevens van het Platform van de Ervaring vestigt.
+1. Eerst, moet u een vraag uitvoeren om toegang tot uw gegevens in Experience Platform toe te staan, door opstelling een basisverbinding.
+2. Dan, gebruikend identiteitskaart van de basisverbinding, zult u een andere vraag maken waarin u een bronverbinding creeert, die de verbinding aan uw gegevens van het Experience Platform vestigt.
 
 
-### Toegang tot uw gegevens autoriseren via het Experience Platform
+### Toegang tot uw gegevens in Experience Platform toestaan
 
 **API-indeling**
 
@@ -205,7 +208,7 @@ Een geslaagde reactie bevat de unieke id (`id`) van de basisverbinding. Sla deze
 }
 ```
 
-### Verbinding maken met uw gegevens van het Experience Platform
+### Verbinden met uw Experience Platform gegevens
 
 **API-indeling**
 
@@ -271,7 +274,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Antwoord**
 
-Een succesvolle reactie keert het unieke herkenningsteken (`id`) voor de pas gecreëerde bronverbinding aan de Verenigde Dienst van het Profiel terug. Dit bevestigt dat u verbinding hebt gemaakt met de gegevens van het Experience Platform. Sla deze waarde op zoals deze in een latere stap wordt vereist.
+Een succesvolle reactie keert het unieke herkenningsteken (`id`) voor de pas gecreëerde bronverbinding aan de Verenigde Dienst van het Profiel terug. Hiermee bevestigt u dat u verbinding hebt gemaakt met de gegevens van uw Experience Platform. Sla deze waarde op zoals deze in een latere stap wordt vereist.
 
 ```json
 {
@@ -462,7 +465,7 @@ Een succesvol antwoord retourneert de unieke id (`id`) voor de nieuwe doelverbin
 
 ![Overzicht doelstappen 4](../images/destinations/flow-api-destinations-step4.png)
 
-Met de id&#39;s die u in de vorige stappen hebt opgehaald, kunt u nu een gegevensstroom maken tussen de gegevens van het Experience Platform en de bestemming waarnaar u de gegevens wilt activeren. Beschouw deze stap als het construeren van de pijpleiding, waardoor de gegevens later, tussen het Platform van de Ervaring en uw gewenste bestemming zullen stromen.
+Met de id&#39;s die u in de vorige stappen hebt opgehaald, kunt u nu een gegevensstroom maken tussen de gegevens van het Experience Platform en de bestemming waarnaar u de gegevens wilt activeren. Beschouw deze stap als het construeren van de pijpleiding, waardoor de gegevens, tussen Experience Platform en uw gewenste bestemming later zullen stromen.
 
 Als u een gegevensstroom wilt maken, voert u een POST-verzoek uit, zoals hieronder wordt weergegeven, terwijl u de hieronder vermelde waarden opgeeft binnen de laadtijd.
 
@@ -514,8 +517,8 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: Gebruik de stroom voor de e-mailmarketingbestemming waarmee u verbinding wilt maken. Om de stroomspecificatie te krijgen, voer een GET verrichting op het `flowspecs` eindpunt uit. Zie hier de documentatie van Swagger: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. In de reactie, zoek `upsTo` en kopieer overeenkomstige identiteitskaart van de e-mailmarketing bestemming die u met wilt verbinden. Zoek bijvoorbeeld naar de parameter voor Adobe Campaign `upsToCampaign` `id` en kopieer deze.
-* `{SOURCE_CONNECTION_ID}`: Gebruik de bronverbindings-id die u hebt verkregen in de stap [Verbinding maken met uw ervaringsplatform](#connect-to-your-experience-platform-data).
+* `{FLOW_SPEC_ID}`: Gebruik de stroom voor de e-mailmarketingbestemming waarmee u verbinding wilt maken. Om de stroomspecificatie te krijgen, voer een GET verrichting op het `flowspecs` eindpunt uit. Zie hier de documentatie van Swagger: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. In de reactie, zoek `upsTo` en kopieer overeenkomstige identiteitskaart van de e-mailmarketing bestemming die u met wilt verbinden. Voor Adobe Campaign zoekt `upsToCampaign` en kopieert u bijvoorbeeld de `id` parameter.
+* `{SOURCE_CONNECTION_ID}`: Gebruik de bronverbindings-id die u hebt verkregen in de stap [Verbinding maken met uw Experience Platform](#connect-to-your-experience-platform-data).
 * `{TARGET_CONNECTION_ID}`: Gebruik de doel-verbindings-id die u hebt verkregen in de stap [Verbinding maken met e-mailmarketingdoel](#connect-to-email-marketing-destination).
 
 **Antwoord**
