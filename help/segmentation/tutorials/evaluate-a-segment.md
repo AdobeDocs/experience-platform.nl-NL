@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een segment evalueren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+workflow-type: tm+mt
+source-wordcount: '2841'
+ht-degree: 0%
 
 ---
 
@@ -18,19 +21,19 @@ Dit document biedt een zelfstudie voor het evalueren van segmenten en het benade
 Deze zelfstudie vereist een goed begrip van de verschillende services van het Adobe Experience Platform die betrokken zijn bij het maken van doelsegmenten. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [Klantprofiel](../../profile/home.md)in realtime: Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [Adobe Experience Platform Segmentation Service](../home.md): Staat u toe om publiekssegmenten van de gegevens van het Profiel van de Klant in real time te bouwen.
-- [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor Platform gegevens van de klantenervaring organiseert.
-- [Sandboxen](../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [Segmenteringsservice](../home.md)Adobe Experience Platform: Staat u toe om publiekssegmenten van de gegevens van het Profiel van de Klant in real time te bouwen.
+- [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+- [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Vereiste koppen
 
-Deze zelfstudie vereist ook dat u de [verificatiezelfstudie](../../tutorials/authentication.md) hebt voltooid om oproepen naar platform-API&#39;s te kunnen uitvoeren. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Deze zelfstudie vereist ook dat u de [verificatiezelfstudie](../../tutorials/authentication.md) hebt voltooid om aanroepen naar Platform-API&#39;s te kunnen uitvoeren. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Voor aanvragen voor platform-API&#39;s is een header vereist die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -42,13 +45,13 @@ Voor alle POST-, PUT- en PATCH-aanvragen is een extra header vereist:
 
 ## Een segment evalueren
 
-Zodra u hebt ontwikkeld, getest, en uw segmentdefinitie bewaard, kunt u het segment door of geplande evaluatie of op bestelling evaluatie dan evalueren.
+Zodra u hebt ontwikkeld, getest en uw segmentdefinitie bewaard, kunt u het segment door of geplande evaluatie of op bestelling evaluatie dan evalueren.
 
 [De geplande evaluatie](#scheduled-evaluation) (die ook als &quot;geplande segmentatie&quot;wordt bekend) staat u toe om een terugkomende planning voor het runnen van een uitvoerbaan in een specifieke tijd tot stand te brengen, terwijl de [op bestelling evaluatie](#on-demand-evaluation) het creëren van een segmentbaan impliceert om het publiek onmiddellijk te bouwen. De stappen voor elk worden hieronder geschetst.
 
 Als u nog niet een segment [creeert creeert een segment gebruikend de Realtime leerprogramma](./create-a-segment.md) van het Profiel van de Klant of creeerde een segmentdefinitie gebruikend [de Bouwer](../ui/overview.md)van het Segment, gelieve dit te doen alvorens met dit leerprogramma te werk te gaan.
 
-## Geplande evaluatie
+## Geplande evaluatie {#scheduled-evaulation}
 
 Via een geplande evaluatie kan uw IMS-organisatie een terugkerend schema maken om exporttaken automatisch uit te voeren.
 
@@ -406,11 +409,11 @@ Een succesvolle reactie retourneert de details van de segmentatietaak en geeft v
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `segmentedProfileCounter` | Het totale aantal samengevoegde profielen dat voor het segment in aanmerking komt. |
-| `segmentedProfileByNamespaceCounter` | Een uitsplitsing van de profielen die in aanmerking komen voor het segment naar naamruimtecode van de identiteit. Een lijst met naamruimtecodes voor identiteiten vindt u in het overzicht [van de naamruimte](../../identity-service/namespaces.md)voor identiteiten. |
+| `segmentedProfileByNamespaceCounter` | Een uitsplitsing van de profielen die in aanmerking komen voor het segment naar naamruimtecode van de identiteit. Een lijst met naamruimtecodes voor identiteiten vindt u in het overzicht [van de](../../identity-service/namespaces.md)naamruimte. |
 
 ## Segmentresultaten interpreteren
 
-Wanneer de segmentbanen met succes in werking worden gesteld, wordt de `segmentMembership` kaart bijgewerkt voor elk profiel inbegrepen binnen het segment. `segmentMembership` slaat ook om het even welke vooraf beoordeelde publiekssegmenten op die in Platform worden opgenomen, die voor integratie met andere oplossingen zoals de Manager van de Audience van Adobe toestaan.
+Wanneer de segmentbanen met succes in werking worden gesteld, wordt de `segmentMembership` kaart bijgewerkt voor elk profiel inbegrepen binnen het segment. `segmentMembership` slaat ook om het even welke vooraf beoordeelde publiekssegmenten op die in Platform worden opgenomen, die voor integratie met andere oplossingen zoals Adobe Audience Manager toestaan.
 
 In het volgende voorbeeld wordt getoond hoe het `segmentMembership` kenmerk eruitziet voor elke afzonderlijke profielrecord:
 
@@ -472,7 +475,7 @@ Wanneer het uitvoeren van een publiek, moet een doeldataset eerst worden gecreee
 Er zijn twee manieren om de noodzakelijke dataset tot stand te brengen:
 
 - **API&#39;s gebruiken:** De stappen die in deze zelfstudie volgen schetsen hoe te om een dataset tot stand te brengen die verwijzingen het Schema van de Unie van het Individuele Profiel XDM gebruikend Catalogus API.
-- **De interface gebruiken:** Als u de gebruikersinterface van het Adobe Experience Platform wilt gebruiken om een dataset te maken die verwijst naar het union-schema, voert u de stappen in de [UI-zelfstudie](../ui/overview.md) uit en gaat u terug naar deze zelfstudie om door te gaan met de stappen voor het [genereren van profielen](#generate-xdm-profiles-for-audience-members)van publiek.
+- **De interface gebruiken:** Om het gebruikersinterface van het Adobe Experience Platform te gebruiken om een dataset tot stand te brengen die verwijzingen het unieschema, de stappen in het [UI leerprogramma](../ui/overview.md) volgen en dan op dit leerprogramma terugkeren om met de stappen te werk te gaan voor het [produceren van publieksprofielen](#generate-xdm-profiles-for-audience-members).
 
 Als u reeds een compatibele dataset hebt en zijn identiteitskaart kent, kunt u aan de stap voor het [produceren van publieksprofielen](#generate-xdm-profiles-for-audience-members)direct te werk gaan.
 
@@ -600,7 +603,7 @@ curl -X POST \
 | `filter.segments` | *(Optioneel)* Hiermee geeft u de segmenten op die u wilt exporteren. Als u deze waarde weglaat, worden alle gegevens van alle profielen geëxporteerd. Accepteert een array van segmentobjecten die elk de volgende velden bevatten: |
 | `filter.segments.segmentId` | **(Vereist bij gebruik van`segments`)** Segment-id voor profielen die moeten worden geëxporteerd. |
 | `filter.segments.segmentNs` | *(Optioneel)* Segmentnaamruimte voor de opgegeven `segmentID`. |
-| `filter.segments.status` | *(Optioneel)* Een array van tekenreeksen die een statusfilter voor de `segmentID`tekenreeks bieden. Standaard heeft `status` deze waarde de waarde `["realized", "existing"]` die alle profielen vertegenwoordigt die in het segment op het huidige tijdstip vallen. Mogelijke waarden zijn: `"realized"`, `"existing"`, en `"exited"`. |
+| `filter.segments.status` | *(Optioneel)* Een array van tekenreeksen die een statusfilter voor de `segmentID`tekenreeks bieden. Standaard heeft `status` deze waarde de waarde `["realized", "existing"]` die alle profielen vertegenwoordigt die in het segment op het huidige tijdstip vallen. Mogelijke waarden zijn: `"realized"`, `"existing"`en `"exited"`. |
 | `filter.segmentQualificationTime` | *(Optioneel)* Filter op basis van de kwalificatietijd van het segment. De begintijd en/of eindtijd kunnen worden opgegeven. |
 | `filter.segmentQualificationTime.startTime` | *(Optioneel)* Begintijd segmentkwalificatie voor een segment-id voor een bepaalde status. Er is geen filter voor de begintijd van een segment-id-kwalificatie opgegeven. Het tijdstempel moet worden opgegeven in de [RFC 339](https://tools.ietf.org/html/rfc3339) -indeling. |
 | `filter.segmentQualificationTime.endTime` | *(Optioneel)* Eindtijd segmentkwalificatie voor een segment-id voor een bepaalde status. Er is geen filter voor de eindtijd van een segment-id-kwalificatie opgegeven. Het tijdstempel moet worden opgegeven in de [RFC 339](https://tools.ietf.org/html/rfc3339) -indeling. |
@@ -948,10 +951,10 @@ curl -X GET \
 
 ## Volgende stappen
 
-Zodra de export is voltooid, zijn uw gegevens beschikbaar in het Data Lake in Experience Platform. Vervolgens kunt u de API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) gegevenstoegang gebruiken om toegang te krijgen tot de gegevens via de `batchId` koppeling die aan de export is gekoppeld. Afhankelijk van de grootte van het segment, kunnen de gegevens in brokken zijn en de partij kan uit verscheidene dossiers bestaan.
+Nadat het exporteren is voltooid, zijn uw gegevens beschikbaar in het Data Lake in Experience Platform. Vervolgens kunt u de API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) gegevenstoegang gebruiken om toegang te krijgen tot de gegevens via de `batchId` koppeling die aan de export is gekoppeld. Afhankelijk van de grootte van het segment, kunnen de gegevens in brokken zijn en de partij kan uit verscheidene dossiers bestaan.
 
 Voor stapsgewijze instructies over het gebruik van de API voor gegevenstoegang voor het openen en downloaden van batchbestanden volgt u de zelfstudie [Gegevenstoegang](../../data-access/tutorials/dataset-data.md).
 
-U kunt geëxporteerde segmentgegevens ook openen met Adobe Experience Platform Query Service. Gebruikend UI of RESTful API, staat de Dienst van de Vraag u toe om, vragen op gegevens binnen het meer van Gegevens te schrijven te bevestigen en in werking te stellen.
+U kunt tot uitgevoerde segmentgegevens ook toegang hebben gebruikend de Dienst van de Vraag van het Adobe Experience Platform. Gebruikend UI of RESTful API, staat de Dienst van de Vraag u toe om, vragen op gegevens binnen het meer van Gegevens te schrijven te bevestigen en in werking te stellen.
 
 Voor meer informatie over hoe te om publieksgegevens te vragen, te herzien gelieve de documentatie [van de Dienst van de](../../query-service/home.md)Vraag.
