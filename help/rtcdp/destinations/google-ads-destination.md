@@ -4,7 +4,7 @@ seo-title: Bestemming voor Google-advertenties
 description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 seo-description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: db2084024f7c25cb1f914f9b8da35298691fd95f
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 0%
@@ -55,7 +55,8 @@ Voordat u de Google Ads-bestemming maakt in Adobe Real-time CDP, moet u contact 
    ![Google Ads-doel verbinden](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. In de stap van de **Opstelling** van creeer bestemmingswerkschema, vul de [!UICONTROL BasisInformatie] voor de bestemming in. <br>
-   ![Basisinformatie over Google Ads](/help/rtcdp/destinations/assets/google-ads-setup-step.png)
+
+   ![Basisinformatie over Google Ads](/help/rtcdp/destinations/assets/google-2-destination-setup-step.png)
 * **[!UICONTROL Naam]**: Vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Omschrijving]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
 * **[!UICONTROL Accounttype]**: De enige beschikbare optie is AdvertentieWoorden.
