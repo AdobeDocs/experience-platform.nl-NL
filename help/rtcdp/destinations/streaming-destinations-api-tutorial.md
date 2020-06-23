@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Verbinding maken met streaming doelen en gegevens activeren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
+source-git-commit: ed9d6eadeb00db51278ea700f7698a1b5590632f
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1857'
 ht-degree: 0%
 
 ---
 
 
-# Verbinding maken met streamingdoelen en gegevens activeren in het realtime-klantgegevensplatform van Adobe met behulp van API&#39;s
+# Verbinding maken met streamingdoelen en gegevens activeren in het realtime Platform voor klantgegevens van Adobe met behulp van API&#39;s
 
 >[!NOTE]
 >
 >De [!DNL Amazon Kinesis] en de [!DNL Azure Event Hubs] bestemmingen in Echte Adobe CDP in tijd zijn momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
-Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw gegevens van het Adobe Experience Platform, een verbinding tot stand te brengen met een streamingbestemming voor cloudopslag ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) of [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), een dataflow te maken naar uw nieuwe gemaakte bestemming en gegevens te activeren naar uw nieuwe gemaakte bestemming.
+Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw Adobe Experience Platform-gegevens, een verbinding tot stand te brengen met een streamingbestemming voor cloudopslag ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) of [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), een dataflow te maken naar uw nieuwe bestemming en gegevens te activeren naar uw nieuwe bestemming.
 
 In deze zelfstudie wordt het [!DNL Amazon Kinesis] doel in alle voorbeelden gebruikt, maar de stappen zijn identiek voor [!DNL Azure Event Hubs].
 
@@ -28,11 +28,11 @@ Raadpleeg de zelfstudies voor [Connect a destination](../../rtcdp/destinations/c
 
 ## Aan de slag
 
-Voor deze handleiding is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
-* [XDM-systeem](../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
-* [Catalogusservice](../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen het Platform van de Ervaring.
-* [Sandboxen](../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [XDM-systeem](../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [Catalogusservice](../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen Experience Platform.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om gegevens aan het stromen bestemmingen in Echte Adobe CDP te activeren.
 
@@ -45,17 +45,17 @@ Om de stappen in dit leerprogramma te voltooien, zou u de volgende geloofsbrieve
 
 ### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste en optionele koppen {#gather-values}
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](/help/tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](/help/tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-De middelen in het Platform van de Ervaring kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor platform-API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
+De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor Platform-API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -68,7 +68,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ### Documentatie voor de wagenbak {#swagger-docs}
 
-In deze zelfstudie in Swagger vindt u begeleidende referentiedocumentatie voor alle API-aanroepen. Zie https://platform.adobe.io/data/foundation/flowservice/swagger#/. We raden u aan deze zelfstudie en de documentatiepagina van Swagger parallel te gebruiken.
+In deze zelfstudie in Swagger vindt u begeleidende referentiedocumentatie voor alle API-aanroepen. Zie de documentatie van de [Flow Service API op Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We raden u aan deze zelfstudie en de documentatiepagina van Swagger parallel te gebruiken.
 
 ## Hiermee wordt de lijst met beschikbare streamingdoelen opgehaald {#get-the-list-of-available-streaming-destinations}
 
@@ -114,17 +114,17 @@ Een succesvolle reactie bevat een lijst met beschikbare bestemmingen en hun unie
 }
 ```
 
-## Verbinding maken met uw gegevens van het Experience Platform {#connect-to-your-experience-platform-data}
+## Verbinden met uw Experience Platform gegevens {#connect-to-your-experience-platform-data}
 
 ![Overzicht doelstappen 2](/help/rtcdp/destinations/assets/step2-create-streaming-destination-api.png)
 
-Vervolgens moet u verbinding maken met de gegevens van het Experience Platform, zodat u profielgegevens kunt exporteren en activeren op de gewenste bestemming. Deze bestaat uit twee substappen die hieronder worden beschreven.
+Vervolgens moet u verbinding maken met de gegevens van uw Experience Platform, zodat u profielgegevens kunt exporteren en activeren op de gewenste bestemming. Deze bestaat uit twee substappen die hieronder worden beschreven.
 
-1. Eerst, moet u een vraag uitvoeren om toegang tot uw gegevens in het Platform van de Ervaring toe te staan, door een basisverbinding te vestigen.
-2. Dan, gebruikend identiteitskaart van de basisverbinding, zult u een andere vraag maken waarin u een bronverbinding creeert, die de verbinding aan uw gegevens van het Platform van de Ervaring vestigt.
+1. Eerst, moet u een vraag uitvoeren om toegang tot uw gegevens in Experience Platform toe te staan, door opstelling een basisverbinding.
+2. Dan, gebruikend identiteitskaart van de basisverbinding, zult u een andere vraag maken waarin u een bronverbinding creeert, die de verbinding aan uw gegevens van het Experience Platform vestigt.
 
 
-### Toegang tot uw gegevens autoriseren via het Experience Platform
+### Toegang tot uw gegevens in Experience Platform toestaan
 
 **API-indeling**
 
@@ -164,7 +164,7 @@ Een geslaagde reactie bevat de unieke id (`id`) van de basisverbinding. Sla deze
 }
 ```
 
-### Verbinding maken met uw gegevens van het Experience Platform
+### Verbinden met uw Experience Platform gegevens
 
 **API-indeling**
 
@@ -201,7 +201,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Antwoord**
 
-Een succesvolle reactie keert het unieke herkenningsteken (`id`) voor de pas gecreëerde bronverbinding aan de Verenigde Dienst van het Profiel terug. Dit bevestigt dat u verbinding hebt gemaakt met de gegevens van het Experience Platform. Sla deze waarde op zoals deze in een latere stap wordt vereist.
+Een succesvolle reactie keert het unieke herkenningsteken (`id`) voor de pas gecreëerde bronverbinding aan de Verenigde Dienst van het Profiel terug. Hiermee bevestigt u dat u verbinding hebt gemaakt met de gegevens van uw Experience Platform. Sla deze waarde op zoals deze in een latere stap wordt vereist.
 
 ```json
 {
@@ -263,7 +263,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{AUTHENTICATION_CREDENTIALS}`: Vul de naam van uw streaming bestemming in, bijvoorbeeld: `Amazon Kinesis authentication credentials` of `Azure Event Hubs authentication credentials`.
 * `{ACCESS_ID}`: *Voor Amazon Kinesis-verbindingen.* Uw toegangs-id voor de opslaglocatie van Amazon Kinesis.
 * `{SECRET_KEY}`: *Voor Amazon Kinesis-verbindingen.* Uw geheime sleutel voor uw opslaglocatie van Amazon Kinesis.
-* `{REGION}`: *Voor Amazon Kinesis-verbindingen.* Het gebied in uw Amazon Kinesis-account waarin Adobe Real-time CDP uw gegevens streamt.
+* `{REGION}`: *Voor Amazon Kinesis-verbindingen.* Het gebied in uw Amazon Kinesis-account waar Adobe Real-time CDP uw gegevens streamt.
 * `{SAS_KEY_NAME}`: *Voor Azure Event Hubs-verbindingen.* Vul uw SAS-sleutelnaam in. Meer informatie over verificatie [!DNL Azure Event Hubs] met SAS-toetsen vindt u in de documentatie [van](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
 * `{SAS_KEY}`: *Voor Azure Event Hubs-verbindingen.* Vul uw SAS-sleutel in. Meer informatie over verificatie [!DNL Azure Event Hubs] met SAS-toetsen vindt u in de documentatie [van](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
 * `{EVENT_HUB_NAMESPACE}`: *Voor Azure Event Hubs-verbindingen.* Vul de Azure Event Hubs-naamruimte in waar Adobe Real-time CDP uw gegevens streamt. Voor meer informatie, zie [Create een de hubs van de Gebeurtenis namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in de documentatie van Microsoft.
@@ -335,7 +335,7 @@ Een geslaagde reactie retourneert de unieke id (`id`) voor de nieuwe doelverbind
 
 ![Overzicht doelstappen 4](/help/rtcdp/destinations/assets/step4-create-streaming-destination-api.png)
 
-Met de id&#39;s die u in de vorige stappen hebt opgehaald, kunt u nu een gegevensstroom maken tussen de gegevens van het Experience Platform en de bestemming waarnaar u de gegevens wilt activeren. Beschouw deze stap als het construeren van de pijpleiding, waardoor de gegevens later, tussen het Platform van de Ervaring en uw gewenste bestemming zullen stromen.
+Met de id&#39;s die u in de vorige stappen hebt opgehaald, kunt u nu een gegevensstroom maken tussen de gegevens van het Experience Platform en de bestemming waarnaar u de gegevens wilt activeren. Beschouw deze stap als het construeren van de pijpleiding, waardoor de gegevens, tussen Experience Platform en uw gewenste bestemming later zullen stromen.
 
 Als u een gegevensstroom wilt maken, voert u een POST-verzoek uit, zoals hieronder wordt weergegeven, terwijl u de hieronder vermelde waarden opgeeft binnen de laadtijd.
 
@@ -375,7 +375,7 @@ curl -X POST \
 ```
 
 * `{FLOW_SPEC_ID}`: De flow-specificatie-id voor op profielen gebaseerde doelen is `71471eba-b620-49e4-90fd-23f1fa0174d8`. Gebruik deze waarde in de vraag.
-* `{SOURCE_CONNECTION_ID}`: Gebruik de bronverbindings-id die u hebt verkregen in de stap [Verbinding maken met uw ervaringsplatform](#connect-to-your-experience-platform-data).
+* `{SOURCE_CONNECTION_ID}`: Gebruik de bronverbindings-id die u hebt verkregen in de stap [Verbinding maken met uw Experience Platform](#connect-to-your-experience-platform-data).
 * `{TARGET_CONNECTION_ID}`: Gebruik de doel-verbindings-id die u hebt verkregen in de stap [Verbinden met streamingdoel](#connect-to-streaming-destination).
 
 **Antwoord**
