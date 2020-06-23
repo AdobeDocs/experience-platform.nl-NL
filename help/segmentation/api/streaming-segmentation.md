@@ -4,46 +4,47 @@ solution: Experience Platform
 title: Streaming segmentering
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+workflow-type: tm+mt
+source-wordcount: '1343'
+ht-degree: 0%
 
 ---
 
 
-# Evalueer gebeurtenissen in real time met het stromen segmentatie (Bèta)
+# Evalueer gebeurtenissen in bijna real time met het stromen segmentatie
 
->[!NOTE] Streaming segmentatie is een bètafunctie en is op verzoek beschikbaar.
-
-Het stromen segmentatie (die ook als ononderbroken vraagevaluatie wordt bekend) is de capaciteit om een klant onmiddellijk te evalueren zodra een gebeurtenis in een bepaalde segmentgroep komt. Met deze mogelijkheid kunnen de meeste segmentregels nu worden geëvalueerd wanneer de gegevens worden doorgegeven aan het Adobe Experience Platform. Dit betekent dat segmentlidmaatschap up-to-date blijft zonder geplande segmentatietaken.
+Streaming segmentering op [!DNL Adobe Experience Platform] staat klanten toe om segmentatie in bijna real time te doen terwijl het concentreren op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in landen [!DNL Platform], die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens worden overgegaan in [!DNL Platform], betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
 ## Aan de slag
 
-Deze ontwikkelaarshandleiding vereist een goed begrip van de verschillende services van het Adobe Experience Platform die betrokken zijn bij het streamen van segmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Deze ontwikkelaarsgids vereist een werkend inzicht in de diverse [!DNL Adobe Experience Platform] diensten betrokken bij het stromen segmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [Klantprofiel](../../profile/home.md)in realtime: Verstrekt een verenigd consumentenprofiel in real time, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [Segmentatie](../home.md): Biedt de mogelijkheid om segmenten en publiek te maken op basis van uw gegevens in het realtime klantprofiel.
-- [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor Platform gegevens van de klantenervaring organiseert.
+- [!DNL Real-time Customer Profile](../../profile/home.md): Verstrekt een verenigd consumentenprofiel in real time, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [!DNL Segmentation](../home.md): Verstrekt de capaciteit om segmenten en publiek van uw [!DNL Real-time Customer Profile] gegevens tot stand te brengen.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Platform APIs te maken.
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan APIs te maken. [!DNL Platform]
 
 ### API-voorbeeldaanroepen lezen
 
-Deze ontwikkelaarsgids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze ontwikkelaarsgids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+>[!NOTE] Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -51,22 +52,39 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 Voor het invullen van specifieke aanvragen kunnen extra kopteksten nodig zijn. In elk voorbeeld in dit document worden de juiste kopteksten weergegeven. Gelieve speciale aandacht te besteden aan de steekproefverzoeken om ervoor te zorgen dat alle vereiste kopballen inbegrepen zijn.
 
-### Voor streaming segmentatie ingeschakelde querytypen
+### Voor streaming segmentatie ingeschakelde querytypen {#streaming-segmentation-query-types}
 
-De volgende lijst maakt een lijst van de verschillende types van segmenteringsvragen en of zij het stromen segmentatie al dan niet steunen.
+>[!NOTE] U zult geplande segmentatie voor de organisatie moeten toelaten opdat het stromen segmentatie werkt. Informatie over het toelaten van geplande segmentatie kan in [toelaat geplande segmenteringssectie worden gevonden](#enable-scheduled-segmentation)
 
-| Type query | Voorbeeldquery | Ondersteunde streamingsegmentatie |
-| ---------- | ------------ | --------------------------------- |
-| Eenvoudig demografisch | &quot;Geef me alle mensen van wie het huisadres in Canada is.&quot; | Ondersteund |
-| Gebeurtenissen uit de tijdreeks | &quot;Geef mij alle personen die Lightroom hebben gedownload.&quot; | Ondersteund |
-| Demografische en tijdreeksen | &quot;Geef me alle mensen die in Canada wonen en in de afgelopen 30 dagen een bestelling hebben geplaatst.&quot; | Ondersteund |
-| Geen gebeurtenissen | &quot;Geef me alle mensen die twee aparte karretjes hebben verlaten binnen twee dagen na elkaar.&quot; | Ondersteund |
-| Meerdere entiteiten | &quot;Geef me alle mensen van wie het machtigingstype &quot;ervaren&quot;is.&quot; | Niet ondersteund |
-| Geavanceerde PQL-functies | &quot;Geef me alle profielen die een orde in de vorige week plaatsten, en omvat SKU en Naam voor alle gekochte producten.&quot; | Niet ondersteund |
+Opdat een segment wordt geëvalueerd gebruikend het stromen segmentatie, moet de vraag aan de volgende richtlijnen in overeenstemming zijn.
 
-## Hiermee worden alle segmenten opgehaald waarvoor segmentatie voor streaming is ingeschakeld
+| Type query | Details |
+| ---------- | ------- |
+| Binnenkomende hit | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis zonder tijdbeperking. |
+| Binnenkomende hit binnen relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis **in de laatste zeven dagen**. |
+| Binnenkomende hit die verwijst naar een profiel | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, zonder tijdbeperking, en een of meer profielkenmerken. |
+| Binnenkomende hit die verwijst naar een profiel binnen een relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis en een of meer profielkenmerken, **binnen de afgelopen zeven dagen**. |
+| Meerdere gebeurtenissen die naar een profiel verwijzen | Elke segmentdefinitie die verwijst naar meerdere gebeurtenissen **in de afgelopen 24 uur** en (optioneel), heeft een of meer profielkenmerken. |
 
-Voordat u een nieuw segment voor streaming maakt of een bestaand segment bijwerkt dat voor streaming is ingeschakeld, moet u ervoor zorgen dat u geen informatie dupliceert door een lijst met alle voor streaming ingeschakelde segmenten op te halen.
+In de volgende sectie worden voorbeelden van segmentdefinities weergegeven die **niet** zijn ingeschakeld voor streamingsegmentatie.
+
+| Type query | Details |
+| ---------- | ------- | 
+| Binnenkomende hit binnen relatief tijdvenster | Als de segmentdefinitie naar een inkomende gebeurtenis verwijst die **niet** binnen de **laatste zeven-dagperiode** valt. Bijvoorbeeld binnen de **laatste twee weken**. |
+| Binnenkomende hit die verwijst naar een profiel binnen een relatief venster | De volgende opties bieden **geen** ondersteuning voor streamingsegmentatie:<ul><li>Een binnenkomende gebeurtenis **die zich niet** binnen de **laatste periode** van zeven dagen bevindt.</li><li>Een segmentdefinitie die Adobe Audience Manager (AAM) segmenten of eigenschappen omvat.</li></ul> |
+| Meerdere gebeurtenissen die naar een profiel verwijzen | De volgende opties bieden **geen** ondersteuning voor streamingsegmentatie:<ul><li>Een gebeurtenis die **niet** optreedt binnen **de laatste 24 uur**.</li><li>Een segmentdefinitie die Adobe Audience Manager (AAM) segmenten of eigenschappen omvat.</li></ul> |
+| Vragen over meerdere entiteiten | Vraagstukken met meerdere entiteiten worden over het geheel genomen **niet** ondersteund door streamingsegmentatie. |
+
+Daarnaast zijn enkele richtlijnen van toepassing wanneer streamingsegmentatie wordt uitgevoerd:
+
+| Type query | Richtsnoer |
+| ---------- | -------- |
+| Query voor één gebeurtenis | Het terugkijkvenster is beperkt tot **zeven dagen**. |
+| Query uitvoeren met gebeurtenisgeschiedenis | <ul><li>Het terugkijkvenster is beperkt tot **één dag**.</li><li>Tussen de gebeurtenissen **moet** een strikte voorwaarde voor de tijdvolgorde bestaan.</li><li>Slechts worden de eenvoudige tijdorden (vóór en na) tussen de gebeurtenissen toegestaan.</li><li>De afzonderlijke gebeurtenissen **kunnen niet** worden genegeerd. De gehele query **kan** echter worden genegeerd.</li></ul> |
+
+## Hiermee worden alle segmenten opgehaald die zijn ingeschakeld voor streamingsegmentatie
+
+U kunt een lijst van al uw segmenten terugwinnen die voor het stromen segmentatie binnen uw IMS Organisatie door een GET verzoek aan het `/segment/definitions` eindpunt te maken worden toegelaten.
 
 **API-indeling**
 
@@ -85,7 +103,7 @@ curl -X GET \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME'
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
@@ -179,7 +197,7 @@ Een succesvolle reactie keert een serie van segmenten in uw IMS Organisatie teru
 
 ## Een segment met streaming mogelijkheden maken
 
-Nadat u hebt bevestigd dat het segment dat u wilt maken, nog niet bestaat, kunt u een nieuw segment maken dat is ingeschakeld voor het streamen van segmentatie.
+Een segment wordt automatisch voor streaming ingeschakeld als het overeenkomt met een van de bovenstaande [](#streaming-segmentation-query-types)streaming segmentatietypen.
 
 **API-indeling**
 
@@ -188,8 +206,6 @@ POST /segment/definitions
 ```
 
 **Verzoek**
-
-Met het volgende verzoek wordt een nieuw segment gemaakt dat segmentatie streamt ingeschakeld. De `continuous` sectie is ingesteld op `enabled: true`.
 
 ```shell
 curl -X POST \
@@ -210,22 +226,11 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
     }
 }'
 ```
 
->[!NOTE] Dit is een standaard &quot;creeer een segment&quot;verzoek, met de toegevoegde parameter van de `continuous` sectie die aan wordt geplaatst `enabled: true`. Voor meer informatie over het creëren van een segmentdefinitie, te lezen gelieve de documentatie over [segmentverwezenlijking](../tutorials/create-a-segment.md).
+>[!NOTE] Dit is een standaard &quot;creeer een segment&quot;verzoek. Lees voor meer informatie over het maken van een segmentdefinitie de zelfstudie over het [maken van een segment](../tutorials/create-a-segment.md).
 
 **Antwoord**
 
@@ -269,174 +274,9 @@ Een succesvolle reactie keert de details van de nieuw gecreeerd streaming-toegel
 }
 ```
 
-## Een bestaand segment voor streamingsegmentatie inschakelen
+## Geplande evaluatie inschakelen {#enable-scheduled-segmentation}
 
-U kunt een bestaand segment voor het stromen segmentatie toelaten door identiteitskaart van de segmentdefinitie in de weg van een verzoek van de PATCH te verstrekken. Bovendien moet de nuttige lading van dit PATCH verzoek de volledige details van de bestaande segmentdefinitie omvatten, die kan worden betreden door een GET verzoek aan de segmentdefinitie in kwestie te doen.
-
-### Een bestaande segmentdefinitie opzoeken
-
-Om omhoog een bestaande segmentdefinitie te kijken, moet u zijn identiteitskaart in de weg van een GET verzoek leveren.
-
-**API-indeling**
-
-```http
-GET /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `{SEGMENT_DEFINITION_ID}` | De id van de segmentdefinitie die u wilt opzoeken. |
-
-**Verzoek**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004\
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-Een succesvolle reactie zal details van de segmentdefinitie terugkeren u vroeg.
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "sandbox": {
-        "sandboxId": "",
-        "sandboxName": "",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": false
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}
-```
-
->[!NOTE] Voor het volgende verzoek, zult u de volledige details van de segmentdefinitie nodig hebben die in deze reactie zijn teruggekeerd. Kopieer de details van dit antwoord die in de tekst van het volgende verzoek moeten worden gebruikt.
-
-### Het bestaande segment voor streamingsegmentatie inschakelen
-
-Nu u de details van het segment kent u wilt bijwerken, kunt u een verzoek van de PATCH uitvoeren om het segment bij te werken om het stromen segmentatie toe te laten.
-
-**API-indeling**
-
-```http
-PATCH /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-**Verzoek**
-
-De nuttige lading van het volgende verzoek verstrekt de details van de segmentdefinitie (die in de [vorige stap](#look-up-an-existing-segment-definition)wordt verkregen), en werkt het bij door zijn `continuous.enabled` bezit in te veranderen `true`.
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -d '{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}'
-```
-
-**Antwoord**
-
-Een succesvolle reactie keert de details van de onlangs bijgewerkte segmentdefinitie terug.
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "ttlInDays": 30,
-    "imsOrgId": "4A21D36B544916100A4C98A7@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    },
-    "creationTime": 1572029711000,
-    "updateEpoch": 1572029712000,
-    "updateTime": 1572029712000
-}
-```
-
-## Geplande evaluatie inschakelen
-
-Zodra de het stromen evaluatie is toegelaten, moet een basislijn worden gecreeerd (waarna zal het segment altijd bijgewerkt zijn). Dit wordt automatisch gedaan door het systeem, nochtans moet de geplande evaluatie (die ook als geplande segmentatie wordt bekend) eerst worden toegelaten opdat baselining plaatsvindt.
-
-Met geplande segmentatie, kan uw IMS Org een terugkerend programma tot stand brengen om de uitvoerbanen automatisch in werking te stellen om segmenten te evalueren.
+Zodra de het stromen evaluatie is toegelaten, moet een basislijn worden gecreeerd (waarna zal het segment altijd bijgewerkt zijn). De geplande evaluatie (die ook als geplande segmentatie wordt bekend) moet eerst worden toegelaten opdat het systeem baselining automatisch uitvoert. Met geplande segmentatie, kan uw IMS Org aan een terugkerend programma houden om uitvoerbanen automatisch in werking te stellen om segmenten te evalueren.
 
 >[!NOTE] De geplande evaluatie kan voor zandbakken met een maximum van vijf (5) fusiebeleid voor Individueel Profiel XDM worden toegelaten. Als uw organisatie meer dan vijf samenvoegingsbeleid voor Individueel Profiel XDM binnen één enkele zandbakmilieu heeft, zult u geen geplande evaluatie kunnen gebruiken.
 
@@ -551,4 +391,4 @@ Dezelfde bewerking kan worden gebruikt om een schema uit te schakelen door de wa
 
 Nu u zowel nieuwe als bestaande segmenten voor het stromen segmentatie hebt toegelaten, en geplande segmentatie om een basislijn te ontwikkelen en terugkomende evaluaties uit te voeren toegelaten, kunt u beginnen om segmenten voor uw organisatie tot stand te brengen.
 
-Als u wilt weten hoe u vergelijkbare acties uitvoert en met segmenten werkt via de gebruikersinterface van het Adobe Experience Platform, raadpleegt u de gebruikershandleiding [van](../ui/overview.md)Segment Builder.
+Leer hoe te om gelijkaardige acties uit te voeren en met segmenten te werken gebruikend het gebruikersinterface van het Adobe Experience Platform, gelieve de gebruikersgids [van de Bouwer van het](../ui/overview.md)Segment te bezoeken.
