@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding voor de gebruikersinterface van Segment Builder
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
 workflow-type: tm+mt
 source-wordcount: '2562'
 ht-degree: 0%
@@ -57,7 +57,7 @@ U kunt deze bouwstenen in de sectie van *Gebieden* op de linkerkant van de [!UIC
 
 ### Attributen
 
-Op het tabblad **[!UICONTROL Kenmerken]** kunt u door [!DNL Profile] kenmerken bladeren die tot de [!DNL XDM Individual Profile] klasse behoren. Elke map kan worden uitgevouwen om extra kenmerken weer te geven. Elk kenmerk is een tegel die naar het canvas voor regelbuilders in het midden van de werkruimte kan worden gesleept. Het canvas van de [regelbouwer](#rule-builder-canvas) wordt meer in detail besproken later in deze gids.
+Op het tabblad **[!UICONTROL Kenmerken]** kunt u door [!DNL Profile] kenmerken bladeren die tot de [!DNL XDM Individual Profile] klasse behoren. Elke map kan worden uitgevouwen om aanvullende kenmerken weer te geven. Elk kenmerk is een tegel die naar het canvas voor regelbuilders in het midden van de werkruimte kan worden gesleept. Het canvas van de [regelbouwer](#rule-builder-canvas) wordt meer in detail besproken later in deze gids.
 
 ![](../images/segment-builder/attributes.png)
 
@@ -165,7 +165,7 @@ Planningen kunnen momenteel alleen worden gemaakt met behulp van de API. Voor ge
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
-## Streaming segmentering
+## Streaming segmentering {#streaming-segmentation}
 
 >[!NOTE] Opdat het stromen segmentatie aan het werk is, zal de klant geplande segmentatie voor de organisatie moeten toelaten. Raadpleeg voor meer informatie over het inschakelen van geplande segmentatie [de vorige sectie in deze gebruikershandleiding](#enable-scheduled-segmentation).
 
