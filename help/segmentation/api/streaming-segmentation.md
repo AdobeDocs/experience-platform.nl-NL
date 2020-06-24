@@ -4,15 +4,17 @@ solution: Experience Platform
 title: Streaming segmentering
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
 
 
 # Evalueer gebeurtenissen in bijna real time met het stromen segmentatie
+
+>[!NOTE] In het volgende document wordt aangegeven hoe u streamingsegmentatie kunt gebruiken met de API. Voor informatie bij het gebruiken van het stromen segmentatie die UI gebruikt, gelieve de gids [van de Bouwer van het](../ui/overview.md#streaming-segmentation)Segment te lezen.
 
 Streaming segmentering op [!DNL Adobe Experience Platform] staat klanten toe om segmentatie in bijna real time te doen terwijl het concentreren op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in landen [!DNL Platform], die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens worden overgegaan in [!DNL Platform], betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
 
