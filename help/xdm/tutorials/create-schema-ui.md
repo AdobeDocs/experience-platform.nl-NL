@@ -4,40 +4,43 @@ solution: Experience Platform
 title: Een schema maken met de Schema-editor
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: c07f926a71447e840c692ed15e85c9e02f1106ab
+source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+workflow-type: tm+mt
+source-wordcount: '3409'
+ht-degree: 0%
 
 ---
 
 
 # Een schema maken met de Schema-editor
 
-Het schemaregister biedt een gebruikersinterface en RESTful-API waarmee u alle bronnen in de Adobe Experience Platform-schemabibliotheek kunt weergeven en beheren. De schemabibliotheek bevat middelen die aan u door de partners van het Platform van de Ervaring, en verkopers ter beschikking worden gesteld van wie toepassingen u gebruikt, evenals middelen die u bepaalt en aan de Registratie van het Schema opslaat.
+De Registratie van het Schema verstrekt een gebruikersinterface en RESTful API waarvan u alle middelen in de Bibliotheek van het Schema van het Adobe Experience Platform kunt bekijken en beheren. De Schemabibliotheek bevat middelen die aan u door Adobe, partners van het Experience Platform, en verkopers ter beschikking worden gesteld waarvan toepassingen u gebruikt, evenals middelen die u bepaalt en aan de Registratie van het Schema opslaat.
 
-Deze zelfstudie behandelt de stappen voor het maken van een schema met behulp van de Schema-editor in het Experience Platform. Als u liever een schema samenstelt met de API voor de registratie van het schema, moet u eerst de handleiding voor [de ontwikkelaar van het](../api/getting-started.md) schemaregister lezen voordat u de zelfstudie [maakt met behulp van de API](create-schema-api.md).
+Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in het Experience Platform. Als u liever een schema samenstelt met de API voor de registratie van het schema, moet u eerst de handleiding voor [de ontwikkelaar van het](../api/getting-started.md) schemaregister lezen voordat u de zelfstudie [maakt met behulp van de API](create-schema-api.md).
 
 Deze zelfstudie bevat ook stappen om een nieuwe klasse [te](#create-new-class) definiëren waarmee u een schema kunt samenstellen.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de verschillende aspecten van het Adobe Experience Platform die betrokken zijn bij het gebruik van de Schema-editor. Lees vóór het starten van deze zelfstudie de documentatie voor de volgende concepten:
+Deze zelfstudie vereist een goed begrip van de verschillende aspecten van Adobe Experience Platform die betrokken zijn bij het gebruik van de Schema-editor. Lees vóór het starten van deze zelfstudie de documentatie voor de volgende concepten:
 
-* [XDM (Experience Data Model)](../home.md): Het gestandaardiseerde kader waardoor Platform gegevens van de klantenervaring organiseert.
+* [XDM (Experience Data Model)](../home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
 * [Basisbeginselen van de schemacompositie](../schema/composition.md): Een overzicht van schema&#39;s XDM en hun bouwstenen, met inbegrip van klassen, mengen, gegevenstypes, en gebieden.
 * [Klantprofiel](../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Voor deze zelfstudie hebt u toegang tot het Experience Platform. Als u geen toegang tot een IMS Organisatie in het Platform van de Ervaring hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
+Voor deze zelfstudie hebt u toegang tot Experience Platform nodig. Als u geen toegang tot een IMS Organisatie in Experience Platform hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
 
-## Door bestaande schema&#39;s in de werkruimte Schema&#39;s bladeren
+## Door bestaande schema&#39;s in de werkruimte Schema&#39;s bladeren {#browse}
 
-De werkruimte van Schema&#39;s binnen het Platform van de Ervaring verstrekt een visualisatie van de Bibliotheek van het Schema, die u toestaat om alle schema&#39;s te bekijken en te beheren beschikbaar aan u, evenals nieuwe degenen samen te stellen. De werkruimte omvat ook de Redacteur van het Schema, het canvas waarop u een schema door dit leerprogramma zult samenstellen.
+De werkruimte van Schema binnen Experience Platform verstrekt een visualisatie van de Bibliotheek van het Schema, die u toestaat om alle schema&#39;s te bekijken en te beheren beschikbaar aan u, evenals nieuwe degenen samen te stellen. De werkruimte omvat ook de Redacteur van het Schema, het canvas waarop u een schema door dit leerprogramma zult samenstellen.
 
-Nadat u zich hebt aangemeld bij Experience Platform, klikt u op **Schema** &#39;s in de linkernavigatie en gaat u naar de werkruimte Schemas. U zult een lijst van schema&#39;s (een vertegenwoordiging van de Bibliotheek van het Schema) zien waar u, alle schema&#39;s kunt bekijken beheren en aanpassen beschikbaar aan u. De lijst bevat de naam, het type, de klasse en het gedrag (record of tijdreeks) waarop het schema is gebaseerd, evenals de datum en tijd waarop het schema voor het laatst is gewijzigd.
+Nadat u zich hebt aangemeld bij het Experience Platform, klikt u op **Schema** in de linkernavigatie en gaat u naar de werkruimte Schemas. U zult een lijst van schema&#39;s (een vertegenwoordiging van de Bibliotheek van het Schema) zien waar u, alle schema&#39;s kunt bekijken beheren en aanpassen beschikbaar aan u. De lijst bevat de naam, het type, de klasse en het gedrag (record of tijdreeks) waarop het schema is gebaseerd, evenals de datum en tijd waarop het schema voor het laatst is gewijzigd.
 
 Klik het filterpictogram naast de bar van het Onderzoek om het filtreren mogelijkheden voor alle middelen in de registratie, met inbegrip van klassen, mengen, en gegevenstypes te gebruiken.
 
 ![De schemabibliotheek weergeven](../images/tutorials/create-schema/schemas_filter.png)
 
-## Een schema maken en een naam geven
+## Een schema maken en een naam geven {#create}
 
 Als u wilt beginnen met het samenstellen van een schema, klikt u op Schema **** maken in de rechterbovenhoek van de werkruimte Schema.
 
@@ -59,7 +62,7 @@ Er zijn verscheidene belangrijke overwegingen om te maken wanneer het beslissen 
 
 Deze zelfstudie stelt een schema samen om gegevens met betrekking tot de leden van een loyaliteitsprogramma in te voeren, daarom wordt het schema genoemd &quot;Loyalty Leden&quot;.
 
-## Een klasse toewijzen
+## Een klasse toewijzen {#class}
 
 Links in de editor bevindt zich de sectie *Compositie* . Het bevat momenteel twee subsecties: *Schema* en *Klasse*.
 
@@ -79,13 +82,13 @@ Het canvas verschijnt weer. De sectie *Klasse* bevat nu de klasse die u hebt ges
 
 ![Afzonderlijke XDM-profielklasse toegewezen](../images/tutorials/create-schema/class_assigned_structure.png)
 
-De velden worden weergegeven in de notatie &quot;fieldName| Gegevenstype&quot;. De stappen voor het bepalen van schemagebieden in UI worden verstrekt later in dit leerprogramma.
+De velden worden weergegeven in de notatie &quot;fieldName | Gegevenstype&quot;. De stappen voor het bepalen van schemagebieden in UI worden verstrekt later in dit leerprogramma.
 
 >[!NOTE] U kunt de klasse van een schema [op om het even welk punt tijdens het aanvankelijke samenstellingsproces](#change-class) veranderen alvorens het schema is bewaard, maar dit zou met uiterste voorzichtigheid moeten worden gedaan. Mixins zijn alleen compatibel met bepaalde klassen. Als u de klasse wijzigt, worden het canvas en alle toegevoegde velden opnieuw ingesteld.
 
-## Een mix toevoegen
+## Een mix toevoegen {#mixin}
 
-Nu een klasse is toegewezen, bevat de sectie *Compositie* een derde subsectie: *Mixins*.
+Nu een klasse is toegewezen, bevat de sectie *Compositie* een derde subsectie: *Mengsels*.
 
 U kunt nu velden toevoegen aan uw schema door mixen toe te voegen. Een mix is een groep van één of meerdere gebieden die een bepaald concept beschrijven. Deze zelfstudie gebruikt mixins om de leden van het loyaliteitsprogramma te beschrijven en zeer belangrijke informatie zoals naam, verjaardag, telefoonaantal, adres, en meer te vangen.
 
@@ -111,7 +114,7 @@ Het veld &quot;name&quot; heeft een gegevenstype van het type &quot;Person Name&
 
 Klik op verschillende velden op het canvas om extra velden weer te geven die worden toegevoegd aan de schemastructuur.
 
-## Een andere mix toevoegen
+## Een andere mix toevoegen {#mixin-2}
 
 U kunt nu dezelfde stappen herhalen om een andere mix toe te voegen. Wanneer u dit keer het dialoogvenster *Mixin* toevoegen weergeeft, ziet u dat de mix &quot;Details van profielpersoon&quot; grijs is weergegeven en dat het keuzerondje ernaast niet kan worden geselecteerd. Zo voorkomt u dat u per ongeluk combinaties dupliceert die u al in het huidige schema hebt opgenomen.
 
@@ -125,7 +128,7 @@ Net als in het veld Naam geven de velden die u zojuist hebt toegevoegd, concepte
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
-## Een nieuwe mix definiëren
+## Een nieuwe mix definiëren {#define-mixin}
 
 Het schema &quot;Loyalty-leden&quot; is bedoeld voor het vastleggen van gegevens met betrekking tot de leden van een loyaliteitsprogramma, zodat het een aantal specifieke velden met betrekking tot loyaliteit vereist. Er zijn geen standaardmengingen beschikbaar die de noodzakelijke gebieden bevatten, daarom zult u een nieuwe mix moeten bepalen.
 
@@ -139,7 +142,7 @@ Geef voor deze zelfstudie de nieuwe mix de naam &quot;Loyalty Details&quot;.
 
 Klik op Mixin **toevoegen** om terug te keren naar de schema-editor. &quot;Loyalty Details&quot; moeten nu worden weergegeven onder *Mixins* aan de linkerkant van het canvas, maar er zijn nog geen velden aan gekoppeld en daarom verschijnen er geen nieuwe velden onder *Structuur*.
 
-## Velden toevoegen aan de mix
+## Velden toevoegen aan de mix {#mixin-fields}
 
 Nu u de mix &quot;Loyalty Details&quot;hebt gecreeerd, is het tijd om de gebieden te bepalen die de mixin aan het schema zal bijdragen.
 
@@ -178,7 +181,7 @@ Welke beperkingsopties beschikbaar zijn, is afhankelijk van het geselecteerde ge
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Meer velden toevoegen om te mengen
+## Meer velden toevoegen om te mengen {#mixin-fields-2}
 
 Nu u het gebied &quot;loyaltyId&quot;hebt toegevoegd, kunt u extra gebieden toevoegen om loyaliteitsgerelateerde informatie zoals te vangen:
 
@@ -191,7 +194,7 @@ Wanneer dit is voltooid, bevat het object Loyalty velden voor: Loyalty ID, Punte
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## Veld &#39;enum&#39; toevoegen om te mengen
+## Veld &#39;enum&#39; toevoegen om te mengen {#enum}
 
 Wanneer u velden in de Schema-editor definieert, zijn er enkele aanvullende opties die u kunt toepassen op elementaire veldtypen om de gegevens in het veld verder te beperken.
 
@@ -212,7 +215,7 @@ Meer informatie over beschikbare extra beperkingen:
 * **Enum:** Geeft aan dat dit veld een van de waarden uit een opsommingslijst met mogelijke waarden moet bevatten.
 * **Identiteit:** Geeft aan dat dit veld een identiteitsveld is. Meer informatie over identiteitsvelden vindt u [later in deze zelfstudie](#identity-field).
 
-## Een object met meerdere velden omzetten in een gegevenstype
+## Een object met meerdere velden omzetten in een gegevenstype {#datatype}
 
 Na het toevoegen van verscheidene loyaliteits-specifieke gebieden, bevat het &quot;loyaliteitsvoorwerp&quot;nu een gemeenschappelijke gegevensstructuur die in andere schema&#39;s nuttig zou kunnen zijn.
 
@@ -230,9 +233,9 @@ In een toekomstig schema, kon u een gebied nu toewijzen het **Type** van &quot;L
 
 ## Een schemaveld instellen als een identiteitsveld {#identity-field}
 
-Schema&#39;s worden gebruikt voor het opnemen van gegevens in het Experience Platform en die gegevens worden uiteindelijk gebruikt om individuen te identificeren en informatie uit meerdere bronnen samen te voegen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als gebieden van de Identiteit worden gemerkt.
+Schema&#39;s worden gebruikt voor het opnemen van gegevens in het Experience Platform, en die gegevens worden uiteindelijk gebruikt om individuen te identificeren en informatie die uit meerdere bronnen afkomstig is aan elkaar te koppelen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als gebieden van de Identiteit worden gemerkt.
 
-Met Experience Platform kunt u gemakkelijk een identiteitsveld aangeven met behulp van het selectievakje **Identiteit** in de Schema-editor.
+Experience Platform maakt het gemakkelijk om een identiteitsgebied door het gebruik van een checkbox van de **Identiteit** in de Redacteur van het Schema aan te duiden.
 
 Er kunnen bijvoorbeeld duizenden leden van het loyaliteitsprogramma zijn die tot hetzelfde &quot;niveau&quot; behoren, maar elk lid van het loyaliteitsprogramma heeft een unieke &quot;loyaltyId&quot; (wat in dit geval het e-mailadres van het individuele lid is). Het feit dat &quot;loyaltyId&quot;een uniek herkenningsteken voor elk lid is maakt het een goede kandidaat voor een identiteitsgebied, terwijl &quot;niveau&quot;niet is.
 
@@ -260,7 +263,7 @@ More information about relationships and other schema metadata can be found in t
 
 ## Het schema inschakelen voor gebruik in Real-time klantprofiel {#profile}
 
-De Redacteur van het Schema verstrekt de capaciteit om een schema voor gebruik met het Profiel [van de Klant in](../../profile/home.md)real time toe te laten. Profiel biedt een holistische weergave van elke individuele klant door een robuust, 360°-profiel van klantkenmerken op te bouwen en een tijdstempelaccount van elke interactie die de klant heeft gehad op elk systeem dat is geïntegreerd met het Experience Platform.
+De Redacteur van het Schema verstrekt de capaciteit om een schema voor gebruik met het Profiel [van de Klant in](../../profile/home.md)real time toe te laten. Profiel biedt een holistische weergave van elke individuele klant door een robuust, 360°-profiel van klantkenmerken op te bouwen en een tijdstempelaccount van elke interactie die de klant heeft gehad op elk systeem dat met Experience Platform is geïntegreerd.
 
 Om een schema voor gebruik met het Profiel van de Klant in real time te kunnen worden toegelaten, moet het een primaire bepaalde identiteit hebben. Als u een schema wilt inschakelen zonder eerst een primaire identiteit te definiëren, ontvangt u het foutbericht &quot;Ontbrekende primaire identiteit&quot;.
 
@@ -292,7 +295,7 @@ De volgende informatie is een aanvulling op de zelfstudie voor de Schema-editor.
 
 ### Een nieuwe klasse maken {#create-new-class}
 
-Het Platform van de ervaring verstrekt de flexibiliteit om een schema te bepalen dat op een klasse wordt gebaseerd die aan uw organisatie uniek is.
+Experience Platform biedt de flexibiliteit om een schema te definiëren dat is gebaseerd op een klasse die uniek is voor uw organisatie.
 
 Open het dialoogvenster Klasse ** toewijzen door te klikken op **Toewijzen** in de sectie *Klasse* van de Schema-editor. Selecteer Nieuwe klasse **** maken in het dialoogvenster.
 
