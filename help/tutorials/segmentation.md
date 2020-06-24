@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zelfstudies voor segmentatie
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 636fae71f9c826ce9715bd96a974e5f6afbffb42
+source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Een segmentdefinitie is de regel die wordt gebruikt om zeer belangrijke kenmerke
 
 ## Evalueer een segment en toegangsresultaten
 
-Zodra u hebt ontwikkeld, getest en uw segmentdefinitie bewaard, kunt u het segment door of geplande evaluatie of op bestelling evaluatie dan evalueren. De geplande evaluatie (die ook als &quot;geplande segmentatie&quot;wordt bekend) staat u toe om een terugkomende planning voor het runnen van een uitvoerbaan in een specifieke tijd tot stand te brengen, terwijl de evaluatie op bestelling het creëren van een segmentbaan impliceert om het publiek onmiddellijk te bouwen. Meer leren, bezoek het leerprogramma voor het [evalueren van en de toegang tot van segmentresultaten](../segmentation/tutorials/evaluate-a-segment.md).
+Zodra u hebt ontwikkeld, getest, en uw segmentdefinitie bewaard, kunt u het segment door of geplande evaluatie of op bestelling evaluatie dan evalueren. De geplande evaluatie (die ook als &quot;geplande segmentatie&quot;wordt bekend) staat u toe om een terugkomende planning voor het runnen van een uitvoerbaan in een specifieke tijd tot stand te brengen, terwijl de evaluatie op bestelling het creëren van een segmentbaan impliceert om het publiek onmiddellijk te bouwen. Meer leren, bezoek het leerprogramma voor het [evalueren van en de toegang tot van segmentresultaten](../segmentation/tutorials/evaluate-a-segment.md).
 
 ## Segmentgegevens exporteren
 
@@ -36,10 +36,7 @@ Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen samenbrengen 
 
 De segmenten die voor gebruik in het Profiel van de Klant in real time worden toegelaten bevatten een identiteitskaart van het fusiebeleid binnen hun segmentdefinitie. Dit samenvoegbeleid bevat informatie over welke datasets in het segment moeten worden omvat, die beurtelings om het even welke toepasselijke etiketten van het gegevensgebruik bevatten. Voor specifieke stappen die het afdwingen van de naleving van het gegevensgebruik voor een publiekssegment, gelieve te volgen de de handhavingszelfstudie van het [gegevensgebruik voor segmenten](../segmentation/tutorials/governance.md).
 
-## (bèta) Streaming segmentatie
-
->[!NOTE]
->Streaming segmentatie vindt plaats in bèta en is op verzoek beschikbaar. De functies en documentatie kunnen worden gewijzigd.
+## Streaming segmentering
 
 Streaming segmentatie is de mogelijkheid om een klant direct te evalueren zodra een gebeurtenis in een bepaalde segmentgroep komt. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens in Adobe Experience Platform worden overgegaan, betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden. Ga voor meer informatie naar het [streamingsegmentatieoverzicht](../segmentation/api/streaming-segmentation.md).
 
