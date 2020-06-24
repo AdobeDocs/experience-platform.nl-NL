@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een schema maken met de API voor schemaregistratie
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
+source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 0%
@@ -14,18 +14,18 @@ ht-degree: 0%
 
 # Een schema maken met de API voor schemaregistratie
 
-Het register van het Schema wordt gebruikt om tot de Bibliotheek van het Schema binnen Adobe Experience Platform toegang te hebben. De Schemabibliotheek bevat bronnen die beschikbaar zijn gesteld door Adobe, Experience Platform-partners en leveranciers van wie u de toepassingen gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
+Het register van het Schema wordt gebruikt om tot de Bibliotheek van het Schema binnen Adobe Experience Platform toegang te hebben. De Schemabibliotheek bevat bronnen die beschikbaar zijn gesteld door Adobe, partners van Experience Platforms en leveranciers van wie u de toepassingen gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
 
-Deze zelfstudie gebruikt de API voor schemaregistratie om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse. Als u de gebruikersinterface in het Platform van de Ervaring liever zou gebruiken, verstrekt de Zelfstudie [van de Redacteur van het](create-schema-ui.md) Schema geleidelijke instructies voor het uitvoeren van gelijkaardige acties in de schemaredacteur.
+Deze zelfstudie gebruikt de API voor schemaregistratie om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse. Als u de gebruikersinterface in Experience Platform liever wilt gebruiken, biedt de zelfstudie [van de](create-schema-ui.md) Schema-editor stapsgewijze instructies voor het uitvoeren van vergelijkbare acties in de Schema-editor.
 
 ## Aan de slag
 
-Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
+Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
-* [XDM-systeem](../home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
+* [XDM-systeem](../home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
 * [Klantprofiel](../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [Sandboxen](../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 Voordat u met deze zelfstudie begint, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de API voor schemaregistratie te kunnen uitvoeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
 
@@ -33,7 +33,7 @@ Deze zelfstudie doorloopt de stappen voor het samenstellen van een schema voor l
 
 ## Een schema met een standaardklasse samenstellen
 
-Een schema kan als blauwdruk voor de gegevens worden beschouwd u in het Platform van de Ervaring wilt opnemen. Elk schema bestaat uit een klasse en nul of meer mixen. Met andere woorden, u moet geen mixin toevoegen om een schema te bepalen, maar in de meeste gevallen wordt minstens één mixin gebruikt.
+Een schema kan als blauwdruk voor de gegevens worden beschouwd u in Experience Platform wilt opnemen. Elk schema bestaat uit een klasse en nul of meer mixen. Met andere woorden, u moet geen mixin toevoegen om een schema te bepalen, maar in de meeste gevallen wordt minstens één mixin gebruikt.
 
 ### Een klasse toewijzen
 
@@ -135,7 +135,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-**Antwoord **
+**Antwoord**
 
 De responsindeling is afhankelijk van de Accept-header die bij de aanvraag wordt verzonden. Experimenteer met verschillende Accepteer kopteksten om te zien welke het beste aan uw behoeften voldoen.
 
@@ -952,9 +952,9 @@ Het uitvoeren van een GET verzoek om het schema op te zoeken toont nu de verwijz
 
 ### Een identiteitsdescriptor definiëren
 
-De schema&#39;s worden gebruikt voor het opnemen van gegevens in het Platform van de Ervaring. Dit gegeven wordt uiteindelijk gebruikt over de veelvoudige diensten om één enkele, verenigde mening van een individu tot stand te brengen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;Identiteit&quot;worden gemerkt en, bij gegevensinvoer, worden de gegevens in die gebieden opgenomen in de Grafiek van de Identiteit voor dat individu. De grafiekgegevens kunnen dan door het Profiel [van de Klant in](../../profile/home.md) real time en de andere diensten van het Platform van de Ervaring worden betreden om een gegeneerde samen mening van elke individuele klant te verstrekken.
+Schema&#39;s worden gebruikt voor het opnemen van gegevens in het Experience Platform. Dit gegeven wordt uiteindelijk gebruikt over de veelvoudige diensten om één enkele, verenigde mening van een individu tot stand te brengen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;Identiteit&quot;worden gemerkt en, bij gegevensinvoer, worden de gegevens in die gebieden opgenomen in de Grafiek van de Identiteit voor dat individu. De grafiekgegevens kunnen dan door het Profiel [van de Klant in](../../profile/home.md) real time en andere diensten van het Experience Platform worden betreden om een verbonden samen mening van elke individuele klant te verstrekken.
 
-Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM-id of andere unieke id-velden.
+Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [Experience Cloud-id (ECID)](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html), CRM-id of andere unieke id-velden.
 
 Houd rekening met alle unieke id&#39;s die specifiek zijn voor uw organisatie, omdat dit ook goede identiteitsvelden kunnen zijn.
 
@@ -970,7 +970,7 @@ POST /tenant/descriptors
 
 **Verzoek**
 
-In het volgende verzoek wordt een identiteitsdescriptor gedefinieerd in het veld &quot;loyaltyId&quot;. Dit vertelt het Platform van de Ervaring om de unieke identiteitskaart van het loyaliteitsprogrammalid (in dit geval, het e-mailadres van het lid) te gebruiken helpen informatie over het individu samenvoegen.
+In het volgende verzoek wordt een identiteitsdescriptor gedefinieerd in het veld &quot;loyaltyId&quot;. Dit vertelt Experience Platform om het unieke herkenningsteken van het loyaliteitsprogrammalid (in dit geval, het e-mailadres van het lid) te gebruiken helpen informatie over het individu samenvoegen.
 
 ```SHELL
 curl -X POST \
