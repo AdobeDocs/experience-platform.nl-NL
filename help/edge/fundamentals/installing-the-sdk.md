@@ -1,12 +1,12 @@
 ---
-title: De Adobe Experience Platform Web SDK installeren
-seo-title: De SDK van Adobe Experience Platform Web SDK installeren
-description: Leer hoe u de Experience Platform Web SDK installeert
-seo-description: Leer hoe u de Experience Platform Web SDK installeert
+title: De SDK van het Web Adobe Experience Platform installeren
+seo-title: Adobe Experience Platform Web SDK die SDK installeert
+description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
+seo-description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 translation-type: tm+mt
-source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
+source-git-commit: e0dee4e39143ae9d7f5e4aaf9c352555f1c7f5d0
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '571'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # De SDK installeren
 
-De AEP Web SDK is beschikbaar op een CDN voor uw gebruik. U kunt naar dit bestand verwijzen of het downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in een geminificeerde en niet-geminiaterde versie. De niet-geminificeerde versie is handig voor foutopsporingsdoeleinden.
+De SDK van het Web van het Adobe Experience Platform is beschikbaar op een netwerk van de inhoudslevering (CDN) voor u aan gebruik. U kunt naar dit bestand verwijzen of het downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in een geminificeerde en niet-geminiaterde versie. De niet-geminificeerde versie is handig voor foutopsporingsdoeleinden.
 
 [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## De code toevoegen
 
-De eerste stap bij de implementatie van de Adobe Experience Platform Web SDK is het zo hoog mogelijk kopiëren en plakken van de volgende &quot;basiscode&quot; in de `<head>` tag van uw HTML:
+De eerste stap in het uitvoeren van het Web SDK van het Adobe Experience Platform is de volgende &quot;basiscode&quot;zo hoog mogelijk in de markering van uw HTML te kopiëren en te kleven: `<head>`
 
 ```markup
 <script>
