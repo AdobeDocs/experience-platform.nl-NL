@@ -1,19 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform Segmentation Service
+title: Segmenteringsservice Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
+workflow-type: tm+mt
+source-wordcount: '2386'
+ht-degree: 0%
 
 ---
 
 
 # Overzicht van segmentatieservice
 
-De Dienst van de Segmentatie van het Platform van de Ervaring van Adobe verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw gegevens van het Profiel van de Klant in real time te produceren. Deze segmenten worden centraal geconfigureerd en onderhouden op het platform en zijn gemakkelijk toegankelijk voor elke Adobe-oplossing.
+De Dienst van de Segmentatie van het Adobe Experience Platform verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw gegevens van het Profiel van de Klant in real time te produceren. Deze segmenten worden centraal geconfigureerd en onderhouden op het Platform en zijn gemakkelijk toegankelijk voor elke Adobe-oplossing.
 
-Dit document biedt een overzicht van de Segmentatieservice en de rol die deze speelt in het Adobe Experience Platform.
+Dit document verstrekt een overzicht van de Dienst van de Segmentatie en de rol het in Adobe Experience Platform speelt.
 
 ## Aan de slag met Segmentatieservice
 
@@ -27,7 +30,7 @@ Het is belangrijk dat u de volgende belangrijke termen kent die in dit document 
 
 De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw profielopslag worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan.
 
-Zodra een segment conceptueel is bepaald wordt het gebouwd in het Platform van de Ervaring. Doorgaans worden segmenten samengesteld door de marketeter of publieksspecialist, maar sommige organisaties geven de voorkeur aan het maken ervan door hun marketingafdeling, in samenwerking met hun gegevensanalisten. Bij het herzien van de gegevens die naar Platform worden verzonden, stelt de gegevensanalist de segmentdefinitie samen door te selecteren welke gebieden en waarden zullen worden gebruikt om de regels of voorwaarden van het segment te bouwen. Dit wordt gedaan gebruikend of UI of API.
+Zodra een segment conceptueel is bepaald wordt het gebouwd in Experience Platform. Doorgaans worden segmenten samengesteld door de marketeter of publieksspecialist, maar sommige organisaties geven de voorkeur aan het maken ervan door hun marketingafdeling, in samenwerking met hun gegevensanalisten. Bij het herzien van de gegevens die naar Platform worden verzonden, stelt de gegevensanalist de segmentdefinitie samen door te selecteren welke gebieden en waarden zullen worden gebruikt om de regels of voorwaarden van het segment te bouwen. Dit wordt gedaan gebruikend of UI of API.
 
 ## Segmenten maken
 
@@ -42,8 +45,6 @@ Voor informatie over het bouwen van segmentdefinities die API gebruiken, zie de 
 ## Segmenten evalueren
 
 ### Streaming segmentering
-
->[!NOTE] Streaming segmentatie is een bètafunctie en is op verzoek beschikbaar.
 
 Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan het Profiel van de Klant in real time. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat uw doelgroep relevant blijft.
 
@@ -74,7 +75,7 @@ Wanneer u een nieuw segment maakt, moet u een segmentnaam opgeven. De segmentnaa
 ### Beleid samenvoegen
 
 Het beleid van de fusie is regels die door Profiel worden gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en in een verenigde mening onder bepaalde voorwaarden zullen worden gecombineerd.
-Als een fusiebeleid niet wordt bepaald, wordt het standaardbeleid van de Fusie van het Platform gebruikt. Als u liever een samenvoegingsbeleid wilt gebruiken dat specifiek is voor uw organisatie, kunt u uw eigen beleid maken en dit markeren als de standaardinstelling van uw organisatie.
+Als er geen samenvoegbeleid is gedefinieerd, wordt het standaardsamenvoegbeleid voor Platforms gebruikt. Als u liever een samenvoegingsbeleid wilt gebruiken dat specifiek is voor uw organisatie, kunt u uw eigen beleid maken en dit markeren als de standaardinstelling van uw organisatie.
 
 >[!NOTE] De schatting van de omvang van het publiek is gebaseerd op het standaardbeleid voor het samenvoegen van profielen van de organisatie.
 
@@ -93,7 +94,7 @@ Deze geavanceerde functies worden in de volgende secties nader besproken.
 
 ## Opeenvolgende segmentatie {#sequential}
 
-Een standaardreis van de gebruiker is sequentieel van aard.  Met het Adobe Experience Platform kunt u een geordende reeks segmenten definiëren die deze reis weerspiegelen en zo sequenties van gebeurtenissen vastleggen zoals deze zich voordoen. U kunt gebeurtenissen in hun gewenste orde schikken door de visuele gebeurtenischronologie in de Bouwer van het Segment te gebruiken.
+Een standaardreis van de gebruiker is sequentieel van aard.  Met Adobe Experience Platform kunt u een geordende reeks segmenten definiëren die deze reis weerspiegelen en zo reeksen gebeurtenissen vastleggen zoals deze zich voordoen. U kunt gebeurtenissen in hun gewenste orde schikken door de visuele gebeurtenischronologie in de Bouwer van het Segment te gebruiken.
 
 Een voorbeeld van een klantenreis die opeenvolgende segmentatie zou vereisen zou productmening > product toevoegen > controle > Geen aankoop zijn.
 
@@ -209,7 +210,7 @@ Met datumgegevens kunt u op tijd gebaseerde context toewijzen aan uw segmentdefi
 
 ### Experience Events
 
-Als schema van het Platform van de Ervaring van Adobe, registreert XDM ExperienceEvents expliciete en impliciete klanteninteractie met Platform-geïntegreerde toepassingen, met inbegrip van een momentopname van het systeem op het tijdstip dat de interactie plaatsvond. ExperienceEvents zijn feitenverslagen. Als dusdanig, zijn zij een gegevensbron beschikbaar aan u tijdens segmentdefinitie.
+Als Adobe Experience Platform schema, registreert XDM ExperienceEvents expliciete en impliciete klanteninteractie met Platform-geïntegreerde toepassingen, met inbegrip van een momentopname van het systeem op het tijdstip dat de interactie plaatsvond. ExperienceEvents zijn feitenverslagen. Als dusdanig, zijn zij een gegevensbron beschikbaar aan u tijdens segmentdefinitie.
 
 Zoals in de onderstaande tabel wordt getoond, worden gebeurtenisgegevens weergegeven met behulp van trefwoorden die het gedrag van gebeurtenissen verfijnen en gebeurteniskenmerken opgeven.
 
