@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor de gebruikersinterface van Segment Builder
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
+source-git-commit: b5a425714b6d69ca241c8ad81eff779b993633a5
 workflow-type: tm+mt
-source-wordcount: '2562'
+source-wordcount: '2683'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ De evaluatiemethode kan streaming of batch zijn. Streaming segmenten worden voor
 
 De segmenten van de partij hebben extra informatie getoond, die zowel de laatste evaluatiedatum als de volgende evaluatiedatum voor de partij tonen.
 
-Als u in de rechterbovenhoek op Segment maken klikt, wordt de werkruimte Segment Builder geopend. Hier kunt u een segmentdefinitie maken. ****
+Als u in de rechterbovenhoek op Segment maken klikt, wordt de werkruimte van Segment Builder geopend. Hier kunt u een segmentdefinitie maken. ****
 
 ![](../images/segment-builder/segment-browse.png)
 
@@ -57,7 +57,7 @@ U kunt deze bouwstenen in de sectie van *Gebieden* op de linkerkant van de [!UIC
 
 ### Attributen
 
-Op het tabblad **[!UICONTROL Kenmerken]** kunt u door [!DNL Profile] kenmerken bladeren die tot de [!DNL XDM Individual Profile] klasse behoren. Elke map kan worden uitgevouwen om aanvullende kenmerken weer te geven. Elk kenmerk is een tegel die naar het canvas voor regelbuilders in het midden van de werkruimte kan worden gesleept. Het canvas van de [regelbouwer](#rule-builder-canvas) wordt meer in detail besproken later in deze gids.
+Op het tabblad **[!UICONTROL Kenmerken]** kunt u door [!DNL Profile] kenmerken bladeren die tot de [!DNL XDM Individual Profile] klasse behoren. Elke map kan worden uitgevouwen om extra kenmerken weer te geven. Elk kenmerk is een tegel die naar het canvas voor regelbuilders in het midden van de werkruimte kan worden gesleept. Het canvas van de [regelbouwer](#rule-builder-canvas) wordt meer in detail besproken later in deze gids.
 
 ![](../images/segment-builder/attributes.png)
 
@@ -103,11 +103,23 @@ Als u een nieuwe regel wilt toevoegen aan de segmentdefinitie, sleept u een tege
 
 U kunt een publiek van het lusje van het *[!UICONTROL Publiek]* op het canvas van de regelbouwer slepen en laten vallen om publiekslidmaatschap in de nieuwe segmentdefinitie te verwijzen. Dit staat u toe om publiekslidmaatschap als attribuut in de nieuwe segmentregel te omvatten of uit te sluiten.
 
-Voor [!DNL Platform] publiek dat gebruikend de Bouwer van het Segment wordt gecreeerd, wordt u gegeven de optie om het publiek in de reeks regels om te zetten die in de segmentdefinitie voor dat publiek werden gebruikt. Deze omzetting maakt een exemplaar van de regellogica, die dan kan worden gewijzigd zonder de originele segmentdefinitie te beïnvloeden.
+Voor [!DNL Platform] publiek dat gebruikend de Bouwer [!UICONTROL van het]Segment wordt gecreeerd, krijgt u de optie om het publiek in de reeks regels om te zetten die in de segmentdefinitie voor dat publiek werden gebruikt. Deze omzetting maakt een exemplaar van de regellogica, die dan kan worden gewijzigd zonder de originele segmentdefinitie te beïnvloeden. Zorg ervoor dat u recente wijzigingen in de segmentdefinitie hebt opgeslagen voordat u deze omzet in regellogica.
 
 >[!NOTE] Wanneer u een publiek uit een externe bron toevoegt, wordt alleen verwezen naar het publiekslidmaatschap. U kunt het publiek niet in regels omzetten, en daarom kunnen de regels die worden gebruikt om het originele publiek tot stand te brengen niet in de nieuwe segmentdefinitie worden gewijzigd.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
+
+Als er conflicten optreden wanneer een publiek wordt omgezet in regels, probeert [!UICONTROL Segment Builder] de bestaande opties optimaal te behouden.
+
+### Codeweergave
+
+Alternatief, kunt u een code-gebaseerde versie van een regel bekijken die in de Bouwer [!UICONTROL van het]Segment wordt gecreeerd. Zodra u uw regel binnen het canvas van de regelbouwer hebt gecreeerd, kunt u de mening **[!UICONTROL van de]** Code selecteren om uw segment als PQL te zien.
+
+![](../images/segment-builder/code-view.png)
+
+De mening van de code verstrekt een knoop die u toestaat om de waarde van het segment in API vraag te kopiëren. Om de recentste versie van het segment te krijgen, zorg ervoor u uw recentste veranderingen in het segment hebt bewaard.
+
+![](../images/segment-builder/copy-code.png)
 
 ## Containers
 
