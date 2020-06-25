@@ -4,9 +4,9 @@ seo-title: Gegevensbeheer in Real-time Customer Data Platform
 description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 seo-description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 translation-type: tm+mt
-source-git-commit: c81723d00f6b0a9338c8dd3be8c79385677b4e93
+source-git-commit: 490154c23b0ae764ac30b7e93d42b33d09b8a5d6
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1056'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ CDP in real time wordt voortgebouwd bovenop Adobe Experience Platform, en daarom
 
 * [Gebruikslabels toepassen op uw gegevens](#labels)
 * [Beleid voor gegevensgebruik beheren](#policies)
-* [Compatibiliteit met gegevensgebruik afdwingen](#enforcement)
+* [Compatibiliteit met gegevensgebruik afdwingen](#enforce-data-usage-compliance)
 
 ## Gebruikslabels toepassen op uw gegevens {#labels}
 
@@ -47,10 +47,7 @@ Om gegevensgebruikslabels effectief gegevensnaleving te steunen, moet het beleid
 
 Het Adobe Experience Platform verstrekt verscheidene **kernbeleid** voor de gemeenschappelijke gebruiksgevallen van de klantenervaring. Dit beleid kan in UI worden bekeken door aan de werkruimte van **[!UICONTROL Beleid]** te navigeren en het **[!UICONTROL Browse]** lusje te selecteren. Zie de gids [van de](../../data-governance/policies/user-guide.md) beleidsgebruiker in de documentatie van het Experience Platform voor meer gedetailleerde stappen bij het werken met beleid in UI, met inbegrip van hoe te om uw eigen douanebeleid te maken.
 
-## (bèta) Naleving van gegevensgebruik afdwingen {#enforce-data-usage-compliance}
-
->[!IMPORTANT]
->Deze functie is momenteel in bèta beschikbaar en niet voor alle gebruikers. Deze functie kan op verzoek worden ingeschakeld. De documentatie en de functionaliteit kunnen worden gewijzigd.
+## Compatibiliteit met gegevensgebruik afdwingen {#enforce-data-usage-compliance}
 
 Zodra de gegevens worden geëtiketteerd en het gebruiksbeleid wordt bepaald, kunt u de naleving van het gegevensgebruik met beleid afdwingen. Wanneer het activeren van publiekssegmenten aan bestemmingen in Echt - tijd CDP, dwingt het Beleid van Gegevens automatisch gebruiksbeleid af als om het even welke schendingen voorkomen.
 
