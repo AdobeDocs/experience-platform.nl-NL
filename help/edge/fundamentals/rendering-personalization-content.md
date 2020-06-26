@@ -1,12 +1,12 @@
 ---
 title: Aangepaste inhoud renderen
-seo-title: Adobe Experience Platform Web SDK Persoonlijke inhoud renderen
-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Platform van de Ervaring terug te geven
-seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Platform van de Ervaring terug te geven
+seo-title: Adobe Experience Platform Web SDK gepersonaliseerde inhoud renderen
+description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven
+seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Overzicht van opties voor personalisatie
 
-De Adobe Experience Platform Web SDK ondersteunt het opvragen van de personalisatieoplossingen bij Adobe, waaronder Adobe Target. Er zijn twee wijzen voor verpersoonlijking: ophalen, inhoud die automatisch kan worden gerenderd en inhoud die de ontwikkelaar moet renderen. De SDK biedt ook mogelijkheden om flikkering te [beheren](../../edge/solution-specific/target/flicker-management.md).
+De SDK van het Web van de Adobe Experience Platform steunt het vragen van de verpersoonlijkingsoplossingen bij Adobe, met inbegrip van Adobe Target. Er zijn twee wijzen voor verpersoonlijking: ophalen, inhoud die automatisch kan worden gerenderd en inhoud die de ontwikkelaar moet renderen. De SDK biedt ook mogelijkheden om flikkering te [beheren](../../edge/solution-specific/target/flicker-management.md).
 
 ## Inhoud automatisch renderen
 
@@ -90,9 +90,10 @@ Dit zal een lijst van besluiten als voorwerp JSON voor elke besluiten terugkeren
 }
 ```
 
-{info}Als u het werkingsgebied van het Doel wordt mBox op de server, slechts zijn zij alle verzoeken in één keer in plaats van individueel. Het globale mbox wordt altijd verzonden.
-{info}
+>[!TIP]
+>
+> Als u Target-bereik gebruikt als een box op de server, zijn alleen alle aanvragen tegelijk in plaats van afzonderlijk ingediend. Het globale mbox wordt altijd verzonden.
 
 ### Automatische inhoud ophalen
 
-Als u de automatische renderbare beslissingen wilt opnemen, kunt u instellen `result.decisions` `renderDecisions` op false en het speciale bereik opnemen `__view__`
+Als u wilt dat de automatische renderbare beslissingen in de selectie worden opgenomen, kunt u instellen `result.decisions` op false en het speciale bereik opnemen `renderDecisions` `__view__`.
