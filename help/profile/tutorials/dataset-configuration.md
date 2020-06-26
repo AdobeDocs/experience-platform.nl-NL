@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Een dataset voor profiel en identiteitsservice configureren met behulp van API's
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
+workflow-type: tm+mt
+source-wordcount: '1121'
+ht-degree: 0%
 
 ---
 
@@ -22,22 +25,22 @@ Deze zelfstudie behandelt het proces om een dataset voor gebruik in het Profiel 
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de verschillende services van het Adobe Experience Platform die betrokken zijn bij het beheer van voor profielen geschikte gegevenssets. Lees vóór het begin van deze zelfstudie de documentatie voor deze verwante platformservices:
+Dit leerprogramma vereist een werkend inzicht in de diverse diensten van het Adobe Experience Platform betrokken bij het beheren van profiel-Toegelaten datasets. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor deze verwante services voor Platforms:
 
 - [Klantprofiel](../home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [Identiteitsservice](../../identity-service/home.md): Laat het Profiel van de Klant in real time toe door identiteiten van ongelijke gegevensbronnen te overbruggen die in Platform worden opgenomen.
 - [Catalogusservice](../../catalog/home.md): Een RESTful API die u toestaat om datasets tot stand te brengen en hen voor de Dienst van het Profiel en van de Identiteit in real time te vormen.
-- [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor Platform gegevens van de klantenervaring organiseert.
+- [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Platform APIs te maken.
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan de Platform APIs te maken.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -47,7 +50,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 - Inhoudstype: application/json
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt. Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt. Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -245,7 +248,7 @@ Zowel in real time het Profiel van de Klant als de Dienst van de Identiteit verb
 
 ## Gegevens bevestigen die door het Profiel van de Klant in real time worden opgenomen {#confirm-data-ingest-by-real-time-customer-profile}
 
-Bij het voor het eerst uploaden van gegevens naar een nieuwe gegevensset of als onderdeel van een proces waarbij een nieuwe ETL of gegevensbron betrokken is, wordt aanbevolen de gegevens zorgvuldig te controleren om te controleren of deze op de verwachte wijze zijn geüpload. Gebruikend de Toegang API van het Profiel van de Klant in real time, kunt u partijgegevens terugwinnen aangezien het in een dataset wordt geladen. Als u om het even welke entiteiten niet kunt terugwinnen u verwacht, kan uw dataset niet voor het Profiel van de Klant in real time worden toegelaten. Na het bevestigen dat uw dataset is toegelaten, zorg ervoor dat uw brongegevensformaat en herkenningstekens uw verwachtingen steunen. Voor gedetailleerde instructies voor het gebruik van de Real-Time Customer Profile API voor toegang tot profielgegevens, volgt u de [subhandleiding voor entiteiten, ook wel de &quot;Profile Access API&quot;](../api/entities.md)genoemd.
+Bij het voor het eerst uploaden van gegevens naar een nieuwe gegevensset of als onderdeel van een proces waarbij een nieuwe ETL of gegevensbron betrokken is, wordt aanbevolen de gegevens zorgvuldig te controleren om te controleren of deze op de verwachte wijze zijn geüpload. Gebruikend de Toegang API van het Profiel van de Klant in real time, kunt u partijgegevens terugwinnen aangezien het in een dataset wordt geladen. Als u om het even welke entiteiten niet kunt terugwinnen u verwacht, kan uw dataset niet voor het Profiel van de Klant in real time worden toegelaten. Na het bevestigen dat uw dataset is toegelaten, zorg ervoor dat uw brongegevensformaat en herkenningstekens uw verwachtingen steunen. Voor gedetailleerde instructies over hoe te om de Real-time API van het Profiel van de Klant te gebruiken om tot de gegevens van het Profiel toegang te hebben, te volgen gelieve de gids [van het](../api/entities.md)entiteitseindpunt, die ook als &quot;API van de Toegang van het Profiel&quot;wordt bekend.
 
 ## Gegevens die door Identity Service worden ingevoerd bevestigen {#confirm-data-ingest-by-identity-service}
 
