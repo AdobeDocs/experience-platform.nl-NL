@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevens voorbereiden voor gebruik in intelligente services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 9a2e6f7db441b804f17ec91d06d359439c3d5da5
+source-git-commit: 9905f0248fe88bac5194560318cf8eced32ba93c
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1878'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Als uw gegevens buiten [!DNL Experience Platform]zijn opgeslagen, voert u de vol
 
 1. Neem contact op met de Adobe Consulting Services om toegangsreferenties aan te vragen voor een specifieke Azure Blob Storage-container.
 1. Upload uw gegevens naar de Blob-container met uw toegangsgegevens.
-1. Werk met Adobe Consulting Services om uw gegevens toe te wijzen aan het [Consumer ExperienceEvent-schema](#cee-schema) en deze in te voeren in Intelligente services.
+1. Als u werkt met Adobe Consulting Services, worden uw gegevens toegewezen aan het [Consumer ExperienceEvent-schema](#cee-schema) en opgenomen in Intelligent Services.
 
 ### [!DNL Experience Platform] gegevensvoorbereiding
 
@@ -41,6 +41,8 @@ Voer de onderstaande stappen uit als uw gegevens al zijn opgeslagen in [!DNL Pla
 
 Het schema Consumer ExperienceEvent beschrijft het gedrag van een individu aangezien het betrekking heeft op digitale marketing gebeurtenissen (web of mobiel) evenals online of off-line handelsactiviteit. Het gebruik van dit schema wordt vereist voor de Intelligente Diensten wegens zijn semantisch duidelijk bepaalde gebieden (kolommen), vermijdend om het even welke onbekende namen die anders de gegevens minder duidelijk zouden maken.
 
+Het CEE-schema legt, net als alle XDM ExperienceEvent-schema&#39;s, de op tijdreeksen gebaseerde status van het systeem vast wanneer een gebeurtenis (of set gebeurtenissen) plaatsvond, inclusief het tijdstip en de identiteit van het betreffende onderwerp. De gebeurtenissen van de ervaring zijn feitenverslagen van wat voorkwam, en zo zijn zij onveranderlijk en vertegenwoordigen wat gebeurde zonder samenvoeging of interpretatie.
+
 De intelligente Diensten gebruiken verscheidene zeer belangrijke gebieden binnen dit schema om inzichten van uw marketing gebeurtenisgegevens te produceren, die allen op het wortelniveau kunnen worden gevonden en worden uitgebreid om hun vereiste subfields te tonen.
 
 ![](./images/data-preparation/schema-expansion.gif)
@@ -51,13 +53,38 @@ Een volledig voorbeeld van de mix vindt u in de [openbare XDM-opslagplaats](http
 
 ## Hoofdvelden
 
-In de onderstaande secties worden de belangrijkste velden in de CEE-mix gemarkeerd die moeten worden gebruikt om intelligente services nuttige inzichten te laten genereren, waaronder beschrijvingen en koppelingen naar referentiedocumentatie voor meer voorbeelden.
+Er zijn verscheidene zeer belangrijke gebieden binnen de CEE mengeling die zou moeten worden gebruikt om de Intelligente Diensten nuttige inzichten te produceren. In deze sectie worden het gebruiksgeval en de verwachte gegevens voor deze velden beschreven en vindt u koppelingen naar de documentatie bij naslagwerken voor meer voorbeelden.
 
->[!IMPORTANT] Het `xdm:channel` veld (uitgelegd in de eerste sectie hieronder) is **vereist** om Attribution AI in staat te stellen met uw gegevens te werken, terwijl KlantAI geen verplichte velden heeft. Alle andere belangrijke velden worden sterk aanbevolen, maar niet verplicht.
+### Verplichte velden
 
-### xdm:kanaal
+Hoewel het gebruik van alle belangrijke gebieden sterk wordt aanbevolen, zijn er twee gebieden die **vereist** zijn om de Intelligente Diensten te laten werken:
 
-Dit gebied vertegenwoordigt het marketing kanaal met betrekking tot ExperienceEvent. Het veld bevat informatie over het kanaaltype, het mediatype en het locatietype. **Dit veld _moet_worden opgegeven voordat Attribution AI kan werken met uw gegevens**.
+* [Een primair identiteitsveld](#identity)
+* [xdm:tijdstempel](#timestamp)
+* [xdm:channel](#channel) (alleen verplicht voor AI-kenmerk)
+
+#### Primaire identiteit {#identity}
+
+Één van de gebieden in uw schema moet als primair identiteitsgebied worden geplaatst, dat de Intelligente Diensten toestaat om elke instantie van tijd-reeksgegevens aan een individuele persoon te verbinden.
+
+U moet bepalen welk veld het beste kan worden gebruikt als primaire identiteit op basis van de bron en de aard van uw gegevens. Een identiteitsveld moet een naamruimte **voor de** identiteit bevatten die het type identiteitsgegevens aangeeft dat het veld als waarde verwacht. Voorbeelden van geldige naamruimtewaarden zijn:
+
+* &quot;email&quot;
+* &quot;phone&quot;
+* &quot;mcid&quot; (voor Adobe Audience Manager-id&#39;s)
+* &quot;aid&quot; (voor Adobe Analytics-id&#39;s)
+
+Als u niet zeker weet welk veld u als primaire identiteit moet gebruiken, neemt u contact op met Adobe Consulting Services om de beste oplossing te bepalen.
+
+#### xdm:tijdstempel {#timestamp}
+
+Dit veld vertegenwoordigt de datum waarop de gebeurtenis heeft plaatsgevonden. Deze waarde moet worden opgegeven als een tekenreeks, volgens de ISO 8601-standaard.
+
+#### xdm:kanaal {#channel}
+
+>[!NOTE] Dit veld is alleen verplicht bij gebruik van Attribution AI.
+
+Dit gebied vertegenwoordigt het marketing kanaal met betrekking tot ExperienceEvent. Het veld bevat informatie over het kanaaltype, het mediatype en het locatietype.
 
 ![](./images/data-preparation/channel.png)
 
@@ -74,7 +101,7 @@ Dit gebied vertegenwoordigt het marketing kanaal met betrekking tot ExperienceEv
 
 Voor volledige informatie over elk van de vereiste subvelden voor `xdm:channel`, gelieve te verwijzen naar het schema [van het](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) ervaringskanaal. Zie de [tabel hieronder](#example-channels)voor een aantal voorbeeldtoewijzingen.
 
-#### Voorbeeldkanaaltoewijzingen {#example-channels}
+##### Voorbeeldkanaaltoewijzingen {#example-channels}
 
 In de volgende tabel staan enkele voorbeelden van marketingkanalen die zijn toegewezen aan het `xdm:channel` schema:
 
@@ -89,7 +116,11 @@ In de volgende tabel staan enkele voorbeelden van marketingkanalen die zijn toeg
 | Omleiding QR-code | https:/<span>/ns.adobe.com/xdm/channel-types/direct | eigendom | klikken |
 | Mobile | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | eigendom | klikken |
 
-### xdm:productListItems
+### Aanbevolen velden
+
+De overige belangrijke velden worden in deze sectie beschreven. Hoewel deze gebieden niet noodzakelijk voor de Intelligente Diensten aan het werk worden vereist, wordt het sterk geadviseerd dat u zo veel van hen zo veel mogelijk gebruikt om rijkere inzichten te bereiken.
+
+#### xdm:productListItems
 
 Dit veld is een array van items die producten vertegenwoordigen die door een klant zijn geselecteerd, waaronder de SKU, naam, prijs en hoeveelheid van het product.
 
@@ -118,7 +149,7 @@ Dit veld is een array van items die producten vertegenwoordigen die door een kla
 
 Voor volledige informatie over elk van de vereiste subvelden voor `xdm:productListItems`, gelieve te verwijzen naar het schema [van](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) handelsdetails.
 
-### xdm:handel
+#### xdm:handel
 
 Dit veld bevat handelspecifieke informatie over de ExperienceEvent, waaronder het inkoopordernummer en betalingsgegevens.
 
@@ -156,7 +187,7 @@ Dit veld bevat handelspecifieke informatie over de ExperienceEvent, waaronder he
 
 Voor volledige informatie over elk van de vereiste subvelden voor `xdm:commerce`, gelieve te verwijzen naar het schema [van](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) handelsdetails.
 
-### xdm:web
+#### xdm:web
 
 In dit veld worden de webdetails weergegeven die betrekking hebben op de ExperienceEvent, zoals de interactie, paginagegevens en de referentie.
 
@@ -186,7 +217,7 @@ In dit veld worden de webdetails weergegeven die betrekking hebben op de Experie
 
 Voor volledige informatie over elk van de vereiste subvelden voor `xdm:productListItems`, raadpleegt u de specificatie van het schema [voor](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) ExperienceEvent-webdetails.
 
-### xdm:marketing
+#### xdm:marketing
 
 Dit veld bevat informatie over marketingactiviteiten die actief zijn met het aanraakpunt.
 
@@ -234,7 +265,13 @@ Zodra u het schema hebt gecreeerd en bewaard, kunt u een nieuwe dataset tot stan
 * [Creeer een dataset in UI](../catalog/datasets/user-guide.md#create) (volg het werkschema voor het gebruiken van een bestaand schema)
 * [Een gegevensset maken in de API](../catalog/datasets/create.md)
 
+Nadat de dataset wordt gecreeerd, kunt u het in het Platform UI binnen de *[!UICONTROL werkruimte van Datasets]* vinden.
+
+![](images/data-preparation/dataset-location.png)
+
 #### Een primaire naamruimte-tag toevoegen aan de gegevensset
+
+>[!NOTE] De toekomstige versies van Intelligente Diensten zullen de Dienst [van de Identiteit van het](../identity-service/home.md) Adobe Experience Platform in hun mogelijkheden van de klantenidentificatie integreren. De hieronder beschreven stappen kunnen dan ook worden gewijzigd.
 
 Als u gegevens uit [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]of een andere externe bron inbrengt, dan moet u een `primaryIdentityNameSpace` markering aan de dataset toevoegen. Dit kan worden gedaan door een PATCH- verzoek aan de Dienst API van de Catalogus te doen.
 
@@ -312,7 +349,7 @@ Als uw gegevens in een gesteunde derdetoepassing worden opgeslagen, kunt u ook v
 
 ## Volgende stappen {#next-steps}
 
-Dit document bevat algemene richtlijnen voor het voorbereiden van uw gegevens voor gebruik in Intelligente services. Neem contact op met de Technische Ondersteuning van Adobe als u extra advies nodig hebt op basis van uw gebruikscase.
+Dit document bevat algemene richtlijnen voor het voorbereiden van gegevens voor gebruik in Intelligente services. Neem contact op met de Technische Ondersteuning van Adobe als u extra advies nodig hebt op basis van uw gebruikscase.
 
 Zodra u met succes een dataset met uw gegevens van de klantenervaring hebt bevolkt, kunt u de Intelligente Diensten gebruiken om inzichten te produceren. Raadpleeg de volgende documenten om aan de slag te gaan:
 
