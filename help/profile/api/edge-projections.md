@@ -4,21 +4,21 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1919'
 ht-degree: 0%
 
 ---
 
 
-# Edge-bestemmingen en -prognoses
+# Edge-projectieconfiguraties en eindpunten van doelen
 
-Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in real time te drijven, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Met het Adobe Experience Platform hebt u in real-time toegang tot gegevens via zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Adobe-toepassingen zoals Adobe Target en Adobe Campaign maken bijvoorbeeld gebruik van randen om klanten in real-time persoonlijke ervaringen te bieden. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Deze handleiding bevat gedetailleerde instructies voor het gebruik van de Real-Time Customer Profile API voor het werken met randprojecties, inclusief bestemmingen en configuraties.
+Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in real time te drijven, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe Experience Platform maakt deze realtime toegang tot gegevens mogelijk via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Adobe-toepassingen zoals Adobe Target en Adobe Campaign gebruiken bijvoorbeeld randen voor persoonlijke ervaringen van klanten in real-time. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Deze handleiding bevat gedetailleerde instructies voor het gebruik van de Real-Time Customer Profile API voor het werken met randprojecties, inclusief bestemmingen en configuraties.
 
 ## Aan de slag
 
-De API eindpunten die in deze gids worden gebruikt maken deel uit van Real-time API van het Profiel van de Klant. Lees voordat u verdergaat de handleiding voor ontwikkelaars van [realtime klantprofiel](getting-started.md). Met name bevat de sectie [Aan de](getting-started.md#getting-started) slag van de handleiding voor ontwikkelaars van profielen koppelingen naar verwante onderwerpen, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar API&#39;s van het Experience Platform met succes uit te voeren.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van het [Real-time Profiel van de Klant API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar elke Experience Platform-API te kunnen uitvoeren.
 
 >[!NOTE]
 >Voor aanvragen die een payload (POST, PUT, PATCH) bevatten, is een `Content-Type` header vereist. In dit document `Content-Type` wordt meer dan één teken gebruikt. Gelieve te letten speciaal op de kopballen in de steekproefvraag om ervoor te zorgen u het correcte `Content-Type` voor elk verzoek gebruikt.
@@ -171,7 +171,7 @@ Een geslaagde reactie retourneert de details van het nieuwe randdoel, inclusief 
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `self.href` | Dit pad wordt gebruikt om de bestemming rechtstreeks op te zoeken (GET) en kan ook worden gebruikt om de bestemming bij te werken (PUT) of te verwijderen (DELETE). |
+| `self.href` | Dit pad wordt gebruikt om de bestemming rechtstreeks op te zoeken (GET) en kan ook worden gebruikt voor het bijwerken (PUT) of het verwijderen (DELETE) van de bestemming. |
 | `id` | De alleen-lezen, door het systeem gegenereerde unieke id voor de bestemming. Deze id wordt gebruikt om rechtstreeks naar de bestemming te verwijzen en wanneer het creëren van projectieconfiguraties. |
 | `version` | Deze alleen-lezen waarde toont de huidige versie van het doel. Wanneer een doel wordt bijgewerkt, wordt het versienummer automatisch verhoogd. |
 
@@ -292,7 +292,7 @@ De reactie omvat de bijgewerkte details voor de bestemming, met inbegrip van zij
 
 ### Een doel verwijderen
 
-Als uw organisatie niet meer een projectiebestemming vereist, kan het worden geschrapt door een verzoek van de VERWIJDERING aan het `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming te maken die u wenst om in de verzoekweg te schrappen.
+Als uw organisatie niet meer een projectiebestemming vereist, kan het worden geschrapt door een DELETE verzoek aan het `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming te doen die u wenst om in de verzoekweg te schrappen.
 
 >[!CAUTION]
 >De API-reactie op het verwijderingsverzoek is onmiddellijk, maar de werkelijke wijzigingen in de gegevens aan de randen worden asynchroon uitgevoerd. Met andere woorden, de profielgegevens worden verwijderd van alle randen (de `dataCenters` opgegeven randen in de projectiebestemming), maar het proces duurt even voordat het is voltooid.
@@ -639,4 +639,4 @@ Retourneert alleen de waarden van de waarden `type` en `city` velden voor elk el
 
 ## Volgende stappen
 
-Deze gids heeft u de stappen getoond betrokken om randprojecties en bestemmingen te vormen, met inbegrip van hoe te om de `selector` parameter behoorlijk te formatteren. U kunt nu nieuwe randbestemmingen en prognoses maken die specifiek zijn voor de behoeften van uw organisatie. Zie de handleiding voor ontwikkelaars van de [realtime-API voor klantprofielen voor meer informatie over extra acties die beschikbaar zijn via de profiel-API](getting-started.md).
+Deze gids heeft u de stappen getoond betrokken om prognoses en bestemmingen te vormen, met inbegrip van hoe te om de `selector` parameter behoorlijk te formatteren. U kunt nieuwe projectiebestemmingen en configuraties nu tot stand brengen specifiek voor de behoeften van uw organisatie.
