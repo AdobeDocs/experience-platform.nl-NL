@@ -4,31 +4,32 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+workflow-type: tm+mt
+source-wordcount: '2431'
+ht-degree: 0%
 
 ---
 
 
-# (Alpha) Berekende kenmerken
+# (Alpha) Berekend kenmerkeindpunt
 
 >[!IMPORTANT]
 >De berekende kenmerkfunctionaliteit die in dit document wordt beschreven, bevindt zich momenteel in alfa en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op basis van andere waarden, berekeningen en expressies. De berekende attributen werken op het profielniveau, betekenend kunt u waarden over alle verslagen en gebeurtenissen bijeenvoegen.
 
-Elk berekend kenmerk bevat een expressie, of &#39;regel&#39;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren.
+Elk berekend kenmerk bevat een expressie, ofwel &quot;rule&quot;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren.
 
-Deze handleiding helpt u meer inzicht te krijgen in berekende kenmerken in het Adobe Experience Platform en bevat voorbeelden van API-aanroepen voor het uitvoeren van standaard CRUD-bewerkingen met behulp van het `/config/computedAttributes` eindpunt.
+Deze gids zal u helpen om gegevens verwerkte attributen binnen Adobe Experience Platform beter te begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisCRUD verrichtingen gebruikend het `/config/computedAttributes` eindpunt.
 
 ## Aan de slag
 
-De API eindpunten die in deze gids worden gebruikt maken deel uit van Real-time API van het Profiel van de Klant. Lees voordat u verdergaat de handleiding voor ontwikkelaars van [realtime klantprofiel](getting-started.md).
-
-Met name bevat de sectie [Aan de](getting-started.md) slag van de handleiding voor ontwikkelaars van profielen koppelingen naar verwante onderwerpen, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar API&#39;s van het Experience Platform met succes uit te voeren.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van het [Real-time Profiel van de Klant API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar elke Experience Platform-API te kunnen uitvoeren.
 
 ## Berekende kenmerken begrijpen
 
-Met het Adobe Experience Platform kunt u eenvoudig gegevens uit meerdere bronnen importeren en samenvoegen om realtime klantprofielen te genereren. Elk profiel bevat belangrijke informatie met betrekking tot een persoon, zoals zijn contactgegevens, voorkeuren en aankoopgeschiedenis, die een 360 graden mening van de klant verstrekken.
+Met Adobe Experience Platform kunt u eenvoudig gegevens uit meerdere bronnen importeren en samenvoegen om realtime klantprofielen te genereren. Elk profiel bevat belangrijke informatie met betrekking tot een persoon, zoals zijn contactgegevens, voorkeuren en aankoopgeschiedenis, die een 360 graden mening van de klant verstrekken.
 
 Een deel van de informatie die in het profiel wordt verzameld, is gemakkelijk te begrijpen wanneer de gegevensvelden rechtstreeks worden gelezen (bijvoorbeeld &quot;voornaam&quot;), terwijl andere gegevens meerdere berekeningen vereisen of op andere velden en waarden vertrouwen om de informatie te genereren (bijvoorbeeld &quot;totaal voor levenslange aanschaf&quot;). Om deze gegevens in één oogopslag begrijpelijker te maken, kunt u met Platform **berekende kenmerken** maken die deze verwijzingen en berekeningen automatisch uitvoeren en de waarde in het juiste veld retourneren.
 
@@ -55,7 +56,7 @@ Het werkschema in deze zelfstudie gebruikt een profiel-toegelaten schema en volg
 
 ### Een schema weergeven
 
-In de volgende stappen wordt de gebruikersinterface van het Adobe Experience Platform gebruikt om een schema te zoeken, een mix toe te voegen en een veld te definiëren. Als u verkiest om de Registratie API van het Schema te gebruiken, te verwijzen gelieve naar de ontwikkelaarsgids [van het](../../xdm/api/getting-started.md) Schemaregister voor stappen op hoe te om een mixin tot stand te brengen, een mengeling aan een schema toe te voegen, en een schema voor gebruik met het Profiel van de Klant in real time toe te laten.
+De stappen die volgen gebruiken het gebruikersinterface van het Adobe Experience Platform om van een schema de plaats te bepalen, een mengeling toe te voegen, en een gebied te bepalen. Als u verkiest om de Registratie API van het Schema te gebruiken, te verwijzen gelieve naar de ontwikkelaarsgids [van het](../../xdm/api/getting-started.md) Schemaregister voor stappen op hoe te om een mixin tot stand te brengen, een mengeling aan een schema toe te voegen, en een schema voor gebruik met het Profiel van de Klant in real time toe te laten.
 
 Klik in de gebruikersinterface op **Schema** &#39;s in het linkerspoor en gebruik de zoekbalk op het tabblad *Bladeren* om snel het schema te zoeken dat u wilt bijwerken.
 
@@ -151,7 +152,7 @@ curl -X POST \
 | `{TENANT_ID}` | Als u niet vertrouwd met uw huurdersidentiteitskaart bent, gelieve te verwijzen naar de stappen voor het vinden van uw huurdersidentiteitskaart in de ontwikkelaarsgids [van de Registratie van het](../../xdm/api/getting-started.md#know-your-tenant_id)Schema. |
 | `description` | Een beschrijving van het berekende kenmerk. Dit is vooral handig als er meerdere berekende kenmerken zijn gedefinieerd, omdat hierdoor anderen binnen uw IMS-organisatie kunnen bepalen welk kenmerk correct moet worden berekend. |
 | `expression.value` | Een geldige PQL-expressie (Profile Query Language). Lees het [PQL-overzicht](../../segmentation/pql/overview.md)voor meer informatie over PQL en koppelingen naar ondersteunde query&#39;s. |
-| `schema.name` | De klasse waarop het schema met het berekende kenmerkveld is gebaseerd. Voorbeeld: `_xdm.context.experienceevent` voor een schema dat op de klasse XDM ExperienceEvent wordt gebaseerd. |
+| `schema.name` | De klasse waarop het schema met het berekende kenmerkveld is gebaseerd. Voorbeeld: `_xdm.context.experienceevent` voor een schema op basis van de klasse XDM ExperienceEvent. |
 
 **Antwoord**
 
@@ -479,10 +480,10 @@ Een geslaagde update retourneert HTTP Status 204 (Geen inhoud) en een lege antwo
 
 ## Een berekend kenmerk verwijderen
 
-Het is ook mogelijk om een berekend attribuut te schrappen gebruikend API. Dit wordt gedaan door een verzoek van de SCHRAPPING aan het `/config/computedAttributes` eindpunt en met inbegrip van identiteitskaart van de gegevens verwerkte attributen te doen die u wenst om in de verzoekweg te schrappen.
+Het is ook mogelijk om een berekend attribuut te schrappen gebruikend API. Dit wordt gedaan door een DELETE verzoek aan het `/config/computedAttributes` eindpunt en met inbegrip van identiteitskaart van de gegevens verwerkte attributen te doen die u wenst om in de verzoekweg te schrappen.
 
 >[!Nofferte]
->Wees voorzichtig bij het verwijderen van een berekend kenmerk, aangezien dit in meerdere schema&#39;s wordt gebruikt en de DELETE-bewerking niet ongedaan kan worden gemaakt.
+>Wees voorzichtig bij het verwijderen van een kenmerk dat u hebt berekend, omdat het in meerdere schema&#39;s wordt gebruikt en de DELETE bewerking niet ongedaan kan worden gemaakt.
 
 **API-indeling**
 
