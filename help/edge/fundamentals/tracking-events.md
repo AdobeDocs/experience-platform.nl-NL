@@ -1,12 +1,12 @@
 ---
 title: Gebeurtenissen bijhouden
-seo-title: Gebeurtenissen van Adobe Experience Platform Web SDK bijhouden
-description: Leer hoe te om de gebeurtenissen van het Web SDK van het Platform van de Ervaring te volgen
-seo-description: Leer hoe te om de gebeurtenissen van het Web SDK van het Platform van de Ervaring te volgen
+seo-title: Gebeurtenissen van SDK van Adobe Experience Platform Web volgen
+description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience Platforms te volgen
+seo-description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience Platforms te volgen
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Gebeurtenissen bijhouden
 
-Gebruik de `sendEvent` opdracht om gebeurtenisgegevens naar de Adobe Experience Cloud te verzenden. Het `sendEvent` bevel is de primaire manier om gegevens naar de Wolk van de Ervaring te verzenden, en gepersonaliseerde inhoud, identiteiten, en publieksbestemmingen terug te winnen.
+Gebruik de `sendEvent` opdracht om gebeurtenisgegevens naar de Adobe Experience Cloud te verzenden. Het `sendEvent` bevel is de primaire manier om gegevens naar Experience Cloud te verzenden, en gepersonaliseerde inhoud, identiteiten, en publieksbestemmingen terug te winnen.
 
 Gegevens die naar Adobe Experience Cloud worden verzonden, vallen in twee categorieën:
 
@@ -23,9 +23,9 @@ Gegevens die naar Adobe Experience Cloud worden verzonden, vallen in twee catego
 
 ## XDM-gegevens verzenden
 
-XDM-gegevens zijn een object waarvan de inhoud en structuur overeenkomen met een schema dat u in Adobe Experience Platform hebt gemaakt. [Meer informatie over het maken van een schema.](../../xdm/tutorials/create-schema-ui.md)
+XDM-gegevens zijn een object waarvan de inhoud en structuur overeenkomen met een schema dat u binnen het Adobe Experience Platform hebt gemaakt. [Meer informatie over het maken van een schema.](../../xdm/tutorials/create-schema-ui.md)
 
-Om het even welke gegevens XDM u deel van uw analyses, verpersoonlijking, publiek, of bestemmingen zou moeten worden verzonden gebruikend de `xdm` optie.
+Om het even welke gegevens XDM die u deel van uw analyses, verpersoonlijking, publiek, of bestemmingen zou willen uitmaken zouden moeten worden verzonden gebruikend de `xdm` optie.
 
 ```javascript
 alloy("sendEvent", {
@@ -82,7 +82,7 @@ alloy("sendEvent", {
 
 ## De sendBeacon-API gebruiken
 
-Het kan lastig zijn om gebeurtenisgegevens te verzenden vlak voordat de gebruiker van de webpagina weg is genavigeerd. Als de aanvraag te lang duurt, kan de browser de aanvraag annuleren. Sommige browsers hebben een webstandaard-API geïmplementeerd, die wordt aangeroepen `sendBeacon` om gegevens tijdens deze periode gemakkelijker te kunnen verzamelen. Wanneer `sendBeacon`de browser wordt gebruikt, wordt de webaanvraag uitgevoerd in de algemene browsercontext. Dit betekent browser maakt het bakenverzoek op de achtergrond en houdt niet de paginanavigatie op. Om Adobe Experience Platform Web SDK te vertellen om te gebruiken `sendBeacon`, voeg de optie `"documentUnloading": true` aan het gebeurtenisbevel toe.  Hier volgt een voorbeeld:
+Het kan lastig zijn om gebeurtenisgegevens te verzenden vlak voordat de gebruiker van de webpagina weg is genavigeerd. Als de aanvraag te lang duurt, kan de browser de aanvraag annuleren. Sommige browsers hebben een webstandaard-API geïmplementeerd, die wordt aangeroepen `sendBeacon` om gegevens tijdens deze periode gemakkelijker te kunnen verzamelen. Wanneer `sendBeacon`de browser wordt gebruikt, wordt de webaanvraag uitgevoerd in de algemene browsercontext. Dit betekent browser maakt het bakenverzoek op de achtergrond en houdt niet de paginanavigatie op. Om het Web SDK van het Adobe Experience Platform te vertellen om te gebruiken `sendBeacon`, voeg de optie `"documentUnloading": true` aan het gebeurtenisbevel toe.  Hier volgt een voorbeeld:
 
 ```javascript
 alloy("sendEvent", {
@@ -100,7 +100,7 @@ alloy("sendEvent", {
 });
 ```
 
-Browsers hebben limieten ingesteld voor de hoeveelheid gegevens die `sendBeacon` tegelijk kan worden verzonden. In veel browsers is de limiet 64 kB. Als browser de gebeurtenis verwerpt omdat de nuttige lading te groot is, valt het Web SDK van Adobe Experience Platform terug naar het gebruiken van zijn normale vervoermethode (bijvoorbeeld, halen).
+Browsers hebben limieten ingesteld voor de hoeveelheid gegevens die `sendBeacon` tegelijk kan worden verzonden. In veel browsers is de limiet 64 kB. Als browser de gebeurtenis verwerpt omdat de lading te groot is, valt het Web SDK van het Adobe Experience Platform terug naar het gebruiken van zijn normale vervoermethode (bijvoorbeeld, halen).
 
 ## Reacties van gebeurtenissen afhandelen
 
