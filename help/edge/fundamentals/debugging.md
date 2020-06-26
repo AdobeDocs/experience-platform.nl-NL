@@ -1,12 +1,12 @@
 ---
 title: Foutopsporing
-seo-title: Foutopsporing in Adobe Experience Platform Web SDK
-description: Leer hoe u foutopsporing voor Web SDK van platform kunt gebruiken
-seo-description: Leer hoe u foutopsporing voor Web SDK van platform kunt gebruiken
+seo-title: Foutopsporing in SDK van Adobe Experience Platform Web
+description: Leer hoe te om het zuiveren van SDK van het Web van het Experience Platform van een knevel te voorzien
+seo-description: Leer hoe te om het zuiveren van SDK van het Web van het Experience Platform van een knevel te voorzien
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Wanneer het zuiveren wordt toegelaten, voert SDK berichten aan de browser console uit die in het zuiveren van uw implementatie en het begrijpen van kunnen nuttig zijn hoe SDK zich gedraagt. Het zuiveren resulteert ook in een server-zijsynchrone bevestiging van de gegevens die tegen het schema worden verzameld u hebt gevormd.
 
-Foutopsporing is standaard uitgeschakeld, maar u kunt deze op drie verschillende manieren in- en uitschakelen:
+Foutopsporing is standaard uitgeschakeld, maar u kunt dit op drie verschillende manieren in- en uitschakelen:
 
 * `configure` command
 * `setDebug` command
@@ -34,7 +34,8 @@ alloy("configure", {
 });
 ```
 
->[!Hint]
+>[!TIP]
+>
 >Hierdoor wordt foutopsporing ingeschakeld voor alle gebruikers van de webpagina in plaats van alleen voor uw persoonlijke browser.
 
 ## Foutopsporing schakelen met de opdracht Foutopsporing
@@ -61,7 +62,7 @@ Net als bij de `debug` opdracht is dit vooral handig als u geen code op uw webpa
 
 ## Prioriteit en duur
 
-Wanneer het zuiveren door het `debug` bevel of de parameter van het vraagkoord wordt geplaatst, treedt het om het even welke `debug` optie met voeten die in het `configure` bevel wordt geplaatst. In deze twee gevallen, blijft het zuiveren ook knevels voor de duur van de zitting. Met andere woorden, als u het zuiveren gebruikend zuivert bevel of de parameter van het vraagkoord toelaat, blijft het toegelaten tot één van het volgende:
+Wanneer het zuiveren door het `debug` bevel of de parameter van het vraagkoord wordt geplaatst, treedt het om het even welke `debug` optie met voeten die in het `configure` bevel wordt geplaatst. In deze twee gevallen blijft foutopsporing ook ingeschakeld gedurende de sessie. Met andere woorden, als u het zuiveren gebruikend zuivert bevel of de parameter van het vraagkoord toelaat, blijft het toegelaten tot één van het volgende:
 
 * Het einde van uw sessie
 * U voert het `debug` bevel in werking
