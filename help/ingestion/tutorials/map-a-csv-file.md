@@ -4,81 +4,120 @@ solution: Experience Platform
 title: Een CSV-bestand toewijzen aan een XDM-schema
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
+source-git-commit: 7876e6d52815968802bd73bb5e340c99ea3387a8
+workflow-type: tm+mt
+source-wordcount: '1354'
+ht-degree: 1%
 
 ---
 
 
 # Een CSV-bestand toewijzen aan een XDM-schema
 
-Als u CSV-gegevens wilt opnemen in het Adobe Experience Platform, moeten de gegevens worden toegewezen aan een XDM-schema (Experience Data Model). In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand met behulp van de gebruikersinterface van het Experience Platform toewijst aan een XDM-schema.
+Om CSV-gegevens in te voeren [!DNL Adobe Experience Platform], moeten de gegevens worden toegewezen aan een [!DNL Experience Data Model] (XDM)-schema. In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand via de [!DNL Platform] gebruikersinterface kunt toewijzen aan een XDM-schema.
 
 Daarnaast bevat het aanhangsel bij deze zelfstudie nadere informatie over het gebruik van [toewijzingsfuncties](#mapping-functions).
 
 ## Aan de slag
 
-Voor deze zelfstudie is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van [!DNL Platform]:
 
-- [Experience Data Model (XDM-systeem)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
-- [Inname](../batch-ingestion/overview.md)in batch: De methode waarmee Platform gegevens uit door de gebruiker opgegeven gegevensbestanden opneemt.
+- [!DNL Experience Data Model (XDM System)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
+- [!DNL Batch ingestion](../batch-ingestion/overview.md): De methode waarmee gegevens uit door de gebruiker opgegeven gegevensbestanden worden [!DNL Platform] ingesloten.
 
 Deze zelfstudie vereist ook dat u al een dataset hebt gemaakt om uw CSV-gegevens in te voeren. Voor stappen bij het creëren van een dataset in UI, zie de [gegevens ingest leerprogramma](./ingest-batch-data.md).
 
+## Kies een bestemming
+
+Meld u aan bij [!DNL Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Workflows]** in de linkernavigatiebalk voor toegang tot de *[!UICONTROL werkruimte Workflows]* .
+
+Selecteer in het scherm **[!UICONTROL Workflows]** de optie CSV **[!UICONTROL toewijzen aan XDM-schema]** onder de sectie **[!UICONTROL Gegevensinvoer]** en selecteer vervolgens **[!UICONTROL Starten]**.
+
+![](../images/tutorials/map-a-csv-file/workflows.png)
+
+De werkstroom CSV *[!UICONTROL toewijzen aan XDM-schema]* wordt weergegeven, te beginnen bij de stap *[!UICONTROL Doel]* . Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U kunt of een bestaande dataset gebruiken of nieuwe creëren.
+
+**Een bestaande gegevensset gebruiken**
+
+Om uw CSV- gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Gebruik bestaande dataset]**. U kunt of een bestaande dataset terugwinnen gebruikend de onderzoeksfunctie of door door de lijst van bestaande datasets in het paneel te scrollen.
+
+![](../images/tutorials/map-a-csv-file/use-existing-dataset.png)
+
+Als u uw CSV-gegevens wilt opnemen in een nieuwe gegevensset, selecteert u **[!UICONTROL Nieuwe gegevensset]** maken en voert u een naam en een beschrijving in voor de gegevensset in de velden die u opgeeft. Selecteer een schema door of de onderzoeksfunctie te gebruiken of door door de lijst van schema&#39;s te scrollen verstrekt. Selecteer **[!UICONTROL Volgende]** om door te gaan.
+
+![](../images/tutorials/map-a-csv-file/create-new-dataset.png)
+
 ## Gegevens toevoegen
 
-Klik in de gebruikersinterface van het ervaringsplatform op **Workflows** in de linkernavigatie en klik vervolgens op CSV **toewijzen aan XDM-schema**. Klik in het rechterspoor dat wordt weergegeven op **Starten**.
-
-![](../images/tutorials/map-a-csv-file/workflow-tab.png)
-
-De werkstroom CSV _toewijzen aan XDM-schema_ wordt weergegeven, te beginnen bij de stap Gegevens __ toevoegen.
+De stap Gegevens ** toevoegen wordt weergegeven. Sleep het CSV-bestand naar de beschikbare ruimte en zet het neer of selecteer Bestanden **** kiezen om het CSV-bestand handmatig in te voeren.
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-Sleep het CSV-bestand naar de beschikbare ruimte en zet het neer, of klik op **Bladeren** om een bestand rechtstreeks te selecteren. Nadat het bestand is geüpload, wordt een _sectie met voorbeeldgegevens_ weergegeven met daarin de eerste tien rijen met gegevens. Als u hebt bevestigd dat de gegevens naar behoren zijn geüpload, klikt u op **Volgende**.
+De sectie *[!UICONTROL Voorbeeldgegevens]* wordt weergegeven wanneer het bestand is geüpload. De eerste tien rijen met gegevens worden weergegeven. Nadat u hebt bevestigd dat de gegevens naar behoren zijn geüpload, selecteert u **[!UICONTROL Volgende]**.
 
-![](../images/tutorials/map-a-csv-file/csv-added.png)
-
-## Kies een bestemming
-
-De stap _Doel_ wordt weergegeven. Van de verstrekte lijst, selecteer de dataset dat de gegevens CSV in zullen worden opgenomen, dan klik **daarna**.
-
-![](../images/tutorials/map-a-csv-file/select-destination.png)
+![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## CSV-velden toewijzen aan XDM-schemavelden
 
-De stap _Toewijzing_ wordt weergegeven. De kolommen van het CSV-bestand worden weergegeven onder _Bronveld_, met de bijbehorende XDM-schemavelden onder _Doelveld_. Niet-geselecteerde doelvelden krijgen een rode omtrek.
+De stap *[!UICONTROL Toewijzing]* wordt weergegeven. De kolommen van het CSV-bestand worden weergegeven onder *[!UICONTROL Bronveld]*, met de bijbehorende XDM-schemavelden onder *[!UICONTROL Target-veld]*. Niet-geselecteerde doelvelden krijgen een rode omtrek. Met de optie Filtervelden kunt u de lijst met beschikbare bronvelden verkleinen.
 
-Als u een CSV-kolom wilt toewijzen aan een XDM-veld, klikt u op het schemapictogram naast het bijbehorende doelveld van de kolom.
+Als u een CSV-kolom wilt toewijzen aan een XDM-veld, selecteert u het schemapictogram naast het bijbehorende doelveld van de kolom.
 
-![](../images/tutorials/map-a-csv-file/target-field-mapping.png)
+![](../images/tutorials/map-a-csv-file/mapping.png)
 
-Het venster _Selectieschemaveld_ wordt weergegeven. Hier kunt u de structuur van het XDM-schema navigeren en van het gebied de plaats bepalen u wenst om de kolom in kaart te brengen CSV aan. Klik op een XDM-veld om dit te selecteren en klik vervolgens op **Selecteren**.
+Het venster *[!UICONTROL Selectieschemaveld]* wordt weergegeven. Hier kunt u de structuur van het XDM-schema navigeren en van het gebied de plaats bepalen u wenst om de kolom in kaart te brengen CSV aan. Klik op een XDM-veld om dit te selecteren en klik vervolgens op **[!UICONTROL Selecteren]**.
 
-![](../images/tutorials/map-a-csv-file/xdm-field-selection.png)
+![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-Het scherm _Toewijzing_ wordt opnieuw weergegeven, waarbij het geselecteerde XDM-veld nu wordt weergegeven onder _Doelveld_.
+Het scherm *[!UICONTROL Toewijzing]* wordt opnieuw weergegeven, waarbij het geselecteerde XDM-veld nu wordt weergegeven onder *[!UICONTROL Target-veld]*.
 
-![](../images/tutorials/map-a-csv-file/xdm-field-mapped.png)
+![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
-Als u geen bepaalde CSV-kolom wilt toewijzen, kunt u de toewijzing verwijderen door op het pictogram **** Verwijderen naast het doelveld te klikken. Als u een nieuwe afbeelding wilt toevoegen, klikt u op Nieuwe toewijzing **** toevoegen onder aan de lijst.
+Als u geen bepaalde CSV-kolom wilt toewijzen, kunt u de toewijzing verwijderen door op het pictogram **** Verwijderen naast het doelveld te klikken. U kunt ook alle toewijzingen verwijderen door de knop **[!UICONTROL Alle toewijzingen]** wissen te selecteren.
 
-![](../images/tutorials/map-a-csv-file/remove-or-add-mapping.png)
+![](../images/tutorials/map-a-csv-file/remove-mapping.png)
+
+Als u een nieuwe afbeelding wilt toevoegen, selecteert u Nieuwe toewijzing **** toevoegen boven aan de lijst *[!UICONTROL Bronveld]* .
+
+![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 Bij het toewijzen van velden kunt u ook functies opnemen om waarden te berekenen op basis van invoerbronvelden. Zie de sectie [toewijzingsfuncties](#mapping-functions) in de bijlage voor meer informatie.
 
-Herhaal bovenstaande stappen om CSV-kolommen verder toe te wijzen aan XDM-velden. Als u klaar bent, klikt u op **Volgende**.
+### Berekend veld toevoegen
 
-![](../images/tutorials/map-a-csv-file/mapping-finish.png)
+Met berekende velden kunnen waarden worden gemaakt op basis van de kenmerken in het invoerschema. Deze waarden kunnen vervolgens aan kenmerken in het doelschema worden toegewezen en een naam en beschrijving worden gegeven om de referentie eenvoudiger te maken.
 
-## Gegevens samenvoegen
+Selecteer de knop Berekend veld **** toevoegen om door te gaan.
 
-De stap _Samenvatting_ verschijnt, toestaand u om de details van uw brondossier en doeldataset te herzien. Klik op **Samenvatting** om de CSV-gegevens in te voeren. Afhankelijk van de grootte van het CSV-bestand kan dit proces enkele minuten duren. Het scherm wordt bijgewerkt zodra de inname is voltooid, wat aangeeft of de opname is gelukt of mislukt. Klik op **Voltooien** om de workflow te voltooien.
+![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
-![](../images/tutorials/map-a-csv-file/ingest-data.png)
+Het **[!UICONTROL deelvenster Berekend veld]** maken wordt weergegeven. Het linkerdialoogvenster bevat de velden, functies en operatoren die in berekende velden worden ondersteund. Selecteer een van de tabbladen om functies, velden of operatoren toe te voegen aan de expressie-editor.
+
+![](../images/tutorials/map-a-csv-file/create-calculated-fields.png)
+
+| Tab | Beschrijving |
+| --------- | ----------- |
+| Velden | Het tabblad Veld bevat velden en kenmerken die beschikbaar zijn in het bronschema. |
+| Functies | Op het tabblad Functies staan de functies die beschikbaar zijn voor het transformeren van de gegevens. |
+| Operatoren | Het tabblad Operatoren bevat een lijst met operatoren die beschikbaar zijn om de gegevens te transformeren. |
+
+U kunt handmatig velden, functies en operatoren toevoegen met de expressieeditor in het midden. Selecteer de editor om een expressie te maken.
+
+![](../images/tutorials/map-a-csv-file/expression-editor.png)
+
+Selecteer **[!UICONTROL Opslaan]** om door te gaan.
+
+Het kaartscherm verschijnt weer met het nieuwe bronveld. Pas het desbetreffende doelveld toe en selecteer **[!UICONTROL Voltooien]** om de toewijzing te voltooien.
+
+![](../images/tutorials/map-a-csv-file/new-field.png)
+
+## Uw gegevensstroom controleren
+
+Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Raadpleeg de zelfstudie over het [controleren van streaming dataflows voor meer informatie over het controleren van gegevensstromen](../../ingestion/quality/monitor-data-flows.md).
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een vlak CSV-bestand toegewezen aan een XDM-schema en het ingepakt in Platform. Deze gegevens kunnen nu worden gebruikt door downstreamplatformservices, zoals Real-time klantprofiel. Zie het overzicht [van het profiel van de Klant in](../../profile/home.md) real time voor meer informatie.
+Door deze zelfstudie te volgen, hebt u een vlak CSV-bestand toegewezen aan een XDM-schema en het ingepakt in [!DNL Platform]. Deze gegevens kunnen nu worden gebruikt door downstreamdiensten [!DNL Platform] zoals [!DNL Real-time Customer Profile]. Zie het overzicht voor [!DNL Real-time Customer Profile](../../profile/home.md) meer informatie.
 
 ## Aanhangsel
 
@@ -86,7 +125,7 @@ De volgende sectie verstrekt extra informatie voor het in kaart brengen CSV kolo
 
 ### Toewijzingsfuncties
 
-Bepaalde toewijzingsfuncties kunnen worden gebruikt om waarden te berekenen en te berekenen op basis van wat is ingevoerd in bronvelden. Als u een functie wilt gebruiken, typt u deze onder _Bronveld_ met de juiste syntaxis en invoer.
+Bepaalde toewijzingsfuncties kunnen worden gebruikt om waarden te berekenen en te berekenen op basis van wat is ingevoerd in bronvelden. Als u een functie wilt gebruiken, typt u deze onder *[!UICONTROL Bronveld]* met de juiste syntaxis en invoer.
 
 Als u bijvoorbeeld CSV-velden voor **steden** en **landen** wilt samenvoegen en deze aan het XDM-veld **Plaats** wilt toewijzen, stelt u het bronveld in als `concat(city, ", ", county)`.
 
@@ -114,12 +153,12 @@ De volgende tabel bevat een lijst met alle ondersteunde toewijzingsfuncties, inc
 | last | Haalt het laatst opgegeven argument op. | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
 | uuid /<br>guid | Hiermee genereert u een pseudo-willekeurige id. | uuid()<br>guid() | {UNIQUE_ID} |
 | now | Hiermee wordt de huidige tijd opgehaald. | now() | `2019-10-23T10:10:24.556-07:00[America/Los_Angeles]` |
-| tijdstempel | Hiermee wordt de huidige Unix-tijd opgehaald. | timestamp() | 1571850624571 |
+| timestamp | Hiermee wordt de huidige Unix-tijd opgehaald. | timestamp() | 1571850624571 |
 | format | Hiermee wordt de invoerdatum opgemaakt volgens een opgegeven notatie. | format({DATE}, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
 | dformat | Converteert een tijdstempel naar een datumtekenreeks volgens een opgegeven notatie. | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;23-okt-2019 11:24&quot; |
 | date | Converteert een datumtekenreeks naar een ZonedDateTime-object (ISO 8601-indeling). | date(&quot;23-okt-2019 11:24&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
-| date_part | Hiermee worden de delen van de datum opgehaald. De volgende componentwaarden worden ondersteund: <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarters&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;m&quot;<br>&quot;m&quot;m&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&quot;ofJaar&quot;&quot;y&quot;dag&quot;dag&quot;dag&quot;dd&quot;&quot;d&quot;d&quot;week&quot;week&quot;week&quot;&quot;w&quot;&quot;w&quot;weekdag&quot;&quot;&quot;uur&quot;&quot;&quot;&quot;&quot;hh&quot;&quot;hh24&quot;&quot;hh12&quot;&quot;minute&quot;&quot;mi&quot;&quot;n&quot;&quot;second&quot;&quot;ss&quot;&quot;millisecond&quot;&quot;ms&quot; | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
-| set_date_part | Hiermee vervangt u een component in een bepaalde datum. De volgende onderdelen worden geaccepteerd: <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br><br><br><br><br><br><br><br><br><br>&quot;hour&quot;hh&quot;&quot;minute&quot;&quot;mi&quot;mi&quot;&quot;n&quot;tweede&quot;&quot;ss&quot;ss&quot;&quot;s&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
+| date_part | Hiermee worden de delen van de datum opgehaald. De volgende componentwaarden worden ondersteund: <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarters&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;m&quot;m&quot;<br>&quot;m&quot;m&quot;of&quot;dy&quot;y&quot;dag&quot;y&quot;dag&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&quot;dag&quot;dd&quot;d&quot;d&quot;d&quot;week&quot;week&quot;week&quot;ww&quot;&quot;w&quot;week&quot;dag&quot;dag&quot;&quot;uur&quot;uur&quot;&quot;h&quot;&quot;hh24&quot;&quot;hh12&quot;&quot;minute&quot;&quot;mi&quot;&quot;tweede&quot;&quot;ss&quot;&quot;&quot;s&quot;&quot;millisecond&quot;&quot;ms&quot; | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
+| set_date_part | Hiermee vervangt u een component in een bepaalde datum. De volgende onderdelen worden geaccepteerd: <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hh&quot;&quot;minute&quot;&quot;mi&quot;&quot;n&quot;tweede&quot;&quot;ss&quot;ss&quot;&quot;s&quot;<br><br><br><br><br><br><br><br><br>&quot;s&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
 | make_date_time /<br>make_timestamp | Hiermee maakt u een datum op basis van onderdelen. | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
 | current_timestamp | Retourneert de huidige tijdstempel. | current_timestamp() | 1571850624571 |
 | current_date | Retourneert de huidige datum zonder een tijdcomponent. | current_date() | &quot;18-nov-2019&quot; |
