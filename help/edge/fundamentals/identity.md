@@ -1,28 +1,28 @@
 ---
-title: Experience Cloud ID ophalen
-seo-title: Adobe Experience Platform Web SDK Experience Cloud ID ophalen
+title: Experience Cloud-id ophalen
+seo-title: Adobe Experience Platform Web SDK Experience Cloud-id ophalen
 description: Leer hoe u Adobe Experience Cloud ID kunt ophalen.
 seo-description: Leer hoe u Adobe Experience Cloud ID kunt ophalen.
 translation-type: tm+mt
-source-git-commit: a9dd5fd93397e57d0876bec334d54c517fa86939
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 0%
+source-wordcount: '412'
+ht-degree: 2%
 
 ---
 
 
-# Experience Cloud ID ophalen
+# Identiteit - De Experience Cloud-id wordt opgehaald
 
 De Adobe Experience Platform Web SDK maakt gebruik van de [Adobe Identity Service](../../identity-service/ecid.md). Dit zorgt ervoor dat elk apparaat een unieke id heeft die op het apparaat blijft bestaan, zodat de activiteit tussen pagina&#39;s aan elkaar kan worden gekoppeld.
 
 ## Identiteit eerste partij
 
-De dienst van identiteitskaart slaat de identiteit in een koekje in een eerste partijdomein op. De diensten van identiteitskaart proberen om het koekje te plaatsen gebruikend een kopbal van HTTP op het domein als dat ontbreekt de dienst van identiteitskaart zal terug naar het plaatsen van koekjes via Javascript vallen. Adobe raadt u aan een CNAME in te stellen om ervoor te zorgen dat uw cookies niet worden beperkt door ITP-beperkingen aan de clientzijde.
+De identiteit wordt in een cookie in een domein van de eerste partij [!DNL Identity Service] opgeslagen. De [!DNL Identity Service] methode probeert het cookie in te stellen met een HTTP-header op het domein. Als dat mislukt, [!DNL Identity Service] worden cookies weer ingesteld via JavaScript. Adobe raadt u aan een CNAME in te stellen om ervoor te zorgen dat uw cookies niet worden beperkt door ITP-beperkingen aan de clientzijde.
 
 ## Identiteit derde partij
 
-De diensten van identiteitskaart hebben de capaciteit om identiteitskaart met een derdedomein (demdex.net) te synchroniseren om het volgen over plaats toe te laten. Wanneer dit wordt toegelaten zal het eerste verzoek voor een bezoeker (b.v. iemand zonder ECID) aan demdex.net worden gedaan. Dit zal slechts op browsers worden gedaan die het toestaan (b.v. Chrome) en door de `thirdPartyCookiesEnabled` parameter in de configuratie gecontroleerd. Als u deze functie wilt uitschakelen, worden deze allemaal samen ingesteld `thirdPartyCookiesEnabled` op false.
+De [!DNL Identity Service] heeft de capaciteit om een identiteitskaart met een derdedomein (demdex.net) te synchroniseren om het volgen over plaatsen toe te laten. Wanneer dit wordt toegelaten zal het eerste verzoek voor een bezoeker (b.v. iemand zonder ECID) aan demdex.net worden gedaan. Dit zal slechts op browsers worden gedaan die het toestaan (b.v. Chrome) en door de `thirdPartyCookiesEnabled` parameter in de configuratie gecontroleerd. Als u deze functie samen wilt uitschakelen, stelt u deze in `thirdPartyCookiesEnabled` op false.
 
 ## De bezoeker-id ophalen
 
@@ -30,7 +30,7 @@ Gebruik de `getIdentity` opdracht als u deze unieke id wilt gebruiken. `getIdent
 
 >[!NOTE]
 >
->Deze methode wordt meestal gebruikt met aangepaste oplossingen waarvoor de Experience Cloud-id moet worden gelezen. Het wordt niet gebruikt door een standaardimplementatie.
+>Deze methode wordt doorgaans gebruikt met aangepaste oplossingen waarvoor de Experience Cloud-id moet worden gelezen. Het wordt niet gebruikt door een standaardimplementatie.
 
 ```javascript
 alloy("getIdentity")
@@ -45,7 +45,7 @@ alloy("getIdentity")
 
 ## Identiteiten synchroniseren
 
-Daarnaast kunt u met de identiteitsservice uw eigen id&#39;s synchroniseren met de ECID via de `syncIdentity` opdracht.
+Daarnaast [!DNL Identity Service] `syncIdentity` kunt u met de opdracht uw eigen id&#39;s synchroniseren met de ECID.
 
 ```javascript
 alloy("syncIdentity",{
@@ -68,7 +68,7 @@ alloy("syncIdentity",{
 | -------- | ------------ | ----------------- |
 | String | Ja | none |
 
-De sleutel voor het object is het symbool [Identiteitsnaamruimte](../../identity-service/namespaces.md) . U vindt dit in de gebruikersinterface van het Adobe Experience Platform onder Identiteiten.
+De sleutel voor het object is het symbool [Identiteitsnaamruimte](../../identity-service/namespaces.md) . U vindt dit in de gebruikersinterface van het Adobe Experience Platform onder [!UICONTROL Identiteiten].
 
 #### `id`
 
@@ -92,7 +92,7 @@ De verificatiestatus van de id.
 | -------- | ------------ | ----------------- |
 | Boolean | optioneel | false |
 
-Moet deze identiteit worden gebruikt als primair fragment in het verenigde profiel. Standaard wordt de ECID ingesteld als primaire id voor de gebruiker.
+Hiermee wordt bepaald of deze identiteit moet worden gebruikt als primair fragment in het verenigde profiel. Standaard wordt de ECID ingesteld als de primaire id voor de gebruiker.
 
 #### `hashEnabled`
 
