@@ -4,23 +4,21 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1690'
 ht-degree: 0%
 
 ---
 
 
-# Entiteiten (toegang tot profiel)
+# Het eindpunt van entiteiten (de toegang van het Profiel)
 
-Met het Adobe Experience Platform hebt u via RESTful-API&#39;s of de gebruikersinterface toegang tot gegevens van het klantprofiel in realtime. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Raadpleeg de gebruikershandleiding bij [Profiel voor meer informatie over toegang tot profielgegevens via de interface van het platform](../ui/user-guide.md).
+Met Adobe Experience Platform hebt u toegang tot gegevens van het profiel Real-time klanten met RESTful-API&#39;s of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Raadpleeg de gebruikershandleiding bij [Profiel voor meer informatie over het gebruik van de interface van het Platform voor toegang tot profielen](../ui/user-guide.md).
 
 ## Aan de slag
 
-De API eindpunten die in deze gids worden gebruikt maken deel uit van Real-time API van het Profiel van de Klant. Lees voordat u verdergaat de handleiding voor ontwikkelaars van de [realtime-API voor klantprofielen](getting-started.md).
-
-Met name bevat de sectie [Aan de](getting-started.md#getting-started) slag van de handleiding voor ontwikkelaars van profielen koppelingen naar verwante onderwerpen, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar API&#39;s van het Experience Platform met succes uit te voeren.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van het [Real-time Profiel van de Klant API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar elke Experience Platform-API te kunnen uitvoeren.
 
 ## Profielgegevens benaderen op identiteit
 
@@ -776,7 +774,7 @@ Gebruikend deze nuttige lading in het verzoeklichaam, kunt u een extra verzoek v
 
 ## De gebeurtenissen van de tijdreeks van de toegang in veelvoudige schemaentiteiten
 
-U kunt toegang krijgen tot meerdere entiteiten die via een relatiebeschrijving zijn verbonden. De volgende voorbeeld API vraag veronderstelt een verhouding reeds tussen twee schema&#39;s is bepaald. Voor meer informatie over relatiebeschrijvers, gelieve te lezen de de ontwikkelaarsgids van de [beschrijvers](../../xdm/api/descriptors.md)van de Registratie van het Schema API voor ontwikkelaars.
+U kunt toegang krijgen tot meerdere entiteiten die via een relatiebeschrijving zijn verbonden. De volgende voorbeeld API vraag veronderstelt een verhouding reeds tussen twee schema&#39;s is bepaald. Voor meer informatie over relatiebeschrijvers, te lezen gelieve de gids van de [beschrijvers van het eindpunt van de de ontwikkelaarsgids](../../xdm/api/descriptors.md)van de Registratie van het Schema API.
 
 U kunt queryparameters opnemen in het aanvraagpad om op te geven tot welke gegevens u toegang wilt krijgen. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;). Een volledige lijst van geldige parameters wordt verstrekt in de sectie van [vraagparameters](#query-parameters) van bijlage.
 
