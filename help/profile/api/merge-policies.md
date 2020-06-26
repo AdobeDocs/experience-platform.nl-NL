@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '2057'
+source-wordcount: '2052'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Beleid samenvoegen
 
-Met het Adobe Experience Platform kunt u gegevens uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, zijn het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Deze handleiding bevat stappen voor het werken met samenvoegbeleid met de API. Om met samenvoegbeleid te werken gebruikend UI, gelieve te verwijzen naar de de gebruikersgids [van het](../ui/merge-policies.md)fusiebeleid.
+Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen samenbrengen en combineren om een volledige weergave van elk van uw individuele klanten te bekijken. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Deze handleiding bevat stappen voor het werken met samenvoegbeleid met de API. Om met samenvoegbeleid te werken gebruikend UI, gelieve te verwijzen naar de de gebruikersgids [van het](../ui/merge-policies.md)fusiebeleid.
 
 ## Aan de slag
 
-De API eindpunten die in deze gids worden gebruikt maken deel uit van Real-time API van het Profiel van de Klant. Lees voordat u verdergaat de handleiding voor ontwikkelaars van de [realtime-API voor klantprofielen](getting-started.md). Met name bevat de sectie [Aan de](getting-started.md#getting-started) slag van de handleiding voor ontwikkelaars van profielen koppelingen naar verwante onderwerpen, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar API&#39;s van het Experience Platform met succes uit te voeren.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van het [Real-time Profiel van de Klant API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar elke Experience Platform-API te kunnen uitvoeren.
 
 ## Componenten van samenvoegingsbeleid {#components-of-merge-policies}
 
-Het beleid van de fusie is privé aan uw organisatie IMS, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manier samen te voegen die u nodig hebt. Om het even welke API die tot de gegevens van het Profiel toegang hebben vereist een fusiebeleid, hoewel een gebrek zal worden gebruikt als niet uitdrukkelijk wordt verstrekt. Het platform verstrekt een standaardsamenvoegbeleid, of u kunt een fusiebeleid voor een specifiek schema tot stand brengen en het merken als gebrek voor uw organisatie. Elke organisatie kan veelvoudige samenvoegingsbeleid per schema potentieel hebben, nochtans kan elk schema slechts één standaardsamenvoegbeleid hebben. Om het even welk die samenvoegbeleid als gebrek wordt geplaatst zal worden gebruikt in gevallen waar de schemanaam wordt verstrekt en een fusiebeleid wordt vereist maar niet verstrekt. Wanneer u een samenvoegbeleid als gebrek plaatst, zal om het even welk bestaand samenvoegbeleid dat eerder als gebrek werd geplaatst automatisch worden bijgewerkt om niet meer als gebrek te worden gebruikt.
+Het beleid van de fusie is privé aan uw organisatie IMS, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manier samen te voegen die u nodig hebt. Om het even welke API die tot de gegevens van het Profiel toegang hebben vereist een fusiebeleid, hoewel een gebrek zal worden gebruikt als niet uitdrukkelijk wordt verstrekt. Het Platform verstrekt een standaardsamenvoegbeleid, of u kunt een fusiebeleid voor een specifiek schema tot stand brengen en het merken als gebrek voor uw organisatie. Elke organisatie kan veelvoudige samenvoegingsbeleid per schema potentieel hebben, nochtans kan elk schema slechts één standaardsamenvoegbeleid hebben. Om het even welk die samenvoegbeleid als gebrek wordt geplaatst zal worden gebruikt in gevallen waar de schemanaam wordt verstrekt en een fusiebeleid wordt vereist maar niet verstrekt. Wanneer u een samenvoegbeleid als gebrek plaatst, zal om het even welk bestaand samenvoegbeleid dat eerder als gebrek werd geplaatst automatisch worden bijgewerkt om niet meer als gebrek te worden gebruikt.
 
 ### Object voor samenvoegbeleid voltooien
 
@@ -56,10 +56,10 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 | `name` | Vriendelijke naam waarmee het samenvoegbeleid kan worden geïdentificeerd in lijstweergaven. |
 | `imsOrgId` | Organisatie-id waartoe dit samenvoegbeleid behoort |
 | `identityGraph` | [Object in identiteitsgrafiek](#identity-graph) dat de identiteitsgrafiek aangeeft waarvan gerelateerde identiteiten worden verkregen. Profielfragmenten die voor alle verwante identiteiten worden gevonden, worden samengevoegd. |
-| `attributeMerge` | [Kenmerksamenvoegobject](#attribute-merge) dat aangeeft op welke manier in het samenvoegbeleid bij gegevensconflicten voorrang wordt gegeven aan profielkenmerkwaarden. |
+| `attributeMerge` | [Kenmerksamenvoegobject](#attribute-merge) dat aangeeft op welke manier in het samenvoegbeleid voorrang wordt gegeven aan profielkenmerkwaarden in het geval van gegevensconflicten. |
 | `schema` | Het [schemaobject](#schema) waarop het samenvoegbeleid kan worden gebruikt. |
 | `default` | Een Booleaanse waarde die aangeeft of dit samenvoegbeleid de standaardinstelling is voor het opgegeven schema. |
-| `version` | Door het platform bijgehouden versie van het samenvoegbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
+| `version` | Platform behoudt versie van samenvoegbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
 | `updateEpoch` | Datum van de laatste update van het samenvoegbeleid. |
 
 **Voorbeeld van samenvoegingsbeleid**
@@ -86,7 +86,7 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 
 ### Identiteitsgrafiek {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) beheert de identiteitsgrafieken die wereldwijd en voor elke organisatie op Experience Platform worden gebruikt. Het `identityGraph` attribuut van het fusiebeleid bepaalt hoe te om de verwante identiteiten voor een gebruiker te bepalen.
+[De Identiteitsdienst](../../identity-service/home.md) van het Adobe Experience Platform beheert de identiteitsgrafieken die globaal en voor elke organisatie op Experience Platform worden gebruikt. Het `identityGraph` attribuut van het fusiebeleid bepaalt hoe te om de verwante identiteiten voor een gebruiker te bepalen.
 
 **identityGraph-object**
 
@@ -693,7 +693,7 @@ Een geslaagde reactie retourneert de details van het bijgewerkte samenvoegingsbe
 
 ## Een samenvoegingsbeleid verwijderen
 
-Een samenvoegingsbeleid kan worden geschrapt door een verzoek van de SCHRAPPING aan het `/config/mergePolicies` eindpunt en met inbegrip van identiteitskaart van het fusiebeleid te doen dat u wenst om in de verzoekweg te schrappen.
+Een fusiebeleid kan worden geschrapt door een DELETE verzoek aan het `/config/mergePolicies` eindpunt en met inbegrip van identiteitskaart van het fusiebeleid te doen dat u wenst om in de verzoekweg te schrappen.
 
 **API-indeling**
 
@@ -724,7 +724,7 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege 
 
 ## Volgende stappen
 
-Nu u weet om samenvoegbeleid voor uw IMS Organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om publiekssegmenten van uw gegevens van het Profiel van de Klant in real time tot stand te brengen. Raadpleeg de documentatie bij [de Segmentatieservice van het](../../segmentation/home.md) Adobe Experience Platform voor meer informatie over het definiëren en werken met segmenten.
+Nu u weet om samenvoegbeleid voor uw IMS Organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om publiekssegmenten van uw gegevens van het Profiel van de Klant in real time tot stand te brengen. Gelieve te zien de documentatie [van de Dienst van de Segmentatie van het](../../segmentation/home.md) Adobe Experience Platform beginnen definiërend en werkend met segmenten.
 
 
 
