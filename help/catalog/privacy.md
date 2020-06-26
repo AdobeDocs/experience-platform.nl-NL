@@ -4,33 +4,36 @@ solution: Experience Platform
 title: Behandeling van een privacyverzoek in het Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3584202554baf46aad174d671084751e6557bbc
+source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+workflow-type: tm+mt
+source-wordcount: '1275'
+ht-degree: 0%
 
 ---
 
 
 # Behandeling van een privacyverzoek in het Data Lake
 
-De privacyservice van Adobe Experience Platform verwerkt verzoeken van klanten om toegang te krijgen tot hun persoonlijke gegevens, deze niet te verkopen of deze te verwijderen, zoals gedefinieerd in wettelijke en organisatorische privacyregels.
+Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang, om te weigeren verkoop, of om hun persoonsgegevens te schrappen zoals die door wettelijke en organisatorische privacyverordeningen worden afgebakend.
 
 Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor klantgegevens die in het Datameer zijn opgeslagen.
 
 ## Aan de slag
 
-U wordt aangeraden een goed begrip te hebben van de volgende services van het Experience Platform voordat u deze handleiding leest:
+U wordt aangeraden de volgende services van het Experience Platform goed te begrijpen voordat u deze handleiding leest:
 
-* [Privacy-service](../privacy-service/home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, niet te verkopen of te verwijderen.
-* [Catalogusservice](home.md): Het registratiesysteem voor gegevenslocatie en gegevenskoppeling binnen het ervaringsplatform. Biedt een API die kan worden gebruikt om metagegevens van gegevenssets bij te werken.
-* [XDM-systeem](../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
+* [Privacy Service](../privacy-service/home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, niet te verkopen of te verwijderen.
+* [Catalogusservice](home.md): Het systeem van verslagen voor gegevensplaats en lijn binnen Experience Platform. Biedt een API die kan worden gebruikt om metagegevens van gegevenssets bij te werken.
+* [XDM-systeem](../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
 * [Identiteitsservice](../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
 
 ## Naamruimten voor identiteiten {#namespaces}
 
-Adobe Experience Platform Identity Service biedt een brug tussen identiteitsgegevens van klanten op verschillende systemen en apparaten. De Dienst van de identiteit gebruikt **identiteitsnaamruimten** om context aan identiteitswaarden te verstrekken door hen met hun systeem van oorsprong te verbinden. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;E-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
+De Dienst van de Identiteit van het Adobe Experience Platform vormt een brug tussen de identiteitsgegevens van de klant over systemen en apparaten. De Dienst van de identiteit gebruikt **identiteitsnaamruimten** om context aan identiteitswaarden te verstrekken door hen met hun systeem van oorsprong te verbinden. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;E-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
 
 De Dienst van de identiteit handhaaft een opslag van globaal bepaalde (standaard) en user-defined (douane) identiteitsnamespaces. Standaard naamruimten zijn beschikbaar voor alle organisaties (bijvoorbeeld E-mail en ECID), terwijl uw organisatie aangepaste naamruimten kan maken die aan de specifieke behoeften voldoen.
 
-Voor meer informatie over identiteitsnaamruimten in het Platform van de Ervaring, zie het overzicht [van](../identity-service/namespaces.md)identiteitsnamespace.
+Zie het overzicht [van naamruimte voor](../identity-service/namespaces.md)identiteiten in het Experience Platform voor meer informatie over naamruimten.
 
 ## Identiteitsgegevens toevoegen aan gegevenssets
 
@@ -40,7 +43,9 @@ Wanneer het creëren van privacyverzoeken voor het meer van Gegevens, moeten de 
 
 Deze sectie doorloopt de stappen om een identiteitsbeschrijver aan het XDM schema van een bestaande dataset toe te voegen. Als u al een dataset met een identiteitsbeschrijver hebt, kunt u vooruit aan de [volgende sectie](#nested-maps)overslaan.
 
->[!IMPORTANT] Houd bij het bepalen van de schemavelden die u wilt instellen als id&#39;s rekening met de [beperkingen van het gebruik van geneste map-type velden](#nested-maps).
+>[!IMPORTANT]
+>
+>Houd bij het bepalen van de schemavelden die u wilt instellen als id&#39;s rekening met de [beperkingen van het gebruik van geneste map-type velden](#nested-maps).
 
 Er zijn twee methodes om een identiteitsbeschrijver aan een datasetschema toe te voegen:
 
@@ -49,7 +54,7 @@ Er zijn twee methodes om een identiteitsbeschrijver aan een datasetschema toe te
 
 ### De gebruikersinterface gebruiken {#identity-ui}
 
-In de gebruikersinterface van het Platform van de Ervaring, staat de _[!UICONTROL Schemas]_werkruimte u toe om uw bestaande XDM schema&#39;s uit te geven. Om een identiteitsbeschrijver aan een schema toe te voegen, selecteer het schema van de lijst en volg de stappen voor het[plaatsen van een schemagebied als identiteitsgebied](../xdm/tutorials/create-schema-ui.md#identity-field)in het leerprogramma van de Redacteur van het Schema.
+In de gebruikersinterface van het Experience Platform, staat de _[!UICONTROL werkruimte van Schema]_u toe om uw bestaande schema&#39;s uit te geven XDM. Om een identiteitsbeschrijver aan een schema toe te voegen, selecteer het schema van de lijst en volg de stappen voor het[plaatsen van een schemagebied als identiteitsgebied](../xdm/tutorials/create-schema-ui.md#identity-field)in het leerprogramma van de Redacteur van het Schema.
 
 Als u de juiste velden in het schema hebt ingesteld als identiteitsvelden, kunt u doorgaan naar de volgende sectie over het [verzenden van privacyverzoeken](#submit).
 
@@ -97,7 +102,7 @@ curl -X POST \
 | `xdm:sourceSchema` | De unieke URI-id van het XDM-schema van uw gegevensset. |
 | `xdm:sourceVersion` | De versie van het XDM-schema dat is opgegeven in `xdm:sourceSchema`. |
 | `xdm:sourceProperty` | Het pad naar het schemaveld waarop de descriptor wordt toegepast. |
-| `xdm:namespace` | Een van de [standaardnaamruimten](../privacy-service/api/appendix.md#standard-namespaces) die wordt herkend door de privacyservice of een aangepaste naamruimte die wordt gedefinieerd door uw organisatie. |
+| `xdm:namespace` | Een van de [standaardnaamruimten](../privacy-service/api/appendix.md#standard-namespaces) die door de Privacy Service wordt herkend, of een aangepaste naamruimte die door uw organisatie wordt gedefinieerd. |
 | `xdm:property` | &quot;xdm:id&quot; of &quot;xdm:code&quot;, afhankelijk van de naamruimte die onder wordt gebruikt `xdm:namespace`. |
 | `xdm:isPrimary` | Een optionele booleaanse waarde. Indien waar (true), geeft dit aan dat het veld een primaire identiteit is. Schema&#39;s mogen slechts één primaire identiteit bevatten. De standaardwaarde is false als dit item niet wordt opgenomen. |
 
@@ -121,9 +126,9 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de
 
 ## Verzoeken indienen {#submit}
 
->[!NOTE] Deze sectie behandelt hoe te om privacyverzoeken voor het meer van Gegevens te formatteren. Het wordt sterk geadviseerd dat u de documentatie van de Dienst van de [Privacy of van de Dienst API](../privacy-service/ui/overview.md) van de [](../privacy-service/api/getting-started.md) Privacy voor volledige stappen op het voorleggen van een privacybaan, met inbegrip van hoe te om verzonden gegevens van de gebruikersidentiteit in verzoeklading behoorlijk te formatteren controleert.
+>[!NOTE] Deze sectie behandelt hoe te om privacyverzoeken voor het meer van Gegevens te formatteren. We raden u ten zeerste aan de [Privacy Service-interface](../privacy-service/ui/overview.md) of de [Privacy Service-API](../privacy-service/api/getting-started.md) -documentatie te raadplegen voor volledige stappen over het verzenden van een privacytaak, inclusief het correct opmaken van verzonden identiteitsgegevens van gebruikers in de payloads voor aanvragen.
 
-In de volgende sectie wordt beschreven hoe u privacyaanvragen voor het gegevensmeer kunt indienen met de interface of API van de privacyservice.
+In de volgende sectie wordt beschreven hoe u privacyverzoeken voor het Data Lake kunt maken met de Privacy Service-interface of -API.
 
 ### De gebruikersinterface gebruiken
 
@@ -180,9 +185,9 @@ curl -X POST \
 
 ## Verzoek om verwerking verwijderen
 
-Wanneer het Platform van de Ervaring een schrappingsverzoek van de Dienst van de Privacy ontvangt, verzendt het Platform bevestiging aan de Dienst van de Privacy dat het verzoek is ontvangen en de beïnvloede gegevens voor schrapping duidelijk zijn gemaakt. De gegevens worden vervolgens binnen zeven dagen uit het Data Lake verwijderd. Tijdens dat venster van zeven dagen, worden de gegevens zachte geschrapt en daarom niet toegankelijk door om het even welke dienst van het Platform.
+Wanneer het Experience Platform een schrappingsverzoek van Privacy Service ontvangt, verzendt het Platform bevestiging aan Privacy Service dat het verzoek is ontvangen en de beïnvloede gegevens voor schrapping duidelijk zijn gemaakt. De gegevens worden vervolgens binnen zeven dagen uit het Data Lake verwijderd. Tijdens dat venster van zeven dagen, worden de gegevens zachte geschrapt en daarom niet toegankelijk door om het even welke dienst van het Platform.
 
-In toekomstige releases zal Platform een bevestiging sturen naar de Privacy Service nadat de gegevens fysiek zijn verwijderd.
+In toekomstige versies stuurt Platform een bevestiging naar de Privacy Service nadat gegevens fysiek zijn verwijderd.
 
 ## Volgende stappen
 
