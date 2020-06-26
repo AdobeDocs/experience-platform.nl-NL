@@ -1,13 +1,13 @@
 ---
 title: De SDK configureren
-seo-title: De SDK van Adobe Experience Platform Web configureren
-description: Leer hoe te om het Platform van de Ervaring te vormen SDK van het Web
-seo-description: Leer hoe te om het Platform van de Ervaring te vormen SDK van het Web
+seo-title: Het vormen van het Web SDK van het Adobe Experience Platform
+description: Leer hoe te om het Web SDK van het Experience Platform te vormen
+seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 2%
+source-wordcount: '743'
+ht-degree: 4%
 
 ---
 
@@ -16,8 +16,9 @@ ht-degree: 2%
 
 De configuratie voor SDK wordt gedaan met het `configure` bevel.
 
->[!Ibelangrijk]
->`configure` zou _altijd_ het eerste geroepen bevel moeten zijn.
+>[!IMPORTANT]
+>
+>`configure` zou *altijd* het eerste geroepen bevel moeten zijn.
 
 ```javascript
 alloy("configure", {
@@ -54,7 +55,7 @@ Geeft aan welke contextcategorieën automatisch worden verzameld, zoals wordt be
 
 Geeft aan of foutopsporing moet worden ingeschakeld. Het plaatsen van dit config om de volgende eigenschappen toe te `true` laten:
 
-| **Functie** |  |  |
+| **Functie** | **-functie** |
 | ---------------------- | ------------------ |
 | Synchrone validatie | Valideert de gegevens die worden verzameld op basis van het schema en retourneert een fout in de reactie onder het volgende label: `collect:error OR success` |
 | Logboek van console | Laat het zuiveren berichten toe om in de console van JavaScript van browser worden getoond |
@@ -65,7 +66,7 @@ Geeft aan of foutopsporing moet worden ingeschakeld. Het plaatsen van dit config
 | -------- | ------------ | ------------------ |
 | String | Nee | `beta.adobedc.net` |
 
-Het domein dat wordt gebruikt voor interactie met Adobe Services. Dit wordt alleen gebruikt als u een domein van de eerste partij (CNAME) hebt dat proxy&#39;s aanvragen bij de Adobe Edge-infrastructuur.
+Het domein dat wordt gebruikt voor interactie met Adobe-services. Dit wordt alleen gebruikt als u een domein van de eerste partij (CNAME) hebt dat proxy&#39;s aanvragen bij de Adobe Edge-infrastructuur.
 
 ### `orgId`
 
@@ -85,7 +86,7 @@ Uw toegewezen Experience Cloud-organisatie-id.  Wanneer het vormen van veelvoudi
 
 Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch moeten worden verzameld. Voor kliks die als verbinding kwalificeren klikt, worden de volgende gegevens van de Interactie [van het](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) Web verzameld:
 
-| **Eigenschap** |  |
+| **Eigenschap** | **Beschrijving** |
 | ------------ | ----------------------------------- |
 | Koppelingsnaam | Naam die wordt bepaald door de context van de koppeling |
 | Koppelings-URL | Genormaliseerde URL |
@@ -97,7 +98,7 @@ Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch moet
 | -------- | ------------ | ----------------- |
 | -functie | Nee | () => undefined |
 
-Plaats dit om callback te vormen die voor elke gebeurtenis vlak alvorens het wordt verzonden wordt geroepen.  Een object met het veld `xdm` wordt naar de callback verzonden.  Wijzig het xdm-object om te wijzigen wat wordt verzonden.  Binnen callback, zal het `xdm` voorwerp reeds de gegevens hebben die in het gebeurtenisbevel worden overgegaan, en de automatisch verzamelde informatie.  Zie Gebeurtenissen globaal [wijzigen voor meer informatie over de timing van deze callback en een voorbeeld](tracking-events.md#modifying-events-globally).
+Plaats dit om callback te vormen die voor elke gebeurtenis vlak alvorens het wordt verzonden wordt geroepen.  Een object met het veld `xdm` wordt naar de callback verzonden.  Wijzig het `xdm` object om te wijzigen wat wordt verzonden.  Binnen callback, zal het `xdm` voorwerp reeds de gegevens hebben die in het gebeurtenisbevel worden overgegaan, en de automatisch verzamelde informatie.  Zie Gebeurtenissen globaal [wijzigen voor meer informatie over de timing van deze callback en een voorbeeld](tracking-events.md#modifying-events-globally).
 
 ## Privacyopties
 
@@ -133,7 +134,7 @@ Als u bijvoorbeeld een element op uw webpagina had met een id waarvan u de stand
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | `true` |
 
-Laat koekjesbestemmingen toe, die het plaatsen van koekjes toestaat die op segmentkwalificatie worden gebaseerd.
+Laat de [!UICONTROL koekjesbestemmingen]van de Audience Manager toe, die het plaatsen van koekjes toestaat die op segmentkwalificatie worden gebaseerd.
 
 ### `urlDestinationsEnabled`
 
@@ -141,7 +142,7 @@ Laat koekjesbestemmingen toe, die het plaatsen van koekjes toestaat die op segme
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | `true` |
 
-Laat bestemmingen URL toe, die het vuren van URLs toestaat die op segmentkwalificatie wordt gebaseerd.
+Laat Audience Manager [!UICONTROL URL bestemmingen]toe, die het vuren van URLs toestaat die op segmentkwalificatie wordt gebaseerd.
 
 ## Identiteitsopties
 
@@ -167,4 +168,4 @@ Hiermee schakelt u de functie voor het synchroniseren van id&#39;s in. Hiermee k
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | true |
 
-Hiermee schakelt u het instellen van cookies van derden van Adobe in. De SDK kan de bezoekersidentiteitskaart in een derdecontext handhaven om de zelfde bezoekersidentiteitskaart toe te laten om over plaats te gebruiken. Dit is nuttig als u veelvoudige plaatsen hebt of u gegevens met partners wilt delen; soms is dit echter om privacyredenen niet gewenst .
+Hiermee schakelt u het instellen van cookies van derden van Adobe in. De SDK kan de bezoekersidentiteitskaart in een derdecontext handhaven om de zelfde bezoekersidentiteitskaart toe te laten om over plaatsen te worden gebruikt. Dit is nuttig als u veelvoudige plaatsen hebt of u gegevens met partners wilt delen; soms is dit echter om privacyredenen niet gewenst .
