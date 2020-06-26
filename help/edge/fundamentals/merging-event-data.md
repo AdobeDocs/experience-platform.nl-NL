@@ -1,12 +1,12 @@
 ---
 title: Gebeurtenisgegevens samenvoegen
 seo-title: Adobe Experience Platform Web SDK-gebeurtenisgegevens samenvoegen
-description: Meer informatie over het samenvoegen van Experience Platform Web SDK-gebeurtenisgegevens
-seo-description: Meer informatie over het samenvoegen van Experience Platform Web SDK-gebeurtenisgegevens
+description: Leer hoe te om de gebeurtenisgegevens van SDK van het Web van het Experience Platform samen te voegen
+seo-description: Leer hoe te om de gebeurtenisgegevens van SDK van het Web van het Experience Platform samen te voegen
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Deze functie is nog in ontwikkeling en dus kunnen niet alle oplossingen deze gegevens samenvoegen.
+>Deze functie is nog in ontwikkeling. Niet alle oplossingen kunnen gebeurtenisgegevens samenvoegen zoals op deze pagina wordt beschreven.
 
 Soms zijn niet alle gegevens beschikbaar wanneer een gebeurtenis plaatsvindt. U zou de gegevens kunnen willen vangen u _hebt_ zodat wordt het niet verloren als, bijvoorbeeld, de gebruiker browser sluit. Anderzijds kunt u ook gegevens opnemen die later beschikbaar komen.
 
@@ -58,15 +58,15 @@ alloy("sendEvent", {
 });
 ```
 
-Door dezelfde waarde voor de samenvoegen-id van de gebeurtenis aan beide gebeurtenisopdrachten in dit voorbeeld door te geven, worden de gegevens in de opdracht voor de tweede gebeurtenis aangevuld met gegevens die eerder zijn verzonden met de opdracht voor de eerste gebeurtenis. Een verslag voor elk gebeurtenisbevel wordt gecreeerd in het Platform van de Gegevens van de Ervaring, maar tijdens het melden worden de verslagen samengevoegd gebruikend identiteitskaart van de gebeurtenisfusie en verschijnen als één enkele gebeurtenis.
+Door dezelfde `eventMergeID` waarde aan beide gebeurtenisopdrachten in dit voorbeeld door te geven, worden de gegevens in de tweede gebeurtenisopdracht aangevuld met gegevens die eerder op de eerste gebeurtenisopdracht zijn verzonden. Een verslag voor elk gebeurtenisbevel wordt gecreeerd in het Platform van de Gegevens van de Ervaring, maar tijdens het melden worden de verslagen samengevoegd gebruikend en verschijnen als één enkele gebeurtenis. `eventMergeID`
 
-Als u gegevens over een bepaalde gebeurtenis naar externe providers verzendt, kunt u dezelfde gebeurtenis ook samenvoegen-id met die gegevens opnemen. Later, als u de gegevens van derden wilt importeren in het Adobe Experience Platform, wordt de id voor het samenvoegen van gebeurtenissen gebruikt om alle gegevens samen te voegen die zijn verzameld als gevolg van de specifieke gebeurtenis die op uw webpagina heeft plaatsgevonden.
+Als u gegevens over een bepaalde gebeurtenis naar externe providers verzendt, kunt u dezelfde gegevens ook `eventMergeID` met die gegevens opnemen. Als u de gegevens van derden later in het Adobe Experience Platform wilt importeren, `eventMergeID` worden deze gebruikt om alle gegevens samen te voegen die zijn verzameld als gevolg van de specifieke gebeurtenis die op uw webpagina heeft plaatsgevonden.
 
-## Een samenvoegen-id voor een gebeurtenis genereren
+## Een `eventMergeID`
 
-De waarde van de ID van de gebeurtenisfusie kan om het even welk koord zijn u kiest, maar herinner dat alle gebeurtenissen die gebruikend zelfde identiteitskaart worden verzonden als één enkele gebeurtenis worden gemeld, zodat ben zorgvuldig om uniciteit af te dwingen wanneer de gebeurtenissen niet zouden moeten worden samengevoegd. Als u wilt dat de SDK namens u een unieke gebeurtenis samenvoegt-id genereert (volgens de algemeen aanvaarde [UUID v4-specificatie](https://www.ietf.org/rfc/rfc4122.txt)), kunt u de `createEventMergeId` opdracht gebruiken om dit te doen.
+De `eventMergeID` waarde kan elke tekenreeks zijn die u kiest, maar houd er rekening mee dat alle gebeurtenissen die met dezelfde id worden verzonden als één gebeurtenis worden gerapporteerd. Wees daarom voorzichtig met het afdwingen van uniciteit wanneer gebeurtenissen niet moeten worden samengevoegd. Als u wilt dat de SDK `eventMergeID` namens u een unieke URL genereert (volgens de algemeen aanvaarde [UUID v4-specificatie](https://www.ietf.org/rfc/rfc4122.txt)), kunt u de `createEventMergeId` opdracht gebruiken om dit te doen.
 
-Zoals met alle bevelen, is een belofte teruggekeerd omdat u het bevel zou kunnen uitvoeren alvorens SDK klaar is met laden. De belofte wordt zo snel mogelijk opgelost met een unieke samengevoegd-id voor de gebeurtenis. U kunt op de belofte wachten om worden opgelost alvorens gegevens naar de server te verzenden als volgt:
+Zoals met alle bevelen, is een belofte teruggekeerd omdat u het bevel zou kunnen uitvoeren alvorens SDK klaar is met laden. De belofte zal zo snel `eventMergeID` mogelijk met een unieke oplossing worden opgelost. U kunt op de belofte wachten om worden opgelost alvorens gegevens naar de server te verzenden als volgt:
 
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
@@ -110,7 +110,7 @@ eventMergeIdPromise.then(function(results) {
 });
 ```
 
-Volg hetzelfde patroon als u om andere redenen toegang wilt tot de samenvoegen-id voor de gebeurtenis (bijvoorbeeld om deze naar een externe provider te verzenden):
+Volg dit zelfde patroon als u toegang tot het `eventMergeID` om andere redenen (bijvoorbeeld, om het naar een derdeleverancier te verzenden) wilt:
 
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
