@@ -1,10 +1,10 @@
 ---
 title: Opdrachten uitvoeren
-seo-title: Opdrachten van Adobe Experience Platform Web SDK uitvoeren
-description: Leer hoe u de opdrachten van Experience Platform Web SDK uitvoert
-seo-description: Leer hoe u de opdrachten van Experience Platform Web SDK uitvoert
+seo-title: Het uitvoeren van de bevelen van SDK van het Web van Adobe Experience Platforms
+description: Leer hoe te om de bevelen van SDK van het Web van het Experience Platform uit te voeren
+seo-description: Leer hoe te om de bevelen van SDK van het Web van het Experience Platform uit te voeren
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%
