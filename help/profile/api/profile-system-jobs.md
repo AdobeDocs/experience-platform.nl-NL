@@ -4,21 +4,24 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+workflow-type: tm+mt
+source-wordcount: '1501'
+ht-degree: 0%
 
 ---
 
 
 # Systeemtaken profiel (aanvragen verwijderen)
 
-Met het Adobe Experience Platform kunt u gegevens uit meerdere bronnen ophalen en robuuste profielen voor afzonderlijke klanten maken. Gegevens die in Platform worden opgenomen, worden opgeslagen in het Data Lake en in de gegevensopslag van het Profiel van de Klant in real time. Soms kan het nodig zijn om een gegevensset of batch uit de profielopslag te verwijderen om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Dit vereist het gebruiken van de Real-time API van het Profiel van de Klant om een systeembaan van het Profiel tot stand te brengen, die ook als &quot;schrappingsverzoek&quot;wordt bekend, die ook kan worden gewijzigd, worden gecontroleerd, of indien nodig worden verwijderd.
+Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor afzonderlijke klanten maken. Gegevens die in Platform worden opgenomen, worden opgeslagen in het Data Lake en in de gegevensopslag van het Profiel van de Klant in real time. Soms kan het nodig zijn om een gegevensset of batch uit de profielopslag te verwijderen om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Dit vereist het gebruiken van de Real-time API van het Profiel van de Klant om een systeembaan van het Profiel tot stand te brengen, die ook als &quot;schrappingsverzoek&quot;wordt bekend, die ook kan worden gewijzigd, worden gecontroleerd, of indien nodig worden verwijderd.
 
 >[!NOTE]
 >Als u gegevenssets of batches wilt verwijderen uit het Datameer, gaat u naar het overzicht [van de](../../catalog/home.md) Catalogusservice voor instructies.
 
 ## Aan de slag
 
-De API eindpunten die in deze gids worden gebruikt maken deel uit van Real-time API van het Profiel van de Klant. Lees voordat u verdergaat de handleiding voor ontwikkelaars van de [realtime-API voor klantprofielen](getting-started.md). Met name bevat de sectie [Aan de](getting-started.md#getting-started) slag van de handleiding voor ontwikkelaars van profielen koppelingen naar verwante onderwerpen, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar API&#39;s van het Experience Platform met succes uit te voeren.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van het [Real-time Profiel van de Klant API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar elke Experience Platform-API te kunnen uitvoeren.
 
 ## Verzoeken om verwijderen weergeven
 
@@ -90,7 +93,7 @@ De reactie bevat een array &#39;children&#39; met een object voor elke verwijder
 |---|---|
 | _page.count | Het totale aantal aanvragen. Deze reactie is afgebroken voor de ruimte. |
 | _page.next | Als er nog een pagina met resultaten is, bekijkt u de volgende pagina met resultaten door de id-waarde in een [opzoekaanvraag](#view-a-specific-delete-request) te vervangen door de waarde &quot;next&quot;. |
-| jobType | Het type taak dat wordt gemaakt. In dit geval retourneert deze altijd &quot;DELETE&quot;. |
+| jobType | Het type taak dat wordt gemaakt. In dit geval wordt altijd &quot;DELETE&quot; geretourneerd. |
 | status | De status van de verwijderaanvraag. Mogelijke waarden zijn &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;COMPLETED&quot;, &quot;ERROR&quot;. |
 | cijfers | Een object dat het aantal records bevat dat is verwerkt (&quot;recordsProcess&quot;) en de tijd in seconden dat het verzoek is verwerkt, of de tijd die het heeft geduurd voordat het verzoek is voltooid (&quot;timetakenInSec&quot;). |
 
@@ -100,10 +103,10 @@ Het in werking stellen van een nieuw schrappingsverzoek wordt gedaan door een PO
 
 ### Een gegevensset verwijderen
 
-Om een dataset te schrappen, moet dataset identiteitskaart in het lichaam van het POST- verzoek worden omvat. Deze actie zal ALLE gegevens voor een bepaalde dataset schrappen. Het Platform van de ervaring staat u toe om datasets te schrappen die op zowel verslag als tijdreeksschema&#39;s worden gebaseerd.
+Om een dataset te schrappen, moet dataset identiteitskaart in het lichaam van het POST- verzoek worden omvat. Deze actie zal ALLE gegevens voor een bepaalde dataset schrappen. Het Experience Platform staat u toe om datasets te schrappen die op zowel verslag als tijdreeksschema&#39;s worden gebaseerd.
 
 >[!CAUTION]
-> Wanneer het proberen om een profiel-Toegelaten dataset te schrappen gebruikend het Platform van de Ervaring UI, wordt de dataset onbruikbaar gemaakt voor opname maar zal niet worden geschrapt tot een schrappingsverzoek wordt gecreeerd gebruikend API. Zie de [bijlage](#appendix) bij dit document voor meer informatie.
+> Wanneer het proberen om een profiel-Toegelaten dataset te schrappen gebruikend de Experience Platform UI, wordt de dataset onbruikbaar gemaakt voor opneming maar zal niet worden geschrapt tot een schrappingsverzoek wordt gecreeerd gebruikend API. Zie de [bijlage](#appendix) bij dit document voor meer informatie.
 
 **API-indeling**
 
@@ -266,7 +269,7 @@ In het antwoord worden de details van het verwijderingsverzoek weergegeven, incl
 
 | Eigenschappen | Beschrijving |
 |---|---|
-| jobType | Het type taak dat wordt gemaakt, retourneert in dit geval altijd &quot;DELETE&quot;. |
+| jobType | Het type baan dat wordt gecreeerd, in dit geval zal het altijd &quot;DELETE&quot;terugkeren. |
 | status | De status van de verwijderaanvraag. Mogelijke waarden: &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;COMPLETED&quot;, &quot;ERROR&quot;. |
 | cijfers | Een array die het aantal records bevat dat is verwerkt (&quot;recordsProcess&quot;) en de tijd in seconden dat de aanvraag is verwerkt, of de tijd die de aanvraag in beslag heeft genomen (&quot;timetakenInSec&quot;). |
 
@@ -274,7 +277,7 @@ Zodra de status van het verwijderingsverzoek &quot;COMPLETED&quot; is, kunt u be
 
 ## Een verwijderingsaanvraag verwijderen
 
-Met het Experience Platform kunt u een eerdere aanvraag verwijderen. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de verwijdertaak niet is voltooid of vastgelopen in het verwerkingsstadium. Om een schrappingsverzoek te verwijderen, kunt u een verzoek van de SCHRAPPING aan het `/system/jobs` eindpunt uitvoeren en identiteitskaart van het schrappingsverzoek omvatten dat u wenst om aan de verzoekweg te verwijderen.
+Met Experience Platform kunt u een eerdere aanvraag verwijderen. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de verwijdertaak niet is voltooid of vastgelopen in het verwerkingsstadium. Om een schrappingsverzoek te verwijderen, kunt u een DELETE verzoek aan het `/system/jobs` eindpunt uitvoeren en identiteitskaart van het schrappingsverzoek omvatten dat u wenst om aan de verzoekweg te verwijderen.
 
 **API-indeling**
 
@@ -303,15 +306,15 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege 
 
 ## Volgende stappen
 
-Nu u de stappen kent betrokken bij het schrappen van datasets en partijen van de opslag van het Profiel binnen het Platform van de Ervaring, kunt u veilig gegevens schrappen die verkeerd zijn toegevoegd of dat uw organisatie niet meer nodig heeft. Houd er rekening mee dat een verwijderingsaanvraag niet ongedaan kan worden gemaakt. Verwijder daarom alleen gegevens die u zeker weet dat u deze nu niet nodig hebt en in de toekomst niet meer nodig hebt.
+Nu u de stappen kent betrokken bij het schrappen van datasets en partijen van de Opslag van het Profiel binnen Experience Platform, kunt u veilig gegevens schrappen die verkeerd zijn toegevoegd of dat uw organisatie niet meer nodig heeft. Houd er rekening mee dat een verwijderingsaanvraag niet ongedaan kan worden gemaakt. Verwijder daarom alleen gegevens die u zeker weet dat u deze nu niet nodig hebt en in de toekomst niet meer nodig hebt.
 
 ## Aanhangsel {#appendix}
 
 De volgende informatie is supplementair aan de handeling van het schrappen van een dataset van de opslag van het Profiel.
 
-### Een gegevensset verwijderen met de gebruikersinterface van het ervaringsplatform
+### Een dataset verwijderen met de interface van het Experience Platform
 
-Wanneer het gebruiken van het Platform van de Ervaring gebruikersinterface om een dataset te schrappen die voor Profiel is toegelaten, opent een dialoog vragend, &quot;bent u zeker u u deze dataset van het Meer van Gegevens van de Ervaring wilt schrappen? Gebruik de API &#39;profile systems job&#39; om deze dataset uit de profielservice te verwijderen.&quot;
+Wanneer het gebruiken van het gebruikersinterface van het Experience Platform om een dataset te schrappen die voor Profiel is toegelaten, opent een dialoog vragend, &quot;bent u zeker u wilt deze dataset van het Meer van Gegevens van de Ervaring schrappen? Gebruik de API &#39;profile systems job&#39; om deze dataset uit de profielservice te verwijderen.&quot;
 
 Als u op **Verwijderen** in de gebruikersinterface klikt, wordt de gegevensset uitgeschakeld voor opname, maar wordt de gegevensset NIET automatisch verwijderd in de achterkant. Om de dataset permanent te schrappen, moet een schrappingsverzoek manueel gebruikend de stappen in deze gids voor het [creëren van een schrappingsverzoek](#create-a-delete-request)worden gecreeerd.
 
