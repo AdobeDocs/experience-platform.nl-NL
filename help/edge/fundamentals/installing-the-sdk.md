@@ -4,21 +4,22 @@ seo-title: Adobe Experience Platform Web SDK die SDK installeert
 description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 seo-description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 translation-type: tm+mt
-source-git-commit: e0dee4e39143ae9d7f5e4aaf9c352555f1c7f5d0
+source-git-commit: 90afc28d41878cbed90fc05176276a30d8aebe09
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---
 
 
-# De SDK installeren
+# De SDK installeren {#installing-the-sdk}
 
 De SDK van het Web van het Adobe Experience Platform is beschikbaar op een netwerk van de inhoudslevering (CDN) voor u aan gebruik. U kunt naar dit bestand verwijzen of het downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in een geminificeerde en niet-geminiaterde versie. De niet-geminificeerde versie is handig voor foutopsporingsdoeleinden.
 
-[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+* GeMinificeerde versie: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* Niet-geminificeerde versie: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
-## De code toevoegen
+## De code toevoegen {#adding-the-code}
 
 De eerste stap in het uitvoeren van het Web SDK van het Adobe Experience Platform is de volgende &quot;basiscode&quot;zo hoog mogelijk in de markering van uw HTML te kopiëren en te kleven: `<head>`
 
@@ -51,7 +52,7 @@ In dit voorbeeld wordt de naam van de algemene functie gewijzigd `mycustomname`i
 
 Deze basiscode laadt, naast het maken van een algemene functie, ook extra code in een extern bestand \(`alloy.js`\) dat op een server wordt gehost. Deze code wordt standaard asynchroon geladen, zodat de webpagina zo goed mogelijk presteert. Dit is de aanbevolen implementatie.
 
-## Ondersteuning voor Internet Explorer
+## Ondersteuning voor Internet Explorer {#support-internet-explore}
 
 Deze SDK maakt gebruik van beloften, een methode om de voltooiing van asynchrone taken mee te delen. De [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) -implementatie die door de SDK wordt gebruikt, wordt native ondersteund door alle doelbrowsers behalve Internet Explorer. Als u de SDK in Internet Explorer wilt gebruiken, moet u over `window.Promise` veelvouden [](https://remysharp.com/2010/10/08/what-is-a-polyfill)beschikken.
 
@@ -71,9 +72,9 @@ Als u hebt vastgesteld dat u moet polyfill `window.Promise`, neemt u de volgende
 
 Dit laadt een manuscript dat ervoor zorgt dat dat een geldige implementatie van het Vermogen `window.Promise` is.
 
-## Het JavaScript-bestand synchroon laden
+## Het JavaScript-bestand synchroon laden {#loading-javascript-synchronously}
 
-Zoals eerder is uitgelegd, laadt de basiscode die u hebt gekopieerd en in de HTML van uw website hebt geplakt een extern bestand met extra code. Deze extra code bevat de kernfunctionaliteit van de SDK. Elke opdracht die u probeert uit te voeren terwijl dit bestand wordt geladen, wordt in de wachtrij geplaatst en verwerkt nadat het bestand is geladen. Dit is de best presterende installatiemethode.
+Zoals uitgelegd in de sectie [De code](#adding-the-code)toevoegen, laadt de basiscode die u hebt gekopieerd en in HTML van uw website hebt geplakt een extern bestand met extra code. Deze extra code bevat de kernfunctionaliteit van de SDK. Elke opdracht die u probeert uit te voeren terwijl dit bestand wordt geladen, wordt in de wachtrij geplaatst en verwerkt nadat het bestand is geladen. Dit is de best presterende installatiemethode.
 
 Onder bepaalde omstandigheden kunt u het bestand echter synchroon laden \(meer details over deze omstandigheden worden later gedocumenteerd\). Hierdoor wordt voorkomen dat de rest van het HTML-document door de browser wordt geparseerd en gerenderd totdat het externe bestand is geladen en uitgevoerd. Deze extra vertraging voordat primaire inhoud aan gebruikers wordt weergegeven, wordt doorgaans afgeraden, maar kan afhankelijk van de omstandigheden zinvol zijn.
 
