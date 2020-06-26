@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Een object verwijderen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 0%
 
 ---
 
 
 # Een object verwijderen
 
-U kunt een Catalog-object verwijderen door de id ervan op te geven in het pad van een DELETE-aanvraag.
+U kunt een object Catalog verwijderen door de id ervan op te geven in het pad van een DELETE aanvraag.
 
->[!WARNING] Wees extra voorzichtig wanneer u objecten verwijdert, omdat dit niet ongedaan kan worden gemaakt en elders in het Experience Platform doorbraakwijzigingen kan veroorzaken.
+>[!WARNING] Wees voorzichtig bij het verwijderen van objecten, want dit kan niet ongedaan worden gemaakt en kan leiden tot doorbraakwijzigingen elders in het Experience Platform.
 
 **API-indeling**
 
@@ -21,7 +24,9 @@ U kunt een Catalog-object verwijderen door de id ervan op te geven in het pad va
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
->[!IMPORTANT] Het `DELETE /batches/{ID}` eindpunt is afgekeurd. Als u een batch wilt verwijderen, moet u de [Batch Ingestie-API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)gebruiken.
+>[!IMPORTANT]
+>
+>Het `DELETE /batches/{ID}` eindpunt is afgekeurd. Als u een batch wilt verwijderen, moet u de [Batch Ingestie-API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)gebruiken.
 
 | Parameter | Beschrijving |
 | --- | --- |
@@ -43,7 +48,7 @@ curl -X DELETE \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 200 (OK) en een array met de id van de verwijderde dataset. Deze id moet overeenkomen met de id die in de DELETE-aanvraag is verzonden. Wanneer u een GET-aanvraag uitvoert voor het verwijderde object, wordt HTTP-status 404 (Niet gevonden) geretourneerd, waarmee wordt bevestigd dat de gegevensset is verwijderd.
+Een geslaagde reactie retourneert HTTP-status 200 (OK) en een array met de id van de verwijderde dataset. Deze id moet overeenkomen met de id die in de DELETE aanvraag is verzonden. Wanneer u een GET-aanvraag uitvoert voor het verwijderde object, wordt HTTP-status 404 (Niet gevonden) geretourneerd, waarmee wordt bevestigd dat de gegevensset is verwijderd.
 
 ```json
 [
