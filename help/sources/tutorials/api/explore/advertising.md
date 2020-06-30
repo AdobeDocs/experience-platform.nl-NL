@@ -4,25 +4,28 @@ solution: Experience Platform
 title: Een advertentiesysteem verkennen met behulp van de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: b9c5afe62ea91e5b7f8ad6c3c6eb1bf834cf7ec8
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+workflow-type: tm+mt
+source-wordcount: '581'
+ht-degree: 0%
 
 ---
 
 
-# Een advertentiesysteem verkennen met behulp van de Flow Service API
+# Een reclamesysteem verkennen met behulp van de [!DNL Flow Service] API
 
-De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[!DNL Flow Service] wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de Flow Service API om advertentiesystemen te verkennen.
+Deze zelfstudie gebruikt de [!DNL Flow Service] API om advertentiesystemen te verkennen.
 
 ## Aan de slag
 
-Voor deze handleiding is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
-* [Bronnen](../../../home.md): Het Platform van de ervaring laat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [Sandboxen](../../../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
+* [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met een advertentiesysteem tot stand te brengen met behulp van de Flow Service API.
+In de volgende secties vindt u aanvullende informatie die u nodig hebt om verbinding te kunnen maken met een advertentiesysteem met behulp van de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
@@ -30,17 +33,17 @@ Deze zelfstudie vereist dat u een geldige verbinding hebt met de externe adverte
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform, inclusief de bronnen die bij Flow Service horen, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot [!DNL Flow Service]behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -50,7 +53,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Uw gegevenstabellen verkennen
 
-Gebruikend de basisverbinding voor uw reclamesysteem, kunt u uw gegevenslijsten onderzoeken door GET verzoeken uit te voeren. Gebruik de volgende vraag om de weg van de lijst te vinden u wenst om in Platform te inspecteren of in te gaan.
+Gebruikend de basisverbinding voor uw reclamesysteem, kunt u uw gegevenslijsten onderzoeken door GET verzoeken uit te voeren. Gebruik de volgende vraag om de weg van de lijst te vinden u wenst om te inspecteren of in te nemen [!DNL Platform].
 
 **API-indeling**
 
@@ -75,7 +78,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvol antwoord is een serie van lijsten van aan uw reclamesysteem. Zoek de lijst u in Platform wilt brengen en nota nemen van zijn `path` bezit, aangezien u het in de volgende stap moet verstrekken om zijn structuur te inspecteren.
+Een succesvol antwoord is een serie van lijsten van aan uw reclamesysteem. Zoek de tabel die u wilt invoegen [!DNL Platform] en neem nota van de `path` eigenschap ervan, aangezien u deze in de volgende stap moet opgeven om de structuur te controleren.
 
 ```json
 [
@@ -184,4 +187,4 @@ Een geslaagde reactie retourneert de structuur van een tabel. De details betreff
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u uw advertentiesysteem verkend, het pad van de tabel gevonden die u wilt doorgeven aan Platform en hebt u informatie gekregen over de structuur ervan. U kunt deze informatie in de volgende zelfstudie gebruiken om gegevens te [verzamelen van uw advertentiesysteem en deze over te brengen naar Platform](../collect/advertising.md).
+Aan de hand van deze zelfstudie hebt u uw advertentiesysteem verkend, het pad van de tabel gevonden die u wilt gebruiken [!DNL Platform], en informatie verkregen over de structuur ervan. U kunt deze informatie in de volgende zelfstudie gebruiken om gegevens van uw advertentiesysteem te [verzamelen en in het Platform](../collect/advertising.md)te brengen.
