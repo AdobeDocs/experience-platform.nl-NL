@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Het domeinmodel van de Beslissing van de aanbieding
 topic: overview
 translation-type: tm+mt
-source-git-commit: fdaef24a23c1c1da064ca33e8bed522e506fead5
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '2614'
+ht-degree: 0%
 
 ---
 
 
 # Overzicht van het besluitvormingsdomeinmodel van de aanbieding
 
-Het besluit van de aanbieding is een gebruiksgeval van de Dienst van Beslissing waarin u de regels en de voorspellingen formaliseert en centraal beheert die voor het in dienst nemen van klanten met aanbiedingen worden gebruikt. Beslissing van aanbiedingen wordt beschouwd als een type _**inhoudbeslissing**_. In dit geval worden de _**beslissingsopties**_ aangeduid als _**aanbiedingen**_ en worden zij als zodanig gekenmerkt door de inhoud die eraan is gehecht. Voor een inleiding van het objecten model dat door de Beslissende Dienst wordt gebruikt, gelieve te verwijzen naar het Model [van het Domein van de Dienst van de](experience-model.md)Beslissing.
+Het besluit van de aanbieding is een gebruiksgeval van [!DNL Decisioning Service] waarin u de regels en de voorspellingen formaliseert en centraal beheert die voor het in dienst nemen van klanten met aanbiedingen worden gebruikt. Beslissing van aanbiedingen wordt beschouwd als een type _**inhoudbeslissing**_. In dit geval worden de _**beslissingsopties**_ aangeduid als _**aanbiedingen**_ en worden zij als zodanig gekenmerkt door de inhoud die eraan is gehecht. Voor een inleiding van het objecten model dat door wordt gebruikt [!DNL Decisioning Service], gelieve te verwijzen naar het Model [van het Domein van de Dienst van de](experience-model.md)Beslissing.
 
 Het doel is de eindgebruiker een &quot;beste voorstel&quot; te bieden in elk kanaal op basis van doelcriteria, kosten en frequentievereisten, alsmede eerdere interacties tussen kanalen, waaronder eerder voorgestelde aanbiedingen.
 
@@ -60,7 +63,7 @@ Algemene aanbiedingen, ook wel gepersonaliseerde aanbiedingen genoemd, zijn de o
 
 Plaatsen definiëren inhoudsbeperkingen en worden gebruikt met een activiteit om de plaats te bepalen waar de volgende beste ervaring wordt geleverd. Dit vermindert verder het aantal opties dat in overweging kan worden genomen en is een andere beperking die door de activiteit wordt opgelegd. Dit wordt de plaatsingsbeperking genoemd. Alleen opties met inhoud die voldoet aan een plaatsingsbeperking, zoals aanbiedingen, worden in overweging genomen. Dit wordt geëvalueerd in de beginstadia van de besluitvormingsstrategie. Wanneer optieobjecten de plaatsingsbeperkingen van elke activiteit wijzigen, worden deze opnieuw geëvalueerd en kan de optie voor een of meer activiteiten in aanmerking worden genomen of eruit vallen.
 
-Het is niet de verantwoordelijkheid van de beslissingsdienst om de complexe details van inhoudsafhankelijkheden te formaliseren. In plaats daarvan identificeert elke client de lijst met plaatsingen op alle kanalen en geeft deze plaatsingen unieke id&#39;s en namen. Door naar een bepaalde plaatsing te verwijzen, beweert de ontwerper dat de bepaalde inhoud in de plaatsing zal passen.
+Het is niet de verantwoordelijkheid van de Commissie [!DNL Decisioning Service] om de complexe details van inhoudsafhankelijkheden te formaliseren. In plaats daarvan identificeert elke client de lijst met plaatsingen op alle kanalen en geeft deze plaatsingen unieke id&#39;s en namen. Door naar een bepaalde plaatsing te verwijzen, beweert de ontwerper dat de bepaalde inhoud in de plaatsing zal passen.
 
 Wanneer de inhoud wordt ontwikkeld zal de aanbiedingsteller en de inhoudsontwerper eenvoudig (moeten) overeenkomen over een &quot;impliciet contract&quot;dat achter de naam &quot;het Beeld van de Hero van de Homepage&quot;of &quot;het Openende Manuscript van de Vraag van de Dienst&quot;plaatst. Het eerste object kan worden overeengekomen als een afbeelding met een breedte van 600 px en een hoogte van 350 px. In het laatste geval kan de inhoud worden beperkt tot tekst in twee taalvarianten die niet meer dan 50 woorden in drie of vier zinnen met een semantische structuur zijn. Plaatsing om niet alle betekenis van het verborgen contract op te slaan.
 
@@ -98,7 +101,7 @@ Wanneer een beslissing wordt gevraagd, kan de cliënt verzoeken om voorstellen v
 
 Er worden momenteel geen dubbele beperkingen naar de opslagplaats voor zakelijke objecten geschreven. In plaats daarvan is deduplicatie de standaardstrategie bij uitvoering. Een verzoekparameter kan het standaardgedrag met voeten treden om de-duplicatiestap te onderdrukken.
 
-### Profielbeperkingen - Subsidiabiliteitsregels
+### [!DNL Profile] beperkingen - Subsidiabiliteitsregels
 
 Tot dusverre zijn de hier besproken beperkingen van toepassing, ongeacht voor wie de selectie van de aanbiedingen is bedoeld. Het Beslissen van de ervaring steunt ook een gebruiksgeval waarin het personaliseren van voorstellen op het verslag en de tijdreeksgebeurtenissen van een klant gebaseerd zijn. De regels worden geëvalueerd per profiel, om te beslissen als een aanbieding voor die gebruiker kwalificeert of moet worden onderdrukt. Om dat te doen, kan een toelatingsregel met elke aanbieding worden geassocieerd. Naast het profiel en de ervaringsgebeurtenissen van een eindgebruiker zal de geschiktheidsregel contextgegevens in real time in aanmerking nemen. Deze gegevens worden door de leveringsdienst verstrekt en kunnen de vorm aannemen van gegevens die geen verband houden met een profiel zoals inventarisniveaus, weersomstandigheden en vluchtschema&#39;s.
 
