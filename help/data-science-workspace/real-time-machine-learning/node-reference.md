@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Referentiehandleiding voor eindbewerkingsknooppunten voor leren van machines
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ De volgende gids schetst de gesteunde knoopbibliotheken voor het Leren van de ma
 
 ## Het ontdekken van knopen voor gebruik in uw pijpleiding van ML
 
-Kopieer de volgende code naar een Python-laptop om alle knooppunten weer te geven die beschikbaar zijn voor gebruik.
+Kopieer de volgende code naar een [!DNL Python] laptop om alle knooppunten weer te geven die beschikbaar zijn voor gebruik.
 
 ```python
 from pprint import pprint
@@ -121,7 +121,7 @@ msg6 = model_train.process(msg5)
 | Waarde | Beschrijving |
 | --- | --- |
 | functies | Invoerfuncties voor het model (lijst met tekenreeksen). <br> Bijvoorbeeld: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Naam van doelkolom (tekenreeks). |
+| label | Target kolomnaam (tekenreeks). |
 | mode | Trein/test (tekenreeks). |
 | model_path | Pad naar het model lokaal opslaan in onx-indeling. |
 | params.model | Absoluut importpad naar het model (tekenreeks), bijvoorbeeld: `sklearn.linear_model.LogisticRegression`. |
