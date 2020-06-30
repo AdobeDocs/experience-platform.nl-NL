@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analyseer uw gegevens met notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
@@ -18,31 +18,31 @@ Deze zelfstudie richt zich op het gebruik van Jupyter-laptops, die zijn gemaakt 
 
 De volgende concepten worden geïntroduceerd:
 
-- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is de webinterface van de volgende generatie voor Project Jupyter en is nauw geïntegreerd in [!DNL Adobe Experience Platform].
+- **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)is de webinterface van de volgende generatie voor Project Jupyter en is nauw geïntegreerd in[!DNL Adobe Experience Platform].
 - **Batches:** Datasets bestaan uit batches. Een batch is een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt. Nieuwe batches worden gemaakt wanneer gegevens aan een gegevensset worden toegevoegd.
-- **SDK voor gegevenstoegang (afgekeurd):** De SDK voor gegevenstoegang is nu afgekeurd. Gebruik de handleiding [Platform SDK](../authoring/platform-sdk.md) .
+- **SDK voor gegevenstoegang (afgekeurd):** De SDK voor gegevenstoegang is nu afgekeurd. Gebruik deze [!DNL Platform SDK](../authoring/platform-sdk.md) handleiding.
 
 ## Laptops verkennen in de werkruimte voor wetenschap van gegevens
 
 In deze sectie, worden de gegevens onderzocht die eerder in het detailhandelschema werden opgenomen.
 
-Met de werkruimte voor gegevenswetenschap kunnen gebruikers Jupyter-laptops maken via het JupyterLab-platform waar ze werkstromen voor machinaal leren kunnen maken en bewerken. JupyterLab is een programma voor samenwerking tussen servers en clients waarmee gebruikers laptopdocumenten kunnen bewerken via een webbrowser. Deze laptops kunnen zowel uitvoerbare code als tekstelementen bevatten. Voor onze doeleinden, zullen wij Markdown voor analysebeschrijving en uitvoerbare code Python gebruiken om gegevensonderzoek en analyse uit te voeren.
+Met de werkruimte voor gegevenswetenschap kunnen gebruikers [!DNL Jupyter Notebooks] via het [!DNL JupyterLab] platform werkstromen voor machinaal leren maken en bewerken. [!DNL JupyterLab] is een hulpmiddel voor samenwerking tussen server en client waarmee gebruikers notitieboekjecten kunnen bewerken via een webbrowser. Deze laptops kunnen zowel uitvoerbare code als tekstelementen bevatten. Voor onze doeleinden, zullen wij Markdown voor analysebeschrijving en uitvoerbare [!DNL Python] code gebruiken om gegevensonderzoek en analyse uit te voeren.
 
 ### Kies uw werkruimte
 
-Bij het starten van JupyterLab krijgen we een webinterface voor Jupyter-laptops te zien. Afhankelijk van welk type laptop we kiezen, wordt een corresponderende kernel gestart.
+Bij de lancering [!DNL JupyterLab], worden wij voorgesteld met een web-based interface voor Notitieboekjes Jupyter. Afhankelijk van welk type laptop we kiezen, wordt een corresponderende kernel gestart.
 
-Bij het vergelijken van welke omgeving we moeten gebruiken, moeten we rekening houden met de beperkingen van elke service. Als we bijvoorbeeld de [pandabibliotheek](https://pandas.pydata.org/) gebruiken met Python, is de RAM-limiet 2 GB als normale gebruiker. Zelfs als energiegebruiker zouden we beperkt zijn tot 20 GB RAM. Als het om grotere berekeningen gaat, zou het zinvol zijn om Spark te gebruiken, dat 1,5 TB biedt dat met alle laptopexemplaren wordt gedeeld.
+Bij het vergelijken van welke omgeving we moeten gebruiken, moeten we rekening houden met de beperkingen van elke service. Als we bijvoorbeeld de [pandabibliotheek](https://pandas.pydata.org/) gebruiken met [!DNL Python], is de RAM-limiet voor gewone gebruikers 2 GB. Zelfs als energiegebruiker zouden we beperkt zijn tot 20 GB RAM. Als u met grotere berekeningen te maken krijgt, is het verstandig om een systeem te gebruiken [!DNL Spark] dat 1,5 TB biedt en dat met alle laptopexemplaren wordt gedeeld.
 
 Standaard werkt Tensorflow-recept in een GPU-cluster en Python in een CPU-cluster.
 
 ### Een nieuw notebook maken
 
-In [!DNL Adobe Experience Platform] UI, klik op het lusje van de Wetenschap van Gegevens in het hoogste menu om u aan de Werkruimte van de Wetenschap van Gegevens te nemen. Klik op het tabblad JupyterLab van deze pagina om de JupyterLab-startprogramma te openen. U zou een pagina moeten zien gelijkend op dit.
+In [!DNL Adobe Experience Platform] UI, klik op het lusje van de Wetenschap van Gegevens in het hoogste menu om u aan de Werkruimte van de Wetenschap van Gegevens te nemen. Klik op de tab van deze pagina waarop de [!DNL JupyterLab] [!DNL JupyterLab] starter wordt geopend. U zou een pagina moeten zien gelijkend op dit.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
-In onze zelfstudie gebruiken we Python 3 in het Jupyter-notebook om te tonen hoe we de gegevens kunnen openen en verkennen. Op de pagina Launcher staan voorbeelden van laptops. We zullen het winkelrecept voor Python 3 gebruiken.
+In onze zelfstudie gebruiken we [!DNL Python] 3 in het Jupyter-notebook om te tonen hoe we de gegevens kunnen openen en verkennen. Op de pagina Launcher staan voorbeelden van laptops. Voor [!DNL Python] 3 gebruiken we het winkelrecept.
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
@@ -50,13 +50,13 @@ Het recept van de Verkoop van de Detailhandel is een standalone voorbeeld dat de
 
 ### Toegangsgegevens
 
->[!NOTE] Het `data_access_sdk_python` is afgekeurd en wordt niet meer aanbevolen. Raadpleeg de zelfstudie [voor het converteren van gegevens naar Platform SDK](../authoring/platform-sdk.md) voor het converteren van uw code naar Platform SDK. Voor deze zelfstudie gelden nog dezelfde stappen.
+>[!NOTE] Het `data_access_sdk_python` is afgekeurd en wordt niet meer aanbevolen. Raadpleeg de zelfstudie [voor het converteren van gegevens naar Platform SDK](../authoring/platform-sdk.md) voor het converteren van uw code. Voor deze zelfstudie gelden nog dezelfde stappen.
 
-We gaan over tot interne toegang tot gegevens van [!DNL Adobe Experience Platform] en externe gegevens. Wij zullen de `data_access_sdk_python` bibliotheek gebruiken om tot interne gegevens zoals datasets en schema&#39;s toegang te hebben XDM. Voor externe gegevens gebruiken we de pandas Python-bibliotheek.
+We gaan over tot interne toegang tot gegevens van [!DNL Adobe Experience Platform] en externe gegevens. Wij zullen de `data_access_sdk_python` bibliotheek gebruiken om tot interne gegevens zoals datasets en schema&#39;s toegang te hebben XDM. Voor externe gegevens gebruiken we de [!DNL Python] bibliotheek met panda&#39;s.
 
 #### Externe gegevens
 
-Open de Retail Sales-laptop en zoek de header &quot;Load Data&quot;. De volgende Python-code gebruikt de gegevensstructuur van de pandas en de `DataFrame` read_csv() [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) -functie om de CSV te lezen die op Github wordt gehost in het DataFrame:
+Open de Retail Sales-laptop en zoek de header &quot;Load Data&quot;. De volgende [!DNL Python] code gebruikt de `DataFrame` gegevensstructuur van de pandas en de functie [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) om de CSV-code te lezen die wordt gehost [!DNL Github] in het DataFrame:
 
 ![](../images/jupyterlab/analyze-data/read_csv.png)
 
@@ -68,13 +68,13 @@ Tot slot kunnen we eens bekijken hoe onze gegevens eruit zien. Wij kunnen gebrui
 
 ![](../images/jupyterlab/analyze-data/df_head.png)
 
-#### Experience Platform-gegevens
+#### [!DNL Experience Platform] data
 
 Nu gaan we verder met het openen van [!DNL Experience Platform] gegevens.
 
 ##### Op gegevensset-id
 
-Voor deze sectie, gebruiken wij de Detailhandel dataset van de Verkoop die de zelfde dataset is in de de steekproefnotitie van de Verkoop wordt gebruikt.
+Voor deze sectie, gebruiken wij de Detailhandel dataset van de Verkoop die de zelfde dataset is die in de de steekproefnotitie van de Verkoop wordt gebruikt.
 
 In ons Jupyter-notebook hebben we toegang tot onze gegevens via het tabblad **Gegevens** aan de linkerkant. Als u op het tabblad klikt, wordt een lijst met gegevenssets weergegeven.
 
@@ -86,7 +86,7 @@ Aangezien de dataset het zelfde is, willen wij de ladingsgegevens van de vorige 
 
 Nu, kunnen wij op de `Retail-Training-<your-alias>` dataset met de rechtermuisknop klikken en de &quot;Onderzoek Gegevens in Notitieboekje&quot;optie in dropdown selecteren. Er wordt een uitvoerbaar code-item in uw notitieboekje weergegeven.
 
->[!TIP] Raadpleeg de SDK-handleiding van het [platform](../authoring/platform-sdk.md) voor het converteren van uw code.
+>[!TIP] raadpleeg de [!DNL Platform SDK](../authoring/platform-sdk.md) handleiding voor het converteren van uw code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -96,7 +96,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-Als u met andere kernels werkt dan Python, kunt u [deze pagina](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) raadplegen voor toegang tot gegevens op de [!DNL Adobe Experience Platform].
+Als u aan andere kernels dan [!DNL Python]werkt, raadpleegt u [deze pagina](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) voor toegang tot gegevens op de [!DNL Adobe Experience Platform].
 
 Als u de cel van het uitvoerbare bestand selecteert en vervolgens op de afspeelknop op de werkbalk drukt, wordt de uitvoerbare code uitgevoerd. De output voor `head()` zal een lijst met de sleutels van uw dataset als kolommen en eerste n rijen in de dataset zijn. `head()` Accepteert een geheel argument om te specificeren hoeveel lijnen aan output. Standaard is dit 5.
 
@@ -122,7 +122,7 @@ Nu wij tot uw gegevens kunnen toegang hebben, laten wij nadruk op de gegevens ze
 
 #### Statistisch overzicht
 
-We kunnen de pandabibliotheek van Python gebruiken om het gegevenstype van elk kenmerk op te halen. De output van de volgende vraag zal ons informatie over het aantal ingangen en het gegevenstype voor elk van de kolommen geven:
+We kunnen een pandabibliotheek gebruiken om het gegevenstype van elk kenmerk op te halen. [!DNL Python's] De output van de volgende vraag zal ons informatie over het aantal ingangen en het gegevenstype voor elk van de kolommen geven:
 
 ```PYTHON
 df.info()
@@ -150,7 +150,7 @@ Dit betekent dat er 22 winkels zijn van `storeType` , `A`17 zijn `storeType` , e
 
 #### Gegevensvisualisatie
 
-Nu we onze gegevenskaderwaarden kennen, willen we dit aanvullen met visualisaties om de dingen duidelijker en makkelijker te maken om patronen te identificeren. Grafieken zijn ook handig wanneer u resultaten naar een publiek verzendt. Enkele Python-bibliotheken die nuttig zijn voor visualisatie zijn onder andere:
+Nu we onze gegevenskaderwaarden kennen, willen we dit aanvullen met visualisaties om de dingen duidelijker en makkelijker te maken om patronen te identificeren. Grafieken zijn ook handig wanneer u resultaten naar een publiek verzendt. Enkele [!DNL Python] bibliotheken die nuttig zijn voor visualisatie zijn:
 - [Matplotlib](https://matplotlib.org/)
 - [pandas](https://pandas.pydata.org/)
 - [seaborn](https://seaborn.pydata.org/)
@@ -158,7 +158,7 @@ Nu we onze gegevenskaderwaarden kennen, willen we dit aanvullen met visualisatie
 
 In deze sectie gaan we snel over enkele voordelen voor het gebruik van elke bibliotheek.
 
-[Matplotlib](https://matplotlib.org/) is de oudste visualisatiepakket van Python. Hun doel is om &quot;gemakkelijke en moeilijke dingen mogelijk te maken&quot;. Dit is meestal het geval omdat het pakket uiterst krachtig is, maar ook ingewikkeld. Het is niet altijd gemakkelijk om een redelijke grafiek te krijgen zonder veel tijd en moeite te nemen.
+[Matplotlib](https://matplotlib.org/) is het oudste [!DNL Python] visualisatiepakket. Hun doel is om &quot;gemakkelijke en moeilijke dingen mogelijk te maken&quot;. Dit is meestal het geval omdat het pakket uiterst krachtig is, maar ook ingewikkeld. Het is niet altijd gemakkelijk om een redelijke grafiek te krijgen zonder veel tijd en moeite te nemen.
 
 [Pandas](https://pandas.pydata.org/) wordt vooral gebruikt voor het DataFrame-object, dat gegevensmanipulatie met geïntegreerde indexering mogelijk maakt. Panda&#39;s bevatten echter ook een ingebouwde functie voor het uitzetten van beelden die is gebaseerd op matplotlib.
 
