@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Een Apache HDFS-bronaansluiting maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
 
 
-# Een Apache HDFS-bronaansluiting maken in de gebruikersinterface
+# Een [!DNL Apache] HDFS-bronaansluiting maken in de gebruikersinterface
 
 >[!NOTE]
->De Apache HDFS-connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De [!DNL Apache] HDFS-aansluiting is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De bronschakelaars in [!DNL Adobe Experience Platform] verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het verifiëren van een Apache Hadoop Distributed File System (hierna &quot;HDFS&quot; genoemd)-bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
+De bronschakelaars in [!DNL Adobe Experience Platform] verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het verifiëren van een [!DNL Apache Hadoop Distributed File System] (hierna &quot;HDFS&quot; genoemd) bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
 
 ## Aan de slag
 
