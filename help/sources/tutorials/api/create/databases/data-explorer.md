@@ -4,60 +4,60 @@ solution: Experience Platform
 title: Een Azure Data Explorer-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: e4ed6ae3ee668cd0db741bd07d2fb7be593db4c9
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
 
 
-# Een Azure Data Explorer-connector maken met de Flow Service API
+# Een [!DNL Azure Data Explorer] aansluiting maken met de [!DNL Flow Service] API
 
 >[!NOTE]
->De Azure Data Explorer-connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De [!DNL Azure Data Explorer] connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De Dienst van de stroom wordt gebruikt om klantengegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[!DNL Flow Service] wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Azure Data Explorer (hierna &quot;Data Explorer&quot; genoemd) aan Experience Platform te verbinden.
+In deze zelfstudie wordt de [!DNL Flow Service] API gebruikt om u door de stappen te laten lopen waarmee u verbinding wilt maken [!DNL Azure Data Explorer] (hierna &quot;Data Explorer&quot; genoemd) [!DNL Experience Platform].
 
 ## Aan de slag
 
 Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
+* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met de Ontdekkingsreiziger van Gegevens te verbinden gebruikend de Dienst API van de Stroom.
+In de volgende secties vindt u aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL Data Explorer] [!DNL Flow Service] de API.
 
 ### Vereiste referenties verzamelen
 
-Voor de Dienst van de Stroom om met de Ontdekkingsreiziger van Gegevens te verbinden, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
+Als u verbinding wilt [!DNL Flow Service] maken met [!DNL Data Explorer], moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `endpoint` | Het eindpunt van de server van de Ontdekkingsreiziger van Gegevens. |
-| `database` | De naam van de gegevensverkenner-database. |
-| `tenant` | De unieke huurder-id die wordt gebruikt om verbinding te maken met de gegevensverkenner-database. |
-| `servicePrincipalId` | De unieke dienst belangrijkste identiteitskaart die wordt gebruikt om met het gegevensbestand van de Ontdekkingsreiziger van Gegevens te verbinden. |
-| `servicePrincipalKey` | De unieke de dienstbelangrijkste sleutel die wordt gebruikt om met het gegevensbestand van de Ontdekkingsreiziger van Gegevens te verbinden. |
-| `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor Data Explorer is `0479cc14-7651-4354-b233-7480606c2ac3`. |
+| `endpoint` | Het eindpunt van de [!DNL Data Explorer] server. |
+| `database` | De naam van de [!DNL Data Explorer] database. |
+| `tenant` | De unieke huurder-id die wordt gebruikt om verbinding te maken met de [!DNL Data Explorer] database. |
+| `servicePrincipalId` | De unieke dienst belangrijkste identiteitskaart die wordt gebruikt om met het [!DNL Data Explorer] gegevensbestand te verbinden. |
+| `servicePrincipalKey` | De unieke de dienstbelangrijkste sleutel die wordt gebruikt om met het [!DNL Data Explorer] gegevensbestand te verbinden. |
+| `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL Data Explorer] is `0479cc14-7651-4354-b233-7480606c2ac3`. |
 
 Voor meer informatie over begonnen worden verwijs naar [dit document](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)van de Ontdekkingsreiziger van Gegevens.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle E[!DNL xperience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in Experience Platform, inclusief die van de Flow Service, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DNL Flow Service]sandboxen behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -67,7 +67,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Verbinding maken
 
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Er is slechts één connector vereist per Data Explorer-account omdat deze kan worden gebruikt om meerdere bronconnectors te maken om verschillende gegevens in te brengen.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Er is slechts één connector per [!DNL Data Explorer] account vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
 
 **API-indeling**
 
@@ -77,7 +77,7 @@ POST /connections
 
 **Verzoek**
 
-Om een verbinding van de Ontdekkingsreiziger van Gegevens tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het POST- verzoek worden verstrekt. De verbindingsspecificatie-id voor Data Explorer is `0479cc14-7651-4354-b233-7480606c2ac3`.
+Om een [!DNL Data Explorer] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het POST- verzoek worden verstrekt. De verbindingsspecificatie-id voor [!DNL Data Explorer] is `0479cc14-7651-4354-b233-7480606c2ac3`.
 
 ```shell
 curl -X POST \
@@ -109,16 +109,16 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.endpoint` | Het eindpunt van de server van de Ontdekkingsreiziger van Gegevens. |
-| `auth.params.database` | De naam van de gegevensverkenner-database. |
-| `auth.params.tenant` | De unieke huurder-id die wordt gebruikt om verbinding te maken met de gegevensverkenner-database. |
-| `auth.params.servicePrincipalId` | De unieke dienst belangrijkste identiteitskaart die wordt gebruikt om met het gegevensbestand van de Ontdekkingsreiziger van Gegevens te verbinden. |
-| `auth.params.servicePrincipalKey` | De unieke de dienstbelangrijkste sleutel die wordt gebruikt om met het gegevensbestand van de Ontdekkingsreiziger van Gegevens te verbinden. |
-| `connectionSpec.id` | De specificatie-id van de gegevensverkenner-verbinding: `0479cc14-7651-4354-b233-7480606c2ac3`. |
+| `auth.params.endpoint` | Het eindpunt van de [!DNL Data Explorer] server. |
+| `auth.params.database` | De naam van de [!DNL Data Explorer] database. |
+| `auth.params.tenant` | De unieke huurder-id die wordt gebruikt om verbinding te maken met de [!DNL Data Explorer] database. |
+| `auth.params.servicePrincipalId` | De unieke dienst belangrijkste identiteitskaart die wordt gebruikt om met het [!DNL Data Explorer] gegevensbestand te verbinden. |
+| `auth.params.servicePrincipalKey` | De unieke de dienstbelangrijkste sleutel die wordt gebruikt om met het [!DNL Data Explorer] gegevensbestand te verbinden. |
+| `connectionSpec.id` | De [!DNL Data Explorer] verbindingsspecificatie-id: `0479cc14-7651-4354-b233-7480606c2ac3`. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
 ```json
 {
@@ -129,4 +129,4 @@ Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, in
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een verbinding van de Ontdekkingsreiziger van Gegevens tot stand gebracht gebruikend de Dienst API van de Stroom en hebt u de unieke waarde van identiteitskaart van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u databases kunt [verkennen met behulp van de Flow Service API](../../explore/database-nosql.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL Data Explorer] verbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u databases kunt [verkennen met behulp van de Flow Service API](../../explore/database-nosql.md).
