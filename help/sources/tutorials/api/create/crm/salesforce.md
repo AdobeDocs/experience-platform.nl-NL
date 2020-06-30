@@ -4,57 +4,57 @@ solution: Experience Platform
 title: Een Salesforce-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 72c1d53295d5c4204c02959c857edc06f246534c
+source-git-commit: 5839e4695589455bd32b6e3e33a7c377343f920d
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
 
 
-# Een Salesforce-connector maken met de Flow Service API
+# Een [!DNL Salesforce] aansluiting maken met de [!DNL Flow Service] API
 
-De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen het Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+De Dienst van de stroom wordt gebruikt om klantengegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Platform te verbinden met een Salesforce-account voor het verzamelen van CRM-gegevens.
+Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om verbinding [!DNL Platform] te maken met een [!DNL Salesforce] account voor het verzamelen van CRM-gegevens.
 
-Als u de gebruikersinterface in het Platform van de Ervaring liever zou gebruiken, verstrekt de [Salesforce bron schakelaar UI leerprogramma](../../../ui/create/crm/salesforce.md) geleidelijke instructies voor het uitvoeren van gelijkaardige acties.
+Als u liever de gebruikersinterface in wilt gebruiken [!DNL Experience Platform], biedt de zelfstudie [van de](../../../ui/create/crm/salesforce.md) Salesforce-bronconnector stapsgewijze instructies voor het uitvoeren van vergelijkbare acties.
 
 ## Aan de slag
 
-Voor deze handleiding is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): Het Platform van de ervaring laat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [Sandboxen](../../../../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
+* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om Platform met een rekening van Salesforce met succes te verbinden gebruikend de Dienst API van de Stroom.
+In de volgende secties vindt u aanvullende informatie die u moet weten om een verbinding met een [!DNL Platform] account met de [!DNL Salesforce] [!DNL Flow Service] API tot stand te kunnen brengen.
 
 ### Vereiste referenties verzamelen
 
-Voor de Dienst van de Stroom om met Salesforce te verbinden, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
+Als u verbinding [!DNL Flow Service] wilt maken met [!DNL Salesforce], moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `environmentUrl` | De URL van de Salesforce-broninstantie. |
-| `username` | De gebruikersnaam voor de Salesforce-gebruikersaccount. |
-| `password` | Het wachtwoord voor de Salesforce-gebruikersaccount. |
-| `securityToken` | Het beveiligingstoken voor de Salesforce-gebruikersaccount. |
+| `environmentUrl` | De URL van de [!DNL Salesforce] broninstantie. |
+| `username` | De gebruikersnaam voor de [!DNL Salesforce] gebruikersaccount. |
+| `password` | Het wachtwoord voor de [!DNL Salesforce] gebruikersaccount. |
+| `securityToken` | Het beveiligingstoken voor de [!DNL Salesforce] gebruikersaccount. |
 
 Ga voor meer informatie over aan de slag met [dit Salesforce-document](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../../../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform, inclusief die van de Flow Service, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DNL Flow Service]sandboxen behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -64,13 +64,13 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Verbindingsspecificaties opzoeken
 
-Voordat u Platform kunt verbinden met een Salesforce-account, moet u controleren of er verbindingsspecificaties bestaan voor Salesforce. Als er geen verbindingsspecificaties bestaan, kan geen verbinding worden gemaakt.
+Voordat u verbinding maakt [!DNL Platform] met een [!DNL Salesforce] account, moet u controleren of er verbindingsspecificaties bestaan voor [!DNL Salesforce]. Als er geen verbindingsspecificaties bestaan, kan geen verbinding worden gemaakt.
 
-Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor Salesforce opzoeken door een GET verzoek uit te voeren en vraagparameters te gebruiken.
+Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor opzoeken [!DNL Salesforce] door een GET verzoek uit te voeren en vraagparameters te gebruiken.
 
 **API-indeling**
 
-Het verzenden van een GET verzoek zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=name=="salesforce"` om informatie specifiek voor Salesforce te verkrijgen.
+Het verzenden van een GET verzoek zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=name=="salesforce"` om informatie specifiek voor te verkrijgen [!DNL Salesforce].
 
 ```http
 GET /connectionSpecs
@@ -79,7 +79,7 @@ GET /connectionSpecs?property=name=="salesforce"
 
 **Verzoek**
 
-Het volgende verzoek wint de verbindingsspecificaties voor Salesforce terug.
+In het volgende verzoek worden de verbindingsspecificaties opgehaald voor [!DNL Salesforce].
 
 ```shell
 curl -X GET \
@@ -92,7 +92,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert de verbindingsspecificaties voor Salesforce, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een basisverbinding te maken.
+Een geslaagde reactie retourneert de verbindingsspecificaties voor [!DNL Salesforce], inclusief de unieke id (`id`). Deze id is vereist in de volgende stap om een basisverbinding te maken.
 
 ```json
 {
@@ -145,7 +145,7 @@ Een succesvolle reactie keert de verbindingsspecificaties voor Salesforce, met i
 
 ## Een basisverbinding maken
 
-Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per Salesforce-account is slechts één basisverbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
+Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL Salesforce] account is slechts één basisverbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
 
 Voer de volgende POST-aanvraag uit om een basisverbinding te maken.
 
@@ -185,10 +185,10 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `auth.params.username` | De gebruikersnaam die aan uw Salesforce-account is gekoppeld. |
-| `auth.params.password` | Het wachtwoord dat aan uw Salesforce-account is gekoppeld. |
-| `auth.params.securityToken` | Het beveiligingstoken dat aan uw Salesforce-account is gekoppeld. |
-| `connectionSpec.id` | De verbindingsspecificatie `id` van uw Salesforce-account die in de vorige stap is opgehaald. |
+| `auth.params.username` | De gebruikersnaam die aan uw [!DNL Salesforce] account is gekoppeld. |
+| `auth.params.password` | Het wachtwoord dat aan uw [!DNL Salesforce] account is gekoppeld. |
+| `auth.params.securityToken` | Het beveiligingstoken dat aan uw [!DNL Salesforce] account is gekoppeld. |
+| `connectionSpec.id` | De verbindingsspecificatie `id` van uw [!DNL Salesforce] account die in de vorige stap is opgehaald. |
 
 **Antwoord**
 
@@ -203,4 +203,4 @@ Een geslaagde reactie bevat de unieke id (`id`) van de basisverbinding. Deze id 
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een basisverbinding voor uw Salesforce-account gemaakt met behulp van API&#39;s en is een unieke id opgehaald als onderdeel van de hoofdtekst van de reactie. U kunt deze basis verbindings identiteitskaart in de volgende zelfstudie gebruiken aangezien u leert hoe te om de systemen van CRM te [onderzoeken gebruikend de Dienst API](../../explore/crm.md)van de Stroom.
+Door deze zelfstudie te volgen, hebt u een basisverbinding voor uw [!DNL Salesforce] account gemaakt met behulp van API&#39;s en is een unieke id verkregen als onderdeel van de hoofdtekst van de reactie. U kunt deze basis verbindings identiteitskaart in de volgende zelfstudie gebruiken aangezien u leert hoe te om de systemen van CRM te [onderzoeken gebruikend de Dienst API](../../explore/crm.md)van de Stroom.
