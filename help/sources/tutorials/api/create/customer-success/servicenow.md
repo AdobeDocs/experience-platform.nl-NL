@@ -4,57 +4,57 @@ solution: Experience Platform
 title: Creeer een schakelaar ServiceNow gebruikend de Dienst API van de Stroom
 topic: overview
 translation-type: tm+mt
-source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
 
 
-# Creeer een schakelaar ServiceNow gebruikend de Dienst API van de Stroom
+# Een [!DNL ServiceNow] aansluiting maken met de [!DNL Flow Service] API
 
 >[!NOTE]
->De aansluiting ServiceNow is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De [!DNL ServiceNow] connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De Dienst van de stroom wordt gebruikt om klantengegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[!DNL Flow Service] wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om Experience Platform met een server te verbinden ServiceNow.
+Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om verbinding [!DNL Experience Platform] te maken met een [!DNL ServiceNow] server.
 
 ## Aan de slag
 
 Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
+* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met een server te verbinden ServiceNow gebruikend de Dienst API van de Stroom.
+In de volgende secties vindt u aanvullende informatie die u moet weten om verbinding te kunnen maken met een [!DNL ServiceNow] server via de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Opdat de Dienst van de Stroom met ServiceNow verbindt, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
+Als u verbinding [!DNL Flow Service] wilt maken met [!DNL ServiceNow], moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `endpoint` | Het eindpunt van de server ServiceNow. |
-| `username` | De gebruikersnaam die wordt gebruikt om verbinding te maken met de ServiceNow-server voor verificatie. |
-| `password` | Het wachtwoord om met de server te verbinden ServiceNow voor authentificatie. |
+| `endpoint` | Het eindpunt van de [!DNL ServiceNow] server. |
+| `username` | De gebruikersnaam die wordt gebruikt om verbinding te maken met de [!DNL ServiceNow] server voor verificatie. |
+| `password` | Het wachtwoord om verbinding te maken met de [!DNL ServiceNow] server voor verificatie. |
 
 Voor meer informatie over begonnen worden, verwijs naar [dit document](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET)ServiceNow.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in Experience Platform, inclusief die van Flow Service, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot [!DNL Flow Service]behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -64,11 +64,11 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Verbindingsspecificaties opzoeken
 
-Om een verbinding te creëren ServiceNow, moet een reeks ServiceNow verbindingsspecificaties binnen de Dienst van de Stroom bestaan. De eerste stap in het verbinden van Platform met ServiceNow is deze specificaties terug te winnen.
+Om een [!DNL ServiceNow] verbinding tot stand te brengen, moet een reeks [!DNL ServiceNow] verbindingsspecificaties binnen bestaan [!DNL Flow Service]. De eerste stap bij het verbinden [!DNL Platform] met [!DNL ServiceNow] is deze specificaties terug te winnen.
 
 **API-indeling**
 
-Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. Het verzenden van een GET verzoek aan het `/connectionSpecs` eindpunt zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag ook omvatten `property=name=="service-now"` om informatie specifiek voor ServiceNow te verkrijgen.
+Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. Het verzenden van een GET verzoek aan het `/connectionSpecs` eindpunt zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag ook omvatten `property=name=="service-now"` om informatie specifiek voor te verkrijgen [!DNL ServiceNow].
 
 ```http
 GET /connectionSpecs
@@ -77,7 +77,7 @@ GET /connectionSpecs?property=name=="service-now"
 
 **Verzoek**
 
-Het volgende verzoek wint de verbindingsspecificaties voor ServiceNow terug.
+In het volgende verzoek worden de verbindingsspecificaties opgehaald voor [!DNL ServiceNow].
 
 ```shell
 curl -X GET \
@@ -90,7 +90,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert de verbindingsspecificaties voor ServiceNow, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een basisverbinding te maken.
+Een geslaagde reactie retourneert de verbindingsspecificaties voor [!DNL ServiceNow], inclusief de unieke id (`id`). Deze id is vereist in de volgende stap om een basisverbinding te maken.
 
 ```json
 {
@@ -137,7 +137,7 @@ Een succesvolle reactie keert de verbindingsspecificaties voor ServiceNow, met i
 
 ## Een basisverbinding maken
 
-Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Er is slechts één basisverbinding vereist per ServiceNow-account, omdat deze kan worden gebruikt om meerdere bronconnectors te maken om verschillende gegevens in te voeren.
+Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL ServiceNow] account is slechts één basisverbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
 
 **API-indeling**
 
@@ -175,10 +175,10 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | ------------- | --------------- |
-| `auth.params.server` | Het eindpunt van uw server ServiceNow. |
-| `auth.params.username` | De gebruikersnaam die wordt gebruikt om verbinding te maken met de ServiceNow-server voor verificatie. |
-| `auth.params.password` | Het wachtwoord om met de server te verbinden ServiceNow voor authentificatie. |
-| `connectionSpec.id` | De identiteitskaart van de verbindingsspecificatie verbonden aan ServiceNow. |
+| `auth.params.server` | Het eindpunt van uw [!DNL ServiceNow] server. |
+| `auth.params.username` | De gebruikersnaam die wordt gebruikt om verbinding te maken met de [!DNL ServiceNow] server voor verificatie. |
+| `auth.params.password` | Het wachtwoord om verbinding te maken met de [!DNL ServiceNow] server voor verificatie. |
+| `connectionSpec.id` | De verbindingsspecificatie-id die aan [!DNL ServiceNow]is gekoppeld. |
 
 **Antwoord**
 
@@ -193,4 +193,4 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een ServiceNow basisverbinding gebruikend de Dienst API van de Stroom gecreeerd, en hebt de unieke waarde van identiteitskaart van de verbinding verkregen. U kunt deze basis verbindings identiteitskaart in de volgende zelfstudie gebruiken aangezien u leert hoe te om de systemen van het succes van de klant te [onderzoeken gebruikend de Dienst API](../../explore/customer-success.md)van de Stroom.
+Aan de hand van deze zelfstudie hebt u een [!DNL ServiceNow] basisverbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze basis verbindings identiteitskaart in de volgende zelfstudie gebruiken aangezien u leert hoe te om de systemen van het succes van de klant te [onderzoeken gebruikend de Dienst API](../../explore/customer-success.md)van de Stroom.
