@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een FTP- of SFTP-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!NOTE]
 >De FTP- en SFTP-connectors bevinden zich in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om extern gesourceerde gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een FTP- of SFTP-bronconnector met behulp van de gebruikersinterface van het Platform.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een FTP- of SFTP-bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
 
 ## Aan de slag
 
@@ -32,7 +32,7 @@ Als u al een geldige FTP- of SFTP-verbinding hebt, kunt u de rest van dit docume
 
 ### Ondersteunde bestandsindelingen
 
-Experience Platform ondersteunt de volgende bestandsindelingen die uit externe bronnen moeten worden ingevoerd:
+[!DNL Experience Platform] ondersteunt de volgende bestandsindelingen die van externe bronnen moeten worden ingevoerd:
 
 * Door scheidingstekens gescheiden waarden (DSV): De ondersteuning voor gegevensbestanden met DSV-indeling is momenteel beperkt tot CSV-bestanden (comma-separated values, door komma&#39;s gescheiden waarden). De waarde van veldkoppen in bestanden met DSV-indeling mag alleen bestaan uit alfanumerieke tekens en onderstrepingstekens. In de toekomst zal steun voor algemene DSV worden verleend.
 * JavaScript Object Notation (JSON): Gegevensbestanden met JSON-indeling moeten XDM-compatibel zijn.
@@ -40,11 +40,11 @@ Experience Platform ondersteunt de volgende bestandsindelingen die uit externe b
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt tot uw FTP- of SFTP-server op het Platform, moet u de **hostnaam** van de server, een **gebruikersnaam** en een **wachtwoord** opgeven.
+Als u toegang wilt tot uw FTP- of SFTP-server [!DNL Platform], moet u de **hostnaam** van de server, een **gebruikersnaam** en een **wachtwoord** opgeven.
 
 ## Verbinding maken met uw FTP- of SFTP-server
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om een nieuwe FTP- of SFTP-account te maken waarmee u verbinding kunt maken met het Platform.
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om een nieuwe FTP- of SFTP-account te maken waarmee u verbinding kunt maken [!DNL Platform].
 
 Login aan [Adobe Experience Platform](https://platform.adobe.com) en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatiebar om tot de werkruimte van *[!UICONTROL Bronnen]* toegang te hebben. In het scherm *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven waarmee u een binnenkomende account kunt maken. Elke bron toont het aantal bestaande accounts en gegevensstromen dat aan deze accounts is gekoppeld.
 
