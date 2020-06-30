@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een verpakt recept (API) importeren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Een verpakt recept (API) importeren
 
-In deze zelfstudie wordt de API [voor leren van](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) Sensei-machines gebruikt om een [engine](../api/engines.md)te maken die ook wel een recept in de gebruikersinterface wordt genoemd.
+In deze zelfstudie wordt de zelfstudie gebruikt [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) om een [engine](../api/engines.md)te maken die ook wel een recept in de gebruikersinterface wordt genoemd.
 
-Voordat u aan de slag gaat, is het belangrijk om op te merken dat in de Adobe Experience Platform Data Science Workspace andere termen worden gebruikt om te verwijzen naar vergelijkbare elementen in de API en de UI. De API-termen worden in deze zelfstudie gebruikt en in de volgende tabel worden de corresponderende termen beschreven:
+Voordat u aan de slag gaat, is het belangrijk om te weten dat Adobe Experience Platform verschillende termen [!DNL Data Science Workspace] gebruikt om naar vergelijkbare elementen in de API en de UI te verwijzen. De API-termen worden in deze zelfstudie gebruikt en in de volgende tabel worden de corresponderende termen beschreven:
 
 | UI-term | API-term |
 | ---- | ---- |
@@ -25,7 +25,7 @@ Voordat u aan de slag gaat, is het belangrijk om op te merken dat in de Adobe Ex
 | Opleiding en evaluatie | [Experimenteer](../api/experiments.md) |
 | Service | [MLService](../api/mlservices.md) |
 
-Een motor bevat machine het leren algoritmen en logica om specifieke problemen op te lossen. Het diagram hieronder verstrekt een visualisatie die het API werkschema in de Werkruimte van de Wetenschap van Gegevens toont. Deze zelfstudie richt zich op het maken van een engine, het brein van een model voor machinaal leren.
+Een motor bevat machine het leren algoritmen en logica om specifieke problemen op te lossen. In het onderstaande diagram ziet u een visualisatie van de API-workflow in [!DNL Data Science Workspace]. Deze zelfstudie richt zich op het maken van een engine, het brein van een model voor machinaal leren.
 
 ![](../images/models-recipes/import-package-api/engine_hierarchy_api.png)
 
@@ -35,7 +35,7 @@ Voor deze zelfstudie is een Recipe-bestand in het pakket vereist in de vorm van 
 
 - `{DOCKER_URL}`: Een adres URL aan een beeld van de Dokker van de intelligente dienst.
 
-Deze zelfstudie vereist dat u de zelfstudie [Verificatie naar Adobe Experience Platform hebt voltooid](../../tutorials/authentication.md) om oproepen naar Platform-API&#39;s te kunnen uitvoeren. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Deze zelfstudie vereist dat u de zelfstudie [Verificatie naar Adobe Experience Platform hebt voltooid](../../tutorials/authentication.md) om aanroepen naar API&#39; [!DNL Platform] s te kunnen uitvoeren. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
 - `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.
 - `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
@@ -50,7 +50,7 @@ De motoren kunnen worden gecreeerd door een POST- verzoek aan het /engines eindp
 Als u een engine wilt maken met een pakketbestand Recipe dat is opgeslagen in een Docker-container, moet u de docker-URL opgeven voor het pakketbestand Recipe.
 
 >[!CAUTION]
-> Als u Python of R gebruikt, gebruik dan de onderstaande aanvraag. Als u PySpark of Scala gebruikt, gebruik het PySpark/Scala- verzoekvoorbeeld dat onder het Python/R voorbeeld wordt gevestigd.
+> Gebruik de onderstaande aanvraag als u [!DNL Python] of R gebruikt. Als u PySpark of Scala gebruikt, gebruik het PySpark/Scala- verzoekvoorbeeld dat onder het Python/R voorbeeld wordt gevestigd.
 
 **API-indeling**
 
@@ -86,8 +86,8 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------  | ----------- |
-| `engine.name` | De gewenste naam voor de engine. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in het gebruikersinterface van de Werkruimte van de Wetenschap van Gegevens als Recipe naam moet worden getoond. |
-| `engine.description` | Een facultatieve beschrijving voor de motor. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in het gebruikersinterface van de Werkruimte van de Wetenschap van Gegevens als beschrijving van de Ontvanger moet worden getoond. Verwijder deze eigenschap niet. Laat deze waarde een lege tekenreeks zijn als u geen beschrijving opgeeft. |
+| `engine.name` | De gewenste naam voor de engine. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in [!DNL Data Science Workspace] gebruikersinterface als naam van de Ontvanger moet worden getoond. |
+| `engine.description` | Een facultatieve beschrijving voor de motor. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in [!DNL Data Science Workspace] gebruikersinterface als beschrijving van de Ontvanger moet worden getoond. Verwijder deze eigenschap niet. Laat deze waarde een lege tekenreeks zijn als u geen beschrijving opgeeft. |
 | `engine.type` | Het uitvoeringstype van de motor. Deze waarde komt overeen met de taal waarin de Docker-afbeelding is ontwikkeld. Wanneer een Docker URL wordt verstrekt om een Motor tot stand te brengen, `type` is of `Python`, `R`, `PySpark`, `Spark` (Schaal), of `Tensorflow`. |
 | `artifacts.default.image.location` | Je `{DOCKER_URL}` gaat hier. Een volledige docker-URL heeft de volgende structuur: `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Een extra naam voor het Docker-afbeeldingsbestand. Verwijder deze eigenschap niet. Laat deze waarde een lege tekenreeks zijn als u ervoor kiest geen extra bestandsnaam voor een Docker-afbeelding op te geven. |
@@ -169,7 +169,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe engine, inclusief de unieke id (`id`) ervan. De volgende voorbeeldreactie is voor een Python Engine. De `executionType` `type` en de sleutels veranderen gebaseerd op de geleverde POST.
+Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe engine, inclusief de unieke id (`id`) ervan. De volgende voorbeeldreactie is voor een [!DNL Python] Motor. De `executionType` `type` en de sleutels veranderen gebaseerd op de geleverde POST.
 
 ```json
 {
