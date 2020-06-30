@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Entiteiten van beslissingsservice beheren met behulp van API's
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '7207'
+ht-degree: 0%
 
 ---
 
 
 # Beslissingsobjecten en -regels beheren met behulp van API&#39;s
 
-Dit document bevat een zelfstudie voor het werken met de bedrijfsentiteiten van de Decisioning Service met behulp van Adobe Experience Platform-API&#39;s.
+Dit document biedt een zelfstudie voor het werken met bedrijfsentiteiten van het [!DNL Decisioning Service] gebruik van Adobe Experience Platform-API&#39;s.
 
 De zelfstudie bestaat uit twee onderdelen:
 
@@ -21,31 +24,31 @@ De zelfstudie bestaat uit twee onderdelen:
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de services van het Experience Platform en de API-conventies. De opslagplaats van het Platform is de dienst die door verscheidene andere diensten van het Platform wordt gebruikt om bedrijfsvoorwerpen en diverse soorten meta-gegevens op te slaan. Het verstrekt een veilige en flexibele manier om die voorwerpen voor gebruik door verscheidene runtime diensten te beheren en te vragen. De beslissingsdienst is er een van. Lees de documentatie voor het volgende voordat u met deze zelfstudie begint:
+Deze zelfstudie vereist een goed begrip van de [!DNL Experience Platform] services en de API-conventies. De [!DNL Platform] opslagplaats is de dienst die door verscheidene andere [!DNL Platform] diensten wordt gebruikt om bedrijfsvoorwerpen en diverse soorten meta-gegevens op te slaan. Het verstrekt een veilige en flexibele manier om die voorwerpen voor gebruik door verscheidene runtime diensten te beheren en te vragen. Het [!DNL Decisioning Service] is er een van. Lees de documentatie voor het volgende voordat u met deze zelfstudie begint:
 
-- [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor Platform gegevens van de klantenervaring organiseert.
-- [Beslissingsservice](./../home.md): Verklaart de concepten en de componenten die voor het Beslissen van de Ervaring in het algemeen en het besluit van de Aanbieding in het bijzonder worden gebruikt. Toont de strategieën die voor het kiezen van de beste optie worden gebruikt om tijdens de ervaring van een klant voor te stellen.
-- [PQL (Profile Query Language)](../../segmentation/pql/overview.md): PQL is een krachtige taal voor het schrijven van expressies over XDM-instanties. PQL wordt gebruikt om besluitvormingsregels te bepalen.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+- [!DNL Decisioning Service](./../home.md): Verklaart de concepten en de componenten die voor het Beslissen van de Ervaring in het algemeen en het besluit van de Aanbieding in het bijzonder worden gebruikt. Toont de strategieën die voor het kiezen van de beste optie worden gebruikt om tijdens de ervaring van een klant voor te stellen.
+- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL is een krachtige taal voor het schrijven van expressies over XDM-instanties. PQL wordt gebruikt om besluitvormingsregels te bepalen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Platform APIs te maken.
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan APIs te maken. [!DNL Platform]
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+>[!NOTE] Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -53,7 +56,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## API-conventies voor opslagplaats
 
-De beslissingsdienst wordt gecontroleerd door een aantal bedrijfsvoorwerpen die met elkaar verwant zijn. Alle bedrijfsvoorwerpen worden opgeslagen in de Bewaarplaats Van Bedrijfs Platform van Objecten. Een belangrijk kenmerk van deze opslagplaats is dat de API&#39;s orthogonaal zijn ten opzichte van het type bedrijfsobject. In plaats van POST, GET, PUT, PATCH of DELETE API te gebruiken die op het type van middel in zijn API eindpunt wijst, zijn er slechts 6 generische eindpunten maar zij aanvaarden of keren een parameter terug die op het type van de doorverwijs wijst wanneer dat nodig is. Het schema moet bij de repository worden geregistreerd, maar daarna is de repository bruikbaar voor een set open-end objecttypen.
+[!DNL Decisioning Service] wordt gecontroleerd door een aantal bedrijfsvoorwerpen die met elkaar verwant zijn. Alle bedrijfsobjecten worden opgeslagen in de [!DNL Platform’s] Business Object Repository. Een belangrijk kenmerk van deze opslagplaats is dat de API&#39;s orthogonaal zijn ten opzichte van het type bedrijfsobject. In plaats van POST, GET, PUT, PATCH of DELETE API te gebruiken die op het type van middel in zijn API eindpunt wijst, zijn er slechts 6 generische eindpunten maar zij aanvaarden of keren een parameter terug die op het type van het voorwerp wijst wanneer die doorverwijs nodig is. Het schema moet bij de repository worden geregistreerd, maar daarna is de repository bruikbaar voor een set open-end objecttypen.
 
 Naast de bovenstaande koppen hebben de API&#39;s die u wilt maken, lezen, bijwerken, verwijderen en zoeken in opslagplaatsen de volgende conventies:
 
@@ -66,7 +69,7 @@ API Payload-indelingen worden onderhandeld met een `Accept` of een `Content-Type
 | <br>halfollowed by a parameter `schema={schemaId}` | Het bericht bevat een instantie die door een Schema JSON wordt beschreven dat door het schema van de formaatparameter wordt vermeld. De instantie wordt opgenomen in een JSON-eigenschap `_instance`. De andere eigenschappen op het hoogste niveau in de antwoordlading specificeren bewaarplaats informatie die voor alle middelen beschikbaar is.  De berichten die aan het formaat van HAL voldoen hebben een `_links` bezit dat verwijzingen in formaat HAL bevat. |
 | `patch.hal` | Het bericht bevat een JSON PATCH-payload met de aanname dat de te patchen instantie HAL-compatibel is. Dat betekent dat niet alleen de eigen instantie-eigenschappen van de instantie maar ook de HAL-koppelingen van de instantie kunnen worden gerepareerd. Er zijn beperkingen waaraan eigenschappen door de client kunnen worden bijgewerkt. |
 | `home.hal` | Het bericht bevat een representatie in JSON-indeling van een thuisdocumentbron voor de gegevensopslagruimte. |
-| xdm.kwitantie | Het bericht bevat een reactie met JSON-indeling voor het maken, bijwerken (volledig en repareren) of verwijderen van een bewerking. Ontvangstbewijzen bevatten controlegegevens die op de herziening van de instantie in de vorm van een ETag wijzen. |
+| xdm.receipt | Het bericht bevat een reactie met JSON-indeling voor het maken, bijwerken (volledig en repareren) of verwijderen van een bewerking. Ontvangstbewijzen bevatten controlegegevens die op de herziening van de instantie in de vorm van een ETag wijzen. |
 
 Het gebruik van elke **indelingsvariant** is afhankelijk van de specifieke API:
 
@@ -89,7 +92,7 @@ De lijst met toegankelijke containers wordt verkregen door het eindpunt &quot;/&
 
 ## Toegang tot containers beheren
 
-Een beheerder kan gelijkaardige principes, middelen, toegangstoestemmingen in profielen groeperen. Dit verlaagt de beheerlast en wordt ondersteund door de interface [van de](https://adminconsole.adobe.com)Adobe Admin Console. U moet een productbeheerder zijn voor het Adobe Experience Platform en de aanbiedingen in uw organisatie om profielen te maken en gebruikers aan hen toe te wijzen.
+Een beheerder kan gelijkaardige principes, middelen, en toegangstoestemmingen in profielen groeperen. Dit verlaagt de beheerlast en wordt ondersteund door de gebruikersinterface [van de Admin Console van](https://adminconsole.adobe.com)Adobe. U moet een productbeheerder voor Adobe Experience Platform in uw organisatie zijn om profielen te creëren en gebruikers aan hen toe te wijzen.
 
 Het is voldoende om in één keer productprofielen te maken die overeenkomen met bepaalde machtigingen en vervolgens gebruikers aan die profielen toe te voegen. Profielen fungeren als groepen waaraan machtigingen zijn verleend en elke echte gebruiker of technische gebruiker in die groep neemt deze machtigingen over.
 
@@ -97,9 +100,9 @@ Het is voldoende om in één keer productprofielen te maken die overeenkomen met
 
 Wanneer de beheerder toegang heeft verleend tot containers voor gewone gebruikers of integratie, worden deze containers weergegeven in de zogenaamde &quot;thuislijst&quot; van de gegevensopslagruimte. De lijst kan voor verschillende gebruikers of integraties verschillend zijn aangezien het een ondergroep van alle containers toegankelijk voor de bezoeker is. De lijst van containers kan worden gefilterd door hun verband met productcontexten. De filterparameter wordt aangeroepen `product` en kan worden herhaald. Als er meer dan één productcontextfilter wordt gegeven, wordt de samenvoeging van de recipiënten die een verband hebben met een van de gegeven productcontextvarianten geretourneerd. Merk op dat één enkele container aan veelvoudige productcontexten kan worden geassocieerd.
 
-De context voor de containers van de Dienst van het Beslissen van het Platform is momenteel `dma_offers`.
+De context voor de [!DNL Platform] containers is momenteel [!DNL Decisioning Service] `dma_offers`.
 
->[!NOTE] De context voor Platform beslissende Containers zal binnenkort veranderen in `acp`. Filteren is optioneel, maar filters alleen `dma_offers` vereisen bewerkingen bij toekomstige release. Om voor deze verandering voorbereidingen te treffen zouden de cliënten geen filters moeten gebruiken of beide productcontexten als filter toepassen.
+>[!NOTE] De context voor [!DNL Platform Decisioning Containers] zal binnenkort veranderen in `acp`. Filteren is optioneel, maar filters alleen `dma_offers` vereisen bewerkingen bij toekomstige release. Om voor deze verandering voorbereidingen te treffen zouden de cliënten geen filters moeten gebruiken of beide productcontexten als filter toepassen.
 
 **Verzoek**
 
@@ -344,13 +347,15 @@ Het pagineren wordt gecontroleerd door de volgende parameters:
 Het filteren van lijstresultaten is mogelijk en gebeurt onafhankelijk van het het pagineren mechanisme. Filters slaan eenvoudig instanties in de volgorde van de lijsten over of vragen expliciet alleen om instanties die aan een bepaalde voorwaarde voldoen, op te nemen. Een client kan verzoeken dat eigenschapsuitdrukking als filter wordt gebruikt of kan een lijst met URI&#39;s opgeven die als de waarden van de primaire sleutel van de instanties moeten worden gebruikt.
 
 - **`property`**: Bevat een pad naar de eigenschapnaam gevolgd door een vergelijkingsoperator, gevolgd door een waarde. <br/>
-De lijst met geretourneerde instanties bevat de instanties waarvoor de expressie true oplevert. Bijvoorbeeld, veronderstellend dat de instantie een nuttige laadeigenschap heeft `status` en de mogelijke waarden zijn `draft`, `approved`, `archived` en `deleted` `property=_instance.status==approved` dan keert de vraagparameter slechts instanties terug waarvoor de status wordt goedgekeurd. <br/>
+De lijst met geretourneerde instanties bevat de instanties waarvoor de expressie true oplevert. Bijvoorbeeld, veronderstellend dat de instantie een nuttige laadeigenschap heeft 
+`status` en de mogelijke waarden zijn `draft`, `approved`, `archived` en `deleted` `property=_instance.status==approved` dan keert de vraagparameter slechts instanties terug waarvoor de status wordt goedgekeurd. <br/>
 <br/>
 De eigenschap die met de opgegeven waarde moet worden vergeleken, wordt aangeduid als een pad. De afzonderlijke padcomponenten worden gescheiden door `.`, zoals: `_instance.xdm:prop1.xdm:prop1_1.xdm:prop1_1_1`<br/>
 
 Voor eigenschappen met tekenreeks, numerieke waarden of datum/tijd-waarden zijn de toegestane operatoren: `==`, `!=`, `<`, `<=`, `>` en `>=`. Voor eigenschappen met een tekenreekswaarde `~` kan bovendien een operator worden gebruikt. De `~` operator komt overeen met de opgegeven eigenschap volgens een reguliere expressie. De tekenreekswaarde van de eigenschap moet overeenkomen met de **gehele** expressie, anders worden de entiteiten in de gefilterde resultaten opgenomen. Wanneer u bijvoorbeeld ergens in de eigenschapswaarde naar de tekenreeks `cars` zoekt, moet de reguliere expressie zijn `.*cars.*`ingesteld. Zonder de regelafstand of nadering komen `.*`alleen entiteiten overeen met een eigenschapswaarde die respectievelijk begint of eindigt met `cars`. Voor de `~` operator is de vergelijking van lettertekens niet hoofdlettergevoelig. Voor alle andere operatoren is de vergelijking hoofdlettergevoelig.<br/><br/>
 Niet alleen instantie payload-eigenschappen kunnen in filterexpressies worden gebruikt. Omhulseleigenschappen worden op dezelfde manier vergeleken, bijvoorbeeld `property=repo:lastModifiedDate>=2019-02-23T16:30:00.000Z`. <br/>
-<br/>De `property` queryparameter kan worden herhaald, zodat er meerdere filtervoorwaarden worden toegepast, bijvoorbeeld om alle instanties te retourneren die het laatst na een bepaalde datum en voor een bepaalde datum zijn gewijzigd. Waarden in die expressies moeten URL-gecodeerd zijn. Als geen uitdrukking wordt gegeven en de naam van het bezit eenvoudig vermeld is zijn de punten die kwalificeren die een bezit met de bepaalde naam hebben.<br/>
+<br/>
+De `property` queryparameter kan worden herhaald, zodat er meerdere filtervoorwaarden worden toegepast, bijvoorbeeld om alle instanties te retourneren die het laatst na een bepaalde datum en voor een bepaalde datum zijn gewijzigd. Waarden in die expressies moeten URL-gecodeerd zijn. Als geen uitdrukking wordt gegeven en de naam van het bezit eenvoudig vermeld is zijn de punten die kwalificeren die een bezit met de bepaalde naam hebben.<br/>
 <br/>
 
 - **`id`**: Soms moet een lijst worden gefilterd door URI van de instanties. De `property` vraagparameter kan worden gebruikt om één instantie uit te filteren, maar om meer dan één geval te verkrijgen, kan een lijst van URIs aan het verzoek worden gegeven. De `id` `id={URI_1}&id={URI_2},…` parameter wordt herhaald en elk voorval geeft één URI-waarde op. De URI-waarden moeten URL-gecodeerd zijn.
@@ -453,7 +458,7 @@ Naast het pagineren en het filtreren parameters van lijst APIs staat dit API cli
 
 Het zoeken naar volledige tekst wordt bepaald door de volgende parameters:
 
-- **`q`**: Bevat een niet-geordende lijst met termen die door spaties worden gescheiden en die worden genormaliseerd voordat ze worden vergeleken met tekenreekseigenschappen van de instanties. Tekenreekseigenschappen worden geanalyseerd op termen en deze termen worden eveneens genormaliseerd. De zoekquery probeert een of meer van de termen aan te passen die in de `q` parameter zijn opgegeven. De tekens +, -, =, &amp;&amp;,||, >, &lt;,!, (,), {, }, [,], ^, &quot;, ~, *, ?, :, / hebben een speciale betekenis voor het bepalen van de woordgrenzen binnen de queryreeks en moeten worden beschermd met een backslash wanneer deze wordt weergegeven in een token dat moet overeenkomen met het teken. De querytekenreeks kan worden omgeven door dubbele aanhalingstekens voor exacte tekenreeksovereenkomst en om speciale tekens te kunnen omzeilen.
+- **`q`**: Bevat een niet-geordende lijst met termen die door spaties worden gescheiden en die worden genormaliseerd voordat ze worden vergeleken met tekenreekseigenschappen van de instanties. Tekenreekseigenschappen worden geanalyseerd op termen en deze termen worden eveneens genormaliseerd. De zoekquery probeert een of meer van de termen aan te passen die in de `q` parameter zijn opgegeven. De tekens +, -, =, &amp;&amp;, ||, >, &lt;,!, (,), {, }, [,], ^, &quot;, ~, *, ?, :, / hebben een speciale betekenis voor het bepalen van de woordgrenzen binnen de queryreeks en moeten worden beschermd met een backslash wanneer deze wordt weergegeven in een token dat moet overeenkomen met het teken. De querytekenreeks kan worden omgeven door dubbele aanhalingstekens voor exacte tekenreeksovereenkomst en om speciale tekens te kunnen omzeilen.
 - **`field`**: Als de zoektermen alleen moeten overeenkomen met een subset van de eigenschappen, kan de veldparameter het pad naar die eigenschap aangeven. De parameter kan worden herhaald om op meer dan één bezit te wijzen dat zou moeten worden aangepast.
 - **`qop`**: Bevat een controleparameter die wordt gebruikt om het passende gedrag van het onderzoek te wijzigen. Wanneer de parameter aan wordt geplaatst en dan moeten alle onderzoekstermijnen aanpassen en wanneer de parameter afwezig is of zijn waarde aan wordt geplaatst of dan om het even welke termijnen voor een gelijke kunnen tellen.
 
@@ -461,7 +466,7 @@ Het zoeken naar volledige tekst wordt bepaald door de volgende parameters:
 
 Als u een instantie wilt bijwerken, kan een client de volledige lijst met eigenschappen tegelijk overschrijven of een JSON PATCH-aanvraag gebruiken om afzonderlijke eigenschapswaarden, waaronder lijsten, te manipuleren.
 
-In beide gevallen specificeert URL van het verzoek de weg aan de fysieke instantie en in beide gevallen zal de reactie een JSON ontvangstlading zoals die zijn teruggekeerd van [creeer verrichting](#create-instances)zijn. Een client moet bij voorkeur de `Location` header of een HAL-koppeling gebruiken die deze heeft ontvangen van een eerdere API-aanroep voor dit object als het volledige URL-pad voor deze API. Als dit niet mogelijk is, kan de client de URL van de URL `containerId` en de `instanceId`URL samenstellen.
+In beide gevallen specificeert URL van het verzoek de weg aan de fysieke instantie en in beide gevallen zal de reactie een JSON ontvangstlading zoals die zijn teruggekeerd van [creeer verrichting](#create-instances)zijn. Een client moet bij voorkeur de `Location` header of een HAL-koppeling gebruiken die deze heeft ontvangen van een eerdere API-aanroep voor dit object als het volledige URL-pad voor deze API. Als dit niet mogelijk is, kan de client de URL samenstellen vanuit de `containerId` en de `instanceId`.
 
 **Verzoek** (PUT)
 
@@ -515,7 +520,7 @@ Er zijn omstandigheden waarin meerdere clients proberen een instantie tegelijk b
 
 ### Instanties verwijderen
 
-Instanties kunnen worden verwijderd met een DELETE-aanroep. Een client moet bij voorkeur de `Location` header of een HAL-koppeling gebruiken die het heeft ontvangen van een eerdere API-aanroep hiervoor als het volledige URL-pad. Als dit niet mogelijk is, kan de client de URL van de URL `containerId` en de fysieke `instanceId`.
+De instanties kunnen met een DELETE vraag worden geschrapt. Een client moet bij voorkeur de `Location` header of een HAL-koppeling gebruiken die het heeft ontvangen van een eerdere API-aanroep hiervoor als het volledige URL-pad. Als dit niet mogelijk is, kan de client de URL van de URL `containerId` en de fysieke `instanceId`.
 
 **Verzoek**
 
@@ -831,7 +836,7 @@ Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige 
 
 De waarde in het de voorwaardeigenschap van de regel bevat een uitdrukking PQL. Naar de contextgegevens wordt verwezen via de speciale padexpressie @{schemaID}.
 
-De regels richten zich natuurlijk op segmenten in het Platform van de Ervaring en vaak zal een regel eenvoudig de bedoeling van een segment hergebruiken door het `segmentMembership` bezit van een profiel te testen. De `segmentMembership` eigenschap bevat de resultaten van segmentvoorwaarden die al zijn geëvalueerd. Hierdoor kan een organisatie haar domeinspecifieke doelgroepen eenmaal definiëren, ze een naam geven en de voorwaarden eenmaal evalueren.
+Regels worden natuurlijk uitgelijnd met segmenten in de map [!DNL Experience Platform] en vaak wordt de intentie van een segment opnieuw gebruikt door de `segmentMembership` eigenschap van een profiel te testen. De `segmentMembership` eigenschap bevat de resultaten van segmentvoorwaarden die al zijn geëvalueerd. Hierdoor kan een organisatie haar domeinspecifieke doelgroepen eenmaal definiëren, ze een naam geven en de voorwaarden eenmaal evalueren.
 
 ## Aanbiedingen beheren
 
