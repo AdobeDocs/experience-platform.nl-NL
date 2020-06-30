@@ -4,30 +4,30 @@ solution: Experience Platform
 title: Koppelaansluiting
 topic: overview
 translation-type: tm+mt
-source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
 
-# (bèta) Couchbase-connector
+# (Beta) [!DNL Couchbase] -connector
 
 >[!NOTE]
->De Couchbase-connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De [!DNL Couchbase] connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Adobe Experience Platform biedt native connectiviteit voor databaseproviders zoals Microsoft, MySQL en Azure, zodat u gegevens van deze systemen kunt ophalen. Verschillende typen databases van derden worden ondersteund, waaronder relationele databases, NoSQL-databases of data warehouse. De steun voor gegevensbestandleveranciers omvat Couchbase.
+Adobe Experience Platform verstrekt inheemse connectiviteit voor gegevensbestandleveranciers zoals [!DNL Microsoft], MySQL, en [!DNL Azure], die u toestaan om uw gegevens van deze systemen te brengen. Verschillende typen databases van derden worden ondersteund, waaronder relationele databases, NoSQL-databases of data warehouse. Ondersteuning voor databaseproviders omvat [!DNL Couchbase].
 
-In de onderstaande documentatie vindt u informatie over het aansluiten van Couchbase op een Platform met behulp van API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Couchbase] [!DNL Platform] met API&#39;s of de gebruikersinterface:
 
-## Couchbase koppelen aan Platform met behulp van API&#39;s
+## Verbinding maken [!DNL Couchbase] met API&#39; [!DNL Platform] s
 
 - [Een Couchbase-connector maken met de Flow Service API](../../tutorials/api/create/databases/couchbase.md)
 - [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## Couchbase verbinden met Platform met behulp van de gebruikersinterface
+## Verbinding maken [!DNL Couchbase] met [!DNL Platform] de gebruikersinterface
 
 - [Een Couchbase-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/databases/couchbase.md)
 - [Vorm een dataflow voor een gegevensbestandschakelaar in UI](../../tutorials/ui/dataflow/databases.md)
