@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Marketingacties
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '536'
+ht-degree: 0%
 
 ---
 
 
 # Marketingacties
 
-Een marketingactie in de context van het Data Governance-platform van het Adobe Experience Platform is een actie die een gebruiker van het Experience Platform uitvoert voor het opsporen van overtredingen van het gegevensgebruiksbeleid.
+Een marketingactie in het kader van het beheer van de gegevens van Adobe Experience Platforms is een actie die een [!DNL Experience Platform] gegevensconsument onderneemt en waarvoor moet worden gecontroleerd op schendingen van het beleid inzake gegevensgebruik.
 
 Als u werkt met marketingacties in de API, moet u het `/marketingActions` eindpunt gebruiken.
 
@@ -139,7 +142,7 @@ Het reactieobject bevat de details voor de marketingactie, inclusief het pad (`_
 
 ## Een marketingactie maken of bijwerken
 
-De dienst API van het Beleid staat u toe om uw eigen marketing acties te bepalen, evenals bestaande degenen bij te werken. Het creëren en het bijwerken allebei worden gedaan gebruikend een verrichting van de ZET aan de naam van de marketing actie.
+Met de [!DNL Policy Service] API kunt u uw eigen marketingacties definiëren en bestaande acties bijwerken. Het creëren en het bijwerken allebei worden gedaan gebruikend een verrichting van de ZET aan de naam van de marketing actie.
 
 **API-indeling**
 
@@ -192,7 +195,7 @@ Als dit gelukt is, ontvangt u een HTTP-status 201 (Gemaakt) en bevat de responss
 
 ## Een marketingactie verwijderen
 
-Het is mogelijk marketingacties te verwijderen door een DELETE-aanvraag te verzenden naar de locatie `{marketingActionName}` van de marketingactie die u wilt verwijderen.
+Het is mogelijk marketingacties te verwijderen door een DELETE verzoek te sturen naar de gebruiker `{marketingActionName}` van de marketingactie die u wilt verwijderen.
 
 >[!NOTE] U kunt geen marketingacties verwijderen waarnaar wordt verwezen door een bestaand beleid. Als u dit probeert, treedt een fout van 400 op (Onjuist verzoek) samen met een foutbericht dat de `id` (of meerdere id&#39;s) bevat van een beleid (of beleid) dat een verwijzing bevat naar de marketingactie die u wilt verwijderen.
 
