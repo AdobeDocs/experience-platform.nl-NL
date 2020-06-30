@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een model publiceren als service (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 967ca85efba315819c6241d034dc3c25a5b1fc70
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1478'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Een model publiceren als service (API)
 
-Deze zelfstudie behandelt het publiceren van een model als service met behulp van de [Sensei Machine Learning-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+Deze zelfstudie behandelt het proces voor het publiceren van een model als service met behulp van de [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de Data Science Workspace van het Adobe Experience Platform. Voordat u met deze zelfstudie begint, bekijkt u eerst het overzicht [van de](../home.md) Data Science Workspace voor een introductie op hoog niveau van de service.
+Deze zelfstudie vereist een goed begrip van de Werkruimte van de Wetenschap van de Gegevens van het Adobe Experience Platform. Voordat u met deze zelfstudie begint, bekijkt u eerst het overzicht [van de](../home.md) Data Science Workspace voor een introductie op hoog niveau van de service.
 
 Om samen met dit leerprogramma te volgen, moet u een bestaande Motor van ML, Instantie van XML, en Experiment hebben. Raadpleeg de zelfstudie over het [importeren van een verpakt recept](./import-packaged-recipe-api.md)voor informatie over het maken van deze methoden in de API.
 
-Tot slot alvorens deze zelfstudie te beginnen, te herzien gelieve de [begonnen](../api/getting-started.md) sectie van de ontwikkelaarsgids voor belangrijke informatie die u moet kennen om met succes vraag aan Sensei Machine het Leren API te maken, met inbegrip van de vereiste kopballen die door dit leerprogramma worden gebruikt:
+Tot slot alvorens deze zelfstudie te beginnen, te herzien gelieve de [begonnen](../api/getting-started.md) sectie van de ontwikkelaarsgids voor belangrijke informatie die u moet weten om met succes vraag aan [!DNL Sensei Machine Learning] API, met inbegrip van de vereiste kopballen te maken die door dit leerprogramma worden gebruikt:
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -38,7 +38,7 @@ In de volgende tabel wordt een aantal gangbare terminologie beschreven die in de
 
 | Term | Definitie |
 --- | ---
-| **Machine Learning Instance (XML-instantie)** | Een instantie van een Sensei-engine voor een bepaalde huurder, die specifieke gegevens, parameters en Sensei-code bevat. |
+| **Machine Learning Instance (XML-instantie)** | Een geval van een [!DNL Sensei] Motor voor een bepaalde huurder, die specifieke gegevens, parameters, en [!DNL Sensei] code bevat. |
 | **Experimenteer** | Een overkoepelende entiteit voor het houden van de looppas van de trainingsExperiment, het scoren Experimentloops, of allebei. |
 | **Gepland experiment** | Een term die de automatisering van de looppas van het opleidings of het schatten van Experiment beschrijft, die door een user-defined programma wordt geregeld. |
 | **Experimenteer uitvoeren** | Een specifiek geval van opleiding of het scoren van Experimenten. Meerdere experimentatieroutes van een bepaalde expert kunnen verschillen in waarden voor gegevenssets die worden gebruikt voor training of scoring. |
