@@ -4,27 +4,27 @@ solution: Experience Platform
 title: Handleiding voor het oplossen van problemen in de Data Science Workspace
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: e77b76bdcfa5137d9bd77400b15f2fe8db3b7c0b
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '665'
 ht-degree: 0%
 
 ---
 
 
-# Handleiding voor het oplossen van problemen in de Data Science Workspace
+# [!DNL Data Science Workspace] gids voor problemen
 
-In dit document worden antwoorden gegeven op veelgestelde vragen over de Adobe Experience Platform Data Science Workspace. Raadpleeg de handleiding voor het oplossen van problemen met de [Adobe Experience Platform API&#39;s in het algemeen voor vragen en het oplossen van problemen met betrekking tot platform-API&#39;s](../landing/troubleshooting.md).
+Dit document geeft antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Data Science Workspace]. Raadpleeg de handleiding voor het oplossen van problemen met [!DNL Platform] Adobe Experience Platform API&#39;s in het algemeen voor vragen en het oplossen van problemen met betrekking tot API&#39;s [](../landing/troubleshooting.md).
 
-## De JupyterLab-omgeving wordt niet geladen in Google Chrome
+## [!DNL JupyterLab] omgeving wordt niet geladen in [!DNL Google Chrome]
 
 >[!IMPORTANT] Dit probleem is opgelost, maar kan nog steeds voorkomen in de Google Chrome 80.x-browser. Controleer of uw Chrome-browser up-to-date is.
 
-Met Google Chrome versie 80.x worden alle cookies van derden standaard geblokkeerd. Met dit beleid kan worden voorkomen dat JupyterLab wordt geladen in Adobe Experience Platform.
+Met [!DNL Google Chrome] browserversie 80.x, worden alle derdekoekjes geblokkeerd door gebrek. Dit beleid kan verhinderen [!DNL JupyterLab] binnen Adobe Experience Platform te laden.
 
 Voer de volgende stappen uit om dit probleem op te lossen:
 
-Navigeer in uw Chrome-browser naar de rechterbovenhoek en selecteer **Instellingen** (u kunt ook &quot;chrome://settings/&quot; in de adresbalk kopiëren en plakken). Blader vervolgens naar de onderkant van de pagina en klik op het vervolgkeuzemenu **Geavanceerd** .
+Navigeer in uw [!DNL Chrome] browser naar de rechterbovenhoek en selecteer **Instellingen** (u kunt ook &quot;chrome://settings/&quot; in de adresbalk kopiëren en plakken). Blader vervolgens naar de onderkant van de pagina en klik op het vervolgkeuzemenu **Geavanceerd** .
 
 ![chroom geavanceerd](./images/faq/chrome-advanced.png)
 
@@ -44,13 +44,13 @@ Ga naar &quot;chrome://flags/&quot; op de adresbalk. U kunt de markering *&quot;
 
 ![markering samensite uitschakelen](./images/faq/samesite-flag.png)
 
-Na Stap 2, wordt u ertoe aangezet om uw browser opnieuw te lanceren. Nadat u het programma opnieuw hebt gestart, moet Jupyterlab toegankelijk zijn.
+Na Stap 2, wordt u ertoe aangezet om uw browser opnieuw te lanceren. Nadat u het programma opnieuw hebt gestart, kunt u het beste toegang [!DNL Jupyterlab] krijgen.
 
-## Waarom heb ik geen toegang tot JupyterLab in Safari?
+## Waarom heb ik geen toegang tot [!DNL JupyterLab] Safari?
 
-Safari schakelt cookies van derden standaard uit in Safari &lt; 12. Aangezien de Jupyter-instantie van de virtuele machine zich in een ander domein bevindt dan het bovenliggende frame, vereist Adobe Experience Platform momenteel dat cookies van derden zijn ingeschakeld. Schakel cookies van derden in of schakel over naar een andere browser, zoals Google Chrome.
+Safari schakelt cookies van derden standaard uit in Safari &lt; 12. Aangezien de [!DNL Jupyter] virtuele-machinefunctie zich in een ander domein bevindt dan het bovenliggende frame, is het momenteel vereist dat cookies van derden zijn ingeschakeld voor het Adobe Experience Platform. Schakel cookies van derden in of schakel over naar een andere browser, zoals [!DNL Google Chrome].
 
-Voor Safari 12, moet u uw Agent van de Gebruiker op &quot;Chrome&quot;of &quot;Firefox&quot;schakelen. Om uw Agent van de Gebruiker te schakelen, begin door het menu van *Safari* te openen en **Voorkeur** te selecteren. Het voorkeurenvenster wordt weergegeven.
+Voor Safari 12, moet u uw Agent van de Gebruiker op &quot;[!DNL Chrome]&quot;of &quot;[!DNL Firefox]&quot;schakelen. Om uw Agent van de Gebruiker te schakelen, begin door het menu van *Safari* te openen en **Voorkeur** te selecteren. Het voorkeurenvenster wordt weergegeven.
 
 ![Safari-voorkeuren](./images/faq/preferences.png)
 
@@ -58,29 +58,29 @@ Selecteer **Geavanceerd** in het voorkeurenvenster van Safari. Schakel vervolgen
 
 ![Safari, geavanceerd](./images/faq/advanced.png)
 
-Selecteer vervolgens in de bovenste navigatiebalk het menu **Ontwikkelen** . Houd de muisaanwijzer boven *Gebruikersagent* in het vervolgkeuzemenu *Ontwikkelen*. U kunt de tekenreeks **Chrome** of **Firefox** User Agent selecteren die u wilt gebruiken.
+Selecteer vervolgens in de bovenste navigatiebalk het menu **Ontwikkelen** . Houd de muisaanwijzer boven *Gebruikersagent* in het vervolgkeuzemenu *Ontwikkelen*. U kunt de tekenreeks **[!DNL Chrome]** **[!DNL Firefox]** of de tekenreeks Gebruikersagent selecteren die u wilt gebruiken.
 
 ![Ontwikkelen, menu](./images/faq/user-agent.png)
 
-## Waarom zie ik een &#39;403 Verboden&#39; bericht bij het uploaden of verwijderen van een bestand in JupyterLab?
+## Waarom zie ik een &#39;403 Verboden&#39; bericht wanneer ik een bestand probeer te uploaden of te verwijderen in [!DNL JupyterLab]?
 
-Als uw browser is ingeschakeld met software voor het blokkeren van advertenties, zoals Ghostery of AdBlock Plus, moet het domein &quot;\*.adobe.net&quot; zijn toegestaan in elke software voor het blokkeren van advertenties, zodat JupyterLab normaal kan werken. Dit komt doordat virtuele JupyterLab-machines op een ander domein worden uitgevoerd dan het Experience Platform-domein.
+Als uw browser is ingeschakeld met software voor het blokkeren van advertenties, zoals [!DNL Ghostery] of [!DNL AdBlock] Plus, moet het domein &quot;\*.adobe.net&quot; zijn toegestaan in elke software voor het blokkeren van advertenties, zodat [!DNL JupyterLab] deze normaal kan werken. Dit komt doordat [!DNL JupyterLab] virtuele machines op een ander domein worden uitgevoerd dan het [!DNL Experience Platform] domein.
 
-## Waarom zien sommige onderdelen van mijn Jupyter-laptop er gescroleerd uit of worden ze niet weergegeven als code?
+## Waarom worden sommige onderdelen van mijn [!DNL Jupyter Notebook] uiterlijk gerasterd of niet gerenderd als code?
 
 Dit kan gebeuren als de cel in kwestie per ongeluk van &quot;Code&quot;in &quot;Markdown&quot;wordt veranderd. Als u op de toetscombinatie **ESC+M** drukt terwijl een codecel de focus heeft, verandert het type cel in Markering. Het type van een cel kan worden gewijzigd door de vervolgkeuzelijst boven aan de laptop voor de geselecteerde cel(len). Als u een celtype in code wilt wijzigen, selecteert u eerst de cel die u wilt wijzigen. Klik vervolgens op het vervolgkeuzemenu dat het huidige type van de cel aangeeft en selecteer &quot;Code&quot;.
 
 ![](./images/faq/code_type.png)
 
-## Hoe installeer ik aangepaste Python-bibliotheken?
+## Hoe installeer ik aangepaste [!DNL Python] bibliotheken?
 
-De Python-kernel wordt vooraf geïnstalleerd met een groot aantal populaire bibliotheken voor machinaal leren. U kunt echter aanvullende aangepaste bibliotheken installeren door de volgende opdracht in een codebel uit te voeren:
+De [!DNL Python] kernel wordt vooraf geïnstalleerd met veel populaire bibliotheken voor computerleren. U kunt echter aanvullende aangepaste bibliotheken installeren door de volgende opdracht in een codebel uit te voeren:
 
 ```shell
 !pip install {LIBRARY_NAME}
 ```
 
-Voor een volledige lijst van vooraf geïnstalleerde Python bibliotheken, zie de [bijlage sectie van de Gids](./jupyterlab/overview.md#supported-libraries)van de Gebruiker JupyterLab.
+Voor een volledige lijst van vooraf geïnstalleerde [!DNL Python] bibliotheken, zie de [bijlage sectie van de Gids](./jupyterlab/overview.md#supported-libraries)van de Gebruiker JupyterLab.
 
 ## Kan ik aangepaste PySpark-bibliotheken installeren?
 
@@ -88,7 +88,7 @@ Helaas kunt u geen extra bibliotheken voor de PySpark-kernel installeren. U kunt
 
 Voor een lijst van vooraf geïnstalleerde bibliotheken PySpark, zie de [bijlage sectie van de Gids](./jupyterlab/overview.md#supported-libraries)van de Gebruiker JupyterLab.
 
-## Is het mogelijk om de clustermiddelen van de Vonk voor de Vonk JupyterLab of de pySpark kernel te vormen?
+## Is het mogelijk om [!DNL Spark] clustermiddelen voor [!DNL JupyterLab] [!DNL Spark] of pySpark kernel te vormen?
 
 U kunt bronnen configureren door het volgende blok toe te voegen aan de eerste cel van uw laptop:
 
@@ -106,4 +106,4 @@ U kunt bronnen configureren door het volgende blok toe te voegen aan de eerste c
 }
 ```
 
-Voor meer informatie over de het middelconfiguratie van de cluster van de Vonk, met inbegrip van de volledige lijst van configureerbare eigenschappen, zie de Gids [van de Gebruiker](./jupyterlab/overview.md#kernels)JupyterLab.
+Voor meer informatie over de configuratie van het [!DNL Spark] clustermiddel, met inbegrip van de volledige lijst van configureerbare eigenschappen, zie de [Gids](./jupyterlab/overview.md#kernels)van de Gebruiker JupyterLab.
