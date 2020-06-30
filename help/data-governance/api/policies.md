@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Beleid
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Beleid
 
-Het beleid van het gebruik van gegevens is regels uw organisatie goedkeurt die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen Experience Platform mag uitvoeren.
+Het beleid van het gebruik van gegevens is regels uw organisatie goedkeurt die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen [!DNL Experience Platform]worden toegestaan uit te voeren.
 
 Het `/policies` eindpunt wordt gebruikt voor alle API-aanroepen met betrekking tot het weergeven, maken, bijwerken of verwijderen van beleidsregels voor gegevensgebruik.
 
@@ -406,7 +406,7 @@ Een succesvol updateverzoek keert een Status 200 van HTTP (O.K.) terug en het re
 
 Een specifiek gedeelte van een beleid kan worden bijgewerkt gebruikend een verzoek van de PATCH. In tegenstelling tot de verzoeken van de ZET om het beleid te _herschrijven_ , werken de verzoeken van de PATCH slechts de weg bij die in het verzoeklichaam wordt gespecificeerd. Dit is vooral nuttig wanneer u een beleid wilt toelaten of onbruikbaar maken, aangezien u slechts de specifieke weg moet verzenden die u wenst bij te werken (`/status`) en zijn waarde (`ENABLE` of `DISABLE`).
 
-De API van de Dienst van het Beleid steunt momenteel &quot;toevoegt&quot;, &quot;vervangt&quot;, en &quot;verwijdert&quot;de verrichtingen van PATCH, en staat u toe om verscheidene updates samen in één enkele vraag te combineren door elk als voorwerp binnen de serie toe te voegen, zoals aangetoond in de volgende voorbeelden.
+De [!DNL Policy Service] API ondersteunt momenteel PATCH-bewerkingen ‘toevoegen’, ‘vervangen’ en ‘verwijderen’ en biedt u de mogelijkheid om meerdere updates samen te voegen tot één aanroep door elk item als een object binnen de array toe te voegen, zoals in de volgende voorbeelden wordt getoond.
 
 **API-indeling**
 
