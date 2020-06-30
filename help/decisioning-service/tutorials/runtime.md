@@ -4,43 +4,46 @@ solution: Experience Platform
 title: Werken met API's voor de beslissingsservice-runtime
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '1985'
+ht-degree: 0%
 
 ---
 
 
 # Werken met API&#39;s voor de beslissingsservice-runtime
 
-Dit document bevat een zelfstudie voor het werken met de runtimeservices van Decisioning Service met behulp van Adobe Experience Platform-API&#39;s.
+Dit document bevat een zelfstudie voor het werken met de runtimeservices van het [!DNL Decisioning Service] gebruik van Adobe Experience Platform-API&#39;s.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een werkend inzicht in de diensten van het Platform van de Ervaring betrokken bij het besluiten van en het bepalen van het volgende beste aanbod om tijdens klantenervaringen voor te stellen. Lees de documentatie voor het volgende voordat u met deze zelfstudie begint:
+Deze zelfstudie vereist een goed begrip van de [!DNL Experience Platform] services die betrokken zijn bij het nemen van beslissingen en het bepalen van de volgende beste aanbieding om tijdens de ervaringen van de klant te presenteren. Lees de documentatie voor het volgende voordat u met deze zelfstudie begint:
 
-- [Beslissingsservice](./../home.md): Biedt het framework voor het toevoegen en verwijderen van aanbiedingen en het maken van algoritmen voor het kiezen van de beste optie die tijdens de ervaring van de klant wordt getoond.
-- [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor Platform gegevens van de klantenervaring organiseert.
-- [PQL (Profile Query Language)](../../segmentation/pql/overview.md): PQL wordt gebruikt om regels en filters te bepalen.
+- [!DNL Decisioning Service](./../home.md): Biedt het framework voor het toevoegen en verwijderen van aanbiedingen en het maken van algoritmen voor het kiezen van de beste optie die tijdens de ervaring van de klant wordt getoond.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL wordt gebruikt om regels en filters te bepalen.
 - [Beslissingsobjecten en -regels beheren met behulp van API&#39;s](./entities.md): Voordat u de runtime voor beslissingsservices kunt gebruiken, moet u de verwante entiteiten instellen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Platform APIs te maken.
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan APIs te maken. [!DNL Platform]
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../tutorials/authentication.md).
+>[!NOTE] Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../tutorials/authentication.md)sandbox.
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -52,7 +55,7 @@ Ook nodig voor runtime-aanvragen:
 
 >[!NOTE] `UUID` is een tekenreeks in UUID-indeling die wereldwijd uniek is en niet opnieuw mag worden gebruikt voor verschillende API-aanroepen
 
-De beslissingsdienst wordt gecontroleerd door een aantal bedrijfsvoorwerpen die met elkaar verwant zijn. Alle zakelijke objecten worden opgeslagen in de zakelijke objectopslagplaats van Platform, XDM Core Object Repository. Een belangrijk kenmerk van deze opslagplaats is dat de API&#39;s orthogonaal zijn ten opzichte van het type bedrijfsobject. In plaats van POST, GET, PUT, PATCH of DELETE API te gebruiken die op het type van middel in zijn API eindpunt wijst, zijn er slechts 6 generische eindpunten maar zij aanvaarden of keren een parameter terug die op het type van de doorverwijs wijst wanneer dat nodig is. Het schema moet bij de repository worden geregistreerd, maar daarna is de repository bruikbaar voor een set open-end objecttypen.
+[!DNL Decisioning Service] wordt gecontroleerd door een aantal bedrijfsvoorwerpen die met elkaar verwant zijn. Alle bedrijfsvoorwerpen worden opgeslagen in [!DNL Platform’s] bedrijfsobjecten bewaarplaats, de Bewaarplaats van de Objecten van de Kern XDM. Een belangrijk kenmerk van deze opslagplaats is dat de API&#39;s orthogonaal zijn ten opzichte van het type bedrijfsobject. In plaats van POST, GET, PUT, PATCH of DELETE API te gebruiken die op het type van middel in zijn API eindpunt wijst, zijn er slechts 6 generische eindpunten maar zij aanvaarden of keren een parameter terug die op het type van het voorwerp wijst wanneer die doorverwijs nodig is. Het schema moet bij de repository worden geregistreerd, maar daarna is de repository bruikbaar voor een set open-end objecttypen.
 
 De eindpuntwegen voor alle Repository APIs van de Voorraad van Objecten XDM van de Kern beginnen met `https://platform.adobe.io/data/core/ode/`.
 
@@ -60,7 +63,7 @@ Het eerste wegelement na eindpunt is het `containerId`. Deze id wordt verkregen 
 
 ## Samenstelling van besluitvormingsmodellen
 
-De activering van de bedrijfslogische entiteiten gebeurt automatisch en voortdurend. Zodra een nieuwe optie in de bewaarplaats wordt opgeslagen en als &quot;goedgekeurd&quot;wordt gemerkt, zal het een kandidaat voor opneming de reeks beschikbare opties zijn. Zodra een beslissingsregel is bijgewerkt, worden de regels opnieuw samengesteld en voorbereid voor uitvoering tijdens de runtime. Bij deze automatische activeringsstap worden eventuele beperkingen die door de bedrijfslogica worden gedefinieerd en die niet afhankelijk zijn van de runtimecontext, geëvalueerd. De resultaten van deze activeringsstap worden verzonden naar een cache waar ze beschikbaar zijn voor de beslissingsservice-runtime.
+De activering van de bedrijfslogische entiteiten gebeurt automatisch en voortdurend. Zodra een nieuwe optie in de bewaarplaats wordt opgeslagen en als &quot;goedgekeurd&quot;wordt gemerkt, zal het een kandidaat voor opneming de reeks beschikbare opties zijn. Zodra een beslissingsregel is bijgewerkt, worden de regels opnieuw samengesteld en voorbereid voor uitvoering tijdens de runtime. Bij deze automatische activeringsstap worden eventuele beperkingen die door de bedrijfslogica worden gedefinieerd en die niet afhankelijk zijn van de runtimecontext, geëvalueerd. De resultaten van deze activeringsstap worden verzonden naar een cache waar ze beschikbaar zijn voor de [!DNL Decisioning Service] runtime.
 
 ### Effecten van plaatsingen, filters en levenscyclustoestanden
 
@@ -168,11 +171,11 @@ De enige parameter voor deze API-aanroep is `containerId`. De resultaten alle up
 
 ## REST API-aanroepen om beslissingen uit te voeren
 
-REST API is één van de routes voor toepassingen die op Platform lopen om de volgende beste ervaring te verkrijgen die op de regels, de modellen en de beperkingen wordt gebaseerd die de organisatie voor hun gebruikers heeft geplaatst. Toepassingen verzenden een van de identiteiten van het profiel (profiel-id en naamruimte van identiteit). De beslissingsservice zoekt het profiel op en de informatie wordt gebruikt om de bedrijfslogica toe te passen. Aanvullende contextgegevens kunnen worden doorgegeven aan het verzoek en indien gespecificeerd in de bedrijfsregels worden opgenomen in de gegevens om de beslissing te nemen.
+De REST API is één van de routes voor toepassingen die bovenop lopen om de volgende beste ervaring te verkrijgen die op de regels, de modellen en de beperkingen wordt gebaseerd die de organisatie voor hun gebruikers heeft geplaatst. [!DNL Platform] Toepassingen verzenden een van de identiteiten van het profiel (profiel-id en naamruimte van identiteit). [!DNL Decisioning Service] Hierbij wordt het profiel opgezocht en wordt de informatie gebruikt om de bedrijfslogica toe te passen. Aanvullende contextgegevens kunnen worden doorgegeven aan het verzoek en indien gespecificeerd in de bedrijfsregels worden opgenomen in de gegevens om de beslissing te nemen.
 
 Toepassingen kunnen betere prestaties bereiken door een beslissing te vragen voor maximaal 30 activiteiten tegelijk. De URI&#39;s van de activiteiten worden doorgegeven in dezelfde aanvraag. De REST API is synchroon en retourneert de voorgestelde opties voor al die activiteiten of de fallback-optie als geen enkele personalisatieoptie aan de beperkingen voldoet.
 
-Het is mogelijk dat twee verschillende activiteiten dezelfde optie krijgen als hun &quot;beste&quot;. Om te vermijden herhalend een samengestelde ervaring, door gebrek, scheidt de Beslissende Dienst tussen de activiteiten die in het zelfde verzoek van verwijzingen worden voorzien. Arbitrage houdt in dat voor elk van de activiteiten hun top-N-opties in overweging worden genomen, maar dat geen enkele optie meer dan één keer voor die activiteiten wordt voorgesteld. Als twee activiteiten dezelfde bovenste optie hebben, wordt een van hen gekozen om de op een na beste keuze of de op twee na beste optie te gebruiken enzovoort. Deze regels voor deduplicatie proberen te voorkomen dat voor een van de activiteiten de mogelijkheid van terugvalsteun moet worden gebruikt.
+Het is mogelijk dat twee verschillende activiteiten dezelfde optie krijgen als hun &quot;beste&quot;. Als u wilt voorkomen dat een samengestelde ervaring wordt herhaald, maakt u standaard [!DNL Decisioning Service] arbitrages tussen de activiteiten waarnaar in hetzelfde verzoek wordt verwezen. Arbitrage houdt in dat voor elk van de activiteiten hun top-N-opties in overweging worden genomen, maar dat geen enkele optie meer dan één keer voor die activiteiten wordt voorgesteld. Als twee activiteiten dezelfde bovenste optie hebben, wordt een van hen gekozen om de op een na beste keuze of de op twee na beste optie te gebruiken enzovoort. Deze regels voor deduplicatie proberen te voorkomen dat voor een van de activiteiten de mogelijkheid van terugvalsteun moet worden gebruikt.
 
 Het verzoek om een beschikking bevat de argumenten die de inhoud van een POST-verzoek betreffen. De hoofdtekst is opgemaakt als JSON- `Content-Type` koptekstwaarde `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
 
@@ -217,7 +220,7 @@ curl -X POST {DECISION_SERVICE_ENDPOINT_PATH}/{CONTAINER_ID}/decisions \
 }’
 ```
 
-- **`xdm:dryRun`** - Wanneer de waarde van dit facultatieve bezit aan waar wordt geplaatst zal het besluitvormingsverzoek aan het maximum beperken beperkingen maar niet die tellers werkelijk zal trekken, is de verwachting dat de bezoeker nooit van plan is om het voorstel aan het profiel voor te stellen. De beslissingsservice zal het voorstel niet opnemen als een officiële XDM-besluitvormingsgebeurtenis en het zal niet worden weergegeven in de rapportage van gegevenssets. De standaardwaarde van deze eigenschap is false en wanneer de eigenschap wordt weggelaten, wordt de beslissing niet als een testrun beschouwd en moet deze daarom aan de eindgebruiker worden gepresenteerd.
+- **`xdm:dryRun`** - Wanneer de waarde van dit facultatieve bezit aan waar wordt geplaatst zal het besluitvormingsverzoek aan het maximum beperken beperkingen maar niet die tellers werkelijk zal trekken, is de verwachting dat de bezoeker nooit van plan is om het voorstel aan het profiel voor te stellen. Het [!DNL Decisioning Service] zal niet het voorstel als officiële XDM besluitvormingsgebeurtenis registreren en het zal niet in het melden van datasets verschijnen. De standaardwaarde van deze eigenschap is false en wanneer de eigenschap wordt weggelaten, wordt de beslissing niet als een testrun beschouwd en moet deze daarom aan de eindgebruiker worden gepresenteerd.
 - **`xdm:validateContextData`** - Met deze optionele eigenschap wordt de validatie van de contextgegevens in- of uitgeschakeld. Als de bevestiging wordt aangezet, dan voor elk verstrekt punt van contextgegevens, zal het schema (dat op het `@type` gebied wordt gebaseerd) van de registratie XDM worden gehaald, en het `xdm:data` voorwerp zal tegen het worden bevestigd.
 
 De aanvraag per dit schema bevat een array van URI&#39;s die verwijzen naar aanbiedingsactiviteiten, een profielidentiteit en een array van contextgegevensitems:
@@ -231,7 +234,7 @@ De aanvraag per dit schema bevat een array van URI&#39;s die verwijzen naar aanb
 
 ## Dynamische contextgegevens in beslissingsverzoeken
 
-In de vorige sectie wordt aangegeven hoe XDM-objecten kunnen worden doorgegeven aan een beslissingsverzoek. Hier volgt een voorbeeld van een dergelijke array van contextobjecten:
+In de vorige sectie wordt aangegeven hoe XDM-objecten kunnen worden doorgegeven aan een beslissingsverzoek. Hieronder ziet u een voorbeeld van een dergelijke array met contextobjecten:
 
 ```json
 "xdm:contextData": [
@@ -289,4 +292,4 @@ De PQL-syntaxis gebruikt geen voorvoegsels in eigenschapsnamen. Standaard wordt 
 Alle records voor profiel- en ervaringsgebeurtenisentiteiten worden al in de profielopslag beheerd. Door een of meer profielidentiteiten aan het verzoek door te geven, wordt het profiel voor die identiteiten geïdentificeerd en opgezocht uit de opslag. De gegevens zijn dan automatisch beschikbaar voor besluitvormingsregels en modellen die door de beslissingsstrategie worden geëvalueerd.
 
 Om het profiel en de ervaringsverslagen terug te winnen wordt het standaardsamenvoegbeleid toegepast.
-Opmerking: na het uploaden van profielrecords naar de gegevens van het platform is er een kleine vertraging tot de profielrecords kunnen worden opgezocht. Hetzelfde geldt voor het opnemen van profiel- en ervaringsrecords via de streaming API&#39;s. Alleen na een paar seconden zijn de gegevens beschikbaar voor het evalueren van beslissingsregels die het profiel evalueren en gebeurtenisgegevens ervaren.
+Let op: na het uploaden van profielrecords naar de [!DNL Platform] database is er een kleine vertraging tot de profielrecords kunnen worden opgezocht. Hetzelfde geldt voor het opnemen van profiel- en ervaringsrecords via de streaming API&#39;s. Alleen na een paar seconden zijn de gegevens beschikbaar voor het evalueren van beslissingsregels die het profiel evalueren en gebeurtenisgegevens ervaren.
