@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Platform SDK-handleiding
+title: Handleiding SDK Platform
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 0%
+source-wordcount: '447'
+ht-degree: 2%
 
 ---
 
 
-# Platform SDK-handleiding
+# [!DNL Platform] Handleiding SDK
 
 Deze zelfstudie biedt u informatie over de omzetting `data_access_sdk_python` in de nieuwe Python `platform_sdk` in zowel Python als R. Deze zelfstudie biedt informatie over de volgende bewerkingen:
 
@@ -69,7 +69,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Basislezen van gegevens {#basic-reading-of-data}
 
-Met de nieuwe Platform SDK is de maximale leesgrootte 32 GB, met een maximale leestijd van 10 minuten.
+Met de nieuwe [!DNL Platform] SDK is de maximale leesgrootte 32 GB, met een maximale leestijd van 10 minuten.
 
 Als de leestijd te lang duurt, kunt u een van de volgende filteropties gebruiken:
 
@@ -144,11 +144,11 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-De nieuwe Platform SDK steunt de volgende verrichtingen:
+De nieuwe [!DNL Platform] SDK ondersteunt de volgende bewerkingen:
 
 | Bewerking | -functie |
 | --------- | -------- |
-| Gelijk (`=`) | `eq()` |
+| Equals (`=`) | `eq()` |
 | Groter dan (`>`) | `gt()` |
 | Groter dan of gelijk aan (`>=`) | `ge()` |
 | Kleiner dan (`<`) | `lt()` |
@@ -217,4 +217,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Volgende stappen
 
-Nadat u de `platform_sdk` gegevenslader hebt geconfigureerd, worden de gegevens voorbereid en vervolgens gesplitst naar de `train` en `val` gegevenssets. Als u meer wilt weten over het voorbereiden van gegevens en het ontwerpen van functies, raadpleegt u de sectie over [gegevensvoorbereiding en functietechniek](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) in de zelfstudie voor het maken van een recept met JupyterLab-laptops.
+Nadat u de `platform_sdk` gegevenslader hebt geconfigureerd, worden de gegevens voorbereid en vervolgens gesplitst naar de `train` en `val` gegevenssets. Als u meer wilt weten over het voorbereiden van gegevens en het ontwerpen van functies, raadpleegt u de sectie over het maken van [gegevens en het ontwerpen](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) van functies in de zelfstudie voor het maken van een recept met behulp van [!DNL JupyterLab] laptops.
