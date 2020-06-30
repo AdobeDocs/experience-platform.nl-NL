@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Gebruikershandleiding voor JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 49f0678cf8bf4349d0b63f3525a1f707f725ede9
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '3782'
-ht-degree: 9%
+source-wordcount: '3647'
+ht-degree: 10%
 
 ---
 
 
-# Gebruikershandleiding voor JupyterLab
+# [!DNL JupyterLab] gebruikershandleiding
 
-JupyterLab is een webgebaseerde gebruikersinterface voor <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> en is nauw geïntegreerd in [!DNL Adobe Experience Platform]. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens.
+[!DNL JupyterLab] is een web-based gebruikersinterface voor <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> en is strak geïntegreerd in [!DNL Adobe Experience Platform]. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens.
 
-Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies om algemene handelingen uit te voeren.
+Dit document biedt een overzicht van [!DNL JupyterLab] en de bijbehorende functies en instructies voor het uitvoeren van algemene handelingen.
 
-## JupyterLab op Experience Platform
+## [!DNL JupyterLab] op [!DNL Experience Platform]
 
 De JupyterLab-integratie van Experience Platform gaat gepaard met architectuurwijzigingen, ontwerpoverwegingen, aangepaste laptopextensies, vooraf geïnstalleerde bibliotheken en een Adobe-interface.
 
@@ -26,29 +26,29 @@ In de volgende lijst worden enkele functies beschreven die uniek zijn voor Jupyt
 
 | Functie | Beschrijving |
 | --- | --- |
-| **Kernels** | Kernels bieden laptop en andere voorkant van JupyterLab de mogelijkheid om code in verschillende programmeertalen uit te voeren en in te voeren. Experience Platform verstrekt extra kernels om ontwikkeling in Python, R, PySpark, en Vonk te steunen. Zie de sectie [Korrels](#kernels) voor meer informatie. |
-| **Toegang tot gegevens** | Toegang tot bestaande datasets rechtstreeks vanuit JupyterLab met volledige ondersteuning voor lees- en schrijfmogelijkheden. |
-| **Integratie van Platform-services** | Dankzij de ingebouwde integratie kunt u rechtstreeks vanuit JupyterLab andere services voor Platforms gebruiken. Een volledige lijst van gesteunde integratie wordt verstrekt in de sectie over [Integratie met andere diensten](#service-integration)van de Platform. |
+| **Kernels** | Kernels bieden laptop en andere [!DNL JupyterLab] front-ends de mogelijkheid om code in verschillende programmeertalen uit te voeren en in te voeren. [!DNL Experience Platform] verstrekt extra kernels om ontwikkeling in [!DNL Python], R, PySpark, en [!DNL Spark]. te steunen. Zie de sectie [Korrels](#kernels) voor meer informatie. |
+| **Toegang tot gegevens** | Toegang tot bestaande datasets rechtstreeks vanuit [!DNL JupyterLab] de volledige ondersteuning voor lees- en schrijfmogelijkheden. |
+| **[!DNL Platform]serviceintegratie ** | Dankzij de ingebouwde integratie kunt u rechtstreeks vanuit de toepassing andere [!DNL Platform] services gebruiken [!DNL JupyterLab]. Een volledige lijst van gesteunde integratie wordt verstrekt in de sectie over [Integratie met andere diensten](#service-integration)van de Platform. |
 | **Verificatie** | Naast het ingebouwde veiligheidsmodel <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">van</a>JupyterLab, wordt elke interactie tussen uw toepassing en Experience Platform, met inbegrip van de dienst-aan-dienst van het Platform mededeling gecodeerd en voor authentiek verklaard door <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
-| **Ontwikkelingsbibliotheken** | In Experience Platform biedt JupyterLab vooraf geïnstalleerde bibliotheken voor Python, R en PySpark. Zie de [bijlage](#supported-libraries) voor een volledige lijst met ondersteunde bibliotheken. |
-| **Bibliotheekcontroller** | Wanneer de vooraf geïnstalleerde bibliotheken niet geschikt zijn voor uw behoeften, kunnen extra bibliotheken voor Python en R worden geïnstalleerd en tijdelijk in geïsoleerde containers worden opgeslagen om de integriteit van het Platform te handhaven en uw gegevens veilig te houden. Zie de sectie [Korrels](#kernels) voor meer informatie. |
+| **Ontwikkelingsbibliotheken** | In [!DNL Experience Platform], verstrekt [!DNL JupyterLab] vooraf geïnstalleerde bibliotheken voor [!DNL Python], R, en PySpark. Zie de [bijlage](#supported-libraries) voor een volledige lijst met ondersteunde bibliotheken. |
+| **Bibliotheekcontroller** | Wanneer de vooraf geïnstalleerde bibliotheken niet aan uw behoeften voldoen, kunnen extra bibliotheken voor Python en R worden geïnstalleerd en tijdelijk in geïsoleerde containers worden opgeslagen om de integriteit van uw gegevens te handhaven [!DNL Platform] en uw gegevens veilig te houden. Zie de sectie [Korrels](#kernels) voor meer informatie. |
 
 >[!NOTE] Aanvullende bibliotheken zijn alleen beschikbaar voor de sessie waarin ze zijn geïnstalleerd. Wanneer u nieuwe sessies start, moet u alle extra bibliotheken die u nodig hebt opnieuw installeren.
 
-## Integratie met andere diensten van de Platform {#service-integration}
+## Integratie met andere [!DNL Platform] services {#service-integration}
 
-Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform]. De integratie van JupyterLab op [!DNL Platform] als ingebedde winde staat het toe om met andere [!DNL Platform] diensten in wisselwerking te staan, toelatend u om aan zijn volledig potentieel [!DNL Platform] te gebruiken. De volgende [!DNL Platform] services zijn beschikbaar in JupyterLab:
+Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform]. De integratie van [!DNL JupyterLab] op [!DNL Platform] als ingebedde winde staat het toe om met andere [!DNL Platform] diensten in wisselwerking te staan, toelatend u om [!DNL Platform] aan zijn volledig potentieel te gebruiken. De volgende [!DNL Platform] services zijn beschikbaar in [!DNL JupyterLab]:
 
-* **Catalogusservice:** Toegang tot en verken gegevenssets met lees- en schrijffuncties.
-* **Query-service:** Toegang tot en verken gegevenssets met SQL, waardoor u lagere gegevenstoegangsoverheadkosten krijgt wanneer u met grote hoeveelheden gegevens werkt.
-* **Sensei ML Framework:** Modelontwikkeling met de mogelijkheid om gegevens op te leiden en te scoren, en het maken van recept met één klik.
-* **Experience Data Model (XDM):** Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter het Adobe Experience Platform. [Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), aangestuurd door Adobe, is een poging om de gegevens van de klantervaring te standaardiseren en schema&#39;s voor het beheer van de klantervaring te definiëren.
+* **[!DNL Catalog Service]:**Toegang tot en verken gegevenssets met lees- en schrijffuncties.
+* **[!DNL Query Service]:**Toegang tot en verken gegevenssets met SQL, waardoor u lagere gegevenstoegangsoverheadkosten krijgt wanneer u met grote hoeveelheden gegevens werkt.
+* **[!DNL Sensei ML Framework]:**Modelontwikkeling met de mogelijkheid om gegevens op te leiden en te scoren, en het maken van recept met één klik.
+* **[!DNL Experience Data Model (XDM)]:**Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter het Adobe Experience Platform.[Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), aangestuurd door Adobe, is een poging om de gegevens van de klantervaring te standaardiseren en schema&#39;s voor het beheer van de klantervaring te definiëren.
 
->[!NOTE] Sommige [!DNL Platform] service-integratie op JupyterLab is beperkt tot specifieke kernels. Raadpleeg de sectie over [korrels](#kernels) voor meer informatie.
+>[!NOTE] Sommige [!DNL Platform] de dienstintegratie op [!DNL JupyterLab] zijn beperkt tot specifieke kernels. Raadpleeg de sectie over [korrels](#kernels) voor meer informatie.
 
 ## Belangrijke functies en veelvoorkomende bewerkingen
 
-In de volgende secties wordt informatie gegeven over de belangrijkste kenmerken van JupyterLab en instructies voor het uitvoeren van veelvoorkomende bewerkingen:
+In de volgende secties wordt informatie gegeven over de belangrijkste kenmerken van [!DNL JupyterLab] en instructies voor het uitvoeren van gemeenschappelijke operaties:
 
 * [Access JupyterLab](#access-jupyterlab)
 * [JupyterLab-interface](#jupyterlab-interface)
@@ -58,28 +58,28 @@ In de volgende secties wordt informatie gegeven over de belangrijkste kenmerken 
 * [PySpark/Spark-uitvoeringsbron](#execution-resource)
 * [Launcher](#launcher)
 
-### Access JupyterLab {#access-jupyterlab}
+### Ga naar [!DNL JupyterLab] {#access-jupyterlab}
 
-In [Adobe Experience Platform](https://platform.adobe.com), uitgezochte **Notities** van de linkernavigatiekolom. Laat JupyterLab enige tijd volledig initialiseren.
+In [Adobe Experience Platform](https://platform.adobe.com), uitgezochte **Notities** van de linkernavigatiekolom. Laat enige tijd over [!DNL JupyterLab] om volledig te initialiseren.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
-### JupyterLab-interface {#jupyterlab-interface}
+### [!DNL JupyterLab] interface {#jupyterlab-interface}
 
-De interface JupyterLab bestaat uit een menubalk, een opvouwbare linkerzijbalk en het hoofdwerkgebied met tabbladen met documenten en activiteiten.
+De [!DNL JupyterLab] interface bestaat uit een menubalk, een opvouwbare linkerzijbalk en het hoofdwerkgebied met tabbladen met documenten en activiteiten.
 
 **Menubalk**
 
-De menubalk boven aan de interface heeft menu&#39;s op hoofdniveau die acties beschikbaar in JupyterLab met hun toetsenbordkortere weg blootstellen:
+De menubalk boven aan de interface heeft menu&#39;s op hoofdniveau die acties beschikbaar maken in [!DNL JupyterLab] de sneltoetsen:
 
 * **Bestand:** Acties in verband met bestanden en mappen
 * **Bewerken:** Acties in verband met het bewerken van documenten en andere activiteiten
-* **Weergave:** Handelingen die de weergave van JupyterLab wijzigen
+* **Weergave:** Handelingen die de weergave van [!DNL JupyterLab]
 * **Uitvoeren:** Handelingen voor het uitvoeren van code in verschillende activiteiten, zoals notebooks en codeconsoles
 * **Kernel:** Handelingen voor het beheren van kernels
 * **Tabs:** Een lijst van geopende documenten en activiteiten
 * **Instellingen:** Algemene instellingen en een geavanceerde instellingeneditor
-* **Help:** Een lijst met JupyterLab- en kernel Help-koppelingen
+* **Help:** Een lijst met Help-koppelingen voor [!DNL JupyterLab] en kernel-koppelingen
 
 **Linkerzijbalk**
 
@@ -98,7 +98,7 @@ Klik op een tab om de bijbehorende functies weer te geven of klik op een uitgevo
 
 **Belangrijkste werkterrein**
 
-Met het hoofdwerkgebied in JupyterLab kunt u documenten en andere activiteiten rangschikken in tabbladen waarvan u de grootte kunt wijzigen of waarin u de documenten kunt onderverdelen. Sleep een tab naar het midden van een deelvenster met tabbladen om de tab te migreren. Verdeel een deelvenster door een tab naar links, rechts, boven of onder in het deelvenster te slepen:
+In het belangrijkste werkgebied in [!DNL JupyterLab] kunt u documenten en andere activiteiten rangschikken in tabbladen waarvan u de grootte kunt wijzigen of die u kunt onderverdelen. Sleep een tab naar het midden van een deelvenster met tabbladen om de tab te migreren. Verdeel een deelvenster door een tab naar links, rechts, boven of onder in het deelvenster te slepen:
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
@@ -120,19 +120,19 @@ Vaak voorkomende celhandelingen worden hieronder beschreven:
 
 ### Kernels {#kernels}
 
-Notebookkernels zijn de taalspecifieke computerengines voor de verwerking van notebookcellen. Naast Python biedt JupyterLab extra taalondersteuning in R, PySpark en Spark (Scala). Wanneer u een notitieboekjectdocument opent, wordt de bijbehorende kernel gestart. Wanneer een laptopcel wordt uitgevoerd, voert de kernel de berekening uit en levert dit resultaten op die aanzienlijke CPU- en geheugenbronnen verbruiken. Let op: toegewezen geheugen wordt pas vrijgegeven wanneer de kernel wordt afgesloten.
+Notebookkernels zijn de taalspecifieke computerengines voor de verwerking van notebookcellen. Naast [!DNL Python], [!DNL JupyterLab] verleent extra taalsteun in R, PySpark, en [!DNL Spark] (Scala). Wanneer u een notitieboekjectdocument opent, wordt de bijbehorende kernel gestart. Wanneer een laptopcel wordt uitgevoerd, voert de kernel de berekening uit en levert dit resultaten op die aanzienlijke CPU- en geheugenbronnen verbruiken. Let op: toegewezen geheugen wordt pas vrijgegeven wanneer de kernel wordt afgesloten.
 
 Bepaalde kenmerken en functies zijn beperkt tot bepaalde kernels zoals beschreven in de onderstaande tabel:
 
-| Kernel | Ondersteuning voor bibliotheekinstallatie | Integratie van Platforms |
+| Kernel | Ondersteuning voor bibliotheekinstallatie | [!DNL Platform] integratie |
 | :----: | :--------------------------: | :-------------------- |
-| **Python** | Ja | <ul><li>Sensei ML Framework</li><li>Catalogusservice</li><li>Query-service</li></ul> |
-| **R** | Ja | <ul><li>Sensei ML Framework</li><li>Catalogusservice</li></ul> |
-| **Scala** | Nee | <ul><li>Sensei ML Framework</li><li>Catalogusservice</li></ul> |
+| **[!DNL Python]** | Ja | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
+| **R** | Ja | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
+| **Scala** | Nee | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
 
 ### Kernel-sessies {#kernel-sessions}
 
-Elke actieve laptop of activiteit op JupyterLab maakt gebruik van een kernel-sessie. Alle actieve sessies kunt u vinden door het tabblad **Doorlopende terminals en kernels** vanuit de linkerzijbalk uit te vouwen. Het type en de toestand van de kernel voor een laptop kunnen worden geïdentificeerd door de laptop rechtsboven te volgen. In het onderstaande diagram is de bijbehorende kernel van de laptop **Python 3** en de huidige toestand wordt weergegeven door een grijze cirkel naar rechts. Een holle cirkel impliceert een nutteloze kernel en een stevige cirkel impliceert een bezige kernel.
+Elke actieve laptop of activiteit op [!DNL JupyterLab] gebruikt een kernel-sessie. Alle actieve sessies kunt u vinden door het tabblad **Doorlopende terminals en kernels** vanuit de linkerzijbalk uit te vouwen. Het type en de toestand van de kernel voor een laptop kunnen worden geïdentificeerd door de laptop rechtsboven te volgen. In het onderstaande diagram is de bijbehorende kernel van de laptop **[!DNL Python]3 **en de huidige toestand wordt weergegeven door een grijze cirkel naar rechts. Een holle cirkel impliceert een nutteloze kernel en een stevige cirkel impliceert een bezige kernel.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
@@ -151,8 +151,8 @@ De aangepaste *Launcher* biedt u nuttige laptopsjablonen voor hun ondersteunde k
 | Leeg | Een leeg laptopbestand. |
 | Starter | Een voorgevulde laptop die de gegevensexploratie aantoont met behulp van voorbeeldgegevens. |
 | Detailhandel | Een voorgevulde laptop met de <a href="https://adobe.ly/2wOgO3L" target="_blank">Retail Sales Recipe</a> met voorbeeldgegevens. |
-| Recipe Builder | Een laptopsjabloon voor het maken van een recept in JupyterLab. De voorgevulde code en opmerkingen tonen en beschrijven het proces voor het maken van recept. Raadpleeg de <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">zelfstudie</a> over het recept voor een gedetailleerde analyse. |
-| Query-service | Een voorgevulde laptop die het gebruik van Query Service rechtstreeks in JupyterLab aantoont met voorbeeldworkflows die gegevens op schaal analyseren. |
+| Recipe Builder | Een laptopsjabloon voor het maken van een recept in [!DNL JupyterLab]. De voorgevulde code en opmerkingen tonen en beschrijven het proces voor het maken van recept. Raadpleeg de <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">zelfstudie</a> over het recept voor een gedetailleerde analyse. |
+| [!DNL Query Service] | Een voorgevulde laptop die het gebruik aantoont van [!DNL Query Service] rechtstreeks in [!DNL JupyterLab] de meegeleverde workflows met voorbeelden die gegevens op schaal analyseren. |
 | XDM-gebeurtenissen | Een voorgevulde laptop waarin de gegevensverkenning op postvalue Experience-gebeurtenisgegevens wordt gedemonstreerd, waarbij de nadruk ligt op functies die gemeenschappelijk zijn in de gegevensstructuur. |
 | XDM-query&#39;s | Een voorgevulde laptop met voorbeelden van zakelijke vragen over Experience Event-gegevens. |
 | Samenvoeging | Een voorgevulde laptop met voorbeelden van workflows om grote hoeveelheden gegevens samen te voegen tot kleinere, beheerbare blokken. |
@@ -167,14 +167,14 @@ Sommige laptopsjablonen zijn beperkt tot bepaalde kernels. De beschikbaarheid va
         <th><strong>Starter</strong></th>
         <th><strong>Detailhandel</strong></th>
         <th><strong>Recipe Builder</strong></th>
-        <th><strong>Query-service</strong></th>
+        <th><strong>[!DNL Query Service]</strong></th>
         <th><strong>XDM-gebeurtenissen</strong></th>
         <th><strong>XDM-query's</strong></th>
         <th><strong>Samenvoeging</strong></th>
         <th><strong>Clustering</strong></th>
     </tr>
     <tr>
-        <th><strong>Python</strong></th>
+        <th><strong>[!DNL Python]</strong></th>
         <td >ja</td>
         <td >ja</td>
         <td >ja</td>
@@ -198,7 +198,7 @@ Sommige laptopsjablonen zijn beperkt tot bepaalde kernels. De beschikbaarheid va
         <td >nee</td>
     </tr>
       <tr>
-        <th  ><strong>PySpark 3 (Spark 2.4)</strong></th>
+        <th  ><strong>PySpark 3 ([!DNL Spark] 2.4)</strong></th>
         <td >nee</td>
         <td >ja</td>
         <td >nee</td>
@@ -227,7 +227,7 @@ Als u een nieuwe *Launcher* wilt openen, klikt u op **Bestand > Nieuwe startpagi
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
-### GPU- en geheugenserverconfiguratie in Python/R
+### GPU- en geheugenserverconfiguratie in [!DNL Python]/R
 
 Selecteer in de [!DNL JupyterLab] rechterbovenhoek het tandwielpictogram om de configuratie *van de* notebookserver te openen. Met de schuifregelaar kunt u de GPU in- en uitschakelen en de benodigde hoeveelheid geheugen toewijzen. De hoeveelheid geheugen die u kunt toewijzen, is afhankelijk van de hoeveelheid geheugen die uw organisatie heeft ingericht. Selecteer Configs **[!UICONTROL bijwerken]** om op te slaan.
 
@@ -236,19 +236,19 @@ Selecteer in de [!DNL JupyterLab] rechterbovenhoek het tandwielpictogram om de c
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
 
-## Toegang tot Platform-gegevens met laptops
+## Toegang tot [!DNL Platform] gegevens met laptops
 
-Elke ondersteunde kernel biedt ingebouwde functies waarmee u gegevens van een Platform in een notitieboekje kunt lezen. De ondersteuning voor pagineringsgegevens is echter beperkt tot Python- en R-laptops.
+Elke ondersteunde kernel biedt ingebouwde functies waarmee u [!DNL Platform] gegevens kunt lezen van een gegevensset in een laptop. De ondersteuning voor pagineringsgegevens is echter beperkt tot laptops [!DNL Python] en R-laptops.
 
 ### Gegevenslimieten voor laptops
 
-De volgende informatie definieert de maximale hoeveelheid gegevens die kan worden gelezen, het type gegevens dat is gebruikt en het geschatte tijdsbestek waarin de gegevens worden gelezen. Voor Python en R werd een notebookserver met een RAM van 40 GB gebruikt voor de benchmarks. Voor PySpark en Scala, werd een gegevensbestandcluster gevormd bij 64GB RAM, 8 kernen, 2 DBU met een maximum van 4 arbeiders gebruikt voor de hieronder vermelde benchmarks.
+De volgende informatie definieert de maximale hoeveelheid gegevens die kan worden gelezen, het type gegevens dat is gebruikt en het geschatte tijdsbestek waarin de gegevens worden gelezen. Voor [!DNL Python] en R werd een notebookserver met een RAM van 40 GB gebruikt voor de benchmarks. Voor PySpark en Scala, werd een gegevensbestandcluster gevormd bij 64GB RAM, 8 kernen, 2 DBU met een maximum van 4 arbeiders gebruikt voor de hieronder vermelde benchmarks.
 
-De gegevens in het ExperienceEvent-schema die werden gebruikt, varieerden van 100 (1K) rijen die oplopen tot 1 miljard (1B) rijen. Merk op dat voor de metriek PySpark en van de Vonk, een datumspanwijdte van 10 dagen werd gebruikt voor de gegevens XDM.
+De gegevens in het ExperienceEvent-schema die werden gebruikt, varieerden van 100 (1K) rijen die oplopen tot 1 miljard (1B) rijen. Merk op dat voor PySpark en [!DNL Spark] metriek, een datumspanwijdte van 10 dagen voor de gegevens XDM werd gebruikt.
 
-De ad-hocschemagegevens zijn vooraf verwerkt gebruikend de Dienst van de Vraag leidt Lijst zoals Uitgezochte (CTAS). Deze gegevens varieerden ook in grootte die van duizend (1K) rijen die zich tot één miljard (1B) rijen uitstrekten.
+De ad-hocschemagegevens zijn vooraf verwerkt met [!DNL Query Service] Create Table as Select (CTAS). Deze gegevens varieerden ook in grootte die van duizend (1K) rijen die zich tot één miljard (1B) rijen uitstrekten.
 
-#### Gegevenslimieten Python-laptop
+#### [!DNL Python] gegevenslimieten voor laptops
 
 **XDM ExperienceEvent-schema:** U moet maximaal 2 miljoen rijen (~6.1 GB gegevens op schijf) XDM-gegevens in minder dan 22 minuten kunnen lezen. Als u extra rijen toevoegt, kunnen er fouten optreden.
 
@@ -280,7 +280,7 @@ De ad-hocschemagegevens zijn vooraf verwerkt gebruikend de Dienst van de Vraag l
 | Grootte op schijf (in MB) | 0.082 | 0.612 | 9.0 | 91 | 188 | 293 |
 | R SDK (in sec) | 7.7 | 4.58 | 35.9 | 233 | 470.5 | 603 |
 
-#### PySpark-laptopgegevenslimieten (Python kernel):
+#### PySpark-[!DNL Python] laptopgegevenslimieten:
 
 **XDM ExperienceEvent-schema:** In de interactieve modus kunt u maximaal 5 miljoen rijen (~13,42 GB gegevens op schijf) XDM-gegevens lezen in ongeveer 20 minuten. De interactieve wijze steunt slechts tot 5 miljoen rijen. Als u wenst om grotere datasets te lezen, wordt het geadviseerd u op de wijze van de Partij over te schakelen. In de Batchmodus kunt u maximaal 500 miljoen rijen (~1,31 TB gegevens op schijf) met XDM-gegevens lezen in ongeveer 14 uur.
 
@@ -298,7 +298,7 @@ De ad-hocschemagegevens zijn vooraf verwerkt gebruikend de Dienst van de Vraag l
 | Interactieve SDK-modus (in seconden) | 28.2s | 18.6s | 20.8s | 20.9s | 23.8s | 21.7s | 24.7s | 22s | 28.4s | 40s | 97.4s | 154.5s |
 | SDK-batchmodus (in seconden) | 428.8s | 578.8s | 641.4s | 538.5s | 630.9s | 467.3s | 411s | 675s | 702s | 719.2s | 1022.1s | 1122.3s |
 
-#### Grenswaarden voor Spark-laptops (Scala kernel):
+#### [!DNL Spark] Gegevenslimieten van laptops (Scala kernel):
 
 **XDM ExperienceEvent-schema:** In de interactieve modus kunt u maximaal 5 miljoen rijen (~13,42 GB gegevens op schijf) met XDM-gegevens lezen in ongeveer 18 minuten. De interactieve wijze steunt slechts tot 5 miljoen rijen. Als u wenst om grotere datasets te lezen, wordt het geadviseerd u op de wijze van de Partij over te schakelen. In de Batchmodus kunt u maximaal 500 miljoen rijen (~1,31 TB gegevens op schijf) met XDM-gegevens lezen in ongeveer 14 uur.
 
@@ -316,13 +316,13 @@ De ad-hocschemagegevens zijn vooraf verwerkt gebruikend de Dienst van de Vraag l
 | Interactieve SDK-modus (in seconden) | 35.7s | 31s | 19.5s | 25.3s | 23s | 33.2s | 25.5s | 29.2s | 29.7s | 36.9s | 83.5s | 139s |
 | SDK-batchmodus (in seconden) | 448.8s | 459.7s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397s | 518.8s | 487.9s | 760.2s | 975.4s |
 
-### Lezen uit een gegevensset in Python/R
+### Lezen van een gegevensset in [!DNL Python]/R
 
-Met Python- en R-laptops kunt u gegevens pagineren wanneer u gegevenssets opent. De voorbeeldcode voor het lezen van gegevens met en zonder paginering wordt hieronder getoond.
+[!DNL Python] en R-laptops kunt u gegevens pagineren wanneer u gegevenssets opent. De voorbeeldcode voor het lezen van gegevens met en zonder paginering wordt hieronder getoond.
 
 [//]: # (In the following samples, the first step is currently required but once the SDK is complete, users are no longer required to explicitly define client_context)
 
-#### Lezen uit een gegevensset in Python/R zonder paginering
+#### Lezen van een dataset in [!DNL Python]/R zonder paginering
 
 Het uitvoeren van de volgende code zal de volledige dataset lezen. Als de uitvoering is gelukt, worden de gegevens opgeslagen als een Pandas-dataframe waarnaar door de variabele wordt verwezen `df`.
 
@@ -352,7 +352,7 @@ df
 
 * `{DATASET_ID}`: De unieke identiteit van de gegevensset waartoe toegang moet worden verkregen
 
-#### Lezen uit een gegevensset in Python/R met paginering
+#### Lezen van een dataset in [!DNL Python]/R met paginering
 
 Het uitvoeren van de volgende code zal gegevens van de gespecificeerde dataset lezen. Paginering wordt bereikt door de gegevens te beperken en te verschuiven via de functies `limit()` en `offset()` . Het beperken van gegevens heeft betrekking op het maximumaantal gegevenspunten dat moet worden gelezen, terwijl het compenseren verwijst naar het aantal gegevenspunten dat vóór het lezen van gegevens moet worden overgeslagen. Als de leesbewerking met succes wordt uitgevoerd, worden de gegevens opgeslagen als een Pandas-dataframe waarnaar door de variabele wordt verwezen `df`.
 
@@ -382,11 +382,11 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`: De unieke identiteit van de gegevensset waartoe toegang moet worden verkregen
 
-### Lees van een dataset in PySpark/Spark/Scala
+### Lees van een dataset in PySpark/[!DNL Spark]/Scala
 
 Met een actieve PySpark of Opgezette Boek Scala, breid het lusje van de Ontdekkingsreiziger **van** Gegevens van linkerzijbalk uit en klik **Datasets** tweemaal om een lijst van beschikbare datasets te bekijken. Klik met de rechtermuisknop op de gegevensset die u wilt openen en klik op Gegevens **zoeken in laptop**. De volgende codecellen worden gegenereerd:
 
-#### PySpark (Spark 2.4) {#pyspark2.4}
+#### PySpark ([!DNL Spark] 2.4) {#pyspark2.4}
 
 Met de introductie van Spark 2.4 wordt [`%dataset`](#magic) aangepaste magie geleverd.
 
@@ -398,7 +398,7 @@ pd0.describe()
 pd0.show(10, False)
 ```
 
-#### Scala (park 2.4) {#spark2.4}
+#### Scala ([!DNL Spark] 2.4) {#spark2.4}
 
 ```scala
 // Scala (Spark 2.4)
@@ -422,9 +422,9 @@ dataFrame.show()
 >[!TIP]
 >In Scala, kunt u gebruiken `sys.env()` om een waarde van binnen te verklaren en terug te keren `option`.
 
-### Het gebruiken van de magie van %dataset in PySpark 3 (Vonk 2.4) laptops {#magic}
+### Het gebruiken van de magie van %dataset in PySpark 3 ([!DNL Spark] 2.4) laptops {#magic}
 
-Met de introductie van Spark 2.4 wordt `%dataset` aangepaste magie geleverd voor gebruik in nieuwe PySpark 3 (Spark 2.4) notebooks (Python 3 kernel).
+Met de introductie van [!DNL Spark] 2.4 wordt `%dataset` aangepaste magie geleverd voor gebruik in nieuwe PySpark 3 ([!DNL Spark] 2.4) notebooks ([!DNL Python] 3 kernel).
 
 **Gebruik**
 
@@ -432,7 +432,7 @@ Met de introductie van Spark 2.4 wordt `%dataset` aangepaste magie geleverd voor
 
 **Beschrijving**
 
-Een toveropdracht voor aangepaste Data Science Workspace voor het lezen of schrijven van een gegevensset van een Python-laptop (Python 3-kernel).
+Een aangepaste opdracht voor het [!DNL Data Science Workspace] schrijven of lezen van een gegevensset van een [!DNL Python] laptop ([!DNL Python] 3 kernel).
 
 * **{action}**: Het type van actie op de dataset uit te voeren. Er zijn twee handelingen beschikbaar: &quot;read&quot; of &quot;write&quot;.
 * **—datasetId {id}**: Gebruikt om identiteitskaart van de dataset te leveren om te lezen of te schrijven. Dit is een verplicht argument.
@@ -446,22 +446,22 @@ Een toveropdracht voor aangepaste Data Science Workspace voor het lezen of schri
 * **Voorbeeld** lezen: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
 * **Voorbeeld** schrijven: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
-### De gegevens van de vraag gebruikend de Dienst van de Vraag in Python
+### Query-gegevens uitvoeren met [!DNL Query Service] In [!DNL Python]
 
-Met JupyterLab op Platform kunt u SQL in een Python-laptop gebruiken om toegang te krijgen tot gegevens via <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platform Query Service</a>. De toegang tot van gegevens door de Dienst van de Vraag kan nuttig zijn om grote datasets wegens zijn superieure lopende tijden te behandelen. Houd er rekening mee dat het opvragen van gegevens met behulp van Query Service een verwerkingstijdslimiet van tien minuten heeft.
+[!DNL JupyterLab] op [!DNL Platform] staat u toe om SQL in een [!DNL Python] notitieboekje te gebruiken om tot gegevens door de Dienst <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">van de Vraag van het</a>Adobe Experience Platform toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan nuttig zijn voor het omgaan met grote gegevenssets vanwege de superieure doorlooptijden. Houd er rekening mee dat het opvragen van gegevens met een verwerkingstijd van tien minuten [!DNL Query Service] heeft.
 
-Alvorens u de Dienst van de Vraag in JupyterLab gebruikt, zorg ervoor u een werkend inzicht in de SQL syntaxis <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">van de Dienst van de</a>Vraag hebt.
+Voordat u [!DNL Query Service] de SQL-syntaxis [!DNL JupyterLab]gaat gebruiken, moet u controleren of u goed op de hoogte bent van de <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">[!DNL Query Service] SQL-syntaxis</a>.
 
-Het vragen van gegevens die de Dienst van de Vraag gebruiken vereist u om de naam van de doeldataset te verstrekken. U kunt de noodzakelijke codecellen produceren door de gewenste dataset te vinden gebruikend de ontdekkingsreiziger **van** Gegevens. Klik met de rechtermuisknop op de gegevenssetlijst en klik op **Query-gegevens in laptop** om de volgende twee codecellen in uw laptop te genereren:
+Het vragen van gegevens die [!DNL Query Service] vereist u om de naam van de doeldataset te verstrekken. U kunt de noodzakelijke codecellen produceren door de gewenste dataset te vinden gebruikend de ontdekkingsreiziger **van** Gegevens. Klik met de rechtermuisknop op de gegevenssetlijst en klik op **Query-gegevens in laptop** om de volgende twee codecellen in uw laptop te genereren:
 
 
-Om de Dienst van de Vraag in JupyterLab te gebruiken, moet u eerst een verbinding tussen uw werkende Notitieboekje Python en de Dienst van de Vraag tot stand brengen. Dit kan worden bereikt door de eerste gegenereerde cel uit te voeren.
+Als u [!DNL Query Service] in wilt gebruiken [!DNL JupyterLab], moet u eerst een verbinding maken tussen uw werkende [!DNL Python] laptop en [!DNL Query Service]. Dit kan worden bereikt door de eerste gegenereerde cel uit te voeren.
 
 ```python
 qs_connect()
 ```
 
-In de tweede gegenereerde cel moet de eerste regel worden gedefinieerd vóór de SQL-query. Door gebrek, bepaalt de geproduceerde cel een facultatieve variabele (`df0`) die de vraagresultaten als dataframe van de Pandas bewaart. <br>Het `-c QS_CONNECTION` argument is verplicht en vertelt de kernel om de SQL vraag tegen de Dienst van de Vraag uit te voeren. Zie de [bijlage](#optional-sql-flags-for-query-service) voor een lijst van extra argumenten.
+In de tweede gegenereerde cel moet de eerste regel worden gedefinieerd vóór de SQL-query. Door gebrek, bepaalt de geproduceerde cel een facultatieve variabele (`df0`) die de vraagresultaten als dataframe van de Pandas bewaart. <br>Het `-c QS_CONNECTION` argument is verplicht en geeft de kernel de opdracht om de SQL-query uit te voeren [!DNL Query Service]. Zie de [bijlage](#optional-sql-flags-for-query-service) voor een lijst van extra argumenten.
 
 ```python
 %%read_sql df0 -c QS_CONNECTION
@@ -484,9 +484,9 @@ SELECT {table_columns}
 FROM {table_name}
 ```
 
-### Filter ExperienceEvent-gegevens in Python/R
+### Filter ExperienceEvent-gegevens in [!DNL Python]/R
 
-Om tot een dataset ExperienceEvent in een notitieboekje van Python of van R toegang te hebben en te filtreren, moet u identiteitskaart van de dataset (`{DATASET_ID}`) samen met de filterregels verstrekken die een specifieke tijdwaaier gebruikend logische exploitanten bepalen. Wanneer een tijdwaaier wordt bepaald, wordt om het even welke gespecificeerde paginering genegeerd en de volledige dataset wordt overwogen.
+Om tot een dataset ExperienceEvent in een [!DNL Python] of notitieboekje van R toegang te hebben en te filtreren, moet u identiteitskaart van de dataset (`{DATASET_ID}`) samen met de filterregels verstrekken die een specifieke tijdwaaier gebruikend logische exploitanten bepalen. Wanneer een tijdwaaier wordt bepaald, wordt om het even welke gespecificeerde paginering genegeerd en de volledige dataset wordt overwogen.
 
 Een lijst met filteroperatoren wordt hieronder beschreven:
 
@@ -530,13 +530,13 @@ df <- dataset_reader$
 )$read()
 ```
 
-### Filter ExperienceEvent-gegevens in PySpark/Spark
+### Filter ExperienceEvent-gegevens in PySpark/[!DNL Spark]
 
 Als u toegang krijgt tot en filtert op een dataset ExperienceEvent in een PySpark- of Scala-laptop, moet u de gegevenssetidentiteit (`{DATASET_ID}`), de IMS-identiteit van uw organisatie en de filterregels die een specifieke tijdreeks definiëren, opgeven. Een het Filtreren tijdwaaier wordt bepaald door de functie te gebruiken `spark.sql()`, waar de functieparameter een SQL vraagkoord is.
 
 De volgende cellen filteren een dataset ExperienceEvent op gegevens die uitsluitend tussen 1 januari 2019 en eind december 2019 bestonden.
 
-#### PySpark 3 (Spark 2.4) {#pyspark3-spark2.4}
+#### PySpark 3 ([!DNL Spark] 2.4) {#pyspark3-spark2.4}
 
 ```python
 # PySpark 3 (Spark 2.4)
@@ -556,7 +556,7 @@ timepd = spark.sql("""
 timepd.show()
 ```
 
-#### Scala (park 2.4) {#scala-spark}
+#### Scala ([!DNL Spark] 2.4) {#scala-spark}
 
 ```scala
 // Spark (Spark 2.4)
@@ -606,7 +606,7 @@ timedf.show()
 
 ## Ondersteunde bibliotheken {#supported-libraries}
 
-### Python/R
+### [!DNL Python] / R
 
 | Bibliotheek | Versie |
 | :------ | :------ |
@@ -687,7 +687,7 @@ timedf.show()
 | grafiet | 2.40.1 |
 | python-graphviz | 0.11.1 |
 | azuuropslag | 0.36.0 |
-| jupyterlab | 1.0.4 |
+| [!DNL jupyterlab] | 1.0.4 |
 | pandas_ml | 0.6.1 |
 | tensorflow-gpu | 1.14.0 |
 | nodejs | 12.3.0 |
@@ -726,12 +726,12 @@ timedf.show()
 | pijltje | 0.8.0 |
 | boto3 | 1.5.18 |
 | azure-storage-blob | 1.4.0 |
-| python | 3.6.7 |
+| [!DNL python] | 3.6.7 |
 | mkl-rt | 11.1 |
 
-## Optionele SQL-vlaggen voor Query Service {#optional-sql-flags-for-query-service}
+## Optionele SQL-markeringen voor [!DNL Query Service] {#optional-sql-flags-for-query-service}
 
-Deze lijst schetst de facultatieve SQL vlaggen die voor de Dienst van de Vraag kunnen worden gebruikt.
+In deze tabel staan de optionele SQL-markeringen waarvoor u kunt kiezen [!DNL Query Service].
 
 | **Markering** | **Beschrijving** |
 | --- | --- |
