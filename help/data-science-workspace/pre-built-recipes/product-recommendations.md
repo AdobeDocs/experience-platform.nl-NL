@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Recept voor productaanbevelingen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '421'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Het recept van de Aanbevelingen van het Product gebruikt machine het leren om de
 
 ## Hoe begin ik?
 
-U kunt aan de slag door de zelfstudie van het Laboratorium van het Platform van de Ervaring van Adobe te volgen (zie de verbinding van het Laboratorium hieronder). Deze zelfstudie laat u zien hoe u het recept voor productaanbevelingen kunt maken in een Jupyter-laptop door de [laptop te volgen om de workflow voor recept](../jupyterlab/create-a-recipe.md) te volgen en het recept te implementeren in de Data Science Workspace van het Experience Platform.
+U kunt beginnen door de zelfstudie van het Laboratorium van het Adobe Experience Platform te volgen (zie de verbinding van het Laboratorium hieronder). Deze zelfstudie laat u zien hoe u het recept voor productaanbevelingen kunt maken in een Jupyter-laptop door de [laptop te volgen en de workflow voor recept](../jupyterlab/create-a-recipe.md) te volgen en het recept te implementeren in [!DNL Experience Platform][!DNL Data Science Workspace].
 
 * [Lab: De toekomst voorspellen met Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
 * [Lab-bronnen](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
@@ -38,7 +41,7 @@ In dit recept worden aangepaste [XDM-schema](../../xdm/schema/field-dictionary.m
 --- | ---
 | itemId | String |
 | interactionType | String |
-| tijdstempel | String |
+| timestamp | String |
 | userId | String |
 
 ### Uitvoergegevensschema
