@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een model optimaliseren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1219'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een model optimaliseren met behulp van het Model Insights-framework
 
-Het Model Insights Framework biedt de gegevenswetenschapper hulpmiddelen in de Data Science Workspace om snelle en geïnformeerde keuzes te maken voor optimale modellen voor machinaal leren op basis van experimenten. Het kader zal de snelheid en doeltreffendheid van de werkstroom voor machinaal leren verbeteren en het gebruiksgemak voor gegevenswetenschappers verbeteren. Dit wordt gedaan door een standaardmalplaatje voor elk machine het leren algoritme type te verstrekken om met model het stemmen bij te wonen. Dankzij het eindresultaat kunnen wetenschappers op het gebied van gegevens en burgergegevens betere modeloptimalisatiebeslissingen maken voor hun eindgebruikers.
+Het Model Insights Framework biedt de gegevenswetenschapper instrumenten [!DNL Data Science Workspace] om snelle en geïnformeerde keuzes te maken voor optimale modellen voor machinaal leren op basis van experimenten. Het kader zal de snelheid en doeltreffendheid van de werkstroom voor machinaal leren verbeteren en het gebruiksgemak voor gegevenswetenschappers verbeteren. Dit wordt gedaan door een standaardmalplaatje voor elk machine het leren algoritme type te verstrekken om met model het stemmen bij te wonen. Dankzij het eindresultaat kunnen wetenschappers op het gebied van gegevens en burgergegevens betere modeloptimalisatiebeslissingen maken voor hun eindgebruikers.
 
 ## Wat zijn metriek?
 
@@ -28,7 +28,7 @@ Na het implementeren en trainen van een model, zou een wetenschapper de volgende
 
 Momenteel ondersteunt het Model Insights Framework de volgende runtimes:
 - [Scala](#scala)
-- [Python/Tensorflow](#pythontensorflow)
+- [!DNL Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
 Voorbeeldcode voor recepten vindt u in de [Experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) repository onder `recipes`. In deze zelfstudie wordt verwezen naar specifieke bestanden in deze opslagplaats.
@@ -95,19 +95,19 @@ Wanneer het in het recept is gedefinieerd, is de volgende stap het in de recepte
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-In de Werkruimte van de Wetenschap van Gegevens, zou de gebruiker de inzichten in het lusje van &quot;Metriek van de Evaluatie&quot;in de experimenteerpagina kunnen zien.
+In het [!DNL Data Science Workspace]voorbeeld zou de gebruiker de inzichten kunnen zien op het tabblad &quot;Evaluatiemetriek&quot; in de testpagina.
 
-### Python/Tensorflow {#pythontensorflow}
+### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-Op dit moment zijn er geen standaardevaluatiemetriek voor Python of Tensorflow. Aldus, om de evaluatiemetriek voor Python of Tensorflow te krijgen, zult u een metrische douaneverhouding moeten tot stand brengen. Dit kan worden gedaan door de `Evaluator` klasse uit te voeren.
+Vanaf nu zijn er geen standaardevaluatiemetriek voor [!DNL Python] of [!DNL Tensorflow]. Aldus, om de evaluatiemetriek voor te krijgen [!DNL Python] of [!DNL Tensorflow], zult u een metrisch van de douaneevaluatie moeten tot stand brengen. Dit kan worden gedaan door de `Evaluator` klasse uit te voeren.
 
-#### Eigen evaluatiemetriek voor Python
+#### Eigen evaluatiemetriek voor [!DNL Python]
 
 Voor de metriek van de douaneevaluatie, zijn er twee belangrijkste methodes die voor de beoordelaar moeten worden uitgevoerd: `split()` en `evaluate()`.
 
-Voor Python worden deze methoden gedefinieerd in [beoordelator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) voor de `Evaluator` klasse. Volg de [koppeling beoordelaar.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) voor een voorbeeld van de `Evaluator`.
+Deze methoden worden bijvoorbeeld gedefinieerd in [!DNL Python]beoordelator.py [voor de](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) `Evaluator` klasse. Volg de [koppeling beoordelaar.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) voor een voorbeeld van de `Evaluator`.
 
-Het creëren van evaluatiemetriek in Python vereist de gebruiker om de `evaluate()` en de `split()` methodes uit te voeren.
+Het creëren van evaluatiemetriek binnen [!DNL Python] vereist de gebruiker om de `evaluate()` en de `split()` methodes uit te voeren.
 
 De `evaluate()` methode retourneert het metrische object dat een array van metrische objecten met eigenschappen van `name`, `value`en `valueType`.
 
@@ -117,7 +117,7 @@ De `split()` methode moet een dataframe voor training en tests retourneren dat v
 
 #### Eigen evaluatiemetriek voor Tensorflow
 
-Voor Tensorflow, vergelijkbaar met Python, moeten de methoden `evaluate()` en `split()` in de `Evaluator` klasse worden geïmplementeerd. De metriek `evaluate()`moet bijvoorbeeld worden geretourneerd terwijl de trein en de testgegevenssets worden `split()` geretourneerd.
+De methoden [!DNL Tensorflow]en [!DNL Python]in de `evaluate()` klasse moeten bijvoorbeeld worden geïmplementeerd, net als `split()` `Evaluator` de methoden. De metriek `evaluate()`moet bijvoorbeeld worden geretourneerd terwijl de trein en de testgegevenssets worden `split()` geretourneerd.
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -152,7 +152,7 @@ Het gegeven wordt eerst geladen aan een dataset van een bron zoals die in [retai
 
 ## Vooraf gebouwde metriek- en visualisatiekaarten gebruiken
 
-Het Sensei Model Insights Framework ondersteunt één standaardsjabloon voor elk type machine-leeralgoritme. In de onderstaande tabel ziet u veelvoorkomende machineleesalgoritme-klassen en de bijbehorende evaluatiemetriek en -visualisaties.
+De [!DNL Sensei Model Insights Framework] functie ondersteunt één standaardsjabloon voor elk type systeemleeralgoritme. In de onderstaande tabel ziet u veelvoorkomende machineleesalgoritme-klassen en de bijbehorende evaluatiemetriek en -visualisaties.
 
 | ML Algorithm Type | Beoordelingswaarden | Visualisaties |
 --- | --- | ---
@@ -163,4 +163,4 @@ Het Sensei Model Insights Framework ondersteunt één standaardsjabloon voor elk
 | Clustering (zonder waarheid op de grond) | - Inertia<br>- Silhouette coëfficiënt<br>- CHI (Calinski-Harabaz index)<br>- DBI (Davies-Bouldin index)<br>- Dunn index | Clusters tekenen clusters en centroïden met relatieve clustergrootten die de gegevenspunten weergeven die binnen een cluster vallen |
 | Aanbeveling | -Gemiddelde gemiddelde precisie (MAP) <br>-genormaliseerde, gedisconteerde cumulatieve winst <br>- Gemiddelde Ware Rank <br>-Metrische K | TBD |
 | Gebruiksgevallen van TensorFlow | TensorFlow Model Analysis (TFMA) | Vergelijking van neurale netwerkmodellen/visualisatie ongedaan maken |
-| Ander/fout-vastlegmechanisme | De metrische logica van de douane (en overeenkomstige evaluatiekaarten) die door modelauteur worden bepaald. Handige foutafhandeling in geval van niet-overeenkomende sjabloon | Lijst met zeer belangrijke paren voor evaluatiemetriek |
+| Ander/fout-vastlegmechanisme | De metrische logica van de douane (en overeenkomstige evaluatiekaarten) die door modelauteur worden bepaald. Handige foutafhandeling in geval van niet-overeenkomende sjablonen | Lijst met zeer belangrijke paren voor evaluatiemetriek |
