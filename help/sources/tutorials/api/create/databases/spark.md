@@ -4,58 +4,58 @@ solution: Experience Platform
 title: Maak een Apache Spark op Azure HDInsights-connector met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: e4ed6ae3ee668cd0db741bd07d2fb7be593db4c9
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '562'
 ht-degree: 0%
 
 ---
 
 
-# Maak een Apache Spark op Azure HDInsights-connector met de Flow Service API
+# Een [!DNL Apache Spark] HDInsights-connector maken met de [!DNL Azure] [!DNL Flow Service] API
 
 >[!NOTE]
->De Apache Spark op Azure HDInsights-connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De [!DNL Apache Spark] on- [!DNL Azure HDInsights] connector bevindt zich in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De Dienst van de stroom wordt gebruikt om klantengegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[!DNL Flow Service] wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Apache Spark op Azure HDInsights (hierna &quot;Spark&quot; genoemd) aan Experience Platform te koppelen.
+In deze zelfstudie wordt de [!DNL Flow Service] API gebruikt om u door de stappen te laten lopen om verbinding [!DNL Apache Spark] te maken [!DNL Azure HDInsights] (hierna &quot;[!DNL Spark]&quot; genoemd) met [!DNL Experience Platform].
 
 ## Aan de slag
 
 Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
+* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met de Vonk te verbinden gebruikend de Dienst API van de Stroom.
+In de volgende secties vindt u aanvullende informatie die u nodig hebt om verbinding te kunnen maken met [!DNL Spark] [!DNL Flow Service] de API.
 
 ### Vereiste referenties verzamelen
 
-Opdat de Dienst van de Stroom met Vonk verbindt, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
+Als u verbinding wilt [!DNL Flow Service] maken met [!DNL Spark], moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `host` | Het IP adres of de gastheernaam van de server van de Vonk. |
-| `username` | De gebruikersnaam die u gebruikt om tot de Server van de Vonk toegang te hebben. |
+| `host` | Het IP-adres of de hostnaam van de [!DNL Spark] server. |
+| `username` | De gebruikersnaam die u gebruikt om toegang te krijgen tot [!DNL Spark] Server. |
 | `password` | Het wachtwoord dat overeenkomt met de gebruiker. |
-| `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De identiteitskaart van de verbindingsspecificatie voor Vonk is: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL Spark] is: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
 
 Voor meer informatie over begonnen worden verwijs naar [dit document](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview)van Vonk.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in Experience Platform, inclusief die van de Flow Service, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DNL Flow Service]sandboxen behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -65,7 +65,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Verbinding maken
 
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Slechts één verbinding wordt vereist per de rekening van de Vonk aangezien het kan worden gebruikt om veelvoudige bronschakelaars tot stand te brengen om verschillende gegevens in te brengen.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Er is slechts één verbinding per [!DNL Spark] account vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
 
 **API-indeling**
 
@@ -75,7 +75,7 @@ POST /connections
 
 **Verzoek**
 
-Om een verbinding van de Vonk tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het POST- verzoek worden verstrekt. De identiteitskaart van de verbindingsspecificatie voor Vonk is `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`.
+Om een [!DNL Spark] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het POST- verzoek worden verstrekt. De verbindingsspecificatie-id voor [!DNL Spark] is `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`.
 
 ```shell
 curl -X POST \
@@ -105,10 +105,10 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.host` | De gastheer van de server van de Vonk. |
-| `auth.params.username` | De gebruikersnaam die aan uw verbinding van de Vonk wordt gekoppeld. |
-| `auth.params.password` | Het wachtwoord verbonden aan uw verbinding van de Vonk. |
-| `connectionSpec.id` | ID van de de verbindingsspecificatie van de Vonk: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
+| `auth.params.host` | De host van de [!DNL Spark] server. |
+| `auth.params.username` | De gebruikersnaam die aan uw [!DNL Spark] verbinding is gekoppeld. |
+| `auth.params.password` | Het wachtwoord dat aan uw [!DNL Spark] verbinding is gekoppeld. |
+| `connectionSpec.id` | De id van de [!DNL Spark] verbindingsspecificatie: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
 
 **Antwoord**
 
@@ -123,4 +123,4 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte verbinding, 
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een verbinding van de Vonk gecreeerd gebruikend de Dienst API van de Stroom en hebt de unieke waarde van identiteitskaart van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u databases kunt [verkennen met behulp van de Flow Service API](../../explore/database-nosql.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL Spark] verbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u databases kunt [verkennen met behulp van de Flow Service API](../../explore/database-nosql.md).
