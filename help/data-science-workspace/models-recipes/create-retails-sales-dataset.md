@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Het detailhandelschema en de dataset maken
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -14,26 +14,26 @@ ht-degree: 0%
 
 # Het detailhandelschema en de dataset maken
 
-Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere zelfstudies over de [!DNL Adobe Experience Platform] Data Science Workspace. Na voltooiing, zullen het Retailschema en de datasets van de Verkoop voor u en leden van uw organisatie IMS op het Platform van de Ervaring beschikbaar zijn.
+Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] zelfstudies. Na voltooiing, zullen het Retailschema en de datasets van de Verkoop voor u en leden van uw IMS Organisatie op [!DNL Experience Platform]. beschikbaar zijn.
 
 ## Aan de slag
 
 Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldoen:
-- Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang tot een IMS Organisatie in het Platform van de Ervaring hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
-- Toestemming voor het maken van API-aanroepen van Experience Platform. Voltooi de zelfstudie voor het [verifiëren en openen van de API&#39;s](../../tutorials/authentication.md) van het Adobe Experience Platform voor het verkrijgen van de volgende waarden om deze zelfstudie te voltooien:
+- Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang hebt tot een IMS-organisatie in [!DNL Experience Platform], neemt u contact op met uw systeembeheerder voordat u verdergaat.
+- Autorisatie voor het uitvoeren van [!DNL Experience Platform] API-aanroepen. Voltooi de [Authenticate en toegang tot Adobe Experience Platform APIs](../../tutorials/authentication.md) zelfstudie om de volgende waarden te verkrijgen om deze zelfstudie te voltooien:
    - Autorisatie: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
    - Klantgeheim: `{CLIENT_SECRET}`
    - Clientcertificaat: `{PRIVATE_KEY}`
-- Voorbeeldgegevens en bronbestanden voor de [Retail Sales Recipe](../pre-built-recipes/retail-sales.md). Download de benodigde middelen voor deze en andere zelfstudies voor de Data Science Workspace van de [Adobe Public Git-opslagplaats](https://github.com/adobe/experience-platform-dsw-reference/).
-- [Python >= 2,7](https://www.python.org/downloads/) en de volgende Python-verpakkingen:
+- Voorbeeldgegevens en bronbestanden voor de [Retail Sales Recipe](../pre-built-recipes/retail-sales.md). Download de voor deze en andere [!DNL Data Science Workspace] zelfstudies vereiste middelen uit de openbare [Adobe Git-opslagplaats](https://github.com/adobe/experience-platform-dsw-reference/).
+- [Python >= 2,7](https://www.python.org/downloads/) en de volgende [!DNL Python] verpakkingen:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
    - [dictor](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
 - Een goed begrip van de volgende concepten die in deze zelfstudie worden gebruikt:
-   - [Experience Data Model (XDM)](../../xdm/home.md)
+   - [!DNL Experience Data Model (XDM)](../../xdm/home.md)
    - [Basisbeginselen van de schemacompositie](../../xdm/schema/field-dictionary.md)
 
 ## Handelsschema en gegevensset maken
@@ -42,7 +42,7 @@ Het schema en de datasets van de Verkoop van de detailhandel worden gecreeerd au
 
 ### Bestanden configureren
 
-1. Navigeer in het bronnenpakket van het Experience Platform naar de map `bootstrap``config.yaml` en open de map met een geschikte teksteditor.
+1. Navigeer in het bronnenpakket van de [!DNL Experience Platform] zelfstudie naar de map `bootstrap``config.yaml` en open de map met een geschikte teksteditor.
 2. Voer onder de `Enterprise` sectie de volgende waarden in:
 
    ```yaml
@@ -91,8 +91,8 @@ Het schema en de datasets van de Verkoop van de detailhandel worden gecreeerd au
 
 ### Het opstartscript uitvoeren
 
-1. Open uw eindtoepassing en navigeer naar de folder van het Leerprogramma van het Platform van de Ervaring.
-2. Stel de `bootstrap` map in als het huidige tijdelijke pad en voer het `bootstrap.py` pythonscript uit door de volgende opdracht in te voeren:
+1. Open de terminaltoepassing en navigeer naar de bronnenmap van de [!DNL Experience Platform] zelfstudie.
+2. Stel de `bootstrap` map in als het huidige tijdelijke pad en voer het `bootstrap.py`[!DNL Python] script uit door de volgende opdracht in te voeren:
 
    ```bash
    python bootstrap.py
@@ -102,12 +102,12 @@ Het schema en de datasets van de Verkoop van de detailhandel worden gecreeerd au
 
 ## Volgende stappen
 
-Na succesvolle voltooiing van het laarzentrekkerscript, kunnen de de input en outputschema&#39;s en datasets van de Handel op het Platform van de Ervaring worden bekeken. Zie de [voorbeeldschemagegevenszelfstudie](./preview-schema-data.md)voor meer informatie.
+Op succesvolle voltooiing van het laarzentrekkerscript, kunnen de de input en outputschema&#39;s en datasets van de Verkoop de Retail worden bekeken [!DNL Experience Platform]. Zie de [voorbeeldschemagegevenszelfstudie](./preview-schema-data.md)voor meer informatie.
 
-U hebt ook met succes de met succes gegevens van de steekproef van de Verkoop van de Handel in het Platform van de Ervaring opgenomen gebruikend het verstrekte laarzentrekkerscript.
+U hebt met succes ook met succes gegevens van de steekproef van de Verkoop van de Handel in het [!DNL Experience Platform] gebruiken van het verstrekte laarzentrekkerscript opgenomen.
 
 U kunt als volgt met de opgenomen gegevens blijven werken:
 - [Uw gegevens analyseren met Jupyter-laptops](../jupyterlab/analyze-your-data.md)
    - Gebruik Jupyter-laptops in de Data Science Workspace voor toegang tot, verkenning, visualisatie en begrip van uw gegevens.
 - [Bronbestanden in een pakket plaatsen in een ontvanger](./package-source-files-recipe.md)
-   - Volg deze zelfstudie om te leren hoe u uw eigen model in de werkruimte van de Wetenschap van Gegevens kunt brengen door bronbestanden in een importeerbaar Recipe-bestand te verpakken.
+   - Volg deze zelfstudie om te leren hoe u uw eigen model in kunt brengen [!DNL Data Science Workspace] door bronbestanden in een importeerbaar Recipe-bestand te verpakken.
