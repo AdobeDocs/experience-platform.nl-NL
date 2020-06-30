@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruikershandleiding voor laptop in realtime leren van machines
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: 695eba3885dc319a9b7f73eb710b2ada0b17d24d
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1637'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ In de volgende handleiding worden de stappen beschreven die nodig zijn om een to
 
 ## Een laptop voor real-time leren van machines maken
 
-Selecteer in de gebruikersinterface van het Adobe Experience Platform **[!UICONTROL laptops]** uit *Data Science*. Selecteer vervolgens **[!UICONTROL JupyterLab]** en laat de omgeving enige tijd laden.
+In het Adobe Experience Platform UI, uitgezochte **[!UICONTROL Notities]** van binnen de Wetenschap *van* Gegevens. Selecteer vervolgens **[!UICONTROL JupyterLab]** en laat de omgeving enige tijd laden.
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
-De JupyterLab-startprogramma wordt weergegeven. Blader omlaag naar *Real-Time Machine Learning* en selecteer de **Real-Time ML** -laptop. Er wordt een sjabloon geopend met voorbeeldlaptopcellen met een voorbeeldgegevensset.
+De [!DNL JupyterLab] startprogramma wordt weergegeven. Blader omlaag naar *Real-Time Machine Learning* en selecteer de **[!UICONTROL Real-Time ML]** -laptop. Er wordt een sjabloon geopend met voorbeeldlaptopcellen met een voorbeeldgegevensset.
 
 ![blanco python](../images/rtml/authoring-notebook.png)
 
@@ -70,7 +70,7 @@ pprint(nf.discover_nodes())
 
 ## Een real-time leren van machines trainen
 
-Met een van de volgende opties schrijft u Python-code voor het lezen, vooraf verwerken en analyseren van gegevens. Daarna, moet u uw eigen model van XML trainen, het in formaat rangschikken ONNX en dan uploadt het aan het Leren modelopslag van de machine in real time.
+Met een van de volgende opties schrijft u [!DNL Python] code voor het lezen, vooraf verwerken en analyseren van gegevens. Daarna, moet u uw eigen model van XML trainen, het in formaat rangschikken ONNX en dan uploadt het aan het Leren modelopslag van de machine in real time.
 
 - [Uw eigen model trainen in JupyterLab-laptops](#training-your-own-model)
 - [Uw eigen vooraf getrainde ONNX-model uploaden naar JupyterLab-laptops](#pre-trained-model-upload)
@@ -80,15 +80,15 @@ Met een van de volgende opties schrijft u Python-code voor het lezen, vooraf ver
 Begin met het laden van uw trainingsgegevens.
 
 >[!NOTE]
->In het **Real-Time ML** malplaatje, wordt de [Csv- dataset](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) van de autoverzekering gegrabd van Github.
+>In het **Real-Time ML** malplaatje, wordt de [CSV dataset](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) van de autoverzekering gegrabbed van [!DNL Github].
 
 ![Trainingsgegevens laden](../images/rtml/load_training.png)
 
-Als u een gegevensset wilt gebruiken vanuit het Adobe Experience Platform, verwijdert u de commentaarmarkering uit de onderstaande cel. Vervolgens moet u deze vervangen door `DATASET_ID` de juiste waarde.
+Als u een dataset van binnen Adobe Experience Platform wenst te gebruiken, uncomment de hieronder cel. Vervolgens moet u deze vervangen door `DATASET_ID` de juiste waarde.
 
 ![rtml-gegevensset](../images/rtml/rtml-dataset.png)
 
-Als u toegang wilt krijgen tot een gegevensset in uw JupyterLab-laptop, selecteert u het tabblad **Gegevens** in de linkernavigatie van JupyterLab. De mappen *Datasets* en *Schemas* worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteren **[!UICONTROL onderzoek Gegevens in Notitie]** van het drop-down menu op de dataset u wenst te gebruiken. Onder aan de laptop wordt een uitvoerbaar code-item weergegeven. Deze cel heeft je `dataset_id`.
+Om tot een dataset in uw [!DNL JupyterLab] notitieboekje toegang te hebben, selecteer het lusje van **Gegevens** in de linkernavigatie van [!DNL JupyterLab]. De mappen *[!UICONTROL Datasets]* en *[!UICONTROL Schemas]* worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteren **[!UICONTROL onderzoek Gegevens in Notitie]** van het drop-down menu op de dataset u wenst te gebruiken. Onder aan de laptop wordt een uitvoerbaar code-item weergegeven. Deze cel heeft je `dataset_id`.
 
 ![toegang tot gegevensset](../images/rtml/access-dataset.png)
 
@@ -109,11 +109,11 @@ config_properties = {
 
 ### Uw model voorbereiden
 
-Met de *Real-Time ML* -sjabloon moet u uw ML-model analyseren, vooraf verwerken, trainen en evalueren. Dit wordt gedaan door gegevenstransformaties toe te passen en een opleidingspijpleiding te bouwen.
+Met de *[!UICONTROL Real-Time ML]* -sjabloon moet u uw ML-model analyseren, vooraf verwerken, trainen en evalueren. Dit wordt gedaan door gegevenstransformaties toe te passen en een opleidingspijpleiding te bouwen.
 
 **Gegevenstransformaties**
 
-De *Echte cel van de Transformaties* van XML *malplaatjes van* Gegevens moet worden gewijzigd om met uw eigen dataset te werken. Doorgaans gaat het hier om het wijzigen van de naam van kolommen, rollup van gegevens en het voorbereiden en bewerken van gegevens.
+De *[!UICONTROL Echte cel van de Transformaties]* van XML *malplaatjes van* Gegevens moet worden gewijzigd om met uw eigen dataset te werken. Doorgaans gaat het hier om het wijzigen van de naam van kolommen, rollup van gegevens en het voorbereiden en bewerken van gegevens.
 
 >[!NOTE]
 >Het volgende voorbeeld is voor leesbaarheidsdoeleinden gecondenseerd met gebruik van `[ ... ]`. Gelieve te bekijken en uit te breiden de sectie van de transformaties van de malplaatjegegevens in *real time van ML* voor de volledige codelel.
@@ -261,7 +261,7 @@ print("Model ID : ", model_id)
 
 ### Uw eigen vooraf opgeleide ONNX-model uploaden {#pre-trained-model-upload}
 
-Met de uploadknop in JupyterLab-laptops kunt u uw vooraf opgeleide ONNX-model uploaden naar de notebookomgeving van de Data Science Workspace.
+Met de uploadknop in [!DNL JupyterLab] notebooks kunt u uw vooraf opgeleide ONNX-model uploaden naar de [!DNL Data Science Workspace] notebookomgeving.
 
 ![uploadpictogram](../images/rtml/upload.png)
 
@@ -321,7 +321,7 @@ nodes = [json_df_node,
         onnx_node]
 ```
 
-Sluit vervolgens de knooppunten aan op de randen. Elke tuple is een Edge-verbinding.
+Sluit vervolgens de knooppunten aan op de randen. Elke tuple is een [!DNL Edge] verbinding.
 
 >[!TIP]
 > Aangezien de knopen lineair van elkaar afhankelijk zijn (elke knoop hangt van de output van vorige knoop af), kunt u verbindingen tot stand brengen gebruikend een eenvoudige het lijstbegrip van Python. Voeg uw eigen verbindingen toe als een knooppunt afhankelijk is van meerdere invoeren.
@@ -346,10 +346,10 @@ Wanneer de bewerking is voltooid, wordt een `edge` object geretourneerd dat elk 
 >[!NOTE]
 >Het leren van de machine in real time wordt tijdelijk opgesteld aan en beheerd door de Hub van het Platform van de Expereence van Adobe. Voor meer details, bezoek de overzichtssectie over de [Echte architectuur](./home.md#architecture)van het Leren van de Machine.
 
-Nu u een DSL-grafiek hebt gemaakt, kunt u uw grafiek op de Rand implementeren.
+Nu u een grafiek van DSL hebt gecreeerd, kunt u uw grafiek aan [!DNL Edge]opstellen.
 
 >[!IMPORTANT]
->Publiceer niet vaak naar Edge, waardoor de Edge-knooppunten kunnen worden overbelast. Het wordt niet aanbevolen hetzelfde model meerdere keren te publiceren.
+>Publiceer niet naar [!DNL Edge] vaak, dit kan de [!DNL Edge] knopen overladen. Het wordt niet aanbevolen hetzelfde model meerdere keren te publiceren.
 
 ```python
 edge_utils = EdgeUtils()
@@ -365,7 +365,7 @@ Als u uw DSL niet hoeft bij te werken, kunt u de [score](#scoring)overslaan.
 >[!NOTE]
 >De volgende cellen zijn alleen vereist als u een bestaande DSL wilt bijwerken die naar Edge is gepubliceerd.
 
-Uw modellen zullen zich waarschijnlijk blijven ontwikkelen. In plaats van een volledige nieuwe service te maken, is het mogelijk een bestaande service bij te werken met uw nieuwe model. U kunt een knooppunt definiëren dat u wilt bijwerken, er een nieuwe id aan toewijzen en vervolgens de nieuwe DSL opnieuw uploaden naar de Edge.
+Uw modellen zullen zich waarschijnlijk blijven ontwikkelen. In plaats van een volledige nieuwe service te maken, is het mogelijk een bestaande service bij te werken met uw nieuwe model. U kunt een knooppunt definiëren dat u wilt bijwerken, er een nieuwe id aan toewijzen en het vervolgens opnieuw uploaden naar de nieuwe DSL [!DNL Edge].
 
 In het onderstaande voorbeeld wordt knooppunt 0 bijgewerkt met een nieuwe id.
 
@@ -397,7 +397,7 @@ U bent teruggekeerd bijgewerkte DSL.
 
 ## Scores {#scoring}
 
-Na publicatie naar Edge wordt de scoring uitgevoerd door een POST-aanvraag van een client. Dit kan doorgaans worden gedaan vanuit een clienttoepassing waarvoor XML-scores vereist zijn. Je kunt het ook van Postman doen. Het *malplaatje van HTML* in real time gebruikt EdgeUtils om dit proces aan te tonen.
+Na het publiceren aan, [!DNL Edge]wordt het scoren gedaan door een POST- verzoek van een cliënt. Dit kan doorgaans worden gedaan vanuit een clienttoepassing waarvoor XML-scores vereist zijn. Je kunt het ook van Postman doen. Het *[!UICONTROL malplaatje van HTML]* in real time gebruikt EdgeUtils om dit proces aan te tonen.
 
 >[!NOTE]
 >Er is een kleine verwerkingstijd vereist voordat het scoren begint.
@@ -414,15 +414,15 @@ Met hetzelfde schema dat in de training werd gebruikt, worden voorbeeldgegevens 
 
 ### Score tegen het eindpunt van de Rand
 
-Gebruik de volgende cel binnen het malplaatje van *real time van XML* aan score tegen uw dienst van de Rand.
+Gebruik de volgende cel binnen het malplaatje van *real time van XML* aan score tegen uw [!DNL Edge] dienst.
 
 ![Score tegen rand](../images/rtml/scoring-edge.png)
 
-Zodra het scoren is voltooid, worden de Edge URL, Payload en de gescorde uitvoer van de Edge geretourneerd.
+Wanneer het scoren is voltooid, worden de [!DNL Edge] URL, Payload en de gecodeerde uitvoer van de [!DNL Edge] URL geretourneerd.
 
-## Maak een lijst met uw geïmplementeerde apps vanuit Edge
+## Maak een lijst met uw geïmplementeerde apps vanuit de [!DNL Edge]
 
-Als u een lijst wilt genereren met de apps die u op dat moment aan de rand hebt geïmplementeerd, voert u de volgende codecel uit. Deze cel kan niet worden bewerkt of verwijderd.
+Als u een lijst wilt genereren met de apps die u op dat moment op de [!DNL Edge]computer hebt geïmplementeerd, voert u de volgende codecel uit. Deze cel kan niet worden bewerkt of verwijderd.
 
 ```python
 services = edge_utils.list_deployed_services()
@@ -443,10 +443,10 @@ De teruggekeerde reactie is een serie van uw opgestelde diensten.
 ]
 ```
 
-## Een geïmplementeerde app of service-id verwijderen uit de Edge (optioneel)
+## Een geïmplementeerde app of service-id verwijderen uit de [!DNL Edge] (optioneel)
 
 >[!CAUTION]
->Deze cel wordt gebruikt om uw geïmplementeerde Edge-toepassing te verwijderen. Gebruik de volgende cel alleen als u een geïmplementeerde Edge-toepassing moet verwijderen.
+>Deze cel wordt gebruikt om uw geïmplementeerde Edge-toepassing te verwijderen. Gebruik de volgende cel alleen als u een geïmplementeerde [!DNL Edge] toepassing moet verwijderen.
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
