@@ -4,32 +4,32 @@ solution: Experience Platform
 title: Apache Spark op Azure HDInsights-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '182'
 ht-degree: 0%
 
 ---
 
 
-# (Beta) Apache Spark op Azure HDInsights-connector
+# (Beta) [!DNL Apache Spark] op [!DNL Azure HDInsights] connector
 
 >[!NOTE]
->De Apache Spark op Azure HDInsights-connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De [!DNL Apache Spark] on- [!DNL Azure HDInsights] connector bevindt zich in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Adobe Experience Platform staat gegevens toe om van externe bronnen worden opgenomen terwijl het voorzien u van de capaciteit om inkomende gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Platform. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+Met Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van [!DNL Platform] services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
-Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Platform kan verbinding maken met verschillende typen databases, zoals relationeel, NoSQL of data warehouse. Tot de ondersteuning voor databaseproviders behoort Apache Spark op Azure HDInsights.
+[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een derdegegevensbestand. [!DNL Platform] kan verbinding maken met verschillende typen databases, zoals relationeel, NoSQL of data warehouse. Ondersteuning voor databaseleveranciers is inbegrepen [!DNL Apache Spark] op [!DNL Azure HDInsights].
 
-In de onderstaande documentatie vindt u informatie over hoe u Apache Spark op Azure HDInsights kunt aansluiten op Platform met behulp van API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding [!DNL Apache Spark] met API&#39;s [!DNL Azure HDInsights] of de gebruikersinterface [!DNL Platform] :
 
-## Connect Apache Spark op Azure HDInsights to Platform using APIs
+## Verbinden [!DNL Apache Spark] met [!DNL Azure HDInsights] het [!DNL Platform] gebruiken van APIs
 
 - [Maak een Apache Spark op Azure HDInsights-connector met de Flow Service API](../../tutorials/api/create/databases/spark.md)
 - [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## Connect Apache Spark op Azure HDInsights to Platform using the UI
+## Verbinding maken [!DNL Apache Spark] met [!DNL Azure HDInsights] [!DNL Platform] de gebruikersinterface
 
 - [Een Apache Spark maken op de Azure HDInsights-bronconnector in de gebruikersinterface](../../tutorials/ui/create/databases/spark.md)
 - [Vorm een dataflow voor een gegevensbestandschakelaar in UI](../../tutorials/ui/dataflow/databases.md)
