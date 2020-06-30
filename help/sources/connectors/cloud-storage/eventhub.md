@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Azure Event Hubs-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
@@ -17,19 +17,19 @@ ht-degree: 0%
 >[!NOTE]
 >De Azure Event Hubs-connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, Google Cloud Platform en Azure. U kunt uw gegevens van deze systemen in Platform brengen.
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform]en [!DNL Azure]. U kunt uw gegevens van deze systemen in brengen [!DNL Platform].
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met Platform kunt u gegevens van Azure Event Hubs in real-time invoeren.
+Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen [!DNL Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] kunt u gegevens in real-time [!DNL Azure Event Hubs] inbrengen.
 
-De documentatie hieronder verstrekt informatie over hoe te om Azure Event Hubs aan Platform te verbinden gebruikend APIs of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Azure Event Hubs] [!DNL Platform] met API&#39;s of de gebruikersinterface:
 
-## Connect Azure Event Hubs naar Platform met behulp van API&#39;s
+## Verbinding maken [!DNL Azure Event Hubs] met API&#39; [!DNL Platform] s
 
 - [Een Azure Event Hubs-connector maken met de Flow Service API](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Een systeem voor cloudopslag verkennen met de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Gegevens voor cloudopslag verzamelen met de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## Connect Azure Event Hubs naar Platform via de gebruikersinterface
+## Verbinding maken [!DNL Azure Event Hubs] met [!DNL Platform] de gebruikersinterface
 
 - [Creeer een Azure de bronschakelaar van de Hubs van de Gebeurtenis in UI](../../tutorials/ui/create/cloud-storage/eventhub.md)
 - [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
