@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Clustergeschiedenis van een identiteit ophalen
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 0%
 
 ---
 
 
 # De clustergeschiedenis van een identiteit ophalen
 
-Identiteiten kunnen clusters bewegen tijdens de uitvoering van verschillende apparaatgrafieken. De Dienst van de identiteit verstrekt zicht in de clusterverenigingen van een bepaalde identiteit in tijd.
+Identiteiten kunnen clusters bewegen tijdens de uitvoering van verschillende apparaatgrafieken. [!DNL Identity Service] geeft in de loop der tijd zichtbaarheid aan de clusterverenigingen van een bepaalde identiteit.
 
 Gebruik optionele `graph-type` parameter om het uitvoertype aan te geven waaruit de cluster moet worden opgehaald. De opties zijn:
 
