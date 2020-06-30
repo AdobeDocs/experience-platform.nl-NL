@@ -4,58 +4,58 @@ solution: Experience Platform
 title: Een Google BigQuery-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: e4ed6ae3ee668cd0db741bd07d2fb7be593db4c9
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
 
 
-# Een Google BigQuery-connector maken met de Flow Service API
+# Een [!DNL Google BigQuery] aansluiting maken met de [!DNL Flow Service] API
 
 >[!NOTE]
->De Google BigQuery-connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De [!DNL Google BigQuery] connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De Dienst van de stroom wordt gebruikt om klantengegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[!DNL Flow Service] wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform aan Google BigQuery (hierna &quot;BigQuery&quot; genoemd) te verbinden.
+Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen waarmee u verbinding wilt maken [!DNL Experience Platform] [!DNL Google BigQuery] (hierna &quot;BigQuery&quot; genoemd).
 
 ## Aan de slag
 
 Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
+* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met BigQuery gebruikend de Dienst API van de Stroom te verbinden.
+In de volgende secties vindt u aanvullende informatie die u moet weten om verbinding te kunnen maken met BigQuery via de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Voor de Dienst van de Stroom om met BigQuery te verbinden, moet u de volgende verbindingseigenschappen verstrekken:
+Als u verbinding wilt maken [!DNL Flow Service] met BigQuery, moet u de volgende verbindingseigenschappen opgeven:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `project` | Projectidentiteitskaart van het standaard project BigQuery aan vraag tegen. |
+| `project` | Projectidentiteitskaart van het standaardproject [!DNL BigQuery] aan vraag tegen. |
 | `clientID` | De waarde van identiteitskaart die wordt gebruikt om het vernieuwingstoken te produceren. |
 | `clientSecret` | De geheime waarde die wordt gebruikt om het te produceren vernieuwt teken. |
-| `refreshToken` | Het vernieuwingstoken dat bij Google wordt verkregen en waarmee toegang tot BigQuery wordt toegestaan. |
+| `refreshToken` | Het vernieuwingstoken dat wordt verkregen van [!DNL Google] wordt gebruikt om toegang tot te verlenen [!DNL BigQuery]. |
 
 Raadpleeg [dit BigQuery-document](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing)voor meer informatie over deze waarden.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in Experience Platform, inclusief die van de Flow Service, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DNL Flow Service]sandboxen behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -65,13 +65,13 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Verbindingsspecificaties opzoeken
 
-Als u een BigQuery-verbinding wilt maken, moet er een set BigQuery-verbindingsspecificaties bestaan binnen Flow Service. De eerste stap in het verbinden van Platform met BigQuery is deze specificaties terug te winnen.
+Om een [!DNL BigQuery] verbinding tot stand te brengen, moet een reeks [!DNL BigQuery] verbindingsspecificaties binnen bestaan [!DNL Flow Service]. De eerste stap bij het verbinden [!DNL Platform] met [!DNL BigQuery] is deze specificaties terug te winnen.
 
 **API-indeling**
 
-Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor BigQuery opzoeken door een GET verzoek uit te voeren en vraagparameters te gebruiken.
+Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor opzoeken [!DNL BigQuery] door een GET verzoek uit te voeren en vraagparameters te gebruiken.
 
-Het verzenden van een GET verzoek zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=name=="google-big-query"` om informatie specifiek voor BigQuery te verkrijgen.
+Het verzenden van een GET verzoek zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=name=="google-big-query"` om informatie specifiek voor te verkrijgen [!DNL BigQuery].
 
 ```http
 GET /connectionSpecs
@@ -80,7 +80,7 @@ GET /connectionSpecs?property=name=="google-big-query"
 
 **Verzoek**
 
-Het volgende verzoek wint de verbindingsspecificaties voor BigQuery terug.
+In het volgende verzoek worden de verbindingsspecificaties opgehaald voor [!DNL BigQuery].
 
 ```shell
 curl -X GET \
@@ -93,7 +93,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert de verbindingsspecificaties voor BigQuery, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een basisverbinding te maken.
+Een geslaagde reactie retourneert de verbindingsspecificaties voor [!DNL BigQuery], inclusief de unieke id (`id`). Deze id is vereist in de volgende stap om een basisverbinding te maken.
 
 ```json
 {
@@ -146,7 +146,7 @@ Een succesvolle reactie keert de verbindingsspecificaties voor BigQuery, met inb
 
 ## Een basisverbinding maken
 
-Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per BigQuery-account is slechts één basisverbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
+Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL BigQuery] account is slechts één basisverbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
 
 **API-indeling**
 
@@ -184,11 +184,11 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
-| `auth.params.project` | Projectidentiteitskaart van het standaard project BigQuery aan vraag. tegen. |
+| `auth.params.project` | Projectidentiteitskaart van het standaardproject [!DNL BigQuery] aan vraag. tegen. |
 | `auth.params.clientId` | De waarde van identiteitskaart die wordt gebruikt om het vernieuwingstoken te produceren. |
 | `auth.params.clientSecret` | De clientwaarde die wordt gebruikt om het vernieuwingstoken te genereren. |
-| `auth.params.refreshToken` | Het vernieuwingstoken dat bij Google wordt verkregen en waarmee toegang tot BigQuery wordt toegestaan. |
-| `connectionSpec.id` | De verbindingsspecificatie `id` van uw BigQuery-account die in de vorige stap is opgehaald. |
+| `auth.params.refreshToken` | Het vernieuwingstoken dat wordt verkregen van [!DNL Google] wordt gebruikt om toegang tot te verlenen [!DNL BigQuery]. |
+| `connectionSpec.id` | De verbindingsspecificatie `id` van uw [!DNL BigQuery] account die in de vorige stap is opgehaald. |
 
 **Antwoord**
 
@@ -203,4 +203,4 @@ Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbind
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een BigQuery-basisverbinding gemaakt met de Flow Service API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze basis verbindings identiteitskaart in de volgende zelfstudie gebruiken aangezien u leert om gegevensbestanden of systemen te [onderzoeken NoSQL gebruikend de Dienst API](../../explore/database-nosql.md)van de Stroom.
+Aan de hand van deze zelfstudie hebt u een [!DNL BigQuery] basisverbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze basis verbindings identiteitskaart in de volgende zelfstudie gebruiken aangezien u leert om gegevensbestanden of systemen te [onderzoeken NoSQL gebruikend de Dienst API](../../explore/database-nosql.md)van de Stroom.
