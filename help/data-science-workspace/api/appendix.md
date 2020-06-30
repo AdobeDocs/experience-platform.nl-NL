@@ -4,18 +4,21 @@ solution: Experience Platform
 title: Aanhangsel
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '298'
+ht-degree: 1%
 
 ---
 
 
 # Aanhangsel
 
-In de volgende secties vindt u informatie over verschillende functies van de API voor leren van Sensei-machines.
+De volgende secties bevatten informatie over diverse functies van de [!DNL Sensei Machine Learning] API.
 
 ## Zoekparameters voor ophalen van elementen {#query}
 
-De API voor leren van Sensei-machines biedt ondersteuning voor queryparameters bij het ophalen van elementen. De beschikbare vraagparameters en hun gebruik worden beschreven in de volgende lijst:
+De [!DNL Sensei Machine Learning] API biedt ondersteuning voor queryparameters met het ophalen van elementen. De beschikbare vraagparameters en hun gebruik worden beschreven in de volgende lijst:
 
 | Query-parameter | Beschrijving | Standaardwaarde |
 | --------------- | ----------- | ------- |
