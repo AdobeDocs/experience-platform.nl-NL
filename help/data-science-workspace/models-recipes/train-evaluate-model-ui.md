@@ -4,61 +4,64 @@ solution: Experience Platform
 title: Een model trainen en evalueren (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '975'
+ht-degree: 1%
 
 ---
 
 
 # Een model trainen en evalueren (UI)
 
-In de Werkruimte van de Wetenschap van de Gegevens van het Platform van de Ervaring van Adobe, wordt een machine het leren Model gecreeerd door een bestaande Ontvanger op te nemen die voor de bedoeling van het Model aangewezen is. Het model wordt vervolgens getraind en geëvalueerd om de efficiëntie en werkzaamheid van de werking te optimaliseren door de bijbehorende hyperparameters te verfijnen. Ontvangers zijn herbruikbaar, wat betekent dat er meerdere modellen kunnen worden gemaakt en op specifieke doeleinden kunnen worden afgestemd met één ontvanger.
+In de Werkruimte van de Wetenschap van Gegevens van het Adobe Experience Platform, wordt een machine het leren Model gecreeerd door bestaande Ontvanger op te nemen die voor de intentie van het Model aangewezen is. Het model wordt vervolgens getraind en geëvalueerd om de efficiëntie en werkzaamheid van de werking te optimaliseren door de bijbehorende hyperparameters te verfijnen. Ontvangers zijn herbruikbaar, wat betekent dat er meerdere modellen kunnen worden gemaakt en op specifieke doeleinden kunnen worden afgestemd met één ontvanger.
 
 Deze zelfstudie doorloopt de stappen voor het maken, trainen en evalueren van een model.
 
 ## Aan de slag
 
-Als u deze zelfstudie wilt voltooien, hebt u toegang nodig tot Experience Platform. Als u geen toegang hebt tot een IMS-organisatie in het ervaringsplatform, neemt u contact op met uw systeembeheerder voordat u verdergaat.
+Voor het voltooien van deze zelfstudie hebt u toegang tot [!DNL Experience Platform]. Als u geen toegang hebt tot een IMS-organisatie in [!DNL Experience Platform], neemt u contact op met uw systeembeheerder voordat u verdergaat.
 
 Voor deze zelfstudie is een bestaande ontvanger vereist. Als u geen Ontvanger hebt, volg de [Invoer een verpakte Ontvanger in de zelfstudie UI](./import-packaged-recipe-ui.md) alvorens verder te gaan.
 
 ## Een model maken
 
-1. Klik in het Adobe Experience Platform op de **[!UICONTROL Models]** koppeling in de linkernavigatiekolom om alle bestaande modellen weer te geven. Klik **[!UICONTROL Create Model]** rechtsboven op de pagina om een modelontwerpproces te starten.
+1. Klik in Adobe Experience Platform op de koppeling **[!UICONTROL Modellen]** in de linkernavigatiekolom om alle bestaande modellen weer te geven. Klik op Model **** maken rechtsboven op de pagina om een ontwerpproces te starten.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Blader door de lijst met bestaande ontvangers, zoek en selecteer de ontvanger die u wilt gebruiken om het model te maken en klik **[!UICONTROL Next]**.
+2. Blader door de lijst met bestaande ontvangers, zoek en selecteer de ontvanger die u wilt gebruiken om het model te maken en klik op **[!UICONTROL Volgende]**.
    ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-3. Selecteer een juiste invoergegevensset en klik op **[!UICONTROL Next]**. Hiermee wordt de standaardgegevensset voor de invoertraining voor het model ingesteld.
+3. Selecteer een geschikte invoergegevensset en klik op **[!UICONTROL Volgende]**. Hiermee wordt de standaardgegevensset voor de invoertraining voor het model ingesteld.
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-4. Geef een naam op voor het model en bekijk de standaardmodelconfiguraties. De standaardconfiguraties zijn toegepast tijdens het maken van Recipe, herzie en wijzig de configuratiewaarden door op de waarden te dubbelklikken. Als u een nieuwe set configuraties wilt opgeven, klikt u op een JSON-bestand met modelconfiguraties **[!UICONTROL Upload New Config]** en sleept u dit naar het browservenster. Klik **[!UICONTROL Finish]** om het model te maken.
+4. Geef een naam op voor het model en bekijk de standaardmodelconfiguraties. De standaardconfiguraties zijn toegepast tijdens het maken van Recipe, herzie en wijzig de configuratiewaarden door op de waarden te dubbelklikken. Als u een nieuwe set configuraties wilt opgeven, klikt u op **[!UICONTROL Nieuwe configuratie]** uploaden en sleept u een JSON-bestand met Modelconfiguraties naar het browservenster. Klik op **[!UICONTROL Voltooien]** om het model te maken.
    >[!NOTE]Configuraties zijn uniek en specifiek voor de beoogde geadresseerde. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Recipe Product Recommendations. Zie de [verwijzingssectie](#reference) voor een lijst van de configuraties van de Ontvanger van de Verkoop Retail.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Een trainingsrun maken
 
-1. Klik in het Adobe Experience Platform op de **[!UICONTROL Models]** koppeling in de linkernavigatiekolom om alle bestaande modellen weer te geven. Zoek en klik op de naam van het model dat u wilt opleiden.
+1. Klik in Adobe Experience Platform op de koppeling **[!UICONTROL Modellen]** in de linkernavigatiekolom om alle bestaande modellen weer te geven. Zoek en klik op de naam van het model dat u wilt opleiden.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Alle bestaande trainingsprogramma&#39;s met hun huidige trainingsstatus worden weergegeven. Voor Modellen die worden gecreeerd gebruikend het gebruikersinterface van de Werkruimte van de Wetenschap van Gegevens, wordt een opleidingslooppas automatisch geproduceerd en uitgevoerd gebruikend de standaardconfiguraties en de dataset van de inputopleiding.
+2. Alle bestaande trainingsprogramma&#39;s met hun huidige trainingsstatus worden weergegeven. Voor Modellen die gebruikend het [!DNL Data Science Workspace] gebruikersinterface worden gecreeerd, wordt een trainingslooppas automatisch geproduceerd en uitgevoerd gebruikend de standaardconfiguraties en de dataset van de inputopleiding.
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-3. Maak een nieuwe training door **[!UICONTROL Train]** rechtsboven op de pagina Modeloverzicht te klikken.
+3. Maak een nieuwe training door op **[!UICONTROL Training]** te klikken rechtsboven op de overzichtspagina Model.
    ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-4. Selecteer de dataset van de opleidingsinput voor de trainingslooppas en klik **[!UICONTROL Next]**.
+4. Selecteer de dataset van de trainingsinput voor de trainingslooppas en klik **[!UICONTROL daarna]**.
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
-5. De standaardconfiguraties die tijdens de creatie van het Model worden verstrekt worden getoond, veranderen en wijzigen dienovereenkomstig door de waarden tweemaal te klikken. Klik **[!UICONTROL Finish]** om de trainingsrun te maken en uit te voeren.
+5. De standaardconfiguraties die tijdens de creatie van het Model worden verstrekt worden getoond, veranderen en wijzigen dienovereenkomstig door de waarden tweemaal te klikken. Klik op **[!UICONTROL Voltooien]** om de trainingsrun te maken en uit te voeren.
    >[!NOTE]Configuraties zijn uniek en specifiek voor de beoogde geadresseerde. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Recipe Product Recommendations. Zie de [verwijzingssectie](#reference) voor een lijst van de configuraties van de Ontvanger van de Verkoop Retail.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## Het model evalueren
 
-1. Klik in het Adobe Experience Platform op de **[!UICONTROL Models]** koppeling in de linkernavigatiekolom om alle bestaande modellen weer te geven. Zoek en klik op de naam van het te evalueren model.
+1. Klik in Adobe Experience Platform op de koppeling **[!UICONTROL Modellen]** in de linkernavigatiekolom om alle bestaande modellen weer te geven. Zoek en klik op de naam van het te evalueren model.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Alle bestaande trainingsprogramma&#39;s met hun huidige trainingsstatus worden weergegeven. Met veelvoudige voltooide trainingslooppas, kunnen de evaluatiemetriek over verschillende opleidingslooppas in de Model beoordelinggrafiek worden vergeleken, selecteer evaluatiemetrisch gebruikend dropdown lijst boven de grafiek.
@@ -77,7 +80,7 @@ Voor deze zelfstudie is een bestaande ontvanger vereist. Als u geen Ontvanger he
 
 ## Volgende stappen
 
-In deze zelfstudie werd u door het maken, trainen en evalueren van een model in de Data Science Workspace geleid. Zodra u bij een geoptimaliseerd Model bent aangekomen, kunt u het getrainde Model gebruiken om inzichten te produceren door de [Score een Model in het UI](./score-model-ui.md) leerprogramma te volgen.
+In deze zelfstudie werd u door het maken, trainen en evalueren van een model in [!DNL Data Science Workspace]uitgelegd. Zodra u bij een geoptimaliseerd Model bent aangekomen, kunt u het getrainde Model gebruiken om inzichten te produceren door de [Score een Model in het UI](./score-model-ui.md) leerprogramma te volgen.
 
 ## Referentie {#reference}
 
