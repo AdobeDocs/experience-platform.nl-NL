@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruikershandleiding voor gegevensgebruiksbeleid
 topic: policies
 translation-type: tm+mt
-source-git-commit: c4554e3fbc0dd527606b81e2767cb5777b6e81e7
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '727'
 ht-degree: 0%
 
 ---
@@ -14,20 +14,20 @@ ht-degree: 0%
 
 # Gebruikershandleiding voor gegevensgebruiksbeleid
 
-Het Beheer van Gegevens van het Adobe Experience Platform verstrekt een gebruikersinterface die u toestaat om het beleid van het gegevensgebruik tot stand te brengen en te beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte _Beleid_ in de gebruikersinterface van het Experience Platform.
+Het Beheer van Gegevens van het Adobe Experience Platform verstrekt een gebruikersinterface die u toestaat om het beleid van het gegevensgebruik tot stand te brengen en te beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte _Beleid_ in de [!DNL Experience Platform] gebruikersinterface.
 
 >[!IMPORTANT] Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten. Zie de sectie over het [toelaten van beleid](#enable) voor stappen op hoe te om dit in UI te doen.
 
 ## Vereisten
 
-Deze gids vereist een werkend inzicht in de volgende concepten van het Experience Platform:
+Deze gids vereist een werkend begrip van de volgende [!DNL Experience Platform] concepten:
 
-- [Data Governance](../home.md)
+- [!DNL Data Governance](../home.md)
 - [Beleid voor gegevensgebruik](./overview.md)
 
 ## Beleid voor gegevensgebruik weergeven {#view-policies}
 
-Klik in de gebruikersinterface van het Experience Platform op **[!UICONTROL Beleid]** om de werkruimte *[!UICONTROL Beleid]* te openen. Op het tabblad **[!UICONTROL Bladeren]** ziet u een lijst met beschikbare beleidsregels, inclusief de bijbehorende labels, marketingacties en status.
+Klik in de [!DNL Experience Platform] gebruikersinterface op **[!UICONTROL Beleid]** om de werkruimte *[!UICONTROL Beleid]* te openen. Op het tabblad **[!UICONTROL Bladeren]** ziet u een lijst met beschikbare beleidsregels, inclusief de bijbehorende labels, marketingacties en status.
 
 ![](../images/policies/browse-policies.png)
 
@@ -37,7 +37,7 @@ Klik op een vermeld beleid om de beschrijving en het type ervan weer te geven. A
 
 ## Een aangepast beleid voor gegevensgebruik maken {#create-policy}
 
-Als u een nieuw beleid voor het gebruik van aangepaste gegevens wilt maken, klikt u op **[!UICONTROL Beleid]** maken in de rechterbovenhoek van het tabblad **[!UICONTROL Bladeren]** in de werkruimte *Beleid* .
+Als u een nieuw beleid voor het gebruik van aangepaste gegevens wilt maken, klikt u op **[!UICONTROL Beleid]** maken in de rechterbovenhoek van het tabblad **[!UICONTROL Bladeren]** in de werkruimte *[!UICONTROL Beleid]* .
 
 ![](../images/policies/create-policy-button.png)
 
@@ -107,8 +107,8 @@ Als de marketingactie niet wordt gebruikt door een bestaand gebruiksbeleid, kunt
 
 ## Volgende stappen
 
-In dit document wordt een overzicht gegeven van de manier waarop beleidsregels voor gegevensgebruik in de gebruikersinterface van het Experience Platform kunnen worden beheerd. Voor stappen op hoe te om beleid te beheren gebruikend DULE Beleid API, zie de [ontwikkelaarsgids](../api/getting-started.md). Voor informatie over hoe te om het beleid van het gegevensgebruik af te dwingen, zie het [beleidshandhavingsoverzicht](../enforcement/overview.md).
+In dit document wordt een overzicht gegeven van de manier waarop beleidsregels voor gegevensgebruik in de [!DNL Experience Platform] gebruikersinterface kunnen worden beheerd. Voor stappen op hoe te om beleid te beheren gebruikend DULE Beleid API, zie de [ontwikkelaarsgids](../api/getting-started.md). Voor informatie over hoe te om het beleid van het gegevensgebruik af te dwingen, zie het [beleidshandhavingsoverzicht](../enforcement/overview.md).
 
-In de volgende video wordt een demonstratie gegeven van hoe u met gebruiksbeleid kunt werken in de gebruikersinterface van het Experience Platform:
+De volgende video biedt een demonstratie van hoe u met gebruiksbeleid kunt werken in de [!DNL Experience Platform] gebruikersinterface:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
