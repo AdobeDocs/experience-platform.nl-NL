@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Beleid voor gegevensgebruik afdwingen met de API voor beleidsservice
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 3e5245a718295cc5318c277a5cf9ee71da2a911b
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '875'
+ht-degree: 0%
 
 ---
 
@@ -15,18 +18,18 @@ Zodra u de etiketten van het gegevensgebruik voor uw gegevens hebt gecreeerd, en
 
 >[!NOTE] Door gebrek, slechts `ENABLED` kan het beleid waarvan status aan evaluatie wordt geplaatst deelnemen. Om `DRAFT` beleid toe te staan om aan evaluatie deel te nemen, moet u de vraagparameter `includeDraft=true` in de verzoekweg omvatten.
 
-In dit document worden stappen beschreven voor het gebruik van de API voor Beleidsservice om te controleren op beleidsovertredingen in verschillende scenario&#39;s.
+Dit document bevat stappen voor het controleren op beleidsovertredingen in verschillende scenario&#39;s met behulp van de [!DNL Policy Service] API.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende belangrijke concepten betrokken bij het afdwingen van DULE-beleid:
 
-* [Gegevensbeheer](../home.md): Het kader waardoor Platform naleving van gegevensgebruik afdwingt.
+* [Gegevensbeheer](../home.md): Het kader waarmee de naleving van het gegevensgebruik wordt [!DNL Platform] afgedwongen.
    * [Labels](../labels/overview.md)voor gegevensgebruik: De etiketten van het gebruik van gegevens worden toegepast op datasets (en/of individuele gebieden binnen die datasets), die beperkingen specificeren voor hoe die gegevens kunnen worden gebruikt.
    * [Beleid](../policies/overview.md)voor gegevensgebruik: Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die voor bepaalde reeksen etiketten van DULE worden toegestaan of beperkt.
-* [Sandboxen](../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-Alvorens deze zelfstudie te beginnen, te herzien gelieve de [ontwikkelaarsgids](../api/getting-started.md) voor belangrijke informatie die u moet weten om vraag aan de DULE Dienst API van het Beleid met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om aanroepen naar de DULE [!DNL Policy Service] API te kunnen uitvoeren, inclusief vereiste headers en hoe u API-voorbeeldaanroepen kunt lezen.
 
 ## Evalueren met DULE-labels en een marketingactie
 
@@ -362,4 +365,4 @@ Een succesvolle reactie keert URL voor de marketing actie, de etiketten DULE ter
 
 Door dit document te lezen, hebt u met succes gecontroleerd op beleidsschendingen wanneer het uitvoeren van een marketing actie op een dataset of een reeks etiketten DULE. Met de gegevens die in API-reacties worden geretourneerd, kunt u protocollen in uw ervaringstoepassing instellen om beleidsovertredingen op de juiste wijze af te dwingen.
 
-Raadpleeg de volgende [zelfstudie](../../segmentation/tutorials/governance.md)voor meer informatie over het afdwingen van beleidsregels voor gegevensgebruik voor publiekssegmenten in Real-time klantprofiel.
+Voor stappen op hoe te om het beleid van het gegevensgebruik voor publiekssegmenten in af te dwingen, gelieve te verwijzen naar het volgende [!DNL Real-time Customer Profile]leerprogramma [](../../segmentation/tutorials/governance.md).
