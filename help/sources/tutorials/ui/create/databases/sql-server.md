@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Een Microsoft SQL Server-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
 
 
-# Een Microsoft SQL Server-bronconnector maken in de gebruikersinterface
+# Creeer een [!DNL Microsoft] SQL de bronschakelaar van de Server in UI
 
 > [!NOTE]
-> De Microsoft SQL Server-connector bevindt zich in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+> De [!DNL Microsoft] SQL schakelaar van de Server is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om extern gesourceerde gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een Microsoft SQL Server-bronconnector (hierna &quot;SQL Server&quot; genoemd) met de gebruikersinterface van het Platform.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om extern gesourceerde gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het creëren van een [!DNL Microsoft] SQL van de Server (hierna genoemd &quot;SQL Server&quot;) bronschakelaar gebruikend het [!DNL Platform] gebruikersinterface.
 
 ## Aan de slag
 
@@ -32,7 +32,7 @@ Als u reeds een SQL de basisverbinding van de Server hebt, kunt u de rest van di
 
 ### Vereiste referenties verzamelen
 
-Om met SQL Server op Platform te verbinden, moet u het volgende verbindingsbezit verstrekken:
+Als u verbinding wilt maken met SQL Server [!DNL Platform], moet u de volgende verbindingseigenschap opgeven:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -42,25 +42,25 @@ Gelieve te verwijzen naar [dit document](https://docs.microsoft.com/en-us/dotnet
 
 ## Uw SQL Server-account verbinden
 
-Zodra u uw vereiste geloofsbrieven hebt verzameld, kunt u de stappen hieronder volgen om een nieuwe binnenkomende basisverbinding tot stand te brengen om uw SQL rekening van de Server aan Platform te verbinden.
+Zodra u uw vereiste geloofsbrieven hebt verzameld, kunt u de stappen hieronder volgen om een nieuwe binnenkomende basisverbinding tot stand te brengen om uw SQL rekening van de Server aan te verbinden [!DNL Platform].
 
-Login aan <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> en selecteer dan **Bronnen** van de linkernavigatiebar om tot de werkruimte van *Bronnen* toegang te hebben. In het scherm *Catalogus* worden diverse bronnen weergegeven waarvoor u binnenkomende basisverbindingen kunt maken met. Elke bron toont het aantal bestaande basisverbindingen dat aan deze verbindingen is gekoppeld.
+Login aan <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatiebar om tot de werkruimte van *[!UICONTROL Bronnen]* toegang te hebben. In het scherm *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven waarvoor u binnenkomende basisverbindingen kunt maken met. Elke bron toont het aantal bestaande basisverbindingen dat aan deze verbindingen is gekoppeld.
 
-Onder de categorie *Databases* selecteert u **Microsoft SQL Server** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Selecteer **Connect-bron** als u een nieuwe binnenkomende basisverbinding wilt maken.
+Onder de categorie *[!UICONTROL Databases]* selecteert u **[!UICONTROL Microsoft SQL Server]** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Selecteer **[!UICONTROL Connect-bron]** als u een nieuwe binnenkomende basisverbinding wilt maken.
 
 ![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
-De pagina *Verbinding maken met Microsoft SQL Server* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina *[!UICONTROL Verbinding maken met Microsoft SQL Server]* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
-Selecteer **Nieuw account** als u nieuwe referenties gebruikt. Voor de inputvorm die verschijnt, verstrek de basisverbinding met een naam, een facultatieve beschrijving, en uw SQL geloofsbrieven van de Server. Als u klaar bent, selecteert u **Connect** en laat u de nieuwe basisverbinding enige tijd tot stand brengen.
+Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Voor de inputvorm die verschijnt, verstrek de basisverbinding met een naam, een facultatieve beschrijving, en uw SQL geloofsbrieven van de Server. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe basisverbinding enige tijd tot stand brengen.
 
 ![](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 ### Bestaande account
 
-Als u een bestaande account wilt verbinden, selecteert u de SQL Server-account waarmee u verbinding wilt maken en selecteert u **Volgende** om door te gaan.
+Als u een bestaande account wilt verbinden, selecteert u de SQL Server-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
 
 ![](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 
