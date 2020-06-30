@@ -4,9 +4,9 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Een functiepijplijn maken
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -387,7 +387,7 @@ scoring.dataSaver: MyDatasetSaver
 
 ## De pijplijnengine voor functies maken met behulp van de API {#create-feature-pipeline-engine-api}
 
-Nu u uw eigenschappijpleiding hebt ontworpen, moet u een beeld van het Dok tot stand brengen om een vraag aan de eindpunten van de eigenschappijpleiding in het Leren van de Machine van Sensei API te maken. U hebt een beeld URL van het Docker nodig om een vraag aan de eindpunten van de eigenschappijpleiding te maken.
+Nu u uw eigenschappijpleiding hebt ontworpen, moet u een beeld van het Dok tot stand brengen om een vraag aan de eindpunten van de eigenschappijpleiding in [!DNL Sensei Machine Learning] API te maken. U hebt een beeld URL van het Docker nodig om een vraag aan de eindpunten van de eigenschappijpleiding te maken.
 
 >[!TIP]
 >Als u geen Docker URL hebt, bezoek de brondossiers van het [Pakket in een recept](../models-recipes/package-source-files-recipe.md) leerprogramma voor een geleidelijke analyse bij het creëren van een de gastheer URL van het Docker.
@@ -398,7 +398,7 @@ https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Een pijplijnengine maken {#create-engine-api}
 
-Zodra u uw de beeldplaats van de Docker hebt, kunt u een motor [van de eigenschappijpleiding tot stand](../api/engines.md#feature-pipeline-docker) brengen gebruikend Sensei Machine Lerend API door POST aan uit te voeren `/engines`. Het creëren van een motor van de eigenschappijpleiding voorziet u van een unieke identiteitskaart van de Motor (`id`). Sla deze waarde op voordat u doorgaat.
+Zodra u uw het beeldplaats van de Docker hebt, kunt u een motor [van de eigenschappijpleiding tot stand](../api/engines.md#feature-pipeline-docker) brengen gebruikend [!DNL Sensei Machine Learning] API door POST aan uit te voeren `/engines`. Het creëren van een motor van de eigenschappijpleiding voorziet u van een unieke identiteitskaart van de Motor (`id`). Sla deze waarde op voordat u doorgaat.
 
 ### Een MLInstance maken {#create-mlinstance}
 
@@ -435,4 +435,4 @@ Zodra het scoren heeft voltooid, zou uw eigenschappijpleiding operationeel moete
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Door dit document te lezen, hebt u een eigenschappijplijn gebruikend ModelAuthoring SDK gecreeerd, een beeld van de Docker, en gebruikt het beeld URL van de Docker om een model van de eigenschappijplijn tot stand te brengen door Sensei te gebruiken lerend API. U kunt nu gegevenssets transformeren en gegevensfuncties op schaal extraheren met de [Sensei Machine Learning-API](../api/getting-started.md).
+Door dit document te lezen, hebt u een eigenschappijplijn gebruikend ModelAuthoring SDK ontworpen, tot een beeld van het Dok geleid, en gebruikt het beeld URL van het Docker om een model van de eigenschappijplijn tot stand te brengen door API te gebruiken. [!DNL Sensei Machine Learning] U bent nu klaar om gegevenssets verder te transformeren en gegevenseigenschappen op schaal te extraheren met behulp van de [!DNL Sensei Machine Learning API](../api/getting-started.md).
