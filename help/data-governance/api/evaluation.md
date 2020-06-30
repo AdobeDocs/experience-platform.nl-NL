@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Beleid
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '940'
+ht-degree: 0%
 
 ---
 
@@ -490,6 +493,6 @@ In het antwoord hieronder, kunt u zien dat de lijst van `duleLabels` nu korter i
 }
 ```
 
-## Beleidsevaluatie voor realtime klantprofiel
+## Beleidsevaluatie voor [!DNL Real-time Customer Profile]
 
-De API van de Dienst van het Beleid kan ook worden gebruikt om beleidsschendingen te controleren die het gebruik van de segmenten van het Profiel van de Klant in real time impliceren. Zie de zelfstudie over het [afdwingen van naleving van gegevensgebruik voor publiekssegmenten](../../segmentation/tutorials/governance.md) voor meer informatie.
+De [!DNL Policy Service] API kan ook worden gebruikt om beleidsschendingen te controleren die het gebruik van [!DNL Real-time Customer Profile] segmenten impliceren. Zie de zelfstudie over het [afdwingen van naleving van gegevensgebruik voor publiekssegmenten](../../segmentation/tutorials/governance.md) voor meer informatie.
