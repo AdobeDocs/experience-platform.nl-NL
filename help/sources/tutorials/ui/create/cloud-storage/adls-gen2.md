@@ -4,23 +4,23 @@ solution: Experience Platform
 title: Maak een Azure Data Lake Storage Gen2-bronconnector in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
 
-# Maak een Azure Data Lake Storage Gen2-bronconnector in de gebruikersinterface
+# Creeer een [!DNL Azure Data Lake Storage Gen2] bronschakelaar in UI
 
-De bronschakelaars in het Platform van de Ervaring van Adobe verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het verifiëren van een Azure Data Lake Storage Gen2-bronconnector (hierna &quot;ADLS Gen2&quot; genoemd) met behulp van de gebruikersinterface van het platform.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het verifiëren van een [!DNL Azure Data Lake Storage Gen2] (hierna &quot;ADLS Gen2&quot; genoemd) bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
 
 ## Aan de slag
 
-Voor deze zelfstudie is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe Experience Platform:
 
-- [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
+- [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    - [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    - [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [Klantprofiel](../../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
@@ -42,28 +42,28 @@ Raadpleeg [dit ADLS Gen2-document](https://docs.microsoft.com/en-us/azure/data-f
 
 ## Sluit uw ADLS Gen2-account aan
 
-Zodra u uw vereiste geloofsbrieven hebt verzameld, kunt u de stappen volgen hieronder om een nieuwe binnenkomende basisverbinding tot stand te brengen om uw rekening van ADLS Gen2 aan Platform te verbinden.
+Zodra u uw vereiste geloofsbrieven hebt verzameld, kunt u de stappen volgen hieronder om een nieuwe binnenkomende basisverbinding tot stand te brengen om uw rekening van ADLS Gen2 aan te verbinden [!DNL Platform].
 
-Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> en selecteer vervolgens **Bronnen** in de linkernavigatiebalk voor toegang tot de werkruimte *Bronnen* . Op het tabblad *Catalogus* worden diverse bronnen weergegeven die kunnen worden gebruikt om binnenkomende basisverbindingen te maken. Elke bron toont het aantal bestaande basisverbindingen verbonden aan hen.
+Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe [!DNL Experience Platform]</a> en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Bronnen]* . Op het tabblad *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven die kunnen worden gebruikt om binnenkomende basisverbindingen te maken. Elke bron toont het aantal bestaande basisverbindingen verbonden aan hen.
 
-Selecteer onder de categorie *Cloud Storage* de optie **Azure Data Lake Gen2** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van een verbinding met de bronweergave in de bijbehorende documentatie. Klik op **Verbindingsbron** om een nieuwe binnenkomende basisverbinding te maken.
+Selecteer onder de categorie *[!UICONTROL Cloud Storage]* de optie **[!UICONTROL Azure Data Lake Gen2]** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van een verbinding met de bronweergave in de bijbehorende documentatie. Klik op **[!UICONTROL Verbindingsbron]** om een nieuwe binnenkomende basisverbinding te maken.
 
 ![](../../../../images/tutorials/create/adls-gen2/catalog.png)
 
-Het dialoogvenster *Verbinden met Azure Data Lake Gen2* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+Het dialoogvenster *[!UICONTROL Verbinden met Azure Data Lake Gen2]* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
-Selecteer **Nieuw account** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven, aan de basisverbinding een naam, een optionele beschrijving en uw ADLS Gen2-referenties. Als u klaar bent, selecteert u **Connect** en laat u de nieuwe basisverbinding enige tijd tot stand brengen.
+Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven, aan de basisverbinding een naam, een optionele beschrijving en uw ADLS Gen2-referenties. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe basisverbinding enige tijd tot stand brengen.
 
 ![](../../../../images/tutorials/create/adls-gen2/connect.png)
 
 ### Bestaande account
 
-Als u een bestaande account wilt verbinden, selecteert u de ADLS Gen2-account waarmee u verbinding wilt maken en selecteert u **Volgende** om door te gaan.
+Als u een bestaande account wilt verbinden, selecteert u de ADLS Gen2-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
 
 ![](../../../../images/tutorials/create/adls-gen2/existing.png)
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een basisverbinding tot stand gebracht met uw account van ADLS Gen2. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag over te brengen naar Platform](../../dataflow/batch/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u een basisverbinding tot stand gebracht met uw account van ADLS Gen2. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag naar het Platform](../../dataflow/batch/cloud-storage.md)te brengen.
