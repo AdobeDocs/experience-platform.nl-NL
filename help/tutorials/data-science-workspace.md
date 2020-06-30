@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zelfstudies over de werkruimte voor gegevenswetenschap
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 4d7d61660e6691d77701db1c089b84eee7f60974
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -137,7 +137,7 @@ Meer leren, bezoek het leerprogramma voor het [creëren van een eigenschappijple
 
 ## Bouw een Real-Time Machine Learning toepassing (alpha)
 
-Een combinatie naadloze berekening op zowel de Hub als de Rand vermindert dramatisch de latentie die traditioneel betrokken bij het aandrijven van hyper-gepersonaliseerde ervaringen is die zowel relevant als ontvankelijk zijn. Vandaar, het Leren van de machine in real time verstrekt conclusies met ongelooflijk lage latentie voor synchrone besluitvorming. Voorbeelden hiervan zijn het renderen van gepersonaliseerde webpagina-inhoud, het surfen op een aanbieding en kortingen om het aantal kleuren te verminderen en tegelijk de conversie in een webwinkel te verhogen.
+Een combinatie naadloze berekening op zowel de Hub als de [!DNL Edge] dramatisch vermindert de latentie die traditioneel betrokken bij het aandrijven van hyper-gepersonaliseerde ervaringen is die zowel relevant als ontvankelijk zijn. Vandaar, het Leren van de machine in real time verstrekt conclusies met ongelooflijk lage latentie voor synchrone besluitvorming. Voorbeelden hiervan zijn het renderen van gepersonaliseerde webpagina-inhoud, het surfen op een aanbieding en kortingen om het aantal kleuren te verminderen en tegelijk de conversie in een webwinkel te verhogen.
 
 **Deze handleiding helpt u:**
 - Begrijp de het leren architectuur van de machine in real time.
