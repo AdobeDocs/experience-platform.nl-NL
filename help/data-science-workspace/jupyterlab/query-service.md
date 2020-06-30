@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query-service in Jupyter-laptop
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Query-service in Jupyter-laptop
 
-[!DNL Adobe Experience Platform] staat u toe om de Gestructureerde Taal van de Vraag (SQL) in de Werkruimte van de Wetenschap van Gegevens te gebruiken door de Dienst van de Vraag in JupyterLab als standaardeigenschap te integreren.
+[!DNL Adobe Experience Platform] Hiermee kunt u SQL (Structured Query Language) gebruiken [!DNL Data Science Workspace] door [!DNL Query Service] in te integreren [!DNL JupyterLab] als standaardfunctie.
 
 In deze zelfstudie worden voorbeelden van SQL-query&#39;s getoond voor veelvoorkomende gebruiksscenario&#39;s voor het verkennen, transformeren en analyseren van [!DNL Adobe Analytics] gegevens.
 
@@ -22,19 +22,19 @@ In deze zelfstudie worden voorbeelden van SQL-query&#39;s getoond voor veelvoork
 
 Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldoen:
 
-- Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang hebt tot een IMS-organisatie in het ervaringsplatform, neemt u contact op met uw systeembeheerder voordat u verdergaat
+- Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang hebt tot een IMS-organisatie in [!DNL Experience Platform], neemt u contact op met uw systeembeheerder voordat u verdergaat
 
 - Een [!DNL Adobe Analytics] gegevensset
 
 - Een goed begrip van de volgende belangrijkste concepten die in deze zelfstudie worden gebruikt:
-   - [Experience Data Model (XDM) en XDM System](../../xdm/home.md)
-   - [Query-service](../../query-service/home.md)
-   - [SQL-syntaxis query-service](../../query-service/sql/overview.md)
-   - [!DNL Adobe Analytics]
+   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
+   - [!DNL Query Service](../../query-service/home.md)
+   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [Adobe Analytics]
 
-## Access JupyterLab en Query Service {#access-jupyterlab-and-query-service}
+## Toegang [!DNL JupyterLab] en [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. Navigeer in [Experience Platform](https://platform.adobe.com)naar **[!UICONTROL laptops]** vanuit de linkernavigatiekolom. Laat JupyterLab even laden.
+1. Navigeer in [!DNL Experience Platform](https://platform.adobe.com)de linkernavigatiekolom naar **[!UICONTROL laptops]** . Laat JupyterLab even laden.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 
 4. Zoek een [!DNL Adobe Analytics] dataset om op de lijst te onderzoeken en met de rechtermuisknop aan te klikken, de Gegevens van de **[!UICONTROL Vraag in Notitieboekje]** om SQL vragen in de lege notitie te produceren.
 
-5. Klik op de eerste cel die de functie bevat `qs_connect()` en voer deze uit door op de afspeelknop te klikken. Deze functie maakt een verbinding tussen uw notitieboekjectinstantie en de Query-service.
+5. Klik op de eerste cel die de functie bevat `qs_connect()` en voer deze uit door op de afspeelknop te klikken. Deze functie maakt een verbinding tussen uw notitieboekjectinstantie en de [!DNL Query Service]component.
 
    ![](../images/jupyterlab/query/execute.png)
 
@@ -85,13 +85,14 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
    - `target_year` : Specifiek jaar waarvoor de doelgegevens afkomstig zijn.
    - `target_month` : Specifieke maand waarvan het doel afkomstig is.
    - `target_day` : De specifieke dag waarop de doelgegevens afkomstig zijn.
+
    >[!NOTE] U kunt deze waarden op elk gewenst moment wijzigen. Zorg er daarbij voor dat u de cel met variabelen uitvoert voor de wijzigingen die moeten worden toegepast.
 
 ## Uw gegevens opvragen {#query-your-data}
 
 Voer de volgende SQL-query&#39;s in voor afzonderlijke laptopcellen. Voer een vraag uit door op zijn cel te klikken die door de **[!UICONTROL spelknoop]** wordt gevolgd te klikken. De succesvolle vraagresultaten of foutenlogboeken worden getoond onder de uitgevoerde cel.
 
-Wanneer een laptop gedurende langere tijd inactief is, kan de verbinding tussen de laptop en de Query-service verbroken zijn. Start in dergelijke gevallen JupyterLab opnieuw door op de knop **[!UICONTROL Aan/uit]** in de rechterbovenhoek te klikken.
+Wanneer een laptop gedurende langere tijd inactief is, kan de verbinding tussen de laptop en [!DNL Query Service] breken. Start in dergelijke gevallen opnieuw [!DNL JupyterLab] door op de knop **[!UICONTROL Aan/uit]** te klikken in de rechterbovenhoek.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
@@ -119,7 +120,7 @@ ORDER  BY Hour;
 
 In de bovenstaande vraag, wordt het doel `_acp_year` in de `WHERE` clausule geplaatst om de waarde van te zijn `target_year`. Neem variabelen op in SQL-query&#39;s door deze tussen accolades (`{}`) te plaatsen.
 
-De eerste regel van de query bevat de optionele variabele `hourly_visitor`. De resultaten van de vraag zullen in deze variabele als dataframe van Pandas worden opgeslagen. Als u resultaten opslaat in een dataframe, kunt u de queryresultaten later visualiseren met een gewenst Python-pakket. Voer de volgende Python-code in een nieuwe cel uit om een staafgrafiek te genereren:
+De eerste regel van de query bevat de optionele variabele `hourly_visitor`. De resultaten van de vraag zullen in deze variabele als dataframe van Pandas worden opgeslagen. Als u resultaten opslaat in een dataframe, kunt u de queryresultaten later visualiseren met een gewenst [!DNL Python] pakket. Voer de volgende [!DNL Python] code in een nieuwe cel uit om een staafgrafiek te genereren:
 
 ```python
 trace = go.Bar(
@@ -209,7 +210,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Voer de volgende Python-code uit om een histogram te genereren voor het aantal gebeurtenissen per bezoeksessie:
+Voer de volgende [!DNL Python] code uit om een histogram te genereren voor het aantal gebeurtenissen per bezoeksessie:
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -283,4 +284,4 @@ LIMIT  10;
 
 ## Volgende stappen <!-- omit in toc -->
 
-Deze zelfstudie laat een aantal voorbeelden zien van het gebruik van Query Service in Jupyter-laptops. Volg de [Analyze uw gegevens gebruikend de zelfstudie van Notities](./analyze-your-data.md) van de Jupyter om te zien hoe de gelijkaardige verrichtingen gebruikend de Toegang SDK van Gegevens worden uitgevoerd.
+Deze zelfstudie laat een aantal voorbeelden zien van gebruiksscenario&#39;s voor gebruik [!DNL Query Service] in [!DNL Jupyter] laptops. Volg de [Analyze uw gegevens gebruikend de zelfstudie van Notities](./analyze-your-data.md) van de Jupyter om te zien hoe de gelijkaardige verrichtingen gebruikend de Toegang SDK van Gegevens worden uitgevoerd.
