@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een recept maken met Jupyter-laptops
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '2330'
+source-wordcount: '2292'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een recept maken met Jupyter-laptops
 
-Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst, zult u een machine het leren model gebruikend een malplaatje binnen Notitieboekje JupyterLab creëren. Vervolgens gebruikt u de workflow voor het maken van een notebook naar het recept in JupyterLab om een recept te maken in de Data Science Workspace.
+Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst maakt u een model voor machinaal leren met behulp van een sjabloon in [!DNL JupyterLab Notebook]. Vervolgens gebruikt u de workflow voor het maken van een recept voor de laptop binnen [!DNL JupyterLab] de [!DNL Data Science Workspace].
 
 ## Ingevoerde concepten:
 
@@ -23,20 +23,20 @@ Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst, zult u een machine
 - **Training:** Training is het proces van leerpatronen en inzichten van gelabelde gegevens.
 - **Scores:** Scores is het proces om inzichten van gegevens te produceren gebruikend een opgeleid model.
 
-## Aan de slag met de JupyterLab-laptopomgeving
+## Aan de slag met de [!DNL JupyterLab] laptopomgeving
 
-U kunt een geheel nieuw recept maken in de Data Science Workspace. Navigeer om te beginnen naar het [Adobe Experience Platform](https://platform.adobe.com) en klik op het tabblad **[!UICONTROL Laptops]** aan de linkerkant. Maak een nieuw notebook door de Recipe Builder-sjabloon te selecteren in de JupyterLauncher.
+U kunt een geheel nieuw recept maken [!DNL Data Science Workspace]. Navigeer naar het [Adobe Experience Platform](https://platform.adobe.com) en klik op het tabblad **[!UICONTROL Laptops]** aan de linkerkant. Maak een nieuw notebook door de Recipe Builder-sjabloon te selecteren in het [!DNL JupyterLab Launcher]dialoogvenster.
 
-Met de Recipe Builder-laptop kunt u trainingen en scoring uitvoeren in de laptop. Dit geeft u de flexibiliteit om veranderingen in hun `train()` en `score()` methodes tussen het runnen van experimenten op de opleiding en het scoren gegevens aan te brengen. Als u tevreden bent met de resultaten van de training en scoring, kunt u een recept maken voor gebruik in de Data Science Workspace met behulp van de laptop voor de receptionfunctionaliteit die is ingebouwd in de Recipe Builder-laptop.
+Met de [!UICONTROL Recipe Builder] -laptop kunt u trainingen en scoring uitvoeren in de laptop. Dit geeft u de flexibiliteit om veranderingen in hun `train()` en `score()` methodes tussen het runnen van experimenten op de opleiding en het scoren gegevens aan te brengen. Als u tevreden bent met de resultaten van de training en scoring, kunt u een recept maken dat u kunt gebruiken voor het [!DNL Data Science Workspace] gebruik van de laptop om de in de Recipe Builder-laptop ingebouwde functionaliteit voor recept te verkrijgen.
 
 >[!NOTE]
->De Recipe Builder-laptop ondersteunt het werken met alle bestandsindelingen, maar momenteel ondersteunt de functie Ontvanger maken alleen Python.
+>De Recipe Builder-laptop biedt ondersteuning voor het werken met alle bestandsindelingen, maar momenteel wordt de functie Ontvanger maken alleen ondersteund [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 Wanneer u klikt op de Recipe Builder-laptop van de draagtas, wordt de laptop geopend op het tabblad. Het model dat in de laptop wordt gebruikt, is de Python Retail Sales Forecasting Recipe die ook in [deze openbare opslagplaats te vinden is](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-U zult zien dat er op de werkbalk drie extra acties staan, namelijk **[!UICONTROL Trein]**, **[!UICONTROL Score]** en Ontvanger **[!UICONTROL maken]**. Deze pictogrammen worden alleen weergegeven in het notebook met de functie Recipe Builder. Meer informatie over deze acties wordt besproken [in de sectie](#training-and-scoring) Training en score nadat u de Recipe hebt gemaakt in de laptop.
+U zult zien dat er op de werkbalk drie extra acties staan, namelijk **[!UICONTROL Trein]**, **[!UICONTROL Score]** en Ontvanger **[!UICONTROL maken]**. Deze pictogrammen worden alleen weergegeven in de [!UICONTROL Recipe Builder] -laptop. Meer informatie over deze acties wordt besproken [in de sectie](#training-and-scoring) Training en score nadat u de Recipe hebt gemaakt in de laptop.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -50,7 +50,7 @@ Breng de benodigde wijzigingen in de cel aan en voer de cel uit als u klaar bent
 
 ## Ga aan de slag met de Recipe Builder-laptop
 
-Nu u de basisbeginselen van de JupyterLab-laptopomgeving kent, kunt u beginnen met het bekijken van de bestanden die een model voor machinaal leren vormen. De bestanden waarover we het hebben, worden hier weergegeven:
+Nu u de basisbeginselen van de [!DNL JupyterLab] laptopomgeving kent, kunt u beginnen met het bekijken van de bestanden die een recept voor een model voor machinaal leren vormen. De bestanden waarover we het hebben, worden hier weergegeven:
 
 - [Vereisten, bestand](#requirements-file)
 - [Configuratiebestanden](#configuration-files)
@@ -102,24 +102,24 @@ Standaard worden de volgende configuratieparameters voor u ingesteld wanneer u t
 ## Opleidingsgegevensloader {#training-data-loader}
 
 Het doel van de trainingsgegevenslader is het instantiëren van gegevens die worden gebruikt voor het maken van het model voor machinaal leren. Er zijn doorgaans twee taken die de lader van de trainingsgegevens uitvoert:
-- Gegevens laden van platform
+- Gegevens laden van [!DNL Platform]
 - Gegevensvoorbereiding en functietechniek
 
 De volgende twee secties gaan over het laden van gegevens en het voorbereiden van gegevens.
 
 ### Gegevens laden {#loading-data}
 
-In deze stap wordt het dataframe van de [pandas gebruikt](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Gegevens kunnen worden geladen uit bestanden in [!DNL Adobe Experience Platform] de SDK van het platform (`platform_sdk`) of uit externe bronnen die gebruikmaken van panda&#39;s `read_csv()` of `read_json()` functies.
+In deze stap wordt het dataframe van de [pandas gebruikt](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Gegevens kunnen worden geladen uit bestanden in [!DNL Adobe Experience Platform] de [!DNL Platform] SDK (`platform_sdk`) of uit externe bronnen die gebruikmaken van panda&#39;s `read_csv()` of `read_json()` functies.
 
-- [Platform SDK](#platform-sdk)
+- [!DNL Platform SDK](#platform-sdk)
 - [Externe bronnen](#external-sources)
 
 >[!NOTE]
 >In de Recipe Builder-laptop worden gegevens geladen via de `platform_sdk` gegevenslader.
 
-### Platform SDK {#platform-sdk}
+### [!DNL Platform] SDK {#platform-sdk}
 
-Voor een diepgaande zelfstudie over het gebruik van de `platform_sdk` gegevenslader gaat u naar de handleiding [van](../authoring/platform-sdk.md)Platform SDK. Dit leerprogramma verstrekt informatie over bouwstijlauthentificatie, basislezing van gegevens, en basisschrijven van gegevens.
+Voor een uitgebreide zelfstudie over het gebruik van de `platform_sdk` gegevenslader gaat u naar de SDK-handleiding [van het](../authoring/platform-sdk.md)Platform. Dit leerprogramma verstrekt informatie over bouwstijlauthentificatie, basislezing van gegevens, en basisschrijven van gegevens.
 
 ### Externe bronnen {#external-sources}
 
@@ -144,7 +144,7 @@ Uw gegevens bevinden zich nu in het dataframe-object en kunnen in de [volgende s
 ### Van SDK voor gegevenstoegang (afgekeurd)
 
 >[!CAUTION]
-> `data_access_sdk_python` niet meer wordt aanbevolen, raadpleeg de [gegevenstoegangscode converteren naar Platform SDK](../authoring/platform-sdk.md) voor een handleiding over het gebruik van de `platform_sdk` gegevenslader.
+> `data_access_sdk_python` wordt niet meer aanbevolen. Zie [Gegevenstoegangscode converteren naar Platform SDK](../authoring/platform-sdk.md) voor een handleiding over het gebruik van de `platform_sdk` gegevenslader.
 
 Gebruikers kunnen gegevens laden met de SDK voor gegevenstoegang. De bibliotheek kan boven aan de pagina worden geïmporteerd door de volgende regel op te nemen:
 
@@ -162,7 +162,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->Zoals vermeld in de sectie [van het Dossier van de](#configuration-files)Configuratie, worden de volgende configuratieparameters geplaatst voor u wanneer u tot gegevens van het Platform van de Ervaring toegang hebt:
+>Zoals vermeld in de sectie [van het Dossier van de](#configuration-files)Configuratie, worden de volgende configuratieparameters geplaatst voor u wanneer u tot gegevens van toegang hebt [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -203,7 +203,7 @@ In dit voorbeeld worden er vijf dingen aan de originele dataset gedaan:
 - verschuiving `weeklySales` om verkoopwaarde in de toekomst en in het verleden te bepalen
 - gesplitste gegevens, op datum, naar `train` en `val` gegevensset
 
-Eerst worden `week` en `year` kolommen gemaakt en wordt de oorspronkelijke `date` kolom omgezet in Python- [datetime](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html). Week- en jaarwaarden worden geëxtraheerd uit het datetime-object.
+Eerst worden `week` en `year` kolommen gemaakt en wordt de oorspronkelijke `date` kolom omgezet in [!DNL Python][datetime](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html). Week- en jaarwaarden worden geëxtraheerd uit het datetime-object.
 
 Daarna, `storeType` wordt omgezet in drie kolommen die de drie verschillende opslagtypes vertegenwoordigen, (`A`, `B`, en `C`). Elk object bevat een booleaanse waarde die true `storeType` is. De `storeType` kolom wordt verwijderd.
 
@@ -408,9 +408,9 @@ De functie retourneert een `metric` object met een array van evaluatiemetriek. D
 
 ### Gegevensopslagbestand {#data-saver-file}
 
-Het `datasaver.py` bestand bevat de `save()` functie waarmee u uw voorspelling kunt opslaan tijdens het testen van scoring. De `save()` functie gebruikt uw voorspelling en maakt gebruik van Experience Platform Catalog API&#39;s en schrijft de gegevens naar de `scoringResultsDataSetId` opgegeven gegevens in uw `scoring.conf` bestand.
+Het `datasaver.py` bestand bevat de `save()` functie waarmee u uw voorspelling kunt opslaan tijdens het testen van scoring. De `save()` functie gebruikt uw voorspelling en [!DNL Experience Platform Catalog] de API&#39;s en schrijft de gegevens naar de `scoringResultsDataSetId` opgegeven gegevens in het `scoring.conf` bestand.
 
-Het voorbeeld dat in het in de detailhandel verkrijgbare product wordt gebruikt, is hier te zien. Let op het gebruik van de `DataSetWriter` bibliotheek voor het schrijven van gegevens naar Platform:
+Het voorbeeld dat in het in de detailhandel verkrijgbare product wordt gebruikt, is hier te zien. Let op het gebruik van de `DataSetWriter` bibliotheek voor het schrijven van gegevens naar het Platform:
 
 ```PYTHON
 from data_access_sdk_python.writer import DataSetWriter
@@ -453,11 +453,11 @@ Als u klaar bent met het bewerken van het recept en tevreden bent met de trainin
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Nadat u op de knop hebt gedrukt, wordt u gevraagd een naam voor het recept in te voeren. Deze naam staat voor het recept dat op Platform is gemaakt.
+Nadat u op de knop hebt gedrukt, wordt u gevraagd een naam voor het recept in te voeren. Deze naam staat voor het recept dat werkelijk is gemaakt op [!DNL Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Als u op **[!UICONTROL OK]** drukt, kunt u naar het nieuwe recept navigeren op het [Adobe Experience Platform](https://platform.adobe.com/). U kunt op de **[!UICONTROL knoop van Ontvangers]** van de Mening klikken om u aan het **[!UICONTROL Ontvangt]** lusje onder de Modellen van **[!UICONTROL ML te nemen]**
+Als u op **[!UICONTROL OK]** drukt, kunt u naar het nieuwe recept navigeren op [Adobe Experience Platform](https://platform.adobe.com/). U kunt op de **[!UICONTROL knoop van Ontvangers]** van de Mening klikken om u aan het **[!UICONTROL Ontvangt]** lusje onder de Modellen van **[!UICONTROL ML te nemen]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -473,9 +473,9 @@ Zodra het proces is voltooid, zal het recept er ongeveer als volgt uitzien:
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te voltooien, hebt u geleerd hoe u een model voor computerleren kunt maken in de Recipe Builder-laptop. U hebt ook geleerd hoe u de workflow voor notebooks kunt gebruiken om een recept te maken in de Data Science Workspace.
+Door deze zelfstudie te voltooien, hebt u geleerd hoe u een model voor computerleren kunt maken in de Recipe Builder-laptop. U hebt ook geleerd hoe u de workflow voor het maken van een notebook kunt gebruiken om een recept in de laptop te maken [!DNL Data Science Workspace].
 
-Als u wilt blijven leren werken met bronnen in de Data Science Workspace, gaat u naar de recepten en vervolgkeuzelijst voor de Data Science Workspace.
+Ga naar het vervolgkeuzemenu voor recepten en modellen [!DNL Data Science Workspace][!DNL Data Science Workspace] om te leren hoe u met bronnen kunt werken.
 
 ## Aanvullende bronnen {#additional-resources}
 
