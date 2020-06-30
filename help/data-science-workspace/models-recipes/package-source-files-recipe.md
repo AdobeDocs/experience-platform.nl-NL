@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Bronbestanden in een recept plaatsen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1077'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Bronbestanden in een recept plaatsen
 
-Deze zelfstudie bevat instructies voor het verpakken van de voorbeeldbronbestanden voor de detailhandel in een archiefbestand. U kunt dit bestand gebruiken om een recept te maken in de Adobe Experience Platform Data Science Workspace door de workflow voor het importeren van recept in de gebruikersinterface of met de API te volgen.
+Deze zelfstudie bevat instructies voor het verpakken van de voorbeeldbronbestanden voor de detailhandel in een archiefbestand. U kunt dit bestand gebruiken om een recept in Adobe Experience Platform te maken [!DNL Data Science Workspace] door de workflow voor het importeren van recept in de gebruikersinterface of met de API uit te voeren.
 
 Concepten om te begrijpen:
 
@@ -23,14 +23,14 @@ Concepten om te begrijpen:
 
 ## Vereisten
 
-- [Docker](https://docs.docker.com/install/#supported-platforms)
-- [Python 3 en pip](https://docs.conda.io/en/latest/miniconda.html)
-- [Scala](https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883)
-- [Maven](https://maven.apache.org/install.html)
+- [!DNL Docker](https://docs.docker.com/install/#supported-platforms)
+- [!DNL Python 3 and pip](https://docs.conda.io/en/latest/miniconda.html)
+- [!DNL Scala](https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883)
+- [!DNL Maven](https://maven.apache.org/install.html)
 
 ## Ontvanger maken
 
-Het maken van recept begint met het verpakken van bronbestanden om een archiefbestand te maken. De brondossiers bepalen de machine het leren logica en de algoritmen die worden gebruikt om een specifiek probleem op te lossen bij de hand, en in of Python, R, PySpark, of Scala geschreven. Gebouwde archiefbestanden hebben de vorm van een Docker-afbeelding. Nadat het archiefbestand in het pakket is gemaakt, wordt het geïmporteerd in de Data Science Workspace om een recept te maken [in de gebruikersinterface](./import-packaged-recipe-ui.md) of [met de API](./import-packaged-recipe-api.md).
+Het maken van recept begint met het verpakken van bronbestanden om een archiefbestand te maken. De brondossiers bepalen de machine het leren logica en de algoritmen die worden gebruikt om een specifiek probleem op te lossen bij de hand, en in of [!DNL Python], R, PySpark, of Scala geschreven. Gebouwde archiefbestanden hebben de vorm van een Docker-afbeelding. Nadat het archiefbestand in het pakket is gemaakt, wordt het geïmporteerd [!DNL Data Science Workspace] om een recept te maken [in de gebruikersinterface](./import-packaged-recipe-ui.md) of [met de API](./import-packaged-recipe-api.md).
 
 ### Ontwerpmodel gebaseerd op docker {#docker-based-model-authoring}
 
@@ -52,7 +52,7 @@ Selecteer de juiste *runtime* en kies een **[!UICONTROL classificatie]** voor *T
 >*Type *is het leerprobleem van de machine waarvoor het recept is ontworpen en wordt na training gebruikt om de trainingsrun op maat te maken of te evalueren.
 
 >[!TIP]
->- Selecteer bij Python-recepten de **[!UICONTROL Python]** -runtime.
+>- Selecteer voor [!DNL Python] recepten de **[!UICONTROL Python]** -runtime.
 >- Selecteer voor R-recepten de **[!UICONTROL R]** -runtime.
 >- Voor PySpark-recepten selecteert u de **[!UICONTROL PySpark]** -runtime. Een artefacttype dat automatisch wordt gevuld.
 >- Selecteer voor Scala-recepten de **[!UICONTROL Spark]** -runtime. Een artefacttype dat automatisch wordt gevuld.
@@ -60,29 +60,29 @@ Selecteer de juiste *runtime* en kies een **[!UICONTROL classificatie]** voor *T
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Maak een notitie van de waarden voor *Docker Host*, *Gebruikersnaam* en *Wachtwoord*. Deze worden gebruikt om uw Docker-afbeelding samen te stellen en te duwen in de hieronder beschreven workflows.
+Maak een notitie van de waarden voor *Docker Host*, *Gebruikersnaam* en *Wachtwoord*. Deze worden gebruikt om uw [!DNL Docker] afbeelding samen te stellen en te duwen in de hieronder beschreven workflows.
 
 >[!NOTE]
->De URL van de bron wordt opgegeven nadat de hieronder beschreven stappen zijn uitgevoerd. Het configuratiebestand wordt uitgelegd in volgende zelfstudies in de [volgende stappen](#next-steps).
+>De bron-URL wordt opgegeven nadat de hieronder beschreven stappen zijn uitgevoerd. Het configuratiebestand wordt uitgelegd in volgende zelfstudies in de [volgende stappen](#next-steps).
 
 ### De bronbestanden verpakken
 
-Begin door steekproefcodebase te verkrijgen die in de de Verwijzing <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">van de Werkruimte van de Werkruimte van de Gegevens van het Platform van de</a> Ervaring wordt gevonden.
+Begin door de steekproefcodebase te verkrijgen die in de de Werkruimte van de Referentie <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">van de Werkruimte van de Gegevens van het</a> Experience Platform wordt gevonden.
 
 - [Python Docker-afbeelding samenstellen](#python-docker)
 - [Afbeelding samenstellen of docker](#r-docker)
 - [Afbeelding van PySpark Docker maken](#pyspark-docker)
 - [Schaaldockerafbeelding (Spark) maken](#scala-docker)
 
-### Python Docker-afbeelding samenstellen {#python-docker}
+### Docker- [!DNL Python] afbeelding samenstellen {#python-docker}
 
-Als u dit nog niet hebt gedaan, kloont u de gegevensopslagruimte van de Glitb op uw lokale systeem met de volgende opdracht:
+Als u dit nog niet hebt gedaan, kloont de [!DNL GitHub] opslagplaats op uw lokale systeem met de volgende opdracht:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigeer naar de map `experience-platform-dsw-reference/recipes/python/retail`. Hier vindt u de scripts `login.sh` en `build.sh` gebruikt u om u aan te melden bij Docker en om de python Docker-afbeelding te maken. Als u uw geloofsbrieven [van de](#docker-based-model-authoring) Dokker klaar hebt, ga de volgende bevelen in orde in:
+Navigeer naar de map `experience-platform-dsw-reference/recipes/python/retail`. Hier vindt u de scripts `login.sh` en `build.sh` gebruikt u om u aan te melden bij Docker en het [!DNL Python Docker] image te maken. Als u uw geloofsbrieven [van de](#docker-based-model-authoring) Dokker klaar hebt, ga de volgende bevelen in orde in:
 
 ```BASH
 # for logging in to Docker
@@ -103,9 +103,9 @@ Zodra het bouwstijlmanuscript volledig is, wordt u gegeven een van het brondossi
 
 Kopieer deze URL en ga naar de [volgende stappen](#next-steps).
 
-### Afbeelding samenstellen of docker {#r-docker}
+### R- [!DNL Docker] afbeelding samenstellen {#r-docker}
 
-Als u dit nog niet hebt gedaan, kloont u de gegevensopslagruimte van de Glitb op uw lokale systeem met de volgende opdracht:
+Als u dit nog niet hebt gedaan, kloont de [!DNL GitHub] opslagplaats op uw lokale systeem met de volgende opdracht:
 
 ```BASH
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -134,7 +134,7 @@ Kopieer deze URL en ga naar de [volgende stappen](#next-steps).
 
 ### Afbeelding van PySpark Docker maken {#pyspark-docker}
 
-Begin met het klonen van de gegevensopslagruimte van de hoofdrol op uw lokale systeem met de volgende opdracht:
+Begin met het klonen van de [!DNL GitHub] opslagplaats op uw lokale systeem met de volgende opdracht:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -163,7 +163,7 @@ Kopieer deze URL en ga naar de [volgende stappen](#next-steps).
 
 ### Afbeelding van Scala Docker maken {#scala-docker}
 
-Begin met het klonen van de opslagplaats van de github op uw lokale systeem met de volgende opdracht in terminal:
+Begin door de [!DNL GitHub] opslagplaats op uw lokale systeem met het volgende bevel in terminal te klonen:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -192,7 +192,7 @@ Kopieer deze URL en ga naar de [volgende stappen](#next-steps).
 
 ## Volgende stappen {#next-steps}
 
-Deze zelfstudie ging over het verpakken van bronbestanden naar een recept, de noodzakelijke stap voor het importeren van een recept naar de werkruimte voor wetenschap van gegevens. U moet nu een Docker-afbeelding in het Azure Container-register hebben samen met de bijbehorende afbeelding-URL. U kunt nu beginnen met de zelfstudie over het importeren van een verpakt recept in de Data Science Workspace. Selecteer een van de onderstaande koppelingen voor zelfstudie om aan de slag te gaan:
+Deze zelfstudie ging over het verpakken van bronbestanden naar een ontvanger, de noodzakelijke stap voor het importeren van een Recipe in [!DNL Data Science Workspace]. U moet nu een Docker-afbeelding in het Azure Container-register hebben samen met de bijbehorende afbeelding-URL. U kunt nu beginnen met de zelfstudie over het importeren van een verpakt recept in [!DNL Data Science Workspace]. Selecteer een van de onderstaande koppelingen voor zelfstudie om aan de slag te gaan:
 
 - [Een gecomprimeerde ontvanger importeren in de gebruikersinterface](./import-packaged-recipe-ui.md)
 - [Een gecomprimeerde ontvanger importeren met de API](./import-packaged-recipe-api.md)
