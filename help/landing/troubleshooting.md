@@ -1,36 +1,36 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform - Veelgestelde vragen en handleiding voor probleemoplossing
+title: Handleiding voor veelgestelde vragen over Adobe Experience Platforms en probleemoplossing
 topic: getting started
 translation-type: tm+mt
-source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
 workflow-type: tm+mt
-source-wordcount: '2001'
-ht-degree: 0%
+source-wordcount: '1959'
+ht-degree: 1%
 
 ---
 
 
-# Platform FAQ en het oplossen van problemengids
+# [!DNL Platform] Veelgestelde vragen en handleiding voor probleemoplossing
 
-Dit document bevat antwoorden op veelgestelde vragen over het Adobe Experience Platform en een gids voor probleemoplossing op hoog niveau voor algemene fouten die kunnen optreden in elke API van het Experience Platform. Voor het oplossen van problemengidsen op de individuele diensten van het Platform, zie de [dienst het oplossen van problemenfolder](#service-troubleshooting-directory) hieronder.
+Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform en een gids voor probleemoplossing op hoog niveau voor algemene fouten die in elke [!DNL Experience Platform] API kunnen worden aangetroffen. Voor het oplossen van problemengidsen op de individuele [!DNL Platform] diensten, zie de hieronder [dienst het oplossen van problemenfolder](#service-troubleshooting-directory) .
 
 ## Veelgestelde vragen {#faq}
 
-Hieronder volgt een lijst met antwoorden op veelgestelde vragen over het Adobe Experience Platform.
+Hieronder volgt een lijst met antwoorden op veelgestelde vragen over Adobe Experience Platform.
 
-## Wat zijn Experience Platform API&#39;s? {#what-are-experience-platform-apis}
+## Wat zijn API&#39; [!DNL Experience Platform] s? {#what-are-experience-platform-apis}
 
-Het Platform van de ervaring biedt veelvoudige RESTful APIs aan die HTTP- verzoeken om tot de middelen van het Platform gebruiken toegang te hebben. Deze dienst APIs elk stelt veelvoudige eindpunten bloot, en staat u toe om verrichtingen aan lijst (KRIJGEN), raadpleging (KRIJGEN) uit te voeren, (PLAATS en/of PATCH) middelen uit te geven, en te schrappen (VERWIJDEREN). Raadpleeg de [API-naslagdocumentatie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) bij Adobe I/O voor meer informatie over specifieke eindpunten en bewerkingen die beschikbaar zijn voor elke service.
+[!DNL Experience Platform] biedt veelvoudige RESTful APIs aan die HTTP- verzoeken om tot [!DNL Platform] middelen gebruiken. Deze dienst APIs elk stelt veelvoudige eindpunten bloot, en staat u toe om verrichtingen aan lijst (KRIJGEN), raadpleging (KRIJGEN) uit te voeren, (PLAATS en/of PATCH) uit te geven, en (DELETE) middelen te schrappen. Raadpleeg de [API-naslagdocumentatie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) bij Adobe I/O voor meer informatie over specifieke eindpunten en bewerkingen die beschikbaar zijn voor elke service.
 
 ## Hoe kan ik een API-aanvraag opmaken? {#how-do-i-format-an-api-request}
 
-De aanvraagindelingen zijn afhankelijk van de Platform-API die wordt gebruikt. De beste manier om te leren hoe te om uw API vraag te structureren is door samen met de voorbeelden te volgen die in de documentatie voor de bepaalde dienst van het Platform worden verstrekt u gebruikt.
+De aanvraagindelingen variëren afhankelijk van de gebruikte [!DNL Platform] API. De beste manier om te leren hoe te om uw API vraag te structureren is door samen met de voorbeelden te volgen die in de documentatie voor de bijzondere [!DNL Platform] dienst worden verstrekt u gebruikt.
 
 ### Voorbeeld-API-aanroepen lezen
 
-De documentatie voor het Platform van de Ervaring toont voorbeeld API vraag op twee verschillende manieren. Eerst, wordt de vraag voorgesteld in zijn **API formaat**, een malplaatjevertegenwoordiging die slechts de verrichting (GET, POST, PUT, PATCH, DELETE) en het eindpunt toont dat (bijvoorbeeld, `/global/classes`) wordt gebruikt. Sommige malplaatjes tonen ook de plaats van variabelen helpen illustreren hoe een vraag zou moeten worden geformuleerd, zoals `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
+De documentatie voor [!DNL Experience Platform] toont voorbeeld API vraag op twee verschillende manieren. Eerst, wordt de vraag voorgesteld in zijn **API formaat**, een malplaatjevertegenwoordiging die slechts de verrichting (GET, POST, PUT, PATCH, DELETE) en het eindpunt toont dat (bijvoorbeeld, `/global/classes`) wordt gebruikt. Sommige malplaatjes tonen ook de plaats van variabelen helpen illustreren hoe een vraag zou moeten worden geformuleerd, zoals `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
 
 De vraag wordt dan getoond als cURL bevelen in een **Verzoek**, die de noodzakelijke kopballen en volledige &quot;basisweg&quot;nodig omvat om met API met succes in wisselwerking te staan. Het basispad moet vooraf aan alle eindpunten worden toegevoegd. Het eerder vermelde `/global/classes` eindpunt wordt bijvoorbeeld `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. U zult het formaat van API/verzoekpatroon door de documentatie zien, en zal naar verwachting de volledige weg gebruiken die in het voorbeeldVerzoek wordt getoond wanneer het maken van uw eigen vraag aan Platform APIs.
 
@@ -84,15 +84,15 @@ De reactie illustreert wat u zou verwachten te ontvangen na een succesvolle vraa
 }
 ```
 
-Raadpleeg de documentatie bij de [API-naslaggids](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)voor meer informatie over specifieke eindpunten in platform-API&#39;s, inclusief vereiste headers en aanvraagorganen.
+Raadpleeg de [API-naslagdocumentatie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)voor meer informatie over specifieke eindpunten in Platform-API&#39;s, inclusief vereiste headers en aanvraaginstanties.
 
 ## Wat is mijn IMS-organisatie? {#what-is-my-ims-organization}
 
-Een IMS-organisatie is een Adobe-representatie van een klant. Alle Adobe-oplossingen met licentie zijn geïntegreerd met deze klantenorganisatie. Wanneer een IMS-organisatie recht heeft op Experience Platform, kan zij toegang toewijzen aan ontwikkelaars. De IMS-organisatie-id (`x-gw-ims-org-id`) vertegenwoordigt de organisatie waarvoor een API-aanroep moet worden uitgevoerd en is daarom vereist als een header in alle API-aanvragen. Deze id kunt u vinden via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in het lusje van **Integraties** , navigeer aan de sectie van het **Overzicht** voor om het even welke bepaalde integratie om identiteitskaart onder de Geloofsbrieven **van de** Cliënt te vinden. Voor een geleidelijke analyse van hoe te in Platform voor authentiek te verklaren, zie het [authentificatieleerprogramma](../tutorials/authentication.md).
+Een IMS-organisatie is een Adobe-representatie van een klant. Alle Adobe-oplossingen met licentie zijn geïntegreerd met deze klantenorganisatie. Wanneer een IMS-organisatie gerechtigd is om toegang te verlenen [!DNL Experience Platform], kan zij toegang toewijzen aan ontwikkelaars. De IMS-organisatie-id (`x-gw-ims-org-id`) vertegenwoordigt de organisatie waarvoor een API-aanroep moet worden uitgevoerd en is daarom vereist als een header in alle API-aanvragen. Deze id kunt u vinden via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in het lusje van **Integraties** , navigeer aan de sectie van het **Overzicht** voor om het even welke bepaalde integratie om identiteitskaart onder de Geloofsbrieven **van de** Cliënt te vinden. Voor een geleidelijke analyse van hoe te voor authentiek te verklaren in [!DNL Platform], zie het [authentificatieleerprogramma](../tutorials/authentication.md).
 
 ## Waar kan ik mijn API-sleutel vinden? {#where-can-i-find-my-api-key}
 
-Een API-sleutel is vereist als een header in alle API-aanvragen. U vindt deze via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Binnen de console, op het lusje van **Integraties** , navigeer aan de sectie van het **Overzicht** voor een specifieke integratie en u zult de sleutel onder de Verantwoordelijkheden **van de** Cliënt vinden. Voor een geleidelijke analyse van hoe te om aan Platform voor authentiek te verklaren, zie het [authentificatieleerprogramma](../tutorials/authentication.md).
+Een API-sleutel is vereist als een header in alle API-aanvragen. U vindt deze via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Binnen de console, op het lusje van **Integraties** , navigeer aan de sectie van het **Overzicht** voor een specifieke integratie en u zult de sleutel onder de Verantwoordelijkheden **van de** Cliënt vinden. Voor een geleidelijke analyse van hoe te voor authentiek te verklaren aan [!DNL Platform], zie het [authentificatieleerprogramma](../tutorials/authentication.md).
 
 ## Hoe krijg ik een toegangstoken? {#how-do-i-get-an-access-token}
 
@@ -100,7 +100,7 @@ Toegangstempens zijn vereist in de machtigingheader van alle API-aanroepen. Ze k
 
 ## Hoe gebruik ik queryparameters? {#how-do-i-user-query-parameters}
 
-Sommige platform API eindpunten aanvaarden vraagparameters om van specifieke informatie de plaats te bepalen en de resultaten te filtreren die in de reactie zijn teruggekeerd. De parameters van de vraag worden toegevoegd aan verzoekwegen met een symbool van het vraagteken (`?`), dat door één of meerdere vraagparameters wordt gevolgd gebruikend het formaat `paramName=paramValue`. Wanneer het combineren van veelvoudige parameters in één enkele vraag, moet u ampersand (`&`) gebruiken om individuele parameters te scheiden. Het volgende voorbeeld toont aan hoe een verzoek dat veelvoudige vraagparameters gebruikt in de documentatie wordt vertegenwoordigd.
+Sommige [!DNL Platform] API eindpunten aanvaarden vraagparameters om van specifieke informatie de plaats te bepalen en de resultaten te filtreren die in de reactie zijn teruggekeerd. De parameters van de vraag worden toegevoegd aan verzoekwegen met een symbool van het vraagteken (`?`), dat door één of meerdere vraagparameters wordt gevolgd gebruikend het formaat `paramName=paramValue`. Wanneer het combineren van veelvoudige parameters in één enkele vraag, moet u ampersand (`&`) gebruiken om individuele parameters te scheiden. Het volgende voorbeeld toont aan hoe een verzoek dat veelvoudige vraagparameters gebruikt in de documentatie wordt vertegenwoordigd.
 
 Voorbeelden van veelgebruikte queryparameters zijn:
 
@@ -114,19 +114,19 @@ Voor gedetailleerde informatie over welke vraagparameters voor de specifieke die
 
 ## Hoe kan ik een JSON-veld aangeven dat moet worden bijgewerkt in een PATCH-verzoek? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
-Veel PATCH-bewerkingen in platform-API&#39;s gebruiken [JSON-aanwijzertekenreeksen](https://tools.ietf.org/html/rfc6901) om aan te geven dat de JSON-eigenschappen moeten worden bijgewerkt. Deze worden meestal opgenomen in de payloads voor aanvragen met de [JSON-indeling voor patches](https://tools.ietf.org/html/rfc6902) . Zie de handleiding [met grondbeginselen van de](api-fundamentals.md) API voor gedetailleerde informatie over vereiste syntaxis voor deze technologieën.
+Veel PATCH-bewerkingen in [!DNL Platform] API&#39;s gebruiken [JSON-aanwijzertekenreeksen](https://tools.ietf.org/html/rfc6901) om aan te geven dat de JSON-eigenschappen moeten worden bijgewerkt. Deze worden meestal opgenomen in de payloads voor aanvragen met de [JSON-indeling voor patches](https://tools.ietf.org/html/rfc6902) . Zie de handleiding [met grondbeginselen van de](api-fundamentals.md) API voor gedetailleerde informatie over vereiste syntaxis voor deze technologieën.
 
-## Kan ik Postman gebruiken om vraag aan Platform APIs te maken? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
+## Kan ik Postman gebruiken om aanroepen te maken naar [!DNL Platform] API&#39;s? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.getpostman.com/) is een nuttig hulpmiddel om vraag aan RESTful APIs te visualiseren. In dit [artikel](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) wordt beschreven hoe u Postman kunt instellen om automatisch verificatie uit te voeren en deze te gebruiken voor gebruik van de API&#39;s van het Experience Platform.
+[Postman](https://www.getpostman.com/) is een nuttig hulpmiddel om vraag aan RESTful APIs te visualiseren. In dit [artikel](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) wordt beschreven hoe u Postman kunt instellen om automatisch verificatie uit te voeren en deze te gebruiken voor het gebruik van API&#39; [!DNL Experience Platform] s.
 
-## Wat zijn de systeemvereisten voor Platform? {#what-are-the-system-requirements-for-platform}
+## Wat zijn de systeemvereisten [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
 Afhankelijk van of u de UI of API gebruikt, zijn de volgende systeemvereisten van toepassing:
 
 **Voor bewerkingen op basis van UI:**
-- Een moderne, standaard webbrowser. Hoewel de nieuwste versie van Chrome wordt aanbevolen, worden de huidige en vorige grote versies van Firefox, Internet Explorer en Safari ook ondersteund.
-   - Telkens wanneer een nieuwe belangrijke versie wordt vrijgegeven, begint Platform steun de meest recente versie terwijl de steun voor de derde meest recente versie wordt gelaten vallen.
+- Een moderne, standaard webbrowser. Hoewel de nieuwste versie van [!DNL Chrome] wordt aanbevolen, worden de huidige en vorige grote releases van [!DNL Firefox], [!DNL Internet Explorer]en Safari ook ondersteund.
+   - Telkens wanneer een nieuwe belangrijke versie wordt vrijgegeven, [!DNL Platform] begint steun de meest recente versie terwijl de steun voor de derde meest recente versie wordt gelaten vallen.
 - Voor alle browsers moeten cookies en JavaScript zijn ingeschakeld.
 
 **Voor API- en ontwikkelaarsinteracties:**
@@ -134,11 +134,11 @@ Afhankelijk van of u de UI of API gebruikt, zijn de volgende systeemvereisten va
 
 ## Fouten en problemen oplossen {#errors-and-troubleshooting}
 
-Hieronder volgt een lijst met fouten die u kunt tegenkomen bij het gebruik van een service van het Experience Platform. Voor het oplossen van problemengidsen op de individuele diensten van het Platform, zie de [dienst het oplossen van problemenfolder](#service-troubleshooting-directory) hieronder.
+Hier volgt een lijst met fouten die u kunt tegenkomen bij het gebruik van een [!DNL Experience Platform] service. Voor het oplossen van problemengidsen op de individuele [!DNL Platform] diensten, zie de hieronder [dienst het oplossen van problemenfolder](#service-troubleshooting-directory) .
 
 ## API-statuscodes {#api-status-codes}
 
-Op elke API van het Experience Platform kunnen de volgende statuscodes worden gevonden. Elk artikel heeft verschillende oorzaken en daarom zijn de toelichtingen in deze paragraaf algemeen van aard. Voor meer details betreffende specifieke fouten in de individuele diensten van het Platform, te zien gelieve de [dienst het oplossen van problemenfolder](#service-troubleshooting-directory) hieronder.
+De volgende statuscodes kunnen worden gevonden op elke [!DNL Experience Platform] API. Elk artikel heeft verschillende oorzaken en daarom zijn de toelichtingen in deze paragraaf algemeen van aard. Raadpleeg de onderstaande map met [!DNL Platform] serviceproblemen voor meer informatie over specifieke fouten in afzonderlijke [services](#service-troubleshooting-directory) .
 
 | Statuscode | Beschrijving | Mogelijke oorzaken |
 --- | --- | ---
@@ -146,11 +146,11 @@ Op elke API van het Experience Platform kunnen de volgende statuscodes worden ge
 | 401 | Verificatie mislukt | De aanvraag heeft geen verificatiecontrole doorstaan. Uw toegangstoken ontbreekt of is ongeldig. Zie de [sectie voor tokenfouten](#oauth-token-is-missing) hieronder voor meer informatie. |
 | 403 | Verboden | De bron is gevonden, maar u hebt niet de juiste referenties om deze te bekijken. |
 | 404 | Niet gevonden | De gevraagde bron is niet gevonden op de server. De bron is mogelijk verwijderd of het gevraagde pad is onjuist ingevoerd. |
-| 500 | Interne serverfout | Dit is een serverfout. Als u vele gelijktijdige vraag maakt, kunt u de API grens bereiken en moet uw resultaten filtreren. (Zie de subhandleiding voor ontwikkelaars van de Catalogusservice-API voor meer informatie over het [filteren van gegevens](../catalog/api/filter-data.md) .) Wacht even voordat u uw verzoek opnieuw probeert en neem contact op met de beheerder als het probleem zich blijft voordoen. |
+| 500 | Interne serverfout | Dit is een serverfout. Als u vele gelijktijdige vraag maakt, kunt u de API grens bereiken en moet uw resultaten filtreren. (Zie de subhandleiding voor [!DNL Catalog Service] API-ontwikkelaars over het [filteren van gegevens](../catalog/api/filter-data.md) voor meer informatie.) Wacht even voordat u uw verzoek opnieuw probeert en neem contact op met de beheerder als het probleem zich blijft voordoen. |
 
 ## Koptekstfouten aanvragen {#request-header-errors}
 
-Voor alle API-aanroepen in Platform zijn specifieke aanvraagheaders vereist. Raadpleeg de documentatie bij de [API-naslaggids](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)voor informatie over de vereiste headers voor afzonderlijke services. Zie de zelfstudie [Verificatie voor](../tutorials/authentication.md)informatie over de waarden voor de vereiste verificatieheaders. Als een van deze headers ontbreekt of ongeldig is bij het aanroepen van een API, kunnen de volgende fouten optreden.
+Voor alle API-aanroepen zijn specifieke aanvraagheaders [!DNL Platform] vereist. Raadpleeg de documentatie bij de [API-naslaggids](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)voor informatie over de vereiste headers voor afzonderlijke services. Zie de zelfstudie [Verificatie voor](../tutorials/authentication.md)informatie over de waarden voor de vereiste verificatieheaders. Als een van deze headers ontbreekt of ongeldig is bij het aanroepen van een API, kunnen de volgende fouten optreden.
 
 ### OAuth-token ontbreekt {#oauth-token-is-missing}
 
@@ -217,7 +217,7 @@ Dit foutbericht wordt weergegeven wanneer een IMS org-header (`x-gw-ims-org-id`)
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer de gebruiker of Adobe I/O-integratie (geïdentificeerd door het [toegangstoken](#how-do-i-get-an-access-token) in de `Authorization` koptekst) niet het recht heeft om aanroepen uit te voeren naar Experience Platform-API&#39;s voor de IMS-organisatie in de `x-gw-ims-org-id` koptekst. Controleer of u de juiste id voor uw IMS-organisatie in de koptekst hebt opgegeven voordat u het opnieuw probeert. Als u uw organisatie-id niet kent, vindt u deze in de [Adobe I/O-console](https://console.adobe.io): op het tabblad **Integraties** navigeert u naar de sectie **Overzicht** voor een specifieke integratie om de id onder **Client Credentials** te vinden.
+Dit foutbericht wordt weergegeven wanneer de gebruiker of Adobe I/O-integratie (geïdentificeerd door het [toegangstoken](#how-do-i-get-an-access-token) in de `Authorization` koptekst) niet het recht heeft om aanroepen uit te voeren naar API&#39; [!DNL Experience Platform] s voor de IMS-organisatie die in de `x-gw-ims-org-id` koptekst is opgegeven. Controleer of u de juiste id voor uw IMS-organisatie in de koptekst hebt opgegeven voordat u het opnieuw probeert. Als u uw organisatie-id niet kent, vindt u deze in de [Adobe I/O-console](https://console.adobe.io): op het tabblad **Integraties** navigeert u naar de sectie **Overzicht** voor een specifieke integratie om de id onder **Client Credentials** te vinden.
 
 ### Geldig inhoudstype niet opgegeven
 
@@ -235,7 +235,7 @@ Dit foutbericht wordt weergegeven wanneer een POST-, PUT- of PATCH-aanvraag een 
 
 ## Servicemap voor probleemoplossing {#service-troubleshooting-directory}
 
-Hieronder volgt een lijst met probleemoplossingsgidsen en API-naslagdocumentatie voor Experience Platform-API&#39;s. Elke het oplossen van problemengids verstrekt antwoorden op vaak gestelde vragen en oplossingen aan problemen die voor de individuele diensten van het Platform specifiek zijn. De API verwijzingsdocumenten verstrekken een uitvoerige gids aan alle beschikbare eindpunten voor elke dienst, en tonen de instanties van de steekproefaanvraag, reacties, en foutencodes die u kunt ontvangen.
+Hieronder volgt een lijst met probleemoplossingsgidsen en API-naslagdocumentatie voor [!DNL Experience Platform] API&#39;s. Elke het oplossen van problemengids verstrekt antwoorden aan vaak gestelde vragen en oplossingen aan problemen die voor de individuele [!DNL Platform] diensten specifiek zijn. De API verwijzingsdocumenten verstrekken een uitvoerige gids aan alle beschikbare eindpunten voor elke dienst, en tonen de instanties van de steekproefaanvraag, reacties, en foutencodes die u kunt ontvangen.
 
 | Service | API-referentie | Problemen oplossen |
 --- | --- | ---
@@ -250,4 +250,4 @@ Hieronder volgt een lijst met probleemoplossingsgidsen en API-naslagdocumentatie
 | Query-service | [Query Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [Handleiding voor het oplossen van problemen bij Query Service](../query-service/troubleshooting-guide.md) |
 | Klantprofiel in realtime | [Real-time API voor klantprofiel](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) |  |
 | Sandboxen | [Sandbox-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Richtlijnen voor het oplossen van problemen met sandboxen](../sandboxes/troubleshooting-guide.md) |
-| Segmentering | [Segmentatie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
+| Segmentatie | [Segmentatie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
