@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google Cloud Storage-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Google Cloud Storage-connector
 
-Het Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, Google Cloud Platform en Azure, zodat u uw gegevens van deze systemen kunt overbrengen.
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform]en [!DNL Azure], zodat u gegevens van deze systemen kunt overbrengen.
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met Platform kunt u gegevens van Google Cloud Storage via batches inbrengen.
+Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen [!DNL Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] kunt u gegevens uit batches [!DNL Google Cloud Storage] importeren.
 
-## Setup vereist voor het verbinden van uw Google Cloud Storage-account
+## Setup vereist voor verbinding met uw [!DNL Google Cloud Storage] account
 
-Als u verbinding wilt maken met Platform, moet u eerst interoperabiliteit inschakelen voor uw Google Cloud Storage-account. Als u toegang wilt tot de instelling voor interoperabiliteit, opent u het Google Cloud-platform en selecteert u **[!UICONTROL Instellingen]** in de optie **[!UICONTROL Opslag]** in het navigatievenster.
+Als u verbinding wilt maken met [!DNL Platform], moet u eerst interoperabiliteit voor uw [!DNL Google Cloud Storage] account inschakelen. Als u toegang wilt krijgen tot de instelling voor interoperabiliteit, opent u [!DNL Google Cloud Platform] en selecteert u **[!UICONTROL Instellingen]** in de optie **[!UICONTROL Opslag]** in het navigatievenster.
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-De pagina **[!UICONTROL Instellingen]** wordt weergegeven. Hier vindt u informatie over uw Google-project-id en informatie over uw Google Cloud Storage-account. Om tot interoperabiliteitsmontages toegang te hebben, selecteer **[!UICONTROL Interoperabiliteit]** van de hoogste kopbal.
+De pagina **[!UICONTROL Instellingen]** wordt weergegeven. Hier kunt u informatie over uw [!DNL Google] project-id en gegevens over uw [!DNL Google Cloud Storage] account bekijken. Om tot interoperabiliteitsmontages toegang te hebben, selecteer **[!UICONTROL Interoperabiliteit]** van de hoogste kopbal.
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
@@ -34,13 +34,13 @@ Selecteer **[!UICONTROL Een sleutel]** maken om een nieuwe toegangs-id en een ge
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
-U kunt uw onlangs gegenereerde toegangs-id en geheime toegangssleutel gebruiken om uw Google Cloud Storage-account aan te sluiten op Platform.
+U kunt uw onlangs gegenereerde toegangs sleutel-id en geheime toegangssleutel gebruiken om uw [!DNL Google Cloud Storage] account aan te sluiten op [!DNL Platform].
 
-In de onderstaande documentatie vindt u informatie over hoe u Google Cloud Storage kunt verbinden met Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Google Cloud Storage] [!DNL Platform] met API&#39;s of de gebruikersinterface:
 
-## Google Cloud-opslag verbinden met platform
+## Verbinden [!DNL Google Cloud Storage] met [!DNL Platform]
 
-In de onderstaande documentatie vindt u informatie over hoe u Google Cloud Storage kunt verbinden met Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Google Cloud Storage] [!DNL Platform] met API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 
