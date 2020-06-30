@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een analyse van een model voor machinaal leren maken en publiceren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1542'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 Voorbereid u een online detailhandelswebsite. Wanneer uw klanten op uw detailhandelswebsite winkelen, wilt u hen met gepersonaliseerde productaanbevelingen presenteren om een verscheidenheid van andere producten bloot te stellen uw bedrijfsaanbiedingen. Gedurende de periode dat uw website bestaat, hebt u voortdurend klantgegevens verzameld en wilt u deze gegevens op de een of andere manier gebruiken om gepersonaliseerde productaanbevelingen te genereren.
 
-[!DNL Adobe Experience Platform] De Werkruimte van de Wetenschap van gegevens verstrekt de middelen om uw doel te bereiken gebruikend prebuilt Recipe van de Aanbevelingen van het [Product](../pre-built-recipes/product-recommendations.md). Volg deze zelfstudie om te zien hoe u toegang hebt tot uw gegevens in de detailhandel, een model voor machinaal leren kunt maken en optimaliseren en inzichten kunt genereren in de werkruimte voor wetenschap van gegevens.
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] biedt de middelen om uw doel te bereiken met behulp van de vooraf gebouwde Recipe voor [productaanbevelingen](../pre-built-recipes/product-recommendations.md). Volg deze zelfstudie om te zien hoe u toegang krijgt tot uw gegevens in de detailhandel en hoe u een model voor machinaal leren kunt maken en optimaliseren en inzichten kunt genereren in [!DNL Data Science Workspace].
 
-Deze zelfstudie weerspiegelt de workflow van Data Science Workspace en behandelt de volgende stappen voor het maken van een model voor machinaal leren:
+Deze zelfstudie weerspiegelt de workflow van [!DNL Data Science Workspace]en behandelt de volgende stappen voor het maken van een model voor machinaal leren:
 
 1. [Uw gegevens voorbereiden](#prepare-your-data)
 2. [Uw model ontwerpen](#author-your-model)
@@ -31,7 +31,7 @@ Deze zelfstudie weerspiegelt de workflow van Data Science Workspace en behandelt
 
 Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldoen:
 
-* Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang tot een IMS Organisatie in het Platform van de Ervaring hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
+* Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang hebt tot een IMS-organisatie in [!DNL Experience Platform], neemt u contact op met uw systeembeheerder voordat u verdergaat.
 
 * Enablement assets. Neem contact op met uw accountvertegenwoordiger om de volgende items voor u beschikbaar te stellen.
    * Aanbevelingen ontvangen
@@ -42,21 +42,21 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
    * Gouden gegevensset, postwaarden
    * Goudgegevenssetschema
 
-* Download de drie vereiste Jupyter-laptopbestanden van de openbare Git-opslagplaats <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">van</a>Adobe. Deze bestanden worden gebruikt om de JupyterLab-workflow in de Data Science Workspace te demonstreren.
+* Download de drie vereiste [!DNL Jupyter Notebook] bestanden van de openbare <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe- [!DNL Git] opslagplaats</a>. Deze bestanden worden gebruikt om de [!DNL JupyterLab] workflow in [!DNL Data Science Workspace]te demonstreren.
 
 * Een goed begrip van de volgende belangrijkste concepten die in deze zelfstudie worden gebruikt:
-   * [Gegevensmodel](../../xdm/home.md)van ervaring: De standaardiseringsinspanning die door Adobe wordt geleid om standaardschema&#39;s zoals Profiel en ExperienceEvent, voor het Beheer van de Ervaring van de Klant te bepalen.
+   * [!DNL Experience Data Model](../../xdm/home.md): De standaardiseringsinspanning die door Adobe wordt geleid om standaardschema&#39;s zoals [!DNL Profile] en ExperienceEvent, voor het Beheer van de Ervaring van de Klant te bepalen.
    * Gegevenssets: Een opslag- en beheerconstructie voor werkelijke gegevens. Een fysieke instantie van een [XDM-schema](../../xdm/schema/field-dictionary.md).
    * Batches: Datasets bestaan uit batches. Een batch is een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt.
-   * JupyterLab: [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is een opensource webinterface voor Project Jupyter en is nauw geïntegreerd in het Experience Platform.
+   * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is een open-bron web-based interface voor Project [!DNL Jupyter] en is strak geïntegreerd in [!DNL Experience Platform].
 
 ## Uw gegevens voorbereiden {#prepare-your-data}
 
-Als u een model voor machinaal leren wilt maken dat gepersonaliseerde productaanbevelingen doet aan uw klanten, moeten eerdere aankopen van klanten op uw website worden geanalyseerd. Deze sectie verkent hoe deze gegevens in Platform door worden opgenomen [!DNL Adobe Analytics], en hoe die gegevens in een dataset van de Eigenschap worden omgezet die door uw machine het leren Model moet worden gebruikt.
+Als u een model voor machinaal leren wilt maken dat gepersonaliseerde productaanbevelingen doet aan uw klanten, moeten eerdere aankopen van klanten op uw website worden geanalyseerd. Deze sectie verkent hoe deze gegevens in [!DNL Platform] door worden opgenomen [!DNL Adobe Analytics], en hoe die gegevens in een dataset van de Eigenschap worden omgezet die door uw machine het leren Model moet worden gebruikt.
 
 ### Ontdek de gegevens en begrijp de schema&#39;s
 
-1. Meld u aan bij het [Adobe Experience Platform](https://platform.adobe.com/) en klik op **[!UICONTROL Datasets]** om alle bestaande gegevenssets weer te geven en selecteer de gegevensset die u wilt verkennen. In dit geval, de dataset van Analytics **Golden Data Set postValues**.
+1. Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com/) en klik op **[!UICONTROL Datasets]** om alle bestaande gegevenssets weer te geven en selecteer de gegevensset die u wilt verkennen. In dit geval, de [!DNL Analytics] dataset **Gulden Dataset postValues**.
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
 2. Selecteer Gegevensset **** voorvertoning rechtsboven om voorbeeldrecords te bekijken en klik op **[!UICONTROL Sluiten]**.
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
@@ -67,13 +67,13 @@ De andere datasets zijn vooraf gevuld met partijen voor het voorvertonen van doe
 
 | Naam gegevensset | Schema | Beschrijving |
 | ----- | ----- | ----- |
-| Gouden gegevensset, postwaarden | Goudgegevenssetschema | Brongegevens van uw website analyseren |
-| Aanbevelingen Gegevensset invoer | Aanbevelingen Invoerschema | De gegevens van Analytics worden omgezet in een opleidingsdataset gebruikend een eigenschappijpleiding. Deze gegevens worden gebruikt voor de training van het Product Recommendations Machine Learning Model. `itemid` en `userid` overeenkomen met een product dat door die klant is aangekocht. |
+| Gouden gegevensset, postwaarden | Goudgegevenssetschema | [!DNL Analytics] brongegevens van uw website |
+| Aanbevelingen Gegevensset invoer | Aanbevelingen Invoerschema | De [!DNL Analytics] gegevens worden omgezet in een opleidingsdataset gebruikend een eigenschappijpleiding. Deze gegevens worden gebruikt voor de training van het Product Recommendations Machine Learning Model. `itemid` en `userid` overeenkomen met een product dat door die klant is aangekocht. |
 | Gegevensset voor aanbevolen uitvoer | Uitvoerschema voor aanbevelingen | De dataset waarvoor het scoren resultaten worden opgeslagen, zal het de lijst van geadviseerde producten voor elke klant bevatten. |
 
 ## Uw model ontwerpen {#author-your-model}
 
-Het tweede onderdeel van de levenscyclus van de Data Science Workspace omvat het ontwerpen van recept en modellen. De Recipe van de Aanbevelingen van het Product wordt ontworpen om productaanbevelingen op schaal te produceren door vroegere aankoopgegevens en machine het leren te gebruiken.
+De tweede component van de [!DNL Data Science Workspace] levenscyclus omvat het ontwerpen van Ontvangers en Modellen. De Recipe van de Aanbevelingen van het Product wordt ontworpen om productaanbevelingen op schaal te produceren door vroegere aankoopgegevens en machine het leren te gebruiken.
 
 Ontvangers vormen de basis voor een model aangezien zij machine het leren algoritmen en logica bevatten die worden ontworpen om specifieke problemen op te lossen. Nog belangrijker is dat met behulp van Ontvangers u het leren van machines in uw organisatie kunt democratiseren, zodat andere gebruikers toegang hebben tot een model voor verschillende gebruiksgevallen zonder dat er code hoeft te worden geschreven.
 
@@ -100,7 +100,7 @@ Een model is een instantie van een recept, waarmee u gegevens op schaal kunt tra
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Zoek en open de opgegeven Recipe **[!UICONTROL Recommendations]** door op de naam ervan te klikken en de overzichtspagina van de ontvanger in te voeren. Klik op **[!UICONTROL Een model]** maken in het midden (als er geen bestaande modellen zijn) of in de rechterbovenhoek van de pagina Overzicht van ontvangen.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Een lijst van beschikbare inputdatasets voor opleiding wordt getoond, wordt de uitgezochte Dataset **[!UICONTROL van de Invoer van]** Aanbevelingen en klikt **[!UICONTROL daarna]**.
+3. Een lijst van beschikbare inputdatasets voor opleiding wordt getoond, wordt de uitgezochte Dataset **[!UICONTROL van de Input van]** Aanbevelingen en klikt **[!UICONTROL daarna]**.
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
 4. Geef het model een naam, bijvoorbeeld &quot;Model met productaanbevelingen&quot;. De beschikbare configuraties voor het model worden vermeld, die montages voor het de standaardopleiding van het Model en het scoring gedrag bevatten. Er zijn geen wijzigingen nodig omdat deze configuraties specifiek zijn voor uw organisatie. Controleer de configuraties en klik op **[!UICONTROL Voltooien]**.
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
@@ -162,4 +162,4 @@ Nadat de scoring is voltooid, kunt u een voorvertoning van de resultaten bekijke
 
 Goed gedaan, hebt u met succes productaanbevelingen geproduceerd!
 
-Deze zelfstudie introduceerde u tot de workflow van de Data Science Workspace en laat zien hoe onverwerkte gegevens kunnen worden omgezet in nuttige informatie via leren van machines. Om meer over het gebruiken van de Werkruimte van de Wetenschap van Gegevens te leren, ga aan de volgende gids bij het [creëren van het detailhandelschema en de dataset](./create-retails-sales-dataset.md)verder.
+Deze zelfstudie introduceerde u de workflow van [!DNL Data Science Workspace], waarin werd aangetoond hoe onverwerkte gegevens kunnen worden omgezet in nuttige informatie door het leren van machines. Om meer over het gebruiken van [!DNL Data Science Workspace]te leren, blijf aan de volgende gids bij het [creëren van het detailhandelschema en de dataset](./create-retails-sales-dataset.md).
