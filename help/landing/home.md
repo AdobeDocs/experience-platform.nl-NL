@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 19b67b57fa277c7ff85646a341cfb5dba1dd92e1
+source-git-commit: b73bd7e163c2861c751b1b505894923f70c99755
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,19 @@ ht-degree: 0%
 >
 >De documentatie van het Adobe Experience Platform is onlangs bewogen. Neem even de tijd om de nieuwe navigatie te bekijken en bestaande bladwijzers bij te werken.
 
-Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van de klant bevorderen. Experience Platform stelt organisaties in staat om klantgegevens en -inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
+Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van de klant bevorderen. [!DNL Experience Platform] stelt organisaties in staat om klantgegevens en inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
 
-Experience Platform is gebaseerd op open API&#39;s en stelt de volledige functionaliteit van het systeem beschikbaar voor ontwikkelaars, zodat bedrijfsoplossingen eenvoudig kunnen worden geïntegreerd met behulp van vertrouwde tools. Experience Platform ondersteunt ook partners om hun eigen producten en technologieën naar behoefte op te bouwen en te integreren. Deze kracht en flexibiliteit maken Experience Platform uniek op de markt. Het geeft partners, klanten, en een gemeenschap van ontwikkelaars een stichting waarop om innovaties te bouwen die de ErvingsZaken drijven: Het overschrijden van klantenverwachtingen door een voortdurend verbeterende, volledig-gepersonaliseerde ervaring te leveren die uit een 360 graadmening van de klant en hun individuele voorkeur wordt getrokken.
+Gebaseerd op open APIs, [!DNL Experience Platform] stelt de volledige functionaliteit van het systeem aan ontwikkelaars bloot, die de gemakkelijke integratie van ondernemingsoplossingen steunen gebruikend vertrouwde hulpmiddelen. [!DNL Experience Platform] steunt ook partners om hun eigen producten en technologieën waar nodig op te bouwen en te integreren. Deze macht en flexibiliteit maken [!DNL Experience Platform] uniek in de markt. Het geeft partners, klanten, en een gemeenschap van ontwikkelaars een stichting waarop om innovaties te bouwen die de ErvingsZaken drijven: Het overschrijden van klantenverwachtingen door een voortdurend verbeterende, volledig-gepersonaliseerde ervaring te leveren die uit een 360 graadmening van de klant en hun individuele voorkeur wordt getrokken.
+
+In de volgende video&#39;s wordt een hypothetische ervaring beschreven die is opgebouwd met Adobe Experience Platform, zoals deze vanuit het perspectief van een klant wordt bekeken. Bekijk hoe u een rijke, relevante en real-time ervaring [!DNL Experience Platform] creëert.
+
+**Klantperspectief:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12&learn=on)
+
+**Achter de schermen:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
 
 ## Taalondersteuning
 
@@ -41,9 +51,9 @@ De standaardtaal van de gebruikersinterface wordt bepaald door het gebied dat in
 >
 > De taal en inhoud op Adobe.com worden bepaald door een gebied te selecteren.
 
-1. Klik op de huidige taal in de voettekst van de interface van het Experience Platform.
-1. Klik in de profielinstellingen op Gebied **** wijzigen.
-1. Selecteer uw gebied.
+1. Klik op de huidige taal in de voettekst van de [!DNL Experience Platform] interface.
+2. Klik in de profielinstellingen op Gebied **** wijzigen.
+3. Selecteer uw gebied.
 
 ### Documentatietalen
 
@@ -51,9 +61,9 @@ De documentatie van het Adobe Experience Platform is beschikbaar in verscheidene
 
 ![afbeelding](assets/lang.jpg)
 
-## Documentatie Experience Platform
+## [!DNL Experience Platform] documentatie
 
-De documentatie van het Experience Platform wordt verstrekt in veelvoudige formaten voor een verscheidenheid van eigenschappen en de diensten. Voor meer informatie over de typen documentatie die beschikbaar zijn en voor een korte beschrijving van elk van de services van het Platform, raadpleegt u het documentatieoverzicht [van het](documentation/overview.md)Experience Platform. Of, om meer over een specifieke dienst van het Platform direct te leren, selecteer een gids van de alfabetische lijst in de linkernavigatie.
+[!DNL Experience Platform] documentatie wordt verstrekt in veelvoudige formaten voor een verscheidenheid van eigenschappen en de diensten. Voor meer informatie over de typen documentatie die beschikbaar zijn en voor een korte beschrijving van elk van de [!DNL Platform] services, raadpleegt u het documentatieoverzicht [van het](documentation/overview.md)Experience Platform. Als u meer wilt weten over een bepaalde [!DNL Platform] service, selecteert u een hulplijn in de alfabetische lijst in de linkernavigatie.
 
 >[!NOTE]
 >
@@ -61,7 +71,7 @@ De documentatie van het Experience Platform wordt verstrekt in veelvoudige forma
 >
 >* Koppelingen naar aanbevolen artikelen
 >* Contextrelevante documentatieaanbevelingen
->* De mogelijkheid om feedback te geven over het Experience Platform en problemen te melden
+>* De mogelijkheid om feedback te geven over de problemen [!DNL Experience Platform] en deze te melden
 >* Verbeterde zoekresultaten, inclusief resultaten van communityforums en video-inhoud.
 
 >
@@ -70,26 +80,55 @@ Van tijd tot tijd, zou u een onderzoek voor extra terugkoppelen kunnen ontvangen
 >
 >Deze uitrol is geleidelijk, zodat zou u de veranderingen niet onmiddellijk kunnen zien. U kunt de bijgewerkte ervaring op elk ogenblik bekijken door naar [https://experience.adobe.com/platform](https://experience.adobe.com/platform)te gaan.
 
-## Zelfstudies voor Experience Platforms
+## [!DNL Experience Platform] zelfstudies
 
-Ga snel en eenvoudig aan de slag met Platform door stapsgewijze zelfstudies voor alles te volgen, van het voorbereiden van uw gegevens voor opname tot geavanceerde computerleeralgoritmen. Deze zelfstudies zijn ontworpen als aanvulling op de informatie in de documentatie van het Experience Platform, zodat u de documenten voor de beste resultaten bij de voltooiing van de lesbestanden kunt bewaren. Ga naar de zelfstudies voor [Experience Platforms](../tutorials/home.md) om aan de slag te gaan.
+Ga snel en eenvoudig aan de slag met [!DNL Platform] stapsgewijze zelfstudies voor alles, van het voorbereiden van uw gegevens voor opname tot geavanceerde computerleeralgoritmen. Deze zelfstudies zijn ontworpen als aanvulling op de informatie in de [!DNL Experience Platform] documentatie, zodat u de documenten voor de beste resultaten bij de voltooiing van de zelfstudies kunt bewaren. Ga naar de zelfstudies voor [Experience Platforms](../tutorials/home.md) om aan de slag te gaan.
 
 ## Videozelfstudies
 
-Bekijk [videozelfstudies](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) voor een groot aantal verschillende onderwerpen over Experience Platforms.
+Bekijk [videozelfstudies](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) voor een groot aantal verschillende [!DNL Experience Platform] onderwerpen.
+
+Bekijk de volgende video voor een snelle rondleiding door de [!DNL Experience Platform's] gebruikersinterface:
+
+>[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
 
 ## Referentiedocumenten en -bronnen
 
-* [**Opmerkingen bij de release **](../release-notes/latest/latest.md)<br/>Zoeken naar informatie over de meest recente release van het Experience Platform en eerdere releases.
+* [**Opmerkingen bij de release **](../release-notes/latest/latest.md)<br/>[!DNL Experience Platform]Zoeken naar informatie over de meest recente release en revisie in het verleden.
 
 * [**Woordenlijst **](glossary.md)<br/>De terminologie van het Adobe Experience Platform controleren.
 
 * [**De gids van het Oplossen van problemen **](troubleshooting.md)<br/>vindt resoluties aan gemeenschappelijke fouten en antwoorden op vaak gestelde vragen.
 
-* [**API-basisbeginselen **](api-fundamentals.md)<br/>Leer de basisbeginselen van het werken met Platform-API&#39;s.
+* [**Basisprincipes van **](api-fundamentals.md)<br/>API&#39;s Leer de basisbeginselen van het werken met[!DNL Platform]API&#39;s.
 
-* [**API-naslaggids **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>Ontdek Experience Platform-API&#39;s, waaronder headers, parameters, voorbeeldaanvragen en reacties.
-*Deze documenten worden gehost op Adobe I/O.*
+* [**API-naslaggids **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>detecteert API&#39;[!DNL Experience Platform]s, waaronder headers, parameters, voorbeeldaanvragen en reacties.*Deze documenten worden gehost op Adobe I/O.*
+
+## Video-bronnen over integratie van Adobe Experience Platform
+
+[!DNL Experience Platform] Gebruikt de Diensten van de Toepassing en [!DNL Intelligent Services] gebouwd bovenop [!DNL Experience Platform], voor meer informatie gelieve te letten op de volgende video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
+
+Een van de belangrijkste voordelen van Adobe Experience Platform is de mogelijkheid om te integreren met andere bestaande Adobe-services. De volgende video geeft een overzicht van hoe [!DNL Experience Platform] de diensten met [!DNL Experience Cloud] toepassingen en mogelijkheden zoals Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Customer Attributes], [!DNL Audience Library], en [!DNL Experience Platform Launch]. integreren.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
+
+Bekijk de volgende video voor aanvullende informatie over de architectuur die Adobe Experience Platform bevoegdheden heeft:
+
+>[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
+
+### [!DNL Experience Platform] mogelijkheden en gebruiksgevallen
+
+In de volgende video&#39;s wordt een overzicht gegeven van de belangrijkste mogelijkheden en gebruiksscenario&#39;s voor [!DNL Experience Platform]:
+
+**Mogelijkheden:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
+
+**Gebruik hoofdletters/kleine letters:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
 
 
 
