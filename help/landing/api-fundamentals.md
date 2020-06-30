@@ -1,21 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Basisprincipes van de API van het Adobe Experience Platform
+title: Grondbeginselen van Adobe Experience Platform API
 topic: getting started
 translation-type: tm+mt
-source-git-commit: c94f065a5d56ac495dd2d541531aaec94c187612
+source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+workflow-type: tm+mt
+source-wordcount: '425'
+ht-degree: 2%
 
 ---
 
 
-# Basisprincipes van de API van het Adobe Experience Platform
+# Grondbeginselen van Adobe Experience Platform API
 
-Adobe Experience Platform-API&#39;s maken gebruik van verschillende onderliggende technologieën en syntaxis die belangrijk zijn om te begrijpen voor een effectief beheer van JSON-gebaseerde platformbronnen. Dit document bevat een kort overzicht van deze technologieën en koppelingen naar externe documentatie voor meer informatie.
+Adobe Experience Platform-API&#39;s maken gebruik van verschillende onderliggende technologieën en syntaxis die belangrijk zijn om te begrijpen voor een effectief beheer van JSON- [!DNL Platform] bronnen. Dit document bevat een kort overzicht van deze technologieën en koppelingen naar externe documentatie voor meer informatie.
 
 ## JSON-aanwijzer {#json-pointer}
 
-JSON Pointer is een gestandaardiseerde tekenreekssyntaxis ([RFC 6901](https://tools.ietf.org/html/rfc6901)) voor het identificeren van specifieke waarden in JSON-documenten. Een JSON-aanwijzer is een tekenreeks met tokens die door `/` tekens worden gescheiden. Hiermee worden objectsleutels of arrayindexen opgegeven. De tokens kunnen een tekenreeks of een getal zijn. JSON-aanwijzertekenreeksen worden gebruikt in veel PATCH-bewerkingen voor platform-API&#39;s, zoals verderop in dit document wordt beschreven. Raadpleeg de overzichtsdocumentatie [van de](https://rapidjson.org/md_doc_pointer.html)JSON-aanwijzer voor meer informatie over JSON-aanwijzer.
+JSON Pointer is een gestandaardiseerde tekenreekssyntaxis ([RFC 6901](https://tools.ietf.org/html/rfc6901)) voor het identificeren van specifieke waarden in JSON-documenten. Een JSON-aanwijzer is een tekenreeks met tokens die door `/` tekens worden gescheiden. Hiermee worden objectsleutels of arrayindexen opgegeven. De tokens kunnen een tekenreeks of een getal zijn. JSON-aanwijzertekenreeksen worden in veel PATCH-bewerkingen voor API&#39; [!DNL Platform] s gebruikt, zoals verderop in dit document wordt beschreven. Raadpleeg de overzichtsdocumentatie [van de](https://rapidjson.org/md_doc_pointer.html)JSON-aanwijzer voor meer informatie over JSON-aanwijzer.
 
 ### Voorbeeld-JSON-schemaobject
 
@@ -78,11 +81,11 @@ JSON Pointer is een gestandaardiseerde tekenreekssyntaxis ([RFC 6901](https://to
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!Nofferte]
->Wanneer u omgaat met de `xdm:sourceProperty` en `xdm:destinationProperty` kenmerken van XDM-beschrijvingen (Experience Data Model), moeten alle `properties` sleutels worden **uitgesloten** van de JSON-aanwijzertekenreeks. Zie de subhandleiding voor ontwikkelaars van de API voor het schemaregister voor [beschrijvingen](../xdm/api/descriptors.md) voor meer informatie.
+>Wanneer u werkt met de `xdm:sourceProperty` en `xdm:destinationProperty` kenmerken van [!DNL Experience Data Model] (XDM)-descriptors, moeten alle `properties` sleutels worden **uitgesloten** van de JSON-pointer-tekenreeks. Zie de subhandleiding voor ontwikkelaars van de API voor het schemaregister voor [beschrijvingen](../xdm/api/descriptors.md) voor meer informatie.
 
 ## JSON Patch
 
-Er zijn veel PATCH-bewerkingen voor platform-API&#39;s die JSON Patch-objecten accepteren voor hun verzoek-lading. JSON Patch is een gestandaardiseerde indeling ([RFC 6902](https://tools.ietf.org/html/rfc6902)) voor het beschrijven van wijzigingen in een JSON-document. Hiermee kunt u gedeeltelijke updates voor JSON definiëren zonder dat u het gehele document in een aanvraaginstantie hoeft te verzenden.
+Er zijn veel PATCH-bewerkingen voor API&#39; [!DNL Platform] s die JSON Patch-objecten accepteren voor hun verzoek-lading. JSON Patch is een gestandaardiseerde indeling ([RFC 6902](https://tools.ietf.org/html/rfc6902)) voor het beschrijven van wijzigingen in een JSON-document. Hiermee kunt u gedeeltelijke updates voor JSON definiëren zonder dat u het gehele document in een aanvraaginstantie hoeft te verzenden.
 
 ### Voorbeeld van JSON Patch-object
 
@@ -93,7 +96,7 @@ Er zijn veel PATCH-bewerkingen voor platform-API&#39;s die JSON Patch-objecten a
 }
 ```
 
-* `op`: Het type patchbewerking. Hoewel JSON Patch verschillende verrichtingstypes steunt, zijn niet alle verrichtingen van de PATCH in Platform APIs compatibel met elk verrichtingstype. Beschikbare bewerkingstypen zijn:
+* `op`: Het type patchbewerking. Hoewel JSON Patch verschillende bewerkingstypen ondersteunt, zijn niet alle PATCH-bewerkingen in API&#39; [!DNL Platform] s compatibel met elk bewerkingstype. Beschikbare bewerkingstypen zijn:
    * `add`
    * `remove`
    * `replace`
@@ -110,4 +113,4 @@ JSON-schema is een indeling waarmee de structuur van JSON-gegevens wordt beschre
 
 ## Volgende stappen
 
-In dit document worden enkele technologieën en syntaxis geïntroduceerd die betrokken zijn bij het beheer van JSON-bronnen voor Experience Platform. Raadpleeg voor meer informatie over het werken met platform-API&#39;s, waaronder best practices en antwoorden op veelgestelde vragen, de handleiding voor het oplossen van problemen bij [platformen](troubleshooting.md).
+In dit document worden enkele technologieën en syntaxis geïntroduceerd die betrokken zijn bij het beheer van JSON-bronnen voor [!DNL Experience Platform]. Raadpleeg de handleiding voor het oplossen van problemen bij [!DNL Platform] Platforms voor meer informatie over het werken met API&#39;s, inclusief tips en trucs en antwoorden op veelgestelde vragen [](troubleshooting.md).
