@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Hulplijnen voor recept- en laptopmigratie
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '3459'
+source-wordcount: '3311'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # Hulplijnen voor recept- en laptopmigratie
 
 >[!NOTE]
->Laptops en recepten die gebruikmaken van Python/R blijven onaangetast. De migratie is alleen van toepassing op recepten en notebooks van PySpark/Spark (2.3).
+>Laptops en recepten die gebruikmaken van [!DNL Python]R blijven ongewijzigd. De migratie geldt alleen voor PySpark/[!DNL Spark] (2.3) recepten en notebooks.
 
 In de volgende handleidingen worden de stappen en informatie beschreven die nodig zijn voor het migreren van bestaande recepten en laptops.
 
@@ -24,7 +24,7 @@ In de volgende handleidingen worden de stappen en informatie beschreven die nodi
 
 ## Hulplijnen voor migratie ontvang {#recipe-migration}
 
-Recente veranderingen in de Werkruimte van de Wetenschap van Gegevens vereisen dat de bestaande recepten van de Vonk en van PySpark worden bijgewerkt. Gebruik de volgende workflows om u te helpen bij de overgang van uw recepten.
+Recente wijzigingen [!DNL Data Science Workspace] vereisen dat bestaande recepten [!DNL Spark] en PySpark worden bijgewerkt. Gebruik de volgende workflows om u te helpen bij de overgang van uw recepten.
 
 - [Gids voor parkmigratie](#spark-migration-guide)
    - [Wijzigen hoe u gegevenssets leest en schrijft](#read-write-recipe-spark)
@@ -40,17 +40,17 @@ Recente veranderingen in de Werkruimte van de Wetenschap van Gegevens vereisen d
    - [Dockerscripts voorbereiden](#pyspark-prepare-docker)
    - [recept maken met docker](#pyspark-create-recipe)
 
-## Gids voor parkmigratie {#spark-migration-guide}
+## [!DNL Spark] migratiegids {#spark-migration-guide}
 
-Het recept artefact dat door de bouwstijlstappen wordt geproduceerd is nu een beeld van de Docker dat uw .jar binair dossier bevat. Bovendien, is de syntaxis die wordt gebruikt om datasets te lezen en te schrijven gebruikend het Platform SDK veranderd en vereist u om uw receptcode te wijzigen.
+Het recept artefact dat door de bouwstijlstappen wordt geproduceerd is nu een beeld van de Docker dat uw .jar binair dossier bevat. Daarnaast is de syntaxis die wordt gebruikt voor het lezen en schrijven van gegevenssets met de [!DNL Platform] SDK gewijzigd. Hiervoor moet u de recept-code wijzigen.
 
-De volgende video wordt ontworpen om in het begrijpen van de veranderingen verder te helpen die voor de recepten van de Vonk worden vereist:
+De volgende video is ontworpen om meer inzicht te krijgen in de wijzigingen die vereist zijn voor [!DNL Spark] recepten:
 
 >[!VIDEO](https://video.tv.adobe.com/v/33243)
 
-### Gegevenssets lezen en schrijven (Spark) {#read-write-recipe-spark}
+### Gegevenssets lezen en schrijven ([!DNL Spark]) {#read-write-recipe-spark}
 
-Alvorens u het beeld van de Docker bouwt, herzie de voorbeelden voor het lezen van en het schrijven van datasets in het Platform SDK, die in de hieronder secties wordt verstrekt. Als u bestaande recepten omzet, moet uw code van Platform SDK worden bijgewerkt.
+Alvorens u het beeld van de Docker bouwt, herzie de voorbeelden voor het lezen van en het schrijven van datasets in [!DNL Platform] SDK, die in de hieronder secties wordt verstrekt. Als u bestaande recepten converteert, moet uw [!DNL Platform] SDK-code worden bijgewerkt.
 
 #### Een gegevensset lezen
 
@@ -69,7 +69,7 @@ Deze sectie schetst de veranderingen die voor het lezen van een dataset nodig zi
 
 **Nieuwe manier om een dataset te lezen**
 
-Met de updates aan de recepten van de Vonk, moet een aantal waarden worden toegevoegd en worden veranderd. Ten eerste wordt `DataSetOptions` het niet meer gebruikt. Vervangen `DataSetOptions` door `QSOption`. Daarnaast zijn nieuwe `option` parameters vereist. Zowel `QSOption.mode` als `QSOption.datasetId` zijn nodig. Tot slot `orgId` en `serviceApiKey` moeten we het veranderen in `imsOrg` en `apiKey`. Bekijk het volgende voorbeeld voor een vergelijking bij het lezen van datasets:
+Met de updates van [!DNL Spark] recepten moet een aantal waarden worden toegevoegd en gewijzigd. Ten eerste wordt `DataSetOptions` het niet meer gebruikt. Vervangen `DataSetOptions` door `QSOption`. Daarnaast zijn nieuwe `option` parameters vereist. Zowel `QSOption.mode` als `QSOption.datasetId` zijn nodig. Tot slot `orgId` en `serviceApiKey` moeten we het veranderen in `imsOrg` en `apiKey`. Bekijk het volgende voorbeeld voor een vergelijking bij het lezen van datasets:
 
 ```scala
 import com.adobe.platform.query.QSOption
@@ -103,7 +103,7 @@ df.write.format("com.adobe.platform.dataset")
 
 **Nieuwe manier om een dataset te schrijven**
 
-Met de updates aan de recepten van de Vonk, moet een aantal waarden worden toegevoegd en worden veranderd. Ten eerste wordt `DataSetOptions` het niet meer gebruikt. Vervangen `DataSetOptions` door `QSOption`. Daarnaast zijn nieuwe `option` parameters vereist. `QSOption.datasetId` is vereist en vervangt de noodzaak om de `{dataSetId}` insteekmodule te laden `.save()`. Tot slot `orgId` en `serviceApiKey` moeten we het veranderen in `imsOrg` en `apiKey`. Bekijk het volgende voorbeeld voor een vergelijking bij het schrijven van datasets:
+Met de updates van [!DNL Spark] recepten moet een aantal waarden worden toegevoegd en gewijzigd. Ten eerste wordt `DataSetOptions` het niet meer gebruikt. Vervangen `DataSetOptions` door `QSOption`. Daarnaast zijn nieuwe `option` parameters vereist. `QSOption.datasetId` is vereist en vervangt de noodzaak om de `{dataSetId}` insteekmodule te laden `.save()`. Tot slot `orgId` en `serviceApiKey` moeten we het veranderen in `imsOrg` en `apiKey`. Bekijk het volgende voorbeeld voor een vergelijking bij het schrijven van datasets:
 
 ```scala
 import com.adobe.platform.query.QSOption
@@ -116,13 +116,13 @@ df.write.format("com.adobe.platform.query")
   .save()
 ```
 
-### Op docker gebaseerde bronbestanden in pakketten (Spark) {#package-docker-spark}
+### Bronbestanden op basis van Docker-pakket ([!DNL Spark]) {#package-docker-spark}
 
 Begin door naar de directory te navigeren waar uw recept zich bevindt.
 
 In de volgende secties wordt gebruikgemaakt van het nieuwe Scala Retail Sales-recept dat u kunt vinden in de [Data Science Workspace public Github-opslagplaats](https://github.com/adobe/experience-platform-dsw-reference).
 
-### Download het voorbeeldrecept (Vonk) {#download-sample-spark}
+### Download het voorbeeldrecept ([!DNL Spark]) {#download-sample-spark}
 
 Het voorbeeldrecept bevat bestanden die naar het bestaande recept moeten worden gekopieerd. Als u de openbare Github wilt klonen die alle voorbeeldrecepten bevat, voert u het volgende in de terminal in:
 
@@ -132,7 +132,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 Het Scala-recept bevindt zich in de volgende directory `experience-platform-dsw-reference/recipes/scala/retail`.
 
-### Dockerfile toevoegen (Vonk) {#add-dockerfile-spark}
+### Dockerfile toevoegen ([!DNL Spark]) {#add-dockerfile-spark}
 
 Er is een nieuw bestand nodig in de map Recept om de op docker gebaseerde workflow te kunnen gebruiken. Kopieer en plak het Dockerbestand vanuit de map recipes in `experience-platform-dsw-reference/recipes/scala/Dockerfile`de map. U kunt desgewenst ook de onderstaande code kopiëren en plakken in een nieuw bestand met de naam `Dockerfile`.
 
@@ -145,9 +145,9 @@ FROM adobe/acp-dsw-ml-runtime-spark:0.0.1
 COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 ```
 
-### Afhankelijkheden wijzigen (Vonk) {#change-dependencies-spark}
+### Afhankelijkheden wijzigen ([!DNL Spark]) {#change-dependencies-spark}
 
-Als u een bestaand recept gebruikt, worden de veranderingen vereist in het pom.xml- dossier voor gebiedsdelen. Verander model-creatie-sdk gebiedsdeelversie in 2.0.0. Werk vervolgens de Spark-versie in het pomabestand bij naar versie 2.4.3 en de Scala-versie naar versie 2.11.12.
+Als u een bestaand recept gebruikt, worden de veranderingen vereist in het pom.xml- dossier voor gebiedsdelen. Verander model-creatie-sdk gebiedsdeelversie in 2.0.0. Werk vervolgens de [!DNL Spark] versie in het pombestand bij naar versie 2.4.3 en de Scala-versie naar versie 2.11.12.
 
 ```json
 <groupId>com.adobe.platform.ml</groupId>
@@ -156,9 +156,9 @@ Als u een bestaand recept gebruikt, worden de veranderingen vereist in het pom.x
 <classifier>jar-with-dependencies</classifier>
 ```
 
-### Uw Docker-scripts voorbereiden (Spark) {#prepare-docker-spark}
+### De Docker-scripts voorbereiden ([!DNL Spark]) {#prepare-docker-spark}
 
-De recepten van de Vonk gebruiken niet meer Binaire Artefacten en in plaats daarvan vereisen het bouwen van een beeld van de Docker. Als u dit nog niet hebt gedaan, [downloadt en installeert u Docker](https://www.docker.com/products/docker-desktop).
+[!DNL Spark] recepten gebruiken niet langer binaire artefacten en moeten een Docker-afbeelding maken. Als u dit nog niet hebt gedaan, [downloadt en installeert u Docker](https://www.docker.com/products/docker-desktop).
 
 In het meegeleverde Scala-voorbeeldrecept kunt u de scripts vinden `login.sh` en `build.sh` vinden op `experience-platform-dsw-reference/recipes/scala/` . Kopieer en plak deze bestanden in uw bestaande recept.
 
@@ -168,7 +168,7 @@ De mapstructuur moet er nu hetzelfde uitzien als in het volgende voorbeeld (nieu
 
 De volgende stap bestaat uit het volgen van de bronbestanden van het [pakket in een zelfstudie over het recept](./models-recipes/package-source-files-recipe.md) . Deze zelfstudie bevat een sectie waarin de bouw van een dockerafbeelding voor een Scala-recept (Spark) wordt beschreven. Zodra volledig, wordt u voorzien van het beeld van de Dokker in een Azure Registratie van de Container samen met het overeenkomstige beeld URL.
 
-### Een recept maken (Vonk) {#create-recipe-spark}
+### Een recept maken ([!DNL Spark]) {#create-recipe-spark}
 
 Als u een recept wilt maken, moet u eerst de zelfstudie over bronbestanden [in het](./models-recipes/package-source-files-recipe.md) pakket voltooien en de URL van de dockerafbeelding gereed hebben. U kunt een recept maken met de gebruikersinterface of API.
 
@@ -178,7 +178,7 @@ Als u het recept wilt maken met de API, volgt u de zelfstudie [voor het verpakte
 
 ## PySpark-migratiegids {#pyspark-migration-guide}
 
-Het recept artefact dat door de bouwstijlstappen wordt geproduceerd is nu een beeld van de Docker dat uw binair dossier .egg bevat. Bovendien, is de syntaxis die wordt gebruikt om datasets te lezen en te schrijven gebruikend het Platform SDK veranderd en vereist u om uw receptcode te wijzigen.
+Het recept artefact dat door de bouwstijlstappen wordt geproduceerd is nu een beeld van de Docker dat uw binair dossier .egg bevat. Daarnaast is de syntaxis die wordt gebruikt voor het lezen en schrijven van gegevenssets met de [!DNL Platform] SDK gewijzigd. Hiervoor moet u de recept-code wijzigen.
 
 De volgende video wordt ontworpen om in het begrijpen van de veranderingen verder te helpen die voor PySpark recepten worden vereist:
 
@@ -186,7 +186,7 @@ De volgende video wordt ontworpen om in het begrijpen van de veranderingen verde
 
 ### Gegevenssets lezen en schrijven (PySpark) {#pyspark-read-write}
 
-Alvorens u het beeld van de Docker bouwt, herzie de voorbeelden voor het lezen van en het schrijven van datasets in het Platform SDK, die in de hieronder secties wordt verstrekt. Als u bestaande recepten omzet, moet uw code van Platform SDK worden bijgewerkt.
+Alvorens u het beeld van de Docker bouwt, herzie de voorbeelden voor het lezen van en het schrijven van datasets in [!DNL Platform] SDK, die in de hieronder secties wordt verstrekt. Als u bestaande recepten converteert, moet uw [!DNL Platform] SDK-code worden bijgewerkt.
 
 #### Een gegevensset lezen
 
@@ -206,7 +206,7 @@ pd = spark.read.format("com.adobe.platform.dataset")
 
 **Nieuwe manier om een dataset te lezen**
 
-Met de updates aan de recepten van de Vonk, moet een aantal waarden worden toegevoegd en worden veranderd. Ten eerste wordt `DataSetOptions` het niet meer gebruikt. Vervangen `DataSetOptions` door `qs_option`. Daarnaast zijn nieuwe `option` parameters vereist. Zowel `qs_option.mode` als `qs_option.datasetId` zijn nodig. Tot slot `orgId` en `serviceApiKey` moeten we het veranderen in `imsOrg` en `apiKey`. Bekijk het volgende voorbeeld voor een vergelijking bij het lezen van datasets:
+Met de updates van [!DNL Spark] recepten moet een aantal waarden worden toegevoegd en gewijzigd. Ten eerste wordt `DataSetOptions` het niet meer gebruikt. Vervangen `DataSetOptions` door `qs_option`. Daarnaast zijn nieuwe `option` parameters vereist. Zowel `qs_option.mode` als `qs_option.datasetId` zijn nodig. Tot slot `orgId` en `serviceApiKey` moeten we het veranderen in `imsOrg` en `apiKey`. Bekijk het volgende voorbeeld voor een vergelijking bij het lezen van datasets:
 
 ```python
 qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
@@ -261,7 +261,7 @@ In dit voorbeeld wordt het nieuwe PySpark Retail Sales-recept gebruikt en is het
 
 ### Download het voorbeeldrecept (PySpark) {#pyspark-download-sample}
 
-Het voorbeeldrecept bevat bestanden die naar het bestaande recept moeten worden gekopieerd. Als u de openbare Github wilt klonen die alle voorbeeldrecepten bevat, voert u het volgende in de terminal in.
+Het voorbeeldrecept bevat bestanden die naar het bestaande recept moeten worden gekopieerd. Om het publiek te klonen [!DNL Github] dat alle steekproefrecepten bevat, ga het volgende in terminal in.
 
 ```BASH
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -311,28 +311,28 @@ Als u het recept wilt maken met de API, volgt u de zelfstudie [voor verpakte rec
 
 ## Laptopmigratiehulplijnen {#notebook-migration}
 
-Recente wijzigingen in JupyterLab-laptops vereisen dat u uw bestaande PySpark- en Spark 2.3-laptops bijwerkt naar 2.4. Met deze wijziging is JupyterLauncher bijgewerkt met nieuwe startlaptops. Voor een stapsgewijze handleiding voor het omzetten van uw laptops selecteert u een van de volgende hulplijnen:
+Recente wijzigingen in [!DNL JupyterLab] laptops vereisen dat u uw bestaande PySpark- en [!DNL Spark] 2.3-laptops bijwerkt naar 2.4. Met deze wijziging [!DNL JupyterLab Launcher] is deze versie bijgewerkt met nieuwe startlaptops. Voor een stapsgewijze handleiding voor het omzetten van uw laptops selecteert u een van de volgende hulplijnen:
 
 - [PySpark 2.3 tot 2.4-migratiegids](#pyspark-notebook-migration)
 - [Spark 2.3 aan Vonk 2.4 (Scala) migratiegids](#spark-notebook-migration)
 
-De volgende video is ontworpen om meer inzicht te krijgen in de wijzigingen die vereist zijn voor JupyterLab-laptops:
+De volgende video is ontworpen om meer inzicht te krijgen in de wijzigingen die vereist zijn voor [!DNL JupyterLab Notebooks]:
 
 >[!VIDEO](https://video.tv.adobe.com/v/33444?quality=12&learn=on)
 
 ## PySpark 2.3 tot 2.4 laptopmigratiehandleiding {#pyspark-notebook-migration}
 
-Met de introductie van PySpark 2.4 in JupyterLab-laptops gebruiken nieuwe Python-laptops met PySpark 2.4 nu de Python 3-kernel in plaats van de PySpark 3-kernel. Dit betekent bestaande code die op PySpark 2.3 loopt niet in PySpark 2.4 wordt gesteund.
+Met de introductie van PySpark 2.4 aan [!DNL JupyterLab Notebooks], gebruiken de nieuwe [!DNL Python] laptops met PySpark 2.4 nu de [!DNL Python] 3 kernel in plaats van PySpark 3 kernel. Dit betekent bestaande code die op PySpark 2.3 loopt niet in PySpark 2.4 wordt gesteund.
 
 >[!IMPORTANT] PySpark 2.3 is afgekeurd en ingesteld om in een volgende versie te worden verwijderd. Alle bestaande voorbeelden worden geplaatst om met PySpark 2.4 voorbeelden worden vervangen.
 
-Volg de onderstaande voorbeelden om uw bestaande PySpark 3 (Spark 2.3)-laptops om te zetten in Spark 2.4:
+Volg de onderstaande voorbeelden om uw bestaande PySpark 3 ([!DNL Spark] 2.3)-laptops om te zetten in [!DNL Spark] 2.4:
 
 ### Kernel
 
-PySpark 3 (Spark 2.4) notebooks gebruiken de Python 3 Kernel in plaats van de afgekeurde PySpark kernel die in PySpark 3 (Spark 2.3 - afgekeurd) notebooks wordt gebruikt.
+PySpark 3 ([!DNL Spark] 2.4) notebooks gebruiken de Python 3 Kernel in plaats van de afgekeurde PySpark kernel die in PySpark 3 (Spark 2.3 - afgekeurd) notebooks wordt gebruikt.
 
-Als u de kernel in de JupyterLab-gebruikersinterface wilt bevestigen of wijzigen, selecteert u de kernelknop in de rechterbovennavigatiebalk van uw laptop. Als u een van de vooraf gedefinieerde laptops voor startprogramma&#39;s gebruikt, wordt de kernel vooraf geselecteerd. In het onderstaande voorbeeld wordt de *startfunctie van de PySpark 3 (Spark 2.4)-laptop* gebruikt.
+Als u de kernel in de [!DNL JupyterLab] gebruikersinterface wilt bevestigen of wijzigen, selecteert u de kernelknop in de rechterbovennavigatiebalk van uw laptop. Als u een van de vooraf gedefinieerde laptops voor startprogramma&#39;s gebruikt, wordt de kernel vooraf geselecteerd. In het onderstaande voorbeeld wordt de startfunctie van de PySpark 3 ([!DNL Spark] 2.4)- *aggregatielaptop* gebruikt.
 
 ![controlekernel](./images/migration/pyspark-migration/check-kernel.png)
 
@@ -342,18 +342,18 @@ Als u het vervolgkeuzemenu selecteert, wordt een lijst met beschikbare kernels g
 
 ![kerneldropdown](./images/migration/pyspark-migration/select-kernel.png)
 
-Voor PySpark 3 (Spark 2.4) notebooks, selecteer de Python 3 kernel en bevestig door op de **Select** knoop te klikken.
+Selecteer voor PySpark 3 ([!DNL Spark] 2.4)-laptops de Python 3-kernel en klik op de knop **Selecteren** om dit te bevestigen.
 
 ![kernel bevestigen](./images/migration/pyspark-migration/confirm-kernel.png)
 
 ## sparkSession initialiseren
 
-Alle laptops van de Vonk 2.4 vereisen dat u de zitting met de nieuwe boilerplate code initialiseert.
+Alle [!DNL Spark] 2.4 laptops vereisen dat u de zitting met de nieuwe boilerplate code initialiseert.
 
 <table>
   <th>Laptop</th>
-  <th>PySpark 3 (Spark 2.3 - afgekeurd)</th>
-  <th>PySpark 3 (Spark 2.4)</th>
+  <th>PySpark 3 ([!DNL Spark] 2.3 - afgekeurd)</th>
+  <th>PySpark 3 ([!DNL Spark] 2.4)</th>
   <tr>
   <th>Kernel</th>
   <td align="center">PySpark 3</td>
@@ -363,7 +363,7 @@ Alle laptops van de Vonk 2.4 vereisen dat u de zitting met de nieuwe boilerplate
   <th>Code</th>
   <td>
   <pre class="JSON language-JSON hljs">
-  vonk
+  [!DNL spark]
 </pre>
   </td>
   <td>
@@ -374,7 +374,7 @@ van pyspark.sql import SparkSessionspark = SparkSession.builder.getOrCreate()
   </tr>
 </table>
 
-De volgende beelden benadrukken de verschillen in configuratie voor PySpark 2.3 en PySpark 2.4. In dit voorbeeld worden de *Startlaptops voor aggregatie* gebruikt die in JupyterLauncher zijn meegeleverd.
+De volgende beelden benadrukken de verschillen in configuratie voor PySpark 2.3 en PySpark 2.4. In dit voorbeeld worden de *aggregatie* -startlaptops gebruikt die in [!DNL JupyterLab Launcher].
 
 **Voorbeeld van configuratie voor 2.3 (afgekeurd)**
 
@@ -386,7 +386,7 @@ De volgende beelden benadrukken de verschillen in configuratie voor PySpark 2.3 
 
 ## Maken van %dataset gebruiken {#magic}
 
-Met de introductie van Spark 2.4 wordt `%dataset` aangepaste magie geleverd voor gebruik in nieuwe PySpark 3 (Spark 2.4) notebooks (Python 3 kernel).
+Met de introductie van [!DNL Spark] 2.4 wordt `%dataset` aangepaste magie geleverd voor gebruik in nieuwe PySpark 3 ([!DNL Spark] 2.4) notebooks ([!DNL Python] 3 kernel).
 
 **Gebruik**
 
@@ -394,7 +394,7 @@ Met de introductie van Spark 2.4 wordt `%dataset` aangepaste magie geleverd voor
 
 **Beschrijving**
 
-Een toveropdracht voor aangepaste Data Science Workspace voor het lezen of schrijven van een gegevensset van een Python-laptop (Python 3-kernel).
+Een aangepaste opdracht voor het [!DNL Data Science Workspace] schrijven of lezen van een gegevensset van een [!DNL Python] laptop ([!DNL Python] 3 kernel).
 
 - **{action}**: Het type van actie op de dataset uit te voeren. Er zijn twee handelingen beschikbaar: &quot;read&quot; of &quot;write&quot;.
 - **—datasetId {id}**: Gebruikt om identiteitskaart van de dataset te leveren om te lezen of te schrijven. Dit is een verplicht argument.
@@ -410,9 +410,9 @@ Een toveropdracht voor aangepaste Data Science Workspace voor het lezen of schri
 
 ## Laden in een dataframe in LocalContext
 
-Met de introductie van Spark 2.4 wordt [`%dataset`](#magic) aangepaste magie geleverd. In het volgende voorbeeld worden de belangrijkste verschillen voor het laden van dataframe in de laptops PySpark (Spark 2.3) en PySpark (Spark 2.4) gemarkeerd:
+Met de introductie van [!DNL Spark] 2.4 wordt [`%dataset`](#magic) aangepaste magie geleverd. In het volgende voorbeeld worden de belangrijkste verschillen voor het laden van dataframe in PySpark ([!DNL Spark] 2.3) en PySpark ([!DNL Spark] 2.4) notebooks gemarkeerd:
 
-**Gebruikend PySpark 3 (Vonk 2.3 - afgekeurd) - PySpark 3 Kernel**
+**Gebruikend PySpark 3 ([!DNL Spark]2.3 - afgekeurd) - PySpark 3 Kernel**
 
 ```python
 dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
@@ -421,7 +421,7 @@ pd0 = spark.read.format("com.adobe.platform.dataset")
   .load("5e68141134492718af974844")
 ```
 
-**Werken met PySpark 3 (Spark 2.4) - Python 3 Kernel**
+**Werken met PySpark 3 ([!DNL Spark]2.4) - Python 3 Kernel**
 
 ```python
 %dataset read --datasetId 5e68141134492718af974844 --dataFrame pd0
@@ -430,9 +430,9 @@ pd0 = spark.read.format("com.adobe.platform.dataset")
 | Element | Beschrijving |
 | ------- | ----------- |
 | pd0 | Naam van dataframe van pandas dat moet worden gebruikt of gemaakt. |
-| [%dataset](#magic) | Aangepaste magie voor gegevenstoegang in Python3-kernel. |
+| [%dataset](#magic) | Aangepaste magie voor gegevenstoegang in [!DNL Python] 3 kernel. |
 
-De volgende beelden benadrukken de belangrijkste verschillen in ladingsgegevens voor PySpark 2.3 en PySpark 2.4. In dit voorbeeld worden de *Startlaptops voor aggregatie* gebruikt die in JupyterLauncher zijn meegeleverd.
+De volgende beelden benadrukken de belangrijkste verschillen in ladingsgegevens voor PySpark 2.3 en PySpark 2.4. In dit voorbeeld worden de *aggregatie* -startlaptops gebruikt die in [!DNL JupyterLab Launcher].
 
 **Gegevens laden in PySpark 2.3 (Luminagegegevensset) - afgekeurd**
 
@@ -444,25 +444,25 @@ Met PySpark 3 (Vonk 2.4) `sc = spark.sparkContext` wordt bepaald in lading.
 
 ![Laden 1](./images/migration/pyspark-migration/2.4-load.png)
 
-**Gegevens van het Cloud Platform laden in PySpark 2.3 - verouderd**
+**Gegevens laden[!DNL Experience Cloud Platform]in PySpark 2.3 - afgekeurd**
 
 ![Laden 2](./images/migration/pyspark-migration/2.3-load-alt.png)
 
-**Gegevens van het Cloud Platform laden in PySpark 2.4**
+**Gegevens laden[!DNL Experience Cloud Platform]in PySpark 2.4**
 
-Met PySpark 3 (Vonk 2.4) te hoeven `org_id` en `dataset_id` niet meer worden bepaald. Bovendien `df = spark.read.format` is deze vervangen door een aangepaste magie [`%dataset`](#magic) om het lezen en schrijven van datasets te vereenvoudigen.
+Met PySpark 3 ([!DNL Spark] 2.4) hoeven de `org_id` en `dataset_id` niet langer te worden gedefinieerd. Bovendien `df = spark.read.format` is deze vervangen door een aangepaste magie [`%dataset`](#magic) om het lezen en schrijven van datasets te vereenvoudigen.
 
 ![Laden 2](./images/migration/pyspark-migration/2.4-load-alt.png)
 
 | Element | beschrijving |
 | ------- | ----------- |
-| [%dataset](#magic) | Aangepaste magie voor gegevenstoegang in Python3-kernel. |
+| [%dataset](#magic) | Aangepaste magie voor gegevenstoegang in [!DNL Python] 3 kernel. |
 
 >[!TIP] —mode kan aan `interactive` of worden geplaatst `batch`. De standaardwaarde voor —mode is `interactive`. Het wordt aanbevolen de `batch` modus te gebruiken wanneer u grote hoeveelheden gegevens leest.
 
 ## Een lokaal dataframe maken
 
-Met PySpark 3 (Spark 2.4) wordt `%%` sparkmagic niet meer ondersteund. De volgende bewerkingen kunnen niet meer worden gebruikt:
+Met PySpark 3 ([!DNL Spark] 2.4) wordt `%%` sparkmagic niet meer ondersteund. De volgende bewerkingen kunnen niet meer worden gebruikt:
 
 - `%%help`
 - `%%info`
@@ -475,12 +475,12 @@ In de volgende tabel worden de wijzigingen beschreven die nodig zijn om `%%sql` 
 
 <table>
   <th>Laptop</th>
-  <th>PySpark 3 (Spark 2.3 - afgekeurd)</th>
-  <th>PySpark 3 (Spark 2.4)</th>
+  <th>PySpark 3 ([!DNL Spark] 2.3 - afgekeurd)</th>
+  <th>PySpark 3 ([!DNL Spark] 2.4)</th>
   <tr>
   <th>Kernel</th>
   <td align="center">PySpark 3</td>
-  <td align="center">Python 3</td>
+  <td align="center">[!DNL Python] 3</td>
   </tr>
   <tr>
   <th>Code</th>
@@ -513,7 +513,7 @@ sample_df = df.sample(breuk)
 
 >[!TIP] U kunt ook een optioneel zaadmonster opgeven, zoals een booleaan met Vervanging, een dubbele fractie of een lang zaadmonster.
 
-De volgende beelden benadrukken de belangrijkste verschillen voor het creëren van een lokaal dataframe in PySpark 2.3 en PySpark 2.4. In dit voorbeeld worden de *Startlaptops voor aggregatie* gebruikt die in JupyterLauncher zijn meegeleverd.
+De volgende beelden benadrukken de belangrijkste verschillen voor het creëren van een lokaal dataframe in PySpark 2.3 en PySpark 2.4. In dit voorbeeld worden de *aggregatie* -startlaptops gebruikt die in [!DNL JupyterLab Launcher].
 
 **Lokaal dataframe PySpark 2.3 maken - afgekeurd**
 
@@ -521,15 +521,15 @@ De volgende beelden benadrukken de belangrijkste verschillen voor het creëren v
 
 **Lokaal dataframe PySpark 2.4 maken**
 
-Met PySpark 3 (Spark 2.4) wordt `%%sql` Sparkmagic niet meer ondersteund en is vervangen door:
+Met PySpark 3 ([!DNL Spark] 2.4) wordt `%%sql` Sparkmagic niet meer ondersteund en is vervangen door:
 
 ![dataframe 2](./images/migration/pyspark-migration/2.4-dataframe.png)
 
 ## Schrijven naar een gegevensset
 
-Met de introductie van Spark 2.4 wordt [`%dataset`](#magic) aangepaste magie geleverd die het schrijven van datasets schoner maakt. Om aan een dataset te schrijven, gebruik het volgende voorbeeld van de Vonk 2.4:
+Met de introductie van [!DNL Spark] 2.4 wordt [`%dataset`](#magic) aangepaste magie geleverd die het schrijven van datasets schoner maakt. Om aan een dataset te schrijven, gebruik het volgende 2.4 voorbeeld: [!DNL Spark]
 
-**Gebruikend PySpark 3 (Vonk 2.3 - afgekeurd) - PySpark 3 Kernel**
+**Gebruikend PySpark 3 ([!DNL Spark]2.3 - afgekeurd) - PySpark 3 Kernel**
 
 ```python
 userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")
@@ -546,7 +546,7 @@ pd0.write.format("com.adobe.platform.dataset")
   .save("5e68141134492718af974844")
 ```
 
-**Werken met PySpark 3 (Spark 2.4) - Python 3 Kernel**
+**PySpark 3 gebruiken ([!DNL Spark]2.4) -[!DNL Python]3 Kernel**
 
 ```python
 %dataset write --datasetId 5e68141134492718af974844 --dataFrame pd0
@@ -557,35 +557,35 @@ pd0.show(10, False)
 | Element | beschrijving |
 | ------- | ----------- |
 | pd0 | Naam van dataframe van pandas dat moet worden gebruikt of gemaakt. |
-| [%dataset](#magic) | Aangepaste magie voor gegevenstoegang in Python3-kernel. |
+| [%dataset](#magic) | Aangepaste magie voor gegevenstoegang in [!DNL Python] 3 kernel. |
 
 >[!TIP] —mode kan aan `interactive` of worden geplaatst `batch`. De standaardwaarde voor —mode is `interactive`. Het wordt aanbevolen de `batch` modus te gebruiken wanneer u grote hoeveelheden gegevens leest.
 
-De volgende beelden benadrukken de belangrijkste verschillen voor het schrijven van gegevens terug naar Platform in PySpark 2.3 en PySpark 2.4. In dit voorbeeld worden de *Startlaptops voor aggregatie* gebruikt die in JupyterLauncher zijn meegeleverd.
+De volgende beelden benadrukken de belangrijkste verschillen voor het schrijven van gegevens terug naar [!DNL Platform] in PySpark 2.3 en PySpark 2.4. In dit voorbeeld worden de *aggregatie* -startlaptops gebruikt die in [!DNL JupyterLab Launcher].
 
-**Gegevens terugschrijven naar Platform PySpark 2.3 - afgekeurd**
+**Gegevens terugschrijven naar[!DNL Platform]PySpark 2.3 - afgekeurd**
 
 ![dataframe 1](./images/migration/pyspark-migration/2.3-write.png)![dataframe 1](./images/migration/pyspark-migration/2.3-write-2.png)![dataframe 1](./images/migration/pyspark-migration/2.3-write-3.png)
 
-**Gegevens terugschrijven naar Platform PySpark 2.4**
+**Gegevens terugschrijven naar[!DNL Platform]PySpark 2.4**
 
-Met PySpark 3 (Vonk 2.4) verwijdert de `%dataset` douanemagie de behoefte om waarden zoals `userToken`, `serviceToken`, `serviceApiKey`, en `.option`te bepalen. Bovendien hoeft `orgId` niet langer te worden gedefinieerd.
+Met PySpark 3 ([!DNL Spark] 2.4) verwijdert de `%dataset` douanemagie de behoefte om waarden zoals `userToken`, `serviceToken`, `serviceApiKey`, en `.option`te bepalen. Bovendien hoeft `orgId` niet langer te worden gedefinieerd.
 
 ![dataframe 2](./images/migration/pyspark-migration/2.4-write.png)![dataframe 2](./images/migration/pyspark-migration/2.4-write-2.png)
 
-## Gids voor migratie van Spark 2.3 naar Spark 2.4 (Scala)-laptops {#spark-notebook-migration}
+## [!DNL Spark] 2.3 tot [!DNL Spark] 2.4 (Scala) handleiding voor migratie van laptops {#spark-notebook-migration}
 
-Met de introductie van Vonk 2.4 aan JupyterLab Blocbooks, gebruiken de bestaande laptops van de Vonk (Vonk 2.3) nu de pit Scala in plaats van de pit van de Vonk. Dit betekent de bestaande code die op Vonk loopt (Vonk 2.3) wordt niet gesteund in Scala (Vonk 2.4). Bovendien zouden alle nieuwe laptops van de Vonk Scala (Vonk 2.4) in de lancering JupyterLab moeten gebruiken.
+Met de introductie van [!DNL Spark] 2,4 naar [!DNL JupyterLab Notebooks], gebruiken bestaande [!DNL Spark] ([!DNL Spark] 2,3) notebooks nu de Scala kernel in plaats van de [!DNL Spark] kernel. Dit betekent dat bestaande code die wordt uitgevoerd op [!DNL Spark] ([!DNL Spark] 2.3) niet wordt ondersteund in Scala ([!DNL Spark] 2.4). Bovendien moeten alle nieuwe [!DNL Spark] laptops gebruikmaken van Scala ([!DNL Spark] 2.4) in de [!DNL JupyterLab Launcher].
 
->[!IMPORTANT] De Vonk (Vonk 2.3) wordt afgekeurd en geplaatst om in een verdere versie worden verwijderd. Alle bestaande voorbeelden moeten worden vervangen door Scala-voorbeelden (Spark 2.4).
+>[!IMPORTANT] [!DNL Spark] ([!DNL Spark] 2.3) is afgekeurd en is ingesteld om in een volgende versie te worden verwijderd. Alle bestaande voorbeelden worden vervangen door Scala-voorbeelden ([!DNL Spark] 2.4).
 
-Volg de onderstaande voorbeelden om uw bestaande Spark-laptops (Spark 2.3) om te zetten in Scala (Spark 2.4):
+Volg de onderstaande voorbeelden om uw bestaande [!DNL Spark] ([!DNL Spark] 2.3) laptops om te zetten in Scala ([!DNL Spark] 2.4):
 
 ## Kernel
 
-Scala-laptops (Spark 2.4) gebruiken de Scala Kernel in plaats van de afgekeurde Spark-kernel die in Spark-laptops (Spark 2.3 - afgekeurd) wordt gebruikt.
+Scala-laptops (Spark 2.4) gebruiken de Scala Kernel in plaats van de afgekeurde [!DNL Spark] kernel die wordt gebruikt in laptops [!DNL Spark] ([!DNL Spark] 2.3 - afgekeurd).
 
-Als u de kernel in de JupyterLab-gebruikersinterface wilt bevestigen of wijzigen, selecteert u de kernelknop in de rechterbovennavigatiebalk van uw laptop. Het pop-upvenster *Selecteren van* ernel wordt weergegeven. Als u een van de vooraf gedefinieerde laptops voor startprogramma&#39;s gebruikt, wordt de kernel vooraf geselecteerd. In het onderstaande voorbeeld wordt de Scala *Clustering* -laptop in JupyterLab Launcher gebruikt.
+Als u de kernel in de [!DNL JupyterLab] gebruikersinterface wilt bevestigen of wijzigen, selecteert u de kernelknop in de rechterbovennavigatiebalk van uw laptop. Het pop-upvenster *Selecteren van* ernel wordt weergegeven. Als u een van de vooraf gedefinieerde laptops voor startprogramma&#39;s gebruikt, wordt de kernel vooraf geselecteerd. In het onderstaande voorbeeld wordt de Scala *Clustering* -laptop in gebruikt [!DNL JupyterLab Launcher].
 
 ![controlekernel](./images/migration/spark-scala/scala-kernel.png)
 
@@ -601,15 +601,15 @@ Voor Scala-laptops (Spark 2.4) selecteert u de Scala-kernel en klikt u op de kno
 
 ## SparkSession initialiseren {#initialize-sparksession-scala}
 
-Alle Scala-laptops (Spark 2.4) vereisen dat u de sessie initialiseert met de volgende bouwsteencode:
+Alle Scala-laptops ([!DNL Spark] 2.4) vereisen dat u de sessie initialiseert met de volgende bouwsteencode:
 
 <table>
   <th>Laptop</th>
-  <th>Vonk (Vonk 2.3 - afgekeurd)</th>
-  <th>Scala (park 2.4)</th>
+  <th>Vonk ([!DNL Spark] 2.3 - afgekeurd)</th>
+  <th>Scala ([!DNL Spark] 2.4)</th>
   <tr>
   <th>Kernel</th>
-  <td align="center">Spark</td>
+  <td align="center">[!DNL Spark]</td>
   <td align="center">Scala</td>
   </tr>
   <tr>
@@ -625,21 +625,21 @@ import org.apache.spark.sql.{ SparkSession} val spark = SparkSession.builder() .
   </tr>
 </table>
 
-Het beeld Scala (Vonk 2.4) benadrukt hieronder het zeer belangrijke verschil in het initialiseren van sparkSession met de kernel van de Vonk 2.3 en Spark 2.4 Scala. In dit voorbeeld worden de *Clustering* -startlaptops gebruikt die in JupyterLauncher zijn meegeleverd.
+De afbeelding Scala ([!DNL Spark] 2.4) hieronder markeert het belangrijkste verschil in het initialiseren van sparkSession met de [!DNL Spark] 2.3 [!DNL Spark] -kernel en [!DNL Spark] 2.4 Scala-kernel. In dit voorbeeld worden de *Clustering* -startlaptops gebruikt die in [!DNL JupyterLab Launcher].
 
-**Vonk (Vonk 2.3 - afgekeurd)**
+**[!DNL Spark]([!DNL Spark]2.3 - afgekeurd)**
 
-De vonk (Vonk 2.3 - afgekeurd) gebruikt de pit van de Vonk, en daarom werd u niet vereist om Vonk te bepalen.
+[!DNL Spark] ([!DNL Spark] 2.3 - afgekeurd) gebruikt de [!DNL Spark] kernel, en daarom was u niet verplicht te bepalen [!DNL Spark].
 
-**Scala (park 2.4)**
+**Scala ([!DNL Spark]2.4)**
 
-Het gebruiken van Vonk 2.4 met Scala kernel vereist dat u bepaalt `val spark` en invoert `SparkSesson` om te lezen of te schrijven:
+Als u [!DNL Spark] 2.4 gebruikt met de Scala-kernel, moet u definiëren `val spark` en importeren `SparkSesson` om te lezen of te schrijven:
 
 ![vonken importeren en definiëren](./images/migration/spark-scala/start-session.png)
 
 ## Query-gegevens
 
-Met Scala (Spark 2.4) wordt `%%` sparkmagic niet meer ondersteund. De volgende bewerkingen kunnen niet meer worden gebruikt:
+Met Scala ([!DNL Spark] 2.4) wordt `%%` sparkmagic niet meer ondersteund. De volgende bewerkingen kunnen niet meer worden gebruikt:
 
 - `%%help`
 - `%%info`
@@ -652,11 +652,11 @@ In de volgende tabel worden de wijzigingen beschreven die nodig zijn om `%%sql` 
 
 <table>
   <th>Laptop</th>
-  <th>Vonk (Vonk 2.3 - afgekeurd)</th>
-  <th>Scala (park 2.4)</th>
+  <th>[!DNL Spark] ([!DNL Spark] 2.3 - afgekeurd)</th>
+  <th>Scala ([!DNL Spark] 2.4)</th>
   <tr>
   <th>Kernel</th>
-  <td align="center">Spark</td>
+  <td align="center">[!DNL Spark]</td>
   <td align="center">Scala</td>
   </tr>
   <tr>
@@ -691,15 +691,15 @@ val sample_df = df.sample(fraction) </pre>
    </tr>
 </table>
 
-Het beeld Scala (Vonk 2.4) benadrukt hieronder de zeer belangrijke verschillen in het maken van vragen met de kernel van de Vonk 2.3 en Spark 2.4 Scala. In dit voorbeeld worden de *Clustering* -startlaptops gebruikt die in JupyterLauncher zijn meegeleverd.
+De afbeelding Scala ([!DNL Spark] 2.4) hieronder benadrukt de belangrijkste verschillen in het maken van vragen met de [!DNL Spark] 2.3 [!DNL Spark] kernel en Spark 2.4 Scala kernel. In dit voorbeeld worden de *Clustering* -startlaptops gebruikt die in [!DNL JupyterLab Launcher].
 
-**Vonk (Vonk 2.3 - afgekeurd)**
+**[!DNL Spark]([!DNL Spark]2.3 - afgekeurd)**
 
-De Spark-laptop (Spark 2.3 - afgekeurd) gebruikt de Spark-kernel. De Spark-kernel ondersteunt en gebruikt `%%sql` sparkmagic.
+De [!DNL Spark] ([!DNL Spark] 2,3 - afgekeurd) laptop gebruikt de [!DNL Spark] kernel. De [!DNL Spark] kernel ondersteunt en gebruikt `%%sql` sparkmagic.
 
 ![](./images/migration/spark-scala/sql-2.3.png)
 
-**Scala (park 2.4)**
+**Scala ([!DNL Spark]2.4)**
 
 De Scala-kernel ondersteunt geen `%%sql` magie meer. Bestaande magische code moet worden omgezet.
 
@@ -707,9 +707,9 @@ De Scala-kernel ondersteunt geen `%%sql` magie meer. Bestaande magische code moe
 
 ## Een gegevensset lezen {#notebook-read-dataset-spark}
 
-In Vonk 2.3 moest u variabelen bepalen voor `option` waarden die worden gebruikt om gegevens te lezen of de ruwe waarden in de codecel te gebruiken. In Scala, kunt u gebruiken `sys.env("PYDASDK_IMS_USER_TOKEN")` om een waarde te verklaren en terug te keren, elimineert dit de behoefte om variabelen zoals `var userToken`te bepalen. In het Scala (Vonk 2.4) voorbeeld hieronder, `sys.env` wordt gebruikt om alle vereiste waarden te bepalen en terug te keren nodig voor het lezen van een dataset.
+In [!DNL Spark] 2.3 moest u variabelen definiëren voor `option` waarden die worden gebruikt om gegevens te lezen of de onbewerkte waarden in de codecel te gebruiken. In Scala, kunt u gebruiken `sys.env("PYDASDK_IMS_USER_TOKEN")` om een waarde te verklaren en terug te keren, elimineert dit de behoefte om variabelen zoals `var userToken`te bepalen. In het Scala (Vonk 2.4) voorbeeld hieronder, `sys.env` wordt gebruikt om alle vereiste waarden te bepalen en terug te keren nodig voor het lezen van een dataset.
 
-**Gebruikend Vonk (Vonk 2.3 - verouderd) - de Kernel van de Vonk**
+**Gebruikt[!DNL Spark]([!DNL Spark]2.3 - afgekeurd) -[!DNL Spark]Kernel**
 
 ```scala
 import com.adobe.platform.dataset.DataSetOptions
@@ -719,7 +719,7 @@ var df1 = spark.read.format("com.adobe.platform.dataset")
   .load("5e68141134492718af974844")
 ```
 
-**Scala gebruiken (Vonk 2.4) - Scala Kernel**
+**Scala ([!DNL Spark]2.4) gebruiken - Scala Kernel**
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -742,17 +742,17 @@ val df1 = spark.read.format("com.adobe.platform.query")
 | ims-org | Uw ims-org-id die automatisch wordt opgehaald met `sys.env("IMS_ORG_ID")`. |
 | api-toets | De api-sleutel die automatisch wordt opgehaald met `sys.env("PYDASDK_IMS_CLIENT_ID")`. |
 
-De beelden hieronder benadrukken de belangrijkste verschillen in ladingsgegevens met Vonk 2.3 en Vonk 2.4. In dit voorbeeld worden de *Clustering* -startlaptops gebruikt die in JupyterLauncher zijn meegeleverd.
+In de onderstaande afbeeldingen worden de belangrijkste verschillen in het laden van gegevens met de [!DNL Spark] 2.3 en [!DNL Spark] 2.4 benadrukt. In dit voorbeeld worden de *Clustering* -startlaptops gebruikt die in [!DNL JupyterLab Launcher].
 
-**Vonk (Vonk 2.3 - afgekeurd)**
+**[!DNL Spark]([!DNL Spark]2.3 - afgekeurd)**
 
-De Spark-laptop (Spark 2.3 - afgekeurd) gebruikt de Spark-kernel. De volgende twee cellen tonen een voorbeeld van het laden van de gegevensset met een opgegeven id voor de gegevensset in het datumbereik (2019-3-21, 2019-3-29).
+De [!DNL Spark] ([!DNL Spark] 2,3 - afgekeurd) laptop gebruikt de [!DNL Spark] kernel. De volgende twee cellen tonen een voorbeeld van het laden van de gegevensset met een opgegeven id voor de gegevensset in het datumbereik (2019-3-21, 2019-3-29).
 
 ![vonk 2.3 laden](./images/migration/spark-scala/load-2.3.png)
 
-**Scala (park 2.4)**
+**Scala ([!DNL Spark]2.4)**
 
-De Scala-laptop (Spark 2.4) gebruikt de Scala-kernel, waarvoor bij de installatie meer waarden nodig zijn, zoals in de eerste codecel is gemarkeerd. Daarnaast `var mdata` moeten er meer `option` waarden worden ingevuld. In dit notitieboek, is de eerder vermelde code voor het [initialiseren van SparkSession](#initialize-sparksession-scala) inbegrepen binnen de `var mdata` codecel.
+De Scala-laptop ([!DNL Spark] 2.4) gebruikt de Scala-kernel die bij de installatie meer waarden vereist, zoals gemarkeerd in de eerste codecel. Daarnaast `var mdata` moeten er meer `option` waarden worden ingevuld. In dit notitieboek, is de eerder vermelde code voor het [initialiseren van SparkSession](#initialize-sparksession-scala) inbegrepen binnen de `var mdata` codecel.
 
 ![vonk 2.4 laden](./images/migration/spark-scala/load-2.4.png)
 
@@ -766,7 +766,7 @@ De Scala-laptop (Spark 2.4) gebruikt de Scala-kernel, waarvoor bij de installati
 
 Net als bij het [lezen van een gegevensset](#notebook-read-dataset-spark), vereist het schrijven naar een gegevensset extra `option` waarden die in het onderstaande voorbeeld worden beschreven. In Scala, kunt u gebruiken `sys.env("PYDASDK_IMS_USER_TOKEN")` om een waarde te verklaren en terug te keren, elimineert dit de behoefte om variabelen zoals `var userToken`te bepalen. In het Scala voorbeeld hieronder, `sys.env` wordt gebruikt om alle vereiste waarden te bepalen en terug te keren nodig om aan een dataset te schrijven.
 
-**Gebruikend Vonk (Vonk 2.3 - verouderd) - de Kernel van de Vonk**
+**Gebruikt[!DNL Spark]([!DNL Spark]2.3 - afgekeurd) -[!DNL Spark]Kernel**
 
 ```scala
 import com.adobe.platform.dataset.DataSetOptions
@@ -783,7 +783,7 @@ df1.write.format("com.adobe.platform.dataset")
   .save("5e68141134492718af974844")
 ```
 
-**Scala gebruiken (Vonk 2.4) - Scala Kernel**
+**Scala ([!DNL Spark]2.4) gebruiken - Scala Kernel**
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
