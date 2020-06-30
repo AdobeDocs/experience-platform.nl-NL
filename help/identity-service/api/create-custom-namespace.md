@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Een aangepaste naamruimte maken
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 2%
 
 ---
 
 
 # Een aangepaste naamruimte maken
 
-Met de API Naamruimte-id kunt u een naamruimte voor een aangepaste identiteit maken die alleen voor uw organisatie beschikbaar is.
+Met behulp van de [!DNL Identity Namespace] API kunt u een naamruimte voor een aangepaste identiteit maken die alleen voor uw organisatie beschikbaar is.
 
 Raadpleeg [de documentatie](../troubleshooting-guide.md)bij Identiteitsservice voor aanbevelingen over het maken van aangepaste naamruimten.
 
