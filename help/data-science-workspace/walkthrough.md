@@ -4,19 +4,22 @@ solution: Experience Platform
 title: Analyse van de Data Science Workspace
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '1638'
+ht-degree: 0%
 
 ---
 
 
-# Analyse van de Data Science Workspace
+# [!DNL Data Science Workspace] wandelpad
 
-Dit document biedt een analyse van de Data Science Workspace van het Adobe Experience Platform. We gaan specifiek over de algemene werkstroom die een wetenschapper zou doorlopen om een probleem op te lossen door middel van machinaal leren.
+Dit document verstrekt een analyse voor Adobe Experience Platform [!DNL Data Science Workspace]. We gaan specifiek over de algemene werkstroom die een wetenschapper zou doorlopen om een probleem op te lossen door middel van machinaal leren.
 
 ## Vereisten
 
-- Een geregistreerd Adobe-id-account
-   - Het Adobe-id-account moet zijn toegevoegd aan een organisatie met toegang tot het Adobe Experience Platform en de Data Science Workspace
+- Een geregistreerde Adobe ID-account
+   - De Adobe ID-account moet zijn toegevoegd aan een organisatie die toegang heeft tot Adobe Experience Platform en de [!DNL Data Science Workspace]
 
 ## Motivering van de wetenschapper
 
@@ -26,22 +29,22 @@ Een detailhandelaar staat voor vele uitdagingen om concurrerend te blijven op de
 
 De oplossing van een wetenschapper op het gebied van gegevens is het benutten van de rijkdom aan historische gegevens waartoe een detailhandelaar toegang heeft, het voorspellen van toekomstige trends en het optimaliseren van prijsbeslissingen. We gebruiken oude verkoopgegevens om ons model voor machinaal leren op te leiden en het model te gebruiken om toekomstige verkooptrends te voorspellen. Hierdoor zal de detailhandelaar inzichten kunnen hebben om hen te helpen bij het maken van prijswijzigingen.
 
-In dit overzicht gaan we door de stappen die een data wetenschapper zou doorlopen om een dataset te nemen en een model te creëren om wekelijkse verkopen te voorspellen. We zullen de volgende secties doornemen in het voorbeeldnotebook voor detailhandel op de Data Science Workspace van het Adobe Experience Platform:
+In dit overzicht gaan we door de stappen die een data wetenschapper zou doorlopen om een dataset te nemen en een model te creëren om wekelijkse verkopen te voorspellen. We zullen de volgende secties doornemen in het voorbeeldnotebook voor de detailhandel op Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Instellen](#setup)
 - [Gegevens verkennen](#exploring-data)
 - [Functietechniek](#feature-engineering)
 - [Training en verificatie](#training-and-verification)
 
-### Laptops in de werkruimte voor gegevenswetenschap
+### Laptops in [!DNL Data Science Workspace]
 
-In de eerste plaats willen we een JupyterLab-laptop maken om de voorbeeldlaptop voor de detailhandel te openen. Als we de stappen volgen die de gegevenswetenschapper in het notebook heeft gezet, kunnen we inzicht krijgen in een typische workflow.
+Ten eerste willen we een [!DNL JupyterLab] laptop maken om de voorbeeldlaptop voor de detailhandel te openen. Als we de stappen volgen die de gegevenswetenschapper in het notebook heeft gezet, kunnen we inzicht krijgen in een typische workflow.
 
-Klik in de gebruikersinterface van het Adobe Experience Platform op het tabblad Data Science in het bovenste menu om naar de Data Science Workspace te gaan. Klik op het tabblad JupyterLab van deze pagina om de JupyterLab-startprogramma te openen. U zou een pagina moeten zien gelijkend op dit.
+In het Adobe Experience Platform UI, klik op het lusje van de Wetenschap van Gegevens in het hoogste menu om u aan [!DNL Data Science Workspace]te nemen. Klik op de tab van deze pagina waarop de [!DNL JupyterLab] [!DNL JupyterLab] starter wordt geopend. U zou een pagina moeten zien gelijkend op dit.
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-In onze zelfstudie gebruiken we Python 3 in het Jupyter-notebook om te tonen hoe we de gegevens kunnen openen en verkennen. Op de pagina Launcher staan voorbeelden van laptops. Voor Python 3 gebruiken we het voorbeeldformulier &#39;Winkelverkoop&#39;.
+In onze zelfstudie gebruiken we [!DNL Python] 3 in de [!DNL Jupyter Notebook] sectie om te tonen hoe we de gegevens kunnen openen en verkennen. Op de pagina Launcher staan voorbeelden van laptops. Voor [!DNL Python] 3 gebruiken we het voorbeeld &#39;Retail Sales&#39;.
 
 ![](./images/walkthrough/retail_sales.png)
 
@@ -59,7 +62,7 @@ Als de Retail Sales-laptop geopend is, is het eerste wat we doen, het laden van 
 
 #### Gegevens laden
 
-Nadat de bibliotheken zijn geladen, kunnen we de gegevens bekijken. De volgende Python-code gebruikt de `DataFrame` gegevensstructuur van de pandas en de functie [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) om de CSV te lezen die op Github wordt gehost in het DataFrame van de pandas:
+Nadat de bibliotheken zijn geladen, kunnen we de gegevens bekijken. De volgende [!DNL Python] code gebruikt de `DataFrame` gegevensstructuur van pandas en de functie [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) om de CSV te lezen die wordt gehost op [!DNL Github] de pandas DataFrame:
 
 ![](./images/walkthrough/read_csv.png)
 
@@ -73,7 +76,7 @@ Tot slot kunnen we eens bekijken hoe onze gegevens eruit zien. Wij kunnen gebrui
 
 #### Statistisch overzicht
 
-We kunnen de pandabibliotheek van Python gebruiken om het gegevenstype van elk kenmerk op te halen. De output van de volgende vraag zal ons informatie over het aantal ingangen en het gegevenstype voor elk van de kolommen geven:
+We kunnen een pandabibliotheek gebruiken om het gegevenstype van elk kenmerk op te halen. [!DNL Python's] De output van de volgende vraag zal ons informatie over het aantal ingangen en het gegevenstype voor elk van de kolommen geven:
 
 ```PYTHON
 df.info()
