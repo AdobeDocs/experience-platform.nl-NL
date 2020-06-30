@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van beleidsregels voor gegevensgebruik
 topic: policies
 translation-type: tm+mt
-source-git-commit: 92092620a7ba9129eef4bde852b1e0afc6612d74
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 0%
 
 # Overzicht van beleidsregels voor gegevensgebruik
 
-Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid van het gegevensgebruik worden uitgevoerd. Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens binnen het Experience Platform, of dat u er een beperking voor hebt.
+Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid van het gegevensgebruik worden uitgevoerd. Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, het uitvoeren op gegevens binnen wordt toegestaan [!DNL Experience Platform].
 
 Dit document biedt een overzicht op hoog niveau van het beleid voor gegevensgebruik en bevat koppelingen naar verdere documentatie voor het werken met het beleid in de gebruikersinterface of de API.
 
 ## Marketingacties {#marketing-actions}
 
-**Marketing-acties**(ook wel **marketinggebruiksgevallen** genoemd) in het kader van het gegevensbeheerkader zijn acties die een gebruiker van gegevens in een Experience Platform kan ondernemen en waarvoor uw organisatie het gegevensgebruik wil beperken. Daarom wordt een beleid voor gegevensgebruik als volgt gedefinieerd:
+**Marketing-acties**(ook wel **marketinggebruiksgevallen** genoemd) in het kader van het gegevensbeheerkader zijn acties die een [!DNL Experience Platform] gegevensconsument kan ondernemen en waarvoor uw organisatie het gegevensgebruik wil beperken. Daarom wordt een beleid voor gegevensgebruik als volgt gedefinieerd:
 
 1. Een specifieke marketingactie
 2. De labels voor gegevensgebruik waarvoor de handeling niet kan worden uitgevoerd
 
-Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naar een derdedienst uit te voeren. Als er een beleid is dat zegt dat de specifieke types van gegevens (zoals Persoonlijk Identificeerbare Informatie (PII)) niet kunnen worden uitgevoerd, en u probeert om een dataset uit te voeren die een &quot;I&quot;etiket (de Gegevens van de Identiteit) bevat, zult u een reactie van de Dienst van het Beleid ontvangen die u vertelt dat een beleid van het gegevensgebruik is geschonden.
+Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naar een derdedienst uit te voeren. Als er een beleid bestaat dat zegt dat de specifieke types van gegevens (zoals Persoonlijk Identificeerbare Informatie (PII)) niet kunnen worden uitgevoerd, en u probeert om een dataset uit te voeren die een &quot;I&quot;etiket (de Gegevens van de Identiteit) bevat, zult u een antwoord van het [!DNL Policy Service] vertellen u ontvangen dat een beleid van het gegevensgebruik is geschonden.
 
 >[!NOTE] Handelingen voor het in de handel brengen zelf beperken het gegevensgebruik niet. Ze moeten worden opgenomen in beleid voor ingeschakeld gegevensgebruik om ervoor te zorgen dat deze acties worden geëvalueerd op beleidsovertredingen.
 
