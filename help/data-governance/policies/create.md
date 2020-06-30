@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een beleid voor gegevensgebruik maken
 topic: policies
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1194'
 ht-degree: 0%
 
 ---
@@ -16,22 +16,22 @@ ht-degree: 0%
 
 De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste mechanisme van het Beheer van Gegevens van de Adobe Experience Platform. De [DULE Dienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) van het Beleid staat u toe om DULE beleid tot stand te brengen en te beheren om te bepalen welke marketing acties tegen gegevens kunnen worden genomen die bepaalde etiketten DULE bevatten.
 
-Dit document verstrekt een geleidelijke zelfstudie voor het creëren van een DULE beleid gebruikend de Dienst API van het Beleid. Voor een uitvoerigere gids voor de verschillende verrichtingen beschikbaar in API, zie de de ontwikkelaarsgids [van de Dienst van het](../api/getting-started.md)Beleid.
+Dit document biedt een stapsgewijze zelfstudie voor het maken van een DULE-beleid met de [!DNL Policy Service] API. Voor een uitvoerigere gids voor de verschillende verrichtingen beschikbaar in API, zie de de ontwikkelaarsgids [van de Dienst van het](../api/getting-started.md)Beleid.
 
 ## Aan de slag
 
 Dit leerprogramma vereist een werkend inzicht in de volgende belangrijkste concepten betrokken bij het creëren van en het evalueren van DULE beleid:
 
-* [Gegevensbeheer](../home.md): Het kader waardoor Platform de naleving van het gegevensgebruik afdwingt.
+* [Gegevensbeheer](../home.md): Het kader waarmee de naleving van het gegevensgebruik wordt [!DNL Platform] afgedwongen.
 * [Labels](../labels/overview.md)voor gegevensgebruik: Labels voor gegevensgebruik worden toegepast op XDM-gegevensvelden en geven beperkingen op voor de manier waarop die gegevens kunnen worden benaderd.
-* [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
+* [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-Alvorens deze zelfstudie te beginnen, te herzien gelieve de [ontwikkelaarsgids](../api/getting-started.md) voor belangrijke informatie die u moet weten om vraag aan de DULE Dienst API van het Beleid met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om aanroepen naar de DULE [!DNL Policy Service] API te kunnen uitvoeren, inclusief vereiste headers en hoe u API-voorbeeldaanroepen kunt lezen.
 
 ## Een marketingactie definiëren {#define-action}
 
-In het kader van gegevensbeheer is een marketingactie een actie die een consument van gegevens uit een Experience Platform neemt en waarvoor moet worden gecontroleerd op schendingen van het beleid inzake gegevensgebruik.
+In het [!DNL Data Governance] kader is een marketingactie een actie die een [!DNL Experience Platform] gegevensconsument onderneemt en waarvoor moet worden gecontroleerd op schendingen van het beleid inzake gegevensgebruik.
 
 De eerste stap bij het creëren van een DULE beleid is te bepalen welke marketing actie het beleid zal evalueren. U kunt dit op een van de volgende manieren doen:
 
@@ -44,7 +44,7 @@ U kunt bestaande marketing acties opzoeken die door uw DULE beleid moeten worden
 
 **API-indeling**
 
-Afhankelijk van of u een marketing actie zoekt die door Experience Platform wordt verstrekt of een douanemarketing actie die door uw organisatie wordt gecreeerd, gebruik respectievelijk de `marketingActions/core` eindpunten of `marketingActions/custom` eindpunten.
+Afhankelijk van of u een marketing actie zoekt die door [!DNL Experience Platform] of een douanemarketing actie wordt verstrekt die door uw organisatie wordt gecreeerd, gebruik de `marketingActions/core` of `marketingActions/custom` eindpunten, respectievelijk.
 
 ```http
 GET /marketingActions/core
@@ -414,6 +414,6 @@ Een geslaagde reactie retourneert HTTP-status 200 (OK) en de details van het bij
 
 Aan de hand van deze zelfstudie hebt u een beleid voor gegevensgebruik voor een marketingactie gemaakt. U kunt nu doorgaan met de zelfstudie over het [afdwingen van beleid](../enforcement/api-enforcement.md) voor gegevensgebruik om te leren hoe u kunt controleren op beleidsovertredingen en deze kunt afhandelen in uw ervaringstoepassing.
 
-Voor meer informatie over de verschillende beschikbare verrichtingen in de Dienst API van het Beleid, zie de de ontwikkelaarsgids [van de Dienst van het](../api/getting-started.md)Beleid. Voor informatie over hoe te om beleid voor de gegevens van het Profiel van de Klant in real time af te dwingen, zie de zelfstudie over het [afdwingen van de naleving van het gegevensgebruik voor publiekssegmenten](../../segmentation/tutorials/governance.md).
+Voor meer informatie over de verschillende beschikbare verrichtingen in [!DNL Policy Service] API, zie de de ontwikkelaarsgids [van de Dienst van het](../api/getting-started.md)Beleid. Voor informatie over hoe te om beleid voor [!DNL Real-time Customer Profile] gegevens af te dwingen, zie de zelfstudie over het [afdwingen van de naleving van het gegevensgebruik voor publiekssegmenten](../../segmentation/tutorials/governance.md).
 
-Leer hoe te om gebruiksbeleid in het gebruikersinterface van het Experience Platform te beheren, zie de gids [van de](user-guide.md)beleidsgebruiker.
+Leer hoe te om gebruiksbeleid in het [!DNL Experience Platform] gebruikersinterface te beheren, zie de gids van de [beleidsgebruiker](user-guide.md).
