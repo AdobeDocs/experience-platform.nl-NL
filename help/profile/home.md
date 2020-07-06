@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Overzicht van het realtime klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: e34b0b92a8fdf0986b10753d6c983b66dde42503
+source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1795'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Met Adobe Experience Platform kunt u uw klanten een gecoördineerde, consistente
 
 ## Klantprofiel in realtime
 
-Klantprofiel in real-time is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
+Klantprofiel in real-time is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek.
 
 ### Profielgegevensopslag
 
@@ -54,7 +54,7 @@ Een van de belangrijkste kenmerken van Real-Time Customer Profile is de mogelijk
 
 Wanneer het samenbrengen van gegevens uit veelvoudige bronnen en het combineren om een volledige mening van elk van uw individuele klanten te zien, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Voor meer informatie bij het werken met samenvoegbeleid die in real time API van het Profiel van de Klant gebruiken, gelieve de gids [van het eindpunt van het](api/merge-policies.md)fusiebeleid te zien. Als u met samenvoegbeleid wilt werken met de gebruikersinterface van het Experience Platform, raadpleegt u de gebruikershandleiding [van het](ui/merge-policies.md)samenvoegbeleid.
 
-## (Alfa) Berekende kenmerken configureren
+### (Alfa) Berekende kenmerken configureren
 
 >[!IMPORTANT]
 >De berekende kenmerkfunctionaliteit die in dit document wordt beschreven is in alpha. De documentatie en de functionaliteit kunnen worden gewijzigd.
@@ -80,7 +80,7 @@ Platform kan worden gevormd om uw verslag en tijdreeksgegevens naar Profiel te v
 >[!Nofferte]
 >De gegevens die via Adobe-oplossingen zijn verzameld, waaronder Analytics Cloud, Marketing Cloud en Advertising Cloud, stromen naar Experience Platform en worden opgenomen in Profile.
 
-### Metrische gegevens voor het streamen van profielen
+### Metrische gegevens voor het opnemen van profielen
 
 Met waarnemingsinformatie kunt u belangrijke meetgegevens in Adobe Experience Platform blootstellen. Naast gebruiksstatistieken van het Platform en prestatiesindicatoren voor diverse functies van het Platform, zijn er specifieke op profiel betrekking hebbende metriek die u toestaan om inzicht in inkomende verzoektarieven, succesvolle innamepercentages, ingebedde verslaggrootte, en meer te krijgen. Meer leren, begin door het overzicht [van de Inzichten van de](../observability/home.md)Waarnemelijkheid te lezen, en voor een volledige lijst van de metriek van het Profiel, zie de documentatie over [beschikbare metriek](../observability/metrics.md).
 
