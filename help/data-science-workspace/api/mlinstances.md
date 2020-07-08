@@ -4,7 +4,7 @@ solution: Experience Platform
 title: MLInstances
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0197c2f5e304f2fc194289b064cc37c91bb658c8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 1%
@@ -273,7 +273,9 @@ Een succesvol antwoord geeft de details van MLInstance terug.
 
 U kunt een bestaande instantie bijwerken door zijn eigenschappen door een PPUT verzoek te beschrijven die identiteitskaart van doelMLInstance in de verzoekweg omvat en een nuttige lading te verstrekken JSON die bijgewerkte eigenschappen bevat.
 
->[!TIP] Om ervoor te zorgen dat dit PUT-verzoek succesvol is, wordt u aangeraden eerst een GET-verzoek uit te voeren om de MLInstance door ID [op te](#retrieve-specific)halen. Vervolgens past u het geretourneerde JSON-object aan en werkt u dit bij en past u het gehele gewijzigde JSON-object toe als de payload voor de PUT-aanvraag.
+>[!TIP]
+>
+>Om ervoor te zorgen dat dit PUT-verzoek succesvol is, wordt u aangeraden eerst een GET-verzoek uit te voeren om de MLInstance door ID [op te](#retrieve-specific)halen. Vervolgens past u het geretourneerde JSON-object aan en werkt u dit bij en past u het gehele gewijzigde JSON-object toe als de payload voor de PUT-aanvraag.
 
 De volgende voorbeeld-API-aanroep werkt de opleidings- en scoringsparameters van een MLInstance bij terwijl deze in eerste instantie beschikken over de volgende eigenschappen:
 
