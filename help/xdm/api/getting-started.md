@@ -4,47 +4,52 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van de API voor schemaregister
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1246'
+ht-degree: 0%
 
 ---
 
 
 # Handleiding voor ontwikkelaars van de API voor schemaregister
 
-Het Schemaregister wordt gebruikt om toegang te krijgen tot de Schemabibliotheek binnen het Adobe Experience Platform en biedt een gebruikersinterface en RESTful-API waaruit alle beschikbare bibliotheekbronnen toegankelijk zijn.
+Het register van het Schema wordt gebruikt om tot de Bibliotheek van het Schema binnen Adobe Experience Platform toegang te hebben, die een gebruikersinterface en RESTful API verstrekken waarvan alle beschikbare bibliotheekmiddelen toegankelijk zijn.
 
-Met de API voor het registreren van het schema kunt u standaard CRUD-bewerkingen uitvoeren om alle schema&#39;s en gerelateerde bronnen die u binnen het Adobe Experience Platform hebt, weer te geven en te beheren. Hieronder vallen de gedefinieerde toepassingen van Adobe, Experience Platform-partners en leveranciers van wie u de toepassingen gebruikt. U kunt ook API-aanroepen gebruiken om nieuwe schema&#39;s en bronnen voor uw organisatie te maken, en bronnen die u al hebt gedefinieerd, weer te geven en te bewerken.
+Gebruikend de Registratie API van het Schema, kunt u basisverrichtingen uitvoeren CRUD om alle schema&#39;s en verwante middelen te bekijken en te beheren beschikbaar aan u binnen Adobe Experience Platform. Dit geldt ook voor de toepassingen die zijn gedefinieerd door Adobe, partners van Experience Platforms en leveranciers van wie u de toepassingen gebruikt. U kunt ook API-aanroepen gebruiken om nieuwe schema&#39;s en bronnen voor uw organisatie te maken, en bronnen die u al hebt gedefinieerd, weer te geven en te bewerken.
 
 Deze ontwikkelaarsgids verstrekt stappen helpen u beginnen te gebruiken de Registratie API van het Schema. De gids verstrekt dan steekproefAPI vraag voor het uitvoeren van zeer belangrijke verrichtingen gebruikend de Registratie van het Schema.
 
 ## Vereisten
 
-Voor deze handleiding is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
-* [XDM-systeem](../home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
+* [XDM-systeem](../home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM.
 * [Klantprofiel](../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [Sandboxen](../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan de Registratie API van het Schema te maken.
 
 ## API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ## Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform, inclusief die welke tot het schemaregister behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in Experience Platform, inclusief die van het Schemaregister, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
 
 Alle opzoekverzoeken (GET) aan de Registratie van het Schema vereisen extra Accept kopbal, de waarvan waarde de formaat van informatie bepaalt die door API is teruggekeerd. Zie de koptekstsectie [Accepteren](#accept) hieronder voor meer informatie.
 
@@ -154,17 +159,17 @@ Een succesvolle reactie keert informatie betreffende het gebruik van uw organisa
 
 * `tenantId`: De `TENANT_ID` waarde voor uw IMS-organisatie.
 
-## Begrijp het `CONTAINER_ID`{#container}
+## Begrijp het `CONTAINER_ID` {#container}
 
 De vraag aan de Registratie API van het Schema vereist het gebruik van een `CONTAINER_ID`. Er zijn twee containers waartegen API-aanroepen kunnen worden uitgevoerd: de **globale container** en de **huurderscontainer**.
 
 ### Algemene container
 
-De globale container bevat alle standaard door Adobe en Experience Platform geleverde klassen, mixins, gegevenstypen en schema&#39;s. U kunt lijst en raadplegingsverzoeken (GET) slechts tegen de globale container uitvoeren.
+De globale container bevat alle standaard door Adobe en Experience Platform verschafte klassen, mixins, gegevenstypen en schema&#39;s. U kunt lijst en raadplegingsverzoeken (GET) slechts tegen de globale container uitvoeren.
 
 ### Trekcontainer
 
-Om niet met uw uniek te worden verward `TENANT_ID`, houdt de huurderscontainer alle klassen, mixins, gegevenstypes, schema&#39;s, en beschrijvers die door een IMS Organisatie worden bepaald. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle CRUD-bewerkingen (GET, POST, PUT, PATCH, DELETE) uitvoeren op bronnen die u maakt in de huurderscontainer.
+Om niet met uw uniek te worden verward `TENANT_ID`, houdt de huurderscontainer alle klassen, mixins, gegevenstypes, schema&#39;s, en beschrijvers die door een IMS Organisatie worden bepaald. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle CRUD-bewerkingen (GET, POST, PUT, PATCH, DELETE) uitvoeren tegen bronnen die u maakt in de huurderscontainer.
 
 Wanneer u een klasse, een mixin, een schema of een gegevenstype in de huurderscontainer creeert, wordt het bewaard aan de Registratie van het Schema en toegewezen `$id` URI die uw `TENANT_ID`omvat. Dit `$id` wordt in de gehele API gebruikt om naar specifieke bronnen te verwijzen. In de volgende sectie worden voorbeelden van `$id` waarden gegeven.
 
@@ -198,7 +203,9 @@ In de volgende tabel vindt u compatibele Accept-headerwaarden, inclusief waarden
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` kenmerken en `allOf` opgelost. Geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` kenmerken en `allOf` opgelost. Beschrijvers worden opgenomen. |
 
->[!NOTE] Indien alleen de `major` versie wordt geleverd (bv. 1, 2, 3), retourneert het register de laatste `minor` versie (bv. .1, .2, .3) automatisch.
+>[!NOTE]
+>
+>Indien alleen de `major` versie wordt geleverd (bv. 1, 2, 3), retourneert het register de laatste `minor` versie (bv. .1, .2, .3) automatisch.
 
 ## Beperkingen en aanbevolen procedures voor XDM-velden
 
