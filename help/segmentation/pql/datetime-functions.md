@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Datum- en tijdfuncties
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '471'
+ht-degree: 2%
 
 ---
 
@@ -140,11 +143,13 @@ De `occurs` functie kan worden geschreven met een van de volgende indelingen:
 | --------- | ----------- |
 | `{COMPARISON}` | Een vergelijkingsoperator. Kan een van de volgende operatoren zijn: `>`, `>=`, `<`, `<=`, `=`, `!=`. Meer informatie over de vergelijkingsfuncties vindt u in het document [met](./comparison-functions.md)vergelijkingsfuncties. |
 | `{INTEGER}` | Een positief geheel getal. |
-| `{TIME_UNIT}` | Een tijdseenheid. Kan een van de volgende woorden zijn: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century``centuries``millennium``millennia`, . |
+| `{TIME_UNIT}` | Een tijdseenheid. Kan een van de volgende woorden zijn: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries``millennium``millennia`, . |
 | `{DIRECTION}` | Een voorstelling waarin wordt beschreven wanneer de datum moet worden vergeleken met. Kan een van de volgende woorden zijn: `before`, `after`, `from`. |
 | `{TIME}` | Dit kan een letterlijke tijdstempel (`today`, `now`, `yesterday`, `tomorrow`), een relatieve tijdeenheid (een van `this`, `last`of `next` gevolgd door een tijdeenheid) of een tijdstempelkenmerk zijn. |
 
->[!NOTE] Het gebruik van het woord `on` is optioneel. Het is nodig om de leesbaarheid van bepaalde combinaties, zoals `timestamp occurs on date(2019,12,31)`bijvoorbeeld, te verbeteren.
+>[!NOTE]
+>
+>Het gebruik van het woord `on` is optioneel. Het is nodig om de leesbaarheid van bepaalde combinaties, zoals `timestamp occurs on date(2019,12,31)`bijvoorbeeld, te verbeteren.
 
 **Voorbeeld**
 
