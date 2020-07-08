@@ -4,16 +4,21 @@ solution: Experience Platform
 title: Een sandbox verwijderen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '84'
+ht-degree: 1%
 
 ---
 
 
 # Een sandbox verwijderen
 
-U kunt een sandbox verwijderen door een DELETE-aanvraag in te dienen die de sandbox&#39;s bevat `name` in het aanvraagpad.
+U kunt een sandbox verwijderen door een DELETE aanvraag in te dienen die de sandbox&#39;s bevat `name` in het aanvraagpad.
 
->[!NOTE] Als u deze API-aanroep maakt, wordt de `status` eigenschap van de sandbox bijgewerkt naar &quot;verwijderd&quot; en gedeactiveerd. Met GET-aanvragen kunnen de details van de sandbox nog steeds worden opgehaald nadat deze zijn verwijderd.
+>[!NOTE]
+>
+>Als u deze API-aanroep maakt, wordt de `status` eigenschap van de sandbox bijgewerkt naar &quot;verwijderd&quot; en gedeactiveerd. Met GET-aanvragen kunnen de details van de sandbox nog steeds worden opgehaald nadat deze zijn verwijderd.
 
 **API-indeling**
 
