@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een schema maken met de API voor schemaregistratie
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 0%
@@ -256,7 +256,9 @@ De reactie toont de zojuist toegevoegde mix in de `meta:extends` array en bevat 
 
 U kunt nu een andere standaardmix toevoegen door de stappen te herhalen met een andere mix.
 
->[!TIP] Het is nuttig om alle beschikbare mengsels te herzien om zich met de gebieden vertrouwd te maken inbegrepen in elk. U kunt (KRIJGEN) van alle mengsels een lijst maken beschikbaar voor gebruik met een bepaalde klasse door een verzoek tegen elk van de &quot;globale&quot;en &quot;huurder&quot;containers uit te voeren, die slechts die mengen terugkeren waar het &quot;meta:intendedToExtend&quot;gebied de klasse aanpast u gebruikt. In dit geval is het de klasse Individueel Profiel XDM, zodat wordt het Individuele Profiel XDM gebruikt: `$id`
+>[!TIP]
+>
+>Het is nuttig om alle beschikbare mengsels te herzien om zich met de gebieden vertrouwd te maken inbegrepen in elk. U kunt (KRIJGEN) van alle mengsels een lijst maken beschikbaar voor gebruik met een bepaalde klasse door een verzoek tegen elk van de &quot;globale&quot;en &quot;huurder&quot;containers uit te voeren, die slechts die mengen terugkeren waar het &quot;meta:intendedToExtend&quot;gebied de klasse aanpast u gebruikt. In dit geval is het de klasse Individueel Profiel XDM, zodat wordt het Individuele Profiel XDM gebruikt: `$id`
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -991,7 +993,9 @@ curl -X POST \
       }'
 ```
 
->[!NOTE] U kunt beschikbare waarden voor &quot;xdm:namespace&quot; weergeven of nieuwe waarden maken met de API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)identiteitsservice. De waarde voor &quot;xdm:property&quot; kan &quot;xdm:code&quot; of &quot;xdm:id&quot; zijn, afhankelijk van de gebruikte &quot;xdm:namespace&quot;.
+>[!NOTE]
+>
+>U kunt beschikbare waarden voor &quot;xdm:namespace&quot; weergeven of nieuwe waarden maken met de API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)identiteitsservice. De waarde voor &quot;xdm:property&quot; kan &quot;xdm:code&quot; of &quot;xdm:id&quot; zijn, afhankelijk van de gebruikte &quot;xdm:namespace&quot;.
 
 **Antwoord**
 
