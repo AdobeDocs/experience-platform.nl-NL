@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruikershandleiding voor Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 9fc95dd9194dca0fada603643c3de949764b2f17
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 0%
@@ -54,13 +54,17 @@ Als u meer details over een bepaald gegevenspunt wilt weergeven, klikt u op het 
 
 ![Toegepast filter van widget](../images/user-guide/apply-filter.png)
 
->[!NOTE] Wanneer een filter is toegepast op de widget Taakverzoeken, kunt u het filter verwijderen door op de **X** van de filtervulling te klikken. De Verzoeken van de baan keren dan aan het gebrek volgende lijst terug.
+>[!NOTE]
+>
+>Wanneer een filter is toegepast op de widget Taakverzoeken, kunt u het filter verwijderen door op de **X** van de filtervulling te klikken. De Verzoeken van de baan keren dan aan het gebrek volgende lijst terug.
 
 ### Taakverzoeken
 
 De widget Taakverzoeken bevat een lijst met alle beschikbare taakaanvragen in uw organisatie, inclusief gegevens zoals het type aanvraag, de huidige status, de vervaldatum en het e-mailadres van de aanvrager.
 
->[!NOTE] De gegevens voor eerder gecreëerde banen zijn slechts 30 dagen na de voltooiingsdatum toegankelijk.
+>[!NOTE]
+>
+>De gegevens voor eerder gecreëerde banen zijn slechts 30 dagen na de voltooiingsdatum toegankelijk.
 
 U kunt de lijst filteren door trefwoorden in de zoekbalk onder de titel Taakverzoeken te typen. De lijst filtert automatisch terwijl u typt, tonend verzoeken die waarden bevatten die uw onderzoekstermijnen aanpassen. U kunt ook het vervolgkeuzemenu **Gevraagd op** gebruiken om een tijdbereik te selecteren voor de weergegeven taken.
 
@@ -78,7 +82,9 @@ Als u de volledige taakgegevens als CSV-bestand wilt downloaden, klikt u op **Ex
 
 ## Een nieuw verzoek voor een privacytaak maken
 
->[!NOTE] Als u een privacytaakverzoek wilt maken, moet u identiteitsgegevens opgeven voor de specifieke klanten van wie de gegevens moeten worden benaderd of verwijderd. Controleer het document over [identiteitsgegevens voor privacyverzoeken](../identity-data.md) voordat u doorgaat met deze sectie.
+>[!NOTE]
+>
+>Als u een privacytaakverzoek wilt maken, moet u identiteitsgegevens opgeven voor de specifieke klanten van wie de gegevens moeten worden benaderd of verwijderd. Controleer het document over [identiteitsgegevens voor privacyverzoeken](../identity-data.md) voordat u doorgaat met deze sectie.
 
 De gebruikersinterface van de Privacy Service biedt twee methoden om nieuwe taakaanvragen te maken:
 
