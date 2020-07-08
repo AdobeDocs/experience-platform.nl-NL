@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een model optimaliseren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 0%
@@ -62,7 +62,9 @@ Nadat een evaluatorklasse wordt toegelaten, zal een aantal metriek tijdens oplei
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
 ```
 
->[!NOTE] Als metrisch niet wordt bepaald, zullen de standaardmetriek actief zijn.
+>[!NOTE]
+>
+>Als metrisch niet wordt bepaald, zullen de standaardmetriek actief zijn.
 
 Een specifieke metrische waarde kan worden toegelaten door de waarde voor te veranderen `evaluation.metrics.com`. In het volgende voorbeeld, wordt metrisch F-Score toegelaten.
 
@@ -83,7 +85,9 @@ In de volgende tabel worden de standaardmetriek voor elke klasse weergegeven. Ee
 
 De aangepaste beoordelaar kan worden opgegeven door de interface van `MLEvaluator.scala` het `Evaluator.scala` bestand uit te breiden. In het voorbeeld [Evaluator.range](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) - dossier, bepalen wij douane `split()` en `evaluate()` functies. Onze `split()` functie splitst onze gegevens willekeurig met een verhouding van 8:2 en onze `evaluate()` functie definieert en retourneert 3 metriek: MAPE, MAE en RMSE.
 
->[!IMPORTANT] Voor de `MLMetric` klasse, gebruik niet `"measures"` voor `valueType` `MLMetric` wanneer het creëren van nieuw anders zal metrisch niet in de lijst van metriek van de douaneevaluatie bevolken.
+>[!IMPORTANT]
+>
+>Voor de `MLMetric` klasse, gebruik niet `"measures"` voor `valueType` `MLMetric` wanneer het creëren van nieuw anders zal metrisch niet in de lijst van metriek van de douaneevaluatie bevolken.
 >  
 > Doe dit: `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > Niet dit: `metrics.add(new MLMetric("MAPE", mape, "measures"))`
@@ -163,4 +167,4 @@ De [!DNL Sensei Model Insights Framework] functie ondersteunt één standaardsja
 | Clustering (zonder waarheid op de grond) | - Inertia<br>- Silhouette coëfficiënt<br>- CHI (Calinski-Harabaz index)<br>- DBI (Davies-Bouldin index)<br>- Dunn index | Clusters tekenen clusters en centroïden met relatieve clustergrootten die de gegevenspunten weergeven die binnen een cluster vallen |
 | Aanbeveling | -Gemiddelde gemiddelde precisie (MAP) <br>-genormaliseerde, gedisconteerde cumulatieve winst <br>- Gemiddelde Ware Rank <br>-Metrische K | TBD |
 | Gebruiksgevallen van TensorFlow | TensorFlow Model Analysis (TFMA) | Vergelijking van neurale netwerkmodellen/visualisatie ongedaan maken |
-| Ander/fout-vastlegmechanisme | De metrische logica van de douane (en overeenkomstige evaluatiekaarten) die door modelauteur worden bepaald. Handige foutafhandeling in geval van niet-overeenkomende sjablonen | Lijst met zeer belangrijke paren voor evaluatiemetriek |
+| Ander/fout-vastlegmechanisme | De metrische logica van de douane (en overeenkomstige evaluatiekaarten) die door modelauteur worden bepaald. Handige foutafhandeling in geval van niet-overeenkomende sjabloon | Lijst met zeer belangrijke paren voor evaluatiemetriek |
