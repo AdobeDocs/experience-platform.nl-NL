@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Toewijzingsveld voor Audiontanager
+title: Veld voor Audience Manager toewijzen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 0%
 
 ---
 
 
-# Toewijzingsvelden voor Auditiebeheer
+# Toewijzingsvelden voor Audience Managers
 
-De onderstaande tabellen bevatten de toewijzingen tussen de velden in Adobe Audience Manager-gegevens (Realtime, Onboded en Profielgegevens) en de bijbehorende XDM-velden.
+De onderstaande tabellen bevatten de toewijzingen tussen de velden in Adobe Audience Manager-gegevens (Realtime, Onboard en Profielgegevens) en de bijbehorende XDM-velden.
 
 Zie het [XDM-veldwoordenboek](../../../../xdm/schema/field-dictionary.md) voor meer informatie over elk XDM-veld.
 
@@ -47,7 +50,9 @@ Type: ExperienceEvent
 | `b_time` | `ExperienceEvent.timeStamp` |
 | `overwrite` | `overwriteTraits` |
 
->[!NOTE] Binnenkomende velden worden in een toekomstige versie afgekeurd.
+>[!NOTE]
+>
+>Binnenkomende velden worden in een toekomstige versie afgekeurd.
 
 ## Profielgegevens
 
