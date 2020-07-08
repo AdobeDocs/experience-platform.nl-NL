@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Inzichten in Attributie AI opzoeken
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 0%
@@ -30,7 +30,9 @@ Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **Services** 
 
 De servicepagina Kenmerk AI wordt weergegeven. Deze pagina bevat een overzicht van de service-instanties van Attribution AI en geeft informatie over deze instanties, zoals de naam van de instantie, conversiegebeurtenissen, hoe vaak de instantie wordt uitgevoerd en de status van de laatste update. Klik op de naam van een service-instantie om te beginnen.
 
->[!NOTE] Alleen serviceversies die een scoring hebben voltooid, kunnen worden geselecteerd.
+>[!NOTE]
+>
+>Alleen serviceversies die een scoring hebben voltooid, kunnen worden geselecteerd.
 
 ![Instantie maken](./images/insights/select-service-instance.png)
 
@@ -72,7 +74,9 @@ De knop *Meer handelingen* bevindt zich in de navigatie rechtsboven naast *Bewer
 
 Met Attribution AI-inzichten kunt u uw gegevens filteren en de UI-visuele elementen automatisch bijwerken op basis van de geselecteerde filters.
 
->[!NOTE] Standaard is elk filter ingesteld op Alles, behalve het filter *Attributiemodel* , dat is ingesteld op &quot;Incrementele en Influenced toewijzingsconversies&quot;.
+>[!NOTE]
+>
+>Standaard is elk filter ingesteld op Alles, behalve het filter *Attributiemodel* , dat is ingesteld op &quot;Incrementele en Influenced toewijzingsconversies&quot;.
 
 ### Conversion-gebeurtenis
 
@@ -98,11 +102,15 @@ Met het filter *Product* kunt u een keuze maken uit alle producten die u aanvank
 
 Met het filter *Geografie* worden landcodes gevuld op basis van regionale modellen. Afhankelijk van uw gegevens kan dit filter al dan niet aanwezig zijn.
 
->[!NOTE] Landcodes zijn twee tekens lang. Een volledige lijst vindt u hier in [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>Landcodes zijn twee tekens lang. Een volledige lijst vindt u hier in [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ### Regio
 
->[!NOTE] Dit filter is alleen aanwezig als u tijdens het maken van uw serviceversie de optionele stap [op regio gebaseerde modellering](./user-guide.md#region-based-modeling-optional) in de handleiding voor de gebruikersinterface van Attribution AI hebt uitgevoerd.
+>[!NOTE]
+>
+>Dit filter is alleen aanwezig als u tijdens het maken van uw serviceversie de optionele stap [op regio gebaseerde modellering](./user-guide.md#region-based-modeling-optional) in de handleiding voor de gebruikersinterface van Attribution AI hebt uitgevoerd.
 
 Met dit filter kunt u alle gebieden selecteren die u hebt ingesteld in het proces voor het maken van instanties.
 
