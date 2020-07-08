@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Objecten weergeven
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '204'
+ht-degree: 0%
 
 ---
 
@@ -42,7 +45,9 @@ curl -X GET \
 
 Een succesvolle reactie keert een lijst van de voorwerpen van de Catalogus in de vorm van sleutel-waarde paren terug, die door de vraagparameters worden gefiltreerd die in het verzoek worden verstrekt. Voor elk sleutel-waardepaar, vertegenwoordigt de sleutel een uniek herkenningsteken voor het voorwerp van de Catalogus in kwestie, dat dan in een andere vraag kan worden gebruikt om dat specifieke voorwerp [voor meer details te](look-up-object.md) bekijken.
 
->[!NOTE] Als een teruggekeerd voorwerp één of meerdere gevraagde eigenschappen niet bevat die door de `properties` vraag worden vermeld, keert de reactie slechts de gevraagde eigenschappen terug die het omvat, zoals aangetoond in &quot;Gegevensset 3 van de Steekproef&quot;en &quot;Dataset 4 van de Steekproef hieronder.
+>[!NOTE]
+>
+>Als een teruggekeerd voorwerp één of meerdere gevraagde eigenschappen niet bevat die door de `properties` vraag worden vermeld, keert de reactie slechts de gevraagde eigenschappen terug die het omvat, zoals aangetoond in &quot;Gegevensset 3 van de Steekproef&quot;en &quot;Dataset 4 van de Steekproef hieronder.
 
 ```json
 {
