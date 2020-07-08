@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een aangepaste naamruimte maken
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 2%
@@ -18,7 +18,9 @@ Met behulp van de [!DNL Identity Namespace] API kunt u een naamruimte voor een a
 
 Raadpleeg [de documentatie](../troubleshooting-guide.md)bij Identiteitsservice voor aanbevelingen over het maken van aangepaste naamruimten.
 
->[!NOTE] Naamruimten zijn een kwalificatie voor identiteiten. Als zodanig kan een naamruimte niet worden verwijderd nadat deze is gemaakt.
+>[!NOTE]
+>
+>Naamruimten zijn een kwalificatie voor identiteiten. Als zodanig kan een naamruimte niet worden verwijderd nadat deze is gemaakt.
 
 **API-indeling**
 
