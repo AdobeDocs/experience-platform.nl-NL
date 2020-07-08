@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een schema maken met de Schema-editor
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3409'
 ht-degree: 0%
@@ -84,7 +84,9 @@ Het canvas verschijnt weer. De sectie *Klasse* bevat nu de klasse die u hebt ges
 
 De velden worden weergegeven in de notatie &quot;fieldName | Gegevenstype&quot;. De stappen voor het bepalen van schemagebieden in UI worden verstrekt later in dit leerprogramma.
 
->[!NOTE] U kunt de klasse van een schema [op om het even welk punt tijdens het aanvankelijke samenstellingsproces](#change-class) veranderen alvorens het schema is bewaard, maar dit zou met uiterste voorzichtigheid moeten worden gedaan. Mixins zijn alleen compatibel met bepaalde klassen. Als u de klasse wijzigt, worden het canvas en alle toegevoegde velden opnieuw ingesteld.
+>[!NOTE]
+>
+>U kunt de klasse van een schema [op om het even welk punt tijdens het aanvankelijke samenstellingsproces](#change-class) veranderen alvorens het schema is bewaard, maar dit zou met uiterste voorzichtigheid moeten worden gedaan. Mixins zijn alleen compatibel met bepaalde klassen. Als u de klasse wijzigt, worden het canvas en alle toegevoegde velden opnieuw ingesteld.
 
 ## Een mix toevoegen {#mixin}
 
@@ -108,7 +110,9 @@ Het schemacanvas verschijnt opnieuw. In de sectie *Mixins* wordt nu de mix &quot
 
 Deze mix levert verschillende velden onder de naam &quot;person&quot; op het hoogste niveau bij met het gegevenstype &quot;Person&quot;. In deze groep velden wordt informatie over een individu beschreven, zoals naam, geboortedatum en geslacht.
 
->[!NOTE] Herinner dat de gebieden scalaire types (zoals koord, geheel, serie, of datum) als gegevenstype, evenals om het even welk &quot;gegevenstype&quot;(een groep gebieden die een gemeenschappelijk concept vertegenwoordigen) in de Registratie van het Schema kunnen gebruiken.
+>[!NOTE]
+>
+>Herinner dat de gebieden scalaire types (zoals koord, geheel, serie, of datum) als gegevenstype, evenals om het even welk &quot;gegevenstype&quot;(een groep gebieden die een gemeenschappelijk concept vertegenwoordigen) in de Registratie van het Schema kunnen gebruiken.
 
 Het veld &quot;name&quot; heeft een gegevenstype van het type &quot;Person Name&quot;, wat betekent dat het een algemeen concept beschrijft en naamgerelateerde subvelden bevat zoals voornaam, achternaam en volledige naam.
 
@@ -247,7 +251,9 @@ Nu zullen alle gegevens die in het &quot;loyaltyId&quot;gebied worden opgenomen 
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
->[!NOTE] Als een schemaveld eenmaal is ingesteld als primaire identiteit, ontvangt u een foutbericht als u later probeert een ander veld in het schema in te stellen als primaire identiteit. Elk schema mag slechts één primair identiteitsveld bevatten.
+>[!NOTE]
+>
+>Als een schemaveld eenmaal is ingesteld als primaire identiteit, ontvangt u een foutbericht als u later probeert een ander veld in het schema in te stellen als primaire identiteit. Elk schema mag slechts één primair identiteitsveld bevatten.
 
 Raadpleeg de documentatie bij [Identiteitsservice](../../identity-service/home.md) voor meer informatie over het werken met identiteiten.
 
@@ -279,7 +285,9 @@ Klik op **Profiel** en er verschijnt een pop-up met de vraag of u het schema wil
 
 ![](../images/tutorials/create-schema/enable_unified_profile.png)
 
->[!NOTE] Zodra een schema voor het Profiel van de Klant in real time is toegelaten en opgeslagen, kan het niet worden onbruikbaar gemaakt.
+>[!NOTE]
+>
+>Zodra een schema voor het Profiel van de Klant in real time is toegelaten en opgeslagen, kan het niet worden onbruikbaar gemaakt.
 
 ## Volgende stappen
 
@@ -303,13 +311,17 @@ U kunt uw nieuwe klasse dan een Naam **van de** Vertoning (een korte, beschrijve
 
 ![Nieuwe klassedetails](../images/tutorials/create-schema/create_new_class.png)
 
->[!NOTE] Wanneer het bouwen van een schema dat een klasse uitvoert die door uw organisatie wordt bepaald, herinner dat de mengen voor gebruik slechts met compatibele klassen beschikbaar zijn. Aangezien de klasse die u hebt gedefinieerd nieuw is, worden er geen compatibele combinaties weergegeven in het dialoogvenster *Mixin* toevoegen. In plaats daarvan moet u Nieuwe mix **** maken selecteren en een mix definiëren voor gebruik met die klasse. De volgende keer dat u een schema samenstelt dat de nieuwe klasse implementeert, wordt de mix die u hebt gedefinieerd vermeld en beschikbaar voor gebruik.
+>[!NOTE]
+>
+>Wanneer het bouwen van een schema dat een klasse uitvoert die door uw organisatie wordt bepaald, herinner dat de mengen voor gebruik slechts met compatibele klassen beschikbaar zijn. Aangezien de klasse die u hebt gedefinieerd nieuw is, worden er geen compatibele combinaties weergegeven in het dialoogvenster *Mixin* toevoegen. In plaats daarvan moet u Nieuwe mix **** maken selecteren en een mix definiëren voor gebruik met die klasse. De volgende keer dat u een schema samenstelt dat de nieuwe klasse implementeert, wordt de mix die u hebt gedefinieerd vermeld en beschikbaar voor gebruik.
 
 ### De klasse van een schema wijzigen {#change-class}
 
 Op elk ogenblik tijdens het aanvankelijke proces van de schemacompositie, alvorens het schema wordt bewaard, kunt u de klasse veranderen waarop het schema wordt gebaseerd.
 
->[!WARNING] Wees voorzichtig voordat u de klasse wijzigt. Mixins zijn alleen compatibel met bepaalde klassen. Als u de klasse wijzigt, wordt het canvas opnieuw ingesteld en worden alle velden verwijderd die u aan dat punt hebt toegevoegd.
+>[!WARNING]
+>
+>Wees voorzichtig voordat u de klasse wijzigt. Mixins zijn alleen compatibel met bepaalde klassen. Als u de klasse wijzigt, wordt het canvas opnieuw ingesteld en worden alle velden verwijderd die u aan dat punt hebt toegevoegd.
 
 Als u de klasse wilt wijzigen, klikt u op **Toewijzen** naast *Klasse* in het gedeelte *Compositie* van de editor.
 
