@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van DULE Policy Service API
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Voordat u met de toepassing begint te werken, [!DNL Policy Service][!DNL Experie
 Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
 * [Gegevensbeheer](../home.md): Het kader waarmee de naleving van het gegevensgebruik wordt [!DNL Experience Platform] afgedwongen.
-   * [DULE-labels](../labels/overview.md): Labels voor gegevensgebruik worden toegepast op XDM-gegevensvelden (Experience Data Model) en geven beperkingen op voor de manier waarop die gegevens kunnen worden benaderd.
+   * [DULE-labels](../labels/overview.md): Labels voor gegevensgebruik worden toegepast op XDM-gegevensvelden (Experience Data Model), waarbij beperkingen worden opgegeven voor de manier waarop die gegevens kunnen worden benaderd.
 * [XDM-systeem](../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
 * [Klantprofiel](../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele instantie van het Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
@@ -50,7 +50,9 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot [!DNL D
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
