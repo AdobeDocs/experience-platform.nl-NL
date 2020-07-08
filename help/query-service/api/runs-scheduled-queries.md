@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Query Service
 topic: runs for scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '659'
+ht-degree: 0%
 
 ---
 
@@ -144,7 +147,9 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van looppas voor
 }
 ```
 
->[!NOTE] U kunt de waarde van gebruiken `_links.cancel` om een looppas voor een gespecificeerde geplande vraag [tegen te](#immediately-stop-a-run-for-a-specific-scheduled-query)houden.
+>[!NOTE]
+>
+>U kunt de waarde van gebruiken `_links.cancel` om een looppas voor een gespecificeerde geplande vraag [tegen te](#immediately-stop-a-run-for-a-specific-scheduled-query)houden.
 
 ### Breng onmiddellijk een looppas voor een specifieke geplande vraag teweeg
 
