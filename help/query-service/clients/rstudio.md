@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Verbinding maken met RStudio
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '222'
+ht-degree: 2%
 
 ---
 
 
 # Verbinding maken met RStudio
 
-Dit document doorloopt de stappen voor het verbinden van R Studio met de Dienst van de Vraag van het Platform van de Vraag van Adobe.
+Dit document loopt door de stappen voor het verbinden van R Studio met de Dienst van de Vraag van het Adobe Experience Platform.
 
 Nadat u RStudio hebt geïnstalleerd, moet u op het *consolescherm* dat wordt weergegeven eerst uw R-script voorbereiden om PostSQL te gebruiken.
 
@@ -40,7 +43,9 @@ con <- dbConnect(drv,
 | `{HOST_NUMBER` en `{PORT_NUMBER}` | Het gastheereindpunt en zijn haven voor de Dienst van de Vraag. |
 | `{USERNAME}` en `{PASSWORD}` | De aanmeldingsgegevens die worden gebruikt. De gebruikersnaam heeft de vorm van `ORG_ID@AdobeOrg`. |
 
->[!NOTE] Ga naar de pagina met [referenties op Platform voor meer informatie over het zoeken naar uw databasenaam, host, poort en aanmeldingsgegevens](https://platform.adobe.com/query/configuration). Om uw geloofsbrieven te vinden, login aan Platform, klik **Vragen**, dan klik **Referenties**.
+>[!NOTE]
+>
+>Ga naar de pagina met [referenties op het Platform](https://platform.adobe.com/query/configuration)voor meer informatie over het zoeken naar uw databasenaam, host, poort en aanmeldingsgegevens. Als u uw referenties wilt zoeken, meldt u zich aan bij het Platform, klikt u op **Vragen** en vervolgens op **Referenties**.
 
 ## Volgende stappen
 
