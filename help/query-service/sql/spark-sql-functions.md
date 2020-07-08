@@ -4,7 +4,10 @@ solution: Experience Platform
 title: SQL-functies in Spark
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: a23ee02a9e801531a38b5ff70ef07497aa21b174
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '4903'
+ht-degree: 4%
 
 ---
 
@@ -13,9 +16,11 @@ source-git-commit: a23ee02a9e801531a38b5ff70ef07497aa21b174
 
 De SQL helpers van de Vonk verstrekken ingebouwde functies van de Vonk SQL om SQL functionaliteit uit te breiden.
 
-Referentie: Documentatie over de SQL-functie [Spark](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
+Referentie: [SQL-functiedocumentatie parkeren](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
->[!NOTE] Niet alle functies in de externe documentatie worden ondersteund.
+>[!NOTE]
+>
+>Niet alle functies in de externe documentatie worden ondersteund.
 
 ## Categorieën
 
@@ -482,7 +487,7 @@ Voorbeeld:
 
 #### percentile_Approx
 
-`percentile_approx(col, percentage [, accuracy])`: Geeft als resultaat de ongeveer percentiele waarde van de numerieke kolom `col` met het opgegeven percentage. De waarde van `percentage` moet tussen 0,0 en 1,0 liggen. De `accuracy` parameter (standaardwaarde): 10000) is een positief letterlijk getal dat de nauwkeurigheid bij benadering bepaalt ten koste van het geheugen. Hoe hoger de waarde van `accuracy` retourneert, hoe nauwkeuriger `1.0/accuracy` de benadering, hoe onjuist deze is. Wanneer `percentage` een array is, moet elke waarde van de array met percentages tussen 0,0 en 1,0 liggen. In dit geval wordt bij benadering de percentielarray van de kolom geretourneerd `col` bij de opgegeven array met percentages.
+`percentile_approx(col, percentage [, accuracy])`: Geeft als resultaat de ongeveer percentiele waarde van de numerieke kolom `col` met het opgegeven percentage. De waarde van `percentage` moet tussen 0,0 en 1,0 liggen. De `accuracy` parameter (standaardwaarde): 10000) is een positief letterlijk getal dat de nauwkeurigheid bij benadering bepaalt ten koste van het geheugen. Hoe hoger de waarde van `accuracy` retourneert, hoe nauwkeuriger `1.0/accuracy` de benadering, hoe onjuist deze is. Wanneer `percentage` een array is, moet elke waarde van de array met percentages tussen 0,0 en 1,0 liggen. In dit geval wordt bij benadering de percentiele array van de kolom geretourneerd `col` bij de opgegeven array met percentages.
 
 Voorbeelden:
 
@@ -573,7 +578,9 @@ Voorbeelden:
  0.8446490682263027
 ```
 
->[!NOTE] Deze functie is in het algemeen niet deterministisch.
+>[!NOTE]
+>
+>Deze functie is in het algemeen niet deterministisch.
 
 #### willekeurig
 
@@ -590,7 +597,9 @@ Voorbeelden:
  1.1164209726833079
 ```
 
->[!NOTE] Deze functie is in het algemeen niet deterministisch.
+>[!NOTE]
+>
+>Deze functie is in het algemeen niet deterministisch.
 
 #### afdruk
 
@@ -1735,7 +1744,9 @@ Voorbeelden:
 ```
 
 Sinds: 1.5.0.
->[!NOTE] rse logic for arrays is beschikbaar vanaf 2.4.0.
+>[!NOTE]
+>
+>rse logic for arrays is beschikbaar vanaf 2.4.0.
 
 #### schudden
 
@@ -1751,7 +1762,9 @@ Voorbeelden:
 ```
 
 Sinds: 2.4.0.
->[!NOTE] niet deterministisch is.
+>[!NOTE]
+>
+>niet deterministisch is.
 
 #### segment
 
@@ -2386,7 +2399,9 @@ Voorbeeld:
  46707d92-02f4-4817-8116-a4c3b23e6266
 ```
 
->[!NOTE] Functie is niet deterministisch.
+>[!NOTE]
+>
+>Functie is niet deterministisch.
 
 ### Gegevensevaluatie
 
@@ -2422,7 +2437,9 @@ Voorbeelden:
  [1,2,3,4,5,6]
 ```
 
->[!NOTE] logica `concat` voor arrays is beschikbaar sinds 2.4.0.
+>[!NOTE]
+>
+>`concat` logica voor arrays is beschikbaar sinds 2.4.0.
 
 #### concat_ws
 
@@ -2680,7 +2697,7 @@ Voorbeelden:
  1
 ```
 
-#### positie
+#### position
 
 `position(substr, str[, pos])`: Retourneert de positie van het eerste exemplaar van `substr` in `str` de volgende positie `pos`. De gegeven `pos` en terugkeerwaarde zijn 1-gebaseerd.
 
