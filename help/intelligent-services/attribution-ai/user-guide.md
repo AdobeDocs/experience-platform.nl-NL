@@ -4,7 +4,7 @@ solution: Experience Platform
 title: gebruikershandleiding voor Attributie AI
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -60,7 +60,9 @@ Als u een conversiegebeurtenis wilt definiëren, moet u de gebeurtenis een naam 
 
 Zodra een gebeurtenis wordt geselecteerd, verschijnt een nieuw drop-down aan zijn recht. Het tweede vervolgkeuzemenu wordt gebruikt om verdere context aan uw gebeurtenis door het gebruik van verrichtingen te verstrekken. Voor deze conversiegebeurtenis *bestaat* de standaardbewerking.
 
->[!NOTE] Een tekenreeks onder de naam *van de* conversie wordt bijgewerkt terwijl u de gebeurtenis definieert.
+>[!NOTE]
+>
+>Een tekenreeks onder de naam *van de* conversie wordt bijgewerkt terwijl u de gebeurtenis definieert.
 
 ![geen vervolgkeuzelijst](./images/user-guide/conversion_event_1.png)
 
@@ -98,7 +100,9 @@ Voor dit aanraakpunt selecteert u **gelijk aan**.
 
 Nadat een operator voor een aanraakpunt is geselecteerd, wordt *Veldwaarde* invoeren beschikbaar gesteld. De vervolgkeuzemenu&#39;s voor *Veldwaarde* invoeren vullen op basis van de operator en de aanraakpuntwaarde die u eerder hebt geselecteerd. Als een waarde niet in de vervolgkeuzelijst wordt gevuld, kunt u die waarde handmatig invoeren. Klik op het vervolgkeuzemenu en selecteer **KLIKKEN**.
 
->[!NOTE] Aan de operatoren &quot;bestaat&quot; en &quot;niet bestaat&quot; zijn geen veldwaarden gekoppeld.
+>[!NOTE]
+>
+>Aan de operatoren &quot;bestaat&quot; en &quot;niet bestaat&quot; zijn geen veldwaarden gekoppeld.
 
 ![vervolgkeuzelijst met aanraakpunten](./images/user-guide/touchpoint_dropdown.png)
 
@@ -112,7 +116,9 @@ Als u op Groep **** toevoegen klikt, kunt u extra velden maken die los staan van
 
 ![overzicht van aanraakpunten](./images/user-guide/add_group_touchpoint.png)
 
->[!NOTE] Gebruik de tekenreeks onder de naam *van het* aanraakpunt voor een snel overzicht van uw aanraakpunt. De tekenreeks komt overeen met de naam van het aanraakpunt.
+>[!NOTE]
+>
+>Gebruik de tekenreeks onder de naam *van het* aanraakpunt voor een snel overzicht van uw aanraakpunt. De tekenreeks komt overeen met de naam van het aanraakpunt.
 
 ![](./images/user-guide/touchpoint_string.png)
 
@@ -140,7 +146,9 @@ Klik op het vervolgkeuzemenu onder *Muziekfrequentie* om een score tussen dag, w
 
 Klik op het klokpictogram om de tijd van de dag te wijzigen die u wilt scoren. Voer in de nieuwe overlay die wordt weergegeven de tijd in van de dag die u wilt scoren. Klik buiten de bedekking om deze te sluiten.
 
->[!NOTE] Het kan tot 24 uur duren voor elk scoringsproces wordt voltooid.
+>[!NOTE]
+>
+>Het kan tot 24 uur duren voor elk scoringsproces wordt voltooid.
 
 ![klokpictogram](./images/user-guide/time_of_day.png)
 
@@ -158,7 +166,9 @@ Selecteer vervolgens een operator.
 
 Typ ten slotte de landcode in het vervolgkeuzemenu *Veldwaarde* invoeren.
 
->[!NOTE] Landcodes zijn twee tekens lang. Een volledige lijst vindt u hier in [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>Landcodes zijn twee tekens lang. Een volledige lijst vindt u hier in [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ![regio](./images/user-guide/region-based.png)
 
@@ -166,7 +176,9 @@ Typ ten slotte de landcode in het vervolgkeuzemenu *Veldwaarde* invoeren.
 
 Om ervoor te zorgen dat u het meest nauwkeurige model mogelijk krijgt, is het belangrijk om uw model te trainen met historische gegevens die uw zaken vertegenwoordigen. Standaard wordt het model getraind met twee kwartalen (zes maanden) gegevens. Selecteer het vervolgkeuzemenu om de standaardinstelling te wijzigen. U kunt kiezen om met één tot vier kwart van gegevens (3-12 maanden) te trainen.
 
->[!NOTE] Een korter trainingsvenster is gevoeliger voor recente trends, terwijl een langer trainingsvenster een robuuster model creëert en minder gevoelig is voor recente trends.
+>[!NOTE]
+>
+>Een korter trainingsvenster is gevoeliger voor recente trends, terwijl een langer trainingsvenster een robuuster model creëert en minder gevoelig is voor recente trends.
 
 ![trainingsvenster](./images/user-guide/training_window.png)
 
