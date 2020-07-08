@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Identiteitskaarten weergeven
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 0%
 
 ---
 
@@ -62,7 +65,9 @@ curl -X GET \
 
 Gebruik de `POST` methode als een batchequivalent van de hierboven beschreven `GET` methode om toewijzingen voor meerdere identiteiten op te halen.
 
->[!NOTE] Het verzoek mag niet meer dan 1000 identiteiten bevatten. Verzoeken die langer zijn dan 1000 identiteiten, resulteren in 400 statuscode.
+>[!NOTE]
+>
+>Het verzoek mag niet meer dan 1000 identiteiten bevatten. Verzoeken die langer zijn dan 1000 identiteiten, resulteren in 400 statuscode.
 
 **API-indeling**
 
