@@ -4,14 +4,17 @@ solution: Experience Platform
 title: ETL-integratie maken
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '4227'
+ht-degree: 0%
 
 ---
 
 
-# ETL-integratie ontwikkelen voor Adobe Experience Platform
+# Ontwikkeling van ETL-integratie voor Adobe Experience Platform
 
-De ETL-integratiehandleiding bevat algemene stappen voor het maken van krachtige, veilige connectors voor het Experience Platform en het opnemen van gegevens in Platform.
+De ETL-integratiehandleiding beschrijft algemene stappen voor het maken van krachtige, veilige connectors voor Experience Platform en het opnemen van gegevens in het Platform.
 
 
 - [Catalogus](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
@@ -20,50 +23,52 @@ De ETL-integratiehandleiding bevat algemene stappen voor het maken van krachtige
 - [API&#39;s voor verificatie en autorisatie](../tutorials/authentication.md)
 - [Schema-register](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
 
-Deze handleiding bevat ook voorbeeld-API-aanroepen die moeten worden gebruikt bij het ontwerpen van een ETL-connector, met koppelingen naar documentatie waarin elke Experience Platform-service en het gebruik van de bijbehorende API nader worden beschreven.
+Deze handleiding bevat ook voorbeeld-API-aanroepen die moeten worden gebruikt bij het ontwerpen van een ETL-aansluiting, met koppelingen naar documentatie die een overzicht geeft van elke service van het Experience Platform en het gebruik van de API, meer in detail.
 
 Een steekproefintegratie is beschikbaar op GitHub via de Referentiecode [van de Integratie van het Ecosysteem van](https://github.com/adobe/acp-data-services-etl-reference) ETL onder de Vergunning van de Apache Versie 2.0.
 
 ## Workflow
 
-Het volgende werkstroomdiagram biedt een overzicht op hoog niveau voor de integratie van componenten van het Adobe Experience Platform met een ETL-toepassing en -aansluiting.
+Het volgende werkschemadiagram verstrekt een overzicht op hoog niveau voor de integratie van de componenten van het Adobe Experience Platform met een toepassing ETL en schakelaar.
 
 ![](images/etl.png)
 
-## Adobe Experience Platform-componenten
+## Adobe Experience Platforms
 
-Er zijn veelvoudige componenten van het Platform van de Ervaring betrokken bij ETL schakelaarintegratie. In de volgende lijst worden verschillende belangrijke componenten en functies beschreven:
+Er zijn veelvoudige Experience Platform componenten betrokken bij ETL schakelaarintegratie. In de volgende lijst worden verschillende belangrijke componenten en functies beschreven:
 
-- **Adobe Identity Management System (IMS)** - Biedt een framework voor verificatie voor Adobe-services.
+- **Adobe Identity Management System (IMS)** : biedt een framework voor verificatie van Adobe-services.
 - **IMS-organisatie** - een organisatie die producten en diensten kan bezitten of in licentie kan geven en toegang kan verlenen tot haar leden.
 - **IMS-gebruiker** - leden van een IMS-organisatie. De relatie Organisatie met gebruiker is veel te veel.
-- **Sandbox** - Een virtuele partitie is één instantie Platform voor het ontwikkelen en ontwikkelen van toepassingen voor digitale ervaringen.
-- **Gegevensdetectie** - Registreert de metagegevens van opgenomen en getransformeerde gegevens in het Experience Platform.
-- **Gegevenstoegang** - Biedt gebruikers een interface om toegang te krijgen tot hun gegevens in Experience Platform.
+- **Sandbox** - Een virtuele partitie die één Platform-instantie vormt, waarmee toepassingen voor digitale ervaringen kunnen worden ontwikkeld en ontwikkeld.
+- **Gegevensdetectie** - Registreert de metagegevens van opgenomen en getransformeerde gegevens in Experience Platform.
+- **De Toegang** van gegevens - voorziet gebruikers van een interface om tot hun gegevens in Experience Platform toegang te hebben.
 - **Gegevensinname** - Past gegevens naar Experience Platform met API&#39;s voor gegevensinname.
-- **Het Register** van het schema - bepaalt en slaat schema op dat de structuur van gegevens beschrijft die in het Platform van de Ervaring moeten worden gebruikt.
+- **Het Register** van het schema - bepaalt en slaat schema op dat de structuur van gegevens beschrijft die in Experience Platform moeten worden gebruikt.
 
-## Aan de slag met de API&#39;s van Experience Platform
+## Aan de slag met Experience Platform-API&#39;s
 
-De volgende secties verstrekken extra informatie die u zult moeten kennen of hebben om met succes vraag aan Platform APIs te maken.
+De volgende secties verstrekken extra informatie die u zult moeten kennen of hebben om met succes vraag aan Experience Platform APIs te maken.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../sandboxes/home.md).
+>[!NOTE]
+>
+>Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -71,21 +76,23 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Algemene gebruikersstroom
 
-Om te beginnen, registreert een gebruiker ETL in het gebruikersinterface van het Platform van de Ervaring (UI) en leidt datasets voor opname gebruikend een standaardschakelaar of een duw-dienst schakelaar.
+Om te beginnen, registreert een gebruiker ETL in het gebruikersinterface van het Experience Platform (UI) en leidt datasets voor opname gebruikend een standaardschakelaar of een duw-dienst schakelaar.
 
-In UI, leidt de gebruiker tot de outputdataset door een datasetschema te selecteren. De keuze van het schema hangt af van het type gegevens (record- of tijdreeks) dat in Platform wordt opgenomen. Door op het lusje van Schema binnen UI te klikken, zal de gebruiker alle beschikbare schema&#39;s, met inbegrip van het gedragstype kunnen bekijken dat het schema steunt.
+In UI, leidt de gebruiker tot de outputdataset door een datasetschema te selecteren. De keuze van het schema hangt af van het type gegevens (record- of tijdreeks) dat in het Platform wordt opgenomen. Door op het lusje van Schema binnen UI te klikken, zal de gebruiker alle beschikbare schema&#39;s, met inbegrip van het gedragstype kunnen bekijken dat het schema steunt.
 
-In ETL zal de gebruiker beginnen hun toewijzingstransformaties te ontwerpen nadat de aangewezen verbinding (gebruikend hun geloofsbrieven) wordt gevormd. Er wordt aangenomen dat de ETL-tool al connectors van het Experience Platform heeft geïnstalleerd (proces niet gedefinieerd in deze integratiegids).
+In ETL zal de gebruiker beginnen hun toewijzingstransformaties te ontwerpen nadat de aangewezen verbinding (gebruikend hun geloofsbrieven) wordt gevormd. Het ETL-hulpprogramma wordt verondersteld dat al Experience Platform-connectors zijn geïnstalleerd (proces niet gedefinieerd in deze integratiegids).
 
 In de [ETL-workflow](./workflow.md)zijn modellen voor een voorbeeld-ETL-tool en -workflow opgenomen. Hoewel de ETL-gereedschappen verschillende indelingen kunnen hebben, zijn de meeste toepassingen beschikbaar voor vergelijkbare functies.
 
->[!NOTE] De ETL-aansluiting moet een tijdstempelfilter opgeven waarmee de datum voor het invoeren van gegevens en verschuiving (d.w.z. het venster waarvoor gegevens moeten worden gelezen) wordt aangegeven. Het ETL-hulpmiddel moet het gebruik van deze twee parameters in deze of een andere relevante interface ondersteunen. In het Adobe Experience Platform worden deze parameters toegewezen aan beschikbare datums (indien aanwezig) of vastgelegde datums in het batchobject van de gegevensset.
+>[!NOTE]
+>
+>De ETL-aansluiting moet een tijdstempelfilter opgeven waarmee de datum voor het invoeren van gegevens en verschuiving (d.w.z. het venster waarvoor gegevens moeten worden gelezen) wordt aangegeven. Het ETL-hulpmiddel moet het gebruik van deze twee parameters in deze of een andere relevante interface ondersteunen. In Adobe Experience Platform worden deze parameters toegewezen aan beschikbare datums (indien aanwezig) of vastgelegde datums in batchobject of dataset.
 
 ### Lijst met gegevenssets weergeven
 
 Met behulp van de gegevensbron voor toewijzing, kan een lijst van alle beschikbare datasets worden gehaald gebruikend [Catalog API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
-U kunt één API-verzoek indienen om alle beschikbare gegevenssets te bekijken (bijvoorbeeld `GET /dataSets`), met beste praktijken het zijn om vraagparameters te omvatten die de grootte van de reactie beperken.
+U kunt één API-verzoek indienen om alle beschikbare gegevenssets te bekijken (bijvoorbeeld `GET /dataSets`), met best practices om queryparameters op te nemen die de grootte van de reactie beperken.
 
 In gevallen waarin om _volledige_ gegevenssetinformatie wordt verzocht, kan de antwoordlading voorbij 3 GB in grootte bereiken, die algemene prestaties kan vertragen. Daarom zal het gebruiken van vraagparameters om slechts de informatie te filtreren nodig vragen van de Catalogus efficiënter maken.
 
@@ -163,7 +170,9 @@ Het XDM-schema is het schema dat u gebruikt wanneer u de gebruiker een lijst moe
 
 De eerste &quot;schemaRef.id&quot;waarde in het vorige reactievoorwerp (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) is URI die aan een specifiek schema XDM in de Registratie van het Schema richt. Het schema kan worden teruggewonnen door een raadpleging (GET) verzoek aan de Registratie API van het Schema te maken.
 
->[!NOTE] De eigenschap &quot;schemaRef&quot; vervangt de nu afgekeurde eigenschap &quot;schema&quot;. Als &quot;schemaRef&quot;van de dataset afwezig is of geen waarde bevat, zult u de aanwezigheid van een &quot;schema&quot;bezit moeten controleren. Dit zou kunnen worden gedaan door &quot;schemaRef&quot;met &quot;schema&quot;in de `properties` vraagparameter in de vorige vraag te vervangen. Meer details over het &quot;schema&quot;bezit zijn beschikbaar in de sectie van het Bezit [van de](#dataset-schema-property-deprecated---eol-2019-05-30) Dataset &quot;schema&quot;die volgt.
+>[!NOTE]
+>
+>De eigenschap &quot;schemaRef&quot; vervangt de nu afgekeurde eigenschap &quot;schema&quot;. Als &quot;schemaRef&quot;van de dataset afwezig is of geen waarde bevat, zult u de aanwezigheid van een &quot;schema&quot;bezit moeten controleren. Dit zou kunnen worden gedaan door &quot;schemaRef&quot;met &quot;schema&quot;in de `properties` vraagparameter in de vorige vraag te vervangen. Meer details over het &quot;schema&quot;bezit zijn beschikbaar in de sectie van het Bezit [van de](#dataset-schema-property-deprecated---eol-2019-05-30) Dataset &quot;schema&quot;die volgt.
 
 **API-indeling**
 
@@ -196,7 +205,9 @@ De responsindeling is afhankelijk van het type Accept-header dat in de aanvraag 
 | `application/vnd.adobe.xed-full-notext+json; version={major version}` | $refs en allOf opgelost, geen titels of beschrijvingen |
 | `application/vnd.adobe.xed-full-desc+json; version={major version}` | $refs en alle opgeloste, omschrijvingen inbegrepen |
 
->[!NOTE] en `application/vnd.adobe.xed-id+json` `application/vnd.adobe.xed-full+json; version={major version}` zijn de meestgebruikte Accepterende koppen. `application/vnd.adobe.xed-id+json` heeft de voorkeur voor het opnemen van bronnen in het schemaregister, aangezien alleen de titel, id en version worden geretourneerd. `application/vnd.adobe.xed-full+json; version={major version}` heeft de voorkeur voor het weergeven van een specifieke bron (aan de hand van de id), aangezien deze alle velden (genest onder &quot;eigenschappen&quot;) retourneert, evenals titels en beschrijvingen.
+>[!NOTE]
+>
+>`application/vnd.adobe.xed-id+json` en `application/vnd.adobe.xed-full+json; version={major version}` zijn de meest gebruikte Accepteer koppen. `application/vnd.adobe.xed-id+json` heeft de voorkeur voor het opnemen van bronnen in het schemaregister, aangezien alleen de titel, id en version worden geretourneerd. `application/vnd.adobe.xed-full+json; version={major version}` heeft de voorkeur voor het weergeven van een specifieke bron (aan de hand van de id), aangezien deze alle velden (genest onder &quot;eigenschappen&quot;) retourneert, evenals titels en beschrijvingen.
 
 **Antwoord**
 
@@ -236,17 +247,21 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
   -H "x-api-key: {API_KEY}"
 ```
 
->[!NOTE] Een facultatieve vraagparameter, `expansion=xdm`, vertelt API om volledig uit te breiden en in-lijn om het even welke referenced schema&#39;s. Dit kunt u doen wanneer u een lijst met alle mogelijke velden aan de gebruiker presenteert.
+>[!NOTE]
+>
+>Een facultatieve vraagparameter, `expansion=xdm`, vertelt API om volledig uit te breiden en in-lijn om het even welke referenced schema&#39;s. Dit kunt u doen wanneer u een lijst met alle mogelijke velden aan de gebruiker presenteert.
 
 **Antwoord**
 
 Gelijkaardig aan de stappen voor het [bekijken van datasetschema](#view-dataset-schema), bevat de reactie een schema JSON dat de structuur en gebied-vlakke informatie van de gegevens beschrijft, die als JSON in series worden vervaardigd.
 
->[!NOTE] Wanneer het &quot;schema&quot;gebied leeg is of volledig ontbreekt, zou de schakelaar het &quot;schemaRef&quot;gebied moeten lezen en de [Registratie API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) van het Schema zoals aangetoond in de vorige stappen gebruiken om een datasetschema [te](#view-dataset-schema)bekijken.
+>[!NOTE]
+>
+>Wanneer het &quot;schema&quot;gebied leeg is of volledig ontbreekt, zou de schakelaar het &quot;schemaRef&quot;gebied moeten lezen en de [Registratie API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) van het Schema zoals aangetoond in de vorige stappen gebruiken om een datasetschema [te](#view-dataset-schema)bekijken.
 
 ### De eigenschap &quot;observableSchema&quot;
 
-De eigenschap &quot;observableSchema&quot; van een dataset heeft een JSON-structuur die overeenkomt met die van het XDM-schema JSON. Het &quot;observableSchema&quot; bevat de velden die aanwezig waren in de binnenkomende invoerbestanden. Wanneer het schrijven van gegevens aan het Platform van de Ervaring, wordt een gebruiker vereist niet om elk gebied van het doelschema te gebruiken. In plaats daarvan moeten ze alleen die velden leveren die worden gebruikt.
+De eigenschap &quot;observableSchema&quot; van een dataset heeft een JSON-structuur die overeenkomt met die van het XDM-schema JSON. Het &quot;observableSchema&quot; bevat de velden die aanwezig waren in de binnenkomende invoerbestanden. Wanneer het schrijven van gegevens aan Experience Platform, wordt een gebruiker vereist niet om elk gebied van het doelschema te gebruiken. In plaats daarvan moeten ze alleen die velden leveren die worden gebruikt.
 
 Het waarneembare schema is het schema dat u zou gebruiken als u de gegevens leest of een lijst presenteert met velden die beschikbaar zijn om van te lezen/in kaart te brengen.
 
@@ -476,9 +491,9 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-Gegevens worden geschreven naar Experience Platform met behulp van [Data Ingestie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).  Het schrijven van gegevens is een asynchroon proces. Wanneer gegevens naar het Adobe Experience Platform worden geschreven, wordt pas een batch gemaakt en gemarkeerd als een succes als de gegevens volledig zijn geschreven.
+Gegevens worden naar het Experience Platform geschreven met de API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)gegevensinname.  Het schrijven van gegevens is een asynchroon proces. Wanneer gegevens naar het Adobe Experience Platform worden geschreven, wordt een batch alleen gemaakt en gemarkeerd als een succes nadat de gegevens volledig zijn geschreven.
 
-Gegevens in het ervaringsplatform moeten worden geschreven in de vorm van parketbestanden.
+Gegevens in Experience Platform moeten in de vorm van parketbestanden worden geschreven.
 
 ## Uitvoeringsfase
 
@@ -488,7 +503,7 @@ Wanneer de uitvoering start, leest de connector (zoals gedefinieerd in de bronco
 
 Het [voorbeelddocument voor ETL-transformaties](./transformations.md) bevat een aantal voorbeeldtransformaties, waaronder identiteitsbeheer en gegevenstypetoewijzingen. Gebruik deze transformaties ter referentie.
 
-### Gegevens van het Experience Platform lezen
+### Gegevens van Experience Platform lezen
 
 Met de [Catalog-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)kunt u alle batches ophalen tussen een opgegeven begintijd en eindtijd en ze sorteren op de volgorde waarin ze zijn gemaakt.
 
@@ -559,11 +574,13 @@ Als u de verwijzingsimplementatie gebruikt die op [GitHub](https://github.com/ad
 
 Validatie kan voor logische types worden uitgevoerd XDM, gebruikend attributen zoals `minLength` en `maxlength` voor koorden, `minimum` en `maximum` voor gehelen, en meer. De ontwikkelaarsgids voor [de](../xdm/api/getting-started.md) schemaregistratie-API bevat een tabel met XDM-typen en de eigenschappen die voor validatie kunnen worden gebruikt.
 
->[!NOTE] De minimum- en maximumwaarden die voor verschillende `integer` typen worden opgegeven, zijn de MIN- en MAX-waarden die door het type worden ondersteund, maar deze waarden kunnen verder worden beperkt tot de minimum- en maximumwaarden van uw keuze.
+>[!NOTE]
+>
+>De minimum- en maximumwaarden die voor verschillende `integer` typen worden opgegeven, zijn de MIN- en MAX-waarden die door het type worden ondersteund, maar deze waarden kunnen verder worden beperkt tot de minimum- en maximumwaarden van uw keuze.
 
 ### Een batch maken
 
-Zodra de gegevens zijn verwerkt, schrijft het ETL-hulpprogramma de gegevens terug naar het Experience Platform met behulp van de [Batch Ingestie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Voordat gegevens kunnen worden toegevoegd aan een gegevensset, moet deze worden gekoppeld aan een batch die later wordt geüpload naar een specifieke gegevensset.
+Nadat de gegevens zijn verwerkt, schrijft het ETL-hulpprogramma de gegevens terug naar het Experience Platform met de [Batch Ingestie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Voordat gegevens kunnen worden toegevoegd aan een gegevensset, moet deze worden gekoppeld aan een batch die later wordt geüpload naar een specifieke gegevensset.
 
 **Verzoek**
 
@@ -587,7 +604,7 @@ Nadat een nieuwe partij met succes tot stand is gebracht, kunnen de dossiers dan
 
 **Verzoek**
 
-Gegevens in het ervaringsplatform moeten worden geschreven in de vorm van parketbestanden.
+Gegevens in Experience Platform moeten in de vorm van parketbestanden worden geschreven.
 
 ```shell
 curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/dataSets/{DATASET_ID}/files/{FILE_NAME}.parquet" \
@@ -603,7 +620,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 Nadat alle bestanden naar de batch zijn geüpload, kan de batch worden gemarkeerd als voltooid. Op deze manier worden de Catalogus &quot;DataSetFile&quot;-items gemaakt voor de voltooide bestanden en gekoppeld aan de gegenereerde batch. De catalogusbatch wordt vervolgens gemarkeerd als succesvol, waardoor stroomafwaartse stromen worden geactiveerd om de beschikbare gegevens in te voeren.
 
-Gegevens worden eerst landd op de testlocatie op het Adobe Experience Platform en vervolgens verplaatst naar de uiteindelijke locatie na catalogisering en validatie. Batches worden gemarkeerd als succesvol zodra alle gegevens naar een vaste locatie worden verplaatst.
+De gegevens worden eerst in de halteplaats op het Adobe Experience Platform geland en vervolgens naar de uiteindelijke locatie verplaatst na catalogisering en validering. Batches worden gemarkeerd als succesvol zodra alle gegevens naar een vaste locatie worden verplaatst.
 
 **Verzoek**
 
@@ -742,13 +759,13 @@ Wanneer momentopnameprofielen worden gebruikt, zal het hulpmiddel ETL de laatste
 
 Het opnieuw afspelen van batches en het opwerken van gegevens kunnen vereist zijn in gevallen waarin een klant ontdekt dat de laatste &#39;n&#39; dagen, de gegevens die worden verwerkt niet zoals verwacht hebben plaatsgevonden of de brongegevens zelf wellicht niet correct zijn geweest.
 
-Hiertoe gebruiken de gegevensbeheerders van de client de interface van het platform om de batches met beschadigde gegevens te verwijderen. Vervolgens zal de ETL waarschijnlijk opnieuw moeten worden uitgevoerd, zodat de ETL met correcte gegevens kan worden gerepareerd. Als de bron zelf corrupte gegevens had, zal de gegevensingenieur/beheerder de bronpartijen moeten verbeteren en de gegevens (of in het Platform van de Ervaring van Adobe of via ETL schakelaars) opnieuw opnemen.
+Hiertoe gebruiken de gegevensbeheerders van de client de interface van het Platform om de batches met beschadigde gegevens te verwijderen. Vervolgens zal de ETL waarschijnlijk opnieuw moeten worden uitgevoerd, zodat de ETL met correcte gegevens kan worden gerepareerd. Als de bron zelf corrupte gegevens had, zal de gegevensingenieur/beheerder de bronpartijen moeten verbeteren en de gegevens (of in Adobe Experience Platform of via schakelaars ETL) opnieuw opnemen.
 
 Gebaseerd op het type van gegevens die worden geproduceerd, zal het de keus van de gegevensingenieur zijn om één enkele partij of alle partijen uit bepaalde datasets te verwijderen. Gegevens worden verwijderd/gearchiveerd volgens de richtlijnen van het Experience Platform.
 
 Het is waarschijnlijk een scenario dat de functionaliteit ETL om gegevens te zuiveren belangrijk zal zijn.
 
-Zodra het leegmaken is voltooid, moeten de clientbeheerders het Adobe Experience Platform opnieuw configureren om de verwerking voor de kernservices opnieuw te starten vanaf het moment dat de batches worden verwijderd.
+Zodra het zuiveren volledig is, zullen de cliëntbeheerders Adobe Experience Platform moeten aanpassen om verwerking voor de kerndiensten van de tijd opnieuw te beginnen wanneer de partijen worden geschrapt.
 
 ## Gelijktijdige batchverwerking
 
@@ -764,7 +781,7 @@ Voor bronbatches is dit weer afhankelijk van de voorkeur van de klant en de bepe
 
 Uitstel is een proces waarbij de inputgegevens nog niet volledig genoeg zijn om naar downstreamprocessen te worden verzonden, maar in de toekomst bruikbaar kunnen zijn. Clients zullen hun individuele tolerantie voor gegevensramen voor toekomstige matching tegenover de kosten van verwerking bepalen om hun beslissing om gegevens te reserveren en opnieuw te verwerken in de volgende transformatieuitvoering te informeren, in de hoop dat het op een bepaald tijdstip in het bewaarvenster kan worden verrijkt en in overeenstemming gebracht/vastgemaakt. Deze cyclus loopt tot de rij voldoende is verwerkt of te groot wordt geacht om te blijven investeren in. Elke herhaling genereert uitgestelde gegevens die een superset zijn van alle uitgestelde gegevens in vorige herhalingen.
 
-Het Platform van de Ervaring van Adobe identificeert momenteel geen uitgestelde gegevens, zodat moeten de cliëntimplementaties zich op de ETL en de handconfiguraties van Dataset baseren om een andere dataset in Platform te creëren die de brondataset weerspiegelt die kan worden gebruikt om uitgestelde gegevens te houden. In dit geval zijn uitgestelde gegevens vergelijkbaar met momentopnamegegevens. Bij elke uitvoering van de ETL-transformatie worden de brongegevens verenigd met uitgestelde gegevens en verzonden voor verwerking.
+Het Adobe Experience Platform identificeert momenteel geen uitgestelde gegevens, zodat moeten de cliëntimplementaties zich op de ETL en de handconfiguraties baseren Dataset om een andere dataset in Platform te creëren die de brondataset weerspiegelt die kan worden gebruikt om uitgestelde gegevens te houden. In dit geval zijn uitgestelde gegevens vergelijkbaar met momentopnamegegevens. Bij elke uitvoering van de ETL-transformatie worden de brongegevens verenigd met uitgestelde gegevens en verzonden voor verwerking.
 
 ## Changelog
 
