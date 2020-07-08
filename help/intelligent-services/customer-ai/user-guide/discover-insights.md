@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Informatie over inzichten met Customer AI
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -30,7 +30,9 @@ Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **[!UICONTROL
 
 De de dienstpagina van AI van de Klant verschijnt. Deze pagina bevat een overzicht van de service-instanties van de AI van de Klant en geeft informatie over deze instanties, zoals de naam van het exemplaar, het type van de Propensiteit, hoe vaak het exemplaar wordt uitgevoerd en de status van de laatste update.
 
->[!NOTE] Slechts hebben de de dienstinstanties die succesvolle het scoren looppas hebben voltooid inzicht.
+>[!NOTE]
+>
+>Slechts hebben de de dienstinstanties die succesvolle het scoren looppas hebben voltooid inzicht.
 
 ![Instantie maken](../images/insights/dashboard.png)
 
@@ -51,7 +53,9 @@ Als u details wilt weergeven vanuit het dashboard, klikt u op een servicecontain
 
 ![rechterspoor](../images/insights/success-run.png)
 
->[!NOTE] Als een scoring mislukt, wordt een foutbericht weergegeven. Het foutbericht wordt weergegeven onder *Laatste run details* in de rechterrail die alleen zichtbaar is voor mislukte run.
+>[!NOTE]
+>
+>Als een scoring mislukt, wordt een foutbericht weergegeven. Het foutbericht wordt weergegeven onder *Laatste run details* in de rechterrail die alleen zichtbaar is voor mislukte run.
 
 ![bericht voor mislukte uitvoering](../images/insights/failed-run.png)
 
@@ -85,7 +89,9 @@ De knop **[!UICONTROL Meer handelingen]** bevindt zich in de navigatie rechtsbov
 
 Scoreoverzicht geeft het totale aantal profielen weer dat wordt gescoord en categoriseert deze in emmers met een hoge, gemiddelde en lage dichtheid. De dichtheidsemmers worden bepaald op basis van het score-bereik, laag is minder dan 24, gemiddeld 25 tot 74 en hoog is boven 74. Elk emmertje heeft een kleur die overeenkomt met de legenda.
 
->[!NOTE] Als het een conversiesnelheidsscore is, worden de hoge scores groen en de lage scores rood weergegeven. Als je de eigenheid van de kroon voorspelt, wordt deze gespiegeld, dan zijn de hoge scores rood en zijn de lage scores groen. Het gemiddelde emmertje blijft geel ongeacht welk aandrijvingstype u kiest.
+>[!NOTE]
+>
+>Als het een conversiesnelheidsscore is, worden de hoge scores groen en de lage scores rood weergegeven. Als je de eigenheid van de kroon voorspelt, wordt deze gespiegeld, dan zijn de hoge scores rood en zijn de lage scores groen. Het gemiddelde emmertje blijft geel ongeacht welk aandrijvingstype u kiest.
 
 ![overzicht van scores](../images/insights/scoring-summary.png)
 
@@ -118,7 +124,7 @@ De segmentbouwer wordt gebruikt om een segment te bepalen. Als u Segment **** ma
 
 ![Segmentvulling in](../images/insights/segment-saving.png)
 
-Klik op **[!UICONTROL Segmenten]** in de linkernavigatie om het nieuwe segment in de interface van het platform weer te geven. De pagina *Bladeren* wordt weergegeven met alle beschikbare segmenten.
+Als u het nieuwe segment wilt weergeven in de gebruikersinterface van het Platform, klikt u op **[!UICONTROL Segmenten]** in de linkernavigatie. De pagina *Bladeren* wordt weergegeven met alle beschikbare segmenten.
 
 ![Alle segmenten](../images/insights/Segments-dashboard.png)
 
