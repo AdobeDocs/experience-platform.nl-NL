@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Beschikbare naamruimten weergeven
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 2%
@@ -35,7 +35,9 @@ curl -X GET \
 
 De reactie bevat een array met objecten, waarbij elk object een beschikbare naamruimte vertegenwoordigt. Naamruimten met de waarde &quot;[!UICONTROL custom]&quot; van &quot;[!UICONTROL false]&quot; zijn standaardnaamruimten, terwijl naamruimten met de waarde &quot;[!UICONTROL custom]&quot; van &quot;[!UICONTROL true]&quot; naamruimten zijn die uw organisatie heeft gemaakt.
 
->[!NOTE] Deze reactie is afgebroken voor de ruimte.
+>[!NOTE]
+>
+>Deze reactie is afgebroken voor de ruimte.
 
 ```json
 [
