@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een beleid voor gegevensgebruik maken
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 0%
@@ -217,7 +217,9 @@ Deze expressie wordt een **beleidsexpressie** genoemd en is een object dat (A) e
 }
 ```
 
->[!NOTE] Alleen de operatoren OR en AND worden ondersteund.
+>[!NOTE]
+>
+>Alleen de operatoren OR en AND worden ondersteund.
 
 Zodra u uw beleidsuitdrukking hebt gevormd, kunt u een nieuw DULE beleid tot stand brengen door een POST- verzoek aan het `/policies/custom` eindpunt te maken.
 
@@ -322,7 +324,9 @@ Registreer identiteitskaart van URI van het pas gecreëerde DULE beleid, aangezi
 
 ## Het DULE-beleid inschakelen
 
->[!NOTE] Hoewel deze stap facultatief is als u uw DULE beleid in `DRAFT` status wilt verlaten, gelieve te merken dat door gebrek een beleid zijn status moet hebben aan `ENABLED` om aan evaluatie deel te nemen. Zie de zelfstudie over het [afdwingen van DULE-beleid](../enforcement/api-enforcement.md) voor informatie over het maken van uitzonderingen voor beleid in `DRAFT` status.
+>[!NOTE]
+>
+>Hoewel deze stap facultatief is als u uw DULE beleid in `DRAFT` status wilt verlaten, gelieve te merken dat door gebrek een beleid zijn status moet hebben aan `ENABLED` om aan evaluatie deel te nemen. Zie de zelfstudie over het [afdwingen van DULE-beleid](../enforcement/api-enforcement.md) voor informatie over het maken van uitzonderingen voor beleid in `DRAFT` status.
 
 Door gebrek, DULE beleid dat hun `status` bezit heeft worden geplaatst om `DRAFT` niet aan evaluatie deel te nemen. U kunt uw beleid voor evaluatie toelaten door een verzoek van de PATCH aan het `/policies/custom/` eindpunt te doen en het unieke herkenningsteken voor het beleid aan het eind van de verzoekweg te verstrekken.
 
