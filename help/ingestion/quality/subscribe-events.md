@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Abonneren op gebeurtenissen voor gegevensinvoer
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1498739d753bdb569e0d3e091e4160bdae40a32f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '851'
 ht-degree: 0%
@@ -14,17 +14,19 @@ ht-degree: 0%
 
 # Meldingen voor gegevensinvoer
 
-Het proces voor het opnemen van gegevens in het Adobe Experience Platform bestaat uit meerdere stappen. Zodra u gegevensdossiers identificeert die in Platform moeten worden opgenomen, begint het innameproces en elke stap komt achtereenvolgens tot de gegevens of met succes worden opgenomen of ontbreken. Het insluitingsproces kan worden gestart met de [Adobe Experience Platform Data Ingestie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) of via de Experience Platform-gebruikersinterface.
+Het proces om gegevens in Adobe Experience Platform in te voeren bestaat uit veelvoudige stappen. Zodra u gegevensdossiers identificeert die in Platform moeten worden opgenomen, begint het innameproces en elke stap komt achtereenvolgens tot de gegevens of met succes worden opgenomen of ontbreken. Het insluitingsproces kan worden geïnitieerd met de API [voor gegevensinsluiting van](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platforms of met de gebruikersinterface van het Experience Platform.
 
 De gegevens die in Platform worden geladen moeten door veelvoudige stappen gaan om zijn bestemming, het meer van Gegevens of de gegevens opslag van het Profiel van de Klant in real time te bereiken. Elke stap omvat het verwerken van de gegevens, het valideren van de gegevens en het opslaan van de gegevens voordat u deze doorgeeft aan de volgende stap. Afhankelijk van de hoeveelheid gegevens die wordt opgenomen, kan dit een tijdrovend proces worden en er is altijd een kans dat het proces mislukt door validatie-, semantiek- of verwerkingsfouten. In geval van een fout moeten de gegevensproblemen worden opgelost en moet het volledige innameproces opnieuw worden gestart met de gecorrigeerde gegevensbestanden.
 
-Om bij het controleren van het innameproces te helpen, maakt het Platform van de Ervaring het mogelijk om aan een reeks gebeurtenissen in te tekenen die door elke stap van het proces worden gepubliceerd, die u op de hoogte brengen van de status van de opgenomen gegevens en om het even welke mogelijke mislukkingen.
+Om bij het controleren van het innameproces te helpen, maakt het Experience Platform het mogelijk om aan een reeks gebeurtenissen in te tekenen die door elke stap van het proces worden gepubliceerd, die u op de hoogte brengen van het statuut van de ingeopgenomen gegevens en om het even welke mogelijke mislukkingen.
 
 ## Beschikbare statusmeldingsgebeurtenissen
 
 Hieronder vindt u een lijst met beschikbare gegevensinvoerstatusmeldingen waarop u zich kunt abonneren.
 
->[!NOTE] Er is slechts één gebeurtenisonderwerp dat voor alle gegevens wordt verstrekt die berichten invoeren. Om onderscheid te maken tussen verschillende statussen, kan de gebeurteniscode worden gebruikt.
+>[!NOTE]
+>
+>Er is slechts één gebeurtenisonderwerp dat voor alle gegevens wordt verstrekt die berichten invoeren. Om onderscheid te maken tussen verschillende statussen, kan de gebeurteniscode worden gebruikt.
 
 | Platform Service | Status | Beschrijving van gebeurtenis | Gebeurteniscode |
 | ---------------- | ------ | ----------------- | ---------- |
@@ -41,19 +43,19 @@ Het gebeurtenisschema voor gegevensinvoer is een XDM-schema (Experience Data Mod
 
 ## Abonneren op statusmeldingen voor gegevensinvoer
 
-Via [Adobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events.html)kunt u zich op meerdere berichttypen abonneren met behulp van websites. In de onderstaande secties vindt u een overzicht van de stappen voor het abonneren op platformberichten voor gegevensinsluitingsgebeurtenissen met behulp van Adobe Developer Console.
+Via [Adobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events.html)kunt u zich op meerdere berichttypen abonneren met behulp van websites. In de onderstaande secties vindt u een overzicht van de stappen voor het abonneren op Platform-berichten voor gegevensinsluitingsgebeurtenissen met Adobe Developer Console.
 
 ### Nieuw project maken in Adobe Developer Console
 
-Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe-id. Voer vervolgens de stappen uit die worden beschreven in de zelfstudie over het [maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.
+Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Voer vervolgens de stappen uit die worden beschreven in de zelfstudie over het [maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.
 
-### Voeg de gebeurtenissen van het Platform van de Ervaring aan het project toe
+### Voeg de gebeurtenissen van het Experience Platform aan het project toe
 
 Nadat u een nieuw project hebt gemaakt, navigeert u naar het overzichtsscherm van dat project. Klik hier op **[!UICONTROL Gebeurtenis]** toevoegen.
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-Het dialoogvenster Gebeurtenissen __toevoegen wordt weergegeven. Klik op**[!UICONTROL  ervaringsplatform ]**om de lijst met beschikbare opties te filteren en klik vervolgens op**[!UICONTROL  Platformmeldingen ]**voordat u op**[!UICONTROL  Volgende ]**klikt.
+Het dialoogvenster Gebeurtenissen __toevoegen wordt weergegeven. Klik op**[!UICONTROL  Experience Platform ]**om de lijst met beschikbare opties te filteren en klik vervolgens op**[!UICONTROL  Platform-meldingen ]**voordat u op**[!UICONTROL  Volgende ]**klikt.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
