@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Query Service
 topic: scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '947'
+ht-degree: 0%
 
 ---
 
@@ -214,7 +217,9 @@ Een succesvolle reactie keert status 202 (Toegelaten) van HTTP met details van u
 }
 ```
 
->[!NOTE] U kunt de waarde van gebruiken `_links.delete` om uw gecreeerde geplande vraag [te](#delete-a-specified-scheduled-query)schrappen.
+>[!NOTE]
+>
+>U kunt de waarde van gebruiken `_links.delete` om uw gecreeerde geplande vraag [te](#delete-a-specified-scheduled-query)schrappen.
 
 ### Gegevens van een opgegeven geplande query aanvragen
 
@@ -295,7 +300,9 @@ Een succesvolle reactie keert status 200 van HTTP met details van de gespecifice
 }
 ```
 
->[!NOTE] U kunt de waarde van gebruiken `_links.delete` om uw gecreeerde geplande vraag [te](#delete-a-specified-scheduled-query)schrappen.
+>[!NOTE]
+>
+>U kunt de waarde van gebruiken `_links.delete` om uw gecreeerde geplande vraag [te](#delete-a-specified-scheduled-query)schrappen.
 
 ### Details van een opgegeven geplande query bijwerken
 
@@ -408,9 +415,11 @@ Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volge
 
 ### Opgegeven geplande query verwijderen
 
-U kunt een gespecificeerde geplande vraag schrappen door een verzoek van de VERWIJDERING aan het `/schedules` eindpunt te doen en identiteitskaart van de geplande vraag te verstrekken u in de verzoekweg wilt schrappen.
+U kunt een gespecificeerde geplande vraag schrappen door een DELETE verzoek aan het `/schedules` eindpunt te doen en identiteitskaart van de geplande vraag te verstrekken u in de verzoekweg wilt schrappen.
 
->[!NOTE] Het schema **moet** worden uitgeschakeld voordat u het verwijdert.
+>[!NOTE]
+>
+>Het schema **moet** worden uitgeschakeld voordat u het verwijdert.
 
 **API-indeling**
 
