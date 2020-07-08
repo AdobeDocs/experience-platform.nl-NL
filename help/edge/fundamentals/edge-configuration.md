@@ -4,7 +4,7 @@ seo-title: De configuratie van de rand voor het Web SDK van het Experience Platf
 description: 'Leer hoe te om het Netwerk van de Rand van het Experience Platform te vormen. '
 seo-description: 'Leer hoe te om het Netwerk van de Rand van het Experience Platform te vormen. '
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 1%
@@ -24,7 +24,9 @@ Edge-configuratie-id&#39;s kunnen in Adobe worden gemaakt [!DNL Launch] met het 
 
 >[!NOTE]
 >
->Het gereedschap voor randconfiguratie is beschikbaar voor klanten in de lijst Toestaan, ongeacht of ze [!DNL Launch] als tagbeheer gebruiken. Bovendien vereisen gebruikers ontwikkelmachtigingen in [!DNL Launch]. Zie het artikel [Gebruikersmachtigingen](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) in de [!DNL Launch] documentatie voor meer informatie.
+>
+>
+>Het gereedschap voor randconfiguratie is beschikbaar voor klanten op de lijst van gewenste personen, ongeacht of ze [!DNL Launch] als tagbeheer gebruiken. Bovendien vereisen gebruikers ontwikkelmachtigingen in [!DNL Launch]. Zie het artikel [Gebruikersmachtigingen](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) in de [!DNL Launch] documentatie voor meer informatie.
 
 U kunt een randconfiguratie tot stand brengen door op **[UICONTROL Nieuwe Configuratie]** van de Rand in het hoogste juiste gebied van het scherm te klikken. Nadat u een naam en een beschrijving hebt opgegeven, wordt u gevraagd om de standaardinstellingen voor elke omgeving.
 
@@ -78,6 +80,8 @@ Als u Adobe Target wilt configureren, moet u een clientcode opgeven. De andere v
 
 >[!NOTE]
 >
+>
+>
 >De organisatie die is gekoppeld aan de clientcode, moet overeenkomen met de organisatie waar de configuratie-id is gemaakt.
 
 ##### [!UICONTROL Clientcode]
@@ -92,7 +96,7 @@ Het eigenschapstoken vindt u in [!UICONTROL Adobe Target] > [!UICONTROL setup] >
 
 ##### [!UICONTROL Target Environment ID]
 
-[Met omgevingen](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target kunt u uw implementatie in alle ontwikkelingsfasen beheren. Deze instelling geeft aan welke omgeving u voor elke omgeving wilt gebruiken.
+[Met omgevingen](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target kunt u uw implementatie in alle ontwikkelingsstadia beheren. Deze instelling geeft aan welke omgeving u voor elke omgeving wilt gebruiken.
 
 Adobe raadt u aan dit anders in te stellen voor elk van uw `dev`-, `stage`- en `prod` randconfiguratieomgevingen om de zaken eenvoudig te houden. Als u echter al [!UICONTROL Adobe Target-omgevingen] hebt gedefinieerd, kunt u deze gebruiken.
 
