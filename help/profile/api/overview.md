@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: fd6516d1c1d3792b41de65d0f44d78af1124ccc7
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '666'
 ht-degree: 0%
@@ -23,9 +23,11 @@ Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt bekijken, raadpleegt 
 ## (Alpha) Berekende kenmerken
 
 >[!IMPORTANT]
+>
+>
 >De functie voor berekende kenmerken staat in alfa en is niet beschikbaar voor alle gebruikers. Documentatie en functionaliteit kunnen worden gewijzigd.
 
-Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op basis van andere waarden, berekeningen en expressies. De berekende attributen werken op het profielniveau, betekenend kunt u waarden over alle verslagen en gebeurtenissen bijeenvoegen. Elk berekend kenmerk bevat een expressie, ofwel &quot;rule&quot;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. U kunt gegevens verwerkte attributen tot stand brengen, bekijken, uitgeven en schrappen gebruikend het `config/computedAttributes` eindpunt. Om te leren hoe te om dit eindpunt te gebruiken, bezoek de [gegevens verwerkte gids](computed-attributes.md)van het attributeneindpunt.
+Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op basis van andere waarden, berekeningen en expressies. De berekende attributen werken op het profielniveau, betekenend kunt u waarden over alle verslagen en gebeurtenissen bijeenvoegen. Elk berekend kenmerk bevat een expressie, of &#39;regel&#39;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. U kunt gegevens verwerkte attributen tot stand brengen, bekijken, uitgeven en schrappen gebruikend het `config/computedAttributes` eindpunt. Om te leren hoe te om dit eindpunt te gebruiken, bezoek de [gegevens verwerkte gids](computed-attributes.md)van het attributeneindpunt.
 
 ## Edge-prognoses
 
