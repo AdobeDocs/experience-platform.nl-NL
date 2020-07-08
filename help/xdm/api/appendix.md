@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Aanhangsel voor ontwikkelaar van het schemaregister
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7c87cc86bfc5017ec5c712d05e39be5c14a7147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1296'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +20,7 @@ Dit document bevat aanvullende informatie over het werken met de API voor het re
 
 Experience Data Model (XDM) is een openbaar gedocumenteerde specificatie die door Adobe wordt aangestuurd om de interoperabiliteit, expressiviteit en kracht van digitale ervaringen te verbeteren. Adobe handhaaft de broncode en de formele definities XDM in een [open bronproject op GitHub](https://github.com/adobe/xdm/). Deze definities worden geschreven in de Standaardaantekening XDM, gebruikend JSON-LD (de Nota van Objecten JavaScript voor Gekoppelde Gegevens) en Schema JSON als grammatica voor het bepalen van XDM schema&#39;s.
 
-Als u formele XDM-definities bekijkt in de openbare opslagplaats, ziet u dat de standaard XDM verschilt van wat u ziet in het Adobe Experience Platform. Wat u in het Platform van de Ervaring ziet wordt genoemd de Wijze van de Verenigbaarheid, en het verstrekt een eenvoudige afbeelding tussen standaardXDM en de manier het binnen Platform wordt gebruikt.
+Wanneer u formele XDM-definities bekijkt in de openbare opslagplaats, kunt u zien dat standaard XDM verschilt van wat u in Adobe Experience Platform ziet. Wat u in Experience Platform ziet wordt genoemd de Wijze van de Verenigbaarheid, en het verstrekt een eenvoudige afbeelding tussen standaardXDM en de manier het binnen Platform wordt gebruikt.
 
 ### Hoe de Wijze van de Verenigbaarheid werkt
 
@@ -46,19 +49,21 @@ Hieronder volgt een vergelijking naast elkaar van verjaardagsgerelateerde velden
 
 ### Waarom is de Wijze van de Verenigbaarheid noodzakelijk?
 
-Het Adobe Experience Platform is ontworpen om met meerdere oplossingen en services te werken, elk met hun eigen technische uitdagingen en beperkingen (bijvoorbeeld hoe bepaalde technologieën speciale tekens verwerken). Om deze beperkingen te verhelpen, werd de compatibiliteitsmodus ontwikkeld.
+Adobe Experience Platform is ontworpen om met meerdere oplossingen en services te werken, elk met hun eigen technische uitdagingen en beperkingen (bijvoorbeeld hoe bepaalde technologieën speciale tekens verwerken). Om deze beperkingen te verhelpen, werd de compatibiliteitsmodus ontwikkeld.
 
-De meeste diensten van het Platform van de Ervaring met inbegrip van Catalogus, het Meer van Gegevens, en het Gebruik van het Profiel van de Klant in real time de Wijze van de Verenigbaarheid van de Verenigbaarheid in plaats van standaardXDM. De API voor het schemaregister gebruikt ook de compatibiliteitsmodus en de voorbeelden in dit document worden allemaal weergegeven met de compatibiliteitsmodus.
+De meeste services voor Experience Platforms, waaronder Catalog, Data Lake en Real-time klantprofiel, gebruiken de compatibiliteitsmodus in plaats van de standaard-XDM. De API voor het schemaregister gebruikt ook de compatibiliteitsmodus en de voorbeelden in dit document worden allemaal weergegeven met de compatibiliteitsmodus.
 
-Het is de moeite waard om te weten dat een afbeelding tussen standaard XDM en de manier plaatsvindt het in het Platform van de Ervaring wordt in werking gesteld, maar het zou uw gebruik van de diensten van het Platform niet moeten beïnvloeden.
+Het is nuttig om te weten dat een afbeelding tussen standaardXDM en de manier plaatsvindt het in Experience Platform operationeel is, maar het zou uw gebruik van de diensten van het Platform niet moeten beïnvloeden.
 
 Het open bronproject is beschikbaar aan u, maar wanneer het over het in wisselwerking staan met middelen door de Registratie van het Schema komt, verstrekken de API voorbeelden in dit document de beste praktijken u zou moeten kennen en volgen.
 
 ## XDM-veldtypen definiëren in de API {#field-types}
 
-De schema&#39;s XDM worden bepaald gebruikend de normen van het Schema JSON en basisgebiedstypes, met extra beperkingen voor gebiedsnamen die door het Platform van de Ervaring worden afgedwongen. Met XDM kunt u aanvullende veldtypen definiëren met behulp van indelingen en optionele beperkingen. De XDM gebiedstypes worden blootgesteld door het gebied-vlakke attribuut, `meta:xdmType`.
+De schema&#39;s XDM worden bepaald gebruikend de normen van het Schema JSON en basisgebiedstypes, met extra beperkingen voor gebiedsnamen die door Experience Platform worden afgedwongen. Met XDM kunt u aanvullende veldtypen definiëren met behulp van indelingen en optionele beperkingen. De XDM gebiedstypes worden blootgesteld door het gebied-vlakke attribuut, `meta:xdmType`.
 
->[!NOTE] `meta:xdmType` is een door het systeem gegenereerde waarde en daarom hoeft u deze eigenschap niet aan de JSON voor uw veld toe te voegen. De beste manier is om JSON-schematypen (zoals een tekenreeks en een geheel getal) te gebruiken met de juiste min/max-beperkingen zoals gedefinieerd in de onderstaande tabel.
+>[!NOTE]
+>
+>`meta:xdmType` is een door het systeem gegenereerde waarde en daarom hoeft u deze eigenschap niet aan de JSON toe te voegen voor uw veld. De beste manier is om JSON-schematypen (zoals een tekenreeks en een geheel getal) te gebruiken met de juiste min/max-beperkingen zoals gedefinieerd in de onderstaande tabel.
 
 In de volgende tabel wordt de juiste opmaak beschreven voor het definiëren van scalaire veldtypen en meer specifieke veldtypen met behulp van optionele eigenschappen. Meer informatie over optionele eigenschappen en type-specifieke trefwoorden is beschikbaar via de documentatie [van het](https://json-schema.org/understanding-json-schema/reference/type.html)JSON-schema.
 
@@ -242,11 +247,11 @@ In de onderstaande tabel wordt de toewijzing tussen &quot;meta:xdmType&quot; en 
 |---|---|---|---|---|---|---|---|---|---|---|
 | string | tekst:tekenreeks | BYTE_ARRAY/UTF8 | StringType | java.lang.String | String | System.String | String | string | String | string |
 | getal | tekst:nummer | DUBBEL | DoubleType | java.lang.Double | Dubbel | System.Double | Getal | double | Dubbel | double |
-| lang | type:<br>integerMaximum:2^53+1<br>minimum:-2^53+1 | INT64 | LongType | java.lang.long | Lang | System.Int64 | Getal | lang | Geheel | int64 |
+| lang | type:<br>integerMaximum:2^53+1<br>minimum:-2^53+1 | INT64 | LongType | java.lang.Long | Lang | System.Int64 | Getal | lang | Geheel | int64 |
 | int | type:<br>integerMaximum:2^31<br>minimum:-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | Getal | int | Geheel | int32 |
 | kort | type:<br>integerMaximum:2^15<br>minimum:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | Kort | System.Int16 | Getal | int | Geheel | int32 |
 | byte | type:<br>integerMaximum:2^7<br>minimum:-2^7 | INT32/INT_8 | ByteType | java.lang.Short | Byte | System.SByte | Getal | int | Geheel | int32 |
 | boolean | type:boolean | BOOLEAN | BooleanType | java.lang.Boolean | Boolean | System.Boolean | Boolean | bool | Geheel | Geheel | bool |
 | date | type:<br>stringformat:date<br>(RFC 3339, sectie 5.6) | INT32/DATE | DateType | java.util.Date | java.util.Date | System.DateTime | String | date | Geheel getal<br>(unix millis) | int64<br>(unix millis) |
-| date-time | type:<br>stringnotatie:date-time<br>(RFC 3339, sectie 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | String | tijdstempel | Geheel getal<br>(unix millis) | int64<br>(unix millis) |
+| date-time | type:<br>stringnotatie:date-time<br>(RFC 3339, sectie 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | String | timestamp | Geheel getal<br>(unix millis) | int64<br>(unix millis) |
 | map | object | MAP geannoteerde groep<br><br>&lt;<span>key_type</span>> MOET STRING<br><br>&lt;<span>value_type</span>> type kaartwaarden zijn | MapType<br><br>&quot;keyType&quot; MOET StringType<br><br>&quot;valueType&quot; zijn type toewijzingswaarden. | java.util.Map | Kaart | --- | object | object | map | map&lt;<span>key_type, value_type</span>> |
