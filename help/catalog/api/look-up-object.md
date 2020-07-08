@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een object opzoeken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4dcd174eda98fee1e8cf668819809bd061c6e8bb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 4dcd174eda98fee1e8cf668819809bd061c6e8bb
 
 Als u de unieke id voor een specifiek catalogusobject kent, kunt u een aanvraag GET uitvoeren om de details van dat object weer te geven.
 
->[!NOTE] Wanneer u specifieke objecten weergeeft, kunt u het beste alleen [filteren op eigenschappen](filter-data.md) en alleen de gewenste eigenschappen retourneren.
+>[!NOTE]
+>
+>Wanneer u specifieke objecten weergeeft, kunt u het beste alleen [filteren op eigenschappen](filter-data.md) en alleen de gewenste eigenschappen retourneren.
 
 **API-indeling**
 
@@ -60,4 +65,6 @@ Een succesvolle reactie keert de gespecificeerde dataset met slechts het gevraag
 }
 ```
 
->[!NOTE] Eigenschappen waarvan de waarden worden voorafgegaan door `@` vertegenwoordigen onderling verwante objecten. Zie de sectie in de bijlage over het [weergeven van onderling verwante objecten](appendix.md#view-interrelated-objects) voor stappen over het weergeven van de details van deze objecten.
+>[!NOTE]
+>
+>Eigenschappen waarvan de waarden worden voorafgegaan door `@` vertegenwoordigen onderling verwante objecten. Zie de sectie in de bijlage over het [weergeven van onderling verwante objecten](appendix.md#view-interrelated-objects) voor stappen over het weergeven van de details van deze objecten.
