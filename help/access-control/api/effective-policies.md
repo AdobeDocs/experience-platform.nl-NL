@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Effectief beleid weergeven
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +40,9 @@ curl -X POST \
   ]'
 ```
 
->[!NOTE] Voor een volledige lijst van toestemmingen en middeltypes die in de ladingsserie kunnen worden verstrekt, zie de bijlage sectie over [toegelaten toestemmingen en middeltypes](#accepted-permissions-and-resource-types).
+>[!NOTE]
+>
+>Voor een volledige lijst van toestemmingen en middeltypes die in de ladingsserie kunnen worden verstrekt, zie de bijlage sectie over [toegelaten toestemmingen en middeltypes](#accepted-permissions-and-resource-types).
 
 **Antwoord**
 
@@ -60,7 +65,7 @@ Een succesvolle reactie keert informatie over de toestemmingen en middeltypes te
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u aanroepen van de API voor toegangsbeheer kunt uitvoeren om informatie te retourneren over actieve machtigingen en het bijbehorende beleid voor typen bronnen. Voor meer informatie over toegangsbeheer voor het Platform van de Ervaring, zie het overzicht [van de](../home.md)toegangscontrole.
+In dit document wordt beschreven hoe u aanroepen van de API voor toegangsbeheer kunt uitvoeren om informatie te retourneren over actieve machtigingen en het bijbehorende beleid voor typen bronnen. Voor meer informatie over toegangsbeheer voor Experience Platform, zie het [toegangsbeheeroverzicht](../home.md).
 
 ## Aanhangsel
 
@@ -70,7 +75,7 @@ Deze sectie biedt aanvullende informatie voor het gebruik van de API voor toegan
 
 Het volgende is een lijst van toestemmingen en middeltypes u in de lading van een POST- verzoek aan het `/acl/active-permissions` eindpunt kunt omvatten.
 
-**Machtigingen**
+**Toestemmingen**
 
 ```plaintext
 "permissions/activate-destinations"
