@@ -4,15 +4,20 @@ solution: Experience Platform
 title: Datasets vs tabellen en schema's
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
 
 # Datasets vs tabellen en schema&#39;s
 
-Bekijk de lijst met gegevenssets die beschikbaar is in de gebruikersinterface [van het](https://platform.adobe.com/datasets)Adobe Experience Platform, waarbij u zeker weet dat u de namen van de gegevenssets wilt observeren.
->[!NOTE] Sommige namen van gegevenssets hebben spaties en zijn anders mogelijk niet SQL veilig.
+Herzie de lijst van datasets beschikbaar in het [Adobe Experience Platform UI](https://platform.adobe.com/datasets), die zeker zijn om de namen van datasets waar te nemen.
+>[!NOTE]
+>
+>Sommige namen van gegevenssets hebben spaties en zijn anders mogelijk niet SQL veilig.
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
@@ -25,7 +30,7 @@ Open de PSQL-opdrachtregel en gebruik de verbindingsdetails vanaf hier: [https:/
 
 ![](../images/clients/psql/connect-bi.png)
 
-Als u de beschikbare tabellen op Platform met SQL wilt weergeven, kunt u een van deze tabellen gebruiken `\d` of `SHOW TABLES;`.
+Als u de beschikbare tabellen op het Platform met SQL wilt weergeven, kunt u zowel `\d` als `SHOW TABLES;`.
 
 
 `\d` geeft de standaard PostSQL-weergave weer
@@ -39,7 +44,7 @@ Als u de beschikbare tabellen op Platform met SQL wilt weergeven, kunt u een van
 (2 rows)
 ```
 
-`SHOW TABLES;` is een douanebevel dat een meer gedetailleerde mening geeft en de lijst, evenals de datasetnaam voorstelt die in Platform UI wordt gevonden.
+`SHOW TABLES;` is een douanebevel dat een meer gedetailleerde mening geeft en de lijst, evenals de datasetnaam voorstelt die in de UI van het Platform wordt gevonden.
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -51,7 +56,9 @@ Als u de beschikbare tabellen op Platform met SQL wilt weergeven, kunt u een van
 
 Als u het hoofdschema van een tabel wilt weergeven, gebruikt u de `\d table_name` opdracht.
 
->[!NOTE] Het voorgestelde schema toont de wortelgebieden, die de meesten complex zijn, die naar een type van Objecten in het schema UI van de Dataset worden verwezen.
+>[!NOTE]
+>
+>Het voorgestelde schema toont de wortelgebieden, die de meesten complex zijn, die naar een type van Objecten in het schema UI van de Dataset worden verwezen.
 
 `\d luma_midvalues`
 
