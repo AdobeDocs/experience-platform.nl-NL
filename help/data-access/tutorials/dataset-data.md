@@ -4,38 +4,43 @@ solution: Experience Platform
 title: Overzicht van gegevenstoegang
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1367'
+ht-degree: 0%
 
 ---
 
 
 # De dataset van de vraag gegevens gebruikend API van de Toegang van Gegevens
 
-Dit document biedt een stapsgewijze zelfstudie waarin wordt uitgelegd hoe u in een gegevensset opgeslagen gegevens kunt zoeken, openen en downloaden met behulp van de API voor gegevenstoegang in het Adobe Experience Platform. U zult ook aan enkele unieke eigenschappen van de Toegang API van Gegevens, zoals het pagineren en gedeeltelijke downloads worden geïntroduceerd.
+Dit document biedt een stapsgewijze zelfstudie over het zoeken naar en openen en downloaden van gegevens die zijn opgeslagen in een gegevensset met de API voor gegevenstoegang in Adobe Experience Platform. U zult ook aan enkele unieke eigenschappen van de Toegang API van Gegevens, zoals het pagineren en gedeeltelijke downloads worden geïntroduceerd.
 
 ## Aan de slag
 
 Deze zelfstudie die inzicht geeft in hoe u een gegevensset kunt maken en vullen. Zie de [datasetverwezenlijking zelfstudie](../../catalog/datasets/create.md) voor meer informatie.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Platform APIs te maken.
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan de Platform APIs te maken.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
