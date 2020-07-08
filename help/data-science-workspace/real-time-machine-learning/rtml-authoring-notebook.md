@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruikershandleiding voor laptop in realtime leren van machines
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -274,6 +274,8 @@ Wijzig vervolgens de `model_path` tekenreekswaarde in de *real-time ML* -laptop,
 Deze sectie schetst het creëren van een DSL. U gaat de knopen schrijven die om het even welke voorverwerking van gegevens samen met knoop ONNX omvatten. Vervolgens wordt een DSL-grafiek gemaakt met knooppunten en randen. Randen verbinden knooppunten met behulp van een op twee gebaseerde indeling (node_1, node_2). De grafiek moet geen cycli hebben.
 
 >[!IMPORTANT]
+>
+>
 >Het gebruik van het ONNX-knooppunt is verplicht. Zonder het ONNX-knooppunt is de toepassing mislukt.
 
 ### Node authoring
