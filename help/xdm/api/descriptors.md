@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Beschrijvers
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Beschrijvers
 
-De schema&#39;s bepalen een statische mening van gegevensentiteiten, maar verstrekken geen specifieke details over hoe gegevens die op deze regelingen (datasets, bijvoorbeeld) worden gebaseerd op elkaar kunnen betrekking hebben. Met het Adobe Experience Platform kunt u deze relaties en andere interpreterende metagegevens over een schema beschrijven aan de hand van beschrijvingen.
+De schema&#39;s bepalen een statische mening van gegevensentiteiten, maar verstrekken geen specifieke details over hoe gegevens die op deze regelingen (datasets, bijvoorbeeld) worden gebaseerd op elkaar kunnen betrekking hebben. Met Adobe Experience Platform kunt u deze relaties en andere interpreterende metagegevens over een schema beschrijven aan de hand van beschrijvingen.
 
 De beschrijvers van het schema zijn huurdersvlakke meta-gegevens, die zij aan uw IMS Organisatie uniek zijn en alle beschrijvingsverrichtingen in de huurderscontainer plaatsvinden.
 
@@ -22,7 +22,9 @@ Op elk schema kunnen een of meer schemabeschrijvingsentiteiten zijn toegepast. E
 
 Dit document bevat voorbeelden van API-aanroepen voor beschrijvingen en een volledige lijst met beschikbare descriptoren en de velden die vereist zijn voor het definiëren van elk type.
 
->[!NOTE] De beschrijvers vereisen unieke Accept kopballen die `xed` `xdm`met vervangen, maar anders zeer gelijkend op Accept kopballen die elders in de Registratie van het Schema worden gebruikt kijken. De juiste Accept kopballen zijn inbegrepen in de steekproefvraag hieronder, maar neem extra voorzichtigheid in acht om ervoor te zorgen de correcte kopballen worden gebruikt.
+>[!NOTE]
+>
+>De beschrijvers vereisen unieke Accept kopballen die `xed` `xdm`met vervangen, maar anders zeer gelijkend op Accept kopballen die elders in de Registratie van het Schema worden gebruikt kijken. De juiste Accept kopballen zijn inbegrepen in de steekproefvraag hieronder, maar neem extra voorzichtigheid in acht om ervoor te zorgen de correcte kopballen worden gebruikt.
 
 ## Lijstbeschrijvingen
 
@@ -141,7 +143,7 @@ POST /tenant/descriptors
 
 **Verzoek**
 
-In het volgende verzoek wordt een identiteitsdescriptor gedefinieerd in een voorbeeldschema in het veld E-mailadres. Dit vertelt het Platform van de Ervaring om het e-mailadres als herkenningsteken te gebruiken helpen informatie over het individu samenvoegen.
+In het volgende verzoek wordt een identiteitsdescriptor gedefinieerd in een voorbeeldschema in het veld E-mailadres. Dit vertelt Experience Platform om het e-mailadres als herkenningsteken te gebruiken om informatie over het individu te binden.
 
 ```SHELL
 curl -X POST \
@@ -236,7 +238,7 @@ Als u een opzoekverzoek (GET) uitvoert om de descriptor weer te geven, wordt wee
 
 ## descriptor verwijderen
 
-Soms moet u een descriptor verwijderen die u in de schemaregistratie hebt gedefinieerd. Dit wordt gedaan door een verzoek van de SCHRAPPING te maken die van de beschrijver verwijst u wenst om te verwijderen. `@id`
+Soms moet u een descriptor verwijderen die u in de schemaregistratie hebt gedefinieerd. Dit wordt gedaan door een DELETE verzoek te maken van verwijzingen `@id` van de beschrijver u wenst te verwijderen.
 
 **API-indeling**
 
@@ -277,7 +279,7 @@ In de volgende secties vindt u een overzicht van de beschikbare descriptortypen,
 
 #### Identiteitsbeschrijving
 
-Een identiteitsbeschrijving geeft aan dat de &quot;sourceProperty&quot; van de &quot;sourceSchema&quot; een identiteitsveld is zoals beschreven door de Identity Service [van het](../../identity-service/home.md)Adobe Experience Platform.
+Een identiteitsbeschrijver signaleert dat &quot;sourceProperty&quot;van &quot;sourceSchema&quot;een gebied van de Identiteit is zoals die door de Dienst [van de Identiteit van het](../../identity-service/home.md)Adobe Experience Platform wordt beschreven.
 
 ```json
 {
@@ -304,7 +306,7 @@ Een identiteitsbeschrijving geeft aan dat de &quot;sourceProperty&quot; van de &
 
 #### Beschrijvende naam
 
-Met beschrijvende namen met een vriendelijke naam kan een gebruiker de `title`, `description`en `meta:enum` waarden van de kernvelden van het bibliotheekschema wijzigen. Dit is vooral handig wanneer u werkt met &quot;eVars&quot; en andere &quot;generieke&quot; velden die u wilt labelen voor informatie die specifiek is voor uw organisatie. De gebruikersinterface kan deze gebruiken om een vriendelijkere naam weer te geven of om alleen velden met een vriendelijke naam weer te geven.
+Met beschrijvingen van uw vriendschappelijke naam kan een gebruiker de `title`, `description`en `meta:enum` waarden van de kernvelden van het bibliotheekschema wijzigen. Dit is vooral handig wanneer u werkt met &quot;eVars&quot; en andere &quot;generieke&quot; velden die u wilt labelen voor informatie die specifiek is voor uw organisatie. De gebruikersinterface kan deze gebruiken om een vriendelijkere naam weer te geven of om alleen velden met een vriendelijke naam weer te geven.
 
 ```json
 {
@@ -334,7 +336,7 @@ Met beschrijvende namen met een vriendelijke naam kan een gebruiker de `title`, 
 | `xdm:sourceProperty` | Het pad naar de specifieke eigenschap die de identiteit zal zijn. Het pad moet beginnen met een &quot;/&quot; en niet eindigen met een pad. Plaats geen &quot;eigenschappen&quot; in het pad (gebruik bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;) |
 | `xdm:title` | De nieuwe titel die u voor dit veld wilt weergeven, geschreven in Alles Beginhoofdletter. |
 | `xdm:description` | Een optionele beschrijving kan samen met de titel worden toegevoegd. |
-| `meta:enum` | Als het veld dat wordt aangegeven door een tekenreeksveld `xdm:sourceProperty` is, wordt de lijst met voorgestelde waarden voor het veld in de gebruikersinterface van het ervaringsplatform `meta:enum` bepaald. Het is belangrijk om op te merken dat `meta:enum` geen opsomming verklaart of om het even welke gegevensbevestiging voor het XDM gebied verstrekt.<br><br>Deze mag alleen worden gebruikt voor de belangrijkste XDM-velden die door Adobe zijn gedefinieerd. Als de broneigenschap een aangepast veld is dat door uw organisatie is gedefinieerd, moet u in plaats daarvan de `meta:enum` eigenschap van het veld rechtstreeks bewerken via een [PATCH-aanvraag](./update-resource.md). |
+| `meta:enum` | Als het veld dat wordt aangegeven door een tekenreeksveld `xdm:sourceProperty` is, wordt de lijst met voorgestelde waarden voor het veld in de gebruikersinterface van het Experience Platform `meta:enum` bepaald. Het is belangrijk om op te merken dat `meta:enum` geen opsomming verklaart of om het even welke gegevensbevestiging voor het XDM gebied verstrekt.<br><br>Deze mag alleen worden gebruikt voor de belangrijkste XDM-velden die door Adobe zijn gedefinieerd. Als de broneigenschap een aangepast veld is dat door uw organisatie is gedefinieerd, moet u in plaats daarvan de `meta:enum` eigenschap van het veld rechtstreeks bewerken via een [PATCH-aanvraag](./update-resource.md). |
 
 #### Relatiebeschrijving
 
