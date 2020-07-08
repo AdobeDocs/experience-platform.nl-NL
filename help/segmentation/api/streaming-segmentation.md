@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Streaming segmentering
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1370'
 ht-degree: 0%
@@ -14,7 +14,9 @@ ht-degree: 0%
 
 # Evalueer gebeurtenissen in bijna real time met het stromen segmentatie
 
->[!NOTE] In het volgende document wordt aangegeven hoe u streamingsegmentatie kunt gebruiken met de API. Voor informatie bij het gebruiken van het stromen segmentatie die UI gebruikt, gelieve de gids [van de Bouwer van het](../ui/overview.md#streaming-segmentation)Segment te lezen.
+>[!NOTE]
+>
+>In het volgende document wordt aangegeven hoe u streamingsegmentatie kunt gebruiken met de API. Voor informatie bij het gebruiken van het stromen segmentatie die UI gebruikt, gelieve de gids [van de Bouwer van het](../ui/overview.md#streaming-segmentation)Segment te lezen.
 
 Streaming segmentering op [!DNL Adobe Experience Platform] staat klanten toe om segmentatie in bijna real time te doen terwijl het concentreren op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in landen [!DNL Platform], die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens worden overgegaan in [!DNL Platform], betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
 
@@ -46,7 +48,9 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -56,7 +60,9 @@ Voor het invullen van specifieke aanvragen kunnen extra kopteksten nodig zijn. I
 
 ### Voor streaming segmentatie ingeschakelde querytypen {#streaming-segmentation-query-types}
 
->[!NOTE] U zult geplande segmentatie voor de organisatie moeten toelaten opdat het stromen segmentatie werkt. Informatie over het toelaten van geplande segmentatie kan in [toelaat geplande segmenteringssectie worden gevonden](#enable-scheduled-segmentation)
+>[!NOTE]
+>
+>U zult geplande segmentatie voor de organisatie moeten toelaten opdat het stromen segmentatie werkt. Informatie over het toelaten van geplande segmentatie kan in [toelaat geplande segmenteringssectie worden gevonden](#enable-scheduled-segmentation)
 
 Opdat een segment wordt geëvalueerd gebruikend het stromen segmentatie, moet de vraag aan de volgende richtlijnen in overeenstemming zijn.
 
@@ -232,7 +238,9 @@ curl -X POST \
 }'
 ```
 
->[!NOTE] Dit is een standaard &quot;creeer een segment&quot;verzoek. Lees voor meer informatie over het maken van een segmentdefinitie de zelfstudie over het [maken van een segment](../tutorials/create-a-segment.md).
+>[!NOTE]
+>
+>Dit is een standaard &quot;creeer een segment&quot;verzoek. Lees voor meer informatie over het maken van een segmentdefinitie de zelfstudie over het [maken van een segment](../tutorials/create-a-segment.md).
 
 **Antwoord**
 
@@ -280,7 +288,9 @@ Een succesvolle reactie keert de details van de nieuw gecreeerd streaming-toegel
 
 Zodra de het stromen evaluatie is toegelaten, moet een basislijn worden gecreeerd (waarna zal het segment altijd bijgewerkt zijn). De geplande evaluatie (die ook als geplande segmentatie wordt bekend) moet eerst worden toegelaten opdat het systeem baselining automatisch uitvoert. Met geplande segmentatie, kan uw IMS Org aan een terugkerend programma houden om uitvoerbanen automatisch in werking te stellen om segmenten te evalueren.
 
->[!NOTE] De geplande evaluatie kan voor zandbakken met een maximum van vijf (5) fusiebeleid voor Individueel Profiel XDM worden toegelaten. Als uw organisatie meer dan vijf samenvoegingsbeleid voor Individueel Profiel XDM binnen één enkele zandbakmilieu heeft, zult u geen geplande evaluatie kunnen gebruiken.
+>[!NOTE]
+>
+>De geplande evaluatie kan voor zandbakken met een maximum van vijf (5) fusiebeleid voor Individueel Profiel XDM worden toegelaten. Als uw organisatie meer dan vijf samenvoegingsbeleid voor Individueel Profiel XDM binnen één enkele zandbakmilieu heeft, zult u geen geplande evaluatie kunnen gebruiken.
 
 ### Een schema maken
 
