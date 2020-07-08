@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van beleidsregels voor gegevensgebruik
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
@@ -27,11 +27,15 @@ Dit document biedt een overzicht op hoog niveau van het beleid voor gegevensgebr
 
 Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naar een derdedienst uit te voeren. Als er een beleid bestaat dat zegt dat de specifieke types van gegevens (zoals Persoonlijk Identificeerbare Informatie (PII)) niet kunnen worden uitgevoerd, en u probeert om een dataset uit te voeren die een &quot;I&quot;etiket (de Gegevens van de Identiteit) bevat, zult u een antwoord van het [!DNL Policy Service] vertellen u ontvangen dat een beleid van het gegevensgebruik is geschonden.
 
->[!NOTE] Handelingen voor het in de handel brengen zelf beperken het gegevensgebruik niet. Ze moeten worden opgenomen in beleid voor ingeschakeld gegevensgebruik om ervoor te zorgen dat deze acties worden geëvalueerd op beleidsovertredingen.
+>[!NOTE]
+>
+>Handelingen voor het in de handel brengen zelf beperken het gegevensgebruik niet. Ze moeten worden opgenomen in beleid voor ingeschakeld gegevensgebruik om ervoor te zorgen dat deze acties worden geëvalueerd op beleidsovertredingen.
 
 Wanneer het gegevensgebruik in de dienst van uw organisatie gebeurt, zouden de relevante marketing acties moeten worden vermeld zodat om het even welke beleidsschendingen kunnen worden geïdentificeerd. Vervolgens kunt u de API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service gebruiken om te controleren op beleidsovertredingen in uw integratie.
 
->[!NOTE] Als u het Platform van Gegevens van de Klant in real time gebruikt, kunt u de gevallen van het plaatsingsgebruik op bestemmingen plaatsen om beleidshandhaving te automatiseren. Zie het document over [Gegevensbeheer in real time CDP](../../rtcdp/privacy/data-governance-overview.md) voor meer informatie.
+>[!NOTE]
+>
+>Als u het Platform van Gegevens van de Klant in real time gebruikt, kunt u de gevallen van het plaatsingsgebruik op bestemmingen plaatsen om beleidshandhaving te automatiseren. Zie het document over [Gegevensbeheer in real time CDP](../../rtcdp/privacy/data-governance-overview.md) voor meer informatie.
 
 Zie de bijlage bij dit document voor een lijst met [beschikbare door Adobe gedefinieerde marketingacties](#core-actions). U kunt ook uw eigen aangepaste marketingacties definiëren met de DULE Policy Service API of de gebruikersinterface van het Experience Platform. In de volgende sectie vindt u meer informatie over het werken met marketingacties en -beleid.
 
@@ -47,7 +51,9 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensstewards de Dienst API van het Beleid DULE of UI van het Experience Platform gebruiken om beleid met betrekking tot marketingacties te beheren en te evalueren die op gegevens worden genomen die de etiketten van het gegevensgebruik bevatten. U kunt beleid tot stand brengen en bijwerken, de status van een beleid bepalen, en met marketing acties werken om te evalueren of een specifieke actie een beleid van het gegevensgebruik schendt.
 
->[!IMPORTANT] Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten door API of UI.
+>[!IMPORTANT]
+>
+>Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten door API of UI.
 
 Zie de zelfstudie over het [maken en evalueren van beleid](create.md)voor gegevensgebruik voor stapsgewijze instructies over het werken met marketingacties en het beleid voor gegevensgebruik in de API. Voor meer informatie zien de belangrijkste verrichtingen die door de Dienst API van het Beleid worden verstrekt, de de ontwikkelaarsgids [van de Dienst van het](../api/getting-started.md)Beleid.
 
@@ -65,7 +71,9 @@ De volgende sectie verstrekt extra informatie over het beleid van het gegevensge
 
 In de onderstaande tabel worden de belangrijkste marketingacties beschreven die Adobe u buiten de verpakking biedt.
 
->[!NOTE] De belangrijkste marketingacties moeten worden beschouwd als een uitgangspunt om u te helpen bepalen welk gebruiksbeleid u moet maken en controleren op overtredingen. De definities en hoe deze worden geïnterpreteerd, zijn afhankelijk van de behoeften en het beleid van uw organisatie.
+>[!NOTE]
+>
+>De belangrijkste marketingacties moeten worden beschouwd als een uitgangspunt om u te helpen bepalen welk gebruiksbeleid u moet maken en controleren op overtredingen. De definities en hoe deze worden geïnterpreteerd, zijn afhankelijk van de behoeften en het beleid van uw organisatie.
 
 | Handeling | Beschrijving |
 | --- | --- |
