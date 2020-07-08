@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Verbinding maken met Aqua Data Studio
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 0%
 
 ---
 
 
 # Verbinding maken met Aqua Data Studio
 
-Dit document doorloopt de stappen voor het verbinden van Aqua Data Studio met de Dienst van de Vraag van het Platform van de Vraag van Adobe Experience.
+Dit document loopt door de stappen voor het verbinden van de Studio van Gegevens Aqua met de Dienst van de Vraag van het Adobe Experience Platform.
 
 Na het installeren van de Studio van Gegevens Aqua, moet u eerst de server registreren. Klik in het hoofdmenu op **Server** en klik vervolgens op **Server** registreren.
 
@@ -24,7 +27,9 @@ Het dialoogvenster *Server* registreren wordt geopend. Selecteer onder het tabbl
 - **Host en poort**: Het gastheereindpunt en zijn haven voor de Dienst van de Vraag.
 - **Database:** De database die wordt gebruikt.
 
->[!NOTE] Ga voor meer informatie over het zoeken naar uw aanmeldingsgegevens, host, poort en databasenaam naar de [aanmeldingspagina op Platform](https://platform.adobe.com/query/configuration). Om uw geloofsbrieven te vinden, login aan Platform, klik **Vragen**, dan klik **Referenties**.
+>[!NOTE]
+>
+>Ga naar de pagina met [referenties op het Platform](https://platform.adobe.com/query/configuration)voor meer informatie over het zoeken naar uw aanmeldingsgegevens, host, poort en databasenaam. Als u uw referenties wilt zoeken, meldt u zich aan bij het Platform, klikt u op **Vragen** en vervolgens op **Referenties**.
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
