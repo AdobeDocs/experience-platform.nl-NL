@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Activeer binnenkomende brongegevens om klantenprofielen te bevolken
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%
@@ -61,7 +61,9 @@ Nu het schema wordt toegelaten voor [!DNL Profile], ga aan het de activiteitensc
 
 Met zowel het schema als de dataset die voor wordt toegelaten, zullen de gegevens in die dataset worden opgenomen ook klantenprofielen bevolken. [!DNL Profile]
 
->[!NOTE] Bestaande gegevens binnen een recent ingeschakelde gegevensset worden niet gebruikt door [!DNL Profile]
+>[!NOTE]
+>
+>Bestaande gegevens binnen een recent ingeschakelde gegevensset worden niet gebruikt door [!DNL Profile]
 
 ## Volgende stappen
 
