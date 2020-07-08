@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experimenten
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 1%
@@ -20,7 +20,9 @@ Modelontwikkeling en -training vinden plaats op het niveau van de experimenten, 
 
 U kunt een Experiment tot stand brengen door een POST- verzoek uit te voeren terwijl het verstrekken van een naam en een geldige identiteitskaart MLInstance in de verzoeklading.
 
->[!NOTE] In tegenstelling tot modeltraining in de UI, leidt het creëren van een Experiment door een expliciete API vraag niet automatisch tot en voert een trainingslooppas uit.
+>[!NOTE]
+>
+>In tegenstelling tot modeltraining in de UI, leidt het creëren van een Experiment door een expliciete API vraag niet automatisch tot en voert een trainingslooppas uit.
 
 **API-indeling**
 
@@ -242,7 +244,9 @@ Een geslaagde reactie retourneert een payload die de details van het gewenste ex
 
 U kunt een lijst van opleiding of het scoren looppas terugwinnen die tot een bepaalde Experiment behoren door één enkele GET verzoek uit te voeren en een geldige Experimentidentiteitskaart te verstrekken. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een volledige lijst van beschikbare vraagparameters, zie de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
 
->[!NOTE] Wanneer het combineren van veelvoudige vraagparameters, moeten zij door ampersands (&amp;) worden gescheiden.
+>[!NOTE]
+>
+>Wanneer het combineren van veelvoudige vraagparameters, moeten zij door ampersands (&amp;) worden gescheiden.
 
 **API-indeling**
 
@@ -301,7 +305,9 @@ Een geslaagde reactie retourneert een payload die een lijst met uitvoeringen en 
 
 U kunt een bestaande Experiment bijwerken door de eigenschappen ervan te overschrijven via een PUT-aanvraag die de id van de doelexpert in het aanvraagpad bevat en een JSON-payload met bijgewerkte eigenschappen opgeeft.
 
->[!TIP] Om ervoor te zorgen dat deze PUT-aanvraag succesvol is, wordt u aangeraden eerst een GET-aanvraag uit te voeren om de Experiment op id [op te](#retrieve-specific)halen. Vervolgens past u het geretourneerde JSON-object aan en werkt u dit bij en past u het gehele gewijzigde JSON-object toe als de payload voor de PUT-aanvraag.
+>[!TIP]
+>
+>Om ervoor te zorgen dat deze PUT-aanvraag succesvol is, wordt u aangeraden eerst een GET-aanvraag uit te voeren om de Experiment op id [op te](#retrieve-specific)halen. Vervolgens past u het geretourneerde JSON-object aan en werkt u dit bij en past u het gehele gewijzigde JSON-object toe als de payload voor de PUT-aanvraag.
 
 De volgende voorbeeld-API-aanroep werkt de naam van een expert bij terwijl deze in eerste instantie deze eigenschappen heeft:
 
