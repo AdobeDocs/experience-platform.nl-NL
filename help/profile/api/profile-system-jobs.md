@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
+title: Systeemtaken profiel - Real-time API voor klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1503'
 ht-degree: 0%
 
 ---
 
 
-# Systeemtaken profiel (aanvragen verwijderen)
+# Het taakeindpunt van het profielsysteem (verzoeken van de Schrapping)
 
 Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor afzonderlijke klanten maken. Gegevens die in Platform worden opgenomen, worden opgeslagen in het Data Lake en in de gegevensopslag van het Profiel van de Klant in real time. Soms kan het nodig zijn om een gegevensset of batch uit de profielopslag te verwijderen om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Dit vereist het gebruiken van de Real-time API van het Profiel van de Klant om een systeembaan van het Profiel tot stand te brengen, die ook als &quot;schrappingsverzoek&quot;wordt bekend, die ook kan worden gewijzigd, worden gecontroleerd, of indien nodig worden verwijderd.
 
