@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Gebruikershandleiding voor sandbox
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '514'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met 
 
 ## Sandboxen weergeven
 
-Klik in de gebruikersinterface van het ervaringsplatform op **Sandboxen** in de linkernavigatie om het dashboard _Sandboxen_ te openen. Het dashboard bevat alle beschikbare sandboxen voor uw organisatie, inclusief het type sandbox (productie of ontwikkeling) en de status (actief, maken, verwijderen of mislukt).
+Klik in de interface van het Experience Platform op **Sandboxen** in de linkernavigatie om het dashboard _Sandboxen_ te openen. Het dashboard bevat alle beschikbare sandboxen voor uw organisatie, inclusief het type sandbox (productie of ontwikkeling) en de status (actief, maken, verwijderen of mislukt).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -45,7 +48,9 @@ Klik op **Maken** als u klaar bent.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
->[!NOTE] Aangezien u beperkt bent tot het maken van alleen niet-productie-sandboxtypen, is de optie **type** vergrendeld bij Niet-productie en kan deze optie niet worden gemanipuleerd.
+>[!NOTE]
+>
+>Aangezien u beperkt bent tot het maken van alleen niet-productie-sandboxtypen, is de optie **type** vergrendeld bij Niet-productie en kan deze optie niet worden gemanipuleerd.
 
 Nadat u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe sandbox in het dashboard _Sandboxen_ met de status &quot;Creating&quot;. Nieuwe sandboxen nemen ongeveer 15 minuten in beslag om door het systeem te worden ingericht, waarna de status van deze sandboxen verandert in Actief.
 
@@ -53,7 +58,9 @@ Nadat u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe s
 
 ## Een sandbox opnieuw instellen
 
->[!NOTE] Deze functionaliteit is alleen beschikbaar voor niet-productiesandboxen. Productiesandboxen kunnen niet opnieuw worden ingesteld.
+>[!NOTE]
+>
+>Deze functionaliteit is alleen beschikbaar voor niet-productiesandboxen. Productiesandboxen kunnen niet opnieuw worden ingesteld.
 
 Als u een niet-productiesandbox opnieuw instelt, worden alle bronnen verwijderd die aan die sandbox zijn gekoppeld (schema&#39;s, gegevenssets, enzovoort), terwijl de naam van de sandbox en de bijbehorende machtigingen behouden blijven. Deze &#39;schone&#39; sandbox blijft onder dezelfde naam beschikbaar voor gebruikers die er toegang toe hebben.
 
@@ -71,7 +78,9 @@ Er wordt een bevestigingsbericht weergegeven en de status van de sandbox verande
 
 ## Een sandbox verwijderen
 
->[!NOTE] Deze functionaliteit is alleen beschikbaar voor niet-productiesandboxen. Productiesandboxen kunnen niet worden verwijderd.
+>[!NOTE]
+>
+>Deze functionaliteit is alleen beschikbaar voor niet-productiesandboxen. Productiesandboxen kunnen niet worden verwijderd.
 
 Als u een niet-productiesandbox verwijdert, worden alle bronnen die aan die sandbox zijn gekoppeld, inclusief de machtigingen, permanent verwijderd.
 
