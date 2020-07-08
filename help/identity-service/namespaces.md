@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -72,7 +72,9 @@ De naamruimten die u definieert, zijn persoonlijk voor uw organisatie en hebben 
 
 Net als bij Standaard-naamruimten kunt u op een aangepaste naamruimte in het tabblad *[!UICONTROL Bladeren]* klikken om de details weer te geven. Met een aangepaste naamruimte kunt u echter ook de weergavenaam en -beschrijving van de naamruimte bewerken vanuit het detailgebied.
 
->[!NOTE] Nadat een naamruimte is gemaakt, kan deze niet worden verwijderd en kunnen de naamsymbolen (of de code in de API) en het type niet worden gewijzigd.
+>[!NOTE]
+>
+>Nadat een naamruimte is gemaakt, kan deze niet worden verwijderd en kunnen de naamsymbolen (of de code in de API) en het type niet worden gewijzigd.
 
 ## Naamruimten in identiteitsgegevens
 
