@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Verbinding maken met Power BI
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '366'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,9 @@ Na het uitvoeren van die voorbereidende stappen, kunt u Power BI aan de Dienst v
 
 - *(Optioneel, maar aanbevolen wanneer &quot;all&quot; is gedeclareerd voor de database)* Voer een SQL-instructie in.
 
->[!NOTE] Als er geen SQL-instructie is opgegeven, geeft Power BI een voorvertoning weer van alle tabellen in de database. Voor hiërarchische gegevens moet een aangepaste SQL-instructie worden gebruikt. Als het tabelschema vlak is, werkt het met of zonder een aangepaste SQL-instructie. Samengestelde typen worden nog niet ondersteund door Power BI. Als u primitieve typen wilt ophalen uit samengestelde typen, moet u SQL-instructies schrijven om deze af te leiden.
+>[!NOTE]
+>
+>Als er geen SQL-instructie is opgegeven, geeft Power BI een voorvertoning weer van alle tabellen in de database. Voor hiërarchische gegevens moet een aangepaste SQL-instructie worden gebruikt. Als het tabelschema vlak is, werkt het met of zonder een aangepaste SQL-instructie. Samengestelde typen worden nog niet ondersteund door Power BI. Als u primitieve typen wilt ophalen uit samengestelde typen, moet u SQL-instructies schrijven om deze af te leiden.
 
 ```sql
 SELECT web.webPageDetails.name AS Page_Name, 
