@@ -4,44 +4,49 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Catalog Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '598'
+ht-degree: 0%
 
 ---
 
 
 # Handleiding voor ontwikkelaars van Catalog Service
 
-Catalog Service is het recordsysteem voor gegevenslocatie en -lijn in het Adobe Experience Platform. Catalogus fungeert als een opslagplaats voor metagegevens of als een &quot;catalogus&quot; waarin u informatie over uw gegevens kunt vinden in het Experience Platform, zonder dat u toegang hoeft te krijgen tot de gegevens zelf. Zie het [Catalogusoverzicht](../home.md) voor meer informatie.
+Catalogusservice is het systeem voor het opnemen van gegevens voor de locatie en de verbinding binnen het Adobe Experience Platform. Catalogus fungeert als een opslagplaats voor metagegevens of als een &quot;catalogus&quot; waarin u informatie over uw gegevens kunt vinden binnen het Experience Platform, zonder dat u toegang hoeft te krijgen tot de gegevens zelf. Zie het [Catalogusoverzicht](../home.md) voor meer informatie.
 
 Deze handleiding voor ontwikkelaars bevat stappen waarmee u de API voor Catalog kunt gaan gebruiken. De handleiding bevat vervolgens voorbeeld-API-aanroepen voor het uitvoeren van toetsbewerkingen met behulp van Catalog.
 
 ## Vereisten
 
-De catalogus houdt meta-gegevens voor verscheidene soorten middelen en verrichtingen binnen het Platform van de Ervaring bij. Deze ontwikkelaarsgids vereist een werkend inzicht in de diverse diensten van het Platform van de Ervaring betrokken bij het creëren van en het beheren van deze middelen:
+De catalogus volgt meta-gegevens voor verscheidene soorten middelen en verrichtingen binnen Experience Platform. Deze ontwikkelaarsgids vereist een werkend inzicht in de diverse diensten van de Experience Platform betrokken bij het creëren van en het beheren van deze middelen:
 
-* [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor Platform gegevens van de klantenervaring organiseert.
-* [Inname](../../ingestion/batch-ingestion/overview.md)in batch: Hoe het Platform van de Ervaring gegevens uit gegevensdossiers, zoals CSV en Parquet opneemt en opslaat.
-* [Streaming opname](../../ingestion/streaming-ingestion/overview.md): Hoe Ervaar het Platform gegevens van cliënt en server-zijapparaten in real time opneemt en opslaat.
+* [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+* [Inname](../../ingestion/batch-ingestion/overview.md)in batch: Hoe Experience Platform gegevens uit gegevensbestanden, zoals CSV en Parquet, opneemt en opslaat.
+* [Streaming opname](../../ingestion/streaming-ingestion/overview.md): Hoe het Experience Platform gegevens van cliënt en server-zijapparaten in real time opneemt en opslaat.
 
 De volgende secties verstrekken extra informatie die u zult moeten kennen of hebben om met succes vraag aan de Dienst API van de Catalogus te maken.
 
 ## API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ## Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
