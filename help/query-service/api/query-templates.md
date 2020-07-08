@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Query Service
 topic: query templates
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '643'
+ht-degree: 1%
 
 ---
 
@@ -102,7 +105,9 @@ Een succesvolle reactie keert HTTP status 200 met een lijst van vraagmalplaatjes
 }
 ```
 
->[!NOTE] U kunt de waarde van gebruiken `_links.delete` om uw vraagmalplaatje [te](#delete-a-specified-query-template)schrappen.
+>[!NOTE]
+>
+>U kunt de waarde van gebruiken `_links.delete` om uw vraagmalplaatje [te](#delete-a-specified-query-template)schrappen.
 
 ### Een querysjabloon maken
 
@@ -163,7 +168,9 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 }
 ```
 
->[!NOTE] U kunt de waarde van gebruiken `_links.delete` om uw vraagmalplaatje [te](#delete-a-specified-query-template)schrappen.
+>[!NOTE]
+>
+>U kunt de waarde van gebruiken `_links.delete` om uw vraagmalplaatje [te](#delete-a-specified-query-template)schrappen.
 
 ### Een opgegeven querysjabloon ophalen
 
@@ -219,7 +226,9 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw gespecifice
 }
 ```
 
->[!NOTE] U kunt de waarde van gebruiken `_links.delete` om uw vraagmalplaatje [te](#delete-a-specified-query-template)schrappen.
+>[!NOTE]
+>
+>U kunt de waarde van gebruiken `_links.delete` om uw vraagmalplaatje [te](#delete-a-specified-query-template)schrappen.
 
 ### Een opgegeven querysjabloon bijwerken
 
@@ -237,7 +246,9 @@ PUT /query-templates/{TEMPLATE_ID}
 
 **Verzoek**
 
->[!NOTE] Voor de PUT-aanvraag moeten zowel het veld sql als de naam worden ingevuld en de huidige inhoud van de querysjabloon wordt **overschreven** .
+>[!NOTE]
+>
+>Voor de PUT-aanvraag moeten zowel het veld sql als de naam worden ingevuld en de huidige inhoud van de querysjabloon wordt **overschreven** .
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -287,11 +298,13 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met de bijgewer
 }
 ```
 
->[!NOTE] U kunt de waarde van gebruiken `_links.delete` om uw vraagmalplaatje [te](#delete-a-specified-query-template)schrappen.
+>[!NOTE]
+>
+>U kunt de waarde van gebruiken `_links.delete` om uw vraagmalplaatje [te](#delete-a-specified-query-template)schrappen.
 
 ### Een opgegeven querysjabloon verwijderen
 
-U kunt een specifiek vraagmalplaatje schrappen door een verzoek van de VERWIJDERING aan te brengen `/query-templates/{TEMPLATE_ID}` en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
+U kunt een specifiek vraagmalplaatje schrappen door een DELETE verzoek aan te brengen `/query-templates/{TEMPLATE_ID}` en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
 
 **API-indeling**
 
