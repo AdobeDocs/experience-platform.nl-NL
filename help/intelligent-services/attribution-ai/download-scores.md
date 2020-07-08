@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Muziek openen in Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 01a500959802aa8c02bdaa8f024a9849ec23be51
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '983'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Daarnaast moet u een service-instantie met een geslaagde uitvoeringsstatus hebbe
 
 ## Uw gegevensset-id zoeken {#dataset-id}
 
-Klik in de serviceversie voor Kenmerken AI-inzichten op het vervolgkeuzemenu *Meer handelingen* in de navigatie rechtsboven en selecteer **[!UICONTROL Access scores]**.
+Binnen uw de dienstinstantie voor de Inzichten van Attributie AI, klik *Meer acties* dropdown in de top-juiste navigatie dan de uitgezochte scores **[!UICONTROL van de]** Toegang.
 
 ![meer acties](./images/download-scores/more-actions.png)
 
@@ -220,7 +223,9 @@ Kopieer de `href` waarde voor elk bestandsobject in de `data` array en ga vervol
 
 Als u uw bestandsgegevens wilt downloaden, vraagt u GET de `"href"` waarde aan die u hebt gekopieerd in de vorige stap [bij het ophalen van uw bestanden](#retrieving-your-files).
 
->[!NOTE] Als u dit verzoek direct in bevellijn doet, zou u kunnen worden ertoe aangezet om een output na uw verzoekkopballen toe te voegen. Het volgende aanvraagvoorbeeld gebruikt `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>Als u dit verzoek direct in bevellijn doet, zou u kunnen worden ertoe aangezet om een output na uw verzoekkopballen toe te voegen. Het volgende aanvraagvoorbeeld gebruikt `--output {FILENAME.FILETYPE}`.
 
 **API-indeling**
 
@@ -244,7 +249,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
   -O 'file.parquet'
 ```
 
->[!TIP] Zorg ervoor dat u zich in de juiste map of map bevindt waarnaar u het bestand wilt opslaan voordat u de aanvraag GET uitvoert.
+>[!TIP]
+>
+>Zorg ervoor dat u zich in de juiste map of map bevindt waarnaar u het bestand wilt opslaan voordat u de aanvraag GET uitvoert.
 
 **Antwoord**
 
@@ -258,7 +265,9 @@ In dit document worden de stappen beschreven die zijn vereist voor het downloade
 
 ## Muziek openen met Snowflake
 
->[!IMPORTANT] Neem contact op met attributionai-support@adobe.com voor meer informatie over het gebruik van scores met SnowFlake.
+>[!IMPORTANT]
+>
+>Neem contact op met attributionai-support@adobe.com voor meer informatie over het gebruik van scores met SnowFlake.
 
 U hebt toegang tot de geaggregeerde AI-scores voor kenmerken via Snowflake. U moet momenteel een e-mail sturen naar de ondersteuning van Adobe op attributionai-support@adobe.com om de aanmeldingsgegevens voor Snowflake in te stellen en deze naar uw lezeraccount te ontvangen.
 
@@ -268,7 +277,9 @@ Nadat uw verzoek door Adobe-ondersteuning is verwerkt, ontvangt u een URL voor h
 - Gebruikersnaam
 - Wachtwoord
 
->[!NOTE] De lezeraccount is bedoeld voor het opvragen van gegevens met SQL-clients, werkbladen en BI-oplossingen die JDBC-connector ondersteunen.
+>[!NOTE]
+>
+>De lezeraccount is bedoeld voor het opvragen van gegevens met SQL-clients, werkbladen en BI-oplossingen die JDBC-connector ondersteunen.
 
 Zodra u uw geloofsbrieven en URL hebt, kunt u de modellijsten vragen, die door touchpoint datum, of omzettingsdatum worden bijeengevoegd.
 
