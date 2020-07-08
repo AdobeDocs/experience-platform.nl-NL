@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Marketingacties
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 0%
@@ -154,7 +154,9 @@ PUT /marketingActions/custom/{marketingActionName}
 
 In het verzoek dat volgt, merk op dat `name` in de verzoeklading het zelfde als `{marketingActionName}` in de API vraag is. In tegenstelling tot het `id` van een beleid dat read-only en systeem-geproduceerd is, vereist het creëren van een marketing actie u om de _voorgenomen_ naam van de marketing actie te verstrekken aangezien u het creeert.
 
->[!NOTE] Het ontbreken om `{marketingActionName}` in de vraag te leveren zal in een 405 Fout (Methode niet Toegestaan) resulteren aangezien u niet wordt toegelaten om PPUT aan het `/marketingActions/custom` eindpunt direct uit te voeren. Ook, als `name` in de lading niet `{marketingActionName}` in de weg aanpast, zult u een 400 Fout (Onjuiste Verzoek) ontvangen.
+>[!NOTE]
+>
+>Het ontbreken om `{marketingActionName}` in de vraag te leveren zal in een 405 Fout (Methode niet Toegestaan) resulteren aangezien u niet wordt toegelaten om PPUT aan het `/marketingActions/custom` eindpunt direct uit te voeren. Ook, als `name` in de lading niet `{marketingActionName}` in de weg aanpast, zult u een 400 Fout (Onjuiste Verzoek) ontvangen.
 
 ```SHELL
 curl -X PUT \
@@ -197,7 +199,9 @@ Als dit gelukt is, ontvangt u een HTTP-status 201 (Gemaakt) en bevat de responss
 
 Het is mogelijk marketingacties te verwijderen door een DELETE verzoek te sturen naar de gebruiker `{marketingActionName}` van de marketingactie die u wilt verwijderen.
 
->[!NOTE] U kunt geen marketingacties verwijderen waarnaar wordt verwezen door een bestaand beleid. Als u dit probeert, treedt een fout van 400 op (Onjuist verzoek) samen met een foutbericht dat de `id` (of meerdere id&#39;s) bevat van een beleid (of beleid) dat een verwijzing bevat naar de marketingactie die u wilt verwijderen.
+>[!NOTE]
+>
+>U kunt geen marketingacties verwijderen waarnaar wordt verwezen door een bestaand beleid. Als u dit probeert, treedt een fout van 400 op (Onjuist verzoek) samen met een foutbericht dat de `id` (of meerdere id&#39;s) bevat van een beleid (of beleid) dat een verwijzing bevat naar de marketingactie die u wilt verwijderen.
 
 **API-indeling**
 
