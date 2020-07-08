@@ -1,10 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform Batch Ingestieontwikkelaarshandleiding
+title: Adobe Experience Platform Batch-ontwikkelaarshandleiding
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '2577'
+ht-degree: 3%
 
 ---
 
@@ -21,29 +24,31 @@ Gegevensinvoer biedt een RESTful-API waarmee u standaard CRUD-bewerkingen kunt u
 
 De volgende secties verstrekken extra informatie die u zult moeten kennen of hebben naast elkaar om met succes vraag aan de Ingestie API van de Partij te maken.
 
-Voor deze handleiding is een goed begrip vereist van de volgende componenten van het Adobe Experience Platform:
+Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
-- [Inname](./overview.md)in batch: Hiermee kunt u gegevens als batchbestanden in Adobe Experience Platform opnemen.
-- [XDM-systeem](../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
-- [Sandboxen](../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [Inname](./overview.md)in batch: Hiermee kunt u gegevens als batchbestanden in het Adobe Experience Platform invoeren.
+- [XDM-systeem](../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+- [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
 
 Voor aanvragen die een payload (POST, PUT, PATCH) bevatten, is mogelijk een extra `Content-Type` header nodig. De toegelaten waarden specifiek voor elke vraag worden verstrekt in de vraagparameters. In deze handleiding worden de volgende inhoudstypen gebruikt:
 
@@ -60,7 +65,7 @@ JSON en CSV hebben bijvoorbeeld geen datum- of datum-tijdtype. Dientengevolge, w
 
 In de onderstaande tabel worden de conversies weergegeven die worden ondersteund bij het invoeren van gegevens.
 
-| Binnenkomend (rij) vs. Doel (kolom) | String | Byte | Kort | Geheel | Lang | Dubbel | Datum | Datum/tijd | Object | Kaart |
+| Binnenkomend (rij) vs. Target (kolom) | String | Byte | Kort | Geheel | Lang | Dubbel | Datum | Datum/tijd | Object | Kaart |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | String | X | X | X | X | X | X | X | X |  |  |
 | Byte | X | X | X | X | X | X |  |  |  |  |
@@ -73,7 +78,9 @@ In de onderstaande tabel worden de conversies weergegeven die worden ondersteund
 | Object |  |  |  |  |  |  |  |  | X | X |
 | Kaart |  |  |  |  |  |  |  |  | X | X |
 
->[!NOTE] Booleaanse waarden en arrays kunnen niet naar andere typen worden geconverteerd.
+>[!NOTE]
+>
+>Booleaanse waarden en arrays kunnen niet naar andere typen worden geconverteerd.
 
 ## Ingestiebeperkingen
 
@@ -85,13 +92,17 @@ De gegevensinvoer in de batch heeft enkele beperkingen:
 
 ## Ingest JSON-bestanden
 
->[!NOTE] De volgende stappen zijn van toepassing op kleine bestanden (256 MB of minder). Als u een gatewayonderbreking of de fouten van de verzoeklichaamsomvang raakt, moet u op grote dossier schakelen uploadt.
+>[!NOTE]
+>
+>De volgende stappen zijn van toepassing op kleine bestanden (256 MB of minder). Als u een gatewayonderbreking of de fouten van de verzoeklichaamsomvang raakt, moet u op grote dossier schakelen uploadt.
 
 ### Batch maken
 
 Ten eerste moet u een batch maken, met JSON als invoerindeling. Wanneer het creëren van de partij, zult u een datasetidentiteitskaart moeten verstrekken. U zult ook moeten ervoor zorgen dat alle dossiers die als deel van de partij worden geupload met het schema XDM verbonden aan de verstrekte dataset in overeenstemming zijn.
 
->[!NOTE] De voorbeelden hieronder zijn voor single-line JSON. Om JSON met meerdere regels in te voeren, moet de `isMultiLineJson` markering worden ingesteld. Lees voor meer informatie de handleiding voor het oplossen van problemen met [batchinvoer](./troubleshooting.md).
+>[!NOTE]
+>
+>De voorbeelden hieronder zijn voor single-line JSON. Om JSON met meerdere regels in te voeren, moet de `isMultiLineJson` markering worden ingesteld. Lees voor meer informatie de handleiding voor het oplossen van problemen met [batchinvoer](./troubleshooting.md).
 
 **API-indeling**
 
@@ -151,7 +162,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 Nu u een batch hebt gemaakt, kunt u de methode `batchId` from before gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
 
->[!NOTE] Zie de bijlage voor een [voorbeeld van een JSON-gegevensbestand](#data-transformation-for-batch-ingestion)met de juiste indeling.
+>[!NOTE]
+>
+>Zie de bijlage voor een [voorbeeld van een JSON-gegevensbestand](#data-transformation-for-batch-ingestion)met de juiste indeling.
 
 **API-indeling**
 
@@ -167,7 +180,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Verzoek**
 
->[!NOTE] De API biedt ondersteuning voor uploaden in één onderdeel. Zorg ervoor dat het inhoudstype application/octet-stream is.
+>[!NOTE]
+>
+>De API biedt ondersteuning voor uploaden in één onderdeel. Zorg ervoor dat het inhoudstype application/octet-stream is.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -221,7 +236,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ## Bovenliggende bestanden samenvoegen
 
->[!NOTE] De volgende stappen zijn van toepassing op kleine bestanden (256 MB of minder). Als u een gatewayonderbreking of de fouten van de verzoeklichaamsomvang raakt, zult u aan grote dossierupload moeten schakelen.
+>[!NOTE]
+>
+>De volgende stappen zijn van toepassing op kleine bestanden (256 MB of minder). Als u een gatewayonderbreking of de fouten van de verzoeklichaamsomvang raakt, zult u aan grote dossierupload moeten schakelen.
 
 ### Batch maken
 
@@ -298,7 +315,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Verzoek**
 
->[!CAUTION] Deze API biedt ondersteuning voor uploaden in één onderdeel. Zorg ervoor dat het inhoudstype application/octet-stream is.
+>[!CAUTION]
+>
+>Deze API biedt ondersteuning voor uploaden in één onderdeel. Zorg ervoor dat het inhoudstype application/octet-stream is.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -352,7 +371,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Grote Parketbestanden samenvoegen
 
->[!NOTE] In deze sectie wordt beschreven hoe u bestanden kunt uploaden die groter zijn dan 256 MB. De grote bestanden worden geüpload in blokken en vervolgens vastgezet via een API-signaal.
+>[!NOTE]
+>
+>In deze sectie wordt beschreven hoe u bestanden kunt uploaden die groter zijn dan 256 MB. De grote bestanden worden geüpload in blokken en vervolgens vastgezet via een API-signaal.
 
 ### Batch maken
 
@@ -467,7 +488,9 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Verzoek**
 
->[!CAUTION] Deze API biedt ondersteuning voor uploaden in één onderdeel. Zorg ervoor dat het inhoudstype application/octet-stream is.
+>[!CAUTION]
+>
+>Deze API biedt ondersteuning voor uploaden in één onderdeel. Zorg ervoor dat het inhoudstype application/octet-stream is.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -559,7 +582,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 om CSV- dossiers in te voeren, zult u een klasse, een schema, en een dataset moeten tot stand brengen die CSV steunt. Voor gedetailleerde informatie over hoe te om de noodzakelijke klasse en het schema tot stand te brengen, volg de instructies die in de [ad hoc zelfstudie](../../xdm/api/ad-hoc.md)van de schemaverwezenlijking worden verstrekt.
 
->[!NOTE] De volgende stappen zijn van toepassing op kleine bestanden (256 MB of minder). Als u een gatewayonderbreking of de fouten van de verzoeklichaamsomvang raakt, zult u aan grote dossierupload moeten schakelen.
+>[!NOTE]
+>
+>De volgende stappen zijn van toepassing op kleine bestanden (256 MB of minder). Als u een gatewayonderbreking of de fouten van de verzoeklichaamsomvang raakt, zult u aan grote dossierupload moeten schakelen.
 
 ### Gegevensset maken
 
@@ -695,7 +720,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 Nu u een batch hebt gemaakt, kunt u de methode `batchId` from before gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
 
->[!NOTE] Zie de appendix sectie voor een [voorbeeld van een behoorlijk-formatted Csv- gegevensdossier](#data-transformation-for-batch-ingestion).
+>[!NOTE]
+>
+>Zie de appendix sectie voor een [voorbeeld van een behoorlijk-formatted Csv- gegevensdossier](#data-transformation-for-batch-ingestion).
 
 **API-indeling**
 
@@ -711,7 +738,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Verzoek**
 
->[!CAUTION] Deze API biedt ondersteuning voor uploaden in één onderdeel. Zorg ervoor dat het inhoudstype application/octet-stream is.
+>[!CAUTION]
+>
+>Deze API biedt ondersteuning voor uploaden in één onderdeel. Zorg ervoor dat het inhoudstype application/octet-stream is.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.csv \
@@ -916,7 +945,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Verzoek**
 
->[!CAUTION] Deze API biedt ondersteuning voor uploaden in één onderdeel. Zorg ervoor dat het inhoudstype application/octet-stream is. Gebruik de optie curl -F niet, omdat deze standaard een meerdelige aanvraag bevat die niet compatibel is met de API.
+>[!CAUTION]
+>
+>Deze API biedt ondersteuning voor uploaden in één onderdeel. Zorg ervoor dat het inhoudstype application/octet-stream is. Gebruik de optie curl -F niet, omdat deze standaard een meerdelige aanvraag bevat die niet compatibel is met de API.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -972,7 +1003,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Gegevenstransformatie voor batch-opname
 
-Om een gegevensdossier in het Platform van de Ervaring in te gaan, moet de hiërarchische structuur van het dossier het schema van de Gegevens van de [Ervaring (XDM)](../../xdm/home.md) in acht nemen verbonden aan de dataset die aan wordt geupload.
+Om een gegevensdossier in Experience Platform in te gaan, moet de hiërarchische structuur van het dossier het schema van de Gegevens van de [Ervaring (XDM)](../../xdm/home.md) in acht nemen verbonden aan de dataset die wordt geupload aan.
 
 Informatie over hoe u een CSV-bestand kunt toewijzen om te voldoen aan een XDM-schema vindt u in het document met [voorbeeldtransformaties](../../etl/transformations.md) , samen met een voorbeeld van een JSON-gegevensbestand met de juiste indeling. Hier vindt u voorbeeldbestanden in het document:
 
