@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Modellen
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 33f8c424c208bb61319b49e7ecb30e3144ef108a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 1%
@@ -220,7 +220,9 @@ Een geslaagde reactie retourneert een payload die de details van uw model bevat,
 
 U kunt een bestaand Model bijwerken door zijn eigenschappen door een PPUT- verzoek te beschrijven dat identiteitskaart van het doelmodel in de verzoekweg omvat en een nuttige lading te verstrekken JSON die bijgewerkte eigenschappen bevat.
 
->[!TIP] Om ervoor te zorgen dat deze PUT-aanvraag succesvol is, wordt u aangeraden eerst een GET-aanvraag uit te voeren om het Model via ID op te halen. Vervolgens past u het geretourneerde JSON-object aan en werkt u dit bij en past u het gehele gewijzigde JSON-object toe als de payload voor de PUT-aanvraag.
+>[!TIP]
+>
+>Om ervoor te zorgen dat deze PUT-aanvraag succesvol is, wordt u aangeraden eerst een GET-aanvraag uit te voeren om het Model via ID op te halen. Vervolgens past u het geretourneerde JSON-object aan en werkt u dit bij en past u het gehele gewijzigde JSON-object toe als de payload voor de PUT-aanvraag.
 
 **API-indeling**
 
