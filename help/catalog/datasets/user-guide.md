@@ -4,21 +4,24 @@ solution: Experience Platform
 title: Gebruikershandleiding voor gegevensbestanden
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1181'
+ht-degree: 0%
 
 ---
 
 
 # Gebruikershandleiding voor gegevensbestanden
 
-Deze gebruikershandleiding bevat instructies voor het uitvoeren van veelvoorkomende acties bij het werken met gegevenssets in de gebruikersinterface van het Adobe Experience Platform.
+Deze gebruikersgids verstrekt instructies bij het uitvoeren van gemeenschappelijke acties wanneer het werken met datasets binnen het gebruikersinterface van het Adobe Experience Platform.
 
 ## Aan de slag
 
-Deze gebruikershandleiding vereist een goed begrip van de volgende componenten van het Adobe Experience Platform:
+Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen van het Adobe Experience Platform:
 
-* [Gegevenssets](overview.md): De opslag- en beheerconstructie voor gegevenspersistentie in het Experience Platform.
-* [XDM-systeem](../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
+* [Gegevenssets](overview.md): De opslag- en beheerconstructie voor gegevenspersistentie in Experience Platform.
+* [XDM-systeem](../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [Schema-editor](../../xdm/tutorials/create-schema-ui.md): Leer hoe te om uw eigen douaneXDM schema&#39;s te bouwen gebruikend de Redacteur van het Schema binnen het gebruikersinterface van het Platform.
 * [Klantprofiel](../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
@@ -26,7 +29,7 @@ Deze gebruikershandleiding vereist een goed begrip van de volgende componenten v
 
 ## Gegevensbestanden weergeven
 
-In het Platform van de Ervaring UI, klik **Datasets** in de linkernavigatie om het dashboard van *Datasets* te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en status van de meest recente versiereeks houdt.
+In Experience Platform UI, klik **Datasets** in de linkernavigatie om het dashboard van *Datasets* te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en status van de meest recente versiereeks houdt.
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
@@ -45,7 +48,7 @@ In het voorproefvenster, wordt de hiërarchische mening van het schema voor de d
 
 ![](../images/datasets/user-guide/preview_dataset.png)
 
-Voor robuustere methodes om tot uw gegevens toegang te hebben, verleent het Platform van de Ervaring de stroomafwaartse diensten zoals de Dienst van de Vraag en JupyterLab om gegevens te onderzoeken en te analyseren. Raadpleeg de volgende documenten voor meer informatie:
+Voor robuustere methodes om tot uw gegevens toegang te hebben, verleent het Experience Platform stroomafwaartse diensten zoals de Dienst van de Vraag en JupyterLab om gegevens te onderzoeken en te analyseren. Raadpleeg de volgende documenten voor meer informatie:
 
 * [Overzicht van Query Service](../../query-service/home.md)
 * [Gebruikershandleiding voor JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
@@ -87,7 +90,9 @@ De stap *Configureren* wordt weergegeven. Geef de gegevensset een naam en een op
 
 De stap Gegevens ** toevoegen wordt weergegeven. Upload het CSV-bestand door het naar het midden van het scherm te slepen of klik op **Bladeren** om de bestandsmap te verkennen. Het bestand kan maximaal tien gigabyte groot zijn. Nadat het CSV-bestand is geüpload, klikt u op **Opslaan** om de gegevensset te maken.
 
->[!NOTE] CSV-kolomnamen moeten beginnen met alfanumerieke tekens en mogen alleen letters, cijfers en onderstrepingstekens bevatten.
+>[!NOTE]
+>
+>CSV-kolomnamen moeten beginnen met alfanumerieke tekens en mogen alleen letters, cijfers en onderstrepingstekens bevatten.
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
@@ -108,13 +113,15 @@ Als een dataset reeds gegevens bevat en dan voor Profiel wordt toegelaten, worde
 
 ## Beheer van gegevens beheren en afdwingen op een gegevensset
 
-De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste gegevensbeheersmechanisme voor het Platform van de Ervaring. De etiketten van DULE staan u toe om datasets en gebieden volgens gebruiksbeleid te categoriseren die op die gegevens van toepassing zijn. Zie het overzicht [van het Beheer van](../../data-governance/home.md) Gegevens om meer over etiketten te leren, of naar de de etiketteringsgebruikersgids [van het](../../data-governance/labels/overview.md) gegevensgebruik voor instructies te verwijzen over hoe te om etiketten op datasets toe te passen.
+De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste gegevensbeheersmechanisme voor Experience Platform. De etiketten van DULE staan u toe om datasets en gebieden volgens gebruiksbeleid te categoriseren die op die gegevens van toepassing zijn. Zie het overzicht [van het Beheer van](../../data-governance/home.md) Gegevens om meer over etiketten te leren, of naar de de etiketteringsgebruikersgids [van het](../../data-governance/labels/overview.md) gegevensgebruik voor instructies te verwijzen over hoe te om etiketten op datasets toe te passen.
 
 ## Een gegevensset verwijderen
 
 U kunt een dataset schrappen door tot zijn de activiteitenscherm van de *Dataset eerst toegang te hebben* . Klik vervolgens op Gegevensset **** verwijderen om deze te verwijderen.
 
->[!NOTE] Datasets die zijn gemaakt en gebruikt door Adobe-toepassingen en -services (zoals Adobe Analytics, Adobe Audience Manager of Decisioning Service), kunnen niet worden verwijderd.
+>[!NOTE]
+>
+>Datasets die zijn gemaakt en gebruikt door Adobe-toepassingen en -services (zoals Adobe Analytics, Adobe Audience Manager of beslissingsservice), kunnen niet worden verwijderd.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
@@ -128,7 +135,7 @@ Als een dataset voor Profiel wordt toegelaten, die het door UI schrapt maakt de 
 
 ## Gegevens bijhouden
 
-In het Platform van de Ervaring UI, klik **Controle** in de linkernavigatie. Met het *dashboard Bewaking* kunt u de status van binnenkomende gegevens van batch- of streaming invoer bekijken. Als u de status van afzonderlijke batches wilt weergeven, klikt u op Van begin tot eind ** batch of op Van begin tot eind ** streaming. De dashboards maakt een lijst van alle partij of het stromen ingangen, met inbegrip van die die succesvol zijn, ontbroken, of nog lopend. Elke lijst verstrekt details van de partij, met inbegrip van partijidentiteitskaart, de naam van de doeldataset, en het aantal verslagen die worden opgenomen. Als de doeldataset voor Profiel wordt toegelaten, wordt het aantal ingebedde identiteits en profielverslagen ook getoond.
+In Experience Platform UI, klik **Controle** in de linkernavigatie. Met het *dashboard Bewaking* kunt u de status van binnenkomende gegevens van batch- of streaming invoer bekijken. Als u de status van afzonderlijke batches wilt weergeven, klikt u op Van begin tot eind ** batch of op Van begin tot eind ** streaming. De dashboards maakt een lijst van alle partij of het stromen ingangen, met inbegrip van die die succesvol zijn, ontbroken, of nog lopend. Elke lijst verstrekt details van de partij, met inbegrip van partijidentiteitskaart, de naam van de doeldataset, en het aantal verslagen die worden opgenomen. Als de doeldataset voor Profiel wordt toegelaten, wordt het aantal ingebedde identiteits en profielverslagen ook getoond.
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
@@ -142,7 +149,7 @@ Als u de batch wilt verwijderen, kunt u dit doen door te klikken op batch **** v
 
 ## Volgende stappen
 
-Deze gebruikersgids verstrekte instructies voor het uitvoeren van gemeenschappelijke acties wanneer het werken met datasets in het gebruikersinterface van het Platform van de Ervaring. Raadpleeg de volgende zelfstudies voor stappen voor het uitvoeren van gemeenschappelijke platformworkflows met datasets:
+Deze gebruikersgids verstrekte instructies voor het uitvoeren van gemeenschappelijke acties wanneer het werken met datasets in het gebruikersinterface van de Experience Platform. Raadpleeg de volgende zelfstudies voor informatie over het uitvoeren van algemene workflows voor Platforms met gegevenssets:
 
 * [Een gegevensset maken met behulp van API&#39;s](create.md)
 * [De gegevens van de dataset van de vraag gebruikend de Toegang API van Gegevens](../../data-access/home.md)
