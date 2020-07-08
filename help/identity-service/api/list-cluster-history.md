@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Clustergeschiedenis van een identiteit ophalen
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 0%
@@ -68,7 +68,9 @@ curl -X GET \
 
 Gebruik de `POST` methode als een batchequivalent van de hierboven beschreven `GET` methode om de clusterhistorie van meerdere identiteiten te retourneren.
 
->[!NOTE] Het verzoek mag niet meer dan 1000 identiteiten bevatten. Verzoeken die langer zijn dan 1000 identiteiten, resulteren in 400 statuscode.
+>[!NOTE]
+>
+>Het verzoek mag niet meer dan 1000 identiteiten bevatten. Verzoeken die langer zijn dan 1000 identiteiten, resulteren in 400 statuscode.
 
 **API-indeling**
 
@@ -210,7 +212,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] De reactie zal altijd één ingang voor elke XID hebben die in het verzoek wordt verstrekt ongeacht of XIDs van een verzoek tot de zelfde cluster behoren of als één of meerdere om het even welke cluster verbonden bij allen hebben.
+>[!NOTE]
+>
+>De reactie zal altijd één ingang voor elke XID hebben die in het verzoek wordt verstrekt ongeacht of XIDs van een verzoek tot de zelfde cluster behoren of als één of meerdere om het even welke cluster verbonden bij allen hebben.
 
 ## Volgende stappen
 
