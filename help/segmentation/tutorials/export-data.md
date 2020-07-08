@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gegevens exporteren met API's
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d0b9223aebca0dc510a7457e5a5c65ac4a567933
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1953'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -23,23 +23,25 @@ Naast het maken van een exporttaak hebt u ook toegang tot profielgegevens via de
 Deze zelfstudie vereist een goed begrip van de verschillende services van het Adobe Experience Platform die betrokken zijn bij het werken met profielgegevens. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [Klantprofiel](../../profile/home.md)in realtime: Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [Adobe Experience Platform Segmentation Service](../home.md): Staat u toe om publiekssegmenten van de gegevens van het Profiel van de Klant in real time te bouwen.
-- [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor Platform gegevens van de klantenervaring organiseert.
-- [Sandboxen](../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [Segmenteringsservice](../home.md)Adobe Experience Platform: Staat u toe om publiekssegmenten van de gegevens van het Profiel van de Klant in real time te bouwen.
+- [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+- [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Vereiste koppen
 
-Deze zelfstudie vereist ook dat u de [verificatiezelfstudie](../../tutorials/authentication.md) hebt voltooid om oproepen naar platform-API&#39;s te kunnen uitvoeren. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Deze zelfstudie vereist ook dat u de [verificatiezelfstudie](../../tutorials/authentication.md) hebt voltooid om aanroepen naar Platform-API&#39;s te kunnen uitvoeren. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Verzoeken aan platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
 
 Voor alle POST-, PUT- en PATCH-aanvragen is een extra header vereist:
 
@@ -47,7 +49,7 @@ Voor alle POST-, PUT- en PATCH-aanvragen is een extra header vereist:
 
 ## Een exporttaak maken
 
-Voor het exporteren van profielgegevens moet u eerst een gegevensset maken waarin de gegevens worden geëxporteerd en vervolgens een nieuwe exporttaak starten. Beide stappen kunnen worden verwezenlijkt gebruikend het Platform APIs van de Ervaring, met het eerste gebruikend de Dienst API van de Catalogus en het tweede gebruikend Real-time het Profiel van de Klant API. Gedetailleerde instructies voor het voltooien van elke stap worden beschreven in de volgende secties.
+Voor het exporteren van profielgegevens moet u eerst een gegevensset maken waarin de gegevens worden geëxporteerd en vervolgens een nieuwe exporttaak starten. Beide stappen kunnen worden verwezenlijkt gebruikend Experience Platform APIs, met het eerste gebruikend de Dienst API van de Catalogus en het laatste gebruikend Real-time het Profiel van de Klant. Gedetailleerde instructies voor het voltooien van elke stap worden beschreven in de volgende secties.
 
 - [Creeer een doeldataset](#create-a-target-dataset) - creeer een dataset om uitgevoerde gegevens te houden.
 - [Start een nieuwe exporttaak](#initiate-export-job) - Vul de gegevensset met XDM Individuele profielgegevens.
@@ -58,7 +60,7 @@ Bij het exporteren van profielgegevens moet eerst een doelgegevensset worden gem
 
 Één van de belangrijkste overwegingen is het schema waarop de dataset (`schemaRef.id` in de API steekproefaanvraag hieronder) wordt gebaseerd. Om een segment uit te voeren, moet de dataset op het Schema van de Unie van het Individuele Profiel XDM (`https://ns.adobe.com/xdm/context/profile__union`) worden gebaseerd. Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen, in dit geval dat de Individuele klasse van het Profiel XDM is. Voor meer informatie over de schema&#39;s van de verenigingsmening, te zien gelieve de sectie van het Profiel van de Klant in [real time van de Ontwikkelaar van het Registratie van het Schema gids](../../xdm/schema/composition.md#union).
 
-De stappen die in deze zelfstudie volgen schetsen hoe te om een dataset tot stand te brengen die verwijzingen het Schema van de Unie van het Individuele Profiel XDM gebruikend Catalogus API. U kunt ook de gebruikersinterface van het Adobe Experience Platform gebruiken om een dataset te maken die verwijst naar het samenvoegingsschema. De stappen voor het gebruiken van UI worden geschetst in [deze zelfstudie UI voor het uitvoeren van segmenten](./create-dataset-export-segment.md) maar zijn ook hier van toepassing. Nadat u de bewerking hebt voltooid, kunt u terugkeren naar deze zelfstudie om door te gaan met de stappen voor het [starten van een nieuwe exporttaak](#initiate-export-job).
+De stappen die in deze zelfstudie volgen schetsen hoe te om een dataset tot stand te brengen die verwijzingen het Schema van de Unie van het Individuele Profiel XDM gebruikend Catalogus API. U kunt het gebruikersinterface van het Adobe Experience Platform ook gebruiken om een dataset tot stand te brengen die verwijzingen het unieschema. De stappen voor het gebruiken van UI worden geschetst in [deze zelfstudie UI voor het uitvoeren van segmenten](./create-dataset-export-segment.md) maar zijn ook hier van toepassing. Nadat u de bewerking hebt voltooid, kunt u terugkeren naar deze zelfstudie om door te gaan met de stappen voor het [starten van een nieuwe exporttaak](#initiate-export-job).
 
 Als u al een compatibele dataset hebt en zijn identiteitskaart kent, kunt u rechtstreeks aan de stap voor het [in werking stellen van een nieuwe uitvoerbaan](#initiate-export-job)te werk gaan.
 
@@ -197,7 +199,9 @@ curl -X POST \
 | `schema.name` | **(Vereist)** De naam van het schema dat is gekoppeld aan de gegevensset waarin gegevens moeten worden geëxporteerd. |
 | `evaluationInfo.segmentation` | *(Optioneel)* Een Booleaanse waarde die, indien niet opgegeven, standaard op `false`. Een waarde van `true` geeft aan dat segmentatie moet worden uitgevoerd op de exporttaak. |
 
->[!NOTE] Als u alleen profielgegevens wilt exporteren, en geen gerelateerde ExperienceEvent-gegevens wilt opnemen, verwijdert u het object &quot;additionalFields&quot; uit de aanvraag.
+>[!NOTE]
+>
+>Als u alleen profielgegevens wilt exporteren, en geen gerelateerde ExperienceEvent-gegevens wilt opnemen, verwijdert u het object &quot;additionalFields&quot; uit de aanvraag.
 
 **Antwoord**
 
@@ -529,7 +533,7 @@ curl -X GET \
 
 ## Een exporttaak annuleren
 
-Met het Experience Platform kunt u een bestaande exporttaak annuleren. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de exporttaak niet is voltooid of vastgelopen in de verwerkingsfase. Als u een exporttaak wilt annuleren, kunt u een DELETE-aanvraag naar het `/export/jobs` eindpunt uitvoeren en de naam `id` van de exporttaak opnemen die u naar het aanvraagpad wilt annuleren.
+Met Experience Platform kunt u een bestaande exporttaak annuleren. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de exporttaak niet is voltooid of vastgelopen in het verwerkingsstadium. Als u een exporttaak wilt annuleren, kunt u een DELETE aanvraag naar het `/export/jobs` eindpunt uitvoeren en de `id` exporttaak opnemen die u naar het aanvraagpad wilt annuleren.
 
 **API-indeling**
 
@@ -558,10 +562,10 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 204 (Geen inhoud) en 
 
 ## Volgende stappen
 
-Zodra de export is voltooid, zijn uw gegevens beschikbaar in het Data Lake in Experience Platform. Vervolgens kunt u de API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) gegevenstoegang gebruiken om toegang te krijgen tot de gegevens via de `batchId` koppeling die aan de export is gekoppeld. Afhankelijk van de grootte van de exportbewerking kunnen de gegevens in blokken staan en kan de batch uit meerdere bestanden bestaan.
+Nadat het exporteren is voltooid, zijn uw gegevens beschikbaar in het Data Lake in Experience Platform. Vervolgens kunt u de API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) gegevenstoegang gebruiken om toegang te krijgen tot de gegevens via de `batchId` koppeling die aan de export is gekoppeld. Afhankelijk van de grootte van de exportbewerking kunnen de gegevens in blokken staan en kan de batch uit meerdere bestanden bestaan.
 
 Voor stapsgewijze instructies over het gebruik van de API voor gegevenstoegang voor het openen en downloaden van batchbestanden volgt u de zelfstudie [Gegevenstoegang](../../data-access/tutorials/dataset-data.md).
 
-U kunt ook toegang krijgen tot geëxporteerde realtime klantprofielgegevens met Adobe Experience Platform Query Service. Gebruikend UI of RESTful API, staat de Dienst van de Vraag u toe om, vragen op gegevens binnen het meer van Gegevens te schrijven te bevestigen en in werking te stellen.
+U kunt ook toegang krijgen tot geëxporteerde realtime gegevens van het klantprofiel via de Query Service van het Adobe Experience Platform. Gebruikend UI of RESTful API, staat de Dienst van de Vraag u toe om, vragen op gegevens binnen het meer van Gegevens te schrijven te bevestigen en in werking te stellen.
 
 Voor meer informatie over hoe te om publieksgegevens te vragen, te herzien gelieve de documentatie [van de Dienst van de](../../query-service/home.md)Vraag.
