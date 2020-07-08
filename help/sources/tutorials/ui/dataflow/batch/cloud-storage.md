@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een gegevensstroom configureren voor een batchaansluiting voor cloudopslag in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1184'
 ht-degree: 0%
@@ -48,7 +48,9 @@ Als u op een map in de lijst klikt, kunt u de mappenhiërarchie doorlopen in die
 
 Wanneer het voorvertoningsvenster is gevuld, kunt u op **[!UICONTROL Volgende]** klikken om alle bestanden in de geselecteerde map te uploaden. Als u naar een specifiek bestand wilt uploaden, selecteert u dat bestand in de aanbieding voordat u op **[!UICONTROL Volgende]** klikt.
 
->[!NOTE] Tot de ondersteunde bestandsindelingen behoren CSV, JSON en Parquet. JSON- en Parquet-bestanden moeten XDM-compatibel zijn.
+>[!NOTE]
+>
+>Tot de ondersteunde bestandsindelingen behoren CSV, JSON en Parquet. JSON- en Parquet-bestanden moeten XDM-compatibel zijn.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-next.png)
 
