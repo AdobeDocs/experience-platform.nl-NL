@@ -1,10 +1,10 @@
 ---
 title: Producten
-seo-title: Producten ondersteunen met Adobe Experience Platform Web SDK
-description: Leer hoe te om gegevens toe te voegen als u producten of een het winkelwagentje met het Web SDK van het Platform van de Ervaring hebt
-seo-description: Leer hoe te om gegevens toe te voegen als u producten of een het winkelwagentje met het Web SDK van het Platform van de Ervaring hebt
+seo-title: Ondersteunende producten met Adobe Experience Platform Web SDK
+description: Leer hoe te om gegevens toe te voegen als u producten of een het winkelwagentje met het Web SDK van het Experience Platform hebt
+seo-description: Leer hoe te om gegevens toe te voegen als u producten of een het winkelwagentje met het Web SDK van het Experience Platform hebt
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 1%
@@ -19,13 +19,17 @@ Als u producten op uw site hebt, is dit een standaardset van dingen die u wilt v
 Dit document gebruikt de [mix ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) . Het `commerce` mengsel wordt in twee delen verdeeld: het `commerce` object en de `productListItems` array. Met het `commerce` object kunt u aangeven welke handelingen met de `productListItems` array worden uitgevoerd.
 
 >[!Tip]
->Als u bekend bent met Adobe Analytics, `commerce` is The het meest verwant aan de `events` variabele. Het `productListItems` hangt meer samen met de `products` variabele.
+>
+>
+>Als u bekend bent met Adobe Analytics, heeft The `commerce` de meeste invloed op de `events` variabele. Het `productListItems` hangt meer samen met de `products` variabele.
 
 ## Acties in verband met producten
 
 Hieronder ziet u een lijst met `measures` beschikbare gegevens in het `commerce` object.
 
 >[!Tip]
+>
+>
 >Een maatregel heeft twee velden: `id` en `value`. Meestal zult u alleen het `value` veld gebruiken (bijvoorbeeld `'value':1`). In het `id` veld kunt u een unieke id instellen waarmee u kunt bijhouden wanneer de maatregel is verzonden. Zie de documentatie XDM voor [Maatregel](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
 | **Meetlat** | **Aanbeveling** | **Beschrijving** |
