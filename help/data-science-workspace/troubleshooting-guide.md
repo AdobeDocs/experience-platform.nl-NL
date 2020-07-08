@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding voor het oplossen van problemen in de Data Science Workspace
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 0%
@@ -18,7 +18,9 @@ Dit document geeft antwoorden op veelgestelde vragen over Adobe Experience Platf
 
 ## [!DNL JupyterLab] omgeving wordt niet geladen in [!DNL Google Chrome]
 
->[!IMPORTANT] Dit probleem is opgelost, maar kan nog steeds voorkomen in de Google Chrome 80.x-browser. Controleer of uw Chrome-browser up-to-date is.
+>[!IMPORTANT]
+>
+>Dit probleem is opgelost, maar kan nog steeds voorkomen in de Google Chrome 80.x-browser. Controleer of uw Chrome-browser up-to-date is.
 
 Met [!DNL Google Chrome] browserversie 80.x, worden alle derdekoekjes geblokkeerd door gebrek. Dit beleid kan verhinderen [!DNL JupyterLab] binnen Adobe Experience Platform te laden.
 
@@ -38,7 +40,9 @@ Schakel ten slotte &quot;Cookies van derden blokkeren&quot; in op &quot;UIT&quot
 
 ![chroom geavanceerd](./images/faq/toggle-off.png)
 
->[!NOTE] U kunt cookies van derden uitschakelen en [* toevoegen.]ds.adobe.net aan toestaan lijst.
+>[!NOTE]
+>
+>U kunt cookies van derden uitschakelen en [* toevoegen.]ds.adobe.net naar de lijst van gewenste personen.
 
 Ga naar &quot;chrome://flags/&quot; op de adresbalk. U kunt de markering *&quot;SameSite by default cookies&quot;* zoeken en uitschakelen in het vervolgkeuzemenu rechts.
 
