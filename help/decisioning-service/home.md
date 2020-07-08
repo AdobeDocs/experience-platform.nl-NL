@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Beslissingsservice
 topic: overview
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 0%
@@ -68,7 +68,9 @@ U kunt [!DNL Decisioning Service] in een synchrone verzoek-reactie interactiemod
 
 Het gebruik van [!DNL Decisioning Service] is optioneel en vereist slechts een paar stappen naast de standaardstappen die nodig zijn om [!DNL Profile] entiteiten te maken en te beheren.
 
->[!NOTE] Om het beste uit het [!DNL Real-time Customer Profile], [!DNL Decisioning Service] direct te maken integreert met de profielopslag. De API-aanroepen hoeven slechts een van de identiteiten voor een bepaald profiel aan te geven.
+>[!NOTE]
+>
+>Om het beste uit het [!DNL Real-time Customer Profile], [!DNL Decisioning Service] direct te maken integreert met de profielopslag. De API-aanroepen hoeven slechts een van de identiteiten voor een bepaald profiel aan te geven.
 
 De typische opeenvolging van stappen begint met het opbouwen van profielen:
 
