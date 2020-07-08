@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een gegevensset maken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
 
 Om een dataset tot stand te brengen die de Catalogus API gebruikt, moet u de `$id` waarde van het schema van de Gegevens van de Ervaring kennen het Model (XDM) waarop de dataset zal worden gebaseerd. Zodra u schema identiteitskaart hebt, kunt u een dataset tot stand brengen door een POST- verzoek aan het `/datasets` eindpunt in de Catalogus API te doen.
 
->[!NOTE] Dit document behandelt slechts hoe te om een datasetvoorwerp in Catalog tot stand te brengen. Voor volledige stappen op om, te creëren bevolken en te controleren een dataset, gelieve te verwijzen naar het volgende [leerprogramma](../datasets/create.md).
+>[!NOTE]
+>
+>Dit document behandelt slechts hoe te om een datasetvoorwerp in Catalog tot stand te brengen. Voor volledige stappen op om, te creëren bevolken en te controleren een dataset, gelieve te verwijzen naar het volgende [leerprogramma](../datasets/create.md).
 
 **API-indeling**
 
@@ -52,7 +57,9 @@ curl -X POST \
 | `name` | De naam van de gegevensset die moet worden gemaakt. |
 | `schemaRef.id` | De URI- `$id` waarde voor het XDM-schema waarop de gegevensset wordt gebaseerd. |
 
->[!NOTE] In dit voorbeeld wordt de bestandsindeling [parket](https://parquet.apache.org/documentation/latest/) voor de `containerFormat` eigenschap gebruikt. Een voorbeeld dat de JSON-bestandsindeling gebruikt, vindt u in de ontwikkelaarshandleiding voor [batchinvoer](../../ingestion/batch-ingestion/api-overview.md).
+>[!NOTE]
+>
+>In dit voorbeeld wordt de bestandsindeling [parket](https://parquet.apache.org/documentation/latest/) voor de `containerFormat` eigenschap gebruikt. Een voorbeeld dat de JSON-bestandsindeling gebruikt, vindt u in de ontwikkelaarshandleiding voor [batchinvoer](../../ingestion/batch-ingestion/api-overview.md).
 
 **Antwoord**
 
