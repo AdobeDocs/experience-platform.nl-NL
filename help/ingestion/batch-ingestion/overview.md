@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Overzicht batchverwerking Adobe Experience Platform
+title: Overzicht van de Adobe Experience Platform Batch-inname
 topic: overview
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1170'
+ht-degree: 1%
 
 ---
 
 
 # Overzicht van inname in batch
 
-Met de API voor inname van batch kunt u gegevens als batchbestanden in het Adobe Experience Platform opnemen. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een parquetdossier), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
+Met de API voor batchverwerking kunt u gegevens als batchbestanden in het Adobe Experience Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een parquetdossier), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
 
 De verwijzing naar [de API voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) gegevensverwerking biedt aanvullende informatie over deze API-aanroepen.
 
@@ -21,7 +24,7 @@ Het volgende diagram schetst het proces van partijingestie:
 
 ## De API gebruiken
 
-Met de API voor gegevensinname kunt u gegevens als batches (een gegevenseenheid die bestaat uit een of meer bestanden die als één eenheid moeten worden opgenomen) in het Experience Platform innemen in drie basisstappen:
+Met de API voor gegevensinsluiting kunt u gegevens als batches (een gegevenseenheid die bestaat uit een of meer bestanden die als één eenheid moeten worden opgenomen) in het Experience Platform invoeren in drie basisstappen:
 
 1. Maak een nieuwe batch.
 2. Upload dossiers aan een gespecificeerde dataset die het XDM schema van de gegevens aanpast.
@@ -44,21 +47,23 @@ Als u een bestand wilt uploaden dat groter is dan 512 MB, moet het bestand in kl
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -123,7 +128,9 @@ Nadat een nieuwe batch is gemaakt om te uploaden, kunnen bestanden vervolgens na
 
 U kunt bestanden uploaden met de **Small File Upload API**. Als uw bestanden echter te groot zijn en de gatewaylimiet wordt overschreden (zoals uitgebreide time-outs, overschrijdingen van aanvragen voor een grotere bestandsgrootte en andere beperkingen), kunt u overschakelen naar de API **voor** grote bestanden uploaden. Deze API uploadt het bestand in delen en koppelt gegevens aan elkaar met behulp van de volledige API **-aanroep voor** groot bestand uploaden.
 
->[!NOTE] In de onderstaande voorbeelden wordt de [bestandsindeling Parquet](https://parquet.apache.org/documentation/latest/) gebruikt. Een voorbeeld dat de JSON-bestandsindeling gebruikt, vindt u in de ontwikkelaarshandleiding voor [batchinvoer](./api-overview.md).
+>[!NOTE]
+>
+>In de onderstaande voorbeelden wordt de [bestandsindeling Parquet](https://parquet.apache.org/documentation/latest/) gebruikt. Een voorbeeld dat de JSON-bestandsindeling gebruikt, vindt u in de ontwikkelaarshandleiding voor [batchinvoer](./api-overview.md).
 
 ### Kleine bestandsupload
 
