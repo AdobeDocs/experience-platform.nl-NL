@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een object vervangen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
 
 U kunt de inhoud van een voorwerp van de Catalogus beschrijven gebruikend een PUT verzoek, waar het volledige middel met de verzoeklading wordt vervangen.
 
->[!NOTE] Als u slechts een paar specifieke gebieden binnen een voorwerp van de Catalogus moet bijwerken, kan het gebruiken van een PATCH verzoek efficiënter zijn.
+>[!NOTE]
+>
+>Als u slechts een paar specifieke gebieden binnen een voorwerp van de Catalogus moet bijwerken, kan het gebruiken van een PATCH verzoek efficiënter zijn.
 
 **API-indeling**
 
