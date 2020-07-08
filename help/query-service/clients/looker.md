@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Verbinding maken met Looker
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
 
 # Verbinding maken met Looker
 
-Volg onderstaande stappen om verbinding te maken met Adobe Query Service op Adobe Experience Platform:
+Volg onderstaande stappen om Lader te verbinden met Adobe Query Service op Adobe Experience Platform:
 
 Nadat u zich hebt aangemeld bij Lader, klikt u op **Beheer**, gevolgd door **Verbindingen**.
 
@@ -31,7 +34,9 @@ Van hier, kunt u de details voor de Montages van de Verbinding invullen.
 - **Database:** De database die wordt gebruikt.
 - **Gebruikersnaam en wachtwoord:** De aanmeldingsgegevens die worden gebruikt. De gebruikersnaam heeft de vorm van `ORG_ID@AdobeOrg`.
 
->[!NOTE] Ga naar de pagina met [referenties op Platform](https://platform.adobe.com/query/configuration)voor meer informatie over het zoeken naar uw host en poort, databasenaam en aanmeldingsgegevens. Om uw geloofsbrieven te vinden, login aan Platform, klik **Vragen**, dan klik **Referenties**.
+>[!NOTE]
+>
+>Ga naar de pagina met [referenties op het Platform](https://platform.adobe.com/query/configuration)voor meer informatie over het zoeken naar uw host en poort, databasenaam en aanmeldingsgegevens. Als u uw referenties wilt zoeken, meldt u zich aan bij het Platform, klikt u op **Vragen** en vervolgens op **Referenties**.
 
 Nadat u de verbindingsgegevens hebt ingevoerd, klikt u op Deze instellingen **** testen om te controleren of uw referenties naar behoren werken. Als dat het geval is, wordt hieronder een bericht weergegeven dat u verbinding kunt maken. Als de verbinding daadwerkelijk tot stand is gebracht, klikt u op Verbinding **** toevoegen om de verbinding te maken.
 
