@@ -1,31 +1,36 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Gegevens verzamelen in het Adobe Experience Platform
+title: Gegevens in Adobe Experience Platform opnemen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1291'
+ht-degree: 0%
 
 ---
 
 
-# Gegevens verzamelen in het Adobe Experience Platform
+# Gegevens in Adobe Experience Platform opnemen
 
-Met het Adobe Experience Platform kunt u gegevens eenvoudig als batchbestanden importeren in Platform. Voorbeelden van gegevens die moeten worden opgenomen, kunnen profielgegevens bevatten van een plat bestand in een CRM-systeem (zoals een parketbestand) of gegevens die voldoen aan een bekend XDM-schema (Experience Data Model) in de Schemaregistratie.
+Met Adobe Experience Platform kunt u gegevens gemakkelijk als batchbestanden in het Platform importeren. Voorbeelden van gegevens die moeten worden opgenomen, kunnen profielgegevens bevatten van een plat bestand in een CRM-systeem (zoals een parketbestand) of gegevens die voldoen aan een bekend XDM-schema (Experience Data Model) in de Schemaregistratie.
 
 ## Aan de slag
 
-Als u deze zelfstudie wilt voltooien, hebt u toegang nodig tot Experience Platform. Als u geen toegang tot een IMS Organisatie in het Platform van de Ervaring hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
+Voor het voltooien van deze zelfstudie hebt u toegang tot Experience Platform nodig. Als u geen toegang tot een IMS Organisatie in Experience Platform hebt, gelieve met uw systeembeheerder te spreken alvorens te werk te gaan.
 
 Als u gegevens liever met API&#39;s voor gegevensinname wilt invoeren, leest u eerst de handleiding voor [Batch Ingestie-ontwikkelaars](../batch-ingestion/api-overview.md).
 
 ## Werkruimte Gegevensbestanden
 
-De werkruimte Datasets binnen het Platform van de Ervaring staat u toe om alle datasets te bekijken en te beheren die uw organisatie IMS heeft gemaakt, evenals nieuwe te creëren.
+De werkruimte van Datasets binnen Experience Platform staat u toe om alle datasets te bekijken en te beheren die uw organisatie IMS heeft gemaakt, evenals nieuwe te creëren.
 
 Bekijk de werkruimte Datasets door in de linkernavigatie op **Datasets** te klikken. De werkruimte van Datasets bevat een lijst van datasets, met inbegrip van kolommen die _Naam_, _Gemaakt_ (datum en tijd), _Bron_, _Schema_, en de Status _van de___ Laatste Partij tonen, evenals de datum en de tijd de dataset was Last Updated.
 
->[!NOTE] Klik op het filterpictogram naast de bar van het Onderzoek om het filtreren mogelijkheden te gebruiken om slechts die datasets te bekijken die voor Profiel worden toegelaten.
+>[!NOTE]
+>
+>Klik op het filterpictogram naast de bar van het Onderzoek om het filtreren mogelijkheden te gebruiken om slechts die datasets te bekijken die voor Profiel worden toegelaten.
 
 ![Alle gegevenssets weergeven](../images/tutorials/ingest-batch-data/datasets_workspace.png)
 
@@ -73,7 +78,7 @@ Ook in het lusje van Info is een _knevel van het Profiel_ die voor het toelaten 
 
 ## Gegevensset inschakelen voor realtime klantprofiel
 
-Datasets worden gebruikt voor het opnemen van gegevens in het Experience Platform en die gegevens worden uiteindelijk gebruikt om individuen te identificeren en informatie die uit meerdere bronnen afkomstig is aan elkaar te koppelen. Deze samengevoegde informatie wordt een Real-Time Klantprofiel genoemd. Opdat Platform weet welke informatie in het Real-Time Profiel zou moeten worden omvat, kunnen de datasets voor opneming worden gemerkt gebruikend de knevel van het **Profiel** .
+Datasets worden gebruikt voor het opnemen van gegevens in het Experience Platform en die gegevens worden uiteindelijk gebruikt om individuen te identificeren en informatie die uit meerdere bronnen afkomstig is aan elkaar te koppelen. Deze samengevoegde informatie wordt een Real-Time Klantprofiel genoemd. Om het Platform te weten te brengen welke informatie in het Real-Time Profiel zou moeten worden omvat, kunnen de datasets voor opneming worden gemerkt gebruikend de knevel van het **Profiel** .
 
 Deze schakeloptie is standaard uitgeschakeld. Als u verkiest om op Profiel van een knevel te voorzien, zullen alle gegevens die in de dataset worden opgenomen worden gebruikt helpen een individu identificeren en hun Real-Time Profiel aaneenschakelen.
 
@@ -97,13 +102,15 @@ Gegevens kunnen op verschillende manieren aan een gegevensset worden toegevoegd.
 
 Als u gegevens aan de gegevensset wilt toevoegen, klikt u op het tabblad Gegevens **** toevoegen. U kunt nu bestanden slepen en neerzetten of op uw computer bladeren naar de bestanden die u wilt toevoegen.
 
->[!NOTE] Platform ondersteunt twee bestandstypen voor gegevensinvoer, parket of JSON. U kunt maximaal vijf bestanden tegelijk toevoegen, waarbij de maximale bestandsgrootte van elk bestand 10 GB is.
+>[!NOTE]
+>
+>Platform ondersteunt twee bestandstypen voor gegevensinvoer, parket of JSON. U kunt maximaal vijf bestanden tegelijk toevoegen, waarbij de maximale bestandsgrootte van elk bestand 10 GB is.
 
 ![Tabblad Gegevens toevoegen](../images/tutorials/ingest-batch-data/add_data.png)
 
 ## Een bestand uploaden
 
-Nadat u een parket of JSON-bestand dat u wilt uploaden hebt gesleept en neergezet (of gebladerd en geselecteerd), wordt meteen begonnen met het verwerken van het bestand. Het dialoogvenster **Uploaden** wordt weergegeven op het tabblad Gegevens **** toevoegen, waarin de voortgang van het uploaden van het bestand wordt weergegeven.
+Wanneer u een parket of JSON-bestand dat u wilt uploaden sleept en neerzet (of bladert en selecteert), begint het Platform onmiddellijk met het verwerken van het bestand. Op het tabblad Gegevens **** **** toevoegen verschijnt een dialoogvenster voor het uploaden van het bestand.
 
 ![Het dialoogvenster Uploaden](../images/tutorials/ingest-batch-data/uploading.png)
 
@@ -135,6 +142,6 @@ Klik de Dataset **van de** Voorproef om een dialoog te openen die steekproefgege
 
 ## Volgende stappen
 
-Nu u een dataset en met succes ingebedde gegevens in het Platform van de Ervaring hebt gecreeerd, kunt u deze stappen herhalen om een nieuwe dataset tot stand te brengen of meer gegevens in de bestaande dataset in te voeren.
+Nu u een dataset en met succes ingebedde gegevens in Experience Platform hebt gecreeerd, kunt u deze stappen herhalen om een nieuwe dataset tot stand te brengen of meer gegevens in de bestaande dataset in te voeren.
 
 Lees voor meer informatie over het gebruik van batch-inname het overzicht [van de](../batch-ingestion/overview.md)Batch-inname.
