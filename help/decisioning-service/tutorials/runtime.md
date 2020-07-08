@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Werken met API's voor de beslissingsservice-runtime
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1985'
 ht-degree: 0%
@@ -43,7 +43,9 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../tutorials/authentication.md)sandbox.
+>[!NOTE]
+>
+>Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../tutorials/authentication.md)sandbox.
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -53,7 +55,9 @@ Ook nodig voor runtime-aanvragen:
 
 - x-request-id: `{UUID}`
 
->[!NOTE] `UUID` is een tekenreeks in UUID-indeling die wereldwijd uniek is en niet opnieuw mag worden gebruikt voor verschillende API-aanroepen
+>[!NOTE]
+>
+>`UUID` is een tekenreeks in UUID-indeling die wereldwijd uniek is en niet opnieuw mag worden gebruikt voor verschillende API-aanroepen
 
 [!DNL Decisioning Service] wordt gecontroleerd door een aantal bedrijfsvoorwerpen die met elkaar verwant zijn. Alle bedrijfsvoorwerpen worden opgeslagen in [!DNL Platform’s] bedrijfsobjecten bewaarplaats, de Bewaarplaats van de Objecten van de Kern XDM. Een belangrijk kenmerk van deze opslagplaats is dat de API&#39;s orthogonaal zijn ten opzichte van het type bedrijfsobject. In plaats van POST, GET, PUT, PATCH of DELETE API te gebruiken die op het type van middel in zijn API eindpunt wijst, zijn er slechts 6 generische eindpunten maar zij aanvaarden of keren een parameter terug die op het type van het voorwerp wijst wanneer die doorverwijs nodig is. Het schema moet bij de repository worden geregistreerd, maar daarna is de repository bruikbaar voor een set open-end objecttypen.
 
