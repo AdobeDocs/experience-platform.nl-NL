@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2431'
 ht-degree: 0%
@@ -483,6 +483,8 @@ Een geslaagde update retourneert HTTP Status 204 (Geen inhoud) en een lege antwo
 Het is ook mogelijk om een berekend attribuut te schrappen gebruikend API. Dit wordt gedaan door een DELETE verzoek aan het `/config/computedAttributes` eindpunt en met inbegrip van identiteitskaart van de gegevens verwerkte attributen te doen die u wenst om in de verzoekweg te schrappen.
 
 >[!Nofferte]
+>
+>
 >Wees voorzichtig bij het verwijderen van een kenmerk dat u hebt berekend, omdat het in meerdere schema&#39;s wordt gebruikt en de DELETE bewerking niet ongedaan kan worden gemaakt.
 
 **API-indeling**
