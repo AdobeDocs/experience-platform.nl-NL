@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een object verwijderen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%
@@ -16,7 +16,9 @@ ht-degree: 0%
 
 U kunt een object Catalog verwijderen door de id ervan op te geven in het pad van een DELETE aanvraag.
 
->[!WARNING] Wees voorzichtig bij het verwijderen van objecten, want dit kan niet ongedaan worden gemaakt en kan leiden tot doorbraakwijzigingen elders in het Experience Platform.
+>[!WARNING]
+>
+>Wees voorzichtig bij het verwijderen van objecten, want dit kan niet ongedaan worden gemaakt en kan leiden tot doorbraakwijzigingen elders in het Experience Platform.
 
 **API-indeling**
 
@@ -56,4 +58,6 @@ Een geslaagde reactie retourneert HTTP-status 200 (OK) en een array met de id va
 ]
 ```
 
->[!NOTE] Als geen voorwerpen van de Catalogus identiteitskaart aanpassen die in uw verzoek wordt verstrekt, kunt u nog een Code 200 van de Status van HTTP ontvangen, maar de reactierearray zal leeg zijn.
+>[!NOTE]
+>
+>Als geen voorwerpen van de Catalogus identiteitskaart aanpassen die in uw verzoek wordt verstrekt, kunt u nog een Code 200 van de Status van HTTP ontvangen, maar de reactierearray zal leeg zijn.
