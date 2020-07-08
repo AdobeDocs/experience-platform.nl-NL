@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een bron vervangen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 67826f838951b3202a6a04321c28daa8ee883d20
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,9 @@ De Registratie van het Schema staat u toe om een volledige middel door een PUT v
 
 Deze methode is vooral handig als u veel informatie in de bron tegelijk wilt bijwerken.
 
->[!NOTE] Als u slechts een deel van een middel wilt bijwerken in plaats van het volledig te vervangen, zie het document bij het [bijwerken van een middel gebruikend een verrichting](update-resource.md)van de PATCH.
+>[!NOTE]
+>
+>Als u slechts een deel van een middel wilt bijwerken in plaats van het volledig te vervangen, zie het document bij het [bijwerken van een middel gebruikend een verrichting](update-resource.md)van de PATCH.
 
 **API-indeling**
 
