@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Catalogusgegevens filteren met behulp van queryparameters
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '2060'
+ht-degree: 0%
 
 ---
 
@@ -202,7 +205,7 @@ Er zijn enkele beperkingen waarmee u rekening kunt houden wanneer u tags gebruik
 * De enige voorwerpen van de Catalogus die momenteel markeringen steunen zijn datasets, partijen, en verbindingen.
 * Tagnamen zijn uniek voor uw IMS-organisatie.
 * Adobe-processen kunnen voor bepaalde gedragingen tags gebruiken. De namen van deze tags worden standaard voorafgegaan door &quot;adobe&quot;. Daarom moet u deze conventie vermijden bij het declareren van labelnamen.
-* De volgende tagnamen zijn gereserveerd voor gebruik door het Experience Platform en kunnen daarom niet worden gedeclareerd als tagnaam voor uw organisatie:
+* De volgende tagnamen zijn gereserveerd voor gebruik in het hele Experience Platform en kunnen daarom niet worden gedeclareerd als tagnaam voor uw organisatie:
    * `unifiedProfile`: Deze markeringsnaam is gereserveerd voor datasets die door het Profiel [van de Klant in](../../profile/home.md)real time moeten worden opgenomen.
    * `unifiedIdentity`: Deze markeringsnaam is gereserveerd voor datasets die door de Dienst [van de](../../identity-service/home.md)Identiteit moeten worden opgenomen.
 
@@ -474,9 +477,9 @@ Catalog biedt twee methoden voor filteren op eigenschap, die nader worden beschr
 * [Eenvoudige filters](#using-simple-filters)gebruiken: Filter op of een specifieke eigenschap overeenkomt met een specifieke waarde.
 * [De parameter](#using-the-property-parameter)property gebruiken: Gebruik voorwaardelijke expressies om te filteren op basis van het feit of een eigenschap bestaat of als de waarde van een eigenschap overeenkomt met, benadert of vergelijkt met een andere opgegeven waarde of reguliere expressie.
 
-### Using simple filters {#using-simple-filters}
+### Eenvoudige filters gebruiken {#using-simple-filters}
 
-Simple filters allow you to filter responses based on specific property values. Een eenvoudig filter heeft de vorm van `{PROPERTY_NAME}={VALUE}`.
+Met eenvoudige filters kunt u reacties filteren op basis van specifieke eigenschapswaarden. Een eenvoudig filter heeft de vorm van `{PROPERTY_NAME}={VALUE}`.
 
 De query `name=exampleName` retourneert bijvoorbeeld alleen objecten waarvan de `name` eigenschap de waarde &#39;exampleName&#39; bevat. De query `name=!exampleName` retourneert daarentegen alleen objecten waarvan de `name` eigenschap **niet** &quot;exampleName&quot; is.
 
@@ -547,7 +550,7 @@ Een succesvol antwoord bevat een lijst van datasets, exclusief om het even welke
 
 De `property` vraagparameter verstrekt meer flexibiliteit voor op bezit-gebaseerd filtreren dan eenvoudige filters. Naast het filteren op basis van het feit of een eigenschap een specifieke waarde heeft, kan de `property` parameter andere vergelijkingsoperatoren (zoals &quot;more-than&quot; (`>`) en &quot;less-than&quot; (`<`))) en reguliere expressies gebruiken om te filteren op eigenschapswaarden. Het filter kan ook filteren op het al dan niet bestaan van een eigenschap, ongeacht de waarde ervan.
 
-De `property` parameter accepteert alleen objecteigenschappen op het hoogste niveau. Dit houdt in dat u voor het volgende voorbeeldobject op eigenschap kunt filteren voor `name`, `description`en `subItem`, maar NIET voor `sampleKey`.
+De `property` parameter accepteert alleen objecteigenschappen op hoofdniveau. Dit houdt in dat u voor het volgende voorbeeldobject op eigenschap kunt filteren voor `name`, `description`en `subItem`, maar NIET voor `sampleKey`.
 
 ```json
 {
@@ -574,7 +577,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 De waarde van de `property` parameter ondersteunt verschillende soorten voorwaardelijke expressies. In de volgende tabel wordt de basissyntaxis voor ondersteunde expressies beschreven:
 
-| Symbol(s) | Beschrijving | Voorbeeld |
+| Symbool(en) | Beschrijving | Voorbeeld |
 | --- | --- | --- |
 | (Geen) | Wanneer de eigenschapnaam wordt opgegeven zonder operator, worden alleen objecten geretourneerd waar de eigenschap bestaat, ongeacht de waarde ervan. | `property=name` |
 | ! | Als u een &#39;`!`&#39; als voorvoegsel toevoegt aan de waarde van een `property` parameter, worden alleen objecten geretourneerd waarvan de eigenschap **niet** bestaat. | `property=!name` |
@@ -586,7 +589,9 @@ De waarde van de `property` parameter ondersteunt verschillende soorten voorwaar
 | > | Retourneert alleen objecten waarvan de eigenschapswaarden groter zijn dan (maar niet gelijk zijn aan) een opgegeven hoeveelheid. | `property=version>1.0.0` |
 | >= | Retourneert alleen objecten waarvan de eigenschapswaarden groter zijn dan (of gelijk zijn aan) een opgegeven hoeveelheid. | `property=version>=1.0.0` |
 
->[!NOTE] De `name` eigenschap ondersteunt het gebruik van een jokerteken `*`als de gehele zoektekenreeks of als onderdeel ervan. Jokertekens komen overeen met lege tekens, zodat de zoektekenreeks overeenkomt met de waarde &quot;test&quot;. `te*st` De sterretjes worden gevrijwaard door ze te verdubbelen (`**`). Een dubbele asterisk in een zoektekenreeks staat voor één sterretje als letterlijke tekenreeks.
+>[!NOTE]
+>
+>De `name` eigenschap ondersteunt het gebruik van een jokerteken `*`als de gehele zoektekenreeks of als onderdeel ervan. Jokertekens komen overeen met lege tekens, zodat de zoektekenreeks overeenkomt met de waarde &quot;test&quot;. `te*st` De sterretjes worden gevrijwaard door ze te verdubbelen (`**`). Een dubbele asterisk in een zoektekenreeks staat voor één sterretje als letterlijke tekenreeks.
 
 **Verzoek**
 
