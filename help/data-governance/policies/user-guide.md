@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruikershandleiding voor gegevensgebruiksbeleid
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -16,7 +16,9 @@ ht-degree: 0%
 
 Het Beheer van Gegevens van het Adobe Experience Platform verstrekt een gebruikersinterface die u toestaat om het beleid van het gegevensgebruik tot stand te brengen en te beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte _Beleid_ in de [!DNL Experience Platform] gebruikersinterface.
 
->[!IMPORTANT] Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten. Zie de sectie over het [toelaten van beleid](#enable) voor stappen op hoe te om dit in UI te doen.
+>[!IMPORTANT]
+>
+>Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten. Zie de sectie over het [toelaten van beleid](#enable) voor stappen op hoe te om dit in UI te doen.
 
 ## Vereisten
 
@@ -51,7 +53,9 @@ Selecteer vervolgens de labels voor gegevensgebruik waarop het beleid wordt geba
 
 De stap *[!UICONTROL Marketingacties]* selecteren wordt weergegeven. Kies de gewenste marketingacties in de lijst en klik op **[!UICONTROL Volgende]** om door te gaan.
 
->[!NOTE] Wanneer het selecteren van veelvoudige marketing acties, interpreteert het beleid hen als &quot;OF&quot;regel. Met andere woorden, het beleid is van toepassing als _om het even welke_ geselecteerde marketing acties worden uitgevoerd.
+>[!NOTE]
+>
+>Wanneer het selecteren van veelvoudige marketing acties, interpreteert het beleid hen als &quot;OF&quot;regel. Met andere woorden, het beleid is van toepassing als _om het even welke_ geselecteerde marketing acties worden uitgevoerd.
 
 ![](../images/policies/add-marketing-actions.png)
 
@@ -93,7 +97,9 @@ De nieuwe actie wordt weergegeven op het tabblad *[!UICONTROL Handelingen]* voor
 
 ## Een marketingactie bewerken of verwijderen {#edit-delete-marketing-action}
 
->[!NOTE] Alleen aangepaste marketingacties die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Door Adobe gedefinieerde marketingacties kunnen niet worden gewijzigd of verwijderd.
+>[!NOTE]
+>
+>Alleen aangepaste marketingacties die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Door Adobe gedefinieerde marketingacties kunnen niet worden gewijzigd of verwijderd.
 
 Selecteer in de werkruimte **[!UICONTROL Beleid]** het tabblad **[!UICONTROL Handelingen]** voor marketing om een lijst weer te geven met beschikbare marketingacties die door Adobe en uw eigen organisatie zijn gedefinieerd. Selecteer een aangepaste marketingactie in de lijst en gebruik vervolgens de beschikbare velden in de rechtersectie om de details van de marketingactie te bewerken.
 
@@ -101,7 +107,9 @@ Selecteer in de werkruimte **[!UICONTROL Beleid]** het tabblad **[!UICONTROL Han
 
 Als de marketingactie niet wordt gebruikt door een bestaand gebruiksbeleid, kunt u deze verwijderen door te klikken op **[!UICONTROL Marketing-actie]** verwijderen.
 
->[!NOTE] Als u probeert een marketingactie te verwijderen die door een bestaand beleid wordt gebruikt, wordt een foutbericht weergegeven dat aangeeft dat de verwijderpoging is mislukt.
+>[!NOTE]
+>
+>Als u probeert een marketingactie te verwijderen die door een bestaand beleid wordt gebruikt, wordt een foutbericht weergegeven dat aangeeft dat de verwijderpoging is mislukt.
 
 ![](../images/policies/delete-marketing-action.png)
 
