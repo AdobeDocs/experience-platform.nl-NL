@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een object bijwerken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4361032b419622d7decc02194d38885b114749e4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '316'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +19,9 @@ U kunt een deel van een object Catalog bijwerken door de id ervan op te nemen in
 * Velden gebruiken
 * JSON-patchnotatie gebruiken
 
->[!NOTE] Met PATCH-bewerkingen op een object kunnen de uitbreidbare velden, die onderling verwante objecten vertegenwoordigen, niet worden gewijzigd.  Wijzigingen in onderling verwante objecten moeten rechtstreeks worden aangebracht.
+>[!NOTE]
+>
+>Met PATCH-bewerkingen op een object kunnen de uitbreidbare velden, die onderling verwante objecten vertegenwoordigen, niet worden gewijzigd.  Wijzigingen in onderling verwante objecten moeten rechtstreeks worden aangebracht.
 
 ## Bijwerken met velden
 
