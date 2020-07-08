@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Grondbeginselen van Adobe Experience Platform API
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 2%
@@ -81,6 +81,8 @@ JSON Pointer is een gestandaardiseerde tekenreekssyntaxis ([RFC 6901](https://to
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!Nofferte]
+>
+>
 >Wanneer u werkt met de `xdm:sourceProperty` en `xdm:destinationProperty` kenmerken van [!DNL Experience Data Model] (XDM)-descriptors, moeten alle `properties` sleutels worden **uitgesloten** van de JSON-pointer-tekenreeks. Zie de subhandleiding voor ontwikkelaars van de API voor het schemaregister voor [beschrijvingen](../xdm/api/descriptors.md) voor meer informatie.
 
 ## JSON Patch
