@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Unies
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '806'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ Dit document behandelt essentiële concepten voor het werken met vakbonden in de
 
 ## Uniemengsels
 
-Het Register van het Schema omvat automatisch drie mengen binnen het unieschema: `identityMap`, `timeSeriesEvents`, en `segmentMembership`.
+Het Register van het Schema omvat automatisch drie mengen binnen het unieschema: `identityMap`, `timeSeriesEvents`en `segmentMembership`.
 
 ### Identiteitskaart
 
@@ -31,7 +34,7 @@ De `timeSeriesEvents` array is een lijst met tijdreeksgebeurtenissen die betrekk
 
 ### Segmentlidmaatschapstoewijzing
 
-De `segmentMembership` kaart slaat de resultaten van segmentevaluaties op. Wanneer segmenttaken met succes worden uitgevoerd met de [segmentatie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), wordt de kaart bijgewerkt. `segmentMembership` slaat ook om het even welke vooraf beoordeelde publiekssegmenten op die in Platform worden opgenomen, die voor integratie met andere oplossingen zoals de Manager van de Audience van Adobe toestaan.
+De `segmentMembership` kaart slaat de resultaten van segmentevaluaties op. Wanneer segmenttaken met succes worden uitgevoerd met de [segmentatie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), wordt de kaart bijgewerkt. `segmentMembership` slaat ook om het even welke vooraf beoordeelde publiekssegmenten op die in Platform worden opgenomen, die voor integratie met andere oplossingen zoals Adobe Audience Manager toestaan.
 
 Zie de zelfstudie over het [maken van segmenten met behulp van API&#39;s](../../segmentation/tutorials/create-a-segment.md) voor meer informatie.
 
@@ -39,7 +42,9 @@ Zie de zelfstudie over het [maken van segmenten met behulp van API&#39;s](../../
 
 Om een schema in de samengevoegde verenigingsmening te omvatten, moet de markering &quot;union&quot;aan de `meta:immutableTags` attributen van het schema worden toegevoegd. Dit gebeurt via een PATCH-verzoek om het schema bij te werken en de `meta:immutableTags` array toe te voegen met de waarde &quot;union&quot;.
 
->[!NOTE] Onveranderbare tags zijn tags die zijn bedoeld om te worden ingesteld, maar die nooit worden verwijderd.
+>[!NOTE]
+>
+>Onveranderbare tags zijn tags die zijn bedoeld om te worden ingesteld, maar die nooit worden verwijderd.
 
 **API-indeling**
 
@@ -161,7 +166,9 @@ Een geslaagde reactie retourneert HTTP-status 200 (OK) en een `results` array in
 
 U kunt een specifieke unie bekijken door een GET verzoek uit te voeren dat de `$id` en, afhankelijk van de Accept- kopbal, sommige of alle details van de unie omvat.
 
->[!NOTE] De raadplegingen van de Unie zijn beschikbaar gebruikend het `/unions` en `/schemas` eindpunt om hen voor gebruik in de uitvoer van het Profiel in een dataset toe te laten.
+>[!NOTE]
+>
+>De raadplegingen van de Unie zijn beschikbaar gebruikend het `/unions` en `/schemas` eindpunt om hen voor gebruik in de uitvoer van het Profiel in een dataset toe te laten.
 
 **API-indeling**
 
