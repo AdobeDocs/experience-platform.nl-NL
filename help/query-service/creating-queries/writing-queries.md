@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Bezig met schrijven van query's
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '667'
+ht-degree: 0%
 
 ---
 
 
 # Algemene begeleiding voor vraaguitvoering in de Dienst van de Vraag
 
-Dit document bevat belangrijke details die u moet weten wanneer u query&#39;s schrijft in Adobe Experience Platform Query Service.
+Dit document detailleert belangrijke details om te weten wanneer het schrijven van vragen in de Dienst van de Vraag van het Adobe Experience Platform.
 
 Voor gedetailleerde informatie over de SQL syntaxis die in de Dienst van de Vraag wordt gebruikt, te lezen gelieve de [SQL syntaxisdocumentatie](../sql/syntax.md).
 
 ## Uitvoeringsmodellen voor query
 
-Adobe Experience Platform Query Service heeft twee modellen voor het uitvoeren van query: interactief en niet-interactief. De interactieve uitvoering wordt gebruikt voor vraagontwikkeling en rapportgeneratie in bedrijfsintelligentiehulpmiddelen, terwijl niet-interactief voor grotere banen en operationele vragen als deel van een werkschema van de gegevensverwerking wordt gebruikt.
+De Dienst van de Vraag van het Adobe Experience Platform heeft twee modellen van vraaguitvoering: interactief en niet-interactief. De interactieve uitvoering wordt gebruikt voor vraagontwikkeling en rapportgeneratie in bedrijfsintelligentiehulpmiddelen, terwijl niet-interactief voor grotere banen en operationele vragen als deel van een werkschema van de gegevensverwerking wordt gebruikt.
 
 ### Interactieve queryuitvoering
 
@@ -31,13 +34,15 @@ De interactieve vraaguitvoering heeft de volgende beperkingen:
 | Maximumaantal geretourneerde rijen | 50,000 |
 | Maximum aantal gelijktijdige query&#39;s | 5 |
 
->[!NOTE] Als u de maximale rijbeperking wilt overschrijven, neemt u `LIMIT 0` de query op. De zoektime-out van 10 minuten is nog steeds van toepassing.
+>[!NOTE]
+>
+>Als u de maximale rijbeperking wilt overschrijven, neemt u `LIMIT 0` de query op. De zoektime-out van 10 minuten is nog steeds van toepassing.
 
-Standaard worden de resultaten van interactieve query&#39;s geretourneerd aan de client en worden deze **niet** voortgezet. Om de resultaten als dataset in het Platform van de Ervaring voort te zetten, moet de vraag de `CREATE TABLE AS SELECT` syntaxis gebruiken.
+Standaard worden de resultaten van interactieve query&#39;s geretourneerd aan de client en worden deze **niet** voortgezet. Om de resultaten als dataset in Experience Platform voort te zetten, moet de vraag de `CREATE TABLE AS SELECT` syntaxis gebruiken.
 
 ### Niet-interactieve query-uitvoering
 
-De vragen die door de Dienst API van de Vraag worden voorgelegd worden in werking gesteld niet-interactief. De niet-interactieve uitvoering betekent dat de Dienst van de Vraag de API vraag ontvangt en de vraag in de orde uitvoert het wordt ontvangen. De niet-interactieve vragen resulteren altijd in of de generatie van een nieuwe dataset in het Platform van de Ervaring om de resultaten te ontvangen, of de toevoeging van nieuwe rijen in een bestaande dataset.
+De vragen die door de Dienst API van de Vraag worden voorgelegd worden in werking gesteld niet-interactief. De niet-interactieve uitvoering betekent dat de Dienst van de Vraag de API vraag ontvangt en de vraag in de orde uitvoert het wordt ontvangen. De niet-interactieve vragen resulteren altijd in of de generatie van een nieuwe dataset in Experience Platform om de resultaten te ontvangen, of de toevoeging van nieuwe rijen in een bestaande dataset.
 
 ## Een specifiek veld binnen een object openen
 
@@ -67,7 +72,9 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | De naam van de analystabel. |
 
->[!NOTE] Aangezien elk notatietype dezelfde resultaten retourneert, blijft de notatie die u wilt gebruiken bij uw voorkeur.
+>[!NOTE]
+>
+>Aangezien elk notatietype dezelfde resultaten retourneert, blijft de notatie die u wilt gebruiken bij uw voorkeur.
 
 Beide voorbeeldquery&#39;s hierboven retourneren een samengevoegd object in plaats van één waarde:
 
@@ -147,7 +154,9 @@ FROM
 )
 ```
 
->[!NOTE] Dubbele aanhalingstekens **kunnen niet** worden gebruikt met toegang tot puntnotatievelden.
+>[!NOTE]
+>
+>Dubbele aanhalingstekens **kunnen niet** worden gebruikt met toegang tot puntnotatievelden.
 
 ### Achter aanhalingstekens
 
