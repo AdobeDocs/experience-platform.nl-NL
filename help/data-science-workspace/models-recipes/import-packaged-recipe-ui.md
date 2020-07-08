@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een verpakt recept (UI) importeren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 0%
@@ -35,7 +35,9 @@ De workflow voor het importeren van een pakketrecept bestaat uit de volgende sta
 
 Elk recept-exemplaar in [!DNL Data Science Workspace] gaat vergezeld van een set configuraties die het recept-exemplaar aanpassen aan een bepaald gebruiksgeval. De dossiers van de configuratie bepalen het standaardopleiding en het scoren gedrag van een Model dat gebruikend dit recept geval wordt gecreeerd.
 
->[!NOTE] De dossiers van de configuratie zijn recept en geval-specifiek.
+>[!NOTE]
+>
+>De dossiers van de configuratie zijn recept en geval-specifiek.
 
 Hieronder ziet u een voorbeeldconfiguratiebestand met standaardtraining en scoring voor het detailhandelsverkooprecept.
 
