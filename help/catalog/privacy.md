@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Behandeling van een privacyverzoek in het Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 0%
@@ -39,7 +39,9 @@ Zie het overzicht [van naamruimte voor](../identity-service/namespaces.md)identi
 
 Wanneer het creëren van privacyverzoeken voor het meer van Gegevens, moeten de geldige identiteitswaarden (en hun bijbehorende namespaces) voor elke individuele klant worden verstrekt om van hun gegevens de plaats te bepalen en het dienovereenkomstig te verwerken. Daarom moeten alle datasets die aan privacyverzoeken onderworpen zijn een **identiteitsbeschrijver** in hun bijbehorend schema XDM bevatten.
 
->[!NOTE] Om het even welke datasets die op schema&#39;s worden gebaseerd die geen meta-gegevens van de identiteitsbeschrijver (zoals ad hoc datasets) steunen kunnen momenteel niet in privacyverzoeken worden verwerkt.
+>[!NOTE]
+>
+>Om het even welke datasets die op schema&#39;s worden gebaseerd die geen meta-gegevens van de identiteitsbeschrijver (zoals ad hoc datasets) steunen kunnen momenteel niet in privacyverzoeken worden verwerkt.
 
 Deze sectie doorloopt de stappen om een identiteitsbeschrijver aan het XDM schema van een bestaande dataset toe te voegen. Als u al een dataset met een identiteitsbeschrijver hebt, kunt u vooruit aan de [volgende sectie](#nested-maps)overslaan.
 
@@ -60,7 +62,9 @@ Als u de juiste velden in het schema hebt ingesteld als identiteitsvelden, kunt 
 
 ### De API gebruiken {#identity-api}
 
->[!NOTE] Deze sectie veronderstelt u de unieke waarde van identiteitskaart van URI van het schema XDM van uw dataset kent. Als u deze waarde niet kent, kunt u deze ophalen met de API voor catalogusservice. Na het lezen van de [begonnen](./api/getting-started.md) sectie van de ontwikkelaarsgids, volg de stappen die in voor het [vermelden](./api/list-objects.md) van of het [zoeken van de voorwerpen van de Catalogus worden geschetst om uw dataset te vinden](./api/look-up-object.md) . De schema-id is te vinden onder `schemaRef.id`
+>[!NOTE]
+>
+>Deze sectie veronderstelt u de unieke waarde van identiteitskaart van URI van het schema XDM van uw dataset kent. Als u deze waarde niet kent, kunt u deze ophalen met de API voor catalogusservice. Na het lezen van de [begonnen](./api/getting-started.md) sectie van de ontwikkelaarsgids, volg de stappen die in voor het [vermelden](./api/list-objects.md) van of het [zoeken van de voorwerpen van de Catalogus worden geschetst om uw dataset te vinden](./api/look-up-object.md) . De schema-id is te vinden onder `schemaRef.id`
 >
 > Deze sectie omvat vraag aan de Registratie API van het Schema. Voor belangrijke informatie met betrekking tot het gebruiken van API, met inbegrip van het kennen van uw `{TENANT_ID}` en het concept containers, zie de [begonnen](../xdm/api/getting-started.md) sectie van de ontwikkelaarsgids.
 
@@ -126,7 +130,9 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de
 
 ## Verzoeken indienen {#submit}
 
->[!NOTE] Deze sectie behandelt hoe te om privacyverzoeken voor het meer van Gegevens te formatteren. We raden u ten zeerste aan de [Privacy Service-interface](../privacy-service/ui/overview.md) of de [Privacy Service-API](../privacy-service/api/getting-started.md) -documentatie te raadplegen voor volledige stappen over het verzenden van een privacytaak, inclusief het correct opmaken van verzonden identiteitsgegevens van gebruikers in de payloads voor aanvragen.
+>[!NOTE]
+>
+>Deze sectie behandelt hoe te om privacyverzoeken voor het meer van Gegevens te formatteren. We raden u ten zeerste aan de [Privacy Service-interface](../privacy-service/ui/overview.md) of de [Privacy Service-API](../privacy-service/api/getting-started.md) -documentatie te raadplegen voor volledige stappen over het verzenden van een privacytaak, inclusief het correct opmaken van verzonden identiteitsgegevens van gebruikers in de payloads voor aanvragen.
 
 In de volgende sectie wordt beschreven hoe u privacyverzoeken voor het Data Lake kunt maken met de Privacy Service-interface of -API.
 
