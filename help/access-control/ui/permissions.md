@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Rechten voor een productprofiel beheren
 topic: user guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,9 @@ Als u een machtiging wilt toevoegen, klikt u op de **plusknop (+)** naast de naa
 
 ![add-permissions](../images/add-permissions.png)
 
->[!NOTE] In de lijst Items *voor* opgenomen machtigingen worden alleen toegevoegde machtigingen weergegeven van de op dat moment geselecteerde categorie.
+>[!NOTE]
+>
+>In de lijst Items *voor* opgenomen machtigingen worden alleen toegevoegde machtigingen weergegeven van de op dat moment geselecteerde categorie.
 
 Als u een machtiging wilt verwijderen, klikt u op het **X** -pictogram naast de naam van de machtiging of selecteert u Alles **** verwijderen om alle machtigingen onder de huidige categorie te verwijderen. Verwijderde machtigingen verschijnen weer onder *Beschikbare machtigingsitems*.
 
