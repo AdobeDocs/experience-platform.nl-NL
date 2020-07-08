@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruikershandleiding voor JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3647'
 ht-degree: 10%
@@ -33,7 +33,9 @@ In de volgende lijst worden enkele functies beschreven die uniek zijn voor Jupyt
 | **Ontwikkelingsbibliotheken** | In [!DNL Experience Platform], verstrekt [!DNL JupyterLab] vooraf geïnstalleerde bibliotheken voor [!DNL Python], R, en PySpark. Zie de [bijlage](#supported-libraries) voor een volledige lijst met ondersteunde bibliotheken. |
 | **Bibliotheekcontroller** | Wanneer de vooraf geïnstalleerde bibliotheken niet aan uw behoeften voldoen, kunnen extra bibliotheken voor Python en R worden geïnstalleerd en tijdelijk in geïsoleerde containers worden opgeslagen om de integriteit van uw gegevens te handhaven [!DNL Platform] en uw gegevens veilig te houden. Zie de sectie [Korrels](#kernels) voor meer informatie. |
 
->[!NOTE] Aanvullende bibliotheken zijn alleen beschikbaar voor de sessie waarin ze zijn geïnstalleerd. Wanneer u nieuwe sessies start, moet u alle extra bibliotheken die u nodig hebt opnieuw installeren.
+>[!NOTE]
+>
+>Aanvullende bibliotheken zijn alleen beschikbaar voor de sessie waarin ze zijn geïnstalleerd. Wanneer u nieuwe sessies start, moet u alle extra bibliotheken die u nodig hebt opnieuw installeren.
 
 ## Integratie met andere [!DNL Platform] services {#service-integration}
 
@@ -44,7 +46,9 @@ Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!
 * **[!DNL Sensei ML Framework]:**Modelontwikkeling met de mogelijkheid om gegevens op te leiden en te scoren, en het maken van recept met één klik.
 * **[!DNL Experience Data Model (XDM)]:**Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter het Adobe Experience Platform.[Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), aangestuurd door Adobe, is een poging om de gegevens van de klantervaring te standaardiseren en schema&#39;s voor het beheer van de klantervaring te definiëren.
 
->[!NOTE] Sommige [!DNL Platform] de dienstintegratie op [!DNL JupyterLab] zijn beperkt tot specifieke kernels. Raadpleeg de sectie over [korrels](#kernels) voor meer informatie.
+>[!NOTE]
+>
+>Sommige [!DNL Platform] de dienstintegratie op [!DNL JupyterLab] zijn beperkt tot specifieke kernels. Raadpleeg de sectie over [korrels](#kernels) voor meer informatie.
 
 ## Belangrijke functies en veelvoorkomende bewerkingen
 
@@ -598,6 +602,8 @@ timedf.show()
 ```
 
 >[!TIP]
+>
+>
 >In Scala, kunt u gebruiken `sys.env()` om een waarde van binnen te verklaren en terug te keren `option`. Dit elimineert de behoefte om variabelen te bepalen als u weet zij slechts één keer zullen worden gebruikt. In het volgende voorbeeld wordt uit het bovenstaande voorbeeld `val userToken` het voorbeeld opgehaald en inline gedeclareerd `option` als alternatief:
 > 
 ```scala
