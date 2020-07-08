@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Services
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 33f8c424c208bb61319b49e7ecb30e3144ef108a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 0%
@@ -213,7 +213,9 @@ Een succesvolle reactie keert een lading terug die de details van de gevraagde M
 
 U kunt een bestaande dienst bijwerken MLService door zijn eigenschappen door een PUT verzoek te beschrijven die identiteitskaart van doelMLService in de verzoekweg omvat en een nuttige lading te verstrekken JSON die bijgewerkte eigenschappen bevat.
 
->[!TIP] Om ervoor te zorgen dat dit PUT-verzoek succesvol is, wordt u aangeraden eerst een GET-verzoek uit te voeren om de MLService via ID [op te](#retrieve-a-specific-mlservice)halen. Vervolgens past u het geretourneerde JSON-object aan en werkt u dit bij en past u het gehele gewijzigde JSON-object toe als de payload voor de PUT-aanvraag.
+>[!TIP]
+>
+>Om ervoor te zorgen dat dit PUT-verzoek succesvol is, wordt u aangeraden eerst een GET-verzoek uit te voeren om de MLService via ID [op te](#retrieve-a-specific-mlservice)halen. Vervolgens past u het geretourneerde JSON-object aan en werkt u dit bij en past u het gehele gewijzigde JSON-object toe als de payload voor de PUT-aanvraag.
 
 **API-indeling**
 
