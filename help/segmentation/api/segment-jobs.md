@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Segmenttaken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0554d931718bb6a8dd7d4f971daf3652a19a2a8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '657'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Deze handleiding bevat informatie die u helpt segmenttaken beter te begrijpen en
 
 De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de segmentatie-API. Lees de ontwikkelaarsgids voor [segmentatie voordat u verdergaat](./getting-started.md).
 
-In het bijzonder, omvat de [begonnen sectie](./getting-started.md#getting-started) van de de ontwikkelaarsgids van de Segmentatie verbindingen aan verwante onderwerpen, een gids aan het lezen van de steekproefAPI vraag in het document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke API van het Platform van de Ervaring met succes te maken.
+In het bijzonder, omvat de [begonnen sectie](./getting-started.md#getting-started) van de de ontwikkelaarsgids van de Segmentatie verbindingen aan verwante onderwerpen, een gids aan het lezen van de steekproefAPI vraag in het document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
 
 ## Een lijst met segmenttaken ophalen
 
@@ -63,7 +63,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 Een succesvolle reactie keert HTTP status 200 met een lijst van segmentbanen voor de gespecificeerde organisatie IMS als JSON terug. De volgende reactie keert een lijst van alle succesvolle segmentbanen voor de organisatie IMS terug.
 
->[!NOTE] De volgende reactie is afgebroken voor de ruimte en geeft alleen de eerste geretourneerde taak weer.
+>[!NOTE]
+>
+>De volgende reactie is afgebroken voor de ruimte en geeft alleen de eerste geretourneerde taak weer.
 
 ```json
 {
@@ -361,7 +363,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen terug.
 
->[!NOTE] De volgende reactie is afgebroken voor ruimte, slechts tonend gedeeltelijke details van elke segmentbaan. De volledige reactie zal de volledige details voor de gevraagde segmentbanen vermelden.
+>[!NOTE]
+>
+>De volgende reactie is afgebroken voor ruimte, slechts tonend gedeeltelijke details van elke segmentbaan. De volledige reactie zal de volledige details voor de gevraagde segmentbanen vermelden.
 
 ```json
 {
@@ -424,7 +428,7 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen 
 
 ## Een specifieke segmenttaak annuleren of verwijderen
 
-U kunt verzoeken om een gespecificeerde segmentbaan te schrappen door een verzoek van de SCHRAPPING aan het `/segment/jobs` eindpunt te doen en de `id` waarde van de segmentbaan in de verzoekweg te verstrekken.
+U kunt verzoeken om een gespecificeerde segmentbaan te schrappen door een DELETE verzoek aan het `/segment/jobs` eindpunt te doen en de `id` waarde van de segmentbaan in de verzoekweg te verstrekken.
 
 **API-indeling**
 
