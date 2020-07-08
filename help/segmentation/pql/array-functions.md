@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Array, list en set-functies
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '740'
+ht-degree: 2%
 
 ---
 
@@ -35,7 +38,9 @@ person.birthMonth in [3, 6, 9]
 
 De `notIn` functie wordt gebruikt om te bepalen als een punt geen lid van een serie of een lijst is.
 
->[!NOTE] De `notIn` functie zorgt *ook* dat geen van beide waarden gelijk is aan null. Daarom zijn de resultaten geen exacte negatie van de `in` functie.
+>[!NOTE]
+>
+>De `notIn` functie zorgt *ook* dat geen van beide waarden gelijk is aan null. Daarom zijn de resultaten geen exacte negatie van de `in` functie.
 
 **Indeling**
 
