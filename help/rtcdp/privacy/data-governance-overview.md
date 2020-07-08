@@ -4,7 +4,7 @@ seo-title: Gegevensbeheer in Real-time Customer Data Platform
 description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 seo-description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 translation-type: tm+mt
-source-git-commit: c4e5e8ccac1af976c890adb1c9f0ff7f7b5ed9b4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 0%
@@ -34,7 +34,9 @@ Zie de gebruikershandleiding [voor](../../data-governance/labels/overview.md) ge
 
 U kunt beperkingen voor het gegevensgebruik op een bestemming instellen door gevallen van marketinggebruik (ook wel marketingacties genoemd) voor die bestemming te definiëren. Een marketinggeval voor een bestemming geeft de intentie aan van de gegevens die naar die bestemming worden geëxporteerd.
 
->[!NOTE] Raadpleeg het overzicht [van het beleid voor](../../data-governance/policies/overview.md) gegevensgebruik in de documentatie bij het Experience Platform voor meer informatie over marketingacties en het gebruik ervan in het beleid voor gegevensgebruik.
+>[!NOTE]
+>
+>Raadpleeg het overzicht [van het beleid voor](../../data-governance/policies/overview.md) gegevensgebruik in de documentatie bij het Experience Platform voor meer informatie over marketingacties en het gebruik ervan in het beleid voor gegevensgebruik.
 
 Het bepalen van marketing gebruiksgevallen op bestemmingen staat u toe om ervoor te zorgen dat om het even welke profielen of segmenten die naar die bestemmingen worden verzonden volgzaam met het beleid van het gegevensgebruik zijn. Daarom zou u aangewezen gevallen van het marketinggebruik aan uw bestemmingen moeten toevoegen die op de behoeften van uw organisatie worden gebaseerd om beleidsbeperkingen op activering af te dwingen.
 
@@ -63,7 +65,9 @@ Wanneer een segment eerst wordt geactiveerd, controleert de Dienst van het Belei
 * De labels voor gegevensgebruik die worden toegepast op velden en gegevenssets binnen het segment dat moet worden geactiveerd.
 * Het marketingdoel van de bestemming.
 
->[!NOTE] Als er gegevensgebruikslabels zijn die slechts op bepaalde gebieden binnen een dataset (eerder dan de volledige dataset) zijn toegepast, komt de handhaving van die gebieden-vlakke etiketten op activering slechts onder de volgende voorwaarden voor:
+>[!NOTE]
+>
+>Als er gegevensgebruikslabels zijn die slechts op bepaalde gebieden binnen een dataset (eerder dan de volledige dataset) zijn toegepast, komt de handhaving van die gebieden-vlakke etiketten op activering slechts onder de volgende voorwaarden voor:
 >* De velden worden gebruikt in de segmentdefinitie.
 >* De velden worden geconfigureerd als geprojecteerde kenmerken voor de doelbestemming.
 
