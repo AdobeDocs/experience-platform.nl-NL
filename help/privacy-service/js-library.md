@@ -4,32 +4,39 @@ solution: Experience Platform
 title: Overzicht van de Adobe Privacy JavaScript-bibliotheek
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b916ac5529db6ca383bf8bad56961bb1b8a0b0c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '972'
+ht-degree: 3%
 
 ---
 
 
 # Overzicht van de Adobe Privacy JavaScript-bibliotheek
 
-Als gegevensverwerker verwerkt Adobe persoonlijke gegevens volgens de toestemming en instructies van uw bedrijf. Als de gegevenscontroller bepaalt u de persoonlijke gegevens die Adobe voor u verwerkt en opslaat. Afhankelijk van de informatie die u via de oplossingen van de Wolk van de Ervaring van Adobe wilt verzenden, kan Adobe persoonlijke informatie opslaan die van toepassing is op privacyverordeningen zoals de Algemene Verordening van de Bescherming van Gegevens (GDPR) en de Wet van de Consumeprivacydienst van Californië (CCPA). Raadpleeg het document over [privacy in Adobe Experience Cloud](https://www.adobe.com/privacy/marketing-cloud.html) voor meer informatie over hoe Experience Cloud-oplossingen persoonlijke gegevens verzamelen.
+Als gegevensverwerker verwerkt Adobe persoonlijke gegevens volgens de toestemming en instructies van uw bedrijf. Als datacontroller bepaalt u welke persoonlijke data Adobe namens u verwerkt en opslaat. Afhankelijk van de informatie die u via de oplossingen van de Wolk van de Ervaring van Adobe wilt verzenden, kan Adobe persoonlijke informatie opslaan die van toepassing is op privacyverordeningen zoals de Algemene Verordening van de Bescherming van Gegevens (GDPR) en de Wet van de Consumeprivacydienst van Californië (CCPA). Raadpleeg het document over [privacy in Adobe Experience Cloud](https://www.adobe.com/privacy/marketing-cloud.html) voor meer informatie over hoe Experience Cloud-oplossingen persoonlijke gegevens verzamelen.
 
-Met de **Adobe Privacy JavaScript-bibliotheek** kunnen gegevenscontrollers het ophalen van alle gegevensonderwerpidentiteiten die zijn gegenereerd door Experience Cloud-oplossingen voor een bepaald domein automatiseren. Met behulp van de API die door de [Adobe Experience Platform Privacy Service](home.md)wordt aangeboden, kunnen deze identiteiten vervolgens worden gebruikt om aanvragen voor toegang tot en verwijdering van persoonlijke gegevens van die betrokkenen te maken.
+Met de **Adobe Privacy JavaScript-bibliotheek** kunnen gegevenscontrollers het ophalen van alle id&#39;s van betrokkenen die door Experience Cloud-oplossingen voor een bepaald domein zijn gegenereerd, automatiseren. Met behulp van de API die door de [Adobe Experience Platform Privacy Service](home.md)wordt geboden, kunnen deze identiteiten vervolgens worden gebruikt om toegang- en verwijderingsverzoeken te maken voor privégegevens van die betrokkenen.
 
->[!NOTE] De Privacy JS Library hoeft gewoonlijk alleen op privacygerelateerde pagina&#39;s te worden geïnstalleerd en hoeft niet op alle pagina&#39;s van een website of domein te worden geïnstalleerd.
+>[!NOTE]
+>
+>De Privacy JS Library hoeft gewoonlijk alleen op privacygerelateerde pagina&#39;s te worden geïnstalleerd en hoeft niet op alle pagina&#39;s van een website of domein te worden geïnstalleerd.
 
 ## Functies
 
-De Privacy JS Library biedt verschillende functies voor het beheer van identiteiten in de Privacy Service. Deze functies kunnen alleen worden gebruikt om de identiteiten te beheren die in de browser voor een specifieke bezoeker zijn opgeslagen. Ze kunnen niet worden gebruikt om informatie rechtstreeks naar de Experience Cloud Central Service te verzenden.
+De Privacy JS Library biedt verschillende functies voor het beheer van identiteiten in Privacy Service. Deze functies kunnen alleen worden gebruikt om de identiteiten te beheren die in de browser voor een specifieke bezoeker zijn opgeslagen. Ze kunnen niet worden gebruikt om informatie rechtstreeks naar de Experience Cloud Central Service te verzenden.
 
 In de volgende tabel worden de verschillende functies beschreven die door de bibliotheek worden geboden:
 
 | -functie | Beschrijving |
 | --- | --- |
-| `retrieveIdentities` | Retourneert een array van overeenkomende identiteiten (`validIds`) die zijn opgehaald van de Privacy Service en een array van identiteiten die niet zijn gevonden (`failedIds`). |
+| `retrieveIdentities` | Retourneert een array van overeenkomende identiteiten (`validIds`) die uit de Privacy Service zijn opgehaald en een array van identiteiten die niet zijn gevonden (`failedIds`). |
 | `removeIdentities` | Hiermee verwijdert u elke overeenkomende (geldige) identiteit uit de browser. Retourneert een array van overeenkomende identiteiten (`validIds`), met elke identiteit die een `isDeleteClientSide` booleaanse id bevat die aangeeft of deze id is verwijderd. |
 | `retrieveThenRemoveIdentities` | Haalt een array van overeenkomende identiteiten (`validIds`) op en verwijdert deze identiteiten vervolgens uit de browser. Hoewel deze functie vergelijkbaar is met `removeIdentities`, wordt deze het best gebruikt wanneer voor de Adobe-oplossing die u gebruikt een toegangsverzoek is vereist voordat verwijdering mogelijk is (bijvoorbeeld wanneer een unieke id moet worden opgehaald voordat deze in een verwijderingsaanvraag wordt opgegeven). |
 
->[!NOTE] en verwijder `removeIdentities` `retrieveThenRemoveIdentities` alleen identiteiten uit de browser voor specifieke Adobe-oplossingen die deze ondersteunen. Adobe Audience Manager verwijdert bijvoorbeeld niet de index-id&#39;s die zijn opgeslagen in cookies van derden, terwijl Adobe Target alle cookies verwijdert waarin de id&#39;s zijn opgeslagen.
+>[!NOTE]
+>
+>`removeIdentities` en verwijder `retrieveThenRemoveIdentities` alleen identiteiten uit de browser voor specifieke Adobe-oplossingen die deze ondersteunen. Adobe Audience Manager verwijdert bijvoorbeeld niet de index-id&#39;s die zijn opgeslagen in cookies van derden, terwijl Adobe Target alle cookies verwijdert waarin de id&#39;s zijn opgeslagen.
 
 Aangezien alle drie functies asynchrone processen vertegenwoordigen, moeten om het even welke teruggewonnen identiteiten worden behandeld gebruikend callbacks of beloftes.
 
@@ -64,7 +71,7 @@ De volgende codesteekproeven tonen aan hoe te om de Bibliotheek van Privacy JS v
 
 ### Identiteiten ophalen
 
-In dit voorbeeld wordt getoond hoe u een lijst met identiteiten ophaalt uit Experience Cloud.
+In dit voorbeeld wordt getoond hoe u een lijst met identiteiten uit Experience Cloud ophaalt.
 
 #### JavaScript
 
@@ -86,7 +93,7 @@ adobePrivacy.retrieveIdentities().then(handleRetrievedIDs);
 | Variabele | Beschrijving |
 | --- | --- |
 | `validIds` | Een JSON-object dat alle id&#39;s bevat die met succes zijn opgehaald. |
-| `failedIDs` | Een JSON-object met alle id&#39;s die niet van de privacyservice zijn opgehaald of die op een andere manier niet zijn gevonden. |
+| `failedIDs` | Een JSON-object met alle id&#39;s die niet uit de Privacy Service zijn opgehaald of die op een andere manier niet zijn gevonden. |
 
 #### Resultaat
 
@@ -135,7 +142,7 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 | Variabele | Beschrijving |
 | --- | --- |
 | `validIds` | Een JSON-object dat alle id&#39;s bevat die met succes zijn opgehaald. |
-| `failedIDs` | Een JSON-object met alle id&#39;s die niet van de privacyservice zijn opgehaald of die op een andere manier niet zijn gevonden. |
+| `failedIDs` | Een JSON-object met alle id&#39;s die niet uit de Privacy Service zijn opgehaald of die op een andere manier niet zijn gevonden. |
 
 #### Resultaat
 
@@ -164,7 +171,7 @@ Als de code met succes wordt uitgevoerd, `validIDs` wordt gevuld met een lijst v
 
 ## Volgende stappen
 
-Door dit document te lezen, bent u geïntroduceerd in de kernfuncties van de Privacy JS Library. Nadat u de bibliotheek hebt gebruikt om een lijst met identiteiten op te halen, kunt u die identiteiten gebruiken om gegevenstoegang te maken en aanvragen naar de API van de privacydienst te verwijderen. Zie de [de ontwikkelaarsgids](api/getting-started.md) van de Dienst van de Privacy voor meer informatie.
+Door dit document te lezen, bent u geïntroduceerd in de kernfuncties van de Privacy JS Library. Nadat u de bibliotheek hebt gebruikt om een lijst met identiteiten op te halen, kunt u die identiteiten gebruiken om gegevenstoegang te maken en aanvragen naar de Privacy Service-API te verwijderen. Zie de [Privacy Service-ontwikkelaarsgids](api/getting-started.md) voor meer informatie.
 
 ## Aanhangsel
 
@@ -185,19 +192,19 @@ Hieronder volgt een lijst met de geaccepteerde configuratieparameters voor onder
 | `trackingServerSecure` | Domein voor gegevensverzameling (SSL). Deze mag alleen worden opgenomen als deze is opgegeven in uw JavaScript-webbaken. |
 | `visitorNamespace` | Naamruimte die wordt gebruikt om bezoekers te groeperen. Deze mag alleen worden opgenomen als deze is opgegeven in uw JavaScript-webbaken. |
 
-**Adobe-doel**
+**Adobe Target**
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `clientCode` | Clientcode die een client identificeert in Adobe Target System. |
+| `clientCode` | Clientcode die een client in Adobe Target System identificeert. |
 
 **Adobe Audience Manager**
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `aamUUIDCookieName` | Naam van het cookie van de eerste partij met de unieke gebruikers-id die door Adobe Audience Manager is geretourneerd. |
+| `aamUUIDCookieName` | Naam van het cookie van de eerste partij met de unieke gebruikersnaam die door de Adobe Audience Manager is geretourneerd. |
 
-**Adobe-id-service (ECID)**
+**Adobe ID-service (ECID)**
 
 | Parameter | Beschrijving |
 | --- | --- |
