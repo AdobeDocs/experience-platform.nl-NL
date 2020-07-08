@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een model (API) trainen en evalueren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1191'
+ht-degree: 0%
 
 ---
 
@@ -23,8 +26,8 @@ Volg deze [zelfstudie](../../tutorials/authentication.md) voor toestemming om AP
 In de zelfstudie hebt u nu de volgende waarden:
 
 - `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.
-- `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke integratie van het Adobe Experience Platform.
-- `{API_KEY}`: Uw specifieke API-sleutelwaarde is te vinden in uw unieke integratie van het Adobe Experience Platform.
+- `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
+- `{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.
 
 - Koppeling naar een Docker-afbeelding van een intelligente service
 
@@ -34,7 +37,9 @@ We gebruiken de API&#39;s om een Experiment Run voor training te maken. Voor dez
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
->[!NOTE] De termen &quot;Engine&quot;, &quot;MLInstance&quot;, &quot;MLService&quot;, &quot;Experiment&quot; en &quot;Model&quot; worden in de gebruikersinterface aangeduid als verschillende termen. Als u uit UI komt, zal de volgende lijst de verschillen in kaart brengen.
+>[!NOTE]
+>
+>De termen &quot;Engine&quot;, &quot;MLInstance&quot;, &quot;MLService&quot;, &quot;Experiment&quot; en &quot;Model&quot; worden in de gebruikersinterface aangeduid als verschillende termen. Als u uit UI komt, zal de volgende lijst de verschillen in kaart brengen.
 > 
 > | UI-term | API-term |
 > --- | ---
@@ -62,8 +67,8 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke integratie van het Adobe Experience Platform.\
-`{API_KEY}`: Uw specifieke API-sleutelwaarde is te vinden in uw unieke integratie van het Adobe Experience Platform.\
+`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.\
 `{JSON_PAYLOAD}`: De configuratie van onze MLInstance. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
 
 ```JSON
@@ -117,7 +122,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] In de `{JSON_PAYLOAD}`code definiëren we parameters die worden gebruikt voor training en scoring in de `tasks` array. Dit `{ENGINE_ID}` is de id van de engine die u wilt gebruiken en het `tag` veld is een optionele parameter die wordt gebruikt om de instantie te identificeren.
+>[!NOTE]
+>
+>In de `{JSON_PAYLOAD}`code definiëren we parameters die worden gebruikt voor training en scoring in de `tasks` array. Dit `{ENGINE_ID}` is de id van de engine die u wilt gebruiken en het `tag` veld is een optionele parameter die wordt gebruikt om de instantie te identificeren.
 
 Het antwoord zal bevatten `{INSTANCE_ID}` die MLInstance vertegenwoordigt die wordt gecreeerd. Er kunnen meerdere model-MLInstances met verschillende configuraties worden gemaakt.
 
@@ -171,9 +178,9 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke integratie van het Adobe Experience Platform.\
+`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{API_KEY}`: Uw specifieke API-sleutelwaarde is te vinden in uw unieke integratie van het Adobe Experience Platform.\
+`{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.\
 `{JSON_PAYLOAD}`: Het gemaakte experimentele object. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
 
 ```JSON
@@ -227,9 +234,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke integratie van het Adobe Experience Platform.\
+`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{API_KEY}`: Uw specifieke API-sleutelwaarde is te vinden in uw unieke integratie van het Adobe Experience Platform.\
+`{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.\
 `{JSON_PAYLOAD}`: Te posten gegevensset. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
 
 ```JSON
@@ -315,9 +322,9 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`: De id die overeenkomt met het experiment dat u als doel wilt instellen. Dit vindt u in het antwoord bij het maken van uw experiment.\
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke integratie van het Adobe Experience Platform.\
+`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{API_KEY}`: Uw specifieke API-sleutelwaarde is te vinden in uw unieke integratie van het Adobe Experience Platform.\
+`{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.\
 `{JSON_PAYLOAD}`: Als u een trainingsrun wilt maken, moet u het volgende opnemen in het hoofdgedeelte:
 
 ```JSON
@@ -386,8 +393,8 @@ curl -X GET \
 `{EXPERIMENT_ID}`: De id die het experiment vertegenwoordigt.\
 `{EXPERIMENT_RUN_ID}`: De id die staat voor de proefrun.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke integratie van het Adobe Experience Platform.\
-`{API_KEY}`: Uw specifieke API-sleutelwaarde is te vinden in uw unieke integratie van het Adobe Experience Platform.
+`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
+`{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.
 
 **Antwoord**
 
@@ -449,7 +456,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}`: De id die overeenkomt met de uitvoering van het experiment waarop u zich wilt richten. Dit vindt u in het antwoord bij het maken van uw experimentele versie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke integratie van het Adobe Experience Platform.
+`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 
 De reactie vertegenwoordigt het opgeleide Model dat werd gecreeerd.
 
@@ -483,7 +490,7 @@ De reactie vertegenwoordigt het opgeleide Model dat werd gecreeerd.
 
 ### Een geplande expert stoppen en verwijderen
 
-Als u de uitvoering van een gepland experiment vóór de uitvoering wilt stoppen `endTime`, kunt u dit doen door een DELETE-verzoek naar de `{EXPERIMENT_ID}`
+Als u de uitvoering van een gepland experiment wilt stoppen voordat het wordt uitgevoerd `endTime`, kunt u dit doen door een DELETE verzoek naar de `{EXPERIMENT_ID}`
 
 **Verzoek**
 
@@ -496,9 +503,11 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:  De id die overeenkomt met het experiment.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke integratie van het Adobe Experience Platform.
+`{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 
->[!NOTE] Met de API-aanroep wordt het maken van nieuwe experimentele runtime uitgeschakeld. De uitvoering van reeds uitgevoerde experimentele runtime wordt echter niet gestopt.
+>[!NOTE]
+>
+>Met de API-aanroep wordt het maken van nieuwe experimentele runtime uitgeschakeld. De uitvoering van reeds uitgevoerde experimentele runtime wordt echter niet gestopt.
 
 Hier volgt de reactie waarbij wordt gemeld dat het experiment is verwijderd.
 
