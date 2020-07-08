@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Taken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 0%
@@ -14,20 +14,24 @@ ht-degree: 0%
 
 # Privacytaken
 
-De volgende secties lopen door vraag u het gebruiken van het `/jobs` eindpunt in de Dienst API van de Privacy kunt maken. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+De volgende secties lopen door vraag u het gebruiken van het `/jobs` eindpunt in Privacy Service API kunt maken. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
 ## Een privacytaak maken {#create-job}
 
 Voordat u een nieuwe taakaanvraag maakt, moet u eerst identificatiegegevens verzamelen over de betrokkenen van wie u de gegevens wilt benaderen, verwijderen of niet wilt verkopen. Zodra u de vereiste gegevens hebt, moet het in de lading van een verzoek van de POST aan het worteleindpunt worden verstrekt.
 
->[!NOTE] Compatibele Adobe Experience Cloud-toepassingen gebruiken verschillende waarden voor het identificeren van betrokkenen. Raadpleeg de handleiding over [Privacy Service en Experience Cloud-toepassingen](../experience-cloud-apps.md) voor meer informatie over vereiste id&#39;s voor uw toepassing(en).
+>[!NOTE]
+>
+>Compatibele Adobe Experience Cloud-toepassingen gebruiken verschillende waarden voor het identificeren van betrokkenen. Raadpleeg de handleiding over [Privacy Service- en Experience Cloud-toepassingen](../experience-cloud-apps.md) voor meer informatie over de vereiste id&#39;s voor uw toepassing(en).
 
-De API van de Privacy Service ondersteunt twee soorten taakverzoeken voor persoonlijke gegevens:
+De Privacy Service-API ondersteunt twee soorten taakaanvragen voor persoonlijke gegevens:
 
 * [Toegang tot en/of verwijdering](#access-delete): Persoonsgegevens openen (lezen) of verwijderen.
 * [Uitschakelen](#opt-out): Persoonlijke gegevens markeren als niet te verkopen gegevens.
 
->[!IMPORTANT] Terwijl toegang en schrappingsverzoeken als één enkele API vraag kunnen worden gecombineerd, opt-out verzoeken moeten afzonderlijk worden gemaakt.
+>[!IMPORTANT]
+>
+>Terwijl toegang en schrappingsverzoeken als één enkele API vraag kunnen worden gecombineerd, opt-out verzoeken moeten afzonderlijk worden gemaakt.
 
 ### Een toegangs-/verwijdertaak maken {#access-delete}
 
@@ -288,7 +292,9 @@ Nadat de taakaanvraag is verzonden, kunt u doorgaan naar de volgende stap om de 
 
 Met een van de `jobId` waarden die in de vorige stap zijn geretourneerd, kunt u informatie over die taak ophalen, zoals de huidige verwerkingsstatus.
 
->[!IMPORTANT] Gegevens voor eerder gemaakte taken kunnen alleen binnen 30 dagen na de einddatum van de taak worden opgehaald.
+>[!IMPORTANT]
+>
+>Gegevens voor eerder gemaakte taken kunnen alleen binnen 30 dagen na de einddatum van de taak worden opgehaald.
 
 **API-indeling**
 
@@ -383,7 +389,9 @@ In de volgende tabel worden de verschillende mogelijke taakstatussen en de bijbe
 | 3 | Verzonden | De taak wordt voorgelegd aan elke toepasselijke toepassing. |
 | 4 | Fout | Er is iets misgegaan in de verwerking van de taak - er kan meer specifieke informatie worden verkregen door individuele taakdetails op te halen. |
 
->[!NOTE] Een voorgelegde baan kan in een verwerkingsstaat blijven als het een afhankelijke kindbaan heeft die nog wordt verwerkt.
+>[!NOTE]
+>
+>Een voorgelegde baan kan in een verwerkingsstaat blijven als het een afhankelijke kindbaan heeft die nog wordt verwerkt.
 
 ## Alle taken weergeven
 
@@ -428,4 +436,4 @@ Om de volgende reeks resultaten in een gepagineerde reactie te halen, moet u een
 
 ## Volgende stappen
 
-U weet nu hoe u privacytaken kunt maken en controleren met de API voor privacyservice. Voor informatie over hoe te om de zelfde taken uit te voeren gebruikend het gebruikersinterface, zie het overzicht [van de Dienst van de](../ui/overview.md)Privacy.
+U weet nu hoe u privacytaken kunt maken en controleren met de Privacy Service-API. Voor informatie over hoe te om de zelfde taken uit te voeren gebruikend het gebruikersinterface, zie het overzicht [van de](../ui/overview.md)Privacy Service UI.
