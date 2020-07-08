@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Query Service
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '647'
+ht-degree: 0%
 
 ---
 
@@ -193,7 +196,9 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 }
 ```
 
->[!NOTE] U kunt de waarde van gebruiken `_links.cancel` om uw gemaakte query [te](#cancel-a-query)annuleren.
+>[!NOTE]
+>
+>U kunt de waarde van gebruiken `_links.cancel` om uw gemaakte query [te](#cancel-a-query)annuleren.
 
 ### Een query ophalen op ID
 
@@ -262,7 +267,9 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 }
 ```
 
->[!NOTE] U kunt de waarde van gebruiken `_links.cancel` om uw gemaakte query [te](#cancel-a-query)annuleren.
+>[!NOTE]
+>
+>U kunt de waarde van gebruiken `_links.cancel` om uw gemaakte query [te](#cancel-a-query)annuleren.
 
 ### Een query annuleren
 
