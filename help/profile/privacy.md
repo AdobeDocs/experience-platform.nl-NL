@@ -4,38 +4,43 @@ solution: Experience Platform
 title: De verzoekverwerking van de privacy in Real-time Profiel van de Klant
 topic: overview
 translation-type: tm+mt
-source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '660'
+ht-degree: 0%
 
 ---
 
 
 # De verzoekverwerking van de privacy in Real-time Profiel van de Klant
 
-De privacydienst van het Platform van de Privacy van Adobe verwerkt klantenverzoeken om tot toegang te hebben, uit verkoop te kiezen, of hun persoonlijke gegevens te schrappen zoals die door privacyverordeningen zoals de Algemene Verordening van de Bescherming van Gegevens (GDPR) en de Wet van de Consumeprivacydienst van Californië (CCPA) worden afgebakend.
+Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang, om zich uit verkoop te laten of om hun persoonsgegevens te verwijderen, zoals die zijn omschreven in privacyregels zoals de General Data Protection Regulation (GDPR) en de California Consumer Privacy Act (CCPA).
 
 Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor Real-time Klantprofiel.
 
 ## Aan de slag
 
-U wordt aangeraden een goed begrip te hebben van de volgende services van het Experience Platform voordat u deze handleiding leest:
+U wordt aangeraden de volgende services van het Experience Platform goed te begrijpen voordat u deze handleiding leest:
 
-* [Privacy-service](home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, niet te verkopen of te verwijderen.
+* [Privacy Service](home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, niet te verkopen of te verwijderen.
 * [Identiteitsservice](../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
 * [Klantprofiel](../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ## Naamruimten voor identiteiten {#namespaces}
 
-Adobe Experience Platform Identity Service biedt een brug tussen identiteitsgegevens van klanten op verschillende systemen en apparaten. De Dienst van de identiteit gebruikt **identiteitsnaamruimten** om context aan identiteitswaarden te verstrekken door hen met hun systeem van oorsprong te verbinden. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;E-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
+De Dienst van de Identiteit van het Adobe Experience Platform vormt een brug tussen de identiteitsgegevens van de klant over systemen en apparaten. De Dienst van de identiteit gebruikt **identiteitsnaamruimten** om context aan identiteitswaarden te verstrekken door hen met hun systeem van oorsprong te verbinden. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;E-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
 
 De Dienst van de identiteit handhaaft een opslag van globaal bepaalde (standaard) en user-defined (douane) identiteitsnamespaces. Standaard naamruimten zijn beschikbaar voor alle organisaties (bijvoorbeeld E-mail en ECID), terwijl uw organisatie aangepaste naamruimten kan maken die aan de specifieke behoeften voldoen.
 
-Voor meer informatie over identiteitsnaamruimten in het Platform van de Ervaring, zie het overzicht [van](../identity-service/namespaces.md)identiteitsnamespace.
+Zie het overzicht [van naamruimte voor](../identity-service/namespaces.md)identiteiten in het Experience Platform voor meer informatie over naamruimten.
 
 ## Verzoeken indienen {#submit}
 
->[!NOTE] In deze sectie wordt beschreven hoe u privacyverzoeken kunt maken voor de profielgegevensopslag. Het wordt ten zeerste aanbevolen dat u de API [-documentatie](../privacy-service/api/getting-started.md) van de [privacyservice of de gebruikersinterface](../privacy-service/ui/overview.md) van deprivacyservice controleert voor volledige stappen over het verzenden van een privacytaak, waaronder het correct indelen van verzonden identiteitsgegevens van gebruikers in aanvragen.
+>[!NOTE]
+>
+>In deze sectie wordt beschreven hoe u privacyverzoeken kunt maken voor de profielgegevensopslag. Het wordt ten zeerste aanbevolen de API [-](../privacy-service/api/getting-started.md) Privacy Service of de [Privacy Service-UI](../privacy-service/ui/overview.md) -documentatie te raadplegen voor volledige stappen over het verzenden van een privacytaak, waaronder het correct indelen van verzonden identiteitsgegevens van gebruikers in aanvragen.
 
-In de volgende sectie wordt beschreven hoe u privacyverzoeken voor Real-time klantprofiel en het Data Lake kunt indienen met behulp van de Privacy Service API of UI.
+In de volgende sectie wordt beschreven hoe u privacyverzoeken voor Real-time klantprofiel en het Data Lake kunt indienen met de Privacy Service-API of -interface.
 
 ### De API gebruiken
 
@@ -94,12 +99,12 @@ Wanneer het creëren van baanverzoeken in UI, ben zeker om **AEP Gegevensmeer** 
 
 ## Verzoek om verwerking verwijderen
 
-Wanneer het Platform van de Ervaring een schrappingsverzoek van de Dienst van de Privacy ontvangt, verzendt het Platform bevestiging aan de Dienst van de Privacy dat het verzoek is ontvangen en de beïnvloede gegevens voor schrapping duidelijk zijn gemaakt. De records worden vervolgens binnen zeven dagen uit het Data Lake- of Profile-archief verwijderd. Tijdens dat venster van zeven dagen, worden de gegevens zachte geschrapt en daarom niet toegankelijk door om het even welke dienst van het Platform.
+Wanneer het Experience Platform een schrappingsverzoek van Privacy Service ontvangt, verzendt het Platform bevestiging aan Privacy Service dat het verzoek is ontvangen en de beïnvloede gegevens voor schrapping duidelijk zijn gemaakt. De records worden vervolgens binnen zeven dagen uit het Data Lake- of Profile-archief verwijderd. Tijdens dat venster van zeven dagen, worden de gegevens zachte geschrapt en daarom niet toegankelijk door om het even welke dienst van het Platform.
 
-In toekomstige releases zal Platform een bevestiging sturen naar de Privacy Service nadat de gegevens fysiek zijn verwijderd.
+In toekomstige versies stuurt Platform een bevestiging naar de Privacy Service nadat gegevens fysiek zijn verwijderd.
 
 ## Volgende stappen
 
-Door dit document te lezen, bent u geïntroduceerd in de belangrijke concepten betrokken bij de verwerking van privacyverzoeken in het Platform van de Ervaring. U wordt aangeraden de documentatie in deze handleiding te blijven lezen om meer inzicht te krijgen in de manier waarop u identiteitsgegevens kunt beheren en privacytaken kunt maken.
+Door dit document te lezen, bent u geïntroduceerd in de belangrijke concepten betreffende de verwerking van privacyverzoeken in Experience Platform. U wordt aangeraden de documentatie in deze handleiding te blijven lezen om meer inzicht te krijgen in de manier waarop u identiteitsgegevens kunt beheren en privacytaken kunt maken.
 
-Zie het document over de verwerking van [privacyverzoeken in het Datameer](../catalog/privacy.md)voor informatie over het verwerken van privacyverzoeken voor platformbronnen die niet worden gebruikt door Profiel.
+Voor informatie over het verwerken van privacyverzoeken voor Platforms die niet door Profiel worden gebruikt, raadpleegt u het document over [privacyaanvraagverwerking in het Datameer](../catalog/privacy.md).
