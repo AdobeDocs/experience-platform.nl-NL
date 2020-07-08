@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Bepaal een verband tussen twee schema's gebruikend de Redacteur van het Schema van het Schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: f8c34d84e30ae14c3936c2e32ee84a2fcd3abdc3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '836'
+ht-degree: 0%
 
 ---
 
@@ -13,13 +16,13 @@ source-git-commit: f8c34d84e30ae14c3936c2e32ee84a2fcd3abdc3
 
 De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk op verschillende kanalen te begrijpen is een belangrijk onderdeel van het Adobe Experience Platform. Het bepalen van deze verhoudingen binnen de structuur van uw schema&#39;s van de Gegevens van de Ervaring van het Model (XDM) staat u toe om complexe inzichten in uw klantengegevens te bereiken.
 
-Dit document verstrekt een zelfstudie voor het bepalen van een één-op-één verhouding tussen twee schema&#39;s die door uw organisatie worden bepaald gebruikend de Redacteur van het Schema in het gebruikersinterface van het Platform van de Ervaring. Voor stappen bij het bepalen van schemaverhoudingen gebruikend API, zie de zelfstudie over het [bepalen van een verhouding gebruikend de Registratie API](relationship-api.md)van het Schema.
+Dit document verstrekt een zelfstudie voor het bepalen van een één-op-één verhouding tussen twee schema&#39;s die door uw organisatie worden bepaald gebruikend de Redacteur van het Schema in het gebruikersinterface van het Experience Platform. Voor stappen bij het bepalen van schemaverhoudingen gebruikend API, zie de zelfstudie over het [bepalen van een verhouding gebruikend de Registratie API](relationship-api.md)van het Schema.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van XDM System en de Schema Editor in de interface van het Experience Platform. Lees de volgende documentatie voordat u met deze zelfstudie begint:
+Deze zelfstudie vereist een goed begrip van XDM System en de Redacteur van het Schema in de UI van het Experience Platform. Lees de volgende documentatie voordat u met deze zelfstudie begint:
 
-* [XDM-systeem in ervaringsplatform](../home.md): Een overzicht van XDM en zijn implementatie in het Platform van de Ervaring.
+* [XDM-systeem in Experience Platform](../home.md): Een overzicht van XDM en zijn implementatie in Experience Platform.
 * [Basisbeginselen van de schemacompositie](../schema/composition.md): Een inleiding van de bouwstenen van schema&#39;s XDM.
 * [Een schema maken met de Schema-editor](create-schema-ui.md): Een zelfstudie over de basisbeginselen van het werken met de Schema-editor.
 
@@ -45,7 +48,9 @@ Het bestemmingsschema &quot;Hotels&quot;bevat gebieden die een hotel beschrijven
 
 ## Een relatie-mix maken
 
->[!NOTE] Deze stap wordt slechts vereist als uw bronschema geen specifiek koord-type gebied heeft dat als verwijzing naar een ander schema moet worden gebruikt. Als dit veld al in uw bronschema is gedefinieerd, gaat u verder met de volgende stap voor het [definiëren van een relatieveld](#relationship-field).
+>[!NOTE]
+>
+>Deze stap wordt slechts vereist als uw bronschema geen specifiek koord-type gebied heeft dat als verwijzing naar een ander schema moet worden gebruikt. Als dit veld al in uw bronschema is gedefinieerd, gaat u verder met de volgende stap voor het [definiëren van een relatieveld](#relationship-field).
 
 Om een verband tussen twee schema&#39;s te bepalen, moet het bronschema een specifiek gebied hebben dat als verwijzing naar het bestemmingsschema moet worden gebruikt. U kunt dit veld toevoegen aan het bronschema door een nieuwe mix te maken.
 
