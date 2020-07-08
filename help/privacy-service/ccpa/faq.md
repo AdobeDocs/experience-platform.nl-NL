@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Veelgestelde vragen over CCPA
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '807'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,9 @@ Dit document bevat antwoorden op veelgestelde vragen over de California Consumer
 
 De California Consumer Privacy Act (CCPA) is de nieuwe privacywet van Californië die zijn inwoners nieuwe rechten met betrekking tot hun persoonlijke informatie verleent, en gegevensbeschermingstaken oplegt aan bepaalde entiteiten die zaken in Californië leiden.
 
->[!NOTE] Hoewel dit technisch effectief is in januari 2020, wordt de CCPA nog steeds door de wetgevers verfijnd. Daarnaast zijn belangrijke implementatiedetails en andere informatie over richtlijnen opgenomen in regels die nog door de toezichthouder voor Californië moeten worden geschreven.
+>[!NOTE]
+>
+>Hoewel dit technisch effectief is in januari 2020, wordt de CCPA nog steeds door de wetgevers verfijnd. Daarnaast zijn belangrijke implementatiedetails en andere informatie over richtlijnen opgenomen in regels die nog door de toezichthouder voor Californië moeten worden geschreven.
 
 Hoewel de CCPA een aantal begrippen deelt die zijn opgenomen in de algemene verordening van de Europese Unie inzake gegevensbescherming (GDPR), zoals het recht van een individu op toegang tot en verwijdering van persoonlijke informatie, zijn er verschillende manieren waarop de CCPA van de GDPR verschilt. Zo biedt de CCPA consumenten een opt-out-recht voor bepaalde activiteiten inzake gegevensuitwisseling die als &quot;verkoop&quot; van persoonlijke informatie aan een derde worden aangemerkt, in plaats van voorafgaande toestemming.
 
@@ -27,7 +32,7 @@ Persoonlijke informatie is informatie &quot;die een consument of een huishouden 
 
 ## Welke soorten persoonlijke gegevens of id&#39;s die in Adobe Experience Cloud worden gebruikt, zijn aan deze nieuwe vereisten onderworpen?
 
-De volgende id&#39;s worden vaak gebruikt in toepassingen van de Wolk van de Ervaring en kunnen aan vereisten worden onderworpen CCPA:
+De volgende herkenningstekens worden algemeen gebruikt in de toepassingen van Experience Cloud en zouden aan vereisten kunnen onderworpen zijn CCPA:
 
 - Naam
 - Postadres
@@ -43,7 +48,7 @@ Persoonlijke informatie kan ook informatie over internet of andere elektronische
 - Zoekgeschiedenis
 - Informatie over de interactie van een consument met een website, toepassing of advertentie
 
-Hoewel de CCPA betrekking heeft op een groot aantal persoonlijke gegevens, wordt in de standaardcontractvoorwaarden van Adobe bepaald dat gevoelige persoonlijke gegevens (zoals SSN, informatie over rijbewijzen, informatie over financiële rekeningen en biometrische gegevens) over het algemeen niet mogen worden geïmporteerd en gebruikt in Experience Cloud-toepassingen.
+Hoewel de CCPA betrekking heeft op een groot aantal persoonlijke gegevens, wordt in de standaardcontractvoorwaarden van Adobe bepaald dat gevoelige persoonlijke gegevens (zoals SSN, informatie over rijbewijzen, informatie over financiële rekeningen en biometrische gegevens) over het algemeen niet mogen worden ingevoerd en gebruikt in Experience Cloud-toepassingen.
 
 ## Hoe zijn de verschillende rollen en verantwoordelijkheden van de CCPA van toepassing op Experience Cloud?
 
@@ -70,9 +75,11 @@ Adobe-services kunnen worden gebruikt om bepaalde gegevens te delen en over te d
 
 ## Hoe kan ik de privacyvereisten voor consumenten in het kader van de CCPA ondersteunen als ik bepaalde soorten gegevens handhaaf die onder de vereisten vallen?
 
-Zodra u de noodzakelijke stappen hebt genomen om CA-consumenten te verifiëren, kunt u met de Adobe Experience Platform Privacy Service aanvragen voor privacy van consumenten indienen bij compatibele Experience Cloud-toepassingen. Zie het overzicht [van de](../home.md) Privacy Service voor meer informatie. Voor informatie over hoe uw specifieke Experience Cloud-toepassingen privacyverzoeken kunnen naleven, raadpleegt u de handleiding over [Privacy Service en Experience Cloud-toepassingen](../experience-cloud-apps.md).
+Zodra u de noodzakelijke stappen hebt genomen om consumenten van CA voor authentiek te verklaren, staat de Adobe Experience Platform Privacy Service u toe om verzoeken van de consument de privacy aan compatibele toepassingen van Experience Cloud voor te leggen. Zie het overzicht [van de](../home.md) Privacy Service voor meer informatie. Raadpleeg de handleiding over [Privacy Service- en Experience Cloud-toepassingen](../experience-cloud-apps.md)voor informatie over hoe uw specifieke Experience Cloud-toepassingen privacyverzoeken kunnen naleven.
 
->[!NOTE] De toezichthouder van Californië hanteert nog steeds nadere aanwijzingen over de soorten gegevens die in aanmerking komen voor privacyverzoeken van consumenten.
+>[!NOTE]
+>
+>De toezichthouder van Californië hanteert nog steeds nadere aanwijzingen over de soorten gegevens die in aanmerking komen voor privacyverzoeken van consumenten.
 
 ## Biedt Adobe andere hulpmiddelen aan die nuttig kunnen zijn in het richten van vereisten CCPA?
 
