@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Muziek downloaden in AI van klant
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 7c892d92a50312fb4b733431737b796651689804
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '933'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Er zijn momenteel twee manieren om AI-scores van klanten te downloaden:
 
 ## Uw gegevensset-id zoeken {#dataset-id}
 
-Klik in uw serviceexemplaar voor AI-inzichten van Klant op het vervolgkeuzemenu *Meer handelingen* rechtsboven in de navigatie rechtsboven en selecteer **[!UICONTROL Access scores]**.
+Binnen uw de dienstinstantie voor de Inzichten van AI van de Klant, klik *Meer acties* dropdown in de top-juiste navigatie en selecteer de scores **[!UICONTROL van de]** Toegang.
 
 ![meer acties](../images/insights/more-actions.png)
 
@@ -240,7 +243,9 @@ Kopieer de `href` waarde voor elk bestandsobject in de `data` array en ga vervol
 
 Als u uw bestandsgegevens wilt downloaden, vraagt u GET de `"href"` waarde aan die u hebt gekopieerd in de vorige stap [bij het ophalen van uw bestanden](#retrieving-your-files).
 
->[!NOTE] Als u dit verzoek direct in bevellijn doet, zou u kunnen worden ertoe aangezet om een output na uw verzoekkopballen toe te voegen. Het volgende aanvraagvoorbeeld gebruikt `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>Als u dit verzoek direct in bevellijn doet, zou u kunnen worden ertoe aangezet om een output na uw verzoekkopballen toe te voegen. Het volgende aanvraagvoorbeeld gebruikt `--output {FILENAME.FILETYPE}`.
 
 **API-indeling**
 
@@ -264,7 +269,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
   -O 'filename.parquet'
 ```
 
->[!TIP] Zorg ervoor dat u zich in de juiste map of map bevindt waarnaar u het bestand wilt opslaan voordat u de aanvraag GET uitvoert.
+>[!TIP]
+>
+>Zorg ervoor dat u zich in de juiste map of map bevindt waarnaar u het bestand wilt opslaan voordat u de aanvraag GET uitvoert.
 
 **Antwoord**
 
@@ -276,7 +283,9 @@ Het antwoord downloadt het bestand dat u in de huidige map hebt aangevraagd. In 
 
 Een andere manier om uw score te downloaden is door uw publiek naar een dataset te exporteren. Nadat een segmentatietaak met succes is voltooid (de waarde van het `status` attribuut is &quot;SUCCEEDED&quot;), kunt u uw publiek naar een dataset uitvoeren waar het kan worden betreden en worden gehandeld. Ga voor meer informatie over segmentatie naar het [segmentatieoverzicht](../../../segmentation/home.md).
 
->[!IMPORTANT] Om deze methode van het uitvoeren te gebruiken, moet het Profiel van de Klant in real time voor de dataset worden toegelaten.
+>[!IMPORTANT]
+>
+>Om deze methode van het uitvoeren te gebruiken, moet het Profiel van de Klant in real time voor de dataset worden toegelaten.
 
 De [uitvoer een segmentsectie](../../../segmentation/tutorials/evaluate-a-segment.md) in de gids van de segmentevaluatie behandelt de vereiste stappen om een publieksdataset uit te voeren. In de handleiding worden de volgende voorbeelden geschetst en gegeven:
 
