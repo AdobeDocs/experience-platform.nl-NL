@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een model publiceren als service (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 0%
@@ -338,7 +338,9 @@ Een succesvolle reactie keert de details van de Dienst van ML terug.
 }
 ```
 
->[!NOTE] Het terugwinnen van de verschillende Diensten van ML kan een reactie met meer of minder sleutel-waarde paren terugkeren. De bovenstaande reactie is een vertegenwoordiging van een Dienst van [ML met zowel geplande opleiding als het scoren van de Runnen van de Experiment](#ml-service-with-scheduled-experiments-for-training-and-scoring).
+>[!NOTE]
+>
+>Het terugwinnen van de verschillende Diensten van ML kan een reactie met meer of minder sleutel-waarde paren terugkeren. De bovenstaande reactie is een vertegenwoordiging van een Dienst van [ML met zowel geplande opleiding als het scoren van de Runnen van de Experiment](#ml-service-with-scheduled-experiments-for-training-and-scoring).
 
 
 ## Training of scores plannen
@@ -388,7 +390,9 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
       }'
 ```
 
->[!WARNING] Probeer niet om de `startTime` bestaande geplande training- en scores-taken te wijzigen. Als u het model `startTime` moet wijzigen, kunt u hetzelfde model publiceren en opleidings- en scoretaken opnieuw plannen.
+>[!WARNING]
+>
+>Probeer niet om de `startTime` bestaande geplande training- en scores-taken te wijzigen. Als u het model `startTime` moet wijzigen, kunt u hetzelfde model publiceren en opleidings- en scoretaken opnieuw plannen.
 
 **Antwoord**
 
