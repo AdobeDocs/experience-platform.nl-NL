@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Gebruikers beheren voor een productprofiel
 topic: user guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,9 @@ Het dialoogvenster Gebruiker ** toevoegen wordt weergegeven. Met het zoekveld ku
 
 ![add-user-autocomplete](../images/add-user-autocomplete.png)
 
->[!NOTE] Als een gebruiker niet in het automatisch aanvullen venster verschijnt, ga hun volledig e-mailadres in de onderzoeksbar in. Er wordt een uitnodiging verzonden naar de e-mail met instructies voor het instellen van een Adobe-id-account.
+>[!NOTE]
+>
+>Als een gebruiker niet in het automatisch aanvullen venster verschijnt, ga hun volledig e-mailadres in de onderzoeksbar in. Er wordt een uitnodiging verzonden naar de e-mail met instructies voor het instellen van een Adobe ID-account.
 
 Als u een gebruiker hebt geselecteerd, klikt u op **Opslaan** om deze aan het productprofiel toe te voegen.
 
@@ -31,4 +36,4 @@ Het tabblad *Gebruikers* voor het productprofiel wordt opnieuw weergegeven, waar
 
 ## Volgende stappen
 
-Nu u hebt geleerd hoe te om toegang tot de eigenschappen van het Platform door de Console te controleren Admin, zie de bijlage sectie in het overzicht [van de](../home.md) toegangscontrole om meer over elke individuele toestemming en de functies van het Platform te leren zij toegang verlenen tot.
+Nu u hebt geleerd hoe te om toegang tot de eigenschappen van het Platform door de Admin Console te controleren, zie de bijlage sectie in het overzicht [van de](../home.md) toegangscontrole om meer over elke individuele toestemming en de functies van het Platform te leren zij toegang verlenen tot.
