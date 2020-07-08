@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een bron bijwerken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0d3bee939226d9ef4ac1672b71e0d240f32c5dcf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,9 @@ U kunt middelen in de huurderscontainer wijzigen of bijwerken gebruikend een ver
 
 Raadpleeg de officiële [JSON Patch-documentatie](http://jsonpatch.com/)voor meer informatie over JSON Patch, inclusief beschikbare bewerkingen.
 
->[!NOTE] Als u een volledige bron wilt vervangen door nieuwe waarden in plaats van afzonderlijke velden bij te werken, raadpleegt u het document over het [vervangen van een bron met behulp van een PUT-bewerking](replace-resource.md).
+>[!NOTE]
+>
+>Als u een volledige bron wilt vervangen door nieuwe waarden in plaats van afzonderlijke velden bij te werken, raadpleegt u het document over het [vervangen van een bron met behulp van een PUT-bewerking](replace-resource.md).
 
 ## Mengsels toevoegen aan een schema
 
