@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Overzicht van het realtime klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 0%
@@ -129,6 +129,8 @@ Experience Platform heeft een aantal richtlijnen om profiel effectief te gebruik
 --->
 
 >[!NOTE]
+>
+>
 >Een niet-persoonlijke entiteit verwijst naar elke XDM-klasse die **geen** deel uitmaakt van Profiel.
 
 ## Volgende stappen en extra bronnen
