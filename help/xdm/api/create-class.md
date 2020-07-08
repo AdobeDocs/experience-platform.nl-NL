@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een klasse maken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 60911e32fd9235be2a258e60818011a42cd5ceba
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '485'
+ht-degree: 0%
 
 ---
 
@@ -13,9 +16,11 @@ source-git-commit: 60911e32fd9235be2a258e60818011a42cd5ceba
 
 De primaire bouwsteen van een schema is een klasse. De klasse bevat de minimale set velden die moet worden gedefinieerd om de kerngegevens van een schema vast te leggen. Als u bijvoorbeeld een schema voor auto&#39;s en vrachtwagens zou ontwerpen, zou het meest waarschijnlijk een klasse gebruiken met de naam Vehicle die de algemene basiseigenschappen van alle voertuigen beschrijft.
 
-Er zijn verschillende standaardklassen die door Adobe en andere partners van het Platform van de Ervaring worden verstrekt, maar u kunt uw eigen klassen ook bepalen en hen bewaren aan de Registratie van het Schema. Vervolgens kunt u een schema samenstellen waarmee de gemaakte klasse wordt geïmplementeerd en combinaties definiëren die compatibel zijn met de zojuist gedefinieerde klasse.
+Adobe en andere partners in Experience Platforms bieden verschillende standaardklassen, maar u kunt ook uw eigen klassen definiëren en deze opslaan in de Schemaregistratie. Vervolgens kunt u een schema samenstellen waarmee de gemaakte klasse wordt geïmplementeerd en combinaties definiëren die compatibel zijn met de zojuist gedefinieerde klasse.
 
->[!NOTE] Wanneer het samenstellen van een schema dat op een klasse wordt gebaseerd die u bepaalt, zult u geen standaardmengen kunnen gebruiken. Elke mix definieert de klassen waarmee ze compatibel zijn in hun `meta:intendedToExtend` kenmerk. Zodra u begint bepalend mengen die met uw nieuwe klasse (door de nieuwe klasse op het `$id` `meta:intendedToExtend` gebied van het mengen te gebruiken) compatibel zijn, zult u die mixins kunnen opnieuw gebruiken telkens als u een schema bepaalt dat de klasse uitvoert u bepaalde. Zie de secties over het [creëren van mengen](create-mixin.md) en het [creëren van schema](create-schema.md) &#39;s voor meer informatie.
+>[!NOTE]
+>
+>Wanneer het samenstellen van een schema dat op een klasse wordt gebaseerd die u bepaalt, zult u geen standaardmengen kunnen gebruiken. Elke mix definieert de klassen waarmee ze compatibel zijn in hun `meta:intendedToExtend` kenmerk. Zodra u begint bepalend mengen die met uw nieuwe klasse (door de nieuwe klasse op het `$id` `meta:intendedToExtend` gebied van het mengen te gebruiken) compatibel zijn, zult u die mixins kunnen opnieuw gebruiken telkens als u een schema bepaalt dat de klasse uitvoert u bepaalde. Zie de secties over het [creëren van mengen](create-mixin.md) en het [creëren van schema](create-schema.md) &#39;s voor meer informatie.
 
 **API-indeling**
 
