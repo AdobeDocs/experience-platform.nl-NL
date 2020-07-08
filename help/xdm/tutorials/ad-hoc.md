@@ -4,22 +4,25 @@ solution: Experience Platform
 title: Een ad-hocschema maken
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 956d1e5b4a994c9ea52d818f3dd6d3ff88cb16b6
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 0%
 
 ---
 
 
 # Een ad-hocschema maken
 
-In specifieke omstandigheden, kan het noodzakelijk zijn om een schema van de Gegevens van de Ervaring van het Model (XDM) met gebieden tot stand te brengen die voor gebruik slechts door één enkele dataset worden genoemd. Dit wordt bedoeld als &quot;ad-hoc&quot;schema. Ad-hocschema&#39;s worden gebruikt in verschillende gegevensinnamegradeworkflows voor het Experience Platform, waaronder het innemen van CSV-bestanden en het maken van bepaalde soorten bronverbindingen.
+In specifieke omstandigheden, kan het noodzakelijk zijn om een schema van de Gegevens van de Ervaring van het Model (XDM) met gebieden tot stand te brengen die voor gebruik slechts door één enkele dataset worden genoemd. Dit wordt bedoeld als &quot;ad-hoc&quot;schema. Ad-hocschema&#39;s worden gebruikt in diverse werkstromen voor gegevensinvoer voor Experience Platform, met inbegrip van het opnemen van CSV-bestanden en het creëren van bepaalde soorten bronverbindingen.
 
-Dit document bevat algemene stappen voor het maken van een ad-hocschema met behulp van de [Schemaregistratie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Het is bedoeld voor gebruik in combinatie met andere zelfstudies van het ervaringsplatform die het maken van een ad-hocschema als onderdeel van hun workflow vereisen. Elk van die documenten verstrekt gedetailleerde informatie over hoe te om een ad-hocschema voor zijn specifiek gebruiksgeval behoorlijk te vormen.
+Dit document bevat algemene stappen voor het maken van een ad-hocschema met behulp van de [Schemaregistratie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Het is bedoeld om samen met andere zelfstudies voor Experience Platforms te worden gebruikt waarvoor een ad-hocschema nodig is als onderdeel van de workflow. Elk van die documenten verstrekt gedetailleerde informatie over hoe te om een ad-hocschema voor zijn specifiek gebruiksgeval behoorlijk te vormen.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van het XDM-systeem (Experience Data Model). Lees de volgende XDM-documentatie voordat u deze zelfstudie start:
 
-- [XDM-systeemoverzicht](../home.md): Een overzicht op hoog niveau van XDM en zijn implementatie in het Platform van de Ervaring.
+- [XDM-systeemoverzicht](../home.md): Een overzicht op hoog niveau van XDM en zijn implementatie in Experience Platform.
 - [Basisbeginselen van de schemacompositie](../schema/composition.md): Een overzicht van de basiscomponenten van schema&#39;s XDM.
 
 Voordat u met deze zelfstudie begint, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de API voor schemaregistratie te kunnen uitvoeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
@@ -38,7 +41,9 @@ POST /tenant/classes
 
 Met de volgende aanvraag wordt een nieuwe XDM-klasse gemaakt, geconfigureerd door de kenmerken die in de payload worden opgegeven. Door een `$ref` eigenschap op te geven die is ingesteld op `https://ns.adobe.com/xdm/data/adhoc` in de `allOf` array, overerft deze klasse het `adhoc` gedrag. De aanvraag definieert ook een `_adhoc` object dat de aangepaste velden voor de klasse bevat.
 
->[!NOTE] De aangepaste velden die onder `_adhoc` deze sectie worden gedefinieerd, variëren afhankelijk van het gebruikte hoofdlettergebruik van het ad-hocschema. Raadpleeg de specifieke workflow in de juiste zelfstudie voor vereiste aangepaste velden op basis van het gebruiksgeval.
+>[!NOTE]
+>
+>De aangepaste velden die onder `_adhoc` deze sectie worden gedefinieerd, variëren afhankelijk van het gebruikte hoofdlettergebruik van het ad-hocschema. Raadpleeg de specifieke workflow in de juiste zelfstudie voor vereiste aangepaste velden op basis van het gebruiksgeval.
 
 ```shell
 curl -X POST \
@@ -216,7 +221,9 @@ Een geslaagde reactie retourneert de details van het nieuwe schema, inclusief de
 
 ## Het volledige ad-hocschema weergeven
 
->[!NOTE] Deze stap is optioneel. Als u de veldstructuur van uw ad-hocschema niet wilt inspecteren, kunt u de sectie [Volgende stappen](#next-steps) aan het einde van deze zelfstudie overslaan.
+>[!NOTE]
+>
+>Deze stap is optioneel. Als u de veldstructuur van uw ad-hocschema niet wilt inspecteren, kunt u de sectie [Volgende stappen](#next-steps) aan het einde van deze zelfstudie overslaan.
 
 Nadat u het ad-hocschema hebt gemaakt, kunt u een opzoekaanvraag (GET) indienen om het schema in het uitgebreide formulier weer te geven. Dit wordt gedaan door de aangewezen Accept- kopbal in het GET verzoek te gebruiken, zoals hieronder aangetoond.
 
