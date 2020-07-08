@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Door Adobe gedefinieerde functies
 topic: queries
 translation-type: tm+mt
-source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 1%
 
 ---
 
@@ -13,10 +16,10 @@ source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
 
 Een van de grote onderscheidende factoren van Adobe is dat zij ervaren gegevens begrijpen en weten wat klanten met die gegevens moeten kunnen doen. U kunt dit inzicht gebruiken om hulpfuncties te bouwen die uw baan gemakkelijker maken.
 
-Dit document behandelt door Adobe gedefinieerde functies (ADF&#39;s) ter ondersteuning van drie belangrijke analytische activiteiten:
+Dit document behandelt door Adobe gedefinieerde functies (ADF&#39;s) ter ondersteuning van drie belangrijke Analytics-activiteiten:
 - [Sessionering](#sessionization)
 - [Attributie](#attribution)
-- [Plakken](#pathing)
+- [Padcontrole](#pathing)
 
 ## Sessionering
 
@@ -92,7 +95,9 @@ De Attributie ADFs die in de Dienst van de Vraag wordt gevonden staat die toewij
 
 In dit voorbeeld wordt de nadruk gelegd op kenmerk last-touch, maar Adobe biedt ook de eigenschap first-touch.
 
->[!NOTE] Andere opties met onderbrekingen en op gebeurtenis-gebaseerde afloop zullen in toekomstige versies van de Dienst van de Vraag beschikbaar zijn.
+>[!NOTE]
+>
+>Andere opties met onderbrekingen en op gebeurtenis-gebaseerde afloop zullen in toekomstige versies van de Dienst van de Vraag beschikbaar zijn.
 
 **Syntaxis:**
 
@@ -145,7 +150,7 @@ LIMIT 25;
 
 ![Afbeelding](../images/queries/adobe-functions/last-member-level.png)
 
-## Plakken
+## Padcontrole
 
 Met tekenen krijgt u meer inzicht in de manier waarop klanten door uw site navigeren. De `NEXT()` ADF&#39; `PREVIOUS()` s en ADF&#39;s maken dit mogelijk.
 
