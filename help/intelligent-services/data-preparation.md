@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gegevens voorbereiden voor gebruik in intelligente services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 9905f0248fe88bac5194560318cf8eced32ba93c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 0%
@@ -82,7 +82,9 @@ Dit veld vertegenwoordigt de datum waarop de gebeurtenis heeft plaatsgevonden. D
 
 #### xdm:kanaal {#channel}
 
->[!NOTE] Dit veld is alleen verplicht bij gebruik van Attribution AI.
+>[!NOTE]
+>
+>Dit veld is alleen verplicht bij gebruik van Attribution AI.
 
 Dit gebied vertegenwoordigt het marketing kanaal met betrekking tot ExperienceEvent. Het veld bevat informatie over het kanaaltype, het mediatype en het locatietype.
 
@@ -245,7 +247,9 @@ Als u een [!DNL Adobe Experience Platform] abonnement hebt en de gegevens zelf w
 
 ### Adobe Experience Platform gebruiken
 
->[!NOTE] Voor de onderstaande stappen is een abonnement op Experience Platform vereist. Als u geen toegang tot Platform hebt, gaat u verder met de sectie [Volgende stappen](#next-steps) .
+>[!NOTE]
+>
+>Voor de onderstaande stappen is een abonnement op Experience Platform vereist. Als u geen toegang tot Platform hebt, gaat u verder met de sectie [Volgende stappen](#next-steps) .
 
 Deze sectie schetst de werkschema voor het in kaart brengen van en het opnemen van gegevens in Experience Platform voor gebruik in de Intelligente Diensten, met inbegrip van verbindingen aan leerprogramma&#39;s voor gedetailleerde stappen.
 
@@ -256,7 +260,9 @@ Wanneer u klaar bent om uw gegevens voor opname voor te bereiden, is de eerste s
 * [Een schema maken in de gebruikersinterface](../xdm/tutorials/create-schema-ui.md)
 * [Een schema maken in de API](../xdm/tutorials/create-schema-api.md)
 
->[!IMPORTANT] De bovenstaande zelfstudies volgen een algemene workflow voor het maken van een schema. Wanneer u een klasse voor het schema kiest, moet u de **klasse** XDM ExperienceEvent gebruiken. Nadat u deze klasse hebt gekozen, kunt u de CEE-mix aan het schema toevoegen.
+>[!IMPORTANT]
+>
+>De bovenstaande zelfstudies volgen een algemene workflow voor het maken van een schema. Wanneer u een klasse voor het schema kiest, moet u de **klasse** XDM ExperienceEvent gebruiken. Nadat u deze klasse hebt gekozen, kunt u de CEE-mix aan het schema toevoegen.
 
 Nadat u de CEE-mix aan het schema hebt toegevoegd, kunt u desgewenst andere combinaties toevoegen voor extra velden in uw gegevens.
 
@@ -271,7 +277,9 @@ Nadat de dataset wordt gecreeerd, kunt u het in het Platform UI binnen de *[!UIC
 
 #### Een primaire naamruimte-tag toevoegen aan de gegevensset
 
->[!NOTE] De toekomstige versies van Intelligente Diensten zullen de Dienst [van de Identiteit van het](../identity-service/home.md) Adobe Experience Platform in hun mogelijkheden van de klantenidentificatie integreren. De hieronder beschreven stappen kunnen dan ook worden gewijzigd.
+>[!NOTE]
+>
+>De toekomstige versies van Intelligente Diensten zullen de Dienst [van de Identiteit van het](../identity-service/home.md) Adobe Experience Platform in hun mogelijkheden van de klantenidentificatie integreren. De hieronder beschreven stappen kunnen dan ook worden gewijzigd.
 
 Als u gegevens uit [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]of een andere externe bron inbrengt, dan moet u een `primaryIdentityNameSpace` markering aan de dataset toevoegen. Dit kan worden gedaan door een PATCH- verzoek aan de Dienst API van de Catalogus te doen.
 
@@ -329,7 +337,9 @@ curl -X PATCH \
       }'
 ```
 
->[!NOTE] Zie het overzicht [van naamruimte voor](../identity-service/namespaces.md)identiteiten voor meer informatie over het werken met naamruimten in het Platform.
+>[!NOTE]
+>
+>Zie het overzicht [van naamruimte voor](../identity-service/namespaces.md)identiteiten voor meer informatie over het werken met naamruimten in het Platform.
 
 **Antwoord**
 
@@ -349,7 +359,7 @@ Als uw gegevens in een gesteunde derdetoepassing worden opgeslagen, kunt u ook v
 
 ## Volgende stappen {#next-steps}
 
-Dit document bevat algemene richtlijnen voor het voorbereiden van gegevens voor gebruik in Intelligente services. Neem contact op met de Technische Ondersteuning van Adobe als u extra advies nodig hebt op basis van uw gebruikscase.
+Dit document bevat algemene richtlijnen voor het voorbereiden van uw gegevens voor gebruik in Intelligente services. Neem contact op met de Technische Ondersteuning van Adobe als u extra advies nodig hebt op basis van uw gebruikscase.
 
 Zodra u met succes een dataset met uw gegevens van de klantenervaring hebt bevolkt, kunt u de Intelligente Diensten gebruiken om inzichten te produceren. Raadpleeg de volgende documenten om aan de slag te gaan:
 
