@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding SDK Platform
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 2%
@@ -78,7 +78,9 @@ Als de leestijd te lang duurt, kunt u een van de volgende filteropties gebruiken
 - [Gegevens filteren op kolom](#filter-by-selected-columns)
 - [Gesorteerde resultaten ophalen](#get-sorted-results)
 
->[!NOTE] De IMS-organisatie wordt ingesteld in de `client_context`map.
+>[!NOTE]
+>
+>De IMS-organisatie wordt ingesteld in de `client_context`map.
 
 ### Python
 
@@ -192,7 +194,9 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 ## Basisschrijven van gegevens {#basic-writing-of-data}
 
->[!NOTE] De IMS-organisatie wordt ingesteld in de `client_context`map.
+>[!NOTE]
+>
+>De IMS-organisatie wordt ingesteld in de `client_context`map.
 
 Gebruik een van de volgende voorbeelden om gegevens in Python en R te schrijven:
 
