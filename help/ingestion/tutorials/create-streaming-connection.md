@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een streamingverbinding maken met de API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 0%
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Een streamingverbinding maken met de API
 
-Deze zelfstudie helpt u bij het gebruik van API&#39;s voor streaming ingestie, die onderdeel zijn van de API&#39;s van de Data Ingestie Service van het Adobe Experience Platform.
+Deze zelfstudie helpt u bij het gebruik van streaming opname-API&#39;s, die onderdeel zijn van de API&#39;s van de Adobe Experience Platform Data Ingestie Service.
 
 ## Aan de slag
 
-Registratie van streamingverbindingen is vereist om gegevens te kunnen streamen naar het Adobe Experience Platform. Wanneer u een streamingverbinding registreert, moet u enkele belangrijke details opgeven, zoals de bron van streaminggegevens.
+Registratie van streamingverbinding is vereist om te beginnen met het streamen van gegevens naar Adobe Experience Platform. Wanneer u een streamingverbinding registreert, moet u enkele belangrijke details opgeven, zoals de bron van streaminggegevens.
 
 Na het registreren van een het stromen verbinding, zult u, als gegevensproducent, een unieke URL hebben die kan worden gebruikt om gegevens aan Platform te stromen.
 
-Deze zelfstudie vereist ook een praktische kennis van verschillende services van het Adobe Experience Platform. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Deze zelfstudie vereist ook een praktische kennis van verschillende diensten van de Adobe Experience Platform. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waarmee Platform ervaringsgegevens organiseert.
 - [Klantprofiel](../../profile/home.md)in realtime: Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
@@ -31,21 +31,23 @@ De volgende secties verstrekken extra informatie die u zult moeten weten om met 
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -63,7 +65,9 @@ POST /flowservice/connections
 
 **Verzoek**
 
->[!NOTE] De waarden voor de lijst `providerId` en de lijst `connectionSpec` moeten **** worden gebruikt zoals in het voorbeeld wordt getoond, aangezien zij aan API zijn die u een het stromen verbinding voor het stromen opname creeert.
+>[!NOTE]
+>
+>De waarden voor de lijst `providerId` en de lijst `connectionSpec` moeten **** worden gebruikt zoals in het voorbeeld wordt getoond, aangezien zij aan API zijn die u een het stromen verbinding voor het stromen opname creeert.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -172,7 +176,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 ## Volgende stappen
 
-Nu u een streamingverbinding hebt gemaakt, kunt u tijdreeksen of recordgegevens streamen, zodat u gegevens kunt invoeren in Platform. Als u wilt leren hoe u tijdreeksgegevens kunt streamen naar Platform, gaat u naar de zelfstudie over [streaming tijdreeksgegevens](./streaming-time-series-data.md). Ga naar de zelfstudie over [streaming recordgegevens voor meer informatie over het streamen van recordgegevens naar](./streaming-record-data.md)Platform.
+Nu u een streamingverbinding hebt gemaakt, kunt u tijdreeksen of recordgegevens streamen, zodat u gegevens binnen het Platform kunt invoeren. Als u wilt leren hoe u tijdreeksgegevens kunt streamen naar het Platform, gaat u naar de zelfstudie over [streaming tijdreeksgegevens](./streaming-time-series-data.md). Ga naar de zelfstudie over [streaming recordgegevens voor meer informatie over het streamen van recordgegevens naar het Platform](./streaming-record-data.md).
 
 ## Aanhangsel
 
@@ -180,6 +184,6 @@ Deze sectie bevat aanvullende informatie over het maken van streamingverbindinge
 
 ### Geverifieerde streamingverbindingen
 
-Met geverifieerde gegevensverzameling kunnen services van het Adobe Experience Platform, zoals Real-time klantprofiel en Identity, onderscheid maken tussen records die afkomstig zijn van vertrouwde bronnen en niet-vertrouwde bronnen. Clients die PII (Personal Identified Information) willen verzenden, kunnen dit doen door IMS Access Tokens te verzenden als onderdeel van de POST-aanvraag - als de IMS Token geldig is, worden de records gemarkeerd als verzameld bij vertrouwde bronnen.
+De voor authentiek verklaarde gegevensinzameling staat de diensten van het Adobe Experience Platform, zoals het Profiel van de Klant In real time en Identiteit, toe om tussen verslagen te onderscheiden die uit vertrouwde op bronnen en onbetrouwbare bronnen komen. Clients die PII (Personal Identified Information) willen verzenden, kunnen dit doen door IMS Access Tokens te verzenden als onderdeel van de POST-aanvraag - als de IMS Token geldig is, worden de records gemarkeerd als verzameld bij vertrouwde bronnen.
 
 Meer informatie over het maken van een geverifieerde streamingverbinding vindt u in de zelfstudie voor het [maken van een geverifieerde streamingverbinding](create-authenticated-streaming-connection.md).
