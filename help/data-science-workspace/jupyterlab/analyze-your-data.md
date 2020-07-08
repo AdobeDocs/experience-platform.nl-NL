@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analyseer uw gegevens met notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1702'
 ht-degree: 0%
@@ -50,7 +50,9 @@ Het recept van de Verkoop van de Detailhandel is een standalone voorbeeld dat de
 
 ### Toegangsgegevens
 
->[!NOTE] Het `data_access_sdk_python` is afgekeurd en wordt niet meer aanbevolen. Raadpleeg de zelfstudie [voor het converteren van gegevens naar Platform SDK](../authoring/platform-sdk.md) voor het converteren van uw code. Voor deze zelfstudie gelden nog dezelfde stappen.
+>[!NOTE]
+>
+>Het `data_access_sdk_python` is afgekeurd en wordt niet meer aanbevolen. Raadpleeg de zelfstudie [voor het converteren van gegevens naar Platform SDK](../authoring/platform-sdk.md) voor het converteren van uw code. Voor deze zelfstudie gelden nog dezelfde stappen.
 
 We gaan over tot interne toegang tot gegevens van [!DNL Adobe Experience Platform] en externe gegevens. Wij zullen de `data_access_sdk_python` bibliotheek gebruiken om tot interne gegevens zoals datasets en schema&#39;s toegang te hebben XDM. Voor externe gegevens gebruiken we de [!DNL Python] bibliotheek met panda&#39;s.
 
@@ -86,7 +88,9 @@ Aangezien de dataset het zelfde is, willen wij de ladingsgegevens van de vorige 
 
 Nu, kunnen wij op de `Retail-Training-<your-alias>` dataset met de rechtermuisknop klikken en de &quot;Onderzoek Gegevens in Notitieboekje&quot;optie in dropdown selecteren. Er wordt een uitvoerbaar code-item in uw notitieboekje weergegeven.
 
->[!TIP] raadpleeg de [!DNL Platform SDK](../authoring/platform-sdk.md) handleiding voor het converteren van uw code.
+>[!TIP]
+>
+>raadpleeg de [!DNL Platform SDK](../authoring/platform-sdk.md) handleiding voor het converteren van uw code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
