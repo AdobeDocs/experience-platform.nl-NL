@@ -1,19 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform Query Service Editor-handleiding
+title: Handleiding Query Service Query Editor voor Adobe Experience Platform
 topic: query editor
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1060'
+ht-degree: 0%
 
 ---
 
 
 # Gebruikershandleiding voor de Query Editor
 
-De Redacteur van de vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van het Platform van de Ervaring van Adobe wordt verstrekt, die u toestaat om, vragen voor de gegevens van de klantenervaring binnen het Gebruikersinterface van het Platform van de Ervaring te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in het Platform van de Ervaring te bevolken.
+De Redacteur van de vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van het Adobe Experience Platform wordt verstrekt, dat u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 
-Voor meer informatie over de concepten en de eigenschappen van de Dienst van de Vraag, zie het overzicht [van de Dienst van de][query-service-overview]Vraag. Meer over hoe te om het gebruikersinterface van de Dienst van de Vraag op Platform te navigeren, zie het overzicht [van de Dienst van de][query-service-ui]Vraag.
+Voor meer informatie over de concepten en de eigenschappen van de Dienst van de Vraag, zie het overzicht [van de Dienst van de][query-service-overview]Vraag. Meer over hoe te om het gebruikersinterface van de Dienst van de Vraag op Platform te navigeren, zie het overzicht [UI van de Dienst van de][query-service-ui]Vraag.
 
 ## Aan de slag
 
@@ -35,7 +38,7 @@ Gebruikend de Redacteur van de Vraag, kunt u schrijven, uitvoeren en sparen vrag
 
 ### Query-editor openen
 
-In het Platform van de Ervaring UI, klik **Vragen** in het linkernavigatiemenu om de werkruimte van de Dienst van de Vraag te openen. Klik vervolgens **op Query** maken rechtsboven in het scherm om query&#39;s te schrijven. Deze koppeling is beschikbaar op een van de pagina&#39;s in de werkruimte van de Query-service.
+In Experience Platform UI, klik **Vragen** in het linkernavigatiemenu om de werkruimte van de Dienst van de Vraag te openen. Klik vervolgens **op Query** maken rechtsboven in het scherm om query&#39;s te schrijven. Deze koppeling is beschikbaar op een van de pagina&#39;s in de werkruimte van de Query-service.
 
 ![Afbeelding](../images/queries/query-editor-overview/create-query.png)
 
@@ -89,7 +92,9 @@ Alle vragen die van de Redacteur van de Vraag worden uitgevoerd worden gevangen 
 
 Zie het overzicht [van de Dienst van de][query-service-ui] Vraag UI voor meer informatie.
 
->[!NOTE] Vragen die niet worden uitgevoerd, worden niet opgeslagen in het logbestand. De query is alleen beschikbaar in Query Service als deze wordt uitgevoerd of opgeslagen in Query Editor.
+>[!NOTE]
+>
+>Vragen die niet worden uitgevoerd, worden niet opgeslagen in het logbestand. De query is alleen beschikbaar in Query Service als deze wordt uitgevoerd of opgeslagen in Query Editor.
 
 ## Vragen uitvoeren met de Query Editor
 
@@ -101,7 +106,9 @@ De console verstrekt informatie over de status en de verrichting van de Dienst v
 
 ![Afbeelding](../images/queries/query-editor-overview/console.png)
 
->[!NOTE] De console toont slechts fouten die uit het uitvoeren van een vraag voortkwamen. Er worden geen fouten met de queryvalidatie weergegeven voordat een query wordt uitgevoerd.
+>[!NOTE]
+>
+>De console toont slechts fouten die uit het uitvoeren van een vraag voortkwamen. Er worden geen fouten met de queryvalidatie weergegeven voordat een query wordt uitgevoerd.
 
 ### Zoekresultaten
 
@@ -111,7 +118,7 @@ Nadat een query is voltooid, worden de resultaten weergegeven op het tabblad *Re
 
 ## Volgende stappen
 
-Nu u weet welke eigenschappen in de Redacteur van de Vraag beschikbaar zijn en hoe te om de toepassing te navigeren, kunt u beginnen creërend uw eigen vragen direct in Platform. Voor meer informatie over het runnen van SQL vragen tegen datasets in het Meer van Gegevens, zie de gids bij het [runnen van vragen][query-service-running-queries]. Zie de naslaggids voor [voorbeeldquery&#39;s voor voorbeeld-SQL-query&#39;s voor het werken met Adobe Analytics en Adobe Target-gegevens][query-service-sample-queries].
+Nu u weet welke eigenschappen in de Redacteur van de Vraag beschikbaar zijn en hoe te om de toepassing te navigeren, kunt u beginnen creërend uw eigen vragen direct in Platform. Voor meer informatie over het runnen van SQL vragen tegen datasets in het Meer van Gegevens, zie de gids bij het [runnen van vragen][query-service-running-queries]. Zie de naslaggids voor [voorbeeldquery&#39;s voor SQL-query&#39;s voor het werken met Adobe Analytics- en Adobe Target-gegevens][query-service-sample-queries].
 
 [query-service-overview]: ../home.md
 [query-service-ui]: overview.md
