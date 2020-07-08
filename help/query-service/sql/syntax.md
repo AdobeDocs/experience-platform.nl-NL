@@ -4,7 +4,10 @@ solution: Experience Platform
 title: SQL-syntaxis
 topic: syntax
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1957'
+ht-degree: 0%
 
 ---
 
@@ -317,7 +320,9 @@ where option can be one of:
 - `FORMAT`: Geef de uitvoerindeling op, die TEXT, XML, JSON of YAML kan zijn. Niet-tekstuele uitvoer bevat dezelfde informatie als de indeling voor tekstuitvoer, maar kan gemakkelijker door programma&#39;s worden geparseerd. Deze parameter is standaard ingesteld op `TEXT`.
 - `statement`: Om het even welk `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, of `CREATE MATERIALIZED VIEW AS` verklaring, waarvan uitvoeringsplan u wilt zien.
 
->[!IMPORTANT] Onthoud dat de instructie daadwerkelijk wordt uitgevoerd wanneer de `ANALYZE` optie wordt gebruikt. Hoewel `EXPLAIN` `SELECT` alle uitvoer die een instructie retourneert, wordt genegeerd, treden andere bijwerkingen van de instructie op de gebruikelijke manier op.
+>[!IMPORTANT]
+>
+>Onthoud dat de instructie daadwerkelijk wordt uitgevoerd wanneer de `ANALYZE` optie wordt gebruikt. Hoewel `EXPLAIN` `SELECT` alle uitvoer die een instructie retourneert, wordt genegeerd, treden andere bijwerkingen van de instructie op de gebruikelijke manier op.
 
 #### Voorbeeld
 
