@@ -4,18 +4,21 @@ solution: Experience Platform
 title: Opnamegegevens streamen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1107'
+ht-degree: 0%
 
 ---
 
 
-# Opnamegegevens streamen naar Adobe Experience Platform
+# Recordgegevens streamen naar Adobe Experience Platform
 
-Deze zelfstudie helpt u bij het gebruik van API&#39;s voor streaming ingestie, die onderdeel zijn van de API&#39;s van de Data Ingestie Service van het Adobe Experience Platform.
+Deze zelfstudie helpt u bij het gebruik van streaming opname-API&#39;s, die onderdeel zijn van de API&#39;s van de Adobe Experience Platform Data Ingestie Service.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een praktische kennis van verschillende services van het Adobe Experience Platform. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Deze zelfstudie vereist een praktische kennis van verschillende diensten van de Adobe Experience Platform. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waarmee Platform ervaringsgegevens organiseert.
 - [Klantprofiel](../../profile/home.md)in realtime: Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
@@ -27,21 +30,23 @@ De volgende secties verstrekken extra informatie die u zult moeten weten om met 
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Platform van de Ervaring te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -182,7 +187,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 | -------- | ----------- |
 | `{SCHEMA_REF_ID}` | Het schema `$id` dat u eerder hebt ontvangen toen u het schema samenstelde. Het moet er ongeveer als volgt uitzien: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
->[!NOTE] &#x200B;**naamruimtecodes &#x200B;**
+>[!NOTE]
+>
+>&#x200B;**naamruimtecodes &#x200B;**
 >
 > Controleer of de codes geldig zijn. In het bovenstaande voorbeeld wordt &quot;email&quot; gebruikt, een naamruimte met een standaardidentiteit. Andere veelgebruikte standaardnaamruimten vindt u in de veelgestelde vragen over [identiteitsgegevens](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)van Identiteitsservice.
 >
@@ -212,7 +219,9 @@ Een geslaagde reactie retourneert HTTP-status 201 met informatie over de nieuwe 
 
 Zodra u uw schema hebt gecreeerd, zult u een dataset moeten tot stand brengen om verslaggegevens in te voeren.
 
->[!NOTE] Deze dataset zal voor het Profiel **en de Dienst** van de **Identiteit van de Klant in** real time worden toegelaten.
+>[!NOTE]
+>
+>Deze dataset zal voor het Profiel **en de Dienst** van de **Identiteit van de Klant in** real time worden toegelaten.
 
 **API-indeling**
 
@@ -255,7 +264,7 @@ Een geslaagde reactie retourneert HTTP-status 201 en een array met de id van de 
 
 ## Recordgegevens opnemen in de streamingverbinding
 
-Met de dataset en het stromen verbinding op zijn plaats, kunt u XDM-Geformatteerde JSON- verslagen opnemen om verslaggegevens in Platform in te nemen.
+Met de dataset en het stromen verbinding op zijn plaats, kunt u XDM-Geformatteerde JSON verslagen opnemen om verslaggegevens in Platform in te voeren.
 
 **API-indeling**
 
@@ -270,7 +279,9 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Verzoek**
 
->[!NOTE] Voor de volgende API-aanroep zijn **geen** verificatiekoppen vereist.
+>[!NOTE]
+>
+>Voor de volgende API-aanroep zijn **geen** verificatiekoppen vereist.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -342,7 +353,9 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van het zojuist ge
 
 Als u de eerder opgenomen records wilt valideren, kunt u de API [voor](../../profile/api/entities.md) profieltoegang gebruiken om de recordgegevens op te halen.
 
->[!NOTE] Als de identiteitskaart van het fusiebeleid niet en het schema wordt bepaald.</span>name or relatedSchema</span>.name is `_xdm.context.profile`, zal de Toegang van het Profiel **alle** verwante identiteiten halen.
+>[!NOTE]
+>
+>Als de identiteitskaart van het fusiebeleid niet en het schema wordt bepaald.</span>name or relatedSchema</span>.name is `_xdm.context.profile`, zal de Toegang van het Profiel **alle** verwante identiteiten halen.
 
 **API-indeling**
 
@@ -421,7 +434,7 @@ Een geslaagde reactie retourneert HTTP status 200 met details over de aangevraag
 
 ## Volgende stappen
 
-Door dit document te lezen, begrijpt u nu hoe u recordgegevens via streamingverbindingen in Platform kunt opnemen. U kunt proberen meer vraag met verschillende waarden te maken en de bijgewerkte waarden terug te winnen. Daarnaast kunt u uw ingesloten gegevens controleren via de interface van het platform. Lees voor meer informatie de [handleiding voor het invoeren van](../quality/monitor-data-flows.md) monitoringgegevens.
+Door dit document te lezen, begrijpt u nu hoe u recordgegevens via streamingverbindingen in het Platform kunt opnemen. U kunt proberen meer vraag met verschillende waarden te maken en de bijgewerkte waarden terug te winnen. Bovendien, kunt u beginnen uw ingebedde gegevens door Platform UI te controleren. Lees voor meer informatie de [handleiding voor het invoeren van](../quality/monitor-data-flows.md) monitoringgegevens.
 
 Lees voor meer informatie over streamingopname in het algemeen het overzicht [van](../streaming-ingestion/overview.md)streamingopname.
 
