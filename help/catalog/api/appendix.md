@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Handboek voor ontwikkelaars van catalogusservice
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '908'
+ht-degree: 0%
 
 ---
 
@@ -105,7 +108,9 @@ Het volgende verzoek leidt tot een nieuwe dataset, dan leidt tot verwante mening
 
 Als u bijvoorbeeld wilt verwijzen naar een waarde die is geretourneerd uit een vorige subaanvraag, kunt u een verwijzing maken in de indeling: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (waarbij `{REQUEST_ID}` de door de gebruiker opgegeven id voor het subverzoek is, zoals hieronder wordt getoond). U kunt naar elk kenmerk verwijzen dat beschikbaar is in de hoofdtekst van het reactieobject van een vorige subaanvraag door deze sjablonen te gebruiken.
 
->[!NOTE] Wanneer een uitgevoerde sub-request alleen de verwijzing naar een object retourneert (zoals de standaardinstelling is voor de meeste POST- en PUT-aanvragen in de Catalogus-API), wordt deze verwijzing naar de waarde gealiased `id` en kan deze worden gebruikt als `<<{OBJECT_ID}.id>>`.
+>[!NOTE]
+>
+>Wanneer een uitgevoerde sub-request alleen de verwijzing naar een object retourneert (zoals de standaardinstelling is voor de meeste POST- en PUT-aanvragen in de Catalogus-API), wordt deze verwijzing naar de waarde gealiased `id` en kan deze worden gebruikt als `<<{OBJECT_ID}.id>>`.
 
 ```shell
 curl -X POST \
@@ -140,8 +145,8 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `id` | Door de gebruiker opgegeven id die aan het reactieobject is gekoppeld, zodat u verzoeken aan reacties kunt koppelen. Deze waarde wordt niet in Catalog opgeslagen en in de reactie geretourneerd ter referentie. |
-| `resource` | Het bronnenpad ten opzichte van de hoofdmap van de catalogus-API. Het protocol en domein moeten geen deel uitmaken van deze waarde en moeten worden voorafgegaan door &quot;/&quot;. <br/><br/> Wanneer u PATCH of DELETE gebruikt als de subaanvraag `method`, neemt u de object-id op in het bronnenpad. Om niet met user-provided te worden verward `id`, gebruikt de middelweg identiteitskaart van het voorwerp van de Catalogus zelf (bijvoorbeeld, `resource: "/dataSets/1234567890"`). |
-| `method` | De naam van de methode (GET, PUT, POST, PATCH of DELETE) die betrekking heeft op de handeling die plaatsvindt in de aanvraag. |
+| `resource` | Het bronnenpad ten opzichte van de hoofdmap van de catalogus-API. Het protocol en domein moeten geen deel uitmaken van deze waarde en moeten worden voorafgegaan door &quot;/&quot;. <br/><br/> Wanneer het gebruiken van PATCH of DELETE als sub-request `method`, omvat objecten identiteitskaart in de middelweg. Om niet met user-provided te worden verward `id`, gebruikt de middelweg identiteitskaart van het voorwerp van de Catalogus zelf (bijvoorbeeld, `resource: "/dataSets/1234567890"`). |
+| `method` | De naam van de methode (GET, PUT, POST, PATCH of DELETE) die betrekking heeft op de actie die in de aanvraag wordt uitgevoerd. |
 | `body` | Het JSON-document dat normaal gesproken zou worden doorgegeven als de lading in een POST-, PUT- of PATCH-aanvraag. Deze eigenschap is niet vereist voor GET- of DELETE-aanvragen. |
 
 **Antwoord**
@@ -187,6 +192,6 @@ Soms wilt u een object valideren zonder de informatie op te slaan. Als u de `Pra
 
 ## Gegevenscompressie
 
-Compaction is een service van het Experience Platform die gegevens uit kleine bestanden samenvoegt tot grotere bestanden zonder gegevens te wijzigen. Om prestatieredenen is het soms nuttig om een set kleine bestanden te combineren in grotere bestanden, zodat u sneller toegang hebt tot gegevens wanneer u hierom wordt gevraagd.
+Compaction is een service van het Experience Platform die gegevens uit kleine bestanden samenvoegt tot grotere bestanden zonder dat gegevens worden gewijzigd. Om prestatieredenen is het soms nuttig om een set kleine bestanden te combineren in grotere bestanden, zodat u sneller toegang hebt tot gegevens wanneer u hierom wordt gevraagd.
 
 Wanneer de bestanden in een geneste batch zijn gecomprimeerd, wordt het bijbehorende Catalog-object bijgewerkt voor controledoeleinden.
