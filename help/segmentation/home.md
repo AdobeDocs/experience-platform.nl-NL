@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Segmenteringsservice Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2386'
 ht-degree: 0%
@@ -40,13 +40,15 @@ Leren om segmenten in de Bouwer van het Segment (de implementatie UI van de Dien
 
 Voor informatie over het bouwen van segmentdefinities die API gebruiken, zie de zelfstudie over het [creëren van publiekssegmenten gebruikend API](./tutorials/create-a-segment.md).
 
->[!NOTE] Als een schema wordt uitgebreid, moeten alle toekomstige uploads nieuwe toegevoegde gebieden dienovereenkomstig bijwerken. Voor meer informatie bij het aanpassen van het Model van de Gegevens van de Ervaring (XDM), bezoek het [Zelfstudie](../xdm/tutorials/create-schema-ui.md)van de Redacteur van het Schema.
+>[!NOTE]
+>
+>Als een schema wordt uitgebreid, moeten alle toekomstige uploads nieuwe toegevoegde gebieden dienovereenkomstig bijwerken. Voor meer informatie bij het aanpassen van het Model van de Gegevens van de Ervaring (XDM), bezoek het [Zelfstudie](../xdm/tutorials/create-schema-ui.md)van de Redacteur van het Schema.
 
 ## Segmenten evalueren
 
 ### Streaming segmentering
 
-Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan het Profiel van de Klant in real time. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat uw doelgroep relevant blijft.
+Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan het Profiel van de Klant in real time. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
 
 Lees de documentatie over [](./api/streaming-segmentation.md)streamingsegmentatie voor meer informatie over streamingsegmentatie.
 
@@ -70,14 +72,18 @@ Het samenstellen van uw segmenten (door of API of de Bouwer van het Segment) ver
 
 Wanneer u een nieuw segment maakt, moet u een segmentnaam opgeven. De segmentnaam wordt gebruikt om een bepaald segment onder de inzameling te identificeren die door de Dienst van de Segmentatie wordt gebouwd. Segmentnamen moeten daarom beschrijvend, beknopt en uniek zijn.
 
->[!NOTE] Wanneer het plannen van een segment, herinner dat de segmenten van, en gecombineerd met, een ander segment kunnen worden van verwijzingen voorzien. Houd er bij het selecteren van een naam rekening mee dat uw segment herbruikbare gedeelten kan bevatten.
+>[!NOTE]
+>
+>Wanneer het plannen van een segment, herinner dat de segmenten van, en gecombineerd met, een ander segment kunnen worden van verwijzingen voorzien. Houd er bij het selecteren van een naam rekening mee dat uw segment herbruikbare gedeelten kan bevatten.
 
 ### Beleid samenvoegen
 
 Het beleid van de fusie is regels die door Profiel worden gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en in een verenigde mening onder bepaalde voorwaarden zullen worden gecombineerd.
 Als er geen samenvoegbeleid is gedefinieerd, wordt het standaardsamenvoegbeleid voor Platforms gebruikt. Als u liever een samenvoegingsbeleid wilt gebruiken dat specifiek is voor uw organisatie, kunt u uw eigen beleid maken en dit markeren als de standaardinstelling van uw organisatie.
 
->[!NOTE] De schatting van de omvang van het publiek is gebaseerd op het standaardbeleid voor het samenvoegen van profielen van de organisatie.
+>[!NOTE]
+>
+>De schatting van de omvang van het publiek is gebaseerd op het standaardbeleid voor het samenvoegen van profielen van de organisatie.
 
 ### Andere segmentmetagegevens
 
@@ -138,7 +144,9 @@ De middelen van de gegevensarchitect omvatten toegang tot Webgegevens van klant 
 
 **De oplossing**
 
->[!NOTE] In dit voorbeeld gaan we ervan uit dat de gegevensarchitect al een id-naamruimte heeft ingesteld.
+>[!NOTE]
+>
+>In dit voorbeeld gaan we ervan uit dat de gegevensarchitect al een id-naamruimte heeft ingesteld.
 
 Met behulp van de API koppelt de gegevensarchitect de sleutel van het ExperienceEvent-schema aan de &quot;products&quot;-klasse. Dit staat de gegevensarchitect toe om van de extra gebieden van de &quot;producten&quot;klasse gebruik te maken alsof zij aan het schema ExperienceEvent inheems zijn. Als laatste stap van het configuratiewerk, moet de gegevensarchitect de aangewezen gegevens in het Profiel van de Klant in real time brengen. Dit wordt gedaan door de &quot;producten&quot;dataset voor gebruik met Profiel toe te laten. Met het configuratiewerk volledig, of de gegevensarchitect of de telleraar kan het doelsegment in de Bouwer van het Segment bouwen.
 
@@ -214,7 +222,7 @@ Als Adobe Experience Platform schema, registreert XDM ExperienceEvents expliciet
 
 Zoals in de onderstaande tabel wordt getoond, worden gebeurtenisgegevens weergegeven met behulp van trefwoorden die het gedrag van gebeurtenissen verfijnen en gebeurteniskenmerken opgeven.
 
-| Trefwoord | Gebruiken |
+| Trefwoord | Gebruik |
 | ------- | --- |
 | Opnemen/uitsluiten | Beschrijft het gedrag van de gebeurtenis door het opnemen of weglaten van gegevens. |
 | Alle | Helpt het aantal in aanmerking komende segmenten te bepalen. |
