@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Beleid voor gegevensgebruik afdwingen met de API voor beleidsservice
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 0%
@@ -16,7 +16,9 @@ ht-degree: 0%
 
 Zodra u de etiketten van het gegevensgebruik voor uw gegevens hebt gecreeerd, en gebruiksbeleid voor marketing acties tegen die etiketten hebt gecreeerd, kunt u de [DULE Dienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) van het Beleid gebruiken om te evalueren of een marketing actie die op een dataset of een willekeurige groep etiketten wordt uitgevoerd een beleidsschending vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie.
 
->[!NOTE] Door gebrek, slechts `ENABLED` kan het beleid waarvan status aan evaluatie wordt geplaatst deelnemen. Om `DRAFT` beleid toe te staan om aan evaluatie deel te nemen, moet u de vraagparameter `includeDraft=true` in de verzoekweg omvatten.
+>[!NOTE]
+>
+>Door gebrek, slechts `ENABLED` kan het beleid waarvan status aan evaluatie wordt geplaatst deelnemen. Om `DRAFT` beleid toe te staan om aan evaluatie deel te nemen, moet u de vraagparameter `includeDraft=true` in de verzoekweg omvatten.
 
 Dit document bevat stappen voor het controleren op beleidsovertredingen in verschillende scenario&#39;s met behulp van de [!DNL Policy Service] API.
 
@@ -51,7 +53,9 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 In het volgende verzoek wordt de `exportToThirdParty` marketingactie getest op labels `C1` en `C3`. Aangezien het gegevensgebruiksbeleid u eerder in deze zelfstudie creeerde het `C1` etiket als één van de `deny` voorwaarden in zijn beleidsuitdrukking definieert, zou de marketing actie een beleidsschending moeten teweegbrengen.
 
->[!NOTE] Labels voor gegevensgebruik zijn hoofdlettergevoelig. Beleidsovertredingen treden alleen op wanneer de labels die in de beleidsuitdrukkingen worden gedefinieerd, exact overeenkomen. In dit voorbeeld zou een `C1` label een schending veroorzaken, maar een `c1` label niet.
+>[!NOTE]
+>
+>Labels voor gegevensgebruik zijn hoofdlettergevoelig. Beleidsovertredingen treden alleen op wanneer de labels die in de beleidsuitdrukkingen worden gedefinieerd, exact overeenkomen. In dit voorbeeld zou een `C1` label een schending veroorzaken, maar een `c1` label niet.
 
 ```shell
 curl -X GET \
