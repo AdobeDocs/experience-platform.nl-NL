@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van de Data Science Workspace
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2569'
 ht-degree: 0%
@@ -14,29 +14,29 @@ ht-degree: 0%
 
 # Overzicht van de Data Science Workspace
 
-Adobe Experience Platform [!DNL Data Science Workspace] gebruikt machinaal leren en kunstmatige intelligentie om inzichten van uw gegevens te ontketenen. Met de functie die in Adobe Experience Platform is geïntegreerd, kunt u [!DNL Data Science Workspace] voorspellingen maken met uw inhoud en gegevenselementen voor alle Adobe-oplossingen.
+Adobe Experience Platform [!DNL Data Science Workspace] gebruikt machinaal leren en kunstmatige intelligentie om inzichten van uw gegevens te ontketenen. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions.
 
-Gegevenswetenschappers van alle vaardigheidsniveaus zullen geavanceerde, makkelijk te gebruiken hulpmiddelen vinden die snelle ontwikkeling, opleiding, en het stemmen van machine het leren recepten steunen - alle voordelen van AI technologie, zonder de ingewikkeldheid.
+Data scientists of all skill levels will find sophisticated, easy-to-use tools that support rapid development, training, and tuning of machine learning recipes - all the benefits of AI technology, without the complexity.
 
 Met [!DNL Data Science Workspace]behulp van computers kunnen gegevenswetenschappers eenvoudig intelligente services-API&#39;s maken. Deze services werken samen met andere Adobe-services, waaronder Adobe Target en Adobe Analytics Cloud, om u te helpen persoonlijke, doelgerichte digitale ervaringen te automatiseren voor web-, desktop- en mobiele apps.
 
-Deze handleiding geeft een overzicht van de belangrijkste concepten die betrekking hebben op [!DNL Data Science Workspace].
+This guide provides an overview the key concepts related to [!DNL Data Science Workspace].
 
 ## Inleiding
 
-De onderneming van vandaag plaatst een hoge prioriteit op het ontginnen van grote gegevens voor voorspellingen en inzichten die hen zullen helpen klantenervaringen personaliseren en meer waarde aan klanten - en aan de zaken leveren.
-Hoe belangrijk het ook is, het overstappen van gegevens naar inzichten kan hoge kosten met zich meebrengen. Meestal vereist het deskundige gegevenswetenschappers die intensief en tijdrovend gegevensonderzoek uitvoeren om machinaal leermodellen te ontwikkelen, of recepten, die intelligente diensten aandrijven. Het proces is lang, de technologie is complex, en deskundige gegevenswetenschappers kunnen moeilijk te vinden zijn.
+Today&#39;s enterprise puts a high priority on mining big data for predictions and insights that will help them personalize customer experiences and deliver more value to customers - and to the business.
+As important as it is, getting from data to insights can come at a high cost. It typically requires skilled data scientists who conduct intensive and time-consuming data research to develop machine-learning models, or recipes, which power intelligent services. Het proces is lang, de technologie is complex, en deskundige gegevenswetenschappers kunnen moeilijk te vinden zijn.
 
-Met [!DNL Data Science Workspace]Adobe Experience Platform kunt u op ervaring gerichte AI in de hele onderneming introduceren, en gegevens-tot-inzichten-aan-code stroomlijnen en versnellen met:
+With [!DNL Data Science Workspace], Adobe Experience Platform allows you to bring experience-focused AI across the enterprise, streamlining and accelerating data-to-insights-to-code with:
 - Een framework voor machinetlering en runtime
 - Geïntegreerde toegang tot uw gegevens die in Adobe Experience Platform worden opgeslagen
 - Geïntegreerd gegevensschema gebaseerd op [!DNL Experience Data Model] (XDM)
 - De verwerkingskracht die essentieel is voor het leren van machines/AI en het beheren van grote datasets
-- Prebuilt machine het leren recepten om de sprong in AI gedreven ervaringen te versnellen
+- Prebuilt machine learning recipes to accelerate the leap into AI-driven experiences
 - Vereenvoudigd ontwerp, hergebruik en wijziging van recepten voor gegevenswetenschappers met verschillende vaardigheidsniveaus
-- Intelligente het de dienstpubliceren en delen in slechts een paar klikken - zonder een ontwikkelaar - en controle en herscholing voor ononderbroken optimalisering van gepersonaliseerde klantenervaringen
+- Intelligent service publishing and sharing in just a few clicks - without a developer - and monitoring and retraining for continuous optimization of personalized customer experiences
 
-Gegevenswetenschappers van alle vaardigheidsniveaus zullen sneller en effectievere digitale ervaringen bereiken.
+Data scientists of all skill levels will achieve insights faster and more effective digital experiences sooner.
 
 ## Aan de slag
 
@@ -83,13 +83,13 @@ U kunt desgewenst een vooraf samengesteld recept aanpassen aan uw behoeften, een
 
 Ongeacht uw expertise op het gebied van gegevenswetenschap [!DNL Data Science Workspace] helpt u het zoeken naar inzichten in gegevens te vereenvoudigen en te versnellen en deze toe te passen op digitale ervaringen.
 
-### Gegevensexploratie
+### Data exploration
 
-Het vinden van de juiste gegevens en het voorbereiden ervan is het meest arbeidsintensieve onderdeel van het opbouwen van een effectief recept. [!DNL Data Science Workspace] en Adobe Experience Platform helpen u sneller van gegevens tot inzichten te komen.
+Finding the right data and preparing it is the most labor-intensive part of building an effective recipe. [!DNL Data Science Workspace] and Adobe Experience Platform will help you get from data to insights more quickly.
 
-Op Adobe Experience Platform, zijn uw dwars-kanaalgegevens gecentraliseerd en opgeslagen in het gestandaardiseerde XDM schema, zodat zijn de gegevens gemakkelijker te vinden, te begrijpen en schoon. Één enkele opslag van gegevens die op een gemeenschappelijk schema worden gebaseerd kan u ontelbare uren van gegevensexploratie en voorbereiding besparen.
+On Adobe Experience Platform, your cross-channel data is centralized and stored in the XDM standardized schema, so data is easier to find, understand, and clean. Één enkele opslag van gegevens die op een gemeenschappelijk schema worden gebaseerd kan u ontelbare uren van gegevensexploratie en voorbereiding besparen.
 
-Terwijl u bladert, gebruikt u R, [!DNL Python]of Scala met de geïntegreerde, gehoste [!DNL Jupyter Notebook] versie om door de gegevenscatalogus te bladeren [!DNL Platform]. Als u een van deze talen gebruikt, kunt u ook gebruikmaken van [!DNL Spark] ML en TensorFlow. Begin helemaal opnieuw of gebruik een van de laptopsjablonen voor specifieke bedrijfsproblemen.
+As you browse, use R, [!DNL Python], or Scala with the integrated, hosted [!DNL Jupyter Notebook] to browse the catalog of data on [!DNL Platform]. Using one of these languages, you can also take advantage of [!DNL Spark] ML and TensorFlow. Begin helemaal opnieuw of gebruik een van de laptopsjablonen voor specifieke bedrijfsproblemen.
 
 Als onderdeel van de workflow voor gegevensverkenning kunt u ook nieuwe gegevens invoeren of bestaande functies gebruiken voor de voorbereiding van gegevens.
 
@@ -97,7 +97,7 @@ Als onderdeel van de workflow voor gegevensverkenning kunt u ook nieuwe gegevens
 
 Met [!DNL Data Science Workspace], beslist u hoe u recepten wilt ontwerpen.
 
-- Bespaar tijd door te bladeren naar een vooraf samengesteld recept dat aan uw bedrijfsbehoeften voldoet, dat u kunt gebruiken zoals is of vormen om aan uw specifieke vereisten te voldoen.
+- Save time by browsing for a prebuilt recipe that addresses your business needs, which you can use as is or configure to meet your specific requirements.
 - Maak een geheel nieuw recept en gebruik de ontwerpruntime in Jupyter Notebook om het recept te ontwikkelen en te registreren.
 - Upload een recept dat buiten het Adobe Experience Platform is geschreven naar [!DNL Data Science Workspace] of importeer recept-code uit een opslagplaats, bijvoorbeeld [!DNL Git]met de verificatie en integratie die beschikbaar zijn tussen [!DNL Git] en [!DNL Data Science Workspace].
 
@@ -123,7 +123,9 @@ Gegevenswetenschappers kunnen profiteren van nieuwe technologieën en datasets z
 
 Toegangsbeheer voor [!DNL Experience Platform] wordt beheerd via de [Adobe-Admin Console](https://adminconsole.adobe.com). Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden. Zie het [toegangsbeheeroverzicht](../access-control/home.md) voor meer informatie.
 
->[!IMPORTANT] U kunt alleen [!DNL Data Science Workspace]de machtiging [!UICONTROL &quot;Data Science Workspace beheren&quot;] gebruiken als deze is ingeschakeld.
+>[!IMPORTANT]
+>
+>U kunt alleen [!DNL Data Science Workspace]de machtiging [!UICONTROL &quot;Data Science Workspace beheren&quot;] gebruiken als deze is ingeschakeld.
 
 In de volgende tabel worden de effecten weergegeven van het inschakelen of uitschakelen van deze machtiging:
 
@@ -140,11 +142,11 @@ Ga naar de beveiligingspagina op https://www.adobe.com/security.html voor meer i
 
 ### Sandbox-ondersteuning
 
-Sandboxen zijn virtuele partities binnen één exemplaar van [!DNL Experience Platform]. Elke [!DNL Platform] instantie ondersteunt één productiesandbox en meerdere niet-productiesandboxen, elk met behoud van zijn eigen bibliotheek met [!DNL Platform] bronnen. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op de productiesandbox. Zie het [sandboxoverzicht](../sandboxes/home.md)voor meer informatie over sandboxen.
+Sandboxen zijn virtuele partities binnen één exemplaar van [!DNL Experience Platform]. Each [!DNL Platform] instance supports one production sandbox and multiple non-production sandboxes, each maintaining its own library of [!DNL Platform] resources. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op de productiesandbox. Zie het [sandboxoverzicht](../sandboxes/home.md)voor meer informatie over sandboxen.
 
 Er [!DNL Data Science Workspace] gelden momenteel enkele beperkingen voor sandboxen:
 
-- Compute resources worden gedeeld door de productiesandbox en niet-productiesandboxen. De isolatie voor productiesandboxen is in de toekomst gepland.
+- Compute resources are shared across the production sandbox and non-production sandboxes. De isolatie voor productiesandboxen is in de toekomst gepland.
 - De werklasten voor Scala/[!DNL Spark] en PySpark voor zowel laptops als recepten worden momenteel alleen ondersteund in de productiesandbox. In de toekomst zal steun worden verleend voor niet-productiesandboxen.
 
 ## [!DNL Data Science Workspace] in actie
