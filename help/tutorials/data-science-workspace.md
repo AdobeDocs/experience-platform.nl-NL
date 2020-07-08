@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Zelfstudies over de werkruimte voor gegevenswetenschap
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 0%
@@ -25,7 +25,7 @@ De Sensei Machine Learning-API biedt een mechanisme voor gegevenswetenschappers 
 **De volgende API-ontwikkelaarshulplijnen zijn beschikbaar:**
 - [De motoren](../data-science-workspace/api/engines.md) - leren hoe te om uw registratie van het Docker op te zoeken, een Motor tot stand te brengen, een motor van de eigenschappijpleiding tot stand te brengen, de informatie voor een Motor terug te winnen, een Motor bij te werken, en een Motor te schrappen.
 - [MLInstances (recepten)](../data-science-workspace/api/mlinstances.md) - Leer hoe te om een MLInstance tot stand te brengen, de informatie voor een MLInstance terug te winnen, een MLInstance bij te werken, en een MLInstance te schrappen.
-- [Experimenten](../data-science-workspace/api/experiments.md) - Leer hoe u een expert maakt, informatie ophaalt over een expert of een expert op het gebied van experimenten, een experiment bijwerkt en een experiment verwijdert.
+- [Experimenten](../data-science-workspace/api/experiments.md) - Leer hoe u een expert maakt, informatie ophaalt over een expert of een expert die op dit gebied actief is, een experiment bijwerkt en een experiment verwijdert.
 - [Modellen](../data-science-workspace/api/models.md) - Leer hoe u uw eigen model registreert, de informatie voor een model ophaalt, een model bijwerkt, een model verwijdert, een nieuwe transcodering voor een model maakt en de details van een getranscodeerd model ophaalt.
 - [MLServices](../data-science-workspace/api/mlservices.md) - Leer hoe u een MLService kunt maken, de informatie voor een dienst MLService terugwinnen, een dienst MLService bijwerken, en een dienst MLService schrappen.
 - [Inzichten](../data-science-workspace/api/insights.md) - Leer hoe te om de informatie voor een Inzicht terug te winnen, een nieuw ModelInzicht toe te voegen, en een lijst van standaardmetriek voor algoritmen terug te winnen.
@@ -60,6 +60,8 @@ Voor meer informatie volgt u de bronbestanden van het [pakket in een recept-zelf
 ## Een recept importeren
 
 >[!NOTE]
+>
+>
 >Deze zelfstudie vereist dat u een URL voor het bronbestand Docker hebt. Bezoek de bronbestanden van het [pakket in een recept-zelfstudie](../data-science-workspace/models-recipes/package-source-files-recipe.md) als u geen URL voor het bronbestand Docker hebt.
 
 De zelfstudies over het importrecept bieden inzicht in het configureren en importeren van een verpakt recept. Aan het einde van deze zelfstudie kunt u een model maken, trainen en evalueren in de Adobe Experience Platform Data Science Workspace.
