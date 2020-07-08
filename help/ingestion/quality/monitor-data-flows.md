@@ -4,24 +4,27 @@ solution: Experience Platform
 title: Inname van gegevens controleren
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '530'
+ht-degree: 0%
 
 ---
 
 
 # Inname van gegevens controleren
 
-Met gegevensinvoer kunt u uw gegevens opnemen in het Adobe Experience Platform. U kunt batch-opname gebruiken, waarmee u gegevens kunt invoegen met behulp van verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u uw gegevens kunt opnemen in Platform met streaming eindpunten in real-time.
+Met gegevensinvoer kunt u uw gegevens aan het Adobe Experience Platform toevoegen. U kunt batch-opname gebruiken, waarmee u gegevens kunt invoegen met behulp van verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u uw gegevens in real-time kunt invoeren in het Platform met streaming eindpunten.
 
-Deze gebruikershandleiding bevat een aantal stappen voor het controleren van uw gegevens in de gebruikersinterface van het Adobe Experience Platform. Voor deze handleiding hebt u een Adobe-id nodig en hebt u toegang tot het Adobe Experience Platform.
+Deze gebruikershandleiding bevat een aantal stappen voor het controleren van gegevens binnen de gebruikersinterface van het Adobe Experience Platform. Deze gids vereist u een Adobe ID en toegang tot Adobe Experience Platform hebben.
 
 ## Doorlopende gegevensinvoer controleren
 
-In de UI [van het Platform van de](https://platform.adobe.com)Ervaring, klik **Controle** op het linkernavigatiemenu, dan klik het **Streamen van begin tot eind**.
+Klik in de gebruikersinterface [van het](https://platform.adobe.com)Experience Platform op **Controle** in het linkernavigatiemenu en klik vervolgens op **Streaming van begin tot eind**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-De *overzichtspagina voor streaming van begin tot einde* wordt weergegeven. Deze werkruimte verstrekt een grafiek die het tarief van gestreamde gebeurtenissen toont die door Platform worden ontvangen, een grafiek die het tarief van gestroomde gebeurtenissen toont die met succes door het Profiel [van de Klant in](../../profile/home.md)real time, evenals een gedetailleerde lijst van inkomende gegevens werden verwerkt.
+De *overzichtspagina voor streaming van begin tot einde* wordt weergegeven. Deze werkruimte verstrekt een grafiek die het tarief van gestreamde gebeurtenissen toont die door Platform worden ontvangen, een grafiek die het tarief van gestroomde gebeurtenissen toont die met succes door het Profiel [van de Klant in](../../profile/home.md)real time werden verwerkt, evenals een gedetailleerde lijst van inkomende gegevens.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -31,7 +34,9 @@ Standaard toont de bovenste grafiek de mate van inname in de afgelopen zeven dag
 
 In de onderste grafiek ziet u de snelheid van gestreamde gebeurtenissen die in de afgelopen zeven dagen zijn verwerkt door Profile. U kunt dit datumbereik aanpassen om verschillende tijdsperioden weer te geven door op de gemarkeerde knop te klikken.
 
-> [!NOTE] Gegevens die in deze grafiek worden weergegeven, moeten **expliciet** zijn ingeschakeld voor Profiel. Leer hoe te om het stromen gegevens voor Profiel toe te laten, lees de [datasets gebruikersgids](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>[!NOTE]
+>
+>Gegevens die in deze grafiek worden weergegeven, moeten **expliciet** zijn ingeschakeld voor Profiel. Leer hoe te om het stromen gegevens voor Profiel toe te laten, lees de [datasets gebruikersgids](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
@@ -55,7 +60,7 @@ Bovendien bevatten mislukte records details over de fouten die zijn opgetreden t
 
 ## Gegevens van begin tot einde bijhouden in batch
 
-Klik in de gebruikersinterface [van het](https://platform.adobe.com)ervaringsplatform op **Controle** in het linkernavigatiemenu.
+Klik in de gebruikersinterface [van het](https://platform.adobe.com)Experience Platform op **Controle** in het linkernavigatiemenu.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
