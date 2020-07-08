@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een recept maken met Jupyter-laptops
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 0%
@@ -30,6 +30,8 @@ U kunt een geheel nieuw recept maken [!DNL Data Science Workspace]. Navigeer naa
 Met de [!UICONTROL Recipe Builder] -laptop kunt u trainingen en scoring uitvoeren in de laptop. Dit geeft u de flexibiliteit om veranderingen in hun `train()` en `score()` methodes tussen het runnen van experimenten op de opleiding en het scoren gegevens aan te brengen. Als u tevreden bent met de resultaten van de training en scoring, kunt u een recept maken dat u kunt gebruiken voor het [!DNL Data Science Workspace] gebruik van de laptop om de in de Recipe Builder-laptop ingebouwde functionaliteit voor recept te verkrijgen.
 
 >[!NOTE]
+>
+>
 >De Recipe Builder-laptop biedt ondersteuning voor het werken met alle bestandsindelingen, maar momenteel wordt de functie Ontvanger maken alleen ondersteund [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
@@ -46,7 +48,9 @@ Als u de receptenbestanden wilt bewerken, navigeert u naar de cel in Jupyter die
 
 Breng de benodigde wijzigingen in de cel aan en voer de cel uit als u klaar bent. Met de `%%writefile filename.py` opdracht wordt de inhoud van de cel naar de cel geschreven `filename.py`. U moet de cel voor elk bestand met wijzigingen handmatig uitvoeren.
 
->[!NOTE] U moet de cellen indien nodig handmatig uitvoeren.
+>[!NOTE]
+>
+>U moet de cellen indien nodig handmatig uitvoeren.
 
 ## Ga aan de slag met de Recipe Builder-laptop
 
@@ -73,6 +77,8 @@ data_access_sdk_python
 ```
 
 >[!NOTE]
+>
+>
 >Bibliotheken of specifieke versies die u toevoegt, zijn mogelijk niet compatibel met de bovenstaande bibliotheken.
 
 ### Configuratiebestanden {#configuration-files}
@@ -115,6 +121,8 @@ In deze stap wordt het dataframe van de [pandas gebruikt](https://pandas.pydata.
 - [Externe bronnen](#external-sources)
 
 >[!NOTE]
+>
+>
 >In de Recipe Builder-laptop worden gegevens geladen via de `platform_sdk` gegevenslader.
 
 ### [!DNL Platform] SDK {#platform-sdk}
@@ -144,6 +152,8 @@ Uw gegevens bevinden zich nu in het dataframe-object en kunnen in de [volgende s
 ### Van SDK voor gegevenstoegang (afgekeurd)
 
 >[!CAUTION]
+>
+>
 > `data_access_sdk_python` wordt niet meer aanbevolen. Zie [Gegevenstoegangscode converteren naar Platform SDK](../authoring/platform-sdk.md) voor een handleiding over het gebruik van de `platform_sdk` gegevenslader.
 
 Gebruikers kunnen gegevens laden met de SDK voor gegevenstoegang. De bibliotheek kan boven aan de pagina worden geïmporteerd door de volgende regel op te nemen:
@@ -162,6 +172,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
+>
+>
 >Zoals vermeld in de sectie [van het Dossier van de](#configuration-files)Configuratie, worden de volgende configuratieparameters geplaatst voor u wanneer u tot gegevens van toegang hebt [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
@@ -262,7 +274,7 @@ return df
 
 Aangezien het doel van ons model de toekomstige wekelijkse verkoop moet voorspellen, zult u een het scoren dataset moeten creëren die wordt gebruikt om te evalueren hoe goed de voorspelling van het model presteert.
 
-Dit doet de Recipe Builder-laptop door onze wekelijkse verkoop 7 dagen vooruit te compenseren. U ziet dat er elke week metingen worden uitgevoerd voor 45 winkels, zodat u de `weeklySales` waarden 45 gegevenssets kunt verplaatsen naar een nieuwe kolom met de naam `weeklySalesAhead`.
+Dit doet de Recipe Builder-laptop door onze wekelijkse verkoop 7 dagen vooruit te compenseren. U ziet dat er elke week metingen worden uitgevoerd voor 45 winkels, zodat u de `weeklySales` waarden 45 gegevenssets naar een nieuwe kolom kunt verplaatsen, de zogenaamde `weeklySalesAhead`kolom.
 
 ```PYTHON
 df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
@@ -291,7 +303,9 @@ Het `pipeline.py` bestand bevat logica voor training en scoring.
 
 Het doel van opleiding is een model te creëren gebruikend eigenschappen en etiketten in uw opleidingsdataset.
 
->[!NOTE]\
+>[!NOTE]
+>
+> 
 >_Functies_ verwijzen naar de invoervariabele die door het model voor machinaal leren wordt gebruikt om de _labels_ te voorspellen.
 
 De `train()` functie moet het trainingsmodel bevatten en het getrainde model retourneren. Sommige voorbeelden van verschillende modellen zijn te vinden in de documentatie [van de](https://scikit-learn.org/stable/user_guide.html)handleiding van scikit-learn.
