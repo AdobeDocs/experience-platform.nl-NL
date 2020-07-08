@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Bepaal een verband tussen twee schema's gebruikend de Registratie API van het Schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 7e867ee12578f599c0c596decff126420a9aca01
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1504'
+ht-degree: 0%
 
 ---
 
@@ -20,10 +23,10 @@ Dit document biedt een zelfstudie voor het definiëren van een een-op-een relati
 
 Deze zelfstudie vereist een goed begrip van het Model van de Gegevens van de Ervaring (XDM) en het Systeem XDM. Lees de volgende documentatie voordat u met deze zelfstudie begint:
 
-* [XDM-systeem in ervaringsplatform](../home.md): Een overzicht van XDM en zijn implementatie in het Platform van de Ervaring.
+* [XDM-systeem in Experience Platform](../home.md): Een overzicht van XDM en zijn implementatie in Experience Platform.
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Een inleiding van de bouwstenen van schema&#39;s XDM.
 * [Klantprofiel](../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [Sandboxen](../../sandboxes/home.md): Het ervaringsplatform biedt virtuele sandboxen die één enkele instantie Platform in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 Voordat u met deze zelfstudie begint, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de API voor schemaregistratie te kunnen uitvoeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
 
@@ -53,7 +56,9 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
->[!NOTE] De koptekst Accepteren `application/vnd.adobe.xed-id+json` retourneert alleen de titels, id&#39;s en versies van de resulterende schema&#39;s.
+>[!NOTE]
+>
+>De koptekst Accepteren `application/vnd.adobe.xed-id+json` retourneert alleen de titels, id&#39;s en versies van de resulterende schema&#39;s.
 
 **Antwoord**
 
@@ -101,7 +106,9 @@ Registreer de `$id` waarden van de twee schema&#39;s u een verhouding tussen wil
 
 Binnen de Registratie van het Schema, werken de relatiebeschrijvers gelijkaardig aan buitenlandse sleutels in SQL lijsten: Een veld in het bronschema fungeert als een verwijzing naar een veld in een doelschema. Wanneer het bepalen van een verhouding, moet elk schema een specifiek gebied hebben dat als verwijzing naar het andere schema moet worden gebruikt.
 
->[!IMPORTANT] Als de schema&#39;s voor gebruik in het Profiel [van de Klant in](../../profile/home.md)real time moeten worden toegelaten, moet het verwijzingsgebied voor het bestemmingsschema zijn zijn **primaire identiteit**. Dit wordt nader uitgelegd in deze zelfstudie.
+>[!IMPORTANT]
+>
+>Als de schema&#39;s voor gebruik in het Profiel [van de Klant in](../../profile/home.md)real time moeten worden toegelaten, moet het verwijzingsgebied voor het bestemmingsschema zijn zijn **primaire identiteit**. Dit wordt nader uitgelegd in deze zelfstudie.
 
 Als één van beide schema&#39;s geen gebied voor dit doel heeft, kunt u een mengeling met het nieuwe gebied moeten tot stand brengen en het toevoegen aan het schema. Dit nieuwe veld moet de `type` waarde &quot;string&quot; hebben.
 
@@ -323,7 +330,9 @@ Een succesvolle reactie retourneert de details van het bijgewerkte schema, dat n
 
 ## Primaire identiteitsvelden definiëren voor beide schema&#39;s
 
->[!NOTE] Deze stap is alleen vereist voor schema&#39;s die zijn ingeschakeld voor gebruik in het [realtime profiel](../../profile/home.md)van de klant. Als u of schema niet aan een unie wilt deelnemen, of als uw schema&#39;s reeds primaire bepaalde identiteiten hebben, kunt u aan de volgende stap overslaan van het [creëren van een beschrijver](#create-descriptor) van de verwijzingsidentiteit voor het bestemmingsschema.
+>[!NOTE]
+>
+>Deze stap is alleen vereist voor schema&#39;s die zijn ingeschakeld voor gebruik in het [realtime profiel](../../profile/home.md)van de klant. Als u of schema niet aan een unie wilt deelnemen, of als uw schema&#39;s reeds primaire bepaalde identiteiten hebben, kunt u aan de volgende stap overslaan van het [creëren van een beschrijver](#create-descriptor) van de verwijzingsidentiteit voor het bestemmingsschema.
 
 Om schema&#39;s voor gebruik in het Profiel van de Klant in real time te kunnen worden toegelaten, moeten zij een primaire bepaalde identiteit hebben. Bovendien moet het bestemmingsschema van een verhouding zijn primaire identiteit als zijn verwijzingsgebied gebruiken.
 
