@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Bronbestanden in een recept plaatsen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1097'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Selecteer de juiste *runtime* en kies een **[!UICONTROL classificatie]** voor *T
 Maak een notitie van de waarden voor *Docker Host*, *Gebruikersnaam* en *Wachtwoord*. Deze worden gebruikt om uw [!DNL Docker] afbeelding samen te stellen en te duwen in de hieronder beschreven workflows.
 
 >[!NOTE]
->De bron-URL wordt opgegeven nadat de hieronder beschreven stappen zijn uitgevoerd. Het configuratiebestand wordt uitgelegd in volgende zelfstudies in de [volgende stappen](#next-steps).
+>De URL van de bron wordt opgegeven nadat de hieronder beschreven stappen zijn uitgevoerd. Het configuratiebestand wordt uitgelegd in volgende zelfstudies in de [volgende stappen](#next-steps).
 
 ### De bronbestanden verpakken
 
@@ -169,7 +169,7 @@ Begin door de [!DNL GitHub] opslagplaats op uw lokale systeem met het volgende b
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigeer vervolgens naar de map `experience-platform-dsw-reference/recipes/scala/retail` waar u de scripts `login.sh` en `build.sh`. Deze scripts worden gebruikt om u aan te melden bij Docker en de Docker-afbeelding te maken. Als u uw geloofsbrieven [van het](#docker-based-model-authoring) Docker klaar hebt, ga de volgende bevelen aan eind in orde in:
+Navigeer vervolgens naar de map `experience-platform-dsw-reference/recipes/scala` waar u de scripts `login.sh` en `build.sh`. Deze scripts worden gebruikt om u aan te melden bij Docker en de Docker-afbeelding te maken. Als u uw geloofsbrieven [van het](#docker-based-model-authoring) Docker klaar hebt, ga de volgende bevelen aan eind in orde in:
 
 ```BASH
 # for logging in to Docker
@@ -178,6 +178,9 @@ Navigeer vervolgens naar de map `experience-platform-dsw-reference/recipes/scala
 # for building Docker image
 ./build.sh
 ```
+
+>[!TIP]
+>Als u een machtigingsfout ontvangt wanneer u zich probeert aan te melden bij Docker met behulp van het `login.sh` script, probeert u de opdracht `bash login.sh`.
 
 Wanneer het uitvoeren van het login manuscript, moet u de gastheer van het Docker, gebruikersbenaming, en wachtwoord verstrekken. Tijdens het bouwen, moet u de gastheer van de Dokker en een versietag voor de bouwstijl verstrekken.
 
