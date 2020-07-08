@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gegevens verzamelen van een database van derden via bronconnectors en API's
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1522'
 ht-degree: 0%
@@ -323,7 +323,9 @@ curl -X POST \
 | `params.dataSetId` | De id van de doeldataset. |
 | `connectionSpec.id` | De id van de verbindingsspecificatie van uw externe database. |
 
->[!NOTE] Wanneer het creëren van een doelverbinding, zorg ervoor om de waarde van de gegevenssetbasisverbinding voor de basisverbinding `id` in tegenstelling tot de basisverbinding van uw derdebronschakelaar te gebruiken.
+>[!NOTE]
+>
+>Wanneer het creëren van een doelverbinding, zorg ervoor om de waarde van de gegevenssetbasisverbinding voor de basisverbinding `id` in tegenstelling tot de basisverbinding van uw derdebronschakelaar te gebruiken.
 
 **Antwoord**
 
