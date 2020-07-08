@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een sandbox maken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ef423a8c1b412315d03cddf7d8c351a232eb509b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +44,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | De id die wordt gebruikt voor toegang tot de sandbox in toekomstige aanvragen. Deze waarde moet uniek zijn, en de beste praktijken moeten het zo beschrijvend mogelijk maken. Kan geen spaties of hoofdletters bevatten. |
-| `title` | Een leesbare naam die voor weergavedoeleinden in de gebruikersinterface van het platform wordt gebruikt. |
+| `title` | Een leesbare naam die voor weergavedoeleinden in de gebruikersinterface van het Platform wordt gebruikt. |
 | `type` | Het type sandbox dat moet worden gemaakt. Momenteel kan een organisatie alleen sandboxen van het type &quot;ontwikkeling&quot; maken. |
 
 **Antwoord**
@@ -58,4 +61,6 @@ Een succesvol antwoord retourneert de details van de nieuwe sandbox, waarbij wor
 }
 ```
 
->[!NOTE] Sandboxen nemen ruwweg 15 minuten in beslag om door het systeem te worden ingericht, waarna de sandboxen &quot;actief&quot; of &quot;mislukt&quot; `state` worden.
+>[!NOTE]
+>
+>Sandboxen nemen ruwweg 15 minuten in beslag om door het systeem te worden ingericht, waarna de sandboxen &quot;actief&quot; of &quot;mislukt&quot; `state` worden.
