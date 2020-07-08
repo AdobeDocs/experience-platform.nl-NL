@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een sandbox bijwerken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '87'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
 
 U kunt een of meer velden in een sandbox bijwerken door een PATCH-aanvraag in te dienen die de sandbox in het aanvraagpad en de eigenschap bevat die moeten worden bijgewerkt in de aanvraaglading. `name`
 
->[!NOTE] Momenteel kan alleen de `title` eigenschap van een sandbox worden bijgewerkt.
+>[!NOTE]
+>
+>Momenteel kan alleen de `title` eigenschap van een sandbox worden bijgewerkt.
 
 **API-indeling**
 
