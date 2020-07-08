@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Bronnen weergeven
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b4d8a6f8006d55c7aac19d705c6880fec915c147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 1%
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 U kunt een lijst van alle middelen van de Registratie van het Schema van een bepaald type (klassen, mixins, schema&#39;s, gegevenstypes, of beschrijvers) binnen een container bekijken door één enkele GET verzoek uit te voeren.
 
->[!NOTE] Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Als u bronnen buiten deze limiet wilt retourneren, moet u [pagineringsparameters](#paging)gebruiken. Men adviseert ook dat u vraagparameters gebruikt om resultaten [te](#filtering) filtreren en het aantal teruggekeerde middelen te verminderen.
+>[!NOTE]
+>
+>Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Als u bronnen buiten deze limiet wilt retourneren, moet u [pagineringsparameters](#paging)gebruiken. Men adviseert ook dat u vraagparameters gebruikt om resultaten [te](#filtering) filtreren en het aantal teruggekeerde middelen te verminderen.
 
 **API-indeling**
 
@@ -78,7 +80,9 @@ In het bovenstaande verzoek wordt de header `application/vnd.adobe.xed-id+json` 
 
 De Registratie van het Schema steunt het gebruik van vraagparameters aan pagina en filterresultaten wanneer het vermelden van middelen.
 
->[!NOTE] Wanneer het combineren van veelvoudige vraagparameters, moeten zij door ampersands (`&`) worden gescheiden.
+>[!NOTE]
+>
+>Wanneer het combineren van veelvoudige vraagparameters, moeten zij door ampersands (`&`) worden gescheiden.
 
 ### Paginering {#paging}
 
@@ -105,4 +109,6 @@ U kunt resultaten filtreren door de `property` parameter te gebruiken, die wordt
 | `~` | Filtert op of de eigenschap overeenkomt met een opgegeven reguliere expressie. | `property=title~test$` |
 | (Geen) | Wanneer alleen de naam van de eigenschap wordt opgegeven, worden alleen items geretourneerd waar de eigenschap bestaat. | `property=title` |
 
->[!TIP] U kunt de `property` parameter aan filtermengen door hun compatibele klasse gebruiken. Retourneert bijvoorbeeld alleen `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` mixins die compatibel zijn met de klasse Individueel profiel XDM.
+>[!TIP]
+>
+>U kunt de `property` parameter aan filtermengen door hun compatibele klasse gebruiken. Retourneert bijvoorbeeld alleen `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` mixins die compatibel zijn met de klasse Individueel profiel XDM.
