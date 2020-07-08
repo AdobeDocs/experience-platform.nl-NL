@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruiksaanwijzing voor labels voor gegevensgebruik
 topic: labels
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 0%
@@ -26,7 +26,9 @@ De volgende sectie verstrekt stappen voor het creëren van een nieuwe dataset om
 
 ### Een nieuwe gegevensset maken
 
->[!NOTE] In dit voorbeeld, wordt een dataset gecreeerd gebruikend een vooraf gevormd schema van de Gegevens van de Ervaring van het Model (XDM). Voor meer informatie over schema&#39;s XDM, zie het [XDM Overzicht](../../xdm/home.md) van het Systeem en de [grondbeginselen van schemacompositie](../../xdm/schema/composition.md).
+>[!NOTE]
+>
+>In dit voorbeeld, wordt een dataset gecreeerd gebruikend een vooraf gevormd schema van de Gegevens van de Ervaring van het Model (XDM). Voor meer informatie over schema&#39;s XDM, zie het [XDM Overzicht](../../xdm/home.md) van het Systeem en de [grondbeginselen van schemacompositie](../../xdm/schema/composition.md).
 
 Als u een nieuwe gegevensset wilt maken, klikt u op Gegevensset **** maken rechtsboven in de werkruimte _[!UICONTROL Datasets]_.
 
