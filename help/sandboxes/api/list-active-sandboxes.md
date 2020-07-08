@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Actieve sandboxen weergeven voor de huidige gebruiker
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 982764ae7807e40cbca5ca60c70bf363a271e3c2
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '220'
+ht-degree: 0%
 
 ---
 
 
 # Actieve sandboxen weergeven voor de huidige gebruiker
 
->[!NOTE] In tegenstelling tot andere eindpunten die in Sandbox API worden verstrekt, is dit eindpunt beschikbaar voor alle gebruikers, met inbegrip van die zonder de toegangstoestemmingen van het Beleid Sandbox.
+>[!NOTE]
+>
+>In tegenstelling tot andere eindpunten die in Sandbox API worden verstrekt, is dit eindpunt beschikbaar voor alle gebruikers, met inbegrip van die zonder de toegangstoestemmingen van het Beleid Sandbox.
 
 U kunt een lijst maken van de zandbakken die voor de huidige gebruiker actief zijn door een GET verzoek aan het wortel (`/`) eindpunt te doen.
 
