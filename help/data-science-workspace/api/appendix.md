@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aanhangsel
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 1%
@@ -27,7 +27,9 @@ De [!DNL Sensei Machine Learning] API biedt ondersteuning voor queryparameters m
 | `orderby` | Geeft de eigenschappen aan die moeten worden gebruikt voor sorteren in de volgorde van prioriteit. Neem een streepje (**-**) vóór de naam van een eigenschap op om in aflopende volgorde te sorteren, anders worden de resultaten in oplopende volgorde gesorteerd. | `orderby=created` |
 | `property` | Hiermee wordt de vergelijkingsexpressie aangegeven waaraan een object moet voldoen om te worden geretourneerd. | `property=deleted==false` |
 
->[!NOTE] Wanneer het combineren van veelvoudige vraagparameters, moeten zij door ampersands (**&amp;**) worden gescheiden.
+>[!NOTE]
+>
+>Wanneer het combineren van veelvoudige vraagparameters, moeten zij door ampersands (**&amp;**) worden gescheiden.
 
 ## Python CPU- en GPU-configuraties {#cpu-gpu-config}
 
@@ -66,7 +68,9 @@ Hieronder volgt een voorbeeldconfiguratie die het gebruik van een CPU voor train
 ]
 ```
 
->[!NOTE] De waarden van `cpus` en geven `gpus` niet het aantal CPU&#39;s of GPU&#39;s aan, maar het aantal fysieke machines. Deze waarden zijn toelaatbaar `"1"` en zullen anders een uitzondering vormen.
+>[!NOTE]
+>
+>De waarden van `cpus` en geven `gpus` niet het aantal CPU&#39;s of GPU&#39;s aan, maar het aantal fysieke machines. Deze waarden zijn toelaatbaar `"1"` en zullen anders een uitzondering vormen.
 
 ## PySpark- en Spark-bronconfiguraties {#resource-config}
 
