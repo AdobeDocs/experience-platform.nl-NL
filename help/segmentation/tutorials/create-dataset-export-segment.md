@@ -4,18 +4,21 @@ solution: Experience Platform
 title: Een dataset maken voor het exporteren van een publiekssegment
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '766'
+ht-degree: 0%
 
 ---
 
 
 # Een dataset maken voor het exporteren van een publiekssegment
 
-Met het Adobe Experience Platform kunt u klantprofielen eenvoudig segmenteren in soorten publiek op basis van specifieke kenmerken. Zodra de segmenten zijn gecreeerd, kunt u dat publiek naar een dataset uitvoeren waar het kan worden betreden en worden gehandeld. Opdat de uitvoer succesvol is, moet de dataset behoorlijk worden gevormd.
+Met Adobe Experience Platform kunt u klantprofielen eenvoudig segmenteren in soorten publiek op basis van specifieke kenmerken. Zodra de segmenten zijn gecreeerd, kunt u dat publiek naar een dataset uitvoeren waar het kan worden betreden en worden gehandeld. Opdat de uitvoer succesvol is, moet de dataset behoorlijk worden gevormd.
 
-Deze zelfstudie doorloopt de stappen die nodig zijn om een dataset te maken die kan worden gebruikt voor het exporteren van een publiekssegment met behulp van de interface van het Experience Platform.
+Deze zelfstudie doorloopt de stappen die worden vereist om een dataset tot stand te brengen die voor het uitvoeren van een publiekssegment kan worden gebruikt gebruikend het Experience Platform UI.
 
-Deze zelfstudie houdt rechtstreeks verband met de stappen die in de zelfstudie worden beschreven voor het [evalueren van en het openen van segmentresultaten](./evaluate-a-segment.md). De evaluatie van een segmentleerprogramma verstrekt stappen voor het creëren van een dataset gebruikend de Catalogus API, terwijl dit leerprogramma schetst stappen om een dataset tot stand te brengen gebruikend het Platform van de Ervaring UI.
+Deze zelfstudie houdt rechtstreeks verband met de stappen die in de zelfstudie worden beschreven voor het [evalueren van en het openen van segmentresultaten](./evaluate-a-segment.md). Het evalueren van een segmentleerprogramma verstrekt stappen voor het creëren van een dataset gebruikend de Catalogus API, terwijl dit leerprogramma schetst stappen om een dataset tot stand te brengen gebruikend het Experience Platform UI.
 
 ## Aan de slag
 
@@ -23,16 +26,18 @@ Om een segment uit te voeren, moet de dataset op het Schema van de Unie van het 
 
 Om verenigingsschema&#39;s in UI te bekijken, klik **Profielen** in de linkernavigatie, dan klik op het *Unieschema* tabel zoals hieronder getoond.
 
-![Tabblad Unieschema in interface van ervaringsplatform](../images/tutorials/segment-export-dataset/union-schema-ui.png)
+![Verenigingsschema-tabblad in gebruikersinterface van Experience Platform](../images/tutorials/segment-export-dataset/union-schema-ui.png)
 
 
 ## Werkruimte Gegevensbestanden
 
-De datasetwerkruimte binnen het Platform van de Ervaring UI staat u toe om alle datasets te bekijken en te beheren die uw organisatie IMS heeft gemaakt, evenals nieuwe te creëren.
+De datasetwerkruimte binnen de Experience Platform UI staat u toe om alle datasets te bekijken en te beheren die uw organisatie IMS heeft gemaakt, evenals nieuwe degenen te creëren.
 
 Om de datasetwerkruimte te bekijken, klik **Datasets** in de linkernavigatie, dan klik op het *Browse* lusje. De werkruimte van datasets bevat een lijst van datasets, met inbegrip van kolommen die *Naam*, *Gemaakt* (datum en tijd), *Bron*, *Schema*, en de Status *van de*** Laatste Partij tonen, evenals de datum en de tijd de dataset werd Last Updated. Afhankelijk van de breedte van elke kolom moet u mogelijk naar links of rechts schuiven om alle kolommen weer te geven.
 
->[!NOTE] Klik op het filterpictogram naast de zoekbalk om filtermogelijkheden te gebruiken om alleen die datasets weer te geven die zijn ingeschakeld voor Real-time klantprofiel.
+>[!NOTE]
+>
+>Klik op het filterpictogram naast de zoekbalk om filtermogelijkheden te gebruiken om alleen die datasets weer te geven die zijn ingeschakeld voor Real-time klantprofiel.
 
 ![Alle gegevenssets weergeven](../images/tutorials/segment-export-dataset/datasets-workspace.png)
 
