@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1530'
 ht-degree: 0%
@@ -94,7 +94,9 @@ Afhankelijk van uw strategie van de de gegevensinzameling van ondernemingsgegeve
 
 Hoewel u verschillende standaardnaamruimten [!DNL Experience Platform] biedt, moet u mogelijk extra naamruimten maken om uw identiteiten correct te categoriseren. Zie de sectie over het [weergeven en maken van naamruimten voor uw organisatie](./namespaces.md) in het overzicht van naamruimte voor identiteiten voor meer informatie.
 
->[!NOTE] Naamruimten zijn een kwalificatie voor identiteiten. Als er eenmaal een naamruimte is gemaakt, kan deze daarom niet worden verwijderd.
+>[!NOTE]
+>
+>Naamruimten zijn een kwalificatie voor identiteiten. Als er eenmaal een naamruimte is gemaakt, kan deze daarom niet worden verwijderd.
 
 ### Inclusief identiteitsgegevens in [!DNL Experience Data Model] (XDM)
 
@@ -109,7 +111,9 @@ Om het even welk gebied van type `string` in schema&#39;s die of verslag of tijd
 Identiteitsvelden maken het ook mogelijk om identiteiten te koppelen als ze gemeenschappelijke PII-gegevens delen.
 Bijvoorbeeld, door de gebieden van het telefoonaantal als identiteitsgebieden te etiketteren, [!DNL Identity Service] grafiekt automatisch relaties met de andere individuen die worden gevonden om het zelfde telefoonaantal te gebruiken.
 
->[!NOTE] De naamruimte van resulterende identiteiten wordt opgegeven op het moment dat het veld wordt gelabeld.
+>[!NOTE]
+>
+>De naamruimte van resulterende identiteiten wordt opgegeven op het moment dat het veld wordt gelabeld.
 
 ### Een gegevensset configureren voor [!DNL Identity Service]
 
