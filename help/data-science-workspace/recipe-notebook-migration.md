@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Hulplijnen voor recept- en laptopmigratie
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3311'
 ht-degree: 0%
@@ -178,7 +178,7 @@ Als u het recept wilt maken met de API, volgt u de zelfstudie [voor het verpakte
 
 ## PySpark-migratiegids {#pyspark-migration-guide}
 
-Het recept artefact dat door de bouwstijlstappen wordt geproduceerd is nu een beeld van de Docker dat uw binair dossier .egg bevat. Daarnaast is de syntaxis die wordt gebruikt voor het lezen en schrijven van gegevenssets met de [!DNL Platform] SDK gewijzigd. Hiervoor moet u de recept-code wijzigen.
+Het recept artefact dat door de bouwstijlstappen wordt geproduceerd is nu een beeld van de Docker dat uw binair dossier .egg bevat. Daarnaast is de syntaxis die wordt gebruikt voor het lezen en schrijven van gegevenssets met de [!DNL Platform] SDK gewijzigd en moet u de recept-code wijzigen.
 
 De volgende video wordt ontworpen om in het begrijpen van de veranderingen verder te helpen die voor PySpark recepten worden vereist:
 
@@ -324,7 +324,9 @@ De volgende video is ontworpen om meer inzicht te krijgen in de wijzigingen die 
 
 Met de introductie van PySpark 2.4 aan [!DNL JupyterLab Notebooks], gebruiken de nieuwe [!DNL Python] laptops met PySpark 2.4 nu de [!DNL Python] 3 kernel in plaats van PySpark 3 kernel. Dit betekent bestaande code die op PySpark 2.3 loopt niet in PySpark 2.4 wordt gesteund.
 
->[!IMPORTANT] PySpark 2.3 is afgekeurd en ingesteld om in een volgende versie te worden verwijderd. Alle bestaande voorbeelden worden geplaatst om met PySpark 2.4 voorbeelden worden vervangen.
+>[!IMPORTANT]
+>
+>PySpark 2.3 is afgekeurd en ingesteld om in een volgende versie te worden verwijderd. Alle bestaande voorbeelden worden geplaatst om met PySpark 2.4 voorbeelden worden vervangen.
 
 Volg de onderstaande voorbeelden om uw bestaande PySpark 3 ([!DNL Spark] 2.3)-laptops om te zetten in [!DNL Spark] 2.4:
 
@@ -458,7 +460,9 @@ Met PySpark 3 ([!DNL Spark] 2.4) hoeven de `org_id` en `dataset_id` niet langer 
 | ------- | ----------- |
 | [%dataset](#magic) | Aangepaste magie voor gegevenstoegang in [!DNL Python] 3 kernel. |
 
->[!TIP] —mode kan aan `interactive` of worden geplaatst `batch`. De standaardwaarde voor —mode is `interactive`. Het wordt aanbevolen de `batch` modus te gebruiken wanneer u grote hoeveelheden gegevens leest.
+>[!TIP]
+>
+>—mode kan aan `interactive` of worden geplaatst `batch`. De standaardwaarde voor —mode is `interactive`. Het wordt aanbevolen de `batch` modus te gebruiken wanneer u grote hoeveelheden gegevens leest.
 
 ## Een lokaal dataframe maken
 
@@ -511,7 +515,9 @@ sample_df = df.sample(breuk)
    </tr>
 </table>
 
->[!TIP] U kunt ook een optioneel zaadmonster opgeven, zoals een booleaan met Vervanging, een dubbele fractie of een lang zaadmonster.
+>[!TIP]
+>
+>U kunt ook een optioneel zaadmonster opgeven, zoals een booleaan met Vervanging, een dubbele fractie of een lang zaadmonster.
 
 De volgende beelden benadrukken de belangrijkste verschillen voor het creëren van een lokaal dataframe in PySpark 2.3 en PySpark 2.4. In dit voorbeeld worden de *aggregatie* -startlaptops gebruikt die in [!DNL JupyterLab Launcher].
 
@@ -559,7 +565,9 @@ pd0.show(10, False)
 | pd0 | Naam van dataframe van pandas dat moet worden gebruikt of gemaakt. |
 | [%dataset](#magic) | Aangepaste magie voor gegevenstoegang in [!DNL Python] 3 kernel. |
 
->[!TIP] —mode kan aan `interactive` of worden geplaatst `batch`. De standaardwaarde voor —mode is `interactive`. Het wordt aanbevolen de `batch` modus te gebruiken wanneer u grote hoeveelheden gegevens leest.
+>[!TIP]
+>
+>—mode kan aan `interactive` of worden geplaatst `batch`. De standaardwaarde voor —mode is `interactive`. Het wordt aanbevolen de `batch` modus te gebruiken wanneer u grote hoeveelheden gegevens leest.
 
 De volgende beelden benadrukken de belangrijkste verschillen voor het schrijven van gegevens terug naar [!DNL Platform] in PySpark 2.3 en PySpark 2.4. In dit voorbeeld worden de *aggregatie* -startlaptops gebruikt die in [!DNL JupyterLab Launcher].
 
@@ -577,7 +585,9 @@ Met PySpark 3 ([!DNL Spark] 2.4) verwijdert de `%dataset` douanemagie de behoeft
 
 Met de introductie van [!DNL Spark] 2,4 naar [!DNL JupyterLab Notebooks], gebruiken bestaande [!DNL Spark] ([!DNL Spark] 2,3) notebooks nu de Scala kernel in plaats van de [!DNL Spark] kernel. Dit betekent dat bestaande code die wordt uitgevoerd op [!DNL Spark] ([!DNL Spark] 2.3) niet wordt ondersteund in Scala ([!DNL Spark] 2.4). Bovendien moeten alle nieuwe [!DNL Spark] laptops gebruikmaken van Scala ([!DNL Spark] 2.4) in de [!DNL JupyterLab Launcher].
 
->[!IMPORTANT] [!DNL Spark] ([!DNL Spark] 2.3) is afgekeurd en is ingesteld om in een volgende versie te worden verwijderd. Alle bestaande voorbeelden worden vervangen door Scala-voorbeelden ([!DNL Spark] 2.4).
+>[!IMPORTANT]
+>
+>[!DNL Spark] ([!DNL Spark] 2.3) is afgekeurd en is ingesteld om in een volgende versie te worden verwijderd. Alle bestaande voorbeelden worden vervangen door Scala-voorbeelden ([!DNL Spark] 2.4).
 
 Volg de onderstaande voorbeelden om uw bestaande [!DNL Spark] ([!DNL Spark] 2.3) laptops om te zetten in Scala ([!DNL Spark] 2.4):
 
@@ -756,7 +766,9 @@ De Scala-laptop ([!DNL Spark] 2.4) gebruikt de Scala-kernel die bij de installat
 
 ![vonk 2.4 laden](./images/migration/spark-scala/load-2.4.png)
 
->[!TIP] In Scala, kunt u gebruiken `sys.env()` om een waarde van binnen te verklaren en terug te keren `option`. Dit elimineert de behoefte om variabelen te bepalen als u weet zij slechts één keer zullen worden gebruikt. In het volgende voorbeeld wordt `val userToken` in het bovenstaande voorbeeld het voorbeeld inline gedeclareerd `option`:
+>[!TIP]
+>
+>In Scala, kunt u gebruiken `sys.env()` om een waarde van binnen te verklaren en terug te keren `option`. Dit elimineert de behoefte om variabelen te bepalen als u weet zij slechts één keer zullen worden gebruikt. In het volgende voorbeeld wordt `val userToken` in het bovenstaande voorbeeld het voorbeeld inline gedeclareerd `option`:
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
