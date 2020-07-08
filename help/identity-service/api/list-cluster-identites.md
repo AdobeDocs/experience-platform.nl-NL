@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Clusteridentiteiten weergeven
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 0%
 
 ---
 
@@ -67,7 +70,9 @@ curl -X GET \
 
 Gebruik `POST` als batchequivalent van de hierboven beschreven `GET` methode om de identiteiten in de clusters van veelvoudige identiteiten terug te keren.
 
->[!NOTE] Het verzoek mag niet meer dan 1000 identiteiten bevatten. Verzoeken die langer zijn dan 1000 identiteiten, resulteren in 400 statuscode.
+>[!NOTE]
+>
+>Het verzoek mag niet meer dan 1000 identiteiten bevatten. Verzoeken die langer zijn dan 1000 identiteiten, resulteren in 400 statuscode.
 
 **API-indeling**
 
@@ -231,7 +236,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] De reactie zal altijd één ingang voor elke XID hebben die in het verzoek wordt verstrekt ongeacht of XIDs van een verzoek tot de zelfde cluster behoren of als één of meerdere om het even welke cluster verbonden bij allen hebben.
+>[!NOTE]
+>
+>De reactie zal altijd één ingang voor elke XID hebben die in het verzoek wordt verstrekt ongeacht of XIDs van een verzoek tot de zelfde cluster behoren of als één of meerdere om het even welke cluster verbonden bij allen hebben.
 
 ## Volgende stappen
 
