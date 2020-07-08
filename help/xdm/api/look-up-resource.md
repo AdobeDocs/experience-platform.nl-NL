@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een resource opzoeken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 1%
 
 ---
 
@@ -47,7 +50,9 @@ De opzoekverzoeken van het middel vereisen een `version` worden omvat in de Acce
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` en `allOf` opgelost, geen titels of beschrijvingen. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` en `allOf` opgelost, beschrijving inbegrepen. |
 
->[!NOTE] Als alleen de `major` versie wordt geleverd (1, 2, 3, enz.), retourneert het register automatisch de laatste `minor` versie (.1, .2, .3, enz.).
+>[!NOTE]
+>
+>Als alleen de `major` versie wordt geleverd (1, 2, 3, enz.), retourneert het register automatisch de laatste `minor` versie (.1, .2, .3, enz.).
 
 **Antwoord**
 
