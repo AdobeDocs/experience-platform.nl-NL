@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aan de slag
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 0%
@@ -42,7 +42,9 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -61,7 +63,9 @@ In de onderstaande tabel worden voorbeeldpaden met behulp van gebieden weergegev
 | [!DNL Identity Service] API | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
 | [!DNL Identity Namespace] API | https://</span>platform-va7.adobe.</span>io/data/core/idnamespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
 
->[!NOTE] De verzoeken die zonder een gebied worden gemaakt te specificeren kunnen in vraag resulteren die aan het onjuiste gebied verplettert of vraag veroorzaken om onverwacht te ontbreken.
+>[!NOTE]
+>
+>De verzoeken die zonder een gebied worden gemaakt te specificeren kunnen in vraag resulteren die aan het onjuiste gebied verplettert of vraag veroorzaken om onverwacht te ontbreken.
 
 Als u het gebied niet kunt vinden binnen uw IMS Org-profiel, gelieve uw systeembeheerder voor steun te contacteren.
 
@@ -77,7 +81,9 @@ Om de lading in reacties te beperken, passen APIs hun reacties aan het type van 
 
 De voorbeelden in dit document hebben geen betrekking op de volledige functionaliteit van de [!DNL Identity Service] API. Zie de [Swagger API-naslaggids](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)voor de volledige API.
 
->[!NOTE] Alle geretourneerde identiteiten hebben de native XID-vorm wanneer native XID wordt gebruikt in de aanvraag. Het wordt aanbevolen het formulier ID/naamruimte te gebruiken. Zie de sectie over het [ophalen van de XID voor een identiteit](./create-custom-namespace.md)voor meer informatie.
+>[!NOTE]
+>
+>Alle geretourneerde identiteiten hebben de native XID-vorm wanneer native XID wordt gebruikt in de aanvraag. Het wordt aanbevolen het formulier ID/naamruimte te gebruiken. Zie de sectie over het [ophalen van de XID voor een identiteit](./create-custom-namespace.md)voor meer informatie.
 
 ## Volgende stappen
 
