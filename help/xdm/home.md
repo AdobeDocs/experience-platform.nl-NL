@@ -4,7 +4,10 @@ solution: Experience Platform
 title: XDM-systeem (Experience Data Model)
 topic: overview
 translation-type: tm+mt
-source-git-commit: c07f926a71447e840c692ed15e85c9e02f1106ab
+source-git-commit: 8ea3b09f86fe11ce7043f22c56ff9756b909e716
+workflow-type: tm+mt
+source-wordcount: '1777'
+ht-degree: 0%
 
 ---
 
@@ -15,27 +18,27 @@ Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter he
 
 XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor om het even welke toepassing om met de diensten van het Platform te gebruiken te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier kan leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden uitdrukken.
 
-XDM is het basisraamwerk dat Adobe Experience Cloud, aangedreven door Experience Platform, in staat stelt de juiste boodschap af te geven aan de juiste persoon, op het juiste kanaal, op precies het juiste moment. De methodologie waarop het Platform van de Ervaring wordt gebouwd, **XDM Systeem**, stelt de Modelschema&#39;s van de Gegevens van de Ervaring voor gebruik door de diensten van het Platform in werking.
+XDM is het basisraamwerk dat Adobe Experience Cloud, aangedreven door Experience Platform, in staat stelt de juiste boodschap af te geven aan de juiste persoon, op het juiste kanaal, op het juiste moment. De methodologie waarop het Experience Platform wordt gebouwd, **XDM Systeem**, stelt de Modelschema&#39;s van de Gegevens van de Ervaring voor gebruik door de diensten van het Platform in werking.
 
-Dit document biedt een overzicht van de rol van XDM System binnen Experience Platform.
+Dit document biedt een overzicht van de rol van XDM System in Experience Platform.
 
 ## XDM-schema&#39;s
 
-Het Platform van de ervaring gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het gemakkelijker om betekenis te behouden en zo waarde te verkrijgen van gegevens.
+Het Experience Platform gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het gemakkelijker om betekenis te behouden en zo waarde te verkrijgen van gegevens.
 
-Voordat gegevens in Platform kunnen worden opgenomen, moet een schema worden samengesteld om de gegevensstructuur te beschrijven en beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. Schema&#39;s bestaan uit een basisklasse en nul of meer mixen.
+Voordat gegevens in Platform kunnen worden opgenomen, moet een schema zijn samengesteld om de gegevensstructuur te beschrijven en om beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. Schema&#39;s bestaan uit een basisklasse en nul of meer mixen.
 
 Voor meer informatie over het model van de schemacompositie, met inbegrip van ontwerpprincipes en beste praktijken, zie de [grondbeginselen van schemacompositie](schema/composition.md).
 
 ### Schema-register en Schema-bibliotheek
 
-Het **Schemaregister** biedt een gebruikersinterface en RESTful-API waarmee u alle schemagerelateerde bronnen in de **Schemabibliotheek** van het Adobe Experience Platform kunt weergeven en beheren. De Schemabibliotheek bevat industriestandaard bronnen die beschikbaar worden gesteld door Adobe en bronnen van Experience Platform-partners en -leveranciers wier toepassingen u gebruikt. De gebruikersinterface en API van het schemaregister kunnen ook worden gebruikt om nieuwe schema&#39;s en middelen tot stand te brengen en te beheren die aan uw organisatie uniek zijn.
+De **Registratie** van het Schema verstrekt een gebruikersinterface en RESTful API waarvan u alle schema-verwante middelen in de Bibliotheek **van het** Schema van het Adobe Experience Platform kunt bekijken en beheren. De Schemabibliotheek bevat industriestandaard bronnen die beschikbaar worden gesteld door Adobe, evenals bronnen van partners en leveranciers van Experience Platforms van wie u de toepassingen gebruikt. De gebruikersinterface en API van het schemaregister kunnen ook worden gebruikt om nieuwe schema&#39;s en middelen tot stand te brengen en te beheren die aan uw organisatie uniek zijn.
 
 Voor een uitvoerige gids voor de belangrijkste verrichtingen beschikbaar in de Registratie van het Schema, zie de de ontwikkelaarsgids [van de Registratie van het](api/getting-started.md)Schema.
 
 ## Gegevensgedrag in XDM-systeem {#data-behaviors}
 
-Gegevens die bestemd zijn voor gebruik in Experience Platform, worden gegroepeerd in twee gedragstypen:
+Gegevens die bestemd zijn voor gebruik in Experience Platform worden gegroepeerd in twee gedragstypen:
 
 * **Opnamegegevens**: Verstrekt informatie over de attributen van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
 * **Gegevens** tijdreeks: Biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
@@ -62,33 +65,33 @@ Hoewel niet alle gebeurtenissen gemakkelijk over alle gegevensbronnen worden gec
 
 ![ExperienceEvent Klantenreis](images/overview/experience-event-journey.png)
 
-## XDM-schema&#39;s en Experience Platform-services
+## XDM-schema&#39;s en Experience Platforms
 
-Het Platform van de ervaring is schema-agnostisch, betekenend dat om het even welk schema dat aan de norm voldoet XDM voor gebruik door de diensten van het Platform beschikbaar is. De manieren waarop de verschillende diensten van het Platform schema&#39;s gebruiken worden hieronder meer in detail beschreven.
+Experience Platform is schema-agnostisch, betekenend dat om het even welk schema dat aan de norm XDM voldoet voor gebruik door de diensten van het Platform beschikbaar is. De manieren waarop de verschillende diensten van de Platform schema&#39;s gebruiken worden hieronder meer in detail beschreven.
 
 ### Catalogusservice, gegevensinsluiting en datameer
 
-Catalogusservice is het systeem van registratie voor de middelen van het ervaringsplatform en de bijbehorende schema&#39;s. Catalogus is niet de daadwerkelijke dossiers of folders die gegevens bevatten, maar het houdt eerder de meta-gegevens en de beschrijvingen van die dossiers en folders.
+De Catalogusdienst is het systeem van verslag voor de activa van het Experience Platform en hun verwante schema&#39;s. Catalogus is niet de daadwerkelijke dossiers of folders die gegevens bevatten, maar het houdt eerder de meta-gegevens en de beschrijvingen van die dossiers en folders.
 
 De gegevens van de catalogus worden opgeslagen in het meer van Gegevens, een hoogst korrelige gegevensopslag die alle gegevens bevat die door Platform, ongeacht oorsprong of dossierformaat worden beheerd.
 
-Om met het opnemen van gegevens in het Platform van de Ervaring te beginnen, wordt een dataset gecreeerd gebruikend de Dienst van de Catalogus. The dataset references an XDM schema describing the structure of the data to be ingested. If a dataset is created without a schema, Experience Platform will derive an &quot;observed schema&quot; by inspecting the type and content of ingested data fields. Datasets worden vervolgens bijgehouden in Catalog en opgeslagen in het Data Lake naast de schema&#39;s en geobserveerde schema&#39;s waarop ze zijn gebaseerd.
+Beginnen opnemend gegevens in Experience Platform, wordt een dataset gecreeerd gebruikend de Dienst van de Catalogus. De dataset verwijst naar een XDM-schema dat de structuur van de gegevens beschrijft die moeten worden opgenomen. Als een dataset zonder een schema wordt gecreeerd, zal het Experience Platform een &quot;waargenomen schema&quot;afleiden door het type en de inhoud van ingebedde gegevensgebieden te inspecteren. Datasets worden vervolgens bijgehouden in Catalog en opgeslagen in het Data Lake naast de schema&#39;s en geobserveerde schema&#39;s waarop ze zijn gebaseerd.
 
-For more information on Catalog, see the [Catalog Service overview](../catalog/home.md). Zie het overzicht [van de gegevensinname van het](../ingestion/home.md)gegevenspakket van het Adobe Experience Platform voor meer informatie over gegevensinname.
+Voor meer informatie over Catalog, zie het overzicht [van de Dienst van de](../catalog/home.md)Catalogus. Voor meer informatie over de Ingestie van de Gegevens van het Adobe Experience Platform, zie het Overzicht [van de Ingestie van](../ingestion/home.md)Gegevens.
 
 ### Query-service
 
-Met de Adobe Experience Platform Query Service kunt u standaard-SQL gebruiken om query&#39;s uit te voeren op de gegevens van het Experience Platform ter ondersteuning van vele verschillende gebruiksgevallen.
+De Dienst van de Vraag van het Adobe Experience Platform staat u toe om standaardSQL aan vraaggegevens van het Experience Platform te gebruiken om vele verschillende gebruiksgevallen te steunen.
 
-After a schema has been composed and a dataset has been created which references that schema, data is then ingested and stored in the Data Lake. Using Query Service, you can join any datasets in the Data Lake and capture the query results as a new dataset for use in reporting, machine learning, or for ingestion into Real-time Customer Profile.
+Nadat een schema is samengesteld en een dataset is gecreeerd die verwijzingen dat schema, wordt het gegeven dan opgenomen en opgeslagen in het meer van Gegevens. Gebruikend de Dienst van de Vraag, kunt u zich bij om het even welke datasets in het meer van Gegevens aansluiten en de vraagresultaten vangen als nieuwe dataset voor gebruik in rapportering, machine het leren, of voor opname in het Profiel van de Klant in real time.
 
-To learn more about Query Service, please see the [Query Service introduction](../query-service/home.md).
+Om meer over de Dienst van de Vraag te leren, te zien gelieve de inleiding [van de Dienst van de](../query-service/home.md)Vraag.
 
 ### Klantprofiel in realtime
 
-Real-time Customer Profile provides a centralized consumer profile for targeted and personalized experience management. Each profile contains data that is aggregated across all systems, as well as actionable timestamped accounts of events involving the individual that have taken place in any of the systems you use with Experience Platform.
+Klantprofiel in realtime biedt een gecentraliseerd consumentenprofiel voor gericht en gepersonaliseerd ervaringsbeheer. Elk profiel bevat gegevens die op alle systemen zijn geaggregeerd, en actioneerbare tijdstempelaccounts van gebeurtenissen waarbij de persoon is betrokken die hebben plaatsgevonden in een van de systemen die u met Experience Platform gebruikt.
 
-Real-time Customer Profile consumes schema-formatted data based on the XDM Individual Profile or XDM ExperienceEvent classes, and responds to queries based on that data. Profiel ondersteunt het gebruik van schema&#39;s die op andere klassen zijn gebaseerd niet.
+Klantprofiel in realtime verbruikt schema-opgemaakte gegevens op basis van de klassen Individueel XDM Profile of XDM ExperienceEvent en reageert op query&#39;s die op die gegevens zijn gebaseerd. Profiel ondersteunt het gebruik van schema&#39;s die op andere klassen zijn gebaseerd niet.
 
 Het profiel handhaaft een geval van elk klantenprofiel, die gegevens samenvoegen om een &quot;enige bron van waarheid&quot;voor het individu te vormen. Deze verenigde gegevens worden vertegenwoordigd gebruikend wat als &quot;verenigingsmening&quot;wordt bekend is. Een verenigingsmening voegt de gebieden van alle schema&#39;s samen die de zelfde klasse in één enkel schema uitvoeren.  Wanneer het samenstellen van een schema gebruikend UI of API, kunt u het schema voor gebruik met het Profiel van de Klant in real time toelaten en het etiketteren voor opneming in de verenigingsmening. Het gelabelde schema neemt dan deel aan de schemadefinitie die aan Profiel wordt doorgegeven.
 
@@ -100,11 +103,11 @@ Zie het overzicht [van het profiel van de Klant in](../profile/home.md) real tim
 
 ### Werkruimte voor gegevenswetenschap
 
-De Werkruimte van de Wetenschap van het Platform van de Ervaring van Adobe gebruikt machine het leren en kunstmatige intelligentie om inzichten van gegevens te bereiken die binnen het Platform van de Ervaring worden opgeslagen. De Werkruimte van de Wetenschap van gegevens staat gegevenswetenschappers toe om recepten te bouwen die op het Individuele Profiel van XDM en gegevens XDM ExperienceEvent over klanten en hun activiteiten worden gebaseerd, die voorspellingen zoals het kopen van neiging en geadviseerde aanbiedingen vergemakkelijken dat het individu waarschijnlijk zal waarderen en gebruiken.
+De Werkruimte van de Wetenschap van Gegevens van het Adobe Experience Platform gebruikt machine het leren en kunstmatige intelligentie om inzichten van gegevens te verkrijgen die binnen Experience Platform worden opgeslagen. De Werkruimte van de Wetenschap van gegevens staat gegevenswetenschappers toe om recepten te bouwen die op het Individuele Profiel van XDM en gegevens XDM ExperienceEvent over klanten en hun activiteiten worden gebaseerd, die voorspellingen zoals het kopen van neiging en geadviseerde aanbiedingen vergemakkelijken dat het individu waarschijnlijk zal waarderen en gebruiken.
 
 Met de Werkruimte van de Wetenschap van Gegevens, kunnen de gegevenswetenschappers intelligente diensten APIs gemakkelijk tot stand brengen die door machine het leren worden aangedreven. Deze services werken met andere Adobe-oplossingen, waaronder Adobe Target en Adobe Analytics Cloud, om u te helpen persoonlijke, doelgerichte digitale ervaringen te automatiseren.
 
-Voor meer informatie bij het gebruiken van de gegevens van het Platform van de Ervaring aan machtsinzichten, zie het Overzicht [van de Werkruimte van de Wetenschap van](../data-science-workspace/home.md)Gegevens.
+Voor meer informatie bij het gebruiken van de gegevens van het Experience Platform aan machtsinzichten, zie het Overzicht [van de Werkruimte van de Wetenschap van](../data-science-workspace/home.md)Gegevens.
 
 ### Beslissingsservice
 
@@ -114,8 +117,13 @@ De Beslissende Dienst hefboomwerkingen de gegevens van het Profiel van de Klant 
 
 Zie het overzicht [van de Dienst van het](../decisioning-service/home.md) Beslissen voor meer informatie.
 
-## Volgende stappen
+## Volgende stappen en extra bronnen
 
-Nu u beter de rol van schema&#39;s door het Platform van de Ervaring begrijpt, bent u bereid beginnen uw samen te stellen.
+Nu u beter de rol van schema&#39;s door Experience Platform begrijpt, bent u bereid om uw te beginnen samenstellen. Als u uw leerproces wilt voortzetten, begint u met het lezen van de voorgestelde documentatie en bekijkt u de onderstaande video.
 
-Om ontwerpprincipes en beste praktijken voor het samenstellen van schema&#39;s te leren die met het Platform van de Ervaring moeten worden gebruikt, begin door de [grondbeginselen van schemacompositie](schema/composition.md)te lezen. Voor geleidelijke instructies op hoe te om een schema tot stand te brengen, zie de leerprogramma&#39;s bij het creëren van een schema [gebruikend API](tutorials/create-schema-api.md) of [gebruikend het gebruikersinterface](tutorials/create-schema-ui.md).
+Om ontwerpprincipes en beste praktijken voor het samenstellen van schema&#39;s te leren die met Experience Platform moeten worden gebruikt, begin door de [grondbeginselen van schemacompositie](schema/composition.md)te lezen. Voor geleidelijke instructies op hoe te om een schema tot stand te brengen, zie de leerprogramma&#39;s bij het creëren van een schema [gebruikend API](tutorials/create-schema-api.md) of [gebruikend het gebruikersinterface](tutorials/create-schema-ui.md).
+
+Bekijk de volgende video om uw inzicht in XDM System in Experience Platform te versterken:
+
+>[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
+
