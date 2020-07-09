@@ -4,17 +4,17 @@ seo-title: Adobe Experience Platform Web SDK snel starten met starten
 description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Web van het Experience Platform om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Web van het Experience Platform om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: 3f52def8318f57cfc6534e15415d172e768a8614
+source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 0%
+source-wordcount: '553'
+ht-degree: 1%
 
 ---
 
 
 # Welkom
 
-In deze handleiding worden de verschillende stappen beschreven voor het instellen van de SDK van het Web Adobe Experience Platform in Adobe Launch. U moet beschikken over machtigingen en in de lijst Toestaan staan om deze functie te kunnen gebruiken. Neem contact op met uw CSM als u op de wachtlijst wilt staan. Als u deze functie wilt gebruiken, moet u bovendien:
+In deze handleiding worden de verschillende stappen beschreven voor het instellen van de SDK van het Web Adobe Experience Platform in Adobe Launch. U moet over toestemmingen beschikken en op de lijst van gewenste personen zijn om deze eigenschap te gebruiken. Neem contact op met uw CSM als u op de wachtlijst wilt staan. Als u deze functie wilt gebruiken, moet u bovendien:
 
 - Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als u al een CNAME voor Adobe Analytics hebt, moet u die gebruiken. Testen in ontwikkeling werkt zonder CNAME, maar u hebt er een nodig voordat u naar productie gaat
 - Gebruik de nieuwste versie van de service Bezoeker-id
@@ -25,7 +25,7 @@ U kunt een configuratie-id maken met het gereedschap [](../fundamentals/edge-con
 
 >[!NOTE]
 >
->Uw organisatie moet in de lijst met toegestane items staan voor de functie. Neem contact op met uw CSM om te worden toegevoegd aan de lijst voor toestaan.
+>Uw organisatie moet op de lijst van gewenste personen voor de eigenschap zijn. Neem contact op met uw CSM om aan de lijst van gewenste personen te worden toegevoegd.
 
 ## Een schema voorbereiden
 
@@ -33,6 +33,10 @@ Het Netwerk van de Rand van het Experience Platform neemt gegevens als XDM. XDM 
 
 - [Een schema maken](../../xdm/tutorials/create-schema-ui.md)
 - Voeg de mengeling van SDK van het Web van het Adobe Experience Platform aan het schema toe u creeerde
+
+De volgende video is bedoeld om u in het creëren van een schema, dataset, en het stromen bronschakelaar voor uw gegevens van SDK van het Web te steunen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 ## SDK installeren in Adobe Launch
 
