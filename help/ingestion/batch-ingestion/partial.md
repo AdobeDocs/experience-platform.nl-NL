@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van gedeeltelijk in batch innemen van Adobe Experience Platforms
 topic: overview
 translation-type: tm+mt
-source-git-commit: 83bb1ade8dbd9b1a166eb627d5d5d5eda987fa19
+source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
 workflow-type: tm+mt
 source-wordcount: '1243'
 ht-degree: 0%
@@ -103,7 +103,7 @@ Om een bestaande dataset te gebruiken, begin door een dataset te selecteren. De 
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-Met de [!UICONTROL *[!UICONTROL optie Partiële]*] inname kunt u het gebruik van gedeeltelijke batch-inname in- of uitschakelen.
+Met de *[!UICONTROL optie Partiële]* inname kunt u het gebruik van gedeeltelijke batch-inname in- of uitschakelen.
 
 De schakeloptie *[!UICONTROL Foutdiagnostiek]* wordt alleen weergegeven wanneer de schakeloptie *[!UICONTROL Partiële inname]* is uitgeschakeld. Met deze functie kunt u gedetailleerde foutberichten genereren [!DNL Platform] over ingesloten batches. Als de *[!UICONTROL schakeloptie Partiële inname]* is ingeschakeld, wordt de uitgebreide foutdiagnose automatisch afgedwongen.
 
