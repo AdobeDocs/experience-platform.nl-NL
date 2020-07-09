@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een schema maken met de Schema-editor
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d55dc9776968099901325c58506c5e322449368e
 workflow-type: tm+mt
-source-wordcount: '3409'
+source-wordcount: '3462'
 ht-degree: 0%
 
 ---
@@ -289,13 +289,25 @@ Klik op **Profiel** en er verschijnt een pop-up met de vraag of u het schema wil
 >
 >Zodra een schema voor het Profiel van de Klant in real time is toegelaten en opgeslagen, kan het niet worden onbruikbaar gemaakt.
 
-## Volgende stappen
+## Volgende stappen en extra bronnen
 
 Nu u klaar bent met het samenstellen van een schema van &quot;Loyalty Leden&quot;, kunt u het volledige schema in de sectie van de *Structuur* van de redacteur zien. Klik **sparen** en het schema zal aan de Bibliotheek van het Schema worden bewaard, makend het toegankelijk door de Registratie van het Schema.
 
 Uw nieuwe schema kan nu worden gebruikt om gegevens in Platform in te voeren. Herinner dat zodra het schema is gebruikt om gegevens in te voeren, slechts de additieve veranderingen kunnen worden aangebracht. Zie de [grondbeginselen van schemacompositie](../schema/composition.md) voor meer informatie over schema versioning.
 
 Het schema van &quot;Loyalty Leden&quot;is ook beschikbaar om te bekijken en te leiden gebruikend de Registratie API van het Schema. Om met API te beginnen te werken, begin door de de ontwikkelaarsgids [van de Registratie van het](../api/getting-started.md)Schema te lezen.
+
+>[!WARNING]
+>
+>De [!DNL Platform] UI die in de volgende video&#39;s wordt getoond is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+
+De volgende video laat zien hoe u een eenvoudig schema maakt in de [!DNL Platform] gebruikersinterface.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+
+De volgende video is bedoeld om uw inzicht in het werken met mixins en klassen te versterken.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Aanhangsel
 
