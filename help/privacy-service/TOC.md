@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Privacy Service
 translation-type: tm+mt
-source-git-commit: 63412f07b2e9237bbceaee8f1febef3ff655c286
+source-git-commit: 8c617631f2c1eb58871ed5eb0c9218cd943764cb
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 2%
@@ -13,18 +13,18 @@ ht-degree: 2%
 
 # Adobe Experience Platform Privacy Service {#privacy}
 
-* [Overzicht van de privacyservice](home.md)
-* [Privacy Service en Experience Cloud-toepassingen](experience-cloud-apps.md)
+* [Overzicht van Privacy Service](home.md)
+* [Privacy Service- en Experience Cloud-toepassingen](experience-cloud-apps.md)
+* [Identiteitsgegevens voor privacyverzoeken](identity-data.md)
 * [Overzicht van Privacy JS Library](js-library.md)
 * Privacy Service-API {#api}
    * [Aan de slag](api/getting-started.md)
    * [Privacytaken](api/privacy-jobs.md)
    * [Toestemming](api/consent.md)
    * [Aanhangsel](api/appendix.md)
-* Gebruikersinterface voor privacyservice {#ui}
-   * [Overzicht van de gebruikersinterface van de privacyservice](ui/overview.md)
-   * [Gebruikershandleiding voor de privacyservice](ui/user-guide.md)
-* [Identiteitsgegevens voor privacyverzoeken](identity-data.md)
+* UI Privacy Service {#ui}
+   * [Overzicht van de gebruikersinterface voor Privacys Service](ui/overview.md)
+   * [Gebruikershandleiding voor Privacy Service](ui/user-guide.md)
 * [Abonneren op privacygebeurtenissen](privacy-events.md)
 * GDPR-hulplijnen {#gdpr}
    * [Veelgestelde vragen over GDPR](gdpr/faq.md)
