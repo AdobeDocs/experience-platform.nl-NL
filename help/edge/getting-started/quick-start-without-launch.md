@@ -1,23 +1,23 @@
 ---
 title: Snel aan de slag met plain javascript
-seo-title: 'Snelle start voor Adobe Experience Platform Web SDK '
-description: Snelle startgids voor het gebruiken van het Web SDK van het Platform van de Ervaring om gegevens te verzamelen
-seo-description: Snelle startgids voor het gebruiken van het Web SDK van het Platform van de Ervaring om gegevens te verzamelen
+seo-title: 'Snelle start voor Web SDK van Adobe Experience Platform '
+description: Snelle startgids voor het gebruiken van het Web SDK van het Experience Platform om gegevens te verzamelen
+seo-description: Snelle startgids voor het gebruiken van het Web SDK van het Experience Platform om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: f401780aa6b11f230506bfca1a747839fc6ae389
+source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 0%
+source-wordcount: '537'
+ht-degree: 1%
 
 ---
 
 
 # Welkom
 
-Deze gids leidt u door de verschillende manieren om SDK van het Web van Adobe Experience Platform te plaatsen. Als u deze functie wilt kunnen gebruiken, moet u in de lijst Toestaan staan. Neem contact op met uw CSM als u op de wachtlijst wilt staan.
+Deze gids leidt u door de verschillende manieren aan opstelling het Web SDK van het Adobe Experience Platform. Als u deze functie wilt kunnen gebruiken, moet u op de lijst van gewenste personen staan. Neem contact op met uw CSM als u op de wachtlijst wilt staan.
 
-- Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als u al een CNAME voor Analytics hebt, zou u dat moeten gebruiken. Het testen in ontwikkeling werkt zonder CNAME maar u hebt er een nodig voordat u naar productie gaat
-- recht hebben op het Adobe Experience Platform-gegevensplatform.  Als u Platform niet hebt aangeschaft, zullen wij u van de Stichting van de Diensten van de Gegevens van het Platform van de Ervaring voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
+- Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als je al een CNAME voor Analytics hebt, moet je die gebruiken. Het testen in ontwikkeling werkt zonder CNAME maar u hebt er een nodig voordat u naar productie gaat
+- Het recht hebben op Platform van gegevens van Adobe Experience Platforms.  Als u geen Platform hebt gekocht, zullen wij u van de Stichting van de Diensten van de Gegevens van het Experience Platform voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
 - Gebruik de nieuwste versie van de service Bezoeker-id
 
 ## Een configuratie-id maken
@@ -26,14 +26,18 @@ U kunt een configuratie-id maken met het gereedschap [](../fundamentals/edge-con
 
 >[!NOTE]
 >
->Uw organisatie moet in de lijst met toegestane items staan voor de functie. Neem contact op met uw CSM om de lijst voor toestaan weer te geven.
+>Uw organisatie moet op de lijst van gewenste personen voor de eigenschap zijn. Neem contact op met uw CSM om de lijst van gewenste personen te openen.
 
 ## Een schema voorbereiden
 
-Het Edge Network van het Platform van de Ervaring neemt gegevens als XDM. XDM is een gegevensformaat dat u schema&#39;s laat bepalen. Het schema bepaalt hoe het Netwerk van de Rand verwacht dat de gegevens worden geformatteerd. Om gegevens te verzenden, moet u uw schema bepalen.
+Het Netwerk van de Rand van het Experience Platform neemt gegevens als XDM. XDM is een gegevensformaat dat u schema&#39;s laat bepalen. Het schema bepaalt hoe het Netwerk van de Rand verwacht dat de gegevens worden geformatteerd. Om gegevens te verzenden, moet u uw schema bepalen.
 
 - [Een schema maken](../../xdm/tutorials/create-schema-ui.md)
-- Voeg de mix van de SDK van Adobe Experience Platform Web toe aan het schema dat u hebt gemaakt
+- Voeg de mengeling van SDK van het Web van het Adobe Experience Platform aan het schema toe u creeerde
+
+De volgende video is bedoeld om u in het creëren van een schema, dataset, en het stromen bronschakelaar voor uw gegevens van SDK van het Web te steunen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 ## De SDK installeren
 
