@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op 
 
 Adobe Experience Platform maakt het mogelijk om in real time de ervaringen van klanten te personaliseren door gegevens gemakkelijk toegankelijk te maken op strategisch gelegen servers die &quot;randen&quot; worden genoemd. De Real-time API van het Profiel van de Klant verstrekt eindpunten voor het werken met randen door componenten genoemd &quot;projecties.&quot; Dit omvat projectieconfiguraties om te bepalen welke gegevens aan elke rand moeten worden geprojecteerd, evenals projectiebestemmingen om te bepalen waar te om een projectie te leiden. Voor gedetailleerde informatie over het werken met randprojecties, gelieve de [projectieconfiguraties en bestemmingseindpuntgids](edge-projections.md)te bezoeken.
 
-## Entiteiten
+## Entiteiten (toegang tot profiel) {#entities}
 
 Via het Adobe Experience Platform hebt u toegang tot realtime gegevens van het klantprofiel met RESTful-API&#39;s of de gebruikersinterface. Als u wilt leren hoe u toegang krijgt tot entiteiten, beter bekend als &quot;profielen&quot;, gebruikt u de API, volgt u de stappen die worden beschreven in de handleiding voor het eindpunt van [entiteiten](entities.md). Raadpleeg de gebruikershandleiding bij [Profiel voor toegang tot profielen met de gebruikersinterface van het Platform](../ui/user-guide.md).
 
