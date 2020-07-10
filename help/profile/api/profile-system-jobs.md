@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Systeemtaken profiel - Real-time API voor klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1466'
 ht-degree: 0%
 
 ---
@@ -38,10 +38,10 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | Parameter | Beschrijving |
 |---|---|
-| `start` | Verschuif de pagina met geretourneerde resultaten volgens de aanmaaktijd van de aanvraag. Voorbeeld: `start=4` |
-| `limit` | Beperk het aantal geretourneerde resultaten. Voorbeeld: `limit=10` |
-| `page` | Retourneer een specifieke pagina met resultaten volgens de aanmaaktijd van de aanvraag. Voorbeeld: `page=2` |
-| `sort` | Sorteer de resultaten op een bepaald veld in oplopende (`asc`) of aflopende (`desc`) volgorde. De sorteerparameter werkt niet bij het retourneren van meerdere pagina&#39;s met resultaten. Voorbeeld: `sort=batchId:asc` |
+| `start` | Verschuif de pagina met geretourneerde resultaten volgens de aanmaaktijd van de aanvraag. Voorbeeld: *`start=4`* |
+| `limit` | Beperk het aantal geretourneerde resultaten. Voorbeeld: *`limit=10`* |
+| `page` | Retourneer een specifieke pagina met resultaten volgens de aanmaaktijd van de aanvraag. Voorbeeld: ***`page=2`*** |
+| `sort` | Sorteer de resultaten op een bepaald veld in oplopende (*`asc`*) of aflopende (**`desc`**) volgorde. De sorteerparameter werkt niet bij het retourneren van meerdere pagina&#39;s met resultaten. Voorbeeld: `sort=batchId:asc` |
 
 **Verzoek**
 
@@ -91,11 +91,11 @@ De reactie bevat een array &#39;children&#39; met een object voor elke verwijder
 
 | Eigenschap | Beschrijving |
 |---|---|
-| _page.count | Het totale aantal aanvragen. Deze reactie is afgebroken voor de ruimte. |
-| _page.next | Als er nog een pagina met resultaten is, bekijkt u de volgende pagina met resultaten door de id-waarde in een [opzoekaanvraag](#view-a-specific-delete-request) te vervangen door de waarde &quot;next&quot;. |
-| jobType | Het type taak dat wordt gemaakt. In dit geval wordt altijd &quot;DELETE&quot; geretourneerd. |
-| status | De status van de verwijderaanvraag. Mogelijke waarden zijn &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;COMPLETED&quot;, &quot;ERROR&quot;. |
-| cijfers | Een object dat het aantal records bevat dat is verwerkt (&quot;recordsProcess&quot;) en de tijd in seconden dat het verzoek is verwerkt, of de tijd die het heeft geduurd voordat het verzoek is voltooid (&quot;timetakenInSec&quot;). |
+| `_page.count` | Het totale aantal aanvragen. Deze reactie is afgebroken voor de ruimte. |
+| `_page.next` | Als er nog een pagina met resultaten is, bekijkt u de volgende pagina met resultaten door de id-waarde in een [opzoekaanvraag](#view-a-specific-delete-request) te vervangen door de opgegeven `"next"` waarde. |
+| `jobType` | Het type taak dat wordt gemaakt. In dit geval zal het altijd terugkeren `"DELETE"`. |
+| `status` | De status van de verwijderaanvraag. Mogelijke waarden zijn `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | Een object dat het aantal records bevat dat is verwerkt (`"recordsProcessed"`) en de tijd in seconden dat de aanvraag is verwerkt, of de tijd die het duurt voordat de aanvraag is voltooid (`"timeTakenInSec"`). |
 
 ## Een verwijderaanvraag maken {#create-a-delete-request}
 
@@ -131,11 +131,11 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 |---|---|
-| dataSetId | **(Vereist)** identiteitskaart van de dataset u wenst om te schrappen. |
+| `dataSetId` | **(Vereist)** identiteitskaart van de dataset u wenst om te schrappen. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de details van het nieuwe verwijderingsverzoek, inclusief een unieke, door het systeem gegenereerde, alleen-lezen-id voor de aanvraag. Dit kan worden gebruikt om het verzoek op te zoeken en zijn status te controleren. De `status` reden van de aanvraag op het moment van aanmaken is `"NEW"` totdat deze wordt verwerkt. Het antwoord `dataSetId` in de reactie moet overeenkomen met het antwoord dat in het verzoek is `dataSetId` verzonden.
+Een geslaagde reactie retourneert de details van het nieuwe verwijderingsverzoek, inclusief een unieke, door het systeem gegenereerde, alleen-lezen-id voor de aanvraag. Dit kan worden gebruikt om het verzoek op te zoeken en zijn status te controleren. De **`status`** reden van de aanvraag op het moment van aanmaken is *`"NEW"`* totdat deze wordt verwerkt. Het antwoord **`dataSetId`** in de reactie moet overeenkomen met het antwoord dat in het verzoek is ***`dataSetId`*** verzonden.
 
 ```json
 {
@@ -151,15 +151,15 @@ Een geslaagde reactie retourneert de details van het nieuwe verwijderingsverzoek
 
 | Eigenschap | Beschrijving |
 |---|---|
-| id | De unieke, door het systeem gegenereerde, alleen-lezen-id van de verwijderaanvraag. |
-| dataSetId | De id van de gegevensset, zoals opgegeven in het POST-verzoek. |
+| `id` | De unieke, door het systeem gegenereerde, alleen-lezen-id van de verwijderaanvraag. |
+| `dataSetId` | De id van de gegevensset, zoals opgegeven in het POST-verzoek. |
 
 ### Een batch verwijderen
 
 Om een partij te kunnen verwijderen, moet de partij-ID worden opgenomen in de hoofdtekst van de POST-aanvraag. Gelieve te worden geadviseerd dat u geen partijen voor datasets kunt schrappen die op verslagschema&#39;s worden gebaseerd. Alleen batches voor gegevenssets op basis van tijdreeksschema&#39;s mogen worden verwijderd.
 
 >[!NOTE]
-> De reden u niet batches voor datasets kunt schrappen die op verslagschema&#39;s worden gebaseerd is omdat de reeksen van de recordtype dataset vorige verslagen beschrijven en daarom niet &quot;undone&quot;of geschrapt kunnen zijn. De enige manier om het effect van onjuiste partijen voor datasets te verwijderen die op verslagschema&#39;s worden gebaseerd is de partij met de correcte gegevens opnieuw in te voeren om de onjuiste verslagen te beschrijven.
+> De reden u niet batches voor datasets kunt schrappen die op verslagschema&#39;s worden gebaseerd is omdat de reeksen van de recordtype dataset vorige verslagen beschrijven en daarom niet &quot;undone&quot;of geschrapt kunnen zijn. De enige manier om het effect van onjuiste partijen voor datasets te verwijderen die op verslagschema&#39;s worden gebaseerd is de partij met de correcte gegevens opnieuw op te nemen om de onjuiste verslagen te beschrijven.
 
 Voor meer informatie over record- en tijdreeksgedrag raadpleegt u de [sectie over XDM-gegevensgedrag](../../xdm/home.md#data-behaviors) in het XDM System-overzicht.
 
@@ -186,11 +186,11 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 |---|---|
-| batchId | **(Vereist)** De id van de batch die u wilt verwijderen. |
+| `batchId` | **(Vereist)** De id van de batch die u wilt verwijderen. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de details van het nieuwe verwijderingsverzoek, inclusief een unieke, door het systeem gegenereerde, alleen-lezen-id voor de aanvraag. Dit kan worden gebruikt om het verzoek op te zoeken en zijn status te controleren. De status van het verzoek op het moment van aanmaken is &#39;NEW&#39; totdat het wordt verwerkt. De &quot;batchId&quot; in de reactie moet overeenkomen met de &quot;batchId&quot; die in de aanvraag wordt verzonden.
+Een geslaagde reactie retourneert de details van het nieuwe verwijderingsverzoek, inclusief een unieke, door het systeem gegenereerde, alleen-lezen-id voor de aanvraag. Dit kan worden gebruikt om het verzoek op te zoeken en zijn status te controleren. De `"status"` reden van de aanvraag op het moment van aanmaken is `"NEW"` totdat deze wordt verwerkt. Het antwoord `"batchId"` in de reactie moet overeenkomen met het antwoord dat in het verzoek is `"batchId"` verzonden.
 
 ```json
 {
@@ -206,8 +206,8 @@ Een geslaagde reactie retourneert de details van het nieuwe verwijderingsverzoek
 
 | Eigenschap | Beschrijving |
 |---|---|
-| id | De unieke, door het systeem gegenereerde, alleen-lezen-id van de verwijderaanvraag. |
-| batchId | De id van de batch, zoals opgegeven in de POST-aanvraag. |
+| `id` | De unieke, door het systeem gegenereerde, alleen-lezen-id van de verwijderaanvraag. |
+| `batchId` | De id van de batch, zoals opgegeven in de POST-aanvraag. |
 
 Als u probeert om een schrappingsverzoek voor een partij van de dataset van het Verslag in werking te stellen, zult u een fout op 400 niveau ontmoeten, gelijkend op het volgende:
 
@@ -237,7 +237,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 | Parameter | Beschrijving |
 |---|---|
-| {DELETE_REQUEST_ID} | **(Vereist)** De id van het verwijderingsverzoek dat u wilt bekijken. |
+| `{DELETE_REQUEST_ID}` | **(Vereist)** De id van het verwijderingsverzoek dat u wilt bekijken. |
 
 **Verzoek**
 
@@ -269,11 +269,11 @@ In het antwoord worden de details van het verwijderingsverzoek weergegeven, incl
 
 | Eigenschappen | Beschrijving |
 |---|---|
-| jobType | Het type baan dat wordt gecreeerd, in dit geval zal het altijd &quot;DELETE&quot;terugkeren. |
-| status | De status van de verwijderaanvraag. Mogelijke waarden: &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;COMPLETED&quot;, &quot;ERROR&quot;. |
-| cijfers | Een array die het aantal records bevat dat is verwerkt (&quot;recordsProcess&quot;) en de tijd in seconden dat de aanvraag is verwerkt, of de tijd die de aanvraag in beslag heeft genomen (&quot;timetakenInSec&quot;). |
+| `jobType` | Het type baan dat wordt gecreeerd, in dit geval zal het altijd terugkeren `"DELETE"`. |
+| `status` | De status van de verwijderaanvraag. Mogelijke waarden: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | Een array die het aantal records bevat dat is verwerkt (`"recordsProcessed"`) en de tijd in seconden dat de aanvraag is verwerkt, of de tijd die nodig was om de aanvraag te voltooien (`"timeTakenInSec"`). |
 
-Zodra de status van het verwijderingsverzoek &quot;COMPLETED&quot; is, kunt u bevestigen dat de gegevens zijn verwijderd door via de API voor gegevenstoegang toegang te krijgen tot de verwijderde gegevens. Voor instructies over hoe te om de Toegang API van Gegevens te gebruiken om tot datasets en partijen toegang te hebben, te herzien gelieve de documentatie [van de Toegang van](../../data-access/home.md)Gegevens.
+Zodra de status van de verwijderaanvraag is ingesteld, kunt `"COMPLETED"` u bevestigen dat de gegevens zijn verwijderd door via de API voor gegevenstoegang toegang te krijgen tot de verwijderde gegevens. Voor instructies over hoe te om de Toegang API van Gegevens te gebruiken om tot datasets en partijen toegang te hebben, te herzien gelieve de documentatie [van de Toegang van](../../data-access/home.md)Gegevens.
 
 ## Een verwijderingsaanvraag verwijderen
 
