@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Een Azure Blob- of Amazon S3-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 1%
+source-wordcount: '631'
+ht-degree: 0%
 
 ---
 
@@ -80,6 +80,6 @@ Als u een bestaande account wilt verbinden, selecteert u de [!DNL Blob] of S3-ac
 
 ![bestaand](../../../../images/tutorials/create/blob/existing.png)
 
-## Volgende stappen
+## Volgende stappen en extra bronnen
 
 Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Blob] of S3-account. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag naar het Platform](../../dataflow/batch/cloud-storage.md)te brengen.
