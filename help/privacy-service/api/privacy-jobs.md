@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Taken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: df36d88de8ac117206d8d744cfcdd7804fcec61e
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1807'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,56 @@ ht-degree: 0%
 
 # Privacytaken
 
-De volgende secties lopen door vraag u het gebruiken van het `/jobs` eindpunt in Privacy Service API kunt maken. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+In dit document wordt beschreven hoe u met privacytaken werkt met API-aanroepen. Het gaat specifiek over het gebruik van het `/job` eindpunt in de Privacy Service-API. Voordat u deze handleiding leest, raadpleegt u de sectie [Aan de](./getting-started.md#getting-started) slag voor belangrijke informatie die u moet weten om oproepen naar de API met succes te kunnen uitvoeren, inclusief vereiste headers en hoe u API-voorbeeldaanroepen kunt lezen.
+
+## Alle taken weergeven {#list}
+
+U kunt een lijst van alle beschikbare privacybanen binnen uw organisatie bekijken door een GET verzoek aan het `/jobs` eindpunt te doen.
+
+**API-indeling**
+
+Dit verzoekformaat gebruikt een `regulation` vraagparameter op het `/jobs` eindpunt, daarom begint het met een vraagteken (`?`) zoals hieronder getoond. De reactie wordt gepagineerd, toestaand u om andere vraagparameters (`page` en `size`) te gebruiken om de reactie te filtreren. U kunt meerdere parameters scheiden met ampersands (`&`).
+
+```http
+GET /jobs?regulation={REGULATION}
+GET /jobs?regulation={REGULATION}&page={PAGE}
+GET /jobs?regulation={REGULATION}&size={SIZE}
+GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Accepteerde waarden zijn `gdpr`, `ccpa`en `pdpa_tha`. |
+| `{PAGE}` | De pagina met gegevens die moet worden weergegeven met een op 0 gebaseerde nummering. De standaardwaarde is `0`. |
+| `{SIZE}` | Het aantal resultaten dat op elke pagina moet worden weergegeven. De standaardwaarde is `1` en het maximum is `100`. Als het maximum wordt overschreden, retourneert de API een fout van 400 code. |
+
+**Verzoek**
+
+Met het volgende verzoek wordt een gepagineerde lijst opgehaald van alle taken binnen een IMS-organisatie, te beginnen bij de derde pagina met een paginaformaat van 50.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**Antwoord**
+
+Een succesvolle reactie retourneert een lijst met taken, waarbij elke taak details zoals de taak `jobId`bevat. In dit voorbeeld bevat het antwoord een lijst met 50 taken, te beginnen op de derde pagina met resultaten.
+
+### Volgende pagina&#39;s openen
+
+Om de volgende reeks resultaten in een gepagineerde reactie te halen, moet u een andere API vraag aan het zelfde eindpunt maken terwijl het verhogen van de `page` vraagparameter door 1.
 
 ## Een privacytaak maken {#create-job}
 
-Voordat u een nieuwe taakaanvraag maakt, moet u eerst identificatiegegevens verzamelen over de betrokkenen van wie u de gegevens wilt benaderen, verwijderen of niet wilt verkopen. Zodra u de vereiste gegevens hebt, moet het in de lading van een verzoek van de POST aan het worteleindpunt worden verstrekt.
+Voordat u een nieuwe taakaanvraag maakt, moet u eerst identificatiegegevens verzamelen over de betrokkenen van wie u de gegevens wilt benaderen, verwijderen of niet wilt verkopen. Zodra u de vereiste gegevens hebt, moet het in de lading van een verzoek van de POST aan het `/jobs` eindpunt worden verstrekt.
 
 >[!NOTE]
 >
->Compatibele Adobe Experience Cloud-toepassingen gebruiken verschillende waarden voor het identificeren van betrokkenen. Raadpleeg de handleiding over [Privacy Service- en Experience Cloud-toepassingen](../experience-cloud-apps.md) voor meer informatie over de vereiste id&#39;s voor uw toepassing(en).
+>Compatibele Adobe Experience Cloud-toepassingen gebruiken verschillende waarden voor het identificeren van betrokkenen. Raadpleeg de handleiding over [Privacy Service- en Experience Cloud-toepassingen](../experience-cloud-apps.md) voor meer informatie over de vereiste id&#39;s voor uw toepassing(en). Zie het document over [identiteitsgegevens in privacyverzoeken](../identity-data.md)voor meer algemene informatie over het bepalen van welke id&#39;s u naar de Privacy Service wilt verzenden.
 
 De Privacy Service-API ondersteunt twee soorten taakaanvragen voor persoonlijke gegevens:
 
@@ -290,7 +331,7 @@ Nadat de taakaanvraag is verzonden, kunt u doorgaan naar de volgende stap om de 
 
 ## De status van een taak controleren {#check-status}
 
-Met een van de `jobId` waarden die in de vorige stap zijn geretourneerd, kunt u informatie over die taak ophalen, zoals de huidige verwerkingsstatus.
+U kunt informatie over een specifieke baan, zoals zijn huidige verwerkingsstatus terugwinnen, door die baan `jobId` in de weg van een GET verzoek aan het `/jobs` eindpunt te omvatten.
 
 >[!IMPORTANT]
 >
@@ -304,7 +345,7 @@ GET /jobs/{JOB_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{JOB_ID}` | De id van de taak die u wilt opzoeken, wordt geretourneerd onder `jobId` de reactie van de [vorige stap](#create-job). |
+| `{JOB_ID}` | De id van de taak die u wilt opzoeken. Deze id wordt geretourneerd onder `jobId` succesvolle API-reacties voor het [maken van een taak](#create-job) en het [weergeven van alle taken](#list). |
 
 **Verzoek**
 
@@ -324,12 +365,12 @@ Een geslaagde reactie retourneert de details van de opgegeven taak.
 
 ```json
 {
-    "jobId": "527ef92d-6cd9-45cc-9bf1-477cfa1e2ca2",
+    "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076b0842b6",
     "requestId": "15700479082313109RX-899",
     "userKey": "David Smith",
     "action": "access",
-    "status": "error",
-    "submittedBy": "02b38adf-6573-401e-b4cc-6b08dbc0e61c@techacct.adobe.com",
+    "status": "complete",
+    "submittedBy": "{ACCOUNT_ID}",
     "createdDate": "10/02/2019 08:25 PM GMT",
     "lastModifiedDate": "10/02/2019 08:25 PM GMT",
     "userIds": [
@@ -354,8 +395,21 @@ Een geslaagde reactie retourneert de details van de opgegeven taak.
             "retryCount": 0,
             "processedDate": "10/02/2019 08:25 PM GMT",
             "productStatusResponse": {
-                "status": "submitted",
-                "message": "processing"
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6000-200",
+                "responseMsgDetail": "Finished successfully."
+            }
+        },
+        {
+            "product": "Profile",
+            "retryCount": 0,
+            "processedDate": "10/02/2019 08:25 PM GMT",
+            "productStatusResponse": {
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6000-200",
+                "responseMsgDetail": "Success dataSetIds = [5dbb87aad37beb18a96feb61], Failed dataSetIds = []"
             }
         },
         {
@@ -363,8 +417,14 @@ Een geslaagde reactie retourneert de details van de opgegeven taak.
             "retryCount": 0,
             "processedDate": "10/02/2019 08:25 PM GMT",
             "productStatusResponse": {
-                "status": "submitted",
-                "message": "processing"
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6054-200",
+                "responseMsgDetail": "PARTIALLY COMPLETED- Data not found for some requests, check results for more info.",
+                "results": {
+                  "processed": ["1123A4D5690B32A"],
+                  "ignored": ["dsmith@acme.com"]
+                }
             }
         }
     ],
@@ -375,64 +435,28 @@ Een geslaagde reactie retourneert de details van de opgegeven taak.
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `productStatusResponse` | De huidige status van de taak. Nadere bijzonderheden over elke mogelijke status zijn te vinden in de onderstaande tabel. |
+| `productStatusResponse` | Elk object in de `productResponses` array bevat informatie over de huidige status van de taak ten opzichte van een specifieke [!DNL Experience Cloud] toepassing. |
+| `productStatusResponse.status` | De huidige statuscategorie van de taak. Zie de onderstaande tabel voor een lijst met [beschikbare statuscategorieën](#status-categories) en de bijbehorende betekenissen. |
+| `productStatusResponse.message` | De specifieke status van de taak, die overeenkomt met de statuscategorie. |
+| `productStatusResponse.responseMsgCode` | Een standaardcode voor de berichten van de productreactie die door Privacy Service worden ontvangen. De details van het bericht worden onder verstrekt `responseMsgDetail`. |
+| `productStatusResponse.responseMsgDetail` | Een gedetailleerdere uitleg van de status van de baan. Berichten voor vergelijkbare statussen kunnen per product verschillen. |
+| `productStatusResponse.results` | Voor bepaalde statussen kunnen sommige producten een `results` object retourneren dat aanvullende informatie biedt die niet door `responseMsgDetail`de status wordt gedekt. |
 | `downloadURL` | Als de status van de taak `complete`is, verschaft dit kenmerk een URL waarmee de taakresultaten als een ZIP-bestand kunnen worden gedownload. Dit bestand kan 60 dagen nadat de taak is voltooid, worden gedownload. |
 
-### Reacties taakstatus
+### Taakstatuscategorieën {#status-categories}
 
-In de volgende tabel worden de verschillende mogelijke taakstatussen en de bijbehorende betekenis weergegeven:
+In de volgende tabel worden de verschillende mogelijke taakstatuscategorieën en de bijbehorende betekenis weergegeven:
 
-| Statuscode | Statusbericht | Betekenis |
-| ----------- | -------------- | -------- |
-| 1 | Voltooid | De taak is voltooid en (indien vereist) worden bestanden vanuit elke toepassing geüpload. |
-| 2 | Verwerking | Toepassingen hebben de taak erkend en worden momenteel verwerkt. |
-| 3 | Verzonden | De taak wordt voorgelegd aan elke toepasselijke toepassing. |
-| 4 | Fout | Er is iets misgegaan in de verwerking van de taak - er kan meer specifieke informatie worden verkregen door individuele taakdetails op te halen. |
+| Statuscategorie | Betekenis |
+| -------------- | -------- |
+| Voltooid | De taak is voltooid en (indien vereist) worden bestanden vanuit elke toepassing geüpload. |
+| Verwerking | Toepassingen hebben de taak erkend en worden momenteel verwerkt. |
+| Verzonden | De taak wordt voorgelegd aan elke toepasselijke toepassing. |
+| Fout | Er is iets misgegaan in de verwerking van de taak - er kan meer specifieke informatie worden verkregen door individuele taakdetails op te halen. |
 
 >[!NOTE]
 >
 >Een voorgelegde baan kan in een verwerkingsstaat blijven als het een afhankelijke kindbaan heeft die nog wordt verwerkt.
-
-## Alle taken weergeven
-
-U kunt een lijst van alle beschikbare baanverzoeken binnen uw organisatie bekijken door een GET verzoek aan het wortel (`/`) eindpunt te doen.
-
-**API-indeling**
-
-Dit verzoekformaat gebruikt een `regulation` vraagparameter op het wortel (`/`) eindpunt, daarom begint het met een vraagteken (`?`) zoals hieronder getoond. De reactie wordt gepagineerd, toestaand u om andere vraagparameters (`page` en `size`) te gebruiken om de reactie te filtreren. U kunt meerdere parameters scheiden met ampersands (`&`).
-
-```http
-GET /jobs?regulation={REGULATION}
-GET /jobs?regulation={REGULATION}&page={PAGE}
-GET /jobs?regulation={REGULATION}&size={SIZE}
-GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
-```
-
-| Parameter | Beschrijving |
-| --- | --- |
-| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Accepteerde waarden zijn `gdpr`, `ccpa`en `pdpa_tha`. |
-| `{PAGE}` | De pagina met gegevens die moet worden weergegeven met een op 0 gebaseerde nummering. De standaardwaarde is `0`. |
-| `{SIZE}` | Het aantal resultaten dat op elke pagina moet worden weergegeven. De standaardwaarde is `1` en het maximum is `100`. Als het maximum wordt overschreden, retourneert de API een fout van 400 code. |
-
-**Verzoek**
-
-Met het volgende verzoek wordt een gepagineerde lijst opgehaald van alle taken binnen een IMS-organisatie, te beginnen bij de derde pagina met een paginaformaat van 50.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-```
-
-**Antwoord**
-
-Een succesvolle reactie retourneert een lijst met taken, waarbij elke taak details zoals de taak `jobId`bevat. In dit voorbeeld bevat het antwoord een lijst met 50 taken, te beginnen op de derde pagina met resultaten.
-
-### Volgende pagina&#39;s openen
-
-Om de volgende reeks resultaten in een gepagineerde reactie te halen, moet u een andere API vraag aan het zelfde eindpunt maken terwijl het verhogen van de `page` vraagparameter door 1.
 
 ## Volgende stappen
 
