@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor de gebruikersinterface van Segment Builder
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
 workflow-type: tm+mt
-source-wordcount: '2683'
+source-wordcount: '2766'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ De evaluatiemethode kan streaming of batch zijn. Streaming segmenten worden voor
 
 De segmenten van de partij hebben extra informatie getoond, die zowel de laatste evaluatiedatum als de volgende evaluatiedatum voor de partij tonen.
 
-Als u in de rechterbovenhoek op Segment maken klikt, wordt de werkruimte Segment Builder geopend. Hier kunt u een segmentdefinitie maken. ****
+Als u in de rechterbovenhoek op Segment maken klikt, wordt de werkruimte van Segment Builder geopend. Hier kunt u een segmentdefinitie maken. ****
 
 ![](../images/segment-builder/segment-browse.png)
 
@@ -233,6 +233,12 @@ De extra informatie over de laatste segmentevaluatie kan worden gevonden door de
 
 ![](../images/segment-builder/info-bubble.png)
 
+### Videodemo voor streamingsegmentatie
+
+De volgende video is bedoeld om uw begrip van het stromen segmentatie te steunen. Het toont een voorbeeldervaring van de klant gevolgd door een snelle rondreis van zeer belangrijke eigenschappen in de [!DNL Platform] interface.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+
 ## Beleidsovertredingen DULE
 
 >[!NOTE]
@@ -243,7 +249,7 @@ Zodra u klaar bent creërend uw segment, zal het segment door worden geanalyseer
 
 ![](../images/segment-builder/segment-dule-policy-violations.png)
 
-## Volgende stappen
+## Volgende stappen en extra bronnen {#next-steps}
 
 De Bouwer van het segment verstrekt een rijk werkschema toelatend u om verhandelbare doelgroepen van [!DNL Real-time Customer Profile] gegevens te isoleren. Na het lezen van deze handleiding moet u nu in staat zijn om:
 
@@ -253,4 +259,16 @@ De Bouwer van het segment verstrekt een rijk werkschema toelatend u om verhandel
 - Schakel alle segmentdefinities in voor geplande segmentatie.
 - Hiermee kunt u opgegeven segmentdefinities voor streaming segmentatie inschakelen.
 
-Zie de zelfstudie voor het [!DNL Segmentation Service] maken van publiekssegmenten met behulp van API&#39;s voor stapsgewijze instructies voor het werken met [!DNL Segmentation Service] de [APIs](../tutorials/create-a-segment.md) .
+Voor meer informatie [!DNL Segmentation Service]leest u de documentatie en vult u deze aan door de onderstaande video&#39;s te bekijken. Zie de zelfstudie voor het [!DNL Segmentation Service] maken van publiekssegmenten met behulp van API&#39;s voor stapsgewijze instructies voor het werken met [!DNL Segmentation Service] de [APIs](../tutorials/create-a-segment.md) .
+
+>[!WARNING]
+>
+> De [!DNL Platform] UI die in de volgende video&#39;s wordt getoond is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+
+**Een segment maken:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+
+**Een dynamisch segment maken:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
