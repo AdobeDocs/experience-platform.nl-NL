@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Segmentatie van meerdere entiteiten
 topic: overview
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 7110be2654e55ea411580f8c9e2e92bb52badab5
+workflow-type: tm+mt
+source-wordcount: '406'
+ht-degree: 0%
 
 ---
 
@@ -13,15 +16,17 @@ source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
 
 De segmentatie van meerdere entiteiten is de capaciteit om de gegevens van het Profiel met extra gegevens uit te breiden die op producten, opslag, of andere niet-profielklassen worden gebaseerd. Zodra verbonden, worden de gegevens van extra klassen beschikbaar alsof zij aan het schema van het Profiel inheems waren.
 
-Lees het [segmentatieoverzicht](./home.md)voor meer informatie over de segmentatie van meerdere entiteiten.
+Als u meer wilt weten over segmentatie tussen meerdere entiteiten, blijft u de documentatie lezen en kunt u deze leren aanvullen door de onderstaande video te bekijken of het [segmentatieoverzicht](./home.md)te verkennen.]
+
+>[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de verschillende services van het Adobe Experience Platform die betrokken zijn bij het gebruik van segmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Deze zelfstudie vereist een goed begrip van de verschillende diensten van het Adobe Experience Platform die betrokken zijn bij het gebruik van segmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [Klantprofiel](../profile/home.md)in realtime: Verstrekt een verenigd consumentenprofiel in real time, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [Adobe Experience Platform Segmentation Service](./home.md): Staat u toe om segmenten van het Profiel van de Klant in real time te bouwen.
-- [XDM (Experience Data Model)](../xdm/home.md): Het gestandaardiseerde kader waardoor Platform gegevens van de klantenervaring organiseert.
+- [Segmenteringsservice](./home.md)Adobe Experience Platform: Staat u toe om segmenten van het Profiel van de Klant in real time te bouwen.
+- [XDM (Experience Data Model)](../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
 
 ## XDM-relaties definiëren
 
