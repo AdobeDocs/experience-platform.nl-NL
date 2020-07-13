@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Adobe Analytics-bronaansluiting maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ Voor meer informatie over hoe te om gegevens te etiketteren die uit Analytics ko
 
 ![](../../../../images/tutorials/create/analytics/labels.png)
 
-## Volgende stappen
+## Volgende stappen en extra bronnen
 
 Zodra de verbinding wordt gecreeerd, wordt een doelschema en datasetstroom automatisch gecreeerd om de inkomende gegevens te bevatten. Bovendien vindt de terugvulling van gegevens plaats en neemt deze tot 13 maanden aan historische gegevens in. Wanneer de eerste opname is voltooid, worden Analytics-gegevens gebruikt door downstreamservices voor Platforms zoals Real-time klantprofiel en Segmentatieservice. Raadpleeg de volgende documenten voor meer informatie:
 
@@ -103,3 +103,12 @@ Zodra de verbinding wordt gecreeerd, wordt een doelschema en datasetstroom autom
 * [Overzicht van segmentatieservice](../../../../../segmentation/home.md)
 * [Overzicht van de Data Science Workspace](../../../../../data-science-workspace/home.md)
 * [Overzicht van Query Service](../../../../../query-service/home.md)
+
+De volgende video is bedoeld als ondersteuning voor uw inzicht in het opnemen van gegevens via de Adobe Analytics Source-connector:
+
+>[!WARNING]
+>
+> De [!DNL Platform] UI die in de volgende video wordt getoond is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+
