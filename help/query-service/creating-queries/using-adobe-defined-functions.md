@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Door Adobe gedefinieerde functies
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 1%
+source-wordcount: '292'
+ht-degree: 2%
 
 ---
 
@@ -240,4 +240,10 @@ LIMIT 10;
 ```
 
 ![Afbeelding](../images/queries/adobe-functions/create-breakdown-report.png)
+
+## Aanvullende bronnen
+
+De volgende video toont hoe te om vragen in de interface van het Adobe Experience Platform en in een cliënt in werking te stellen PSQL. Bovendien gebruikt de video ook voorbeelden waarbij afzonderlijke eigenschappen in een XDM-object zijn betrokken, waarbij gebruik wordt gemaakt van door Adobe gedefinieerde functies en gebruik wordt gemaakt van CREATE TABLE AS SELECT (CTAS).
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
