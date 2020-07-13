@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding Query Service Query Editor voor Adobe Experience Platform
 topic: query editor
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1106'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,12 @@ De console verstrekt informatie over de status en de verrichting van de Dienst v
 Nadat een query is voltooid, worden de resultaten weergegeven op het tabblad *Resultaten* , naast het tabblad *Console* . In deze weergave wordt de tabeluitvoer van uw query weergegeven, met maximaal 100 rijen. In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met in werking `CREATE TABLE tablename AS SELECT` om een dataset met de output te produceren. Zie het [produceren datasetleerprogramma][query-service-create-datasets] voor instructies op hoe te om een dataset van vraagresultaten in de Redacteur van de Vraag te produceren.
 
 ![Afbeelding](../images/queries/query-editor-overview/query-results.png)
+
+## De vragen van de looppas met de zelfstudie van de Dienst van de Vraag
+
+De volgende video toont hoe te om vragen in de interface van het Adobe Experience Platform en in een cliënt in werking te stellen PSQL. Bovendien wordt het gebruik van individuele eigenschappen in een XDM-object, met behulp van door Adobe gedefinieerde functies en het gebruik van CREATE TABLE AS SELECT (CTAS) aangetoond.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Volgende stappen
 
