@@ -1,19 +1,22 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Data Access
+user-guide-title: Toegang tot Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+source-git-commit: 5f3afdbb52f5c99257c35e675c782e7477618ce6
 workflow-type: tm+mt
-source-wordcount: '24'
+source-wordcount: '31'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platform Data Access {#data-access}
+# Toegang tot Adobe Experience Platform {#data-access}
 
 - [Overzicht van gegevenstoegang](home.md)
+- [API voor gegevenstoegang](api.md)
 - Zelfstudies {#tutorials}
    - [Gegevens van toegangsgegevensset](tutorials/dataset-data.md)
-- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+   - [Python SDK](tutorials/python-sdk.md)
+   - [Spark SDK](tutorials/spark-sdk.md)
+- [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
