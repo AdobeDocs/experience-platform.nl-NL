@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmenteringsservice Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
 workflow-type: tm+mt
-source-wordcount: '2386'
+source-wordcount: '2408'
 ht-degree: 0%
 
 ---
@@ -129,6 +129,10 @@ Door een variabele toe te wijzen aan het attribuut van de koopstaat, vereenvoudi
 Met de geavanceerde functie voor segmentatie van meerdere entiteiten kunt u segmenten maken met behulp van meerdere XDM-klassen en zo extensies toevoegen aan persoonlijke schema&#39;s. Dientengevolge, kan de Dienst van de Segmentatie tot extra gebieden tijdens segmentdefinitie toegang hebben alsof zij aan de opslag van profielgegevens inheems waren.
 
 De segmentatie van meerdere entiteiten verstrekt de flexibiliteit nodig om publiek te identificeren dat op gegevens wordt gebaseerd relevant voor uw bedrijfsbehoeften. Dit proces kan snel en gemakkelijk worden gedaan zonder deskundigheid in het vragen van gegevensbestanden te vereisen. Dit laat u toe om zeer belangrijke gegevens aan uw segmenten toe te voegen zonder het moeten dure veranderingen in gegevensstromen aanbrengen of op een achterste-eindgegevenssamenvoeging wachten.
+
+De volgende video is bedoeld om uw begrip van multi-entiteitsegmentatie te steunen, en schetst zowel multi-entiteitsegmentatie als segmentcontext (segmentlading).
+
+>[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
 ### Hoofdlettergebruik: Prijsgerichte promotie
 
