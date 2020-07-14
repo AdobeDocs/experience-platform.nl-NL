@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een dataflow configureren voor een advertentieverbinding in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1072'
 ht-degree: 0%
 
 ---
@@ -111,9 +111,9 @@ Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Voltooien]*
 
 ![revisie](../../../images/tutorials/dataflow/advertising/review.png)
 
-## De gegevenssetstroom controleren
+## Uw gegevensstroom controleren en verwijderen
 
-Zodra uw datasetstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voor meer informatie over hoe te om uw datasetstromen te controleren, zie de zelfstudie over [rekeningen en datasetstromen](../monitor.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voor meer informatie over hoe te om uw gegevensstroom te controleren en te schrappen, zie de zelfstudie over het [controleren van en het schrappen van gegevensstromen](../monitor.md).
 
 ## Volgende stappen
 
