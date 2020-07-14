@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruikershandleiding voor sandbox
 topic: user guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,10 @@ Als een sandbox is geselecteerd, wordt het scherm vernieuwd met de geselecteerde
 ![](../images/ui/sandbox-switched.png)
 
 ## Een nieuwe sandbox maken
+
+Gebruik de volgende video voor een snel overzicht van het gebruik [!DNL Sandboxes] in [!DNL Experience Platform].
+
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
 Als u een nieuwe sandbox wilt maken in de gebruikersinterface, klikt u op **Sandboxen** in de linkernav en klikt u op Sandbox **** maken.
 
