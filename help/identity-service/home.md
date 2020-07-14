@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1672'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,14 @@ Als je iemand vraagt: &quot;Wat is je id?&quot; zonder verdere context zou het v
 Uw klanten kunnen met uw merk door een combinatie online en off-line kanalen in wisselwerking staan, resulterend in de uitdaging van hoe te om die gefragmenteerde interactie in één enkele klantenidentiteit te verzoenen.
 
 [!DNL Experience Platform] Deze uitdaging wordt aangegaan door twee concepten: [naamruimten](#identity-namespaces) en [identiteitsgrafieken](#identity-graphs).
+
+De volgende video is bedoeld als ondersteuning voor uw begrip van identiteiten en identiteitsgrafieken. De volgende video behandelt de drie mogelijkheden van de Inzameling van de Identiteit, de Grafieken van de Identiteit, en APIs. Het beschrijft ook hoe deterministische en probabilistische algoritmen worden gebruikt om privé identiteitsgrafieken te construeren, en bespreekt de rol van privé identiteitsgrafieken, de CoOp Grafiek van de Dienst van de Identiteit van het Adobe Experience Platform, en derdegrafieken.
+
+>[!IMPORTANT]
+>
+> Probabilistische privégrafieken zijn nog in ontwikkeling en worden later gepubliceerd.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ### Identiteitsnaamruimten
 
@@ -122,6 +130,14 @@ Tijdens het streamingingingproces extraheert u [!DNL Identity Service ]automatis
 ### Gegevens samenvoegen tot [!DNL Identity Service]
 
 [!DNL Identity Service] verbruikt XDM-compatibele gegevens die naar [!DNL Experience Platform] batch-opname [of](../ingestion/batch-ingestion/overview.md) streaming-opname [](../ingestion/streaming-ingestion/overview.md)worden verzonden.
+
+De volgende video is bedoeld om uw begrip van de Dienst van de Identiteit te steunen. In deze video ziet u hoe u gegevensvelden kunt labelen als identiteiten, identiteitsgegevens kunt invoeren en vervolgens kunt controleren of de gegevens zijn omgezet in de persoonlijke grafiek van de identiteitsdienst van het Adobe Experience Platform.
+
+>[!WARNING]
+>
+> De [!DNL Platform] UI die in de volgende video wordt getoond is verouderd. Raadpleeg de documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+
+>[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 
 ## Gegevensbeheer
 
