@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vorm een dataflow voor een protocolschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1071'
 ht-degree: 0%
 
 ---
@@ -85,19 +85,19 @@ De *[!UICONTROL Plannende]* stap verschijnt, toestaand u om een innameprogramma 
 | Begintijd | Een UTC-tijdstempel waarvoor de eerste invoer wordt uitgevoerd. |
 | Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als *[!UICONTROL Backfill]* is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Als *[!UICONTROL Backfill]* is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de *[!UICONTROL begintijd]* worden geladen. Bestanden die vóór het begin van het *[!UICONTROL starten]* zijn geladen, worden niet opgenomen. |
 
-Datasetstromen worden ontworpen om automatisch gegevens op een geplande basis in te voeren. Als u slechts één keer wilt opnemen via deze workflow, kunt u dit doen door de **[!UICONTROL Frequentie]** in te stellen op &quot;Dag&quot; en een zeer groot aantal toe te passen voor het **[!UICONTROL Interval]**, zoals 10000 of een vergelijkbaar aantal.
+Dataflows worden ontworpen om gegevens automatisch in te voeren op een geplande basis. Als u slechts één keer wilt opnemen via deze workflow, kunt u dit doen door de **[!UICONTROL Frequentie]** in te stellen op &quot;Dag&quot; en een zeer groot aantal toe te passen voor het **[!UICONTROL Interval]**, zoals 10000 of een vergelijkbaar aantal.
 
 Geef waarden op voor het schema en klik op **[!UICONTROL Volgende]**.
 
 ![plannen](../../../images/tutorials/dataflow/protocols/scheduling.png)
 
-## Geef de gegevenssetstroom een naam
+## Geef uw gegevensstroom een naam
 
 De stap met de details *[!UICONTROL van de]* Dataset-stroom wordt weergegeven. Hier moet u een naam en een optionele beschrijving opgeven voor de gegevenssetstroom. Klik op **[!UICONTROL Volgende]** als u klaar bent.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/protocols/dataset-flow-details.png)
 
-## De gegevenssetstroom controleren
+## Controleer uw gegevensstroom
 
 De stap *[!UICONTROL Revisie]* wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
@@ -109,9 +109,9 @@ Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Voltooien]*
 
 ![revisie](../../../images/tutorials/dataflow/protocols/review.png)
 
-## De gegevenssetstroom controleren
+## Uw gegevensstroom controleren en verwijderen
 
-Zodra uw datasetstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voor meer informatie over hoe te om uw datasetstromen te controleren, zie de zelfstudie over [rekeningen en datasetstromen](../monitor.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voor meer informatie over hoe te om uw gegevensstroom te controleren en te schrappen, zie de zelfstudie over het [controleren van en het schrappen van gegevensstromen](../monitor.md).
 
 ## Volgende stappen
 
