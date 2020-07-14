@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Accounts en gegevenssetstromen bewaken
+title: Gegevensstromen controleren en verwijderen
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: f08ad2c9cc48c08bcdc0e278481992e8789000b5
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
 
 
-# Accounts en gegevenssetstromen bewaken
+# Gegevensstromen controleren en verwijderen
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om extern gesourceerde gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het bekijken van bestaande rekeningen en datasetstromen van de werkruimte van *[!UICONTROL Bronnen]* .
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het bekijken van bestaande rekeningen en gegevensstromen van de *[!UICONTROL werkruimte van Bronnen]* . Dit leerprogramma verstrekt ook stappen voor het schrappen van gegevensstromen van de werkruimte van *[!UICONTROL Bronnen]* .
 
 ## Aan de slag
 
@@ -27,15 +27,15 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe
 
 ## Accounts controleren
 
-Login aan <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatiebar om tot de werkruimte van *[!UICONTROL Bronnen]* toegang te hebben. Het scherm van de *[!UICONTROL Catalogus]* toont een verscheidenheid van bronnen waarvoor u de stromen van de rekeningsdataset kunt tot stand brengen met. Elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
+Login aan [Adobe Experience Platform](https://platform.adobe.com) en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatiebar om tot de werkruimte van *[!UICONTROL Bronnen]* toegang te hebben. In het scherm *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven waarvoor u accounts en gegevensstromen kunt maken. Elke bron toont het aantal bestaande rekeningen en gegevensstromen verbonden aan hen.
 
 Selecteer *[!UICONTROL Accounts]* in de bovenste koptekst om bestaande accounts weer te geven.
 
 ![catalogus](../../images/tutorials/monitor/catalog.png)
 
-De pagina&#39;s *[!UICONTROL Accounts]* worden weergegeven. Op deze pagina vindt u een lijst met te bekijken accounts, waaronder informatie over de bron, gebruikersnaam, het aantal gegevenssetstromen en de aanmaakdatum.
+De pagina&#39;s *[!UICONTROL Accounts]* worden weergegeven. Op deze pagina vindt u een lijst met weer te geven accounts, waaronder informatie over de bron, gebruikersnaam, het aantal gegevensstromen en de aanmaakdatum.
 
-Selecteer het pictogram linksboven om het sorteervenster te openen.
+Selecteer het trechter-pictogram linksboven om het sorteervenster te openen.
 
 ![rekeningen](../../images/tutorials/monitor/accounts-list.png)
 
@@ -43,33 +43,63 @@ Via het sorteervenster hebt u toegang tot accounts vanuit een specifieke bron. S
 
 ![accounts selecteren](../../images/tutorials/monitor/accounts-sort.png)
 
-Van de pagina van *[!UICONTROL Rekeningen]* , kunt u een lijst van bestaande datasetstromen bekijken verbonden aan de rekening u toegang had tot. Selecteer de datasetstroom u wenst om te bekijken.
+Vanuit de pagina *[!UICONTROL Accounts]* kunt u een lijst weergeven met bestaande gegevensstromen die zijn gekoppeld aan de account die u hebt geopend. Selecteer de gegevensstroom u wenst om te bekijken.
 
-![accountpagina](../../images/tutorials/monitor/dataset-flows.png)
+![accountpagina](../../images/tutorials/monitor/dataflows.png)
 
-Het scherm *[!UICONTROL Dataset flow activity]* wordt weergegeven. Op deze pagina wordt de snelheid van berichten weergegeven die in de vorm van een grafiek worden gebruikt.
+Het scherm *[!UICONTROL Dataflow-activiteit]* wordt weergegeven. Op deze pagina wordt de snelheid van berichten weergegeven die in de vorm van een grafiek worden gebruikt.
 
-![dataset-flow-activity](../../images/tutorials/monitor/dataset-flows-activity.png)
+![dataset-flow-activity](../../images/tutorials/monitor/dataflow-activity.png)
 
-## Gegevensstromen controleren
+## Dataflows bewaken
 
-Datasetstromen zijn rechtstreeks vanuit de *[!UICONTROL Cataloguspagina]* toegankelijk zonder *[!UICONTROL accounts]* weer te geven. Selecteer *[!UICONTROL Datasetstromen]* in de bovenste koptekst om een lijst met bestaande gegevenssetstromen weer te geven.
+Dataflows zijn rechtstreeks vanuit de *[!UICONTROL Cataloguspagina]* toegankelijk zonder *[!UICONTROL accounts]* weer te geven. Selecteer *[!UICONTROL Gegevensstromen]* van de hoogste kopbal om een lijst van bestaande gegevensstromen te bekijken.
 
-![gegevenssetstromen](../../images/tutorials/monitor/dataset-flows-list.png)
+![catalogusgegevensstromen](../../images/tutorials/monitor/catalog-dataflows.png)
 
-Net als bij accounts kunt u de lijst met gegevenssetstromen sorteren met het sorteerpictogram linksboven. Selecteer de bron u wenst om de datasetstroom van de lijst op het recht te bekijken en te selecteren.
+Er wordt een lijst met bestaande gegevensstromen weergegeven. Op deze pagina vindt u een lijst met zichtbare gegevensstromen, waaronder informatie over de bron, gebruikersnaam, het aantal gegevensstromen en de status. Selecteer het trechter-pictogram linksboven om te sorteren.
 
-![select-dataset-flows](../../images/tutorials/monitor/dataset-flows-sort.png)
+![dataflows-list](../../images/tutorials/monitor/dataflows-list.png)
 
-Het scherm *[!UICONTROL Dataset flow activity]* wordt weergegeven. Op deze pagina wordt de snelheid van berichten weergegeven die in de vorm van een grafiek worden gebruikt.
+Het sorteervenster wordt weergegeven. Selecteer de bron die u wilt openen in het schuifmenu en selecteer de gegevensstroom in de lijst aan de rechterkant.
 
-![dataset-flow-activity](../../images/tutorials/monitor/dataset-flows-activity.png)
+![sortDataFlow](../../images/tutorials/monitor/dataflows-sort.png)
 
-Voor meer informatie over het controleren van datasets en ingestie, verwijs naar het leerprogramma bij het [controleren van het stromen gegevens](../../../ingestion/quality/monitor-data-flows.md).
+Het scherm *[!UICONTROL Dataflow-activiteit]* wordt weergegeven. Op deze pagina wordt de snelheid van berichten weergegeven die in de vorm van een grafiek worden gebruikt.
+
+![dataset-flow-activity](../../images/tutorials/monitor/dataflow-activity.png)
+
+Raadpleeg de zelfstudie over het [controleren van streaming dataflows voor meer informatie over het controleren van gegevensstromen](../../../ingestion/quality/monitor-data-flows.md)en het opnemen van gegevens.
+
+## Een gegevensstroom verwijderen
+
+U kunt gegevens verwijderen die onjuist zijn gemaakt of niet meer nodig zijn door het venster met gegevensstromen te openen. Zoek de gegevensstroom die u wilt verwijderen met het pictogram van de sorteertrechter en selecteer de gegevensstroom om het deelvenster **[!UICONTROL Eigenschappen]** te openen.
+
+Als u een gegevensstroom wilt verwijderen, selecteert u **[!UICONTROL Verwijderen]** in de eigenschappen aan de rechterbovenhoek.
+
+![delete-dataflows](../../images/tutorials/monitor/dataflows-sort-delete.png)
+
+Er verschijnt een laatste bevestigingsbericht. Selecteer **[!UICONTROL Verwijderen]** om te bevestigen.
+
+![bevestigen-schrappen](../../images/tutorials/monitor/confirm-delete.png)
+
+Na enkele ogenblikken verschijnt er een groen bevestigingsvak onder aan het scherm om te bevestigen dat het verwijderen is gelukt.
+
+![delete gelukt](../../images/tutorials/monitor/deletion-confirmed.png)
+
+U kunt ook een gegevensstroom verwijderen uit het scherm *[!UICONTROL Accounts]* . Zoek de account die u wilt openen met het pictogram van de sorteertrechter en selecteer de account in de lijst.
+
+![accounts selecteren](../../images/tutorials/monitor/accounts-sort.png)
+
+De pagina *[!UICONTROL Accounts]* wordt weergegeven. Selecteer de gegevensstroom die u wilt verwijderen en selecteer vervolgens **[!UICONTROL Verwijderen]** in het deelvenster Eigenschappen om het proces te voltooien.
+
+![accounts-delete](../../images/tutorials/monitor/accounts-delete.png)
+
+Volg de bovenstaande bevestigingsstappen om het proces te voltooien.
 
 ## Volgende stappen
 
-Door dit leerprogramma te volgen, hebt u met succes bestaande rekeningen en datasetstromen van de *[!UICONTROL Bronwerkruimte]* betreden. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Door dit leerprogramma te volgen, hebt u met succes bestaande rekeningen en gegevensstromen van de *[!UICONTROL werkruimte van Bronnen]* betreden. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
 - [Overzicht van het realtime klantprofiel](../../../profile/home.md)
 - [Overzicht van de Data Science Workspace](../../../data-science-workspace/home.md)
