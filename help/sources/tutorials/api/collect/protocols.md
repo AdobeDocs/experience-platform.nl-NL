@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verzamel protocolgegevens door bronschakelaars en APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: d5a21462b9f0362414dfe4f73a6c4e4a2c92af61
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1605'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,18 @@ Ga door met het volgen van de stappen die in de ontwikkelaarsgids worden beschre
 
 Als een ad-hoc XDM-schema is gemaakt, kan nu een bronverbinding worden gemaakt met een POST-aanvraag voor de [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbindingsID, een brongegevensbestand, en een verwijzing naar het schema dat de brongegevens beschrijft.
 
+Als u een bronverbinding wilt maken, moet u ook een opsommingswaarde voor het kenmerk voor de gegevensindeling definiëren.
+
+Gebruik de volgende opsommingswaarden voor op **bestanden gebaseerde connectors**:
+
+| Data.format | Enumwaarde |
+| ----------- | ---------- |
+| Gescheiden bestanden | `delimited` |
+| JSON-bestanden | `json` |
+| Parketbestanden | `parquet` |
+
+Voor alle op **lijst-gebaseerde schakelaars** gebruik de enum waarde: `tabular`.
+
 **API-indeling**
 
 ```http
@@ -84,7 +96,7 @@ curl -X POST \
         "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "description": "Protocols source connection to ingest Orders",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9e800522521c1ed7d05d3782897f6bd78ee8c2302169bc19",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -275,17 +287,11 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de pas ge
 ]
 ```
 
-## Een databaseverbinding maken
-
-Om externe gegevens in te voeren in [!DNL Platform], moet eerst een verbinding van de [!DNL Experience Platform] datasetbasis worden verworven.
-
-Om een verbinding van de datasetbasis tot stand te brengen, volg de stappen die in het [gegevensbestand van de basisverbinding](../create-dataset-base-connection.md)worden geschetst.
-
-Ga na de stappen die in de ontwikkelaarsgids worden geschetst verder tot u een verbinding van de datasetbasis hebt gecreeerd. Haal de unieke id (`$id`) op en sla deze op en ga door om deze te gebruiken als de verbindings-id in de volgende stap om een doelverbinding te maken.
-
 ## Een doelverbinding maken
 
-U hebt nu met u de unieke herkenningstekens voor een gegevenssetbasisverbinding, een doelschema, en een doeldataset. U kunt nu een doelverbinding maken met behulp van de [!DNL Flow Service] API om de dataset op te geven die de binnenkomende brongegevens zal bevatten.
+Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Als u een doelverbinding wilt maken, moet u de vaste specificatie-id voor de verbinding opgeven die is gekoppeld aan het datumpeer. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+U hebt nu unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan gegevens meer. Gebruikend deze herkenningstekens, kunt u een doelverbinding tot stand brengen gebruikend API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten. [!DNL Flow Service]
 
 **API-indeling**
 
@@ -304,7 +310,6 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "name": "Target Connection for protocols",
         "description": "Target Connection for protocols",
         "data": {
@@ -325,10 +330,9 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `baseConnectionId` | De id van de gegevenssetbasisverbinding. |
 | `data.schema.id` | Het `$id` doel-XDM-schema. |
 | `params.dataSetId` | De id van de doeldataset. |
-| `connectionSpec.id` | De id van de verbindingsspecificatie voor uw protocoltoepassing. |
+| `connectionSpec.id` | The fixed connection spec ID to data Lake. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwoord**
 
@@ -441,7 +445,6 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **Antwoord**
 
@@ -578,6 +581,9 @@ De laatste stap in de richting van het verzamelen van gegevens is het maken van 
 
 Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een POST- verzoek uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
 
+Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd in seconden. Vervolgens moet u de frequentiewaarde instellen op een van de vijf opties: `once`, `minute`, `hour`, `day`, of `week`. De intervalwaarde geeft de periode tussen twee opeenvolgende inname aan en het maken van een eenmalige inname vereist geen interval dat moet worden ingesteld. Voor alle andere frequenties moet de intervalwaarde worden ingesteld op gelijk aan of groter dan `15`.
+
+
 **API-indeling**
 
 ```http
@@ -633,13 +639,25 @@ curl -X POST \
     }'
 ```
 
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `flowSpec.id` | De gegevensstroomspecificatie-id die aan de bron van externe protocollen is gekoppeld. |
+| `sourceConnectionIds` | De bron verbindingsID verbonden aan uw bron van derdeprotocollen. |
+| `targetConnectionIds` | De doel verbindings identiteitskaart verbonden aan uw bron van derdeprotocollen. |
+| `transformations.params.deltaColum` | De opgegeven kolom die wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
+| `transformations.params.mappingId` | De afbeelding-id die aan de bron van externe protocollen is gekoppeld. |
+| `scheduleParams.startTime` | De begintijd voor de gegevensstroom in epoche tijd in seconden. |
+| `scheduleParams.frequency` | De volgende frequentiewaarden kunnen worden geselecteerd: `once`, `minute`, `hour`, `day`, of `week`. |
+| `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie wordt ingesteld als `once` en groter dan of gelijk aan `15` andere frequentiewaarden moet zijn. |
+
 **Antwoord**
 
 Een geslaagde reactie retourneert de id `id` van de nieuwe gegevensstroom.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
