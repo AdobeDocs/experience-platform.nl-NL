@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 73e0c245191c88025e59cf226ec5b07a55064b97
+source-git-commit: 71193ad346c3976f80b14ee0d6e5b12055a17473
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 4%
+source-wordcount: '94'
+ht-degree: 10%
 
 ---
 
@@ -33,14 +33,15 @@ ht-degree: 4%
    * [Producten](what-to-implement/commerce.md)
 * Oplossingsspecifieke overwegingen {#solutions}
    * Analytics {#analytics}
-      * [Overzicht van analysemogelijkheden](solution-specific/analytics/analytics-overview.md)
+      * [Analytics - Overzicht](solution-specific/analytics/analytics-overview.md)
+      * [Variabelen handmatig toewijzen in Analytics](solution-specific/analytics/manually-mapping-variables.md)
       * [Automatisch toegewezen variabelen](solution-specific/analytics/automatically-mapped-vars.md)
    * Audience Manager {#aam}
-      * [Overzicht van Auditiebeheer](solution-specific/audience-manager/audience-manager-overview.md)
-   * Doel {#target}
-      * [Doeloverzicht](solution-specific/target/target-overview.md)
+      * [Overzicht van Audience Manager](solution-specific/audience-manager/audience-manager-overview.md)
+   * Target {#target}
+      * [Target-overzicht](solution-specific/target/target-overview.md)
       * [Flickbeheer](solution-specific/target/flicker-management.md)
-* Referentie {#ref}
+* Referenties {#ref}
    * [Automatisch verzamelde gegevens](reference/automatic-information.md)
    * [Bibliotheekgegevens ophalen](reference/retrieving-library-information.md)
-* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
