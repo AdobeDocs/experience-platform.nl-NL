@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vorm een dataflow voor een gegevensbestandschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: c3d85485d0c4a910e7ba777858e2f6cf7185ef54
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ De *[!UICONTROL Plannende]* stap verschijnt, toestaand u om een innameprogramma 
 | --- | --- |
 | Frequentie | Selecteerbare frequenties zijn Minuut, Uur, Dag en Week. |
 | Interval | Een geheel getal dat het interval voor de geselecteerde frequentie instelt. |
-| Begintijd | Een UTC-tijdstempel waarvoor de eerste invoer wordt uitgevoerd. |
+| Begintijd | Een UTC-tijdstempel waarvoor de eerste invoer wordt uitgevoerd. De begintijdwaarde moet in epoche-tijd in seconden worden ingesteld. |
 | Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als *Backfill* is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Als *Backfill* is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de *begintijd* worden geladen. Bestanden die vóór het begin van het *starten* zijn geladen, worden niet opgenomen. |
 | Delta-kolom | Een optie met een gefilterde reeks gebieden van het bronschema van type, datum, of tijd. Dit veld wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
 
