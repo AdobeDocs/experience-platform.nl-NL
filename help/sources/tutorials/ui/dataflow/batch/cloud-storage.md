@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een gegevensstroom configureren voor een batchaansluiting voor cloudopslag in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1226'
 ht-degree: 0%
 
 ---
@@ -123,9 +123,9 @@ Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Voltooien]*
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
 
-## Uw gegevensstroom controleren
+## Uw gegevensstroom controleren en verwijderen
 
-Nadat u de gegevens voor de cloudopslag hebt gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Voor meer informatie over controledatasets, zie het leerprogramma bij het [controleren van het stromen gegevens](../../../../../ingestion/quality/monitor-data-flows.md).
+Nadat u de gegevens voor de cloudopslag hebt gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Voor meer informatie bij het controleren van en het schrappen van gegevensstromen, zie de zelfstudie over het [controleren van gegevensstromen](../../../../../ingestion/quality/monitor-data-flows.md).
 
 ## Volgende stappen
 
