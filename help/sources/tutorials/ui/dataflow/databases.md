@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vorm een dataflow voor een gegevensbestandschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
@@ -108,9 +108,9 @@ Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Voltooien]*
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
-## Uw gegevensstroom controleren
+## Uw gegevensstroom controleren en verwijderen
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voor meer informatie over hoe te om uw gegevensstromen te controleren, zie de zelfstudie over [rekeningen en gegevensstromen](../monitor.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voor meer informatie over hoe te om uw gegevensstroom te controleren en te schrappen, zie de zelfstudie over het [controleren van en het schrappen van gegevensstromen](../monitor.md).
 
 ## Volgende stappen
 
