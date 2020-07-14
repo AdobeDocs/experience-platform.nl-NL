@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vorm een dataflow voor een schakelaar van de marketing automatisering in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -103,23 +103,9 @@ Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Voltooien]*
 
 ![revisie](../../../images/tutorials/dataflow/marketing-automation/review.png)
 
-## Uw gegevensstroom controleren
+## Uw gegevensstroom controleren en verwijderen
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voer de onderstaande stappen uit om toegang te krijgen tot de gegevenssetcontrole van een gegevensstroom.
-
-Selecteer in de werkruimte *[!UICONTROL Bronnen]* de marketingautomatiseringsbron die u wilt weergeven in de categorie *[!UICONTROL Marketing Automation]* . Selecteer *[!UICONTROL Connect-bron]* om de verificatieinterface te starten. Als u een bestaande gegevensstroom wilt weergeven, selecteert u *[!UICONTROL Bestaande account]* en selecteert u de account die u wilt openen.
-
-![monitor](../../../images/tutorials/dataflow/marketing-automation/monitor.png)
-
-Het scherm *[!UICONTROL Bronactiviteit]* wordt weergegeven. Van hier, klik de naam van een dataset waarvan activiteit u wilt controleren.
-
-![select-dataflow-dataset](../../../images/tutorials/dataflow/marketing-automation/select-dataflow-dataset.png)
-
-Het scherm *[!UICONTROL Dataset-activiteit]* wordt weergegeven. Op deze pagina wordt de snelheid van berichten weergegeven die in de vorm van een grafiek worden gebruikt.
-
-![datasetactiviteit](../../../images/tutorials/dataflow/marketing-automation/dataset-activity.png)
-
-Voor meer informatie over het controleren van datasets en ingestie, verwijs naar het leerprogramma bij het [controleren van het stromen gegevens](../../../../ingestion/quality/monitor-data-flows.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voor meer informatie over hoe te om uw gegevensstroom te controleren en te schrappen, zie de zelfstudie over het [controleren van en het schrappen van gegevensstromen](../monitor.md).
 
 ## Volgende stappen
 
