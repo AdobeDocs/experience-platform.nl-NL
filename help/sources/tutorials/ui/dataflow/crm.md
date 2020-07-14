@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vorm een dataflow voor een schakelaar van CRM in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Vorm een dataflow voor een schakelaar van CRM in UI
 
-Een dataflow is een geplande taak die gegevens van een bron aan een [!DNL Platform] dataset terugwint en opneemt. Dit leerprogramma verstrekt stappen om een nieuwe dataflow te vormen gebruikend uw basisschakelaar van CRM.
+Een dataflow is een geplande taak die gegevens van een bron aan een [!DNL Platform] dataset terugwint en opneemt. Dit leerprogramma verstrekt stappen om een nieuwe dataflow te vormen gebruikend uw schakelaar van CRM.
 
 ## Aan de slag
 
@@ -103,23 +103,9 @@ Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Voltooien]*
 
 ![revisie](../../../images/tutorials/dataflow/crm/review.png)
 
-## Uw gegevensstroom controleren
+## Uw gegevensstroom controleren en verwijderen
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voer de onderstaande stappen uit om toegang te krijgen tot de gegevenssetcontrole van een gegevensstroom.
-
-Binnen de _Bronwerkruimte_ , selecteer de bron van CRM u wenst om onder de categorie van *[!UICONTROL CRM]* te bekijken. Selecteer *[!UICONTROL Connect-bron]* om de verificatieinterface te starten. Als u een bestaande gegevensstroom wilt weergeven, selecteert u *Bestaande account* en selecteert u de account die u wilt openen.
-
-![monitor](../../../images/tutorials/dataflow/crm/monitor.png)
-
-Het scherm *[!UICONTROL Bronactiviteit]* wordt weergegeven. Van hier, klik de naam van een dataset waarvan activiteit u wilt controleren.
-
-![select-dataflow-dataset](../../../images/tutorials/dataflow/crm/select-dataflow-dataset.png)
-
-Het scherm *[!UICONTROL Dataset-activiteit]* wordt weergegeven. Op deze pagina wordt de snelheid van berichten weergegeven die in de vorm van een grafiek worden gebruikt.
-
-![datasetactiviteit](../../../images/tutorials/dataflow/crm/dataset-activity.png)
-
-Voor meer informatie over het controleren van datasets en ingestie, verwijs naar het leerprogramma bij het [controleren van het stromen gegevens](../../../../ingestion/quality/monitor-data-flows.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voor meer informatie over hoe te om uw gegevensstroom te controleren en te schrappen, zie de zelfstudie over het [controleren van en het schrappen van gegevensstromen](../monitor.md).
 
 ## Volgende stappen
 
