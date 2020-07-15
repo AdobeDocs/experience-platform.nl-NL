@@ -4,9 +4,9 @@ seo-title: Gegevensbeheer in Real-time Customer Data Platform
 description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 seo-description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1056'
 ht-degree: 0%
 
 ---
@@ -49,10 +49,7 @@ Om gegevensgebruikslabels effectief gegevensnaleving te steunen, moet het beleid
 
 Het Adobe Experience Platform verstrekt verscheidene **kernbeleid** voor de gemeenschappelijke gebruiksgevallen van de klantenervaring. Dit beleid kan in UI worden bekeken door aan de werkruimte van **[!UICONTROL Beleid]** te navigeren en het **[!UICONTROL Browse]** lusje te selecteren. Zie de gids [van de](../../data-governance/policies/user-guide.md) beleidsgebruiker in de documentatie van het Experience Platform voor meer gedetailleerde stappen bij het werken met beleid in UI, met inbegrip van hoe te om uw eigen douanebeleid te maken.
 
-## (bèta) Naleving van gegevensgebruik afdwingen {#enforce-data-usage-compliance}
-
->[!IMPORTANT]
->Deze functie is momenteel in bèta beschikbaar en niet voor alle gebruikers. Deze functie kan op verzoek worden ingeschakeld. De documentatie en de functionaliteit kunnen worden gewijzigd.
+## Compatibiliteit met gegevensgebruik afdwingen {#enforce-data-usage-compliance}
 
 Zodra de gegevens worden geëtiketteerd en het gebruiksbeleid wordt bepaald, kunt u de naleving van het gegevensgebruik met beleid afdwingen. Wanneer het activeren van publiekssegmenten aan bestemmingen in Echt - tijd CDP, dwingt het Beleid van Gegevens automatisch gebruiksbeleid af als om het even welke schendingen voorkomen.
 
