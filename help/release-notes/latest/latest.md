@@ -1,67 +1,82 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform
-description: De meest recente release bevat informatie over het Experience Platform
+title: Opmerkingen bij de release Adobe Experience Platform
+description: De nieuwste releaseopmerkingen voor Experience Platform
 doc-type: release notes
-last-update: June 10, 2020
-author: crhoades, ens28527
+last-update: July 15, 2020
+author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 1dad479708291e911719c3f3dd5edd2e9b497973
+source-git-commit: 1e420d26f89150999f356f9cf5af94d434076c2b
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '331'
 ht-degree: 2%
 
 ---
 
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Opmerkingen bij de release Adobe Experience Platform
 
-**Releasedatum: 10 juni 2020**
+**Releasedatum: 15 juli 2020**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-- [Werkruimte voor gegevenswetenschap](#dsw)
-- [Segmentering](#segmentation)
+<!-- - [Data Governance](#governance) -->
+- [Klantprofiel in realtime](#profile)
+- [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
 
-## Werkruimte voor gegevenswetenschap {#dsw}
+<!-- ## [!DNL Data Governance] {#governance}
 
-De Werkruimte van de Wetenschap van gegevens gebruikt machine het leren en kunstmatige intelligentie om inzichten van uw gegevens te ontketenen. De Data Science Workspace is geïntegreerd in Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor alle Adobe-oplossingen.
+Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
-De Werkruimte van de Wetenschap van gegevens heeft aan nieuwe manieren gewerkt om betere ervaringen en voorspellingen toe te laten door het gebruik van het Leren van de machine in real time. Het leren van de machine in real time verstrekt de capaciteit om douane of ingevoerde vooraf opgeleide machine het leren modellen in industrie-standaard interoperabele modelformaten voor scoring/activering in real time via een API eindpunt te ontwerpen, te testen en op te stellen.
+**New features**
 
-Merk op dat het Leren van de machine in real time in alpha is en nog momenteel wordt ontwikkeld.
+| Feature    | Description  |
+| -----------| ---------- |
+| Automatic policy enforcement in [!DNL Real-time Customer Data Platform] | Data usage policies are now automatically enforced in [!DNL Real-time CDP] when violating actions occur, including activating segments to destinations. When a policy violation is triggered, users get real-time visibility into usage restrictions within the activation workflow, indicating what data they cannot use and why.<br><br>See the section on [enforcing data usage compliance](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) within the overview on [!DNL Data Governance] in [!DNL Real-time CDP] for more information. |
+| Adobe Audience Manager integration | Any segments that are shared with [!DNL Audience Manager] from [!DNL Platform] inherit any applied data usage labels as [!DNL Data Export Controls], and vice versa. See the [!DNL Audience Manager] documentation for specific [mappings between usage labels and Data Export Controls](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep). |
+| Custom data usage labels | You can now create custom data usage labels using the Policy Service API or in the UI. See the [labels overview](../../data-governance/labels/overview.md) for more information. |
 
-| Functie | Beschrijving |
-|--- | ---|
-| Starter van JupyterLab Launcher Real-time ML | De JupyterLab Launcher beschikt nu over een Python-laptop voor Real-time Machine Learning (Alpha). |
+See the [Data Governance overview](../../data-governance/home.md) for more information on the service.
 
-Voor meer informatie over het Leren alfakanaal van de machine in real time, te zien gelieve het [Leren van de machine in real time overzicht](../../data-science-workspace/real-time-machine-learning/home.md).
+## [!DNL Real-time Customer Profile] {#profile}
 
-## Segmentering {#segmentation}
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
-Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en RESTful API waarmee u segmenten kunt samenstellen en doelgroepen kunt genereren op basis van uw gegevens in het realtime-klantprofiel. Deze segmenten worden centraal geconfigureerd en onderhouden op Platform, waardoor ze gemakkelijk toegankelijk zijn voor elke Adobe-toepassing.
+**New features**
 
-De Dienst van de segmentatie bepaalt een bepaalde ondergroep van profielen door de criteria te beschrijven die een verhandelbare groep mensen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
+| Feature | Description |
+| ------- | ----------- |
+| Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Profile] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. | 
+
+-->
+
+## [!DNL Segmentation Service] {#segmentation}
+
+De Dienst van de Segmentatie van het Adobe Experience Platform verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal geconfigureerd en onderhouden, zodat ze gemakkelijk toegankelijk zijn voor alle Adobe-toepassingen. [!DNL Platform]
+
+[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Datumvelden | Er is een &#39;verjaardagsfunctie&#39; toegevoegd voor datumfuncties waarmee gebruikers datums zonder het jaar kunnen evalueren. |
+| Streaming segmentering | Streaming segmentatie kan nu worden gekwalificeerd als een gebruiker in een segment wanneer gegevens in worden geland [!DNL Platform], waardoor de kwalificatietijd van het segment aanzienlijk wordt verkort. Door segmentatie te streamen, hoeft u segmentatietaken ook handmatig uit te voeren. |
 
-Zie het [segmentatieoverzicht voor meer informatie over segmentatie](../../segmentation/home.md)
+<!-- | Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Segments] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. | -->
+
+Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het overzicht van de [Segmentatie](../../segmentation/home.md)
 
 ## Bronnen {#sources}
 
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
+Het Adobe Experience Platform kan gegevens uit externe bronnen opnemen terwijl het toestaan van u om die gegevens te structureren, te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
 
-Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u bronverbindingen voor diverse gegevensleveranciers met gemak laat opzetten. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Aanvullende API- en UI-ondersteuning voor cloudopslagsystemen | Nieuwe bronaansluiting voor Apache HDFS |
-| Aanvullende API- en UI-ondersteuning voor databases | Nieuwe bronconnector voor Couchbase. |
+| API- en UI-ondersteuning voor het verwijderen van gegevensstromen | Gegevensstromen die met fouten werden gemaakt of onnodig zijn geworden kunnen nu door APIs of het gebruiken van UI worden geschrapt. |
+| API- en UI-ondersteuning voor eenmalige invoer | Eenmalige invoer voor gegevensstromen, waar slechts de begindatum wordt verstrekt en geen toekomstige opname wordt gepland, kan nu door APIs of het gebruiken van UI worden uitgevoerd. |
 
 Zie het [bronoverzicht](../../sources/home.md)voor meer informatie over bronnen.
