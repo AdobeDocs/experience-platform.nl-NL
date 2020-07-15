@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK snel starten met starten
 description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Web van het Experience Platform om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Web van het Experience Platform om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 9d58693646f472e84f04a64c4ad66f61dc5d3eba
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '560'
 ht-degree: 1%
 
 ---
@@ -31,8 +31,9 @@ U kunt een configuratie-id maken met het gereedschap [](../fundamentals/edge-con
 
 Het Netwerk van de Rand van het Experience Platform neemt gegevens als XDM. XDM is een gegevensformaat dat u schema&#39;s laat bepalen. Het schema bepaalt hoe het Netwerk van de Rand verwacht dat de gegevens worden geformatteerd. Om gegevens te verzenden zult u uw schema moeten bepalen. Controleer of u het volgende hebt voltooid:
 
-- [Een schema maken](../../xdm/tutorials/create-schema-ui.md)
-- Voeg de mengeling van SDK van het Web van het Adobe Experience Platform aan het schema toe u creeerde
+1. [Een schema maken](../../xdm/tutorials/create-schema-ui.md)
+2. Voeg de AEP Web SDK ExperienceEvent Mixin aan het schema toe u creeerde.
+3. Creeer een Dataset van het schema u creeerde.
 
 De volgende video is bedoeld om u in het creëren van een schema, dataset, en het stromen bronschakelaar voor uw gegevens van SDK van het Web te steunen.
 
