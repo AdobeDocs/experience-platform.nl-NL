@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vorm een dataflow voor een protocolschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: 2590c28df6d0fff3e207eb232a02abe16830ee17
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1205'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Vorm een dataflow voor een protocolschakelaar in UI
 
-Een datasetstroom is een geplande taak die gegevens van een bron aan een dataset van de Adobe Experience Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen om een nieuwe datasetstroom te vormen gebruikend uw protocolrekening.
+Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Adobe Experience Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen om een nieuwe dataflow te vormen gebruikend uw protocolrekening.
 
 ## Aan de slag
 
@@ -70,30 +70,45 @@ Het dialoogvenster Schema ** selecteren wordt geopend. Selecteer het schema u we
 
 Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of mapperfuncties te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Raadpleeg de zelfstudie over het [toewijzen van CSV-gegevens aan XDM-schemavelden](../../../../ingestion/tutorials/map-a-csv-file.md)voor meer informatie over gegevenstoewijzing en mapperfuncties.
 
-In het scherm *[!UICONTROL Toewijzen]* kunt u ook de *[!UICONTROL Delta-kolom]* instellen. Wanneer de datasetstroom wordt gecreeerd, kunt u om het even welk tijdstempelgebied als basis plaatsen om te beslissen welke verslagen in geplande stijgende ingestities moeten worden opgenomen.
+In het scherm *[!UICONTROL Toewijzen]* kunt u ook de *[!UICONTROL Delta-kolom]* instellen. Wanneer de gegevensstroom wordt gecreeerd, kunt u om het even welk tijdstempelgebied als basis plaatsen om te beslissen welke verslagen aan opgenomen in geplande stijgende ingestie.
 
 Klik op **[!UICONTROL Volgende]** als de brongegevens zijn toegewezen.
 
 ![](../../../images/tutorials/dataflow/protocols/mapping.png)
 
+## Planninguitvoering
+
 De *[!UICONTROL Plannende]* stap verschijnt, toestaand u om een innameprogramma te vormen om de geselecteerde brongegevens automatisch in te nemen gebruikend de gevormde afbeeldingen. De volgende lijst schetst de verschillende configureerbare gebieden voor het plannen:
 
 | Veld | Beschrijving |
 | --- | --- |
-| Frequentie | Selecteerbare frequenties zijn Minuut, Uur, Dag en Week. |
+| Frequentie | Selecteerbare frequenties zijn Eenmaal, Minuut, Uur, Dag en Week. |
 | Interval | Een geheel getal dat het interval voor de geselecteerde frequentie instelt. |
-| Begintijd | Een UTC-tijdstempel waarvoor de eerste invoer wordt uitgevoerd. |
-| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als *[!UICONTROL Backfill]* is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Als *[!UICONTROL Backfill]* is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de *[!UICONTROL begintijd]* worden geladen. Bestanden die vóór het begin van het *[!UICONTROL starten]* zijn geladen, worden niet opgenomen. |
+| Begintijd | Een UTC-tijdstempel die aangeeft wanneer de eerste opname wordt uitgevoerd |
+| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als *Backfill* is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Als *Backfill* is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de *begintijd* worden geladen. Bestanden die vóór het begin van het *starten* zijn geladen, worden niet opgenomen. |
+| Delta-kolom | Een optie met een gefilterde reeks gebieden van het bronschema van type, datum, of tijd. Dit veld wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
 
-Dataflows worden ontworpen om gegevens automatisch in te voeren op een geplande basis. Als u slechts één keer wilt opnemen via deze workflow, kunt u dit doen door de **[!UICONTROL Frequentie]** in te stellen op &quot;Dag&quot; en een zeer groot aantal toe te passen voor het **[!UICONTROL Interval]**, zoals 10000 of een vergelijkbaar aantal.
+Dataflows worden ontworpen om gegevens automatisch in te voeren op een geplande basis. Begin door de innamefrequentie te selecteren. Daarna, plaats het interval om de periode tussen twee stroomlooppas aan te wijzen. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul en moet worden ingesteld op groter dan of gelijk aan 15.
 
-Geef waarden op voor het schema en klik op **[!UICONTROL Volgende]**.
+Als u de begintijd voor inname wilt instellen, past u de datum en tijd aan die worden weergegeven in het vak Begintijd. U kunt ook het kalenderpictogram selecteren om de begintijdwaarde te bewerken. De begintijd moet groter zijn dan of gelijk zijn aan de huidige UTC-tijd.
 
-![plannen](../../../images/tutorials/dataflow/protocols/scheduling.png)
+Selecteer Incrementele gegevens **[!UICONTROL laden door]** de deltabkolom toe te wijzen. In dit veld wordt een onderscheid gemaakt tussen nieuwe en bestaande gegevens.
+
+![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+
+### Eenmalige gegevensstroom voor inname instellen
+
+Als u eenmalige invoer wilt instellen, selecteert u de vervolgkeuzepijl voor de frequentie en selecteert u **[!UICONTROL Eenmaal]**.
+
+>[!TIP] **[!UICONTROL Interval]** en **[!UICONTROL backfill]** zijn niet zichtbaar tijdens eenmalig gebruik.
+
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
+
+Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Volgende]**.
 
 ## Geef uw gegevensstroom een naam
 
-De stap met de details *[!UICONTROL van de]* Dataset-stroom wordt weergegeven. Hier moet u een naam en een optionele beschrijving opgeven voor de gegevenssetstroom. Klik op **[!UICONTROL Volgende]** als u klaar bent.
+De stap met *[!UICONTROL details]* over gegevensstroom wordt weergegeven. Hier moet u een naam en een optionele beschrijving voor de gegevensstroom opgeven. Klik op **[!UICONTROL Volgende]** als u klaar bent.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/protocols/dataset-flow-details.png)
 
@@ -115,7 +130,7 @@ Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door he
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een datasetstroom gecreeerd om gegevens van een systeem van de marketingautomatisering in te brengen en inzicht verworven in de controle van datasets. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u met succes een dataflow gecreeerd om gegevens van een systeem van de marketingautomatisering in te brengen en inzicht verworven in de controle van datasets. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
 - [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
 - [Overzicht van de Data Science Workspace](../../../../data-science-workspace/home.md)
@@ -124,11 +139,11 @@ Door deze zelfstudie te volgen, hebt u met succes een datasetstroom gecreeerd om
 
 De volgende secties verstrekken extra informatie voor het werken met bronschakelaars.
 
-### Een gegevenssetstroom uitschakelen
+### Een gegevensstroom uitschakelen
 
-Wanneer een datasetstroom wordt gecreeerd, wordt het onmiddellijk actief en neemt gegevens volgens het programma op het werd gegeven. U kunt een actieve datasetstroom op elk ogenblik onbruikbaar maken door de instructies hieronder te volgen.
+Wanneer een gegevensstroom wordt gecreeerd, wordt het onmiddellijk actief en neemt gegevens volgens het programma op het werd gegeven. U kunt een actieve gegevensstroom op elk ogenblik onbruikbaar maken door de instructies hieronder te volgen.
 
-Binnen het scherm van de Stromen *[!UICONTROL van de]* Dataset, selecteer de naam van de datasetstroom u wenst om onbruikbaar te maken.
+Selecteer in het scherm *[!UICONTROL Gegevensstroom]* de naam van de gegevensstroom die u wilt uitschakelen.
 
 ![browse-dataset-flow](../../../images/tutorials/dataflow/protocols/view-dataset-flows.png)
 
