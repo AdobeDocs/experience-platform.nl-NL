@@ -4,29 +4,233 @@ solution: Experience Platform
 title: 'Gegevensgebruikslabels beheren met API''s '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
+source-git-commit: b51a13e2eab967099c84d1cca2233e2ace554e01
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 0%
+source-wordcount: '995'
+ht-degree: 1%
 
 ---
 
 
 # Gegevensgebruikslabels beheren met API&#39;s
 
-De dienst API van de Dataset staat u toe om gebruiksetiketten voor datasets programmatically te beheren. Deze klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API voor catalogusservice die metagegevens van gegevenssets beheert.
+Dit document bevat stappen voor het beheren van labels voor gegevensgebruik met de API voor beleidsservice en de Dataset Service-API.
 
-Dit document verstrekt stappen op hoe te om de etiketten van het gegevensgebruik op dataset en gebied-niveau te beheren gebruikend de Dienst API van de Dataset.
+De API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) beleidsservice biedt verschillende eindpunten waarmee u labels voor gegevensgebruik voor uw organisatie kunt maken en beheren.
+
+Met de Dataset Service API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Het maakt deel uit van de mogelijkheden van de gegevenscatalogus van het Adobe Experience Platform, maar is los van de API van de Dienst van de Catalogus die dataset meta-gegevens beheert.
 
 ## Aan de slag
 
 Voordat u deze handleiding leest, volgt u de stappen in de sectie [Aan de](../../catalog/api/getting-started.md) slag in de handleiding voor ontwikkelaars van catalogi om de vereiste gegevens te verzamelen voor het oproepen van [!DNL Platform] API&#39;s.
 
-Om vraag aan de eindpunten te maken die in de hieronder secties worden geschetst, moet u de unieke `id` waarde voor een specifieke dataset hebben. Als u deze waarde niet hebt, raadpleegt u de handleiding bij het [weergeven van catalogusobjecten](../../catalog/api/list-objects.md) om de id&#39;s van uw bestaande gegevenssets te vinden.
+Om vraag aan de eindpunten te maken van de Dienst Dataset die in dit document worden geschetst, moet u de unieke `id` waarde voor een specifieke dataset hebben. Als u deze waarde niet hebt, raadpleegt u de handleiding bij het [weergeven van catalogusobjecten](../../catalog/api/list-objects.md) om de id&#39;s van uw bestaande gegevenssets te vinden.
 
-## De etiketten van de raadpleging voor een dataset {#lookup}
+## Alle labels weergeven {#list-labels}
 
-U kunt de etiketten van het gegevensgebruik opzoeken die op een bestaande dataset zijn toegepast door een GET verzoek te doen.
+Met behulp van de [!DNL Policy Service] API kunt u alle `core` of `custom` labels weergeven door een GET-aanvraag in te dienen bij `/labels/core` of `/labels/custom`.
+
+**API-indeling**
+
+```http
+GET /labels/core
+GET /labels/custom
+```
+
+**Verzoek**
+
+In het volgende verzoek worden alle aangepaste labels weergegeven die in uw organisatie zijn gemaakt.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Antwoord**
+
+Een succesvolle reactie keert een lijst van douanelabels terug die van het systeem worden teruggewonnen. Aangezien de voorbeeldaanvraag hierboven is ingediend, worden in de onderstaande reactie alleen aangepaste labels weergegeven. `/labels/custom`
+
+```json
+{
+    "_page": {
+        "count": 2
+    },
+    "_links": {
+        "page": {
+            "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom?{?limit,start,property}",
+            "templated": true
+        }
+    },
+    "children": [
+        {
+            "name": "L1",
+            "category": "Custom",
+            "friendlyName": "Banking Information",
+            "description": "Data containing banking information for a customer.",
+            "imsOrg": "{IMS_ORG}",
+            "sandboxName": "{SANDBOX_NAME}",
+            "created": 1594396718731,
+            "createdClient": "{CLIENT_ID}",
+            "createdUser": "{USER_ID}",
+            "updated": 1594396718731,
+            "updatedClient": "{CLIENT_ID}",
+            "updatedUser": "{USER_ID}",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L1"
+                }
+            }
+        },
+        {
+            "name": "L2",
+            "category": "Custom",
+            "friendlyName": "Purchase History Data",
+            "description": "Data containing information on past transactions",
+            "imsOrg": "{IMS_ORG}",
+            "sandboxName": "{SANDBOX_NAME}",
+            "created": 1594397415663,
+            "createdClient": "{CLIENT_ID}",
+            "createdUser": "{USER_ID}",
+            "updated": 1594397728708,
+            "updatedClient": "{CLIENT_ID}",
+            "updatedUser": "{USER_ID}",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L2"
+                }
+            }
+        }
+    ]
+}
+```
+
+## Een label opzoeken {#look-up-label}
+
+U kunt omhoog een specifiek etiket kijken door het `name` bezit van dat etiket in de weg van een GET verzoek aan de Dienst API van het Beleid te omvatten.
+
+**API-indeling**
+
+```http
+GET /labels/core/{LABEL_NAME}
+GET /labels/custom/{LABEL_NAME}
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `{LABEL_NAME}` | De `name` eigenschap van het aangepaste label dat u wilt opzoeken. |
+
+**Verzoek**
+
+Met het volgende verzoek wordt het aangepaste label opgehaald, `L2`zoals aangegeven in het pad.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L2' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Antwoord**
+
+Als de reactie is gelukt, worden de details van het aangepaste label geretourneerd.
+
+```json
+{
+    "name": "L2",
+    "category": "Custom",
+    "friendlyName": "Purchase History Data",
+    "description": "Data containing information on past transactions",
+    "imsOrg": "{IMS_ORG}",
+    "sandboxName": "{SANDBOX_NAME}",
+    "created": 1594397415663,
+    "createdClient": "{CLIENT_ID}",
+    "createdUser": "{USER_ID}",
+    "updated": 1594397728708,
+    "updatedClient": "{CLIENT_ID}",
+    "updatedUser": "{USER_ID}",
+    "_links": {
+        "self": {
+            "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L2"
+        }
+    }
+}
+```
+
+## Een aangepast label maken of bijwerken {#create-update-label}
+
+Als u een aangepast label wilt maken of bijwerken, moet u een PUT-aanvraag indienen bij de Beleidsservice-API.
+
+**API-indeling**
+
+```http
+PUT /labels/custom/{LABEL_NAME}
+```
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `{LABEL_NAME}` | De `name` eigenschap van een aangepast label. Als er geen aangepast label met deze naam bestaat, wordt een nieuw label gemaakt. Als er een label bestaat, wordt dat label bijgewerkt. |
+
+**Verzoek**
+
+Het volgende verzoek leidt tot een nieuw etiket, `L3`dat gegevens beschrijft die informatie met betrekking tot de geselecteerde betalingsplannen van klanten bevatten.
+
+```shell
+curl -X PUT \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L3' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "name": "L3",
+        "category": "Custom",
+        "friendlyName": "Payment Plan",
+        "description": "Data containing information on selected payment plans."
+      }'
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `name` | Een unieke tekenreeks-id voor het label. Deze waarde wordt gebruikt voor raadplegingsdoeleinden en het toepassen van het etiket op datasets en gebieden, en daarom wordt geadviseerd dat het kort en beknopt is. |
+| `category` | De categorie van het etiket. Hoewel u uw eigen categorieën voor douanelabels kunt tot stand brengen, wordt het sterk geadviseerd dat u gebruikt `Custom` als u het etiket in UI wilt verschijnen. |
+| `friendlyName` | Een vriendelijke naam voor het label, dat wordt gebruikt voor weergavedoeleinden. |
+| `description` | (Optioneel) Een beschrijving van het label voor verdere context. |
+
+**Antwoord**
+
+Een geslaagde reactie retourneert de details van het aangepaste label, met HTTP-code 200 (OK) als een bestaand label is bijgewerkt, of 201 (Gemaakt) als een nieuw label is gemaakt.
+
+```json
+{
+  "name": "L3",
+  "category": "Custom",
+  "friendlyName": "Payment Plan",
+  "description": "Data containing information on selected payment plans.",
+  "imsOrg": "{IMS_ORG}",
+  "sandboxName": "{SANDBOX_NAME}",
+  "created": 1529696681413,
+  "createdClient": "{CLIENT_ID}",
+  "createdUser": "{USER_ID}",
+  "updated": 1529697651972,
+  "updatedClient": "{CLIENT_ID}",
+  "updatedUser": "{USER_ID}",
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L3"
+    }
+  }
+}
+```
+
+## De etiketten van de raadpleging voor een dataset {#look-up-dataset-labels}
+
+U kunt de etiketten van het gegevensgebruik opzoeken die op een bestaande dataset zijn toegepast door een GET verzoek aan de Dienst API van de Dataset te doen.
 
 **API-indeling**
 
@@ -77,9 +281,9 @@ Een succesvolle reactie keert de etiketten van het gegevensgebruik terug die op 
 | `labels` | Een lijst van de etiketten van het gegevensgebruik die op de dataset zijn toegepast. |
 | `optionalLabels` | Een lijst van individuele gebieden binnen de dataset die de etiketten van het gegevensgebruik hebben op hen worden toegepast. |
 
-## Labels toepassen op een gegevensset
+## Labels toepassen op een gegevensset {#apply-dataset-labels}
 
-U kunt een reeks etiketten voor een dataset tot stand brengen door hen in de nuttige lading van een POST of PLAATS verzoek te verstrekken. Als u een van deze methoden gebruikt, worden bestaande labels overschreven en vervangen door de labels in de payload.
+U kunt een reeks etiketten voor een dataset tot stand brengen door hen in de nuttige lading van een POST of PLAATS verzoek aan de Dienst API van de Dataset te verstrekken. Als u een van deze methoden gebruikt, worden bestaande labels overschreven en vervangen door de labels in de payload.
 
 **API-indeling**
 
@@ -105,18 +309,18 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-  "labels": [ "C1", "C2", "C3", "I1", "I2" ],
-  "optionalLabels": [
-    {
-      "option": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c6b1b09bc3f2ad2627c1ecc719826836",
-        "contentType": "application/vnd.adobe.xed-full+json;version=1",
-        "schemaPath": "/properties/repositoryCreatedBy"
-      },
-      "labels": [ "S1", "S2" ]
-    }
-  ]
-}'
+        "labels": [ "C1", "C2", "C3", "I1", "I2" ],
+        "optionalLabels": [
+          {
+            "option": {
+              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c6b1b09bc3f2ad2627c1ecc719826836",
+              "contentType": "application/vnd.adobe.xed-full+json;version=1",
+              "schemaPath": "/properties/repositoryCreatedBy"
+            },
+            "labels": [ "S1", "S2" ]
+          }
+        ]
+      }'
 ```
 
 | Eigenschap | Beschrijving |
@@ -144,9 +348,9 @@ Een succesvolle reactie keert de etiketten terug die aan de dataset zijn toegevo
 }
 ```
 
-## Labels voor een gegevensset verwijderen
+## Labels uit een gegevensset verwijderen {#remove-dataset-labels}
 
-U kunt de etiketten schrappen die op een dataset door een verzoek van de SCHRAPPING worden toegepast.
+U kunt de etiketten verwijderen die op een dataset worden toegepast door een DELETE verzoek aan de Dienst API van de Dataset te doen.
 
 **API-indeling**
 
@@ -156,7 +360,7 @@ DELETE /datasets/{DATASET_ID}/labels
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{DATASET_ID}` | De unieke `id` waarde van de dataset waarvan etiketten u wilt schrappen. |
+| `{DATASET_ID}` | De unieke `id` waarde van de dataset waarvan etiketten u wilt verwijderen. |
 
 **Verzoek**
 
@@ -171,11 +375,13 @@ curl -X DELETE \
 
 **Antwoord**
 
-Een geslaagde HTTP-status 200 voor reacties (OK) die aangeeft dat de labels zijn verwijderd. U kunt de bestaande etiketten [voor de dataset in een afzonderlijke vraag](#lookup) omhoog kijken om dit te bevestigen.
+Een geslaagde HTTP-respons status 200 (OK) die aangeeft dat de labels zijn verwijderd. U kunt de bestaande etiketten [voor de dataset in een afzonderlijke vraag](#look-up-dataset-labels) omhoog kijken om dit te bevestigen.
 
 ## Volgende stappen
 
-Nu u de etiketten van het gegevensgebruik op dataset en gebied-niveau hebt toegevoegd, kunt u beginnen om gegevens in het Platform van de Ervaring op te nemen. Voor meer informatie begint u met het lezen van de [gegevensinvoerdocumentatie](../../ingestion/home.md).
+Door dit document te lezen hebt u geleerd hoe u labels voor gegevensgebruik met API&#39;s kunt beheren.
+
+Zodra u de etiketten van het gegevensgebruik op dataset en gebied-niveau hebt toegevoegd, kunt u beginnen om gegevens in Experience Platform in te voeren. Voor meer informatie begint u met het lezen van de [gegevensinvoerdocumentatie](../../ingestion/home.md).
 
 U kunt nu ook beleid voor gegevensgebruik definiëren op basis van de labels die u hebt toegepast. Zie het overzicht [van beleidsregels voor](../policies/overview.md)gegevensgebruik voor meer informatie.
 
