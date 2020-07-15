@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Beheer van gegevens Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Gegevensstewards vormen de kern van gegevensbeheer. Deze rol is verantwoordelijk
 
 Marktdeelnemers zijn het eindpunt van gegevensbeheer. Ze vragen gegevens van de infrastructuur voor gegevensbeheer die is gemaakt door data stewards, wetenschappers en engineers. Marktdeelnemers omvatten een aantal verschillende specialiteiten onder de marketingparaplu, waaronder:
 
-* De analisten van de marketing verzoeken gegevens om begrip van klanten, zowel als individuen als in groepen (ook die als segmenten worden bekend) toe te laten.
+* De analisten van de marketing verzoeken gegevens om inzicht in klanten, zowel als individuen als in groepen (ook die als segmenten worden bekend) toe te laten.
 * De Specialisten van de marketing en Ontwerpers van de Ervaring gebruiken gegevens om nieuwe klantenervaringen te ontwerpen.
 
 
@@ -92,7 +92,6 @@ Gegevensbeheer ondersteunt momenteel DULE-etikettering op twee niveaus (dataset 
 
 De volgende versies zullen de volgende eigenschappen verstrekken:
 
-* Labels voor aangepast gegevensgebruik: Maak nieuwe labels en definities op basis van de behoeften van uw organisatie.
 * Beleidshandhaving: Gebruik het beleidskader om beleid over verschillende patronen van de gegevenstoegang te adviseren en af te dwingen.
 * Controle: De activiteiten van de gegevenstoegang van het toezicht en identificeert en rapporteert over nalevingskwesties.
 
