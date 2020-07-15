@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van labels voor gegevensgebruik
 topic: labels
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,9 @@ Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op b
 
 De etiketten van het gebruik van gegevens die op het datasetniveau worden toegepast worden verspreid aan alle gebieden binnen de dataset. De etiketten kunnen ook direct op individuele gebieden (kolomkopballen) in een dataset, zonder propagatie worden toegepast.
 
-Zie de handleiding over [!DNL Experience Platform] ondersteunde labels voor [gegevensgebruik voor meer informatie over beschikbare labels voor gegevensgebruik in](reference.md)en het gebruiksbeleid dat ze vertegenwoordigen.
+[!DNL Platform] biedt verschillende &#39;core&#39; labels voor gegevensgebruik buiten de box, die een groot aantal gemeenschappelijke beperkingen bestrijken die van toepassing zijn op gegevensbeheer. Zie de handleiding over [kernlabels](reference.md)voor meer informatie over deze labels en het gebruiksbeleid dat ze vertegenwoordigen.
+
+Naast de labels die door Adobe worden geleverd, kunt u ook uw eigen aangepaste labels definiëren. Raadpleeg de gebruikershandleiding bij de labels voor [gegevensgebruik voor informatie over hoe u dit in de gebruikersinterface kunt doen](./user-guide.md). Raadpleeg de API-handleiding [voor labels voor](./api.md)gegevensgebruik voor informatie over hoe u dit kunt doen met API-aanroepen.
 
 ## Labelovererving voor publiekssegmenten
 
@@ -34,14 +36,13 @@ Naast het erven van dataset-vlakke etiketten, erven de segmenten alle gebied-vla
 
 Voor meer informatie over hoe de automatische handhaving in Echt - tijd CDP werkt, zie het overzicht [van het Beleid van Gegevens van](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe in real time CDP.
 
-<!-- (Add after DEC mapping reference is added to AAM docs to link out to)
-### Inheritance from Adobe Audience Manager Data Export Controls
+### Overerving van de Controles van de Uitvoer van Gegevens van de Adobe Audience Manager
 
-Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by Experience Platform Data Governance.
+Experience Platform heeft de capaciteit om segmenten met Adobe Audience Manager te delen. Om het even welke Controles van de Uitvoer van Gegevens die op de segmenten van de Audience Manager zijn toegepast worden vertaald in gelijkwaardige etiketten en marketing acties die door de Governance van Gegevens van de Experience Platform worden erkend.
 
-For a reference on how specific Data Export Controls map to data usage labels in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
--->
+Voor een verwijzing op hoe de specifieke Controles van de Uitvoer van Gegevens aan de etiketten van het gegevensgebruik in Platform in kaart brengen, gelieve te verwijzen naar de documentatie [van de](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
+
 
 ## Volgende stappen
 
-Nu u de etiketten van het gegevensgebruik bent geïntroduceerd, kunt u de [gebruikersgids](user-guide.md) blijven lezen om te leren hoe te om etiketten in [!DNL Experience Platform] UI te beheren. Voor stappen op hoe te om etiketten te beheren die APIs gebruiken, zie de aangewezen sectie in de de ontwikkelaarsgids [van de Dienst van de](../../catalog/api/labels.md)Catalogus.
+Nu u de etiketten van het gegevensgebruik bent geïntroduceerd, kunt u de [gebruikersgids](user-guide.md) blijven lezen om te leren hoe te om etiketten in [!DNL Experience Platform] UI te beheren. Zie de handleiding voor [](./api.md)gebruikslabels voor informatie over het beheren van labels met behulp van API&#39;s.
