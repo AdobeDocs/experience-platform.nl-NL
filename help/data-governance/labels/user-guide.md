@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruiksaanwijzing voor labels voor gegevensgebruik
 topic: labels
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: b36f67fd7d597d5d6a8cd514d95908ae26189c83
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
@@ -99,6 +99,30 @@ U kunt deze stappen herhalen om door te gaan met het toevoegen en bewerken van l
 ![Selecteer meerdere velden om labels op veldniveau tegelijk toe te passen.](../images/labels/fields_select_multiple.png)
 
 Het is belangrijk om te herinneren dat de overerving zich van top-level slechts (dataset → gebieden) beweegt, betekenend dat de etiketten die op het gebiedsniveau worden toegepast niet aan andere gebieden of datasets worden verspreid.
+
+## Aangepaste labels beheren
+
+U kunt uw eigen labels voor aangepast gebruik maken in de werkruimte *[!UICONTROL Beleid]* in de [!DNL Experience Platform] gebruikersinterface. Klik op **[!UICONTROL Beleid]** in de linkernavigatie en klik vervolgens op **[!UICONTROL Labels]** om een lijst met bestaande labels weer te geven. Klik hier op Label **** maken.
+
+![](../images/labels/create-label-btn.png)
+
+Het *[!UICONTROL dialoogvenster Label]* maken wordt weergegeven. Geef vanaf hier de volgende informatie op voor het nieuwe label:
+
+* **[!UICONTROL Id]**: Een unieke id voor het label. Deze waarde wordt gebruikt voor opzoekdoeleinden en moet daarom kort en beknopt zijn.
+* **[!UICONTROL Naam]**: Een vriendelijke weergavenaam voor het label.
+* **[!UICONTROL Omschrijving]**: (Optioneel) Een beschrijving van het label voor verdere context.
+
+Klik op **[!UICONTROL Maken]** als u klaar bent.
+
+![](../images/labels/create-label.png)
+
+Het dialoogvenster wordt gesloten en het nieuwe aangepaste label wordt weergegeven in de lijst onder het tabblad *[!UICONTROL Labels]* .
+
+![](../images/labels/label-created.png)
+
+Het label kan nu worden geselecteerd onder *[!UICONTROL Aangepaste labels]* wanneer u gebruikslabels bewerkt voor gegevenssets en velden of wanneer u beleidsregels voor gegevensgebruik maakt.
+
+<img src="../images/labels/add-custom-label.png" width="600" /><br>
 
 ## Volgende stappen
 
