@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een gegevenstype maken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0d8c8ee4df11d601d8feb122c70a9cd5d7d5b77
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '200'
+ht-degree: 0%
 
 ---
 
@@ -64,7 +67,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van het nieuwe gegevenstype, inclusief de instructies `$id`, `meta:altId`en `version`. Deze drie waarden zijn read-only en door de Registratie van het Schema toegewezen.
+Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van het nieuwe gegevenstype, inclusief de instructies `$id`, `meta:altId`en `version`. Deze drie waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry].
 
 ```JSON
 {
