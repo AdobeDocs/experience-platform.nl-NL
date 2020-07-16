@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Toestemming
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Toestemming
 
-Bepaalde voorschriften vereisen uitdrukkelijke toestemming van de klant voordat hun persoonsgegevens kunnen worden verzameld. Het `/consent` eindpunt in Privacy Service API staat u toe om verzoeken van de klantentoestemming te verwerken en hen in uw privacywerkschema te integreren.
+Bepaalde voorschriften vereisen uitdrukkelijke toestemming van de klant voordat hun persoonsgegevens kunnen worden verzameld. Het `/consent` eindpunt in [!DNL Privacy Service] API staat u toe om verzoeken van de klantentoestemming te verwerken en hen in uw privacywerkschema te integreren.
 
 Voordat u deze handleiding gebruikt, raadpleegt u de sectie Aan de [slag](./getting-started.md) voor informatie over de vereiste verificatieheaders in de voorbeeld-API-aanroep hieronder.
 
@@ -68,8 +68,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->Voor meer informatie over hoe te om te bepalen welke waarden van de klantenidentiteit om naar Privacy Service te verzenden, zie de gids over het [verstrekken van identiteitsgegevens](../identity-data.md).
+>Voor meer informatie over hoe te om te bepalen welke waarden van de klantenidentiteit om te verzenden [!DNL Privacy Service], zie de gids bij het [verstrekken van identiteitsgegevens](../identity-data.md).
 
 **Antwoord**
 
-Een succesvolle reactie keert HTTP status 202 (Toegelaten) zonder lading terug, erop wijzend dat het verzoek door Privacy Service werd goedgekeurd en aan verwerking ondergaat.
+Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) zonder lading, wat aangeeft dat de aanvraag is geaccepteerd door [!DNL Privacy Service] en wordt verwerkt.
