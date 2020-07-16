@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een klasse maken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 De primaire bouwsteen van een schema is een klasse. De klasse bevat de minimale set velden die moet worden gedefinieerd om de kerngegevens van een schema vast te leggen. Als u bijvoorbeeld een schema voor auto&#39;s en vrachtwagens zou ontwerpen, zou het meest waarschijnlijk een klasse gebruiken met de naam Vehicle die de algemene basiseigenschappen van alle voertuigen beschrijft.
 
-Adobe en andere partners in Experience Platforms bieden verschillende standaardklassen, maar u kunt ook uw eigen klassen definiëren en deze opslaan in de Schemaregistratie. Vervolgens kunt u een schema samenstellen waarmee de gemaakte klasse wordt geïmplementeerd en combinaties definiëren die compatibel zijn met de zojuist gedefinieerde klasse.
+Adobe en andere [!DNL Experience Platform] partners hebben verschillende standaardklassen beschikbaar, maar u kunt ook uw eigen klassen definiëren en deze opslaan in de [!DNL Schema Registry]. Vervolgens kunt u een schema samenstellen waarmee de gemaakte klasse wordt geïmplementeerd en combinaties definiëren die compatibel zijn met de zojuist gedefinieerde klasse.
 
 >[!NOTE]
 >
@@ -83,12 +83,12 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `_{TENANT_ID}` | De `TENANT_ID` naamruimte voor uw organisatie. Alle middelen die door uw organisatie worden gecreeerd moeten dit bezit omvatten om botsingen met andere middelen in de Registratie van het Schema te vermijden. |
+| `_{TENANT_ID}` | De `TENANT_ID` naamruimte voor uw organisatie. Alle middelen die door uw organisatie worden gecreeerd moeten dit bezit omvatten om botsingen met andere middelen in te vermijden [!DNL Schema Registry]. |
 | `allOf` | Een lijst met bronnen waarvan de eigenschappen door de nieuwe klasse moeten worden overgeërfd. Een van de `$ref` objecten in de array definieert het gedrag van de klasse. In dit voorbeeld overerft de klasse het gedrag &#39;record&#39;. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van de nieuwe klasse, inclusief de klasse `$id`, `meta:altId`en `version`. Deze drie waarden zijn read-only en door de Registratie van het Schema toegewezen.
+Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van de nieuwe klasse, inclusief de klasse `$id`, `meta:altId`en `version`. Deze drie waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry].
 
 ```JSON
 {
