@@ -4,7 +4,10 @@ solution: Experience Platform
 title: GDPR-terminologie
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 39d5446c04fcceaf9d75db91ecb2c136986de098
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+workflow-type: tm+mt
+source-wordcount: '1066'
+ht-degree: 13%
 
 ---
 
@@ -61,7 +64,7 @@ __Bestandssysteem:__ Elke specifieke verzameling persoonsgegevens die volgens sp
 
 ## G
 
-__GDPR:__ De algemene verordening inzake gegevensbescherming (GDPR) is een juridisch kader dat richtsnoeren vaststelt voor het verzamelen en verwerken van persoonsgegevens van personen binnen de Europese Unie (EU). In de GDPR worden de beginselen voor gegevensbeheer en de rechten van het individu uiteengezet en worden boetes opgelegd die op inkomsten kunnen worden gebaseerd. De GDPR heeft betrekking op alle bedrijven die zich bezighouden met de gegevens van EU-burgers. Het is dus een kritische regeling voor met de naleving van de regelgeving belaste bedrijven bij banken, verzekeraars en andere financiële ondernemingen. De GDPR zal op 25 mei 2018 in de hele EU van kracht worden.
+__GDPR:__ De [!DNL General Data Protection Regulation] (GDPR) is een juridisch kader dat richtsnoeren vaststelt voor het verzamelen en verwerken van persoonlijke gegevens van personen binnen de Europese Unie (EU). In de GDPR worden de principes van databeheer en de rechten van het individu uiteengezet en worden tevens boetes opgelegd die op inkomsten kunnen worden gebaseerd. De GDPR geldt voor alle bedrijven die te maken hebben met data van EU-burgers. Het is dus een essentiële wetgeving voor bedrijfsnalevingsfunctionarissen bij banken, verzekeraars en andere financiële ondernemingen. De GDPR is op 25 mei 2018 in de hele EU ingegaan.
 
 __Genetische gegevens:__ Gegevens over de kenmerken van een persoon die geërfd of verworven is en unieke informatie over de gezondheid of fysiologie van het individu opleveren.
 
@@ -71,9 +74,9 @@ __Groep ondernemingen:__ Een controlerende onderneming en de ondernemingen waaro
 
 ## I
 
-__Identity Management Services (IMS):__ De Adobe-implementatie van Federated ID en OAuth 2.0 voor verificatie van gebruikers van Adobe-id en autorisatie voor bronnen van Adobe. U moet IMS integreren met uw Adobe-toepassing of -service om uw gebruikers in staat te stellen zich aan te melden en toegang te krijgen tot Adobe-services. Gebruikers kunnen zich rechtstreeks aanmelden bij Renga (de Adobe-leverancier van identiteitsservices) of zich aanmelden via een vertrouwd derde verificatiedomein (zoals Google, Facebook of een bedrijf/organisatie LDAP).
+__Identity Management Services (IMS):__ De Adobe-implementatie van Federated ID en OAuth 2.0 voor verificatie van Adobe ID-gebruikers en autorisatie voor Adobe-bronnen. U moet IMS integreren met uw Adobe-applicatie of -service om uw gebruikers zich te laten aanmelden en toegang te geven tot Adobe-services. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
 
-__IMS-organisatie-id:__ Verwijst naar een Adobe-verificatietoken voor service-to-service verificatie waarvoor geen gebruikersaanmelding vereist is. Het wordt uitgegeven aan een cliënt IMS, en heeft geen bijbehorende gebruiker. Een cliënt IMS heeft een de dienstteken nodig om achterkanaalverzoeken tussen de diensten goed te keuren. (De term &quot;systeemtoken&quot; wordt soms gebruikt als servicetoken.)
+__IMS-organisatie-id:__ Verwijst naar een Adobe-verificatietoken voor service-to-service verificatie waarvoor geen gebruikersaanmelding vereist is. Deze wordt uitgegeven aan een IMS-client en heeft geen bijbehorende gebruiker. Een IMS-client heeft een servicetoken nodig voor de verificatie van back-channelaanvragen tussen services goed te keuren. (De term “systeemtoken” wordt soms gebruikt voor een servicetoken.)
 
 ## J
 
@@ -93,7 +96,7 @@ __Hoofdvestiging:__ de plaats binnen de Unie waar de belangrijkste beslissingen 
 
 __Persoonlijke gegevens:__ Alle informatie met betrekking tot een natuurlijke persoon of &quot;betrokkene&quot; die kan worden gebruikt om de persoon direct of indirect te identificeren.
 
-__Schending van persoonsgegevens:__ Een inbreuk op de beveiliging die leidt tot onbedoelde of onrechtmatige toegang tot, vernietiging, misbruik, enz. van persoonsgegevens.
+__Schending van persoonsgegevens:__ Een inbreuk op de beveiliging die leidt tot onbedoelde of onrechtmatige toegang tot, vernietiging, misbruik, enz. van persoonlijke data.
 
 __Privacy via ontwerp:__ Een beginsel dat vereist dat de gegevensbescherming vanaf het begin van het ontwerpen van systemen wordt opgenomen in plaats van een toevoeging.
 
