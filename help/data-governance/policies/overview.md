@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van beleidsregels voor gegevensgebruik
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,9 @@ Wanneer het gegevensgebruik in de dienst van uw organisatie gebeurt, zouden de r
 
 >[!NOTE]
 >
->Als u het Platform van Gegevens van de Klant in real time gebruikt, kunt u de gevallen van het plaatsingsgebruik op bestemmingen plaatsen om beleidshandhaving te automatiseren. Zie het document over [Gegevensbeheer in real time CDP](../../rtcdp/privacy/data-governance-overview.md) voor meer informatie.
+>Als u gebruikt [!DNL Real-time Customer Data Platform], kunt u opstellings marketing gebruiksgevallen op bestemmingen aan automatisering beleidshandhaving. Zie het document over [Gegevensbeheer in real time CDP](../../rtcdp/privacy/data-governance-overview.md) voor meer informatie.
 
-Zie de bijlage bij dit document voor een lijst met [beschikbare door Adobe gedefinieerde marketingacties](#core-actions). U kunt ook uw eigen aangepaste marketingacties definiëren met de DULE Policy Service API of de gebruikersinterface van het Experience Platform. In de volgende sectie vindt u meer informatie over het werken met marketingacties en -beleid.
+Zie de bijlage bij dit document voor een lijst met [beschikbare door Adobe gedefinieerde marketingacties](#core-actions). U kunt ook uw eigen aangepaste marketingacties definiëren met de DULE [!DNL Policy Service] API of de [!DNL Experience Platform ]gebruikersinterface. In de volgende sectie vindt u meer informatie over het werken met marketingacties en -beleid.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -49,15 +49,15 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ## Beleid voor gegevensgebruik beheren {#manage}
 
-Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensstewards de Dienst API van het Beleid DULE of UI van het Experience Platform gebruiken om beleid met betrekking tot marketingacties te beheren en te evalueren die op gegevens worden genomen die de etiketten van het gegevensgebruik bevatten. U kunt beleid tot stand brengen en bijwerken, de status van een beleid bepalen, en met marketing acties werken om te evalueren of een specifieke actie een beleid van het gegevensgebruik schendt.
+Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensstewards de DULE [!DNL Policy Service] API of [!DNL Experience Platform] UI gebruiken om beleid met betrekking tot marketing acties te beheren en te evalueren die op gegevens worden genomen die de etiketten van het gegevensgebruik bevatten. U kunt beleid tot stand brengen en bijwerken, de status van een beleid bepalen, en met marketing acties werken om te evalueren of een specifieke actie een beleid van het gegevensgebruik schendt.
 
 >[!IMPORTANT]
 >
 >Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten door API of UI.
 
-Zie de zelfstudie over het [maken en evalueren van beleid](create.md)voor gegevensgebruik voor stapsgewijze instructies over het werken met marketingacties en het beleid voor gegevensgebruik in de API. Voor meer informatie zien de belangrijkste verrichtingen die door de Dienst API van het Beleid worden verstrekt, de de ontwikkelaarsgids [van de Dienst van het](../api/getting-started.md)Beleid.
+Zie de zelfstudie over het [maken en evalueren van beleid](create.md)voor gegevensgebruik voor stapsgewijze instructies over het werken met marketingacties en het beleid voor gegevensgebruik in de API. Voor meer informatie zien de belangrijkste verrichtingen die door [!DNL Policy Service] API worden verstrekt, de de ontwikkelaarsgids [van de Dienst van het](../api/getting-started.md)Beleid.
 
-Voor informatie over hoe te met marketing acties en beleid in het Platform UI te werken, zie de de gebruikersgids [van het](./user-guide.md)gegevensgebruiksbeleid.
+Voor informatie over hoe te met marketing acties en beleid in [!DNL Platform] UI te werken, zie de de gebruikersgids [van het](./user-guide.md)gegevensgebruiksbeleid.
 
 ## Volgende stappen
 
