@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruikershandleiding voor gegevensgebruiksbeleid
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '725'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Gebruikershandleiding voor gegevensgebruiksbeleid
 
-Het Beheer van Gegevens van het Adobe Experience Platform verstrekt een gebruikersinterface die u toestaat om het beleid van het gegevensgebruik tot stand te brengen en te beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte _Beleid_ in de [!DNL Experience Platform] gebruikersinterface.
+Adobe Experience Platform [!DNL Data Governance] biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte _Beleid_ in de [!DNL Experience Platform] gebruikersinterface.
 
 >[!IMPORTANT]
 >
