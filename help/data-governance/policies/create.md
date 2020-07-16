@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een beleid voor gegevensgebruik maken
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1186'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een beleid voor gegevensgebruik maken in de API
 
-De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste mechanisme van het Beheer van Gegevens van de Adobe Experience Platform. De [DULE Dienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) van het Beleid staat u toe om DULE beleid tot stand te brengen en te beheren om te bepalen welke marketing acties tegen gegevens kunnen worden genomen die bepaalde etiketten DULE bevatten.
+De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste mechanisme van Adobe Experience Platform [!DNL Data Governance]. De [DULE Dienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) van het Beleid staat u toe om DULE beleid tot stand te brengen en te beheren om te bepalen welke marketing acties tegen gegevens kunnen worden genomen die bepaalde etiketten DULE bevatten.
 
 Dit document biedt een stapsgewijze zelfstudie voor het maken van een DULE-beleid met de [!DNL Policy Service] API. Voor een uitvoerigere gids voor de verschillende verrichtingen beschikbaar in API, zie de de ontwikkelaarsgids [van de Dienst van het](../api/getting-started.md)Beleid.
 
@@ -22,9 +22,9 @@ Dit document biedt een stapsgewijze zelfstudie voor het maken van een DULE-belei
 
 Dit leerprogramma vereist een werkend inzicht in de volgende belangrijkste concepten betrokken bij het creëren van en het evalueren van DULE beleid:
 
-* [Gegevensbeheer](../home.md): Het kader waarmee de naleving van het gegevensgebruik wordt [!DNL Platform] afgedwongen.
+* [!DNL Data Governance](../home.md): Het kader waarmee de naleving van het gegevensgebruik wordt [!DNL Platform] afgedwongen.
 * [Labels](../labels/overview.md)voor gegevensgebruik: Labels voor gegevensgebruik worden toegepast op XDM-gegevensvelden en geven beperkingen op voor de manier waarop die gegevens kunnen worden benaderd.
-* [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 * [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om aanroepen naar de DULE [!DNL Policy Service] API te kunnen uitvoeren, inclusief vereiste headers en hoe u API-voorbeeldaanroepen kunt lezen.
