@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: July 15, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: e864073c27ba20ce32c962c469aed52608f199ac
+source-git-commit: 9fbd30adcb29c8925f02745be924477eb4e3fe2a
 workflow-type: tm+mt
-source-wordcount: '686'
-ht-degree: 2%
+source-wordcount: '681'
+ht-degree: 3%
 
 ---
 
@@ -73,7 +73,7 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| API- en UI-ondersteuning voor het verwijderen van gegevensstromen | Gegevensstromen die met fouten werden gemaakt of onnodig zijn geworden kunnen nu door APIs of het gebruiken van UI worden geschrapt. |
+| UI-ondersteuning voor het verwijderen van gegevensstromen | Gegevensstromen die met fouten werden gemaakt of onnodig zijn geworden kunnen nu door UI worden geschrapt. |
 | API- en UI-ondersteuning voor eenmalige invoer | Eenmalige invoer voor gegevensstromen, waar slechts de begindatum wordt verstrekt en geen toekomstige opname wordt gepland, kan nu door APIs of het gebruiken van UI worden uitgevoerd. |
 
 Zie het [bronoverzicht](../../sources/home.md)voor meer informatie over bronnen.
