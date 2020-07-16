@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Marketingacties
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Marketingacties
 
-Een marketingactie in het kader van het beheer van de gegevens van Adobe Experience Platforms is een actie die een [!DNL Experience Platform] gegevensconsument onderneemt en waarvoor moet worden gecontroleerd op schendingen van het beleid inzake gegevensgebruik.
+Een marketingactie in het kader van het Adobe Experience Platform [!DNL Data Governance]is een actie die een [!DNL Experience Platform] gegevensconsument onderneemt en waarvoor moet worden gecontroleerd op schendingen van het beleid inzake gegevensgebruik.
 
 Als u werkt met marketingacties in de API, moet u het `/marketingActions` eindpunt gebruiken.
 
