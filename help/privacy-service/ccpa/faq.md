@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Veelgestelde vragen over CCPA
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Veelgestelde vragen over CCPA
 
-Dit document bevat antwoorden op veelgestelde vragen over de California Consumer Protection Act (CCPA) en de implementatie ervan in Adobe Experience Cloud.
+Dit document bevat antwoorden op veelgestelde vragen over de [!DNL California Consumer Protection Act] (CCPA) en de implementatie ervan in Adobe Experience Cloud.
 
 ## Wat is CCPA?
 
-De California Consumer Privacy Act (CCPA) is de nieuwe privacywet van Californië die zijn inwoners nieuwe rechten met betrekking tot hun persoonlijke informatie verleent, en gegevensbeschermingstaken oplegt aan bepaalde entiteiten die zaken in Californië leiden.
+De [!DNL California Consumer Privacy Act] (CCPA) is de nieuwe privacywet van Californië die zijn inwoners nieuwe rechten met betrekking tot hun persoonlijke informatie verleent, en legt gegevensbeschermingstaken op aan bepaalde entiteiten die zaken in Californië leiden.
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Persoonlijke informatie is informatie &quot;die een consument of een huishouden 
 
 ## Welke soorten persoonlijke gegevens of id&#39;s die in Adobe Experience Cloud worden gebruikt, zijn aan deze nieuwe vereisten onderworpen?
 
-De volgende herkenningstekens worden algemeen gebruikt in de toepassingen van Experience Cloud en zouden aan vereisten kunnen onderworpen zijn CCPA:
+De volgende herkenningstekens worden algemeen gebruikt in [!DNL Experience Cloud] toepassingen en zouden aan vereisten kunnen onderworpen zijn CCPA:
 
 - Naam
 - Postadres
@@ -48,9 +48,9 @@ Persoonlijke informatie kan ook informatie over internet of andere elektronische
 - Zoekgeschiedenis
 - Informatie over de interactie van een consument met een website, toepassing of advertentie
 
-Hoewel de CCPA betrekking heeft op een groot aantal persoonlijke gegevens, wordt in de standaardcontractvoorwaarden van Adobe bepaald dat gevoelige persoonlijke gegevens (zoals SSN, informatie over rijbewijzen, informatie over financiële rekeningen en biometrische gegevens) over het algemeen niet mogen worden ingevoerd en gebruikt in Experience Cloud-toepassingen.
+Hoewel CCPA een groot aantal persoonlijke gegevens bestrijkt, wordt in de standaardcontractvoorwaarden van Adobe bepaald dat gevoelige persoonlijke gegevens (zoals SSN, informatie over rijbewijzen, informatie over financiële rekeningen en biometrische gegevens) over het algemeen niet mogen worden geïmporteerd en gebruikt in [!DNL Experience Cloud] toepassingen.
 
-## Hoe zijn de verschillende rollen en verantwoordelijkheden van de CCPA van toepassing op Experience Cloud?
+## Op welke wijze zijn de verschillende rollen en verantwoordelijkheden van de CCPA van toepassing [!DNL Experience Cloud]?
 
 Zoals bepaald door CCPA, zijn de volgende rollen op Adobe en zijn klanten van toepassing:
 
@@ -75,7 +75,7 @@ Adobe-services kunnen worden gebruikt om bepaalde gegevens te delen en over te d
 
 ## Hoe kan ik de privacyvereisten voor consumenten in het kader van de CCPA ondersteunen als ik bepaalde soorten gegevens handhaaf die onder de vereisten vallen?
 
-Zodra u de noodzakelijke stappen hebt genomen om consumenten van CA voor authentiek te verklaren, staat de Adobe Experience Platform Privacy Service u toe om verzoeken van de consument de privacy aan compatibele toepassingen van Experience Cloud voor te leggen. Zie het overzicht [van de](../home.md) Privacy Service voor meer informatie. Raadpleeg de handleiding over [Privacy Service- en Experience Cloud-toepassingen](../experience-cloud-apps.md)voor informatie over hoe uw specifieke Experience Cloud-toepassingen privacyverzoeken kunnen naleven.
+Zodra u de noodzakelijke stappen hebt genomen om consumenten van CA voor authentiek te verklaren, [!DNL Privacy Service] staat het Adobe Experience Platform u toe om de privacyverzoeken van de consument aan compatibele [!DNL Experience Cloud] toepassingen voor te leggen. Zie het overzicht [van de](../home.md) Privacy Service voor meer informatie. Raadpleeg de handleiding over [!DNL Experience Cloud] Privacy Service- en Experience Cloud-toepassingen [voor meer informatie over hoe uw specifieke](../experience-cloud-apps.md)toepassingen aan uw privacyverzoeken kunnen voldoen.
 
 >[!NOTE]
 >
