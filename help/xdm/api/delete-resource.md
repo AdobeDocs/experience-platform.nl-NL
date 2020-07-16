@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Een bron verwijderen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d9ab2b1226b051be43f8fc0dd222bc075caed6f0
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '133'
+ht-degree: 0%
 
 ---
 
 
 # Een bron verwijderen
 
-Het kan soms noodzakelijk zijn om (DELETE) een middel uit de Registratie van het Schema te verwijderen. Slechts kunnen de middelen die u in de huurderscontainer creeert worden geschrapt. Dit wordt gedaan door een verzoek van de SCHRAPPING uit te voeren gebruikend de bron `$id` u wenst om te schrappen.
+Het kan soms nodig zijn om een bron uit de bron te verwijderen (DELETE) [!DNL Schema Registry]. Slechts kunnen de middelen die u in de huurderscontainer creeert worden geschrapt. Dit wordt gedaan door een DELETE verzoek uit te voeren gebruikend de bron `$id` u wenst om te schrappen.
 
 **API-indeling**
 
@@ -21,12 +24,12 @@ DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Het type resource dat uit de Schemabibliotheek moet worden verwijderd. Geldige typen zijn `datatypes`, `mixins`, `schemas`en `classes`. |
+| `{RESOURCE_TYPE}` | Het type bron dat uit het bestand moet worden verwijderd [!DNL Schema Library]. Geldige typen zijn `datatypes`, `mixins`, `schemas`en `classes`. |
 | `{RESOURCE_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de bron. |
 
 **Verzoek**
 
-Voor verzoeken VERWIJDEREN zijn geen headers voor accepteren vereist.
+Voor DELETE aanvragen zijn geen koppen Accepteren vereist.
 
 ```SHELL
 curl -X DELETE \
@@ -41,4 +44,4 @@ curl -X DELETE \
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
-U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan het middel te proberen. U zult een Accept- kopbal in het verzoek moeten omvatten, maar zou een status 404 van HTTP (niet Gevonden) moeten ontvangen omdat het middel uit de Registratie van het Schema is verwijderd.
+U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan het middel te proberen. U zult een Accept- kopbal in het verzoek moeten omvatten, maar zou een status 404 van HTTP (niet Gevonden) moeten ontvangen omdat het middel uit [!DNL Schema Registry]is verwijderd.
