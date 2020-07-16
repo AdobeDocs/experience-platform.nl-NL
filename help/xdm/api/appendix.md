@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aanhangsel voor ontwikkelaar van het schemaregister
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1265'
 ht-degree: 1%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # Aanhangsel
 
-Dit document bevat aanvullende informatie over het werken met de API voor het registreren van het schema.
+Dit document bevat aanvullende informatie over het werken met de [!DNL Schema Registry] API.
 
 ## Compatibiliteitsmodus
 
-Experience Data Model (XDM) is een openbaar gedocumenteerde specificatie die door Adobe wordt aangestuurd om de interoperabiliteit, expressiviteit en kracht van digitale ervaringen te verbeteren. Adobe handhaaft de broncode en de formele definities XDM in een [open bronproject op GitHub](https://github.com/adobe/xdm/). Deze definities worden geschreven in de Standaardaantekening XDM, gebruikend JSON-LD (de Nota van Objecten JavaScript voor Gekoppelde Gegevens) en Schema JSON als grammatica voor het bepalen van XDM schema&#39;s.
+[!DNL Experience Data Model] (XDM) is een openbaar gedocumenteerde specificatie die door Adobe wordt aangestuurd om de interoperabiliteit, expressiviteit en kracht van digitale ervaringen te verbeteren. Adobe handhaaft de broncode en de formele definities XDM in een [open bronproject op GitHub](https://github.com/adobe/xdm/). Deze definities worden geschreven in de Standaardaantekening XDM, gebruikend JSON-LD (de Nota van Objecten JavaScript voor Gekoppelde Gegevens) en Schema JSON als grammatica voor het bepalen van XDM schema&#39;s.
 
-Wanneer u formele XDM-definities bekijkt in de openbare opslagplaats, kunt u zien dat standaard XDM verschilt van wat u in Adobe Experience Platform ziet. Wat u in Experience Platform ziet wordt genoemd de Wijze van de Verenigbaarheid, en het verstrekt een eenvoudige afbeelding tussen standaardXDM en de manier het binnen Platform wordt gebruikt.
+Wanneer u formele XDM-definities bekijkt in de openbare opslagplaats, kunt u zien dat standaard XDM verschilt van wat u in Adobe Experience Platform ziet. Wat u ziet in [!DNL Experience Platform] wordt genoemd de Wijze van de Verenigbaarheid, en het verstrekt een eenvoudige afbeelding tussen standaardXDM en de manier het binnen wordt gebruikt [!DNL Platform].
 
 ### Hoe de Wijze van de Verenigbaarheid werkt
 
@@ -51,15 +51,15 @@ Hieronder volgt een vergelijking naast elkaar van verjaardagsgerelateerde velden
 
 Adobe Experience Platform is ontworpen om met meerdere oplossingen en services te werken, elk met hun eigen technische uitdagingen en beperkingen (bijvoorbeeld hoe bepaalde technologieën speciale tekens verwerken). Om deze beperkingen te verhelpen, werd de compatibiliteitsmodus ontwikkeld.
 
-De meeste services voor Experience Platforms, waaronder Catalog, Data Lake en Real-time klantprofiel, gebruiken de compatibiliteitsmodus in plaats van de standaard-XDM. De API voor het schemaregister gebruikt ook de compatibiliteitsmodus en de voorbeelden in dit document worden allemaal weergegeven met de compatibiliteitsmodus.
+De meeste [!DNL Experience Platform] services, inclusief [!DNL Catalog], [!DNL Data Lake]en [!DNL Real-time Customer Profile] [!DNL Compatibility Mode] gebruik in plaats van standaard-XDM. De [!DNL Schema Registry] API gebruikt ook [!DNL Compatibility Mode]en de voorbeelden in dit document worden allemaal weergegeven met behulp van [!DNL Compatibility Mode].
 
-Het is nuttig om te weten dat een afbeelding tussen standaardXDM en de manier plaatsvindt het in Experience Platform operationeel is, maar het zou uw gebruik van de diensten van het Platform niet moeten beïnvloeden.
+Het is de moeite waard om te weten dat een afbeelding tussen standaard XDM en de manier plaatsvindt het binnen wordt operationeel [!DNL Experience Platform], maar het zou uw gebruik van de [!DNL Platform] diensten niet moeten beïnvloeden.
 
-Het open bronproject is beschikbaar aan u, maar wanneer het over het in wisselwerking staan met middelen door de Registratie van het Schema komt, verstrekken de API voorbeelden in dit document de beste praktijken u zou moeten kennen en volgen.
+Het opensource-project is beschikbaar voor u, maar als u communiceert met bronnen via de [!DNL Schema Registry]API, bieden de API-voorbeelden in dit document de beste praktijken die u moet kennen en volgen.
 
 ## XDM-veldtypen definiëren in de API {#field-types}
 
-De schema&#39;s XDM worden bepaald gebruikend de normen van het Schema JSON en basisgebiedstypes, met extra beperkingen voor gebiedsnamen die door Experience Platform worden afgedwongen. Met XDM kunt u aanvullende veldtypen definiëren met behulp van indelingen en optionele beperkingen. De XDM gebiedstypes worden blootgesteld door het gebied-vlakke attribuut, `meta:xdmType`.
+De schema&#39;s XDM worden bepaald gebruikend de normen van het Schema JSON en basisgebiedstypes, met extra beperkingen voor gebiedsnamen die door [!DNL Experience Platform]. worden afgedwongen. Met XDM kunt u aanvullende veldtypen definiëren met behulp van indelingen en optionele beperkingen. De XDM gebiedstypes worden blootgesteld door het gebied-vlakke attribuut, `meta:xdmType`.
 
 >[!NOTE]
 >
@@ -221,7 +221,7 @@ Zoek eerst het gewenste veldtype en gebruik de voorbeeldcode om uw API-aanvraag 
   <tr>
     <td>map</td>
     <td>type:<br/><br/><strong>objectNote:</strong><br/>Het gebruik van het gegevenstype 'map' is gereserveerd voor gebruik in de industrie en het schema van leveranciers en is niet beschikbaar voor gebruik in door huurders gedefinieerde velden. Het wordt gebruikt in standaardschema's wanneer het gegeven als sleutels wordt vertegenwoordigd die aan één of andere waarde in kaart brengen, of waar de sleutels redelijkerwijs niet in een statisch schema kunnen worden omvat en als gegevenswaarden moeten worden behandeld.</td>
-    <td>A 'map' MAG GEEN eigenschappen definiëren. Het MOET één enkel "additionalProperties"schema bepalen om het type van waarden te beschrijven in de "kaart". Een 'map' in XDM kan slechts één gegevenstype bevatten. Waarden kunnen elke geldige XDM-schemadefinitie zijn, inclusief een array of een object, of als verwijzing naar een ander schema (via $ref).<br/><br/>Veld toewijzen met waarden van het type 'string':
+    <td>A 'map' MAG GEEN eigenschappen definiëren. Het MOET één "[!UICONTROL additionalProperties]"-schema definiëren om het type waarden in de 'map' te beschrijven. Een 'map' in XDM kan slechts één gegevenstype bevatten. Waarden kunnen elke geldige XDM-schemadefinitie zijn, inclusief een array of een object, of als verwijzing naar een ander schema (via $ref).<br/><br/>Veld toewijzen met waarden van het type 'string':
       <pre class="JSON language-JSON hljs">
         "sampleField": { "type": "object", "additionalProperties":{ "type": "string" } }
       </pre>
@@ -243,7 +243,7 @@ Zoek eerst het gewenste veldtype en gebruik de voorbeeldcode om uw API-aanvraag 
 
 In de onderstaande tabel wordt de toewijzing tussen &quot;meta:xdmType&quot; en andere serialisatie-indelingen beschreven.
 
-| XDM Type<br>(meta:xdmType) | JSON<br>(JSON-schema) | Parquet<br>(type/aantekening) | Spark SQL | Java | Scala | .NET | CosmosDB | MongoDB | Aerospike | Protocol 2 |
+| XDM Type<br>(meta:xdmType) | JSON<br>(JSON-schema) | Parquet<br>(type/aantekening) | [!DNL Spark] SQL | Java | Scala | .NET | CosmosDB | MongoDB | Aerospike | Protocol 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | string | tekst:tekenreeks | BYTE_ARRAY/UTF8 | StringType | java.lang.String | String | System.String | String | string | String | string |
 | getal | tekst:nummer | DUBBEL | DoubleType | java.lang.Double | Dubbel | System.Double | Getal | double | Dubbel | double |
