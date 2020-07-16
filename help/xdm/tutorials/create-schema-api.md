@@ -4,42 +4,42 @@ solution: Experience Platform
 title: Een schema maken met de API voor schemaregistratie
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '2418'
+source-wordcount: '2322'
 ht-degree: 0%
 
 ---
 
 
-# Een schema maken met de API voor schemaregistratie
+# Een schema maken met de [!DNL Schema Registry] API
 
-Het register van het Schema wordt gebruikt om tot de Bibliotheek van het Schema binnen Adobe Experience Platform toegang te hebben. De Schemabibliotheek bevat bronnen die beschikbaar zijn gesteld door Adobe, partners van Experience Platforms en leveranciers van wie u de toepassingen gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
+Het [!DNL Schema Registry] wordt gebruikt om tot [!DNL Schema Library] binnen Adobe Experience Platform toegang te hebben. De [!DNL Schema Library] map bevat bronnen die beschikbaar zijn gesteld door Adobe, [!DNL Experience Platform] partners en leveranciers van wie u de toepassingen gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
 
-Deze zelfstudie gebruikt de API voor schemaregistratie om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse. Als u de gebruikersinterface in Experience Platform liever wilt gebruiken, biedt de zelfstudie [van de](create-schema-ui.md) Schema-editor stapsgewijze instructies voor het uitvoeren van vergelijkbare acties in de Schema-editor.
+Deze zelfstudie gebruikt de [!DNL Schema Registry] API om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse. Als u de gebruikersinterface liever in wilt gebruiken, [!DNL Experience Platform]biedt de zelfstudie [van de](create-schema-ui.md) Schema-editor stapsgewijze instructies voor het uitvoeren van vergelijkbare acties in de Schema-editor.
 
 ## Aan de slag
 
 Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
-* [XDM-systeem](../home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [!DNL Experience Data Model (XDM) System](../home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-* [Klantprofiel](../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [!DNL Real-time Customer Profile](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-Voordat u met deze zelfstudie begint, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de API voor schemaregistratie te kunnen uitvoeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
+Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de [!DNL Schema Registry] API te kunnen uitvoeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
 
 Deze zelfstudie doorloopt de stappen voor het samenstellen van een schema voor leden van Loyalty&#39;s dat gegevens beschrijft die betrekking hebben op de leden van een programma voor loyaliteit in de detailhandel. Voordat u begint, kunt u een voorvertoning weergeven van het [volledige schema](#complete-schema) Loyalty-leden in de bijlage.
 
 ## Een schema met een standaardklasse samenstellen
 
-Een schema kan als blauwdruk voor de gegevens worden beschouwd u in Experience Platform wilt opnemen. Elk schema bestaat uit een klasse en nul of meer mixen. Met andere woorden, u moet geen mixin toevoegen om een schema te bepalen, maar in de meeste gevallen wordt minstens één mixin gebruikt.
+Een schema kan als blauwdruk voor de gegevens worden beschouwd u wilt opnemen in [!DNL Experience Platform]. Elk schema bestaat uit een klasse en nul of meer mixen. Met andere woorden, u moet geen mixin toevoegen om een schema te bepalen, maar in de meeste gevallen wordt minstens één mixin gebruikt.
 
 ### Een klasse toewijzen
 
 Het proces van de schemacompositie begint met de selectie van een klasse. De klasse definieert de belangrijkste gedragsaspecten van de gegevens (record- versus tijdreeks) en de minimale velden die vereist zijn om de gegevens te beschrijven die worden ingevoerd.
 
-Het schema dat u in deze zelfstudie maakt, gebruikt de klasse Individueel profiel XDM. Individueel XDM profiel is een standaardklasse die door Adobe wordt verstrekt voor het bepalen van verslaggedrag. Meer informatie over gedrag kan in [grondbeginselen van schemacompositie](../schema/composition.md)worden gevonden.
+Het schema dat u in deze zelfstudie maakt, gebruikt de [!DNL XDM Individual Profile] klasse. [!DNL XDM Individual Profile] is een standaardklasse die door Adobe wordt geleverd voor het definiëren van recordgedrag. Meer informatie over gedrag kan in [grondbeginselen van schemacompositie](../schema/composition.md)worden gevonden.
 
 Om een klasse toe te wijzen, wordt een API vraag gemaakt om (POST) een nieuw schema in de huurderscontainer tot stand te brengen. Deze vraag omvat de klasse het schema zal uitvoeren. Elk schema mag slechts één klasse implementeren.
 
@@ -51,7 +51,7 @@ POST /tenant/schemas
 
 **Verzoek**
 
-De aanvraag moet een `allOf` attribuut bevatten dat naar de klasse `$id` van verwijst. Dit attribuut bepaalt de &quot;basisklasse&quot;die het schema zal uitvoeren. In dit voorbeeld is de basisklasse de klasse XDM Individual Profile. De waarde `$id` van de klasse Individueel profiel XDM wordt gebruikt als de waarde van het `$ref` veld in de onderstaande `allOf` array.
+De aanvraag moet een `allOf` attribuut bevatten dat naar de klasse `$id` van verwijst. Dit attribuut bepaalt de &quot;basisklasse&quot;die het schema zal uitvoeren. In dit voorbeeld is de basisklasse de [!DNL XDM Individual Profile] klasse. De waarde `$id` van de [!DNL XDM Individual Profile] klasse wordt gebruikt als de waarde van het `$ref` veld in de `allOf` onderstaande array.
 
 ```SHELL
 curl -X POST \
@@ -75,7 +75,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvol verzoek keert de Status 201 van de Reactie van HTTP (Gemaakt) met een reactielichaam terug dat de details van het pas gecreëerde schema, met inbegrip van bevat, `$id`, `meta:altIt`en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door het schemaregister.
+Een succesvol verzoek keert de Status 201 van de Reactie van HTTP (Gemaakt) met een reactielichaam terug dat de details van het pas gecreëerde schema, met inbegrip van bevat, `$id`, `meta:altIt`en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry]operator.
 
 ```JSON
 {
@@ -258,7 +258,7 @@ U kunt nu een andere standaardmix toevoegen door de stappen te herhalen met een 
 
 >[!TIP]
 >
->Het is nuttig om alle beschikbare mengsels te herzien om zich met de gebieden vertrouwd te maken inbegrepen in elk. U kunt (KRIJGEN) van alle mengsels een lijst maken beschikbaar voor gebruik met een bepaalde klasse door een verzoek tegen elk van de &quot;globale&quot;en &quot;huurder&quot;containers uit te voeren, die slechts die mengen terugkeren waar het &quot;meta:intendedToExtend&quot;gebied de klasse aanpast u gebruikt. In dit geval is het de klasse Individueel Profiel XDM, zodat wordt het Individuele Profiel XDM gebruikt: `$id`
+>Het is nuttig om alle beschikbare mengsels te herzien om zich met de gebieden vertrouwd te maken inbegrepen in elk. U kunt (KRIJGEN) van alle mengsels een lijst maken beschikbaar voor gebruik met een bepaalde klasse door een verzoek tegen elk van de &quot;globale&quot;en &quot;huurder&quot;containers uit te voeren, die slechts die mengen terugkeren waar het &quot;meta:intendedToExtend&quot;gebied de klasse aanpast u gebruikt. In dit geval is het de [!DNL XDM Individual Profile] klasse, zodat [!DNL XDM Individual Profile] `$id` wordt gebruikt:
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -342,7 +342,7 @@ Het schema Loyalty-leden moet nu drie `$ref` waarden in de `allOf` array bevatte
 
 Het schema van Loyalty-leden moet informatie vastleggen die uniek is voor het loyaliteitsprogramma. Deze informatie is in geen van de standaardmengsels opgenomen.
 
-De rekeningen van de Registratie van het Schema voor dit door u toe te staan om uw eigen mengen binnen de huurderscontainer te bepalen. Deze combinaties zijn uniek voor uw organisatie en zijn niet zichtbaar of bewerkbaar door iemand buiten uw IMS-organisatie.
+De [!DNL Schema Registry] rekeningen voor dit door u toe te staan om uw eigen mengsels binnen de huurderscontainer te bepalen. Deze combinaties zijn uniek voor uw organisatie en zijn niet zichtbaar of bewerkbaar door iemand buiten uw IMS-organisatie.
 
 Als u een nieuwe mix wilt maken (POST), moet uw aanvraag een `meta:intendedToExtend` veld bevatten met de `$id` voor de basisklasse(n) waarmee de mix compatibel is, samen met de eigenschappen die de mix zal bevatten.
 
@@ -417,7 +417,7 @@ curl -X POST\
 
 **Antwoord**
 
-Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van de zojuist gemaakte mix, inclusief de `$id`, `meta:altIt`en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door het schemaregister.
+Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van de zojuist gemaakte mix, inclusief de `$id`, `meta:altIt`en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry]operator.
 
 ```JSON
 {
@@ -754,7 +754,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van het nieuwe gegevenstype, inclusief de instructies `$id`, `meta:altIt`en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door het schemaregister.
+Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een antwoordinstantie die de details bevat van het nieuwe gegevenstype, inclusief de instructies `$id`, `meta:altIt`en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry]operator.
 
 ```JSON
 {
@@ -954,9 +954,9 @@ Het uitvoeren van een GET verzoek om het schema op te zoeken toont nu de verwijz
 
 ### Een identiteitsdescriptor definiëren
 
-Schema&#39;s worden gebruikt voor het opnemen van gegevens in het Experience Platform. Dit gegeven wordt uiteindelijk gebruikt over de veelvoudige diensten om één enkele, verenigde mening van een individu tot stand te brengen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;Identiteit&quot;worden gemerkt en, bij gegevensinvoer, worden de gegevens in die gebieden opgenomen in de Grafiek van de Identiteit voor dat individu. De grafiekgegevens kunnen dan door het Profiel [van de Klant in](../../profile/home.md) real time en andere diensten van het Experience Platform worden betreden om een verbonden samen mening van elke individuele klant te verstrekken.
+Schema&#39;s worden gebruikt om gegevens in te voeren [!DNL Experience Platform]. Dit gegeven wordt uiteindelijk gebruikt over de veelvoudige diensten om één enkele, verenigde mening van een individu tot stand te brengen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;Identiteit&quot;worden gemerkt en, bij gegevensinvoer, worden de gegevens in die gebieden opgenomen in de Grafiek van de Identiteit voor dat individu. De grafiekgegevens kunnen dan door [!DNL Real-time Customer Profile](../../profile/home.md) en andere [!DNL Experience Platform] diensten worden betreden om een verbonden mening van elke individuele klant te verstrekken.
 
-Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [Experience Cloud-id (ECID)](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html), CRM-id of andere unieke id-velden.
+Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html)CRM-id of andere unieke id-velden.
 
 Houd rekening met alle unieke id&#39;s die specifiek zijn voor uw organisatie, omdat dit ook goede identiteitsvelden kunnen zijn.
 
@@ -972,7 +972,7 @@ POST /tenant/descriptors
 
 **Verzoek**
 
-In het volgende verzoek wordt een identiteitsdescriptor gedefinieerd in het veld &quot;loyaltyId&quot;. Dit vertelt Experience Platform om het unieke herkenningsteken van het loyaliteitsprogrammalid (in dit geval, het e-mailadres van het lid) te gebruiken helpen informatie over het individu samenvoegen.
+In het volgende verzoek wordt een identiteitsdescriptor gedefinieerd in het veld &quot;loyaltyId&quot;. Dit vertelt [!DNL Experience Platform] om het unieke herkenningsteken van het loyaliteitsprogrammalid (in dit geval, het e-mailadres van het lid) te gebruiken om te helpen informatie over het individu verbinden.
 
 ```SHELL
 curl -X POST \
@@ -995,11 +995,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->U kunt beschikbare waarden voor &quot;xdm:namespace&quot; weergeven of nieuwe waarden maken met de API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)identiteitsservice. De waarde voor &quot;xdm:property&quot; kan &quot;xdm:code&quot; of &quot;xdm:id&quot; zijn, afhankelijk van de gebruikte &quot;xdm:namespace&quot;.
+>U kunt beschikbare waarden voor &quot;xdm:namespace&quot; weergeven of nieuwe waarden maken met de [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)methode. De waarde voor &quot;xdm:property&quot; kan &quot;xdm:code&quot; of &quot;xdm:id&quot; zijn, afhankelijk van de gebruikte &quot;xdm:namespace&quot;.
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) met een antwoordinstantie die de details van de zojuist gemaakte descriptor, inclusief de `@id`beschrijving, bevat. Het `@id` is een alleen-lezen veld dat is toegewezen door de schemaregistratie en wordt gebruikt voor het verwijzen naar de descriptor in de API.
+Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) met een antwoordinstantie die de details van de zojuist gemaakte descriptor, inclusief de `@id`beschrijving, bevat. Het `@id` is een alleen-lezen veld dat door de API is toegewezen [!DNL Schema Registry] en wordt gebruikt voor het verwijzen naar de descriptor in de API.
 
 ```JSON
 {
@@ -1015,11 +1015,11 @@ Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) met een antwoordinst
 }
 ```
 
-## Schema inschakelen voor gebruik in realtime klantprofiel
+## Schema inschakelen voor gebruik in [!DNL Real-time Customer Profile]
 
-Door de tag &quot;union&quot; aan het `meta:immutableTags` kenmerk toe te voegen, kunt u het schema Loyalty-leden inschakelen voor gebruik door het profiel Real-time klant.
+Door de tag &quot;union&quot; aan het `meta:immutableTags` kenmerk toe te voegen, kunt u het schema Loyalty-leden inschakelen voor gebruik door [!DNL Real-time Customer Profile].
 
-Voor meer informatie over het werken met vakbondsmeningen, zie de sectie over [vakbonden](../api/unions.md) in de de ontwikkelaarsgids van het Registratie van het Schema.
+Zie de sectie over [vakbonden](../api/unions.md) in de handleiding voor [!DNL Schema Registry] ontwikkelaars voor meer informatie over het werken met de weergaven van vakverenigingen.
 
 ### Tag &quot;union&quot; toevoegen
 
@@ -1103,9 +1103,9 @@ De reactie toont aan dat de verrichting met succes werd uitgevoerd, en het schem
 
 ### Schema&#39;s weergeven in een union
 
-U hebt nu met succes uw schema aan de vereniging van het Individuele Profiel XDM toegevoegd. Om een lijst van alle schema&#39;s te zien die een deel van de zelfde unie zijn, kunt u een GET verzoek uitvoeren gebruikend vraagparameters om de reactie te filtreren.
+U hebt nu met succes uw schema aan de [!DNL XDM Individual Profile] unie toegevoegd. Om een lijst van alle schema&#39;s te zien die een deel van de zelfde unie zijn, kunt u een GET verzoek uitvoeren gebruikend vraagparameters om de reactie te filtreren.
 
-Met behulp van de `property` queryparameter kunt u opgeven dat alleen schema&#39;s die een `meta:immutableTags` veld bevatten dat `meta:class` gelijk is aan de waarde `$id` van de klasse Individueel profiel XDM, worden geretourneerd.
+Met behulp van de `property` queryparameter kunt u opgeven dat alleen schema&#39;s die een `meta:immutableTags` veld bevatten dat `meta:class` gelijk is aan de waarde `$id` van de [!DNL XDM Individual Profile] klasse, worden geretourneerd.
 
 **API-indeling**
 
@@ -1115,7 +1115,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **Verzoek**
 
-Het voorbeeldverzoek keert hieronder alle schema&#39;s terug die deel van de vereniging van het Profiel XDM Individual uitmaken.
+Het voorbeeldverzoek hieronder keert alle schema&#39;s terug die deel van de [!DNL XDM Individual Profile] unie uitmaken.
 
 ```SHELL
 curl -X GET \
@@ -1183,7 +1183,7 @@ De volgende informatie vormt een aanvulling op de API-zelfstudie.
 
 Door dit leerprogramma, wordt een schema samengesteld om de leden van een programma van de kleinhandelsloyaliteit te beschrijven.
 
-Het schema implementeert de klasse XDM Individual Profile en combineert meerdere combinaties. informatie over de loyaliteitsleden inbrengen met behulp van de standaardmixen &quot;Persoonsgegevens&quot; en &quot;Persoonlijke details&quot;, alsmede door een mix van &quot;Loyalty Details&quot; die tijdens de zelfstudie is gedefinieerd.
+Het schema implementeert de [!DNL XDM Individual Profile] klasse en combineert meerdere combinaties. informatie over de loyaliteitsleden inbrengen met behulp van de standaardmixen &quot;Persoonsgegevens&quot; en &quot;Persoonlijke details&quot;, alsmede door een mix van &quot;Loyalty Details&quot; die tijdens de zelfstudie is gedefinieerd.
 
 In het volgende voorbeeld ziet u het voltooide schema Loyalty-leden in JSON-indeling:
 
