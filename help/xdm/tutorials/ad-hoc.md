@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een ad-hocschema maken
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '724'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 0%
 
 # Een ad-hocschema maken
 
-In specifieke omstandigheden, kan het noodzakelijk zijn om een schema van de Gegevens van de Ervaring van het Model (XDM) met gebieden tot stand te brengen die voor gebruik slechts door één enkele dataset worden genoemd. Dit wordt bedoeld als &quot;ad-hoc&quot;schema. Ad-hocschema&#39;s worden gebruikt in diverse werkstromen voor gegevensinvoer voor Experience Platform, met inbegrip van het opnemen van CSV-bestanden en het creëren van bepaalde soorten bronverbindingen.
+In specifieke omstandigheden, kan het noodzakelijk zijn om een [!DNL Experience Data Model] (XDM) schema met gebieden tot stand te brengen die namespaced voor gebruik slechts door één enkele dataset zijn. Dit wordt bedoeld als &quot;ad-hoc&quot;schema. Ad-hocschema&#39;s worden gebruikt in diverse werkstromen voor het opnemen van gegevens, [!DNL Experience Platform]zoals het opnemen van CSV-bestanden en het maken van bepaalde soorten bronverbindingen.
 
-Dit document bevat algemene stappen voor het maken van een ad-hocschema met behulp van de [Schemaregistratie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Het is bedoeld om samen met andere zelfstudies voor Experience Platforms te worden gebruikt waarvoor een ad-hocschema nodig is als onderdeel van de workflow. Elk van die documenten verstrekt gedetailleerde informatie over hoe te om een ad-hocschema voor zijn specifiek gebruiksgeval behoorlijk te vormen.
+Dit document bevat algemene stappen voor het maken van een ad-hocschema met behulp van de [Schemaregistratie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Het is bedoeld voor gebruik in combinatie met andere [!DNL Experience Platform] zelfstudies waarvoor een ad-hocschema moet worden gemaakt als onderdeel van de workflow. Elk van die documenten verstrekt gedetailleerde informatie over hoe te om een ad-hocschema voor zijn specifiek gebruiksgeval behoorlijk te vormen.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van het XDM-systeem (Experience Data Model). Lees de volgende XDM-documentatie voordat u deze zelfstudie start:
+Deze zelfstudie vereist een goed begrip van [!DNL Experience Data Model] (XDM) System. Lees de volgende XDM-documentatie voordat u deze zelfstudie start:
 
-- [XDM-systeemoverzicht](../home.md): Een overzicht op hoog niveau van XDM en zijn implementatie in Experience Platform.
+- [XDM-systeemoverzicht](../home.md): Een overzicht op hoog niveau van XDM en zijn implementatie in [!DNL Experience Platform].
 - [Basisbeginselen van de schemacompositie](../schema/composition.md): Een overzicht van de basiscomponenten van schema&#39;s XDM.
 
-Voordat u met deze zelfstudie begint, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de API voor schemaregistratie te kunnen uitvoeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
+Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de [!DNL Schema Registry] API te kunnen uitvoeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
 
 ## Een ad-hocklasse maken
 
@@ -239,7 +239,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 **Verzoek**
 
-In het volgende verzoek wordt de header Accept gebruikt `application/vnd.adobe.xed-full+json; version=1`, die de uitgebreide vorm van het schema retourneert. Merk op dat wanneer het terugwinnen van een specifiek middel van de Registratie van het Schema, de Accept van het verzoek kopbal belangrijke versie van het middel in kwestie moet omvatten.
+In het volgende verzoek wordt de header Accept gebruikt `application/vnd.adobe.xed-full+json; version=1`, die de uitgebreide vorm van het schema retourneert. Merk op dat wanneer het terugwinnen van een specifiek middel van het [!DNL Schema Registry], de Accept kopbal van het verzoek belangrijke versie van de betrokken bron moet omvatten.
 
 ```shell
 curl -X GET \
@@ -305,4 +305,4 @@ Een geslaagde reactie retourneert de details van het schema, inclusief alle gene
 
 Door deze zelfstudie te volgen, hebt u een nieuw ad-hocschema gemaakt. Als u naar dit document bent overgebracht als onderdeel van een andere zelfstudie, kunt u nu de instructies van uw ad-hocschema gebruiken om de workflow te voltooien. `$id`
 
-Raadpleeg de handleiding voor [ontwikkelaars voor meer informatie over het werken met de Schemaregistratie-API](../api/getting-started.md).
+Raadpleeg voor meer informatie over het werken met de [!DNL Schema Registry] API de handleiding voor [ontwikkelaars](../api/getting-started.md).
