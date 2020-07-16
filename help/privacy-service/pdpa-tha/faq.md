@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Veelgestelde vragen PDPA (Thailand)
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: ccfc90fe6de80ab050c3b937be7626be4e90db1c
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Veelgestelde vragen PDPA (Thailand)
 
-Dit document bevat antwoorden op veelgestelde vragen over de Personal Data Protection Act (PDPA) van Thailand en de implementatie ervan in Adobe Experience Cloud.
+In dit document worden antwoorden gegeven op veelgestelde vragen over de [!DNL Personal Data Protection Act] status van Thailand (PDPA) en de implementatie ervan in Adobe Experience Cloud.
 
 Definities voor de verschillende PDPA-termen die in dit document worden gebruikt, zijn te vinden in het [PDPA (Thailand)-terminologieartikel](./terminology.md) .
 
