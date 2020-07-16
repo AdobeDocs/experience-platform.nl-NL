@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Opmerkingen bij de release Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 4cfa64e3371496e2408fe8fee64d49883334917c
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '511'
 ht-degree: 5%
 
 ---
 
 
-# Opmerkingen bij de release Privacy Service
+# [!DNL Privacy Service] releaseopmerkingen
 
-Dit document bevat informatie over nieuwe functies voor Adobe Experience Platform Privacy Service en over verbeteringen en belangrijke opgeloste problemen.
+Dit document bevat informatie over nieuwe functies voor Adobe Experience Platform [!DNL Privacy Service]en over verbeteringen en belangrijke opgeloste problemen.
 
 >[!NOTE]
 >
->De meest recente releaseopmerkingen voor andere services van Experience Platforms vindt u [hier](../release-notes/latest/latest.md).
+>De meest recente releaseopmerkingen voor andere [!DNL Experience Platform] services zijn [hier](../release-notes/latest/latest.md)te vinden.
 
 ## 8 april 2020
 
@@ -26,8 +26,8 @@ Dit document bevat informatie over nieuwe functies voor Adobe Experience Platfor
 
 | Functie | Beschrijving |
 | --- | --- |
-| PDPA-ondersteuning | De verzoeken van de privacy kunnen nu worden gecreeerd en worden gevolgd onder de Wet van de Bescherming van Persoonlijke Gegevens (PDPA) in Thailand. Wanneer u privacyverzoeken indient in de API, accepteert de `regulation` array de waarde &quot;pdpa_tha&quot;. |
-| Naamruimtetypen in de gebruikersinterface | U kunt nu verschillende naamruimtetypen opgeven in de Aanvraag Builder in de gebruikersinterface van de Privacy Service. Raadpleeg de [gebruikershandleiding](ui/user-guide.md) voor meer informatie. |
+| PDPA-ondersteuning | [!DNL Privacy] verzoeken kunnen nu worden opgesteld en bijgehouden op grond van de Personal Data Protection Act (PDPA) in Thailand. Wanneer u privacyverzoeken indient in de API, accepteert de `regulation` array de waarde &quot;pdpa_tha&quot;. |
+| Naamruimtetypen in de gebruikersinterface | U kunt nu verschillende naamruimtetypen opgeven in de [!DNL Privacy Service] gebruikersinterface van Request Builder. Raadpleeg de [gebruikershandleiding](ui/user-guide.md) voor meer informatie. |
 | Oude afleiding van eindpunt | Het oude API-eindpunt (`data/privacy/gdpr`) is vervangen. |
 
 ## 14 januari 2020
@@ -36,14 +36,14 @@ Dit document bevat informatie over nieuwe functies voor Adobe Experience Platfor
 
 | Functie | Beschrijving |
 | --- | --- |
-| Privacy Service herbranding | De voormalige naam &quot;GDPR-dienst&quot; is hernoemd tot Privacy Service, aangezien de dienst is gegroeid om andere voorschriften naast GDPR te ondersteunen. |
-| Nieuwe API-eindpunten | Het basispad voor de Privacy Service-API is bijgewerkt van `/data/privacy/gdpr` naar `/data/core/privacy/jobs` |
-| Nieuwe vereiste `regulation` eigenschap | Bij het creëren van nieuwe banen in Privacy Service API, moet een `regulation` bezit in de verzoeklading worden geleverd om te wijzen op welke regeling om de baan onder te volgen. Accepteerde waarden zijn `gdpr` en `ccpa`. Zie het document over [privacytaken](api/privacy-jobs.md) in de ontwikkelaarsgids voor Privacys Service voor meer informatie. |
-| Ondersteuning voor Adobe Primetime-verificatie | Privacy Service accepteert nu toegang-/verwijderaanvragen van Adobe Primetime-verificatie, die worden gebruikt `primetimeAuthentication` als de productwaarde. Zie de documentatie [van de Authentificatie](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) Primetime voor meer informatie. |
+| [!DNL Privacy Service] herbranding | De voormalige naam &quot;GDPR Service&quot; is omgedoopt [!DNL Privacy Service] omdat de dienst is gegroeid om andere regels naast GDPR te ondersteunen. |
+| Nieuwe API-eindpunten | Het basispad voor de [!DNL Privacy Service] API is bijgewerkt van `/data/privacy/gdpr` naar `/data/core/privacy/jobs` |
+| Nieuwe vereiste `regulation` eigenschap | Bij het maken van nieuwe taken in de [!DNL Privacy Service] API moet een `regulation` eigenschap worden opgegeven in de payload van de aanvraag om aan te geven welke regelgeving moet worden gebruikt om de taak onder te volgen. Accepteerde waarden zijn `gdpr` en `ccpa`. Zie het document over [privacytaken](api/privacy-jobs.md) in de [!DNL Privacy Service] ontwikkelaarsgids voor meer informatie. |
+| Ondersteuning voor Adobe Primetime-verificatie | [!DNL Privacy Service] Accepteert nu toegang-/verwijderaanvragen van Adobe Primetime-verificatie, die `primetimeAuthentication` als productwaarde worden gebruikt. Zie de documentatie [van de Authentificatie](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) Primetime voor meer informatie. |
 
 ### Verbeteringen
 
-* Verbeteringen in de gebruikersinterface van Privacy Service:
+* [!DNL Privacy Service] Verbeteringen voor gebruikersinterface:
    * Afzonderlijke pagina&#39;s voor het volgen van taken voor GDPR en CCPA verordeningen.
    * Het nieuwe _Regeltype_ dropdown om tussen het volgen gegevens voor GDPR en CCPA te schakelen.
 
@@ -53,21 +53,21 @@ Dit document bevat informatie over nieuwe functies voor Adobe Experience Platfor
 
 | Functie | Beschrijving |
 | --- | --- |
-| Metrische dashboard aanvragen | Het nieuwe dashboard van metriek in UI van de Privacy Service verstrekt zicht in voorgelegde, geëiste, en voltooide GDPR- verzoeken. |
-| Request Builder | Aan de dienstorganisaties met zowel technische als niet-technische gebruikers die GDPR- verzoeken indienen, is een functionaliteit &quot;Create Verzoek&quot;toegevoegd aan UI. De mogelijkheid voor het indienen van JSON-bestanden is nog steeds beschikbaar in de gebruikersinterface van de Privacy Service voor organisaties die het bestand liever blijven gebruiken. |
-| GDPR-berichten over taakgebeurtenissen | Gebeurtenismeldingen over GDPR-taakstatussen zijn voor veel workflows van essentieel belang. Hoewel meldingen eerder via afzonderlijke e-mailberichten zijn verzonden, zijn GDPR-gebeurtenismeldingen berichten die gebruikmaken van Adobe I/O-gebeurtenissen. Deze berichten worden verzonden naar een geconfigureerde webhaak die de automatisering van taakaanvragen vergemakkelijkt. Gebruikers in de gebruikersinterface van Privacys Service kunnen zich abonneren op Adobe I/O GDPR-gebeurtenissen om updates te ontvangen wanneer een product of de GDPR-taak is voltooid. |
+| Metrische dashboard aanvragen | Het nieuwe dashboard van metriek in [!DNL Privacy Service] UI verstrekt zicht in voorgelegde, geëiste, en voltooide GDPR- verzoeken. |
+| Request Builder | Aan de dienstorganisaties met zowel technische als niet-technische gebruikers die GDPR- verzoeken indienen, is een functionaliteit &quot;Create Verzoek&quot;toegevoegd aan UI. De mogelijkheid voor het indienen van JSON-bestanden is nog steeds beschikbaar in de [!DNL Privacy Service] gebruikersinterface voor organisaties die het bestand liever blijven gebruiken. |
+| GDPR-berichten over taakgebeurtenissen | Gebeurtenismeldingen over GDPR-taakstatussen zijn voor veel workflows van essentieel belang. Hoewel meldingen eerder via afzonderlijke e-mailberichten zijn verzonden, zijn GDPR-gebeurtenismeldingen berichten die gebruikmaken van Adobe I/O-gebeurtenissen. Deze berichten worden verzonden naar een geconfigureerde webhaak die de automatisering van taakaanvragen vergemakkelijkt. [!DNL Privacy Service] UI-gebruikers kunnen zich abonneren op Adobe I/O GDPR-gebeurtenissen om updates te ontvangen wanneer een product of de GDPR-taak is voltooid. |
 
 ## 18 april 2019
 
 ### Verbeteringen
 
-* Het standaardbereik voor de statustabel in de gebruikersinterface van de Privacy Service is gewijzigd in een bereik van 7 dagen.
+* Het standaardbereik voor de statustabel in de [!DNL Privacy Service] UI is gewijzigd in een bereik van 7 dagen.
 * Betere interne uitzonderingsbehandeling.
 * Verbeterde prestaties door caching voor gemeenschappelijke interne vraag met lage tarieven van de gegevensverandering in te voeren.
 
 ### Bugfixes
 
-* Ontbrekende logboekinformatie voor gefilterde vragen voor het `GET /` eindpunt in Privacy Service API toegevoegd.
+* Ontbrekende logboekinformatie voor gefilterde vragen voor het `GET /` eindpunt in [!DNL Privacy Service] API toegevoegd.
 
 ## 11 april 2019
 
@@ -92,4 +92,4 @@ Dit document bevat informatie over nieuwe functies voor Adobe Experience Platfor
 
 ### Bugfixes
 
-* Probleem verholpen waarbij klanten de interface van de Privacy Service niet konden laden.
+* Probleem verholpen waarbij klanten de [!DNL Privacy Service] gebruikersinterface niet konden laden.
