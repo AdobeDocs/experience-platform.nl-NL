@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Een mix maken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b2ceac3de73ac622dc885eb388e46e93551f43a8
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: b2ceac3de73ac622dc885eb388e46e93551f43a8
 
 Mixins zijn een set velden die worden gebruikt om een bepaald concept te beschrijven, zoals &quot;adres&quot; of &quot;profielvoorkeuren&quot;. Er zijn talrijke standaardmixins beschikbaar, of u kunt uw bepalen wanneer u wenst om informatie te vangen die voor uw organisatie uniek is. Elke mix bevat een `meta:intendedToExtend` veld met de klassen waarmee de mix compatibel is.
 
-Het kan handig zijn om alle beschikbare combinaties te bekijken om uzelf bekend te maken met de velden die in de verschillende combinaties zijn opgenomen. U kunt (KRIJGEN) van alle mengen een lijst maken compatibel met een bepaalde klasse door een verzoek tegen elk van de &quot;globale&quot;en &quot;huurder&quot;containers uit te voeren, die slechts die mengen terugkeren waar het &quot;meta:intendedToExtend&quot;gebied de klasse aanpast u gebruikt. De voorbeelden hieronder zullen alle mengen terugkeren die met de individuele klasse van het Profiel XDM kunnen worden gebruikt:
+Het kan handig zijn om alle beschikbare combinaties te bekijken om uzelf bekend te maken met de velden die in de verschillende combinaties zijn opgenomen. U kunt (KRIJGEN) van alle mengen een lijst maken compatibel met een bepaalde klasse door een verzoek tegen elk van de &quot;globale&quot;en &quot;huurder&quot;containers uit te voeren, die slechts die mengen terugkeren waar het &quot;meta:intendedToExtend&quot;gebied de klasse aanpast u gebruikt. In de onderstaande voorbeelden worden alle combinaties geretourneerd die met de [!DNL XDM Individual Profile] klasse kunnen worden gebruikt:
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -99,7 +102,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van de zojuist gemaakte mix, inclusief de combinatie `$id`, `meta:altId`en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door het schemaregister.
+Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van de zojuist gemaakte mix, inclusief de combinatie `$id`, `meta:altId`en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry]operator.
 
 ```JSON
 {
