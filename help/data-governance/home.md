@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Beheer van gegevens Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
 
 
-# Overzicht van gegevensbeheer
+# [!DNL Data Governance] overzicht
 
 Een van de kernmogelijkheden van Adobe Experience Platform is om gegevens van meerdere bedrijfssystemen samen te brengen, zodat marketeers klanten beter kunnen identificeren, begrijpen en betrekken. Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Daarom is het belangrijk om ervoor te zorgen dat uw gegevensbewerkingen binnen [!DNL Platform] voldoen aan het beleid voor gegevensgebruik.
 
-Met gegevensbeheer voor Adobe Experience Platforms kunt u klantgegevens beheren en ervoor zorgen dat de voorschriften, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een sleutelrol binnen [!DNL Experience Platform] op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, en het controleren van het gebruik van gegevens voor marketing acties.
+Adobe Experience Platform [!DNL Data Governance] staat u toe om klantengegevens te beheren en naleving van verordeningen, beperkingen, en beleid te verzekeren van toepassing op gegevensgebruik. Het speelt een sleutelrol binnen [!DNL Experience Platform] op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, en het controleren van het gebruik van gegevens voor marketing acties.
 
 ## Functies voor gegevensbeheer
 
@@ -38,13 +38,13 @@ Gegevensstewards vormen de kern van gegevensbeheer. Deze rol is verantwoordelijk
 
 Marktdeelnemers zijn het eindpunt van gegevensbeheer. Ze vragen gegevens van de infrastructuur voor gegevensbeheer die is gemaakt door data stewards, wetenschappers en engineers. Marktdeelnemers omvatten een aantal verschillende specialiteiten onder de marketingparaplu, waaronder:
 
-* De analisten van de marketing verzoeken gegevens om inzicht in klanten, zowel als individuen als in groepen (ook die als segmenten worden bekend) toe te laten.
+* De analisten van de marketing verzoeken gegevens om begrip van klanten, zowel als individuen als in groepen (ook die als segmenten worden bekend) toe te laten.
 * De Specialisten van de marketing en Ontwerpers van de Ervaring gebruiken gegevens om nieuwe klantenervaringen te ontwerpen.
 
 
 ## DULE-kader
 
-De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste kader voor [!DNL Experience Platform] Gegevensbeheer. DULE vereenvoudigt en stroomlijnt het proces om gegevens te categoriseren en het beleid van het gegevensgebruik te creëren. Zodra gegevensetiketten zijn toegepast en het beleid van het gegevensgebruik is op zijn plaats, kunnen de marketing acties worden geëvalueerd om het correcte gebruik van gegevens te verzekeren.
+De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste kader voor [!DNL Experience Platform] [!DNL Data Governance]. DULE vereenvoudigt en stroomlijnt het proces om gegevens te categoriseren en het beleid van het gegevensgebruik te creëren. Zodra gegevensetiketten zijn toegepast en het beleid van het gegevensgebruik is op zijn plaats, kunnen de marketing acties worden geëvalueerd om het correcte gebruik van gegevens te verzekeren.
 
 Het DULE-raamwerk bestaat uit drie hoofdelementen: Labels, Beleid en Handhaving.
 
@@ -54,7 +54,7 @@ Het DULE-raamwerk bestaat uit drie hoofdelementen: Labels, Beleid en Handhaving.
 
 ## Labels voor gegevensgebruik
 
-Met gegevensbeheer kunnen de gegevens in plaats daarvan worden gebruikt om labels op gegevensset en veldniveau toe te passen om gegevens te categoriseren op basis van het type beleid dat van toepassing is.
+[!DNL Data Governance] laat gegevens toe stewards om gebruiksetiketten op de dataset en gebiedsniveau toe toe te passen om gegevens volgens het type van beleid te categoriseren dat van toepassing is.
 
 Het DULE-framework bevat vooraf gedefinieerde labels voor gegevensgebruik waarmee gegevens op drie manieren kunnen worden gecategoriseerd:
 
@@ -76,9 +76,9 @@ Zie het overzicht op de labels [van het](./labels/overview.md) gegevensgebruik v
 
 Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid van het gegevensgebruik worden uitgevoerd. Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, het uitvoeren op gegevens binnen wordt toegestaan [!DNL Experience Platform].
 
-Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naar een derdedienst uit te voeren. Als er een beleid is dat zegt dat de specifieke types van gegevens, zoals Persoonlijk Identificeerbare Informatie (PII), niet kunnen worden uitgevoerd en een &quot;I&quot;etiket (de Gegevens van de Identiteit) is toegepast op de dataset, zult u een reactie van de Dienst van het Beleid ontvangen die u vertelt dat een beleid van het gegevensgebruik is geschonden.
+Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naar een derdedienst uit te voeren. Als er een beleid bestaat dat zegt dat specifieke types van gegevens, zoals Persoonlijk Identificeerbare Informatie (PII), niet kunnen worden uitgevoerd en een &quot;I&quot;etiket (de Gegevens van de Identiteit) is toegepast op de dataset, zult u een antwoord van het [!DNL Policy Service] vertellen u ontvangen dat een beleid van het gegevensgebruik is geschonden.
 
-Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevens stewards beleid tot stand brengen gebruikend de DULE Dienst API van het Beleid of de [!DNL Experience Platform] gebruikersinterface.
+Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensstewards beleid tot stand brengen gebruikend DULE [!DNL Policy Service] API of het [!DNL Experience Platform] gebruikersinterface.
 
 >[!IMPORTANT]
 >
@@ -88,7 +88,7 @@ Zie het [beleidsoverzicht](./policies/overview.md)voor meer informatie over het 
 
 ## Toekomstige releases
 
-Gegevensbeheer ondersteunt momenteel DULE-etikettering op twee niveaus (dataset en field). Gegevensbeheer ondersteunt ook het maken en beheren van beleid voor gegevensgebruik en marketingacties via de DULE Policy Service API.
+[!DNL Data Governance] biedt momenteel ondersteuning voor DULE-labeling op twee niveaus (gegevensset en veld). [!DNL Data Governance] ondersteunt ook de ontwikkeling en het beheer van beleidslijnen en marketingacties voor gegevensgebruik via de DULE- [!DNL Policy Service] API.
 
 De volgende versies zullen de volgende eigenschappen verstrekken:
 
@@ -97,15 +97,15 @@ De volgende versies zullen de volgende eigenschappen verstrekken:
 
 ## Volgende stappen
 
-Dit document bevatte een inleiding op hoog niveau op het gebied van gegevensbeheer en het DULE-kader. U kunt nu doorgaan met de gebruikershandleiding [voor labels voor](labels/user-guide.md) gegevensgebruik en gebruikslabels toevoegen aan uw ervaringsgegevens.
+Dit document bevatte een inleiding op hoog niveau op [!DNL Data Governance] en in het DULE-kader. U kunt nu doorgaan met de gebruikershandleiding [voor labels voor](labels/user-guide.md) gegevensgebruik en gebruikslabels toevoegen aan uw ervaringsgegevens.
 
 ## Aanhangsel
 
-In het volgende gedeelte wordt aanvullende informatie gegeven over gegevensbeheer.
+In de volgende sectie vindt u aanvullende informatie over [!DNL Data Governance].
 
-### terminologie voor gegevensbeheer
+### [!DNL Data Governance] terminologie
 
-De volgende tabel geeft een overzicht van de belangrijkste termen met betrekking tot gegevensbeheer en het DULE-kader.
+In de volgende tabel worden de belangrijkste termen met betrekking tot [!DNL Data Governance] en het DULE-framework weergegeven.
 
 | Term | Definitie |
 |---|---|
@@ -126,6 +126,6 @@ De volgende tabel geeft een overzicht van de belangrijkste termen met betrekking
 
 ## Aanvullende bronnen
 
-De volgende video is bedoeld om uw begrip van Gegevensbeheer te steunen, en schetst de belangrijkste aspecten van het Kader van de Etikettering en van de Handhaving van het Gebruik van Gegevens (DULE).
+De volgende video is bedoeld om uw begrip van te steunen, [!DNL Data Governance]en schetst de belangrijkste aspecten van het Kader van de Etikettering en van de Handhaving van het Gebruik van Gegevens (DULE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
