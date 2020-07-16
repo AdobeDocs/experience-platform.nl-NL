@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een bron vervangen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een bron vervangen
 
-De Registratie van het Schema staat u toe om een volledige middel door een PUT verrichting te vervangen. Deze verrichting herschrijft hoofdzakelijk het middel, daarom moet het verzoeklichaam alle gebieden omvatten die worden vereist wanneer het creëren van een nieuwe middel gebruikend een POST- verzoek.
+Met [!DNL Schema Registry] deze optie kunt u een volledige bron vervangen door een PUT-bewerking. Deze verrichting herschrijft hoofdzakelijk het middel, daarom moet het verzoeklichaam alle gebieden omvatten die worden vereist wanneer het creëren van een nieuwe middel gebruikend een POST- verzoek.
 
 Deze methode is vooral handig als u veel informatie in de bron tegelijk wilt bijwerken.
 
@@ -32,7 +32,7 @@ PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Het type bron dat vanuit de Schemabibliotheek moet worden bijgewerkt. Geldige typen zijn `datatypes`, `mixins`, `schemas`en `classes`. |
+| `{RESOURCE_TYPE}` | Het type bron dat vanuit de [!DNL Schema Library]bron moet worden bijgewerkt. Geldige typen zijn `datatypes`, `mixins`, `schemas`en `classes`. |
 | `{RESOURCE_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de bron. |
 
 **Verzoek**
