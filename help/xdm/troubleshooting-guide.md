@@ -4,26 +4,29 @@ solution: Experience Platform
 title: De gids van de het oplossen van problemen van het Systeem van de Gegevens van de Ervaring Model (XDM)
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '1826'
+ht-degree: 0%
 
 ---
 
 
-# De gids van de het oplossen van problemen van het Systeem van de Gegevens van de Ervaring Model (XDM)
+# [!DNL Experience Data Model] (XDM) Handleiding voor systeemprobleemoplossing
 
-Dit document biedt antwoorden op veelgestelde vragen over het Systeem van de Gegevens van de Ervaring (XDM), evenals een het oplossen van problemengids voor gemeenschappelijke fouten. Raadpleeg de handleiding voor het oplossen van problemen bij het [ervaringsplatform voor vragen en het oplossen van problemen met betrekking tot andere services in het Adobe Experience Platform](../landing/troubleshooting.md).
+Dit document biedt antwoorden op veelgestelde vragen over [!DNL Experience Data Model] (XDM) System en een gids voor probleemoplossing voor algemene fouten. Voor vragen en het oplossen van problemen met betrekking tot andere diensten in Adobe Experience Platform, gelieve te verwijzen naar de het oplossen van problemengids [van het](../landing/troubleshooting.md)Experience Platform.
 
-**Het Model van Gegevens van de ervaring (XDM)** is een open-bronspecificatie die gestandaardiseerde schema&#39;s voor het beheer van de klantenervaring bepaalt. De methodologie waarop het Platform van de Ervaring wordt gebouwd, **XDM Systeem**, stelt de Modelschema&#39;s van de Gegevens van de Ervaring voor gebruik door de diensten van het Platform in werking. Het **Schemaregister** biedt een gebruikersinterface en een RESTful-API voor toegang tot de **Schemabibliotheek** binnen het Experience Platform. Zie de [XDM documentatie](home.md) voor meer informatie.
+**[!DNL Experience Data Model](XDM)**is een open-bronspecificatie die gestandaardiseerde schema&#39;s voor het beheer van de klantenervaring bepaalt. De methodologie waarop[!DNL Experience Platform]wordt gebouwd,**Systeem **XDM, exploiteert[!DNL Experience Data Model]schema&#39;s voor gebruik door de[!DNL Platform]diensten. De **[!DNL Schema Registry]**toepassing biedt een gebruikersinterface en een RESTful-API voor toegang tot de **[!DNL Schema Library]**binnenste API[!DNL Experience Platform]. Zie de[XDM documentatie](home.md)voor meer informatie.
 
 ## Veelgestelde vragen
 
-Hieronder volgt een lijst met antwoorden op veelgestelde vragen over XDM System en het gebruik van de Schema Registry API.
+Hieronder volgt een lijst met antwoorden op veelgestelde vragen over XDM System en het gebruik van de [!DNL Schema Registry] API.
 
 ### Hoe voeg ik velden toe aan een schema?
 
-U kunt velden aan een schema toevoegen met behulp van een mix. Elke mix is compatibel met een of meer klassen, waardoor de mix kan worden gebruikt in elk schema dat een van die compatibele klassen implementeert. Hoewel het Platform van de Ervaring van Adobe verscheidene industriemengins van hun eigen vooraf bepaalde gebieden voorziet, kunt u uw eigen gebieden aan een schema toevoegen door nieuwe mengen tot stand te brengen gebruikend API of de gebruikersinterface.
+U kunt velden aan een schema toevoegen met behulp van een mix. Elke mix is compatibel met een of meer klassen, waardoor de mix kan worden gebruikt in elk schema dat een van die compatibele klassen implementeert. Hoewel Adobe Experience Platform verschillende industriemengsels van hun eigen vooraf gedefinieerde velden voorziet, kunt u uw eigen velden aan een schema toevoegen door nieuwe combinaties te maken met behulp van de API of de gebruikersinterface.
 
-Zie de handleiding voor het [maken van een mixindocument](api/create-mixin.md) in de handleiding voor ontwikkelaars van de API voor het registreren van schema voor meer informatie over het maken van nieuwe mixins in de API. Als u UI gebruikt, zie het [leerprogramma](./tutorials/create-schema-ui.md)van de Redacteur van het Schema.
+Zie voor meer informatie over het maken van nieuwe combinaties in de API de handleiding voor [het maken van een mixindocument](api/create-mixin.md) in de [!DNL Schema Registry] API-ontwikkelaar. Als u UI gebruikt, zie het [leerprogramma](./tutorials/create-schema-ui.md)van de Redacteur van het Schema.
 
 ### Wat zijn de beste toepassingen voor mixins versus gegevenstypes?
 
@@ -33,23 +36,23 @@ Zie de handleiding voor het [maken van een mixindocument](api/create-mixin.md) i
 
 ### Wat is unieke identiteitskaart voor een schema?
 
-Alle middelen van de Registratie van het Schema (schema&#39;s, mixins, gegevenstypes, klassen) hebben URI die als unieke identiteitskaart voor verwijzing en raadplegingsdoeleinden dienst doet. Wanneer u een schema in de API weergeeft, vindt u dit in de kenmerken op hoofdniveau `$id` en `meta:altId` kenmerken.
+Alle [!DNL Schema Registry] middelen (schema&#39;s, mixins, gegevenstypes, klassen) hebben URI die als unieke identiteitskaart voor verwijzing en raadplegingsdoeleinden dienst doet. Wanneer u een schema in de API weergeeft, vindt u dit in de kenmerken op hoofdniveau `$id` en `meta:altId` kenmerken.
 
-Voor meer informatie, zie de sectie van de [schemaidentificatie](api/getting-started.md#schema-identification) in de de ontwikkelaarsgids van de Registratie van het Schema API.
+Zie de sectie [Schema-identificatie](api/getting-started.md#schema-identification) in de [!DNL Schema Registry] API-ontwikkelaarsgids voor meer informatie.
 
 ### Wanneer begint een schema het breken van veranderingen te verhinderen?
 
-De het breken veranderingen kunnen in een schema worden aangebracht zolang het nooit in de verwezenlijking van een dataset of toegelaten voor gebruik in het Profiel [van de Klant](../profile/home.md)In real time is gebruikt. Zodra een schema in datasetverwezenlijking of toegelaten voor gebruik met het Profiel van de Klant in real time is gebruikt, worden de regels van de Evolutie [van het](schema/composition.md#evolution) Schema strikt gehandhaafd door het systeem.
+De brekende veranderingen kunnen in een schema worden aangebracht zolang het nooit in de verwezenlijking van een dataset of toegelaten voor gebruik binnen is gebruikt [!DNL Real-time Customer Profile](../profile/home.md). Zodra een schema in datasetverwezenlijking of toegelaten voor gebruik met is gebruikt, worden de regels van de Evolutie [!DNL Real-time Customer Profile]van het [](schema/composition.md#evolution) Schema strikt gehandhaafd door het systeem.
 
 ### Wat is de maximumgrootte van een lang gebiedstype?
 
 Een lang veldtype is een geheel getal met een maximale grootte van 53(+1) bits, waardoor het een mogelijk bereik heeft tussen -9007199254740992 en 9007199254740992. Dit komt door een beperking van de manier waarop JavaScript-implementaties van JSON lange gehele getallen vertegenwoordigen.
 
-Voor meer informatie over gebiedstypes, zie de [Defining XDM gebiedstypes](api/appendix.md#field-types) sectie in de de ontwikkelaarsgids van de Registratie van het Schema API.
+Zie de sectie [XDM-veldtypen](api/appendix.md#field-types) definiëren in de handleiding voor ontwikkelaars van de [!DNL Schema Registry] API voor meer informatie over veldtypen.
 
 ### Hoe definieer ik identiteiten voor mijn schema?
 
-In het ervaringsplatform worden identiteiten gebruikt om een onderwerp (doorgaans een individuele persoon) te identificeren, ongeacht de bronnen van gegevens die worden geïnterpreteerd. Ze worden in schema&#39;s gedefinieerd door de sleutelvelden als &quot;Identiteit&quot; te markeren. Veelgebruikte velden voor identiteiten zijn e-mailadres, telefoonnummer, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM-id en andere unieke id-velden.
+In [!DNL Experience Platform]dat geval worden identiteiten gebruikt om een onderwerp (doorgaans een individuele persoon) te identificeren, ongeacht de bronnen van gegevens die worden geïnterpreteerd. Ze worden in schema&#39;s gedefinieerd door de sleutelvelden als &quot;Identiteit&quot; te markeren. Veelgebruikte velden voor identiteiten zijn e-mailadres, telefoonnummer, CRM-id [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html)en andere unieke id-velden.
 
 Velden kunnen als id&#39;s worden gemarkeerd met de API of de gebruikersinterface.
 
@@ -59,48 +62,48 @@ In de API worden identiteiten vastgesteld door identiteitsbeschrijvers te maken.
 
 De beschrijvers van de identiteit worden gecreeerd door een POST- verzoek aan het /descriptors eindpunt. Als dit lukt, ontvangt u een HTTP Status 201 (Gemaakt) en een reactieobject met de details van de nieuwe descriptor.
 
-Zie het document over de sectie [descriptors](api/descriptors.md) in de handleiding voor ontwikkelaars van het schema voor meer informatie over het maken van identiteitsbeschrijvers in de API.
+Zie het document over de sectie [descriptors](api/descriptors.md) in de handleiding voor [!DNL Schema Registry] ontwikkelaars voor meer informatie over het maken van identiteitsbeschrijvers in de API.
 
 #### Identiteiten definiëren in de gebruikersinterface
 
-Open het schema in de Schema-editor en klik in de sectie **Structuur** van de editor op het veld dat u als identiteit wilt markeren. Klik rechts onder **Veldeigenschappen** op het selectievakje **Identiteit** .
+Open het schema in de Schema-editor en klik in de sectie **[!UICONTROL Structuur]** van de editor op het veld dat u als identiteit wilt markeren. Klik rechts onder **[!UICONTROL Veldeigenschappen]** op het selectievakje **[!UICONTROL Identiteit]** .
 
 Zie de sectie over het [definiëren van identiteitsvelden](./tutorials/create-schema-ui.md#identity-field) in de zelfstudie van de Schema-editor voor meer informatie over het beheren van identiteiten in de gebruikersinterface.
 
 ### Heeft mijn schema een primaire identiteit nodig?
 
-Primaire id&#39;s zijn optioneel omdat schema&#39;s er 0 of 1 kunnen hebben. Nochtans, moet een schema een primaire identiteit hebben opdat het schema voor gebruik in het Profiel van de Klant in real time wordt toegelaten. Zie de [identiteitssectie](./tutorials/create-schema-ui.md#identity-field) van het leerprogramma van de Redacteur van het Schema voor meer informatie.
+Primaire id&#39;s zijn optioneel omdat schema&#39;s er 0 of 1 kunnen hebben. Nochtans, moet een schema een primaire identiteit hebben opdat het schema voor gebruik binnen wordt toegelaten [!DNL Real-time Customer Profile]. Zie de [identiteitssectie](./tutorials/create-schema-ui.md#identity-field) van het leerprogramma van de Redacteur van het Schema voor meer informatie.
 
-### Hoe laat ik een schema voor gebruik in het Profiel van de Klant in real time toe?
+### Hoe laat ik een schema voor gebruik binnen toe [!DNL Real-time Customer Profile]?
 
-De schema&#39;s worden toegelaten voor gebruik in het Profiel [van de Klant in](../profile/home.md) real time door de toevoeging van een &quot;unie&quot;markering, die in de `meta:immutableTags` attributen van het schema wordt gevestigd. U kunt een schema inschakelen voor gebruik met profiel via de API of de gebruikersinterface.
+De schema&#39;s worden toegelaten voor gebruik binnen [!DNL Real-time Customer Profile](../profile/home.md) door de toevoeging van een &quot;unie&quot;markering, die in de `meta:immutableTags` attributen van het schema wordt gevestigd. Het toelaten van een schema voor gebruik met [!DNL Profile] kan worden gedaan gebruikend API of de gebruikersinterface.
 
-#### Een bestaand schema voor profiel inschakelen met de API
+#### Een bestaand schema inschakelen voor het [!DNL Profile] gebruik van de API
 
 Voer een PATCH-verzoek in om het schema bij te werken en het `meta:immutableTags` kenmerk toe te voegen als een array met de waarde &quot;union&quot;. Als de update succesvol is, zal de reactie het bijgewerkte schema tonen dat nu de verenigingsmarkering bevat.
 
-Voor meer informatie bij het gebruiken van API om een schema voor gebruik in het Profiel van de Klant in real time toe te laten, zie het [uniendocument](./api/unions.md) van de de ontwikkelaarsgids van het Registratie van het Schema.
+Zie het document [!DNL Real-time Customer Profile]union [](./api/unions.md) [!DNL Schema Registry] in de handleiding voor ontwikkelaars voor meer informatie over het gebruik van de API om een schema voor gebruik in te schakelen.
 
-#### Het toelaten van een bestaand schema voor Profiel gebruikend UI
+#### Het toelaten van een bestaand schema voor het [!DNL Profile] gebruiken van UI
 
-Klik in Experience Platform op **Schema** &#39;s in de linkernavigatie en selecteer de naam van het schema dat u wilt inschakelen in de lijst met schema&#39;s. Klik vervolgens rechts van de editor onder **Schemaeigenschappen** op **Profiel** om deze in of uit te schakelen.
+Klik in [!DNL Experience Platform]de linkernavigatie op **[!UICONTROL Schema&#39;s]** en selecteer de naam van het schema dat u wilt inschakelen in de lijst met schema&#39;s. Klik vervolgens rechts van de editor onder **[!UICONTROL Schemaeigenschappen]** op **[!UICONTROL Profiel]** om deze in of uit te schakelen.
 
 
-Voor meer informatie, zie de sectie over [gebruik in het Profiel](./tutorials/create-schema-ui.md#profile) van de Klant in real time in de Redacteur van het Schema zelfstudie.
+Voor meer informatie, zie de sectie over [gebruik in het Profiel](./tutorials/create-schema-ui.md#profile) van de Klant in real time in de [!UICONTROL Redacteur] van het Schema.
 
 ### Kan ik een samenvoegingsschema direct uitgeven?
 
 Unieschema&#39;s zijn alleen-lezen en worden automatisch gegenereerd door het systeem. Ze kunnen niet rechtstreeks worden bewerkt. Unieschema&#39;s worden voor een specifieke klasse gemaakt wanneer een tag union wordt toegevoegd aan een schema dat die klasse implementeert.
 
-Voor meer informatie over unies in XDM, zie de [vakbondssectie](./api/unions.md) in de de ontwikkelaarsgids van de Registratie van het Schema API.
+Zie de sectie [union](./api/unions.md) [!DNL Schema Registry] in de API developer guide voor meer informatie over samenvoegingen in XDM.
 
 ### Hoe moet ik mijn gegevensbestand formatteren om gegevens in mijn schema in te voeren?
 
-Het Platform van de ervaring keurt gegevensdossiers in of Parquet of formaat JSON goed. De inhoud van deze dossiers moet met het schema in overeenstemming zijn dat door de dataset van verwijzingen wordt voorzien. Voor details over beste praktijken voor gegevensuitwisseling, zie het [batch ingesinsectieoverzicht](../ingestion/home.md).
+[!DNL Experience Platform] Accepteert gegevensbestanden in één van beide [!DNL Parquet] of formaat JSON. De inhoud van deze dossiers moet met het schema in overeenstemming zijn dat door de dataset van verwijzingen wordt voorzien. Voor details over beste praktijken voor gegevensuitwisseling, zie het [batch ingesinsectieoverzicht](../ingestion/home.md).
 
 ## Fouten en problemen oplossen
 
-Hieronder volgt een lijst met foutberichten die u kunt tegenkomen wanneer u werkt met de API voor schemaregistratie.
+Hieronder volgt een lijst met foutberichten die kunnen optreden wanneer u met de [!DNL Schema Registry] API werkt.
 
 ### Object niet gevonden
 
@@ -116,7 +119,7 @@ Hieronder volgt een lijst met foutberichten die u kunt tegenkomen wanneer u werk
 
 Deze fout wordt weergegeven wanneer het systeem een bepaalde bron niet kan vinden. De bron kan zijn verwijderd of het pad in de API-aanroep is ongeldig. Controleer of u een geldig pad voor uw API-aanroep hebt ingevoerd voordat u het opnieuw probeert. U kunt willen controleren dat u correcte identiteitskaart voor het middel bent ingegaan, en dat de weg behoorlijk namespaced met de aangewezen container (globaal of huurder) is.
 
-Voor meer informatie bij het construeren van raadplegingswegen in API, zie de [container](./api/getting-started.md#container) en de secties van de [schemaidentificatie](api/getting-started.md#schema-identification) in de de ontwikkelaarsgids van de Registratie van het Schema.
+Zie de secties over [container](./api/getting-started.md#container) - en [schemaidentificatie](api/getting-started.md#schema-identification) in de handleiding voor [!DNL Schema Registry] ontwikkelaars voor meer informatie over het samenstellen van opzoekpaden in de API.
 
 ### Titel moet uniek zijn
 
@@ -145,12 +148,12 @@ Dit foutbericht wordt weergegeven wanneer u een bron probeert te maken met een t
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer u een nieuwe mix probeert te maken met velden met een onjuiste naam. Mixins die door uw IMS-organisatie zijn gedefinieerd, moeten hun velden naamruimte geven met een naamruimte `TENANT_ID` om conflicten met andere bronnen in de branche en de leverancier te voorkomen. Gedetailleerde voorbeelden van juiste gegevensstructuren voor mixins zijn te vinden in het document over het [creëren van een mixinsectie](api/create-mixin.md) in de ontwikkelaarsgids voor de Registratie van het Schema API.
+Dit foutbericht wordt weergegeven wanneer u een nieuwe mix probeert te maken met velden met een onjuiste naam. Mixins die door uw IMS-organisatie zijn gedefinieerd, moeten hun velden naamruimte geven met een naamruimte `TENANT_ID` om conflicten met andere bronnen in de branche en de leverancier te voorkomen. Gedetailleerde voorbeelden van juiste gegevensstructuren voor mixins vindt u in het document over het [maken van een mixinsectie](api/create-mixin.md) in de [!DNL Schema Registry] API-ontwikkelaarsgids.
 
 
-### Fouten in het realtime profiel van de klant
+### [!DNL Real-time Customer Profile] fouten
 
-De volgende foutberichten zijn gekoppeld aan bewerkingen die betrokken zijn bij het inschakelen van schema&#39;s voor realtime-klantprofiel. Zie de [vaksectie](./api/unions.md) in de ontwikkelaarsgids voor het Registratie van het Schema API voor meer informatie.
+De volgende foutberichten zijn gekoppeld aan bewerkingen die zijn betrokken bij het inschakelen van schema&#39;s voor [!DNL Real-time Customer Profile]. Zie de sectie [union](./api/unions.md) in de [!DNL Schema Registry] API-ontwikkelaarsgids voor meer informatie.
 
 #### Om profieldatasets toe te laten zou het schema geldig moeten zijn
 
@@ -163,7 +166,7 @@ De volgende foutberichten zijn gekoppeld aan bewerkingen die betrokken zijn bij 
 }
 ```
 
-Dit foutenbericht toont wanneer u probeert om een profieldataset voor een schema toe te laten dat niet voor het Profiel van de Klant in real time is toegelaten. Zorg ervoor dat het schema een verenigingsmarkering bevat alvorens de dataset toe te laten.
+Dit foutenbericht toont wanneer u probeert om een profieldataset voor een schema toe te laten dat niet voor is toegelaten [!DNL Real-time Customer Profile]. Zorg ervoor dat het schema een verenigingsmarkering bevat alvorens de dataset toe te laten.
 
 #### Er moet een identiteitsbeschrijving voor verwijzingen zijn
 
@@ -178,7 +181,7 @@ Dit foutenbericht toont wanneer u probeert om een profieldataset voor een schema
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer u een schema voor Profiel probeert in te schakelen en een van de eigenschappen een relatiebeschrijving bevat zonder een verwijzings-id-descriptor. Voeg een beschrijver van de verwijzingsIdentiteit aan het schemagebied in kwestie toe om deze fout op te lossen.
+Dit foutbericht wordt weergegeven wanneer u probeert een schema in te schakelen voor [!DNL Profile] en een van de eigenschappen ervan een relatiebeschrijving bevat zonder een referentie-id-descriptor. Voeg een beschrijver van de verwijzingsIdentiteit aan het schemagebied in kwestie toe om deze fout op te lossen.
 
 #### De naamruimten van het beschrijvingsveld voor de referentie-id en het doelschema moeten overeenkomen
 
@@ -196,13 +199,13 @@ Dit foutbericht wordt weergegeven wanneer u een schema voor Profiel probeert in 
 }
 ```
 
-Om schema&#39;s toe te laten die relatiebeschrijvers voor gebruik in Profiel bevatten, moet namespace van het brongebied en primaire namespace van het doelgebied het zelfde zijn. Dit foutbericht wordt weergegeven wanneer u een schema wilt inschakelen dat een naamruimte zonder overeenkomst bevat voor de verwijzingsidentiteitsbeschrijving. Zorg ervoor dat de `xdm:namespace` waarde van het de identiteitsgebied van het bestemmingsschema dat van het `xdm:identityNamespace` bezit in de beschrijver van de verwijzingsidentiteit van het brongebied aanpast om deze kwestie op te lossen.
+Om schema&#39;s toe te laten die relatiebeschrijvers voor gebruik binnen bevatten [!DNL Profile], moet namespace van het brongebied en primaire namespace van het doelgebied het zelfde zijn. Dit foutbericht wordt weergegeven wanneer u een schema wilt inschakelen dat een naamruimte zonder overeenkomst bevat voor de verwijzingsidentiteitsbeschrijving. Zorg ervoor dat de `xdm:namespace` waarde van het de identiteitsgebied van het bestemmingsschema dat van het `xdm:identityNamespace` bezit in de beschrijver van de verwijzingsidentiteit van het brongebied aanpast om deze kwestie op te lossen.
 
 Zie de sectie over [standaardnaamruimten](../identity-service/namespaces.md) in het overzicht van naamruimte voor identiteiten voor een lijst met ondersteunde naamruimtecodes.
 
 ### Koptekstfouten accepteren
 
-De meeste GET verzoeken in de Registratie API van het Schema vereisen Accept kopbal voor het systeem om te bepalen hoe te om de reactie te formatteren. Hieronder volgt een lijst met veelvoorkomende fouten die aan de koptekst Accepteren zijn gekoppeld. Voor lijsten van compatibele Accept kopballen voor verschillende API verzoeken, gelieve te verwijzen naar hun overeenkomstige secties in de de ontwikkelaarsgids [van de Registratie van het](api/getting-started.md)Schema.
+De meeste GET-aanvragen in de [!DNL Schema Registry] API vereisen een Accept-header, zodat het systeem kan bepalen hoe de reactie moet worden opgemaakt. Hieronder volgt een lijst met veelvoorkomende fouten die aan de koptekst Accepteren zijn gekoppeld. Voor lijsten van compatibele Accept kopballen voor verschillende API verzoeken, gelieve te verwijzen naar hun overeenkomstige secties in de de ontwikkelaarsgids [van de Registratie van het](api/getting-started.md)Schema.
 
 #### Accepteren van headerparameter is vereist
 
@@ -261,7 +264,7 @@ Dit foutbericht wordt weergegeven wanneer er geen versienummer is opgenomen in d
 application/vnd.adobe.xed+json; version=1
 ```
 
-Voor een lijst van gesteunde Accept kopballen, zie de [Accepteer kopbalsectie](api/getting-started.md#accept) in de de ontwikkelaarsgids van de Registratie van het Schema.
+Zie de koptekstsectie [Accepteren](api/getting-started.md#accept) in de handleiding voor [!DNL Schema Registry] ontwikkelaars voor een lijst met ondersteunde koppen.
 
 #### Versie mag niet worden opgegeven in de header Accepteren
 
