@@ -4,9 +4,9 @@ seo-title: De configuratie van de rand voor het Web SDK van het Experience Platf
 description: 'Leer hoe te om het Netwerk van de Rand van het Experience Platform te vormen. '
 seo-description: 'Leer hoe te om het Netwerk van de Rand van het Experience Platform te vormen. '
 translation-type: tm+mt
-source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
+source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '880'
 ht-degree: 1%
 
 ---
@@ -92,11 +92,11 @@ De unieke id voor een doelaccount. Als u dit wilt zoeken, navigeert u naar [!UIC
 
 Target staat klanten toe om toestemmingen door het gebruik van eigenschappen te controleren. Meer informatie vindt u in de sectie [Enterprise Permissions](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) van de Target-documentatie.
 
-Het eigenschapstoken vindt u in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [UICONTROL-eigenschappen]
+De eigenschap token vindt u in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Eigenschappen]
 
 ##### [!UICONTROL Target Environment ID]
 
-[Met omgevingen](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target kunt u uw implementatie in alle ontwikkelingsfasen beheren. Deze instelling geeft aan welke omgeving u voor elke omgeving wilt gebruiken.
+[Met omgevingen](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target kunt u uw implementatie in alle ontwikkelingsstadia beheren. Deze instelling geeft aan welke omgeving u voor elke omgeving wilt gebruiken.
 
 Adobe raadt u aan dit anders in te stellen voor elk van uw `dev`-, `stage`- en `prod` randconfiguratieomgevingen om de zaken eenvoudig te houden. Als u echter al [!UICONTROL Adobe Target-omgevingen] hebt gedefinieerd, kunt u deze gebruiken.
 
