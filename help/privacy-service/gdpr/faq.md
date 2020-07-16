@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Veelgestelde vragen over GDPR
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: e176cc69613fad1d4a6b44138a6d88a688438578
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+workflow-type: tm+mt
+source-wordcount: '642'
+ht-degree: 0%
 
 ---
 
 
 # Veelgestelde vragen over GDPR
 
-Dit document bevat antwoorden op veelgestelde vragen over de algemene gegevensbeschermingsverordening (GDPR) en de implementatie ervan in Adobe Experience Cloud.
+Dit document bevat antwoorden op veelgestelde vragen over de [!DNL General Data Protection Regulation] (GDPR) en de implementatie ervan in Adobe Experience Cloud.
 
 Definities voor de verschillende GDPR-termen die in dit document worden gebruikt, zijn te vinden in het [GDPR-terminologieartikel](terminology.md) .
 
@@ -45,7 +48,7 @@ Ouderlijke toestemming is vereist voor de verwerking van persoonsgegevens van ki
 
 ## Wat is het verschil tussen een verordening en een richtlijn?
 
-Een **verordening** is een bindend wetgevingsbesluit en moet in de gehele EU worden toegepast. Een **richtlijn** is een wetgevingshandeling waarin een doel wordt vastgelegd dat alle EU-landen moeten bereiken, maar het is aan de afzonderlijke landen om te beslissen hoe dat moet gebeuren.
+A **regulation** is a binding legislative act and must be applied in its entirety across the EU. Een **richtlijn** is een wetgevingshandeling waarin een doel wordt vastgelegd dat alle EU-landen moeten bereiken, maar het is aan de afzonderlijke landen om te beslissen hoe dat moet gebeuren.
 
 Het is belangrijk om op te merken dat de GDPR een verordening is, in tegenstelling tot de eerdere wetgeving (de richtlijn gegevensbescherming), die een richtlijn is.
 
