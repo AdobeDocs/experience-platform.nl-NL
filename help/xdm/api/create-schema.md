@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Een schema maken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 162316c3b908ffa87d8df4dff72e26ba237993db
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '235'
+ht-degree: 0%
 
 ---
 
 
 # Een schema maken
 
-Een schema kan als blauwdruk voor de gegevens worden beschouwd u in het Platform van de Ervaring wilt opnemen. Elk schema bestaat uit een klasse en nul of meer mixen. Met andere woorden, u moet geen mixin toevoegen om een schema te bepalen, maar in de meeste gevallen zal minstens één mixin worden gebruikt.
+Een schema kan als blauwdruk voor de gegevens worden beschouwd u wilt opnemen in [!DNL Experience Platform]. Elk schema bestaat uit een klasse en nul of meer mixen. Met andere woorden, u moet geen mixin toevoegen om een schema te bepalen, maar in de meeste gevallen zal minstens één mixin worden gebruikt.
 
 Het proces van de schemacompositie begint door een klasse toe te wijzen. De klasse definieert de belangrijkste gedragsaspecten van de gegevens (record- of tijdreeks) en de minimale velden die vereist zijn om de gegevens te beschrijven die worden ingevoerd.
 
@@ -51,7 +54,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van het nieuwe schema, inclusief het schema `$id`, `meta:altId`en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door het schemaregister.
+Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die de details bevat van het nieuwe schema, inclusief het schema `$id`, `meta:altId`en `version`. Deze waarden zijn alleen-lezen en worden toegewezen door de [!DNL Schema Registry]operator.
 
 ```JSON
 {
