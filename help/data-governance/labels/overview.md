@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van labels voor gegevensgebruik
 topic: labels
 translation-type: tm+mt
-source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Overzicht van labels voor gegevensgebruik
 
-De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste mechanisme van het Beheer van Gegevens van de Adobe Experience Platform. De eigenschappen DULE laten u toe om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen, die elk volgens het verwante beleid van het gegevensgebruik categoriseren.
+De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste mechanisme van Adobe Experience Platform [!DNL Data Governance]. De eigenschappen DULE laten u toe om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen, die elk volgens het verwante beleid van het gegevensgebruik categoriseren.
 
 Dit document biedt een overzicht van labels voor gegevensgebruik in [!DNL Experience Platform]. Dit wordt ook wel DULE-labels genoemd. Voordat u deze handleiding leest, raadpleegt u het overzicht [van](../home.md) gegevensbeheer voor een robuustere inleiding op het DULE-kader.
 
@@ -38,9 +38,9 @@ Voor meer informatie over hoe de automatische handhaving in Echt - tijd CDP werk
 
 ### Overerving van de Controles van de Uitvoer van Gegevens van de Adobe Audience Manager
 
-Experience Platform heeft de capaciteit om segmenten met Adobe Audience Manager te delen. Om het even welke Controles van de Uitvoer van Gegevens die op de segmenten van de Audience Manager zijn toegepast worden vertaald in gelijkwaardige etiketten en marketing acties die door de Governance van Gegevens van de Experience Platform worden erkend.
+[!DNL Experience Platform] heeft de capaciteit om segmenten met Adobe Audience Manager te delen. Om het even welke Controles van de Uitvoer van Gegevens die op de segmenten van de Audience Manager zijn toegepast worden vertaald in gelijkwaardige etiketten en marketing acties die door [!DNL Experience Platform][!DNL Data Governance]. worden erkend.
 
-Voor een verwijzing op hoe de specifieke Controles van de Uitvoer van Gegevens aan de etiketten van het gegevensgebruik in Platform in kaart brengen, gelieve te verwijzen naar de documentatie [van de](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
+Voor een verwijzing op hoe de specifieke Controles van de Uitvoer van Gegevens aan de etiketten van het gegevensgebruik in in kaart brengen, gelieve te verwijzen naar de documentatie [!DNL Platform]van de [](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
 
 
 ## Volgende stappen
