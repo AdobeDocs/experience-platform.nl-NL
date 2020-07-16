@@ -4,28 +4,28 @@ solution: Experience Platform
 title: Abonneren op privacygebeurtenissen
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: ab29c7771122267634dea24582b07f605abd7ed8
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
 
 
-# Abonneren op privacygebeurtenissen
+# Abonneren op [!DNL Privacy Events]
 
-Privacy-gebeurtenissen zijn berichten die worden aangeboden door de Adobe Experience Platform Privacy Service. Deze berichten maken gebruik van Adobe I/O-gebeurtenissen die naar een geconfigureerde webhaak worden verzonden om efficiënte automatisering van taakaanvragen te vergemakkelijken. Zij verminderen of elimineren de behoefte om de Dienst API van de Privacy te onderzoeken om te controleren of een baan volledig is of een bepaalde mijlpaal binnen een werkschema is bereikt.
+[!DNL Privacy Events] Dit zijn berichten van Adobe Experience Platform [!DNL Privacy Service], die Adobe I/O-gebeurtenissen gebruiken die naar een geconfigureerde webhaak worden verzonden om een efficiënte automatisering van taakaanvragen te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een werkstroom is bereikt.
 
 Er zijn momenteel vier typen meldingen die betrekking hebben op de levenscyclus van de privacytaakaanvraag:
 
 | Type | Beschrijving |
 --- | ---
-| Taak voltooid | Alle Experience Cloud-oplossingen zijn teruggestuurd en de algemene of algemene status van de taak is als voltooid gemarkeerd. |
+| Taak voltooid | Alle [!DNL Experience Cloud] oplossingen zijn gemeld en de algemene of algemene status van de baan is als volledig gemarkeerd. |
 | Taakfout | Een of meer oplossingen hebben een fout gemeld tijdens de verwerking van het verzoek. |
 | Product voltooid | Een van de oplossingen voor deze taak heeft zijn werk voltooid. |
 | Productfout | Een van de oplossingen rapporteerde een fout tijdens de verwerking van het verzoek. |
 
-In dit document worden stappen beschreven voor het instellen van een integratie voor meldingen van de privacyservice in Adobe I/O. Voor een overzicht op hoog niveau van de Dienst van de Privacy en zijn eigenschappen, zie het overzicht [van de Dienst van de](home.md)Privacy.
+Dit document bevat stappen voor het instellen van een integratie voor [!DNL Privacy Service] meldingen in Adobe I/O. Voor een overzicht op hoog niveau van [!DNL Privacy Service] en zijn eigenschappen, zie het overzicht [van de](home.md)Privacy Service.
 
 ## Aan de slag
 
@@ -74,7 +74,7 @@ Neem nota van `Forwarding` URL (`https://212d6cd2.ngrok.io`), aangezien dit zal 
 
 ## Nieuw project maken in Adobe Developer Console
 
-Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe-id. Voer vervolgens de stappen uit die worden beschreven in de zelfstudie over het [maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.
+Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Voer vervolgens de stappen uit die worden beschreven in de zelfstudie over het [maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.
 
 ## Privacy-gebeurtenissen toevoegen aan het project
 
@@ -82,7 +82,7 @@ Nadat u een nieuw project in de console hebt gemaakt, klikt u op **[!UICONTROL G
 
 ![](./images/privacy-events/add-event-button.png)
 
-Het dialoogvenster Gebeurtenissen __ toevoegen wordt weergegeven. Selecteer **[!UICONTROL Experience Cloud]** om de lijst met beschikbare gebeurtenistypen op te geven en selecteer vervolgens **[!UICONTROL Privacy Service Events]** voordat u op **[!UICONTROL Volgende]** klikt.
+Het dialoogvenster Gebeurtenissen __ toevoegen wordt weergegeven. Selecteer **[!UICONTROL Experience Cloud]** om de lijst met beschikbare gebeurtenistypen omlaag te filteren en selecteer vervolgens Gebeurtenissen **** Privacys Service voordat u op **[!UICONTROL Volgende]** klikt.
 
 ![](./images/privacy-events/add-privacy-events.png)
 
@@ -110,11 +110,11 @@ Verderop op het zelfde scherm, krijgt u twee opties om te vormen hoe te om gebeu
 
 ![](./images/privacy-events/webhook-details.png)
 
-De detailpagina voor uw project verschijnt opnieuw, met de Gebeurtenissen van de Privacy die onder _[!UICONTROL Gebeurtenissen]_in de linkernavigatie verschijnen.
+De detailpagina voor uw project verschijnt opnieuw, met [!DNL Privacy Events] verschijnt onder _[!UICONTROL Gebeurtenissen]_in de linkernavigatie.
 
 ## Gebeurtenisgegevens weergeven
 
-Nadat u privacygebeurtenissen hebt geregistreerd voor uw project en privacytaken zijn verwerkt, kunt u alle ontvangen meldingen voor die registratie weergeven. Selecteer op het tabblad **[!UICONTROL Projecten]** in Developer Console uw project in de lijst om de pagina met het overzicht _van het_ product te openen. Van hier, selecteer de Gebeurtenissen **[!UICONTROL van de]** Privacy van de linkernavigatie.
+Nadat u zich hebt geregistreerd [!DNL Privacy Events] bij uw project en privacytaken zijn verwerkt, kunt u ontvangen meldingen voor die registratie weergeven. Selecteer op het tabblad **[!UICONTROL Projecten]** in Developer Console uw project in de lijst om de pagina met het overzicht _van het_ product te openen. Van hier, selecteer de Gebeurtenissen **[!UICONTROL van de]** Privacy van de linkernavigatie.
 
 ![](./images/privacy-events/events-left-nav.png)
 
