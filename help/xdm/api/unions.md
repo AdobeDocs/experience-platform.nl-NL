@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Unies
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Unies
 
-De verenigingen (of verenigingsmeningen) zijn systeem-geproduceerde, read-only schema&#39;s die de gebieden van alle schema&#39;s samenvoegen die de zelfde klasse (XDM ExperienceEvent of Individueel Profiel XDM) delen en voor het Profiel [van de Klant in](../../profile/home.md)real time worden toegelaten.
+De unions (of verenigingsmeningen) zijn systeem-geproduceerde, read-only schema&#39;s die de gebieden van alle schema&#39;s samenvoegen die de zelfde klasse ([!DNL XDM ExperienceEvent] of [!DNL XDM Individual Profile]) delen en toegelaten voor [!DNL Real-time Customer Profile](../../profile/home.md).
 
 Dit document behandelt essentiële concepten voor het werken met vakbonden in de API van de Registratie van het Schema, met inbegrip van steekproefvraag voor diverse verrichtingen. Voor meer algemene informatie over unies in XDM, zie de sectie over unies in de [grondbeginselen van schemacompositie](../schema/composition.md#union).
 
 ## Uniemengsels
 
-Het Register van het Schema omvat automatisch drie mengen binnen het unieschema: `identityMap`, `timeSeriesEvents`en `segmentMembership`.
+Het [!DNL Schema Registry] omvat automatisch drie mengen binnen het verenigingsschema: `identityMap`, `timeSeriesEvents`en `segmentMembership`.
 
 ### Identiteitskaart
 
@@ -30,7 +30,7 @@ Raadpleeg de documentatie [bij](../../identity-service/home.md) Identiteitsservi
 
 ### Gebeurtenissen uit de tijdreeks
 
-De `timeSeriesEvents` array is een lijst met tijdreeksgebeurtenissen die betrekking hebben op de recordschema&#39;s die aan de union zijn gekoppeld. Wanneer profielgegevens naar gegevenssets worden geëxporteerd, wordt deze array opgenomen voor elke record. Dit is handig voor verschillende gebruiksgevallen, zoals het leren van machines waarbij modellen naast de recordkenmerken ook de gehele gedragsgeschiedenis van een profiel nodig hebben.
+De `timeSeriesEvents` array is een lijst met tijdreeksgebeurtenissen die betrekking hebben op de recordschema&#39;s die aan de union zijn gekoppeld. Wanneer [!DNL Profile] gegevens naar datasets worden geëxporteerd, wordt deze array opgenomen voor elke record. Dit is handig voor verschillende gebruiksgevallen, zoals het leren van machines waarbij modellen naast de recordkenmerken ook de gehele gedragsgeschiedenis van een profiel nodig hebben.
 
 ### Segmentlidmaatschapstoewijzing
 
@@ -54,7 +54,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SCHEMA_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` het schema dat u wilt inschakelen voor gebruik in Profiel. |
+| `{SCHEMA_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` het schema dat u wilt inschakelen voor gebruik in [!DNL Profile]. |
 
 **Verzoek**
 
@@ -117,7 +117,7 @@ Een succesvol antwoord retourneert de details van het bijgewerkte schema, dat nu
 
 ## Lijstverenigingen
 
-Wanneer u de tag union instelt op een schema, maakt en onderhoudt de schemaregistratie automatisch een samenvoeging voor de klasse waarop het schema is gebaseerd. De `$id` voor de Unie is vergelijkbaar met de standaard `$id` van een klasse, met als enige verschil dat twee onderstrepingen en het woord &quot;union&quot; (`"__union"`) worden toegevoegd.
+Wanneer u de tag union instelt op een schema, wordt automatisch een samenvoeging gemaakt en onderhouden voor de klasse waarop het schema is gebaseerd. [!DNL Schema Registry] De `$id` voor de Unie is vergelijkbaar met de standaard `$id` van een klasse, met als enige verschil dat twee onderstrepingen en het woord &quot;union&quot; (`"__union"`) worden toegevoegd.
 
 Om een lijst van beschikbare unies te bekijken, kunt u een GET verzoek aan het `/unions` eindpunt uitvoeren.
 
@@ -168,7 +168,7 @@ U kunt een specifieke unie bekijken door een GET verzoek uit te voeren dat de `$
 
 >[!NOTE]
 >
->De raadplegingen van de Unie zijn beschikbaar gebruikend het `/unions` en `/schemas` eindpunt om hen voor gebruik in de uitvoer van het Profiel in een dataset toe te laten.
+>De raadplegingen van de Unie zijn beschikbaar gebruikend het `/unions` en `/schemas` eindpunt om hen voor gebruik in [!DNL Profile] uitvoer in een dataset toe te laten.
 
 **API-indeling**
 
@@ -265,7 +265,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **Verzoek**
 
-Het volgende verzoek kijkt omhoog alle schema&#39;s die deel van de de klassenunie van het Profiel van XDM Individual uitmaken.
+Het volgende verzoek kijkt omhoog alle schema&#39;s die deel van de [!DNL XDM Individual Profile] klassenunie uitmaken.
 
 ```SHELL
 curl -X GET \
