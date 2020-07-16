@@ -4,39 +4,39 @@ solution: Experience Platform
 title: Bepaal een verband tussen twee schema's gebruikend de Registratie API van het Schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1467'
 ht-degree: 0%
 
 ---
 
 
-# Bepaal een verband tussen twee schema&#39;s gebruikend de Registratie API van het Schema
+# Een relatie tussen twee schema&#39;s definiëren met behulp van de [!DNL Schema Registry] API
 
 
-De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk op verschillende kanalen te begrijpen is een belangrijk onderdeel van het Adobe Experience Platform. Het bepalen van deze verhoudingen binnen de structuur van uw schema&#39;s van de Gegevens van de Ervaring van het Model (XDM) staat u toe om complexe inzichten in uw klantengegevens te bereiken.
+De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk op verschillende kanalen te begrijpen is een belangrijk onderdeel van het Adobe Experience Platform. Het bepalen van deze verhoudingen binnen de structuur van uw [!DNL Experience Data Model] (XDM) schema&#39;s staat u toe om complexe inzichten in uw klantengegevens te bereiken.
 
-Dit document biedt een zelfstudie voor het definiëren van een een-op-een relatie tussen twee schema&#39;s die door uw organisatie zijn gedefinieerd met behulp van de [schemaregistratie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Dit document biedt een zelfstudie voor het definiëren van een een-op-een relatie tussen twee schema&#39;s die door uw organisatie met de [!DNL Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)code zijn gedefinieerd.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van het Model van de Gegevens van de Ervaring (XDM) en het Systeem XDM. Lees de volgende documentatie voordat u met deze zelfstudie begint:
+Deze zelfstudie vereist een goed begrip van [!DNL Experience Data Model] (XDM) en [!DNL XDM System]. Lees de volgende documentatie voordat u met deze zelfstudie begint:
 
 * [XDM-systeem in Experience Platform](../home.md): Een overzicht van XDM en zijn implementatie in Experience Platform.
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Een inleiding van de bouwstenen van schema&#39;s XDM.
-* [Klantprofiel](../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [!DNL Real-time Customer Profile](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-Voordat u met deze zelfstudie begint, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de API voor schemaregistratie te kunnen uitvoeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
+Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de [!DNL Schema Registry] API te kunnen uitvoeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
 
 ## Een bron- en doelschema definiëren {#define-schemas}
 
 Verwacht wordt dat u reeds de twee schema&#39;s hebt gecreeerd die in de verhouding zullen worden bepaald. Deze zelfstudie creëert een relatie tussen leden van het huidige loyaliteitsprogramma van een organisatie (gedefinieerd in een schema &quot;Loyalty Member&quot;) en hun favoriete hotels (gedefinieerd in een &quot;Hotels&quot;-schema).
 
-De verhoudingen van het schema worden vertegenwoordigd door een **bronschema** die een gebied hebben dat naar een ander gebied binnen een **bestemmingsschema** verwijst. In de stappen die volgen, zullen de &quot;Leden van de Loyalty&quot;het bronschema zijn, terwijl &quot;Hotels&quot;als bestemmingsschema zal handelen.
+De verhoudingen van het schema worden vertegenwoordigd door een **[!UICONTROL bronschema]** die een gebied hebben dat naar een ander gebied binnen een **[!UICONTROL bestemmingsschema]** verwijst. In de stappen die volgen, &quot;[!UICONTROL Loyalty Leden]&quot;zal het bronschema zijn, terwijl &quot;[!UICONTROL Hotels]&quot;als bestemmingsschema zal handelen.
 
-Als u een relatie tussen twee schema&#39;s wilt definiëren, moet u eerst de `$id` waarden voor beide schema&#39;s ophalen. Als u de vertoningsnamen (`title`) van de schema&#39;s kent, kunt u hun `$id` waarden vinden door een GET verzoek aan het `/tenant/schemas` eindpunt in de Registratie API van het Schema te doen.
+Als u een relatie tussen twee schema&#39;s wilt definiëren, moet u eerst de `$id` waarden voor beide schema&#39;s ophalen. Als u de vertoningsnamen (`title`) van de schema&#39;s kent, kunt u hun `$id` waarden vinden door een GET verzoek aan het `/tenant/schemas` eindpunt in [!DNL Schema Registry] API te doen.
 
 **API-indeling**
 
@@ -104,11 +104,11 @@ Registreer de `$id` waarden van de twee schema&#39;s u een verhouding tussen wil
 
 ## Referentievelden definiëren voor beide schema&#39;s
 
-Binnen de Registratie van het Schema, werken de relatiebeschrijvers gelijkaardig aan buitenlandse sleutels in SQL lijsten: Een veld in het bronschema fungeert als een verwijzing naar een veld in een doelschema. Wanneer het bepalen van een verhouding, moet elk schema een specifiek gebied hebben dat als verwijzing naar het andere schema moet worden gebruikt.
+Relatiebeschrijvers werken in de SQL-tabellen ongeveer op dezelfde manier als in andere sleutels [!DNL Schema Registry]: Een veld in het bronschema fungeert als een verwijzing naar een veld in een doelschema. Wanneer het bepalen van een verhouding, moet elk schema een specifiek gebied hebben dat als verwijzing naar het andere schema moet worden gebruikt.
 
 >[!IMPORTANT]
 >
->Als de schema&#39;s voor gebruik in het Profiel [van de Klant in](../../profile/home.md)real time moeten worden toegelaten, moet het verwijzingsgebied voor het bestemmingsschema zijn zijn **primaire identiteit**. Dit wordt nader uitgelegd in deze zelfstudie.
+>Als de schema&#39;s voor gebruik binnen moeten worden toegelaten [!DNL Real-time Customer Profile](../../profile/home.md), moet het verwijzingsgebied voor het bestemmingsschema zijn **[!UICONTROL primaire identiteit]**. Dit wordt nader uitgelegd in deze zelfstudie.
 
 Als één van beide schema&#39;s geen gebied voor dit doel heeft, kunt u een mengeling met het nieuwe gebied moeten tot stand brengen en het toevoegen aan het schema. Dit nieuwe veld moet de `type` waarde &quot;string&quot; hebben.
 
@@ -332,9 +332,9 @@ Een succesvolle reactie retourneert de details van het bijgewerkte schema, dat n
 
 >[!NOTE]
 >
->Deze stap is alleen vereist voor schema&#39;s die zijn ingeschakeld voor gebruik in het [realtime profiel](../../profile/home.md)van de klant. Als u of schema niet aan een unie wilt deelnemen, of als uw schema&#39;s reeds primaire bepaalde identiteiten hebben, kunt u aan de volgende stap overslaan van het [creëren van een beschrijver](#create-descriptor) van de verwijzingsidentiteit voor het bestemmingsschema.
+>Deze stap is slechts vereist voor schema&#39;s die voor gebruik binnen zullen worden toegelaten [!DNL Real-time Customer Profile](../../profile/home.md). Als u of schema niet aan een unie wilt deelnemen, of als uw schema&#39;s reeds primaire bepaalde identiteiten hebben, kunt u aan de volgende stap overslaan van het [creëren van een beschrijver](#create-descriptor) van de verwijzingsidentiteit voor het bestemmingsschema.
 
-Om schema&#39;s voor gebruik in het Profiel van de Klant in real time te kunnen worden toegelaten, moeten zij een primaire bepaalde identiteit hebben. Bovendien moet het bestemmingsschema van een verhouding zijn primaire identiteit als zijn verwijzingsgebied gebruiken.
+Om schema&#39;s voor gebruik in te laten worden toegelaten [!DNL Real-time Customer Profile], moeten zij een primaire bepaalde identiteit hebben. Bovendien moet het bestemmingsschema van een verhouding zijn primaire identiteit als zijn verwijzingsgebied gebruiken.
 
 Voor deze zelfstudie is voor het bronschema al een primaire identiteit gedefinieerd, maar het doelschema niet. U kunt een schemaveld als primair identiteitsveld markeren door een identiteitsdescriptor te maken. Dit wordt gedaan door een POST- verzoek aan het `/tenant/descriptors` eindpunt te doen.
 
@@ -513,4 +513,4 @@ Een succesvol antwoord keert de details van de pas gecreëerde relatiebeschrijve
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een één-op-één verhouding tussen twee schema&#39;s gecreeerd. Voor meer informatie bij het werken met beschrijvers die de Registratie API van het Schema gebruiken, zie de de ontwikkelaarsgids [van de Registratie van het](../api/getting-started.md)Schema. Voor stappen op hoe te om schemaverhoudingen in UI te bepalen, zie het leerprogramma bij het [bepalen van schemaverhoudingen gebruikend de Redacteur](relationship-ui.md)van het Schema.
+Door deze zelfstudie te volgen, hebt u met succes een één-op-één verhouding tussen twee schema&#39;s gecreeerd. Zie de handleiding voor ontwikkelaars van het [!DNL Schema Registry] schemaregister voor meer informatie over het werken met descriptors die de [API gebruiken](../api/getting-started.md). Voor stappen op hoe te om schemaverhoudingen in UI te bepalen, zie het leerprogramma bij het [bepalen van schemaverhoudingen gebruikend de Redacteur](relationship-ui.md)van het Schema.
