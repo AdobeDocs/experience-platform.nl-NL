@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Bronnen weergeven
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '508'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Bronnen weergeven
 
-U kunt een lijst van alle middelen van de Registratie van het Schema van een bepaald type (klassen, mixins, schema&#39;s, gegevenstypes, of beschrijvers) binnen een container bekijken door één enkele GET verzoek uit te voeren.
+U kunt een lijst van alle [!DNL Schema Registry] middelen van een bepaald type (klassen, mixins, schema&#39;s, gegevenstypes, of beschrijvers) binnen een container bekijken door één enkele GET verzoek uit te voeren.
 
 >[!NOTE]
 >
->Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Als u bronnen buiten deze limiet wilt retourneren, moet u [pagineringsparameters](#paging)gebruiken. Men adviseert ook dat u vraagparameters gebruikt om resultaten [te](#filtering) filtreren en het aantal teruggekeerde middelen te verminderen.
+>Bij het aanbieden van resources wordt het resultaat [!DNL Schema Registry] beperkt tot 300 items. Als u bronnen buiten deze limiet wilt retourneren, moet u [pagineringsparameters](#paging)gebruiken. Men adviseert ook dat u vraagparameters gebruikt om resultaten [te](#filtering) filtreren en het aantal teruggekeerde middelen te verminderen.
 
 **API-indeling**
 
@@ -30,7 +30,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{CONTAINER_ID}` | De container waar de middelen worden gevestigd (&quot;globaal&quot;of &quot;huurder&quot;). |
-| `{RESOURCE_TYPE}` | Het type van middel om van de Bibliotheek van het Schema terug te winnen. Geldige typen zijn `classes`, `mixins`, `schemas`, `datatypes`en `descriptors`. |
+| `{RESOURCE_TYPE}` | Het type bron dat van de [!DNL Schema Library]bron moet worden opgehaald. Geldige typen zijn `classes`, `mixins`, `schemas`, `datatypes`en `descriptors`. |
 | `{QUERY_PARAMS`} | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [vraagparameters](#query) voor meer informatie. |
 
 **Verzoek**
@@ -78,7 +78,7 @@ In het bovenstaande verzoek wordt de header `application/vnd.adobe.xed-id+json` 
 
 ## Query-parameters gebruiken {#query}
 
-De Registratie van het Schema steunt het gebruik van vraagparameters aan pagina en filterresultaten wanneer het vermelden van middelen.
+De [!DNL Schema Registry] functie ondersteunt het gebruik van queryparameters voor pagina- en filterresultaten bij het weergeven van bronnen.
 
 >[!NOTE]
 >
@@ -111,4 +111,4 @@ U kunt resultaten filtreren door de `property` parameter te gebruiken, die wordt
 
 >[!TIP]
 >
->U kunt de `property` parameter aan filtermengen door hun compatibele klasse gebruiken. Retourneert bijvoorbeeld alleen `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` mixins die compatibel zijn met de klasse Individueel profiel XDM.
+>U kunt de `property` parameter aan filtermengen door hun compatibele klasse gebruiken. Retourneert bijvoorbeeld alleen `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` mixins die compatibel zijn met de [!DNL XDM Individual Profile] klasse.
