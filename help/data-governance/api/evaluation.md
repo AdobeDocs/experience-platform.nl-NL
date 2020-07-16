@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Beleid
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Beleidsevaluatie
 
-Zodra de marketing acties zijn gecreeerd en het beleid is bepaald, kunt u de Dienst API van het Beleid gebruiken om te evalueren of om het even welk beleid door bepaalde acties wordt geschonden. De geretourneerde beperkingen hebben de vorm van een reeks beleidsregels die worden overtreden door de marketingactie te proberen voor de opgegeven gegevens die labels voor gegevensgebruik bevatten.
+Nadat u marketingacties hebt gemaakt en beleid hebt gedefinieerd, kunt u de [!DNL Policy Service] API gebruiken om te beoordelen of beleidsregels worden overtreden door bepaalde acties. De geretourneerde beperkingen hebben de vorm van een reeks beleidsregels die worden overtreden door de marketingactie te proberen voor de opgegeven gegevens die labels voor gegevensgebruik bevatten.
 
 Door gebrek, **slechts neemt het beleid de waarvan status aan &quot;TOEGELATEN&quot;aan evaluatie** wordt geplaatst deel, nochtans kunt u de vraagparameter gebruiken `?includeDraft=true` om &quot;CONCEPT&quot;beleid in evaluatie te omvatten.
 
