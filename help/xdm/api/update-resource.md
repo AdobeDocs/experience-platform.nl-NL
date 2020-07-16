@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een bron bijwerken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een bron bijwerken
 
-U kunt middelen in de huurderscontainer wijzigen of bijwerken gebruikend een verzoek van de PATCH. Het register van het Schema steunt alle standaard verrichtingen van de Reparatie JSON, met inbegrip van toevoegen, verwijderen en vervangen.
+U kunt middelen in de huurderscontainer wijzigen of bijwerken gebruikend een verzoek van de PATCH. De [!DNL Schema Registry] functie ondersteunt alle standaard JSON-patchbewerkingen, inclusief toevoegen, verwijderen en vervangen.
 
 Raadpleeg de officiële [JSON Patch-documentatie](http://jsonpatch.com/)voor meer informatie over JSON Patch, inclusief beschikbare bewerkingen.
 
@@ -34,7 +34,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Het type bron dat vanuit de Schemabibliotheek moet worden bijgewerkt. Geldige typen zijn `datatypes`, `mixins`, `schemas`en `classes`. |
+| `{RESOURCE_TYPE}` | Het type bron dat vanuit de [!DNL Schema Library]bron moet worden bijgewerkt. Geldige typen zijn `datatypes`, `mixins`, `schemas`en `classes`. |
 | `{RESOURCE_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de bron. |
 
 **Verzoek**
@@ -110,7 +110,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Het type bron dat vanuit de Schemabibliotheek moet worden bijgewerkt. Geldige typen zijn `datatypes`, `mixins`, `schemas`en `classes`. |
+| `{RESOURCE_TYPE}` | Het type bron dat vanuit de [!DNL Schema Library]bron moet worden bijgewerkt. Geldige typen zijn `datatypes`, `mixins`, `schemas`en `classes`. |
 | `{RESOURCE_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van de bron. |
 
 **Verzoek**
