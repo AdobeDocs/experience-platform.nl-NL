@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Segmentation Service
 translation-type: tm+mt
-source-git-commit: 58781fb5622564b29cf250459a9149cf25672bfa
+source-git-commit: a1f80b86a1e761c15d567821b13c7533b7fcf622
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '103'
 ht-degree: 2%
 
 ---
@@ -14,6 +14,7 @@ ht-degree: 2%
 # Help bij Adobe Experience Platform Segmentation Service {#segmentation}
 
 - [Overzicht](home.md)
+- [Segmenteringsgegevenstypen](data-types.md)
 - Segmentatie-API {#api}
    - [Aan de slag](api/getting-started.md)
    - [Segmentdefinities](api/segment-definitions.md)
@@ -40,8 +41,7 @@ ht-degree: 2%
 - Zelfstudies {#tutorials}
    - [Een segment maken](tutorials/create-a-segment.md)
    - [Een segment evalueren](tutorials/evaluate-a-segment.md)
-   - [Gegevens exporteren](tutorials/export-data.md)
    - [Een gegevensset maken om gegevens te exporteren](tutorials/create-dataset-export-segment.md)
    - [Compatibiliteit met gegevensgebruik voor segmenten afdwingen](tutorials/governance.md)
 - [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
-- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
