@@ -4,43 +4,43 @@ solution: Adobe Experience Platform
 title: Gebruikershandleiding voor het profiel van de klant in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59dff7687f8a0c5b5084eb1ce7dd222cc18d8dbf
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
 
 
-# Gebruikershandleiding voor het profiel van de klant in realtime
+# [!DNL Real-time Customer Profile] gebruikershandleiding
 
-Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren.
+[!DNL Real-time Customer Profile] leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren.
 
-Dit document fungeert als richtlijn voor de interactie met Real-time klantprofiel in de gebruikersinterface van het Adobe Experience Platform.
+Dit document fungeert als richtlijn voor interactie met [!DNL Real-time Customer Profile] de gebruikersinterface van het Adobe Experience Platform.
 
 ## Aan de slag
 
-Deze gebruikershandleiding vereist inzicht in de verschillende services van het Experience Platform die betrokken zijn bij het beheren van realtime profielen van klanten. Lees de documentatie voor de volgende services voordat u deze gebruikershandleiding leest:
+Deze gebruikershandleiding vereist inzicht in de verschillende [!DNL Experience Platform] services die bij het beheren van bestanden betrokken zijn [!DNL Real-time Customer Profiles]. Lees de documentatie voor de volgende services voordat u deze gebruikershandleiding leest:
 
-* [Klantprofiel](../home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [Identiteitsservice](../../identity-service/home.md): Laat het Profiel van de Klant in real time toe door identiteiten van verschillende gegevensbronnen te overbruggen aangezien zij in Platform worden opgenomen.
-* [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+* [!DNL Real-time Customer Profile](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [!DNL Identity Service](../../identity-service/home.md): Schakelt [!DNL Real-time Customer Profile] het overbruggen van identiteiten uit verschillende gegevensbronnen in wanneer deze worden ingepakt [!DNL Platform].
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
 ## Overzicht
 
-Klik in de gebruikersinterface [van het](http://platform.adobe.com)Experience Platform op **Profielen** in de linkernavigatie om het tabblad _Overzicht_ te openen. Op dit tabblad vindt u koppelingen naar documentatie en video&#39;s die u helpen bij het begrijpen van profielen en het werken met profielen.
+Klik in het [!DNL Experience Platform UI](http://platform.adobe.com)venster op **[!UICONTROL Profielen]** in de linkernavigatie om het tabblad _[!UICONTROL Overzicht]_te openen. Op dit tabblad vindt u koppelingen naar documentatie en video&#39;s die u helpen bij het begrijpen van profielen en het werken met profielen.
 
 ![](../images/user-guide/profiles-overview.png)
 
 ## Bladeren
 
-Selecteer het tabblad *Bladeren* om door profielen te bladeren op basis van identiteit.
+Selecteer het tabblad *[!UICONTROL Bladeren]* om door profielen te bladeren op basis van identiteit.
 
 ![](../images/user-guide/profiles-browse.png)
 
 ### Profielafmetingen {#profile-metrics}
 
-Aan de rechterkant van het tabblad *Bladeren* staan verschillende belangrijke metingen voor uw profielgegevens, zoals het totale aantal [](#profile-count) profielen en een lijst met [profielen per naamruimte](#profiles-by-namespace).
+Aan de rechterkant van het tabblad *[!UICONTROL Bladeren]* staan verschillende belangrijke metingen voor uw profielgegevens, zoals het totale aantal [](#profile-count) profielen en een lijst met [profielen per naamruimte](#profiles-by-namespace).
 
 Deze profielmetriek worden geëvalueerd gebruikend het standaardsamenvoegbeleid van uw organisatie. Voor meer informatie bij het werken met fusiebeleid, met inbegrip van hoe te om een standaardfusiebeleid te bepalen, zie de de gebruikersgids [van het Beleid van de](merge-policies.md)Fusie.
 
@@ -50,57 +50,57 @@ Naast deze metriek, verstrekt de sectie van profielmetriek ook een *Laatst bijge
 
 ### Aantal profielen {#profile-count}
 
-Het aantal profielen geeft het totale aantal profielen weer dat uw organisatie binnen het Experience Platform heeft, nadat het standaardsamenvoegbeleid van uw organisatie profielfragmenten heeft samengevoegd tot één profiel voor elke individuele klant. Met andere woorden, uw organisatie kan veelvoudige profielfragmenten met betrekking tot één enkele klant hebben die met uw merk over verschillende kanalen interactie heeft, maar deze fragmenten zouden samen (volgens het standaard fusiebeleid) worden samengevoegd en een telling van &quot;1&quot;profiel terugkeren omdat zij allen met het zelfde individu verwant zijn.
+Het aantal profielen geeft het totale aantal profielen weer dat uw organisatie binnen heeft [!DNL Experience Platform], nadat het standaardsamenvoegbeleid van uw organisatie profielfragmenten heeft samengevoegd tot één profiel voor elke individuele klant. Met andere woorden, uw organisatie kan veelvoudige profielfragmenten met betrekking tot één enkele klant hebben die met uw merk over verschillende kanalen interactie heeft, maar deze fragmenten zouden samen (volgens het standaard fusiebeleid) worden samengevoegd en een telling van &quot;1&quot;profiel terugkeren omdat zij allen met het zelfde individu verwant zijn.
 
 Het aantal profielen omvat ook zowel profielen met kenmerken (recordgegevens) als profielen die alleen tijdreeksgegevens (gebeurtenisgegevens) bevatten, zoals Adobe Analytics-profielen. Het aantal profielen wordt regelmatig vernieuwd om een up-to-date totaal aantal profielen binnen Platform te verstrekken.
 
-Wanneer de opname van records in de profielopslag de telling met meer dan 5% verhoogt of verlaagt, wordt een baan teweeggebracht om de telling bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om het aantal profielen bij te werken. Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal profielen bij te werken als aan de drempel van 5% verhoging of verlaging is voldaan.
+Wanneer de opname van records in de [!DNL Profile Store] telling met meer dan 5% verhoogt of verlaagt, wordt een baan teweeggebracht om de telling bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om het aantal profielen bij te werken. Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal profielen bij te werken als aan de drempel van 5% verhoging of verlaging is voldaan.
 
 ### Profielen op naamruimte {#profiles-by-namespace}
 
-Met de metrische waarde *Profielen op naamruimte* worden het totale aantal naamruimten en de totale verdeling daarvan over alle samengevoegde profielen in uw profielarchief weergegeven. Het totale aantal profielen per naamruimte (d.w.z. het optellen van de waarden voor elke naamruimte) zal altijd hoger zijn dan de metrische waarde van het aantal profielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
+Met de metrische waarde *[!UICONTROL Profielen op naamruimte]* worden het totale aantal naamruimten en de totale verdeling daarvan over alle samengevoegde profielen in uw profielarchief weergegeven. Het totale aantal profielen per naamruimte (d.w.z. het optellen van de waarden voor elke naamruimte) zal altijd hoger zijn dan de metrische waarde van het aantal profielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
 
-Vergelijkbaar met de metrische waarde van het [profielaantal](#profile-count) , wanneer de opname van verslagen in de Opslag van het Profiel de telling met meer dan 5% verhoogt of vermindert, wordt een baan teweeggebracht om de namespacemetriek bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om het aantal profielen bij te werken. Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om de metriek bij te werken als aan de drempel van 5% verhoging of verlaging is voldaan.
+Vergelijkbaar met de metrische waarde van het [profielaantal](#profile-count) , wanneer de opname van verslagen in de [!DNL Profile Store] toename of daling de telling met meer dan 5% verhoogt, wordt een baan teweeggebracht om de namespacemetriek bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om het aantal profielen bij te werken. Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de batch een taak uitgevoerd [!DNL Profile Store]als aan de drempel van 5% voor verhogen of verlagen is voldaan, om de metriek bij te werken.
 
 ### Samenvoegbeleid
 
-Met de **optie Samenvoegbeleid** selecteren wordt automatisch het standaardsamenvoegbeleid voor uw organisatie geselecteerd. Als u dat samenvoegbeleid niet wilt gebruiken, kunt u het `X` naast het standaardsamenvoegbeleid selecteren om een dialoogvenster *Samenvoegbeleid* selecteren te openen waarin u een ander samenvoegingsbeleid kunt kiezen. Raadpleeg de gebruikershandleiding [Beleid](merge-policies.md)samenvoegen voor meer informatie over samenvoegingsbeleid.
+Met de **[!UICONTROL optie Samenvoegbeleid]** selecteren wordt automatisch het standaardsamenvoegbeleid voor uw organisatie geselecteerd. Als u dat samenvoegbeleid niet wilt gebruiken, kunt u het `X` naast het standaardsamenvoegbeleid selecteren om een dialoogvenster *[!UICONTROL Samenvoegbeleid]* selecteren te openen waarin u een ander samenvoegingsbeleid kunt kiezen. Raadpleeg de gebruikershandleiding [Beleid](merge-policies.md)samenvoegen voor meer informatie over samenvoegingsbeleid.
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
 ### Naamruimte identiteit
 
-Met de naamruimte **-kiezer** Identiteit wordt een dialoogvenster geopend waarin u de naamruimte kunt kiezen waarmee u wilt zoeken. U kunt de kenmerken die worden weergegeven in de zoekopdracht aanpassen door het filterpictogram te selecteren en te kiezen welke kenmerken u wilt toevoegen of verwijderen.
+Met de naamruimte **[!UICONTROL -kiezer]** Identiteit wordt een dialoogvenster geopend waarin u de naamruimte kunt kiezen waarmee u wilt zoeken. U kunt de kenmerken die worden weergegeven in de zoekopdracht aanpassen door het filterpictogram te selecteren en te kiezen welke kenmerken u wilt toevoegen of verwijderen.
 
 ![](../images/user-guide/profiles-search-filter.png)
 
-Kies in het dialoogvenster Naamruimte ** selecteren de naamruimte waarin u wilt zoeken of gebruik de **zoekbalk** in het dialoogvenster om de naam van een naamruimte te typen. U kunt een naamruimte selecteren om aanvullende details weer te geven. Nadat u de naamruimte hebt gevonden waarnaar u wilt zoeken, kunt u het keuzerondje selecteren en op **Selecteren** drukken om door te gaan.
+Kies in het dialoogvenster Naamruimte ** selecteren de naamruimte waarin u wilt zoeken of gebruik de **[!UICONTROL zoekbalk]** in het dialoogvenster om de naam van een naamruimte te typen. U kunt een naamruimte selecteren om aanvullende details weer te geven. Nadat u de naamruimte hebt gevonden waarnaar u wilt zoeken, kunt u het keuzerondje selecteren en op **[!UICONTROL Selecteren]** drukken om door te gaan.
 
 ![](../images/user-guide/profiles-select-identity-namespace.png)
 
 ### Identiteitswaarde
 
-Nadat u een naamruimte **** Identiteit hebt geselecteerd, gaat u terug naar het tabblad *Bladeren* waar u een waarde **** Identiteit kunt invoeren. Deze waarde is specifiek voor een individueel klantprofiel en moet een geldige waarde zijn voor de opgegeven naamruimte. Als u bijvoorbeeld de naamruimte **** Identiteit &quot;E-mail&quot; selecteert, hebt u een **identiteitswaarde** nodig in de vorm van een geldig e-mailadres.
+Nadat u een naamruimte **** Identiteit hebt geselecteerd, gaat u terug naar het tabblad *[!UICONTROL Bladeren]* waar u een waarde **** Identiteit kunt invoeren. Deze waarde is specifiek voor een individueel klantprofiel en moet een geldige waarde zijn voor de opgegeven naamruimte. Als u bijvoorbeeld de naamruimte **** Identiteit &quot;E-mail&quot; selecteert, hebt u een **[!UICONTROL identiteitswaarde]** nodig in de vorm van een geldig e-mailadres.
 
 ![](../images/user-guide/profiles-show-profile.png)
 
-Nadat een waarde is ingevoerd, selecteert u Profiel **** tonen en geeft u één profiel weer dat overeenkomt met de waarde. Selecteer de **profiel-id** om de profieldetails weer te geven.
+Nadat een waarde is ingevoerd, selecteert u Profiel **** tonen en geeft u één profiel weer dat overeenkomt met de waarde. Selecteer de **[!UICONTROL profiel-id]** om de profieldetails weer te geven.
 
 ![](../images/user-guide/profiles-display-profile.png)
 
 ### Profieldetails
 
-Als u de **profiel-id** selecteert, wordt het tabblad _Details_ geopend. Deze pagina bevat informatie over het geselecteerde profiel, zoals basiskenmerken, gekoppelde identiteiten en beschikbare contactkanalen. De weergegeven profielgegevens zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van de individuele klant.
+Als u de **[!UICONTROL profiel-id]** selecteert, wordt het tabblad _[!UICONTROL Details]_geopend. Deze pagina bevat informatie over het geselecteerde profiel, zoals basiskenmerken, gekoppelde identiteiten en beschikbare contactkanalen. De weergegeven profielgegevens zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van de individuele klant.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-U kunt aanvullende informatie over het profiel weergeven, zoals *Kenmerken*, *Gebeurtenissen* en *Segmenten* waarbij het profiel een lid is.
+U kunt aanvullende informatie over het profiel weergeven, zoals *[!UICONTROL Kenmerken]*, *[!UICONTROL Gebeurtenissen]* en *[!UICONTROL Segmenten]* waarbij het profiel een lid is.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Beleid samenvoegen
 
-Selecteer het tabblad *Samenvoegen van beleidsregels* om een lijst weer te geven met samenvoegingsbeleid dat tot uw organisatie behoort. Elk vermeld beleid toont zijn naam, al dan niet het standaardsamenvoegbeleid, en het schema dat het op van toepassing is.
+Selecteer het tabblad *[!UICONTROL Samenvoegen van beleidsregels]* om een lijst weer te geven met samenvoegingsbeleid dat tot uw organisatie behoort. Elk vermeld beleid toont zijn naam, al dan niet het standaardsamenvoegbeleid, en het schema dat het op van toepassing is.
 
 Voor meer informatie over fusiebeleid, zie de de gebruikersgids [van het Beleid van de](merge-policies.md)Fusie.
 
@@ -108,14 +108,14 @@ Voor meer informatie over fusiebeleid, zie de de gebruikersgids [van het Beleid 
 
 ## Unieschema
 
-Selecteer het tabblad *Unieschema* om de samenvoegingsschema&#39;s voor uw profielarchief weer te geven. Een verenigingsschema is een samenvoeging van alle gebieden van het Model van de Gegevens van de Ervaring (XDM) onder de zelfde klasse, de waarvan schema&#39;s voor gebruik in het Profiel van de Klant in real time zijn toegelaten. Selecteer een klasse in de linkerlijst om de structuur van zijn unieschema in het canvas te bekijken.
+Selecteer het tabblad *Unieschema* om de samenvoegingsschema&#39;s voor uw [!DNL Profile Store]. Een verenigingsschema is een samenvoeging van alle [!DNL Experience Data Model] (XDM) gebieden onder de zelfde klasse, de waarvan schema&#39;s voor gebruik binnen zijn toegelaten [!DNL Real-time Customer Profile]. Selecteer een klasse in de linkerlijst om de structuur van zijn unieschema in het canvas te bekijken.
 
-Als u bijvoorbeeld &quot;XDM-profiel&quot; selecteert, wordt het samenvoegingsschema voor de klasse Individueel profiel XDM weergegeven.
+Als u bijvoorbeeld &quot;[!DNL XDM Profile]&quot; selecteert, wordt het samenvoegingsschema voor de [!DNL XDM Individual Profile] klasse weergegeven.
 
-Zie de sectie over verenigingsschema&#39;s in de [schemacompositie gids](../../xdm/schema/composition.md) voor meer informatie over verenigingsschema&#39;s en hun rol in het Profiel van de Klant in real time.
+Zie de sectie over verenigingsschema&#39;s in de [schemacompositie gids](../../xdm/schema/composition.md) voor meer informatie over verenigingsschema&#39;s en hun rol in [!DNL Real-time Customer Profile].
 
 ![](../images/user-guide/profiles-union-schema.png)
 
 ## Volgende stappen
 
-Door deze handleiding te lezen, weet u nu hoe u de profielgegevens kunt weergeven en beheren met de interface van het Experience Platform. Voor informatie over hoe te hefboomwerking de gegevens van het Profiel van de Klant in real time om publiekssegmenten te produceren, zie de documentatie [van de](../../segmentation/home.md)Segmentatie.
+Door deze gids te lezen, weet u nu hoe te om uw [!DNL Profile] gegevens te bekijken en te beheren gebruikend [!DNL Experience Platform] UI. Voor informatie over hoe te hefboomwerking [!DNL Real-time Customer Profile] gegevens om publiekssegmenten te produceren, zie de documentatie [van de](../../segmentation/home.md)Segmentatie.
