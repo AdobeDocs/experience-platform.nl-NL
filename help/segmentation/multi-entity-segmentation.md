@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentatie van meerdere entiteiten
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7110be2654e55ea411580f8c9e2e92bb52badab5
+source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -34,14 +34,14 @@ Het bepalen van verhoudingen met de structuur van uw schema&#39;s van de Gegeven
 
 Dit proces kan of gebruikend de Registratie API van het Schema of de Redacteur van het Schema worden gedaan. Voor een gedetailleerde gids over het gebruiken van API om een verhouding tussen twee schema&#39;s te bepalen, te lezen gelieve [het leerprogramma over het bepalen van een verhouding tussen twee schema&#39;s gebruikend API](../xdm/tutorials/relationship-api.md). Voor een gedetailleerde gids bij het gebruiken van de Redacteur van het Schema om een verband tussen twee schema&#39;s te bepalen, te lezen gelieve [het leerprogramma over het bepalen van een verband tussen twee schema&#39;s gebruikend de Redacteur](../xdm/tutorials/relationship-ui.md)van het Schema.
 
-## Hoe te gebruiken creeer segmenten die relaties XDM gebruiken
+## Hoe te om segmenten tot stand te brengen die relaties gebruiken XDM
 
-Nadat u uw XDM-relaties hebt gedefinieerd, kunt u de Real-Time Customer Profile API&#39;s gebruiken om een segment te maken.
+Zodra u uw verhoudingen XDM hebt bepaald, kunt u de Dienst API van de Segmentatie gebruiken om een segment te bouwen.
 
-Dit proces kan of gebruikend Real-time het Profiel van de Klant of de Bouwer van het Segment worden gedaan. Voor een gedetailleerde gids over het gebruiken van API om een segment te bouwen, te lezen gelieve [de zelfstudie over het creëren van een segment gebruikend Real-time het Profiel van de Klant API](./tutorials/create-a-segment.md). Voor een gedetailleerde gids bij het gebruiken van de Bouwer van het Segment om een segment te bouwen, te lezen gelieve [de gebruikersgids](./ui/overview.md)van de Bouwer van het Segment.
+Dit proces kan of gebruikend de Segmentatie API of het gebruikersinterface van de Bouwer van het Segment worden gedaan. Voor een gedetailleerde gids over het gebruiken van API om een segment te bouwen, gelieve te lezen [het leerprogramma over het creëren van een segment gebruikend de Segmentatie API](./tutorials/create-a-segment.md). Voor een gedetailleerde gids bij het gebruiken van de Bouwer van het Segment om een segment te bouwen, te lezen gelieve [de gebruikersgids](./ui/overview.md)van de Bouwer van het Segment.
 
 ## Hoe te om tot segmenten voor multi-entiteitsegmenten te evalueren en toegang te hebben
 
-Na het creëren van een segment, kunt u de segmentresultaten evalueren en tot stand brengen gebruikend Real-time het Profiel van de Klant APIs. Het evalueren van een segment met meerdere entiteiten lijkt sterk op het evalueren van een regulier segment.
+Nadat u een segment hebt gemaakt, kunt u de resultaten van het segment evalueren en openen met de [!DNL Segmentation Service] API. Het evalueren van een segment met meerdere entiteiten lijkt sterk op het evalueren van een regulier segment.
 
-Dit proces kan alleen worden uitgevoerd met de Real-Time Customer Profile API. Voor een gedetailleerde gids over het gebruiken van API om segmenten te evalueren en toegang te hebben tot, gelieve [de zelfstudie over het evalueren van en de toegang tot segmenten](./tutorials/evaluate-a-segment.md)te lezen.
+Dit proces kan alleen worden uitgevoerd met de [!DNL Segmentation Service] API. Lees de zelfstudie over het [evalueren en benaderen van segmenten](./tutorials/evaluate-a-segment.md)voor een gedetailleerde handleiding over het gebruik van de API voor het evalueren van en het openen van segmenten.
