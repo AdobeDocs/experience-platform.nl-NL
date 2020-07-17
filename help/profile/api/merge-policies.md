@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Beleid voor samenvoegen - Real-time klantprofiel-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '2053'
+source-wordcount: '2035'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Het eindpunt van beleid samenvoegen
 
-Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen samenbrengen en combineren om een volledige weergave van elk van uw individuele klanten te bekijken. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Deze handleiding bevat stappen voor het werken met samenvoegbeleid met de API. Om met samenvoegbeleid te werken gebruikend UI, gelieve te verwijzen naar de de gebruikersgids [van het](../ui/merge-policies.md)fusiebeleid.
+Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen samenbrengen en combineren om een volledige weergave van elk van uw individuele klanten te bekijken. Wanneer het brengen van deze gegevens samen, zijn het fusiebeleid de regels die [!DNL Platform] gebruiken om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Deze handleiding bevat stappen voor het werken met samenvoegbeleid met de API. Om met samenvoegbeleid te werken gebruikend UI, gelieve te verwijzen naar de de gebruikersgids [van het](../ui/merge-policies.md)fusiebeleid.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van het [Real-time Profiel van de Klant API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar elke Experience Platform-API te kunnen uitvoeren.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)handleiding. Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een willekeurige [!DNL Experience Platform] API mogelijk te maken.
 
 ## Componenten van samenvoegingsbeleid {#components-of-merge-policies}
 
-Het beleid van de fusie is privé aan uw organisatie IMS, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manier samen te voegen die u nodig hebt. Om het even welke API die tot de gegevens van het Profiel toegang hebben vereist een fusiebeleid, hoewel een gebrek zal worden gebruikt als niet uitdrukkelijk wordt verstrekt. Het Platform verstrekt een standaardsamenvoegbeleid, of u kunt een fusiebeleid voor een specifiek schema tot stand brengen en het merken als gebrek voor uw organisatie. Elke organisatie kan veelvoudige samenvoegingsbeleid per schema potentieel hebben, nochtans kan elk schema slechts één standaardsamenvoegbeleid hebben. Om het even welk die samenvoegbeleid als gebrek wordt geplaatst zal worden gebruikt in gevallen waar de schemanaam wordt verstrekt en een fusiebeleid wordt vereist maar niet verstrekt. Wanneer u een samenvoegbeleid als gebrek plaatst, zal om het even welk bestaand samenvoegbeleid dat eerder als gebrek werd geplaatst automatisch worden bijgewerkt om niet meer als gebrek te worden gebruikt.
+Het beleid van de fusie is privé aan uw organisatie IMS, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manier samen te voegen die u nodig hebt. Om het even welke API die tot [!DNL Profile] gegevens toegang hebben vereist een fusiebeleid, hoewel een gebrek zal worden gebruikt als niet uitdrukkelijk wordt verstrekt. [!DNL Platform] verstrekt een standaardsamenvoegbeleid, of u kunt een fusiebeleid voor een specifiek schema tot stand brengen en het merken als gebrek voor uw organisatie. Elke organisatie kan veelvoudige samenvoegingsbeleid per schema potentieel hebben, nochtans kan elk schema slechts één standaardsamenvoegbeleid hebben. Om het even welk die samenvoegbeleid als gebrek wordt geplaatst zal worden gebruikt in gevallen waar de schemanaam wordt verstrekt en een fusiebeleid wordt vereist maar niet verstrekt. Wanneer u een samenvoegbeleid als gebrek plaatst, zal om het even welk bestaand samenvoegbeleid dat eerder als gebrek werd geplaatst automatisch worden bijgewerkt om niet meer als gebrek te worden gebruikt.
 
 ### Object voor samenvoegbeleid voltooien
 
@@ -56,10 +56,10 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 | `name` | Vriendelijke naam waarmee het samenvoegbeleid kan worden geïdentificeerd in lijstweergaven. |
 | `imsOrgId` | Organisatie-id waartoe dit samenvoegbeleid behoort |
 | `identityGraph` | [Object in identiteitsgrafiek](#identity-graph) dat de identiteitsgrafiek aangeeft waarvan gerelateerde identiteiten worden verkregen. Profielfragmenten die voor alle verwante identiteiten worden gevonden, worden samengevoegd. |
-| `attributeMerge` | [Kenmerksamenvoegobject](#attribute-merge) dat aangeeft op welke manier in het samenvoegbeleid voorrang wordt gegeven aan profielkenmerkwaarden in het geval van gegevensconflicten. |
+| `attributeMerge` | [Kenmerksamenvoegobject](#attribute-merge) dat aangeeft op welke manier in het samenvoegbeleid bij gegevensconflicten voorrang wordt gegeven aan profielkenmerkwaarden. |
 | `schema` | Het [schemaobject](#schema) waarop het samenvoegbeleid kan worden gebruikt. |
 | `default` | Een Booleaanse waarde die aangeeft of dit samenvoegbeleid de standaardinstelling is voor het opgegeven schema. |
-| `version` | Platform behoudt versie van samenvoegbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
+| `version` | [!DNL Platform] onderhouden versie van samenvoegingsbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
 | `updateEpoch` | Datum van de laatste update van het samenvoegbeleid. |
 
 **Voorbeeld van samenvoegingsbeleid**
@@ -86,7 +86,7 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 
 ### Identiteitsgrafiek {#identity-graph}
 
-[De Identiteitsdienst](../../identity-service/home.md) van het Adobe Experience Platform beheert de identiteitsgrafieken die globaal en voor elke organisatie op Experience Platform worden gebruikt. Het `identityGraph` attribuut van het fusiebeleid bepaalt hoe te om de verwante identiteiten voor een gebruiker te bepalen.
+[De Identiteitsdienst](../../identity-service/home.md) van het Adobe Experience Platform beheert de identiteitsgrafieken die globaal en voor elke organisatie op worden gebruikt [!DNL Experience Platform]. Het `identityGraph` attribuut van het fusiebeleid bepaalt hoe te om de verwante identiteiten voor een gebruiker te bepalen.
 
 **identityGraph-object**
 
@@ -173,7 +173,7 @@ Waar de waarde van `name` is de naam van de klasse XDM waarop het schema verbond
 
 ## Beleid voor samenvoegen openen {#access-merge-policies}
 
-Gebruikend het In real time API van het Profiel van de Klant, staat het `/config/mergePolicies` eindpunt u een raadplegingsverzoek toe om een specifiek fusiebeleid door zijn identiteitskaart te bekijken, of tot alle fusiebeleid in uw IMS Organisatie toegang te hebben, die door specifieke criteria wordt gefiltreerd. U kunt het `/config/mergePolicies/bulk-get` eindpunt ook gebruiken om veelvoudige fusiebeleid door hun IDs terug te winnen. De stappen voor het uitvoeren van elk van deze vraag worden geschetst in de volgende secties.
+Gebruikend [!DNL Real-time Customer Profile] API, staat het `/config/mergePolicies` eindpunt u toe een raadplegingsverzoek om een specifiek fusiebeleid door zijn identiteitskaart uit te voeren, of toegang tot elk van het fusiebeleid in uw IMS Organisatie, die door specifieke criteria wordt gefiltreerd. U kunt het `/config/mergePolicies/bulk-get` eindpunt ook gebruiken om veelvoudige fusiebeleid door hun IDs terug te winnen. De stappen voor het uitvoeren van elk van deze vraag worden geschetst in de volgende secties.
 
 ### Heb toegang tot één enkel fusiebeleid door identiteitskaart
 
@@ -724,7 +724,7 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege 
 
 ## Volgende stappen
 
-Nu u weet om samenvoegbeleid voor uw IMS Organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om publiekssegmenten van uw gegevens van het Profiel van de Klant in real time tot stand te brengen. Gelieve te zien de documentatie [van de Dienst van de Segmentatie van het](../../segmentation/home.md) Adobe Experience Platform beginnen definiërend en werkend met segmenten.
+Nu u weet om samenvoegbeleid voor uw IMS Organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om publiekssegmenten van uw [!DNL Real-time Customer Profile] gegevens tot stand te brengen. Gelieve te zien de documentatie [van de Dienst van de Segmentatie van het](../../segmentation/home.md) Adobe Experience Platform beginnen definiërend en werkend met segmenten.
 
 
 
