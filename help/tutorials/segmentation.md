@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zelfstudies voor segmentatie
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: ae244711ed89f4c7d6f87fd38bf7f8324e9b64be
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ Een segmentdefinitie is de regel die wordt gebruikt om zeer belangrijke kenmerke
 
 ## Evalueer een segment en toegangsresultaten
 
-Zodra u hebt ontwikkeld, getest, en uw segmentdefinitie bewaard, kunt u het segment door of geplande evaluatie of op bestelling evaluatie dan evalueren. De geplande evaluatie (die ook als &quot;geplande segmentatie&quot;wordt bekend) staat u toe om een terugkomende planning voor het runnen van een uitvoerbaan in een specifieke tijd tot stand te brengen, terwijl de evaluatie op bestelling het creëren van een segmentbaan impliceert om het publiek onmiddellijk te bouwen. Meer leren, bezoek het leerprogramma voor het [evalueren van en de toegang tot van segmentresultaten](../segmentation/tutorials/evaluate-a-segment.md).
+Zodra u hebt ontwikkeld, getest en uw segmentdefinitie bewaard, kunt u het segment door of geplande evaluatie of op bestelling evaluatie dan evalueren. De geplande evaluatie (die ook als &quot;geplande segmentatie&quot;wordt bekend) staat u toe om een terugkomende planning voor het runnen van een uitvoerbaan in een specifieke tijd tot stand te brengen, terwijl de evaluatie op bestelling het creëren van een segmentbaan impliceert om het publiek onmiddellijk te bouwen. Meer leren, bezoek het leerprogramma voor het [evalueren van en de toegang tot van segmentresultaten](../segmentation/tutorials/evaluate-a-segment.md).
 
 ## Segmentgegevens exporteren
 
-Voor het exporteren van segmenten met [!DNL Profile] gegevens moet eerst een gegevensset worden [gemaakt waarin de gegevens worden geëxporteerd](../segmentation/tutorials/create-dataset-export-segment.md)en vervolgens een nieuwe exporttaak worden gestart. De stappen voor het genereren van een exporttaak vindt u in de zelfstudie over de [exportAPI](../segmentation/tutorials/export-data.md).
+Voor het exporteren van segmenten met [!DNL Profile] gegevens moet eerst een gegevensset worden [gemaakt waarin de gegevens worden geëxporteerd](../segmentation/tutorials/create-dataset-export-segment.md)en vervolgens een nieuwe exporttaak worden gestart. De stappen voor het produceren van een uitvoerbaan kunnen in het leerprogramma bij het [evalueren van een segment](../segmentation/tutorials/evaluate-a-segment.md)worden gevonden.
 
 ## Samenvoegingsbeleid configureren
 
