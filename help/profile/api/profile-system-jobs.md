@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Systeemtaken profiel - Real-time API voor klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1420'
 ht-degree: 0%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 0%
 
 # Het taakeindpunt van het profielsysteem (verzoeken van de Schrapping)
 
-Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor afzonderlijke klanten maken. Gegevens die in Platform worden opgenomen, worden opgeslagen in het Data Lake en in de gegevensopslag van het Profiel van de Klant in real time. Soms kan het nodig zijn om een gegevensset of batch uit de profielopslag te verwijderen om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Dit vereist het gebruiken van de Real-time API van het Profiel van de Klant om een systeembaan van het Profiel tot stand te brengen, die ook als &quot;schrappingsverzoek&quot;wordt bekend, die ook kan worden gewijzigd, worden gecontroleerd, of indien nodig worden verwijderd.
+Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor afzonderlijke klanten maken. Gegevens die in [!DNL Platform] worden ingevoerd, worden zowel in de [!DNL Data Lake] gegevensopslag als in de [!DNL Real-time Customer Profile] gegevensopslag opgeslagen. Soms kan het nodig zijn om een gegevensset of batch uit de profielopslag te verwijderen om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de [!DNL Real-time Customer Profile] API gebruiken om een [!DNL Profile] systeemtaak te maken, ook wel een &quot;[!DNL delete request]&quot;-taak genoemd, die indien nodig ook kan worden gewijzigd, bewaakt of verwijderd.
 
 >[!NOTE]
->Als u gegevenssets of batches wilt verwijderen uit het Datameer, gaat u naar het overzicht [van de](../../catalog/home.md) Catalogusservice voor instructies.
+>Als u gegevenssets of batches wilt verwijderen uit de [!DNL Data Lake]catalogus, gaat u naar het overzicht [van de](../../catalog/home.md) Catalogusservice voor instructies.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van het [Real-time Profiel van de Klant API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar elke Experience Platform-API te kunnen uitvoeren.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)handleiding. Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een willekeurige [!DNL Experience Platform] API mogelijk te maken.
 
 ## Verzoeken om verwijderen weergeven
 
@@ -103,10 +103,10 @@ Het in werking stellen van een nieuw schrappingsverzoek wordt gedaan door een PO
 
 ### Een gegevensset verwijderen
 
-Om een dataset te schrappen, moet dataset identiteitskaart in het lichaam van het POST- verzoek worden omvat. Deze actie zal ALLE gegevens voor een bepaalde dataset schrappen. Het Experience Platform staat u toe om datasets te schrappen die op zowel verslag als tijdreeksschema&#39;s worden gebaseerd.
+Om een dataset te schrappen, moet dataset identiteitskaart in het lichaam van het POST- verzoek worden omvat. Deze actie zal ALLE gegevens voor een bepaalde dataset schrappen. [!DNL Experience Platform] staat u toe om datasets te schrappen die op zowel verslag als tijdreeksschema&#39;s worden gebaseerd.
 
 >[!CAUTION]
-> Wanneer het proberen om een profiel-Toegelaten dataset te schrappen gebruikend de Experience Platform UI, wordt de dataset onbruikbaar gemaakt voor opneming maar zal niet worden geschrapt tot een schrappingsverzoek wordt gecreeerd gebruikend API. Zie de [bijlage](#appendix) bij dit document voor meer informatie.
+> Wanneer het proberen om een [!DNL Profile]-toegelaten dataset te schrappen gebruikend [!DNL Experience Platform] UI, wordt de dataset onbruikbaar gemaakt voor opname maar zal niet worden geschrapt tot een schrappingsverzoek wordt gecreeerd gebruikend API. Zie de [bijlage](#appendix) bij dit document voor meer informatie.
 
 **API-indeling**
 
@@ -161,7 +161,7 @@ Om een partij te kunnen verwijderen, moet de partij-ID worden opgenomen in de ho
 >[!NOTE]
 > De reden u niet batches voor datasets kunt schrappen die op verslagschema&#39;s worden gebaseerd is omdat de reeksen van de recordtype dataset vorige verslagen beschrijven en daarom niet &quot;undone&quot;of geschrapt kunnen zijn. De enige manier om het effect van onjuiste partijen voor datasets te verwijderen die op verslagschema&#39;s worden gebaseerd is de partij met de correcte gegevens opnieuw op te nemen om de onjuiste verslagen te beschrijven.
 
-Voor meer informatie over record- en tijdreeksgedrag raadpleegt u de [sectie over XDM-gegevensgedrag](../../xdm/home.md#data-behaviors) in het XDM System-overzicht.
+Voor meer informatie over record- en tijdreeksgedrag raadpleegt u de [sectie over XDM-gegevensgedrag](../../xdm/home.md#data-behaviors) in het [!DNL XDM System] overzicht.
 
 **API-indeling**
 
@@ -277,7 +277,7 @@ Zodra de status van de verwijderaanvraag is ingesteld, kunt `"COMPLETED"` u beve
 
 ## Een verwijderingsaanvraag verwijderen
 
-Met Experience Platform kunt u een eerdere aanvraag verwijderen. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de verwijdertaak niet is voltooid of vastgelopen in het verwerkingsstadium. Om een schrappingsverzoek te verwijderen, kunt u een DELETE verzoek aan het `/system/jobs` eindpunt uitvoeren en identiteitskaart van het schrappingsverzoek omvatten dat u wenst om aan de verzoekweg te verwijderen.
+[!DNL Experience Platform] Hiermee kunt u een eerdere aanvraag verwijderen. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de verwijdertaak niet is voltooid of vastgelopen in het verwerkingsstadium. Om een schrappingsverzoek te verwijderen, kunt u een DELETE verzoek aan het `/system/jobs` eindpunt uitvoeren en identiteitskaart van het schrappingsverzoek omvatten dat u wenst om aan de verzoekweg te verwijderen.
 
 **API-indeling**
 
@@ -306,19 +306,19 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege 
 
 ## Volgende stappen
 
-Nu u de stappen kent betrokken bij het schrappen van datasets en partijen van de Opslag van het Profiel binnen Experience Platform, kunt u veilig gegevens schrappen die verkeerd zijn toegevoegd of dat uw organisatie niet meer nodig heeft. Houd er rekening mee dat een verwijderingsaanvraag niet ongedaan kan worden gemaakt. Verwijder daarom alleen gegevens die u zeker weet dat u deze nu niet nodig hebt en in de toekomst niet meer nodig hebt.
+Nu u de stappen kent betrokken bij het schrappen van datasets en partijen van [!DNL Profile Store] binnen [!DNL Experience Platform], kunt u veilig gegevens schrappen die verkeerd zijn toegevoegd of dat uw organisatie niet meer nodig heeft. Houd er rekening mee dat een verwijderingsaanvraag niet ongedaan kan worden gemaakt. Verwijder daarom alleen gegevens die u zeker weet dat u deze nu niet nodig hebt en in de toekomst niet meer nodig hebt.
 
 ## Aanhangsel {#appendix}
 
-De volgende informatie is supplementair aan de handeling van het schrappen van een dataset van de opslag van het Profiel.
+De volgende informatie is aanvullend op het schrappen van een dataset van het [!DNL Profile Store].
 
-### Een dataset verwijderen met de interface van het Experience Platform
+### Een gegevensset verwijderen met de [!DNL Experience Platform] UI
 
-Wanneer het gebruiken van het gebruikersinterface van het Experience Platform om een dataset te schrappen die voor Profiel is toegelaten, opent een dialoog vragend, &quot;bent u zeker u wilt deze dataset van het Meer van Gegevens van de Ervaring schrappen? Gebruik de API &#39;profile systems job&#39; om deze dataset uit de profielservice te verwijderen.&quot;
+Wanneer het gebruiken van het [!DNL Experience Platform] gebruikersinterface om een dataset te schrappen die voor is toegelaten [!DNL Profile], opent een dialoog vragend, &quot;bent u zeker u wilt deze dataset van [!DNL Experience Data Lake]? Gebruik de &#39;p[!DNL rofile systems jobs]&#39;-API om deze gegevensset uit de [!DNL Profile Service]te verwijderen.&quot;
 
-Als u op **Verwijderen** in de gebruikersinterface klikt, wordt de gegevensset uitgeschakeld voor opname, maar wordt de gegevensset NIET automatisch verwijderd in de achterkant. Om de dataset permanent te schrappen, moet een schrappingsverzoek manueel gebruikend de stappen in deze gids voor het [creëren van een schrappingsverzoek](#create-a-delete-request)worden gecreeerd.
+Als u op **[!UICONTROL Verwijderen]** in de gebruikersinterface klikt, wordt de gegevensset uitgeschakeld voor opname, maar wordt de gegevensset NIET automatisch verwijderd in de achterkant. Om de dataset permanent te schrappen, moet een schrappingsverzoek manueel gebruikend de stappen in deze gids voor het [creëren van een schrappingsverzoek](#create-a-delete-request)worden gecreeerd.
 
-In de volgende afbeelding ziet u de waarschuwing wanneer u probeert een voor profiel ingeschakelde gegevensset te verwijderen met behulp van de gebruikersinterface.
+Het volgende beeld toont de waarschuwing wanneer het proberen om een [!DNL Profile]-Toegelaten dataset te schrappen gebruikend UI.
 
 ![](../images/delete-profile-dataset.png)
 
