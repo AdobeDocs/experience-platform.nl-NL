@@ -1,30 +1,28 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: Handleiding voor ontwikkelaars van segment-API
+title: Sectie zoekeindpunthulplijn
 topic: guide
 translation-type: tm+mt
-source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
+source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1141'
 ht-degree: 0%
 
 ---
 
 
-# Segmentzoekopdracht
+# Overzicht van het eindpunt van Segment zoeken
 
-Het Onderzoek van het segment wordt gebruikt om configureerbare gebieden te zoeken en te indexeren die over diverse gegevensbronnen worden bevat en hen in bijna real time terug te keren.
+Het Onderzoek van het segment wordt gebruikt om gebieden te zoeken die zich over diverse gegevensbronnen bevinden en hen in bijna real time terug te keren.
 
 Deze gids verstrekt informatie om u te helpen het Onderzoek van het Segment beter begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisacties gebruikend API.
 
 ## Aan de slag
 
-De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de segmentatie-API. Lees de ontwikkelaarsgids voor [segmentatie voordat u verdergaat](getting-started.md).
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Voordat u verdergaat, bekijkt u eerst de gids [](./getting-started.md) Aan de slag voor belangrijke informatie die u moet weten om oproepen naar de API met succes te kunnen uitvoeren, inclusief vereiste headers en hoe u API-voorbeeldaanroepen kunt lezen.
 
-In het bijzonder, omvat de [begonnen sectie](getting-started.md) van de de ontwikkelaarsgids van de Segmentatie verbindingen aan verwante onderwerpen, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan het Platform API van de Ervaring te maken.
-
-Naast de vereiste kopballen die in de begonnen sectie worden geschetst, vereisen alle verzoeken aan het Onderzoek API van het Segment de volgende extra kopbal:
+Naast de vereiste kopballen die in de begonnen sectie worden geschetst, vereisen alle verzoeken aan het eindpunt van het Onderzoek van het Segment de volgende extra kopbal:
 
 - x-ups-search-version: &quot;1.0&quot;
 
@@ -223,11 +221,11 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde structurele
 
 ## Volgende stappen
 
-Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe Segment Search werkt. Lees het [segmentatieoverzicht](../home.md)voor meer informatie over segmentatie.
+Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe Segment Search werkt.
 
 ## Aanhangsel {#appendix}
 
-In de volgende secties vindt u aanvullende informatie over de werking van zoektermen. Zoekopdrachten worden als volgt geschreven: `s={FieldName}:{SearchExpression}`. Zo, bijvoorbeeld, aan onderzoek naar een segment genoemd AAM of Platform, zou u de volgende onderzoeksvraag gebruiken: `s=segmentName:AAM%20OR%20Platform`.
+In de volgende secties vindt u aanvullende informatie over de werking van zoektermen. Zoekopdrachten worden als volgt geschreven: `s={FieldName}:{SearchExpression}`. Zo, bijvoorbeeld, om naar een segment te zoeken genoemd AAM of Platform, zou u de volgende onderzoeksvraag gebruiken: `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] Voor beste praktijken, zou de onderzoeksuitdrukking HTML moeten worden gecodeerd, zoals het hierboven getoonde voorbeeld.
 
