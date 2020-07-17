@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Entiteiten - Real-time API voor klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1671'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Het eindpunt van entiteiten (de toegang van het Profiel)
 
-Met Adobe Experience Platform hebt u toegang tot gegevens van het profiel Real-time klanten met RESTful-API&#39;s of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Raadpleeg de gebruikershandleiding bij [Profiel voor meer informatie over het gebruik van de interface van het Platform voor toegang tot profielen](../ui/user-guide.md).
+Met Adobe Experience Platform hebt u toegang tot [!DNL Real-time Customer Profile] gegevens met RESTful API&#39;s of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Raadpleeg de gebruikershandleiding bij [!DNL Platform] Profiel voor meer informatie over het gebruik van de [gebruikersinterface voor profielen](../ui/user-guide.md).
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van het [Real-time Profiel van de Klant API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar elke Experience Platform-API te kunnen uitvoeren.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)handleiding. Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een willekeurige [!DNL Experience Platform] API mogelijk te maken.
 
 ## Profielgegevens benaderen op identiteit
 
-U kunt tot een entiteit van het Profiel toegang hebben door een GET verzoek aan het `/access/entities` eindpunt te doen en de identiteit van de entiteit als reeks vraagparameters te verstrekken. Deze identiteit bestaat uit een ID-waarde (`entityId`) en de naamruimte voor identiteit (`entityIdNS`).
+U kunt tot een [!DNL Profile] entiteit toegang hebben door een GET verzoek aan het `/access/entities` eindpunt te doen en de identiteit van de entiteit als reeks vraagparameters te verstrekken. Deze identiteit bestaat uit een ID-waarde (`entityId`) en de naamruimte voor identiteit (`entityIdNS`).
 
 De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;). Een volledige lijst van geldige parameters wordt verstrekt in de sectie van [vraagparameters](#query-parameters) van bijlage.
 
@@ -774,7 +774,7 @@ Gebruikend deze nuttige lading in het verzoeklichaam, kunt u een extra verzoek v
 
 ## De gebeurtenissen van de tijdreeks van de toegang in veelvoudige schemaentiteiten
 
-U kunt toegang krijgen tot meerdere entiteiten die via een relatiebeschrijving zijn verbonden. De volgende voorbeeld API vraag veronderstelt een verhouding reeds tussen twee schema&#39;s is bepaald. Voor meer informatie over relatiebeschrijvers, te lezen gelieve de gids van de [beschrijvers van het eindpunt van de de ontwikkelaarsgids](../../xdm/api/descriptors.md)van de Registratie van het Schema API.
+U kunt toegang krijgen tot meerdere entiteiten die via een relatiebeschrijving zijn verbonden. De volgende voorbeeld API vraag veronderstelt een verhouding reeds tussen twee schema&#39;s is bepaald. Voor meer informatie over relatiebeschrijvers, gelieve te lezen de [!DNL Schema Registry] API [van de ontwikkelaarsgids](../../xdm/api/descriptors.md)van de beschrijvingseindpuntgids.
 
 U kunt queryparameters opnemen in het aanvraagpad om op te geven tot welke gegevens u toegang wilt krijgen. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;). Een volledige lijst van geldige parameters wordt verstrekt in de sectie van [vraagparameters](#query-parameters) van bijlage.
 
@@ -884,11 +884,11 @@ Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als e
 
 ## Volgende stappen
 
-Met deze handleiding hebt u de gegevensvelden, profielen en gegevens uit de tijdreeks van het profiel van de klant in real time geopend. Leer hoe te om tot andere gegevensmiddelen toegang te hebben die in Platform worden opgeslagen, zie het overzicht [van de Toegang van](../../data-access/home.md)Gegevens.
+Aan de hand van deze handleiding hebt u toegang tot gegevensvelden, profielen en gegevens uit de tijdreeks. [!DNL Real-time Customer Profile] Leer hoe te om tot andere gegevensmiddelen toegang te hebben die in worden opgeslagen, zie het overzicht [!DNL Platform]van de Toegang van [](../../data-access/home.md)Gegevens.
 
 ## Aanhangsel {#appendix}
 
-In de volgende sectie vindt u aanvullende informatie over de toegang tot profielgegevens met de API.
+In de volgende sectie vindt u aanvullende informatie over de toegang tot [!DNL Profile] gegevens met behulp van de API.
 
 ### Parameters query {#query-parameters}
 
