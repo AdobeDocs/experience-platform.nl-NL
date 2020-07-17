@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Handleiding voor de gebruikersinterface van Segment Builder
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
+source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
 workflow-type: tm+mt
-source-wordcount: '2766'
+source-wordcount: '2750'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL Gebruikershandleiding voor Segment Builder]
+# [!DNL Segment Builder] gebruikershandleiding
 
 [!DNL Adobe Experience Platform Segmentation Service] verstrekt een RESTful API en gebruikersinterface voor het creëren van segmentdefinities van [!DNL Real-time Customer Profile] gegevens.
 
@@ -37,13 +37,13 @@ De evaluatiemethode kan streaming of batch zijn. Streaming segmenten worden voor
 
 De segmenten van de partij hebben extra informatie getoond, die zowel de laatste evaluatiedatum als de volgende evaluatiedatum voor de partij tonen.
 
-Als u in de rechterbovenhoek op Segment maken klikt, wordt de werkruimte van Segment Builder geopend. Hier kunt u een segmentdefinitie maken. ****
+Als u in de rechterbovenhoek op Segment maken klikt, wordt de werkruimte Segment Builder geopend. Hier kunt u een segmentdefinitie maken. ****
 
 ![](../images/segment-builder/segment-browse.png)
 
-## [!UICONTROL De werkruimte van Segment Builder]
+## [!DNL Segment Builder] werkruimte
 
-[!UICONTROL De Bouwer] van het segment verstrekt een rijke werkruimte die u toestaat om met [!DNL Profile] gegevenselementen in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
+[!DNL Segment Builder] biedt een rijke werkruimte waarmee u kunt werken met [!DNL Profile] gegevenselementen. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 
 ![](../images/segment-builder/segment-builder.png)
 
@@ -51,7 +51,7 @@ Als u in de rechterbovenhoek op Segment maken klikt, wordt de werkruimte van Seg
 
 De basisbouwstenen van segmentdefinities zijn **[!UICONTROL Attributen]** en **[!UICONTROL Gebeurtenissen]**. Daarnaast kunnen de kenmerken en gebeurtenissen in het bestaande **[!UICONTROL publiek]** ook worden gebruikt als componenten voor nieuwe definities.
 
-U kunt deze bouwstenen in de sectie van *Gebieden* op de linkerkant van de [!UICONTROL werkruimte van de Bouwer] van het Segment zien. *[!UICONTROL De gebieden]* bevatten een lusje voor elk van de belangrijkste bouwstenen: **[!UICONTROL Kenmerken]**, **[!UICONTROL Gebeurtenissen]** en **[!UICONTROL Soorten publiek]**.
+U kunt deze bouwstenen in de sectie van *[!UICONTROL Gebieden]* op de linkerkant van de [!DNL Segment Builder] werkruimte zien. *[!UICONTROL De gebieden]* bevatten een lusje voor elk van de belangrijkste bouwstenen: **[!UICONTROL Kenmerken]**, **[!UICONTROL Gebeurtenissen]** en **[!UICONTROL Soorten publiek]**.
 
 ![](../images/segment-builder/segment-fields.png)
 
@@ -95,7 +95,7 @@ U kunt ook naar [!UICONTROL Soorten publiek] zoeken met de zoekbalk, die de zoek
 
 ## Rule builder canvas {#rule-builder-canvas}
 
-Een segmentdefinitie is een inzameling van regels die worden gebruikt om zeer belangrijke kenmerken of gedrag van een doelpubliek te beschrijven. Deze regels worden gecreeerd gebruikend het canvas *[!UICONTROL van de]* regelbouwer, dat in het centrum van de Bouwer [!UICONTROL van het]Segment wordt gevestigd.
+Een segmentdefinitie is een inzameling van regels die worden gebruikt om zeer belangrijke kenmerken of gedrag van een doelpubliek te beschrijven. Deze regels worden gecreeerd gebruikend het canvas *[!UICONTROL van de]* regelbouwer, dat in het centrum van wordt gevestigd [!DNL Segment Builder].
 
 Als u een nieuwe regel wilt toevoegen aan de segmentdefinitie, sleept u een tegel van het tabblad *[!UICONTROL Velden]* en zet u deze neer op het canvas van de regelbuilder. Vervolgens krijgt u contextspecifieke opties, afhankelijk van het type gegevens dat u wilt toevoegen. Beschikbare gegevenstypen zijn: tekenreeksen, datums, [!DNL ExperienceEvents], [!UICONTROL gebeurtenistypen]en [!UICONTROL Soorten publiek].
 
@@ -105,7 +105,7 @@ Als u een nieuwe regel wilt toevoegen aan de segmentdefinitie, sleept u een tege
 
 U kunt een publiek van het lusje van het *[!UICONTROL Publiek]* op het canvas van de regelbouwer slepen en laten vallen om publiekslidmaatschap in de nieuwe segmentdefinitie te verwijzen. Dit staat u toe om publiekslidmaatschap als attribuut in de nieuwe segmentregel te omvatten of uit te sluiten.
 
-Voor [!DNL Platform] publiek dat gebruikend de Bouwer [!UICONTROL van het]Segment wordt gecreeerd, krijgt u de optie om het publiek in de reeks regels om te zetten die in de segmentdefinitie voor dat publiek werden gebruikt. Deze omzetting maakt een exemplaar van de regellogica, die dan kan worden gewijzigd zonder de originele segmentdefinitie te beïnvloeden. Zorg ervoor dat u recente wijzigingen in de segmentdefinitie hebt opgeslagen voordat u deze omzet in regellogica.
+Voor [!DNL Platform] publiek dat gebruikend [!DNL Segment Builder]wordt gecreeerd, wordt u gegeven de optie om het publiek in de reeks regels om te zetten die in de segmentdefinitie voor dat publiek werden gebruikt. Deze omzetting maakt een exemplaar van de regellogica, die dan kan worden gewijzigd zonder de originele segmentdefinitie te beïnvloeden. Zorg ervoor dat u recente wijzigingen in de segmentdefinitie hebt opgeslagen voordat u deze omzet in regellogica.
 
 >[!NOTE]
 >
@@ -113,11 +113,11 @@ Voor [!DNL Platform] publiek dat gebruikend de Bouwer [!UICONTROL van het]Segmen
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
-Als er conflicten optreden wanneer een publiek wordt omgezet in regels, probeert [!UICONTROL Segment Builder] de bestaande opties optimaal te behouden.
+Als er conflicten optreden wanneer een publiek wordt omgezet in regels, [!DNL Segment Builder] wordt geprobeerd de bestaande opties zo goed mogelijk te behouden.
 
 ### Codeweergave
 
-Alternatief, kunt u een code-gebaseerde versie van een regel bekijken die in de Bouwer [!UICONTROL van het]Segment wordt gecreeerd. Zodra u uw regel binnen het canvas van de regelbouwer hebt gecreeerd, kunt u de mening **[!UICONTROL van de]** Code selecteren om uw segment als PQL te zien.
+U kunt ook een op code gebaseerde versie weergeven van een regel die in de [!DNL Segment Builder]code is gemaakt. Zodra u uw regel binnen het canvas van de regelbouwer hebt gecreeerd, kunt u de mening **[!UICONTROL van de]** Code selecteren om uw segment als PQL te zien.
 
 ![](../images/segment-builder/code-view.png)
 
