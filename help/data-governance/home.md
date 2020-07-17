@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Beheer van gegevens Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 53225525feb1878aae58939338c1a94f98ec1607
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1342'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Gegevensstewards vormen de kern van gegevensbeheer. Deze rol is verantwoordelijk
 
 Marktdeelnemers zijn het eindpunt van gegevensbeheer. Ze vragen gegevens van de infrastructuur voor gegevensbeheer die is gemaakt door data stewards, wetenschappers en engineers. Marktdeelnemers omvatten een aantal verschillende specialiteiten onder de marketingparaplu, waaronder:
 
-* De analisten van de marketing verzoeken gegevens om begrip van klanten, zowel als individuen als in groepen (ook die als segmenten worden bekend) toe te laten.
+* De analisten van de marketing verzoeken gegevens om inzicht in klanten, zowel als individuen als in groepen (ook die als segmenten worden bekend) toe te laten.
 * De Specialisten van de marketing en Ontwerpers van de Ervaring gebruiken gegevens om nieuwe klantenervaringen te ontwerpen.
 
 
@@ -85,15 +85,6 @@ Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensste
 >Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten.
 
 Zie het [beleidsoverzicht](./policies/overview.md)voor meer informatie over het beleid en de marketingacties voor gegevensgebruik.
-
-## Toekomstige releases
-
-[!DNL Data Governance] biedt momenteel ondersteuning voor DULE-labeling op twee niveaus (gegevensset en veld). [!DNL Data Governance] ondersteunt ook de ontwikkeling en het beheer van beleidslijnen en marketingacties voor gegevensgebruik via de DULE- [!DNL Policy Service] API.
-
-De volgende versies zullen de volgende eigenschappen verstrekken:
-
-* Beleidshandhaving: Gebruik het beleidskader om beleid over verschillende patronen van de gegevenstoegang te adviseren en af te dwingen.
-* Controle: De activiteiten van de gegevenstoegang van het toezicht en identificeert en rapporteert over nalevingskwesties.
 
 ## Volgende stappen
 
