@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Productdocumentatie Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '6594'
+source-wordcount: '6593'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 **Toegangsbeheer:** {#access-control} Toegangsbeheer voor [!DNL Experience Platform] koppelingen naar gebruikers met toegangsmachtigingen en sandboxomgevingen via productprofielen in Adobe Admin Console.
 
-**Toegangstoets-id:** Toegangstoets-id is een unieke id die is gekoppeld aan een geheime toegangssleutel van Amazon S3. De toegangs belangrijkste identiteitskaart en geheime toegangssleutel worden gebruikt samen om AWS- verzoeken te ondertekenen.
+**Toegangstoets-id:** De belangrijkste identiteitskaart van de toegang is een uniek herkenningsteken dat met een [!DNL Amazon] S3 geheime toegangssleutel wordt geassocieerd. De toegangs belangrijkste identiteitskaart en geheime toegangssleutel worden gebruikt samen om AWS- verzoeken te ondertekenen.
 
 **Handeling:** In [!DNL Experience Platform Launch], is een actie een specifiek type van regelcomponent die bepaalt wat zou moeten gebeuren nadat een gebeurtenis voorkomt en de voorwaarden worden geëvalueerd en overgegaan.
 
@@ -330,7 +330,7 @@ ht-degree: 0%
 
 **Samenvoegingsbeleid:** Een samenvoegingsbeleid is een reeks regels die door worden gebruikt [!DNL Profile] om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en in een verenigde mening onder bepaalde voorwaarden zullen worden gecombineerd.
 
-**Mengsel:** Met een mix kunnen gebruikers herbruikbare velden uitbreiden die variabelen bevatten die een of meer kenmerken definiëren die in een schema moeten worden opgenomen of aan een klasse moeten worden toegevoegd.
+**Mengsel:** Met een mix kunnen gebruikers herbruikbare velden uitbreiden die variabelen bevatten die een of meer kenmerken definiëren die zijn bedoeld om in een schema te worden opgenomen of aan een klasse te worden toegevoegd.
 
 **Wijzigingsdatumkolom:** Het selecteren van een `Modified Date` kolom is een optie wanneer het specificeren van derdegegevens via een verbinding. Wanneer de `Delta` opslagstrategie wordt geselecteerd en de dataset veelvoudige datum met betrekking tot schema bevat, moet de gebruiker van het beschikbare datum/tijdtypeschema kiezen om de gewijzigde kolom van de datumsleutel te specificeren. `Modified Date` is niet beschikbaar als de `Overwrite` opslagstrategie is geselecteerd.
 
