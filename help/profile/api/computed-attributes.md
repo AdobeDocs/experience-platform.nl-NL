@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Berekende kenmerken - Real-time Customer Profile API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '2431'
+source-wordcount: '2404'
 ht-degree: 0%
 
 ---
@@ -19,19 +19,19 @@ ht-degree: 0%
 
 Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op basis van andere waarden, berekeningen en expressies. De berekende attributen werken op het profielniveau, betekenend kunt u waarden over alle verslagen en gebeurtenissen bijeenvoegen.
 
-Elk berekend kenmerk bevat een expressie, ofwel &quot;rule&quot;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren.
+Elk berekend kenmerk bevat een expressie, of &#39;regel&#39;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren.
 
 Deze gids zal u helpen om gegevens verwerkte attributen binnen Adobe Experience Platform beter te begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisCRUD verrichtingen gebruikend het `/config/computedAttributes` eindpunt.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van het [Real-time Profiel van de Klant API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar elke Experience Platform-API te kunnen uitvoeren.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van het [Real-time Profiel van de Klant API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een willekeurige [!DNL Experience Platform] API mogelijk te maken.
 
 ## Berekende kenmerken begrijpen
 
-Met Adobe Experience Platform kunt u eenvoudig gegevens uit meerdere bronnen importeren en samenvoegen om realtime klantprofielen te genereren. Elk profiel bevat belangrijke informatie met betrekking tot een persoon, zoals zijn contactgegevens, voorkeuren en aankoopgeschiedenis, die een 360 graden mening van de klant verstrekken.
+Met Adobe Experience Platform kunt u eenvoudig gegevens uit meerdere bronnen importeren en samenvoegen om te genereren [!DNL Real-time Customer Profiles]. Elk profiel bevat belangrijke informatie met betrekking tot een persoon, zoals zijn contactgegevens, voorkeuren en aankoopgeschiedenis, die een 360 graden mening van de klant verstrekken.
 
-Een deel van de informatie die in het profiel wordt verzameld, is gemakkelijk te begrijpen wanneer de gegevensvelden rechtstreeks worden gelezen (bijvoorbeeld &quot;voornaam&quot;), terwijl andere gegevens meerdere berekeningen vereisen of op andere velden en waarden vertrouwen om de informatie te genereren (bijvoorbeeld &quot;totaal voor levenslange aanschaf&quot;). Om deze gegevens in één oogopslag begrijpelijker te maken, kunt u met Platform **berekende kenmerken** maken die deze verwijzingen en berekeningen automatisch uitvoeren en de waarde in het juiste veld retourneren.
+Een deel van de informatie die in het profiel wordt verzameld, is gemakkelijk te begrijpen wanneer de gegevensvelden rechtstreeks worden gelezen (bijvoorbeeld &quot;voornaam&quot;), terwijl andere gegevens meerdere berekeningen vereisen of op andere velden en waarden vertrouwen om de informatie te genereren (bijvoorbeeld &quot;totaal voor levenslange aanschaf&quot;). Om deze gegevens in één oogopslag begrijpelijker te maken, [!DNL Platform] kunt u **[!UICONTROL berekende attributen]** tot stand brengen die deze verwijzingen en berekeningen automatisch uitvoeren, die de waarde op het aangewezen gebied terugkeren.
 
 De berekende attributen omvatten het creëren van een uitdrukking, of &quot;regel&quot;, die op inkomende gegevens werkt en de resulterende waarde in een profielattribuut of een gebeurtenis opslaat. Expressies kunnen op meerdere verschillende manieren worden gedefinieerd, zodat u kunt opgeven dat een regel alleen binnenkomende gebeurtenissen, binnenkomende gebeurtenis- en profielgegevens of binnenkomende gebeurtenissen, profielgegevens en historische gebeurtenissen evalueert.
 
@@ -39,9 +39,9 @@ De berekende attributen omvatten het creëren van een uitdrukking, of &quot;rege
 
 Bij gebruik van berekende kenmerken kan het gaan om eenvoudige berekeningen tot zeer complexe verwijzingen. Hier volgen een paar voorbeelden van gebruiksscenario&#39;s voor berekende kenmerken:
 
-1. **Percentage:** Een eenvoudig berekend kenmerk kan bestaan uit het opnemen van twee numerieke velden in een record en het splitsen van deze velden om een percentage te maken. U kunt bijvoorbeeld het totale aantal e-mails dat naar een individu is verzonden, opsplitsen in het aantal e-mails dat de persoon opent. Als u het resulterende berekende kenmerkveld bekijkt, wordt snel het percentage weergegeven van het totale aantal e-mails dat door het individu wordt geopend.
-1. **Toepassingsgebruik:** Een ander voorbeeld is de mogelijkheid om het aantal keren te verzamelen dat een gebruiker uw toepassing opent. Door het totale aantal geopende toepassingen te volgen, op basis van afzonderlijke open gebeurtenissen, kunt u speciale aanbiedingen of berichten aan gebruikers aanbieden op hun 100e open, waardoor u een diepere betrokkenheid bij uw merk aanmoedigt.
-1. **Levenstijdwaarden:** Het verzamelen van lopende totalen, zoals een waarde van de levenslange aankoop voor een klant, kan zeer moeilijk zijn. Dit vereist het bijwerken van het historische totaal telkens wanneer een nieuwe aankoopgebeurtenis plaatsvindt. Een gegevens verwerkt attribuut staat u toe om dit veel gemakkelijker te doen door de levenwaarde op één enkel gebied te handhaven dat automatisch na elke succesvolle koopgebeurtenis met betrekking tot de klant wordt bijgewerkt.
+1. **[!UICONTROL Percentage]:**Een eenvoudig berekend kenmerk kan bestaan uit het opnemen van twee numerieke velden in een record en het splitsen van deze velden om een percentage te maken. U kunt bijvoorbeeld het totale aantal e-mails dat naar een individu is verzonden, opsplitsen in het aantal e-mails dat de persoon opent. Als u het resulterende berekende kenmerkveld bekijkt, wordt snel het percentage weergegeven van het totale aantal e-mails dat door het individu wordt geopend.
+1. **[!UICONTROL Toepassingsgebruik]:**Een ander voorbeeld is de mogelijkheid om het aantal keren te verzamelen dat een gebruiker uw toepassing opent. Door het totale aantal geopende toepassingen te volgen, op basis van afzonderlijke open gebeurtenissen, kunt u speciale aanbiedingen of berichten aan gebruikers aanbieden op hun 100e open, waardoor u een diepere betrokkenheid bij uw merk aanmoedigt.
+1. **[!UICONTROL Levenstijdwaarden]:**Het verzamelen van lopende totalen, zoals een waarde van de levenslange aankoop voor een klant, kan zeer moeilijk zijn. Dit vereist het bijwerken van het historische totaal telkens wanneer een nieuwe aankoopgebeurtenis plaatsvindt. Een gegevens verwerkt attribuut staat u toe om dit veel gemakkelijker te doen door de levenwaarde op één enkel gebied te handhaven dat automatisch na elke succesvolle koopgebeurtenis met betrekking tot de klant wordt bijgewerkt.
 
 ## Een berekend kenmerk configureren
 
@@ -50,33 +50,33 @@ Om een gegevens verwerkt attribuut te vormen, moet u eerst het gebied identifice
 >[!NOTE]
 >Berekende kenmerken kunnen niet worden toegevoegd aan velden in door Adobe gedefinieerde combinaties. Het veld moet zich binnen de `tenant` naamruimte bevinden. Dit betekent dat het een veld moet zijn dat u definieert en toevoegt aan een schema.
 
-Om een gegevens verwerkt attributengebied met succes te bepalen, moet het schema voor Profiel worden toegelaten en als deel van het verenigingsschema voor de klasse verschijnen waarop het schema wordt gebaseerd. Voor meer informatie over profiel-toegelaten schema&#39;s en vakbonden, te herzien gelieve de sectie van de de ontwikkelaarsgids van de Registratie van het Schema over het [toelaten van een schema voor Profiel en het bekijken verenigingsschema](../../xdm/api/getting-started.md). Het wordt ook geadviseerd om de [sectie over unies](../../xdm/schema/composition.md) in de documentatie van de schemacompositie te herzien.
+Om een gegevens verwerkt attributengebied met succes te bepalen, moet het schema voor worden toegelaten [!DNL Profile] en als deel van het verenigingsschema voor de klasse verschijnen waarop het schema wordt gebaseerd. Voor meer informatie over [!DNL Profile]-toegelaten schema&#39;s en vakbonden, te herzien gelieve de sectie van de sectie van de [!DNL Schema Registry] ontwikkelaarsgids over het [toelaten van een schema voor Profiel en het bekijken verenigingsschema](../../xdm/api/getting-started.md). Het wordt ook geadviseerd om de [sectie over unies](../../xdm/schema/composition.md) in de documentatie van de schemacompositie te herzien.
 
-Het werkschema in deze zelfstudie gebruikt een profiel-toegelaten schema en volgt de stappen voor het bepalen van een nieuwe mengeling die het gegevens verwerkte attributengebied bevat en ervoor zorgt dat het correcte namespace is. Als u al een gebied hebt dat in correcte namespace binnen een profiel-toegelaten schema is, kunt u aan de stap voor het [creëren van een gegevens verwerkt attribuut](#create-a-computed-attribute)direct te werk gaan.
+De workflow in deze zelfstudie gebruikt een schema [!DNL Profile]-ingeschakeld en volgt de stappen voor het definiëren van een nieuwe mix die het berekende kenmerkveld bevat en om ervoor te zorgen dat dit de juiste naamruimte is. Als u al een gebied hebt dat in correcte namespace binnen een profiel-toegelaten schema is, kunt u aan de stap voor het [creëren van een gegevens verwerkt attribuut](#create-a-computed-attribute)direct te werk gaan.
 
 ### Een schema weergeven
 
-De stappen die volgen gebruiken het gebruikersinterface van het Adobe Experience Platform om van een schema de plaats te bepalen, een mengeling toe te voegen, en een gebied te bepalen. Als u verkiest om de Registratie API van het Schema te gebruiken, te verwijzen gelieve naar de ontwikkelaarsgids [van het](../../xdm/api/getting-started.md) Schemaregister voor stappen op hoe te om een mixin tot stand te brengen, een mengeling aan een schema toe te voegen, en een schema voor gebruik met het Profiel van de Klant in real time toe te laten.
+De stappen die volgen gebruiken het gebruikersinterface van het Adobe Experience Platform om van een schema de plaats te bepalen, een mengeling toe te voegen, en een gebied te bepalen. Als u liever de [!DNL Schema Registry] API gebruikt, raadpleegt u de ontwikkelaarsgids [voor het](../../xdm/api/getting-started.md) schemaregister voor stappen voor het maken van een mix, het toevoegen van een mix aan een schema en het inschakelen van een schema voor gebruik met [!DNL Real-time Customer Profile].
 
-Klik in de gebruikersinterface op **Schema** &#39;s in het linkerspoor en gebruik de zoekbalk op het tabblad *Bladeren* om snel het schema te zoeken dat u wilt bijwerken.
+Klik in de gebruikersinterface op **[!UICONTROL Schema]** &#39;s in het linkerspoor en gebruik de zoekbalk op het tabblad *[!UICONTROL Bladeren]* om snel het schema te zoeken dat u wilt bijwerken.
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
-Zodra u het schema hebt gevestigd, klik zijn naam om de Redacteur van het Schema te openen waar u uitgeeft aan het schema kunt maken.
+Als u het schema hebt gevonden, klikt u op de naam van het schema om het te openen [!DNL Schema Editor] waar u het schema kunt bewerken.
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
 ### Een mix maken
 
-Als u een nieuwe mix wilt maken, klikt u op **Toevoegen** naast *Mixins* in de sectie *Compositie* links in de editor. Hierdoor wordt het dialoogvenster **Toevoegen** geopend waarin u bestaande mixen kunt zien. Klik op het keuzerondje voor **Nieuwe mix** maken om de nieuwe mix te definiëren.
+Als u een nieuwe mix wilt maken, klikt u op **[!UICONTROL Toevoegen]** naast *Mixins* in de sectie *[!UICONTROL Compositie]* links in de editor. Hierdoor wordt het dialoogvenster **[!UICONTROL Toevoegen]** geopend waarin u bestaande mixen kunt zien. Klik op het keuzerondje voor **[!UICONTROL Nieuwe mix]** maken om de nieuwe mix te definiëren.
 
-Geef de mix een naam en een beschrijving en klik op Mengsel **toevoegen** wanneer u klaar bent.
+Geef de mix een naam en een beschrijving en klik op Mengsel **[!UICONTROL toevoegen]** wanneer u klaar bent.
 
 ![](../images/computed-attributes/Add-mixin.png)
 
 ### Een veld voor berekende kenmerken toevoegen aan het schema
 
-Het nieuwe mengsel moet nu worden weergegeven in de sectie *Mixins* onder *Compositie*. Klik op de naam van de mixin en de veelvoudige **Add gebiedsknopen** zullen in de sectie van de *Structuur* van de redacteur verschijnen.
+Het nieuwe mengsel moet nu worden weergegeven in de sectie *[!UICONTROL Mixins]* onder *[!UICONTROL Compositie]*. Klik op de naam van de mixin en de veelvoudige **[!UICONTROL Add gebiedsknopen]** zullen in de sectie van de *[!UICONTROL Structuur]* van de redacteur verschijnen.
 
 Selecteer het veld **** Toevoegen naast de naam van het schema om een veld op hoofdniveau toe te voegen. U kunt ook selecteren om het veld toe te voegen binnen het gewenste schema.
 
@@ -86,29 +86,29 @@ Nadat u op het veld **** Toevoegen hebt geklikt, wordt er een nieuw object geope
 
 ### Het veld configureren
 
-Gebruik de sectie *Eigenschappen* van veld aan de rechterkant van de editor om de benodigde informatie voor het nieuwe veld op te geven, zoals de naam, weergavenaam en het type.
+Gebruik de sectie *[!UICONTROL Eigenschappen]* van veld aan de rechterkant van de editor om de benodigde informatie voor het nieuwe veld op te geven, zoals de naam, weergavenaam en het type.
 
 >[!NOTE]
 >Het type voor het veld moet van hetzelfde type zijn als de berekende kenmerkwaarde. Als de berekende kenmerkwaarde bijvoorbeeld een tekenreeks is, moet het veld dat in het schema wordt gedefinieerd, een tekenreeks zijn.
 
-Klik vervolgens op **Toepassen** en typ de naam van het veld en het type in de sectie *Structuur* van de editor.
+Klik vervolgens op **[!UICONTROL Toepassen]** en typ de naam van het veld en het type in de sectie *[!UICONTROL Structuur]* van de editor.
 
 ![](../images/computed-attributes/Apply.png)
 
-### Schema inschakelen voor profiel
+### Schema inschakelen voor [!DNL Profile]
 
-Controleer voordat u verdergaat of het schema is ingeschakeld voor Profiel. Klik op de schemanaam in de sectie van de *Structuur* van de redacteur zodat het lusje van de Eigenschappen *van het* Schema verschijnt. Als de schuifregelaar **Profiel** blauw is, is het schema ingeschakeld voor Profiel.
+Controleer voordat u doorgaat of het schema is ingeschakeld voor [!DNL Profile]. Klik op de schemanaam in de sectie van de *[!UICONTROL Structuur]* van de redacteur zodat het lusje van de Eigenschappen *[!UICONTROL van het]* Schema verschijnt. Als de schuifregelaar **[!UICONTROL Profiel]** blauw is, is het schema ingeschakeld voor [!DNL Profile].
 
 >[!NOTE]
->Het inschakelen van een schema voor Profiel kan niet ongedaan worden gemaakt, dus als u op de schuifregelaar klikt nadat deze is ingeschakeld, hoeft u het risico niet te vergroten dat het schema wordt uitgeschakeld.
+>Het toelaten van een schema voor [!DNL Profile] kan niet ongedaan worden gemaakt, zodat als u op de schuif klikt zodra het is toegelaten, moet u het risico niet het onbruikbaar maken.
 
 ![](../images/computed-attributes/Profile.png)
 
-U kunt nu op **Opslaan** klikken om het bijgewerkte schema op te slaan en verder te gaan met de rest van de zelfstudie met behulp van de API.
+U kunt nu op **[!UICONTROL Opslaan]** klikken om het bijgewerkte schema op te slaan en verder te gaan met de rest van de zelfstudie met behulp van de API.
 
 ### Een berekend kenmerk maken {#create-a-computed-attribute}
 
-Met uw gegevens verwerkte kenmerkgebied geïdentificeerd, en bevestiging dat het schema voor Profiel wordt toegelaten, kunt u een gegevens verwerkt attribuut nu vormen.
+Met uw gegevens verwerkte kenmerkgebied geïdentificeerd, en bevestiging dat het schema voor wordt toegelaten [!DNL Profile], kunt u een gegevens verwerkt attribuut nu vormen.
 
 Begin door een POST- verzoek aan het `/config/computedAttributes` eindpunt met een verzoeklichaam te maken dat de details van de gegevens verwerkte attributen bevat die u wenst om tot stand te brengen.
 
@@ -151,7 +151,7 @@ curl -X POST \
 | `path` | Het pad naar het veld met het berekende kenmerk. Dit pad wordt gevonden binnen het `properties` kenmerk van het schema en mag de veldnaam NIET in het pad opnemen. Laat bij het schrijven van het pad de verschillende `properties` kenmerkniveaus weg. |
 | `{TENANT_ID}` | Als u niet vertrouwd met uw huurdersidentiteitskaart bent, gelieve te verwijzen naar de stappen voor het vinden van uw huurdersidentiteitskaart in de ontwikkelaarsgids [van de Registratie van het](../../xdm/api/getting-started.md#know-your-tenant_id)Schema. |
 | `description` | Een beschrijving van het berekende kenmerk. Dit is vooral handig als er meerdere berekende kenmerken zijn gedefinieerd, omdat hierdoor anderen binnen uw IMS-organisatie kunnen bepalen welk kenmerk correct moet worden berekend. |
-| `expression.value` | Een geldige PQL-expressie (Profile Query Language). Lees het [PQL-overzicht](../../segmentation/pql/overview.md)voor meer informatie over PQL en koppelingen naar ondersteunde query&#39;s. |
+| `expression.value` | Een geldige [!DNL Profile Query Language] (PQL) expressie. Lees het [PQL-overzicht](../../segmentation/pql/overview.md)voor meer informatie over PQL en koppelingen naar ondersteunde query&#39;s. |
 | `schema.name` | De klasse waarop het schema met het berekende kenmerkveld is gebaseerd. Voorbeeld: `_xdm.context.experienceevent` voor een schema op basis van de klasse XDM ExperienceEvent. |
 
 **Antwoord**
@@ -472,7 +472,7 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | Een geldige PQL-expressie (Profile Query Language). Lees het [PQL-overzicht](../../segmentation/pql/overview.md)voor meer informatie over PQL en koppelingen naar ondersteunde query&#39;s. |
+| `{NEW_EXPRESSION_VALUE}` | Een geldige [!DNL Profile Query Language] (PQL) expressie. Lees het [PQL-overzicht](../../segmentation/pql/overview.md)voor meer informatie over PQL en koppelingen naar ondersteunde query&#39;s. |
 
 **Antwoord**
 
