@@ -4,38 +4,39 @@ solution: Experience Platform
 title: Optie-outs respecteren
 topic: overview
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: f156679601c2ed0bb933a66a56661c29c1b9c778
+workflow-type: tm+mt
+source-wordcount: '954'
+ht-degree: 0%
 
 ---
 
 
 # Naleving van &quot;opt-out&quot;-verzoeken in segmenten
 
-Met het Experience Platform kunnen uw klanten weigeren-aanvragen betreffende het gebruik en de opslag van hun gegevens verzenden binnen het Real-time Klantprofiel. Deze &quot;opt-out&quot;-verzoeken maken deel uit van de California Consumer Privacy Act (CCPA), die de inwoners van Californië het recht geeft toegang te krijgen tot hun persoonsgegevens en deze te verwijderen en te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie).
+[!DNL Experience Platform] kunnen uw klanten aanvragen om te weigeren verzenden met betrekking tot het gebruik en de opslag van hun gegevens binnen [!DNL Real-time Customer Profile]. Deze &quot;opt-out&quot;-verzoeken maken deel uit van de [!DNL California Consumer Privacy Act] (CCPA), die de inwoners van Californië het recht geven hun persoonsgegevens te raadplegen en te verwijderen en te weten te komen of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie).
 
 Zodra een klant heeft gekozen-uit, is het belangrijk dat uw organisatie die opt-outs respecteert wanneer het produceren van publiek voor marketing activiteiten. In dit document worden belangrijke details beschreven met betrekking tot het naleven van de &quot;opt-out&quot;-verzoeken.
 
 ## Aan de slag
 
-Voor het uitvoeren van de optie om te weigeren is een goed begrip vereist van de verschillende services van het Adobe Experience Platform die u wilt gebruiken. Lees de documentatie voor de volgende services voordat u gaat werken met opt-out-verzoeken:
+Voor het naleven van de &quot;opt-out&quot;-verzoeken moet inzicht worden verkregen in de verschillende betrokken [!DNL Adobe Experience Platform] diensten. Lees de documentatie voor de volgende services voordat u gaat werken met opt-out-verzoeken:
 
-- [Klantprofiel](../profile/home.md)in realtime: Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [Adobe Experience Platform Segmentation Service](./home.md): Staat u toe om publiekssegmenten van de gegevens van het Profiel van de Klant in real time te bouwen.
-- [XDM (Experience Data Model)](../xdm/home.md): Het gestandaardiseerde kader waardoor Platform gegevens van de klantenervaring organiseert.
-- [Adobe Experience Platform Privacy Service](../privacy-service/home.md): Helpt organisaties om naleving van gegevensprivacyverordeningen te automatiseren die klantengegevens binnen Platform impliceren. Deze verordeningen omvatten:
-   - California Consumer Privacy Act (CCPA): Rechten op privacy van gegevens voor inwoners van Californië, met inbegrip van het recht op toegang tot en verwijdering van persoonsgegevens en om te weten of persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie).
-   - Algemene gegevensbeschermingsverordening (GDPR): Rechten op privacy van gegevens voor leden van de Europese Unie, waaronder het &quot;recht op toegang&quot; en het &quot;recht om te worden vergeten&quot;.
+- [!DNL Real-time Customer Profile](../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [!DNL Adobe Experience Platform Segmentation Service](./home.md): Staat u toe om publiekssegmenten van [!DNL Real-time Customer Profile] gegevens te bouwen.
+- [!DNL Experience Data Model (XDM)](../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): Helpt organisaties om naleving van de regels van de gegevensprivacy te automatiseren die klantengegevens binnen impliceren [!DNL Platform].
 
 ## Opt-out-mixen
 
-Om uit CCPA te respecteren opt-out verzoeken, moet één van de schema&#39;s die een deel van het unieschema uitmaken de noodzakelijke gebieden van de Optie van Gegevens van de Ervaring van het Model (XDM) bevatten. Er zijn twee combinaties die kunnen worden gebruikt om opt-outvelden toe te voegen aan een schema. Elk van deze combinaties wordt nader beschreven in de volgende secties:
+Om de optieverzoeken CCPA te respecteren moet een van de schema&#39;s die deel uitmaken van het unieschema de noodzakelijke (XDM) opt-out gebieden bevatten. [!DNL Experience Data Model] Er zijn twee combinaties die kunnen worden gebruikt om opt-outvelden toe te voegen aan een schema. Elk van deze combinaties wordt nader beschreven in de volgende secties:
 
 - [Profielprivacy](#profile-privacy): Wordt gebruikt om verschillende soorten opt-out vast te leggen (algemeen of verkoop/delen).
 - [Profielvoorkeuren — Details](#profile-preferences-details): Wordt gebruikt voor het vastleggen van optieverzoeken voor specifieke XDM-kanalen.
 
 Voor geleidelijke instructies op hoe te om een mengeling aan een schema toe te voegen, gelieve te verwijzen naar de &quot;Add a mixin&quot;sectie in de volgende XDM documentatie:
 - [Zelfstudie](../xdm/api/getting-started.md)voor schema Registry API.: Een schema maken met de API voor schemaregistratie.
-- [Zelfstudie](../xdm/tutorials/create-schema-ui.md)Schema-editor: Een schema maken met de gebruikersinterface van Platform.
+- [Zelfstudie](../xdm/tutorials/create-schema-ui.md)Schema-editor: Een schema maken met behulp van de gebruikersinterface van het Platform.
 
 Hier ziet u een voorbeeld van de mix van de optie Weigeren die in de gebruikersinterface aan een schema wordt toegevoegd:
 
@@ -43,16 +44,16 @@ Hier ziet u een voorbeeld van de mix van de optie Weigeren die in de gebruikersi
 
 De structuur van elke mix en een beschrijving van de velden die deze bijdragen aan het schema worden in de volgende secties nader beschreven.
 
-### Profielprivacy
+### [!DNL Profile Privacy]
 
-Met het mixin Profile Privacy kunt u twee soorten CCPA-verzoeken om te weigeren van klanten vastleggen:
+Het [!DNL Profile Privacy] mengen staat u toe om twee soorten opt-outverzoeken CCPA van klanten te vangen:
 
 1. Algemene opt-out
 2. Optie voor verkopen/delen
 
 ![](images/opt-outs/profile-privacy.png)
 
-De mix van de Privacy van het Profiel bevat de volgende gebieden:
+De [!DNL Profile Privacy] mix bevat de volgende velden:
 
 - Privacy opt-Outs (`privacyOptOuts`): Een array met een lijst met opt-out-objecten.
 - Type optie (`optOutType`): Het type opt-out. Dit veld is een opsomming met twee mogelijke waarden:
@@ -65,7 +66,7 @@ De mix van de Privacy van het Profiel bevat de volgende gebieden:
    - Inschakelen (`in`): De klant heeft zich aangemeld.
 - Tijdstempel uitschakelen (`timestamp`): Tijdstempel van het ontvangen opt-out-signaal.
 
-Om de volledige structuur van de mix van de Privacy van het Profiel te bekijken, gelieve te verwijzen naar de openbare bewaarplaats [van GitHub van](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM of voorproef de mixin gebruikend Platform UI.
+Om de volledige structuur van de [!DNL Profile Privacy] mix te bekijken, gelieve te verwijzen naar de [XDM openbare bewaarplaats](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) GitHub of voorproef de mixin gebruikend het Platform UI.
 
 ### Details van profielvoorkeuren
 
@@ -98,7 +99,7 @@ In het onderstaande voorbeeld ziet u hoe het OptInOut-object meerdere optiesigna
 }
 ```
 
-Als u de volledige structuur van de mix met profielvoorkeuren wilt bekijken, gaat u naar de openbare GitHub-opslagruimte [van](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) XDM of bekijkt u een voorvertoning van de mix met behulp van de Platform-interface.
+Om de volledige structuur van de de Details van de Voorkeur van het Profiel te bekijken mengen, te bezoeken gelieve de openbare bewaarplaats [van GitHub van](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) XDM of voorproef de mixin gebruikend [!DNL Platform] UI.
 
 ## Afhandeling van opt-outs in segmentatie
 
@@ -110,15 +111,15 @@ In de volgende secties ziet u hoe u de juiste velden toevoegt voor de twee typen
 
 ### Algemene opt-out
 
-De segmentatie houdt automatisch rekening met alle profielen die de vlag &quot;Algemene Opt-Out&quot;bevatten, die betekent dat die profielen niet in publiek of de uitvoer door gebrek zullen worden omvat. Het is echter aan te raden de juiste velden toe te voegen om ervoor te zorgen dat opted-out-profielen niet worden opgenomen in publiek- en marketingactiviteiten.
+[!DNL Segmentation] Hiermee worden automatisch alle profielen geaccepteerd die de markering &quot;[!UICONTROL Algemeen uitschakelen]&quot; bevatten. Dit betekent dat deze profielen niet standaard worden opgenomen in het publiek of de exportbewerking. Het is echter aan te raden de juiste velden toe te voegen om ervoor te zorgen dat opted-out-profielen niet worden opgenomen in publiek- en marketingactiviteiten.
 
-Dit kan worden gedaan gebruikend het gebruikersinterface van de Bouwer van het Segment door de **Gevoelige** attributen van de Privacy toe te voegen. In dit geval wordt het segment zo ingesteld dat het alleen diegenen omvat die hebben gekozen (wat betekent dat ze geen algemene &quot;opt-out&quot;-vlag hebben op hun profiel. Dit wordt gedaan door te verklaren dat het &quot;Opt-Out Type&quot;&quot;Algemene Opt-out&quot;en de &quot;Opt-uit Waarde&quot;&quot;Opt-in&quot;evenaart.
+Dit kan worden gedaan gebruikend het gebruikersinterface door de **[!UICONTROL attributen van de Privacy toe te voegen Opt-Outs]** . In dit geval wordt het segment zo ingesteld dat het alleen diegenen omvat die ervoor hebben gekozen (wat betekent dat ze geen algemene &quot;opt-out&quot;-vlag hebben op hun profiel. Dit wordt gedaan door te verklaren dat het &quot;Type[!UICONTROL van]Opt-uit&quot;&quot;[!UICONTROL Algemene Opt-uit]&quot;en de &quot;[!UICONTROL Opt-uit Waarde]&quot;gelijke &quot;[!UICONTROL Opt-in]&quot; is.
 
 ![](images/opt-outs/segment-general-opt-out.png)
 
 ### Optie voor verkopen/delen
 
-Als een gebruiker een verkoop/het delen opt-out vlag op hun profiel heeft wordt geplaatst, zou dit profiel niet meer voor om het even welke segmentverwezenlijking of marketing activiteiten moeten worden gebruikt. Om ervoor te zorgen dat deze markering wordt toegepast, moet het &quot;Uitschakelen Type&quot; gelijk zijn aan &quot;Uitschakelen van verkoop&quot; en moet de &quot;Uitschakelen waarde&quot; gelijk zijn aan &quot;Opt-In&quot;.
+Als een gebruiker een verkoop/het delen opt-out vlag op hun profiel heeft wordt geplaatst, zou dit profiel niet meer voor om het even welke segmentverwezenlijking of marketing activiteiten moeten worden gebruikt. Om ervoor te zorgen dat deze markering wordt toegepast, moet het &quot;[!UICONTROL Opt-Out Type]&quot; gelijk zijn aan &quot;[!UICONTROL Sales Sharing Opt-Out]&quot; en moet de &quot;[!UICONTROL Opt-Out Waarde]&quot; gelijk zijn aan &quot;[!UICONTROL Opt-in]&quot;.
 
 ![](images/opt-outs/segment-sales-sharing-opt-out.png)
 
@@ -130,4 +131,4 @@ In some instances, such as building a segment of people who have opted out, it m
 
 Voor meer informatie over segmentatie, zoals het werken met segmentdefinities en publiek via de API en gebruikersinterface, gelieve te beginnen door het [segmentatieoverzicht](./home.md)te lezen.
 
-Raadpleeg de documentatie [bij de](../privacy-service/home.md)privacyservice voor meer informatie over de privacy van gegevens binnen het platform, waaronder de manier waarop de privacyservice de automatische naleving van wettelijke en organisatorische privacyregels vergemakkelijkt.
+Raadpleeg de documentatie op voor meer informatie over de privacy van gegevens binnen [!DNL Platform]en over hoe u de automatische naleving van wettelijke en organisatorische privacyregels [!DNL Privacy Service] kunt vergemakkelijken. [!DNL Privacy Service](../privacy-service/home.md).
