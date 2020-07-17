@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Segmenteringsservice Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
+source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
 workflow-type: tm+mt
-source-wordcount: '2408'
+source-wordcount: '1986'
 ht-degree: 0%
 
 ---
 
 
-# Overzicht van segmentatieservice
+# Overzicht van de Adobe Experience Platform Segmentation Service
 
-De Dienst van de Segmentatie van het Adobe Experience Platform verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw gegevens van het Profiel van de Klant in real time te produceren. Deze segmenten worden centraal geconfigureerd en onderhouden op het Platform en zijn gemakkelijk toegankelijk voor elke Adobe-oplossing.
+De Dienst van de Segmentatie van het Adobe Experience Platform verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal geconfigureerd en onderhouden op het Platform en zijn gemakkelijk toegankelijk voor elke Adobe-oplossing.
 
-Dit document verstrekt een overzicht van de Dienst van de Segmentatie en de rol het in Adobe Experience Platform speelt.
+Dit document biedt een overzicht van [!DNL Segmentation Service] en de rol die het in Adobe Experience Platform speelt.
 
-## Aan de slag met Segmentatieservice
+## Getting started with [!DNL Segmentation Service]
 
 Het is belangrijk dat u de volgende belangrijke termen kent die in dit document worden gebruikt:
 
@@ -30,25 +30,25 @@ Het is belangrijk dat u de volgende belangrijke termen kent die in dit document 
 
 De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw profielopslag worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan.
 
-Zodra een segment conceptueel is bepaald wordt het gebouwd in Experience Platform. Doorgaans worden segmenten samengesteld door de marketeter of publieksspecialist, maar sommige organisaties geven de voorkeur aan het maken ervan door hun marketingafdeling, in samenwerking met hun gegevensanalisten. Bij het herzien van de gegevens die naar Platform worden verzonden, stelt de gegevensanalist de segmentdefinitie samen door te selecteren welke gebieden en waarden zullen worden gebruikt om de regels of voorwaarden van het segment te bouwen. Dit wordt gedaan gebruikend of UI of API.
+Zodra een segment conceptueel is gedefinieerd, wordt het ingebouwd [!DNL Experience Platform]. Doorgaans worden segmenten samengesteld door de marketeter of publieksspecialist, maar sommige organisaties geven de voorkeur aan het maken ervan door hun marketingafdeling, in samenwerking met hun gegevensanalisten. Bij het herzien van de gegevens die worden verzonden naar [!DNL Platform], stelt de gegevensanalist de segmentdefinitie samen door te selecteren welke gebieden en waarden zullen worden gebruikt om de regels of voorwaarden van het segment te bouwen. Dit wordt gedaan gebruikend of UI of API.
 
 ## Segmenten maken
 
-Of gecreeerd gebruikend API of het gebruiken van de Bouwer van het Segment, worden de segmenten uiteindelijk bepaald gebruikend de Taal van de Vraag van het Profiel (PQL). Dit is waar de conceptuele segmentdefinitie in de gebouwde taal wordt beschreven om profielen terug te winnen die aan de criteria voldoen. Zie het [PQL-overzicht](./pql/overview.md)voor meer informatie.
+Of ze nu zijn gemaakt met de API of met de API, segmenten [!DNL Segment Builder]worden uiteindelijk gedefinieerd met [!DNL Profile Query Language] (PQL). Dit is waar de conceptuele segmentdefinitie in de gebouwde taal wordt beschreven om profielen terug te winnen die aan de criteria voldoen. Zie het [PQL-overzicht](./pql/overview.md)voor meer informatie.
 
-Leren om segmenten in de Bouwer van het Segment (de implementatie UI van de Dienst van de Segmentatie) tot stand te brengen en te gebruiken, zie de gids [van de Bouwer van het](./ui/overview.md)Segment.
+Leren om segmenten in te creëren en te gebruiken [!DNL Segment Builder] (de implementatie UI van [!DNL Segmentation Service]), zie de gids [van de Bouwer van het](./ui/overview.md)Segment.
 
 Voor informatie over het bouwen van segmentdefinities die API gebruiken, zie de zelfstudie over het [creëren van publiekssegmenten gebruikend API](./tutorials/create-a-segment.md).
 
 >[!NOTE]
 >
->Als een schema wordt uitgebreid, moeten alle toekomstige uploads nieuwe toegevoegde gebieden dienovereenkomstig bijwerken. Voor meer informatie bij het aanpassen van het Model van de Gegevens van de Ervaring (XDM), bezoek het [Zelfstudie](../xdm/tutorials/create-schema-ui.md)van de Redacteur van het Schema.
+>Als een schema wordt uitgebreid, moeten alle toekomstige uploads nieuwe toegevoegde gebieden dienovereenkomstig bijwerken. Voor meer informatie bij het aanpassen [!DNL Experience Data Model] (XDM), bezoek het [Zelfstudie](../xdm/tutorials/create-schema-ui.md)van de Redacteur van het Schema.
 
 ## Segmenten evalueren
 
 ### Streaming segmentering
 
-Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan het Profiel van de Klant in real time. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
+Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-time Customer Profile]. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
 
 Lees de documentatie over [](./api/streaming-segmentation.md)streamingsegmentatie voor meer informatie over streamingsegmentatie.
 
@@ -66,11 +66,11 @@ Leren hoe te om tot een uitgevoerd segment toegang te hebben, zie het [studiepag
 
 Metagegevens van segmenten maken het indexeren mogelijk als een van uw segmenten opnieuw moet worden gebruikt en/of moet worden gecombineerd.
 
-Het samenstellen van uw segmenten (door of API of de Bouwer van het Segment) vereist dat u een segmentnaam bepaalt en beleid samenvoegt.
+Het samenstellen van uw segmenten (door of API of [!DNL Segment Builder]) vereist dat u een segmentnaam en fusiebeleid bepaalt.
 
 ### Segmentnamen
 
-Wanneer u een nieuw segment maakt, moet u een segmentnaam opgeven. De segmentnaam wordt gebruikt om een bepaald segment onder de inzameling te identificeren die door de Dienst van de Segmentatie wordt gebouwd. Segmentnamen moeten daarom beschrijvend, beknopt en uniek zijn.
+Wanneer u een nieuw segment maakt, moet u een segmentnaam opgeven. De segmentnaam wordt gebruikt om een bepaald segment onder de inzameling te identificeren die door wordt gebouwd [!DNL Segmentation Service]. Segmentnamen moeten daarom beschrijvend, beknopt en uniek zijn.
 
 >[!NOTE]
 >
@@ -78,8 +78,10 @@ Wanneer u een nieuw segment maakt, moet u een segmentnaam opgeven. De segmentnaa
 
 ### Beleid samenvoegen
 
-Het beleid van de fusie is regels die door Profiel worden gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en in een verenigde mening onder bepaalde voorwaarden zullen worden gecombineerd.
-Als er geen samenvoegbeleid is gedefinieerd, wordt het standaardsamenvoegbeleid voor Platforms gebruikt. Als u liever een samenvoegingsbeleid wilt gebruiken dat specifiek is voor uw organisatie, kunt u uw eigen beleid maken en dit markeren als de standaardinstelling van uw organisatie.
+Het beleid van de fusie is regels die door worden gebruikt [!DNL Profile] om te bepalen hoe de gegevens aan prioriteit zullen worden gegeven en in een verenigde mening onder bepaalde voorwaarden zullen worden gecombineerd.
+Als er geen samenvoegbeleid is gedefinieerd, wordt het standaardsamenvoegbeleid [!DNL Platform] gebruikt. Als u liever een samenvoegingsbeleid wilt gebruiken dat specifiek is voor uw organisatie, kunt u uw eigen beleid maken en dit markeren als de standaardinstelling van uw organisatie.
+
+Meer informatie over samenvoegingsbeleid vindt u in de handleiding voor [samenvoegingsbeleid](../profile/api/merge-policies.md).
 
 >[!NOTE]
 >
@@ -87,7 +89,7 @@ Als er geen samenvoegbeleid is gedefinieerd, wordt het standaardsamenvoegbeleid 
 
 ### Andere segmentmetagegevens
 
-Naast segmentnaam en samenvoegbeleid, biedt de Bouwer van het Segment u een extra &quot;segmentbeschrijving&quot;meta-gegevensgebied aan waar u het doel van uw segmentdefinitie kunt samenvatten.
+Naast segmentnaam en samenvoegbeleid, [!DNL Segment Builder] biedt u een extra &quot;segmentbeschrijving&quot;meta-gegevensgebied aan waar u het doel van uw segmentdefinitie kunt samenvatten.
 
 ## Geavanceerde segmentatiefuncties
 
@@ -100,7 +102,7 @@ Deze geavanceerde functies worden in de volgende secties nader besproken.
 
 ## Opeenvolgende segmentatie {#sequential}
 
-Een standaardreis van de gebruiker is sequentieel van aard.  Met Adobe Experience Platform kunt u een geordende reeks segmenten definiëren die deze reis weerspiegelen en zo reeksen gebeurtenissen vastleggen zoals deze zich voordoen. U kunt gebeurtenissen in hun gewenste orde schikken door de visuele gebeurtenischronologie in de Bouwer van het Segment te gebruiken.
+Een standaardreis van de gebruiker is sequentieel van aard. Met Adobe Experience Platform kunt u een geordende reeks segmenten definiëren die deze reis weerspiegelen en zo reeksen gebeurtenissen vastleggen zoals deze zich voordoen. U kunt gebeurtenissen in de gewenste volgorde rangschikken met de tijdlijn van de visuele gebeurtenis in de [!DNL Segment Builder]tijdlijn.
 
 Een voorbeeld van een klantenreis die opeenvolgende segmentatie zou vereisen zou productmening > product toevoegen > controle > Geen aankoop zijn.
 
@@ -152,7 +154,7 @@ De middelen van de gegevensarchitect omvatten toegang tot Webgegevens van klant 
 >
 >In dit voorbeeld gaan we ervan uit dat de gegevensarchitect al een id-naamruimte heeft ingesteld.
 
-Met behulp van de API koppelt de gegevensarchitect de sleutel van het ExperienceEvent-schema aan de &quot;products&quot;-klasse. Dit staat de gegevensarchitect toe om van de extra gebieden van de &quot;producten&quot;klasse gebruik te maken alsof zij aan het schema ExperienceEvent inheems zijn. Als laatste stap van het configuratiewerk, moet de gegevensarchitect de aangewezen gegevens in het Profiel van de Klant in real time brengen. Dit wordt gedaan door de &quot;producten&quot;dataset voor gebruik met Profiel toe te laten. Met het configuratiewerk volledig, of de gegevensarchitect of de telleraar kan het doelsegment in de Bouwer van het Segment bouwen.
+Met behulp van de API koppelt de gegevensarchitect de sleutel van het ExperienceEvent-schema aan de &quot;products&quot;-klasse. Dit staat de gegevensarchitect toe om van de extra gebieden van de &quot;producten&quot;klasse gebruik te maken alsof zij aan het schema ExperienceEvent inheems zijn. Als laatste stap van het configuratiewerk, moet de gegevensarchitect de aangewezen gegevens in brengen [!DNL Real-time Customer Profile]. Dit wordt gedaan door de &quot;producten&quot;dataset voor gebruik met toe te laten [!DNL Profile]. Met het configuratiewerk volledig, of de gegevensarchitect of de telleraar kan het doelsegment binnen bouwen [!DNL Segment Builder].
 
 Zie het overzicht [van de](../xdm/schema/composition.md#union) schemacompositie leren hoe te om verhoudingen over klassen te bepalen XDM.
 
@@ -194,58 +196,10 @@ Het is vaak complex om segmenten te maken en te kwalificeren voor e-mailcampagne
 
 Een andere traditionele uitdaging voor marketers is het creëren van advertenties om klanten met verlaten winkelwagentjes te richten. Hoewel de segmentdefinities deze uitdaging aanpasten, was er vóór de verbetering geen formele methode om onderscheid te maken tussen aangekochte en verlaten producten. Nu kunt u specifieke datasets tijdens segmentdefinitie richten.
 
-## Segmenteringsservicetypen
+## [!DNL Segmentation Service] gegevenstypen
 
-Alle XDM gegevenstypes worden gesteund binnen de Dienst van de Segmentatie. De regels die een segmentdefinitie vormen worden contextualiseerd door de volgende gegevenstypes.
+[!DNL Segmentation Service] ondersteunt diverse gegevenstypen, waaronder:
 
-### Tekenreeksgegevens
-
-Segmentdefinities gebruiken tekenreeksgegevens om niet-numerieke beperkingen voor segmentpubliek te definiëren, zoals &quot;landnaam&quot; of &quot;niveau van loyaliteitsprogramma&quot;.
-
-Tekenreeksgegevens worden opgenomen in segmentdefinities met behulp van logische, uitsluitende en uitsluitende instructies. Zodra een koordattribuut aan uw segmentdefinitie wordt toegevoegd, kunt u koord-relevante verklaringen gebruiken om het tegen andere koordgebieden te evalueren.
-
-| Type instructie | Voorbeelden |
-| -------------- | -------- |
-| Logisch | en, of |
-| Inclusief/exclusief | include, must exist, exclude, must not exist |
-| Vergelijking | equals, niet gelijk, bevat, begint met |
-
-
-### Datumgegevens
-
-Met datumgegevens kunt u op tijd gebaseerde context toewijzen aan uw segmentdefinities door specifieke begin- en einddatums te gebruiken of door datumrelevante instructies te gebruiken, zoals in de onderstaande tabel wordt getoond. Eén implementatie zou kunnen leiden tot een publiek van klanten die op elk moment *dit jaar* met uw merk hebben gewerkt en ook *in de afgelopen dagen* actief zijn geweest.
-
-| Voorbeeldveld | Datum-relevante verklaringen | Tijdlijn |
-| ------------- | ------------------------ | --------- |
-| person.firstPurchase | vandaag, gisteren, deze maand, dit jaar | Relevant aan de dag het segment werd gebouwd. |
-| person.lastPurchase | in het laatste geval, tijdens, vóór, na, binnen | Relevant binnen een bepaalde week/maand. |
-
-### Experience Events
-
-Als Adobe Experience Platform schema, registreert XDM ExperienceEvents expliciete en impliciete klanteninteractie met Platform-geïntegreerde toepassingen, met inbegrip van een momentopname van het systeem op het tijdstip dat de interactie plaatsvond. ExperienceEvents zijn feitenverslagen. Als dusdanig, zijn zij een gegevensbron beschikbaar aan u tijdens segmentdefinitie.
-
-Zoals in de onderstaande tabel wordt getoond, worden gebeurtenisgegevens weergegeven met behulp van trefwoorden die het gedrag van gebeurtenissen verfijnen en gebeurteniskenmerken opgeven.
-
-| Trefwoord | Gebruik |
-| ------- | --- |
-| Opnemen/uitsluiten | Beschrijft het gedrag van de gebeurtenis door het opnemen of weglaten van gegevens. |
-| Alle | Helpt het aantal in aanmerking komende segmenten te bepalen. |
-| Knop Tijdregel toepassen | Bevat datumgegevens. |
-| Gelijk aan, niet gelijk aan, begint met, niet met, eindigt niet met, eindigt niet met, bevat, bevat, niet bevat, bestaat, niet bestaat | Bevat tekenreeksgegevens. |
-
-### Segmenten
-
-De bestaande segmentdefinities kunnen ook als componenten van een nieuwe segmentdefinitie worden gebruikt, toevoegend hun attributen en op gebeurtenis-gebaseerde regels aan het nieuwe segment.
-
-### Soorten publiek
-
-Het externe publiek kan ook als componenten van een nieuwe segmentdefinitie worden gebruikt, toevoegend hun attributenregels aan het nieuwe segment.
-
-Momenteel wordt alleen Adobe Audience Manager ondersteund als publiek. Extra bronnen worden in de toekomst ingeschakeld.
-
-### Andere gegevenstypen
-
-Naast de hierboven vermelde gegevenstypen bevat de lijst ook de volgende gegevenstypen:
 - String
 - Uniforme resource-id
 - Enum
@@ -262,11 +216,13 @@ Naast de hierboven vermelde gegevenstypen bevat de lijst ook de volgende gegeven
 - Kaart
 - Gebeurtenissen
 
+Meer gedetailleerde informatie over deze ondersteunde gegevenstypen vindt u in het document [met](./data-types.md)ondersteunde gegevenstypen.
+
 ## Volgende stappen
 
-De Dienst van de segmentatie verstrekt een geconsolideerd werkschema om segmenten van gegevens van het Profiel van de Klant in real time te bouwen. Samenvattend:
+[!DNL Segmentation Service] biedt een geconsolideerde workflow voor het samenstellen van segmenten op basis van [!DNL Real-time Customer Profile] gegevens. Samenvattend:
 
-- Segmentatie is het proces waarbij een subset van profielen wordt gedefinieerd vanuit het profielarchief, zodat u gedrag of kenmerken van een gewenste verhandelbare groep kunt karakteriseren. De Dienst van de segmentatie maakt dit proces mogelijk.
+- [!DNL Segmentation] Dit is het proces waarbij u een subset van profielen definieert vanuit het profielarchief, zodat u gedrag of kenmerken van een gewenste verhandelbare groep kunt karakteriseren. [!DNL Segmentation Service] maakt dit proces mogelijk.
 - Wanneer het plannen van een segment, houd in mening dat een segment van, en gecombineerd met, een ander segment kan worden van verwijzingen voorzien.
 - Een segment kan van regels worden gebouwd die op profielgegevens, verwante tijdreeksgegevens, of allebei worden gebaseerd.
 - Segmenten kunnen op aanvraag of continu worden geëvalueerd. Wanneer geëvalueerd op bestelling, worden alle profielgegevens overgegaan door de segmentdefinities in één keer. Wanneer voortdurend geëvalueerd, stromen de gegevens door segmentdefinities aangezien het Platform ingaat.
