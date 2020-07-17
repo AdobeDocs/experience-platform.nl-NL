@@ -4,34 +4,32 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Segmentatieservice
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
 
 
-# Handleiding voor ontwikkelaars van Segmentatieservice
+# Getting started with [!DNL Segmentation Service] {#getting-started}
 
-De segmentatie staat u toe om segmenten te bouwen en publiek in Adobe Experience Platform van uw gegevens van het Profiel van de Klant in real time te produceren.
+De Dienst van de Segmentatie van het Adobe Experience Platform staat u toe om segmenten te bouwen en publiek in Adobe Experience Platform van uw [!DNL Real-time Customer Profile] gegevens te produceren.
 
-## Aan de slag
+De ontwikkelaarsgids vereist een werkend inzicht in de diverse diensten van de Experience Platform betrokken bij het gebruiken [!DNL Segmentation Service].
 
-Deze gids vereist een werkend inzicht in de diverse diensten van het Adobe Experience Platform betrokken bij het gebruiken van Segmentatie.
-
-- [Segmentatie](../home.md): Staat u toe om publiekssegmenten van de gegevens van het Profiel van de Klant in real time te bouwen.
-- [XDM-systeem](../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
-- [Klantprofiel](../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [!DNL Segmentation](../home.md): Staat u toe om publiekssegmenten van de gegevens van het Profiel van de Klant in real time te bouwen.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+- [!DNL Real-time Customer Profile](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om Segmentatie met succes te gebruiken gebruikend API.
+De volgende secties bevatten aanvullende informatie die u moet weten om te kunnen werken met de [!DNL Segmentation] API.
 
-### API-voorbeeldaanroepen lezen
+## API-voorbeeldaanroepen lezen
 
-De documentatie van de Dienst API van de Segmentatie verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
+De API-documentatie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. [!DNL Segmentation Service] Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
-### Vereiste koppen
+## Vereiste koppen
 
 De API documentatie vereist ook u om de [authentificatiezelfstudie](../../tutorials/authentication.md) te hebben voltooid om vraag aan Platform eindpunten met succes te maken. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
@@ -39,13 +37,13 @@ De API documentatie vereist ook u om de [authentificatiezelfstudie](../../tutori
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Voor alle aanvragen voor [!DNL Platform] API&#39;s is een header nodig die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Raadpleeg de documentatie bij het overzicht van [sandboxen voor meer informatie over het werken met sandboxen in Experience Platform](../../sandboxes/home.md).
+>Raadpleeg de documentatie bij het overzicht van [!DNL Experience Platform]sandboxen voor meer informatie over het werken met sandboxen in [de](../../sandboxes/home.md)sandboxen.
 
 <!-- ## Estimates
 
@@ -95,4 +93,4 @@ Het onderzoek van het segment wordt gebruikt aan onderzoek en index configureerb
 
 ## Volgende stappen
 
-Beginnen het maken vraag gebruikend de Segmentatie API, selecteer één van sub-gidsen om te leren hoe te om specifieke op segmentatie betrekking hebbende eindpunten te gebruiken. Meer over het werken met segmenten gebruikend het Platform UI, zie de de gebruikersgids [van de](../ui/overview.md)Segmentatie.
+Als u aanroepen wilt uitvoeren met de [!DNL Segmentation Service] API, selecteert u een van de beschikbare eindpunthulplijnen met behulp van de linkernavigatie of het overzicht van de [ontwikkelaarsgids](./overview.md)
