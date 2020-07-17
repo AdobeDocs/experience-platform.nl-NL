@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Edge-projecties - Real-time API voor klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1900'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Edge-projectieconfiguraties en eindpunten van doelen
 
-Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in real time te drijven, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe Experience Platform maakt deze realtime toegang tot gegevens mogelijk via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Adobe-toepassingen zoals Adobe Target en Adobe Campaign gebruiken bijvoorbeeld randen voor persoonlijke ervaringen van klanten in real-time. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Deze handleiding bevat gedetailleerde instructies voor het gebruik van de Real-Time Customer Profile API voor het werken met randprojecties, inclusief bestemmingen en configuraties.
+Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in real time te drijven, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe Experience Platform maakt deze realtime toegang tot gegevens mogelijk via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Adobe-toepassingen zoals Adobe Target en Adobe Campaign gebruiken bijvoorbeeld randen voor persoonlijke ervaringen van klanten in real-time. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Deze handleiding bevat gedetailleerde instructies voor het gebruik van de [!DNL Real-time Customer Profile] API voor het werken met randprojecties, inclusief doelen en configuraties.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van het [Real-time Profiel van de Klant API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar elke Experience Platform-API te kunnen uitvoeren.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)handleiding. Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een willekeurige [!DNL Experience Platform] API mogelijk te maken.
 
 >[!NOTE]
 >Voor aanvragen die een payload (POST, PUT, PATCH) bevatten, is een `Content-Type` header vereist. In dit document `Content-Type` wordt meer dan één teken gebruikt. Gelieve te letten speciaal op de kopballen in de steekproefvraag om ervoor te zorgen u het correcte `Content-Type` voor elk verzoek gebruikt.
@@ -325,7 +325,7 @@ De verwijderaanvraag retourneert HTTP-status 204 (Geen inhoud) en een lege antwo
 
 ## Projectieconfiguraties
 
-Projectieconfiguraties bieden informatie over de gegevens die aan elke rand beschikbaar moeten zijn. In plaats van een schema van het Model van de Gegevens van de Ervaring (XDM) aan de rand te projecteren, verstrekt een projectie slechts specifieke gegevens, of gebieden, van het schema. Uw organisatie kan meer dan één projectieconfiguratie voor elk schema bepalen XDM.
+Projectieconfiguraties bieden informatie over de gegevens die aan elke rand beschikbaar moeten zijn. In plaats van een volledig [!DNL Experience Data Model] (XDM) schema aan de rand te projecteren, verstrekt een projectie slechts specifieke gegevens, of gebieden, van het schema. Uw organisatie kan meer dan één projectieconfiguratie voor elk schema bepalen XDM.
 
 ### Alle projectieconfiguraties weergeven
 
@@ -349,7 +349,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **Verzoek**
 
-De volgende aanvraag bevat een lijst met alle projectieconfiguraties die zijn gekoppeld aan de XDM-schemacategorie Persoonlijk profiel (Experience Data Model). Voor meer informatie over XDM en zijn rol binnen Platform, gelieve te beginnen door het [XDM systeemoverzicht](../../xdm/home.md)te lezen.
+Het volgende verzoek maakt een lijst van alle projectieconfiguraties verbonden aan de [!DNL Experience Data Model] schemaklasse, [!DNL XDM Individual Profile]. Voor meer informatie over XDM en zijn rol binnen [!DNL Platform], gelieve te beginnen door het [XDM systeemoverzicht](../../xdm/home.md)te lezen.
 
 ```shell
 curl -X GET \
