@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK die SDK installeert
 description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 seo-description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 translation-type: tm+mt
-source-git-commit: 90afc28d41878cbed90fc05176276a30d8aebe09
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 0%
 
 # De SDK installeren {#installing-the-sdk}
 
-De SDK van het Web van het Adobe Experience Platform is beschikbaar op een netwerk van de inhoudslevering (CDN) voor u aan gebruik. U kunt naar dit bestand verwijzen of het downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in een geminificeerde en niet-geminiaterde versie. De niet-geminificeerde versie is handig voor foutopsporingsdoeleinden.
+Het Adobe Experience Platform [!DNL Web SDK] is beschikbaar op een netwerk van de inhoudslevering (CDN) voor u aan gebruik. U kunt naar dit bestand verwijzen of het downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in een geminificeerde en niet-geminiaterde versie. De niet-geminificeerde versie is handig voor foutopsporingsdoeleinden.
 
 * GeMinificeerde versie: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
 * Niet-geminificeerde versie: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## De code toevoegen {#adding-the-code}
 
-De eerste stap in het uitvoeren van het Web SDK van het Adobe Experience Platform is de volgende &quot;basiscode&quot;zo hoog mogelijk in de markering van uw HTML te kopiëren en te kleven: `<head>`
+De eerste stap bij het implementeren van het Adobe Experience Platform [!DNL Web SDK] is het zo hoog mogelijk kopiëren en plakken van de volgende &quot;basiscode&quot; in de `<head>` tag van uw HTML:
 
 ```markup
 <script>
@@ -54,11 +54,11 @@ Deze basiscode laadt, naast het maken van een algemene functie, ook extra code i
 
 ## Ondersteuning voor Internet Explorer {#support-internet-explore}
 
-Deze SDK maakt gebruik van beloften, een methode om de voltooiing van asynchrone taken mee te delen. De [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) -implementatie die door de SDK wordt gebruikt, wordt native ondersteund door alle doelbrowsers behalve Internet Explorer. Als u de SDK in Internet Explorer wilt gebruiken, moet u over `window.Promise` veelvouden [](https://remysharp.com/2010/10/08/what-is-a-polyfill)beschikken.
+Deze SDK maakt gebruik van beloften, een methode om de voltooiing van asynchrone taken mee te delen. De [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) -implementatie die door de SDK wordt gebruikt, wordt native ondersteund door alle doelbrowsers behalve [!DNL Internet Explorer]. Als u de SDK wilt gebruiken [!DNL Internet Explorer], moet u `window.Promise` gepolymeerd [](https://remysharp.com/2010/10/08/what-is-a-polyfill)zijn.
 
 U kunt als volgt bepalen of u al een `window.Promise` polyvulling hebt:
 
-1. Open uw website in Internet Explorer.
+1. Open uw website in [!DNL Internet Explorer].
 1. Open de foutopsporingsconsole van de browser.
 1. Typ `window.Promise` de code in de console en druk op Enter.
 
