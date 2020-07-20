@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Segmentation Service
 translation-type: tm+mt
-source-git-commit: a1f80b86a1e761c15d567821b13c7533b7fcf622
+source-git-commit: 82067c3bfa6d80cd5f5dcc6644cdbcacbae85053
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 2%
+source-wordcount: '111'
+ht-degree: 3%
 
 ---
 
@@ -15,8 +15,11 @@ ht-degree: 2%
 
 - [Overzicht](home.md)
 - [Segmenteringsgegevenstypen](data-types.md)
-- Segmentatie-API {#api}
+- Handleiding voor ontwikkelaars van segment-API{#api}
+   - [Overzicht](api/overview.md)
    - [Aan de slag](api/getting-started.md)
+   - [Exporttaken](api/export-jobs.md)
+   - [Voorvertoningen en ramingen](api/previews-and-estimates.md)
    - [Segmentdefinities](api/segment-definitions.md)
    - [Segmenttaken](api/segment-jobs.md)
    - [Segmentzoekopdracht](api/segment-search.md)
