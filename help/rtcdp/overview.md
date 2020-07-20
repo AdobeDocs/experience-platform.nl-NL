@@ -1,34 +1,39 @@
 ---
-title: Real-time overzicht van klantgegevensplatform
-seo-title: Real-time overzicht van klantgegevensplatform
-description: Overzicht van het Real-Time Customer Data Platform
-seo-description: Overzicht van het Real-Time Customer Data Platform
+title: Real-time overzicht van het Platform van klantgegevens
+seo-title: Real-time overzicht van het Platform van klantgegevens
+description: Overzicht van het Platform van de Gegevens van de Klant in real time
+seo-description: Overzicht van het Platform van de Gegevens van de Klant in real time
 translation-type: tm+mt
-source-git-commit: 08b35c862472308fbec282a7727035fb3924d19b
+source-git-commit: c16232179701aa40ae06da45e0581d70d0437191
+workflow-type: tm+mt
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
 
-# Overzicht van het Adobe Real-Time Customer Data Platform
+# Overzicht van het Platform voor klantgegevens in realtime van Adobe
 
-Adobe Real-time Customer Data Platform (CDP in realtime) is gebaseerd op het Adobe Experience Platform en helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren door middel van intelligente beslissingen tijdens de reis van de klant. CDP in real time combineert veelvoudige bronnen van ondernemingsgegevens om verenigde profielen in real time tot stand te brengen die kunnen worden gebruikt om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
+Het Adobe Experience Platform van de Gegevens van de Klant van Adobe in real time (CDP in real time) is gebaseerd op Platform van de Gegevens van de Klant van Adobe helpt bedrijven bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samenbrengen om klantenprofielen tot stand te brengen die kunnen worden gebruikt om gepersonaliseerde klantenervaringen over alle kanalen en apparaten in echt te verstrekken - tijd.
 
-Het platform van de Gegevens van de Klant in real time omvat hulpmiddelen voor gegevensbeheer, identiteitsbeheer, geavanceerde segmentatie, en gegevenswetenschap zodat u profielen kunt bouwen en publiek bepalen, evenals rijke inzichten af te leiden terwijl het kunnen strikte beleid van het gegevensbeheer afdwingen.
+CDP in real time omvat hulpmiddelen voor gegevensbeheer, identiteitsbeheer, geavanceerde segmentatie, en gegevenswetenschap zodat u profielen kunt bouwen en publiek bepalen, evenals rijke inzichten af te leiden terwijl het kunnen strikte beleid van het gegevensbeheer afdwingen.
 
-Adobe maakt verbinding met een groot ecosysteem van partners, om nog maar te zwijgen van native integratie met Adobe Experience Cloud, zodat u dit publiek naadloos kunt activeren en klanten overal een geweldige ervaring kunt bieden, van on-site of in-app personalisatie tot e-mail, betaalde media, callcenters, verbonden apparaten en nog veel meer.
+Adobe Real-time Customer Data Platform maakt verbinding met een groot ecosysteem van partners, om nog maar te zwijgen van de native integratie met Adobe Experience Cloud, zodat u dit publiek naadloos kunt activeren en klanten overal een geweldige ervaring kunt bieden, van on-site of in-app personalisatie tot e-mail, betaalde media, callcenters, aangesloten apparaten en nog veel meer.
 
-Met CDP in real time, kunt u:
+Met het Platform van de Gegevens van de Klant in real time, kunt u:
 
-* Zorg voor één weergave van uw klant met een stroomsgewijze verzameling van klantgegevens in de hele onderneming.
-* Beheer profielen op verantwoordelijke wijze met vertrouwde governance en privacycontroles voor bekende en onbekende id&#39;s.
+* Bereik één enkele mening van uw klant door gegevens van over de onderneming te combineren.
+* Beheer profielen op verantwoordelijke wijze met vertrouwde governance en privacycontroles voor bekende en anonieme id&#39;s.
 * Genereer activeerbare inzichten en schaal publiek met AI en machine leren aangedreven door Adobe Sensei en gebouwd voor marketers.
 * Lever gepersonaliseerde ervaringen in real time over alle kanalen en bestemmingen.
 
-## Aanvullende informatie
+## Extra informatie
 
-De volgende documentatieonderwerpen worden aanbevolen wanneer u begint te werken met het Adobe Real-time Customer Data Platform:
+Als u meer wilt weten over Adobe Experience Platform, leest u eerst het overzicht [van het](../landing/home.md)Experience Platform.
 
-* [Aan de slag](get-started.md)
+De volgende documentatie wordt aanbevolen om u te helpen aan de slag te gaan met Real-time Customer Data Platform:
+
+* [Hoe te beginnen met Real-time CDP](get-started.md)
 * [Hoe kan ik gegevens invoeren](sources/sources-overview.md)
 * [Profielen openen](profile/profile-overview.md)
 * [Hoe te om segmenten te bouwen](segmentation/segmentation-overview.md)
