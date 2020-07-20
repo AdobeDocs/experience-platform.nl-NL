@@ -1,27 +1,27 @@
 ---
 product: adobe experience platform
 audience: user
-user-guide-title: Real-Time Customer Data Platform Help
+user-guide-title: Hulp bij realtime Platform klantgegevens
 translation-type: tm+mt
-source-git-commit: fc8bdc6a46e0b64f29d89a36b0810f7312200616
+source-git-commit: b0068c0ef0897d5d4ec578f0c97b20aef3b2931c
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '440'
 ht-degree: 2%
 
 ---
 
 
-# Hulp bij realtime klantgegevensplatform {#rtcdp}
+# Hulp bij realtime Platform klantgegevens {#rtcdp}
 
-* [Overzicht van producten](overview.md)
-* Gegevensplatform voor realtime klanten {#intro}
+* [CDP-overzicht in realtime](overview.md)
+* Getting started {#intro}
    * [Aan de slag](get-started.md)
    * [Overzicht van cijfers](home-page-dashboards.md)
 * Beheer {#admin}
    * [Overzicht van beheer](administration/admin-overview.md)
 * Gegevenssets {#datasets}
    * [Gegevenssets](datasets/dataset.md)
-   * [Gegevenskwaliteit op platform](datasets/data-quality.md)
+   * [Gegevenskwaliteit op Platform](datasets/data-quality.md)
 * Doelen {#destinations}
    * [Overzicht van doelen](destinations/destinations-overview.md)
    * [Doeltypen en -categorieën](/help/rtcdp/destinations/destination-types.md)
@@ -32,7 +32,7 @@ ht-degree: 2%
       * [Overzicht van de doelcatalogus](destinations/destinations-catalog.md)
       * Adobe-doelen{#adobe-destinations}
          * [Overzicht van Adobe-doelen](destinations/adobe-destinations.md)
-         * [Adobe-campagne](destinations/adobe-campaign-destination.md)
+         * [Adobe Campaign](destinations/adobe-campaign-destination.md)
       * Reclamebestemmingen{#advertising-destinations}
          * [Overzicht van advertentiebestemmingen](destinations/advertising-destinations.md)
          * [Adobe Advertising Cloud-extensie](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
@@ -52,11 +52,11 @@ ht-degree: 2%
          * [LinkedIn Insight-tagextensie](/help/rtcdp/destinations/linkedin-extension.md)
          * [Pinterest Conversion Tracking extension](destinations/pinterest-extension.md)
          * [Twitter Universal Website Tag-extensie](destinations/twitter-uwt-extension.md)
-      * Analysedoelen {#analytics-destinations}
-         * [Overzicht van analysedoelen](destinations/analytics-destinations.md)
+      * Analytics-bestemmingen {#analytics-destinations}
+         * [Overzicht Analytics-bestemmingen](destinations/analytics-destinations.md)
          * [Adform Website Tracking extension](/help/rtcdp/destinations/adform-extension.md)
          * [Adobe Analytics-extensie](/help/rtcdp/destinations/adobe-analytics-extension.md)
-         * [Adobe Media Analytics voor audio- en video-extensie](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
+         * [Adobe Media Analytics for Audio and Video extension](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
          * [Clicktale extensie](/help/rtcdp/destinations/clicktale-extension.md)
          * [Contentsquare-extensie](/help/rtcdp/destinations/contentsquare-extension.md)
          * [Decibel-extensie](/help/rtcdp/destinations/decibel-extension.md)
@@ -64,7 +64,7 @@ ht-degree: 2%
          * [Dialoogtoevoeging](/help/rtcdp/destinations/dialogtech-extension.md)
          * [Google Global Site Tag Analytics-extensie](/help/rtcdp/destinations/gtag-analytics-extension.md)
          * [Google Universal Analytics-extensie](/help/rtcdp/destinations/google-universal-analytics-extension.md)
-         * [JW Player Analytics-extensie (Bèta)](/help/rtcdp/destinations/jw-player-analytics-extension.md)
+         * [JW Player Analytics-extensie (bèta)](/help/rtcdp/destinations/jw-player-analytics-extension.md)
          * [Nielsen BSDK-extensie](destinations/nielsen-bsdk-extension.md)
          * [Nielsen IMA Handler extension](destinations/nielsen-ima-extension.md)
          * [Nielsen VideoJS Player Handler extension](destinations/nielsen-videojs-extension.md)
@@ -80,12 +80,12 @@ ht-degree: 2%
          * [Amazon S3-bestemming](destinations/amazon-s3-destination.md)
          * [Azure Event Hubs-bestemming](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [SFTP-bestemming](destinations/sftp-destination.md)
-      * Gebieden van het Platform voor gegevensbeheer {#dmp-destinations}
-         * [Overzicht van doelen van het gegevensbeheerplatform](destinations/dmp-destinations.md)
-         * [Publiek Manager DIL-extensie](/help/rtcdp/destinations/aam-dil-extension.md)
+      * Platforms voor gegevensbeheer {#dmp-destinations}
+         * [Overzicht van gegevensbeheerdoelen voor Platforms](destinations/dmp-destinations.md)
+         * [Audience Manager DIL-extensie](/help/rtcdp/destinations/aam-dil-extension.md)
       * E-mailmarketingdoelen{#email-destinations}
          * [Overzicht van e-mailmarketingdoelen](destinations/email-marketing-destinations.md)
-         * [Adobe-campagne](destinations/adobe-campaign-destination.md)
+         * [Adobe Campaign](destinations/adobe-campaign-destination.md)
          * [Bizible Analytics-extensie](/help/rtcdp/destinations/bizible-extension.md)
          * [Marketo-extensie](destinations/marketo-extension.md)
          * [Marketo Munchkin-extensie](destinations/marketo-munchkin-extension.md)
@@ -94,7 +94,7 @@ ht-degree: 2%
          * [PebblePost-extensie](destinations/pebblepost-extension.md)
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch-extensies{#launch-extensions}
-         * [Overzicht van de Launch-extensies van Experience Platform](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
+         * [Overzicht van extensies voor Experience Platforms Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
       * Aanpassingsdoelen {#personalization-destinations}
          * [Overzicht van personalisatiedoelen](/help/rtcdp/destinations/personalization-destinations.md)
          * [Adobe Target-extensie](/help/rtcdp/destinations/adobe-target-extension.md)
@@ -131,16 +131,16 @@ ht-degree: 2%
 * Privacy en gegevensbeheer {#privacy}
    * [Privacyoverzicht](privacy/privacy-overview.md)
    * [Overzicht van gegevensbeheer](privacy/data-governance-overview.md)
-* Klantprofiel in realtime {#profile}
+* Profielen {#profile}
    * [Profieloverzicht](profile/profile-overview.md)
    * [Identiteiten en naamruimten](profile/identities-overview.md)
    * [Beleid samenvoegen](profile/merge-policies.md)
    * [Profielviewer](profile/profile-viewer.md)
-* Segmentering {#segmentation}
+* Segmenten {#segmentation}
    * [Overzicht van segmentatie](segmentation/segmentation-overview.md)
    * [Handleiding voor het maken van segmenten](segmentation/segment-builder-guide.md)
 * Bronnen {#sources}
    * [Overzicht van bronnen](sources/sources-overview.md)
    * [Websitetags implementeren met Adobe Launch](sources/launch.md)
-* [Releaseopmerkingen](https://www.adobe.com/go/platform-release-notes-en)
-* [Verklarende woordenlijst](https://www.adobe.com/go/platform-glossary-en)
+* [Opmerkingen bij de release Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Woordenlijst Experience Platform](https://www.adobe.com/go/platform-glossary-en)
