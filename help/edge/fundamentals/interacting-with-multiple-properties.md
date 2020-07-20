@@ -1,12 +1,12 @@
 ---
 title: Interactie met meerdere eigenschappen
 seo-title: Adobe Experience Platform Web SDK Interactie met meerdere eigenschappen
-description: Leer hoe te met de veelvoudige eigenschappen van SDK van het Web van het Platform van de Ervaring in wisselwerking staan
-seo-description: Leer hoe te met de veelvoudige eigenschappen van SDK van het Web van het Platform van de Ervaring in wisselwerking staan
+description: Leer hoe te met de veelvoudige eigenschappen van SDK van het Web van het Experience Platform in wisselwerking te staan
+seo-description: Leer hoe te met de veelvoudige eigenschappen van SDK van het Web van het Experience Platform in wisselwerking te staan
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
@@ -66,4 +66,4 @@ Zorg ervoor dat u de `configure` opdracht voor elke instantie uitvoert voordat u
 
 ## Beperkingen
 
-Om conflicten met cookies te voorkomen, kan slechts één instantie van Adobe Experience Platform Web SDK binnen een pagina een bepaalde versie hebben `edgeConfigId`.  Op dezelfde manier kan slechts één geval van het Web SDK van Adobe Experience Platform een bepaalde hebben `orgId`.
+Om conflicten met cookies te voorkomen, kan slechts één exemplaar van het Adobe Experience Platform [!DNL Web SDK] op een pagina een bepaalde pagina hebben `edgeConfigId`.  Op dezelfde manier [!DNL Web SDK] kan slechts één geval van Adobe Experience Platform een bepaalde hebben `orgId`.
