@@ -4,19 +4,19 @@ seo-title: Variabelen automatisch toegewezen in Analytics met Web SDK van Adobe 
 description: Leer welke Variabelen automatisch in Analytics met het Web SDK van het Experience Platform worden toegewezen
 seo-description: Leer welke Variabelen automatisch in Analytics met het Web SDK van het Experience Platform worden toegewezen
 translation-type: tm+mt
-source-git-commit: a7c8830c5c8152b1f21373a506b2fff97d43c40a
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '543'
 ht-degree: 0%
 
 ---
 
 
-# Variabelen automatisch toegewezen in Analytics
+# Variabelen automatisch toegewezen in [!DNL Analytics]
 
-Hieronder volgt een lijst met variabelen die het Edge Network van het Adobe Experience Platform automatisch toewijst aan Analytics.
+Hieronder ziet u een lijst met variabelen die het Adobe Experience Platform [!DNL Edge Network] automatisch opneemt [!DNL Analytics].
 
-| XDM-veldpad | Analytics Query String / HTTP Header | Beschrijving |
+| XDM-veldpad | [!DNL Analytics Query String] / HTTP-koptekst | Beschrijving |
 | ---------- | ------------------------- | -------- |
 | `commerce.order.purchaseID` | `pi` | PURCHASEID-toewijzing voor queryparameter AppMeturement. |
 | `commerce.order.currencyCode` | `cc` | Toewijzing van de query voor de parameter CURRENCY voor AppMeasurement. |
