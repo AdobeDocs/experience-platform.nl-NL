@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Overzicht van eindpunt van taken exporteren
+title: Eindpunt van taken exporteren
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3e39333207ef6c94b6d792be33a4605f185ff5ab
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1497'
 ht-degree: 1%
 
 ---
 
 
-# Overzicht van eindpunt van taken exporteren
+# Eindpunt van taken exporteren
 
 De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. U kunt het `/export/jobs` eindpunt in de Segmentatie API van het Adobe Experience Platform gebruiken, die u toestaat programmatically om, uitvoerbanen terug te winnen tot stand te brengen en te annuleren.
+
+>[!NOTE]
+>
+>Deze handleiding heeft betrekking op het gebruik van exportbanen in de [!DNL Segmentation API]Unie. Zie de handleiding over [!DNL Real-time Customer Profile] exporttaken in de profiel-API voor informatie over het beheren van exporttaken voor [gegevens](../../profile/api/export-jobs.md)
 
 ## Aan de slag
 
