@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Hulp bij realtime klantprofiel
 translation-type: tm+mt
-source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
+source-git-commit: 635f8cf8173cc7db2032f2181848b0ce1e9095cc
 workflow-type: tm+mt
-source-wordcount: '81'
+source-wordcount: '83'
 ht-degree: 1%
 
 ---
@@ -30,5 +30,6 @@ ht-degree: 1%
    * [Gegevensset configureren voor profiel en identiteit](tutorials/dataset-configuration.md)
    * [Meer zelfstudies](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html)
 * [Verwerking van privacyverzoeken](privacy.md)
+* [Handleiding voor probleemoplossing](troubleshooting.md)
 * [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
 * [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
