@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor veelgestelde vragen over Adobe Experience Platforms en probleemoplossing
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: 635f8cf8173cc7db2032f2181848b0ce1e9095cc
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '1962'
 ht-degree: 1%
 
 ---
@@ -142,7 +142,7 @@ De volgende statuscodes kunnen worden gevonden op elke [!DNL Experience Platform
 
 | Statuscode | Beschrijving | Mogelijke oorzaken |
 --- | --- | ---
-| 400 | Ongeldig verzoek | Het verzoek is niet correct samengesteld, bevat geen sleutelinformatie en/of bevat een onjuiste syntaxis. |
+| 400 | Ongeldig verzoek | Het verzoek is onjuist samengesteld, bevat geen sleutelinformatie en/of bevat een onjuiste syntaxis. |
 | 401 | Verificatie mislukt | De aanvraag heeft geen verificatiecontrole doorstaan. Uw toegangstoken ontbreekt of is ongeldig. Zie de [sectie voor tokenfouten](#oauth-token-is-missing) hieronder voor meer informatie. |
 | 403 | Verboden | De bron is gevonden, maar u hebt niet de juiste referenties om deze te bekijken. |
 | 404 | Niet gevonden | De gevraagde bron is niet gevonden op de server. De bron is mogelijk verwijderd of het gevraagde pad is onjuist ingevoerd. |
@@ -248,6 +248,6 @@ Hieronder volgt een lijst met probleemoplossingsgidsen en API-naslagdocumentatie
 | Experience Data Model (XDM) | [Schema-register-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [Handleiding Veelgestelde vragen over XDM-systemen en probleemoplossing](../xdm/troubleshooting-guide.md) |
 | Identiteitsservice | [Identiteitsservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [Handleiding voor het oplossen van problemen met identiteitsservice](../identity-service/troubleshooting-guide.md) |
 | Query-service | [Query Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [Handleiding voor het oplossen van problemen bij Query Service](../query-service/troubleshooting-guide.md) |
-| Klantprofiel in realtime | [Real-time API voor klantprofiel](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) |  |
+| Klantprofiel in realtime | [Real-time API voor klantprofiel](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [Handleiding voor probleemoplossing voor profielen](../profile/troubleshooting.md) |
 | Sandboxen | [Sandbox-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Richtlijnen voor het oplossen van problemen met sandboxen](../sandboxes/troubleshooting-guide.md) |
 | Segmentatie | [Segmentatie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
