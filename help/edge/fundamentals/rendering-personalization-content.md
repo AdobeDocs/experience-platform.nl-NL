@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK gepersonaliseerde inhoud renderen
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven
 seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Overzicht van opties voor personalisatie
 
-De SDK van het Web van de Adobe Experience Platform steunt het vragen van de verpersoonlijkingsoplossingen bij Adobe, met inbegrip van Adobe Target. Er zijn twee wijzen voor verpersoonlijking: ophalen, inhoud die automatisch kan worden gerenderd en inhoud die de ontwikkelaar moet renderen. De SDK biedt ook mogelijkheden om flikkering te [beheren](../../edge/solution-specific/target/flicker-management.md).
+Het Adobe Experience Platform [!DNL Web SDK] biedt ondersteuning voor het opvragen van persoonlijke oplossingen bij Adobe, waaronder Adobe Target. Er zijn twee wijzen voor verpersoonlijking: ophalen, inhoud die automatisch kan worden gerenderd en inhoud die de ontwikkelaar moet renderen. De SDK biedt ook mogelijkheden om flikkering te [beheren](../../edge/solution-specific/target/flicker-management.md).
 
 ## Inhoud automatisch renderen
 
@@ -92,7 +92,7 @@ Dit zal een lijst van besluiten als voorwerp JSON voor elke besluiten terugkeren
 
 >[!TIP]
 >
-> Als u Target-bereik gebruikt als een box op de server, zijn alleen alle aanvragen tegelijk in plaats van afzonderlijk ingediend. Het globale mbox wordt altijd verzonden.
+> Als u [!DNL Target] bereik gebruikt, wordt het veld &#39;mBox&#39; op de server weergegeven, alleen zijn het aanvragen in één keer in plaats van afzonderlijk. Het globale mbox wordt altijd verzonden.
 
 ### Automatische inhoud ophalen
 
