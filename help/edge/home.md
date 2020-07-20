@@ -4,9 +4,9 @@ seo-title: Help bij Adobe Experience Platform Web SDK
 description: Leer welke SDK van het Web van het Adobe Experience Platform is en hoe het kan worden gebruikt.
 seo-description: klanten van de Adobe Experience Cloud in staat stellen te communiceren met de verschillende services in de Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '429'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Wat is SDK van het Web van Adobe Experience Platform
 
-Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van de Adobe Experience Cloud via het Edge Network van het Adobe Experience Platform kunnen communiceren met de verschillende services in de Experience Cloud.
+Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van de Adobe Experience Cloud kunnen communiceren met de verschillende services in de  [!DNL Experience Cloud] via Adobe [!DNL Experience Platform Edge Network].
 
-De volgende video geeft een overzicht van het Web SDK van het Adobe Experience Platform en het Netwerk van de Rand.
+De volgende video geeft een overzicht van het Adobe Experience Platform [!DNL Web SDK] en [!DNL Edge Network].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -29,11 +29,11 @@ SDK van het Web van het Adobe Experience Platform vervangt de volgende SDKs:
 * AT.js
 * DIL.js
 
-Dit is niet alleen een omslag rond bestaande bibliotheken. Het is een volledige herschrijving. Het doel is een einde te maken aan de uitdagingen waarbij tags in de juiste volgorde moeten worden afgevuurd, inconsistentie met bibliotheekversieproblemen en een beter beheer van afhankelijkheden. Het is een nieuwe manier om de Experience Cloud te implementeren en het is een [open bron](https://github.com/adobe/alloy).
+Dit is niet alleen een omslag rond bestaande bibliotheken. Het is een volledige herschrijving. Het doel is een einde te maken aan de uitdagingen waarbij tags in de juiste volgorde moeten worden afgevuurd, inconsistentie met bibliotheekversieproblemen en een beter beheer van afhankelijkheden. Het is een nieuwe manier om de richtlijn uit te voeren [!DNL Experience Cloud] en het is een [open bron](https://github.com/adobe/alloy).
 
-Naast een nieuwe bibliotheek is er een nieuw eindpunt dat de HTTP-aanvragen naar Adobe-oplossingen stroomlijnt. Vóór, stuurde Visitor.js een blokkerende vraag naar de dienst van bezoekersidentiteitskaart, toen stuurde AT.js een vraag naar Adobe Target, stuurde DIL.js een vraag naar Adobe Audience Manager, en tenslotte stuurde AppMeasurement.js een vraag naar Adobe Analytics. Deze nieuwe bibliotheek en eindpunt kunnen een identiteitskaart terugwinnen, een [!DNL Target] ervaring halen, gegevens verzenden naar Audience Manager, en de gegevens tot het Adobe Experience Platform in één enkele vraag overgaan.
+Naast een nieuwe bibliotheek is er een nieuw eindpunt dat de HTTP-aanvragen naar Adobe-oplossingen stroomlijnt. Vóór, stuurde Visitor.js een blokkerende vraag naar de dienst van bezoekersidentiteitskaart, toen stuurde AT.js een vraag naar Adobe Target, stuurde DIL.js een vraag naar Adobe Audience Manager, en tenslotte stuurde AppMeasurement.js een vraag naar Adobe Analytics. Deze nieuwe bibliotheek en eindpunt kunnen een identiteitskaart terugwinnen, een [!DNL Target] ervaring halen, gegevens verzenden naar [!DNL Audience Manager], en de gegevens tot het Adobe Experience Platform in één enkele vraag overgaan.
 
-De volgende video toont SDK van het Web van het Adobe Experience Platform en het Netwerk van de Rand in actie. In het videovoorbeeld wordt één aanroep naar Adobe uitgevoerd die gegevens naar Experience Platform, Analytics, Audience Manager en Target verzendt.
+In de volgende video ziet u het Adobe Experience Platform [!DNL Web SDK] en [!DNL Edge Network] de actie. In het videovoorbeeld wordt één aanroep naar Adobe uitgevoerd die gegevens verzendt naar [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]en [!DNL Target].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
