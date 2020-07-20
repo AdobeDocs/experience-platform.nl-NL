@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van Adobe Experience Platform Segmentation Service
 topic: guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Platform Segmentation Service] kunt u segmenten maken en publiek genereren [!DNL Adobe Experience Platform] op basis van uw [!DNL Real-time Customer Profile] gegevens.
 
-De [!DNL Segmentation Service] API verstrekt veelvoudige eindpunten die u toestaan om uw segmenteringsverrichtingen in programmatically te beheren [!DNL Experience Platform]. Dit overzichtsdocument verstrekt inleiding op hoog niveau aan elk van deze eindpunten, en verbindingen aan hun bijbehorende eindpuntgidsen voor details. Alvorens de individuele eindpuntgidsen te lezen, gelieve te verwijzen naar de [begonnen gids](getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
+De [!DNL Segmentation Service] API verstrekt veelvoudige eindpunten die u toestaan om uw segmenteringsverrichtingen in programmatically te beheren [!DNL Experience Platform]. Dit overzichtsdocument verstrekt inleiding op hoog niveau aan elk van deze eindpunten, en verbindingen aan hun bijbehorende eindpuntgidsen voor details. Alvorens de individuele eindpuntgidsen te lezen, gelieve te verwijzen naar de [begonnen gids](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
 
 Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, raadpleegt u de API-naslaggids voor [segmentatieservice](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml).
 
@@ -24,7 +24,7 @@ Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, raadpleegt
 
 De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. Met het `/export/jobs` eindpunt kunt u alle exporttaken ophalen, een nieuwe exporttaak maken, details van een specifieke exporttaak ophalen of een specifieke exporttaak annuleren.
 
-Voor meer informatie bij het gebruiken van dit eindpunt, te lezen gelieve de gids [van het de](./export-jobs.md)uitvoerbaaneindpunt.
+Voor meer informatie bij het gebruiken van dit eindpunt, gelieve te lezen de gids [van het de eindpunt van](./export-jobs.md)uitvoerbanen.
 
 ## Voorvertoningen en ramingen
 
