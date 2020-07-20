@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK snel starten met starten
 description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Web van het Experience Platform om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Web van het Experience Platform om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: 9d58693646f472e84f04a64c4ad66f61dc5d3eba
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '543'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Welkom
 
-In deze handleiding worden de verschillende stappen beschreven voor het instellen van de SDK van het Web Adobe Experience Platform in Adobe Launch. U moet over toestemmingen beschikken en op de lijst van gewenste personen zijn om deze eigenschap te gebruiken. Neem contact op met uw CSM als u op de wachtlijst wilt staan. Als u deze functie wilt gebruiken, moet u bovendien:
+In deze handleiding worden de verschillende stappen beschreven voor het instellen van het Adobe Experience Platform [!DNL Web SDK] in Adobe Launch. U moet over toestemmingen beschikken en op de lijst van gewenste personen zijn om deze eigenschap te gebruiken. Neem contact op met uw CSM als u op de wachtlijst wilt staan. Als u deze functie wilt gebruiken, moet u bovendien:
 
 - Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als u al een CNAME voor Adobe Analytics hebt, moet u die gebruiken. Testen in ontwikkeling werkt zonder CNAME, maar u hebt er een nodig voordat u naar productie gaat
 - Gebruik de nieuwste versie van de service Bezoeker-id
@@ -29,13 +29,13 @@ U kunt een configuratie-id maken met het gereedschap [](../fundamentals/edge-con
 
 ## Een schema voorbereiden
 
-Het Netwerk van de Rand van het Experience Platform neemt gegevens als XDM. XDM is een gegevensformaat dat u schema&#39;s laat bepalen. Het schema bepaalt hoe het Netwerk van de Rand verwacht dat de gegevens worden geformatteerd. Om gegevens te verzenden zult u uw schema moeten bepalen. Controleer of u het volgende hebt voltooid:
+De [!DNL Experience Platform Edge Network] gegevens worden als XDM gebruikt. XDM is een gegevensformaat dat u schema&#39;s laat bepalen. Het schema bepaalt hoe de gegevens [!DNL Edge Network] verwacht worden geformatteerd. Om gegevens te verzenden zult u uw schema moeten bepalen. Controleer of u het volgende hebt voltooid:
 
 1. [Een schema maken](../../xdm/tutorials/create-schema-ui.md)
-2. Voeg de AEP Web SDK ExperienceEvent Mixin aan het schema toe u creeerde.
+2. Voeg de AEP- [!DNL Web SDK ExperienceEvent] mix toe aan het schema dat u hebt gemaakt.
 3. Creeer een Dataset van het schema u creeerde.
 
-De volgende video is bedoeld om u in het creëren van een schema, dataset, en het stromen bronschakelaar voor uw gegevens van SDK van het Web te steunen.
+De volgende video is bedoeld om u in het creëren van een schema, dataset, en het stromen bronschakelaar voor uw [!DNL Web SDK] gegevens te steunen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
@@ -47,13 +47,13 @@ Voor meer details over verschillende configuratieopties, zie het [Vormen SDK](..
 
 ## Een gegevenselement maken op basis van uw schema
 
-Maak in Adobe Launch een gegevenselement dat naar het schema verwijst door de extensie te wijzigen in AEP Web SDK en het type in te stellen op XDM Object. Hierdoor wordt uw schema geladen en kunt u gegevenselementen toewijzen in verschillende delen van het schema.
+Maak in Adobe Launch een gegevenselement dat naar het schema verwijst door de extensie te wijzigen in AEP [!DNL Web SDK] en het type in te stellen op XDM Object. Hierdoor wordt uw schema geladen en kunt u gegevenselementen toewijzen in verschillende delen van het schema.
 
 ![Date-element in Launch](../../assets/edge_data_element.png)
 
 ## Een gebeurtenis verzenden
 
-Nadat de extensie is geïnstalleerd, begint u gebeurtenissen te verzenden door een actie &quot;sendEvent&quot; van de SDK-extensie van AEP Web toe te voegen aan een regel. Vergeet niet het gegevenselement dat u net als de XDM-gegevens aan de gebeurtenis hebt gemaakt, toe te voegen. We raden u aan ten minste één gebeurtenis te verzenden telkens wanneer een pagina wordt geladen.
+Nadat de extensie is geïnstalleerd, begint u met het verzenden van gebeurtenissen door een actie &quot;sendEvent&quot; van de AEP- [!DNL Web SDK] extensie toe te voegen aan een regel. Vergeet niet het gegevenselement dat u net als de XDM-gegevens aan de gebeurtenis hebt gemaakt, toe te voegen. We raden u aan ten minste één gebeurtenis te verzenden telkens wanneer een pagina wordt geladen.
 
 Zie Gebeurtenissen [bijhouden voor meer informatie over het bijhouden van gebeurtenissen](../fundamentals/tracking-events.md).
 
