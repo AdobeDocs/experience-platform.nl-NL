@@ -1,12 +1,12 @@
 ---
 title: Ondersteunende toestemming
-seo-title: Voorkeuren voor Adobe Experience Platform Web SDK-toestemming ondersteunen
-description: Leer hoe u voorkeuren voor toestemming ondersteunt met Experience Platform Web SDK
-seo-description: Leer hoe u voorkeuren voor toestemming ondersteunt met Experience Platform Web SDK
+seo-title: Voorkeur voor webSDK van Adobe Experience Platform ondersteunen
+description: Leer hoe u toestemmingsvoorkeuren met Experience Platform Web SDK kunt ondersteunen
+seo-description: Leer hoe u toestemmingsvoorkeuren met Experience Platform Web SDK kunt ondersteunen
 translation-type: tm+mt
-source-git-commit: c86ae6d887f52d8bb4b78dadc06060791c7a02c0
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Omdat de gebruiker ervoor koos om te weigeren, worden de beloftes die van eerder
 
 >[!NOTE]
 >
->Momenteel ondersteunt de SDK alleen het `general` doel. Hoewel wij van plan zijn een robuustere reeks doelen of categorieën te ontwikkelen die aan de verschillende mogelijkheden en productaanbiedingen van Adobe zullen beantwoorden, is de huidige implementatie een alles of niets benadering van opt-in.  Dit geldt alleen voor de Adobe Experience Platform Web SDK en NIET voor andere Adobe JavaScript-bibliotheken.
+>Momenteel ondersteunt de SDK alleen het `general` doel. Hoewel wij van plan zijn een robuustere reeks doelen of categorieën te ontwikkelen die aan de verschillende mogelijkheden en productaanbiedingen van Adobe zullen beantwoorden, is de huidige implementatie een alles of niets benadering van opt-in.  Dit geldt alleen voor het Adobe Experience Platform [!DNL Web SDK] en NIET voor andere Adobe JavaScript-bibliotheken.
 
 ## Voorkeuren voor blijvende toestemming
 
