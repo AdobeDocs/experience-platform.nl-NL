@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Segmenttaken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2327ce9a87647fb2416093d4a27eb7d4dc4aa4d7
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '993'
 ht-degree: 1%
 
 ---
 
 
-# Doel segmenttaken
+# Eindpunt segmenttaken
 
 Een segmentbaan is een asynchroon proces dat tot een nieuw publiekssegment leidt. Het verwijst naar een [segmentdefinitie](./segment-definitions.md), evenals om het even welk [fusiebeleid](../../profile/api/merge-policies.md) die controleert hoe de [!DNL Real-time Customer Profile] fusies overlappende attributen over uw profielfragmenten samenvoegen. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen.
 
