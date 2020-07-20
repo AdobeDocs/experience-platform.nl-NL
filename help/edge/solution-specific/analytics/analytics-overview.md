@@ -4,9 +4,9 @@ seo-title: Gegevens verzenden naar Adobe Analytics met Adobe Experience Platform
 description: Meer informatie over het verzenden van gegevens naar Adobe Analytics met Experience Platform Web SDK
 seo-description: Meer informatie over het verzenden van gegevens naar Adobe Analytics met Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 890004b54cb4daf08f188147ed5c97d56e4055fb
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Gegevens verzenden naar Adobe Analytics
 
-De Adobe Experience Platform Web SDK kan gegevens verzenden naar Adobe Analytics. Dit werkt door te vertalen `xdm` in een indeling die Adobe Analytics kan gebruiken.
+De Adobe Experience Platform [!DNL Web SDK] kan gegevens verzenden naar Adobe Analytics. Dit werkt door te vertalen `xdm` in een indeling die Adobe Analytics kan gebruiken.
 
 ## Instellen
 
-Adobe Analytics haalt automatisch de gegevens op die u verzendt als u een rapportsuite hebt toegewezen in de gebruikersinterface van Customer Config. Hier kunt u één of meerdere rapporten aan een bepaalde config in kaart brengen. Nadat een rapportsuite is toegewezen, beginnen de gegevens automatisch te stromen.
+Adobe Analytics haalt de gegevens die u verzendt automatisch op als u een rapportsuite hebt toegewezen in de gebruikersinterface van Customer Config. Hier kunt u één of meerdere rapporten aan een bepaalde config in kaart brengen. Nadat een rapportsuite is toegewezen, beginnen de gegevens automatisch te stromen.
 
 ## Automatisch toegewezen gegevens
 
-Het Adobe Experience Platform Edge Network wijst automatisch veel XDM-variabelen toe. De volledige lijst met automatisch toegewezen variabelen wordt [hier](../analytics/automatically-mapped-vars.md)weergegeven.
+Het Adobe Experience Platform wijst automatisch veel XDM-variabelen [!DNL Edge Network] toe. De volledige lijst met automatisch toegewezen variabelen wordt [hier](../analytics/automatically-mapped-vars.md)weergegeven.
 
 ## Handmatig toegewezen gegevens
 
