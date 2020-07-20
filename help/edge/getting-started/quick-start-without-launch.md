@@ -4,9 +4,9 @@ seo-title: 'Snelle start voor Web SDK van Adobe Experience Platform '
 description: Snelle startgids voor het gebruiken van het Web SDK van het Experience Platform om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van het Web SDK van het Experience Platform om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '515'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Welkom
 
-Deze gids leidt u door de verschillende manieren aan opstelling het Web SDK van het Adobe Experience Platform. Als u deze functie wilt kunnen gebruiken, moet u op de lijst van gewenste personen staan. Neem contact op met uw CSM als u op de wachtlijst wilt staan.
+Deze handleiding leidt u door de verschillende manieren om het Adobe Experience Platform in te stellen [!DNL Web SDK]. Als u deze functie wilt kunnen gebruiken, moet u op de lijst van gewenste personen staan. Neem contact op met uw CSM als u op de wachtlijst wilt staan.
 
-- Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als je al een CNAME voor Analytics hebt, moet je die gebruiken. Het testen in ontwikkeling werkt zonder CNAME maar u hebt er een nodig voordat u naar productie gaat
-- Het recht hebben op Platform van gegevens van Adobe Experience Platforms.  Als u geen Platform hebt gekocht, zullen wij u van de Stichting van de Diensten van de Gegevens van het Experience Platform voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
+- Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als u al een CNAME voor hebt, [!DNL Analytics]zou u dat moeten gebruiken. Het testen in ontwikkeling werkt zonder CNAME maar u hebt er een nodig voordat u naar productie gaat
+- Het recht hebben op Adobe Experience Platform [!DNL Data Platform].  Als u geen Platform hebt aangeschaft, ontvangen wij u gratis [!DNL Experience Platform Data Services Foundation] een beperkte gebruiksmogelijkheid met de SDK.
 - Gebruik de nieuwste versie van de service Bezoeker-id
 
 ## Een configuratie-id maken
 
-U kunt een configuratie-id maken met het gereedschap [](../fundamentals/edge-configuration.md) Edge-configuratie in Adobe Launch, zelfs als u de functies voor tagbeheer niet gebruikt. Dit staat u toe om het Netwerk van de Rand toe te laten om gegevens naar de diverse oplossingen te verzenden. Nadere informatie over het vinden van elke optie vindt u in de pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) .
+U kunt een configuratie-id maken met het gereedschap [](../fundamentals/edge-configuration.md) Edge-configuratie in Adobe Launch, zelfs als u de functies voor tagbeheer niet gebruikt. Dit staat u toe om toe te laten [!DNL Edge Network] om gegevens naar de diverse oplossingen te verzenden. Nadere informatie over het vinden van elke optie vindt u in de pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) .
 
 >[!NOTE]
 >
@@ -30,12 +30,12 @@ U kunt een configuratie-id maken met het gereedschap [](../fundamentals/edge-con
 
 ## Een schema voorbereiden
 
-Het Netwerk van de Rand van het Experience Platform neemt gegevens als XDM. XDM is een gegevensformaat dat u schema&#39;s laat bepalen. Het schema bepaalt hoe het Netwerk van de Rand verwacht dat de gegevens worden geformatteerd. Om gegevens te verzenden, moet u uw schema bepalen.
+De [!DNL Experience Platform Edge Network] gegevens worden als XDM gebruikt. XDM is een gegevensformaat dat u schema&#39;s laat bepalen. Het schema bepaalt hoe de gegevens [!DNL Edge Network] verwacht worden geformatteerd. Om gegevens te verzenden, moet u uw schema bepalen.
 
 - [Een schema maken](../../xdm/tutorials/create-schema-ui.md)
-- Voeg de mengeling van SDK van het Web van het Adobe Experience Platform aan het schema toe u creeerde
+- Voeg de Adobe Experience Platform- [!DNL Web SDK] mix toe aan het schema dat u hebt gemaakt
 
-De volgende video is bedoeld om u in het creëren van een schema, dataset, en het stromen bronschakelaar voor uw gegevens van SDK van het Web te steunen.
+De volgende video is bedoeld om u in het creëren van een schema, dataset, en het stromen bronschakelaar voor uw [!DNL Web SDK] gegevens te steunen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
