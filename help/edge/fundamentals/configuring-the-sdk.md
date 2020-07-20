@@ -4,9 +4,9 @@ seo-title: Het vormen van het Web SDK van het Adobe Experience Platform
 description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '737'
 ht-degree: 4%
 
 ---
@@ -74,7 +74,7 @@ Het domein dat wordt gebruikt voor interactie met Adobe-services. Dit wordt alle
 | -------- | ------------ | ----------------- |
 | String | Ja | none |
 
-Uw toegewezen Experience Cloud-organisatie-id.  Wanneer het vormen van veelvoudige instanties binnen een pagina, moet u een verschillende `orgId` voor elke instantie vormen.
+Uw toegewezen [!DNL Experience Cloud] organisatie-id.  Wanneer het vormen van veelvoudige instanties binnen een pagina, moet u een verschillende `orgId` voor elke instantie vormen.
 
 ## Gegevensverzameling
 
@@ -134,7 +134,7 @@ Als u bijvoorbeeld een element op uw webpagina had met een id waarvan u de stand
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | `true` |
 
-Laat de [!UICONTROL koekjesbestemmingen]van de Audience Manager toe, die het plaatsen van koekjes toestaat die op segmentkwalificatie worden gebaseerd.
+Laat [!DNL Audience Manager] koekjesbestemmingen toe, die het plaatsen van koekjes toestaat die op segmentkwalificatie worden gebaseerd.
 
 ### `urlDestinationsEnabled`
 
@@ -142,7 +142,7 @@ Laat de [!UICONTROL koekjesbestemmingen]van de Audience Manager toe, die het pla
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | `true` |
 
-Laat Audience Manager [!UICONTROL URL bestemmingen]toe, die het vuren van URLs toestaat die op segmentkwalificatie wordt gebaseerd.
+Laat [!DNL Audience Manager] URL bestemmingen toe, die het vuren van URLs toestaat die op segmentkwalificatie wordt gebaseerd.
 
 ## Identiteitsopties
 
