@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Overzicht van voorvertoningen en een overzicht van eindpunten
+title: Voorvertoningen en schattingen van eindpunten
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '750'
 ht-degree: 1%
 
 ---
 
 
-# Overzicht van voorvertoningen en een overzicht van eindpunten
+# Voorvertoningen en schattingen van eindpunten
 
 Terwijl u de segmentdefinitie ontwikkelt, kunt u de schatting- en voorvertoningsgereedschappen binnen gebruiken om informatie op overzichtsniveau weer te geven, zodat u zeker weet dat u het verwachte publiek isoleert. [!DNL Adobe Experience Platform] **De voorproeven** verstrekken gepagineerde lijsten van kwalificerende profielen voor een segmentdefinitie, toelatend u om de resultaten tegen te vergelijken wat u verwacht. **Schattingen** verschaffen statistische informatie over een segmentdefinitie, zoals de geprojecteerde publieksgrootte, het betrouwbaarheidsinterval en de standaardafwijking voor fouten.
 
