@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Segmentdefinities
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1041'
 ht-degree: 1%
 
 ---
 
 
-# Overzicht van segmentdefinities
+# Definitieeindpunt van segment
 
 Met Adobe Experience Platform kunt u segmenten maken die een groep specifieke kenmerken of gedragingen definiëren op basis van een groep profielen. Een segmentdefinitie is een object waarin een query wordt ingekapseld die is geschreven in [!DNL Profile Query Language] (PQL). Dit object wordt ook wel een PQL-voorspelling genoemd. In PQL worden de regels voor het segment gedefinieerd op basis van voorwaarden die betrekking hebben op record- of tijdreeksgegevens die u opgeeft aan [!DNL Real-time Customer Profile]. Raadpleeg de [PQL-handleiding](../pql/overview.md) voor meer informatie over het schrijven van PQL-query&#39;s.
 
