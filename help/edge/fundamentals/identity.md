@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK Experience Cloud-id ophalen
 description: Leer hoe u Adobe Experience Cloud ID kunt ophalen.
 seo-description: Leer hoe u Adobe Experience Cloud ID kunt ophalen.
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '408'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Identiteit - De Experience Cloud-id wordt opgehaald
 
-De Adobe Experience Platform Web SDK maakt gebruik van de [Adobe Identity Service](../../identity-service/ecid.md). Dit zorgt ervoor dat elk apparaat een unieke id heeft die op het apparaat blijft bestaan, zodat de activiteit tussen pagina&#39;s aan elkaar kan worden gekoppeld.
+Het Adobe Experience Platform [!DNL Web SDK] gebruikt de [Adobe Identity Service](../../identity-service/ecid.md). Dit zorgt ervoor dat elk apparaat een unieke id heeft die op het apparaat blijft bestaan, zodat de activiteit tussen pagina&#39;s aan elkaar kan worden gekoppeld.
 
 ## Identiteit eerste partij
 
@@ -30,7 +30,7 @@ Gebruik de `getIdentity` opdracht als u deze unieke id wilt gebruiken. `getIdent
 
 >[!NOTE]
 >
->Deze methode wordt doorgaans gebruikt met aangepaste oplossingen waarvoor de Experience Cloud-id moet worden gelezen. Het wordt niet gebruikt door een standaardimplementatie.
+>Deze methode wordt typisch gebruikt met douaneoplossingen die het lezen van [!DNL Experience Cloud] identiteitskaart vereisen. Het wordt niet gebruikt door een standaardimplementatie.
 
 ```javascript
 alloy("getIdentity")
