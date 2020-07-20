@@ -4,9 +4,9 @@ seo-title: De configuratie van de rand voor het Web SDK van het Experience Platf
 description: 'Leer hoe te om het Netwerk van de Rand van het Experience Platform te vormen. '
 seo-description: 'Leer hoe te om het Netwerk van de Rand van het Experience Platform te vormen. '
 translation-type: tm+mt
-source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '870'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # De rand configureren
 
-De configuratie voor het Web SDK van het Adobe Experience Platform wordt verdeeld tussen twee plaatsen. Het [vormt bevel](configuring-the-sdk.md) in SDK controleert dingen die op de cliënt, zoals de `edgeDomain`. moeten worden behandeld. De randconfiguratie behandelt alle andere configuratie voor SDK. Wanneer een verzoek naar het Netwerk van de Rand van het Adobe Experience Platform wordt verzonden, `edgeConfigId` wordt gebruikt om naar de server zijconfiguratie te verwijzen. Hierdoor kunt u de configuratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
+De configuratie voor het Adobe Experience Platform [!DNL Web SDK] wordt gesplitst tussen twee plaatsen. Het [vormt bevel](configuring-the-sdk.md) in SDK controleert dingen die op de cliënt, zoals de `edgeDomain`. moeten worden behandeld. De randconfiguratie behandelt alle andere configuratie voor SDK. Wanneer een verzoek naar het Adobe Experience Platform wordt verzonden [!DNL Edge Network], `edgeConfigId` wordt gebruikt om naar de server zijconfiguratie te verwijzen. Hierdoor kunt u de configuratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
 
 ## Een Edge-configuratie-id maken
 
@@ -90,7 +90,7 @@ De unieke id voor een doelaccount. Als u dit wilt zoeken, navigeert u naar [!UIC
 
 ##### [!UICONTROL Eigenschapstoken]
 
-Target staat klanten toe om toestemmingen door het gebruik van eigenschappen te controleren. Meer informatie vindt u in de sectie [Enterprise Permissions](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) van de Target-documentatie.
+[!DNL Target] staat klanten toe om toestemmingen door het gebruik van eigenschappen te controleren. Details vindt u in de sectie [Enterprise Permissions](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) van de [!DNL Target] documentatie.
 
 De eigenschap token vindt u in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Eigenschappen]
 
@@ -108,11 +108,11 @@ Alles wat nodig is om gegevens naar de Adobe Audience Manager te verzenden, moet
 
 ##### [!UICONTROL Cookie-doelen ingeschakeld]
 
-Staat SDK toe om segmentinformatie via de Doelen [van het](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) Koekje van Audience Manager te delen.
+Staat SDK toe om segmentinformatie via de Doelen [van het](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) Koekje van te delen [!DNL Audience Manager].
 
 ##### [!UICONTROL URL-doelen ingeschakeld]
 
-Staat SDK toe om segmentinformatie via Doelen [URL](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)te delen. Deze worden gevormd in Audience Manager.
+Staat SDK toe om segmentinformatie via Doelen [URL](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)te delen. Deze worden gevormd in [!DNL Audience Manager].
 
 #### Adobe Analytics
 
