@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een object bijwerken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '313'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Een object bijwerken
 
-U kunt een deel van een object Catalog bijwerken door de id ervan op te nemen in het pad van een PATCH-aanvraag. In dit document worden de twee methoden beschreven voor het uitvoeren van PATCH-bewerkingen op catalogusobjecten:
+U kunt een deel van een [!DNL Catalog] object bijwerken door de id ervan op te nemen in het pad van een PATCH-aanvraag. In dit document worden de twee methoden beschreven voor het uitvoeren van PATCH-bewerkingen op catalogusobjecten:
 
 * Velden gebruiken
 * JSON-patchnotatie gebruiken
@@ -35,7 +35,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden bijgewerkt. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] object dat moet worden bijgewerkt. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**
@@ -84,7 +84,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden bijgewerkt. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] object dat moet worden bijgewerkt. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**
