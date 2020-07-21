@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Abonneren op gebeurtenissen voor gegevensinvoer
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Meldingen voor gegevensinvoer
 
-Het proces om gegevens in Adobe Experience Platform in te voeren bestaat uit veelvoudige stappen. Zodra u gegevensdossiers identificeert die in Platform moeten worden opgenomen, begint het innameproces en elke stap komt achtereenvolgens tot de gegevens of met succes worden opgenomen of ontbreken. Het insluitingsproces kan worden geïnitieerd met de API [voor gegevensinsluiting van](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platforms of met de gebruikersinterface van het Experience Platform.
+Het proces om gegevens in Adobe Experience Platform in te voeren bestaat uit veelvoudige stappen. Zodra u gegevensdossiers identificeert die in moeten worden opgenomen [!DNL Platform], begint het innameproces en elke stap komt achtereenvolgens tot de gegevens of met succes worden opgenomen of ontbreken. Het insluitingsproces kan worden gestart met de API [voor gegevensinname van](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platforms of met de [!DNL Experience Platform] gebruikersinterface.
 
-De gegevens die in Platform worden geladen moeten door veelvoudige stappen gaan om zijn bestemming, het meer van Gegevens of de gegevens opslag van het Profiel van de Klant in real time te bereiken. Elke stap omvat het verwerken van de gegevens, het valideren van de gegevens en het opslaan van de gegevens voordat u deze doorgeeft aan de volgende stap. Afhankelijk van de hoeveelheid gegevens die wordt opgenomen, kan dit een tijdrovend proces worden en er is altijd een kans dat het proces mislukt door validatie-, semantiek- of verwerkingsfouten. In geval van een fout moeten de gegevensproblemen worden opgelost en moet het volledige innameproces opnieuw worden gestart met de gecorrigeerde gegevensbestanden.
+De gegevens die in worden geladen [!DNL Platform] moeten door veelvoudige stappen gaan om zijn bestemming, [!DNL Data Lake] of de [!DNL Real-time Customer Profile] gegevensopslag te bereiken. Elke stap omvat het verwerken van de gegevens, het valideren van de gegevens en het opslaan van de gegevens voordat u deze doorgeeft aan de volgende stap. Afhankelijk van de hoeveelheid gegevens die wordt opgenomen, kan dit een tijdrovend proces worden en er is altijd een kans dat het proces mislukt door validatie-, semantiek- of verwerkingsfouten. In geval van een fout moeten de gegevensproblemen worden opgelost en moet het volledige innameproces opnieuw worden gestart met de gecorrigeerde gegevensbestanden.
 
-Om bij het controleren van het innameproces te helpen, maakt het Experience Platform het mogelijk om aan een reeks gebeurtenissen in te tekenen die door elke stap van het proces worden gepubliceerd, die u op de hoogte brengen van het statuut van de ingeopgenomen gegevens en om het even welke mogelijke mislukkingen.
+Als u wilt helpen bij het controleren van het innameproces, [!DNL Experience Platform] kunt u zich abonneren op een set gebeurtenissen die door elke stap van het proces worden gepubliceerd, waarbij u op de hoogte wordt gebracht van de status van de ingesloten gegevens en van mogelijke fouten.
 
 ## Beschikbare statusmeldingsgebeurtenissen
 
@@ -39,17 +39,17 @@ Hieronder vindt u een lijst met beschikbare gegevensinvoerstatusmeldingen waarop
 
 ## Payloadschema voor berichten
 
-Het gebeurtenisschema voor gegevensinvoer is een XDM-schema (Experience Data Model) dat velden en waarden bevat die details bevatten over de status van de gegevens die worden ingevoerd. Gelieve te bezoeken de openbare reactie XDM GitHub om het recentste schema [van de](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)berichtlading te bekijken.
+Het gebeurtenisschema voor gegevensinvoer is een [!DNL Experience Data Model] (XDM)-schema dat velden en waarden bevat die gegevens bevatten over de status van de gegevens die worden ingevoerd. Ga naar het openbare XDM- [!DNL GitHub] repo om het meest recente [berichtladingsschema](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)te bekijken.
 
 ## Abonneren op statusmeldingen voor gegevensinvoer
 
-Via [Adobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events.html)kunt u zich op meerdere berichttypen abonneren met behulp van websites. In de onderstaande secties vindt u een overzicht van de stappen voor het abonneren op Platform-berichten voor gegevensinsluitingsgebeurtenissen met Adobe Developer Console.
+Via [Adobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events.html)kunt u zich op meerdere berichttypen abonneren met behulp van websites. In de onderstaande secties vindt u een overzicht van de stappen voor het abonneren op [!DNL Platform] meldingen voor gebeurtenissen voor gegevensinvoer met Adobe Developer Console.
 
 ### Nieuw project maken in Adobe Developer Console
 
 Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Voer vervolgens de stappen uit die worden beschreven in de zelfstudie over het [maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.
 
-### Voeg de gebeurtenissen van het Experience Platform aan het project toe
+### Voeg [!DNL Experience Platform] gebeurtenissen aan het project toe
 
 Nadat u een nieuw project hebt gemaakt, navigeert u naar het overzichtsscherm van dat project. Klik hier op **[!UICONTROL Gebeurtenis]** toevoegen.
 
@@ -91,4 +91,4 @@ De detailspagina voor de pas gecreëerde gebeurtenisregistratie verschijnt, waar
 
 ## Volgende stappen
 
-Zodra u de berichten van het Platform aan uw project hebt geregistreerd, kunt u ontvangen gebeurtenissen van het projectdashboard bekijken. Raadpleeg de handleiding [OvertrekAdobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) voor gedetailleerde instructies over het overtrekken van gebeurtenissen.
+Zodra u [!DNL Platform] berichten aan uw project hebt geregistreerd, kunt u ontvangen gebeurtenissen van het projectdashboard bekijken. Raadpleeg de handleiding [OvertrekAdobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) voor gedetailleerde instructies over het overtrekken van gebeurtenissen.
