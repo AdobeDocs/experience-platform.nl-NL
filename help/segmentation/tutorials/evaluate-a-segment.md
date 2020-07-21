@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een segment evalueren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1519'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Voor alle POST-, PUT- en PATCH-aanvragen is een extra header vereist:
 
 ## Een segment evalueren
 
-Zodra u hebt ontwikkeld, getest en uw segmentdefinitie bewaard, kunt u het segment door of geplande evaluatie of op bestelling evaluatie dan evalueren.
+Zodra u hebt ontwikkeld, getest, en uw segmentdefinitie bewaard, kunt u het segment door of geplande evaluatie of op bestelling evaluatie dan evalueren.
 
 [De geplande evaluatie](#scheduled-evaluation) (die ook als &quot;geplande segmentatie&quot;wordt bekend) staat u toe om een terugkomende planning voor het runnen van een uitvoerbaan in een specifieke tijd tot stand te brengen, terwijl de [op bestelling evaluatie](#on-demand-evaluation) het creëren van een segmentbaan impliceert om het publiek onmiddellijk te bouwen. De stappen voor elk worden hieronder geschetst.
 
@@ -59,7 +59,7 @@ Via een geplande evaluatie kan uw IMS-organisatie een terugkerend schema maken o
 
 >[!NOTE]
 >
->De geplande evaluatie kan voor zandbakken met een maximum van vijf (5) fusiebeleid voor Individueel Profiel XDM worden toegelaten. Als uw organisatie meer dan vijf samenvoegingsbeleid voor Individueel Profiel XDM binnen één enkele zandbakmilieu heeft, zult u geen geplande evaluatie kunnen gebruiken.
+>De geplande evaluatie kan voor zandbakken met een maximum van vijf (5) fusiebeleid voor worden toegelaten [!DNL XDM Individual Profile]. Als uw organisatie meer dan vijf samenvoegingsbeleid voor [!DNL XDM Individual Profile] binnen één enkele zandbakmilieu heeft, zult u geen geplande evaluatie kunnen gebruiken.
 
 ### Een schema maken
 
@@ -157,11 +157,11 @@ De volgende stappen zijn vereist om uw publiek te exporteren:
 
 Wanneer het uitvoeren van een publiek, moet een doeldataset eerst worden gecreeerd. Het is belangrijk dat de dataset correct wordt gevormd om de uitvoer succesvol te verzekeren.
 
-Één van de belangrijkste overwegingen is het schema waarop de dataset (`schemaRef.id` in de API steekproefaanvraag hieronder) wordt gebaseerd. Om een segment uit te voeren, moet de dataset op het Schema van de Unie van het Individuele Profiel XDM (`https://ns.adobe.com/xdm/context/profile__union`) worden gebaseerd. Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen, in dit geval dat de Individuele klasse van het Profiel XDM is. Voor meer informatie over de schema&#39;s van de verenigingsmening, te zien gelieve de sectie van het Profiel van de Klant in [real time van de Ontwikkelaar van het Registratie van het Schema gids](../../xdm/api/getting-started.md).
+Één van de belangrijkste overwegingen is het schema waarop de dataset (`schemaRef.id` in de API steekproefaanvraag hieronder) wordt gebaseerd. Om een segment uit te voeren, moet de dataset op [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`) worden gebaseerd. Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen, in dit geval dat de Individuele klasse van het Profiel XDM is. Voor meer informatie over de schema&#39;s van de verenigingsmening, te zien gelieve de sectie van het Profiel van de Klant in [real time van de Ontwikkelaar van het Registratie van het Schema gids](../../xdm/api/getting-started.md).
 
 Er zijn twee manieren om de noodzakelijke dataset tot stand te brengen:
 
-- **API&#39;s gebruiken:** De stappen die in deze zelfstudie volgen schetsen hoe te om een dataset tot stand te brengen die verwijzingen het Schema van de Unie van het Individuele Profiel XDM gebruikend Catalogus API.
+- **API&#39;s gebruiken:** De stappen die in deze zelfstudie volgen, schetsen hoe te om een dataset tot stand te brengen die verwijzingen [!DNL XDM Individual Profile Union Schema] gebruikend [!DNL Catalog] API.
 - **De interface gebruiken:** Om het [!DNL Adobe Experience Platform] gebruikersinterface te gebruiken om een dataset tot stand te brengen die verwijzingen het unieschema, de stappen in het [UI leerprogramma](../ui/overview.md) volgen en dan aan dit leerprogramma terugkeren om met de stappen te werk te gaan voor het [produceren van publieksprofielen](#generate-xdm-profiles-for-audience-members).
 
 Als u reeds een compatibele dataset hebt en zijn identiteitskaart kent, kunt u aan de stap voor het [produceren van publieksprofielen](#generate-xdm-profiles-for-audience-members)direct te werk gaan.
@@ -228,10 +228,10 @@ Meer gedetailleerde informatie over het gebruiken van dit eindpunt kan in de gid
 
 ## Volgende stappen
 
-Nadat het exporteren is voltooid, zijn uw gegevens beschikbaar in het Data Lake in [!DNL Experience Platform]. Vervolgens kunt u de API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) gegevenstoegang gebruiken om toegang te krijgen tot de gegevens via de `batchId` koppeling die aan de export is gekoppeld. Afhankelijk van de grootte van het segment, kunnen de gegevens in brokken zijn en de partij kan uit verscheidene dossiers bestaan.
+Nadat het exporteren is voltooid, zijn uw gegevens beschikbaar in de map [!DNL Data Lake] in [!DNL Experience Platform]. Vervolgens kunt u het dialoogvenster gebruiken [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) om toegang te krijgen tot de gegevens met behulp van de `batchId` koppeling voor het exporteren. Afhankelijk van de grootte van het segment, kunnen de gegevens in brokken zijn en de partij kan uit verscheidene dossiers bestaan.
 
 Voor stapsgewijze instructies over het gebruik van de [!DNL Data Access] API voor het openen en downloaden van batchbestanden volgt u de zelfstudie [Gegevenstoegang](../../data-access/tutorials/dataset-data.md).
 
-U kunt geëxporteerde segmentgegevens ook openen met [!DNL Adobe Experience Platform Query Service]succes. Gebruikend UI of RESTful API, [!DNL Query Service] staat u toe om, vragen op gegevens binnen het meer van Gegevens te schrijven te bevestigen en in werking te stellen.
+U kunt geëxporteerde segmentgegevens ook openen met [!DNL Adobe Experience Platform Query Service]succes. Met de UI of RESTful API [!DNL Query Service] kunt u query&#39;s schrijven, valideren en uitvoeren op gegevens binnen de [!DNL Data Lake]API.
 
 Voor meer informatie over hoe te om publieksgegevens te vragen, te herzien gelieve de documentatie over [!DNL Query Service](../../query-service/home.md).
