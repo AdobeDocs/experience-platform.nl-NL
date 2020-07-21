@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Zoekeindpunt segment
 topic: guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1138'
 ht-degree: 0%
 
 ---
@@ -225,7 +225,7 @@ Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe Segment Sea
 
 ## Aanhangsel {#appendix}
 
-In de volgende secties vindt u aanvullende informatie over de werking van zoektermen. Zoekopdrachten worden als volgt geschreven: `s={FieldName}:{SearchExpression}`. Zo, bijvoorbeeld, om naar een segment te zoeken genoemd AAM of Platform, zou u de volgende onderzoeksvraag gebruiken: `s=segmentName:AAM%20OR%20Platform`.
+In de volgende secties vindt u aanvullende informatie over de werking van zoektermen. Zoekopdrachten worden als volgt geschreven: `s={FieldName}:{SearchExpression}`. Zo, bijvoorbeeld, om naar een segment te zoeken genoemd AAM of [!DNL Platform], zou u de volgende onderzoeksvraag gebruiken: `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] Voor beste praktijken, zou de onderzoeksuitdrukking HTML moeten worden gecodeerd, zoals het hierboven getoonde voorbeeld.
 
