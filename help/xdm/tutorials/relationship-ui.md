@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Bepaal een verband tussen twee schema's gebruikend de Redacteur van het Schema van het Schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1445646be8fa3416a34408205eadca0a792290c6
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Het dialoogvenster [!UICONTROL _Mixin _]toevoegen wordt weergegeven. Klik hier o
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-Het canvas verschijnt weer met &quot;[!UICONTROL Loyalty Relationship]&quot; in de sectie _Mixins_ . Klik op de mixnaam en klik vervolgens op Veld **** toevoegen naast het veld[!UICONTROL Loyalty-leden]op hoofdniveau.
+Het canvas verschijnt weer met &quot;[!UICONTROL Favoriet Hotel]&quot; in de sectie _Mixins_ . Klik op de mixnaam en klik vervolgens op Veld **** toevoegen naast het veld[!UICONTROL Loyalty-leden]op hoofdniveau.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -74,7 +74,7 @@ Klik op **[!UICONTROL Toepassen]** als u klaar bent.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-Het bijgewerkte veld &quot;[!UICONTROL loyaltyRelationship]&quot; wordt weergegeven op het canvas. Klik op **[!UICONTROL Opslaan]** om de wijzigingen in het schema te voltooien.
+Het bijgewerkte veld[!UICONTROL FavorietHotel]wordt weergegeven op het canvas. Klik op **[!UICONTROL Opslaan]** om de wijzigingen in het schema te voltooien.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
