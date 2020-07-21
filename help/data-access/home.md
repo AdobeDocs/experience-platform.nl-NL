@@ -4,31 +4,31 @@ solution: Experience Platform
 title: Overzicht van gegevenstoegang
 topic: overview
 translation-type: tm+mt
-source-git-commit: 49aa2e2664fe658d89b6279d1f869eb30c48ccad
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
 
-# Overzicht van gegevenstoegang
+# [!DNL Data Access] overzicht
 
-[!DNL Data Access] steunt Adobe Experience Platform door gebruikershulpmiddelen te verstrekken die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen Experience Platform worden geconcentreerd.
+[!DNL Data Access] steunt Adobe Experience Platform door gebruikershulpmiddelen te verstrekken die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen worden geconcentreerd [!DNL Experience Platform].
 
 ![Toegang tot gegevens op Experience Platform](images/Data_Access_Experience_Platform.png)
 
-## API voor gegevenstoegang
+## [!DNL Data Access] API
 
 Gedetailleerde informatie over het gebruik van de [!DNL Data Access] API voor het maken van een verbinding met [!DNL Platform] Data Access vindt u in de [handleiding](api.md)voor ontwikkelaars van Data Access.
 
-## Python SDK
+## [!DNL Python] SDK
 
 U kunt met datasets lezen en schrijven gebruikend [!DNL Python] SDK. Meer gedetailleerde informatie over de [!DNL Python] SDK vindt u in de zelfstudie van [Python SDK](./tutorials/python-sdk.md).
 
-[!DNL Data Science Workspace] gebruikt de Python SDK in Laptops en Ontvangers. Voor meer informatie over [!DNL Data Science Workspace], gelieve te beginnen door het overzicht [van de Werkruimte van de Wetenschap van](../data-science-workspace/home.md)Gegevens te lezen.
+[!DNL Data Science Workspace] gebruikt de [!DNL Python] SDK in Laptops en Ontvangers. Voor meer informatie over [!DNL Data Science Workspace], gelieve te beginnen door het overzicht [van de Werkruimte van de Wetenschap van](../data-science-workspace/home.md)Gegevens te lezen.
 
-## Spark SDK
+## [!DNL Spark] SDK
 
 U kunt met datasets lezen en schrijven gebruikend [!DNL Spark] SDK. Meer gedetailleerde informatie over de [!DNL Spark] SDK vindt u in de zelfstudie [van de](./tutorials/spark-sdk.md)Spark SDK.
 
