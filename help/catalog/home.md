@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Overzicht van Catalog Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
 
 
-# Overzicht van Catalog Service
+# [!DNL Catalog Service] overzicht
 
-Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens en de verbinding in Adobe Experience Platform. Terwijl alle gegevens die in het Platform van de Ervaring worden opgenomen in het meer van Gegevens als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
+[!DNL Catalog Service] is het registratiesysteem voor de gegevenslocatie en -lijn in het Adobe Experience Platform. Terwijl alle gegevens die in worden opgenomen in [!DNL Experience Platform] in [!DNL Data Lake] als dossiers en folders worden opgeslagen, [!DNL Catalog] houdt de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
 
-Eenvoudig gezet, werkt Catalog als meta-gegevensopslag of &quot;catalogus&quot;waar u informatie over uw gegevens binnen het Platform van de Ervaring kunt vinden. U kunt Catalog gebruiken om de volgende vragen te beantwoorden:
+Eenvoudig gezet, handelt [!DNL Catalog] als meta-gegevensopslag of &quot;[!UICONTROL catalogus]&quot;waar u informatie over uw gegevens binnen kunt vinden [!DNL Experience Platform]. U kunt de volgende vragen [!DNL Catalog] beantwoorden:
 
 * Waar bevinden mijn gegevens zich?
 * In welk stadium van verwerking bevinden deze gegevens zich?
@@ -24,43 +24,43 @@ Eenvoudig gezet, werkt Catalog als meta-gegevensopslag of &quot;catalogus&quot;w
 * Hoeveel gegevens zijn verwerkt?
 * Welke fouten zijn tijdens de verwerking opgetreden?
 
-Catalog verstrekt een RESTful API die u toestaat om de meta-gegevens van het Platform programmatically te beheren gebruikend basisCRUD verrichtingen. Zie de [ontwikkelaarsgids](api/getting-started.md) van de Catalogus voor meer informatie.
+[!DNL Catalog] biedt een RESTful-API waarmee u [!DNL Platform] metagegevens programmatisch kunt beheren met behulp van standaard-CRUD-bewerkingen. Zie de [ontwikkelaarsgids](api/getting-started.md) van de Catalogus voor meer informatie.
 
-## Diensten van het Catalogus- en ervaringsplatform
+## [!DNL Catalog] en [!DNL Experience Platform] diensten
 
-De middelen die de sporen van de Dienst van de Catalogus worden gebruikt door de veelvoudige diensten van het Platform van de Ervaring. Om de mogelijkheden van de Catalogus optimaal te maken, adviseert men dat u met deze diensten vertrouwd wordt en hoe zij met Catalogus in wisselwerking staan.
+De middelen die [!DNL Catalog Service] sporen worden gebruikt door de veelvoudige [!DNL Experience Platform] diensten. Om de [!DNL Catalog's] mogelijkheden optimaal te benutten, wordt u aangeraden vertrouwd te raken met deze services en te weten te komen hoe deze werken met [!DNL Catalog].
 
-### XDM-systeem (Experience Data Model)
+### [!DNL Experience Data Model] (XDM) System
 
-Het Systeem van de Gegevens van de ervaring Model (XDM) is het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert. De hefboomwerkingen van het Platform van de ervaring XDM schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven.
+[!DNL Experience Data Model] (XDM) Het systeem is het gestandaardiseerde kader waardoor de gegevens van de klantenervaring [!DNL Platform] organiseren. [!DNL Experience Platform] hefboomwerkingen XDM schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven.
 
-Wanneer het gegeven in Platform wordt opgenomen, wordt de structuur van die gegevens in kaart gebracht aan een XDM schema en binnen het meer van Gegevens als deel van een **dataset** opgeslagen. De meta-gegevens voor elke dataset wordt gevolgd door de Dienst van de Catalogus, die een verwijzing naar het XDM schema omvat dat de dataset met in overeenstemming is.
+Wanneer het gegeven in wordt opgenomen [!DNL Platform], wordt de structuur van dat gegeven in kaart gebracht aan een schema XDM en binnen [!DNL Data Lake] als deel van een **dataset** opgeslagen. De meta-gegevens voor elke dataset wordt gevolgd door [!DNL Catalog Service], die een verwijzing naar het schema XDM omvat dat de dataset met inachtneming is.
 
 Voor meer algemene informatie over XDM System, gelieve te zien het [XDM systeemoverzicht](../xdm/home.md).
 
-### Gegevensinname
+### [!DNL Data Ingestion]
 
-Het Platform van de ervaring neemt gegevens uit veelvoudige bronnen op en handhaaft verslagen als datasets binnen het meer van Gegevens. De catalogus volgt de meta-gegevens voor deze datasets, ongeacht hun bron of methode van opname.
+[!DNL Experience Platform] Neemt gegevens van veelvoudige bronnen op en handhaaft verslagen als datasets binnen [!DNL Data Lake]. [!DNL Catalog] volgt de meta-gegevens voor deze datasets, ongeacht hun bron of methode van opname.
 
-Als u de methode voor het toevoegen van batches gebruikt, worden in Catalog ook aanvullende metagegevens bijgehouden voor **batchbestanden** . Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. De catalogus volgt de meta-gegevens voor deze partijdossiers, evenals de datasets zij binnen na opname worden voortgeduurd. De meta-gegevens van de partij omvatten informatie over het aantal met succes opgenomen verslagen, evenals om het even welke ontbroken verslagen en bijbehorende foutenmeldingen.
+Wanneer u de methode voor het toevoegen van batches gebruikt, worden [!DNL Catalog] ook aanvullende metagegevens voor **batchbestanden** bijgehouden. Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. [!DNL Catalog] volgt de meta-gegevens voor deze partijdossiers, evenals de datasets zij binnen na opname worden voortgeduurd. De meta-gegevens van de partij omvatten informatie over het aantal met succes opgenomen verslagen, evenals om het even welke ontbroken verslagen en bijbehorende foutenmeldingen.
 
 Zie het overzicht [van](../ingestion/home.md) gegevensinvoer voor meer informatie.
 
-## Catalogusobjecten
+## [!DNL Catalog] objecten
 
-Zoals geschetst in de vorige sectie, volgt de Catalogus meta-gegevens voor verscheidene soorten middelen en verrichtingen die door andere diensten van het Platform worden gebruikt. In Catalog wordt een eigen opslagruimte van &#39;objecten&#39; bijgehouden waarin deze metagegevens worden ingekapseld. De voorwerpen van de catalogus zijn queryable vertegenwoordiging van de gegevens van het Platform die u toestaan om, uw gegevens te zoeken te controleren en te etiketteren zonder het moeten tot de gegevens zelf toegang hebben.
+Zoals geschetst in de vorige sectie, [!DNL Catalog] volgt meta-gegevens voor verscheidene soorten middelen en verrichtingen die door andere [!DNL Platform] diensten worden gebruikt. [!DNL Catalog] onderhoudt een eigen opslagruimte van &#39;objecten&#39; die deze metagegevens omvat. [!DNL Catalog] de voorwerpen zijn queryable vertegenwoordiging van [!DNL Platform] gegevens die u toestaan om, uw gegevens te zoeken te controleren en te etiketteren zonder het moeten tot de gegevens zelf toegang hebben.
 
-In de volgende tabel worden de verschillende objecttypen weergegeven die door Catalog worden ondersteund:
+In de volgende tabel worden de verschillende objecttypen weergegeven die worden ondersteund door [!DNL Catalog]:
 
 | Object | API-eindpunt | Definitie |
 |---|---|---|
-| Account | `/accounts` | Bij het maken van bronverbindingen moeten verificatiereferenties worden opgegeven. Een rekening vertegenwoordigt een inzameling van authentificatiegeloofsbrieven die werden gebruikt om een verbinding van een specifiek type tot stand te brengen. Elke verbinding heeft een reeks unieke parameters die door Catalog worden voortgeduurd en in een Azure Key Vault worden beveiligd. |
-| Batch | `/batches` | Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. Een partijvoorwerp in Catalogus schetst de innamemetriek van de partij (zoals het aantal verwerkte verslagen of grootte op schijf) en kan verbindingen aan datasets, meningen, en andere middelen omvatten die door de partijverrichting werden beïnvloed. |
+| Account | `/accounts` | Bij het maken van bronverbindingen moeten verificatiereferenties worden opgegeven. Een rekening vertegenwoordigt een inzameling van authentificatiegeloofsbrieven die werden gebruikt om een verbinding van een specifiek type tot stand te brengen. Elke verbinding heeft een reeks unieke parameters die door [!DNL Catalog] en beveiligd in een [!DNL Azure Key Vault]. worden voortgeduurd. |
+| Batch | `/batches` | Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. Een batchobject in [!DNL Catalog] contouren de innamemetriek van de batch (zoals het aantal verwerkte records of de grootte op schijf) en kan ook koppelingen naar gegevenssets, weergaven en andere bronnen bevatten die door de batchbewerking zijn beïnvloed. |
 | Verbinding | `/connections` | Een verbinding is één enkel geval van een bronschakelaar, uniek aan uw organisatie en gevormd gebruikend de aangewezen authentificatiereferenties voor het schakelaartype. |
-| Connector | `/connectors` | Connectors definiëren hoe bronverbindingen gegevens moeten verzamelen van andere Adobe-toepassingen (zoals Adobe Analytics en Adobe Audience Manager), bronnen voor cloudopslag van derden (zoals Azure Blob, Amazon S3, FTP-servers en SFTP-servers) en CRM-systemen van derden (zoals Microsoft Dynamics en Salesforce). |
+| Connector | `/connectors` | Connectors definiëren hoe bronverbindingen gegevens moeten verzamelen van andere Adobe-toepassingen (zoals Adobe Analytics en Adobe Audience Manager), bronnen voor cloudopslag van derden (zoals [!DNL Azure Blob], [!DNL Amazon S3]FTP-servers en SFTP-servers) en CRM-systemen van derden (zoals [!DNL Microsoft Dynamics] en [!DNL Salesforce]). |
 | Gegevensset | `/dataSets` | Een dataset is een opslag en beheersconstructie die voor de inzameling van gegevens (typisch een lijst) wordt gebruikt die een schema (kolommen) en gebieden (rijen) bevat. Zie het overzicht [van](./datasets/overview.md) gegevenssets voor meer informatie. |
-| Gegevensbestand | `/datasetFiles` | Gegevensbestanden vertegenwoordigen gegevensblokken die zijn opgeslagen op het platform. Als verslagen van letterlijke dossiers, zijn deze waar u de grootte van het dossier, het aantal verslagen kunt vinden het bevat, en een verwijzing naar de partij die het dossier opnam. |
+| Gegevensbestand | `/datasetFiles` | Gegevensbestanden vertegenwoordigen gegevensblokken waarop is opgeslagen [!DNL Platform]. Als verslagen van letterlijke dossiers, zijn deze waar u de grootte van het dossier, het aantal verslagen kunt vinden het bevat, en een verwijzing naar de partij die het dossier opnam. |
 
 ## Volgende stappen
 
-Dit document gaf een inleiding aan de Dienst van de Catalogus en hoe het binnen het grotere werkingsgebied van het Platform van de Ervaring functioneert. Zie de ontwikkelaarsgids [van de](api/getting-started.md) Catalogus voor stappen bij het in wisselwerking staan met de verschillende eindpunten van die Catalogus API. U wordt aangeraden ook naar de handleiding voor het [filteren van catalogusgegevens](api/filter-data.md) te verwijzen om de best practices voor het beperken van de gegevens die worden geretourneerd in API-reacties te volgen.
+Dit document gaf een inleiding op [!DNL Catalog Service] en hoe het functioneert binnen de grotere reikwijdte van [!DNL Experience Platform]. Zie de ontwikkelaarsgids [van de](api/getting-started.md) Catalogus voor stappen bij het in wisselwerking staan met de verschillende eindpunten van die [!DNL Catalog] API. U wordt aangeraden ook naar de handleiding voor het [filteren van catalogusgegevens](api/filter-data.md) te verwijzen om de best practices voor het beperken van de gegevens die worden geretourneerd in API-reacties te volgen.
