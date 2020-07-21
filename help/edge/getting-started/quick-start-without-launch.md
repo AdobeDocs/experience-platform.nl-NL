@@ -4,9 +4,9 @@ seo-title: 'Snelle start voor Web SDK van Adobe Experience Platform '
 description: Snelle startgids voor het gebruiken van het Web SDK van het Experience Platform om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van het Web SDK van het Experience Platform om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '517'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Welkom
 
-Deze handleiding leidt u door de verschillende manieren om het Adobe Experience Platform in te stellen [!DNL Web SDK]. Als u deze functie wilt kunnen gebruiken, moet u op de lijst van gewenste personen staan. Neem contact op met uw CSM als u op de wachtlijst wilt staan.
+Deze gids leidt u door de verschillende manieren aan opstelling het Web SDK van het Adobe Experience Platform. Als u deze functie wilt gebruiken, moet u een whitelist hebben. Neem contact op met uw CSM als u op de wachtlijst wilt staan.
 
-- Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als u al een CNAME voor hebt, [!DNL Analytics]zou u dat moeten gebruiken. Het testen in ontwikkeling werkt zonder CNAME maar u hebt er een nodig voordat u naar productie gaat
-- Het recht hebben op Adobe Experience Platform [!DNL Data Platform].  Als u geen Platform hebt aangeschaft, ontvangen wij u gratis [!DNL Experience Platform Data Services Foundation] een beperkte gebruiksmogelijkheid met de SDK.
-- Gebruik de nieuwste versie van de service Bezoeker-id
+- Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als je al een CNAME voor Analytics hebt, moet je die gebruiken. Het testen in ontwikkeling werkt zonder een CNAME maar u hebt één nodig alvorens u aan productie gaat.
+- Het recht hebben op Adobe Experience Platform.  Als u geen Platform hebt aangeschaft, biedt Adobe u gratis Experience Platform Data Services Foundation voor gebruik op beperkte wijze met de SDK.
+- Gebruik de nieuwste versie van de service Bezoeker-id.
 
 ## Een configuratie-id maken
 
