@@ -4,7 +4,10 @@ solution: Experience Platform
 title: ETL-workflow
 topic: overview
 translation-type: tm+mt
-source-git-commit: 943b45d1c6de5f0e2be761d8246b9de4c4c0b4e7
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '177'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +22,11 @@ De volgende diagrammen verstrekken mock-ups van gemeenschappelijke acties ETL en
 
 De hieronder weergegeven acties worden beschreven in de stappen die worden beschreven in de [ETL Integration Guide](home.md). In sommige stappen wordt verwezen naar specifieke figuren, in andere worden vergelijkbare acties beschreven als in de hier weergegeven workflow.
 
-### Afbeelding 1 - Nieuwe Adobe Experience Platform-aansluiting configureren:
+### Afbeelding 1 - Nieuwe aansluiting voor Adobe Experience Platform configureren:
 
 ![](images/image2.png)
 
-### Afbeelding 2 - Experience Platform Connector geactiveerd:
+### Afbeelding 2 - Activering van [!DNL Experience Platform] connector:
 
 ![](images/image3.png)
 
@@ -31,11 +34,11 @@ De hieronder weergegeven acties worden beschreven in de stappen die worden besch
 
 ![](images/image4.png)
 
-### Afbeelding 4 - Nieuwe transformatie-interface, selecteren Verbinding met ervaringsplatform:
+### Figuur 4 - Nieuwe Transformatie UI, die [!DNL Experience Platform] Verbinding selecteert:
 
 ![](images/image5.png)
 
-### Figuur 5 - het doorbladeren voor de Datasets van het Platform van de bronErvaring:
+### Figuur 5 - het doorbladeren voor bronDatasets [!DNL Experience Platform] :
 
 ![](images/image6.png)
 
@@ -55,7 +58,7 @@ De hieronder weergegeven acties worden beschreven in de stappen die worden besch
 
 ![](images/image10.png)
 
-### Figuur 10 - het bepalen van de het doelDataset van de Gegevens van de Ervings van het Model (XDM):
+### Figuur 10 - die de (XDM) [!DNL Experience Data Model] (doelDataset bepaalt:
 
 ![](images/image11.png)
 
