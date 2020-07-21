@@ -4,27 +4,27 @@ solution: Experience Platform
 title: Secure Spark Data Access SDK
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f7714b8bebe37b29290794a48314962e42b24058
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
 
 
-# Secure Spark Data Access SDK
+# Secure [!DNL Spark Data Access] SDK
 
-De Secure Spark [!DNL Data Access] SDK is een softwareontwikkelkit waarmee gegevens van het Adobe Experience Platform kunnen worden gelezen en geschreven.
+De Secure [!DNL Spark] [!DNL Data Access] SDK is een softwareontwikkelingskit waarmee gegevens van het Adobe Experience Platform kunnen worden gelezen en geschreven.
 
 ## Aan de slag
 
-U moet het [authentificatieleerprogramma](../../tutorials/authentication.md) hebben voltooid om toegang tot de waarden te hebben om vraag aan Secure Spark [!DNL Data Access] SDK te maken:
+U moet het [authentificatieleerprogramma](../../tutorials/authentication.md) hebben voltooid om toegang tot de waarden te hebben om vraag aan Secure [!DNL Spark] [!DNL Data Access] SDK te maken:
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
 - `{IMS_ORG}`
 
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Het gebruiken van SDK van de Vonk vereist de naam en identiteitskaart van de zandbak de verrichting in zal plaatsvinden:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Voor het gebruik van de [!DNL Spark] SDK zijn de naam en de id van de sandbox vereist waarin de bewerking plaatsvindt:
 
 - `{SANDBOX_NAME}`
 - `{SANDBOX_ID}`
@@ -83,7 +83,7 @@ spark.sql.extensions = com.adobe.platform.query.QSSparkSessionExtensions
 
 De [!DNL Spark] SDK ondersteunt twee leesmodi: interactief en batchgewijs.
 
-De interactieve wijze leidt tot een verbinding van de Connectiviteit van het Gegevensbestand van Java (JDBC) aan [!DNL Query Service] en krijgt resultaten door een regelmatige JDBC `ResultSet` die automatisch aan een `DataFrame`. wordt vertaald. Deze wijze werkt gelijkaardig aan de ingebouwde methode van de Vonk `spark.read.jdbc()`. Deze wijze wordt bedoeld slechts voor kleine datasets en vereist slechts een gebruikerstoken voor authentificatie.
+De interactieve wijze leidt tot een verbinding van de Connectiviteit van het Gegevensbestand van Java (JDBC) aan [!DNL Query Service] en krijgt resultaten door een regelmatige JDBC `ResultSet` die automatisch aan een `DataFrame`. wordt vertaald. Deze modus werkt ongeveer op dezelfde manier als de ingebouwde [!DNL Spark] methode `spark.read.jdbc()`. Deze wijze wordt bedoeld slechts voor kleine datasets en vereist slechts een gebruikerstoken voor authentificatie.
 
 In de modus Batch wordt [!DNL Query Service]de opdracht COPY gebruikt om de set met het resultaat van het Parket te genereren op een gedeelde locatie. Deze Parquet-bestanden kunnen vervolgens verder worden verwerkt. Deze wijze vereist zowel een gebruikerstoken als een de dienstteken met het `acp.foundation.catalog.credentials` werkingsgebied.
 
