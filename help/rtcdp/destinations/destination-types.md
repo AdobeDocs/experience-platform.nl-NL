@@ -1,21 +1,24 @@
 ---
 title: Typen bestemmingen en categorieën
 seo-title: Typen bestemmingen en categorieën
-description: 'In het Platform van de Gegevens van de Klant van Adobe In real time, leggen de Profiel/de bestemmingen van de Uitvoer van het Segment gebeurtenisgegevens vast, combineren het met andere gegevensbronnen, passen segmentatie toe, en voeren segmenten en gekwalificeerde profielen naar bestemmingen uit. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen. '
-seo-description: In het Platform van de Gegevens van de Klant van Adobe In real time, leggen de Profiel/de bestemmingen van de Uitvoer van het Segment gebeurtenisgegevens vast, combineren het met andere gegevensbronnen, passen segmentatie toe, en voeren segmenten en gekwalificeerde profielen naar bestemmingen uit. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen.
+description: 'In het Platform van Gegevens van de Klant van Adobe In real time, vangen de Profiel/de bestemmingen van de Uitvoer van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie toe, en voeren segmenten en gekwalificeerde profielen naar bestemmingen uit. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen. '
+seo-description: In het Platform van Gegevens van de Klant van Adobe In real time, vangen de Profiel/de bestemmingen van de Uitvoer van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie toe, en voeren segmenten en gekwalificeerde profielen naar bestemmingen uit. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen.
 translation-type: tm+mt
-source-git-commit: 617cf1934402b9001647d7704fb24d6256069ff3
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '580'
+ht-degree: 0%
 
 ---
 
 
 # Doeltypen en -categorieën
 
-Lees deze pagina om inzicht te krijgen in de verschillende typen en categorieën bestemmingen van het Adobe Real-time klantgegevensplatform.
+Lees deze pagina om inzicht te krijgen in de verschillende typen en categorieën bestemmingen van het Adobe Real-time Platform voor klantgegevens.
 
 ## Doeltypen
 
-In Adobe Real-time Customer Data Platform maken we onderscheid tussen twee doeltypen - verbindingen en extensies. Er zijn twee soorten verbindingsbestemmingen, de bestemmingen van de Uitvoer van het Profiel en de bestemmingen van de Uitvoer van het Segment.
+In het Platform van de Gegevens van de Klant van Adobe In real time, maken wij onderscheid tussen twee bestemmingstypes - verbindingen en uitbreidingen. Er zijn twee soorten verbindingsbestemmingen, de bestemmingen van de Uitvoer van het Profiel en de bestemmingen van de Uitvoer van het Segment.
 
 ![Soorten bestemmingen](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -23,7 +26,7 @@ In Adobe Real-time Customer Data Platform maken we onderscheid tussen twee doelt
 
 ### Verbindingen
 
-**De bestemmingen van de Uitvoer** en van het **Segment van het profiel van de Uitvoer** in het Platform van de Gegevens van de Klant van Adobe Real-time vangen gebeurtenisgegevens, combineren het met andere gegevensbronnen om het [real-time klantenprofiel](/help/profile/home.md)te vormen, segmentatie toe te passen, en segmenten en gekwalificeerde profielen naar bestemmingen uit te voeren.
+**[!UICONTROL De bestemmingen van de Uitvoer]** en van het **[!UICONTROL Segment van het profiel van de Uitvoer]** in de Gegevens van de Klant van Adobe in real time leggen gebeurtenisgegevens vast, combineren het met andere gegevensbronnen om het [real-time klantenprofiel](/help/profile/home.md)te vormen, segmentatie toe te passen, en segmenten en gekwalificeerde profielen naar bestemmingen uit te voeren.
 
 <br> 
 
@@ -33,7 +36,7 @@ Profielexportdoelen genereren een bestand met profielen en/of kenmerken. Deze be
 
 #### Exportbestemmingen segment
 
-De de uitvoerbestemmingen van het segment verzenden de profielen en de segmenten die zij voor aan bestemmingsplatforms kwalificeerden. Deze bestemmingen gebruiken segment ID of gebruiker IDs. Advertentiebestemmingen zoals [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md) of [Google Ads](/help/rtcdp/destinations/google-ads-destination.md) zijn voorbeelden van deze soorten doelen.
+De de uitvoerbestemmingen van het segment verzenden de profielen en de segmenten die zij voor aan bestemmingsplatforms kwalificeerden. Deze bestemmingen gebruiken segment ID of gebruiker IDs. Reclamebestemmingen zoals [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) of [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) zijn voorbeelden van dit soort bestemmingen.
 
 #### Exportdoelen profiel en segment - video-overzicht
 
@@ -45,15 +48,15 @@ In de onderstaande video worden de bijzonderheden van de twee soorten doelen uit
 
 ### Extensies
 
-Adobe Real-time CDP maakt gebruik van de kracht en flexibiliteit van Experience Platform Launch om Launch-extensies op te nemen in de Adobe Real-time CDP-interface.
+Adobe Real-time CDP gebruikt de macht en de flexibiliteit van Experience Platform Launch om de uitbreidingen van de Lancering in de interface van Adobe in real time CDP te omvatten.
 
 >[!TIP]
 >
->Voor gedetailleerde informatie over de uitbreidingen van de Lancering van het Platform van de Ervaring, met inbegrip van gebruiksgevallen en hoe te om hen in de interface te vinden, zie het overzicht [van de uitbreidingen van de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Lancering.
+>Zie het overzicht [Extensies](/help/rtcdp/destinations/experience-platform-launch-extensions.md)starten voor meer informatie over extensies van Experience Platforms Launch, waaronder gebruiksgevallen en het zoeken van deze extensies in de interface.
 
 Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen. Beschouw extensies als een **type bestemming voor doorsturen** van gebeurtenissen. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Gegineerde personalisatieuitbreiding](/help/rtcdp/destinations/gainsight-extension.md) of de [Bevestiging Stem van de uitbreiding](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)van de Klant.
 
-![De uitbreidingen van de Lancering van het Platform van de ervaring vergeleken met andere bestemmingen](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
+![Extensies van Experience Platforms Launch vergeleken met andere bestemmingen](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
 <br> 
 
