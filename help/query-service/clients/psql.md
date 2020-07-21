@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Verbinding maken met PSQL
 topic: connect
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
 
 # Verbinding maken met PSQL
 
-PSQL is een opdrachtregelinterface die wordt weergegeven wanneer u Postgres op uw computer installeert. U kunt het installeren door deze instructies te volgen.
+PSQL is een opdrachtregelinterface die wordt geleverd wanneer u [!DNL Postgres] op uw computer installeert. U kunt het installeren door deze instructies te volgen.
 
 ## Postcodes installeren op een Mac
 
@@ -35,15 +38,15 @@ Na het uitgeven van deze bevelen, zou u het volgende moeten zien:
 /usr/local/bin/psql
 ```
 
-## Postcodes installeren op een pc
+## Installeren [!DNL Postgres] op een pc
 
-Download en installeer Postgres vanaf deze [locatie](https://www.postgresql.org/download/windows/).
+Download en installeer [!DNL Postgres] vanaf deze [locatie](https://www.postgresql.org/download/windows/).
 
 De padvariabele bewerken:
 
 ![Afbeelding](../images/clients/psql/path.png)
 
-Voeg de twee getoonde lijnen toe die &quot;Postgres.&quot;omvatten
+Voeg de twee getoonde lijnen toe die &quot;[!DNL Postgres].&quot;omvatten
 
 Sla de updates op en open vervolgens een opdrachtprompt en typ:
 
@@ -57,11 +60,11 @@ Je zou iets als dit moeten zien:
 psql (PostgreSQL) 9.5.14
 ```
 
-## Connect PSQL en Query Service
+## Connect PSQL en [!DNL Query Service]
 
-Ga terug naar de interface Platform op de pagina &quot;Connect BI Tools&quot;.
+Ga terug naar de [!DNL Platform] gebruikersinterface op de pagina Tools *[!UICONTROL voor]* Connect BI.
 
-Klik op **kopie** voor &quot;PSQL-opdracht&quot;.
+Klik **[!UICONTROL exemplaar]** voor *[!UICONTROL Bevel]* PSQL.
 
 ![Afbeelding](../images/clients/psql/connect-bi.png)
 
