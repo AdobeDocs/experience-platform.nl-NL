@@ -4,15 +4,15 @@ seo-title: Amazon Kinesis-bestemming
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens te streamen vanaf het Adobe Experience Platform.
 seo-description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens te streamen vanaf het Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
 
 
-# (bèta) Amazon Kinesis-bestemming
+# (Beta) [!DNL Amazon Kinesis] bestemming
 
 
 >[!IMPORTANT]
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Met de [!DNL Kinesis Data Streams] service van Amazon Web Services kunt u grote stromen gegevensrecords in real-time verzamelen en verwerken.
+De [!DNL Kinesis Data Streams] dienst door [!DNL Amazon Web Services] staat u toe om grote stromen gegevensverslagen in echt te verzamelen en te verwerken.
 
 U kunt een uitgaande verbinding in real time aan uw [!DNL Amazon Kinesis] opslag tot stand brengen aan stroomgegevens van Adobe Experience Platform.
 
@@ -34,9 +34,9 @@ U kunt een uitgaande verbinding in real time aan uw [!DNL Amazon Kinesis] opslag
 
 ## Gevallen gebruiken {#use-cases}
 
-Door streamingdoelen zoals Amazon Kinesis te gebruiken, kunt u eenvoudig hoogwaardige segmentatiegebeurtenissen en de bijbehorende profielkenmerken in uw systemen van keuze doorgeven.
+Door het stromen bestemmingen zoals te gebruiken [!DNL Amazon Kinesis], kunt u high-value segmenteringsgebeurtenissen en bijbehorende profielattributen in uw systemen van keus gemakkelijk invoeren.
 
-Met een vooruitzicht downloadde u bijvoorbeeld een witboek dat hen kwalificeert tot een segment met een &quot;hoge neiging om te converteren&quot;. Door het segment in kaart te brengen dat het vooruitzicht binnen aan de bestemming van Amazon Kinesis valt, zou u deze gebeurtenis in Amazon Kinesis ontvangen. Daar, kunt u een doe-het-zelf benadering gebruiken en bedrijfslogica bovenop de gebeurtenis beschrijven, aangezien u denkt het beste met uw systemen van bedrijfsIT zou werken.
+Met een vooruitzicht downloadde u bijvoorbeeld een witboek dat hen kwalificeert tot een segment met een &quot;hoge neiging om te converteren&quot;. Door het segment in kaart te brengen dat het vooruitzicht binnen aan de [!DNL Amazon Kinesis] bestemming valt, zou u deze gebeurtenis binnen ontvangen [!DNL Amazon Kinesis]. Daar, kunt u een doe-het-zelf benadering gebruiken en bedrijfslogica bovenop de gebeurtenis beschrijven, aangezien u denkt het beste met uw systemen van bedrijfsIT zou werken.
 
 ## Connect-doel {#connect-destination}
 
@@ -46,7 +46,7 @@ Voor [!DNL Amazon Kinesis] bestemmingen, ga de volgende informatie in creeer bes
 
 ### In de stap Verificatie {#authentication-step}
 
-* **Toegangssleutel en geheime sleutel** voor Amazon Web Services: In [!DNL Amazon Web Services], produceer een toegangstoets - geheim toegangszeer belangrijke paar om Adobe in real time CDP toegang tot uw [!DNL Amazon Kinesis] rekening te verlenen. Meer informatie vindt u in de documentatie [van](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon Web Services.
+* **[!DNL Amazon Web Services]toegangssleutel en geheime sleutel **: In[!DNL Amazon Web Services], produceer een toegangstoets - geheim toegangszeer belangrijke paar om Adobe in real time CDP toegang tot uw[!DNL Amazon Kinesis]rekening te verlenen. Meer informatie vindt u in de documentatie[van](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon Web Services.
 * **regio**: Geef aan naar welk [!DNL Amazon Web Services] gebied gegevens moeten worden gestreamd.
 
 ![Invoervelden in de stap van de account](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -73,7 +73,7 @@ Zie Profielen en segmenten [activeren naar een doel](/help/rtcdp/destinations/ac
 
 ## Geëxporteerde gegevens {#exported-data}
 
-De geëxporteerde gegevens van het Experience Platform worden in JSON- [!DNL Amazon Kinesis] indeling opgeslagen. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn ECID en e-mail.
+De geëxporteerde [!DNL Experience Platform] gegevens worden in JSON- [!DNL Amazon Kinesis] indeling opgeslagen. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn ECID en e-mail.
 
 ```
 {
