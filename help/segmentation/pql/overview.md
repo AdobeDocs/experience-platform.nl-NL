@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Overzicht van PQL (Profile Query Language)
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '670'
+ht-degree: 1%
 
 ---
 
 
-# Overzicht van PQL (Profile Query Language)
+# [!DNL Profile Query Language] (PQL) - overzicht
 
-De Taal van de Vraag van het profiel (PQL) is een van het Model van de Gegevens van de Ervaring (XDM) volgzame vraagtaal die wordt ontworpen om de definitie en de uitvoering van segmenteringsvragen voor de gegevens van het Profiel van de Klant in real time te steunen.
+[!DNL Profile Query Language] (PQL) is een [!DNL Experience Data Model] (XDM) volgzame vraagtaal die wordt ontworpen om de definitie en de uitvoering van segmenteringsvragen voor [!DNL Real-time Customer Profile] gegevens te steunen.
 
 Deze handleiding biedt een algemeen overzicht van PQL, met opmaakrichtlijnen en voorbeelden van PQL-expressies.
 
@@ -37,7 +40,7 @@ homeAddress.stateProvince = workAddress.stateProvince
 
 ### Expliciete verwijzing naar de eerste parameter
 
-In het onderstaande voorbeeld `$1` wordt naar de eerste parameter verwezen. Als gevolg hiervan `$2` zou ik verwijzen naar de tweede parameter, enz.
+In het onderstaande voorbeeld wordt `$1` verwezen naar de eerste parameter. Als gevolg hiervan `$2` zou ik verwijzen naar de tweede parameter, enz.
 
 ```sql
 $1.homeAddress.stateProvince = $1.homeAddress.stateProvince
@@ -86,4 +89,4 @@ In de volgende tabel worden de verschillende categorieën ondersteunde PQL-funct
 
 ## Volgende stappen
 
-Nu u hebt geleerd hoe te om de Taal van de Vraag van het Profiel te gebruiken, kunt u PQL gebruiken wanneer het creëren van en het wijzigen van segmenten. Lees het [segmentatieoverzicht](../home.md)voor meer informatie over segmentatie.
+Nu u hebt geleerd hoe te te gebruiken [!DNL Profile Query Language], kunt u PQL gebruiken wanneer het creëren van en het wijzigen van segmenten. Lees het [segmentatieoverzicht](../home.md)voor meer informatie over segmentatie.
