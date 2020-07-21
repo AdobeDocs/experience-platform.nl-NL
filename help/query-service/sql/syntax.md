@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis
 topic: syntax
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1940'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # SQL-syntaxis
 
-De Dienst van de vraag verstrekt de capaciteit om standaardANSI SQL voor `SELECT` verklaringen en andere beperkte bevelen te gebruiken. Dit document toont SQL syntaxis die door de Dienst van de Vraag wordt gesteund.
+[!DNL Query Service] verstrekt de capaciteit om standaardANSI SQL voor `SELECT` verklaringen en andere beperkte bevelen te gebruiken. In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door [!DNL Query Service].
 
 ## Een SELECT-query definiëren
 
-De volgende syntaxis bepaalt een `SELECT` vraag die door de Dienst van de Vraag wordt gesteund:
+De volgende syntaxis definieert een `SELECT` query die wordt ondersteund door [!DNL Query Service]:
 
 ```
 [ WITH with_query [, ...] ]
@@ -111,7 +111,7 @@ SELECT statement 2
 
 ## TABEL MAKEN ALS SELECT
 
-De volgende syntaxis bepaalt een vraag `CREATE TABLE AS SELECT` (CTAS) die door de Dienst van de Vraag wordt gesteund:
+De volgende syntaxis definieert een `CREATE TABLE AS SELECT` (CTAS)-query die wordt ondersteund door [!DNL Query Service]:
 
 ```
 CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
@@ -136,7 +136,7 @@ Houd er rekening mee dat voor een bepaalde CTAS-query:
 
 ## INVOEGEN IN
 
-De volgende syntaxis bepaalt een `INSERT INTO` vraag die door de Dienst van de Vraag wordt gesteund:
+De volgende syntaxis definieert een `INSERT INTO` query die wordt ondersteund door [!DNL Query Service]:
 
 ```
 INSERT INTO table_name select_query
@@ -170,7 +170,7 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 ## WEERGAVE MAKEN
 
-De volgende syntaxis bepaalt een `CREATE VIEW` vraag die door de Dienst van de Vraag wordt gesteund:
+De volgende syntaxis definieert een `CREATE VIEW` query die wordt ondersteund door [!DNL Query Service]:
 
 ```
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
@@ -187,7 +187,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ### DROP VIEW
 
-De volgende syntaxis bepaalt een `DROP VIEW` vraag die door de Dienst van de Vraag wordt gesteund:
+De volgende syntaxis definieert een `DROP VIEW` query die wordt ondersteund door [!DNL Query Service]:
 
 ```
 DROP VIEW [IF EXISTS] view_name
@@ -202,7 +202,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## SQL-opdrachten parkeren
+## [!DNL Spark] SQL-opdrachten
 
 ### SET
 
@@ -242,7 +242,7 @@ CLOSE { name }
 
 ### DOEN
 
-Er wordt geen actie ondernomen in de Dienst van de Vraag als antwoord op begaat transactieverklaring.
+Er wordt geen actie ondernomen [!DNL Query Service] als reactie op de instructie commit transaction.
 
 ```
 COMMIT [ WORK | TRANSACTION ]
