@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Vooraf voorbereide instructies
 topic: prepared statements
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '340'
+ht-degree: 7%
 
 ---
 
 
 # Vooraf voorbereide instructies
 
-In SQL, worden de voorbereide verklaringen gebruikt om gelijkaardige vragen of updates te templatiseren. Adobe Experience Platform Query Service ondersteunt voorbereide instructies door gebruik te maken van een geparametriseerde query. Dit kan worden gebruikt om prestaties te optimaliseren, aangezien u een vraag niet meer zult moeten opnieuw parseren opnieuw en opnieuw.
+In SQL, worden de voorbereide verklaringen gebruikt om gelijkaardige vragen of updates te templatiseren. Adobe Experience Platform [!DNL Query Service] steunt voorbereide verklaringen door een geparameterized vraag te gebruiken. Dit kan worden gebruikt om prestaties te optimaliseren, aangezien u een vraag niet meer zult moeten opnieuw parseren opnieuw en opnieuw.
 
 ## Vooraf voorbereide instructies gebruiken
 
