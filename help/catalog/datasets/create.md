@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een gegevensset maken met behulp van API's
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1234'
 ht-degree: 0%
 
 ---
@@ -20,31 +20,31 @@ Dit document verstrekt algemene stappen voor het creëren van een dataset gebrui
 
 Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
 
-* [Inname](../../ingestion/batch-ingestion/overview.md)in batch: Met Experience Platform kunt u gegevens invoeren als batchbestanden.
-* [XDM-systeem](../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Inname](../../ingestion/batch-ingestion/overview.md)in batch: [!DNL Experience Platform] kunt u gegevens invoeren als batchbestanden.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan de Platform APIs te maken.
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan APIs te maken. [!DNL Platform]
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+>Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -60,9 +60,9 @@ Deze standaarddefinities maken het mogelijk dat gegevens consistent worden geïn
 
 Deze zelfstudie begint waar de zelfstudie over de API voor [schemaregistratie](../../xdm/tutorials/create-schema-api.md) eindigt, waarbij gebruik wordt gemaakt van het schema Loyalty-leden dat tijdens die zelfstudie is gemaakt.
 
-Als u niet het leerprogramma van de Registratie van het Schema hebt voltooid, gelieve daar te beginnen en met dit datasetleerprogramma voort te zetten slechts zodra u het noodzakelijke schema hebt samengesteld.
+Als u de [!DNL Schema Registry] zelfstudie niet hebt voltooid, begint u daar en gaat u verder met deze zelfstudie voor de gegevensset, maar pas nadat u het vereiste schema hebt samengesteld.
 
-De volgende vraag kan worden gebruikt om het schema van de Leden van de Loyalty te bekijken u tijdens het leerprogramma van de Registratie van het Schema API creeerde:
+De volgende vraag kan worden gebruikt om het schema van de Leden van de Loyalty te bekijken u tijdens het [!DNL Schema Registry] API leerprogramma creeerde:
 
 **API-indeling**
 
@@ -329,7 +329,7 @@ Een bestand dat is geüpload, retourneert een lege responstekst en HTTP Status 2
 
 ## Signaalbatchverwerking
 
-Nadat u al uw gegevensbestanden naar de batch hebt geüpload, kunt u de batch voor voltooiing signaleren. Door het afgeven van de handtekening maakt de service catalogusitems voor de geüploade bestanden en koppelt u deze aan de eerder gegenereerde batch. `DataSetFile` De catalogusbatch is gemarkeerd als succesvol, waardoor stroomafwaartse stromen worden geactiveerd die vervolgens aan de nu beschikbare gegevens kunnen werken.
+Nadat u al uw gegevensbestanden naar de batch hebt geüpload, kunt u de batch voor voltooiing signaleren. Door het afgeven van de handtekening maakt de service [!DNL Catalog] `DataSetFile` items voor de geüploade bestanden en koppelt u deze aan de eerder gegenereerde batch. De [!DNL Catalog] batch is gemarkeerd als succesvol, waardoor stroomafwaartse stromen worden geactiveerd die vervolgens aan de nu beschikbare gegevens kunnen werken.
 
 **API-indeling**
 
