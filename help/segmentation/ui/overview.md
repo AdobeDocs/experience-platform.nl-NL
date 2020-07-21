@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor de gebruikersinterface van Segment Builder
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '2750'
+source-wordcount: '2745'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 Het werken met segmentdefinities vereist een begrip van de diverse [!DNL Experience Platform] diensten betrokken bij segmentatie. Lees de documentatie voor de volgende services voordat u deze gebruikershandleiding leest:
 
-- [!DNL Segmentation Service](../home.md): De Dienst van de segmentatie staat u gegevens toe die in worden opgeslagen [!DNL Experience Platform] die op individuen (zoals klanten, vooruitzichten, gebruikers, of organisaties) betrekking hebben in kleinere groepen die gelijkaardige eigenschappen delen en op gelijkaardige marketing strategieën zullen antwoorden.
+- [!DNL Segmentation Service](../home.md): [!DNL Segmentation Service] kunt u gegevens verdelen die in [!DNL Experience Platform] die op individuen (zoals klanten, vooruitzichten, gebruikers, of organisaties) betrekking hebben in kleinere groepen worden opgeslagen die gelijkaardige eigenschappen delen en op gelijkaardige wijze aan marketing strategieën zullen antwoorden.
 - [!DNL Real-time Customer Profile](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [!DNL Identity Service](../../identity-service/home.md): Schakelt [!DNL Real-time Customer Profile] het overbruggen van identiteiten uit verschillende gegevensbronnen die in Platform worden opgenomen.
+- [!DNL Identity Service](../../identity-service/home.md): Schakelt [!DNL Real-time Customer Profile] het overbruggen van identiteiten uit verschillende gegevensbronnen in [!DNL Platform].
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
 Het is ook belangrijk om twee belangrijke termen te kennen die in dit document worden gebruikt en het verschil tussen hen te begrijpen:
@@ -57,13 +57,13 @@ U kunt deze bouwstenen in de sectie van *[!UICONTROL Gebieden]* op de linkerkant
 
 ### Attributen
 
-Op het tabblad **[!UICONTROL Kenmerken]** kunt u door [!DNL Profile] kenmerken bladeren die tot de [!DNL XDM Individual Profile] klasse behoren. Elke map kan worden uitgevouwen om extra kenmerken weer te geven. Elk kenmerk is een tegel die naar het canvas voor regelbuilders in het midden van de werkruimte kan worden gesleept. Het canvas van de [regelbouwer](#rule-builder-canvas) wordt meer in detail besproken later in deze gids.
+Op het tabblad **[!UICONTROL Kenmerken]** kunt u door [!DNL Profile] kenmerken bladeren die tot de [!DNL XDM Individual Profile] klasse behoren. Elke map kan worden uitgevouwen om aanvullende kenmerken weer te geven. Elk kenmerk is een tegel die naar het canvas voor regelbuilders in het midden van de werkruimte kan worden gesleept. Het canvas van de [regelbouwer](#rule-builder-canvas) wordt meer in detail besproken later in deze gids.
 
 ![](../images/segment-builder/attributes.png)
 
 ### Gebeurtenissen
 
-Op het tabblad **[!UICONTROL Gebeurtenissen]** kunt u een publiek maken op basis van gebeurtenissen of acties die hebben plaatsgevonden met XDM ExperienceEvent-gegevenselementen. U kunt gebeurtenistypen ook vinden op het tabblad **[!UICONTROL Gebeurtenissen]** . Dit is een verzameling veelgebruikte gebeurtenissen waarmee u uw segmenten sneller kunt maken.
+Op het tabblad **[!UICONTROL Gebeurtenissen]** kunt u een publiek maken op basis van gebeurtenissen of acties die hebben plaatsgevonden met behulp van [!DNL XDM ExperienceEvent] gegevenselementen. U kunt gebeurtenistypen ook vinden op het tabblad **[!UICONTROL Gebeurtenissen]** . Dit is een verzameling veelgebruikte gebeurtenissen waarmee u uw segmenten sneller kunt maken.
 
 U kunt niet alleen naar [!DNL ExperienceEvent] elementen bladeren, maar ook naar gebeurtenistypen zoeken. Gebeurtenistypen gebruiken dezelfde coderingslogica als [!DNL ExperienceEvents], zonder dat u door de [!DNL XDM ExperienceEvent] klasse hoeft te zoeken om de juiste gebeurtenis te zoeken. Als u bijvoorbeeld met de zoekbalk zoekt naar &quot;winkelwagentje&quot;, worden de gebeurtenistypen &quot;[!UICONTROL AddCart]&quot; en &quot;[!UICONTROL RemoveCart]&quot; geretourneerd. Dit zijn twee veelgebruikte tekenacties bij het samenstellen van segmentdefinities.
 
