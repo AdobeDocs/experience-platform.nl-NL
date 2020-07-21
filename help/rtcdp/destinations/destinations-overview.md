@@ -1,22 +1,22 @@
 ---
-title: Overzicht van doelen
-seo-title: Overzicht van doelen
+title: Overzicht van bestemmingen
+seo-title: Overzicht van bestemmingen
 description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Platform van de Gegevens van de Klant van Adobe in real time gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 seo-description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Platform van de Gegevens van de Klant van Adobe in real time gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 translation-type: tm+mt
-source-git-commit: a61a2a4d9d51c402bb50153c06a93d255a3613cb
+source-git-commit: 7aa15772003cce1dfc7c3636048bce9a35bf8197
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
 
 
-# Destinations Overview {#overview}
+# [!DNL Destinations] overzicht {#overview}
 
 ![Overzicht van doelen banner](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**Doelen** zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+**[!DNL Destinations]** zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
 ## Doelen en bronnen {#destinations-and-sources}
 
@@ -48,14 +48,14 @@ De bestemmingsfunctionaliteit in CDP in real time werkt met de toestemmingen van
 
 Voor meer informatie over toegangscontroles, zie de handleiding [van de controlegebruiker van de](../../access-control/ui/overview.md)Toegang.
 
-## Beperkingen op gegevensbeheer bij het activeren van gegevens naar bestemmingen {#data-governance}
+## [!DNL Data Governance] beperkingen op het activeren van gegevens naar bestemmingen {#data-governance}
 
 Het beheer van gegevens wordt afgedwongen voor CDP-bestemmingen in real time via:
 
 * *Gebruiksgevallen* voor marketing die u kunt selecteren in de workflow voor het maken van doelen.
 * *Beleid* voor gegevensgebruik dat gegevens met bepaalde gebruikslabels beperkt van activering tot bestemmingen met bepaalde gevallen van marketinggebruik.
 
-Zie het Beleid van Gegevens in CDP in real time documentatie voor meer informatie over [marketing gebruiksgevallen](/help/rtcdp/privacy/data-governance-overview.md#destinations) en het [oplossen van de schendingen](/help/rtcdp/privacy/data-governance-overview.md#enforcement)van het gegevensbeleid.
+Zie de [!DNL Data Governance] in CDP in real time documentatie voor meer informatie over de [marketing gebruiksgevallen](/help/rtcdp/privacy/data-governance-overview.md#destinations) en het [oplossen van de schendingen](/help/rtcdp/privacy/data-governance-overview.md#enforcement)van het gegevensbeleid.
 
 Voor meer informatie over het selecteren van marketing gebruiksgevallen in creeer bestemmingswerkschema, zie de volgende pagina&#39;s voor de verschillende bestemmingstypes in Echt - tijd CDP:
 
