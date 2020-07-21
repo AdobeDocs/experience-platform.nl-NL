@@ -4,27 +4,27 @@ solution: Experience Platform
 title: Bezig met schrijven van query's
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
 
 
-# Algemene begeleiding voor vraaguitvoering in de Dienst van de Vraag
+# Algemene richtlijnen voor het uitvoeren van query&#39;s in [!DNL Query Service]
 
-Dit document detailleert belangrijke details om te weten wanneer het schrijven van vragen in de Dienst van de Vraag van het Adobe Experience Platform.
+Dit document bevat belangrijke informatie die u moet weten wanneer u query&#39;s schrijft in het Adobe Experience Platform [!DNL Query Service].
 
-Voor gedetailleerde informatie over de SQL syntaxis die in de Dienst van de Vraag wordt gebruikt, te lezen gelieve de [SQL syntaxisdocumentatie](../sql/syntax.md).
+Lees voor meer informatie over de SQL-syntaxis die wordt gebruikt in [!DNL Query Service]de [SQL-syntaxisdocumentatie](../sql/syntax.md).
 
 ## Uitvoeringsmodellen voor query
 
-De Dienst van de Vraag van het Adobe Experience Platform heeft twee modellen van vraaguitvoering: interactief en niet-interactief. De interactieve uitvoering wordt gebruikt voor vraagontwikkeling en rapportgeneratie in bedrijfsintelligentiehulpmiddelen, terwijl niet-interactief voor grotere banen en operationele vragen als deel van een werkschema van de gegevensverwerking wordt gebruikt.
+Adobe Experience Platform [!DNL Query Service] heeft twee modellen van vraaguitvoering: interactief en niet-interactief. De interactieve uitvoering wordt gebruikt voor vraagontwikkeling en rapportgeneratie in bedrijfsintelligentiehulpmiddelen, terwijl niet-interactief voor grotere banen en operationele vragen als deel van een werkschema van de gegevensverwerking wordt gebruikt.
 
 ### Interactieve queryuitvoering
 
-De vragen kunnen interactief worden uitgevoerd door hen door de Dienst UI van de Vraag of [door een verbonden cliënt](../clients/overview.md)voor te leggen. Wanneer het runnen van de Dienst van de Vraag door een verbonden cliënt, loopt een actieve zitting tussen de cliënt en de Dienst van de Vraag tot of de voorgelegde vraagwinst of tijden uit.
+De vragen kunnen interactief worden uitgevoerd door hen door [!DNL Query Service] UI of [door een verbonden cliënt](../clients/overview.md)voor te leggen. Wanneer het lopen [!DNL Query Service] door een verbonden cliënt, loopt een actieve zitting tussen de cliënt en [!DNL Query Service] tot of de voorgelegde vraagwinst of tijden uit.
 
 De interactieve vraaguitvoering heeft de volgende beperkingen:
 
@@ -38,11 +38,11 @@ De interactieve vraaguitvoering heeft de volgende beperkingen:
 >
 >Als u de maximale rijbeperking wilt overschrijven, neemt u `LIMIT 0` de query op. De zoektime-out van 10 minuten is nog steeds van toepassing.
 
-Standaard worden de resultaten van interactieve query&#39;s geretourneerd aan de client en worden deze **niet** voortgezet. Om de resultaten als dataset in Experience Platform voort te zetten, moet de vraag de `CREATE TABLE AS SELECT` syntaxis gebruiken.
+Standaard worden de resultaten van interactieve query&#39;s geretourneerd aan de client en worden deze **niet** voortgezet. Om de resultaten als dataset binnen te handhaven [!DNL Experience Platform], moet de vraag de `CREATE TABLE AS SELECT` syntaxis gebruiken.
 
 ### Niet-interactieve query-uitvoering
 
-De vragen die door de Dienst API van de Vraag worden voorgelegd worden in werking gesteld niet-interactief. De niet-interactieve uitvoering betekent dat de Dienst van de Vraag de API vraag ontvangt en de vraag in de orde uitvoert het wordt ontvangen. De niet-interactieve vragen resulteren altijd in of de generatie van een nieuwe dataset in Experience Platform om de resultaten te ontvangen, of de toevoeging van nieuwe rijen in een bestaande dataset.
+Vragen die via de [!DNL Query Service] API worden ingediend, worden niet-interactief uitgevoerd. De niet-interactieve uitvoering betekent dat de API vraag [!DNL Query Service] ontvangt en de vraag in de orde uitvoert het wordt ontvangen. De niet-interactieve vragen resulteren altijd in of de generatie van een nieuwe dataset binnen [!DNL Experience Platform] om de resultaten te ontvangen, of de toevoeging van nieuwe rijen in een bestaande dataset.
 
 ## Een specifiek veld binnen een object openen
 
@@ -189,4 +189,4 @@ Achteraanhalingstekens zijn **niet** nodig als u haakje notatie gebruikt.
 
 ## Volgende stappen
 
-Door dit document te lezen, bent u aan sommige belangrijke overwegingen geïntroduceerd wanneer het schrijven van vragen gebruikend de Dienst van de Vraag. Voor meer informatie over hoe te om de SQL syntaxis te gebruiken om uw eigen vragen te schrijven, gelieve de [SQL syntaxisdocumentatie](../sql/syntax.md)te lezen.
+Door dit document te lezen, bent u aan sommige belangrijke overwegingen toegevoegd wanneer het schrijven van vragen gebruikend [!DNL Query Service]. Voor meer informatie over hoe te om de SQL syntaxis te gebruiken om uw eigen vragen te schrijven, gelieve de [SQL syntaxisdocumentatie](../sql/syntax.md)te lezen.
