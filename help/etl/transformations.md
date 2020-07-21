@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Voorbeeld-ETL-transformaties
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '466'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ In dit artikel worden de volgende voorbeeldtransformaties getoond die een ETL-on
 
 ### Voorbeeldbestanden
 
-Voorbeelden van CSV- en JSON-bestanden zijn beschikbaar in het openbare, door Adobe onderhouden antwoord GitHub Reference van ETL:
+Voorbeelden van CSV- en JSON-bestanden zijn beschikbaar in het openbare, door Adobe onderhouden [!DNL GitHub] referentierapport voor ETL:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -49,9 +52,9 @@ De toewijzingsvereisten voor de CRM-gegevens worden in de volgende tabel uiteeng
 | TITEL | person.name.courtesyTitle | Kopiëren als tekenreeks |
 | F_NAME | person.name.firstName | Kopiëren als tekenreeks |
 | L_NAME | person.name.lastName | Kopiëren als tekenreeks |
-| GENDER | persoon.geslacht | Het geslacht transformeren als overeenkomende persoon.genumwaarde geslacht |
+| GENDER | person.gender | Het geslacht transformeren als overeenkomende persoon.genumwaarde geslacht |
 | DOB | person.bornDayAndMonth: &quot;MM-DD&quot;<br/>person.bornDate: &quot;YYYY-MM-DD&quot;<br/>person.bornYear: JJJJ | TransformDayAndMonth als<br/>stringTransformDate als<br/>stringTransformYear als short int |
-| EMAIL | PersonalEmail.address | Kopiëren als tekenreeks |
+| EMAIL | personalEmail.address | Kopiëren als tekenreeks |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | Kopiëren als tekenreeks naar CRMID-array in identityMap en instellen Primair als onwaar |
 | ECID | identityMap.ECID[{&quot;id&quot;:x, primair: false}] | Kopiëren als tekenreeks naar eerste item in ECID-array in identityMap en instellen Primair als onwaar |
 | LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | Kopiëren als tekenreeks naar LOYALTYID-array in identityMap en Primair instellen als true |
@@ -174,7 +177,7 @@ De hiërarchie van een dataframe (zoals een Parquet-bestand) moet overeenkomen m
 
 ### Voorbeeld dataframe
 
-De structuur van het volgende voorbeelddataframe is in kaart gebracht aan een schema dat de individuele klasse van het Profiel XDM uitvoert, en de gemeenschappelijkste gebieden verbonden aan schema&#39;s van dat type bevat.
+De structuur van het volgende voorbeeld dataframe is in kaart gebracht aan een schema dat de [!DNL XDM Individual Profile] klasse uitvoert, en de gemeenschappelijkste gebieden verbonden aan schema&#39;s van dat type bevat.
 
 ```python
 [
@@ -247,7 +250,7 @@ De structuur van het volgende voorbeelddataframe is in kaart gebracht aan een sc
 ]
 ```
 
-Bij het samenstellen van een dataframe voor gebruik in het Platform van de Ervaring van Adobe, is het belangrijk om ervoor te zorgen dat zijn hiërarchische structuur een nauwkeurige gelijke aan dat van een bestaand schema XDM is opdat de gebieden behoorlijk in kaart brengen.
+Wanneer het construeren van een dataframe voor gebruik in Adobe Experience Platform, is het belangrijk om ervoor te zorgen dat zijn hiërarchische structuur een nauwkeurige gelijke aan dat van een bestaand schema XDM is opdat de gebieden behoorlijk in kaart brengen.
 
 ## Identiteitskaart
 
@@ -280,7 +283,7 @@ Bij het samenstellen van een dataframe voor gebruik in het Platform van de Ervar
 
 De toewijzingsvereisten voor de array van identiteiten worden in de volgende tabel beschreven:
 
-| Identiteitsveld | identityMap-veld | Gegevenstype |
+| Identiteitsveld | identityMap-veld | Datatype |
 | -------------- | ----------------- | --------- |
 | identiteiten[0].id | [identityMapEmail][{"id"}] | kopiëren als tekenreeks |
 | identiteiten[1].id | [identityMapCRMID][{"id"}] | kopiëren als tekenreeks |
