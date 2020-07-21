@@ -1,21 +1,24 @@
 ---
 title: Overzicht van het realtime klantprofiel
-seo-title: Klantprofiel in real-time in realtime klantgegevensplatform
-description: Een overzicht van hoe het platform van de Gegevens van de Klant in real time u toelaat om gecoördineerde, verenigbare, relevante ervaringen voor uw klanten te drijven gebruikend de Profielen van de Klant in real time.
-seo-description: Gegevensplatform, profiel, gegevens, ervaringen, kanalen voor klanten in realtime
+seo-title: Klantprofiel in real-time in Platform van de Gegevens van de Klant in real-time
+description: Een overzicht van hoe het Platform van de Gegevens van de Klant in real time u toelaat om gecoördineerde, verenigbare, relevante ervaringen voor uw klanten te drijven gebruikend de Profielen van de Klant in real time.
+seo-description: Platform, profiel, gegevens, ervaringen, kanalen voor klantgegevens in realtime
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+workflow-type: tm+mt
+source-wordcount: '394'
+ht-degree: 0%
 
 ---
 
 
-# Overzicht van het realtime klantprofiel
+# [!DNL Real-time Customer Profile] overzicht
 
-Het Profiel van de Klant in real time laat u toe om een holistische mening van elke individuele klant te zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens te combineren. Het profiel staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
+[!DNL Real-time Customer Profile] laat u toe om een holistische mening van elke individuele klant te zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens te combineren. [!DNL Profile] staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
 
-## Profielen in het Real-Time Customer Data Platform
+## Profielen in [!DNL Real-time Customer Data Platform]
 
-Met het Real-Time Customer Data Platform kunt u gecoördineerde en consistente ervaringen voor uw klanten aansturen, ongeacht waar of wanneer ze met uw merk communiceren. Het leveren van deze persoonlijke ervaringen, zodat zij zich relevant en tijdig voelen, is geen kleine functie, maar het kan worden bereikt door het gebruik van het Real-time Klantprofiel, onderdeel van het Adobe Experience Platform. CDP in real time wordt gebouwd bovenop het Platform van de Ervaring en gebruikt veel van de diensten en de functionaliteit van het Platform van de Ervaring, met inbegrip van de verwezenlijking van profielen. Deze samengevoegde meningen van een individuele klant brengen gegevens van over uw vele marketing kanalen en de diverse systemen samen die uw organisatie momenteel gebruikt om klantengegevens op te slaan.
+[!DNL Real-time Customer Data Platform] biedt u de mogelijkheid om gecoördineerde en consistente ervaringen voor uw klanten te gebruiken, ongeacht waar of wanneer ze met uw merk communiceren. Het leveren van deze persoonlijke ervaringen, zodat zij zich relevant en tijdig voelen, is geen kleinigheid, maar het kan worden bereikt door gebruik te maken van [!DNL Real-time Customer Profile], een deel van het Adobe Experience Platform. CDP in real time wordt voortgebouwd bovenop [!DNL Experience Platform] en gebruikt veel van de [!DNL Experience Platform] diensten en de functionaliteit, met inbegrip van de verwezenlijking van profielen. Deze samengevoegde meningen van een individuele klant brengen gegevens van over uw vele marketing kanalen en de diverse systemen samen die uw organisatie momenteel gebruikt om klantengegevens op te slaan.
 
 ## Identiteiten en naamruimten
 
@@ -23,12 +26,12 @@ Aangezien de klantengegevens samenkomen wordt het samengevoegd in één enkel pr
 
 ## Beleid samenvoegen
 
-Wanneer het brengen van klantengegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen krijgen en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Zie het overzicht [van](/help/rtcdp/profile/merge-policies.md)samenvoegingsbeleid voor meer informatie over samenvoegingsbeleid.
+Wanneer het brengen van klantengegevens samen, zijn het fusiebeleid de regels die [!DNL Platform] gebruiken om te bepalen hoe de gegevens voorrang zullen krijgen en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Zie het overzicht [van](/help/rtcdp/profile/merge-policies.md)samenvoegingsbeleid voor meer informatie over samenvoegingsbeleid.
 
 ## Profielviewer
 
-Met Platform kunt u eenvoudig klantprofielen bekijken en zoeken naar specifieke profielen met behulp van verschillende kenmerken. Zie het [profieloverzicht](/help/rtcdp/profile/profile-viewer.md)voor meer informatie over het weergeven van profielen in Platform.
+[!DNL Platform] kunt u klantprofielen gemakkelijk bekijken en naar specifieke profielen zoeken gebruikend diverse attributen. Zie het overzicht [!DNL Platform]van de [profielviewer voor meer informatie over het weergeven van profielen binnen](/help/rtcdp/profile/profile-viewer.md).
 
 ## Volgende stappen
 
-Na het lezen van dit overzicht, zou u nu moeten begrijpen hoe Real-time CDP het Profiel van de Klant in real time gebruikt om dwars-kanaalverpersoonlijking bij schaal te drijven. Door identiteiten uit verschillende bronnen te verenigen, kunt u een volledig beeld van elk van uw individuele klanten zien, die u toestaan om uw marketing campagnes op een volledig nieuw niveau te brengen. Raadpleeg de documentatie [van het profiel van de](../../profile/home.md)real-time klant voor meer gedetailleerde informatie, zoals best practices en zelfstudies voor het werken met gegevens van het realtime-klantprofiel in de gebruikersinterface en via API&#39;s.
+Na het lezen van dit overzicht, zou u nu moeten begrijpen hoe Real-time CDP [!DNL Real-time Customer Profile] aan macht kanaalpersonalisatie bij schaal gebruikt. Door identiteiten uit verschillende bronnen te verenigen, kunt u een volledig beeld van elk van uw individuele klanten zien, die u toestaan om uw marketing campagnes op een volledig nieuw niveau te brengen. Raadpleeg de documentatie [!DNL Real-time Customer Profile] van het Klantprofiel in [realtime voor meer gedetailleerde informatie, waaronder best practices en zelfstudies voor het werken met](../../profile/home.md)gegevens in de gebruikersinterface en via API&#39;s.
