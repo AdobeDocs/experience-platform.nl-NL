@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevens in Adobe Experience Platform opnemen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1277'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Als u gegevens liever met API&#39;s voor gegevensinname wilt invoeren, leest u e
 
 De werkruimte van Datasets binnen [!DNL Experience Platform] staat u toe om alle datasets te bekijken en te beheren die uw organisatie IMS heeft gemaakt, evenals nieuwe te creëren.
 
-Bekijk de werkruimte Datasets door in de linkernavigatie op **[!UICONTROL Datasets]** te klikken. De werkruimte van Datasets bevat een lijst van datasets, met inbegrip van kolommen die _Naam_, _Gemaakt_ (datum en tijd), _Bron_, _Schema_, en de Status _van de___ Laatste Partij tonen, evenals de datum en de tijd de dataset was Last Updated.
+Bekijk de werkruimte Datasets door in de linkernavigatie op **[!UICONTROL Datasets]** te klikken. De werkruimte van Datasets bevat een lijst van datasets, met inbegrip van kolommen die _[!UICONTROL Naam]_,_[!UICONTROL  Gemaakt]_ (datum en tijd), _[!UICONTROL Bron]_,_[!UICONTROL  Schema]_, en de Status _[!UICONTROL van de]___Laatste Partij tonen, evenals de datum en de tijd de dataset was Last Updated.
 
 >[!NOTE]
 >
@@ -70,9 +70,9 @@ Als de gegevensset een naam en een beschrijving heeft, klikt u op **[!UICONTROL 
 
 Een lege dataset is nu gecreeerd en u bent teruggekeerd aan het lusje van de Activiteit **[!UICONTROL van de]** Dataset in de werkruimte van Datasets. U zou de naam van de dataset in de upper-left hoek van de werkruimte, samen met een bericht moeten zien dat &quot;Geen partijen zijn toegevoegd.&quot; Dit moet worden verwacht aangezien u nog geen partijen aan deze dataset hebt toegevoegd.
 
-Rechts in de werkruimte Datasets ziet u het tabblad **[!UICONTROL Info]** met informatie over uw nieuwe gegevensset, zoals de id _van de_ gegevensset, de _naam_, de _beschrijving_, de naam _van de_ tabel, de naam ______ van deTabel, de combinatieSchema, de combinatieStreamingen deBron. Het tabblad Info bevat ook informatie over het tijdstip waarop de gegevensset is _gemaakt_ en de datum waarop deze voor het _laatst is gewijzigd_ .
+Rechts in de werkruimte Datasets ziet u het tabblad **[!UICONTROL Info]** met informatie over uw nieuwe gegevensset, zoals de id _[!UICONTROL van de]_gegevensset, de_[!UICONTROL  naam]_, de _[!UICONTROL beschrijving]_, de naam_[!UICONTROL  van de]_tabel, de naam ______van deTabel, de combinatieSchema, de combinatieStreamingen deBron. Het tabblad Info bevat ook informatie over het tijdstip waarop de gegevensset is_[!UICONTROL  gemaakt]_ en de datum waarop deze voor het _[!UICONTROL laatst is gewijzigd]_.
 
-Ook in het lusje van Info is een _knevel van het Profiel_ die voor het toelaten van uw dataset voor gebruik met wordt gebruikt [!DNL Real-time Customer Profile]. Het gebruik van deze schakeloptie en [!DNL Real-time Customer Profile], wordt nader toegelicht in de volgende sectie.
+Ook in het lusje van Info is een _[!UICONTROL knevel van het Profiel]_die voor het toelaten van uw dataset voor gebruik met wordt gebruikt[!DNL Real-time Customer Profile]. Het gebruik van deze schakeloptie en[!DNL Real-time Customer Profile], wordt nader toegelicht in de volgende sectie.
 
 ![Gegevensactiviteit](../images/tutorials/ingest-batch-data/dataset_activity.png)
 
@@ -88,7 +88,7 @@ Als u de gegevensset wilt inschakelen voor [!DNL Real-time Customer Profile], kl
 
 ![Schakelen tussen profielen](../images/tutorials/ingest-batch-data/enable_dataset_unified_profile.png)
 
-Er verschijnt een dialoogvenster waarin u wordt gevraagd te bevestigen dat u de gegevensset wilt inschakelen voor realtime-klantprofiel.
+Er verschijnt een dialoogvenster waarin u wordt gevraagd te bevestigen dat u de gegevensset wilt inschakelen voor [!DNL Real-time Customer Profile].
 
 ![Dialoogvenster Profiel inschakelen](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
 
@@ -98,7 +98,7 @@ Klik op **[!UICONTROL Inschakelen]** en de schakeloptie wordt blauw om aan te ge
 
 ## Gegevens toevoegen aan gegevensset
 
-Gegevens kunnen op verschillende manieren aan een gegevensset worden toegevoegd. U kunt ervoor kiezen om API&#39;s voor gegevensinname te gebruiken of een ETL-partner zoals Unifi of Informatica. Voor dit leerprogramma, zullen de gegevens aan de dataset worden toegevoegd gebruikend het **[!UICONTROL Add lusje van Gegevens]** binnen UI.
+Gegevens kunnen op verschillende manieren aan een gegevensset worden toegevoegd. U zou kunnen verkiezen om APIs of een partner van ETL zoals [!DNL Data Ingestion] of [!DNL Unifi] [!DNL Informatica]te gebruiken. Voor dit leerprogramma, zullen de gegevens aan de dataset worden toegevoegd gebruikend het **[!UICONTROL Add lusje van Gegevens]** binnen UI.
 
 Als u gegevens aan de gegevensset wilt toevoegen, klikt u op het tabblad Gegevens **** toevoegen. U kunt nu bestanden slepen en neerzetten of op uw computer bladeren naar de bestanden die u wilt toevoegen.
 
@@ -116,19 +116,19 @@ Wanneer u een parket of JSON-bestand dat u wilt uploaden sleept en neerzet (of b
 
 ## Dataset-meetgegevens
 
-Nadat het bestand is geüpload, wordt op het tabblad **[!UICONTROL Datasetactiviteit]** niet meer aangegeven dat er geen batches zijn toegevoegd. In plaats daarvan, toont het lusje van de Activiteit van de Dataset nu datasetmetriek. Alle metriek tonen &quot;0&quot;in dit stadium aangezien de partij nog niet heeft geladen.
+Nadat het bestand is geüpload, wordt op het tabblad **[!UICONTROL Datasetactiviteit]** niet meer aangegeven dat er geen batches zijn toegevoegd. In plaats daarvan, toont het lusje van de Activiteit *[!UICONTROL van de]* Dataset nu datasetmetriek. Alle metriek tonen &quot;0&quot;in dit stadium aangezien de partij nog niet heeft geladen.
 
-Onder aan het tabblad vindt u een lijst met de _batch-id_ van de gegevens die zojuist zijn opgenomen via het proces [&quot;Gegevens toevoegen aan gegevensset&quot;](#add-data-to-dataset) . Ook wordt informatie over de batch opgenomen, waaronder de datum van _Ingested_ , het aantal _Records Ingested_ en de huidige _status_ van de batch.
+Onder aan het tabblad vindt u een lijst met de _[!UICONTROL batch-id]_van de gegevens die zojuist zijn opgenomen via het proces[&quot;Gegevens toevoegen aan gegevensset&quot;](#add-data-to-dataset). Ook wordt informatie over de batch opgenomen, waaronder de datum van_[!UICONTROL  Ingested]_ , het aantal _[!UICONTROL Records Ingested]_en de huidige_[!UICONTROL  status]_van de batch.
 
 ![Dataset-meetgegevens](../images/tutorials/ingest-batch-data/batch_loading.png)
 
 ## Batchgegevens
 
-Klik op de _Batch-id_ om een **[!UICONTROL Batch-overzicht]** weer te geven met aanvullende gegevens over de batch. Zodra de partij klaar is met laden, zal de informatie over de partij worden bijgewerkt om het aantal _Verweven_ Verslagen en de Grootte _van het_ Dossier te tonen. De _status_ wordt ook gewijzigd in &quot;Voltooid&quot; of &quot;Mislukt&quot;. Als de partij ontbreekt zal de sectie van de Code _van de_ Fout details betreffende om het even welke fouten tijdens opname bevatten.
+Klik op de _[!UICONTROL Batch-id]_om een**[!UICONTROL  Batch-overzicht ]**weer te geven met aanvullende gegevens over de batch. Zodra de partij klaar is met laden, zal de informatie over de partij worden bijgewerkt om het aantal_[!UICONTROL  Verweven]_ Verslagen en de Grootte _[!UICONTROL van het]_Dossier te tonen. De_[!UICONTROL  status]_ wordt ook gewijzigd in &quot;Voltooid&quot; of &quot;Mislukt&quot;. Als de partij ontbreekt zal de sectie van de Code _[!UICONTROL van de]_Fout details betreffende om het even welke fouten tijdens opname bevatten.
 
 Raadpleeg de handleiding voor het oplossen van problemen bij [Batch-inname voor meer informatie en veelgestelde vragen over het gebruik van batch-inname](../batch-ingestion/troubleshooting.md).
 
-Om aan het scherm van de Activiteit **van de** Dataset terug te keren, klik de naam van de dataset (_Loyalty Details_) in breadcrumb.
+Om aan het scherm van de Activiteit **[!UICONTROL van de]** Dataset terug te keren, klik de naam van de dataset (_[!UICONTROL Loyalty Details]_) in breadcrumb.
 
 ![Batchoverzicht](../images/tutorials/ingest-batch-data/batch_overview.png)
 
