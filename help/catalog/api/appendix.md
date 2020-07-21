@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Handboek voor ontwikkelaars van catalogusservice
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
 
 
-# Handboek voor ontwikkelaars van catalogusservice
+# [!DNL Catalog Service] bijlage ontwikkelaarsgids
 
-Dit document bevat aanvullende informatie die u helpt bij het werken met de Catalog-API.
+Dit document bevat aanvullende informatie die u helpt bij het werken met de [!DNL Catalog] API.
 
 ## Verwante objecten weergeven {#view-interrelated-objects}
 
-Sommige catalogusobjecten kunnen met andere catalogusobjecten worden verweven. Alle velden die vooraf worden ingesteld door `@` in antwoordladingen, verwijzen naar verwante objecten. De waarden voor deze gebieden nemen de vorm van URI aan, die in een afzonderlijke GET verzoek kan worden gebruikt om de verwante voorwerpen terug te winnen zij vertegenwoordigen.
+Sommige [!DNL Catalog] objecten kunnen met andere [!DNL Catalog] objecten verweven zijn. Alle velden die vooraf worden ingesteld door `@` in antwoordladingen, verwijzen naar verwante objecten. De waarden voor deze gebieden nemen de vorm van URI aan, die in een afzonderlijke GET verzoek kan worden gebruikt om de verwante voorwerpen terug te winnen zij vertegenwoordigen.
 
 De voorbeelddataset die in het document is geretourneerd bij het [opzoeken van een specifieke dataset](look-up-object.md) , bevat een `files` veld met de volgende URI-waarde: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. De inhoud van het `files` veld kan worden weergegeven door deze URI te gebruiken als het pad voor een nieuwe GET-aanvraag.
 
@@ -92,9 +92,9 @@ Een geslaagde reactie retourneert een lijst met verwante objecten. In dit voorbe
 
 ## Maak veelvoudige verzoeken in één enkele vraag
 
-Het worteleindpunt van Catalog API staat voor veelvoudige verzoeken toe om binnen één enkele vraag worden gemaakt. De aanvraaglading bevat een serie van voorwerpen die wat normaal individuele verzoeken vertegenwoordigen, die dan in orde worden uitgevoerd.
+Het worteleindpunt van [!DNL Catalog] API staat voor veelvoudige verzoeken toe om binnen één enkele vraag worden gemaakt. De aanvraaglading bevat een serie van voorwerpen die wat normaal individuele verzoeken vertegenwoordigen, die dan in orde worden uitgevoerd.
 
-Als deze aanvragen wijzigingen of toevoegingen aan de catalogus zijn en een van de wijzigingen mislukt, worden alle wijzigingen ongedaan gemaakt.
+Als deze verzoeken wijzigingen of toevoegingen zijn aan [!DNL Catalog] en een van de wijzigingen mislukt, worden alle wijzigingen ongedaan gemaakt.
 
 **API-indeling**
 
@@ -144,14 +144,14 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `id` | Door de gebruiker opgegeven id die aan het reactieobject is gekoppeld, zodat u verzoeken aan reacties kunt koppelen. Deze waarde wordt niet in Catalog opgeslagen en in de reactie geretourneerd ter referentie. |
-| `resource` | Het bronnenpad ten opzichte van de hoofdmap van de catalogus-API. Het protocol en domein moeten geen deel uitmaken van deze waarde en moeten worden voorafgegaan door &quot;/&quot;. <br/><br/> Wanneer het gebruiken van PATCH of DELETE als sub-request `method`, omvat objecten identiteitskaart in de middelweg. Om niet met user-provided te worden verward `id`, gebruikt de middelweg identiteitskaart van het voorwerp van de Catalogus zelf (bijvoorbeeld, `resource: "/dataSets/1234567890"`). |
+| `id` | Door de gebruiker opgegeven id die aan het reactieobject is gekoppeld, zodat u verzoeken aan reacties kunt koppelen. [!DNL Catalog] slaat deze waarde niet op en retourneert deze gewoon in de reactie voor referentiedoeleinden. |
+| `resource` | Het bronnenpad ten opzichte van de hoofdmap van de [!DNL Catalog] API. Het protocol en domein moeten geen deel uitmaken van deze waarde en moeten worden voorafgegaan door &quot;/&quot;. <br/><br/> Wanneer het gebruiken van PATCH of DELETE als sub-request `method`, omvat objecten identiteitskaart in de middelweg. Om niet met user-provided te worden verward `id`, gebruikt de middelweg identiteitskaart van het [!DNL Catalog] voorwerp zelf (bijvoorbeeld, `resource: "/dataSets/1234567890"`). |
 | `method` | De naam van de methode (GET, PUT, POST, PATCH of DELETE) die betrekking heeft op de actie die in de aanvraag wordt uitgevoerd. |
 | `body` | Het JSON-document dat normaal gesproken zou worden doorgegeven als de lading in een POST-, PUT- of PATCH-aanvraag. Deze eigenschap is niet vereist voor GET- of DELETE-aanvragen. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een array met objecten met de objecten `id` die u aan elke aanvraag hebt toegewezen, de HTTP-statuscode voor de individuele aanvraag en de reactie `body`. Aangezien de drie voorbeeldaanvragen allemaal waren om nieuwe objecten te maken, is de array `body` van elk object een array die alleen de id van het nieuwe object bevat, net als de standaard met de meest succesvolle POST-reacties in Catalog.
+Een geslaagde reactie retourneert een array met objecten met de objecten `id` die u aan elke aanvraag hebt toegewezen, de HTTP-statuscode voor de individuele aanvraag en de reactie `body`. Aangezien de drie voorbeeldaanvragen allemaal waren om nieuwe objecten te maken, is de array `body` van elk object een array die alleen de id van het nieuwe object bevat, net als de standaard met de meest succesvolle POST-reacties [!DNL Catalog].
 
 ```json
 [
@@ -176,7 +176,7 @@ Wees voorzichtig bij het inspecteren van de reactie op een meervoudige aanvraag,
 
 ## Aanvullende aanvraagheaders
 
-Catalog biedt verschillende headerconventies om u te helpen de integriteit van uw gegevens tijdens updates te behouden.
+[!DNL Catalog] biedt verschillende headerconventies om u te helpen de integriteit van uw gegevens tijdens updates te behouden.
 
 ### If-Match
 
@@ -192,6 +192,6 @@ Soms wilt u een object valideren zonder de informatie op te slaan. Als u de `Pra
 
 ## Gegevenscompressie
 
-Compaction is een service van het Experience Platform die gegevens uit kleine bestanden samenvoegt tot grotere bestanden zonder dat gegevens worden gewijzigd. Om prestatieredenen is het soms nuttig om een set kleine bestanden te combineren in grotere bestanden, zodat u sneller toegang hebt tot gegevens wanneer u hierom wordt gevraagd.
+Compaction is een [!DNL Experience Platform] service waarbij gegevens uit kleine bestanden worden samengevoegd in grotere bestanden zonder dat gegevens worden gewijzigd. Om prestatieredenen is het soms nuttig om een set kleine bestanden te combineren in grotere bestanden, zodat u sneller toegang hebt tot gegevens wanneer u hierom wordt gevraagd.
 
-Wanneer de bestanden in een geneste batch zijn gecomprimeerd, wordt het bijbehorende Catalog-object bijgewerkt voor controledoeleinden.
+Wanneer de bestanden in een ingesloten batch zijn gecomprimeerd, wordt het bijbehorende [!DNL Catalog] object bijgewerkt voor controledoeleinden.
