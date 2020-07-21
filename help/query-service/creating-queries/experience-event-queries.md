@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Query's van ExperienceEvent
 topic: queries
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
 
-# Query&#39;s van ExperienceEvent
+# [!DNL ExperienceEvent] query
 
-Naast de standaard SQL-query&#39;s biedt Adobe Experience Platform Query Service ondersteuning voor het schrijven van query&#39;s met behulp van ExperienceEvents. Een ExperienceEvent is een klasse van het Gegevensmodel van de Ervaring (XDM) die een onveranderlijke niet-geaggregeerde momentopname van het systeem vertegenwoordigt wanneer een gebruiker met een website of de dienst interactie aangaat, en kan daarom voor tijd-domeinanalyse worden gebruikt. Meer informatie over XDM en de Gebeurtenissen van de Ervaring kan in het XDM systeemoverzicht worden gevonden. Door de Dienst van de Vraag met ExperienceEvents te combineren, kunt u gedragstendensen onder uw gebruikers effectief volgen. In het volgende document worden voorbeelden gegeven van query&#39;s met betrekking tot ExperienceEvents.
+Naast standaard SQL-query&#39;s [!DNL Query Service] ondersteunt Adobe Experience Platform het schrijven van query&#39;s met behulp van [!DNL ExperienceEvents]. Een [!DNL ExperienceEvent] klasse is een [!DNL Experience Data Model] (XDM) klasse die een onveranderlijke niet-geaggregeerde momentopname van het systeem vertegenwoordigt wanneer een gebruiker met een website of de dienst interactie aangaat, en kan daarom voor tijd-domeinanalyse worden gebruikt. Meer informatie over XDM en [!DNL Experience Events] vindt u in het [!DNL XDM System] overzicht. Door [!DNL Query Service] met [!DNL ExperienceEvents]te combineren, kunt u gedragstrends onder uw gebruikers effectief volgen. In het volgende document worden voorbeelden gegeven van query&#39;s die worden uitgevoerd [!DNL ExperienceEvents].
 
 ## Een trended-rapport van gebeurtenissen op dag maken over een bepaald datumbereik
 
 In het volgende voorbeeld wordt een trended-rapport gemaakt van gebeurtenissen over een opgegeven datumbereik, gegroepeerd op datum. Het vat verschillende analysewaarden samen als A, B en C, en vat dan het aantal keren samen dat parka&#39;s is bekeken.
 
-De tijdstempelkolom die wordt gevonden in de datasets van de Gebeurtenis van de Ervaring is in UTC. In het volgende voorbeeld wordt de `from_utc_timestamp()` functie gebruikt om de tijdstempel te transformeren van UTC naar EDT. Vervolgens wordt de `date_format()` functie gebruikt om de datum te isoleren van de rest van de tijdstempel.
+De tijdstempelkolom in [!DNL Experience Event] gegevenssets staat in UTC. In het volgende voorbeeld wordt de `from_utc_timestamp()` functie gebruikt om de tijdstempel te transformeren van UTC naar EDT. Vervolgens wordt de `date_format()` functie gebruikt om de datum te isoleren van de rest van de tijdstempel.
 
 ```sql
 SELECT 
