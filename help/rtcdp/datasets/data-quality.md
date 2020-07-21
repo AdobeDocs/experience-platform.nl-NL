@@ -1,18 +1,21 @@
 ---
-title: Gegevenskwaliteit op het Real-Time Customer Data Platform
-seo-title: Gegevenskwaliteit op Adobe Real-time klantgegevensplatform
-description: Een document over de gegevenskwaliteit op het Real-time platform van de Gegevens van de Klant
-seo-description: Een document waarin wordt beschreven hoe gegevenskwaliteit werkt door batch- en gegevensinvoer op het Adobe Real-time Customer Data Platform
+title: Gegevenskwaliteit op Platform van realtime klantgegevens
+seo-title: Gegevenskwaliteit op Adobe Real-time Customer Data Platform
+description: Een document over gegevenskwaliteit op het Platform van de Gegevens van de Klant in real time
+seo-description: Een document waarin wordt beschreven hoe gegevenskwaliteit werkt door batch- en gegevensinvoer op het Platform voor klantgegevens in Adobe Real-time
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
 
-# Gegevenskwaliteit op het Real-Time Customer Data Platform
+# Gegevenskwaliteit op [!DNL Real-time Customer Data Platform]
 
-Het platform van de Gegevens van de Klant in real time (CDP in real time) staat u toe om gegevens van veelvoudige bronnen te brengen en hen samen te voegen om een verenigbare en gecoördineerde ervaring voor uw klanten te geven. Daarom is het van het grootste belang ervoor te zorgen dat uw gegevens volledig, nauwkeurig en beknopt zijn.
+[!DNL Real-time Customer Data Platform] (In real time CDP) staat u toe om gegevens van veelvoudige bronnen te brengen en hen samen te overbruggen om een verenigbare en gecoördineerde ervaring voor uw klanten te geven. Daarom is het van het grootste belang ervoor te zorgen dat uw gegevens volledig, nauwkeurig en beknopt zijn.
 
-CDP in realtime is gebaseerd op het Adobe Experience Platform en gebruikt veel van de services en functies van het Experience Platform. U kunt er dus zeker van zijn dat uw gegevens tijdens het invoeren worden gecontroleerd en gevalideerd.
+CDP in real time wordt gebouwd bovenop Adobe Experience Platform en gebruikt veel van de [!DNL Experience Platform] diensten en de functionaliteit. U kunt er dus zeker van zijn dat uw gegevens tijdens het invoeren worden gecontroleerd en gevalideerd.
 
 Lees de documentatie over de [gegevenskwaliteit in Adobe I/O](../../ingestion/quality/overview.md)voor meer informatie over de gegevenskwaliteit.
