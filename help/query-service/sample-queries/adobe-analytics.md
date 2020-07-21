@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Voorbeeldquery's
 topic: queries
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+workflow-type: tm+mt
+source-wordcount: '862'
+ht-degree: 1%
 
 ---
 
 
 # Voorbeeldquery&#39;s voor Adobe Analytics-gegevens
 
-Gegevens uit geselecteerde Adobe Analytics-rapportreeksen worden getransformeerd in XDM ExperienceEvents en opgenomen in Adobe Experience Platform als datasets voor u. In dit document wordt een aantal gebruiksgevallen beschreven waarin Adobe Experience Platform Query Service van deze gegevens gebruikmaakt en de meegeleverde voorbeeldquery&#39;s zouden moeten werken met uw Adobe Analytics-gegevenssets. Zie de documentatie [van de het gebiedstoewijzing van](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics voor meer informatie over afbeelding aan XDM ExperienceEvents.
+Gegevens uit geselecteerde Adobe Analytics-rapportsuites worden omgezet in XDM [!DNL ExperienceEvents] en als datasets voor u opgenomen in Adobe Experience Platform. Dit document beschrijft een aantal gebruiksgevallen waarin Adobe Experience Platform van deze gegevens [!DNL Query Service] gebruik maakt, en de inbegrepen steekproefvragen zouden met uw datasets van Adobe Analytics moeten werken. Zie de documentatie [van de het gebiedstoewijzing van](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics voor meer informatie over afbeelding aan XDM [!DNL ExperienceEvents].
 
 ## Aan de slag
 
@@ -126,9 +129,9 @@ ORDER BY Hour;
 
 ## Merchandising-variabelen (productsyntaxis)
 
-In Adobe Analytics kunnen gegevens op productniveau worden verzameld via speciaal geconfigureerde variabelen, genaamd &#39;Merchandising Variables&#39;. Deze zijn gebaseerd op een eVar of een Gebeurtenis van de Douane. Het verschil tussen deze variabelen en hun standaardgebruik is dat ze een afzonderlijke waarde vertegenwoordigen voor elk product dat op de hit wordt gevonden, in plaats van slechts één waarde voor de hit. Deze variabelen worden bedoeld als Variabelen van de Verkoop van de Syntaxis van het Product. Op deze manier kunt u informatie verzamelen zoals een &quot;kortingsbedrag&quot; per product of informatie over de &quot;locatie op pagina&quot; van het product in de zoekresultaten van de klant.
+In Adobe Analytics kunnen aangepaste gegevens op productniveau worden verzameld via speciaal geconfigureerde variabelen, de zogenaamde &quot;Merchandising Variables&quot;. Deze zijn gebaseerd op een eVar of een Gebeurtenis van de Douane. Het verschil tussen deze variabelen en hun standaardgebruik is dat ze een afzonderlijke waarde vertegenwoordigen voor elk product dat op de hit wordt gevonden, in plaats van slechts één waarde voor de hit. Deze variabelen worden bedoeld als Variabelen van de Verkoop van de Syntaxis van het Product. Op deze manier kunt u informatie verzamelen zoals een &quot;kortingsbedrag&quot; per product of informatie over de &quot;locatie op pagina&quot; van het product in de zoekresultaten van de klant.
 
-Hier zijn de gebieden XDM om tot de merchandising variabelen in uw dataset van Analytics toegang te hebben:
+Hier zijn de gebieden XDM om tot de verkoop variabelen in uw [!DNL Analytics] dataset toegang te hebben:
 
 ### eVars
 
@@ -162,7 +165,7 @@ WHERE _ACP_YEAR=2019 AND _ACP_MONTH=7 AND _ACP_DAY=23
 LIMIT 10
 ```
 
-Deze volgende query &#39;explodeert&#39; de `productListItems` en retourneert elke koopwaar en gebeurtenis per product. Het `_id` veld wordt opgenomen om de relatie met de oorspronkelijke hit weer te geven. De `_id` waarde is een unieke primaire sleutel in de dataset ExperienceEvent.
+Deze volgende query &#39;explodeert&#39; de `productListItems` en retourneert elke koopwaar en gebeurtenis per product. Het `_id` veld wordt opgenomen om de relatie met de oorspronkelijke hit weer te geven. De `_id` waarde is een unieke primaire sleutel in de [!DNL ExperienceEvent] dataset.
 
 ```sql
 SELECT
@@ -192,7 +195,7 @@ ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered.
 
 ## Merchandising-variabelen (conversiesyntaxis)
 
-Een ander type van een Merchandising Variabele die in de Analyse van Adobe wordt gevonden is Syntaxis van de Omzetting. Met de Syntaxis van het Product wordt de waarde verzameld tezelfdertijd zoals het product maar dit vereist dat de gegevens op de zelfde pagina aanwezig zijn. Er zijn scenario&#39;s waarin de gegevens op een pagina vóór de conversie of het geval van belang met betrekking tot het product voorkomen. Neem bijvoorbeeld het gebruik van het rapportvoorbeeld van de productzoekmethode.
+Een ander type van Merchandising Variabele die in Adobe Analytics wordt gevonden is de Syntaxis van de Omzetting. Met de Syntaxis van het Product wordt de waarde verzameld tezelfdertijd zoals het product maar dit vereist dat de gegevens op de zelfde pagina aanwezig zijn. Er zijn scenario&#39;s waarin de gegevens op een pagina vóór de conversie of het geval van belang met betrekking tot het product voorkomen. Neem bijvoorbeeld het gebruik van het rapportvoorbeeld van de productzoekmethode.
 
 1. Een gebruiker voert en intern onderzoek naar &quot;winterhoed&quot;uit die de Syntaxis van de Omzetting toeliet Verkeer eVar6 aan &quot;intern onderzoek:winterhoed&quot;
 2. De gebruiker klikt op &quot;wafelbeanie&quot; en landt op de pagina met productdetails.\
@@ -213,7 +216,7 @@ Bij de rapportage worden de orders, inkomsten, productweergaven en carttoevoegin
 | intern zoeken:zomershirt | 19.99 | 1 | 1 | 1 |
 | interne zoekopdracht:winterhoed | 12.99 | 1 | 1 | 1 |
 
-Hier zijn de XDM gebieden om de Syntaxis van de Omzetting in uw dataset van Analytics te veroorzaken:
+Hier zijn de gebieden XDM om de Syntaxis van de Omzetting in uw [!DNL Analytics] dataset te veroorzaken:
 
 ### eVars
 
