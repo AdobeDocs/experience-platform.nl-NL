@@ -4,7 +4,10 @@ solution: Experience Platform
 title: De namen van de lijst van toestemmingen en middeltypes
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7b354a96d70332cf7a7e9eff322cd3d6ee0fc96a
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '123'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 7b354a96d70332cf7a7e9eff322cd3d6ee0fc96a
 
 U kunt van de namen van alle toestemmingen en middeltypes een lijst maken door een GET verzoek aan het `/acl/reference` eindpunt te doen. Deze namen kunnen vervolgens worden gebruikt in API-aanroepen om effectief beleid [voor de huidige gebruiker](./effective-policies.md) weer te geven.
 
-Een **toestemming** is een beleid dat door de Console van Adobe wordt beheerd Admin, en kaarten aan nul of meer middel-type beleid. Een **middeltype** is een beleid dat lees toelaat, schrijft, en/of schrapt mogelijkheden voor een specifiek type van middel van het Platform (zoals datasets of schema&#39;s).
+Een **toestemming** is een beleid dat door de Admin Console van Adobe wordt beheerd, en kaarten aan nul of meer middel-type beleid. Een **middeltype** is een beleid dat lees toelaat, schrijft, en/of schrapt mogelijkheden voor een specifiek type van [!DNL Platform] middel (zoals datasets of schema&#39;s).
 
 **API-indeling**
 
