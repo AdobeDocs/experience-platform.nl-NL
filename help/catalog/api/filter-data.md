@@ -4,23 +4,23 @@ solution: Experience Platform
 title: Catalogusgegevens filteren met behulp van queryparameters
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2033'
 ht-degree: 0%
 
 ---
 
 
-# Catalogusgegevens filteren met behulp van queryparameters
+# Gegevens filteren [!DNL Catalog] met behulp van queryparameters
 
-De dienst API van de Catalogus staat reactiegegevens toe om door het gebruik van de parameters van de verzoekvraag worden gefiltreerd. Een deel van beste praktijken voor Catalog is filters in alle API vraag te gebruiken, aangezien zij de lading op API verminderen en helpen algemene prestaties verbeteren.
+De [!DNL Catalog Service] API staat reactiegegevens toe om door het gebruik van verzoekvraagparameters worden gefiltreerd. Een deel van beste praktijken voor [!DNL Catalog] is filters in alle API vraag te gebruiken, aangezien zij de lading op API verminderen en helpen algemene prestaties verbeteren.
 
-In dit document worden de meest gebruikte methoden voor het filteren van catalogusobjecten in de API beschreven. U wordt aangeraden naar dit document te verwijzen terwijl u de ontwikkelaarsgids [voor](getting-started.md) catalogi leest voor meer informatie over de interactie met de catalogus-API. Voor meer algemene informatie over de Dienst van de Catalogus, zie het overzicht [van de](../home.md)Catalogus.
+In dit document worden de meest gebruikte methoden voor het filteren van [!DNL Catalog] objecten in de API beschreven. U wordt aangeraden naar dit document te verwijzen terwijl u de [Catalog Developer Guide](getting-started.md) leest voor meer informatie over hoe u kunt werken met de [!DNL Catalog] API. Meer algemene informatie over [!DNL Catalog Service], zie het [Overzicht](../home.md)van de Catalogus.
 
 ## Teruggestuurde objecten beperken
 
-Met de `limit` queryparameter beperkt u het aantal objecten dat in een reactie wordt geretourneerd. Catalogusreacties worden automatisch gemeten volgens de geconfigureerde limieten:
+Met de `limit` queryparameter beperkt u het aantal objecten dat in een reactie wordt geretourneerd. [!DNL Catalog] de reacties worden automatisch gemeten volgens geconfigureerde limieten:
 
 * Wanneer geen `limit` parameter is opgegeven, is het maximumaantal objecten per antwoordlading 20.
 * Voor datasetvragen, als gevraagd gebruikend de `observableSchema` vraagparameter `properties` wordt, is het maximumaantal teruggekeerde datasets 20.
@@ -36,7 +36,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | Een geheel getal dat het aantal objecten aangeeft dat moet worden geretourneerd, van 1 tot en met 100. |
 
 **Verzoek**
@@ -104,9 +104,9 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | The name of an attribute to include in the response body. |
-| `{OBJECT_ID}` | De unieke id van een specifiek object Catalog dat wordt opgehaald. |
+| `{OBJECT_ID}` | De unieke id van een specifiek [!DNL Catalog] object dat wordt opgehaald. |
 
 **Verzoek**
 
@@ -123,7 +123,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een lijst met catalogusobjecten waarbij alleen de gevraagde eigenschappen worden weergegeven.
+Een succesvol antwoord retourneert een lijst met [!DNL Catalog] objecten met alleen de gevraagde eigenschappen weergegeven.
 
 ```json
 {
@@ -205,9 +205,9 @@ Er zijn enkele beperkingen waarmee u rekening kunt houden wanneer u tags gebruik
 * De enige voorwerpen van de Catalogus die momenteel markeringen steunen zijn datasets, partijen, en verbindingen.
 * Tagnamen zijn uniek voor uw IMS-organisatie.
 * Adobe-processen kunnen voor bepaalde gedragingen tags gebruiken. De namen van deze tags worden standaard voorafgegaan door &quot;adobe&quot;. Daarom moet u deze conventie vermijden bij het declareren van labelnamen.
-* De volgende tagnamen zijn gereserveerd voor gebruik in het hele Experience Platform en kunnen daarom niet worden gedeclareerd als tagnaam voor uw organisatie:
-   * `unifiedProfile`: Deze markeringsnaam is gereserveerd voor datasets die door het Profiel [van de Klant in](../../profile/home.md)real time moeten worden opgenomen.
-   * `unifiedIdentity`: Deze markeringsnaam is gereserveerd voor datasets die door de Dienst [van de](../../identity-service/home.md)Identiteit moeten worden opgenomen.
+* De volgende tagnamen zijn gereserveerd voor gebruik in [!DNL Experience Platform]de hele organisatie en kunnen daarom niet worden gedeclareerd als een tagnaam voor uw organisatie:
+   * `unifiedProfile`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden opgenomen door [!DNL Real-time Customer Profile](../../profile/home.md).
+   * `unifiedIdentity`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden opgenomen door [!DNL Identity Service](../../identity-service/home.md).
 
 Hieronder ziet u een voorbeeld van een gegevensset die een `tags` eigenschap bevat. De tags binnen die eigenschap hebben de vorm van sleutel-waardeparen, waarbij elke tagwaarde wordt weergegeven als een array met één tekenreeks:
 
@@ -261,7 +261,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | De naam van de tag waarop moet worden gefilterd. |
 | `{TAG_VALUE}` | De waarde van de tag waarop moet worden gefilterd. Ondersteunt jokertekens (`*`). |
 
@@ -332,7 +332,7 @@ Een succesvolle reactie keert een lijst van datasets terug die `sampleTag` met e
 
 ## Filteren op datumbereik
 
-Sommige eindpunten in de Catalogus API hebben vraagparameters die voor gerangschikte vragen, het vaakst in het geval van data toestaan.
+Sommige eindpunten in de [!DNL Catalog] API hebben vraagparameters die voor gerangschikte vragen, het vaakst in het geval van data toestaan.
 
 **API-indeling**
 
@@ -359,7 +359,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie bevat een lijst met catalogusobjecten die binnen het opgegeven datumbereik vallen. Tenzij ook een limiet is opgegeven, bevat het antwoord maximaal 20 objecten.
+Een geslaagde reactie bevat een lijst met [!DNL Catalog] objecten die binnen het opgegeven datumbereik vallen. Tenzij ook een limiet is opgegeven, bevat het antwoord maximaal 20 objecten.
 
 ```json
 {
@@ -427,7 +427,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie bevat een lijst met catalogusobjecten die worden gesorteerd op basis van de `orderBy` parameter. Tenzij ook een limiet is opgegeven, bevat het antwoord maximaal 20 objecten.
+Een geslaagde reactie bevat een lijst met [!DNL Catalog] objecten die worden gesorteerd op basis van de `orderBy` parameter. Tenzij ook een limiet is opgegeven, bevat het antwoord maximaal 20 objecten.
 
 ```json
 {
@@ -472,7 +472,7 @@ Een geslaagde reactie bevat een lijst met catalogusobjecten die worden gesorteer
 
 ## Filteren op eigenschap
 
-Catalog biedt twee methoden voor filteren op eigenschap, die nader worden beschreven in de volgende secties:
+[!DNL Catalog] biedt twee methoden voor filteren op eigenschap, die nader worden beschreven in de volgende secties:
 
 * [Eenvoudige filters](#using-simple-filters)gebruiken: Filter op of een specifieke eigenschap overeenkomt met een specifieke waarde.
 * [De parameter](#using-the-property-parameter)property gebruiken: Gebruik voorwaardelijke expressies om te filteren op basis van het feit of een eigenschap bestaat of als de waarde van een eigenschap overeenkomt met, benadert of vergelijkt met een andere opgegeven waarde of reguliere expressie.
@@ -496,7 +496,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | De naam van de eigenschap waarop u wilt filteren. |
 | `{VALUE}` | Een eigenschapwaarde die bepaalt welke resultaten moeten worden opgenomen (of uitgesloten, afhankelijk van de query). |
 
@@ -550,7 +550,7 @@ Een succesvol antwoord bevat een lijst van datasets, exclusief om het even welke
 
 De `property` vraagparameter verstrekt meer flexibiliteit voor op bezit-gebaseerd filtreren dan eenvoudige filters. Naast het filteren op basis van het feit of een eigenschap een specifieke waarde heeft, kan de `property` parameter andere vergelijkingsoperatoren (zoals &quot;more-than&quot; (`>`) en &quot;less-than&quot; (`<`))) en reguliere expressies gebruiken om te filteren op eigenschapswaarden. Het filter kan ook filteren op het al dan niet bestaan van een eigenschap, ongeacht de waarde ervan.
 
-De `property` parameter accepteert alleen objecteigenschappen op hoofdniveau. Dit houdt in dat u voor het volgende voorbeeldobject op eigenschap kunt filteren voor `name`, `description`en `subItem`, maar NIET voor `sampleKey`.
+De `property` parameter accepteert alleen objecteigenschappen op het hoogste niveau. Dit houdt in dat u voor het volgende voorbeeldobject op eigenschap kunt filteren voor `name`, `description`en `subItem`, maar NIET voor `sampleKey`.
 
 ```json
 {
@@ -572,7 +572,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | Een voorwaardelijke expressie die aangeeft voor welke eigenschap query moet worden uitgevoerd en hoe de waarde ervan moet worden geëvalueerd. Hieronder vindt u voorbeelden. |
 
 De waarde van de `property` parameter ondersteunt verschillende soorten voorwaardelijke expressies. In de volgende tabel wordt de basissyntaxis voor ondersteunde expressies beschreven:
