@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een object verwijderen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Een object verwijderen
 
-U kunt een object Catalog verwijderen door de id ervan op te geven in het pad van een DELETE aanvraag.
+U kunt een [!DNL Catalog] object verwijderen door de id ervan op te geven in het pad van een DELETE aanvraag.
 
 >[!WARNING]
 >
->Wees voorzichtig bij het verwijderen van objecten, want dit kan niet ongedaan worden gemaakt en kan leiden tot doorbraakwijzigingen elders in het Experience Platform.
+>Wees voorzichtig bij het verwijderen van objecten, want dit kan niet ongedaan worden gemaakt en kan leiden tot verbreken van wijzigingen elders in [!DNL Experience Platform].
 
 **API-indeling**
 
@@ -32,7 +32,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden verwijderd. Geldige objecten zijn: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] object dat moet worden verwijderd. Geldige objecten zijn: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**
@@ -60,4 +60,4 @@ Een geslaagde reactie retourneert HTTP-status 200 (OK) en een array met de id va
 
 >[!NOTE]
 >
->Als geen voorwerpen van de Catalogus identiteitskaart aanpassen die in uw verzoek wordt verstrekt, kunt u nog een Code 200 van de Status van HTTP ontvangen, maar de reactierearray zal leeg zijn.
+>Als geen [!DNL Catalog] voorwerpen identiteitskaart aanpassen die in uw verzoek wordt verstrekt, kunt u nog een Code 200 van de Status van HTTP ontvangen, maar de reactiereserie zal leeg zijn.
