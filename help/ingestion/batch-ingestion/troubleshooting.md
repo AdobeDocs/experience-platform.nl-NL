@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform - Handleiding voor het oplossen van problemen met batchverwerking
+title: Handleiding voor het oplossen van problemen met inslikken in Adobe Experience Platform
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '1335'
+ht-degree: 0%
 
 ---
 
 
 # Handleiding voor het oplossen van problemen met inslikken
 
-Met deze documentatie kunt u veelgestelde vragen met betrekking tot de batchgegevens voor het Adobe Experience Platform beantwoorden.
+Deze documentatie zal helpen veelgestelde vragen over Adobe Experience Platform APIs beantwoorden. [!DNL Batch Data Ingestion]
 
 ## Blokvraag API
 
@@ -35,7 +38,7 @@ Als stukken van een groot bestand elkaar overlappen of ontbreken, reageert de se
 
 ### Wat zijn de ondersteunde indelingen?
 
-Momenteel worden Parquet en JSON ondersteund. CSV wordt ondersteund op oudere basis - terwijl gegevens worden bevorderd tot master en voorbereidende controles worden uitgevoerd, worden geen moderne functies zoals conversie, partitionering of rijvalidatie ondersteund.
+Momenteel worden Parquet en JSON ondersteund. CSV wordt ondersteund op oudere basis - terwijl gegevens worden bevorderd tot master en voorbereidende controles, worden geen moderne functies zoals conversie, partitionering of rijvalidatie ondersteund.
 
 ### Waar moet het invoerformaat voor de batch worden gespecificeerd?
 
@@ -106,7 +109,7 @@ Voor JSON met meerdere regels kan één object meerdere regels beslaan, terwijl 
 ]
 ```
 
-Standaard wordt bij Batch-gegevensinname gebruikgemaakt van een JSON-regel met één regel.
+Standaard wordt JSON met één regel [!DNL Batch Data Ingestion] gebruikt.
 
 ### Wordt CSV-opname ondersteund?
 
@@ -165,17 +168,17 @@ Met dit verzoek krijgt u een vergelijkbaar antwoord:
 
 Een batch kan in de levenscyclus de volgende statussen doorlopen:
 
-| Status | Gegevens naar stramien geschreven | Beschrijving |
+| Status | Gegevens die naar Master zijn geschreven | Beschrijving |
 | ------ | ---------------------- | ----------- |
 | Verlaten |  | De client heeft de batch niet binnen de verwachte tijd voltooid. |
-| Afgebroken |  | De client heeft via de API&#39;s voor gegevensverwerking in batch expliciet een afbreekbewerking voor de opgegeven batch aangeroepen. Wanneer de status van een batch is geladen, kan de batch niet worden afgebroken. |
-| Actief/Succes | x | De partij is met succes gepromoot van stadium aan meester, en is nu beschikbaar voor downstreamconsumptie. **Opmerking:** Actief en Succes worden door elkaar gebruikt. |
+| Afgebroken |  | De client heeft via de API&#39; [!DNL Batch Data Ingestion] s expliciet een afbreekbewerking voor de opgegeven batch aangeroepen. Wanneer de status van een batch is geladen, kan de batch niet worden afgebroken. |
+| Actief/Succes | x | De partij is met succes gepromoot van stadium aan master, en is nu beschikbaar voor downstreamconsumptie. **Opmerking:** Actief en Succes worden door elkaar gebruikt. |
 | Gearchiveerd |  | De partij is gearchiveerd in de koelkast. |
 | Mislukt/Mislukt |  | Een eindstaat die uit of slechte configuratie en/of slechte gegevens voortvloeit. Er wordt een bewerkbare fout opgenomen, samen met de batch, om clients in staat te stellen de gegevens te corrigeren en opnieuw te verzenden. **Opmerking:** Mislukt en Mislukt worden onderling verwisselbaar gebruikt. |
-| Inactief | x | De batch is gepromoveerd, maar deze is teruggezet of verlopen. De partij zal niet meer voor downstreamconsumptie beschikbaar zijn, maar de onderliggende gegevens blijven in Master totdat deze bewaard, gearchiveerd of anderszins verwijderd zijn. |
+| Inactief | x | De batch is gepromoveerd, maar deze is teruggezet of verlopen. De partij zal niet meer voor downstreamconsumptie beschikbaar zijn, maar de onderliggende gegevens blijven Master totdat ze bewaard, gearchiveerd of anderszins verwijderd zijn. |
 | Laden |  | De client schrijft momenteel gegevens voor de batch. De partij is op dit moment **niet** klaar voor promotie. |
 | Geladen |  | De client heeft het schrijven van gegevens voor de batch voltooid. De partij is klaar voor promotie. |
-| Behouden |  | De gegevens zijn uit Master genomen en bevinden zich in een speciaal archief in het Adobe Data Lake. |
+| Behouden |  | De gegevens zijn uit het Master bestand gehaald en bevinden zich in een speciaal archief in het Adobe Data Lake. |
 | Staging |  | De klant heeft de batch met succes voor promotie gesignaleerd en de gegevens worden gefaseerd voor consumptie stroomafwaarts. |
 | Opnieuw proberen |  | De cliënt heeft de partij voor bevordering gesignaleerd, maar wegens een fout, wordt de partij opnieuw geprobeerd door de dienst van de Controle van de Partij. Deze staat kan worden gebruikt om cliënten te vertellen dat er een vertraging in het opnemen van de gegevens kan zijn. |
 | Gestopt |  | De cliënt heeft de partij voor bevordering gesignaleerd, maar na `n` herpogingen door de dienst van de Controle van de Partij, heeft de partijbevordering vastgelopen. |
@@ -186,11 +189,11 @@ Wanneer een partij zich in &quot;Staging&quot; bevindt, betekent dit dat de part
 
 ### Wat betekent het als een partij &quot;Opnieuw probeert&quot;?
 
-Wanneer een batch zich in &quot;Opnieuw proberen&quot; bevindt, betekent dit dat de gegevensopname van de batch tijdelijk is gestopt vanwege intermitterende problemen. Wanneer dit gebeurt, vereist het geen klanteninterventie.
+Wanneer een partij in &quot;Opnieuw proberen&quot; staat, betekent dit dat de gegevensopname van de partij tijdelijk is gestopt vanwege intermitterende problemen. Wanneer dit gebeurt, vereist het geen klanteninterventie.
 
 ### Wat betekent het wanneer een partij &quot;wordt afgebroken&quot;?
 
-Wanneer een partij in &quot;Geroepen&quot;is, betekent het dat de Diensten van de Ingestie van Gegevens moeilijkheden ervaren die de partij opnemen en alle pogingen zijn uitgeput.
+Wanneer een partij in &quot;Stalled&quot; staat, betekent dit dat het moeilijk [!DNL Data Ingestion Services] is de partij in te nemen en dat alle pogingen zijn uitgeput.
 
 ### Wat betekent het als een partij nog &quot;Lading&quot;is?
 
@@ -225,7 +228,7 @@ Nadat de fouten zijn gecorrigeerd, kan de batch opnieuw worden geüpload.
 
 ### Hoe moeten batches worden verwijderd?
 
-In plaats van rechtstreeks uit Catalogus te schrappen, zouden de partijen moeten worden verwijderd gebruikend één van beide hieronder verstrekt methode:
+In plaats van rechtstreeks uit [!DNL Catalog]te verwijderen, moeten batches worden verwijderd met behulp van een van de volgende methoden:
 
 1. Als de partij in uitvoering is, moet de partij worden afgebroken.
 2. Indien de batch succesvol wordt gecontroleerd, dient de batch te worden teruggedraaid.
@@ -236,11 +239,11 @@ De volgende cijfers op batchniveau zijn beschikbaar voor batches in de staat Act
 
 | Metrisch | Beschrijving |
 | ------ | ----------- |
-| inputByteSize | The total number of bytes staged for Data Ingestie Services to process. |
-| inputRecordSize | The total number of rows staged for Data Ingestie Services to process. |
-| outputByteSize | Het totale aantal bytes die door de Diensten van de Ingestie van Gegevens aan het Meer van Gegevens worden uitgevoerd. |
-| outputRecordSize | Het totale aantal rijen dat door de Diensten van de Ingestie van Gegevens aan het meer van Gegevens wordt uitgevoerd. |
-| partitieCount | The total number of partitions written into Data Lake. |
+| inputByteSize | The total number of bytes stage for [!DNL Data Ingestion Services] to process. |
+| inputRecordSize | The total number of rows stage for [!DNL Data Ingestion Services] to process. |
+| outputByteSize | The total number of bytes output by [!DNL Data Ingestion Services] to [!DNL Data Lake]. |
+| outputRecordSize | Het totale aantal rijen dat is uitgevoerd door [!DNL Data Ingestion Services] aan [!DNL Data Lake]. |
+| partitieCount | The total number of partitions written into [!DNL Data Lake]. |
 
 ### Waarom zijn metriek niet beschikbaar op sommige partijen?
 
