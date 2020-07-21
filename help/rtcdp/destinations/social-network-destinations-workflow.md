@@ -4,9 +4,9 @@ seo-title: Workflow voor sociale netwerkdoelen
 description: Instructies om verbinding te maken met uw sociale netwerk en accounts
 seo-description: Instructies om verbinding te maken met uw sociale netwerk en accounts
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Workflow om sociale netwerkdoelen te maken
 
-Deze zelfstudie gebruikt Facebook als voorbeeld, maar de workflow in Adobe Real-time Customer Data Platform is hetzelfde voor alle sociale netwerkbestemmingen, als deze weer aan het product wordt toegevoegd.
+Deze zelfstudie gebruikt [!DNL Facebook] als voorbeeld, maar de workflow in Adobe Real-time Customer Data Platform is hetzelfde voor alle sociale netwerkdoelen, wanneer er weer aan het product wordt toegevoegd.
 
 1. Blader in **[!UICONTROL Doelen > Catalogus]** naar de categorie **[!UICONTROL Sociaal]** . Selecteer de gewenste sociale netwerkbestemming en selecteer vervolgens de **[!UICONTROL Connect-bestemming]**.
 
@@ -39,7 +39,7 @@ Deze zelfstudie gebruikt Facebook als voorbeeld, maar de workflow in Adobe Real-
    >[!IMPORTANT]
    >
    > * Het marketinggeval *Single Identity Personalization* wordt standaard geselecteerd voor sociale netwerkdoelen en kan niet worden verwijderd.
-   > * Voor Facebook-bestemmingen. **[!UICONTROL De account-id]** is uw Facebook advertentie-account-id. U vindt deze id in Facebook Ads Manager. Plaats de id vooraf in de `act_` onderstaande afbeelding:
+   > * Voor [!DNL Facebook] bestemmingen. **[!UICONTROL Account ID]** is je [!DNL Facebook Ad Account ID]. U vindt deze id in de [!DNL Facebook Ads Manager]lijst. Plaats de id vooraf in de `act_` onderstaande afbeelding:
 
 
    ![Verbinden met sociale netwerkbestemming - opstellingsstap](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
