@@ -4,21 +4,21 @@ seo-title: Gegevensbeheer in Real-time Customer Data Platform
 description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 seo-description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 translation-type: tm+mt
-source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
 
 
-# Gegevensbeheer in real time CDP
+# [!DNL Data Governance] in Real-time CDP
 
-Het Platform van Gegevens van de Klant in real time (in real time CDP) brengt gegevens van veelvoudige ondernemingssystemen samen, toestaand marketers om, hun klanten beter te identificeren te begrijpen en te betrekken. Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Daarom is het belangrijk om ervoor te zorgen dat CDP in real time met gebruiksbeleid wanneer het behandelen van uw gegevens compatibel is.
+[!DNL Real-time Customer Data Platform] (CDP in real time) brengt gegevens van veelvoudige ondernemingssystemen samen, toestaand marketers om, hun klanten beter te identificeren te begrijpen en in dienst te nemen. Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Daarom is het belangrijk om ervoor te zorgen dat CDP in real time met gebruiksbeleid wanneer het behandelen van uw gegevens compatibel is.
 
-Met gegevensbeheer voor Adobe Experience Platforms kunt u klantgegevens beheren en ervoor zorgen dat de voorschriften, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een zeer belangrijke rol binnen CDP In real time, toestaand u om gebruiksbeleid te bepalen, uw gegevens te categoriseren die op dat beleid worden gebaseerd, en beleidsschendingen te controleren wanneer het uitvoeren van bepaalde marketing acties.
+Adobe Experience Platform [!DNL Data Governance] staat u toe om klantengegevens te beheren en naleving van verordeningen, beperkingen, en beleid te verzekeren van toepassing op gegevensgebruik. Het speelt een zeer belangrijke rol binnen CDP In real time, toestaand u om gebruiksbeleid te bepalen, uw gegevens te categoriseren die op dat beleid worden gebaseerd, en beleidsschendingen te controleren wanneer het uitvoeren van bepaalde marketing acties.
 
-CDP in real time wordt voortgebouwd bovenop Adobe Experience Platform, en daarom wordt de meerderheid van de mogelijkheden van het Beleid van Gegevens behandeld in de documentatie van het Experience Platform. Dit document is bedoeld als aanvulling op het overzicht [van](../../data-governance/home.md) gegevensbeheer voor Experience Platform en geeft een overzicht van de bestuurskenmerken die beschikbaar zijn in real time CDP. De volgende onderwerpen worden behandeld:
+CDP in real time wordt gebouwd bovenop Adobe Experience Platform, en daarom wordt de meerderheid van [!DNL Data Governance] mogelijkheden behandeld in de [!DNL Experience Platform] documentatie. Dit document is bedoeld als aanvulling op het overzicht [van](../../data-governance/home.md) gegevensbeheer voor [!DNL Experience Platform], en schetst de bestuurskenmerken die beschikbaar zijn in real time CDP. De volgende onderwerpen worden behandeld:
 
 * [Gebruikslabels toepassen op uw gegevens](#labels)
 * [Beleid voor gegevensgebruik beheren](#policies)
@@ -26,7 +26,7 @@ CDP in real time wordt voortgebouwd bovenop Adobe Experience Platform, en daarom
 
 ## Gebruikslabels toepassen op uw gegevens {#labels}
 
-Met gegevensbeheer kunt u gebruikslabels op uw gegevens toepassen, op het niveau van de gegevensset of op het niveau van de gegevensset-velden. Met labels voor gegevensgebruik kunt u gegevens indelen op basis van het gebruiksbeleid dat op die gegevens van toepassing is.
+[!DNL Data Governance] staat u toe om gebruiksetiketten op uw gegevens, of op de dataset of dataset-gebied niveau toe te passen. Met labels voor gegevensgebruik kunt u gegevens indelen op basis van het gebruiksbeleid dat op die gegevens van toepassing is.
 
 Zie de gebruikershandleiding [voor](../../data-governance/labels/overview.md) gegevensgebruikslabels voor Adobe Experience Platform voor gedetailleerde informatie over het werken met labels voor gegevensgebruik.
 
@@ -36,7 +36,7 @@ U kunt beperkingen voor het gegevensgebruik op een bestemming instellen door gev
 
 >[!NOTE]
 >
->Raadpleeg het overzicht [van het beleid voor](../../data-governance/policies/overview.md) gegevensgebruik in de documentatie bij het Experience Platform voor meer informatie over marketingacties en het gebruik ervan in het beleid voor gegevensgebruik.
+>Zie het overzicht [van beleidsregels voor](../../data-governance/policies/overview.md) gegevensgebruik in de [!DNL Experience Platform] documentatie voor meer informatie over marketingacties en het gebruik ervan in het gegevensgebruiksbeleid.
 
 Het bepalen van marketing gebruiksgevallen op bestemmingen staat u toe om ervoor te zorgen dat om het even welke profielen of segmenten die naar die bestemmingen worden verzonden volgzaam met het beleid van het gegevensgebruik zijn. Daarom zou u aangewezen gevallen van het marketinggebruik aan uw bestemmingen moeten toevoegen die op de behoeften van uw organisatie worden gebaseerd om beleidsbeperkingen op activering af te dwingen.
 
@@ -45,19 +45,19 @@ Gebruiksscenario&#39;s voor marketingdoeleinden kunnen alleen worden geselecteer
 
 ## Beleid voor gegevensgebruik beheren {#policies}
 
-Om gegevensgebruikslabels effectief gegevensnaleving te steunen, moet het beleid van het gegevensgebruik worden bepaald en worden toegelaten. Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen CDP in real time mag uitvoeren. Zie de sectie &quot;Beleid van het Gebruik van Gegevens&quot;in het overzicht [van de](../../data-governance/home.md) Gegevensbeheer van het Experience Platform voor meer informatie.
+Om gegevensgebruikslabels effectief gegevensnaleving te steunen, moet het beleid van het gegevensgebruik worden bepaald en worden toegelaten. Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen CDP in real time mag uitvoeren. Zie de sectie &quot;Beleid voor gegevensgebruik&quot; in het overzicht [!DNL Experience Platform] van [](../../data-governance/home.md) gegevensbeheer voor meer informatie.
 
-Het Adobe Experience Platform verstrekt verscheidene **kernbeleid** voor de gemeenschappelijke gebruiksgevallen van de klantenervaring. Dit beleid kan in UI worden bekeken door aan de werkruimte van **[!UICONTROL Beleid]** te navigeren en het **[!UICONTROL Browse]** lusje te selecteren. Zie de gids [van de](../../data-governance/policies/user-guide.md) beleidsgebruiker in de documentatie van het Experience Platform voor meer gedetailleerde stappen bij het werken met beleid in UI, met inbegrip van hoe te om uw eigen douanebeleid te maken.
+Het Adobe Experience Platform verstrekt verscheidene **kernbeleid** voor de gemeenschappelijke gebruiksgevallen van de klantenervaring. Dit beleid kan in UI worden bekeken door aan de werkruimte van **[!UICONTROL Beleid]** te navigeren en het **[!UICONTROL Browse]** lusje te selecteren. Zie de gids [van de](../../data-governance/policies/user-guide.md) beleidsgebruiker in de [!DNL Experience Platform] documentatie voor meer gedetailleerde stappen bij het werken met beleid in UI, met inbegrip van hoe te om uw eigen douanebeleid te maken.
 
 ## Compatibiliteit met gegevensgebruik afdwingen {#enforce-data-usage-compliance}
 
-Zodra de gegevens worden geëtiketteerd en het gebruiksbeleid wordt bepaald, kunt u de naleving van het gegevensgebruik met beleid afdwingen. Wanneer het activeren van publiekssegmenten aan bestemmingen in Echt - tijd CDP, dwingt het Beleid van Gegevens automatisch gebruiksbeleid af als om het even welke schendingen voorkomen.
+Zodra de gegevens worden geëtiketteerd en het gebruiksbeleid wordt bepaald, kunt u de naleving van het gegevensgebruik met beleid afdwingen. Wanneer het activeren van publiekssegmenten aan bestemmingen in Echt - tijd CDP, [!DNL Data Governance] dwingt automatisch gebruiksbeleid af als om het even welke schendingen voorkomen.
 
 Het volgende diagram illustreert hoe de beleidshandhaving in de gegevensstroom van segmentactivering wordt geïntegreerd:
 
 ![](assets/enforcement-flow.png)
 
-Wanneer een segment eerst wordt geactiveerd, controleert de Dienst van het Beleid DULE beleidsschendingen die op de volgende factoren worden gebaseerd:
+Wanneer een segment voor het eerst wordt geactiveerd, controleert DULE op beleidsovertredingen op basis van de volgende factoren: [!DNL Policy Service]
 
 * De labels voor gegevensgebruik die worden toegepast op velden en gegevenssets binnen het segment dat moet worden geactiveerd.
 * Het marketingdoel van de bestemming.
@@ -75,13 +75,13 @@ Als een beleidsovertreding voorkomt in een poging om een segment te activeren (o
 
 ![](assets/violation-popover.png)
 
-Het tabblad *Details* van de popover geeft de actie aan die de schending heeft veroorzaakt, de reden waarom de schending heeft plaatsgevonden en bevat suggesties voor het mogelijk oplossen van het probleem.
+Het tabblad *[!UICONTROL Details]* van de popover geeft de actie aan die de schending heeft veroorzaakt, de reden waarom de schending heeft plaatsgevonden en bevat suggesties voor het mogelijk oplossen van het probleem.
 
-Klik op **Gegevenslijn** om de doelen, segmenten, samenvoegbeleidsregels of gegevenssets bij te houden waarvan de gegevenslabels de schending hebben veroorzaakt.
+Klik op **[!UICONTROL Gegevenslijn]** om de doelen, segmenten, samenvoegbeleidsregels of gegevenssets bij te houden waarvan de gegevenslabels de schending hebben veroorzaakt.
 
 ![](assets/data-lineage.png)
 
-Nadat een schending heeft teweeggebracht, wordt de **sparen** knoop onbruikbaar gemaakt voor de activering tot de aangewezen componenten worden bijgewerkt om aan het beleid van het gegevensgebruik te voldoen.
+Nadat een schending heeft teweeggebracht, wordt de **[!UICONTROL sparen]** knoop onbruikbaar gemaakt voor de activering tot de aangewezen componenten worden bijgewerkt om aan het beleid van het gegevensgebruik te voldoen.
 
 ### Beleidshandhaving voor geactiveerde segmenten {#policy-enforcement-for-activated-segments}
 
@@ -96,8 +96,8 @@ Als een van de bovenstaande acties een schending veroorzaakt, wordt die actie ve
 
 ## Volgende stappen
 
-Nu u aan de belangrijkste eigenschappen van het Beleid van Gegevens op CDP in real time en hoe het Experience Platform hen toelaat bent geïntroduceerd, gelieve aan de [documentatie voor het Beleid van Gegevens over Adobe Experience Platform](../../data-governance/home.md)verder te gaan. De documentatie verstrekt overzichten van essentiële concepten van het Beleid van Gegevens, evenals geleidelijke werkschema&#39;s voor het beheren van de etiketten en het beleid van het gegevensgebruik.
+Nu u aan de belangrijkste [!DNL Data Governance] eigenschappen op CDP in real time en hoe [!DNL Experience Platform] toelaat bent geïntroduceerd, gelieve aan de [documentatie voor het Beleid van Gegevens over Adobe Experience Platform](../../data-governance/home.md)voort te zetten. De documentatie verstrekt overzichten van essentiële [!DNL Data Governance] concepten, evenals geleidelijke werkschema&#39;s voor het beheren van de etiketten en het beleid van het gegevensgebruik.
 
-De volgende video verstrekt een overzicht van de Governance van Gegevens in Echt - tijd CDP, met inbegrip van het gebruik van marketing gebruiksgevallen op bestemmingen en voorbeeldwerkschema&#39;s voor verschillende scenario&#39;s:
+De volgende video verstrekt een overzicht van [!DNL Data Governance] in real time CDP, met inbegrip van het gebruik van marketing gebruiks-gevallen op bestemmingen en voorbeeldwerkschema&#39;s voor verschillende scenario&#39;s:
 
 >[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)
