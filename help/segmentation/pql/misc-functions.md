@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Diverse functies
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d7ec6240864916d3b54db8bd641f4917a38f9480
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '105'
+ht-degree: 2%
 
 ---
 
 
 # Diverse functies
 
-De volgende functie is een diverse functie voor de Taal van de Vraag van het Profiel (PQL). Meer informatie over andere PQL-functies vindt u in het overzicht [Taal van](./overview.md)profielquery.
+De volgende functie is een overige functie voor [!DNL Profile Query Language] (PQL). Meer informatie over andere PQL-functies vindt u in het overzicht [Taal van](./overview.md)profielquery.
 
 ## Laat
 
