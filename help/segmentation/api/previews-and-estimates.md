@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Voorvertoningen en schattingen van eindpunten
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '742'
 ht-degree: 1%
 
 ---
@@ -71,7 +71,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | De uitdrukking PQL om de gegevens door te vragen. |
 | `predicateType` | Het predikaat type voor de vraaguitdrukking onder `predicateExpression`. Momenteel is de enige toegestane waarde voor deze eigenschap `pql/text`. |
-| `predicateModel` | De naam van het XDM-schema (Experience Data Model) waarop de profielgegevens zijn gebaseerd. |
+| `predicateModel` | De naam van het [!DNL Experience Data Model] (XDM)-schema waarop de profielgegevens zijn gebaseerd. |
 
 **Antwoord**
 
@@ -167,7 +167,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. De opgegeven koppelingen kunnen worden gebruikt om de opgegeven entiteiten op te zoeken met behulp van de API [voor](../../profile/api/entities.md)profieltoegang. |
+| `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. Met de opgegeven koppelingen kunt u de opgegeven entiteiten opzoeken met de [!DNL Profile Access API](../../profile/api/entities.md)instructies. |
 
 ## De resultaten van een specifieke geschatte taak ophalen {#get-estimate}
 
@@ -226,4 +226,4 @@ Een succesvolle reactie retourneert HTTP status 200 met details van de geschatte
 
 ## Volgende stappen
 
-Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u met voorvertoningen en schattingen kunt werken. Meer over de andere eindpunten van de Dienst API van de Segmentatie, te lezen gelieve het overzicht [van de de ontwikkelaarsgids van de Dienst van de](./overview.md)Segmentatie.
+Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u met voorvertoningen en schattingen kunt werken. Lees voor meer informatie over de andere [!DNL Segmentation Service] API-eindpunten het overzicht [van de ontwikkelaar van de](./overview.md)Segmentatieservice.
