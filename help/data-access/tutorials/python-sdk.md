@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Secure Python Data Access SDK
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 49aa2e2664fe658d89b6279d1f869eb30c48ccad
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
 
 
-# Secure Python [!DNL Data Access] SDK
+# Secure [!DNL Python] [!DNL Data Access] SDK
 
-De Secure Python [!DNL Data Access] SDK is een softwareontwikkelingskit waarmee gegevens van het Adobe Experience Platform kunnen worden gelezen en geschreven.
+De Secure [!DNL Python] [!DNL Data Access] SDK is een softwareontwikkelingskit waarmee gegevens van het Adobe Experience Platform kunnen worden gelezen en geschreven.
 
 ## Aan de slag
 
-U moet het [authentificatieleerprogramma](../../tutorials/authentication.md) hebben voltooid om toegang tot de waarden te hebben om vraag aan Secure Python [!DNL Data Access] SDK te maken:
+U moet het [authentificatieleerprogramma](../../tutorials/authentication.md) hebben voltooid om toegang tot de waarden te hebben om vraag aan Secure [!DNL Python] [!DNL Data Access] SDK te maken:
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
@@ -63,7 +63,7 @@ Alle pakketten worden uitgevoerd aan `./dist` na de bouw.
 python3 setup.py bdist_wheel --universal
 ```
 
-Laad het wiel vanuit de projectdirectory naar uw Python 3-omgeving.
+Van de projectfolder, ladingswiel in uw [!DNL Python] 3 milieu.
 
 ```python
 pip3 install ./dist/<name_of_wheel_file>.whl
@@ -148,7 +148,7 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY-component
 
-Met de ORDER BY-component kunnen ontvangen resultaten worden gesorteerd met een opgegeven kolom in een bepaalde volgorde (oplopend of aflopend). In de Python SDK gebeurt dit met behulp van de `sort()` functie.
+Met de ORDER BY-component kunnen ontvangen resultaten worden gesorteerd met een opgegeven kolom in een bepaalde volgorde (oplopend of aflopend). In de [!DNL Python] SDK doet u dit door de `sort()` functie te gebruiken.
 
 Hieronder ziet u een voorbeeld van het gebruik van de `sort()` functie:
 
