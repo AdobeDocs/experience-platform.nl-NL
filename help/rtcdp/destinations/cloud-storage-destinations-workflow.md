@@ -4,9 +4,9 @@ seo-title: Workflow voor opslagdoelen voor cloud
 description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 seo-description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Op deze pagina wordt uitgelegd hoe u verbinding kunt maken met cloudopslaglocati
 
    ![Verbinding maken met bestemming voor cloudopslag](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. Als u in de stap **[!UICONTROL Verificatie]** eerder een verbinding met uw bestemming voor cloudopslag had ingesteld, selecteert u **[!UICONTROL Bestaande account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL Nieuwe account]** selecteren om een nieuwe verbinding met de bestemming voor cloudopslag in te stellen. Vul de verificatiereferenties van uw account in en selecteer **[!UICONTROL Verbinding maken met doel]**. <br> Zie [bestemming Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) , bestemming [Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) , [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) bestemming, en bestemming [SFTP](/help/rtcdp/destinations/sftp-destination.md) voor details rond geloofsbrieven input in de stap van de **Authentificatie** .
+2. Als u in de stap **[!UICONTROL Verificatie]** eerder een verbinding met uw bestemming voor cloudopslag had ingesteld, selecteert u **[!UICONTROL Bestaande account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL Nieuwe account]** selecteren om een nieuwe verbinding met de bestemming voor cloudopslag in te stellen. Vul de verificatiereferenties van uw account in en selecteer **[!UICONTROL Verbinding maken met doel]**. <br> Zie [bestemming Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) , [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) bestemming, [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) bestemming, en bestemming [SFTP](/help/rtcdp/destinations/sftp-destination.md) voor details rond geloofsbrieven input in de stap van de **Authentificatie** .
 
    >[!NOTE]
    >
@@ -40,11 +40,11 @@ Voor Amazon S3-doelen voegt u de naam **[!UICONTROL van de]** emmertje en het pa
 
    ![Verbinding maken met SFTP-cloudopslagbestemming - verificatiestap](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
-   Geef voor Amazon Kinesis-doelen de naam van uw bestaande gegevensstroom op in uw [!DNL Amazon Kinesis] account. Adobe Real-time CDP exporteert gegevens naar deze stream. Selecteer Doel **** maken nadat u de bovenstaande velden hebt ingevuld.
+   Geef voor [!DNL Amazon Kinesis] doelen de naam van uw bestaande gegevensstroom op in uw [!DNL Amazon Kinesis] account. Adobe Real-time CDP exporteert gegevens naar deze stream. Selecteer Doel **** maken nadat u de bovenstaande velden hebt ingevuld.
 
    ![Verbinding maken met bestemming Kinesis-cloudopslag - verificatiestap](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
 
-   Geef voor Azure Event Hubs-bestemmingen de naam van uw bestaande gegevensstroom op in uw [!DNL Amazon Kinesis] account. Adobe Real-time CDP exporteert gegevens naar deze stream. Selecteer Doel **** maken nadat u de bovenstaande velden hebt ingevuld.
+   Geef voor [!DNL Azure Event Hubs] doelen de naam van uw bestaande gegevensstroom op in uw [!DNL Amazon Kinesis] account. Adobe Real-time CDP exporteert gegevens naar deze stream. Selecteer Doel **** maken nadat u de bovenstaande velden hebt ingevuld.
 
    ![Verbinding maken met bestemming Kinesis-cloudopslag - verificatiestap](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
