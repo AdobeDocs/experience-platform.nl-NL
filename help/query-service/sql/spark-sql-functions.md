@@ -4,17 +4,17 @@ solution: Experience Platform
 title: SQL-functies in Spark
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '4903'
+source-wordcount: '4900'
 ht-degree: 4%
 
 ---
 
 
-# SQL-functies in Spark
+# [!DNL Spark] SQL-functies
 
-De SQL helpers van de Vonk verstrekken ingebouwde functies van de Vonk SQL om SQL functionaliteit uit te breiden.
+De [!DNL Spark] SQL-hulpprogramma&#39;s bieden ingebouwde [!DNL Spark] SQL-functies om de SQL-functionaliteit uit te breiden.
 
 Referentie: [SQL-functiedocumentatie parkeren](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
@@ -487,7 +487,7 @@ Voorbeeld:
 
 #### percentile_Approx
 
-`percentile_approx(col, percentage [, accuracy])`: Geeft als resultaat de ongeveer percentiele waarde van de numerieke kolom `col` met het opgegeven percentage. De waarde van `percentage` moet tussen 0,0 en 1,0 liggen. De `accuracy` parameter (standaardwaarde): 10000) is een positief letterlijk getal dat de nauwkeurigheid bij benadering bepaalt ten koste van het geheugen. Hoe hoger de waarde van `accuracy` retourneert, hoe nauwkeuriger `1.0/accuracy` de benadering, hoe onjuist deze is. Wanneer `percentage` een array is, moet elke waarde van de array met percentages tussen 0,0 en 1,0 liggen. In dit geval wordt bij benadering de percentiele array van de kolom geretourneerd `col` bij de opgegeven array met percentages.
+`percentile_approx(col, percentage [, accuracy])`: Geeft als resultaat de ongeveer percentiele waarde van de numerieke kolom `col` met het opgegeven percentage. De waarde van `percentage` moet tussen 0,0 en 1,0 liggen. De `accuracy` parameter (standaardwaarde): 10000) is een positief letterlijk getal dat de nauwkeurigheid bij benadering bepaalt ten koste van het geheugen. Hoe hoger de waarde van `accuracy` retourneert, hoe nauwkeuriger `1.0/accuracy` de benadering, hoe onjuist deze is. Wanneer `percentage` een array is, moet elke waarde van de array met percentages tussen 0,0 en 1,0 liggen. In dit geval wordt bij benadering de percentielarray van de kolom geretourneerd `col` bij de opgegeven array met percentages.
 
 Voorbeelden:
 
