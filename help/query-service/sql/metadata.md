@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Opdrachten Metagegevens
 topic: metadata
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -43,5 +43,5 @@ Voor meta-gegevens op uw dataset, worden de volgende bevelen PSQL momenteel gest
 
 Alle opdrachten die beginnen met, `\d` kunnen worden gecombineerd. U kunt bijvoorbeeld een lijst weergeven met alle tabellen, reeksen en schema&#39;s. `\dtsn` `\d` op zichzelf toont alle zichtbare tabellen, weergaven, gematerialiseerde weergaven en reeksen.
 
-Raadpleeg de documentatie op [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html)voor meer informatie over de bovenstaande opdrachten. Houd er echter rekening mee dat niet alle opties in de documentatie van PostgreSQL door Experience Platform worden ondersteund.
+Raadpleeg de documentatie op [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html)voor meer informatie over de bovenstaande opdrachten. Houd er echter rekening mee dat niet alle opties in de documentatie van PostgreSQL door worden ondersteund [!DNL Experience Platform].
 
