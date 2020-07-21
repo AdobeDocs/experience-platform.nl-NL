@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Overzicht van gegevenstoegang
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1332'
 ht-degree: 0%
 
 ---
 
 
-# De dataset van de vraag gegevens gebruikend API van de Toegang van Gegevens
+# Gegevensset met query-gegevens met [!DNL Data Access] API
 
-Dit document biedt een stapsgewijze zelfstudie over het zoeken naar en openen en downloaden van gegevens die zijn opgeslagen in een gegevensset met de API voor gegevenstoegang in Adobe Experience Platform. U zult ook aan enkele unieke eigenschappen van de Toegang API van Gegevens, zoals het pagineren en gedeeltelijke downloads worden geïntroduceerd.
+Dit document biedt een stapsgewijze zelfstudie over het zoeken naar en openen en downloaden van gegevens die zijn opgeslagen in een gegevensset met behulp van de [!DNL Data Access] API in het Adobe Experience Platform. U wordt ook geïntroduceerd in enkele unieke functies van de [!DNL Data Access] API, zoals pagineren en gedeeltelijke downloads.
 
 ## Aan de slag
 
@@ -24,23 +24,23 @@ De volgende secties verstrekken extra informatie die u zult moeten weten om met 
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u eerst het [authentificatieleerprogramma](../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../../sandboxes/home.md).
+>Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -48,23 +48,23 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Sequentiediagram
 
-Deze zelfstudie volgt de stappen die in het onderstaande reeksdiagram worden beschreven en markeert de kernfunctionaliteit van de API voor gegevenstoegang.</br>
+Deze zelfstudie volgt de stappen die in het onderstaande reeksdiagram worden beschreven en markeert de kernfunctionaliteit van de [!DNL Data Access] API.</br>
 ![](../images/sequence_diagram.png)
 
-Met de catalogus-API kunt u informatie over batches en bestanden ophalen. Met de API voor gegevenstoegang kunt u deze bestanden openen en downloaden via HTTP als volledige of gedeeltelijke downloads, afhankelijk van de grootte van het bestand.
+Met de [!DNL Catalog] API kunt u informatie over batches en bestanden ophalen. Met de [!DNL Data Access] API kunt u deze bestanden openen en downloaden via HTTP als volledige of gedeeltelijke downloads, afhankelijk van de grootte van het bestand.
 
 ## De gegevens zoeken
 
-Voordat u de API voor gegevenstoegang kunt gaan gebruiken, moet u de locatie identificeren van de gegevens waartoe u toegang wilt hebben. In de Catalog API, zijn er twee eindpunten die u kunt gebruiken om de meta-gegevens van een organisatie te doorbladeren en identiteitskaart van een partij of een dossier terug te winnen dat u wilt toegang hebben:
+Voordat u de [!DNL Data Access] API kunt gaan gebruiken, moet u de locatie identificeren van de gegevens waartoe u toegang wilt hebben. In de [!DNL Catalog] API zijn er twee eindpunten die u kunt gebruiken om door de metagegevens van een organisatie te bladeren en de id op te halen van een batch of bestand waartoe u toegang wilt hebben:
 
 - `GET /batches`: Retourneert een lijst met batches onder uw organisatie
 - `GET /dataSetFiles`: Hiermee wordt een lijst met bestanden binnen uw organisatie geretourneerd
 
-Raadpleeg de [API-naslaggids](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)voor een uitgebreide lijst met eindpunten in de catalogus-API.
+Raadpleeg de [!DNL Catalog] API-naslaggids [voor een uitgebreide lijst met eindpunten in de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)API.
 
 ## Een lijst met batches ophalen onder uw IMS-organisatie
 
-Met de Catalog-API kunt u een lijst met batches retourneren onder uw organisatie:
+Met behulp van de [!DNL Catalog] API kunt u een lijst met batches in uw organisatie retourneren:
 
 **API-indeling**
 
@@ -195,7 +195,7 @@ Een volledige lijst met parameters en filters vindt u in de API-naslaggids voor 
 
 ## Een lijst ophalen van alle bestanden die tot een bepaalde batch behoren
 
-Nu u de id hebt van de batch waartoe u toegang wilt hebben, kunt u de API voor gegevenstoegang gebruiken om een lijst op te halen met bestanden die tot die batch behoren.
+Nu u de id hebt van de batch waartoe u toegang wilt hebben, kunt u de [!DNL Data Access] API gebruiken om een lijst op te halen met bestanden die tot die batch behoren.
 
 **API-indeling**
 
@@ -252,7 +252,7 @@ De reactie bevat een gegevensarray met alle bestanden in de opgegeven batch. Er 
 
 ## Een bestand openen met een bestands-id
 
-Als u een unieke bestands-id hebt, kunt u de API voor gegevenstoegang gebruiken om toegang te krijgen tot de specifieke gegevens over het bestand, zoals de naam, grootte in bytes en een koppeling om het bestand te downloaden.
+Als u een unieke bestands-id hebt, kunt u de [!DNL Data Access] API gebruiken om toegang te krijgen tot de specifieke details van het bestand, zoals de naam, grootte in bytes en een koppeling om het bestand te downloaden.
 
 **API-indeling**
 
@@ -385,7 +385,7 @@ De antwoordheaders bevatten de metagegevens van het bestand waarnaar wordt gevra
 
 ## De inhoud van een bestand openen
 
-U kunt de inhoud van een bestand ook benaderen met de API voor gegevenstoegang.
+U kunt de inhoud van een bestand ook benaderen met de [!DNL Data Access] API.
 
 **API-indeling**
 
@@ -414,7 +414,7 @@ Met een succesvol antwoord wordt de inhoud van het bestand geretourneerd.
 
 ## Gedeeltelijke inhoud van een bestand downloaden
 
-Met de API voor gegevenstoegang kunt u bestanden downloaden in blokken. Een bereikkoptekst kan worden opgegeven tijdens een `GET /files/{FILE_ID}` verzoek om een specifieke reeks bytes te downloaden uit een bestand. Als het bereik niet wordt opgegeven, downloadt de API standaard het gehele bestand.
+Met de [!DNL Data Access] API kunt u bestanden downloaden in blokken. Een bereikkoptekst kan worden opgegeven tijdens een `GET /files/{FILE_ID}` verzoek om een specifieke reeks bytes te downloaden uit een bestand. Als het bereik niet wordt opgegeven, downloadt de API standaard het gehele bestand.
 
 In het HEAD-voorbeeld in de [vorige sectie](#retrieve-the-metadata-of-a-file) wordt de grootte van een specifiek bestand in bytes weergegeven.
 
@@ -454,7 +454,7 @@ De hoofdtekst van de reactie bevat de eerste 100 bytes van het bestand (zoals op
 
 ## Paginering van API-reactie configureren
 
-Reacties binnen de API voor gegevenstoegang worden gepagineerd. Standaard is het maximumaantal items per pagina 100. U kunt parameters voor paginering gebruiken om het standaardgedrag te wijzigen.
+Reacties binnen de [!DNL Data Access] API worden gepagineerd. Standaard is het maximumaantal items per pagina 100. U kunt parameters voor paginering gebruiken om het standaardgedrag te wijzigen.
 
 - `limit`: U kunt het aantal items per pagina volgens uw vereisten opgeven met de parameter &quot;limit&quot;.
 - `start`: De verschuiving kan worden ingesteld door de queryparameter &quot;start&quot;.
