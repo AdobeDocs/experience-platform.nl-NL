@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Effectief beleid weergeven
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '265'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Effectief beleid weergeven
 
-Om efficiënt beleid voor de huidige gebruiker te bekijken, doe een POST- verzoek aan het `/acl/effective-policies` eindpunt in Toegangsbeheer API. De toestemmingen en middeltypes u wilt terugwinnen moeten in de verzoeklading in de vorm van een serie worden verstrekt. Dit wordt geïllustreerd in de voorbeeld-API-aanroep hieronder.
+Om efficiënt beleid voor de huidige gebruiker te bekijken, doe een POST- verzoek aan het `/acl/effective-policies` eindpunt in [!DNL Access Control] API. De toestemmingen en middeltypes u wilt terugwinnen moeten in de verzoeklading in de vorm van een serie worden verstrekt. Dit wordt geïllustreerd in de voorbeeld-API-aanroep hieronder.
 
 **API-indeling**
 
@@ -24,7 +24,7 @@ POST /acl/effective-policies
 
 **Verzoek**
 
-De volgende verzoeken wint informatie over de &quot;Manage toestemmingen van Datasets&quot;en toegang tot het &quot;schema&#39;s&quot;middeltype voor de huidige gebruiker terug.
+De volgende verzoeken wint informatie over de toestemming &quot;van Datasets[!UICONTROL van het]leiden&quot;en toegang tot het &quot;[!UICONTROL schema]&quot;middeltype voor de huidige gebruiker terug.
 
 ```shell
 curl -X POST \
@@ -65,11 +65,11 @@ Een succesvolle reactie keert informatie over de toestemmingen en middeltypes te
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u aanroepen van de API voor toegangsbeheer kunt uitvoeren om informatie te retourneren over actieve machtigingen en het bijbehorende beleid voor typen bronnen. Voor meer informatie over toegangsbeheer voor Experience Platform, zie het [toegangsbeheeroverzicht](../home.md).
+Dit document besprak hoe te om vraag aan [!DNL Access Control] API te maken om informatie over actieve toestemmingen en verwant beleid voor middeltypes terug te keren. Voor meer informatie over toegangsbeheer voor [!DNL Experience Platform], zie het [toegangsbeheeroverzicht](../home.md).
 
 ## Aanhangsel
 
-Deze sectie biedt aanvullende informatie voor het gebruik van de API voor toegangsbeheer.
+Deze sectie bevat aanvullende informatie voor het gebruik van de [!DNL Access Control] API.
 
 ### Toegelaten toestemmingen en middeltypes
 
