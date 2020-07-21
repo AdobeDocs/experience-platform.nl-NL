@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Segmenteringsservice Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1986'
+source-wordcount: '1971'
 ht-degree: 0%
 
 ---
 
 
-# Overzicht van de Adobe Experience Platform Segmentation Service
+# Overzicht [!DNL Segmentation Service] van Adobe Experience Platforms
 
-De Dienst van de Segmentatie van het Adobe Experience Platform verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal geconfigureerd en onderhouden op het Platform en zijn gemakkelijk toegankelijk voor elke Adobe-oplossing.
+Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal geconfigureerd en onderhouden [!DNL Platform], en zijn gemakkelijk toegankelijk voor elke Adobe-oplossing.
 
 Dit document biedt een overzicht van [!DNL Segmentation Service] en de rol die het in Adobe Experience Platform speelt.
 
@@ -128,7 +128,7 @@ Door een variabele toe te wijzen aan het attribuut van de koopstaat, vereenvoudi
 
 ## Segmentatie van meerdere entiteiten {#multi-entity}
 
-Met de geavanceerde functie voor segmentatie van meerdere entiteiten kunt u segmenten maken met behulp van meerdere XDM-klassen en zo extensies toevoegen aan persoonlijke schema&#39;s. Dientengevolge, kan de Dienst van de Segmentatie tot extra gebieden tijdens segmentdefinitie toegang hebben alsof zij aan de opslag van profielgegevens inheems waren.
+Met de geavanceerde functie voor segmentatie van meerdere entiteiten kunt u segmenten maken met behulp van meerdere XDM-klassen en zo extensies toevoegen aan persoonlijke schema&#39;s. Dit betekent dat u tijdens de segmentdefinitie toegang [!DNL Segmentation Service] kunt krijgen tot aanvullende velden alsof deze native zijn in de profielgegevensopslag.
 
 De segmentatie van meerdere entiteiten verstrekt de flexibiliteit nodig om publiek te identificeren dat op gegevens wordt gebaseerd relevant voor uw bedrijfsbehoeften. Dit proces kan snel en gemakkelijk worden gedaan zonder deskundigheid in het vragen van gegevensbestanden te vereisen. Dit laat u toe om zeer belangrijke gegevens aan uw segmenten toe te voegen zonder het moeten dure veranderingen in gegevensstromen aanbrengen of op een achterste-eindgegevenssamenvoeging wachten.
 
@@ -140,7 +140,7 @@ De volgende video is bedoeld om uw begrip van multi-entiteitsegmentatie te steun
 
 Als u de waarde van deze geavanceerde segmentatiefunctie wilt illustreren, kunt u overwegen om een gegevensarchitect samen te voegen met een marketer.
 
-In dit voorbeeld verbindt de gegevensarchitect gegevens voor een individu (samengesteld uit schema&#39;s met het Individuele Profiel XDM en XDM ExperienceEvent als hun basisklassen) met een andere klasse gebruikend een sleutel. Zodra verbonden, kan de gegevensarchitect of de telleraar deze nieuwe gebieden tijdens segmentdefinitie gebruiken alsof zij aan het schema van de basisklasse inheems waren.
+In dit voorbeeld verbindt de gegevensarchitect gegevens voor een individu (samengesteld uit schema&#39;s met [!DNL XDM Individual Profile] en [!DNL XDM ExperienceEvent] als hun basisklassen) met een andere klasse gebruikend een sleutel. Zodra verbonden, kan de gegevensarchitect of de telleraar deze nieuwe gebieden tijdens segmentdefinitie gebruiken alsof zij aan het schema van de basisklasse inheems waren.
 
 **Het probleem**
 
@@ -154,7 +154,7 @@ De middelen van de gegevensarchitect omvatten toegang tot Webgegevens van klant 
 >
 >In dit voorbeeld gaan we ervan uit dat de gegevensarchitect al een id-naamruimte heeft ingesteld.
 
-Met behulp van de API koppelt de gegevensarchitect de sleutel van het ExperienceEvent-schema aan de &quot;products&quot;-klasse. Dit staat de gegevensarchitect toe om van de extra gebieden van de &quot;producten&quot;klasse gebruik te maken alsof zij aan het schema ExperienceEvent inheems zijn. Als laatste stap van het configuratiewerk, moet de gegevensarchitect de aangewezen gegevens in brengen [!DNL Real-time Customer Profile]. Dit wordt gedaan door de &quot;producten&quot;dataset voor gebruik met toe te laten [!DNL Profile]. Met het configuratiewerk volledig, of de gegevensarchitect of de telleraar kan het doelsegment binnen bouwen [!DNL Segment Builder].
+Gebruikend API, brengt de gegevensarchitect de sleutel van het [!DNL ExperienceEvent] schema met de &quot;producten&quot;klasse in verband. Dit staat de gegevensarchitect toe om van de extra gebieden van de &quot;producten&quot;klasse gebruik te maken alsof zij aan het [!DNL ExperienceEvent] schema inheems zijn. Als laatste stap van het configuratiewerk, moet de gegevensarchitect de aangewezen gegevens in brengen [!DNL Real-time Customer Profile]. Dit wordt gedaan door de &quot;producten&quot;dataset voor gebruik met toe te laten [!DNL Profile]. Met het configuratiewerk volledig, of de gegevensarchitect of de telleraar kan het doelsegment binnen bouwen [!DNL Segment Builder].
 
 Zie het overzicht [van de](../xdm/schema/composition.md#union) schemacompositie leren hoe te om verhoudingen over klassen te bepalen XDM.
 
@@ -225,6 +225,6 @@ Meer gedetailleerde informatie over deze ondersteunde gegevenstypen vindt u in h
 - [!DNL Segmentation] Dit is het proces waarbij u een subset van profielen definieert vanuit het profielarchief, zodat u gedrag of kenmerken van een gewenste verhandelbare groep kunt karakteriseren. [!DNL Segmentation Service] maakt dit proces mogelijk.
 - Wanneer het plannen van een segment, houd in mening dat een segment van, en gecombineerd met, een ander segment kan worden van verwijzingen voorzien.
 - Een segment kan van regels worden gebouwd die op profielgegevens, verwante tijdreeksgegevens, of allebei worden gebaseerd.
-- Segmenten kunnen op aanvraag of continu worden geëvalueerd. Wanneer geëvalueerd op bestelling, worden alle profielgegevens overgegaan door de segmentdefinities in één keer. Wanneer voortdurend geëvalueerd, stromen de gegevens door segmentdefinities aangezien het Platform ingaat.
+- Segmenten kunnen op aanvraag of continu worden geëvalueerd. Wanneer geëvalueerd op bestelling, worden alle profielgegevens overgegaan door de segmentdefinities in één keer. Wanneer voortdurend geëvalueerd, stromen de gegevens door segmentdefinities aangezien het ingaat [!DNL Platform].
 
 Leer hoe te om segmenten in UI te bepalen, zie de gids [van de Bouwer van het](./ui/overview.md)Segment. Zie de zelfstudie over het [maken van segmenten met de API](./tutorials/create-a-segment.md)voor informatie over het maken van segmentdefinities met de API.
