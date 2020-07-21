@@ -1,17 +1,20 @@
 ---
 title: Reclamebestemmingen
 seo-title: Reclamebestemmingen
-description: Verbind uw platform van de Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, ad netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
-seo-description: Verbind uw platform van de Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, ad netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
+description: Verbind uw Platform van Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, ad netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
+seo-description: Verbind uw Platform van Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, ad netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
 
 # Reclamebestemmingen {#advertising-destinations}
 
-Verbind uw platform van de Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, ad netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
+Verbind uw [!DNL Real-time Customer Data Platform] met een derdereclameplatform (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 
 Wanneer het verbinden met een reclamebestemming, worden uw publiek verzonden als IDs naar het bestemmingsplatform, waar zij aan een identiteitskaart in kaart worden gebracht die door het bestemmingsplatform wordt gekend.
 
