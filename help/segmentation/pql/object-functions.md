@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Objectfuncties
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '111'
+ht-degree: 3%
 
 ---
 
 
 # Objectfuncties
 
-PQL (Profile Query Language) biedt functies om interactie met objecten eenvoudiger te maken. Meer informatie over andere PQL-functies vindt u in het overzicht [Taal van](./overview.md)profielquery.
+[!DNL Profile Query Language] (PQL) biedt functies om interactie met objecten eenvoudiger te maken. Meer informatie over andere PQL-functies vindt u in het overzicht [Taal van](./overview.md)profielquery.
 
 ## Is null
 
