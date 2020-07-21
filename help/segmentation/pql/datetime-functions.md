@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Datum- en tijdfuncties
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '468'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Datum- en tijdfuncties
 
-Datum- en tijdfuncties worden gebruikt om datum- en tijdbewerkingen uit te voeren op waarden in de taal van de profielquery (PQL). Meer informatie over andere PQL-functies vindt u in het overzicht [Taal van](./overview.md)profielquery.
+Datum- en tijdfuncties worden gebruikt voor het uitvoeren van datum- en tijdbewerkingen op waarden binnen [!DNL Profile Query Language] (PQL). Meer informatie over andere PQL-functies vindt u in het overzicht [Taal van](./overview.md)profielquery.
 
 ## Huidige maand
 
