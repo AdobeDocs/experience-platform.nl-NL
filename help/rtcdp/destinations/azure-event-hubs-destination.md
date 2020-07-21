@@ -4,15 +4,15 @@ seo-title: (Beta) Azure Event Hubs-bestemming
 description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van Experience Platform.
 seo-description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van Experience Platform.
 translation-type: tm+mt
-source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
 
-# (Beta) Azure Event Hubs-bestemming
+# (Beta) [!DNL Azure Event Hubs] bestemming
 
 >[!IMPORTANT]
 >
@@ -32,9 +32,9 @@ U kunt een uitgaande verbinding in real time aan uw [!DNL Azure Event Hubs] opsl
 
 ## Gevallen gebruiken {#use-cases}
 
-Door het stromen bestemmingen zoals de Hubs van de Gebeurtenis van de Azure te gebruiken, kunt u high-value segmenteringsgebeurtenissen en bijbehorende profielattributen in uw systemen van keus gemakkelijk voeren.
+Door het stromen bestemmingen zoals te gebruiken [!DNL Azure Event Hubs], kunt u high-value segmenteringsgebeurtenissen en bijbehorende profielattributen in uw systemen van keus gemakkelijk invoeren.
 
-Met een vooruitzicht downloadde u bijvoorbeeld een witboek dat hen kwalificeert tot een segment met een &quot;hoge neiging om te converteren&quot;. Door het segment in kaart te brengen dat het vooruitzicht binnen aan de Azure bestemming van de Hubs van de Gebeurtenis valt, zou u deze gebeurtenis in de Hubs van de Gebeurtenis van Azure ontvangen. Daar, kunt u een doe-het-zelf benadering gebruiken en bedrijfslogica bovenop de gebeurtenis beschrijven, aangezien u denkt het beste met uw systemen van bedrijfsIT zou werken.
+Met een vooruitzicht downloadde u bijvoorbeeld een witboek dat hen kwalificeert tot een segment met een &quot;hoge neiging om te converteren&quot;. Door het segment in kaart te brengen dat het vooruitzicht binnen aan de [!DNL Azure Event Hubs] bestemming valt, zou u deze gebeurtenis binnen ontvangen [!DNL Azure Event Hubs]. Daar, kunt u een doe-het-zelf benadering gebruiken en bedrijfslogica bovenop de gebeurtenis beschrijven, aangezien u denkt het beste met uw systemen van bedrijfsIT zou werken.
 
 ## Connect-doel {#connect-destination}
 
@@ -64,7 +64,7 @@ Zie Profielen en segmenten [activeren naar een doel](/help/rtcdp/destinations/ac
 
 ## Geëxporteerde gegevens {#exported-data}
 
-De geëxporteerde gegevens van het Experience Platform worden in JSON- [!DNL Azure Event Hubs] indeling opgeslagen. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn ECID en e-mail.
+De geëxporteerde [!DNL Experience Platform] gegevens worden in JSON- [!DNL Azure Event Hubs] indeling opgeslagen. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn ECID en e-mail.
 
 ```
 {
