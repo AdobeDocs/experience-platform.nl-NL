@@ -1,11 +1,14 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform
-description: Opmerkingen bij de release Experience Platform van 11 december 2019
+description: Opmerkingen bij de release van Experience Platform van 11 december 2019
 doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+workflow-type: tm+mt
+source-wordcount: '668'
+ht-degree: 3%
 
 ---
 
@@ -14,25 +17,25 @@ source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 **Releasedatum: 11 december 2019**
 
-Updates voor bestaande functies in het Adobe Experience Platform:
+Updates voor bestaande functies in Adobe Experience Platform:
 
-* [Segmenteringsservice](#segmentation)
-* [Beslissingsservice](#decisioning)
-* [Bronnen](#sources)
-* [XDM-systeem (Experience Data Model)](#xdm)
+* [!DNL Segmentation Service](#segmentation)
+* [!DNL Decisioning Service](#decisioning)
+* [!DNL Sources](#sources)
+* [!DNL Experience Data Model (XDM) System](#xdm)
 
-## Segmenteringsservice {#segmentation}
+## [!DNL Segmentation Service] {#segmentation}
 
-De Dienst van de Segmentatie van het Platform van de Ervaring van Adobe verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw gegevens van het Profiel van de Klant in real time te produceren. Deze segmenten worden centraal geconfigureerd en onderhouden op Platform, waardoor ze gemakkelijk toegankelijk zijn voor elke Adobe-toepassing.
+De Dienst van de Segmentatie van het Adobe Experience Platform verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal geconfigureerd en onderhouden, zodat ze gemakkelijk toegankelijk zijn voor alle Adobe-toepassingen. [!DNL Platform]
 
-De Dienst van de segmentatie bepaalt een bepaalde ondergroep van profielen door de criteria te beschrijven die een verhandelbare groep mensen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
+[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 |--- | ---|
-| Het samengevoegde lusje van het publiek in de Bouwer van het Segment | De tabbladen _Segmenten_ en _Soorten publiek_ in Segment Builder zijn gecombineerd tot één tabblad _Soorten publiek_ . Dit lusje staat u toe om naar bestaand publiek te doorbladeren en te zoeken, dat u dan en in het canvas van de regelbouwer kunt slepen om een nieuwe segmentdefinitie tot stand te brengen. Verwijzen naar een publiek kan één van de volgende reeksen regellogica aan de nieuwe segmentdefinitie toevoegen: Het lidmaatschap van het publiek als regel, de volledige reeks regellogica die het referenced publiek bepaalde. |
-| Nieuwe locatie voor de kiezer voor het samenvoegbeleid | De plaats van de selecteur van het fusiebeleid in de Bouwer van het Segment is veranderd. Als u een samenvoegbeleid voor een segmentdefinitie wilt selecteren, klikt u op het tandwielpictogram op het tabblad _Velden_ en gebruikt u het vervolgkeuzemenu Beleid __ samenvoegen om het samenvoegbeleid te selecteren dat u wilt gebruiken. |
+| Het tabblad Samengevoegd publiek in [!DNL Segment Builder] | De tabbladen [!UICONTROL _Segmenten _]en[!UICONTROL _Soorten publiek_] in het dialoogvenster [!DNL Segment Builder] zijn gecombineerd tot één [!UICONTROL _tabblad Soorten publiek _]. Dit lusje staat u toe om naar bestaand publiek te doorbladeren en te zoeken, dat u dan en in het canvas van de regelbouwer kunt slepen om een nieuwe segmentdefinitie tot stand te brengen. Verwijzen naar een publiek kan één van de volgende reeksen regellogica aan de nieuwe segmentdefinitie toevoegen: Het lidmaatschap van het publiek als regel, de volledige reeks regellogica die het referenced publiek bepaalde. |
+| Nieuwe locatie voor de kiezer voor het samenvoegbeleid | De locatie van de kiezer voor het samenvoegbeleid in de map [!DNL Segment Builder] is gewijzigd. Als u een samenvoegbeleid voor een segmentdefinitie wilt selecteren, klikt u op het tandwielpictogram op het tabblad [!UICONTROL _Velden _]en gebruikt u het vervolgkeuzemenu Beleid__ samenvoegen om het samenvoegbeleid te selecteren dat u wilt gebruiken. |
 
 **Bekende problemen**
 
@@ -40,9 +43,9 @@ De Dienst van de segmentatie bepaalt een bepaalde ondergroep van profielen door 
 
 Voor meer informatie, gelieve te zien het overzicht [van de Dienst van de](../../segmentation/home.md)Segmentatie.
 
-## Beslissingsservice {#decisioning}
+## [!DNL Decisioning Service] {#decisioning}
 
-Met de Adobe Experience Platform Decisioning Service kunt u via programmacode en op intelligente wijze de &quot;Next Best Experience&quot; selecteren uit een set beschikbare opties voor een bepaalde persoon, deze leveren aan een willekeurig kanaal of een willekeurige toepassing en rapportage en analyse uitvoeren.
+Adobe Experience Platform [!DNL Decisioning Service] biedt de mogelijkheid om programmatisch en intelligent de &quot;Next Best Experience&quot; te selecteren uit een set beschikbare opties voor een bepaalde persoon, deze te leveren aan een willekeurig kanaal of een toepassing en rapportage en analyse uit te voeren.
 
 **Nieuwe functies**
 
@@ -56,18 +59,18 @@ Met de Adobe Experience Platform Decisioning Service kunt u via programmacode en
 
 Zie het overzicht [van de Dienst van het](../../decisioning-service/home.md) Beslissen voor een volledige inleiding aan de dienst.
 
-## Bronnen {#sources}
+## [!DNL Sources] {#sources}
 
-Met het Adobe Experience Platform kunt u gegevens uit externe bronnen ophalen en tegelijk die gegevens structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe Solutions, cloudopslag, software van derden en uw CRM-systeem.
+Het Adobe Experience Platform kan gegevens uit externe bronnen opnemen terwijl het toestaan van u om die gegevens te structureren, te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe Solutions, cloudopslag, software van derden en uw CRM-systeem.
 
-Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u bronverbindingen voor diverse gegevensleveranciers met gemak laat opzetten. Deze bronverbindingen staan u toe om aan uw opslagsystemen en de diensten van CRM voor authentiek te verklaren, tijden voor inname looppas te plaatsen, en gegevensinvoer te beheren.
+[!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om aan uw opslagsystemen en de diensten van CRM voor authentiek te verklaren, tijden voor inname looppas te plaatsen, en gegevensinvoer te beheren.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | ---------- | ------------ |
-| Streaming verbinding | Met streaming opname kunt u gegevens van client- en server-side apparaten naar het Platform verzenden in real-time. Release omvat een nieuwe streamingverbinding, gebruikersinterface. |
-| Connectorondersteuning voor Google Cloud Store | Ondersteuning voor het verzamelen van gegevens in de Google Cloud Store. |
+| Streaming verbinding | Met streaming opname kunt u gegevens van client- en serverapparaten [!DNL Experience Platform] in real-time verzenden. Release omvat een nieuwe streamingverbinding, gebruikersinterface. |
+| Connectorondersteuning voor [!DNL Google Cloud Store] | Ondersteuning voor het verzamelen van gegevens van [!DNL Google Cloud Store]. |
 
 **Bekende problemen**
 
@@ -75,11 +78,11 @@ Het Platform van de ervaring verstrekt RESTful API en een interactieve UI die u 
 
 Zie het [bronoverzicht](../../sources/home.md)voor meer informatie over bronnen.
 
-## XDM-systeem (Experience Data Model) {#xdm}
+## [!DNL Experience Data Model] (XDM) System {#xdm}
 
-Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter het ervaringsplatform. Experience Data Model (XDM), aangestuurd door Adobe, is een poging om gegevens over klantervaring te standaardiseren en schema&#39;s voor het beheer van klantervaring te definiëren.
+Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), aangestuurd door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
 
-XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Deze biedt algemene structuren en definities waarmee toepassingen kunnen communiceren met services op het Adobe Experience Platform. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier levert. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor om het even welke toepassing om met de diensten op Adobe Experience Platform te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier levert. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
 
 **Nieuwe functies**
 
@@ -90,10 +93,10 @@ XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht
 **Bugfixes**
 
 * Onderhoud en verbeteringen met betrekking tot toegangsbeheer en sandboxen.
-* Steun voor `eTag` het `/descriptors` eindpunt in de Registratie API van het Schema.
+* Ondersteuning voor `eTag` het `/descriptors` eindpunt in de [!DNL Schema Registry] API.
 
 **Bekende problemen**
 
 * Geen
 
-Meer informatie over het werken met XDM gebruikend de Registratie API van het Schema en gebruikersinterface van de Redacteur van het Schema, gelieve de documentatie [van het](../../xdm/home.md)Systeem XDM te lezen.
+Meer informatie over het werken met XDM die API en [!DNL Schema Registry] gebruikersinterface gebruikt, te lezen gelieve de documentatie [!DNL Schema Editor] van het [](../../xdm/home.md)Systeem XDM.
