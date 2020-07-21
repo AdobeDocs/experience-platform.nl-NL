@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Optie-outs respecteren
 topic: overview
 translation-type: tm+mt
-source-git-commit: f156679601c2ed0bb933a66a56661c29c1b9c778
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
@@ -68,13 +68,13 @@ De [!DNL Profile Privacy] mix bevat de volgende velden:
 
 Om de volledige structuur van de [!DNL Profile Privacy] mix te bekijken, gelieve te verwijzen naar de [XDM openbare bewaarplaats](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) GitHub of voorproef de mixin gebruikend het Platform UI.
 
-### Details van profielvoorkeuren
+### [!DNL Profile Preferences Details]
 
-De mix Profielvoorkeuren > Details bevat verschillende velden die voorkeuren voor klantprofielen vertegenwoordigen (zoals e-mailindeling, voorkeurstaal en tijdzone). In een van de velden in deze mix, OptInOut (`optInOut`), kunnen de waarden voor de optie om te weigeren worden ingesteld voor afzonderlijke kanalen.
+De [!DNL Profile Preferences Details] mix bevat verschillende velden die voorkeuren voor klantprofielen vertegenwoordigen (zoals e-mailindeling, voorkeurstaal en tijdzone). In een van de velden in deze mix, OptInOut (`optInOut`), kunnen de waarden voor de optie om te weigeren worden ingesteld voor afzonderlijke kanalen.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-De mix Details van de Voorkeur van het Profiel bevat de volgende gebieden met betrekking tot opt-outs:
+De [!DNL Profile Preferences Details] mix bevat de volgende velden met betrekking tot opt-outs:
 
 - OptInOut (`optInOut`): Een object waarbij elke sleutel een geldige en bekende URI voor een communicatiekanaal vertegenwoordigt en de actieve status van de opt-out voor elk kanaal. Elk kanaal kan een van vier mogelijke waarden hebben:
    - Niet verstrekt (`not_provided`): Er is geen verzoek om te weigeren ingediend voor dit kanaal.
