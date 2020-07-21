@@ -4,26 +4,29 @@ solution: Experience Platform
 title: Adobe Experience Platform Observability Insights
 topic: overview
 translation-type: tm+mt
-source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '396'
+ht-degree: 1%
 
 ---
 
 
-# Overzicht van observatiegegevens van Adobe Experience Platform
+# Overzicht van Adobe Experience Platform Observability Insights
 
-Observability Insights is een RESTful API waarmee u belangrijke waarneembaarheidsmetriek in het Platform van de Ervaring van Adobe kunt blootstellen. Deze metriek verstrekt inzicht in het gebruiksstatistieken van het Platform, gezondheid-controles voor de diensten van het Platform, historische tendensen, en prestatiesindicatoren voor diverse functies van het Platform.
+Observability Insights is een RESTful API die u toestaat om zeer belangrijke waarneembaarheidsmetriek in Adobe Experience Platform bloot te stellen. Deze metriek verstrekt inzicht in [!DNL Platform] gebruiksstatistieken, gezondheid-controles voor de [!DNL Platform] diensten, historische tendensen, en prestatiesindicatoren voor diverse [!DNL Platform] functionaliteit.
 
 In dit document wordt een voorbeeld gegeven van een aanroep van de API Observability Insights. Voor een volledige lijst van de eindpunten van de Waarnemelijkheid, gelieve te verwijzen naar de [Bron](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)van de Inzichten van de Observability API.
 
 ## Aan de slag
 
-Om vraag aan Platform APIs te maken, moet u de [authentificatieleerprogramma](../tutorials/authentication.md)eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen van het Experience Platform, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in het ervaringsplatform zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt. Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Platform](../sandboxes/home.md).
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Voor alle aanvragen voor [!DNL Platform] API&#39;s is een header nodig die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt. Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../sandboxes/home.md)sandbox.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -46,7 +49,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{METRIC}` | De metrisch u wilt blootstellen. Wanneer het combineren van veelvoudige metriek in één enkele vraag, moet u ampersand (`&`) gebruiken om individuele metriek te scheiden. Bijvoorbeeld, `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | De id voor een bepaald middel van het Platform waarvan metriek u wilt blootstellen. Deze id kan optioneel, vereist of niet van toepassing zijn, afhankelijk van de gebruikte maatstaven. Raadpleeg het referentiedocument over [beschikbare metriek](metrics.md)voor een lijst met beschikbare metriek en ondersteunde id&#39;s (zowel vereist als optioneel) voor elke meting. |
+| `{ID}` | De id voor een bepaalde [!DNL Platform] bron waarvan u de meetgegevens wilt weergeven. Deze id kan optioneel, vereist of niet van toepassing zijn, afhankelijk van de gebruikte maatstaven. Raadpleeg het referentiedocument over [beschikbare metriek](metrics.md)voor een lijst met beschikbare metriek en ondersteunde id&#39;s (zowel vereist als optioneel) voor elke meting. |
 | `{DATE_RANGE}` | Het datumbereik voor de metriek die u wilt weergeven, in de ISO 8601-indeling (bijvoorbeeld `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
 
 **Verzoek**
@@ -62,7 +65,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een lijst met objecten die elk een tijdstempel bevatten binnen de opgegeven waarden `dateRange` en de bijbehorende waarden voor de metriek die in het aanvraagpad zijn opgegeven. Als de bron `id` van een platform is opgenomen in het aanvraagpad, zijn de resultaten alleen van toepassing op die specifieke bron. Als het `id` wordt weggelaten, zullen de resultaten op alle toepasselijke middelen binnen uw IMS Organisatie van toepassing zijn.
+Een geslaagde reactie retourneert een lijst met objecten die elk een tijdstempel bevatten binnen de opgegeven waarden `dateRange` en de bijbehorende waarden voor de metriek die in het aanvraagpad zijn opgegeven. Als het `id` van een [!DNL Platform] bron is opgenomen in het aanvraagpad, zijn de resultaten alleen van toepassing op die bron. Als het `id` wordt weggelaten, zullen de resultaten op alle toepasselijke middelen binnen uw IMS Organisatie van toepassing zijn.
 
 ```json
 {
