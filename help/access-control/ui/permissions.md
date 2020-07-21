@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Rechten voor een productprofiel beheren
 topic: user guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Rechten voor een productprofiel beheren
 
-Onmiddellijk nadat u een nieuw productprofiel [hebt](#create-a-new-product-profile)gemaakt, wordt u gevraagd om de profielmachtigingen te configureren. Als u machtigingen voor een bestaand profiel bewerkt, selecteert u het profiel op het tabblad *Productprofielen* om de detailpagina van het profiel te openen en klikt u op **Machtigingen**.
+Onmiddellijk nadat u een nieuw productprofiel [hebt](#create-a-new-product-profile)gemaakt, wordt u gevraagd om de profielmachtigingen te configureren. Als u machtigingen voor een bestaand profiel bewerkt, selecteert u het profiel op het tabblad *[!UICONTROL Productprofielen]* om de detailpagina van het profiel te openen en klikt u op **[!UICONTROL Machtigingen]**.
 
 ![profielmachtigingen](../images/profile-permissions.png)
 
@@ -24,25 +24,25 @@ Klik op een categorie in de lijst om de pagina *Machtigingen* bewerken te openen
 
 ![bewerkingsmachtigingen](../images/edit-permissions.png)
 
-De pagina *Machtigingen* bewerken biedt een werkruimte voor het toevoegen en verwijderen van machtigingen uit het geselecteerde productprofiel. Links in het scherm wordt een lijst met machtigingscategorieën weergegeven. Als u op een categorie klikt, worden de machtigingen gewijzigd die onder *Beschikbare machtigingsitems* worden weergegeven.
+De pagina *[!UICONTROL Machtigingen]* bewerken biedt een werkruimte voor het toevoegen en verwijderen van machtigingen uit het geselecteerde productprofiel. Links in het scherm wordt een lijst met machtigingscategorieën weergegeven. Als u op een categorie klikt, worden de machtigingen gewijzigd die onder *[!UICONTROL Beschikbare machtigingsitems]* worden weergegeven.
 
 ![change-permissions-categorie](../images/change-permissions-category.png)
 
-Als u een machtiging wilt toevoegen, klikt u op de **plusknop (+)** naast de naam van de machtiging. U kunt ook op Alles **** toevoegen klikken om alle machtigingen onder de huidige categorie aan het profiel toe te voegen. Toegevoegde machtigingen worden weergegeven onder *Opgenomen machtigingsitems*.
+Als u een machtiging wilt toevoegen, klikt u op de **plusknop (+)** naast de naam van de machtiging. U kunt ook op Alles **** toevoegen klikken om alle machtigingen onder de huidige categorie aan het profiel toe te voegen. Toegevoegde machtigingen worden weergegeven onder *[!UICONTROL Opgenomen machtigingsitems]*.
 
 ![add-permissions](../images/add-permissions.png)
 
 >[!NOTE]
 >
->In de lijst Items *voor* opgenomen machtigingen worden alleen toegevoegde machtigingen weergegeven van de op dat moment geselecteerde categorie.
+>In de lijst Items *[!UICONTROL voor]* opgenomen machtigingen worden alleen toegevoegde machtigingen weergegeven van de op dat moment geselecteerde categorie.
 
-Als u een machtiging wilt verwijderen, klikt u op het **X** -pictogram naast de naam van de machtiging of selecteert u Alles **** verwijderen om alle machtigingen onder de huidige categorie te verwijderen. Verwijderde machtigingen verschijnen weer onder *Beschikbare machtigingsitems*.
+Als u een machtiging wilt verwijderen, klikt u op het **X** -pictogram naast de naam van de machtiging of selecteert u Alles **** verwijderen om alle machtigingen onder de huidige categorie te verwijderen. Verwijderde machtigingen verschijnen weer onder *[!UICONTROL Beschikbare machtigingsitems]*.
 
-Doorgaan met de beschikbare categorieën en de gewenste machtigingen toevoegen. Klik op **Opslaan** als u klaar bent.
+Doorgaan met de beschikbare categorieën en de gewenste machtigingen toevoegen. Klik op **[!UICONTROL Opslaan]** als u klaar bent.
 
 ![rechten voltooien](../images/permissions-finish.png)
 
-Het tabblad *Machtigingen* voor het productprofiel wordt opnieuw weergegeven en toont dat de geselecteerde machtigingen nu actief zijn.
+Het tabblad *[!UICONTROL Machtigingen]* voor het productprofiel wordt opnieuw weergegeven en toont dat de geselecteerde machtigingen nu actief zijn.
 
 ![added-permissions](../images/added-permissions.png)
 
