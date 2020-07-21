@@ -4,25 +4,28 @@ seo-title: Privacy in realtime gegevensprofiel van klanten
 description: Met het realtime gegevensprofiel voor klanten kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen in overeenstemming worden gehouden met privacyregels.
 seo-description: Met het realtime gegevensprofiel voor klanten kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen in overeenstemming worden gehouden met privacyregels.
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+workflow-type: tm+mt
+source-wordcount: '304'
+ht-degree: 0%
 
 ---
 
 
 # Privacy in real time CDP
 
-Het Real-Time Customer Data Platform (Real-time CDP) helpt marketers gegevens van meerdere bedrijfssystemen samen te brengen, zodat ze hun klanten beter kunnen identificeren, begrijpen en betrekken. Adobe beschouwt de privacy van consumentengegevens als een fundamenteel ontwerpbeginsel en biedt verschillende besturingselementen om marketers te helpen de privacy van gegevens van hun klanten te beheren.
+[!DNL Real-time Customer Data Platform] (CDP in real time) helpt marketers gegevens van veelvoudige ondernemingssystemen samen te brengen, die hen toestaan om, hun klanten beter te identificeren te begrijpen en te betrekken. Adobe beschouwt de privacy van consumentengegevens als een fundamenteel ontwerpbeginsel en biedt verschillende besturingselementen om marketers te helpen de privacy van gegevens van hun klanten te beheren.
 
-De meeste CDP-mogelijkheden in realtime worden aangestuurd door het Adobe Experience Platform. Dit document biedt informatie over de verschillende technologieën voor privacyverbetering die worden ondersteund door Real-time CDP, met koppelingen naar de documentatie van Experience Platform voor meer informatie.
+De meerderheid van CDP-mogelijkheden in real time worden aangedreven door Adobe Experience Platform. Dit document biedt informatie over de verschillende technologieën voor privacyverbetering die worden ondersteund door Real-time CDP, met koppelingen naar [!DNL Experience Platform] documentatie voor meer informatie.
 
-## Privacy Service
+## [!DNL Privacy Service]
 
-Met de Adobe Experience Platform Privacy Service kunt u het proces van het naleven van uw gegevensbewerkingen stroomlijnen met privacyregels, zoals de General Data Protection Regulation (GDPR) en de California Consumer Privacy Act (CCPA). Aangezien CDP in real time de mogelijkheden van het Platform van de Ervaring voor gegevensinzameling en opslag gebruikt, zouden de toegang en schrappingsverzoeken voor GDPR en CCPA binnen Platform moeten worden beheerd. Zie het overzichtsdocument [van de Dienst van de](../../privacy-service/home.md) Privacy voor een meer gedetailleerde inleiding van de dienst.
+Adobe Experience Platform [!DNL Privacy Service] staat u toe om het proces te stroomlijnen om uw gegevensverrichtingen met privacyverordeningen zoals [!DNL General Data Protection Regulation] (GDPR) en [!DNL California Consumer Privacy Act] (CCPA) te houden. Aangezien CDP in real time [!DNL Experience Platform] mogelijkheden voor gegevensinzameling en opslag gebruikt, zouden de toegang en schrappingsverzoeken voor GDPR en CCPA binnen moeten worden beheerd [!DNL Platform]. Zie het overzichtsdocument [van de](../../privacy-service/home.md) Privacy Service voor een meer gedetailleerde inleiding van de dienst.
 
 Er zijn twee methoden voor het indienen van individuele aanvragen voor GDPR- en CCPA-gegevens voor de toegang tot en het verwijderen van klantgegevens:
 
-* Gebruik de UI [van de Dienst van de](https://gdprui.cloud.adobe.io/) Privacy om toegang tot te creëren en te controleren en verzoeken binnen een visuele werkruimte te schrappen. Raadpleeg de zelfstudie [over de](../../privacy-service/ui/overview.md) privacyservice voor stapsgewijze instructies.
-* Gebruik de API [van de Dienst van de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) Privacy om toegang te beheren en verzoeken met RESTful API vraag te schrappen. Zie de API-zelfstudie [van de](../../privacy-service/api/getting-started.md) privacyservice voor stapsgewijze instructies.
+* Gebruik het [!DNL Privacy Service UI](https://gdprui.cloud.adobe.io/) om toegang tot en schrapping verzoeken binnen een visuele werkruimte tot stand te brengen en te controleren. Zie de zelfstudie [over de gebruikersinterface van de](../../privacy-service/ui/overview.md) Privacy Service voor stapsgewijze instructies.
+* Gebruik [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) om toegang te beheren en verzoeken met RESTful API vraag te schrappen. Zie de API-zelfstudie voor [Privacy Service](../../privacy-service/api/getting-started.md) voor stapsgewijze instructies.
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
@@ -35,4 +38,4 @@ Real-time CDP provides two types of consumer opt-out capabilities:
 
 ## Volgende stappen
 
-Dit document verstrekte een korte inleiding aan de mogelijkheden van de Privacy van CDP in real time. Raadpleeg de documentatie [van de](../../privacy-service/home.md)privacydienst voor gedetailleerde informatie over de beste praktijken en stappen voor het verzenden van toegang-/verwijderverzoeken.
+Dit document verstrekte een korte inleiding aan de mogelijkheden van de Privacy van CDP in real time. Raadpleeg de documentatie bij de [Privacy Service](../../privacy-service/home.md)voor meer informatie over de beste praktijken en stappen voor het indienen van verzoeken om toegang/verwijdering.
