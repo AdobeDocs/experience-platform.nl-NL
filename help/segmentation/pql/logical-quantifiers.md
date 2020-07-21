@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Logische kwantoren
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 3%
 
 ---
 
 
-# Logical quantifier functions
+# Logische kwantor-functies
 
-Logische kwantoren kunnen worden gebruikt om voorwaarden met arrays in Profile Query Language (PQL) te bepalen. Meer informatie over andere PQL-functies vindt u in het overzicht [Taal van](./overview.md)profielquery.
+Logische kwantoren kunnen worden gebruikt om omstandigheden met arrays in [!DNL Profile Query Language] (PQL) te bevestigen. Meer informatie over andere PQL-functies vindt u in het overzicht [Taal van](./overview.md)profielquery.
 
 ## Exists
 
@@ -40,7 +43,7 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Voor alles
 
-The `forall` function determines all items in an array that satisfy all the given conditions.
+De `forall` functie bepaalt alle items in een array die aan alle opgegeven voorwaarden voldoen.
 
 **Indeling**
 
