@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Datasets vs tabellen en schema's
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '181'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Open de PSQL-opdrachtregel en gebruik de verbindingsdetails vanaf hier: [https:/
 
 ![](../images/clients/psql/connect-bi.png)
 
-Als u de beschikbare tabellen op het Platform met SQL wilt weergeven, kunt u zowel `\d` als `SHOW TABLES;`.
+Als u de beschikbare tabellen wilt weergeven [!DNL Platform] met SQL, kunt u zowel `\d` als `SHOW TABLES;`.
 
 
 `\d` geeft de standaard PostSQL-weergave weer
@@ -44,7 +44,7 @@ Als u de beschikbare tabellen op het Platform met SQL wilt weergeven, kunt u zow
 (2 rows)
 ```
 
-`SHOW TABLES;` is een douanebevel dat een meer gedetailleerde mening geeft en de lijst, evenals de datasetnaam voorstelt die in de UI van het Platform wordt gevonden.
+`SHOW TABLES;` is een douanebevel dat een meer gedetailleerde mening geeft en de lijst, evenals de datasetnaam voorstelt die in [!DNL Platform] UI wordt gevonden.
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
