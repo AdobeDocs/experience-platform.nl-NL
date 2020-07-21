@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van gedeeltelijk in batch innemen van Adobe Experience Platforms
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1243'
+source-wordcount: '1237'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Daarnaast bevat de [bijlage bij](#appendix) deze zelfstudie een verwijzing naar 
 Deze zelfstudie vereist een praktische kennis van de verschillende diensten van de Adobe Experience Platform die betrokken zijn bij gedeeltelijke partijopname. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [Inname](./overview.md)in batch: De methode die gegevens uit gegevensbestanden, zoals CSV en Parquet, [!DNL Platform] opneemt en opslaat.
-- [XDM (Experience Data Model)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan APIs te maken. [!DNL Platform]
 
@@ -42,7 +42,7 @@ Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor Platform-API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
