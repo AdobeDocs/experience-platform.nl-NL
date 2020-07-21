@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Inname van gegevens controleren
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Inname van gegevens controleren
 
-Met gegevensinvoer kunt u uw gegevens aan het Adobe Experience Platform toevoegen. U kunt batch-opname gebruiken, waarmee u gegevens kunt invoegen met behulp van verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u uw gegevens in real-time kunt invoeren in het Platform met streaming eindpunten.
+Met gegevensinvoer kunt u uw gegevens aan het Adobe Experience Platform toevoegen. U kunt batch-opname gebruiken, waarmee u gegevens kunt invoegen met behulp van verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u uw gegevens kunt invoeren om streaming eindpunten in real-time te [!DNL Platform] gebruiken.
 
 Deze gebruikershandleiding bevat een aantal stappen voor het controleren van gegevens binnen de gebruikersinterface van het Adobe Experience Platform. Deze gids vereist u een Adobe ID en toegang tot Adobe Experience Platform hebben.
 
 ## Doorlopende gegevensinvoer controleren
 
-Klik in de gebruikersinterface [van het](https://platform.adobe.com)Experience Platform op **Controle** in het linkernavigatiemenu en klik vervolgens op **Streaming van begin tot eind**.
+Klik in de gebruikersinterface [van het](https://platform.adobe.com)Experience Platform op **[!UICONTROL Controle]** in het linkernavigatiemenu en klik vervolgens op **[!UICONTROL Streaming van begin tot eind]**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-De *overzichtspagina voor streaming van begin tot einde* wordt weergegeven. Deze werkruimte verstrekt een grafiek die het tarief van gestreamde gebeurtenissen toont die door Platform worden ontvangen, een grafiek die het tarief van gestroomde gebeurtenissen toont die met succes door het Profiel [van de Klant in](../../profile/home.md)real time werden verwerkt, evenals een gedetailleerde lijst van inkomende gegevens.
+De *[!UICONTROL overzichtspagina voor streaming van begin tot einde]* wordt weergegeven. Deze werkruimte biedt een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die worden ontvangen door [!DNL Platform], een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die zijn verwerkt door [!DNL Real-time Customer Profile](../../profile/home.md), en een gedetailleerde lijst met binnenkomende gegevens.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -32,11 +32,11 @@ Standaard toont de bovenste grafiek de mate van inname in de afgelopen zeven dag
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-In de onderste grafiek ziet u de snelheid van gestreamde gebeurtenissen die in de afgelopen zeven dagen zijn verwerkt door Profile. U kunt dit datumbereik aanpassen om verschillende tijdsperioden weer te geven door op de gemarkeerde knop te klikken.
+In de onderste grafiek wordt de snelheid van gestreamde gebeurtenissen in de [!DNL Profile] afgelopen zeven dagen weergegeven. U kunt dit datumbereik aanpassen om verschillende tijdsperioden weer te geven door op de gemarkeerde knop te klikken.
 
 >[!NOTE]
 >
->Gegevens die in deze grafiek worden weergegeven, moeten **expliciet** zijn ingeschakeld voor Profiel. Leer hoe te om het stromen gegevens voor Profiel toe te laten, lees de [datasets gebruikersgids](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>Gegevens die in deze grafiek worden weergegeven, moeten **expliciet** zijn ingeschakeld voor [!DNL Profile]. Leer hoe te om het stromen gegevens voor toe te laten [!DNL Profile], lees de [datasets gebruikersgids](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
@@ -60,11 +60,11 @@ Bovendien bevatten mislukte records details over de fouten die zijn opgetreden t
 
 ## Gegevens van begin tot einde bijhouden in batch
 
-Klik in de gebruikersinterface [van het](https://platform.adobe.com)Experience Platform op **Controle** in het linkernavigatiemenu.
+Klik in het [!DNL Experience Platform UI](https://platform.adobe.com)dialoogvenster op **[!UICONTROL Bewaking]** links in het navigatiemenu.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
-De controlepagina Van begin tot eind **van de** Partij van de Partij verschijnt, die een lijst van de eerder opgenomen partijen toont. U kunt op een van de batches klikken voor meer informatie over de record.
+De controlepagina Van begin tot eind **[!UICONTROL van de]** Partij van de Partij verschijnt, die een lijst van de eerder opgenomen partijen toont. U kunt op een van de batches klikken voor meer informatie over de record.
 
 ![](../images/quality/monitor-data-flows/list-batches.png)
 
