@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een object vervangen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Een object vervangen
 
-U kunt de inhoud van een voorwerp van de Catalogus beschrijven gebruikend een PUT verzoek, waar het volledige middel met de verzoeklading wordt vervangen.
+U kunt de inhoud van een [!DNL Catalog] object overschrijven met een PUT-verzoek, waarbij de volledige bron wordt vervangen door de aanvraaglading.
 
 >[!NOTE]
 >
->Als u slechts een paar specifieke gebieden binnen een voorwerp van de Catalogus moet bijwerken, kan het gebruiken van een PATCH verzoek efficiënter zijn.
+>Als u slechts een paar specifieke gebieden binnen een [!DNL Catalog] voorwerp moet bijwerken, kan het gebruiken van een PATCH verzoek efficiënter zijn.
 
 **API-indeling**
 
@@ -28,7 +28,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden vervangen. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] object dat moet worden vervangen. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt bijwerken. |
 
 **Verzoek**
