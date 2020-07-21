@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Kwaliteit van gegevensinvoer
 topic: overview
 translation-type: tm+mt
-source-git-commit: 24df962656706d769a7034020d96a545e8f905ca
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 4%
 
 ---
 
 
-# Gegevenskwaliteit in het Adobe Experience Platform
+# Gegevenskwaliteit in Adobe Experience Platform
 
-Het Adobe Experience Platform biedt duidelijk gedefinieerde garanties voor de volledigheid, nauwkeurigheid en consistentie voor alle gegevens die via batch- of streaming opname zijn geüpload. Het volgende document bevat een overzicht van de ondersteunde controles en validatiegedragingen voor batch- en streaming-opname in het Experience Platform.
+Adobe Experience Platform biedt duidelijk gedefinieerde garanties voor volledigheid, nauwkeurigheid en consistentie voor alle gegevens die via batch- of streaming opname worden geüpload. Het volgende document bevat een overzicht van de ondersteunde controles en validatiegedragingen voor batch- en streaming-opname in [!DNL Experience Platform].
 
 ## Ondersteunde controles
 
@@ -26,7 +29,7 @@ Het Adobe Experience Platform biedt duidelijk gedefinieerde garanties voor de vo
 
 ## Ondersteund validatiegedrag
 
-Zowel partij als het stromen ingestie verhinderen ontbroken gegevens stroomafwaarts te gaan door slechte gegevens voor herwinning en analyse in het meer van Gegevens te bewegen. Gegevensinvoer biedt de volgende validaties voor batch- en streaming-opname.
+Zowel batch- als streaming-opname voorkomt dat mislukte gegevens stroomafwaarts gaan door onjuiste gegevens te verplaatsen voor ophalen en analyse in [!DNL Data Lake]. Gegevensinvoer biedt de volgende validaties voor batch- en streaming-opname.
 
 ### Inname in batch
 
@@ -52,4 +55,4 @@ De volgende validaties worden uitgevoerd voor streaming invoer:
 | Gegevensset | Zorgt ervoor dat de dataset wordt gespecificeerd, toegelaten en niet is verwijderd. |
 | Koptekst | Zorgt ervoor dat de kopbal wordt gespecificeerd en geldig is. |
 
-Meer informatie over hoe het Platform gegevens controleert en bevestigt kan in de documentatie [van de](./monitor-data-flows.md)controlegegevensstromen worden gevonden.
+Meer informatie over het controleren en valideren van gegevens vindt u in de documentatie [!DNL Platform] over de [](./monitor-data-flows.md)gegevensstromen van de bewaking.
