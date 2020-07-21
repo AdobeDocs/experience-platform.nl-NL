@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Productdocumentatie Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 1ecff21343c8b39070afdb4f486d0961c024235a
 workflow-type: tm+mt
-source-wordcount: '6593'
+source-wordcount: '6665'
 ht-degree: 0%
 
 ---
@@ -192,6 +192,8 @@ ht-degree: 0%
 
 **Doelcatalogus:** Een doelcatalogus is een lijst met beschikbare doelen in de [!DNL Real-time Customer Data Platform]doelcatalogus.
 
+**Regels voor directe oproepen:** in [!DNL Experience Platform Launch], kunt u opstelling een [!UICONTROL directe vraag] [!UICONTROL regel] die uitvoert wanneer het direct van de pagina wordt geroepen. Als het laden van de pagina of de actie op uw site heel eenvoudig is, of als deze uniek is en elke keer een specifieke set instructies kan uitvoeren (ingesteld [!DNL eVar4] op X en geactiveerd [!DNL event2] ), kunt u een [!UICONTROL directe] aanroepregel gebruiken. Zie [!DNL Launch] documentatie betreffende het creëren van [!UICONTROL directe vraag] [!UICONTROL regels].
+
 **Weergavenaam:** De naam van de vertoning is een gebruikersvriendelijke naam van een gebied dat in UI wordt getoond.
 
 **DULE:** DULE is een acroniem voor de Etikettering en de Handhaving *van het Gebruik van* Gegevens. DULE is een essentieel onderdeel van gegevensbeheer en een verzameling sleutelfuncties die labeling van gegevensgebruik en toepassing van beleid voor gegevenstoegang binnen een organisatie mogelijk maken voor beheerbehoeften.
@@ -330,7 +332,7 @@ ht-degree: 0%
 
 **Samenvoegingsbeleid:** Een samenvoegingsbeleid is een reeks regels die door worden gebruikt [!DNL Profile] om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en in een verenigde mening onder bepaalde voorwaarden zullen worden gecombineerd.
 
-**Mengsel:** Met een mix kunnen gebruikers herbruikbare velden uitbreiden die variabelen bevatten die een of meer kenmerken definiëren die zijn bedoeld om in een schema te worden opgenomen of aan een klasse te worden toegevoegd.
+**Mengsel:** Met een mix kunnen gebruikers herbruikbare velden uitbreiden die variabelen bevatten die een of meer kenmerken definiëren die in een schema moeten worden opgenomen of aan een klasse moeten worden toegevoegd.
 
 **Wijzigingsdatumkolom:** Het selecteren van een `Modified Date` kolom is een optie wanneer het specificeren van derdegegevens via een verbinding. Wanneer de `Delta` opslagstrategie wordt geselecteerd en de dataset veelvoudige datum met betrekking tot schema bevat, moet de gebruiker van het beschikbare datum/tijdtypeschema kiezen om de gewijzigde kolom van de datumsleutel te specificeren. `Modified Date` is niet beschikbaar als de `Overwrite` opslagstrategie is geselecteerd.
 
