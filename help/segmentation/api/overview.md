@@ -4,15 +4,15 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van Adobe Experience Platform Segmentation Service
 topic: guide
 translation-type: tm+mt
-source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
 
-# Handleiding voor ontwikkelaars van de Adobe Experience Platform Segmentation Service API
+# Handleiding voor ontwikkelaars van Adobe Experience Platform-API [!DNL Segmentation Service]
 
 [!DNL Adobe Experience Platform Segmentation Service] kunt u segmenten maken en publiek genereren [!DNL Adobe Experience Platform] op basis van uw [!DNL Real-time Customer Profile] gegevens.
 
