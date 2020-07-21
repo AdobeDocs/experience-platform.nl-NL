@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Gegevensdeduplicatie
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
 
 
-# Gegevensdeduplicatie in Query-service
+# Gegevensdeduplicatie in [!DNL Query Service]
 
-De Dienst van de Vraag van het Adobe Experience Platform steunt gegevensdeduplicatie wanneer het kan worden vereist om een volledige rij uit een berekening te verwijderen of een specifieke reeks gebieden te negeren omdat slechts een deel van de gegevens in de rij een duplicaat is. Het gemeenschappelijke patroon voor deduplicatie impliceert het gebruiken van de `ROW_NUMBER()` functie over een venster voor een identiteitskaart, of paar IDs, over geordende tijd (gebruikend het Model van de Gegevens van de Ervaring (XDM) `timestamp` gebied) om een nieuw gebied terug te keren dat het aantal tijden vertegenwoordigt een duplicaat is ontdekt. Wanneer deze waarde is `1`, verwijst dat naar de oorspronkelijke instantie en in de meeste gevallen die instantie is die u wilt gebruiken, waarbij elke andere instantie wordt genegeerd. Dit zal het vaakst binnen een sub-uitgezochte worden gedaan waar deduplicatie in een hoger niveau wordt gedaan `SELECT` zoals het uitvoeren van een gezamenlijke telling.
+Adobe Experience Platform [!DNL Query Service] ondersteunt gegevensdeduplicatie wanneer het nodig kan zijn een hele rij uit een berekening te verwijderen of een specifieke set velden te negeren omdat slechts een deel van de gegevens in de rij een duplicaat is. Het gemeenschappelijke patroon voor deduplicatie impliceert het gebruiken van de `ROW_NUMBER()` functie over een venster voor een identiteitskaart, of paar IDs, over geordende tijd (gebruikend het [!DNL Experience Data Model] (XDM) `timestamp` gebied) om een nieuw gebied terug te keren dat het aantal tijden vertegenwoordigt een duplicaat is ontdekt. Wanneer deze waarde is `1`, verwijst dat naar de oorspronkelijke instantie en in de meeste gevallen die instantie is die u wilt gebruiken, waarbij elke andere instantie wordt genegeerd. Dit zal het vaakst binnen een sub-uitgezochte worden gedaan waar deduplicatie in een hoger niveau wordt gedaan `SELECT` zoals het uitvoeren van een gezamenlijke telling.
 
 ## Gebruik hoofdletters
 
@@ -31,7 +31,7 @@ In het geval van dubbele ExperienceEvents, zult u waarschijnlijk de volledige ri
 
 >[!CAUTION]
 >
->Voor veel gegevenssets in Experience Platform, waaronder die welke door de Adobe Analytics Data Connector worden gemaakt, is al een deduplicatie op ervaringsniveau toegepast. Daarom is het opnieuw toepassen van dit niveau van deduplicatie onnodig en zal uw vraag vertragen. Het is belangrijk om de bron van uw Datasets te begrijpen en te weten of is deduplicatie op het ExperienceEvent-niveau reeds toegepast. Voor gegevenssets die worden gestreamd (bijvoorbeeld vanuit Adobe Target), moet u deduplicatie op ervaringsniveau toepassen omdat deze gegevensbronnen &#39;minstens één keer&#39; semantiek hebben.
+>Voor veel gegevenssets in [!DNL Experience Platform], waaronder die welke door de Adobe Analytics Data Connector worden gemaakt, is al deduplicatie op ervaringsniveau toegepast. Daarom is het opnieuw toepassen van dit niveau van deduplicatie onnodig en zal uw vraag vertragen. Het is belangrijk om de bron van uw Datasets te begrijpen en te weten of is deduplicatie op het ExperienceEvent-niveau reeds toegepast. Voor gegevenssets die worden gestreamd (bijvoorbeeld vanuit Adobe Target), moet u deduplicatie op ervaringsniveau toepassen omdat deze gegevensbronnen &#39;minstens één keer&#39; semantiek hebben.
 
 **Toepassingsgebied:** Algemeen
 
