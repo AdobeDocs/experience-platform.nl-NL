@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een dataset maken voor het exporteren van een publiekssegment
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '733'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Deze zelfstudie houdt rechtstreeks verband met de stappen die in de zelfstudie w
 
 ## Aan de slag
 
-Om een segment uit te voeren, moet de dataset op het Schema van de Unie van het Individuele Profiel XDM worden gebaseerd. Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van alle schema&#39;s samenvoegt die de zelfde klasse delen, in dit geval dat de Individuele klasse van het Profiel XDM is. Voor meer informatie over de schema&#39;s van de verenigingsmening, te zien gelieve de sectie van het Profiel van de Klant in [real time van de Ontwikkelaar van het Registratie van het Schema gids](../../xdm/schema/composition.md#union).
+Om een segment uit te voeren, moet de dataset op het [!DNL XDM Individual Profile Union Schema]. worden gebaseerd. Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van alle schema&#39;s samenvoegt die de zelfde klasse delen, in dit geval dat de [!DNL XDM Individual Profile] klasse is. Voor meer informatie over de schema&#39;s van de verenigingsmening, te zien gelieve de sectie van het Profiel van de Klant in [real time van de Ontwikkelaar van het Registratie van het Schema gids](../../xdm/schema/composition.md#union).
 
 Om verenigingsschema&#39;s in UI te bekijken, klik **[!UICONTROL Profielen]** in de linkernavigatie, dan klik op het **[!UICONTROL Unieschema]** tabel zoals hieronder getoond.
 
@@ -53,9 +53,9 @@ Op het *[!UICONTROL Create scherm van de Dataset]* , klik **[!UICONTROL Create D
 
 ## XDM Individueel profiel verenigingsschema selecteren
 
-Als u het XDM Individual Profile Union-schema voor gebruik in uw gegevensset wilt selecteren, zoekt u het schema &quot;[!UICONTROL XDM Individual Profile]&quot; met een type &quot;[!UICONTROL Union]&quot; op het scherm *[!UICONTROL Select Schema]* .
+Om [!DNL XDM Individual Profile Union Schema] voor gebruik in uw dataset te selecteren, vind het &quot;[!UICONTROL Individuele Profiel]XDM&quot;schema met een type van &quot;[!UICONTROL Unie]&quot;op het *[!UICONTROL Uitgezochte Schema]* scherm.
 
-Selecteer het keuzerondje naast **[!UICONTROL XDM Individueel Profiel]** en klik vervolgens op **[!UICONTROL Volgende]** in de rechterbovenhoek.
+Selecteer het keuzerondje naast **[!UICONTROL XDM Individueel Profiel]** en klik op **[!UICONTROL Volgende]** in de rechterbovenhoek.
 
 ![Schema selecteren](../images/tutorials/segment-export-dataset/select-schema.png)
 
@@ -84,6 +84,6 @@ Noteer de **[!UICONTROL gegevensset-id]**, omdat deze waarde vereist is om de ex
 
 ## Volgende stappen
 
-Nu u een dataset hebt gecreeerd die op het Schema van de Vereniging van het Profiel van XDM Individueel wordt gebaseerd, kunt u identiteitskaart **[!UICONTROL van de]** Dataset gebruiken om de [evaluatie voort te zetten en tot segment toegang te hebben resulterend](./evaluate-a-segment.md) leerprogramma.
+Nu u een dataset hebt gecreeerd die op wordt gebaseerd [!DNL XDM Individual Profile Union Schema], kunt u identiteitskaart **[!UICONTROL van de]** Dataset gebruiken om de [evaluatie voort te zetten en tot segment toegang te hebben resulterend](./evaluate-a-segment.md) leerprogramma.
 
 Op dit ogenblik, gelieve terug te keren naar de evaluerende zelfstudie van segmentresultaten en van het [produceren profielen voor publieksleden](./evaluate-a-segment.md#generate-profiles) stap van het uitvoeren van een segmentwerkschema te plukken.
