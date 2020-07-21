@@ -4,14 +4,17 @@ seo-title: Pagina Gegevens bestemming
 description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 seo-description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 translation-type: tm+mt
-source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '505'
+ht-degree: 1%
 
 ---
 
 
 # Pagina met doeldetails {#destinations-details-page}
 
-De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. Als u deze gegevens wilt weergeven, gaat u naar **Doelen** > **Bladeren** en klikt u op de naam van het doel waarmee u wilt werken.
+De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. Als u deze gegevens wilt weergeven, gaat u naar **[!UICONTROL Doelen]** > **[!UICONTROL Bladeren]** en klikt u op de naam van het doel waarmee u wilt werken.
 
 De kerncomponenten van een individuele bestemming zijn:
 
@@ -49,8 +52,8 @@ De juiste spoorlijn omvat informatie over uw bestemming. Zie de onderstaande tab
 | Platform | Vertegenwoordigt het bestemmingsplatform dat het publiek wordt verzonden naar. Zie Catalogus [](/help/rtcdp/destinations/destinations-catalog.md) Doelen voor meer informatie. |
 | Beschrijving | U kunt de beschrijving van de doelstroom bewerken. |
 | Categorie | Geeft het type doel aan. Zie Catalogus [](/help/rtcdp/destinations/destinations-catalog.md) Doelen voor meer informatie. |
-| Verbindingstype | Hiermee geeft u aan in welke vorm uw publiek naar de bestemming wordt gestuurd. Dit kan **cookie** of **op profiel gebaseerde** zijn. |
-| Frequentie | Geeft aan hoe vaak het publiek naar de bestemming wordt gestuurd. Kan **streaming** of **batch** zijn. |
+| Verbindingstype | Hiermee geeft u aan in welke vorm uw publiek naar de bestemming wordt gestuurd. Dit kan **[!UICONTROL cookie]** of **[!UICONTROL op profiel gebaseerde]** zijn. |
+| Frequentie | Geeft aan hoe vaak het publiek naar de bestemming wordt gestuurd. Kan **[!UICONTROL streaming]** of **[!UICONTROL batch]** zijn. |
 | Identiteit | Vertegenwoordigt de identiteitsnaamruimte die door de bestemming wordt geaccepteerd. Het veld Identiteit kan bijvoorbeeld GAID, IDFA en e-mail zijn. Zie standaardnaamruimten in het naamruimteoverzicht [](../../identity-service/namespaces.md)Identiteit voor alle geaccepteerde naamruimten. |
 | Gemaakt door | Geeft de gebruiker aan die deze doelstroom heeft gemaakt. |
 | Gemaakt | Geeft de UTC-datum en -tijd aan waarop deze doelstroom is gemaakt. |
