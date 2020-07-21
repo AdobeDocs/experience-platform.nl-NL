@@ -4,7 +4,10 @@ seo-title: Sociale netwerkdoelen
 description: Met sociale netwerkdoelen kunt u profielen voor uw campagnes activeren voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 seo-description: Met sociale netwerkdoelen kunt u profielen voor uw campagnes activeren voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '87'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
 
 Met sociale netwerkdoelen kunt u profielen voor uw campagnes activeren voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 
-Het Adobe Real-time klantgegevensplatform biedt momenteel ondersteuning voor de volgende sociale netwerkdoelen:
+Het Platform van de Gegevens van de Klant van Adobe In real time steunt momenteel de volgende sociale netwerkbestemmingen:
 
 * [Adobe LiveCycle-extensie](/help/rtcdp/destinations/adobe-livefyre-extension.md)
-* [Facebook](/help/rtcdp/destinations/facebook-destination.md)
+* [!DNL Facebook](/help/rtcdp/destinations/facebook-destination.md)
