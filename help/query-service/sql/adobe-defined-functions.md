@@ -4,22 +4,25 @@ solution: Experience Platform
 title: Door Adobe gedefinieerde functies
 topic: functions
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '2156'
+ht-degree: 2%
 
 ---
 
 
 # Door Adobe gedefinieerde functies
 
-De door Adobe-bepaalde functies (ADFs) zijn prebuilt functies in de Dienst van de Vraag die helpen gemeenschappelijke bedrijfsgerelateerde taken op de gegevens van ExperienceEvent uitvoeren. Dit zijn onder andere functies voor sessionisatie en Attributie, zoals die in Adobe Analytics zijn gevonden. Raadpleeg de documentatie [bij](https://docs.adobe.com/content/help/en/analytics/landing/home.html) Adobe Analytics voor meer informatie over Adobe Analytics en de concepten achter de ADF&#39;s die op deze pagina zijn gedefinieerd. Dit document bevat informatie over door Adobe gedefinieerde functies die beschikbaar zijn in Query Service.
+Door Adobe gedefinieerde functies (ADF&#39;s) zijn vooraf gebouwde functies [!DNL Query Service] die u helpen bij het uitvoeren van veelvoorkomende bedrijfsgerelateerde taken op [!DNL ExperienceEvent] gegevens. Dit zijn onder andere functies voor sessies en kenmerken, zoals die in Adobe Analytics. Raadpleeg de documentatie [van](https://docs.adobe.com/content/help/nl-NL/analytics/landing/home.html) Adobe Analytics voor meer informatie over Adobe Analytics en de concepten achter de ADF&#39;s die op deze pagina zijn gedefinieerd. Dit document bevat informatie over door Adobe gedefinieerde functies die beschikbaar zijn in [!DNL Query Service].
 
 ## Vensterfuncties
 
-De meerderheid van de bedrijfslogica vereist het verzamelen van de aanraakpunten voor een klant en het opdracht geven tot hen tegen tijd. Deze steun wordt verleend door SQL van de Vonk in de vorm van vensterfuncties. Vensterfuncties maken deel uit van standaard-SQL en worden ondersteund door vele andere SQL-engines.
+De meerderheid van de bedrijfslogica vereist het verzamelen van de aanraakpunten voor een klant en het opdracht geven tot hen tegen tijd. Deze ondersteuning wordt geleverd door [!DNL Spark] SQL in de vorm van vensterfuncties. Vensterfuncties maken deel uit van standaard-SQL en worden ondersteund door vele andere SQL-engines.
 
 Een vensterfunctie werkt een samenvoeging bij en retourneert één item voor elke rij in de geordende subset. De eenvoudigste aggregatiefunctie is `SUM()`. `SUM()` neemt uw rijen en geeft u één totaal. Als u in plaats daarvan `SUM()` op een venster toepast en het verandert in een vensterfunctie, ontvangt u bij elke rij een cumulatief bedrag.
 
-De meerderheid van de SQL helpers van de Vonk zijn vensterfuncties die elke rij in uw venster bijwerken, met de staat van die toegevoegde rij.
+De meeste [!DNL Spark] SQL helpers zijn vensterfuncties die elke rij in uw venster bijwerken, met de staat van die toegevoegde rij.
 
 ### Specificatie
 
@@ -27,15 +30,15 @@ Syntaxis: `OVER ([partition] [order] [frame])`
 
 | Parameter | Beschrijving |
 | --- | --- |
-| [partitie] | Een subgroep van de rijen op basis van een kolom of een beschikbaar veld. Voorbeeld: `PARTITION BY endUserIds._experience.mcid.id` |
-| [bestellen] | Een kolom of beschikbaar veld dat wordt gebruikt om de subset of rijen te bestellen. Voorbeeld: `ORDER BY timestamp` |
-| [frame] | Een subgroep van de rijen in een verdeling. Voorbeeld: `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
+| [partitie] | Een subgroep van de rijen op basis van een kolom of een beschikbaar veld. Voorbeeld, `PARTITION BY endUserIds._experience.mcid.id` |
+| [bestellen] | Een kolom of beschikbaar veld dat wordt gebruikt om de subset of rijen te bestellen. Voorbeeld, `ORDER BY timestamp` |
+| [frame] | Een subgroep van de rijen in een verdeling. Voorbeeld, `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
 
 ## Sessionering
 
-Wanneer u werkt met ExperienceEvent-gegevens die afkomstig zijn van een website, mobiele toepassing, interactief spraakreactiesysteem of een ander kanaal voor klantinteractie, is het handig als gebeurtenissen kunnen worden gegroepeerd rond een verwante periode van activiteit. Doorgaans hebt u een specifieke intentie om uw activiteiten te sturen, zoals het zoeken naar een product, het betalen van een rekening, het controleren van de balans, het invullen van een toepassing, enzovoort. Deze groepering helpt de gebeurtenissen associëren om meer context over de klantenervaring te ontdekken.
+Wanneer u werkt met [!DNL ExperienceEvent] gegevens die afkomstig zijn van een website, mobiele toepassing, interactief spraakreactiesysteem of een ander kanaal voor klantinteractie, is het handig als gebeurtenissen kunnen worden gegroepeerd rond een verwante periode. Doorgaans hebt u een specifieke intentie om uw activiteiten te sturen, zoals het zoeken naar een product, het betalen van een rekening, het controleren van de balans, het invullen van een toepassing, enzovoort. Deze groepering helpt de gebeurtenissen associëren om meer context over de klantenervaring te ontdekken.
 
-Raadpleeg de documentatie over [contextbewuste sessies](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)voor meer informatie over sessies in Adobe Analytics.
+Raadpleeg de documentatie over [contextbewuste sessies](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)voor meer informatie over Sessionisatie in Adobe Analytics.
 
 ### Specificatie
 
@@ -91,13 +94,13 @@ LIMIT 10
 
 Het koppelen van klantenacties aan succes is een belangrijk deel van het begrip van de factoren die klantenervaring beïnvloeden. De volgende ADFs steunt Eerste en laatste attributie met verschillende vervalmontages.
 
-Zie het overzicht [van](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html) Attributie-IQ in de Analyse Guide voor meer informatie over attributie in Adobe Analytics.
+Zie het overzicht [van](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html) Attributie-IQ in de [!DNL Analytics] Analyze Guide voor meer informatie over attributie in Adobe Analytics.
 
 ### Eerste aanraakkenmerk
 
-Retourneert de eerste aanraakattributiewaarde en details voor één kanaal in de gegevensset van de target ExperienceEvent. De query retourneert een `struct` object met de eerste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
+Retourneert de eerste aanraakattributiewaarde en details voor één kanaal in de [!DNL ExperienceEvent] doelgegevensset. De query retourneert een `struct` object met de eerste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
 
-Deze vraag is nuttig als u wilt zien welke interactie tot een reeks klantenacties leidde. In het onderstaande voorbeeld wordt de eerste trackingcode (`em:946426`) in de ExperienceEvent-gegevens toegewezen aan 100% (`1.0`) verantwoordelijkheid voor de acties van de klant, aangezien dit de eerste interactie was.
+Deze vraag is nuttig als u wilt zien welke interactie tot een reeks klantenacties leidde. In het onderstaande voorbeeld wordt de initiële volgcode (`em:946426`) in de [!DNL ExperienceEvent] gegevens toegewezen aan 100% (`1.0`) verantwoordelijkheid voor de acties van de klant, aangezien dit de eerste interactie was.
 
 ### Specificatie
 
@@ -113,8 +116,8 @@ Syntaxis: `ATTRIBUTION_FIRST_TOUCH(timestamp, channelName, channelValue) OVER ([
 | Parameters van geretourneerd object | Beschrijving |
 | ---------------------- | ------------- |
 | `name` | De `channelName` ingevoerde gegevens als een label in de ADF |
-| `value` | De waarde van `channelValue` dat is de eerste aanraking in de ExperienceEvent |
-| `timestamp` | De tijdstempel van de ExperienceEvent waar de eerste aanraking plaatsvond |
+| `value` | De waarde van `channelValue` dat is de eerste aanraking in de [!DNL ExperienceEvent] |
+| `timestamp` | De tijdstempel van de [!DNL ExperienceEvent] locatie waar de eerste aanraking heeft plaatsgevonden |
 | `fraction` | De toerekening van de eerste aanraking uitgedrukt als fractioneel krediet |
 
 #### Voorbeeldquery
@@ -151,9 +154,9 @@ LIMIT 10
 
 ### Laatste aanraakkenmerk
 
-Retourneert de laatste aanraakattributiewaarde en details voor één kanaal in de gegevensset van de target ExperienceEvent. De query retourneert een `struct` object met de laatste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
+Retourneert de laatste aanraakattributiewaarde en details voor één kanaal in de [!DNL ExperienceEvent] doelgegevensset. De query retourneert een `struct` object met de laatste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
 
-Deze vraag is nuttig als u de definitieve interactie in een reeks klantenacties wilt zien. In het onderstaande voorbeeld is de trackingcode in het geretourneerde object de laatste interactie in elke ExperienceEvent-record. Aan elke code wordt 100% (`1.0`) verantwoordelijkheid voor de acties van de klant toegewezen, aangezien dit de laatste interactie was.
+Deze vraag is nuttig als u de definitieve interactie in een reeks klantenacties wilt zien. In het onderstaande voorbeeld is de trackingcode in het geretourneerde object de laatste interactie in elke [!DNL ExperienceEvent] record. Aan elke code wordt 100% (`1.0`) verantwoordelijkheid voor de acties van de klant toegewezen, aangezien dit de laatste interactie was.
 
 ### Specificatie
 
@@ -169,8 +172,8 @@ Syntaxis: `ATTRIBUTION_LAST_TOUCH(timestamp, channelName, channelValue) OVER ([p
 | Parameters van geretourneerd object | Beschrijving |
 | ---------------------- | ------------- |
 | `name` | De `channelName` ingevoerde gegevens als een label in de ADF |
-| `value` | De waarde van `channelValue` die de laatste aanraking in de ExperienceEvent is |
-| `timestamp` | Het tijdstempel van de ExperienceEvent waar het `channelValue` werd gebruikt |
+| `value` | De waarde van `channelValue` dat is de laatste aanraking in de [!DNL ExperienceEvent] |
+| `timestamp` | De tijdstempel van de [!DNL ExperienceEvent] locatie waar het `channelValue` is gebruikt |
 | `fraction` | Toekenning van de laatste aanraking uitgedrukt als fractioneel krediet |
 
 #### Voorbeeldquery
@@ -206,9 +209,9 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Eerste aanraakkenmerk met vervalvoorwaarde
 
-Retourneert de eerste aanraakattributiewaarde en de details voor één kanaal in de gegevensset met doel-ExperienceEvent, die na of vóór een voorwaarde verlopen. De query retourneert een `struct` object met de eerste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
+Retourneert de eerste aanraakattributiewaarde en de details voor één kanaal in de [!DNL ExperienceEvent] doelgegevensset, die na of vóór een voorwaarde verlopen. De query retourneert een `struct` object met de eerste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
 
-Deze vraag is nuttig als u wilt zien welke interactie tot een reeks klantenacties binnen een gedeelte van de dataset van ExperienceEvent leidde die door een voorwaarde van uw keuze wordt bepaald. In het onderstaande voorbeeld wordt een aankoop geregistreerd (`commerce.purchases.value IS NOT NULL`) op elk van de vier dagen die in de resultaten worden weergegeven (15 juli, 21 juli, 23 en 29 juli) en wordt de initiële volgcode op elke dag toegewezen aan 100% (`1.0`) verantwoordelijkheid voor de acties van de klant.
+Deze vraag is nuttig als u wilt zien welke interactie tot een reeks klantenacties binnen een gedeelte van de [!DNL ExperienceEvent] dataset leidde die door een voorwaarde van uw keuze wordt bepaald. In het onderstaande voorbeeld wordt een aankoop geregistreerd (`commerce.purchases.value IS NOT NULL`) op elk van de vier dagen die in de resultaten worden weergegeven (15 juli, 21 juli, 23 en 29 juli) en wordt de initiële volgcode op elke dag toegewezen aan 100% (`1.0`) verantwoordelijkheid voor de acties van de klant.
 
 #### Specificatie
 
@@ -220,13 +223,13 @@ Syntaxis: `ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, channelName, channelValue, 
 | `channelName` | Een vriendelijke naam die als label in het geretourneerde object moet worden gebruikt |
 | `channelValue` | De kolom of het gebied dat het doelkanaal voor de vraag is |
 | `expCondition` | De voorwaarde die het verlooppunt van het kanaal bepaalt |
-| `expBefore` | Wordt standaard ingesteld op `false`. Booleaanse waarde die aangeeft of het kanaal vervalt voordat of nadat aan de opgegeven voorwaarde is voldaan. Primair ingeschakeld voor de vervalvoorwaarden van een sessie (bijvoorbeeld `sess.depth = 1, true`) om ervoor te zorgen dat de eerste aanraking niet wordt geselecteerd uit een vorige sessie. |
+| `expBefore` | Defaults to `false`. Booleaanse waarde die aangeeft of het kanaal vervalt voordat of nadat aan de opgegeven voorwaarde is voldaan. Primair ingeschakeld voor de vervalvoorwaarden van een sessie (bijvoorbeeld `sess.depth = 1, true`) om ervoor te zorgen dat de eerste aanraking niet wordt geselecteerd uit een vorige sessie. |
 
 | Parameters van geretourneerd object | Beschrijving |
 | ---------------------- | ------------- |
 | `name` | De `channelName` ingevoerde gegevens als een label in de ADF |
-| `value` | De waarde van `channelValue` dat is de eerste aanraking in de ExperienceEvent voorafgaand aan de `expCondition` |
-| `timestamp` | De tijdstempel van de ExperienceEvent waar de eerste aanraking plaatsvond |
+| `value` | De waarde van `channelValue` dat is de eerste aanraking in de [!DNL ExperienceEvent] voorafgaande `expCondition` |
+| `timestamp` | De tijdstempel van de [!DNL ExperienceEvent] locatie waar de eerste aanraking heeft plaatsgevonden |
 | `fraction` | De toerekening van de eerste aanraking uitgedrukt als fractioneel krediet |
 
 #### Voorbeeldquery
@@ -262,7 +265,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Eerste aanraakkenmerk met verlooptime-out
 
-Retourneert de eerste aanraakattributiewaarde en details voor één kanaal in de gegevensset van de targetEvent voor een opgegeven tijdsperiode. De query retourneert een `struct` object met de eerste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd. Deze vraag is nuttig als u wilt zien welke interactie, binnen een geselecteerd tijdinterval, tot een klantenactie leidde. In het onderstaande voorbeeld is de eerste aanraking die voor elke actie van de klant wordt geretourneerd, de vroegste interactie binnen de voorafgaande zeven dagen (`expTimeout = 86400 * 7`).
+Retourneert de eerste aanraakattributiewaarde en details voor één kanaal in de doelgegevensset voor een opgegeven tijdsperiode. [!DNL ExperienceEvent] De query retourneert een `struct` object met de eerste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd. Deze vraag is nuttig als u wilt zien welke interactie, binnen een geselecteerd tijdinterval, tot een klantenactie leidde. In het onderstaande voorbeeld is de eerste aanraking die voor elke actie van de klant wordt geretourneerd, de vroegste interactie binnen de voorafgaande zeven dagen (`expTimeout = 86400 * 7`).
 
 #### Specificatie
 
@@ -279,7 +282,7 @@ Syntaxis: `ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelVa
 | ---------------------- | ------------- |
 | `name` | De `channelName` ingevoerde gegevens als een label in de ADF |
 | `value` | De waarde van `channelValue` dat is de eerste aanraking binnen het opgegeven `expTimeout` interval |
-| `timestamp` | De tijdstempel van de ExperienceEvent waar de eerste aanraking plaatsvond |
+| `timestamp` | De tijdstempel van de [!DNL ExperienceEvent] locatie waar de eerste aanraking heeft plaatsgevonden |
 | `fraction` | De toerekening van de eerste aanraking uitgedrukt als fractioneel krediet |
 
 #### Voorbeeldquery
@@ -315,7 +318,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Laatste aanraakkenmerk met vervalvoorwaarde
 
-Retourneert de laatste aanraakattributiewaarde en de details voor één kanaal in de gegevensset van de ExperienceEvent-target, die verlopen na of vóór een voorwaarde. De query retourneert een `struct` object met de laatste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd. Deze vraag is nuttig als u de laatste interactie in een reeks klantenacties binnen een gedeelte van de dataset wilt zien ExperienceEvent die door een voorwaarde van uw het kiezen wordt bepaald. In het onderstaande voorbeeld wordt een aankoop geregistreerd (`commerce.purchases.value IS NOT NULL`) op elk van de vier dagen die in de resultaten worden weergegeven (15 juli, 21 juli, 23 en 29 juli) en wordt de laatste trackingcode op elke dag toegewezen aan 100% (`1.0`) verantwoordelijkheid voor de acties van de klant.
+Retourneert de laatste aanraakattributiewaarde en de details voor één kanaal in de [!DNL ExperienceEvent] doelgegevensset, die na of vóór een voorwaarde verlopen. De query retourneert een `struct` object met de laatste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd. Deze vraag is nuttig als u de laatste interactie in een reeks klantenacties binnen een gedeelte van de [!DNL ExperienceEvent] dataset wilt zien die door een voorwaarde van uw het kiezen wordt bepaald. In het onderstaande voorbeeld wordt een aankoop geregistreerd (`commerce.purchases.value IS NOT NULL`) op elk van de vier dagen die in de resultaten worden weergegeven (15 juli, 21 juli, 23 en 29 juli) en wordt de laatste trackingcode op elke dag toegewezen aan 100% (`1.0`) verantwoordelijkheid voor de acties van de klant.
 
 #### Specificatie
 
@@ -327,13 +330,13 @@ Syntaxis: `ATTRIBUTION_LAST_TOUCH_EXP_IF(timestamp, channelName, channelValue, e
 | `channelName` | Een vriendelijke naam die als label in het geretourneerde object moet worden gebruikt |
 | `channelValue` | De kolom of het gebied dat het doelkanaal voor de vraag is |
 | `expCondition` | De voorwaarde die het verlooppunt van het kanaal bepaalt |
-| `expBefore` | Wordt standaard ingesteld op `false`. Booleaanse waarde die aangeeft of het kanaal vervalt voordat of nadat aan de opgegeven voorwaarde is voldaan. Primair ingeschakeld voor de voorwaarden bij het verlopen van de sessie (bijvoorbeeld `sess.depth = 1, true`) om ervoor te zorgen dat de laatste aanraking niet wordt geselecteerd uit een vorige sessie. |
+| `expBefore` | Defaults to `false`. Booleaanse waarde die aangeeft of het kanaal vervalt voordat of nadat aan de opgegeven voorwaarde is voldaan. Primair ingeschakeld voor de voorwaarden bij het verlopen van de sessie (bijvoorbeeld `sess.depth = 1, true`) om ervoor te zorgen dat de laatste aanraking niet wordt geselecteerd uit een vorige sessie. |
 
 | Parameters van geretourneerd object | Beschrijving |
 | ---------------------- | ------------- |
 | `name` | De `channelName` ingevoerde gegevens als een label in de ADF |
-| `value` | De waarde van `channelValue` dat is de laatste aanraking in de ExperienceEvent voorafgaand aan de `expCondition` |
-| `timestamp` | Het tijdstempel van de ExperienceEvent waar de laatste aanraking plaatsvond |
+| `value` | De waarde van `channelValue` die de laatste aanraking in [!DNL ExperienceEvent] voorafgaand aan `expCondition` |
+| `timestamp` | De tijdstempel van de [!DNL ExperienceEvent] locatie waar de laatste aanraking is opgetreden |
 | `percentage` | Toekenning van de laatste aanraking uitgedrukt als fractioneel krediet |
 
 #### Voorbeeldquery
@@ -369,7 +372,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Laatste aanraakkenmerk met eindtime-out
 
-Retourneert de laatste aanraakattributiewaarde en de details voor één kanaal in de gegevensset van de targetExperienceEvent voor een opgegeven tijdsperiode. De query retourneert een `struct` object met de laatste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd. Deze query is nuttig als u de laatste interactie binnen een geselecteerd tijdinterval wilt zien. In het onderstaande voorbeeld is de laatste aanraking die voor elke actie van de klant wordt geretourneerd, de laatste interactie binnen de volgende zeven dagen (`expTimeout = 86400 * 7`).
+Retourneert de laatste aanraakattributiewaarde en details voor één kanaal in de doelgegevensset voor een opgegeven tijdsperiode. [!DNL ExperienceEvent] De query retourneert een `struct` object met de laatste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd. Deze query is nuttig als u de laatste interactie binnen een geselecteerd tijdinterval wilt zien. In het onderstaande voorbeeld is de laatste aanraking die voor elke actie van de klant wordt geretourneerd, de laatste interactie binnen de volgende zeven dagen (`expTimeout = 86400 * 7`).
 
 #### Specificatie
 
@@ -386,7 +389,7 @@ Syntaxis: `ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelVal
 | ---------------------- | ------------- |
 | `name` | De `channelName` ingevoerde gegevens als een label in de ADF |
 | `value` | De waarde van `channelValue` dat de laatste aanraking binnen het opgegeven `expTimeout` interval is |
-| `timestamp` | De tijdstempel van de ExperienceEvent waar de laatste aanraking plaatsvond |
+| `timestamp` | De tijdstempel van de [!DNL ExperienceEvent] locatie waar de laatste aanraking is opgetreden |
 | `percentage` | Toekenning van de laatste aanraking uitgedrukt als fractioneel krediet |
 
 #### Voorbeeldquery
@@ -647,4 +650,4 @@ LIMIT 10
 
 ## Volgende stappen
 
-Gebruikend de hier beschreven functies, kunt u vragen schrijven om tot uw eigen datasets toegang te hebben ExperienceEvent gebruikend de Dienst van de Vraag. Voor meer informatie over auteursvragen in de Dienst van de Vraag, zie de documentatie bij het [creëren van vragen](../creating-queries/creating-queries.md).
+Gebruikend de hier beschreven functies, kunt u vragen schrijven om tot uw eigen [!DNL ExperienceEvent] datasets toegang te hebben gebruikend [!DNL Query Service]. Voor meer informatie over auteursvragen in [!DNL Query Service], zie de documentatie bij het [creëren van vragen](../creating-queries/creating-queries.md).
