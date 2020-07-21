@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Een gegevensset maken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a25ca22fb8ec9eb95f74e4fd76a7f18e87343085
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 1%
 
 ---
 
 
 # Een batch maken
 
-Opdat een dataset gegevens inneemt, moet het een partij hebben verbonden aan het. Gebruikend de `id` waarde van een bestaande dataset, kunt u een partij tot stand brengen door een POST- verzoek aan het `/batches` eindpunt in Catalog API te maken.
+Opdat een dataset gegevens inneemt, moet het een partij hebben verbonden aan het. Gebruikend de `id` waarde van een bestaande dataset, kunt u een partij tot stand brengen door een POST- verzoek aan het `/batches` eindpunt in [!DNL Catalog] API te maken.
 
 **API-indeling**
 
