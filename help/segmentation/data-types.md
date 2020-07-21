@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Gegevenstypen Adobe Experience Platform Segmentation Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
 
 
-# Ondersteunde gegevenstypen in de Adobe Experience Platform Segmentation Service
+# Adobe Experience Platform [!DNL Segmentation Service] ondersteunde gegevenstypen
 
 Alle XDM-gegevenstypen worden ondersteund binnen [!DNL Segmentation Service]. De regels die een segmentdefinitie vormen worden contextualiseerd door de volgende gegevenstypes.
 
@@ -39,7 +39,7 @@ Met datumgegevens kunt u op tijd gebaseerde context toewijzen aan uw segmentdefi
 
 ## Experience Events
 
-Als schema van het Adobe Experience Platform, registreert XDM ExperienceEvents expliciete en impliciete klanteninteractie met [!DNL Platform]-geïntegreerde toepassingen, met inbegrip van een momentopname van het systeem op het tijdstip dat de interactie plaatsvond. ExperienceEvents zijn feitenverslagen. Als dusdanig, zijn zij een gegevensbron beschikbaar aan u tijdens segmentdefinitie.
+Als schema van het Adobe Experience Platform, [!DNL XDM ExperienceEvents] registreer expliciete en impliciete klanteninteractie met [!DNL Platform]-geïntegreerde toepassingen, met inbegrip van een momentopname van het systeem op het tijdstip dat de interactie plaatsvond. [!DNL ExperienceEvents] Dit zijn feiten. Als dusdanig, zijn zij een gegevensbron beschikbaar aan u tijdens segmentdefinitie.
 
 Zoals in de onderstaande tabel wordt getoond, worden gebeurtenisgegevens weergegeven met behulp van trefwoorden die het gedrag van gebeurtenissen verfijnen en gebeurteniskenmerken opgeven.
 
