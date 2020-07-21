@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Verbinding maken met RStudio
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '209'
 ht-degree: 2%
 
 ---
 
 
-# Verbinding maken met RStudio
+# Verbinden met [!DNL RStudio]
 
-Dit document loopt door de stappen voor het verbinden van R Studio met de Dienst van de Vraag van het Adobe Experience Platform.
+Dit document loopt door de stappen voor het verbinden van R Studio met Adobe Experience Platform [!DNL Query Service].
 
-Nadat u RStudio hebt geïnstalleerd, moet u op het *consolescherm* dat wordt weergegeven eerst uw R-script voorbereiden om PostSQL te gebruiken.
+Na installatie [!DNL RStudio], op het scherm van de *Console* dat verschijnt, zult u eerst uw manuscript van R aan gebruik moeten voorbereiden [!DNL PostgreSQL].
 
 ```r
 install.packages("RPostgreSQL")
@@ -25,7 +25,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-Zodra u uw manuscript van R hebt voorbereid om PostSQL te gebruiken, kunt u RStudio aan de Dienst van de Vraag nu verbinden door de bestuurder te laden PostgreSQL.
+Nadat u het R-script hebt voorbereid voor gebruik, kunt u nu verbinding maken [!DNL PostgreSQL]met [!DNL RStudio] het [!DNL Query Service] [!DNL PostgreSQL] stuurprogramma.
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -45,11 +45,11 @@ con <- dbConnect(drv,
 
 >[!NOTE]
 >
->Ga naar de pagina met [referenties op het Platform](https://platform.adobe.com/query/configuration)voor meer informatie over het zoeken naar uw databasenaam, host, poort en aanmeldingsgegevens. Als u uw referenties wilt zoeken, meldt u zich aan bij het Platform, klikt u op **Vragen** en vervolgens op **Referenties**.
+>Ga naar de pagina met [referenties op het Platform](https://platform.adobe.com/query/configuration)voor meer informatie over het zoeken naar uw databasenaam, host, poort en aanmeldingsgegevens. Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform], klikt u op **[!UICONTROL Vragen]** en vervolgens op **[!UICONTROL Referenties]**.
 
 ## Volgende stappen
 
-Nu u met de Dienst van de Vraag hebt verbonden, kunt u vragen schrijven om SQL verklaringen uit te voeren en uit te geven. U kunt bijvoorbeeld query&#39;s uitvoeren `dbGetQuery(con, sql)` om query&#39;s uit te voeren, waarbij `sql` de SQL-query is die u wilt uitvoeren.
+Nu u met hebt verbonden, kunt u vragen schrijven om SQL verklaringen uit te voeren en uit te geven. [!DNL Query Service] U kunt bijvoorbeeld query&#39;s uitvoeren `dbGetQuery(con, sql)` om query&#39;s uit te voeren, waarbij `sql` de SQL-query is die u wilt uitvoeren.
 
 De volgende vraag gebruikt een dataset die [ExperienceEvents](../creating-queries/experience-event-queries.md) bevat en leidt tot een histogram van paginameningen van een website, gezien de het schermhoogte van het apparaat.
 
