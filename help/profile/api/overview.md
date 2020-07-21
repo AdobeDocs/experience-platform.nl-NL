@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: 57ef7df4b9323b58a90660d515ade61a3974779f
+source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,9 @@ ht-degree: 0%
 
 De [!DNL Real-time Customer Profile] API bevat meerdere eindpunten, die hieronder worden beschreven. Gelieve te bezoeken de individuele eindpuntgidsen voor details en te verwijzen naar de [begonnen gids](getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
 
-Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt bekijken, raadpleegt u de API-naslagwerker voor [realtime-klantprofiel](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt bekijken, gaat u naar de API-naslagwerker voor [realtime-klantprofiel](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+
+Raadpleeg de gebruikershandleiding [!DNL Real-time Customer Profile] van het [!DNL Experience Platform] profiel voor een handleiding voor het werken met [gegevens in de](../ui/user-guide.md)gebruikersinterface.
 
 ## (Alpha) Berekende kenmerken {#computed-attributes}
 
@@ -52,4 +54,4 @@ Gegevens die in [!DNL Platform] worden ingevoerd, worden zowel in de [!DNL Data 
 
 ## Volgende stappen {#next-steps}
 
-Beginnen het maken vraag gebruikend [!DNL Real-time Customer Profile] API, lees de [begonnen gids](getting-started.md) dan één van de eindpuntgidsen om te leren hoe te om specifieke [!DNL Profile]verwante eindpunten te gebruiken. Raadpleeg de gebruikershandleiding [!DNL Profile] van het profiel van de [!DNL Platform] real-time klant voor meer informatie over het werken met [gegevens via de](../ui/user-guide.md)gebruikersinterface.
+Beginnen het maken vraag gebruikend [!DNL Real-time Customer Profile] API, lees de [begonnen gids](getting-started.md) dan één van de eindpuntgidsen om te leren hoe te om specifieke [!DNL Profile]verwante eindpunten te gebruiken. Raadpleeg de gebruikershandleiding [!DNL Profile] van het profiel van de [!DNL Experience Platform] real-time klant als u wilt werken met [gegevens die gebruikmaken van de](../ui/user-guide.md)gebruikersinterface.
