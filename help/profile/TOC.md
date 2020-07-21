@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Hulp bij realtime klantprofiel
 translation-type: tm+mt
-source-git-commit: 57ef7df4b9323b58a90660d515ade61a3974779f
+source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 1%
@@ -31,6 +31,6 @@ ht-degree: 1%
    * [Gegevensset configureren voor [!DNL Profile] &amp; [!DNL Identity]](tutorials/dataset-configuration.md)
    * [Meer zelfstudies](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html)
 * [Verwerking van privacyverzoeken](privacy.md)
-* [Handleiding voor probleemoplossing](troubleshooting.md)
+* [[!DNL Profile] gids voor problemen](troubleshooting.md)
 * [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
 * [[!DNL Platform] releaseopmerkingen](https://www.adobe.com/go/platform-release-notes-en)
