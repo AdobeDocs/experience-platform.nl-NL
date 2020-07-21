@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Objecten weergeven
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '197'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type Catalog-object dat moet worden weergegeven. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type [!DNL Catalog] object dat moet worden weergegeven. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{FILTER}` | Een queryparameter die wordt gebruikt om de resultaten te filteren die in de reactie worden geretourneerd. Meerdere parameters worden gescheiden door ampersands (`&`). Zie de handleiding voor het [filteren van catalogusgegevens](filter-data.md) voor meer informatie. |
 
 **Verzoek**
@@ -43,11 +43,11 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert een lijst van de voorwerpen van de Catalogus in de vorm van sleutel-waarde paren terug, die door de vraagparameters worden gefiltreerd die in het verzoek worden verstrekt. Voor elk sleutel-waardepaar, vertegenwoordigt de sleutel een uniek herkenningsteken voor het voorwerp van de Catalogus in kwestie, dat dan in een andere vraag kan worden gebruikt om dat specifieke voorwerp [voor meer details te](look-up-object.md) bekijken.
+Een geslaagde reactie retourneert een lijst met [!DNL Catalog] objecten in de vorm van sleutelwaardeparen, gefilterd door de queryparameters die in de aanvraag zijn opgegeven. Voor elk sleutel-waardepaar, vertegenwoordigt de sleutel een uniek herkenningsteken voor het [!DNL Catalog] voorwerp in kwestie, die dan in een andere vraag kan worden gebruikt om dat specifieke voorwerp [voor meer details te](look-up-object.md) bekijken.
 
 >[!NOTE]
 >
->Als een teruggekeerd voorwerp één of meerdere gevraagde eigenschappen niet bevat die door de `properties` vraag worden vermeld, keert de reactie slechts de gevraagde eigenschappen terug die het omvat, zoals aangetoond in &quot;Gegevensset 3 van de Steekproef&quot;en &quot;Dataset 4 van de Steekproef hieronder.
+>Als een geretourneerd object geen van de gevraagde eigenschappen bevat die door de `properties` query worden aangegeven, retourneert het antwoord alleen de gevraagde eigenschappen die het wel bevat, zoals in ***`Sample Dataset 3`*** en ***`Sample Dataset 4`*** eronder.
 
 ```json
 {
