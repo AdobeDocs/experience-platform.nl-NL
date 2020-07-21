@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Beschikbare cijfers
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ff299a69a81f00cad3e90a83f7411e4b15d4f850
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '878'
+ht-degree: 2%
 
 ---
 
 
 # Lijst met beschikbare meetwaarden
 
-De volgende lijsten maken een lijst van alle metriek die door de Inzichten van de Waarneming, uitgesplitst door de dienst van het Platform worden blootgesteld. Elke metrische waarde bevat een beschrijving en geaccepteerde ID-queryparameter.
+De volgende lijsten maken een lijst van alle metriek die door de Inzichten van de Waarnemelijkheid, uitgesplitst door de [!DNL Platform] dienst worden blootgesteld. Elke metrische waarde bevat een beschrijving en geaccepteerde ID-queryparameter.
 
-## Gegevensinname
+## [!DNL Data Ingestion]
 
-In de volgende tabel worden de metriek voor gegevensinname van het Adobe Experience Platform beschreven. Metriek in **vet** zijn streaming ingestion metrics.
+In de volgende tabel worden de metriek voor het Adobe Experience Platform weergegeven [!DNL Data Ingestion]. Metriek in **vet** zijn streaming ingestion metrics.
 
-| Metrische informatie | Beschrijving | ID-queryparameter |
+| Metrische informatie  | Beschrijving | ID-queryparameter |
 | ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | Het totale aantal gemaakte gegevenssets. | N.v.t. |
 | timeseries.ingestion.dataset.size | Cumulatieve grootte van alle gegevens die voor één dataset voor of alle datasets worden opgenomen. | Gegevensset-id (optioneel) |
@@ -41,14 +44,14 @@ In de volgende tabel worden de metriek voor gegevensinname van het Adobe Experie
 | **timeseries.data.collection.inlet.success** | Het totale aantal geslaagde HTTP-aanroepen naar één gegevensinlaat of naar alle gegevensinlaten. | Inlaat-id (optioneel) |
 | **timeseries.data.collection.inlet.failure** | Het totale aantal mislukte HTTP-aanroepen naar één gegevensinlaat of naar alle gegevensinlaten. | Inlaat-id (optioneel) |
 
-## Identiteitsservice
+## [!DNL Identity Service]
 
-In de volgende tabel worden de metriek voor Adobe Experience Platform Identity Service beschreven.
+In de volgende tabel worden de metriek voor het Adobe Experience Platform weergegeven [!DNL Identity Service].
 
-| Metrische informatie | Beschrijving | ID-queryparameter |
+| Metrische informatie  | Beschrijving | ID-queryparameter |
 | ---- | ---- | ---- |
-| timeseries.identity.dataset.recordsuccess.count | Aantal verslagen die aan hun gegevensbron door de Dienst van de Identiteit, voor één dataset of alle datasets worden geschreven. | Gegevensset-id (optioneel) |
-| timeseries.identity.dataset.recordfailed.count | Aantal verslagen die door de Dienst van de Identiteit, voor één dataset of voor alle datasets worden ontbroken. | Gegevensset-id (optioneel) |
+| timeseries.identity.dataset.recordsuccess.count | Aantal verslagen die aan hun gegevensbron door [!DNL Identity Service], voor één dataset of alle datasets worden geschreven. | Gegevensset-id (optioneel) |
+| timeseries.identity.dataset.recordfailed.count | Aantal verslagen ontbrak door [!DNL Identity Service], voor één dataset of voor alle datasets. | Gegevensset-id (optioneel) |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Aantal identiteitsrecords dat is ingevoerd voor een naamruimte. | Naamruimte-id (**vereist**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Aantal identiteitsrecords dat is mislukt door een naamruimte. | Naamruimte-id (**vereist**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | Aantal identiteitsrecords dat door een naamruimte is overgeslagen. | Naamruimte-id (**vereist**) |
@@ -57,21 +60,21 @@ In de volgende tabel worden de metriek voor Adobe Experience Platform Identity S
 | timeseries.identity.graph.imsorg.numidgraphs.count | Aantal unieke grafiekidentiteiten die in de identiteitsgrafiek voor uw IMS Organisatie worden opgeslagen. | N.v.t. |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Aantal unieke identiteiten die in de identiteitsgrafiek voor uw IMS Organisatie voor een bepaalde grafieksterkte worden opgeslagen (&quot;onbekend&quot;, &quot;zwak&quot;, of &quot;sterk&quot;). | Grafieksterkte (**vereist**) |
 
-## Privacy Service
+## [!DNL Privacy Service]
 
-In de volgende tabel worden de meetgegevens voor de Adobe Experience Platform Privacy Service weergegeven.
+In de volgende tabel worden de metriek voor het Adobe Experience Platform weergegeven [!DNL Privacy Service].
 
-| Metrische informatie | Beschrijving | ID-queryparameter |
+| Metrische informatie  | Beschrijving | ID-queryparameter |
 | ---- | ---- | ---- |
 | timeseries.gdpr.jobs.totaljobs.count | Het totale aantal banen dat door de GDPR is gecreëerd. | ENV (**vereist**) |
 | timeseries.gdpr.jobs.completedjobs.count | Totaal aantal voltooide banen van GDPR. | ENV (**vereist**) |
 | timeseries.gdpr.jobs.errorjobs.count | Totaal aantal fouttaken van GDPR. | ENV (**vereist**) |
 
-## Query-service
+## [!DNL Query Service]
 
-In de volgende tabel worden de metriek voor Adobe Experience Platform Query Service beschreven.
+In de volgende tabel worden de metriek voor het Adobe Experience Platform weergegeven [!DNL Query Service].
 
-| Metrische informatie | Beschrijving | ID-queryparameter |
+| Metrische informatie  | Beschrijving | ID-queryparameter |
 | ---- | ---- | ---- |
 | timeseries.queryservice.query.scheduleonce.count | Het totale aantal eenmalige geplande query&#39;s. | N.v.t. |
 | timeseries.queryservice.query.scheduledrecurring.count | Het totale aantal terugkerende geplande query&#39;s. | N.v.t. |
@@ -80,17 +83,17 @@ In de volgende tabel worden de metriek voor Adobe Experience Platform Query Serv
 | timeseries.queryservice.query.interactivequery.count | Het totale aantal uitgevoerde interactieve query&#39;s. | N.v.t. |
 | timeseries.queryservice.query.batchfrompsqlquery.count | Het totale aantal uitgevoerde batchquery&#39;s van PSQL. | N.v.t. |
 
-## Klantprofiel in realtime
+## [!DNL Real-time Customer Profile]
 
-De volgende lijst schetst metriek voor het Profiel van de Klant in real time.
+In de volgende tabel worden de metriek voor [!DNL Real-time Customer Profile].
 
-| Metrische informatie | Beschrijving | ID-queryparameter |
+| Metrische informatie  | Beschrijving | ID-queryparameter |
 | ---- | ---- | ---- |
-| timeseries.profiles.dataset.recordread.count | Aantal verslagen die van het gegevensmeer door Profiel, voor één dataset of voor alle datasets worden gelezen. | Gegevensset-id (optioneel) |
-| timeseries.profiles.dataset.recordsuccess.count | Aantal verslagen die aan hun gegevensbron door Profiel, voor één dataset of voor alle datasets worden geschreven. | Gegevensset-id (optioneel) |
-| timeseries.profiles.dataset.recordfailed.count | Aantal verslagen door Profiel, voor één dataset of voor alle datasets ontbrak. | Gegevensset-id (optioneel) |
-| timeseries.profiles.dataset.batchsuccess.count | Aantal partijen van het Profiel die voor een dataset of voor alle datasets worden opgenomen. | Gegevensset-id (optioneel) |
-| timeseries.profiles.dataset.batchfailed.count | Het aantal batches van het profiel is mislukt voor één gegevensset of voor alle gegevenssets. | Gegevensset-id (optioneel) |
+| timeseries.profiles.dataset.recordread.count | Aantal verslagen die van [!DNL Data Lake] [!DNL Profile]door, voor één dataset of voor alle datasets worden gelezen. | Gegevensset-id (optioneel) |
+| timeseries.profiles.dataset.recordsuccess.count | Aantal verslagen die aan hun gegevensbron door [!DNL Profile], voor één dataset of voor alle datasets worden geschreven. | Gegevensset-id (optioneel) |
+| timeseries.profiles.dataset.recordfailed.count | Aantal verslagen ontbrak door [!DNL Profile], voor één dataset of voor alle datasets. | Gegevensset-id (optioneel) |
+| timeseries.profiles.dataset.batchsuccess.count | Aantal [!DNL Profile] partijen die voor een dataset of voor alle datasets worden opgenomen. | Gegevensset-id (optioneel) |
+| timeseries.profiles.dataset.batchfailed.count | Aantal ontbroken [!DNL Profile] partijen voor één dataset of voor alle datasets. | Gegevensset-id (optioneel) |
 | platform.ups.ingest.streaming.request.m1_rate | Binnenkomend aanvraagpercentage. | IMS Org |
 | platform.ups.ingest.streaming.access.put.success.m1_rate | Ingestie succespercentage. | IMS Org |
 | platform.ups.ingest.streaming.records.created.m15_rate | Het tarief van nieuwe verslagen die voor een dataset worden opgenomen. | Dataset-id |
