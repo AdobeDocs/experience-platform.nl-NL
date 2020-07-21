@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van gegevenstoegang
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7714b8bebe37b29290794a48314962e42b24058
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '485'
 ht-degree: 2%
 
 ---
@@ -242,4 +242,4 @@ Raadpleeg de zelfstudie over [gegevenstoegang](tutorials/dataset-data.md)voor me
 
 ## Abonneren op gebeurtenissen voor gegevensinvoer
 
-Platform maakt specifieke hoogwaardige gebeurtenissen beschikbaar voor een abonnement via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie de zelfstudie over het [abonneren op meldingen](../ingestion/quality/subscribe-events.md) over gegevensinvoer voor meer informatie.
+[!DNL Platform] maakt specifieke hoogwaardige gebeurtenissen beschikbaar voor een abonnement via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie de zelfstudie over het [abonneren op meldingen](../ingestion/quality/subscribe-events.md) over gegevensinvoer voor meer informatie.
