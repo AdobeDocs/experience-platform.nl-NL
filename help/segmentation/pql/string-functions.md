@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Reeksfuncties
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '757'
+ht-degree: 3%
 
 ---
 
 
 # Reeksfuncties
 
-PQL (Profile Query Language) biedt functies om interactie met tekenreeksen eenvoudiger te maken. Meer informatie over andere PQL-functies vindt u in het overzicht [Taal van](./overview.md)profielquery.
+[!DNL Profile Query Language] (PQL) biedt functies om interactie met tekenreeksen eenvoudiger te maken. Meer informatie over andere PQL-functies vindt u in het overzicht [Taal van](./overview.md)profielquery.
 
 ## leuk
 
@@ -36,7 +39,7 @@ Met de volgende PQL-query worden alle steden opgehaald die het patroon &quot;es&
 city like "%es%"
 ```
 
-## Begint met
+## Starts with (Begint met)
 
 De `startsWith` functie wordt gebruikt om te bepalen of een tekenreeks begint met een opgegeven subtekenreeks.
 
@@ -84,7 +87,7 @@ De volgende vraag PQL bepaalt, met case gevoeligheid, als de naam van de persoon
 person.name.doesNotStartWith("Joe")
 ```
 
-## Eindigt met
+## Ends with (Eindigt met)
 
 De `endsWith` functie wordt gebruikt om te bepalen of een tekenreeks eindigt met een opgegeven subtekenreeks.
 
@@ -180,7 +183,7 @@ De volgende PQL-query bepaalt, met hoofdlettergevoeligheid, of het e-mailadres v
 person.emailAddress.doesNotContain("2010@gm")
 ```
 
-## Gelijk
+## Equals (Is gelijk aan)
 
 De `equals` functie wordt gebruikt om te bepalen of een tekenreeks gelijk is aan de opgegeven tekenreeks.
 
