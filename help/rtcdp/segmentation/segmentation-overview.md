@@ -2,27 +2,30 @@
 title: Overzicht van de segmenteringsservice
 seo-title: Segmentatieservice in Adobe Real-time Customer Data Platform
 description: Een overzicht dat de segmentatieservice beschrijft.
-seo-description: Een overzicht met een beschrijving van de segmentatieservice en -segmenten op het Adobe Real-Time Customer Data Platform.
+seo-description: Een overzicht dat de segmentatieservice en segmenten op het Platform van de Gegevens van de Klant van Adobe in real time beschrijft.
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 1%
 
 ---
 
 
-# Segmentatieservice in Real-Time Customer Data Platform
+# [!DNL Segmentation Service] in [!DNL Real-time Customer Data Platform]
 
-Het Real-time Platform van de Gegevens van de Klant (CDP in real time) staat u toe om gegevens van veelvoudige bronnen te brengen om een gecoördineerde en verenigbare ervaring voor uw klanten te drijven. Het leveren van relevante gepersonaliseerde marketing campagnes kan worden bereikt gebruikend de Dienst van de Segmentatie, deel van het Platform van de Ervaring van Adobe.
+[!DNL Real-time Customer Data Platform] (In real time CDP) staat u toe om gegevens van veelvoudige bronnen te brengen om een gecoördineerde en verenigbare ervaring voor uw klanten te drijven. Het leveren van relevante gepersonaliseerde marketingcampagnes kan worden bereikt met behulp van het [!DNL Segmentation Service], deel van het Adobe Experience Platform.
 
-CDP in realtime is gebaseerd op het Adobe Experience Platform en gebruikt veel van de services en functionaliteit van het Experience Platform. Gebruikend de Dienst van de Segmentatie, kunt u op maat-gemaakte marketing verstrekken door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen.
+CDP in real time wordt gebouwd bovenop Adobe Experience Platform en gebruikt veel van de [!DNL Experience Platform] diensten en de functionaliteit. Gebruikend [!DNL Segmentation Service], kunt u op maat-gemaakte marketing verstrekken door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen.
 
-## Segmentering
+## Segmentatie
 
 De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw profielopslag worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan. Met behulp van verschillende segmenten kunt u zich richten op uw verschillende doelgroepen en een meer aangepaste marketingervaring bieden.
 
-## Segment Builder
+## [!DNL Segment Builder]
 
-Met Platform kunt u eenvoudig segmenten maken en openen en kunt u verschillende bouwstenen gebruiken om uw segmenten verder te karakteriseren. Voor meer informatie over hoe te om de Bouwer van het Segment te gebruiken, gelieve de gids [van de Bouwer van het](./segment-builder-guide.md)Segment te lezen.
+[!DNL Platform] kunt u gemakkelijk tot segmenten leiden en toegang hebben, evenals verschillende bouwstenen gebruiken om uw segmenten verder te karakteriseren. Voor meer informatie over hoe te om de Bouwer van het Segment te gebruiken, gelieve de gids [van de Bouwer van het](./segment-builder-guide.md)Segment te lezen.
 
 ## Volgende stappen
 
-Na het lezen van dit overzicht, zou u nu moeten begrijpen hoe In real time CDP de Dienst van de Segmentatie gebruikt om aanpassing en verpersoonlijking van marketing campagnes te verbeteren. Voor meer informatie over de Dienst van de Segmentatie, gelieve de documentatie [van de](../../segmentation/home.md)Segmentatie te lezen.
+Na het lezen van dit overzicht, zou u nu moeten begrijpen hoe In real time CDP gebruikt [!DNL Segmentation Service] om aanpassing en verpersoonlijking van marketing campagnes te verbeteren. Voor meer informatie over [!DNL Segmentation Service], gelieve de documentatie [van de](../../segmentation/home.md)Segmentatie te lezen.
