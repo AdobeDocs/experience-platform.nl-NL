@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Door Adobe gedefinieerde functies
 topic: queries
 translation-type: tm+mt
-source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '287'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Een van de grote onderscheidende factoren van Adobe is dat zij ervaren gegevens begrijpen en weten wat klanten met die gegevens moeten kunnen doen. U kunt dit inzicht gebruiken om hulpfuncties te bouwen die uw baan gemakkelijker maken.
 
-Dit document behandelt door Adobe gedefinieerde functies (ADF&#39;s) ter ondersteuning van drie belangrijke Analytics-activiteiten:
+Dit document behandelt door Adobe gedefinieerde functies (ADF&#39;s) ter ondersteuning van drie belangrijke [!DNL Analytics] activiteiten:
 - [Sessionering](#sessionization)
 - [Attributie](#attribution)
 - [Padcontrole](#pathing)
@@ -91,13 +91,13 @@ De attributie is hoe u metriek of omzettingen zoals opbrengst, orde, of sign-ups
 
 In Adobe Analytics worden attributie-instellingen geconfigureerd met behulp van variabelen zoals eVars en worden deze gegenereerd wanneer gegevens worden ingevoerd.
 
-De Attributie ADFs die in de Dienst van de Vraag wordt gevonden staat die toewijzingen toe om bij vraagtijd worden bepaald en worden geproduceerd.
+De Attribution ADFs die in worden gevonden [!DNL Query Service] staat die toewijzingen toe om bij vraagtijd worden bepaald en worden geproduceerd.
 
 In dit voorbeeld wordt de nadruk gelegd op kenmerk last-touch, maar Adobe biedt ook de eigenschap first-touch.
 
 >[!NOTE]
 >
->Andere opties met onderbrekingen en op gebeurtenis-gebaseerde afloop zullen in toekomstige versies van de Dienst van de Vraag beschikbaar zijn.
+>Andere opties met time-outs en op gebeurtenissen gebaseerde vervaldatum zijn beschikbaar in toekomstige versies van [!DNL Query Service].
 
 **Syntaxis:**
 
