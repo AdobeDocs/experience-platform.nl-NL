@@ -4,9 +4,9 @@ seo-title: Opslagdoelen voor cloud
 description: Adobe Real-time CDP kan uw segmenten als gegevensbestanden leveren aan uw Amazon S3-, AWS Kinesis-, Azure Event Hubs- of SFTP-cloudopslaglocaties.
 seo-description: Adobe Real-time CDP kan uw segmenten als gegevensbestanden leveren aan uw Amazon S3-, AWS Kinesis-, Azure Event Hubs- of SFTP-cloudopslaglocaties.
 translation-type: tm+mt
-source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '178'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Opslagdoelen voor cloud {#cloud-storage-destinations}
 
-Adobe CDP in real-time kan uw segmenten als gegevensbestanden aan uw plaatsen van de wolkenopslag leveren. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV of door tabs gescheiden bestanden voor Amazon S3 en SFTP. Voor AWS Kinesis en Azure Event Hubs bestemmingen, worden de gegevens gestreamd uit het Platform van de Ervaring in formaat JSON.
+Adobe CDP in real-time kan uw segmenten als gegevensbestanden aan uw plaatsen van de wolkenopslag leveren. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV- of tabgescheiden bestanden voor [!DNL Amazon S3] en SFTP. Voor [!DNL AWS Kinesis] en [!DNL Azure Event Hubs] bestemmingen, worden de gegevens gestroomd uit Experience Platform in formaat JSON.
 
 ![Adobe Cloud-opslagdoelen](/help/rtcdp/destinations/assets/cloud-storage-destinations.png)
 
