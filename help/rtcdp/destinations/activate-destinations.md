@@ -4,9 +4,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: b1f8cbe245f73e31a8941fc45cefcee595968a70
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Wij adviseren één van de attributen om een [uniek herkenningsteken](/help/rtcd
    ![Loyalty-id als identiteit](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Selecteer deze optie `Email_LC_SHA256` als doel als u de e-mailadressen van klanten bij het invoeren van gegevens in het Adobe Experience Platform hebt gewijzigd volgens de vereisten [voor e-](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)mailhashing van Facebook. <br> Selecteer `Email` als doel-id als de e-mailadressen die u gebruikt geen hashing zijn. Adobe Real-time CDP hasht de e-mailadressen om aan de Facebook-vereisten te voldoen.
+   Selecteer `Email_LC_SHA256` als doelIdentiteit als u de e-mailadressen van de klant bij gegevensinvoer in Adobe Experience Platform, volgens [!DNL Facebook] e- [mailhashing vereisten](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)hashing. <br> Selecteer `Email` als doel-id als de e-mailadressen die u gebruikt geen hashing zijn. Adobe CDP in realtime verbergt de e-mailadressen om aan de [!DNL Facebook] vereisten te voldoen.
 
    ![identiteitstoewijzing na invullen van velden](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -113,11 +113,11 @@ Controleer de respectieve advertentiebestemming u uw gegevens aan activeert. Als
 
 ### Sociale netwerkbestemmingen
 
-Voor Facebook betekent een geslaagde activering dat er via de programmacode een aangepast publiek voor Facebook wordt gemaakt in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). Het lidmaatschap van een segment in het publiek zou worden toegevoegd en verwijderd aangezien de gebruikers voor de geactiveerde segmenten worden gekwalificeerd of worden uitgesloten.
+Een geslaagde activering betekent [!DNL Facebook]bijvoorbeeld dat er via de programmacode een [!DNL Facebook] aangepast publiek wordt gemaakt in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). Het lidmaatschap van een segment in het publiek zou worden toegevoegd en verwijderd aangezien de gebruikers voor de geactiveerde segmenten worden gekwalificeerd of worden uitgesloten.
 
 >[!TIP]
 >
->De integratie tussen Adobe Real-time CDP en Facebook ondersteunt historische publieksbackfills. Alle historische segmentkwalificaties worden naar Facebook verzonden wanneer u de segmenten naar de bestemming activeert.
+>De integratie tussen Adobe Real-time CDP en [!DNL Facebook] steunt historische publieksbackfills. Alle historische segmentkwalificaties worden verzonden naar [!DNL Facebook] wanneer u de segmenten naar de bestemming activeert.
 
 ## Activering uitschakelen {#disable-activation}
 
