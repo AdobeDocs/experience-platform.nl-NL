@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Beschrijvers
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '1477'
 ht-degree: 0%
@@ -369,7 +369,7 @@ Relationship-descriptors beschrijven een relatie tussen twee verschillende schem
 
 #### Referentie-identiteitsdescriptor
 
-De identiteitsbeschrijvers van de verwijzing verstrekken een verwijzingscontext aan een schemagebied, toestaand het om met het primaire identiteitsgebied van een bestemmingsschema worden verbonden. Velden moeten al zijn gelabeld met een identiteitsdescriptor voordat er een verwijzingsdescriptor op kan worden toegepast.
+De identiteitsbeschrijvers van de verwijzing verstrekken een verwijzingscontext aan de primaire identiteit van een schemagebied, toelatend het om door gebieden in andere schema&#39;s worden van verwijzingen voorzien. Velden moeten al zijn gelabeld met een identiteitsdescriptor voordat er een verwijzingsdescriptor op kan worden toegepast.
 
 ```json
 {
