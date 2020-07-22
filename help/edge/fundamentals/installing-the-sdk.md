@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK die SDK installeert
 description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 seo-description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -71,6 +71,10 @@ Als u hebt vastgesteld dat u moet polyfill `window.Promise`, neemt u de volgende
 ```
 
 Dit laadt een manuscript dat ervoor zorgt dat dat een geldige implementatie van het Vermogen `window.Promise` is.
+
+>[!NOTE]
+>
+>Als u een andere Promise-implementatie wilt laden, moet u controleren of deze ondersteuning biedt `Promise.prototype.finally`.
 
 ## Het JavaScript-bestand synchroon laden {#loading-javascript-synchronously}
 
