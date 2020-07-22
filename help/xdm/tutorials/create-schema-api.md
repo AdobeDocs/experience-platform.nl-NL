@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een schema maken met de API voor schemaregistratie
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '2322'
 ht-degree: 0%
@@ -972,7 +972,7 @@ POST /tenant/descriptors
 
 **Verzoek**
 
-In het volgende verzoek wordt een identiteitsdescriptor gedefinieerd in het veld &quot;loyaltyId&quot;. Dit vertelt [!DNL Experience Platform] om het unieke herkenningsteken van het loyaliteitsprogrammalid (in dit geval, het e-mailadres van het lid) te gebruiken om te helpen informatie over het individu verbinden.
+In het volgende verzoek wordt een identiteitsdescriptor gedefinieerd in het veld &quot;loyaltyId&quot;. Dit vertelt [!DNL Experience Platform] om het unieke herkenningsteken van het loyaliteitsprogrammalid (in dit geval, het e-mailadres van het lid) te gebruiken om te helpen informatie over het individu verenigen.
 
 ```SHELL
 curl -X POST \
@@ -1015,7 +1015,7 @@ Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) met een antwoordinst
 }
 ```
 
-## Schema inschakelen voor gebruik in [!DNL Real-time Customer Profile]
+## Schema inschakelen voor gebruik in [!DNL Real-time Customer Profile] {#profile}
 
 Door de tag &quot;union&quot; aan het `meta:immutableTags` kenmerk toe te voegen, kunt u het schema Loyalty-leden inschakelen voor gebruik door [!DNL Real-time Customer Profile].
 
