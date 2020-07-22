@@ -4,7 +4,7 @@ solution: Experience Platform
 title: XDM-veldwoordenboek (Experience Data Model)
 topic: overview
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
 workflow-type: tm+mt
 source-wordcount: '25163'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Zie de [grondbeginselen van schemacompositie](composition.md) voor meer informat
 
 De onderstaande tabel bevat de veldnaam (niet alle XDM-velden krijgen een naamruimte met &quot;xdm&quot;) samen met de titel en beschrijving, het type en de indeling, indien nodig, evenals het corresponderende XDM-type en de bronnen (mixins, gegevenstypen en schema&#39;s) waarin het veld kan worden gevonden.
 
-U kunt de onderzoeksfunctionaliteit in gebruiken [!DNL Schema Editor] aan meningsdetails van deze middelen, zoals aangetoond in het leerprogramma [van de Redacteur van het](../tutorials/create-schema-ui.md)Schema.
+U kunt de onderzoeksfunctionaliteit in gebruiken [!DNL Schema Editor] aan meningsdetails van deze middelen, zoals aangetoond in het leerprogramma [van de Redacteur van het](../tutorials/create-schema-ui.md#browse)Schema.
 
 >[!NOTE]
 >
