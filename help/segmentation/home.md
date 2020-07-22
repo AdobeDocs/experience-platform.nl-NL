@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmenteringsservice Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1974'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Voor informatie over het bouwen van segmentdefinities die API gebruiken, zie de 
 
 ### Streaming segmentering
 
-Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-time Customer Profile]. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
+Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-time Customer Profile]. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat uw doelgroep relevant blijft.
 
 Lees de documentatie over [](./api/streaming-segmentation.md)streamingsegmentatie voor meer informatie over streamingsegmentatie.
 
@@ -215,6 +215,8 @@ Een andere traditionele uitdaging voor marketers is het creëren van advertentie
 - Object
 - Kaart
 - Gebeurtenissen
+- Extern publiek
+- Segmenten
 
 Meer gedetailleerde informatie over deze ondersteunde gegevenstypen vindt u in het document [met](./data-types.md)ondersteunde gegevenstypen.
 
