@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gegevenstypen Adobe Experience Platform Segmentation Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 0%
+source-wordcount: '456'
+ht-degree: 2%
 
 ---
 
@@ -50,15 +50,15 @@ Zoals in de onderstaande tabel wordt getoond, worden gebeurtenisgegevens weergeg
 | Knop Tijdregel toepassen | Bevat datumgegevens. |
 | Gelijk aan, niet gelijk aan, begint met, niet met, eindigt niet met, eindigt niet met, bevat, bevat, niet bevat, bestaat, niet bestaat | Bevat tekenreeksgegevens. |
 
-## Segmenten
-
-De bestaande segmentdefinities kunnen ook als componenten van een nieuwe segmentdefinitie worden gebruikt, toevoegend hun attributen en op gebeurtenis-gebaseerde regels aan het nieuwe segment.
-
-## Soorten publiek
+### Delen van publiek
 
 Het externe publiek kan ook als componenten van een nieuwe segmentdefinitie worden gebruikt, toevoegend hun attributenregels aan het nieuwe segment.
 
-Momenteel wordt alleen Adobe Audience Manager ondersteund als publiek. Extra bronnen worden in de toekomst ingeschakeld.
+Momenteel wordt alleen Adobe Audience Manager ondersteund als een extern publiek, waarbij in de toekomst extra bronnen worden ingeschakeld. Meer informatie over het gebruiken van het publiek van de Adobe Audience Manager met Platform kan in de gids van het [publiek delen binnen de documentatie](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)van de Adobe Audience Manager worden gevonden.
+
+### Segment delen
+
+Segmenten die in Platform zijn gemaakt, kunnen worden gebruikt in andere [Adobe Experience Cloud Core Services](https://docs.adobe.com/content/help/nl-NL/core-services/interface/experience-cloud.html). Om deze functie in te schakelen, dient u contact op te nemen met uw oplossingsarchitect of uw consultant.
 
 ## Andere gegevenstypen
 
