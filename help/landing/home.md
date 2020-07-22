@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Overzicht van Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: efde1b9bf65bde1a55084774c845b8d5585272d4
+source-git-commit: 444185df28026bf2045afcdadf29f9255885dafb
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 0%
+source-wordcount: '820'
+ht-degree: 1%
 
 ---
 
@@ -34,34 +34,13 @@ In de volgende video&#39;s wordt beschreven hoe u rijke, relevante, real-time er
 
 ## Browserondersteuning
 
-De website van het Adobe Experience Platform en bijbehorende websites, zoals de Admin Console van Adobe, zijn allen ontworpen om optimaal in de recentste versies van Google Chrome, Safari, Firefox, en Microsoft Edge te werken. Mogelijk kunt u problemen ondervinden bij het gebruik van bepaalde functies in oudere versies van browsers.
+De website van het Adobe Experience Platform en bijbehorende websites, zoals de Admin Console van Adobe, zijn allen ontworpen om optimaal in de **recentste versies** van Google Chrome, Safari, Firefox, en Microsoft Edge te werken. Mogelijk kunt u problemen ondervinden bij het gebruik van bepaalde functies in oudere versies van browsers.
 
-<table>
-<tr>
-  <th>Besturingssysteem</th>
-  <th>Ondersteunde browsers</th>
-  <th></th>
-  <th></th>
-</tr>
-<tr>
-  <td>Mac OS X</td>
-  <td>Laatste versie van Google Chrome</td>
-  <td>Laatste versie van Safari</td>
-  <td>Laatste versie van Firefox</td>
-</tr>
-<tr>
-  <td>Windows 10</td>
-  <td>Laatste versie van Google Chrome</td>
-  <td>Laatste versie van Microsoft Edge</td>
-  <td>Laatste versie van Firefox</td>
-</tr>
-<tr>
-  <td>Windows 7</td>
-  <td>Laatste versie van Google Chrome</td>
-  <td> </td>
-  <td>Laatste versie van Firefox</td>
-</tr>
-</table>
+| Besturingssysteem | Ondersteunde browsers |  |  |
+|---|---|---|---|
+| Mac OS X | Google Chrome | Safari | Firefox |
+| Windows 10 | Google Chrome | Microsoft Edge | Firefox |
+| Windows 7 | Google Chrome |  | Firefox&lt; |
 
 Niet ondersteund:
 
