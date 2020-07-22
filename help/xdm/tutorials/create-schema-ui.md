@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een schema maken met de Schema-editor
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
 workflow-type: tm+mt
 source-wordcount: '3376'
 ht-degree: 0%
@@ -273,7 +273,7 @@ De Redacteur van het Schema verstrekt de capaciteit om een schema voor gebruik t
 
 Als u wilt dat een schema kan worden gebruikt met, moet er een primaire identiteit zijn gedefinieerd. [!DNL Real-time Customer Profile] Als u een schema wilt inschakelen zonder eerst een primaire identiteit te definiëren, ontvangt u het foutbericht &quot;Ontbrekende primaire identiteit&quot;.
 
-![](../images/tutorials/create-schema/missing_primary_identity.png)
+<img src="../images/tutorials/create-schema/missing_primary_identity.png" width="600" /><br>
 
 Als u het schema &quot;Loyalty-leden&quot; wilt gebruiken in [!DNL Profile], klikt u eerst op &quot;Loyalty-leden&quot; in het gedeelte *Structuur* van de editor.
 
