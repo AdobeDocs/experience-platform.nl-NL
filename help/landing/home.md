@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: f86625f2cf9a08b2395f190a50d7fb40c71bc49b
+source-git-commit: c79d9690f5d1f6c199d0c0a74238225c5b6fd2c2
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '815'
 ht-degree: 1%
 
 ---
@@ -42,10 +42,10 @@ Het Adobe Experience Platform is ontworpen om optimaal te werken in de **nieuwst
 | Windows 10 | Google Chrome | Microsoft Edge | Firefox |
 | Windows 7 | Google Chrome |  | Firefox |
 
-Deze browsers worden niet ondersteund:
+Deze besturingssystemen en browsers worden niet ondersteund:
 
-* Internet Explorer 10
 * Windows 8
+* Internet Explorer 10
 * Opera
 
 ## Taalondersteuning
