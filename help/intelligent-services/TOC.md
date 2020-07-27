@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Intelligente services
 translation-type: tm+mt
-source-git-commit: 9bdd2b17953c1c72243ae07be3e40d53ced9360b
+source-git-commit: a0b85809d0703c0366c73ed6d66319af0f62cb27
+workflow-type: tm+mt
+source-wordcount: '64'
+ht-degree: 3%
 
 ---
 
@@ -22,9 +25,9 @@ source-git-commit: 9bdd2b17953c1c72243ae07be3e40d53ced9360b
    * [Overzicht](customer-ai/overview.md)
    * [Aan de slag met Customer AI](customer-ai/getting-started.md)
    * [Invoer en uitvoer](customer-ai/input-output.md)
-   * Handleiding gebruikersinterface {#user-guide}
+   * UI-hulplijnen{#user-guide}
       * [Een instantie configureren](customer-ai/user-guide/configure.md)
       * [Inzichten detecteren](customer-ai/user-guide/discover-insights.md)
       * [Segmenten maken met behulp van AI-scores van de klant](customer-ai/user-guide/create-segment.md)
       * [Muziek downloaden](customer-ai/user-guide/download-scores.md)
-* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
