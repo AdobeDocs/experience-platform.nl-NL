@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruikershandleiding voor sandbox
 topic: user guide
 translation-type: tm+mt
-source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
+source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met 
 
 ## Sandboxen weergeven
 
-Klik in de interface van het Experience Platform op **Sandboxen** in de linkernavigatie om het dashboard _Sandboxen_ te openen. Het dashboard bevat alle beschikbare sandboxen voor uw organisatie, inclusief het type sandbox (productie of ontwikkeling) en de status (actief, maken, verwijderen of mislukt).
+Klik in de interface van het Experience Platform op **[!UICONTROL Sandboxen]** in de linkernavigatie om het dashboard _[!UICONTROL Sandboxen]_te openen. Het dashboard bevat alle beschikbare sandboxen voor uw organisatie, inclusief het type sandbox (productie of ontwikkeling) en de status (actief, maken, verwijderen of mislukt).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -38,25 +38,25 @@ Als een sandbox is geselecteerd, wordt het scherm vernieuwd met de geselecteerde
 
 ## Een nieuwe sandbox maken
 
-Gebruik de volgende video voor een snel overzicht van het gebruik [!DNL Sandboxes] in [!DNL Experience Platform].
+Gebruik de volgende video voor een snel overzicht van het gebruik van sandboxen in Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-Als u een nieuwe sandbox wilt maken in de gebruikersinterface, klikt u op **Sandboxen** in de linkernav en klikt u op Sandbox **** maken.
+Als u een nieuwe sandbox wilt maken in de gebruikersinterface, klikt u op **[!UICONTROL Sandboxen]** in de linkernav en klikt u op Sandbox **** maken.
 
 ![](../images/ui/create-sandbox-button.png)
 
-Het dialoogvenster Sandbox __ maken wordt weergegeven en u wordt gevraagd een weergavetoetitel en naam voor de sandbox op te geven. De **weergavetitel** moet leesbaar zijn en moet beschrijvend genoeg zijn om gemakkelijk te kunnen worden herkend. De **naam** van de sandbox is een id in kleine letters voor gebruik in API-aanroepen en moet daarom uniek en beknopt zijn.
+Het dialoogvenster Sandbox __maken wordt weergegeven en u wordt gevraagd een weergavetoetitel en naam voor de sandbox op te geven. De **weergavetitel**moet leesbaar zijn en moet beschrijvend genoeg zijn om gemakkelijk te kunnen worden herkend. De**[!UICONTROL  naam ]**van de sandbox is een id in kleine letters voor gebruik in API-aanroepen en moet daarom uniek en beknopt zijn.
 
-Klik op **Maken** als u klaar bent.
+Klik op **[!UICONTROL Maken]** als u klaar bent.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
 >[!NOTE]
 >
->Aangezien u beperkt bent tot het maken van alleen niet-productie-sandboxtypen, is de optie **type** vergrendeld bij Niet-productie en kan deze optie niet worden gemanipuleerd.
+>Aangezien u beperkt bent tot het maken van alleen niet-productie-sandboxtypen, is de optie **[!UICONTROL type]** vergrendeld bij Niet-productie en kan deze optie niet worden gemanipuleerd.
 
-Nadat u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe sandbox in het dashboard _Sandboxen_ met de status &quot;Creating&quot;. Nieuwe sandboxen nemen ongeveer 15 minuten in beslag om door het systeem te worden ingericht, waarna de status van deze sandboxen verandert in Actief.
+Nadat u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe sandbox in het dashboard _[!UICONTROL Sandboxen]_met de status &quot;[!UICONTROL Creating]&quot;. Nieuwe sandboxen nemen ongeveer 15 minuten in beslag om door het systeem te worden ingericht, waarna de status van deze sandboxen verandert in[!UICONTROL Actief].
 
 ![](../images/ui/sandbox-created.png)
 
@@ -68,15 +68,15 @@ Nadat u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe s
 
 Als u een niet-productiesandbox opnieuw instelt, worden alle bronnen verwijderd die aan die sandbox zijn gekoppeld (schema&#39;s, gegevenssets, enzovoort), terwijl de naam van de sandbox en de bijbehorende machtigingen behouden blijven. Deze &#39;schone&#39; sandbox blijft onder dezelfde naam beschikbaar voor gebruikers die er toegang toe hebben.
 
-Als u een sandbox in de UI opnieuw wilt instellen, klikt u op **Sandboxen** in de linkernav en vervolgens op de sandbox die u opnieuw wilt instellen. Klik in het dialoogvenster dat aan de rechterkant van het scherm wordt weergegeven op Sandbox **** opnieuw instellen.
+Als u een sandbox in de UI opnieuw wilt instellen, klikt u op **[!UICONTROL Sandboxen]** in de linkernav en vervolgens op de sandbox die u opnieuw wilt instellen. Klik in het dialoogvenster dat aan de rechterkant van het scherm wordt weergegeven op Sandbox **** opnieuw instellen.
 
 ![](../images/ui/reset-sandbox-button.png)
 
-Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen. Klik op **Herstellen** om door te gaan.
+Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen. Klik op **[!UICONTROL Herstellen]** om door te gaan.
 
 <img src="../images/ui/reset-are-you-sure.png" width="350"><br>
 
-Er wordt een bevestigingsbericht weergegeven en de status van de sandbox verandert in &quot;Opnieuw instellen&quot;. Zodra het door het systeem is provisioned, zal zijn staat aan &quot;Actief&quot;of &quot;Ontbroken&quot;bijwerken.
+Er wordt een bevestigingsbericht weergegeven en de status van de sandbox verandert in &quot;[!UICONTROL Opnieuw instellen]&quot;. Zodra het door het systeem is provisioned, zal zijn staat aan &quot;[!UICONTROL Actief]&quot;of &quot;[!UICONTROL Mislukt]&quot;bijwerken.
 
 ![](../images/ui/sandbox-resetting.png)
 
@@ -88,15 +88,15 @@ Er wordt een bevestigingsbericht weergegeven en de status van de sandbox verande
 
 Als u een niet-productiesandbox verwijdert, worden alle bronnen die aan die sandbox zijn gekoppeld, inclusief de machtigingen, permanent verwijderd.
 
-Als u een sandbox in de UI wilt verwijderen, klikt u op **Sandboxen** in de linkernav en vervolgens op de sandbox die u wilt verwijderen. Klik in het dialoogvenster dat aan de rechterkant van het scherm wordt weergegeven op Sandbox **** verwijderen.
+Als u een sandbox in de UI wilt verwijderen, klikt u op **[!UICONTROL Sandboxen]** in de linkernav en vervolgens op de sandbox die u wilt verwijderen. Klik in het dialoogvenster dat aan de rechterkant van het scherm wordt weergegeven op Sandbox **** verwijderen.
 
 ![](../images/ui/delete-sandbox-button.png)
 
-Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen. Klik op **Verwijderen** om door te gaan.
+Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen. Klik op **[!UICONTROL Verwijderen]** om door te gaan.
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
-Er wordt een bevestigingsbericht weergegeven en de sandbox wordt verwijderd uit de _sandboxwerkruimte_ .
+Er wordt een bevestigingsbericht weergegeven en de sandbox wordt verwijderd uit de _[!UICONTROL sandboxwerkruimte]_.
 
 ## Volgende stappen
 
