@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van sandboxen
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '677'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Samengevat bieden sandboxen de volgende voordelen:
 
 ## Toegangsbeheer voor sandboxen
 
-Standaard hebben alle gebruikers van een organisatie toegang tot een productiesandbox. Toegang tot niet-productiesandboxen moet worden verleend door een systeembeheerder, productbeheerder of beheerder van het productprofiel via de [Adobe-Admin Console](https://adminconsole.adobe.com).
+Standaard hebben alle gebruikers van een organisatie toegang tot een productiesandbox. Toegang tot niet-productiesandboxen moet worden verleend door een systeembeheerder, productbeheerder of beheerder van het productprofiel via de [Adobe Admin Console](https://adminconsole.adobe.com).
 
 Voor het weergeven, maken, bijwerken of verwijderen van niet-productiesandboxen moeten gebruikers ook de bevoegdheden van Sandbox-beheer hebben.
 
@@ -46,11 +46,11 @@ Voor meer informatie over het beheren van rollen en toestemmingen voor zandbakke
 
 ## Sandboxen in de gebruikersinterface van het Experience Platform
 
-In de gebruikersinterface [van het](https://platform.adobe.com)Experience Platform, kunnen de gebruikers tussen de zandbakken schakelen zij tot toegang hebben door de **zandbakschakelaar** op de top-left van het scherm te gebruiken.  Gebruikers met bevoegdheden voor Sandboxbeheer hebben ook toegang tot het tabblad **Sandboxen** in de linkernavigatie, waar ze sandboxen voor hun organisatie kunnen weergeven en beheren. Raadpleeg de gebruikershandleiding bij de [sandbox voor meer informatie over het werken met sandboxen in de gebruikersinterface](ui/overview.md).
+In de gebruikersinterface [van het](https://platform.adobe.com)Experience Platform, kunnen de gebruikers tussen de zandbakken schakelen zij tot toegang hebben door de **zandbakschakelaar** op de top-left van het scherm te gebruiken.  Gebruikers met bevoegdheden voor Sandboxbeheer hebben ook toegang tot het tabblad **[!UICONTROL Sandboxen]** in de linkernavigatie, waar ze sandboxen voor hun organisatie kunnen weergeven en beheren. Raadpleeg de gebruikershandleiding bij de [sandbox voor meer informatie over het werken met sandboxen in de gebruikersinterface](ui/overview.md).
 
 ## Sandboxen in Experience Platform-API&#39;s
 
-Bij het aanroepen van Experience Platform-API&#39;s moet een naam voor de sandbox worden opgegeven onder de koptekst `x-sandbox-name`. Wanneer u bijvoorbeeld de API [van de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) Catalogusservice aanroept om alle gegevenssets in de productiesandbox weer te geven, wordt de naam van de sandbox (&quot;prod&quot;) als een header weergegeven in de API-aanvraag:
+Bij het aanroepen van Experience Platform-API&#39;s moet een naam voor de sandbox worden opgegeven onder de koptekst `x-sandbox-name`. Wanneer u bijvoorbeeld een aanroep naar de component maakt [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) om alle gegevenssets in de productiesandbox weer te geven, wordt de naam van de sandbox (&quot;prod&quot;) als een header weergegeven in de API-aanvraag:
 
 ```shell
 curl -X GET \
@@ -71,4 +71,4 @@ Met de sandbox-API kunt u sandboxen beheren met behulp van RESTful-API-bewerking
 
 Door dit document te lezen, hebt u kennis genomen van de belangrijkste concepten met betrekking tot sandboxen in Experience Platform. Zie de [gebruikershandleiding](ui/overview.md) voor de gebruikersinterface of de [ontwikkelaarsgids](./api/getting-started.md) voor de API voor gedetailleerde stappen voor het beheren van sandboxen.
 
-Hoewel sandboxen een waardevol hulpmiddel zijn om Platforms te isoleren voor uw ontwikkelingsteam, kunt u ook meer korrelige toegangscontrole beheren met de Adobe-Admin Console. Zie het [toegangsbeheeroverzicht](../access-control/home.md) voor meer informatie.
+Hoewel sandboxen een waardevol hulpmiddel zijn voor het isoleren van Platforms voor uw ontwikkelingsteam, kunt u ook meer korrelige toegangscontrole beheren met de Adobe Admin Console. Zie het [toegangsbeheeroverzicht](../access-control/home.md) voor meer informatie.
