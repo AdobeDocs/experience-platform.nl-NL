@@ -89,4 +89,4 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die d
 }
 ```
 
-Het uitvoeren van een GET verzoek om van alle schema&#39;s in de huurderscontainer een lijst te maken zou nu het schema van de Informatie van het Bezit omvatten, of u kunt een raadpleging (KRIJGEN) verzoek uitvoeren gebruikend URL-Gecodeerde `$id` URI om het nieuwe schema direct te bekijken. Vergeet niet de header Accepteren op te nemen `version` in alle opzoekverzoeken.
+Het uitvoeren van een verzoek van de GET om van alle schema&#39;s in de huurderscontainer een lijst te maken zou nu het schema van de Informatie van het Bezit omvatten, of u kunt een raadpleging (GET) verzoek uitvoeren gebruikend URL-Gecodeerde `$id` URI om het nieuwe schema direct te bekijken. Vergeet niet de header Accepteren op te nemen `version` in alle opzoekverzoeken.
