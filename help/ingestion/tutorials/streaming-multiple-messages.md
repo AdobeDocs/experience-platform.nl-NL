@@ -29,7 +29,7 @@ Deze zelfstudie vereist ook dat u de zelfstudie [Verificatie naar Adobe Experien
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 
-Voor alle POST-aanvragen is een extra header nodig:
+Voor alle aanvragen voor POSTEN is een extra header vereist:
 
 - Inhoudstype: application/json
 
