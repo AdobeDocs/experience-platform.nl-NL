@@ -44,7 +44,7 @@ Schakel ten slotte &quot;Cookies van derden blokkeren&quot; in op &quot;UIT&quot
 >
 >U kunt cookies van derden uitschakelen en [* toevoegen.]ds.adobe.net naar de lijst van gewenste personen.
 
-Ga naar &quot;chrome://flags/&quot; op de adresbalk. U kunt de markering *&quot;SameSite by default cookies&quot;* zoeken en uitschakelen in het vervolgkeuzemenu rechts.
+Ga naar &quot;chrome://flags/&quot; op de adresbalk. U kunt de markering *&quot;SameSite door standaardcookies&quot;* zoeken en uitschakelen in het vervolgkeuzemenu rechts.
 
 ![markering samensite uitschakelen](./images/faq/samesite-flag.png)
 
