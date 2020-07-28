@@ -20,7 +20,7 @@ Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het voeren van
 
 ### Hiermee wordt een lijst met geplande query&#39;s opgehaald
 
-U kunt een lijst van alle geplande vragen voor uw IMS Organisatie terugwinnen door een GET verzoek aan het `/schedules` eindpunt te doen.
+U kunt een lijst van alle geplande vragen voor uw IMS Organisatie terugwinnen door een verzoek van de GET tot het `/schedules` eindpunt te richten.
 
 **API-indeling**
 
@@ -124,7 +124,7 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van geplande vra
 
 ### Nieuwe geplande query maken
 
-U kunt een nieuwe geplande vraag tot stand brengen door een POST- verzoek aan het `/schedules` eindpunt te doen.
+U kunt een nieuwe geplande vraag tot stand brengen door een verzoek van de POST aan het `/schedules` eindpunt te doen.
 
 **API-indeling**
 
@@ -223,7 +223,7 @@ Een succesvolle reactie keert status 202 (Toegelaten) van HTTP met details van u
 
 ### Gegevens van een opgegeven geplande query aanvragen
 
-U kunt informatie voor een specifieke geplande vraag terugwinnen door een GET verzoek aan het `/schedules` eindpunt te doen en zijn identiteitskaart in de verzoekweg te verstrekken.
+U kunt informatie voor een specifieke geplande vraag terugwinnen door een verzoek van de GET aan het `/schedules` eindpunt te doen en zijn identiteitskaart in de verzoekweg te verstrekken.
 
 **API-indeling**
 
