@@ -65,7 +65,7 @@ De standaardtaal van de gebruikersinterface wordt bepaald door het gebied dat in
 
 >[!NOTE]
 >
-> De taal en inhoud op Adobe.com worden bepaald door een gebied te selecteren.
+> Het selecteren van een gebied bepaalt de taal en de inhoud op Adobe.com.
 
 1. Klik op de huidige taal in de voettekst van de [!DNL Experience Platform] interface.
 2. Klik in de profielinstellingen op Gebied **** wijzigen.
@@ -83,7 +83,7 @@ De documentatie van het Adobe Experience Platform is beschikbaar in verscheidene
 
 >[!NOTE]
 >
->Vanaf mei 2020 wordt door Adobe een update van het domein en de headerbalk uitgevoerd om uw ervaring in alle Experience Cloud-toepassingen te verenigen en te verbeteren. Dit omvat een nieuw menu van de Hulp. Het nieuwe menu van de Hulp omvat het volgende:
+>Adobe begint in mei 2020 en implementeert updates voor het domein en de headerbalk om uw ervaring in alle Experience Cloud-toepassingen te verenigen en te verbeteren. Dit omvat een nieuw menu van de Hulp. Het nieuwe menu van de Hulp omvat het volgende:
 >
 >* Koppelingen naar aanbevolen artikelen
 >* Contextrelevante documentatieaanbevelingen
@@ -126,7 +126,7 @@ Bekijk de volgende video voor een snelle rondleiding door de [!DNL Experience Pl
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
 
-Een van de belangrijkste voordelen van Adobe Experience Platform is de mogelijkheid om te integreren met andere bestaande Adobe-services. De volgende video geeft een overzicht van hoe [!DNL Experience Platform] de diensten met [!DNL Experience Cloud] toepassingen en mogelijkheden zoals Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Customer Attributes], [!DNL Audience Library], en [!DNL Experience Platform Launch]. integreren.
+Een van de belangrijkste voordelen van Adobe Experience Platform is zijn vermogen om met andere bestaande diensten van de Adobe te integreren. De volgende video geeft een overzicht van hoe de [!DNL Experience Platform] diensten met [!DNL Experience Cloud] toepassingen en mogelijkheden zoals Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Customer Attributes], [!DNL Audience Library], en [!DNL Experience Platform Launch]. integreren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
