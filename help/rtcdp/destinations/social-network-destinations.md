@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Met sociale netwerkdoelen kunt u profielen voor uw campagnes activeren voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 
-Het Platform van de Gegevens van de Klant van Adobe In real time steunt momenteel de volgende sociale netwerkbestemmingen:
+Het Adobe Real-time Platform van de Gegevens van de Klant steunt momenteel de volgende sociale netwerkbestemmingen:
 
-* [Adobe LiveCycle-extensie](/help/rtcdp/destinations/adobe-livefyre-extension.md)
+* [Adobe Livefyre-extensie](/help/rtcdp/destinations/adobe-livefyre-extension.md)
 * [!DNL Facebook](/help/rtcdp/destinations/facebook-destination.md)
