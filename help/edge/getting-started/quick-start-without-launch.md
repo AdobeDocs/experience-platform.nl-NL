@@ -17,12 +17,12 @@ ht-degree: 1%
 Deze gids leidt u door de verschillende manieren aan opstelling het Web SDK van het Adobe Experience Platform. Als u deze functie wilt gebruiken, moet u een whitelist hebben. Neem contact op met uw CSM als u op de wachtlijst wilt staan.
 
 - Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als je al een CNAME voor Analytics hebt, moet je die gebruiken. Het testen in ontwikkeling werkt zonder een CNAME maar u hebt één nodig alvorens u aan productie gaat.
-- Het recht hebben op Adobe Experience Platform.  Als u geen Platform hebt aangeschaft, biedt Adobe u gratis Experience Platform Data Services Foundation voor gebruik op beperkte wijze met de SDK.
+- Het recht hebben op Adobe Experience Platform.  Als u geen Platform hebt gekocht, zal Adobe u van de Stichting van de Diensten van de Gegevens van het Experience Platform voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
 - Gebruik de nieuwste versie van de service Bezoeker-id.
 
 ## Een configuratie-id maken
 
-U kunt een configuratie-id maken met het gereedschap [](../fundamentals/edge-configuration.md) Edge-configuratie in Adobe Launch, zelfs als u de functies voor tagbeheer niet gebruikt. Dit staat u toe om toe te laten [!DNL Edge Network] om gegevens naar de diverse oplossingen te verzenden. Nadere informatie over het vinden van elke optie vindt u in de pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) .
+U kunt een configuratie-id maken met het gereedschap [voor](../fundamentals/edge-configuration.md) randconfiguratie in Adobe Launch, zelfs als u de functies voor tagbeheer niet gebruikt. Dit staat u toe om toe te laten [!DNL Edge Network] om gegevens naar de diverse oplossingen te verzenden. Nadere informatie over het vinden van elke optie vindt u in de pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) .
 
 >[!NOTE]
 >
