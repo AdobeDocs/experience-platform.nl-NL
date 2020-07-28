@@ -116,4 +116,4 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die d
 }
 ```
 
-Het uitvoeren van een GET verzoek om van alle gegevenstypes in de huurderscontainer een lijst te maken zou nu het gegevenstype van de Bouw van het Bezit omvatten. U kunt ook een opzoekaanvraag (GET) uitvoeren met de URL-gecodeerde `$id` URI om het nieuwe gegevenstype direct weer te geven. Zorg ervoor dat u de code opneemt `version` in de koptekst Accepteren voor een opzoekverzoek.
+Het uitvoeren van een verzoek van de GET om van alle gegevenstypes in de huurderscontainer een lijst te maken zou nu het gegevenstype van de Bouw van het Bezit omvatten. U kunt ook een opzoekverzoek (GET) uitvoeren met de URL-gecodeerde `$id` URI om het nieuwe gegevenstype rechtstreeks weer te geven. Zorg ervoor dat u de code opneemt `version` in de koptekst Accepteren voor een opzoekverzoek.
