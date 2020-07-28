@@ -79,8 +79,8 @@ In de volgende sectie worden voorbeelden van segmentdefinities weergegeven die *
 | Type query | Details |
 | ---------- | ------- | 
 | Binnenkomende hit binnen relatief tijdvenster | Als de segmentdefinitie naar een inkomende gebeurtenis verwijst die **niet** binnen de **laatste zeven-dagperiode** valt. Bijvoorbeeld binnen de **laatste twee weken**. |
-| Binnenkomende hit die verwijst naar een profiel binnen een relatief venster | De volgende opties bieden **geen** ondersteuning voor streamingsegmentatie:<ul><li>Een binnenkomende gebeurtenis **die zich niet** binnen de **laatste periode** van zeven dagen bevindt.</li><li>Een segmentdefinitie die Adobe Audience Manager (AAM) segmenten of eigenschappen omvat.</li></ul> |
-| Meerdere gebeurtenissen die naar een profiel verwijzen | De volgende opties bieden **geen** ondersteuning voor streamingsegmentatie:<ul><li>Een gebeurtenis die **niet** optreedt binnen **de laatste 24 uur**.</li><li>Een segmentdefinitie die Adobe Audience Manager (AAM) segmenten of eigenschappen omvat.</li></ul> |
+| Binnenkomende hit die verwijst naar een profiel binnen een relatief venster | De volgende opties bieden **geen** ondersteuning voor streamingsegmentatie:<ul><li>Een binnenkomende gebeurtenis **die zich niet** binnen de **laatste periode** van zeven dagen bevindt.</li><li>Een segmentdefinitie die Adobe Audience Manager (AAM) segmenten of kenmerken omvat.</li></ul> |
+| Meerdere gebeurtenissen die naar een profiel verwijzen | De volgende opties bieden **geen** ondersteuning voor streamingsegmentatie:<ul><li>Een gebeurtenis die **niet** optreedt binnen **de laatste 24 uur**.</li><li>Een segmentdefinitie die Adobe Audience Manager (AAM) segmenten of kenmerken omvat.</li></ul> |
 | Vragen over meerdere entiteiten | Vraagstukken met meerdere entiteiten worden over het geheel genomen **niet** ondersteund door streamingsegmentatie. |
 
 Daarnaast zijn enkele richtlijnen van toepassing wanneer streamingsegmentatie wordt uitgevoerd:
@@ -92,7 +92,7 @@ Daarnaast zijn enkele richtlijnen van toepassing wanneer streamingsegmentatie wo
 
 ## Hiermee worden alle segmenten opgehaald die zijn ingeschakeld voor streamingsegmentatie
 
-U kunt een lijst van al uw segmenten terugwinnen die voor het stromen segmentatie binnen uw IMS Organisatie door een GET verzoek aan het `/segment/definitions` eindpunt te maken worden toegelaten.
+U kunt een lijst van al uw segmenten terugwinnen die voor het stromen segmentatie binnen uw organisatie IMS door een verzoek van de GET aan het `/segment/definitions` eindpunt te doen worden toegelaten.
 
 **API-indeling**
 
@@ -294,7 +294,7 @@ Zodra de het stromen evaluatie is toegelaten, moet een basislijn worden gecreeer
 
 ### Een schema maken
 
-Door een POST- verzoek aan het `/config/schedules` eindpunt te doen, kunt u een programma tot stand brengen en de specifieke tijd omvatten wanneer het programma zou moeten worden teweeggebracht.
+Door een verzoek van de POST aan het `/config/schedules` eindpunt te doen, kunt u een programma tot stand brengen en de specifieke tijd omvatten wanneer het programma zou moeten worden teweeggebracht.
 
 **API-indeling**
 
@@ -364,7 +364,7 @@ Een succesvolle reactie keert de details van het onlangs gecreeerde programma te
 
 ### Een schema inschakelen
 
-Door gebrek, is een programma inactief wanneer gecreeerd tenzij het `state` bezit aan `active` in creeer (POST) verzoeklichaam wordt geplaatst. U kunt een programma toelaten (reeks `state` aan `active`) door een verzoek van de PATCH aan het `/config/schedules` eindpunt en met inbegrip van identiteitskaart van het programma in de weg te doen.
+Door gebrek, is een programma inactief wanneer gecreeerd tenzij het `state` bezit wordt geplaatst aan `active` in creeer (POST) verzoeklichaam. U kunt een programma toelaten (reeks `state` aan `active`) door een verzoek van de PATCH aan het `/config/schedules` eindpunt en met inbegrip van identiteitskaart van het programma in de weg te doen.
 
 **API-indeling**
 
