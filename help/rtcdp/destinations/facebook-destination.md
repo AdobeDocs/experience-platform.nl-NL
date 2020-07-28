@@ -22,7 +22,7 @@ Activeer profielen voor uw [!DNL Facebook] campagnes voor doelgroepen, personali
 
 ## Gevallen gebruiken
 
-Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Facebook] bestemming zou moeten gebruiken, zijn er twee voorbeelden van gebruiksgevallen die de klanten van het Platform van Gegevens van de Klant van Adobe in real time door deze eigenschap kunnen oplossen.
+Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Facebook] bestemming zou moeten gebruiken, zijn hier twee gevallen van het steekproefgebruik die de klanten van het Platform van de Gegevens van de Klant in real time van de Adobe kunnen oplossen door deze eigenschap te gebruiken.
 
 
 ### Hoofdletters en kleine letters gebruiken 1
@@ -36,7 +36,7 @@ Een online detailhandelaar wil bestaande klanten door sociale platforms bereiken
 
 Een luchtvaartmaatschappij heeft verschillende klantniveaus (Bronze, Silver en Gold) en wil elk niveau via sociale platforms voorzien van persoonlijke aanbiedingen. Niet alle klanten gebruiken echter de mobiele app van de luchtvaartmaatschappij en sommige van hen hebben zich niet aangemeld bij de website van het bedrijf. De enige id&#39;s die het bedrijf over deze klanten heeft, zijn id&#39;s voor lidmaatschap en e-mailadressen.
 
-Als ze zich op sociale media willen richten, kunnen ze de klantgegevens van hun CRM in Adobe Real-time CDP opnemen, waarbij de e-mailadressen als id&#39;s worden gebruikt.
+Om hen over sociale media te richten, kunnen zij de klantengegevens van hun CRM in Adobe in real time CDP betreden, gebruikend de e-mailadressen als herkenningstekens.
 
 Daarna, kunnen zij hun off-line gegevens met inbegrip van bijbehorende lidmaatschap IDs en klantenrijen gebruiken om nieuwe publiekssegmenten te bouwen die zij door de [!DNL Facebook] bestemming kunnen richten.
 
