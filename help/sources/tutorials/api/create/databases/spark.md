@@ -59,7 +59,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -75,7 +75,7 @@ POST /connections
 
 **Verzoek**
 
-Om een [!DNL Spark] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het POST- verzoek worden verstrekt. De verbindingsspecificatie-id voor [!DNL Spark] is `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`.
+Om een [!DNL Spark] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL Spark] is `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`.
 
 ```shell
 curl -X POST \
