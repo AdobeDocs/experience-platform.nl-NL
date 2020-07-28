@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Overzicht van bronconnectors
 
-Met Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van [!DNL Platform] services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+Met Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
 [!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
 
@@ -26,11 +26,11 @@ De bronnen in [!DNL Experience Platform] worden gegroepeerd in de volgende categ
 
 ### Adobe-toepassingen
 
-[!DNL Experience Platform] kunnen gegevens uit andere Adobe-toepassingen worden ingevoerd, zoals Adobe Analytics, Adobe Audience Manager en [!DNL Experience Platform Launch]. Zie de volgende verwante documenten voor meer informatie:
+[!DNL Experience Platform] staat toe dat gegevens van andere toepassingen van Adobe, met inbegrip van Adobe Analytics, Adobe Audience Manager, en [!DNL Experience Platform Launch]worden opgenomen. Zie de volgende verwante documenten voor meer informatie:
 
 - [Overzicht van de Adobe Audience Manager-aansluiting](connectors/adobe-applications/audience-manager.md)
 - [Creeer een Adobe Audience Manager bronschakelaar in UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Overzicht van de Adobe Analytics-gegevensconnector](connectors/adobe-applications/analytics.md)
+- [Overzicht Adobe Analytics-gegevensconnector](connectors/adobe-applications/analytics.md)
 - [Een Adobe Analytics-bronaansluiting maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Een bronconnector voor klantkenmerken in de gebruikersinterface maken](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
@@ -109,7 +109,7 @@ De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen b
 
 ## Toegangsbeheer voor bronnen bij gegevensinvoer
 
-Machtigingen voor bronnen in gegevensinvoer kunnen worden beheerd in de Adobe-Admin Console. U hebt toegang tot machtigingen via het tabblad *[!UICONTROL Machtigingen]* in een bepaald productprofiel. Via het deelvenster **[!UICONTROL Machtigingen]** bewerken hebt u toegang tot de machtigingen voor bronnen via de menuvermelding voor *[!UICONTROL gegevensinvoer]* . De toestemming van de Bronnen **[!UICONTROL van de]** Mening verleent read-only toegang tot beschikbare bronnen in het lusje van de *[!UICONTROL Catalogus]* en voor authentiek verklaarde bronnen op het *[!UICONTROL Browse]* lusje, terwijl de machtiging **[!UICONTROL Manage Bronnen]** volledige toegang verleent om te lezen, tot stand te brengen, uit te geven, en bronnen onbruikbaar te maken.
+Machtigingen voor bronnen in gegevensinvoer kunnen binnen de Adobe Admin Console worden beheerd. U hebt toegang tot machtigingen via het tabblad *[!UICONTROL Machtigingen]* in een bepaald productprofiel. Via het deelvenster **[!UICONTROL Machtigingen]** bewerken hebt u toegang tot de machtigingen voor bronnen via de menuvermelding voor *[!UICONTROL gegevensinvoer]* . De toestemming van de Bronnen **[!UICONTROL van de]** Mening verleent read-only toegang tot beschikbare bronnen in het lusje van de *[!UICONTROL Catalogus]* en voor authentiek verklaarde bronnen op het *[!UICONTROL Browse]* lusje, terwijl de machtiging **[!UICONTROL Manage Bronnen]** volledige toegang verleent om te lezen, tot stand te brengen, uit te geven, en bronnen onbruikbaar te maken.
 
 De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combinaties van deze toestemmingen:
 
@@ -127,6 +127,6 @@ Door een van de bronnen te gebruiken die als bèta (&quot;Beta&quot;) worden gel
 
 Adobe is niet verplicht het bètaprogramma te onderhouden, te corrigeren, bij te werken, te wijzigen, te wijzigen of anderszins te ondersteunen. U wordt aangeraden voorzichtig te zijn en op geen enkele wijze te vertrouwen op de juiste werking of prestaties van dergelijke bèta en/of begeleidende materialen. De bètaversie wordt beschouwd als vertrouwelijke informatie van Adobe.
 
-Alle &quot;Feedback&quot; (informatie over de bètaversie, inclusief maar niet beperkt tot problemen of fouten die u tegenkomt bij het gebruik van de bètaversie, suggesties, verbeteringen en aanbevelingen) die u aan Adobe hebt gegeven, worden hierbij aan Adobe toegewezen, inclusief alle rechten, titels en interesse in en voor dergelijke feedback.
+Elke &quot;feedback&quot; (informatie over de bètaversie, inclusief maar niet beperkt tot problemen of defecten die u tegenkomt bij het gebruik van de bètaversie, suggesties, verbeteringen en aanbevelingen) die u aan Adobe hebt gegeven, wordt toegewezen aan Adobe, inclusief alle rechten, titel en interesse in en voor dergelijke feedback.
 
 Verzend Open Feedback of maak een Support Ticket om uw suggesties te delen of een bug te melden en een functieverbetering te zoeken.
