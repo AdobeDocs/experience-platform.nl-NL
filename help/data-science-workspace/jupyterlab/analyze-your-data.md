@@ -76,7 +76,7 @@ Nu gaan we verder met het openen van [!DNL Experience Platform] gegevens.
 
 ##### Op gegevensset-id
 
-Voor deze sectie, gebruiken wij de Detailhandel dataset van de Verkoop die de zelfde dataset is die in de de steekproefnotitie van de Verkoop wordt gebruikt.
+Voor deze sectie, gebruiken wij de Detailhandel dataset van de Verkoop die de zelfde dataset is in de de steekproefnotitie van de Verkoop wordt gebruikt.
 
 In ons Jupyter-notebook hebben we toegang tot onze gegevens via het tabblad **Gegevens** aan de linkerkant. Als u op het tabblad klikt, wordt een lijst met gegevenssets weergegeven.
 
