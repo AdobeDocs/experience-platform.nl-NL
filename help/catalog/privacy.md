@@ -22,14 +22,14 @@ Dit document behandelt essentiële concepten met betrekking tot het verwerken va
 
 U wordt aangeraden de volgende [!DNL Experience Platform] services goed te begrijpen voordat u deze handleiding leest:
 
-* [!DNL Privacy Service](../privacy-service/home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, niet te verkopen of te verwijderen.
+* [!DNL Privacy Service](../privacy-service/home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, uit de handel te nemen of te verwijderen.
 * [!DNL Catalog Service](home.md): The system of record for data location and lineage within [!DNL Experience Platform]. Biedt een API die kan worden gebruikt om metagegevens van gegevenssets bij te werken.
 * [!DNL Experience Data Model (XDM) System](../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
 * [!DNL Identity Service](../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
 
 ## Naamruimten voor identiteiten {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] biedt een brug tussen identiteitsgegevens van klanten op verschillende systemen en apparaten. [!DNL Identity Service] gebruikt **[!UICONTROL naamruimten]** om context aan identiteitswaarden te verstrekken door hen met hun systeem van oorsprong te verbinden. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;E-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] biedt een brug tussen identiteitsgegevens van klanten op verschillende systemen en apparaten. [!DNL Identity Service] gebruikt **[!UICONTROL naamruimten]** om context aan identiteitswaarden te verstrekken door hen met hun systeem van oorsprong te verbinden. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;e-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
 
 [!DNL Identity Service] onderhoudt een opslag van algemeen gedefinieerde (standaard) en door de gebruiker gedefinieerde (aangepaste) naamruimten. Standaard naamruimten zijn beschikbaar voor alle organisaties (bijvoorbeeld E-mail en ECID), terwijl uw organisatie aangepaste naamruimten kan maken die aan de specifieke behoeften voldoen.
 
@@ -68,7 +68,7 @@ Als u de juiste velden in het schema hebt ingesteld als identiteitsvelden, kunt 
 >
 > Deze sectie omvat vraag aan de Registratie API van het Schema. Voor belangrijke informatie met betrekking tot het gebruiken van API, met inbegrip van het kennen van uw `{TENANT_ID}` en het concept containers, zie de [begonnen](../xdm/api/getting-started.md) sectie van de ontwikkelaarsgids.
 
-U kunt een identiteitsbeschrijver aan het schema van XDM van een dataset toevoegen door een POST- verzoek aan het `/descriptors` eindpunt in [!DNL Schema Registry] API te doen.
+U kunt een identiteitsbeschrijver aan het schema van XDM van een dataset toevoegen door een verzoek van de POST aan het `/descriptors` eindpunt in [!DNL Schema Registry] API te doen.
 
 **API-indeling**
 
