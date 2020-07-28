@@ -49,7 +49,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot [!DNL F
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -59,9 +59,9 @@ De eerste stap in het creëren van een verbinding van de datasetbasis is een ree
 
 **API-indeling**
 
-Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor een gegevenssetbasisverbinding opzoeken door een GET verzoek uit te voeren en vraagparameters te gebruiken.
+Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor een gegevenssetbasisverbinding opzoeken door een verzoek van de GET uit te voeren en vraagparameters te gebruiken.
 
-Het verzenden van een GET verzoek zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` om informatie voor uw gegevenssetbasisverbinding te verkrijgen.
+Het verzenden van een verzoek van de GET zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` om informatie voor uw gegevenssetbasisverbinding te verkrijgen.
 
 ```http
 GET /connectionSpecs
