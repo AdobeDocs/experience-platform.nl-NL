@@ -57,7 +57,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -73,7 +73,7 @@ POST /connections
 
 **Verzoek**
 
-Om een SQL verbinding van de Server tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het POST- verzoek worden verstrekt. De verbindingsspecificatieidentiteitskaart voor SQL Server is `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`.
+Om een SQL verbinding van de Server tot stand te brengen, moet zijn unieke identiteitskaart van verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatieidentiteitskaart voor SQL Server is `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`.
 
 ```shell
 curl -X POST \
@@ -105,7 +105,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw database te verkennen in de volgende zelfstudie.
+Een succesvolle reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw database te verkennen in de volgende zelfstudie.
 
 ```json
 {
