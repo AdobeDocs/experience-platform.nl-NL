@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Overzicht van toegangsbeheer
 
-Toegangsbeheer voor [!DNL Experience Platform] is beschikbaar via de [Adobe Admin Console](https://adminconsole.adobe.com). Deze functionaliteit gebruikt productprofielen in [!DNL Admin Console], die gebruikers met toestemmingen en zandbakken verbinden.
+Toegangsbeheer voor [!DNL Experience Platform] wordt verstrekt door [Adobe Admin Console](https://adminconsole.adobe.com). Deze functionaliteit gebruikt productprofielen in [!DNL Admin Console], die gebruikers met toestemmingen en zandbakken verbinden.
 
 ## Toegangsbeheerhiërarchie en -workflow
 
-Om toegangsbeheer voor te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een [!DNL Experience Platform][!DNL Experience Platform] productintegratie heeft. De minimale rol die machtigingen verleent of intrekt, is een beheerder **[!UICONTROL van het]** productprofiel. Andere beheerdersrollen die machtigingen kunnen beheren, zijn **[!UICONTROL productbeheerders]** (die alle profielen binnen een product kunnen beheren) en **[!UICONTROL systeembeheerders]** (geen beperkingen). Zie het artikel in Adobe Help Center over [beheerrollen](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie.
+Om toegangsbeheer voor te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een [!DNL Experience Platform][!DNL Experience Platform] productintegratie heeft. De minimale rol die machtigingen verleent of intrekt, is een beheerder **[!UICONTROL van het]** productprofiel. Andere beheerdersrollen die machtigingen kunnen beheren, zijn **[!UICONTROL productbeheerders]** (die alle profielen binnen een product kunnen beheren) en **[!UICONTROL systeembeheerders]** (geen beperkingen). Zie het Adobe Help Center-artikel over [administratieve rollen](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie.
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ Om toegangsbeheer voor te vormen, moet u beheerdervoorrechten voor een organisat
 Een werkschema op hoog niveau voor het verkrijgen en toewijzen van toegangsmachtigingen kan als volgt worden samengevat:
 
 - Nadat u zich hebt geabonneerd op een Adobe Experience Platform, wordt een e-mail verzonden naar de beheerder die is opgegeven in het registratieformulier.
-- De beheerder meldt zich aan bij de Admin Console [van](#adobe-admin-console) Adobe en selecteert **Adobe Experience Platform** van de lijst van producten op de overzichtspagina.
+- De beheerder logt binnen aan [Adobe Admin Console](#adobe-admin-console) en selecteert **Adobe Experience Platform** van de lijst van producten op de overzichtspagina.
 - De beheerder kan de standaardprofielen [van het](#product-profiles) product bekijken of nieuwe profielen van het klantenproduct tot stand brengen zoals nodig.
 - De beheerder kan de machtigingen en gebruikers voor bestaande productprofielen bewerken.
 - Wanneer de beheerder een productprofiel maakt of bewerkt, voegt hij gebruikers aan het profiel toe met behulp van het tabblad **[!UICONTROL Gebruikers]** en verleent hij deze gebruikers machtigingen (zoals &quot;Datasetslezen&quot; of &quot;Schema&#39;sbeheren&quot;) via het tabblad **[!UICONTROL machtigingen]** . Op dezelfde manier kan de beheerder toegang tot sandboxen toewijzen via hetzelfde machtigingentabblad.
@@ -39,7 +39,7 @@ Alle aanroepen van [!DNL Experience Platform] API&#39;s worden gevalideerd voor 
 
 ## Adobe Admin Console
 
-Adobe Admin Console biedt een centrale locatie voor het beheer van Adobe-productrechten en -toegang voor uw organisatie. Via de console kunt u groepen gebruikers toegangsmachtigingen verlenen voor verschillende [!DNL Platform] mogelijkheden, zoals &quot;[!UICONTROL Datasets]beheren&quot;, &quot;Datasetsweergeven&quot; of &quot;Profielenbeheren&quot;.
+Adobe Admin Console biedt een centrale locatie voor het beheer van Adobe-productrechten en toegang voor uw organisatie. Via de console kunt u groepen gebruikers toegangsmachtigingen verlenen voor verschillende [!DNL Platform] mogelijkheden, zoals &quot;[!UICONTROL Datasets]beheren&quot;, &quot;Datasetsweergeven&quot; of &quot;Profielenbeheren&quot;.
 
 ### Productprofielen
 
