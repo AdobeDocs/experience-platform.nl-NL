@@ -63,5 +63,5 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 
 ## Verbinding maken [!DNL Amazon Kinesis] met [!DNL Platform] de gebruikersinterface
 
-- [Een Amazon Kinesis-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [Een Amazon Kinesis-bronaansluiting maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
