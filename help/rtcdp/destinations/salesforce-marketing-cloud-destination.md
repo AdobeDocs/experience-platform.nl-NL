@@ -1,8 +1,8 @@
 ---
-title: Salesforce Marketing Cloud
-seo-title: Salesforce Marketing Cloud
-description: Salesforce Marketing Cloud is een digitale marketingsuite die voorheen ExactTarget werd genoemd en waarmee u ritten kunt maken en aanpassen voor bezoekers en klanten om hun ervaring aan te passen.
-seo-description: Salesforce Marketing Cloud is een digitale marketingsuite die voorheen ExactTarget werd genoemd en waarmee u ritten kunt maken en aanpassen voor bezoekers en klanten om hun ervaring aan te passen.
+title: Salesforce-Marketing Cloud
+seo-title: Salesforce-Marketing Cloud
+description: De Marketing Cloud van Salesforce is een digitale marketing reeks die vroeger als ExactTarget wordt bekend die u toestaat om reizen voor bezoekers en klanten te bouwen en aan te passen om hun ervaring te personaliseren.
+seo-description: De Marketing Cloud van Salesforce is een digitale marketing reeks die vroeger als ExactTarget wordt bekend die u toestaat om reizen voor bezoekers en klanten te bouwen en aan te passen om hun ervaring te personaliseren.
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 [!DNL Salesforce Marketing Cloud](https://www.salesforce.com/products/marketing-cloud/email-marketing/) is een digitale marketingsuite die voorheen ExactTarget werd genoemd. Met deze suite kunt u reizen maken en aanpassen voor bezoekers en klanten om hun ervaring aan te passen.
 
-Als u segmentgegevens naar wilt verzenden, moet u eerst de bestemming [!DNL Salesforce Marketing Cloud]in Adobe Real-time CDP [verbinden en vervolgens een gegevensimport](#connect-destination) [instellen vanaf uw opslaglocatie naar](#import-data-into-salesforce) [!DNL Salesforce Marketing Cloud].
+Om segmentgegevens naar te verzenden [!DNL Salesforce Marketing Cloud], moet u eerst de bestemming [in Adobe in real time CDP](#connect-destination) verbinden, en dan [opstelling een gegevensinvoer](#import-data-into-salesforce) van uw opslagplaats in [!DNL Salesforce Marketing Cloud].
 
 ## Connect-doel {#connect-destination}
 
@@ -49,4 +49,4 @@ Wanneer het [activeren van segmenten](/help/rtcdp/destinations/activate-destinat
 
 ## Gegevensimport instellen in [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-Nadat u CDP in realtime hebt verbonden met uw Amazon S3- of SFTP-opslag, moet u de gegevensimport instellen vanaf uw opslaglocatie naar [!DNL Salesforce Marketing Cloud]. Zie Abonnees [importeren in Marketing Cloud vanuit een bestand](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) in de [!DNL Salesforce Help Center]app voor meer informatie over het uitvoeren van dit proces.
+Nadat u CDP in realtime hebt verbonden met uw Amazon S3- of SFTP-opslag, moet u de gegevensimport instellen vanaf uw opslaglocatie naar [!DNL Salesforce Marketing Cloud]. Leren hoe te om dit te verwezenlijken, zie het [Invoeren van Abonnees in Marketing Cloud van een Dossier](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) in [!DNL Salesforce Help Center].
