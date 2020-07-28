@@ -25,7 +25,7 @@ Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [
 
 ## Verzoeken om verwijderen weergeven
 
-Een verwijderingsverzoek is een langdurig, asynchroon proces, wat betekent dat uw organisatie mogelijk meerdere verwijderingsverzoeken tegelijk uitvoert. Om alle schrappingsverzoeken te bekijken die uw organisatie momenteel loopt, kunt u een GET verzoek aan het `/system/jobs` eindpunt uitvoeren.
+Een verwijderingsverzoek is een langdurig, asynchroon proces, wat betekent dat uw organisatie mogelijk meerdere verwijderingsverzoeken tegelijk uitvoert. Om alle schrappingsverzoeken te bekijken die uw organisatie momenteel loopt, kunt u een verzoek van de GET aan het `/system/jobs` eindpunt uitvoeren.
 
 U kunt facultatieve vraagparameters ook gebruiken om de lijst van schrappingsverzoeken te filtreren die in de reactie zijn teruggekeerd. Als u meerdere parameters wilt gebruiken, scheidt u elke parameter met een en-teken (&amp;).
 
@@ -99,11 +99,11 @@ De reactie bevat een array &#39;children&#39; met een object voor elke verwijder
 
 ## Een verwijderaanvraag maken {#create-a-delete-request}
 
-Het in werking stellen van een nieuw schrappingsverzoek wordt gedaan door een POST- verzoek aan het `/systems/jobs` eindpunt, waar identiteitskaart van de te schrappen dataset of partij in het lichaam van het verzoek wordt verstrekt.
+Het in werking stellen van een nieuw schrappingsverzoek wordt gedaan door een verzoek van de POST aan het `/systems/jobs` eindpunt, waar identiteitskaart van de te schrappen dataset of partij in het lichaam van het verzoek wordt verstrekt.
 
 ### Een gegevensset verwijderen
 
-Om een dataset te schrappen, moet dataset identiteitskaart in het lichaam van het POST- verzoek worden omvat. Deze actie zal ALLE gegevens voor een bepaalde dataset schrappen. [!DNL Experience Platform] staat u toe om datasets te schrappen die op zowel verslag als tijdreeksschema&#39;s worden gebaseerd.
+Om een dataset te schrappen, moet dataset identiteitskaart in het lichaam van het verzoek van de POST worden omvat. Deze actie zal ALLE gegevens voor een bepaalde dataset schrappen. [!DNL Experience Platform] staat u toe om datasets te schrappen die op zowel verslag als tijdreeksschema&#39;s worden gebaseerd.
 
 >[!CAUTION]
 > Wanneer het proberen om een [!DNL Profile]-toegelaten dataset te schrappen gebruikend [!DNL Experience Platform] UI, wordt de dataset onbruikbaar gemaakt voor opname maar zal niet worden geschrapt tot een schrappingsverzoek wordt gecreeerd gebruikend API. Zie de [bijlage](#appendix) bij dit document voor meer informatie.
@@ -152,11 +152,11 @@ Een geslaagde reactie retourneert de details van het nieuwe verwijderingsverzoek
 | Eigenschap | Beschrijving |
 |---|---|
 | `id` | De unieke, door het systeem gegenereerde, alleen-lezen-id van de verwijderaanvraag. |
-| `dataSetId` | De id van de gegevensset, zoals opgegeven in het POST-verzoek. |
+| `dataSetId` | Identiteitskaart van de dataset, zoals die in het verzoek van de POST wordt gespecificeerd. |
 
 ### Een batch verwijderen
 
-Om een partij te kunnen verwijderen, moet de partij-ID worden opgenomen in de hoofdtekst van de POST-aanvraag. Gelieve te worden geadviseerd dat u geen partijen voor datasets kunt schrappen die op verslagschema&#39;s worden gebaseerd. Alleen batches voor gegevenssets op basis van tijdreeksschema&#39;s mogen worden verwijderd.
+Om een partij te kunnen verwijderen, moet de partij-ID worden opgenomen in de hoofdtekst van de aanvraag voor de POST. Gelieve te worden geadviseerd dat u geen partijen voor datasets kunt schrappen die op verslagschema&#39;s worden gebaseerd. Alleen batches voor gegevenssets op basis van tijdreeksschema&#39;s mogen worden verwijderd.
 
 >[!NOTE]
 > De reden u niet batches voor datasets kunt schrappen die op verslagschema&#39;s worden gebaseerd is omdat de reeksen van de recordtype dataset vorige verslagen beschrijven en daarom niet &quot;undone&quot;of geschrapt kunnen zijn. De enige manier om het effect van onjuiste partijen voor datasets te verwijderen die op verslagschema&#39;s worden gebaseerd is de partij met de correcte gegevens opnieuw op te nemen om de onjuiste verslagen te beschrijven.
@@ -207,7 +207,7 @@ Een geslaagde reactie retourneert de details van het nieuwe verwijderingsverzoek
 | Eigenschap | Beschrijving |
 |---|---|
 | `id` | De unieke, door het systeem gegenereerde, alleen-lezen-id van de verwijderaanvraag. |
-| `batchId` | De id van de batch, zoals opgegeven in de POST-aanvraag. |
+| `batchId` | De id van de batch, zoals opgegeven in het verzoek om POST. |
 
 Als u probeert om een schrappingsverzoek voor een partij van de dataset van het Verslag in werking te stellen, zult u een fout op 400 niveau ontmoeten, gelijkend op het volgende:
 
@@ -227,7 +227,7 @@ Als u probeert om een schrappingsverzoek voor een partij van de dataset van het 
 
 ## Een specifiek verwijderingsverzoek weergeven {#view-a-specific-delete-request}
 
-Om een specifiek schrappingsverzoek, met inbegrip van details zoals zijn status te bekijken, kunt u een raadpleging (KRIJGEN) verzoek aan het `/system/jobs` eindpunt uitvoeren en identiteitskaart van het schrappingsverzoek in de weg omvatten.
+Om een specifiek schrappingsverzoek, met inbegrip van details zoals zijn status te bekijken, kunt u een raadpleging (GET) verzoek aan het `/system/jobs` eindpunt uitvoeren en identiteitskaart van het schrappingsverzoek in de weg omvatten.
 
 **API-indeling**
 
@@ -302,7 +302,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege antwoordinstantie. U kunt bevestigen het verzoek werd geschrapt door een GET verzoek uit te voeren om het schrappingsverzoek door zijn identiteitskaart te bekijken. Dit zou een Status 404 van HTTP (niet Gevonden) moeten terugkeren, erop wijzend dat het schrappingsverzoek werd verwijderd.
+Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege antwoordinstantie. U kunt bevestigen dat de aanvraag is verwijderd door een GET-aanvraag uit te voeren om de verwijderaanvraag met de id weer te geven. Dit zou een Status 404 van HTTP (niet Gevonden) moeten terugkeren, erop wijzend dat het schrappingsverzoek werd verwijderd.
 
 ## Volgende stappen
 
