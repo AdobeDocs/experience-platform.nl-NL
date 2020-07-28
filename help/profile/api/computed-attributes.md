@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op basis van andere waarden, berekeningen en expressies. De berekende attributen werken op het profielniveau, betekenend kunt u waarden over alle verslagen en gebeurtenissen bijeenvoegen.
 
-Elk berekend kenmerk bevat een expressie, of &#39;regel&#39;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren.
+Elk berekend kenmerk bevat een expressie, ofwel &quot;rule&quot;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren.
 
 Deze gids zal u helpen om gegevens verwerkte attributen binnen Adobe Experience Platform beter te begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisCRUD verrichtingen gebruikend het `/config/computedAttributes` eindpunt.
 
@@ -48,7 +48,7 @@ Bij gebruik van berekende kenmerken kan het gaan om eenvoudige berekeningen tot 
 Om een gegevens verwerkt attribuut te vormen, moet u eerst het gebied identificeren dat de gegevens verwerkte attributenwaarde zal houden. Dit veld kan worden gemaakt met een mix om het veld toe te voegen aan een bestaand schema of door een veld te selecteren dat u al in een schema hebt gedefinieerd.
 
 >[!NOTE]
->Berekende kenmerken kunnen niet worden toegevoegd aan velden in door Adobe gedefinieerde combinaties. Het veld moet zich binnen de `tenant` naamruimte bevinden. Dit betekent dat het een veld moet zijn dat u definieert en toevoegt aan een schema.
+>Berekende kenmerken kunnen niet worden toegevoegd aan velden binnen door Adobe gedefinieerde combinaties. Het veld moet zich binnen de `tenant` naamruimte bevinden. Dit betekent dat het een veld moet zijn dat u definieert en toevoegt aan een schema.
 
 Om een gegevens verwerkt attributengebied met succes te bepalen, moet het schema voor worden toegelaten [!DNL Profile] en als deel van het verenigingsschema voor de klasse verschijnen waarop het schema wordt gebaseerd. Voor meer informatie over [!DNL Profile]-toegelaten schema&#39;s en vakbonden, te herzien gelieve de sectie van de sectie van de [!DNL Schema Registry] ontwikkelaarsgids over het [toelaten van een schema voor Profiel en het bekijken verenigingsschema](../../xdm/api/getting-started.md). Het wordt ook geadviseerd om de [sectie over unies](../../xdm/schema/composition.md) in de documentatie van de schemacompositie te herzien.
 
@@ -110,7 +110,7 @@ U kunt nu op **[!UICONTROL Opslaan]** klikken om het bijgewerkte schema op te sl
 
 Met uw gegevens verwerkte kenmerkgebied geïdentificeerd, en bevestiging dat het schema voor wordt toegelaten [!DNL Profile], kunt u een gegevens verwerkt attribuut nu vormen.
 
-Begin door een POST- verzoek aan het `/config/computedAttributes` eindpunt met een verzoeklichaam te maken dat de details van de gegevens verwerkte attributen bevat die u wenst om tot stand te brengen.
+Begin door een verzoek van de POST aan het `/config/computedAttributes` eindpunt met een verzoeklichaam te doen dat de details van de gegevens verwerkte attributen bevat die u wenst om tot stand te brengen.
 
 **API-indeling**
 
@@ -223,7 +223,7 @@ De stappen voor zowel het vermelden van alle gegevens verwerkte attributen als h
 
 ### Berekende kenmerken weergeven {#list-computed-attributes}
 
-Uw organisatie IMS kan veelvoudige gegevens verwerkte attributen tot stand brengen, en het uitvoeren van een GET verzoek aan het `/config/computedAttributes` eindpunt staat u toe om van alle bestaande gegevens verwerkte attributen voor uw organisatie een lijst te maken.
+Uw organisatie IMS kan veelvoudige gegevens verwerkte attributen tot stand brengen, en het uitvoeren van een verzoek van de GET aan het `/config/computedAttributes` eindpunt staat u toe om van alle bestaande gegevens verwerkte attributen voor uw organisatie een lijst te maken.
 
 **API-indeling**
 
@@ -357,11 +357,11 @@ De reactie bevat ook een `children` array die bestaat uit een of meer objecten, 
 | `_page.pageSize` | Het aantal berekende kenmerken dat op deze resultatenpagina wordt geretourneerd. Als `pageSize` gelijk is aan `totalCount`, betekent dit dat er slechts één pagina met resultaten is en alle berekende kenmerken zijn geretourneerd. Als deze niet gelijk zijn, zijn er extra pagina&#39;s met resultaten die kunnen worden geopend. Zie `_links.next` voor meer informatie. |
 | `children` | Een array die bestaat uit een of meer objecten, die elk de details van één berekend kenmerk bevatten. Als er geen berekende kenmerken zijn gedefinieerd, is de `children` array leeg. |
 | `id` | Een unieke, alleen-lezen, door het systeem gegenereerde waarde die automatisch wordt toegewezen aan een berekend kenmerk wanneer dit wordt gemaakt. Voor meer informatie over de componenten van een berekend kenmerkobject raadpleegt u de sectie over het [maken van een berekend kenmerk](#create-a-computed-attribute) eerder in deze zelfstudie. |
-| `_links.next` | Als één pagina met berekende kenmerken wordt geretourneerd, `_links.next` is dit een leeg object, zoals in de voorbeeldreactie hierboven wordt getoond. Als uw organisatie vele gegevens verwerkte attributen heeft, zullen zij op veelvoudige pagina&#39;s worden teruggekeerd die u kunt toegang hebben door een GET verzoek aan de `_links.next` waarde te doen. |
+| `_links.next` | Als één pagina met berekende kenmerken wordt geretourneerd, `_links.next` is dit een leeg object, zoals in de voorbeeldreactie hierboven wordt getoond. Als uw organisatie veel berekende kenmerken heeft, worden deze geretourneerd op meerdere pagina&#39;s die u kunt openen door een GET-aanvraag voor de `_links.next` waarde in te dienen. |
 
 ### Een berekend kenmerk weergeven {#view-a-computed-attribute}
 
-U kunt een specifiek gegevens verwerkt attribuut ook bekijken door een GET verzoek aan het `/config/computedAttributes` eindpunt te doen en met inbegrip van gegevens verwerkte kenmerkidentiteitskaart in de verzoekweg.
+U kunt een specifiek gegevens verwerkt attribuut ook bekijken door een verzoek van de GET aan het `/config/computedAttributes` eindpunt en met inbegrip van gegevens verwerkte kenmerkidentiteitskaart in de verzoekweg te richten.
 
 **API-indeling**
 
@@ -432,7 +432,7 @@ curl -X GET \
 
 ## Een berekend kenmerk bijwerken
 
-Mocht u vinden dat u een bestaand gegevens verwerkt attribuut moet bijwerken, kan dit worden gedaan door een verzoek van de PATCH aan het `/config/computedAttributes` eindpunt en met inbegrip van identiteitskaart van gegevens verwerkte toegeschreven die u in de verzoekweg wenst bij te werken.
+Mocht u vinden dat u een bestaand gegevens verwerkt attribuut moet bijwerken, kan dit worden gedaan door een verzoek van PATCH aan het `/config/computedAttributes` eindpunt en met inbegrip van identiteitskaart van berekende toegeschreven die u wenst om in de verzoekweg bij te werken.
 
 **API-indeling**
 
@@ -476,7 +476,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-Een geslaagde update retourneert HTTP Status 204 (Geen inhoud) en een lege antwoordinstantie. Als u wilt bevestigen dat de update succesvol was, kunt u een GET verzoek uitvoeren om het berekende attribuut door zijn identiteitskaart te bekijken.
+Een geslaagde update retourneert HTTP Status 204 (Geen inhoud) en een lege antwoordinstantie. Als u wilt bevestigen dat de update succesvol was, kunt u een verzoek van de GET uitvoeren om het gegevens verwerkte attribuut door zijn identiteitskaart te bekijken.
 
 ## Een berekend kenmerk verwijderen
 
@@ -485,7 +485,7 @@ Het is ook mogelijk om een berekend attribuut te schrappen gebruikend API. Dit w
 >[!Nofferte]
 >
 >
->Wees voorzichtig bij het verwijderen van een kenmerk dat u hebt berekend, omdat het in meerdere schema&#39;s wordt gebruikt en de DELETE bewerking niet ongedaan kan worden gemaakt.
+>Wees voorzichtig bij het verwijderen van een kenmerk dat u hebt berekend, omdat het in meerdere schema&#39;s wordt gebruikt en de bewerking DELETE niet ongedaan kan worden gemaakt.
 
 **API-indeling**
 
@@ -510,7 +510,7 @@ curl -X DELETE \
 
 **Antwoord**
 
-Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege antwoordinstantie. Om de schrapping te bevestigen succesvol was, kunt u een GET verzoek uitvoeren om het gegevens verwerkte attribuut door zijn identiteitskaart te zoeken. Als het kenmerk is verwijderd, ontvangt u een HTTP Status 404 (Not Found)-fout.
+Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege antwoordinstantie. Om de schrapping te bevestigen succesvol was, kunt u een verzoek van de GET om het gegevens verwerkte attribuut door zijn identiteitskaart uit te voeren. Als het kenmerk is verwijderd, ontvangt u een HTTP Status 404 (Not Found)-fout.
 
 ## Volgende stappen
 
