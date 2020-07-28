@@ -18,7 +18,7 @@ Een model is een geval van een machine het leren recept dat gebruikend historisc
 
 ## Een lijst met modellen ophalen
 
-U kunt een lijst van Modeldetails terugwinnen die tot alle Modellen behoren door één enkele GET verzoek aan /models uit te voeren. Standaard wordt in deze lijst de volgorde van het oudste gemaakte model gewijzigd en worden de resultaten beperkt tot 25. U kunt verkiezen om resultaten te filtreren door sommige vraagparameters te specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+U kunt een lijst van Modeldetails terugwinnen die tot alle Modellen behoren door één enkel verzoek van de GET aan /models uit te voeren. Standaard wordt in deze lijst de volgorde van het oudste gemaakte model gewijzigd en worden de resultaten beperkt tot 25. U kunt verkiezen om resultaten te filtreren door sommige vraagparameters te specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
 
 **API-indeling**
 
@@ -100,7 +100,7 @@ Een geslaagde reactie retourneert een payload die de details van uw modellen bev
 
 ## Een specifiek model ophalen
 
-U kunt een lijst van Modeldetails terugwinnen die tot een bepaald Model behoren door één enkele GET verzoek uit te voeren en een geldige Modelidentiteitskaart in de verzoekweg te verstrekken. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+U kunt een lijst ophalen met Modeldetails die bij een bepaald model horen door één aanvraag voor een GET uit te voeren en een geldige model-id op te geven in het aanvraagpad. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
 
 **API-indeling**
 
@@ -164,7 +164,7 @@ Een geslaagde reactie retourneert een payload die de details van uw model bevat,
 
 ## Een vooraf gegenereerd model registreren {#register-a-model}
 
-U kunt een vooraf gegenereerd model registreren door een POST-verzoek in te dienen bij het `/models` eindpunt. Als u uw model wilt registreren, moeten de waarden van het `modelArtifact` bestand en de `model` eigenschap worden opgenomen in de hoofdtekst van de aanvraag.
+U kunt een vooraf gegenereerd model registreren door een POST aan te vragen bij het `/models` eindpunt. Als u uw model wilt registreren, moeten de waarden van het `modelArtifact` bestand en de `model` eigenschap worden opgenomen in de hoofdtekst van de aanvraag.
 
 **API-indeling**
 
@@ -218,11 +218,11 @@ Een geslaagde reactie retourneert een payload die de details van uw model bevat,
 
 ## Model op id bijwerken
 
-U kunt een bestaand Model bijwerken door zijn eigenschappen door een PPUT- verzoek te beschrijven dat identiteitskaart van het doelmodel in de verzoekweg omvat en een nuttige lading te verstrekken JSON die bijgewerkte eigenschappen bevat.
+U kunt een bestaand Model bijwerken door zijn eigenschappen door een verzoek van de PUT te beschrijven dat identiteitskaart van het doelModel in de verzoekweg omvat en een nuttige lading te verstrekken JSON die bijgewerkte eigenschappen bevat.
 
 >[!TIP]
 >
->Om ervoor te zorgen dat deze PUT-aanvraag succesvol is, wordt u aangeraden eerst een GET-aanvraag uit te voeren om het Model via ID op te halen. Vervolgens past u het geretourneerde JSON-object aan en werkt u dit bij en past u het gehele gewijzigde JSON-object toe als de payload voor de PUT-aanvraag.
+>Om ervoor te zorgen dat deze PUT-aanvraag succesvol is, wordt u aangeraden eerst een GET-aanvraag uit te voeren om het model op id op te halen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 **API-indeling**
 
@@ -281,7 +281,7 @@ Een geslaagde reactie retourneert een lading die de bijgewerkte gegevens van de 
 
 ## Model op id verwijderen
 
-U kunt één enkel Model schrappen door een DELETE verzoek uit te voeren die identiteitskaart van het doelmodel in de verzoekweg omvat.
+U kunt één enkel Model schrappen door een DELETE verzoek uit te voeren die identiteitskaart van het doelModel in de verzoekweg omvat.
 
 **API-indeling**
 
@@ -373,7 +373,7 @@ Een geslaagde reactie retourneert een payload die een JSON-object met de informa
 
 ## Een lijst met transcoderingen ophalen voor een model {#retrieve-transcoded-model-list}
 
-U kunt een lijst van transcoderingen terugwinnen die op een Model door een GET verzoek met uw `{MODEL_ID}`zijn uitgevoerd.
+U kunt een lijst van transcoderingen terugwinnen die op een Model zijn uitgevoerd door een verzoek van de GET met uw `{MODEL_ID}`.
 
 **API-indeling**
 
@@ -433,7 +433,7 @@ Een geslaagde reactie retourneert een payload die een JSON-object bevat met een 
 
 ## Een specifiek getranscodeerd model ophalen {#retrieve-transcoded-model}
 
-U kunt een specifiek getranscodeerd Model terugwinnen door een GET verzoek met uw `{MODEL_ID}` en identiteitskaart van een getranscodeerd model uit te voeren.
+U kunt een specifiek getranscodeerd Model terugwinnen door een verzoek van de GET met uw `{MODEL_ID}` en identiteitskaart van een getranscodeerd model uit te voeren.
 
 **API-indeling**
 
