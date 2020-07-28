@@ -57,7 +57,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief bronconnectors, zijn geïs
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 - Inhoudstype: `application/json`
 
@@ -73,7 +73,7 @@ POST /connections
 
 **Verzoek**
 
-Om een verbinding van HP tot stand te brengen, moet zijn unieke identiteitskaart van verbindingsspecificiteit als deel van het POST- verzoek worden verstrekt. [!DNL Vertica] De verbindingsspecificatieidentiteitskaart voor HP [!DNL Vertica] is `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`.
+Om een verbinding van HP tot stand te brengen, moet zijn unieke verbindingsSPC identiteitskaart als deel van het verzoek van de POST worden verstrekt. [!DNL Vertica] De verbindingsspecificatieidentiteitskaart voor HP [!DNL Vertica] is `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`.
 
 ```shell
 curl -X POST \
@@ -106,7 +106,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
 ```json
 {
