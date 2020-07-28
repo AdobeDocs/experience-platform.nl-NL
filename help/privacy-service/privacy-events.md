@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Abonneren op [!DNL Privacy Events]
 
-[!DNL Privacy Events] Dit zijn berichten van Adobe Experience Platform [!DNL Privacy Service], die Adobe I/O-gebeurtenissen gebruiken die naar een geconfigureerde webhaak worden verzonden om een efficiënte automatisering van taakaanvragen te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een werkstroom is bereikt.
+[!DNL Privacy Events] zijn berichten die door Adobe Experience Platform worden verstrekt [!DNL Privacy Service], die hefboomwerking I/O Gebeurtenissen die van Adobe naar een gevormde webhaak worden verzonden om efficiënte baanverzoekautomatisering te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een werkstroom is bereikt.
 
 Er zijn momenteel vier typen meldingen die betrekking hebben op de levenscyclus van de privacytaakaanvraag:
 
@@ -25,7 +25,7 @@ Er zijn momenteel vier typen meldingen die betrekking hebben op de levenscyclus 
 | Product voltooid | Een van de oplossingen voor deze taak heeft zijn werk voltooid. |
 | Productfout | Een van de oplossingen rapporteerde een fout tijdens de verwerking van het verzoek. |
 
-Dit document bevat stappen voor het instellen van een integratie voor [!DNL Privacy Service] meldingen in Adobe I/O. Voor een overzicht op hoog niveau van [!DNL Privacy Service] en zijn eigenschappen, zie het overzicht [van de](home.md)Privacy Service.
+Dit document bevat stappen voor het instellen van een integratie voor [!DNL Privacy Service] meldingen binnen Adobe I/O. Voor een overzicht op hoog niveau van [!DNL Privacy Service] en zijn eigenschappen, zie het overzicht [van de](home.md)Privacy Service.
 
 ## Aan de slag
 
