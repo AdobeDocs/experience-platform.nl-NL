@@ -53,7 +53,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -69,7 +69,7 @@ POST /connections
 
 **Verzoek**
 
-Als u een [!DNL GreenPlum] verbinding wilt maken, moet de unieke specificatie-id van de verbinding worden opgegeven als onderdeel van de POST-aanvraag. De verbindingsspecificatie-id voor [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b`.
+Om een [!DNL GreenPlum] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b`.
 
 ```shell
 curl -X POST \
