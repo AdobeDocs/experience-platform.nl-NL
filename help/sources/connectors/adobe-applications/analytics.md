@@ -14,13 +14,13 @@ ht-degree: 2%
 
 # Analytics Data Connector
 
-Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de Analytics Data Connector (ADC). ADC streamt gegevens die door Adobe Analytics zijn verzameld naar Platform in real-time, waarbij Analytics-gegevens met SCDS-indeling worden omgezet in XDM-velden (Experience Data Model) voor gebruik door Platform.
+Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de Analytics Data Connector (ADC). ADC stroomt gegevens die door Adobe Analytics aan Platform in real time worden verzameld, die SCDS-gevormde gegevens van Analytics in de gebieden van het Model van de Gegevens van de Ervaring (XDM) voor consumptie door Platform omzetten.
 
-Dit document biedt een overzicht van Adobe Analytics en beschrijft de gebruiksscenario&#39;s voor Analytics-gegevens.
+Dit document biedt een overzicht van Adobe Analytics en beschrijft de gebruiksgevallen voor Analytics-gegevens.
 
 ## Adobe Analytics- en Analytics-gegevens
 
-Adobe Analytics is een krachtige engine waarmee u meer kunt leren over uw klanten, hoe ze communiceren met uw wegeigenschappen, kunt zien waar uw uitgaven voor digitale marketing effectief zijn en verbeteringsgebieden kunt identificeren. Adobe Analytics verwerkt biljoenen webtransacties per jaar en ADC stelt u in staat om eenvoudig gebruik te maken van deze rijke gedragsgegevens en het Real-time klantprofiel in een paar minuten te verrijken.
+Adobe Analytics is een krachtige motor om u te helpen meer over uw klanten te leren, hoe zij met uw Web-eigenschappen in wisselwerking staan, te zien waar uw digitale marketing uitgaven efficiënt is, en gebieden van verbetering te identificeren. Adobe Analytics verwerkt biljoenen webtransacties per jaar en ADC stelt u in staat om eenvoudig gebruik te maken van deze rijke gedragsgegevens en het Real-time Klantprofiel binnen enkele minuten te verrijken.
 
 ![](./images/analytics-data-experience-platform.png)
 
@@ -38,9 +38,9 @@ Zie het [XDM-systeemoverzicht](../../../xdm/home.md)voor meer informatie over XD
 
 ## Hoe worden velden toegewezen van Adobe Analytics aan XDM?
 
-Wanneer een bronverbinding tot stand is gebracht voor het in Experience Platform brengen van Analytics-gegevens via de gebruikersinterface van het Platform, worden gegevensvelden automatisch toegewezen aan en opgenomen in het Real-time Klantprofiel binnen enkele minuten. Zie de zelfstudie over de [Analytics-gegevensaansluiting voor instructies over het maken van een bronverbinding met Adobe Analytics via de interface van het Platform](../../tutorials/ui/create/adobe-applications/analytics.md).
+Wanneer een bronverbinding tot stand is gebracht voor het in Experience Platform brengen van Analytics-gegevens via de gebruikersinterface van het Platform, worden gegevensvelden automatisch toegewezen aan en opgenomen in het Real-time Klantprofiel binnen enkele minuten. Zie de zelfstudie over de [Analytics-gegevensaansluiting voor instructies over het maken van een bronverbinding met Adobe Analytics met behulp van de interface van het Platform](../../tutorials/ui/create/adobe-applications/analytics.md).
 
-Voor meer informatie over de veldtoewijzing tussen Analytics en Experience Platform gaat u naar de handleiding voor [Adobe Analytics-toewijzing](./mapping/analytics.md) .
+Voor meer informatie over de veldtoewijzing tussen Analytics en Experience Platform gaat u naar de handleiding voor [Adobe Analytics-veldtoewijzingen](./mapping/analytics.md) .
 
 ## Wat is de verwachte vertraging voor Analytics Data on Platform?
 
