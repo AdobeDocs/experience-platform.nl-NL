@@ -26,7 +26,7 @@ Als u met een website-implementatie werkt, verkent u de bronnen [hier](https://d
 
 Als u met een mobiele app werkt, kunt u zien hoe ECID wordt gebruikt om bezoekers te [volgen tussen een app en een mobiel web](https://docs.adobe.com/content/help/en/mobile-services/ios/sdk-reference-ios/hybrid-app.html).
 
-Het implementeren van deze gereedschappen kan eenvoudig en eenvoudig te beheren zijn als u [Adobe Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)gebruikt.
+Het implementeren van deze gereedschappen kan eenvoudig en eenvoudig zijn te beheren als u [Adobe Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)gebruikt.
 
 Zie ook de documentatie [van de](../privacy-service/identity-data.md) Privacy Service voor informatie over het gebruik van ECID voor GDPR-compatibiliteit.
 
