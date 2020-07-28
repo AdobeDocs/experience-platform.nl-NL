@@ -52,7 +52,7 @@ Voor meer informatie over [!DNL Data Governance], zie het [Overzicht](../../data
 
 ## Gegevensinname {#ingestion}
 
-Adobe Experience Platform biedt een uitgebreide reeks functies voor het invoeren van elk type en elke vertraging van gegevens. Adobe Experience Platform [!DNL Data Ingestion] biedt meerdere alternatieven voor het opnemen van gegevens, zoals batch-API&#39;s, streaming API&#39;s, native Adobe-connectors, partners voor gegevensintegratie of de interface van het Adobe Experience Platform.
+Adobe Experience Platform biedt een uitgebreide reeks functies voor het invoeren van elk type en elke vertraging van gegevens. Adobe Experience Platform [!DNL Data Ingestion] biedt meerdere alternatieven voor het opnemen van gegevens, waaronder batch-API&#39;s, streaming API&#39;s, native Adobe-connectors, partners voor gegevensintegratie of de interface van het Adobe Experience Platform.
 
 **Nieuwe functies**
 
@@ -69,7 +69,7 @@ Meer over het opnemen van gegevens in Platform, bezoek de documentatie [van de I
 
 ## Doelen {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md)zijn doelen vooraf gebouwde integratie met doelplatforms die gegevens naadloos aan die partners activeren.
+In [Adobe Real-time het Platform](../../rtcdp/overview.md)van de Gegevens van de Klant, zijn de bestemmingen prebuilt integraties met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe bestemmingen**
 
@@ -77,8 +77,8 @@ Er zijn nieuwe doelen beschikbaar waar u de gegevens van uw Adobe Experience Pla
 
 | Bestemming | Beschrijving |
 |--- | ---|
-| Opslagdoelen voor cloud | Adobe CDP in realtime kan uw segmenten nu als gegevensbestanden leveren aan uw [!DNL Amazon S3] of SFTP-cloudopslaglocaties. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV- of tabgescheiden bestanden. |
-| Reclamebestemmingen | De [!DNL Google] doelkaart wordt nu gesplitst in drie doelkaarten voor de drie verschillende [!DNL Google] platforms die momenteel worden ondersteund in Adobe Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
+| Opslagdoelen voor cloud | Adobe CDP in realtime kan uw segmenten nu als gegevensbestanden leveren aan uw [!DNL Amazon S3] of SFTP-locatie voor cloudopslag. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV- of tabgescheiden bestanden. |
+| Reclamebestemmingen | De [!DNL Google] bestemmingskaart wordt nu gesplitst in drie bestemmingskaarten, voor de drie verschillende [!DNL Google] platforms die momenteel in Adobe in real time CDP worden gesteund: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
 
 Ga voor meer informatie naar het overzicht met [bestemmingen](../../rtcdp/destinations/destinations-overview.md)
 
@@ -102,7 +102,7 @@ Voor meer informatie over [!DNL Identity Service], zie het overzicht [van de Die
 
 ## Bronnen {#sources}
 
-Het Adobe Experience Platform kan gegevens uit externe bronnen opnemen terwijl het toestaan van u om die gegevens te structureren, te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
+Het Adobe Experience Platform kan gegevens uit externe bronnen opnemen terwijl het toestaan van u om die gegevens te structureren, te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
 
 [!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
