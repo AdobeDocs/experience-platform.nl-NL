@@ -20,7 +20,7 @@ Voordat u deze handleiding gebruikt, raadpleegt u de sectie Aan de [slag](./gett
 
 ## Een verzoek om toestemming van een klant verwerken
 
-De toestemmingsverzoeken worden verwerkt door een POST- verzoek aan het `/consent` eindpunt te doen.
+De toestemmingsverzoeken worden verwerkt door een verzoek van de POST aan het `/consent` eindpunt te doen.
 
 **API-indeling**
 
