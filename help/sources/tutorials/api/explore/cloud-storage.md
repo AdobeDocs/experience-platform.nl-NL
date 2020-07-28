@@ -53,13 +53,13 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot [!DNL F
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
 ## Ontdek uw cloudopslag
 
-Met de basisverbinding voor uw cloudopslag kunt u bestanden en mappen verkennen door GET-aanvragen uit te voeren. Wanneer het uitvoeren van GET verzoeken om uw wolkenopslag te onderzoeken, moet u de vraagparameters omvatten die in de lijst hieronder worden vermeld:
+Met de basisverbinding voor uw cloudopslag kunt u bestanden en mappen verkennen door GET-aanvragen uit te voeren. Wanneer u GET-aanvragen uitvoert om uw cloudopslag te verkennen, moet u de queryparameters opnemen die in de onderstaande tabel worden vermeld:
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
@@ -110,9 +110,9 @@ Een succesvol antwoord retourneert een array met bestanden en mappen die in de g
 ]
 ```
 
-## De structuur van een bestand controleren
+## De structuur van een bestand Inspect
 
-Om de structuur van gegevensdossier van uw cloudopslag te inspecteren, voer een GET verzoek uit terwijl het verstrekken van de weg van het dossier als vraagparameter.
+Om de structuur van gegevensdossier van uw cloudopslag te inspecteren, voer een verzoek van de GET uit terwijl het verstrekken van de weg van het dossier als vraagparameter.
 
 **API-indeling**
 
