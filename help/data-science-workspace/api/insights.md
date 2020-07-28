@@ -18,7 +18,7 @@ Inzichten bevatten meetgegevens die worden gebruikt om een gegevenswetenschapper
 
 ## Een lijst met inzichten ophalen
 
-U kunt een lijst van Inzichten terugwinnen door één enkel GET verzoek aan het inzichten eindpunt uit te voeren.  Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+U kunt een lijst van Inzichten terugwinnen door één enkel verzoek van GET tot het inzichten eindpunt uit te voeren.  Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
 
 **API-indeling**
 
@@ -108,7 +108,7 @@ Een geslaagde reactie retourneert een payload die een lijst met inzichten bevat 
 
 ## Een specifiek inzicht ophalen
 
-Om omhoog een bepaald inzicht te zoeken maak een GET verzoek en verstrek een geldig `{INSIGHT_ID}` in de verzoekweg. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+Als u een bepaald inzicht wilt opzoeken, vraagt u een GET en geeft u een geldige waarde op `{INSIGHT_ID}` in het aanvraagpad. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
 
 **API-indeling**
 
@@ -171,7 +171,7 @@ Een geslaagde reactie retourneert een payload die de inzichten als unieke id (`i
 
 ## Nieuw modelinzicht toevoegen
 
-U kunt een nieuw Modelinzicht tot stand brengen door een POST- verzoek en een lading uit te voeren die context, gebeurtenissen, en metriek voor het nieuwe Model inzicht verstrekt. Het contextgebied dat wordt gebruikt om een nieuw Model inzicht tot stand te brengen wordt niet vereist om de bestaande diensten in bijlage aan het te hebben maar u kunt verkiezen om het nieuwe Model inzicht met de bestaande diensten tot stand te brengen door één of meerdere overeenkomstige IDs te verstrekken:
+U kunt een nieuw Modelinzicht tot stand brengen door een verzoek van de POST en een nuttige lading uit te voeren die context, gebeurtenissen, en metriek voor het nieuwe Modelinzicht verstrekt. Het contextgebied dat wordt gebruikt om een nieuw Model inzicht tot stand te brengen wordt niet vereist om de bestaande diensten in bijlage aan het te hebben maar u kunt verkiezen om het nieuwe Model inzicht met de bestaande diensten tot stand te brengen door één of meerdere overeenkomstige IDs te verstrekken:
 
 ```json
 "context": {
@@ -260,11 +260,11 @@ Een succesvolle reactie zal een lading terugkeren die een `{INSIGHT_ID}` en om h
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `insightId` | De unieke id die voor dit bepaalde inzicht wordt gemaakt wanneer een succesvol POST-verzoek wordt gedaan. |
+| `insightId` | De unieke id die voor dit bepaalde inzicht wordt gemaakt wanneer een POST met succes wordt aangevraagd. |
 
 ## Hiermee wordt een lijst met standaardmetriek voor algoritmen opgehaald
 
-U kunt een lijst van al uw algoritme en standaardmetriek terugwinnen door één enkele GET verzoek aan het metrieke eindpunt uit te voeren. Om metrisch te vragen maak een GET verzoek en verstrek een geldig `{ALGORITHM}` in de verzoekweg.
+U kunt een lijst van al uw algoritme en standaardmetriek terugwinnen door één enkel verzoek van de GET aan het metrieke eindpunt uit te voeren. Om metrisch te vragen doe een verzoek van de GET en verstrek een geldig `{ALGORITHM}` in de verzoekweg.
 
 **API-indeling**
 
