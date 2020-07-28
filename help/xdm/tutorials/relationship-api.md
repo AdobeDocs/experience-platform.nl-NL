@@ -40,7 +40,7 @@ De verhoudingen van het schema worden vertegenwoordigd door een **bronschema** d
 
 >[!IMPORTANT] Om een relatie tot stand te brengen, moeten beide schema&#39;s primaire identiteiten hebben bepaald en voor [!DNL Real-time Customer Profile]. Zie de sectie over het [toelaten van een schema voor gebruik in Profiel](./create-schema-api.md#profile) in de schemacreatie zelfstudie als u begeleiding op hoe te om uw schema&#39;s dienovereenkomstig te vormen vereist.
 
-Als u een relatie tussen twee schema&#39;s wilt definiëren, moet u eerst de `$id` waarden voor beide schema&#39;s ophalen. Als u de vertoningsnamen (`title`) van de schema&#39;s kent, kunt u hun `$id` waarden vinden door een GET verzoek aan het `/tenant/schemas` eindpunt in [!DNL Schema Registry] API te doen.
+Als u een relatie tussen twee schema&#39;s wilt definiëren, moet u eerst de `$id` waarden voor beide schema&#39;s ophalen. Als u de vertoningsnamen (`title`) van de schema&#39;s kent, kunt u hun `$id` waarden vinden door een verzoek van de GET tot het `/tenant/schemas` eindpunt in [!DNL Schema Registry] API te richten.
 
 **API-indeling**
 
@@ -120,7 +120,7 @@ In dit leerprogramma, bevat het bestemmingsschema &quot;[!DNL Hotels]&quot;een `
 
 ### Een nieuwe mix maken
 
-Als u een nieuw veld aan een schema wilt toevoegen, moet u dit eerst definiëren in een mix. U kunt een nieuwe mengeling tot stand brengen door een POST- verzoek aan het `/tenant/mixins` eindpunt te doen.
+Als u een nieuw veld aan een schema wilt toevoegen, moet u dit eerst definiëren in een mix. U kunt een nieuwe mengeling tot stand brengen door een verzoek van de POST aan het `/tenant/mixins` eindpunt te doen.
 
 **API-indeling**
 
@@ -230,7 +230,7 @@ Registreer de `$id` URI van de mix die in de volgende stap van het toevoegen van
 
 ### De mix toevoegen aan het bronschema
 
-Zodra u een mixin hebt gecreeerd, kunt u het aan het bronschema toevoegen door een verzoek van de PATCH aan het `/tenant/schemas/{SCHEMA_ID}` eindpunt te doen.
+Zodra u een mixin hebt gecreeerd, kunt u het aan het bronschema toevoegen door een verzoek van PATCH aan het `/tenant/schemas/{SCHEMA_ID}` eindpunt te doen.
 
 **API-indeling**
 
@@ -267,7 +267,7 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `op` | De PATCH-bewerking die moet worden uitgevoerd. In dit verzoek wordt de `add` bewerking gebruikt. |
+| `op` | De uit te voeren PATCH-bewerking. In dit verzoek wordt de `add` bewerking gebruikt. |
 | `path` | De weg aan het schemagebied waar het nieuwe middel zal worden toegevoegd. Wanneer u combinaties toevoegt aan schema&#39;s, moet de waarde &quot;/allOf/-&quot; zijn. |
 | `value.$ref` | De hoeveelheid `$id` van het toe te voegen mengsel. |
 
@@ -336,7 +336,7 @@ Een succesvolle reactie retourneert de details van het bijgewerkte schema, dat n
 
 Op schemavelden moet een identiteitsreferentie-descriptor zijn toegepast als deze worden gebruikt als referentie van andere schema&#39;s in een relatie. Aangezien het `favoriteHotel` veld in &quot;[!DNL Loyalty Members]&quot; verwijst naar het `email` veld in &quot;[!DNL Hotels]&quot;, moet `email` een identiteitsbeschrijving van een referentie worden gegeven.
 
-Creeer een verwijzingsbeschrijver voor het bestemmingsschema door een POST- verzoek aan het `/tenant/descriptors` eindpunt te doen.
+Creeer een verwijzingsbeschrijver voor het bestemmingsschema door een verzoek van de POST aan het `/tenant/descriptors` eindpunt te doen.
 
 **API-indeling**
 
@@ -391,7 +391,7 @@ Een succesvolle reactie keert de details van de pas gecreëerde verwijzingsbesch
 
 ## Relatiebeschrijvingen maken {#create-descriptor}
 
-Relatiebeschrijvingen maken een één-op-één relatie tussen een bronschema en een doelschema. Zodra u een verwijzingsbeschrijver voor het bestemmingsschema hebt bepaald, kunt u een nieuwe relatiebeschrijver tot stand brengen door een POST- verzoek aan het `/tenant/descriptors` eindpunt te doen.
+Relatiebeschrijvingen maken een één-op-één relatie tussen een bronschema en een doelschema. Zodra u een verwijzingsbeschrijver voor het bestemmingsschema hebt bepaald, kunt u een nieuwe relatiebeschrijver tot stand brengen door een verzoek van de POST aan het `/tenant/descriptors` eindpunt te doen.
 
 **API-indeling**
 
