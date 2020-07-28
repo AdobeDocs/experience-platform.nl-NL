@@ -24,7 +24,7 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!D
 
 ## Een lijst met segmenttaken ophalen {#retrieve-list}
 
-U kunt een lijst van alle segmentbanen voor uw IMS Organisatie terugwinnen door een GET verzoek aan het `/segment/jobs` eindpunt te doen.
+U kunt een lijst van alle segmentbanen voor uw IMS Organisatie terugwinnen door een verzoek van de GET tot het `/segment/jobs` eindpunt te richten.
 
 **API-indeling**
 
@@ -164,7 +164,7 @@ Een succesvolle reactie keert HTTP status 200 met een lijst van segmentbanen voo
 
 ## Een nieuwe segmenttaak maken {#create}
 
-U kunt een nieuwe segmentbaan tot stand brengen door een POST- verzoek aan het `/segment/jobs` eindpunt te doen en in het lichaam identiteitskaart van de segmentdefinitie te omvatten waarvan u een nieuw publiek zou willen tot stand brengen.
+U kunt een nieuwe segmentbaan tot stand brengen door een verzoek van de POST aan het `/segment/jobs` eindpunt te doen en in het lichaam identiteitskaart van de segmentdefinitie te omvatten waarvan u een nieuw publiek zou willen tot stand brengen.
 
 **API-indeling**
 
@@ -258,7 +258,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 ## Een specifieke segmenttaak ophalen {#get}
 
-U kunt gedetailleerde informatie over een specifieke segmentbaan terugwinnen door een GET verzoek aan het `/segment/jobs` eindpunt te doen en identiteitskaart van de segmentbaan te verstrekken u wenst om in de verzoekweg terug te winnen.
+U kunt gedetailleerde informatie over een specifieke segmentbaan terugwinnen door een verzoek van de GET aan het `/segment/jobs` eindpunt te doen en identiteitskaart van de segmentbaan te verstrekken u in de verzoekweg wenst terug te winnen.
 
 **API-indeling**
 
@@ -355,7 +355,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 ## Ophaalsegmenttaken bulksgewijs opvragen {#bulk-get}
 
-U kunt gedetailleerde informatie over veelvoudige segmentbanen terugwinnen door een POST- verzoek aan het `/segment/jobs/bulk-get` eindpunt te doen en de `id` waarden van de segmentbanen in het verzoeklichaam te verstrekken.
+U kunt gedetailleerde informatie over veelvoudige segmentbanen terugwinnen door een verzoek van de POST aan het `/segment/jobs/bulk-get` eindpunt te doen en de `id` waarden van de segmentbanen in het verzoeklichaam te verstrekken.
 
 **API-indeling**
 
