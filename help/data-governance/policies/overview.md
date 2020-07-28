@@ -37,7 +37,7 @@ Wanneer het gegevensgebruik in de dienst van uw organisatie gebeurt, zouden de r
 >
 >Als u gebruikt [!DNL Real-time Customer Data Platform], kunt u opstellings marketing gebruiksgevallen op bestemmingen aan automatisering beleidshandhaving. Zie het document over [Gegevensbeheer in real time CDP](../../rtcdp/privacy/data-governance-overview.md) voor meer informatie.
 
-Zie de bijlage bij dit document voor een lijst met [beschikbare door Adobe gedefinieerde marketingacties](#core-actions). U kunt ook uw eigen aangepaste marketingacties definiëren met de DULE [!DNL Policy Service] API of de [!DNL Experience Platform ]gebruikersinterface. In de volgende sectie vindt u meer informatie over het werken met marketingacties en -beleid.
+Zie de bijlage bij dit document voor een lijst van [beschikbare Adobe-bepaalde marketing acties](#core-actions). U kunt ook uw eigen aangepaste marketingacties definiëren met de DULE [!DNL Policy Service] API of de [!DNL Experience Platform ]gebruikersinterface. In de volgende sectie vindt u meer informatie over het werken met marketingacties en -beleid.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -69,7 +69,7 @@ De volgende sectie verstrekt extra informatie over het beleid van het gegevensge
 
 ### Door Adobe gedefinieerde marketingacties {#core-actions}
 
-In de onderstaande tabel worden de belangrijkste marketingacties beschreven die Adobe u buiten de verpakking biedt.
+In de onderstaande tabel worden de belangrijkste marketingacties beschreven die door Adobe buiten de box worden geleverd.
 
 >[!NOTE]
 >
