@@ -18,7 +18,7 @@ Met Adobe Experience Platform kunt u uw klanten een gecoördineerde, consistente
 
 ## Begrijpen [!DNL Real-time Customer Profile]
 
-[!DNL Real-time Customer Profile] is een generische opslag van raadplegingsentiteiten die gegevens van diverse activa van ondernemingsgegevens samenvoegt, en dan toegang tot die gegevens in de vorm van individuele klantenprofielen en verwante gebeurtenissen van de tijdreeks verleent. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek.
+[!DNL Real-time Customer Profile] is een generische opslag van raadplegingsentiteiten die gegevens van diverse activa van ondernemingsgegevens samenvoegt, en dan toegang tot die gegevens in de vorm van individuele klantenprofielen en verwante gebeurtenissen van de tijdreeks verleent. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 
 ### [!DNL Profile] gegevensopslag
 
@@ -59,7 +59,7 @@ Wanneer het samenbrengen van gegevens uit veelvoudige bronnen en het combineren 
 >[!IMPORTANT]
 >De berekende kenmerkfunctionaliteit die in dit document wordt beschreven is in alpha. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
-Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op basis van andere waarden, berekeningen en expressies. De berekende attributen werken op het profielniveau, betekenend kunt u waarden over alle verslagen en gebeurtenissen bijeenvoegen. Elk berekend kenmerk bevat een expressie, of &#39;regel&#39;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. Voor meer informatie over gegevens verwerkte attributen, en geleidelijke instructies voor het werken met hen die API gebruiken, gelieve de [!DNL Real-time Customer Profile] gegevens verwerkte gids [](api/computed-attributes.md)van het attributeneindpunt te zien. Deze gids zal u helpen beter begrijpen de rol gegevens verwerkte attributen binnen Adobe Experience Platform spelen, en het omvat steekproefAPI vraag voor het uitvoeren van basisCRUD verrichtingen.
+Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op basis van andere waarden, berekeningen en expressies. De berekende attributen werken op het profielniveau, betekenend kunt u waarden over alle verslagen en gebeurtenissen bijeenvoegen. Elk berekend kenmerk bevat een expressie, ofwel &quot;rule&quot;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. Voor meer informatie over gegevens verwerkte attributen, en geleidelijke instructies voor het werken met hen die API gebruiken, gelieve de [!DNL Real-time Customer Profile] gegevens verwerkte gids [](api/computed-attributes.md)van het attributeneindpunt te zien. Deze gids zal u helpen beter begrijpen de rol gegevens verwerkte attributen binnen Adobe Experience Platform spelen, en het omvat steekproefAPI vraag voor het uitvoeren van basisCRUD verrichtingen.
 
 ## Realtime componenten
 
@@ -71,14 +71,14 @@ Invoer in realtime wordt mogelijk gemaakt via een proces dat streaming opname wo
 
 ### Edge-projectieconfiguraties en -doelen
 
-Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in real time te drijven, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe Experience Platform maakt deze realtime toegang tot gegevens mogelijk via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Adobe-toepassingen zoals Adobe Target en Adobe Campaign gebruiken bijvoorbeeld randen voor persoonlijke ervaringen van klanten in real-time. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Raadpleeg de handleiding voor de eindpunten van de [!DNL Real-time Customer Profile] randprojectie voor meer informatie en voor meer informatie over het werken met projecties met de [](api/edge-projections.md)API.
+Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in real time te drijven, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe Experience Platform maakt deze realtime toegang tot gegevens mogelijk via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Bijvoorbeeld, gebruiken de toepassingen van de Adobe zoals Adobe Target en Adobe Campaign randen om gepersonaliseerde klantenervaringen in real time te verstrekken. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Raadpleeg de handleiding voor de eindpunten van de [!DNL Real-time Customer Profile] randprojectie voor meer informatie en voor meer informatie over het werken met projecties met de [](api/edge-projections.md)API.
 
 ## Gegevens toevoegen aan [!DNL Real-time Customer Profile]
 
 [!DNL Platform] kan worden gevormd om uw verslag en tijdreeksgegevens naar te verzenden [!DNL Profile], ondersteunend het stromen in real time en partijingestie. Voor meer informatie, zie de zelfstudie die schetst hoe te om gegevens aan het Profiel [van de Klant in real time](tutorials/add-profile-data.md)toe te voegen.
 
 >[!Nofferte]
->De gegevens die via Adobe-oplossingen worden verzameld, waaronder [!DNL Analytics Cloud], [!DNL Marketing Cloud]en [!DNL Advertising Cloud], lopen over naar [!DNL Experience Platform] en worden opgenomen in [!DNL Profile].
+>Gegevens die worden verzameld via Adobe-oplossingen, waaronder [!DNL Analytics Cloud], [!DNL Marketing Cloud]en [!DNL Advertising Cloud], stromen naar [!DNL Experience Platform] en worden opgenomen in [!DNL Profile].
 
 ### [!DNL Profile] metriek
 
@@ -88,7 +88,7 @@ Met waarnemingsinformatie kunt u belangrijke meetgegevens in Adobe Experience Pl
 
 [!DNL Data governance] is een reeks strategieën en technologieën die worden gebruikt om klantengegevens te beheren en naleving van verordeningen, beperkingen, en beleid te verzekeren van toepassing op gegevensgebruik.
 
-Met betrekking tot de toegang tot gegevens speelt het beheer van gegevens een sleutelrol binnen [!DNL Experience Platform] verschillende niveaus:
+Met betrekking tot de toegang tot gegevens speelt gegevensbeheer een sleutelrol binnen [!DNL Experience Platform] verschillende niveaus:
 * Labels voor gegevensgebruik
 * Beleid voor gegevenstoegang
 * Toegangscontrole van gegevens voor marketingacties
