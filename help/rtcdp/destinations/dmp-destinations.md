@@ -16,6 +16,6 @@ ht-degree: 0%
 
 [!DNL Data Management Platforms] (DMPs) laat adverteerders, uitgevers, en agentschappen toe om unieke publieksprofielen te bouwen, hun waardevolste segmenten te identificeren, en hen over om het even welk digitaal kanaal te gebruiken. Zo kunt u een echte 360-weergave van een consumentenprofiel maken, een zinvol publiek maken en activeren.
 
-Momenteel ondersteunt het Adobe Real-time Customer Data Platform de hieronder vermelde doelen van het Data Management Platform (DMP). Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
+Momenteel ondersteunt het Adobe Real-Time Customer Data Platform de hieronder vermelde doelen van het Data Management Platform (DMP). Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
 
 * [Audience Manager DIL-extensie](/help/rtcdp/destinations/aam-dil-extension.md)
