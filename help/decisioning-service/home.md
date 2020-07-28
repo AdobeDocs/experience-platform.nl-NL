@@ -58,7 +58,7 @@ Het algoritme of de functie die de lijst met opties van top-K produceert, variee
 
 ## Working with [!DNL Decisioning Service]
 
-Net [!DNL Decisioning Service]als andere [!DNL Platform] services neemt de eerste API-filosofie over. Dit betekent dat de API de primaire interface is waar alle functies, inclusief administratieve functies, beschikbaar worden gesteld via API&#39;s. Dit betekent ook dat andere [!DNL Platform] services, Adobe-oplossingen en integraties van derden dezelfde API&#39;s gebruiken.
+Net [!DNL Decisioning Service]als andere [!DNL Platform] services neemt de eerste API-filosofie over. Dit betekent dat de API de primaire interface is waar alle functies, inclusief administratieve functies, beschikbaar worden gesteld via API&#39;s. Het betekent ook dat andere [!DNL Platform] services, Adobe-oplossingen en integratie van derden dezelfde API&#39;s gebruiken.
 
 U kunt [!DNL Decisioning Service] in een synchrone verzoek-reactie interactiemodus gebruiken die door eenvoudige HTTP REST API wordt gefaciliteerd. De API-aanroep retourneert de momenteel beste optie voor één profiel. De selectie van de &quot;momenteel beste optie&quot; verandert op basis van de regels en beperkingen die van toepassing zijn op alle opties die door een bepaalde activiteit in overweging worden genomen. Met de REST API kunt u de volgende beste optie voor meerdere activiteiten tegelijk ophalen. Hierdoor kunnen opties langs verschillende kanalen worden verdeeld. Wanneer reacties voor meerdere activiteiten samen worden verkregen, kunnen aanvullende regels worden toegepast.
 
