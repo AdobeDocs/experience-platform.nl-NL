@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een sandbox maken
 
-U kunt een nieuwe sandbox maken door een POST-aanvraag in te dienen bij het `/sandboxes` eindpunt.
+U kunt een nieuwe zandbak tot stand brengen door een verzoek van de POST aan het `/sandboxes` eindpunt te doen.
 
 **API-indeling**
 
