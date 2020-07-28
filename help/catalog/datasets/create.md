@@ -469,7 +469,7 @@ Gedetailleerde stappen voor het werken met de API voor gegevenstoegang vindt u i
 
 ## Het schema van de gegevensset bijwerken
 
-U kunt velden toevoegen en aanvullende gegevens invoeren in gegevenssets die u hebt gemaakt. Hiervoor moet u eerst het schema bijwerken door extra eigenschappen toe te voegen die de nieuwe gegevens definiëren. Dit kan worden gedaan gebruikend PATCH en/of de verrichtingen van de PLAATS om het bestaande schema bij te werken.
+U kunt velden toevoegen en aanvullende gegevens invoeren in gegevenssets die u hebt gemaakt. Hiervoor moet u eerst het schema bijwerken door extra eigenschappen toe te voegen die de nieuwe gegevens definiëren. Dit kan worden gedaan gebruikend PATCH en/of PUT verrichtingen om het bestaande schema bij te werken.
 
 Voor meer informatie over het bijwerken van schema&#39;s, zie de [Gids](../../xdm/api/getting-started.md)van de Ontwikkelaar van de Registratie van het Schema API.
 
