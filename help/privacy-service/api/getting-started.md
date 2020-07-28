@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Privacy Service] ontwikkelaarsgids
 
-Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u de persoonlijke gegevens van uw betrokkenen (klanten) kunt beheren (openen en verwijderen) in alle Adobe Experience Cloud-toepassingen. [!DNL Privacy Service] voorziet ook een centraal controle en registrerenmechanisme dat u toestaat om tot de status en de resultaten van banen toegang te hebben die [!DNL Experience Cloud] toepassingen impliceren.
+Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u de persoonlijke gegevens van uw betrokkenen (klanten) in Adobe Experience Cloud-toepassingen kunt beheren (openen en verwijderen). [!DNL Privacy Service] voorziet ook een centraal controle en registrerenmechanisme dat u toestaat om tot de status en de resultaten van banen toegang te hebben die [!DNL Experience Cloud] toepassingen impliceren.
 
 In deze handleiding wordt uitgelegd hoe u de [!DNL Privacy Service] API kunt gebruiken. Zie het overzicht [van de gebruikersinterface van de](../ui/overview.md)Privacy Service voor meer informatie over het gebruik van de gebruikersinterface. Zie de [!DNL Privacy Service] API-referentie [voor een uitgebreide lijst met alle beschikbare eindpunten in de](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)API.
 
@@ -23,7 +23,7 @@ In deze handleiding wordt uitgelegd hoe u de [!DNL Privacy Service] API kunt geb
 
 Deze handleiding vereist een goed begrip van de volgende [!DNL Experience Platform] functies:
 
-* [!DNL Privacy Service](../home.md): Biedt een RESTful-API en -gebruikersinterface waarmee u toegang kunt beheren en aanvragen van uw betrokkenen (klanten) kunt verwijderen voor alle Adobe Experience Cloud-toepassingen.
+* [!DNL Privacy Service](../home.md): Verstrekt een RESTful API en een gebruikersinterface die u toestaan om toegang te beheren en verzoeken van uw gegevenssubjecten (klanten) over Adobe Experience Cloud toepassingen te schrappen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Privacy Service API te maken.
 
@@ -39,15 +39,15 @@ Om vraag aan [!DNL Privacy Service] API te maken, moet u uw toegangsgeloofsbriev
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Hiervoor moeten ontwikkelaarsmachtigingen voor [!DNL Experience Platform] de Adobe Admin Console worden verkregen en moeten de gegevens vervolgens worden gegenereerd in Adobe Developer Console.
+Hiervoor moeten ontwikkelaarsmachtigingen voor [!DNL Experience Platform] de Adobe Admin Console worden verkregen en moeten de gegevens vervolgens worden gegenereerd in de Adobe Developer Console.
 
 ### Toegang voor ontwikkelaars verkrijgen tot [!DNL Experience Platform]
 
-Om ontwikkelaarstoegang tot te krijgen [!DNL Platform], volg de eerste stappen in het de authentificatieleerprogramma [van het](../../tutorials/authentication.md)Experience Platform. Wanneer u de stap &#39;Toegangsgegevens genereren in Adobe Developer Console&#39; hebt bereikt, gaat u terug naar deze zelfstudie om de referenties te genereren die specifiek zijn voor [!DNL Privacy Service].
+Om ontwikkelaarstoegang tot te krijgen [!DNL Platform], volg de eerste stappen in het de authentificatieleerprogramma [van het](../../tutorials/authentication.md)Experience Platform. Zodra u bij de stap &quot;Genereer toegangsgeloofsbrieven in de Console van de Ontwikkelaar van de Adobe&quot;aankomt, terugkeer aan dit leerprogramma om de geloofsbrieven te produceren specifiek voor [!DNL Privacy Service].
 
 ### Toegangsreferenties genereren
 
-Met Adobe Developer Console moet u de volgende drie toegangsreferenties genereren:
+Gebruikend de Console van de Ontwikkelaar van Adobe, moet u de volgende drie toegangsgeloofsbrieven produceren:
 
 * `{IMS_ORG}`
 * `{API_KEY}`
