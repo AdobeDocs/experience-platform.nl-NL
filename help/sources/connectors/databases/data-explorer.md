@@ -57,11 +57,11 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 
 ## Verbinding maken [!DNL Azure Data Explorer] met API&#39; [!DNL Platform] s
 
-- [Een Azure Data Explorer-connector maken met de Flow Service API](../../tutorials/api/create/databases/data-explorer.md)
+- [Een Azure Data Explorer-aansluiting maken met de Flow Service API](../../tutorials/api/create/databases/data-explorer.md)
 - [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinding maken [!DNL Azure Data Explorer] met [!DNL Platform] de gebruikersinterface
 
-- [Een Azure Data Explorer-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/databases/data-explorer.md)
+- [Een Azure Data Explorer-bronaansluiting in de gebruikersinterface maken](../../tutorials/ui/create/databases/data-explorer.md)
 - [Vorm een dataflow voor een gegevensbestandschakelaar in UI](../../tutorials/ui/dataflow/databases.md)
