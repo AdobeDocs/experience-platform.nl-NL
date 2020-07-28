@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Creeer een [!DNL Azure Data Lake Storage Gen2] bronschakelaar in UI
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het verifiëren van een [!DNL Azure Data Lake Storage Gen2] (hierna &quot;ADLS Gen2&quot; genoemd) bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om extern gesourceerde gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het verifiëren van een [!DNL Azure Data Lake Storage Gen2] (hierna &quot;ADLS Gen2&quot; genoemd) bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
 
 ## Aan de slag
 
@@ -44,7 +44,7 @@ Raadpleeg [dit ADLS Gen2-document](https://docs.microsoft.com/en-us/azure/data-f
 
 Zodra u uw vereiste geloofsbrieven hebt verzameld, kunt u de stappen volgen hieronder om een nieuwe binnenkomende basisverbinding tot stand te brengen om uw rekening van ADLS Gen2 aan te verbinden [!DNL Platform].
 
-Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe [!DNL Experience Platform]</a> en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Bronnen]* . Op het tabblad *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven die kunnen worden gebruikt om binnenkomende basisverbindingen te maken. Elke bron toont het aantal bestaande basisverbindingen verbonden aan hen.
+Login aan <a href="https://platform.adobe.com" target="_blank">Adobe [!DNL Experience Platform]</a> en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatiebar om tot de werkruimte van *[!UICONTROL Bronnen]* toegang te hebben. Op het tabblad *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven die kunnen worden gebruikt om binnenkomende basisverbindingen te maken. Elke bron toont het aantal bestaande basisverbindingen verbonden aan hen.
 
 Selecteer onder de categorie *[!UICONTROL Cloud Storage]* de optie **[!UICONTROL Azure Data Lake Gen2]** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van een verbinding met de bronweergave in de bijbehorende documentatie. Klik op **[!UICONTROL Verbindingsbron]** om een nieuwe binnenkomende basisverbinding te maken.
 
