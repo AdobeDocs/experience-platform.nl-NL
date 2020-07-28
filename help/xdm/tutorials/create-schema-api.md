@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een schema maken met de [!DNL Schema Registry] API
 
-Het [!DNL Schema Registry] wordt gebruikt om tot [!DNL Schema Library] binnen Adobe Experience Platform toegang te hebben. De [!DNL Schema Library] map bevat bronnen die beschikbaar zijn gesteld door Adobe, [!DNL Experience Platform] partners en leveranciers van wie u de toepassingen gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
+Het [!DNL Schema Registry] wordt gebruikt om tot [!DNL Schema Library] binnen Adobe Experience Platform toegang te hebben. Het [!DNL Schema Library] bevat middelen die aan u door Adobe, [!DNL Experience Platform] partners, en verkopers ter beschikking worden gesteld waarvan toepassingen u gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
 
 Deze zelfstudie gebruikt de [!DNL Schema Registry] API om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse. Als u de gebruikersinterface liever in wilt gebruiken, [!DNL Experience Platform]biedt de zelfstudie [van de](create-schema-ui.md) Schema-editor stapsgewijze instructies voor het uitvoeren van vergelijkbare acties in de Schema-editor.
 
@@ -39,7 +39,7 @@ Een schema kan als blauwdruk voor de gegevens worden beschouwd u wilt opnemen in
 
 Het proces van de schemacompositie begint met de selectie van een klasse. De klasse definieert de belangrijkste gedragsaspecten van de gegevens (record- versus tijdreeks) en de minimale velden die vereist zijn om de gegevens te beschrijven die worden ingevoerd.
 
-Het schema dat u in deze zelfstudie maakt, gebruikt de [!DNL XDM Individual Profile] klasse. [!DNL XDM Individual Profile] is een standaardklasse die door Adobe wordt geleverd voor het definiëren van recordgedrag. Meer informatie over gedrag kan in [grondbeginselen van schemacompositie](../schema/composition.md)worden gevonden.
+Het schema dat u in deze zelfstudie maakt, gebruikt de [!DNL XDM Individual Profile] klasse. [!DNL XDM Individual Profile] is een standaardklasse die door Adobe wordt verstrekt voor het bepalen van verslaggedrag. Meer informatie over gedrag kan in [grondbeginselen van schemacompositie](../schema/composition.md)worden gevonden.
 
 Om een klasse toe te wijzen, wordt een API vraag gemaakt om (POST) een nieuw schema in de huurderscontainer tot stand te brengen. Deze vraag omvat de klasse het schema zal uitvoeren. Elk schema mag slechts één klasse implementeren.
 
@@ -115,7 +115,7 @@ Een succesvol verzoek keert de Status 201 van de Reactie van HTTP (Gemaakt) met 
 
 ### Een schema opzoeken
 
-Als u het nieuwe schema wilt weergeven, voert u een opzoekaanvraag (GET) uit met de `meta:altId` URL of de URL-gecodeerde `$id` URI voor het schema.
+Als u het nieuwe schema wilt weergeven, voert u een opzoekverzoek (GET) uit met de `meta:altId` URL of de URL-gecodeerde `$id` URI voor het schema.
 
 **API-indeling**
 
@@ -191,7 +191,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Verzoek**
 
-Dit verzoek werkt (PATCH) het schema van de Leden van de Loyalty bij om de gebieden binnen de &quot;profiel-persoon-details&quot;mengeling te omvatten.
+Dit verzoek werkt (PATCH) het schema van Loyalty Leden bij om de gebieden binnen de &quot;profiel-persoon-details&quot;mengeling te omvatten.
 
 Door de &quot;profiel-persoon-details&quot;mix toe te voegen, vangt het schema van Leden Loyalty nu informatie over loyaliteitsprogrammaleden zoals hun voornaam, familienaam, en verjaardag.
 
@@ -258,7 +258,7 @@ U kunt nu een andere standaardmix toevoegen door de stappen te herhalen met een 
 
 >[!TIP]
 >
->Het is nuttig om alle beschikbare mengsels te herzien om zich met de gebieden vertrouwd te maken inbegrepen in elk. U kunt (KRIJGEN) van alle mengsels een lijst maken beschikbaar voor gebruik met een bepaalde klasse door een verzoek tegen elk van de &quot;globale&quot;en &quot;huurder&quot;containers uit te voeren, die slechts die mengen terugkeren waar het &quot;meta:intendedToExtend&quot;gebied de klasse aanpast u gebruikt. In dit geval is het de [!DNL XDM Individual Profile] klasse, zodat [!DNL XDM Individual Profile] `$id` wordt gebruikt:
+>Het is nuttig om alle beschikbare mengsels te herzien om zich met de gebieden vertrouwd te maken inbegrepen in elk. U kunt (GET) van alle mengsels een lijst maken beschikbaar voor gebruik met een bepaalde klasse door een verzoek tegen elk van de &quot;globale&quot;en &quot;huurder&quot;containers uit te voeren, die slechts die mengen terugkeren waar het &quot;meta:intendedToExtend&quot;gebied de klasse aanpast u gebruikt. In dit geval is het de [!DNL XDM Individual Profile] klasse, zodat [!DNL XDM Individual Profile] `$id` wordt gebruikt:
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -273,7 +273,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Verzoek**
 
-Dit verzoek werkt (PATCH) het schema van de Leden van de Loyalty bij om de gebieden binnen de &quot;profiel-persoonlijk-details&quot;mengeling, toevoegend &quot;huisadres&quot;, &quot;e-mailadres&quot;, en &quot;huistelefoon&quot;gebieden aan het schema te omvatten.
+Dit verzoek werkt (PATCH) het schema van de Leden van de Loyalty bij om de gebieden binnen de &quot;profiel-persoonlijk-details&quot;mengeling, toevoegend &quot;huisadres&quot;, &quot;e-mailadres&quot;, en &quot;huistelefoon&quot;gebieden aan het schema.
 
 ```SHELL
 curl -X PATCH \
@@ -344,7 +344,7 @@ Het schema van Loyalty-leden moet informatie vastleggen die uniek is voor het lo
 
 De [!DNL Schema Registry] rekeningen voor dit door u toe te staan om uw eigen mengsels binnen de huurderscontainer te bepalen. Deze combinaties zijn uniek voor uw organisatie en zijn niet zichtbaar of bewerkbaar door iemand buiten uw IMS-organisatie.
 
-Als u een nieuwe mix wilt maken (POST), moet uw aanvraag een `meta:intendedToExtend` veld bevatten met de `$id` voor de basisklasse(n) waarmee de mix compatibel is, samen met de eigenschappen die de mix zal bevatten.
+Als u een nieuwe mix wilt maken (POSTEN), moet uw aanvraag een `meta:intendedToExtend` veld bevatten met de `$id` voor de basisklasse(n) waarmee de mix compatibel is, samen met de eigenschappen die de mix zal bevatten.
 
 Aangepaste eigenschappen moeten onder de afbeelding worden genest `TENANT_ID` om conflicten met andere mixins of velden te voorkomen.
 
@@ -506,7 +506,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Verzoek**
 
-Dit verzoek werkt (PATCH) het schema van Loyalty Leden bij om de gebieden binnen de nieuwe &quot;Details van het Lid van Loyalty&quot;mengeling te omvatten.
+Met dit verzoek wordt (PATCH) het schema Loyalty-leden bijgewerkt om de velden in de nieuwe mix &quot;Loyalty Member Details&quot; op te nemen.
 
 ```SHELL
 curl -X PATCH \
@@ -575,7 +575,7 @@ U kunt zien dat de mix is toegevoegd omdat de reactie nu de toegevoegde mix in d
 
 ### Het huidige schema weergeven
 
-U kunt een GET verzoek nu uitvoeren om het huidige schema te bekijken en te zien hoe de toegevoegde mengelingen aan de algemene structuur van het schema hebben bijgedragen.
+U kunt een verzoek van de GET nu uitvoeren om het huidige schema te bekijken en te zien hoe de toegevoegde mengelingen aan de algemene structuur van het schema hebben bijgedragen.
 
 **API-indeling**
 
@@ -816,11 +816,11 @@ Een succesvol verzoek retourneert HTTP Response Status 201 (Gemaakt) met een ant
 }
 ```
 
-U kunt een opzoekaanvraag (GET) uitvoeren met de URL-gecodeerde `$id` URI om het nieuwe gegevenstype rechtstreeks weer te geven. Zorg ervoor dat u de code opneemt `version` in de koptekst Accepteren voor een opzoekverzoek.
+U kunt een opzoekverzoek (GET) uitvoeren met de URL-gecodeerde `$id` URI om het nieuwe gegevenstype rechtstreeks weer te geven. Zorg ervoor dat u de code opneemt `version` in de koptekst Accepteren voor een opzoekverzoek.
 
 ### Gegevenstype gebruiken in schema
 
-Nu het gegevenstype Loyalty Details is gecreeerd, kunt u (PATCH) het &quot;loyaliteitsgebied&quot;gebied in de mengeling bijwerken u creeerde om naar het gegevenstype in plaats van de gebieden te verwijzen die eerder daar waren.
+Nu het gegevenstype Loyalty Details is gemaakt, kunt u (PATCH) het veld &quot;loyalty&quot; in de gemaakte mixin bijwerken om naar het gegevenstype te verwijzen in plaats van de velden die er eerder waren.
 
 **API-indeling**
 
@@ -908,7 +908,7 @@ De reactie omvat nu een verwijzing (`$ref`) naar het gegevenstype in het &quot;l
 }
 ```
 
-Het uitvoeren van een GET verzoek om het schema op te zoeken toont nu de verwijzing naar het gegevenstype onder &quot;eigenschappen/_{TENANT_ID}&quot;, zoals hier wordt gezien:
+Wanneer u een GET-verzoek uitvoert om het schema op te zoeken, wordt nu de verwijzing naar het gegevenstype onder &quot;eigenschappen/_{TENANT_ID}&quot; weergegeven, zoals u hier ziet:
 
 ```JSON
 "_{TENANT_ID}": {
@@ -972,7 +972,7 @@ POST /tenant/descriptors
 
 **Verzoek**
 
-In het volgende verzoek wordt een identiteitsdescriptor gedefinieerd in het veld &quot;loyaltyId&quot;. Dit vertelt [!DNL Experience Platform] om het unieke herkenningsteken van het loyaliteitsprogrammalid (in dit geval, het e-mailadres van het lid) te gebruiken om te helpen informatie over het individu verenigen.
+In het volgende verzoek wordt een identiteitsdescriptor gedefinieerd in het veld &quot;loyaltyId&quot;. Dit vertelt [!DNL Experience Platform] om het unieke herkenningsteken van het loyaliteitsprogrammalid (in dit geval, het e-mailadres van het lid) te gebruiken om te helpen informatie over het individu verbinden.
 
 ```SHELL
 curl -X POST \
@@ -1023,7 +1023,7 @@ Zie de sectie over [vakbonden](../api/unions.md) in de handleiding voor [!DNL Sc
 
 ### Tag &quot;union&quot; toevoegen
 
-Om een schema in de samengevoegde verenigingsmening te omvatten, moet de markering &quot;union&quot;aan de `meta:immutableTags` attributen van het schema worden toegevoegd. Dit gebeurt via een PATCH-verzoek om het schema bij te werken en de `meta:immutableTags` array toe te voegen met de waarde &quot;union&quot;.
+Om een schema in de samengevoegde verenigingsmening te omvatten, moet de markering &quot;union&quot;aan de `meta:immutableTags` attributen van het schema worden toegevoegd. Dit wordt gedaan door een verzoek van PATCH om het schema bij te werken en de `meta:immutableTags` serie met een waarde van &quot;unie&quot;toe te voegen.
 
 **API-indeling**
 
@@ -1103,7 +1103,7 @@ De reactie toont aan dat de verrichting met succes werd uitgevoerd, en het schem
 
 ### Schema&#39;s weergeven in een union
 
-U hebt nu met succes uw schema aan de [!DNL XDM Individual Profile] unie toegevoegd. Om een lijst van alle schema&#39;s te zien die een deel van de zelfde unie zijn, kunt u een GET verzoek uitvoeren gebruikend vraagparameters om de reactie te filtreren.
+U hebt nu met succes uw schema aan de [!DNL XDM Individual Profile] unie toegevoegd. Om een lijst van alle schema&#39;s te zien die een deel van de zelfde unie zijn, kunt u een verzoek uitvoeren van de GET gebruikend vraagparameters om de reactie te filtreren.
 
 Met behulp van de `property` queryparameter kunt u opgeven dat alleen schema&#39;s die een `meta:immutableTags` veld bevatten dat `meta:class` gelijk is aan de waarde `$id` van de [!DNL XDM Individual Profile] klasse, worden geretourneerd.
 
@@ -1173,7 +1173,7 @@ Door deze zelfstudie te volgen, hebt u met succes een schema samengesteld gebrui
 
 Het volledige schema van de Leden van de Loyalty, zoals die door dit leerprogramma wordt gecreeerd, is beschikbaar in het bijlage dat volgt. Als u naar het schema kijkt, kunt u zien hoe de mixins bijdragen aan de algemene structuur en welke velden beschikbaar zijn voor gegevensinvoer.
 
-Zodra u meer dan één schema hebt gecreeerd, kunt u verhoudingen tussen hen door het gebruik van relatiebeschrijvers bepalen. Zie het leerprogramma voor het [bepalen van een verband tussen twee schema](relationship-api.md) &#39;s voor meer informatie. Voor gedetailleerde voorbeelden van hoe te om alle verrichtingen (GET, POST, PUT, PATCH, en DELETE) in het register uit te voeren, gelieve te verwijzen naar de ontwikkelaarsgids [van de Registratie van het](../api/getting-started.md) Schema terwijl het werken met API.
+Zodra u meer dan één schema hebt gecreeerd, kunt u verhoudingen tussen hen door het gebruik van relatiebeschrijvers bepalen. Zie het leerprogramma voor het [bepalen van een verband tussen twee schema](relationship-api.md) &#39;s voor meer informatie. Voor gedetailleerde voorbeelden van hoe te om alle verrichtingen (GET, POST, PUT, PATCH, en DELETE) in de registratie uit te voeren, gelieve te verwijzen naar de ontwikkelaarsgids [van de Registratie van het](../api/getting-started.md) Schema terwijl het werken met API.
 
 ## Aanhangsel {#appendix}
 
