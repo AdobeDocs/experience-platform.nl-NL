@@ -1,9 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Help bij Query-service Adobe Experience Platform
+user-guide-title: Help bij Adobe Experience Platform Query Service
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 2%
 
 ---
 
@@ -34,14 +37,14 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 - SQL-referentie {#sql}
    - [SQL-overzicht](sql/overview.md)
    - [SQL-syntaxis](sql/syntax.md)
-   - [Door Adobe gedefinieerde functies](sql/adobe-defined-functions.md)
+   - [Adobe-gedefinieerde functies](sql/adobe-defined-functions.md)
    - [SQL-functies in Spark](sql/spark-sql-functions.md)
    - [Opdrachten Metagegevens](sql/metadata.md)
    - [Vooraf voorbereide instructies](sql/prepared-statements.md)
 - Voorbeeldquery&#39;s {#samples}
    - [Overzicht van voorbeeldquery&#39;s](sample-queries/overview.md)
    - [Adobe Analytics](sample-queries/adobe-analytics.md)
-   - [Adobe-doel](sample-queries/adobe-target.md)
+   - [Adobe Target](sample-queries/adobe-target.md)
 - Client verbinden met Query-service {#clients}
    - [Overzicht van clientverbindingen](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
@@ -53,4 +56,4 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    - [Tableau](clients/tableau.md)
 - [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 - [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
-- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
