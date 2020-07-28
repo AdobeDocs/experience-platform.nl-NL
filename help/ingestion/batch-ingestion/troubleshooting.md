@@ -178,7 +178,7 @@ Een batch kan in de levenscyclus de volgende statussen doorlopen:
 | Inactief | x | De batch is gepromoveerd, maar deze is teruggezet of verlopen. De partij zal niet meer voor downstreamconsumptie beschikbaar zijn, maar de onderliggende gegevens blijven Master totdat ze bewaard, gearchiveerd of anderszins verwijderd zijn. |
 | Laden |  | De client schrijft momenteel gegevens voor de batch. De partij is op dit moment **niet** klaar voor promotie. |
 | Geladen |  | De client heeft het schrijven van gegevens voor de batch voltooid. De partij is klaar voor promotie. |
-| Behouden |  | De gegevens zijn uit het Master bestand gehaald en bevinden zich in een speciaal archief in het Adobe Data Lake. |
+| Behouden |  | De gegevens zijn uit het Master gehaald en in een speciaal archief in het Adobe Data Lake. |
 | Staging |  | De klant heeft de batch met succes voor promotie gesignaleerd en de gegevens worden gefaseerd voor consumptie stroomafwaarts. |
 | Opnieuw proberen |  | De cliënt heeft de partij voor bevordering gesignaleerd, maar wegens een fout, wordt de partij opnieuw geprobeerd door de dienst van de Controle van de Partij. Deze staat kan worden gebruikt om cliënten te vertellen dat er een vertraging in het opnemen van de gegevens kan zijn. |
 | Gestopt |  | De cliënt heeft de partij voor bevordering gesignaleerd, maar na `n` herpogingen door de dienst van de Controle van de Partij, heeft de partijbevordering vastgelopen. |
@@ -189,7 +189,7 @@ Wanneer een partij zich in &quot;Staging&quot; bevindt, betekent dit dat de part
 
 ### Wat betekent het als een partij &quot;Opnieuw probeert&quot;?
 
-Wanneer een partij in &quot;Opnieuw proberen&quot; staat, betekent dit dat de gegevensopname van de partij tijdelijk is gestopt vanwege intermitterende problemen. Wanneer dit gebeurt, vereist het geen klanteninterventie.
+Wanneer een batch zich in &quot;Opnieuw proberen&quot; bevindt, betekent dit dat de gegevensopname van de batch tijdelijk is gestopt vanwege intermitterende problemen. Wanneer dit gebeurt, vereist het geen klanteninterventie.
 
 ### Wat betekent het wanneer een partij &quot;wordt afgebroken&quot;?
 
