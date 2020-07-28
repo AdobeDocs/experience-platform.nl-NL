@@ -92,7 +92,7 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 
 Voer de volgende SQL-query&#39;s in voor afzonderlijke laptopcellen. Voer een vraag uit door op zijn cel te klikken die door de **[!UICONTROL spelknoop]** wordt gevolgd te klikken. De succesvolle vraagresultaten of foutenlogboeken worden getoond onder de uitgevoerde cel.
 
-Wanneer een laptop gedurende langere tijd inactief is, kan de verbinding tussen de laptop en [!DNL Query Service] breken. Start in dergelijke gevallen opnieuw [!DNL JupyterLab] door op de knop **[!UICONTROL Aan/uit]** te klikken in de rechterbovenhoek.
+Wanneer een laptop gedurende langere tijd inactief is, kan de verbinding tussen de laptop en [!DNL Query Service] breken. In dergelijke gevallen, begin opnieuw [!DNL JupyterLab] door de knoop van de **[!UICONTROL Macht]** te klikken die bij de hoogste juiste hoek wordt gevestigd.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
