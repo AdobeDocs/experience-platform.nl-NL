@@ -59,7 +59,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -75,7 +75,7 @@ POST /connections
 
 **Verzoek**
 
-Om een [!DNL Hive] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het POST- verzoek worden verstrekt. De verbindingsspecificatie-id voor [!DNL Hive] is `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`.
+Om een [!DNL Hive] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL Hive] is `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`.
 
 ```shell
 curl -X POST \
