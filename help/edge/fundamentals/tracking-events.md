@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Gebeurtenissen bijhouden
 
-Gebruik de `sendEvent` opdracht om gebeurtenisgegevens naar de Adobe Experience Cloud te verzenden. Het `sendEvent` bevel is de primaire manier om gegevens naar [!DNL Experience Cloud]te verzenden, en gepersonaliseerde inhoud, identiteiten, en publieksbestemmingen terug te winnen.
+Als u gebeurtenisgegevens naar de Adobe Experience Cloud wilt verzenden, gebruikt u de `sendEvent` opdracht. Het `sendEvent` bevel is de primaire manier om gegevens naar [!DNL Experience Cloud]te verzenden, en gepersonaliseerde inhoud, identiteiten, en publieksbestemmingen terug te winnen.
 
 Gegevens die naar Adobe Experience Cloud worden verzonden, vallen in twee categorieën:
 
