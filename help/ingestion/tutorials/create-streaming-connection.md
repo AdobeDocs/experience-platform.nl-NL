@@ -184,6 +184,6 @@ Deze sectie bevat aanvullende informatie over het maken van streamingverbindinge
 
 ### Geverifieerde streamingverbindingen
 
-De voor authentiek verklaarde gegevensinzameling staat de diensten van het Adobe Experience Platform, zoals [!DNL Real-time Customer Profile] en [!DNL Identity], toe om tussen verslagen te onderscheiden die uit vertrouwde op bronnen en onbetrouwbare bronnen komen. Clients die PII (Personal Identified Information) willen verzenden, kunnen dit doen door IMS Access Tokens te verzenden als onderdeel van de POST-aanvraag - als de IMS Token geldig is, worden de records gemarkeerd als verzameld bij vertrouwde bronnen.
+De voor authentiek verklaarde gegevensinzameling staat de diensten van het Adobe Experience Platform, zoals [!DNL Real-time Customer Profile] en [!DNL Identity], toe om tussen verslagen te onderscheiden die uit vertrouwde op bronnen en onbetrouwbare bronnen komen. Clients die PII (Personal Identified Information) willen verzenden, kunnen dit doen door IMS Access Tokens te verzenden als onderdeel van het verzoek van de POST. Als de IMS Token geldig is, worden de records gemarkeerd als verzameld bij vertrouwde bronnen.
 
 Meer informatie over het maken van een geverifieerde streamingverbinding vindt u in de zelfstudie voor het [maken van een geverifieerde streamingverbinding](create-authenticated-streaming-connection.md).
