@@ -16,25 +16,25 @@ ht-degree: 0%
 
 ## Workflow om sociale netwerkdoelen te maken
 
-Deze zelfstudie gebruikt [!DNL Facebook] als voorbeeld, maar de workflow in Adobe Real-time Customer Data Platform is hetzelfde voor alle sociale netwerkdoelen, wanneer er weer aan het product wordt toegevoegd.
+Deze zelfstudie gebruikt [!DNL Facebook] als voorbeeld, maar de workflow in het Adobe Real-time Platform van klantgegevens zal hetzelfde zijn voor alle sociale netwerkbestemmingen, wanneer er nog meer aan het product wordt toegevoegd.
 
 1. Blader in **[!UICONTROL Doelen > Catalogus]** naar de categorie **[!UICONTROL Sociaal]** . Selecteer de gewenste sociale netwerkbestemming en selecteer vervolgens de **[!UICONTROL Connect-bestemming]**.
 
    ![Verbinden met sociale netwerkbestemming](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
 
-2. Als u in de stap **Verificatie** eerder een verbinding met uw sociale netwerkbestemming had ingesteld, selecteert u **[!UICONTROL Bestaande account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL Nieuwe account]** selecteren om een nieuwe verbinding met uw sociale netwerkbestemming in te stellen. Selecteer **[!UICONTROL Verbinding maken met doel]** . Hiermee gaat u naar de geselecteerde sociale netwerkbestemming om u aan te melden en Adobe Experience Cloud te verbinden met uw sociale netwerk Ad-account.
+2. Als u in de stap **Verificatie** eerder een verbinding met uw sociale netwerkbestemming had ingesteld, selecteert u **[!UICONTROL Bestaande account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL Nieuwe account]** selecteren om een nieuwe verbinding met uw sociale netwerkbestemming in te stellen. Selecteer **[!UICONTROL Verbinding maken met doel]** . Hiermee gaat u naar de geselecteerde sociale netwerkbestemming om u aan te melden en Adobe Experience Cloud te verbinden met uw sociale netwerk en account Advertentie.
 
    >[!NOTE]
    >
-   >Adobe CDP in real-time ondersteunt aanmeldingsvalidatie in het verificatieproces en geeft een foutbericht weer als u onjuiste gegevens hebt ingevoerd in de id van uw sociale netwerkaccount. Dit zorgt ervoor dat u de werkstroom niet met onjuiste geloofsbrieven voltooit.
+   >Adobe CDP in real time steunt geloofsbevestiging in het authentificatieproces en toont een foutenmelding als u onjuiste geloofsbrieven aan uw identiteitskaart van de sociale netwerkrekening invoert. Dit zorgt ervoor dat u de werkstroom niet met onjuiste geloofsbrieven voltooit.
 
    ![Verbinden met sociale netwerkbestemming - authentificatiestap](/help/rtcdp/destinations/assets/facebook-pre-connect-view.png)
 
-3. Nadat uw referenties zijn bevestigd en Adobe Experience Cloud is verbonden met uw sociale netwerk, kunt u **[!UICONTROL Volgende]** selecteren om door te gaan naar de stap **[!UICONTROL Setup]** .
+3. Zodra uw geloofsbrieven worden bevestigd en Adobe Experience Cloud wordt aangesloten aan uw sociaal netwerk, kunt u **[!UICONTROL Volgende]** selecteren om aan de stap van de **[!UICONTROL Opstelling]** te werk te gaan.
 
    ![Credentials bevestigd](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. Voer in de stap **[!UICONTROL Setup]** een **[!UICONTROL naam]** en een **[!UICONTROL beschrijving]** in voor de activeringsstroom en vul de **[!UICONTROL account-id]** van uw sociale netwerk en account in. <br> Ook in deze stap kunt u elke **[!UICONTROL Gebruikszaak]** voor marketingdoeleinden selecteren die op deze bestemming moet worden toegepast. Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde gevallen voor marketinggebruik of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het op de markt brengen van gebruiksgevallen, zie de [Governance van Gegevens in Echte tijd CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) pagina. Zie het overzicht [van het beleid voor](/help/data-governance/policies/overview.md#core-actions)gegevensgebruik voor informatie over de afzonderlijke door Adobe gedefinieerde gevallen van marketinggebruik. <br> Selecteer Doel **** maken nadat u de bovenstaande velden hebt ingevuld.
+4. Voer in de stap **[!UICONTROL Setup]** een **[!UICONTROL naam]** en een **[!UICONTROL beschrijving]** in voor de activeringsstroom en vul de **[!UICONTROL account-id]** van uw sociale netwerk en account in. <br> Ook in deze stap kunt u elke **[!UICONTROL Gebruikszaak]** voor marketingdoeleinden selecteren die op deze bestemming moet worden toegepast. Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het op de markt brengen van gebruiksgevallen, zie de [Governance van Gegevens in Echte tijd CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) pagina. Voor informatie over de individuele Adobe-bepaalde het in de handel brengen gebruiksgevallen, zie het overzicht [van het het gebruiksbeleid van](/help/data-governance/policies/overview.md#core-actions)Gegevens. <br> Selecteer Doel **** maken nadat u de bovenstaande velden hebt ingevuld.
 
    >[!IMPORTANT]
    >
