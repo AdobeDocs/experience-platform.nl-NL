@@ -55,7 +55,7 @@ Dit document bevat informatie over nieuwe functies voor Adobe Experience Platfor
 | --- | --- |
 | Metrische dashboard aanvragen | Het nieuwe dashboard van metriek in [!DNL Privacy Service] UI verstrekt zicht in voorgelegde, geëiste, en voltooide GDPR- verzoeken. |
 | Request Builder | Aan de dienstorganisaties met zowel technische als niet-technische gebruikers die GDPR- verzoeken indienen, is een functionaliteit &quot;Create Verzoek&quot;toegevoegd aan UI. De mogelijkheid voor het indienen van JSON-bestanden is nog steeds beschikbaar in de [!DNL Privacy Service] gebruikersinterface voor organisaties die het bestand liever blijven gebruiken. |
-| GDPR-berichten over taakgebeurtenissen | Gebeurtenismeldingen over GDPR-taakstatussen zijn voor veel workflows van essentieel belang. Hoewel meldingen eerder via afzonderlijke e-mailberichten zijn verzonden, zijn GDPR-gebeurtenismeldingen berichten die gebruikmaken van Adobe I/O-gebeurtenissen. Deze berichten worden verzonden naar een geconfigureerde webhaak die de automatisering van taakaanvragen vergemakkelijkt. [!DNL Privacy Service] UI-gebruikers kunnen zich abonneren op Adobe I/O GDPR-gebeurtenissen om updates te ontvangen wanneer een product of de GDPR-taak is voltooid. |
+| GDPR-berichten over taakgebeurtenissen | Gebeurtenismeldingen over GDPR-taakstatussen zijn voor veel workflows van essentieel belang. Terwijl meldingen eerder via afzonderlijke e-mailberichten werden verzonden, zijn GDPR-gebeurtenismeldingen berichten die gebruikmaken van Adobe I/O-gebeurtenissen, die worden verzonden naar een geconfigureerde webhaak die de automatisering van taakaanvragen vergemakkelijkt. [!DNL Privacy Service] UI-gebruikers kunnen zich abonneren op Adobe I/O GDPR-gebeurtenissen om updates te ontvangen wanneer een product of de GDPR-taak is voltooid. |
 
 ## 18 april 2019
 
@@ -80,14 +80,14 @@ Dit document bevat informatie over nieuwe functies voor Adobe Experience Platfor
 
 ### Verbeteringen
 
-* Alle opzoekings (GET) API-aanroepen zijn standaard bijgewerkt naar een opzoekbereik van 30 dagen
+* Alle opzoeken (GET) API-aanroepen zijn standaard bijgewerkt naar een opzoekbereik van 30 dagen
 * Beperkt API-gebruik voor een maximaal terugzoekbereik van 45 dagen
 
 ## 14 februari 2019
 
 ### Verbeteringen
 
-* Het `include` veld afdwingen bij elke POST-verzending.
+* Het `include` veld afdwingen bij elke POST die wordt verzonden.
 * Het `include` veld tijdens het uploaden van JSON afdwingen.
 
 ### Bugfixes
