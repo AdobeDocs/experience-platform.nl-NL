@@ -41,7 +41,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 >
 >Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
 
-Voor alle POST-, PUT- en PATCH-aanvragen is een extra header vereist:
+Alle POST, PUT, en PATCH verzoeken vereisen een extra kopbal:
 
 - Inhoudstype: application/json
 
@@ -63,13 +63,13 @@ Via een geplande evaluatie kan uw IMS-organisatie een terugkerend schema maken o
 
 ### Een schema maken
 
-Door een POST- verzoek aan het `/config/schedules` eindpunt te doen, kunt u een programma tot stand brengen en de specifieke tijd omvatten wanneer het programma zou moeten worden teweeggebracht.
+Door een verzoek van de POST aan het `/config/schedules` eindpunt te doen, kunt u een programma tot stand brengen en de specifieke tijd omvatten wanneer het programma zou moeten worden teweeggebracht.
 
 Meer gedetailleerde informatie over het gebruiken van dit eindpunt kan in de gids van het [planningseindpunt worden gevonden](../api/schedules.md#create)
 
 ### Een schema inschakelen
 
-Door gebrek, is een programma inactief wanneer gecreeerd tenzij het `state` bezit aan `active` in creeer (POST) verzoeklichaam wordt geplaatst. U kunt een programma toelaten (reeks `state` aan `active`) door een verzoek van de PATCH aan het `/config/schedules` eindpunt en met inbegrip van identiteitskaart van het programma in de weg te doen.
+Door gebrek, is een programma inactief wanneer gecreeerd tenzij het `state` bezit wordt geplaatst aan `active` in creeer (POST) verzoeklichaam. U kunt een programma toelaten (reeks `state` aan `active`) door een verzoek van de PATCH aan het `/config/schedules` eindpunt en met inbegrip van identiteitskaart van het programma in de weg te doen.
 
 Meer gedetailleerde informatie over het gebruiken van dit eindpunt kan in de gids van het [planningseindpunt worden gevonden](../api/schedules.md#update-state)
 
@@ -87,7 +87,7 @@ De evaluatie op bestelling staat u toe om een segmentbaan tot stand te brengen o
 
 Een segmentbaan is een asynchroon proces dat tot een nieuw publiekssegment leidt. Het verwijst naar een segmentdefinitie en naar elk samenvoegbeleid dat bepaalt hoe overlappende kenmerken in uw profielfragmenten worden [!DNL Real-time Customer Profile] samengevoegd. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen.
 
-U kunt een nieuwe segmentbaan tot stand brengen door een POST- verzoek aan het `/segment/jobs` eindpunt in [!DNL Real-time Customer Profile] API te doen.
+U kunt een nieuwe segmentbaan tot stand brengen door een verzoek van de POST aan het `/segment/jobs` eindpunt in [!DNL Real-time Customer Profile] API te doen.
 
 Meer gedetailleerde informatie over het gebruiken van dit eindpunt kan in de gids van het [segmentbaneneindpunt worden gevonden](../api/segment-jobs.md#create)
 
@@ -216,13 +216,13 @@ Een succesvolle reactie keert een serie terug die read-only, systeem-geproduceer
 
 ### Profielen genereren voor publieksleden {#generate-profiles}
 
-Zodra u een unie-persisterende dataset hebt, kunt u een de uitvoerbaan tot stand brengen om de publieksleden aan de dataset voort te zetten door een POST- verzoek aan het `/export/jobs` eindpunt in [!DNL Real-time Customer Profile] API te doen en dataset ID en de segmentinformatie voor de segmenten te verstrekken die u wenst om uit te voeren.
+Zodra u een unie-persisterende dataset hebt, kunt u een de uitvoerbaan tot stand brengen om de publieksleden aan de dataset voort te zetten door een verzoek van de POST aan het `/export/jobs` eindpunt in [!DNL Real-time Customer Profile] API te richten en dataset ID en de segmentinformatie voor de segmenten te verstrekken die u wenst om uit te voeren.
 
 Meer gedetailleerde informatie over het gebruiken van dit eindpunt kan in de gids van het [de baneneindpunt van de uitvoer worden gevonden](../api/export-jobs.md#create)
 
 ### Exportvoortgang volgen
 
-Als de processen van de uitvoerbaan, kunt u zijn status controleren door een GET verzoek aan het `/export/jobs` eindpunt en met inbegrip `id` van de uitvoerbaan in de weg te doen. De exporttaak is voltooid wanneer het `status` veld de waarde &quot;SUCCEEDED&quot; retourneert.
+Als de processen van de uitvoerbaan, kunt u zijn status controleren door een verzoek van de GET aan het `/export/jobs` eindpunt en met inbegrip `id` van de uitvoerbaan in de weg te doen. De exporttaak is voltooid wanneer het `status` veld de waarde &quot;SUCCEEDED&quot; retourneert.
 
 Meer gedetailleerde informatie over het gebruiken van dit eindpunt kan in de gids van het [de baneneindpunt van de uitvoer worden gevonden](../api/export-jobs.md#get)
 
