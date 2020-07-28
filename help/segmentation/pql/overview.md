@@ -40,7 +40,7 @@ homeAddress.stateProvince = workAddress.stateProvince
 
 ### Expliciete verwijzing naar de eerste parameter
 
-In het onderstaande voorbeeld wordt `$1` verwezen naar de eerste parameter. Als gevolg hiervan `$2` zou ik verwijzen naar de tweede parameter, enz.
+In het onderstaande voorbeeld `$1` wordt naar de eerste parameter verwezen. Als gevolg hiervan `$2` zou ik verwijzen naar de tweede parameter, enz.
 
 ```sql
 $1.homeAddress.stateProvince = $1.homeAddress.stateProvince
