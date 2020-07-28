@@ -20,7 +20,7 @@ In dit artikel worden de volgende voorbeeldtransformaties getoond die een ETL-on
 
 ### Voorbeeldbestanden
 
-Voorbeelden van CSV- en JSON-bestanden zijn beschikbaar in het openbare, door Adobe onderhouden [!DNL GitHub] referentierapport voor ETL:
+Voorbeelden van CSV- en JSON-bestanden zijn beschikbaar in het openbare, door Adobe bijgehouden [!DNL GitHub] rapport met de referentiehandleiding ETL:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
