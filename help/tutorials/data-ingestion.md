@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Gegevens verzamelen in [!DNL Experience Platform]
 
-Adobe Experience Platform brengt gegevens uit meerdere bronnen samen, zodat marketers het gedrag van hun klanten beter kunnen begrijpen. Adobe [!DNL Experience Platform Data Ingestion] vertegenwoordigt de veelvoudige methodes waardoor gegevens uit deze bronnen [!DNL Platform] opnemen, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door stroomafwaartse [!DNL Platform services]. [!DNL Data Ingestion] omvat batch-opname, streaming opname en inname via bronconnectors. Meer leren, lees het overzicht [van de Ingestie van](../ingestion/home.md) Gegevens of ga direct aan de [Brondocumentatie](../sources/home.md)te werk.
+Adobe Experience Platform brengt gegevens uit meerdere bronnen samen, zodat marketers het gedrag van hun klanten beter kunnen begrijpen. Adobe vertegenwoordigt de veelvoudige methodes waardoor gegevens uit deze bronnen [!DNL Experience Platform Data Ingestion] opnemen, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door stroomafwaartse [!DNL Platform] [!DNL Platform services]. [!DNL Data Ingestion] omvat batch-opname, streaming opname en inname via bronconnectors. Meer leren, lees het overzicht [van de Ingestie van](../ingestion/home.md) Gegevens of ga direct aan de [Brondocumentatie](../sources/home.md)te werk.
 
 ## Een bronaansluiting maken in de gebruikersinterface en de API
 
