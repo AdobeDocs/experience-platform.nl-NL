@@ -24,7 +24,7 @@ Nieuwe functies in Adobe Experience Platform:
 
 ## [!DNL Access control] {#access-control}
 
-[!DNL Experience Platform] Hiermee gebruikt u [Adobe Admin Console](https://adminconsole.adobe.com) -productprofielen om gebruikers te koppelen aan machtigingen en sandboxen. Machtigingen beheren de toegang tot verschillende mogelijkheden van Platforms, waaronder gegevensmodellering, profielbeheer en sandboxbeheer.
+[!DNL Experience Platform] Gebruikt [Adobe Admin Console](https://adminconsole.adobe.com) -productprofielen om gebruikers te koppelen aan machtigingen en sandboxen. Machtigingen beheren de toegang tot verschillende mogelijkheden van Platforms, waaronder gegevensmodellering, profielbeheer en sandboxbeheer.
 
 **Belangrijkste kenmerken**
 
