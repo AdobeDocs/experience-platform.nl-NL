@@ -18,7 +18,7 @@ Deze zelfstudie bevat instructies voor het verpakken van de voorbeeldbronbestand
 
 Concepten om te begrijpen:
 
-- **Recipes**: Een recept is de term van Adobe voor een Model specificatie en is een top-level container die een specifiek machine het leren, een kunstmatig intelligentiealgoritme of een samenstel van algoritmen, verwerkingslogica, en configuratie vertegenwoordigt die wordt vereist om een opgeleid model te bouwen en uit te voeren en daardoor helpen specifieke bedrijfsproblemen oplossen.
+- **Recipes**: Een recept is Adobe voor een Model specificatie en is een top-level container die een specifiek machine het leren, kunstmatig intelligentiealgoritme of samenstel van algoritmen, verwerkingslogica, en configuratie vertegenwoordigt die wordt vereist om een opgeleid model te bouwen en uit te voeren en vandaar helpen specifieke bedrijfsproblemen oplossen.
 - **Bronbestanden**: Afzonderlijke bestanden in uw project die de logica voor een recept bevatten.
 
 ## Vereisten
