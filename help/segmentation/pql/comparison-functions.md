@@ -5,6 +5,9 @@ title: Vergelijkingsfuncties
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
 
 Vergelijkingsfuncties worden gebruikt om verschillende expressies en waarden met elkaar te vergelijken, `true` of `false` op basis daarvan. Meer informatie over andere PQL-functies vindt u in het overzicht [Taal van](./overview.md)profielquery.
 
-## Gelijk
+## Equals (Is gelijk aan)
 
 De functie `=` (equals) controleert of een waarde of expressie gelijk is aan een andere waarde of expressie.
 
