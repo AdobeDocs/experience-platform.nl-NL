@@ -16,14 +16,14 @@ ht-degree: 0%
 - [Overzicht van bronconnectors](home.md)
 - Beschikbare bronconnectors {#connectors}
    - Adobe-toepassingen {#adobe-applications}
-      - [Gegevensconnector Analytics](connectors/adobe-applications/analytics.md)
-      - [Poortbeheeraansluiting](connectors/adobe-applications/audience-manager.md)
+      - [Analytics-gegevensconnector](connectors/adobe-applications/analytics.md)
+      - [Audience Manager-aansluiting](connectors/adobe-applications/audience-manager.md)
       - [Klantenkenmerkaansluiting](connectors/adobe-applications/customer-attributes.md)
-      - Adobe-toepassingsvelden toewijzen {#mapping}
-         - [Toewijzingsvelden voor analysemogelijkheden](connectors/adobe-applications/mapping/analytics.md)
-         - [Toewijzingsvelden voor Auditiebeheer](connectors/adobe-applications/mapping/audience-manager.md)
+      - Toepassingsvelden Adobe toewijzen {#mapping}
+         - [Analytics-toewijzingsvelden](connectors/adobe-applications/mapping/analytics.md)
+         - [Toewijzingsvelden voor Audience Managers](connectors/adobe-applications/mapping/audience-manager.md)
          - [Doeltoewijzingsvelden](connectors/adobe-applications/mapping/target.md)
-   - Reclame {#advertising}
+   - Advertising {#advertising}
       - [Google AdWords-connector](connectors/advertising/ads.md)
    - Cloud-opslag {#cloud-storage}
       - [Amazon Kinesis-connector](connectors/cloud-storage/kinesis.md)
@@ -66,7 +66,7 @@ ht-degree: 0%
       - [Generic OData-connector](connectors/protocols/odata.md)
 - API-zelfstudies {#api-tutorials}
    - Een bronaansluiting maken {#create}
-      - Reclame {#advertising}
+      - Advertising {#advertising}
          - [Google AdWords-connector](tutorials/api/create/advertising/ads.md)
       - Cloud-opslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
@@ -133,9 +133,9 @@ ht-degree: 0%
    - Een bronaansluiting maken {#create}
       - Adobe-toepassingen {#adobe-applications}
          - [Adobe Analytics-connector](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Aansluiting voor Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Adobe Audience Manager-aansluiting](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Klantenkenmerkaansluiting](tutorials/ui/create/adobe-applications/customer-attributes.md)
-      - Reclame {#create}
+      - Advertising {#create}
          - [Google AdWords-connector](tutorials/ui/create/advertising/ads.md)
       - Cloud-opslag {#cloud-storage}
          - [Amazon Kinesis-connector](tutorials/ui/create/cloud-storage/kinesis.md)
@@ -188,4 +188,4 @@ ht-degree: 0%
       - [Vorm een dataflow voor een protocolschakelaar](tutorials/ui/dataflow/protocols.md)
    - [Inkomende gegevens activeren om klantprofielen te vullen](tutorials/ui/profile.md)
    - [Accounts en gegevenssetstromen bewaken](tutorials/ui/monitor.md)
-- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
