@@ -28,7 +28,7 @@ Om in te schakelen moet [!DNL Audience Manager] u het volgende doen:
 
 Het Adobe Experience Platform [!DNL Web SDK] steunt de capaciteit om klant IDs en hun authentificatiestatus via het bevel [SyncIdentity](../../fundamentals/identity.md) te verklaren.
 
-De syncIdentity methode gebruikt Namespaces [van de Dienst van de](../../../identity/../identity-service/namespaces.md) Identiteit om op de context te wijzen waarop een identiteit betrekking heeft. Als [!DNL Audience Manager] klant, al uw bestaande Gegevensbronnen die het Type van identiteitskaart gebruiken: Cross-Device heeft automatisch een overeenkomende functie [!DNL Identity Namespace]. Als u het overeenkomende item wilt zoeken [!DNL Identity Namespace] voor uw [!DNL Audience Manager Data Source]toepassing, meldt u zich aan bij het Adobe Experience Platform en navigeert u naar de [!DNL Identities] sectie.
+De syncIdentity methode gebruikt Namespaces [van de Dienst van de](../../../identity/../identity-service/namespaces.md) Identiteit om op de context te wijzen waarop een identiteit betrekking heeft. Als [!DNL Audience Manager] klant, al uw bestaande Gegevensbronnen die het Type van identiteitskaart gebruiken: Cross-Device heeft automatisch een overeenkomend item [!DNL Identity Namespace]. Als u het overeenkomende item wilt zoeken [!DNL Identity Namespace] voor uw [!DNL Audience Manager Data Source]toepassing, meldt u zich aan bij het Adobe Experience Platform en navigeert u naar de [!DNL Identities] sectie.
 
 ![Weergave van de interface Namespaces](../../../assets/edge_configuration_identity.png)
 
