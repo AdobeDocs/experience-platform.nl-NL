@@ -20,7 +20,7 @@ Het `/policies` eindpunt wordt gebruikt voor alle API-aanroepen met betrekking t
 
 ## Alle beleid weergeven
 
-Om een lijst van beleid te bekijken, kan een GET verzoek worden gemaakt aan `/policies/core` of `/policies/custom` dat alle beleid voor de gespecificeerde container terugkeert.
+Om een lijst van beleid te bekijken, kan een verzoek van de GET worden gemaakt aan `/policies/core` of `/policies/custom` dat alle beleid voor de gespecificeerde container terugkeert.
 
 **API-indeling**
 
@@ -135,7 +135,7 @@ De reactie omvat een &quot;telling&quot;die het totale aantal beleid binnen de g
 
 ## Een beleid opzoeken
 
-Elk beleid bevat een `id` gebied dat kan worden gebruikt om de details van een specifiek beleid te verzoeken. Als het `id` van een beleid onbekend is, kan het worden gevonden gebruikend het lijst (KRIJGEN) verzoek om van alle beleid binnen een specifieke container (`core` of `custom`) een lijst te maken zoals aangetoond in de vorige stap.
+Elk beleid bevat een `id` gebied dat kan worden gebruikt om de details van een specifiek beleid te verzoeken. Als het `id` van een beleid onbekend is, kan het worden gevonden gebruikend het lijst (GET) verzoek om van alle beleid binnen een specifieke container (`core` of `custom`) een lijst te maken zoals aangetoond in de vorige stap.
 
 **API-indeling**
 
@@ -312,7 +312,7 @@ Als dit gelukt is, ontvangt u een HTTP Status 201 (Gemaakt) en bevat de responsi
 
 ## Een beleid bijwerken
 
-Mogelijk moet u een beleid voor gegevensgebruik bijwerken nadat het is gemaakt. Dit wordt gedaan door een PPUT- verzoek aan het beleid `id` met een lading die de bijgewerkte vorm van het beleid, in zijn geheel omvat. Met andere woorden, het PUT-verzoek is in wezen een _herformulering_ van het beleid, zodat de instantie alle vereiste informatie moet bevatten, zoals in het onderstaande voorbeeld wordt getoond.
+Mogelijk moet u een beleid voor gegevensgebruik bijwerken nadat het is gemaakt. Dit wordt gedaan door een verzoek van de PUT aan het beleid `id` met een lading die de bijgewerkte vorm van het beleid, in zijn geheel omvat. Met andere woorden, het verzoek van de PUT is in wezen een _herformulering_ van het beleid, zodat de instantie alle vereiste informatie moet opnemen, zoals in het onderstaande voorbeeld wordt getoond.
 
 **API-indeling**
 
@@ -404,9 +404,9 @@ Een succesvol updateverzoek keert een Status 200 van HTTP (O.K.) terug en het re
 
 ## Een gedeelte van een beleid bijwerken
 
-Een specifiek gedeelte van een beleid kan worden bijgewerkt gebruikend een verzoek van de PATCH. In tegenstelling tot de verzoeken van de ZET om het beleid te _herschrijven_ , werken de verzoeken van de PATCH slechts de weg bij die in het verzoeklichaam wordt gespecificeerd. Dit is vooral nuttig wanneer u een beleid wilt toelaten of onbruikbaar maken, aangezien u slechts de specifieke weg moet verzenden die u wenst bij te werken (`/status`) en zijn waarde (`ENABLE` of `DISABLE`).
+Een specifiek gedeelte van een beleid kan worden bijgewerkt gebruikend een verzoek van de PATCH. In tegenstelling tot de verzoeken van de PUT om het beleid te _herschrijven_ , werken de verzoeken van de PATCH slechts de weg bij die in het verzoeklichaam wordt gespecificeerd. Dit is vooral nuttig wanneer u een beleid wilt toelaten of onbruikbaar maken, aangezien u slechts de specifieke weg moet verzenden die u wenst bij te werken (`/status`) en zijn waarde (`ENABLE` of `DISABLE`).
 
-De [!DNL Policy Service] API ondersteunt momenteel PATCH-bewerkingen ‘toevoegen’, ‘vervangen’ en ‘verwijderen’ en biedt u de mogelijkheid om meerdere updates samen te voegen tot één aanroep door elk item als een object binnen de array toe te voegen, zoals in de volgende voorbeelden wordt getoond.
+De [!DNL Policy Service] API ondersteunt momenteel &quot;add&quot;, &quot;replace&quot; en &quot;remove&quot; PATCH-bewerkingen, en u kunt meerdere updates combineren tot één aanroep door elk object als een object binnen de array toe te voegen, zoals in de volgende voorbeelden wordt getoond.
 
 **API-indeling**
 
@@ -432,7 +432,7 @@ In dit voorbeeld gebruiken we de bewerking &quot;replace&quot; om de beleidsstat
 ]
 ```
 
-Wanneer het verzenden van veelvoudige verrichtingen van de PATCH in één enkel verzoek, herinner dat zij in de orde zullen worden verwerkt waarin zij in de serie verschijnen, zodat zorg ervoor dat u de verzoeken waar nodig in de correcte orde verzendt.
+Wanneer het verzenden van veelvoudige verrichtingen van PATCH in één enkel verzoek, herinner dat zij in de orde zullen worden verwerkt waarin zij in de serie verschijnen, zodat zorg ervoor dat u de verzoeken waar nodig in de correcte orde verzendt.
 
 ```SHELL
 curl -X PATCH \
@@ -506,7 +506,7 @@ Een succesvol updateverzoek zal een Status 200 van HTTP (O.K.) terugkeren en het
 
 ## Een beleid verwijderen
 
-Als u een beleid moet verwijderen dat u hebt gecreeerd, kunt u dit doen door een DELETE verzoek aan de `id` van het beleid uit te geven u wenst om te schrappen. Het is beste praktijken om een raadpleging (GET) verzoek eerst uit te voeren om het beleid te bekijken en het te bevestigen is het correcte beleid u wenst om te verwijderen. **Nadat beleidsregels zijn verwijderd, kunnen ze niet meer worden hersteld.**
+Als u een beleid moet verwijderen dat u hebt gecreeerd, kunt u dit doen door een DELETE verzoek aan het `id` van het beleid uit te geven u wenst om te schrappen. Het is beste praktijken om een raadpleging (GET) verzoek eerst uit te voeren om het beleid te bekijken en het te bevestigen het correcte beleid is u wenst om te verwijderen. **Nadat beleidsregels zijn verwijderd, kunnen ze niet meer worden hersteld.**
 
 **API-indeling**
 
@@ -529,4 +529,4 @@ curl -X DELETE \
 
 Als het beleid met succes is geschrapt, zal de reactiekarakter met een Status 200 van HTTP (O.K.) leeg zijn.
 
-U kunt de schrapping bevestigen door te proberen om (KRIJG) het beleid opnieuw te zoeken. U zou een Status 404 van HTTP (niet Gevonden) samen met een &quot;niet Gevonden&quot;foutenmelding moeten ontvangen omdat het beleid is verwijderd.
+U kunt de schrapping bevestigen door te proberen (GET) het beleid opnieuw te zoeken. U zou een Status 404 van HTTP (niet Gevonden) samen met een &quot;niet Gevonden&quot;foutenmelding moeten ontvangen omdat het beleid is verwijderd.
