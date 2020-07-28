@@ -1,8 +1,8 @@
 ---
 title: Amazon Kinesis-bestemming
 seo-title: Amazon Kinesis-bestemming
-description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens te streamen vanaf het Adobe Experience Platform.
-seo-description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens te streamen vanaf het Adobe Experience Platform.
+description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens te streamen vanaf Adobe Experience Platform.
+seo-description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens te streamen vanaf Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De [!DNL Amazon Kinesis] bestemming in Echte Adobe CDP in tijd is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
+>De [!DNL Amazon Kinesis] bestemming in Adobe in real time CDP is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 ## Overzicht {#overview}
 
@@ -27,7 +27,7 @@ U kunt een uitgaande verbinding in real time aan uw [!DNL Amazon Kinesis] opslag
 
 * Raadpleeg de documentatie bij [!DNL Amazon Kinesis][Amazon voor meer informatie over](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)het programma.
 * Zie de zelfstudie over de API- [!DNL Amazon Kinesis] streamingdoelen als u verbinding wilt maken met het [gebruik van API-aanroepen](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
-* Zie de onderstaande secties voor [!DNL Amazon Kinesis] het maken van een verbinding met de Adobe Real-Time CDP-gebruikersinterface.
+* Zie de onderstaande secties om verbinding te maken met [!DNL Amazon Kinesis] het gebruik van de CDP-gebruikersinterface van Adobe Real-Time.
 
 ![Amazon Kinesis in de gebruikersinterface](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
 
@@ -46,7 +46,7 @@ Voor [!DNL Amazon Kinesis] bestemmingen, ga de volgende informatie in creeer bes
 
 ### In de stap Verificatie {#authentication-step}
 
-* **[!DNL Amazon Web Services]toegangssleutel en geheime sleutel **: In[!DNL Amazon Web Services], produceer een toegangstoets - geheim toegangszeer belangrijke paar om Adobe in real time CDP toegang tot uw[!DNL Amazon Kinesis]rekening te verlenen. Meer informatie vindt u in de documentatie[van](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon Web Services.
+* **[!DNL Amazon Web Services]toegangssleutel en geheime sleutel **: In[!DNL Amazon Web Services], produceer een toegangssleutel - geheim toegangszeer belangrijke paar om Adobe toegang in real time CDP tot uw[!DNL Amazon Kinesis]rekening te verlenen. Meer informatie vindt u in de documentatie[van](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon Web Services.
 * **regio**: Geef aan naar welk [!DNL Amazon Web Services] gebied gegevens moeten worden gestreamd.
 
 ![Invoervelden in de stap van de account](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -55,7 +55,7 @@ Voor [!DNL Amazon Kinesis] bestemmingen, ga de volgende informatie in creeer bes
 
 * **Naam**: Geef een naam op voor uw verbinding met [!DNL Amazon Kinesis]
 * **Omschrijving**: Geef een beschrijving op voor de verbinding met [!DNL Amazon Kinesis].
-* **stream**: Geef de naam op van een bestaande gegevensstroom in uw [!DNL Amazon Kinesis] account. Adobe Real-time CDP exporteert gegevens naar deze stream.
+* **stream**: Geef de naam op van een bestaande gegevensstroom in uw [!DNL Amazon Kinesis] account. Adobe In real time CDP zal gegevens naar deze stroom uitvoeren.
 
 ![Invoervelden in de verificatiestap](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
 
