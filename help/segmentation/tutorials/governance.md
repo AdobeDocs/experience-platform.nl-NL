@@ -126,7 +126,7 @@ Een succesvolle reactie keert de details van de segmentdefinitie terug.
 
 ## Vind de brondatasets van het fusiebeleid {#datasets}
 
-Het beleid van de fusie bevat informatie over hun brondatasets, die beurtelings de etiketten van het gegevensgebruik bevatten. U kunt de details van een fusiebeleid opzoeken door identiteitskaart van het fusiebeleid in een GET verzoek aan [!DNL Profile] API te verstrekken. Meer informatie over fusiebeleid kan in de het eindverbruiksgids [van het](../../profile/api/merge-policies.md)fusiebeleid worden gevonden.
+Het beleid van de fusie bevat informatie over hun brondatasets, die beurtelings de etiketten van het gegevensgebruik bevatten. U kunt de details van een fusiebeleid opzoeken door identiteitskaart van het fusiebeleid in een verzoek van de GET aan [!DNL Profile] API te verstrekken. Meer informatie over fusiebeleid kan in de het eindverbruiksgids [van het](../../profile/api/merge-policies.md)fusiebeleid worden gevonden.
 
 **API-indeling**
 
@@ -189,7 +189,7 @@ Een succesvolle reactie retourneert de details van het samenvoegbeleid.
 
 Zodra u IDs van de brondatasets van het fusiebeleid hebt verkregen, kunt u de [DULE Dienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) van het Beleid gebruiken om die datasets tegen specifieke marketing acties te evalueren om op de schendingen van het beleid van het gegevensgebruik te controleren.
 
-Om de datasets te evalueren, moet u de naam van de marketing actie in de weg van een POST- verzoek verstrekken, terwijl het verstrekken van dataset IDs binnen het verzoeklichaam, zoals aangetoond in het voorbeeld hieronder.
+Om de datasets te evalueren, moet u de naam van de marketing actie in de weg van een verzoek van de POST verstrekken, terwijl het verstrekken van dataset IDs binnen het verzoeklichaam, zoals aangetoond in het voorbeeld hieronder.
 
 **API-indeling**
 
@@ -200,7 +200,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | De naam van de marketing actie verbonden aan het beleid van het gegevensgebruik u de datasets door evalueert. Afhankelijk van het feit of het beleid is gedefinieerd door Adobe of door uw organisatie, moet u respectievelijk gebruiken `/marketingActions/core` of `/marketingActions/custom`. |
+| `{MARKETING_ACTION_NAME}` | De naam van de marketing actie verbonden aan het beleid van het gegevensgebruik u de datasets door evalueert. Afhankelijk van of het beleid door Adobe of uw organisatie werd bepaald, moet u, respectievelijk gebruiken `/marketingActions/core` of `/marketingActions/custom`. |
 
 **Verzoek**
 
