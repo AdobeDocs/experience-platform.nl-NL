@@ -20,7 +20,7 @@ Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het voeren van
 
 ### Een lijst met querysjablonen ophalen
 
-U kunt een lijst van alle vraagmalplaatjes voor uw IMS Organisatie terugwinnen door een GET verzoek aan het `/query-templates` eindpunt te doen.
+U kunt een lijst van alle vraagmalplaatjes voor uw IMS Organisatie terugwinnen door een verzoek van de GET tot het `/query-templates` eindpunt te richten.
 
 **API-indeling**
 
@@ -111,7 +111,7 @@ Een succesvolle reactie keert HTTP status 200 met een lijst van vraagmalplaatjes
 
 ### Een querysjabloon maken
 
-U kunt een vraagmalplaatje tot stand brengen door een POST- verzoek aan het `/query-templates` eindpunt te doen.
+U kunt een vraagmalplaatje tot stand brengen door een verzoek van de POST aan het `/query-templates` eindpunt te doen.
 
 **API-indeling**
 
@@ -174,7 +174,7 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 
 ### Een opgegeven querysjabloon ophalen
 
-U kunt een specifiek vraagmalplaatje terugwinnen door een GET verzoek aan het `/query-templates/{TEMPLATE_ID}` eindpunt te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
+U kunt een specifiek vraagmalplaatje terugwinnen door een verzoek van de GET aan het `/query-templates/{TEMPLATE_ID}` eindpunt te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
 
 **API-indeling**
 
@@ -232,7 +232,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw gespecifice
 
 ### Een opgegeven querysjabloon bijwerken
 
-U kunt een specifiek vraagmalplaatje bijwerken door een PPUT- verzoek aan het `/query-templates/{TEMPLATE_ID}` eindpunt te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
+U kunt een specifiek vraagmalplaatje bijwerken door een verzoek van de PUT aan het `/query-templates/{TEMPLATE_ID}` eindpunt te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
 
 **API-indeling**
 
@@ -248,7 +248,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->Voor de PUT-aanvraag moeten zowel het veld sql als de naam worden ingevuld en de huidige inhoud van de querysjabloon wordt **overschreven** .
+>Het verzoek van de PUT vereist zowel het sql als naamgebied om worden gevuld, en zal de huidige inhoud van dat vraagmalplaatje **beschrijven** .
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
