@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >Het leren van de machine in real time is niet beschikbaar aan alle gebruikers nog. Deze functie bevindt zich in alfa en wordt nog steeds getest. Dit document kan worden gewijzigd.
 
-In de volgende handleiding worden de stappen beschreven die nodig zijn om een toepassing voor het leren van machines in realtime te bouwen. Met behulp van de door Adobe verschafte **[!UICONTROL real-time ML]** Python-laptopsjabloon behandelt deze handleiding het trainen van een model, het maken van een DSL, het publiceren van DSL naar Edge en het scoren van de aanvraag. Aangezien u door het uitvoeren van uw het Leren model van de machine in real time vordert, wordt verwacht dat u het malplaatje wijzigt om de behoeften van uw dataset te passen.
+In de volgende handleiding worden de stappen beschreven die nodig zijn om een toepassing voor het leren van machines in realtime te bouwen. Gebruikend de Adobe verstrekte **[!UICONTROL in real time ML]** Python notitieboekjecjabloon, behandelt deze gids opleiding een model, het creëren van een DSL, het publiceren van DSL aan Rand, en het scoren van het verzoek. Aangezien u door het uitvoeren van uw het Leren model van de machine in real time vordert, wordt verwacht dat u het malplaatje wijzigt om de behoeften van uw dataset te passen.
 
 ## Een laptop voor real-time leren van machines maken
 
@@ -346,7 +346,7 @@ Wanneer de bewerking is voltooid, wordt een `edge` object geretourneerd dat elk 
 ## Publiceren naar rand (hub)
 
 >[!NOTE]
->Het leren van de machine in real time wordt tijdelijk opgesteld aan en beheerd door de Hub van het Platform van de Expereence van Adobe. Voor meer details, bezoek de overzichtssectie over de [Echte architectuur](./home.md#architecture)van het Leren van de Machine.
+>Het leren van de machine in real time wordt tijdelijk opgesteld aan en beheerd door de Hub van het Platform van de Expereence van de Adobe. Voor meer details, bezoek de overzichtssectie over de [Echte architectuur](./home.md#architecture)van het Leren van de Machine.
 
 Nu u een grafiek van DSL hebt gecreeerd, kunt u uw grafiek aan [!DNL Edge]opstellen.
 
@@ -399,7 +399,7 @@ U bent teruggekeerd bijgewerkte DSL.
 
 ## Scores {#scoring}
 
-Na het publiceren aan, [!DNL Edge]wordt het scoren gedaan door een POST- verzoek van een cliënt. Dit kan doorgaans worden gedaan vanuit een clienttoepassing waarvoor XML-scores vereist zijn. Je kunt het ook van Postman doen. Het *[!UICONTROL malplaatje van HTML]* in real time gebruikt EdgeUtils om dit proces aan te tonen.
+Na het publiceren aan [!DNL Edge], wordt het scoren gedaan door een verzoek van de POST van een cliënt. Dit kan doorgaans worden gedaan vanuit een clienttoepassing waarvoor XML-scores vereist zijn. Je kunt het ook van Postman doen. Het *[!UICONTROL malplaatje van HTML]* in real time gebruikt EdgeUtils om dit proces aan te tonen.
 
 >[!NOTE]
 >Er is een kleine verwerkingstijd vereist voordat het scoren begint.
