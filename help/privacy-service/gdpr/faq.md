@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Veelgestelde vragen over GDPR
 
-Dit document bevat antwoorden op veelgestelde vragen over de [!DNL General Data Protection Regulation] (GDPR) en de implementatie ervan in Adobe Experience Cloud.
+In dit document worden antwoorden gegeven op veelgestelde vragen over de [!DNL General Data Protection Regulation] (GDPR) en de tenuitvoerlegging ervan in Adobe Experience Cloud.
 
 Definities voor de verschillende GDPR-termen die in dit document worden gebruikt, zijn te vinden in het [GDPR-terminologieartikel](terminology.md) .
 
