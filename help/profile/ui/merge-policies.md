@@ -16,15 +16,15 @@ ht-degree: 0%
 
 Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen samenbrengen en combineren om een volledige weergave van elk van uw individuele klanten te bekijken. Wanneer het brengen van deze gegevens samen, zijn het fusiebeleid de regels die [!DNL Platform] gebruiken om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen.
 
-Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. This guide provides step-by-step instructions for working with merge policies using the Adobe Experience Platform user interface.
+Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Deze gids verstrekt geleidelijke instructies voor het werken met samenvoegbeleid gebruikend het gebruikersinterface van het Adobe Experience Platform.
 
-If you would prefer to work with merge policies using the [!DNL Real-time Customer Profile] API, please follow the instructions outlined in the [merge policies API tutorial](../api/merge-policies.md).
+Als u het samenvoegbeleid liever wilt gebruiken met de [!DNL Real-time Customer Profile] API, volgt u de instructies in de zelfstudie over de [samenvoegbeleidsAPI](../api/merge-policies.md).
 
 ## Aan de slag
 
-This guide requires a working understanding of the various [!DNL Experience Platform] services involved with merge policies. Before beginning this tutorial, please review the documentation for the following services:
+Deze gids vereist een goed begrip van de verschillende [!DNL Experience Platform] diensten betrokken bij fusiebeleid. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-* [!DNL Real-time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [!DNL Real-time Customer Profile](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [!DNL Identity Service](../../identity-service/home.md): Schakelt [!DNL Real-time Customer Profile] het overbruggen van identiteiten uit verschillende gegevensbronnen in [!DNL Platform].
 * [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
@@ -70,18 +70,18 @@ Wanneer het selecteren van de belangrijkheid *[!UICONTROL van de]* Dataset, open
 
 ![](../images/merge-policies/dataset-precedence.png)
 
-Once you have finished creating the merge policy, click **[!UICONTROL Save]** to return to the *[!UICONTROL Merge policies]* tab where your new merge policy now appears in the list of policies.
+Als u klaar bent met het maken van het samenvoegbeleid, klikt u op **[!UICONTROL Opslaan]** om terug te keren naar het tabblad *[!UICONTROL Samenvoegingsbeleid]* waar het nieuwe samenvoegbeleid nu wordt weergegeven in de lijst met beleidsregels.
 
 ## Een samenvoegingsbeleid bewerken
 
-You can modify an existing merge policy through the *[!UICONTROL Merge policies]* tab by clicking on the *[!UICONTROL Policy Name]* for the merge policy you wish to edit.
+U kunt een bestaand samenvoegbeleid wijzigen via het tabblad *[!UICONTROL Samenvoegen van beleidsregels]* door op de *[!UICONTROL Beleidsnaam]* te klikken voor het samenvoegbeleid dat u wilt bewerken.
 
 ![Landingspagina van beleid samenvoegen](../images/merge-policies/select-edit.png)
 
-When the *[!UICONTROL Edit merge policy]* screen appears, you can make changes to the *[!UICONTROL Name]*, *[!UICONTROL Schema]*, *[!UICONTROL ID stitching]* type, and *[!UICONTROL Attribute merge]* type, as well as select whether or not this policy will be the *[!UICONTROL Default merge policy]* for your organization.
+Wanneer het *[!UICONTROL Edit scherm van het Samenvoegingsbeleid]* verschijnt, kunt u veranderingen in de *[!UICONTROL Naam]*, het *[!UICONTROL Schema]*, het *[!UICONTROL identiteitskaart stitching]* type, en de samenvoegingstype *[!UICONTROL van]* ** Attributen aanbrengen, evenals selecteren of dit beleid al dan niet het Default samenvoegbeleid voor uw organisatie zal zijn.
 
 >[!Nofferte]
->You cannot edit the merge policy ID, shown at the top of the edit screen. Dit is een alleen-lezen, door het systeem gegenereerde id die niet kan worden gewijzigd.
+>U kunt de beleids-id voor samenvoegen, die boven in het bewerkingsscherm wordt weergegeven, niet bewerken. Dit is een alleen-lezen, door het systeem gegenereerde id die niet kan worden gewijzigd.
 
 ![](../images/merge-policies/edit-screen.png)
 
@@ -91,7 +91,7 @@ Nadat u de benodigde wijzigingen hebt aangebracht, klikt u op **[!UICONTROL Opsl
 
 ## Schendingen van het beleid inzake gegevensbeheer
 
-When creating or updating a merge policy, a check is performed to determine if the merge policy violates any of the data usage policies defined by your organization. Data usage policies are part of Adobe Experience Platform [!DNL Data Governance] and are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on specific [!DNL Platform] data. Bijvoorbeeld, als een fusiebeleid werd gebruikt om een segment tot stand te brengen dat aan een derdebestemming activeerde, en uw organisatie een beleid van het gegevensgebruik had dat de uitvoer van specifieke gegevens naar derden verhindert, zou u een bericht &quot;van de het beleidsschending van Gegevens ontdekt&quot;wanneer het proberen om uw fusiebeleid te bewaren.
+Wanneer het creëren van of het bijwerken van een samenvoegbeleid, wordt een controle uitgevoerd om te bepalen als het fusiebeleid om het even welk beleid van het gegevensgebruik schendt dat door uw organisatie wordt bepaald. Het beleid voor gegevensgebruik maakt deel uit van een Adobe Experience Platform [!DNL Data Governance] en is een regel die het soort marketingacties beschrijft dat u op specifieke [!DNL Platform] gegevens mag uitvoeren of waarvan u een beperking hebt. Bijvoorbeeld, als een fusiebeleid werd gebruikt om een segment tot stand te brengen dat aan een derdebestemming activeerde, en uw organisatie een beleid van het gegevensgebruik had dat de uitvoer van specifieke gegevens naar derden verhindert, zou u een bericht &quot;van de het beleidsschending van Gegevens ontdekt&quot;wanneer het proberen om uw fusiebeleid te bewaren.
 
 Deze melding bevat een lijst met beleidsregels voor gegevensgebruik die zijn overtreden. U kunt de details van de schending bekijken door een beleid in de lijst te selecteren. Als u een overtreden beleid selecteert, biedt het tabblad *Gegevenskoppeling* de *reden voor schending* en de betreffende *activering*, elk met meer details over de manier waarop het beleid voor gegevensgebruik is overtreden.
 
