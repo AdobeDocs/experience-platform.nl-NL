@@ -40,7 +40,7 @@ Zie de zelfstudie over het [maken van segmenten met behulp van API&#39;s](../../
 
 ## Een schema voor samenvoeging inschakelen
 
-Om een schema in de samengevoegde verenigingsmening te omvatten, moet de markering &quot;union&quot;aan de `meta:immutableTags` attributen van het schema worden toegevoegd. Dit gebeurt via een PATCH-verzoek om het schema bij te werken en de `meta:immutableTags` array toe te voegen met de waarde &quot;union&quot;.
+Om een schema in de samengevoegde verenigingsmening te omvatten, moet de markering &quot;union&quot;aan de `meta:immutableTags` attributen van het schema worden toegevoegd. Dit wordt gedaan door een verzoek van PATCH om het schema bij te werken en de `meta:immutableTags` serie met een waarde van &quot;unie&quot;toe te voegen.
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Een succesvol antwoord retourneert de details van het bijgewerkte schema, dat nu
 
 Wanneer u de tag union instelt op een schema, wordt automatisch een samenvoeging gemaakt en onderhouden voor de klasse waarop het schema is gebaseerd. [!DNL Schema Registry] De `$id` voor de Unie is vergelijkbaar met de standaard `$id` van een klasse, met als enige verschil dat twee onderstrepingen en het woord &quot;union&quot; (`"__union"`) worden toegevoegd.
 
-Om een lijst van beschikbare unies te bekijken, kunt u een GET verzoek aan het `/unions` eindpunt uitvoeren.
+Om een lijst van beschikbare unies te bekijken, kunt u een verzoek van de GET aan het `/unions` eindpunt uitvoeren.
 
 **API-indeling**
 
@@ -164,7 +164,7 @@ Een geslaagde reactie retourneert HTTP-status 200 (OK) en een `results` array in
 
 ## Een specifieke unie opzoeken
 
-U kunt een specifieke unie bekijken door een GET verzoek uit te voeren dat de `$id` en, afhankelijk van de Accept- kopbal, sommige of alle details van de unie omvat.
+U kunt een specifieke samenvoeging bekijken door een verzoek van de GET uit te voeren die `$id` en, afhankelijk van de Accept- kopbal, sommige of alle details van de unie omvat.
 
 >[!NOTE]
 >
@@ -249,7 +249,7 @@ De responsindeling is afhankelijk van de Accept-header die in de aanvraag wordt 
 
 ## Schema&#39;s weergeven in een union
 
-Om te zien welke schema&#39;s deel van een specifieke unie uitmaken, kunt u een GET verzoek uitvoeren gebruikend vraagparameters om de schema&#39;s binnen de huurderscontainer te filtreren.
+Om te zien welke schema&#39;s deel van een specifieke unie uitmaken, kunt u een verzoek uitvoeren van de GET gebruikend vraagparameters om de schema&#39;s binnen de huurderscontainer te filtreren.
 
 Gebruikend de `property` vraagparameter, kunt u de reactie vormen op slechts terugkeerschema&#39;s die een `meta:immutableTags` gebied en een `meta:class` gelijke aan de klasse bevatten waarvan unie u toegang hebt tot.
 
