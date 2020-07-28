@@ -31,7 +31,7 @@ In het geval van dubbele ExperienceEvents, zult u waarschijnlijk de volledige ri
 
 >[!CAUTION]
 >
->Voor veel gegevenssets in [!DNL Experience Platform], waaronder die welke door de Adobe Analytics Data Connector worden gemaakt, is al deduplicatie op ervaringsniveau toegepast. Daarom is het opnieuw toepassen van dit niveau van deduplicatie onnodig en zal uw vraag vertragen. Het is belangrijk om de bron van uw Datasets te begrijpen en te weten of is deduplicatie op het ExperienceEvent-niveau reeds toegepast. Voor gegevenssets die worden gestreamd (bijvoorbeeld vanuit Adobe Target), moet u deduplicatie op ervaringsniveau toepassen omdat deze gegevensbronnen &#39;minstens één keer&#39; semantiek hebben.
+>Voor veel gegevenssets in [!DNL Experience Platform], waaronder die welke door de Adobe Analytics Data Connector worden geproduceerd, is al deduplicatie op ervaringsniveau toegepast. Daarom is het opnieuw toepassen van dit niveau van deduplicatie onnodig en zal uw vraag vertragen. Het is belangrijk om de bron van uw Datasets te begrijpen en te weten of is deduplicatie op het ExperienceEvent-niveau reeds toegepast. Voor gegevenssets die worden gestreamd (bijvoorbeeld vanuit Adobe Target), moet u deduplicatie op ervaringsniveau toepassen omdat deze gegevensbronnen &#39;minstens één keer&#39; semantiek hebben.
 
 **Toepassingsgebied:** Algemeen
 
