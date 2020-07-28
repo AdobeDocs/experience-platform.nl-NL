@@ -58,7 +58,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## API-conventies voor opslagplaats
 
-[!DNL Decisioning Service] wordt gecontroleerd door een aantal bedrijfsvoorwerpen die met elkaar verwant zijn. Alle bedrijfsobjecten worden opgeslagen in de [!DNL Platform’s] Business Object Repository. Een belangrijk kenmerk van deze opslagplaats is dat de API&#39;s orthogonaal zijn ten opzichte van het type bedrijfsobject. In plaats van POST, GET, PUT, PATCH of DELETE API te gebruiken die op het type van middel in zijn API eindpunt wijst, zijn er slechts 6 generische eindpunten maar zij aanvaarden of keren een parameter terug die op het type van het voorwerp wijst wanneer die doorverwijs nodig is. Het schema moet bij de repository worden geregistreerd, maar daarna is de repository bruikbaar voor een set open-end objecttypen.
+[!DNL Decisioning Service] wordt gecontroleerd door een aantal bedrijfsvoorwerpen die met elkaar verwant zijn. Alle bedrijfsobjecten worden opgeslagen in de [!DNL Platform’s] Business Object Repository. Een belangrijk kenmerk van deze opslagplaats is dat de API&#39;s orthogonaal zijn ten opzichte van het type bedrijfsobject. In plaats van een POST, GET, PUT, PATCH of DELETE API te gebruiken die op het type van middel in zijn API eindpunt wijst, zijn er slechts 6 generische eindpunten maar zij aanvaarden of keren een parameter terug die op het type van het voorwerp wijst wanneer die doorverwijs nodig is. Het schema moet bij de repository worden geregistreerd, maar daarna is de repository bruikbaar voor een set open-end objecttypen.
 
 Naast de bovenstaande koppen hebben de API&#39;s die u wilt maken, lezen, bijwerken, verwijderen en zoeken in opslagplaatsen de volgende conventies:
 
@@ -69,7 +69,7 @@ API Payload-indelingen worden onderhandeld met een `Accept` of een `Content-Type
 | FORMAT-variant | Beschrijving van de verzoek- of responsentiteit |
 | --- | --- |
 | <br>halfollowed by a parameter `schema={schemaId}` | Het bericht bevat een instantie die door een Schema JSON wordt beschreven dat door het schema van de formaatparameter wordt vermeld. De instantie wordt opgenomen in een JSON-eigenschap `_instance`. De andere eigenschappen op het hoogste niveau in de antwoordlading specificeren bewaarplaats informatie die voor alle middelen beschikbaar is.  De berichten die aan het formaat van HAL voldoen hebben een `_links` bezit dat verwijzingen in formaat HAL bevat. |
-| `patch.hal` | Het bericht bevat een JSON PATCH-payload met de aanname dat de te patchen instantie HAL-compatibel is. Dat betekent dat niet alleen de eigen instantie-eigenschappen van de instantie maar ook de HAL-koppelingen van de instantie kunnen worden gerepareerd. Er zijn beperkingen waaraan eigenschappen door de client kunnen worden bijgewerkt. |
+| `patch.hal` | Het bericht bevat een JSON PATCH nuttige lading met de veronderstelling dat de te patchen instantie HAL volgzaam is. Dat betekent dat niet alleen de eigen instantie-eigenschappen van de instantie maar ook de HAL-koppelingen van de instantie kunnen worden gerepareerd. Er zijn beperkingen waaraan eigenschappen door de client kunnen worden bijgewerkt. |
 | `home.hal` | Het bericht bevat een representatie in JSON-indeling van een thuisdocumentbron voor de gegevensopslagruimte. |
 | xdm.receipt | Het bericht bevat een reactie met JSON-indeling voor het maken, bijwerken (volledig en repareren) of verwijderen van een bewerking. Ontvangstbewijzen bevatten controlegegevens die op de herziening van de instantie in de vorm van een ETag wijzen. |
 
@@ -90,11 +90,11 @@ Voor de container API&#39;s maken, bijwerken en lezen, heeft het indelingsparame
 
 `ContainerId` is de eerste padparameter voor de instantie-API&#39;s. Alle bedrijfsentiteiten bevinden zich in wat een container wordt genoemd. Een container is een isolatiemechanisme om verschillende zorgen van elkaar te onderscheiden. Het eerste padelement voor de instantie-API&#39;s van de repository die het algemene eindpunt volgen, is het `containerId`. De id wordt verkregen uit de lijst met containers die toegankelijk zijn voor de aanroeper. De API die bijvoorbeeld wordt gebruikt om een instantie in een container te maken, is `POST https://platform.adobe.io/data/core/xcore/{containerId}/instances`.
 
-De lijst met toegankelijke containers wordt verkregen door het eindpunt &quot;/&quot; van de repository aan te roepen met een HTTP GET aanvraag met de standaardheaders.
+De lijst met toegankelijke containers wordt verkregen door het eindpunt &quot;/&quot; van de repository aan te roepen met een HTTP GET-aanvraag met de standaardheaders.
 
 ## Toegang tot containers beheren
 
-Een beheerder kan gelijkaardige principes, middelen, en toegangstoestemmingen in profielen groeperen. Dit verlaagt de beheerlast en wordt ondersteund door de gebruikersinterface [van de Admin Console van](https://adminconsole.adobe.com)Adobe. U moet een productbeheerder voor Adobe Experience Platform in uw organisatie zijn om profielen te creëren en gebruikers aan hen toe te wijzen.
+Een beheerder kan gelijkaardige principes, middelen, en toegangstoestemmingen in profielen groeperen. Dit vermindert de beheerslast en wordt gesteund door de Admin Console UI [van](https://adminconsole.adobe.com)Adobe. U moet een productbeheerder voor Adobe Experience Platform in uw organisatie zijn om profielen te creëren en gebruikers aan hen toe te wijzen.
 
 Het is voldoende om in één keer productprofielen te maken die overeenkomen met bepaalde machtigingen en vervolgens gebruikers aan die profielen toe te voegen. Profielen fungeren als groepen waaraan machtigingen zijn verleend en elke echte gebruiker of technische gebruiker in die groep neemt deze machtigingen over.
 
@@ -474,7 +474,7 @@ Het zoeken naar volledige tekst wordt bepaald door de volgende parameters:
 
 Als u een instantie wilt bijwerken, kan een client de volledige lijst met eigenschappen tegelijk overschrijven of een JSON PATCH-aanvraag gebruiken om afzonderlijke eigenschapswaarden, waaronder lijsten, te manipuleren.
 
-In beide gevallen specificeert URL van het verzoek de weg aan de fysieke instantie en in beide gevallen zal de reactie een JSON ontvangstlading zoals die zijn teruggekeerd van [creeer verrichting](#create-instances)zijn. Een client moet bij voorkeur de `Location` header of een HAL-koppeling gebruiken die deze heeft ontvangen van een eerdere API-aanroep voor dit object als het volledige URL-pad voor deze API. Als dit niet mogelijk is, kan de client de URL van de URL `containerId` en de `instanceId`URL samenstellen.
+In beide gevallen specificeert URL van het verzoek de weg aan de fysieke instantie en in beide gevallen zal de reactie een JSON ontvangstlading zoals die zijn teruggekeerd van [creeer verrichting](#create-instances)zijn. Een client moet bij voorkeur de `Location` header of een HAL-koppeling gebruiken die deze heeft ontvangen van een eerdere API-aanroep voor dit object als het volledige URL-pad voor deze API. Als dit niet mogelijk is, kan de client de URL samenstellen vanuit de `containerId` en de `instanceId`.
 
 **Verzoek** (PUT)
 
@@ -513,7 +513,7 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]'
 ```
 
-Het PATCH-verzoek past de instructies toe en valideert vervolgens de resulterende entiteit op basis van het schema en dezelfde entiteit- en referentiële integriteitsregels als het PUT-verzoek.
+Het verzoek van de PATCH past de instructies toe en bevestigt dan de resulterende entiteit tegen het schema en de zelfde entiteit en de referentiële integriteitsregels zoals het verzoek van de PUT.
 
 **Waardebewerkingen voor eigenschappen beheren**
 
@@ -528,7 +528,7 @@ Er zijn omstandigheden waarin meerdere clients proberen een instantie tegelijk b
 
 ### Instanties verwijderen
 
-De instanties kunnen met een DELETE vraag worden geschrapt. Een client moet bij voorkeur de `Location` header of een HAL-koppeling gebruiken die het heeft ontvangen van een eerdere API-aanroep hiervoor als het volledige URL-pad. Als dit niet mogelijk is, kan de client de URL van de URL `containerId` en de fysieke `instanceId`.
+Instanties kunnen met een DELETE worden verwijderd. Een client moet bij voorkeur de `Location` header of een HAL-koppeling gebruiken die het heeft ontvangen van een eerdere API-aanroep hiervoor als het volledige URL-pad. Als dit niet mogelijk is, kan de client de URL van de URL `containerId` en de fysieke `instanceId`.
 
 **Verzoek**
 
@@ -600,7 +600,7 @@ Aanbiedingen zijn een type beslissingsoptie en het JSON-schema van aanbiedingen 
 }
 ```
 
-Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige syntaxis cURL. De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer` of `https://ns.adobe.com/experience/offer-management/fallback-offer` als de aanbieding een reserveaanbieding is.
+Zie [Bijwerken en patchen voor de volledige cURL-syntaxis](#updating-and-patching-instances) . De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer` of `https://ns.adobe.com/experience/offer-management/fallback-offer` als de aanbieding een reserveaanbieding is.
 
 Elke aanbiedingsinstantie kan een optionele set eigenschappen hebben die alleen kenmerkend zijn voor die instantie. De verschillende aanbiedingen kunnen verschillende sleutels voor die eigenschappen hebben, moeten de waarden, nochtans koorden zijn. Deze eigenschappen kunnen in besluit en segmenteringsregels worden gebruikt. Ze zijn ook toegankelijk om de gekozen ervaring samen te stellen en de berichten verder aan te passen.
 
@@ -612,7 +612,7 @@ Er is een eenvoudige staat-overgang stroom die alle Opties zal volgen. Zij begin
 
 - **`xdm:status`** - Deze eigenschap wordt gebruikt voor levenscyclusbeheer van de instantie. De waarde vertegenwoordigt een workflowstatus die wordt gebruikt om aan te geven of de aanbieding nog in opbouw is (waarde = concept), algemeen door de runtime kan worden beschouwd (waarde = goedgekeurd) of dat deze niet langer mag worden gebruikt (waarde = gearchiveerd).
 
-Een eenvoudige PATCH-bewerking op de instantie wordt meestal gebruikt om alleen een `xdm:status` eigenschap te manipuleren:
+Een eenvoudige PATCH-bewerking op de instantie wordt doorgaans gebruikt om alleen een `xdm:status` eigenschap te manipuleren:
 
 ```json
 [
@@ -624,11 +624,11 @@ Een eenvoudige PATCH-bewerking op de instantie wordt meestal gebruikt om alleen 
 ]
 ```
 
-Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige syntaxis cURL. De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer` of `https://ns.adobe.com/experience/offer-management/fallback-offer` als de aanbieding een reserveaanbieding is.
+Zie [Bijwerken en patchen voor de volledige cURL-syntaxis](#updating-and-patching-instances) . De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer` of `https://ns.adobe.com/experience/offer-management/fallback-offer` als de aanbieding een reserveaanbieding is.
 
 ### Vertegenwoordigingen en plaatsingen
 
-Aanbiedingen zijn beslissingsopties met weergave van inhoud. Wanneer een beslissing wordt genomen, wordt de optie gekozen en wordt zijn herkenningsteken gebruikt om de inhoud of inhoudsverwijzingen voor de plaatsing te verkrijgen die moet worden geleverd. Een aanbieding kan meer dan één vertegenwoordiging hebben maar elk van die moet een verschillende plaatsingsverwijzing hebben. Dit zorgt ervoor dat bij een bepaalde plaatsing de vertegenwoordiging ondubbelzinnig kan worden bepaald.
+Aanbiedingen zijn beslissingsopties met weergave van inhoud. Wanneer een beslissing wordt genomen, wordt de optie gekozen en zijn herkenningsteken wordt gebruikt om de inhoud of inhoudsverwijzingen voor de plaatsing te verkrijgen die moet worden geleverd. Een aanbieding kan meer dan één vertegenwoordiging hebben maar elk van die moet een verschillende plaatsingsverwijzing hebben. Dit zorgt ervoor dat bij een bepaalde plaatsing de vertegenwoordiging ondubbelzinnig kan worden bepaald.
 Tijdens de beslissingsbewerking wordt de plaatsing bepaald in combinatie met het object activity. Aanbiedingen die geen representatie hebben met die plaatsing als referentie, worden automatisch verwijderd uit de keuzelijst.
 
 Voordat vertegenwoordigingen aan een aanbieding kunnen worden toegevoegd, moeten de plaatsingsinstanties bestaan. Die instanties worden gecreeerd het schema herkenningsteken`https://ns.adobe.com/experience/offer-management/offer-placement`.
@@ -646,7 +646,7 @@ Voordat vertegenwoordigingen aan een aanbieding kunnen worden toegevoegd, moeten
 } 
 ```
 
-Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige syntaxis cURL. De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer` of `https://ns.adobe.com/experience/offer-management/fallback-offer` als de aanbieding een reserveaanbieding is.
+Zie [Bijwerken en patchen voor de volledige cURL-syntaxis](#updating-and-patching-instances) . De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer` of `https://ns.adobe.com/experience/offer-management/fallback-offer` als de aanbieding een reserveaanbieding is.
 
 Een **instantie Placement** kan de volgende eigenschappen hebben:
 
@@ -686,7 +686,7 @@ De extra eigenschappen kunnen door cliënten worden gebruikt om context behandel
 - Binnen elk punt in de `xdm:components` serie, voegt de cliënt UI van de Bibliotheek van de Aanbieding de volgende eigenschappen toe. Deze eigenschappen mogen niet worden verwijderd of gemanipuleerd zonder dat de gevolgen voor de gebruikersinterface worden begrepen:
    - **`offerui:previewThumbnail`** - Dit is een optionele eigenschap die de aanbiedingsbibliotheek gebruikt om een rendering van het element weer te geven. Deze uitvoering is niet hetzelfde als het element zelf. De inhoud kan bijvoorbeeld HTML zijn en de vertoning is een bitmapafbeelding die alleen een benadering van de afbeelding weergeeft. Deze (lagere kwaliteit) vertoning wordt weergegeven in het weergaveblok van de aanbieding.
 
-Een voorbeeld van de verrichting van de PATCH op een aanbiedingsinstantie toont hoe te om de vertegenwoordiging te manipuleren:
+Een voorbeeld van PATCH-bewerking op een aanbiedingsinstantie laat zien hoe u de representaties kunt manipuleren:
 
 ```json
 [
@@ -709,7 +709,7 @@ Een voorbeeld van de verrichting van de PATCH op een aanbiedingsinstantie toont 
 
 Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige syntaxis cURL. De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer` of `https://ns.adobe.com/experience/offer-management/fallback-offer` als de aanbieding een reserveaanbieding is.
 
-De bewerking PATCH kan mislukken als er `xdm:representations` nog geen eigenschap is. In dat geval kan de bovenstaande add-bewerking worden voorafgegaan door een andere add-bewerking die de `xdm:representations` array maakt of de enkele add-bewerking stelt de array rechtstreeks in.
+De PATCH-bewerking kan mislukken als er `xdm:representations` nog geen eigenschap is. In dat geval kan de bovenstaande add-bewerking worden voorafgegaan door een andere add-bewerking die de `xdm:representations` array maakt of de enkele add-bewerking stelt de array rechtstreeks in.
 De schema&#39;s en eigenschappen die worden beschreven worden gebruikt voor alle aanbiedingstypes, verpersoonlijkingsaanbiedingen evenals reserveaanbiedingen. De volgende twee secties over beperkingen en besluitvormingsregels verklaren aspecten van verpersoonlijkingsaanbiedingen.
 
 ## Aanbiedingsbeperkingen instellen
@@ -746,7 +746,7 @@ Een begrenzingsbeperking is een component in een beslissingsoptie die de paramet
 - **`xdm:globalCap`** - Een mondiaal plafond is een beperking van het aantal keren dat een aanbod in zijn geheel kan worden voorgesteld.
 - **`xdm:profileCap`** - Een profiellimiet is een beperking van het aantal keren dat een aanbieding aan een bepaald profiel kan worden voorgesteld.
 
-Het plaatsen van of het veranderen van de het maximum beperking op een verpersoonlijkingsaanbieding kan met de volgende vraag van de PATCH worden verwezenlijkt:
+Het plaatsen van of het veranderen van de het maximum beperking op een verpersoonlijkingsaanbieding kan met de volgende vraag van PATCH worden verwezenlijkt:
 
 ```json
 [
@@ -773,7 +773,7 @@ De verwijzing naar de regel is ingesloten in de eigenschap `xdm:selectionConstra
 
 - **`xdm:eligibilityRule`** - Deze eigenschap bevat een verwijzing naar een subsidiabiliteitsregel. De waarde is de waarde `@id` van een instantie van schemahttps://ns.adobe.com/experience/offer-management/eligibility-rule.
 
-Het toevoegen van en het schrappen van een regel kunnen ook met een verrichting van de PATCH worden verwezenlijkt:
+Het toevoegen en schrappen van een regel kan ook met een verrichting van de PATCH worden verwezenlijkt:
 
 ```
 [
@@ -785,9 +785,9 @@ Het toevoegen van en het schrappen van een regel kunnen ook met een verrichting 
 ]'
 ```
 
-Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige syntaxis cURL. De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer`. Voor alternatieven gelden geen beperkingen.
+Zie [Bijwerken en patchen voor de volledige cURL-syntaxis](#updating-and-patching-instances) . De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer`. Voor alternatieven gelden geen beperkingen.
 
-Merk op dat de toelatingsregel in het `xdm:selectionConstraint` bezit samen met de kalenderbeperkingen wordt ingebed. De verrichtingen van de PATCH zouden niet moeten proberen om het volledige `SelectionConstraint` bezit te verwijderen.
+Merk op dat de toelatingsregel in het `xdm:selectionConstraint` bezit samen met de kalenderbeperkingen wordt ingebed. PATCH-bewerkingen mogen niet proberen de gehele `SelectionConstraint` eigenschap te verwijderen.
 
 ## Vaststelling van de prioriteit van een aanbieding
 
@@ -796,7 +796,7 @@ De basisprioriteit is ingesloten in de eigenschap `xdm:rank`:
 
 - **`xdm:priority`** - Deze eigenschap staat voor de standaardvolgorde waarin een aanbieding boven een andere wordt geselecteerd als er geen profielspecifieke volgorde bekend is. Als na het vergelijken van de prioritaire waarde twee of meer personaliseringsaanbiedingen nog steeds verbonden zijn wordt gekozen willekeurig en gebruikt in het aanbiedingsvoorstel. De waarde voor deze eigenschap moet een geheel getal groter of gelijk aan 0 zijn.
 
-Het aanpassen van de basisprioriteit kan met de volgende vraag van de PATCH worden gedaan:
+Het aanpassen van de basisprioriteit kan met de volgende vraag van PATCH worden gedaan:
 
 ```shell
 curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
@@ -900,7 +900,7 @@ Een aanbieding kan ook worden gepatcheerd om de lijst met tags te wijzigen:
 
 In beide gevallen raadpleegt u [Bijwerken en patchen voor de volledige cURL-syntaxis](#updating-and-patching-instances) . De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer`.
 
-Merk op dat het `xdm:tags` bezit reeds moet bestaan om toe te voegen verrichting te slagen. Als er geen tags bestaan in een instantie, kan de PATCH-bewerking eerst de array-eigenschap toevoegen en vervolgens een tagverwijzing naar die array toevoegen.
+Merk op dat het `xdm:tags` bezit reeds moet bestaan om toe te voegen verrichting te slagen. Als er geen tags bestaan in een instantie, kan de bewerking PATCH eerst de array-eigenschap toevoegen en vervolgens een tagverwijzing naar die array toevoegen.
 
 ### Filters definiëren voor aanbiedingsverzamelingen
 
