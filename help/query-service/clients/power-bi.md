@@ -24,7 +24,7 @@ Nadat u hebt [!DNL Power BI] geïnstalleerd, moet u opstelling de noodzakelijke 
 
 - Selecteer v4.0.10 (nieuwere versies resulteren momenteel in een fout).
 
-- Onder &quot;Installatie van Npgsql GAC&quot;op het scherm van de Opstelling van de Douane, wordt de uitgezochte **[!UICONTROL Zal geïnstalleerd op lokale harde aandrijving]**. Als u de GAC niet installeert, zal Power BI later mislukken.
+- Onder &quot;Installatie van Npgsql GAC&quot;op het scherm van de Opstelling van de Douane, wordt de uitgezochte **[!UICONTROL Zal geïnstalleerd op lokale harde aandrijving]**. Als u de GAC niet installeert, mislukt de Power BI later.
 
 - Start Windows opnieuw.
 
