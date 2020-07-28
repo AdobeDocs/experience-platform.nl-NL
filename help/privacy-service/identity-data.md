@@ -14,31 +14,31 @@ ht-degree: 1%
 
 # Identiteitsgegevens voor privacyverzoeken
 
-Adobe Experience Platforms kunnen alleen aanvragen van klanten [!DNL Privacy Service] voor hun persoonlijke gegevens verwerken (zoals aanvragen voor toegang, verwijderen of het niet-verkopen) als ze unieke id&#39;s hebben die een bepaalde klant koppelen aan de opgeslagen privégegevens in toepassingen die geschikt zijn voor Adobe Experience Cloud. [!DNL Privacy Service] gebruikt deze id&#39;s vervolgens om alle gegevens te verzamelen die onder de identiteit van de klant binnen zijn opgeslagen [!DNL Experience Cloud], en deze te verwerken volgens het verzoek van de klant.
+Opdat het Adobe Experience Platform klantenverzoeken [!DNL Privacy Service] om hun privé gegevens (met inbegrip van toegang, schrapping, of uit-van-verkoop verzoeken) kan verwerken, moet het van unieke herkenningstekens worden voorzien die een specifieke klant aan hun opgeslagen privé gegevens in uw Adobe Experience Cloud toegelaten toepassingen verbinden. [!DNL Privacy Service] gebruikt deze id&#39;s vervolgens om alle gegevens te verzamelen die onder de identiteit van de klant binnen zijn opgeslagen [!DNL Experience Cloud], en deze te verwerken volgens het verzoek van de klant.
 
-Dit document biedt algemene richtlijnen voor het configureren van gegevensbewerkingen en het benutten van Adobe-technologieën om de juiste identiteitsgegevens op te halen voor privacyverzoeken van klanten.
+Dit document biedt algemene richtlijnen voor het configureren van gegevensbewerkingen en het benutten van Adobe-technologieën om de juiste identiteitsgegevens voor privacyverzoeken van klanten op te halen.
 
 ## Identiteiten en naamruimten
 
 Wanneer een klant met uw merk door verscheidene verschillende kanalen kan in wisselwerking staan, kan het lastig zijn om de ongelijke herkenningstekens te verzoenen die van die vele interactie worden geregistreerd. Hierdoor kan het moeilijk worden om te bepalen welke gegevens bij een bepaalde persoon in uw [!DNL Experience Cloud] toepassingen horen.
 
-Wanneer u bijvoorbeeld verzoeken om klantgegevens afhandelt in, [!DNL Privacy Service]kan een identiteit een cookie-waarde vertegenwoordigen die is ingesteld onder een door Adobe beheerd domein, een cookie-waarde onder een domein van derden en wordt gedeeld met Adobe, of een aangepaste id die u expliciet definieert binnen uw IMS-organisatie.
+Bijvoorbeeld, wanneer het behandelen van de verzoeken van klantengegevens binnen [!DNL Privacy Service], kan een identiteit een kokerwaarde vertegenwoordigen die onder een Adobe-gecontroleerd domein, een kokerwaarde onder een derdedomein wordt geplaatst en met Adobe wordt gedeeld, of een douaneherkenningsteken dat u uitdrukkelijk binnen uw IMS Organisatie bepaalt.
 
-Daarom is het vereist dat elke identiteit waarnaar wordt verzonden vergezeld [!DNL Privacy Service] gaat van een **naamruimte** die context biedt door de identiteitswaarde te koppelen aan het systeem van oorsprong. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;E-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
+Daarom is het vereist dat elke identiteit waarnaar wordt verzonden vergezeld [!DNL Privacy Service] gaat van een **naamruimte** die context biedt door de identiteitswaarde te koppelen aan het systeem van oorsprong. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;e-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
 
 De Dienst van de Identiteit van het Adobe Experience Platform handhaaft een opslag van globaal bepaalde en user-defined identiteitsnaamruimten. Zie het overzicht [](../identity-service/namespaces.md)van naamruimten voor meer informatie over naamruimten. Voor een lijst van standaardnamespaces en namespace kwalificfiers die algemeen binnen worden gebruikt, zie de [!DNL Privacy Service]bijlage sectie [](api/appendix.md) in de ontwikkelaarsgids.
 
 ## ECID en Opt-in Service
 
-Adobe Experience Cloud [!DNL Identity Service] fungeert als een algemeen identificatiekader voor [!DNL Experience Cloud]en wijst een unieke, permanente id toe aan elke sitebezoeker. Met de [!DNL Experience Cloud] id (ECID) wordt de activiteit van een klant bijgehouden via het gebruik van een cookie van de eerste partij, kan een apparaat in meerdere toepassingen op unieke wijze worden geïdentificeerd en kunt u dezelfde sitebezoeker en de gegevens ervan in verschillende [!DNL Experience Cloud] toepassingen identificeren. Zie het overzicht [van de](https://docs.adobe.com/content/help/en/id-service/using/intro/overview.html) Experience Cloud Identity Service voor meer informatie.
+Adobe Experience Cloud [!DNL Identity Service] fungeert als een gemeenschappelijk identificatiekader voor [!DNL Experience Cloud]en wijst een unieke, permanente id toe aan elke bezoeker van de site. Met de [!DNL Experience Cloud] id (ECID) wordt de activiteit van een klant bijgehouden via het gebruik van een cookie van de eerste partij, kan een apparaat in meerdere toepassingen op unieke wijze worden geïdentificeerd en kunt u dezelfde sitebezoeker en de gegevens ervan in verschillende [!DNL Experience Cloud] toepassingen identificeren. Raadpleeg het overzicht [van de](https://docs.adobe.com/content/help/en/id-service/using/intro/overview.html) Experience Cloud Identity Service voor meer informatie.
 
 De open-binnen Dienst, een uitbreiding van [!DNL Experience Cloud Identity Service], staat u opstellings protocollen op uw toepassing toe om bezoekers te laten bepalen of u een koekje op het apparaat of browser van de bezoeker kunt plaatsen. Raadpleeg de [documentatie](https://docs.adobe.com/content/help/nl-NL/id-service/using/implementation/opt-in-service/optin-overview.html)van de Opt-in-service voor meer informatie over de Opt-in-service, inclusief hoe u de service voor uw toepassing kunt instellen.
 
-Nadat aan uw sitebezoekers ECID&#39;s zijn toegewezen, kunt u deze id&#39;s ophalen via Adobe [!DNL Privacy JavaScript Library] voor gebruik in privacyverzoeken, zoals beschreven in de volgende sectie.
+Nadat aan uw sitebezoekers ECID&#39;s zijn toegewezen, kunt u de Adobe gebruiken [!DNL Privacy JavaScript Library] om die id&#39;s op te halen voor gebruik in privacyverzoeken, zoals beschreven in de volgende sectie.
 
 ## [!DNL Privacy JS Library]
 
-Het [!DNL Adobe Privacy JavaScript Library] biedt verschillende functies waarmee u de identiteit van klanten die in de browser zijn opgeslagen, kunt ophalen en verwijderen. De bibliotheek kan worden geconfigureerd om identiteitsgegevens op te halen uit verschillende Adobe-toepassingen, waaronder ECID. Door het gebruik van callbacks of beloften, kunt u met succes opgehaalde IDs behandelen en hen verzenden naar [!DNL Privacy Service] API.
+Het [!DNL Adobe Privacy JavaScript Library] biedt verschillende functies waarmee u de identiteit van klanten die in de browser zijn opgeslagen, kunt ophalen en verwijderen. De bibliotheek kan worden gevormd om identiteitsinformatie van verscheidene toepassingen van Adobe, met inbegrip van ECID terug te winnen. Door het gebruik van callbacks of beloften, kunt u met succes opgehaalde IDs behandelen en hen verzenden naar [!DNL Privacy Service] API.
 
 Voor meer informatie over [!DNL Privacy JS Library], met inbegrip van codesteekproeven voor verscheidene gemeenschappelijke gebruiksgevallen, gelieve te verwijzen naar het overzicht [van de Bibliotheek van](js-library.md)Privacy JS.
 
