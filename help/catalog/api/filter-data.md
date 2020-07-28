@@ -16,7 +16,7 @@ ht-degree: 0%
 
 De [!DNL Catalog Service] API staat reactiegegevens toe om door het gebruik van verzoekvraagparameters worden gefiltreerd. Een deel van beste praktijken voor [!DNL Catalog] is filters in alle API vraag te gebruiken, aangezien zij de lading op API verminderen en helpen algemene prestaties verbeteren.
 
-In dit document worden de meest gebruikte methoden voor het filteren van [!DNL Catalog] objecten in de API beschreven. U wordt aangeraden naar dit document te verwijzen terwijl u de [Catalog Developer Guide](getting-started.md) leest voor meer informatie over hoe u kunt werken met de [!DNL Catalog] API. Meer algemene informatie over [!DNL Catalog Service], zie het [Overzicht](../home.md)van de Catalogus.
+In dit document worden de meest gebruikte methoden voor het filteren van [!DNL Catalog] objecten in de API beschreven. U wordt aangeraden naar dit document te verwijzen terwijl u de [Catalog-ontwikkelaarsgids](getting-started.md) leest voor meer informatie over de interactie met de [!DNL Catalog] API. Meer algemene informatie over [!DNL Catalog Service], zie het [Overzicht](../home.md)van de Catalogus.
 
 ## Teruggestuurde objecten beperken
 
