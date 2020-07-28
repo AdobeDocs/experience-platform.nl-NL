@@ -4,9 +4,9 @@ seo-title: Help bij Adobe Experience Platform Web SDK
 description: Leer welke SDK van het Web van het Adobe Experience Platform is en hoe het kan worden gebruikt.
 seo-description: klanten van de Adobe Experience Cloud in staat stellen te communiceren met de verschillende diensten in de Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: fc8b26e237821d5fa2d72fb38189894ed0b05271
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,32 @@ ht-degree: 0%
 
 # Wat is SDK van het Web van Adobe Experience Platform
 
-Het Web SDK van het Adobe Experience Platform is een cliënt-kant bibliotheek JavaScript die klanten van Adobe Experience Cloud toestaat om met de diverse diensten in de [!DNL Experience Cloud] door de Adobe in wisselwerking te staan [!DNL Experience Platform Edge Network].
+Het Web SDK van het Adobe Experience Platform is een cliënt-kant bibliotheek JavaScript die klanten van Adobe Experience Cloud toestaat om met de diverse diensten in de [!DNL Experience Cloud] door de Adobe in wisselwerking te staan [!DNL Experience Platform Edge Network]. Naast de JavaScript-bibliotheek is er een [extensie](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) Starten die u kunt helpen met uw Web SDK-configuraties.
+
+## Beleef de rand
+
+[!DNL Adobe Experience Platform Web SDK] maakt deel uit van de verzameling waaruit Experience Edge bestaat. Experience Edge bestaat uit drie technologieën:
+
+* **[!DNL Adobe Experience Platform Web SDK]:**Een JavaScript SDK en[!DNL Launch]extensie voor een drastische vereenvoudiging van de implementatie van[!DNL Adobe]technologieën
+* **Adobe Experience Platform Mobile SDK:** Een uitbreiding van de mobiele SDK van v5 zodat klanten de nieuwe implementatiemethode kunnen gebruiken
+* **[!DNL Adobe Experience Platform Edge Network]:**Een globaal verdeeld netwerk van servers die een nieuwe methodologie toelaten om[!DNL Adobe]producten op te stellen
+
+Het [!DNL Adobe Experience Edge] is een nieuw kader voor gegevensverzameling met lage latentie, pluggable computergebruik en snelle gegevensactivering op alle adresseerbare kanalen.
+
+[!DNL Adobe Experience Edge] biedt één geconsolideerde SDK voor elk kanaal (JavaScript, Mobiel, Server-kant), die gegevens naar een gemeenschappelijk Adobe-domein (`adobedc.net`) verzendt en één enkele nuttige lading voor gegevens en ervaringslevering ontvangt.
+
+Aan de serverzijde, maken een verenigde randgateway en een gemeenschappelijk kader van de platformdiensten het gemakkelijk om nieuwe mogelijkheden in deze real-time gegevensverwerkingsomgeving op te nemen en op te stellen.  Deze architectuur:
+
+* Vermindert klantentijd aan waarde
+* Beëindigt de behoefte aan &quot;punt&quot;integratie
+* Verbetert de prestaties in vergelijking met de oude bibliotheken
+* Lagere kosten
+* Verhoogt de snelheid van innovatie
+* Creeert duurzame concurrerende voordelen voor klanten van Adobe
+
+Met één enkel geconsolideerd randsysteem kunnen klanten hun reclame-, marketing- of personalisatiecampagnes op alle kanalen als een geïntegreerde ervaring beheren.  Het staat toe [!DNL Adobe] om de diensten met lagere totale kosten van eigendom voor klanten te leveren.  Het helpt ook de snelheid van productinnovatie verhogen door de rand in real time pluggable te maken en [!DNL Adobe] en zijn klanten toe te staan om nieuwe mogelijkheden en klant-bepaalde logica aan dat echt - tijdsysteem sneller toe te voegen.
+
+## Video-overzicht
 
 De volgende video geeft een overzicht van het Adobe Experience Platform [!DNL Web SDK] en [!DNL Edge Network].
 
@@ -37,14 +62,13 @@ In de volgende video ziet u het Adobe Experience Platform [!DNL Web SDK] en [!DN
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-
 ## Aan de slag
 
 We raden u ten zeerste aan onze gids [over aan de slag uit te](getting-started/quick-start-with-launch.md) checken voor een korte zelfstudie over hoe u aan de slag kunt met Adobe Launch.
 
 Dit product ontwikkelt zich voortdurend en groeit om steeds meer gebruiksgevallen te ondersteunen. Om de nieuwste ontwikkelingen bij te houden, bekijkt u ons [ondersteunde toetsenbord](https://github.com/adobe/alloy/projects/5). Wij houden dit bij met de gebruiksgevallen die wij momenteel steunen en de gevallen waarin wij aan het werk zijn om u in staat te stellen de beste beslissingen te nemen.
 
-* __Gebruik gevallen die nog niet worden ondersteund__ . Dit zijn gebruiksgevallen die op onze routekaart staan en in de toekomst worden ondersteund.
-* __Gevallen van het gebruik Lopend__ - Dit zijn de gebruiksgevallen het team momenteel aan voltooiing voor versie werkt.
-* __Ondersteunde gebruiksscenario__ &#39;s - Dit zijn de gebruiksgevallen die worden ondersteund en die vandaag de dag werken.
-* __Gebruik gevallen die we niet ondersteunen__ . Dit zijn de gebruiksgevallen die we hebben besloten niet te ondersteunen.
+* **Gebruik nog niet ondersteunde gevallen:** Dit zijn gebruiksgevallen die op onze routekaart staan en die in de toekomst moeten worden ondersteund.
+* **Gevallen worden gebruikt:** Dit zijn de gebruiksgevallen die het team momenteel aan de voltooiing voor versie werkt.
+* **Gevallen voor ondersteund gebruik:** Dit zijn de gebruiksgevallen die worden ondersteund en vandaag werken.
+* **Gebruik gevallen die we niet ondersteunen:** Dit zijn de gebruiksgevallen die we hebben besloten niet te steunen.
