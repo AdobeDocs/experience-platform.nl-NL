@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Creeer een [!DNL Amazon Redshift] bronschakelaar in UI
 
->De [!NOTE]
+>The [!NOTE]
 >De [!DNL Amazon Redshift] connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een [!DNL Amazon Redshift] (hierna &quot;[!DNL Redshift]&quot; genoemd) bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
@@ -49,11 +49,11 @@ Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volg
 
 Login aan <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatiebar om tot de werkruimte van *[!UICONTROL Bronnen]* toegang te hebben. In het scherm *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven waarvoor u binnenkomende basisverbindingen kunt maken met. Elke bron toont het aantal bestaande basisverbindingen dat aan deze verbindingen is gekoppeld.
 
-Selecteer onder de categorie *[!UICONTROL Databases]* de optie **[!UICONTROL Amazon Redshift]** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Selecteer **[!UICONTROL Connect-bron]** als u een nieuwe binnenkomende basisverbinding wilt maken.
+Onder de categorie *[!UICONTROL Databases]* selecteert u **[!UICONTROL Amazon Redshift]** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Selecteer **[!UICONTROL Connect-bron]** als u een nieuwe binnenkomende basisverbinding wilt maken.
 
 ![](../../../../images/tutorials/create/redshift/catalog.png)
 
-De pagina *[!UICONTROL Verbinding maken met Amazon Redshift]* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina *[!UICONTROL Verbinding maken met Amazon Opnieuw verschuiven]* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
