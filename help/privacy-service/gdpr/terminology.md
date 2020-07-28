@@ -74,9 +74,9 @@ __Groep ondernemingen:__ Een controlerende onderneming en de ondernemingen waaro
 
 ## I
 
-__Identity Management Services (IMS):__ De Adobe-implementatie van Federated ID en OAuth 2.0 voor verificatie van Adobe ID-gebruikers en autorisatie voor Adobe-bronnen. U moet IMS integreren met uw Adobe-applicatie of -service om uw gebruikers zich te laten aanmelden en toegang te geven tot Adobe-services. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
+__Identity Management Services (IMS):__ De Adobe implementatie van Federated ID en OAuth 2.0 voor authentificatie van de gebruikers van Adobe ID en vergunning voor de middelen van Adobe. U moet IMS integreren met uw Adobe-applicatie of -service om uw gebruikers zich te laten aanmelden en toegang te geven tot Adobe-services. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
 
-__IMS-organisatie-id:__ Verwijst naar een Adobe-verificatietoken voor service-to-service verificatie waarvoor geen gebruikersaanmelding vereist is. Deze wordt uitgegeven aan een IMS-client en heeft geen bijbehorende gebruiker. Een IMS-client heeft een servicetoken nodig voor de verificatie van back-channelaanvragen tussen services goed te keuren. (De term “systeemtoken” wordt soms gebruikt voor een servicetoken.)
+__IMS-organisatie-id:__ Verwijst naar een Adobe toestemmingstoken voor dienst-aan-dienst authentificatie, die gebruikerslogin niet vereist. Deze wordt uitgegeven aan een IMS-client en heeft geen bijbehorende gebruiker. Een IMS-client heeft een servicetoken nodig voor de verificatie van back-channelaanvragen tussen services goed te keuren. (De term “systeemtoken” wordt soms gebruikt voor een servicetoken.)
 
 ## J
 
