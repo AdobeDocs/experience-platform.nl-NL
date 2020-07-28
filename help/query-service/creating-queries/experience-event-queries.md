@@ -185,5 +185,5 @@ ORDER BY pageViews DESC;
 
 ## Volgende stappen
 
-Lees de handleiding Door Adobe gedefinieerde functies voor meer informatie over voorbeeldquery&#39;s met behulp van Adobe Defined Functions (ADF&#39;s). Voor algemene begeleiding bij vraaguitvoering, te lezen gelieve de [gids over vraaguitvoering in de Dienst](./writing-queries.md)van de Vraag.
+Voor meer informatie over steekproefvragen die Adobe bepaalde Functies (ADFs) gebruiken, te lezen gelieve de Adobe bepaalde gids van Functies. Voor algemene begeleiding bij vraaguitvoering, te lezen gelieve de [gids over vraaguitvoering in de Dienst](./writing-queries.md)van de Vraag.
 
