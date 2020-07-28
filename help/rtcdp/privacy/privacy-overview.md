@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Privacy in real time CDP
 
-[!DNL Real-time Customer Data Platform] (CDP in real time) helpt marketers gegevens van veelvoudige ondernemingssystemen samen te brengen, die hen toestaan om, hun klanten beter te identificeren te begrijpen en te betrekken. Adobe beschouwt de privacy van consumentengegevens als een fundamenteel ontwerpbeginsel en biedt verschillende besturingselementen om marketers te helpen de privacy van gegevens van hun klanten te beheren.
+[!DNL Real-time Customer Data Platform] (CDP in real time) helpt marketers gegevens van veelvoudige ondernemingssystemen samen te brengen, die hen toestaan om, hun klanten beter te identificeren te begrijpen en te betrekken. Adobe beschouwt de privacy van consumentengegevens als een fundamenteel ontwerpbeginsel en biedt verschillende controles om marketers te helpen de gegevensprivacy van hun klanten te beheren.
 
 De meerderheid van CDP-mogelijkheden in real time worden aangedreven door Adobe Experience Platform. Dit document biedt informatie over de verschillende technologieën voor privacyverbetering die worden ondersteund door Real-time CDP, met koppelingen naar [!DNL Experience Platform] documentatie voor meer informatie.
 
