@@ -58,7 +58,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -66,11 +66,11 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 Voordat u verbinding maakt [!DNL Platform] met een [!DNL Salesforce] account, moet u controleren of er verbindingsspecificaties bestaan voor [!DNL Salesforce]. Als er geen verbindingsspecificaties bestaan, kan geen verbinding worden gemaakt.
 
-Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor opzoeken [!DNL Salesforce] door een GET verzoek uit te voeren en vraagparameters te gebruiken.
+Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor opzoeken [!DNL Salesforce] door een verzoek van de GET uit te voeren en vraagparameters te gebruiken.
 
 **API-indeling**
 
-Het verzenden van een GET verzoek zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=name=="salesforce"` om informatie specifiek voor te verkrijgen [!DNL Salesforce].
+Het verzenden van een verzoek van de GET zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=name=="salesforce"` om informatie specifiek voor te verkrijgen [!DNL Salesforce].
 
 ```http
 GET /connectionSpecs
@@ -147,7 +147,7 @@ Een geslaagde reactie retourneert de verbindingsspecificaties voor [!DNL Salesfo
 
 Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL Salesforce] account is slechts één basisverbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
 
-Voer de volgende POST-aanvraag uit om een basisverbinding te maken.
+Voer het volgende verzoek van de POST uit om een basisverbinding tot stand te brengen.
 
 **API-indeling**
 
