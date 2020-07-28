@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een geverifieerde streamingverbinding maken
 
-De voor authentiek verklaarde Inzameling van Gegevens staat de diensten van het Adobe Experience Platform, zoals [!DNL Real-time Customer Profile] en [!DNL Identity], toe om tussen verslagen te onderscheiden die uit vertrouwde op bronnen en niet-vertrouwde op bronnen komen. De cliënten die Persoonlijk Identificeerbare Informatie (PII) willen verzenden kunnen dit doen door toegangstokens als deel van het POST- verzoek te verzenden.
+De voor authentiek verklaarde Inzameling van Gegevens staat de diensten van het Adobe Experience Platform, zoals [!DNL Real-time Customer Profile] en [!DNL Identity], toe om tussen verslagen te onderscheiden die uit vertrouwde op bronnen en niet-vertrouwde op bronnen komen. De cliënten die Persoonlijk Identificeerbare Informatie (PII) willen verzenden kunnen dit doen door toegangstokens als deel van het verzoek van de POST te verzenden.
 
 ## Aan de slag
 
