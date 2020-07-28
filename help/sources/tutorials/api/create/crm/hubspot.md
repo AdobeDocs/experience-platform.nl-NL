@@ -56,7 +56,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -66,7 +66,7 @@ Om een [!DNL HubSpot] verbinding tot stand te brengen, moet een reeks [!DNL HubS
 
 **API-indeling**
 
-Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. Het verzenden van een GET verzoek aan het `/connectionSpecs` eindpunt zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag ook omvatten `property=name=="hubspot"` om informatie specifiek voor te verkrijgen [!DNL HubSpot].
+Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. Het verzenden van een verzoek van de GET naar het `/connectionSpecs` eindpunt zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag ook omvatten `property=name=="hubspot"` om informatie specifiek voor te verkrijgen [!DNL HubSpot].
 
 ```http
 GET /connectionSpecs
@@ -142,7 +142,7 @@ Een geslaagde reactie retourneert de verbindingsspecificatie voor [!DNL HubSpot]
 
 ## Verbinding maken voor de API
 
-Een verbinding voor API specificeert een bronnen en bevat uw geloofsbrieven voor die bron. Per [!DNL HubSpot] account is slechts één verbinding voor de API vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
+Een verbinding voor API specificeert een bronnen en bevat uw geloofsbrieven voor die bron. Per [!DNL HubSpot] account is slechts één verbinding voor de API vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het opnemen van verschillende gegevens.
 
 **API-indeling**
 
