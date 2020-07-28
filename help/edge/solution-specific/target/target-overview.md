@@ -61,7 +61,7 @@ alloy
 
 ## De op formulieren gebaseerde composer gebruiken
 
-De Form-Based Experience Composer is een niet-visuele interface die nuttig is voor het configureren van A/B Tests, [!DNL Experience Targeting], Automated Personalization en Recommendations activiteiten met verschillende soorten reacties, zoals JSON, HTML, Image, enz. Afhankelijk van het type reactie of de beslissing die Adobe Target heeft gegeven, kan uw kernbedrijfslogica worden uitgevoerd. Om besluiten voor uw op vorm-Gebaseerde Composer activiteiten terug te winnen, verzend een gebeurtenis met alle &quot;DecisionScopes&quot;u een besluit voor wilt terugwinnen.
+De Form-Based Experience Composer is een niet-visuele interface die handig is voor het configureren van A/B Tests, [!DNL Experience Targeting], Automated Personalization en Recommendations-activiteiten met verschillende soorten reacties, zoals JSON, HTML, Image, enz. Afhankelijk van het type reactie of de beslissing die Adobe Target heeft gegeven, kan uw kernbedrijfslogica worden uitgevoerd. Om besluiten voor uw op vorm-Gebaseerde Composer activiteiten terug te winnen, verzend een gebeurtenis met alle &quot;DecisionScopes&quot;u een besluit voor wilt terugwinnen.
 
 ```javascript
 alloy
@@ -84,7 +84,7 @@ alloy
 
 ## Beslissingsgebieden
 
-`decisionScopes` Hiermee definieert u secties, locaties of delen van uw pagina&#39;s waar u een persoonlijke ervaring wilt weergeven. Deze `decisionScopes` zijn aanpasbaar en door de gebruiker gedefinieerd. Voor huidige [!DNL Target] klanten, `decisionScopes` zijn ook genoemd geworden &quot;dozen.&quot; In de [!DNL Target] UI, `decisionScopes` verschijnen als &quot;plaatsen.&quot;
+`decisionScopes` Hiermee definieert u secties, locaties of delen van uw pagina&#39;s waar u een persoonlijke ervaring wilt weergeven. Deze `decisionScopes` zijn aanpasbaar en door de gebruiker gedefinieerd. Voor huidige [!DNL Target] klanten, `decisionScopes` zijn ook gekend als &quot;dozen.&quot; In de [!DNL Target] UI, `decisionScopes` verschijnen als &quot;plaatsen.&quot;
 
 ## __weergavebereik__
 
