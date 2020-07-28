@@ -18,9 +18,9 @@ Dit document bevat aanvullende informatie die u helpt bij het werken met de [!DN
 
 ## Verwante objecten weergeven {#view-interrelated-objects}
 
-Sommige [!DNL Catalog] objecten kunnen met andere [!DNL Catalog] objecten verweven zijn. Alle velden die vooraf worden ingesteld door `@` in antwoordladingen, verwijzen naar verwante objecten. De waarden voor deze gebieden nemen de vorm van URI aan, die in een afzonderlijke GET verzoek kan worden gebruikt om de verwante voorwerpen terug te winnen zij vertegenwoordigen.
+Sommige [!DNL Catalog] objecten kunnen met andere [!DNL Catalog] objecten verweven zijn. Alle velden die vooraf worden ingesteld door `@` in antwoordladingen, verwijzen naar verwante objecten. De waarden voor deze velden hebben de vorm van een URI, die kan worden gebruikt in een afzonderlijke aanvraag voor een GET om de gerelateerde objecten op te halen die ze vertegenwoordigen.
 
-De voorbeelddataset die in het document is geretourneerd bij het [opzoeken van een specifieke dataset](look-up-object.md) , bevat een `files` veld met de volgende URI-waarde: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. De inhoud van het `files` veld kan worden weergegeven door deze URI te gebruiken als het pad voor een nieuwe GET-aanvraag.
+De voorbeelddataset die in het document is geretourneerd bij het [opzoeken van een specifieke dataset](look-up-object.md) , bevat een `files` veld met de volgende URI-waarde: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. De inhoud van het `files` veld kan worden weergegeven door deze URI te gebruiken als het pad voor een nieuwe aanvraag voor een GET.
 
 **API-indeling**
 
@@ -110,7 +110,7 @@ Als u bijvoorbeeld wilt verwijzen naar een waarde die is geretourneerd uit een v
 
 >[!NOTE]
 >
->Wanneer een uitgevoerde sub-request alleen de verwijzing naar een object retourneert (zoals de standaardinstelling is voor de meeste POST- en PUT-aanvragen in de Catalogus-API), wordt deze verwijzing naar de waarde gealiased `id` en kan deze worden gebruikt als `<<{OBJECT_ID}.id>>`.
+>Wanneer een uitgevoerde sub-request slechts de verwijzing naar een voorwerp (zoals het gebrek voor de meeste POST en PUT verzoeken in Catalog API) terugkeert, is deze verwijzing aliased aan de waarde `id` en kan als `<<{OBJECT_ID}.id>>`. worden gebruikt.
 
 ```shell
 curl -X POST \
@@ -146,12 +146,12 @@ curl -X POST \
 | --- | --- |
 | `id` | Door de gebruiker opgegeven id die aan het reactieobject is gekoppeld, zodat u verzoeken aan reacties kunt koppelen. [!DNL Catalog] slaat deze waarde niet op en retourneert deze gewoon in de reactie voor referentiedoeleinden. |
 | `resource` | Het bronnenpad ten opzichte van de hoofdmap van de [!DNL Catalog] API. Het protocol en domein moeten geen deel uitmaken van deze waarde en moeten worden voorafgegaan door &quot;/&quot;. <br/><br/> Wanneer het gebruiken van PATCH of DELETE als sub-request `method`, omvat objecten identiteitskaart in de middelweg. Om niet met user-provided te worden verward `id`, gebruikt de middelweg identiteitskaart van het [!DNL Catalog] voorwerp zelf (bijvoorbeeld, `resource: "/dataSets/1234567890"`). |
-| `method` | De naam van de methode (GET, PUT, POST, PATCH of DELETE) die betrekking heeft op de actie die in de aanvraag wordt uitgevoerd. |
-| `body` | Het JSON-document dat normaal gesproken zou worden doorgegeven als de lading in een POST-, PUT- of PATCH-aanvraag. Deze eigenschap is niet vereist voor GET- of DELETE-aanvragen. |
+| `method` | De naam van de methode (GET, PUT, POST, PATCH of DELETE) met betrekking tot de actie die in het verzoek wordt uitgevoerd. |
+| `body` | Het JSON-document dat normaal gesproken zou worden doorgegeven als de payload in een POST-, PUT- of PATCH-aanvraag. Deze eigenschap is niet vereist voor GET- of DELETE-aanvragen. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een array met objecten met de objecten `id` die u aan elke aanvraag hebt toegewezen, de HTTP-statuscode voor de individuele aanvraag en de reactie `body`. Aangezien de drie voorbeeldaanvragen allemaal waren om nieuwe objecten te maken, is de array `body` van elk object een array die alleen de id van het nieuwe object bevat, net als de standaard met de meest succesvolle POST-reacties [!DNL Catalog].
+Een geslaagde reactie retourneert een array met objecten met de objecten `id` die u aan elke aanvraag hebt toegewezen, de HTTP-statuscode voor de individuele aanvraag en de reactie `body`. Aangezien de drie voorbeeldaanvragen allemaal waren om nieuwe objecten te maken, is de array `body` van elk object een array die alleen de id van het nieuwe object bevat, net als de standaard met de meest geslaagde reacties van POSTEN in [!DNL Catalog].
 
 ```json
 [
@@ -172,7 +172,7 @@ Een geslaagde reactie retourneert een array met objecten met de objecten `id` di
 ]
 ```
 
-Wees voorzichtig bij het inspecteren van de reactie op een meervoudige aanvraag, aangezien u de code van elke individuele subaanvraag moet verifiëren en niet alleen op de HTTP-statuscode voor de bovenliggende POST-aanvraag moet vertrouwen.  Het is mogelijk voor één enkel sub-verzoek om 404 (zoals een GET verzoek op een ongeldige middel) terug te keren terwijl het algemene verzoek 200 terugkeert.
+Wees voorzichtig bij het inspecteren van de reactie op een meervoudige aanvraag, aangezien u de code van elke individuele subaanvraag moet verifiëren en niet alleen op de HTTP-statuscode voor de aanvraag van de bovenliggende POST moet vertrouwen.  Het is mogelijk voor één enkel sub-verzoek om 404 (zoals een verzoek van de GET op een ongeldige middel) terug te keren terwijl het algemene verzoek 200 terugkeert.
 
 ## Aanvullende aanvraagheaders
 
@@ -182,13 +182,13 @@ Wees voorzichtig bij het inspecteren van de reactie op een meervoudige aanvraag,
 
 Het is een goede gewoonte om objectversioning te gebruiken om het type gegevensbeschadiging te voorkomen dat optreedt wanneer een object door meerdere gebruikers bijna tegelijk wordt opgeslagen.
 
-Bij het bijwerken van een object wordt het beste eerst een API-aanroep uitgevoerd om het object dat moet worden bijgewerkt, weer te geven. Bevatten binnen de reactie (en elke aanroep waarbij de reactie één object bevat) is een `E-Tag` koptekst die de versie van het object bevat. Als u de objectversie toevoegt als een aanvraagheader die `If-Match` in de aanroepen van de update (PUT of PATCH) wordt genoemd, wordt de update alleen succesvol uitgevoerd als de versie hetzelfde is. Zo voorkomt u gegevensconflict.
+Bij het bijwerken van een object kunt u het beste eerst een API-aanroep uitvoeren om het object dat moet worden bijgewerkt, weer te geven (GET). Bevatten binnen de reactie (en elke aanroep waarbij de reactie één object bevat) is een `E-Tag` koptekst die de versie van het object bevat. Als u de objectversie toevoegt als een aanvraagkoptekst die `If-Match` in de aanroepen van de update (PUT of PATCH) is genoemd, wordt de update alleen succesvol uitgevoerd als de versie hetzelfde is. Hierdoor wordt botsing met gegevens voorkomen.
 
 Als de versies niet overeenkomen (het object is gewijzigd door een ander proces sinds u het hebt opgehaald), ontvangt u HTTP-status 412 (Voorwaarde mislukt) om aan te geven dat toegang tot de doelbron is geweigerd.
 
 ### Pragma
 
-Soms wilt u een object valideren zonder de informatie op te slaan. Als u de `Pragma` koptekst gebruikt met de waarde van `validate-only` , kunt u POST- of PUT-aanvragen alleen verzenden voor validatiedoeleinden, zodat wijzigingen in de gegevens niet worden voortgezet.
+Soms wilt u een object valideren zonder de informatie op te slaan. Als u de `Pragma` koptekst met de waarde &#39; `validate-only` allows&#39; gebruikt, kunt u alleen POST- of PUT-aanvragen voor validatiedoeleinden verzenden, zodat wijzigingen in de gegevens niet worden voortgezet.
 
 ## Gegevenscompressie
 
