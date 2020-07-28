@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Een Azure Data Explorer-bronconnector maken in de gebruikersinterface
+title: Een Azure Data Explorer-bronaansluiting in de gebruikersinterface maken
 topic: overview
 translation-type: tm+mt
 source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!NOTE]
 > De [!DNL Azure Data Explorer] connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een [!DNL Azure Data Explorer] (hierna &quot;[!DNL Data Explorer]&quot; genoemd) bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om extern gesourceerde gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een [!DNL Azure Data Explorer] (hierna &quot;[!DNL Data Explorer]&quot; genoemd) bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
 
 ## Aan de slag
 
@@ -39,10 +39,10 @@ Als u toegang wilt krijgen tot uw [!DNL Data Explorer] [!DNL Platform]account op
 | `endpoint` | Het eindpunt van de [!DNL Data Explorer] server. |
 | `database` | De naam van de [!DNL Data Explorer] database. |
 | `tenant` | De unieke huurder-id die wordt gebruikt om verbinding te maken met de [!DNL Data Explorer] database. |
-| `servicePrincipalId` | De unieke dienst belangrijkste identiteitskaart die wordt gebruikt om met het gegevensbestand van de Ontdekkingsreiziger van Gegevens te verbinden. |
-| `servicePrincipalKey` | De unieke de dienstbelangrijkste sleutel die wordt gebruikt om met het gegevensbestand van de Ontdekkingsreiziger van Gegevens te verbinden. |
+| `servicePrincipalId` | De unieke dienst belangrijkste identiteitskaart die wordt gebruikt om met het gegevensbestand van de Data Explorer te verbinden. |
+| `servicePrincipalKey` | De unieke dienst belangrijkste sleutel die wordt gebruikt om met het gegevensbestand van de Data Explorer te verbinden. |
 
-Voor meer informatie over begonnen worden verwijs naar [dit document](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)van de Ontdekkingsreiziger van Gegevens.
+Raadpleeg [dit Data Explorer-document](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)voor meer informatie over aan de slag gaan.
 
 ## Uw [!DNL Azure Data Explorer] account verbinden
 
@@ -52,7 +52,7 @@ Login aan [Adobe Experience Platform](https://platform.adobe.com) en selecteer d
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer onder de categorie *[!UICONTROL Databases]* de optie **[!UICONTROL Azure Data Explorer]** en klik **op het pictogram + (+)** om een nieuwe Data Explorer-connector te maken.
+Selecteer onder de categorie *[!UICONTROL Databases]* de optie **[!UICONTROL Azure Data Explorer]** en klik **op het plusteken (+)** om een nieuwe Data Explorer-aansluiting te maken.
 
 ![catalogus](../../../../images/tutorials/create/data-explorer/catalog.png)
 
