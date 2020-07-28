@@ -20,7 +20,7 @@ Als u werkt met marketingacties in de API, moet u het `/marketingActions` eindpu
 
 ## Alle marketingacties weergeven
 
-Om een lijst van alle marketing acties te bekijken, kan een GET verzoek worden gemaakt aan `/marketingActions/core` of `/marketingActions/custom` dat alle beleid voor de gespecificeerde container terugkeert.
+Om een lijst van alle marketing acties te bekijken, kan een verzoek van de GET worden gedaan aan `/marketingActions/core` of `/marketingActions/custom` dat alle beleid voor de gespecificeerde container terugkeert.
 
 **API-indeling**
 
@@ -97,7 +97,7 @@ Het reactieobject geeft het totale aantal marketingacties in de container (`coun
 
 ## Een specifieke marketingactie opzoeken
 
-U kunt ook een opzoekverzoek (GET) uitvoeren om de details van een specifieke marketingactie te bekijken. Dit gebeurt met behulp `name` van de marketingactie. Als de naam onbekend is, kan deze worden gevonden met de bovenstaande aanvraag voor de aanbieding (GET).
+U kunt ook een opzoekverzoek (GET) uitvoeren om de details van een specifieke marketingactie te bekijken. Dit gebeurt met behulp `name` van de marketingactie. Als de naam onbekend is, kan deze worden gevonden met de bovenstaande aanvraag voor aanbieding (GET).
 
 **API-indeling**
 
@@ -142,7 +142,7 @@ Het reactieobject bevat de details voor de marketingactie, inclusief het pad (`_
 
 ## Een marketingactie maken of bijwerken
 
-Met de [!DNL Policy Service] API kunt u uw eigen marketingacties definiëren en bestaande acties bijwerken. Het creëren en het bijwerken allebei worden gedaan gebruikend een verrichting van de ZET aan de naam van de marketing actie.
+Met de [!DNL Policy Service] API kunt u uw eigen marketingacties definiëren en bestaande acties bijwerken. Het creëren en het bijwerken allebei worden gedaan gebruikend een verrichting van de PUT aan de naam van de marketing actie.
 
 **API-indeling**
 
@@ -156,7 +156,7 @@ In het verzoek dat volgt, merk op dat `name` in de verzoeklading het zelfde als 
 
 >[!NOTE]
 >
->Het ontbreken om `{marketingActionName}` in de vraag te leveren zal in een 405 Fout (Methode niet Toegestaan) resulteren aangezien u niet wordt toegelaten om PPUT aan het `/marketingActions/custom` eindpunt direct uit te voeren. Ook, als `name` in de lading niet `{marketingActionName}` in de weg aanpast, zult u een 400 Fout (Onjuiste Verzoek) ontvangen.
+>Het nalaten om `{marketingActionName}` in de vraag te leveren zal in een 405 Fout (Methode niet Toegestaan) resulteren aangezien u niet wordt toegelaten om een PUT aan het `/marketingActions/custom` eindpunt direct uit te voeren. Ook, als `name` in de lading niet `{marketingActionName}` in de weg aanpast, zult u een 400 Fout (Onjuiste Verzoek) ontvangen.
 
 ```SHELL
 curl -X PUT \
@@ -197,7 +197,7 @@ Als dit gelukt is, ontvangt u een HTTP-status 201 (Gemaakt) en bevat de responss
 
 ## Een marketingactie verwijderen
 
-Het is mogelijk marketingacties te verwijderen door een DELETE verzoek te sturen naar de gebruiker `{marketingActionName}` van de marketingactie die u wilt verwijderen.
+Het is mogelijk marketingacties te verwijderen door een DELETE-aanvraag naar de `{marketingActionName}` van de marketingactie te sturen die u wilt verwijderen.
 
 >[!NOTE]
 >
@@ -224,4 +224,4 @@ curl -X DELETE \
 
 Als de marketing actie met succes is geschrapt, zal de reactiekarakter met een Status 200 van HTTP (O.K.) leeg zijn.
 
-U kunt de schrapping bevestigen door te proberen om (GET) de marketing actie te zoeken. U ontvangt een HTTP-status 404 (Niet gevonden) samen met het foutbericht &quot;Niet gevonden&quot; omdat de marketingactie is verwijderd.
+U kunt de verwijdering bevestigen door te proberen de marketingactie op te zoeken (GET). U ontvangt een HTTP-status 404 (Niet gevonden) samen met het foutbericht &quot;Niet gevonden&quot; omdat de marketingactie is verwijderd.
