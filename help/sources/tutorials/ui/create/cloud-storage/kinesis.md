@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Een Amazon Kinesis-bronconnector maken in de gebruikersinterface
+title: Een Amazon Kinesis-bronaansluiting maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
 source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!NOTE]
 >De [!DNL Amazon Kinesis] connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het verifiëren van een [!DNL Amazon Kinesis] (hierna [!DNL "Kinesis"]) bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om extern gesourceerde gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het verifiëren van een [!DNL Amazon Kinesis] (hierna [!DNL "Kinesis"]) bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
 
 ## Aan de slag
 
@@ -48,7 +48,7 @@ Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volg
 
 Login aan [Adobe Experience Platform](https://platform.adobe.com) en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatiebar om tot de werkruimte van *Bronnen* toegang te hebben. Op het tabblad *Catalogus* worden diverse bronnen weergegeven waarmee u verbinding kunt maken [!DNL Platform]. Elke bron toont het aantal bestaande rekeningen verbonden aan hen.
 
-Selecteer in de categorie *[!UICONTROL Cloud Storage]* de optie **[!UICONTROL Amazon Kinesis]** en klik **op het plus-pictogram (+)** om een nieuwe [!DNL Kinesis] connector te maken.
+Selecteer in de categorie *[!UICONTROL Cloud Storage]* de optie **[!UICONTROL Amazon Kinesis]** en klik **op + (+)** om een nieuwe [!DNL Kinesis] aansluiting te maken.
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
