@@ -18,7 +18,7 @@ ht-degree: 0%
 
 [Eloqua](https://www.oracle.com/marketingcloud/products/marketing-automation/) is een softwareplatform als service (SaaS) voor het automatiseren van de marketing dat door [!DNL Oracle] die wordt aangeboden bedoeld om B2B-marketers en -organisaties te helpen marketing campagnes en verkooploodproductie te beheren.
 
-Als u segmentgegevens naar wilt verzenden, moet u eerst de bestemming [!DNL Oracle Eloqua]in Adobe Real-time Customer Data Platform [verbinden en vervolgens een gegevensimport](#connect-destination) [instellen vanaf uw opslaglocatie naar](#import-data-into-eloqua) [!DNL Oracle Eloqua].
+Om segmentgegevens naar te verzenden [!DNL Oracle Eloqua], moet u eerst de bestemming [in het Platform van de Gegevens van de Klant van Adobe in real time](#connect-destination) verbinden, en dan [opstelling een gegevensimport](#import-data-into-eloqua) van uw opslagplaats in [!DNL Oracle Eloqua].
 
 ## Verbinden met doel {#connect-destination}
 
