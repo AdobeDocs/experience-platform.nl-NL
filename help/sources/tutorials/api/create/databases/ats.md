@@ -57,7 +57,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -73,7 +73,7 @@ POST /connections
 
 **Verzoek**
 
-Als u een ATS-verbinding wilt maken, moet de unieke specificatie-id van de verbinding worden opgegeven als onderdeel van de POST-aanvraag. De verbindingsspecificatie-id voor ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
+Als u een ATS-verbinding wilt maken, moet de unieke specificatie-id van de verbinding worden opgegeven als onderdeel van het verzoek om POST. De verbindingsspecificatie-id voor ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
 
 ```shell
 curl -X POST \
