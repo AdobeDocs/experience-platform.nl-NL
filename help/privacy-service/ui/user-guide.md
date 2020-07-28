@@ -139,7 +139,7 @@ Het dialoogvenster JSON ** uploaden wordt weergegeven en u krijgt een venster wa
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
-Als u geen JSON-bestand hebt om te uploaden, klikt u op Adobe-GDPR-Request.json **** downloaden om een sjabloon te downloaden dat u kunt vullen op basis van de waarden die u van de betrokkenen hebt verzameld.
+Als u geen JSON-bestand hebt om te uploaden, klikt u op **[!UICONTROL Download Adobe-GDPR-Request.json]** om een sjabloon te downloaden die u kunt vullen op basis van de waarden die u van de betrokkenen hebt verzameld.
 
 
 <img src="../images/user-guide/privacy-template.png" width="500" /><br/>
