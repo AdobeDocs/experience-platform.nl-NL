@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!NOTE]
 > De MySQL-connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om extern gesourceerde gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een MySQL-bronconnector met behulp van de gebruikersinterface van het Platform.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een MySQL-bronconnector met behulp van de gebruikersinterface van het Platform.
 
 ## Aan de slag
 
