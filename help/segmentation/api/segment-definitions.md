@@ -24,7 +24,7 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!D
 
 ## Een lijst met segmentdefinities ophalen {#list}
 
-U kunt een lijst van alle segmentdefinities voor uw IMS Organisatie terugwinnen door een GET verzoek aan het `/segment/definitions` eindpunt te doen.
+U kunt een lijst van alle segmentdefinities voor uw IMS Organisatie terugwinnen door een verzoek van de GET tot het `/segment/definitions` eindpunt te richten.
 
 **API-indeling**
 
@@ -153,7 +153,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van segmentdefin
 
 ## Een nieuwe segmentdefinitie maken {#create}
 
-U kunt een nieuwe segmentdefinitie tot stand brengen door een POST- verzoek aan het `/segment/definitions` eindpunt te doen.
+U kunt een nieuwe segmentdefinitie tot stand brengen door een verzoek van de POST aan het `/segment/definitions` eindpunt te doen.
 
 **API-indeling**
 
@@ -250,7 +250,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 ## Een specifieke segmentdefinitie ophalen {#get}
 
-U kunt gedetailleerde informatie over een specifieke segmentdefinitie terugwinnen door een GET verzoek aan het `/segment/definitions` eindpunt te doen en identiteitskaart van de segmentdefinitie te verstrekken u wenst om in de verzoekweg terug te winnen.
+U kunt gedetailleerde informatie over een specifieke segmentdefinitie terugwinnen door een verzoek van de GET aan het `/segment/definitions` eindpunt te doen en identiteitskaart van de segmentdefinitie te verstrekken u wenst om in de verzoekweg terug te winnen.
 
 **API-indeling**
 
@@ -332,7 +332,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 ## Bulk haalt segmentdefinities op {#bulk-get}
 
-U kunt gedetailleerde informatie over veelvoudige gespecificeerde segmentdefinities terugwinnen door een POST- verzoek aan het `/segment/definitions/bulk-get` eindpunt te doen en de `id` waarden van de segmentdefinities in het verzoeklichaam te verstrekken.
+U kunt gedetailleerde informatie over veelvoudige gespecificeerde segmentdefinities terugwinnen door een verzoek van de POST aan het `/segment/definitions/bulk-get` eindpunt te doen en de `id` waarden van de segmentdefinities in het verzoeklichaam te verstrekken.
 
 **API-indeling**
 
@@ -493,7 +493,7 @@ Een geslaagde reactie retourneert HTTP status 200 zonder bericht.
 
 ## Een specifieke segmentdefinitie bijwerken
 
-U kunt een specifieke segmentdefinitie bijwerken door een verzoek van de PATCH aan het `/segment/definitions` eindpunt te doen en identiteitskaart van de segmentdefinitie te verstrekken u wenst om in de verzoekweg bij te werken.
+U kunt een specifieke segmentdefinitie bijwerken door een verzoek van PATCH aan het `/segment/definitions` eindpunt te doen en identiteitskaart van de segmentdefinitie te verstrekken u wenst om in de verzoekweg bij te werken.
 
 **API-indeling**
 
