@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Door Adobe gedefinieerde functies
+title: Adobe-gedefinieerde functies
 topic: functions
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
@@ -12,9 +12,9 @@ ht-degree: 2%
 ---
 
 
-# Door Adobe gedefinieerde functies
+# Adobe-gedefinieerde functies
 
-Door Adobe gedefinieerde functies (ADF&#39;s) zijn vooraf gebouwde functies [!DNL Query Service] die u helpen bij het uitvoeren van veelvoorkomende bedrijfsgerelateerde taken op [!DNL ExperienceEvent] gegevens. Dit zijn onder andere functies voor sessies en kenmerken, zoals die in Adobe Analytics. Raadpleeg de documentatie [van](https://docs.adobe.com/content/help/nl-NL/analytics/landing/home.html) Adobe Analytics voor meer informatie over Adobe Analytics en de concepten achter de ADF&#39;s die op deze pagina zijn gedefinieerd. Dit document bevat informatie over door Adobe gedefinieerde functies die beschikbaar zijn in [!DNL Query Service].
+Adobe-bepaalde functies (ADFs) zijn prebuilt functies in [!DNL Query Service] die helpen gemeenschappelijke bedrijfs verwante taken op [!DNL ExperienceEvent] gegevens uitvoeren. Deze omvatten functies voor Sessionisatie en Attributie zoals die in Adobe Analytics worden gevonden. Zie de documentatie [van](https://docs.adobe.com/content/help/nl-NL/analytics/landing/home.html) Adobe Analytics voor meer informatie over Adobe Analytics en de concepten achter ADFs die op deze pagina worden bepaald. Dit document bevat informatie over door Adobe gedefinieerde functies die beschikbaar zijn in [!DNL Query Service].
 
 ## Vensterfuncties
 
@@ -38,7 +38,7 @@ Syntaxis: `OVER ([partition] [order] [frame])`
 
 Wanneer u werkt met [!DNL ExperienceEvent] gegevens die afkomstig zijn van een website, mobiele toepassing, interactief spraakreactiesysteem of een ander kanaal voor klantinteractie, is het handig als gebeurtenissen kunnen worden gegroepeerd rond een verwante periode. Doorgaans hebt u een specifieke intentie om uw activiteiten te sturen, zoals het zoeken naar een product, het betalen van een rekening, het controleren van de balans, het invullen van een toepassing, enzovoort. Deze groepering helpt de gebeurtenissen associëren om meer context over de klantenervaring te ontdekken.
 
-Raadpleeg de documentatie over [contextbewuste sessies](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)voor meer informatie over Sessionisatie in Adobe Analytics.
+Raadpleeg de documentatie over [contextbewuste sessies](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)voor meer informatie over sessies in Adobe Analytics.
 
 ### Specificatie
 
@@ -94,7 +94,7 @@ LIMIT 10
 
 Het koppelen van klantenacties aan succes is een belangrijk deel van het begrip van de factoren die klantenervaring beïnvloeden. De volgende ADFs steunt Eerste en laatste attributie met verschillende vervalmontages.
 
-Zie het overzicht [van](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html) Attributie-IQ in de [!DNL Analytics] Analyze Guide voor meer informatie over attributie in Adobe Analytics.
+Zie het overzicht [van de](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html) Attribution IQ in de handleiding voor [!DNL Analytics] analyse voor meer informatie over attributie in Adobe Analytics.
 
 ### Eerste aanraakkenmerk
 
