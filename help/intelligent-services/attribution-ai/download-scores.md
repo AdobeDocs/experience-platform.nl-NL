@@ -12,19 +12,19 @@ ht-degree: 0%
 ---
 
 
-# Muziek downloaden in Attributie AI
+# Muziek downloaden in Attribution AI
 
 Dit document dient als richtlijn voor het downloaden van scores voor Attribution AI.
 
 ## Aan de slag
 
-Met kenmerk AI kunt u scores downloaden in de bestandsindeling parket. Deze zelfstudie vereist dat u de sectie Attribution AI-scores in de gids Aan de [slag](./getting-started.md) hebt gelezen en gedownload.
+Met Attribution AI kunt u scores downloaden in de parketbestandsindeling. Deze zelfstudie vereist dat u de sectie met downloadscores in de gids Aan de [slag](./getting-started.md) hebt gelezen en voltooid.
 
-Daarnaast moet u een service-instantie met een geslaagde uitvoeringsstatus hebben om toegang te krijgen tot scores voor Attribution AI. Ga naar de gebruikershandleiding voor [Kenmerken AI om een nieuwe service-instantie te maken](./user-guide.md). Als u onlangs een de dienstinstantie creeerde en het nog opleidt en het scoring, gelieve 24 uren voor het te beëindigen loopt.
+Bovendien, om tot scores voor Attribution AI toegang te hebben, moet u een de dienstinstantie hebben met een succesvolle looppasstatus beschikbaar. Om een nieuwe de dienstinstantie tot stand te brengen, bezoek de [gebruikersgids](./user-guide.md)van de Attribution AI. Als u onlangs een de dienstinstantie creeerde en het nog opleidt en het scoring, gelieve 24 uren voor het te beëindigen loopt.
 
 ## Uw gegevensset-id zoeken {#dataset-id}
 
-Binnen uw de dienstinstantie voor de Inzichten van Attributie AI, klik *Meer acties* dropdown in de top-juiste navigatie dan de uitgezochte scores **[!UICONTROL van de]** Toegang.
+Binnen uw de dienstinstantie voor Attribution AI inzichten, klik *Meer acties* dropdown in de top-juiste navigatie en selecteer de scores **[!UICONTROL van de]** Toegang.
 
 ![meer acties](./images/download-scores/more-actions.png)
 
@@ -112,7 +112,7 @@ Een geslaagde reactie retourneert een lading die een batch-id-object bevat. In d
 
 ## De volgende API-aanroep ophalen met uw batch-id {#retrieve-the-next-api-call-with-your-batch-id}
 
-Als je eenmaal een batch-id hebt, kun je een nieuwe GET aanvraag indienen bij `/batches`. De aanvraag retourneert een koppeling die wordt gebruikt als de volgende API-aanvraag.
+Als je eenmaal een batch-id hebt, kun je een nieuwe aanvraag indienen bij `/batches`. De aanvraag retourneert een koppeling die wordt gebruikt als de volgende API-aanvraag.
 
 **API-indeling**
 
@@ -166,7 +166,7 @@ Een geslaagde reactie retourneert een lading die een `_links` object bevat. Binn
 
 ## Bestanden ophalen {#retrieving-your-files}
 
-Gebruikend de `href` waarde u in de vorige stap als API vraag kreeg, doe een nieuw GET verzoek om uw dossierfolder terug te winnen.
+Gebruikend de `href` waarde u in de vorige stap als API vraag kreeg, doe een nieuw verzoek van de GET om uw dossierfolder terug te winnen.
 
 **API-indeling**
 
@@ -214,14 +214,14 @@ De reactie bevat een gegevensarray die één item kan hebben, of een lijst met b
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `_links.self.href` | De GET aanvraag-URL waarmee een bestand in uw map wordt gedownload. |
+| `_links.self.href` | De aanvraag-URL van de GET die wordt gebruikt om een bestand in uw map te downloaden. |
 
 
 Kopieer de `href` waarde voor elk bestandsobject in de `data` array en ga vervolgens verder met de volgende stap.
 
 ## Bestandsgegevens downloaden
 
-Als u uw bestandsgegevens wilt downloaden, vraagt u GET de `"href"` waarde aan die u hebt gekopieerd in de vorige stap [bij het ophalen van uw bestanden](#retrieving-your-files).
+Als u de bestandsgegevens wilt downloaden, vraagt u de GET om de `"href"` waarde die u hebt gekopieerd in de vorige stap bij het [ophalen van de bestanden](#retrieving-your-files).
 
 >[!NOTE]
 >
@@ -251,7 +251,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 >[!TIP]
 >
->Zorg ervoor dat u zich in de juiste map of map bevindt waarnaar u het bestand wilt opslaan voordat u de aanvraag GET uitvoert.
+>Zorg ervoor dat u zich in de juiste map of map bevindt waarnaar u het bestand wilt opslaan voordat u de GET-aanvraag indient.
 
 **Antwoord**
 
@@ -261,19 +261,19 @@ Het antwoord downloadt het bestand dat u in de huidige map hebt aangevraagd. In 
 
 ## Volgende stappen
 
-In dit document worden de stappen beschreven die zijn vereist voor het downloaden van Attribution AI-scores. U kunt nu door de andere [Intelligente Diensten](../home.md) en gidsen blijven bladeren die worden aangeboden.
+In dit document worden de stappen beschreven die zijn vereist voor het downloaden van scores van Attribution AI. U kunt nu door de andere [Intelligente Diensten](../home.md) en gidsen blijven bladeren die worden aangeboden.
 
 ## Muziek openen met Snowflake
 
 >[!IMPORTANT]
 >
->Neem contact op met attributionai-support@adobe.com voor meer informatie over het gebruik van scores met SnowFlake.
+>Neem contact op met attributionai-support@adobe.com voor meer informatie over het gebruik van scores via Snowflake.
 
-U hebt toegang tot de geaggregeerde AI-scores voor kenmerken via Snowflake. U moet momenteel een e-mail sturen naar de ondersteuning van Adobe op attributionai-support@adobe.com om de aanmeldingsgegevens voor Snowflake in te stellen en deze naar uw lezeraccount te ontvangen.
+U hebt toegang tot geaggregeerde Attribution AI-scores via Snowflake. U moet momenteel Adobe-ondersteuning via e-mail verzenden naar attributionai-support@adobe.com om de gegevens voor Snowflake in te stellen en te ontvangen bij uw lezeraccount.
 
-Nadat uw verzoek door Adobe-ondersteuning is verwerkt, ontvangt u een URL voor het lezeraccount voor Snowflake en de bijbehorende referenties hieronder:
+Nadat de Adobe-ondersteuning uw verzoek heeft verwerkt, krijgt u een URL voor het lezeraccount naar Snowflake en de bijbehorende referenties hieronder:
 
-- Sneeuwvlok-URL
+- Snowflake URL
 - Gebruikersnaam
 - Wachtwoord
 
@@ -293,11 +293,11 @@ Klik vervolgens op Schema **** selecteren in de rechterbovenhoek van het scherm.
 
 ![zoeken naar een schema](./images/download-scores/edited_snowflake_2.png)
 
-## PowerBI aansluiten op sneeuwvlok (optioneel)
+## PowerBI aansluiten op Snowflake (optioneel)
 
-Uw Sneeuwvloke-referenties kunnen worden gebruikt om een verbinding tot stand te brengen tussen PowerBI Desktop- en Snowflake-databases.
+Met uw Snowflake-referenties kunt u een verbinding tot stand brengen tussen PowerBI Desktop- en Snowflake-databases.
 
-Typ eerst in het vak *Server* onder Sneeuwvlok-URL. Vervolgens typt u onder *Winkel*&quot;XSMALL&quot;. Typ vervolgens uw gebruikersnaam en wachtwoord.
+Typ eerst onder het vak *Server* de URL van de Snowflake. Vervolgens typt u onder *Winkel*&quot;XSMALL&quot;. Typ vervolgens uw gebruikersnaam en wachtwoord.
 
 ![voorbeeld van POWERBI](./images/download-scores/powerbi-snowflake.png)
 
