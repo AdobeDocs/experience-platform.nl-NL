@@ -118,13 +118,13 @@ Nadat een query is voltooid, worden de resultaten weergegeven op het tabblad *[!
 
 ## Zoekopdrachten uitvoeren met [!DNL Query Service] zelfstudievideo
 
-De volgende video toont hoe te om vragen in de interface van het Adobe Experience Platform en in een cliënt in werking te stellen PSQL. Bovendien wordt het gebruik van individuele eigenschappen in een XDM-object, met behulp van door Adobe gedefinieerde functies en het gebruik van CREATE TABLE AS SELECT (CTAS) aangetoond.
+De volgende video toont hoe te om vragen in de interface van het Adobe Experience Platform en in een cliënt in werking te stellen PSQL. Bovendien wordt het gebruik van individuele eigenschappen in een XDM-object, met gebruik van door Adobe gedefinieerde functies en het gebruik van CREATE TABLE AS SELECT (CTAS) aangetoond.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Volgende stappen
 
-Nu u weet welke functies beschikbaar zijn in [!DNL Query Editor] en hoe u door de toepassing kunt navigeren, kunt u uw eigen query&#39;s rechtstreeks schrijven [!DNL Platform]. Voor meer informatie over het runnen van SQL vragen tegen datasets binnen [!DNL Data Lake], zie de gids bij het [runnen van vragen][query-service-running-queries]. Zie de naslaggids voor [voorbeeldquery&#39;s voor SQL-query&#39;s voor het werken met Adobe Analytics- en Adobe Target-gegevens][query-service-sample-queries].
+Nu u weet welke functies beschikbaar zijn in [!DNL Query Editor] en hoe u door de toepassing kunt navigeren, kunt u uw eigen query&#39;s rechtstreeks schrijven [!DNL Platform]. Voor meer informatie over het runnen van SQL vragen tegen datasets binnen [!DNL Data Lake], zie de gids bij het [runnen van vragen][query-service-running-queries]. Zie de [voorbeeldquery][query-service-sample-queries]&#39;s voor voorbeeld-SQL-query&#39;s voor het werken met Adobe Analytics- en Adobe Target-gegevens.
 
 [query-service-overview]: ../home.md
 [query-service-ui]: overview.md
