@@ -50,7 +50,7 @@ Met Adobe Experience Platform kunt u uw klanten een gecoördineerde, consistente
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-De Dienst van de Segmentatie van het Adobe Experience Platform verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal geconfigureerd en onderhouden, zodat ze gemakkelijk toegankelijk zijn voor alle Adobe-toepassingen. [!DNL Platform]
+De Dienst van de Segmentatie van het Adobe Experience Platform verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal gevormd en gehandhaafd [!DNL Platform], die hen gemakkelijk toegankelijk door om het even welke toepassing van de Adobe maken.
 
 [!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
 
