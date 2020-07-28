@@ -40,7 +40,7 @@ De voorbeeldgrootte van de scan is afhankelijk van het totale aantal entiteiten 
 
 ## Een nieuwe voorvertoning maken {#create-preview}
 
-U kunt een nieuwe voorproef tot stand brengen door een POST- verzoek aan het `/preview` eindpunt te maken.
+U kunt een nieuwe voorproef tot stand brengen door een verzoek van de POST aan het `/preview` eindpunt te doen.
 
 >[!NOTE] Er wordt automatisch een geschatte taak gemaakt wanneer een voorbeeldtaak wordt gemaakt. Deze twee taken delen dezelfde id.
 
@@ -94,7 +94,7 @@ Een succesvol antwoord retourneert HTTP-status 201 (Gemaakt) met details van de 
 
 ## De resultaten van een specifieke voorvertoning ophalen {#get-preview}
 
-U kunt gedetailleerde informatie over een specifieke voorproef terugwinnen door een GET verzoek aan het `/preview` eindpunt te maken en voorproef identiteitskaart in de verzoekweg te verstrekken.
+U kunt gedetailleerde informatie over een specifieke voorproef terugwinnen door een verzoek van de GET aan het `/preview` eindpunt te doen en voorproef identiteitskaart in de verzoekweg te verstrekken.
 
 **API-indeling**
 
@@ -171,7 +171,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 
 ## De resultaten van een specifieke geschatte taak ophalen {#get-estimate}
 
-Zodra u een voorproefbaan hebt gecreeerd, kunt u zijn `previewId` in de weg van een GET verzoek aan het `/estimate` eindpunt gebruiken om statistische informatie over de segmentdefinitie, met inbegrip van geprojecteerde publieksgrootte, betrouwbaarheidsinterval, en foutenstandaardafwijking te bekijken.
+Zodra u een voorproefbaan hebt gecreeerd, kunt u zijn `previewId` in de weg van een verzoek van de GET aan het `/estimate` eindpunt gebruiken om statistische informatie over de segmentdefinitie, met inbegrip van geprojecteerde publieksgrootte, betrouwbaarheidsinterval, en foutenstandaardafwijking te bekijken.
 
 **API-indeling**
 
