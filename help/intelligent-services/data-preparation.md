@@ -28,14 +28,14 @@ Als uw gegevens buiten [!DNL Experience Platform]zijn opgeslagen, voert u de vol
 
 1. Neem contact op met de Adobe Consulting Services om toegangsreferenties aan te vragen voor een specifieke Azure Blob Storage-container.
 1. Upload uw gegevens naar de Blob-container met uw toegangsgegevens.
-1. Als u werkt met Adobe Consulting Services, worden uw gegevens toegewezen aan het [Consumer ExperienceEvent-schema](#cee-schema) en opgenomen in Intelligent Services.
+1. Het werk met Adobe Consulting Services krijgt uw gegevens toegewezen aan het schema [](#cee-schema) Consumer ExperienceEvent en opgenomen in Intelligente services.
 
 ### [!DNL Experience Platform] gegevensvoorbereiding
 
 Voer de onderstaande stappen uit als uw gegevens al zijn opgeslagen in [!DNL Platform]:
 
 1. Controleer de structuur van het schema [](#cee-schema) Consumer ExperienceEvent en bepaal of uw gegevens kunnen worden toegewezen aan de velden.
-1. Neem contact op met de Adobe Consulting Services om u te helpen uw gegevens toe te wijzen aan het schema en deze in te voeren in Intelligente services. U kunt ook de stappen in deze handleiding [](#mapping) volgen als u de gegevens zelf wilt toewijzen.
+1. Vraag de Consulting Services van Adobe om u te helpen uw gegevens in kaart te brengen aan het schema en deze in te voeren in Intelligente services, of [volg de stappen in deze handleiding](#mapping) als u de gegevens zelf wilt toewijzen.
 
 ## Het CEE-schema {#cee-schema}
 
@@ -61,7 +61,7 @@ Hoewel het gebruik van alle belangrijke gebieden sterk wordt aanbevolen, zijn er
 
 * [Een primair identiteitsveld](#identity)
 * [xdm:tijdstempel](#timestamp)
-* [xdm:channel](#channel) (alleen verplicht voor AI-kenmerk)
+* [xdm:channel](#channel) (alleen verplicht voor Attribution AI)
 
 #### Primaire identiteit {#identity}
 
@@ -74,7 +74,7 @@ U moet bepalen welk veld het beste kan worden gebruikt als primaire identiteit o
 * &quot;mcid&quot; (voor Adobe Audience Manager-id&#39;s)
 * &quot;aid&quot; (voor Adobe Analytics-id&#39;s)
 
-Als u niet zeker weet welk veld u als primaire identiteit moet gebruiken, neemt u contact op met Adobe Consulting Services om de beste oplossing te bepalen.
+Als u onzeker bent welk gebied u als primaire identiteit zou moeten gebruiken, contacteer de Consulting Diensten van de Adobe om de beste oplossing te bepalen.
 
 #### xdm:tijdstempel {#timestamp}
 
@@ -241,7 +241,7 @@ Voor volledige informatie over elk van de vereiste subvelden voor `xdm:productLi
 
 Zodra u hebt bepaald of uw gegevens van de marketinggebeurtenissen aan het CEE schema kunnen worden in kaart gebracht, is de volgende stap te bepalen welke gegevens u in de Intelligente Diensten moet brengen. Alle historische gegevens die in de Intelligente Diensten worden gebruikt moeten binnen het minimumtijdvenster van vier maanden van gegevens vallen, plus het aantal dagen voorgenomen als raadplegingsperiode.
 
-Nadat u het gegevensbereik hebt bepaald dat u wilt verzenden, neemt u contact op met de Adobe Consulting Services om uw gegevens toe te wijzen aan het schema en deze in te voeren in de service.
+Nadat het beslissen van de waaier van gegevens u wilt verzenden, contacteer de Raadplegende Diensten van de Adobe om uw gegevens aan het schema in kaart te brengen en het in de dienst in te voeren.
 
 Als u een [!DNL Adobe Experience Platform] abonnement hebt en de gegevens zelf wilt toewijzen en invoeren, volgt u de stappen die in de onderstaande sectie worden beschreven.
 
@@ -281,7 +281,7 @@ Nadat de dataset wordt gecreeerd, kunt u het in het Platform UI binnen de *[!UIC
 >
 >De toekomstige versies van Intelligente Diensten zullen de Dienst [van de Identiteit van het](../identity-service/home.md) Adobe Experience Platform in hun mogelijkheden van de klantenidentificatie integreren. De hieronder beschreven stappen kunnen dan ook worden gewijzigd.
 
-Als u gegevens uit [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]of een andere externe bron inbrengt, dan moet u een `primaryIdentityNameSpace` markering aan de dataset toevoegen. Dit kan worden gedaan door een PATCH- verzoek aan de Dienst API van de Catalogus te doen.
+Als u gegevens uit [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]of een andere externe bron inbrengt, dan moet u een `primaryIdentityNameSpace` markering aan de dataset toevoegen. U doet dit door een PATCH-aanvraag in te dienen bij de Catalog Service API.
 
 Als u gegevens uit een lokaal CSV-bestand opneemt, kunt u verdergaan met de volgende sectie over het [toewijzen en invoeren van gegevens](#ingest).
 
@@ -343,7 +343,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-Een succesvolle reactie keert een serie terug die identiteitskaart van de bijgewerkte dataset bevat. Deze id moet overeenkomen met de id die in de PATCH-aanvraag is verzonden.
+Een succesvolle reactie keert een serie terug die identiteitskaart van de bijgewerkte dataset bevat. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden.
 
 ```json
 [
@@ -359,9 +359,9 @@ Als uw gegevens in een gesteunde derdetoepassing worden opgeslagen, kunt u ook v
 
 ## Volgende stappen {#next-steps}
 
-Dit document bevat algemene richtlijnen voor het voorbereiden van uw gegevens voor gebruik in Intelligente services. Neem contact op met de Technische Ondersteuning van Adobe als u extra advies nodig hebt op basis van uw gebruikscase.
+Dit document bevat algemene richtlijnen voor het voorbereiden van uw gegevens voor gebruik in Intelligente services. Neem contact op met de Adobe Consulting Support als u extra advies nodig hebt op basis van uw gebruikscase.
 
 Zodra u met succes een dataset met uw gegevens van de klantenervaring hebt bevolkt, kunt u de Intelligente Diensten gebruiken om inzichten te produceren. Raadpleeg de volgende documenten om aan de slag te gaan:
 
-* [Overzicht AI-kenmerken](./attribution-ai/overview.md)
+* [Overzicht van Attribution AI](./attribution-ai/overview.md)
 * [AI-overzicht van klant](./customer-ai/overview.md)
