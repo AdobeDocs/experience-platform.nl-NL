@@ -21,7 +21,7 @@ Dit document gebruikt de [mix ExperienceEvent Commerce Details](https://github.c
 >[!Tip]
 >
 >
->Als u bekend bent met Adobe Analytics, heeft The `commerce` de meeste invloed op de `events` variabele. Het `productListItems` hangt meer samen met de `products` variabele.
+>Als u bekend bent met Adobe Analytics, heeft The het `commerce` meest te maken met de `events` variabele. Het `productListItems` hangt meer samen met de `products` variabele.
 
 ## Acties in verband met producten
 
