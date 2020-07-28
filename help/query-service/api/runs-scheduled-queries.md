@@ -20,7 +20,7 @@ Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het voeren van
 
 ### Hiermee wordt een lijst met alle uitvoeringen voor een opgegeven geplande query opgehaald
 
-U kunt een lijst van alle looppas voor een specifieke geplande vraag terugwinnen, ongeacht of zij momenteel lopen of reeds voltooid zijn. Dit wordt gedaan door een GET verzoek aan het `/schedules/{SCHEDULE_ID}/runs` eindpunt te doen, waar `{SCHEDULE_ID}` is de `id` waarde van de geplande vraag de waarvan looppas u wenst terug te winnen.
+U kunt een lijst van alle looppas voor een specifieke geplande vraag terugwinnen, ongeacht of zij momenteel lopen of reeds voltooid zijn. Dit wordt gedaan door een verzoek van de GET tot het `/schedules/{SCHEDULE_ID}/runs` eindpunt te richten, waar `{SCHEDULE_ID}` is de `id` waarde van de geplande vraag de waarvan looppas u wenst terug te winnen.
 
 **API-indeling**
 
@@ -153,7 +153,7 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van looppas voor
 
 ### Breng onmiddellijk een looppas voor een specifieke geplande vraag teweeg
 
-U kunt een looppas voor een gespecificeerde geplande vraag onmiddellijk teweegbrengen door een POST- verzoek aan het `/schedules/{SCHEDULE_ID}/runs` eindpunt te doen, waar `{SCHEDULE_ID}` de `id` waarde van de geplande vraag is de waarvan looppas u wenst om te teweegbrengen.
+U kunt een looppas voor een gespecificeerde geplande vraag onmiddellijk teweegbrengen door een verzoek van de POST aan het `/schedules/{SCHEDULE_ID}/runs` eindpunt te doen, waar `{SCHEDULE_ID}` de `id` waarde van de geplande vraag is de waarvan looppas u wenst om te teweegbrengen.
 
 **API-indeling**
 
@@ -184,7 +184,7 @@ Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volge
 
 ### Haal details van een looppas voor een specifieke geplande vraag terug
 
-U kunt details over een looppas voor een specifieke geplande vraag terugwinnen door een GET verzoek aan het `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` eindpunt te doen en zowel identiteitskaart van de geplande vraag als looppas in de verzoekweg te verstrekken.
+U kunt details over een looppas voor een specifieke geplande vraag terugwinnen door een verzoek van de GET aan het `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` eindpunt te doen en zowel identiteitskaart van de geplande vraag als looppas in de verzoekweg te verstrekken.
 
 **API-indeling**
 
