@@ -26,7 +26,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 ## [!DNL Experience Data Model] (XDM) System {#xdm}
 
-Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), aangestuurd door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
+Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), gedreven door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
 
 XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor om het even welke toepassing om met de diensten op Adobe Experience Platform te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier levert. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
 
@@ -45,7 +45,7 @@ Meer informatie over het werken met XDM die API en [!DNL Schema Registry] gebrui
 
 ## [!DNL Privacy Service] {#privacy}
 
-De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het recht om tot hun persoonlijke gegevens van uw gegevensopslag toegang te hebben of te schrappen op verzoek. Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u deze gegevensaanvragen van uw klanten kunt beheren. Met [!DNL Privacy Service]kunt u aanvragen indienen voor toegang tot en verwijdering van persoonlijke of persoonlijke klantgegevens uit Adobe Experience Cloud-toepassingen, waardoor u gemakkelijker kunt voldoen aan wettelijke en organisatorische privacyregels.
+De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het recht om tot hun persoonlijke gegevens van uw gegevensopslag toegang te hebben of te schrappen op verzoek. Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u deze gegevensaanvragen van uw klanten kunt beheren. Met [!DNL Privacy Service]kunt u verzoeken indienen om toegang te krijgen tot persoonlijke of persoonlijke klantgegevens en deze te verwijderen uit Adobe Experience Cloud-toepassingen, waardoor u gemakkelijker kunt voldoen aan wettelijke en organisatorische privacyregels.
 
 **Nieuwe functies**
 
@@ -54,7 +54,7 @@ De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het rech
 | [!DNL Privacy Service] herbranding | De voormalige naam &quot;GDPR Service&quot; is omgedoopt [!DNL Privacy Service] omdat de dienst is gegroeid om andere regels naast GDPR te ondersteunen. |
 | Nieuwe API-eindpunten | Het basispad voor de [!DNL Privacy Service] API is bijgewerkt van `/data/privacy/gdpr` naar `/data/core/privacy/jobs`. |
 | Nieuwe vereiste `regulation` eigenschap | Bij het maken van nieuwe taken in de [!DNL Privacy Service] API moet een `regulation` eigenschap worden opgegeven in de payload van de aanvraag om aan te geven welke regelgeving moet worden gebruikt om de taak onder te volgen. Accepteerde waarden zijn `gdpr` en `ccpa`. |
-| Ondersteuning voor [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] Accepteert nu toegang-/verwijderaanvragen van Adobe [!DNL Primetime Authentication]en gebruikt deze `primetimeAuthentication` als de productwaarde. |
+| Ondersteuning voor [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] Accepteert nu toegang/schrappingsverzoeken van Adobe [!DNL Primetime Authentication], die `primetimeAuthentication` als zijn productwaarde gebruiken. |
 | Verbeteringen in de gebruikersinterface van Privacy Service | Afzonderlijke pagina&#39;s voor het volgen van taken voor GDPR en CCPA verordeningen. Het nieuwe _Regeltype_ dropdown om tussen het volgen gegevens voor GDPR en CCPA te schakelen. |
 
 **Bekende problemen**
@@ -92,7 +92,7 @@ Voor meer informatie over bronnen, zie het [bronoverzicht](../../sources/home.md
 
 ## Doelen {#destinations}
 
-In [Adobe real-time CDP](../../rtcdp/overview.md), zijn de bestemmingen prebuilt integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In [Adobe in real time CDP](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe functies**
 
