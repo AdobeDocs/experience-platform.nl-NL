@@ -328,7 +328,7 @@ Als de opgegeven marketingactie een beleid schendt dat betrekking heeft op de `d
 
 ## Evalueer beleid gebruikend datasets, gebieden, en een marketing actie
 
-Naast het verstrekken van één of meer dataset-id&#39;s kan ook een subset van velden uit elke dataset worden gespecificeerd, die aangeeft dat alleen de gegevensgebruikslabels op die velden moeten worden geëvalueerd. Net als het POST-verzoek dat alleen gegevenssets betreft, voegt dit verzoek specifieke velden voor elke gegevensset toe aan de aanvraaginstantie.
+Naast het verstrekken van één of meer dataset-id&#39;s kan ook een subset van velden uit elke dataset worden gespecificeerd, die aangeeft dat alleen de gegevensgebruikslabels op die velden moeten worden geëvalueerd. Vergelijkbaar met het verzoek van de POST die slechts datasets impliceert, voegt dit verzoek specifieke gebieden voor elke dataset aan het verzoeklichaam toe.
 
 Houd rekening met het volgende wanneer u beleid beoordeelt met gegevenssetvelden:
 
