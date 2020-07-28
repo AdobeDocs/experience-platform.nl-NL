@@ -416,7 +416,7 @@ Met een succesvol antwoord wordt de inhoud van het bestand geretourneerd.
 
 Met de [!DNL Data Access] API kunt u bestanden downloaden in blokken. Een bereikkoptekst kan worden opgegeven tijdens een `GET /files/{FILE_ID}` verzoek om een specifieke reeks bytes te downloaden uit een bestand. Als het bereik niet wordt opgegeven, downloadt de API standaard het gehele bestand.
 
-In het HEAD-voorbeeld in de [vorige sectie](#retrieve-the-metadata-of-a-file) wordt de grootte van een specifiek bestand in bytes weergegeven.
+In het voorbeeld HEAD in de [vorige sectie](#retrieve-the-metadata-of-a-file) wordt de grootte van een specifiek bestand in bytes weergegeven.
 
 **API-indeling**
 
