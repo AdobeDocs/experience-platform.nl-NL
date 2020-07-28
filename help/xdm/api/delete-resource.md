@@ -29,7 +29,7 @@ DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 **Verzoek**
 
-Voor DELETE aanvragen zijn geen koppen Accepteren vereist.
+Voor DELETE-aanvragen zijn geen headers voor Accepteren vereist.
 
 ```SHELL
 curl -X DELETE \
