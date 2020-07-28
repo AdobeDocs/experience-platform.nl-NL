@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een object verwijderen
 
-U kunt een [!DNL Catalog] object verwijderen door de id ervan op te geven in het pad van een DELETE aanvraag.
+U kunt een [!DNL Catalog] object verwijderen door de id ervan op te geven in het pad van een DELETE-aanvraag.
 
 >[!WARNING]
 >
@@ -50,7 +50,7 @@ curl -X DELETE \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 200 (OK) en een array met de id van de verwijderde dataset. Deze id moet overeenkomen met de id die in de DELETE aanvraag is verzonden. Wanneer u een GET-aanvraag uitvoert voor het verwijderde object, wordt HTTP-status 404 (Niet gevonden) geretourneerd, waarmee wordt bevestigd dat de gegevensset is verwijderd.
+Een geslaagde reactie retourneert HTTP-status 200 (OK) en een array met de id van de verwijderde dataset. Deze id moet overeenkomen met de id die in de DELETE-aanvraag is verzonden. Wanneer u een GET-verzoek uitvoert op het verwijderde object, wordt HTTP-status 404 (Niet gevonden) geretourneerd, waarmee wordt bevestigd dat de gegevensset is verwijderd.
 
 ```json
 [
