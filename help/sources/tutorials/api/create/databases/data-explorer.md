@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Een Azure Data Explorer-connector maken met de Flow Service API
+title: Een Azure Data Explorer-aansluiting maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
 source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
@@ -43,7 +43,7 @@ Als u verbinding wilt [!DNL Flow Service] maken met [!DNL Data Explorer], moet u
 | `servicePrincipalKey` | De unieke de dienstbelangrijkste sleutel die wordt gebruikt om met het [!DNL Data Explorer] gegevensbestand te verbinden. |
 | `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL Data Explorer] is `0479cc14-7651-4354-b233-7480606c2ac3`. |
 
-Voor meer informatie over begonnen worden verwijs naar [dit document](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)van de Ontdekkingsreiziger van Gegevens.
+Raadpleeg [dit Data Explorer-document](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)voor meer informatie over aan de slag gaan.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -61,7 +61,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -77,7 +77,7 @@ POST /connections
 
 **Verzoek**
 
-Om een [!DNL Data Explorer] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het POST- verzoek worden verstrekt. De verbindingsspecificatie-id voor [!DNL Data Explorer] is `0479cc14-7651-4354-b233-7480606c2ac3`.
+Om een [!DNL Data Explorer] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL Data Explorer] is `0479cc14-7651-4354-b233-7480606c2ac3`.
 
 ```shell
 curl -X POST \
