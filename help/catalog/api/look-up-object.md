@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een object opzoeken
 
-Als u de unieke id voor een specifiek [!DNL Catalog] object kent, kunt u een aanvraag GET uitvoeren om de details van dat object weer te geven.
+Als u de unieke id voor een specifiek [!DNL Catalog] object kent, kunt u een verzoek van de GET uitvoeren om de details van dat object weer te geven.
 
 >[!NOTE]
 >
