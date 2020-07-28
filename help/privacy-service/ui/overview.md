@@ -20,7 +20,7 @@ Adobe Experience Platform [!DNL Privacy Service] verstrekt een RESTful API en ge
 
 U moet een Adobe ID hebben om voor authentiek te verklaren aan [!DNL Privacy Service] UI. Bovendien moet u de voorrechten van de Beheerder van het Systeem binnen de organisatie hebben uw Adobe ID wordt geassocieerd met.
 
-Ga naar de aanmeldingspagina voor Adobe Experience Cloud op https://experience.adobe.com. Klik op **[!UICONTROL Aanmelden met een Adobe ID]** en voer uw aanmeldingsgegevens voor de Adobe ID in als u hierom wordt gevraagd.
+Navigeer naar de Adobe Experience Cloud-aanmeldpagina op https://experience.adobe.com. Klik op **[!UICONTROL Aanmelden met een Adobe ID]** en voer uw aanmeldingsgegevens voor de Adobe ID in als u hierom wordt gevraagd.
 
 Als u bent aangemeld, klikt u op **[!UICONTROL Privacy UI]**.
 
