@@ -25,7 +25,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 ## [!DNL Data Ingestion] {#ingestion}
 
-Adobe Experience Platform biedt een uitgebreide reeks functies voor het invoeren van elk type en elke vertraging van gegevens. Adobe Experience Platform [!DNL Data Ingestion] biedt meerdere alternatieven voor het opnemen van gegevens, zoals batch-API&#39;s, streaming API&#39;s, native Adobe-connectors, partners voor gegevensintegratie of de interface van het Adobe Experience Platform.
+Adobe Experience Platform biedt een uitgebreide reeks functies voor het invoeren van elk type en elke vertraging van gegevens. Adobe Experience Platform [!DNL Data Ingestion] biedt meerdere alternatieven voor het opnemen van gegevens, waaronder batch-API&#39;s, streaming API&#39;s, native Adobe-connectors, partners voor gegevensintegratie of de interface van het Adobe Experience Platform.
 
 **Nieuwe functies**
 
@@ -37,7 +37,7 @@ Voor meer informatie, bezoek de documentatie [van de](../../ingestion/home.md)In
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] is een volledig beheerde service binnen [!DNL Experience Platform] die wetenschappers in staat stelt naadloos inzichten te genereren op basis van gegevens en inhoud in alle Adobe-oplossingen en systemen van derden door Machine Learning Models te maken en te exploiteren. [!DNL Data Science Workspace] is nauw geïntegreerd met de levenscyclus van de end-to-end gegevenswetenschap, inclusief de exploratie en voorbereiding van XDM-gegevens, gevolgd door de ontwikkeling en de exploitatie van Modellen om automatisch te verrijken [!DNL Platform] [!DNL Real-time Customer Profile] met Inzichten voor het leren van machines.
+Adobe Experience Platform [!DNL Data Science Workspace] is een volledig beheerde dienst binnen [!DNL Experience Platform] die gegevenswetenschappers toelaat om inzichten van gegevens en inhoud over oplossingen van Adobe en derdesystemen foutloos te produceren door de Modellen van het Leren van de Machine te bouwen en in werking te stellen. [!DNL Data Science Workspace] is nauw geïntegreerd met de levenscyclus van de end-to-end gegevenswetenschap, inclusief de exploratie en voorbereiding van XDM-gegevens, gevolgd door de ontwikkeling en de exploitatie van Modellen om automatisch te verrijken [!DNL Platform] [!DNL Real-time Customer Profile] met Inzichten voor het leren van machines.
 
 **Nieuwe functies**
 
@@ -66,7 +66,7 @@ U kunt gegevens gebruiken [!DNL Query Service] om ecosystemen van de gegevensana
 | Functie | Beschrijving |
 | -----------| ---------- |
 | Verbeteringen aan [!DNL Query Editor] | Er is een opslagfunctie toegevoegd waarmee u een query kunt opslaan en er later aan kunt werken. Er is een tabblad &quot;Bladeren&quot; toegevoegd aan de [!DNL Query Service] gebruikersinterface op het Adobe Experience Platform waarin query&#39;s worden weergegeven die door gebruikers in uw organisatie zijn opgeslagen. Het deelvenster &quot;Query-details&quot; is geïmplementeerd waarin nuttige metagegevens worden weergegeven over de query die wordt weergegeven. |
-| Nieuwe toewijzingsfuncties | Door Adobe gedefinieerde functies in [!DNL Query Service] om te zoeken naar kanaaltoewijzing met vervalparameters. |
+| Nieuwe toewijzingsfuncties | Adobe-bepaalde functies in [!DNL Query Service] aan vraag voor kanaalattributie met vervalparameters. |
 | Verbeteringen in SQL-syntaxis | Ondersteuning voor ilike-syntaxis. |
 | Gegevenssets genereren met een gedefinieerd XDM-schema | Een nieuwe clausule in Create Lijst als Uitgezochte vragen (CTAS) toegevoegd die u toestaat om een doelschema te specificeren. |
 
