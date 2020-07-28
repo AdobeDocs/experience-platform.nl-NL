@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: c59acbe9acce65ab81a53cfe8f8f3373cf9ae388
 workflow-type: tm+mt
 source-wordcount: '24'
-ht-degree: 50%
+ht-degree: 54%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 50%
 # Adobe Experience Platform release notes {#release-notes}
 
 * [Juli 2020](latest/latest.md)
-* [juni 2020](2020/june-2020.md)
+* [Juni 2020](2020/june-2020.md)
 * [Mei 2020](2020/may-2020.md)
 * [April 2020](2020/april-2020.md)
 * [Maart 2020](2020/march-2020.md)
