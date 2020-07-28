@@ -22,7 +22,7 @@ Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [
 
 ## Profielgegevens benaderen op identiteit
 
-U kunt tot een [!DNL Profile] entiteit toegang hebben door een GET verzoek aan het `/access/entities` eindpunt te doen en de identiteit van de entiteit als reeks vraagparameters te verstrekken. Deze identiteit bestaat uit een ID-waarde (`entityId`) en de naamruimte voor identiteit (`entityIdNS`).
+U kunt tot een [!DNL Profile] entiteit toegang hebben door een verzoek van de GET tot het `/access/entities` eindpunt te richten en de identiteit van de entiteit als reeks vraagparameters te verstrekken. Deze identiteit bestaat uit een ID-waarde (`entityId`) en de naamruimte voor identiteit (`entityIdNS`).
 
 De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;). Een volledige lijst van geldige parameters wordt verstrekt in de sectie van [vraagparameters](#query-parameters) van bijlage.
 
@@ -119,7 +119,7 @@ curl -X GET \
 
 ## Profielgegevens benaderen op basis van lijst met identiteiten
 
-U kunt tot veelvoudige profielentiteiten door hun identiteiten toegang hebben door een POST- verzoek aan het `/access/entities` eindpunt te richten en de identiteiten in de lading te verstrekken. Deze identiteiten bestaan uit een ID-waarde (`entityId`) en een naamruimte voor identiteit (`entityIdNS`).
+U kunt tot veelvoudige profielentiteiten door hun identiteiten toegang hebben door een verzoek van de POST aan het `/access/entities` eindpunt te richten en de identiteiten in de lading te verstrekken. Deze identiteiten bestaan uit een ID-waarde (`entityId`) en een naamruimte voor identiteit (`entityIdNS`).
 
 **API-indeling**
 
@@ -332,7 +332,7 @@ curl -X POST \
 
 ## De gebeurtenissen van de tijdreeks van de toegang voor een profiel door identiteit
 
-U kunt tot de gebeurtenissen van de tijdreeks door de identiteit van hun bijbehorende profielentiteit toegang hebben door een GET verzoek aan het `/access/entities` eindpunt te doen. Deze identiteit bestaat uit een ID-waarde (`entityId`) en een naamruimte voor identiteit (`entityIdNS`).
+U kunt tot de gebeurtenissen van de tijdreeks door de identiteit van hun bijbehorende profielentiteit toegang hebben door een verzoek van de GET tot het `/access/entities` eindpunt te richten. Deze identiteit bestaat uit een ID-waarde (`entityId`) en een naamruimte voor identiteit (`entityIdNS`).
 
 De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;). Een volledige lijst van geldige parameters wordt verstrekt in de sectie van [vraagparameters](#query-parameters) van bijlage.
 
@@ -411,7 +411,7 @@ Een succesvolle reactie keert een gepagineerde lijst van de gebeurtenissen van d
 
 ### Een volgende pagina met resultaten openen
 
-Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als er volgende pagina&#39;s met resultaten zijn, bevat de `_page.next` eigenschap een id. Bovendien, verstrekt het `_links.next.href` bezit een verzoek URI voor het terugwinnen van de volgende pagina. Om de resultaten terug te winnen, doe een ander GET verzoek aan het `/access/entities` `/entities` eindpunt, nochtans moet u zeker zijn om met de waarde van verstrekte URI te vervangen.
+Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als er volgende pagina&#39;s met resultaten zijn, bevat de `_page.next` eigenschap een id. Bovendien, verstrekt het `_links.next.href` bezit een verzoek URI voor het terugwinnen van de volgende pagina. Om de resultaten terug te winnen, doe een ander verzoek van de GET aan het `/access/entities` `/entities` eindpunt, nochtans moet u zeker zijn om met de waarde van verstrekte URI te vervangen.
 
 >[!NOTE]
 >Zorg ervoor dat u niet per ongeluk `/entities/` in het aanvraagpad herhaalt. Het mag slechts eenmaal voorkomen, `/access/entities?start=...`
@@ -492,7 +492,7 @@ Als de reactie is gelukt, wordt de volgende pagina met resultaten geretourneerd.
 
 ## Gebeurtenissen in tijdreeksen benaderen voor meerdere profielen op basis van identiteit
 
-U kunt tot gebeurtenissen van de tijdreeks van veelvoudige bijbehorende profielen toegang hebben door een POST- verzoek aan het `/access/entities` eindpunt te doen en de profielidentiteiten in de lading te verstrekken. Deze identiteiten bestaan elk uit een waarde van identiteitskaart (`entityId`) en een identiteitsnamespace (`entityIdNS`).
+U kunt tot gebeurtenissen van de tijdreeks van veelvoudige bijbehorende profielen toegang hebben door een verzoek van de POST aan het `/access/entities` eindpunt te richten en de profielidentiteiten in de nuttige lading te verstrekken. Deze identiteiten bestaan elk uit een waarde van identiteitskaart (`entityId`) en een identiteitsnamespace (`entityIdNS`).
 
 **API-indeling**
 
@@ -880,7 +880,7 @@ Een geslaagde reactie retourneert een gepagineerde lijst met gebeurtenissen uit 
 
 ### Een volgende pagina met resultaten openen
 
-Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als er volgende pagina&#39;s met resultaten zijn, bevat de `_page.next` eigenschap een id. Bovendien, verstrekt het `_links.next.href` bezit een verzoek URI om de verdere pagina terug te winnen door extra te maken GET verzoeken aan het `access/entities` eindpunt.
+Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als er volgende pagina&#39;s met resultaten zijn, bevat de `_page.next` eigenschap een id. Bovendien, verstrekt het `_links.next.href` bezit een verzoek URI om de verdere pagina terug te winnen door extra GET verzoeken aan het `access/entities` eindpunt te doen.
 
 ## Volgende stappen
 
