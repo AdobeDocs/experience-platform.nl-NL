@@ -26,7 +26,7 @@ Intelligente services, gebaseerd op [!DNL Adobe Experience Platform], bieden mar
 
 ### Kostenefficiënte snelheid van de markt
 
-Adobe beschikt over AI/ML-expertise in combinatie met uitgebreide CXM-ervaring en Intelligente services zijn speciaal ontworpen voor marketeers om AI/ML onmiddellijk van de grond te krijgen voor gangbare gevallen van marketinggebruik zonder dat schaarse en dure wetenschappers op het gebied van gegevens hoeven aan te trekken, waardoor de snelheid van de markt en actionabiliteit worden versneld.
+Adobe beschikt over AI/ML-expertise in combinatie met uitgebreide CXM-ervaring, en Intelligente services zijn speciaal ontworpen voor marketeers om AI/ML onmiddellijk van de grond te krijgen voor gangbare gevallen van marketinggebruik zonder dat schaarse en dure gegevenswetenschappers hoeven aan te werven, waardoor de snelheid van de markt en actionabiliteit worden versneld.
 
 ### Hogere nauwkeurigheid in voorspellende inzichten
 
@@ -48,7 +48,7 @@ De marketinganalist configureert de gewenste voorspellingen door bedrijfsregels 
 
 ### Voorspelend
 
-Nadat de modellen klaar zijn met training en scoring, worden de scores teruggeschreven naar Platform.
+Nadat de modellen klaar zijn met training en scoren, worden de scores weer in het Platform geschreven.
 
 ### Handeling
 
@@ -56,4 +56,4 @@ Tot slot kunt u besluiten welke acties u met de voorspellingen wilt ondernemen, 
 
 ## Volgende stappen
 
-Intelligent Services biedt momenteel Attribution AI en Customer AI. Met Attribution AI kunnen marketers op intelligente wijze de marketingeffectiviteit op verschillende kanalen en campagnes stimuleren. Ga voor meer informatie over Kenmerken AI naar het [AI-overzicht](./attribution-ai/overview.md)Kenmerken. Klantenservice-AI stelt marketers in staat hun klantervaringen te hyper-personaliseren. Ga voor meer informatie over de AI van de Klant naar het [AI-overzicht](./customer-ai/overview.md)van de Klant.
+Intelligente services bieden momenteel Attribution AI- en Customer AI. Met Attribution AI kunnen marketers op intelligente wijze de doeltreffendheid van marketing via kanalen en campagnes stimuleren. Ga voor meer informatie over Attribution AI naar het [Attribution AI-overzicht](./attribution-ai/overview.md). Klantenservice-AI stelt marketers in staat hun klantervaringen te hyper-personaliseren. Ga voor meer informatie over de AI van de Klant naar het [AI-overzicht](./customer-ai/overview.md)van de Klant.
