@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een bron vervangen
 
-Met [!DNL Schema Registry] deze optie kunt u een volledige bron vervangen door een PUT-bewerking. Deze verrichting herschrijft hoofdzakelijk het middel, daarom moet het verzoeklichaam alle gebieden omvatten die worden vereist wanneer het creëren van een nieuwe middel gebruikend een POST- verzoek.
+Met [!DNL Schema Registry] deze optie kunt u een volledige bron vervangen door een PUT-bewerking. Deze verrichting herschrijft hoofdzakelijk het middel, daarom moet het verzoeklichaam alle gebieden omvatten die zouden worden vereist wanneer het creëren van een nieuwe middel gebruikend een verzoek van de POST.
 
 Deze methode is vooral handig als u veel informatie in de bron tegelijk wilt bijwerken.
 
@@ -24,7 +24,7 @@ Deze methode is vooral handig als u veel informatie in de bron tegelijk wilt bij
 
 **API-indeling**
 
-Een PUT verzoek kan slechts tegen middelen worden uitgevoerd die u in de huurderscontainer bepaalt.
+Een verzoek van de PUT kan slechts tegen middelen worden uitgevoerd die u in de huurderscontainer bepaalt.
 
 ```http
 PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID} 
@@ -37,7 +37,7 @@ PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 **Verzoek**
 
-Dit voorbeeldverzoek vervangt het datatype van de Bouw van het Bezit dat in een vorig voorbeeld werd gecreeerd. De aanvraaginstantie ziet er ongeveer hetzelfde uit als de POST-aanvraag die is gebruikt om het gegevenstype te maken, behalve dat deze nu een bijgewerkte set velden bevat met nieuwe waarden die vervangen wat eerder is gedefinieerd.
+Dit voorbeeldverzoek vervangt het datatype van de Bouw van het Bezit dat in een vorig voorbeeld werd gecreeerd. De aanvraaginstantie ziet er ongeveer hetzelfde uit als de POST die wordt gebruikt om het gegevenstype te maken, behalve dat het nu een bijgewerkte set velden bevat met nieuwe waarden die vervangen wat eerder is gedefinieerd.
 
 ```SHELL
 curl -X PUT \
