@@ -39,7 +39,7 @@ Voorbeelden :
 
 - U wilt voorspellen of een klant waarschijnlijk een horloge in de komende 30 dagen zal kopen. U wilt ook gebruikers scoren die de afgelopen 60 dagen enige internetactiviteit hebben gehad. In dat geval is de minimumlengte van de vereiste gegevens 60 dagen + 30 dagen. De in aanmerking komende populatie is 60 dagen en het resultaatvenster is 30 dagen in totaal 90 dagen.
 
-- U wilt voorspellen of de gebruiker waarschijnlijk de komende 7 dagen een horloge zal kopen. In dat geval is de minimumlengte van de vereiste gegevens 120 dagen + 7 dagen. De in aanmerking komende populatie staat standaard op 120 dagen en het resultaatvenster is 7 dagen in totaal 127 dagen.
+- U wilt voorspellen of de gebruiker waarschijnlijk de komende 7 dagen een horloge zal kopen. In dit geval is de minimumlengte van de vereiste gegevens 120 dagen + 7 dagen. De in aanmerking komende populatie staat standaard op 120 dagen en het resultaatvenster is 7 dagen in totaal 127 dagen.
 
 - U wilt voorspellen of de klant waarschijnlijk de komende 7 dagen een horloge zal kopen. U wilt ook gebruikers scoren die de afgelopen 7 dagen enige internetactiviteit hebben gehad. In dat geval is de minimumlengte van de vereiste gegevens 30 dagen + 7 dagen. De in aanmerking komende populatie duurt minimaal 30 dagen en de resultaatperiode bedraagt 7 dagen in totaal 37 dagen.
 
