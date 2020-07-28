@@ -57,7 +57,7 @@ Standaardknooppunten bouwen voort op open-source gegevenswetenschapsbibliotheken
 
 ### ModelUpload
 
-Het knooppunt ModelUpload is een intern Adobe-knooppunt dat een model_path neemt en het model uploadt van het lokale modelpad naar de blob-opslag voor machines in real-time.
+De ModelUpload knoop is een interne knoop van Adobe die model_path neemt en het model van de lokale modelweg uploadt aan de Echte - tijd machine Lerende blob opslag.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -69,7 +69,7 @@ model_id = msg_model.model['model_id']
 
 ### ONNXNode
 
-ONNXNode is een intern Adobe-knooppunt dat gebruikmaakt van een model-id om het vooraf opgeleide ONNX-model te trekken en te gebruiken voor de score op binnenkomende gegevens.
+ONNXNode is een intern knooppunt van de Adobe dat een model-id gebruikt om het vooraf opgeleide ONNX-model op te halen en het te gebruiken om op binnenkomende gegevens te score.
 
 >[!TIP]
 >Geef de kolommen op in dezelfde volgorde als de gegevens die naar het ONNX-model moeten worden verzonden.
