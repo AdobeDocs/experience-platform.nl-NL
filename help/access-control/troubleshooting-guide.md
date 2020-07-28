@@ -16,11 +16,11 @@ ht-degree: 0%
 
 Dit document geeft antwoorden op veelgestelde vragen over toegangsbeheer in Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere [!DNL Platform] diensten, gelieve te verwijzen naar de het oplossen van problemengids [van](../landing/troubleshooting.md)Experience Platforms.
 
-[!DNL Experience Platform] Gebruikt productprofielen in de Admin Console [van](http://adminconsole.adobe.com) Adobe om op rol-gebaseerde **toegangscontrole** te verstrekken, die gebruikers met toestemmingen en zandbakken verbindt.  Zie het [toegangsbeheeroverzicht](home.md) voor meer informatie.
+[!DNL Experience Platform] Gebruikt productprofielen in [Adobe Admin Console](http://adminconsole.adobe.com) om op rol-gebaseerde **toegangscontrole** te verstrekken, die gebruikers met toestemmingen en zandbakken verbindt.  Zie het [toegangsbeheeroverzicht](home.md) voor meer informatie.
 
 ## Waar kan ik mijn huidige toegangstoestemmingen vinden?
 
-Als u een systeembeheerder, productbeheerder of productprofielbeheerder voor uw IMS-organisatie bent, kunt u het toegewezen productprofiel en de machtigingen die in de Adobe-Admin Console zijn opgegeven, weergeven. Zie de gebruikershandleiding voor [toegangsbeheer](./ui/overview.md) voor instructies over het navigeren door het profiel [!DNL Admin Console] om de machtigingen van een productprofiel weer te geven.
+Als u een systeembeheerder, productbeheerder of productprofielbeheerder voor uw IMS-organisatie bent, kunt u het toegewezen productprofiel en de machtigingen die het biedt in de Adobe Admin Console bekijken. Zie de gebruikershandleiding voor [toegangsbeheer](./ui/overview.md) voor instructies over het navigeren door het profiel [!DNL Admin Console] om de machtigingen van een productprofiel weer te geven.
 
 Als u geen beheerder bent, kunt u uw huidige toegangstoestemmingen nog bekijken door een verzoek naar het `/acl/effective-policies` eindpunt in de Controle API van de Toegang te verzenden. Zie de sectie van de &quot;van de Mening efficiënte beleid&quot;in de ontwikkelaarsgids [van de](./api/effective-policies.md) toegangscontrole voor meer informatie.
 
