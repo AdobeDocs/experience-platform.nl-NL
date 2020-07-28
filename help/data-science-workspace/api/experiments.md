@@ -18,7 +18,7 @@ Modelontwikkeling en -training vinden plaats op het niveau van de experimenten, 
 
 ## Een experiment maken {#create-an-experiment}
 
-U kunt een Experiment tot stand brengen door een POST- verzoek uit te voeren terwijl het verstrekken van een naam en een geldige identiteitskaart MLInstance in de verzoeklading.
+U kunt een Experiment tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van een naam en een geldige identiteitskaart MLInstance in de verzoeklading.
 
 >[!NOTE]
 >
@@ -133,7 +133,7 @@ Een succesvolle reactie keert een lading terug die de details van de pas gecreë
 
 ## Een lijst met experimenten ophalen
 
-U kunt een lijst van Experimenten terugwinnen die tot een bepaalde instantie behoren door één enkel GET verzoek uit te voeren en geldige identiteitskaart MLInstance als vraagparameter te verstrekken. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+U kunt een lijst van Experimenten terugwinnen die tot een bepaalde instantie behoren door één enkel verzoek van de GET uit te voeren en geldige identiteitskaart MLInstance als vraagparameter te verstrekken. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
 
 
 **API-indeling**
@@ -199,7 +199,7 @@ Een succesvolle reactie keert een lijst van Experimenten terug die zelfde MLInst
 
 ## Een specifiek experiment ophalen {#retrieve-specific}
 
-U kunt de details van een specifieke Experiment terugwinnen door een GET verzoek uit te voeren dat gewenste identiteitskaart van de Experiment in de verzoekweg omvat.
+U kunt de details van een specifieke Experiment terugwinnen door een verzoek van de GET uit te voeren dat gewenste identiteitskaart van de Experiment in de verzoekweg omvat.
 
 **API-indeling**
 
@@ -242,7 +242,7 @@ Een geslaagde reactie retourneert een payload die de details van het gewenste ex
 
 ## Een lijst met experimentele tests ophalen
 
-U kunt een lijst van opleiding of het scoren looppas terugwinnen die tot een bepaalde Experiment behoren door één enkele GET verzoek uit te voeren en een geldige Experimentidentiteitskaart te verstrekken. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een volledige lijst van beschikbare vraagparameters, zie de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+U kunt een lijst ophalen met trainings- of scores die bij een bepaalde expert horen, door één aanvraag voor een GET uit te voeren en een geldige experimentele id op te geven. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een volledige lijst van beschikbare vraagparameters, zie de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
 
 >[!NOTE]
 >
@@ -303,11 +303,11 @@ Een geslaagde reactie retourneert een payload die een lijst met uitvoeringen en 
 
 ## Een experiment bijwerken
 
-U kunt een bestaande Experiment bijwerken door de eigenschappen ervan te overschrijven via een PUT-aanvraag die de id van de doelexpert in het aanvraagpad bevat en een JSON-payload met bijgewerkte eigenschappen opgeeft.
+U kunt een bestaande Experiment bijwerken door zijn eigenschappen door een verzoek van de PUT te beschrijven dat identiteitskaart van de doelExperiment in de verzoekweg omvat en een nuttige lading van JSON verstrekt die bijgewerkte eigenschappen bevat.
 
 >[!TIP]
 >
->Om ervoor te zorgen dat deze PUT-aanvraag succesvol is, wordt u aangeraden eerst een GET-aanvraag uit te voeren om de Experiment op id [op te](#retrieve-specific)halen. Vervolgens past u het geretourneerde JSON-object aan en werkt u dit bij en past u het gehele gewijzigde JSON-object toe als de payload voor de PUT-aanvraag.
+>Om ervoor te zorgen dat dit verzoek van de PUT met succes wordt uitgevoerd, wordt u aangeraden eerst een verzoek van de GET uit te voeren om het Experiment op identiteitskaart [](#retrieve-specific)terug te winnen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 De volgende voorbeeld-API-aanroep werkt de naam van een expert bij terwijl deze in eerste instantie deze eigenschappen heeft:
 
@@ -374,7 +374,7 @@ Een geslaagde reactie retourneert een lading die de bijgewerkte gegevens van de 
 
 ## Een experiment verwijderen
 
-U kunt één Experiment verwijderen door een DELETE aanvraag uit te voeren die de id van de doelexpert in het aanvraagpad bevat.
+U kunt één enkele Experiment schrappen door een DELETE verzoek uit te voeren die identiteitskaart van de doelExperiment in de verzoekweg omvat.
 
 **API-indeling**
 
@@ -409,7 +409,7 @@ curl -X DELETE \
 
 ## Experimenten door MLInstance ID verwijderen
 
-U kunt alle Experimenten schrappen die tot een bepaalde instantie behoren MLI door een DELETE verzoek uit te voeren dat identiteitskaart MLInstance als vraagparameter omvat.
+U kunt alle Experimenten schrappen die tot een bepaalde instantie behoren MLInstance door een DELETE verzoek uit te voeren dat identiteitskaart MLInstance als vraagparameter omvat.
 
 **API-indeling**
 
