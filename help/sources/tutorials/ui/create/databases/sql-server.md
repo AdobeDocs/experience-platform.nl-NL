@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Microsoft SQL Server-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 0%
@@ -14,10 +14,10 @@ ht-degree: 0%
 
 # Creeer een [!DNL Microsoft] SQL de bronschakelaar van de Server in UI
 
-> [!NOTE]
+>[!NOTE]
 > De [!DNL Microsoft] SQL schakelaar van de Server is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om extern gesourceerde gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het creëren van een [!DNL Microsoft] SQL van de Server (hierna genoemd &quot;SQL Server&quot;) bronschakelaar gebruikend het [!DNL Platform] gebruikersinterface.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het creëren van een [!DNL Microsoft] SQL van de Server (hierna genoemd &quot;SQL Server&quot;) bronschakelaar gebruikend het [!DNL Platform] gebruikersinterface.
 
 ## Aan de slag
 
