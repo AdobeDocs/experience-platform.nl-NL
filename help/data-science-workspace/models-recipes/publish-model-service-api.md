@@ -28,7 +28,7 @@ Tot slot alvorens deze zelfstudie te beginnen, te herzien gelieve de [begonnen](
 - `{IMS_ORG}`
 - `{API_KEY}`
 
-Voor alle POST-, PUT- en PATCH-aanvragen is een extra header vereist:
+Alle POST, PUT, en PATCH verzoeken vereisen een extra kopbal:
 
 - Inhoudstype: application/json
 
@@ -48,7 +48,7 @@ In de volgende tabel wordt een aantal gangbare terminologie beschreven die in de
 
 ## Creeer de Dienst van ML met een bestaande de looppas van de trainings Experimenteer en geplande scoring
 
-Wanneer u een opleiding de Looppas van de Experimenteer als Dienst van ML publiceert, kunt u het scoren plannen door details voor het scoren Experiment te verstrekken de lading van een POST- verzoek in werking stellen. Dit resulteert in de oprichting van een geplande entiteit voor het maken van scores door een expert.
+Wanneer u een de looppas van de trainingsExperiment als Dienst van ML publiceert, kunt u het scoren plannen door details voor het scoren in werking te stellen Experiment de lading van een verzoek van de POST. Dit resulteert in de oprichting van een geplande entiteit voor het maken van scores door een expert.
 
 **API-indeling**
 
