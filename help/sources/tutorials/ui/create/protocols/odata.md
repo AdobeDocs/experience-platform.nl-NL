@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!NOTE]
 > De [!DNL Generic OData] connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om extern gesourceerde gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een algemene bronconnector van het Open Data Protocol (hierna &quot;OData&quot; genoemd) met behulp van de [!DNL Platform] gebruikersinterface.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een algemene bronconnector van het Open Data Protocol (hierna &quot;OData&quot; genoemd) met behulp van de [!DNL Platform] gebruikersinterface.
 
 ## Aan de slag
 
