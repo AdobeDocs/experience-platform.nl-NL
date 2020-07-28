@@ -26,7 +26,7 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
    - x-gw-ims-org-id: `{IMS_ORG}`
    - Klantgeheim: `{CLIENT_SECRET}`
    - Clientcertificaat: `{PRIVATE_KEY}`
-- Voorbeeldgegevens en bronbestanden voor de [Retail Sales Recipe](../pre-built-recipes/retail-sales.md). Download de voor deze en andere [!DNL Data Science Workspace] zelfstudies vereiste middelen uit de openbare [Adobe Git-opslagplaats](https://github.com/adobe/experience-platform-dsw-reference/).
+- Voorbeeldgegevens en bronbestanden voor de [Retail Sales Recipe](../pre-built-recipes/retail-sales.md). Download de benodigde middelen voor deze en andere [!DNL Data Science Workspace] zelfstudies van de [Adobe openbare Git-opslagplaats](https://github.com/adobe/experience-platform-dsw-reference/).
 - [Python >= 2,7](https://www.python.org/downloads/) en de volgende [!DNL Python] verpakkingen:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
