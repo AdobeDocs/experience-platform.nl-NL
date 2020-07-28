@@ -14,14 +14,14 @@ ht-degree: 0%
 
 # Edge-projectieconfiguraties en eindpunten van doelen
 
-Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in real time te drijven, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe Experience Platform maakt deze realtime toegang tot gegevens mogelijk via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Adobe-toepassingen zoals Adobe Target en Adobe Campaign gebruiken bijvoorbeeld randen voor persoonlijke ervaringen van klanten in real-time. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Deze handleiding bevat gedetailleerde instructies voor het gebruik van de [!DNL Real-time Customer Profile] API voor het werken met randprojecties, inclusief doelen en configuraties.
+Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in real time te drijven, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe Experience Platform maakt deze realtime toegang tot gegevens mogelijk via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Bijvoorbeeld, gebruiken de toepassingen van de Adobe zoals Adobe Target en Adobe Campaign randen om gepersonaliseerde klantenervaringen in real time te verstrekken. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Deze handleiding bevat gedetailleerde instructies voor het gebruik van de [!DNL Real-time Customer Profile] API voor het werken met randprojecties, inclusief doelen en configuraties.
 
 ## Aan de slag
 
 Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)handleiding. Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een willekeurige [!DNL Experience Platform] API mogelijk te maken.
 
 >[!NOTE]
->Voor aanvragen die een payload (POST, PUT, PATCH) bevatten, is een `Content-Type` header vereist. In dit document `Content-Type` wordt meer dan één teken gebruikt. Gelieve te letten speciaal op de kopballen in de steekproefvraag om ervoor te zorgen u het correcte `Content-Type` voor elk verzoek gebruikt.
+>Verzoeken die een payload (POST, PUT, PATCH) bevatten, vereisen een `Content-Type` header. In dit document `Content-Type` wordt meer dan één teken gebruikt. Gelieve te letten speciaal op de kopballen in de steekproefvraag om ervoor te zorgen u het correcte `Content-Type` voor elk verzoek gebruikt.
 
 ## Projectiebestemmingen
 
@@ -29,7 +29,7 @@ Een projectie kan naar een of meer randen worden gerouteerd door de locaties op 
 
 ### Alle doelen weergeven
 
-U kunt van de randbestemmingen een lijst maken die reeds voor uw organisatie door een GET verzoek aan het `/config/destinations` eindpunt te maken zijn gecreeerd.
+U kunt van de randbestemmingen een lijst maken die reeds voor uw organisatie door een verzoek van de GET aan het `/config/destinations` eindpunt te richten zijn gecreeerd.
 
 **API-indeling**
 
@@ -102,14 +102,14 @@ De reactie bevat een `projectionDestinations` array met de details voor elke bes
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `_links.self.href` | Op het hoogste niveau, past de weg aan die wordt gebruikt om het GET verzoek te maken. Binnen elk individueel bestemmingsvoorwerp, kan dit weg in een GET verzoek worden gebruikt om de details van een specifieke bestemming direct te zoeken. |
+| `_links.self.href` | Op het hoogste niveau, past de weg aan die wordt gebruikt om het verzoek van de GET te doen. Binnen elk individueel bestemmingsvoorwerp, kan dit weg in een verzoek van de GET worden gebruikt om de details van een specifieke bestemming direct te zoeken. |
 | `id` | Binnen elk bestemmingsvoorwerp, `"id"` toont read-only, systeem-geproduceerde unieke identiteitskaart voor de bestemming. Deze ID wordt gebruikt wanneer het van verwijzingen voorzien van een specifieke bestemming en wanneer het creëren van projectieconfiguraties. |
 
 Voor meer informatie betreffende de attributen van een individuele bestemming, gelieve de sectie te zien over het [creëren van een bestemming](#create-a-destination) die volgt.
 
 ### Een doel maken {#create-a-destination}
 
-Als de bestemming u vereist niet reeds bestaat, kunt u een nieuwe projectiebestemming tot stand brengen door een POST- verzoek aan het `/config/destinations` eindpunt te doen.
+Als de bestemming u vereist niet reeds bestaat, kunt u een nieuwe projectiebestemming tot stand brengen door een verzoek van de POST aan het `/config/destinations` eindpunt te doen.
 
 **API-indeling**
 
@@ -122,7 +122,7 @@ POST /config/destinations
 Met de volgende aanvraag wordt een nieuwe randbestemming gemaakt.
 
 >[!NOTE]
->Voor het POST-verzoek om een bestemming te maken is een specifieke `Content-Type` koptekst vereist, zoals hieronder wordt weergegeven. Het gebruik van een onjuiste `Content-Type` header resulteert in een HTTP Status 415 (Unsupported Media Type)-fout.
+>Het verzoek van de POST om een bestemming tot stand te brengen vereist een specifieke `Content-Type` kopbal, zoals hieronder getoond. Het gebruik van een onjuiste `Content-Type` header resulteert in een HTTP Status 415 (Unsupported Media Type)-fout.
 
 ```shell
 curl -X POST \
@@ -177,7 +177,7 @@ Een geslaagde reactie retourneert de details van het nieuwe randdoel, inclusief 
 
 ### Een doel weergeven
 
-Als u unieke identiteitskaart van een projectiebestemming kent, kunt u een raadplegingsverzoek uitvoeren om zijn details te bekijken. Dit wordt gedaan door een GET verzoek aan het `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming in de verzoekweg te doen.
+Als u unieke identiteitskaart van een projectiebestemming kent, kunt u een raadplegingsverzoek uitvoeren om zijn details te bekijken. Dit wordt gedaan door een verzoek van de GET tot het `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming in de verzoekweg te richten.
 
 **API-indeling**
 
@@ -224,7 +224,7 @@ Het reactieobject geeft de details van de projectiebestemming weer. Het `id` att
 
 ### Een doel bijwerken
 
-Een bestaande bestemming kan worden bijgewerkt door een PPUT- verzoek aan het `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming die in de verzoekweg moet worden bijgewerkt te doen. Deze bewerking _herschrijft_ in wezen de bestemming en daarom moeten in de hoofdtekst van het verzoek dezelfde kenmerken worden opgegeven als bij het maken van een nieuwe bestemming.
+Een bestaande bestemming kan worden bijgewerkt door een verzoek van de PUT aan het `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming om in de verzoekweg worden bijgewerkt te doen. Deze bewerking _herschrijft_ in wezen de bestemming en daarom moeten in de hoofdtekst van het verzoek dezelfde kenmerken worden opgegeven als bij het maken van een nieuwe bestemming.
 
 >[!CAUTION]
 >De API-reactie op het updateverzoek is onmiddellijk, maar de wijzigingen in de projecties worden asynchroon toegepast. Met andere woorden, er is een tijdverschil tussen wanneer de update aan de definitie van de bestemming wordt gemaakt en wanneer het wordt toegepast.
@@ -244,7 +244,7 @@ PUT /config/destinations/{DESTINATION_ID}
 Het volgende verzoek werkt de bestaande bestemming bij om een tweede plaats (`dataCenters`) te omvatten.
 
 >[!IMPORTANT]
->Voor de PUT-aanvraag is een specifieke `Content-Type` header nodig, zoals hieronder wordt weergegeven. Het gebruik van een onjuiste `Content-Type` header resulteert in een HTTP Status 415 (Unsupported Media Type)-fout.
+>Voor het verzoek om PUT is een specifieke `Content-Type` header nodig, zoals hieronder wordt weergegeven. Het gebruik van een onjuiste `Content-Type` header resulteert in een HTTP Status 415 (Unsupported Media Type)-fout.
 
 ```shell
 curl -X PUT \
@@ -329,7 +329,7 @@ Projectieconfiguraties bieden informatie over de gegevens die aan elke rand besc
 
 ### Alle projectieconfiguraties weergeven
 
-U kunt van alle projectieconfiguraties een lijst maken die voor uw organisatie door een GET verzoek aan het `/config/projections` eindpunt te maken zijn gecreeerd. U kunt facultatieve parameters aan de verzoekweg ook toevoegen om tot projectieconfiguraties voor een bepaald schema toegang te hebben of een individuele projectie door zijn naam te zoeken.
+U kunt van alle projectieconfiguraties een lijst maken die voor uw organisatie zijn gecreeerd door een verzoek van de GET tot het `/config/projections` eindpunt te richten. U kunt facultatieve parameters aan de verzoekweg ook toevoegen om tot projectieconfiguraties voor een bepaald schema toegang te hebben of een individuele projectie door zijn naam te zoeken.
 
 **API-indeling**
 
@@ -429,7 +429,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **Verzoek**
 
 >[!NOTE]
->Voor het POST-verzoek om een configuratie te maken is een specifieke `Content-Type` header nodig, zoals hieronder wordt weergegeven. Het gebruik van een onjuiste `Content-Type` header resulteert in een HTTP Status 415 (Unsupported Media Type)-fout.
+>Het verzoek van de POST om een configuratie tot stand te brengen vereist een specifieke `Content-Type` kopbal, zoals hieronder getoond. Het gebruik van een onjuiste `Content-Type` header resulteert in een HTTP Status 415 (Unsupported Media Type)-fout.
 
 ```shell
 curl -X POST \
