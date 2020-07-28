@@ -15,7 +15,7 @@ ht-degree: 0%
 
 - [Overzicht van gegevenstoegang](home.md)
 - [API voor gegevenstoegang](api.md)
-- Zelfstudies {#tutorials}
+- Tutorials {#tutorials}
    - [Gegevens van toegangsgegevensset](tutorials/dataset-data.md)
    - [Python SDK](tutorials/python-sdk.md)
    - [Spark SDK](tutorials/spark-sdk.md)
