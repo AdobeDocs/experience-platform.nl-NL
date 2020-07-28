@@ -20,7 +20,7 @@ Geautomatiseerde trainings- en scoreschema&#39;s worden gedefinieerd met een beg
 
 ## Een MLService maken {#create-an-mlservice}
 
-U kunt een dienst tot stand brengen MLService door een POST- verzoek en een lading uit te voeren die een naam voor de dienst en een geldige identiteitskaart MLInstance verstrekt. De MLInstance die wordt gebruikt om een dienst te creëren MLService wordt vereist geen bestaande trainingsexperimenten te hebben maar u kunt verkiezen om de dienst MLService met een bestaand opgeleid model tot stand te brengen door overeenkomstige Deskundige identiteitskaart en opleidingsuitloopidentiteitskaart te verstrekken.
+U kunt een dienst tot stand brengen MLService door een verzoek van de POST en een lading uit te voeren die een naam voor de dienst en een geldige identiteitskaart MLInstance verstrekt. De MLInstance die wordt gebruikt om een dienst te creëren MLService wordt vereist geen bestaande trainingsexperimenten te hebben maar u kunt verkiezen om de dienst MLService met een bestaand opgeleid model tot stand te brengen door overeenkomstige Deskundige identiteitskaart en opleidingsuitloopidentiteitskaart te verstrekken.
 
 **API-indeling**
 
@@ -108,7 +108,7 @@ Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe 
 
 ## Een lijst met MLServices ophalen {#retrieve-a-list-of-mlservices}
 
-U kunt een lijst van diensten terugwinnen MLServices door één enkel GET verzoek uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+U kunt een lijst van diensten terugwinnen MLServices door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
 
 **API-indeling**
 
@@ -167,7 +167,7 @@ Een succesvolle reactie keert een lijst van diensten MLServices en hun details m
 
 ## Een specifieke MLService ophalen {#retrieve-a-specific-mlservice}
 
-U kunt de details van een specifieke Experiment terugwinnen door een GET verzoek uit te voeren dat gewenste identiteitskaart MLService in de verzoekweg omvat.
+U kunt de details van een specifiek Experiment terugwinnen door een verzoek van de GET uit te voeren dat gewenste identiteitskaart MLService in de verzoekweg omvat.
 
 **API-indeling**
 
@@ -211,11 +211,11 @@ Een succesvolle reactie keert een lading terug die de details van de gevraagde M
 
 ## Een MLService bijwerken {#update-an-mlservice}
 
-U kunt een bestaande dienst bijwerken MLService door zijn eigenschappen door een PUT verzoek te beschrijven die identiteitskaart van doelMLService in de verzoekweg omvat en een nuttige lading te verstrekken JSON die bijgewerkte eigenschappen bevat.
+U kunt een bestaande dienst bijwerken MLService door zijn eigenschappen door een verzoek van de PUT te beschrijven dat identiteitskaart van doelMLService in de verzoekweg omvat en een nuttige lading te verstrekken JSON die bijgewerkte eigenschappen bevat.
 
 >[!TIP]
 >
->Om ervoor te zorgen dat dit PUT-verzoek succesvol is, wordt u aangeraden eerst een GET-verzoek uit te voeren om de MLService via ID [op te](#retrieve-a-specific-mlservice)halen. Vervolgens past u het geretourneerde JSON-object aan en werkt u dit bij en past u het gehele gewijzigde JSON-object toe als de payload voor de PUT-aanvraag.
+>Om het succes van dit verzoek van de PUT te verzekeren, wordt geadviseerd eerst dat u een verzoek van de GET uitvoert om de dienst MLService door identiteitskaart [](#retrieve-a-specific-mlservice)terug te winnen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 **API-indeling**
 
@@ -288,7 +288,7 @@ Een succesvolle reactie keert een lading terug die de bijgewerkte details van ML
 
 ## Een MLService verwijderen
 
-U kunt één enkele dienst schrappen MLService door een DELETE verzoek uit te voeren die identiteitskaart van doelMLService in de verzoekweg omvat.
+U kunt één enkele dienst schrappen MLService door een DELETE verzoek uit te voeren dat identiteitskaart van doelMLService in de verzoekweg omvat.
 
 **API-indeling**
 
