@@ -1,8 +1,8 @@
 ---
 title: Amazon S3-bestemming
 seo-title: Amazon S3-bestemming
-description: Maak een live uitgaande verbinding met uw Amazon Web Services (AWS) S3-opslagruimte om periodiek door tabs gescheiden of CSV-gegevensbestanden van het Adobe Experience Platform naar uw eigen S3-emmers te exporteren.
-seo-description: Maak een live uitgaande verbinding met uw Amazon Web Services (AWS) S3-opslagruimte om periodiek door tabs gescheiden of CSV-gegevensbestanden van het Adobe Experience Platform naar uw eigen S3-emmers te exporteren.
+description: Creeer een levende uitgaande verbinding aan uw opslag van het Web van Amazon van de Diensten (AWS) S3 om lusje-afgebakende of CSV gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
+seo-description: Creeer een levende uitgaande verbinding aan uw opslag van het Web van Amazon van de Diensten (AWS) S3 om lusje-afgebakende of CSV gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -24,10 +24,10 @@ Zie de workflow voor [Cloud-opslagdoelen ](/help/rtcdp/destinations/cloud-storag
 
 Voor [!DNL Amazon S3] bestemmingen, ga de volgende informatie in creeer bestemmingswerkschema in:
 
-* **[!DNL Amazon S3]toegangstoets en[!DNL Amazon S3]geheime sleutel **: In[!DNL Amazon S3], produceer een toegangstoets - geheim toegangszeer belangrijke paar om Adobe in real time CDP toegang tot uw[!DNL Amazon S3]rekening te verlenen.
+* **[!DNL Amazon S3]toegangstoets en[!DNL Amazon S3]geheime sleutel **: In[!DNL Amazon S3], produceer een toegangssleutel - geheim toegangszeer belangrijke paar om Adobe toegang in real time CDP tot uw[!DNL Amazon S3]rekening te verlenen.
 
 
 
 >[!IMPORTANT]
 >
->Adobe Real-time CDP heeft `write` machtigingen nodig voor het emmerobject waar de exportbestanden worden geleverd.
+>Adobe In real time CDP heeft `write` toestemmingen op het emmervoorwerp nodig waar de de uitvoerdossiers zullen worden geleverd.
