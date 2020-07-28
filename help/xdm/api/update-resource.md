@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een bron bijwerken
 
-U kunt middelen in de huurderscontainer wijzigen of bijwerken gebruikend een verzoek van de PATCH. De [!DNL Schema Registry] functie ondersteunt alle standaard JSON-patchbewerkingen, inclusief toevoegen, verwijderen en vervangen.
+U kunt middelen in de huurderscontainer wijzigen of bijwerken gebruikend een verzoek van PATCH. De [!DNL Schema Registry] functie ondersteunt alle standaard JSON-patchbewerkingen, inclusief toevoegen, verwijderen en vervangen.
 
 Raadpleeg de officiële [JSON Patch-documentatie](http://jsonpatch.com/)voor meer informatie over JSON Patch, inclusief beschikbare bewerkingen.
 
@@ -100,7 +100,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De mix `$
 
 ## Afzonderlijke velden voor een bron bijwerken
 
-U kunt PATCH- verzoeken ook verzenden die veelvoudige veranderingen in individuele gebieden binnen een middel van de Registratie van het Schema aanbrengen.
+U kunt PATCH verzoeken ook verzenden die veelvoudige veranderingen in individuele gebieden binnen een middel van de Registratie van het Schema aanbrengen.
 
 **API-indeling**
 
