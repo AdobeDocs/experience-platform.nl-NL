@@ -59,7 +59,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -69,9 +69,9 @@ Om een [!DNL Redshift] verbinding tot stand te brengen, moet een reeks [!DNL Red
 
 **API-indeling**
 
-Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor opzoeken [!DNL Redshift] door een GET verzoek uit te voeren en vraagparameters te gebruiken.
+Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor opzoeken [!DNL Redshift] door een verzoek van de GET uit te voeren en vraagparameters te gebruiken.
 
-Het verzenden van een GET verzoek zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=name=="amazon-redshift"` om informatie specifiek voor te verkrijgen [!DNL Redshift].
+Het verzenden van een verzoek van de GET zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=name=="amazon-redshift"` om informatie specifiek voor te verkrijgen [!DNL Redshift].
 
 ```http
 GET /connectionSpecs
