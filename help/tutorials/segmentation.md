@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Zelfstudies voor segmentatie
 
-Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal geconfigureerd en onderhouden [!DNL Platform], en zijn gemakkelijk toegankelijk voor elke Adobe-oplossing. Meer over segmentatie leren, begin door het overzicht [van de Dienst van de](../segmentation/home.md)Segmentatie te lezen.
+Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal gevormd en gehandhaafd [!DNL Platform], en gemakkelijk toegankelijk door om het even welke oplossing van Adobe. Meer over segmentatie leren, begin door het overzicht [van de Dienst van de](../segmentation/home.md)Segmentatie te lezen.
 
 ## Een segmentdefinitie maken
 
