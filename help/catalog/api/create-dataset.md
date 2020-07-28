@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een gegevensset maken
 
-Om een dataset tot stand te brengen gebruikend [!DNL Catalog] API, moet u de `$id` waarde van het schema [!DNL Experience Data Model] (XDM) kennen waarop de dataset zal worden gebaseerd. Zodra u schema identiteitskaart hebt, kunt u een dataset tot stand brengen door een POST- verzoek aan het `/datasets` eindpunt in [!DNL Catalog] API te doen.
+Om een dataset tot stand te brengen gebruikend [!DNL Catalog] API, moet u de `$id` waarde van het schema [!DNL Experience Data Model] (XDM) kennen waarop de dataset zal worden gebaseerd. Zodra u schema identiteitskaart hebt, kunt u een dataset tot stand brengen door een verzoek van de POST aan het `/datasets` eindpunt in [!DNL Catalog] API te doen.
 
 >[!NOTE]
 >
