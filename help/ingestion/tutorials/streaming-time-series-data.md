@@ -395,13 +395,13 @@ Een geslaagde reactie retourneert HTTP status 200 met details van het net gestre
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | De id van de eerder gemaakte streamingverbinding. |
-| `xactionId` | Een unieke id die op de server is gegenereerd voor de record die u zojuist hebt verzonden. Met deze id kan Adobe de levenscyclus van deze record volgen via verschillende systemen en met foutopsporing. |
+| `xactionId` | Een unieke id die op de server is gegenereerd voor de record die u zojuist hebt verzonden. Met deze id kan Adobe de levenscyclus van deze record traceren via verschillende systemen en met foutopsporing. |
 | `receivedTimeMs`: Een tijdstempel (tijdperk in milliseconden) dat aangeeft op welk tijdstip de aanvraag is ontvangen. |
 | `synchronousValidation.status` | Aangezien de queryparameter `synchronousValidation=true` is toegevoegd, wordt deze waarde weergegeven. Als de validatie is gelukt, wordt de status `pass`ingesteld. |
 
 ## De nieuw ingevoerde tijdreeksgegevens ophalen
 
-Om de eerder opgenomen verslagen te bevestigen, kunt u gebruiken [!DNL Profile Access API](../../profile/api/entities.md) om de gegevens van de tijdreeksen terug te winnen. Dit kan worden gedaan gebruikend GET verzoek aan het `/access/entities` eindpunt en het gebruiken van facultatieve vraagparameters. U kunt meerdere parameters gebruiken, gescheiden door ampersands (&amp;).&quot;
+Om de eerder opgenomen verslagen te bevestigen, kunt u gebruiken [!DNL Profile Access API](../../profile/api/entities.md) om de gegevens van de tijdreeksen terug te winnen. Dit kan worden gedaan gebruikend een verzoek van de GET aan het `/access/entities` eindpunt en het gebruiken van facultatieve vraagparameters. U kunt meerdere parameters gebruiken, gescheiden door ampersands (&amp;).&quot;
 
 >[!NOTE]
 >
