@@ -40,7 +40,7 @@ De eerste stap bij het creëren van een DULE beleid is te bepalen welke marketin
 
 ### Een bestaande marketingactie opzoeken {#look-up}
 
-U kunt bestaande marketing acties opzoeken die door uw DULE beleid moeten worden geëvalueerd door een GET verzoek aan één van de `/marketingActions` eindpunten te doen.
+U kunt bestaande marketing acties opzoeken die door uw DULE beleid moeten worden geëvalueerd door een verzoek van de GET tot één van de `/marketingActions` eindpunten te richten.
 
 **API-indeling**
 
@@ -125,7 +125,7 @@ Wanneer u de marketing actie vindt die u wilt gebruiken, registreer de waarde va
 
 ### Nieuwe marketingactie maken {#create-new}
 
-U kunt een nieuwe marketing actie tot stand brengen door een PUT verzoek aan het `/marketingActions/custom/` eindpunt te maken en een naam voor de marketing actie aan het eind van de verzoekweg te verstrekken.
+U kunt een nieuwe marketing actie tot stand brengen door een verzoek van de PUT aan het `/marketingActions/custom/` eindpunt te doen en een naam voor de marketing actie aan het eind van de verzoekweg te verstrekken.
 
 **API-indeling**
 
@@ -221,7 +221,7 @@ Deze expressie wordt een **beleidsexpressie** genoemd en is een object dat (A) e
 >
 >Alleen de operatoren OR en AND worden ondersteund.
 
-Zodra u uw beleidsuitdrukking hebt gevormd, kunt u een nieuw DULE beleid tot stand brengen door een POST- verzoek aan het `/policies/custom` eindpunt te maken.
+Zodra u uw beleidsuitdrukking hebt gevormd, kunt u een nieuw DULE beleid tot stand brengen door een verzoek van de POST aan het `/policies/custom` eindpunt te doen.
 
 **API-indeling**
 
@@ -328,7 +328,7 @@ Registreer identiteitskaart van URI van het pas gecreëerde DULE beleid, aangezi
 >
 >Hoewel deze stap facultatief is als u uw DULE beleid in `DRAFT` status wilt verlaten, gelieve te merken dat door gebrek een beleid zijn status moet hebben aan `ENABLED` om aan evaluatie deel te nemen. Zie de zelfstudie over het [afdwingen van DULE-beleid](../enforcement/api-enforcement.md) voor informatie over het maken van uitzonderingen voor beleid in `DRAFT` status.
 
-Door gebrek, DULE beleid dat hun `status` bezit heeft worden geplaatst om `DRAFT` niet aan evaluatie deel te nemen. U kunt uw beleid voor evaluatie toelaten door een verzoek van de PATCH aan het `/policies/custom/` eindpunt te doen en het unieke herkenningsteken voor het beleid aan het eind van de verzoekweg te verstrekken.
+Door gebrek, DULE beleid dat hun `status` bezit heeft worden geplaatst om `DRAFT` niet aan evaluatie deel te nemen. U kunt uw beleid voor evaluatie toelaten door een verzoek van PATCH aan het `/policies/custom/` eindpunt te doen en het unieke herkenningsteken voor het beleid aan het eind van de verzoekweg te verstrekken.
 
 **API-indeling**
 
