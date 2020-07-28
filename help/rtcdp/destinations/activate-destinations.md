@@ -1,8 +1,8 @@
 ---
 title: Profielen en segmenten naar een doel activeren
 seo-title: Profielen en segmenten naar een doel activeren
-description: Activeer de gegevens in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
-seo-description: Activeer de gegevens in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
+description: Activeer de gegevens u in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
+seo-description: Activeer de gegevens u in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Profielen en segmenten naar een doel activeren
 
-Activeer de gegevens in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen. Volg onderstaande stappen om dit te bereiken.
+Activeer de gegevens u in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
 
 ## Vereisten {#prerequisites}
 
@@ -57,7 +57,7 @@ Wij adviseren één van de attributen om een [uniek herkenningsteken](/help/rtcd
    ![Loyalty-id als identiteit](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Selecteer `Email_LC_SHA256` als doelIdentiteit als u de e-mailadressen van de klant bij gegevensinvoer in Adobe Experience Platform, volgens [!DNL Facebook] e- [mailhashing vereisten](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)hashing. <br> Selecteer `Email` als doel-id als de e-mailadressen die u gebruikt geen hashing zijn. Adobe CDP in realtime verbergt de e-mailadressen om aan de [!DNL Facebook] vereisten te voldoen.
+   Selecteer `Email_LC_SHA256` als doelIdentiteit als u de e-mailadressen van de klant bij gegevensinvoer in Adobe Experience Platform, volgens [!DNL Facebook] e- [mailhashing vereisten](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)hashing. <br> Selecteer `Email` als doel-id als de e-mailadressen die u gebruikt geen hashing zijn. Adobe In real time CDP zal de e-mailadressen hash om aan [!DNL Facebook] vereisten te voldoen.
 
    ![identiteitstoewijzing na invullen van velden](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -94,7 +94,7 @@ Voer de onderstaande stappen uit om bestaande activeringsstromen in CDP in real 
 
 ### E-mailmarketingbestemmingen en cloudopslagbestemmingen
 
-Voor marketingdoelen en opslagdoelen voor de cloud maakt Adobe Real-time CDP een door tabs gescheiden `.txt` of `.csv` bestand op de opslaglocatie die u hebt opgegeven. Verwacht dat er elke dag een nieuw bestand op uw opslaglocatie wordt gemaakt. De bestandsindeling is:
+Voor e-mailmarketingdoelen en cloudopslagdoelen maakt Adobe Real-time CDP een door tabs gescheiden `.txt` of `.csv` bestand op de opslaglocatie die u hebt opgegeven. Verwacht dat er elke dag een nieuw bestand op uw opslaglocatie wordt gemaakt. De bestandsindeling is:
 `<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
 
 De bestanden die u op drie opeenvolgende dagen ontvangt, kunnen er als volgt uitzien:
@@ -117,7 +117,7 @@ Een geslaagde activering betekent [!DNL Facebook]bijvoorbeeld dat er via de prog
 
 >[!TIP]
 >
->De integratie tussen Adobe Real-time CDP en [!DNL Facebook] steunt historische publieksbackfills. Alle historische segmentkwalificaties worden verzonden naar [!DNL Facebook] wanneer u de segmenten naar de bestemming activeert.
+>De integratie tussen Adobe in real time CDP en [!DNL Facebook] steunt historische publieksbackfills. Alle historische segmentkwalificaties worden verzonden naar [!DNL Facebook] wanneer u de segmenten naar de bestemming activeert.
 
 ## Activering uitschakelen {#disable-activation}
 
