@@ -62,7 +62,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 Binnen de [!DNL Policy Service] API worden alle beleid- en marketingacties ofwel `core` ofwel `custom` bronnen genoemd.
 
-De `core` bronnen worden gedefinieerd en onderhouden door Adobe, terwijl `custom` bronnen worden gemaakt en onderhouden door individuele klanten en daarom uniek en zichtbaar zijn voor alleen de IMS-organisatie die ze heeft gemaakt. Als dusdanig, zijn de lijst en de raadplegingsverrichtingen (`GET`) de enige verrichtingen toegestaan op `core` middelen, terwijl de lijsten, de raadpleging en de updateverrichtingen (`POST`, `PUT`, `PATCH`, en `DELETE`) voor `custom` middelen beschikbaar zijn.
+De `core` middelen zijn die door Adobe worden bepaald en gehandhaafd, terwijl de `custom` middelen door individuele klanten worden gecreeerd en worden gehandhaafd en daarom uniek en zichtbaar slechts aan de organisatie IMS die hen creeerde. Als dusdanig, zijn de lijst en de raadplegingsverrichtingen (`GET`) de enige verrichtingen toegestaan op `core` middelen, terwijl de lijsten, de raadpleging en de updateverrichtingen (`POST`, `PUT`, `PATCH`, en `DELETE`) voor `custom` middelen beschikbaar zijn.
 
 ## Beleidstatus
 
