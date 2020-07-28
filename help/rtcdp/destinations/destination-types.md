@@ -1,8 +1,8 @@
 ---
 title: Typen bestemmingen en categorieën
 seo-title: Typen bestemmingen en categorieën
-description: 'In het Platform van Gegevens van de Klant van Adobe In real time, vangen de Profiel/de bestemmingen van de Uitvoer van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie toe, en voeren segmenten en gekwalificeerde profielen naar bestemmingen uit. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen. '
-seo-description: In het Platform van Gegevens van de Klant van Adobe In real time, vangen de Profiel/de bestemmingen van de Uitvoer van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie toe, en voeren segmenten en gekwalificeerde profielen naar bestemmingen uit. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen.
+description: 'In het Platform van de Gegevens van de Klant van Adobe in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen. '
+seo-description: In het Platform van de Gegevens van de Klant van Adobe in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen.
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Doeltypen en -categorieën
 
-Lees deze pagina om inzicht te krijgen in de verschillende typen en categorieën bestemmingen van het Adobe Real-time Platform voor klantgegevens.
+Lees deze pagina om de verschillende types en de categorieën van de bestemmingen van het Platform van de Gegevens van de Klant in real time van Adobe te begrijpen.
 
 ## Doeltypen
 
-In het Platform van de Gegevens van de Klant van Adobe In real time, maken wij onderscheid tussen twee bestemmingstypes - verbindingen en uitbreidingen. Er zijn twee soorten verbindingsbestemmingen, de bestemmingen van de Uitvoer van het Profiel en de bestemmingen van de Uitvoer van het Segment.
+In het Platform van de Gegevens van de Klant van Adobe in real time, maken wij onderscheid tussen twee bestemmingstypes - verbindingen en uitbreidingen. Er zijn twee soorten verbindingsbestemmingen, de bestemmingen van de Uitvoer van het Profiel en de bestemmingen van de Uitvoer van het Segment.
 
 ![Soorten bestemmingen](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -26,7 +26,7 @@ In het Platform van de Gegevens van de Klant van Adobe In real time, maken wij o
 
 ### Verbindingen
 
-**[!UICONTROL De bestemmingen van de Uitvoer]** en van het **[!UICONTROL Segment van het profiel van de Uitvoer]** in de Gegevens van de Klant van Adobe in real time leggen gebeurtenisgegevens vast, combineren het met andere gegevensbronnen om het [real-time klantenprofiel](/help/profile/home.md)te vormen, segmentatie toe te passen, en segmenten en gekwalificeerde profielen naar bestemmingen uit te voeren.
+**[!UICONTROL De bestemmingen van de Uitvoer]** en van het **[!UICONTROL Segment van het profiel van de Uitvoer]** in het Platform van de Gegevens van de Klant van Adobe Real-time vangen gebeurtenisgegevens, combineren het met andere gegevensbronnen om het [real-time klantenprofiel](/help/profile/home.md)te vormen, segmentatie, en de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe te passen.
 
 <br> 
 
@@ -48,7 +48,7 @@ In de onderstaande video worden de bijzonderheden van de twee soorten doelen uit
 
 ### Extensies
 
-Adobe Real-time CDP gebruikt de macht en de flexibiliteit van Experience Platform Launch om de uitbreidingen van de Lancering in de interface van Adobe in real time CDP te omvatten.
+Adobe In real time CDP hefboomwerkingen de macht en de flexibiliteit van Experience Platform Launch om de uitbreidingen van de Lancering in de Adobe in real time CDP interface te omvatten.
 
 >[!TIP]
 >
