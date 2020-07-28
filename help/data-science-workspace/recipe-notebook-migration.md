@@ -54,7 +54,7 @@ Alvorens u het beeld van de Docker bouwt, herzie de voorbeelden voor het lezen v
 
 #### Een gegevensset lezen
 
-Deze sectie schetst de veranderingen die voor het lezen van een dataset nodig zijn en gebruikt het [helper.range](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) voorbeeld, die door Adobe wordt verstrekt.
+Deze sectie schetst de veranderingen die voor het lezen van een dataset nodig zijn en gebruikt het [helper.range](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) voorbeeld, dat door Adobe wordt verstrekt.
 
 **Oude manier om een dataset te lezen**
 
@@ -178,7 +178,7 @@ Als u het recept wilt maken met de API, volgt u de zelfstudie [voor het verpakte
 
 ## PySpark-migratiegids {#pyspark-migration-guide}
 
-Het recept artefact dat door de bouwstijlstappen wordt geproduceerd is nu een beeld van de Docker dat uw binair dossier .egg bevat. Daarnaast is de syntaxis die wordt gebruikt voor het lezen en schrijven van gegevenssets met de [!DNL Platform] SDK gewijzigd en moet u de recept-code wijzigen.
+Het recept artefact dat door de bouwstijlstappen wordt geproduceerd is nu een beeld van de Docker dat uw binair dossier .egg bevat. Daarnaast is de syntaxis die wordt gebruikt voor het lezen en schrijven van gegevenssets met de [!DNL Platform] SDK gewijzigd. Hiervoor moet u de recept-code wijzigen.
 
 De volgende video wordt ontworpen om in het begrijpen van de veranderingen verder te helpen die voor PySpark recepten worden vereist:
 
@@ -225,7 +225,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 
 #### Schrijven naar een gegevensset
 
-In deze sectie worden de wijzigingen beschreven die nodig zijn voor het schrijven van een gegevensset met behulp van het voorbeeld [data_saver.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) , dat wordt geleverd door Adobe.
+Deze sectie schetst de veranderingen nodig voor het schrijven van een dataset door het [data_saver.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) voorbeeld te gebruiken, die door Adobe wordt verstrekt.
 
 **Oude manier om een dataset te schrijven**
 
