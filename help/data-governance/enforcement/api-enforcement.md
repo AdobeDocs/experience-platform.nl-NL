@@ -132,7 +132,7 @@ Een geslaagde reactie retourneert de URL voor de marketingactie, de DULE-labels 
 
 ## Evalueren met gebruik van gegevenssets
 
-U kunt een DULE beleid evalueren door een marketing actie tegen één of meerdere datasets te testen waarvan de etiketten DULE kunnen worden verzameld. Dit wordt gedaan door een POST- verzoek te doen aan `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` en dataset IDs binnen het verzoeklichaam, zoals aangetoond in het hieronder voorbeeld te verstrekken.
+U kunt een DULE beleid evalueren door een marketing actie tegen één of meerdere datasets te testen waarvan de etiketten DULE kunnen worden verzameld. Dit wordt gedaan door een verzoek van de POST aan `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` en het verstrekken van dataset IDs binnen het verzoeklichaam, zoals aangetoond in het hieronder voorbeeld te doen.
 
 **API-indeling**
 
