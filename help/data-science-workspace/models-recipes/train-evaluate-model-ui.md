@@ -36,7 +36,7 @@ Voor deze zelfstudie is een bestaande ontvanger vereist. Als u geen Ontvanger he
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 4. Geef een naam op voor het model en bekijk de standaardmodelconfiguraties. De standaardconfiguraties zijn toegepast tijdens het maken van Recipe, herzie en wijzig de configuratiewaarden door op de waarden te dubbelklikken. Als u een nieuwe set configuraties wilt opgeven, klikt u op **[!UICONTROL Nieuwe configuratie]** uploaden en sleept u een JSON-bestand met Modelconfiguraties naar het browservenster. Klik op **[!UICONTROL Voltooien]** om het model te maken.
-   >[!NOTE]Configuraties zijn uniek en specifiek voor de beoogde geadresseerde. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Recipe Product Recommendations. Zie de [verwijzingssectie](#reference) voor een lijst van de configuraties van de Ontvanger van de Verkoop Retail.
+   >[!NOTE]Configuraties zijn uniek en specifiek voor de beoogde recept. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Product Recommendations Recipe. Zie de [verwijzingssectie](#reference) voor een lijst van de configuraties van de Ontvanger van de Verkoop Retail.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
@@ -55,7 +55,7 @@ Voor deze zelfstudie is een bestaande ontvanger vereist. Als u geen Ontvanger he
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 5. De standaardconfiguraties die tijdens de creatie van het Model worden verstrekt worden getoond, veranderen en wijzigen dienovereenkomstig door de waarden tweemaal te klikken. Klik op **[!UICONTROL Voltooien]** om de trainingsrun te maken en uit te voeren.
-   >[!NOTE]Configuraties zijn uniek en specifiek voor de beoogde geadresseerde. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Recipe Product Recommendations. Zie de [verwijzingssectie](#reference) voor een lijst van de configuraties van de Ontvanger van de Verkoop Retail.
+   >[!NOTE]Configuraties zijn uniek en specifiek voor de beoogde recept. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Product Recommendations Recipe. Zie de [verwijzingssectie](#reference) voor een lijst van de configuraties van de Ontvanger van de Verkoop Retail.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
@@ -82,7 +82,7 @@ Voor deze zelfstudie is een bestaande ontvanger vereist. Als u geen Ontvanger he
 
 In deze zelfstudie werd u door het maken, trainen en evalueren van een model in [!DNL Data Science Workspace]uitgelegd. Zodra u bij een geoptimaliseerd Model bent aangekomen, kunt u het getrainde Model gebruiken om inzichten te produceren door de [Score een Model in het UI](./score-model-ui.md) leerprogramma te volgen.
 
-## Referentie {#reference}
+## Referenties {#reference}
 
 ### Retail Sales Recipe-configuraties
 
