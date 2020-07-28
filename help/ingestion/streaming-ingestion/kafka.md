@@ -16,7 +16,7 @@ ht-degree: 0%
 
 De stroomschakelaar voor Adobe Experience Platform is gebaseerd op [!DNL Apache Kafka Connect]. Deze bibliotheek kan worden gebruikt om JSON-gebeurtenissen van [!DNL Kafka] onderwerpen in uw datacenter rechtstreeks naar [!DNL Experience Platform] in real-time te streamen.
 
-De stroomschakelaar is een gootsteen (unidirectionele) schakelaar, leverend gegevens van [!DNL Kafka] onderwerpen aan een geregistreerd eindpunt op [!DNL Experience Platform]. Als u deze connector wilt gebruiken, moet u de bibliotheek downloaden, deze toevoegen aan uw bestaande [!DNL Kafka] implementatie en het [!DNL Kafka] onderwerp of de onderwerpen configureren naar de HTTP-URL voor streaming van Adobe. Aanvullende code is **niet** vereist. De schakelaar steunt de volgende eigenschappen:
+De stroomschakelaar is een gootsteen (unidirectionele) schakelaar, leverend gegevens van [!DNL Kafka] onderwerpen aan een geregistreerd eindpunt op [!DNL Experience Platform]. Om deze schakelaar te gebruiken, moet u de bibliotheek downloaden, het toevoegen aan uw bestaande [!DNL Kafka] plaatsing, en [!DNL Kafka] onderwerp(en) vormen aan de Adobe die HTTP URL stromen. Aanvullende code is **niet** vereist. De schakelaar steunt de volgende eigenschappen:
 
 - Geverifieerde verzameling van gegevens
 - Berichten in batches om netwerkaanroepen te verminderen en de doorvoer te verhogen
