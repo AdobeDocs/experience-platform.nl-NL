@@ -42,7 +42,7 @@ ht-degree: 3%
    - [Filterfuncties](pql/filter-functions.md)
    - [Logische kwantoren](pql/logical-quantifiers.md)
    - [Diverse functies](pql/misc-functions.md)
-- Zelfstudies {#tutorials}
+- Tutorials {#tutorials}
    - [Een segment maken](tutorials/create-a-segment.md)
    - [Een segment evalueren](tutorials/evaluate-a-segment.md)
    - [Een gegevensset maken om gegevens te exporteren](tutorials/create-dataset-export-segment.md)
