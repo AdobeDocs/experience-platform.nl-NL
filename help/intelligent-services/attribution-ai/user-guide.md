@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;user guide;attribution ai;popular topics
 solution: Experience Platform
-title: gebruikershandleiding voor Attributie AI
+title: Gebruikershandleiding voor Attribution AI
 topic: User guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
@@ -12,23 +12,23 @@ ht-degree: 0%
 ---
 
 
-# gebruikershandleiding voor Attributie AI
+# Gebruikershandleiding voor Attribution AI
 
-Attribution AI, als onderdeel van Intelligent Services is een meerkanaals, algoritmische attributiedienst die de invloed en incrementele impact van klanteninteractie tegen gespecificeerde resultaten berekent. Met Attribution AI kunnen marketers marketing- en advertentiekosten meten en optimaliseren door de impact van elke afzonderlijke interactie van de klant in elke fase van de reizen van de klant te begrijpen.
+Attribution AI, als onderdeel van Intelligente Diensten is een multi-channel, algoritmische attributiedienst die de invloed en de stijgende invloed van klanteninteractie tegen gespecificeerde resultaten berekent. Met Attribution AI kunnen marketeers marketing- en advertentieuitgaven meten en optimaliseren door inzicht te krijgen in de impact van elke individuele interactie van de klant in elke fase van de reis van de klant.
 
-Dit document fungeert als richtlijn voor interactie met Attribution AI in de Intelligent Services-gebruikersinterface.
+Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 
 ## Een instantie maken
 
-Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **Services** in de linkernavigatie. De browser *Services* wordt weergegeven met beschikbare intelligente Adobe-services. Klik in de container voor Kenmerken AI op **Openen**.
+Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **Services** in de linkernavigatie. De browser van de *Diensten* verschijnt en toont beschikbare Adobe intelligente diensten. Klik in de container voor Attribution AI op **Openen**.
 
 ![Toegang tot uw exemplaar](./images/user-guide/open_Attribution_ai.png)
 
-De servicepagina Kenmerk AI wordt weergegeven. Deze pagina bevat een overzicht van de service-instanties van Attribution AI en geeft informatie over deze instanties, zoals de naam van de instantie, conversiegebeurtenissen, hoe vaak de instantie wordt uitgevoerd en de status van de laatste update. Klik op **Instantie** maken om te beginnen.
+De de dienstpagina van de Attribution AI verschijnt. Deze pagina bevat een overzicht van de service-instanties van Attribution AI en informatie over deze instanties, zoals de naam van de instantie, conversiegebeurtenissen, hoe vaak de instantie wordt uitgevoerd en de status van de laatste update. Klik op **Instantie** maken om te beginnen.
 
 ![Instantie maken](./images/user-guide/landing_page.png)
 
-Daarna, verschijnt de opstellingspagina voor Attributie AI, waar u basisinformatie kunt verstrekken en een dataset voor de instantie specificeren.
+Daarna, verschijnt de opstellingspagina voor Attribution AI, waar u basisinformatie kunt verstrekken en een dataset voor de instantie specificeren.
 
 ![instellingspagina](./images/user-guide/setup_attribution.png)
 
@@ -40,7 +40,7 @@ Geef onder *Basisinformatie* een naam en een optionele beschrijving op voor uw s
 
 ### Een gegevensset selecteren
 
-Nadat u de basisgegevens hebt ingevuld, klikt u op de vervolgkeuzelijst Gegevensset **selecteren** om de gegevensset te selecteren. De dataset wordt gebruikt om het model te trainen en de verdere gegevens te scoren het produceert. Wanneer het selecteren van een dataset van dropdown selecteur, slechts degenen die met Attributie AI compatibel zijn en met het schema van de Gegevens van de Ervaring in overeenstemming zijn (XDM) zijn vermeld. Nadat u een gegevensset hebt gekozen, klikt u op **Volgende** in de rechterbovenhoek om door te gaan naar de pagina met gedefinieerde gebeurtenissen.
+Nadat u de basisgegevens hebt ingevuld, klikt u op de vervolgkeuzelijst Gegevensset **selecteren** om de gegevensset te selecteren. De dataset wordt gebruikt om het model te trainen en de verdere gegevens te scoren het produceert. Wanneer het selecteren van een dataset van de dropdown selecteur, slechts degenen die met Attribution AI compatibel zijn en met het schema van de Gegevens van de Ervaring in overeenstemming zijn (XDM) zijn vermeld. Nadat u een gegevensset hebt gekozen, klikt u op **Volgende** in de rechterbovenhoek om door te gaan naar de pagina met gedefinieerde gebeurtenissen.
 
 ![instellingspagina](./images/user-guide/initial_creation_attribution.png)
 
@@ -132,7 +132,7 @@ Als u alle benodigde aanraakpunten hebt gedefinieerd, schuift u omhoog en klikt 
 
 ## Geavanceerde instellingen voor training en scores
 
-De laatste pagina in Attribution AI is de *geavanceerde* pagina die wordt gebruikt voor het instellen van training en scoring.
+De laatste pagina in Attribution AI is de pagina *Geavanceerd* die wordt gebruikt voor het instellen van training en scoring.
 
 ![nieuwe pagina, geavanceerd](./images/user-guide/advanced_settings.png)
 
@@ -188,7 +188,7 @@ Als u uw trainingsvenster hebt geselecteerd, klikt u op **Voltooien** in de rech
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een service-instantie gemaakt in Attribution AI. Zodra de instantie het scoren heeft voltooid (maximaal 24 uur toestaan), bent u klaar om de Inzichten van Attribution AI te [ontdekken](./discover-insights.md). Als u de resultaten van uw scores wilt downloaden, gaat u ook naar de documentatie over het [downloaden van onbewerkte scores](./download-scores.md) .
+Door deze zelfstudie te volgen, hebt u met succes een de dienstinstantie in Attribution AI gecreeerd. Zodra de instantie het scoren heeft gebeëindigd (sta tot 24 uren toe), bent u bereid om Attribution AI inzichten [te](./discover-insights.md)ontdekken. Als u de resultaten van uw scores wilt downloaden, gaat u ook naar de documentatie over het [downloaden van onbewerkte scores](./download-scores.md) .
 
 ## Aanvullende bronnen
 
