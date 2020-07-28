@@ -1,8 +1,8 @@
 ---
 title: Gegevens verzenden naar Adobe Analytics
-seo-title: Gegevens verzenden naar Adobe Analytics met Adobe Experience Platform Web SDK
-description: Meer informatie over het verzenden van gegevens naar Adobe Analytics met Experience Platform Web SDK
-seo-description: Meer informatie over het verzenden van gegevens naar Adobe Analytics met Experience Platform Web SDK
+seo-title: Gegevens verzenden naar Adobe Analytics met Web SDK van Adobe Experience Platform
+description: Meer informatie over het verzenden van gegevens naar Adobe Analytics met Web SDK van Experience Platform
+seo-description: Meer informatie over het verzenden van gegevens naar Adobe Analytics met Web SDK van Experience Platform
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Gegevens verzenden naar Adobe Analytics
 
-De Adobe Experience Platform [!DNL Web SDK] kan gegevens verzenden naar Adobe Analytics. Dit werkt door te vertalen `xdm` in een indeling die Adobe Analytics kan gebruiken.
+Het Adobe Experience Platform [!DNL Web SDK] kan gegevens naar Adobe Analytics verzenden. Dit werkt door te vertalen `xdm` in een indeling die de Adobe Analytics kan gebruiken.
 
 ## Instellen
 
