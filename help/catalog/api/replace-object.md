@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Een object vervangen
 
-U kunt de inhoud van een [!DNL Catalog] object overschrijven met een PUT-verzoek, waarbij de volledige bron wordt vervangen door de aanvraaglading.
+U kunt de inhoud van een [!DNL Catalog] voorwerp beschrijven gebruikend een verzoek van de PUT, waar het volledige middel met de verzoeklading wordt vervangen.
 
 >[!NOTE]
 >
->Als u slechts een paar specifieke gebieden binnen een [!DNL Catalog] voorwerp moet bijwerken, kan het gebruiken van een PATCH verzoek efficiënter zijn.
+>Als u slechts een paar specifieke gebieden binnen een [!DNL Catalog] voorwerp moet bijwerken, kan het gebruiken van een verzoek van de PATCH efficiënter zijn.
 
 **API-indeling**
 
@@ -58,7 +58,7 @@ curl -X PUT \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een array met de id van het overschreven object. Deze id moet overeenkomen met de id die in de PUT-aanvraag is verzonden. Wanneer u een GET-aanvraag voor dit object uitvoert, wordt nu aangegeven dat de details zijn vervangen door de gegevens die zijn opgegeven in de lading van de vorige PUT-aanvraag.
+Een geslaagde reactie retourneert een array met de id van het overschreven object. Deze id moet overeenkomen met de id die in de aanvraag voor PUT is verzonden. Wanneer u een GET-verzoek voor dit object uitvoert, wordt nu aangegeven dat de gegevens zijn vervangen door de gegevens die zijn opgegeven in de payload van het vorige verzoek om PUT.
 
 ```json
 [
