@@ -77,7 +77,7 @@ U kunt beleid van het *[!UICONTROL Browse]* lusje in of onbruikbaar maken in de 
 
 ## Marketingacties weergeven {#view-marketing-actions}
 
-Selecteer in de werkruimte **[!UICONTROL Beleid]** het tabblad **[!UICONTROL Handelingen]** voor marketing om een lijst weer te geven met beschikbare marketingacties die door Adobe en uw eigen organisatie zijn gedefinieerd.
+In de **[!UICONTROL werkruimte van Beleid]** , selecteer het lusje van de Acties **[!UICONTROL van de]** Marketing om een lijst van beschikbare marketing acties te bekijken die door Adobe en uw eigen organisatie worden bepaald.
 
 ![](../images/policies/marketing-actions.png)
 
@@ -99,9 +99,9 @@ De nieuwe actie wordt weergegeven op het tabblad *[!UICONTROL Handelingen]* voor
 
 >[!NOTE]
 >
->Alleen aangepaste marketingacties die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Door Adobe gedefinieerde marketingacties kunnen niet worden gewijzigd of verwijderd.
+>Alleen aangepaste marketingacties die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Marketingacties die door Adobe worden gedefinieerd, kunnen niet worden gewijzigd of verwijderd.
 
-Selecteer in de werkruimte **[!UICONTROL Beleid]** het tabblad **[!UICONTROL Handelingen]** voor marketing om een lijst weer te geven met beschikbare marketingacties die door Adobe en uw eigen organisatie zijn gedefinieerd. Selecteer een aangepaste marketingactie in de lijst en gebruik vervolgens de beschikbare velden in de rechtersectie om de details van de marketingactie te bewerken.
+In de **[!UICONTROL werkruimte van Beleid]** , selecteer het lusje van de Acties **[!UICONTROL van de]** Marketing om een lijst van beschikbare marketing acties te bekijken die door Adobe en uw eigen organisatie worden bepaald. Selecteer een aangepaste marketingactie in de lijst en gebruik vervolgens de beschikbare velden in de rechtersectie om de details van de marketingactie te bewerken.
 
 ![](../images/policies/edit-marketing-action.png)
 
