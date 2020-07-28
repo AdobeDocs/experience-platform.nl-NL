@@ -21,7 +21,7 @@ Motoren vormen de basis voor het leren van machines Modellen in de werkruimte va
 >[!TIP]
 >Als u geen Docker URL hebt, bezoek de brondossiers van het [Pakket in een recept](../models-recipes/package-source-files-recipe.md) leerprogramma voor een geleidelijke analyse bij het creëren van een de gastheer URL van het Docker.
 
-Uw Docker-registergegevens zijn vereist voor het uploaden van een pakket Recipe-bestand, inclusief de URL van de Docker-host, gebruikersnaam en wachtwoord. U kunt deze informatie opzoeken door het volgende GET verzoek uit te voeren:
+Uw Docker-registergegevens zijn vereist voor het uploaden van een pakket Recipe-bestand, inclusief de URL van de Docker-host, gebruikersnaam en wachtwoord. U kunt deze informatie opzoeken door de volgende GET-aanvraag uit te voeren:
 
 **API-indeling**
 
@@ -58,7 +58,7 @@ Een succesvolle reactie keert een nuttige lading terug die de details van uw reg
 
 ## Een engine maken met Docker-URL&#39;s {#docker-image}
 
-U kunt een engine maken door een POST-aanvraag uit te voeren en de bijbehorende metagegevens en een docker-URL op te geven die verwijst naar een Docker-afbeelding in meerdelige formulieren.
+U kunt een Motor tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van zijn meta-gegevens en een Dokker URL die verwijzingen een beeld van de Dokker in meerdelige vormen.
 
 **API-indeling**
 
@@ -172,7 +172,7 @@ Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe 
 
 ## Creeer een motor van de eigenschappijpleiding gebruikend de Url van de Doker {#feature-pipeline-docker}
 
-U kunt een motor van de eigenschappijpleiding tot stand brengen door een POST- verzoek uit te voeren terwijl het verstrekken van zijn meta-gegevens en een Dok URL die verwijzingen een beeld van het Dokker.
+U kunt een motor van de eigenschappijpleiding tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van zijn meta-gegevens en een Dok URL die verwijzingen een beeld van het Dokker.
 
 **API-indeling**
 
@@ -254,7 +254,7 @@ Een succesvolle reactie keert een lading terug die de details van de pas gecreë
 
 ## Een lijst met motoren ophalen
 
-U kunt een lijst van Motoren terugwinnen door één enkele GET verzoek uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+U kunt een lijst van Motoren terugwinnen door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
 
 **API-indeling**
 
@@ -329,7 +329,7 @@ Een succesvol antwoord retourneert een lijst met engines en hun details.
 
 ### Een specifieke engine ophalen {#retrieve-specific}
 
-U kunt de details van een specifieke Motor terugwinnen door een GET verzoek uit te voeren dat identiteitskaart van de gewenste Motor in de verzoekweg omvat.
+U kunt de details van een specifieke Motor terugwinnen door een verzoek van de GET uit te voeren dat identiteitskaart van de gewenste Motor in de verzoekweg omvat.
 
 **API-indeling**
 
@@ -383,11 +383,11 @@ Een succesvolle reactie keert een lading terug die de details van de gewenste Mo
 
 ## Een engine bijwerken
 
-U kunt een bestaande Engine wijzigen en bijwerken door de eigenschappen ervan te overschrijven via een PUT-aanvraag die de id van de doelengine in het aanvraagpad bevat en een JSON-payload met bijgewerkte eigenschappen opgeeft.
+U kunt een bestaande Motor wijzigen en bijwerken door zijn eigenschappen door een verzoek van de PUT te beschrijven dat identiteitskaart van de doelmotor in de verzoekweg omvat en een nuttige lading te verstrekken JSON die bijgewerkte eigenschappen bevat.
 
 >[!NOTE]
 >
->Om ervoor te zorgen dat dit PUT-verzoek succesvol is, wordt u aangeraden eerst een GET-aanvraag uit te voeren om de Engine op ID [op te](#retrieve-specific)halen. Vervolgens past u het geretourneerde JSON-object aan en werkt u dit bij en past u het gehele gewijzigde JSON-object toe als de payload voor de PUT-aanvraag.
+>Om ervoor te zorgen dat deze PUT-aanvraag succesvol is, wordt u aangeraden eerst een GET-verzoek uit te voeren om de Engine op id [op te](#retrieve-specific)halen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 De volgende voorbeeld-API-aanroep werkt de naam en beschrijving van een engine bij terwijl deze in eerste instantie deze eigenschappen heeft:
 
