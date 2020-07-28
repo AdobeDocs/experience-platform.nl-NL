@@ -28,7 +28,7 @@ Om vraag aan de [!DNL Dataset Service] eindpunten te maken die in dit document w
 
 ## Alle labels weergeven {#list-labels}
 
-Met behulp van de [!DNL Policy Service] API kunt u alle `core` of `custom` labels weergeven door een GET-aanvraag in te dienen bij `/labels/core` of `/labels/custom`.
+Met de [!DNL Policy Service] API kunt u alle `core` of `custom` labels weergeven door een aanvraag voor een GET in te dienen bij `/labels/core` of `/labels/custom`.
 
 **API-indeling**
 
@@ -110,7 +110,7 @@ Een succesvolle reactie keert een lijst van douanelabels terug die van het syste
 
 ## Een label opzoeken {#look-up-label}
 
-U kunt een specifiek label opzoeken door de `name` eigenschap van dat label op te nemen in het pad van een GET aanvraag naar de [!DNL Policy Service] API.
+U kunt een specifiek label opzoeken door de `name` eigenschap van dat label op te nemen in het pad van een aanvraag van een GET naar de [!DNL Policy Service] API.
 
 **API-indeling**
 
@@ -164,7 +164,7 @@ Als de reactie is gelukt, worden de details van het aangepaste label geretournee
 
 ## Een aangepast label maken of bijwerken {#create-update-label}
 
-Als u een aangepast label wilt maken of bijwerken, moet u een PUT-aanvraag indienen bij de [!DNL Policy Service] API.
+Als u een aangepast label wilt maken of bijwerken, moet u een aanvraag voor een PUT indienen bij de [!DNL Policy Service] API.
 
 **API-indeling**
 
@@ -230,7 +230,7 @@ Een geslaagde reactie retourneert de details van het aangepaste label, met HTTP-
 
 ## De etiketten van de raadpleging voor een dataset {#look-up-dataset-labels}
 
-U kunt de etiketten van het gegevensgebruik opzoeken die op een bestaande dataset zijn toegepast door een GET verzoek aan [!DNL Dataset Service] API te doen.
+U kunt de etiketten van het gegevensgebruik opzoeken die op een bestaande dataset zijn toegepast door een verzoek van de GET aan [!DNL Dataset Service] API te richten.
 
 **API-indeling**
 
@@ -283,7 +283,7 @@ Een succesvolle reactie keert de etiketten van het gegevensgebruik terug die op 
 
 ## Labels toepassen op een gegevensset {#apply-dataset-labels}
 
-U kunt een reeks etiketten voor een dataset tot stand brengen door hen in de nuttige lading van een POST of een verzoek van de ZET aan [!DNL Dataset Service] API te verstrekken. Als u een van deze methoden gebruikt, worden bestaande labels overschreven en vervangen door de labels in de payload.
+U kunt een reeks etiketten voor een dataset tot stand brengen door hen in de nuttige lading van een POST of een verzoek van de PUT aan [!DNL Dataset Service] API te verstrekken. Als u een van deze methoden gebruikt, worden bestaande labels overschreven en vervangen door de labels in de payload.
 
 **API-indeling**
 
@@ -298,7 +298,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Verzoek**
 
-Het volgende POST- verzoek voegt een reeks etiketten aan de dataset, evenals een specifiek gebied binnen die dataset toe. De velden in de payload zijn gelijk aan de velden die vereist zijn voor een PUT-aanvraag.
+Het volgende verzoek van de POST voegt een reeks etiketten aan de dataset, evenals een specifiek gebied binnen die dataset toe. De velden in de payload zijn gelijk aan de velden die vereist zijn voor een PUT-aanvraag.
 
 ```shell
 curl -X POST \
@@ -350,7 +350,7 @@ Een succesvolle reactie keert de etiketten terug die aan de dataset zijn toegevo
 
 ## Labels uit een gegevensset verwijderen {#remove-dataset-labels}
 
-U kunt de labels verwijderen die op een gegevensset zijn toegepast door een DELETE verzoek in te dienen op de [!DNL Dataset Service] API.
+U kunt de labels verwijderen die op een gegevensset zijn toegepast door een DELETE-aanvraag in te dienen bij de [!DNL Dataset Service] API.
 
 **API-indeling**
 
