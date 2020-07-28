@@ -29,7 +29,7 @@ Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/gett
 
 ## Een ad-hocklasse maken
 
-Het gegevensgedrag van een schema XDM wordt bepaald door zijn onderliggende klasse. De eerste stap bij het maken van een ad-hocschema is het maken van een klasse op basis van het `adhoc` gedrag. Dit wordt gedaan door een POST- verzoek aan het `/tenant/classes` eindpunt te doen.
+Het gegevensgedrag van een schema XDM wordt bepaald door zijn onderliggende klasse. De eerste stap bij het maken van een ad-hocschema is het maken van een klasse op basis van het `adhoc` gedrag. Dit wordt gedaan door een verzoek van de POST aan het `/tenant/classes` eindpunt te doen.
 
 **API-indeling**
 
@@ -148,7 +148,7 @@ Een succesvolle reactie keert de details van de nieuwe klasse terug, die de naam
 
 ## Een ad-hocschema maken
 
-Als u een ad-hocklasse hebt gemaakt, kunt u een nieuw schema maken dat die klasse implementeert door een POST-aanvraag voor het `/tenant/schemas` eindpunt in te dienen.
+Zodra u een ad-hocklasse hebt gecreeerd, kunt u een nieuw schema tot stand brengen dat die klasse uitvoert door een POST tot een verzoek aan het `/tenant/schemas` eindpunt te richten.
 
 **API-indeling**
 
@@ -225,7 +225,7 @@ Een geslaagde reactie retourneert de details van het nieuwe schema, inclusief de
 >
 >Deze stap is optioneel. Als u de veldstructuur van uw ad-hocschema niet wilt inspecteren, kunt u de sectie [Volgende stappen](#next-steps) aan het einde van deze zelfstudie overslaan.
 
-Nadat u het ad-hocschema hebt gemaakt, kunt u een opzoekaanvraag (GET) indienen om het schema in het uitgebreide formulier weer te geven. Dit wordt gedaan door de aangewezen Accept- kopbal in het GET verzoek te gebruiken, zoals hieronder aangetoond.
+Nadat u het ad-hocschema hebt gemaakt, kunt u een opzoekverzoek (GET) indienen om het schema in het uitgebreide formulier weer te geven. Dit wordt gedaan door de aangewezen Accept- kopbal in het verzoek van de GET te gebruiken, zoals hieronder aangetoond.
 
 **API-indeling**
 
