@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Een batch maken
 
-Opdat een dataset gegevens inneemt, moet het een partij hebben verbonden aan het. Gebruikend de `id` waarde van een bestaande dataset, kunt u een partij tot stand brengen door een POST- verzoek aan het `/batches` eindpunt in [!DNL Catalog] API te maken.
+Opdat een dataset gegevens inneemt, moet het een partij hebben verbonden aan het. Gebruikend de `id` waarde van een bestaande dataset, kunt u een partij tot stand brengen door een verzoek van de POST aan het `/batches` eindpunt in [!DNL Catalog] API te doen.
 
 **API-indeling**
 
