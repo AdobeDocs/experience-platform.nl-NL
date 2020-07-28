@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Een sandbox bijwerken
 
-U kunt een of meer velden in een sandbox bijwerken door een PATCH-aanvraag in te dienen die de sandbox in het aanvraagpad en de eigenschap bevat die moeten worden bijgewerkt in de aanvraaglading. `name`
+U kunt een of meer velden in een sandbox bijwerken door een PATCH-aanvraag in te dienen die de sandbox `name` in het aanvraagpad en de eigenschap bevat die moeten worden bijgewerkt in de aanvraaglading.
 
 >[!NOTE]
 >
