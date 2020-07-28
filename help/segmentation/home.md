@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Overzicht [!DNL Segmentation Service] van Adobe Experience Platforms
 
-Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal geconfigureerd en onderhouden [!DNL Platform], en zijn gemakkelijk toegankelijk voor elke Adobe-oplossing.
+Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal gevormd en gehandhaafd [!DNL Platform], en gemakkelijk toegankelijk door om het even welke oplossing van Adobe.
 
 Dit document biedt een overzicht van [!DNL Segmentation Service] en de rol die het in Adobe Experience Platform speelt.
 
@@ -48,7 +48,7 @@ Voor informatie over het bouwen van segmentdefinities die API gebruiken, zie de 
 
 ### Streaming segmentering
 
-Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-time Customer Profile]. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat uw doelgroep relevant blijft.
+Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-time Customer Profile]. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
 
 Lees de documentatie over [](./api/streaming-segmentation.md)streamingsegmentatie voor meer informatie over streamingsegmentatie.
 
