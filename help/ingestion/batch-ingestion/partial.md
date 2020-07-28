@@ -133,7 +133,7 @@ Als de partijen mislukkingen bevatten, zult u fouteninformatie over deze mislukk
 
 ### Status controleren {#check-status}
 
-Om de status van de ingesloten batch te controleren, moet u de batch-id opgeven in het pad van een GET aanvraag.
+Als u de status van de ingesloten batch wilt controleren, moet u de id van de batch opgeven in het pad van een GET-aanvraag.
 
 **API-indeling**
 
