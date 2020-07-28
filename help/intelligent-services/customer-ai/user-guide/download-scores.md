@@ -114,7 +114,7 @@ Een geslaagde reactie retourneert een lading die een batch-id-object bevat. In d
 
 ## De volgende API-aanroep ophalen met uw batch-id {#retrieve-the-next-api-call-with-your-batch-id}
 
-Als je eenmaal een batch-id hebt, kun je een nieuwe GET aanvraag indienen bij `/batches`. De aanvraag retourneert een koppeling die wordt gebruikt als de volgende API-aanvraag.
+Als je eenmaal een batch-id hebt, kun je een nieuwe aanvraag indienen bij `/batches`. De aanvraag retourneert een koppeling die wordt gebruikt als de volgende API-aanvraag.
 
 **API-indeling**
 
@@ -168,7 +168,7 @@ Een geslaagde reactie retourneert een lading die een `_links` object bevat. Binn
 
 ## Bestanden ophalen {#retrieving-your-files}
 
-Gebruikend de `href` waarde u in de vorige stap als API vraag kreeg, doe een nieuw GET verzoek om uw dossierfolder terug te winnen.
+Gebruikend de `href` waarde u in de vorige stap als API vraag kreeg, doe een nieuw verzoek van de GET om uw dossierfolder terug te winnen.
 
 **API-indeling**
 
@@ -234,14 +234,14 @@ De reactie bevat een gegevensarray die één item kan hebben, of een lijst met b
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `_links.self.href` | De GET aanvraag-URL waarmee een bestand in uw map wordt gedownload. |
+| `_links.self.href` | De aanvraag-URL van de GET die wordt gebruikt om een bestand in uw map te downloaden. |
 
 
 Kopieer de `href` waarde voor elk bestandsobject in de `data` array en ga vervolgens verder met de volgende stap.
 
 ## Bestandsgegevens downloaden
 
-Als u uw bestandsgegevens wilt downloaden, vraagt u GET de `"href"` waarde aan die u hebt gekopieerd in de vorige stap [bij het ophalen van uw bestanden](#retrieving-your-files).
+Als u de bestandsgegevens wilt downloaden, vraagt u de GET om de `"href"` waarde die u hebt gekopieerd in de vorige stap bij het [ophalen van de bestanden](#retrieving-your-files).
 
 >[!NOTE]
 >
@@ -271,7 +271,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->Zorg ervoor dat u zich in de juiste map of map bevindt waarnaar u het bestand wilt opslaan voordat u de aanvraag GET uitvoert.
+>Zorg ervoor dat u zich in de juiste map of map bevindt waarnaar u het bestand wilt opslaan voordat u de GET-aanvraag indient.
 
 **Antwoord**
 
