@@ -5,13 +5,16 @@ title: Alle sandboxen weergeven
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 0%
 
 ---
 
 
 # Alle sandboxen weergeven
 
-Als u alle sandboxen wilt weergeven die tot uw IMS-organisatie behoren (actief of anderszins), dient u een aanvraag GET in bij het `/sandboxes` eindpunt.
+Als u alle sandboxen wilt weergeven die tot uw IMS-organisatie behoren (actief of anderszins), vraagt u een GET aan bij het `/sandboxes` eindpunt.
 
 **API-indeling**
 
