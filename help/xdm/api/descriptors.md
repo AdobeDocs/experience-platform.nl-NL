@@ -28,7 +28,7 @@ Dit document bevat voorbeelden van API-aanroepen voor beschrijvingen en een voll
 
 ## Lijstbeschrijvingen
 
-Één enkel GET verzoek kan worden gebruikt om een lijst van alle beschrijvers terug te keren die door uw organisatie zijn bepaald.
+Eén aanvraag voor GET kan worden gebruikt om een lijst met alle descriptoren te retourneren die door uw organisatie zijn gedefinieerd.
 
 **API-indeling**
 
@@ -82,7 +82,7 @@ Wanneer u de koptekst `link` Accepteren gebruikt, wordt elke descriptor weergege
 
 ## Een descriptor opzoeken
 
-Als u de details van een specifieke descriptor wilt bekijken, kunt u een afzonderlijke descriptor opzoeken (GET) met behulp van zijn `@id`.
+Als u de details van een specifieke descriptor wilt bekijken, kunt u een afzonderlijke descriptor opzoeken (GET) met behulp van de bijbehorende `@id`descriptor.
 
 **API-indeling**
 
@@ -133,7 +133,7 @@ Een geslaagde reactie retourneert de details van de descriptor, inclusief de det
 
 ## descriptor maken
 
-Met [!DNL Schema Registry] deze optie kunt u verschillende beschrijvingstypen definiëren. Elk beschrijvingstype vereist dat zijn eigen specifieke gebieden in het POST- verzoek worden verzonden. Een volledige lijst van beschrijvingen en de velden die nodig zijn om deze te definiëren, is beschikbaar in de bijlage over het [definiëren van beschrijvingen](#defining-descriptors).
+Met [!DNL Schema Registry] deze optie kunt u verschillende beschrijvingstypen definiëren. Elk beschrijvingstype vereist dat zijn eigen specifieke gebieden in het verzoek van de POST worden verzonden. Een volledige lijst van beschrijvingen en de velden die nodig zijn om deze te definiëren, is beschikbaar in de bijlage over het [definiëren van beschrijvingen](#defining-descriptors).
 
 **API-indeling**
 
@@ -185,7 +185,7 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de
 
 ## Descriptor bijwerken
 
-U kunt een descriptor bijwerken door een PUT-aanvraag in te dienen die verwijst naar de beschrijving `@id` die u wilt bijwerken in het aanvraagpad.
+U kunt een descriptor bijwerken door een PUT-verzoek in te dienen dat verwijst naar de beschrijving `@id` die u wilt bijwerken in het aanvraagpad.
 
 **API-indeling**
 
@@ -199,7 +199,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Verzoek**
 
-Dit verzoek _herschrijft_ in wezen de descriptor, zodat de aanvraaginstantie alle velden moet bevatten die vereist zijn voor het definiëren van een descriptor van dat type. Met andere woorden, de bij te werken aanvraaglading (PUT) is de beschrijver het zelfde als nuttige lading om (POST) een beschrijver van het zelfde type tot stand te brengen.
+Dit verzoek _herschrijft_ in wezen de descriptor, zodat de aanvraaginstantie alle velden moet bevatten die vereist zijn voor het definiëren van een descriptor van dat type. Met andere woorden, de aanvraaglading om (PUT) een beschrijver bij te werken is het zelfde als nuttige lading om (POST) een beschrijver van het zelfde type tot stand te brengen.
 
 In dit voorbeeld wordt de identiteitsbeschrijving bijgewerkt om naar een andere `xdm:sourceProperty` (&quot;mobiele telefoon&quot;) te verwijzen en de naam `xdm:namespace` te wijzigen in &quot;Telefoon&quot;.
 
@@ -234,7 +234,7 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de status `@id` v
 }
 ```
 
-Als u een opzoekverzoek (GET) uitvoert om de descriptor weer te geven, wordt weergegeven dat de velden nu zijn bijgewerkt met de wijzigingen die zijn verzonden in de PUT-aanvraag.
+Als u een opzoekverzoek (GET) uitvoert om de beschrijving weer te geven, wordt weergegeven dat de velden nu zijn bijgewerkt met de wijzigingen die zijn verzonden in het verzoek om PUT.
 
 ## descriptor verwijderen
 
@@ -336,7 +336,7 @@ Met beschrijvingen van uw vriendschappelijke naam kan een gebruiker de `title`, 
 | `xdm:sourceProperty` | Het pad naar de specifieke eigenschap die de identiteit zal zijn. Het pad moet beginnen met een &quot;/&quot; en niet eindigen met een pad. Plaats geen &quot;eigenschappen&quot; in het pad (gebruik bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;) |
 | `xdm:title` | De nieuwe titel die u voor dit veld wilt weergeven, geschreven in Alles Beginhoofdletter. |
 | `xdm:description` | Een optionele beschrijving kan samen met de titel worden toegevoegd. |
-| `meta:enum` | Als het veld dat door wordt aangegeven een tekenreeksveld `xdm:sourceProperty` is, wordt de lijst met voorgestelde waarden voor het veld in de `meta:enum` UI [!DNL Experience Platform] bepaald. Het is belangrijk om op te merken dat `meta:enum` geen opsomming verklaart of om het even welke gegevensbevestiging voor het XDM gebied verstrekt.<br><br>Deze mag alleen worden gebruikt voor de belangrijkste XDM-velden die door Adobe zijn gedefinieerd. Als de broneigenschap een aangepast veld is dat door uw organisatie is gedefinieerd, moet u in plaats daarvan de `meta:enum` eigenschap van het veld rechtstreeks bewerken via een [PATCH-aanvraag](./update-resource.md). |
+| `meta:enum` | Als het veld dat door wordt aangegeven een tekenreeksveld `xdm:sourceProperty` is, wordt de lijst met voorgestelde waarden voor het veld in de `meta:enum` UI [!DNL Experience Platform] bepaald. Het is belangrijk om op te merken dat `meta:enum` geen opsomming verklaart of om het even welke gegevensbevestiging voor het XDM gebied verstrekt.<br><br>Deze mag alleen worden gebruikt voor de belangrijkste XDM-velden die door Adobe worden gedefinieerd. Als de broneigenschap een aangepast veld is dat door uw organisatie is gedefinieerd, moet u in plaats daarvan de `meta:enum` eigenschap van het veld rechtstreeks bewerken via een [PATCH-aanvraag](./update-resource.md). |
 
 #### Relatiebeschrijving
 
