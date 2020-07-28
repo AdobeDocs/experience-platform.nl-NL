@@ -59,7 +59,7 @@ Ook nodig voor runtime-aanvragen:
 >
 >`UUID` is een tekenreeks in UUID-indeling die wereldwijd uniek is en niet opnieuw mag worden gebruikt voor verschillende API-aanroepen
 
-[!DNL Decisioning Service] wordt gecontroleerd door een aantal bedrijfsvoorwerpen die met elkaar verwant zijn. Alle bedrijfsvoorwerpen worden opgeslagen in [!DNL Platform’s] bedrijfsobjecten bewaarplaats, de Bewaarplaats van de Objecten van de Kern XDM. Een belangrijk kenmerk van deze opslagplaats is dat de API&#39;s orthogonaal zijn ten opzichte van het type bedrijfsobject. In plaats van POST, GET, PUT, PATCH of DELETE API te gebruiken die op het type van middel in zijn API eindpunt wijst, zijn er slechts 6 generische eindpunten maar zij aanvaarden of keren een parameter terug die op het type van het voorwerp wijst wanneer die doorverwijs nodig is. Het schema moet bij de repository worden geregistreerd, maar daarna is de repository bruikbaar voor een set open-end objecttypen.
+[!DNL Decisioning Service] wordt gecontroleerd door een aantal bedrijfsvoorwerpen die met elkaar verwant zijn. Alle bedrijfsvoorwerpen worden opgeslagen in [!DNL Platform’s] bedrijfsobjecten bewaarplaats, de Bewaarplaats van de Objecten van de Kern XDM. Een belangrijk kenmerk van deze opslagplaats is dat de API&#39;s orthogonaal zijn ten opzichte van het type bedrijfsobject. In plaats van een POST, GET, PUT, PATCH of DELETE API te gebruiken die op het type van middel in zijn API eindpunt wijst, zijn er slechts 6 generische eindpunten maar zij aanvaarden of keren een parameter terug die op het type van het voorwerp wijst wanneer die doorverwijs nodig is. Het schema moet bij de repository worden geregistreerd, maar daarna is de repository bruikbaar voor een set open-end objecttypen.
 
 De eindpuntwegen voor alle Repository APIs van de Voorraad van Objecten XDM van de Kern beginnen met `https://platform.adobe.io/data/core/ode/`.
 
@@ -181,7 +181,7 @@ Toepassingen kunnen betere prestaties bereiken door een beslissing te vragen voo
 
 Het is mogelijk dat twee verschillende activiteiten dezelfde optie krijgen als hun &quot;beste&quot;. Als u wilt voorkomen dat een samengestelde ervaring wordt herhaald, maakt u standaard [!DNL Decisioning Service] arbitrages tussen de activiteiten waarnaar in hetzelfde verzoek wordt verwezen. Arbitrage houdt in dat voor elk van de activiteiten hun top-N-opties in overweging worden genomen, maar dat geen enkele optie meer dan één keer voor die activiteiten wordt voorgesteld. Als twee activiteiten dezelfde bovenste optie hebben, wordt een van hen gekozen om de op een na beste keuze of de op twee na beste optie te gebruiken enzovoort. Deze regels voor deduplicatie proberen te voorkomen dat voor een van de activiteiten de mogelijkheid van terugvalsteun moet worden gebruikt.
 
-Het verzoek om een beschikking bevat de argumenten die de inhoud van een POST-verzoek betreffen. De hoofdtekst is opgemaakt als JSON- `Content-Type` koptekstwaarde `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
+Het verzoek om een besluit bevat de argumenten die de inhoud van een verzoek om POST bevatten. De hoofdtekst is opgemaakt als JSON- `Content-Type` koptekstwaarde `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
 
 Het aanvraagschema en de versie die op dit moment worden ondersteund, zijn `https://ns.adobe.com/experience/offer-management/decision-request;version=0.9`. In de toekomst worden aanvullende aanvraagschema&#39;s of -versies aangeboden.
 
@@ -238,7 +238,7 @@ De aanvraag per dit schema bevat een array van URI&#39;s die verwijzen naar aanb
 
 ## Dynamische contextgegevens in beslissingsverzoeken
 
-In de vorige sectie wordt aangegeven hoe XDM-objecten kunnen worden doorgegeven aan een beslissingsverzoek. Hieronder ziet u een voorbeeld van een dergelijke array met contextobjecten:
+In de vorige sectie wordt aangegeven hoe XDM-objecten kunnen worden doorgegeven aan een beslissingsverzoek. Hier volgt een voorbeeld van een dergelijke array van contextobjecten:
 
 ```json
 "xdm:contextData": [
