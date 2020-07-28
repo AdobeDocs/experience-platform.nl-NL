@@ -16,7 +16,7 @@ ht-degree: 0%
 
 De primaire bouwsteen van een schema is een klasse. De klasse bevat de minimale set velden die moet worden gedefinieerd om de kerngegevens van een schema vast te leggen. Als u bijvoorbeeld een schema voor auto&#39;s en vrachtwagens zou ontwerpen, zou het meest waarschijnlijk een klasse gebruiken met de naam Vehicle die de algemene basiseigenschappen van alle voertuigen beschrijft.
 
-Adobe en andere [!DNL Experience Platform] partners hebben verschillende standaardklassen beschikbaar, maar u kunt ook uw eigen klassen definiëren en deze opslaan in de [!DNL Schema Registry]. Vervolgens kunt u een schema samenstellen waarmee de gemaakte klasse wordt geïmplementeerd en combinaties definiëren die compatibel zijn met de zojuist gedefinieerde klasse.
+Er zijn verscheidene standaardklassen die door Adobe en andere [!DNL Experience Platform] partners worden verstrekt, maar u kunt uw eigen klassen ook bepalen en hen bewaren aan [!DNL Schema Registry]. Vervolgens kunt u een schema samenstellen waarmee de gemaakte klasse wordt geïmplementeerd en combinaties definiëren die compatibel zijn met de zojuist gedefinieerde klasse.
 
 >[!NOTE]
 >
@@ -152,4 +152,4 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die d
 }
 ```
 
-Het uitvoeren van een GET verzoek om van alle klassen in de huurderscontainer een lijst te maken zou nu de klasse van het Bezit omvatten. U kunt ook een opzoekaanvraag (GET) uitvoeren met de URL-gecodeerde `$id` URI om de nieuwe klasse rechtstreeks weer te geven. Zorg ervoor dat u de code opneemt `version` in de koptekst Accepteren wanneer u een opzoekverzoek uitvoert.
+Het uitvoeren van een verzoek van de GET om van alle klassen in de huurderscontainer een lijst te maken zou nu de klasse van het Bezit omvatten. U kunt ook een opzoekaanvraag (GET) uitvoeren met de URL-gecodeerde `$id` URI om de nieuwe klasse rechtstreeks weer te geven. Zorg ervoor dat u de code opneemt `version` in de koptekst Accepteren wanneer u een opzoekverzoek uitvoert.
