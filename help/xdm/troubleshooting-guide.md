@@ -60,7 +60,7 @@ Velden kunnen als id&#39;s worden gemarkeerd met de API of de gebruikersinterfac
 
 In de API worden identiteiten vastgesteld door identiteitsbeschrijvers te maken. Identiteitsbeschrijvers geven aan dat een bepaalde eigenschap voor een schema een unieke id is.
 
-De beschrijvers van de identiteit worden gecreeerd door een POST- verzoek aan het /descriptors eindpunt. Als dit lukt, ontvangt u een HTTP Status 201 (Gemaakt) en een reactieobject met de details van de nieuwe descriptor.
+De beschrijvers van de identiteit worden gecreeerd door een verzoek van de POST aan het /descriptors eindpunt. Als dit lukt, ontvangt u een HTTP Status 201 (Gemaakt) en een reactieobject met de details van de nieuwe descriptor.
 
 Zie het document over de sectie [descriptors](api/descriptors.md) in de handleiding voor [!DNL Schema Registry] ontwikkelaars voor meer informatie over het maken van identiteitsbeschrijvers in de API.
 
@@ -205,7 +205,7 @@ Zie de sectie over [standaardnaamruimten](../identity-service/namespaces.md) in 
 
 ### Koptekstfouten accepteren
 
-De meeste GET-aanvragen in de [!DNL Schema Registry] API vereisen een Accept-header, zodat het systeem kan bepalen hoe de reactie moet worden opgemaakt. Hieronder volgt een lijst met veelvoorkomende fouten die aan de koptekst Accepteren zijn gekoppeld. Voor lijsten van compatibele Accept kopballen voor verschillende API verzoeken, gelieve te verwijzen naar hun overeenkomstige secties in de de ontwikkelaarsgids [van de Registratie van het](api/getting-started.md)Schema.
+De meeste GET-aanvragen in de [!DNL Schema Registry] API vereisen een header Accepteren, zodat het systeem kan bepalen hoe de reactie moet worden opgemaakt. Hieronder volgt een lijst met veelvoorkomende fouten die aan de koptekst Accepteren zijn gekoppeld. Voor lijsten van compatibele Accept kopballen voor verschillende API verzoeken, gelieve te verwijzen naar hun overeenkomstige secties in de de ontwikkelaarsgids [van de Registratie van het](api/getting-started.md)Schema.
 
 #### Accepteren van headerparameter is vereist
 
@@ -278,4 +278,4 @@ Zie de koptekstsectie [Accepteren](api/getting-started.md#accept) in de handleid
 }
 ```
 
-Als u probeert een versie op te nemen in de koptekst Accepteren bij het aanbieden van bronnen (GET), wordt deze fout weergegeven. Versies zijn alleen vereist wanneer u een opzoekaanvraag probeert uit te voeren voor één resource. Verwijder de versie uit de koptekst Accepteren om de fout op te lossen.
+Als u probeert een versie op te nemen in de koptekst Accepteren bij het weergeven van bronnen (GET), wordt deze fout weergegeven. Versies zijn alleen vereist wanneer u een opzoekaanvraag probeert uit te voeren voor één resource. Verwijder de versie uit de koptekst Accepteren om de fout op te lossen.
