@@ -20,7 +20,7 @@ De volgende secties lopen door vraag u het gebruiken van het `/queries` eindpunt
 
 ### Een lijst met query&#39;s ophalen
 
-U kunt een lijst van alle vragen voor uw IMS Organisatie terugwinnen door een GET verzoek aan het `/queries` eindpunt te doen.
+U kunt een lijst van alle vragen voor uw IMS Organisatie terugwinnen door een verzoek van de GET tot het `/queries` eindpunt te richten.
 
 **API-indeling**
 
@@ -119,7 +119,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst met query&#39;s 
 
 ### Een query maken
 
-U kunt een nieuwe vraag tot stand brengen door een POST- verzoek aan het `/queries` eindpunt te doen.
+U kunt een nieuwe vraag tot stand brengen door een verzoek van de POST aan het `/queries` eindpunt te doen.
 
 **API-indeling**
 
@@ -202,7 +202,7 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 
 ### Een query ophalen op ID
 
-U kunt gedetailleerde informatie over een specifieke vraag terugwinnen door een GET verzoek aan het `/queries` eindpunt te doen en de `id` waarde van de vraag in de verzoekweg te verstrekken.
+U kunt gedetailleerde informatie over een specifieke vraag terugwinnen door een verzoek van de GET tot het `/queries` eindpunt te richten en de `id` waarde van de vraag in de verzoekweg te verstrekken.
 
 **API-indeling**
 
@@ -273,7 +273,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 ### Een query annuleren
 
-U kunt verzoeken om een gespecificeerde vraag te schrappen door een verzoek van de PATCH aan het `/queries` eindpunt te doen en de `id` waarde van de vraag in de verzoekweg te verstrekken.
+U kunt verzoeken om een gespecificeerde vraag te schrappen door een verzoek van PATCH aan het `/queries` eindpunt te doen en de `id` waarde van de vraag in de verzoekweg te verstrekken.
 
 **API-indeling**
 
