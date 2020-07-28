@@ -242,4 +242,4 @@ Raadpleeg de zelfstudie over [gegevenstoegang](tutorials/dataset-data.md)voor me
 
 ## Abonneren op gebeurtenissen voor gegevensinvoer
 
-[!DNL Platform] maakt specifieke hoogwaardige gebeurtenissen beschikbaar voor een abonnement via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie de zelfstudie over het [abonneren op meldingen](../ingestion/quality/subscribe-events.md) over gegevensinvoer voor meer informatie.
+[!DNL Platform] maakt specifieke hoogwaardige gebeurtenissen beschikbaar voor abonnement via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie de zelfstudie over het [abonneren op meldingen](../ingestion/quality/subscribe-events.md) over gegevensinvoer voor meer informatie.
