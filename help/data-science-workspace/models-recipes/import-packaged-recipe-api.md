@@ -43,7 +43,7 @@ Deze zelfstudie vereist dat u de zelfstudie [Verificatie naar Adobe Experience P
 
 ## Een engine maken
 
-De motoren kunnen worden gecreeerd door een POST- verzoek aan het /engines eindpunt te maken. De gemaakte engine wordt geconfigureerd op basis van de vorm van het pakketbestand Recipe dat moet worden opgenomen als onderdeel van de API-aanvraag.
+De motoren kunnen worden gecreeerd door een verzoek van de POST aan het /engines eindpunt te doen. De gemaakte engine wordt geconfigureerd op basis van de vorm van het pakketbestand Recipe dat moet worden opgenomen als onderdeel van de API-aanvraag.
 
 ### Een engine maken met een docker-URL {#create-an-engine-with-a-docker-url}
 
@@ -169,7 +169,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe engine, inclusief de unieke id (`id`) ervan. De volgende voorbeeldreactie is voor een [!DNL Python] Motor. De `executionType` `type` en de sleutels veranderen gebaseerd op de geleverde POST.
+Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe engine, inclusief de unieke id (`id`) ervan. De volgende voorbeeldreactie is voor een [!DNL Python] Motor. De `executionType` toetsen en de `type` toetsen veranderen op basis van de opgegeven POST.
 
 ```json
 {
