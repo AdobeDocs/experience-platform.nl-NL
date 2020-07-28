@@ -44,7 +44,7 @@ Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!
 * **[!DNL Catalog Service]:**Toegang tot en verken gegevenssets met lees- en schrijffuncties.
 * **[!DNL Query Service]:**Toegang tot en verken gegevenssets met SQL, waardoor u lagere gegevenstoegangsoverheadkosten krijgt wanneer u met grote hoeveelheden gegevens werkt.
 * **[!DNL Sensei ML Framework]:**Modelontwikkeling met de mogelijkheid om gegevens op te leiden en te scoren, en het maken van recept met één klik.
-* **[!DNL Experience Data Model (XDM)]:**Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter het Adobe Experience Platform.[Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), aangestuurd door Adobe, is een poging om de gegevens van de klantervaring te standaardiseren en schema&#39;s voor het beheer van de klantervaring te definiëren.
+* **[!DNL Experience Data Model (XDM)]:**Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter het Adobe Experience Platform.[Het Model van Gegevens van de ervaring (XDM)](https://www.adobe.com/go/xdm-home-en), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
 
 >[!NOTE]
 >
@@ -388,7 +388,7 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Lees van een dataset in PySpark/[!DNL Spark]/Scala
 
-Met een actieve PySpark of Opgezette Boek Scala, breid het lusje van de Ontdekkingsreiziger **van** Gegevens van linkerzijbalk uit en klik **Datasets** tweemaal om een lijst van beschikbare datasets te bekijken. Klik met de rechtermuisknop op de gegevensset die u wilt openen en klik op Gegevens **zoeken in laptop**. De volgende codecellen worden gegenereerd:
+Als een actieve PySpark of Opgenomen notitieboekje Scala wordt geopend, breid het lusje van de **Data Explorer** van linkerzijbalk uit en klik **Datasets** tweemaal om een lijst van beschikbare datasets te bekijken. Klik met de rechtermuisknop op de gegevensset die u wilt openen en klik op Gegevens **zoeken in laptop**. De volgende codecellen worden gegenereerd:
 
 #### PySpark ([!DNL Spark] 2.4) {#pyspark2.4}
 
