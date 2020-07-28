@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Een resource opzoeken
 
-U kunt specifieke middelen omhoog zoeken door een GET verzoek te doen dat `$id` (URL-Gecodeerde URI) van het middel in de verzoekweg omvat.
+U kunt specifieke bronnen opzoeken door een verzoek van de GET in te dienen dat de `$id` (URL-gecodeerde URI) van de bron bevat in het aanvraagpad.
 
 **API-indeling**
 
