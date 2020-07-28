@@ -26,7 +26,7 @@ ht-degree: 1%
 * UI-hulplijnen {#ui}
    * [[!DNL Profile] gebruikershandleiding](ui/user-guide.md)
    * [Gebruikershandleiding voor beleid samenvoegen](ui/merge-policies.md)
-* Zelfstudies {#tutorials}
+* Tutorials {#tutorials}
    * [Gegevens toevoegen aan [!DNL Profile]](tutorials/add-profile-data.md)
    * [Gegevensset configureren voor [!DNL Profile] &amp; [!DNL Identity]](tutorials/dataset-configuration.md)
    * [Meer zelfstudies](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html)
