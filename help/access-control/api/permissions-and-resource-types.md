@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # De namen van de lijst van toestemmingen en middeltypes
 
-U kunt van de namen van alle toestemmingen en middeltypes een lijst maken door een GET verzoek aan het `/acl/reference` eindpunt te doen. Deze namen kunnen vervolgens worden gebruikt in API-aanroepen om effectief beleid [voor de huidige gebruiker](./effective-policies.md) weer te geven.
+U kunt van de namen van alle toestemmingen en middeltypes een lijst maken door een verzoek van de GET tot het `/acl/reference` eindpunt te richten. Deze namen kunnen vervolgens worden gebruikt in API-aanroepen om effectief beleid [voor de huidige gebruiker](./effective-policies.md) weer te geven.
 
-Een **toestemming** is een beleid dat door de Admin Console van Adobe wordt beheerd, en kaarten aan nul of meer middel-type beleid. Een **middeltype** is een beleid dat lees toelaat, schrijft, en/of schrapt mogelijkheden voor een specifiek type van [!DNL Platform] middel (zoals datasets of schema&#39;s).
+Een **toestemming** is een beleid dat door Adobe Admin Console wordt beheerd, en kaarten aan nul of meer middel-type beleid. Een **middeltype** is een beleid dat lees toelaat, schrijft, en/of schrapt mogelijkheden voor een specifiek type van [!DNL Platform] middel (zoals datasets of schema&#39;s).
 
 **API-indeling**
 
