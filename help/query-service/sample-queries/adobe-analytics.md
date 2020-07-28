@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Voorbeeldquery&#39;s voor Adobe Analytics-gegevens
 
-Gegevens uit geselecteerde Adobe Analytics-rapportsuites worden omgezet in XDM [!DNL ExperienceEvents] en als datasets voor u opgenomen in Adobe Experience Platform. Dit document beschrijft een aantal gebruiksgevallen waarin Adobe Experience Platform van deze gegevens [!DNL Query Service] gebruik maakt, en de inbegrepen steekproefvragen zouden met uw datasets van Adobe Analytics moeten werken. Zie de documentatie [van de het gebiedstoewijzing van](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics voor meer informatie over afbeelding aan XDM [!DNL ExperienceEvents].
+Gegevens uit geselecteerde Adobe Analytics-rapportsuites worden omgezet in XDM [!DNL ExperienceEvents] en als datasets voor u opgenomen in Adobe Experience Platform. Dit document schetst een aantal gebruiksgevallen waar het Adobe Experience Platform van deze gegevens gebruik [!DNL Query Service] maakt, en de inbegrepen steekproefvragen zouden met uw datasets van Adobe Analytics moeten werken. Zie de documentatie [van de het gebiedstoewijzing van](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics voor meer informatie over afbeelding aan XDM [!DNL ExperienceEvents].
 
 ## Aan de slag
 
-De SQL voorbeelden door dit document vereisen u om SQL uit te geven en de verwachte parameters voor uw vragen in te vullen die op de dataset, eVar, gebeurtenis, of tijdkader worden gebaseerd u in het evalueren geinteresseerd bent. Geef parameters op `{ }` in de volgende SQL-voorbeelden.
+De SQL voorbeelden door dit document vereisen u om SQL uit te geven en de verwachte parameters voor uw vragen in te vullen die op de dataset, de eVar, de gebeurtenis, of het tijdkader worden gebaseerd u in het evalueren geinteresseerd bent. Geef parameters op `{ }` in de volgende SQL-voorbeelden.
 
 ## Algemeen gebruikte SQL-voorbeelden
 
@@ -151,7 +151,7 @@ Waar `[#]` is een arrayindex en `event#` is de specifieke aangepaste gebeurtenis
 
 ### Voorbeeldquery&#39;s
 
-Hier is een steekproefvraag die een handelende eVar en een gebeurtenis terugkeert voor het eerste product dat in `productListItems`wordt gevonden.
+Hier volgt een voorbeeldquery waarin een eVar en gebeurtenis voor het eerste product in de `productListItems`sjabloon worden geretourneerd.
 
 ```sql
 SELECT
@@ -165,7 +165,7 @@ WHERE _ACP_YEAR=2019 AND _ACP_MONTH=7 AND _ACP_DAY=23
 LIMIT 10
 ```
 
-Deze volgende query &#39;explodeert&#39; de `productListItems` en retourneert elke koopwaar en gebeurtenis per product. Het `_id` veld wordt opgenomen om de relatie met de oorspronkelijke hit weer te geven. De `_id` waarde is een unieke primaire sleutel in de [!DNL ExperienceEvent] dataset.
+Deze volgende vraag &quot;explodeert&quot;het `productListItems` en keert elke eVar en gebeurtenis van de koophandel per product terug. Het `_id` veld wordt opgenomen om de relatie met de oorspronkelijke hit weer te geven. De `_id` waarde is een unieke primaire sleutel in de [!DNL ExperienceEvent] dataset.
 
 ```sql
 SELECT
@@ -195,23 +195,23 @@ ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered.
 
 ## Merchandising-variabelen (conversiesyntaxis)
 
-Een ander type van Merchandising Variabele die in Adobe Analytics wordt gevonden is de Syntaxis van de Omzetting. Met de Syntaxis van het Product wordt de waarde verzameld tezelfdertijd zoals het product maar dit vereist dat de gegevens op de zelfde pagina aanwezig zijn. Er zijn scenario&#39;s waarin de gegevens op een pagina vóór de conversie of het geval van belang met betrekking tot het product voorkomen. Neem bijvoorbeeld het gebruik van het rapportvoorbeeld van de productzoekmethode.
+Een ander type van een Merchandising Variabele die in Adobe Analytics wordt gevonden is de Syntaxis van de Omzetting. Met de Syntaxis van het Product wordt de waarde verzameld tezelfdertijd zoals het product maar dit vereist dat de gegevens op de zelfde pagina aanwezig zijn. Er zijn scenario&#39;s waarin de gegevens op een pagina vóór de conversie of het geval van belang met betrekking tot het product voorkomen. Neem bijvoorbeeld het gebruik van het rapportvoorbeeld van de productzoekmethode.
 
-1. Een gebruiker voert en intern onderzoek naar &quot;winterhoed&quot;uit die de Syntaxis van de Omzetting toeliet Verkeer eVar6 aan &quot;intern onderzoek:winterhoed&quot;
+1. Een gebruiker voert en intern onderzoek naar &quot;winterhoed&quot;uit die de Syntaxis van de Omzetting toelaat Merchandising eVar6 aan &quot;intern onderzoek:winterhoed&quot;
 2. De gebruiker klikt op &quot;wafelbeanie&quot; en landt op de pagina met productdetails.\
    a. Het landen hier vuurt een `Product View` evenement voor de &quot;wafelbeenie&quot; voor $12,99.\
-   b. Omdat `Product View` is geconfigureerd als een bindingsgebeurtenis, is het product &quot;waffle beanie&quot; nu gebonden aan de waarde eVar6 van &quot;internal search:winter hat&quot;. Telkens wanneer het product &quot;waffle beanie&quot; wordt verzameld, wordt het gekoppeld aan &quot;internal search:winter hat&quot; totdat (1) de instelling voor verlopen is bereikt of (2) een nieuwe eVar6-waarde is ingesteld en de gebeurtenis binding met dat product opnieuw plaatsvindt.
+   b. Omdat `Product View` wordt gevormd als bindende gebeurtenis is het product &quot;wafelbeanie&quot;nu gebonden aan de eVar6 waarde van &quot;intern onderzoek:winterhoed&quot;. Telkens wanneer het product &quot;waffle beanie&quot; wordt verzameld, wordt het gekoppeld aan &quot;internal search:winter hat&quot; totdat (1) de instelling voor de vervaldatum is bereikt of (2) een nieuwe waarde voor eVar6 is ingesteld en de gebeurtenis binding met dat product opnieuw plaatsvindt.
 3. De gebruiker voegt het product aan zijn winkelwagentje toe en start het `Cart Add` evenement.
-4. De gebruiker voert een andere interne zoekopdracht uit naar &quot;zomershirt&quot; waarmee de omzettingssyntaxis eVar6 instelt op &quot;intern zoeken:zomershirt&quot;
+4. De gebruiker voert een andere interne zoekopdracht uit naar &quot;zomershirt&quot; waarmee de omzettingssyntaxis Merchandising eVar6 instelt op &quot;intern zoeken:zomershirt&quot;
 5. De gebruiker klikt op &quot;sporty t-shirt&quot; en landt op de pagina met productdetails.\
    a. Het landen hier vuurt een `Product View` evenement voor &quot;sporty t-shirt voor $19,99.\
-   b. Het `Product View` evenement is nog steeds ons bindende evenement, dus nu is het product &quot;sporty t-shirt&quot; nu gebonden aan de waarde eVar6 van &quot;internal search:zomer shirt&quot; en het eerdere product &quot;waffle beanie&quot; is nog steeds gebonden aan de waarde eVar6 van &quot;internal search:waffle beanie&quot;.
+   b. Het `Product View` evenement is nog steeds ons bindende evenement, dus nu is het product &quot;sporty t-shirt&quot; nu gebonden aan de eVar van &quot;internal search:zomer shirt&quot; en het eerdere product &quot;waffle beanie&quot; is nog steeds gebonden aan de eVar &quot;internal search:waffle beanie&quot;.
 6. De gebruiker voegt het product aan zijn winkelwagentje toe en start het `Cart Add` evenement.
 7. De gebruiker checkt beide producten uit.
 
-Bij de rapportage worden de orders, inkomsten, productweergaven en carttoevoegingen tegen eVar6 gemeld en afgestemd op de activiteit van het gebonden product.
+Bij de rapportage worden de orders, opbrengsten, productweergaven en winkelwagentjes gerapporteerd tegen eVar6 en afgestemd op de activiteit van het gebonden product.
 
-| eVar6 (methode voor het zoeken van producten) | inkomsten | orders | productweergave | cartografische objecten |
+| eVar6 (productzoekmethode) | inkomsten | orders | productweergave | cartografische objecten |
 |---|---|---|---|---|
 | intern zoeken:zomershirt | 19.99 | 1 | 1 | 1 |
 | interne zoekopdracht:winterhoed | 12.99 | 1 | 1 | 1 |
