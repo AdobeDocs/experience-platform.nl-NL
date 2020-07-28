@@ -66,7 +66,7 @@ Geeft aan of foutopsporing moet worden ingeschakeld. Het plaatsen van dit config
 | -------- | ------------ | ------------------ |
 | String | Nee | `beta.adobedc.net` |
 
-Het domein dat wordt gebruikt voor interactie met Adobe-services. Dit wordt alleen gebruikt als u een domein van de eerste partij (CNAME) hebt dat proxy&#39;s aanvragen bij de Adobe Edge-infrastructuur.
+Het domein dat wordt gebruikt om met de diensten van Adobe in wisselwerking te staan. Dit wordt slechts gebruikt als u een eerste partijdomein (CNAME) hebt dat volmachten verzoeken aan de de randinfrastructuur van de Adobe.
 
 ### `orgId`
 
@@ -160,7 +160,7 @@ De container-id die aangeeft welke ID-syncs worden geactiveerd. Dit is een niet-
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | `true` |
 
-Hiermee schakelt u de functie voor het synchroniseren van id&#39;s in. Hiermee kunnen URL&#39;s worden geactiveerd om de unieke gebruikers-id van Adobe te synchroniseren met de unieke gebruikers-id van een gegevensbron van derden.
+Hiermee schakelt u de functie voor id-synchronisatie in, waarmee URL&#39;s kunnen worden geactiveerd om de unieke gebruikers-id van de Adobe te synchroniseren met de unieke gebruikers-id van een gegevensbron van derden.
 
 ### `thirdPartyCookiesEnabled`
 
@@ -168,4 +168,4 @@ Hiermee schakelt u de functie voor het synchroniseren van id&#39;s in. Hiermee k
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | true |
 
-Hiermee schakelt u het instellen van cookies van derden van Adobe in. De SDK kan de bezoekersidentiteitskaart in een derdecontext handhaven om de zelfde bezoekersidentiteitskaart toe te laten om over plaatsen te worden gebruikt. Dit is nuttig als u veelvoudige plaatsen hebt of u gegevens met partners wilt delen; soms is dit echter om privacyredenen niet gewenst .
+Hiermee schakelt u het instellen van cookies van derden voor Adobe in. De SDK kan de bezoekersidentiteitskaart in een derdecontext handhaven om de zelfde bezoekersidentiteitskaart toe te laten om over plaatsen te worden gebruikt. Dit is nuttig als u veelvoudige plaatsen hebt of u gegevens met partners wilt delen; soms is dit echter om privacyredenen niet gewenst .
