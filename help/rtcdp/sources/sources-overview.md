@@ -14,6 +14,6 @@ ht-degree: 0%
 
 # Overzicht van bronnen
 
-[!DNL Real-Time Customer Data Platform] staat gegevens toe om van externe bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe Solutions, cloudopslag, software van derden en uw CRM.
+[!DNL Real-Time Customer Data Platform] staat gegevens toe om van externe bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten. U kunt gegevens van een verscheidenheid van bronnen zoals de Oplossingen van Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw CRM opnemen.
 
 Voor een meer gedetailleerd overzicht van bronnen, met inbegrip van een lijst van beschikbare bronnen en verbindingen aan leerprogramma&#39;s, gelieve de documentatie [van](../../sources/home.md)Bronnen te lezen.
