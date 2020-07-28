@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # [!DNL Access control] ontwikkelaarsgids
 
-[!DNL Access control] for [!DNL Experience Platform] wordt beheerd via de [Adobe Admin Console](https://adminconsole.adobe.com). Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden. Zie het [toegangsbeheeroverzicht](../home.md) voor meer informatie.
+[!DNL Access control] for [!DNL Experience Platform] wordt toegediend via de [Adobe Admin Console](https://adminconsole.adobe.com). Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden. Zie het [toegangsbeheeroverzicht](../home.md) voor meer informatie.
 
 Deze ontwikkelaarsgids verstrekt informatie over hoe te om uw verzoeken aan te maken, [!DNL Access Control API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)en behandelt de volgende verrichtingen:
 
