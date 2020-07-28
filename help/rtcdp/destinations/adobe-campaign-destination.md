@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren. Zie [Informatie over Adobe Campaign Classic](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) voor meer informatie.
 
-Als u segmentgegevens naar Adobe Campaign wilt verzenden, moet u eerst de bestemming [](#connect-destination) verbinden in het Adobe Real-time Customer Data Platform en vervolgens [een gegevensimport](#import-data-into-campaign) instellen vanaf uw opslaglocatie naar Adobe Campaign.
+Als u segmentgegevens naar Adobe Campaign wilt verzenden, moet u eerst de bestemming [](#connect-destination) verbinden in het Platform voor realtime klantgegevens van Adobe en vervolgens een gegevensimport [](#import-data-into-campaign) instellen vanaf uw opslaglocatie naar Adobe Campaign.
 
 ## Connect-doel {#connect-destination}
 
@@ -30,7 +30,7 @@ Als u segmentgegevens naar Adobe Campaign wilt verzenden, moet u eerst de bestem
 
    ![Wizard Campagne instellen](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
-   Voor **[!UICONTROL Amazon S3]** -verbindingen moet u de toegangstoets-id en de sleutel voor geheime toegang opgeven.
+   Voor **[!UICONTROL Amazon S3]** -verbindingen moet u uw toegangstoets-id en de sleutel voor geheime toegang opgeven.
 Voor **[!UICONTROL SFTP met de verbindingen van het Wachtwoord]** , moet u Domein, Haven, Gebruikersnaam, en Wachtwoord verstrekken.
 Voor **[!UICONTROL SFTP met SSH Zeer belangrijke]** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Sleutel van SSH verstrekken.
 
