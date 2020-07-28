@@ -22,7 +22,7 @@ De volgende secties geven een inleiding tot de centrale componenten van [!DNL Ex
 
 ## Toegangsbeheer
 
-Toegangsbeheer wordt beheerd via de [Adobe-Admin Console](http://adminconsole.adobe.com). Deze functionaliteit maakt gebruik van productprofielen in [!DNL Admin Console], zodat u gebruikers kunt koppelen aan machtigingen en sandboxen. Met deze functie kunnen beheerders toegang verlenen of beperken tot specifieke CDP-mogelijkheden in realtime voor gedefinieerde sets gebruikers.
+Toegangsbeheer wordt beheerd via de [Adobe Admin Console](http://adminconsole.adobe.com). Deze functionaliteit maakt gebruik van productprofielen in [!DNL Admin Console], zodat u gebruikers kunt koppelen aan machtigingen en sandboxen. Met deze functie kunnen beheerders toegang verlenen of beperken tot specifieke CDP-mogelijkheden in realtime voor gedefinieerde sets gebruikers.
 
 Meer over toegangsbeheer leren, zie het [toegangsbeheeroverzicht](../../access-control/home.md) in de [!DNL Experience Platform] documentatie.
 
