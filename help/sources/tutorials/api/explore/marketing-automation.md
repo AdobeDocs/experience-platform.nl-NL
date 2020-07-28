@@ -47,13 +47,13 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot [!DNL F
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
 ## Uw gegevenstabellen verkennen
 
-Gebruikend de basisverbinding voor uw systeem van de marketing automatisering, kunt u uw gegevenslijsten onderzoeken door GET verzoeken uit te voeren. Gebruik de volgende vraag om de weg van de lijst te vinden u wenst om te inspecteren of in te nemen [!DNL Platform].
+Gebruikend de basisverbinding voor uw systeem van de marketing automatisering, kunt u uw gegevenslijsten onderzoeken door verzoeken van de GET uit te voeren. Gebruik de volgende vraag om de weg van de lijst te vinden u wenst om te inspecteren of in te nemen [!DNL Platform].
 
 **API-indeling**
 
@@ -113,9 +113,9 @@ Een succesvolle reactie is een serie van lijsten van aan uw systeem van de marke
 ]
 ```
 
-## De structuur van een tabel controleren
+## De structuur van een tabel Inspect
 
-Om de structuur van een lijst van uw marketing automatiseringssysteem te inspecteren, voer een GET verzoek uit terwijl het specificeren van de weg van een lijst als vraagparameter.
+Om de structuur van een lijst van uw marketing automatiseringssysteem te inspecteren, voer een verzoek van de GET uit terwijl het specificeren van de weg van een lijst als vraagparameter.
 
 **API-indeling**
 
