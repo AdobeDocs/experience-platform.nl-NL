@@ -177,7 +177,7 @@ Gebruikend [!DNL Real-time Customer Profile] API, staat het `/config/mergePolici
 
 ### Heb toegang tot één enkel fusiebeleid door identiteitskaart
 
-U kunt tot één enkel samenvoegbeleid door zijn identiteitskaart toegang hebben door een GET verzoek aan het `/config/mergePolicies` eindpunt en met inbegrip van `mergePolicyId` in de verzoekweg te doen.
+U kunt tot één enkel fusiebeleid door zijn identiteitskaart toegang hebben door een verzoek van de GET tot het `/config/mergePolicies` eindpunt en met inbegrip van `mergePolicyId` in de verzoekweg te richten.
 
 **API-indeling**
 
@@ -227,7 +227,7 @@ Zie de [componenten van de sectie van het samenvoegingsbeleid](#components-of-me
 
 ### Hiermee worden meerdere samenvoegbeleidsregels via de id&#39;s opgehaald
 
-U kunt veelvoudige fusiebeleid terugwinnen door een POST- verzoek aan het `/config/mergePolicies/bulk-get` eindpunt en met inbegrip van identiteitskaarts van het fusiebeleid te doen u in het verzoeklichaam wenst terug te winnen.
+U kunt veelvoudige fusiebeleid terugwinnen door een verzoek van de POST aan het `/config/mergePolicies/bulk-get` eindpunt en met inbegrip van identiteitskaarts van het fusiebeleid te doen u in het verzoeklichaam wenst terug te winnen.
 
 **API-indeling**
 
@@ -261,7 +261,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert de Status 207 van HTTP (multi-Status) en de details van het fusiebeleid terug waarvan IDs in het POST- verzoek werd verstrekt.
+Een succesvolle reactie keert de Status 207 van HTTP (multi-Status) en de details van het fusiebeleid terug waarvan IDs in het verzoek van de POST werd verstrekt.
 
 ```json
 { 
@@ -324,7 +324,7 @@ Zie de [componenten van de sectie van het samenvoegingsbeleid](#components-of-me
 
 ### Meerdere vormen van samenvoegingsbeleid weergeven op basis van criteria
 
-U kunt van veelvoudige fusiebeleid binnen uw IMS Organisatie een lijst maken door een GET verzoek aan het `/config/mergePolicies` eindpunt uit te geven en facultatieve vraagparameters te gebruiken om, de reactie te filtreren te orde te geven en te pagineren. U kunt meerdere parameters opnemen, gescheiden door ampersands (&amp;). Het maken van een vraag aan dit eindpunt zonder parameters zal al samenvoegbeleid beschikbaar voor uw organisatie terugwinnen.
+U kunt van veelvoudige fusiebeleid binnen uw IMS Organisatie een lijst maken door een verzoek van de GET aan het `/config/mergePolicies` eindpunt uit te geven en facultatieve vraagparameters te gebruiken om, de reactie te filtreren te orde te geven en te pagineren. U kunt meerdere parameters opnemen, gescheiden door ampersands (&amp;). Het maken van een vraag aan dit eindpunt zonder parameters zal al samenvoegbeleid beschikbaar voor uw organisatie terugwinnen.
 
 **API-indeling**
 
@@ -435,7 +435,7 @@ Een succesvolle reactie keert een gepagineerde lijst van fusiebeleid terug dat a
 
 ## Samenvoegbeleid maken
 
-U kunt een nieuw fusiebeleid voor uw organisatie tot stand brengen door een POST- verzoek aan het `/config/mergePolicies` eindpunt te doen.
+U kunt een nieuw fusiebeleid voor uw organisatie tot stand brengen door een verzoek van de POST aan het `/config/mergePolicies` eindpunt te doen.
 
 **API-indeling**
 
@@ -524,7 +524,7 @@ U kunt een bestaand samenvoegingsbeleid wijzigen door individuele attributen (PA
 
 ### Afzonderlijke velden voor samenvoegbeleid bewerken
 
-U kunt individuele gebieden voor een samenvoegbeleid uitgeven door een verzoek van de PATCH aan het `/config/mergePolicies/{mergePolicyId}` eindpunt te doen:
+U kunt individuele gebieden voor een samenvoegbeleid uitgeven door een verzoek van PATCH aan het `/config/mergePolicies/{mergePolicyId}` eindpunt te doen:
 
 **API-indeling**
 
@@ -557,7 +557,7 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `op` | Geeft de bewerking aan die moet worden uitgevoerd. Voorbeelden van andere PATCH-bewerkingen vindt u in de documentatie bij [JSON Patch](http://jsonpatch.com) |
+| `op` | Geeft de bewerking aan die moet worden uitgevoerd. Voorbeelden van andere PATCH-bewerkingen vindt u in de documentatie bij [JSON-patch](http://jsonpatch.com) |
 | `path` | Het pad van het veld dat moet worden bijgewerkt. Accepteerde waarden zijn: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot; |
 | `value` | De waarde waarop het opgegeven veld moet worden ingesteld. |
 
@@ -600,7 +600,7 @@ Een succesvolle reactie keert de details van het onlangs bijgewerkte fusiebeleid
 
 ### Een samenvoegbeleid overschrijven
 
-Een andere manier om een samenvoegbeleid te wijzigen is een PPUT- verzoek te gebruiken, dat het volledige fusiebeleid beschrijft.
+Een andere manier om een fusiebeleid te wijzigen is een verzoek van de PUT te gebruiken, dat het volledige fusiebeleid beschrijft.
 
 **API-indeling**
 
@@ -720,7 +720,7 @@ curl -X DELETE \
 
 **Antwoord**
 
-Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege antwoordinstantie. Om de schrapping te bevestigen succesvol was, kunt u een GET verzoek uitvoeren om het fusiebeleid door zijn identiteitskaart te bekijken. Als het samenvoegbeleid is verwijderd, ontvangt u een HTTP Status 404 (Not Found)-fout.
+Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege antwoordinstantie. Om de schrapping te bevestigen succesvol was, kunt u een verzoek van de GET uitvoeren om het fusiebeleid door zijn identiteitskaart te bekijken. Als het samenvoegbeleid is verwijderd, ontvangt u een HTTP Status 404 (Not Found)-fout.
 
 ## Volgende stappen
 
