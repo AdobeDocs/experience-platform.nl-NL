@@ -54,7 +54,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Aanbevolen procedures voor [!DNL Catalog] API-aanroepen
 
-Als u GET-aanvragen voor de [!DNL Catalog] API uitvoert, kunt u het beste queryparameters opnemen in uw aanvragen om alleen de objecten en eigenschappen te retourneren die u nodig hebt. Door ongefilterde verzoeken kunnen antwoordladingen groter zijn dan 3 GB, wat de algehele prestaties kan vertragen.
+Wanneer u GET-aanvragen naar de [!DNL Catalog] API uitvoert, kunt u het beste queryparameters opnemen in uw aanvragen om alleen de objecten en eigenschappen te retourneren die u nodig hebt. Door ongefilterde verzoeken kunnen antwoordladingen groter zijn dan 3 GB, wat de algehele prestaties kan vertragen.
 
 U kunt specifieke objecten weergeven door hun id op te nemen in het aanvraagpad of met queryparameters, zoals `properties` en `limit` voor het filteren van reacties. Filters kunnen als kopballen en als vraagparameters worden overgegaan, met die overgegaan als vraagparameters die belangrijkheid nemen. Zie het document over het [filtreren van de gegevens](filter-data.md) van de Catalogus voor meer informatie.
 
