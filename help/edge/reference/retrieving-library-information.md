@@ -1,8 +1,8 @@
 ---
 title: Bibliotheekgegevens ophalen
-seo-title: Bibliotheekgegevens ophalen met Adobe Experience Platform Web SDK
+seo-title: Het terugwinnen van bibliotheekinformatie met het Web SDK van het Adobe Experience Platform
 description: Leer hoe u informatie ophaalt over de bibliotheek die op de website is geladen
-seo-description: Leer hoe u automatisch informatie ophaalt over de bibliotheek die door de Adobe Experience Cloud SDK op de website is geladen
+seo-description: Leer hoe u automatisch informatie ophaalt over de bibliotheek die door De SDK van Adobe Experience Cloud automatisch op de website is geladen
 translation-type: tm+mt
 source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
