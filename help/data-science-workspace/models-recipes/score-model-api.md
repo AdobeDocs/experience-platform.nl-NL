@@ -108,7 +108,7 @@ Hier volgt de reactie na het maken van het geplande experiment.
 
 ### Een experimentele score maken
 
-Met het getrainde model kunnen we nu een Experimentele run voor scoring maken. De waarde van de `modelId` parameter is de `id` parameter die in het GET Model hierboven verzoek is teruggekeerd.
+Met het getrainde model kunnen we nu een Experimentele run voor scoring maken. De waarde van de `modelId` parameter is de `id` parameter die in de bovenstaande aanvraag voor het model van GET is geretourneerd.
 
 **Verzoek**
 
@@ -172,7 +172,7 @@ De reactie van het project Experiment Run wordt hieronder weergegeven:
 `{EXPERIMENT_RUN_ID}`: De id die overeenkomt met de proefversie die u zojuist hebt gemaakt.
 
 
-### De status Experiment uitvoeren ophalen voor de geplande uitvoering van het experiment
+### De status Experiment uitvoeren ophalen voor de geplande uitvoering van een experiment
 
 Om de Runs van de Experiment voor geplande Experimenten te krijgen, wordt de vraag hieronder getoond:
 
@@ -217,7 +217,7 @@ Aangezien er meerdere experimentele runtime&#39;s zijn voor een specifiek experi
 
 ### Een geplande expert stoppen en verwijderen
 
-Als u de uitvoering van een gepland experiment wilt stoppen voordat het wordt uitgevoerd `endTime`, kunt u dit doen door een DELETE verzoek naar de `{EXPERIMENT_ID}`
+Als u de uitvoering van een gepland experiment vóór de uitvoering wilt stoppen `endTime`, kunt u dit doen door een DELETE-verzoek naar de `{EXPERIMENT_ID}`
 
 **Verzoek**
 
