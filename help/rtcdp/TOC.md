@@ -30,7 +30,7 @@ ht-degree: 2%
       * [Pagina met doeldetails](destinations/destination-details-page.md)
    * Doelcatalogus {#destinations-cat}
       * [Overzicht van de doelcatalogus](destinations/destinations-catalog.md)
-      * Adobe-doelen{#adobe-destinations}
+      * Adobe-bestemmingen{#adobe-destinations}
          * [Overzicht van Adobe-doelen](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
       * Reclamebestemmingen{#advertising-destinations}
@@ -92,7 +92,7 @@ ht-degree: 2%
          * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
          * [Oracle Responsys](destinations/oracle-responsys-destination.md)
          * [PebblePost-extensie](destinations/pebblepost-extension.md)
-         * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
+         * [Salesforce-Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch-extensies{#launch-extensions}
          * [Overzicht van extensies voor Experience Platforms Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
       * Aanpassingsdoelen {#personalization-destinations}
@@ -108,7 +108,7 @@ ht-degree: 2%
       * Sociale netwerkbestemmingen{#social-destinations}
          * [Overzicht van sociale netwerkbestemmingen](/help/rtcdp/destinations/social-network-destinations.md)
          * [Verificatiestroom naar sociale netwerkdoelen](/help/rtcdp/destinations/social-network-destinations-workflow.md)
-         * [Adobe LiveCycle-extensie](/help/rtcdp/destinations/adobe-livefyre-extension.md)
+         * [Adobe Livefyre-extensie](/help/rtcdp/destinations/adobe-livefyre-extension.md)
          * [Facebook-bestemming](/help/rtcdp/destinations/facebook-destination.md)
       * Onderzoeksbestemmingen {#survey-destinations}
          * [Overzicht van de enquêtedoelen](/help/rtcdp/destinations/survey-destinations.md)
