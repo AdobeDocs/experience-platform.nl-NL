@@ -84,18 +84,18 @@ De volgende standaardnaamruimten kunnen door alle organisaties in Experience Pla
 | E-mail (SHA256, verlaagd) | 11 | E-mails | Standaardnaamruimte voor vooraf gehashte e-mail. Waarden die in deze naamruimte worden opgegeven, worden omgezet in kleine letters voordat er een hash plaatsvindt met SHA-256. |
 | Telefoon | 7 | Telefoon |  |
 | Windows-ID | 8 | WAID |  |
-| AdCloud | 411 | AdCloud | alias: Advertentie Cloud |
+| AdCloud | 411 | AdCloud | alias: Ad Cloud |
 | Adobe Target | 9 | TNTID | Target-id |
 | Google-advertentie-id | 20914 | GAID | GAID |
 | Apple IDFA | 20915 | IDFA | ID voor adverteerders |
 
 ## Waar kan ik de lijst van identiteitsnamespaces beschikbaar voor mijn organisatie vinden?
 
-Gebruikend de Dienst API [van de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Identiteit, kunt u van alle beschikbare identiteitsnamespaces voor uw organisatie een lijst maken door een GET verzoek aan het `/idnamespace/identities` eindpunt te doen. Zie de sectie over het [vermelden van beschikbare naamruimten](./api/list-namespaces.md) in het overzicht van de Identiteitsservice-API voor meer informatie.
+Gebruikend de Dienst API [van de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Identiteit, kunt u van alle beschikbare identiteitsnamespaces voor uw organisatie een lijst maken door een verzoek van de GET tot het `/idnamespace/identities` eindpunt te richten. Zie de sectie over het [vermelden van beschikbare naamruimten](./api/list-namespaces.md) in het overzicht van de Identiteitsservice-API voor meer informatie.
 
 ## Hoe maak ik een aangepaste naamruimte voor mijn organisatie?
 
-Gebruikend de Dienst API [van de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Identiteit, kunt u een douaneidentiteit tot stand brengen namespace voor uw organisatie door een POST- verzoek aan het `/idnamespace/identities` eindpunt te doen. Zie de sectie over het [maken van een aangepaste naamruimte](./api/create-custom-namespace.md) in het API-overzicht Identiteitsservice voor meer informatie.
+Gebruikend de Dienst API [van de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Identiteit, kunt u een douaneidentiteit tot stand brengen namespace voor uw organisatie door een verzoek van de POST aan het `/idnamespace/identities` eindpunt te doen. Zie de sectie over het [maken van een aangepaste naamruimte](./api/create-custom-namespace.md) in het API-overzicht Identiteitsservice voor meer informatie.
 
 ## Wat zijn samengestelde identiteiten en XIDs?
 
