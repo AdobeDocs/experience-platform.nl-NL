@@ -1,22 +1,22 @@
 ---
 title: Automatisch verzamelde informatie
-seo-title: Gegevens die automatisch worden verzameld door de Adobe Experience Platform Web SDK
+seo-title: De informatie die automatisch door het Web SDK van het Adobe Experience Platform wordt verzameld
 description: Beschrijving van alle informatie die de Adobe Experience Cloud SDK automatisch verzamelt
 seo-description: Beschrijving van alle informatie die de Adobe Experience Cloud SDK automatisch verzamelt
 translation-type: tm+mt
 source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
 source-wordcount: '382'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
 
 # Automatisch verzamelde informatie
 
-De Adobe Experience Cloud SDK verzamelt automatisch een aantal gegevens zonder een speciale configuratie. Deze informatie kan echter desgewenst worden uitgeschakeld met de `context` optie in de `configure` opdracht. [Zie De SDK](../fundamentals/configuring-the-sdk.md)configureren. Hieronder volgt een lijst van deze gegevens. De naam tussen haakjes geeft de tekenreeks aan die moet worden gebruikt bij het configureren van de context.
+De Adobe Experience Cloud SDK verzamelt automatisch een aantal gegevens zonder speciale configuratie. Deze informatie kan echter desgewenst worden uitgeschakeld met de `context` optie in de `configure` opdracht. [Zie De SDK](../fundamentals/configuring-the-sdk.md)configureren. Hieronder volgt een lijst van deze gegevens. De naam tussen haakjes geeft de tekenreeks aan die moet worden gebruikt bij het configureren van de context.
 
-## Apparaat (`device`)
+## Device (`device`)
 
 Informatie over het apparaat. Dit omvat geen gegevens die op server-kant van het koord van de gebruikersagent kunnen worden gezocht.
 
@@ -56,7 +56,7 @@ Browser
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-Het type omgeving dat de ervaring heeft doorgemaakt. De Adobe Experience Platform SDK voor JavaScript wordt altijd ingesteld `browser`.
+Het type omgeving dat de ervaring heeft doorgemaakt. De Adobe Experience Platform-SDK voor JavaScript wordt altijd ingesteld `browser`.
 
 ### Viewporthoogte
 
