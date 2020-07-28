@@ -38,7 +38,7 @@ De schema&#39;s lossen dit probleem op door gegevens toe te laten om uit veelvou
 
 ### Workflows op basis van schema&#39;s in [!DNL Experience Platform]
 
-Standaardisering is een essentieel concept achter [!DNL Experience Platform]. XDM, aangedreven door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en standaardschema&#39;s voor het beheer van de klantenervaring te bepalen.
+Standaardisering is een essentieel concept achter [!DNL Experience Platform]. XDM, die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en standaardschema&#39;s voor het beheer van de klantenervaring te bepalen.
 
 De infrastructuur waarop [!DNL Experience Platform] wordt gebouwd, die als [!DNL XDM System], op schema-gebaseerde werkschema&#39;s wordt bekend en omvat de [!DNL Schema Registry], [!DNL Schema Editor], schemameta-gegevens, en de patronen van het de dienstconsumptie. Zie het [XDM-systeemoverzicht](../home.md) voor meer informatie.
 
@@ -101,13 +101,13 @@ Het samenstellen van een schema begint door een klasse toe te wijzen. De klassen
 
 Een klasse bepaalt ook welke mengen voor gebruik in het schema in aanmerking komen. Dit wordt meer in detail besproken in de [mixinsectie](#mixin) die volgt.
 
-Er zijn standaardklassen voorzien van elke integratie van [!DNL Experience Platform], die als &quot;Industrie&quot;klassen wordt bekend. Industrieklassen zijn algemeen aanvaarde industriestandaarden die van toepassing zijn op een breed scala van gebruiksgevallen. Voorbeelden van brancheklassen zijn de [!DNL XDM Individual Profile] en de [!DNL XDM ExperienceEvent] klassen die door Adobe worden geleverd.
+Er zijn standaardklassen voorzien van elke integratie van [!DNL Experience Platform], die als &quot;Industrie&quot;klassen wordt bekend. Industrieklassen zijn algemeen aanvaarde industriestandaarden die van toepassing zijn op een breed scala van gebruiksgevallen. De voorbeelden van de klassen van de Industrie omvatten de [!DNL XDM Individual Profile] en [!DNL XDM ExperienceEvent] klassen door Adobe worden verstrekt die.
 
 [!DNL Experience Platform] staat ook voor klassen &quot;van de Leverancier&quot;toe, die klassen door [!DNL Experience Platform] partners worden bepaald en ter beschikking gesteld aan alle klanten die die verkopersdienst of toepassing binnen gebruiken [!DNL Platform].
 
 Er zijn ook klassen die worden gebruikt om specifiekere gebruiksgevallen voor individuele organisaties binnen te beschrijven [!DNL Platform], de &quot;Klant&quot;klassen. Klantklassen worden gedefinieerd door een organisatie wanneer er geen branche- of leveranciersklassen beschikbaar zijn om een uniek geval van gebruik te beschrijven.
 
-Een schema dat bijvoorbeeld leden van een Loyalty-programma vertegenwoordigt, beschrijft recordgegevens over een individu en kan daarom worden gebaseerd op de [!DNL XDM Individual Profile] klasse, een standaardindustrieklasse die door Adobe is gedefinieerd.
+Een schema dat bijvoorbeeld leden van een Loyalty-programma vertegenwoordigt, beschrijft recordgegevens over een individu en kan daarom op de [!DNL XDM Individual Profile] klasse worden gebaseerd, een standaardklasse van de Industrie die door Adobe wordt bepaald.
 
 ### Mixin {#mixin}
 
@@ -200,7 +200,7 @@ Alle gegevensbestanden die in worden opgenomen [!DNL Experience Platform] moeten
 
 Nu u de grondbeginselen van schemacompositie begrijpt, bent u bereid beginnen bouwend schema&#39;s gebruikend [!DNL Schema Registry].
 
-Het [!DNL Schema Registry] wordt gebruikt om tot het [!DNL Schema Library] binnen Adobe Experience Platform toegang te hebben, en verstrekt een gebruikersinterface en RESTful API waarvan alle beschikbare bibliotheekmiddelen toegankelijk zijn. Het [!DNL Schema Library] bevat de middelen van de Industrie die door Adobe, de middelen van de Leverancier door [!DNL Experience Platform] partners worden bepaald, en klassen, mengen, gegevenstypes, en schema&#39;s worden bepaald die door leden van uw organisatie zijn samengesteld die.
+Het [!DNL Schema Registry] wordt gebruikt om tot het [!DNL Schema Library] binnen Adobe Experience Platform toegang te hebben, en verstrekt een gebruikersinterface en RESTful API waarvan alle beschikbare bibliotheekmiddelen toegankelijk zijn. Het [!DNL Schema Library] bevat de middelen van de Industrie die door Adobe worden bepaald, de middelen van de Leverancier door [!DNL Experience Platform] partners, en klassen, mengen, gegevenstypes, en schema&#39;s worden bepaald die door leden van uw organisatie zijn samengesteld die.
 
 Als u wilt beginnen met het samenstellen van een schema met behulp van de UI, volgt u de zelfstudie [van de](../tutorials/create-schema-ui.md) Schema-editor om het schema &quot;Loyalty-leden&quot; te bouwen dat in dit document wordt vermeld.
 
