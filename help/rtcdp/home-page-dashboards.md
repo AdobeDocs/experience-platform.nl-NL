@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Real-time Customer Data Platform] metriek-overzicht
 
-De homepage van de Gegevens van de Klant van Adobe in real time (CDP in real time), die een metriek dashboard omvat, verschijnt wanneer u login aan CDP in real time.
+De Adobe Echte de homepage van Gegevens van de Klant - tijdGegevens (CDP in real time), die een metriek dashboard omvat, verschijnt wanneer u login aan CDP in real time.
 
 De homepage is slechts een van de plaatsen waar metrische kaarten verschijnen. CDP in real time verstrekt metrische kaarten door uw ervaring. Deze metriek informeren u over de gegevens, het profiel, en het segmentpubliek in het systeem.
 
