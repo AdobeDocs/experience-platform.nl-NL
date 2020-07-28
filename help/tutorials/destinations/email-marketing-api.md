@@ -12,7 +12,7 @@ ht-degree: 0%
 ---
 
 
-# E-mailmarketingdoelen maken en gegevens activeren in Adobe [!DNL Real-time Customer Data Platform]
+# Maak marketingbestemmingen voor e-mail en activeer gegevens in Adobe [!DNL Real-time Customer Data Platform]
 
 Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw Adobe Experience Platform-gegevens, een [e-mailmarketingbestemming](../../rtcdp/destinations/email-marketing-destinations.md)te maken, een gegevensstroom te maken naar uw nieuwe gemaakte bestemming en gegevens te activeren voor uw nieuwe gemaakte bestemming.
 
@@ -20,7 +20,7 @@ In deze zelfstudie wordt de Adobe Campaign-bestemming in alle voorbeelden gebrui
 
 ![Overzicht - de stappen om een bestemming tot stand te brengen en segmenten te activeren](../images/destinations/flow-api-destinations-steps-overview.png)
 
-Raadpleeg de zelfstudies voor het [verbinden van een doel](../../rtcdp/destinations/connect-destination.md) en het [activeren van profielen en segmenten naar een doel](../../rtcdp/destinations/activate-destinations.md) als u liever de gebruikersinterface in CDP in realtime van Adobe gebruikt om een doel te verbinden en gegevens te activeren.
+Als u verkiest gebruik het gebruikersinterface in Adobe aan Echt - tijd CDP om een bestemming aan te sluiten en gegevens te activeren, [verbind een bestemming](../../rtcdp/destinations/connect-destination.md) en [activeer profielen en segmenten aan een bestemmingsleerprogramma](../../rtcdp/destinations/activate-destinations.md) .
 
 ## Aan de slag
 
@@ -58,7 +58,7 @@ De middelen in [!DNL Experience Platform] kunnen aan specifieke virtuele zandbak
 >[!Nofferte]
 >Zie de documentatie over het [!DNL Experience Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -467,9 +467,9 @@ Een succesvol antwoord retourneert de unieke id (`id`) voor de nieuwe doelverbin
 
 Met de id&#39;s die u in de vorige stappen hebt opgehaald, kunt u nu een gegevensstroom maken tussen uw [!DNL Experience Platform] gegevens en de bestemming waarnaar u de gegevens wilt activeren. Beschouw deze stap als het construeren van de pijpleiding, waardoor de gegevens later, tussen [!DNL Experience Platform] en uw gewenste bestemming zullen stromen.
 
-Als u een gegevensstroom wilt maken, voert u een POST-verzoek uit, zoals hieronder wordt weergegeven, terwijl u de hieronder vermelde waarden opgeeft binnen de laadtijd.
+Om een gegevensstroom tot stand te brengen, voer een verzoek van de POST uit, zoals hieronder getoond, terwijl het verstrekken van de hieronder vermelde waarden binnen de lading.
 
-Voer het volgende POST- verzoek uit om een gegevensstroom tot stand te brengen.
+Voer het volgende verzoek van de POST uit om een gegevensstroom tot stand te brengen.
 
 **API-indeling**
 
@@ -517,7 +517,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: Gebruik de stroom voor de e-mailmarketingbestemming waarmee u verbinding wilt maken. Om de stroomspecificatie te krijgen, voer een GET verrichting op het `flowspecs` eindpunt uit. Zie hier de documentatie van Swagger: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. In de reactie, zoek `upsTo` en kopieer overeenkomstige identiteitskaart van de e-mailmarketing bestemming die u met wilt verbinden. Voor Adobe Campaign zoekt `upsToCampaign` en kopieert u bijvoorbeeld de `id` parameter.
+* `{FLOW_SPEC_ID}`: Gebruik de stroom voor de e-mailmarketingbestemming waarmee u verbinding wilt maken. Om de stroomspecificatie te krijgen, voer een verrichting van de GET op het `flowspecs` eindpunt uit. Zie hier de documentatie van Swagger: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. In de reactie, zoek `upsTo` en kopieer overeenkomstige identiteitskaart van de e-mailmarketing bestemming die u met wilt verbinden. Voor Adobe Campaign zoekt `upsToCampaign` en kopieert u bijvoorbeeld de `id` parameter.
 * `{SOURCE_CONNECTION_ID}`: Gebruik de bronverbindings-id die u hebt verkregen in de stap [Verbinding maken met uw Experience Platform](#connect-to-your-experience-platform-data).
 * `{TARGET_CONNECTION_ID}`: Gebruik de doel-verbindings-id die u hebt verkregen in de stap [Verbinding maken met e-mailmarketingdoel](#connect-to-email-marketing-destination).
 
@@ -539,7 +539,7 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom en e
 
 Nadat u alle verbindingen en de gegevensstroom hebt gemaakt, kunt u nu uw profielgegevens activeren naar het e-mailmarketingplatform. In deze stap selecteert u welke segmenten en welke profielkenmerken u naar de bestemming verzendt en kunt u gegevens plannen en naar de bestemming verzenden.
 
-Als u segmenten naar uw nieuwe bestemming wilt activeren, moet u een JSON PATCH-bewerking uitvoeren, vergelijkbaar met het onderstaande voorbeeld. U kunt veelvoudige segmenten en profielattributen in één vraag activeren. Zie de [RFC-specificatie](https://tools.ietf.org/html/rfc6902)voor meer informatie over JSON PATCH.
+Als u segmenten naar uw nieuwe bestemming wilt activeren, moet u een JSON PATCH-bewerking uitvoeren, vergelijkbaar met het onderstaande voorbeeld. U kunt veelvoudige segmenten en profielattributen in één vraag activeren. Meer over JSON PATCH leren, zie de [specificatie](https://tools.ietf.org/html/rfc6902)RFC.
 
 **API-indeling**
 
@@ -611,7 +611,7 @@ Kijk naar een 202 OK-antwoord. Er wordt geen responsorgaan geretourneerd. Om te 
 
 Als laatste stap in de zelfstudie moet u controleren of de segmenten en profielkenmerken correct zijn toegewezen aan de gegevensstroom.
 
-Om dit te bevestigen, voer het volgende GET verzoek uit:
+Om dit te bevestigen, voer het volgende verzoek van de GET uit:
 
 **API-indeling**
 
