@@ -22,7 +22,7 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!D
 
 ## Een lijst met schema&#39;s ophalen {#retrieve-list}
 
-U kunt een lijst van alle programma&#39;s voor uw IMS Organisatie terugwinnen door een GET verzoek aan het `/config/schedules` eindpunt te doen.
+U kunt een lijst van alle programma&#39;s voor uw IMS Organisatie terugwinnen door een verzoek van de GET tot het `/config/schedules` eindpunt te richten.
 
 **API-indeling**
 
@@ -103,7 +103,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst met schema&#39;s
 
 ## Een nieuw schema maken {#create}
 
-U kunt een nieuw programma tot stand brengen door een POST- verzoek aan het `/config/schedules` eindpunt te doen.
+U kunt een nieuw programma tot stand brengen door een verzoek van de POST aan het `/config/schedules` eindpunt te doen.
 
 **API-indeling**
 
@@ -173,7 +173,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs gec
 
 ## Een specifiek schema ophalen {#get}
 
-U kunt gedetailleerde informatie over een specifiek programma terugwinnen door een GET verzoek aan het `/config/schedules` eindpunt te doen en identiteitskaart van het programma te verstrekken u in de verzoekweg wenst terug te winnen.
+U kunt gedetailleerde informatie over een specifiek programma terugwinnen door een verzoek van de GET aan het `/config/schedules` eindpunt te doen en identiteitskaart van het programma te verstrekken u in de verzoekweg wenst terug te winnen.
 
 **API-indeling**
 
@@ -229,14 +229,14 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 | `type` | Het type taak als tekenreeks. De twee ondersteunde typen zijn `batch_segmentation` en `export`. |
 | `properties` | Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
 | `properties.segments` | Het gebruiken `["*"]` zorgt ervoor alle segmenten inbegrepen zijn. |
-| `schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Lees de documentatie over de indeling van de [uitsnijdexpressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor meer informatie over de uitsnijdschema&#39;s. In dit voorbeeld betekent &quot;0 0 1 *&quot; dat dit schema om middernacht op het eerste van elke maand zal lopen. |
+| `schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd. Dit betekent dat u een taak niet meer dan één keer gedurende een periode van 24 uur kunt plannen. Lees de documentatie over de indeling van de [uitsnijdexpressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor meer informatie over de uitsnijdschema&#39;s. In dit voorbeeld betekent &quot;0 0 1 *&quot; dat dit schema om middernacht op het eerste van elke maand zal lopen. |
 | `state` | Een tekenreeks die de staat van het schema bevat. De twee ondersteunde staten zijn `active` en `inactive`. De status is standaard ingesteld op `inactive`. |
 
 ## Details bijwerken voor een specifiek schema {#update}
 
-U kunt een specifiek programma bijwerken door een verzoek van de PATCH aan het `/config/schedules` eindpunt te doen en identiteitskaart van het programma te verstrekken u probeert om in de verzoekweg bij te werken.
+U kunt een specifiek programma bijwerken door een verzoek van PATCH aan het `/config/schedules` eindpunt te doen en identiteitskaart van het programma te verstrekken u probeert om in de verzoekweg bij te werken.
 
-Met het PATCH-verzoek kunt u de [status](#update-state) of het [uitsnijdschema](#update-schedule) voor een afzonderlijk schema bijwerken.
+Met het verzoek PATCH kunt u de [status](#update-state) of het [bijsnijdschema](#update-schedule) voor een afzonderlijk schema bijwerken.
 
 ### Status schema bijwerken {#update-state}
 
