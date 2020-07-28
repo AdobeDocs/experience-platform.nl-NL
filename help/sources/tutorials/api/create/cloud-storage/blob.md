@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om verbinding te maken [!DNL Experience Platform] met een [!DNL Azure Blob] (hierna &quot;blob&quot; genoemd) opslag.
 
-Als u liever de gebruikersinterface in wilt gebruiken, [!DNL Experience Platform]biedt de UI-zelfstudie [van de](../../../ui/create/cloud-storage/blob-s3.md) Azure Blob- of Amazon S3-bronconnector stapsgewijze instructies voor het uitvoeren van vergelijkbare acties.
+Als u liever de gebruikersinterface in wilt gebruiken, [!DNL Experience Platform]biedt de zelfstudie [van de](../../../ui/create/cloud-storage/blob-s3.md) Azure Blob- of Amazon S3-bronconnector stapsgewijze instructies voor het uitvoeren van vergelijkbare acties.
 
 ## Aan de slag
 
@@ -56,7 +56,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -72,7 +72,7 @@ POST /connections
 
 **Verzoek**
 
-Als u een blob-verbinding wilt maken, moet de unieke id van de verbindingsspecificatie worden opgegeven als onderdeel van de POST-aanvraag. De verbindingsspecificatie-id voor Blob is `4c10e202-c428-4796-9208-5f1f5732b1cf`.
+Als u een blob-verbinding wilt maken, moet de unieke id van de verbindingsspecificatie worden opgegeven als onderdeel van het verzoek om POST. De verbindingsspecificatie-id voor Blob is `4c10e202-c428-4796-9208-5f1f5732b1cf`.
 
 ```shell
 curl -X POST \
@@ -105,7 +105,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw opslag te verkennen in de volgende zelfstudie.
+Een succesvolle reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw opslag te verkennen in de volgende zelfstudie.
 
 ```json
 {
