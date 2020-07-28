@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Een sandbox opnieuw instellen
 
-Ontwikkelingssandboxen beschikken over een functie voor fabrieksinstellingen waarmee alle niet-standaardbronnen uit een sandbox worden verwijderd. U kunt een sandbox opnieuw instellen door een PUT-aanvraag te maken die de sandbox&#39;s bevat `name` in het aanvraagpad.
+Ontwikkelingssandboxen beschikken over een functie voor fabrieksinstellingen waarmee alle niet-standaardbronnen uit een sandbox worden verwijderd. U kunt een sandbox opnieuw instellen door een PUT-aanvraag in te dienen die de sandbox&#39;s bevat `name` in het aanvraagpad.
 
 **API-indeling**
 
