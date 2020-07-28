@@ -14,14 +14,14 @@ ht-degree: 1%
 
 # Een object bijwerken
 
-U kunt een deel van een [!DNL Catalog] object bijwerken door de id ervan op te nemen in het pad van een PATCH-aanvraag. In dit document worden de twee methoden beschreven voor het uitvoeren van PATCH-bewerkingen op catalogusobjecten:
+U kunt een deel van een [!DNL Catalog] object bijwerken door de id ervan op te nemen in het pad van een PATCH-aanvraag. In dit document worden de twee methoden beschreven voor het uitvoeren van PATCH-bewerkingen op Catalog-objecten:
 
 * Velden gebruiken
 * JSON-patchnotatie gebruiken
 
 >[!NOTE]
 >
->Met PATCH-bewerkingen op een object kunnen de uitbreidbare velden, die onderling verwante objecten vertegenwoordigen, niet worden gewijzigd.  Wijzigingen in onderling verwante objecten moeten rechtstreeks worden aangebracht.
+>PATCH-bewerkingen op een object kunnen de uitbreidbare velden van het object, die onderling verwante objecten vertegenwoordigen, niet wijzigen.  Wijzigingen in onderling verwante objecten moeten rechtstreeks worden aangebracht.
 
 ## Bijwerken met velden
 
@@ -58,7 +58,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-Een succesvolle reactie keert een serie terug die identiteitskaart van de bijgewerkte dataset bevat. Deze id moet overeenkomen met de id die in de PATCH-aanvraag is verzonden. Het uitvoeren van een GET verzoek voor deze dataset toont nu dat slechts `name` en `description` zijn bijgewerkt terwijl alle andere waarden onveranderd blijven.
+Een succesvolle reactie keert een serie terug die identiteitskaart van de bijgewerkte dataset bevat. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. Wanneer u een GET-aanvraag voor deze gegevensset uitvoert, wordt nu alleen getoond dat alleen de gegevens `name` en `description` zijn bijgewerkt terwijl alle andere waarden ongewijzigd blijven.
 
 ```json
 [
@@ -107,7 +107,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een array met de id van het bijgewerkte object. Deze id moet overeenkomen met de id die in de PATCH-aanvraag is verzonden. Wanneer u een GET-aanvraag voor dit object uitvoert, geeft dit nu aan dat alleen de aanvraag `name` en `description` zijn bijgewerkt terwijl alle andere waarden ongewijzigd blijven.
+Een geslaagde reactie retourneert een array met de id van het bijgewerkte object. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. Wanneer u een GET-aanvraag voor dit object uitvoert, geeft dit nu aan dat alleen de aanvraag `name` en `description` zijn bijgewerkt terwijl alle andere waarden ongewijzigd blijven.
 
 ```json
 [
