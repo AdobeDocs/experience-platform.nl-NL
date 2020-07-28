@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een Adobe Analytics-bronaansluiting maken in de gebruikersinterface
 
-Deze zelfstudie bevat stappen voor het maken van een Adobe Analytics-bronconnector in de gebruikersinterface om consumentengegevens in Adobe Experience Platform te brengen.
+Deze zelfstudie biedt stappen voor het maken van een Adobe Analytics-bronaansluiting in de gebruikersinterface om consumentengegevens in Adobe Experience Platform te brengen.
 
 ## Aan de slag
 
@@ -30,7 +30,7 @@ Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experi
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer in de categorie *Adobe-toepassingen* de optie **[!UICONTROL Adobe Analytics]** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Als u bestaande accounts wilt weergeven, selecteert u **[!UICONTROL Accounts]**.
+Selecteer onder de categorie *Adobe-toepassingen* de optie **[!UICONTROL Adobe Analytics]** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Als u bestaande accounts wilt weergeven, selecteert u **[!UICONTROL Accounts]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
@@ -104,7 +104,7 @@ Zodra de verbinding wordt gecreeerd, wordt een doelschema en datasetstroom autom
 * [Overzicht van de Data Science Workspace](../../../../../data-science-workspace/home.md)
 * [Overzicht van Query Service](../../../../../query-service/home.md)
 
-De volgende video is bedoeld als ondersteuning voor uw inzicht in het opnemen van gegevens via de Adobe Analytics Source-connector:
+De volgende video is bedoeld ter ondersteuning van uw inzicht in het opnemen van gegevens via de Adobe Analytics Source-connector:
 
 >[!WARNING]
 >
