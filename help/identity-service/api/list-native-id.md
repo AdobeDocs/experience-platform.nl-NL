@@ -18,7 +18,7 @@ Identiteitsgegevens worden doorgaans verstrekt als een ID-tekenreekswaarde en na
 
 >[!NOTE]
 >
->Deze indeling is voornamelijk bedoeld voor intern gebruik door Adobe. Native XID is een unieke waarde die ruimtezuiniger is en is wat intern binnen [!DNL Platform] oplossingen voor opslag en rangschikking wordt gebruikt. Het is echter niet leesbaar voor mensen, het is ondoorzichtig en vereist een aparte aanroep om het te gebruiken.
+>Dit formaat is hoofdzakelijk voor intern gebruik van Adobe. Native XID is een unieke waarde die ruimtezuiniger is en is wat intern binnen [!DNL Platform] oplossingen voor opslag en rangschikking wordt gebruikt. Het is echter niet leesbaar voor mensen, het is ondoorzichtig en vereist een aparte aanroep om het te gebruiken.
 
 Verkrijg XID voor een bepaalde waarde van identiteitskaart en namespace gebruikend de dienst die in deze sectie wordt beschreven.
 
