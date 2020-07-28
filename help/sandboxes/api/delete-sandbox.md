@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Een sandbox verwijderen
 
-U kunt een sandbox verwijderen door een DELETE aanvraag in te dienen die de sandbox&#39;s bevat `name` in het aanvraagpad.
+U kunt een sandbox verwijderen door een DELETE-aanvraag in te dienen die de sandbox&#39;s bevat `name` in het aanvraagpad.
 
 >[!NOTE]
 >
->Als u deze API-aanroep maakt, wordt de `status` eigenschap van de sandbox bijgewerkt naar &quot;verwijderd&quot; en gedeactiveerd. Met GET-aanvragen kunnen de details van de sandbox nog steeds worden opgehaald nadat deze zijn verwijderd.
+>Als u deze API-aanroep maakt, wordt de `status` eigenschap van de sandbox bijgewerkt naar &quot;verwijderd&quot; en gedeactiveerd. Met GET-aanvragen kunnen de gegevens van de sandbox nog steeds worden opgehaald nadat deze zijn verwijderd.
 
 **API-indeling**
 
