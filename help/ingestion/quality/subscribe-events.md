@@ -43,7 +43,7 @@ Het gebeurtenisschema voor gegevensinvoer is een [!DNL Experience Data Model] (X
 
 ## Abonneren op statusmeldingen voor gegevensinvoer
 
-Via [Adobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events.html)kunt u zich op meerdere berichttypen abonneren met behulp van websites. In de onderstaande secties vindt u een overzicht van de stappen voor het abonneren op [!DNL Platform] meldingen voor gebeurtenissen voor gegevensinvoer met Adobe Developer Console.
+Via [Adobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events.html)kunt u zich op meerdere berichttypen abonneren met behulp van websites. In de onderstaande secties vindt u een overzicht van de stappen voor het abonneren op [!DNL Platform] meldingen voor gegevensinsluitingsgebeurtenissen met behulp van Adobe Developer Console.
 
 ### Nieuw project maken in Adobe Developer Console
 
@@ -79,7 +79,7 @@ Geef in het volgende scherm een naam en een beschrijving op voor de registratie 
 
 ![](../images/quality/subscribe-events/registration-details.png)
 
-Verderop op het zelfde scherm, kunt u naar keuze vormen hoe te om gebeurtenissen te ontvangen. **[!UICONTROL Met WebHaak]** kunt u een aangepast webhaadres opgeven voor het ontvangen van gebeurtenissen, terwijl met **[!UICONTROL Runtime-actie]** u hetzelfde kunt doen met [Adobe I/O-runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+Verderop op het zelfde scherm, kunt u naar keuze vormen hoe te om gebeurtenissen te ontvangen. **[!UICONTROL Met WebHaak]** kunt u een aangepast webhaadres opgeven voor het ontvangen van gebeurtenissen, terwijl u met **[!UICONTROL Runtime-actie]** hetzelfde kunt doen met [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
 
 Deze zelfstudie slaat deze optionele configuratiestap over. Als u klaar bent, klikt u op **[!UICONTROL geconfigureerde gebeurtenissen]** opslaan om de gebeurtenisregistratie te voltooien.
 
@@ -91,4 +91,4 @@ De detailspagina voor de pas gecreëerde gebeurtenisregistratie verschijnt, waar
 
 ## Volgende stappen
 
-Zodra u [!DNL Platform] berichten aan uw project hebt geregistreerd, kunt u ontvangen gebeurtenissen van het projectdashboard bekijken. Raadpleeg de handleiding [OvertrekAdobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) voor gedetailleerde instructies over het overtrekken van gebeurtenissen.
+Zodra u [!DNL Platform] berichten aan uw project hebt geregistreerd, kunt u ontvangen gebeurtenissen van het projectdashboard bekijken. Raadpleeg de handleiding [Adobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) overtrekken voor gedetailleerde instructies over het overtrekken van gebeurtenissen.
