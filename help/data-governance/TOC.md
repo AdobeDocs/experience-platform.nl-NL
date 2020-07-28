@@ -1,14 +1,17 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Help bij het Adobe Experience Platform voor gegevensbeheer
+user-guide-title: Help bij gegevensbeheer voor Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
 
-# Data Governance Adobe Experience Platform {#data-governance}
+# Beheer van gegevens Adobe Experience Platform {#data-governance}
 
 * [Overzicht van gegevensbeheer](home.md)
 * Labels voor gegevensgebruik {#labels}
@@ -29,4 +32,4 @@ source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
    * [Marketingacties](api/marketing-actions.md)
    * [Evaluatie](api/evaluation.md)
 * [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
-* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
