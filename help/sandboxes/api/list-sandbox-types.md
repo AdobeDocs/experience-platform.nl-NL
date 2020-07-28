@@ -5,13 +5,16 @@ title: Ondersteunde sandboxtypen weergeven
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+workflow-type: tm+mt
+source-wordcount: '47'
+ht-degree: 0%
 
 ---
 
 
 # Ondersteunde sandboxtypen weergeven
 
-U kunt een lijst van gesteunde zandbaktypes voor uw organisatie terugwinnen door een GET verzoek aan het `/sandboxTypes` eindpunt te doen.
+U kunt een lijst van gesteunde zandbaktypes voor uw organisatie terugwinnen door een verzoek van de GET tot het `/sandboxTypes` eindpunt te richten.
 
 **API-indeling**
 
