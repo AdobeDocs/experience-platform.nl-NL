@@ -50,7 +50,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 >
 >Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
 
-Voor aanvragen die een payload (POST, PUT, PATCH) bevatten, is mogelijk een extra `Content-Type` header nodig. De toegelaten waarden specifiek voor elke vraag worden verstrekt in de vraagparameters. In deze handleiding worden de volgende inhoudstypen gebruikt:
+Verzoeken die een payload (POST, PUT, PATCH) bevatten, vereisen mogelijk een extra `Content-Type` header. De toegelaten waarden specifiek voor elke vraag worden verstrekt in de vraagparameters. In deze handleiding worden de volgende inhoudstypen gebruikt:
 
 - Inhoudstype: application/json
 - Inhoudstype: application/octet-stream
@@ -472,7 +472,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Grote bestandskoppels uploaden
 
-Nu het bestand is gemaakt, kunnen alle volgende hoofdstukken worden geüpload door herhaalde PATCH-aanvragen te maken, één voor elke sectie van het bestand.
+Nadat het bestand is gemaakt, kunnen alle volgende elementen worden geüpload door herhaalde PATCH-aanvragen te maken, één voor elke sectie van het bestand.
 
 **API-indeling**
 
@@ -821,7 +821,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Een batch verwijderen {#delete-a-batch}
 
-Een partij kan worden geschrapt door het volgende POST- verzoek met de `action=REVERT` vraagparameter aan identiteitskaart van de partij uit te voeren u wenst om te schrappen. De partij is gemerkt als &quot;inactief&quot;, die het voor huisvuilinzameling in aanmerking laten komen. De partij wordt asynchroon verzameld, waarna de partij als &quot;geschrapt&quot;zal worden gemerkt.
+Een partij kan worden geschrapt door het volgende verzoek van de POST met de `action=REVERT` vraagparameter aan identiteitskaart van de partij uit te voeren u wenst om te schrappen. De partij is gemerkt als &quot;inactief&quot;, die het voor huisvuilinzameling in aanmerking laten komen. De partij wordt asynchroon verzameld, waarna de partij als &quot;geschrapt&quot;zal worden gemerkt.
 
 **API-indeling**
 
