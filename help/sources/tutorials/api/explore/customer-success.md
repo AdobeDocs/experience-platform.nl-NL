@@ -50,7 +50,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot [!DNL F
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -116,9 +116,9 @@ Een succesvolle reactie keert een serie van lijsten van uw systeem terug CS. Zoe
 ]
 ```
 
-## De structuur van een tabel controleren
+## De structuur van een tabel Inspect
 
-Om de structuur van een lijst van uw systeem te inspecteren CS, voer een GET verzoek uit terwijl het specificeren van de weg van een lijst als vraagparameter.
+Om de structuur van een lijst van uw systeem te inspecteren CS, voer een verzoek van de GET uit terwijl het specificeren van de weg van een lijst als vraagparameter.
 
 **API-indeling**
 
