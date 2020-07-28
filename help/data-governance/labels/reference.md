@@ -24,7 +24,7 @@ De etiketten van het contract &quot;C&quot;worden gebruikt om gegevens te catego
 
 | Label | Definitie |
 |---|---|
-| **C1** | Gegevens kunnen alleen vanuit Adobe Experience Cloud worden geëxporteerd in een geaggregeerd formulier, zonder individuele id&#39;s of apparaatid&#39;s. [Meer informatie...](#c1) |
+| **C1** | Gegevens kunnen alleen uit Adobe Experience Cloud worden geëxporteerd in een geaggregeerde vorm, zonder individuele of apparaat-id&#39;s. [Meer informatie...](#c1) |
 | **C2** | Gegevens kunnen niet naar derden worden geëxporteerd. [Meer informatie...](#c2) |
 | **C3** | Gegevens kunnen niet met rechtstreeks identificeerbare informatie worden gecombineerd of anderszins worden gebruikt. [Meer informatie...](#c3) |
 | **C4** | Gegevens kunnen niet worden gebruikt voor advertenties of inhoud die on-site of intersite zijn. [Meer informatie...](#c4) |
@@ -65,7 +65,7 @@ De volgende secties bevatten gedetailleerde informatie over de uitvoering van sp
 
 #### C1 {#c1}
 
-Sommige gegevens kunnen alleen vanuit Adobe Experience Cloud worden geëxporteerd in een geaggregeerd formulier zonder individuele of apparaatid&#39;s op te nemen. Bijvoorbeeld gegevens die afkomstig zijn van sociale netwerken.
+Sommige gegevens kunnen alleen uit Adobe Experience Cloud worden geëxporteerd in een geaggregeerd formulier, zonder individuele of apparaat-id&#39;s op te nemen. Bijvoorbeeld gegevens die afkomstig zijn van sociale netwerken.
 
 #### C2 {#c2}
 
