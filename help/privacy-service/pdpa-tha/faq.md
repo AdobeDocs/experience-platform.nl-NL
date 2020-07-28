@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Veelgestelde vragen PDPA (Thailand)
 
-In dit document worden antwoorden gegeven op veelgestelde vragen over de [!DNL Personal Data Protection Act] status van Thailand (PDPA) en de implementatie ervan in Adobe Experience Cloud.
+In dit document worden antwoorden gegeven op veelgestelde vragen over de situatie in Thailand (PDPA) en de uitvoering ervan in Adobe Experience Cloud. [!DNL Personal Data Protection Act]
 
 Definities voor de verschillende PDPA-termen die in dit document worden gebruikt, zijn te vinden in het [PDPA (Thailand)-terminologieartikel](./terminology.md) .
 
