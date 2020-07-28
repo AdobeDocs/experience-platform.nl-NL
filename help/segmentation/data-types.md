@@ -58,7 +58,7 @@ Momenteel wordt alleen Adobe Audience Manager ondersteund als een extern publiek
 
 ### Segment delen
 
-Segmenten die in Platform zijn gemaakt, kunnen worden gebruikt in andere [Adobe Experience Cloud Core Services](https://docs.adobe.com/content/help/nl-NL/core-services/interface/experience-cloud.html). Om deze functie in te schakelen, dient u contact op te nemen met uw oplossingsarchitect of uw consultant.
+Segmenten die in Platform zijn gemaakt, kunnen binnen andere [Adobe Experience Cloud Core Services](https://docs.adobe.com/content/help/nl-NL/core-services/interface/experience-cloud.html)worden gebruikt. Om deze functie in te schakelen, dient u contact op te nemen met uw oplossingsarchitect of uw consultant.
 
 ## Andere gegevenstypen
 
