@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;insights;attribution ai;popular topics
 solution: Experience Platform
-title: Inzichten in Attributie AI opzoeken
+title: Inzichten in Attribution AI ontdekken
 topic: Attribution AI insights
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
@@ -12,23 +12,23 @@ ht-degree: 0%
 ---
 
 
-# Inzichten in Attributie AI opzoeken
+# Inzichten in Attribution AI ontdekken
 
-Attribution AI service instances verschaffen inzichten die kunnen worden gebruikt om marketingbeslissingen met betrekking tot marketingprestaties en rendement op investeringen te nemen en te meten. Het selecteren van een de dienstinstantie verstrekt visualisaties en filters om u bij het begrijpen van het effect van elke klanteninteractie in elke fase van de klantenreis te helpen.
+De instanties van de dienst van de Attribution AI geven inzicht die kunnen worden gebruikt om bij het maken en het meten van marketing besluiten met betrekking tot marketing prestaties en rendement van investering te helpen. Het selecteren van een de dienstinstantie verstrekt visualisaties en filters om u bij het begrijpen van het effect van elke klanteninteractie in elke fase van de klantenreis te helpen.
 
-Dit document dient als richtlijn voor het communiceren met de inzichten van serviceversies in de gebruikersinterface van Adobe Intelligent Services.
+Dit document fungeert als richtlijn voor het communiceren met de inzichten van serviceversies in de gebruikersinterface van Adobe Intelligent Services.
 
 ## Aan de slag
 
-Om inzichten voor Attribution AI te gebruiken, moet u een de dienstinstantie hebben met een succesvolle looppasstatus beschikbaar. Ga naar de handleiding voor de [gebruikersinterface](./user-guide.md)van Attribution AI om een nieuwe service-instantie te maken. Als u onlangs een de dienstinstantie creeerde en het nog opleidt en het scoring, gelieve 24 uren voor het te beëindigen loopt.
+Om inzichten voor Attribution AI te gebruiken, moet u een de dienstinstantie hebben met een succesvolle beschikbare looppasstatus. Om een nieuwe de dienstinstantie tot stand te brengen bezoek de gids [van het](./user-guide.md)gebruikersinterface van de Attribution AI. Als u onlangs een de dienstinstantie creeerde en het nog opleidt en het scoring, gelieve 24 uren voor het te beëindigen loopt.
 
 ## Overzicht van inzichten in servicevergaderingen
 
-Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **Services** in de linkernavigatie. De browser *Services* wordt weergegeven en beschikbaar gesteld Adobe Intelligent Services. Klik in de container voor Kenmerken AI op **Openen**.
+Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **Services** in de linkernavigatie. De browser *Services* wordt weergegeven en geeft de beschikbare Adobe Intelligente services weer. Klik in de container voor Attribution AI op **Openen**.
 
 ![Toegang tot uw exemplaar](./images/insights/open_Attribution_ai.png)
 
-De servicepagina Kenmerk AI wordt weergegeven. Deze pagina bevat een overzicht van de service-instanties van Attribution AI en geeft informatie over deze instanties, zoals de naam van de instantie, conversiegebeurtenissen, hoe vaak de instantie wordt uitgevoerd en de status van de laatste update. Klik op de naam van een service-instantie om te beginnen.
+De de dienstpagina van de Attribution AI verschijnt. Deze pagina bevat een overzicht van de service-instanties van Attribution AI en informatie over deze instanties, zoals de naam van de instantie, conversiegebeurtenissen, hoe vaak de instantie wordt uitgevoerd en de status van de laatste update. Klik op de naam van een service-instantie om te beginnen.
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ Als u meer details voor een service-instantie wilt weergeven, klikt u rechtsbove
 
 ![meer weergeven](./images/insights/show-more.png)
 
-Er wordt een gedetailleerde lijst weergegeven. Meer informatie over de vermelde eigenschappen vindt u in de gebruikershandleiding [van](./user-guide.md)Attribution AI.
+Er wordt een gedetailleerde lijst weergegeven. Raadpleeg de gebruikershandleiding bij de [Attribution AI voor meer informatie over de vermelde eigenschappen](./user-guide.md).
 
 ![details tonen](./images/insights/advanced-details.png)
 
@@ -65,14 +65,14 @@ De knop *Meer handelingen* bevindt zich in de navigatie rechtsboven naast *Bewer
 
 - **Verwijderen**: Hiermee wordt de instantie verwijderd.
 - **Samenvattingsgegevens** downloaden: Hiermee downloadt u een CSV-bestand met de overzichtsgegevens.
-- **Toegangscores**: Als u op *Toegangscores* klikt, wordt u omgeleid naar de [toegangscores voor de Attribution AI-zelfstudie](./download-scores.md).
+- **Toegangscores**: Als u op *Toegangsscores* klikt, wordt u omgeleid naar de [toegangscores voor de zelfstudie](./download-scores.md)Attribution AI.
 - **Runtimegeschiedenis** weergeven: Er wordt een pop-upmenu weergegeven met een lijst van alle scoring-reeksen die aan de service-instantie zijn gekoppeld.
 
 ![meer acties](./images/insights/more-actions.png)
 
 ## Gegevens filteren
 
-Met Attribution AI-inzichten kunt u uw gegevens filteren en de UI-visuele elementen automatisch bijwerken op basis van de geselecteerde filters.
+Met Attribution AI-inzichten kunt u uw gegevens filteren en de gebruikersinterface-visuele elementen automatisch bijwerken op basis van de geselecteerde filters.
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ Met Attribution AI-inzichten kunt u uw gegevens filteren en de UI-visuele elemen
 
 ### Conversion-gebeurtenis
 
-Wanneer u een nieuwe instantie maakt in Attribution AI, is een van de vereiste velden &#39;Conversiegebeurtenissen&#39;. Conversiegebeurtenissen zijn bedrijfsdoelstellingen die het effect van marketing activiteiten, zoals, e-commerceorders, in-store aankopen, en websitebezoeken identificeren.
+Wanneer u een nieuwe instantie maakt in Attribution AI, is een van de vereiste velden Conversiegebeurtenissen. Conversiegebeurtenissen zijn bedrijfsdoelstellingen die het effect van marketing activiteiten, zoals, e-commerceorders, in-store aankopen, en websitebezoeken identificeren.
 
 Vanuit de instantie kunt u met het vervolgkeuzemenu *Conversiegebeurtenissen* een van de gebeurtenissen selecteren die voor de instantie zijn gedefinieerd om uw gegevens te filteren. Als u specifieke gebeurtenissen selecteert, worden de gebruikersinterfacevisualisaties gewijzigd en worden conversies die bij die gebeurtenissen horen alleen gevuld.
 
@@ -88,7 +88,7 @@ Vanuit de instantie kunt u met het vervolgkeuzemenu *Conversiegebeurtenissen* ee
 
 ### Attributiemodel
 
-Als u op het *kenmerkingsmodel* klikt, wordt een vervolgkeuzelijst geopend met alle verschillende beschikbare attributiemodellen. U kunt meerdere modellen selecteren om de resultaten te vergelijken. Ga voor meer informatie over de verschillende attributiemodellen en hoe ze werken naar het [Attribution AI](./overview.md) -overzicht dat een tabel bevat met informatie over elk model.
+Als u op het *kenmerkingsmodel* klikt, wordt een vervolgkeuzelijst geopend met alle verschillende beschikbare attributiemodellen. U kunt meerdere modellen selecteren om de resultaten te vergelijken. Voor meer informatie over de verschillende attributiemodellen en hoe zij werken, bezoek het overzicht van de [Attribution AI](./overview.md) dat een lijst met informatie over elk model bevat.
 
 ![toewijzingsmodel](./images/insights/attribution-model.png)
 
@@ -110,7 +110,7 @@ Met het filter *Geografie* worden landcodes gevuld op basis van regionale modell
 
 >[!NOTE]
 >
->Dit filter is alleen aanwezig als u tijdens het maken van uw serviceversie de optionele stap [op regio gebaseerde modellering](./user-guide.md#region-based-modeling-optional) in de handleiding voor de gebruikersinterface van Attribution AI hebt uitgevoerd.
+>Dit filter is slechts aanwezig als u de facultatieve stap op gebied-gebaseerde modellering [](./user-guide.md#region-based-modeling-optional) in de gebruikersinterfacegids van de Attribution AI toen het creëren van uw de dienstinstantie uitvoerde.
 
 Met dit filter kunt u alle gebieden selecteren die u hebt ingesteld in het proces voor het maken van instanties.
 
@@ -162,10 +162,10 @@ De *bovenste campagnerekaart* geeft een overzicht van uw campagnes en hoe de cam
 
 ## Volgende stappen
 
-Wanneer u de gegevens hebt gefilterd en de juiste gegevens hebt kunnen weergeven, hebt u de mogelijkheid om toegang te krijgen tot de scores. Ga naar de [toegangsscores in de zelfstudie Attribution AI](./download-scores.md) voor een uitgebreide handleiding over het openen van uw scores. Bovendien kunt u de samenvattingsgegevens ook downloaden, zoals aangegeven in [meer acties](#more-actions). Als u Samenvattingsgegevens downloaden selecteert, worden de samengevoegde gegevens gedownload op datums.
+Wanneer u de gegevens hebt gefilterd en de juiste gegevens hebt kunnen weergeven, hebt u de mogelijkheid om toegang te krijgen tot de scores. Voor een uitgebreide gids over hoe te om tot uw scores toegang te hebben, bezoek de [toegangsscores in Attribution AI](./download-scores.md) zelfstudie. Bovendien kunt u de samenvattingsgegevens ook downloaden, zoals aangegeven in [meer acties](#more-actions). Als u Samenvattingsgegevens downloaden selecteert, worden de samengevoegde gegevens gedownload op datums.
 
 ## Aanvullende bronnen
 
-De volgende video is ontworpen om u te helpen bij het leren hoe u de pagina Kenmerken AI-inzichten kunt gebruiken om inzicht te krijgen in de ROI van marketingkanalen en campagnes.
+De volgende video is ontworpen om u te helpen bij het leren hoe u de pagina met Attribution AI-inzichten kunt gebruiken om inzicht te krijgen in het rendement van marketingkanalen en campagnes.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
