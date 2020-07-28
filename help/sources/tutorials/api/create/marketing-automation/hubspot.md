@@ -60,7 +60,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -76,7 +76,7 @@ POST /connections
 
 **Verzoek**
 
-Om een [!DNL HubSpot] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het POST- verzoek worden verstrekt. De verbindingsspecificatie-id voor [!DNL HubSpot] is `cc6a4487-9e91-433e-a3a3-9cf6626c1806`.
+Om een [!DNL HubSpot] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL HubSpot] is `cc6a4487-9e91-433e-a3a3-9cf6626c1806`.
 
 ```shell
 curl -X POST \
