@@ -56,7 +56,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 De eerste stap in segmentatie is een segment te bepalen dat in een constructie wordt vertegenwoordigd genoemd een **segmentdefinitie**. Een segmentdefinitie is een object waarin een query wordt ingekapseld die is geschreven in [!DNL Profile Query Language] (PQL). Dit object wordt ook wel een **PQL-voorspelling** genoemd. In PQL worden de regels voor het segment gedefinieerd op basis van voorwaarden die betrekking hebben op record- of tijdreeksgegevens die u opgeeft aan [!DNL Real-time Customer Profile]. Raadpleeg de [PQL-handleiding](../pql/overview.md) voor meer informatie over het schrijven van PQL-query&#39;s.
 
-U kunt een nieuwe segmentdefinitie tot stand brengen door een POST- verzoek aan het `/segment/definitions` eindpunt in [!DNL Segmentation] API te doen. Het volgende voorbeeld schetst hoe te om een definitieverzoek te formatteren, die welke informatie wordt vereist opdat een segment met succes wordt bepaald.
+U kunt een nieuwe segmentdefinitie tot stand brengen door een verzoek van de POST aan het `/segment/definitions` eindpunt in [!DNL Segmentation] API te doen. Het volgende voorbeeld schetst hoe te om een definitieverzoek te formatteren, die welke informatie wordt vereist opdat een segment met succes wordt bepaald.
 
 Lees voor een gedetailleerde uitleg van het definiëren van een segment de handleiding voor ontwikkelaars van [segmentdefinities](../api/segment-definitions.md#create).
 
@@ -73,7 +73,7 @@ Er zijn twee vereiste stappen om een voorvertoning van uw segment te bekijken of
 
 ### Hoe schattingen worden gegenereerd
 
-Gegevenssteekproeven worden gebruikt om segmenten te evalueren en het aantal kwalificerende profielen te schatten. De nieuwe gegevens worden geladen in geheugen elke ochtend (tussen 12AM-2AM PT, die 7-9AM UTC is), en alle segmenteringsvragen worden geschat gebruikend de steekproefgegevens van die dag. Bijgevolg zullen nieuwe toegevoegde velden of verzamelde aanvullende gegevens de volgende dag in schattingen worden weergegeven.
+Gegevenssteekproeven worden gebruikt om segmenten te evalueren en het aantal kwalificerende profielen te schatten. De nieuwe gegevens worden geladen in geheugen elke ochtend (tussen 12AM-2AM PT, die 7-9AM UTC is), en alle segmenteringsvragen worden geschat gebruikend de steekproefgegevens van die dag. Dientengevolge zullen nieuwe toegevoegde velden of extra verzamelde gegevens de volgende dag in schattingen worden weerspiegeld.
 
 De voorbeeldgrootte is afhankelijk van het totale aantal entiteiten in het profielarchief. Deze steekproefgrootte wordt vertegenwoordigd in de volgende lijst:
 
@@ -87,13 +87,13 @@ De schattingen lopen over het algemeen over 10-15 seconden, beginnend met een ru
 
 ### Een voorbeeldtaak maken
 
-U kunt een nieuwe voorproefbaan tot stand brengen door een POST- verzoek aan het `/preview` eindpunt te doen.
+U kunt een nieuwe voorproefbaan tot stand brengen door een verzoek van de POST aan het `/preview` eindpunt te doen.
 
 Gedetailleerde instructies over het maken van een voorbeeldtaak vindt u in de handleiding [Voorvertoningen en Eindpunten van schattingen](../api/previews-and-estimates.md#create-preview).
 
 ### Een schatting of voorvertoning weergeven
 
-De schattings- en voorvertoningsprocessen worden asynchroon uitgevoerd, omdat verschillende query&#39;s verschillende tijdsduur kunnen duren. Nadat een query is gestart, kunt u API-aanroepen gebruiken om de huidige status van de schatting of voorvertoning op te halen terwijl deze vordert.
+De schattings- en voorvertoningsprocessen worden asynchroon uitgevoerd, omdat verschillende query&#39;s verschillende tijdsduur kunnen duren. Nadat een query is gestart, kunt u API-aanroepen gebruiken om de huidige status van de schatting of voorvertoning tijdens het uitvoeren op te halen (GET).
 
 Met de [!DNL Segmentation Service] API kunt u de huidige status van een voorbeeldtaak opzoeken aan de hand van de id. Als de status &quot;RESULT_READY&quot; is, kunt u de resultaten bekijken. Als u de huidige status van een voorbeeldtaak wilt opzoeken, leest u de sectie over het [ophalen van een voorbeeldtaaksectie](../api/previews-and-estimates.md#get-preview) in de handleiding voor voorvertoningen en geschatte eindpunten. Als u de huidige status van een geschatte taak wilt opzoeken, leest u de sectie over het [ophalen van een geschatte taak](../api/previews-and-estimates.md#get-estimate) in de handleiding voor voorvertoningen en geschatte eindpunten.
 
