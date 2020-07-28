@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Bronnen weergeven
 
-U kunt een lijst van alle [!DNL Schema Registry] middelen van een bepaald type (klassen, mixins, schema&#39;s, gegevenstypes, of beschrijvers) binnen een container bekijken door één enkele GET verzoek uit te voeren.
+U kunt een lijst van alle [!DNL Schema Registry] middelen van een bepaald type (klassen, mixins, schema&#39;s, gegevenstypes, of beschrijvers) binnen een container bekijken door één enkel verzoek van de GET uit te voeren.
 
 >[!NOTE]
 >
