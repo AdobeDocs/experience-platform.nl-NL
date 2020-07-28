@@ -18,7 +18,7 @@ Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst maakt u een model v
 
 ## Ingevoerde concepten:
 
-- **Ontvangers:** Een recept is de term van Adobe voor een modelspecificatie en is een container van het hoogste niveau die een specifiek machine het leren, AI algoritme of een samenstel van algoritmen, verwerkingslogica, en configuratie vertegenwoordigt die wordt vereist om een opgeleid model te bouwen en uit te voeren en daardoor helpen specifieke bedrijfsproblemen oplossen.
+- **Ontvangers:** Een recept is Adobe term voor een modelspecificatie en is een top-level container die een specifiek machine het leren, AI algoritme of een samenstel van algoritmen, verwerkingslogica, en configuratie vertegenwoordigt die wordt vereist om een opgeleid model te bouwen en uit te voeren en vandaar helpen specifieke bedrijfsproblemen oplossen.
 - **Model:** Een model is een geval van een machine het leren recept dat gebruikend historische gegevens en configuraties wordt opgeleid om voor een bedrijfs geval op te lossen.
 - **Training:** Training is het proces van leerpatronen en inzichten van gelabelde gegevens.
 - **Scores:** Scores is het proces om inzichten van gegevens te produceren gebruikend een opgeleid model.
