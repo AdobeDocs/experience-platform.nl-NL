@@ -20,7 +20,7 @@ Dit leerprogramma behandelt het proces om een dataset voor gebruik in toe te lat
    - [Een nieuwe gegevensset maken](#create-a-dataset-enabled-for-profile-and-identity)
    - [Een bestaande gegevensset configureren](#configure-an-existing-dataset)
 1. [Gegevens in de dataset opnemen](#ingest-data-into-the-dataset)
-1. [Gegevens bevestigen die door het Profiel van de Klant in real time worden opgenomen](#confirm-data-ingest-by-real-time-customer-profile)
+1. [Gegevens bevestigen die worden ingevoerd door Real-time klantprofiel](#confirm-data-ingest-by-real-time-customer-profile)
 1. [Gegevens die door Identity Service worden ingevoerd bevestigen](#confirm-data-ingest-by-identity-service)
 
 ## Aan de slag
@@ -231,7 +231,7 @@ curl -X PATCH \
 
 De aanvraaginstantie bevat een `tags` eigenschap die twee subeigenschappen bevat: `"unifiedProfile"` en `"unifiedIdentity"`. De waarden van deze subeigenschappen zijn arrays die de tekenreeks bevatten `"enabled:true"`.
 
-**De vraag van de Reactie** Een succesvolle PATCH keert de Status 200 van HTTP (O.K.) en een serie terug die identiteitskaart van de bijgewerkte dataset bevatten. Deze id moet overeenkomen met de id die in de PATCH-aanvraag is verzonden. De `"unifiedProfile"` - en `"unifiedIdentity"` -tags zijn nu toegevoegd en de gegevensset is ingeschakeld voor gebruik door de services Profiel en Identiteit.
+**De vraag van de reactie** Een succesvolle PATCH keert de Status 200 van HTTP (O.K.) en een serie terug die identiteitskaart van de bijgewerkte dataset bevatten. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. De `"unifiedProfile"` - en `"unifiedIdentity"` -tags zijn nu toegevoegd en de gegevensset is ingeschakeld voor gebruik door de services Profiel en Identiteit.
 
 ```json
 [
