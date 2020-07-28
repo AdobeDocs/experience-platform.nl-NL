@@ -22,7 +22,7 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over Adobe Exper
 
 ## Wat zijn API&#39; [!DNL Experience Platform] s? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] biedt veelvoudige RESTful APIs aan die HTTP- verzoeken om tot [!DNL Platform] middelen gebruiken. Deze dienst APIs elk stelt veelvoudige eindpunten bloot, en staat u toe om verrichtingen aan lijst (KRIJGEN), raadpleging (KRIJGEN) uit te voeren, (PLAATS en/of PATCH) uit te geven, en (DELETE) middelen te schrappen. Raadpleeg de [API-naslagdocumentatie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) bij Adobe I/O voor meer informatie over specifieke eindpunten en bewerkingen die beschikbaar zijn voor elke service.
+[!DNL Experience Platform] biedt veelvoudige RESTful APIs aan die HTTP- verzoeken om tot [!DNL Platform] middelen gebruiken. Deze dienst APIs elk stelt veelvoudige eindpunten bloot, en staat u toe om verrichtingen aan lijst (GET), raadpleging (GET) uit te voeren, (PUT en/of PATCH) uit te geven, en (DELETE) middelen te schrappen. Raadpleeg de [API-naslagdocumentatie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) bij Adobe I/O voor meer informatie over specifieke eindpunten en bewerkingen die beschikbaar zijn voor elke service.
 
 ## Hoe kan ik een API-aanvraag opmaken? {#how-do-i-format-an-api-request}
 
@@ -40,7 +40,7 @@ Hier volgt een voorbeeld-API-aanvraag die de indeling weergeeft die u in de docu
 
 **API-indeling**
 
-Het API formaat toont de verrichting (KRIJGT) en het eindpunt dat wordt gebruikt. Variabelen worden aangegeven met accolades (in dit geval `{CONTAINER_ID}`).
+De API-indeling toont de bewerking (GET) en het eindpunt dat wordt gebruikt. Variabelen worden aangegeven met accolades (in dit geval `{CONTAINER_ID}`).
 
 ```http
 GET /{CONTAINER_ID}/classes
@@ -88,7 +88,7 @@ Raadpleeg de [API-naslagdocumentatie](https://www.adobe.io/apis/experienceplatfo
 
 ## Wat is mijn IMS-organisatie? {#what-is-my-ims-organization}
 
-Een IMS-organisatie is een Adobe-representatie van een klant. Alle Adobe-oplossingen met licentie zijn geïntegreerd met deze klantenorganisatie. Wanneer een IMS-organisatie gerechtigd is om toegang te verlenen [!DNL Experience Platform], kan zij toegang toewijzen aan ontwikkelaars. De IMS-organisatie-id (`x-gw-ims-org-id`) vertegenwoordigt de organisatie waarvoor een API-aanroep moet worden uitgevoerd en is daarom vereist als een header in alle API-aanvragen. Deze id kunt u vinden via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in het lusje van **Integraties** , navigeer aan de sectie van het **Overzicht** voor om het even welke bepaalde integratie om identiteitskaart onder de Geloofsbrieven **van de** Cliënt te vinden. Voor een geleidelijke analyse van hoe te voor authentiek te verklaren in [!DNL Platform], zie het [authentificatieleerprogramma](../tutorials/authentication.md).
+Een IMS-organisatie is een Adobe-representatie van een klant. Om het even welke vergunning gegeven Adobe oplossingen zijn geïntegreerd met deze klantenorganisatie. Wanneer een IMS-organisatie gerechtigd is om toegang te verlenen [!DNL Experience Platform], kan zij toegang toewijzen aan ontwikkelaars. De IMS-organisatie-id (`x-gw-ims-org-id`) vertegenwoordigt de organisatie waarvoor een API-aanroep moet worden uitgevoerd en is daarom vereist als een header in alle API-aanvragen. Deze id kunt u vinden via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in het lusje van **Integraties** , navigeer aan de sectie van het **Overzicht** voor om het even welke bepaalde integratie om identiteitskaart onder de Geloofsbrieven **van de** Cliënt te vinden. Voor een geleidelijke analyse van hoe te voor authentiek te verklaren in [!DNL Platform], zie het [authentificatieleerprogramma](../tutorials/authentication.md).
 
 ## Waar kan ik mijn API-sleutel vinden? {#where-can-i-find-my-api-key}
 
@@ -142,7 +142,7 @@ De volgende statuscodes kunnen worden gevonden op elke [!DNL Experience Platform
 
 | Statuscode | Beschrijving | Mogelijke oorzaken |
 --- | --- | ---
-| 400 | Ongeldig verzoek | Het verzoek is onjuist samengesteld, bevat geen sleutelinformatie en/of bevat een onjuiste syntaxis. |
+| 400 | Ongeldig verzoek | Het verzoek is niet correct samengesteld, bevat geen sleutelinformatie en/of bevat een onjuiste syntaxis. |
 | 401 | Verificatie mislukt | De aanvraag heeft geen verificatiecontrole doorstaan. Uw toegangstoken ontbreekt of is ongeldig. Zie de [sectie voor tokenfouten](#oauth-token-is-missing) hieronder voor meer informatie. |
 | 403 | Verboden | De bron is gevonden, maar u hebt niet de juiste referenties om deze te bekijken. |
 | 404 | Niet gevonden | De gevraagde bron is niet gevonden op de server. De bron is mogelijk verwijderd of het gevraagde pad is onjuist ingevoerd. |
@@ -172,7 +172,7 @@ Dit foutbericht wordt weergegeven wanneer een `Authorization` koptekst ontbreekt
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer het toegangstoken in de `Authorization` koptekst niet geldig is. Controleer of het token correct is ingevoerd of [genereer een nieuw token](../tutorials/authentication.md) in de Adobe I/O-console.
+Dit foutbericht wordt weergegeven wanneer het toegangstoken in de `Authorization` koptekst niet geldig is. Controleer of het token correct is ingevoerd of [genereer een nieuw token](../tutorials/authentication.md) in de I/O-console van Adobe.
 
 ### API-sleutel is vereist
 
@@ -194,7 +194,7 @@ Dit foutbericht wordt weergegeven wanneer een API-sleutelheader (`x-api-key`) on
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer de waarde van de opgegeven API-sleutelheader (`x-api-key`) ongeldig is. Controleer of u de sleutel correct hebt ingevoerd voordat u het opnieuw probeert. Als u de API-sleutel niet kent, vindt u deze in de [Adobe I/O-console](https://console.adobe.io): op het tabblad **Integraties** navigeert u naar de sectie **Overzicht** voor een specifieke integratie om de API-sleutel onder **Client Credentials** te vinden.
+Dit foutbericht wordt weergegeven wanneer de waarde van de opgegeven API-sleutelheader (`x-api-key`) ongeldig is. Controleer of u de sleutel correct hebt ingevoerd voordat u het opnieuw probeert. Als u de API-sleutel niet kent, vindt u deze in de I/O-console [van](https://console.adobe.io)Adobe: op het tabblad **Integraties** navigeert u naar de sectie **Overzicht** voor een specifieke integratie om de API-sleutel onder **Client Credentials** te vinden.
 
 
 ### Ontbrekende koptekst
@@ -217,7 +217,7 @@ Dit foutbericht wordt weergegeven wanneer een IMS org-header (`x-gw-ims-org-id`)
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer de gebruiker of Adobe I/O-integratie (geïdentificeerd door het [toegangstoken](#how-do-i-get-an-access-token) in de `Authorization` koptekst) niet het recht heeft om aanroepen uit te voeren naar API&#39; [!DNL Experience Platform] s voor de IMS-organisatie die in de `x-gw-ims-org-id` koptekst is opgegeven. Controleer of u de juiste id voor uw IMS-organisatie in de koptekst hebt opgegeven voordat u het opnieuw probeert. Als u uw organisatie-id niet kent, vindt u deze in de [Adobe I/O-console](https://console.adobe.io): op het tabblad **Integraties** navigeert u naar de sectie **Overzicht** voor een specifieke integratie om de id onder **Client Credentials** te vinden.
+Dit foutbericht wordt weergegeven wanneer de gebruiker of Adobe I/O-integratie (geïdentificeerd door het [toegangstoken](#how-do-i-get-an-access-token) in de `Authorization` koptekst) niet het recht heeft om aanroepen uit te voeren naar API&#39; [!DNL Experience Platform] s voor de IMS-organisatie die in de `x-gw-ims-org-id` koptekst is opgegeven. Controleer of u de juiste id voor uw IMS-organisatie in de koptekst hebt opgegeven voordat u het opnieuw probeert. Als u uw organisatie-id niet kent, vindt u deze in de I/O-console [van](https://console.adobe.io)Adobe: op het tabblad **Integraties** navigeert u naar de sectie **Overzicht** voor een specifieke integratie om de id onder **Client Credentials** te vinden.
 
 ### Geldig inhoudstype niet opgegeven
 
