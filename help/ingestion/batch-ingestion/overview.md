@@ -200,7 +200,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Grote bestandsupload - volgende onderdelen uploaden
 
-Nadat het bestand is gemaakt, kunnen alle volgende hoofdstukken worden geüpload door herhaalde PATCH-aanvragen te maken, één voor elke sectie van het bestand.
+Nadat het bestand is gemaakt, kunnen alle volgende elementen worden geüpload door herhaalde PATCH-aanvragen te maken, één voor elke sectie van het bestand.
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
