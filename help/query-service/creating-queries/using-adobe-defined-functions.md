@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Door Adobe gedefinieerde functies
+title: Adobe-gedefinieerde functies
 topic: queries
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
@@ -14,16 +14,16 @@ ht-degree: 2%
 
 # Door Adobe gedefinieerde functies gebruiken
 
-Een van de grote onderscheidende factoren van Adobe is dat zij ervaren gegevens begrijpen en weten wat klanten met die gegevens moeten kunnen doen. U kunt dit inzicht gebruiken om hulpfuncties te bouwen die uw baan gemakkelijker maken.
+Eén van de Adobe die grote verschillen in gegevens kennen, is dat ze weten wat klanten nodig hebben om dat te doen. U kunt dit inzicht gebruiken om hulpfuncties te bouwen die uw baan gemakkelijker maken.
 
-Dit document behandelt door Adobe gedefinieerde functies (ADF&#39;s) ter ondersteuning van drie belangrijke [!DNL Analytics] activiteiten:
+Dit document behandelt Adobe-bepaalde functies (ADFs) om drie zeer belangrijke [!DNL Analytics] activiteiten te steunen:
 - [Sessionering](#sessionization)
 - [Attributie](#attribution)
 - [Padcontrole](#pathing)
 
 ## Sessionering
 
-De `SESS_TIMEOUT()` reproduceren de bezoekersgroepen die bij Adobe Analytics zijn gevonden. Het voert een gelijkaardige op tijd-gebaseerde groepering uit, maar met klantgerichte parameters.
+De `SESS_TIMEOUT()` reproduceren de bezoeken die met Adobe Analytics werden gevonden. Het voert een gelijkaardige op tijd-gebaseerde groepering uit, maar met klantgerichte parameters.
 
 **Syntaxis:**
 
@@ -89,7 +89,7 @@ LIMIT 31;
 
 De attributie is hoe u metriek of omzettingen zoals opbrengst, orde, of sign-ups aan uw marketing inspanningen toewijst.
 
-In Adobe Analytics worden attributie-instellingen geconfigureerd met behulp van variabelen zoals eVars en worden deze gegenereerd wanneer gegevens worden ingevoerd.
+In Adobe Analytics worden attributie-instellingen geconfigureerd met behulp van variabelen zoals eVars en worden ze gegenereerd wanneer gegevens worden ingevoerd.
 
 De Attribution ADFs die in worden gevonden [!DNL Query Service] staat die toewijzingen toe om bij vraagtijd worden bepaald en worden geproduceerd.
 
@@ -243,7 +243,7 @@ LIMIT 10;
 
 ## Aanvullende bronnen
 
-De volgende video toont hoe te om vragen in de interface van het Adobe Experience Platform en in een cliënt in werking te stellen PSQL. Bovendien gebruikt de video ook voorbeelden waarbij afzonderlijke eigenschappen in een XDM-object zijn betrokken, waarbij gebruik wordt gemaakt van door Adobe gedefinieerde functies en gebruik wordt gemaakt van CREATE TABLE AS SELECT (CTAS).
+De volgende video toont hoe te om vragen in de interface van het Adobe Experience Platform en in een cliënt in werking te stellen PSQL. Bovendien gebruikt de video ook voorbeelden met afzonderlijke eigenschappen in een XDM-object, met gebruik van door Adobe gedefinieerde functies en met gebruik van CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
