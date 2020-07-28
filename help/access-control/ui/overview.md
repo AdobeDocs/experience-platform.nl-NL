@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Gebruikershandleiding voor toegangsbeheer
 
-Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende [!DNL Platform] mogelijkheden beheren met de [Adobe-Admin Console](https://adminconsole.adobe.com). Dit document dient als richtlijn voor hoe te om toegangsbeheer [!DNL Admin Console] te beheren voor [!DNL Platform]. Voor een overzicht op hoog niveau van toegangsbeheer in [!DNL Experience Platform], zie het [toegangsbeheeroverzicht](./../home.md).
+Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende [!DNL Platform] mogelijkheden beheren met de [Adobe Admin Console](https://adminconsole.adobe.com). Dit document dient als richtlijn voor hoe te om toegangsbeheer [!DNL Admin Console] te beheren voor [!DNL Platform]. Voor een overzicht op hoog niveau van toegangsbeheer in [!DNL Experience Platform], zie het [toegangsbeheeroverzicht](./../home.md).
 
 De volgende taken worden behandeld:
 
