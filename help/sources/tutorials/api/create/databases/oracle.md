@@ -53,7 +53,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -69,7 +69,7 @@ POST /connections
 
 **Verzoek**
 
-Om een [!DNL Oracle] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het POST- verzoek worden verstrekt. De verbindingsspecificatie-id voor [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`.
+Om een [!DNL Oracle] verbinding tot stand te brengen, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De verbindingsspecificatie-id voor [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`.
 
 ```shell
 curl -X POST \
