@@ -398,36 +398,36 @@ https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Een pijplijnengine maken {#create-engine-api}
 
-Zodra u uw het beeldplaats van de Docker hebt, kunt u een motor [van de eigenschappijpleiding tot stand](../api/engines.md#feature-pipeline-docker) brengen gebruikend [!DNL Sensei Machine Learning] API door POST aan uit te voeren `/engines`. Het creëren van een motor van de eigenschappijpleiding voorziet u van een unieke identiteitskaart van de Motor (`id`). Sla deze waarde op voordat u doorgaat.
+Zodra u uw het beeldplaats van de Docker hebt, kunt u een motor [van de eigenschappijpleiding](../api/engines.md#feature-pipeline-docker) tot stand brengen gebruikend [!DNL Sensei Machine Learning] API door een POST aan uit te voeren `/engines`. Het creëren van een motor van de eigenschappijpleiding voorziet u van een unieke identiteitskaart van de Motor (`id`). Sla deze waarde op voordat u doorgaat.
 
 ### Een MLInstance maken {#create-mlinstance}
 
-Gebruikend uw onlangs gecreeerd `engineID`, moet u een MLIstance [](../api/mlinstances.md#create-an-mlinstance) tot stand brengen door een POST verzoek aan het `/mlInstance` eindpunt te maken. Een succesvolle reactie keert een lading terug die de details van pas gecreëerde MLInstance met inbegrip van zijn uniek herkenningsteken (`id`) bevat die in de volgende API vraag wordt gebruikt.
+Gebruikend uw onlangs gecreeerd `engineID`, moet u een MLIstance [](../api/mlinstances.md#create-an-mlinstance) creëren door een verzoek van de POST aan het `/mlInstance` eindpunt te maken. Een succesvolle reactie keert een lading terug die de details van pas gecreëerde MLInstance met inbegrip van zijn uniek herkenningsteken (`id`) bevat die in de volgende API vraag wordt gebruikt.
 
 ### Een experiment maken {#create-experiment}
 
-Vervolgens moet u een [expert](../api/experiments.md#create-an-experiment)maken. Om een Experiment tot stand te brengen moet u uw uniek herkenningsteken MLIstance (`id`) hebben en een verzoek van de POST aan het `/experiment` eindpunt indienen. Een geslaagde reactie retourneert een payload die de details bevat van de nieuwe Experiment, inclusief de unieke id (`id`) die wordt gebruikt in de volgende API-aanroep.
+Vervolgens moet u een [expert](../api/experiments.md#create-an-experiment)maken. Om een Experiment tot stand te brengen moet u uw uniek herkenningsteken MLIstance (`id`) hebben en een verzoek van de POST tot het `/experiment` eindpunt richten. Een geslaagde reactie retourneert een payload die de details bevat van de nieuwe Experiment, inclusief de unieke id (`id`) die wordt gebruikt in de volgende API-aanroep.
 
 ### Specificeer de de eigenschappijpleidingstaak van de in werking stellen Experimenteer {#specify-feature-pipeline-task}
 
-Nadat u een experiment hebt gemaakt, moet u de modus Experimenteren wijzigen in `featurePipeline`. Om de wijze te veranderen, maak een extra POST aan [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) met uw `EXPERIMENT_ID` en in het lichaam verzenden `{ "mode":"featurePipeline"}` om een looppas van de eigenschappijpleiding van de Experiment te specificeren.
+Nadat u een experiment hebt gemaakt, moet u de modus Experimenteren wijzigen in `featurePipeline`. Om de wijze te veranderen, maak een extra POST aan [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) met uw `EXPERIMENT_ID` en in het lichaam verzendt `{ "mode":"featurePipeline"}` om een looppas van de eigenschappijpleiding van de Experiment te specificeren.
 
-Zodra volledig, doe een GET verzoek om `/experiments/{EXPERIMENT_ID}` de experimentstatus [terug te](../api/experiments.md#retrieve-specific) winnen en op de status van de Experiment te wachten om te voltooien.
+Als de bewerking is voltooid, vraagt u de GET om de status `/experiments/{EXPERIMENT_ID}` van het experiment op te [](../api/experiments.md#retrieve-specific) halen en wacht u tot de status van het experiment is bijgewerkt.
 
 ### De trainingstaak voor het uitvoeren van de Experimentele taak opgeven {#training}
 
-Vervolgens moet u de [taak](../api/experiments.md#experiment-training-scoring)van de trainingsruntime opgeven. Maak een POST aan `experiments/{EXPERIMENT_ID}/runs` en in het lichaam plaatsen de wijze aan `train` en verzendt een serie van taken die uw trainingsparameters bevatten. Een geslaagde reactie retourneert een payload die de details van het gewenste experiment bevat.
+Vervolgens moet u de [taak](../api/experiments.md#experiment-training-scoring)van de trainingsruntime opgeven. Maak een POST aan `experiments/{EXPERIMENT_ID}/runs` en in het lichaam plaats de wijze aan `train` en verzendt een serie van taken die uw trainingsparameters bevatten. Een geslaagde reactie retourneert een payload die de details van het gewenste experiment bevat.
 
-Zodra volledig, doe een GET verzoek om `/experiments/{EXPERIMENT_ID}` de experimentstatus [terug te](../api/experiments.md#retrieve-specific) winnen en op de status van de Experiment te wachten om te voltooien.
+Als de bewerking is voltooid, vraagt u de GET om de status `/experiments/{EXPERIMENT_ID}` van het experiment op te [](../api/experiments.md#retrieve-specific) halen en wacht u tot de status van het experiment is bijgewerkt.
 
 ### De taak voor het uitvoeren van scoring op experimentele wijze opgeven {#scoring}
 
 >[!NOTE]
 > Als u deze stap wilt voltooien, moet u ten minste één voltooide training hebben die aan uw expert is gekoppeld.
 
-Nadat de training met succes is uitgevoerd, moet u de taak [van de](../api/experiments.md#experiment-training-scoring)scoringbewerking opgeven. Stel POST in op `experiments/{EXPERIMENT_ID}/runs` en in de hoofdtekst en stel het `mode` kenmerk in op score. Hierdoor start u de uitvoering van uw studieprogramma Experiment.
+Nadat de training met succes is uitgevoerd, moet u de taak [van de](../api/experiments.md#experiment-training-scoring)scoringbewerking opgeven. Stel een POST in op `experiments/{EXPERIMENT_ID}/runs` en in de hoofdtekst en stel het `mode` kenmerk in op &quot;score&quot;. Hierdoor start u de uitvoering van uw studieprogramma Experiment.
 
-Zodra volledig, doe een GET verzoek om `/experiments/{EXPERIMENT_ID}` de experimentstatus [terug te](../api/experiments.md#retrieve-specific) winnen en op de status van de Experiment te wachten om te voltooien.
+Als de bewerking is voltooid, vraagt u de GET om de status `/experiments/{EXPERIMENT_ID}` van het experiment op te [](../api/experiments.md#retrieve-specific) halen en wacht u tot de status van het experiment is bijgewerkt.
 
 Zodra het scoren heeft voltooid, zou uw eigenschappijpleiding operationeel moeten zijn.
 
