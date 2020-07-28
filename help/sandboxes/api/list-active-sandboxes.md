@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >In tegenstelling tot andere eindpunten die in Sandbox API worden verstrekt, is dit eindpunt beschikbaar voor alle gebruikers, met inbegrip van die zonder de toegangstoestemmingen van het Beleid Sandbox.
 
-U kunt een lijst maken van de zandbakken die voor de huidige gebruiker actief zijn door een GET verzoek aan het wortel (`/`) eindpunt te doen.
+U kunt een lijst maken van de sandboxen die actief zijn voor de huidige gebruiker door een GET-aanvraag in te dienen bij het basis(`/`) eindpunt.
 
 **API-indeling**
 
