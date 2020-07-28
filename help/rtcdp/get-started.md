@@ -1,8 +1,8 @@
 ---
-title: Aan de slag met Adobe Real-time Customer Data Platform
-seo-title: Aan de slag met Adobe Real-time Customer Data Platform
-description: Voorbeeldscenario voor Adobe Real-time Customer Data Platform
-seo-description: Voorbeeldscenario voor Adobe Real-time Customer Data Platform
+title: Aan de slag met het Adobe Real-time Platform voor klantgegevens
+seo-title: Aan de slag met het Adobe Real-time Platform voor klantgegevens
+description: Het scenario van de steekproef voor het Platform van de Gegevens van de Klant van Adobe in real time
+seo-description: Het scenario van de steekproef voor het Platform van de Gegevens van de Klant van Adobe in real time
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -12,11 +12,11 @@ ht-degree: 0%
 ---
 
 
-# Aan de slag met Adobe Real-time Customer Data Platform
+# Aan de slag met het Adobe Real-time Platform voor klantgegevens
 
-Deze gids Aan de slag leidt u door een steekproefimplementatie van het Platform van de Gegevens van de Klant van Adobe in real time (CDP in real time). U kunt dit als voorbeeld gebruiken wanneer u uw eigen implementatie instelt. Hoewel in deze handleiding specifieke voorbeelden worden gegeven, wordt er een koppeling gemaakt naar aanvullende informatie die u kunt gebruiken tijdens het maken van uw instellingen.
+Deze gids aan de slag leidt u door een steekproefimplementatie van het Platform van de Gegevens van de Klant van de Adobe in real time (in real time CDP). U kunt dit als voorbeeld gebruiken wanneer u uw eigen implementatie instelt. Hoewel in deze handleiding specifieke voorbeelden worden gegeven, wordt er een koppeling gemaakt naar aanvullende informatie die u kunt gebruiken tijdens het maken van uw instellingen.
 
-In dit voorbeeld wordt de kracht van het Platform voor klantgegevens in realtime van Adobe, aangedreven door Adobe Experience Platform, getoond:
+Dit voorbeeld toont de macht van het Platform van de Gegevens van de Klant van de Adobe in real time, aangedreven door Adobe Experience Platform, aan:
 
 * Gegevens uit meerdere bronnen samenvoegen
 * Deze samenvoegen tot één geheel [!DNL real-time customer profile]
@@ -77,7 +77,7 @@ Een niet-geïdentificeerde bezoeker navigeert bijvoorbeeld naar het gedeelte Men
 
 ![afbeelding](assets/luma-sweatshirts.png)
 
-Wanneer de klant klikt om meer over deze producten te weten te komen, worden deze productweergaven verzameld in Adobe Analytics en verzonden naar [!DNL Experience Platform].
+Aangezien de klant klikt om meer over deze producten te leren, worden deze productmeningen verzameld in Adobe Analytics en verzonden naar [!DNL Experience Platform].
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
@@ -110,7 +110,7 @@ Ze klikt op de homepage om nog wat meer te bladeren.
 
 Sarah krijgt een persoonlijke homepage-ervaring die dynamisch wordt opgeleverd, gebaseerd op haar [!DNL Real-time Customer Profile] in Adobe Experience Platform.
 
-Ze ziet relevante inhoud dankzij de personalisatie van Adobe Sensei in Adobe Target, die rekening houdt met haar eerdere aankopen en affiniteit voor het runnen van kleding en uitrusting. Luma maakt de inhoud van de mannencatalogus ook geschikt voor loopwerk voor mannen op basis van haar meest recente browse.
+Ze ziet relevante inhoud, dankzij de personalisatie van Adobe Sensei in Adobe Target, die rekening houdt met haar eerdere aankopen en haar affiniteit voor het runnen van kleding en uitrusting. Luma maakt de inhoud van de mannencatalogus ook geschikt voor loopwerk voor mannen op basis van haar meest recente browse.
 
 Verder op de pagina ziet u Sarah als aanbevolen producten en een nieuwe aanbevolen lade op basis van haar meest recent bekeken artikelen.
 
@@ -120,7 +120,7 @@ Deze persoonlijke inhoud helpt Sarah snel relevante items te vinden. Dit verhoog
 
 Sarah wordt afgeleid en verlaat de site en beëindigt haar sessie. Luma kan haar gegevens in Adobe Experience Platform gebruiken om haar terug naar de site te brengen.
 
-Adobe Real-time Customer Data Platform, aangedreven door Adobe Experience Platform, is gebouwd voor het beheer van de klantervaring. Organisaties kunnen:
+Adobe Het Platform van de Gegevens van de Klant in real time, aangedreven door Adobe Experience Platform, wordt gebouwd voor het beheer van de klantenervaring. Organisaties kunnen:
 
 * Gegevensintegratie en -activering vereenvoudigen
 * Bekend en onbekend gegevensgebruik beheren
@@ -134,8 +134,8 @@ Het team bij Luma heeft al hun gedrag en klantgegevens op één plaats.
 
 Ze kunnen gegevens uit alle volgende bronnen invoeren:
 
-* Gegevens van bestaande Adobe Experience Cloud-oplossingen
-* Niet-Adobe-bronnen, zoals het loyaliteitsprogramma van Luma, callcenter en systeemgegevens van het verkooppunt
+* Bestaande Adobe Experience Cloud-oplossingsgegevens
+* Niet-Adobe bronnen, zoals het loyaliteitsprogramma van Luma, callcenter, en punt-van-verkoop systeemgegevens
 * Streaming gegevens in realtime uit Luminagegegevensbronnen
 * Real-time gegevens van Adobe-oplossingen (geen nieuwe tags vereist)
 
@@ -236,8 +236,8 @@ Als je het segment &quot;Gift Giving Cart Abandoner&quot; hebt toegevoegd, kun j
 
 Klik op **[!UICONTROL Verzenden naar doelen]**.
 
-In Adobe Real-time CDP kan Luma naadloos op hun publiekssegmenten voor verpersoonlijking handelen.\
-Hier ziet u alle bestemmingen die beschikbaar zijn voor Luma om deze bestemming naar te sturen, zowel Adobe- als niet-Adobe-oplossingen:
+In Adobe Real-time CDP, kan Luma naadloos op hun publiekssegmenten voor verpersoonlijking handelen.\
+Hier zien wij alle bestemmingen beschikbaar voor Luma om deze bestemming naar, zowel Adobe als niet-Adobe oplossingen te verzenden:
 
 ![afbeelding](assets/luma-dest.png)
 
