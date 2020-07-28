@@ -12,7 +12,7 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Data Governance] en [!DNL Privacy] zelfstudies
+# [!DNL Data Governance] en [!DNL Privacy] Tutorials
 
 [!DNL Data Usage Labeling and Enforcement] (DULE) is het kernmechanisme van Adobe Experience Platform [!DNL Data Governanc]e. De eigenschappen DULE laten u toe om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen, die elk volgens het verwante beleid van het gegevensgebruik categoriseren. Voordat u aan de slag gaat met labels, raadpleegt u het overzicht [van](../data-governance/home.md) gegevensbeheer voor een robuustere inleiding op het DULE-framework binnen [!DNL Platform].
 
@@ -36,4 +36,4 @@ De segmenten die voor gebruik in worden toegelaten [!DNL Real-time Customer Prof
 
 ## Get started with [!DNL Privacy Service]
 
-[!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u de persoonlijke gegevens van uw betrokkenen (klanten) kunt beheren in alle Adobe Experience Cloud-toepassingen. [!DNL Privacy Service] voorziet ook een centraal controle en registrerenmechanisme dat u toestaat om tot de status en de resultaten van banen toegang te hebben die [!DNL Experience Cloud] toepassingen impliceren. Voor instructies die tonen hoe te om [!DNL Privacy Service] banen tot stand te brengen en te controleren, volg de stappen die in de de ontwikkelaarsgids [van de](../privacy-service/api/getting-started.md) Privacy Service of de [gebruikershandleiding](../privacy-service/ui/overview.md)van de Privacy Service worden verstrekt.
+[!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u de persoonlijke gegevens van uw betrokkenen (klanten) in Adobe Experience Cloud-toepassingen kunt beheren. [!DNL Privacy Service] voorziet ook een centraal controle en registrerenmechanisme dat u toestaat om tot de status en de resultaten van banen toegang te hebben die [!DNL Experience Cloud] toepassingen impliceren. Voor instructies die tonen hoe te om [!DNL Privacy Service] banen tot stand te brengen en te controleren, volg de stappen die in de de ontwikkelaarsgids [van de](../privacy-service/api/getting-started.md) Privacy Service of de [gebruikershandleiding](../privacy-service/ui/overview.md)van de Privacy Service worden verstrekt.
