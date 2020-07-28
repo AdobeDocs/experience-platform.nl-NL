@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Effectief beleid weergeven
 
-Om efficiënt beleid voor de huidige gebruiker te bekijken, doe een POST- verzoek aan het `/acl/effective-policies` eindpunt in [!DNL Access Control] API. De toestemmingen en middeltypes u wilt terugwinnen moeten in de verzoeklading in de vorm van een serie worden verstrekt. Dit wordt geïllustreerd in de voorbeeld-API-aanroep hieronder.
+Om efficiënt beleid voor de huidige gebruiker te bekijken, doe een verzoek van de POST aan het `/acl/effective-policies` eindpunt in [!DNL Access Control] API. De toestemmingen en middeltypes u wilt terugwinnen moeten in de verzoeklading in de vorm van een serie worden verstrekt. Dit wordt geïllustreerd in de voorbeeld-API-aanroep hieronder.
 
 **API-indeling**
 
@@ -73,7 +73,7 @@ Deze sectie bevat aanvullende informatie voor het gebruik van de [!DNL Access Co
 
 ### Toegelaten toestemmingen en middeltypes
 
-Het volgende is een lijst van toestemmingen en middeltypes u in de lading van een POST- verzoek aan het `/acl/active-permissions` eindpunt kunt omvatten.
+Het volgende is een lijst van toestemmingen en middeltypes u in de lading van een verzoek van de POST aan het `/acl/active-permissions` eindpunt kunt omvatten.
 
 **Toestemmingen**
 
