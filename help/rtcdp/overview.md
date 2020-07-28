@@ -12,19 +12,19 @@ ht-degree: 0%
 ---
 
 
-# Overzicht van het Platform voor klantgegevens in realtime van Adobe
+# Adobe Real-time overzicht van het Platform voor klantgegevens
 
-Het Adobe Experience Platform van de Gegevens van de Klant van Adobe in real time (CDP in real time) is gebaseerd op Platform van de Gegevens van de Klant van Adobe helpt bedrijven bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samenbrengen om klantenprofielen tot stand te brengen die kunnen worden gebruikt om gepersonaliseerde klantenervaringen over alle kanalen en apparaten in echt te verstrekken - tijd.
+Het Platform van de Gegevens van de Klant van de Adobe in real time (in real time CDP) is gebaseerd op Adobe Experience Platform, helpt bedrijven bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samenbrengen om klantenprofielen tot stand te brengen die kunnen worden gebruikt om gepersonaliseerde klantenervaringen over alle kanalen en apparaten in echt te verstrekken - tijd.
 
 CDP in real time omvat hulpmiddelen voor gegevensbeheer, identiteitsbeheer, geavanceerde segmentatie, en gegevenswetenschap zodat u profielen kunt bouwen en publiek bepalen, evenals rijke inzichten af te leiden terwijl het kunnen strikte beleid van het gegevensbeheer afdwingen.
 
-Adobe Real-time Customer Data Platform maakt verbinding met een groot ecosysteem van partners, om nog maar te zwijgen van de native integratie met Adobe Experience Cloud, zodat u dit publiek naadloos kunt activeren en klanten overal een geweldige ervaring kunt bieden, van on-site of in-app personalisatie tot e-mail, betaalde media, callcenters, aangesloten apparaten en nog veel meer.
+Het Adobe Real-time Platform van de Gegevens van de Klant verbindt met een groot ecosysteem van partners, om het even welke inheemse integratie met Adobe Experience Cloud te noemen, zodat kunt u deze toehoorders naadloos activeren en grote klantenervaringen over alle kanalen, van onsite of in-app verpersoonlijking aan e-mail, betaalde media, callcenters, aangesloten apparaten, en meer leveren.
 
 Met het Platform van de Gegevens van de Klant in real time, kunt u:
 
 * Bereik één enkele mening van uw klant door gegevens van over de onderneming te combineren.
 * Beheer profielen op verantwoordelijke wijze met vertrouwde governance en privacycontroles voor bekende en anonieme id&#39;s.
-* Genereer activeerbare inzichten en schaal publiek met AI en machine leren aangedreven door Adobe Sensei en gebouwd voor marketers.
+* Maak actionable inzichten en schaal publiek met AI en machine leren aangedreven door Adobe Sensei en gebouwd voor marketers.
 * Lever gepersonaliseerde ervaringen in real time over alle kanalen en bestemmingen.
 
 ## Extra informatie
