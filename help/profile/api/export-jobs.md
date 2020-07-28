@@ -92,7 +92,7 @@ Een succesvolle reactie keert een serie terug die read-only, systeem-geproduceer
 
 ### Exporttaak starten {#initiate}
 
-Zodra u een unie-persisterende dataset hebt, kunt u een uitvoerbaan tot stand brengen om de gegevens van het Profiel aan de dataset voort te zetten door een POST- verzoek aan het `/export/jobs` eindpunt in Real-time API van het Profiel van de Klant te richten en de details van de gegevens te verstrekken u in het lichaam van het verzoek wenst om uit te voeren.
+Zodra u een unie-persisterende dataset hebt, kunt u een uitvoerbaan tot stand brengen om de gegevens van het Profiel aan de dataset voort te zetten door een verzoek van de POST aan het `/export/jobs` eindpunt in Real-time het Profiel API van de Klant te richten en de details van de gegevens te verstrekken u in het lichaam van het verzoek wenst om uit te voeren.
 
 **API-indeling**
 
@@ -185,7 +185,7 @@ Een succesvolle reactie keert een dataset terug die met de gegevens van het Prof
 
 ## Alle exporttaken weergeven
 
-U kunt een lijst van alle uitvoerbanen voor een bepaalde organisatie terugkeren IMS door een GET verzoek aan het `export/jobs` eindpunt uit te voeren. Het verzoek steunt ook de vraagparameters `limit` en `offset`, zoals hieronder getoond.
+U kunt een lijst van alle uitvoerbanen voor een bepaalde organisatie terugkeren IMS door een verzoek van de GET aan het `export/jobs` eindpunt uit te voeren. Het verzoek steunt ook de vraagparameters `limit` en `offset`, zoals hieronder getoond.
 
 **API-indeling**
 
@@ -331,7 +331,7 @@ De reactie bevat een `records` object dat de exporttaken bevat die door uw IMS-o
 
 ## Exportvoortgang volgen
 
-Om de details van een specifieke uitvoerbaan te bekijken, of zijn status te controleren aangezien het verwerkt, kunt u een GET verzoek aan het `/export/jobs` eindpunt indienen en de `id` van de uitvoerbaan in de weg omvatten. De exporttaak is voltooid wanneer het `status` veld de waarde &quot;SUCCEEDED&quot; retourneert.
+Als u de details van een specifieke exporttaak wilt bekijken of de status wilt controleren terwijl deze wordt verwerkt, kunt u een verzoek van de GET indienen bij het `/export/jobs` eindpunt en de status `id` van de exporttaak in het pad opnemen. De exporttaak is voltooid wanneer het `status` veld de waarde &quot;SUCCEEDED&quot; retourneert.
 
 **API-indeling**
 
@@ -408,7 +408,7 @@ curl -X GET \
 
 ## Een exporttaak annuleren
 
-Met Experience Platform kunt u een bestaande exporttaak annuleren. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de exporttaak niet is voltooid of vastgelopen in het verwerkingsstadium. Als u een exporttaak wilt annuleren, kunt u een DELETE aanvraag naar het `/export/jobs` eindpunt uitvoeren en de `id` exporttaak opnemen die u naar het aanvraagpad wilt annuleren.
+Met Experience Platform kunt u een bestaande exporttaak annuleren. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de exporttaak niet is voltooid of vastgelopen in het verwerkingsstadium. Als u een exporttaak wilt annuleren, kunt u een DELETE-aanvraag naar het `/export/jobs` eindpunt uitvoeren en de taak `id` van de exporttaak opnemen die u wilt annuleren naar het aanvraagpad.
 
 **API-indeling**
 
