@@ -45,7 +45,7 @@ De volgende video is ontworpen ter ondersteuning van uw inzicht in de AI van de 
 
 ## Hoe werkt het?
 
-De AI van de klant werkt door bestaande gegevens van de Gebeurtenis van de Consumentenervaring te analyseren om karn of de scores van de omzetneigheidswaarde te voorspellen. Adobe beseft dat de definitie van kurn en conversie niet overal gelijk is en daarom kunt u aangepaste doeldoelen definiëren als een reeks voorwaarden. U kunt het voorspelde doel vormen zolang de gebeurtenis van belang binnen de gegevens van de de Gebeurtenis van de Ervaring van de consument van de input aanwezig is.
+De AI van de klant werkt door bestaande gegevens van de Gebeurtenis van de Consumentenervaring te analyseren om karn of de scores van de omzetneigheidswaarde te voorspellen. Adobe realiseert zich dat de definitie van kurn en omzetting niet over alle gebruiksgevallen uniform is en om deze reden, hebt u de capaciteit om douanedoeldoelstellingen als reeks voorwaarden te bepalen. U kunt het voorspelde doel vormen zolang de gebeurtenis van belang binnen de gegevens van de de Gebeurtenis van de Ervaring van de consument van de input aanwezig is.
 
 ## Volgende stappen
 
