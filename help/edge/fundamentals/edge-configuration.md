@@ -18,7 +18,7 @@ De configuratie voor het Adobe Experience Platform [!DNL Web SDK] wordt gesplits
 
 ## Een Edge-configuratie-id maken
 
-Edge-configuratie-id&#39;s kunnen in Adobe worden gemaakt [!DNL Launch] met het gereedschap voor randconfiguratie. Met dit gereedschap kunt u zowel de randconfiguratie als omgevingen binnen die configuraties maken.
+De de configuratie IDs van de rand kan in Adobe worden gecreeerd [!DNL Launch] gebruikend het hulpmiddel van de randconfiguratie. Met dit gereedschap kunt u zowel de randconfiguratie als omgevingen binnen die configuraties maken.
 
 ![Edge Configuration Tool navigation](../../assets/edge_configuration_nav.png)
 
@@ -104,7 +104,7 @@ Adobe raadt u aan dit anders in te stellen voor elk van uw `dev`-, `stage`- en `
 
 Alles wat nodig is om gegevens naar de Adobe Audience Manager te verzenden, moet deze sectie inschakelen. De andere instellingen zijn optioneel, maar worden aangemoedigd.
 
-![Instellingenblok Adobe Audience Manage](../../assets/edge_configuration_aam.png)
+![Adobe Publiek beheren, instellingenblok](../../assets/edge_configuration_aam.png)
 
 ##### [!UICONTROL Cookie-doelen ingeschakeld]
 
@@ -116,10 +116,10 @@ Staat SDK toe om segmentinformatie via Doelen [URL](https://docs.adobe.com/conte
 
 #### Adobe Analytics
 
-Hiermee bepaalt u of gegevens naar Adobe Analytics worden verzonden. Meer informatie vindt u in het overzicht [van](../solution-specific/analytics/analytics-overview.md)Analytics.
+Bepaalt of gegevens naar Adobe Analytics worden verzonden. Meer informatie vindt u in het overzicht [van](../solution-specific/analytics/analytics-overview.md)Analytics.
 
 ![Adobe Analytics Settings Block](../../assets/edge_configuration_aa.png)
 
 ##### [!UICONTROL Rapportsuite-id]
 
-De rapportsuite vindt u in de sectie Adobe Analytics Admin onder [!UICONTROL Admin > ReportSuites]. Als de veelvoudige rapportreeksen worden gespecificeerd, dan worden de gegevens gekopieerd aan elke rapportreeks.
+De rapportsuite vindt u in de sectie Adobe Analytics Admin onder [!UICONTROL Beheer > ReportSuites]. Als de veelvoudige rapportreeksen worden gespecificeerd, dan worden de gegevens gekopieerd aan elke rapportreeks.
