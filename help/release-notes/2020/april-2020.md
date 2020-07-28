@@ -30,7 +30,7 @@ Updates voor bestaande functies:
 
 ## [!DNL Intelligent Services] {#intelligent}
 
-[!DNL Intelligent Services] marketinganalisten en praktijkbeoefenaars in staat stellen de kracht van kunstmatige intelligentie en het leren van machines te benutten in gevallen waarin de klant gebruikmaakt van ervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap. Daarnaast kunnen marketingmedewerkers voorspellingen activeren in Adobe Experience Cloud-, Adobe Experience Platform- en andere toepassingen.
+[!DNL Intelligent Services] marketinganalisten en praktijkbeoefenaars in staat stellen de kracht van kunstmatige intelligentie en het leren van machines te benutten in gevallen waarin de klant gebruikmaakt van ervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap. Daarnaast kunnen marketingmedewerkers voorspellingen activeren in Adobe Experience Cloud, Adobe Experience Platform en toepassingen van derden.
 
 **Belangrijkste kenmerken**
 
@@ -47,7 +47,7 @@ Voor meer informatie over [!DNL Intelligent Services] en wat het moet aanbieden,
 
 ## [!DNL Experience Data Model] (XDM) System {#xdm}
 
-Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), aangestuurd door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
+Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), gedreven door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
 
 XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor om het even welke toepassing om met de diensten op Adobe Experience Platform te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier levert. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
 
@@ -90,22 +90,22 @@ Zie het overzicht [van](../../data-governance/home.md)gegevensbeheer voor meer i
 
 ## Doelen {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md)zijn doelen vooraf gebouwde integratie met doelplatforms die gegevens naadloos aan die partners activeren.
+In [Adobe Real-time het Platform](../../rtcdp/overview.md)van de Gegevens van de Klant, zijn de bestemmingen prebuilt integraties met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe bestemmingen**
 
-Adobe Real-time CDP ondersteunt nu gegevensactivering voor meer dan vijftig [!DNL Experience Cloud Launch] extensies, waardoor analyses, personalisatie en andere gebruiksgevallen mogelijk zijn. Zie hieronder voor meer informatie:
+Adobe CDP in real time steunt nu gegevensactivering aan meer dan vijftig [!DNL Experience Cloud Launch] uitbreidingen, toelatend analyses, verpersoonlijking, en andere gebruiksgevallen. Zie hieronder voor meer informatie:
 
 | Documentatie | Beschrijving |
 |--- | ---|
-| [Doeltypen en -categorieën](/help/rtcdp/destinations/destination-types.md) | Dit artikel verklaart het verschil tussen verbindingen en uitbreidingen in de interface van Adobe in real time CDP en adviseert wanneer om elk van deze bestemmingen te gebruiken. |
-| [Experience Platform Launch-extensies](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | Op deze pagina wordt uitgelegd wat [!DNL Launch] extensies zijn, worden gebruiksgevallen voor het gebruik ervan vermeld en worden koppelingen naar documentatie voor elke [!DNL Launch] extensie in Adobe Real-time CDP weergegeven. |
+| [Doeltypen en -categorieën](/help/rtcdp/destinations/destination-types.md) | Dit artikel verklaart het verschil tussen verbindingen en uitbreidingen in de Adobe in real time CDP interface en adviseert wanneer om elk van deze bestemmingen te gebruiken. |
+| [Experience Platform Launch-extensies](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | Deze pagina verklaart wat [!DNL Launch] uitbreidingen zijn, maakt een lijst van gebruiksgevallen voor het gebruiken van hen, en verbindingen aan documentatie voor elke [!DNL Launch] uitbreiding in Adobe in real time CDP. |
 
 Zie het overzicht [](/help/rtcdp/destinations/destinations-overview.md)Doelen voor meer informatie.
 
 ## [!DNL Privacy Service] {#privacy}
 
-De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het recht om tot hun persoonlijke gegevens van uw gegevensopslag toegang te hebben of te schrappen op verzoek. Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u deze gegevensaanvragen van uw klanten kunt beheren. Met [!DNL Privacy Service]kunt u aanvragen indienen voor toegang tot en verwijdering van persoonlijke of persoonlijke klantgegevens uit Adobe Experience Cloud-toepassingen, waardoor u gemakkelijker kunt voldoen aan wettelijke en organisatorische privacyregels.
+De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het recht om tot hun persoonlijke gegevens van uw gegevensopslag toegang te hebben of te schrappen op verzoek. Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u deze gegevensaanvragen van uw klanten kunt beheren. Met [!DNL Privacy Service]kunt u verzoeken indienen om toegang te krijgen tot persoonlijke of persoonlijke klantgegevens en deze te verwijderen uit Adobe Experience Cloud-toepassingen, waardoor u gemakkelijker kunt voldoen aan wettelijke en organisatorische privacyregels.
 
 **Nieuwe functies**
 
