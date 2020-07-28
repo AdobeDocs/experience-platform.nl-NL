@@ -5,13 +5,16 @@ title: Sandbox opzoeken
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: ef423a8c1b412315d03cddf7d8c351a232eb509b
+workflow-type: tm+mt
+source-wordcount: '204'
+ht-degree: 0%
 
 ---
 
 
 # Sandbox opzoeken
 
-U kunt een afzonderlijke sandbox opzoeken door een GET-aanvraag in te dienen die de `name` eigenschap van de sandbox in het aanvraagpad bevat.
+U kunt een afzonderlijke sandbox opzoeken door een verzoek in te dienen om de `name` eigenschap van de sandbox op te nemen in het aanvraagpad.
 
 **API-indeling**
 
