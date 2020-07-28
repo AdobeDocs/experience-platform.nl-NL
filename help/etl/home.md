@@ -37,7 +37,7 @@ Het volgende werkschemadiagram verstrekt een overzicht op hoog niveau voor de in
 
 Er zijn veelvoudige Experience Platform componenten betrokken bij ETL schakelaarintegratie. In de volgende lijst worden verschillende belangrijke componenten en functies beschreven:
 
-- **Adobe Identity Management System (IMS)** : biedt een framework voor verificatie van Adobe-services.
+- **Het Systeem van het Identity Management van Adobe (IMS)** - verstrekt kader voor authentificatie aan de diensten van Adobe.
 - **IMS-organisatie** - een organisatie die producten en diensten kan bezitten of in licentie kan geven en toegang kan verlenen tot haar leden.
 - **IMS-gebruiker** - leden van een IMS-organisatie. De relatie Organisatie met gebruiker is veel te veel.
 - **[!DNL Sandbox]** - Een virtuele partitie die één [!DNL Platform] instantie vormt, om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
@@ -198,7 +198,7 @@ De responsindeling is afhankelijk van het type Accept-header dat in de aanvraag 
 
 | Accepteren | Beschrijving |
 | ------ | ----------- |
-| `application/vnd.adobe.xed-id+json` | Aanvragen, titels, id&#39;s en versies van List (GET) |
+| `application/vnd.adobe.xed-id+json` | Aanvragen, titels, id&#39;s en versies van lijsten (GET) |
 | `application/vnd.adobe.xed-full+json; version={major version}` | $refs en allOf opgelost, heeft titels en beschrijvingen |
 | `application/vnd.adobe.xed+json; version={major version}` | Onbewerkt met $ref en alles, heeft titels en beschrijvingen |
 | `application/vnd.adobe.xed-notext+json; version={major version}` | Onbewerkt met $ref en alles, geen titels of beschrijvingen |
@@ -326,7 +326,7 @@ De reactie zal één dataset (`limit=1`) omvatten die het &quot;dossiers&quot;be
 
 ### Gegevenssetbestanden weergeven met het kenmerk &quot;files&quot;
 
-U kunt ook een GET-aanvraag gebruiken om bestandsgegevens op te halen met het kenmerk &quot;files&quot;.
+U kunt ook een verzoek van de GET gebruiken om dossierdetails te halen gebruikend het &quot;dossiers&quot;attribuut.
 
 **API-indeling**
 
@@ -552,7 +552,7 @@ De reactie kan naar één bestand of naar een map verwijzen. De details over elk
 
 ### Bestandsinhoud openen
 
-U [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) kunt de inhoud van een bepaald bestand openen met deze functie. Om de inhoud op te halen, wordt een GET verzoek gemaakt gebruikend de waarde voor `_links.self.href` wanneer het toegang tot van een dossier gebruikend dossieridentiteitskaart is teruggekeerd.
+U [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) kunt de inhoud van een bepaald bestand openen met deze functie. Als u de inhoud wilt ophalen, wordt een GET-aanvraag gedaan met de waarde die wordt geretourneerd `_links.self.href` wanneer u een bestand opent met de bestands-id.
 
 **Verzoek**
 
@@ -674,7 +674,7 @@ Nieuwe taken kunnen worden gepland als de vorige batch-&quot;status&quot;-waarde
 
 ### Laatste batchstatus ophalen op id
 
-Een individuele partijstatus kan door worden teruggewonnen [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) door een GET verzoek uit te geven gebruikend `{BATCH_ID}`. De `{BATCH_ID}` gebruikte id is hetzelfde als de id die wordt geretourneerd toen de batch werd gemaakt.
+Een individuele partijstatus kan door het worden teruggewonnen [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) door een verzoek van de GET uit te geven gebruikend `{BATCH_ID}`. De `{BATCH_ID}` gebruikte id is hetzelfde als de id die wordt geretourneerd toen de batch werd gemaakt.
 
 **Verzoek**
 
