@@ -20,7 +20,7 @@ Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het voeren van
 
 ### Verbindingsparameters aanvragen voor de interactieve service
 
-U kunt uw verbindingsparameters voor het gebruiken van de [interactieve dienst](../creating-queries/writing-queries.md) terugwinnen door een GET verzoek aan het `/connection_parameters` eindpunt te doen. Voor meer informatie over cliënten die verbindingsparameters gebruiken om via de interactieve dienst te verbinden, gelieve de documentatie op de cliënten [van de Dienst van de](../clients/overview.md)Vraag te lezen.
+U kunt uw verbindingsparameters voor het gebruiken van de [interactieve dienst](../creating-queries/writing-queries.md) terugwinnen door een verzoek van de GET aan het `/connection_parameters` eindpunt te doen. Voor meer informatie over cliënten die verbindingsparameters gebruiken om via de interactieve dienst te verbinden, gelieve de documentatie op de cliënten [van de Dienst van de](../clients/overview.md)Vraag te lezen.
 
 **API-indeling**
 
