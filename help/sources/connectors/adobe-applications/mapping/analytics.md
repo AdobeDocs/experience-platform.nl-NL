@@ -20,7 +20,7 @@ Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de An
 
 ## Directe toewijzingsvelden
 
-Bepaalde velden worden rechtstreeks toegewezen vanuit Adobe Analytics aan Experience Data Model (XDM).
+Bepaalde velden worden rechtstreeks toegewezen vanuit Adobe Analytics naar het XDM-model (Experience Data Model).
 
 De volgende tabel bevat kolommen met de naam van het Analytics-veld (*Analytics-veld*), het bijbehorende XDM-veld (*XDM-veld*) en het type veld (*XDM-type*) en een beschrijving van het veld (*Beschrijving*).
 
@@ -135,7 +135,7 @@ Deze velden hebben één bron, maar koppelen aan **meerdere** XDM-locaties.
 
 ## Gegenereerde toewijzingsvelden
 
-Selecteer velden die afkomstig zijn van ADC moeten worden getransformeerd. Hiervoor is meer logica dan een directe kopie van Adobe Analytics nodig om te worden gegenereerd in XDM.
+Selecteer velden die afkomstig zijn van ADC moeten worden getransformeerd. Voor het genereren in XDM is logica vereist die verder gaat dan een directe kopie van Adobe Analytics.
 
 De volgende tabel bevat kolommen met de naam van het Analytics-veld (*Analytics-veld*), het bijbehorende XDM-veld (*XDM-veld*) en het type veld (*XDM-type*) en een beschrijving van het veld (*Beschrijving*).
 
@@ -195,7 +195,7 @@ De volgende tabel bevat kolommen met de naam van het Analytics-veld (*Analytics-
 
 Selecteer velden (ook wel &quot;postwaarden&quot; genoemd) vereisen geavanceerdere transformaties voordat ze van Adobe Analytics-velden naar XDM (Experience Data Model) kunnen worden toegewezen. Wanneer u deze geavanceerde transformaties uitvoert, gebruikt u Adobe Experience Platform Query Service en vooraf gebouwde functies (zogenaamde door Adobe gedefinieerde functies) voor sessionisatie, attributie en deduplicatie.
 
-Meer informatie over het uitvoeren van deze transformaties met behulp van de Dienst van de Vraag, gelieve de [door Adobe bepaalde functiedocumentatie](../../../../query-service/sql/adobe-defined-functions.md) te bezoeken.
+Meer over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, gelieve de [Adobe-bepaalde functiedocumentatie](../../../../query-service/sql/adobe-defined-functions.md) te bezoeken.
 
 De volgende tabel bevat kolommen met de naam van het Analytics-veld (*Analytics-veld*), het bijbehorende XDM-veld (*XDM-veld*) en het type veld (*XDM-type*) en een beschrijving van het veld (*Beschrijving*).
 
