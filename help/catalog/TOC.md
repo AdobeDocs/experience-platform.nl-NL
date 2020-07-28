@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Help bij Catalog en Datasets
 translation-type: tm+mt
 source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
+workflow-type: tm+mt
+source-wordcount: '93'
+ht-degree: 0%
 
 ---
 
@@ -29,6 +32,6 @@ source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
    * [Gebruikershandleiding voor gegevensbestanden](datasets/user-guide.md)
    * [Een gegevensset maken en vullen met API&#39;s](datasets/create.md)
 * [Behandeling van een privacyverzoek in het Data Lake](privacy.md)
-* [Gegevensbescherming in het ervaringsplatform](data-protection.md)
+* [Gegevensbescherming in Experience Platform](data-protection.md)
 * [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
-* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
