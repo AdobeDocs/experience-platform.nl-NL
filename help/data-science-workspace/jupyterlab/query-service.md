@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Query-service in Jupyter-laptop
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 0%
@@ -38,13 +38,13 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] Als er niet automatisch een nieuw tabblad Launcher wordt weergegeven, opent u een nieuw tabblad Launcher door op **[!UICONTROL Bestand]** te klikken en vervolgens **[!UICONTROL Nieuwe startpagina]** te selecteren.
+   >[!NOTE] Als er niet automatisch een nieuw tabblad Launcher wordt weergegeven, opent u een nieuw tabblad Launcher door op **[!UICONTROL Bestand]** te klikken en vervolgens **[!UICONTROL Nieuwe startpagina]** te selecteren.
 
 2. Klik op het tabblad Launcher op het pictogram **[!UICONTROL Lege]** in een Python 3-omgeving om een lege laptop te openen.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   > [!NOTE] Python 3 is momenteel de enige ondersteunde omgeving voor Query Service in laptops.
+   >[!NOTE] Python 3 is momenteel de enige ondersteunde omgeving voor Query Service in laptops.
 
 3. Klik in de linkerselectieregel op het pictogram **[!UICONTROL Gegevens]** en dubbelklik op de map **[!UICONTROL Datasets]** om alle gegevenssets weer te geven.
 
