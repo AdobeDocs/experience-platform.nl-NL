@@ -12,19 +12,19 @@ ht-degree: 0%
 ---
 
 
-# Verbinding maken met streamingdoelen en gegevens activeren in het realtime Platform voor klantgegevens van Adobe met behulp van API&#39;s
+# Verbinding maken met streaming doelen en gegevens activeren in realtime Platforms van klantgegevens in Adobe met API&#39;s
 
 >[!NOTE]
 >
->De [!DNL Amazon Kinesis] en de [!DNL Azure Event Hubs] bestemmingen in Echte Adobe CDP in tijd zijn momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
+>De [!DNL Amazon Kinesis] en de [!DNL Azure Event Hubs] bestemmingen in Adobe in real time CDP zijn momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
-Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw Adobe Experience Platform-gegevens, een verbinding tot stand te brengen met een streamingbestemming voor cloudopslag ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) of [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), een dataflow te maken naar uw nieuwe bestemming en gegevens te activeren naar uw nieuwe bestemming.
+Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw Adobe Experience Platform-gegevens, een verbinding tot stand te brengen met een streamingbestemming voor cloudopslag ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) of [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), een dataflow te maken naar uw nieuwe, gemaakte bestemming en gegevens te activeren voor uw nieuwe, gemaakte bestemming.
 
 In deze zelfstudie wordt het [!DNL Amazon Kinesis] doel in alle voorbeelden gebruikt, maar de stappen zijn identiek voor [!DNL Azure Event Hubs].
 
 ![Overzicht - de stappen om een het stromen bestemming tot stand te brengen en segmenten te activeren](/help/rtcdp/destinations/assets/flow-prelim.png)
 
-Raadpleeg de zelfstudies voor [Connect a destination](../../rtcdp/destinations/connect-destination.md) en [Activate profielen and segments to a destination](../../rtcdp/destinations/activate-destinations.md) als u liever de gebruikersinterface in CDP in real-time van Adobe gebruikt om verbinding te maken met een doel en gegevens te activeren.
+Als u liever de gebruikersinterface in Adobe gebruikt om verbinding te maken met een doel in realtime en gegevens te activeren, raadpleegt u de zelfstudies voor [Connect een doel](../../rtcdp/destinations/connect-destination.md) en [Activate profielen en segmenten aan een doel](../../rtcdp/destinations/activate-destinations.md) .
 
 ## Aan de slag
 
@@ -34,7 +34,7 @@ Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Exper
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] is het registratiesysteem voor de gegevenslocatie en -lijn in het Experience Platform.
 * [Sandboxen](../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om gegevens aan het stromen bestemmingen in Echte Adobe CDP te activeren.
+De volgende secties verstrekken extra informatie die u zult moeten weten om gegevens aan het stromen bestemmingen in Adobe in real time CDP te activeren.
 
 ### Vereiste referenties verzamelen
 
@@ -62,7 +62,7 @@ De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken wor
 >[!Nofferte]
 >Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Experience Platform](../../sandboxes/home.md).
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -261,8 +261,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsSpeciaal identiteitskaart u in de stap verkrijgt [krijgt de lijst van beschikbare bestemmingen](#get-the-list-of-available-destinations).
 * `{AUTHENTICATION_CREDENTIALS}`: Vul de naam van uw streaming bestemming in, bijvoorbeeld: `Amazon Kinesis authentication credentials` of `Azure Event Hubs authentication credentials`.
-* `{ACCESS_ID}`: *Voor[!DNL Amazon Kinesis]verbindingen.* Uw toegangs-id voor de opslaglocatie van Amazon Kinesis.
-* `{SECRET_KEY}`: *Voor[!DNL Amazon Kinesis]verbindingen.* Uw geheime sleutel voor uw opslaglocatie van Amazon Kinesis.
+* `{ACCESS_ID}`: *Voor[!DNL Amazon Kinesis]verbindingen.* Uw toegangs-id voor uw Amazon Kinesis-opslaglocatie.
+* `{SECRET_KEY}`: *Voor[!DNL Amazon Kinesis]verbindingen.* Je geheime sleutel voor je Amazon Kinesis-opslaglocatie.
 * `{REGION}`: *Voor[!DNL Amazon Kinesis]verbindingen.* Het gebied in uw [!DNL Amazon Kinesis] account waar Adobe Real-Time CDP uw gegevens stroomt.
 * `{SAS_KEY_NAME}`: *Voor[!DNL Azure Event Hubs]verbindingen.* Vul uw SAS-sleutelnaam in. Meer informatie over verificatie [!DNL Azure Event Hubs] met SAS-toetsen vindt u in de documentatie [van](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
 * `{SAS_KEY}`: *Voor[!DNL Azure Event Hubs]verbindingen.* Vul uw SAS-sleutel in. Meer informatie over verificatie [!DNL Azure Event Hubs] met SAS-toetsen vindt u in de documentatie [van](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
@@ -317,9 +317,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`: Gebruik de basisverbindings-id die u in de bovenstaande stap hebt verkregen.
 * `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie u in de stap verkrijgt [krijgt de lijst van beschikbare bestemmingen](#get-the-list-of-available-destinations).
-* `{NAME_OF_DATA_STREAM}`: *Voor[!DNL Amazon Kinesis]verbindingen.* Geef de naam op van de bestaande gegevensstroom in uw [!DNL Amazon Kinesis] account. Adobe Real-time CDP exporteert gegevens naar deze stream.
-* `{REGION}`: *Voor[!DNL Amazon Kinesis]verbindingen.* Het gebied in uw Amazon Kinesis-account waarin Adobe Real-time CDP uw gegevens streamt.
-* `{EVENT_HUB_NAME}`: *Voor[!DNL Azure Event Hubs]verbindingen.* Vul de [!DNL Azure Event Hub] naam in waar Adobe Real-time CDP uw gegevens stroomt. Zie [Een gebeurtenishub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) maken in de [!DNL Microsoft] documentatie voor meer informatie.
+* `{NAME_OF_DATA_STREAM}`: *Voor[!DNL Amazon Kinesis]verbindingen.* Geef de naam op van de bestaande gegevensstroom in uw [!DNL Amazon Kinesis] account. Adobe In real time CDP zal gegevens naar deze stroom uitvoeren.
+* `{REGION}`: *Voor[!DNL Amazon Kinesis]verbindingen.* Het gebied in uw Amazon Kinesis-account waar Adobe Real-time CDP uw gegevens streamt.
+* `{EVENT_HUB_NAME}`: *Voor[!DNL Azure Event Hubs]verbindingen.* Vul de [!DNL Azure Event Hub] naam in waar Adobe Real-time CDP uw gegevens zal stromen. Zie [Een gebeurtenishub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) maken in de [!DNL Microsoft] documentatie voor meer informatie.
 
 **Antwoord**
 
@@ -337,9 +337,9 @@ Een geslaagde reactie retourneert de unieke id (`id`) voor de nieuwe doelverbind
 
 Met de id&#39;s die u in de vorige stappen hebt opgehaald, kunt u nu een gegevensstroom maken tussen de gegevens van het Experience Platform en de bestemming waarnaar u de gegevens wilt activeren. Beschouw deze stap als het construeren van de pijpleiding, waardoor de gegevens, tussen Experience Platform en uw gewenste bestemming later zullen stromen.
 
-Als u een gegevensstroom wilt maken, voert u een POST-verzoek uit, zoals hieronder wordt weergegeven, terwijl u de hieronder vermelde waarden opgeeft binnen de laadtijd.
+Om een gegevensstroom tot stand te brengen, voer een verzoek van de POST uit, zoals hieronder getoond, terwijl het verstrekken van de hieronder vermelde waarden binnen de lading.
 
-Voer het volgende POST- verzoek uit om een gegevensstroom tot stand te brengen.
+Voer het volgende verzoek van de POST uit om een gegevensstroom tot stand te brengen.
 
 **API-indeling**
 
@@ -396,7 +396,7 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom en e
 
 Nadat u alle verbindingen en de gegevensstroom hebt gemaakt, kunt u nu uw profielgegevens activeren op het streamingplatform. In deze stap selecteert u welke segmenten en welke profielkenmerken u naar de bestemming verzendt en kunt u gegevens plannen en naar de bestemming verzenden.
 
-Als u segmenten naar uw nieuwe bestemming wilt activeren, moet u een JSON PATCH-bewerking uitvoeren, vergelijkbaar met het onderstaande voorbeeld. U kunt veelvoudige segmenten en profielattributen in één vraag activeren. Zie de [RFC-specificatie](https://tools.ietf.org/html/rfc6902)voor meer informatie over JSON PATCH.
+Als u segmenten naar uw nieuwe bestemming wilt activeren, moet u een JSON PATCH-bewerking uitvoeren, vergelijkbaar met het onderstaande voorbeeld. U kunt veelvoudige segmenten en profielattributen in één vraag activeren. Meer over JSON PATCH leren, zie de [specificatie](https://tools.ietf.org/html/rfc6902)RFC.
 
 **API-indeling**
 
@@ -480,7 +480,7 @@ Kijk naar een 202 OK-antwoord. Er wordt geen responsorgaan geretourneerd. Om te 
 
 Als laatste stap in de zelfstudie moet u controleren of de segmenten en profielkenmerken correct zijn toegewezen aan de gegevensstroom.
 
-Om dit te bevestigen, voer het volgende GET verzoek uit:
+Om dit te bevestigen, voer het volgende verzoek van de GET uit:
 
 **API-indeling**
 
