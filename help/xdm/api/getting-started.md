@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Het [!DNL Schema Registry] wordt gebruikt om tot de Bibliotheek van het Schema binnen Adobe Experience Platform toegang te hebben, die een gebruikersinterface en RESTful API verstrekken waarvan alle beschikbare bibliotheekmiddelen toegankelijk zijn.
 
-Gebruikend de Registratie API van het Schema, kunt u basisverrichtingen uitvoeren CRUD om alle schema&#39;s en verwante middelen te bekijken en te beheren beschikbaar aan u binnen Adobe Experience Platform. Hieronder vallen de toepassingen die zijn gedefinieerd door Adobe, [!DNL Experience Platform] partners en leveranciers van wie u de toepassingen gebruikt. U kunt ook API-aanroepen gebruiken om nieuwe schema&#39;s en bronnen voor uw organisatie te maken, en bronnen die u al hebt gedefinieerd, weer te geven en te bewerken.
+Gebruikend de Registratie API van het Schema, kunt u basisverrichtingen uitvoeren CRUD om alle schema&#39;s en verwante middelen te bekijken en te beheren beschikbaar aan u binnen Adobe Experience Platform. Dit omvat die door Adobe, [!DNL Experience Platform] partners, en verkopers worden bepaald waarvan toepassingen u gebruikt. U kunt ook API-aanroepen gebruiken om nieuwe schema&#39;s en bronnen voor uw organisatie te maken, en bronnen die u al hebt gedefinieerd, weer te geven en te bewerken.
 
 Deze handleiding voor ontwikkelaars bevat stappen waarmee u de [!DNL Schema Registry] API kunt gaan gebruiken. De gids verstrekt dan steekproefAPI vraag voor het uitvoeren van zeer belangrijke verrichtingen gebruikend de [!DNL Schema Registry].
 
@@ -51,7 +51,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 >
 >Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
 
-Alle opzoekverzoeken (GET) naar de API [!DNL Schema Registry] vereisen een extra Accept-header, waarvan de waarde de indeling van de informatie bepaalt die door de API wordt geretourneerd. Zie de koptekstsectie [Accepteren](#accept) hieronder voor meer informatie.
+Alle opzoekverzoeken (GET) aan de gebruiker [!DNL Schema Registry] vereisen een extra Accept-header, waarvan de waarde de indeling van de informatie bepaalt die door de API wordt geretourneerd. Zie de koptekstsectie [Accepteren](#accept) hieronder voor meer informatie.
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -59,7 +59,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Weet uw TENANT_ID {#know-your-tenant_id}
 
-In deze handleiding ziet u verwijzingen naar een `TENANT_ID`. Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich in uw IMS-organisatie bevinden. Als u uw id niet kent, kunt u deze openen door het volgende GET verzoek uit te voeren:
+In deze handleiding ziet u verwijzingen naar een `TENANT_ID`. Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich in uw IMS-organisatie bevinden. Als u uw id niet kent, kunt u deze openen door de volgende GET-aanvraag uit te voeren:
 
 **API-indeling**
 
@@ -165,11 +165,11 @@ Oproepen aan [!DNL Schema Registry] API vereisen het gebruik van een `CONTAINER_
 
 ### Algemene container
 
-De globale container bevat alle standaard door Adobe en de [!DNL Experience Platform] partner opgegeven klassen, mixins, gegevenstypen en schema&#39;s. U kunt lijst en raadplegingsverzoeken (GET) slechts tegen de globale container uitvoeren.
+De globale container houdt alle standaard Adobe en [!DNL Experience Platform] partner verstrekte klassen, mixins, gegevenstypes, en schema&#39;s. U kunt lijst en raadplegings (GET) verzoeken tegen de globale container slechts uitvoeren.
 
 ### Trekcontainer
 
-Om niet met uw uniek te worden verward `TENANT_ID`, houdt de huurderscontainer alle klassen, mixins, gegevenstypes, schema&#39;s, en beschrijvers die door een IMS Organisatie worden bepaald. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle CRUD-bewerkingen (GET, POST, PUT, PATCH, DELETE) uitvoeren tegen bronnen die u maakt in de huurderscontainer.
+Om niet met uw uniek te worden verward `TENANT_ID`, houdt de huurderscontainer alle klassen, mixins, gegevenstypes, schema&#39;s, en beschrijvers die door een IMS Organisatie worden bepaald. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle verrichtingen CRUD (GET, POST, PUT, PATCH, DELETE) tegen middelen uitvoeren die u in de huurderscontainer creeert.
 
 Wanneer u een klasse, een mixin, een schema of een gegevenstype in de huurderscontainer creeert, wordt het bewaard aan [!DNL Schema Registry] en toegewezen URI die uw `$id` `TENANT_ID`. omvat. Dit `$id` wordt in de gehele API gebruikt om naar specifieke bronnen te verwijzen. In de volgende sectie worden voorbeelden van `$id` waarden gegeven.
 
@@ -189,7 +189,7 @@ Oproepen aan de Registratie API van het Schema zullen of URL-Gecodeerde `$id` UR
 
 ## Koptekst accepteren {#accept}
 
-Bij het uitvoeren van lijst- en opzoekbewerkingen (GET) in de [!DNL Schema Registry] API is een Accept-header vereist om de indeling te bepalen van de gegevens die door de API worden geretourneerd. Wanneer het omhoog zoeken van specifieke middelen, moet een versieaantal ook in de Accept kopbal worden omvat.
+Bij het uitvoeren van lijst- en opzoekbewerkingen (GET) in de [!DNL Schema Registry] API is een header Accept vereist om de indeling van de gegevens te bepalen die door de API worden geretourneerd. Wanneer het omhoog zoeken van specifieke middelen, moet een versieaantal ook in de Accept kopbal worden omvat.
 
 In de volgende tabel vindt u compatibele Accept-headerwaarden, inclusief waarden met versienummers, en een beschrijving van wat de API retourneert wanneer deze worden gebruikt.
 
