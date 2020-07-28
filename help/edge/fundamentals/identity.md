@@ -1,8 +1,8 @@
 ---
 title: Experience Cloud-id ophalen
 seo-title: Adobe Experience Platform Web SDK Experience Cloud-id ophalen
-description: Leer hoe u Adobe Experience Cloud ID kunt ophalen.
-seo-description: Leer hoe u Adobe Experience Cloud ID kunt ophalen.
+description: Meer weten over Adobe Experience Cloud-id?
+seo-description: Meer weten over Adobe Experience Cloud-id?
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
