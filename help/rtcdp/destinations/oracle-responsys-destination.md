@@ -18,7 +18,7 @@ ht-degree: 0%
 
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) is een marketingtool voor e-mailberichten van bedrijven voor marketingcampagnes over meerdere kanalen die worden aangeboden door interacties via e-mail, mobiele apparaten, displays en sociale media [!DNL Oracle] aan te passen.
 
-Als u segmentgegevens wilt verzenden naar [!DNL Oracle Responsys], moet u eerst [verbinding maken met het doel](#connect-destination) in het Adobe Real-time Platform Klantgegevens en vervolgens een gegevensimport [](#import-data-into-responsys) instellen vanaf uw opslaglocatie naar [!DNL Oracle Responsys].
+Als u segmentgegevens wilt verzenden naar [!DNL Oracle Responsys], moet u eerst [verbinding maken met het doel](#connect-destination) in Adobe Real-time Customer Data Platform en vervolgens een gegevensimport [](#import-data-into-responsys) instellen vanaf uw opslaglocatie naar [!DNL Oracle Responsys].
 
 ## Connect-doel {#connect-destination}
 
