@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # E-mailmarketingdoelen {#email-marketing-destinations}
 
-Met e-mailserviceproviders (ESP&#39;s) kunt u uw marketingactiviteiten voor e-mail beheren, zoals het verzenden van promotionele e-mailcampagnes. Het Platform van de Gegevens van de Klant van Adobe in real time integreert met ESPs door u toe te staan om segmenten aan e-mail marketing bestemmingen te activeren.
+Met e-mailserviceproviders (ESP&#39;s) kunt u uw marketingactiviteiten voor e-mail beheren, zoals het verzenden van promotionele e-mailcampagnes. Het Platform van de Gegevens van de Klant van de Adobe in real time integreert met ESPs door u toe te staan om segmenten aan e-mail marketing bestemmingen te activeren.
 
 Om segmenten naar e-mail marketing bestemmingen voor uw campagnes te verzenden, moet Adobe in real time CDP eerst met de bestemming verbinden.
 
 Het verbinden met e-mail marketing bestemmingen is een proces in drie stappen. Elk van de stappen wordt hieronder verder beschreven op deze pagina.
 
-Maak in de Connect-doelstroom, zoals beschreven in de onderstaande sectie, verbinding met Amazon S3 of SFTP. CDP in real time exporteert uw segmenten als `.csv` of `.txt` dossiers en levert hen aan uw aangewezen plaats. Plan de gegevensimport in uw e-mailmarketingplatform vanaf de opslaglocatie die in Real-Time CDP is ingeschakeld. Het proces om gegevens in te voeren varieert voor elke partner. Zie de afzonderlijke bestemmingsartikelen voor meer informatie.
+In de verbindingsbestemmingsstroom, die in de sectie hieronder wordt beschreven, verbind met of Amazon S3 of SFTP. CDP in real time exporteert uw segmenten als `.csv` of `.txt` dossiers en levert hen aan uw aangewezen plaats. Plan de gegevensimport in uw e-mailmarketingplatform vanaf de opslaglocatie die in Real-Time CDP is ingeschakeld. Het proces om gegevens in te voeren varieert voor elke partner. Zie de afzonderlijke bestemmingsartikelen voor meer informatie.
 
 ## Stap 1 - Verbind bestemming {#connect-destination}
 
@@ -28,17 +28,17 @@ Maak in de Connect-doelstroom, zoals beschreven in de onderstaande sectie, verbi
 
    ![Verbinden met doel](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. Als u in de stap **[!UICONTROL Verificatie]** eerder een verbinding met uw e-mailmarketingbestemming had ingesteld, selecteert u **[!UICONTROL Bestaande account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL Nieuwe account]** selecteren om een nieuwe verbinding in te stellen met uw marketingbestemming voor e-mail. In de **[!UICONTROL het type]** van Verbinding selecteur, kunt u tussen **Amazon S3**, **SFTP met Wachtwoord**, **SFTP met SSH Sleutel** selecteren. Vul de informatie hieronder in, afhankelijk van het verbindingstype en selecteer vervolgens **[!UICONTROL Connect]**.
+2. Als u in de stap **[!UICONTROL Verificatie]** eerder een verbinding met uw e-mailmarketingbestemming had ingesteld, selecteert u **[!UICONTROL Bestaande account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL Nieuwe account]** selecteren om een nieuwe verbinding in te stellen met uw marketingbestemming voor e-mail. In de het type **[!UICONTROL van]** Verbinding selecteur, kunt u tussen **Amazon S3**, **SFTP met Wachtwoord**, **SFTP met de Sleutel** van SSH selecteren. Vul de informatie hieronder in, afhankelijk van het verbindingstype en selecteer vervolgens **[!UICONTROL Connect]**.
 
-   Voor **S3-verbindingen** moet u uw Amazon Access Key-id en de Geheime toegangstoets opgeven.
+   Voor **S3-verbindingen** moet u de Amazon Access Key-id en de Secure Access-sleutel opgeven.
 
    Voor **SFTP met de verbindingen van het Wachtwoord** , moet u Domein, Haven, Gebruikersnaam, en Wachtwoord voor uw server van SFTP verstrekken.
 
    Voor **SFTP met SSH Zeer belangrijke** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Sleutel SSH voor uw server van SFTP verstrekken.
 
 3. Voer in de stap **[!UICONTROL Setup]** een **[!UICONTROL naam]** en een **[!UICONTROL beschrijving]** in voor uw nieuwe bestemming en de indeling **** Bestand voor de geëxporteerde bestanden. <br>
-Als u Amazon S3 als opslagoptie hebt geselecteerd in de vorige stap, voegt u de naam **[!UICONTROL van het]** emmertje en het pad **[!UICONTROL naar de]** map in in de opslaglocatie van de cloud waar de bestanden worden geleverd. Voeg voor de opslagoptie SFTP het **[!UICONTROL mappad]** in waarin de bestanden worden geleverd. <br>
-Ook in deze stap kunt u elke **[!UICONTROL Gebruikszaak]** voor marketingdoeleinden selecteren die op deze bestemming moet worden toegepast. Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde gevallen voor marketinggebruik of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het op de markt brengen van gebruiksgevallen, zie de [Governance van Gegevens in Echte tijd CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) pagina. Zie het overzicht [van het beleid voor](/help/data-governance/policies/overview.md#core-actions)gegevensgebruik voor informatie over de afzonderlijke door Adobe gedefinieerde gevallen van marketinggebruik. <br>
+Als u in de vorige stap Amazon S3 als opslagoptie hebt geselecteerd, voegt u de naam **[!UICONTROL van het]** emmertje en het pad **[!UICONTROL naar de]** map in in de opslaglocatie van de cloud waar de bestanden worden geleverd. Voeg voor de opslagoptie SFTP het **[!UICONTROL mappad]** in waarin de bestanden worden geleverd. <br>
+Ook in deze stap kunt u elke **[!UICONTROL Gebruikszaak]** voor marketingdoeleinden selecteren die op deze bestemming moet worden toegepast. Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het op de markt brengen van gebruiksgevallen, zie de [Governance van Gegevens in Echte tijd CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) pagina. Voor informatie over de individuele Adobe-bepaalde het in de handel brengen gebruiksgevallen, zie het overzicht [van het het gebruiksbeleid van](/help/data-governance/policies/overview.md#core-actions)Gegevens. <br>
    ![E-mailinstallatiestap](/help/rtcdp/destinations/assets/email-setup-step.png)
 
 ## Stap 2 - selecteer welke segmentleden om in uw bestemmingsuitvoer te omvatten {#select-segments}
@@ -82,7 +82,7 @@ Kies in de keuzelijst Schema welke andere velden u naar de e-mailbestemming wilt
 Zie de afzonderlijke artikelen van de e-mailmarketing bestemming om te leren hoe te om gegevens van uw opslagplaats in bestemmingen in te voeren:
 
 * [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md#import-data-into-campaign)
-* [Salesforce Marketing Cloud](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
+* [Salesforce-Marketing Cloud](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
 * [Oracle Eloqua](/help/rtcdp/destinations/oracle-eloqua-destination.md#import-data-into-eloqua)
 * [Oracle Responsys](/help/rtcdp/destinations/oracle-responsys-destination.md#import-data-into-responsys)
 
