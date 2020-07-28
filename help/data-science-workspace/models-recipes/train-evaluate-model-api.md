@@ -19,7 +19,7 @@ In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalue
 
 ## Vereisten
 
-Volg de [import van een gecomprimeerde ontvanger met behulp van de API](./import-packaged-recipe-api.md) voor het maken van een engine. Deze is vereist voor het trainen en evalueren van een model met behulp van de API.
+Volg de [import van een gecomprimeerde ontvanger met behulp van de API](./import-packaged-recipe-api.md) voor het maken van een engine, die nodig is om een model te trainen en te evalueren met behulp van de API.
 
 Volg deze [zelfstudie](../../tutorials/authentication.md) voor toestemming om API-aanroepen te starten.
 
@@ -398,7 +398,7 @@ curl -X GET \
 
 **Antwoord**
 
-De GET vraag zal de status in de `state` parameter zoals hieronder getoond verstrekken:
+De aanroep van de GET geeft de status in de `state` parameter op, zoals hieronder wordt getoond:
 
 ```JSON
 {
@@ -490,7 +490,7 @@ De reactie vertegenwoordigt het opgeleide Model dat werd gecreeerd.
 
 ### Een geplande expert stoppen en verwijderen
 
-Als u de uitvoering van een gepland experiment wilt stoppen voordat het wordt uitgevoerd `endTime`, kunt u dit doen door een DELETE verzoek naar de `{EXPERIMENT_ID}`
+Als u de uitvoering van een gepland experiment vóór de uitvoering wilt stoppen `endTime`, kunt u dit doen door een DELETE-verzoek naar de `{EXPERIMENT_ID}`
 
 **Verzoek**
 
