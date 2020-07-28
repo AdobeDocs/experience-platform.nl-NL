@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Voorbereid u een online detailhandelswebsite. Wanneer uw klanten op uw detailhandelswebsite winkelen, wilt u hen met gepersonaliseerde productaanbevelingen presenteren om een verscheidenheid van andere producten bloot te stellen uw bedrijfsaanbiedingen. Gedurende de periode dat uw website bestaat, hebt u voortdurend klantgegevens verzameld en wilt u deze gegevens op de een of andere manier gebruiken om gepersonaliseerde productaanbevelingen te genereren.
 
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] biedt de middelen om uw doel te bereiken met behulp van de vooraf gebouwde Recipe voor [productaanbevelingen](../pre-built-recipes/product-recommendations.md). Volg deze zelfstudie om te zien hoe u toegang krijgt tot uw gegevens in de detailhandel en hoe u een model voor machinaal leren kunt maken en optimaliseren en inzichten kunt genereren in [!DNL Data Science Workspace].
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] biedt de middelen om uw doel te bereiken met behulp van het vooraf gebouwde [Product Recommendations Recipe](../pre-built-recipes/product-recommendations.md). Volg deze zelfstudie om te zien hoe u toegang krijgt tot uw gegevens in de detailhandel en hoe u een model voor machinaal leren kunt maken en optimaliseren en inzichten kunt genereren in [!DNL Data Science Workspace].
 
 Deze zelfstudie weerspiegelt de workflow van [!DNL Data Science Workspace]en behandelt de volgende stappen voor het maken van een model voor machinaal leren:
 
@@ -34,11 +34,11 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 * Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang hebt tot een IMS-organisatie in [!DNL Experience Platform], neemt u contact op met uw systeembeheerder voordat u verdergaat.
 
 * Enablement assets. Neem contact op met uw accountvertegenwoordiger om de volgende items voor u beschikbaar te stellen.
-   * Aanbevelingen ontvangen
-   * Aanbevelingen Gegevensset invoer
-   * Aanbevelingen Invoerschema
-   * Gegevensset voor aanbevolen uitvoer
-   * Uitvoerschema voor aanbevelingen
+   * Recommendations Recipe
+   * Recommendations Input Dataset
+   * Recommendations-invoerschema
+   * Recommendations-uitvoergegevensset
+   * Recommendations-uitvoerschema
    * Gouden gegevensset, postwaarden
    * Goudgegevenssetschema
 
@@ -68,25 +68,25 @@ De andere datasets zijn vooraf gevuld met partijen voor het voorvertonen van doe
 | Naam gegevensset | Schema | Beschrijving |
 | ----- | ----- | ----- |
 | Gouden gegevensset, postwaarden | Goudgegevenssetschema | [!DNL Analytics] brongegevens van uw website |
-| Aanbevelingen Gegevensset invoer | Aanbevelingen Invoerschema | De [!DNL Analytics] gegevens worden omgezet in een opleidingsdataset gebruikend een eigenschappijpleiding. Deze gegevens worden gebruikt voor de training van het Product Recommendations Machine Learning Model. `itemid` en `userid` overeenkomen met een product dat door die klant is aangekocht. |
-| Gegevensset voor aanbevolen uitvoer | Uitvoerschema voor aanbevelingen | De dataset waarvoor het scoren resultaten worden opgeslagen, zal het de lijst van geadviseerde producten voor elke klant bevatten. |
+| Recommendations Input Dataset | Recommendations-invoerschema | De [!DNL Analytics] gegevens worden omgezet in een opleidingsdataset gebruikend een eigenschappijpleiding. Deze gegevens worden gebruikt voor de training van het Product Recommendations-model voor machinetechniek. `itemid` en `userid` overeenkomen met een product dat door die klant is aangekocht. |
+| Recommendations-uitvoergegevensset | Recommendations-uitvoerschema | De dataset waarvoor het scoren resultaten worden opgeslagen, zal het de lijst van geadviseerde producten voor elke klant bevatten. |
 
 ## Uw model ontwerpen {#author-your-model}
 
-De tweede component van de [!DNL Data Science Workspace] levenscyclus omvat het ontwerpen van Ontvangers en Modellen. De Recipe van de Aanbevelingen van het Product wordt ontworpen om productaanbevelingen op schaal te produceren door vroegere aankoopgegevens en machine het leren te gebruiken.
+De tweede component van de [!DNL Data Science Workspace] levenscyclus omvat het ontwerpen van Ontvangers en Modellen. De Product Recommendations Recipe is ontworpen om op grote schaal productaanbevelingen te genereren door gebruik te maken van eerdere aankoopgegevens en computerlessen.
 
 Ontvangers vormen de basis voor een model aangezien zij machine het leren algoritmen en logica bevatten die worden ontworpen om specifieke problemen op te lossen. Nog belangrijker is dat met behulp van Ontvangers u het leren van machines in uw organisatie kunt democratiseren, zodat andere gebruikers toegang hebben tot een model voor verschillende gebruiksgevallen zonder dat er code hoeft te worden geschreven.
 
-### Ontdek de Recipe voor productaanbevelingen
+### Ontdek het product dat Recommendations recept
 
 1. In [!DNL Adobe Experience Platform], navigeer aan **[!UICONTROL Modellen]** van de linkernavigatiekolom, dan klik **[!UICONTROL Ontvangt]** bij de bovenkant om een lijst van beschikbare Ontvangers voor uw organisatie te bekijken.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Zoek en open de opgegeven Recipe **[!UICONTROL Recommendations]** door op de naam ervan te klikken.
+2. Zoek en open de opgegeven **[!UICONTROL Recommendations Recipe]** door op de naam ervan te klikken.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Klik in het rechterspoor op **[!UICONTROL Aanbevelingen voor invoerschema]** om het schema voor het recept weer te geven. De schemagebieden **[!UICONTROL itemId]** en **[!UICONTROL userId]** beantwoorden aan een product dat door die klant op een specifiek tijdstip (**[!UICONTROL timestamp]**) wordt gekocht (**[!UICONTROL interactionType]**). Voer dezelfde stappen uit om de velden voor het uitvoerschema voor **[!UICONTROL Aanbevelingen te controleren]**.
+3. Klik in het rechterspoor op **[!UICONTROL Recommendations Input Schema]** om het schema voor het recept weer te geven. De schemagebieden **[!UICONTROL itemId]** en **[!UICONTROL userId]** beantwoorden aan een product dat door die klant op een specifiek tijdstip (**[!UICONTROL timestamp]**) wordt gekocht (**[!UICONTROL interactionType]**). Voer dezelfde stappen uit om de velden voor het **[!UICONTROL Recommendations-uitvoerschema]**te bekijken.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
-U hebt nu de invoer- en uitvoerschema&#39;s gecontroleerd die vereist zijn voor de Recipe voor productaanbevelingen. U kunt nu verdergaan naar de volgende sectie om te weten te komen hoe u een model van de Aanbevelingen van het Product creeert, opleidt en evalueert.
+U hebt nu de invoer- en uitvoerschema&#39;s gecontroleerd die vereist zijn voor de Product Recommendations Recipe. U kunt nu verdergaan naar de volgende sectie om te weten te komen hoe u een product-Recommendations-model kunt maken, trainen en evalueren.
 
 ## Uw model trainen en evalueren {#train-and-evaluate-your-model}
 
@@ -98,11 +98,11 @@ Een model is een instantie van een recept, waarmee u gegevens op schaal kunt tra
 
 1. In [!DNL Adobe Experience Platform], navigeer aan **[!UICONTROL Modellen]** van de linkernavigatiekolom, dan klik **[!UICONTROL Ontvangt]** bij de bovenkant van de pagina om een lijst van alle beschikbare Ontvangers voor uw organisatie te tonen.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Zoek en open de opgegeven Recipe **[!UICONTROL Recommendations]** door op de naam ervan te klikken en de overzichtspagina van de ontvanger in te voeren. Klik op **[!UICONTROL Een model]** maken in het midden (als er geen bestaande modellen zijn) of in de rechterbovenhoek van de pagina Overzicht van ontvangen.
+2. Zoek en open de opgegeven **[!UICONTROL Recommendations Recipe]** door op de naam ervan te klikken en de overzichtspagina van de geadresseerde in te voeren. Klik op **[!UICONTROL Een model]** maken in het midden (als er geen bestaande modellen zijn) of in de rechterbovenhoek van de pagina Overzicht van ontvangen.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Een lijst van beschikbare inputdatasets voor opleiding wordt getoond, wordt de uitgezochte Dataset **[!UICONTROL van de Input van]** Aanbevelingen en klikt **[!UICONTROL daarna]**.
+3. Een lijst van beschikbare inputdatasets voor opleiding wordt getoond, selecteert de Dataset **[!UICONTROL van de Invoer van]** Recommendations en klikt **[!UICONTROL daarna]**.
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4. Geef het model een naam, bijvoorbeeld &quot;Model met productaanbevelingen&quot;. De beschikbare configuraties voor het model worden vermeld, die montages voor het de standaardopleiding van het Model en het scoring gedrag bevatten. Er zijn geen wijzigingen nodig omdat deze configuraties specifiek zijn voor uw organisatie. Controleer de configuraties en klik op **[!UICONTROL Voltooien]**.
+4. Geef het model een naam, bijvoorbeeld &quot;Product Recommendations Model&quot;. De beschikbare configuraties voor het model worden vermeld, die montages voor het de standaardopleiding van het Model en het scoring gedrag bevatten. Er zijn geen wijzigingen nodig omdat deze configuraties specifiek zijn voor uw organisatie. Controleer de configuraties en klik op **[!UICONTROL Voltooien]**.
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
 5. Het model is nu gemaakt en de pagina *Overzicht* van het model wordt weergegeven in een nieuw gegenereerde trainingsreeks. Een trainingsrun wordt standaard gegenereerd wanneer een model wordt gemaakt.
    ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
@@ -141,9 +141,9 @@ De laatste stap in de Data Science-workflow is het operationeel maken van uw mod
 
 1. Voor de pagina van het ModelOverzicht ** van het ModelOverzicht van de productaanbevelingen, klik de naam van de best-presterende trainingslooppas, met de hoogste herinnering en precisienormen.
 2. Rechtsboven op de pagina met details voor de trainingsuitvoering klikt u op **[!UICONTROL Score]**.
-3. Selecteer de Dataset **[!UICONTROL van de Input van]** Aanbevelingen als het scoring inputdataset, die de zelfde dataset is u gebruikte toen u het Model creeerde en zijn trainingslooppas uitvoerde. Klik vervolgens op **[!UICONTROL Volgende]**.
+3. Selecteer de Dataset **[!UICONTROL van de Invoer van]** Recommendations als het scoring inputdataset, die de zelfde dataset is u gebruikte toen u het Model creeerde en zijn trainingslooppas uitvoerde. Klik vervolgens op **[!UICONTROL Volgende]**.
    ![](../images/models-recipes/model-walkthrough/scoring_input.png)
-4. Selecteer de Dataset **[!UICONTROL van de Output van]** Aanbevelingen als het schatten outputdataset. De resultaten van het noteren zullen in deze dataset als partij worden opgeslagen.
+4. Selecteer de **[!UICONTROL Recommendations Output Dataset]** als de gegevensset voor de score. De resultaten van het noteren zullen in deze dataset als partij worden opgeslagen.
    ![](../images/models-recipes/model-walkthrough/scoring_output.png)
 5. Controleer de scoreconfiguraties. Deze parameters bevatten de input en outputdatasets die vroeger samen met de aangewezen schema&#39;s worden geselecteerd. Klik op **[!UICONTROL Voltooien]** om de scoring uit te voeren. De uitvoering kan enkele minuten duren.
    ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
