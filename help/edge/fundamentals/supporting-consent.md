@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Ondersteunende toestemming
 
-Om de privacy van uw gebruiker te respecteren, zou u om de toestemming van de gebruiker kunnen willen vragen alvorens SDK toe te staan om gebruiker-specifieke gegevens voor bepaalde doeleinden te gebruiken. Momenteel kunnen gebruikers met de SDK alleen voor alle doeleinden kiezen, maar in de toekomst hoopt Adobe meer gedetailleerde controle over specifieke doeleinden te kunnen uitoefenen.
+Om de privacy van uw gebruiker te respecteren, zou u om de toestemming van de gebruiker kunnen willen vragen alvorens SDK toe te staan om gebruiker-specifieke gegevens voor bepaalde doeleinden te gebruiken. Momenteel staat SDK gebruikers alleen toe om in of uit alle doeleinden te kiezen, maar in de toekomst hoopt Adobe meer korrelige controle over specifieke doeleinden te verschaffen.
 
 Als de gebruiker voor alle doeleinden inbelt, mag de SDK de volgende taken uitvoeren:
 
-* Gegevens verzenden van en naar de servers van Adobe.
+* Gegevens verzenden van en naar Adobe-servers.
 * Cookies of webopslagitems lezen en schrijven (behalve voor het doorlopen van de aanmeldingsvoorkeuren van de gebruiker).
 
 Als de gebruiker uit alle doeleinden kiest, voert de SDK geen van deze taken uit.
@@ -79,7 +79,7 @@ Omdat de gebruiker ervoor koos om te weigeren, worden de beloftes die van eerder
 
 >[!NOTE]
 >
->Momenteel ondersteunt de SDK alleen het `general` doel. Hoewel wij van plan zijn een robuustere reeks doelen of categorieën te ontwikkelen die aan de verschillende mogelijkheden en productaanbiedingen van Adobe zullen beantwoorden, is de huidige implementatie een alles of niets benadering van opt-in.  Dit geldt alleen voor het Adobe Experience Platform [!DNL Web SDK] en NIET voor andere Adobe JavaScript-bibliotheken.
+>Momenteel ondersteunt de SDK alleen het `general` doel. Hoewel wij van plan zijn een robuustere reeks doelen of categorieën te ontwikkelen die aan de verschillende mogelijkheden en productaanbiedingen van de Adobe zullen beantwoorden, is de huidige implementatie een alles of niets benadering van opt-in.  Dit geldt alleen voor het Adobe Experience Platform [!DNL Web SDK] en NIET voor andere Adobe JavaScript-bibliotheken.
 
 ## Voorkeuren voor blijvende toestemming
 
