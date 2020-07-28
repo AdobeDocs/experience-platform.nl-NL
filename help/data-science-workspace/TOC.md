@@ -1,7 +1,7 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Help bij het Adobe Experience Platform Data Science Workspace
+user-guide-title: Help bij Adobe Experience Platform Data Science Workspace
 translation-type: tm+mt
 source-git-commit: 8a613237d3d835039185954e580d3c86a5e465ae
 workflow-type: tm+mt
@@ -42,7 +42,7 @@ ht-degree: 0%
 * Model Authoring {#authoring}
    * [Model Authoring SDK](authoring/sdk.md)
    * [Een functiepijpleiding maken](authoring/feature-pipeline.md)
-   * [Platform SDK-handleiding (Python)](authoring/platform-sdk.md)
+   * [Handleiding SDK Platform (Python)](authoring/platform-sdk.md)
 * Zelfstudies over modellen en recept {#models-recipes}
    * [Een analyse van een model voor machinaal leren maken en publiceren](models-recipes/create-publish-model.md)
    * [Het schema en de gegevensset voor de detailhandel maken](models-recipes/create-retails-sales-dataset.md)
@@ -62,4 +62,4 @@ ht-degree: 0%
 * [Hulplijnen voor recept- en laptopmigratie](recipe-notebook-migration.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
