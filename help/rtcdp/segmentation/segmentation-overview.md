@@ -1,8 +1,8 @@
 ---
 title: Overzicht van de segmenteringsservice
-seo-title: Segmentatieservice in Adobe Real-time Customer Data Platform
+seo-title: De dienst van de segmentatie in het Platform van de Gegevens van de Klant van Adobe Real-time
 description: Een overzicht dat de segmentatieservice beschrijft.
-seo-description: Een overzicht dat de segmentatieservice en segmenten op het Platform van de Gegevens van de Klant van Adobe in real time beschrijft.
+seo-description: Een overzicht dat de segmentatieservice en segmenten op het Platform van de Gegevens van de Klant van de Adobe in real time beschrijft.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
