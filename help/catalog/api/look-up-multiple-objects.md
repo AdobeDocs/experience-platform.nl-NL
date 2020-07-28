@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Meerdere objecten opzoeken
 
-Als u meerdere specifieke objecten wilt weergeven in plaats van één aanvraag per object te maken, [!DNL Catalog] biedt u een eenvoudige sneltoets voor het aanvragen van meerdere objecten van hetzelfde type. U kunt één enkele GET aanvraag gebruiken om veelvoudige specifieke voorwerpen terug te keren door een komma-gescheiden lijst van IDs op te nemen.
+Als u meerdere specifieke objecten wilt weergeven in plaats van één aanvraag per object te maken, [!DNL Catalog] biedt u een eenvoudige sneltoets voor het aanvragen van meerdere objecten van hetzelfde type. U kunt één aanvraag voor GET gebruiken om meerdere specifieke objecten te retourneren door een lijst met id&#39;s met komma&#39;s als scheidingsteken op te nemen.
 
 >[!NOTE]
 >
