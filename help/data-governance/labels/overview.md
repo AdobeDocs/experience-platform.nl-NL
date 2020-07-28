@@ -26,7 +26,7 @@ De etiketten van het gebruik van gegevens die op het datasetniveau worden toegep
 
 [!DNL Platform] biedt verschillende &#39;core&#39; labels voor gegevensgebruik buiten de box, die een groot aantal gemeenschappelijke beperkingen bestrijken die van toepassing zijn op gegevensbeheer. Zie de handleiding over [kernlabels](reference.md)voor meer informatie over deze labels en het gebruiksbeleid dat ze vertegenwoordigen.
 
-Naast de labels die door Adobe worden geleverd, kunt u ook uw eigen aangepaste labels definiëren. Raadpleeg de gebruikershandleiding bij de labels voor [gegevensgebruik voor informatie over hoe u dit in de gebruikersinterface kunt doen](./user-guide.md). Raadpleeg de API-handleiding [voor labels voor](./api.md)gegevensgebruik voor informatie over hoe u dit kunt doen met API-aanroepen.
+Naast de labels die door Adobe worden verschaft, kunt u ook uw eigen aangepaste labels definiëren. Raadpleeg de gebruikershandleiding bij de labels voor [gegevensgebruik voor informatie over hoe u dit in de gebruikersinterface kunt doen](./user-guide.md). Raadpleeg de API-handleiding [voor labels voor](./api.md)gegevensgebruik voor informatie over hoe u dit kunt doen met API-aanroepen.
 
 ## Labelovererving voor publiekssegmenten
 
@@ -34,7 +34,7 @@ Alle publiekssegmenten die door de Dienst [van de Segmentatie van het](../../seg
 
 Naast het erven van dataset-vlakke etiketten, erven de segmenten alle gebied-vlakke etiketten van hun bijbehorende datasets door gebrek. Afhankelijk van de manier waarop uw [!DNL Platform]gebaseerde toepassing segmenten gebruikt, kunt u mogelijk opgeven welke velden worden gebruikt, zodat het segment geen labels van uitgesloten velden kan overnemen.
 
-Voor meer informatie over hoe de automatische handhaving in Echt - tijd CDP werkt, zie het overzicht [van het Beleid van Gegevens van](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe in real time CDP.
+Voor meer informatie over hoe de automatische handhaving in Echt - tijd CDP werkt, zie het overzicht [van het Beheer van Gegevens](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe In real time CDP.
 
 ### Overerving van de Controles van de Uitvoer van Gegevens van de Adobe Audience Manager
 
