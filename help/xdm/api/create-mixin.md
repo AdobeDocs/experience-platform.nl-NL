@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Mixins zijn een set velden die worden gebruikt om een bepaald concept te beschrijven, zoals &quot;adres&quot; of &quot;profielvoorkeuren&quot;. Er zijn talrijke standaardmixins beschikbaar, of u kunt uw bepalen wanneer u wenst om informatie te vangen die voor uw organisatie uniek is. Elke mix bevat een `meta:intendedToExtend` veld met de klassen waarmee de mix compatibel is.
 
-Het kan handig zijn om alle beschikbare combinaties te bekijken om uzelf bekend te maken met de velden die in de verschillende combinaties zijn opgenomen. U kunt (KRIJGEN) van alle mengen een lijst maken compatibel met een bepaalde klasse door een verzoek tegen elk van de &quot;globale&quot;en &quot;huurder&quot;containers uit te voeren, die slechts die mengen terugkeren waar het &quot;meta:intendedToExtend&quot;gebied de klasse aanpast u gebruikt. In de onderstaande voorbeelden worden alle combinaties geretourneerd die met de [!DNL XDM Individual Profile] klasse kunnen worden gebruikt:
+Het kan handig zijn om alle beschikbare combinaties te bekijken om uzelf bekend te maken met de velden die in de verschillende combinaties zijn opgenomen. U kunt (GET) van alle mengen een lijst maken compatibel met een bepaalde klasse door een verzoek tegen elk van de &quot;globale&quot;en &quot;huurder&quot;containers uit te voeren, die slechts die mengen terugkeren waar het &quot;meta:intendedToExtend&quot;gebied de klasse aanpast u gebruikt. In de onderstaande voorbeelden worden alle combinaties geretourneerd die met de [!DNL XDM Individual Profile] klasse kunnen worden gebruikt:
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -186,4 +186,4 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die d
 }
 ```
 
-Het uitvoeren van een GET verzoek om van alle mengen in de huurderscontainer een lijst te maken zou nu de mengeling van de Details van het Voertuig omvatten, of u kunt een raadpleging (KRIJGEN) verzoek uitvoeren gebruikend URL-Gecodeerde `$id` URI om de nieuwe mengeling direct te bekijken. Vergeet niet de header Accepteren op te nemen `version` in alle opzoekverzoeken.
+Het uitvoeren van een verzoek van de GET om van alle mengen in de huurderscontainer een lijst te maken zou nu de mengeling van de Details van het Voertuig omvatten, of u kunt een raadplegingsverzoek (GET) uitvoeren gebruikend URL-Gecodeerde `$id` URI om de nieuwe mengeling direct te bekijken. Vergeet niet de header Accepteren op te nemen `version` in alle opzoekverzoeken.
