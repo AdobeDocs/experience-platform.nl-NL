@@ -18,7 +18,7 @@ Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang t
 
 ## Verifiëren om API-aanroepen te maken
 
-Om de beveiliging van uw toepassingen en gebruikers te garanderen, moeten alle aanvragen voor Adobe I/O-API&#39;s worden geverifieerd en geautoriseerd aan de hand van standaarden zoals OAuth en JSON Web Tokens (JWT). JWT wordt dan gebruikt samen met cliënt-specifieke informatie om uw persoonlijk toegangstoken te produceren.
+Om de veiligheid van uw toepassingen en gebruikers te handhaven, moeten alle verzoeken aan Adobe I/O APIs voor authentiek worden verklaard en worden gemachtigd gebruikend normen zoals OAuth en JSON Webtokens (JWT). JWT wordt dan gebruikt samen met cliënt-specifieke informatie om uw persoonlijk toegangstoken te produceren.
 
 Deze zelfstudie behandelt de stappen van authentificatie door het creëren van een toegangstoken die in het volgende stroomschema wordt geschetst:
 ![](images/authentication/authentication-flowchart.png)
@@ -43,7 +43,7 @@ Als u geen Adobe ID hebt, kunt u een van de volgende stappen maken:
 
 ## Ontwikkelaar en gebruiker worden voor [!DNL Experience Platform] een organisatie
 
-Voordat u integraties maakt voor Adobe I/O, moet uw account ontwikkelaarsmachtigingen voor een product in een IMS-organisatie hebben. Gedetailleerde informatie over ontwikkelaarsaccounts in de Admin Console vindt u in het [ondersteuningsdocument](https://helpx.adobe.com/enterprise/using/manage-developers.html) voor ontwikkelaars.
+Voordat u integratie op Adobe I/O maakt, moet uw account beschikken over ontwikkelaarsmachtigingen voor een product in een IMS-organisatie. Gedetailleerde informatie over ontwikkelaarsaccounts in de Admin Console vindt u in het [ondersteuningsdocument](https://helpx.adobe.com/enterprise/using/manage-developers.html) voor ontwikkelaars.
 
 **Toegang voor ontwikkelaars verkrijgen**
 
@@ -55,7 +55,7 @@ De beheerder moet u als ontwikkelaar toewijzen aan ten minste één productprofi
 
 ![](images/authentication/add-developer.png)
 
-Als u eenmaal als ontwikkelaar bent toegewezen, hebt u toegangsrechten om integraties te maken voor [Adobe I/O](https://www.adobe.com/go/devs_console_ui). Deze integraties vormen een pijplijn van externe apps en services naar de Adobe API.
+Als u eenmaal als ontwikkelaar bent toegewezen, hebt u toegangsrechten om integraties te maken voor [Adobe I/O](https://www.adobe.com/go/devs_console_ui). Deze integratie vormt een pijplijn van externe apps en services naar de Adobe-API.
 
 **Toegang tot gebruikers verkrijgen**
 
@@ -73,7 +73,7 @@ Net als bij het toevoegen van een ontwikkelaar moet de beheerder u toewijzen aan
 >
 >Als u dit document volgt vanuit de [Privacy Service-ontwikkelaarsgids](../privacy-service/api/getting-started.md), kunt u nu terugkeren naar die handleiding om de toegangsreferenties te genereren die uniek zijn voor [!DNL Privacy Service].
 
-Met Adobe Developer Console moet u de volgende drie toegangsreferenties genereren:
+Gebruikend de Console van de Ontwikkelaar van Adobe, moet u de volgende drie toegangsgeloofsbrieven produceren:
 
 * `{IMS_ORG}`
 * `{API_KEY}`
