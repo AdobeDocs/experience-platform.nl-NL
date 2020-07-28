@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een schema maken met de opdracht [!DNL Schema Editor]
 
-Het [!DNL Schema Registry] biedt een gebruikersinterface en RESTful-API waarmee u alle bronnen in het Adobe Experience Platform kunt weergeven en beheren [!DNL Schema Library]. Het [!DNL Schema Library] bevat bronnen die beschikbaar zijn gesteld door Adobe, partners van Experience Platforms en leveranciers van wie u de toepassingen gebruikt, en bronnen die u definieert en opslaat naar de [!DNL Schema Registry]server.
+Het [!DNL Schema Registry] biedt een gebruikersinterface en RESTful-API waarmee u alle bronnen in het Adobe Experience Platform kunt weergeven en beheren [!DNL Schema Library]. Het [!DNL Schema Library] bevat middelen die aan u door Adobe, de partners van het Experience Platform, en verkopers ter beschikking worden gesteld van wie toepassingen u gebruikt, evenals middelen die u bepaalt en aan [!DNL Schema Registry].
 
 Deze zelfstudie behandelt de stappen voor het maken van een schema met behulp van de Schema-editor in [!DNL Experience Platform]. Als u liever een schema samenstelt met de API voor de registratie van het schema, moet u eerst de handleiding voor [de ontwikkelaar van het](../api/getting-started.md) schemaregister lezen voordat u de zelfstudie [maakt met behulp van de API](create-schema-api.md).
 
