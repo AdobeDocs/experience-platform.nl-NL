@@ -1,8 +1,8 @@
 ---
 title: Zelfstudie Websitetags implementeren met Adobe Launch
 seo-title: Websitetags implementeren met Adobe Launch
-description: Websitetags in Adobe Experience Platform implementeren met Adobe Launch
-seo-description: Websitetags in Adobe Experience Platform implementeren met Adobe Launch
+description: Adobe starten gebruiken om websitetags te implementeren in Adobe Experience Platform
+seo-description: Adobe starten gebruiken om websitetags te implementeren in Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Zelfstudie: Websitetags implementeren met Adobe Launch
 
-In deze zelfstudie wordt uitgelegd hoe u uw websitetags kunt implementeren om gegevens naar Adobe Experience Platform te verzenden met Adobe Launch.
+In deze zelfstudie wordt uitgelegd hoe u uw websitetags kunt implementeren om gegevens naar het Adobe Experience Platform te verzenden met behulp van Adobe Launch.
 
 ## Vereisten
 
@@ -49,7 +49,7 @@ Installeer eerst de [!DNL Web SDK] extensie Adobe Experience Platform.
    U hebt nu alleen de volgende instellingen nodig:
 
    * **Configuratie-id:** Geef de configuratie-id op die u van uw Adobe-vertegenwoordiger hebt gekregen.
-   * **Randdomein:** Geef het Edge-domein op dat u van uw Adobe-vertegenwoordiger hebt gekregen.
+   * **Randdomein:** Geef het randdomein op dat u van uw Adobe-vertegenwoordiger hebt gekregen.
 
 1. Klik op **[!UICONTROL Opslaan]** en ga verder met de volgende stap.
 
