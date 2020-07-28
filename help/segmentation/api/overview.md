@@ -24,7 +24,7 @@ Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, raadpleegt
 
 De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. Met het `/export/jobs` eindpunt kunt u alle exporttaken ophalen, een nieuwe exporttaak maken, details van een specifieke exporttaak ophalen of een specifieke exporttaak annuleren.
 
-Voor meer informatie bij het gebruiken van dit eindpunt, gelieve te lezen de gids [van het de eindpunt van](./export-jobs.md)uitvoerbanen.
+Voor meer informatie bij het gebruiken van dit eindpunt, te lezen gelieve de gids [van het de](./export-jobs.md)uitvoerbaaneindpunt.
 
 ## Voorvertoningen en ramingen
 
