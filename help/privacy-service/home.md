@@ -31,7 +31,7 @@ Deze besluiten kunnen als volgt worden samengevat:
 1. **Heb ik mijn gegevens correct gelabeld?**
    * De gegevens moeten correct geëtiketteerd zijn opdat de dienst kan bepalen welke gebieden om tijdens privacybanen toegang te hebben of te schrappen. Zie de sectie over [etiketteringsgegevens](#label) voor meer informatie.
 1. **Weet ik naar welke id&#39;s u wilt verzenden[!DNL Privacy Service]?**
-   * Wanneer u een privacyverzoek verzendt, moet u afzonderlijke klant-id&#39;s opgeven die specifiek zijn voor bepaalde Adobe-toepassingen. Zie de secties over het [verstrekken van identiteitsgegevens](#identity) en het [maken van privacyverzoeken](#requests) voor meer informatie.
+   * Bij het verzenden van privacyverzoeken moeten individuele klant-id&#39;s worden opgegeven die specifiek zijn voor bepaalde Adobe-toepassingen. Zie de secties over het [verstrekken van identiteitsgegevens](#identity) en het [maken van privacyverzoeken](#requests) voor meer informatie.
 1. **Hoe volg ik mijn privacytaken?**
    * Nadat u een privacyverzoek hebt ingediend, kunt u de status en de resultaten van dat verzoek op verschillende manieren volgen. Zie de sectie over het [controleren van privacytaken](#monitor) voor meer informatie.
 
@@ -55,15 +55,15 @@ Naast wettelijke voorschriften, zouden om het even welke organisatie of industri
 
 ### Gegevens labelen voor privacyverzoeken {#label}
 
-Afhankelijk van de [!DNL Experience Cloud] toepassingen die u gebruikt, moet u de specifieke gegevensgebieden etiketteren die in antwoord op privacyverzoeken zouden moeten worden betreden of worden geschrapt. Het proces voor het etiketteren van gegevens varieert tussen toepassingen. Raadpleeg het document over [Experience Cloud-toepassingen](./experience-cloud-apps.md)voor meer informatie over het labelen van gegevens voor elke ondersteunde Adobe-toepassing.
+Afhankelijk van de [!DNL Experience Cloud] toepassingen die u gebruikt, moet u de specifieke gegevensgebieden etiketteren die in antwoord op privacyverzoeken zouden moeten worden betreden of worden geschrapt. Het proces voor het etiketteren van gegevens varieert tussen toepassingen. Zie het document over [Experience Cloud-toepassingen](./experience-cloud-apps.md)voor meer informatie over het labelen van gegevens voor elke ondersteunde Adobe-toepassing.
 
 ### Bepaal de typen identiteitsgegevens waarnaar u wilt verzenden [!DNL Privacy Service] {#identity}
 
 Om een privacyverzoek van een klant [!DNL Privacy Service] te verwerken, moet minstens één unieke identiteitswaarde voor die klant in het verzoek zelf worden verstrekt. Een unieke identiteitswaarde is alle informatie die kan worden gebruikt om een individuele persoon en zijn opgeslagen persoonlijke gegevens in uw [!DNL Experience Cloud] gegevensopslag te identificeren. [!DNL Privacy Service] gebruikt deze identiteitsgegevens om de persoonsgegevens van de klant te zoeken en te verwerken volgens de aard van de aanvraag (toegang, verwijdering of opt-out).
 
-Afhankelijk van de [!DNL Experience Cloud] toepassingen uw systeem van CRM gebruikt, zullen het type en het aantal identiteitswaarden u voor elke klant moet verstrekken variëren. Sommige toepassingen gebruiken hun eigen interne waarden voor de klant-id (zoals Adobe Target-id&#39;s), terwijl andere oplossingen vertrouwen op algemene id&#39;s van Adobe [!DNL Experience Cloud Identity Service] (ECID) die de activiteiten van de klant in alle [!DNL Experience Cloud] toepassingen volgen. Daarnaast kunnen algemene persoonlijke gegevens, zoals een e-mailadres of telefoonnummer, ook als geldige identiteitsgegevens worden gebruikt.
+Afhankelijk van de [!DNL Experience Cloud] toepassingen uw systeem van CRM gebruikt, zullen het type en het aantal identiteitswaarden u voor elke klant moet verstrekken variëren. Sommige toepassingen gebruiken hun eigen interne waarden van klantidentiteitskaart (zoals Adobe Target IDs), terwijl andere oplossingen op globale herkenningstekens van Adobe [!DNL Experience Cloud Identity Service] (ECID) vertrouwen die klantenactiviteit over alle [!DNL Experience Cloud] toepassingen volgen. Daarnaast kunnen algemene persoonlijke gegevens, zoals een e-mailadres of telefoonnummer, ook als geldige identiteitsgegevens worden gebruikt.
 
-Het document over [identiteitsgegevens voor privacyverzoeken](./identity-data.md) bevat gedetailleerdere informatie over de typen identiteitsgegevens die worden geaccepteerd voor [!DNL Privacy Service]. Het document biedt ook richtlijnen over hoe u Adobe-technologieën kunt gebruiken om de juiste identiteitsgegevens van uw klanten op te halen bij de interactie met uw website en deze gegevens naar [!DNL Privacy Service] in API-verzoeken te verzenden.
+Het document over [identiteitsgegevens voor privacyverzoeken](./identity-data.md) bevat gedetailleerdere informatie over de typen identiteitsgegevens die worden geaccepteerd voor [!DNL Privacy Service]. Het document biedt ook richtlijnen voor het gebruik van Adobe-technologieën om de juiste identiteitsgegevens van uw klanten op te halen bij de interactie met uw website en om die gegevens naar [!DNL Privacy Service] in API-verzoeken te verzenden.
 
 ### Start met het indienen van privacyaanvragen {#requests}
 
@@ -95,7 +95,7 @@ Nadat u een privacytaak hebt uitgevoerd, kunt u de status en de resultaten van d
 | --- | --- |
 | [!DNL Privacy Service] UI | De [!DNL Privacy Service] UI verstrekt een controledashboard dat u toestaat om een visuele vertegenwoordiging van de status van alle actieve verzoeken te bekijken. Raadpleeg de gebruikershandleiding [bij de](ui/overview.md) Privacy Service voor meer informatie. |
 | [!DNL Privacy Service] API | U kunt de status van de banen van de Privacy programmatically controleren door de raadplegingseindpunten te gebruiken die door [!DNL Privacy Service] API worden verstrekt. Zie de handleiding voor ontwikkelaars van [Privacys Service](./api/getting-started.md) voor gedetailleerde stappen over het gebruik van de API. |
-| [!DNL Privacy Events] | [!DNL Privacy Events] gebruik Adobe I/O-gebeurtenissen die naar een geconfigureerde webhaak zijn verzonden voor een efficiënte automatisering van taakaanvragen. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een werkstroom is bereikt. Zie de zelfstudie over het [abonneren op Privacy Events](./privacy-events.md) voor meer informatie. |
+| [!DNL Privacy Events] | [!DNL Privacy Events] hefboomwerking I/O Gebeurtenissen van Adobe die naar een gevormde webhaak worden verzonden om efficiënte baanverzoekautomatisering te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een werkstroom is bereikt. Zie de zelfstudie over het [abonneren op Privacy Events](./privacy-events.md) voor meer informatie. |
 
 ## Volgende stappen
 
