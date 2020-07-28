@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Overzicht van de Adobe Privacy JavaScript-bibliotheek
+title: Overzicht van Adobe Privacy JavaScript-bibliotheek
 topic: overview
 translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
@@ -12,11 +12,11 @@ ht-degree: 3%
 ---
 
 
-# Overzicht van de Adobe Privacy JavaScript-bibliotheek
+# Overzicht van Adobe Privacy JavaScript-bibliotheek
 
-Als gegevensverwerker verwerkt Adobe persoonlijke gegevens volgens de toestemming en instructies van uw bedrijf. Als datacontroller bepaalt u welke persoonlijke data Adobe namens u verwerkt en opslaat. Afhankelijk van de informatie die u via de oplossingen van Adobe Experience Cloud wilt verzenden, kan Adobe persoonlijke gegevens opslaan die van toepassing zijn op privacyregels zoals de [!DNL General Data Protection Regulation] (GDPR) en [!DNL California Consumer Privacy Act] (CCPA). Raadpleeg het document over [privacy in Adobe Experience Cloud](https://www.adobe.com/privacy/marketing-cloud.html) voor meer informatie over hoe Experience Cloud-oplossingen persoonlijke gegevens verzamelen.
+Als gegevensverwerker verwerkt Adobe persoonlijke gegevens volgens de toestemming en instructies van uw bedrijf. Als datacontroller bepaalt u welke persoonlijke data Adobe namens u verwerkt en opslaat. Afhankelijk van de informatie die u kiest om via Adobe Experience Cloud-oplossingen te verzenden, kan Adobe persoonlijke informatie opslaan die van toepassing is op privacyregels zoals de [!DNL General Data Protection Regulation] (GDPR) en [!DNL California Consumer Privacy Act] (CCPA). Raadpleeg het document over [privacy in Adobe Experience Cloud](https://www.adobe.com/privacy/marketing-cloud.html) voor meer informatie over hoe Experience Cloud-oplossingen privégegevens verzamelen.
 
-Met de **Adobe Privacy JavaScript-bibliotheek** kunnen gegevenscontrollers het ophalen van alle id&#39;s van betrokkenen die door [!DNL Experience Cloud] oplossingen voor een bepaald domein zijn gegenereerd, automatiseren. Met behulp van de API die door de [Adobe Experience Platform Privacy Service](home.md)wordt geboden, kunnen deze identiteiten vervolgens worden gebruikt om toegang- en verwijderingsverzoeken te maken voor privégegevens van die betrokkenen.
+Met de JavaScript-bibliotheek **** Adobe Privacy kunnen gegevenscontrollers het ophalen van alle gegevensonderwerpidentiteiten automatiseren die zijn gegenereerd door [!DNL Experience Cloud] oplossingen voor een bepaald domein. Met behulp van de API die door de [Adobe Experience Platform Privacy Service](home.md)wordt geboden, kunnen deze identiteiten vervolgens worden gebruikt om toegang- en verwijderingsverzoeken te maken voor privégegevens van die betrokkenen.
 
 >[!NOTE]
 >
@@ -31,8 +31,8 @@ In de volgende tabel worden de verschillende functies beschreven die door de bib
 | -functie | Beschrijving |
 | --- | --- |
 | `retrieveIdentities` | Retourneert een array van overeenkomende identiteiten (`validIds`) die zijn opgehaald van [!DNL Privacy Service], en een array van identiteiten die niet zijn gevonden (`failedIds`). |
-| `removeIdentities` | Hiermee verwijdert u elke overeenkomende (geldige) identiteit uit de browser. Retourneert een array van overeenkomende identiteiten (`validIds`), met elke identiteit die een `isDeleteClientSide` booleaanse id bevat die aangeeft of deze id is verwijderd. |
-| `retrieveThenRemoveIdentities` | Haalt een array van overeenkomende identiteiten (`validIds`) op en verwijdert deze identiteiten vervolgens uit de browser. Hoewel deze functie vergelijkbaar is met `removeIdentities`, wordt deze het best gebruikt wanneer voor de Adobe-oplossing die u gebruikt een toegangsverzoek is vereist voordat verwijdering mogelijk is (bijvoorbeeld wanneer een unieke id moet worden opgehaald voordat deze in een verwijderingsaanvraag wordt opgegeven). |
+| `removeIdentities` | Hiermee verwijdert u elke overeenkomende (geldige) identiteit uit de browser. Retourneert een array van overeenkomende identiteiten (`validIds`), met elke identiteit die een `isDeleteClientSide` Booleaanse id bevat die aangeeft of deze id is verwijderd. |
+| `retrieveThenRemoveIdentities` | Haalt een array van overeenkomende identiteiten (`validIds`) op en verwijdert deze identiteiten vervolgens uit de browser. Terwijl deze functie aan gelijkaardig is, wordt het best gebruikt wanneer de oplossing van Adobe u gebruikt een toegangsverzoek vereist alvorens schrapping mogelijk is (zoals wanneer een uniek herkenningsteken moet worden teruggewonnen alvorens het in een schrappingsverzoek te verstrekken). `removeIdentities` |
 
 >[!NOTE]
 >
@@ -46,12 +46,12 @@ Aangezien alle drie functies asynchrone processen vertegenwoordigen, moeten om h
 Als u de toepassing wilt gaan gebruiken, moet u deze op een van de volgende manieren op de computer installeren: [!DNL Privacy JS Library]
 
 * Installeer met npm door de volgende opdracht uit te voeren: `npm install @adobe/adobe-privacy`
-* Adobe Launch Extension onder de naam gebruiken `AdobePrivacy`
+* De extensie Adobe starten onder de naam `AdobePrivacy`
 * Downloaden vanaf [https://github.com/Adobe-Marketing-Cloud/adobe-privacy](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## Instantiëren van de [!DNL Privacy JS Library]
 
-Alle apps die het gebruiken [!DNL Privacy JS Library] moeten een nieuw `AdobePrivacy` voorwerp concretiseren, dat aan een specifieke oplossing van Adobe moet worden gevormd. Een instantie voor Adobe Analytics ziet er bijvoorbeeld ongeveer als volgt uit:
+Alle apps die het gebruiken [!DNL Privacy JS Library] moeten een nieuw `AdobePrivacy` voorwerp concretiseren, dat aan een specifieke oplossing van de Adobe moet worden gevormd. Een instantie voor Adobe Analytics ziet er bijvoorbeeld ongeveer als volgt uit:
 
 ```js
 var adobePrivacy = new AdobePrivacy({
@@ -63,7 +63,7 @@ var adobePrivacy = new AdobePrivacy({
 });
 ```
 
-Voor een volledige lijst van gesteunde parameters voor verschillende oplossingen van Adobe, zie de bijlage sectie over gesteunde de configuratieparameters [van de](#adobe-solution-configuration-parameters)oplossing van Adobe.
+Voor een volledige lijst van gesteunde parameters voor verschillende oplossingen van Adobe, zie de bijlage sectie over gesteunde de configuratieparameters [van de oplossing van](#adobe-solution-configuration-parameters)Adobe.
 
 ## Codevoorbeelden
 
@@ -177,7 +177,7 @@ Door dit document te lezen, bent u geïntroduceerd in de kernfuncties van het [!
 
 Deze sectie bevat aanvullende informatie voor het gebruik van de [!DNL Privacy JS Library]flacon.
 
-### Configuratieparameters van de Adobe-oplossing
+### Adobe-configuratieparameters voor oplossing
 
 Hieronder volgt een lijst met de geaccepteerde configuratieparameters voor ondersteunde Adobe-oplossingen die worden gebruikt bij het [instantiëren van een AdobePrivacy-object](#instantiate-the-privacy-js-library).
 
@@ -186,7 +186,7 @@ Hieronder volgt een lijst met de geaccepteerde configuratieparameters voor onder
 | Parameter | Beschrijving |
 | --- | --- |
 | `cookieDomainPeriods` | De numerieke punten in een domein voor het bijhouden van cookies (standaard is 2). |
-| `dataCenter` | Adobe-datacenter voor gegevensverzameling. Deze mag alleen worden opgenomen als deze is opgegeven in uw JavaScript-webbaken. Mogelijke waarden zijn: <ul><li>&quot;d1&quot;: San Jose datacenter.</li><li>&quot;d2&quot;: Dallas datacenter.</li></ul> |
+| `dataCenter` | Adobe gegevensverzamelingsdatacenter. Deze mag alleen worden opgenomen als deze is opgegeven in uw JavaScript-webbaken. Mogelijke waarden zijn: <ul><li>&quot;d1&quot;: San Jose datacenter.</li><li>&quot;d2&quot;: Dallas datacenter.</li></ul> |
 | `reportSuite` | ID van de Reeks van het rapport zoals gespecificeerd in uw JavaScript Webbaken (bijvoorbeeld, &quot;s_code.js&quot;of &quot;dtm&quot;). |
 | `trackingServer` | Domein voor gegevensverzameling (niet-SSL). Deze mag alleen worden opgenomen als deze is opgegeven in uw JavaScript-webbaken. |
 | `trackingServerSecure` | Domein voor gegevensverzameling (SSL). Deze mag alleen worden opgenomen als deze is opgegeven in uw JavaScript-webbaken. |
