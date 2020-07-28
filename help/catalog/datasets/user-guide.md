@@ -121,7 +121,7 @@ U kunt een dataset schrappen door tot zijn de activiteitenscherm van de *[!UICON
 
 >[!NOTE]
 >
->Datasets die zijn gemaakt en gebruikt door Adobe-toepassingen en -services (zoals Adobe Analytics, Adobe Audience Manager of [!DNL Decisioning Service]), kunnen niet worden verwijderd.
+>Datasets die zijn gemaakt en gebruikt door Adobe-toepassingen en -services (zoals Adobe Analytics, Adobe Audience Manager of [!DNL Decisioning Service]) kunnen niet worden verwijderd.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
