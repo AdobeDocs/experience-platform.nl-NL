@@ -32,7 +32,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 ## Metrische waarden voor waarneembaarheid ophalen
 
-U kunt waarnemingsbaarheidsmetriek terugwinnen door een GET verzoek aan het `/metrics` eindpunt in de Inzichten API van de Waarneming te doen.
+U kunt de metriek van de waarneembaarheid terugwinnen door een verzoek van de GET aan het `/metrics` eindpunt in de Inzichten API van de Waarnembaarheid te richten.
 
 **API-indeling**
 
