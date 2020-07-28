@@ -5,6 +5,9 @@ title: Detailhandelrecept
 topic: overview
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 0%
 
 ---
 
@@ -28,9 +31,9 @@ In het recept Verkoopprognose voor detailhandel wordt machinaal leren gebruikt o
 
 ## Hoe begin ik?
 
-Aan de slag met deze [zelfstudie](../jupyterlab/create-a-recipe.md).
+U kunt aan de slag door deze [zelfstudie](../jupyterlab/create-a-recipe.md)te volgen.
 
-Deze zelfstudie gaat over het maken van het recept voor detailhandel in een Jupyter-laptop en het gebruik van de workflow voor het recept voor laptops om het recept te maken in het Adobe Experience Platform.
+Deze zelfstudie gaat over het maken van het recept voor detailhandel in een Jupyter-laptop en het gebruik van de laptop voor het recept-workflow om het recept in Adobe Experience Platform te maken.
 
 ## Gegevensschema
 
@@ -61,4 +64,4 @@ De verliesfunctie verwijst naar een maat van hoe goed een voorspellingsmodel doe
 
 Bij het verhogen van het verloop wordt een beslissingsstructuur gebruikt als de zwakke leerling. Normaal gesproken worden structuren met een beperkt aantal lagen, knooppunten en splitsingen gebruikt om ervoor te zorgen dat de leerling zwak blijft.
 
-Ten slotte wordt een additief model gebruikt. Na het berekenen van het verlies met de verliesfunctie wordt de boom die het verlies vermindert gekozen en gewogen om de moeilijker waarneming te modelleren. De productie van de gewogen boom wordt vervolgens toegevoegd aan de bestaande reeks bomen om de uiteindelijke productie van het model te verbeteren - de hoeveelheid van de toekomstige verkoop.
+Ten slotte wordt een additief model gebruikt. Na het berekenen van het verlies met de verliesfunctie wordt de boom die het verlies vermindert gekozen en gewogen om het modelleren van de lastigste waarnemingen te verbeteren. De productie van de gewogen boom wordt vervolgens toegevoegd aan de bestaande reeks bomen om de uiteindelijke productie van het model te verbeteren - de hoeveelheid van de toekomstige verkoop.
