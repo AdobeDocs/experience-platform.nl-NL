@@ -1,14 +1,17 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Help bij Adobe Experience Platform - Gegevensverwerking
+user-guide-title: Help bij Adobe Experience Platform gegevensinname
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '108'
+ht-degree: 4%
 
 ---
 
 
-# Gegevensinname Adobe Experience Platform {#ingestion}
+# Adobe Experience Platform gegevensinname {#ingestion}
 
 - [Overzicht van gegevensinname](home.md)
 - Streaming opname {#streaming}
@@ -20,7 +23,7 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    - [Batchopname-API](batch-ingestion/api-overview.md)
    - [Gedeeltelijke batch ingestie](batch-ingestion/partial.md)
    - [Problemen oplossen](batch-ingestion/troubleshooting.md)
-- Zelfstudies {#tutorials}
+- Tutorials {#tutorials}
    - [Een CSV-bestand toewijzen aan XDM](tutorials/map-a-csv-file.md)
    - [Batchgegevens invoeren met de gebruikersinterface](tutorials/ingest-batch-data.md)
    - [Een geverifieerde streamingverbinding maken](tutorials/create-authenticated-streaming-connection.md)
@@ -37,4 +40,4 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    - [Abonneren op gebeurtenissen voor gegevensinvoer](quality/subscribe-events.md)
 - [Bronaansluitingen](source-connectors.md)
 - [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
-- [Opmerkingen bij de release van Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
