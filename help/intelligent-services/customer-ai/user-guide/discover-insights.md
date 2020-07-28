@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Informatie over inzichten met Customer AI
 
-Klantenservice AI biedt marketers de mogelijkheid om Adobe Sensei te gebruiken om te anticiperen op wat de volgende actie van uw klanten zal zijn. AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, het kiezen van een algoritme, een opleiding, of plaatsing.
+Klantenservice AI biedt marketers de mogelijkheid om Adobe Sensei te gebruiken om te anticiperen op wat uw klanten de volgende actie zullen gaan ondernemen. AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, het kiezen van een algoritme, een opleiding, of plaatsing.
 
 Dit document fungeert als hulpmiddel bij de interactie met de inzichten van serviceversies in de Intelligent Services Customer AI-gebruikersinterface.
 
@@ -130,7 +130,7 @@ Als u het nieuwe segment wilt weergeven in de gebruikersinterface van het Platfo
 
 ## Volgende stappen
 
-In dit document worden de inzichten geschetst die door een AI-serviceexemplaar van een klant worden verschaft. U kunt nu doorgaan met de zelfstudie over het [downloaden van scores in Customer AI](./download-scores.md) of door de andere gidsen van [Adobe Intelligent Services](../../home.md) bladeren die worden aangeboden.
+In dit document worden de inzichten geschetst die door een AI-serviceexemplaar van een klant worden verschaft. U kunt nu doorgaan met de zelfstudie over het [downloaden van scores in Customer AI](./download-scores.md) of door de andere gidsen van de [Adobe Intelligente Diensten](../../home.md) bladeren die worden aangeboden.
 
 ## Aanvullende bronnen
 
