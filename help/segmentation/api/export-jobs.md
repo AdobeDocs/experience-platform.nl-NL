@@ -26,7 +26,7 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!D
 
 ## Een lijst met exporttaken ophalen {#retrieve-list}
 
-U kunt een lijst van alle uitvoerbanen voor uw organisatie terugwinnen IMS door een GET verzoek aan het `/export/jobs` eindpunt te doen.
+U kunt een lijst van alle uitvoerbanen voor uw organisatie terugwinnen IMS door een verzoek van de GET aan het `/export/jobs` eindpunt te doen.
 
 **API-indeling**
 
@@ -210,7 +210,7 @@ De volgende reactie keert status 200 van HTTP met een lijst van met succes volto
 
 ## Een nieuwe exporttaak maken {#create}
 
-U kunt een nieuwe uitvoerbaan tot stand brengen door een POST- verzoek aan het `/export/jobs` eindpunt te doen.
+U kunt een nieuwe uitvoerbaan tot stand brengen door een verzoek van de POST aan het `/export/jobs` eindpunt te doen.
 
 **API-indeling**
 
@@ -379,7 +379,7 @@ Als deze `destination.segmentPerBatch` was ingesteld op `true`, zou het bovensta
 
 ## Een specifieke exporttaak ophalen {#get}
 
-U kunt gedetailleerde informatie over een specifieke de uitvoerbaan terugwinnen door een GET verzoek aan het `/export/jobs` eindpunt te doen en identiteitskaart van de uitvoerbaan te verstrekken u in de verzoekweg wenst terug te winnen.
+U kunt gedetailleerde informatie over een specifieke de uitvoerbaan terugwinnen door een verzoek van de GET aan het `/export/jobs` eindpunt te doen en identiteitskaart van de de uitvoerbaan te verstrekken u in de verzoekweg wenst terug te winnen.
 
 **API-indeling**
 
