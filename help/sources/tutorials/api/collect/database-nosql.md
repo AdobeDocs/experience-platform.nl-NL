@@ -49,7 +49,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot [!DNL F
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
+Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
 * Inhoudstype: `application/json`
 
@@ -63,7 +63,7 @@ Ga door met het volgen van de stappen die in de ontwikkelaarsgids worden beschre
 
 ## Een bronverbinding maken {#source}
 
-Als een ad-hoc XDM-schema is gemaakt, kan nu een bronverbinding worden gemaakt met een POST-aanvraag voor de [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbindingsID, een brongegevensbestand, en een verwijzing naar het schema dat de brongegevens beschrijft.
+Als een ad-hoc XDM-schema is gemaakt, kan nu een bronverbinding worden gemaakt met behulp van een verzoek van de POST aan de [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbindingsID, een brongegevensbestand, en een verwijzing naar het schema dat de brongegevens beschrijft.
 
 Als u een bronverbinding wilt maken, moet u ook een opsommingswaarde voor het kenmerk voor de gegevensindeling definiëren.
 
@@ -136,7 +136,7 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 In eerdere stappen werd een ad-hoc XDM-schema gemaakt om de brongegevens te structureren. Als u de brongegevens in wilt gebruiken, moet u ook een doelschema maken om de brongegevens te structureren op basis van uw behoeften. [!DNL Platform] Het doelschema wordt dan gebruikt om een [!DNL Platform] dataset tot stand te brengen waarin de brongegevens bevat zijn. Dit doel-XDM-schema breidt ook de [!DNL XDM Individual Profile] klasse uit.
 
-Een doel-XDM-schema kan worden gemaakt door een POST-verzoek uit te voeren naar de [schemaregistratie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Als u de gebruikersinterface liever in wilt gebruiken, [!DNL Experience Platform]biedt de zelfstudie [van de](../../../../xdm/tutorials/create-schema-ui.md) Schema-editor stapsgewijze instructies voor het uitvoeren van vergelijkbare acties in de Schema-editor.
+Een doelXDM schema kan worden gecreeerd door een verzoek van de POST aan de Registratie API [van het](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schema uit te voeren. Als u de gebruikersinterface liever in wilt gebruiken, [!DNL Experience Platform]biedt de zelfstudie [van de](../../../../xdm/tutorials/create-schema-ui.md) Schema-editor stapsgewijze instructies voor het uitvoeren van vergelijkbare acties in de Schema-editor.
 
 **API-indeling**
 
@@ -242,7 +242,7 @@ Een geslaagde reactie retourneert details van het nieuwe schema, inclusief de un
 
 ## Een doelgegevensset maken
 
-Een doeldataset kan worden tot stand gebracht door een POST- verzoek aan de Dienst API [van de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalogus uit te voeren, die identiteitskaart van het doelschema binnen de lading verstrekken.
+Een doeldataset kan worden gecreeerd door een verzoek van de POST aan de Dienst API [van de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalogus uit te voeren, die identiteitskaart van het doelschema binnen de nuttige lading verstrekken.
 
 **API-indeling**
 
@@ -341,7 +341,7 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe doelverbindi
 
 ## Een toewijzing maken {#mapping}
 
-Opdat de brongegevens in een doeldataset worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht de doeldataset volgt aan. Dit wordt bereikt door een POST-verzoek uit te voeren naar de [!DNL Conversion Service] API met gegevenstoewijzingen die zijn gedefinieerd in de payload van de aanvraag.
+Opdat de brongegevens in een doeldataset worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht de doeldataset volgt aan. Dit wordt bereikt door een verzoek van de POST aan [!DNL Conversion Service] API met gegevenstoewijzingen uit te voeren die binnen de verzoeklading worden bepaald.
 
 **API-indeling**
 
@@ -565,7 +565,7 @@ De laatste stap in de richting van het verzamelen van gegevens is het maken van 
 * [Toewijzing-id](#mapping)
 * [Dataflow-specificatie-id](#specs)
 
-Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een POST- verzoek uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
+Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
 
 Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd in seconden. Vervolgens moet u de frequentiewaarde instellen op een van de vijf opties: `once`, `minute`, `hour`, `day`, of `week`. De intervalwaarde geeft de periode tussen twee opeenvolgende inname aan en het maken van een eenmalige inname vereist geen interval dat moet worden ingesteld. Voor alle andere frequenties moet de intervalwaarde worden ingesteld op gelijk aan of groter dan `15`.
 
