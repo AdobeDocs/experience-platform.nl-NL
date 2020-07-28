@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Voorbeeldquery&#39;s
 
-Adobe Experience Cloud-oplossingsgegevens zijn standaard beschikbaar in [!DNL Experience Platform]. Voor het eerst kunt u een query uitvoeren op Adobe Analytics-, Adobe Target-, Adobe Campaign- en Adobe Audience Manager-gegevens in dezelfde gegevensopslag zonder dat u gegevens hoeft te verplaatsen. Aangezien het gegeven van de oplossingen in Adobe Experience Platform wordt opgenomen wordt het omgezet in [!DNL Experience Event Experience Data Model] (de Gebeurtenis XDM van de Ervaring). Dit verstrekt een laag van schema normalisatie.
+Adobe Experience Cloud-oplossingsgegevens zijn standaard beschikbaar in [!DNL Experience Platform]. Voor de eerste keer, kunt u Adobe Analytics, Adobe Target, Adobe Campaign, en Gegevens van de Adobe Audience Manager van de zelfde gegevensopslag vragen zonder het moeten gegevens bewegen rond. Aangezien het gegeven van de oplossingen in Adobe Experience Platform wordt opgenomen wordt het omgezet in [!DNL Experience Event Experience Data Model] (de Gebeurtenis XDM van de Ervaring). Dit verstrekt een laag van schema normalisatie.
 
-Er zijn een aantal standaardquery&#39;s die u tegen uw Adobe-gegevens wilt uitvoeren. Raadpleeg de onderstaande documenten voor voorbeeldquery&#39;s voor Adobe Analytics en Adobe Target. De vragen van de steekproef voor andere oplossingsgegevens zullen in de toekomst worden toegevoegd.
+Er zijn een aantal standaardvragen die u tegen uw gegevens van Adobe zou kunnen willen lopen. Raadpleeg de onderstaande documenten voor voorbeeldquery&#39;s voor Adobe Analytics en Adobe Target. De vragen van de steekproef voor andere oplossingsgegevens zullen in de toekomst worden toegevoegd.
 
 - [Adobe Analytics-voorbeeldvragen](adobe-analytics.md)
 - [Adobe Target-voorbeeldvragen](adobe-target.md)
