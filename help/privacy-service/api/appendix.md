@@ -36,7 +36,7 @@ In de volgende tabel worden diverse veelgebruikte, vooraf gedefinieerde identite
 >
 >Elk identiteitstype heeft ook een `namespaceId` geheel-getalwaarde, die in plaats van het `namespace` koord kan worden gebruikt wanneer het plaatsen van het bezit van de identiteit aan &quot;namespaceId&quot; `type` . Zie de sectie over [naamruimtetekens](#namespace-qualifiers) voor meer informatie.
 
-U kunt een lijst van identiteit terugwinnen namespaces in gebruik door uw organisatie door een GET verzoek aan het `idnamespace/identities` eindpunt in [!DNL Identity Service] API te doen. Zie de ontwikkelaarsgids [van de Dienst van de](../../identity-service/api/getting-started.md) Identiteit voor meer informatie.
+U kunt een lijst van identiteitsnamespaces terugwinnen die door uw organisatie wordt gebruikt door een verzoek van de GET tot het `idnamespace/identities` eindpunt in [!DNL Identity Service] API te richten. Zie de ontwikkelaarsgids [van de Dienst van de](../../identity-service/api/getting-started.md) Identiteit voor meer informatie.
 
 ## Naamruimtetekens
 
@@ -54,7 +54,7 @@ Wanneer u een `namespace` waarde opgeeft in de [!DNL Privacy Service] API, moet 
 
 ## Geaccepteerde productwaarden
 
-In de volgende tabel worden de geaccepteerde waarden weergegeven voor het opgeven van een Adobe-product in het `include` kenmerk van een aanvraag voor het maken van taken.
+In de volgende tabel worden de geaccepteerde waarden weergegeven voor het opgeven van een Adobe-product in het `include` kenmerk van een aanvraag voor het maken van een taak.
 
 | Product | Waarde voor gebruik in het `include` kenmerk |
 --- | ---
