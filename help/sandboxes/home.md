@@ -38,7 +38,7 @@ Samengevat bieden sandboxen de volgende voordelen:
 
 ## Toegangsbeheer voor sandboxen
 
-Standaard hebben alle gebruikers van een organisatie toegang tot een productiesandbox. Toegang tot niet-productiesandboxen moet worden verleend door een systeembeheerder, productbeheerder of beheerder van het productprofiel via de [Adobe Admin Console](https://adminconsole.adobe.com).
+Standaard hebben alle gebruikers van een organisatie toegang tot een productiesandbox. Toegang tot niet-productiesandboxen moet worden verleend door een systeembeheerder, productbeheerder of productprofielbeheerder via de [Adobe Admin Console](https://adminconsole.adobe.com).
 
 Voor het weergeven, maken, bijwerken of verwijderen van niet-productiesandboxen moeten gebruikers ook de bevoegdheden van Sandbox-beheer hebben.
 
@@ -71,4 +71,4 @@ Met de sandbox-API kunt u sandboxen beheren met behulp van RESTful-API-bewerking
 
 Door dit document te lezen, hebt u kennis genomen van de belangrijkste concepten met betrekking tot sandboxen in Experience Platform. Zie de [gebruikershandleiding](ui/overview.md) voor de gebruikersinterface of de [ontwikkelaarsgids](./api/getting-started.md) voor de API voor gedetailleerde stappen voor het beheren van sandboxen.
 
-Hoewel sandboxen een waardevol hulpmiddel zijn voor het isoleren van Platforms voor uw ontwikkelingsteam, kunt u ook meer korrelige toegangscontrole beheren met de Adobe Admin Console. Zie het [toegangsbeheeroverzicht](../access-control/home.md) voor meer informatie.
+Terwijl zandbakken als waardevol hulpmiddel dienen om de milieu&#39;s van het Platform voor uw ontwikkelingsteam te isoleren, kunt u meer korrelige toegangscontrole ook beheren door Adobe Admin Console te gebruiken. Zie het [toegangsbeheeroverzicht](../access-control/home.md) voor meer informatie.
