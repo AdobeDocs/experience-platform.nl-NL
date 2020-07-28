@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] zelfstudies
 
-Adobe Experience Platform [!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzichten te creëren uit uw gegevens. Met de functie die in Adobe Experience Platform is geïntegreerd, kunt u [!DNL Data Science Workspace] voorspellingen maken met uw inhoud en gegevenselementen voor alle Adobe-oplossingen. Gegevenswetenschappers van alle vaardigheidsniveaus hebben geavanceerde, gebruiksvriendelijke hulpmiddelen die snelle ontwikkeling, opleiding, en het stemmen van machine het leren recepten steunen - alle voordelen van AI technologie, zonder de ingewikkeldheid.
+Adobe Experience Platform [!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzichten te creëren uit uw gegevens. Dankzij de geïntegreerde functie in Adobe Experience Platform kunt u [!DNL Data Science Workspace] voorspellingen maken met uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen. Gegevenswetenschappers van alle vaardigheidsniveaus hebben geavanceerde, gebruiksvriendelijke hulpmiddelen die snelle ontwikkeling, opleiding, en het stemmen van machine het leren recepten steunen - alle voordelen van AI technologie, zonder de ingewikkeldheid.
 
 Om meer te leren, begin door het overzicht [van de Werkruimte van de Wetenschap van](../data-science-workspace/home.md)Gegevens te lezen.
 
