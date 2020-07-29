@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK snel starten met starten
 description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Web van het Experience Platform om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Web van het Experience Platform om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
+source-git-commit: bc18ca26da37ecfca2ade9403be22d7de222facb
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Deze gids leidt u door de verschillende manieren aan opstelling het Web SDK van het Adobe Experience Platform in Lancering. Als u deze functie wilt gebruiken, moet u een whitelist hebben. Neem contact op met uw CSM als u op de wachtlijst wilt staan.
 
-- Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als je al een CNAME voor Analytics hebt, moet je die gebruiken. Het testen in ontwikkeling werkt zonder CNAME, maar u hebt er een nodig voordat u naar productie gaat.
+- Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als je al een CNAME voor Analytics hebt, moet je die gebruiken. Het testen in ontwikkeling werkt zonder een CNAME, maar u hebt één nodig alvorens u aan productie gaat.
 - Het recht hebben op Adobe Experience Platform. Als u geen Platform hebt gekocht, zal Adobe u van de Stichting van de Diensten van de Gegevens van het Experience Platform voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
 - Gebruik de nieuwste versie van de service Bezoeker-id.
 
@@ -29,6 +29,9 @@ Het Netwerk van de Rand van het Experience Platform neemt gegevens als XDM. XDM 
 3. Creeer een Dataset van het schema u creeerde.
 
 De volgende video is bedoeld om u in het creëren van een schema, dataset, en het stromen bronschakelaar voor uw [!DNL Web SDK] gegevens te steunen.
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 Meld u aan bij Starten en installeren van de `AEP Web SDK` extensie. Wanneer u de SDK installeert, wordt u gevraagd om de extensie te configureren. Voer de configuratie-id in die u hierboven hebt aangevraagd. De extensie vult automatisch uw organisatie-id in.
 
