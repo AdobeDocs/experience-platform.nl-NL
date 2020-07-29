@@ -4,7 +4,7 @@ seo-title: 'Snelle start voor Web SDK van Adobe Experience Platform '
 description: Snelle startgids voor het gebruiken van het Web SDK van het Experience Platform om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van het Web SDK van het Experience Platform om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
+source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 1%
@@ -20,14 +20,6 @@ Deze gids leidt u door de verschillende manieren aan opstelling het Web SDK van 
 - Het recht hebben op Adobe Experience Platform.  Als u geen Platform hebt gekocht, zal Adobe u van de Stichting van de Diensten van de Gegevens van het Experience Platform voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
 - Gebruik de nieuwste versie van de service Bezoeker-id.
 
-## Een configuratie-id maken
-
-U kunt een configuratie-id maken met het gereedschap [voor](../fundamentals/edge-configuration.md) randconfiguratie in Adobe Launch, zelfs als u de functies voor tagbeheer niet gebruikt. Dit staat u toe om toe te laten [!DNL Edge Network] om gegevens naar de diverse oplossingen te verzenden. Nadere informatie over het vinden van elke optie vindt u in de pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) .
-
->[!NOTE]
->
->Uw organisatie moet op de lijst van gewenste personen voor de eigenschap zijn. Neem contact op met uw CSM om de lijst van gewenste personen te openen.
-
 ## Een schema voorbereiden
 
 De [!DNL Experience Platform Edge Network] gegevens worden als XDM gebruikt. XDM is een gegevensformaat dat u schema&#39;s laat bepalen. Het schema bepaalt hoe de gegevens [!DNL Edge Network] verwacht worden geformatteerd. Om gegevens te verzenden, moet u uw schema bepalen.
@@ -38,6 +30,14 @@ De [!DNL Experience Platform Edge Network] gegevens worden als XDM gebruikt. XDM
 De volgende video is bedoeld om u in het creëren van een schema, dataset, en het stromen bronschakelaar voor uw [!DNL Web SDK] gegevens te steunen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
+
+## Een configuratie-id maken
+
+U kunt een configuratie-id maken met het gereedschap [voor](../fundamentals/edge-configuration.md) randconfiguratie in Adobe Launch, zelfs als u de functies voor tagbeheer niet gebruikt. Dit staat u toe om toe te laten [!DNL Edge Network] om gegevens naar de diverse oplossingen te verzenden. Nadere informatie over het vinden van elke optie vindt u in de pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) .
+
+>[!NOTE]
+>
+>Uw organisatie moet op de lijst van gewenste personen voor de eigenschap zijn. Neem contact op met uw CSM om de lijst van gewenste personen te openen.
 
 ## De SDK installeren
 
