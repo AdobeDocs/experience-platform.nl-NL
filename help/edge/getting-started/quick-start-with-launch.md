@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK snel starten met starten
 description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Web van het Experience Platform om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Web van het Experience Platform om gegevens te verzamelen
 translation-type: tm+mt
-source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
+source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 1%
@@ -16,17 +16,9 @@ ht-degree: 1%
 
 Deze gids leidt u door de verschillende manieren aan opstelling het Web SDK van het Adobe Experience Platform in Lancering. Als u deze functie wilt gebruiken, moet u een whitelist hebben. Neem contact op met uw CSM als u op de wachtlijst wilt staan.
 
-- Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als je al een CNAME voor Analytics hebt, moet je die gebruiken. Het testen in ontwikkeling werkt zonder een CNAME, maar u hebt één nodig alvorens u aan productie gaat.
+- Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als je al een CNAME voor Analytics hebt, moet je die gebruiken. Het testen in ontwikkeling werkt zonder CNAME, maar u hebt er een nodig voordat u naar productie gaat.
 - Het recht hebben op Adobe Experience Platform. Als u geen Platform hebt gekocht, zal Adobe u van de Stichting van de Diensten van de Gegevens van het Experience Platform voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
 - Gebruik de nieuwste versie van de service Bezoeker-id.
-
-## Een configuratie-id maken
-
-U kunt een configuratie-id maken met het gereedschap [](../fundamentals/edge-configuration.md) Edge-configuratie in Launch. Dit staat u toe om het Netwerk van de Rand toe te laten om gegevens naar de diverse oplossingen te verzenden. Nadere informatie over het vinden van elke optie vindt u in de pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) .
-
->[!NOTE]
->
->Voor deze functie moet een whitelist zijn voor uw organisatie. Neem contact op met uw CSM om op de lijst te komen voor eventuele whitelisting.
 
 ## Een schema voorbereiden
 
@@ -42,6 +34,14 @@ Meld u aan bij Starten en installeren van de `AEP Web SDK` extensie. Wanneer u d
 
 
 Voor meer details over verschillende configuratieopties, zie het [Vormen SDK](../fundamentals/configuring-the-sdk.md).
+
+## Een configuratie-id maken
+
+U kunt een configuratie-id maken met het gereedschap [](../fundamentals/edge-configuration.md) Edge-configuratie in Launch. Dit staat u toe om het Netwerk van de Rand toe te laten om gegevens naar de diverse oplossingen te verzenden. Nadere informatie over het vinden van elke optie vindt u in de pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) .
+
+>[!NOTE]
+>
+>Voor deze functie moet een whitelist zijn voor uw organisatie. Neem contact op met uw CSM om op de lijst te komen voor eventuele whitelisting.
 
 ## Een gegevenselement maken op basis van uw schema
 
