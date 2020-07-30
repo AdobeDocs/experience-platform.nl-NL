@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een gegevensstroom configureren voor een batchaansluiting voor cloudopslag in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: f532bd6393bfad84fa09c2fc753d1d5c5b39d013
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1482'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een gegevensstroom configureren voor een batchaansluiting voor cloudopslag in de gebruikersinterface
 
-Een dataflow is een geplande taak die gegevens van een bron aan een [!DNL Platform] dataset terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met behulp van de basisaansluiting voor cloudopslag.
+Een dataflow is een geplande taak die gegevens van een bron aan een [!DNL Platform] dataset terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
 
 ## Aan de slag
 
@@ -25,7 +25,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe
    * [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [Klantprofiel](../../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Bovendien is voor deze zelfstudie vereist dat u al een cloudopslagaansluiting hebt gemaakt. Een lijst met zelfstudies voor het maken van verschillende cloudopslagconnectors in de gebruikersinterface vindt u in het overzicht [van de](../../../../home.md)bronconnectors.
+Daarnaast vereist deze zelfstudie dat u beschikt over een gevestigde account voor cloudopslag. Een lijst met zelfstudies voor het maken van verschillende cloudopslagaccounts in de gebruikersinterface vindt u in het overzicht [van de](../../../../home.md)bronconnectors.
 
 ### Ondersteunde bestandsindelingen
 
@@ -37,22 +37,28 @@ Bovendien is voor deze zelfstudie vereist dat u al een cloudopslagaansluiting he
 
 ## Gegevens selecteren
 
-Nadat u de aansluiting voor cloudopslag hebt gemaakt, wordt de stap Gegevens ** selecteren weergegeven en krijgt u een interactieve interface om de hiërarchie voor cloudopslag te verkennen.
+Nadat u uw account voor cloudopslag hebt gemaakt, wordt de stap Gegevens ** selecteren weergegeven en krijgt u een interactieve interface om uw hiërarchie voor cloudopslag te verkennen.
 
 * De linkerhelft van de interface is een directorybrowser waarin de bestanden en mappen van uw server worden weergegeven.
 * Met de rechterhelft van de interface kunt u maximaal 100 rijen gegevens uit een compatibel bestand voorvertonen.
 
-Als u op een map in de lijst klikt, kunt u de mappenhiërarchie doorlopen in diepere mappen. Als u een compatibel bestand of een compatibele map hebt geselecteerd, wordt het vervolgkeuzemenu Gegevensindeling **** selecteren weergegeven. Hier kunt u een indeling kiezen waarmee de gegevens in het voorvertoningsvenster worden weergegeven.
+Als u een map in de lijst selecteert, kunt u de mappenhiërarchie doorlopen in diepere mappen. Als u een compatibel bestand of een compatibele map hebt geselecteerd, wordt het vervolgkeuzemenu Gegevensindeling **** selecteren weergegeven. Hier kunt u een indeling kiezen waarmee de gegevens in het voorvertoningsvenster worden weergegeven.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
-Wanneer het voorvertoningsvenster is gevuld, kunt u op **[!UICONTROL Volgende]** klikken om alle bestanden in de geselecteerde map te uploaden. Als u naar een specifiek bestand wilt uploaden, selecteert u dat bestand in de aanbieding voordat u op **[!UICONTROL Volgende]** klikt.
+Wanneer het voorvertoningsvenster is gevuld, kunt u **[!UICONTROL Volgende]** selecteren om alle bestanden in de geselecteerde map te uploaden. Als u naar een specifiek bestand wilt uploaden, selecteert u dat bestand in de aanbieding voordat u **[!UICONTROL Volgende]** selecteert.
 
->[!NOTE]
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-preview.png)
+
+### Parket- of JSON-bestanden samenvoegen
+
+Ondersteunde bestandsindelingen voor een account voor cloudopslag zijn ook JSON en Parquet. JSON- en Parquet-bestanden moeten XDM-compatibel zijn. Als u JSON- of Parquet-bestanden wilt innemen, selecteert u de juiste bestandsindeling in de directorybrowser en past u de compatibele gegevensindeling in de rechterinterface toe. Selecteer **[!UICONTROL Volgende]** om door te gaan.
+
+>[!IMPORTANT]
 >
->Tot de ondersteunde bestandsindelingen behoren CSV, JSON en Parquet. JSON- en Parquet-bestanden moeten XDM-compatibel zijn.
+>In tegenstelling tot bestandstypen met scheidingstekens zijn bestanden met de indeling JSON en Parquet niet beschikbaar voor voorvertoning.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-next.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Gegevensvelden toewijzen aan een XDM-schema
 
@@ -62,27 +68,27 @@ Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U k
 
 **Een bestaande gegevensset gebruiken**
 
-Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Gebruik bestaande dataset]**, dan klik het datasetpictogram.
+Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Bestaande dataset]**, dan het datasetpictogram.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-existing-data.png)
 
-Het dialoogvenster _Gegevensset_ selecteren wordt geopend. Zoek de gegevensset die u wilt gebruiken, selecteer deze en klik op **[!UICONTROL Doorgaan]**.
+Het dialoogvenster *[!UICONTROL Gegevensset]* selecteren wordt geopend. Zoek de gegevensset die u wilt gebruiken, selecteer deze en klik op **[!UICONTROL Doorgaan]**.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-data.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-dataset.png)
 
 **Een nieuwe gegevensset gebruiken**
 
-Om gegevens in een nieuwe dataset in te voeren, **[!UICONTROL creeer nieuwe dataset]** en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in. Klik vervolgens op het schemapictogram.
+Om gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL Nieuwe dataset]** en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in. Als u een schema wilt toevoegen, kunt u een bestaande schemanaam in het dialoogvenster Schema ** selecteren invoeren. Alternatief, kunt u het **[!UICONTROL Schema Geavanceerde onderzoek]** selecteren om naar een aangewezen schema te zoeken.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-schema.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
 
-Het dialoogvenster Schema __ selecteren wordt geopend. Selecteer het schema u wenst om op de nieuwe dataset toe te passen, dan klik **[!UICONTROL Gedaan]**.
+Het dialoogvenster Schema ** selecteren wordt geopend. Selecteer het schema u wenst om op de nieuwe dataset toe te passen, dan uitgezocht **[!UICONTROL Gedaan]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
 Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of mapperfuncties te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Raadpleeg de zelfstudie over het [toewijzen van CSV-gegevens aan XDM-schemavelden](../../../../../ingestion/tutorials/map-a-csv-file.md)voor meer informatie over gegevenstoewijzing en mapperfuncties.
 
-Klik op **[!UICONTROL Volgende]** als de brongegevens zijn toegewezen.
+Als uw brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Volgende]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
@@ -92,32 +98,46 @@ De *[!UICONTROL Plannende]* stap verschijnt, toestaand u om een innameprogramma 
 
 | Veld | Beschrijving |
 | --- | --- |
-| Frequentie | Selecteerbare frequenties zijn Minuut, Uur, Dag en Week. |
+| Frequentie | De selecteerbare frequenties omvatten `Once`, `Minute`, `Hour`, `Day`, en `Week`. |
 | Interval | Een geheel getal dat het interval voor de geselecteerde frequentie instelt. |
-| Begintijd | Een UTC-tijdstempel waarvoor de eerste invoer wordt uitgevoerd. |
-| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als *[!UICONTROL Backfill]* is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Als *[!UICONTROL Backfill]* is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de *[!UICONTROL begintijd]* worden geladen. Bestanden die vóór het begin van het *[!UICONTROL starten]* zijn geladen, worden niet opgenomen. |
+| Begintijd | Een UTC-tijdstempel die aangeeft wanneer de eerste opname wordt uitgevoerd. |
+| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als *[!UICONTROL Backfill]* is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Als *Backfill* is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de *[!UICONTROL begintijd]* worden geladen. Bestanden die vóór het begin van het *[!UICONTROL starten]* zijn geladen, worden niet opgenomen. |
 
-Dataflows worden ontworpen om gegevens automatisch in te voeren op een geplande basis. Als u slechts één keer wilt opnemen via deze workflow, kunt u dit doen door de **[!UICONTROL Frequentie]** in te stellen op &quot;Dag&quot; en een zeer groot aantal toe te passen voor het **[!UICONTROL Interval]**, zoals 10000 of een vergelijkbaar aantal.
+Dataflows worden ontworpen om gegevens automatisch in te voeren op een geplande basis. Begin door de innamefrequentie te selecteren. Daarna, plaats het interval om de periode tussen twee stroomlooppas aan te wijzen. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul en moet worden ingesteld op groter dan of gelijk aan 15.
 
-Geef waarden op voor het schema en klik op **Volgende**.
+Als u de begintijd voor inname wilt instellen, past u de datum en tijd aan die worden weergegeven in het vak Begintijd. U kunt ook het kalenderpictogram selecteren om de begintijdwaarde te bewerken. De begintijd moet groter zijn dan of gelijk zijn aan de huidige tijd in UTC.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling.png)
+Geef waarden op voor het schema en selecteer **[!UICONTROL Volgende]**.
 
-## Geef uw gegevensstroom een naam
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
-De stap *[!UICONTROL Naam doorloop]* wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
+### Eenmalige gegevensstroom voor inname instellen
 
-Geef waarden op voor de gegevensstroom en klik op **[!UICONTROL Volgende]**.
+Als u eenmalige invoer wilt instellen, selecteert u de vervolgkeuzepijl voor de frequentie en selecteert u **[!UICONTROL Eenmaal]**. U kunt bewerkingen blijven uitvoeren op een gegevensstroom die is ingesteld voor eenmalig opnemen van de frequentie, zolang de begintijd in de toekomst behouden blijft. Zodra de begintijd is verstreken, kan de eenmalig frequentiewaarde niet meer worden bewerkt.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/name-your-dataflow.png)
+>[!TIP] **[!UICONTROL Interval]** en **[!UICONTROL backfill]** zijn niet zichtbaar tijdens eenmalig gebruik.
 
-### Controleer uw gegevensstroom
+Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Volgende]**.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
+
+## Gegevens over gegevensstroom opgeven
+
+De stap met *[!UICONTROL details]* over gegevensstroom wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
+
+Tijdens dit proces kunt u ook *[!UICONTROL gedeeltelijke inname]* en *[!UICONTROL foutdiagnose]* inschakelen. Als u *[!UICONTROL Gedeeltelijke opname]* inschakelt, kunt u gegevens met fouten, tot een bepaalde drempel die u kunt instellen, insluiten. Als *[!UICONTROL foutdiagnostiek]* wordt ingeschakeld, worden details weergegeven over eventuele onjuiste gegevens die afzonderlijk in een batch worden opgeslagen. Voor meer informatie, zie het [gedeeltelijke partijingestie overzicht](../../../../../ingestion/batch-ingestion/partial.md).
+
+Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Volgende]**.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/dataflow-detail.png)
+
+## Controleer uw gegevensstroom
 
 De stap *[!UICONTROL Revisie]* wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-* *[!UICONTROL Brongegevens]*: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
-* *[!UICONTROL Target-gegevens]*: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
-* *[!UICONTROL Details]* schema: Toont de actieve periode, de frequentie, en het interval van het innameprogramma.
+* *[!UICONTROL Verbinding]*: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
+* *[!UICONTROL Gegevensset- en kaartvelden]* toewijzen: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
+* *[!UICONTROL Planning]*: Toont de actieve periode, de frequentie, en het interval van het innameprogramma.
 
 Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Voltooien]** en laat u enige tijd over tot de gegevensstroom.
 
