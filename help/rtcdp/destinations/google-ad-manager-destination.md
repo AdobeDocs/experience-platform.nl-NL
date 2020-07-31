@@ -4,9 +4,9 @@ seo-title: Doel van Google Ad Manager
 description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 seo-description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: f23d7dae7883cc14dc8b54d8b1ba2d94f0786cbc
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -69,3 +69,7 @@ Voordat u de [!DNL Google Ad Manager] bestemming maakt in CDP in real-time Adobe
 ## Segmenten activeren om [!DNL Google Ad Manager]
 
 Voor instructies op hoe te om segmenten te activeren, zie [!DNL Google Ad Manager]Gegevens aan Doelen [](/help/rtcdp/destinations/activate-destinations.md)activeren.
+
+## Geëxporteerde gegevens
+
+Controleer uw [!DNL Google Ad Manager] account om te controleren of gegevens naar de [!DNL Google Ad Manager] bestemming zijn geëxporteerd. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
