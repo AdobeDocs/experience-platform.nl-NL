@@ -4,9 +4,9 @@ seo-title: Bestemming voor Google-advertenties
 description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 seo-description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,6 @@ Voordat u de [!DNL Google Ads] bestemming maakt in CDP in real-time Adobe, moet 
 
 Voor instructies op hoe te om segmenten te activeren, zie [!DNL Google Ads]Gegevens aan Doelen [](/help/rtcdp/destinations/activate-destinations.md)activeren.
 
+## Geëxporteerde gegevens
+
+Controleer uw [!DNL Google Ads] account om te controleren of gegevens naar de [!DNL Google Ads] bestemming zijn geëxporteerd. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
