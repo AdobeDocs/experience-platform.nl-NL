@@ -4,9 +4,9 @@ seo-title: Bestemming Google Display en Video 360
 description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
 seo-description: 'Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten. '
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,7 @@ Voordat u de [!DNL Google Display & Video 360] bestemming maakt in CDP in real-t
 ## Segmenten activeren om [!DNL Google Display & Video 360]
 
 Voor instructies op hoe te om segmenten te activeren, zie [!DNL Google Display & Video 360]Gegevens aan Doelen [](/help/rtcdp/destinations/activate-destinations.md)activeren.
+
+## Geëxporteerde gegevens
+
+Controleer uw [!DNL Google Display & Video 360] account om te controleren of gegevens naar de [!DNL Google Display & Video 360] bestemming zijn geëxporteerd. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
