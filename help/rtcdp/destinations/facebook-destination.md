@@ -4,9 +4,9 @@ seo-title: Facebook-bestemming
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 seo-description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '722'
 ht-degree: 2%
 
 ---
@@ -93,3 +93,11 @@ Om met de [!DNL Facebook] bestemming te verbinden, zie het de authentificatiewer
 ## Segmenten activeren om [!DNL Facebook] {#activate-segments}
 
 Voor instructies op hoe te om segmenten te activeren, zie [!DNL Facebook]Gegevens aan Doelen [](/help/rtcdp/destinations/activate-destinations.md)activeren.
+
+## Geëxporteerde gegevens {#exported-data}
+
+Een geslaagde activering betekent [!DNL Facebook]bijvoorbeeld dat er via de programmacode een [!DNL Facebook] aangepast publiek wordt gemaakt in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Het lidmaatschap van een segment in het publiek zou worden toegevoegd en verwijderd aangezien de gebruikers voor de geactiveerde segmenten worden gekwalificeerd of worden uitgesloten.
+
+>[!TIP]
+>
+>De integratie tussen Adobe in real time CDP en [!DNL Facebook] steunt historische publieksbackfills. Alle historische segmentkwalificaties worden verzonden naar [!DNL Facebook] wanneer u de segmenten naar de bestemming activeert.
