@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Overzicht van Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: c79d9690f5d1f6c199d0c0a74238225c5b6fd2c2
+source-git-commit: 99bee24a8b1a0a212424ca63464f7733adba2ba2
 workflow-type: tm+mt
 source-wordcount: '815'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -36,11 +36,11 @@ In de volgende video&#39;s wordt beschreven hoe u rijke, relevante, real-time er
 
 Het Adobe Experience Platform is ontworpen om optimaal te werken in de **nieuwste versies** van Google Chrome, Safari, Firefox en Microsoft Edge. Mogelijk kunt u problemen ondervinden bij het gebruik van bepaalde functies in oudere versies van browsers.
 
-| Besturingssysteem | Ondersteunde browsers |  |  |
-|---|---|---|---|
-| Mac OS X | Google Chrome | Safari | Firefox |
-| Windows 10 | Google Chrome | Microsoft Edge | Firefox |
-| Windows 7 | Google Chrome |  | Firefox |
+| Besturingssysteem | Ondersteunde browsers |
+|---|---|
+| **Mac OS X** | Google Chrome, Safari, Firefox |
+| **Windows 10** | Google Chrome, Microsoft Edge, Firefox |
+| **Windows 7** | Google Chrome, Firefox |
 
 Deze besturingssystemen en browsers worden niet ondersteund:
 
