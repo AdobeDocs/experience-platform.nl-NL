@@ -4,7 +4,7 @@ seo-title: Salesforce-Marketing Cloud
 description: De Marketing Cloud van Salesforce is een digitale marketing reeks die vroeger als ExactTarget wordt bekend die u toestaat om reizen voor bezoekers en klanten te bouwen en aan te passen om hun ervaring te personaliseren.
 seo-description: De Marketing Cloud van Salesforce is een digitale marketing reeks die vroeger als ExactTarget wordt bekend die u toestaat om reizen voor bezoekers en klanten te bouwen en aan te passen om hun ervaring te personaliseren.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Om segmentgegevens naar te verzenden [!DNL Salesforce Marketing Cloud], moet u e
 
 ## Connect-doel {#connect-destination}
 
-1. Selecteer in **[!UICONTROL Verbindingen > Doelen]** de optie [!DNL Salesforce Marketing Cloud]en selecteer vervolgens de **[!UICONTROL Connect-bestemming]**.
+1. Selecteer in **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** de optie [!DNL Salesforce Marketing Cloud]en selecteer vervolgens de **[!UICONTROL Connect-bestemming]**.
 
    ![Verbinding maken met Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
