@@ -4,7 +4,7 @@ seo-title: Oracle Responsys-bestemming
 description: Responsys is een marketingtool voor e-mailberichten voor marketingcampagnes over meerdere kanalen die door Oracle worden aangeboden om interacties via e-mail, mobiele apparaten, displays en sociale media aan te passen.
 seo-description: Responsys is een marketingtool voor e-mailberichten voor marketingcampagnes over meerdere kanalen die door Oracle worden aangeboden om interacties via e-mail, mobiele apparaten, displays en sociale media aan te passen.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Als u segmentgegevens wilt verzenden naar [!DNL Oracle Responsys], moet u eerst 
 
 ## Connect-doel {#connect-destination}
 
-1. Selecteer in **[!UICONTROL Verbindingen > Doelen]** de optie [!DNL Oracle Responsys]en selecteer vervolgens de **[!UICONTROL Connect-bestemming]**.
+1. Selecteer in **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** de optie [!DNL Oracle Responsys]en selecteer vervolgens de **[!UICONTROL Connect-bestemming]**.
 
    ![Verbinden met Responssys](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
