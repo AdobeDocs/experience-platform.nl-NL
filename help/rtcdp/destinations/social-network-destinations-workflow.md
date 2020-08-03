@@ -4,7 +4,7 @@ seo-title: Workflow voor sociale netwerkdoelen
 description: Instructies om verbinding te maken met uw sociale netwerk en accounts
 seo-description: Instructies om verbinding te maken met uw sociale netwerk en accounts
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Deze zelfstudie gebruikt [!DNL Facebook] als voorbeeld, maar de workflow in het Adobe Real-time Platform van klantgegevens zal hetzelfde zijn voor alle sociale netwerkbestemmingen, wanneer er nog meer aan het product wordt toegevoegd.
 
-1. Blader in **[!UICONTROL Doelen > Catalogus]** naar de categorie **[!UICONTROL Sociaal]** . Selecteer de gewenste sociale netwerkbestemming en selecteer vervolgens de **[!UICONTROL Connect-bestemming]**.
+1. Blader in **[!UICONTROL Doelen]** > **[!UICONTROL Catalogus]** naar de categorie **[!UICONTROL Sociaal]** . Selecteer de gewenste sociale netwerkbestemming en selecteer vervolgens de **[!UICONTROL Connect-bestemming]**.
 
    ![Verbinden met sociale netwerkbestemming](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
 
