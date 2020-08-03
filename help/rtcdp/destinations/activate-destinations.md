@@ -4,7 +4,7 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens u in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens u in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Om gegevens aan bestemmingen te activeren, moet u een bestemming [met succes heb
 
 ## Gegevens activeren {#activate-data}
 
-1. Kies in **[!UICONTROL Doelen > Bladeren]** de bestemming waar u de segmenten wilt activeren.
+1. Kies in **[!UICONTROL Doelen]** > **[!UICONTROL Bladeren]** de bestemming waar u de segmenten wilt activeren.
 2. Klik op de naam van het doel. Hiermee gaat u naar de flow Activeren.
    ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)Merk op dat als een activeringsstroom reeds voor een bestemming bestaat, u de segmenten kunt zien die momenteel naar de bestemming worden verzonden. Selecteer Activering **** bewerken in de rechtertrack en voer de onderstaande stappen uit om de activeringsdetails te wijzigen.
 3. Selecteer **[!UICONTROL Activeren]**;
