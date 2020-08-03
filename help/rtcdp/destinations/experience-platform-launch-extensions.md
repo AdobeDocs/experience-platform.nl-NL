@@ -4,7 +4,7 @@ seo-title: Experience Platform Launch-extensies
 description: Starten is de volgende generatie mogelijkheden voor tagbeheer van Adobe. De lancering geeft klanten een eenvoudige manier om alle analytische, marketing, en reclame markeringen noodzakelijk om relevante klantenervaringen op te stellen en te beheren.
 seo-description: Starten is de volgende generatie mogelijkheden voor tagbeheer van Adobe. De lancering geeft klanten een eenvoudige manier om alle analytische, marketing, en reclame markeringen noodzakelijk om relevante klantenervaringen op te stellen en te beheren.
 translation-type: tm+mt
-source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '622'
 ht-degree: 3%
@@ -22,7 +22,7 @@ Zie de volgende bronnen voor een inleiding op de mogelijkheden van Experience Pl
 
 ## Hoe te om de uitbreidingen van de Lancering in de Adobe te vinden Real-time CDP interface {#how-to-find-extensions-in-interface}
 
-Blader naar **[!UICONTROL Doelen > Catalogus]** en selecteer **[!UICONTROL Extensies]** in het filter **[!UICONTROL Types]** om de extensies Starten te zoeken in de CDP-interface van de Adobe in real-time.
+Blader naar **[!UICONTROL Doelen]** > **[!UICONTROL Catalogus]** en selecteer **[!UICONTROL Extensies]** in het filter **[!UICONTROL Types]** om de extensies Starten te zoeken in de CDP-interface van de Adobe in real-time.
 
 ![Extensies, filter in de interface](/help/rtcdp/destinations/assets/extensions-filter.png)
 
@@ -58,7 +58,7 @@ De uitbreidingen van de lancering laten u toe om diverse klantengebruiksgevallen
 De uitbreidingen van de lancering kunnen onder de volgende categorieën in Adobe Real-time CDP vallen:
 
 * [Reclame](/help/rtcdp/destinations/advertising-destinations.md)
-* [Analytics](/help/rtcdp/destinations/analytics-destinations.md)
+* [Analytics](/help/rtcdp/destinations/analytics-destinations.md) 
 * [Platform voor gegevensbeheer](/help/rtcdp/destinations/dmp-destinations.md)
 * [E-mailmarketingdoelen](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Personalisatie](/help/rtcdp/destinations/personalization-destinations.md)
