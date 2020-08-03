@@ -4,7 +4,7 @@ seo-title: Oracle Eloqua-bestemming
 description: Oracle Eloqua is een SaaS-platform (software as a service) voor marketingautomatisering dat door Oracle wordt aangeboden en bedoeld is om B2B-marketers en -organisaties te helpen bij het beheren van marketingcampagnes en het genereren van verkooplood.
 seo-description: Oracle Eloqua is een SaaS-platform (software as a service) voor marketingautomatisering dat door Oracle wordt aangeboden en bedoeld is om B2B-marketers en -organisaties te helpen bij het beheren van marketingcampagnes en het genereren van verkooplood.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Om segmentgegevens naar te verzenden [!DNL Oracle Eloqua], moet u eerst de beste
 
 ## Verbinden met doel {#connect-destination}
 
-1. Selecteer in **[!UICONTROL Verbindingen > Doelen]** de optie [!DNL Oracle Eloqua]en selecteer vervolgens de **[!UICONTROL Connect-bestemming]**.
+1. Selecteer in **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** de optie [!DNL Oracle Eloqua]en selecteer vervolgens de **[!UICONTROL Connect-bestemming]**.
 
    ![Verbinden met Eloqua](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
