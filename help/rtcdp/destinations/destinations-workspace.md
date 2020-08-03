@@ -4,7 +4,7 @@ seo-title: Werkruimte Doelen
 description: In het Platform van de Gegevens van de Klant van Adobe in real time, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 seo-description: In het Platform van de Gegevens van de Klant van Adobe in real time, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 2%
@@ -34,7 +34,7 @@ Voor meer informatie over bestemmingscategorieën en informatie over elke bestem
 
 ## [!UICONTROL Bladeren] {#browse}
 
-Op het tabblad **[!UICONTROL Bladeren]** worden de doelen weergegeven waarmee u een verbinding hebt gemaakt. Doelen waarvoor de **[!UICONTROL ingeschakelde]** schakeloptie is ingeschakeld, stellen de bestemming in op actief en andersom. U kunt de bestemmingen ook bekijken waar u gegevens door **[!UICONTROL Segmenten > te selecteren doorbladert]** en een segment selecteert te inspecteren. Zie de lijst hieronder voor alle informatie die voor elke bestemming in het Browse lusje wordt verstrekt:
+Op het tabblad **[!UICONTROL Bladeren]** worden de doelen weergegeven waarmee u een verbinding hebt gemaakt. Doelen waarvoor de **[!UICONTROL ingeschakelde]** schakeloptie is ingeschakeld, stellen de bestemming in op actief en andersom. U kunt de bestemmingen ook bekijken waar u gegevens hebt die door **[!UICONTROL Segmenten]** te selecteren > **[!UICONTROL doorbladeren]** en een te inspecteren segment te selecteren stromen. Zie de lijst hieronder voor alle informatie die voor elke bestemming in het Browse lusje wordt verstrekt:
 
 ![Tabblad Bladeren](/help/rtcdp/destinations/assets/browse-tab.png)
 
