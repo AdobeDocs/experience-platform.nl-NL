@@ -4,7 +4,7 @@ seo-title: Experience Cloud ID Service-extensie
 description: De uitbreiding van de Dienst van identiteitskaart van Experience Cloud is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: De uitbreiding van de Dienst van identiteitskaart van Experience Cloud is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 2%
@@ -35,7 +35,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang nodig tot [!DNL Experience Pl
 
 U installeert als volgt de extensie [!DNL Experience Cloud] Id-service:
 
-1. In de [Adobe in real time CDP interface](http://platform.adobe.com/), ga naar **[!UICONTROL Doelen > Catalogus]**.
+1. In de [Adobe in real time CDP interface](http://platform.adobe.com/), ga naar **[!UICONTROL Doelen]** > **[!UICONTROL Catalogus]**.
 2. Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 3. Klik op de bestemming om deze te markeren en selecteer Extensie **** installeren in de rechterrail. Als het besturingselement Extensie **** installeren grijs wordt weergegeven, ontbreekt u de machtiging **[!UICONTROL manage_properties]** . Zie [Voorwaarden](#prerequisites).
 4. Selecteer in het venster **[!UICONTROL Selecteer beschikbare]** starteigenschap de [!DNL Launch] eigenschap waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken in [!DNL Launch]. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Eigenschappen van de [!DNL Launch] documentatie.
