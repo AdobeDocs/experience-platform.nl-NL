@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruikershandleiding voor Attribution AI
 topic: User guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 15f9f90e5a1439e071eeb46ad655eee10954c2ac
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1432'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Als u meerdere conversies nodig hebt, klikt u op Conversie **** toevoegen om een
 
 ![conversie toevoegen](./images/user-guide/add_conversion.png)
 
-### Opzoekvenster definiëren
+### Opzoekvenster definiëren {#lookback-window}
 
 Nadat u de conversie hebt gedefinieerd, moet u het terugzoekvenster bevestigen. Geef met de pijltoetsen of door op de standaardwaarde (56) te klikken op hoeveel dagen vóór de conversiegebeurtenis u aanraakpunten wilt opnemen. Aanraakpunten worden gedefinieerd in de volgende stap.
 
@@ -172,9 +172,9 @@ Typ ten slotte de landcode in het vervolgkeuzemenu *Veldwaarde* invoeren.
 
 ![regio](./images/user-guide/region-based.png)
 
-### Trainingsvenster
+### Trainingsvenster {#training-window}
 
-Om ervoor te zorgen dat u het meest nauwkeurige model mogelijk krijgt, is het belangrijk om uw model te trainen met historische gegevens die uw zaken vertegenwoordigen. Standaard wordt het model getraind met twee kwartalen (zes maanden) gegevens. Selecteer het vervolgkeuzemenu om de standaardinstelling te wijzigen. U kunt kiezen om met één tot vier kwart van gegevens (3-12 maanden) te trainen.
+Om ervoor te zorgen dat u het meest nauwkeurige model mogelijk krijgt, is het belangrijk om uw model te trainen met historische gegevens die uw zaken vertegenwoordigen. Standaard wordt het model getraind met twee kwartalen (zes maanden) conversiegebeurtenisgegevens. Selecteer het vervolgkeuzemenu om de standaardinstelling te wijzigen. U kunt kiezen om met één tot vier kwart van gegevens (3-12 maanden) te trainen.
 
 >[!NOTE]
 >
