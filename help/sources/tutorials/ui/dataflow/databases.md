@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vorm een dataflow voor een gegevensbestandschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: dd0ce5b5c45133b570970b1d1d7e2f484b89c2e9
+source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1225'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Vorm een dataflow voor een gegevensbestandschakelaar in UI
 
-Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen om een nieuwe dataflow te vormen gebruikend uw schakelaar van de gegevensbestandbasis.
+Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen om een nieuwe gegevensstroom te vormen gebruikend uw gegevensbestandrekening.
 
 ## Aan de slag
 
@@ -25,11 +25,11 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe
    - [Zelfstudie](../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [Klantprofiel](../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Bovendien, vereist dit leerprogramma dat u reeds een gegevensbestandschakelaar hebt gecreeerd. Een lijst van leerprogramma&#39;s voor het creëren van verschillende gegevensbestandschakelaars in UI kan in het overzicht [van](../../../home.md)bronschakelaars worden gevonden.
+Bovendien is het voor deze zelfstudie nodig dat u al een databaseaccount hebt gemaakt. Een lijst van leerprogramma&#39;s voor het creëren van verschillende gegevensbestandschakelaars in UI kan in het overzicht [van](../../../home.md)bronschakelaars worden gevonden.
 
 ## Gegevens selecteren
 
-Nadat u de databaseverbinding hebt gemaakt, wordt de stap Gegevens ** selecteren weergegeven en krijgt u een interactieve interface om de databasehiërarchie te verkennen.
+Nadat u uw databaseaccount hebt gemaakt, wordt de stap Gegevens ** selecteren weergegeven en krijgt u een interactieve interface om de databasehiërarchie te verkennen.
 
 - De linkerhelft van de interface is een browser die de lijst met databases van uw account weergeeft.
 - Met de rechterhelft van de interface kunt u maximaal 100 rijen met gegevens voorvertonen.
@@ -58,11 +58,11 @@ Het dialoogvenster *[!UICONTROL Gegevensset]* selecteren wordt geopend. Zoek de 
 
 Om gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL Nieuwe dataset]** en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in.
 
-U kunt een schemagebied vastmaken door een schemanaam in de **[!UICONTROL Uitgezochte bar van het schemaonderzoek]** te typen. U kunt ook het vervolgkeuzepictogram selecteren om een lijst met bestaande schema&#39;s weer te geven. U kunt ook **[!UICONTROL Geavanceerd zoeken]** selecteren in een scherm met bestaande schema&#39;s en de desbetreffende details.
+U kunt een schemagebied vastmaken door een schemanaam in te gaan in de **[!UICONTROL Uitgezochte bar van het schemaonderzoek]** . U kunt ook het vervolgkeuzepictogram selecteren om een lijst met bestaande schema&#39;s weer te geven. U kunt ook **[!UICONTROL Geavanceerd zoeken]** selecteren om toegang te krijgen tot het scherm met bestaande schema&#39;s en de bijbehorende details.
 
-![](../../../images/tutorials/dataflow/databases/new-dataset.png)
+![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-Het dialoogvenster *[!UICONTROL Selecteer schema] wordt weergegeven. Selecteer het schema u wenst om op de nieuwe dataset toe te passen, dan klik **[!UICONTROL Gedaan]**.
+Het dialoogvenster Schema ** selecteren wordt geopend. Selecteer het schema u wenst om op de nieuwe dataset toe te passen, dan klik **[!UICONTROL Gedaan]**.
 
 ![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
@@ -70,7 +70,7 @@ Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wij
 
 Klik op **[!UICONTROL Volgende]** als de brongegevens zijn toegewezen.
 
-![](../../../images/tutorials/dataflow/databases/mapping.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
 
 ## Planninguitvoering
 
@@ -78,10 +78,10 @@ De *[!UICONTROL Plannende]* stap verschijnt, toestaand u om een innameprogramma 
 
 | Veld | Beschrijving |
 | --- | --- |
-| Frequentie | Selecteerbare frequenties zijn Eenmaal, Minuut, Uur, Dag en Week. |
+| Frequentie | De selecteerbare frequenties omvatten `Once`, `Minute`, `Hour`, `Day`, en `Week`. |
 | Interval | Een geheel getal dat het interval voor de geselecteerde frequentie instelt. |
-| Begintijd | Een UTC-tijdstempel die aangeeft wanneer de eerste opname wordt uitgevoerd |
-| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als *Backfill* is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Als *Backfill* is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de *begintijd* worden geladen. Bestanden die vóór het begin van het *starten* zijn geladen, worden niet opgenomen. |
+| Begintijd | Een UTC-tijdstempel die aangeeft wanneer de eerste opname wordt uitgevoerd. |
+| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als *[!UICONTROL Backfill]* is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Als *Backfill* is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de *[!UICONTROL begintijd]* worden geladen. Bestanden die vóór het begin van het *[!UICONTROL starten]* zijn geladen, worden niet opgenomen. |
 | Delta-kolom | Een optie met een gefilterde reeks gebieden van het bronschema van type, datum, of tijd. Dit veld wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
 
 Dataflows worden ontworpen om gegevens automatisch in te voeren op een geplande basis. Begin door de innamefrequentie te selecteren. Daarna, plaats het interval om de periode tussen twee stroomlooppas aan te wijzen. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul en moet worden ingesteld op groter dan of gelijk aan 15.
@@ -98,13 +98,18 @@ Als u eenmalige invoer wilt instellen, selecteert u de vervolgkeuzepijl voor de 
 
 >[!TIP] **[!UICONTROL Interval]** en **[!UICONTROL backfill]** zijn niet zichtbaar tijdens eenmalig gebruik.
 
-![](../../../images/tutorials/dataflow/databases/schedule-once.png)
-
 Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Volgende]**.
 
-## Geef uw gegevensstroom een naam
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-De stap met *[!UICONTROL details]* voor gegevensstroom wordt weergegeven. Hier moet u een naam en een optionele beschrijving voor de gegevensstroom opgeven. Selecteer **[!UICONTROL Volgende]** als u klaar bent.
+## Gegevens over gegevensstroom opgeven
+
+De stap met *[!UICONTROL details]* over gegevensstroom wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
+
+Tijdens dit proces kunt u ook *[!UICONTROL gedeeltelijke inname]* en *[!UICONTROL foutdiagnose]* inschakelen. Als u *[!UICONTROL Gedeeltelijke inname]* inschakelt, kunt u gegevens met fouten tot een bepaalde drempel innemen. Wanneer *[!UICONTROL Partiële inname]* is ingeschakeld, sleept u de *[!UICONTROL foutdrempel %]* voor een wijziging van de foutdrempel van de batch. U kunt de drempelwaarde ook handmatig aanpassen door het invoervak te selecteren. Voor meer informatie, zie het [gedeeltelijke partijingestie overzicht](../../../../ingestion/batch-ingestion/partial.md).
+Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Volgende]**.
+
+Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Volgende]**.
 
 ![](../../../images/tutorials/dataflow/databases/dataflow-detail.png)
 
@@ -112,9 +117,9 @@ De stap met *[!UICONTROL details]* voor gegevensstroom wordt weergegeven. Hier m
 
 De stap *[!UICONTROL Revisie]* wordt weergegeven, zodat u de nieuwe gegevensstroom kunt controleren voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-- *Verbinding*: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
-- *Gegevensset- en kaartvelden* toewijzen: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
-- *Planning*: Toont de actieve periode, de frequentie, en het interval van het innameprogramma.
+- *[!UICONTROL Verbinding]*: Toont het brontype, de relevante weg van het gekozen brondossier, en de hoeveelheid kolommen binnen dat brondossier.
+- *[!UICONTROL Gegevensset- en kaartvelden]* toewijzen: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset zich aan houdt.
+- *[!UICONTROL Planning]*: Toont de actieve periode, de frequentie, en het interval van het innameprogramma.
 
 Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Voltooien]** en laat u enige tijd over tot de gegevensstroom.
 
