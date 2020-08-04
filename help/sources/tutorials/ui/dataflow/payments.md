@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een gegevensstroom configureren voor een betalingsconnector in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0d6f5776fef93b3d96461fc18c8818231e4c2e44
+source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1224'
 ht-degree: 0%
 
 ---
@@ -58,11 +58,9 @@ Het dialoogvenster *[!UICONTROL Gegevensset]* selecteren wordt geopend. Zoek de 
 
 Om gegevens in een nieuwe dataset in te voeren, **[!UICONTROL creeer nieuwe dataset]** en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in.
 
-Tijdens dit proces kunt u ook *[!UICONTROL gedeeltelijke inname]* en *[!UICONTROL foutdiagnose]* inschakelen. Als u *[!UICONTROL Gedeeltelijke opname]* inschakelt, kunt u gegevens met fouten, tot een bepaalde drempel die u kunt instellen, insluiten. Als u de diagnostische functie Fout inschakelt, worden details weergegeven over onjuiste gegevens die afzonderlijk in een batch worden opgeslagen. Voor meer informatie, zie het [gedeeltelijke partijingestie overzicht](../../../../ingestion/batch-ingestion/partial.md).
+U kunt een schemagebied vastmaken door een schemanaam in te gaan in de **[!UICONTROL Uitgezochte bar van het schemaonderzoek]** . U kunt ook het vervolgkeuzepictogram selecteren om een lijst met bestaande schema&#39;s weer te geven. U kunt ook **[!UICONTROL Geavanceerd zoeken]** selecteren om toegang te krijgen tot het scherm met bestaande schema&#39;s en de bijbehorende details.
 
-Klik op het schemapictogram als u klaar bent.
-
-![create-new-dataset](../../../images/tutorials/dataflow/payments/new-dataset.png)
+![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
 Het dialoogvenster Schema ** selecteren wordt geopend. Selecteer het schema u wenst om op de nieuwe dataset toe te passen, dan klik **[!UICONTROL Gedaan]**.
 
@@ -70,11 +68,9 @@ Het dialoogvenster Schema ** selecteren wordt geopend. Selecteer het schema u we
 
 Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of mapperfuncties te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Raadpleeg de zelfstudie over het [toewijzen van CSV-gegevens aan XDM-schemavelden](../../../../ingestion/tutorials/map-a-csv-file.md)voor meer informatie over gegevenstoewijzing en mapperfuncties.
 
-In het scherm *[!UICONTROL Toewijzing]* kunt u ook de *[!UICONTROL Delta-kolom]* instellen. Wanneer de gegevensstroom wordt gecreeerd, kunt u om het even welk tijdstempelgebied als basis plaatsen om te beslissen welke verslagen aan opgenomen in geplande stijgende ingestie.
-
 Klik op **[!UICONTROL Volgende]** als de brongegevens zijn toegewezen.
 
-![](../../../images/tutorials/dataflow/payments/mapping.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
 
 ## Planninguitvoering
 
@@ -82,10 +78,10 @@ De *[!UICONTROL Plannende]* stap verschijnt, toestaand u om een innameprogramma 
 
 | Veld | Beschrijving |
 | --- | --- |
-| Frequentie | Selecteerbare frequenties zijn Eenmaal, Minuut, Uur, Dag en Week. |
+| Frequentie | De selecteerbare frequenties omvatten `Once`, `Minute`, `Hour`, `Day`, en `Week`. |
 | Interval | Een geheel getal dat het interval voor de geselecteerde frequentie instelt. |
-| Begintijd | Een UTC-tijdstempel die aangeeft wanneer de eerste opname wordt uitgevoerd |
-| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als *Backfill* is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Als *Backfill* is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de *begintijd* worden geladen. Bestanden die vóór het begin van het *starten* zijn geladen, worden niet opgenomen. |
+| Begintijd | Een UTC-tijdstempel die aangeeft wanneer de eerste opname wordt uitgevoerd. |
+| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als *[!UICONTROL Backfill]* is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Als *Backfill* is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de *[!UICONTROL begintijd]* worden geladen. Bestanden die vóór het begin van het *[!UICONTROL starten]* zijn geladen, worden niet opgenomen. |
 | Delta-kolom | Een optie met een gefilterde reeks gebieden van het bronschema van type, datum, of tijd. Dit veld wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
 
 Dataflows worden ontworpen om gegevens automatisch in te voeren op een geplande basis. Begin door de innamefrequentie te selecteren. Daarna, plaats het interval om de periode tussen twee stroomlooppas aan te wijzen. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul en moet worden ingesteld op groter dan of gelijk aan 15.
@@ -102,15 +98,19 @@ Als u eenmalige invoer wilt instellen, selecteert u de vervolgkeuzepijl voor de 
 
 >[!TIP] **[!UICONTROL Interval]** en **[!UICONTROL backfill]** zijn niet zichtbaar tijdens eenmalig gebruik.
 
-![](../../../images/tutorials/dataflow/databases/schedule-once.png)
-
 Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Volgende]**.
 
-## Geef uw gegevensstroom een naam
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-De stap met *[!UICONTROL details]* over gegevensstroom wordt weergegeven. Hier moet u een naam en een optionele beschrijving voor de gegevensstroom opgeven. Selecteer **[!UICONTROL Volgende]** als u klaar bent.
+## Gegevens over gegevensstroom opgeven
 
-![dataset-flow-details](../../../images/tutorials/dataflow/payments/dataset-flow-details.png)
+De stap met *[!UICONTROL details]* over gegevensstroom wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
+
+Tijdens dit proces kunt u ook *[!UICONTROL gedeeltelijke inname]* en *[!UICONTROL foutdiagnose]* inschakelen. Als u *[!UICONTROL Gedeeltelijke inname]* inschakelt, kunt u gegevens met fouten tot een bepaalde drempel innemen. Wanneer *[!UICONTROL Partiële inname]* is ingeschakeld, sleept u de *[!UICONTROL foutdrempel %]* voor een wijziging van de foutdrempel van de batch. U kunt de drempelwaarde ook handmatig aanpassen door het invoervak te selecteren. Voor meer informatie, zie het [gedeeltelijke partijingestie overzicht](../../../../ingestion/batch-ingestion/partial.md).
+
+Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Volgende]**.
+
+![details gegevensstroom](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
 ## Controleer uw gegevensstroom
 
