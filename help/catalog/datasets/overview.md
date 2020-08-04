@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van gegevenssets
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '712'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ De etiketten van het gebruik van gegevens kunnen op volledige datasets of indivi
 Zie het overzicht [van](../../data-governance/home.md) Gegevensbeheer voor meer informatie over de dienst. Raadpleeg de volgende hulplijnen voor stappen over het werken met gebruikslabels in [!DNL Platform]:
 
 * [Labels beheren in de gebruikersinterface](../../data-governance/labels/user-guide.md)
-* [Labels in de API beheren](../../data-governance/labels/api.md)
+* [Gegevenssetlabels beheren in de API](../../data-governance/labels/dataset-api.md)
 
 ## Gegevensbestanden in downstream- [!DNL Platform] services
 
@@ -60,7 +60,7 @@ Hieronder volgt een lijst met downstreamservices die gegevenssets gebruiken voor
 * [!DNL Real-time Customer Profile](../../profile/home.md): Hefboomwerkingen [!DNL Identity Service] om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. [!DNL Real-time Customer Profile] trekt gegevens van de klant [!DNL Data Lake] en voortduurt klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
 * [Segmenteringsservice](../../segmentation/home.md)Adobe Experience Platform: Staat u toe om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze doelgroepen kunnen vervolgens worden geëxporteerd naar hun eigen gegevensbestanden in de [!DNL Data Lake]map.
 * [Werkruimte](../../data-science-workspace/home.md)voor wetenschapsgegevens van Adobe Experience Platform: Gebruikt machinaal leren en kunstmatige intelligentie om inzichten in grote datasets te ontdekken.
-* [Query-service](../../query-service/home.md)Adobe Experience Platform: Staat u toe om standaardSQL aan vraaggegevens binnen te gebruiken, die tot om het even welke datasets binnen [!DNL Experience Platform]en het vangen van vraagresultaten als nieuwe dataset voor gebruik in het melden, [!DNL Data Lake] , of [!DNL Data Science Workspace][!DNL Real-time Customer Profile]. toetreden.
+* [Query-service](../../query-service/home.md)Adobe Experience Platform: Staat u toe om standaardSQL aan vraaggegevens binnen te gebruiken, die tot om het even welke datasets binnen de [!DNL Experience Platform]en het vangen van vraagresultaten als nieuwe dataset voor gebruik in het melden, [!DNL Data Lake] of [!DNL Data Science Workspace][!DNL Real-time Customer Profile]toetreden.
 * [Adobe Experience Platform beslissingsservice](../../decisioning-service/home.md): Hefboomwerkingen [!DNL Real-time Customer Profile] om de meest waarschijnlijke keus te bepalen een klant van een reeks opties zal maken, die op de gedragsgegevens wordt gebaseerd die van toegelaten datasets [!DNL Profile] trekt.
 
 ## Volgende stappen
