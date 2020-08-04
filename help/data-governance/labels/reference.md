@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Ondersteunde labels voor gegevensgebruik
+title: Kernlabels voor gegevensgebruik
 topic: labels
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: 876ac35f6366411adda821805bf628470839f80e
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1869'
 ht-degree: 1%
 
 ---
 
 
-# Ondersteunde labels voor gegevensgebruik
+# Kernlabels voor gegevensgebruik
 
-Adobe Experience Platform omvat infrastructuren voor gegevensbeheer, waarbij de Etikettering en de Handhaving van het Gebruik van Gegevens (DULE) centraal staan.  De eigenschappen DULE laten de toepassing van de etiketten van het gegevensgebruik op datasets en gebieden toe om gegevens volgens het type van gebruiksbeleid te categoriseren dat op die gegevens van toepassing is.
+Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Het Beheer van de Gegevens van het Adobe Experience Platform verstrekt verscheidene kernetiketten van het gegevensgebruik uit-van-de-doos die u kunt gebruiken beginnen uw gegevens te categoriseren.
 
-In dit document worden alle labels voor gegevensgebruik beschreven die momenteel worden ondersteund door [!DNL Experience Platform]. Meer informatie over [!DNL Data Governance] en DULE vindt u in het [Data Governance-overzicht](../home.md).
+Dit document bevat een overzicht van de basislabels voor gegevensgebruik die momenteel worden geleverd door [!DNL Experience Platform]. Meer informatie over [!DNL Data Governance] is te vinden in het [Data Governance-overzicht](../home.md).
 
 ## Contractlabels
 
