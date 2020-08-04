@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van labels voor gegevensgebruik
 topic: labels
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 5e65c843c3c612b657ebe915c53f14f0b8d7f541
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Overzicht van labels voor gegevensgebruik
 
-De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste mechanisme van Adobe Experience Platform [!DNL Data Governance]. De eigenschappen DULE laten u toe om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen, die elk volgens het verwante beleid van het gegevensgebruik categoriseren.
+Adobe Experience Platform [!DNL Data Governance] staat u toe om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen, die elk volgens het verwante beleid van het gegevensgebruik categoriseren.
 
-Dit document biedt een overzicht van labels voor gegevensgebruik in [!DNL Experience Platform]. Dit wordt ook wel DULE-labels genoemd. Voordat u deze handleiding leest, raadpleegt u het overzicht [van](../home.md) gegevensbeheer voor een robuustere inleiding op het DULE-kader.
+Dit document biedt een overzicht van labels voor gegevensgebruik in [!DNL Experience Platform]. Voordat u deze handleiding leest, raadpleegt u het overzicht [van](../home.md) gegevensbeheer voor een robuustere inleiding op het kader voor gegevensbeheer.
 
 ## Werken met labels voor gegevensgebruik
 
@@ -26,7 +26,7 @@ De etiketten van het gebruik van gegevens die op het datasetniveau worden toegep
 
 [!DNL Platform] biedt verschillende &#39;core&#39; labels voor gegevensgebruik buiten de box, die een groot aantal gemeenschappelijke beperkingen bestrijken die van toepassing zijn op gegevensbeheer. Zie de handleiding over [kernlabels](reference.md)voor meer informatie over deze labels en het gebruiksbeleid dat ze vertegenwoordigen.
 
-Naast de labels die door Adobe worden verschaft, kunt u ook uw eigen aangepaste labels definiëren. Raadpleeg de gebruikershandleiding bij de labels voor [gegevensgebruik voor informatie over hoe u dit in de gebruikersinterface kunt doen](./user-guide.md). Raadpleeg de API-handleiding [voor labels voor](./api.md)gegevensgebruik voor informatie over hoe u dit kunt doen met API-aanroepen.
+Naast de labels die door Adobe worden verschaft, kunt u ook uw eigen aangepaste labels voor uw organisatie definiëren. Zie de sectie over het [beheren van labels](#manage-labels) voor meer informatie.
 
 ## Labelovererving voor publiekssegmenten
 
@@ -34,7 +34,7 @@ Alle publiekssegmenten die door de Dienst [van de Segmentatie van het](../../seg
 
 Naast het erven van dataset-vlakke etiketten, erven de segmenten alle gebied-vlakke etiketten van hun bijbehorende datasets door gebrek. Afhankelijk van de manier waarop uw [!DNL Platform]gebaseerde toepassing segmenten gebruikt, kunt u mogelijk opgeven welke velden worden gebruikt, zodat het segment geen labels van uitgesloten velden kan overnemen.
 
-Voor meer informatie over hoe de automatische handhaving in Echt - tijd CDP werkt, zie het overzicht [van het Beheer van Gegevens](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe In real time CDP.
+Voor meer informatie over hoe de automatische handhaving in Echt - tijd CDP werkt, zie het overzicht over het Beheer van [Gegevens in Echt - tijd CDP](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
 
 ### Overerving van de Controles van de Uitvoer van Gegevens van de Adobe Audience Manager
 
@@ -42,7 +42,20 @@ Voor meer informatie over hoe de automatische handhaving in Echt - tijd CDP werk
 
 Voor een verwijzing op hoe de specifieke Controles van de Uitvoer van Gegevens aan de etiketten van het gegevensgebruik in in kaart brengen, gelieve te verwijzen naar de documentatie [!DNL Platform]van de [](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
 
+## Labels voor gegevensgebruik beheren in [!DNL Experience Platform] {#manage-labels}
+
+U kunt labels voor gegevensgebruik beheren met API&#39; [!DNL Experience Platform] s of de gebruikersinterface. Raadpleeg de onderstaande subsecties voor meer informatie over elke subsectie.
+
+### De gebruikersinterface gebruiken
+
+De werkruimte **[!UICONTROL Beleid]** in [!DNL Experience Platform] UI staat u toe om kern en douanelabels voor uw organisatie te bekijken en te beheren. In de **[!DNL Datasets]** werkruimte kunt u labels toepassen op gegevenssets en velden. Raadpleeg de gebruikershandleiding bij [](user-guide.md)labels voor meer informatie.
+
+### API&#39;s gebruiken
+
+Het `/labels` eindpunt in de [Dienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) van het Beleid staat u toe om de etiketten van het gegevensgebruik programmatically te beheren, met inbegrip van het creëren van douanelabels. Raadpleeg de handleiding voor het [eindpunt van labels](../api/labels.md) voor meer informatie.
+
+De [Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) wordt gebruikt om labels voor dataset en gebieden te beheren. Zie de gids over het [beheren van datasetetiketten](./dataset-api.md) voor meer informatie.
 
 ## Volgende stappen
 
-Nu u de etiketten van het gegevensgebruik bent geïntroduceerd, kunt u de [gebruikersgids](user-guide.md) blijven lezen om te leren hoe te om etiketten in [!DNL Experience Platform] UI te beheren. Zie de handleiding voor [](./api.md)gebruikslabels voor informatie over het beheren van labels met behulp van API&#39;s.
+Dit document bevatte een inleiding op de labels voor gegevensgebruik en hun rol binnen het kader voor gegevensbeheer. Raadpleeg de documentatie bij deze handleiding voor meer informatie over het beheren van labels in [!DNL Experience Platform].
