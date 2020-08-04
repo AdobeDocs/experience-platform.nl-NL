@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Attribution AI
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 7fc121d310509739c7ee81f7d6657ea8f3963b69
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
@@ -29,24 +29,6 @@ Attribution AI ondersteunt twee categorieën scores, algoritmisch en op regels g
 De volgende video is ontworpen om uw begrip van Attribution AI te steunen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
-
-## Attribution AI algoritmische scores
-
-Attribution AI ondersteunt twee categorieën attributiescore, algoritmische en op regels gebaseerde scores.
-
-Attribution AI produceert twee verschillende typen algoritmische scores, incrementeel en beïnvloed. Een beïnvloede score is de fractie van de omzetting die elk marketing aanraakpunt voor verantwoordelijk is. Een incrementele score is de hoeveelheid marginale impact die rechtstreeks wordt veroorzaakt door het marketingaanraakpunt. Het belangrijkste verschil tussen de incrementele score en de beïnvloede score is dat de incrementele score rekening houdt met het basislijneffect. Zij gaat er niet van uit dat een conversie uitsluitend door de voorafgaande marketingaanraakpunten wordt veroorzaakt.
-
-Zie de tabel hieronder voor meer informatie over elk van deze toewijzingsscores:
-
-| Attributiescores | Beschrijving |
-| ----- | ----------- |
-| Eerste aanraking | Op regel gebaseerde attributiescore die alle credits toewijst aan het eerste aanraakpunt op een conversiepad. |
-| Laatste aanraking | Op regel gebaseerde attributiescore die alle punten toewijst aan het aanraakpunt dat het dichtst bij de conversie ligt. |
-| Lineair | Op regel gebaseerde attributiescore die gelijk krediet aan elk aanraakpunt op een conversiepad toewijst. |
-| U-vorm | Op regels gebaseerde attributiescore die 40% van het krediet toewijst aan het eerste aanraakpunt en 40% van het krediet aan het laatste aanraakpunt, waarbij de andere aanraakpunten de resterende 20% gelijkmatig verdelen. |
-| Tijdverlies | Op regels gebaseerde attributiescore waarbij aanraakpunten die dichter bij de conversie liggen, meer krediet krijgen dan aanraakpunten die verder van de conversie verwijderd zijn. |
-| Invloed (algoritmisch) | De beïnvloede score is de fractie van de omzetting die elk marketing aanraakpunt voor verantwoordelijk is. |
-| Incrementeel (algoritmisch) | De incrementele score is de hoeveelheid marginale impact die rechtstreeks wordt veroorzaakt door een marketingaanraakpunt. |
 
 ## Voorbeelden van gevallen van zakelijk gebruik
 
