@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 'Gegevensgebruikslabels voor gegevenssets beheren met behulp van API''s '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2f35765c0dfadbfb4782b6c3904e33ae7a330b2f
+source-git-commit: 3b6f46c5a81e1b6e8148bf4b78ae2560723f9d20
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 1%
+source-wordcount: '912'
+ht-degree: 0%
 
 ---
 
 
 # Gegevensgebruikslabels voor gegevenssets beheren met behulp van API&#39;s
 
-Met [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) deze optie kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Het maakt deel uit van de mogelijkheden van de gegevenscatalogus van het Adobe Experience Platform, maar staat los van de [!DNL Catalog Service] API die gegevenssetmetagegevens beheert.
+Met [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) deze optie kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Het maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de [!DNL Catalog Service] API die metagegevens van gegevenssets beheert.
 
 In dit document wordt beschreven hoe u labels voor gegevenssets en velden kunt beheren met de [!DNL Dataset Service API]code. Voor stappen op hoe te om de etiketten van het gegevensgebruik zelf te beheren die API vraag gebruiken, zie de gids [van het](../api/labels.md) etiketteneindpunt voor [!DNL Policy Service API].
 
@@ -94,16 +94,21 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Verzoek**
 
-Het volgende verzoek van de POST voegt een reeks etiketten aan de dataset, evenals een specifiek gebied binnen die dataset toe. De velden in de payload zijn gelijk aan de velden die vereist zijn voor een PUT-aanvraag.
+Het volgende verzoek van de PUT werkt de bestaande etiketten voor een dataset, evenals een specifiek gebied binnen die dataset bij. De velden in de payload zijn gelijk aan de velden die vereist zijn voor een POST-aanvraag.
+
+>[!IMPORTANT]
+>
+>Een geldige `If-Match` kopbal moet worden verstrekt wanneer het maken van PUT verzoeken aan het `/datasets/{DATASET_ID}/labels` eindpunt. Zie de [bijlage sectie](#if-match) voor meer informatie over het gebruiken van de vereiste kopbal.
 
 ```shell
-curl -X POST \
+curl -X PUT \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000' \
   -d '{
         "labels": [ "C1", "C2", "C3", "I1", "I2" ],
         "optionalLabels": [
@@ -160,13 +165,20 @@ DELETE /datasets/{DATASET_ID}/labels
 
 **Verzoek**
 
+Het volgende verzoek verwijdert de etiketten voor de dataset die in de weg wordt gespecificeerd.
+
+>[!IMPORTANT]
+>
+>Een geldige `If-Match` kopbal moet worden verstrekt wanneer het doen van DELETE verzoeken aan het `/datasets/{DATASET_ID}/labels` eindpunt. Zie de [bijlage sectie](#if-match) voor meer informatie over het gebruiken van de vereiste kopbal.
+
 ```shell
 curl -X DELETE \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000'
 ```
 
 **Antwoord**
@@ -182,3 +194,17 @@ Zodra u de etiketten van het gegevensgebruik op dataset en gebied-niveau hebt to
 U kunt nu ook beleid voor gegevensgebruik definiëren op basis van de labels die u hebt toegepast. Zie het overzicht [van beleidsregels voor](../policies/overview.md)gegevensgebruik voor meer informatie.
 
 Voor meer informatie bij het beheren van datasets in [!DNL Experience Platform], zie het [datasetoverzicht](../../catalog/datasets/overview.md).
+
+## Aanhangsel {#appendix}
+
+De volgende sectie bevat extra informatie over het werken met etiketten gebruikend de Dienst API van de Dataset.
+
+### [!DNL If-Match] header {#if-match}
+
+Wanneer het maken van API vraag die de bestaande etiketten van een dataset (PUT en DELETE) bijwerken, moet een `If-Match` kopbal die op de huidige versie van de dataset-etiket entiteit in de Dienst van de Dataset wijst worden omvat. Om gegevensbotsingen te verhinderen, zal de dienst slechts de datasetentiteit bijwerken als het inbegrepen `If-Match` koord de recentste versiemarkering aanpast die door het systeem voor die dataset wordt geproduceerd.
+
+>[!NOTE]
+>
+>Als er momenteel geen labels voor de betrokken gegevensset bestaan, kunnen nieuwe labels alleen worden toegevoegd via een verzoek om POST, waarvoor geen `If-Match` koptekst vereist is. Zodra de etiketten aan een dataset zijn toegevoegd, wordt een `etag` waarde toegewezen die kan worden gebruikt om de etiketten in een recentere tijd bij te werken of te verwijderen.
+
+Om de meest recente versie van de dataset-etiket entiteit terug te winnen, doe een [GET verzoek](#look-up) aan het `/datasets/{DATASET_ID}/labels` eindpunt. De huidige waarde wordt geretourneerd in de reactie onder een `etag` koptekst. Wanneer het bijwerken van bestaande datasetetiketten, moeten de beste praktijken eerst een raadplegingsverzoek voor de dataset uitvoeren om zijn recentste `etag` waarde te halen alvorens die waarde in de `If-Match` kopbal van uw verdere PUT of DELETE verzoek te gebruiken.
