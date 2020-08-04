@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Muziek openen in Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
@@ -259,9 +259,11 @@ Het antwoord downloadt het bestand dat u in de huidige map hebt aangevraagd. In 
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
+De gedownloade scores hebben de parketindeling en hebben een [!DNL Spark]-shell of een parketlezer nodig om de scores weer te geven. Voor het bekijken van onbewerkte scores kunt u [parketgereedschappen](https://github.com/apache/parquet-mr/tree/master/parquet-tools)gebruiken. Met de gereedschappen Parquet kunt u de gegevens analyseren [!DNL Spark].
+
 ## Volgende stappen
 
-In dit document worden de stappen beschreven die zijn vereist voor het downloaden van scores van Attribution AI. U kunt nu door de andere [Intelligente Diensten](../home.md) en gidsen blijven bladeren die worden aangeboden.
+In dit document worden de stappen beschreven die zijn vereist voor het downloaden van scores van Attribution AI. Voor meer informatie over de score gaat u naar de [documentatie over invoer en uitvoer](./input-output.md) van Attribons AI.
 
 ## Muziek openen met Snowflake
 
