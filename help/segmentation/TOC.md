@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Segmentation Service
 translation-type: tm+mt
-source-git-commit: c5880153f4ba9a6518423985e42fb1b3b71cd862
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 3%
+source-wordcount: '116'
+ht-degree: 6%
 
 ---
 
@@ -27,6 +27,8 @@ ht-degree: 3%
    - [Streaming segmentering](api/streaming-segmentation.md)
 - Segmenteringsinterface {#ui}
    - [Overzicht](ui/overview.md)
+   - [Segment Builder](ui/segment-builder.md)
+   - [Streaming segmentering](ui/streaming-segmentation.md)
 - [Optie-outs respecteren](honoring-opt-outs.md)
 - [Segmentatie van meerdere entiteiten](multi-entity-segmentation.md)
 - Taal voor profielquery {#pql}
