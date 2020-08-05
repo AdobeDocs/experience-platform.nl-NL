@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Gebruikershandleiding voor het profiel van de klant in realtime
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 5c2429f10dfed8cc927914572c690a0536ddae99
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Profile] leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren.
 
-Dit document fungeert als richtlijn voor interactie met [!DNL Real-time Customer Profile] de gebruikersinterface van het Adobe Experience Platform.
+Dit document fungeert als richtlijn voor interactie met [!DNL Real-time Customer Profile] de Adobe Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
@@ -88,7 +88,7 @@ Nadat een waarde is ingevoerd, selecteert u Profiel **** tonen en geeft u één 
 
 ![](../images/user-guide/profiles-display-profile.png)
 
-### Profieldetails
+### Profieldetails {#profile-detail}
 
 Als u de **[!UICONTROL profiel-id]** selecteert, wordt het tabblad _[!UICONTROL Details]_geopend. Deze pagina bevat informatie over het geselecteerde profiel, zoals basiskenmerken, gekoppelde identiteiten en beschikbare contactkanalen. De weergegeven profielgegevens zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van de individuele klant.
 
