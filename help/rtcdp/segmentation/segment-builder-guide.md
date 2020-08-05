@@ -4,7 +4,7 @@ seo-title: Het gebruiken van de Bouwer van het Segment van de Dienst van de Segm
 description: Een gids die beschrijft hoe te om de Bouwer van het Segment te gebruiken.
 seo-description: Een gebruikershandleiding die beschrijft hoe te om de Bouwer van het Segment van de Dienst van de Segmentatie op het Platform van Gegevens van de Klant in real time te gebruiken.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 0%
@@ -16,4 +16,4 @@ ht-degree: 0%
 
 Gebaseerd op Adobe Experience Platform, [!DNL Real-time Customer Data Platform] kan van de volledige mogelijkheden van de Bouwer van het Segment gebruik maken die een deel van zijn [!DNL Experience Platform]. Binnen het gebruikersinterface van de Bouwer van het Segment, kunt u nieuwe segmenten tot stand brengen, tot bestaande segmenten toegang hebben, en bestaande segmenten wijzigen.
 
-Voor een meer gedetailleerde gids op de Bouwer van het Segment, gelieve de de gebruikersgids [van de Bouwer van het](../../segmentation/ui/overview.md)Segment te lezen.
+Voor een meer gedetailleerde gids op de Bouwer van het Segment, gelieve de de gebruikersgids [van de Bouwer van het](../../segmentation/ui/segment-builder.md)Segment te lezen.
