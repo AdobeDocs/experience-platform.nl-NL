@@ -4,17 +4,17 @@ seo-title: Adobe Experience Platform Web SDK Experience Cloud-id ophalen
 description: Meer weten over Adobe Experience Cloud-id?
 seo-description: Meer weten over Adobe Experience Cloud-id?
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: d2870df230811486c09ae29bf9f600beb24fe4f8
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 2%
+source-wordcount: '730'
+ht-degree: 1%
 
 ---
 
 
 # Identiteit - De Experience Cloud-id wordt opgehaald
 
-Het Adobe Experience Platform [!DNL Web SDK] gebruikt de [Adobe Identity Service](../../identity-service/ecid.md). Dit zorgt ervoor dat elk apparaat een unieke id heeft die op het apparaat blijft bestaan, zodat de activiteit tussen pagina&#39;s aan elkaar kan worden gekoppeld.
+De Adobe Experience Platform [!DNL Web SDK] gebruikt de [Adobe Identity Service](../../identity-service/ecid.md). Dit zorgt ervoor dat elk apparaat een unieke id heeft die op het apparaat blijft bestaan, zodat de activiteit tussen pagina&#39;s aan elkaar kan worden gekoppeld.
 
 ## Identiteit eerste partij
 
@@ -23,6 +23,14 @@ De identiteit wordt in een cookie in een domein van de eerste partij [!DNL Ident
 ## Identiteit derde partij
 
 De [!DNL Identity Service] heeft de capaciteit om een identiteitskaart met een derdedomein (demdex.net) te synchroniseren om het volgen over plaatsen toe te laten. Wanneer dit wordt toegelaten zal het eerste verzoek voor een bezoeker (b.v. iemand zonder ECID) aan demdex.net worden gedaan. Dit zal slechts op browsers worden gedaan die het toestaan (b.v. Chrome) en door de `thirdPartyCookiesEnabled` parameter in de configuratie gecontroleerd. Als u deze functie samen wilt uitschakelen, stelt u deze in `thirdPartyCookiesEnabled` op false.
+
+## ID-migratie
+
+Wanneer u migreert vanuit de Bezoeker-API, kunt u ook bestaande AMCV-cookies migreren. Stel de `idMigrationEnabled` parameter in de configuratie in om ECID-migratie in te schakelen. De migratie van id is opstelling om sommige gebruiksgevallen toe te laten:
+
+* Wanneer sommige pagina&#39;s van een domein de bezoeker-API gebruiken en andere pagina&#39;s deze SDK gebruiken. Ter ondersteuning van dit geval leest de SDK bestaande AMCV-cookies en schrijft hij een nieuw cookie met de bestaande ECID. Bovendien schrijft de SDK AMCV-cookies zodat, als de ECID eerst wordt verkregen op een pagina die van instrumenten is voorzien met de AEP Web SDK, de volgende pagina&#39;s die van instrumenten zijn voorzien met de Bezoeker-API dezelfde ECID hebben.
+* Wanneer de AEP Web SDK opstelling op een pagina is die ook bezoeker API heeft. Ter ondersteuning van dit geval zoekt de SDK, als het AMCV-cookie niet is ingesteld, naar de Bezoeker-API op de pagina en roept deze aan om de ECID op te halen.
+* Wanneer de hele site de SDK van AEP Web gebruikt en geen API voor bezoekers heeft, is het handig om de ECID&#39;s te migreren zodat de informatie van de retourbezoeker behouden blijft. Nadat de SDK gedurende een bepaalde periode is geïmplementeerd, zodat de meeste cookies van de bezoeker worden gemigreerd, kan de instelling worden uitgeschakeld. `idMigrationEnabled`
 
 ## De bezoeker-id ophalen
 
@@ -45,20 +53,34 @@ alloy("getIdentity")
 
 ## Identiteiten synchroniseren
 
+>[!NOTE]
+>
+>De `syncIdentity` methode is, naast de hash-functie, verwijderd uit versie 2.1.0. Als u versie 2.1.0+ gebruikt en identiteiten wilt synchroniseren, kunt u ze rechtstreeks via de `xdm` optie van de `sendEvent` opdracht onder het `identityMap` veld verzenden.
+
 Daarnaast [!DNL Identity Service] `syncIdentity` kunt u met de opdracht uw eigen id&#39;s synchroniseren met de ECID.
 
+>[!NOTE]
+>
+>Het wordt ten zeerste aanbevolen alle beschikbare identiteiten door te geven voor elke `sendEvent` opdracht. Dit ontgrendelt een reeks gebruiksgevallen, waaronder personalisatie. Nu u die identiteiten in het `sendEvent` bevel kunt overgaan, kunnen zij direct in uw DataLayer worden geplaatst.
+
+Door identiteiten te synchroniseren kunt u een apparaat/gebruiker identificeren met behulp van meerdere identiteiten, de verificatiestatus instellen en bepalen welke id als de primaire id wordt beschouwd. Als er geen id is ingesteld als `primary`, worden de primaire standaardinstellingen ingesteld als `ECID`id.
+
 ```javascript
-alloy("syncIdentity",{
-    identity:{
-      "AppNexus":{
-        "id":"123456,
-        "authenticationState":"ambiguous",
-        "primary":false,
-        "hashEnabled": true,
-      }
+alloy("sendEvent", {
+  xdm: {
+    "identityMap": {
+      "ID_NAMESPACE": [ // Notice how each namespace can contain multiple identifiers.
+        {
+          "id": "1234",
+          "authenticatedState": "ambiguous",
+          "primary": true
+        }
+      ]
     }
+  }
 })
 ```
+
 
 ### Opties voor synchronisatie-identiteiten
 
@@ -66,15 +88,15 @@ alloy("syncIdentity",{
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
-| String | Ja | none |
+| Tekenreeks | Ja | none |
 
-De sleutel voor het object is het symbool [Identiteitsnaamruimte](../../identity-service/namespaces.md) . U vindt dit in de gebruikersinterface van het Adobe Experience Platform onder [!UICONTROL Identiteiten].
+De sleutel voor het object is het symbool [Identiteitsnaamruimte](../../identity-service/namespaces.md) . U vindt dit in de Adobe Experience Platform-gebruikersinterface onder [!UICONTROL Id].
 
 #### `id`
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
-| String | Ja | none |
+| Tekenreeks | Ja | none |
 
 Dit is de id die u voor de opgegeven naamruimte wilt synchroniseren.
 
@@ -82,7 +104,7 @@ Dit is de id die u voor de opgegeven naamruimte wilt synchroniseren.
 
 | **Type** | **Vereist** | **Standaardwaarde** | **Mogelijke waarden** |
 | -------- | ------------ | ----------------- | ------------------------------------ |
-| String | Ja | dubbelzinnig | ambigu, geverifieerd en gelogd |
+| Tekenreeks | Ja | dubbelzinnig | ambigu, geverifieerd en gelogd |
 
 De verificatiestatus van de id.
 
