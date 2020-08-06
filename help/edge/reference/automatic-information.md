@@ -1,13 +1,13 @@
 ---
 title: Automatisch verzamelde informatie
-seo-title: De informatie die automatisch door het Web SDK van het Adobe Experience Platform wordt verzameld
+seo-title: Informatie die automatisch wordt verzameld door Adobe Experience Platform Web SDK
 description: Beschrijving van alle informatie die de Adobe Experience Cloud SDK automatisch verzamelt
 seo-description: Beschrijving van alle informatie die de Adobe Experience Cloud SDK automatisch verzamelt
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: ccd47e024f3ea53507454b7785528c031746d681
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 6%
+source-wordcount: '387'
+ht-degree: 7%
 
 ---
 
@@ -56,7 +56,7 @@ Browser
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-Het type omgeving dat de ervaring heeft doorgemaakt. De Adobe Experience Platform-SDK voor JavaScript wordt altijd ingesteld `browser`.
+Het type omgeving dat de ervaring heeft doorgemaakt. De Adobe Experience Platform SDK voor JavaScript wordt altijd ingesteld `browser`.
 
 ### Viewporthoogte
 
@@ -91,6 +91,13 @@ De id van de Software Development Kit (SDK).  In dit veld wordt een URI gebruikt
 | **Pad in Payload:** | **Voorbeeld:** |
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
+
+### Omgeving
+
+| **Pad in Payload:** | **Voorbeeld:** |
+| ------------------------------------------------ | ------------ |
+| `events[].xdm.implementationDetails.environment` | `browser` |
+
 
 ## Context plaatsen (`placeContext`)
 
