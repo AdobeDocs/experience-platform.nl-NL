@@ -1,12 +1,12 @@
 ---
 title: Ondersteunende toestemming
-seo-title: Voorkeur voor webSDK van Adobe Experience Platform ondersteunen
+seo-title: Voorkeuren voor Adobe Experience Platform Web SDK-toestemming ondersteunen
 description: Leer hoe u toestemmingsvoorkeuren met Experience Platform Web SDK kunt ondersteunen
 seo-description: Leer hoe u toestemmingsvoorkeuren met Experience Platform Web SDK kunt ondersteunen
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 0869c6c54e8936a1ac1225cf6510f7139dce1936
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '756'
 ht-degree: 0%
 
 ---
@@ -39,17 +39,17 @@ Wanneer de standaardtoestemming voor het algemene doel op in behandeling wordt g
 
 Op dit punt wilt u de gebruiker wellicht vragen zich ergens in de gebruikersinterface aan te melden. Nadat de gebruikersvoorkeuren zijn verzameld, geeft u deze door aan de SDK.
 
-## Voorkeuren voor toestemming communiceren
+## Voorkeuren voor toestemming via de Adobe-standaard communiceren
 
 Als de gebruiker binnen kiest, voer het `setConsent` bevel met de `general` optie uit die aan `in` als volgt wordt geplaatst:
 
 ```javascript
 alloy("setConsent", {
-    consent: [{ 
+    consent: [{
       standard: "Adobe",
       version: "1.0",
-      value: { 
-        general: "in" 
+      value: {
+        general: "in"
       }
     }]
 });
@@ -61,11 +61,11 @@ Als de gebruiker ervoor kiest om te weigeren, voert u de `setConsent` opdracht u
 
 ```javascript
 alloy("setConsent", {
-    consent: [{ 
+    consent: [{
       standard: "Adobe",
       version: "1.0",
-      value: { 
-        general: "out" 
+      value: {
+        general: "out"
       }
     }]
 });
@@ -79,8 +79,51 @@ Omdat de gebruiker ervoor koos om te weigeren, worden de beloftes die van eerder
 
 >[!NOTE]
 >
->Momenteel ondersteunt de SDK alleen het `general` doel. Hoewel wij van plan zijn een robuustere reeks doelen of categorieën te ontwikkelen die aan de verschillende mogelijkheden en productaanbiedingen van de Adobe zullen beantwoorden, is de huidige implementatie een alles of niets benadering van opt-in.  Dit geldt alleen voor het Adobe Experience Platform [!DNL Web SDK] en NIET voor andere Adobe JavaScript-bibliotheken.
+>Momenteel ondersteunt de SDK alleen het `general` doel. Hoewel wij van plan zijn een robuustere reeks doelen of categorieën te ontwikkelen die aan de verschillende mogelijkheden en productaanbiedingen van de Adobe zullen beantwoorden, is de huidige implementatie een alles of niets benadering van opt-in.  Dit geldt alleen voor de Adobe Experience Platform [!DNL Web SDK] en NOT other Adobe JavaScript libraries.
 
-## Voorkeuren voor blijvende toestemming
+## Voorkeuren voor machtigingen via de IAB TCF Standard doorgeven
 
-Nadat u gebruikersvoorkeuren aan de SDK hebt doorgegeven met de `setConsent` opdracht, blijft de SDK de gebruikersvoorkeuren voor een cookie gebruiken. De volgende keer dat de gebruiker uw website in de browser laadt, haalt de SDK deze voorkeuren op en gebruikt deze. U hoeft de `setConsent` opdracht niet opnieuw uit te voeren, behalve om een wijziging in de gebruikersvoorkeuren door te geven, die u op elk gewenst moment kunt doorvoeren.
+De SDK ondersteunt het opnemen van voorkeuren voor toestemming van gebruikers via de norm Interactive Advertising Bureau Europe (IAB) Transparency and Consent Framework (TCF). De toestemmingstekenreeks kan worden ingesteld via dezelfde setConsent-opdracht als hierboven:
+
+```javascript
+alloy("setConsent", {
+    consent: [{
+      standard: "IAB TCF",
+      version: "2.0",
+      value: "CO1Z4yuO1Z4yuAcABBENArCsAP_AAH_AACiQGCNX_T5eb2vj-3Zdt_tkaYwf55y3o-wzhhaIse8NwIeH7BoGP2MwvBX4JiQCGBAkkiKBAQdtHGhcCQABgIhRiTKMYk2MjzNKJLJAilsbe0NYCD9mnsHT3ZCY70--u__7P3fAwQgkwVLwCRIWwgJJs0ohTABCOICpBwCUEIQEClhoACAnYFAR6gAAAIDAACAAAAEEEBAIABAAAkIgAAAEBAKACIBAACAEaAhAARIEAsAJEgCAAVA0JACKIIQBCDgwCjlACAoAAAAA.YAAAAAAAAAAA",
+      gdprApplies: true
+    }]
+});
+```
+
+Wanneer de toestemming op deze manier wordt geplaatst, wordt het Verenigde Profiel bijgewerkt met de toestemmingsinformatie. Dit werkt alleen als het profiel-XDM-schema de [profielprivacymixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md)bevat. Bij het verzenden van gebeurtenissen moet de informatie over de IAB-toestemming handmatig worden toegevoegd aan het xdm-gebeurtenisobject. De SDK neemt niet automatisch de informatie over de toestemming op in de gebeurtenissen. Om de toestemmingsinformatie in gebeurtenissen te verzenden, moet de [Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) van de Privacy van de Gebeurtenis van de Ervaring aan het schema van de ervaringsgebeurtenis worden toegevoegd.
+
+## Beide standaarden verzenden in één aanvraag
+
+De SDK biedt ook ondersteuning voor het verzenden van meer dan één bevestigingsobject in een aanvraag.
+
+```javascript
+alloy("setConsent", {
+    consent: [{
+      standard: "Adobe",
+      version: "1.0",
+      value: {
+        general: "in"
+      }
+    },{
+      standard: "IAB TCF",
+      version: "2.0",
+      value: "CO1Z4yuO1Z4yuAcABBENArCsAP_AAH_AACiQGCNX_T5eb2vj-3Zdt_tkaYwf55y3o-wzhhaIse8NwIeH7BoGP2MwvBX4JiQCGBAkkiKBAQdtHGhcCQABgIhRiTKMYk2MjzNKJLJAilsbe0NYCD9mnsHT3ZCY70--u__7P3fAwQgkwVLwCRIWwgJJs0ohTABCOICpBwCUEIQEClhoACAnYFAR6gAAAIDAACAAAAEEEBAIABAAAkIgAAAEBAKACIBAACAEaAhAARIEAsAJEgCAAVA0JACKIIQBCDgwCjlACAoAAAAA.YAAAAAAAAAAA",
+      gdprApplies: true
+    }]
+});
+```
+
+## Voorkeuren voor goedkeuring
+
+Nadat u gebruikersvoorkeuren aan de SDK hebt doorgegeven met de `setConsent` opdracht, blijft de SDK de gebruikersvoorkeuren voor een cookie gebruiken. De volgende keer dat de gebruiker uw website in de browser laadt, haalt de SDK deze voorkeuren op en gebruikt deze om te bepalen of gebeurtenissen naar Adobe kunnen worden verzonden. U hoeft de `setConsent` opdracht niet opnieuw uit te voeren, behalve om een wijziging in de gebruikersvoorkeuren door te geven, die u op elk gewenst moment kunt doorvoeren.
+
+## Identiteiten synchroniseren tijdens instellen van toestemming
+
+Wanneer de standaardtoestemming hangende is, kan &quot;setConsent&quot;het eerste verzoek zijn dat uit gaat en identiteit vestigt. Daarom kan het belangrijk zijn om identiteiten op het eerste verzoek te synchroniseren. Het identiteitsoverzicht kan aan &quot;setConsent&quot;bevel enkel zoals op het &quot;sendEvent&quot;bevel worden toegevoegd. Zie Experience Cloud-id [ophalen](./identity.md)
+
