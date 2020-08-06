@@ -1,12 +1,12 @@
 ---
 title: De SDK configureren
-seo-title: Het vormen van het Web SDK van het Adobe Experience Platform
+seo-title: De SDK van Adobe Experience Platform Web configureren
 description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: abd72993577f298141ed0d25b6c4abc42050b68e
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '749'
 ht-degree: 4%
 
 ---
@@ -35,7 +35,7 @@ Er zijn vele opties die tijdens configuratie kunnen worden geplaatst. Alle optie
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
-| String | Ja | none |
+| Tekenreeks | Ja | none |
 
 Uw toegewezen configuratie-id, die de SDK koppelt aan de juiste accounts en configuratie.  Wanneer het vormen van veelvoudige instanties binnen één enkele pagina, moet u een verschillende `edgeConfigId` voor elke instantie vormen.
 
@@ -64,7 +64,7 @@ Geeft aan of foutopsporing moet worden ingeschakeld. Het plaatsen van dit config
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ------------------ |
-| String | Nee | `beta.adobedc.net` |
+| Tekenreeks | Nee | `beta.adobedc.net` |
 
 Het domein dat wordt gebruikt om met de diensten van Adobe in wisselwerking te staan. Dit wordt slechts gebruikt als u een eerste partijdomein (CNAME) hebt dat volmachten verzoeken aan de de randinfrastructuur van de Adobe.
 
@@ -72,7 +72,7 @@ Het domein dat wordt gebruikt om met de diensten van Adobe in wisselwerking te s
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
-| String | Ja | none |
+| Tekenreeks | Ja | none |
 
 Uw toegewezen [!DNL Experience Cloud] organisatie-id.  Wanneer het vormen van veelvoudige instanties binnen een pagina, moet u een verschillende `orgId` voor elke instantie vormen.
 
@@ -116,7 +116,7 @@ Hiermee stelt u de standaardtoestemming van de gebruiker in. Dit wordt gebruikt 
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
-| String | Nee | none |
+| Tekenreeks | Nee | none |
 
 Wordt gebruikt om een CSS-stijldefinitie te maken die inhoudsgebieden van uw webpagina verbergt terwijl gepersonaliseerde inhoud van de server wordt geladen. Als deze optie niet wordt opgegeven, probeert de SDK geen inhoudsgebieden te verbergen terwijl gepersonaliseerde inhoud wordt geladen, wat mogelijk resulteert in &quot;flikkering&quot;.
 
@@ -146,21 +146,13 @@ Laat [!DNL Audience Manager] URL bestemmingen toe, die het vuren van URLs toesta
 
 ## Identiteitsopties
 
-### `idSyncContainerId`
+### `idMigrationEnabled`
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
-| Getal | Nee | none |
+| Boolean | Nee | true |
 
-De container-id die aangeeft welke ID-syncs worden geactiveerd. Dit is een niet-negatief geheel getal dat u kunt verkrijgen van uw consultant.
-
-### `idSyncEnabled`
-
-| **Type** | **Vereist** | **Standaardwaarde** |
-| -------- | ------------ | ----------------- |
-| Boolean | Nee | `true` |
-
-Hiermee schakelt u de functie voor id-synchronisatie in, waarmee URL&#39;s kunnen worden geactiveerd om de unieke gebruikers-id van de Adobe te synchroniseren met de unieke gebruikers-id van een gegevensbron van derden.
+Indien waar (true), leest de SDK oude AMCV-cookies en stelt deze in. Dit helpt bij het overschakelen naar het gebruik van de AEP Web SDK terwijl sommige delen van de site wellicht nog steeds Visitor.js gebruiken. Als de API voor bezoekers op de pagina is gedefinieerd, vraagt de SDK bovendien naar de API voor bezoekers voor de ECID. Op deze manier kunt u pagina&#39;s met twee tags plaatsen met de AEP Web SDK en toch dezelfde ECID hebben.
 
 ### `thirdPartyCookiesEnabled`
 
