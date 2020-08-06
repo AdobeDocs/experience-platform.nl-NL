@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruikershandleiding voor segmentatieservice
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1365'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ De evaluatiemethode kan streaming of batch zijn. Streaming segmenten worden voor
 
 ![](../images/ui/overview/segment-browse-segments.png)
 
-Boven aan de pagina vindt u opties voor het **[!UICONTROL toevoegen van alle segmenten aan de planning]** en het **[!UICONTROL maken van segmenten]**.
+Boven aan de pagina staan opties voor het toevoegen van alle segmenten aan een schema en het maken van een nieuw segment.
 
 Als u schakelt **[!UICONTROL Alle segmenten aan schema]** toevoegen, wordt de geplande segmentatie ingeschakeld. Meer informatie over geplande segmentatie kan in de [geplande segmenteringssectie van deze gebruikersgids](#scheduled-segmentation)worden gevonden.
 
@@ -73,7 +73,7 @@ De pagina met segmentdetails wordt weergegeven. Bovenaan, is er een samenvatting
 
 ### Overzicht van segment
 
-De overzichtssectie *[!UICONTROL Segment]* bevat informatie zoals de id, naam, beschrijving en details van de kenmerken.
+De overzichtssectie **[!UICONTROL Segment]** bevat informatie zoals de id, naam, beschrijving en details van de kenmerken.
 
 Bovendien kunt u het segment bewerken. Als u Segment **** bewerken selecteert, komt u naar de [!DNL Segment Builder]gewenste locatie. Lees voor meer informatie over het gebruik van de [!DNL Segment Builder] werkruimte de [[!DNL Segment Builder] gebruikershandleiding](./segment-builder.md).
 
