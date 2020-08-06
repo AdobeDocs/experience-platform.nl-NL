@@ -1,12 +1,12 @@
 ---
 title: Gebeurtenissen bijhouden
-seo-title: Gebeurtenissen van SDK van Adobe Experience Platform Web volgen
+seo-title: Gebeurtenissen van Adobe Experience Platform Web SDK bijhouden
 description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience Platforms te volgen
 seo-description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience Platforms te volgen
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8ac603f749928440438f2e0d1f3f1f1cc95b2916
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Gegevens die naar Adobe Experience Cloud worden verzonden, vallen in twee catego
 
 ## XDM-gegevens verzenden
 
-XDM-gegevens zijn een object waarvan de inhoud en structuur overeenkomen met een schema dat u binnen het Adobe Experience Platform hebt gemaakt. [Meer informatie over het maken van een schema.](../../xdm/tutorials/create-schema-ui.md)
+XDM-gegevens zijn een object waarvan de inhoud en structuur overeenkomen met een schema dat u in Adobe Experience Platform hebt gemaakt. [Meer informatie over het maken van een schema.](../../xdm/tutorials/create-schema-ui.md)
 
 Om het even welke gegevens XDM die u deel van uw analyses, verpersoonlijking, publiek, of bestemmingen zou willen uitmaken zouden moeten worden verzonden gebruikend de `xdm` optie.
 
@@ -80,9 +80,27 @@ alloy("sendEvent", {
 });
 ```
 
+### De gegevensset-id overschrijven
+
+In sommige gebruiksgevallen, zou u een gebeurtenis naar een dataset buiten kunnen willen verzenden die in de Configuratie UI wordt gevormd. Hiervoor moet u de `datasetId` optie voor de `sendEvent` opdracht instellen:
+
+```javascript
+var myXDMData = { ... };
+
+alloy("sendEvent", {
+  "xdm": myXDMData,
+  "type": "commerce.checkout",
+  "datasetId": "YOUR_DATASET_ID"
+});
+```
+
+### Identiteitsgegevens toevoegen
+
+U kunt ook aangepaste identiteitsgegevens toevoegen aan de gebeurtenis. Zie Experience Cloud-id [ophalen](./identity.md)
+
 ## De sendBeacon-API gebruiken
 
-Het kan lastig zijn om gebeurtenisgegevens te verzenden vlak voordat de gebruiker van de webpagina weg is genavigeerd. Als de aanvraag te lang duurt, kan de browser de aanvraag annuleren. Sommige browsers hebben een webstandaard-API geïmplementeerd, die wordt aangeroepen `sendBeacon` om gegevens tijdens deze periode gemakkelijker te kunnen verzamelen. Wanneer `sendBeacon`de browser wordt gebruikt, wordt de webaanvraag uitgevoerd in de algemene browsercontext. Dit betekent browser maakt het bakenverzoek op de achtergrond en houdt niet de paginanavigatie op. Als u het Adobe Experience Platform wilt vertellen dat [!DNL Web SDK] het moet worden gebruikt, voegt u de optie toe `sendBeacon``"documentUnloading": true` aan de gebeurtenisopdracht.  Hier volgt een voorbeeld:
+Het kan lastig zijn om gebeurtenisgegevens te verzenden vlak voordat de gebruiker van de webpagina weg is genavigeerd. Als de aanvraag te lang duurt, kan de browser de aanvraag annuleren. Sommige browsers hebben een webstandaard-API geïmplementeerd, die wordt aangeroepen `sendBeacon` om gegevens tijdens deze periode gemakkelijker te kunnen verzamelen. Wanneer `sendBeacon`de browser wordt gebruikt, wordt de webaanvraag uitgevoerd in de algemene browsercontext. Dit betekent browser maakt het bakenverzoek op de achtergrond en houdt niet de paginanavigatie op. Als u Adobe Experience Platform wilt vertellen [!DNL Web SDK] dat het moet worden gebruikt, voegt u de optie toe `sendBeacon``"documentUnloading": true` aan de gebeurtenisopdracht.  Hier volgt een voorbeeld:
 
 ```javascript
 alloy("sendEvent", {
@@ -100,7 +118,7 @@ alloy("sendEvent", {
 });
 ```
 
-Browsers hebben limieten ingesteld voor de hoeveelheid gegevens die `sendBeacon` tegelijk kan worden verzonden. In veel browsers is de limiet 64 kB. Als de browser de gebeurtenis weigert omdat de lading te groot is, [!DNL Web SDK] valt het Adobe Experience Platform terug naar het gebruiken van zijn normale vervoermethode (bijvoorbeeld, halen).
+Browsers hebben limieten ingesteld voor de hoeveelheid gegevens die `sendBeacon` tegelijk kan worden verzonden. In veel browsers is de limiet 64 kB. Als de browser de gebeurtenis afwijst omdat de lading te groot is, [!DNL Web SDK] valt Adobe Experience Platform terug naar het gebruiken van zijn normale vervoermethode (bijvoorbeeld, halen).
 
 ## Reacties van gebeurtenissen afhandelen
 
