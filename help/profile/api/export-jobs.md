@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Exporttaken - Real-time API voor klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2c0466bf0534d09e3cad54caef213def122d948b
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Dit document bevat stapsgewijze instructies voor het maken en beheren van export
 
 >[!NOTE]
 >
->Deze handleiding heeft betrekking op het gebruik van exportbanen in de [!DNL Profile API]Unie. Voor informatie over hoe te om uitvoerbanen voor de Dienst van de Segmentatie van het Adobe Experience Platform te beheren, zie de gids over [uitvoerbanen in de Segmentatie API](../../profile/api/export-jobs.md).
+>Deze handleiding heeft betrekking op het gebruik van exportbanen in de [!DNL Profile API]Unie. Zie de handleiding over [exporttaken in de segmentatie-API](../../profile/api/export-jobs.md)voor informatie over het beheren van exporttaken voor de Adobe Experience Platform Segmentation Service.
 
 Naast het creëren van een de uitvoerbaan, kunt u tot [!DNL Profile] gegevens ook toegang hebben gebruikend het `/entities` eindpunt, dat ook als &quot;[!DNL Profile Access]&quot;wordt bekend. Zie de gids [van het](./entities.md) entiteitseindpunt voor meer informatie. Raadpleeg de gebruikershandleiding voor informatie over de manier waarop u toegang kunt krijgen tot [!DNL Profile] gegevens via de gebruikersinterface [](../ui/user-guide.md).
 
@@ -146,7 +146,9 @@ curl -X POST \
 | `destination` | **(Vereist)** Doelgegevens voor de geëxporteerde gegevens:<ul><li>`destination.datasetId`: **(Vereist)** De id van de gegevensset waarin gegevens moeten worden geëxporteerd.</li><li>`destination.segmentPerBatch`: *(Optioneel)* Een Booleaanse waarde die, indien niet opgegeven, standaard op `false`. Een waarde van `false` exporteert alle segment-id&#39;s naar één batch-id. Een waarde van `true` exporteert één segment-id naar één batch-id. Merk op dat het plaatsen van de te zijn waarde `true` de prestaties van de partijuitvoer kan beïnvloeden.</li></ul> |
 | `schema.name` | **(Vereist)** De naam van het schema dat is gekoppeld aan de gegevensset waarin gegevens moeten worden geëxporteerd. |
 
->[!NOTE] Als u alleen profielgegevens wilt exporteren en geen gerelateerde tijdreeksgegevens wilt opnemen, verwijdert u het object &quot;additionalFields&quot; uit de aanvraag.
+>[!NOTE]
+>
+>Als u alleen profielgegevens wilt exporteren en geen gerelateerde tijdreeksgegevens wilt opnemen, verwijdert u het object &quot;additionalFields&quot; uit de aanvraag.
 
 **Antwoord**
 
@@ -408,7 +410,7 @@ curl -X GET \
 
 ## Een exporttaak annuleren
 
-Met Experience Platform kunt u een bestaande exporttaak annuleren. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de exporttaak niet is voltooid of vastgelopen in het verwerkingsstadium. Als u een exporttaak wilt annuleren, kunt u een DELETE-aanvraag naar het `/export/jobs` eindpunt uitvoeren en de taak `id` van de exporttaak opnemen die u wilt annuleren naar het aanvraagpad.
+Met Experience Platform kunt u een bestaande exporttaak annuleren. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de exporttaak niet is voltooid of vastgelopen in het verwerkingsstadium. Als u een exporttaak wilt annuleren, kunt u een DELETE-aanvraag naar het `/export/jobs` eindpunt uitvoeren en de exporttaak opnemen die u wilt annuleren `id` naar het aanvraagpad.
 
 **API-indeling**
 
@@ -441,7 +443,7 @@ Nadat het exporteren is voltooid, zijn uw gegevens beschikbaar in het Data Lake 
 
 Voor stapsgewijze instructies over het gebruik van de API voor gegevenstoegang voor het openen en downloaden van batchbestanden volgt u de zelfstudie [Gegevenstoegang](../../data-access/tutorials/dataset-data.md).
 
-U kunt ook toegang krijgen tot geëxporteerde realtime gegevens van het klantprofiel via de Query Service van het Adobe Experience Platform. Gebruikend UI of RESTful API, staat de Dienst van de Vraag u toe om, vragen op gegevens binnen het meer van Gegevens te schrijven te bevestigen en in werking te stellen.
+U kunt ook toegang krijgen tot geëxporteerde realtime klantprofielgegevens met Adobe Experience Platform Query Service. Gebruikend UI of RESTful API, staat de Dienst van de Vraag u toe om, vragen op gegevens binnen het meer van Gegevens te schrijven te bevestigen en in werking te stellen.
 
 Voor meer informatie over hoe te om publieksgegevens te vragen, te herzien gelieve de documentatie [van de Dienst van de](../../query-service/home.md)Vraag.
 
