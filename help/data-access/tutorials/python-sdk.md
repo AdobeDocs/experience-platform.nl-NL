@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Secure Python Data Access SDK
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Secure [!DNL Python] [!DNL Data Access] SDK
 
-De Secure [!DNL Python] [!DNL Data Access] SDK is een softwareontwikkelingskit waarmee gegevens van het Adobe Experience Platform kunnen worden gelezen en geschreven.
+De Secure [!DNL Python][!DNL Data Access] SDK is een softwareontwikkelingskit waarmee gegevens van Adobe Experience Platform kunnen worden gelezen en geschreven.
 
 ## Aan de slag
 
@@ -128,7 +128,9 @@ df = dataset_reader.select(['column-a']).distinct().read()
 
 De [!DNL Python] SDK ondersteunt bepaalde operatoren om de dataset te filteren.
 
->[!NOTE] De functies die worden gebruikt voor filteren zijn hoofdlettergevoelig.
+>[!NOTE]
+>
+>De functies die worden gebruikt voor filteren zijn hoofdlettergevoelig.
 
 ```python
 eq() = '='
