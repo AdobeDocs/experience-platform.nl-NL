@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Bepaal een verband tussen twee schema's gebruikend de Registratie API van het Schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 849142e44c56f2958e794ca6aefaccd5670c28ba
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 # Een relatie tussen twee schema&#39;s definiëren met behulp van de [!DNL Schema Registry] API
 
 
-De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk op verschillende kanalen te begrijpen is een belangrijk onderdeel van het Adobe Experience Platform. Het bepalen van deze verhoudingen binnen de structuur van uw [!DNL Experience Data Model] (XDM) schema&#39;s staat u toe om complexe inzichten in uw klantengegevens te bereiken.
+De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk op verschillende kanalen te begrijpen is een belangrijk onderdeel van Adobe Experience Platform. Het bepalen van deze verhoudingen binnen de structuur van uw [!DNL Experience Data Model] (XDM) schema&#39;s staat u toe om complexe inzichten in uw klantengegevens te bereiken.
 
 Terwijl de schemaverhoudingen door het gebruik van het unieschema kunnen worden afgeleid en [!DNL Real-time Customer Profile], is dit slechts op schema&#39;s van toepassing die de zelfde klasse delen. Om een verband tussen twee schema&#39;s te vestigen die tot verschillende klassen behoren, moet een specifiek **relatiegebied** aan een bronschema worden toegevoegd, dat de identiteit van een bestemmingsschema verwijst.
 
@@ -38,7 +38,9 @@ Verwacht wordt dat u reeds de twee schema&#39;s hebt gecreeerd die in de verhoud
 
 De verhoudingen van het schema worden vertegenwoordigd door een **bronschema** die een gebied hebben dat naar een ander gebied binnen een **bestemmingsschema** verwijst. In de stappen die volgen, &quot;[!DNL Loyalty Members]&quot;zal het bronschema zijn, terwijl &quot;[!DNL Hotels]&quot;als bestemmingsschema zal handelen.
 
->[!IMPORTANT] Om een relatie tot stand te brengen, moeten beide schema&#39;s primaire identiteiten hebben bepaald en voor [!DNL Real-time Customer Profile]. Zie de sectie over het [toelaten van een schema voor gebruik in Profiel](./create-schema-api.md#profile) in de schemacreatie zelfstudie als u begeleiding op hoe te om uw schema&#39;s dienovereenkomstig te vormen vereist.
+>[!IMPORTANT]
+>
+>Om een relatie tot stand te brengen, moeten beide schema&#39;s primaire identiteiten hebben bepaald en voor [!DNL Real-time Customer Profile]. Zie de sectie over het [toelaten van een schema voor gebruik in Profiel](./create-schema-api.md#profile) in de schemacreatie zelfstudie als u begeleiding op hoe te om uw schema&#39;s dienovereenkomstig te vormen vereist.
 
 Als u een relatie tussen twee schema&#39;s wilt definiëren, moet u eerst de `$id` waarden voor beide schema&#39;s ophalen. Als u de vertoningsnamen (`title`) van de schema&#39;s kent, kunt u hun `$id` waarden vinden door een verzoek van de GET tot het `/tenant/schemas` eindpunt in [!DNL Schema Registry] API te richten.
 
@@ -116,7 +118,9 @@ Binnen de [!DNL Schema Registry], werken de relatiebeschrijvers gelijkaardig aan
 
 In dit leerprogramma, bevat het bestemmingsschema &quot;[!DNL Hotels]&quot;een `email` gebied dat als primaire identiteit van het schema dient, en daarom ook als zijn verwijzingsgebied zal handelen. Nochtans, heeft het bronschema &quot;[!DNL Loyalty Members]&quot;geen specifiek gebied dat als verwijzing moet worden gebruikt, en moet een nieuwe mengeling worden gegeven die een nieuw gebied aan het schema toevoegt: `favoriteHotel`.
 
->[!NOTE] Als uw bronschema reeds een specifiek gebied heeft dat u als verwijzingsgebied van plan bent te gebruiken, kunt u vooruit aan de stap overslaan bij het [creëren van een verwijzingsbeschrijver](#reference-identity).
+>[!NOTE]
+>
+>Als uw bronschema reeds een specifiek gebied heeft dat u als verwijzingsgebied van plan bent te gebruiken, kunt u vooruit aan de stap overslaan bij het [creëren van een verwijzingsbeschrijver](#reference-identity).
 
 ### Een nieuwe mix maken
 
