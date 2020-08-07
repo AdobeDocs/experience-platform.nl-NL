@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verbinding maken met streaming doelen en gegevens activeren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: dce9a7040ad25d5bb08de95fce7655f1fec7c226
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1809'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >De [!DNL Amazon Kinesis] en de [!DNL Azure Event Hubs] bestemmingen in Adobe in real time CDP zijn momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
-Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw Adobe Experience Platform-gegevens, een verbinding tot stand te brengen met een streamingbestemming voor cloudopslag ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) of [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), een dataflow te maken naar uw nieuwe, gemaakte bestemming en gegevens te activeren voor uw nieuwe, gemaakte bestemming.
+Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw Adobe Experience Platform-gegevens, een verbinding tot stand te brengen met een streamingbestemming voor cloudopslag ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) of [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), een dataflow te maken naar uw nieuwe bestemming en gegevens te activeren naar uw nieuwe bestemming.
 
 In deze zelfstudie wordt het [!DNL Amazon Kinesis] doel in alle voorbeelden gebruikt, maar de stappen zijn identiek voor [!DNL Azure Event Hubs].
 
@@ -28,7 +28,7 @@ Als u liever de gebruikersinterface in Adobe gebruikt om verbinding te maken met
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] is het registratiesysteem voor de gegevenslocatie en -lijn in het Experience Platform.
@@ -59,7 +59,8 @@ De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken wor
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Nofferte]
+>[!NOTE]
+>
 >Raadpleeg de documentatie bij het overzicht van de [sandbox voor meer informatie over sandboxen in Experience Platform](../../sandboxes/home.md).
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
