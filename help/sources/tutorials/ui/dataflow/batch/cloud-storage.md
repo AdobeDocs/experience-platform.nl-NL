@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een gegevensstroom configureren voor een batchaansluiting voor cloudopslag in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: f532bd6393bfad84fa09c2fc753d1d5c5b39d013
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Een dataflow is een geplande taak die gegevens van een bron aan een [!DNL Platfo
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -115,7 +115,9 @@ Geef waarden op voor het schema en selecteer **[!UICONTROL Volgende]**.
 
 Als u eenmalige invoer wilt instellen, selecteert u de vervolgkeuzepijl voor de frequentie en selecteert u **[!UICONTROL Eenmaal]**. U kunt bewerkingen blijven uitvoeren op een gegevensstroom die is ingesteld voor eenmalig opnemen van de frequentie, zolang de begintijd in de toekomst behouden blijft. Zodra de begintijd is verstreken, kan de eenmalig frequentiewaarde niet meer worden bewerkt.
 
->[!TIP] **[!UICONTROL Interval]** en **[!UICONTROL backfill]** zijn niet zichtbaar tijdens eenmalig gebruik.
+>[!TIP]
+>
+>**[!UICONTROL Interval]** en **[!UICONTROL backfill]** zijn niet zichtbaar tijdens eenmalig gebruik.
 
 Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Volgende]**.
 
