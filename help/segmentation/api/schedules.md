@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Planningen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 1%
@@ -55,7 +55,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 Een geslaagde reactie retourneert HTTP-status 200 met een lijst met schema&#39;s voor de opgegeven IMS-organisatie als JSON.
 
->[!NOTE] De volgende reactie is afgebroken voor ruimte, en toont slechts het eerste teruggekeerde programma.
+>[!NOTE]
+>
+>De volgende reactie is afgebroken voor ruimte, en toont slechts het eerste teruggekeerde programma.
 
 ```json
 {
@@ -98,7 +100,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst met schema&#39;s
 | `children.type` | Het type taak als tekenreeks. De twee ondersteunde typen zijn &quot;batch_segmentation&quot; en &quot;export&quot;. |
 | `children.properties` | Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
 | `children.properties.segments` | Het gebruiken `["*"]` zorgt ervoor alle segmenten inbegrepen zijn. |
-| `children.schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Lees de documentatie over de indeling van de [uitsnijdexpressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor meer informatie over de uitsnijdschema&#39;s. In dit voorbeeld betekent &quot;0 0 1 *&quot; dat dit schema om middernacht op het eerste van elke maand zal lopen. |
+| `children.schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, &quot;0 0 1 * *&quot; means that this schedule will run at midnight on the first of every month. |
 | `children.state` | Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn &quot;actief&quot; en &quot;inactief&quot;. De status wordt standaard ingesteld op &quot;inactief&quot;. |
 
 ## Een nieuw schema maken {#create}
@@ -140,12 +142,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **Vereist.** Het type taak als tekenreeks. De twee ondersteunde typen zijn &quot;batch_segmentation&quot; en &quot;export&quot;. |
 | `properties` | **Vereist.** Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
 | `properties.segments` | **Vereist wanneer`type`gelijk is aan &quot;batch_segmentation&quot;.** Het gebruiken `["*"]` zorgt ervoor alle segmenten inbegrepen zijn. |
-| `schedule` | *Optioneel.* Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Lees de documentatie over de indeling van de [uitsnijdexpressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor meer informatie over de uitsnijdschema&#39;s. In dit voorbeeld betekent &quot;0 0 1 *&quot; dat dit schema om middernacht op het eerste van elke maand zal lopen. <br><br>Als deze tekenreeks niet wordt opgegeven, wordt automatisch een door het systeem gegenereerd schema gegenereerd. |
+| `schedule` | *Optioneel.* A string containing the job schedule. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Lees de documentatie over de indeling van de [uitsnijdexpressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor meer informatie over de uitsnijdschema&#39;s. In dit voorbeeld betekent &quot;0 0 1 *&quot; dat dit schema om middernacht op het eerste van elke maand zal lopen. <br><br>Als deze tekenreeks niet wordt opgegeven, wordt automatisch een door het systeem gegenereerd schema gegenereerd. |
 | `state` | *Optioneel.* Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn &quot;actief&quot; en &quot;inactief&quot;. De status wordt standaard ingesteld op &quot;inactief&quot;. |
 
 **Antwoord**
 
-Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs gecreeerd programma terug.
+A successful response returns HTTP status 200 with details of your newly created schedule.
 
 ```json
 {
@@ -229,7 +231,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 | `type` | Het type taak als tekenreeks. De twee ondersteunde typen zijn `batch_segmentation` en `export`. |
 | `properties` | Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
 | `properties.segments` | Het gebruiken `["*"]` zorgt ervoor alle segmenten inbegrepen zijn. |
-| `schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd. Dit betekent dat u een taak niet meer dan één keer gedurende een periode van 24 uur kunt plannen. Lees de documentatie over de indeling van de [uitsnijdexpressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor meer informatie over de uitsnijdschema&#39;s. In dit voorbeeld betekent &quot;0 0 1 *&quot; dat dit schema om middernacht op het eerste van elke maand zal lopen. |
+| `schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Lees de documentatie over de indeling van de [uitsnijdexpressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor meer informatie over de uitsnijdschema&#39;s. In dit voorbeeld betekent &quot;0 0 1 *&quot; dat dit schema om middernacht op het eerste van elke maand zal lopen. |
 | `state` | Een tekenreeks die de staat van het schema bevat. De twee ondersteunde staten zijn `active` en `inactive`. De status is standaard ingesteld op `inactive`. |
 
 ## Details bijwerken voor een specifiek schema {#update}
@@ -272,8 +274,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `path` | Het pad van de waarde die u wilt repareren. In dit geval, aangezien u de staat van het programma bijwerkt, moet u de waarde van aan &quot;/staat&quot;plaatsen `path` . |
-| `value` | De bijgewerkte waarde van de staat van het programma. Deze waarde kan worden ingesteld op &quot;actief&quot; of &quot;inactief&quot; om het schema te activeren of deactiveren. |
+| `path` | The path of the value you want to patch. In dit geval, aangezien u de staat van het programma bijwerkt, moet u de waarde van aan &quot;/staat&quot;plaatsen `path` . |
+| `value` | De bijgewerkte waarde van de staat van het programma. This value can either be set as &quot;active&quot; or &quot;inactive&quot; to activate or deactivate the schedule. |
 
 **Antwoord**
 
@@ -322,7 +324,7 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud).
 
 ## Een specifiek schema verwijderen
 
-U kunt verzoeken om een specifiek programma te schrappen door een DELETE verzoek aan het `/config/schedules` eindpunt te doen en identiteitskaart van het programma te verstrekken u wenst om in de verzoekweg te schrappen.
+U kunt verzoeken om een specifiek programma te schrappen door een verzoek van DELETE aan het `/config/schedules` eindpunt te doen en identiteitskaart van het programma te verstrekken u wenst om in de verzoekweg te schrappen.
 
 **API-indeling**
 
