@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verbinding maken met PSQL
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
 workflow-type: tm+mt
 source-wordcount: '170'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -44,7 +44,7 @@ Download en installeer [!DNL Postgres] vanaf deze [locatie](https://www.postgres
 
 De padvariabele bewerken:
 
-![Afbeelding](../images/clients/psql/path.png)
+![Image](../images/clients/psql/path.png)
 
 Voeg de twee getoonde lijnen toe die &quot;[!DNL Postgres].&quot;omvatten
 
@@ -66,9 +66,11 @@ Ga terug naar de [!DNL Platform] gebruikersinterface op de pagina Tools *[!UICON
 
 Klik **[!UICONTROL exemplaar]** voor *[!UICONTROL Bevel]* PSQL.
 
-![Afbeelding](../images/clients/psql/connect-bi.png)
+![Image](../images/clients/psql/connect-bi.png)
 
->[!IMPORTANT]: Als u op PC bent, gebruik een tekstredacteur om de lijnonderbrekingen in het bevelkoord te verwijderen, dan kopieer het koord.
+>[!IMPORTANT]
+>
+>Als u op PC bent, gebruik een tekstredacteur om de lijnonderbrekingen in het bevelkoord te verwijderen, dan kopieer het koord.
 
 Plak de opdrachttekenreeks in een terminal- of opdrachtvenster en druk op Enter.
 
