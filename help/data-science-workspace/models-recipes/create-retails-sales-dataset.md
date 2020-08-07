@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Het detailhandelschema en de dataset maken
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle a
 
 Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldoen:
 - Toegang tot [!DNL Adobe Experience Platform]. Als u geen toegang hebt tot een IMS-organisatie in [!DNL Experience Platform], neemt u contact op met uw systeembeheerder voordat u verdergaat.
-- Autorisatie voor het uitvoeren van [!DNL Experience Platform] API-aanroepen. Voltooi de [Authenticate en toegang tot Adobe Experience Platform APIs](../../tutorials/authentication.md) zelfstudie om de volgende waarden te verkrijgen om deze zelfstudie te voltooien:
+- Autorisatie voor het uitvoeren van [!DNL Experience Platform] API-aanroepen. Voltooi de zelfstudie [Verifiëren en toegang krijgen tot Adobe Experience Platform APIs](../../tutorials/authentication.md) om de volgende waarden te verkrijgen om deze zelfstudie te voltooien:
    - Autorisatie: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
@@ -98,7 +98,9 @@ Het schema en de datasets van de Verkoop van de detailhandel worden gecreeerd au
    python bootstrap.py
    ```
 
-   >[!NOTE] Het script kan enkele minuten duren.
+   >[!NOTE]
+   >
+   >Het script kan enkele minuten duren.
 
 ## Volgende stappen
 
