@@ -5,7 +5,7 @@ title: Invoer en uitvoer van Attribution AI
 topic: Input and Output data for Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 translation-type: tm+mt
-source-git-commit: 5126ef74330d9cee7234ccd1ee7260b09db9e78c
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '2174'
 ht-degree: 0%
@@ -164,7 +164,7 @@ Attribution AI ondersteunt twee categorieën attributiescore, algoritmische en o
 
 Attribution AI produceert twee verschillende typen algoritmische scores, incrementeel en beïnvloed. Een beïnvloede score is de fractie van de omzetting die elk marketing aanraakpunt voor verantwoordelijk is. Een incrementele score is de hoeveelheid marginale impact die rechtstreeks wordt veroorzaakt door het marketingaanraakpunt. Het belangrijkste verschil tussen de incrementele score en de beïnvloede score is dat de incrementele score rekening houdt met het basislijneffect. Zij gaat er niet van uit dat een conversie uitsluitend door de voorafgaande marketingaanraakpunten wordt veroorzaakt.
 
-Hier is een snelle blik bij een voorbeeld van de het schemaoutput van Attribution AI van Adobe Experience Platform UI:
+Hier volgt een snel voorbeeld van een Attribution AI-schema-uitvoer uit de Adobe Experience Platform-gebruikersinterface:
 
 ![](./images/input-output/schema_screenshot.png)
 
