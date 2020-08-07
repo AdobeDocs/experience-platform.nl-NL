@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een dataflow configureren voor een advertentieverbinding in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1225'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Een dataflow configureren voor een advertentieverbinding in de gebruikersinterface
 
-Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Adobe Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw advertentieaccount.
+Een dataflow is een geplande taak die gegevens van een bron aan een dataset van Adobe Experience Platform terugwint en opneemt. This tutorial provides steps to configure a new dataflow using your advertising account.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 - [XDM-systeem](../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    - [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -34,7 +34,7 @@ Nadat u uw advertentieaccount hebt gemaakt, wordt de stap Gegevens ** selecteren
 - De linkerhelft van de interface is een directorybrowser waarin de bestanden en mappen van uw server worden weergegeven.
 - Met de rechterhelft van de interface kunt u maximaal 100 rijen gegevens uit een compatibel bestand voorvertonen.
 
-Selecteer de directory die u wilt gebruiken en selecteer vervolgens **[!UICONTROL Volgende]**.
+Select the directory you wish to use, then select **[!UICONTROL Next]**.
 
 ![add-data](../../../images/tutorials/dataflow/advertising/add-data.png)
 
@@ -96,17 +96,19 @@ Selecteer Incrementele gegevens **[!UICONTROL laden door]** de deltabkolom toe t
 
 Als u eenmalige invoer wilt instellen, selecteert u de vervolgkeuzepijl voor de frequentie en selecteert u **[!UICONTROL Eenmaal]**.
 
->[!TIP] **[!UICONTROL Interval]** en **[!UICONTROL backfill]** zijn niet zichtbaar tijdens eenmalig gebruik.
+>[!TIP]
+>
+>**[!UICONTROL Interval]** en **[!UICONTROL backfill]** zijn niet zichtbaar tijdens eenmalig gebruik.
 
 Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Volgende]**.
 
-![schema-eens](../../../images/tutorials/dataflow/databases/schedule-once.png)
+![schedule-once](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
 ## Gegevens over gegevensstroom opgeven
 
 De stap met *[!UICONTROL details]* over gegevensstroom wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
 
-Tijdens dit proces kunt u ook *[!UICONTROL gedeeltelijke inname]* en *[!UICONTROL foutdiagnose]* inschakelen. Als u *[!UICONTROL Gedeeltelijke inname]* inschakelt, kunt u gegevens met fouten tot een bepaalde drempel innemen. Wanneer *[!UICONTROL Partiële inname]* is ingeschakeld, sleept u de *[!UICONTROL foutdrempel %]* voor een wijziging van de foutdrempel van de batch. U kunt de drempelwaarde ook handmatig aanpassen door het invoervak te selecteren. Voor meer informatie, zie het [gedeeltelijke partijingestie overzicht](../../../../ingestion/batch-ingestion/partial.md).
+Tijdens dit proces kunt u ook *[!UICONTROL gedeeltelijke inname]* en *[!UICONTROL foutdiagnose]* inschakelen. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold. Wanneer *[!UICONTROL Partiële inname]* is ingeschakeld, sleept u de *[!UICONTROL foutdrempel %]* voor een wijziging van de foutdrempel van de batch. U kunt de drempelwaarde ook handmatig aanpassen door het invoervak te selecteren. Voor meer informatie, zie het [gedeeltelijke partijingestie overzicht](../../../../ingestion/batch-ingestion/partial.md).
 Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Volgende]**.
 
 ![details gegevensstroom](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
@@ -129,7 +131,7 @@ Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door he
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een dataflow gecreeerd om gegevens van een systeem van de marketingautomatisering in te brengen en inzicht verworven in de controle van datasets. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u met succes een dataflow gecreeerd om gegevens van een systeem van de marketingautomatisering in te brengen en inzicht verworven in de controle van datasets. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. See the following documents for more details:
 
 - [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
 - [Overzicht van de Data Science Workspace](../../../../data-science-workspace/home.md)
@@ -146,7 +148,7 @@ Selecteer in het scherm *[!UICONTROL Gegevensstroom]* de naam van de gegevensstr
 
 ![browse-dataset-flow](../../../images/tutorials/dataflow/advertising/view-dataset-flows.png)
 
-De kolom *[!UICONTROL Eigenschappen]* wordt aan de rechterkant van het scherm weergegeven. Dit deelvenster bevat een schakelknop **[!UICONTROL Ingeschakeld]** . Klik op de schakeloptie om de gegevensstroom uit te schakelen. Dezelfde schakeloptie kan worden gebruikt om een gegevensstroom opnieuw in te schakelen nadat deze is uitgeschakeld.
+The *[!UICONTROL Properties]* column appears on the right-hand side of the screen. Dit deelvenster bevat een schakelknop **[!UICONTROL Ingeschakeld]** . Klik op de schakeloptie om de gegevensstroom uit te schakelen. Dezelfde schakeloptie kan worden gebruikt om een gegevensstroom opnieuw in te schakelen nadat deze is uitgeschakeld.
 
 ![disable](../../../images/tutorials/dataflow/advertising/disable.png)
 
