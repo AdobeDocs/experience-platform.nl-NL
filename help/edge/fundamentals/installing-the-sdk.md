@@ -1,12 +1,12 @@
 ---
-title: De SDK van het Web Adobe Experience Platform installeren
-seo-title: Adobe Experience Platform Web SDK die SDK installeert
+title: De SDK van Adobe Experience Platform Web installeren
+seo-title: Adobe Experience Platform Web SDK die de SDK installeert
 description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 seo-description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 translation-type: tm+mt
-source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
+source-git-commit: 12cbcc26956cba2e14d64734c9210fa79bcc70b9
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '623'
 ht-degree: 0%
 
 ---
@@ -14,14 +14,20 @@ ht-degree: 0%
 
 # De SDK installeren {#installing-the-sdk}
 
-Het Adobe Experience Platform [!DNL Web SDK] is beschikbaar op een netwerk van de inhoudslevering (CDN) voor u aan gebruik. U kunt naar dit bestand verwijzen of het downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in een geminificeerde en niet-geminiaterde versie. De niet-geminificeerde versie is handig voor foutopsporingsdoeleinden.
+De aangewezen manier om het Web SDK van Adobe Experience Platform te gebruiken is via [Lancering](http://launch.adobe.com/). Zoek naar `AEP Web SDK` in de catalogus van uitbreidingen, installeer dan de uitbreiding.
 
-* GeMinificeerde versie: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
-* Niet-geminificeerde versie: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+De AEP web SDK is ook beschikbaar op een CDN die u kunt gebruiken. U kunt naar dit bestand verwijzen of het downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in een geminificeerde en niet-geminiaterde versie. De niet-geminificeerde versie is handig voor foutopsporingsdoeleinden.
+
+URL-structuur: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OF alloy.js voor de niet-geminificeerde versie.
+
+Bijvoorbeeld:
+
+* Gepiliseerd: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* Niet-geminificeerd: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## De code toevoegen {#adding-the-code}
 
-De eerste stap bij het implementeren van het Adobe Experience Platform [!DNL Web SDK] is het zo hoog mogelijk kopiëren en plakken van de volgende &quot;basiscode&quot; in de `<head>` tag van uw HTML:
+De eerste stap bij het implementeren van de Adobe Experience Platform [!DNL Web SDK] is het zo hoog mogelijk kopiëren en plakken van de volgende &quot;basiscode&quot; in de `<head>` tag van uw HTML:
 
 ```markup
 <script>
