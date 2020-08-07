@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Voorvertoningen en schattingen van eindpunten
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 1%
@@ -36,13 +36,17 @@ De voorbeeldgrootte van de scan is afhankelijk van het totale aantal entiteiten 
 | 1 tot 20 miljoen | 1 miljoen |
 | Meer dan 20 miljoen | 5% van het totaal |
 
->[!NOTE] De schattingen duren over het algemeen 10 tot 15 seconden om te werken, te beginnen met een ruwe schatting en verfijning naarmate meer records worden gelezen.
+>[!NOTE]
+>
+>De schattingen duren over het algemeen 10 tot 15 seconden om te werken, te beginnen met een ruwe schatting en verfijning naarmate meer records worden gelezen.
 
 ## Een nieuwe voorvertoning maken {#create-preview}
 
 U kunt een nieuwe voorproef tot stand brengen door een verzoek van de POST aan het `/preview` eindpunt te doen.
 
->[!NOTE] Er wordt automatisch een geschatte taak gemaakt wanneer een voorbeeldtaak wordt gemaakt. Deze twee taken delen dezelfde id.
+>[!NOTE]
+>
+>Er wordt automatisch een geschatte taak gemaakt wanneer een voorbeeldtaak wordt gemaakt. Deze twee taken delen dezelfde id.
 
 **API-indeling**
 
