@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Query-service in Jupyter-laptop
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '764'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -38,13 +38,17 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   >[!NOTE] Als er niet automatisch een nieuw tabblad Launcher wordt weergegeven, opent u een nieuw tabblad Launcher door op **[!UICONTROL Bestand]** te klikken en vervolgens **[!UICONTROL Nieuwe startpagina]** te selecteren.
+   >[!NOTE]
+   >
+   >Als er niet automatisch een nieuw tabblad Launcher wordt weergegeven, opent u een nieuw tabblad Launcher door op **[!UICONTROL Bestand]** te klikken en vervolgens **[!UICONTROL Nieuwe startpagina]** te selecteren.
 
 2. Klik op het tabblad Launcher op het pictogram **[!UICONTROL Lege]** in een Python 3-omgeving om een lege laptop te openen.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   >[!NOTE] Python 3 is momenteel de enige ondersteunde omgeving voor Query Service in laptops.
+   >[!NOTE]
+   >
+   >Python 3 is momenteel de enige ondersteunde omgeving voor Query Service in laptops.
 
 3. Klik in de linkerselectieregel op het pictogram **[!UICONTROL Gegevens]** en dubbelklik op de map **[!UICONTROL Datasets]** om alle gegevenssets weer te geven.
 
@@ -86,7 +90,9 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
    - `target_month` : Specifieke maand waarvan het doel afkomstig is.
    - `target_day` : De specifieke dag waarop de doelgegevens afkomstig zijn.
 
-   >[!NOTE] U kunt deze waarden op elk gewenst moment wijzigen. Zorg er daarbij voor dat u de cel met variabelen uitvoert voor de wijzigingen die moeten worden toegepast.
+   >[!NOTE]
+   >
+   >U kunt deze waarden op elk gewenst moment wijzigen. Zorg er daarbij voor dat u de cel met variabelen uitvoert voor de wijzigingen die moeten worden toegepast.
 
 ## Uw gegevens opvragen {#query-your-data}
 
@@ -102,7 +108,7 @@ De notebookkernel wordt opnieuw ingesteld, maar de cellen blijven, en **[!UICONT
 
 De volgende query retourneert het aantal bezoekers per uur voor een opgegeven datum:
 
-#### Query
+#### Queryactiviteit
 
 ```sql
 %%read_sql hourly_visitor -c QS_CONNECTION
