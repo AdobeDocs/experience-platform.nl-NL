@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Vorm een dataflow voor een schakelaar van de marketing automatisering in UI
+title: Configure a dataflow for a marketing automation connector in the UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 0%
@@ -12,20 +12,20 @@ ht-degree: 0%
 ---
 
 
-# Vorm een dataflow voor een schakelaar van de marketing automatisering in UI
+# Configure a dataflow for a marketing automation connector in the UI
 
-Een dataflow is een geplande taak die gegevens van een bron aan een [!DNL Platform] dataset terugwint en opneemt. Deze zelfstudie biedt stappen om een nieuwe gegevensstroom te configureren met behulp van uw account voor marketingautomatisering.
+Een dataflow is een geplande taak die gegevens van een bron aan een [!DNL Platform] dataset terugwint en opneemt. This tutorial provides steps to configure a new dataflow using your marketing automation account.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 - [XDM-systeem](../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    - [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    - [Zelfstudie](../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [Klantprofiel](../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Bovendien moet u voor deze zelfstudie al een account voor marketingautomatisering hebben gemaakt. Een lijst van leerprogramma&#39;s voor het creëren van verschillende marketing automatiseringsschakelaars in UI kan in het overzicht [van](../../../home.md)bronschakelaars worden gevonden.
+Bovendien moet u voor deze zelfstudie al een account voor marketingautomatisering hebben gemaakt. A list of tutorials for creating different marketing automation connectors in the UI can be found in the [source connectors overview](../../../home.md).
 
 ## Gegevens selecteren
 
@@ -56,7 +56,7 @@ Het dialoogvenster _Gegevensset_ selecteren wordt geopend. Zoek de gegevensset d
 
 ### Een nieuwe gegevensset gebruiken
 
-Om gegevens in een nieuwe dataset in te voeren, **[!UICONTROL creeer nieuwe dataset]** en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in.
+To ingest data into a new dataset, select **[!UICONTROL Create new dataset]** and enter a name and description for the dataset in the fields provided.
 
 U kunt een schemagebied vastmaken door een schemanaam in te gaan in de **[!UICONTROL Uitgezochte bar van het schemaonderzoek]** . U kunt ook het vervolgkeuzepictogram selecteren om een lijst met bestaande schema&#39;s weer te geven. U kunt ook **[!UICONTROL Geavanceerd zoeken]** selecteren om toegang te krijgen tot het scherm met bestaande schema&#39;s en de bijbehorende details.
 
@@ -96,7 +96,9 @@ Selecteer Incrementele gegevens **[!UICONTROL laden door]** de deltabkolom toe t
 
 Als u eenmalige invoer wilt instellen, selecteert u de vervolgkeuzepijl voor de frequentie en selecteert u **[!UICONTROL Eenmaal]**.
 
->[!TIP] **[!UICONTROL Interval]** en **[!UICONTROL backfill]** zijn niet zichtbaar tijdens eenmalig gebruik.
+>[!TIP]
+>
+>**[!UICONTROL Interval]** en **[!UICONTROL backfill]** zijn niet zichtbaar tijdens eenmalig gebruik.
 
 Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Volgende]**.
 
