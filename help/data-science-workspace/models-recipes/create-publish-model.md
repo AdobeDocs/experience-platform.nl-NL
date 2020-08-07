@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een analyse van een model voor machinaal leren maken en publiceren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 0%
@@ -117,7 +117,9 @@ U kunt ervoor kiezen te wachten totdat de trainingsreeks is voltooid of een nieu
 
    Hyperparameters kunnen niet worden geleerd, daarom moeten zij worden toegewezen alvorens de opleidingslooppas voorkomt. Het aanpassen van Hyperparameters kan de nauwkeurigheid van het Getrainde Model veranderen. Aangezien het optimaliseren van een model een herhalend proces is, kunnen meerdere trainingen nodig zijn voordat een bevredigende evaluatie wordt uitgevoerd.
 
-   >[!TIP] Stel **[!UICONTROL num_recommendations]** in op 10.
+   >[!TIP]
+   >
+   >Stel **[!UICONTROL num_recommendations]** in op 10.
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. Er verschijnt een extra gegevenspunt in het modelevaluatieschema wanneer de nieuwe trainingsrun is voltooid. Dit kan enkele minuten in beslag nemen.
