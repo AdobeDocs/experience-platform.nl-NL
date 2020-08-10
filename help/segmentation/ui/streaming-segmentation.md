@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Streaming segmentering
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,7 @@ Een query wordt automatisch geëvalueerd met streaming segmentatie als deze aan 
 | ---------- | ------- | ------- |
 | Binnenkomende hit | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis zonder tijdbeperking. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
 | Binnenkomende hit binnen relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis **in de laatste zeven dagen**. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. |  |
 | Binnenkomende hit die verwijst naar een profiel | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, zonder tijdbeperking, en een of meer profielkenmerken. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | Binnenkomende hit die verwijst naar een profiel binnen een relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis en een of meer profielkenmerken, **binnen de afgelopen zeven dagen**. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Meerdere gebeurtenissen die naar een profiel verwijzen | Elke segmentdefinitie die verwijst naar meerdere gebeurtenissen **in de afgelopen 24 uur** en (optioneel), heeft een of meer profielkenmerken. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
