@@ -4,25 +4,25 @@ solution: Experience Platform
 title: Een Azure Blob-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
+source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 0%
+source-wordcount: '582'
+ht-degree: 1%
 
 ---
 
 
 # Een [!DNL Azure Blob] aansluiting maken met de [!DNL Flow Service] API
 
-[!DNL Flow Service] wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
 Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om verbinding te maken [!DNL Experience Platform] met een [!DNL Azure Blob] (hierna &quot;blob&quot; genoemd) opslag.
 
-Als u liever de gebruikersinterface in wilt gebruiken, [!DNL Experience Platform]biedt de zelfstudie [van de](../../../ui/create/cloud-storage/blob-s3.md) Azure Blob- of Amazon S3-bronconnector stapsgewijze instructies voor het uitvoeren van vergelijkbare acties.
+Als u liever de gebruikersinterface in wilt gebruiken, [!DNL Experience Platform]biedt de UI-zelfstudie voor de [Azure Blob-bronconnector](../../../ui/create/cloud-storage/blob.md) stapsgewijze instructies voor het uitvoeren van vergelijkbare acties.
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
 * [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
