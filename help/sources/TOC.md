@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 23653949cd16e9d4ee8c3f345cbee74f147263cd
+source-git-commit: b019b6b8b69e0bfac6fc8840da350d92733dc97c
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,15 @@ ht-degree: 0%
       - [Google AdWords-connector](connectors/advertising/ads.md)
    - Cloud-opslag {#cloud-storage}
       - [Amazon Kinesis-connector](connectors/cloud-storage/kinesis.md)
+      - [Amazon S3-connector](connectors/cloud-storage/s3.md)
       - [Apache HDFS-aansluiting](connectors/cloud-storage/hdfs.md)
       - [Azure Data Lake Storage Gen2-connector](connectors/cloud-storage/adls-gen2.md)
-      - [Azure Blob- en Amazon S3-connector](connectors/cloud-storage/blob-s3.md)
+      - [Azure Blob-connector](connectors/cloud-storage/blob.md)
       - [Azure Event Hubs-connector](connectors/cloud-storage/eventhub.md)
       - [Azure File Storage-aansluiting](connectors/cloud-storage/azure-file-storage.md)
       - [FTP- en SFTP-aansluiting](connectors/cloud-storage/ftp-sftp.md)
       - [Google Cloud Storage-connector](connectors/cloud-storage/google-cloud-storage.md)
+      - [Amazon S3- en Azure Blob-connector](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Microsoft Dynamics-connector](connectors/crm/ms-dynamics.md)
       - [Salesforce-aansluiting](connectors/crm/salesforce.md)
@@ -139,13 +141,15 @@ ht-degree: 0%
          - [Google AdWords-connector](tutorials/ui/create/advertising/ads.md)
       - Cloud-opslag {#cloud-storage}
          - [Amazon Kinesis-connector](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Amazon S3-connector](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS-aansluiting](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Azure Data Lake Storage Gen2-connector](tutorials/ui/create/cloud-storage/adls-gen2.md)
-         - [Azure Blob- en Amazon S3-connector](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Azure Blob-connector](tutorials/ui/create/cloud-storage/blob.md)
          - [Azure Event Hubs-connector](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure File Storage-aansluiting](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTP- en SFTP-aansluiting](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Google Cloud Storage-connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Amazon S3- en Blob-connector](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Microsoft Dynamics-connector](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce-aansluiting](tutorials/ui/create/crm/salesforce.md)
