@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: Hulp bij realtime Platform klantgegevens
 translation-type: tm+mt
-source-git-commit: b0068c0ef0897d5d4ec578f0c97b20aef3b2931c
+source-git-commit: 836feb48c62e0e0ed11248846d63021125796b76
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 2%
+source-wordcount: '443'
+ht-degree: 4%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 # Hulp bij realtime Platform klantgegevens {#rtcdp}
 
 * [CDP-overzicht in realtime](overview.md)
-* Getting started {#intro}
+* Aan de slag {#intro}
    * [Aan de slag](get-started.md)
    * [Overzicht van cijfers](home-page-dashboards.md)
 * Beheer {#admin}
@@ -47,16 +47,17 @@ ht-degree: 2%
          * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
          * [Google Ads-extensie](/help/rtcdp/destinations/google-ads-extension.md)
          * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+         * [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
          * [Google Display en Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
          * [Google-tag-extensie](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [LinkedIn Insight-tagextensie](/help/rtcdp/destinations/linkedin-extension.md)
          * [Pinterest Conversion Tracking extension](destinations/pinterest-extension.md)
          * [Twitter Universal Website Tag-extensie](destinations/twitter-uwt-extension.md)
-      * Analytics-bestemmingen {#analytics-destinations}
-         * [Overzicht Analytics-bestemmingen](destinations/analytics-destinations.md)
+      * Analysedoelen {#analytics-destinations}
+         * [Overzicht van analysedoelen](destinations/analytics-destinations.md)
          * [Adform Website Tracking extension](/help/rtcdp/destinations/adform-extension.md)
          * [Adobe Analytics-extensie](/help/rtcdp/destinations/adobe-analytics-extension.md)
-         * [Adobe Media Analytics for Audio and Video extension](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
+         * [Adobe Media Analytics voor audio- en video-extensie](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
          * [Clicktale extensie](/help/rtcdp/destinations/clicktale-extension.md)
          * [Contentsquare-extensie](/help/rtcdp/destinations/contentsquare-extension.md)
          * [Decibel-extensie](/help/rtcdp/destinations/decibel-extension.md)
@@ -64,7 +65,7 @@ ht-degree: 2%
          * [Dialoogtoevoeging](/help/rtcdp/destinations/dialogtech-extension.md)
          * [Google Global Site Tag Analytics-extensie](/help/rtcdp/destinations/gtag-analytics-extension.md)
          * [Google Universal Analytics-extensie](/help/rtcdp/destinations/google-universal-analytics-extension.md)
-         * [JW Player Analytics-extensie (bèta)](/help/rtcdp/destinations/jw-player-analytics-extension.md)
+         * [JW Player Analytics-extensie (Bèta)](/help/rtcdp/destinations/jw-player-analytics-extension.md)
          * [Nielsen BSDK-extensie](destinations/nielsen-bsdk-extension.md)
          * [Nielsen IMA Handler extension](destinations/nielsen-ima-extension.md)
          * [Nielsen VideoJS Player Handler extension](destinations/nielsen-videojs-extension.md)
