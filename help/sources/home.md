@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '801'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Overzicht van bronconnectors
 
-Met Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
 [!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
 
@@ -28,8 +28,8 @@ De bronnen in [!DNL Experience Platform] worden gegroepeerd in de volgende categ
 
 [!DNL Experience Platform] staat toe dat gegevens van andere toepassingen van Adobe, met inbegrip van Adobe Analytics, Adobe Audience Manager, en [!DNL Experience Platform Launch]worden opgenomen. Zie de volgende verwante documenten voor meer informatie:
 
-- [Overzicht van de Adobe Audience Manager-aansluiting](connectors/adobe-applications/audience-manager.md)
-- [Creeer een Adobe Audience Manager bronschakelaar in UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Overzicht Adobe Audience Manager-connector](connectors/adobe-applications/audience-manager.md)
+- [Een Adobe Audience Manager-bronaansluiting maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Overzicht Adobe Analytics-gegevensconnector](connectors/adobe-applications/analytics.md)
 - [Een Adobe Analytics-bronaansluiting maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Een bronconnector voor klantkenmerken in de gebruikersinterface maken](./tutorials/ui/create/adobe-applications/customer-attributes.md)
@@ -45,8 +45,9 @@ De bronnen in [!DNL Experience Platform] worden gegroepeerd in de volgende categ
 Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen [!DNL Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
 
 - [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) connector
-- [!DNL Azure Blob and Amazon S3](connectors/cloud-storage/blob-s3.md) connector
+- [!DNL Azure Blob](connectors/cloud-storage/blob.md) connector
 - [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) connector
+- [!DNL Amazon S3](connectors/cloud-storage/s3.md) connector
 - [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) connector
 - [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) connector
 - [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) connector
