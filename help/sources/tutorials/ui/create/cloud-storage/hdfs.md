@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Een Apache HDFS-bronaansluiting maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '483'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -42,11 +42,11 @@ Voor verificatie van de HDFS-bronconnector moet u waarden opgeven voor de volgen
 
 Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om een nieuwe HDFS-account te maken waarmee u verbinding kunt maken [!DNL Platform].
 
-Login aan [Adobe Experience Platform](https://platform.adobe.com) en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatiebar om tot de werkruimte van *[!UICONTROL Bronnen]* toegang te hebben. In het scherm *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven waarmee u een binnenkomende account kunt maken. Elke bron toont het aantal bestaande accounts en gegevensstromen dat aan deze accounts is gekoppeld.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Bronnen]* . In het scherm *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven waarmee u een binnenkomende account kunt maken. Elke bron toont het aantal bestaande accounts en gegevensstromen dat aan deze accounts is gekoppeld.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer in de *[!UICONTROL opslagcategorie]* van Cloud de optie **[!UICONTROL Apache HDFS]** en klik **op het plus-pictogram (+)** om een nieuwe HDFS-aansluiting te maken.
+Selecteer in de opslagcategorie *[!UICONTROL Cloud de optie]* Apache HDFS **[!UICONTROL gevolgd door Gegevens]** **** toevoegen om een nieuwe HDFS-aansluiting te maken.
 
 ![catalogus](../../../../images/tutorials/create/hdfs/catalog.png)
 
