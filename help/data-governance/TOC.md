@@ -1,12 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Help bij gegevensbeheer voor Adobe Experience Platform
+user-guide-title: Help bij Adobe Experience Platform Data Governance
 translation-type: tm+mt
-source-git-commit: 876ac35f6366411adda821805bf628470839f80e
+source-git-commit: de79706be6303f82c6d0e68cdf2c9d389f23d9a8
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 2%
+source-wordcount: '107'
+ht-degree: 3%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 2%
    * [Overzicht van beleidshandhaving](enforcement/overview.md)
    * [Beleid voor gegevensgebruik afdwingen met de API voor beleidsservice](enforcement/api-enforcement.md)
 * Handleiding voor ontwikkelaars van API voor beleidsservice {#api}
+   * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
    * [Labels](api/labels.md)
    * [Beleid](api/policies.md)
