@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creeer een van de klantenattributen bronschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 3%
@@ -14,17 +14,17 @@ ht-degree: 3%
 
 # Creeer een van de klantenattributen bronschakelaar in UI
 
-Deze zelfstudie biedt stappen voor het maken van een bronconnector in de UI voor het verzamelen van klantkenmerkprofielgegevens in Adobe Experience Platform. Raadpleeg het [overzichtsdocument](https://docs.adobe.com/content/help/nl-NL/core-services/interface/customer-attributes/attributes.html)voor meer informatie over klantkenmerken.
+Deze zelfstudie biedt stappen voor het maken van een bronaansluiting in de gebruikersinterface voor het verzamelen van profielgegevens van klantkenmerken naar Adobe Experience Platform. Raadpleeg het [overzichtsdocument](https://docs.adobe.com/content/help/nl-NL/core-services/interface/customer-attributes/attributes.html)voor meer informatie over klantkenmerken.
 
 ## Een bronverbinding maken
 
-Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> en selecteer vervolgens **Bronnen** in de linkernavigatiebalk voor toegang tot de werkruimte Bronnen. In het scherm *Catalog* worden beschikbare bronnen weergegeven om binnenkomende verbindingen te maken met. Elke bron toont het aantal bestaande verbindingen dat aan deze verbindingen is gekoppeld. Selecteer de optie voor **Klantkenmerken** en klik op **Verbindingsbron**. Toestaan dat de verbinding enige tijd kan duren, wordt u omgeleid als een verbinding tot stand is gebracht.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte Bronnen. In het scherm **[!UICONTROL Catalog]** worden beschikbare bronnen weergegeven om binnenkomende verbindingen te maken met. Elke bron toont het aantal bestaande verbindingen dat aan deze verbindingen is gekoppeld. Selecteer de optie voor **[!UICONTROL Klantkenmerken]** en selecteer vervolgens Gegevens **** toevoegen. Toestaan dat de verbinding enige tijd kan duren, wordt u omgeleid als een verbinding tot stand is gebracht.
 
 >[!NOTE]
 >
 >Als u reeds een bronschakelaar voor de profielgegevens van klantenattributen hebt gevestigd, zal de optie om met de bron te verbinden gehandicapt zijn.
 
-![](../../../../images/tutorials/create/customer-attributes/CA-sources_catalog.png)
+![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
 In het scherm *Bronactiviteit* worden alle eerder ingestelde verbindingen voor profielgegevens van klantkenmerken weergegeven. U kunt een nieuwe verbinding maken door op Gegevens **** selecteren te klikken.
 
@@ -32,7 +32,7 @@ In het scherm *Bronactiviteit* worden alle eerder ingestelde verbindingen voor p
 >
 >De veelvoudige binnenkomende verbindingen aan een bron kunnen voor het brengen van verschillende gegevens worden gemaakt.
 
-![](../../../../images/tutorials/create/customer-attributes/CA-source_activity.png)
+![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
 
 Van de lijst van beschikbare het profieldatasets van klantenattributen, selecteer één u in Platform wilt brengen en **daarna** klikken.
 
@@ -40,14 +40,14 @@ Van de lijst van beschikbare het profieldatasets van klantenattributen, selectee
 >
 >Slechts één dataset kan per de bronverbinding van klantenattributen worden geselecteerd.
 
-![](../../../../images/tutorials/create/customer-attributes/CA-select_data.png)
+![](../../../../images/tutorials/create/customer-attributes/select_data.png)
 
 De stap *Revisie* wordt weergegeven, zodat u de nieuwe binnenkomende verbinding kunt controleren voordat deze wordt gemaakt. De details van de verbinding worden gegroepeerd per categorieën, die omvatten:
 
 * *Brongegevens*: Hiermee geeft u het type van de bronverbinding en de geselecteerde brongegevens weer.
-* *Target-gegevens*: Wanneer het creëren van andere bronschakelaars, toont deze container welke dataset de brongegevens opnemen in, met inbegrip van het schema de dataset zich aan houdt. Klantkenmerkprofielgegevens worden automatisch toegewezen en opgenomen in realtime profielen van klanten.
+* *Doelgegevens*: Wanneer het creëren van andere bronschakelaars, toont deze container welke dataset de brongegevens opnemen in, met inbegrip van het schema de dataset zich aan houdt. Klantkenmerkprofielgegevens worden automatisch toegewezen en opgenomen in realtime profielen van klanten.
 
-![](../../../../images/tutorials/create/customer-attributes/CA-review.png)
+![](../../../../images/tutorials/create/customer-attributes/review.png)
 
 ## Volgende stappen
 
