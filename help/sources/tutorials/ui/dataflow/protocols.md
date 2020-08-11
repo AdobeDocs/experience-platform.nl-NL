@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vorm een dataflow voor een protocolschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1274'
 ht-degree: 0%
 
 ---
@@ -126,9 +126,13 @@ Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Voltooien]*
 
 ![revisie](../../../images/tutorials/dataflow/protocols/review.png)
 
-## Uw gegevensstroom controleren en verwijderen
+## Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voor meer informatie over hoe te om uw gegevensstroom te controleren en te schrappen, zie de zelfstudie over het [controleren van en het schrappen van gegevensstromen](../monitor.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamepercentages, succes, en fouten te zien. Voor meer informatie over hoe te om dataflow te controleren, zie de zelfstudie over het [controleren van rekeningen en dataflows in UI](../monitor.md).
+
+## Uw gegevensstroom verwijderen
+
+U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeerd gebruikend de functie van de *[!UICONTROL Schrapping]* beschikbaar in de *[!UICONTROL werkruimte Dataflows]* zijn. Voor meer informatie over hoe te om dataflows te schrappen, zie de zelfstudie over het [schrappen van gegevensstromen in UI](../delete.md).
 
 ## Volgende stappen
 
