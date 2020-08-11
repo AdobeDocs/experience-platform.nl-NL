@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
+source-git-commit: 23653949cd16e9d4ee8c3f345cbee74f147263cd
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 - [Overzicht van bronconnectors](home.md)
 - Beschikbare bronconnectors {#connectors}
    - Adobe-toepassingen {#adobe-applications}
-      - [Analytics-gegevensconnector](connectors/adobe-applications/analytics.md)
+      - [Gegevensconnector Analytics](connectors/adobe-applications/analytics.md)
       - [Audience Manager-aansluiting](connectors/adobe-applications/audience-manager.md)
       - [Klantenkenmerkaansluiting](connectors/adobe-applications/customer-attributes.md)
       - Toepassingsvelden Adobe toewijzen {#mapping}
-         - [Analytics-toewijzingsvelden](connectors/adobe-applications/mapping/analytics.md)
+         - [Toewijzingsvelden voor analysemogelijkheden](connectors/adobe-applications/mapping/analytics.md)
          - [Toewijzingsvelden voor Audience Managers](connectors/adobe-applications/mapping/audience-manager.md)
          - [Doeltoewijzingsvelden](connectors/adobe-applications/mapping/target.md)
    - Advertising {#advertising}
@@ -133,7 +133,7 @@ ht-degree: 0%
    - Een bronaansluiting maken {#create}
       - Adobe-toepassingen {#adobe-applications}
          - [Adobe Analytics-connector](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Adobe Audience Manager-aansluiting](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Adobe Audience Manager-connector](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Klantenkenmerkaansluiting](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Advertising {#create}
          - [Google AdWords-connector](tutorials/ui/create/advertising/ads.md)
@@ -187,5 +187,6 @@ ht-degree: 0%
       - [Een gegevensstroom configureren voor een betalingsaansluiting](tutorials/ui/dataflow/payments.md)
       - [Vorm een dataflow voor een protocolschakelaar](tutorials/ui/dataflow/protocols.md)
    - [Inkomende gegevens activeren om klantprofielen te vullen](tutorials/ui/profile.md)
-   - [Accounts en gegevenssetstromen bewaken](tutorials/ui/monitor.md)
+   - [Accounts en gegevensstromen bewaken](tutorials/ui/monitor.md)
+   - [Gegevensstromen verwijderen](tutorials/ui/delete.md)
 - [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
