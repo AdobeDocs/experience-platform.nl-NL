@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Adobe Analytics-bronaansluiting maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Een Adobe Analytics-bronaansluiting maken in de gebruikersinterface
 
-Deze zelfstudie biedt stappen voor het maken van een Adobe Analytics-bronaansluiting in de gebruikersinterface om consumentengegevens in Adobe Experience Platform te brengen.
+Deze zelfstudie biedt stappen voor het maken van een Adobe Analytics-bronaansluiting in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
 * [Klantprofiel](../../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
@@ -26,7 +26,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe
 
 ## Een bronverbinding maken met Adobe Analytics
 
-Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte Bronnen. Het scherm van de *Catalogus* toont beschikbare bronnen om binnenkomende verbindingen met tot stand te brengen, en elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte Bronnen. Het scherm van de *Catalogus* toont beschikbare bronnen om binnenkomende verbindingen met tot stand te brengen, en elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -36,7 +36,7 @@ Selecteer onder de categorie *Adobe-toepassingen* de optie **[!UICONTROL Adobe A
 
 ### Gegevens selecteren
 
-De stap *Adobe Analytics* wordt weergegeven. Eerder ingestelde gegevenssetstromen voor Analytics worden op dit scherm weergegeven. U kunt een nieuwe datasetstroom tot stand brengen door **[!UICONTROL Uitgezochte gegevens]** te klikken.
+De stap *Adobe Analytics* wordt weergegeven. Eerder ingestelde gegevenssetstromen voor Analytics worden vermeld op dit scherm. U kunt een nieuwe datasetstroom tot stand brengen door **[!UICONTROL Uitgezochte gegevens]** te klikken.
 
 >[!NOTE]
 >
@@ -58,16 +58,16 @@ De stap met de details *van de* Dataset-stroom wordt weergegeven. Hier moet u ee
 
 ### De gegevenssetstroom controleren
 
-De stap *Revisie* wordt weergegeven, zodat u de nieuwe interne gegevenssetstroom van Analytics kunt controleren voordat deze wordt gemaakt. De details van de verbinding worden gegroepeerd per categorieën, die omvatten:
+De stap van het *Overzicht* verschijnt, toestaand u om uw nieuwe Analytics in-gebonden datasetstroom te herzien alvorens het wordt gecreeerd. De details van de verbinding worden gegroepeerd per categorieën, die omvatten:
 
 * *Verbinding*: Toont het type van de bronverbinding en de geselecteerde rapportreeks.
-* *Gegevensset- en kaartvelden* toewijzen: Wanneer het creëren van andere bronschakelaars, toont deze container welke dataset de brongegevens opnemen in, met inbegrip van het schema de dataset zich aan houdt. Het outputschema en de dataset worden automatisch gevormd voor de datasetstromen van Analytics.
+* *Gegevensset- en kaartvelden* toewijzen: Wanneer het creëren van andere bronschakelaars, toont deze container welke dataset de brongegevens opnemen in, met inbegrip van het schema de dataset zich aan houdt. Het outputschema en de dataset worden automatisch gevormd voor de gegevenssetstromen van Analytics.
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
 ### De gegevenssetstroom controleren
 
-Zodra uw datasetstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Selecteer in het scherm *Catalogus* de optie *Gegevensstromen* om een lijst weer te geven met bestaande stromen die zijn gekoppeld aan uw Analytics-account.
+Zodra uw datasetstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Selecteer in het scherm *Catalogus* de optie *Gegevensstromen* om een lijst weer te geven met bestaande stromen die zijn gekoppeld aan uw account Analytics.
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
@@ -75,7 +75,7 @@ Het scherm *Dataset-stromen* wordt weergegeven. Op deze pagina is een paar gegev
 
 De schakelaar concretiseert twee datasetstromen. De ene flow vertegenwoordigt de backfill-gegevens en de andere stroom is bedoeld voor live-gegevens. De gegevens van de backfill worden niet gevormd voor Profiel maar wordt verzonden naar het gegevensmeer voor analytische en gegeven-wetenschapsgebruik-gevallen.
 
-Zie het overzicht [van de](../../../../connectors/adobe-applications/analytics.md)Analytics Data Connector voor meer informatie over back-up, live gegevens en de bijbehorende latentie.
+Voor meer informatie over backfill, levende gegevens, en hun respectieve latentie, zie het Overzicht [van de Verbinding van Gegevens van de](../../../../connectors/adobe-applications/analytics.md)Analyse.
 
 Selecteer de datasetstroom u wenst om van de lijst te bekijken.
 
@@ -97,7 +97,7 @@ Voor meer informatie over hoe te om gegevens te etiketteren die uit Analytics ko
 
 ## Volgende stappen en extra bronnen
 
-Zodra de verbinding wordt gecreeerd, wordt een doelschema en datasetstroom automatisch gecreeerd om de inkomende gegevens te bevatten. Bovendien vindt de terugvulling van gegevens plaats en neemt deze tot 13 maanden aan historische gegevens in. Wanneer de eerste opname is voltooid, worden Analytics-gegevens gebruikt door downstreamservices voor Platforms zoals Real-time klantprofiel en Segmentatieservice. Raadpleeg de volgende documenten voor meer informatie:
+Zodra de verbinding wordt gecreeerd, wordt een doelschema en datasetstroom automatisch gecreeerd om de inkomende gegevens te bevatten. Bovendien vindt de terugvulling van gegevens plaats en neemt deze tot 13 maanden aan historische gegevens in. Wanneer de aanvankelijke opname voltooit, analyseert gegevens en door de stroomafwaartse diensten van het Platform zoals het Profiel van de Klant In real time en de Dienst van de Segmentatie wordt gebruikt. Raadpleeg de volgende documenten voor meer informatie:
 
 * [Overzicht van het realtime klantprofiel](../../../../../profile/home.md)
 * [Overzicht van segmentatieservice](../../../../../segmentation/home.md)
