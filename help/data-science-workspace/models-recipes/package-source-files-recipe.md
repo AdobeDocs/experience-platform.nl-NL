@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Bronbestanden in een recept plaatsen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Bronbestanden in een recept plaatsen
 
-Deze zelfstudie bevat instructies voor het verpakken van de voorbeeldbronbestanden voor de detailhandel in een archiefbestand. U kunt dit bestand gebruiken om een recept in Adobe Experience Platform te maken [!DNL Data Science Workspace] door de workflow voor het importeren van recept in de gebruikersinterface of met de API uit te voeren.
+Deze zelfstudie bevat instructies voor het verpakken van de voorbeeldbronbestanden voor de detailhandel in een archiefbestand. U kunt dit bestand gebruiken om een recept te maken in Adobe Experience Platform [!DNL Data Science Workspace] door de workflow voor het importeren van recept te volgen in de gebruikersinterface of met de API.
 
 Concepten om te begrijpen:
 
@@ -38,7 +38,7 @@ Met een Docker-afbeelding kan een ontwikkelaar een toepassing verpakken met alle
 
 De ingebouwde afbeelding van de Docker wordt geduwd aan het Azure Registratie van de Container gebruikend geloofsbrieven die aan u tijdens de het creatieve werkschema van het recept worden geleverd.
 
-Meld u aan bij <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>om uw Azure Container Registry-referenties te verkrijgen. Navigeer in de linkernavigatiekolom naar **[!UICONTROL Workflows]**. Selecteer Recipe **[!UICONTROL importeren]** , gevolgd door **[!UICONTROL Starten]**. Zie de schermafbeelding hieronder ter referentie.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com)om uw Azure Container Registry-referenties te verkrijgen. Navigeer in de linkernavigatiekolom naar **[!UICONTROL Workflows]**. Selecteer Recipe **[!UICONTROL importeren]** , gevolgd door **[!UICONTROL Starten]**. Zie de schermafbeelding hieronder ter referentie.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
@@ -63,7 +63,7 @@ Selecteer de juiste *runtime* en kies een **[!UICONTROL classificatie]** voor *T
 Maak een notitie van de waarden voor *Docker Host*, *Gebruikersnaam* en *Wachtwoord*. Deze worden gebruikt om uw [!DNL Docker] afbeelding samen te stellen en te duwen in de hieronder beschreven workflows.
 
 >[!NOTE]
->De URL van de bron wordt opgegeven nadat de hieronder beschreven stappen zijn uitgevoerd. Het configuratiebestand wordt uitgelegd in volgende zelfstudies in de [volgende stappen](#next-steps).
+>De bron-URL wordt opgegeven nadat de hieronder beschreven stappen zijn uitgevoerd. Het configuratiebestand wordt uitgelegd in volgende zelfstudies in de [volgende stappen](#next-steps).
 
 ### De bronbestanden verpakken
 
