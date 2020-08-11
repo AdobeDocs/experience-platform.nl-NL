@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Een Couchbase-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '466'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -42,11 +42,11 @@ Om uw [!DNL Couchbase] bronschakelaar voor authentiek te verklaren, moet u waard
 
 Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om een nieuw [!DNL Couchbase] account te maken waarmee u verbinding kunt maken [!DNL Platform].
 
-Login aan [Adobe Experience Platform](https://platform.adobe.com) en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatiebar om tot de werkruimte van *[!UICONTROL Bronnen]* toegang te hebben. Het scherm van de *[!UICONTROL Catalogus]* toont een verscheidenheid van bronnen waarvoor u een binnenkomende rekening met kunt tot stand brengen, en elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Bronnen]* . Het scherm van de *[!UICONTROL Catalogus]* toont een verscheidenheid van bronnen waarvoor u een binnenkomende rekening met kunt tot stand brengen, en elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de categorie *[!UICONTROL Databases]* selecteert u **[!UICONTROL Couchbase]** en klikt u **op het pictogram + (+)** om een nieuwe [!DNL Couchbase] connector te maken.
+Onder de categorie *[!UICONTROL Databases]* selecteert u **[!UICONTROL Couchbase]** gevolgd door **[!UICONTROL Gegevens]** toevoegen om een nieuwe [!DNL Couchbase] connector te maken.
 
 ![catalogus](../../../../images/tutorials/create/couchbase/catalog.png)
 
