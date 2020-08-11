@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Configure a dataflow for a marketing automation connector in the UI
+title: Vorm een dataflow voor een schakelaar van de marketing automatisering in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1293'
 ht-degree: 0%
 
 ---
 
 
-# Configure a dataflow for a marketing automation connector in the UI
+# Vorm een dataflow voor een schakelaar van de marketing automatisering in UI
 
-Een dataflow is een geplande taak die gegevens van een bron aan een [!DNL Platform] dataset terugwint en opneemt. This tutorial provides steps to configure a new dataflow using your marketing automation account.
+Een dataflow is een geplande taak die gegevens van een bron aan een [!DNL Platform] dataset terugwint en opneemt. Deze zelfstudie biedt stappen om een nieuwe gegevensstroom te configureren met behulp van uw account voor marketingautomatisering.
 
 ## Aan de slag
 
@@ -25,7 +25,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
    - [Zelfstudie](../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [Klantprofiel](../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Bovendien moet u voor deze zelfstudie al een account voor marketingautomatisering hebben gemaakt. A list of tutorials for creating different marketing automation connectors in the UI can be found in the [source connectors overview](../../../home.md).
+Bovendien moet u voor deze zelfstudie al een account voor marketingautomatisering hebben gemaakt. Een lijst van leerprogramma&#39;s voor het creëren van verschillende marketing automatiseringsschakelaars in UI kan in het overzicht [van](../../../home.md)bronschakelaars worden gevonden.
 
 ## Gegevens selecteren
 
@@ -56,7 +56,7 @@ Het dialoogvenster _Gegevensset_ selecteren wordt geopend. Zoek de gegevensset d
 
 ### Een nieuwe gegevensset gebruiken
 
-To ingest data into a new dataset, select **[!UICONTROL Create new dataset]** and enter a name and description for the dataset in the fields provided.
+Om gegevens in een nieuwe dataset in te voeren, **[!UICONTROL creeer nieuwe dataset]** en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in.
 
 U kunt een schemagebied vastmaken door een schemanaam in te gaan in de **[!UICONTROL Uitgezochte bar van het schemaonderzoek]** . U kunt ook het vervolgkeuzepictogram selecteren om een lijst met bestaande schema&#39;s weer te geven. U kunt ook **[!UICONTROL Geavanceerd zoeken]** selecteren om toegang te krijgen tot het scherm met bestaande schema&#39;s en de bijbehorende details.
 
@@ -126,9 +126,13 @@ Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Voltooien]*
 
 ![revisie](../../../images/tutorials/dataflow/marketing-automation/review.png)
 
-## Uw gegevensstroom controleren en verwijderen
+## Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voor meer informatie over hoe te om uw gegevensstroom te controleren en te schrappen, zie de zelfstudie over het [controleren van en het schrappen van gegevensstromen](../monitor.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamepercentages, succes, en fouten te zien. Voor meer informatie over hoe te om dataflow te controleren, zie de zelfstudie over het [controleren van rekeningen en dataflows in UI](../monitor.md).
+
+## Uw gegevensstroom verwijderen
+
+U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeerd gebruikend de functie van de *[!UICONTROL Schrapping]* beschikbaar in de *[!UICONTROL werkruimte Dataflows]* zijn. Voor meer informatie over hoe te om dataflows te schrappen, zie de zelfstudie over het [schrappen van gegevensstromen in UI](../delete.md).
 
 ## Volgende stappen
 
