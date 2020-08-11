@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vorm een dataflow voor een schakelaar van CRM in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1325'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Om gegevens in een bestaande dataset in te voeren, selecteer **[!UICONTROL Gebru
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/crm/use-existing-dataset.png)
 
-Het dialoogvenster *[!UICONTROL Gegevensset]* selecteren wordt geopend. Find the dataset you you wish to use, select it, then click **[!UICONTROL Continue]**.
+Het dialoogvenster *[!UICONTROL Gegevensset]* selecteren wordt geopend. Zoek de gegevensset die u wilt gebruiken, selecteer deze en klik op **[!UICONTROL Doorgaan]**.
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/crm/select-existing-dataset.png)
 
@@ -66,7 +66,7 @@ Het dialoogvenster Schema ** selecteren wordt geopend. Selecteer het schema u we
 
 ![selectieschema](../../../images/tutorials/dataflow/crm/select-schema.png)
 
-Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. Raadpleeg de zelfstudie over het [toewijzen van CSV-gegevens aan XDM-schemavelden](../../../../ingestion/tutorials/map-a-csv-file.md)voor meer informatie over gegevenstoewijzing en mapperfuncties.
+Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of mapperfuncties te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Raadpleeg de zelfstudie over het [toewijzen van CSV-gegevens aan XDM-schemavelden](../../../../ingestion/tutorials/map-a-csv-file.md)voor meer informatie over gegevenstoewijzing en mapperfuncties.
 
 Klik op **[!UICONTROL Volgende]** als de brongegevens zijn toegewezen.
 
@@ -102,13 +102,13 @@ Als u eenmalige invoer wilt instellen, selecteert u de vervolgkeuzepijl voor de 
 
 Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Volgende]**.
 
-![schedule-once](../../../images/tutorials/dataflow/databases/schedule-once.png)
+![schema-eens](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
 ## Gegevens over gegevensstroom opgeven
 
 De stap met *[!UICONTROL details]* over gegevensstroom wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
 
-Tijdens dit proces kunt u ook *[!UICONTROL gedeeltelijke inname]* en *[!UICONTROL foutdiagnose]* inschakelen. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold. Wanneer *[!UICONTROL Partiële inname]* is ingeschakeld, sleept u de *[!UICONTROL foutdrempel %]* voor een wijziging van de foutdrempel van de batch. Alternatively, you can manually adjust the threshold by selecting the input box. Voor meer informatie, zie het [gedeeltelijke partijingestie overzicht](../../../../ingestion/batch-ingestion/partial.md).
+Tijdens dit proces kunt u ook *[!UICONTROL gedeeltelijke inname]* en *[!UICONTROL foutdiagnose]* inschakelen. Als u *[!UICONTROL Gedeeltelijke inname]* inschakelt, kunt u gegevens met fouten tot een bepaalde drempel innemen. Wanneer *[!UICONTROL Partiële inname]* is ingeschakeld, sleept u de *[!UICONTROL foutdrempel %]* voor een wijziging van de foutdrempel van de batch. U kunt de drempelwaarde ook handmatig aanpassen door het invoervak te selecteren. Voor meer informatie, zie het [gedeeltelijke partijingestie overzicht](../../../../ingestion/batch-ingestion/partial.md).
 
 Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Volgende]**.
 
@@ -126,13 +126,17 @@ Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Voltooien]*
 
 ![revisie](../../../images/tutorials/dataflow/crm/review.png)
 
-## Uw gegevensstroom controleren en verwijderen
+## Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Voor meer informatie over hoe te om uw gegevensstroom te controleren en te schrappen, zie de zelfstudie over het [controleren van en het schrappen van gegevensstromen](../monitor.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamepercentages, succes, en fouten te zien. Voor meer informatie over hoe te om dataflow te controleren, zie de zelfstudie over het [controleren van rekeningen en dataflows in UI](../monitor.md).
+
+## Uw gegevensstroom verwijderen
+
+U kunt gegevensstromen schrappen die niet meer noodzakelijk of verkeerd gecreeerd gebruikend de functie van de *[!UICONTROL Schrapping]* beschikbaar in de *[!UICONTROL werkruimte Dataflows]* zijn. Voor meer informatie over hoe te om dataflows te schrappen, zie de zelfstudie over het [schrappen van gegevensstromen in UI](../delete.md).
 
 ## Volgende stappen
 
-Door dit leerprogramma te volgen, hebt u met succes een dataflow gecreeerd om gegevens van CRM in te brengen en inzicht verworven in de controles van datasets. Als u meer wilt weten over het maken van gegevensstromen, kunt u uw studie aanvullen door de onderstaande video te bekijken. Bovendien kunnen inkomende gegevens nu worden gebruikt door downstreamservices [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. See the following documents for more details:
+Door dit leerprogramma te volgen, hebt u met succes een dataflow gecreeerd om gegevens van CRM in te brengen en inzicht verworven in de controles van datasets. Als u meer wilt weten over het maken van gegevensstromen, kunt u uw studie aanvullen door de onderstaande video te bekijken. Bovendien kunnen inkomende gegevens nu worden gebruikt door downstreamservices [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
 
 * [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
 * [Overzicht van de Data Science Workspace](../../../../data-science-workspace/home.md)
