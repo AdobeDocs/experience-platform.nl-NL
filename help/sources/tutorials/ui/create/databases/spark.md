@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Maak een Apache Spark op de Azure HDInsights-bronconnector in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 598b29f681ac930a4e1781f7f298608c8344d807
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 0%
@@ -21,7 +21,7 @@ De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -46,11 +46,11 @@ Voor meer informatie over begonnen worden verwijs naar [dit document](https://do
 
 Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om een nieuw [!DNL Spark] account te maken waarmee u verbinding kunt maken [!DNL Platform].
 
-Login aan <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatiebar om tot de werkruimte van *[!UICONTROL Bronnen]* toegang te hebben. Het scherm van de *[!UICONTROL Catalogus]* toont een verscheidenheid van bronnen waarvoor u binnenkomende rekening kunt tot stand brengen, en elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Bronnen]* . Het scherm van de *[!UICONTROL Catalogus]* toont een verscheidenheid van bronnen waarvoor u binnenkomende rekening kunt tot stand brengen, en elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de categorie *[!UICONTROL Databases]* selecteert u **[!UICONTROL Vonk]** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Selecteer **[!UICONTROL Connect-bron]** als u een nieuwe binnenkomende verbinding wilt maken.
+Onder de categorie *[!UICONTROL Databases]* selecteert u **[!UICONTROL Vonk]** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Als u een nieuwe binnenkomende verbinding wilt maken, selecteert u Gegevens **** toevoegen.
 
 ![catalogus](../../../../images/tutorials/create/spark/catalog.png)
 
