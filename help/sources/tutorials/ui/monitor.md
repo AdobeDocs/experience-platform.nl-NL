@@ -1,24 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; monitor accounts; monitor dataflows
+description: De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het bekijken van bestaande rekeningen en dataflows van de Bronwerkruimte.
 solution: Experience Platform
-title: Gegevensstromen controleren en verwijderen
+title: Accounts en gegevensstromen bewaken
 topic: overview
 translation-type: tm+mt
-source-git-commit: f08ad2c9cc48c08bcdc0e278481992e8789000b5
+source-git-commit: 8bdd0493444c2c3b0f56db1166a6fa5d616e41be
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
 
 
-# Gegevensstromen controleren en verwijderen
+# De rekeningen en de gegevensstromen van de monitor in UI
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het bekijken van bestaande rekeningen en gegevensstromen van de *[!UICONTROL werkruimte van Bronnen]* . Dit leerprogramma verstrekt ook stappen voor het schrappen van gegevensstromen van de werkruimte van *[!UICONTROL Bronnen]* .
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het bekijken van bestaande rekeningen en gegevensstromen van de *[!UICONTROL werkruimte van Bronnen]* .
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 - [XDM-systeem](../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    - [Basisbeginselen van de schemacompositie](../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -27,11 +28,11 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Adobe
 
 ## Accounts controleren
 
-Login aan [Adobe Experience Platform](https://platform.adobe.com) en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatiebar om tot de werkruimte van *[!UICONTROL Bronnen]* toegang te hebben. In het scherm *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven waarvoor u accounts en gegevensstromen kunt maken. Elke bron toont het aantal bestaande rekeningen en gegevensstromen verbonden aan hen.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Bronnen]* . In het scherm *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven waarvoor u accounts en gegevensstromen kunt maken. Elke bron toont het aantal bestaande rekeningen en gegevensstromen verbonden aan hen.
 
 Selecteer *[!UICONTROL Accounts]* in de bovenste koptekst om bestaande accounts weer te geven.
 
-![catalogus](../../images/tutorials/monitor/catalog.png)
+![catalogus](../../images/tutorials/monitor/catalog-accounts.png)
 
 De pagina&#39;s *[!UICONTROL Accounts]* worden weergegeven. Op deze pagina vindt u een lijst met weer te geven accounts, waaronder informatie over de bron, gebruikersnaam, het aantal gegevensstromen en de aanmaakdatum.
 
@@ -43,13 +44,9 @@ Via het sorteervenster hebt u toegang tot accounts vanuit een specifieke bron. S
 
 ![accounts selecteren](../../images/tutorials/monitor/accounts-sort.png)
 
-Vanuit de pagina *[!UICONTROL Accounts]* kunt u een lijst weergeven met bestaande gegevensstromen die zijn gekoppeld aan de account die u hebt geopend. Selecteer de gegevensstroom u wenst om te bekijken.
+Van de pagina van *[!UICONTROL Rekeningen]* , kunt u een lijst van bestaande gegevensstromen of doeldatasets bekijken verbonden aan de rekening u toegang had tot.
 
-![accountpagina](../../images/tutorials/monitor/dataflows.png)
-
-Het scherm *[!UICONTROL Dataflow-activiteit]* wordt weergegeven. Op deze pagina wordt de snelheid van berichten weergegeven die in de vorm van een grafiek worden gebruikt.
-
-![dataset-flow-activity](../../images/tutorials/monitor/dataflow-activity.png)
+![dataflows](../../images/tutorials/monitor/dataflows.png)
 
 ## Dataflows bewaken
 
@@ -65,37 +62,53 @@ Het sorteervenster wordt weergegeven. Selecteer de bron die u wilt openen in het
 
 ![sortDataFlow](../../images/tutorials/monitor/dataflows-sort.png)
 
-Het scherm *[!UICONTROL Dataflow-activiteit]* wordt weergegeven. Op deze pagina wordt de snelheid van berichten weergegeven die in de vorm van een grafiek worden gebruikt.
+De *[!UICONTROL Dataflow-activiteitenpagina]* bevat details over het aantal records dat wordt opgenomen en records die zijn mislukt, en informatie over de status van de gegevensstroom en de verwerkingstijd. Selecteer het kalenderpictogram boven de gegevensstroom om het tijdkader van uw innameregisters aan te passen.
 
-![dataset-flow-activity](../../images/tutorials/monitor/dataflow-activity.png)
+![datflow-activity](../../images/tutorials/monitor/dataflow-activity.png)
+
+Met de kalender kunt u de verschillende tijdframes voor opgenomen records bekijken. U kunt kiezen of u een van de twee vooraf ingestelde opties *[!UICONTROL Laatste 7 dagen]* of *[!UICONTROL Laatste 30 dagen]* selecteert. U kunt ook een aangepast tijdframe instellen met de kalender. Selecteer het gewenste tijdkader en selecteer **[!UICONTROL Toepassen]** om door te gaan.
+
+![stroomkalender](../../images/tutorials/monitor/flow-calendar.png)
+
+Standaard geeft de activiteit *[!UICONTROL Dataflow]* het deelvenster *[!UICONTROL Eigenschappen]* weer dat is gekoppeld aan de dataflow. Selecteer de doorloop in de lijst om de bijbehorende metagegevens weer te geven, inclusief informatie over de unieke uitvoerings-id.
+
+Selecteer **[!UICONTROL Dataflow run start]** om het *[!UICONTROL Dataflow run overzicht]* te openen.
+
+![run](../../images/tutorials/monitor/run-metadata.png)
+
+Het *[!UICONTROL Dataflow looppas overzicht]* toont informatie over dataflow met inbegrip van zijn meta-gegevens, *[!UICONTROL Gedeeltelijke inname]* status, en toegewezen *[!UICONTROL Fout drempel]*. De bovenste koptekst bevat ook een *[!UICONTROL foutoverzicht]*. De *[!UICONTROL foutensamenvatting]* bevat de specifieke fout op hoofdniveau die toont bij welke stap het innameproces een fout tegenkwam.
+
+![data-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
+
+Raadpleeg de volgende tabel voor foutcodes die u kunt zien in het overzicht ** Fout.
+
+| Foutcode | Foutbericht |
+| ---------- | ----------- |
+| `CONNECTOR-1001-500` | &quot;Er is een probleem opgetreden met de kopieeractiviteit.&quot; |
+| `CONNECTOR-2001-500` | &quot;Er is een probleem opgetreden bij het kopiëren van de bron van het Experience Platform naar de gegevensset.&quot; |
+| `CONNECTOR-3001-500` | &quot;Er is een probleem opgetreden met de stroomprovider tijdens het maken van batch met de bulkingest-API.&quot; |
+
+De onderste helft van het scherm bevat informatie over *[!UICONTROL Dataflow-uitvoerfouten]*. Van hier kunt u ook de opgenomen bestanden weergeven, een voorbeeld bekijken en fouten downloaden of het bestandmanifest downloaden.
+
+In de *[!UICONTROL sectie met uitvoerfouten]* in DataFlow worden de *[!UICONTROL foutcode]*, het aantal mislukte records en informatie over de fout weergegeven.
+
+Selecteer **[!UICONTROL Voorvertoning van foutdiagnostiek]** voor meer informatie over de innamefout.
+
+![Dataflow-run-fouten](../../images/tutorials/monitor/dataflow-run-errors.png)
+
+Het voorvertoningsvenster voor *[!UICONTROL foutdiagnostiek]* wordt weergegeven. In dit scherm wordt specifieke informatie weergegeven over de fout bij insluiten, zoals de *[!UICONTROL bestandsnaam]*, de *[!UICONTROL foutcode]*, de naam van de kolom waarin de fout is opgetreden en een beschrijving van de fout.
+
+Deze sectie bevat ook een voorvertoning van de kolom die de fout bevat.
+
+> [!IMPORTANT] Als u de voorvertoning van *[!UICONTROL foutdiagnostiek]* wilt inschakelen, moet u *[!UICONTROL Gedeeltelijke inname]* en *[!UICONTROL foutdiagnose]* activeren bij het configureren van een gegevensstroom. Als u dit doet, kan het systeem alle records scannen die tijdens de flowuitvoering worden ingevoerd.
+
+![Voorvertoning-fout-diagnostiek](../../images/tutorials/monitor/preview-error-diagnostics.png)
+
+Nadat u een voorbeeld van de fouten hebt weergegeven, kunt u **[!UICONTROL Downloaden]** vanuit het deelvenster Overzicht *[van uitvoeringen van]* UICONTROL selecteren voor toegang tot volledige foutdiagnoses en het bestandmanifest downloaden. Zie de documenten over [foutdiagnose](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) en het [downloaden van metagegevens](../../../ingestion/batch-ingestion/partial.md#download-metadata) voor meer informatie.
+
+![Voorvertoning-fout-diagnostiek](../../images/tutorials/monitor/download.png)
 
 Raadpleeg de zelfstudie over het [controleren van streaming dataflows voor meer informatie over het controleren van gegevensstromen](../../../ingestion/quality/monitor-data-flows.md)en het opnemen van gegevens.
-
-## Een gegevensstroom verwijderen
-
-U kunt gegevens verwijderen die onjuist zijn gemaakt of niet meer nodig zijn door het venster met gegevensstromen te openen. Zoek de gegevensstroom die u wilt verwijderen met het pictogram van de sorteertrechter en selecteer de gegevensstroom om het deelvenster **[!UICONTROL Eigenschappen]** te openen.
-
-Als u een gegevensstroom wilt verwijderen, selecteert u **[!UICONTROL Verwijderen]** in de eigenschappen aan de rechterbovenhoek.
-
-![delete-dataflows](../../images/tutorials/monitor/dataflows-sort-delete.png)
-
-Er verschijnt een laatste bevestigingsbericht. Selecteer **[!UICONTROL Verwijderen]** om te bevestigen.
-
-![bevestigen-schrappen](../../images/tutorials/monitor/confirm-delete.png)
-
-Na enkele ogenblikken verschijnt er een groen bevestigingsvak onder aan het scherm om te bevestigen dat het verwijderen is gelukt.
-
-![delete gelukt](../../images/tutorials/monitor/deletion-confirmed.png)
-
-U kunt ook een gegevensstroom verwijderen uit het scherm *[!UICONTROL Accounts]* . Zoek de account die u wilt openen met het pictogram van de sorteertrechter en selecteer de account in de lijst.
-
-![accounts selecteren](../../images/tutorials/monitor/accounts-sort.png)
-
-De pagina *[!UICONTROL Accounts]* wordt weergegeven. Selecteer de gegevensstroom die u wilt verwijderen en selecteer vervolgens **[!UICONTROL Verwijderen]** in het deelvenster Eigenschappen om het proces te voltooien.
-
-![accounts-delete](../../images/tutorials/monitor/accounts-delete.png)
-
-Volg de bovenstaande bevestigingsstappen om het proces te voltooien.
 
 ## Volgende stappen
 
