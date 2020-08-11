@@ -4,9 +4,9 @@ seo-title: Werkruimte Doelen
 description: In het Platform van de Gegevens van de Klant van Adobe in real time, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 seo-description: In het Platform van de Gegevens van de Klant van Adobe in real time, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: f3e489416a9bc80cfb0502d3973a86748123a687
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '807'
 ht-degree: 2%
 
 ---
@@ -22,15 +22,34 @@ De [!UICONTROL werkruimte van Doelen] bestaat uit vier secties, **[!UICONTROL Ca
 
 ## [!UICONTROL Catalogus] {#catalog}
 
-Op het tabblad **[!UICONTROL Catalogus]** wordt een lijst weergegeven met alle doelen die door Adobe worden aangeboden en waarnaar u gegevens kunt verzenden.
+Het **[!UICONTROL lusje van de Catalogus]** toont een lijst van alle bestemmingen beschikbaar in Adobe in real time CDP, dat u gegevens kunt verzenden naar.
 
-Gebruik de onderzoeksfunctionaliteit op de pagina om van een specifieke bestemming of filterbestemmingen de plaats te bepalen gebruikend de controle van **[!UICONTROL Categorieën]** .
+De Echte Adobe - tijd CDP gebruikersinterface verstrekt een aantal onderzoek en filteropties op de pagina van de bestemmingscatalogus:
 
-Selecteer een bestemming in de catalogus om de rechterrail te openen. Hier, kunt u opstelling een verbinding aan de bestemming (**[!UICONTROL verbind bestemming]**), bestaande bestemmingsverbindingen (**[!UICONTROL doorbladert bestemmingen]**) bekijken of meer gedetailleerde informatie over elke bestemming leren door de documentatie (de documentatie **[!UICONTROL van de]** Mening) te bekijken.
+* Gebruik de zoekfunctionaliteit op de pagina om een specifiek doel te zoeken.
+* Doelen filteren met het besturingselement **[!UICONTROL Categorieën]** .
+* Wissel tussen **[!UICONTROL Alle bestemmingen]** en **[!UICONTROL Mijn bestemmingen]**. Wanneer **[!UICONTROL Alle bestemmingen]** wordt geselecteerd, worden alle beschikbare Adobe in real time CDP bestemmingen getoond. Wanneer **[!UICONTROL Mijn bestemmingen]** wordt geselecteerd, kunt u slechts de bestemmingen zien waarmee u een verbinding hebt gevestigd.
+* Selecteer deze optie om **[!UICONTROL verbindingen]** en/of **[!UICONTROL extensies]** weer te geven. Om het verschil tussen de twee categorieën te begrijpen, zie de Types en de Categorieën van [Bestemming](/help/rtcdp/destinations/destination-types.md).
 
-![Opties voor doelcatalogus](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
+![doelen filteren en zoeken, demo](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
 
-Voor meer informatie over bestemmingscategorieën en informatie over elke bestemming, zie de Catalogus [van de](/help/rtcdp/destinations/destinations-catalog.md)Bestemming.
+De bestemmingskaarten bevatten of **[!UICONTROL vormen]** of een **[!UICONTROL Activate]** controle, en een secundaire controle die meer opties omhoog brengt. Deze worden allemaal hieronder beschreven:
+
+| Control | Beschrijving |
+---------|----------
+| [!UICONTROL Configureren] | Hiermee kunt u verbinding maken met het doel. |
+| [!UICONTROL Activeren] | Nadat u een verbinding met de bestemming hebt gemaakt, kunt u segmenten activeren. |
+| [!UICONTROL Account weergeven] | Bekijk de accounts waarmee u verbinding hebt gemaakt voor een bestemming. |
+| [!UICONTROL Gegevensstromen weergeven] | De gegevensactiveringsstromen weergeven die voor een doel bestaan |
+| [!UICONTROL Documentatie weergeven] | Opent een verbinding aan de documentatiepagina voor die specifieke bestemming, voor meer informatie en om u te helpen opstelling het. |
+
+![Controles op de bestemmingskaart](/help/rtcdp/destinations/assets/destination-card-options.png)
+
+Selecteer een doelkaart in de catalogus om de rechterrail te openen.  Hier, kunt u een beschrijving van de bestemming zien. De rechterspoorstaaf bevat dezelfde besturingselementen als in de bovenstaande tabel, alsmede een beschrijving van de bestemming en een aanduiding van de categorie en het type van bestemming.
+
+![Opties voor doelcatalogus](/help/rtcdp/destinations/assets/destination-right-rail.png)
+
+Voor meer informatie over bestemmingscategorieën en informatie over elke bestemming, zie de Catalogus [van de](/help/rtcdp/destinations/destinations-catalog.md) Bestemming en de Types en de Categorieën [van](/help/rtcdp/destinations/destination-types.md)Bestemming.
 
 ## [!UICONTROL Bladeren] {#browse}
 
