@@ -5,9 +5,9 @@ title: Invoer en uitvoer van Attribution AI
 topic: Input and Output data for Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
 workflow-type: tm+mt
-source-wordcount: '2174'
+source-wordcount: '2075'
 ht-degree: 0%
 
 ---
@@ -81,18 +81,6 @@ Attribution AI geeft de volgende uitvoer:
 
 - [Ruw granulaat](#raw-granular-scores)
 - [Geaggregeerde scores](#aggregated-attribution-scores)
-
-In de onderstaande voorbeelden werd een voorbeeld-CSV-uitvoer gebruikt ter illustratie. Hier volgen enkele kenmerken van het voorbeeldbestand.
-
-- Het bestand bevat geen samengevoegde gebeurtenissen.
-- Het bestand had geen conversie-alleen-gebeurtenissen (het bevatte geen scorerijen met 0 als marginale score).
-- Gegevenskenmerken:
-   - 368 rijen van het totale monster.
-   - Ten minste 8 omzettingen met elk 3 verschillende kanalen.
-   - 151 omzettingen van het conversietype `“Digital_Product_Purchase”`.
-   - 10 verschillende aanraakpunten, EMAIL, SOCIAL_LINKEDIN, ADS_GOOGLE, SOCIAL_OTHER, ADS_OTHER, SOCIAL_TWITTER, LANDINGPAGE, SOCIAL_FB, ADS_BING, PRINT.
-   - Conversies en aanraakpunten hebben een bereik van respectievelijk 8 en 9 maanden.
-   - Rijen worden geordend door `id`, `conversion_timestamp` en `touchpoint_timestamp`.
 
 **Voorbeeld van uitvoerschema:**
 
