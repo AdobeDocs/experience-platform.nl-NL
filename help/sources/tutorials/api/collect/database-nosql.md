@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevens verzamelen van een database van derden via bronconnectors en API's
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5b5e1f9a1465a3ec252bac9ba376abc8f2781b1
+source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1715'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Gegevens verzamelen van een database van derden via bronconnectors en API&#39;s
 
-[!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
 Deze zelfstudie behandelt de stappen voor het ophalen van gegevens uit een database van derden en het innemen van gegevens [!DNL Platform] via bronconnectors en API&#39;s.
 
@@ -22,7 +22,7 @@ Deze zelfstudie behandelt de stappen voor het ophalen van gegevens uit een datab
 
 Voor deze zelfstudie moet u beschikken over een geldige verbinding met een database van derden en over informatie over het bestand waarin u het bestand wilt plaatsen [!DNL Platform] (inclusief het pad en de structuur van het bestand). Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van een database met de Flow Service API](../explore/database-nosql.md) voordat u deze zelfstudie probeert.
 
-Deze zelfstudie vereist ook dat u een goed inzicht hebt in de volgende onderdelen van het Adobe Experience Platform:
+Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
 * [XDM-systeem](../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    * [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -132,7 +132,7 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 }
 ```
 
-## Een doel-XDM-schema maken {#target}
+## Een doel-XDM-schema maken {#target-schema}
 
 In eerdere stappen werd een ad-hoc XDM-schema gemaakt om de brongegevens te structureren. Als u de brongegevens in wilt gebruiken, moet u ook een doelschema maken om de brongegevens te structureren op basis van uw behoeften. [!DNL Platform] Het doelschema wordt dan gebruikt om een [!DNL Platform] dataset tot stand te brengen waarin de brongegevens bevat zijn. Dit doel-XDM-schema breidt ook de [!DNL XDM Individual Profile] klasse uit.
 
@@ -283,7 +283,7 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de pas ge
 ]
 ```
 
-## Een doelverbinding maken
+## Een doelverbinding maken {#target-connection}
 
 U hebt nu de unieke herkenningstekens voor een gegevenssetbasisverbinding, een doelschema, en een doeldataset. Gebruikend deze herkenningstekens, kunt u een doelverbinding tot stand brengen gebruikend API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten. [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)
 
@@ -561,7 +561,7 @@ Een succesvolle reactie keert de details van de dataflow specificatie terug die 
 De laatste stap in de richting van het verzamelen van gegevens is het maken van een gegevensstroom. Op dit punt moeten de volgende vereiste waarden worden voorbereid:
 
 * [Bronverbinding-id](#source)
-* [Target-verbinding-id](#target)
+* [Doelverbinding-id](#target)
 * [Toewijzing-id](#mapping)
 * [Dataflow-specificatie-id](#specs)
 
@@ -623,13 +623,14 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `flowSpec.id` | De gegevensstroomspecificatie-id die aan uw database is gekoppeld. |
-| `sourceConnectionIds` | De bronverbindings-id die aan uw database is gekoppeld. |
-| `targetConnectionIds` | De doel verbindings-id die aan uw database is gekoppeld. |
+| `flowSpec.id` | De [flow-specificatie-id](#specs) die in de vorige stap is opgehaald. |
+| `sourceConnectionIds` | De [bronverbindings-id](#source) die in een eerdere stap is opgehaald. |
+| `targetConnectionIds` | De [doel-verbindings-id](#target-connection) die in een eerdere stap is opgehaald. |
+| `transformations.params.mappingId` | De [toewijzings-id](#mapping) die in een eerdere stap is opgehaald. |
 | `transformations.params.deltaColum` | De opgegeven kolom die wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
 | `transformations.params.mappingId` | De toewijzing-id die aan uw database is gekoppeld. |
-| `scheduleParams.startTime` | De begintijd voor de gegevensstroom in epoche tijd in seconden. |
-| `scheduleParams.frequency` | De volgende frequentiewaarden kunnen worden geselecteerd: `once`, `minute`, `hour`, `day`, of `week`. |
+| `scheduleParams.startTime` | De begintijd voor de gegevensstroom in tijdperk. |
+| `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day`, of `week`. |
 | `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie wordt ingesteld als `once` en groter dan of gelijk aan `15` andere frequentiewaarden moet zijn. |
 
 **Antwoord**
@@ -642,6 +643,11 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom.
     "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
+
+## Uw gegevensstroom controleren
+
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor meer informatie over hoe te om gegevensstromen te controleren, zie de zelfstudie over het [controleren van gegevensstromen in API ](../monitor.md)
+
 
 ## Volgende stappen
 
