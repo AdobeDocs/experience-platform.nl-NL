@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Bepaal een verband tussen twee schema's gebruikend de Redacteur van het Schema van het Schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 6d291ac9a8c194dd63e411e4d064492c38412749
+source-git-commit: d847329f675c7ac34a4feabb9e57a9e97f7e3ed1
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '911'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Het bronschema &quot;Leden[!UICONTROL van de]Loyalty&quot;is gebaseerd op de kla
 
 ### Hotelschema
 
-Het doelschema &quot;[!UICONTROL Hotels]&quot; is gebaseerd op een aangepaste klasse &quot;[!UICONTROL Hotels]&quot; en bevat velden die een hotel beschrijven. Het veld[!UICONTROL E-mail]fungeert als primaire identiteit voor het schema onder de naamruimte[!UICONTROL E-mail]. Net als &quot;[!UICONTROL Loyalty-leden]&quot; is dit schema ook ingeschakeld voor [!DNL Real-time Customer Profile].
+Het doelschema &quot;[!UICONTROL Hotels]&quot; is gebaseerd op een aangepaste klasse &quot;[!UICONTROL Hotels]&quot; en bevat velden die een hotel beschrijven. Het veld &quot;[!DNL hotelId]&quot; fungeert als primaire identiteit voor het schema onder een aangepaste naamruimte &quot;[!DNL hotelId]&quot;. Net als &quot;[!UICONTROL Loyalty-leden]&quot; is dit schema ook ingeschakeld voor [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/hotels.png)
 
@@ -76,7 +76,7 @@ Er wordt een nieuw veld weergegeven op het canvas onder de naamruimte &quot;\_hu
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-Klik op **[!UICONTROL Toepassen]** als u klaar bent.
+When finished, click **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
