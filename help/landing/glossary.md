@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Productdocumentatie Adobe Experience Platform
+title: Adobe Experience Platform-productdocumentatie
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 1ecff21343c8b39070afdb4f486d0961c024235a
+source-git-commit: b67513a83a46861872e92d9db57232554e7d831b
 workflow-type: tm+mt
-source-wordcount: '6665'
+source-wordcount: '7237'
 ht-degree: 0%
 
 ---
 
 
-# Woordenlijst Adobe Experience Platform {#adobe-experience-platform-glossary}
+# Adobe Experience Platform Glossary {#adobe-experience-platform-glossary}
 
 ## A
 
@@ -26,21 +26,35 @@ ht-degree: 0%
 
 **Activiteit:** In de [!DNL Decisioning Service], is een activiteit een reeks aanbiedingen de marktleider wil de besluitvormingsmotor de beste aanbieding van selecteren.
 
-**Adobe Admin Console:** Adobe Admin Console biedt een centrale locatie voor het beheer van toegang en het toestaan van functies voor uw organisatie.
+**Beheerder:** Één of meerdere individuen in uw organisatie die de toestemmingen voor Experience Platform kunnen vormen en aanpassen.
 
-**Adobe Experience Platform:** Adobe Experience Platform standaardiseert gegevens en inhoud in de hele onderneming, en biedt realtime consumentenprofielen, maakt gegevenswetenschap mogelijk en versnelt de snelheid van de inhoud om de beleving tijdens de reis van de klant te personaliseren.
+**Adobe Admin Console:** Adobe Admin Console biedt een centrale locatie voor het beheer van Adobe-productrechten en toegang voor uw organisatie. Via de console kunnen beheerders groepen gebruikers toegangsmachtigingen verlenen voor verschillende functies van het Platform, zoals &quot;Datasets beheren&quot;, &quot;Datasets weergeven&quot; of &quot;Profielen beheren&quot;.
 
 **Adobe-aansluitingen:** Adobe de Verbindingen zijn pre-gevormde verbindingen die door Adobe worden gecreeerd om gegevens toe te laten om binnen en uit te stromen [!DNL Experience Platform]. De schakelaars omvatten [!DNL Microsoft Dynamics], [!DNL Salesforce], [!DNL Amazon S3], en [!DNL Azure Blob].
 
+**Adobe Experience Platform:** Adobe Experience Platform standaardiseert gegevens en inhoud in de hele onderneming, biedt realtime consumentenprofielen, maakt gegevenswetenschap mogelijk en versnelt de snelheid van de inhoud om de persoonlijke functionaliteit van de klant te verbeteren.
+
+**Adobe Experience Platform-beslissingsservice** maakt gebruik van realtime-klantprofiel om te bepalen welke keuze een klant het meest waarschijnlijk zal maken uit een reeks opties, op basis van de gedragsgegevens die het profiel ophaalt van ingeschakelde datasets.
+
+**Adobe Experience Platform Launch:** [!DNL Launch] is een ecosysteem voor tags- en SDK-beheer, geïntegreerd met [!DNL Experience Platform] en [!DNL Experience Cloud] toepassingen. [!DNL Launch] biedt tools voor het implementeren, verenigen en beheren van analyses, marketing en advertentie-integratie die nodig zijn om relevante ervaringen van klanten op alle clientapparaten te benutten.
+
+**Adobe Experience Platform Launch-extensies:** [!DNL Experience Platform Launch] met extensies kunnen onbewerkte gebeurtenisgegevens rechtstreeks naar [!DNL Real-time Customer Data Platform] bestemmingen worden verzonden. Voor het installeren van [!DNL Launch] extensies hebt u toegang tot [!DNL Launch] eigenschappen nodig.
+
+**De Dienst** van de Vraag van Adobe Experience Platform laat het gebruik van standaardSQL toe om gegevens in Experience Platform te vragen, zich bij om het even welke datasets binnen het meer van Gegevens aan te sluiten en vraagresultaten als nieuwe dataset voor gebruik in rapportering, de Werkruimte van de Wetenschap van Gegevens, of het Profiel van de Klant in real time te vangen.
+
+**Adobe Experience Platform Segmentation Service** maakt het mogelijk om segmenten te bouwen en een publiek te maken op basis van uw gegevens in het realtime klantprofiel. Deze doelgroepen kunnen vervolgens naar hun eigen gegevensbestanden worden geëxporteerd binnen het Data Lake.
+
 **Adobe Intelligente services:** Adobe Sensei is het inlichtingenkader dat bevoegdheden heeft [!DNL Experience Platform]. Het verstrekt ook een reeks diensten AI die merken machtigt om hun capaciteit te verbeteren om in real time, gepersonaliseerde klantenervaringen te leveren.
 
-**Adobe I/O:** Adobe I/O maakt deel uit van [!DNL Experience Platform] en biedt toegang tot alles wat ontwikkelaars nodig hebben om Adobe Experience Platform te integreren, uit te breiden en aan te passen, inclusief API&#39;s, gebeurtenissen, ontwikkelaarsconsole en handig gereedschap.
+**Adobe I/O:** Adobe I/O maakt deel uit van [!DNL Experience Platform] en biedt toegang tot alles wat ontwikkelaars nodig hebben om Adobe Experience Platform te integreren, uit te breiden en aan te passen, inclusief API&#39;s, gebeurtenissen, ontwikkelaarsconsole en handige gereedschappen.
 
 **Adobe Sensei:** Adobe Sensei is het inlichtingenkader dat bevoegdheden heeft [!DNL Experience Platform]. Het verstrekt ook een reeks diensten AI die merken machtigt om hun capaciteit te verbeteren om in real time, gepersonaliseerde klantenervaringen te leveren.
 
 **Amazon S3-emmertje:** [!DNL Amazon S3] emmers zijn de basiscontainers voor gegevens die in het [!DNL Amazon] ecosysteem worden opgeslagen. Emmers bevatten objecten. Elk object wordt opgeslagen en opgehaald met een unieke door de ontwikkelaar toegewezen sleutel.
 
 **Amazon S3-connector:** [!DNL Amazon] S3 schakelaar staat klanten van [!DNL Experience Platform] om veilig tot hun [!DNL Amazon] S3 gegevens te verbinden en toegang te hebben.
+
+**Handeling Analytics Marketing:** Een marketingactie waarbij gegevens worden gebruikt voor analytische doeleinden, zoals het meten, analyseren en rapporteren van het gebruik van de sites of apps van uw organisatie door klanten.
 
 **Opslagstrategie toevoegen:** De `Append` opslagstrategie is een optie die wordt gebruikt wanneer gegevens van derden worden opgegeven die via een verbinding moeten worden ingevoerd en wanneer nieuwe gegevens of rijen aan het einde van de gegevensset worden toegevoegd. De eerder opgenomen rijen blijven ongewijzigd en alleen de rijen die zijn gemaakt sinds de laatste geplande uitvoering, worden ingevuld bij [!DNL Experience Platform]. Rijen die in het bronsysteem zijn gewijzigd, blijven ongewijzigd [!DNL Experience Platform].
 
@@ -56,7 +70,7 @@ ht-degree: 0%
 
 **Attribution AI:** [!DNL Attribution AI] is een Adobe Sensei-service die algoritmische multikanaaltoewijzingsmogelijkheden biedt gedurende de gehele levenscyclus van de klant.
 
-**Publiek**: Een publiek is de resulterende reeks profielen die aan de criteria van een segmentdefinitie voldoen.
+**Publiek**: Een publiek of publieksgrootte is de resulterende reeks profielen die aan de criteria van een segmentdefinitie voldoen.
 
 **Momentopname** publiek: In een publieksopname worden alle profielen vastgelegd die op het moment van segmentatie in aanmerking komen voor de segmentcriteria.
 
@@ -94,13 +108,15 @@ ht-degree: 0%
 
 **Verzameling:** In de [!DNL Decisioning Service]lijst zijn verzamelingen subsets van aanbiedingen die zijn gebaseerd op vooraf gedefinieerde voorwaarden die door een marketmaker zijn gedefinieerd, zoals de categorie van de aanbieding.
 
+**Combineer met PII-marketingactie** Een marketingactie waarbij alle persoonlijk identificeerbare informatie (PII) wordt gecombineerd met anonieme gegevens. Contracten voor gegevens die afkomstig zijn van advertentienetwerken, servers en derde gegevensleveranciers bevatten vaak specifieke contractuele verbodsbepalingen inzake het gebruik van dergelijke gegevens met rechtstreeks identificeerbare gegevens.
+
 **Opdrachtregelinterface:** De Interface van de Lijn van het bevel is een hulpmiddel van de bevellijn dat wordt gebruikt om met [!DNL Query Service] voor onbewerkte vraaguitvoering te verbinden.
 
 **Compositie**: Een samenstelling is een groepering van componenten die samen vormen om omhoog het schema te maken.
 
 **Verbinding:** Een verbinding is een virtuele pijpleiding die gegevens om binnen en uit van toelaat te stromen [!DNL Experience Platform]. Verbindingen worden nu vervangen door Bronnen.
 
-**Connector:** De Bron van het Adobe Experience Platform schakelaars helpen gebruikers gemakkelijk gegevens uit veelvoudige bronnen in te voeren, die het structureren, etiketteren en de verbetering van gegevens het gebruiken toestaan [!DNL Experience Platform Services]. Gegevens kunnen worden ingevoerd uit verschillende bronnen, zoals cloudgebaseerde opslag, software van derden en CRM-systemen.
+**Connector:** Met Adobe Experience Platform Source-connectors kunnen gebruikers eenvoudig gegevens uit meerdere bronnen innemen, zodat ze gegevens kunnen structureren, labelen en verbeteren met behulp van [!DNL Experience Platform Services]gegevens. Gegevens kunnen worden ingevoerd uit verschillende bronnen, zoals cloudgebaseerde opslag, software van derden en CRM-systemen.
 
 **Voorwaarde:** In Experience Platform Launch, is een voorwaarde een regelcomponent die een logische verklaring evalueert die moet terugkeren `true` of `false`. Alle voorwaarden moeten evalueren aan `true` en alle uitzonderingsvoorwaarden moeten evalueren aan `false` alvorens om het even welke acties op de regel worden uitgevoerd.
 
@@ -126,13 +142,19 @@ ht-degree: 0%
 
 **C9 Contractlabel:** `C9` Op het label voor contractgegevensbeheer worden gegevens vermeld die niet kunnen worden gebruikt in Data Science-workflows. In sommige contracten zijn expliciete verbodsbepalingen opgenomen voor gegevens die voor gegevenswetenschap worden gebruikt.  Soms worden deze termen omschreven in termen die het gebruik van gegevens voor kunstmatige intelligentie (AI), machine-leren (ML), of modellering verbieden.
 
+**C10 Contractlabel:** `C10` op het label voor contractgegevensbeheer worden gegevensgegevens vermeld die niet kunnen worden gebruikt voor activering van een stitched identity. Sommige beleidsregels voor gegevensgebruik beperken het gebruik van verankerde identiteitsgegevens voor personalisatie. Het label C10 wordt automatisch toegepast op segmenten als in het samenvoegbeleid de optie &quot;particuliere grafiek&quot; wordt gebruikt.
+
 **Aanmaakdatum kolom:** Het selecteren van een `Created Date` kolom is een optie wanneer het specificeren van derdegegevens via een verbinding. Wanneer toevoegt sparen strategie wordt geselecteerd en de dataset een veelvoudige data met betrekking tot schema bevat, moet de gebruiker van het beschikbare datum/tijdschema kiezen om een `Created Date` zeer belangrijke kolom te specificeren. `Created Date` is niet beschikbaar als de optie Opslaan overschrijven is geselecteerd.
 
 **Tabel maken als selectie:** Creeer Lijst zoals Uitgezocht is een SQL bevel dat, wanneer uitgevoerd als deel van een volledige en geldige SQL vraag, het zal instrueren [!DNL Query Service] om de resultaten van de vraag in een dataset op het Meer van Gegevens voort te zetten. De volgende opties zijn beschikbaar: Nieuw maken, Alle vorige overschrijven en Toevoegen aan vorige.
 
 **Gegevens naar andere locatie:** Gegevens die naar andere sites verwijzen, zijn de combinatie van gegevens van verschillende sites, waaronder een combinatie van gegevens ter plaatse en externe gegevens of een combinatie van gegevens van verschillende externe bronnen.
 
+**Voor het maken van marketingacties** die verwijzen naar andere sites, worden gegevens gebruikt voor het maken van advertenties op andere locaties. De combinatie van gegevens van verschillende sites, waaronder een combinatie van gegevens ter plaatse en gegevens buiten de locatie of een combinatie van gegevens van verschillende bronnen buiten de locatie, wordt ook wel gegevens over andere locaties genoemd. Gegevens over andere sites worden doorgaans verzameld en verwerkt om conclusies te trekken over de belangen van gebruikers.
+
 **Aangepaste naamruimte:** Aangepaste naamruimten zijn door de klant gemaakte id&#39;s die worden gebruikt om identiteiten voor een specifieke organisatie of bedrijfscase weer te geven.
+
+**Aangepaste labels:** Met labels voor aangepast gegevensbeheer kunnen gebruikers specifieke labels maken en toepassen op gegevensvelden die aan specifieke bedrijfsbehoeften voldoen.
 
 **Klant-AI:** De AI van de klant is de Dienst van Adobe Sensei die klantenprofielen met op AI-Gebaseerde eigenschappen verrijkt en klantensegmentatie en gerichte inspanningen toelaat.
 
@@ -148,8 +170,6 @@ ht-degree: 0%
 
 **Gegevenstoewijzing:** Gegevenstoewijzing is het proces waarbij brongegevensvelden worden toegewezen aan doelgerelateerde doelvelden.
 
-**Gegevensstroom:** Een gegevensstroom is een reeks of een inzameling van berichten die het zelfde schema delen en door de zelfde bron worden verzonden.
-
 **Gegevensbeheer:** [!DNL Data governance] omvat de strategieën en technologieën die worden gebruikt om ervoor te zorgen dat gegevens in overeenstemming zijn met de regelgeving en het organisatiebeleid met betrekking tot gegevensgebruik.
 
 **Labels voor gegevensbeheer:** [!DNL Data governance] de etiketten verstrekken gebruikers de capaciteit om gegevens te classificeren die op privacy betrekking hebbende overwegingen en contractuele voorwaarden om met verordeningen en collectief beleid te voldoen weerspiegelen. [!DNL Data governance] de etiketten die aan een dataset worden toegevoegd worden geërft onderaan of op alle gebieden binnen die dataset worden toegepast. [!DNL Data governance] labels kunnen ook rechtstreeks op velden worden toegepast.
@@ -164,11 +184,15 @@ ht-degree: 0%
 
 **Gegevensstap:** Een gegevensbeheerder is de persoon die verantwoordelijk is voor het beheer, het toezicht en de handhaving van de gegevensactiva van een organisatie. Een gegevensgestuurde functie zorgt er ook voor dat het beleid inzake gegevensbeheer wordt gewaarborgd en gehandhaafd om in overeenstemming te zijn met de overheidsvoorschriften en het organisatiebeleid.
 
+**Gegevensstroom:** Een gegevensstroom is een reeks of een inzameling van berichten die het zelfde schema delen en door de zelfde bron worden verzonden.
+
 **Gegevenstype:** Gegevenstype is een herbruikbaar object met eigenschappen in een hiërarchische representatie.
 
 **Labels voor gegevensgebruik:** Met labels voor gegevensgebruik kunnen gebruikers gegevens categoriseren die privacygerelateerde overwegingen en contractuele voorwaarden weerspiegelen om te voldoen aan de regels en het bedrijfsbeleid.
 
 **Gegevensstroom:** In [!DNL Real-time Customer Data Platform], is een dataflow een virtuele pijpleiding van gegevens die [!DNL Platform] van een bron en uit aan bestemmingen stromen.
+
+**Dataflow-run:** Dataflow-run is een gegevensstroom die in Experience Platform landt op basis van een door de gebruiker opgegeven planning.
 
 **Gegevensset:** Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die schema (kolommen) en gebieden (rijen) bevat.
 
@@ -202,11 +226,11 @@ ht-degree: 0%
 
 ## E
 
-**Foutdiagnose:** Bij de diagnose van fouten kunnen gedetailleerde foutberichten voor ingesloten batches worden gegenereerd. De drempel van de Fout laat de configuratie van het percentage aanvaardbare fouten toe alvorens de volledige partij zal ontbreken.
-
 **In aanmerking komend voorstel:** In het [!DNL Decisioning Service]geval voldoet een in aanmerking komende aanbieding aan de stroomopwaarts gedefinieerde beperkingen die consistent aan een profiel kunnen worden aangeboden.
 
 **Subsidiabele regels:** In het [!DNL Decisioning Service]document worden de subsidiabiliteitsregels toegepast op een profiel dat betrekking heeft op kalender-, schema- en plafondbeperkingen.
+
+**E-mailgerichte marketingactie** Een marketingactie waarbij gegevens worden gebruikt in campagnes voor het aanwijzen van e-mail.
 
 **Code insluiten:** De insluitcode [!DNL Experience Platform Launch]is in feite een scripttag die in de HTML op een site of omgeving is geplaatst. De insluitcode instrueert browser waar te om de bouwstijl terug te winnen.
 
@@ -214,15 +238,13 @@ ht-degree: 0%
 
 **Omgeving:** In [!DNL Experience Platform Launch], is een milieu een reeks plaatsingsinstructies die de gastheerlevering en dossierformaat van een bouwstijl specificeert. Een bibliotheek moet met een milieu worden gecombineerd alvorens het kan worden gebouwd.
 
+**Foutdiagnose:** Bij de diagnose van fouten kunnen gedetailleerde foutberichten voor ingesloten batches worden gegenereerd. De drempel van de Fout laat de configuratie van het percentage aanvaardbare fouten toe alvorens de volledige partij zal ontbreken.
+
 **Gebeurtenis** binnen [!DNL Experience Platform Launch], is een gebeurtenis een specifiek type van regelcomponent, een trekker die op een cliëntapparaat voorkomt om met de uitvoering van een regel te beginnen.
 
 **Gebeurtenissen:** Gebeurtenissen zijn de gedragsgegevens die aan een profiel zijn gekoppeld.
 
 **Experience Data Model (XDM):** [!DNL Experience Data Model] (XDM) is het concept het gebruiken van standaardschema&#39;s om gegevens voor gebruik met [!DNL Experience Platform] en toepassingen van Adobe Experience Cloud te verenigen. XDM gestandaardiseert hoe de gegevens gestructureerd zijn en versnelt en vereenvoudigt het proces om inzichten van enorme hoeveelheden gegevens te verkrijgen.
-
-**Experience Platform Launch:** [!DNL Launch] is een ecosysteem voor tags- en SDK-beheer, geïntegreerd met [!DNL Experience Platform] en [!DNL Experience Cloud] toepassingen. [!DNL Launch] biedt tools voor het implementeren, verenigen en beheren van analyses, marketing en advertentie-integratie die nodig zijn om relevante ervaringen van klanten op alle clientapparaten te benutten.
-
-**Experience Platform Launch-extensies:** [!DNL Experience Platform Launch] met extensies kunnen onbewerkte gebeurtenisgegevens rechtstreeks naar [!DNL Real-time Customer Data Platform] bestemmingen worden verzonden. Voor het installeren van [!DNL Launch] extensies hebt u toegang tot [!DNL Launch] eigenschappen nodig.
 
 **Experimenteer:** Een experiment is een proces om een getraind model tot stand te brengen door de instantie met een steekproefgedeelte van de levende productiegegevens te leiden.
 
@@ -326,7 +348,7 @@ ht-degree: 0%
 
 **Toewijzing:** In [!DNL Real-time Customer Data Platform], is de gegevenstoewijzing het proces om brongegevensgebieden aan bestemmings verwante doelgebieden in kaart te brengen.
 
-**Handeling voor marketing:** Een marketingactie in het kader van het gegevensbeheerkader is een actie die een [!DNL Experience Platform] gegevensconsument onderneemt en waarvoor moet worden gecontroleerd op overtredingen van het gegevensgebruiksbeleid.
+**Handeling voor marketing:** Een marketingactie, ook wel marketinggevallen genoemd, in het kader van het gegevensbeheerkader, is een actie die een [!DNL Experience Platform] gegevensconsument onderneemt en waarvoor moet worden gecontroleerd op overtredingen van het gegevensgebruiksbeleid.
 
 **Samenvoegmethode:** A `merge method` is een optie van het fusiebeleid die aan het samenvoegen van gegevensfragmenten toelaat. De opties van de fusiemethode zijn fusie door datasetvoorkeur of door dataset timestamp.
 
@@ -356,6 +378,10 @@ ht-degree: 0%
 
 **Bibliotheek voorstel:** In de [!DNL Decisioning Service], is de aanbiedingsbibliotheek een centrale bibliotheek die wordt gebruikt om gepersonaliseerde en reserveaanbiedingen, besluitvormingsregels en activiteiten te beheren.
 
+**On-site actie voor het op de markt brengen van personalisatie** Een marketing actie die gegevens voor onsite inhoudpersonalisatie gebruikt. De verpersoonlijking onsite is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over gebruikersbelangen te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend.
+
+**On-site gerichte marketingactie** Een marketingactie die gegevens gebruikt voor onsite advertenties, waaronder de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten.
+
 **Organisatie:** Een organisatie is de naam die wordt gebruikt om een bedrijf of een specifieke groep binnen een bedrijf over producten van Adobe te identificeren. Beheerders kunnen de toegang tot en machtigingen voor functies voor gebruikers van een organisatie configureren en beheren.
 
 **Opslagstrategie overschrijven:** `Overwrite` Opslagstrategie is een optie voor het invoeren van gegevens van derden via een verbinding, waarbij de gebruiker opgeeft of ingesloten gegevens volgens een bepaald schema worden overschreven. [!DNL Experience Platform] zal de gespecificeerde dataset van de derdebron opnemen en zal de dataset op overschrijven [!DNL Experience Platform].
@@ -364,7 +390,7 @@ ht-degree: 0%
 
 ## P
 
-**Gedeeltelijke inname:** Gedeeltelijke invoer maakt het opnemen van geldige records met batchgegevens binnen een opgegeven foutdrempel mogelijk. Foutendiagnostiek voor mislukte records kan worden gedownload of toegankelijk zijn bij Bewaking.
+**Gedeeltelijke inname:** Gedeeltelijke invoer maakt het opnemen van geldige records met batchgegevens binnen een opgegeven foutdrempel mogelijk. De diagnostiek van de fout voor ontbroken verslagen kan of toegang in Controle of het overzicht van de de looppas van Bronnen worden gedownload.
 
 **Parketbestanden:** Een parketbestand is een kolombestandsindeling met complexe geneste gegevensstructuren. De dossiers van de parket worden vereist voor het toevoegen van gegevens om een schemadataset te bevolken.
 
@@ -372,7 +398,11 @@ ht-degree: 0%
 
 **Plaatsen:** In het [!DNL Decisioning Service]gedeelte is een plaatsing de locatie en/of context waarin een aanbieding voor een eindgebruiker wordt weergegeven.
 
+**De Werkruimte** van beleid laat gegevens toe om kern en douanelabels voor uw organisatie te bekijken en te beheren.
+
 **Beleid:** Een beleid van het gegevensgebruik is een regel die marketing acties specificeert die gebaseerd op de toepassing van de etiketten van het gegevensgebruik op gegevens binnen worden beperkt [!DNL Experience Platform].
+
+**Beleidshandhaving** zorgt voor de handhaving van het beleid voor gegevensgebruik met toegepaste marketingacties om gegevensbewerkingen te voorkomen die beleidsovertredingen binnen een organisatie vormen.
 
 **Primaire sleutel:** De primaire sleutel is een aanwijzing in een schema om alle verslagen uniek te identificeren.
 
@@ -410,7 +440,7 @@ ht-degree: 0%
 
 **Platform voor realtime klantgegevens:** De Adobe brengt bekende en onbekende klantengegevens samen om vertrouwde op klantenprofielen met vereenvoudigde integratie, intelligente segmentatie, en in real time activering over de digitale klantenreis tot stand te brengen. [!DNL Real-time Customer Data Platform]
 
-**Klantprofiel in realtime:** [!DNL Real-time Customer Profile] is een gecentraliseerd profiel voor gericht en gepersonaliseerd ervaringsbeheer.
+**Klantprofiel in realtime:** [!DNL Real-time Customer Profile] is een gecentraliseerd profiel voor gericht en gepersonaliseerd ervaringsbeheer en biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens uit meerdere bronnen.
 
 **Recipe:** Een recept is Adobe term voor een modelspecificatie en is een top-level container die een specifiek machine het leren, AI algoritme of een samenstel van algoritmen, verwerkingslogica, en configuratie vertegenwoordigt die wordt vereist om een opgeleid model te bouwen en uit te voeren en vandaar helpen specifieke bedrijfsproblemen oplossen.
 
@@ -478,6 +508,8 @@ ht-degree: 0%
 
 **Services:** Een krachtig kader om de diensten van AI en van ML in werking te stellen door Adobe Intelligente Diensten te leveraging. De diensten leveren in real time, gepersonaliseerde klantenervaringen of operationeel douane intelligente diensten.
 
+**Single Identity Personalization Marketing Action** A marketing action that uses data for onsite content personalization. De verpersoonlijking onsite is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over gebruikersbelangen te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend.
+
 **S1-gegevenslabel:** `S1` het gegevensetiket wordt gebruikt om gegevens te classificeren die breedte en lengte specificeren die kunnen worden gebruikt om de nauwkeurige plaats van een apparaat te bepalen.
 
 **S2-gegevenslabel:** `S2` gegevenslabel wordt gebruikt voor de classificatie van gegevens die kunnen worden gebruikt om een breed gedefinieerd geo-fence-gebied te bepalen.
@@ -486,21 +518,21 @@ ht-degree: 0%
 
 **Bronkenmerk:** Een bronattribuut is een gebied in brondataset.  Bronkenmerken worden toegewezen aan doelschemavelden.
 
-**Bronaansluiting:** De Bron van het Adobe Experience Platform schakelaars helpen gebruikers gemakkelijk gegevens uit veelvoudige bronnen in te voeren, die het structureren, etiketteren en de verbetering van gegevens het gebruiken toestaan [!DNL Experience Platform Services]. Gegevens kunnen worden ingevoerd uit verschillende bronnen, zoals cloudgebaseerde opslag, software van derden en CRM-systemen.
+**Broncatalogus:** Een broncatalogus is een lijst met beschikbare bronnen in de [!DNL Real-time Customer Data Platform]catalogus.
 
 **Broncategorie:** Een broncategorie is een groep [!DNL Real-time Customer Data Platform] bronnen met vergelijkbare kenmerken.
 
-**Broncatalogus:** Een broncatalogus is een lijst met beschikbare bronnen in de [!DNL Real-time Customer Data Platform]catalogus.
+**Bronaansluiting:** Met Adobe Experience Platform Source-connectors kunnen gebruikers eenvoudig gegevens uit meerdere bronnen innemen, zodat ze gegevens kunnen structureren, labelen en verbeteren met behulp van [!DNL Experience Platform Services]gegevens. Gegevens kunnen worden ingevoerd uit verschillende bronnen, zoals cloudgebaseerde opslag, software van derden en CRM-systemen.
 
 **Standaardnaamruimte:** Standaard identiteitsnaamruimten zijn vooraf gedefinieerde Adobe-id&#39;s, inclusief Adobe- en industriestandaard oplossingen die worden gebruikt om gebruikers te identificeren.
 
 **Standaardschema:** Standaardschema&#39;s bestaan uit klassen en mengsels en zijn bestemd voor hergebruik.
 
-**Streaming inname:** Streaming opname biedt gebruikers een methode om gegevens van client- en serverapparaten naar [!DNL Experience Platform] realtime te verzenden.
-
 **Streaming eindpunt-URL:** Een het stromen eindpunt URL is een uniek eindpunt dat door Adobe wordt verstrekt en aan IMS org van een klant wordt gebonden om gegevens in te stromen [!DNL Experience Platform].
 
-**Streaming segmentering:** Streaming segmentatie is een doorlopend proces voor gegevensselectie dat segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-time Customer Profile]. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
+**Streaming inname:** Streaming opname biedt gebruikers een methode om gegevens van client- en serverapparaten naar [!DNL Experience Platform] realtime te verzenden.
+
+**Streaming segmentering:** Streaming segmentatie is een doorlopend proces voor gegevensselectie dat segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-time Customer Profile]. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat uw doelgroep relevant blijft.
 
 **Symbool:** Symbool is een afkorting van een naamruimte voor identiteiten die kan worden gebruikt als referentie in API&#39;s.
 
@@ -510,7 +542,7 @@ ht-degree: 0%
 
 ## T
 
-**Target-functies:** De Target-functie wordt opgegeven in functietoewijzing. Dit is de functie die door een model wordt voorspeld.
+**Doelfuncties:** De eigenschap van het doel wordt gespecificeerd in eigenschapafbeelding is de eigenschap die door een model wordt voorspeld.
 
 **Opgeleid model:** Een getraind model vertegenwoordigt de uitvoerbare output van een model opleidingsproces, waarin een reeks opleidingsgegevens werd toegepast op de modelinstantie. Een opgeleid model zal een verwijzing naar om het even welke Intelligente Dienst van het Web handhaven die van het wordt gecreeerd. Het getrainde model is geschikt voor het scoren en maken van een intelligente webservice. Wijzigingen in een getraind model kunnen als een nieuwe versie worden bijgehouden.
 
