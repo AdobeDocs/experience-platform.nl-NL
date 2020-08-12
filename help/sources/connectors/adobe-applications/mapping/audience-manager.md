@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Veld voor Audience Manager toewijzen
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: a1b09f3e88e489f1b0ec0c1fcb72a2a5a4356d87
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
@@ -36,23 +36,6 @@ Type: Realtime gegevens
 | `location` | `ExperienceEvent.placeContext.geo` <ul><li>d_land → landcode</li><li>d_state → stateProvince</li><li>d_city → stad</li><li>d_post → postcode</li><li>d_lat → latitude</li><li>d_longitude → longitude</li></ul> |
 | `request_user_agent` | `ExperienceEvent.environment.browserDetails` <ul><li>h_user-agent → userAgent</li><li>h_accept-language → acceptLanguage</li></ul> |
 | `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_naam → naam </li><li>d_os_version → os_version</li></ul> |
-| `Signals` | ExperienceEvent.signals |
-
-## Binnenkomende gegevens **(afgekeurd)**
-
-Type: ExperienceEvent
-
-| Binnenkomend veld | XDM-veld |
-| --- | --- |
-| `uuid` | `ExperienceEvent.identityMap[<ID Type>]` |
-| `deviceIds` | `ExperienceEvent.identityMap["CORE"] And calculated ECIDs  ExperienceEvent.identityMap["ECID"]` |
-| `signals` | `ExperienceEvent.signals` |
-| `b_time` | `ExperienceEvent.timeStamp` |
-| `overwrite` | `overwriteTraits` |
-
->[!NOTE]
->
->Binnenkomende velden worden in een toekomstige versie afgekeurd.
 
 ## Profielgegevens
 
