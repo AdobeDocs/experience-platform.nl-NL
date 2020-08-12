@@ -4,9 +4,9 @@ seo-title: Google Customer Match Destination
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 seo-description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 translation-type: tm+mt
-source-git-commit: 31eb03c6625f820c9729caf5181c56e748e853a5
+source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,9 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u voldoen aan de ve
 
    >[!IMPORTANT]
    >
-   > Voor [!DNL Google Customer Match] bestemmingen. **[!UICONTROL De account-id]** is uw client-id met Google. De indeling van de id is xxx-xxx-xxxx.
+   > * De **[!UICONTROL optie Combineren met PII]** -marketingtoepassing is standaard geselecteerd voor de [!DNL Google Customer Match] bestemming en kan niet worden verwijderd.
+   > * Voor [!DNL Google Customer Match] bestemmingen. **[!UICONTROL De account-id]** is uw client-id met Google. De indeling van de id is xxx-xxx-xxxx.
+
 
    ![Google-klantovereenkomst aansluiten - verificatiestap](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
 
@@ -170,3 +172,7 @@ Insert in Step 6 when mobile device ID activation is available
 ## Controleren of segmentactivering is gelukt {#verify-activation}
 
 Schakel na het voltooien van de activeringsstroom over naar uw **[!UICONTROL Google Ads]** -account. De geactiveerde segmenten worden nu in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van uw segment, alleen vullen met meer dan 100 actieve gebruikers.
+
+## Aanvullende bronnen {#additional-resources}
+
+* [Google Customer Match integreren - videozelfstudie](https://docs.adobe.com/content/help/en/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
