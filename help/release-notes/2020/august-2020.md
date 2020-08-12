@@ -1,51 +1,52 @@
 ---
-title: Opmerkingen bij de release Adobe Experience Platform
+title: Opmerkingen bij de release van Adobe Experience Platform
 description: Opmerkingen bij de release van Experience Platform, 10 augustus 2020
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 4%
+source-wordcount: '297'
+ht-degree: 2%
 
 ---
 
 
-# Opmerkingen bij de release Adobe Experience Platform
+# Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 10 juni 2020**
+**Releasedatum: 12 augustus 2020**
 
-Nieuwe functies in Adobe Experience Platform:
+Updates voor bestaande functies in Adobe Experience Platform:
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL-bronnen]](#sources)
 
-## [!DNL Access control] {#access-control}
+## [!DNL Data Science Workspace] {#dsw}
 
-[!DNL Experience Platform] Gebruikt [Adobe Admin Console](https://adminconsole.adobe.com) -productprofielen om gebruikers te koppelen aan machtigingen en sandboxen. Machtigingen beheren de toegang tot verschillende mogelijkheden van Platforms, waaronder gegevensmodellering, profielbeheer en sandboxbeheer.
+[!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzichten van uw gegevens te onthullen. Met de geïntegreerde Adobe Experience Platform-software kunt u [!DNL Data Science Workspace] voorspellingen maken op basis van uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen.
 
-**Belangrijkste kenmerken**
-
-| Functie | Beschrijving |
-|--- | ---|
-| Toestemmingen | Op de [!DNL Admin Console]tab in een [!DNL Platform] productprofiel kunt u aanpassen welke [!DNL Platform] mogelijkheden beschikbaar zijn voor de gebruikers die aan dat profiel zijn gekoppeld. Beschikbare machtigingscategorieën zijn: [!UICONTROL Gegevensmodellering], [!UICONTROL gegevensbeheer], [!UICONTROL profielbeheer], [!UICONTROL identiteiten], [!UICONTROL gegevenscontrole], Sandbox-beheer, Destination, Sources. |
-| Toegang tot sandboxen | Met het tabblad [!UICONTROL _Machtigingen _]in een[!DNL Platform]productprofiel kunnen gebruikers toegang krijgen tot specifieke sandboxen. Zie de sectie over[sandboxen](#sandboxes)hieronder voor meer informatie. |
-
-Zie het overzicht [van](../../access-control/home.md)toegangsbeheer voor meer informatie.
-
-## [!DNL Sandboxes] {#sandboxes}
-
-[!DNL Experience Platform] is ontworpen om toepassingen voor digitale ervaring wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen. Om aan deze behoefte tegemoet te komen, [!DNL Experience Platform] verstrekt zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
-
-**Belangrijkste kenmerken**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
-|--- | ---|
-| Productiesandbox | [!DNL Experience Platform] biedt één productiesandbox die niet kan worden verwijderd of opnieuw ingesteld. |
-| Niet-productie sandboxen | Er kunnen meerdere niet-productiesandboxen voor één [!DNL Platform] instantie worden gemaakt, zodat u functies kunt testen, experimenten kunt uitvoeren en aangepaste configuraties kunt maken zonder dat dit invloed heeft op de productiesandbox. |
-| Sandboxschakelaar | In de [!DNL Experience Platform] gebruikersinterface kunt u met de sandboxschakelaar in de linkerbovenhoek van het scherm schakelen tussen beschikbare sandboxen via een vervolgkeuzemenu. |
-| `x-sandbox-name` header | Alle aanroepen van [!DNL Experience Platform] API&#39;s moeten nu de nieuwe `x-sandbox-name` header bevatten, waarvan de waarde verwijst naar het `name` kenmerk van de sandbox waarin de bewerking plaatsvindt. |
+| ------- | ----------- |
+| VM-verbeteringen in [!DNL JupyterLab] | Verbeterde stabiliteit van langdurige [!DNL JupyterLab notebook] virtuele machines. |
 
-Zie het [sandboxoverzicht](../../sandboxes/home.md)voor meer informatie.
+Raadpleeg de [!DNL JupyterLab]gebruikershandleiding [[!DNL JupyterLab] voor meer informatie over](../../data-science-workspace/jupyterlab/overview.md).
+
+## Bronnen {#sources}
+
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Platform] services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
+
+[!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Bewaking van de stroom | Gebruikers kunnen alle flowuitvoering controleren en een gedetailleerde weergave van elke uitvoering bekijken, zoals voltooiingsstatus, uitvoerduur, lijst met verwerkte bestanden, fouten en metriek. Zie het document met [controlegegevens](../../sources/tutorials/ui/monitor.md) voor meer informatie. |
+| Account bijwerken | Gebruikers kunnen de referenties, de naam en de beschrijving van bestaande accounts bijwerken om zinvollere informatie te verstrekken en eventuele gemaakte fouten te corrigeren. |
+| Meldingen voor stroomuitvoering | Gebruikers kunnen zich abonneren op gebeurtenissen en websites registreren om realtime meldingen te ontvangen over de status, metriek en fouten met betrekking tot flowuitvoering. |
+| Verbeteringen in gebruikerscatalogus | Updates voor het catalogusscherm van bronnen zodat u gemakkelijker toegang hebt tot primaire acties van geselecteerde objecten. |
+
+Zie het [bronoverzicht](../../sources/home.md)voor meer informatie over bronnen.
