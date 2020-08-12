@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: b019b6b8b69e0bfac6fc8840da350d92733dc97c
+source-git-commit: 2ee74c9ea0e4838eacfaba1b1e6b8aac7012f427
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,7 @@ ht-degree: 0%
       - [protocolgegevens verzamelen](tutorials/api/collect/protocols.md)
    - [Parketgegevens uit een cloudopslagsysteem van een andere fabrikant verzamelen](tutorials/api/cloud-storage-parquet.md)
    - [Creeer een verbinding van de datasetbasis gebruikend de Dienst API van de Stroom](tutorials/api/create-dataset-base-connection.md)
+   - [Dataflows gebruiken met de Flow Service API](tutorials/api/monitor.md)
 - UI-zelfstudies {#ui-tutorials}
    - Een bronaansluiting maken {#create}
       - Adobe-toepassingen {#adobe-applications}
