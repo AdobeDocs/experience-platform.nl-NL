@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: dba7ae62b51b5cc4556f7f12d43b84e90f6c29dc
+source-git-commit: 1d9c8cbf273e9aef13e34df91a98b6c08180c8ff
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 3%
@@ -45,7 +45,7 @@ Er zijn nieuwe doelen beschikbaar waar u uw Adobe Experience Platform-gegevens k
 
 | Bestemming | Beschrijving |
 |--- | ---|
-| [!DNL Google Customer Match] | Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere klanten over de eigendommen en bediende eigenschappen van Google, zoals: [!DNL Search], [!DNL Shopping], Gmail en YouTube. Bezoek de [!DNL Google Customer Match] pagina [](/help/rtcdp/destinations/google-customer-match-destination.md) in de bestemmingscatalogus voor meer informatie over de bestemming en hoe te opstelling het in Adobe in real time CDP. |
+| [!DNL Google Customer Match] | Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere klanten over de eigendommen en bediende eigenschappen van Google, zoals: [!DNL Search], [!DNL Shopping], Gmail en YouTube. <br><br> Bezoek de [!DNL Google Customer Match] pagina [](/help/rtcdp/destinations/google-customer-match-destination.md) in de bestemmingscatalogus voor meer informatie over de bestemming en hoe te opstelling het in Adobe in real time CDP. |
 
 **Nieuwe functies**
 
