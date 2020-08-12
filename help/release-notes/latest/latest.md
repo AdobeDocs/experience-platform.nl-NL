@@ -1,71 +1,42 @@
 ---
-title: Opmerkingen bij de release Adobe Experience Platform
-description: De nieuwste releaseopmerkingen voor Experience Platform
+title: Opmerkingen bij de release van Adobe Experience Platform
+description: Opmerkingen bij de release van Experience Platform, 10 augustus 2020
 doc-type: release notes
-last-update: July 15, 2020
-author: crhoades, ens25212
+last-update: August 10, 2020
+author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 3%
+source-wordcount: '296'
+ht-degree: 2%
 
 ---
 
 
-# Opmerkingen bij de release Adobe Experience Platform
+# Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 15 juli 2020**
+**Releasedatum: 12 augustus 2020**
 
-Updates voor bestaande functies in Adobe Experience Platform:
+De nieuwste releaseopmerkingen voor Experience Platform
 
-- [Data Governance](#governance)
-- [Klantprofiel in realtime](#profile)
-- [Segmenteringsservice](#segmentation)
-- [Bronnen](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL-bronnen]](#sources)
 
-## [!DNL Data Governance] {#governance}
+## [!DNL Data Science Workspace] {#dsw}
 
-Het Beheer van de Gegevens van het Adobe Experience Platform is een reeks strategieën en technologieën die worden gebruikt om klantengegevens te beheren en naleving van verordeningen, beperkingen, en beleid te verzekeren van toepassing op gegevensgebruik. Het speelt een sleutelrol binnen [!DNL Experience Platform] op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van de gegevenstoegang, en toegangscontrole over gegevens voor marketing acties.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| -----------| ---------- |
-| Automatische beleidshandhaving in [!DNL Real-time Customer Data Platform] | Het beleid van het gegevensgebruik wordt nu automatisch afgedwongen in [!DNL Real-time CDP] wanneer het overtreden van acties voorkomt, met inbegrip van het activeren van segmenten aan bestemmingen. Wanneer een beleidsovertreding wordt geactiveerd, krijgen gebruikers realtime zichtbaarheid in gebruiksbeperkingen binnen de activeringsworkflow en geven ze aan welke gegevens ze niet kunnen gebruiken en waarom.<br><br>Zie de sectie over het [afdwingen van naleving](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) van gegevensgebruik in het overzicht op [!DNL Data Governance] in [!DNL Real-time CDP] voor meer informatie. |
-| Adobe Audience Manager-integratie | Om het even welke segmenten die met [!DNL Audience Manager] van worden gedeeld [!DNL Platform] erven om het even welke toegepaste etiketten van het gegevensgebruik als [!DNL Data Export Controls], en vice versa. Zie de [!DNL Audience Manager] documentatie voor specifieke [afbeeldingen tussen gebruiksetiketten en de Controles](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)van de Uitvoer van Gegevens. |
-| Aangepaste labels voor gegevensgebruik | U kunt aangepaste labels voor gegevensgebruik maken met de API voor beleidsservice of in de gebruikersinterface. Zie het overzicht [van](../../data-governance/labels/overview.md) labels voor meer informatie. |
-
-Zie het overzicht [van](../../data-governance/home.md) Gegevensbeheer voor meer informatie over de dienst.
-
-## [!DNL Real-time Customer Profile] {#profile}
-
-Met Adobe Experience Platform kunt u uw klanten een gecoördineerde, consistente en relevante ervaring bieden, ongeacht waar of wanneer ze met uw merk communiceren. Met [!DNL Real-time Customer Profile], kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. [!DNL Profile] staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
+[!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzichten van uw gegevens te onthullen. Met de geïntegreerde Adobe Experience Platform-software kunt u [!DNL Data Science Workspace] voorspellingen maken op basis van uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Beleidshandhaving voor gegevensgebruik | In [!DNL Real-time Customer Data Platform], worden de beleidsschendingen van het gegevensgebruik automatisch opgeheven wanneer een het schenden actie in de werkruimte van het [!UICONTROL Profiel] wordt geprobeerd. Zie de [release notes voor gegevensbeheer](#governance) voor meer informatie over automatische beleidshandhaving. |
+| VM-verbeteringen in [!DNL JupyterLab] | Verbeterde stabiliteit van langdurige [!DNL JupyterLab notebook] virtuele machines. |
 
-## [!DNL Segmentation Service] {#segmentation}
-
-De Dienst van de Segmentatie van het Adobe Experience Platform verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal gevormd en gehandhaafd [!DNL Platform], die hen gemakkelijk toegankelijk door om het even welke toepassing van de Adobe maken.
-
-[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Streaming segmentering | Streaming segmentatie kan nu worden gekwalificeerd als een gebruiker in een segment wanneer gegevens in worden geland [!DNL Platform], waardoor de kwalificatietijd van het segment aanzienlijk wordt verkort. Door segmentatie te streamen, hoeft u segmentatietaken ook handmatig uit te voeren. |
-| Beleidshandhaving voor gegevensgebruik | In [!DNL Real-time Customer Data Platform], worden de beleidsschendingen van het gegevensgebruik automatisch opgeheven wanneer een het schenden actie in de werkruimte van [!UICONTROL Segmenten] wordt geprobeerd. Zie de [release notes voor gegevensbeheer](#governance) voor meer informatie over automatische beleidshandhaving. |
-
-Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het overzicht van de [Segmentatie](../../segmentation/home.md)
+Raadpleeg de [!DNL JupyterLab]gebruikershandleiding [[!DNL JupyterLab] voor meer informatie over](../../data-science-workspace/jupyterlab/overview.md).
 
 ## Bronnen {#sources}
 
-Het Adobe Experience Platform kan gegevens uit externe bronnen opnemen terwijl het toestaan van u om die gegevens te structureren, te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Platform] services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
 
 [!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
@@ -73,7 +44,9 @@ Het Adobe Experience Platform kan gegevens uit externe bronnen opnemen terwijl h
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| UI-ondersteuning voor het verwijderen van gegevensstromen | Gegevensstromen die met fouten werden gemaakt of onnodig zijn geworden kunnen nu door UI worden geschrapt. |
-| API- en UI-ondersteuning voor eenmalige invoer | Eenmalige invoer voor gegevensstromen, waar slechts de begindatum wordt verstrekt en geen toekomstige opname wordt gepland, kan nu door APIs of het gebruiken van UI worden uitgevoerd. |
+| Bewaking van de stroom | Gebruikers kunnen alle flowuitvoering controleren en een gedetailleerde weergave van elke uitvoering bekijken, zoals voltooiingsstatus, uitvoerduur, lijst met verwerkte bestanden, fouten en metriek. Zie het document met [controlegegevens](../../sources/tutorials/ui/monitor.md) voor meer informatie. |
+| Account bijwerken | Gebruikers kunnen de referenties, de naam en de beschrijving van bestaande accounts bijwerken om zinvollere informatie te verstrekken en eventuele gemaakte fouten te corrigeren. |
+| Meldingen voor stroomuitvoering | Gebruikers kunnen zich abonneren op gebeurtenissen en websites registreren om realtime meldingen te ontvangen over de status, metriek en fouten met betrekking tot flowuitvoering. |
+| Verbeteringen in gebruikerscatalogus | Updates voor het catalogusscherm van bronnen zodat u gemakkelijker toegang hebt tot primaire acties van geselecteerde objecten. |
 
 Zie het [bronoverzicht](../../sources/home.md)voor meer informatie over bronnen.
