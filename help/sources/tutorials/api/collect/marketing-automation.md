@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevens over marketingautomatisering verzamelen via bronconnectors en API's
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1658'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Gegevens over marketingautomatisering verzamelen via bronconnectors en API&#39;s
 
-[!DNL Flow Service] wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
 In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens van een marketingautomatiseringssysteem en het doorsturen van deze gegevens [!DNL Platform] via bronconnectors en API&#39;s.
 
@@ -22,7 +22,7 @@ In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens va
 
 Deze zelfstudie vereist dat u toegang hebt tot een systeem voor marketingautomatisering van derden via een geldige verbinding en informatie over het bestand dat u wilt introduceren [!DNL Platform], inclusief het pad en de structuur van het bestand. Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van een marketingautomatiseringssysteem van derden met behulp van de Flow Service API](../explore/marketing-automation.md) voordat u deze zelfstudie probeert.
 
-Deze zelfstudie vereist ook dat u een goed inzicht hebt in de volgende onderdelen van het Adobe Experience Platform:
+Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
 * [XDM-systeem](../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    * [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -132,7 +132,7 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 }
 ```
 
-## Een doel-XDM-schema maken {#target}
+## Een doel-XDM-schema maken {#target-schema}
 
 In eerdere stappen werd een ad-hoc XDM-schema gemaakt om de brongegevens te structureren. Als u de brongegevens in wilt gebruiken, moet u ook een doelschema maken om de brongegevens te structureren op basis van uw behoeften. [!DNL Platform] Het doelschema wordt dan gebruikt om een [!DNL Platform] dataset tot stand te brengen waarin de brongegevens bevat zijn.
 
@@ -285,7 +285,7 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de pas ge
 ]
 ```
 
-## Een doelverbinding maken
+## Een doelverbinding maken {#target-connection}
 
 Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Als u een doelverbinding wilt maken, moet u de vaste specificatie-id voor de verbinding opgeven die is gekoppeld aan het datumpeer. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -560,7 +560,7 @@ Een succesvolle reactie keert de details van de gegevensstroomspecificatie terug
 De laatste stap in de richting van het verzamelen van gegevens over marketingautomatisering is het maken van een gegevensstroom. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Bronverbinding-id](#source)
-* [Target-verbinding-id](#target)
+* [Doelverbinding-id](#target)
 * [Toewijzing-id](#mapping)
 * [Dataflow-specificatie-id](#specs)
 
@@ -620,13 +620,15 @@ curl -X POST \
 ```
 
 | Eigenschap | Beschrijving |
-| --- | --- |
-| `flowSpec.id` | De flow-specificatie-id die in de vorige stap is opgehaald. |
-| `sourceConnectionIds` | De bronverbindings-id die in een eerdere stap is opgehaald. |
-| `targetConnectionIds` | De doel verbindings ID die in een vroegere stap wordt teruggewonnen. |
-| `transformations.params.mappingId` | De toewijzing-id die in een eerdere stap is opgehaald. |
-| `scheduleParams.startTime` | De begintijd voor de gegevensstroom in epoche tijd in seconden. |
-| `scheduleParams.frequency` | De volgende frequentiewaarden kunnen worden geselecteerd: `once`, `minute`, `hour`, `day`, of `week`. |
+| -------- | ----------- |
+| `flowSpec.id` | De [flow-specificatie-id](#specs) die in de vorige stap is opgehaald. |
+| `sourceConnectionIds` | De [bronverbindings-id](#source) die in een eerdere stap is opgehaald. |
+| `targetConnectionIds` | De [doel-verbindings-id](#target-connection) die in een eerdere stap is opgehaald. |
+| `transformations.params.mappingId` | De [toewijzings-id](#mapping) die in een eerdere stap is opgehaald. |
+| `transformations.params.deltaColum` | De opgegeven kolom die wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
+| `transformations.params.mappingId` | De toewijzing-id die aan uw database is gekoppeld. |
+| `scheduleParams.startTime` | De begintijd voor de gegevensstroom in tijdperk. |
+| `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day`, of `week`. |
 | `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Interval is niet vereist wanneer de frequentie wordt ingesteld als `once` en groter dan of gelijk aan `15` andere frequentiewaarden moet zijn. |
 
 **Antwoord**
@@ -639,6 +641,10 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom.
     "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
+
+## Uw gegevensstroom controleren
+
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor meer informatie over hoe te om gegevensstromen te controleren, zie de zelfstudie over het [controleren van gegevensstromen in API ](../monitor.md)
 
 ## Volgende stappen
 
