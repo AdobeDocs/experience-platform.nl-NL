@@ -4,9 +4,9 @@ seo-title: Reclamebestemmingen
 description: Verbind uw Platform van Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 seo-description: Verbind uw Platform van Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 875430cdbd80025fc3f0de2664f9b55db0debe53
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,7 @@ Momenteel, in real time CDP steunt de reclame hieronder vermelde bestemmingen. V
 * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
 * [Google Ads-extensie](/help/rtcdp/destinations/google-ads-extension.md)
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+* [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
 * [Google-tag-extensie](/help/rtcdp/destinations/gtag-advertising-extension.md)
 * [LinkedIn Insight-tagextensie](linkedin-extension.md)
 * [Pinterest Conversion Tracking extension](pinterest-extension.md)
