@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: Hulp bij realtime Platform klantgegevens
 translation-type: tm+mt
-source-git-commit: 836feb48c62e0e0ed11248846d63021125796b76
+source-git-commit: 759c96d091194d1d7d670d947169eceac7910730
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '460'
 ht-degree: 4%
 
 ---
@@ -132,6 +132,9 @@ ht-degree: 4%
 * Privacy en gegevensbeheer {#privacy}
    * [Privacyoverzicht](privacy/privacy-overview.md)
    * [Overzicht van gegevensbeheer](privacy/data-governance-overview.md)
+   * IAB TCF 2.0-ondersteuning {#iab}
+      * [IAB TCF 2.0 steun in Echt - tijd CDP](./privacy/iab/overview.md)
+      * [Gegevenssets maken voor het vastleggen van gegevens met IAB TCF 2.0-toestemming](./privacy/iab/dataset-preparation.md)
 * Profielen {#profile}
    * [Profieloverzicht](profile/profile-overview.md)
    * [Identiteiten en naamruimten](profile/identities-overview.md)
