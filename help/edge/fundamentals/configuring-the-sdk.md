@@ -4,7 +4,7 @@ seo-title: De SDK van Adobe Experience Platform Web configureren
 description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 translation-type: tm+mt
-source-git-commit: abd72993577f298141ed0d25b6c4abc42050b68e
+source-git-commit: b7b206573a130af70a82c73a3f9b0a0eb28a513a
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 4%
@@ -78,7 +78,7 @@ Uw toegewezen [!DNL Experience Cloud] organisatie-id.  Wanneer het vormen van ve
 
 ## Gegevensverzameling
 
-### `clickCollectionEnabled`
+### `clickCollectionEnabled` {#clickCollectionEnabled}
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
