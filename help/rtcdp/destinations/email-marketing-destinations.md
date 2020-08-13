@@ -4,9 +4,9 @@ seo-title: E-mailmarketingdoelen
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 seo-description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 6850a1ee5a578a3dccce9f9decd8f6a368705f4a
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -47,15 +47,21 @@ Selecteer op de pagina Segmenten **** selecteren welke segmenten u naar de beste
 
 ![Segmenten selecteren](/help/rtcdp/destinations/assets/email-select-segments.png)
 
-## Stap 3 - selecteer welke schemagebieden als bestemmingsattributen in uw uitgevoerde dossiers te gebruiken {#destination-attributes}
+## Stap 3 - Bestandsnamen configureren
+
+Voor informatie over de dossier - noem het uitgeven opties, verwijs naar de [Configure](/help/rtcdp/destinations/activate-destinations.md#configure) stap in de activerende bestemmingszelfstudie.
+
+## Stap 4 - Selecteer kenmerken - selecteer welke schemavelden u als bestemmingskenmerken in uw geëxporteerde bestanden wilt gebruiken {#destination-attributes}
 
 In deze stap selecteert u welke velden u wilt exporteren naar marketingdoelen per e-mail.
 
-![Doelkenmerken](/help/rtcdp/destinations/assets/destination-attributes.png)
+![Doelkenmerken](/help/rtcdp/destinations/assets/recommended-attributes.png)
+
+Voor meer informatie over deze stap, verwijs naar de [Uitgezochte attributenstap](/help/rtcdp/destinations/activate-destinations.md#select-attributes) in activeert bestemmingsleerprogramma.
 
 ### Identity {#identity}
 
-Wij adviseren dat u een uniek herkenningsteken van uw [verenigingsschema](../../profile/home.md#profile-fragments-and-union-schemas)selecteert. Dit is het veld waarvan de identiteit van uw gebruikers wordt weggefilterd. Meestal is dit veld het e-mailadres, maar het kan ook een id voor een loyaliteitsprogramma of een telefoonnummer zijn. Zie de lijst hieronder voor de gemeenschappelijkste unieke herkenningstekens en hun gebied XDM in het unieschema.
+Wij adviseren dat u een uniek herkenningsteken van uw [verenigingsschema](../../profile/home.md#profile-fragments-and-union-schemas)selecteert. Dit is het veld waarvan de identiteit van uw gebruikers wordt weggefilterd. Meestal is dit veld het e-mailadres, maar het kan ook een id voor een loyaliteitsprogramma of een telefoonnummer zijn. Zie de tabel hieronder voor de meest gebruikelijke unieke id&#39;s en hun XDM-veld in het schema.
 
 | Unieke id | XDM-veld in Unified Schema |
 ---------|----------
@@ -76,8 +82,9 @@ Kies in de keuzelijst Schema welke andere velden u naar de e-mailbestemming wilt
 | Adresstatus | `homeAddress.stateProvince` |
 | Postcode adres | `homeAddress.postalCode` |
 | Geboortedatum | `person.birthDayAndMonth` |
+| Segmentlidmaatschap | `segmentMembership.status` |
 
-## Stap 3 - de Gegevens van de invoer van uw opslagplaats in de bestemming
+## Stap 5 - de gegevens van de invoer van uw opslagplaats in de bestemming
 
 Zie de afzonderlijke artikelen van de e-mailmarketing bestemming om te leren hoe te om gegevens van uw opslagplaats in bestemmingen in te voeren:
 
@@ -89,3 +96,8 @@ Zie de afzonderlijke artikelen van de e-mailmarketing bestemming om te leren hoe
 ## Segmenten activeren voor e-mailmarketingdoelen
 
 Voor instructies op hoe te om segmenten aan e-mail marketing bestemmingen te activeren, zie Gegevens aan Doelen [activeren](/help/rtcdp/destinations/activate-destinations.md).
+
+## Aanvullende bronnen
+
+* [Gegevens naar doelen activeren](/help/rtcdp/destinations/activate-destinations.md)
+* [E-mailmarketingdoelen maken en gegevens activeren met de Flow Service API](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
