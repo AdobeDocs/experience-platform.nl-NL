@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Hulp bij realtime klantprofiel
 translation-type: tm+mt
-source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
+source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 1%
+source-wordcount: '84'
+ht-degree: 4%
 
 ---
 
@@ -22,6 +22,7 @@ ht-degree: 1%
    * [Entiteiten ([!DNL Profile])](api/entities.md)
    * [Exporttaken ([!DNL-profiel])](api/export-jobs.md)
    * [Beleid samenvoegen](api/merge-policies.md)
+   * [Voorvertoning voorbeeldstatus ([!DNL-profiel] voorvertoning)](api/preview-sample-status.md)
    * [[!DNL Profile] systeemtaken (aanvragen verwijderen)](api/profile-system-jobs.md)
 * UI-hulplijnen {#ui}
    * [[!DNL Profile] gebruikershandleiding](ui/user-guide.md)
