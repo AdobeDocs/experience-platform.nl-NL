@@ -1,10 +1,10 @@
 ---
 title: Opdrachten uitvoeren
-seo-title: Het uitvoeren van de bevelen van SDK van het Web van Adobe Experience Platforms
+seo-title: Opdrachten van Adobe Experience Platform Web SDK uitvoeren
 description: Leer hoe te om de bevelen van SDK van het Web van het Experience Platform uit te voeren
 seo-description: Leer hoe te om de bevelen van SDK van het Web van het Experience Platform uit te voeren
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bf4194e1449bddd662f2152f84dbbe90060b5d30
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Het `commandName` vertelt de SDK wat te doen, terwijl `options` zijn de paramete
 
 [Beloften](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) zijn van fundamenteel belang voor de manier waarop de SDK communiceert met de code op uw webpagina. Een promise is een algemene programmeerstructuur en is niet specifiek voor deze SDK of zelfs JavaScript. Een belofte doet dienst als volmacht voor een waarde die niet gekend is wanneer de belofte wordt gecreeerd. Zodra de waarde gekend is, wordt de belofte &quot;opgelost&quot;met de waarde. De functies van de manager kunnen met een belofte worden geassocieerd, zodat u kunt worden op de hoogte gebracht wanneer de belofte is opgelost of wanneer een fout in het proces is voorgekomen om de belofte op te lossen. Lees voor meer informatie over beloften [deze zelfstudie](https://javascript.info/promise-basics) of een van de andere bronnen op het web.
 
-## Voltooien of mislukken
+## Voltooien of mislukken {#handling-success-or-failure}
 
 Elke keer dat een opdracht wordt uitgevoerd, wordt een belofte geretourneerd. De belofte vertegenwoordigt de uiteindelijke voltooiing van het bevel. In het onderstaande voorbeeld kunt u methoden gebruiken `then` en `catch` gebruiken om te bepalen wanneer de opdracht is geslaagd of mislukt.
 
