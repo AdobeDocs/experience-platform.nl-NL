@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: Hulp bij realtime Platform klantgegevens
 translation-type: tm+mt
-source-git-commit: 759c96d091194d1d7d670d947169eceac7910730
+source-git-commit: 5802c05ce166f0b355b17a28655ff2f18f7cd0c4
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '469'
 ht-degree: 4%
 
 ---
@@ -128,13 +128,13 @@ ht-degree: 4%
       * [Profielen en segmenten naar een doel activeren](destinations/activate-destinations.md)
    * Zelfstudies voor doel-API {#api-tutorials}
       * [Verbinding maken met streamingdoelen (AWS Kinesis en Azure Event Hubs) en gegevens activeren](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
-      * [Verbinding maken met marketingdoelen en gegevens activeren](/help/tutorials/destinations/email-marketing-api.md)
+      * [Verbinding maken met marketingdoelen en gegevens activeren](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
 * Privacy en gegevensbeheer {#privacy}
    * [Privacyoverzicht](privacy/privacy-overview.md)
    * [Overzicht van gegevensbeheer](privacy/data-governance-overview.md)
    * IAB TCF 2.0-ondersteuning {#iab}
-      * [IAB TCF 2.0 steun in Echt - tijd CDP](./privacy/iab/overview.md)
-      * [Gegevenssets maken voor het vastleggen van gegevens met IAB TCF 2.0-toestemming](./privacy/iab/dataset-preparation.md)
+      * [IAB TCF 2.0 steun in Echt - tijd CDP](privacy/iab/overview.md)
+      * [Gegevenssets maken voor het vastleggen van gegevens met IAB TCF 2.0-toestemming](privacy/iab/dataset-preparation.md)
 * Profielen {#profile}
    * [Profieloverzicht](profile/profile-overview.md)
    * [Identiteiten en naamruimten](profile/identities-overview.md)
