@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Aan de slag met de Real-time API voor klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 6df3e6579139f01d9877c1f033ea7721ca78118c
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Met behulp van de [!DNL Real-time Customer Profile] API kunt u elementaire CRUD-bewerkingen uitvoeren op profielbronnen, zoals het configureren van berekende kenmerken, het openen van entiteiten, het exporteren van profielgegevens en het verwijderen van overbodige gegevenssets of batches.
 
-Het gebruik van de ontwikkelaarsgids vereist een werkend inzicht in de diverse diensten van het Adobe Experience Platform betrokken bij het werken met [!DNL Profile] gegevens. Voordat u begint te werken met de [!DNL Real-time Customer Profile] API, raadpleegt u de documentatie voor de volgende services:
+Het gebruik van de ontwikkelaarsgids vereist een werkend inzicht in de diverse diensten van Adobe Experience Platform betrokken bij het werken met [!DNL Profile] gegevens. Voordat u begint te werken met de [!DNL Real-time Customer Profile] API, raadpleegt u de documentatie voor de volgende services:
 
 * [!DNL Real-time Customer Profile](../home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [!DNL Adobe Experience Platform Identity Service](../../identity-service/home.md): Verbeter een beter beeld van uw klant en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
@@ -34,13 +34,13 @@ De API-documentatie biedt voorbeeld-API-aanroepen om aan te tonen hoe aanvragen 
 
 De API documentatie vereist ook u om de [authentificatiezelfstudie](../../tutorials/authentication.md) te hebben voltooid om vraag aan [!DNL Platform] eindpunten met succes te maken. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
-* Autorisatie: Drager `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Voor aanvragen voor [!DNL Platform] API&#39;s is een header vereist die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
 
