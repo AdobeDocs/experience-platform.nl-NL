@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform-productdocumentatie
 topic: getting started
 translation-type: tm+mt
-source-git-commit: b67513a83a46861872e92d9db57232554e7d831b
+source-git-commit: c91bcdff5b57ef69f79e211fbeb912e3d7fcdb39
 workflow-type: tm+mt
-source-wordcount: '7237'
+source-wordcount: '7245'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 **Afbeelding:** In de [!DNL Decisioning Service]code wordt de optie Afdekkend gebruikt in beslissingsregels om te bepalen hoe vaak een aanbieding wordt gepresenteerd. Er zijn twee soorten plafonds, hoeveel keer een aanbod kan worden voorgesteld over het gecombineerde doelpubliek, ook bekend als &quot;Global Cap&quot; en hoeveel keer een aanbod kan worden voorgesteld aan dezelfde eindgebruiker, ook wel bekend als &quot;Profile Cap&quot;.
 
-**Catalogus:** In [!DNL Real-time Customer Data Platform], in bronnen en bestemmingen, is een catalogus galerij met beschikbare verbindingen aan de toepassingen van Adobe en de technologieën van de derde partij.
+**Catalogus:** In [!DNL Real-time Customer Data Platform], in bronnen en bestemmingen, is een catalogus een galerij met beschikbare verbindingen aan de toepassingen van Adobe en de technologieën van de derde partij.
 
 **Klasse:** Een klasse bepaalt de kleinste reeks gebieden die worden gebruikt om een schema te bouwen en is het basisgedrag dat het bedrijfsvoorwerp beschrijft.
 
@@ -210,7 +210,7 @@ ht-degree: 0%
 
 **Opslagstrategie voor delta:** `Delta save strategy` is een optie voor het invoeren van gegevens van derden via een verbinding. Met deze optie kan de gebruiker opgeven dat nieuwe of gewijzigde rijen met brongegevens worden ingevoerd in [!DNL Experience Platform]. De nieuwe rijen worden toegevoegd aan het eind van de dataset en de veranderde rijen worden bijgewerkt in de dataset op [!DNL Experience Platform].
 
-**Doel:** In [!DNL Real-time Customer Data Platform] een bestemming is een algemene term voor elk systeem, zoals een Adobe-toepassing, een advertentieserver of een ad-netwerk, waarin een publiek wordt geactiveerd en geleverd.
+**Doel:** In [!DNL Real-time Customer Data Platform] een bestemming is een algemene term voor elk eindpunt, zoals een Adobe-toepassing, een advertentieplatform, een cloudopslagservice of een marketingservice, waarbij een publiek wordt geactiveerd en geleverd.
 
 **Doelcategorie:** Een bestemmingscategorie is een groepering van [!DNL Real-time Customer Data Platform] bestemmingen die gelijkaardige kenmerken hebben.
 
@@ -326,9 +326,9 @@ ht-degree: 0%
 
 ## J
 
-**[!DNL JupyterLab]:**Een open-bron web-based interface voor Project[!DNL Jupyter]en is strak geïntegreerd in[!DNL Experience Platform].
+**[!DNL JupyterLab]:** Een open-bron web-based interface voor Project [!DNL Jupyter] en is strak geïntegreerd in [!DNL Experience Platform].
 
-**[!DNL Jupyter Notebook]:**Een opensource webtoepassing waarmee gebruikers documenten kunnen maken en delen die live code, vergelijkingen, visualisaties en beschrijvende tekst bevatten.
+**[!DNL Jupyter Notebook]:** Een opensource webtoepassing waarmee gebruikers documenten kunnen maken en delen die live code, vergelijkingen, visualisaties en beschrijvende tekst bevatten.
 
 ## K
 
@@ -366,7 +366,7 @@ ht-degree: 0%
 
 **Niet-productiesandbox:** Niet-productiesandboxen zijn een vorm van gegevensvirtualisatie waarmee u gegevens kunt isoleren van andere sandboxen. Deze sandboxen worden doorgaans gebruikt voor ontwikkelingsexperimenten, -tests of -tests. Niet-productiesandboxen kunnen worden hersteld en verwijderd.
 
-**[!DNL Notebooks]:**[!DNL Notebooks]zijn ontworpen met *[!DNL Jupyter Notebook]*en bevatten analysebeschrijving, resultaten en kunnen worden uitgevoerd om gegevensanalyse uit te voeren.
+**[!DNL Notebooks]:** [!DNL Notebooks] zijn ontworpen met *[!DNL Jupyter Notebook]* en bevatten analysebeschrijving, resultaten en kunnen worden uitgevoerd om gegevensanalyse uit te voeren.
 
 [Terug naar boven](#adobe-experience-platform-glossary)
 
@@ -490,7 +490,7 @@ ht-degree: 0%
 
 **Evaluatiemethode segment:** De geplande evaluatie van het segment laat een terugkerend programma voor het runnen van een uitvoerbaan in een specifieke tijd toe, terwijl de evaluatie op bestelling het creëren van een segmentbaan impliceert om het publiek onmiddellijk te bouwen.
 
-**Segment exporteren:** De uitvoer van het segment is één van de twee soorten bestemmingen en verzendt de profielen die kwalificeren en aan de bestemming in kaart zijn gebracht. Gebruikt segment- en gebruikers-id&#39;s en pseudoniem-gegevens en integreert doorgaans met sociale netwerken en andere doelplatforms voor digitale media.
+**Segment exporteren:** De uitvoer van segmenten is een van de twee soorten bestemmingen in [!DNL Real-time Customer Data Platform]. Met segment de uitvoer, kunt u de profielen verzenden die kwalificeren en aan de bestemming in kaart zijn gebracht. Gebruikt segment- en gebruikers-id&#39;s en pseudoniem-gegevens en integreert doorgaans met sociale netwerken en andere doelplatforms voor digitale media.
 
 **Segment-id:** Segment-id is een automatisch gegenereerde id die aan een segment is gekoppeld.
 
@@ -532,7 +532,7 @@ ht-degree: 0%
 
 **Streaming inname:** Streaming opname biedt gebruikers een methode om gegevens van client- en serverapparaten naar [!DNL Experience Platform] realtime te verzenden.
 
-**Streaming segmentering:** Streaming segmentatie is een doorlopend proces voor gegevensselectie dat segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-time Customer Profile]. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat uw doelgroep relevant blijft.
+**Streaming segmentering:** Streaming segmentatie is een doorlopend proces voor gegevensselectie dat segmenten bijwerkt als reactie op gebruikersactiviteit. Zodra een segment is gebouwd en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens aan [!DNL Real-time Customer Profile]. Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
 
 **Symbool:** Symbool is een afkorting van een naamruimte voor identiteiten die kan worden gebruikt als referentie in API&#39;s.
 
