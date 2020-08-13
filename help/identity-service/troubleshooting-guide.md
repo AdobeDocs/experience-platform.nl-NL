@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Handleiding voor het oplossen van problemen met identiteitsservice van Adobe Experience Platforms
+title: Handleiding voor het oplossen van problemen met de identiteitsservice van Adobe Experience Platform
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5d7e6387382e20b3e7f07070006b6d9d59ac47eb
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Handleiding voor het oplossen van problemen met identiteitsservice
 
-Dit document biedt antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Identity Service]en een gids voor probleemoplossing voor algemene fouten. Raadpleeg de handleiding voor het oplossen van problemen met [!DNL Platform] Adobe Experience Platform API&#39;s in het algemeen voor vragen en het oplossen van problemen met betrekking tot API&#39;s [](../landing/troubleshooting.md).
+Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Identity Service]en een gids voor probleemoplossing voor algemene fouten. Raadpleeg de handleiding voor het oplossen van problemen met [!DNL Platform] Adobe Experience Platform API&#39;s in het algemeen voor vragen en het oplossen van problemen met betrekking tot API&#39;s [](../landing/troubleshooting.md).
 
 Gegevens die één enkele klant identificeren, worden vaak gefragmenteerd over de verschillende apparaten en systemen die zij gebruiken om met uw merk in contact te komen. [!DNL Identity Service] verzamelt deze gefragmenteerde identiteiten, waardoor u een volledig inzicht krijgt in het gedrag van de klant, zodat u in real-time een ongekende digitale ervaring kunt opdoen. Zie het overzicht [van](./home.md)Identiteitsservice voor meer informatie.
 
@@ -72,20 +72,20 @@ Identiteitsvelden moeten worden gekoppeld aan een bestaande naamruimte voor iden
 
 Voor geleidelijke instructies voor het bepalen van namespace wanneer het creëren van een identiteitsbeschrijver gebruikend API, gelieve de sectie over het [creëren van een beschrijver](../xdm/tutorials/create-schema-ui.md) in de de ontwikkelaarsgids van het Registratie van het Schema te raadplegen. Voor het merken van een schemagebied als identiteit in UI, volg de stappen in het [Zelfstudie](../xdm/tutorials/create-schema-api.md)van de Redacteur van het Schema.
 
-## Wat zijn de standaardnaamruimten van Experience Platform?
+## Wat zijn de standaardnaamruimten van Experience Platform? {#standard-namespaces}
 
 De volgende standaardnaamruimten kunnen door alle organisaties in Experience Platform worden gebruikt:
 
-| Weergavenaam | ID | Code | Beschrijving |
+| Weergavenaam | Id | Code | Beschrijving |
 | ------------ | --- | --- | ----------- |
 | CORE | 0 | CORE | oudere naam: &quot;Adobe AudienceManager&quot; |
-| ECID | 4 | ECID | alias: &quot;Adobe Marketing Cloud-id&quot;, &quot;Adobe Experience Cloud-id&quot;, &quot;Adobe Experience Platform-id&quot; |
-| E-mail | 6 | E-mail |  |
+| ECID | 4 | ECID | alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; |
+| Email | 6 | Email |  |
 | E-mail (SHA256, verlaagd) | 11 | E-mails | Standaardnaamruimte voor vooraf gehashte e-mail. Waarden die in deze naamruimte worden opgegeven, worden omgezet in kleine letters voordat er een hash plaatsvindt met SHA-256. |
 | Telefoon | 7 | Telefoon |  |
 | Windows-ID | 8 | WAID |  |
 | AdCloud | 411 | AdCloud | alias: Ad Cloud |
-| Adobe Target | 9 | TNTID | Target-id |
+| Adobe Target | 9 | TNTID | Doel-id |
 | Google-advertentie-id | 20914 | GAID | GAID |
 | Apple IDFA | 20915 | IDFA | ID voor adverteerders |
 
