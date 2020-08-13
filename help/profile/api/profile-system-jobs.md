@@ -4,17 +4,17 @@ solution: Adobe Experience Platform
 title: Systeemtaken profiel - Real-time API voor klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
 workflow-type: tm+mt
 source-wordcount: '1420'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
 # Het taakeindpunt van het profielsysteem (verzoeken van de Schrapping)
 
-Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor afzonderlijke klanten maken. Gegevens die in [!DNL Platform] worden ingevoerd, worden zowel in de [!DNL Data Lake] gegevensopslag als in de [!DNL Real-time Customer Profile] gegevensopslag opgeslagen. Soms kan het nodig zijn om een gegevensset of batch uit de profielopslag te verwijderen om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de [!DNL Real-time Customer Profile] API gebruiken om een [!DNL Profile] systeemtaak te maken, ook wel een &quot;[!DNL delete request]&quot;-taak genoemd, die indien nodig ook kan worden gewijzigd, bewaakt of verwijderd.
+Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor individuele klanten maken. Gegevens die in [!DNL Platform] worden ingevoerd, worden zowel in de [!DNL Data Lake] gegevensopslag als in de [!DNL Real-time Customer Profile] gegevensopslag opgeslagen. Soms kan het nodig zijn om een gegevensset of batch uit de profielopslag te verwijderen om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de [!DNL Real-time Customer Profile] API gebruiken om een [!DNL Profile] systeemtaak te maken, ook wel een &quot;[!DNL delete request]&quot;-taak genoemd, die indien nodig ook kan worden gewijzigd, bewaakt of verwijderd.
 
 >[!NOTE]
 >Als u gegevenssets of batches wilt verwijderen uit de [!DNL Data Lake]catalogus, gaat u naar het overzicht [van de](../../catalog/home.md) Catalogusservice voor instructies.
@@ -46,7 +46,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 **Verzoek**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -267,7 +267,7 @@ In het antwoord worden de details van het verwijderingsverzoek weergegeven, incl
 }
 ```
 
-| Eigenschappen | Beschrijving |
+| Properties | Beschrijving |
 |---|---|
 | `jobType` | Het type baan dat wordt gecreeerd, in dit geval zal het altijd terugkeren `"DELETE"`. |
 | `status` | De status van de verwijderaanvraag. Mogelijke waarden: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
@@ -277,7 +277,7 @@ Zodra de status van de verwijderaanvraag is ingesteld, kunt `"COMPLETED"` u beve
 
 ## Een verwijderingsaanvraag verwijderen
 
-[!DNL Experience Platform] Hiermee kunt u een eerdere aanvraag verwijderen. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de verwijdertaak niet is voltooid of vastgelopen in het verwerkingsstadium. Om een schrappingsverzoek te verwijderen, kunt u een DELETE verzoek aan het `/system/jobs` eindpunt uitvoeren en identiteitskaart van het schrappingsverzoek omvatten dat u wenst om aan de verzoekweg te verwijderen.
+[!DNL Experience Platform] Hiermee kunt u een eerdere aanvraag verwijderen. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de verwijdertaak niet is voltooid of vastgelopen in het verwerkingsstadium. Om een schrappingsverzoek te verwijderen, kunt u een verzoek van DELETE aan het `/system/jobs` eindpunt uitvoeren en identiteitskaart van het schrappingsverzoek omvatten dat u wenst om aan de verzoekweg te verwijderen.
 
 **API-indeling**
 
