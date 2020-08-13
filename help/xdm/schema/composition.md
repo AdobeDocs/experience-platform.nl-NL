@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Basisbeginselen van de schemacompositie
 topic: overview
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: dae86df3ca4fcc9c5951068e905081df29e3b5f2
 workflow-type: tm+mt
-source-wordcount: '2628'
+source-wordcount: '2782'
 ht-degree: 0%
 
 ---
@@ -59,13 +59,52 @@ Zowel de verslagen als de tijdreeksschema&#39;s bevatten een kaart van identitei
 
 ### [!UICONTROL Identiteit]
 
-Schema&#39;s worden gebruikt om gegevens in te voeren [!DNL Experience Platform]. Deze gegevens kunnen over de veelvoudige diensten worden gebruikt om één enkele, verenigde mening van een individuele entiteit tot stand te brengen. Daarom is het belangrijk bij het denken over schema&#39;s om over &quot;[!UICONTROL Identiteit]&quot;te denken en welke gebieden kunnen worden gebruikt om een onderwerp te identificeren ongeacht waar de gegevens uit kunnen komen.
+Schema&#39;s worden gebruikt om gegevens in te voeren [!DNL Experience Platform]. Deze gegevens kunnen over de veelvoudige diensten worden gebruikt om één enkele, verenigde mening van een individuele entiteit tot stand te brengen. Daarom is het belangrijk wanneer het denken over schema&#39;s om over klantenidentiteiten te denken en welke gebieden kunnen worden gebruikt om een onderwerp te identificeren ongeacht waar de gegevens uit kunnen komen.
 
-Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;[!UICONTROL Identiteit]&quot;worden gemerkt. Bij gegevensinvoer worden de gegevens in die velden ingevoegd in de &quot;[!UICONTROL Identiteitsgrafiek]&quot; voor die persoon. De grafiekgegevens kunnen dan door [!DNL Real-time Customer Profile](../../profile/home.md) en andere [!DNL Experience Platform] diensten worden betreden om een geneutraliseerde mening van elke individuele klant te verstrekken.
+Om dit proces te helpen, kunnen de belangrijkste gebieden binnen uw schema&#39;s als identiteiten worden gemerkt. Bij gegevensinvoer worden de gegevens in die velden ingevoegd in de &quot;[!UICONTROL Identiteitsgrafiek]&quot; voor die persoon. De grafiekgegevens kunnen dan door [!DNL Real-time Customer Profile](../../profile/home.md) en andere [!DNL Experience Platform] diensten worden betreden om een geneutraliseerde mening van elke individuele klant te verstrekken.
 
 Velden die algemeen als &quot;[!UICONTROL Identiteit]&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html)CRM-id of andere unieke id-velden. U zou ook om het even welke unieke herkenningstekens moeten overwegen specifiek voor uw organisatie, aangezien zij ook goede &quot;[!UICONTROL Identiteit]&quot;gebieden kunnen zijn.
 
-Het is belangrijk om over klantenidentiteiten tijdens de schema planningsfase te denken helpen ervoor zorgen de gegevens worden samengebracht om het meest robuuste profiel mogelijk te bouwen. Zie het overzicht [van de](../../identity-service/home.md) Identiteitsdienst voor meer informatie over hoe de identiteitsinformatie u kan helpen digitale ervaringen aan uw klanten leveren.
+Het is belangrijk om over klantenidentiteiten tijdens de schema planningsfase te denken helpen ervoor zorgen de gegevens worden samengebracht om het meest robuuste profiel mogelijk te bouwen. Zie het overzicht over [Adobe Experience Platform Identity Service](../../identity-service/home.md) voor meer informatie over hoe identiteitsgegevens u kunnen helpen uw klanten digitale ervaringen te bieden.
+
+#### xdm:identityMap
+
+`xdm:identityMap` is een map-type gebied dat de diverse identiteitswaarden voor een individu, samen met hun bijbehorende namespaces beschrijft. Dit gebied kan worden gebruikt om identiteitsinformatie voor uw schema&#39;s te verstrekken, in plaats van het bepalen van identiteitswaarden binnen de structuur van het schema zelf.
+
+Een voorbeeld van een eenvoudige identiteitskaart zou als het volgende kijken:
+
+```json
+"identityMap": {
+  "email": [
+    {
+      "id": "jsmith@example.com",
+      "primary": false
+    }
+  ],
+  "ECID": [
+    {
+      "id": "87098882279810196101440938110216748923",
+      "primary": false
+    },
+    {
+      "id": "55019962992006103186215643814973128178",
+      "primary": false
+    }
+  ],
+  "loyaltyId": [
+    {
+      "id": "2e33192000007456-0365c00000000000",
+      "primary": true
+    }
+  ]
+}
+```
+
+Zoals in het bovenstaande voorbeeld wordt getoond, vertegenwoordigt elke sleutel in het `identityMap` object een naamruimte voor identiteit. De waarde voor elke sleutel is een array van objecten die de identiteitswaarden (`id`) voor de respectievelijke naamruimte vertegenwoordigt. Raadpleeg de [!DNL Identity Service] documentatie voor een [lijst met standaardnaamruimten](../../identity-service/troubleshooting-guide.md#standard-namespaces) die door Adobe-toepassingen worden herkend.
+
+>[!NOTE]
+>
+>Een Booleaanse waarde die aangeeft of de waarde een primaire identiteit (`primary`) is, kan ook worden opgegeven voor elke identiteitswaarde. De primaire identiteiten hoeven alleen te worden vastgesteld voor schema&#39;s die bestemd zijn om te worden gebruikt in [!DNL Real-time Customer Profile]. Zie de sectie over [samenvoegingsschema&#39;s](#union) voor meer informatie.
 
 ### Beginselen voor de ontwikkeling van schema&#39;s {#evolution}
 
@@ -83,7 +122,7 @@ Aangezien het handhaven van achterwaartse verenigbaarheid essentieel voor schema
 
 ### Schema&#39;s en gegevensinvoer
 
-Om gegevens in te voeren in [!DNL Experience Platform], moet een dataset eerst worden gecreeerd. Datasets zijn de bouwstenen voor gegevenstransformatie en -tracking voor [!DNL Catalog Service](../../catalog/home.md), en vertegenwoordigen over het algemeen tabellen of bestanden die ingesloten gegevens bevatten. Alle datasets zijn gebaseerd op bestaande schema&#39;s XDM, die beperkingen voor wat verstrekken de ingebedde gegevens zouden moeten bevatten en hoe het zou moeten worden gestructureerd. Zie het overzicht over de Ingestie [van de Gegevens van het](../../ingestion/home.md) Adobe Experience Platform voor meer informatie.
+Om gegevens in te voeren in [!DNL Experience Platform], moet een dataset eerst worden gecreeerd. Datasets zijn de bouwstenen voor gegevenstransformatie en -tracking voor [!DNL Catalog Service](../../catalog/home.md), en vertegenwoordigen over het algemeen tabellen of bestanden die ingesloten gegevens bevatten. Alle datasets zijn gebaseerd op bestaande schema&#39;s XDM, die beperkingen voor wat verstrekken de ingebedde gegevens zouden moeten bevatten en hoe het zou moeten worden gestructureerd. Zie het overzicht over [Adobe Experience Platform Data Ingestie](../../ingestion/home.md) voor meer informatie.
 
 ## Bouwstenen van een schema
 
@@ -131,7 +170,7 @@ Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als
 
 Een veld is de eenvoudigste bouwsteen van een schema. Velden bieden beperkingen met betrekking tot het type gegevens dat ze kunnen bevatten door een specifiek gegevenstype te definiëren. Deze basistypen definiëren één veld, terwijl u met de eerder vermelde [gegevenstypen](#data-type) meerdere subvelden kunt definiëren en dezelfde structuur voor meerdere velden kunt gebruiken in verschillende schema&#39;s. Zo, naast het bepalen van het &quot;gegevenstype&quot;van een gebied als één van de gegevenstypes die in de registratie worden bepaald, [!DNL Experience Platform] steunt fundamentele scalaire types zoals:
 
-* String
+* Tekenreeks
 * Geheel
 * Getal
 * Boolean
@@ -182,7 +221,7 @@ In het onderstaande diagram ziet u deze schema&#39;s en de velden die door elke 
 
 ![](../images/schema-composition/composition.png)
 
-### Unie {#union}
+### Samenvoegen {#union}
 
 Terwijl [!DNL Experience Platform] u schema&#39;s voor bepaalde gebruiksgevallen kunt samenstellen, staat het u ook toe om een &quot;unie&quot;van schema&#39;s voor een specifiek klassentype te zien. Het vorige diagram toont twee schema&#39;s die op de klasse XDM ExperienceEvent en twee schema&#39;s worden gebaseerd die op [!DNL XDM Individual Profile] klasse worden gebaseerd. De samenvoeging, die hieronder wordt weergegeven, aggregeert de velden van alle schema&#39;s die dezelfde klasse ([!DNL XDM ExperienceEvent] respectievelijk [!DNL XDM Individual Profile]) delen.
 
@@ -200,7 +239,7 @@ Alle gegevensbestanden die in worden opgenomen [!DNL Experience Platform] moeten
 
 Nu u de grondbeginselen van schemacompositie begrijpt, bent u bereid beginnen bouwend schema&#39;s gebruikend [!DNL Schema Registry].
 
-Het [!DNL Schema Registry] wordt gebruikt om tot het [!DNL Schema Library] binnen Adobe Experience Platform toegang te hebben, en verstrekt een gebruikersinterface en RESTful API waarvan alle beschikbare bibliotheekmiddelen toegankelijk zijn. Het [!DNL Schema Library] bevat de middelen van de Industrie die door Adobe worden bepaald, de middelen van de Leverancier door [!DNL Experience Platform] partners, en klassen, mengen, gegevenstypes, en schema&#39;s worden bepaald die door leden van uw organisatie zijn samengesteld die.
+Het [!DNL Schema Registry] wordt gebruikt om toegang te krijgen tot het [!DNL Schema Library] binnen Adobe Experience Platform en biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen. Het [!DNL Schema Library] bevat de middelen van de Industrie die door Adobe worden bepaald, de middelen van de Leverancier door [!DNL Experience Platform] partners, en klassen, mengen, gegevenstypes, en schema&#39;s worden bepaald die door leden van uw organisatie zijn samengesteld die.
 
 Als u wilt beginnen met het samenstellen van een schema met behulp van de UI, volgt u de zelfstudie [van de](../tutorials/create-schema-ui.md) Schema-editor om het schema &quot;Loyalty-leden&quot; te bouwen dat in dit document wordt vermeld.
 
