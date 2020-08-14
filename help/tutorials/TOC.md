@@ -3,15 +3,15 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Tutorials
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 1%
+source-wordcount: '41'
+ht-degree: 2%
 
 ---
 
 
-# Zelfstudies voor Adobe Experience Platforms {#tutorials}
+# Adobe Experience Platform tutorials {#tutorials}
 
 * [Overzicht van Tutorials](home.md)
 * [Verifiëren voor Experience Platform-API&#39;s](authentication.md)
@@ -19,9 +19,7 @@ ht-degree: 1%
 * [Beheer van gegevens en privacy](data-governance-privacy.md)
 * [Werkruimte voor gegevenswetenschap](data-science-workspace.md)
 * [Beslissing](decisioning.md)
-* Doelen {#destinations}
-   * [Een doel maken en gegevens activeren (API)](destinations/api-tutorial.md)
-   * [E-mailmarketingbestemming (API)](destinations/email-marketing-api.md)
+* [Doelen](destinations.md)
 * [Gegevens in Platform opnemen](data-ingestion.md)
 * [Profielen en identiteiten](configure-profile.md)
 * [Schema&#39;s en relatiebeschrijvingen](schemas.md)
