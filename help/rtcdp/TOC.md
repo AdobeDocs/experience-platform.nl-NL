@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: Hulp bij realtime Platform klantgegevens
 translation-type: tm+mt
-source-git-commit: 5802c05ce166f0b355b17a28655ff2f18f7cd0c4
+source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '460'
 ht-degree: 4%
 
 ---
@@ -128,7 +128,7 @@ ht-degree: 4%
       * [Profielen en segmenten naar een doel activeren](destinations/activate-destinations.md)
    * Zelfstudies voor doel-API {#api-tutorials}
       * [Verbinding maken met streamingdoelen (AWS Kinesis en Azure Event Hubs) en gegevens activeren](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
-      * [Verbinding maken met marketingdoelen en gegevens activeren](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
+      * [Verbinding maken met marketingdoelen en gegevens activeren](/help/rtcdp/destinations/email-marketing-api.md)
 * Privacy en gegevensbeheer {#privacy}
    * [Privacyoverzicht](privacy/privacy-overview.md)
    * [Overzicht van gegevensbeheer](privacy/data-governance-overview.md)
