@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een doel maken en gegevens activeren met API's
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
+source-git-commit: cd593e67578f6c6831f02c3b9dcb9a0db4def48a
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%
@@ -16,10 +16,10 @@ ht-degree: 0%
 
 Leer om verschillende soorten bestemmingen tot stand te brengen en gegevens te activeren. Deze functionaliteit is beschikbaar voor gebruikers van het Platform van de Klant van de [Adobe in real time](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html).
 
-## E-mailmarketingdoelen
+## E-mailmarketingdoelen {#email-destinations}
 
 * [Een e-mailmarketingbestemming maken en gegevens activeren](/help/rtcdp/destinations/email-marketing-api.md)
 
-## Streaming naar cloudopslag
+## Streaming naar cloudopslag {#streaming-destinations}
 
 * [Verbinding maken met streaming doelen en gegevens activeren](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
