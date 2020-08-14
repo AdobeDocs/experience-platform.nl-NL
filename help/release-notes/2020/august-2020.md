@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1d9c8cbf273e9aef13e34df91a98b6c08180c8ff
+source-git-commit: 8b540a108336ae4475f072b71a34e37cac064826
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '452'
 ht-degree: 3%
 
 ---
@@ -65,7 +65,6 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Bewaking van de stroom | Gebruikers kunnen alle flowuitvoering controleren en een gedetailleerde weergave van elke uitvoering bekijken, zoals voltooiingsstatus, uitvoerduur, lijst met verwerkte bestanden, fouten en metriek. Zie het document met [controlegegevens](../../sources/tutorials/ui/monitor.md) voor meer informatie. |
-| Account bijwerken | Gebruikers kunnen de referenties, de naam en de beschrijving van bestaande accounts bijwerken om zinvollere informatie te verstrekken en eventuele gemaakte fouten te corrigeren. |
 | Meldingen voor stroomuitvoering | Gebruikers kunnen zich abonneren op gebeurtenissen en websites registreren om realtime meldingen te ontvangen over de status, metriek en fouten met betrekking tot flowuitvoering. |
 | Verbeteringen in gebruikerscatalogus | Updates voor het catalogusscherm van bronnen zodat u gemakkelijker toegang hebt tot primaire acties van geselecteerde objecten. |
 
