@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;popular topics
+keywords: Experience Platform;home;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
 title: Overzicht van de Data Science Workspace
 topic: overview
+description: Deze gids verstrekt een overzicht van de belangrijkste concepten met betrekking tot de Werkruimte van de Wetenschap van Gegevens.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2584'
 ht-degree: 0%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 0%
 
 # Overzicht van de Data Science Workspace
 
-Adobe Experience Platform [!DNL Data Science Workspace] gebruikt machinaal leren en kunstmatige intelligentie om inzichten van uw gegevens te ontketenen. Dankzij de geïntegreerde functie in Adobe Experience Platform kunt u [!DNL Data Science Workspace] voorspellingen maken met uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen.
+Adobe Experience Platform [!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzichten uit uw gegevens te halen. Met de geïntegreerde Adobe Experience Platform-software kunt u [!DNL Data Science Workspace] voorspellingen maken op basis van uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen.
 
 Gegevenswetenschappers van alle vaardigheidsniveaus zullen geavanceerde, makkelijk te gebruiken hulpmiddelen vinden die snelle ontwikkeling, opleiding, en het stemmen van machine het leren recepten steunen - alle voordelen van AI technologie, zonder de ingewikkeldheid.
 
 Met [!DNL Data Science Workspace]behulp van computers kunnen gegevenswetenschappers eenvoudig intelligente services-API&#39;s maken. Deze services werken samen met andere Adobe-services, zoals Adobe Target en Adobe Analytics Cloud, om u te helpen persoonlijke, doelgerichte digitale ervaringen te automatiseren voor web-, desktop- en mobiele apps.
 
-Deze handleiding geeft een overzicht van de belangrijkste concepten die betrekking hebben op [!DNL Data Science Workspace].
+Deze handleiding biedt een overzicht van de belangrijkste concepten die betrekking hebben op [!DNL Data Science Workspace].
 
 ## Inleiding
 
@@ -29,7 +30,7 @@ Hoe belangrijk het ook is, het overstappen van gegevens naar inzichten kan hoge 
 
 Met [!DNL Data Science Workspace]Adobe Experience Platform kunt u op ervaring gerichte AI in de hele onderneming introduceren, en gegevens-tot-inzichten-aan-code stroomlijnen en versnellen met:
 - Een framework voor machinetlering en runtime
-- Geïntegreerde toegang tot uw gegevens die in Adobe Experience Platform worden opgeslagen
+- Geïntegreerde toegang tot uw gegevens die in Adobe Experience Platform zijn opgeslagen
 - Geïntegreerd gegevensschema gebaseerd op [!DNL Experience Data Model] (XDM)
 - De verwerkingskracht die essentieel is voor het leren van machines/AI en het beheren van grote datasets
 - Prebuilt machine het leren recepten om de sprong in AI gedreven ervaringen te versnellen
@@ -85,9 +86,9 @@ Ongeacht uw expertise op het gebied van gegevenswetenschap [!DNL Data Science Wo
 
 ### Gegevensexploratie
 
-Het vinden van de juiste gegevens en het voorbereiden ervan is het meest arbeidsintensieve onderdeel van het opbouwen van een effectief recept. [!DNL Data Science Workspace] en Adobe Experience Platform helpen u sneller van gegevens tot inzichten te komen.
+Het vinden van de juiste gegevens en het voorbereiden ervan is het meest arbeidsintensieve onderdeel van het opbouwen van een effectief recept. [!DNL Data Science Workspace] en Adobe Experience Platform helpt u sneller van gegevens naar inzichten te gaan.
 
-Op Adobe Experience Platform, zijn uw dwars-kanaalgegevens gecentraliseerd en opgeslagen in het gestandaardiseerde XDM schema, zodat zijn de gegevens gemakkelijker te vinden, te begrijpen en schoon. Één enkele opslag van gegevens die op een gemeenschappelijk schema worden gebaseerd kan u ontelbare uren van gegevensexploratie en voorbereiding besparen.
+Op Adobe Experience Platform worden uw gegevens over meerdere kanalen gecentraliseerd en opgeslagen in het gestandaardiseerde XDM-schema, zodat gegevens eenvoudiger te vinden, te begrijpen en schoon zijn. Één enkele opslag van gegevens die op een gemeenschappelijk schema worden gebaseerd kan u ontelbare uren van gegevensexploratie en voorbereiding besparen.
 
 Terwijl u bladert, gebruikt u R, [!DNL Python]of Scala met de geïntegreerde, gehoste [!DNL Jupyter Notebook] versie om door de gegevenscatalogus te bladeren [!DNL Platform]. Als u een van deze talen gebruikt, kunt u ook gebruikmaken van [!DNL Spark] ML en TensorFlow. Begin helemaal opnieuw of gebruik een van de laptopsjablonen voor specifieke bedrijfsproblemen.
 
@@ -99,7 +100,7 @@ Met [!DNL Data Science Workspace], beslist u hoe u recepten wilt ontwerpen.
 
 - Bespaar tijd door te bladeren naar een vooraf samengesteld recept dat aan uw bedrijfsbehoeften voldoet, dat u kunt gebruiken zoals is of vormen om aan uw specifieke vereisten te voldoen.
 - Maak een geheel nieuw recept en gebruik de ontwerpruntime in Jupyter Notebook om het recept te ontwikkelen en te registreren.
-- Upload een recept dat buiten het Adobe Experience Platform is geschreven naar [!DNL Data Science Workspace] of importeer recept-code uit een opslagplaats, bijvoorbeeld [!DNL Git]met de verificatie en integratie die beschikbaar zijn tussen [!DNL Git] en [!DNL Data Science Workspace].
+- Upload een recept dat buiten Adobe Experience Platform is ontworpen naar [!DNL Data Science Workspace] of importeer recept-code uit een opslagplaats, bijvoorbeeld [!DNL Git]met de verificatie en integratie die beschikbaar zijn tussen [!DNL Git] en [!DNL Data Science Workspace].
 
 ### Experimentatie
 
