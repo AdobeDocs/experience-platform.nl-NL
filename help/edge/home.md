@@ -1,10 +1,11 @@
 ---
-title: Help bij Adobe Experience Platform Web SDK
-seo-title: Help bij Adobe Experience Platform Web SDK
-description: Leer welke SDK van het Web van het Adobe Experience Platform is en hoe het kan worden gebruikt.
+keywords: web sdk;SDK;web SDK;Launch;launch
+title: Adobe Experience Platform Web SDK Help
+seo-title: Adobe Experience Platform Web SDK Help
+description: Leer wat Adobe Experience Platform Web SDK is en hoe deze kan worden gebruikt.
 seo-description: klanten van de Adobe Experience Cloud in staat stellen te communiceren met de verschillende diensten in de Experience Cloud.
 translation-type: tm+mt
-source-git-commit: fc8b26e237821d5fa2d72fb38189894ed0b05271
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 0%
@@ -12,17 +13,17 @@ ht-degree: 0%
 ---
 
 
-# Wat is SDK van het Web van Adobe Experience Platform
+# Wat is Adobe Experience Platform Web SDK
 
-Het Web SDK van het Adobe Experience Platform is een cliënt-kant bibliotheek JavaScript die klanten van Adobe Experience Cloud toestaat om met de diverse diensten in de [!DNL Experience Cloud] door de Adobe in wisselwerking te staan [!DNL Experience Platform Edge Network]. Naast de JavaScript-bibliotheek is er een [extensie](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) Starten die u kunt helpen met uw Web SDK-configuraties.
+Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van de Adobe Experience Cloud kunnen communiceren met de verschillende services in de [!DNL Experience Cloud] Adobe [!DNL Experience Platform Edge Network]. Naast de JavaScript-bibliotheek is er een [extensie](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) Starten die u kunt helpen met uw Web SDK-configuraties.
 
 ## Beleef de rand
 
 [!DNL Adobe Experience Platform Web SDK] maakt deel uit van de verzameling waaruit Experience Edge bestaat. Experience Edge bestaat uit drie technologieën:
 
-* **[!DNL Adobe Experience Platform Web SDK]:**Een JavaScript SDK en[!DNL Launch]extensie voor een drastische vereenvoudiging van de implementatie van[!DNL Adobe]technologieën
+* **[!DNL Adobe Experience Platform Web SDK]:** Een JavaScript SDK en [!DNL Launch] extensie voor een drastische vereenvoudiging van de implementatie van [!DNL Adobe] technologieën
 * **Adobe Experience Platform Mobile SDK:** Een uitbreiding van de mobiele SDK van v5 zodat klanten de nieuwe implementatiemethode kunnen gebruiken
-* **[!DNL Adobe Experience Platform Edge Network]:**Een globaal verdeeld netwerk van servers die een nieuwe methodologie toelaten om[!DNL Adobe]producten op te stellen
+* **[!DNL Adobe Experience Platform Edge Network]:** Een globaal verdeeld netwerk van servers die een nieuwe methodologie toelaten om [!DNL Adobe] producten op te stellen
 
 Het [!DNL Adobe Experience Edge] is een nieuw kader voor gegevensverzameling met lage latentie, pluggable computergebruik en snelle gegevensactivering op alle adresseerbare kanalen.
 
@@ -41,13 +42,13 @@ Met één enkel geconsolideerd randsysteem kunnen klanten hun reclame-, marketin
 
 ## Video-overzicht
 
-De volgende video geeft een overzicht van het Adobe Experience Platform [!DNL Web SDK] en [!DNL Edge Network].
+De volgende video geeft een overzicht van de Adobe Experience Platform [!DNL Web SDK] en [!DNL Edge Network].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
-## SDKs die door het Web SDK van het Adobe Experience Platform wordt vervangen
+## SDK&#39;s vervangen door Adobe Experience Platform Web SDK
 
-SDK van het Web van het Adobe Experience Platform vervangt de volgende SDKs:
+Adobe Experience Platform Web SDK vervangt de volgende SDK&#39;s:
 
 * Visitor.js
 * AppMeasurement.js
@@ -56,9 +57,9 @@ SDK van het Web van het Adobe Experience Platform vervangt de volgende SDKs:
 
 Dit is niet alleen een omslag rond bestaande bibliotheken. Het is een volledige herschrijving. Het doel is een einde te maken aan de uitdagingen waarbij tags in de juiste volgorde moeten worden afgevuurd, inconsistentie met bibliotheekversieproblemen en een beter beheer van afhankelijkheden. Het is een nieuwe manier om de richtlijn uit te voeren [!DNL Experience Cloud] en het is een [open bron](https://github.com/adobe/alloy).
 
-Naast een nieuwe bibliotheek, is er een nieuw eindpunt dat de HTTP- verzoeken aan de oplossingen van Adobe stroomlijnt. Vóór, stuurde Visitor.js een blokkerende vraag naar de dienst van bezoekersidentiteitskaart, toen stuurde AT.js een vraag naar Adobe Target, zond DIL.js een vraag naar Adobe Audience Manager, en tenslotte stuurde AppMeasurement.js een vraag naar Adobe Analytics. Deze nieuwe bibliotheek en eindpunt kunnen een identiteitskaart terugwinnen, een [!DNL Target] ervaring halen, gegevens verzenden naar [!DNL Audience Manager], en de gegevens tot het Adobe Experience Platform in één enkele vraag overgaan.
+Naast een nieuwe bibliotheek, is er een nieuw eindpunt dat de HTTP- verzoeken aan de oplossingen van Adobe stroomlijnt. Vóór, stuurde Visitor.js een blokkerende vraag naar de dienst van bezoekersidentiteitskaart, toen stuurde AT.js een vraag naar Adobe Target, zond DIL.js een vraag naar Adobe Audience Manager, en tenslotte stuurde AppMeasurement.js een vraag naar Adobe Analytics. Deze nieuwe bibliotheek en eindpunt kunnen een identiteitskaart terugwinnen, een [!DNL Target] ervaring halen, gegevens verzenden naar [!DNL Audience Manager], en de gegevens tot Adobe Experience Platform in één enkele vraag overgaan.
 
-In de volgende video ziet u het Adobe Experience Platform [!DNL Web SDK] en [!DNL Edge Network] de actie. Het videovoorbeeld gebruikt één enkele vraag aan Adobe die gegevens naar [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]en [!DNL Target]verzendt.
+De volgende video demonstreert de Adobe Experience Platform [!DNL Web SDK] en [!DNL Edge Network] in actie. Het videovoorbeeld gebruikt één enkele vraag aan Adobe die gegevens naar [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]en [!DNL Target]verzendt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
