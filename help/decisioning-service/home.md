@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;offer management;Offer Management;Journey;customer journey;journey;decision events;decision event;Decision events
 solution: Experience Platform
 title: Beslissingsservice
 topic: overview
+description: De beslissingsservice biedt de mogelijkheid om persoonlijke, geoptimaliseerde en georkestreerde ervaringen te maken in toepassingen die op Adobe Experience Platform worden uitgevoerd. Gebruikend de Dienst van Beslissing, kunt u de beste optie van een reeks beschikbare keuzen bepalen. Deze opties, ook genoemd alternatieven, zouden aanbiedingen, productaanbevelingen, inhoudscomponenten voor een Webervaring, gespreksmanuscripten, en te nemen acties kunnen zijn.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1592'
+source-wordcount: '1648'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Overzicht van de beslissingsservice
 
-[!DNL Decisioning Service] biedt de mogelijkheid om persoonlijke, geoptimaliseerde en geordende ervaringen te maken in toepassingen die op het Adobe Experience Platform worden uitgevoerd. Met behulp [!DNL Decisioning Service]van een set beschikbare opties kunt u de beste *optie* bepalen. Deze opties, ook genoemd alternatieven, zouden aanbiedingen, productaanbevelingen, inhoudscomponenten voor een Webervaring, gespreksmanuscripten, en te nemen acties kunnen zijn. Momenteel wordt het gebruiksgeval en het domein van de Beslissing *van de* Aanbieding gesteund, waar de besluitvormingsopties specifiek als aanbiedingen worden gemodelleerd, met steun voor meer te gebruiken gevallen om te komen.
+[!DNL Decisioning Service] biedt de mogelijkheid om persoonlijke, geoptimaliseerde en geordende ervaringen te maken met toepassingen die op Adobe Experience Platform worden uitgevoerd. Met behulp [!DNL Decisioning Service]van een set beschikbare opties kunt u de beste *optie* bepalen. Deze opties, ook genoemd alternatieven, zouden aanbiedingen, productaanbevelingen, inhoudscomponenten voor een Webervaring, gespreksmanuscripten, en te nemen acties kunnen zijn. Momenteel wordt het gebruiksgeval en het domein van de Beslissing *van de* Aanbieding gesteund, waar de besluitvormingsopties specifiek als aanbiedingen worden gemodelleerd, met steun voor meer te gebruiken gevallen om te komen.
 
 Met [!DNL Decisioning Service], kunnen de klanten bedrijfslogica opnieuw gebruiken en een catalogus van opties over kanalen en toepassingen delen. In plaats van het beheren van besluitvormingsopties - en strategieën om hen te selecteren - diep binnen een toepassing, kunnen zij nu worden leveraged ongeacht wanneer, hoe en op welk kanaal de eindgebruiker van een klant met een zaken of organisatie interactie aangaat.
 
