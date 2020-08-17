@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;schema api;enum;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: Een schema maken met de API voor schemaregistratie
 topic: tutorials
+description: Deze zelfstudie gebruikt de API voor schemaregistratie om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse.
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2322'
+source-wordcount: '2343'
 ht-degree: 0%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 0%
 
 # Een schema maken met de [!DNL Schema Registry] API
 
-Het [!DNL Schema Registry] wordt gebruikt om tot [!DNL Schema Library] binnen Adobe Experience Platform toegang te hebben. Het [!DNL Schema Library] bevat middelen die aan u door Adobe, [!DNL Experience Platform] partners, en verkopers ter beschikking worden gesteld waarvan toepassingen u gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
+Het [!DNL Schema Registry] wordt gebruikt om binnen [!DNL Schema Library] Adobe Experience Platform toegang te hebben. Het [!DNL Schema Library] bevat middelen die aan u door Adobe, [!DNL Experience Platform] partners, en verkopers ter beschikking worden gesteld waarvan toepassingen u gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
 
 Deze zelfstudie gebruikt de [!DNL Schema Registry] API om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse. Als u de gebruikersinterface liever in wilt gebruiken, [!DNL Experience Platform]biedt de zelfstudie [van de](create-schema-ui.md) Schema-editor stapsgewijze instructies voor het uitvoeren van vergelijkbare acties in de Schema-editor.
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [!DNL Experience Data Model (XDM) System](../home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
