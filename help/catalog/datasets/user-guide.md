@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
 solution: Experience Platform
 title: Gebruikershandleiding voor gegevensbestanden
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Gebruikershandleiding voor gegevensbestanden
 
-Deze gebruikersgids verstrekt instructies bij het uitvoeren van gemeenschappelijke acties wanneer het werken met datasets binnen het gebruikersinterface van het Adobe Experience Platform.
+Deze gebruikershandleiding bevat instructies voor het uitvoeren van veelvoorkomende handelingen bij het werken met gegevenssets in de gebruikersinterface van Adobe Experience Platform.
 
 ## Aan de slag
 
-Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen van het Adobe Experience Platform:
+Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [Gegevenssets](overview.md): De opslag- en beheerconstructie voor gegevenspersistentie in [!DNL Experience Platform].
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
