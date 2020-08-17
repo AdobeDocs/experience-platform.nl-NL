@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Sensei Machine Learning API
 topic: Developer guide
+description: Deze ontwikkelaarsgids verstrekt stappen om u te helpen beginnen het Leren API van de Machine Sensei te gebruiken, en toont API vraag voor het uitvoeren van verrichtingen CRUD op diverse middelen van de Werkruimte van de Wetenschap van Gegevens aan.
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 1%
+source-wordcount: '225'
+ht-degree: 2%
 
 ---
 
