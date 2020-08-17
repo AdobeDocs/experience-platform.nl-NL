@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows
 solution: Experience Platform
 title: Inname van gegevens controleren
 topic: overview
+description: Deze gebruikershandleiding bevat een aantal stappen voor het controleren van uw gegevens in de gebruikersinterface van Adobe Experience Platform. Voor deze handleiding hebt u een Adobe ID nodig en hebt u toegang tot Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -14,9 +15,9 @@ ht-degree: 0%
 
 # Inname van gegevens controleren
 
-Met gegevensinvoer kunt u uw gegevens aan het Adobe Experience Platform toevoegen. U kunt batch-opname gebruiken, waarmee u gegevens kunt invoegen met behulp van verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u uw gegevens kunt invoeren om streaming eindpunten in real-time te [!DNL Platform] gebruiken.
+Met gegevensinvoer kunt u uw gegevens opnemen in Adobe Experience Platform. U kunt batch-opname gebruiken, waarmee u gegevens kunt invoegen met behulp van verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u uw gegevens kunt invoeren om streaming eindpunten in real-time te [!DNL Platform] gebruiken.
 
-Deze gebruikershandleiding bevat een aantal stappen voor het controleren van gegevens binnen de gebruikersinterface van het Adobe Experience Platform. Deze gids vereist u een Adobe ID en toegang tot Adobe Experience Platform hebben.
+Deze gebruikershandleiding bevat een aantal stappen voor het controleren van uw gegevens in de gebruikersinterface van Adobe Experience Platform. Voor deze handleiding hebt u een Adobe ID nodig en hebt u toegang tot Adobe Experience Platform.
 
 ## Doorlopende gegevensinvoer controleren
 
