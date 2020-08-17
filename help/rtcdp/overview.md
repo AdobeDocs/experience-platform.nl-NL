@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;CDP
 title: Real-time overzicht van het Platform van klantgegevens
 seo-title: Real-time overzicht van het Platform van klantgegevens
 description: Overzicht van het Platform van de Gegevens van de Klant in real time
 seo-description: Overzicht van het Platform van de Gegevens van de Klant in real time
 translation-type: tm+mt
-source-git-commit: c16232179701aa40ae06da45e0581d70d0437191
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Adobe Real-time overzicht van het Platform voor klantgegevens
 
-Het Platform van de Gegevens van de Klant van de Adobe in real time (in real time CDP) is gebaseerd op Adobe Experience Platform, helpt bedrijven bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samenbrengen om klantenprofielen tot stand te brengen die kunnen worden gebruikt om gepersonaliseerde klantenervaringen over alle kanalen en apparaten in echt te verstrekken - tijd.
+Adobe In real time CDP (Customer Data Platform in real time) is gebaseerd op Adobe Experience Platform en helpt bedrijven bekende en anonieme gegevens uit meerdere bedrijfsbronnen bijeen te brengen om klantprofielen te maken die kunnen worden gebruikt om persoonlijke klantervaringen te bieden op alle kanalen en apparaten in real time.
 
 CDP in real time omvat hulpmiddelen voor gegevensbeheer, identiteitsbeheer, geavanceerde segmentatie, en gegevenswetenschap zodat u profielen kunt bouwen en publiek bepalen, evenals rijke inzichten af te leiden terwijl het kunnen strikte beleid van het gegevensbeheer afdwingen.
 
