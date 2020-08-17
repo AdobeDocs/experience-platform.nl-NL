@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ECID;ecid
 solution: Experience Platform
 title: Identiteitsgegevens voor privacyverzoeken
 topic: overview
+description: Dit document biedt algemene richtlijnen voor het configureren van gegevensbewerkingen en het benutten van Adobe-technologieën om de juiste identiteitsgegevens voor privacyverzoeken van klanten op te halen.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '643'
 ht-degree: 1%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 # Identiteitsgegevens voor privacyverzoeken
 
-Opdat het Adobe Experience Platform klantenverzoeken [!DNL Privacy Service] om hun privé gegevens (met inbegrip van toegang, schrapping, of uit-van-verkoop verzoeken) kan verwerken, moet het van unieke herkenningstekens worden voorzien die een specifieke klant aan hun opgeslagen privé gegevens in uw Adobe Experience Cloud toegelaten toepassingen verbinden. [!DNL Privacy Service] gebruikt deze id&#39;s vervolgens om alle gegevens te verzamelen die onder de identiteit van de klant binnen zijn opgeslagen [!DNL Experience Cloud], en deze te verwerken volgens het verzoek van de klant.
+Adobe Experience Platform kan alleen aanvragen van klanten voor hun persoonlijke gegevens verwerken (zoals aanvragen voor toegang, verwijderen of het niet-verkopen van gegevens) als het beschikt over unieke id&#39;s die een specifieke klant koppelen aan de opgeslagen privégegevens in uw Adobe Experience Cloud-toepassingen. [!DNL Privacy Service] [!DNL Privacy Service] gebruikt deze id&#39;s vervolgens om alle gegevens te verzamelen die onder de identiteit van de klant binnen zijn opgeslagen [!DNL Experience Cloud], en deze te verwerken volgens het verzoek van de klant.
 
 Dit document biedt algemene richtlijnen voor het configureren van gegevensbewerkingen en het benutten van Adobe-technologieën om de juiste identiteitsgegevens voor privacyverzoeken van klanten op te halen.
 
@@ -26,7 +27,7 @@ Bijvoorbeeld, wanneer het behandelen van de verzoeken van klantengegevens binnen
 
 Daarom is het vereist dat elke identiteit waarnaar wordt verzonden vergezeld [!DNL Privacy Service] gaat van een **naamruimte** die context biedt door de identiteitswaarde te koppelen aan het systeem van oorsprong. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;e-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
 
-De Dienst van de Identiteit van het Adobe Experience Platform handhaaft een opslag van globaal bepaalde en user-defined identiteitsnaamruimten. Zie het overzicht [](../identity-service/namespaces.md)van naamruimten voor meer informatie over naamruimten. Voor een lijst van standaardnamespaces en namespace kwalificfiers die algemeen binnen worden gebruikt, zie de [!DNL Privacy Service]bijlage sectie [](api/appendix.md) in de ontwikkelaarsgids.
+Adobe Experience Platform Identity Service bewaart een opslag van wereldwijd gedefinieerde en door de gebruiker gedefinieerde naamruimten. Zie het overzicht [](../identity-service/namespaces.md)van naamruimten voor meer informatie over naamruimten. Voor een lijst van standaardnamespaces en namespace kwalificfiers die algemeen binnen worden gebruikt, zie de [!DNL Privacy Service]bijlage sectie [](api/appendix.md) in de ontwikkelaarsgids.
 
 ## ECID en Opt-in Service
 
