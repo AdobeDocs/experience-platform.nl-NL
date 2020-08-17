@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
 solution: Adobe Experience Platform
 title: Overzicht van het realtime klantprofiel
 topic: guide
+description: Klantprofiel in real-time is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek.
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 05032ba72afd5224e33cb4fdc93c97ba6ec6f8e8
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1718'
 ht-degree: 0%
 
 ---
@@ -89,7 +90,7 @@ Met observability Insights kunt u belangrijke metriek in Adobe Experience Platfo
 
 [!DNL Data governance] is een reeks strategieën en technologieën die worden gebruikt om klantengegevens te beheren en naleving van verordeningen, beperkingen, en beleid te verzekeren van toepassing op gegevensgebruik.
 
-Met betrekking tot de toegang tot gegevens speelt het beheer van gegevens een sleutelrol binnen [!DNL Experience Platform] verschillende niveaus:
+Met betrekking tot de toegang tot gegevens speelt gegevensbeheer een sleutelrol binnen [!DNL Experience Platform] verschillende niveaus:
 * Labels voor gegevensgebruik
 * Beleid voor gegevenstoegang
 * Toegangscontrole van gegevens voor marketingacties
