@@ -4,7 +4,7 @@ seo-title: Koppeling bijhouden naar Adobe Analytics met Adobe Experience Platfor
 description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met het Web SDK van het Experience Platform te verzenden
 seo-description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met het Web SDK van het Experience Platform te verzenden
 translation-type: tm+mt
-source-git-commit: ab73e4d793cf39c29ddca385487bf027002db883
+source-git-commit: b50082405cd0392ff827a83ad82091fbcd370b21
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
