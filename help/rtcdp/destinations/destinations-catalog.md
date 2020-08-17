@@ -1,10 +1,11 @@
 ---
+keywords: Catalog;catalog
 title: Doelcatalogus
 seo-title: Doelcatalogus
 description: De Catalogus van Doelen verstrekt een lijst van beschikbare bestemmingen die klaar zijn om gegevens te ontvangen. Deze bestemmingen omvatten Adobe oplossingen, reclameplatforms, onderzoeksplatforms, e-mailmarketing platforms, en meer.
 seo-description: De Catalogus van Doelen verstrekt een lijst van beschikbare bestemmingen die klaar zijn om gegevens te ontvangen. Deze bestemmingen omvatten Adobe oplossingen, reclameplatforms, onderzoeksplatforms, e-mailmarketing platforms, en meer.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
@@ -24,7 +25,7 @@ U kunt uw gegevens activeren naar verschillende doelcategorieën in het Real-tim
 
 * [Adobe-oplossingen](/help/rtcdp/destinations/adobe-destinations.md)
 * [Reclamebestemmingen](/help/rtcdp/destinations/advertising-destinations.md)
-* [Analytics-bestemmingen](/help/rtcdp/destinations/analytics-destinations.md)
+* [Analysedoelen](/help/rtcdp/destinations/analytics-destinations.md)
 * [Opslagdoelen voor cloud](/help/rtcdp/destinations/cloud-storage-destinations.md)
 * [Platform voor gegevensbeheer](/help/rtcdp/destinations/dmp-destinations.md)
 * [E-mailmarketing](/help/rtcdp/destinations/email-marketing-destinations.md)
