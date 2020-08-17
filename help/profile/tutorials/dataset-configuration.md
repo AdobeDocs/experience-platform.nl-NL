@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
 solution: Adobe Experience Platform
 title: Een dataset voor profiel en identiteitsservice configureren met behulp van API's
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '1020'
 ht-degree: 0%
@@ -20,12 +20,12 @@ Dit leerprogramma behandelt het proces om een dataset voor gebruik in toe te lat
    - [Een nieuwe gegevensset maken](#create-a-dataset-enabled-for-profile-and-identity)
    - [Een bestaande gegevensset configureren](#configure-an-existing-dataset)
 1. [Gegevens in de dataset opnemen](#ingest-data-into-the-dataset)
-1. [Gegevens bevestigen die worden ingevoerd door Real-time klantprofiel](#confirm-data-ingest-by-real-time-customer-profile)
+1. [Gegevens bevestigen die door het Profiel van de Klant in real time worden opgenomen](#confirm-data-ingest-by-real-time-customer-profile)
 1. [Gegevens die door Identity Service worden ingevoerd bevestigen](#confirm-data-ingest-by-identity-service)
 
 ## Aan de slag
 
-Dit leerprogramma vereist een werkend inzicht in de diverse diensten van het Adobe Experience Platform betrokken bij het beheren van [!DNL Profile]-toegelaten datasets. Lees vóór het begin van deze zelfstudie de documentatie voor deze verwante [!DNL Platform] services:
+Deze zelfstudie vereist een goed begrip van de verschillende Adobe Experience Platform-services die betrokken zijn bij het beheer van [!DNL Profile]gegevenssets. Lees vóór het begin van deze zelfstudie de documentatie voor deze verwante [!DNL Platform] services:
 
 - [!DNL Real-time Customer Profile](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [!DNL Identity Service](../../identity-service/home.md): Schakelt [!DNL Real-time Customer Profile] het overbruggen van identiteiten uit verschillende gegevensbronnen in [!DNL Platform].
