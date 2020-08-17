@@ -4,9 +4,9 @@ solution: Experience Platform
 title: E-mailmarketingdoelen maken
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1610'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,8 @@ De middelen in [!DNL Experience Platform] kunnen aan specifieke virtuele zandbak
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NLet op]
+>[!NOTE]
+>
 >Zie de documentatie over het [!DNL Experience Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
