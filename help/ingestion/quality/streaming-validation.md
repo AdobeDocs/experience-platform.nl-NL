@@ -1,24 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: Validatie van gestreamde invoer
 topic: overview
+description: 'Met streaming opname kunt u uw gegevens naar Adobe Experience Platform uploaden met streaming eindpunten in real-time. API''s voor streaming opname ondersteunen twee validatiemodi: synchroon en asynchroon.'
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 1%
+source-wordcount: '843'
+ht-degree: 2%
 
 ---
 
 
 # Validatie van gestreamde invoer
 
-Met streaming opname kunt u uw gegevens naar het Adobe Experience Platform uploaden met streaming eindpunten in real-time. API&#39;s voor streaming opname ondersteunen twee validatiemodi: synchroon en asynchroon.
+Met streaming opname kunt u uw gegevens naar Adobe Experience Platform uploaden met streaming eindpunten in real-time. API&#39;s voor streaming opname ondersteunen twee validatiemodi: synchroon en asynchroon.
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 - [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
 - [!DNL Streaming Ingestion](../streaming-ingestion/overview.md): Een van de methoden waarmee gegevens kunnen worden verzonden naar [!DNL Experience Platform].
