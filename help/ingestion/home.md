@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
 solution: Experience Platform
-title: Overzicht van Adobe Experience Platform gegevensinname
+title: Overzicht van Adobe Experience Platform-gegevensinname
 topic: overview
+description: Dit document introduceert de drie belangrijkste manieren waarop gegevens in Platform worden opgenomen, met koppelingen naar hun respectieve overzichtsdocumentatie voor meer gedetailleerde informatie.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Overzicht van gegevensinname
 
-Adobe Experience Platform brengt gegevens uit meerdere bronnen samen, zodat marketers het gedrag van hun klanten beter kunnen begrijpen. De Ingestie van Gegevens van het Adobe Experience Platform vertegenwoordigt de veelvoudige methodes waardoor gegevens uit deze bronnen [!DNL Platform] opnemen, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door stroomafwaartse [!DNL Platform] diensten worden voortgeduurd.
+Adobe Experience Platform brengt gegevens uit meerdere bronnen samen om marketers te helpen het gedrag van hun klanten beter te begrijpen. De Ingestie van Gegevens van Adobe Experience Platform vertegenwoordigt de veelvoudige methodes waardoor gegevens uit deze bronnen [!DNL Platform] opnemen, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door stroomafwaartse [!DNL Platform] diensten worden voortgeduurd.
 
 In dit document worden de drie belangrijkste manieren geïntroduceerd waarop gegevens worden ingevoerd [!DNL Platform], met koppelingen naar hun respectieve overzichtsdocumentatie voor meer gedetailleerde informatie.
 
@@ -42,7 +43,7 @@ Zie het [Bronoverzicht](../sources/home.md) voor meer informatie.
 
 ## Volgende stappen en extra bronnen
 
-Dit document bevatte een korte inleiding over de verschillende aspecten van [!DNL Data Ingestion] het programma [!DNL Experience Platform]. Lees verder de overzichtsdocumentatie voor elke innamemethode om vertrouwd te raken met hun verschillende mogelijkheden, gebruiksgevallen en beste praktijken. U kunt uw leermogelijkheden ook bieden door de onderstaande video met het ingeslipoverzicht te bekijken. Voor informatie over hoe [!DNL Experience Platform] spoor de meta-gegevens voor ingebedde verslagen, zie het overzicht [van de Dienst van de](../catalog/home.md)Catalogus.
+Dit document bevatte een korte inleiding over de verschillende aspecten van [!DNL Data Ingestion] het programma [!DNL Experience Platform]. Lees verder de overzichtsdocumentatie voor elke innamemethode om vertrouwd te raken met hun verschillende mogelijkheden, gebruiksgevallen en beste praktijken. U kunt het leren ook aanvullen door de onderstaande video met het ingesloten overzicht te bekijken. Voor informatie over hoe [!DNL Experience Platform] spoor de meta-gegevens voor ingebedde verslagen, zie het overzicht [van de Dienst van de](../catalog/home.md)Catalogus.
 
 >[!WARNING]
 >
