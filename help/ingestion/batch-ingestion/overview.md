@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset
 solution: Experience Platform
-title: Overzicht van de Adobe Experience Platform Batch-inname
+title: Overzicht van Adobe Experience Platform-batchverwerking
 topic: overview
+description: Met de API voor batchverwerking kunt u gegevens als batchbestanden in Adobe Experience Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een parquetdossier), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1196'
 ht-degree: 1%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 # [!DNL Batch Ingestion] overzicht
 
-Met de [!DNL Batch Ingestion] API kunt u gegevens als batchbestanden in het Adobe Experience Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een ouderdossier), of gegevens zijn die aan een bekend schema in het [!DNL Experience Data Model] (XDM) register in overeenstemming zijn.
+Met de [!DNL Batch Ingestion] API kunt u gegevens als batchbestanden in Adobe Experience Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een ouderdossier), of gegevens zijn die aan een bekend schema in het [!DNL Experience Data Model] (XDM) register in overeenstemming zijn.
 
 De verwijzing naar [de API voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) gegevensverwerking biedt aanvullende informatie over deze API-aanroepen.
 
