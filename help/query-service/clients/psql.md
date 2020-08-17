@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PSQL;psql
 solution: Experience Platform
 title: Verbinding maken met PSQL
 topic: connect
+description: 'PSQL is een opdrachtregelinterface die wordt weergegeven wanneer u Postgres op uw computer installeert. U kunt het installeren door deze instructies te volgen. '
 translation-type: tm+mt
-source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '192'
 ht-degree: 1%
 
 ---
