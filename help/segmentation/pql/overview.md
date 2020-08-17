@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PQL;pql;profile query language
 solution: Experience Platform
 title: Overzicht van PQL (Profile Query Language)
 topic: developer guide
+description: Deze handleiding biedt een algemeen overzicht van PQL, met opmaakrichtlijnen en voorbeelden van PQL-expressies.
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 691af873e0753217b9e7566042c508d9d9b8d8d5
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '686'
 ht-degree: 1%
 
 ---
@@ -40,7 +41,7 @@ homeAddress.stateProvince = workAddress.stateProvince
 
 ### Expliciete verwijzing naar de eerste parameter
 
-In het onderstaande voorbeeld `$1` wordt naar de eerste parameter verwezen. Als gevolg hiervan `$2` zou ik verwijzen naar de tweede parameter, enz.
+In het onderstaande voorbeeld wordt `$1` verwezen naar de eerste parameter. Als gevolg hiervan `$2` zou ik verwijzen naar de tweede parameter, enz.
 
 ```sql
 $1.homeAddress.stateProvince = $1.homeAddress.stateProvince
@@ -60,7 +61,7 @@ PQL biedt ondersteuning voor de volgende letterlijke typen:
 
 | Letterlijk | Definitie | Voorbeeld |
 | ------- | ---------- | ------- |
-| String | Een gegevenstype dat bestaat uit tekens die tussen dubbele aanhalingstekens staan. | `"pizza"`, `"jobs"`, `"antidisestablishmentarianism"` |
+| Tekenreeks | Een gegevenstype dat bestaat uit tekens die tussen dubbele aanhalingstekens staan. | `"pizza"`, `"jobs"`, `"antidisestablishmentarianism"` |
 | Boolean | Een gegevenstype dat waar of onwaar is. | `true`, `false` |
 | Geheel | Een gegevenstype dat een geheel getal vertegenwoordigt. Het kan positief, negatief, of nul zijn. | `-201`, `0`, `412` |
 | Dubbel | A data type representing any real number. Het kan positief, negatief, of nul zijn. | `-51.24`, `3.14`, `0.6942058` |
@@ -79,7 +80,7 @@ In de volgende tabel worden de verschillende categorieën ondersteunde PQL-funct
 | Vergelijking | Wordt gebruikt om verschillende PQL-elementen te vergelijken. Meer informatie over deze functies vindt u in het document [met](./comparison-functions.md)vergelijkingsfuncties. |
 | Array, list en set | Wordt gebruikt voor interactie met arrays, lijsten en sets. Meer informatie over deze functies vindt u in het document met [arrays, lijsten en ingestelde functies](./array-functions.md). |
 | Kaart | Wordt gebruikt voor interactie met kaarten. Meer informatie over deze functies vindt u in het document met [kaartfuncties](./map-functions.md). |
-| String | Wordt gebruikt voor interactie met tekenreeksen. Meer informatie over deze functies vindt u in het document [met](./string-functions.md)tekenreeksfuncties. |
+| Tekenreeks | Wordt gebruikt voor interactie met tekenreeksen. Meer informatie over deze functies vindt u in het document [met](./string-functions.md)tekenreeksfuncties. |
 | Rekenkundig | Wordt gebruikt voor het uitvoeren van rekenkundige basisbewerkingen op PQL-elementen. Meer informatie over deze functies vindt u in het document met [rekenkundige functies](./arithmetic-functions.md) |
 | Samenvoeging | Wordt gebruikt om resultaten van een array te combineren in een enkel resultaat. Meer informatie over samenvoegingsfuncties vindt u in het document [met](./aggregation-functions.md)aggregatiefuncties. |
 | Datum en tijd | Wordt gebruikt in combinatie met datum-, tijd- en datetime-objecten. Meer informatie over deze functies vindt u in het document met [datum-/tijdfuncties](./datetime-functions.md). |
