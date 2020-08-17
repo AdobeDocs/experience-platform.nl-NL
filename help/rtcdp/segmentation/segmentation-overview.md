@@ -1,10 +1,11 @@
 ---
+keywords: segmentation; segmentation rtcdp;real time customer data platform segmentation
 title: Overzicht van de segmenteringsservice
 seo-title: De dienst van de segmentatie in het Platform van de Gegevens van de Klant van Adobe Real-time
 description: Een overzicht dat de segmentatieservice beschrijft.
 seo-description: Een overzicht dat de segmentatieservice en segmenten op het Platform van de Gegevens van de Klant van de Adobe in real time beschrijft.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 1%
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 # [!DNL Segmentation Service] in [!DNL Real-time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] (In real time CDP) staat u toe om gegevens van veelvoudige bronnen te brengen om een gecoördineerde en verenigbare ervaring voor uw klanten te drijven. Het leveren van relevante gepersonaliseerde marketingcampagnes kan worden bereikt met behulp van het [!DNL Segmentation Service], deel van het Adobe Experience Platform.
+[!DNL Real-time Customer Data Platform] (In real time CDP) staat u toe om gegevens van veelvoudige bronnen te brengen om een gecoördineerde en verenigbare ervaring voor uw klanten te drijven. Het leveren van relevante gepersonaliseerde marketingcampagnes kan worden bereikt met behulp van het [!DNL Segmentation Service], deel van Adobe Experience Platform.
 
 CDP in real time wordt gebouwd bovenop Adobe Experience Platform en gebruikt veel van de [!DNL Experience Platform] diensten en de functionaliteit. Gebruikend [!DNL Segmentation Service], kunt u op maat-gemaakte marketing verstrekken door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen.
 
