@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;jupyterlab
 solution: Experience Platform
 title: Gebruikershandleiding voor JupyterLab
 topic: Overview
+description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '3647'
+source-wordcount: '3684'
 ht-degree: 10%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 10%
 
 # [!DNL JupyterLab] gebruikershandleiding
 
-[!DNL JupyterLab] is een web-based gebruikersinterface voor <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> en is strak geïntegreerd in [!DNL Adobe Experience Platform]. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens.
+[!DNL JupyterLab] is een webgebaseerde gebruikersinterface voor [Project Jupyter](https://jupyter.org/) en is nauw geïntegreerd in Adobe Experience Platform. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens.
 
 Dit document biedt een overzicht van [!DNL JupyterLab] en de bijbehorende functies en instructies voor het uitvoeren van algemene handelingen.
 
@@ -28,7 +29,7 @@ In de volgende lijst worden enkele functies beschreven die uniek zijn voor Jupyt
 | --- | --- |
 | **Kernels** | Kernels bieden laptop en andere [!DNL JupyterLab] front-ends de mogelijkheid om code in verschillende programmeertalen uit te voeren en in te voeren. [!DNL Experience Platform] verstrekt extra kernels om ontwikkeling in [!DNL Python], R, PySpark, en [!DNL Spark]. te steunen. Zie de sectie [Korrels](#kernels) voor meer informatie. |
 | **Toegang tot gegevens** | Toegang tot bestaande datasets rechtstreeks vanuit [!DNL JupyterLab] de volledige ondersteuning voor lees- en schrijfmogelijkheden. |
-| **[!DNL Platform]serviceintegratie ** | Dankzij de ingebouwde integratie kunt u rechtstreeks vanuit de toepassing andere [!DNL Platform] services gebruiken [!DNL JupyterLab]. Een volledige lijst van gesteunde integratie wordt verstrekt in de sectie over [Integratie met andere diensten](#service-integration)van de Platform. |
+| **[!DNL Platform]serviceintegratie** | Dankzij de ingebouwde integratie kunt u rechtstreeks vanuit de toepassing andere [!DNL Platform] services gebruiken [!DNL JupyterLab]. Een volledige lijst van gesteunde integratie wordt verstrekt in de sectie over [Integratie met andere diensten](#service-integration)van de Platform. |
 | **Verificatie** | Naast het ingebouwde veiligheidsmodel <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">van</a>JupyterLab, wordt elke interactie tussen uw toepassing en Experience Platform, met inbegrip van de dienst-aan-dienst van het Platform mededeling gecodeerd en voor authentiek verklaard door <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Ontwikkelingsbibliotheken** | In [!DNL Experience Platform], verstrekt [!DNL JupyterLab] vooraf geïnstalleerde bibliotheken voor [!DNL Python], R, en PySpark. Zie de [bijlage](#supported-libraries) voor een volledige lijst met ondersteunde bibliotheken. |
 | **Bibliotheekcontroller** | Wanneer de vooraf geïnstalleerde bibliotheken niet aan uw behoeften voldoen, kunnen extra bibliotheken voor Python en R worden geïnstalleerd en tijdelijk in geïsoleerde containers worden opgeslagen om de integriteit van uw gegevens te handhaven [!DNL Platform] en uw gegevens veilig te houden. Zie de sectie [Korrels](#kernels) voor meer informatie. |
@@ -41,10 +42,10 @@ In de volgende lijst worden enkele functies beschreven die uniek zijn voor Jupyt
 
 Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform]. De integratie van [!DNL JupyterLab] op [!DNL Platform] als ingebedde winde staat het toe om met andere [!DNL Platform] diensten in wisselwerking te staan, toelatend u om [!DNL Platform] aan zijn volledig potentieel te gebruiken. De volgende [!DNL Platform] services zijn beschikbaar in [!DNL JupyterLab]:
 
-* **[!DNL Catalog Service]:**Toegang tot en verken gegevenssets met lees- en schrijffuncties.
-* **[!DNL Query Service]:**Toegang tot en verken gegevenssets met SQL, waardoor u lagere gegevenstoegangsoverheadkosten krijgt wanneer u met grote hoeveelheden gegevens werkt.
-* **[!DNL Sensei ML Framework]:**Modelontwikkeling met de mogelijkheid om gegevens op te leiden en te scoren, en het maken van recept met één klik.
-* **[!DNL Experience Data Model (XDM)]:**Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter het Adobe Experience Platform.[Het Model van Gegevens van de ervaring (XDM)](https://www.adobe.com/go/xdm-home-en), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
+* **[!DNL Catalog Service]:** Toegang tot en verken gegevenssets met lees- en schrijffuncties.
+* **[!DNL Query Service]:** Toegang tot en verken gegevenssets met SQL, waardoor u lagere gegevenstoegangsoverheadkosten krijgt wanneer u met grote hoeveelheden gegevens werkt.
+* **[!DNL Sensei ML Framework]:** Modelontwikkeling met de mogelijkheid om gegevens op te leiden en te scoren, en het maken van recept met één klik.
+* **[!DNL Experience Data Model (XDM)]:** Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. [Het Model van Gegevens van de ervaring (XDM)](https://www.adobe.com/go/xdm-home-en), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
 
 >[!NOTE]
 >
@@ -64,7 +65,7 @@ In de volgende secties wordt informatie gegeven over de belangrijkste kenmerken 
 
 ### Ga naar [!DNL JupyterLab] {#access-jupyterlab}
 
-In [Adobe Experience Platform](https://platform.adobe.com), uitgezochte **Notities** van de linkernavigatiekolom. Laat enige tijd over [!DNL JupyterLab] om volledig te initialiseren.
+Selecteer in [Adobe Experience Platform](https://platform.adobe.com)de optie **Laptops** in de navigatiekolom links. Laat enige tijd over [!DNL JupyterLab] om volledig te initialiseren.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -136,7 +137,7 @@ Bepaalde kenmerken en functies zijn beperkt tot bepaalde kernels zoals beschreve
 
 ### Kernel-sessies {#kernel-sessions}
 
-Elke actieve laptop of activiteit op [!DNL JupyterLab] gebruikt een kernel-sessie. Alle actieve sessies kunt u vinden door het tabblad **Doorlopende terminals en kernels** vanuit de linkerzijbalk uit te vouwen. Het type en de toestand van de kernel voor een laptop kunnen worden geïdentificeerd door de laptop rechtsboven te volgen. In het onderstaande diagram is de bijbehorende kernel van de laptop **[!DNL Python]3 **en de huidige toestand wordt weergegeven door een grijze cirkel naar rechts. Een holle cirkel impliceert een nutteloze kernel en een stevige cirkel impliceert een bezige kernel.
+Elke actieve laptop of activiteit op [!DNL JupyterLab] gebruikt een kernel-sessie. Alle actieve sessies kunt u vinden door het tabblad **Doorlopende terminals en kernels** vanuit de linkerzijbalk uit te vouwen. Het type en de toestand van de kernel voor een laptop kunnen worden geïdentificeerd door de laptop rechtsboven te volgen. In het onderstaande diagram is de bijbehorende kernel van de laptop **[!DNL Python]3** en de huidige toestand wordt weergegeven door een grijze cirkel naar rechts. Een holle cirkel impliceert een nutteloze kernel en een stevige cirkel impliceert een bezige kernel.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
@@ -452,7 +453,7 @@ Een aangepaste opdracht voor het [!DNL Data Science Workspace] schrijven of leze
 
 ### Query-gegevens uitvoeren met [!DNL Query Service] In [!DNL Python]
 
-[!DNL JupyterLab] op [!DNL Platform] staat u toe om SQL in een [!DNL Python] notitieboekje te gebruiken om tot gegevens door de Dienst <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">van de Vraag van het</a>Adobe Experience Platform toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan nuttig zijn voor het omgaan met grote gegevenssets vanwege de superieure doorlooptijden. Houd er rekening mee dat het opvragen van gegevens met een verwerkingstijd van tien minuten [!DNL Query Service] heeft.
+[!DNL JupyterLab] op [!DNL Platform] staat u toe om SQL in een [!DNL Python] notitieboekje te gebruiken om tot gegevens door de Dienst <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">van de Vraag van</a>Adobe Experience Platform toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan nuttig zijn voor het omgaan met grote gegevenssets vanwege de superieure doorlooptijden. Houd er rekening mee dat het opvragen van gegevens met een verwerkingstijd van tien minuten [!DNL Query Service] heeft.
 
 Voordat u [!DNL Query Service] de SQL-syntaxis [!DNL JupyterLab]gaat gebruiken, moet u controleren of u goed op de hoogte bent van de <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">[!DNL Query Service] SQL-syntaxis</a>.
 
@@ -494,11 +495,11 @@ Om tot een dataset ExperienceEvent in een [!DNL Python] of notitieboekje van R t
 
 Een lijst met filteroperatoren wordt hieronder beschreven:
 
-* `eq()`: Gelijk aan
-* `gt()`: Groter dan
-* `ge()`: Groter dan of gelijk aan
-* `lt()`: Minder dan
-* `le()`: Kleiner dan of gelijk aan
+* `eq()`: Equal to
+* `gt()`: Greater than
+* `ge()`: Greater than or equal to
+* `lt()`: Less than
+* `le()`: Less than or equal to
 * `And()`: Logische operator AND
 * `Or()`: Logische operator OR
 
