@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Grondbeginselen van Adobe Experience Platform API
+title: Basisprincipes van Adobe Experience Platform API
 topic: getting started
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '422'
 ht-degree: 2%
 
 ---
 
 
-# Grondbeginselen van Adobe Experience Platform API
+# Basisprincipes van Adobe Experience Platform API
 
-Adobe Experience Platform-API&#39;s maken gebruik van verschillende onderliggende technologieën en syntaxis die belangrijk zijn om te begrijpen voor een effectief beheer van JSON- [!DNL Platform] bronnen. Dit document bevat een kort overzicht van deze technologieën en koppelingen naar externe documentatie voor meer informatie.
+Adobe Experience Platform API&#39;s maken gebruik van verschillende onderliggende technologieën en syntaxis die belangrijk zijn om te begrijpen voor een effectief beheer van JSON- [!DNL Platform] bronnen. Dit document bevat een kort overzicht van deze technologieën en koppelingen naar externe documentatie voor meer informatie.
 
 ## JSON-aanwijzer {#json-pointer}
 
@@ -80,8 +80,7 @@ JSON Pointer is een gestandaardiseerde tekenreekssyntaxis ([RFC 6901](https://to
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
->[!Nofferte]
->
+>[!NOTE]
 >
 >Wanneer u werkt met de `xdm:sourceProperty` en `xdm:destinationProperty` kenmerken van [!DNL Experience Data Model] (XDM)-descriptors, moeten alle `properties` sleutels worden **uitgesloten** van de JSON-pointer-tekenreeks. Zie de subhandleiding voor [!DNL Schema Registry] API-ontwikkelaars voor [beschrijvingen](../xdm/api/descriptors.md) voor meer informatie.
 
