@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming
 solution: Experience Platform
-title: Overzicht van streaming Adobe Experience Platform
+title: Overzicht van Adobe Experience Platform Streaming-integratie
 topic: overview
+description: Streaming opname voor Adobe Experience Platform biedt gebruikers een methode om gegevens van client- en serverapparaten in real-time naar het Experience Platform te verzenden.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Streaming opname voor Adobe Experience Platform biedt gebruikers een methode om 
 
 ## Wat kan je doen met streaming opname?
 
-Adobe Experience Platform laat u toe om gecoördineerde, verenigbare, en relevante ervaringen te drijven door een [!DNL Real-time Customer Profile] voor elk van uw individuele klanten te produceren. Streaming opname speelt een belangrijke rol bij het samenstellen van deze profielen door u in staat te stellen [!DNL Profile] gegevens met zo weinig mogelijk latentie in de [!DNL Data Lake] omgeving te leveren.
+Met Adobe Experience Platform kunt u gecoördineerde, consistente en relevante ervaringen aansturen door een [!DNL Real-time Customer Profile] voor elk van uw individuele klanten te genereren. Streaming opname speelt een belangrijke rol bij het samenstellen van deze profielen door u in staat te stellen [!DNL Profile] gegevens met zo weinig mogelijk latentie in de [!DNL Data Lake] omgeving te leveren.
 
 De volgende video is ontworpen om u te helpen bij het begrijpen van streaming opname en geeft een overzicht van de bovenstaande concepten.
 
@@ -43,6 +44,6 @@ Voor meer informatie bij het toelaten van een dataset voor [!DNL Profile] en [!D
 | Klantprofiel in realtime | &lt; 1 minuut |
 | Data Lake | &lt; 60 minuten |
 
-## Adobe Experience Platform extensie
+## Adobe Experience Platform-extensie
 
-Met de extensie Adobe Experience Platform kunt u een nieuwe streamingverbinding maken. De [!DNL Experience Platform] extensie biedt acties voor het verzenden van bakens die zijn opgemaakt in [!DNL Experience Data Model] (XDM) voor realtime invoer naar [!DNL Experience Platform]. Raadpleeg de documentatie bij Extensie [Experience Platform](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) voor meer informatie.
+Met de Adobe Experience Platform-extensie kunt u een nieuwe streamingverbinding maken. De [!DNL Experience Platform] extensie biedt acties voor het verzenden van bakens die zijn opgemaakt in [!DNL Experience Data Model] (XDM) voor realtime invoer naar [!DNL Experience Platform]. Raadpleeg de documentatie bij Extensie [Experience Platform](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) voor meer informatie.
