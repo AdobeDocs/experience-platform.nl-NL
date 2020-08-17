@@ -1,10 +1,11 @@
 ---
+Keywords: ECID;ecid
 title: Experience Cloud ID Service-extensie
 seo-title: Experience Cloud ID Service-extensie
 description: De uitbreiding van de Dienst van identiteitskaart van Experience Cloud is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: De uitbreiding van de Dienst van identiteitskaart van Experience Cloud is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 2%
