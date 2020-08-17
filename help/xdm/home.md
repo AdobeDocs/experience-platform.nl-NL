@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins;mixin;Mixin;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet
 solution: Experience Platform
 title: XDM-systeem (Experience Data Model)
 topic: overview
+description: 'Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema''s voor het beheer van de klantenervaring te bepalen. '
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1638'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # XDM System, overzicht
 
-Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter het Adobe Experience Platform. [!DNL Experience Data Model] (XDM), gedreven door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
+Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. [!DNL Experience Data Model] (XDM), gedreven door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
 
 XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor om het even welke toepassing om met de [!DNL Platform] diensten te gebruiken te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier kan leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden uitdrukken.
 
@@ -24,7 +25,7 @@ Dit document biedt een overzicht van de rol van XDM System in [!DNL Experience P
 
 ## XDM-schema&#39;s
 
-[!DNL Experience Platform] gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens.
+[!DNL Experience Platform] gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het gemakkelijker om betekenis te behouden en zo waarde te verkrijgen van gegevens.
 
 Voordat gegevens kunnen worden opgenomen in [!DNL Platform], moet een schema zijn samengesteld om de gegevensstructuur te beschrijven en om beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. Schema&#39;s bestaan uit een basisklasse en nul of meer mixen.
 
@@ -32,7 +33,7 @@ Voor meer informatie over het model van de schemacompositie, met inbegrip van on
 
 ### [!DNL Schema Registry] en [!DNL Schema Library]
 
-Het **[!DNL Schema Registry]** verstrekt een gebruikersinterface en RESTful API waarvan u alle op schema betrekking hebbende middelen in het Adobe Experience Platform kunt bekijken en beheren **[!DNL Schema Library]**. Het [!DNL Schema Library] bevat industriestandaard middelen die door Adobe aan u ter beschikking worden gesteld, evenals middelen van [!DNL Experience Platform] partners en verkopers waarvan toepassingen u gebruikt. De gebruikersinterface en API van het schemaregister kunnen ook worden gebruikt om nieuwe schema&#39;s en middelen tot stand te brengen en te beheren die aan uw organisatie uniek zijn.
+Het **[!DNL Schema Registry]** biedt een gebruikersinterface en RESTful-API waarmee u alle schemagerelateerde bronnen in de Adobe Experience Platform kunt weergeven en beheren **[!DNL Schema Library]**. Het [!DNL Schema Library] bevat industriestandaard middelen die door Adobe aan u ter beschikking worden gesteld, evenals middelen van [!DNL Experience Platform] partners en verkopers waarvan toepassingen u gebruikt. De gebruikersinterface en API van het schemaregister kunnen ook worden gebruikt om nieuwe schema&#39;s en middelen tot stand te brengen en te beheren die aan uw organisatie uniek zijn.
 
 Voor een uitvoerige gids voor de belangrijkste verrichtingen beschikbaar in [!DNL Schema Registry], zie de de ontwikkelaarsgids [van de Registratie van het](api/getting-started.md)Schema.
 
@@ -77,7 +78,7 @@ Hoewel niet alle gebeurtenissen gemakkelijk over alle gegevensbronnen worden gec
 
 Om te beginnen met het opnemen van gegevens in [!DNL Experience Platform], wordt een dataset gecreeerd gebruikend [!DNL Catalog Service]. De dataset verwijst naar een XDM-schema dat de structuur van de gegevens beschrijft die moeten worden opgenomen. Als een dataset zonder een schema wordt gecreeerd, zal een &quot;waargenomen schema&quot;afleiden door het type en de inhoud van ingebedde gegevensgebieden te inspecteren. [!DNL Experience Platform] Datasets worden vervolgens bijgehouden in [!DNL Catalog] en opgeslagen in de [!DNL Data Lake] parallel aan de schema&#39;s en geobserveerde schema&#39;s waarop ze zijn gebaseerd.
 
-Voor meer informatie over [!DNL Catalog], zie het overzicht [van de Dienst van de](../catalog/home.md)Catalogus. Voor meer informatie over de Ingestie van de Gegevens van het Adobe Experience Platform, zie het Overzicht [van de Ingestie van](../ingestion/home.md)Gegevens.
+Voor meer informatie over [!DNL Catalog], zie het overzicht [van de Dienst van de](../catalog/home.md)Catalogus. Voor meer informatie over de Ingestie van Gegevens van Adobe Experience Platform, zie het Overzicht [van de](../ingestion/home.md)Ingestie van Gegevens.
 
 ### [!DNL Query Service]
 
@@ -103,7 +104,7 @@ Zie het overzicht [van het profiel van de Klant in](../profile/home.md) real tim
 
 ### [!DNL Data Science Workspace]
 
-Adobe Experience Platform [!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzichten te verkrijgen uit gegevens die binnen zijn opgeslagen [!DNL Experience Platform]. [!DNL Data Science Workspace] staat gegevenswetenschappers toe om recepten te bouwen die op Individuele XDM [!DNL Profile] [!DNL XDM ExperienceEvent] en gegevens over klanten en hun activiteiten worden gebaseerd, die voorspellingen zoals het kopen van neiging en geadviseerde aanbiedingen vergemakkelijken dat het individu waarschijnlijk zal waarderen en gebruiken.
+Adobe Experience Platform [!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzichten te krijgen van gegevens die in het systeem zijn opgeslagen [!DNL Experience Platform]. [!DNL Data Science Workspace] staat gegevenswetenschappers toe om recepten te bouwen die op Individuele XDM [!DNL Profile] [!DNL XDM ExperienceEvent] en gegevens over klanten en hun activiteiten worden gebaseerd, die voorspellingen zoals het kopen van neiging en geadviseerde aanbiedingen vergemakkelijken dat het individu waarschijnlijk zal waarderen en gebruiken.
 
 Met [!DNL Data Science Workspace]behulp van computerleren kunnen gegevenswetenschappers eenvoudig intelligente services-API&#39;s maken. Deze services werken samen met andere Adobe-oplossingen, zoals Adobe Target en Adobe Analytics Cloud, om u te helpen persoonlijke, doelgerichte digitale ervaringen te automatiseren.
 
