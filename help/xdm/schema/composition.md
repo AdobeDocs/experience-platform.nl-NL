@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;primary identity;primary idenity;XDM individual profile;XDM fields;enum datatype;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design
 solution: Experience Platform
 title: Basisbeginselen van de schemacompositie
 topic: overview
+description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 translation-type: tm+mt
-source-git-commit: dae86df3ca4fcc9c5951068e905081df29e3b5f2
+source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
 workflow-type: tm+mt
-source-wordcount: '2782'
+source-wordcount: '2811'
 ht-degree: 0%
 
 ---
@@ -243,4 +244,4 @@ Het [!DNL Schema Registry] wordt gebruikt om toegang te krijgen tot het [!DNL Sc
 
 Als u wilt beginnen met het samenstellen van een schema met behulp van de UI, volgt u de zelfstudie [van de](../tutorials/create-schema-ui.md) Schema-editor om het schema &quot;Loyalty-leden&quot; te bouwen dat in dit document wordt vermeld.
 
-Als u de [!DNL Schema Registry] API wilt gaan gebruiken, begint u met het lezen van de ontwikkelaarsgids [van de](../api/getting-started.md)schemaregistratie-API. Na het lezen van de ontwikkelaarsgids, volg de stappen die in het leerprogramma worden geschetst over het [creëren van een schema gebruikend de Registratie API](../tutorials/create-schema-api.md)van het Schema.
+Als u de [!DNL Schema Registry] API wilt gaan gebruiken, begint u met het lezen van de ontwikkelaarsgids [van de](../api/getting-started.md)Schemaregister-API. Na het lezen van de ontwikkelaarsgids, volg de stappen die in het leerprogramma worden geschetst over het [creëren van een schema gebruikend de Registratie API](../tutorials/create-schema-api.md)van het Schema.
