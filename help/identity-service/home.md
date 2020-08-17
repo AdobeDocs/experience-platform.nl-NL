@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity;Identity;XDM graphs;identity service;Identity service
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
+description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 translation-type: tm+mt
-source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1672'
+source-wordcount: '1707'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Identity Service] overzicht
 
-Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van uw klant vereist. Dit wordt bemoeilijkt wanneer uw klantengegevens over verschillende systemen worden gefragmenteerd, die elke individuele klant ertoe brengen om veelvoudige &quot;identiteiten&quot;te hebben te schijnen. Adobe Experience Platform [!DNL Identity Service] helpt u om een beter beeld van uw klant en hun gedrag te krijgen door identiteiten over apparaten en systemen te overbruggen, die u toestaan om daadwerkelijke, persoonlijke digitale ervaringen in real time te leveren.
+Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van uw klant vereist. Dit wordt bemoeilijkt wanneer uw klantengegevens over verschillende systemen worden gefragmenteerd, die elke individuele klant ertoe brengen om veelvoudige &quot;identiteiten&quot;te hebben te schijnen. Adobe Experience Platform [!DNL Identity Service] helpt u om een beter inzicht te krijgen in uw klant en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 
 ## Begrijpen [!DNL Identity Service]
 
@@ -61,7 +62,7 @@ Uw klanten kunnen met uw merk door een combinatie online en off-line kanalen in 
 
 [!DNL Experience Platform] Deze uitdaging wordt aangegaan door twee concepten: [naamruimten](#identity-namespaces) en [identiteitsgrafieken](#identity-graphs).
 
-De volgende video is bedoeld als ondersteuning voor uw begrip van identiteiten en identiteitsgrafieken. De volgende video behandelt de drie mogelijkheden van de Inzameling van de Identiteit, de Grafieken van de Identiteit, en APIs. Het beschrijft ook hoe deterministische en probabilistische algoritmen worden gebruikt om privé identiteitsgrafieken te construeren, en bespreekt de rol van privé identiteitsgrafieken, de CoOp Grafiek van de Dienst van de Identiteit van het Adobe Experience Platform, en derdegrafieken.
+De volgende video is bedoeld als ondersteuning voor uw begrip van identiteiten en identiteitsgrafieken. De volgende video behandelt de drie mogelijkheden van de Inzameling van de Identiteit, de Grafieken van de Identiteit, en APIs. Het beschrijft ook hoe deterministische en probabilistische algoritmen worden gebruikt om privé identiteitsgrafieken te construeren, en bespreekt de rol van privé identiteitsgrafieken, de CoOp Grafiek van de Dienst van de Identiteit van Adobe Experience Platform, en derdegrafieken.
 
 >[!IMPORTANT]
 >
@@ -88,11 +89,11 @@ Als voorbeeld van de mogelijke typen factoren die in overweging moeten worden ge
 
 ## Identiteitsgegevens leveren aan [!DNL Identity Service]
 
-In deze sectie wordt beschreven hoe gegevens die aan Adobe Experience Platform worden verstrekt, worden verwerkt voordat ze worden gebruikt om een identiteitsgrafiek voor elke klant [!DNL Identity Service] te maken.
+In deze sectie wordt beschreven hoe aan Adobe Experience Platform verstrekte gegevens worden verwerkt voordat ze worden gebruikt om een identiteitsgrafiek voor elke klant [!DNL Identity Service] te maken.
 
 ### Beslissen over identiteitsvelden
 
-Afhankelijk van uw strategie van de de gegevensinzameling van ondernemingsgegevens, bepalen de gegevensgebieden u als identiteiten etiketteert welke gegevens in uw identiteitskaart inbegrepen zijn. Om het maximale voordeel van Adobe Experience Platform en de meest uitgebreide klantenidentiteiten mogelijk te krijgen, zou u zowel online als off-line gegevens moeten uploaden.
+Afhankelijk van uw strategie van de de gegevensinzameling van ondernemingsgegevens, bepalen de gegevensgebieden u als identiteiten etiketteert welke gegevens in uw identiteitskaart inbegrepen zijn. Als u het maximale voordeel van Adobe Experience Platform en de meest uitgebreide klantidentiteiten wilt benutten, moet u zowel online als offline gegevens uploaden.
 
 - Onlinegegevens zijn gegevens die de online aanwezigheid en het gedrag beschrijven, zoals gebruikersnamen en e-mailadressen.
 
@@ -131,7 +132,7 @@ Tijdens het streamingingingproces extraheert u [!DNL Identity Service ]automatis
 
 [!DNL Identity Service] verbruikt XDM-compatibele gegevens die naar [!DNL Experience Platform] batch-opname [of](../ingestion/batch-ingestion/overview.md) streaming-opname [](../ingestion/streaming-ingestion/overview.md)worden verzonden.
 
-De volgende video is bedoeld om uw begrip van de Dienst van de Identiteit te steunen. In deze video ziet u hoe u gegevensvelden kunt labelen als identiteiten, identiteitsgegevens kunt invoeren en vervolgens kunt controleren of de gegevens zijn omgezet in de persoonlijke grafiek van de identiteitsdienst van het Adobe Experience Platform.
+De volgende video is bedoeld om uw begrip van de Dienst van de Identiteit te steunen. In deze video ziet u hoe u gegevensvelden kunt labelen als identiteiten, identiteitsgegevens kunt invoeren en vervolgens kunt controleren of de gegevens zijn omgezet in de persoonlijke grafiek van de Adobe Experience Platform Identity Service.
 
 >[!WARNING]
 >
