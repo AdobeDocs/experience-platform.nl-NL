@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Berekende kenmerken - Real-time Customer Profile API
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '2404'
+source-wordcount: '2403'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op basis van andere waarden, berekeningen en expressies. De berekende attributen werken op het profielniveau, betekenend kunt u waarden over alle verslagen en gebeurtenissen bijeenvoegen.
 
-Elk berekend kenmerk bevat een expressie, ofwel &quot;rule&quot;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren.
+Elk berekend kenmerk bevat een expressie, of &#39;regel&#39;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren.
 
 Deze gids zal u helpen om gegevens verwerkte attributen binnen Adobe Experience Platform beter te begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisCRUD verrichtingen gebruikend het `/config/computedAttributes` eindpunt.
 
@@ -29,19 +29,19 @@ Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van het [Real-ti
 
 ## Berekende kenmerken begrijpen
 
-Met Adobe Experience Platform kunt u eenvoudig gegevens uit meerdere bronnen importeren en samenvoegen om te genereren [!DNL Real-time Customer Profiles]. Elk profiel bevat belangrijke informatie met betrekking tot een persoon, zoals zijn contactgegevens, voorkeuren en aankoopgeschiedenis, die een 360 graden mening van de klant verstrekken.
+Met Adobe Experience Platform kunt u eenvoudig gegevens uit meerdere bronnen importeren en samenvoegen om deze te genereren [!DNL Real-time Customer Profiles]. Elk profiel bevat belangrijke informatie met betrekking tot een persoon, zoals zijn contactgegevens, voorkeuren en aankoopgeschiedenis, die een 360 graden mening van de klant verstrekken.
 
 Een deel van de informatie die in het profiel wordt verzameld, is gemakkelijk te begrijpen wanneer de gegevensvelden rechtstreeks worden gelezen (bijvoorbeeld &quot;voornaam&quot;), terwijl andere gegevens meerdere berekeningen vereisen of op andere velden en waarden vertrouwen om de informatie te genereren (bijvoorbeeld &quot;totaal voor levenslange aanschaf&quot;). Om deze gegevens in één oogopslag begrijpelijker te maken, [!DNL Platform] kunt u **[!UICONTROL berekende attributen]** tot stand brengen die deze verwijzingen en berekeningen automatisch uitvoeren, die de waarde op het aangewezen gebied terugkeren.
 
 De berekende attributen omvatten het creëren van een uitdrukking, of &quot;regel&quot;, die op inkomende gegevens werkt en de resulterende waarde in een profielattribuut of een gebeurtenis opslaat. Expressies kunnen op meerdere verschillende manieren worden gedefinieerd, zodat u kunt opgeven dat een regel alleen binnenkomende gebeurtenissen, binnenkomende gebeurtenis- en profielgegevens of binnenkomende gebeurtenissen, profielgegevens en historische gebeurtenissen evalueert.
 
-### Gebruik hoofdletters
+### Gebruiksscenario’s
 
 Bij gebruik van berekende kenmerken kan het gaan om eenvoudige berekeningen tot zeer complexe verwijzingen. Hier volgen een paar voorbeelden van gebruiksscenario&#39;s voor berekende kenmerken:
 
-1. **[!UICONTROL Percentage]:**Een eenvoudig berekend kenmerk kan bestaan uit het opnemen van twee numerieke velden in een record en het splitsen van deze velden om een percentage te maken. U kunt bijvoorbeeld het totale aantal e-mails dat naar een individu is verzonden, opsplitsen in het aantal e-mails dat de persoon opent. Als u het resulterende berekende kenmerkveld bekijkt, wordt snel het percentage weergegeven van het totale aantal e-mails dat door het individu wordt geopend.
-1. **[!UICONTROL Toepassingsgebruik]:**Een ander voorbeeld is de mogelijkheid om het aantal keren te verzamelen dat een gebruiker uw toepassing opent. Door het totale aantal geopende toepassingen te volgen, op basis van afzonderlijke open gebeurtenissen, kunt u speciale aanbiedingen of berichten aan gebruikers aanbieden op hun 100e open, waardoor u een diepere betrokkenheid bij uw merk aanmoedigt.
-1. **[!UICONTROL Levenstijdwaarden]:**Het verzamelen van lopende totalen, zoals een waarde van de levenslange aankoop voor een klant, kan zeer moeilijk zijn. Dit vereist het bijwerken van het historische totaal telkens wanneer een nieuwe aankoopgebeurtenis plaatsvindt. Een gegevens verwerkt attribuut staat u toe om dit veel gemakkelijker te doen door de levenwaarde op één enkel gebied te handhaven dat automatisch na elke succesvolle koopgebeurtenis met betrekking tot de klant wordt bijgewerkt.
+1. **[!UICONTROL Percentage]:** Een eenvoudig berekend kenmerk kan bestaan uit het opnemen van twee numerieke velden in een record en het splitsen van deze velden om een percentage te maken. U kunt bijvoorbeeld het totale aantal e-mails dat naar een individu is verzonden, opsplitsen in het aantal e-mails dat de persoon opent. Als u het resulterende berekende kenmerkveld bekijkt, wordt snel het percentage weergegeven van het totale aantal e-mails dat door het individu wordt geopend.
+1. **[!UICONTROL Toepassingsgebruik]:** Een ander voorbeeld is de mogelijkheid om het aantal keren te verzamelen dat een gebruiker uw toepassing opent. Door het totale aantal geopende toepassingen te volgen, op basis van afzonderlijke open gebeurtenissen, kunt u speciale aanbiedingen of berichten aan gebruikers aanbieden op hun 100e open, waardoor u een diepere betrokkenheid bij uw merk aanmoedigt.
+1. **[!UICONTROL Levenstijdwaarden]:** Het verzamelen van lopende totalen, zoals een waarde van de levenslange aankoop voor een klant, kan zeer moeilijk zijn. Dit vereist het bijwerken van het historische totaal telkens wanneer een nieuwe aankoopgebeurtenis plaatsvindt. Een gegevens verwerkt attribuut staat u toe om dit veel gemakkelijker te doen door de levenwaarde op één enkel gebied te handhaven dat automatisch na elke succesvolle koopgebeurtenis met betrekking tot de klant wordt bijgewerkt.
 
 ## Een berekend kenmerk configureren
 
@@ -56,7 +56,7 @@ De workflow in deze zelfstudie gebruikt een schema [!DNL Profile]-ingeschakeld e
 
 ### Een schema weergeven
 
-De stappen die volgen gebruiken het gebruikersinterface van het Adobe Experience Platform om van een schema de plaats te bepalen, een mengeling toe te voegen, en een gebied te bepalen. Als u liever de [!DNL Schema Registry] API gebruikt, raadpleegt u de ontwikkelaarsgids [voor het](../../xdm/api/getting-started.md) schemaregister voor stappen voor het maken van een mix, het toevoegen van een mix aan een schema en het inschakelen van een schema voor gebruik met [!DNL Real-time Customer Profile].
+De stappen die volgen gebruiken het gebruikersinterface van Adobe Experience Platform om van een schema de plaats te bepalen, een mengeling toe te voegen, en een gebied te bepalen. Als u liever de [!DNL Schema Registry] API gebruikt, raadpleegt u de ontwikkelaarsgids [voor het](../../xdm/api/getting-started.md) schemaregister voor stappen voor het maken van een mix, het toevoegen van een mix aan een schema en het inschakelen van een schema voor gebruik met [!DNL Real-time Customer Profile].
 
 Klik in de gebruikersinterface op **[!UICONTROL Schema]** &#39;s in het linkerspoor en gebruik de zoekbalk op het tabblad *[!UICONTROL Bladeren]* om snel het schema te zoeken dat u wilt bijwerken.
 
@@ -480,10 +480,9 @@ Een geslaagde update retourneert HTTP Status 204 (Geen inhoud) en een lege antwo
 
 ## Een berekend kenmerk verwijderen
 
-Het is ook mogelijk om een berekend attribuut te schrappen gebruikend API. Dit wordt gedaan door een DELETE verzoek aan het `/config/computedAttributes` eindpunt en met inbegrip van identiteitskaart van de gegevens verwerkte attributen te doen die u wenst om in de verzoekweg te schrappen.
+Het is ook mogelijk om een berekend attribuut te schrappen gebruikend API. Dit wordt gedaan door een verzoek van DELETE aan het `/config/computedAttributes` eindpunt en met inbegrip van identiteitskaart van de gegevens verwerkte attributen te doen die u wenst om in de verzoekweg te schrappen.
 
->[!Nofferte]
->
+>[!NOTE]
 >
 >Wees voorzichtig bij het verwijderen van een kenmerk dat u hebt berekend, omdat het in meerdere schema&#39;s wordt gebruikt en de bewerking DELETE niet ongedaan kan worden gemaakt.
 
