@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
 solution: Adobe Experience Platform
 title: Handleiding voor ontwikkelaars van API voor gebruikersprofiel in realtime
 topic: guide
+description: De realtime-API voor klantprofielen bevat meerdere eindpunten, die hieronder worden beschreven.
 translation-type: tm+mt
-source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
+source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
