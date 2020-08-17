@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;Catalog
 solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Catalog Service
 topic: developer guide
+description: Deze handleiding voor ontwikkelaars bevat stappen waarmee u de API voor Catalog kunt gaan gebruiken. De handleiding bevat vervolgens voorbeeld-API-aanroepen voor het uitvoeren van toetsbewerkingen met behulp van Catalog.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Catalog Service] ontwikkelaarsgids
 
-[!DNL Catalog Service] is het registratiesysteem voor de gegevenslocatie en -lijn in het Adobe Experience Platform. [!DNL Catalog] fungeert als een opslagplaats voor metagegevens of als een &quot;catalogus&quot; waarin u informatie over uw gegevens kunt vinden [!DNL Experience Platform], zonder dat u toegang hoeft te krijgen tot de gegevens zelf. Zie het [Catalogusoverzicht](../home.md) voor meer informatie.
+[!DNL Catalog Service] is het registratiesysteem voor gegevenslocatie en -lijn in Adobe Experience Platform. [!DNL Catalog] fungeert als een opslagplaats voor metagegevens of als een &quot;catalogus&quot; waarin u informatie over uw gegevens kunt vinden [!DNL Experience Platform], zonder dat u toegang hoeft te krijgen tot de gegevens zelf. Zie het [Catalogusoverzicht](../home.md) voor meer informatie.
 
 Deze handleiding voor ontwikkelaars bevat stappen waarmee u de [!DNL Catalog] API kunt gaan gebruiken. De gids verstrekt dan steekproefAPI vraag voor het uitvoeren van zeer belangrijke verrichtingen gebruikend [!DNL Catalog].
 
