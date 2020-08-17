@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ingested data
 solution: Experience Platform
-title: Handleiding voor het oplossen van problemen met inslikken in Adobe Experience Platform
+title: Adobe Experience Platform-handleiding voor het oplossen van problemen met de inname van batterijen
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '1335'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
 # Handleiding voor het oplossen van problemen met inslikken
 
-Deze documentatie zal helpen veelgestelde vragen over Adobe Experience Platform APIs beantwoorden. [!DNL Batch Data Ingestion]
+Deze documentatie helpt veelgestelde vragen over Adobe Experience Platform API&#39; [!DNL Batch Data Ingestion] s te beantwoorden.
 
 ## Blokvraag API
 
@@ -189,7 +189,7 @@ Wanneer een partij zich in &quot;Staging&quot; bevindt, betekent dit dat de part
 
 ### Wat betekent het als een partij &quot;Opnieuw probeert&quot;?
 
-Wanneer een batch zich in &quot;Opnieuw proberen&quot; bevindt, betekent dit dat de gegevensopname van de batch tijdelijk is gestopt vanwege intermitterende problemen. Wanneer dit gebeurt, vereist het geen klanteninterventie.
+Wanneer een partij in &quot;Opnieuw proberen&quot; staat, betekent dit dat de gegevensopname van de partij tijdelijk is gestopt vanwege intermitterende problemen. Wanneer dit gebeurt, vereist het geen klanteninterventie.
 
 ### Wat betekent het wanneer een partij &quot;wordt afgebroken&quot;?
 
