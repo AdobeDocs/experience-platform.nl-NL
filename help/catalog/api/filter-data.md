@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
 solution: Experience Platform
 title: Catalogusgegevens filteren met behulp van queryparameters
 topic: developer guide
+description: De dienst API van de Catalogus staat reactiegegevens toe om door het gebruik van de parameters van de verzoekvraag worden gefiltreerd. Een deel van beste praktijken voor Catalog is filters in alle API vraag te gebruiken, aangezien zij de lading op API verminderen en helpen algemene prestaties verbeteren.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2078'
 ht-degree: 0%
 
 ---
