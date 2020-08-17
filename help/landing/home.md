@@ -1,24 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
 solution: Experience Platform
-title: Overzicht van Adobe Experience Platform
+title: Adobe Experience Platform-overzicht
 topic: getting started
+description: Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. Experience Platform stelt organisaties in staat om klantgegevens en -inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
 translation-type: tm+mt
-source-git-commit: 99bee24a8b1a0a212424ca63464f7733adba2ba2
+source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
 
 
-# Overzicht van Adobe Experience Platform
+# Adobe Experience Platform-overzicht
 
 >[!NOTE]
 >
->De documentatie van het Adobe Experience Platform is onlangs bewogen. Neem even de tijd om de nieuwe navigatie te bekijken en bestaande bladwijzers bij te werken.
+>Adobe Experience Platform-documentatie is onlangs verplaatst. Neem even de tijd om de nieuwe navigatie te bekijken en bestaande bladwijzers bij te werken.
 
-Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van de klant bevorderen. [!DNL Experience Platform] stelt organisaties in staat om klantgegevens en inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
+Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. [!DNL Experience Platform] stelt organisaties in staat om klantgegevens en inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
 
 Gebaseerd op open APIs, [!DNL Experience Platform] stelt de volledige functionaliteit van het systeem aan ontwikkelaars bloot, die de gemakkelijke integratie van ondernemingsoplossingen steunen gebruikend vertrouwde hulpmiddelen. [!DNL Experience Platform] steunt ook partners om hun eigen producten en technologieën waar nodig op te bouwen en te integreren. Deze macht en flexibiliteit maken [!DNL Experience Platform] uniek in de markt. Het geeft partners, klanten, en een gemeenschap van ontwikkelaars een stichting waarop om innovaties te bouwen die de ErvingsZaken drijven: Het overschrijden van klantenverwachtingen door een voortdurend verbeterende, volledig-gepersonaliseerde ervaring te leveren die uit een 360 graadmening van de klant en hun individuele voorkeur wordt getrokken.
 
@@ -34,7 +35,7 @@ In de volgende video&#39;s wordt beschreven hoe u rijke, relevante, real-time er
 
 ## Browserondersteuning
 
-Het Adobe Experience Platform is ontworpen om optimaal te werken in de **nieuwste versies** van Google Chrome, Safari, Firefox en Microsoft Edge. Mogelijk kunt u problemen ondervinden bij het gebruik van bepaalde functies in oudere versies van browsers.
+De Adobe Experience Platform is ontworpen om optimaal te werken in de **nieuwste versies** van Google Chrome, Safari, Firefox en Microsoft Edge. Mogelijk kunt u problemen ondervinden bij het gebruik van bepaalde functies in oudere versies van browsers.
 
 | Besturingssysteem | Ondersteunde browsers |
 |---|---|
@@ -50,11 +51,11 @@ Deze besturingssystemen en browsers worden niet ondersteund:
 
 ## Taalondersteuning
 
-De gebruikersinterface en documentatie van het Adobe Experience Platform zijn beschikbaar in meerdere talen.
+De gebruikersinterface en documentatie van Adobe Experience Platform zijn beschikbaar in meerdere talen.
 
 ### Talen gebruikersinterface
 
-De gebruikersinterface van het Adobe Experience Platform is huidig beschikbaar in de volgende talen:
+De Adobe Experience Platform-gebruikersinterface is beschikbaar in de volgende talen:
 
 * Engels
 * Frans
@@ -73,7 +74,7 @@ De standaardtaal van de gebruikersinterface wordt bepaald door het gebied dat in
 
 ### Documentatietalen
 
-De documentatie van het Adobe Experience Platform is beschikbaar in verscheidene talen. Als u de taal wilt wijzigen, klikt u op de vervolgkeuzelijst Taal en selecteert u de gewenste taal.
+De documentatie van Adobe Experience Platform is beschikbaar in verscheidene talen. Als u de taal wilt wijzigen, klikt u op de vervolgkeuzelijst Taal en selecteert u de gewenste taal.
 
 ![afbeelding](assets/lang.jpg)
 
@@ -110,23 +111,23 @@ Bekijk de volgende video voor een snelle rondleiding door de [!DNL Experience Pl
 
 ## Referentiedocumenten en -bronnen
 
-* [**Opmerkingen bij de release **](../release-notes/latest/latest.md)<br/>[!DNL Experience Platform]Zoeken naar informatie over de meest recente release en revisie in het verleden.
+* [**Opmerkingen bij de release**](../release-notes/latest/latest.md)<br/>[!DNL Experience Platform] Zoeken naar informatie over de meest recente release en revisie in het verleden.
 
-* [**Woordenlijst **](glossary.md)<br/>De terminologie van het Adobe Experience Platform controleren.
+* [**Woordenlijst**](glossary.md)<br/> Adobe Experience Platform-terminologie controleren.
 
-* [**De gids van het Oplossen van problemen **](troubleshooting.md)<br/>vindt resoluties aan gemeenschappelijke fouten en antwoorden op vaak gestelde vragen.
+* [**De gids van het Oplossen van problemen**](troubleshooting.md)<br/> vindt resoluties aan gemeenschappelijke fouten en antwoorden op vaak gestelde vragen.
 
-* [**Basisprincipes van **](api-fundamentals.md)<br/>API&#39;s Leer de basisbeginselen van het werken met[!DNL Platform]API&#39;s.
+* [**Basisprincipes van**](api-fundamentals.md)<br/> API&#39;s Leer de basisbeginselen van het werken met [!DNL Platform] API&#39;s.
 
-* [**API-naslaggids **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>detecteert API&#39;[!DNL Experience Platform]s, waaronder headers, parameters, voorbeeldaanvragen en reacties.*Deze documenten worden gehost op Adobe I/O.*
+* [**API-naslaggids**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>detecteert API&#39; [!DNL Experience Platform] s, waaronder headers, parameters, voorbeeldaanvragen en reacties. *Deze documenten worden gehost op Adobe I/O.*
 
-## Video-bronnen over integratie van Adobe Experience Platform
+## Adobe Experience Platform-bronnen voor integratie
 
 [!DNL Experience Platform] Gebruikt de Diensten van de Toepassing en [!DNL Intelligent Services] gebouwd bovenop [!DNL Experience Platform], voor meer informatie gelieve te letten op de volgende video:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
 
-Een van de belangrijkste voordelen van Adobe Experience Platform is zijn vermogen om met andere bestaande diensten van de Adobe te integreren. De volgende video geeft een overzicht van hoe de [!DNL Experience Platform] diensten met [!DNL Experience Cloud] toepassingen en mogelijkheden zoals Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Customer Attributes], [!DNL Audience Library], en [!DNL Experience Platform Launch]. integreren.
+Een van de belangrijkste voordelen van Adobe Experience Platform is zijn vermogen om met andere bestaande Adobe-diensten te integreren. De volgende video geeft een overzicht van hoe [!DNL Experience Platform] de diensten met [!DNL Experience Cloud] toepassingen en mogelijkheden zoals Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Customer Attributes], [!DNL Audience Library], en [!DNL Experience Platform Launch]. integreren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
@@ -142,7 +143,7 @@ In de volgende video&#39;s wordt een overzicht gegeven van de belangrijkste moge
 
 >[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
 
-**Gebruik hoofdletters/kleine letters:**
+**Gebruiksscenario’s:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
 
