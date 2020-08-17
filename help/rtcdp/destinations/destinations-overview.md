@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;rtcdp
 title: Overzicht van bestemmingen
 seo-title: Overzicht van bestemmingen
 description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Adobe Real-time Platform van de Gegevens van de Klant gebruiken om uw bekende en onbekende gegevens voor dwars-kanaal marketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 seo-description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Adobe Real-time Platform van de Gegevens van de Klant gebruiken om uw bekende en onbekende gegevens voor dwars-kanaal marketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 translation-type: tm+mt
-source-git-commit: 7aa15772003cce1dfc7c3636048bce9a35bf8197
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 0%
@@ -44,7 +45,7 @@ Voor gedetailleerde informatie, zie de [bestemmingstypes en categoriesoverzicht]
 
 ## Doelen en toegangscontroles {#access-controls}
 
-De bestemmingsfunctionaliteit in CDP in real time werkt met de toestemmingen van de de toegangscontrole van het Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Voor informatie over de individuele toestemmingen, zie de controle van de [Toegang in Adobe Experience Platform](../../access-control/home.md) en rol neer aan de bodem van de pagina.
+De bestemmingsfunctionaliteit in CDP in real time werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Zie [Toegangsbeheer in Adobe Experience Platform](../../access-control/home.md) en schuif omlaag naar de onderkant van de pagina voor informatie over de individuele machtigingen.
 
 Voor meer informatie over toegangscontroles, zie de handleiding [van de controlegebruiker van de](../../access-control/ui/overview.md)Toegang.
 
