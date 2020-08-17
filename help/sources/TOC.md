@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 2ee74c9ea0e4838eacfaba1b1e6b8aac7012f427
+source-git-commit: 18af4226c07cd7bc8a093aa4b1ce2b5f8f018cb6
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -194,4 +194,5 @@ ht-degree: 0%
    - [Inkomende gegevens activeren om klantprofielen te vullen](tutorials/ui/profile.md)
    - [Accounts en gegevensstromen bewaken](tutorials/ui/monitor.md)
    - [Gegevensstromen verwijderen](tutorials/ui/delete.md)
+- [Meldingen voor stroomuitvoering](notifications.md)
 - [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
