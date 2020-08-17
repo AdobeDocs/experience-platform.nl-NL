@@ -1,10 +1,11 @@
 ---
+keywords: rtcdp profile;real-time customer profile
 title: Overzicht van het realtime klantprofiel
 seo-title: Klantprofiel in real-time in Platform van de Gegevens van de Klant in real-time
 description: Een overzicht van hoe het Platform van de Gegevens van de Klant in real time u toelaat om gecoördineerde, verenigbare, relevante ervaringen voor uw klanten te drijven gebruikend de Profielen van de Klant in real time.
 seo-description: Platform, profiel, gegevens, ervaringen, kanalen voor klantgegevens in realtime
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 ## Profielen in [!DNL Real-time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] biedt u de mogelijkheid om gecoördineerde en consistente ervaringen voor uw klanten te gebruiken, ongeacht waar of wanneer ze met uw merk communiceren. Het leveren van deze persoonlijke ervaringen, zodat zij zich relevant en tijdig voelen, is geen kleinigheid, maar het kan worden bereikt door gebruik te maken van [!DNL Real-time Customer Profile], een deel van het Adobe Experience Platform. CDP in real time wordt voortgebouwd bovenop [!DNL Experience Platform] en gebruikt veel van de [!DNL Experience Platform] diensten en de functionaliteit, met inbegrip van de verwezenlijking van profielen. Deze samengevoegde meningen van een individuele klant brengen gegevens van over uw vele marketing kanalen en de diverse systemen samen die uw organisatie momenteel gebruikt om klantengegevens op te slaan.
+[!DNL Real-time Customer Data Platform] biedt u de mogelijkheid om gecoördineerde en consistente ervaringen voor uw klanten te gebruiken, ongeacht waar of wanneer ze met uw merk communiceren. Het leveren van deze persoonlijke ervaringen, zodat zij zich relevant en tijdig voelen, is geen klein kenmerk, maar het kan worden bereikt door gebruik te maken van een deel van Adobe Experience Platform [!DNL Real-time Customer Profile]. CDP in real time wordt voortgebouwd bovenop [!DNL Experience Platform] en gebruikt veel van de [!DNL Experience Platform] diensten en de functionaliteit, met inbegrip van de verwezenlijking van profielen. Deze samengevoegde meningen van een individuele klant brengen gegevens van over uw vele marketing kanalen en de diverse systemen samen die uw organisatie momenteel gebruikt om klantengegevens op te slaan.
 
 ## Identiteiten en naamruimten
 
