@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;decision events;decision event;Decision events
 solution: Experience Platform
 title: Werken met API's voor de beslissingsservice-runtime
 topic: tutorial
+description: 'Dit document bevat een zelfstudie voor het werken met de runtimeservices van de Decisioning Service met Adobe Experience Platform API''s. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1985'
+source-wordcount: '2004'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Werken met API&#39;s voor de beslissingsservice-runtime
 
-Dit document bevat een zelfstudie voor het werken met de runtimeservices van het [!DNL Decisioning Service] gebruik van Adobe Experience Platform-API&#39;s.
+Dit document bevat een zelfstudie voor het werken met de runtimeservices van het [!DNL Decisioning Service] gebruik van Adobe Experience Platform API&#39;s.
 
 ## Aan de slag
 
@@ -238,7 +239,7 @@ De aanvraag per dit schema bevat een array van URI&#39;s die verwijzen naar aanb
 
 ## Dynamische contextgegevens in beslissingsverzoeken
 
-In de vorige sectie wordt aangegeven hoe XDM-objecten kunnen worden doorgegeven aan een beslissingsverzoek. Hier volgt een voorbeeld van een dergelijke array van contextobjecten:
+In de vorige sectie wordt aangegeven hoe XDM-objecten kunnen worden doorgegeven aan een beslissingsverzoek. Hieronder ziet u een voorbeeld van een dergelijke array met contextobjecten:
 
 ```json
 "xdm:contextData": [
