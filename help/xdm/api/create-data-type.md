@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;datatype;Datatype
 solution: Experience Platform
 title: Een gegevenstype maken
 topic: developer guide
+description: 'Wanneer er gemeenschappelijke gegevensstructuren zijn die uw organisatie op veelvoudige manieren wenst te gebruiken, kunt u wensen om een gegevenstype te bepalen. Gegevenstypen maken een consistent gebruik van structuren met meerdere velden mogelijk, met meer flexibiliteit dan mixen, omdat ze overal in een schema kunnen worden opgenomen door ze toe te voegen als het ''type'' van een veld. '
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
