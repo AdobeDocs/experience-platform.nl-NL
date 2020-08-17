@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: Problemen met streaming opname oplossen
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Handleiding voor het oplossen van problemen bij het streamen
 
-In dit document worden antwoorden gegeven op veelgestelde vragen over het streamen van opname op het Adobe Experience Platform. Raadpleeg de handleiding voor het oplossen van problemen bij het [!DNL Platform] Experience Platform voor vragen en problemen met betrekking tot andere [!DNL Platform] services, waaronder de services die worden aangetroffen in alle API&#39; [](../../landing/troubleshooting.md)s.
+In dit document worden antwoorden gegeven op veelgestelde vragen over het streamen van opname op Adobe Experience Platform. Raadpleeg de handleiding voor het oplossen van problemen bij het [!DNL Platform] Experience Platform voor vragen en problemen met betrekking tot andere [!DNL Platform] services, waaronder de services die worden aangetroffen in alle API&#39; [](../../landing/troubleshooting.md)s.
 
 Adobe Experience Platform [!DNL Data Ingestion] biedt RESTful-API&#39;s die u kunt gebruiken om gegevens in te voeren [!DNL Experience Platform]. De opgenomen gegevens worden gebruikt om individuele klantenprofielen in bijna real time bij te werken, toestaand u om gepersonaliseerde, relevante ervaringen over veelvoudige kanalen te leveren. Lees het overzicht [van de](../home.md) gegevensinname voor meer informatie over de service en de verschillende innamemethoden. Lees het [overzicht](../streaming-ingestion/overview.md)van de streamingopname voor informatie over het gebruik van API&#39;s voor het opnemen van streaming.
 
