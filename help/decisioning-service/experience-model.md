@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;decision events;decision event;Decision events
 solution: Experience Platform
 title: Ervaar het Beslissen domeinmodel
 topic: overview
+description: In deze sectie, worden de componenten van de Beslissende Dienst verklaard en de manieren waarin die componenten interactie aangaan zijn gedetailleerd. De concepten en hun verhoudingen vormen *Domain* van het beslissingsprobleem. Deze fundamentele componenten komen in spel ongeacht hoe u de Dienst van het Beslissen gebruikt].
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1412'
 ht-degree: 0%
 
 ---
@@ -18,9 +19,9 @@ In deze sectie worden de componenten van [!DNL Decisioning Service] deze compone
 
 ## Beslissingsopties
 
-Een ervaringsbeslissingsoptie ** is een potentiële ervaring die aan een specifieke klant kan worden gepresenteerd. Een optie wordt ook wel een keuze of een alternatief genoemd. Wanneer het beslissen over de volgende beste optie voor een klant, [!DNL Decisioning Service] overweegt opties ***d<sub>1</sub>***aan***<sub>dN</sub>*** van onder een eindige reeks opties **`D`**.
+Een ervaringsbeslissingsoptie ** is een potentiële ervaring die aan een specifieke klant kan worden gepresenteerd. Een optie wordt ook wel een keuze of een alternatief genoemd. Wanneer het beslissen over de volgende beste optie voor een klant, [!DNL Decisioning Service] overweegt opties ***d<sub>1</sub>*** aan ***<sub>dN</sub>*** van onder een eindige reeks opties **`D`**.
 
-Besluiten worden genomen door de beste optie te kiezen uit een reeks beschikbare opties. Eén methode is het achtereenvolgens uitsluiten van *beslissingsopties* ***<sub>di</sub>***uit de set*** D ***totdat er slechts één overblijft en vervolgens willekeurig een &quot;winnaar&quot; uit de resterende set kiezen. Een andere vorm van besluitvorming is het rangschikken van de resterende (in aanmerking komende) beslissingsopties naar hun verwachte resultaat.
+Besluiten worden genomen door de beste optie te kiezen uit een reeks beschikbare opties. Eén methode is het achtereenvolgens uitsluiten van *beslissingsopties* ***<sub>di</sub>*** uit de set ***D*** totdat er slechts één overblijft en vervolgens willekeurig een &quot;winnaar&quot; uit de resterende set kiezen. Een andere vorm van besluitvorming is het rangschikken van de resterende (in aanmerking komende) beslissingsopties naar hun verwachte resultaat.
 
 ### Eindverzameling beslissingsopties
 
