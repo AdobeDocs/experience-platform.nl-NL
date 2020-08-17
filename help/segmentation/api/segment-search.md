@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
+keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment
 solution: Adobe Experience Platform
 title: Zoekeindpunt segment
 topic: guide
+description: Het Onderzoek van het segment wordt gebruikt om gebieden te zoeken die zich over diverse gegevensbronnen bevinden en hen in bijna real time terug te keren. Deze gids verstrekt informatie om u te helpen het Onderzoek van het Segment beter begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisacties gebruikend API.
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1179'
 ht-degree: 0%
 
 ---
