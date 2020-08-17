@@ -1,24 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segment;Segment;Segments;segments
 solution: Experience Platform
-title: Segmenteringsservice Adobe Experience Platform
+title: Adobe Experience Platform Segmentation Service
 topic: overview
+description: Dit document biedt een overzicht van de Segmentatieservice en de rol die deze speelt in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1991'
 ht-degree: 0%
 
 ---
 
 
-# Overzicht [!DNL Segmentation Service] van Adobe Experience Platforms
+# Adobe Experience Platform [!DNL Segmentation Service] overview
 
-Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal gevormd en gehandhaafd [!DNL Platform], en gemakkelijk toegankelijk door om het even welke oplossing van Adobe.
+Adobe Experience Platform [!DNL Segmentation Service] biedt een gebruikersinterface en RESTful-API waarmee u segmenten kunt samenstellen en doelgroepen kunt genereren op basis van uw [!DNL Real-time Customer Profile] gegevens. Deze segmenten worden centraal gevormd en gehandhaafd [!DNL Platform], en gemakkelijk toegankelijk door om het even welke oplossing van Adobe.
 
-Dit document biedt een overzicht van [!DNL Segmentation Service] en de rol die het in Adobe Experience Platform speelt.
+Dit document biedt een overzicht van [!DNL Segmentation Service] en de rol die het speelt in Adobe Experience Platform.
 
-## Getting started with [!DNL Segmentation Service]
+## Aan de slag met [!DNL Segmentation Service]
 
 Het is belangrijk dat u de volgende belangrijke termen kent die in dit document worden gebruikt:
 
@@ -102,7 +103,7 @@ Deze geavanceerde functies worden in de volgende secties nader besproken.
 
 ## Opeenvolgende segmentatie {#sequential}
 
-Een standaardreis van de gebruiker is sequentieel van aard. Met Adobe Experience Platform kunt u een geordende reeks segmenten definiëren die deze reis weerspiegelen en zo reeksen gebeurtenissen vastleggen zoals deze zich voordoen. U kunt gebeurtenissen in de gewenste volgorde rangschikken met de tijdlijn van de visuele gebeurtenis in de [!DNL Segment Builder]tijdlijn.
+Een standaardreis van de gebruiker is sequentieel van aard. Met Adobe Experience Platform kunt u een geordende reeks segmenten definiëren die deze reis weerspiegelen en zo sequenties van gebeurtenissen vastleggen zoals deze zich voordoen. U kunt gebeurtenissen in de gewenste volgorde rangschikken met de tijdlijn van de visuele gebeurtenis in de [!DNL Segment Builder]tijdlijn.
 
 Een voorbeeld van een klantenreis die opeenvolgende segmentatie zou vereisen zou productmening > product toevoegen > controle > Geen aankoop zijn.
 
@@ -177,7 +178,7 @@ While this solution does not change the binary nature of segment membership, it 
 
 Adding this specific data to the segment itself allows execution engines to personalize the experience for the customers in their target audience. -->
 
-### Gebruik hoofdletters
+### Gebruiksscenario’s
 
 Om de waarde van deze geavanceerde segmenteringseigenschap te illustreren, overweeg drie standaardgebruiksgevallen die de uitdagingen illustreren die in marketing toepassingen voorafgaand aan de verhoging van de Lading van het Segment aanwezig waren:
 - E-mailpersonalisatie
@@ -200,7 +201,7 @@ Een andere traditionele uitdaging voor marketers is het creëren van advertentie
 
 [!DNL Segmentation Service] ondersteunt diverse gegevenstypen, waaronder:
 
-- String
+- Tekenreeks
 - Uniforme resource-id
 - Enum
 - Getal
