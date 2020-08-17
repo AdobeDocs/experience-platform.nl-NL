@@ -1,10 +1,11 @@
 ---
+keywords: Launch;launch
 title: Zelfstudie Websitetags implementeren met Adobe Launch
 seo-title: Websitetags implementeren met Adobe Launch
 description: Adobe starten gebruiken om websitetags te implementeren in Adobe Experience Platform
 seo-description: Adobe starten gebruiken om websitetags te implementeren in Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 3%
@@ -14,7 +15,7 @@ ht-degree: 3%
 
 # Zelfstudie: Websitetags implementeren met Adobe Launch
 
-In deze zelfstudie wordt uitgelegd hoe u uw websitetags kunt implementeren om gegevens naar het Adobe Experience Platform te verzenden met behulp van Adobe Launch.
+In deze zelfstudie wordt uitgelegd hoe u uw websitetags kunt implementeren om gegevens naar Adobe Experience Platform te verzenden met behulp van Adobe Launch.
 
 ## Vereisten
 
@@ -26,19 +27,19 @@ In deze zelfstudie wordt uitgelegd hoe u uw websitetags kunt implementeren om ge
 
 Deze zelfstudie bevat de volgende stappen:
 
-1. Installeer de [!DNL Web SDK] extensie Adobe Experience Platform.
+1. Installeer de Adobe Experience Platform- [!DNL Web SDK] extensie.
 1. Maak een regel om te bepalen [!DNL Launch] welke gegevens moeten worden verzonden.
 1. Bundel de extensie en regel in een bibliotheek.
 
-## De [!DNL Web SDK] extensie van het Adobe Experience Platform installeren
+## De Adobe Experience Platform- [!DNL Web SDK] extensie installeren
 
-Installeer eerst de [!DNL Web SDK] extensie Adobe Experience Platform.
+Installeer eerst de Adobe Experience Platform- [!DNL Web SDK] extensie.
 
 1. Open [!DNL Launch]het tabblad **[!UICONTROL Extensies]** in.
 
    ![afbeelding](assets/launch-overview.png)
 
-1. Selecteer de extensie Web SDK van Adobe Experience Platform in de catalogus van Extensie starten. Het configuratiescherm wordt geopend.
+1. Selecteer de extensie Adobe Experience Platform Web SDK in de catalogus Extensie starten. Het configuratiescherm wordt geopend.
 
    ![afbeelding](assets/launch-extension-install.png)
 
@@ -55,7 +56,7 @@ Installeer eerst de [!DNL Web SDK] extensie Adobe Experience Platform.
 
 ## Een regel maken om te bepalen [!DNL Launch] welke gegevens moeten worden verzonden
 
-Maak vervolgens een regel om te laten [!DNL Launch] weten welke gegevens u naar het Adobe Experience Platform wilt verzenden en wanneer u deze wilt verzenden.
+Maak vervolgens een regel om te laten [!DNL Launch] weten welke gegevens u naar Adobe Experience Platform wilt verzenden en wanneer u deze wilt verzenden.
 
 1. Configureer op het tabblad **[!UICONTROL Regels]** een gebeurtenis die op elke nieuwe pagina van de website wordt geactiveerd wanneer de [!DNL Launch] bibliotheek wordt geladen.
 
@@ -79,7 +80,7 @@ Daarna, [bundel de uitbreiding](https://docs.adobe.com/content/help/en/launch/us
 
 ![afbeelding](assets/launch-add-changes-to-library.png)
 
-Nadat u uw tests hebt voltooid, promoot u de bibliotheek via de workflow zodat deze op de productiesite kan worden geïmplementeerd. De gegevens stromen nu van elke individuele gebruiker aan Adobe Experience Platform.
+Nadat u uw tests hebt voltooid, promoot u de bibliotheek via de workflow zodat deze op de productiesite kan worden geïmplementeerd. Er stromen nu gegevens van elke individuele gebruiker naar Adobe Experience Platform.
 
 ![afbeelding](assets/launch-promote-library.png)
 
