@@ -1,12 +1,12 @@
 ---
 title: Aangepaste inhoud renderen
-seo-title: Adobe Experience Platform Web SDK gepersonaliseerde inhoud renderen
+seo-title: Adobe Experience Platform Web SDK Persoonlijke inhoud renderen
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven
 seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: c342e8d7698c1d213658f3f1dae751edbde04b83
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Overzicht van opties voor personalisatie
 
-Het Adobe Experience Platform [!DNL Web SDK] steunt het vragen van de verpersoonlijkingsoplossingen bij Adobe, met inbegrip van Adobe Target. Er zijn twee wijzen voor verpersoonlijking: ophalen, inhoud die automatisch kan worden gerenderd en inhoud die de ontwikkelaar moet renderen. De SDK biedt ook mogelijkheden om flikkering te [beheren](../../edge/solution-specific/target/flicker-management.md).
+De Adobe Experience Platform [!DNL Web SDK] biedt ondersteuning voor het opvragen van persoonlijke oplossingen bij Adobe, waaronder Adobe Target. Er zijn twee wijzen voor verpersoonlijking: ophalen, inhoud die automatisch kan worden gerenderd en inhoud die de ontwikkelaar moet renderen. De SDK biedt ook mogelijkheden om flikkering te [beheren](../../edge/solution-specific/target/flicker-management.md).
 
 ## Inhoud automatisch renderen
 
@@ -40,15 +40,15 @@ Het renderen van gepersonaliseerde inhoud is asynchroon, dus er mag geen enkele 
 
 ## Inhoud handmatig renderen
 
-U kunt de lijst van besluiten verzoeken om als belofte op het `event` bevel te zijn teruggekeerd door te gebruiken `scopes`. Een werkingsgebied is een koord de laat de verpersoonlijkingsoplossing weten welk besluit u zou willen.
+U kunt de lijst van besluiten verzoeken om als belofte op het `sendEvent` bevel te zijn teruggekeerd door de `decisionScopes` optie te specificeren. Een werkingsgebied is een koord de laat de verpersoonlijkingsoplossing weten welk besluit u zou willen.
 
 ```javascript
 alloy("sendEvent",{
     xdm:{...},
-    scopes:['demo-1', 'demo-2']
+    decisionScopes:['demo-1', 'demo-2']
   }).then(function(result){
     if (result.decisions){
-      //do something with the decisions
+      // Do something with the decisions.
     }
   })
 ```
@@ -92,8 +92,8 @@ Dit zal een lijst van besluiten als voorwerp JSON voor elke besluiten terugkeren
 
 >[!TIP]
 >
-> Als u [!DNL Target] bereik gebruikt, wordt het veld &#39;mBox&#39; op de server weergegeven, alleen zijn het aanvragen in één keer in plaats van afzonderlijk. Het globale mbox wordt altijd verzonden.
+> Als u [!DNL Target], werkingsgebied wordt mBoxes op de server gebruikt, slechts worden zij allen gevraagd tegelijkertijd in plaats van individueel. Het globale mbox wordt altijd verzonden.
 
 ### Automatische inhoud ophalen
 
-Als u wilt dat de automatische renderbare beslissingen in de selectie worden opgenomen, kunt u instellen `result.decisions` op false en het speciale bereik opnemen `renderDecisions` `__view__`.
+Als u de automatische renderbare beslissingen `result.decisions` wilt opnemen en NIET automatisch renderen wilt hebben, kunt u instellen `renderDecisions` op `false`en het speciale bereik opnemen `__view__`.
