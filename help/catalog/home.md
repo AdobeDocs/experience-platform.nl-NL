@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;data location;Data Location;Data management;data management;Lineage;lineage;Catalog;enable dataset
 solution: Experience Platform
 title: Overzicht van Catalog Service
 topic: overview
+description: Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens en de verbinding in Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het meer van Gegevens als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '783'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Catalog Service] overzicht
 
-[!DNL Catalog Service] is het registratiesysteem voor de gegevenslocatie en -lijn in het Adobe Experience Platform. Terwijl alle gegevens die in worden opgenomen in [!DNL Experience Platform] in [!DNL Data Lake] als dossiers en folders worden opgeslagen, [!DNL Catalog] houdt de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
+[!DNL Catalog Service] is het registratiesysteem voor gegevenslocatie en -lijn in Adobe Experience Platform. Terwijl alle gegevens die in worden opgenomen in [!DNL Experience Platform] in [!DNL Data Lake] als dossiers en folders worden opgeslagen, [!DNL Catalog] houdt de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
 
 Eenvoudig gezet, handelt [!DNL Catalog] als meta-gegevensopslag of &quot;[!UICONTROL catalogus]&quot;waar u informatie over uw gegevens binnen kunt vinden [!DNL Experience Platform]. U kunt de volgende vragen [!DNL Catalog] beantwoorden:
 
@@ -57,7 +58,7 @@ In de volgende tabel worden de verschillende objecttypen weergegeven die worden 
 | Account | `/accounts` | Bij het maken van bronverbindingen moeten verificatiereferenties worden opgegeven. Een rekening vertegenwoordigt een inzameling van authentificatiegeloofsbrieven die werden gebruikt om een verbinding van een specifiek type tot stand te brengen. Elke verbinding heeft een reeks unieke parameters die door [!DNL Catalog] en beveiligd in een [!DNL Azure Key Vault]. worden voortgeduurd. |
 | Batch | `/batches` | Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. Een batchobject in [!DNL Catalog] contouren de innamemetriek van de batch (zoals het aantal verwerkte records of de grootte op schijf) en kan ook koppelingen naar gegevenssets, weergaven en andere bronnen bevatten die door de batchbewerking zijn beïnvloed. |
 | Verbinding | `/connections` | Een verbinding is één enkel geval van een bronschakelaar, uniek aan uw organisatie en gevormd gebruikend de aangewezen authentificatiereferenties voor het schakelaartype. |
-| Connector | `/connectors` | De schakelaars bepalen hoe de bronverbindingen gegevens van andere toepassingen van de Adobe (zoals Adobe Analytics en Adobe Audience Manager), van de derdewolkenopslag (zoals [!DNL Azure Blob], [!DNL Amazon S3], de servers van FTP, en servers SFTP), en de systemen van derdeCRM (zoals [!DNL Microsoft Dynamics] en [!DNL Salesforce]) moeten verzamelen. |
+| Connector | `/connectors` | De schakelaars bepalen hoe de bronverbindingen gegevens van andere toepassingen van Adobe (zoals Adobe Analytics en Adobe Audience Manager), derdewolkenopslagbronnen (zoals [!DNL Azure Blob], [!DNL Amazon S3], de servers van FTP, en servers SFTP), en de systemen van derdeCRM (zoals [!DNL Microsoft Dynamics] en [!DNL Salesforce]) moeten verzamelen. |
 | Gegevensset | `/dataSets` | Een dataset is een opslag en beheersconstructie die voor de inzameling van gegevens (typisch een lijst) wordt gebruikt die een schema (kolommen) en gebieden (rijen) bevat. Zie het overzicht [van](./datasets/overview.md) gegevenssets voor meer informatie. |
 | Gegevensbestand | `/datasetFiles` | Gegevensbestanden vertegenwoordigen gegevensblokken waarop is opgeslagen [!DNL Platform]. Als verslagen van letterlijke dossiers, zijn deze waar u de grootte van het dossier, het aantal verslagen kunt vinden het bevat, en een verwijzing naar de partij die het dossier opnam. |
 
