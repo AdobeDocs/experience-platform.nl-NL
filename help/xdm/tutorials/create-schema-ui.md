@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;enum;XDM individual profile;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: Een schema maken met de Schema-editor
 topic: tutorials
+description: Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in het Experience Platform.
 translation-type: tm+mt
-source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '3376'
+source-wordcount: '3392'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Een schema maken met de opdracht [!DNL Schema Editor]
 
-Het [!DNL Schema Registry] biedt een gebruikersinterface en RESTful-API waarmee u alle bronnen in het Adobe Experience Platform kunt weergeven en beheren [!DNL Schema Library]. Het [!DNL Schema Library] bevat middelen die aan u door Adobe, de partners van het Experience Platform, en verkopers ter beschikking worden gesteld van wie toepassingen u gebruikt, evenals middelen die u bepaalt en aan [!DNL Schema Registry].
+Het [!DNL Schema Registry] biedt een gebruikersinterface en RESTful-API waarmee u alle bronnen in de Adobe Experience Platform kunt weergeven en beheren [!DNL Schema Library]. Het [!DNL Schema Library] bevat middelen die aan u door Adobe, de partners van het Experience Platform, en verkopers ter beschikking worden gesteld van wie toepassingen u gebruikt, evenals middelen die u bepaalt en aan [!DNL Schema Registry].
 
 Deze zelfstudie behandelt de stappen voor het maken van een schema met behulp van de Schema-editor in [!DNL Experience Platform]. Als u liever een schema samenstelt met de API voor de registratie van het schema, moet u eerst de handleiding voor [de ontwikkelaar van het](../api/getting-started.md) schemaregister lezen voordat u de zelfstudie [maakt met behulp van de API](create-schema-api.md).
 
@@ -162,7 +163,7 @@ In dat knooppunt met naamruimte bevindt zich een &quot;[!UICONTROL Nieuw veld]&q
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
-Gebruikend de Eigenschappen *[!UICONTROL van het]* Gebied op de rechterkant van de redacteur, begin door een gebied van de &quot;[!UICONTROL loyaliteit]&quot;met type &quot;[!UICONTROL Voorwerp]&quot;te creëren dat zal worden gebruikt om uw op loyaliteit betrekking hebbende gebieden te houden. Klik op **[!UICONTROL Toepassen]** als u klaar bent.
+Gebruikend de Eigenschappen *[!UICONTROL van het]* Gebied op de rechterkant van de redacteur, begin door een gebied van de &quot;[!UICONTROL loyaliteit]&quot;met type &quot;[!UICONTROL Voorwerp]&quot;te creëren dat zal worden gebruikt om uw op loyaliteit betrekking hebbende gebieden te houden. When finished, click **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
@@ -172,10 +173,10 @@ De wijzigingen worden toegepast en het nieuwe &quot;[!UICONTROL loyalty]&quot;-o
 
 Voor elk veld is de volgende informatie vereist:
 
-* **[!UICONTROL Veldnaam]:**De naam van het veld, geschreven in camelcase. Voorbeeld: loyaltyLevel
-* **[!UICONTROL Weergavenaam]:**De naam van het veld, geschreven in hoofdletters/kleine letters. Voorbeeld: Loyaliteitsniveau
-* **[!UICONTROL Type]:**Het gegevenstype van het veld. Dit omvat fundamentele scalaire types en om het even welke die gegevenstypes in[!DNL Schema Registry]worden bepaald. Voorbeelden: tekenreeks, geheel getal, Booleaans, Persoon, Adres, Telefoonnummer, enz.
-* **[!UICONTROL Omschrijving]:**Er moet een facultatieve beschrijving van het veld worden opgenomen, geschreven in geval van een zin. (max. 200 tekens)
+* **[!UICONTROL Veldnaam]:** De naam van het veld, geschreven in camelcase. Voorbeeld: loyaltyLevel
+* **[!UICONTROL Weergavenaam]:** De naam van het veld, geschreven in hoofdletters/kleine letters. Voorbeeld: Loyaliteitsniveau
+* **[!UICONTROL Type]:** Het gegevenstype van het veld. Dit omvat fundamentele scalaire types en om het even welke die gegevenstypes in [!DNL Schema Registry]worden bepaald. Voorbeelden: tekenreeks, geheel getal, Booleaans, Persoon, Adres, Telefoonnummer, enz.
+* **[!UICONTROL Omschrijving]:** Er moet een facultatieve beschrijving van het veld worden opgenomen, geschreven in geval van een zin. (max. 200 tekens)
 
 Het eerste veld voor het object Loyalty is een tekenreeks met de naam &quot;[!UICONTROL loyaltyId]&quot;. Wanneer u het type van het nieuwe veld instelt op &quot;[!UICONTROL String]&quot;, wordt het venster *[!UICONTROL Veldeigenschappen]* gevuld met verschillende opties voor het toepassen van beperkingen, waaronder **[!UICONTROL Standaardwaarde]**, **[!UICONTROL Indeling]** en **[!UICONTROL Maximale lengte]**.
 
@@ -214,10 +215,10 @@ Als u alle veldeigenschappen hebt voltooid, klikt u op **[!UICONTROL Toepassen]*
 
 Meer informatie over beschikbare extra beperkingen:
 
-* **[!UICONTROL Vereist]:**Geeft aan dat het veld verplicht is voor gegevensinvoer. Om het even welke gegevens die aan een dataset worden geupload die op dit schema wordt gebaseerd dat dit gebied niet bevat zullen op opname ontbreken.
-* **[!UICONTROL Array]:**Geeft aan dat het veld een array van waarden bevat, elk met het opgegeven gegevenstype. Als u bijvoorbeeld een gegevenstype &quot;String&quot; selecteert en het selectievakje &quot;Array&quot; inschakelt, bevat het veld een array van tekenreeksen.
-* **[!UICONTROL Enum]:**Geeft aan dat dit veld een van de waarden uit een opsommingslijst met mogelijke waarden moet bevatten.
-* **[!UICONTROL Identiteit]:**Geeft aan dat dit veld een identiteitsveld is. Meer informatie over identiteitsvelden vindt u[later in deze zelfstudie](#identity-field).
+* **[!UICONTROL Vereist]:** Geeft aan dat het veld verplicht is voor gegevensinvoer. Om het even welke gegevens die aan een dataset worden geupload die op dit schema wordt gebaseerd dat dit gebied niet bevat zullen op opname ontbreken.
+* **[!UICONTROL Array]:** Geeft aan dat het veld een array van waarden bevat, elk met het opgegeven gegevenstype. Als u bijvoorbeeld een gegevenstype &quot;String&quot; selecteert en het selectievakje &quot;Array&quot; inschakelt, bevat het veld een array van tekenreeksen.
+* **[!UICONTROL Enum]:** Geeft aan dat dit veld een van de waarden uit een opsommingslijst met mogelijke waarden moet bevatten.
+* **[!UICONTROL Identiteit]:** Geeft aan dat dit veld een identiteitsveld is. Meer informatie over identiteitsvelden vindt u [later in deze zelfstudie](#identity-field).
 
 ## Een object met meerdere velden omzetten in een gegevenstype {#datatype}
 
@@ -317,7 +318,7 @@ De volgende informatie is een aanvulling op de zelfstudie voor de Schema-editor.
 
 [!DNL Experience Platform] biedt de flexibiliteit om een schema te definiëren dat is gebaseerd op een klasse die uniek is voor uw organisatie.
 
-Open het dialoogvenster Klasse ** toewijzen door te klikken op **[!UICONTROL Toewijzen]** in de sectie *[!UICONTROL Klasse]* van de Schema-editor. Selecteer Nieuwe klasse ****maken in het dialoogvenster.
+Open het dialoogvenster Klasse ** toewijzen door te klikken op **[!UICONTROL Toewijzen]** in de sectie *[!UICONTROL Klasse]* van de Schema-editor. Selecteer Nieuwe klasse **** maken in het dialoogvenster.
 
 U kunt uw nieuwe klasse dan een Naam **[!UICONTROL van de]** Vertoning (een korte, beschrijvende, unieke, en gebruikersvriendelijke naam voor de klasse), een **[!UICONTROL Beschrijving]**, en een **[!UICONTROL Gedrag]** (&quot;[!UICONTROL Verslag]&quot; of &quot;de Reeks[!UICONTROL van de]Tijd&quot;) voor de gegevens geven het schema zal bepalen.
 
