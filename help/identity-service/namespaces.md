@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces;namespaces;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
+description: 'Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name<span>@email.com" als e-mailadres of "443522" als een numerieke CRM-id. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 0%
+source-wordcount: '761'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +19,7 @@ Identiteitsnaamruimten zijn een component van [!DNL Identity Service](./home.md)
 
 ## Aan de slag
 
-Voor het werken met naamruimten voor identiteiten is een goed begrip van de verschillende betrokken diensten van de Adobe Experience Platform vereist. Voordat u begint te werken met naamruimten, raadpleegt u de documentatie voor de volgende services:
+Als u met naamruimten werkt, moet u de verschillende betrokken Adobe Experience Platform-services begrijpen. Voordat u begint te werken met naamruimten, raadpleegt u de documentatie voor de volgende services:
 
 - [!DNL Real-time Customer Profile](../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [!DNL Identity Service](./home.md): Verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
@@ -43,7 +44,7 @@ De volgende identiteitstypen zijn beschikbaar binnen [!DNL Platform]:
 | Cookie | Deze identiteiten zijn essentieel voor uitbreiding en vormen het grootste deel van de identiteitsgrafiek. Maar door de natuur verval ze snel en verliezen hun waarde in de loop der tijd. Verwijderen van cookies wordt speciaal verwerkt in de identiteitsgrafiek. |
 | Cross-device | Dit geeft aan dat dit als een sterke personele identificator [!DNL Identity Service] moet worden beschouwd en dus voor altijd moet worden bewaard. Voorbeelden zijn een aanmeldings-id, CRM-id, loyaliteitsidentiteitskaart enz. |
 | Apparaat | Omvat IDFA, GAID en andere IOT-id&#39;s. Deze kunnen door mensen in huishoudens worden gedeeld. |
-| E-mail | Tot dit type identiteiten behoren ook PII&#39;s (Persoonlijke identificeerbare informatie). Dit is een aanwijzing om de waarde gevoelig [!DNL Identity Service] te verwerken. |
+| Email | Tot dit type identiteiten behoren ook PII&#39;s (Persoonlijke identificeerbare informatie). Dit is een aanwijzing om de waarde gevoelig [!DNL Identity Service] te verwerken. |
 | Mobile | Tot dit type identiteiten behoren PII. Dit is een aanwijzing om de waarde gevoelig [!DNL Identity Service] te verwerken. |
 | Niet-personen | Wordt gebruikt voor het opslaan van id&#39;s die naamruimten nodig hebben, maar die niet zijn gekoppeld aan een personencluster. Deze id&#39;s worden vervolgens gefilterd uit de identiteitsgrafiek. Mogelijke gebruiksgevallen zijn onder meer gegevens over producten, organisaties, winkels, enz. (Bijvoorbeeld een product-SKU.) |
 | Telefoon | Tot dit type identiteiten behoren PII. Dit is een aanwijzing om de waarde gevoelig [!DNL Identity Service] te behandelen. |
