@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segments;Segments
 solution: Experience Platform
 title: Segmentatie van meerdere entiteiten
 topic: overview
+description: De segmentatie van meerdere entiteiten is de capaciteit om de gegevens van het Profiel met extra gegevens uit te breiden die op producten, opslag, of andere niet-profielklassen worden gebaseerd. Zodra verbonden, worden de gegevens van extra klassen beschikbaar alsof zij aan het schema van het Profiel inheems waren.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
@@ -22,10 +23,10 @@ Als u meer wilt weten over segmentatie tussen meerdere entiteiten, blijft u de d
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de verschillende diensten van het Adobe Experience Platform die betrokken zijn bij het gebruik van segmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Deze zelfstudie vereist een goed begrip van de verschillende Adobe Experience Platform-services die betrokken zijn bij het gebruik van segmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [!DNL Real-time Customer Profile](../profile/home.md): Verstrekt een verenigd consumentenprofiel in real time, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [Segmenteringsservice](./home.md)Adobe Experience Platform: Staat u toe om segmenten van het Profiel van de Klant in real time te bouwen.
+- [Adobe Experience Platform Segmentation Service](./home.md): Staat u toe om segmenten van het Profiel van de Klant in real time te bouwen.
 - [!DNL Experience Data Model (XDM)](../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
 ## XDM-relaties definiëren
