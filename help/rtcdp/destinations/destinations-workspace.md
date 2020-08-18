@@ -5,7 +5,7 @@ seo-title: Werkruimte Doelen
 description: In het Platform van de Gegevens van de Klant van Adobe in real time, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 seo-description: In het Platform van de Gegevens van de Klant van Adobe in real time, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: ac9c629e8c83d3e056ba94b30d978edbda274923
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 2%
@@ -41,7 +41,7 @@ De bestemmingskaarten bevatten of **[!UICONTROL vormen]** of een **[!UICONTROL A
 | [!UICONTROL Configureren] | Hiermee kunt u verbinding maken met het doel. |
 | [!UICONTROL Activeren] | Nadat u een verbinding met de bestemming hebt gemaakt, kunt u segmenten activeren. |
 | [!UICONTROL Account weergeven] | Bekijk de accounts waarmee u verbinding hebt gemaakt voor een bestemming. |
-| [!UICONTROL Gegevensstromen weergeven] | De gegevensactiveringsstromen weergeven die voor een doel bestaan |
+| [!UICONTROL Gegevensstromen weergeven] | Bekijk de gegevensactiveringsstromen die voor een bestemming bestaan. |
 | [!UICONTROL Documentatie weergeven] | Opent een verbinding aan de documentatiepagina voor die specifieke bestemming, voor meer informatie en om u te helpen opstelling het. |
 
 ![Controles op de bestemmingskaart](/help/rtcdp/destinations/assets/destination-card-options.png)
