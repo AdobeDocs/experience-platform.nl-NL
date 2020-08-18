@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Azure Blob- of Amazon S3-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3cee9b2515d833a640b091a90cd2152f0c1b1e64
+source-git-commit: 999ff0e9525d7d9f67298862c68bb59ddc35e558
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,6 @@ De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van
 
 Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen [!DNL Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] kunt u gegevens uit [!DNL Azure Blob] en [!DNL Amazon S3] door batches inbrengen.
 
-Voor gedetailleerde instructies over het gebruik van de bronconnector van de Azure Blob, lees dan de [[!DNL Azure Blob] bronverbindingshandleiding](./blob.md).
+Voor gedetailleerde instructies bij het gebruiken van de [!DNL Azure Blob] bronschakelaar, gelieve de gids [[!DNL Azure Blob] van de](./blob.md)bronschakelaar te lezen.
 
-Voor gedetailleerde instructies over het gebruik van de Amazon S3-bronconnector, leest u de [[!DNL Amazon S3] bronconnectorhulplijn](./blob.md).
+Voor gedetailleerde instructies bij het gebruiken van de [!DNL Amazon S3] bronschakelaar, gelieve de gids [[!DNL Amazon S3] van de](./blob.md)bronschakelaar te lezen.
