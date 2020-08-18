@@ -4,10 +4,10 @@ solution: Experience Platform
 title: SQL-functies in Spark
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: a98e31f57c6ff4fc49d8d8f64441a6e1e18d89da
+source-git-commit: a10508770a862621403bad94c14db4529051020c
 workflow-type: tm+mt
-source-wordcount: '4900'
-ht-degree: 4%
+source-wordcount: '4996'
+ht-degree: 5%
 
 ---
 
@@ -24,17 +24,18 @@ Referentie: [SQL-functiedocumentatie parkeren](https://spark.apache.org/docs/2.4
 
 ## Categorieën
 
-- [Math- en statistische operatoren en functies](#math-and-statistical-operators-and-functions)
+- [Math- en statistische operatoren en functies](#math)
 - [Logische operatoren](#logical-operators)
-- [Datum-/tijdfuncties](#date/time-functions)
+- [Datum-/tijdfuncties](#datetime-functions)
 - [Samengevoegde functies](#aggregate-functions)
 - [Arrays](#arrays)
-- [Datatype casting-functies](#datatype-casting-functions)
-- [Conversie- en opmaakfuncties](#conversion-and-formatting-functions)
+- [Datatype casting-functies](#datatype-casting)
+- [Conversie- en opmaakfuncties](#conversion)
 - [Gegevensevaluatie](#data-evaluation)
 - [Huidige informatie](#current-information)
+- [Functies voor hogere volgorde](#higher-order)
 
-### Math- en statistische operatoren en functies
+### Math- en statistische operatoren en functies {#math}
 
 #### Modulo
 
@@ -612,7 +613,7 @@ Voorbeelden:
  12.0
 ```
 
-#### rond
+#### round
 
 `round(expr, d)`: Retourneert `expr` afgerond tot op `d` decimalen met de afrondingsmodus HALF_UP.
 
@@ -698,7 +699,7 @@ Voorbeeld:
 
 `stddev_samp(expr)`: Retourneert de standaardafwijking van het voorbeeld, berekend op basis van waarden van een groep.
 
-#### som
+#### sum
 
 `sum(expr)`: Retourneert de som die is berekend op basis van waarden van een groep.
 
@@ -744,13 +745,13 @@ Voorbeeld:
 
 `variance(expr)`: Retourneert de samplevariantie die is berekend op basis van waarden van een groep.
 
-### Logische operatoren
+### Logische operatoren {#logical-operators}
 
 #### Logisch niet
 
 `! expr`: Logisch niet.
 
-#### Minder dan
+#### Less than
 
 `expr1 < expr2`: Retourneert true als `expr1` minder is dan `expr2`.
 
@@ -773,7 +774,7 @@ Voorbeelden:
  NULL
 ```
 
-#### Kleiner dan of gelijk aan
+#### Less than or equal to
 
 `expr1 <= expr2`: Retourneert true als `expr1` kleiner dan of gelijk aan `expr2`.
 
@@ -796,7 +797,7 @@ Voorbeelden:
  NULL
 ```
 
-#### Gelijk aan
+#### Equal to
 
 `expr1 = expr2`: Retourneert true als `expr1` gelijk is `expr2`aan, anders false.
 
@@ -817,7 +818,7 @@ Voorbeelden:
  NULL
 ```
 
-#### Groter dan
+#### Greater than
 
 `expr1 > expr2`: Retourneert true als `expr1` groter is dan `expr2`.
 
@@ -840,7 +841,7 @@ Voorbeelden:
  NULL
 ```
 
-#### Groter dan of gelijk aan
+#### Greater than or equal to
 
 `expr1 >= expr2`: Retourneert true als `expr1` groter dan of gelijk aan `expr2`.
 
@@ -1007,7 +1008,7 @@ Voorbeeld:
  true
 ```
 
-### Datum-/tijdfuncties
+### Datum-/tijdfuncties {#datetime-functions}
 
 #### add_month
 
@@ -1425,13 +1426,13 @@ Voorbeeld:
 
 Sinds: 1.5.0.
 
-### Samengevoegde functies
+### Samengevoegde functies {#aggregate-functions}
 
 #### Approx_count_different
 
 `approx_count_distinct(expr[, relativeSD])`: Retourneert de geschatte kardinaliteit door HyperLog++. `relativeSD` definieert de maximaal toegestane schattingsfout.
 
-### Arrays
+### Arrays {#arrays}
 
 #### array
 
@@ -1809,7 +1810,7 @@ Voorbeelden:
 
 Sinds: 2.4.0.
 
-### Datatype casting-functies
+### Datatype casting-functies {#datatype-casting}
 
 #### onbeschaamdheid
 
@@ -1894,7 +1895,7 @@ Voorbeelden:
 
 `tinyint(expr)`: Casts the value `expr` to the target data type `tinyint`.
 
-### Conversie- en opmaakfuncties
+### Conversie- en opmaakfuncties {#conversion}
 
 #### ascii
 
@@ -2086,7 +2087,7 @@ Voorbeeld:
  sparksql
 ```
 
-#### lager
+#### lower
 
 `lower(str)`: Retourneert `str` met alle tekens gewijzigd in kleine letters.
 
@@ -2312,7 +2313,7 @@ Voorbeeld:
  A1B2C3
 ```
 
-#### bijsnijden
+#### trim
 
 `trim(str)`: Hiermee verwijdert u de spatietekens vóór en achter de spatie uit `str`.
 
@@ -2377,7 +2378,7 @@ Voorbeeld:
  Spark SQL
 ```
 
-#### bovenste
+#### upper
 
 `upper(str)`: Retourneert `str` met alle tekens gewijzigd in hoofdletters.
 
@@ -2403,7 +2404,7 @@ Voorbeeld:
 >
 >Functie is niet deterministisch.
 
-### Gegevensevaluatie
+### Gegevensevaluatie {#data-evaluation}
 
 #### samenvoegen
 
@@ -2452,7 +2453,7 @@ Voorbeeld:
   Spark SQL
 ```
 
-#### aantal
+#### count
 
 `count(*)`: Retourneert het totale aantal opgehaalde rijen, inclusief rijen met null.
 
@@ -2749,7 +2750,7 @@ Voorbeeld:
  123123
 ```
 
-#### vervangen
+#### replace
 
 `replace(str, search[, replace])`: Vervangt alle exemplaren van `search` het bestand door `replace`.
 
@@ -2996,7 +2997,7 @@ Voorbeeld:
  cc
 ```
 
-### Huidige informatie
+### Huidige informatie {#current-information}
 
 #### current_database
 
@@ -3026,3 +3027,65 @@ Sinds: 1.5.0.
 `now()`: Retourneert de huidige tijdstempel aan het begin van de query-evaluatie.
 
 Sinds: 1.5.0.
+
+### Functies voor hogere volgorde {#higher-order}
+
+#### transformeren
+
+`transform(array, lambdaExpression): array`
+
+Transformeer elementen in een array met behulp van de functie.
+
+Als er twee argumenten zijn voor de lambdafunctie, betekent het tweede argument de index van het element.
+
+Voorbeeld:
+
+```
+> SELECT transform(array(1, 2, 3), x -> x + 1);
+  [2,3,4]
+> SELECT transform(array(1, 2, 3), (x, i) -> x + i);
+  [1,3,5]
+```
+
+
+#### exists
+
+`exists(array, lambdaExpression returning Boolean): Boolean`
+
+Test of een predikaat voor één of meerdere elementen in de serie houdt.
+
+Voorbeeld:
+
+```
+> SELECT exists(array(1, 2, 3), x -> x % 2 == 0);
+  true
+```
+
+#### filter
+
+`filter(array, lambdaExpression returning Boolean): array`
+
+Filter de invoerarray met de opgegeven voorspelling.
+
+Voorbeeld:
+
+```
+> SELECT filter(array(1, 2, 3), x -> x % 2 == 1);
+ [1,3]
+```
+
+
+#### aggregaat
+
+`aggregate(array, <initial accumulator value>, lambdaExpression to accumulate the value): array`
+
+Pas een binaire operator toe op een begintoestand en alle elementen in de array en verlaagt deze tot één status. De uiteindelijke status wordt geconverteerd naar het uiteindelijke resultaat door het toepassen van een afwerkingsfunctie.
+
+Voorbeeld:
+
+```
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x);
+  6
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x, acc -> acc * 10);
+  60
+```
