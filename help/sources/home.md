@@ -5,9 +5,9 @@ title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,6 @@ De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen b
 - [!DNL GreenPlum](connectors/databases/greenplum.md) connector
 - [!DNL HP Vertica](connectors/databases/hp-vertica.md) connector
 - [!DNL IBM DB2](connectors/databases/ibm-db2.md) connector
-- [!DNL MariaDB](connectors/databases/mariadb.md) connector
 - [!DNL Microsoft SQL Server](connectors/databases/sql-server.md) connector
 - [!DNL MySQL](connectors/databases/mysql.md) connector
 - [!DNL Oracle](connectors/databases/oracle.md) connector
