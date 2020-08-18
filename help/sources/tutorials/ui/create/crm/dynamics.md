@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creeer een de bronschakelaar van de Dynamica van Microsoft in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 7cc76eab53adf6a40d16b368854a2e7f178e7244
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '430'
 ht-degree: 1%
 
 ---
@@ -20,10 +20,10 @@ De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om ext
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+* [[!DNL Experience Data Model] (XDM) Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [Klantprofiel](../../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-time klantprofiel]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 Als u al een geldig [!DNL Dynamics] account hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie over het [configureren van een gegevensstroom](../../dataflow/crm.md).
 
@@ -33,27 +33,27 @@ Als u al een geldig [!DNL Dynamics] account hebt, kunt u de rest van dit documen
 | ---------- | ----------- |
 | `serviceUri` | De service-URL van uw [!DNL Dynamics] instantie. |
 | `username` | De gebruikersnaam voor uw [!DNL Dynamics] gebruikersaccount. |
-| `password` | Het wachtwoord voor uw rekening van de Dynamiek. |
+| `password` | Het wachtwoord voor uw [!DNL Dynamics] account. |
 
-Voor meer informatie over aan de slag gaan, bezoek [dit document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth)van de Dynamiek.
+Raadpleeg [ [!DNL Dynamics] dit document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth)voor meer informatie over aan de slag gaan.
 
 ## Uw [!DNL Dynamics] account verbinden
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om een nieuw [!DNL Dynamics] account te maken waarmee u verbinding kunt maken [!DNL Platform].
+Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Dynamics] account te koppelen aan [!DNL Platform].
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Bronnen]* . Het scherm van de *[!UICONTROL Catalogus]* toont een verscheidenheid van bronnen waarvoor u een binnenkomende rekening met kunt tot stand brengen, en elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte **[!UICONTROL Bronnen]** . In het scherm **[!UICONTROL Catalogus]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de categorie *[!UICONTROL Databases]* selecteert u **[!UICONTROL Dynamics]** gevolgd door **[!UICONTROL Add data]** om een nieuwe [!DNL Dynamics] connector te maken.
+Selecteer onder de categorie **[!UICONTROL Databases]** de optie **[!UICONTROL Dynamics]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders, uitgezocht **[!UICONTROL voeg gegevens]** toe om een nieuwe [!DNL Dynamics] schakelaar tot stand te brengen.
 
 ![catalogus](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 
-De pagina *[!UICONTROL Verbinden met dynamiek]* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Verbinden met dynamiek]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
-Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven, de verbinding een naam, een optionele beschrijving en uw [!DNL Dynamics] referenties. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe account enige tijd beginnen.
+Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Voer in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Dynamics] referenties in. Wanneer u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
 ![verbinden](../../../../images/tutorials/create/ms-dynamics/new.png)
 
@@ -65,4 +65,4 @@ Als u een bestaande account wilt verbinden, selecteert u de [!DNL Dynamics] acco
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding met uw [!DNL Dynamics] account tot stand gebracht. U kunt nu verdergaan aan het volgende leerprogramma en een dataflow [vormen om gegevens in Platform](../../dataflow/crm.md)te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding met uw [!DNL Dynamics] account tot stand gebracht. U kunt nu verdergaan naar de volgende zelfstudie en een gegevensstroom [configureren om gegevens in te voeren [!DNL Platform]](../../dataflow/crm.md).
