@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 18af4226c07cd7bc8a093aa4b1ce2b5f8f018cb6
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,6 @@ ht-degree: 0%
       - [GreenPlum-connector](connectors/databases/greenplum.md)
       - [HP Vertica-connector](connectors/databases/hp-vertica.md)
       - [IBM DB2-connector](connectors/databases/ibm-db2.md)
-      - [MariaDB-connector](connectors/databases/mariadb.md)
       - [Microsoft SQL Server-aansluiting](connectors/databases/sql-server.md)
       - [MySQL-connector](connectors/databases/mysql.md)
       - [Oracle-connector](connectors/databases/oracle.md)
@@ -99,7 +98,6 @@ ht-degree: 0%
          - [GreenPlum-connector](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica-connector](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2-connector](tutorials/api/create/databases/ibm-db2.md)
-         - [MariaDB-connector](tutorials/api/create/databases/mariadb.md)
          - [MySQL-connector](tutorials/api/create/databases/mysql.md)
          - [Oracle-connector](tutorials/api/create/databases/oracle.md)
          - [Phoenix-aansluiting](tutorials/api/create/databases/phoenix.md)
@@ -169,7 +167,6 @@ ht-degree: 0%
          - [GreenPlum-connector](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica-connector](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2-connector](tutorials/ui/create/databases/ibm-db2.md)
-         - [MariaDB-connector](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Server-aansluiting](tutorials/ui/create/databases/sql-server.md)
          - [MySQL-connector](tutorials/ui/create/databases/mysql.md)
          - [Oracle-connector](tutorials/ui/create/databases/oracle.md)
