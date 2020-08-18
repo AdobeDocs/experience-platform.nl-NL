@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Azure File Storage-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
@@ -23,12 +23,12 @@ De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+- [[!DNL Experience Data Model] (XDM) Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    - [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    - [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-- [Klantprofiel](../../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-time klantprofiel]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Als u al een verbinding van de Opslag van het Dossier hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan bij het [vormen van een gegevensstroom](../../dataflow/batch/cloud-storage.md).
+Als u al een geldige [!DNL Azure File Storage] verbinding hebt, kunt u de rest van dit document overslaan en verdergaan naar de zelfstudie over het [configureren van een gegevensstroom](../../dataflow/batch/cloud-storage.md).
 
 ### Vereiste referenties verzamelen
 
@@ -40,25 +40,25 @@ Om uw [!DNL Azure File Storage] bronschakelaar voor authentiek te verklaren, moe
 | `userId` | De gebruiker met voldoende toegang tot het [!DNL Azure File Storage] eindpunt. |
 | `password` | De [!DNL Azure File Storage] toegangstoets. |
 
-Raadpleeg [dit Azure File Storage-document](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)voor meer informatie over hoe u aan de slag gaat.
+Raadpleeg dit document voor meer informatie over aan de slag gaan met [ [!DNL Azure File Storage] dit document](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 
 ## Uw [!DNL Azure File Storage] account verbinden
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om een nieuw [!DNL Azure File Storage] account te maken waarmee u verbinding kunt maken [!DNL Platform].
+Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Azure File Storage] account te koppelen aan [!DNL Platform].
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Bronnen]* . In het scherm *[!UICONTROL Catalogus]* worden diverse bronnen weergegeven waarmee u een binnenkomende account kunt maken. Elke bron toont het aantal bestaande accounts en gegevensstromen dat aan deze accounts is gekoppeld.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte **[!UICONTROL Bronnen]** . In het scherm **[!UICONTROL Catalogus]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer onder de categorie *[!UICONTROL Databases]* de optie **[!UICONTROL Azure File Storage]** gevolgd door gegevens **** toevoegen om een nieuwe Azure File Storage-connector te maken.
+Selecteer onder de categorie **[!UICONTROL Databases]** de optie **[!UICONTROL Azure File Storage]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders, uitgezocht **[!UICONTROL voeg gegevens]** toe om een nieuwe [!DNL Azure File Storage] schakelaar tot stand te brengen.
 
 ![catalogus](../../../../images/tutorials/create/azure-file-storage/catalog.png)
 
-De pagina *[!UICONTROL Connect to Azure File Storage]* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to Azure File Storage]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
-Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven, de verbinding een naam, een optionele beschrijving en de gegevens voor de bestandsopslag op. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe account enige tijd beginnen.
+Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Voer in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Azure File Storage] referenties in. Wanneer u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
 ![verbinden](../../../../images/tutorials/create/azure-file-storage/new.png)
 
@@ -70,4 +70,4 @@ Als u een bestaande account wilt verbinden, selecteert u de [!DNL Azure File Sto
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding met uw [!DNL Azure File Storage] account tot stand gebracht. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag naar het Platform](../../dataflow/batch/cloud-storage.md)te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding met uw [!DNL Azure File Storage] account tot stand gebracht. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag naar [!DNL Platform]](../../dataflow/batch/cloud-storage.md)te brengen.
