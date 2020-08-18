@@ -4,9 +4,9 @@ seo-title: TMMData-extensie
 description: THe TMMData-extensie is een analysedoel in het Adobe Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: De uitbreiding TMMData is een analysebestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '568'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 ## Overzicht {#overview}
 
-[!DNL TMMData's] Het platform van de stichting voor Adobe Marketing Cloud voorziet marketing teams van de hulpmiddelen om tot al hun kritieke gegevensbronnen toegang te hebben en te mengen - met inbegrip van interne/externe en online/off-line gegevens - voor betrouwbare, uitvoerige dwars-kanaalanalyse, met geautomatiseerde campagneopstelling en directe invoer aan Adobe en andere analytische hulpmiddelen en BI.
+[!DNL TMMData's] Het stichtingsplatform voor Adobe Marketing Cloud biedt marketingteams de middelen om al hun kritieke gegevensbronnen - inclusief interne/externe en online/offline gegevens - te openen en te combineren voor een betrouwbare, uitgebreide kanaalanalyse, met geautomatiseerde campagneopstelling en rechtstreekse invoer naar Adobe en andere analytische en BI-instrumenten.
 
 [!DNL TMMData] is een analytische uitbreiding in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
@@ -36,7 +36,7 @@ De [!DNL TMMData] extensie installeren:
 
 1. In de [Adobe in real time CDP interface](http://platform.adobe.com/), ga naar **[!UICONTROL Doelen]** > **[!UICONTROL Catalogus]**.
 2. Selecteer de extensie in de catalogus of gebruik de zoekbalk.
-3. Klik op de bestemming om deze te markeren en selecteer Extensie **** installeren in de rechterrail. Als het besturingselement Extensie **** installeren grijs wordt weergegeven, ontbreekt u de machtiging **[!UICONTROL manage_properties]** . Zie [Voorwaarden](#prerequisites).
+3. Klik op de bestemming om deze te markeren en selecteer vervolgens **[!UICONTROL Configureren]** in de rechterrail. Als de **[!UICONTROL Configure]** controle grayed is, mist u de toestemming **[!UICONTROL manage_properties]** . Zie [Voorwaarden](#prerequisites).
 4. Selecteer in het venster **[!UICONTROL Selecteer beschikbare]** starteigenschap de eigenschap Launch waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken in Launch. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Eigenschappen van de documentatie bij Starten.
 5. Met de workflow gaat u naar Start om de installatie te voltooien.
 
