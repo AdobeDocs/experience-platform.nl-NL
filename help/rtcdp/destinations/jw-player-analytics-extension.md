@@ -1,12 +1,12 @@
 ---
 title: JW Player Analytics-extensie (BETA)
 seo-title: JW Player Analytics-extensie (BETA)
-description: De JW Player Analytics-extensie (BETA) is een analysedoel in het Adobe Real-time Platform met klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De JW Player Analytics-extensie (BETA) is een analysedoel in het Adobe Real-time Platform met klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De uitbreiding van de Analytics van de Speler JW (BETA) is een analysebestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De uitbreiding van de Analytics van de Speler JW (BETA) is een analysebestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '571'
 ht-degree: 2%
 
 ---
@@ -16,12 +16,13 @@ ht-degree: 2%
 
 ## Overzicht {#overview}
 
-Deze extensie installeert de [!DNL JW Player] adapter om [!DNL JW Player] gebeurtenissen te verbinden met Adobe Video Analytics. Maak gebruik van de kracht van Adobe Video Analytics om meer inzicht te krijgen in de videoweergavepatronen van uw klanten.
+Deze extensie installeert de [!DNL JW Player] [!DNL JW Player] adapter om gebeurtenissen te verbinden met Adobe Video Analytics. Maak gebruik van de kracht van Adobe Video Analytics om meer inzicht te krijgen in de videoweergavegewoonten van uw klanten.
 
 [!DNL JW Player Analytics] (BETA) is een analytische uitbreiding in het Adobe Real-time Platform van de Gegevens van de Klant. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
 
 Deze bestemming is een Experience Platform Launch uitbreiding. Voor meer informatie over hoe de uitbreidingen van de Lancering in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van het](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
+![JW analytics-extensie](assets/jw-analytics-extension.png)
 
 ## Vereisten {#prerequisites}
 
@@ -35,11 +36,11 @@ De extensie [!DNL JW Player Analytics] (BETA) installeren:
 
 1. In de [Adobe in real time CDP interface](http://platform.adobe.com/), ga naar **[!UICONTROL Doelen]** > **[!UICONTROL Catalogus]**.
 2. Selecteer de extensie in de catalogus of gebruik de zoekbalk.
-3. Klik op de bestemming om deze te markeren en selecteer Extensie **** installeren in de rechterrail. Als het besturingselement Extensie **** installeren grijs wordt weergegeven, ontbreekt u de machtiging **[!UICONTROL manage_properties]** . Zie [Voorwaarden](#prerequisites).
+3. Klik op de bestemming om deze te markeren en selecteer vervolgens **[!UICONTROL Configureren]** in de rechterrail. Als de **[!UICONTROL Configure]** controle grayed is, mist u de toestemming **[!UICONTROL manage_properties]** . Zie [Voorwaarden](#prerequisites).
 4. Selecteer in het venster **[!UICONTROL Selecteer beschikbare]** starteigenschap de eigenschap Launch waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken in Launch. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Eigenschappen van de documentatie bij Starten.
 5. Met de workflow gaat u naar Start om de installatie te voltooien.
 
-Voor informatie over de opties van de uitbreidingsconfiguratie, zie de de uitbreidingspagina [van de Speler van](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) JW Analytics (BETA) in de Uitwisseling van Adobe.
+Voor informatie over de opties van de uitbreidingsconfiguratie, zie de de uitbreidingspagina [van Analytics van de Speler](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) JW (BETA) in de Uitwisseling van Adobe.
 
 U kunt de extensie ook rechtstreeks in de interface [](https://launch.adobe.com/)Experience Platform Launch installeren. Zie [Een nieuwe extensie](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) toevoegen in de documentatie bij Starten.
 
