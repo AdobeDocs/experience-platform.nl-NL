@@ -5,9 +5,9 @@ title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '863'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,8 @@ De bronnen in [!DNL Experience Platform] worden gegroepeerd in de volgende categ
 
 - [Overzicht Adobe Audience Manager-connector](connectors/adobe-applications/audience-manager.md)
 - [Een Adobe Audience Manager-bronaansluiting maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Overzicht Adobe Analytics Classifications Data Connector](connectors/adobe-applications/classifications.md)
+- [Een gegevensbronaansluiting voor Adobe Analytics Classifications maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Overzicht Adobe Analytics-gegevensconnector](connectors/adobe-applications/analytics.md)
 - [Een Adobe Analytics-bronaansluiting maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Een bronconnector voor klantkenmerken in de gebruikersinterface maken](./tutorials/ui/create/adobe-applications/customer-attributes.md)
