@@ -4,9 +4,9 @@ seo-title: Google Customer Match Destination
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 seo-description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 translation-type: tm+mt
-source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1555'
 ht-degree: 0%
 
 ---
@@ -102,6 +102,10 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u voldoen aan de ve
 
    ![Verbinding maken met Google Customer Match-doel](/help/rtcdp/destinations/assets/connect-google-customer-match.png)
 
+   >[!NOTE]
+   >
+   >Als er al een verbinding met dit doel bestaat, ziet u een knop **[!UICONTROL Activeren]** op de doelkaart. Voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]**, verwijs naar de sectie van de [Catalogus](/help/rtcdp/destinations/destinations-workspace.md#catalog) van de documentatie van de bestemmingswerkruimte.
+
 2. Als u in de stap **Account** eerder een verbinding met uw [!DNL Google Customer Match] doel hebt ingesteld, selecteert u **[!UICONTROL Bestaande account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL Nieuwe account]** selecteren om een nieuwe verbinding in te stellen met [!DNL Google Customer Match]. Selecteer **[!UICONTROL Verbinding maken met doel]** om u aan te melden en Adobe Experience Cloud te verbinden met uw [!DNL Google Ad] account.
 
    >[!NOTE]
@@ -171,7 +175,7 @@ Insert in Step 6 when mobile device ID activation is available
 
 ## Controleren of segmentactivering is gelukt {#verify-activation}
 
-Schakel na het voltooien van de activeringsstroom over naar uw **[!UICONTROL Google Ads]** -account. De geactiveerde segmenten worden nu in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van uw segment, alleen vullen met meer dan 100 actieve gebruikers.
+Schakel na het voltooien van de activeringsstroom over naar uw **[!UICONTROL Google Ads]** -account. De geactiveerde segmenten worden nu in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van het segment, alleen worden gevuld als er meer dan 100 actieve gebruikers zijn.
 
 ## Aanvullende bronnen {#additional-resources}
 
