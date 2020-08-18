@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 0%
 - [Overzicht van bronconnectors](home.md)
 - Beschikbare bronconnectors {#connectors}
    - Adobe-toepassingen {#adobe-applications}
+      - [Gegevensconnector Analytics Classifications](connectors/adobe-applications/classifications.md)
       - [Gegevensconnector Analytics](connectors/adobe-applications/analytics.md)
       - [Audience Manager-aansluiting](connectors/adobe-applications/audience-manager.md)
       - [Klantenkenmerkaansluiting](connectors/adobe-applications/customer-attributes.md)
@@ -133,6 +134,7 @@ ht-degree: 0%
 - UI-zelfstudies {#ui-tutorials}
    - Een bronaansluiting maken {#create}
       - Adobe-toepassingen {#adobe-applications}
+         - [Adobe Analytics Classifications Data-connector](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Analytics-connector](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Audience Manager-connector](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Klantenkenmerkaansluiting](tutorials/ui/create/adobe-applications/customer-attributes.md)
