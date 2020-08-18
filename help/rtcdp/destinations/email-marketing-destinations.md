@@ -4,9 +4,9 @@ seo-title: E-mailmarketingdoelen
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 seo-description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 translation-type: tm+mt
-source-git-commit: 6850a1ee5a578a3dccce9f9decd8f6a368705f4a
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Het verbinden met e-mail marketing bestemmingen is een proces in drie stappen. E
 
 In de verbindingsbestemmingsstroom, die in de sectie hieronder wordt beschreven, verbind met of Amazon S3 of SFTP. CDP in real time exporteert uw segmenten als `.csv` of `.txt` dossiers en levert hen aan uw aangewezen plaats. Plan de gegevensimport in uw e-mailmarketingplatform vanaf de opslaglocatie die in Real-Time CDP is ingeschakeld. Het proces om gegevens in te voeren varieert voor elke partner. Zie de afzonderlijke bestemmingsartikelen voor meer informatie.
 
-## Stap 1 - Verbind bestemming {#connect-destination}
+## Stap 1 - vorm bestemming {#connect-destination}
 
-1. Selecteer in **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** de e-mailmarketingbestemming waarmee u verbinding wilt maken en selecteer vervolgens de **[!UICONTROL Connect-bestemming]**.
+1. Selecteer in **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** de e-mailmarketingbestemming waarmee u verbinding wilt maken en selecteer vervolgens **[!UICONTROL Configureren]**.
 
    ![Verbinden met doel](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
