@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis
 topic: syntax
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: a10508770a862621403bad94c14db4529051020c
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1973'
 ht-degree: 0%
 
 ---
@@ -369,7 +369,7 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 #### Parameters
 
 - `name`: Een willekeurige naam die aan deze bepaalde voorbereide instructie wordt gegeven. Deze moet uniek zijn binnen één sessie en wordt vervolgens gebruikt om een eerder voorbereide instructie uit te voeren of te distribueren.
-- `data-type`: Het gegevenstype van een parameter voor de voorbereide instructie. Wanneer het gegevenstype van een bepaalde parameter niet is opgegeven of als onbekend is opgegeven, wordt dit afgeleid van de context waarin de parameter voor het eerst wordt genoemd. Als u naar de parameters in de voorbereide instructie zelf wilt verwijzen, gebruikt u $1, $2 enzovoort.
+- `data-type`: Het gegevenstype van een parameter voor de voorbereide instructie. Wanneer het gegevenstype van een bepaalde parameter niet is opgegeven of als onbekend is opgegeven, wordt dit afgeleid van de context waarin de parameter voor het eerst wordt genoemd. Gebruik $1, $2 enzovoort om naar de parameters in de voorbereide instructie zelf te verwijzen.
 
 
 ### ROLLBACK
@@ -462,3 +462,22 @@ where transaction_mode is one of:
     ISOLATION LEVEL { SERIALIZABLE | REPEATABLE READ | READ COMMITTED | READ UNCOMMITTED }
     READ WRITE | READ ONLY
 ```
+
+### KOPIËREN
+
+Deze opdracht plaatst de uitvoer van een SELECT-query naar een opgegeven locatie. Deze opdracht is alleen succesvol als de gebruiker toegang heeft tot deze locatie.
+
+```
+COPY  query
+    TO '%scratch_space%/folder_location'
+    [  WITH FORMAT 'format_name']
+
+where 'format_name' is be one of:
+    'parquet', 'csv', 'json'
+
+'parquet' is the default format.
+```
+
+>[!NOTE]
+>
+>Het volledige uitvoerpad wordt `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
