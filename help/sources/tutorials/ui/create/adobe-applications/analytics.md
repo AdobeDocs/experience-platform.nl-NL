@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een Adobe Analytics-bronaansluiting maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 0479f5097b530dd97e28474d8e5eb832e5e44e5a
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -30,13 +30,13 @@ Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en select
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer onder de categorie *Adobe-toepassingen* de optie **[!UICONTROL Adobe Analytics]** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Als u bestaande accounts wilt weergeven, selecteert u **[!UICONTROL Accounts]**.
+Selecteer onder de categorie **[!UICONTROL Adobe-toepassingen]** de optie **[!UICONTROL Adobe Analytics]** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het maken van verbinding met de bron of het bekijken van de documentatie. Als u bestaande accounts wilt weergeven, selecteert u **[!UICONTROL Accounts]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Gegevens selecteren
 
-De stap *Adobe Analytics* wordt weergegeven. Eerder ingestelde gegevenssetstromen voor Analytics worden vermeld op dit scherm. U kunt een nieuwe datasetstroom tot stand brengen door **[!UICONTROL Uitgezochte gegevens]** te klikken.
+De stap **[!UICONTROL Adobe Analytics]** wordt weergegeven. Eerder ingestelde gegevenssetstromen voor Analytics worden vermeld op dit scherm. U kunt een nieuwe datasetstroom tot stand brengen door **[!UICONTROL Uitgezochte gegevens]** te klikken.
 
 >[!NOTE]
 >
@@ -52,22 +52,22 @@ Van de lijst van beschikbare rapportreeksen, selecteer één u in Platform wilt 
 
 ### Geef de gegevenssetstroom een naam
 
-De stap met de details *van de* Dataset-stroom wordt weergegeven. Hier moet u een naam en een optionele beschrijving opgeven voor de gegevenssetstroom. Selecteer **[UICONTROL! Volgende]** als u klaar bent.
+De stap met de details **[!UICONTROL van de]** Dataset-stroom wordt weergegeven. Hier moet u een naam en een optionele beschrijving opgeven voor de gegevenssetstroom. Selecteer **[!UICONTROL Volgende]** als u klaar bent.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
 ### De gegevenssetstroom controleren
 
-De stap van het *Overzicht* verschijnt, toestaand u om uw nieuwe Analytics in-gebonden datasetstroom te herzien alvorens het wordt gecreeerd. De details van de verbinding worden gegroepeerd per categorieën, die omvatten:
+De stap van het **[!UICONTROL Overzicht]** verschijnt, toestaand u om uw nieuwe Analytics in-gebonden datasetstroom te herzien alvorens het wordt gecreeerd. De details van de verbinding worden gegroepeerd per categorieën, die omvatten:
 
-* *Verbinding*: Toont het type van de bronverbinding en de geselecteerde rapportreeks.
-* *Gegevensset- en kaartvelden* toewijzen: Wanneer het creëren van andere bronschakelaars, toont deze container welke dataset de brongegevens opnemen in, met inbegrip van het schema de dataset zich aan houdt. Het outputschema en de dataset worden automatisch gevormd voor de gegevenssetstromen van Analytics.
+* **[!UICONTROL Verbinding]**: Toont het type van de bronverbinding en de geselecteerde rapportreeks.
+* **[!UICONTROL Gegevensset- en kaartvelden]** toewijzen: Wanneer het creëren van andere bronschakelaars, toont deze container welke dataset de brongegevens opnemen in, met inbegrip van het schema de dataset zich aan houdt. Het outputschema en de dataset worden automatisch gevormd voor de gegevenssetstromen van Analytics.
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
 ### De gegevenssetstroom controleren
 
-Zodra uw datasetstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Selecteer in het scherm *Catalogus* de optie *Gegevensstromen* om een lijst weer te geven met bestaande stromen die zijn gekoppeld aan uw account Analytics.
+Zodra uw datasetstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Selecteer in het scherm **[!UICONTROL Catalogus]** de optie **[!UICONTROL Gegevensstromen]** om een lijst weer te geven met bestaande stromen die zijn gekoppeld aan uw account Analytics.
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
