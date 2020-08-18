@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van gedeeltelijke invoer van Adobe Experience Platform-batch
 topic: overview
 translation-type: tm+mt
-source-git-commit: df6a6e20733953a0983bbfdf66ca2abc6f03e977
+source-git-commit: ac75b1858b6a731915bbc698107f0be6043267d8
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1446'
 ht-degree: 0%
 
 ---
@@ -373,7 +373,7 @@ Als de partij ingesloten een ongeldig schema of ongeldige kopballen heeft, zulle
 
 ### Onscheidbare rijen {#unparsable}
 
-Als de partij ingesloten unparsable rijen heeft, zullen de fouten van de partij in een dossier worden opgeslagen dat kan worden betreden door het hieronder geschetste eindpunt te gebruiken.
+Als de batch die u hebt ingevoegd onscheidbare rijen bevat, kunt u het volgende eindpunt gebruiken om een lijst met bestanden weer te geven die fouten bevatten.
 
 **API-indeling**
 
@@ -397,15 +397,48 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 200 met details van de onscheidbare rijen.
+Een geslaagde reactie retourneert HTTP-status 200 met een lijst van de bestanden die fouten bevatten.
 
 ```json
 {
-    "_corrupt_record": "{missingQuotes:"v1"}",
+    "data": [
+        {
+            "name": "conversion_errors_0.json",
+            "length": "1162",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fconversion_errors_0.json"
+                }
+            }
+        },
+        {
+            "name": "parsing_errors_0.json",
+            "length": "153",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fparsing_errors_0.json"
+                }
+            }
+        }
+    ],
+    "_page": {
+        "limit": 100,
+        "count": 2
+    }
+}
+```
+
+U kunt gedetailleerde informatie over de fouten dan terugwinnen gebruikend het eindpunt [van de](#retrieve-metadata)meta-gegevensherwinning.
+
+Hieronder ziet u een voorbeeldreactie van het ophalen van het foutbestand:
+
+```json
+{
+    "_corrupt_record": "{missingQuotes: "v1"}",
     "_errors": [{
-         "code": "1401",
-         "message": "Row is corrupted and cannot be read, please fix and resend."
+        "code": "1401",
+        "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
-    "_filename": "a1.json"
+    "_filename": "parsing_errors_0.json"
 }
 ```
