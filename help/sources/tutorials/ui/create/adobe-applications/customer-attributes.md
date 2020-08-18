@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creeer een van de klantenattributen bronschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 999ff0e9525d7d9f67298862c68bb59ddc35e558
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '352'
 ht-degree: 3%
 
 ---
@@ -34,7 +34,7 @@ In het scherm *Bronactiviteit* worden alle eerder ingestelde verbindingen voor p
 
 ![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
 
-Van de lijst van beschikbare het profieldatasets van klantenattributen, selecteer één u in Platform wilt brengen en **daarna** klikken.
+Van de lijst van beschikbare het profieldatasets van klantenattributen, selecteer één u wilt brengen in [!DNL Platform] en **daarna** klikken.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ De stap *Revisie* wordt weergegeven, zodat u de nieuwe binnenkomende verbinding 
 
 ## Volgende stappen
 
-Zodra de verbinding wordt gecreeerd, wordt een doelschema en een dataset automatisch gecreeerd om de inkomende gegevens te bevatten. Wanneer de aanvankelijke opname voltooit, kunnen de gegevens van het klantenkenmerkprofiel door de stroomafwaartse diensten van het Platform zoals het Profiel van de Klant In real time en de Dienst van de Segmentatie worden gebruikt. Raadpleeg de volgende documenten voor meer informatie:
+Zodra de verbinding wordt gecreeerd, wordt een doelschema en een dataset automatisch gecreeerd om de inkomende gegevens te bevatten. Wanneer de aanvankelijke opname voltooit, kunnen de gegevens van het klantenkenmerkprofiel door downstream [!DNL Platform] diensten zoals [!DNL Real-time Customer Profile] en [!DNL Segmentation Service]worden gebruikt. Raadpleeg de volgende documenten voor meer informatie:
 
-* [Overzicht van het realtime klantprofiel](../../../../../profile/home.md)
-* [Overzicht van segmentatieservice](../../../../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile] overzicht](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] overzicht](../../../../../segmentation/home.md)
