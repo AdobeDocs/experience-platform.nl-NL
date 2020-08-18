@@ -1,12 +1,12 @@
 ---
-title: Adobe Media Analytics for Audio and Video extension
-seo-title: Adobe Media Analytics for Audio and Video extension
-description: De Adobe Media Analytics for Audio and Video-extensie is een analysedoel in het Adobe Real-time Platform voor klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Adobe Media Analytics for Video-extensie is een analysedoel in het Adobe Real-time Platform voor klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+title: Adobe Media Analytics voor audio- en video-extensie
+seo-title: Adobe Media Analytics voor audio- en video-extensie
+description: De Adobe Media Analytics voor Audio en Video uitbreiding is een analysebestemming in Adobe Real-time Platform van de Gegevens van de Klant. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De Adobe Media Analytics voor Video uitbreiding is een analysebestemming in Adobe Real-time Platform van de Gegevens van de Klant. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '585'
 ht-degree: 2%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 2%
 
 ## Overzicht {#overview}
 
-Adobe Media Analytics for Audio and Video is een invoegtoepassing voor de basis-Analytics die clients een robuuste meting biedt voor video, audio en advertenties.
+Adobe Media Analytics for Audio and Video is een aanvulling op de basisanalysemogelijkheden die clients een robuuste meting voor video, audio en advertenties bieden.
 
-Adobe Media Analytics for Audio and Video is een analyseextensie in Adobe Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.100157.html).
+Adobe Media Analytics voor Audio en Video is een analytische uitbreiding in het Platform van de Gegevens van de Klant van Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.100157.html).
 
 Dit doel is een [!DNL Experience Platform Launch] extensie. Voor meer informatie over hoe de [!DNL Launch] uitbreidingen in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van het](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
-![Adobe Media Analytics for Audio and Video extension](/help/rtcdp/destinations/assets/adobe-analytics-extension.png)
+![Adobe Media Analytics voor audio- en video-extensie](/help/rtcdp/destinations/assets/adobe-video-analytics-extension.png)
 
 ## Vereisten {#prerequisites}
 
@@ -36,11 +36,11 @@ De extensie Adobe Analytics for Video installeren:
 
 1. In de [Adobe in real time CDP interface](http://platform.adobe.com/), ga naar **[!UICONTROL Doelen]** > **[!UICONTROL Catalogus]**.
 2. Selecteer de extensie in de catalogus of gebruik de zoekbalk.
-3. Klik op de bestemming om deze te markeren en selecteer Extensie **** installeren in de rechterrail. Als het besturingselement Extensie **** installeren grijs wordt weergegeven, ontbreekt u de machtiging **[!UICONTROL manage_properties]** . Zie [Voorwaarden](#prerequisites).
+3. Klik op de bestemming om deze te markeren en selecteer vervolgens **[!UICONTROL Configureren]** in de rechterrail. Als de **[!UICONTROL Configure]** controle grayed is, mist u de toestemming **[!UICONTROL manage_properties]** . Zie [Voorwaarden](#prerequisites).
 4. Selecteer in het venster **[!UICONTROL Selecteer beschikbare]** starteigenschap de [!DNL Launch] eigenschap waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken in [!DNL Launch]. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Eigenschappen van de [!DNL Launch] documentatie.
 5. U moet de installatie voltooien [!DNL Launch] om de workflow te voltooien.
 
-Raadpleeg de pagina [](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html) Adobe Media Analytics for Audio and Video in de [!DNL Experience Launch] documentatie voor informatie over de configuratieopties voor extensies.
+Raadpleeg de pagina [Adobe Media Analytics voor audio- en video-extensie in de documentatie voor informatie over de configuratieopties voor extensies](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html) in [!DNL Experience Launch] documentatie.
 
 U kunt de extensie ook rechtstreeks in de interface [](https://launch.adobe.com/)Experience Platform Launch installeren. Zie [Een nieuwe extensie](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) toevoegen in de [!DNL Launch] documentatie.
 
