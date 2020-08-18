@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creeer HP Vertica bronschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
@@ -23,10 +23,10 @@ De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [XDM-systeem](../../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+* [[!DNL Experience Data Model] (XDM) Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [Klantprofiel](../../../../../profile/home.md)in realtime: Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-time klantprofiel]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 Als u reeds een geldige [!DNL Vertica] verbinding van HP hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan bij het [vormen van een dataflow](../../dataflow/databases.md).
 
@@ -38,25 +38,25 @@ De volgende secties verstrekken extra informatie die u zult moeten weten om met 
 | ---------- | ----------- |
 | `connectionString` | Het verbindingskoord dat wordt gebruikt om met uw [!DNL Vertica] instantie van HP te verbinden. Het patroon van het verbindingskoord voor HP [!DNL Vertica] is `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
-Voor meer informatie over begonnen worden verwijs naar [dit document](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)van HP Vertica.
+Voor meer informatie over begonnen worden, verwijs naar [dit [!DNL Vertica] document](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)van HP.
 
 ## Sluit uw [!DNL Vertica] rekening van HP aan
 
-Zodra u uw vereiste geloofsbrieven hebt verzameld, kunt u de stappen hieronder volgen om een nieuwe rekening van HP tot stand te brengen om met [!DNL Vertica] [!DNL Platform]. te verbinden.
+Zodra u uw vereiste geloofsbrieven hebt verzameld, kunt u de stappen hieronder volgen om uw rekening van HP aan te verbinden [!DNL Vertica] [!DNL Platform].
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Bronnen]* . Het scherm van de *[!UICONTROL Catalogus]* toont een verscheidenheid van bronnen waarvoor u een binnenkomende rekening met kunt tot stand brengen, en elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte **[!UICONTROL Bronnen]** . In het scherm **[!UICONTROL Catalogus]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de categorie *[!UICONTROL Databases]* selecteert u **[!UICONTROL HP Vertica]** gevolgd door gegevens **** toevoegen om een nieuwe HP Vertica-connector te maken.
+Onder de categorie **[!UICONTROL Databases]** selecteert u **[!UICONTROL HP Vertica]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders, uitgezochte **[!UICONTROL voeg gegevens]** toe om een nieuwe [!DNL Vertica] schakelaar van HP tot stand te brengen.
 
 ![catalogus](../../../../images/tutorials/create/hp-vertica/catalog.png)
 
-De pagina *[!UICONTROL Verbinding maken met HP Vertica]* wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Verbinding maken met HP Vertica]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
-Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Voor de inputvorm die verschijnt, verstrek de verbinding met een naam, een facultatieve beschrijving, en uw [!DNL Vertica] geloofsbrieven van HP. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe account enige tijd beginnen.
+Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Voor de inputvorm die verschijnt, verstrek een naam, een facultatieve beschrijving, en uw geloofsbrieven van HP [!DNL Vertica] . Wanneer u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
 ![verbinden](../../../../images/tutorials/create/hp-vertica/new.png)
 
@@ -68,4 +68,4 @@ Als u een bestaande account wilt verbinden, selecteert u de HP- [!DNL Vertica] a
 
 ## Volgende stappen
 
-Door dit leerprogramma te volgen, hebt u een verbinding aan uw [!DNL Vertica] rekening van HP gevestigd. U kunt nu verdergaan aan het volgende leerprogramma en een dataflow [vormen om gegevens in Platform](../../dataflow/databases.md)te brengen.
+Door dit leerprogramma te volgen, hebt u een verbinding aan uw [!DNL Vertica] rekening van HP gevestigd. U kunt nu verdergaan naar de volgende zelfstudie en een gegevensstroom [configureren om gegevens in te voeren [!DNL Platform]](../../dataflow/databases.md).
