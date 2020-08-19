@@ -1,11 +1,11 @@
 ---
-keywords: RTCDP;CDP
+keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp
 title: Real-time overzicht van het Platform van klantgegevens
 seo-title: Real-time overzicht van het Platform van klantgegevens
 description: Overzicht van het Platform van de Gegevens van de Klant in real time
 seo-description: Overzicht van het Platform van de Gegevens van de Klant in real time
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
