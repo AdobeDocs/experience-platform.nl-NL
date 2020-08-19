@@ -1,10 +1,11 @@
 ---
+keywords: TMMData;tmm data;tmmdata;TMM data
 title: TMMData-extensie
 seo-title: TMMData-extensie
 description: THe TMMData-extensie is een analysedoel in het Adobe Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: De uitbreiding TMMData is een analysebestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 2%
