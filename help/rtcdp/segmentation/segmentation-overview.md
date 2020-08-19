@@ -2,12 +2,11 @@
 keywords: segmentation; segmentation rtcdp;real time customer data platform segmentation
 title: Overzicht van de segmenteringsservice
 seo-title: De dienst van de segmentatie in het Platform van de Gegevens van de Klant van Adobe Real-time
-description: Een overzicht dat de segmentatieservice beschrijft.
-seo-description: Een overzicht dat de segmentatieservice en segmenten op het Platform van de Gegevens van de Klant van de Adobe in real time beschrijft.
+description: CDP in real time wordt gebouwd bovenop Adobe Experience Platform en gebruikt veel van de diensten en de functionaliteit van het Experience Platform. Gebruikend de Dienst van de Segmentatie, kunt u op maat-gemaakte marketing verstrekken door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '275'
 ht-degree: 1%
 
 ---
