@@ -1,11 +1,11 @@
 ---
-keywords: RTCDP;rtcdp
+keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Aan de slag met het Adobe Real-time Platform voor klantgegevens
 seo-title: Aan de slag met het Adobe Real-time Platform voor klantgegevens
 description: Het scenario van de steekproef voor het Platform van de Gegevens van de Klant van Adobe in real time
 seo-description: Het scenario van de steekproef voor het Platform van de Gegevens van de Klant van Adobe in real time
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Aan de slag met het Adobe Real-time Platform voor klantgegevens
 
-Deze gids aan de slag leidt u door een steekproefimplementatie van het Platform van de Gegevens van de Klant van de Adobe in real time (in real time CDP). U kunt dit als voorbeeld gebruiken wanneer u uw eigen implementatie instelt. Hoewel in deze handleiding specifieke voorbeelden worden gegeven, wordt er een koppeling gemaakt naar aanvullende informatie die u kunt gebruiken tijdens het maken van de instellingen.
+Deze gids aan de slag leidt u door een steekproefimplementatie van het Platform van de Gegevens van de Klant van de Adobe in real time (in real time CDP). U kunt dit als voorbeeld gebruiken wanneer u uw eigen implementatie instelt. Hoewel in deze handleiding specifieke voorbeelden worden gegeven, wordt er een koppeling gemaakt naar aanvullende informatie die u kunt gebruiken tijdens het maken van uw instellingen.
 
 Dit voorbeeld toont de macht van het Platform van de Gegevens van de Klant van de Adobe in real time, aangedreven door Adobe Experience Platform, aan:
 
