@@ -1,10 +1,11 @@
 ---
+keywords: Amazon S3;S3 destination;s3;amazon s3
 title: Amazon S3-bestemming
 seo-title: Amazon S3-bestemming
 description: Creeer een levende uitgaande verbinding aan uw opslag van het Web van Amazon van de Diensten (AWS) S3 om lusje-afgebakende of CSV gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 seo-description: Creeer een levende uitgaande verbinding aan uw opslag van het Web van Amazon van de Diensten (AWS) S3 om lusje-afgebakende of CSV gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 ## Overzicht
 
-Creeer een levende uitgaande verbinding aan uw [!DNL Amazon Web Services] (AWS) S3 opslag om lusje-afgebakende of CSV gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
+Creeer een levende uitgaande verbinding aan uw opslag [!DNL Amazon Web Services] (AWS) S3 om lusje-afgebakende of CSV gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 
 ## Connect-doel {#connect-destination}
 
@@ -24,7 +25,7 @@ Zie de workflow voor [Cloud-opslagdoelen ](/help/rtcdp/destinations/cloud-storag
 
 Voor [!DNL Amazon S3] bestemmingen, ga de volgende informatie in creeer bestemmingswerkschema in:
 
-* **[!DNL Amazon S3]toegangstoets en[!DNL Amazon S3]geheime sleutel **: In[!DNL Amazon S3], produceer een toegangssleutel - geheim toegangszeer belangrijke paar om Adobe toegang in real time CDP tot uw[!DNL Amazon S3]rekening te verlenen.
+* **[!DNL Amazon S3]toegangstoets en[!DNL Amazon S3]geheime sleutel**: In [!DNL Amazon S3], produceer een toegangssleutel - geheim toegangszeer belangrijke paar om Adobe toegang in real time CDP tot uw [!DNL Amazon S3] rekening te verlenen.
 
 >[!IMPORTANT]
 >
