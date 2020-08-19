@@ -1,10 +1,11 @@
 ---
+keywords: Survey destinations;survey;foresee;inmoment;web intercept surveys;qualtrics
 title: Beoordelingsbestemmingen
 seo-title: Beoordelingsbestemmingen
 description: De platforms van onderzoeken ontdekken onderzoeksgebeurtenissen, vangen klant terugkoppelt in real time door gegevenselementen, en delen gegevens met Adobe in real time CDP.
 seo-description: De platforms van onderzoeken ontdekken onderzoeksgebeurtenissen, vangen klant terugkoppelt in real time door gegevenselementen, en delen gegevens met Adobe in real time CDP.
 translation-type: tm+mt
-source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%
