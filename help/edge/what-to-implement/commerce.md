@@ -1,10 +1,10 @@
 ---
 title: Producten
-seo-title: Ondersteunende producten met Adobe Experience Platform Web SDK
+seo-title: Producten met Adobe Experience Platform Web SDK ondersteunen
 description: Leer hoe te om gegevens toe te voegen als u producten of een het winkelwagentje met het Web SDK van het Experience Platform hebt
 seo-description: Leer hoe te om gegevens toe te voegen als u producten of een het winkelwagentje met het Web SDK van het Experience Platform hebt
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 1%
@@ -28,7 +28,6 @@ Dit document gebruikt de [mix ExperienceEvent Commerce Details](https://github.c
 Hieronder ziet u een lijst met `measures` beschikbare gegevens in het `commerce` object.
 
 >[!Tip]
->
 >
 >Een maatregel heeft twee velden: `id` en `value`. Meestal zult u alleen het `value` veld gebruiken (bijvoorbeeld `'value':1`). In het `id` veld kunt u een unieke id instellen waarmee u kunt bijhouden wanneer de maatregel is verzonden. Zie de documentatie XDM voor [Maatregel](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
