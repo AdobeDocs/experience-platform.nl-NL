@@ -1,11 +1,11 @@
 ---
-keywords: rtcdp profile;real-time customer profile
+keywords: rtcdp profile;profiles rtcdp;rtcdp identities;rtcdp merge policies;real-time customer profile
 title: Overzicht van het realtime klantprofiel
 seo-title: Klantprofiel in real-time in Platform van de Gegevens van de Klant in real-time
 description: Een overzicht van hoe het Platform van de Gegevens van de Klant in real time u toelaat om gecoördineerde, verenigbare, relevante ervaringen voor uw klanten te drijven gebruikend de Profielen van de Klant in real time.
 seo-description: Platform, profiel, gegevens, ervaringen, kanalen voor klantgegevens in realtime
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
