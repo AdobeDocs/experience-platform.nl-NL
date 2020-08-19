@@ -1,10 +1,11 @@
 ---
+keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance;privacy rtcdp;rtcdp privacy
 title: Privacy in realtime gegevensprofiel van klanten
 seo-title: Privacy in realtime gegevensprofiel van klanten
 description: Met het realtime gegevensprofiel voor klanten kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen in overeenstemming worden gehouden met privacyregels.
 seo-description: Met het realtime gegevensprofiel voor klanten kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen in overeenstemming worden gehouden met privacyregels.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
@@ -16,11 +17,11 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Data Platform] (CDP in real time) helpt marketers gegevens van veelvoudige ondernemingssystemen samen te brengen, die hen toestaan om, hun klanten beter te identificeren te begrijpen en te betrekken. Adobe beschouwt de privacy van consumentengegevens als een fundamenteel ontwerpbeginsel en biedt verschillende controles om marketers te helpen de gegevensprivacy van hun klanten te beheren.
 
-De meerderheid van CDP-mogelijkheden in real time worden aangedreven door Adobe Experience Platform. Dit document biedt informatie over de verschillende technologieën voor privacyverbetering die worden ondersteund door Real-time CDP, met koppelingen naar [!DNL Experience Platform] documentatie voor meer informatie.
+De meeste CDP-mogelijkheden in realtime worden aangestuurd door Adobe Experience Platform. Dit document biedt informatie over de verschillende technologieën voor privacyverbetering die worden ondersteund door Real-time CDP, met koppelingen naar [!DNL Experience Platform] documentatie voor meer informatie.
 
 ## [!DNL Privacy Service]
 
-Adobe Experience Platform [!DNL Privacy Service] staat u toe om het proces te stroomlijnen om uw gegevensverrichtingen met privacyverordeningen zoals [!DNL General Data Protection Regulation] (GDPR) en [!DNL California Consumer Privacy Act] (CCPA) te houden. Aangezien CDP in real time [!DNL Experience Platform] mogelijkheden voor gegevensinzameling en opslag gebruikt, zouden de toegang en schrappingsverzoeken voor GDPR en CCPA binnen moeten worden beheerd [!DNL Platform]. Zie het overzichtsdocument [van de](../../privacy-service/home.md) Privacy Service voor een meer gedetailleerde inleiding van de dienst.
+Met Adobe Experience Platform [!DNL Privacy Service] kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen voldoen aan privacyregels zoals de [!DNL General Data Protection Regulation] (GDPR) en de [!DNL California Consumer Privacy Act] (CCPA). Aangezien CDP in real time [!DNL Experience Platform] mogelijkheden voor gegevensinzameling en opslag gebruikt, zouden de toegang en schrappingsverzoeken voor GDPR en CCPA binnen moeten worden beheerd [!DNL Platform]. Zie het overzichtsdocument [van de](../../privacy-service/home.md) Privacy Service voor een meer gedetailleerde inleiding van de dienst.
 
 Er zijn twee methoden voor het indienen van individuele aanvragen voor GDPR- en CCPA-gegevens voor de toegang tot en het verwijderen van klantgegevens:
 
