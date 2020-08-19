@@ -1,9 +1,10 @@
 ---
+keywords: connect destination;destination connect;how to connect destination
 title: Verbind met een Doel in het Platform van de Gegevens van de Klant van de Adobe Real-time
 seo-title: Verbind met een Doel in het Platform van de Gegevens van de Klant van de Adobe Real-time
 description: Dit leerprogramma maakt een lijst van de stappen om een bestemming in het Platform van de Gegevens van de Klant van de Adobe in real time te verbinden
 translation-type: tm+mt
-source-git-commit: b070a8a6eee1c1b95b20468c7067181ec62bdbd0
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
