@@ -1,10 +1,11 @@
 ---
+keywords: advertising destinations;destinations;rtcdp destinations
 title: Reclamebestemmingen
 seo-title: Reclamebestemmingen
 description: Verbind uw Platform van Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 seo-description: Verbind uw Platform van Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 translation-type: tm+mt
-source-git-commit: 875430cdbd80025fc3f0de2664f9b55db0debe53
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
