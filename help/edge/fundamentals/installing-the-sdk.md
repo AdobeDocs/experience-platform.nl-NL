@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK die de SDK installeert
 description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 seo-description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 translation-type: tm+mt
-source-git-commit: 12cbcc26956cba2e14d64734c9210fa79bcc70b9
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 0%
@@ -54,6 +54,7 @@ De basiscode maakt een algemene functie met de naam `alloy`. Gebruik deze functi
 In dit voorbeeld wordt de naam van de algemene functie gewijzigd `mycustomname`in plaats van `alloy`.
 
 >[!IMPORTANT]
+>
 >U voorkomt mogelijke problemen door een naam te gebruiken die ten minste één teken bevat dat geen cijfer is en dat niet conflicteert met de naam van een eigenschap die al is gevonden op `window`.
 
 Deze basiscode laadt, naast het maken van een algemene functie, ook extra code in een extern bestand \(`alloy.js`\) dat op een server wordt gehost. Deze code wordt standaard asynchroon geladen, zodat de webpagina zo goed mogelijk presteert. Dit is de aanbevolen implementatie.
