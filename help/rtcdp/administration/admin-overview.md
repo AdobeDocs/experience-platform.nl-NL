@@ -1,12 +1,13 @@
 ---
+keywords: rtcdp administration overview;administration overview
 title: Overzicht van beheer
 seo-title: Real-Time CDP-beheeroverzicht
-description: beschrijving
+description: 'Dit document biedt een overzicht van de beheermogelijkheden van Real-Time Customer Data Platform, aangedreven door Adobe Experience Platform. '
 seo-description: seo beschrijving
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Real-Time CDP-beheeroverzicht
 
-Dit document biedt een overzicht van de beheermogelijkheden van [!DNL Real-time Customer Data Platform], aangedreven door Adobe Experience Platform.
+Dit document biedt een overzicht van de beheermogelijkheden van [!DNL Real-time Customer Data Platform]Adobe Experience Platform.
 
 [!DNL Experience Platform] Hiermee kunnen beheerders op rollen gebaseerd toegangsbeheer voor gebruikers beheren en virtuele sandboxen voor toepassingsontwikkeling beheren.
 
@@ -31,8 +32,8 @@ Meer over toegangsbeheer leren, zie het [toegangsbeheeroverzicht](../../access-c
 
 ## Sandboxen
 
-Adobe Experience Platform (en CDP in real time door uitbreiding) wordt gebouwd om digitale ervaringstoepassingen op globale schaal te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen.
+Adobe Experience Platform (en Real-time CDP via extensie) is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen.
 
-Om aan deze behoefte tegemoet te komen, verstrekt het Adobe Experience Platform &quot;zandbakken&quot;, toelatend u om één enkel [!DNL Platform] geval in afzonderlijke virtuele milieu&#39;s te verdelen die kunnen worden gebruikt om digitale ervaringstoepassingen te ontwikkelen en te ontwikkelen.
+Om aan deze behoefte tegemoet te komen, biedt Adobe Experience Platform &quot;sandboxen&quot;, waarmee u één [!DNL Platform] instantie kunt onderverdelen in afzonderlijke virtuele omgevingen die kunnen worden gebruikt om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 Zie het [sandboxoverzicht](../../sandboxes/home.md) in de [!DNL Experience Platform] documentatie voor meer informatie over sandboxen.
