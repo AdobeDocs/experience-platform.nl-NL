@@ -1,12 +1,13 @@
 ---
-title: Profielviewer
+keywords: view profiles rtcdp;rtcdp profile view;rtcdp profiles
+title: Profielen weergeven in CDP in realtime
 seo-title: Gegevens in realtime klantprofiel weergeven op Platform voor realtime klantgegevens
 description: Gegevens in realtime klantprofiel weergeven op Platform voor realtime klantgegevens
 seo-description: Gegevens in realtime klantprofiel weergeven op Platform voor realtime klantgegevens
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
@@ -18,4 +19,4 @@ ht-degree: 0%
 
 Binnen de gebruikersinterface kunt u deze alleen-lezen profielen weergeven en belangrijke informatie over de individuele klant zien, zoals voorkeuren, gebeurtenissen uit het verleden en interacties en segmenten waartoe de individuele klant behoort.
 
-Aangezien [!DNL Real-time Customer Data Platform] bovenop Adobe Experience Platform wordt gebouwd, kan CDP in real time gebruik maken van de mogelijkheden van het profielbekijken die deel van uitmaken [!DNL Experience Platform]. Raadpleeg de gebruikershandleiding [!DNL Platform] van het profiel van de [real-time klant voor een gedetailleerde handleiding voor het weergeven van klantprofielen in de](../../profile/ui/user-guide.md)gebruikersinterface.
+Omdat CDP in real time [!DNL Real-time Customer Data Platform] is gebouwd boven op Adobe Experience Platform, kan het gebruiken van de het profielbekijken mogelijkheden die deel van uitmaken [!DNL Experience Platform]. Raadpleeg de gebruikershandleiding [!DNL Platform] van het profiel van de [real-time klant voor een gedetailleerde handleiding voor het weergeven van klantprofielen in de](../../profile/ui/user-guide.md)gebruikersinterface.
