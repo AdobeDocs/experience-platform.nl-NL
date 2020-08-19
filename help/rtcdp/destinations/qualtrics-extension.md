@@ -1,10 +1,11 @@
 ---
+keywords: Qualtrics;qualtrics;Qualtrics Website Feedback;qualtrics website feedback;Qualtricks website feedback
 title: Qualtrics Website Feedback-extensie
 seo-title: Qualtrics Website Feedback-extensie
 description: De uitbreiding van de Terugkoppeling van de Vraag van de Website van Qualtrics is een onderzoeksbestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: De uitbreiding van de Terugkoppeling van de Vraag van de Website van Qualtrics is een onderzoeksbestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 2%
