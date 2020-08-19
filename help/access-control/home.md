@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van toegangsbeheer
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: e66fd20eb7a153e556a3716bb255af084e52292e
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1103'
 ht-degree: 1%
 
 ---
@@ -26,8 +26,8 @@ Om toegangsbeheer voor te vormen, moet u beheerdervoorrechten voor een organisat
 
 Een werkschema op hoog niveau voor het verkrijgen en toewijzen van toegangsmachtigingen kan als volgt worden samengevat:
 
-- Nadat u zich hebt geabonneerd op een Adobe Experience Platform, wordt een e-mail verzonden naar de beheerder die is opgegeven in het registratieformulier.
-- De beheerder logt binnen aan [Adobe Admin Console](#adobe-admin-console) en selecteert **Adobe Experience Platform** van de lijst van producten op de overzichtspagina.
+- Nadat u een licentie hebt verleend aan Adobe Experience Platform of een toepassings-/toepassingsservice die Experience Platform gebruikt, wordt een e-mail verzonden naar de beheerder die tijdens de licentie is opgegeven.
+- De beheerder meldt zich aan bij [Adobe Admin Console](#adobe-admin-console) en selecteert **Adobe Experience Platform** in de lijst met producten op de overzichtspagina.
 - De beheerder kan de standaardprofielen [van het](#product-profiles) product bekijken of nieuwe profielen van het klantenproduct tot stand brengen zoals nodig.
 - De beheerder kan de machtigingen en gebruikers voor bestaande productprofielen bewerken.
 - Wanneer de beheerder een productprofiel maakt of bewerkt, voegt hij gebruikers aan het profiel toe met behulp van het tabblad **[!UICONTROL Gebruikers]** en verleent hij deze gebruikers machtigingen (zoals &quot;Datasetslezen&quot; of &quot;Schema&#39;sbeheren&quot;) via het tabblad **[!UICONTROL machtigingen]** . Op dezelfde manier kan de beheerder toegang tot sandboxen toewijzen via hetzelfde machtigingentabblad.
