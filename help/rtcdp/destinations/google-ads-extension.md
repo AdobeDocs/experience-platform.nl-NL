@@ -1,10 +1,11 @@
 ---
+keywords: Google ads;google ads;google ads extension;Google Ads extension
 title: Google Ads-extensie
 seo-title: Google Ads-extensie
 description: De Google Ads-extensie is een advertentiebestemming in het Adobe Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: De Google Ads-extensie is een advertentiebestemming in het Adobe Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 2%
