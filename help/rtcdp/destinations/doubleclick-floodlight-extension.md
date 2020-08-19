@@ -1,10 +1,11 @@
 ---
+keywords: DoubleClick Floodlight;doubleclick floodlight extension;doubleclick;floodlight
 title: DoubleClick Floodlight (bèta)-extensie
 seo-title: DoubleClick Floodlight (bèta)-extensie
 description: De extensie DoubleClick Floodlight (Beta) is een advertentiebestemming in het Adobe Real-time Platform van klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: De extensie DoubleClick Floodlight (Beta) is een advertentiebestemming in het Adobe Real-time Platform van klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 2%
