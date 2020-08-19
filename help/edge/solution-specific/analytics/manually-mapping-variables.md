@@ -1,10 +1,10 @@
 ---
 title: Variabelen handmatig toewijzen in Analytics
 seo-title: Variabelen handmatig toewijzen in Analytics met Web SDK
-description: Hoe kan ik variabelen handmatig toewijzen aan Analytics met behulp van verwerkingsregels
+description: Hoe te om variabelen in Analyses manueel in kaart te brengen gebruikend verwerkingsregels
 seo-description: manueel kaart variabelen in Analytics gebruikend verwerkingsregels met Web SDK
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Variabelen handmatig toewijzen in Analytics
 
-In het Adobe Experience Platform (AEP) [!DNL Web SDK] kunnen bepaalde variabelen automatisch worden toegewezen, maar aangepaste variabelen moeten handmatig worden toegewezen.
+In de Adobe Experience Platform (AEP) [!DNL Web SDK] kunnen bepaalde variabelen automatisch worden toegewezen, maar aangepaste variabelen moeten handmatig worden toegewezen.
 
 Voor XDM-gegevens die niet automatisch worden toegewezen aan [!DNL Analytics], kunt u [contextgegevens](https://docs.adobe.com/content/help/en/analytics/implementation/vars/page-vars/contextdata.html) gebruiken om uw [schema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)aan te passen. Vervolgens kan het worden toegewezen aan het [!DNL Analytics] gebruik van [verwerkingsregels](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) om [!DNL Analytics] variabelen te vullen.
 
@@ -63,7 +63,7 @@ In de volgende regel is Analytics bijvoorbeeld ingesteld op het vullen van **int
 In het volgende voorbeeld wordt getoond hoe de [`event` opdracht](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html) kan worden gebruikt met de `xdm` optie om gegevens te verzenden en op te halen met de AEP [!DNL Web SDK]. In dit voorbeeld, past het `event` bevel het Schema [van de Details van de Handel van](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) ExperienceEvent aan zodat productListItems `name` en de `SKU` waarden worden gevolgd:
 
 
-```
+```javascript
 alloy("event",{
   "xdm":{
     "commerce":{
