@@ -1,10 +1,11 @@
 ---
+keywords: facebook extensions;facebook extension;facebook destinations;facebook
 title: Facebook-bestemming
 seo-title: Facebook-bestemming
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 seo-description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 2%
