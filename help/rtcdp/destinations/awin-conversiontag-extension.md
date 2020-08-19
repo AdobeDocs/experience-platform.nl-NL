@@ -1,10 +1,11 @@
 ---
+keywords: Awin Advertiser Conversion Tag extension;conversion tag;Awin;awin;AWIN
 title: Awin Advertiser Conversion Tag-extensie
 seo-title: Awin Advertiser Conversion Tag-extensie
 description: De extensie voor conversietag voor Awin Advertiser is een advertentie-bestemming in het Adobe Real-time Platform met klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '539'
 ht-degree: 2%
