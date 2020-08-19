@@ -1,10 +1,11 @@
 ---
+keywords: facebook pixel extensions;facebook pixel extension;facebook pixel destinations;facebook pixel
 title: Facebook Pixel-extensie
 seo-title: Facebook Pixel-extensie
 description: De Facebook Pixel-extensie is een advertentiebestemming in het Adobe Real-time Platform voor klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 2%
