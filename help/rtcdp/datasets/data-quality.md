@@ -1,10 +1,11 @@
 ---
+keywords: data quality;rtcdp data quality
 title: Gegevenskwaliteit op Platform van realtime klantgegevens
 seo-title: Gegevenskwaliteit op Adobe Real-time Platform van klantgegevens
 description: Een document over gegevenskwaliteit op het Platform van de Gegevens van de Klant in real time
 seo-description: Een document waarin wordt beschreven hoe de gegevenskwaliteit werkt door batch- en gegevensinvoer op het Adobe Real-time Platform van klantgegevens
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
