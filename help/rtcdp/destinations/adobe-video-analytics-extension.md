@@ -1,10 +1,11 @@
 ---
+keywords: media analytics extension;media analytics;audio and video extension
 title: Adobe Media Analytics voor audio- en video-extensie
 seo-title: Adobe Media Analytics voor audio- en video-extensie
 description: De Adobe Media Analytics voor Audio en Video uitbreiding is een analysebestemming in Adobe Real-time Platform van de Gegevens van de Klant. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: De Adobe Media Analytics voor Video uitbreiding is een analysebestemming in Adobe Real-time Platform van de Gegevens van de Klant. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 2%
