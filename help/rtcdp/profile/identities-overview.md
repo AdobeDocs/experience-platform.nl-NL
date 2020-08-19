@@ -1,20 +1,19 @@
 ---
-title: Identiteiten en naamruimten
-seo-title: Adobe Experience Platform Identity Service
-description: beschrijving
-seo-description: seo beschrijving
+keywords: identities rtcdp;rtcdp identities;real-time cdp identities
+title: Identiteiten in real time CDP
+description: Met de Adobe Experience Platform Identity Service kunt u uw klanten en hun gedrag beter zien door identiteiten tussen apparaten en systemen te combineren.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 1%
+source-wordcount: '424'
+ht-degree: 0%
 
 ---
 
 
 # Identiteiten in real time CDP
 
-Adobe Experience Platform [!DNL Identity Service] helpt u om een beter beeld van uw klanten en hun gedrag te krijgen door identiteiten over apparaten en systemen samen te brengen. Doorgaans communiceren uw klanten via meerdere kanalen met uw merk. U kunt onder andere online door uw website bladeren, een aankoop in de winkel doen, deelnemen aan uw loyaliteitsprogramma of een helpdesk bellen voor ondersteuning, om er een paar te noemen. In deze verschillende systemen is er een identiteit gemaakt voor die klant en [!DNL Identity Service] is het mogelijk die identiteiten samen te brengen om het volledige beeld te zien.
+Adobe Experience Platform [!DNL Identity Service] helpt u om een beter beeld van uw klanten en hun gedrag te krijgen door identiteiten over apparaten en systemen te overbruggen. Doorgaans communiceren uw klanten via meerdere kanalen met uw merk. U kunt onder andere online door uw website bladeren, een aankoop in de winkel doen, deelnemen aan uw loyaliteitsprogramma of een helpdesk bellen voor ondersteuning, om er een paar te noemen. In deze verschillende systemen is er een identiteit gemaakt voor die klant en [!DNL Identity Service] is het mogelijk die identiteiten samen te brengen om het volledige beeld te zien.
 
 Nu, in plaats van vijf afzonderlijke klanten die met uw merk over vijf verschillende kanalen in wisselwerking staan, kunt u zien dat dit de zelfde klant is, en u kunt ervoor zorgen zij een verenigbare, gepersonaliseerde, relevante ervaring door elke interactie ontvangen. Naarmate meer informatie bekend raakt over uw klant (bijvoorbeeld een anonieme browser van uw website besluit zich aan te melden voor een account en zich aan te melden), wordt deze informatie aan elkaar gekoppeld en wordt het beeld van uw klant steeds duidelijker.
 
