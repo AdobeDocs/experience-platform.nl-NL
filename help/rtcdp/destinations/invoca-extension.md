@@ -1,10 +1,11 @@
 ---
+keywords: Invoca;invoca
 title: Invoc-tags, extensie
 seo-title: Invoc-tags, extensie
 description: De uitbreiding van de Markeringen Invoca is een stem van de klantenbestemming in het Platform van de Gegevens van de Klant van Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 2%
