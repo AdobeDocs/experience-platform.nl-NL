@@ -1,10 +1,11 @@
 ---
+keywords: Flashtalking OneTag extensions;Flashtalking OneTag extension;Flashtalking OneTag destinations;Flashtalking OneTag;flashtalking onetag
 title: OneTag-extensie knipperen
 seo-title: OneTag-extensie knipperen
 description: De Flash-sprekende OneTag-extensie is een advertentiebestemming in het Adobe Real-time Platform met klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 2%
