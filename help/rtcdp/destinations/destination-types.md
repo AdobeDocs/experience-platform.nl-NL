@@ -1,10 +1,11 @@
 ---
+keywords: destinations;destination;destination types
 title: Typen bestemmingen en categorieën
 seo-title: Typen bestemmingen en categorieën
 description: 'In het Platform van de Gegevens van de Klant van Adobe in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen. '
 seo-description: In het Platform van de Gegevens van de Klant van Adobe in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 0%
