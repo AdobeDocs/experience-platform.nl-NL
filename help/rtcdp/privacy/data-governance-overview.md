@@ -1,10 +1,11 @@
 ---
+keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
 title: Overzicht van gegevensbeheer
 seo-title: Gegevensbeheer in Real-time Customer Data Platform
 description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 seo-description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 0%
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Data Platform] (CDP in real time) brengt gegevens van veelvoudige ondernemingssystemen samen, toestaand marketers om, hun klanten beter te identificeren te begrijpen en in dienst te nemen. Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Daarom is het belangrijk om ervoor te zorgen dat CDP in real time met gebruiksbeleid wanneer het behandelen van uw gegevens compatibel is.
 
-Adobe Experience Platform [!DNL Data Governance] staat u toe om klantengegevens te beheren en naleving van verordeningen, beperkingen, en beleid te verzekeren van toepassing op gegevensgebruik. Het speelt een zeer belangrijke rol binnen CDP In real time, toestaand u om gebruiksbeleid te bepalen, uw gegevens te categoriseren die op dat beleid worden gebaseerd, en beleidsschendingen te controleren wanneer het uitvoeren van bepaalde marketing acties.
+Met Adobe Experience Platform [!DNL Data Governance] kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een zeer belangrijke rol binnen CDP In real time, toestaand u om gebruiksbeleid te bepalen, uw gegevens te categoriseren die op dat beleid worden gebaseerd, en beleidsschendingen te controleren wanneer het uitvoeren van bepaalde marketing acties.
 
 CDP in real time wordt gebouwd bovenop Adobe Experience Platform, en daarom wordt de meerderheid van [!DNL Data Governance] mogelijkheden behandeld in de [!DNL Experience Platform] documentatie. Dit document is bedoeld als aanvulling op het overzicht [van](../../data-governance/home.md) gegevensbeheer voor [!DNL Experience Platform], en schetst de bestuurskenmerken die beschikbaar zijn in real time CDP. De volgende onderwerpen worden behandeld:
 
@@ -28,7 +29,7 @@ CDP in real time wordt gebouwd bovenop Adobe Experience Platform, en daarom word
 
 [!DNL Data Governance] staat u toe om gebruiksetiketten op uw gegevens, of op de dataset of dataset-gebied niveau toe te passen. Met labels voor gegevensgebruik kunt u gegevens indelen op basis van het gebruiksbeleid dat op die gegevens van toepassing is.
 
-Zie de gebruikershandleiding [voor](../../data-governance/labels/overview.md) gegevensgebruikslabels voor Adobe Experience Platform voor gedetailleerde informatie over het werken met labels voor gegevensgebruik.
+Zie de gebruikershandleiding bij [de labels voor](../../data-governance/labels/overview.md) gegevensgebruikslabels voor Adobe Experience Platform voor gedetailleerde informatie over het werken met labels voor gegevensgebruik.
 
 ## Gebruiksgevallen voor marketingdoeleinden configureren voor doelen {#destinations}
 
@@ -47,7 +48,7 @@ Gebruiksscenario&#39;s voor marketingdoeleinden kunnen alleen worden geselecteer
 
 Om gegevensgebruikslabels effectief gegevensnaleving te steunen, moet het beleid van het gegevensgebruik worden bepaald en worden toegelaten. Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen CDP in real time mag uitvoeren. Zie de sectie &quot;Beleid voor gegevensgebruik&quot; in het overzicht [!DNL Experience Platform] van [](../../data-governance/home.md) gegevensbeheer voor meer informatie.
 
-Het Adobe Experience Platform verstrekt verscheidene **kernbeleid** voor de gemeenschappelijke gebruiksgevallen van de klantenervaring. Dit beleid kan in UI worden bekeken door aan de werkruimte van **[!UICONTROL Beleid]** te navigeren en het **[!UICONTROL Browse]** lusje te selecteren. Zie de gids [van de](../../data-governance/policies/user-guide.md) beleidsgebruiker in de [!DNL Experience Platform] documentatie voor meer gedetailleerde stappen bij het werken met beleid in UI, met inbegrip van hoe te om uw eigen douanebeleid te maken.
+Adobe Experience Platform biedt verschillende **basisbeleidsregels** voor veelvoorkomende gebruiksgevallen voor de klantervaring. Dit beleid kan in UI worden bekeken door aan de werkruimte van **[!UICONTROL Beleid]** te navigeren en het **[!UICONTROL Browse]** lusje te selecteren. Zie de gids [van de](../../data-governance/policies/user-guide.md) beleidsgebruiker in de [!DNL Experience Platform] documentatie voor meer gedetailleerde stappen bij het werken met beleid in UI, met inbegrip van hoe te om uw eigen douanebeleid te maken.
 
 ## Compatibiliteit met gegevensgebruik afdwingen {#enforce-data-usage-compliance}
 
@@ -96,7 +97,7 @@ Als een van de bovenstaande acties een schending veroorzaakt, wordt die actie ve
 
 ## Volgende stappen
 
-Nu u aan de belangrijkste [!DNL Data Governance] eigenschappen op CDP in real time en hoe [!DNL Experience Platform] toelaat bent geïntroduceerd, gelieve aan de [documentatie voor het Beleid van Gegevens over Adobe Experience Platform](../../data-governance/home.md)voort te zetten. De documentatie verstrekt overzichten van essentiële [!DNL Data Governance] concepten, evenals geleidelijke werkschema&#39;s voor het beheren van de etiketten en het beleid van het gegevensgebruik.
+Nu u aan de belangrijkste [!DNL Data Governance] eigenschappen op CDP in real time en hoe [!DNL Experience Platform] toelaat bent geïntroduceerd, gelieve aan de [documentatie voor het Beleid van Gegevens op Adobe Experience Platform](../../data-governance/home.md)voort te zetten. De documentatie verstrekt overzichten van essentiële [!DNL Data Governance] concepten, evenals geleidelijke werkschema&#39;s voor het beheren van de etiketten en het beleid van het gegevensgebruik.
 
 De volgende video verstrekt een overzicht van [!DNL Data Governance] in real time CDP, met inbegrip van het gebruik van marketing gebruiks-gevallen op bestemmingen en voorbeeldwerkschema&#39;s voor verschillende scenario&#39;s:
 
