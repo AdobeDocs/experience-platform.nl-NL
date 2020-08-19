@@ -1,10 +1,11 @@
 ---
+keywords: QuestionPro Intercept Surveys;questionpro intercept surveys;QuestionPro;questionpro
 title: QuestionPro Intercept Surveys-extensie
 seo-title: QuestionPro Intercept Surveys-extensie
 description: THe QuestionPro Intercept Surveys-extensie is een enquêtedoel in het Adobe Real-time Platform met klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: De uitbreiding van het Onderzoek van het Onderschepping QuestionPro is een onderzoeksbestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 2%
