@@ -1,10 +1,11 @@
 ---
+keywords: dialogtech extension;dialogtech;dialogtech destination;DialogTech;DialogTech SourceTrak
 title: DialogTech-extensie
 seo-title: DialogTech-extensie
 description: De uitbreiding DialogTech is een analysebestemming in Adobe Real-time het Platform van Gegevens van de Klant. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: De uitbreiding DialogTech is een analysebestemming in Adobe Real-time het Platform van Gegevens van de Klant. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 2%
