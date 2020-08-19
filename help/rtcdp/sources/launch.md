@@ -1,11 +1,11 @@
 ---
-keywords: Launch;launch
+keywords: launch web tags;web tags launch;website tags;web tags;launch;Launch
 title: Zelfstudie Websitetags implementeren met Adobe Launch
 seo-title: Websitetags implementeren met Adobe Launch
 description: Adobe starten gebruiken om websitetags te implementeren in Adobe Experience Platform
 seo-description: Adobe starten gebruiken om websitetags te implementeren in Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 3%
