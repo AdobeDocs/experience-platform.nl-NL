@@ -4,7 +4,7 @@ seo-title: De configuratie van de rand voor het Web SDK van het Experience Platf
 description: 'Leer hoe te om het Netwerk van de Rand van het Experience Platform te vormen. '
 seo-description: 'Leer hoe te om het Netwerk van de Rand van het Experience Platform te vormen. '
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # De rand configureren
 
-De configuratie voor het Adobe Experience Platform [!DNL Web SDK] wordt gesplitst tussen twee plaatsen. Het [vormt bevel](configuring-the-sdk.md) in SDK controleert dingen die op de cliënt, zoals de `edgeDomain`. moeten worden behandeld. De randconfiguratie behandelt alle andere configuratie voor SDK. Wanneer een verzoek naar het Adobe Experience Platform wordt verzonden [!DNL Edge Network], `edgeConfigId` wordt gebruikt om naar de server zijconfiguratie te verwijzen. Hierdoor kunt u de configuratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
+De configuratie voor de Adobe Experience Platform [!DNL Web SDK] wordt gesplitst tussen twee plaatsen. Het [vormt bevel](configuring-the-sdk.md) in SDK controleert dingen die op de cliënt, zoals de `edgeDomain`. moeten worden behandeld. De randconfiguratie behandelt alle andere configuratie voor SDK. Wanneer een verzoek naar de Adobe Experience Platform wordt verzonden [!DNL Edge Network], `edgeConfigId` wordt het gebruikt om naar de server zijconfiguratie te verwijzen. Hierdoor kunt u de configuratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
 
 ## Een Edge-configuratie-id maken
 
@@ -23,8 +23,6 @@ De de configuratie IDs van de rand kan in Adobe worden gecreeerd [!DNL Launch] g
 ![Edge Configuration Tool navigation](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
->
->
 >
 >Het gereedschap voor randconfiguratie is beschikbaar voor klanten op de lijst van gewenste personen, ongeacht of ze [!DNL Launch] als tagbeheer gebruiken. Bovendien vereisen gebruikers ontwikkelmachtigingen in [!DNL Launch]. Zie het artikel [Gebruikersmachtigingen](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) in de [!DNL Launch] documentatie voor meer informatie.
 
@@ -56,17 +54,17 @@ De syncs van identiteitskaart kunnen in containers worden gegroepeerd om verschi
 
 #### Adobe Experience Platform
 
-Met de hier vermelde instellingen kunt u gegevens naar het Adobe Experience Platform verzenden. Schakel deze sectie alleen in als u het Adobe Experience Platform hebt aangeschaft.
+Met de hier vermelde instellingen kunt u gegevens naar de Adobe Experience Platform verzenden. Schakel deze sectie alleen in als u de Adobe Experience Platform hebt aangeschaft.
 
 ![Adobe Experience Platform-instellingenblok](../../assets/edge_configuration_aep.png)
 
 ##### [!UICONTROL Sandbox]
 
-Sandboxen zijn locaties in het Adobe Experience Platform waarmee klanten hun gegevens en implementaties van elkaar kunnen isoleren. Raadpleeg de documentatie bij [Sandboxen voor meer informatie over hoe ze werken](../../sandboxes/home.md).
+Sandboxen zijn locaties in de Adobe Experience Platform die klanten in staat stellen hun gegevens en implementaties van elkaar te isoleren. Raadpleeg de documentatie bij [Sandboxen voor meer informatie over hoe ze werken](../../sandboxes/home.md).
 
 ##### [!UICONTROL Streaming-ingang]
 
-Een streaminginlaat is een HTTP-bron in het Adobe Experience Platform. Deze worden gecreeerd onder het [!UICONTROL Bronlusje] in het Adobe Experience Platform als HTTP API.
+Een streaminginlaat is een HTTP-bron in de Adobe Experience Platform. Deze worden onder het tabblad [!UICONTROL Bronnen] in de Adobe Experience Platform gemaakt als een HTTP-API.
 
 ##### [!UICONTROL Gebeurtenisgegevens]
 
@@ -80,8 +78,6 @@ Als u Adobe Target wilt configureren, moet u een clientcode opgeven. De andere v
 
 >[!NOTE]
 >
->
->
 >De organisatie die is gekoppeld aan de clientcode, moet overeenkomen met de organisatie waar de configuratie-id is gemaakt.
 
 ##### [!UICONTROL Clientcode]
@@ -94,7 +90,7 @@ De unieke id voor een doelaccount. Als u dit wilt zoeken, navigeert u naar [!UIC
 
 De eigenschap token vindt u in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Eigenschappen]
 
-##### [!UICONTROL Target Environment ID]
+##### [!UICONTROL Id doelomgeving]
 
 [Met omgevingen](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target kunt u uw implementatie in alle ontwikkelingsstadia beheren. Deze instelling geeft aan welke omgeving u voor elke omgeving wilt gebruiken.
 
@@ -102,7 +98,7 @@ Adobe raadt u aan dit anders in te stellen voor elk van uw `dev`-, `stage`- en `
 
 #### Adobe Audience Manager
 
-Alles wat nodig is om gegevens naar de Adobe Audience Manager te verzenden, moet deze sectie inschakelen. De andere instellingen zijn optioneel, maar worden aangemoedigd.
+U kunt deze sectie alleen inschakelen als u gegevens naar Adobe Audience Manager wilt verzenden. De andere instellingen zijn optioneel, maar worden aangemoedigd.
 
 ![Adobe Publiek beheren, instellingenblok](../../assets/edge_configuration_aam.png)
 
@@ -116,7 +112,7 @@ Staat SDK toe om segmentinformatie via Doelen [URL](https://docs.adobe.com/conte
 
 #### Adobe Analytics
 
-Bepaalt of gegevens naar Adobe Analytics worden verzonden. Meer informatie vindt u in het overzicht [van](../solution-specific/analytics/analytics-overview.md)Analytics.
+Bepaalt of gegevens naar Adobe Analytics worden verzonden. De extra details zijn in het Overzicht [van](../solution-specific/analytics/analytics-overview.md)Analytics.
 
 ![Adobe Analytics Settings Block](../../assets/edge_configuration_aa.png)
 
