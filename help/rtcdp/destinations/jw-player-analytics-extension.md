@@ -1,10 +1,11 @@
 ---
+keywords: JW player;jw player;JW Player;jw extension;JW extension
 title: JW Player Analytics-extensie (BETA)
 seo-title: JW Player Analytics-extensie (BETA)
 description: De uitbreiding van de Analytics van de Speler JW (BETA) is een analysebestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 seo-description: De uitbreiding van de Analytics van de Speler JW (BETA) is een analysebestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 2%
