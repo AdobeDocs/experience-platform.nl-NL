@@ -1,10 +1,11 @@
 ---
+keywords: Azure event hub destination;azure event hub;azure eventhub
 title: (Beta) Azure Event Hubs-bestemming
 seo-title: (Beta) Azure Event Hubs-bestemming
 description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van Experience Platform.
 seo-description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van Experience Platform.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -22,7 +23,7 @@ ht-degree: 0%
 
 [!DNL Azure Event Hubs] is een groot platform voor gegevensstreaming en service voor het opnemen van gebeurtenissen. Het kan miljoenen gebeurtenissen per seconde ontvangen en verwerken. Gegevens die naar een gebeurtenishub worden verzonden, kunnen worden getransformeerd en opgeslagen met behulp van een realtime analyseprovider of batchadapters.
 
-U kunt een uitgaande verbinding in real time aan uw [!DNL Azure Event Hubs] opslag tot stand brengen aan stroomgegevens van Adobe Experience Platform.
+U kunt een uitgaande verbinding in real time met uw [!DNL Azure Event Hubs] opslag maken om gegevens vanuit Adobe Experience Platform te streamen.
 
 * Voor meer informatie over [!DNL Azure Event Hubs], zie de documentatie [van](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)Microsoft.
 * Zie de zelfstudie over de API- [!DNL Azure Event Hubs] streamingdoelen als u verbinding wilt maken met het [gebruik van API-aanroepen](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
@@ -30,7 +31,7 @@ U kunt een uitgaande verbinding in real time aan uw [!DNL Azure Event Hubs] opsl
 
 ![AWS Kinesis in de gebruikersinterface](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
 
-## Gevallen gebruiken {#use-cases}
+## Use Cases {#use-cases}
 
 Door het stromen bestemmingen zoals te gebruiken [!DNL Azure Event Hubs], kunt u high-value segmenteringsgebeurtenissen en bijbehorende profielattributen in uw systemen van keus gemakkelijk invoeren.
 
