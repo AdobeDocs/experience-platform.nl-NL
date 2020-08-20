@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van gegevenstoegang
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '1332'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Gegevensset met query-gegevens met [!DNL Data Access] API
 
-Dit document biedt een stapsgewijze zelfstudie over het zoeken naar en openen en downloaden van gegevens die zijn opgeslagen in een gegevensset met behulp van de [!DNL Data Access] API in het Adobe Experience Platform. U wordt ook geïntroduceerd in enkele unieke functies van de [!DNL Data Access] API, zoals pagineren en gedeeltelijke downloads.
+Dit document biedt een stapsgewijze zelfstudie over het zoeken naar en openen en downloaden van gegevens die zijn opgeslagen in een gegevensset met de [!DNL Data Access] API in Adobe Experience Platform. U wordt ook geïntroduceerd in enkele unieke functies van de [!DNL Data Access] API, zoals pagineren en gedeeltelijke downloads.
 
 ## Aan de slag
 
@@ -365,7 +365,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `{FILE_ID}` | De id van het bestand. |
-| `{FILE_NAME`} | De bestandsnaam (bijvoorbeeld profiles.parquet) |
+| `{FILE_NAME}` | De bestandsnaam (bijvoorbeeld profiles.parquet) |
 
 **Verzoek**
 
@@ -396,7 +396,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `{FILE_ID}` | De id van het bestand. |
-| `{FILE_NAME`} | De bestandsnaam (bijvoorbeeld profiles.parquet). |
+| `{FILE_NAME}` | De bestandsnaam (bijvoorbeeld profiles.parquet). |
 
 **Verzoek**
 
