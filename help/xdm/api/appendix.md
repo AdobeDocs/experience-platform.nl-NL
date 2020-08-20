@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Aanhangsel voor ontwikkelaar van het schemaregister
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '1265'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ Dit document bevat aanvullende informatie over het werken met de [!DNL Schema Re
 
 [!DNL Experience Data Model] (XDM) is een openbaar gedocumenteerde specificatie, die door Adobe wordt gedreven om de interoperabiliteit, de expressiviteit, en de macht van digitale ervaringen te verbeteren. Adobe handhaaft de broncode en de formele definities XDM in een [open bronproject op GitHub](https://github.com/adobe/xdm/). Deze definities worden geschreven in de Standaardaantekening XDM, gebruikend JSON-LD (de Nota van Objecten JavaScript voor Gekoppelde Gegevens) en Schema JSON als grammatica voor het bepalen van XDM schema&#39;s.
 
-Wanneer u formele XDM-definities bekijkt in de openbare opslagplaats, kunt u zien dat standaard XDM verschilt van wat u in Adobe Experience Platform ziet. Wat u ziet in [!DNL Experience Platform] wordt genoemd de Wijze van de Verenigbaarheid, en het verstrekt een eenvoudige afbeelding tussen standaardXDM en de manier het binnen wordt gebruikt [!DNL Platform].
+Wanneer u formele XDM-definities bekijkt in de openbare opslagplaats, ziet u dat standaard XDM verschilt van wat u in Adobe Experience Platform ziet. Wat u ziet in [!DNL Experience Platform] wordt genoemd de Wijze van de Verenigbaarheid, en het verstrekt een eenvoudige afbeelding tussen standaardXDM en de manier het binnen wordt gebruikt [!DNL Platform].
 
 ### Hoe de Wijze van de Verenigbaarheid werkt
 
@@ -37,7 +37,7 @@ Hieronder volgt een vergelijking naast elkaar van verjaardagsgerelateerde velden
   <td>
   <pre class="JSON language-JSON hljs">
         {1} "xdm:bornDate": {1} "title": "Geboortedatum", "type": "string", "format": "date", }, "xdm:bornDayAndMonth": {1} "title": "Geboortedatum", "type": "string", "pattern": "[0-1][0-9]-[0-9][0-9]", }, "xdm:bornYear": {1} "title": "Geboortejaar", "type": "integer", "minimum": 1, "maximum": 32767 }
-      </pre>
+  </pre>
   </td>
   <td>
   <pre class="JSON language-JSON hljs">
@@ -245,13 +245,13 @@ In de onderstaande tabel wordt de toewijzing tussen &quot;meta:xdmType&quot; en 
 
 | XDM Type<br>(meta:xdmType) | JSON<br>(JSON-schema) | Parquet<br>(type/aantekening) | [!DNL Spark] SQL | Java | Scala | .NET | CosmosDB | MongoDB | Aerospike | Protocol 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| string | tekst:tekenreeks | BYTE_ARRAY/UTF8 | StringType | java.lang.String | String | System.String | String | string | String | string |
+| string | tekst:tekenreeks | BYTE_ARRAY/UTF8 | StringType | java.lang.String | Tekenreeks | System.String | Tekenreeks | string | Tekenreeks | string |
 | getal | tekst:nummer | DUBBEL | DoubleType | java.lang.Double | Dubbel | System.Double | Getal | double | Dubbel | double |
 | lang | type:<br>integerMaximum:2^53+1<br>minimum:-2^53+1 | INT64 | LongType | java.lang.Long | Lang | System.Int64 | Getal | lang | Geheel | int64 |
 | int | type:<br>integerMaximum:2^31<br>minimum:-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | Getal | int | Geheel | int32 |
 | kort | type:<br>integerMaximum:2^15<br>minimum:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | Kort | System.Int16 | Getal | int | Geheel | int32 |
 | byte | type:<br>integerMaximum:2^7<br>minimum:-2^7 | INT32/INT_8 | ByteType | java.lang.Short | Byte | System.SByte | Getal | int | Geheel | int32 |
 | boolean | type:boolean | BOOLEAN | BooleanType | java.lang.Boolean | Boolean | System.Boolean | Boolean | bool | Geheel | Geheel | bool |
-| date | type:<br>stringformat:date<br>(RFC 3339, sectie 5.6) | INT32/DATE | DateType | java.util.Date | java.util.Date | System.DateTime | String | date | Geheel getal<br>(unix millis) | int64<br>(unix millis) |
-| date-time | type:<br>stringnotatie:date-time<br>(RFC 3339, sectie 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | String | timestamp | Geheel getal<br>(unix millis) | int64<br>(unix millis) |
+| date | type:<br>stringformat:date<br>(RFC 3339, sectie 5.6) | INT32/DATE | DateType | java.util.Date | java.util.Date | System.DateTime | Tekenreeks | date | Geheel getal<br>(unix millis) | int64<br>(unix millis) |
+| date-time | type:<br>stringnotatie:date-time<br>(RFC 3339, sectie 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | Tekenreeks | timestamp | Geheel getal<br>(unix millis) | int64<br>(unix millis) |
 | map | object | MAP geannoteerde groep<br><br>&lt;<span>key_type</span>> MOET STRING<br><br>&lt;<span>value_type</span>> type kaartwaarden zijn | MapType<br><br>&quot;keyType&quot; MOET StringType<br><br>&quot;valueType&quot; zijn type toewijzingswaarden. | java.util.Map | Kaart | --- | object | object | map | map&lt;<span>key_type, value_type</span>> |
