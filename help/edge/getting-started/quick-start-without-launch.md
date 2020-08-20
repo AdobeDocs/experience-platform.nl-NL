@@ -1,10 +1,11 @@
 ---
 title: Snel aan de slag met plain javascript
-seo-title: 'Snelle start voor Web SDK van Adobe Experience Platform '
+seo-title: 'Snelle start voor Adobe Experience Platform Web SDK '
 description: Snelle startgids voor het gebruiken van het Web SDK van het Experience Platform om gegevens te verzamelen
 seo-description: Snelle startgids voor het gebruiken van het Web SDK van het Experience Platform om gegevens te verzamelen
+keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 translation-type: tm+mt
-source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 1%
@@ -14,10 +15,10 @@ ht-degree: 1%
 
 # Welkom
 
-Deze gids leidt u door de verschillende manieren aan opstelling het Web SDK van het Adobe Experience Platform. Als u deze functie wilt gebruiken, moet u een whitelist hebben. Neem contact op met uw CSM als u op de wachtlijst wilt staan.
+Deze gids leidt u door de verschillende manieren om SDK van het Web van Adobe Experience Platform te plaatsen. Als u deze functie wilt gebruiken, moet u een whitelist hebben. Neem contact op met uw CSM als u op de wachtlijst wilt staan.
 
-- Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als je al een CNAME voor Analytics hebt, moet je die gebruiken. Het testen in ontwikkeling werkt zonder een CNAME maar u hebt één nodig alvorens u aan productie gaat.
-- Het recht hebben op Adobe Experience Platform.  Als u geen Platform hebt gekocht, zal Adobe u van de Stichting van de Diensten van de Gegevens van het Experience Platform voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
+- Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als u al een CNAME voor Analytics hebt, zou u dat moeten gebruiken. Het testen in ontwikkeling werkt zonder een CNAME maar u hebt één nodig alvorens u aan productie gaat.
+- Mag Adobe Experience Platform gebruiken.  Als u geen Platform hebt gekocht, zal Adobe u van de Stichting van de Diensten van de Gegevens van het Experience Platform voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
 - Gebruik de nieuwste versie van de service Bezoeker-id.
 
 ## Een schema voorbereiden
@@ -25,7 +26,7 @@ Deze gids leidt u door de verschillende manieren aan opstelling het Web SDK van 
 De [!DNL Experience Platform Edge Network] gegevens worden als XDM gebruikt. XDM is een gegevensformaat dat u schema&#39;s laat bepalen. Het schema bepaalt hoe de gegevens [!DNL Edge Network] verwacht worden geformatteerd. Om gegevens te verzenden, moet u uw schema bepalen.
 
 - [Een schema maken](../../xdm/tutorials/create-schema-ui.md)
-- Voeg de Adobe Experience Platform- [!DNL Web SDK] mix toe aan het schema dat u hebt gemaakt
+- De Adobe Experience Platform- [!DNL Web SDK] mix toevoegen aan het gemaakte schema
 
 De volgende video is bedoeld om u in het creëren van een schema, dataset, en het stromen bronschakelaar voor uw [!DNL Web SDK] gegevens te steunen.
 
