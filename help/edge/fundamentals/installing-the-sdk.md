@@ -3,8 +3,9 @@ title: De SDK van Adobe Experience Platform Web installeren
 seo-title: Adobe Experience Platform Web SDK die de SDK installeert
 description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 seo-description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
+keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 0%
