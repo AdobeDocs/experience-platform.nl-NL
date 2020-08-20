@@ -3,8 +3,9 @@ title: Gebeurtenisgegevens samenvoegen
 seo-title: Adobe Experience Platform Web SDK-gebeurtenisgegevens samenvoegen
 description: Leer hoe te om de gebeurtenisgegevens van SDK van het Web van het Experience Platform samen te voegen
 seo-description: Leer hoe te om de gebeurtenisgegevens van SDK van het Web van het Experience Platform samen te voegen
+keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%
@@ -60,7 +61,7 @@ alloy("sendEvent", {
 
 Door dezelfde `eventMergeID` waarde aan beide gebeurtenisopdrachten in dit voorbeeld door te geven, worden de gegevens in de tweede gebeurtenisopdracht aangevuld met gegevens die eerder op de eerste gebeurtenisopdracht zijn verzonden. Er wordt een record voor elke gebeurtenisopdracht gemaakt in de [!DNL Experience Data Platform]map, maar tijdens de rapportage worden de records samengevoegd met de code `eventMergeID` en weergegeven als één gebeurtenis.
 
-Als u gegevens over een bepaalde gebeurtenis naar externe providers verzendt, kunt u dezelfde gegevens ook `eventMergeID` met die gegevens opnemen. Als u de gegevens van derden later in het Adobe Experience Platform wilt importeren, `eventMergeID` worden deze gebruikt om alle gegevens samen te voegen die zijn verzameld als gevolg van de specifieke gebeurtenis die op uw webpagina heeft plaatsgevonden.
+Als u gegevens over een bepaalde gebeurtenis naar externe providers verzendt, kunt u dezelfde gegevens ook `eventMergeID` met die gegevens opnemen. Als u de gegevens van derden later in de Adobe Experience Platform wilt importeren, `eventMergeID` worden deze gebruikt om alle gegevens samen te voegen die zijn verzameld als gevolg van de specifieke gebeurtenis die op uw webpagina heeft plaatsgevonden.
 
 ## Een `eventMergeID`
 
