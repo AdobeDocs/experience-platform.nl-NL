@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Bronnen weergeven
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 1%
@@ -31,7 +31,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | --- | --- |
 | `{CONTAINER_ID}` | De container waar de middelen worden gevestigd (&quot;globaal&quot;of &quot;huurder&quot;). |
 | `{RESOURCE_TYPE}` | Het type bron dat van de [!DNL Schema Library]bron moet worden opgehaald. Geldige typen zijn `classes`, `mixins`, `schemas`, `datatypes`en `descriptors`. |
-| `{QUERY_PARAMS`} | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [vraagparameters](#query) voor meer informatie. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [vraagparameters](#query) voor meer informatie. |
 
 **Verzoek**
 
