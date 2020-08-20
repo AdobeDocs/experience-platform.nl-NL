@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release Adobe Experience Platform
+title: Opmerkingen bij de release van Adobe Experience Platform
 description: Opmerkingen bij de release van Experience Platform 18 november 2019
 doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
-source-wordcount: '1884'
+source-wordcount: '1882'
 ht-degree: 1%
 
 ---
 
 
-# Opmerkingen bij de release Adobe Experience Platform
+# Opmerkingen bij de release van Adobe Experience Platform
 
 **Releasedatum: 18 november 2019**
 
@@ -30,7 +30,7 @@ Updates voor bestaande functies:
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Het Adobe Adobe Experience Platform Real-Time Customer Data Platform (Real-time CDP) is gebaseerd op  en helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren door op intelligente wijze te beslissen tijdens de reis van de klant. CDP in real time combineert veelvoudige bronnen van ondernemingsgegevens om verenigde profielen in real time tot stand te brengen die kunnen worden gebruikt om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
+Het Adobe Real-Time Customer Data Platform (Real-time CDP) is gebaseerd op Adobe Experience Platform en helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren door op intelligente wijze te beslissen tijdens de reis van de klant. CDP in real time combineert veelvoudige bronnen van ondernemingsgegevens om verenigde profielen in real time tot stand te brengen die kunnen worden gebruikt om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
 
 [!DNL Real-time Customer Data Platform] omvat hulpmiddelen voor gegevensbeheer, identiteitsbeheer, geavanceerde segmentatie en gegevenswetenschap zodat u profielen kunt maken en het publiek kunt definiëren, en rijke inzichten kunt afleiden terwijl u strikte beleidsregels voor gegevensbeheer kunt afdwingen.
 
@@ -53,7 +53,7 @@ Voor meer informatie, zie de [Adobe Real-time documentatie](../../rtcdp/overview
 | Metrisch dashboard voor startpagina | De Adobe Echte de homepage van de Gegevens van de Klant van de tijd van de Platform (CDP in real time) omvat een metriek dashboard dat informatie over profielen en segmenten toont. De homepage bevat ook koppelingen naar leermaterialen. Zie de sectie over de [gegevens van het Platform](#real-time-customer-data-platform-metrics) van de Klant in real time hieronder. |
 | Bronnen | U kunt gegevens van een verscheidenheid van bronnen zoals de Oplossingen van Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw CRM opnemen. Zie de sectie [Bronnen](#sources) hieronder voor meer informatie. |
 
-**[!DNL Real-time Customer Data Platform]cijfers **
+**[!DNL Real-time Customer Data Platform]cijfers**
 
 De Adobe Echte de homepage van Gegevens van de Klant - tijdGegevens (CDP in real time), die een metriek dashboard omvat, verschijnt wanneer u login aan CDP in real time.
 
@@ -72,8 +72,8 @@ Meer leren, zie het [Realtime overzicht van de Metriek van het Platform van Gege
 Met de versie van November, steunt het Adobe Real-time Platform van de Gegevens van de Klant de volgende bestemmingen:
 
 * Advertising: [!DNL Google]
-* E-mailmarketing: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua
-   ]
+* E-mailmarketing: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
+
 Zie de [bestemmingscatalogus](../../rtcdp/destinations/destinations-catalog.md) voor informatie over elk van de bestemmingen.
 
 **Bekende beperkingen**
@@ -85,7 +85,7 @@ Zie de [bestemmingscatalogus](../../rtcdp/destinations/destinations-catalog.md) 
 
 ## Bronnen {#sources}
 
-Het Adobe Experience Platform kan gegevens uit externe bronnen opnemen terwijl het toestaan van u om die gegevens te structureren, te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten. U kunt gegevens van een verscheidenheid van bronnen zoals de Oplossingen van Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Platform] services. U kunt gegevens van een verscheidenheid van bronnen zoals de Oplossingen van Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
 
 [!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om aan uw opslagsystemen en de diensten van CRM voor authentiek te verklaren, tijden voor inname looppas te plaatsen, en gegevensinvoer te beheren.
 
@@ -105,7 +105,7 @@ Voor meer informatie over bronnen, zie [Bronoverzicht](../../sources/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] stelt gegevenswetenschappers in staat om naadloos inzichten van gegevens en inhoud over Adobe- toepassingen en derdesystemen te produceren door de Modellen van het Leren van de Machine te bouwen en in werking te stellen. [!DNL Data Science Workspace] is nauw geïntegreerd met de levenscyclus van de end-to-end gegevenswetenschap, inclusief de exploratie en voorbereiding van XDM-gegevens, gevolgd door de ontwikkeling en de exploitatie van Modellen om automatisch te verrijken [!DNL Platform] [!DNL Real-time Customer Profile] met Inzichten voor het leren van machines.
+Adobe Experience Platform [!DNL Data Science Workspace] stelt gegevenswetenschappers in staat naadloos inzichten te genereren op basis van gegevens en inhoud in Adobe-toepassingen en systemen van derden door Modellen voor machinaal leren te maken en te gebruiken. [!DNL Data Science Workspace] is nauw geïntegreerd met de levenscyclus van de end-to-end gegevenswetenschap, inclusief de exploratie en voorbereiding van XDM-gegevens, gevolgd door de ontwikkeling en de exploitatie van Modellen om automatisch te verrijken [!DNL Platform] [!DNL Real-time Customer Profile] met Inzichten voor het leren van machines.
 
 **Nieuwe functies**
 
@@ -141,7 +141,7 @@ Meer informatie over het werken met XDM die API en [!DNL Schema Registry] gebrui
 
 ## [!DNL Real-time Customer Profile] {#profile}
 
-Met Adobe Experience Platform kunt u uw klanten een gecoördineerde, consistente en relevante ervaring bieden, ongeacht waar of wanneer ze met uw merk communiceren. Met [!DNL Real-time Customer Profile], kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. [!DNL Profile] staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
+Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met [!DNL Real-time Customer Profile], kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. [!DNL Profile] staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
 
 | Functie | Beschrijving |
 | -----------| ---------- |
@@ -163,7 +163,7 @@ Lees voor meer informatie over [!DNL Real-time Customer Profile], waaronder zelf
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform [!DNL Segmentation Service] verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal gevormd en gehandhaafd [!DNL Platform], die hen gemakkelijk toegankelijk door om het even welke toepassing van de Adobe maken.
+Adobe Experience Platform [!DNL Segmentation Service] biedt een gebruikersinterface en RESTful-API waarmee u segmenten kunt samenstellen en doelgroepen kunt genereren op basis van uw [!DNL Real-time Customer Profile] gegevens. Deze segmenten worden centraal gevormd en gehandhaafd [!DNL Platform], die hen gemakkelijk toegankelijk door om het even welke toepassing van de Adobe maken.
 
 [!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
 
