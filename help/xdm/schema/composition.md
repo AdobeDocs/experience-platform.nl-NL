@@ -5,7 +5,7 @@ title: Basisbeginselen van de schemacompositie
 topic: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 23a69653ee773562cb0261b8e0bb67411eb4856e
 workflow-type: tm+mt
 source-wordcount: '2811'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Velden die algemeen als &quot;[!UICONTROL Identiteit]&quot;worden gemerkt omvatt
 
 Het is belangrijk om over klantenidentiteiten tijdens de schema planningsfase te denken helpen ervoor zorgen de gegevens worden samengebracht om het meest robuuste profiel mogelijk te bouwen. Zie het overzicht over [Adobe Experience Platform Identity Service](../../identity-service/home.md) voor meer informatie over hoe identiteitsgegevens u kunnen helpen uw klanten digitale ervaringen te bieden.
 
-#### xdm:identityMap
+#### xdm:identityMap {#identityMap}
 
 `xdm:identityMap` is een map-type gebied dat de diverse identiteitswaarden voor een individu, samen met hun bijbehorende namespaces beschrijft. Dit gebied kan worden gebruikt om identiteitsinformatie voor uw schema&#39;s te verstrekken, in plaats van het bepalen van identiteitswaarden binnen de structuur van het schema zelf.
 
@@ -244,4 +244,4 @@ Het [!DNL Schema Registry] wordt gebruikt om toegang te krijgen tot het [!DNL Sc
 
 Als u wilt beginnen met het samenstellen van een schema met behulp van de UI, volgt u de zelfstudie [van de](../tutorials/create-schema-ui.md) Schema-editor om het schema &quot;Loyalty-leden&quot; te bouwen dat in dit document wordt vermeld.
 
-Als u de [!DNL Schema Registry] API wilt gaan gebruiken, begint u met het lezen van de ontwikkelaarsgids [van de](../api/getting-started.md)Schemaregister-API. Na het lezen van de ontwikkelaarsgids, volg de stappen die in het leerprogramma worden geschetst over het [creëren van een schema gebruikend de Registratie API](../tutorials/create-schema-api.md)van het Schema.
+Als u de [!DNL Schema Registry] API wilt gaan gebruiken, begint u met het lezen van de ontwikkelaarsgids [van de](../api/getting-started.md)schemaregistratie-API. Na het lezen van de ontwikkelaarsgids, volg de stappen die in het leerprogramma worden geschetst over het [creëren van een schema gebruikend de Registratie API](../tutorials/create-schema-api.md)van het Schema.
