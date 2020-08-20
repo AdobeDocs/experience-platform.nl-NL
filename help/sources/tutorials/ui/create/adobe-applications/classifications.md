@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Een Adobe Analytics Classifications Data-connector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: abb15e3daac4aebd46012822c790b056d0b3d2c1
+source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '624'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Deze zelfstudie bevat stappen voor het maken van een Adobe Analytics Classificat
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model] (XDM) Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
 * [[!DNL Real-time klantprofiel]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL-sandboxen]](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
@@ -57,7 +57,7 @@ Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Voltooien]*
 
 ![](../../../../images/tutorials/create/classifications/review.png)
 
-## Gegevens over classificaties bijhouden en verwijderen
+## Uw classificatiegegevens controleren
 
 Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen. Selecteer in het scherm **[!UICONTROL Catalogus]** de optie **[!UICONTROL Dataflows]** om een lijst weer te geven met bestaande stromen die aan uw [!DNL Classifications] account zijn gekoppeld.
 
@@ -69,13 +69,13 @@ Selecteer de **[!UICONTROL gegevensset]** van het Doel waartoe u toegang wilt he
 
 ![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
 
-De **[!UICONTROL de activiteitenpagina]** van de Dataset toont informatie over de doeldataset u selecteerde, met inbegrip van details over zijn partijstatus, dataset identiteitskaart, en schema. Selecteer Gegevensset **** verwijderen om te verwijderen.
+De **[!UICONTROL de activiteitenpagina]** van de Dataset toont informatie over de doeldataset u selecteerde, met inbegrip van details over zijn partijstatus, dataset identiteitskaart, en schema.
 
-![](../../../../images/tutorials/create/classifications/batch-screen.png)
+>[!IMPORTANT]
+>Terwijl het schrappen van datasets voor andere bronschakelaars mogelijk is, wordt het momenteel niet gesteund voor de schakelaar van Gegevens van de Classificaties van Analytics. Neem contact op met de klantenservice van Adobe als u per ongeluk een gegevensset verwijdert.
 
-Er wordt een dialoogvenster weergegeven waarin de verwijdering wordt bevestigd. Selecteer **[!UICONTROL Verwijderen]** om te voltooien.
+![](../../../../images/tutorials/create/classifications/dataset.png)
 
-![](../../../../images/tutorials/create/classifications/delete-confirm.png)
 
 ## Volgende stappen
 
