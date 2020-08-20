@@ -1,10 +1,11 @@
 ---
 title: Flicker beheren voor persoonlijke ervaringen
-seo-title: Adobe Experience Platform Web SDK beheren flikkering
+seo-title: Adobe Experience Platform Web SDK, flikkering beheren
 description: Leer hoe u flikkering kunt beheren op ervaringen van gebruikers
 seo-description: Leer hoe te om flikkering met de eigenschappen van SDK van het Web van het Experience Platform te beheren
+keywords: target;flicker;prehidingStyle;asynchronously;asynchronous;
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
