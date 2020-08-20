@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform Batch-ontwikkelaarshandleiding
+title: Handleiding voor ontwikkelaars van Adobe Experience Platform Batch-insluiting
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 3eaef72de2999fc088b92562c08a896d1cb08e55
 workflow-type: tm+mt
-source-wordcount: '2552'
+source-wordcount: '2670'
 ht-degree: 3%
 
 ---
@@ -24,11 +24,11 @@ Gegevensinvoer biedt een RESTful-API waarmee u standaard CRUD-bewerkingen kunt u
 
 De volgende secties verstrekken extra informatie die u zult moeten kennen of hebben naast elkaar om met succes vraag aan de Ingestie API van de Partij te maken.
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [Inname](./overview.md)in batch: Hiermee kunt u gegevens als batchbestanden in het Adobe Experience Platform invoeren.
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
-- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [Inname](./overview.md)in batch: Hiermee kunt u gegevens als batchbestanden in Adobe Experience Platform invoeren.
+- [[!DNL Experience Data Model] (XDM) Systeem](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+- [[!DNL-sandboxen]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -38,22 +38,19 @@ Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken t
 
 Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
-- Autorisatie: Drager `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
 >Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
 
-Verzoeken die een payload (POST, PUT, PATCH) bevatten, vereisen mogelijk een extra `Content-Type` header. De toegelaten waarden specifiek voor elke vraag worden verstrekt in de vraagparameters. In deze handleiding worden de volgende inhoudstypen gebruikt:
-
-- Inhoudstype: application/json
-- Inhoudstype: application/octet-stream
+Verzoeken die een payload (POST, PUT, PATCH) bevatten, vereisen mogelijk een extra `Content-Type` header. De toegelaten waarden specifiek voor elke vraag worden verstrekt in de vraagparameters.
 
 ## Typen
 
@@ -65,9 +62,9 @@ JSON en CSV hebben bijvoorbeeld geen datum- of datum-tijdtype. Dientengevolge, w
 
 In de onderstaande tabel worden de conversies weergegeven die worden ondersteund bij het invoeren van gegevens.
 
-| Binnenkomend (rij) vs. Target (kolom) | String | Byte | Kort | Geheel | Lang | Dubbel | Datum | Datum/tijd | Object | Kaart |
+| Binnenkomend (rij) vs. Doel (kolom) | Tekenreeks | Byte | Kort | Geheel | Lang | Dubbel | Datum | Datum/tijd | Object | Kaart |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| String | X | X | X | X | X | X | X | X |  |  |
+| Tekenreeks | X | X | X | X | X | X | X | X |  |  |
 | Byte | X | X | X | X | X | X |  |  |  |  |
 | Kort | X | X | X | X | X | X |  |  |  |  |
 | Geheel | X | X | X | X | X | X |  |  |  |  |
@@ -176,7 +173,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de batch waarnaar u wilt uploaden. |
 | `{DATASET_ID}` | De id van de referentiegegevensset van de batch. |
-| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. |
+| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Dit bestandspad is de locatie waar het bestand wordt opgeslagen op de zijde Adobe. |
 
 **Verzoek**
 
@@ -196,7 +193,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, bijvoorbeeld `Users/sample-user/Downloads/sample.json`. |
 
 **Antwoord**
 
@@ -311,7 +308,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de batch waarnaar u wilt uploaden. |
 | `{DATASET_ID}` | De id van de referentiegegevensset van de batch. |
-| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. |
+| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Dit bestandspad is de locatie waar het bestand wordt opgeslagen op de zijde Adobe. |
 
 **Verzoek**
 
@@ -331,7 +328,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, bijvoorbeeld `Users/sample-user/Downloads/sample.json`. |
 
 **Antwoord**
 
@@ -484,7 +481,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de batch waarnaar u wilt uploaden. |
 | `{DATASET_ID}` | De id van de referentiegegevensset van de batch. |
-| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. |
+| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Dit bestandspad is de locatie waar het bestand wordt opgeslagen op de zijde Adobe. |
 
 **Verzoek**
 
@@ -506,7 +503,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | In gehele getallen, het begin en het eind van de gevraagde waaier. |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, bijvoorbeeld `Users/sample-user/Downloads/sample.json`. |
 
 
 **Antwoord**
@@ -734,7 +731,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de batch waarnaar u wilt uploaden. |
 | `{DATASET_ID}` | De id van de referentiegegevensset van de batch. |
-| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. |
+| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Dit bestandspad is de locatie waar het bestand wordt opgeslagen op de zijde Adobe. |
 
 **Verzoek**
 
@@ -754,7 +751,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, bijvoorbeeld `Users/sample-user/Downloads/sample.json`. |
 
 
 **Antwoord**
@@ -941,7 +938,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | De id van de batch waarnaar u wilt uploaden. |
 | `{DATASET_ID}` | De id van de referentiegegevensset van de batch. |
-| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. |
+| `{FILE_NAME}` | De naam van het bestand dat u wilt uploaden. Dit bestandspad is de locatie waar het bestand wordt opgeslagen op de zijde Adobe. |
 
 **Verzoek**
 
@@ -961,7 +958,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. |
+| `{FILE_PATH_AND_NAME}` | Het volledige pad en de naam van het bestand dat u wilt uploaden. Dit bestandspad is het lokale bestandspad, bijvoorbeeld `Users/sample-user/Downloads/sample.json`. |
 
 **Antwoord**
 
