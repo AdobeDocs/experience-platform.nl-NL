@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Gebruikershandleiding voor beleid samenvoegen
 topic: guide
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 98be95e0a6e0661dcddf2db1cf6993b643d4df2b
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -30,19 +30,19 @@ Deze gids vereist een goed begrip van de verschillende [!DNL Experience Platform
 
 ## Samenvoegbeleid weergeven
 
-Binnen het [!DNL Experience Platform] gebruikersinterface, kunt u beginnen met het samenvoegen beleid te werken en een lijst van het bestaande de fusiebeleid van uw organisatie te zien door **[!UICONTROL Profiel]** in het linkerspoor te klikken en dan het beleid **[!UICONTROL van de]** Fusie te selecteren tabel.
+Binnen het [!DNL Experience Platform] gebruikersinterface, kunt u beginnen met het samenvoegen beleid te werken en een lijst van het bestaande de fusiebeleid van uw organisatie te zien door **[!UICONTROL Profielen]** in het linkerspoor te selecteren en dan het beleid **[!UICONTROL van de]** Fusie te selecteren tabel.
 
 ![Landingspagina van beleid samenvoegen](../images/merge-policies/landing.png)
 
-De details voor elk samenvoegbeleid beschikbaar aan uw organisatie zijn zichtbaar op de het landen pagina, met inbegrip van de Naam *[!UICONTROL van het]* Beleid, het Beleid *[!UICONTROL van de]* StandaardFusie, en *[!UICONTROL Schema]*.
+De details voor elk samenvoegbeleid beschikbaar aan uw organisatie zijn zichtbaar op de het landen pagina, met inbegrip van de Naam [!UICONTROL van het]Beleid, het [!UICONTROL Standaard fusiebeleid], en het [!UICONTROL Schema].
 
-Als u wilt selecteren welke details zichtbaar zijn of extra kolommen wilt toevoegen aan de weergave, selecteert u het pictogram voor kolomkiezer aan de rechterkant en klikt u op de kolomnaam om deze toe te voegen aan of te verwijderen uit de weergave.
+Als u wilt selecteren welke details zichtbaar zijn of extra kolommen wilt toevoegen aan de weergave, selecteert u het pictogram van de kolomkiezer en klikt u op de kolomnaam om deze toe te voegen aan of te verwijderen uit de weergave.
 
 ![](../images/merge-policies/adjust-view.png)
 
 ## Samenvoegbeleid maken
 
-Als u een nieuw samenvoegbeleid wilt maken, klikt u op **[!UICONTROL Samenvoegbeleid]** maken rechtsboven op het tabblad **[!UICONTROL Samenvoegingsbeleid]** .
+Als u een nieuw samenvoegbeleid wilt maken, selecteert u **[!UICONTROL Samenvoegbeleid]** maken.
 
 ![Landingspagina van beleid samenvoegen](../images/merge-policies/create-new.png)
 
@@ -55,30 +55,56 @@ Het scherm **[!UICONTROL Samenvoegbeleid]** maken wordt weergegeven, zodat u bel
 * **[!UICONTROL ID stitching]**: In dit veld wordt gedefinieerd hoe de verwante identiteiten van een klant worden bepaald. Er zijn twee mogelijke waarden:
    * **[!UICONTROL Geen]**: Geen identiteitsstitching uitvoeren.
    * **[!UICONTROL Privégrafiek]**: Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek.
-* **[!UICONTROL Kenmerk samenvoegen]**: Een profielfragment is de profielinformatie voor slechts één identiteit uit de lijst van identiteiten die voor een individuele klant bestaan. Wanneer het gebruikte type van identiteitsgrafiek in meer dan één identiteit resulteert, is er de mogelijkheid voor het in conflict brengen van de waarden van het profielbezit en de prioriteit moet worden gespecificeerd. Door *kenmerksamenvoeging* te gebruiken, kunt u opgeven welke waarden voor het gegevenssetprofiel moeten worden prioriteerd als er een samenvoegconflict optreedt. Er zijn twee mogelijke waarden:
-   * **[!UICONTROL Tijdstempel geordend]**: Geef in geval van een conflict prioriteit aan het profiel dat het laatst is bijgewerkt.
+* **[!UICONTROL Kenmerk samenvoegen]**: Een profielfragment is de profielinformatie voor slechts één identiteit uit de lijst van identiteiten die voor een individuele klant bestaan. Wanneer het gebruikte grafiektype van de identiteit in meer dan één identiteit resulteert, is er de mogelijkheid voor conflicterende profielattributen en de prioriteit moet worden gespecificeerd. Door [!UICONTROL kenmerksamenvoeging] te gebruiken, kunt u opgeven welke waarden voor het gegevenssetprofiel moeten worden prioriteerd als er een samenvoegconflict optreedt tussen gegevenssets van het type Key Value (recordgegevens). Er zijn twee mogelijke waarden:
+   * **[!UICONTROL Tijdstempel geordend]**: Geef in geval van een conflict prioriteit aan het profiel dat het laatst is bijgewerkt. [!UICONTROL Tijdstempel dat is geordend] , ondersteunt ook aangepaste tijdstempels die voorrang hebben op systeemtijdstempels bij het samenvoegen van gegevens binnen dezelfde gegevensset (meerdere identiteiten) of over gegevenssets heen. Zie de [sectie met geordende](#timestamp-ordered) tijdstempels voor meer informatie.
    * **[!UICONTROL Prioriteit]** gegevensset: Geef voorrang aan profielfragmenten die op de dataset worden gebaseerd waaruit zij kwamen. Wanneer het selecteren van deze optie, moet u de verwante datasets en hun orde van prioriteit selecteren. Zie de details over [datasetbelangrijkheid](#dataset-precedence) hieronder voor meer informatie.
 * **[!UICONTROL Standaardsamenvoegbeleid]**: Een schakelknop waarmee u kunt bepalen of dit samenvoegbeleid al dan niet de standaardinstelling voor uw organisatie is. Als de kiezer wordt ingeschakeld en het nieuwe beleid wordt opgeslagen, wordt het vorige standaardbeleid automatisch bijgewerkt zodat het niet langer de standaardbeleid is.
 
+### Tijdstempel geordend {#timestamp-ordered}
+
+Aangezien de verslagen van het Profiel in Experience Platform worden opgenomen, wordt een systeemtimestamp verkregen op het tijdstip van opneming en toegevoegd aan het verslag. Wanneer [!UICONTROL Tijdstempel geordend] is geselecteerd als het samenvoegtype [!UICONTROL voor] kenmerken voor een samenvoegbeleid, worden profielen samengevoegd op basis van de tijdstempel van het systeem. Met andere woorden, het samenvoegen wordt uitgevoerd op basis van de tijdstempel voor het tijdstip waarop de record in het Platform is opgenomen.
+
+Er kunnen soms gebruiksgevallen zijn, zoals het terugvullen van gegevens of het verzekeren van de correcte orde van gebeurtenissen als de verslagen uit orde worden opgenomen, waar het noodzakelijk is om een douantimestamp te leveren en het fusiebeleid te hebben de douane timestamp eerder dan de systeemtimestamp respecteren.
+
+>[!NOTE]
+>
+>Dit vermogen is slechts beschikbaar voor opname over datasets. Als de verslagen gebruikend de zelfde dataset worden opgenomen, komt het standaardvervangingsgedrag voor.
+
+### Aangepaste tijdstempels gebruiken {#custom-timestamps}
+
+Als u een aangepaste tijdstempel wilt gebruiken, moet u de [!UICONTROL External Source System Audit Details Mixin] toevoegen aan uw profielschema. Nadat u de aangepaste tijdstempel hebt toegevoegd, kunt u deze in het `lastUpdatedDate` veld vullen.
+
+Wanneer een verslag met het bevolkte `lastUpdatedDate` gebied wordt opgenomen, zal het Experience Platform dat gebied gebruiken om verslagen over datasets samen te voegen. Als `lastUpdatedDate` het Platform niet aanwezig of niet gevuld is, blijft het de tijdstempel van het systeem gebruiken.
+
+>[!NOTE]
+>
+>U moet ervoor zorgen dat de `lastUpdatedDate` tijdstempel wordt gevuld wanneer u een update in dezelfde record opneemt.
+
+In de volgende schermafbeelding worden de velden weergegeven in de [!UICONTROL External Source System Audit Details Mixin]. Voor geleidelijke instructies bij het werken met schema&#39;s die UI gebruiken, met inbegrip van hoe te om mengsels aan schema&#39;s toe te voegen, gelieve te bezoeken [leerprogramma voor het creëren van een schema gebruikend UI](../../xdm/tutorials/create-schema-ui.md).
+
+![](../images/merge-policies/custom-timestamp-mixin.png)
+
+Als u met aangepaste tijdstempels wilt werken met de API, raadpleegt u de bijlage bij de eindgebruikershandleiding [voor](../api/merge-policies.md) samenvoegbeleid en vervolgens de sectie over het [gebruik van aangepaste tijdstempels](../api/merge-policies.md#custom-timestamps).
+
 ### Dataset-prioriteit {#dataset-precedence}
 
-Wanneer het selecteren van een waarde van de samenvoeging *[!UICONTROL van]* Attributen, kunt u de voorkeur *[!UICONTROL van de]* Dataset selecteren die u toestaat om prioriteit aan profielfragmenten te geven die op de dataset worden gebaseerd waaruit zij kwamen.
+Wanneer het selecteren van een waarde van de samenvoeging [!UICONTROL van] Attributen, kunt u de voorkeur [!UICONTROL van de] Dataset selecteren die u toestaat om prioriteit aan profielfragmenten te geven die op de dataset worden gebaseerd waaruit zij kwamen.
 
 Een geval van het voorbeeldgebruik zou zijn als uw organisatie informatie aanwezig in één dataset had die over gegevens in een andere dataset voorkeur of vertrouwd is.
 
-Wanneer het selecteren van de belangrijkheid *[!UICONTROL van de]* Dataset, opent een afzonderlijk paneel dat u van *[!UICONTROL Beschikbare datasets]* vereist (of gebruik checkbox om allen te selecteren) welke datasets zullen worden omvat. U kunt die datasets dan slepen en neerzetten in het *[!UICONTROL Geselecteerde paneel van Datasets]* en hen slepen in de correcte orde van prioriteit. De hoogste dataset zal hoogste prioriteit worden gegeven, dan zal tweede dataset tweede-hoogste zijn, etc.
+Wanneer het selecteren van de belangrijkheid [!UICONTROL van de]Dataset, opent een afzonderlijk paneel dat u van [!UICONTROL Beschikbare datasets] vereist (of gebruik checkbox om allen te selecteren) welke datasets zullen worden omvat. U kunt die datasets dan slepen en neerzetten in het [!UICONTROL Geselecteerde paneel van Datasets] en hen slepen in de correcte orde van prioriteit. De hoogste dataset zal hoogste prioriteit worden gegeven, dan zal tweede dataset tweede-hoogste zijn, etc.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
-Als u klaar bent met het maken van het samenvoegbeleid, klikt u op **[!UICONTROL Opslaan]** om terug te keren naar het tabblad *[!UICONTROL Samenvoegingsbeleid]* waar het nieuwe samenvoegbeleid nu wordt weergegeven in de lijst met beleidsregels.
+Als u klaar bent met het maken van het samenvoegbeleid, selecteert u **[!UICONTROL Opslaan]** om terug te keren naar het tabblad [!UICONTROL Samenvoegingsbeleid] waar het nieuwe samenvoegbeleid nu wordt weergegeven in de lijst met beleidsregels.
 
 ## Een samenvoegingsbeleid bewerken
 
-U kunt een bestaand samenvoegbeleid wijzigen via het tabblad *[!UICONTROL Samenvoegen van beleidsregels]* door op de *[!UICONTROL Beleidsnaam]* te klikken voor het samenvoegbeleid dat u wilt bewerken.
+U kunt een bestaand samenvoegbeleid wijzigen via het tabblad [!UICONTROL Samenvoegen van beleidsregels] door op de [!UICONTROL beleidsnaam]* te klikken voor het samenvoegbeleid dat u wilt bewerken.
 
 ![Landingspagina van beleid samenvoegen](../images/merge-policies/select-edit.png)
 
-Wanneer het *[!UICONTROL Edit scherm van het Samenvoegingsbeleid]* verschijnt, kunt u veranderingen in de *[!UICONTROL Naam]*, het *[!UICONTROL Schema]*, het *[!UICONTROL identiteitskaart stitching]* type, en de samenvoegingstype *[!UICONTROL van]* ** Attributen aanbrengen, evenals selecteren of dit beleid al dan niet het Default samenvoegbeleid voor uw organisatie zal zijn.
+Wanneer het [!UICONTROL Edit scherm van het Samenvoegingsbeleid] verschijnt, kunt u veranderingen in de [!UICONTROL Naam], het [!UICONTROL Schema], het [!UICONTROL identiteitskaart stitching] type, en de samenvoegingstype [!UICONTROL van]  Attributen aanbrengen, evenals selecteren of dit beleid al dan niet het Default samenvoegbeleid voor uw organisatie zal zijn.
 
 >[!NOTE]
 >
@@ -86,15 +112,15 @@ Wanneer het *[!UICONTROL Edit scherm van het Samenvoegingsbeleid]* verschijnt, k
 
 ![](../images/merge-policies/edit-screen.png)
 
-Nadat u de benodigde wijzigingen hebt aangebracht, klikt u op **[!UICONTROL Opslaan]** om terug te keren naar het tabblad *[!UICONTROL Samenvoegingsbeleid]* waar de bijgewerkte informatie over het samenvoegingsbeleid nu wordt weergegeven.
+Nadat u de benodigde wijzigingen hebt aangebracht, selecteert u **[!UICONTROL Opslaan]** om terug te keren naar het tabblad [!UICONTROL Samenvoegen van beleidsregels] , waar de bijgewerkte informatie over het samenvoegbeleid nu wordt weergegeven.
 
 ![](../images/merge-policies/edited.png)
 
 ## Schendingen van het beleid inzake gegevensbeheer
 
-Wanneer het creëren van of het bijwerken van een samenvoegbeleid, wordt een controle uitgevoerd om te bepalen als het fusiebeleid om het even welk beleid van het gegevensgebruik schendt dat door uw organisatie wordt bepaald. Het beleid voor gegevensgebruik maakt deel uit van Adobe Experience Platform [!DNL Data Governance] en is een regel die het soort marketingacties beschrijft dat u op specifieke [!DNL Platform] gegevens mag uitvoeren of waarvan u een beperking hebt. Bijvoorbeeld, als een fusiebeleid werd gebruikt om een segment tot stand te brengen dat aan een derdebestemming activeerde, en uw organisatie een beleid van het gegevensgebruik had dat de uitvoer van specifieke gegevens naar derden verhindert, zou u een bericht &quot;van de het beleidsschending van Gegevens ontdekt&quot;wanneer het proberen om uw fusiebeleid te bewaren.
+Wanneer het creëren van of het bijwerken van een samenvoegbeleid, wordt een controle uitgevoerd om te bepalen als het fusiebeleid om het even welk beleid van het gegevensgebruik schendt dat door uw organisatie wordt bepaald. Het beleid voor gegevensgebruik maakt deel uit van Adobe Experience Platform [!DNL Data Governance] en is een regel die het soort marketingacties beschrijft dat u op specifieke [!DNL Platform] gegevens mag uitvoeren of waarvan u een beperking hebt. Bijvoorbeeld, als een fusiebeleid werd gebruikt om een segment tot stand te brengen dat aan een derdebestemming activeerde, en uw organisatie een beleid van het gegevensgebruik had dat de uitvoer van specifieke gegevens naar derden verhindert, zou u een &quot;[!UICONTROL Gegevens behoorlijk ontdekte]&quot;bericht ontvangen wanneer het proberen om uw fusiebeleid te bewaren.
 
-Deze melding bevat een lijst met beleidsregels voor gegevensgebruik die zijn overtreden. U kunt de details van de schending bekijken door een beleid in de lijst te selecteren. Als u een overtreden beleid selecteert, biedt het tabblad *Gegevenskoppeling* de *reden voor schending* en de betreffende *activering*, elk met meer details over de manier waarop het beleid voor gegevensgebruik is overtreden.
+Deze melding bevat een lijst met beleidsregels voor gegevensgebruik die zijn overtreden. U kunt de details van de schending bekijken door een beleid in de lijst te selecteren. Als u een overtreden beleid selecteert, biedt het tabblad [!UICONTROL Gegevenskoppeling] de reden voor de schending en de [!UICONTROL betreffende activering]. Elk tabblad geeft u meer details over de manier waarop het beleid voor gegevensgebruik is overtreden.
 
 Als u meer wilt weten over de manier waarop gegevensbeheer in Adobe Experience Platform wordt uitgevoerd, leest u eerst het overzicht [van](../../data-governance/home.md)gegevensbeheer.
 
