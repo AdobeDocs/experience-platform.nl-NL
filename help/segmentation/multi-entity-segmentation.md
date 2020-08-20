@@ -5,7 +5,7 @@ title: Segmentatie van meerdere entiteiten
 topic: overview
 description: De segmentatie van meerdere entiteiten is de capaciteit om de gegevens van het Profiel met extra gegevens uit te breiden die op producten, opslag, of andere niet-profielklassen worden gebaseerd. Zodra verbonden, worden de gegevens van extra klassen beschikbaar alsof zij aan het schema van het Profiel inheems waren.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 De segmentatie van meerdere entiteiten is de capaciteit om [!DNL Profile] gegevens met extra gegevens uit te breiden die op producten, opslag, of andere niet-profielklassen worden gebaseerd. Zodra verbonden, worden de gegevens van extra klassen beschikbaar alsof zij aan het [!DNL Profile] schema inheems waren.
 
-Als u meer wilt weten over segmentatie tussen meerdere entiteiten, blijft u de documentatie lezen en kunt u deze leren aanvullen door de onderstaande video te bekijken of het [segmentatieoverzicht](./home.md)te verkennen.]
+Als u meer wilt weten over segmentatie tussen meerdere entiteiten, blijft u de documentatie lezen en kunt u deze leren door de onderstaande video te bekijken of het [segmentatieoverzicht](./home.md)te verkennen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
