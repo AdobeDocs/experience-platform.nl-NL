@@ -3,8 +3,9 @@ title: Opdrachten uitvoeren
 seo-title: Opdrachten van Adobe Experience Platform Web SDK uitvoeren
 description: Leer hoe te om de bevelen van SDK van het Web van het Experience Platform uit te voeren
 seo-description: Leer hoe te om de bevelen van SDK van het Web van het Experience Platform uit te voeren
+keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
 translation-type: tm+mt
-source-git-commit: bf4194e1449bddd662f2152f84dbbe90060b5d30
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%
