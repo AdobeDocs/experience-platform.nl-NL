@@ -1,10 +1,11 @@
 ---
-title: Variabelen automatisch toegewezen in Analytics
-seo-title: Variabelen automatisch toegewezen in Analytics met Web SDK van Adobe Experience Platform
-description: Leer welke Variabelen automatisch in Analytics met het Web SDK van het Experience Platform worden toegewezen
-seo-description: Leer welke Variabelen automatisch in Analytics met het Web SDK van het Experience Platform worden toegewezen
+title: Variabelen worden automatisch toegewezen in Analytics
+seo-title: Variabelen worden automatisch toegewezen in Analyses met Adobe Experience Platform Web SDK
+description: Leer welke Variabelen automatisch in Analyses met het Web SDK van het Experience Platform worden toegewezen
+seo-description: Leer welke Variabelen automatisch in Analyses met het Web SDK van het Experience Platform worden toegewezen
+keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 0%
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Variabelen automatisch toegewezen in [!DNL Analytics]
 
-Hieronder ziet u een lijst met variabelen die het Adobe Experience Platform [!DNL Edge Network] automatisch opneemt [!DNL Analytics].
+Hieronder ziet u een lijst met variabelen die de Adobe Experience Platform [!DNL Edge Network] automatisch in kaart brengt [!DNL Analytics].
 
 | XDM-veldpad | [!DNL Analytics Query String] / HTTP-koptekst | Beschrijving |
 | ---------- | ------------------------- | -------- |
