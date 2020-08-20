@@ -3,10 +3,11 @@ title: Producten
 seo-title: Producten met Adobe Experience Platform Web SDK ondersteunen
 description: Leer hoe te om gegevens toe te voegen als u producten of een het winkelwagentje met het Web SDK van het Experience Platform hebt
 seo-description: Leer hoe te om gegevens toe te voegen als u producten of een het winkelwagentje met het Web SDK van het Experience Platform hebt
+keywords: products;commerce;measures;measure;order;cartAbandons;checkouts;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;purchases;saveForLaters;currencyCode;payments;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1312'
 ht-degree: 1%
 
 ---
@@ -18,8 +19,7 @@ Als u producten op uw site hebt, is dit een standaardset van dingen die u wilt v
 
 Dit document gebruikt de [mix ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) . Het `commerce` mengsel wordt in twee delen verdeeld: het `commerce` object en de `productListItems` array. Met het `commerce` object kunt u aangeven welke handelingen met de `productListItems` array worden uitgevoerd.
 
->[!Tip]
->
+>[!TIP]
 >
 >Als u bekend bent met Adobe Analytics, heeft The het `commerce` meest te maken met de `events` variabele. Het `productListItems` hangt meer samen met de `products` variabele.
 
@@ -27,7 +27,7 @@ Dit document gebruikt de [mix ExperienceEvent Commerce Details](https://github.c
 
 Hieronder ziet u een lijst met `measures` beschikbare gegevens in het `commerce` object.
 
->[!Tip]
+>[!TIP]
 >
 >Een maatregel heeft twee velden: `id` en `value`. Meestal zult u alleen het `value` veld gebruiken (bijvoorbeeld `'value':1`). In het `id` veld kunt u een unieke id instellen waarmee u kunt bijhouden wanneer de maatregel is verzonden. Zie de documentatie XDM voor [Maatregel](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
