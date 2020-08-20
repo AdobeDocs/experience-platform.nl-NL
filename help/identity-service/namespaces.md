@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: 'Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name<span>@email.com" als e-mailadres of "443522" als een numerieke CRM-id. '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 235f611115b89a87c924a00409a6acae4f5ac97d
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 1%
@@ -49,7 +49,7 @@ De volgende identiteitstypen zijn beschikbaar binnen [!DNL Platform]:
 | Niet-personen | Wordt gebruikt voor het opslaan van id&#39;s die naamruimten nodig hebben, maar die niet zijn gekoppeld aan een personencluster. Deze id&#39;s worden vervolgens gefilterd uit de identiteitsgrafiek. Mogelijke gebruiksgevallen zijn onder meer gegevens over producten, organisaties, winkels, enz. (Bijvoorbeeld een product-SKU.) |
 | Telefoon | Tot dit type identiteiten behoren PII. Dit is een aanwijzing om de waarde gevoelig [!DNL Identity Service] te behandelen. |
 
-### Standaardnaamruimten
+### Standaardnaamruimten {#standard}
 
 Adobe Experience Platform biedt verschillende naamruimten die beschikbaar zijn voor alle organisaties. Deze worden standaardnaamruimten genoemd en zijn zichtbaar met de [!DNL Identity Service] API of via de [!DNL Platform] interface.
 
