@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Beleid voor samenvoegen - Real-time klantprofiel-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 0309a2d6da888a2a88af161977310f213c36a85d
 workflow-type: tm+mt
-source-wordcount: '2035'
+source-wordcount: '2381'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Het eindpunt van beleid samenvoegen
 
-Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen samenbrengen en combineren om een volledige weergave van elk van uw individuele klanten te bekijken. Wanneer het brengen van deze gegevens samen, zijn het fusiebeleid de regels die [!DNL Platform] gebruiken om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Deze handleiding bevat stappen voor het werken met samenvoegbeleid met de API. Om met samenvoegbeleid te werken gebruikend UI, gelieve te verwijzen naar de de gebruikersgids [van het](../ui/merge-policies.md)fusiebeleid.
+Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, zijn het fusiebeleid de regels die [!DNL Platform] gebruiken om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Deze handleiding bevat stappen voor het werken met samenvoegbeleid met de API. Om met samenvoegbeleid te werken gebruikend UI, gelieve te verwijzen naar de de gebruikersgids [van het](../ui/merge-policies.md)fusiebeleid.
 
 ## Aan de slag
 
@@ -56,7 +56,7 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 | `name` | Vriendelijke naam waarmee het samenvoegbeleid kan worden geïdentificeerd in lijstweergaven. |
 | `imsOrgId` | Organisatie-id waartoe dit samenvoegbeleid behoort |
 | `identityGraph` | [Object in identiteitsgrafiek](#identity-graph) dat de identiteitsgrafiek aangeeft waarvan gerelateerde identiteiten worden verkregen. Profielfragmenten die voor alle verwante identiteiten worden gevonden, worden samengevoegd. |
-| `attributeMerge` | [Kenmerksamenvoegobject](#attribute-merge) dat aangeeft op welke manier in het samenvoegbeleid bij gegevensconflicten voorrang wordt gegeven aan profielkenmerkwaarden. |
+| `attributeMerge` | [Kenmerksamenvoegobject](#attribute-merge) dat aangeeft op welke manier in het samenvoegbeleid de profielkenmerken voorrang krijgen bij gegevensconflicten. |
 | `schema` | Het [schemaobject](#schema) waarop het samenvoegbeleid kan worden gebruikt. |
 | `default` | Een Booleaanse waarde die aangeeft of dit samenvoegbeleid de standaardinstelling is voor het opgegeven schema. |
 | `version` | [!DNL Platform] onderhouden versie van samenvoegingsbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
@@ -86,7 +86,7 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 
 ### Identiteitsgrafiek {#identity-graph}
 
-[De Identiteitsdienst](../../identity-service/home.md) van het Adobe Experience Platform beheert de identiteitsgrafieken die globaal en voor elke organisatie op worden gebruikt [!DNL Experience Platform]. Het `identityGraph` attribuut van het fusiebeleid bepaalt hoe te om de verwante identiteiten voor een gebruiker te bepalen.
+[Adobe Experience Platform Identity Service](../../identity-service/home.md) beheert de identiteitsgrafieken die globaal en voor elke organisatie op worden gebruikt [!DNL Experience Platform]. Het `identityGraph` attribuut van het fusiebeleid bepaalt hoe te om de verwante identiteiten voor een gebruiker te bepalen.
 
 **identityGraph-object**
 
@@ -111,7 +111,7 @@ Waar `{IDENTITY_GRAPH_TYPE}` is een van de volgende:
 
 ### Kenmerk samenvoegen {#attribute-merge}
 
-Een profielfragment is de profielinformatie voor slechts één identiteit uit de lijst van identiteiten die voor een bepaalde gebruiker bestaan. Wanneer het gebruikte grafiektype van de identiteit in meer dan één identiteit resulteert, is er een potentieel voor conflicterende waarden voor profieleigenschappen en de prioriteit moet worden gespecificeerd. Gebruikend `attributeMerge`, kunt u specificeren welke waarden van het datasetprofiel aan voorrang in het geval van een fusieconflict.
+Een profielfragment is de profielinformatie voor slechts één identiteit uit de lijst van identiteiten die voor een bepaalde gebruiker bestaan. Wanneer het gebruikte type identiteitsgrafiek meer dan één identiteit resulteert, is er een potentieel voor conflicterende profielattributen en de prioriteit moet worden gespecificeerd. Met `attributeMerge`behulp van deze optie kunt u opgeven welke profielkenmerken prioriteit moeten krijgen in geval van een samenvoegconflict tussen de gegevenssets van het type Key Value (recordgegevens).
 
 **Object attributeMerge**
 
@@ -123,11 +123,11 @@ Een profielfragment is de profielinformatie voor slechts één identiteit uit de
 
 Waar `{ATTRIBUTE_MERGE_TYPE}` is een van de volgende:
 
-* **&quot;timestampOrdered&quot;**: (standaardwaarde) Geef prioriteit aan het profiel dat als laatste is bijgewerkt in geval van een conflict. Met dit samenvoegtype is het `data` kenmerk niet vereist.
-* **&quot;dataSetPrecedence&quot;** : Geef voorrang aan profielfragmenten die op de dataset worden gebaseerd waaruit zij kwamen. Dit zou kunnen worden gebruikt wanneer de informatie aanwezig in één dataset over gegevens in een andere dataset wordt aangewezen of wordt vertrouwd. Wanneer het gebruiken van dit fusietype, wordt het `order` attribuut vereist, aangezien het van de datasets in de orde van prioriteit een lijst maakt.
-   * **&quot;order&quot;**: Wanneer &quot;dataSetPrecedence&quot; wordt gebruikt, moet een `order` array worden voorzien van een lijst met gegevenssets. Gegevenssets die niet in de lijst zijn opgenomen, worden niet samengevoegd. Met andere woorden, gegevenssets moeten expliciet worden vermeld om te worden samengevoegd in een profiel. De `order` array bevat de id&#39;s van de gegevenssets in volgorde van prioriteit.
+* **`timestampOrdered`**: (standaardwaarde) Geef prioriteit aan het profiel dat als laatste is bijgewerkt in geval van een conflict. Met dit samenvoegtype is het `data` kenmerk niet vereist. `timestampOrdered` ondersteunt ook aangepaste tijdstempels die voorrang hebben bij het samenvoegen van profielfragmenten binnen of tussen gegevenssets. Zie de sectie Bijlage over het [gebruik van aangepaste tijdstempels](#custom-timestamps)voor meer informatie.
+* **`dataSetPrecedence`** : Geef voorrang aan profielfragmenten die op de dataset worden gebaseerd waaruit zij kwamen. Dit zou kunnen worden gebruikt wanneer de informatie aanwezig in één dataset over gegevens in een andere dataset wordt aangewezen of wordt vertrouwd. Wanneer het gebruiken van dit fusietype, wordt het `order` attribuut vereist, aangezien het van de datasets in de orde van prioriteit een lijst maakt.
+   * **`order`**: Wanneer &quot;dataSetPrecedence&quot; wordt gebruikt, moet een `order` array worden voorzien van een lijst met gegevenssets. Gegevenssets die niet in de lijst zijn opgenomen, worden niet samengevoegd. Met andere woorden, gegevenssets moeten expliciet worden vermeld om te worden samengevoegd in een profiel. De `order` array bevat de id&#39;s van de gegevenssets in volgorde van prioriteit.
 
-**Object ExampleMerge met gegevenstype dataSetPrecision**
+**Object ExampleMerge met`dataSetPrecedence`type**
 
 ```json
     "attributeMerge": {
@@ -141,7 +141,7 @@ Waar `{ATTRIBUTE_MERGE_TYPE}` is een van de volgende:
     }
 ```
 
-**Object ExampleMerge met type timestampOrdered**
+**Object ExampleMerge met`timestampOrdered`type**
 
 ```json
     "attributeMerge": {
@@ -151,9 +151,9 @@ Waar `{ATTRIBUTE_MERGE_TYPE}` is een van de volgende:
 
 ### Schema {#schema}
 
-Het schemavoorwerp specificeert het schema XDM waarvoor dit fusiebeleid wordt gecreeerd.
+Het schemavoorwerp specificeert het schema van de Gegevens van de Ervaring (XDM) waarvoor dit fusiebeleid wordt gecreeerd.
 
-**`schema`object **
+**`schema`object**
 
 ```json
     "schema": {
@@ -170,6 +170,8 @@ Waar de waarde van `name` is de naam van de klasse XDM waarop het schema verbond
         "name": "_xdm.context.profile"
     }
 ```
+
+Om meer over XDM en het werken met schema&#39;s in Experience Platform te leren, begin door het overzicht [van het Systeem te lezen](../../xdm/home.md)XDM.
 
 ## Beleid voor samenvoegen openen {#access-merge-policies}
 
@@ -693,7 +695,7 @@ Een geslaagde reactie retourneert de details van het bijgewerkte samenvoegingsbe
 
 ## Een samenvoegingsbeleid verwijderen
 
-Een fusiebeleid kan worden geschrapt door een DELETE verzoek aan het `/config/mergePolicies` eindpunt en met inbegrip van identiteitskaart van het fusiebeleid te doen dat u wenst om in de verzoekweg te schrappen.
+Een fusiebeleid kan worden geschrapt door een verzoek van de DELETE aan het `/config/mergePolicies` eindpunt en met inbegrip van identiteitskaart van het fusiebeleid te doen dat u wenst om in de verzoekweg te schrappen.
 
 **API-indeling**
 
@@ -724,7 +726,42 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege 
 
 ## Volgende stappen
 
-Nu u weet om samenvoegbeleid voor uw IMS Organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om publiekssegmenten van uw [!DNL Real-time Customer Profile] gegevens tot stand te brengen. Gelieve te zien de documentatie [van de Dienst van de Segmentatie van het](../../segmentation/home.md) Adobe Experience Platform beginnen definiërend en werkend met segmenten.
+Nu u weet om samenvoegbeleid voor uw IMS Organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om publiekssegmenten van uw [!DNL Real-time Customer Profile] gegevens tot stand te brengen. Raadpleeg de documentatie [van de](../../segmentation/home.md) Adobe Experience Platform Segmentation Service om te beginnen met het definiëren en werken met segmenten.
+
+## Aanhangsel
+
+### Aangepaste tijdstempels gebruiken {#custom-timestamps}
+
+Aangezien de verslagen van het Profiel in Experience Platform worden opgenomen, wordt een systeemtimestamp verkregen op het tijdstip van opneming en toegevoegd aan het verslag. Wanneer `timestampOrdered` is geselecteerd als het `attributeMerge` type voor een samenvoegbeleid, worden profielen samengevoegd op basis van de tijdstempel van het systeem. Met andere woorden, het samenvoegen wordt uitgevoerd op basis van de tijdstempel voor het tijdstip waarop de record in het Platform is opgenomen.
+
+Er kunnen soms gebruiksgevallen zijn, zoals het terugvullen van gegevens of het verzekeren van de correcte orde van gebeurtenissen als de verslagen uit orde worden opgenomen, waar het noodzakelijk is om een douantimestamp te leveren en het fusiebeleid te hebben de douane timestamp eerder dan de systeemtimestamp respecteren.
+
+Als u een aangepaste tijdstempel wilt gebruiken, moet u de [External Source System Audit Details Mixin](#mixin-details) toevoegen aan uw profielschema. Nadat u de aangepaste tijdstempel hebt toegevoegd, kunt u deze in het `xdm:lastUpdatedDate` veld vullen. Wanneer een verslag met het bevolkte `xdm:lastUpdatedDate` gebied wordt opgenomen, zal het Experience Platform dat gebied gebruiken om verslagen of profielfragmenten binnen en over datasets samen te voegen. Als `xdm:lastUpdatedDate` het Platform niet aanwezig of niet gevuld is, blijft het de tijdstempel van het systeem gebruiken.
+
+>[!NOTE]
+>
+>U moet ervoor zorgen dat de `xdm:lastUpdatedDate` tijdstempel wordt gevuld wanneer u een PATCH in dezelfde record verzendt.
+
+Voor geleidelijke instructies bij het werken met schema&#39;s die de schemaregistratie API gebruiken, met inbegrip van hoe te om mengelingen aan schema&#39;s toe te voegen, gelieve de [zelfstudie voor het creëren van een schema te bezoeken gebruikend API](../../xdm/tutorials/create-schema-api.md).
+
+Als u met aangepaste tijdstempels wilt werken met de gebruikersinterface, raadpleegt u de sectie over het [gebruik van aangepaste tijdstempels](../ui/merge-policies.md#custom-timestamps) in de gebruikershandleiding [voor](../ui/merge-policies.md)samenvoegingsbeleid.
+
+#### Details van de Mixingdetails van de controle van het externe bronsysteem {#mixin-details}
+
+Het volgende voorbeeld toont correct bevolkte gebieden in de Externe Mixin van de Details van de Controle van het Bronsysteem. De volledige mix JSON kan ook in het [openbare Model van de Gegevens van de Ervaring (XDM) repo](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) op GitHub worden bekeken.
+
+```json
+{
+  "xdm:createdBy": "{CREATED_BY}",
+  "xdm:createdDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastUpdatedBy": "{LAST_UPDATED_BY}",
+  "xdm:lastUpdatedDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastActivityDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastReferencedDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastViewedDate": "2018-01-02T15:52:25+00:00"
+ }
+```
+
 
 
 
