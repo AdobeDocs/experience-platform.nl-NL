@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Intelligente services
 translation-type: tm+mt
-source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
+source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
 workflow-type: tm+mt
-source-wordcount: '67'
-ht-degree: 2%
+source-wordcount: '88'
+ht-degree: 5%
 
 ---
 
@@ -22,6 +22,14 @@ ht-degree: 2%
    * [Handleiding gebruikersinterface](attribution-ai/user-guide.md)
    * [Inzichten detecteren](attribution-ai/discover-insights.md)
    * [Muziek openen](attribution-ai/download-scores.md)
+* AI (Content and Commerce AI) {#content-commerce-ai}
+   * [Overzicht](content-commerce-ai/overview.md)
+   * [Aan de slag](content-commerce-ai/getting-started.md)
+   * AI API voor inhoud en handel{#api}
+      * [Kleurextractie](content-commerce-ai/api/color-extraction.md)
+      * [Trefwoordextractie](content-commerce-ai/api/keyword-extraction.md)
+      * [Tekstclassificatie](content-commerce-ai/api/text-classification.md)
+      * [Visuele gelijkenis](content-commerce-ai/api/visual-similarity.md)
 * Customer AI {#customer-ai}
    * [Overzicht](customer-ai/overview.md)
    * [Aan de slag met Customer AI](customer-ai/getting-started.md)
