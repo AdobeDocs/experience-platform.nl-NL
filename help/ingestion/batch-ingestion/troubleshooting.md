@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform-handleiding voor het oplossen van problemen met de inname van batterijen
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 9766cadee83e81bacc2abe6b13342ac95aae19a9
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1389'
 ht-degree: 1%
 
 ---
@@ -56,6 +56,18 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
                 "format": "json"
            }
     }'
+```
+
+### Waarom verschijnen de geüploade gegevens niet in de dataset?
+
+Om gegevens in de dataset te verschijnen, moet de partij als volledig worden gemerkt. Alle bestanden die u wilt invoeren, moeten worden geüpload voordat de batch als voltooid wordt gemarkeerd. Hieronder ziet u een voorbeeld van het markeren van een batch als voltooid:
+
+```shell
+curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key : {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 ### Hoe wordt JSON met meerdere regels ingenomen?
