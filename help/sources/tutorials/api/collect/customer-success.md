@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevens verzamelen van een systeem met succesmeldingen van klanten via bronconnectors en API's
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
 workflow-type: tm+mt
-source-wordcount: '1697'
+source-wordcount: '1703'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ curl -X POST \
 | `baseConnectionId` | De unieke verbindingsID van het systeem van de derdeklantensucces u toegang hebt. |
 | `data.schema.id` | Het `$id` ad-hoc XDM-schema. |
 | `params.path` | Het pad van het bronbestand. |
-| `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan uw specifieke systeem voor succes van externe klanten. Zie de [bijlage](#appendix) voor een lijst van verbindingsspecificaties - IDs. |
+| `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan uw specifieke systeem voor succes bij externe klanten. Zie de [bijlage](#appendix) voor een lijst van verbindingsspecificaties - IDs. |
 
 **Antwoord**
 
@@ -604,7 +604,9 @@ curl -X POST \
                 "name": "Copy",
                 "params": {
                     "deltaColumn": {
-                        "name": "date-time"
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
                     }
                 }
             },
@@ -631,7 +633,7 @@ curl -X POST \
 | `sourceConnectionIds` | De [bronverbindings-id](#source) die in een eerdere stap is opgehaald. |
 | `targetConnectionIds` | De [doel-verbindings-id](#target-connection) die in een eerdere stap is opgehaald. |
 | `transformations.params.mappingId` | De [toewijzings-id](#mapping) die in een eerdere stap is opgehaald. |
-| `transformations.params.deltaColum` | De opgegeven kolom die wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
+| `transformations.params.deltaColum` | De opgegeven kolom die wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. De ondersteunde datumnotatie voor `deltaColumn` is `yyyy-MM-dd HH:mm:ss`. |
 | `transformations.params.mappingId` | De toewijzing-id die aan uw database is gekoppeld. |
 | `scheduleParams.startTime` | De begintijd voor de gegevensstroom in tijdperk. |
 | `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day`, of `week`. |
