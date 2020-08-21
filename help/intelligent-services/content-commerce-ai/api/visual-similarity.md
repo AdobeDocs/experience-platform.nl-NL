@@ -5,9 +5,9 @@ title: Visuele gelijkenis
 topic: Developer guide
 description: Wanneer u een afbeelding krijgt met de visuele gelijkenis, worden in de catalogus automatisch visueel vergelijkbare afbeeldingen gevonden.
 translation-type: tm+mt
-source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
+source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '497'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Wanneer u een afbeelding krijgt met de visuele gelijkenis, worden in de catalogu
 
 De volgende afbeelding is gebruikt in de voorbeeldaanvraag die in dit document wordt weergegeven:
 
-![testafbeelding](../images/test_image.jpeg)
+![testafbeelding](../images/Query_Image.jpeg)
 
 **API-indeling**
 
@@ -37,7 +37,7 @@ In het volgende verzoek worden visueel vergelijkbare afbeeldingen uit een catalo
 
 >[!CAUTION]
 >
->`analyzer_id` bepaalt welke [!DNL Sensei Content Framework] wordt gebruikt. Controleer of je de juiste gegevens hebt `analyzer_id` voordat je een aanvraag indient.
+>`analyzer_id` bepaalt welke [!DNL Sensei Content Framework] wordt gebruikt. Controleer of je de juiste gegevens hebt `analyzer_id` voordat je een aanvraag indient. Neem contact op met het AI bètateam van Content and Commerce om uw `analyzer_id` voor deze service te ontvangen.
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -76,7 +76,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Eigenschap | Beschrijving | Verplicht |
 | --- | --- | --- |
-| `analyzer_id` | De [!DNL Sensei] dienst identiteitskaart dat uw verzoek onder wordt opgesteld. Deze id bepaalt welke van de [!DNL Sensei Content Frameworks] waarden worden gebruikt. | Ja |
+| `analyzer_id` | De [!DNL Sensei] dienst identiteitskaart dat uw verzoek onder wordt opgesteld. Deze id bepaalt welke van de [!DNL Sensei Content Frameworks] waarden worden gebruikt. Neem voor aangepaste services contact op met het AI-team voor Inhoud en Handel om een aangepaste id in te stellen. | Ja |
 | `application-id` | De id van de toepassing die u hebt gemaakt. | Ja |
 | `data` | Een array die een JSON-object bevat met elk object in de array die een afbeelding vertegenwoordigt. Elke parameter die als onderdeel van deze array wordt doorgegeven, overschrijft de algemene parameters die buiten de `data` array zijn opgegeven. Alle overige eigenschappen die hieronder in deze tabel worden beschreven, kunnen van binnenuit worden overschreven `data`. | Ja |
 | `content-id` | De unieke id voor het gegevenselement dat in de reactie wordt geretourneerd. Als dit niet wordt overgegaan, wordt een auto-geproduceerde identiteitskaart toegewezen. | Nee |
@@ -91,6 +91,10 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 **Antwoord**
 
 Een geslaagde reactie retourneert een `response` array die een `feature_value` en `feature_name` voor elk van de visueel vergelijkbare afbeeldingen in de catalogus bevat.
+
+De volgende visueel vergelijkbare afbeeldingen zijn geretourneerd in de onderstaande voorbeeldreactie:
+
+![vergelijkbare afbeeldingen](../images/results.jpg)
 
 ```json
 {
@@ -156,3 +160,4 @@ Een geslaagde reactie retourneert een `response` array die een `feature_value` e
   "error": []
 }
 ```
+
