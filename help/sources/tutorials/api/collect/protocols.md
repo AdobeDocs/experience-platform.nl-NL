@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verzamel protocolgegevens door bronschakelaars en APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1669'
 ht-degree: 0%
 
 ---
@@ -645,7 +645,7 @@ curl -X POST \
 | `sourceConnectionIds` | De [bronverbindings-id](#source) die in een eerdere stap is opgehaald. |
 | `targetConnectionIds` | De [doel-verbindings-id](#target-connection) die in een eerdere stap is opgehaald. |
 | `transformations.params.mappingId` | De [toewijzings-id](#mapping) die in een eerdere stap is opgehaald. |
-| `transformations.params.deltaColum` | De opgegeven kolom die wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
+| `transformations.params.deltaColum` | De opgegeven kolom die wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. De ondersteunde indeling voor `deltaColumn` het gebruik van Generic OData is `yyyy-MM-ddTHH:mm:ssZ`. |
 | `transformations.params.mappingId` | De toewijzing-id die aan uw database is gekoppeld. |
 | `scheduleParams.startTime` | De begintijd voor de gegevensstroom in tijdperk. |
 | `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day`, of `week`. |
