@@ -3,11 +3,11 @@ keywords: livefyre;livefyre extension
 title: Adobe Livefyre-extensie
 seo-title: Adobe Livefyre-extensie
 description: De Adobe Livefyre-extensie is een sociale bestemming in het Adobe Real-time Platform van klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: null
+seo-description: De Adobe Livefyre-extensie is een sociale bestemming in het Adobe Real-time Platform van klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '541'
 ht-degree: 2%
 
 ---
