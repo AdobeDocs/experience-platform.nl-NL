@@ -3,11 +3,11 @@ keywords: Advertising Cloud;advertising cloud extension; advertising cloud desti
 title: Adobe Advertising Cloud-extensie
 seo-title: Adobe Advertising Cloud-extensie
 description: De extensie Adobe Advertising Cloud is een advertentiebestemming in het Adobe Real-time Platform voor klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: null
+seo-description: De extensie Adobe Advertising Cloud is een advertentiebestemming in het Adobe Real-time Platform voor klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '505'
 ht-degree: 2%
 
 ---
