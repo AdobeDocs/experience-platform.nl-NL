@@ -5,9 +5,9 @@ title: Kleurextractie
 topic: Developer guide
 description: Wanneer u een afbeelding opgeeft, kan de service voor kleurextractie het histogram van pixelkleuren berekenen en deze sorteren op dominante kleuren in emmers.
 translation-type: tm+mt
-source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
+source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '689'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Deze methode gebruikt een op diepleren gebaseerde voorgrondextractor om objecten
 
 De volgende afbeelding is gebruikt in het voorbeeld dat in dit document wordt weergegeven:
 
-![testafbeelding](../images/test_image.jpeg)
+![testafbeelding](../images/QQAsset1.jpg)
 
 **API-indeling**
 
@@ -47,7 +47,7 @@ In het volgende verzoek worden kleuren uit een afbeelding geëxtraheerd op basis
 
 >[!CAUTION]
 >
->`analyzer_id` bepaalt welke [!DNL Sensei Content Framework] wordt gebruikt. Controleer of je de juiste gegevens hebt `analyzer_id` voordat je een aanvraag indient.
+>`analyzer_id` bepaalt welke [!DNL Sensei Content Framework] wordt gebruikt. Controleer of je de juiste gegevens hebt `analyzer_id` voordat je een aanvraag indient. Voor de service voor kleurextractie is de `analyzer_id` id: `Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -86,7 +86,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Eigenschap | Beschrijving | Verplicht |
 | --- | --- | --- |
-| `analyzer_id` | De [!DNL Sensei] dienst identiteitskaart dat uw verzoek onder wordt opgesteld. Deze id bepaalt welke van de [!DNL Sensei Content Frameworks] waarden worden gebruikt. | Ja |
+| `analyzer_id` | De [!DNL Sensei] dienst identiteitskaart dat uw verzoek onder wordt opgesteld. Deze id bepaalt welke van de [!DNL Sensei Content Frameworks] waarden worden gebruikt. Neem voor aangepaste services contact op met het AI-team voor Inhoud en Handel om een aangepaste id in te stellen. | Ja |
 | `application-id` | De id van de toepassing die u hebt gemaakt. | Ja |
 | `data` | Een array die JSON-objecten bevat. Elk object in de array vertegenwoordigt een afbeelding. Elke parameter die als onderdeel van deze array wordt doorgegeven, overschrijft de algemene parameters die buiten de `data` array zijn opgegeven. Alle overige eigenschappen die hieronder in deze tabel worden beschreven, kunnen van binnenuit worden overschreven `data`. | Ja |
 | `content-id` | De unieke id voor het gegevenselement dat in de reactie wordt geretourneerd. Als dit niet wordt overgegaan, wordt een auto-geproduceerde identiteitskaart toegewezen. | Nee |
@@ -106,7 +106,7 @@ Wanneer de reactie is gelukt, worden de details van de geëxtraheerde kleuren ge
 - Het percentage waarmee deze kleur wordt weergegeven in verhouding tot de afbeelding
 - De RGB-waarde van de kleur
 
-In het eerste onderstaande voorbeeldobject `feature_value` betekent de waarde `White,0.82,239,239,239` van de gevonden kleur wit, wit gevonden in 82% van de afbeelding en heeft een RGB-waarde van 239.239.239.
+In het eerste onderstaande voorbeeldobject `feature_value` betekent de waarde `White,0.59,251,251,243` van de gevonden kleur wit, wit gevonden in 59% van de afbeelding en heeft een RGB-waarde van 251.251.243.
 
 ```json
 {
@@ -124,15 +124,19 @@ In het eerste onderstaande voorbeeldobject `feature_value` betekent de waarde `W
             "feature_value": [
               {
                 "feature_name": "color_name_and_rgb",
-                "feature_value": "White,0.82,239,239,239"
+                "feature_value": "White,0.59,251,251,243"
               },
               {
-                "feature_value": "Dark_Blue,0.11,41,60,86",
+                "feature_value": "Orange,0.30,248,169,48",
                 "feature_name": "color_name_and_rgb"
               },
               {
                 "feature_name": "color_name_and_rgb",
-                "feature_value": "Royal_Blue,0.08,63,91,123"
+                "feature_value": "Mustard,0.08,251,199,77"
+              },
+              {
+                "feature_name": "color_name_and_rgb",
+                "feature_value": "Gold,0.02,250,191,55"
               }
             ],
             "feature_name": "color"
