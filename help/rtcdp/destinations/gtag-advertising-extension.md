@@ -3,11 +3,11 @@ keywords: gtag;google gtag;google extension;google gtag extension;GTAG
 title: Google-tag-extensie
 seo-title: Google-tag-extensie
 description: De Google-tagextensie is een advertentiebestemming in het Adobe Real-time Platform voor klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: null
+seo-description: De Google-tagextensie is een advertentiebestemming in het Adobe Real-time Platform voor klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '576'
 ht-degree: 2%
 
 ---
