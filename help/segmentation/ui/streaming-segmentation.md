@@ -5,9 +5,9 @@ title: Streaming segmentering
 topic: ui guide
 description: Dankzij streamingsegmentatie op Adobe Experience Platform kunt u segmentering uitvoeren in bijna real-time terwijl u zich richt op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in Platform landen, die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens in Platform worden overgegaan, betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: d0323fd2e769f97fa738ea55e7aba1d7ae821051
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,9 @@ Nadat u een voor streaming geschikt segment hebt gemaakt, kunt u details van dat
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Specifiek, worden de details over de **[!UICONTROL totale gekwalificeerde publieksgrootte]** getoond. Als een baan binnen de laatste 24 uren is gelopen, wordt de **[!UICONTROL Totale gekwalificeerde publieksgrootte]** van de baan getoond, naast een lijngrafiek voor het toegevoegde publiek. Anders wordt naast een trendlijn voor visualisatie ook de geschatte **[!UICONTROL totale omvang]** van het publiek weergegeven.
+Specifiek, worden de details over de **[!UICONTROL totale gekwalificeerde publieksgrootte]** getoond. De **[!UICONTROL Totale gekwalificeerde publieksgrootte]** toont het totale aantal gekwalificeerde publiek van de laatste voltooide looppas van de segmentbaan. Als een segmentbaan niet binnen de laatste 24 uren werd voltooid, zal het aantal publiek van een raming in plaats daarvan worden genomen.
+
+Onderaan ziet u een lijngrafiek met het aantal segmenten dat in de afgelopen 24 uur is gekwalificeerd en gediskwalificeerd. De vervolgkeuzelijst kan worden aangepast om de laatste 24 uur, vorige week of 30 dagen weer te geven.
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
