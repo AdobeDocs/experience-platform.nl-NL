@@ -5,7 +5,7 @@ description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met 
 seo-description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met het Web SDK van het Experience Platform te verzenden
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: ef01c258cb9ac72f0912d17dcd113c1baa2a5b5e
+source-git-commit: c6b572f8757e46ccb22ccea326a7537747f81893
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 0%
@@ -25,9 +25,10 @@ U kunt een paginaweergave opgeven door de `web.webPageDetails.pageViews.value=1`
 alloy("sendEvent", {
   "xdm": {
     "web": {
-      "webPageDetailsr": {
+      "webPageDetails": {
         "pageViews": {
             "value":1
+         }
       }
     }
   }
@@ -51,6 +52,7 @@ alloy("sendEvent", {
       "name":"My Custom Link", //Name that shows up in the custom links report
       "URL":"https://myurl.com", //the URL of the link
       "type":"other", // values: other, download, exit
+      }
     }
   }
 });
