@@ -5,7 +5,7 @@ title: Optie-outs respecteren
 topic: overview
 description: 'Met Experience Platform kunnen uw klanten weigeren-aanvragen betreffende het gebruik en de opslag van hun gegevens verzenden binnen het realtime profiel van de klant]. Deze "opt-out"-verzoeken maken deel uit van de California Consumer Privacy Act (CCPA), die de inwoners van Californië het recht geeft toegang te krijgen tot hun persoonsgegevens en deze te verwijderen en te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie). '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Hier ziet u een voorbeeld van de mix van de optie Weigeren die in de gebruikersi
 
 De structuur van elke mix en een beschrijving van de velden die deze bijdragen aan het schema worden in de volgende secties nader beschreven.
 
-### [!DNL Profile Privacy]
+### [!DNL Profile Privacy] {#profile-privacy}
 
 Het [!DNL Profile Privacy] mengen staat u toe om twee soorten opt-outverzoeken CCPA van klanten te vangen:
 
@@ -69,7 +69,7 @@ De [!DNL Profile Privacy] mix bevat de volgende velden:
 
 Om de volledige structuur van de [!DNL Profile Privacy] mix te bekijken, gelieve te verwijzen naar de [XDM openbare bewaarplaats](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) GitHub of voorproef de mixin gebruikend het Platform UI.
 
-### [!DNL Profile Preferences Details]
+### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
 De [!DNL Profile Preferences Details] mix bevat verschillende velden die voorkeuren voor klantprofielen vertegenwoordigen (zoals e-mailindeling, voorkeurstaal en tijdzone). In een van de velden in deze mix, OptInOut (`optInOut`), kunnen de waarden voor de optie om te weigeren worden ingesteld voor afzonderlijke kanalen.
 
