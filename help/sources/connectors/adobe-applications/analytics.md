@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gegevensconnector Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 662ca170b7416dfb55cfb6b8cbaef640c1f83d31
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 2%
@@ -51,7 +51,9 @@ Voor meer informatie over de veldtoewijzing tussen [!DNL Analytics] en [!DNL Exp
 | Nieuwe gegevens voor Data Lake | &lt; 45 minuten |
 | Backfill-gegevens (13 maanden of 10 miljard gebeurtenissen, afhankelijk van welke waarde lager is) | &lt; 4 weken |
 
->[!NOTE] De latentie zal afhankelijk van klantenconfiguratie, gegevensvolumes, en de toepassingen van de consument variëren. Bijvoorbeeld, als de implementatie van Analytics met `A4T` de latentie aan Pijpleiding wordt gevormd zal tot 5-10 minuten stijgen.
+>[!NOTE]
+>
+>De latentie zal afhankelijk van klantenconfiguratie, gegevensvolumes, en de toepassingen van de consument variëren. Bijvoorbeeld, als de implementatie van Analytics met `A4T` de latentie aan Pijpleiding wordt gevormd zal tot 5-10 minuten stijgen.
 
 ## Primaire id-id&#39;s in analysegegevens
 
