@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Vergelijkingsfuncties
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 3%
+source-wordcount: '292'
+ht-degree: 7%
 
 ---
 
 
 # Vergelijkingsfuncties
 
-Vergelijkingsfuncties worden gebruikt om verschillende expressies en waarden met elkaar te vergelijken, `true` of `false` op basis daarvan. Meer informatie over andere PQL-functies vindt u in het overzicht [Taal van](./overview.md)profielquery.
+Vergelijkingsfuncties worden gebruikt om verschillende expressies en waarden met elkaar te vergelijken, `true` of `false` op basis daarvan. Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
 
 ## Equals (Is gelijk aan)
 
@@ -52,7 +52,7 @@ De volgende vraag PQL controleert als het land van het huisadres niet in Canada 
 homeAddress.countryISO != "CA"
 ```
 
-## Groter dan
+## Greater than
 
 De functie `>` (groter dan) wordt gebruikt om te controleren of de eerste waarde groter is dan de tweede waarde.
 
@@ -70,7 +70,7 @@ De volgende PQL-query definieert personen wier verjaardagen niet in januari of f
 person.birthMonth > 2
 ```
 
-## Groter dan of gelijk aan
+## Greater than or equal to
 
 De functie `>=` (groter dan of gelijk aan) wordt gebruikt om te controleren of de eerste waarde groter dan of gelijk is aan de tweede waarde.
 
@@ -88,7 +88,7 @@ De volgende PQL-query definieert personen wier verjaardagen niet in januari of f
 person.birthMonth >= 3
 ```
 
-## Minder dan
+## Less than
 
 De vergelijkingsfunctie `<` (kleiner dan) wordt gebruikt om te controleren of de eerste waarde kleiner is dan de tweede waarde.
 
@@ -106,7 +106,7 @@ De volgende vraag PQL bepaalt mensen van wie verjaardag in Januari is.
 person.birthMonth < 2
 ```
 
-## Kleiner dan of gelijk aan
+## Less than or equal to
 
 De vergelijkingsfunctie `<=` (kleiner dan of gelijk aan) wordt gebruikt om te controleren of de eerste waarde kleiner dan of gelijk is aan de tweede waarde.
 
