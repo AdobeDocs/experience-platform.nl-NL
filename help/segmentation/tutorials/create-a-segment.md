@@ -5,9 +5,9 @@ title: Een segment maken
 topic: tutorial
 description: Dit document biedt een zelfstudie voor het ontwikkelen, testen, voorvertonen en opslaan van een segmentdefinitie met de Adobe Experience Platform Segmentation Service API.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Een segment maken
 
-Dit document biedt een zelfstudie voor het ontwikkelen, testen, voorvertonen en opslaan van een segmentdefinitie met de [DNL Adobe Experience Platform Segmentation Service-API](../api/getting-started.md).
+Dit document biedt een zelfstudie voor het ontwikkelen, testen, voorvertonen en opslaan van een segmentdefinitie met de [!DNL Adobe Experience Platform Segmentation Service API](../api/getting-started.md)code.
 
 Voor informatie over hoe te om segmenten te bouwen gebruikend het gebruikersinterface, te zien gelieve de gids [van de Bouwer van het](../ui/overview.md)Segment.
 
@@ -74,7 +74,7 @@ Er zijn twee vereiste stappen om een voorvertoning van uw segment te bekijken of
 
 ### Hoe schattingen worden gegenereerd
 
-Gegevenssteekproeven worden gebruikt om segmenten te evalueren en het aantal kwalificerende profielen te schatten. De nieuwe gegevens worden geladen in geheugen elke ochtend (tussen 12AM-2AM PT, die 7-9AM UTC is), en alle segmenteringsvragen worden geschat gebruikend de steekproefgegevens van die dag. Dientengevolge zullen nieuwe toegevoegde velden of extra verzamelde gegevens de volgende dag in schattingen worden weerspiegeld.
+Gegevenssteekproeven worden gebruikt om segmenten te evalueren en het aantal kwalificerende profielen te schatten. De nieuwe gegevens worden geladen in geheugen elke ochtend (tussen 12AM-2AM PT, die 7-9AM UTC is), en alle segmenteringsvragen worden geschat gebruikend de steekproefgegevens van die dag. Bijgevolg zullen nieuwe toegevoegde velden of verzamelde aanvullende gegevens de volgende dag in schattingen worden weergegeven.
 
 De voorbeeldgrootte is afhankelijk van het totale aantal entiteiten in het profielarchief. Deze steekproefgrootte wordt vertegenwoordigd in de volgende lijst:
 
