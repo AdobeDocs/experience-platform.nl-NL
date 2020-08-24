@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Abonneren op gebeurtenissen voor gegevensinvoer
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Meldingen voor gegevensinvoer
 
-Het proces om gegevens in Adobe Experience Platform in te voeren bestaat uit veelvoudige stappen. Zodra u gegevensdossiers identificeert die in moeten worden opgenomen [!DNL Platform], begint het innameproces en elke stap komt achtereenvolgens tot de gegevens of met succes worden opgenomen of ontbreken. Het insluitingsproces kan worden gestart met de API [voor gegevensinname van](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platforms of met de [!DNL Experience Platform] gebruikersinterface.
+Het proces om gegevens in Adobe Experience Platform in te voeren bestaat uit meerdere stappen. Zodra u gegevensdossiers identificeert die in moeten worden opgenomen [!DNL Platform], begint het innameproces en elke stap komt achtereenvolgens tot de gegevens of met succes worden opgenomen of ontbreken. Het insluitingsproces kan worden gestart met de [Adobe Experience Platform-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) voor gegevensinsluiting of met de [!DNL Experience Platform] gebruikersinterface.
 
 De gegevens die in worden geladen [!DNL Platform] moeten door veelvoudige stappen gaan om zijn bestemming, [!DNL Data Lake] of de [!DNL Real-time Customer Profile] gegevensopslag te bereiken. Elke stap omvat het verwerken van de gegevens, het valideren van de gegevens en het opslaan van de gegevens voordat u deze doorgeeft aan de volgende stap. Afhankelijk van de hoeveelheid gegevens die wordt opgenomen, kan dit een tijdrovend proces worden en er is altijd een kans dat het proces mislukt door validatie-, semantiek- of verwerkingsfouten. In geval van een fout moeten de gegevensproblemen worden opgelost en moet het volledige innameproces opnieuw worden gestart met de gecorrigeerde gegevensbestanden.
 
@@ -39,7 +39,7 @@ Hieronder vindt u een lijst met beschikbare gegevensinvoerstatusmeldingen waarop
 
 ## Payloadschema voor berichten
 
-Het gebeurtenisschema voor gegevensinvoer is een [!DNL Experience Data Model] (XDM)-schema dat velden en waarden bevat die gegevens bevatten over de status van de gegevens die worden ingevoerd. Ga naar het openbare XDM- [!DNL GitHub] repo om het meest recente [berichtladingsschema](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)te bekijken.
+Het gebeurtenisschema voor gegevensinvoer is een [!DNL Experience Data Model] (XDM)-schema dat velden en waarden bevat die gegevens bevatten over de status van de gegevens die worden ingevoerd. Ga naar het openbare XDM- [!DNL GitHub] repo om het meest recente [berichtladingsschema](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json)te bekijken.
 
 ## Abonneren op statusmeldingen voor gegevensinvoer
 
@@ -55,7 +55,7 @@ Nadat u een nieuw project hebt gemaakt, navigeert u naar het overzichtsscherm va
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-Het dialoogvenster Gebeurtenissen __toevoegen wordt weergegeven. Klik op**[!UICONTROL  Experience Platform ]**om de lijst met beschikbare opties te filteren en klik vervolgens op**[!UICONTROL  Platform-meldingen ]**voordat u op**[!UICONTROL  Volgende ]**klikt.
+Het dialoogvenster Gebeurtenissen __ toevoegen wordt weergegeven. Klik op **[!UICONTROL Experience Platform]** om de lijst met beschikbare opties te filteren en klik vervolgens op **[!UICONTROL Platform-meldingen]** voordat u op **[!UICONTROL Volgende]** klikt.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
