@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Accounts en gegevensstromen bewaken
 topic: overview
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Met de kalender kunt u de verschillende tijdframes voor opgenomen records bekijk
 
 ![stroomkalender](../../images/tutorials/monitor/flow-calendar.png)
 
-Standaard geeft de activiteit **[!UICONTROL Dataflow]** het deelvenster **[!UICONTROL Eigenschappen]** weer dat is gekoppeld aan de dataflow. Selecteer de doorloop in de lijst om de bijbehorende metagegevens weer te geven, inclusief informatie over de unieke uitvoerings-id.
+Standaard geeft de activiteit **[!UICONTROL Dataflow]** het deelvenster **[!UICONTROL Eigenschappen]** weer dat is gekoppeld aan de dataflow. Selecteer de doorloop die in de lijst wordt uitgevoerd om de bijbehorende metagegevens weer te geven, inclusief informatie over de unieke uitvoerings-id.
 
 Selecteer **[!UICONTROL Dataflow run start]** om het **[!UICONTROL Dataflow run overzicht]** te openen.
 
@@ -106,7 +106,7 @@ Deze sectie bevat ook een voorvertoning van de kolom die de fout bevat.
 
 ![Voorvertoning-fout-diagnostiek](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
-Nadat u een voorbeeld van de fouten hebt weergegeven, kunt u **[!UICONTROL Downloaden]** vanuit het deelvenster Overzicht **[van uitvoeringen van]** UICONTROL selecteren voor toegang tot volledige foutdiagnoses en het bestandmanifest downloaden. Zie de documenten over [foutdiagnose](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) en het [downloaden van metagegevens](../../../ingestion/batch-ingestion/partial.md#download-metadata) voor meer informatie.
+Nadat u een voorbeeld van de fouten hebt weergegeven, kunt u **[!UICONTROL Downloaden]** vanuit het **[!UICONTROL venster Overzicht]** van de gegevensstroomuitvoering selecteren voor toegang tot volledige diagnostische foutmeldingen en het bestandmanifest downloaden. Zie de documenten over [foutdiagnose](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) en het [downloaden van metagegevens](../../../ingestion/batch-ingestion/partial.md#download-metadata) voor meer informatie.
 
 ![Voorvertoning-fout-diagnostiek](../../images/tutorials/monitor/download.png)
 
