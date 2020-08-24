@@ -1,36 +1,36 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Analytics-gegevensconnector
+title: Gegevensconnector Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 662ca170b7416dfb55cfb6b8cbaef640c1f83d31
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '471'
 ht-degree: 2%
 
 ---
 
 
-# Analytics Data Connector
+# Gegevensconnector Analytics
 
-Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de Analytics Data Connector (ADC). ADC stroomt gegevens die door Adobe Analytics aan Platform in real time worden verzameld, die SCDS-gevormde gegevens van Analytics in de gebieden van het Model van de Gegevens van de Ervaring (XDM) voor consumptie door Platform omzetten.
+Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de Analytics Data Connector (ADC). ADC streamt gegevens die door [!DNL Analytics] aan [!DNL Platform] in real time worden verzameld, die [!DNL Analytics] gegevens SCDS-formatted in [!DNL Experience Data Model] (XDM) gebieden voor consumptie door [!DNL Platform]. omzetten
 
-Dit document biedt een overzicht van Adobe Analytics en beschrijft de gebruiksgevallen voor Analytics-gegevens.
+Dit document biedt een overzicht van [!DNL Analytics] en een beschrijving van de gebruikte [!DNL Analytics] gegevens.
 
-## Adobe Analytics- en Analytics-gegevens
+## Adobe Analytics- en analysegegevens
 
-Adobe Analytics is een krachtige motor om u te helpen meer over uw klanten te leren, hoe zij met uw Web-eigenschappen in wisselwerking staan, te zien waar uw digitale marketing uitgaven efficiënt is, en gebieden van verbetering te identificeren. Adobe Analytics verwerkt biljoenen webtransacties per jaar en ADC stelt u in staat om eenvoudig gebruik te maken van deze rijke gedragsgegevens en het Real-time Klantprofiel binnen enkele minuten te verrijken.
+[!DNL Analytics] is een krachtige motor om u te helpen meer over uw klanten leren, hoe zij met uw Web-eigenschappen in wisselwerking staan, zien waar uw digitale marketing uitgaven efficiënt is, en gebieden van verbetering identificeren. [!DNL Analytics] verwerkt biljoenen webtransacties per jaar en ADC stelt u in staat om gemakkelijk gebruik te maken van deze rijke gedragsgegevens en deze binnen enkele minuten te verrijken. [!DNL Real-time Customer Profile]
 
 ![](./images/analytics-data-experience-platform.png)
 
-Op hoog niveau verzamelt Adobe Analytics gegevens via verschillende digitale kanalen en meerdere datacenters over de hele wereld. Zodra de gegevens zijn verzameld, worden de regels van Visitor Identification, Segmentation and Transformation Architecture (VISTA) en de verwerkingsregels toegepast om de inkomende gegevens vorm te geven. Nadat de ruwe gegevens door deze lichte verwerking zijn gegaan, wordt het dan beschouwd klaar voor consumptie door het Profiel van de Klant in real time. In een proces parallel aan het bovengenoemde, worden de zelfde verwerkte gegevens microbatched en ingebed in Platform datasets voor gebruik door de Werkruimte van de Wetenschap van Gegevens, de Dienst van de Vraag, en andere gegevens-ontdekkingstoepassingen.
+Op hoog niveau worden gegevens verzameld via verschillende digitale kanalen en meerdere datacenters over de hele wereld. [!DNL Analytics] Zodra de gegevens zijn verzameld, worden de regels van Visitor Identification, Segmentation and Transformation Architecture (VISTA) en de verwerkingsregels toegepast om de inkomende gegevens vorm te geven. Nadat de ruwe gegevens door deze lichte verwerking zijn gegaan, wordt het dan beschouwd klaar voor consumptie door [!DNL Real-time Customer Profile]. In een parallel aan het bovenstaande proces worden dezelfde verwerkte gegevens op micro-basis opgeslagen en opgenomen in gegevenssets van Platforms voor gebruik door [!DNL Data Science Workspace], [!DNL Query Service]en andere toepassingen voor gegevensdetectie.
 
 Zie Overzicht [van](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules.html) verwerkingsregels voor meer informatie over verwerkingsregels.
 
 ## Experience Data Model (XDM)
 
-XDM is een openbaar gedocumenteerde specificatie die gemeenschappelijke structuren en definities voor een toepassing verstrekt om met de diensten op Adobe Experience Platform te communiceren te gebruiken.
+XDM is een openbaar gedocumenteerde specificatie die gemeenschappelijke structuren en definities voor een toepassing verstrekt om met de diensten op te communiceren [!DNL Experience Platform].
 
 Door te voldoen aan XDM-standaarden kunnen gegevens op uniforme wijze worden opgenomen, waardoor het eenvoudiger wordt om gegevens te leveren en informatie te verzamelen.
 
@@ -38,19 +38,21 @@ Zie het [XDM-systeemoverzicht](../../../xdm/home.md)voor meer informatie over XD
 
 ## Hoe worden velden toegewezen van Adobe Analytics aan XDM?
 
-Wanneer een bronverbinding tot stand is gebracht voor het in Experience Platform brengen van Analytics-gegevens via de gebruikersinterface van het Platform, worden gegevensvelden automatisch toegewezen aan en opgenomen in het Real-time Klantprofiel binnen enkele minuten. Zie de zelfstudie over de [Analytics-gegevensaansluiting voor instructies over het maken van een bronverbinding met Adobe Analytics met behulp van de interface van het Platform](../../tutorials/ui/create/adobe-applications/analytics.md).
+Wanneer een bronverbinding tot stand wordt gebracht voor het brengen van [!DNL Analytics] gegevens in [!DNL Experience Platform] gebruikend het [!DNL Platform] gebruikersinterface, worden de gegevensgebieden automatisch in kaart gebracht en in [!DNL Real-time Customer Profile] notulen opgenomen. Voor instructies bij het creëren van een bronverbinding met [!DNL Analytics] het gebruiken van [!DNL Platform] UI, zie het de schakelaarleerprogramma [van de Gegevens van de](../../tutorials/ui/create/adobe-applications/analytics.md)Analyse.
 
-Voor meer informatie over de veldtoewijzing tussen Analytics en Experience Platform gaat u naar de handleiding voor [Adobe Analytics-veldtoewijzingen](./mapping/analytics.md) .
+Voor meer informatie over de veldtoewijzing tussen [!DNL Analytics] en [!DNL Experience Platform], raadpleegt u de [Adobe Analytics-handleiding voor veldtoewijzing](./mapping/analytics.md) .
 
-## Wat is de verwachte vertraging voor Analytics Data on Platform?
+## Wat is de verwachte latentie voor de Gegevens van Analytics over Platform?
 
-| Analytics-gegevens | Verwachte vertraging |
+| Analysegegevens | Verwachte vertraging |
 | -------------- | ---------------- |
-| Nieuwe gegevens naar Real-time klantprofiel (A4T **niet** ingeschakeld) | &lt; 2 minuten |
-| Nieuwe gegevens naar Real-time klantprofiel (A4T **is** ingeschakeld) | &lt; 15 minuten |
+| Nieuwe gegevens aan [!DNL Real-time Customer Profile] (A4T **niet** ingeschakeld) | &lt; 2 minuten |
+| Nieuwe gegevens aan [!DNL Real-time Customer Profile] (A4T **is** ingeschakeld) | &lt; 15 minuten |
 | Nieuwe gegevens voor Data Lake | &lt; 45 minuten |
 | Backfill-gegevens (13 maanden of 10 miljard gebeurtenissen, afhankelijk van welke waarde lager is) | &lt; 4 weken |
 
->[!NOTE]
->
->De latentie zal afhankelijk van klantenconfiguratie, gegevensvolumes, en de toepassingen van de consument variëren. Bijvoorbeeld, als de implementatie van Analytics met `A4T` de latentie aan Pijpleiding wordt gevormd zal tot 5-10 minuten stijgen.
+>[!NOTE] De latentie zal afhankelijk van klantenconfiguratie, gegevensvolumes, en de toepassingen van de consument variëren. Bijvoorbeeld, als de implementatie van Analytics met `A4T` de latentie aan Pijpleiding wordt gevormd zal tot 5-10 minuten stijgen.
+
+## Primaire id-id&#39;s in analysegegevens
+
+Elke hit van de gegevensconnector Analytics bevat een primaire id die afhankelijk is van het feit of een ECID of een AID bestaat. Als er een ECID is, wordt de ECID aangewezen als primaire identificator. Als er sprake is van steun, wordt de steun als primaire steun aangemerkt.
