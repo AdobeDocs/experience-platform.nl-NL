@@ -5,9 +5,9 @@ title: Overzicht van PQL (Profile Query Language)
 topic: developer guide
 description: Deze handleiding biedt een algemeen overzicht van PQL, met opmaakrichtlijnen en voorbeelden van PQL-expressies.
 translation-type: tm+mt
-source-git-commit: 691af873e0753217b9e7566042c508d9d9b8d8d5
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '705'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ homeAddress.stateProvince = workAddress.stateProvince
 
 ### Expliciete verwijzing naar de eerste parameter
 
-In het onderstaande voorbeeld wordt `$1` verwezen naar de eerste parameter. Als gevolg hiervan `$2` zou ik verwijzen naar de tweede parameter, enz.
+In het onderstaande voorbeeld `$1` wordt naar de eerste parameter verwezen. Als gevolg hiervan `$2` zou ik verwijzen naar de tweede parameter, enz.
 
 ```sql
 $1.homeAddress.stateProvince = $1.homeAddress.stateProvince
@@ -81,6 +81,7 @@ In de volgende tabel worden de verschillende categorieën ondersteunde PQL-funct
 | Array, list en set | Wordt gebruikt voor interactie met arrays, lijsten en sets. Meer informatie over deze functies vindt u in het document met [arrays, lijsten en ingestelde functies](./array-functions.md). |
 | Kaart | Wordt gebruikt voor interactie met kaarten. Meer informatie over deze functies vindt u in het document met [kaartfuncties](./map-functions.md). |
 | Tekenreeks | Wordt gebruikt voor interactie met tekenreeksen. Meer informatie over deze functies vindt u in het document [met](./string-functions.md)tekenreeksfuncties. |
+| Object | Wordt gebruikt voor interactie met objecten. Meer informatie over deze functies vindt u in het document [met](./object-functions.md)objectfuncties. |
 | Rekenkundig | Wordt gebruikt voor het uitvoeren van rekenkundige basisbewerkingen op PQL-elementen. Meer informatie over deze functies vindt u in het document met [rekenkundige functies](./arithmetic-functions.md) |
 | Samenvoeging | Wordt gebruikt om resultaten van een array te combineren in een enkel resultaat. Meer informatie over samenvoegingsfuncties vindt u in het document [met](./aggregation-functions.md)aggregatiefuncties. |
 | Datum en tijd | Wordt gebruikt in combinatie met datum-, tijd- en datetime-objecten. Meer informatie over deze functies vindt u in het document met [datum-/tijdfuncties](./datetime-functions.md). |
