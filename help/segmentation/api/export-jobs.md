@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Eindpunt van taken exporteren
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 6ddb420ad3c4df3096dac456c58afc7a4916ce51
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1521'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Eindpunt van taken exporteren
 
-De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. U kunt het `/export/jobs` eindpunt in de Segmentatie API van het Adobe Experience Platform gebruiken, die u toestaat programmatically om, uitvoerbanen terug te winnen tot stand te brengen en te annuleren.
+De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. U kunt het `/export/jobs` eindpunt in de Adobe Experience Platform Segmentation API gebruiken, die u toestaat programmatically om, uitvoerbanen terug te winnen tot stand te brengen en te annuleren.
 
 >[!NOTE]
 >
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
 
 **Antwoord**
 
-De volgende reactie keert status 200 van HTTP met een lijst van met succes voltooide die uitvoerbanen terug, op de vraagparameter wordt gebaseerd in de verzoekweg wordt verstrekt.
+De volgende reactie keert HTTP status 200 met een lijst van met succes voltooide uitvoerbanen terug, die op de vraagparameter wordt gebaseerd in de verzoekweg wordt verstrekt.
 
 ```json
 {
@@ -268,6 +268,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
     },
     "schema":{
         "name": "_xdm.context.profile"
+    },
+    "evaluationInfo": {
+        "segmentation": true
     }
 }'
 ```
@@ -286,6 +289,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `additionalFields.eventList` | Bepaalt de tijdlijngebeurtenisvelden die worden geëxporteerd voor onderliggende of gekoppelde objecten door een of meer van de volgende instellingen op te geven:<ul><li>`fields`: Besturing van de velden die u wilt exporteren.</li><li>`filter`: Hiermee worden criteria opgegeven waarmee de resultaten van gekoppelde objecten worden beperkt. Hiermee wordt een minimumwaarde verwacht die vereist is voor het exporteren, meestal een datum.</li><li>`filter.fromIngestTimestamp`: Hiermee filtert u tijdreeksgebeurtenissen naar gebeurtenissen die na de opgegeven tijdstempel zijn ingevoegd. Dit is niet de tijd van de gebeurtenis zelf, maar de tijd van inname voor de gebeurtenissen.</li><li>`filter.toIngestTimestamp`: Hiermee wordt de tijdstempel gefilterd op de tijdstempel die vóór de opgegeven tijdstempel is ingevoerd. Dit is niet de tijd van de gebeurtenis zelf, maar de tijd van inname voor de gebeurtenissen.</li></ul> |
 | `destination` | **(Vereist)** Informatie over de geëxporteerde gegevens:<ul><li>`datasetId`: **(Vereist)** De id van de gegevensset waarin gegevens moeten worden geëxporteerd.</li><li>`segmentPerBatch`: *(Optioneel)* Een Booleaanse waarde die, indien niet opgegeven, standaard &quot;false&quot; is. De waarde &quot;false&quot; exporteert alle segment-id&#39;s naar één batch-id. De waarde &quot;waar&quot; exporteert één segment-id naar één batch-id. Merk op dat het plaatsen van de waarde &quot;waar&quot;kan beïnvloeden partijuitvoerprestaties.</li></ul> |
 | `schema.name` | **(Vereist)** De naam van het schema dat is gekoppeld aan de gegevensset waarin gegevens moeten worden geëxporteerd. |
+| `evaluationInfo.segmentation` | *(Optioneel)* Een Booleaanse waarde die, indien niet opgegeven, standaard op `false`. Een waarde van `true` geeft aan dat segmentatie moet worden uitgevoerd op de exporttaak. |
 
 **Antwoord**
 
@@ -475,7 +479,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 
 ## Een specifieke exporttaak annuleren of verwijderen {#delete}
 
-U kunt verzoeken om de opgegeven exporttaak te verwijderen door een DELETE aanvraag in te dienen bij het `/export/jobs` eindpunt en de id op te geven van de exporttaak die u wilt verwijderen in het aanvraagpad.
+U kunt verzoeken om de opgegeven exporttaak te verwijderen door een DELETE-aanvraag in te dienen bij het `/export/jobs` eindpunt en de id op te geven van de exporttaak die u wilt verwijderen in het aanvraagpad.
 
 **API-indeling**
 
