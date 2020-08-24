@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Array, list en set-functies
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 2%
+source-wordcount: '734'
+ht-degree: 3%
 
 ---
 
 
 # Array, list en set-functies
 
-[!DNL Profile Query Language] (PQL) biedt functies om interactie met arrays, lijsten en tekenreeksen eenvoudiger te maken. Meer informatie over andere PQL-functies vindt u in het overzicht [Taal van](./overview.md)profielquery.
+[!DNL Profile Query Language] (PQL) biedt functies om interactie met arrays, lijsten en tekenreeksen eenvoudiger te maken. Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
 
 ## In
 
@@ -74,7 +74,7 @@ De volgende PQL-query definieert personen van wie de favoriete kleuren ten minst
 person.favoriteColors.intersects(["red", "blue", "green"])
 ```
 
-## Intersectie
+## Doorsnede
 
 De `intersection` functie wordt gebruikt om de gemeenschappelijke leden van twee series of lijsten te bepalen.
 
@@ -228,7 +228,7 @@ Met de volgende PQL-query wordt een nieuwe array met getallen gemaakt en wordt d
 numbers.map(square)
 ```
 
-## Eerste `n` in array
+## Eerste `n` in array {#first-n}
 
 De `topN` functie wordt gebruikt om de eerste `N` items in een array te retourneren, wanneer deze in oplopende volgorde worden gesorteerd op basis van de opgegeven numerieke expressie.
 
@@ -288,7 +288,7 @@ De `head` functie wordt gebruikt om het eerste item in de array of lijst te reto
 
 **Voorbeeld**
 
-De volgende vraag PQL keert eerste van de hoogste vijf orden met de hoogste prijs terug. Meer informatie over de `topN` functie vindt u in het [eerste gedeelte `n` van de array](#first-n-in-array) .
+De volgende vraag PQL keert eerste van de hoogste vijf orden met de hoogste prijs terug. Meer informatie over de `topN` functie vindt u in het [eerste gedeelte `n` van de array](#first-n) .
 
 ```sql
 orders.topN(price, 5).head()
