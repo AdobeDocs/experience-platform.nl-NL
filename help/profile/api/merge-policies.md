@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Beleid voor samenvoegen - Real-time klantprofiel-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 0309a2d6da888a2a88af161977310f213c36a85d
+source-git-commit: 2c83e282a7674ed6f36c8608035ddf19d88f0433
 workflow-type: tm+mt
-source-wordcount: '2381'
+source-wordcount: '2392'
 ht-degree: 0%
 
 ---
@@ -729,6 +729,8 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege 
 Nu u weet om samenvoegbeleid voor uw IMS Organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om publiekssegmenten van uw [!DNL Real-time Customer Profile] gegevens tot stand te brengen. Raadpleeg de documentatie [van de](../../segmentation/home.md) Adobe Experience Platform Segmentation Service om te beginnen met het definiëren en werken met segmenten.
 
 ## Aanhangsel
+
+Deze sectie verstrekt extra informatie met betrekking tot het werken met fusiebeleid.
 
 ### Aangepaste tijdstempels gebruiken {#custom-timestamps}
 
