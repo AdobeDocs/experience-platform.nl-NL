@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Segmentation Service
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 6%
+source-wordcount: '118'
+ht-degree: 7%
 
 ---
 
@@ -38,6 +38,7 @@ ht-degree: 6%
    - [Array, list en set-functies](pql/array-functions.md)
    - [Toewijzingsfuncties](pql/map-functions.md)
    - [Reeksfuncties](pql/string-functions.md)
+   - [Objectfuncties](pql/object-functions.md)
    - [Rekenkundige functies](pql/arithmetic-functions.md)
    - [Samenvoegingsfuncties](pql/aggregation-functions.md)
    - [Datum- en tijdfuncties](pql/datetime-functions.md)
