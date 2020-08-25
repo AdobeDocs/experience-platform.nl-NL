@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Hulplijnen voor recept- en laptopmigratie
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '3311'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Recente wijzigingen [!DNL Data Science Workspace] vereisen dat bestaande recepte
 
 ## [!DNL Spark] migratiegids {#spark-migration-guide}
 
-Het recept artefact dat door de bouwstijlstappen wordt geproduceerd is nu een beeld van de Docker dat uw .jar binair dossier bevat. Daarnaast is de syntaxis die wordt gebruikt voor het lezen en schrijven van gegevenssets met de [!DNL Platform] SDK gewijzigd. Hiervoor moet u de recept-code wijzigen.
+Het recept artefact dat door de bouwstijlstappen wordt geproduceerd is nu een beeld van de Docker dat uw .jar binair dossier bevat. Daarnaast is de syntaxis die wordt gebruikt voor het lezen en schrijven van gegevenssets met de [!DNL Platform] SDK gewijzigd en moet u de recept-code wijzigen.
 
 De volgende video is ontworpen om meer inzicht te krijgen in de wijzigingen die vereist zijn voor [!DNL Spark] recepten:
 
@@ -174,11 +174,11 @@ Als u een recept wilt maken, moet u eerst de zelfstudie over bronbestanden [in h
 
 Als u uw recept wilt maken met de gebruikersinterface, volgt u de zelfstudie voor het verpakken van een recept (UI) [voor het](./models-recipes/import-packaged-recipe-ui.md) importeren van Scala.
 
-Als u het recept wilt maken met de API, volgt u de zelfstudie [voor het verpakte recept (API)](./models-recipes/import-packaged-recipe-api.md) voor Scala.
+Als u uw recept wilt maken met de API, volgt u de zelfstudie [voor het verpakte recept (API)](./models-recipes/import-packaged-recipe-api.md) voor Scala.
 
 ## PySpark-migratiegids {#pyspark-migration-guide}
 
-Het recept artefact dat door de bouwstijlstappen wordt geproduceerd is nu een beeld van de Docker dat uw binair dossier .egg bevat. Daarnaast is de syntaxis die wordt gebruikt voor het lezen en schrijven van gegevenssets met de [!DNL Platform] SDK gewijzigd. Hiervoor moet u de recept-code wijzigen.
+Het recept artefact dat door de bouwstijlstappen wordt geproduceerd is nu een beeld van de Docker dat uw binair dossier .egg bevat. Daarnaast is de syntaxis die wordt gebruikt voor het lezen en schrijven van gegevenssets met de [!DNL Platform] SDK gewijzigd en moet u de recept-code wijzigen.
 
 De volgende video wordt ontworpen om in het begrijpen van de veranderingen verder te helpen die voor PySpark recepten worden vereist:
 
@@ -386,7 +386,7 @@ De volgende beelden benadrukken de verschillen in configuratie voor PySpark 2.3 
 
 ![config 3](./images/migration/pyspark-migration/2.4-config.png)
 
-## Maken van %dataset gebruiken {#magic}
+## Tovermagie %dataset gebruiken {#magic}
 
 Met de introductie van [!DNL Spark] 2.4 wordt `%dataset` aangepaste magie geleverd voor gebruik in nieuwe PySpark 3 ([!DNL Spark] 2.4) notebooks ([!DNL Python] 3 kernel).
 
@@ -769,6 +769,7 @@ De Scala-laptop ([!DNL Spark] 2.4) gebruikt de Scala-kernel die bij de installat
 >[!TIP]
 >
 >In Scala, kunt u gebruiken `sys.env()` om een waarde van binnen te verklaren en terug te keren `option`. Dit elimineert de behoefte om variabelen te bepalen als u weet zij slechts één keer zullen worden gebruikt. In het volgende voorbeeld wordt `val userToken` in het bovenstaande voorbeeld het voorbeeld inline gedeclareerd `option`:
+>
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
