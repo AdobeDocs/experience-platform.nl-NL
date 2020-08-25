@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe-gedefinieerde functies
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '287'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -54,7 +54,7 @@ FROM  (
 LIMIT 100;
 ```
 
-![Afbeelding](../images/queries/adobe-functions/sess-timeout.png)
+![Image](../images/queries/adobe-functions/sess-timeout.png)
 
 ### Een nieuw verouderd rapport maken met bezoekers, sessies en paginaweergaven
 
@@ -83,7 +83,7 @@ ORDER BY Day DESC
 LIMIT 31;
 ```
 
-![Afbeelding](../images/queries/adobe-functions/trended-report.png)
+![Image](../images/queries/adobe-functions/trended-report.png)
 
 ## Attributie
 
@@ -124,7 +124,7 @@ WHERE _ACP_YEAR=2018 AND _ACP_MONTH=4
 LIMIT 50;
 ```
 
-![Afbeelding](../images/queries/adobe-functions/row-level-attribution.png)
+![Image](../images/queries/adobe-functions/row-level-attribution.png)
 
 ### Een uitsplitsing van orders naar niveau van het laatste lid maken (eVar10)
 
@@ -148,7 +148,7 @@ ORDER BY MemberLevelOrders DESC
 LIMIT 25;
 ```
 
-![Afbeelding](../images/queries/adobe-functions/last-member-level.png)
+![Image](../images/queries/adobe-functions/last-member-level.png)
 
 ## Padcontrole
 
@@ -156,7 +156,7 @@ Met tekenen krijgt u meer inzicht in de manier waarop klanten door uw site navig
 
 **Syntaxis:**
 
-```
+```sql
 NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 ```
@@ -182,7 +182,7 @@ WHERE _ACP_YEAR=2018
 LIMIT 10;
 ```
 
-![Afbeelding](../images/queries/adobe-functions/select-current-page.png)
+![Image](../images/queries/adobe-functions/select-current-page.png)
 
 ### Maak bij het begin van de sessie een uitsplitsingsrapport voor de bovenste namen van vijf pagina&#39;s
 
@@ -239,11 +239,11 @@ LIMIT 10;
   LIMIT 100;
 ```
 
-![Afbeelding](../images/queries/adobe-functions/create-breakdown-report.png)
+![Image](../images/queries/adobe-functions/create-breakdown-report.png)
 
 ## Aanvullende bronnen
 
-De volgende video toont hoe te om vragen in de interface van het Adobe Experience Platform en in een cliënt in werking te stellen PSQL. Bovendien gebruikt de video ook voorbeelden met afzonderlijke eigenschappen in een XDM-object, met gebruik van door Adobe gedefinieerde functies en met gebruik van CREATE TABLE AS SELECT (CTAS).
+In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Platform-interface en in een PSQL-client. Bovendien gebruikt de video ook voorbeelden met afzonderlijke eigenschappen in een XDM-object, met gebruik van door Adobe gedefinieerde functies en met gebruik van CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
