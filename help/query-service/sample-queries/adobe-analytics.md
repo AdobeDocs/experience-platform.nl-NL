@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Voorbeeldquery's
 topic: queries
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Voorbeeldquery&#39;s voor Adobe Analytics-gegevens
 
-Gegevens uit geselecteerde Adobe Analytics-rapportsuites worden omgezet in XDM [!DNL ExperienceEvents] en als datasets voor u opgenomen in Adobe Experience Platform. Dit document schetst een aantal gebruiksgevallen waar het Adobe Experience Platform van deze gegevens gebruik [!DNL Query Service] maakt, en de inbegrepen steekproefvragen zouden met uw datasets van Adobe Analytics moeten werken. Zie de documentatie [van de het gebiedstoewijzing van](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics voor meer informatie over afbeelding aan XDM [!DNL ExperienceEvents].
+Gegevens uit geselecteerde Adobe Analytics-rapportsuites worden omgezet in XDM [!DNL ExperienceEvents] en worden opgenomen in Adobe Experience Platform als gegevenssets voor u. Dit document schetst een aantal gebruiksgevallen waarin Adobe Experience Platform van deze gegevens [!DNL Query Service] gebruik maakt, en de inbegrepen steekproefvragen zouden met uw datasets van Adobe Analytics moeten werken. Zie de documentatie [van de het gebiedstoewijzing van](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics voor meer informatie over afbeelding aan XDM [!DNL ExperienceEvents].
 
 ## Aan de slag
 
@@ -135,7 +135,7 @@ Hier zijn de gebieden XDM om tot de verkoop variabelen in uw [!DNL Analytics] da
 
 ### eVars
 
-```
+```console
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -143,7 +143,7 @@ Waar `[#]` is een arrayindex en `evar#` is de specifieke eVar-variabele.
 
 ### Aangepaste gebeurtenissen
 
-```
+```console
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
@@ -189,7 +189,7 @@ LIMIT 20
 
 De fout &quot;Geen dergelijk struct gebied&quot;wordt ontmoet wanneer u probeert om een gebied terug te winnen dat niet in uw huidige dataset bestaat. Evalueer de reden die in het foutenbericht is teruggekeerd om een beschikbaar gebied te identificeren dan uw vraag bij te werken en opnieuw te herhalen.
 
-```
+```console
 ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 ```
 
@@ -220,7 +220,7 @@ Hier zijn de gebieden XDM om de Syntaxis van de Omzetting in uw [!DNL Analytics]
 
 ### eVars
 
-```
+```console
 _experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -228,7 +228,7 @@ Waar `evar#` is de specifieke variabele eVar.
 
 ### Product
 
-```
+```console
 productListItems[#].sku
 ```
 
