@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Marketingacties
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 1%
@@ -37,7 +37,7 @@ GET /marketingActions/custom
 
 Met het volgende verzoek wordt een lijst opgehaald met aangepaste marketingacties die door uw organisatie worden onderhouden.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -124,7 +124,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 Met het volgende verzoek wordt een aangepaste marketingactie met de naam `combineData`opgehaald.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/combineData \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -174,7 +174,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 Met het volgende verzoek wordt een nieuwe marketingactie met de naam `crossSiteTargeting`gemaakt, op voorwaarde dat het systeem nog geen marketingactie met dezelfde naam uitvoert. Als een `crossSiteTargeting` marketing actie bestaat, werkt deze vraag in plaats daarvan die marketing actie bij die op de eigenschappen wordt gebaseerd die in de lading worden verstrekt.
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -190,7 +190,7 @@ curl -X PUT \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `name` | De naam van de marketingactie die moet worden gemaakt of bijgewerkt. <br><br>**BELANGRIJK **: Deze eigenschap moet overeenkomen met de waarde`{MARKETING_ACTION_NAME}`in het pad, anders treedt een HTTP 400-fout (Bad Request) op. Met andere woorden, wanneer een marketingactie is gemaakt, kan de`name`eigenschap ervan niet worden gewijzigd. |
+| `name` | De naam van de marketingactie die moet worden gemaakt of bijgewerkt. <br><br>**BELANGRIJK**: Deze eigenschap moet overeenkomen met de waarde `{MARKETING_ACTION_NAME}` in het pad, anders treedt een HTTP 400-fout (Bad Request) op. Met andere woorden, wanneer een marketingactie is gemaakt, kan de `name` eigenschap ervan niet worden gewijzigd. |
 | `description` | Een optionele beschrijving om de context van de marketingactie te verfijnen. |
 
 **Antwoord**
@@ -236,7 +236,7 @@ DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **Verzoek**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
