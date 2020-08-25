@@ -5,7 +5,7 @@ seo-title: Aan de slag met het Adobe Real-time Platform voor klantgegevens
 description: Het scenario van de steekproef voor het Platform van de Gegevens van de Klant van Adobe in real time
 seo-description: Het scenario van de steekproef voor het Platform van de Gegevens van de Klant van Adobe in real time
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Aan de slag met het Adobe Real-time Platform voor klantgegevens
 
-Deze gids aan de slag leidt u door een steekproefimplementatie van het Platform van de Gegevens van de Klant van de Adobe in real time (in real time CDP). U kunt dit als voorbeeld gebruiken wanneer u uw eigen implementatie instelt. Hoewel in deze handleiding specifieke voorbeelden worden gegeven, wordt er een koppeling gemaakt naar aanvullende informatie die u kunt gebruiken tijdens het maken van uw instellingen.
+Deze gids aan de slag leidt u door een steekproefimplementatie van het Platform van de Gegevens van de Klant van de Adobe in real time (in real time CDP). U kunt dit als voorbeeld gebruiken wanneer u uw eigen implementatie instelt. Hoewel in deze handleiding specifieke voorbeelden worden gegeven, wordt er een koppeling gemaakt naar aanvullende informatie die u kunt gebruiken tijdens het maken van de instellingen.
 
 Dit voorbeeld toont de macht van het Platform van de Gegevens van de Klant van de Adobe in real time, aangedreven door Adobe Experience Platform, aan:
 
@@ -55,7 +55,7 @@ Deze zelfstudie bevat de volgende stappen:
 1. Bouw het [klantenprofiel](#customer-profile).
 1. [Pas](#personalizing-the-user-experience) de gebruikerservaring aan.
 1. Gebruik [meerdere gegevensbronnen](#using-multiple-data-sources).
-1. [Configureer een gegevensbron](#configuring-a-data-source).
+1. [Een gegevensbron](#configuring-a-data-source)configureren.
 1. [Verzamel de gegevens](#bringing-the-data-together-for-a-specific-customer) voor een specifieke klant.
 1. Stel [segmenten](#segments)in.
 1. Stel [doelen](#destinations)in.
@@ -216,7 +216,7 @@ Het gegevenswetenschappelijk team van Luma heeft modellen gemaakt rond de koopkr
 
 Wijzig of creeer een segment dat karretoucheerders vertegenwoordigt die lijken bezig te zijn om een cadeau te kopen:
 
-```
+```sql
 Profile: Category != Preferred Category 
 AND 
 Product Size != Preferred Size 
