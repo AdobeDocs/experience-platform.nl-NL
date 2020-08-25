@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Help bij Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 3a0ef81980910cedcec69a2a53bcf270b8d12d00
+source-git-commit: 1fc0fbd2c278c5bec4bce6186ea870c9c1203c79
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '104'
 ht-degree: 13%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 13%
 * Uitvoeren {#implement}
    * [Producten](what-to-implement/commerce.md)
 * Oplossingsspecifieke overwegingen {#solutions}
-   * Analytics {#analytics}
+   * Analytics{#analytics}  
       * [Overzicht van analysemogelijkheden](solution-specific/analytics/analytics-overview.md)
       * [Variabelen handmatig toewijzen in Analytics](solution-specific/analytics/manually-mapping-variables.md)
       * [Automatisch toegewezen variabelen](solution-specific/analytics/automatically-mapped-vars.md)
@@ -47,3 +47,4 @@ ht-degree: 13%
    * [Bibliotheekgegevens ophalen](reference/retrieving-library-information.md)
 * [Releaseopmerkingen](release-notes.md)
 * [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Veelgestelde vragen over de SDK van Web](getting-started/web-sdk-faq.md)
