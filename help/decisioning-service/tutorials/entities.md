@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entiteiten van beslissingsservice beheren met behulp van API's
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '7207'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Beslissingsobjecten en -regels beheren met behulp van API&#39;s
 
-Dit document biedt een zelfstudie voor het werken met bedrijfsentiteiten van het [!DNL Decisioning Service] gebruik van Adobe Experience Platform-API&#39;s.
+Dit document biedt een zelfstudie voor het werken met de bedrijfsentiteiten van het [!DNL Decisioning Service] gebruik van Adobe Experience Platform API&#39;s.
 
 De zelfstudie bestaat uit twee onderdelen:
 
@@ -94,7 +94,7 @@ De lijst met toegankelijke containers wordt verkregen door het eindpunt &quot;/&
 
 ## Toegang tot containers beheren
 
-Een beheerder kan gelijkaardige principes, middelen, en toegangstoestemmingen in profielen groeperen. Dit vermindert de beheerslast en wordt gesteund door de Admin Console UI [van](https://adminconsole.adobe.com)Adobe. U moet een productbeheerder voor Adobe Experience Platform in uw organisatie zijn om profielen te creëren en gebruikers aan hen toe te wijzen.
+Een beheerder kan gelijkaardige principes, middelen, en toegangstoestemmingen in profielen groeperen. Dit vermindert de beheerslast en wordt gesteund door de Admin Console UI [van](https://adminconsole.adobe.com)Adobe. Als u profielen wilt maken en gebruikers wilt toewijzen, moet u in uw organisatie productbeheerder voor Adobe Experience Platform zijn.
 
 Het is voldoende om in één keer productprofielen te maken die overeenkomen met bepaalde machtigingen en vervolgens gebruikers aan die profielen toe te voegen. Profielen fungeren als groepen waaraan machtigingen zijn verleend en elke echte gebruiker of technische gebruiker in die groep neemt deze machtigingen over.
 
@@ -360,7 +360,7 @@ De lijst met geretourneerde instanties bevat de instanties waarvoor de expressie
 <br/>
 De eigenschap die met de opgegeven waarde moet worden vergeleken, wordt aangeduid als een pad. De afzonderlijke padcomponenten worden gescheiden door `.`, zoals: `_instance.xdm:prop1.xdm:prop1_1.xdm:prop1_1_1`<br/>
 
-Voor eigenschappen met tekenreeks, numerieke waarden of datum/tijd-waarden zijn de toegestane operatoren: `==`, `!=`, `<`, `<=`, `>` en `>=`. Voor eigenschappen met een tekenreekswaarde `~` kan bovendien een operator worden gebruikt. De `~` operator komt overeen met de opgegeven eigenschap volgens een reguliere expressie. De tekenreekswaarde van de eigenschap moet overeenkomen met de **gehele** expressie, anders worden de entiteiten in de gefilterde resultaten opgenomen. Wanneer u bijvoorbeeld ergens in de eigenschapswaarde naar de tekenreeks `cars` zoekt, moet de reguliere expressie zijn `.*cars.*`ingesteld. Zonder de regelafstand of nadering komen `.*`alleen entiteiten overeen met een eigenschapswaarde die respectievelijk begint of eindigt met `cars`. Voor de `~` operator is de vergelijking van lettertekens niet hoofdlettergevoelig. Voor alle andere operatoren is de vergelijking hoofdlettergevoelig.<br/><br/>
+Voor eigenschappen met tekenreeks, numerieke waarden of datum/tijd-waarden zijn de toegestane operatoren: `==`, `!=`, `<`, `<=`, `>` en `>=`. Voor eigenschappen met een tekenreekswaarde `~` kan bovendien een operator worden gebruikt. De `~` operator komt overeen met de opgegeven eigenschap volgens een reguliere expressie. De tekenreekswaarde van de eigenschap moet overeenkomen met de **gehele** expressie, anders worden de entiteiten in de gefilterde resultaten opgenomen. Wanneer u bijvoorbeeld naar de tekenreeks `cars` ergens binnen de eigenschapswaarde zoekt, moet de reguliere expressie zijn `.*cars.*`ingesteld. Zonder de regelafstand of nadering komen `.*`alleen entiteiten overeen met een eigenschapswaarde die respectievelijk begint of eindigt met `cars`. Voor de `~` operator is de vergelijking van lettertekens niet hoofdlettergevoelig. Voor alle andere operatoren is de vergelijking hoofdlettergevoelig.<br/><br/>
 Niet alleen instantie payload-eigenschappen kunnen in filterexpressies worden gebruikt. Omhulseleigenschappen worden op dezelfde manier vergeleken, bijvoorbeeld `property=repo:lastModifiedDate>=2019-02-23T16:30:00.000Z`. <br/>
 <br/>
 De `property` queryparameter kan worden herhaald, zodat er meerdere filtervoorwaarden worden toegepast, bijvoorbeeld om alle instanties te retourneren die het laatst na een bepaalde datum en voor een bepaalde datum zijn gewijzigd. Waarden in die expressies moeten URL-gecodeerd zijn. Als geen uitdrukking wordt gegeven en de naam van het bezit eenvoudig vermeld is zijn de punten die kwalificeren die een bezit met de bepaalde naam hebben.<br/>
@@ -528,7 +528,7 @@ Er zijn omstandigheden waarin meerdere clients proberen een instantie tegelijk b
 
 ### Instanties verwijderen
 
-Instanties kunnen met een DELETE worden verwijderd. Een client moet bij voorkeur de `Location` header of een HAL-koppeling gebruiken die het heeft ontvangen van een eerdere API-aanroep hiervoor als het volledige URL-pad. Als dit niet mogelijk is, kan de client de URL van de URL `containerId` en de fysieke `instanceId`.
+Instanties kunnen worden verwijderd met een aanroep van DELETE. Een client moet bij voorkeur de `Location` header of een HAL-koppeling gebruiken die het heeft ontvangen van een eerdere API-aanroep hiervoor als het volledige URL-pad. Als dit niet mogelijk is, kan de client de URL van de URL `containerId` en de fysieke `instanceId`.
 
 **Verzoek**
 
@@ -557,7 +557,7 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 } 
 ```
 
-Bij het ontvangen van een verwijderingsverzoek controleert de gegevensopslagruimte op andere instanties, van elk schema, nog steeds naar de instantie die moet worden verwijderd. In een gedistribueerd, hoogst beschikbaar systeem, kan de referentiële integriteit niet onmiddellijk worden gecontroleerd. Als er relaties met externe sleutels zijn gedefinieerd, worden controles asynchroon uitgevoerd. Dit leidt tot een enigszins vertraagde reactie op de uitkomst van het verwijderingsverzoek. Wanneer die controles worden uitgevoerd, omvat de directe reactie status 202 Geaccepteerd en een verbinding om het resultaat van de schrappingsverrichting in de `Location` kopbal te controleren. Een klant moet dan controleren of de koppeling tot resultaat heeft geleid.
+Bij het ontvangen van een verwijderingsverzoek controleert de gegevensopslagruimte op andere instanties, van elk schema, nog steeds naar de instantie die moet worden verwijderd. In een gedistribueerd, hoogst beschikbaar systeem, kan de referentiële integriteit niet onmiddellijk worden gecontroleerd. Als er relaties met externe sleutels zijn gedefinieerd, worden controles asynchroon uitgevoerd. Dit leidt tot een enigszins vertraagde reactie op de uitkomst van het verwijderingsverzoek. Wanneer die controles worden uitgevoerd, omvat de directe reactie status 202 Geaccepteerd en een verbinding om het resultaat van de schrappingsverrichting in de `Location` kopbal te controleren. Een klant moet dan controleren of die koppeling het resultaat oplevert.
 
 Als een instantie wordt gevonden die verwijst naar de instantie die wordt verwijderd, is het resultaat een afwijzing van de verwijderingsbewerking. Als er geen andere verwijzingen naar externe sleutels worden gevonden, wordt het verwijderen voltooid. Als het resultaat nog niet is besloten, geeft het antwoord aan dat nog eens 202 geaccepteerde reacties met dezelfde `Location` koptekst zijn ontvangen en wordt de klant gevraagd om te blijven controleren. Wanneer het resultaat wordt bepaald, zal de reactie erop wijzen dat met een 200 Ok status en de lading van de reactie het resultaat van het originele schrappingsverzoek zal bevatten. De 200 Ok-reactie betekent alleen dat het resultaat bekend is en de responsinstantie zal de bevestiging of afwijzing van het verwijderingsverzoek bevatten.
 
@@ -707,7 +707,7 @@ Een voorbeeld van PATCH-bewerking op een aanbiedingsinstantie laat zien hoe u de
 ]' 
 ```
 
-Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige syntaxis cURL. De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer` of `https://ns.adobe.com/experience/offer-management/fallback-offer` als de aanbieding een reserveaanbieding is.
+Zie [Bijwerken en patchen voor de volledige cURL-syntaxis](#updating-and-patching-instances) . De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer` of `https://ns.adobe.com/experience/offer-management/fallback-offer` als de aanbieding een reserveaanbieding is.
 
 De PATCH-bewerking kan mislukken als er `xdm:representations` nog geen eigenschap is. In dat geval kan de bovenstaande add-bewerking worden voorafgegaan door een andere add-bewerking die de `xdm:representations` array maakt of de enkele add-bewerking stelt de array rechtstreeks in.
 De schema&#39;s en eigenschappen die worden beschreven worden gebruikt voor alle aanbiedingstypes, verpersoonlijkingsaanbiedingen evenals reserveaanbiedingen. De volgende twee secties over beperkingen en besluitvormingsregels verklaren aspecten van verpersoonlijkingsaanbiedingen.
@@ -737,7 +737,7 @@ Het veranderen van een kalenderbeperking kan met de volgende vraag van de PATCH 
 ]' 
 ```
 
-Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige syntaxis cURL. De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer`. Voor alternatieven gelden geen beperkingen.
+Zie [Bijwerken en patchen voor de volledige cURL-syntaxis](#updating-and-patching-instances) . De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer`. Voor alternatieven gelden geen beperkingen.
 
 ### Beperkingen voor plafonds
 
@@ -761,7 +761,7 @@ Het plaatsen van of het veranderen van de het maximum beperking op een verpersoo
 ]' 
 ```
 
-Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige syntaxis cURL. De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer`. Voor alternatieven gelden geen beperkingen.
+Zie [Bijwerken en patchen voor de volledige cURL-syntaxis](#updating-and-patching-instances) . De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer`. Voor alternatieven gelden geen beperkingen.
 
 Als u de plafondwaarden wilt verwijderen, wordt de bewerking &quot;add&quot; vervangen door de bewerking &quot;remove&quot;. De plafondwaarden bestaan afzonderlijk en kunnen ook afzonderlijk worden ingesteld of verwijderd.
 
@@ -775,7 +775,7 @@ De verwijzing naar de regel is ingesloten in de eigenschap `xdm:selectionConstra
 
 Het toevoegen en schrappen van een regel kan ook met een verrichting van de PATCH worden verwezenlijkt:
 
-```
+```json
 [
   {
     "op":   "replace",
@@ -815,15 +815,15 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]'
 ```
 
-Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige syntaxis cURL. De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer`. Voor alternatieven zijn geen ranking-eigenschappen beschikbaar.
+Zie [Bijwerken en patchen voor de volledige cURL-syntaxis](#updating-and-patching-instances) . De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/personalized-offer`. Voor alternatieven zijn geen ranking-eigenschappen beschikbaar.
 
-## Besluitvormingsregels beheren
+## Regels voor het beheer van besluiten
 
 De subsidiabiliteitsregels bevatten de voorwaarden die worden beoordeeld om te bepalen of een bepaalde beslissingsoptie in aanmerking komt voor een bepaald profiel. Het vastmaken van een regel aan één of meerdere besluitvormingsopties bepaalt impliciet dat voor deze optie de regel aan waar voor de optie moet evalueren die voor deze gebruiker moet worden overwogen. De regel kan tests op profielattributen bevatten, uitdrukkingen evalueren die ervaringsgebeurtenissen voor dit profiel impliceren, en kan contextgegevens omvatten die tot het besluitverzoek werden overgegaan. Een voorwaarde kan bijvoorbeeld als volgt worden beschreven:
 
 > &quot;Inclusief personen die de status van elite hebben en in de laatste zes maanden driemaal hebben gevlogen op een vlucht met het vluchtnummer van de huidige vlucht.&quot;
 
-De instanties worden gemaakt met schema-idhttps://ns.adobe.com/experience/offer-management/eligibility-rule. De `_instance` eigenschap voor de aanroep van het bestand create of update ziet er als volgt uit:
+De instanties worden gemaakt met schema-idhttps://ns.adobe.com/experience/offer-management/eligibility-rule. De `_instance` eigenschap voor de aanroep van het maken of bijwerken ziet er als volgt uit:
 
 ```json
 {
@@ -842,7 +842,7 @@ De instanties worden gemaakt met schema-idhttps://ns.adobe.com/experience/offer-
 }
 ```
 
-Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige syntaxis cURL. De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/eligibility-rule`.
+Zie [Bijwerken en patchen voor de volledige cURL-syntaxis](#updating-and-patching-instances) . De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/eligibility-rule`.
 
 De waarde in het de voorwaardeigenschap van de regel bevat een uitdrukking PQL. Naar de contextgegevens wordt verwezen via de speciale padexpressie @{schemaID}.
 
@@ -863,7 +863,7 @@ Tags zijn eenvoudige instanties die instanties kunnen bieden. Het zijn op zichze
 
 De voorwerpen van de markering dienen om een categorisering onder besluitvormingsopties (aanbiedingen) te vestigen. Een tag kan door veel aanbiedingen worden gekoppeld en een aanbieding kan veel tagverwijzingen bevatten. Een categorie aanbiedingen wordt vastgesteld door te verwijzen naar alle aanbiedingen die betrekking hebben op een bepaalde set taginstanties.
 
-De taginstanties worden gemaakt met de schema-idhttps://ns.adobe.com/experience/offer-management/tag. De `_instance` eigenschap voor de aanroep van het bestand create of update ziet er als volgt uit:
+De taginstanties worden gemaakt met de schema-idhttps://ns.adobe.com/experience/offer-management/tag. De `_instance` eigenschap voor de aanroep van het maken of bijwerken ziet er als volgt uit:
 
 ```json
 {
@@ -871,7 +871,7 @@ De taginstanties worden gemaakt met de schema-idhttps://ns.adobe.com/experience/
 } 
 ```
 
-Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige syntaxis cURL. De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/tag`.
+Zie [Bijwerken en patchen voor de volledige cURL-syntaxis](#updating-and-patching-instances) . De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/tag`.
 
 
 Een aanbiedingsinstantie kan worden gemaakt met de lijst met tagreferenties, zoals:
@@ -917,7 +917,7 @@ De filterinstanties worden gemaakt met schema-idhttps://ns.adobe.com/experience/
 }
 ```
 
-Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige syntaxis cURL. De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/offer-filter`.
+Zie [Bijwerken en patchen voor de volledige cURL-syntaxis](#updating-and-patching-instances) . De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/offer-filter`.
 
 - **`xdm:filterType`** - Deze eigenschap geeft aan of het filter is ingesteld met tags of met verwijzingen die rechtstreeks door de id&#39;s worden aangeboden. Wanneer het filter is ingesteld om tags te gebruiken, kan het filtertype verder aangeven of alle tags moeten overeenkomen met de tags in een bepaalde aanbieding of of dat een van de opgegeven tags voldoende is om voor het filter in aanmerking te komen. De geldige waarden voor deze enum-eigenschap zijn:
    - `offers`
@@ -949,7 +949,7 @@ De volgende vraag illustreert hoe het `_instance` bezit voor creeert of updatevr
 
 Een aanbiedingsactiviteit wordt gebruikt om het besluitvormingsproces te controleren. Het specificeert het aanbiedingsfilter dat op de totale inventaris wordt toegepast om aanbiedingen door onderwerp/categorie te versmallen, de plaatsing om de inventaris aan die aanbiedingen te versmallen die in de gereserveerde ruimte passen en specificeert een reserveoptie als de gecombineerde beperkingen alle beschikbare verpersoonlijkingsopties (aanbiedingen) onbruikbaar maken.
 
-De activity-instanties worden gemaakt met schema-id`https://ns.adobe.com/experience/offer-management/offer-activity`. De `_instance` eigenschap voor de aanroep van het bestand create of update ziet er als volgt uit:
+De activity-instanties worden gemaakt met schema-id`https://ns.adobe.com/experience/offer-management/offer-activity`. De `_instance` eigenschap voor de aanroep van het maken of bijwerken ziet er als volgt uit:
 
 ```json
 {
@@ -963,7 +963,7 @@ De activity-instanties worden gemaakt met schema-id`https://ns.adobe.com/experie
 }
 ```
 
-Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige syntaxis cURL. De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/offer-activity`.
+Zie [Bijwerken en patchen voor de volledige cURL-syntaxis](#updating-and-patching-instances) . De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/offer-activity`.
 
 - **`xdm:name`** - Deze verplichte eigenschap bevat de naam van de activiteit. De naam wordt getoond in diverse gebruikersinterfaces.
 - **`xdm:status`** - Deze eigenschap wordt gebruikt voor levenscyclusbeheer van de instantie. De waarde vertegenwoordigt een werkstroomstatus die wordt gebruikt om aan te geven of de activiteit nog in opbouw is (waarde = concept), algemeen door de runtime kan worden beschouwd (waarde = live) of dat deze niet langer mag worden gebruikt (waarde = gearchiveerd).
@@ -994,5 +994,5 @@ Voordat activiteiteninstanties kunnen worden gemaakt, moet er een fallback-aanbi
 }  
 ```
 
-Zie [](#updating-and-patching-instances) Bijwerken en patchen voor de volledige syntaxis cURL. De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/fallback-offer`.
+Zie [Bijwerken en patchen voor de volledige cURL-syntaxis](#updating-and-patching-instances) . De `schemaId` parameter moet zijn `https://ns.adobe.com/experience/offer-management/fallback-offer`.
 
