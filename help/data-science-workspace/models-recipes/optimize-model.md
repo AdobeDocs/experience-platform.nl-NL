@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een model optimaliseren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 0%
@@ -95,7 +95,7 @@ De aangepaste beoordelaar kan worden opgegeven door de interface van `MLEvaluato
 
 Wanneer het in het recept is gedefinieerd, is de volgende stap het in de recepten toelaten. Dit wordt gedaan in het [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) - dossier in de `resources` omslag van het project. Hier `evaluation.class` `Evaluator` wordt de klasse ingesteld die in `Evaluator.scala`
 
-```properties
+```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
@@ -109,9 +109,9 @@ Vanaf nu zijn er geen standaardevaluatiemetriek voor [!DNL Python] of [!DNL Tens
 
 Voor de metriek van de douaneevaluatie, zijn er twee belangrijkste methodes die voor de beoordelaar moeten worden uitgevoerd: `split()` en `evaluate()`.
 
-Deze methoden worden bijvoorbeeld gedefinieerd in [!DNL Python]beoordelator.py [voor de](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) `Evaluator` klasse. Volg de [koppeling beoordelaar.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) voor een voorbeeld van de `Evaluator`.
+Deze methoden worden bijvoorbeeld gedefinieerd in [!DNL Python]beoordelator.py [voor de](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) `Evaluator` klasse. Volg de koppeling [beoordelaar.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) voor een voorbeeld van de `Evaluator`code.
 
-Het creëren van evaluatiemetriek binnen [!DNL Python] vereist de gebruiker om de `evaluate()` en de `split()` methodes uit te voeren.
+Het creëren van evaluatiemetriek binnen [!DNL Python] vereist de gebruiker om de `evaluate()` en `split()` methodes uit te voeren.
 
 De `evaluate()` methode retourneert het metrische object dat een array van metrische objecten met eigenschappen van `name`, `value`en `valueType`.
 
