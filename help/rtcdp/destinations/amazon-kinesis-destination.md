@@ -5,7 +5,7 @@ seo-title: Amazon Kinesis-bestemming
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
 seo-description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -76,7 +76,7 @@ Zie Profielen en segmenten [activeren naar een doel](/help/rtcdp/destinations/ac
 
 De geëxporteerde [!DNL Experience Platform] gegevens worden in JSON- [!DNL Amazon Kinesis] indeling opgeslagen. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn ECID en e-mail.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
