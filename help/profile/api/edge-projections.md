@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Edge-projecties - Real-time API voor klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Edge-projectieconfiguraties en eindpunten van doelen
 
-Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in real time te drijven, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe Experience Platform maakt deze realtime toegang tot gegevens mogelijk via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Bijvoorbeeld, gebruiken de toepassingen van de Adobe zoals Adobe Target en Adobe Campaign randen om gepersonaliseerde klantenervaringen in real time te verstrekken. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Deze handleiding bevat gedetailleerde instructies voor het gebruik van de [!DNL Real-time Customer Profile] API voor het werken met randprojecties, inclusief doelen en configuraties.
+Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in real time te drijven, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe Experience Platform biedt realtime toegang tot gegevens via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Bijvoorbeeld, gebruiken de toepassingen van de Adobe zoals Adobe Target en Adobe Campaign randen om gepersonaliseerde klantenervaringen in real time te verstrekken. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Deze handleiding bevat gedetailleerde instructies voor het gebruik van de [!DNL Real-time Customer Profile] API voor het werken met randprojecties, inclusief doelen en configuraties.
 
 ## Aan de slag
 
@@ -171,7 +171,7 @@ Een geslaagde reactie retourneert de details van het nieuwe randdoel, inclusief 
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `self.href` | Dit pad wordt gebruikt om de bestemming rechtstreeks op te zoeken (GET) en kan ook worden gebruikt voor het bijwerken (PUT) of het verwijderen (DELETE) van de bestemming. |
+| `self.href` | Deze weg wordt gebruikt aan raadpleging (GET) de bestemming direct en kan ook voor het bijwerken (PUT) of het schrappen (DELETE) van de bestemming worden gebruikt. |
 | `id` | De alleen-lezen, door het systeem gegenereerde unieke id voor de bestemming. Deze id wordt gebruikt om rechtstreeks naar de bestemming te verwijzen en wanneer het creëren van projectieconfiguraties. |
 | `version` | Deze alleen-lezen waarde toont de huidige versie van het doel. Wanneer een doel wordt bijgewerkt, wordt het versienummer automatisch verhoogd. |
 
@@ -231,7 +231,7 @@ Een bestaande bestemming kan worden bijgewerkt door een verzoek van de PUT aan h
 
 **API-indeling**
 
-```
+```http
 PUT /config/destinations/{DESTINATION_ID}
 ```
 
@@ -292,14 +292,14 @@ De reactie omvat de bijgewerkte details voor de bestemming, met inbegrip van zij
 
 ### Een doel verwijderen
 
-Als uw organisatie niet meer een projectiebestemming vereist, kan het worden geschrapt door een DELETE verzoek aan het `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming te doen die u wenst om in de verzoekweg te schrappen.
+Als uw organisatie niet meer een projectiebestemming vereist, kan het worden geschrapt door een verzoek van DELETE aan het `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming te doen die u wenst om in de verzoekweg te schrappen.
 
 >[!CAUTION]
 >De API-reactie op het verwijderingsverzoek is onmiddellijk, maar de werkelijke wijzigingen in de gegevens aan de randen worden asynchroon uitgevoerd. Met andere woorden, de profielgegevens worden verwijderd van alle randen (de `dataCenters` opgegeven randen in de projectiebestemming), maar het proces duurt even voordat het is voltooid.
 
 **API-indeling**
 
-```
+```http
 DELETE /config/destinations/{DESTINATION_ID}
 ```
 
