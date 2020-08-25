@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Beleid
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
@@ -52,7 +52,7 @@ In het onderstaande voorbeeldverzoek wordt een marketingactie geëvalueerd op de
 >
 >Let op de `AND` en `OR` operatoren in uw beleidsexpressies. In het onderstaande voorbeeld zou de marketingactie, als een van beide labels (`C1` of `C3`) alleen in het verzoek was verschenen, dit beleid niet hebben geschonden. Het vergt beide etiketten (`C1` en `C3`) om het geschonden beleid terug te keren. Zorg ervoor dat u het beleid zorgvuldig evalueert en dat u met gelijke zorg beleidsuitdrukkingen definieert.
 
-```sh
+```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -140,7 +140,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 Het volgende verzoek voert de `crossSiteTargeting` marketing actie tegen een reeks drie datasets uit om voor om het even welke beleidsschendingen te evalueren.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -166,7 +166,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `entityType` | Het type entiteit waarvan id wordt aangegeven in de eigenschap sibling `entityId` . Momenteel is de enige toegestane waarde `dataSet`. |
+| `entityType` | Het type entiteit waarvan id wordt vermeld in de eigenschap sibling `entityId` . Momenteel is de enige toegestane waarde `dataSet`. |
 | `entityId` | De id van een dataset om de marketingactie tegen te testen. Een lijst van datasets en hun overeenkomstige IDs kan worden verkregen door een verzoek van de GET tot het `/dataSets` eindpunt in [!DNL Catalog Service] API te richten. Zie de handleiding bij [ [!DNL Catalog] objecten](../../catalog/api/list-objects.md) weergeven voor meer informatie. |
 
 **Antwoord**
@@ -371,7 +371,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 In het volgende verzoek wordt de marketingactie getest `crossSiteTargeting` op een specifieke set velden die tot drie gegevenssets behoren. De nuttige lading is gelijkaardig aan een [evaluatieverzoek die slechts datasets](#datasets)impliceert, toevoegend specifieke gebieden voor elke dataset om etiketten van te verzamelen.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -414,7 +414,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `entityType` | Het type entiteit waarvan id wordt aangegeven in de eigenschap sibling `entityId` . Momenteel is de enige toegestane waarde `dataSet`. |
+| `entityType` | Het type entiteit waarvan id wordt vermeld in de eigenschap sibling `entityId` . Momenteel is de enige toegestane waarde `dataSet`. |
 | `entityId` | De id van een dataset waarvan gebieden tegen de marketing actie moeten worden geëvalueerd. Een lijst van datasets en hun overeenkomstige IDs kan worden verkregen door een verzoek van de GET tot het `/dataSets` eindpunt in [!DNL Catalog Service] API te richten. Zie de handleiding bij [ [!DNL Catalog] objecten](../../catalog/api/list-objects.md) weergeven voor meer informatie. |
 | `entityMeta.fields` | Een array van paden naar specifieke velden binnen het schema van de gegevensset, opgegeven in de vorm van JSON-aanwijzertekenreeksen. Zie de sectie over [JSON-aanwijzer](../../landing/api-fundamentals.md#json-pointer) in de handleiding API-basisbeginselen voor meer informatie over de geaccepteerde syntaxis voor deze tekenreeksen. |
 
@@ -540,7 +540,7 @@ De lading van een bulkevaluatieverzoek zou een serie van voorwerpen moeten zijn;
 >
 >Als een vermelde evaluatietaak zowel een `entityList` als een `labels` array bevat, treedt er een fout op. Als u dezelfde marketingactie wilt evalueren op basis van zowel gegevenssets als labels, moet u afzonderlijke evaluatietaken voor die marketingactie opnemen.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -580,8 +580,8 @@ curl -X POST \
 | --- | --- |
 | `evalRef` | De URI van de marketingactie voor het testen op labels of gegevenssets voor beleidsovertredingen. |
 | `includeDraft` | Door gebrek, slechts neemt het toegelaten beleid aan evaluatie deel. Als `includeDraft` deze optie is ingesteld `true`, wordt ook deelgenomen aan beleid dat in `DRAFT` status verkeert. |
-| `labels` | Een array met labels voor gegevensgebruik waarmee de marketingactie wordt getest.<br><br>**BELANGRIJK **: Wanneer u deze eigenschap gebruikt, mag een`entityList`eigenschap NIET in hetzelfde object worden opgenomen. Als u dezelfde marketingactie wilt evalueren met behulp van gegevenssets en/of velden, moet u een afzonderlijk object in de aanvraaglading opnemen dat een`entityList`array bevat. |
-| `entityList` | Een serie van datasets en (facultatief) specifieke gebieden binnen die datasets om de marketing actie tegen te testen.<br><br>**BELANGRIJK **: Wanneer u deze eigenschap gebruikt, mag een`labels`eigenschap NIET in hetzelfde object worden opgenomen. Als u dezelfde marketingactie wilt evalueren met gebruik van specifieke labels voor gegevensgebruik, moet u een afzonderlijk object in de payload van de aanvraag opnemen dat een`labels`array bevat. |
+| `labels` | Een array met labels voor gegevensgebruik waarmee de marketingactie wordt getest.<br><br>**BELANGRIJK**: Wanneer u deze eigenschap gebruikt, mag een `entityList` eigenschap NIET in hetzelfde object worden opgenomen. Als u dezelfde marketingactie wilt evalueren met behulp van gegevenssets en/of velden, moet u een afzonderlijk object in de aanvraaglading opnemen dat een `entityList` array bevat. |
+| `entityList` | Een serie van datasets en (facultatief) specifieke gebieden binnen die datasets om de marketing actie tegen te testen.<br><br>**BELANGRIJK**: Wanneer u deze eigenschap gebruikt, mag een `labels` eigenschap NIET in hetzelfde object worden opgenomen. Als u dezelfde marketingactie wilt evalueren met gebruik van specifieke labels voor gegevensgebruik, moet u een afzonderlijk object in de payload van de aanvraag opnemen dat een `labels` array bevat. |
 | `entityType` | Het type entiteit waarop de marketingactie moet worden getest. Momenteel wordt alleen `dataSet` ondersteund. |
 | `entityId` | De id van een dataset om de marketingactie tegen te testen. |
 | `entityMeta.fields` | (Optioneel) Een lijst met specifieke velden in de gegevensset waarop de marketingactie moet worden getest. |
