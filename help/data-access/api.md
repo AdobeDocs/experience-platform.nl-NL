@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van gegevenstoegang
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Handleiding voor ontwikkelaars van gegevenstoegang
 
-De API van de Toegang van Gegevens steunt Adobe Experience Platform door gebruikers van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van opgenomen datasets binnen wordt geconcentreerd [!DNL Experience Platform].
+De API van de Toegang van Gegevens steunt Adobe Experience Platform door gebruikers van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen wordt geconcentreerd [!DNL Experience Platform].
 
 ![Toegang tot gegevens op Experience Platform](images/Data_Access_Experience_Platform.png)
 
@@ -232,9 +232,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 **Antwoord**
 
-```
-Contents of the file
-```
+`Contents of the file`
 
 ## Aanvullende codevoorbeelden
 
