@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verbinding maken met streaming doelen en gegevens activeren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: dce9a7040ad25d5bb08de95fce7655f1fec7c226
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 0%
@@ -85,7 +85,7 @@ GET /connectionSpecs
 
 **Verzoek**
 
-```
+```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
 --header 'accept: application/json' \
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -135,7 +135,7 @@ POST /connections
 
 **Verzoek**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -175,7 +175,7 @@ POST /sourceConnections
 
 **Verzoek**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -230,7 +230,7 @@ POST /connections
 
 **Verzoek**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -289,7 +289,7 @@ POST /targetConnections
 
 **Verzoek**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -407,7 +407,7 @@ PATCH /flows
 
 **Verzoek**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -491,7 +491,7 @@ GET /flows
 
 **Verzoek**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -508,7 +508,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 De geretourneerde reactie moet in de `transformations` parameter de segmenten en profielkenmerken bevatten die u in de vorige stap hebt verzonden. Een voorbeeldparameter in de reactie kan er als volgt uitzien: `transformations`
 
-```
+```json
 "transformations": [
     {
         "name": "GeneralTransform",
@@ -554,7 +554,7 @@ De geretourneerde reactie moet in de `transformations` parameter de segmenten en
 >
 > Naast de profielkenmerken en de segmenten in de stap Gegevens [activeren naar uw nieuwe bestemming](#activate-data), bevatten de geëxporteerde gegevens in [!DNL AWS Kinesis] en [!DNL Azure Event Hubs] ook informatie over het identiteitskaart. Dit geeft de identiteiten van de geëxporteerde profielen aan (bijvoorbeeld [ECID](https://docs.adobe.com/content/help/en/id-service/using/intro/id-request.html), mobiele id, Google-id, e-mailadres, enz.). Zie een voorbeeld hieronder.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
