@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SQL-syntaxis
 topic: syntax
 translation-type: tm+mt
-source-git-commit: a10508770a862621403bad94c14db4529051020c
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1973'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 De volgende syntaxis definieert een `SELECT` query die wordt ondersteund door [!DNL Query Service]:
 
-```
+```sql
 [ WITH with_query [, ...] ]
 SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ * | expression [ [ AS ] output_name ] [, ...] ]
@@ -37,7 +37,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
 
 waarbij `from_item` een van de volgende kan worden gebruikt:
 
-```
+```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
     [ LATERAL ] ( select ) [ AS ] alias [ ( column_alias [, ...] ) ]
     with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -46,7 +46,7 @@ table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
 
 en `grouping_element` kan een van de volgende zijn:
 
-```
+```sql
 ( )
     expression
     ( expression [, ...] )
@@ -57,7 +57,7 @@ en `grouping_element` kan een van de volgende zijn:
 
 en `with_query` is:
 
-```
+```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
  
 TABLE [ ONLY ] table_name [ * ]
@@ -67,7 +67,7 @@ TABLE [ ONLY ] table_name [ * ]
 
 Het sleutelwoord ILIKE kan in plaats van LIKE worden gebruikt om gelijken op WAAR clausule van de UITGEZOCHTE vraag ongevoelig te maken.
 
-```
+```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
 ```
 
@@ -80,7 +80,7 @@ De logica van de clausules LIKE en ILIKE is als volgt:
 
 #### Voorbeeld
 
-```
+```sql
 SELECT * FROM Customers
 WHERE CustomerName ILIKE 'a%';
 ```
@@ -91,7 +91,7 @@ Keert klanten met namen terug die in &quot;A&quot;of &quot;a&quot;beginnen.
 
 Een `SELECT` query die gebruikmaakt van verbindingen heeft de volgende syntaxis:
 
-```
+```sql
 SELECT statement
 FROM statement
 [JOIN | INNER JOIN | LEFT JOIN | LEFT OUTER JOIN | RIGHT JOIN | RIGHT OUTER JOIN | FULL JOIN | FULL OUTER JOIN]
@@ -103,7 +103,7 @@ ON join condition
 
 De `UNION`, `INTERSECT`, en de `EXCEPT` clausules worden gesteund om als rijen van twee of meer lijsten te combineren of uit te sluiten:
 
-```
+```sql
 SELECT statement 1
 [UNION | UNION ALL | UNION DISTINCT | INTERSECT | EXCEPT | MINUS]
 SELECT statement 2
@@ -113,7 +113,7 @@ SELECT statement 2
 
 De volgende syntaxis definieert een `CREATE TABLE AS SELECT` (CTAS)-query die wordt ondersteund door [!DNL Query Service]:
 
-```
+```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
 ```
 
@@ -124,7 +124,7 @@ en `select_query` is een `SELECT` instructie waarvan de syntaxis hierboven in di
 
 ### Voorbeeld
 
-```
+```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 ```
@@ -138,7 +138,7 @@ Houd er rekening mee dat voor een bepaalde CTAS-query:
 
 De volgende syntaxis definieert een `INSERT INTO` query die wordt ondersteund door [!DNL Query Service]:
 
-```
+```sql
 INSERT INTO table_name select_query
 ```
 
@@ -146,7 +146,7 @@ waarbij `select_query` een `SELECT` instructie is waarvan de syntaxis hierboven 
 
 ### Voorbeeld
 
-```
+```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 ```
 
@@ -159,7 +159,7 @@ Houd er rekening mee dat voor een bepaalde INSERT INTO-query:
 
 Zet een tabel neer en verwijder de map die aan de tabel is gekoppeld uit het bestandssysteem als dit geen EXTERNE tabel is. Als de te laten vallen tabel niet bestaat, treedt een uitzondering op.
 
-```
+```sql
 DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 ```
 
@@ -172,7 +172,7 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 De volgende syntaxis definieert een `CREATE VIEW` query die wordt ondersteund door [!DNL Query Service]:
 
-```
+```sql
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
 ```
 
@@ -180,7 +180,7 @@ Waar `view_name` is de naam van de weergave die moet worden gemaakt en `select_q
 
 Voorbeeld:
 
-```
+```sql
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
@@ -189,7 +189,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 De volgende syntaxis definieert een `DROP VIEW` query die wordt ondersteund door [!DNL Query Service]:
 
-```
+```sql
 DROP VIEW [IF EXISTS] view_name
 ```
 
@@ -197,7 +197,7 @@ Waar `view_name` is de naam van de weergave die moet worden verwijderd
 
 Voorbeeld:
 
-```
+```sql
 DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
@@ -208,7 +208,7 @@ DROP VIEW IF EXISTS v1
 
 Stel een eigenschap in, retourneer de waarde van een bestaande eigenschap of vermeld alle bestaande eigenschappen. Als een waarde wordt opgegeven voor een bestaande eigenschapsleutel, wordt de oude waarde overschreven.
 
-```
+```sql
 SET property_key [ To | =] property_value
 ```
 
@@ -220,7 +220,7 @@ Als u de waarde voor een instelling wilt retourneren, gebruikt u `SHOW [setting 
 
 Dit bevel wordt ontleed en het voltooide bevel wordt teruggestuurd naar de cliënt. Dit is het zelfde als het `START TRANSACTION` bevel.
 
-```
+```sql
 BEGIN [ TRANSACTION ]
 ```
 
@@ -232,7 +232,7 @@ BEGIN [ TRANSACTION ]
 
 `CLOSE` bevrijdt de middelen verbonden aan een open curseur. Nadat de cursor is gesloten, zijn er geen verdere bewerkingen meer toegestaan. Een cursor moet worden gesloten wanneer deze niet meer nodig is.
 
-```
+```sql
 CLOSE { name }
 ```
 
@@ -244,7 +244,7 @@ CLOSE { name }
 
 Er wordt geen actie ondernomen [!DNL Query Service] als reactie op de instructie commit transaction.
 
-```
+```sql
 COMMIT [ WORK | TRANSACTION ]
 ```
 
@@ -255,9 +255,9 @@ COMMIT [ WORK | TRANSACTION ]
 
 ### VERWIJDEREN
 
-Gebruik deze methode `DEALLOCATE` om een eerder voorbereide SQL-instructie te zoeken. Als u een voorbereide instructie niet expliciet zoekt, wordt de toewijzing ongedaan gemaakt wanneer de sessie wordt beëindigd.
+Gebruik deze optie `DEALLOCATE` om een eerder voorbereide SQL-instructie te zoeken. Als u een voorbereide instructie niet expliciet zoekt, wordt de toewijzing ongedaan gemaakt wanneer de sessie wordt beëindigd.
 
-```
+```sql
 DEALLOCATE [ PREPARE ] { name | ALL }
 ```
 
@@ -271,7 +271,7 @@ DEALLOCATE [ PREPARE ] { name | ALL }
 
 `DECLARE` Hiermee kan een gebruiker cursors maken die kunnen worden gebruikt om een klein aantal rijen tegelijk op te halen uit een grotere query. Nadat de cursor is gemaakt, worden er rijen van opgehaald met `FETCH`.
 
-```
+```sql
 DECLARE name CURSOR [ WITH  HOLD ] FOR query
 ```
 
@@ -287,7 +287,7 @@ DECLARE name CURSOR [ WITH  HOLD ] FOR query
 
 Als de `PREPARE` verklaring die tot de verklaring leidde sommige parameters specificeerde, moet een compatibele reeks parameters tot de `EXECUTE` verklaring worden overgegaan, anders wordt een fout opgeheven. Let op: instructies die zijn voorbereid (anders dan functies) worden niet overbelast op basis van het type of het aantal parameters. De naam van een voorbereide instructie moet uniek zijn binnen een databasesessie.
 
-```
+```sql
 EXECUTE name [ ( parameter [, ...] ) ]
 ```
 
@@ -304,7 +304,7 @@ Het meest kritieke deel van de vertoning is de geschatte kosten van de verklarin
 
 De `ANALYZE` optie zorgt ervoor dat de instructie wordt uitgevoerd, niet alleen gepland. Dan, worden de daadwerkelijke runtime statistieken toegevoegd aan de vertoning, met inbegrip van de totale verstreken tijd die binnen elke planknoop (in milliseconden) wordt uitgegeven en het totale aantal rijen het teruggekeerde. Dit is nuttig om te zien of de ramingen van de planner dicht bij de realiteit staan.
 
-```
+```sql
 EXPLAIN [ ( option [, ...] ) ] statement
 EXPLAIN [ ANALYZE ] statement
 
@@ -328,7 +328,7 @@ where option can be one of:
 
 Om het plan voor een eenvoudige vraag op een lijst met één enkele `integer` kolom en 10000 rijen te tonen:
 
-```
+```sql
 EXPLAIN SELECT * FROM foo;
 
                        QUERY PLAN
@@ -343,7 +343,7 @@ EXPLAIN SELECT * FROM foo;
 
 Een cursor heeft een bijbehorende positie, die wordt gebruikt door `FETCH`. De cursorpositie kan vóór de eerste rij van het vraagresultaat, op om het even welke bepaalde rij van het resultaat, of na de laatste rij van het resultaat zijn. Wanneer u een cursor maakt, wordt deze vóór de eerste rij geplaatst. Na het halen van sommige rijen, wordt de curseur geplaatst op de rij onlangs teruggewonnen. Als de cursor aan het einde van de beschikbare rijen `FETCH` loopt, wordt deze na de laatste rij geplaatst. Als er geen dergelijke rij is, wordt een leeg resultaat geretourneerd en worden de cursors vóór de eerste rij of na de laatste rij geplaatst, al naargelang wat van toepassing is.
 
-```
+```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
@@ -362,21 +362,21 @@ Bereide instructies gelden alleen voor de duur van de huidige databasesessie. Wa
 
 Bereide instructies hebben mogelijk het grootste prestatievoordeel wanneer één sessie wordt gebruikt om een groot aantal vergelijkbare instructies uit te voeren. Het prestatiesverschil is met name significant als de verklaringen complex zijn om te plannen of te herschrijven, bijvoorbeeld als de vraag zich bij vele lijsten impliceert of de toepassing van verscheidene regels vereist. Als de verklaring vrij eenvoudig is om te plannen en te herschrijven maar vrij duur om uit te voeren, is het prestatievoordeel van voorbereide verklaringen minder merkbaar.
 
-```
+```sql
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
 #### Parameters
 
 - `name`: Een willekeurige naam die aan deze bepaalde voorbereide instructie wordt gegeven. Deze moet uniek zijn binnen één sessie en wordt vervolgens gebruikt om een eerder voorbereide instructie uit te voeren of te distribueren.
-- `data-type`: Het gegevenstype van een parameter voor de voorbereide instructie. Wanneer het gegevenstype van een bepaalde parameter niet is opgegeven of als onbekend is opgegeven, wordt dit afgeleid van de context waarin de parameter voor het eerst wordt genoemd. Gebruik $1, $2 enzovoort om naar de parameters in de voorbereide instructie zelf te verwijzen.
+- `data-type`: Het gegevenstype van een parameter voor de voorbereide instructie. Wanneer het gegevenstype van een bepaalde parameter niet is opgegeven of als onbekend is opgegeven, wordt dit afgeleid van de context waarin de parameter voor het eerst wordt genoemd. Als u naar de parameters in de voorbereide instructie zelf wilt verwijzen, gebruikt u $1, $2 enzovoort.
 
 
 ### ROLLBACK
 
 `ROLLBACK` rolt terug de huidige transactie en veroorzaakt alle updates die door de transactie worden gemaakt om worden verworpen.
 
-```
+```sql
 ROLLBACK [ WORK ]
 ```
 
@@ -388,7 +388,7 @@ ROLLBACK [ WORK ]
 
 `SELECT INTO` Hiermee maakt u een nieuwe tabel en vult u deze met gegevens die door een query zijn berekend. De gegevens worden niet aan de client geretourneerd, zoals bij een normale waarde `SELECT`. De kolommen van de nieuwe lijst hebben de namen en de gegevenstypes verbonden aan de outputkolommen van `SELECT`.
 
-```
+```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
 SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     * | expression [ [ AS ] output_name ] [, ...]
@@ -416,7 +416,7 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 Een nieuwe tabel maken die alleen recente items uit de tabel `films_recent` bevat `films`:
 
-```
+```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 ```
 
@@ -424,7 +424,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 `SHOW` geeft de huidige instelling van runtimeparameters weer. Deze variabelen kunnen worden geplaatst gebruikend de `SET` verklaring, door het postgresql.conf configuratiedossier, door de `PGOPTIONS` milieuvariabele (wanneer het gebruiken van libpq of een libpq-Gebaseerde toepassing), of door bevel-lijn vlaggen te bewerken wanneer het beginnen van de postgres server.
 
-```
+```sql
 SHOW name
 ```
 
@@ -442,7 +442,7 @@ SHOW name
 
 Huidige instelling van parameter weergeven `DateStyle`
 
-```
+```sql
 SHOW DateStyle;
  DateStyle
 -----------
@@ -454,7 +454,7 @@ SHOW DateStyle;
 
 Dit bevel wordt ontleed en verzendt het voltooide bevel terug naar cliënt. Dit is het zelfde als het `BEGIN` bevel.
 
-```
+```sql
 START TRANSACTION [ transaction_mode [, ...] ]
 
 where transaction_mode is one of:
@@ -467,7 +467,7 @@ where transaction_mode is one of:
 
 Deze opdracht plaatst de uitvoer van een SELECT-query naar een opgegeven locatie. Deze opdracht is alleen succesvol als de gebruiker toegang heeft tot deze locatie.
 
-```
+```sql
 COPY  query
     TO '%scratch_space%/folder_location'
     [  WITH FORMAT 'format_name']
