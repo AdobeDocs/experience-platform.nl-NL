@@ -5,7 +5,7 @@ title: Gebruikershandleiding voor JupyterLab
 topic: Overview
 description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '3684'
 ht-degree: 10%
@@ -43,7 +43,7 @@ In de volgende lijst worden enkele functies beschreven die uniek zijn voor Jupyt
 Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform]. De integratie van [!DNL JupyterLab] op [!DNL Platform] als ingebedde winde staat het toe om met andere [!DNL Platform] diensten in wisselwerking te staan, toelatend u om [!DNL Platform] aan zijn volledig potentieel te gebruiken. De volgende [!DNL Platform] services zijn beschikbaar in [!DNL JupyterLab]:
 
 * **[!DNL Catalog Service]:** Toegang tot en verken gegevenssets met lees- en schrijffuncties.
-* **[!DNL Query Service]:** Toegang tot en verken gegevenssets met SQL, waardoor u lagere gegevenstoegangsoverheadkosten krijgt wanneer u met grote hoeveelheden gegevens werkt.
+* **[!DNL Query Service]:** Toegang tot en verken gegevenssets met SQL, waardoor u lagere gegevenstoegangsoverheadkosten krijgt wanneer u te maken hebt met grote hoeveelheden gegevens.
 * **[!DNL Sensei ML Framework]:** Modelontwikkeling met de mogelijkheid om gegevens op te leiden en te scoren, en het maken van recept met één klik.
 * **[!DNL Experience Data Model (XDM)]:** Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. [Het Model van Gegevens van de ervaring (XDM)](https://www.adobe.com/go/xdm-home-en), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
 
@@ -606,6 +606,7 @@ timedf.show()
 >
 >
 >In Scala, kunt u gebruiken `sys.env()` om een waarde van binnen te verklaren en terug te keren `option`. Dit elimineert de behoefte om variabelen te bepalen als u weet zij slechts één keer zullen worden gebruikt. In het volgende voorbeeld wordt uit het bovenstaande voorbeeld `val userToken` het voorbeeld opgehaald en inline gedeclareerd `option` als alternatief:
+>
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
