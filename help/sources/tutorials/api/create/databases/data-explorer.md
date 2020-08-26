@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Azure Data Explorer-aansluiting maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 0%
@@ -15,15 +15,16 @@ ht-degree: 0%
 # Een [!DNL Azure Data Explorer] aansluiting maken met de [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >De [!DNL Azure Data Explorer] connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-[!DNL Flow Service] wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
 In deze zelfstudie wordt de [!DNL Flow Service] API gebruikt om u door de stappen te laten lopen waarmee u verbinding wilt maken [!DNL Azure Data Explorer] (hierna &quot;Data Explorer&quot; genoemd) [!DNL Experience Platform].
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
 * [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
@@ -51,7 +52,7 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle E[!DNL xperience Platform] API-aanroepen, zoals hieronder wordt getoond:
+Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle E[!DNL xperience Platform] API-aanroepen, zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -118,7 +119,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
 ```json
 {
