@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creeer HP Vertica bronschakelaar in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Creeer een [!DNL Vertica] bronschakelaar van HP in UI
 
 >[!NOTE]
+>
 > De [!DNL Vertica] schakelaar van HP is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het creëren van een [!DNL Vertica] bronschakelaar van HP gebruikend het [!DNL Platform] gebruikersinterface.
