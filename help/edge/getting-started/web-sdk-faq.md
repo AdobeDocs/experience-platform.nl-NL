@@ -4,7 +4,7 @@ seo-title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Veelgestelde vragen over Adobe Experience Platform Web SDK
 seo-description: Veelgestelde vragen over Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 87669db063781750097057463536723274eb0b4f
+source-git-commit: 8cd9c52acd981c92d3959e12d91ebb65b2c3cec8
 workflow-type: tm+mt
 source-wordcount: '1684'
 ht-degree: 1%
@@ -48,7 +48,7 @@ Er is momenteel ook geen JavaScript-bibliotheek die gegevens rechtstreeks naar A
 
 ### Met Adobe Experience Platform Web SDK
 
-De nieuwe Web SDK verzendt gegevens voor de volgende oplossingen naar één enkele bestemming (het Netwerk van de Rand van AEP) en lost voor de gemeenschappelijkste bovengenoemde gevallen van het oplossingsgebruik op.
+De nieuwe SDK van het Web verzendt gegevens voor de volgende oplossingen naar één enkele bestemming (het Netwerk van de Rand van AEP) en lost voor de gemeenschappelijkste bovengenoemde gevallen van het oplossingsgebruik op.
 
 * Adobe Analytics
 * Adobe Audience Manager
