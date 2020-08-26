@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Google AdWords-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 25f4589ff1f4fa11f3cd5b96c11731577949b5b0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
@@ -15,9 +15,10 @@ ht-degree: 0%
 # [!DNL Google AdWords] connector
 
 >[!NOTE]
+>
 >De [!DNL Google AdWords] connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Met Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
 [!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Tot de steun voor reclamebureaus behoren [!DNL Google AdWords].
 
