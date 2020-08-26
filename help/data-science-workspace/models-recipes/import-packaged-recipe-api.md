@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een verpakt recept (API) importeren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 In deze zelfstudie wordt de zelfstudie gebruikt [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) om een [engine](../api/engines.md)te maken die ook wel een recept in de gebruikersinterface wordt genoemd.
 
-Voordat u aan de slag gaat, is het belangrijk om te weten dat Adobe Experience Platform verschillende termen [!DNL Data Science Workspace] gebruikt om naar vergelijkbare elementen in de API en de UI te verwijzen. De API-termen worden in deze zelfstudie gebruikt en in de volgende tabel worden de corresponderende termen beschreven:
+Voordat u aan de slag gaat, is het belangrijk om te weten dat Adobe Experience Platform verschillende termen [!DNL Data Science Workspace] gebruikt om te verwijzen naar vergelijkbare elementen in de API en de gebruikersinterface. De API-termen worden in deze zelfstudie gebruikt en in de volgende tabel worden de corresponderende termen beschreven:
 
 | UI-term | API-term |
 | ---- | ---- |
@@ -35,11 +35,11 @@ Voor deze zelfstudie is een Recipe-bestand in het pakket vereist in de vorm van 
 
 - `{DOCKER_URL}`: Een adres URL aan een beeld van de Dokker van de intelligente dienst.
 
-Deze zelfstudie vereist dat u de zelfstudie [Verificatie naar Adobe Experience Platform hebt voltooid](../../tutorials/authentication.md) om aanroepen naar API&#39; [!DNL Platform] s te kunnen uitvoeren. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Deze zelfstudie vereist dat u de zelfstudie [](../../tutorials/authentication.md) Verificatie bij Adobe Experience Platform hebt voltooid om oproepen naar API&#39; [!DNL Platform] s te kunnen uitvoeren. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
 - `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.
 - `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
-- `{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.
+- `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.
 
 ## Een engine maken
 
@@ -50,6 +50,7 @@ De motoren kunnen worden gecreeerd door een verzoek van de POST aan het /engines
 Als u een engine wilt maken met een pakketbestand Recipe dat is opgeslagen in een Docker-container, moet u de docker-URL opgeven voor het pakketbestand Recipe.
 
 >[!CAUTION]
+>
 > Gebruik de onderstaande aanvraag als u [!DNL Python] of R gebruikt. Als u PySpark of Scala gebruikt, gebruik het PySpark/Scala- verzoekvoorbeeld dat onder het Python/R voorbeeld wordt gevestigd.
 
 **API-indeling**
