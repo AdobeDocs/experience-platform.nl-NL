@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een recept maken met Jupyter-laptops
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 0%
@@ -25,12 +25,11 @@ Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst maakt u een model v
 
 ## Aan de slag met de [!DNL JupyterLab] laptopomgeving
 
-U kunt een geheel nieuw recept maken [!DNL Data Science Workspace]. Navigeer naar het [Adobe Experience Platform](https://platform.adobe.com) en klik op het tabblad **[!UICONTROL Laptops]** aan de linkerkant. Maak een nieuw notebook door de Recipe Builder-sjabloon te selecteren in het [!DNL JupyterLab Launcher]dialoogvenster.
+U kunt een geheel nieuw recept maken [!DNL Data Science Workspace]. Navigeer naar [Adobe Experience Platform](https://platform.adobe.com) en klik links op het tabblad **[!UICONTROL Laptops]** . Maak een nieuw notebook door de Recipe Builder-sjabloon te selecteren in het [!DNL JupyterLab Launcher]dialoogvenster.
 
 Met de [!UICONTROL Recipe Builder] -laptop kunt u trainingen en scoring uitvoeren in de laptop. Dit geeft u de flexibiliteit om veranderingen in hun `train()` en `score()` methodes tussen het runnen van experimenten op de opleiding en het scoren gegevens aan te brengen. Als u tevreden bent met de resultaten van de training en scoring, kunt u een recept maken dat u kunt gebruiken voor het [!DNL Data Science Workspace] gebruik van de laptop om de in de Recipe Builder-laptop ingebouwde functionaliteit voor recept te verkrijgen.
 
 >[!NOTE]
->
 >
 >De Recipe Builder-laptop biedt ondersteuning voor het werken met alle bestandsindelingen, maar momenteel wordt de functie Ontvanger maken alleen ondersteund [!DNL Python].
 
@@ -78,7 +77,6 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->
 >Bibliotheken of specifieke versies die u toevoegt, zijn mogelijk niet compatibel met de bovenstaande bibliotheken.
 
 ### Configuratiebestanden {#configuration-files}
@@ -96,7 +94,7 @@ Om dataset en schema IDs te vinden, ga naar het Lusje van Gegevens binnen notiti
 
 ![](../images/jupyterlab/create-recipe/datasets.png)
 
-Dezelfde informatie vindt u op het [Adobe Experience Platform](https://platform.adobe.com/) onder de tabbladen **[Schema](https://platform.adobe.com/schema)**en**[Datasets](https://platform.adobe.com/dataset/overview)** .
+Dezelfde informatie vindt u op [Adobe Experience Platform](https://platform.adobe.com/) onder de tabbladen **[Schema](https://platform.adobe.com/schema)** en **[Datasets](https://platform.adobe.com/dataset/overview)** .
 
 Standaard worden de volgende configuratieparameters voor u ingesteld wanneer u toegang krijgt tot gegevens:
 
@@ -121,7 +119,6 @@ In deze stap wordt het dataframe van de [pandas gebruikt](https://pandas.pydata.
 - [Externe bronnen](#external-sources)
 
 >[!NOTE]
->
 >
 >In de Recipe Builder-laptop worden gegevens geladen via de `platform_sdk` gegevenslader.
 
@@ -153,7 +150,6 @@ Uw gegevens bevinden zich nu in het dataframe-object en kunnen in de [volgende s
 
 >[!CAUTION]
 >
->
 > `data_access_sdk_python` wordt niet meer aanbevolen. Zie [Gegevenstoegangscode converteren naar Platform SDK](../authoring/platform-sdk.md) voor een handleiding over het gebruik van de `platform_sdk` gegevenslader.
 
 Gebruikers kunnen gegevens laden met de SDK voor gegevenstoegang. De bibliotheek kan boven aan de pagina worden geïmporteerd door de volgende regel op te nemen:
@@ -172,7 +168,6 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->
 >
 >Zoals vermeld in de sectie [van het Dossier van de](#configuration-files)Configuratie, worden de volgende configuratieparameters geplaatst voor u wanneer u tot gegevens van toegang hebt [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
@@ -304,7 +299,6 @@ Het `pipeline.py` bestand bevat logica voor training en scoring.
 Het doel van opleiding is een model te creëren gebruikend eigenschappen en etiketten in uw opleidingsdataset.
 
 >[!NOTE]
->
 > 
 >_Functies_ verwijzen naar de invoervariabele die door het model voor machinaal leren wordt gebruikt om de _labels_ te voorspellen.
 
@@ -376,7 +370,7 @@ Het `evaluator.py` bestand bevat logica voor de manier waarop u uw getrainde rec
 
 De fase van de gegevensvoorbereiding voor opleiding vereist opsplitsing van de gegevensset die voor opleiding en tests moet worden gebruikt. Deze `val` gegevens worden impliciet gebruikt om het model te evalueren nadat het is opgeleid. Dit proces staat los van scoring.
 
-In deze sectie wordt de functie weergegeven die `split()` eerst gegevens in de laptop laadt en worden de gegevens vervolgens opgeschoond door niet-verwante kolommen uit de gegevensset te verwijderen. Vanaf dat punt kunt u functietechniek uitvoeren. Dit is het proces om aanvullende relevante functies te maken op basis van bestaande onbewerkte functies in de gegevens. Een voorbeeld van dit proces is hieronder samen met een verklaring te zien.
+In deze sectie wordt de functie weergegeven die `split()` eerst gegevens in de laptop laadt, en vervolgens worden de gegevens opgeschoond door niet-verwante kolommen uit de gegevensset te verwijderen. Vanaf dat punt kunt u functietechniek uitvoeren. Dit is het proces om aanvullende relevante functies te maken op basis van bestaande onbewerkte functies in de gegevens. Een voorbeeld van dit proces is hieronder samen met een verklaring te zien.
 
 De `split()` functie wordt hieronder weergegeven. Het dataframe dat in het argument wordt opgegeven, wordt gesplitst naar de te retourneren variabelen `train` `val` en variabelen.
 
@@ -471,7 +465,7 @@ Nadat u op de knop hebt gedrukt, wordt u gevraagd een naam voor het recept in te
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Als u op **[!UICONTROL OK]** drukt, kunt u naar het nieuwe recept navigeren op [Adobe Experience Platform](https://platform.adobe.com/). U kunt op de **[!UICONTROL knoop van Ontvangers]** van de Mening klikken om u aan het **[!UICONTROL Ontvangt]** lusje onder de Modellen van **[!UICONTROL ML te nemen]**
+Als je op **[!UICONTROL OK]** drukt, kun je naar het nieuwe recept op [Adobe Experience Platform](https://platform.adobe.com/)navigeren. U kunt op de **[!UICONTROL knoop van Ontvangers]** van de Mening klikken om u aan het **[!UICONTROL Ontvangt]** lusje onder de Modellen van **[!UICONTROL ML te nemen]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
