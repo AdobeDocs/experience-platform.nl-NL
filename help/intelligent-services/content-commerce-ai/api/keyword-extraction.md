@@ -5,7 +5,7 @@ title: Kleurextractie
 topic: Developer guide
 description: De service voor het uitnemen van trefwoorden extraheert bij een tekstdocument automatisch trefwoorden of trefwoorden die het onderwerp van het document het best beschrijven. Voor het uitpakken van trefwoorden wordt een combinatie van algoritmen voor herkenning van benoemde entiteit (NER) en zonder toezicht gebruikt voor het extraheren van trefwoorden.
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 2%
@@ -84,7 +84,8 @@ Zie de tabel onder de voorbeeldlading voor meer informatie over de getoonde inpu
 
 >[!CAUTION]
 >
->`analyzer_id` bepaalt welke [!DNL Sensei Content Framework] wordt gebruikt. Controleer of je de juiste gegevens hebt `analyzer_id` voordat je een aanvraag indient. Voor de dienst van de sleutelwoordextractie is `analyzer_id` identiteitskaart: `Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
+>`analyzer_id` bepaalt welke [!DNL Sensei Content Framework] wordt gebruikt. Controleer of je de juiste gegevens hebt `analyzer_id` voordat je een aanvraag indient. Voor de dienst van de sleutelwoordextractie is `analyzer_id` identiteitskaart:
+>`Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
