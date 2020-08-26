@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Meldingen voor stroomuitvoering
 topic: overview
 translation-type: tm+mt
-source-git-commit: b5b785d8415c15e3acb9e1155811a66c51477717
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 0%
@@ -27,7 +27,7 @@ In dit document worden stappen beschreven voor het abonneren op gebeurtenissen, 
 
 Voor dit document is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
-* [[!DNL -ervaringsgegevensmodel (XDM)-systeem]](../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
 * [[!DNL Real-time klantprofiel]](../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL Adobe Experience Platform-gegevensinvoer]](../ingestion/home.md): [!DNL Data Ingestion] vertegenwoordigt de veelvoudige methodes waardoor gegevens uit deze bronnen [!DNL Platform] opnemen, evenals hoe die gegevens binnen [!DNL Data Lake] voor gebruik door stroomafwaartse [!DNL Platform] diensten worden voortgeduurd.
 
@@ -44,6 +44,7 @@ Als u meldingen wilt ontvangen over de status van uw workflow, moet u een webhaa
 Nadat u een unieke URL voor de webhaak hebt verkregen, gaat u naar [Adobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events.html) en volgt u de stappen in het document met [gegevensinvoer](../ingestion/quality/subscribe-events.md) om u te abonneren op gebeurtenissen.
 
 >[!IMPORTANT]
+>
 >Zorg tijdens het abonnementsproces dat u [!DNL Platform] meldingen selecteert als gebeurtenisprovider en selecteer de volgende gebeurtenisabonnementen:
 >
 >* **[!UICONTROL Experience Platform Source&#39;s Flow Run geslaagd]**
@@ -60,6 +61,7 @@ Als uw webhaak is aangesloten en uw gebeurtenisabonnement is voltooid, kunt u me
 Een melding retourneert informatie zoals het aantal taken dat wordt uitgevoerd, de bestandsgrootte en fouten. Een bericht keert ook een lading terug verbonden aan uw stroom in formaat JSON in werking stelt. De antwoordlading kan als `sources_flow_run_success` of `sources_flow_run_failure`worden geclassificeerd.
 
 >[!IMPORTANT]
+>
 >Als gedeeltelijke ingestie tijdens het proces van de stroomverwezenlijking wordt toegelaten, zal een stroom die zowel succesvolle als ontbroken ingesties bevat `sources_flow_run_success` slechts worden gemerkt als het aantal fouten onder het foutendrempelpercentage is dat tijdens het proces van de stroomverwezenlijking wordt geplaatst. Als een geslaagde flowuitvoering fouten bevat, worden deze fouten nog steeds opgenomen in de geretourneerde lading.
 
 ### Succes
@@ -322,6 +324,7 @@ De volgende reactie is een voorbeeld van een mislukte stroomuitvoering, waarbij 
 | `fileInfo` | Een URL die leidt tot een overzicht van de dossiers die met succes en zonder succes werden opgenomen. |
 
 >[!NOTE]
+>
 >Zie de [bijlage](#errors) voor meer informatie over foutenmeldingen.
 
 ## Volgende stappen
