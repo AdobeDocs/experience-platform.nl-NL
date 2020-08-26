@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Bronbestanden in een recept plaatsen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Het maken van recept begint met het verpakken van bronbestanden om een archiefbe
 
 Met een Docker-afbeelding kan een ontwikkelaar een toepassing verpakken met alle benodigde onderdelen, zoals bibliotheken en andere afhankelijkheden, en deze als één pakket verzenden.
 
-De ingebouwde afbeelding van de Docker wordt geduwd aan het Azure Registratie van de Container gebruikend geloofsbrieven die aan u tijdens de het creatieve werkschema van het recept worden geleverd.
+De ingebouwde afbeelding van de Docker wordt geduwd aan de Azure Registratie van de Container gebruikend geloofsbrieven die aan u tijdens de het creatieve werkschema van het recept worden geleverd.
 
 Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com)om uw Azure Container Registry-referenties te verkrijgen. Navigeer in de linkernavigatiekolom naar **[!UICONTROL Workflows]**. Selecteer Recipe **[!UICONTROL importeren]** , gevolgd door **[!UICONTROL Starten]**. Zie de schermafbeelding hieronder ter referentie.
 
@@ -49,9 +49,11 @@ De pagina *Configureren* wordt geopend. Geef een geschikte *recept-naam* op, bij
 Selecteer de juiste *runtime* en kies een **[!UICONTROL classificatie]** voor *Type*. Uw Azure Container Registry-referenties worden gegenereerd zodra dit is voltooid.
 
 >[!NOTE]
->*Type *is het leerprobleem van de machine waarvoor het recept is ontworpen en wordt na training gebruikt om de trainingsrun op maat te maken of te evalueren.
+>
+>*Type* is het leerprobleem van de machine waarvoor het recept is ontworpen en wordt na training gebruikt om de trainingsrun op maat te maken of te evalueren.
 
 >[!TIP]
+>
 >- Selecteer voor [!DNL Python] recepten de **[!UICONTROL Python]** -runtime.
 >- Selecteer voor R-recepten de **[!UICONTROL R]** -runtime.
 >- Voor PySpark-recepten selecteert u de **[!UICONTROL PySpark]** -runtime. Een artefacttype dat automatisch wordt gevuld.
@@ -63,6 +65,7 @@ Selecteer de juiste *runtime* en kies een **[!UICONTROL classificatie]** voor *T
 Maak een notitie van de waarden voor *Docker Host*, *Gebruikersnaam* en *Wachtwoord*. Deze worden gebruikt om uw [!DNL Docker] afbeelding samen te stellen en te duwen in de hieronder beschreven workflows.
 
 >[!NOTE]
+>
 >De bron-URL wordt opgegeven nadat de hieronder beschreven stappen zijn uitgevoerd. Het configuratiebestand wordt uitgelegd in volgende zelfstudies in de [volgende stappen](#next-steps).
 
 ### De bronbestanden verpakken
@@ -180,6 +183,7 @@ Navigeer vervolgens naar de map `experience-platform-dsw-reference/recipes/scala
 ```
 
 >[!TIP]
+>
 >Als u een machtigingsfout ontvangt wanneer u zich probeert aan te melden bij Docker met behulp van het `login.sh` script, probeert u de opdracht `bash login.sh`.
 
 Wanneer het uitvoeren van het login manuscript, moet u de gastheer van het Docker, gebruikersbenaming, en wachtwoord verstrekken. Tijdens het bouwen, moet u de gastheer van de Dokker en een versietag voor de bouwstijl verstrekken.
