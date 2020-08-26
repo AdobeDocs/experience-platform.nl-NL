@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Muziek openen in Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1028'
 ht-degree: 0%
@@ -61,6 +61,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 Een geslaagde reactie retourneert een lading die een batch-id-object bevat. In dit voorbeeld is de waarde Key voor het geretourneerde object de batch-id `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieer de batch-id die u wilt gebruiken in de volgende API-aanroep.
 
 >[!NOTE]
+>
 > In de volgende reactie is het `tags` object gereed voor leesbaarheid.
 
 ```json
