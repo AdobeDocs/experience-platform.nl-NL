@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Motoren
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 0%
@@ -44,7 +44,6 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 Een succesvolle reactie keert een nuttige lading terug die de details van uw registratie van de Dokker met inbegrip van de Docker URL (`host`), gebruikersbenaming (`username`), en wachtwoord (`password`) bevat.
 
 >[!NOTE]
->
 >
 >Het wachtwoord van de Docker verandert telkens wanneer uw `{ACCESS_TOKEN}` wordt bijgewerkt.
 
@@ -172,7 +171,7 @@ Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe 
 
 ## Creeer een motor van de eigenschappijpleiding gebruikend de Url van de Doker {#feature-pipeline-docker}
 
-U kunt een motor van de eigenschappijpleiding tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van zijn meta-gegevens en een Dok URL die verwijzingen een beeld van het Dokker.
+U kunt een Motor van de eigenschappijpleiding tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van zijn meta-gegevens en een Dok URL die verwijzingen een beeld van het Dokker.
 
 **API-indeling**
 
@@ -474,7 +473,7 @@ Een succesvolle reactie keert een lading terug die de bijgewerkte details van de
 
 ## Een engine verwijderen
 
-U kunt een Motor schrappen door een DELETE verzoek uit te voeren terwijl het specificeren van identiteitskaart van de doelmotor in de verzoekweg. Als een engine wordt verwijderd, worden alle MLInstances die naar die engine verwijzen, met inbegrip van alle experimenten en experimentele tests die tot die MLInstances behoren, trapsgewijs verwijderd.
+U kunt een Motor schrappen door een verzoek van DELETE uit te voeren terwijl het specificeren van identiteitskaart van de doelmotor in de verzoekweg. Als een engine wordt verwijderd, worden alle MLInstances die naar die engine verwijzen, met inbegrip van alle experimenten en experimentele tests die tot die MLInstances behoren, trapsgewijs verwijderd.
 
 **API-indeling**
 
