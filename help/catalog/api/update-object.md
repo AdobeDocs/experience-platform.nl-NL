@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een object bijwerken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 1%
@@ -21,7 +21,7 @@ U kunt een deel van een [!DNL Catalog] object bijwerken door de id ervan op te n
 
 >[!NOTE]
 >
->PATCH-bewerkingen op een object kunnen de uitbreidbare velden van het object, die onderling verwante objecten vertegenwoordigen, niet wijzigen.  Wijzigingen in onderling verwante objecten moeten rechtstreeks worden aangebracht.
+>PATCH-bewerkingen op een object kunnen de uitbreidbare velden van het object, die onderling verwante objecten vertegenwoordigen, niet wijzigen. Wijzigingen in onderling verwante objecten moeten rechtstreeks worden aangebracht.
 
 ## Bijwerken met velden
 
