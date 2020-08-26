@@ -5,7 +5,7 @@ description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 4%
@@ -28,7 +28,7 @@ alloy("configure", {
 });
 ```
 
-Er zijn vele opties die tijdens configuratie kunnen worden geplaatst. Alle opties vindt u hieronder, gegroepeerd op categorie.
+Er zijn vele opties die tijdens configuratie kunnen worden geplaatst. Alle opties zijn hieronder te vinden, gegroepeerd op categorie.
 
 ## Algemene opties
 
@@ -107,9 +107,9 @@ Plaats dit om callback te vormen die voor elke gebeurtenis vlak alvorens het wor
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
-| Object | Nee | `{"general": "in"}` |
+| Object | Nee | `"in"` |
 
-Hiermee stelt u de standaardtoestemming van de gebruiker in. Dit wordt gebruikt wanneer er geen voorkeur voor toestemming reeds voor de gebruiker wordt bewaard. De andere geldige waarde is `{"general": "pending"}`. Wanneer deze is ingesteld, wordt het werk in de wachtrij geplaatst totdat de gebruiker voorkeuren voor toestemming heeft ingesteld. Nadat de voorkeuren van de gebruiker zijn opgegeven, gaat het werk door of wordt het afgebroken op basis van de voorkeuren van de gebruiker. Zie [Ondersteunende toestemming](supporting-consent.md) voor meer informatie.
+Hiermee stelt u de standaardtoestemming van de gebruiker in. Dit wordt gebruikt wanneer er geen voorkeur voor toestemming reeds voor de gebruiker wordt bewaard. De andere geldige waarde is `"pending"`. Wanneer deze is ingesteld, wordt het werk in de wachtrij geplaatst totdat de gebruiker voorkeuren voor toestemming heeft ingesteld. Nadat de voorkeuren van de gebruiker zijn opgegeven, gaat het werk door of wordt het afgebroken op basis van de voorkeuren van de gebruiker. Zie [Ondersteunende toestemming](supporting-consent.md) voor meer informatie.
 
 ## Persoonlijke opties
 
