@@ -2,8 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: Hulp bij realtime klantprofiel
+user-guide-description: Real-time Customer Profile provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 translation-type: tm+mt
-source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 4%
@@ -20,9 +21,9 @@ ht-degree: 4%
    * [(Alpha) Berekende kenmerken](api/computed-attributes.md)
    * [Edge-prognoses](api/edge-projections.md)
    * [Entiteiten ([!DNL Profile])](api/entities.md)
-   * [Exporttaken ([!DNL -profiel])](api/export-jobs.md)
+   * [Exporttaken ([!DNL-profiel])](api/export-jobs.md)
    * [Beleid samenvoegen](api/merge-policies.md)
-   * [Voorvertoning voorbeeldstatus ([!DNL -profiel] voorvertoning)](api/preview-sample-status.md)
+   * [Voorvertoning voorbeeldstatus ([!DNL-profiel] voorvertoning)](api/preview-sample-status.md)
    * [[!DNL Profile] systeemtaken (aanvragen verwijderen)](api/profile-system-jobs.md)
 * UI-hulplijnen {#ui}
    * [[!DNL Profile] gebruikershandleiding](ui/user-guide.md)
