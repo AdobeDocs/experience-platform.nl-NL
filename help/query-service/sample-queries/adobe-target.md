@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Voorbeeldquery's
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
@@ -17,9 +17,10 @@ ht-degree: 0%
 Gegevens uit Adobe Target worden omgezet in XDM-schema voor Experience Event en worden opgenomen in [!DNL Experience Platform] gegevenssets voor u. Er zijn vele gebruiksgevallen voor [!DNL Query Service] deze gegevens, en de volgende steekproefvragen zouden met uw datasets van Adobe Target moeten werken.
 
 >[!NOTE]
+>
 >In de volgende voorbeelden, zult u SQL moeten uitgeven om de verwachte parameters voor uw vragen in te vullen die op de dataset, variabelen, of timeframe worden gebaseerd u in het evalueren geinteresseerd bent. Geef parameters op waar u ze ook ziet `{ }` in de SQL.
 
-## Standaardnaam gegevensset voor Target-gegevensbron op [!DNL Platform]:
+## Standaardnaam gegevensset voor doelgegevensbron op [!DNL Platform]:
 
 Adobe Target Experience Events (vriendelijke naam) <br>`adobe_target_experience_events` (naam voor gebruik in query)
 
