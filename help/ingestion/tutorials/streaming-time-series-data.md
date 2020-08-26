@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Streaming tijdreeksgegevens
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1126'
 ht-degree: 0%
 
 ---
 
 
-# Gegevens tijdreeks streamen naar Adobe Experience Platform
+# Gegevens uit tijdreeksen streamen naar Adobe Experience Platform
 
-Deze zelfstudie helpt u bij het gebruik van streaming opname-API&#39;s, onderdeel van de Adobe Experience Platform-API&#39; [!DNL Data Ingestion Service] s.
+Deze zelfstudie helpt u bij het gebruik van streaming opname-API&#39;s, onderdeel van de Adobe Experience Platform API&#39; [!DNL Data Ingestion Service] s.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een praktische kennis van verschillende diensten van de Adobe Experience Platform. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Deze zelfstudie vereist een praktische kennis van verschillende Adobe Experience Platform-services. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader voor het [!DNL Platform] organiseren van ervaringsgegevens.
 - [!DNL Real-time Customer Profile](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
@@ -187,7 +187,7 @@ Vervolgens voegt u een [identiteitsbeschrijving](../../xdm/api/descriptors.md) t
 
 1. Het werk-e-mailadres wordt een verplicht veld. Dit betekent dat berichten die zonder dit veld worden verzonden, niet worden gevalideerd en niet worden ingevoerd.
 
-2. [!DNL Real-time Customer Profile] gebruikt het werk-e-mailadres als id om meer informatie over die persoon samen te voegen.
+2. [!DNL Real-time Customer Profile] gebruikt het werk-e-mailadres als id om meer informatie over die persoon te koppelen.
 
 ### Verzoek
 
@@ -219,7 +219,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 >
 > Controleer of de codes geldig zijn. In het bovenstaande voorbeeld wordt &quot;email&quot; gebruikt, een naamruimte met een standaardidentiteit. Andere veelgebruikte standaardnaamruimten vindt u in de veelgestelde vragen over [identiteitsgegevens](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)van Identiteitsservice.
 >
-> Als u een aangepaste naamruimte wilt maken, volgt u de stappen die worden beschreven in het overzicht [van de](../../identity-service/home.md)naamruimte.
+> Als u een aangepaste naamruimte wilt maken, volgt u de stappen die worden beschreven in het overzicht [van de naamruimte van de](../../identity-service/home.md)identiteit.
 **Antwoord**
 
 Een geslaagde reactie retourneert HTTP-status 201 met informatie over de nieuw gemaakte primaire naamruimte voor het schema.
@@ -311,7 +311,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 >[!NOTE]
 >
->U moet uw eigen `xdmEntity._id` en `xdmEntity.timestamp`. Een goede manier om een identiteitskaart te produceren is UUID te gebruiken. Bovendien vereist de volgende API-aanroep **geen** verificatiekoppen.
+>Je moet je eigen `xdmEntity._id` en `xdmEntity.timestamp`maken. Een goede manier om een identiteitskaart te produceren is UUID te gebruiken. Bovendien vereist de volgende API-aanroep **geen** verificatiekoppen.
 
 
 ```shell
@@ -405,7 +405,7 @@ Om de eerder opgenomen verslagen te bevestigen, kunt u gebruiken [!DNL Profile A
 
 >[!NOTE]
 >
->Als de identiteitskaart van het fusiebeleid niet en het schema wordt bepaald.</span>name or relatedSchema</span>.name is `_xdm.context.profile`, [!DNL Profile Access] zal **alle** verwante identiteiten halen.
+>Als de samenvoegings beleids-id niet is gedefinieerd en `schema.name` of `relatedSchema.name` is `_xdm.context.profile`, [!DNL Profile Access] worden **alle** verwante identiteiten opgehaald.
 
 **API-indeling**
 
