@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Entiteiten - Real-time API voor klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1671'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Het eindpunt van entiteiten (de toegang van het Profiel)
 
-Met Adobe Experience Platform hebt u toegang tot [!DNL Real-time Customer Profile] gegevens met RESTful API&#39;s of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Raadpleeg de gebruikershandleiding bij [!DNL Platform] Profiel voor meer informatie over het gebruik van de [gebruikersinterface voor profielen](../ui/user-guide.md).
+Met Adobe Experience Platform hebt u toegang tot [!DNL Real-time Customer Profile] gegevens via RESTful API&#39;s of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Raadpleeg de gebruikershandleiding bij [!DNL Platform] Profiel voor meer informatie over het gebruik van de [gebruikersinterface voor profielen](../ui/user-guide.md).
 
 ## Aan de slag
 
@@ -115,6 +115,7 @@ curl -X GET \
 ```
 
 >[!NOTE]
+>
 >Als een verwante grafiek meer dan 50 identiteiten verbindt, zal deze dienst status 422 van HTTP en het bericht &quot;Te veel verwante identiteiten&quot;terugkeren. Als deze fout optreedt, kunt u wellicht meer queryparameters toevoegen om uw zoekopdracht te beperken.
 
 ## Profielgegevens benaderen op basis van lijst met identiteiten
@@ -360,6 +361,7 @@ curl -X GET \
 Een succesvolle reactie keert een gepagineerde lijst van de gebeurtenissen van de tijdreeks en bijbehorende gebieden terug die in de parameters van de verzoekvraag werden gespecificeerd.
 
 >[!NOTE]
+>
 >In het verzoek werd een limiet van één (`limit=1`) gespecificeerd, zodat de `count` in het antwoord hieronder vermelde limiet 1 is en slechts één entiteit wordt geretourneerd.
 
 ```json
@@ -414,6 +416,7 @@ Een succesvolle reactie keert een gepagineerde lijst van de gebeurtenissen van d
 Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als er volgende pagina&#39;s met resultaten zijn, bevat de `_page.next` eigenschap een id. Bovendien, verstrekt het `_links.next.href` bezit een verzoek URI voor het terugwinnen van de volgende pagina. Om de resultaten terug te winnen, doe een ander verzoek van de GET aan het `/access/entities` `/entities` eindpunt, nochtans moet u zeker zijn om met de waarde van verstrekte URI te vervangen.
 
 >[!NOTE]
+>
 >Zorg ervoor dat u niet per ongeluk `/entities/` in het aanvraagpad herhaalt. Het mag slechts eenmaal voorkomen, `/access/entities?start=...`
 
 **API-indeling**
