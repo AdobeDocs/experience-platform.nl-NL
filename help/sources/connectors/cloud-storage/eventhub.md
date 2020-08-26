@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azure Event Hubs-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # (Beta) Azure Event Hubs-connector
 
 >[!NOTE]
+>
 >De Azure Event Hubs-connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform]en [!DNL Azure]. U kunt uw gegevens van deze systemen in brengen [!DNL Platform].
