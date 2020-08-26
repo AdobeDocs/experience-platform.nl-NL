@@ -5,7 +5,7 @@ title: Invoer en uitvoer van Attribution AI
 topic: Input and Output data for Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 translation-type: tm+mt
-source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 0%
@@ -60,7 +60,7 @@ De kolommen hieronder zijn niet vereist maar het wordt geadviseerd dat u hen in 
 
 Attribution AI vereist historische gegevens als input voor modeltraining. De vereiste gegevensduur wordt hoofdzakelijk bepaald door twee sleutelfactoren: trainingsvenster en terugkijkvenster. De input met kortere opleidingsvensters is gevoeliger voor recente tendensen, terwijl de langere trainingsvensters helpen stabielere en nauwkeurigere modellen produceren. Het is belangrijk om het doel met historische gegevens te modelleren die uw bedrijfsdoelstellingen het best vertegenwoordigen.
 
-Met de configuratie [van het](./user-guide.md#training-window) trainingsvenster worden conversiegebeurtenissen gefilterd die zijn ingesteld om te worden opgenomen voor modeltraining op basis van voorvaltijd. Momenteel is het minimale trainingsvenster 1 kwart (90 dagen). In het [terugzoekvenster](./user-guide.md#lookback-window) ziet u een tijdframe dat aangeeft hoeveel dagen vóór de conversiegebeurtenis de aanraakpunten met betrekking tot deze conversiegebeurtenis moeten worden opgenomen. Deze twee concepten bepalen samen de hoeveelheid inputgegevens (die door dagen wordt gemeten) die voor een toepassing wordt vereist.
+Met de configuratie [van het](./user-guide.md#training-window) trainingsvenster worden conversiegebeurtenissen gefilterd die zijn ingesteld om te worden opgenomen voor modeltraining op basis van voorvaltijd. Momenteel is het minimale trainingsvenster 1 kwart (90 dagen). Het [terugzoekvenster](./user-guide.md#lookback-window) bevat een tijdframe dat aangeeft hoeveel dagen vóór de conversiegebeurtenis de aanraakpunten met betrekking tot deze conversiegebeurtenis moeten worden opgenomen. Deze twee concepten bepalen samen de hoeveelheid inputgegevens (die door dagen wordt gemeten) die voor een toepassing wordt vereist.
 
 Standaard definieert Attribution AI het trainingsvenster als de meest recente 2 kwartalen (6 maanden) en terugkijkvenster als 56 dagen. Met andere woorden, het model houdt rekening met alle gedefinieerde conversiegebeurtenissen die zich in de afgelopen twee kwartalen hebben voorgedaan en zoekt naar alle aanraakpunten die zich hebben voorgedaan binnen 56 dagen vóór de bijbehorende conversiegebeurtenis(sen).
 
@@ -69,6 +69,7 @@ Standaard definieert Attribution AI het trainingsvenster als de meest recente 2 
 Minimale lengte van vereiste gegevens = trainingsvenster + terugkijkvenster
 
 >[!TIP]
+>
 > De minimale gegevenslengte die vereist is voor een toepassing met standaardconfiguraties is: 2 kwartalen (180 dagen) + 56 dagen = 236 dagen.
 
 Voorbeeld :
