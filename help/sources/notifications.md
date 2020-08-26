@@ -27,7 +27,7 @@ In dit document worden stappen beschreven voor het abonneren op gebeurtenissen, 
 
 Voor dit document is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
-* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+* [[!DNL -ervaringsgegevensmodel (XDM)-systeem]](../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
 * [[!DNL Real-time klantprofiel]](../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL Adobe Experience Platform-gegevensinvoer]](../ingestion/home.md): [!DNL Data Ingestion] vertegenwoordigt de veelvoudige methodes waardoor gegevens uit deze bronnen [!DNL Platform] opnemen, evenals hoe die gegevens binnen [!DNL Data Lake] voor gebruik door stroomafwaartse [!DNL Platform] diensten worden voortgeduurd.
 

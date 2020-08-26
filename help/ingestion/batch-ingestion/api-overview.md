@@ -28,7 +28,7 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 
 - [Inname](./overview.md)in batch: Hiermee kunt u gegevens als batchbestanden in Adobe Experience Platform invoeren.
 - [[!DNL Experience Data Model] (XDM) Systeem](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
-- [[!DNL-sandboxen]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [[!DNL -sandboxen]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### API-voorbeeldaanroepen lezen
 

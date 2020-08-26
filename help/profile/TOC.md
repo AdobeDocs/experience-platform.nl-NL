@@ -20,9 +20,9 @@ ht-degree: 4%
    * [(Alpha) Berekende kenmerken](api/computed-attributes.md)
    * [Edge-prognoses](api/edge-projections.md)
    * [Entiteiten ([!DNL Profile])](api/entities.md)
-   * [Exporttaken ([!DNL-profiel])](api/export-jobs.md)
+   * [Exporttaken ([!DNL -profiel])](api/export-jobs.md)
    * [Beleid samenvoegen](api/merge-policies.md)
-   * [Voorvertoning voorbeeldstatus ([!DNL-profiel] voorvertoning)](api/preview-sample-status.md)
+   * [Voorvertoning voorbeeldstatus ([!DNL -profiel] voorvertoning)](api/preview-sample-status.md)
    * [[!DNL Profile] systeemtaken (aanvragen verwijderen)](api/profile-system-jobs.md)
 * UI-hulplijnen {#ui}
    * [[!DNL Profile] gebruikershandleiding](ui/user-guide.md)

@@ -21,8 +21,8 @@ Met de [!DNL Policy Service] API kunt u verschillende bronnen voor Adobe Experie
 
 Het gebruik van de ontwikkelaarsgids vereist een werkend inzicht in de diverse [!DNL Experience Platform] diensten betrokken bij het werken met de mogelijkheden van het Beheer van Gegevens. Voordat u met de [!DNL Policy Service API]toepassing begint te werken, raadpleegt u de documentatie voor de volgende services:
 
-* [[!DNL-gegevensbeheer]](../home.md): Het kader waarmee de naleving van het gegevensgebruik wordt [!DNL Experience Platform] afgedwongen.
-* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+* [[!DNL -gegevensbeheer]](../home.md): Het kader waarmee de naleving van het gegevensgebruik wordt [!DNL Experience Platform] afgedwongen.
+* [[!DNL -ervaringsgegevensmodel (XDM)-systeem]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
 * [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
