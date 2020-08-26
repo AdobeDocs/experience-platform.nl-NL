@@ -5,9 +5,9 @@ seo-title: Adobe Campaign
 description: Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren.
 seo-description: Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren.
 translation-type: tm+mt
-source-git-commit: e5a3539c8be8b7424f4965c7ab43d4260e39b380
+source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '581'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Zie Profielen en segmenten [activeren naar een doel](/help/rtcdp/destinations/ac
 
 ## Doelkenmerken {#destination-attributes}
 
-Wanneer het [activeren van segmenten](/help/rtcdp/destinations/activate-destinations.md) aan de bestemming van Adobe Campaign, adviseren wij dat u een uniek herkenningsteken van uw [verenigingsschema](../../profile/home.md#profile-fragments-and-union-schemas)selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Zie [Selecteren welke schemavelden u als doelkenmerken wilt gebruiken in uw geëxporteerde bestanden](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in E-mailmarketingdoelen voor meer informatie.
+Wanneer het [activeren van segmenten](/help/rtcdp/destinations/activate-destinations.md) aan de bestemming van Adobe Campaign, adviseren wij dat u een uniek herkenningsteken van uw [verenigingsschema](../../profile/home.md#profile-fragments-and-union-schemas)selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Voor meer informatie, zie [Uitgezocht welke schemagebieden als bestemmingsattributen in uw uitgevoerde dossiers](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in e-mail marketing bestemmingsdocumentatie te gebruiken.
 
 ## Geëxporteerde gegevens {#exported-data}
 
