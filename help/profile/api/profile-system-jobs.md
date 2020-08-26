@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Systeemtaken profiel - Real-time API voor klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 1%
@@ -17,6 +17,7 @@ ht-degree: 1%
 Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor individuele klanten maken. Gegevens die in [!DNL Platform] worden ingevoerd, worden zowel in de [!DNL Data Lake] gegevensopslag als in de [!DNL Real-time Customer Profile] gegevensopslag opgeslagen. Soms kan het nodig zijn om een gegevensset of batch uit de profielopslag te verwijderen om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de [!DNL Real-time Customer Profile] API gebruiken om een [!DNL Profile] systeemtaak te maken, ook wel een &quot;[!DNL delete request]&quot;-taak genoemd, die indien nodig ook kan worden gewijzigd, bewaakt of verwijderd.
 
 >[!NOTE]
+>
 >Als u gegevenssets of batches wilt verwijderen uit de [!DNL Data Lake]catalogus, gaat u naar het overzicht [van de](../../catalog/home.md) Catalogusservice voor instructies.
 
 ## Aan de slag
@@ -106,6 +107,7 @@ Het in werking stellen van een nieuw schrappingsverzoek wordt gedaan door een ve
 Om een dataset te schrappen, moet dataset identiteitskaart in het lichaam van het verzoek van de POST worden omvat. Deze actie zal ALLE gegevens voor een bepaalde dataset schrappen. [!DNL Experience Platform] staat u toe om datasets te schrappen die op zowel verslag als tijdreeksschema&#39;s worden gebaseerd.
 
 >[!CAUTION]
+>
 > Wanneer het proberen om een [!DNL Profile]-toegelaten dataset te schrappen gebruikend [!DNL Experience Platform] UI, wordt de dataset onbruikbaar gemaakt voor opname maar zal niet worden geschrapt tot een schrappingsverzoek wordt gecreeerd gebruikend API. Zie de [bijlage](#appendix) bij dit document voor meer informatie.
 
 **API-indeling**
@@ -159,6 +161,7 @@ Een geslaagde reactie retourneert de details van het nieuwe verwijderingsverzoek
 Om een partij te kunnen verwijderen, moet de partij-ID worden opgenomen in de hoofdtekst van de aanvraag voor de POST. Gelieve te worden geadviseerd dat u geen partijen voor datasets kunt schrappen die op verslagschema&#39;s worden gebaseerd. Alleen batches voor gegevenssets op basis van tijdreeksschema&#39;s mogen worden verwijderd.
 
 >[!NOTE]
+>
 > De reden u niet batches voor datasets kunt schrappen die op verslagschema&#39;s worden gebaseerd is omdat de reeksen van de recordtype dataset vorige verslagen beschrijven en daarom niet &quot;undone&quot;of geschrapt kunnen zijn. De enige manier om het effect van onjuiste partijen voor datasets te verwijderen die op verslagschema&#39;s worden gebaseerd is de partij met de correcte gegevens opnieuw op te nemen om de onjuiste verslagen te beschrijven.
 
 Voor meer informatie over record- en tijdreeksgedrag raadpleegt u de [sectie over XDM-gegevensgedrag](../../xdm/home.md#data-behaviors) in het [!DNL XDM System] overzicht.
