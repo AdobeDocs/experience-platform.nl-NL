@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Salesforce Service Cloud-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Creeer een [!DNL Salesforce Service Cloud] bronschakelaar in UI
 
 >[!NOTE]
+>
 >De [!DNL Salesforce Service Cloud] connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een [!DNL Salesforce Service Cloud] (hierna &quot;SSC&quot; genoemd) bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
