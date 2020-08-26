@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Samenwerken in JupyterLab met behulp van Git
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
@@ -19,6 +19,7 @@ ht-degree: 1%
 ## Vereisten
 
 >[!NOTE]
+>
 > De Git-server die u wilt gebruiken, moet via internet toegankelijk zijn.
 
 De [!DNL Data Science Workspace JupyterLab] omgeving is een gehoste omgeving en wordt niet geïmplementeerd binnen uw bedrijfsfirewall. Daarom moet de Git-server waarmee u verbinding maakt, toegankelijk zijn via het openbare internet. Dit zou een openbare of privé bewaarplaats op [GitHub](https://github.com/) of een ander geval van een [!DNL Git] server kunnen zijn die u hebt besloten om te ontvangen.
@@ -36,6 +37,7 @@ Daarna, binnen *Terminal* navigeer aan uw werkruimte door het volgende bevel te 
 ![cd-werkruimte](../images/jupyterlab/tutorials/find-workspace.png)
 
 >[!TIP]
+>
 > Als u een lijst met beschikbare it-opdrachten wilt weergeven, geeft u de opdracht: `git -help` in uw terminal.
 
 Vervolgens kloont u de opslagplaats die u wilt gebruiken met de `git clone` opdracht. Klonen van uw project met een `https://` URL in plaats van `ssh://`.
@@ -47,6 +49,7 @@ Vervolgens kloont u de opslagplaats die u wilt gebruiken met de `git clone` opdr
 ![klonen](../images/jupyterlab/tutorials/git-collaboration.png)
 
 >[!NOTE]
+>
 > Om om het even welke schrijfverrichtingen (`git push` bijvoorbeeld) uit te voeren moeten de volgende configuratiebevelen voor elke nieuwe zitting worden in werking gesteld. Houd er ook rekening mee dat een pushopdracht vraagt om een gebruikersnaam en wachtwoord.
 >
 >`git config --global user.email "you@example.com"`
