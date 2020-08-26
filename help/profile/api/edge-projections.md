@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Edge-projecties - Real-time API voor klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 0%
@@ -21,6 +21,7 @@ Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten
 Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)handleiding. Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een willekeurige [!DNL Experience Platform] API mogelijk te maken.
 
 >[!NOTE]
+>
 >Verzoeken die een payload (POST, PUT, PATCH) bevatten, vereisen een `Content-Type` header. In dit document `Content-Type` wordt meer dan één teken gebruikt. Gelieve te letten speciaal op de kopballen in de steekproefvraag om ervoor te zorgen u het correcte `Content-Type` voor elk verzoek gebruikt.
 
 ## Projectiebestemmingen
@@ -53,6 +54,7 @@ curl -X GET \
 De reactie bevat een `projectionDestinations` array met de details voor elke bestemming die als een afzonderlijk object binnen de array wordt weergegeven. Als er geen projecties zijn geconfigureerd, retourneert de `projectionDestinations` array leeg.
 
 >[!NOTE]
+>
 >Deze reactie is verkort voor ruimte en toont slechts twee bestemmingen.
 
 ```json
@@ -122,6 +124,7 @@ POST /config/destinations
 Met de volgende aanvraag wordt een nieuwe randbestemming gemaakt.
 
 >[!NOTE]
+>
 >Het verzoek van de POST om een bestemming tot stand te brengen vereist een specifieke `Content-Type` kopbal, zoals hieronder getoond. Het gebruik van een onjuiste `Content-Type` header resulteert in een HTTP Status 415 (Unsupported Media Type)-fout.
 
 ```shell
@@ -227,6 +230,7 @@ Het reactieobject geeft de details van de projectiebestemming weer. Het `id` att
 Een bestaande bestemming kan worden bijgewerkt door een verzoek van de PUT aan het `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming om in de verzoekweg worden bijgewerkt te doen. Deze bewerking _herschrijft_ in wezen de bestemming en daarom moeten in de hoofdtekst van het verzoek dezelfde kenmerken worden opgegeven als bij het maken van een nieuwe bestemming.
 
 >[!CAUTION]
+>
 >De API-reactie op het updateverzoek is onmiddellijk, maar de wijzigingen in de projecties worden asynchroon toegepast. Met andere woorden, er is een tijdverschil tussen wanneer de update aan de definitie van de bestemming wordt gemaakt en wanneer het wordt toegepast.
 
 **API-indeling**
@@ -244,6 +248,7 @@ PUT /config/destinations/{DESTINATION_ID}
 Het volgende verzoek werkt de bestaande bestemming bij om een tweede plaats (`dataCenters`) te omvatten.
 
 >[!IMPORTANT]
+>
 >Voor het verzoek om PUT is een specifieke `Content-Type` header nodig, zoals hieronder wordt weergegeven. Het gebruik van een onjuiste `Content-Type` header resulteert in een HTTP Status 415 (Unsupported Media Type)-fout.
 
 ```shell
@@ -295,6 +300,7 @@ De reactie omvat de bijgewerkte details voor de bestemming, met inbegrip van zij
 Als uw organisatie niet meer een projectiebestemming vereist, kan het worden geschrapt door een verzoek van DELETE aan het `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming te doen die u wenst om in de verzoekweg te schrappen.
 
 >[!CAUTION]
+>
 >De API-reactie op het verwijderingsverzoek is onmiddellijk, maar de werkelijke wijzigingen in de gegevens aan de randen worden asynchroon uitgevoerd. Met andere woorden, de profielgegevens worden verwijderd van alle randen (de `dataCenters` opgegeven randen in de projectiebestemming), maar het proces duurt even voordat het is voltooid.
 
 **API-indeling**
@@ -345,6 +351,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 | `{PROJECTION_NAME}` | De naam van de projectieconfiguratie waartoe u toegang wilt hebben. |
 
 >[!NOTE]
+>
 >`schemaName` is vereist wanneer het gebruiken van de `name` parameter, aangezien een naam van de projectieconfiguratie slechts uniek in de context van een schemaklasse is.
 
 **Verzoek**
@@ -429,6 +436,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **Verzoek**
 
 >[!NOTE]
+>
 >Het verzoek van de POST om een configuratie tot stand te brengen vereist een specifieke `Content-Type` kopbal, zoals hieronder getoond. Het gebruik van een onjuiste `Content-Type` header resulteert in een HTTP Status 415 (Unsupported Media Type)-fout.
 
 ```shell
@@ -506,6 +514,7 @@ Een kiezer is een door komma&#39;s gescheiden lijst met XDM-veldnamen. In een pr
    * Het bovenstaande voorbeeld is gelijk aan `addresses.type,addresses.city.country`.
 
 >[!NOTE]
+>
 >Zowel puntnotatie als haakjesnotatie worden ondersteund voor het verwijzen naar subvelden. Het is echter aan te raden puntnotatie te gebruiken, omdat deze beknopter is en een betere illustratie van de veldhiërarchie biedt.
 
 * Elk veld in een kiezer wordt opgegeven ten opzichte van de hoofdmap van de reactie.
@@ -610,6 +619,7 @@ Retourneert alleen het stadsveld voor alle elementen in de array adressen.
 ```
 
 >[!NOTE]
+>
 >Wanneer een genest veld wordt geretourneerd, worden in de projectie de bovenliggende objecten opgenomen. De bovenliggende velden bevatten geen andere onderliggende velden, tenzij deze ook expliciet zijn geselecteerd.
 
 **adressen (type,plaats)**
