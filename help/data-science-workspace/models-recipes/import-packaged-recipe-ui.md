@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een verpakt recept (UI) importeren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een verpakt recept (UI) importeren
 
-Deze zelfstudie biedt inzicht in het configureren en importeren van een verpakt recept met behulp van het meegeleverde voorbeeld Detailhandel. Aan het einde van deze zelfstudie bent u klaar om een model in Adobe Experience Platform te maken, te trainen en te evalueren [!DNL Data Science Workspace].
+Deze zelfstudie biedt inzicht in het configureren en importeren van een verpakt recept met behulp van het meegeleverde voorbeeld Detailhandel. Aan het einde van deze zelfstudie bent u klaar om een model te maken, te trainen en te evalueren in Adobe Experience Platform [!DNL Data Science Workspace].
 
 ## Vereisten
 
@@ -109,14 +109,14 @@ Hieronder ziet u een voorbeeldconfiguratiebestand met standaardtraining en scori
 | `learning_rate` | Getal | Schaalbaar voor verloopvermenigvuldiging. |
 | `n_estimators` | Getal | Aantal bomen in het bos voor Random Forest Classifier. |
 | `max_depth` | Getal | Maximale diepte van een boom in Random Forest Classifier. |
-| `ACP_DSW_INPUT_FEATURES` | String | Lijst met door komma&#39;s gescheiden invoerschemakenmerken. |
-| `ACP_DSW_TARGET_FEATURES` | String | Lijst met door komma&#39;s gescheiden kenmerken van het uitvoerschema. |
+| `ACP_DSW_INPUT_FEATURES` | Tekenreeks | Lijst met door komma&#39;s gescheiden invoerschemakenmerken. |
+| `ACP_DSW_TARGET_FEATURES` | Tekenreeks | Lijst met door komma&#39;s gescheiden kenmerken van het uitvoerschema. |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Boolean | Hiermee wordt bepaald of invoer- en uitvoerfuncties kunnen worden gewijzigd |
-| `tenantId` | String | Deze id zorgt ervoor dat bronnen die u maakt, op de juiste wijze worden benoemd en zich binnen uw IMS-organisatie bevinden. [Volg de stappen hier](../../xdm/api/getting-started.md#know-your-tenant_id) om uw huurder te vinden identiteitskaart |
-| `ACP_DSW_TRAINING_XDM_SCHEMA` | String | Het invoerschema dat wordt gebruikt voor het trainen van een model. Laat dit leeg wanneer u importeert in de gebruikersinterface, vervang deze door de trainingsschema-id wanneer u importeert met de API. |
-| `evaluation.labelColumn` | String | Kolomlabel voor evaluatievisualisaties. |
-| `evaluation.metrics` | String | Door komma&#39;s gescheiden lijst met evaluatiemetriek die moet worden gebruikt voor de evaluatie van een model. |
-| `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA` | String | Het uitvoerschema dat voor het scoren van een model wordt gebruikt. Laat dit leeg wanneer u importeert in de gebruikersinterface, vervang het bestand door een SchemaID wanneer u importeert met behulp van de API. |
+| `tenantId` | Tekenreeks | Deze id zorgt ervoor dat bronnen die u maakt, op de juiste wijze worden benoemd en zich in uw IMS-organisatie bevinden. [Volg de stappen hier](../../xdm/api/getting-started.md#know-your-tenant_id) om uw huurder te vinden identiteitskaart |
+| `ACP_DSW_TRAINING_XDM_SCHEMA` | Tekenreeks | Het invoerschema dat wordt gebruikt voor het trainen van een model. Laat dit leeg wanneer u importeert in de gebruikersinterface, vervang deze door de trainingsschema-id wanneer u importeert met behulp van de API. |
+| `evaluation.labelColumn` | Tekenreeks | Kolomlabel voor evaluatievisualisaties. |
+| `evaluation.metrics` | Tekenreeks | Door komma&#39;s gescheiden lijst met evaluatiemetriek die moet worden gebruikt voor de evaluatie van een model. |
+| `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA` | Tekenreeks | Het uitvoerschema dat voor het scoren van een model wordt gebruikt. Laat dit leeg wanneer u importeert in de gebruikersinterface, vervang het bestand door een SchemaID wanneer u importeert met behulp van de API. |
 
 Voor dit leerprogramma, kunt u de standaardconfiguratiedossiers voor het Recept van de Verkoop van de Detailhandel in de [!DNL Data Science Workspace] Verwijzing verlaten de manier zij zijn.
 
@@ -131,12 +131,14 @@ De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven.
 ![workflow configureren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > In de brondossiers van het [Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Retailrecept van de Verkoop gebruikend Python brondossiers.
 
 Wanneer u zich op de *pagina Bron* selecteren bevindt, plakt u de URL van de Docker die overeenkomt met het verpakte recept dat is samengesteld met [!DNL Python] bronbestanden in het veld **[!UICONTROL Bron-URL]** . Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Selecteer **[!UICONTROL Python]** in de vervolgkeuzelijst *Runtime* en **[!UICONTROL Classificatie]** in de vervolgkeuzelijst *Type* . Als alles is ingevuld, klikt u op **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan naar *Schema&#39;s* beheren.
 
 >[!NOTE]
-> *Type *ondersteunt **[!UICONTROL Classificatie]**en **[!UICONTROL Regressie]**. Selecteer **[!UICONTROL Aangepast]**als uw model niet onder een van deze typen valt.
+>
+> *Type* ondersteunt **[!UICONTROL Classificatie]** en **[!UICONTROL Regressie]**. Selecteer **[!UICONTROL Aangepast]** als uw model niet onder een van deze typen valt.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
@@ -144,7 +146,7 @@ Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detail
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Invoerfunctie]** of **[!UICONTROL Target-functie]** in het rechtervenster **[!UICONTROL Veldeigenschappen]** . In deze zelfstudie stelt u **[!UICONTROL wekelijkseSales]** in als de **[!UICONTROL Target-functie]** en alles als **[!UICONTROL invoerfunctie]**. Klik op **[!UICONTROL Volgende]** om uw nieuwe geconfigureerde recept te bekijken.
+Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Invoerfunctie]** of **[!UICONTROL Doelfunctie]** in het rechtervenster **[!UICONTROL Veldeigenschappen]** . Voor deze zelfstudie stelt u **[!UICONTROL wekelijkseSales]** in als de **[!UICONTROL doelfunctie]** en alles als **[!UICONTROL invoerfunctie]**. Klik op **[!UICONTROL Volgende]** om uw nieuwe geconfigureerde recept te bekijken.
 
 Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **[!UICONTROL Voltooien]** om het recept te maken.
 
@@ -163,12 +165,14 @@ De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven.
 ![workflow configureren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > In de brondossiers van het [Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Retailrecept van de Verkoop gebruikend de brondossiers van R.
 
 Wanneer u zich op de *Uitgezochte bronpagina* bevindt, plakt u de URL van Docker die overeenkomt met het verpakte recept dat is samengesteld met R-bronbestanden in het veld **[!UICONTROL Bron-URL]** . Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Selecteer **[!UICONTROL R]** in de vervolgkeuzelijst *Runtime* en **[!UICONTROL Classificatie]** in de vervolgkeuzelijst *Type* . Als alles is ingevuld, klikt u op **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan naar *Schema&#39;s* beheren.
 
 >[!NOTE]
-> *Type *ondersteunt **[!UICONTROL Classificatie]**en **[!UICONTROL Regressie]**. Selecteer **[!UICONTROL Aangepast]**als uw model niet onder een van deze typen valt.
+>
+> *Type* ondersteunt **[!UICONTROL Classificatie]** en **[!UICONTROL Regressie]**. Selecteer **[!UICONTROL Aangepast]** als uw model niet onder een van deze typen valt.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
@@ -176,7 +180,7 @@ Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detail
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Invoerfunctie]** of **[!UICONTROL Target-functie]** in het rechtervenster **[!UICONTROL Veldeigenschappen]** . In deze zelfstudie stelt u **[!UICONTROL wekelijkseSales]** in als de **[!UICONTROL Target-functie]** en alles als **[!UICONTROL invoerfunctie]**. Klik op **[!UICONTROL Volgende]** om uw nieuwe geconfigureerde recept te bekijken.
+Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Invoerfunctie]** of **[!UICONTROL Doelfunctie]** in het rechtervenster **[!UICONTROL Veldeigenschappen]** . Voor deze zelfstudie stelt u **[!UICONTROL wekelijkseSales]** in als de **[!UICONTROL doelfunctie]** en alles als **[!UICONTROL invoerfunctie]**. Klik op **[!UICONTROL Volgende]** om uw nieuwe geconfigureerde recept te bekijken.
 
 Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **Voltooien** om het recept te maken.
 
@@ -195,12 +199,14 @@ De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven.
 ![workflow configureren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > In de brondossiers van het [Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Detailhandelrecept van de Verkoop gebruikend PySpark brondossiers.
 
 Zodra u op de *Uitgezochte bronpagina* bent, kleef de Docker URL die aan het verpakte recept beantwoordt dat gebruikend PySpark brondossiers in het **[!UICONTROL BronURL]** gebied wordt gebouwd. Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Selecteer **[!UICONTROL PySpark]** in de drop-down *Runtime* . Nadat de PySpark-runtime is geselecteerd, wordt het standaardartefact automatisch ingevuld in **[!UICONTROL Docker]**. Selecteer vervolgens **[!UICONTROL Classificatie]** in de vervolgkeuzelijst *Type* . Als alles is ingevuld, klikt u op **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan naar *Schema&#39;s* beheren.
 
 >[!NOTE]
-> *Type *ondersteunt **[!UICONTROL Classificatie]**en **[!UICONTROL Regressie]**. Selecteer **[!UICONTROL Aangepast]**als uw model niet onder een van deze typen valt.
+>
+> *Type* ondersteunt **[!UICONTROL Classificatie]** en **[!UICONTROL Regressie]**. Selecteer **[!UICONTROL Aangepast]** als uw model niet onder een van deze typen valt.
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
@@ -208,7 +214,7 @@ Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detail
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Invoerfunctie]** of **[!UICONTROL Target-functie]** in het rechtervenster **[!UICONTROL Veldeigenschappen]** . In deze zelfstudie stelt u **[!UICONTROL wekelijkseSales]** in als de **[!UICONTROL Target-functie]** en alles als **[!UICONTROL invoerfunctie]**. Klik op **[!UICONTROL Volgende]** om uw nieuwe geconfigureerde recept te bekijken.
+Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Invoerfunctie]** of **[!UICONTROL Doelfunctie]** in het rechtervenster **[!UICONTROL Veldeigenschappen]** . Voor deze zelfstudie stelt u **[!UICONTROL wekelijkseSales]** in als de **[!UICONTROL doelfunctie]** en alles als **[!UICONTROL invoerfunctie]**. Klik op **[!UICONTROL Volgende]** om uw nieuwe geconfigureerde recept te bekijken.
 
 Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **[!UICONTROL Voltooien]** om het recept te maken.
 
@@ -227,12 +233,14 @@ De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven.
 ![workflow configureren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > In de brondossiers van het [Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Retailrecept van de Verkoop gebruikend Scala ([!DNL Spark]) brondossiers.
 
 Wanneer u zich op de *pagina Bron* selecteren bevindt, plakt u de URL van Docker die overeenkomt met het verpakte recept dat is samengesteld met de bronbestanden Scala in het veld *Bron-URL* . Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Selecteer **[!UICONTROL Vonk]** in de drop-down *Runtime* . Als de [!DNL Spark] runtime is geselecteerd, wordt de standaardeigenschap automatisch in **[!UICONTROL Docker]** ingevuld. Selecteer vervolgens **[!UICONTROL Regressie]** in de vervolgkeuzelijst *Type* . Als alles is ingevuld, klikt u op **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan naar *Schema&#39;s* beheren.
 
 >[!NOTE]
-> *Type *ondersteunt **[!UICONTROL Classificatie]**en **[!UICONTROL Regressie]**. Selecteer **[!UICONTROL Aangepast]**als uw model niet onder een van deze typen valt.
+>
+> *Type* ondersteunt **[!UICONTROL Classificatie]** en **[!UICONTROL Regressie]**. Selecteer **[!UICONTROL Aangepast]** als uw model niet onder een van deze typen valt.
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
@@ -240,7 +248,7 @@ Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detail
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Invoerfunctie]** of **[!UICONTROL Target-functie]** in het rechtervenster **[!UICONTROL Veldeigenschappen]** . In deze zelfstudie stelt u **[!UICONTROL wekelijkseSales]** in als de **[!UICONTROL Target-functie]** en alles als **[!UICONTROL invoerfunctie]**. Klik op **[!UICONTROL Volgende]** om uw nieuwe geconfigureerde recept te bekijken.
+Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Invoerfunctie]** of **[!UICONTROL Doelfunctie]** in het rechtervenster **[!UICONTROL Veldeigenschappen]** . Voor deze zelfstudie stelt u **[!UICONTROL wekelijkseSales]** in als de **[!UICONTROL doelfunctie]** en alles als **[!UICONTROL invoerfunctie]**. Klik op **[!UICONTROL Volgende]** om uw nieuwe geconfigureerde recept te bekijken.
 
 Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **[!UICONTROL Voltooien]** om het recept te maken.
 
