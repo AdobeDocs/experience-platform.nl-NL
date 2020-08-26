@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Berekende kenmerken - Real-time Customer Profile API
 topic: guide
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # (Alpha) Berekend kenmerkeindpunt
 
 >[!IMPORTANT]
+>
 >De berekende kenmerkfunctionaliteit die in dit document wordt beschreven, bevindt zich momenteel in alfa en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op basis van andere waarden, berekeningen en expressies. De berekende attributen werken op het profielniveau, betekenend kunt u waarden over alle verslagen en gebeurtenissen bijeenvoegen.
@@ -29,7 +30,7 @@ Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van het [Real-ti
 
 ## Berekende kenmerken begrijpen
 
-Met Adobe Experience Platform kunt u eenvoudig gegevens uit meerdere bronnen importeren en samenvoegen om deze te genereren [!DNL Real-time Customer Profiles]. Elk profiel bevat belangrijke informatie met betrekking tot een persoon, zoals zijn contactgegevens, voorkeuren en aankoopgeschiedenis, die een 360 graden mening van de klant verstrekken.
+Met Adobe Experience Platform kunt u eenvoudig gegevens uit meerdere bronnen importeren en samenvoegen om te genereren [!DNL Real-time Customer Profiles]. Elk profiel bevat belangrijke informatie met betrekking tot een persoon, zoals zijn contactgegevens, voorkeuren en aankoopgeschiedenis, die een 360 graden mening van de klant verstrekken.
 
 Een deel van de informatie die in het profiel wordt verzameld, is gemakkelijk te begrijpen wanneer de gegevensvelden rechtstreeks worden gelezen (bijvoorbeeld &quot;voornaam&quot;), terwijl andere gegevens meerdere berekeningen vereisen of op andere velden en waarden vertrouwen om de informatie te genereren (bijvoorbeeld &quot;totaal voor levenslange aanschaf&quot;). Om deze gegevens in één oogopslag begrijpelijker te maken, [!DNL Platform] kunt u **[!UICONTROL berekende attributen]** tot stand brengen die deze verwijzingen en berekeningen automatisch uitvoeren, die de waarde op het aangewezen gebied terugkeren.
 
@@ -48,6 +49,7 @@ Bij gebruik van berekende kenmerken kan het gaan om eenvoudige berekeningen tot 
 Om een gegevens verwerkt attribuut te vormen, moet u eerst het gebied identificeren dat de gegevens verwerkte attributenwaarde zal houden. Dit veld kan worden gemaakt met een mix om het veld toe te voegen aan een bestaand schema of door een veld te selecteren dat u al in een schema hebt gedefinieerd.
 
 >[!NOTE]
+>
 >Berekende kenmerken kunnen niet worden toegevoegd aan velden binnen door Adobe gedefinieerde combinaties. Het veld moet zich binnen de `tenant` naamruimte bevinden. Dit betekent dat het een veld moet zijn dat u definieert en toevoegt aan een schema.
 
 Om een gegevens verwerkt attributengebied met succes te bepalen, moet het schema voor worden toegelaten [!DNL Profile] en als deel van het verenigingsschema voor de klasse verschijnen waarop het schema wordt gebaseerd. Voor meer informatie over [!DNL Profile]-toegelaten schema&#39;s en vakbonden, te herzien gelieve de sectie van de sectie van de [!DNL Schema Registry] ontwikkelaarsgids over het [toelaten van een schema voor Profiel en het bekijken verenigingsschema](../../xdm/api/getting-started.md). Het wordt ook geadviseerd om de [sectie over unies](../../xdm/schema/composition.md) in de documentatie van de schemacompositie te herzien.
@@ -89,6 +91,7 @@ Nadat u op het veld **** Toevoegen hebt geklikt, wordt er een nieuw object geope
 Gebruik de sectie *[!UICONTROL Eigenschappen]* van veld aan de rechterkant van de editor om de benodigde informatie voor het nieuwe veld op te geven, zoals de naam, weergavenaam en het type.
 
 >[!NOTE]
+>
 >Het type voor het veld moet van hetzelfde type zijn als de berekende kenmerkwaarde. Als de berekende kenmerkwaarde bijvoorbeeld een tekenreeks is, moet het veld dat in het schema wordt gedefinieerd, een tekenreeks zijn.
 
 Klik vervolgens op **[!UICONTROL Toepassen]** en typ de naam van het veld en het type in de sectie *[!UICONTROL Structuur]* van de editor.
@@ -100,6 +103,7 @@ Klik vervolgens op **[!UICONTROL Toepassen]** en typ de naam van het veld en het
 Controleer voordat u doorgaat of het schema is ingeschakeld voor [!DNL Profile]. Klik op de schemanaam in de sectie van de *[!UICONTROL Structuur]* van de redacteur zodat het lusje van de Eigenschappen *[!UICONTROL van het]* Schema verschijnt. Als de schuifregelaar **[!UICONTROL Profiel]** blauw is, is het schema ingeschakeld voor [!DNL Profile].
 
 >[!NOTE]
+>
 >Het toelaten van een schema voor [!DNL Profile] kan niet ongedaan worden gemaakt, zodat als u op de schuif klikt zodra het is toegelaten, moet u het risico niet het onbruikbaar maken.
 
 ![](../images/computed-attributes/Profile.png)
