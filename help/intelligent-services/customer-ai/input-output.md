@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Invoer en uitvoer van AI van de klant
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 5cab341138e809bae79623bb65e499ac6b955f27
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%
@@ -33,13 +33,14 @@ In de volgende voorbeelden wordt een eenvoudige formule gebruikt om u te helpen 
 Minimumlengte van de vereiste gegevens = subsidiabele populatie + resultaatvenster
 
 >[!NOTE]
+>
 > 30 is het minimumaantal dagen dat vereist is voor de in aanmerking komende bevolking. Als dit niet wordt verstrekt is het gebrek 120 dagen.
 
 Voorbeelden :
 
 - U wilt voorspellen of een klant waarschijnlijk een horloge in de komende 30 dagen zal kopen. U wilt ook gebruikers scoren die de afgelopen 60 dagen enige internetactiviteit hebben gehad. In dat geval is de minimumlengte van de vereiste gegevens 60 dagen + 30 dagen. De in aanmerking komende populatie is 60 dagen en het resultaatvenster is 30 dagen in totaal 90 dagen.
 
-- U wilt voorspellen of de gebruiker waarschijnlijk de komende 7 dagen een horloge zal kopen. In dit geval is de minimumlengte van de vereiste gegevens 120 dagen + 7 dagen. De in aanmerking komende populatie staat standaard op 120 dagen en het resultaatvenster is 7 dagen in totaal 127 dagen.
+- U wilt voorspellen of de gebruiker waarschijnlijk de komende 7 dagen een horloge zal kopen. In dat geval is de minimumlengte van de vereiste gegevens 120 dagen + 7 dagen. De in aanmerking komende populatie staat standaard op 120 dagen en het resultaatvenster is 7 dagen in totaal 127 dagen.
 
 - U wilt voorspellen of de klant waarschijnlijk de komende 7 dagen een horloge zal kopen. U wilt ook gebruikers scoren die de afgelopen 7 dagen enige internetactiviteit hebben gehad. In dat geval is de minimumlengte van de vereiste gegevens 30 dagen + 7 dagen. De in aanmerking komende populatie duurt minimaal 30 dagen en de resultaatperiode bedraagt 7 dagen in totaal 37 dagen.
 
@@ -50,6 +51,7 @@ Naast de minimaal vereiste gegevens, werkt de AI van de Klant ook het best met r
 De AI van de Klant produceert verscheidene attributen voor individuele profielen die als verkiesbaar worden beschouwd. Er zijn twee manieren om de score te verbruiken op basis van wat u hebt voorzien. Als u het Profiel van de Klant in real time voor uw dataset wordt toegelaten, kunt u het via het Profiel van de Klant in real time verbruiken. Als u geen Real-Time Klantprofiel hebt, kunt u de de outputdataset downloaden van de Klant AI beschikbaar op het gegevenspop.
 
 >[!NOTE]
+>
 >De waarden van de output worden verbruikt door het Profiel van de Klant in real time dat kan worden gebruikt om segmenten tot stand te brengen en te bepalen.
 
 In de onderstaande tabel worden de verschillende kenmerken beschreven die in de uitvoer van AI van de Klant zijn aangetroffen:
