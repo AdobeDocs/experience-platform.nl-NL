@@ -4,7 +4,7 @@ solution: Experience Platform
 title: HP Vertica-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '182'
 ht-degree: 0%
@@ -15,11 +15,12 @@ ht-degree: 0%
 # (Beta) [!DNL HP Vertica] -connector
 
 >[!NOTE]
+>
 >De [!DNL HP Vertica] connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 Adobe Experience Platform biedt native connectiviteit voor databaseproviders zoals [!DNL Microsoft], MySQL en [!DNL Azure]. U kunt uw gegevens van deze systemen in brengen [!DNL Platform].
 
-Verschillende typen databases van derden worden ondersteund, waaronder relationele databases, NoSQL-databases of data warehouse. Ondersteuning voor databaseproviders omvat [!DNL HP Vertica].
+Verschillende soorten derdegegevensbestanden worden gesteund, met inbegrip van relationele, NoSQL, of gegevenspakhuizen. Ondersteuning voor databaseproviders omvat [!DNL HP Vertica].
 
 ## IP adres lijst van gewenste personen
 
