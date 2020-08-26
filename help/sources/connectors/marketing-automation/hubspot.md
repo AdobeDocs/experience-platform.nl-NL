@@ -4,7 +4,7 @@ solution: Experience Platform
 title: HubSpot-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 52a01c5f90a9643691a25e2d0a5f03a7f0334a7d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -15,9 +15,10 @@ ht-degree: 0%
 # (Beta) [!DNL HubSpot] -connector
 
 >[!NOTE]
+>
 >De [!DNL HubSpot] connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Met Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
 [!DNL Experience Platform ]biedt ondersteuning voor het opnemen van gegevens van een derde marketingautomatiseringssysteem. Tot de ondersteuning voor aanbieders van marketingautomatisering behoren [!DNL HubSpot].
 
