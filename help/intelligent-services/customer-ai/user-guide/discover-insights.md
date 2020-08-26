@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Informatie over inzichten met Customer AI
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -59,7 +59,7 @@ Als u details wilt weergeven vanuit het dashboard, klikt u op een servicecontain
 
 ![bericht voor mislukte uitvoering](../images/insights/failed-run.png)
 
-De tweede manier om extra details voor een de dienstinstantie te bekijken wordt gevestigd binnen de inzichten pagina. U kunt op Meer **** tonen rechtsboven klikken om een vervolgkeuzelijst te vullen. De details worden vermeld zoals de score, toen het werd gecreeerd, en het type van dichtheid. Voor meer informatie over om het even welke vermelde eigenschappen, gelieve te bezoeken het [Vormen van een Instantie](./configure.md)van de Klant AI.
+De tweede manier om extra details voor een de dienstinstantie te bekijken wordt gevestigd binnen de inzichten pagina. U kunt op Meer **** tonen rechtsboven klikken om een vervolgkeuzelijst te vullen. De details worden vermeld zoals de score, toen het werd gecreeerd, en het type van dichtheid. Voor meer informatie over de vermelde eigenschappen gaat u naar [Configuring a Customer AI instance](./configure.md).
 
 ![meer weergeven](../images/insights/landing-show-more.png)
 
@@ -112,6 +112,7 @@ Voor elk scoreemmertje, wordt een kaart geproduceerd die de hoogste 10 invloedri
 Als u klikt op de knop Segment **** maken in een van de emmers voor Laag, Normaal en Hoog, wordt u omgeleid naar de segmentbuilder.
 
 >[!NOTE]
+>
 >De **[!UICONTROL Create knoop van het Segment]** is slechts beschikbaar als het Profiel van de Klant in real time voor de dataset wordt toegelaten. Voor meer informatie over hoe te om het Profiel van de Klant in real time toe te laten, bezoek het overzicht [van het Profiel van de Klant in](../../../rtcdp/overview.md)real time.
 
 ![Klikken om segment te maken](../images/insights/influential-factors-create-segment.png)
