@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Behandeling van een privacyverzoek in het Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ U wordt aangeraden de volgende [!DNL Experience Platform] services goed te begri
 
 ## Naamruimten voor identiteiten {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] biedt een brug tussen identiteitsgegevens van klanten op verschillende systemen en apparaten. [!DNL Identity Service] gebruikt **[!UICONTROL naamruimten]** om context aan identiteitswaarden te verstrekken door hen met hun systeem van oorsprong te verbinden. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;e-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] biedt een brug tussen identiteitsgegevens van klanten op systemen en apparaten. [!DNL Identity Service] gebruikt **[!UICONTROL naamruimten]** om context aan identiteitswaarden te verstrekken door hen met hun systeem van oorsprong te verbinden. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;e-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
 
 [!DNL Identity Service] onderhoudt een opslag van algemeen gedefinieerde (standaard) en door de gebruiker gedefinieerde (aangepaste) naamruimten. Standaard naamruimten zijn beschikbaar voor alle organisaties (bijvoorbeeld E-mail en ECID), terwijl uw organisatie aangepaste naamruimten kan maken die aan de specifieke behoeften voldoen.
 
@@ -56,7 +56,7 @@ Er zijn twee methodes om een identiteitsbeschrijver aan een datasetschema toe te
 
 ### De gebruikersinterface gebruiken {#identity-ui}
 
-In de [!DNL Experience Platform ]gebruikersinterface kunt u met de werkruimte _[!UICONTROL Schema]_uw bestaande XDM-schema&#39;s bewerken. Om een identiteitsbeschrijver aan een schema toe te voegen, selecteer het schema van de lijst en volg de stappen voor het[plaatsen van een schemagebied als identiteitsgebied](../xdm/tutorials/create-schema-ui.md#identity-field)in het[!DNL Schema Editor]leerprogramma.
+In de [!DNL Experience Platform ]gebruikersinterface kunt u met de werkruimte _[!UICONTROL Schema]_ uw bestaande XDM-schema&#39;s bewerken. Om een identiteitsbeschrijver aan een schema toe te voegen, selecteer het schema van de lijst en volg de stappen voor het [plaatsen van een schemagebied als identiteitsgebied](../xdm/tutorials/create-schema-ui.md#identity-field) in het [!DNL Schema Editor] leerprogramma.
 
 Als u de juiste velden in het schema hebt ingesteld als identiteitsvelden, kunt u doorgaan naar de volgende sectie over het [verzenden van privacyverzoeken](#submit).
 
@@ -78,7 +78,7 @@ POST /descriptors
 
 **Verzoek**
 
-In het volgende verzoek wordt een identiteitsdescriptor gedefinieerd in een voorbeeldschema in het veld E-mailadres.
+In het volgende verzoek wordt een identiteitsbeschrijving gedefinieerd in een veld &quot;E-mailadres&quot; in een voorbeeldschema.
 
 ```shell
 curl -X POST \
@@ -132,13 +132,13 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de
 
 >[!NOTE]
 >
->In deze sectie wordt beschreven hoe u privacyverzoeken voor de [!DNL Data Lake]website kunt opmaken. We raden u ten zeerste aan de [!DNL Privacy Service UI](../privacy-service/ui/overview.md) of [!DNL Privacy Service API](../privacy-service/api/getting-started.md) documentatie te controleren voor volledige stappen op het gebied van het verzenden van een privacytaak, inclusief het correct indelen van verzonden identiteitsgegevens van gebruikers in aanvragen.
+>In deze sectie wordt beschreven hoe u privacyverzoeken voor de [!DNL Data Lake]website kunt opmaken. We raden u ten zeerste aan de [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) - of [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) -documentatie te raadplegen voor volledige stappen op het gebied van het verzenden van een privacytaak, waaronder het correct indelen van verzonden identiteitsgegevens van gebruikers in aanvragen.
 
 In de volgende sectie wordt beschreven hoe u privacyverzoeken voor het [!DNL Data Lake] gebruik van de [!DNL Privacy Service] gebruikersinterface of API kunt indienen.
 
 ### De gebruikersinterface gebruiken
 
-Wanneer het creëren van baanverzoeken in UI, ben zeker om **[!UICONTROL AEP Gegevensmeer]** en/of **[!UICONTROL Profiel]** onder _[!UICONTROL Producten]_te selecteren om banen voor gegevens te verwerken die in[!DNL Data Lake]of[!DNL Real-time Customer Profile], respectievelijk worden opgeslagen.
+Wanneer het creëren van baanverzoeken in UI, ben zeker om **[!UICONTROL AEP Gegevensmeer]** en/of **[!UICONTROL Profiel]** onder _[!UICONTROL Producten]_ te selecteren om banen voor gegevens te verwerken die in [!DNL Data Lake] of [!DNL Real-time Customer Profile], respectievelijk worden opgeslagen.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
