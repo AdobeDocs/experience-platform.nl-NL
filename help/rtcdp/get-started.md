@@ -5,7 +5,7 @@ seo-title: Aan de slag met het Adobe Real-time Platform voor klantgegevens
 description: Het scenario van de steekproef voor het Platform van de Gegevens van de Klant van Adobe in real time
 seo-description: Het scenario van de steekproef voor het Platform van de Gegevens van de Klant van Adobe in real time
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 0%
@@ -258,6 +258,7 @@ In dit scenario, wil Luma dit publiek met verpersoonlijking over deze bestemming
 U kunt het segment ook plannen om op een bepaald tijdstip te beginnen of te eindigen. Het segment wordt gepost en automatisch bijgewerkt in de geconfigureerde platforms op de geplande datums.
 
 >[!NOTE]
+>
 >Als u in het datumveld klikt, wordt deze automatisch 90 dagen gepland.
 
 Klik op **[!UICONTROL Opslaan]** om naar de volgende pagina te gaan.
