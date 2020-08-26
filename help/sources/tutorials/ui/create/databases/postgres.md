@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een PostgreSQL-bronconnector maken in de UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Creeer een [!DNL PostgreSQL] bronschakelaar in UI
 
 >[!NOTE]
+>
 > De [!DNL PostgreSQL] connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een [!DNL PostgreSQL] (hierna &quot;PSQL&quot; genoemd) bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
