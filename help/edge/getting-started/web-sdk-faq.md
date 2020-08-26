@@ -4,15 +4,15 @@ seo-title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Veelgestelde vragen over Adobe Experience Platform Web SDK
 seo-description: Veelgestelde vragen over Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 8cd9c52acd981c92d3959e12d91ebb65b2c3cec8
+source-git-commit: f51513e66945c41d06f12f4ac8f05ddad0d32898
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1679'
 ht-degree: 1%
 
 ---
 
 
-# Veelgestelde vragen over Adobe Experience Platform Web SDK
+# Veelgestelde vragen
 
 Deze veelgestelde vragen bevatten vragen die vaak worden gesteld over de Adobe Web SDK/
 
