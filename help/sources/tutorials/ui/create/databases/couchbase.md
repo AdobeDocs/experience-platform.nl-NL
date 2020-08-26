@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Couchbase-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9995a1d7daae3860783d2b4e4e0d2f1314eaa643
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Creeer een [!DNL Couchbase] bronschakelaar in UI
 
 >[!NOTE]
+>
 > De [!DNL Couchbase] connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 De bronschakelaars in [!DNL Adobe Experience Platform] verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Couchbase] bronaansluiting met behulp van de [!DNL Platform] gebruikersinterface.
