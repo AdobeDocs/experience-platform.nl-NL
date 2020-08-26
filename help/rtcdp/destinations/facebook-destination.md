@@ -5,7 +5,7 @@ seo-title: Facebook-bestemming
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 seo-description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 2%
@@ -23,7 +23,7 @@ Activeer profielen voor uw [!DNL Facebook] campagnes voor doelgroepen, personali
 
 ## Gevallen gebruiken
 
-Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Facebook] bestemming zou moeten gebruiken, zijn hier twee gevallen van het steekproefgebruik die de klanten van het Platform van de Gegevens van de Klant in real time van de Adobe kunnen oplossen door deze eigenschap te gebruiken.
+Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Facebook] bestemming zou moeten gebruiken, zijn hier twee gevallen van het steekproefgebruik die de klanten van het Platform van Gegevens van de Adobe in real time van de Klant kunnen oplossen door deze eigenschap te gebruiken.
 
 
 ### Hoofdletters en kleine letters gebruiken 1
@@ -60,6 +60,7 @@ Voordat u publiekssegmenten kunt verzenden naar [!DNL Facebook], moet u controle
 1. Voor uw [!DNL Facebook] gebruikersaccount moet de **[!DNL Manage campaigns]** machtiging zijn ingeschakeld voor de advertentieaccount die u wilt gebruiken.
 2. Add the **Adobe Experience Cloud** business account as an advertising partner in your [!DNL Facebook Ad Account]. Gebruik `business ID=206617933627973`. Zie Partners [toevoegen aan uw Business Manager](https://www.facebook.com/business/help/1717412048538897) in de Facebook-documentatie voor meer informatie.
    >[!IMPORTANT]
+   >
    > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. Dit is nodig voor de [!DNL Adobe Real-time CDP]-integratie.
 3. Lees en onderteken de [!DNL Facebook Custom Audiences] Servicevoorwaarden. Ga daarvoor naar `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, waarbij `accountID` uw [!DNL Facebook Ad Account ID] is.
 
