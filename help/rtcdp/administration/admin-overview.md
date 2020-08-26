@@ -5,7 +5,7 @@ seo-title: Real-Time CDP-beheeroverzicht
 description: 'Dit document biedt een overzicht van de beheermogelijkheden van Real-Time Customer Data Platform, aangedreven door Adobe Experience Platform. '
 seo-description: seo beschrijving
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 0%
@@ -28,7 +28,8 @@ Toegangsbeheer wordt beheerd via de [Adobe Admin Console](http://adminconsole.ad
 Meer over toegangsbeheer leren, zie het [toegangsbeheeroverzicht](../../access-control/home.md) in de [!DNL Experience Platform] documentatie.
 
 >[!IMPORTANT]
->Voor een gedetailleerde gids aan het verlenen van toegang tot CDP in real time, met inbegrip van het toelaten van zicht in UI, gelieve de stappen te volgen die in de gebruikershandleiding [van de](../../access-control/ui/overview.md)toegangscontrole, specifiek die voor het beheren van details en de extra diensten voor een productprofiel worden verstrekt.
+>
+>Voor een gedetailleerde gids aan het verlenen van toegang tot CDP in real time, met inbegrip van het toelaten van zicht in UI, gelieve de stappen te volgen die in de gebruikershandleiding [van de](../../access-control/ui/overview.md)toegangscontrole worden verstrekt, met name die voor het beheren van details en de extra diensten voor een productprofiel.
 
 ## Sandboxen
 
