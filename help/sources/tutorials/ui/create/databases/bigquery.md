@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een Google Big Query-bronconnector maken in de gebruikersinterface
 topic: overview
 translation-type: tm+mt
-source-git-commit: a4ba11b8e05e5e054133c954b749381e39a7f721
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Creeer een [!DNL Google Big Query] bronschakelaar in UI
 
 >[!NOTE]
+>
 > De [!DNL Google BigQuery] connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een [!DNL Google Big Query] (hierna &quot;GBQ&quot; genoemd) bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
