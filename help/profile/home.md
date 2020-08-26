@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 solution: Adobe Experience Platform
 title: Overzicht van het realtime klantprofiel
 topic: guide
-description: Klantprofiel in real-time is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek.
+description: Klantprofiel in real-time is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 translation-type: tm+mt
-source-git-commit: 05032ba72afd5224e33cb4fdc93c97ba6ec6f8e8
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1718'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met [!DNL Real-time Customer Profile], kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. [!DNL Profile] staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt. Dit overzicht zal u helpen de rol en het gebruik van [!DNL Real-time Customer Profile] in begrijpen [!DNL Experience Platform].
 
-## Begrijpen [!DNL Real-time Customer Profile]
+## [!DNL Real-time Customer Profile] begrijpen
 
 [!DNL Real-time Customer Profile] is een generische opslag van raadplegingsentiteiten die gegevens van diverse activa van ondernemingsgegevens samenvoegt, en dan toegang tot die gegevens in de vorm van individuele klantenprofielen en verwante gebeurtenissen van de tijdreeks verleent. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 
@@ -58,6 +58,7 @@ Wanneer het samenbrengen van gegevens uit veelvoudige bronnen en het combineren 
 ### (Alfa) Berekende kenmerken configureren
 
 >[!IMPORTANT]
+>
 >De berekende kenmerkfunctionaliteit die in dit document wordt beschreven is in alpha. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op basis van andere waarden, berekeningen en expressies. De berekende attributen werken op het profielniveau, betekenend kunt u waarden over alle verslagen en gebeurtenissen bijeenvoegen. Elk berekend kenmerk bevat een expressie, of &#39;regel&#39;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. Voor meer informatie over gegevens verwerkte attributen, en geleidelijke instructies voor het werken met hen die API gebruiken, gelieve de [!DNL Real-time Customer Profile] gegevens verwerkte gids [](api/computed-attributes.md)van het attributeneindpunt te zien. Deze handleiding geeft u een beter inzicht in de rol die berekende kenmerken spelen in Adobe Experience Platform en bevat voorbeelden van API-aanroepen voor het uitvoeren van standaard CRUD-bewerkingen.
@@ -114,7 +115,7 @@ Met betrekking tot de toegang tot gegevens speelt gegevensbeheer een sleutelrol 
 | Schema-relaties van derden | Schema-relaties van derden zijn **niet** toegestaan. |
 | Profielfragment | De aanbevolen maximale grootte van een profielfragment is **10kB**.<br><br> De absolute maximumgrootte van een profielfragment is **1 MB**. |
 | Niet-persoonlijke entiteit | De maximale totale grootte voor één niet-persoonlijke entiteit is **200 MB**. |
-| Gegevensbestanden per niet-persoonlijke entiteit | Een maximum van **1** dataset kan aan een niet-persoonentiteit worden geassocieerd. |
+| Gegevensbestanden per niet-persoonlijke entiteit | Een maximum van **1** dataset kan aan een niet persoonentiteit worden geassocieerd. |
 
 <!--
 | Section | Boundary | Enforcement |
@@ -132,7 +133,6 @@ Met betrekking tot de toegang tot gegevens speelt gegevensbeheer een sleutelrol 
 
 >[!NOTE]
 >
->
 >Een niet-persoonlijke entiteit verwijst naar elke XDM-klasse die **geen** deel uitmaakt van [!DNL Profile].
 
 ## Volgende stappen en extra bronnen
@@ -140,6 +140,7 @@ Met betrekking tot de toegang tot gegevens speelt gegevensbeheer een sleutelrol 
 Als u meer wilt weten over [!DNL Real-time Customer Profile]de documentatie, leest u de documentatie en vult u deze aan door de onderstaande video te bekijken of andere [Experience Platform videozelfstudies](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html)te bekijken.
 
 >[!WARNING]
+>
 >De [!DNL Platform] UI die in de volgende video wordt getoond is verouderd. Raadpleeg de gebruikershandleiding [van het profiel van de](ui/user-guide.md) real-time klant voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
