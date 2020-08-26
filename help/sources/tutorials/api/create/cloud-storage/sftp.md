@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Een SFTP-connector maken met de Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '543'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -15,9 +15,10 @@ ht-degree: 0%
 # Een SFTP-connector maken met de [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >De SFTP-connector bevindt zich in bèta. De functies en documentatie kunnen worden gewijzigd. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-[!DNL Flow Service] wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
 Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om verbinding te maken [!DNL Experience Platform] met een SFTP-server (Secure File Transfer Protocol).
 
@@ -25,7 +26,7 @@ Als u liever de gebruikersinterface in wilt gebruiken, [!DNL Experience Platform
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
 * [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
@@ -64,7 +65,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Verbinding maken
 
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per SFTP-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per SFTP-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
 
 **API-indeling**
 
