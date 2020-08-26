@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Apache Spark op Azure HDInsights-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 0%
@@ -15,11 +15,12 @@ ht-degree: 0%
 # (Beta) [!DNL Apache Spark] op [!DNL Azure HDInsights] connector
 
 >[!NOTE]
+>
 >De [!DNL Apache Spark] on- [!DNL Azure HDInsights] connector bevindt zich in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Met Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
-[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een derdegegevensbestand. [!DNL Platform] kan verbinding maken met verschillende typen databases, zoals relationeel, NoSQL of data warehouse. Ondersteuning voor databaseleveranciers is inbegrepen [!DNL Apache Spark] op [!DNL Azure HDInsights].
+[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een derdegegevensbestand. [!DNL Platform] kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. Ondersteuning voor databaseleveranciers is inbegrepen [!DNL Apache Spark] op [!DNL Azure HDInsights].
 
 ## IP adres lijst van gewenste personen
 
