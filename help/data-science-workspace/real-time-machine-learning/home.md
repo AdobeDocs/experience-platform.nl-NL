@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Real-time Machine Learning-overzicht
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Real-time Machine Learning-overzicht (Alpha)
 
 >[!IMPORTANT]
+>
 >Het leren van de machine in real time is niet beschikbaar aan alle gebruikers nog. Deze functie bevindt zich in alfa en wordt nog steeds getest. Dit document kan worden gewijzigd.
 
 Het leren van machines in real time kan de relevantie van uw digitale ervaringsinhoud voor uw eindgebruikers drastisch verbeteren. Dit wordt mogelijk gemaakt door real-time conferenties en voortdurend leren op de [!DNL Experience Edge]website te benutten.
@@ -35,11 +36,11 @@ In de volgende workflow worden de typische stappen en resultaten beschreven die 
 
 ### Inname van gegevens en preparaten
 
-Gegevens worden opgenomen en getransformeerd met de [!DNL Experience Data Model] (XDM) op het Adobe Experience Platform. Deze gegevens worden gebruikt voor modeltraining. Meer informatie over XDM vindt u in het [XDM-overzicht](../../xdm/home.md).
+Gegevens worden opgenomen en getransformeerd met de [!DNL Experience Data Model] (XDM) op Adobe Experience Platform. Deze gegevens worden gebruikt voor modeltraining. Meer informatie over XDM vindt u in het [XDM-overzicht](../../xdm/home.md).
 
 ### Authoring
 
-Creeer een Echte-tijd het Leren van de Machine model door het van kras te ontwerpen of het te brengen als vooraf opgeleid geserialiseerd ONNX model in de Notities van de Jupyter van het Adobe Experience Platform.
+Maak een real-time model voor het leren van machines door deze volledig te ontwerpen of in te voeren als een vooraf geserialiseerd ONNX-model in Adobe Experience Platform Jupyter-laptops.
 
 ### Implementatie
 
@@ -49,15 +50,16 @@ Stel uw model op om een Echte - tijd machine te creëren die de dienst in de Gal
 
 Met het voorspellingsREST API-eindpunt kunt u inzichten van machines in real-time genereren.
 
-### Aflevering
+### Levering
 
-Marketers kunnen vervolgens segmenten en regels definiëren die de leerscores voor machines in real time toewijzen aan ervaringen met Adobe Target. Op deze manier kunnen bezoekers van de website van uw merk in real-time dezelfde of hyperpersonaliseerde ervaring van de volgende pagina zien.
+Marketers kunnen vervolgens segmenten en regels definiëren die de leerscores voor machines in realtime toewijzen aan ervaringen met Adobe Target. Op deze manier kunnen bezoekers van de website van uw merk in real-time dezelfde of hyperpersonaliseerde ervaring van de volgende pagina zien.
 
 ## Huidige functionaliteit
 
 Het leren van machines in real time is momenteel in alpha. De hieronder beschreven functionaliteit kan worden gewijzigd wanneer meer functies en knooppunten beschikbaar worden gemaakt.
 
 >[!NOTE]
+>
 > Alfa-beperkingen:
 > - Momenteel worden alleen ONNX-modellen ondersteund.
 > - De functies die in knopen worden gebruikt kunnen niet in series worden vervaardigd. Bijvoorbeeld, een lambdafunctie die in een knoop van Pandas wordt gebruikt.
@@ -70,7 +72,7 @@ Het leren van machines in real time is momenteel in alpha. De hieronder beschrev
 
 |  | Alfa (mei) |
 | --- | --- |
-| **Functies** | - Het gebruiken van het de notitieboekjecalplaatje van RTML, auteur, test, en stelt een model van het douanemachine leren op. <br> - Ondersteuning voor het importeren van vooraf opgeleide modellen voor machinaal leren. <br> - Real-time Machine Learning SDK. <br> - Startset van ontwerpknooppunten. <br> - Gedistribueerd aan de Hub van het Adobe Experience Platform. |
+| **Functies** | - Het gebruiken van het de notitieboekjecalplaatje van RTML, auteur, test, en stelt een model van het douanemachine leren op. <br> - Ondersteuning voor het importeren van vooraf opgeleide modellen voor machinaal leren. <br> - Real-time Machine Learning SDK. <br> - Startset van ontwerpknooppunten. <br> - Gedistribueerd naar Adobe Experience Platform Hub. |
 | **Beschikbaarheid** | Noord-Amerika |
 | **Ontwerpknooppunten** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
 | **Runtime van scores** | ONNX |
