@@ -2,11 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: Opmerkingen bij de release van Adobe Experience Platform
+user-guide-description: Monthly release notes for Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 3a650d8a6553cd313f49423a2280a89e5b5785fc
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '25'
-ht-degree: 56%
+ht-degree: 60%
 
 ---
 
@@ -22,7 +23,7 @@ ht-degree: 56%
 * [Februari 2020](2020/february-2020.md)
 * [Januari 2020](2020/january-2020.md)
 * 2019 {#2019}
-   * [december 2019](2019/december-2019.md)
+   * [December 2019](2019/december-2019.md)
    * [November 2019](2019/november-2019.md)
    * [September 2019](2019/september-2019.md)
    * [Juli 2019](2019/july-2019.md)
