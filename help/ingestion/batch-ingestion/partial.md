@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van gedeeltelijke invoer van Adobe Experience Platform-batch
 topic: overview
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 0%
@@ -341,7 +341,6 @@ Als de batch een of meer fouten bevat en foutdiagnostiek ingeschakeld is, krijgt
 >[!NOTE]
 >
 >Als foutdiagnostiek niet beschikbaar is, wordt in plaats daarvan het volgende foutbericht weergegeven:
->
 > 
 ```json
 > {
