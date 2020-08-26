@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een model optimaliseren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Na het implementeren en trainen van een model, zou een wetenschapper de volgende
 
 Momenteel ondersteunt het Model Insights Framework de volgende runtimes:
 - [Scala](#scala)
-- [!DNL Python/Tensorflow](#pythontensorflow)
+- [Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
 Voorbeeldcode voor recepten vindt u in de [Experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) repository onder `recipes`. In deze zelfstudie wordt verwezen naar specifieke bestanden in deze opslagplaats.
