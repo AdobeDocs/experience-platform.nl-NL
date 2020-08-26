@@ -5,7 +5,7 @@ title: Gebruikershandleiding voor JupyterLab
 topic: Overview
 description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '3684'
 ht-degree: 10%
@@ -237,6 +237,7 @@ Als u een nieuwe *Launcher* wilt openen, klikt u op **Bestand > Nieuwe startpagi
 Selecteer in de [!DNL JupyterLab] rechterbovenhoek het tandwielpictogram om de configuratie *van de* notebookserver te openen. Met de schuifregelaar kunt u de GPU in- en uitschakelen en de benodigde hoeveelheid geheugen toewijzen. De hoeveelheid geheugen die u kunt toewijzen, is afhankelijk van de hoeveelheid geheugen die uw organisatie heeft ingericht. Selecteer Configs **[!UICONTROL bijwerken]** om op te slaan.
 
 >[!NOTE]
+>
 >Per organisatie is slechts één GPU beschikbaar voor laptops. Als de GPU in gebruik is, moet u wachten op de gebruiker die momenteel de GPU heeft gereserveerd om deze vrij te geven. Dit kan worden gedaan door uit te loggen of GPU in een nutteloze staat voor vier of meer uren te verlaten.
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
@@ -425,6 +426,7 @@ dataFrame.show()
 ```
 
 >[!TIP]
+>
 >In Scala, kunt u gebruiken `sys.env()` om een waarde van binnen te verklaren en terug te keren `option`.
 
 ### Het gebruiken van de magie van %dataset in PySpark 3 ([!DNL Spark] 2.4) laptops {#magic}
@@ -604,9 +606,7 @@ timedf.show()
 
 >[!TIP]
 >
->
 >In Scala, kunt u gebruiken `sys.env()` om een waarde van binnen te verklaren en terug te keren `option`. Dit elimineert de behoefte om variabelen te bepalen als u weet zij slechts één keer zullen worden gebruikt. In het volgende voorbeeld wordt uit het bovenstaande voorbeeld `val userToken` het voorbeeld opgehaald en inline gedeclareerd `option` als alternatief:
->
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
@@ -682,11 +682,11 @@ timedf.show()
 | r-lubridate | 1.7.4 |
 | r-randomforest | 4.6_14 |
 | r-tidyverse | 1.2.1 |
-| r-tree | 1.0_39 |
+| volume | 1.0_39 |
 | pymongo | 3.8.0 |
 | pijltje | 0.14.1 |
 | boto3 | 1.9.199 |
-| ipyvolume | 0.5.2 |
+| brussel | 0.5.2 |
 | fastparket | 0.3.2 |
 | python-snappy | 0.5.4 |
 | ipywebrtc | 0.5.0 |
