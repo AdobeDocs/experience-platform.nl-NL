@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Referentiehandleiding voor eindbewerkingsknooppunten voor leren van machines
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # Referentiegids voor eindbewerkingsknooppunten (Alpha)
 
 >[!IMPORTANT]
+>
 >Het leren van de machine in real time is niet beschikbaar aan alle gebruikers nog. Deze functie bevindt zich in alfa en wordt nog steeds getest. Dit document kan worden gewijzigd.
 
 Een knooppunt is de fundamentele eenheid waarvan grafieken worden gevormd. Elke knoop voert een specifieke taak uit en zij kunnen samen gebruikend verbindingen worden geketend om een grafiek te vormen die een pijpleiding van XML vertegenwoordigt. De taak die door een knoop wordt uitgevoerd vertegenwoordigt een verrichting op inputgegevens zoals een transformatie van gegevens of schema, of een machine het leren conclusie. Het knooppunt geeft de getransformeerde of afgeleide waarde uit aan de volgende node(s).
@@ -72,6 +73,7 @@ model_id = msg_model.model['model_id']
 ONNXNode is een intern knooppunt van de Adobe dat een model-id gebruikt om het vooraf opgeleide ONNX-model op te halen en het te gebruiken om op binnenkomende gegevens te score.
 
 >[!TIP]
+>
 >Geef de kolommen op in dezelfde volgorde als de gegevens die naar het ONNX-model moeten worden verzonden.
 
 ```python
@@ -121,11 +123,11 @@ msg6 = model_train.process(msg5)
 | Waarde | Beschrijving |
 | --- | --- |
 | functies | Invoerfuncties voor het model (lijst met tekenreeksen). <br> Bijvoorbeeld: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Target kolomnaam (tekenreeks). |
+| label | Naam van doelkolom (tekenreeks). |
 | mode | Trein/test (tekenreeks). |
 | model_path | Pad naar het model lokaal opslaan in onx-indeling. |
 | params.model | Absoluut importpad naar het model (tekenreeks), bijvoorbeeld: `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | Modelhyperparameters raadpleegt u de documentatie van de [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) voor meer informatie. |
+| params.model_params | Modelhyperparameters raadpleegt u de documentatie over de [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) voor meer informatie. |
 | node_instance.process(data_message_from_previous_node) | De methode `process()` neemt DataMsg van de vorige knoop en past transformatie toe. Dit hangt van de huidige knoop af die wordt gebruikt. |
 
 ### Splitsen
