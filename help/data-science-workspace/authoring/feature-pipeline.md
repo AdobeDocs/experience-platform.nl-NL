@@ -4,7 +4,7 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Een functiepijplijn maken
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
@@ -15,9 +15,10 @@ ht-degree: 0%
 # Een functiepijplijn maken
 
 >[!IMPORTANT]
+>
 > Functiepijpleidingen zijn momenteel alleen beschikbaar via API.
 
-Met Adobe Experience Platform kunt u aangepaste functiepijpleidingen maken en maken om functies op schaal te laten engineering via de Sensei Machine Learning Framework Runtime (hierna &quot;Runtime&quot; genoemd).
+Adobe Experience Platform staat u toe om de pijpleidingen van de douaneeigenschap te bouwen en tot stand te brengen om eigenschapengineering op schaal door Runtime van het Lerende Kader van de Machines van Sensei uit te voeren (verder genoemd als &quot;Runtime&quot;).
 
 Dit document beschrijft de diverse klassen die in een eigenschappijpleiding worden gevonden, en verstrekt een geleidelijke zelfstudie voor het creëren van een pijpleiding van de douaneeigenschap gebruikend [ModelAuthoring SDK](./sdk.md) in PySpark.
 
@@ -390,6 +391,7 @@ scoring.dataSaver: MyDatasetSaver
 Nu u uw eigenschappijpleiding hebt ontworpen, moet u een beeld van het Dok tot stand brengen om een vraag aan de eindpunten van de eigenschappijpleiding in [!DNL Sensei Machine Learning] API te maken. U hebt een beeld URL van het Docker nodig om een vraag aan de eindpunten van de eigenschappijpleiding te maken.
 
 >[!TIP]
+>
 >Als u geen Docker URL hebt, bezoek de brondossiers van het [Pakket in een recept](../models-recipes/package-source-files-recipe.md) leerprogramma voor een geleidelijke analyse bij het creëren van een de gastheer URL van het Docker.
 
 Naar keuze, kunt u de volgende inzameling van Postman ook gebruiken om in de voltooiing van het werkschema van de eigenschappijpleiding te helpen API:
@@ -423,6 +425,7 @@ Als de bewerking is voltooid, vraagt u de GET om de status `/experiments/{EXPERI
 ### De taak voor het uitvoeren van scoring op experimentele wijze opgeven {#scoring}
 
 >[!NOTE]
+>
 > Als u deze stap wilt voltooien, moet u ten minste één voltooide training hebben die aan uw expert is gekoppeld.
 
 Nadat de training met succes is uitgevoerd, moet u de taak [van de](../api/experiments.md#experiment-training-scoring)scoringbewerking opgeven. Stel een POST in op `experiments/{EXPERIMENT_ID}/runs` en in de hoofdtekst en stel het `mode` kenmerk in op &quot;score&quot;. Hierdoor start u de uitvoering van uw studieprogramma Experiment.
