@@ -5,9 +5,9 @@ title: Werken met API's voor de beslissingsservice-runtime
 topic: tutorial
 description: 'Dit document bevat een zelfstudie voor het werken met de runtimeservices van de Decisioning Service met Adobe Experience Platform API''s. '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2017'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ Dit document bevat een zelfstudie voor het werken met de runtimeservices van het
 
 Deze zelfstudie vereist een goed begrip van de [!DNL Experience Platform] services die betrokken zijn bij het nemen van beslissingen en het bepalen van de volgende beste aanbieding om tijdens de ervaringen van de klant te presenteren. Lees de documentatie voor het volgende voordat u met deze zelfstudie begint:
 
-- [!DNL Decisioning Service](./../home.md): Biedt het framework voor het toevoegen en verwijderen van aanbiedingen en het maken van algoritmen voor het kiezen van de beste optie die tijdens de ervaring van de klant wordt getoond.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL wordt gebruikt om regels en filters te bepalen.
+- [[!DNL-beslissingsservice]](./../home.md): Biedt het framework voor het toevoegen en verwijderen van aanbiedingen en het maken van algoritmen voor het kiezen van de beste optie die tijdens de ervaring van de klant wordt getoond.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+- [[!DNL Profile Query Language (PQL)]](../../segmentation/pql/overview.md): PQL wordt gebruikt om regels en filters te bepalen.
 - [Beslissingsobjecten en -regels beheren met behulp van API&#39;s](./entities.md): Voordat u de runtime voor beslissingsservices kunt gebruiken, moet u de verwante entiteiten instellen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan APIs te maken. [!DNL Platform]
@@ -239,7 +239,7 @@ De aanvraag per dit schema bevat een array van URI&#39;s die verwijzen naar aanb
 
 ## Dynamische contextgegevens in beslissingsverzoeken
 
-In de vorige sectie wordt aangegeven hoe XDM-objecten kunnen worden doorgegeven aan een beslissingsverzoek. Hieronder ziet u een voorbeeld van een dergelijke array met contextobjecten:
+In de vorige sectie wordt aangegeven hoe XDM-objecten kunnen worden doorgegeven aan een beslissingsverzoek. Hier volgt een voorbeeld van een dergelijke array van contextobjecten:
 
 ```json
 "xdm:contextData": [
