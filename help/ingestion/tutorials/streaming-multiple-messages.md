@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Meerdere berichten streamen in één HTTP-aanvraag
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1459'
-ht-degree: 0%
+source-wordcount: '1466'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ Deze zelfstudie vereist een goed begrip van Adobe Experience Platform [!DNL Data
 - [Overzicht](../home.md)van gegevensinname: Omvat de kernconcepten van [!DNL Experience Platform Data Ingestion], met inbegrip van innamemethodes en gegevensschakelaars.
 - [Overzicht](../streaming-ingestion/overview.md)van streaming opname: De werkstroom en bouwstenen van het stromen opname, zoals het stromen verbindingen, datasets, [!DNL XDM Individual Profile]en [!DNL XDM ExperienceEvent].
 
-Deze zelfstudie vereist ook dat u de zelfstudie [Verificatie naar Adobe Experience Platform](../../tutorials/authentication.md) hebt voltooid om aanroepen naar API&#39; [!DNL Platform] s te kunnen uitvoeren. Voltooiing van de authentificatiezelfstudie verstrekt de waarde voor de kopbal van de Vergunning die door alle API vraag in dit leerprogramma wordt vereist. De kopbal wordt getoond in steekproefvraag als volgt:
+Deze zelfstudie vereist ook dat u de zelfstudie [Verificatie naar Adobe Experience Platform](../../tutorials/authentication.md) hebt voltooid om oproepen naar API&#39; [!DNL Platform] s te kunnen uitvoeren. Voltooiing van de authentificatiezelfstudie verstrekt de waarde voor de kopbal van de Vergunning die door alle API vraag in dit leerprogramma wordt vereist. De kopbal wordt getoond in steekproefvraag als volgt:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 
@@ -508,7 +508,7 @@ Het tweede bericht is mislukt omdat het geen berichttekst bevatte. Het inzamelin
     },
 ```
 
-Het derde bericht is mislukt omdat een ongeldige IMS-organisatie-id in de koptekst wordt gebruikt. De IMS-organisatie moet overeenkomen met de {CONNECTION_ID} die u wilt posten. Als u wilt bepalen welke IMS-organisatie-id overeenkomt met de streamingverbinding die u gebruikt, kunt u een `GET inlet` aanvraag uitvoeren met de [!DNL Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)methode. Zie [het ophalen van een streamingverbinding](./create-streaming-connection.md#get-data-collection-url) voor een voorbeeld van hoe eerder gemaakte streamingverbindingen kunnen worden opgehaald.
+Het derde bericht is mislukt omdat een ongeldige IMS-organisatie-id in de koptekst wordt gebruikt. De IMS-organisatie moet overeenkomen met de {CONNECTION_ID} die u wilt posten. Als u wilt bepalen welke IMS-organisatie-id overeenkomt met de streamingverbinding die u gebruikt, kunt u een `GET inlet` aanvraag uitvoeren met de [[!DNL-API voor gegevensverwerking]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Zie [het ophalen van een streamingverbinding](./create-streaming-connection.md#get-data-collection-url) voor een voorbeeld van hoe eerder gemaakte streamingverbindingen kunnen worden opgehaald.
 
 Het vierde bericht is mislukt omdat het niet het verwachte XDM-schema heeft gevolgd. De `xdmSchema` include-bestanden in de kop- en hoofdtekst van de aanvraag komen niet overeen met het XDM-schema van de aanvraag `{DATASET_ID}`. Het verbeteren van het schema in de berichtkopbal en het lichaam staat het toe om bevestiging DCCS over te gaan en met succes verzonden naar [!DNL Platform]. De berichttekst moet ook worden bijgewerkt zodat deze overeenkomt met het XDM-schema van het formulier, `{DATASET_ID}` zodat de streamingvalidatie wordt ingeschakeld [!DNL Platform]. Voor meer informatie over wat aan berichten gebeurt die met succes aan Platform stromen, zie de [bevestig berichten die sectie van dit leerprogramma worden opgenomen](#confirm-messages-ingested) .
 
@@ -529,7 +529,7 @@ De berichten van de partij die het stromen bevestiging op overgaan [!DNL Platfor
 
 ## Volgende stappen
 
-Nu u weet hoe te om veelvoudige berichten in één enkel verzoek te verzenden en te verifiëren wanneer de berichten met succes in de doeldataset worden opgenomen, kunt u beginnen het stromen van uw eigen gegevens aan [!DNL Platform]. Voor een overzicht van hoe te om ingebed gegevens van te vragen en terug te winnen [!DNL Platform], zie de [!DNL Data Access](../../data-access/tutorials/dataset-data.md) gids.
+Nu u weet hoe te om veelvoudige berichten in één enkel verzoek te verzenden en te verifiëren wanneer de berichten met succes in de doeldataset worden opgenomen, kunt u beginnen het stromen van uw eigen gegevens aan [!DNL Platform]. Zie de handleiding [!DNL Platform][!DNL-gegevenstoegang] [voor een overzicht van het opvragen en ophalen van opgenomen gegevens uit](../../data-access/tutorials/dataset-data.md) .
 
 ## Aanhangsel
 
