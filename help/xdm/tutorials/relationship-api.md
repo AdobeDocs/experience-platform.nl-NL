@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Bepaal een verband tussen twee schema's gebruikend de Registratie API van het Schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1282'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ De mogelijkheid om de relaties tussen uw klanten en hun interactie met uw merk o
 
 Terwijl de schemaverhoudingen door het gebruik van het unieschema kunnen worden afgeleid en [!DNL Real-time Customer Profile], is dit slechts op schema&#39;s van toepassing die de zelfde klasse delen. Om een verband tussen twee schema&#39;s te vestigen die tot verschillende klassen behoren, moet een specifiek **relatiegebied** aan een bronschema worden toegevoegd, dat de identiteit van een bestemmingsschema verwijst.
 
-Dit document biedt een zelfstudie voor het definiëren van een een-op-een relatie tussen twee schema&#39;s die door uw organisatie met de [!DNL Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)code zijn gedefinieerd.
+Dit document biedt een zelfstudie voor het definiëren van een een-op-een relatie tussen twee schema&#39;s die door uw organisatie met de [[!DNL-API voor schemaregistratie]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)zijn gedefinieerd.
 
 ## Aan de slag
 
@@ -27,7 +27,7 @@ Deze zelfstudie vereist een goed begrip van [!DNL Experience Data Model] (XDM) e
 
 * [XDM-systeem in Experience Platform](../home.md): Een overzicht van XDM en zijn implementatie in [!DNL Experience Platform].
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Een inleiding van de bouwstenen van schema&#39;s XDM.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de [!DNL Schema Registry] API te kunnen uitvoeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de [!DNL Accept] kopbal en zijn mogelijke waarden).
@@ -110,7 +110,7 @@ Registreer de `$id` waarden van de twee schema&#39;s u een verhouding tussen wil
 
 ## Een referentieveld definiëren voor het bronschema
 
-Binnen de [!DNL Schema Registry], werken de relatiebeschrijvers gelijkaardig aan buitenlandse sleutels in relationele gegevensbestandlijsten: een veld in het bronschema fungeert als een verwijzing naar het **primaire identiteitsveld** van een doelschema. Als uw bronschema geen gebied voor dit doel heeft, kunt u een mengeling met het nieuwe gebied moeten tot stand brengen en het toevoegen aan het schema. Dit nieuwe veld moet de `type` waarde &quot;[!DNL string]&quot; hebben.
+Binnen de [!DNL Schema Registry], werken de relatiebeschrijvers gelijkaardig aan buitenlandse sleutels in relationele gegevensbestandlijsten: Een veld in het bronschema fungeert als een verwijzing naar het **primaire identiteitsveld** van een doelschema. Als uw bronschema geen gebied voor dit doel heeft, kunt u een mengeling met het nieuwe gebied moeten tot stand brengen en het toevoegen aan het schema. Dit nieuwe veld moet de `type` waarde &quot;[!DNL string]&quot; hebben.
 
 >[!IMPORTANT]
 >
