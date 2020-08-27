@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorstromen en -uitvoering
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9bdc45f6e51f1a140da503ac36355619300cedd2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-In deze zelfstudie worden de stappen beschreven voor het controleren van gegevens over stroomuitvoering op volledigheid, fouten en metriek met de [!DNL Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)instructies.
+In deze zelfstudie worden de stappen beschreven voor het controleren van gegevens voor stroomuitvoering op volledigheid, fouten en metriek met de [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
