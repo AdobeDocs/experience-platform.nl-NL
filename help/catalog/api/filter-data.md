@@ -5,9 +5,9 @@ title: Catalogusgegevens filteren met behulp van queryparameters
 topic: developer guide
 description: De dienst API van de Catalogus staat reactiegegevens toe om door het gebruik van de parameters van de verzoekvraag worden gefiltreerd. Een deel van beste praktijken voor Catalog is filters in alle API vraag te gebruiken, aangezien zij de lading op API verminderen en helpen algemene prestaties verbeteren.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2085'
 ht-degree: 0%
 
 ---
@@ -207,8 +207,8 @@ Er zijn enkele beperkingen waarmee u rekening kunt houden wanneer u tags gebruik
 * Tagnamen zijn uniek voor uw IMS-organisatie.
 * Adobe-processen kunnen voor bepaalde gedragingen tags gebruiken. De namen van deze tags worden standaard voorafgegaan door &quot;adobe&quot;. Daarom moet u deze conventie vermijden bij het declareren van labelnamen.
 * De volgende tagnamen zijn gereserveerd voor gebruik in [!DNL Experience Platform]de hele organisatie en kunnen daarom niet worden gedeclareerd als een tagnaam voor uw organisatie:
-   * `unifiedProfile`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden opgenomen door [!DNL Real-time Customer Profile](../../profile/home.md).
-   * `unifiedIdentity`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden opgenomen door [!DNL Identity Service](../../identity-service/home.md).
+   * `unifiedProfile`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden ingevoerd door [[!DNL Real-time klantprofiel]](../../profile/home.md).
+   * `unifiedIdentity`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden ingevoerd door [[!DNL Identity Service]](../../identity-service/home.md).
 
 Hieronder ziet u een voorbeeld van een gegevensset die een `tags` eigenschap bevat. De tags binnen die eigenschap hebben de vorm van sleutel-waardeparen, waarbij elke tagwaarde wordt weergegeven als een array met één tekenreeks:
 
@@ -551,7 +551,7 @@ Een succesvol antwoord bevat een lijst van datasets, exclusief om het even welke
 
 De `property` vraagparameter verstrekt meer flexibiliteit voor op bezit-gebaseerd filtreren dan eenvoudige filters. Naast het filteren op basis van het feit of een eigenschap een specifieke waarde heeft, kan de `property` parameter andere vergelijkingsoperatoren (zoals &quot;more-than&quot; (`>`) en &quot;less-than&quot; (`<`))) en reguliere expressies gebruiken om te filteren op eigenschapswaarden. Het filter kan ook filteren op het al dan niet bestaan van een eigenschap, ongeacht de waarde ervan.
 
-De `property` parameter accepteert alleen objecteigenschappen op het hoogste niveau. Dit houdt in dat u voor het volgende voorbeeldobject op eigenschap kunt filteren voor `name`, `description`en `subItem`, maar NIET voor `sampleKey`.
+De `property` parameter accepteert alleen objecteigenschappen op hoofdniveau. Dit houdt in dat u voor het volgende voorbeeldobject op eigenschap kunt filteren voor `name`, `description`en `subItem`, maar NIET voor `sampleKey`.
 
 ```json
 {
