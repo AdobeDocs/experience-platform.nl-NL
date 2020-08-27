@@ -5,9 +5,9 @@ title: Handleiding voor ontwikkelaars van Catalog Service
 topic: developer guide
 description: Deze handleiding voor ontwikkelaars bevat stappen waarmee u de API voor Catalog kunt gaan gebruiken. De handleiding bevat vervolgens voorbeeld-API-aanroepen voor het uitvoeren van toetsbewerkingen met behulp van Catalog.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Deze handleiding voor ontwikkelaars bevat stappen waarmee u de [!DNL Catalog] AP
 
 [!DNL Catalog] controleert meta-gegevens voor verscheidene soorten middelen en verrichtingen binnen [!DNL Experience Platform]. Deze ontwikkelaarsgids vereist een werkend inzicht in de diverse [!DNL Experience Platform] diensten betrokken bij het creëren van en het beheren van deze middelen:
 
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 * [Inname](../../ingestion/batch-ingestion/overview.md)in batch: Hoe [!DNL Experience Platform] neemt en slaat gegevens van gegevensdossiers, zoals CSV en Parquet op.
 * [Streaming opname](../../ingestion/streaming-ingestion/overview.md): Hoe [!DNL Experience Platform] neemt en slaat gegevens van cliënt-en server-zijapparaten in real time op.
 
