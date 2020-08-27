@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query-service in Jupyter-laptop
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '783'
 ht-degree: 1%
 
 ---
@@ -27,14 +27,14 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 - Een [!DNL Adobe Analytics] gegevensset
 
 - Een goed begrip van de volgende belangrijkste concepten die in deze zelfstudie worden gebruikt:
-   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
-   - [!DNL Query Service](../../query-service/home.md)
-   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [[!DNL het Model van de Gegevens van de Ervaring (XDM) en XDM Systeem]](../../xdm/home.md)
+   - [[!DNL Query Service]](../../query-service/home.md)
+   - [[!SQL-syntaxis voor DNL Query Service](../../query-service/sql/overview.md)
    - [Adobe Analytics]
 
 ## Toegang [!DNL JupyterLab] en [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. Navigeer in [!DNL Experience Platform](https://platform.adobe.com)de linkernavigatiekolom naar **[!UICONTROL laptops]** . Laat JupyterLab even laden.
+1. Navigeer in [[!DNL-Experience Platform]](https://platform.adobe.com)naar **[!UICONTROL laptops]** vanuit de linkernavigatiekolom. Laat JupyterLab even laden.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
@@ -54,7 +54,7 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Zoek een [!DNL Adobe Analytics] dataset om op de lijst te onderzoeken en met de rechtermuisknop aan te klikken, de Gegevens van de **[!UICONTROL Vraag in Notitieboekje]** om SQL vragen in de lege notitie te produceren.
+4. Zoek een [!DNL Adobe Analytics] dataset om op de lijst te onderzoeken en met de rechtermuisknop aan te klikken, de Gegevens van de **[!UICONTROL Vraag in Notitieboekje]** om SQL vragen in de lege notitieboekje te produceren.
 
 5. Klik op de eerste cel die de functie bevat `qs_connect()` en voer deze uit door op de afspeelknop te klikken. Deze functie maakt een verbinding tussen uw notitieboekjectinstantie en de [!DNL Query Service]component.
 
