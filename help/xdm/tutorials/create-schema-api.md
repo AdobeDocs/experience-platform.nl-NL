@@ -5,9 +5,9 @@ title: Een schema maken met de API voor schemaregistratie
 topic: tutorials
 description: Deze zelfstudie gebruikt de API voor schemaregistratie om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2343'
+source-wordcount: '2368'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,10 @@ Deze zelfstudie gebruikt de [!DNL Schema Registry] API om u door de stappen te l
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [!DNL Experience Data Model (XDM) System](../home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL-sandboxen]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de [!DNL Schema Registry] API te kunnen uitvoeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
 
@@ -955,9 +955,9 @@ Wanneer u een GET-verzoek uitvoert om het schema op te zoeken, wordt nu de verwi
 
 ### Een identiteitsdescriptor definiëren
 
-Schema&#39;s worden gebruikt om gegevens in te voeren [!DNL Experience Platform]. Dit gegeven wordt uiteindelijk gebruikt over de veelvoudige diensten om één enkele, verenigde mening van een individu tot stand te brengen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;Identiteit&quot;worden gemerkt en, bij gegevensinvoer, worden de gegevens in die gebieden opgenomen in de Grafiek van de Identiteit voor dat individu. De grafiekgegevens kunnen dan door [!DNL Real-time Customer Profile](../../profile/home.md) en andere [!DNL Experience Platform] diensten worden betreden om een verbonden mening van elke individuele klant te verstrekken.
+Schema&#39;s worden gebruikt om gegevens in te voeren [!DNL Experience Platform]. Dit gegeven wordt uiteindelijk gebruikt over de veelvoudige diensten om één enkele, verenigde mening van een individu tot stand te brengen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;Identiteit&quot;worden gemerkt en, bij gegevensinvoer, worden de gegevens in die gebieden opgenomen in de Grafiek van de Identiteit voor dat individu. De grafiekgegevens kunnen vervolgens worden benaderd door [[!DNL Real-time klantprofiel]](../../profile/home.md) en andere [!DNL Experience Platform] services voor een aan elkaar gekoppelde weergave van elke afzonderlijke klant.
 
-Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html)CRM-id of andere unieke id-velden.
+Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html), CRM-id of andere unieke id-velden.
 
 Houd rekening met alle unieke id&#39;s die specifiek zijn voor uw organisatie, omdat dit ook goede identiteitsvelden kunnen zijn.
 
@@ -996,7 +996,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->U kunt beschikbare waarden voor &quot;xdm:namespace&quot; weergeven of nieuwe waarden maken met de [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)methode. De waarde voor &quot;xdm:property&quot; kan &quot;xdm:code&quot; of &quot;xdm:id&quot; zijn, afhankelijk van de gebruikte &quot;xdm:namespace&quot;.
+>U kunt beschikbare waarden voor &quot;xdm:namespace&quot; weergeven of nieuwe waarden maken met de [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). De waarde voor &quot;xdm:property&quot; kan &quot;xdm:code&quot; of &quot;xdm:id&quot; zijn, afhankelijk van de gebruikte &quot;xdm:namespace&quot;.
 
 **Antwoord**
 
@@ -1170,7 +1170,7 @@ Het antwoord is een gefilterde lijst van schema&#39;s die alleen schema&#39;s be
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een schema samengesteld gebruikend zowel standaardmengen als een mengeling die u bepaalde. U kunt dit schema nu gebruiken om een dataset tot stand te brengen en recordgegevens in Adobe Experience Platform in te voeren.
+Door deze zelfstudie te volgen, hebt u met succes een schema samengesteld gebruikend zowel standaardmengen als een mengeling die u bepaalde. U kunt dit schema nu gebruiken om een dataset te creëren en recordgegevens in Adobe Experience Platform in te voeren.
 
 Het volledige schema van de Leden van de Loyalty, zoals die door dit leerprogramma wordt gecreeerd, is beschikbaar in het bijlage dat volgt. Als u naar het schema kijkt, kunt u zien hoe de mixins bijdragen aan de algemene structuur en welke velden beschikbaar zijn voor gegevensinvoer.
 
