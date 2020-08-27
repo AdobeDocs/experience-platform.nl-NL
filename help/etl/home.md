@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ETL-integratie maken
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 8b1b61b6446b28f92d6cf221003674fa09716c53
 workflow-type: tm+mt
-source-wordcount: '4158'
+source-wordcount: '4153'
 ht-degree: 0%
 
 ---
@@ -522,7 +522,7 @@ Details over het filteren van batches vindt u in de zelfstudie [Gegevenstoegang]
 
 ### Bestanden ophalen uit een batch
 
-Als u de id hebt voor de batch die u zoekt (`{BATCH_ID}`), kan een lijst met bestanden die tot een specifieke batch behoren, worden opgehaald via de [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  Details hiervoor zijn beschikbaar in de zelfstudie [Gegevenstoegang](../data-access/tutorials/dataset-data.md).
+Als u de id hebt voor de batch die u zoekt (`{BATCH_ID}`), kan een lijst met bestanden die tot een specifieke batch behoren, worden opgehaald via de [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  Details hiervoor vindt u in de [[!DNL Data Access] zelfstudie](../data-access/tutorials/dataset-data.md).
 
 **Verzoek**
 
@@ -548,7 +548,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key : {API_KEY}"
 ```
 
-De reactie kan naar één bestand of naar een map verwijzen. De details over elk kunnen in de zelfstudie van de Toegang van [Gegevens worden gevonden](../data-access/tutorials/dataset-data.md).
+De reactie kan naar één bestand of naar een map verwijzen. De details over elk kunnen in het [[!DNL Data Access] leerprogramma](../data-access/tutorials/dataset-data.md)worden gevonden.
 
 ### Bestandsinhoud openen
 
@@ -568,7 +568,7 @@ Het antwoord op deze aanvraag bevat de inhoud van het bestand. Voor meer informa
 
 ### Records voor schemaconformiteit valideren
 
-Wanneer gegevens worden geschreven, kunnen gebruikers ervoor kiezen om gegevens te valideren volgens de validatieregels die in het XDM-schema zijn gedefinieerd. Meer informatie over schemabevestiging kan in de Code van de Verwijzing van de Integratie van het Ecosysteem van [ETL op GitHub](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation)worden gevonden.
+Wanneer gegevens worden geschreven, kunnen gebruikers ervoor kiezen om gegevens te valideren volgens de validatieregels die in het XDM-schema zijn gedefinieerd. Meer informatie over schemabevestiging kan in de Code van de Verwijzing van de Integratie van het Ecosysteem van [ETL worden gevonden op [!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation).
 
 Als u de verwijzingsimplementatie gebruikt die op [[!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md)wordt gevonden, kunt u schemabevestiging in deze implementatie aanzetten gebruikend het systeembezit `-DenableSchemaValidation=true`.
 
