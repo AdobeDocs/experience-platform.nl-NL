@@ -3,10 +3,11 @@ keywords: Experience Platform;user guide;attribution ai;popular topics
 solution: Experience Platform
 title: Gebruikershandleiding voor Attribution AI
 topic: User guide
+description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 translation-type: tm+mt
-source-git-commit: 15f9f90e5a1439e071eeb46ad655eee10954c2ac
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
