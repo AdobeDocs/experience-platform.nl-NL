@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;create batch;catalog service;api
 solution: Experience Platform
 title: Een gegevensset maken
 topic: developer guide
+description: Opdat een dataset gegevens inneemt, moet het een partij hebben verbonden aan het. Gebruikend de id waarde van een bestaande dataset, kunt u een partij tot stand brengen door een verzoek van de POST aan het /batches eindpunt in de Catalogus API te doen.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 1%
+source-wordcount: '128'
+ht-degree: 0%
 
 ---
 
