@@ -5,7 +5,7 @@ title: Een analyse van een model voor machinaal leren maken en publiceren
 topic: Tutorial
 description: De Adobe Experience Platform Data Science Workspace biedt de middelen om uw doel te bereiken met behulp van het vooraf gebouwde Product Recommendations Recipe. Volg deze zelfstudie om te zien hoe u toegang hebt tot uw gegevens in de detailhandel, een model voor machinaal leren kunt maken en optimaliseren en inzichten kunt genereren in de werkruimte voor wetenschap van gegevens.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
    * Gouden gegevensset, postwaarden
    * Goudgegevenssetschema
 
-* Download de drie vereiste [!DNL Jupyter Notebook] bestanden van de openbare <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe- [!DNL Git] opslagplaats</a>. Deze bestanden worden gebruikt om de [!DNL JupyterLab] workflow in [!DNL Data Science Workspace]te demonstreren.
+* Download de drie vereiste [!DNL Jupyter Notebook] bestanden van de [Adobe [!DNL Git] publicgegevensopslagplaats](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs). Deze bestanden worden gebruikt om de [!DNL JupyterLab] workflow in [!DNL Data Science Workspace]te demonstreren.
 
 * Een goed begrip van de volgende belangrijkste concepten die in deze zelfstudie worden gebruikt:
    * [[!DNL Experience Data Model]](../../xdm/home.md): De standaardiseringsinspanning die door Adobe wordt geleid om standaardschema&#39;s zoals [!DNL Profile] en ExperienceEvent, voor het Beheer van de Ervaring van de Klant te bepalen.
