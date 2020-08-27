@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;machine learning model;Data Science Workspace;popular topics
+keywords: Experience Platform;machine learning model;Data Science Workspace;popular topics;create and publish a model
 solution: Experience Platform
 title: Een analyse van een model voor machinaal leren maken en publiceren
 topic: Tutorial
+description: De Adobe Experience Platform Data Science Workspace biedt de middelen om uw doel te bereiken met behulp van het vooraf gebouwde Product Recommendations Recipe. Volg deze zelfstudie om te zien hoe u toegang hebt tot uw gegevens in de detailhandel, een model voor machinaal leren kunt maken en optimaliseren en inzichten kunt genereren in de werkruimte voor wetenschap van gegevens.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1595'
 ht-degree: 0%
 
 ---
