@@ -3,10 +3,11 @@ keywords: Experience Platform;troubleshooting;Data Science Workspace;popular top
 solution: Experience Platform
 title: Handleiding voor het oplossen van problemen in de Data Science Workspace
 topic: Troubleshooting
+description: In dit document worden antwoorden gegeven op veelgestelde vragen over de Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ Dit document geeft antwoorden op veelgestelde vragen over Adobe Experience Platf
 >
 >Dit probleem is opgelost, maar kan nog steeds voorkomen in de Google Chrome 80.x-browser. Controleer of uw Chrome-browser up-to-date is.
 
-Met [!DNL Google Chrome] browserversie 80.x, worden alle derdekoekjes geblokkeerd door gebrek. Dit beleid kan verhinderen [!DNL JupyterLab] binnen Adobe Experience Platform te laden.
+Met [!DNL Google Chrome] browserversie 80.x, worden alle derdekoekjes geblokkeerd door gebrek. Met dit beleid kan het laden [!DNL JupyterLab] in Adobe Experience Platform worden voorkomen.
 
 Voer de volgende stappen uit om dit probleem op te lossen:
 
@@ -52,7 +53,7 @@ Na Stap 2, wordt u ertoe aangezet om uw browser opnieuw te lanceren. Nadat u het
 
 ## Waarom heb ik geen toegang tot [!DNL JupyterLab] Safari?
 
-Safari schakelt cookies van derden standaard uit in Safari &lt; 12. Aangezien de [!DNL Jupyter] virtuele-machinefunctie zich in een ander domein bevindt dan het bovenliggende frame, is het momenteel vereist dat cookies van derden zijn ingeschakeld voor het Adobe Experience Platform. Schakel cookies van derden in of schakel over naar een andere browser, zoals [!DNL Google Chrome].
+Safari schakelt cookies van derden standaard uit in Safari &lt; 12. Aangezien de [!DNL Jupyter] virtuele-machinefunctie zich in een ander domein bevindt dan het bovenliggende frame, vereist Adobe Experience Platform momenteel dat cookies van derden zijn ingeschakeld. Schakel cookies van derden in of schakel over naar een andere browser, zoals [!DNL Google Chrome].
 
 Voor Safari 12, moet u uw Agent van de Gebruiker op &quot;[!DNL Chrome]&quot;of &quot;[!DNL Firefox]&quot;schakelen. Om uw Agent van de Gebruiker te schakelen, begin door het menu van *Safari* te openen en **Voorkeur** te selecteren. Het voorkeurenvenster wordt weergegeven.
 
@@ -68,7 +69,7 @@ Selecteer vervolgens in de bovenste navigatiebalk het menu **Ontwikkelen** . Hou
 
 ## Waarom zie ik een &#39;403 Verboden&#39; bericht wanneer ik een bestand probeer te uploaden of te verwijderen in [!DNL JupyterLab]?
 
-Als uw browser is ingeschakeld met software voor het blokkeren van advertenties, zoals [!DNL Ghostery] of [!DNL AdBlock] Plus, moet het domein &quot;\*.adobe.net&quot; zijn toegestaan in elke software voor het blokkeren van advertenties, zodat [!DNL JupyterLab] deze normaal kan werken. Dit komt doordat [!DNL JupyterLab] virtuele machines op een ander domein worden uitgevoerd dan het [!DNL Experience Platform] domein.
+Als uw browser is ingeschakeld met software voor het blokkeren van advertenties, zoals [!DNL Ghostery] of [!DNL AdBlock] Plus, moet het domein &quot;\*.adobe.net&quot; zijn toegestaan in elke software voor het blokkeren van advertenties, zodat [!DNL JupyterLab] deze normaal kan werken. Dit komt doordat [!DNL JupyterLab] virtuele machines op een ander domein dan het [!DNL Experience Platform] domein worden uitgevoerd.
 
 ## Waarom worden sommige onderdelen van mijn [!DNL Jupyter Notebook] uiterlijk gerasterd of niet gerenderd als code?
 
