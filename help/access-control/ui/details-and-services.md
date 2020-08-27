@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile
 solution: Experience Platform
 title: Details en aanvullende services voor een productprofiel beheren
 topic: user guide
+description: In dit document worden de stappen beschreven die nodig zijn om details en aanvullende services voor een productprofiel in de Adobe Admin Console te beheren. U kunt de details van een profiel en toegang tot extra diensten van binnen het menu van de Montages van het Profiel vormen.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -34,6 +35,6 @@ Met het menu *[!UICONTROL Services]* kunt u de toegang van een profiel tot aanvu
 
 Klik op de schakeloptie aan de rechterkant van een bepaalde service om deze in of uit te schakelen. U kunt ook op het selectievakje **[!UICONTROL Alles op]** klikken om alle vermelde services in of uit te schakelen.
 
-Klik op **[!UICONTROL Opslaan]** als u klaar bent.
+When finished, click **[!UICONTROL Save]**.
 
 ![bewerken-aanvullende services](../images/edit-additional-services.png)
