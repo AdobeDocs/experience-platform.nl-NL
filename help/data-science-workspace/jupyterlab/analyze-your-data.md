@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analyseer uw gegevens met notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1710'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ Deze zelfstudie richt zich op het gebruik van Jupyter-laptops, die zijn gemaakt 
 
 De volgende concepten worden geïntroduceerd:
 
-- **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)is de webinterface van de volgende generatie voor Project Jupyter en is nauw geïntegreerd in[!DNL Adobe Experience Platform].
+- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is de webinterface van de volgende generatie voor Jupyter van project en is nauw geïntegreerd in [!DNL Adobe Experience Platform].
 - **Batches:** Datasets bestaan uit batches. Een batch is een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt. Nieuwe batches worden gemaakt wanneer gegevens aan een gegevensset worden toegevoegd.
-- **SDK voor gegevenstoegang (afgekeurd):** De SDK voor gegevenstoegang is nu afgekeurd. Gebruik deze [!DNL Platform SDK](../authoring/platform-sdk.md) handleiding.
+- **SDK voor gegevenstoegang (afgekeurd):** De SDK voor gegevenstoegang is nu afgekeurd. Gebruik de handleiding [[!DNL Platform SDK]](../authoring/platform-sdk.md) .
 
 ## Laptops verkennen in de werkruimte voor wetenschap van gegevens
 
@@ -46,7 +46,7 @@ In onze zelfstudie gebruiken we [!DNL Python] 3 in het Jupyter-notebook om te to
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
-Het recept van de Verkoop van de Detailhandel is een standalone voorbeeld dat de zelfde Detailhandel dataset van de Verkoop gebruikt om te tonen hoe de gegevens in de Notitie van Jupyter kunnen worden onderzocht en worden visualiseerd. Bovendien gaat de laptop dieper in met training en verificatie. Meer informatie over deze specifieke laptop vindt u in deze [analyse](../walkthrough.md).
+Het recept van de Verkoop van de Detailhandel is een standalone voorbeeld dat de zelfde detailhandel dataset van de Verkoop gebruikt om te tonen hoe de gegevens in de Notitie van Jupyter kunnen worden onderzocht en worden visualiseerd. Bovendien gaat de laptop dieper in met training en verificatie. Meer informatie over deze specifieke laptop vindt u in deze [analyse](../walkthrough.md).
 
 ### Toegangsgegevens
 
@@ -76,7 +76,7 @@ Nu gaan we verder met het openen van [!DNL Experience Platform] gegevens.
 
 ##### Op gegevensset-id
 
-Voor deze sectie, gebruiken wij de Detailhandel dataset van de Verkoop die de zelfde dataset is in de de steekproefnotitie van de Verkoop wordt gebruikt.
+Voor deze sectie, gebruiken wij de Detailhandel dataset van de Verkoop die de zelfde dataset is die in de de steekproefnotitie van de Verkoop wordt gebruikt.
 
 In ons Jupyter-notebook hebben we toegang tot onze gegevens via het tabblad **Gegevens** aan de linkerkant. Als u op het tabblad klikt, wordt een lijst met gegevenssets weergegeven.
 
@@ -90,7 +90,7 @@ Nu, kunnen wij op de `Retail-Training-<your-alias>` dataset met de rechtermuiskn
 
 >[!TIP]
 >
->raadpleeg de [!DNL Platform SDK](../authoring/platform-sdk.md) handleiding voor het converteren van uw code.
+>raadpleeg de handleiding [[!DNL Platform SDK]](../authoring/platform-sdk.md) voor het converteren van uw code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
