@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Unies
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Unies
 
-De unions (of verenigingsmeningen) zijn systeem-geproduceerde, read-only schema&#39;s die de gebieden van alle schema&#39;s samenvoegen die de zelfde klasse ([!DNL XDM ExperienceEvent] of [!DNL XDM Individual Profile]) delen en toegelaten voor [!DNL Real-time Customer Profile](../../profile/home.md).
+Unions (of samenvoegweergaven) zijn door het systeem gegenereerde, alleen-lezen schema&#39;s die de velden samenvoegen van alle schema&#39;s die dezelfde klasse ([!DNL XDM ExperienceEvent] of [!DNL XDM Individual Profile]) delen en die zijn ingeschakeld voor [[!DNL Real-time klantprofiel]](../../profile/home.md).
 
 Dit document behandelt essentiële concepten voor het werken met vakbonden in de API van de Registratie van het Schema, met inbegrip van steekproefvraag voor diverse verrichtingen. Voor meer algemene informatie over unies in XDM, zie de sectie over unies in de [grondbeginselen van schemacompositie](../schema/composition.md#union).
 
@@ -141,7 +141,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 200 (OK) en een `results` array in de hoofdtekst van de reactie. Als er samenvoegingen zijn gedefinieerd, worden de elementen `title`, `$id`, `meta:altId`en `version` voor elke samenvoeging als objecten in de array opgegeven. Als er geen samenvoegingen zijn gedefinieerd, wordt de HTTP-status 200 (OK) nog steeds geretourneerd, maar is de `results` array leeg.
+Een geslaagde reactie retourneert HTTP-status 200 (OK) en een `results` array in de hoofdtekst van de reactie. Als er samenvoegingen zijn gedefinieerd, worden de elementen `title`, `$id`, `meta:altId`en `version` voor elke samenvoeging als objecten in de array opgegeven. Als er geen samenvoegingen zijn gedefinieerd, wordt HTTP status 200 (OK) nog steeds geretourneerd, maar is de `results` array leeg.
 
 ```JSON
 {
