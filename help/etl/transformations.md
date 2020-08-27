@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
 solution: Experience Platform
 title: Voorbeeld-ETL-transformaties
 topic: overview
+description: In dit artikel worden de volgende voorbeeldtransformaties getoond die een ETL-ontwikkelaar (extract, transform, load) kan tegenkomen.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '482'
 ht-degree: 0%
 
 ---
@@ -57,7 +58,7 @@ De toewijzingsvereisten voor de CRM-gegevens worden in de volgende tabel uiteeng
 | EMAIL | personalEmail.address | Kopiëren als tekenreeks |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | Kopiëren als tekenreeks naar CRMID-array in identityMap en instellen Primair als onwaar |
 | ECID | identityMap.ECID[{&quot;id&quot;:x, primair: false}] | Kopiëren als tekenreeks naar eerste item in ECID-array in identityMap en instellen Primair als onwaar |
-| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | Kopiëren als tekenreeks naar LOYALTYID-array in identityMap en Primair instellen als true |
+| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | Kopieer als tekenreeks naar LOYALTYID-array in identityMap en stel Primair in op true |
 | ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | Kopiëren als tekenreeks naar tweede item in ECID-array in identityMap en instellen Primair op Onwaar |
 | TELEFOON | homePhone.number | Kopiëren als tekenreeks |
 | STREET | homeAddress.street1 | Kopiëren als tekenreeks |
