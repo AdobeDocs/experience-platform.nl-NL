@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Voorvertoningen en schattingen van eindpunten
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '746'
 ht-degree: 1%
 
 ---
@@ -171,7 +171,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. Met de opgegeven koppelingen kunt u de opgegeven entiteiten opzoeken met de [!DNL Profile Access API](../../profile/api/entities.md)instructies. |
+| `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. De opgegeven koppelingen kunnen worden gebruikt om de opgegeven entiteiten op te zoeken met de [[!DNL Profile Access API]](../../profile/api/entities.md). |
 
 ## De resultaten van een specifieke geschatte taak ophalen {#get-estimate}
 
@@ -225,7 +225,7 @@ Een succesvolle reactie retourneert HTTP status 200 met details van de geschatte
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `state` | De huidige status van de voorvertoningstaak. Zal &quot;RUNNING&quot;zijn tot de verwerking volledig is, waarbij het &quot;RESULT_READY&quot;of &quot;MISLUKT&quot;wordt. |
+| `state` | De huidige status van de voorvertoningstaak. Zal &quot;RUNNING&quot;zijn tot de verwerking volledig is, waarbij het &quot;RESULT_READY&quot;of &quot;FAILED&quot;wordt. |
 | `_links.preview` | Wanneer de huidige status van de voorvertoningstaak &quot;RESULT_READY&quot; is, geeft dit kenmerk een URL om de schatting weer te geven. |
 
 ## Volgende stappen
