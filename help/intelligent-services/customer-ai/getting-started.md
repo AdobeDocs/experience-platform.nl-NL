@@ -3,10 +3,11 @@ keywords: Experience Platform;getting started;customer ai;popular topics
 solution: Experience Platform
 title: Aan de slag met Customer AI
 topic: Getting started
+description: Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
