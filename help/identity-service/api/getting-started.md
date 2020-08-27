@@ -4,25 +4,25 @@ solution: Experience Platform
 title: Aan de slag
 topic: API guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 0%
+source-wordcount: '726'
+ht-degree: 1%
 
 ---
 
 
 # [!DNL Identity Service] Handleiding voor API-ontwikkelaars
 
-Adobe Experience Platform [!DNL Identity Service] beheert de cross-device, cross-channel en bijna real-time identificatie van uw klanten in wat bekend staat als een identiteitsgrafiek binnen Adobe Experience Platform.
+Adobe Experience Platform [!DNL Identity Service] beheert de identificatie van uw klanten op alle apparaten, via meerdere kanalen en bijna realtime in een identiteitsgrafiek in Adobe Experience Platform.
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [!DNL Identity Service](../home.md): Oplost de fundamentele uitdaging die door de fragmentatie van gegevens van het klantenprofiel wordt gesteld. Het doet dit door identiteiten over apparaten en systemen te overbruggen waar de klanten met uw merk in wisselwerking staan.
-- [!DNL Real-time Customer Profile](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
+- [[!DNL Identity Service]](../home.md): Oplost de fundamentele uitdaging die door de fragmentatie van gegevens van het klantenprofiel wordt gesteld. Het doet dit door identiteiten over apparaten en systemen te overbruggen waar de klanten met uw merk in wisselwerking staan.
+- [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
 De volgende secties verstrekken extra informatie die u zult moeten kennen of hebben om met succes vraag aan [!DNL Identity Service] API te maken.
 
@@ -56,7 +56,7 @@ De [!DNL Identity Service] API gebruikt regio-specifieke eindpunten die de opnem
 
 Er zijn momenteel twee gebieden die door API&#39; [!DNL Identity Service] s worden ondersteund: VA7 en NLD2.
 
-In de onderstaande tabel worden voorbeeldpaden met behulp van gebieden weergegeven:
+In de onderstaande tabel ziet u voorbeelden van paden die gebieden gebruiken:
 
 | Service | Regio: VA7 | Regio: NLD2 |
 | ------ | -------- |--------- |
