@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een recept maken met Jupyter-laptops
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2292'
+source-wordcount: '2295'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ De volgende twee secties gaan over het laden van gegevens en het voorbereiden va
 
 In deze stap wordt het dataframe van de [pandas gebruikt](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Gegevens kunnen worden geladen uit bestanden in [!DNL Adobe Experience Platform] de [!DNL Platform] SDK (`platform_sdk`) of uit externe bronnen die gebruikmaken van panda&#39;s `read_csv()` of `read_json()` functies.
 
-- [!DNL Platform SDK](#platform-sdk)
+- [[!DNL Platform SDK]](#platform-sdk)
 - [Externe bronnen](#external-sources)
 
 >[!NOTE]
