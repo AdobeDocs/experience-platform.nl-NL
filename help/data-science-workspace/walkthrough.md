@@ -3,10 +3,11 @@ keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Analyse van de Data Science Workspace
 topic: Walkthrough
+description: Dit document biedt een analyse voor de Adobe Experience Platform Data Science Workspace. Specifiek de algemene werkstroom zou een gegevenswetenschapper een probleem oplossen gebruikend machine het leren.
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] wandelpad
 
-Dit document verstrekt een analyse voor Adobe Experience Platform [!DNL Data Science Workspace]. We gaan specifiek over de algemene werkstroom die een wetenschapper zou doorlopen om een probleem op te lossen door middel van machinaal leren.
+Dit document biedt een doorhaling voor Adobe Experience Platform [!DNL Data Science Workspace]. We gaan specifiek over de algemene werkstroom die een wetenschapper zou doorlopen om een probleem op te lossen door middel van machinaal leren.
 
 ## Vereisten
 
@@ -29,7 +30,7 @@ Een detailhandelaar staat voor vele uitdagingen om concurrerend te blijven op de
 
 De oplossing van een wetenschapper op het gebied van gegevens is het benutten van de rijkdom aan historische gegevens waartoe een detailhandelaar toegang heeft, het voorspellen van toekomstige trends en het optimaliseren van prijsbeslissingen. We gebruiken oude verkoopgegevens om ons model voor machinaal leren op te leiden en het model te gebruiken om toekomstige verkooptrends te voorspellen. Hierdoor zal de detailhandelaar inzichten kunnen hebben om hen te helpen bij het maken van prijswijzigingen.
 
-In dit overzicht gaan we door de stappen die een data wetenschapper zou doorlopen om een dataset te nemen en een model te creëren om wekelijkse verkopen te voorspellen. We zullen de volgende secties doornemen in het voorbeeldnotebook voor de detailhandel op Adobe Experience Platform [!DNL Data Science Workspace]:
+In dit overzicht gaan we door de stappen die een data wetenschapper zou doorlopen om een dataset te nemen en een model te creëren om wekelijkse verkopen te voorspellen. In de voorbeeldversie van het handboek Detailhandel op Adobe Experience Platform gaan we over de volgende secties [!DNL Data Science Workspace]:
 
 - [Instellen](#setup)
 - [Gegevens verkennen](#exploring-data)
@@ -40,7 +41,7 @@ In dit overzicht gaan we door de stappen die een data wetenschapper zou doorlope
 
 Ten eerste willen we een [!DNL JupyterLab] laptop maken om de voorbeeldlaptop voor de detailhandel te openen. Als we de stappen volgen die de gegevenswetenschapper in het notebook heeft gezet, kunnen we inzicht krijgen in een typische workflow.
 
-In het Adobe Experience Platform UI, klik op het lusje van de Wetenschap van Gegevens in het hoogste menu om u aan [!DNL Data Science Workspace]te nemen. Klik op de tab van deze pagina waarop de [!DNL JupyterLab] [!DNL JupyterLab] starter wordt geopend. U zou een pagina moeten zien gelijkend op dit.
+In Adobe Experience Platform UI, klik op het lusje van de Wetenschap van Gegevens in het hoogste menu om u aan [!DNL Data Science Workspace]te nemen. Klik op de tab van deze pagina waarop de [!DNL JupyterLab] [!DNL JupyterLab] starter wordt geopend. U zou een pagina moeten zien gelijkend op dit.
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
