@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Gebruikershandleiding voor beleid samenvoegen
 topic: guide
 translation-type: tm+mt
-source-git-commit: 98be95e0a6e0661dcddf2db1cf6993b643d4df2b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1433'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Als u het samenvoegbeleid liever wilt gebruiken met de [!DNL Real-time Customer 
 
 Deze gids vereist een goed begrip van de verschillende [!DNL Experience Platform] diensten betrokken bij fusiebeleid. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-* [!DNL Real-time Customer Profile](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [!DNL Identity Service](../../identity-service/home.md): Schakelt [!DNL Real-time Customer Profile] het overbruggen van identiteiten uit verschillende gegevensbronnen in [!DNL Platform].
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
+* [[!DNL Real-time klantprofiel]](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Identity Service]](../../identity-service/home.md): Schakelt [!DNL Real-time Customer Profile] het overbruggen van identiteiten uit verschillende gegevensbronnen in [!DNL Platform].
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
 ## Samenvoegbeleid weergeven
 
@@ -96,7 +96,7 @@ Wanneer het selecteren van de belangrijkheid [!UICONTROL van de]Dataset, opent e
 
 ![](../images/merge-policies/dataset-precedence.png)
 
-Als u klaar bent met het maken van het samenvoegbeleid, selecteert u **[!UICONTROL Opslaan]** om terug te keren naar het tabblad [!UICONTROL Samenvoegingsbeleid] waar het nieuwe samenvoegbeleid nu wordt weergegeven in de lijst met beleidsregels.
+Als u klaar bent met het maken van het samenvoegbeleid, selecteert u **[!UICONTROL Opslaan]** om terug te keren naar het tabblad [!UICONTROL Samenvoegingsbeleid] , waar het nieuwe samenvoegbeleid nu wordt weergegeven in de lijst met beleidsregels.
 
 ## Een samenvoegingsbeleid bewerken
 
