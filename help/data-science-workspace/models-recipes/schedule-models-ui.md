@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;schedule a model;Data Science Workspace;popular topics
+keywords: Experience Platform;schedule a model;Data Science Workspace;popular topics;schedule scoring;schedule training
 solution: Experience Platform
 title: Een model plannen (UI)
 topic: Tutorial
+description: Met de Adobe Experience Platform Data Science Workspace kunt u geplande scoring- en trainingsprogramma's instellen voor een computerleerservice. Door het trainings- en scoringsproces te automatiseren, kunt u de efficiëntie van een service op tijd behouden en verbeteren door patronen in uw gegevens bij te houden.
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -31,7 +32,7 @@ Voor deze zelfstudie is een bestaande service vereist. Als u geen toegankelijke 
 
 Model het scoren kan worden gevormd om een geautomatiseerd proces op een geplande basis te zijn. Zodra een Dienst wordt gecreeerd, kunt u de hieronder stappen volgen om een het scoren programma te vormen en toe te passen:
 
-1. Klik in het Adobe Experience Platform op het tabblad **[!UICONTROL Services]** in de linkernavigatiekolom om het bestand te openen *[!DNL Service Gallery]*. Zoek de dienst u wenst om het scoren looppas te plannen en **[!UICONTROL Open]** te klikken om zijn pagina van het *Overzicht* te bekijken.
+1. Klik in Adobe Experience Platform op het tabblad **[!UICONTROL Services]** in de navigatiekolom links om het dialoogvenster te openen *[!DNL Service Gallery]*. Zoek de dienst u wenst om het scoren looppas te plannen en **[!UICONTROL Open]** te klikken om zijn pagina van het *Overzicht* te bekijken.
    ![](../images/models-recipes/schedule/click_to_open.png)
 
 2. De overzichtspagina toont de het scoren van de Dienst informatie. Klik de verbinding van het Programma **[!UICONTROL van de]** Update om een het scoren programma te vormen.
