@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Streaming segmentering
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1388'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ Streaming segmentering op [!DNL Adobe Experience Platform] staat klanten toe om 
 
 Deze ontwikkelaarsgids vereist een werkend inzicht in de diverse [!DNL Adobe Experience Platform] diensten betrokken bij het stromen segmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): Verstrekt een verenigd consumentenprofiel in real time, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [!DNL Segmentation](../home.md): Verstrekt de capaciteit om segmenten en publiek van uw [!DNL Real-time Customer Profile] gegevens tot stand te brengen.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
+- [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd consumentenprofiel in real time, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL-segmentatie]](../home.md): Verstrekt de capaciteit om segmenten en publiek van uw [!DNL Real-time Customer Profile] gegevens tot stand te brengen.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan APIs te maken. [!DNL Platform]
 
@@ -91,7 +91,7 @@ Daarnaast zijn enkele richtlijnen van toepassing wanneer streamingsegmentatie wo
 | Query voor één gebeurtenis | Het terugkijkvenster is beperkt tot **zeven dagen**. |
 | Query uitvoeren met gebeurtenisgeschiedenis | <ul><li>Het terugkijkvenster is beperkt tot **één dag**.</li><li>Tussen de gebeurtenissen **moet** een strikte voorwaarde voor de tijdvolgorde bestaan.</li><li>Slechts worden de eenvoudige tijdorden (vóór en na) tussen de gebeurtenissen toegestaan.</li><li>De afzonderlijke gebeurtenissen **kunnen niet** worden genegeerd. De gehele query **kan** echter worden genegeerd.</li></ul> |
 
-## Hiermee worden alle segmenten opgehaald die zijn ingeschakeld voor streamingsegmentatie
+## Hiermee worden alle segmenten opgehaald die zijn ingeschakeld voor streaming segmentatie
 
 U kunt een lijst van al uw segmenten terugwinnen die voor het stromen segmentatie binnen uw organisatie IMS door een verzoek van de GET aan het `/segment/definitions` eindpunt te doen worden toegelaten.
 
@@ -332,7 +332,7 @@ curl -X POST \
 | `type` | **(Vereist)** Het taaktype in tekenreeksindeling. De ondersteunde typen zijn `batch_segmentation` en `export`. |
 | `properties` | **(Vereist)** Een object dat aanvullende eigenschappen bevat die betrekking hebben op het schema. |
 | `properties.segments` | **(Vereist wanneer`type`evenaart`batch_segmentation`)** Door te gebruiken worden alle segmenten `["*"]` opgenomen. |
-| `schedule` | **(Vereist)** Een tekenreeks die het taakschema bevat. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. In het voorbeeld (`0 0 1 * * ?`) wordt aangegeven dat de taak elke dag om 1:00:00 UTC wordt geactiveerd. Raadpleeg de documentatie bij de indeling [van de](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) uitsnijdexpressie voor meer informatie. |
+| `schedule` | **(Vereist)** Een tekenreeks die het taakschema bevat. Taken kunnen slechts eenmaal per dag worden uitgevoerd. Dit betekent dat u een taak niet meer dan één keer gedurende een periode van 24 uur kunt plannen. In het voorbeeld (`0 0 1 * * ?`) wordt aangegeven dat de taak elke dag om 1:00:00 UTC wordt geactiveerd. Raadpleeg de documentatie bij de indeling [van de](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) uitsnijdexpressie voor meer informatie. |
 | `state` | *(Optioneel)* Tekenreeks die de staat van het schema bevat. Beschikbare waarden: `active` en `inactive`. De standaardwaarde is `inactive`. Een IMS-organisatie kan slechts één schema maken. De stappen voor het bijwerken van het programma zijn beschikbaar later in dit leerprogramma. |
 
 **Antwoord**
