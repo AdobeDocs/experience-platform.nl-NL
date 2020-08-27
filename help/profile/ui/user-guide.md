@@ -5,9 +5,9 @@ title: Gebruikershandleiding voor het profiel van de klant in realtime
 topic: guide
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-time klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -21,15 +21,15 @@ Dit document fungeert als richtlijn voor interactie met [!DNL Real-time Customer
 
 ## Aan de slag
 
-Deze gebruikershandleiding vereist inzicht in de verschillende [!DNL Experience Platform] services die bij het beheren van bestanden betrokken zijn [!DNL Real-time Customer Profiles]. Lees de documentatie voor de volgende services voordat u deze gebruikershandleiding leest:
+Deze gebruikershandleiding vereist inzicht in de verschillende [!DNL Experience Platform] services die bij het beheer van de software betrokken zijn [!DNL Real-time Customer Profiles]. Lees de documentatie voor de volgende services voordat u deze gebruikershandleiding leest:
 
-* [!DNL Real-time Customer Profile](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [!DNL Identity Service](../../identity-service/home.md): Schakelt [!DNL Real-time Customer Profile] het overbruggen van identiteiten uit verschillende gegevensbronnen in wanneer deze worden ingepakt [!DNL Platform].
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
+* [[!DNL Real-time klantprofiel]](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Identity Service]](../../identity-service/home.md): Schakelt [!DNL Real-time Customer Profile] het overbruggen van identiteiten uit verschillende gegevensbronnen in wanneer deze worden ingepakt [!DNL Platform].
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
 ## Overzicht
 
-Klik in het [!DNL Experience Platform UI](http://platform.adobe.com)venster op **[!UICONTROL Profielen]** in de linkernavigatie om het tabblad _[!UICONTROL Overzicht]_te openen. Op dit tabblad vindt u koppelingen naar documentatie en video&#39;s die u helpen bij het begrijpen van profielen en het werken met profielen.
+Klik in [[!DNL Experience Platform UI]](http://platform.adobe.com)op **[!UICONTROL Profielen]** in de linkernavigatie om het tabblad _[!UICONTROL Overzicht]_ te openen. Op dit tabblad vindt u koppelingen naar documentatie en video&#39;s die u helpen bij het begrijpen van profielen en het werken met profielen.
 
 ![](../images/user-guide/profiles-overview.png)
 
@@ -91,7 +91,7 @@ Nadat een waarde is ingevoerd, selecteert u Profiel **** tonen en geeft u één 
 
 ### Profieldetails {#profile-detail}
 
-Als u de **[!UICONTROL profiel-id]** selecteert, wordt het tabblad _[!UICONTROL Details]_geopend. Deze pagina bevat informatie over het geselecteerde profiel, zoals basiskenmerken, gekoppelde identiteiten en beschikbare contactkanalen. De weergegeven profielgegevens zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van de individuele klant.
+Als u de **[!UICONTROL profiel-id]** selecteert, wordt het tabblad _[!UICONTROL Details]_ geopend. Deze pagina bevat informatie over het geselecteerde profiel, zoals basiskenmerken, gekoppelde identiteiten en beschikbare contactkanalen. De weergegeven profielgegevens zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van de individuele klant.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
