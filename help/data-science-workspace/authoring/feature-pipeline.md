@@ -4,9 +4,9 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Een functiepijplijn maken
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1372'
 ht-degree: 0%
 
 ---
@@ -438,4 +438,4 @@ Zodra het scoren heeft voltooid, zou uw eigenschappijpleiding operationeel moete
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Door dit document te lezen, hebt u een eigenschappijplijn gebruikend ModelAuthoring SDK ontworpen, tot een beeld van het Dok geleid, en gebruikt het beeld URL van het Docker om een model van de eigenschappijplijn tot stand te brengen door API te gebruiken. [!DNL Sensei Machine Learning] U bent nu klaar om gegevenssets verder te transformeren en gegevenseigenschappen op schaal te extraheren met behulp van de [!DNL Sensei Machine Learning API](../api/getting-started.md).
+Door dit document te lezen, hebt u een eigenschappijplijn gebruikend ModelAuthoring SDK ontworpen, tot een beeld van het Dok geleid, en gebruikt het beeld URL van het Docker om een model van de eigenschappijplijn tot stand te brengen door API te gebruiken. [!DNL Sensei Machine Learning] U kunt nu gegevenssets transformeren en gegevensfuncties op schaal extraheren met de [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
