@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Recept voor productaanbevelingen
 topic: overview
+description: Met het product Recommendations-recept kunt u op maat gemaakte productaanbevelingen doen die zijn afgestemd op de behoeften en belangen van uw klant. Met een accuraat voorspellingsmodel kan de aankoopgeschiedenis van een klant u inzicht verschaffen in welke producten zij geïnteresseerd kunnen zijn.
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 0%
+source-wordcount: '463'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +27,7 @@ Het product-Recommendations-recept gebruikt automatisch leren om de interactie v
 
 ## Hoe begin ik?
 
-U kunt beginnen door de zelfstudie van het Laboratorium van het Adobe Experience Platform te volgen (zie de verbinding van het Laboratorium hieronder). Deze zelfstudie laat u zien hoe u het product Recommendations-recept kunt maken in een Jupyter-laptop door de workflow voor [notebooks](../jupyterlab/create-a-recipe.md) te volgen en het recept te implementeren in [!DNL Experience Platform][!DNL Data Science Workspace].
+U kunt aan de slag door de zelfstudie van Adobe Experience Platform Lab te volgen (zie de verbinding van het Laboratorium hieronder). Deze zelfstudie laat u zien hoe u het product Recommendations-recept kunt maken in een Jupyter-laptop door de workflow voor [notebooks](../jupyterlab/create-a-recipe.md) te volgen en het recept te implementeren in [!DNL Experience Platform][!DNL Data Science Workspace].
 
 * [Lab: De toekomst voorspellen met Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
 * [Lab-bronnen](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
@@ -39,16 +40,16 @@ In dit recept worden aangepaste [XDM-schema](../../xdm/schema/field-dictionary.m
 
 | Veldnaam | Type |
 --- | ---
-| itemId | String |
-| interactionType | String |
-| timestamp | String |
-| userId | String |
+| itemId | Tekenreeks |
+| interactionType | Tekenreeks |
+| timestamp | Tekenreeks |
+| userId | Tekenreeks |
 
 ### Uitvoergegevensschema
 
 | Veldnaam | Type |
 --- | ---
-| aanbevelingen | String |
+| aanbevelingen | Tekenreeks |
 | userId | Geheel |
 
 ## Algorithm
