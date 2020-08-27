@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
 solution: Experience Platform
 title: Overzicht van labels voor gegevensgebruik
 topic: labels
+description: De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste mechanisme van het Beheer van Gegevens van Adobe Experience Platform. De eigenschappen DULE laten u toe om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen, die elk volgens het verwante beleid van het gegevensgebruik categoriseren. Dit document biedt een overzicht van labels voor gegevensgebruik (ook wel DULE-labels genoemd) in Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5e65c843c3c612b657ebe915c53f14f0b8d7f541
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -30,15 +31,15 @@ Naast de labels die door Adobe worden verschaft, kunt u ook uw eigen aangepaste 
 
 ## Labelovererving voor publiekssegmenten
 
-Alle publiekssegmenten die door de Dienst [van de Segmentatie van het](../../segmentation/home.md) Adobe Experience Platform worden gecreeerd erven de gebruiksetiketten van hun overeenkomstige datasets. Dit staat toepassingen toe die bovenop [!DNL Experience Platform] (zoals [!DNL Real-time Customer Data Platform]) worden gebouwd om de automatische handhaving van het gegevensgebruiksbeleid te verstrekken wanneer het activeren van segmenten aan bestemmingen.
+Alle publiekssegmenten die door de Dienst [van de Segmentatie van](../../segmentation/home.md) Adobe Experience Platform worden gecreeerd erven de gebruiksetiketten van hun overeenkomstige datasets. Dit staat toepassingen toe die bovenop [!DNL Experience Platform] (zoals [!DNL Real-time Customer Data Platform]) worden gebouwd om de automatische handhaving van het gegevensgebruiksbeleid te verstrekken wanneer het activeren van segmenten aan bestemmingen.
 
 Naast het erven van dataset-vlakke etiketten, erven de segmenten alle gebied-vlakke etiketten van hun bijbehorende datasets door gebrek. Afhankelijk van de manier waarop uw [!DNL Platform]gebaseerde toepassing segmenten gebruikt, kunt u mogelijk opgeven welke velden worden gebruikt, zodat het segment geen labels van uitgesloten velden kan overnemen.
 
 Voor meer informatie over hoe de automatische handhaving in Echt - tijd CDP werkt, zie het overzicht over het Beheer van [Gegevens in Echt - tijd CDP](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
 
-### Overerving van de Controles van de Uitvoer van Gegevens van de Adobe Audience Manager
+### Overerving van Adobe Audience Manager Data Export Controls
 
-[!DNL Experience Platform] heeft de capaciteit om segmenten met Adobe Audience Manager te delen. Om het even welke Controles van de Uitvoer van Gegevens die op de segmenten van de Audience Manager zijn toegepast worden vertaald in gelijkwaardige etiketten en marketing acties die door [!DNL Experience Platform][!DNL Data Governance]. worden erkend.
+[!DNL Experience Platform] kan segmenten delen met Adobe Audience Manager. Om het even welke Controles van de Uitvoer van Gegevens die op de segmenten van de Audience Manager zijn toegepast worden vertaald in gelijkwaardige etiketten en marketing acties die door [!DNL Experience Platform][!DNL Data Governance]. worden erkend.
 
 Voor een verwijzing op hoe de specifieke Controles van de Uitvoer van Gegevens aan de etiketten van het gegevensgebruik in in kaart brengen, gelieve te verwijzen naar de documentatie [!DNL Platform]van de [](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
 
