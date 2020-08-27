@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;score a model;Data Science Workspace;popular topics
+keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
 solution: Experience Platform
 title: Score een model (UI)
 topic: Tutorial
+description: 'Scores in de Adobe Experience Platform Data Science Workspace kunnen worden bereikt door invoergegevens in te voeren in een bestaand getraind model. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij. '
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '609'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Score een model (UI)
 
-Het scoren in Adobe Experience Platform [!DNL Data Science Workspace] kan worden bereikt door inputgegevens in een bestaand opgeleid Model te voeren. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij.
+Scores in Adobe Experience Platform [!DNL Data Science Workspace] kunnen worden bereikt door invoergegevens in te voeren in een bestaand getraind model. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij.
 
 In deze zelfstudie worden de stappen beschreven die zijn vereist om een model in de [!DNL Data Science Workspace] gebruikersinterface te scoren.
 
