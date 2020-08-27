@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile
 solution: Experience Platform
 title: Een nieuw productprofiel maken
 topic: user guide
+description: In dit document worden de stappen beschreven die nodig zijn om een nieuw productprofiel in de Adobe Admin Console te maken. Als u een nieuw profiel wilt maken, navigeert u naar het tabblad Productprofielen en klikt u op Nieuw profiel.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---
@@ -18,13 +19,13 @@ Als u een nieuw profiel wilt maken, navigeert u naar het tabblad *[!UICONTROL Pr
 
 ![new-profile-button](../images/new-profile-button.png)
 
-Het dialoogvenster _[!UICONTROL Nieuw profiel]_maken wordt weergegeven en u wordt gevraagd een**[!UICONTROL  profielnaam ]**en**[!UICONTROL  beschrijving ]**voor het nieuwe profiel in te voeren. Als u de weergavenaam van het profiel wilt wijzigen, schakelt u**[!UICONTROL  Gelijk aan als profielnaam ]**uit en voert u de weergavenaam in het tekstvak in dat verschijnt. Onder*[!UICONTROL  Gebruikersmeldingen ]*kunt u bepalen of gebruikers via e-mail op de hoogte worden gesteld wanneer ze uit het profiel worden toegevoegd of verwijderd.
+Het dialoogvenster _[!UICONTROL Nieuw profiel]_ maken wordt weergegeven en u wordt gevraagd een **[!UICONTROL profielnaam]** en **[!UICONTROL beschrijving]** voor het nieuwe profiel in te voeren. Als u de weergavenaam van het profiel wilt wijzigen, schakelt u **[!UICONTROL Gelijk aan als profielnaam]** uit en voert u de weergavenaam in het tekstvak in dat verschijnt. Onder *[!UICONTROL Gebruikersmeldingen]* kunt u bepalen of gebruikers via e-mail op de hoogte worden gesteld wanneer ze uit het profiel worden toegevoegd of verwijderd.
 
-Klik op **[!UICONTROL Volgende]** als u klaar bent.
+When finished, click **[!UICONTROL Next]**.
 
 ![new-profile-details](../images/new-profile-details.png)
 
-In het volgende scherm wordt u gevraagd welke [!DNL Platform] services u in het profiel wilt opnemen. Klik de knevelknoop naast de dienst om het onbruikbaar te maken. Als een service is uitgeschakeld, zijn alle functies die aan die service zijn gekoppeld niet beschikbaar voor gebruikers die aan dit productprofiel zijn toegewezen. Klik op **[!UICONTROL Gereed]** als u klaar bent.
+In het volgende scherm wordt u gevraagd welke [!DNL Platform] services u in het profiel wilt opnemen. Klik de knevelknoop naast de dienst om het onbruikbaar te maken. Als een service is uitgeschakeld, zijn alle functies die aan die service zijn gekoppeld niet beschikbaar voor gebruikers die aan dit productprofiel zijn toegewezen. When finished, click **[!UICONTROL Done]**.
 
 ![new-profile-services](../images/new-profile-services.png)
 
