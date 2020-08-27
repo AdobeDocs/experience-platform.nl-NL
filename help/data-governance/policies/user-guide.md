@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruikershandleiding voor gegevensgebruiksbeleid
 topic: policies
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '728'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Data Governance] biedt een gebruikersinterface w
 
 Deze gids vereist een werkend begrip van de volgende [!DNL Experience Platform] concepten:
 
-- [!DNL Data Governance](../home.md)
+- [[!DNL-gegevensbeheer]](../home.md)
 - [Beleid voor gegevensgebruik](./overview.md)
 
 ## Beleid voor gegevensgebruik weergeven {#view-policies}
@@ -77,7 +77,7 @@ U kunt beleid van het *[!UICONTROL Browse]* lusje in of onbruikbaar maken in de 
 
 ## Marketingacties weergeven {#view-marketing-actions}
 
-In de **[!UICONTROL werkruimte van Beleid]** , selecteer het lusje van de Acties **[!UICONTROL van de]** Marketing om een lijst van beschikbare marketing acties te bekijken die door Adobe en uw eigen organisatie worden bepaald.
+In de werkruimte **[!UICONTROL Beleid]** , selecteer het lusje van de Acties **[!UICONTROL van de]** Marketing om een lijst van beschikbare marketing acties te bekijken die door Adobe en uw eigen organisatie worden bepaald.
 
 ![](../images/policies/marketing-actions.png)
 
@@ -101,7 +101,7 @@ De nieuwe actie wordt weergegeven op het tabblad *[!UICONTROL Handelingen]* voor
 >
 >Alleen aangepaste marketingacties die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Marketingacties die door Adobe worden gedefinieerd, kunnen niet worden gewijzigd of verwijderd.
 
-In de **[!UICONTROL werkruimte van Beleid]** , selecteer het lusje van de Acties **[!UICONTROL van de]** Marketing om een lijst van beschikbare marketing acties te bekijken die door Adobe en uw eigen organisatie worden bepaald. Selecteer een aangepaste marketingactie in de lijst en gebruik vervolgens de beschikbare velden in de rechtersectie om de details van de marketingactie te bewerken.
+In de werkruimte **[!UICONTROL Beleid]** , selecteer het lusje van de Acties **[!UICONTROL van de]** Marketing om een lijst van beschikbare marketing acties te bekijken die door Adobe en uw eigen organisatie worden bepaald. Selecteer een aangepaste marketingactie in de lijst en gebruik vervolgens de beschikbare velden in de rechtersectie om de details van de marketingactie te bewerken.
 
 ![](../images/policies/edit-marketing-action.png)
 
