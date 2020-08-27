@@ -5,9 +5,9 @@ title: Handleiding voor ontwikkelaars van Catalog Service
 topic: developer guide
 description: Deze handleiding voor ontwikkelaars bevat stappen waarmee u de API voor Catalog kunt gaan gebruiken. De handleiding bevat vervolgens voorbeeld-API-aanroepen voor het uitvoeren van toetsbewerkingen met behulp van Catalog.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Catalog Service] ontwikkelaarsgids
 
-[!DNL Catalog Service] is het registratiesysteem voor gegevenslocatie en -lijn in Adobe Experience Platform. [!DNL Catalog] fungeert als een opslagplaats voor metagegevens of als een &quot;catalogus&quot; waarin u informatie over uw gegevens kunt vinden [!DNL Experience Platform], zonder dat u toegang hoeft te krijgen tot de gegevens zelf. Zie het [Catalogusoverzicht](../home.md) voor meer informatie.
+[!DNL Catalog Service] is het registratiesysteem voor gegevenslocatie en -lijn in Adobe Experience Platform. [!DNL Catalog] fungeert als een opslagplaats voor metagegevens of als een &quot;catalogus&quot; waarin u informatie over uw gegevens kunt vinden [!DNL Experience Platform], zonder dat u toegang hoeft te krijgen tot de gegevens zelf. Zie het [[!DNL Catalog] overzicht](../home.md) voor meer informatie.
 
 Deze handleiding voor ontwikkelaars bevat stappen waarmee u de [!DNL Catalog] API kunt gaan gebruiken. De gids verstrekt dan steekproefAPI vraag voor het uitvoeren van zeer belangrijke verrichtingen gebruikend [!DNL Catalog].
 
