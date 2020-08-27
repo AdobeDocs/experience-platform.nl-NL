@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics
+keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
 solution: Experience Platform
 title: Een model (API) trainen en evalueren
 topic: Tutorial
+description: Deze zelfstudie laat u zien hoe u een model kunt maken, trainen en evalueren met API-aanroepen van Sensei Machine Learning.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1210'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,7 @@ In de zelfstudie hebt u nu de volgende waarden:
 
 - `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.
 - `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
-- `{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.
+- `{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.
 
 - Koppeling naar een Docker-afbeelding van een intelligente service
 
@@ -68,7 +69,7 @@ curl -X POST \
 
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
 `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
-`{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.\
+`{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: De configuratie van onze MLInstance. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
 
 ```JSON
@@ -180,7 +181,7 @@ curl -X POST \
 
 `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.\
+`{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: Het gemaakte experimentele object. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
 
 ```JSON
@@ -236,7 +237,7 @@ curl -X POST \
 
 `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.\
+`{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: Te posten gegevensset. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
 
 ```JSON
@@ -307,7 +308,7 @@ Wanneer wij een Experiment creëren, zou het lichaam, `{JSON_PAYLOAD}`, of de `m
 
 ### Een experimentele training maken
 
-Als er een entiteit Experiment is gemaakt, kan een trainingrun worden gemaakt en uitgevoerd met de onderstaande oproep. U zult het nodig hebben `{EXPERIMENT_ID}` en specificeren wat `mode` u in het verzoeklichaam wilt teweegbrengen.
+Als er een entiteit Experiment is gemaakt, kan een trainingrun worden gemaakt en uitgevoerd met de onderstaande oproep. U hebt de code `{EXPERIMENT_ID}` en de status nodig die `mode` u wilt activeren in de aanvraaginstantie.
 
 **Verzoek**
 
@@ -324,7 +325,7 @@ curl -X POST \
 `{EXPERIMENT_ID}`: De id die overeenkomt met het experiment dat u als doel wilt instellen. Dit vindt u in het antwoord bij het maken van uw experiment.\
 `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.\
+`{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: Als u een trainingsrun wilt maken, moet u het volgende opnemen in het hoofdgedeelte:
 
 ```JSON
@@ -394,7 +395,7 @@ curl -X GET \
 `{EXPERIMENT_RUN_ID}`: De id die staat voor de proefrun.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
 `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
-`{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.
+`{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.
 
 **Antwoord**
 
@@ -490,7 +491,7 @@ De reactie vertegenwoordigt het opgeleide Model dat werd gecreeerd.
 
 ### Een geplande expert stoppen en verwijderen
 
-Als u de uitvoering van een gepland experiment vóór de uitvoering wilt stoppen `endTime`, kunt u dit doen door een DELETE-verzoek naar de `{EXPERIMENT_ID}`
+Als u de uitvoering van een gepland experiment vóór de uitvoering wilt stoppen `endTime`, kunt u dit doen door een verzoek van DELETE naar de `{EXPERIMENT_ID}`
 
 **Verzoek**
 
