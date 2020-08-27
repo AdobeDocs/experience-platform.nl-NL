@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;supported data usage labels;contract labels;identity labels;sensitive labels
 solution: Experience Platform
 title: Kernlabels voor gegevensgebruik
 topic: labels
+description: Dit document bevat een overzicht van alle labels voor gegevensgebruik die momenteel door Adobe Experience Platform worden ondersteund.
 translation-type: tm+mt
-source-git-commit: 876ac35f6366411adda821805bf628470839f80e
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1882'
 ht-degree: 1%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 # Kernlabels voor gegevensgebruik
 
-Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Het Beheer van de Gegevens van het Adobe Experience Platform verstrekt verscheidene kernetiketten van het gegevensgebruik uit-van-de-doos die u kunt gebruiken beginnen uw gegevens te categoriseren.
+Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Adobe Experience Platform Data Governance biedt verschillende basislabels voor gegevensgebruik die u kunt gebruiken om uw gegevens te categoriseren.
 
 Dit document bevat een overzicht van de basislabels voor gegevensgebruik die momenteel worden geleverd door [!DNL Experience Platform]. Meer informatie over [!DNL Data Governance] is te vinden in het [Data Governance-overzicht](../home.md).
 
@@ -97,7 +98,7 @@ DAA: Online gedragsreclame. Gegevens van een bepaalde computer of een bepaald ap
 
 #### C6 {#c6}
 
-Advertenties zijn berichten of meldingen, met inbegrip van tekst en afbeeldingen, die op een website of app verschijnen en die voornamelijk bedoeld zijn om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van dergelijke berichten of berichten te bepalen. Advertenties staan los van on-site inhoud, die onder label [C7](#c7)valt. Gegevens met een C6-label kunnen niet worden gebruikt voor on-site advertenties, zoals de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. Dit omvat het gebruik van eerder verzamelde onsite gegevens over de belangen van de gebruikers om advertenties te selecteren, gegevens te verwerken over welke advertenties werden weergegeven, wanneer en waar deze werden weergegeven en of de gebruikers actie hebben ondernomen in verband met de advertentie, zoals het klikken op een advertentie of het maken van een aankoop. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de onsite activiteiten van die gebruikers en het vervolgens gebruiken van die voorkeuren in on-site en doelgericht gebruik niet als op rente gebaseerde doelgerichtheid (ook wel personalisatie genoemd) worden aangemerkt, aangezien het niet aan alle drie de vereisten zou voldoen die nodig zijn voor op rente gebaseerde doelgerichtheid. _[Zie label C5 voor deze vereisten.](#c5)_
+Advertenties zijn berichten of meldingen, met inbegrip van tekst en afbeeldingen, die op een website of app verschijnen en die voornamelijk bedoeld zijn om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van dergelijke berichten of berichten te bepalen. Advertenties staan los van on-site inhoud, die onder label [C7](#c7)valt. Gegevens met een C6-label kunnen niet worden gebruikt voor on-site advertenties, waaronder de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. Dit omvat het gebruik van eerder verzamelde onsite gegevens over de belangen van de gebruikers om advertenties te selecteren, gegevens te verwerken over welke advertenties werden getoond, wanneer en waar deze werden getoond en of de gebruikers actie hebben ondernomen in verband met de advertentie, zoals het klikken op een advertentie of het maken van een aankoop. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de onsite activiteiten van die gebruikers en het vervolgens gebruiken van die voorkeuren in on-site en doelgericht gebruik niet als op rente gebaseerde doelgerichtheid (ook wel personalisatie genoemd) worden aangemerkt, aangezien het niet aan alle drie de vereisten zou voldoen die nodig zijn voor op rente gebaseerde doelgerichtheid. _[Zie label C5 voor deze vereisten.](#c5)_
 
 Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-kaderregelingen hieronder vermeld:
 
