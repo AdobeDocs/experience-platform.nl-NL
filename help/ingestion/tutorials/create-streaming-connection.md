@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een streamingverbinding maken met de API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 0%
 
 # Een streamingverbinding maken met de API
 
-Deze zelfstudie helpt u bij het gebruik van streaming opname-API&#39;s, die onderdeel zijn van de API&#39; [!DNL Ingestion Service] s voor gegevens van Adobe Experience Platforms.
+Deze zelfstudie helpt u bij het gebruik van streaming opname-API&#39;s, onderdeel van de Adobe Experience Platform Data API&#39; [!DNL Ingestion Service] s.
 
 ## Aan de slag
 
-Registratie van streamingverbinding is vereist om te beginnen met het streamen van gegevens naar Adobe Experience Platform. Wanneer u een streamingverbinding registreert, moet u enkele belangrijke details opgeven, zoals de bron van streaminggegevens.
+Registratie voor streamingverbindingen is vereist om te beginnen met het streamen van gegevens naar Adobe Experience Platform. Wanneer u een streamingverbinding registreert, moet u enkele belangrijke details opgeven, zoals de bron van streaminggegevens.
 
 Na het registreren van een het stromen verbinding, zult u, als gegevensproducent, een unieke URL hebben die kan worden gebruikt om gegevens aan Platform te stromen.
 
-Deze zelfstudie vereist ook een praktische kennis van verschillende diensten van de Adobe Experience Platform. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
+Deze zelfstudie vereist ook een praktische kennis van verschillende Adobe Experience Platform-services. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader voor het [!DNL Platform] organiseren van ervaringsgegevens.
-- [!DNL Real-time Customer Profile](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader voor het [!DNL Platform] organiseren van ervaringsgegevens.
+- [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan het stromen ingestie APIs te maken.
 
@@ -184,6 +184,6 @@ Deze sectie bevat aanvullende informatie over het maken van streamingverbindinge
 
 ### Geverifieerde streamingverbindingen
 
-De voor authentiek verklaarde gegevensinzameling staat de diensten van het Adobe Experience Platform, zoals [!DNL Real-time Customer Profile] en [!DNL Identity], toe om tussen verslagen te onderscheiden die uit vertrouwde op bronnen en onbetrouwbare bronnen komen. Clients die PII (Personal Identified Information) willen verzenden, kunnen dit doen door IMS Access Tokens te verzenden als onderdeel van het verzoek van de POST. Als de IMS Token geldig is, worden de records gemarkeerd als verzameld bij vertrouwde bronnen.
+De voor authentiek verklaarde gegevensinzameling staat de diensten van Adobe Experience Platform, zoals [!DNL Real-time Customer Profile] en [!DNL Identity], toe om tussen verslagen te onderscheiden die uit vertrouwde op bronnen en onbetrouwbare bronnen komen. Clients die PII (Personal Identified Information) willen verzenden, kunnen dit doen door IMS Access Tokens te verzenden als onderdeel van het verzoek van de POST. Als de IMS Token geldig is, worden de records gemarkeerd als verzameld bij vertrouwde bronnen.
 
 Meer informatie over het maken van een geverifieerde streamingverbinding vindt u in de zelfstudie voor het [maken van een geverifieerde streamingverbinding](create-authenticated-streaming-connection.md).
