@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ontbroken batches ophalen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '607'
 ht-degree: 0%
 
 ---
@@ -14,16 +14,16 @@ ht-degree: 0%
 
 # Mislukte batches ophalen met de API
 
-Adobe Experience Platform biedt twee methoden voor het uploaden en opnemen van gegevens. U kunt batch-opname gebruiken, waarmee u gegevens kunt invoegen met verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u gegevens kunt invoegen om streaming eindpunten in real-time te [!DNL Platform] gebruiken.
+Adobe Experience Platform biedt twee methoden voor het uploaden en opnemen van gegevens. U kunt batch-opname gebruiken, waarmee u gegevens kunt invoegen met verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u gegevens kunt invoegen [!DNL Platform] met streaming eindpunten in real-time.
 
 Deze zelfstudie behandelt stappen voor het ophalen van informatie over een mislukte batch met behulp van API&#39; [!DNL Data Ingestion] s.
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
-- [!DNL Data Ingestion](../home.md): De methoden waarmee gegevens naar kunnen worden verzonden [!DNL Experience Platform].
+- [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+- [[!DNL-gegevensinname]](../home.md): De methoden waarmee gegevens kunnen worden verzonden naar [!DNL Experience Platform].
 
 ### API-voorbeeldaanroepen lezen
 
