@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile;manage permissions
 solution: Experience Platform
 title: Rechten voor een productprofiel beheren
 topic: user guide
+description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. Dit document dient als richtlijn voor het beheren van machtigingen voor een productprofiel voor Platform.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ Als u een machtiging wilt toevoegen, klikt u op de **plusknop (+)** naast de naa
 
 Als u een machtiging wilt verwijderen, klikt u op het **X** -pictogram naast de naam van de machtiging of selecteert u Alles **** verwijderen om alle machtigingen onder de huidige categorie te verwijderen. Verwijderde machtigingen verschijnen weer onder *[!UICONTROL Beschikbare machtigingsitems]*.
 
-Doorgaan met de beschikbare categorieën en de gewenste machtigingen toevoegen. Klik op **[!UICONTROL Opslaan]** als u klaar bent.
+Doorgaan met de beschikbare categorieën en de gewenste machtigingen toevoegen. When finished, click **[!UICONTROL Save]**.
 
 ![rechten voltooien](../images/permissions-finish.png)
 
