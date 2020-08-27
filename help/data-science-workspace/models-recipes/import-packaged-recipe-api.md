@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een verpakt recept (API) importeren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een verpakt recept (API) importeren
 
-In deze zelfstudie wordt de zelfstudie gebruikt [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) om een [engine](../api/engines.md)te maken die ook wel een recept in de gebruikersinterface wordt genoemd.
+Deze zelfstudie gebruikt de [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) om een [engine](../api/engines.md)te maken, ook wel een recept genoemd in de gebruikersinterface.
 
 Voordat u aan de slag gaat, is het belangrijk om te weten dat Adobe Experience Platform verschillende termen [!DNL Data Science Workspace] gebruikt om te verwijzen naar vergelijkbare elementen in de API en de gebruikersinterface. De API-termen worden in deze zelfstudie gebruikt en in de volgende tabel worden de corresponderende termen beschreven:
 
