@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access control;adobe admin console
 solution: Experience Platform
-title: Overzicht van toegangsbeheer
 topic: overview
+title: Overzicht van toegangsbeheer
+description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 translation-type: tm+mt
-source-git-commit: e66fd20eb7a153e556a3716bb255af084e52292e
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1131'
 ht-degree: 1%
 
 ---
