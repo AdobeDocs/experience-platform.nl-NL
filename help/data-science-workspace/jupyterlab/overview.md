@@ -5,7 +5,7 @@ title: Gebruikershandleiding voor JupyterLab
 topic: Overview
 description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies voor het uitvoeren van veelvoorkomende handelingen.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
 workflow-type: tm+mt
 source-wordcount: '3702'
 ht-degree: 10%
@@ -155,8 +155,8 @@ De aangepaste *Launcher* biedt u nuttige laptopsjablonen voor hun ondersteunde k
 | --- | --- |
 | Leeg | Een leeg laptopbestand. |
 | Starter | Een voorgevulde laptop die de gegevensexploratie aantoont met behulp van voorbeeldgegevens. |
-| Detailhandel | Een voorgevulde laptop met de <a href="https://adobe.ly/2wOgO3L" target="_blank">Retail Sales Recipe</a> met voorbeeldgegevens. |
-| Recipe Builder | Een laptopsjabloon voor het maken van een recept in [!DNL JupyterLab]. De voorgevulde code en opmerkingen tonen en beschrijven het proces voor het maken van recept. Raadpleeg de <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">zelfstudie</a> over het recept voor een gedetailleerde analyse. |
+| Detailhandel | Een voorgevulde laptop met het recept [voor de](https://adobe.ly/2wOgO3L) detailhandel aan de hand van voorbeeldgegevens. |
+| Recipe Builder | Een laptopsjabloon voor het maken van een recept in [!DNL JupyterLab]. De voorgevulde code en opmerkingen tonen en beschrijven het proces voor het maken van recept. Raadpleeg de [zelfstudie](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) over het recept voor een gedetailleerde analyse. |
 | [!DNL Query Service] | Een voorgevulde laptop die het gebruik aantoont van [!DNL Query Service] rechtstreeks in [!DNL JupyterLab] de meegeleverde workflows met voorbeelden die gegevens op schaal analyseren. |
 | XDM-gebeurtenissen | Een voorgevulde laptop waarin de gegevensverkenning op postvalue Experience-gebeurtenisgegevens wordt gedemonstreerd, waarbij de nadruk ligt op functies die gemeenschappelijk zijn in de gegevensstructuur. |
 | XDM-query&#39;s | Een voorgevulde laptop met voorbeelden van zakelijke vragen over Experience Event-gegevens. |
@@ -455,9 +455,9 @@ Een aangepaste opdracht voor het [!DNL Data Science Workspace] schrijven of leze
 
 ### Query-gegevens uitvoeren met [!DNL Query Service] In [!DNL Python]
 
-[!DNL JupyterLab] op [!DNL Platform] staat u toe om SQL in een [!DNL Python] notitieboekje te gebruiken om tot gegevens door de Dienst <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">van de Vraag van</a>Adobe Experience Platform toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan nuttig zijn voor het omgaan met grote gegevenssets vanwege de superieure doorlooptijden. Houd er rekening mee dat het opvragen van gegevens met een verwerkingstijd van tien minuten [!DNL Query Service] heeft.
+[!DNL JupyterLab] op [!DNL Platform] staat u toe om SQL in een [!DNL Python] notitieboekje te gebruiken om tot gegevens door de Dienst [van de Vraag van](https://www.adobe.com/go/query-service-home-en)Adobe Experience Platform toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan nuttig zijn voor het omgaan met grote gegevenssets vanwege de superieure doorlooptijden. Houd er rekening mee dat het opvragen van gegevens met een verwerkingstijd van tien minuten [!DNL Query Service] heeft.
 
-Voordat u [!DNL Query Service] de SQL-syntaxis [!DNL JupyterLab]gaat gebruiken, moet u controleren of u goed op de hoogte bent van de <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">[!DNL Query Service] SQL-syntaxis</a>.
+Voordat u [!DNL Query Service] de SQL-syntaxis [!DNL JupyterLab]gaat gebruiken, moet u controleren of u goed op de hoogte bent van de [[!DNL Query Service] SQL-syntaxis](https://www.adobe.com/go/query-service-sql-syntax-en).
 
 Het vragen van gegevens die [!DNL Query Service] vereist u om de naam van de doeldataset te verstrekken. U kunt de noodzakelijke codecellen produceren door de gewenste dataset te vinden gebruikend de ontdekkingsreiziger **van** Gegevens. Klik met de rechtermuisknop op de gegevenssetlijst en klik op **Query-gegevens in laptop** om de volgende twee codecellen in uw laptop te genereren:
 
@@ -686,7 +686,7 @@ timedf.show()
 | pymongo | 3.8.0 |
 | pijltje | 0.14.1 |
 | boto3 | 1.9.199 |
-| ipyvolume | 0.5.2 |
+| brussel | 0.5.2 |
 | fastparket | 0.3.2 |
 | python-snappy | 0.5.4 |
 | ipywebrtc | 0.5.0 |
