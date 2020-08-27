@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Bladeren in de werkruimte voor toegangsbeheer
 topic: user guide
+description: In dit document worden de stappen beschreven die nodig zijn om door de werkruimte voor toegangsbeheer te bladeren. Om toegangsbeheer voor Experience Platform door Adobe Admin Console te vormen, moet u een beheerder voor een IMS Organisatie zijn die een abonnement op Experience Platform heeft.
 translation-type: tm+mt
-source-git-commit: 6f599c0c6d8b349ebfb8cc0523543904fd628f8d
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 3%
+source-wordcount: '301'
+ht-degree: 2%
 
 ---
 
