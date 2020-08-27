@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
 title: Overzicht van gegevenstoegang
 topic: tutorial
+description: Dit document biedt een stapsgewijze zelfstudie over het zoeken naar, openen van en downloaden van gegevens die zijn opgeslagen in een gegevensset met de API voor gegevenstoegang in Adobe Experience Platform. U zult ook aan enkele unieke eigenschappen van de Toegang API van Gegevens, zoals het pagineren en gedeeltelijke downloads worden geïntroduceerd.
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1332'
+source-wordcount: '1384'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Dit document biedt een stapsgewijze zelfstudie over het zoeken naar en openen en
 
 ## Aan de slag
 
-Deze zelfstudie die inzicht geeft in hoe u een gegevensset kunt maken en vullen. Zie de [datasetverwezenlijking zelfstudie](../../catalog/datasets/create.md) voor meer informatie.
+Dit leerprogramma vereist een werkend begrip over om een dataset tot stand te brengen en te bevolken. Zie de [datasetverwezenlijking zelfstudie](../../catalog/datasets/create.md) voor meer informatie.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan de Platform APIs te maken.
 
