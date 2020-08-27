@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van de API voor schemaregister
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -14,20 +14,20 @@ ht-degree: 0%
 
 # [!DNL Schema Registry] Handleiding voor API-ontwikkelaars
 
-Het [!DNL Schema Registry] wordt gebruikt om tot de Bibliotheek van het Schema binnen Adobe Experience Platform toegang te hebben, die een gebruikersinterface en RESTful API verstrekken waarvan alle beschikbare bibliotheekmiddelen toegankelijk zijn.
+Het [!DNL Schema Registry] wordt gebruikt om toegang te krijgen tot de Schemabibliotheek in Adobe Experience Platform, waarbij een gebruikersinterface en de RESTful-API worden opgegeven die toegang bieden tot alle beschikbare bibliotheekbronnen.
 
-Gebruikend de Registratie API van het Schema, kunt u basisverrichtingen uitvoeren CRUD om alle schema&#39;s en verwante middelen te bekijken en te beheren beschikbaar aan u binnen Adobe Experience Platform. Dit omvat die door Adobe, [!DNL Experience Platform] partners, en verkopers worden bepaald waarvan toepassingen u gebruikt. U kunt ook API-aanroepen gebruiken om nieuwe schema&#39;s en bronnen voor uw organisatie te maken, en bronnen die u al hebt gedefinieerd, weer te geven en te bewerken.
+Met behulp van de API voor schemaregistratie kunt u standaard CRUD-bewerkingen uitvoeren om alle schema&#39;s en gerelateerde bronnen die binnen Adobe Experience Platform voor u beschikbaar zijn, weer te geven en te beheren. Dit omvat die door Adobe, [!DNL Experience Platform] partners, en verkopers worden bepaald waarvan toepassingen u gebruikt. U kunt ook API-aanroepen gebruiken om nieuwe schema&#39;s en bronnen voor uw organisatie te maken, en bronnen die u al hebt gedefinieerd, weer te geven en te bewerken.
 
 Deze handleiding voor ontwikkelaars bevat stappen waarmee u de [!DNL Schema Registry] API kunt gaan gebruiken. De gids verstrekt dan steekproefAPI vraag voor het uitvoeren van zeer belangrijke verrichtingen gebruikend de [!DNL Schema Registry].
 
 ## Vereisten
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [!DNL Experience Data Model (XDM) System](../home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL-sandboxen]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan [!DNL Schema Registry] API te maken.
 
@@ -171,7 +171,7 @@ De globale container houdt alle standaard Adobe en [!DNL Experience Platform] pa
 
 Om niet met uw uniek te worden verward `TENANT_ID`, houdt de huurderscontainer alle klassen, mixins, gegevenstypes, schema&#39;s, en beschrijvers die door een IMS Organisatie worden bepaald. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle verrichtingen CRUD (GET, POST, PUT, PATCH, DELETE) tegen middelen uitvoeren die u in de huurderscontainer creeert.
 
-Wanneer u een klasse, een mixin, een schema of een gegevenstype in de huurderscontainer creeert, wordt het bewaard aan [!DNL Schema Registry] en toegewezen URI die uw `$id` `TENANT_ID`. omvat. Dit `$id` wordt in de gehele API gebruikt om naar specifieke bronnen te verwijzen. In de volgende sectie worden voorbeelden van `$id` waarden gegeven.
+Wanneer u een klasse, een mixin, een schema of een gegevenstype in de huurderscontainer creeert, wordt het bewaard aan [!DNL Schema Registry] en toegewezen URI die uw `$id` `TENANT_ID`. omvat. Dit `$id` wordt in de gehele API gebruikt om naar specifieke bronnen te verwijzen. De voorbeelden van `$id` waarden worden verstrekt in de volgende sectie.
 
 ## Schema-identificatie {#schema-identification}
 
