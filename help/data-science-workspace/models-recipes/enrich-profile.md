@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Klantprofiel in realtime verrijken met kennis van machinaal leren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
 
 
-# Verrijken [!DNL Real-time Customer Profile] met computerleerinzicht
+# Verrijken [!DNL Real-time Customer Profile] met kennis van machine
 
 [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] biedt de tools en bronnen om modellen voor machinaal leren te maken, te evalueren en te gebruiken om gegevensvoorspellingen en inzichten te genereren. Wanneer de machinaal het leren inzichten in een [!DNL Profile]-toegelaten dataset worden opgenomen, worden die zelfde gegevens ook opgenomen als [!DNL Profile] verslagen die dan in ondergroepen van verwante elementen kunnen worden gesegmenteerd door te gebruiken [!DNL Experience Platform Segmentation Service].
 
@@ -26,9 +26,9 @@ Dit document biedt een stapsgewijze zelfstudie om meer inzicht te krijgen in het
 
 Deze zelfstudie vereist een goed begrip van de verschillende aspecten van [!DNL Adobe Experience Platform] het opnemen van [!DNL Profile] gegevens en het maken van segmenten. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-* [!DNL Real-time Customer Profile](../../rtcdp/overview.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [!DNL Identity Service](../../identity-service/home.md): Schakelt [!DNL Real-time Customer Profile] het overbruggen van identiteiten uit verschillende gegevensbronnen die in Platform worden opgenomen.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Real-time klantprofiel]](../../rtcdp/overview.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Identity Service]](../../identity-service/home.md): Schakelt [!DNL Real-time Customer Profile] het overbruggen van identiteiten uit verschillende gegevensbronnen die in Platform worden opgenomen.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
 
 Naast de bovengenoemde documenten, wordt het ten zeerste geadviseerd dat u ook de volgende gidsen op schema&#39;s en de Redacteur van het Schema bekijkt:
 
@@ -41,7 +41,7 @@ De eerste stap naar verrijking [!DNL Real-time Customer Profile] met inzichten i
 
 Het samenstellen van een schema begint door een klasse toe te wijzen. De klassen bepalen de gedragsaspecten van de gegevens het schema (verslag of tijdreeks) zal bevatten. Deze sectie verstrekt basisinstructies om een schema tot stand te brengen gebruikend de schemabouwer. Voor een meer diepgaande zelfstudie raadpleegt u de zelfstudie over het [maken van een schema met de Schema-editor](../../xdm/tutorials/create-schema-ui.md).
 
-1. Klik in het Adobe Experience Platform op het tabblad **[!UICONTROL Schema]** om de schemabrowser te openen. Klik **[!UICONTROL creëren Schema]** toegang tot de Redacteur *van het*Schema, waar u schema&#39;s op elkaar inwerkend kunt bouwen en creëren.
+1. Klik in Adobe Experience Platform op het tabblad **[!UICONTROL Schema]** om de schemabrowser te openen. Klik **[!UICONTROL creëren Schema]** toegang tot de Redacteur *van het*Schema, waar u schema&#39;s op elkaar inwerkend kunt bouwen en creëren.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
 2. Klik in het venster *Compositie* op **[!UICONTROL Toewijzen]** om door de beschikbare klassen te bladeren.
@@ -69,7 +69,7 @@ Het samenstellen van een schema begint door een klasse toe te wijzen. De klassen
 5. Creeer een outputdataset gebruikend uw onlangs gecreeerd schema door **[!UICONTROL Datasets]** van de linkernavigatiekolom te klikken, dan de klik **[!UICONTROL leidt dataset]**. Kies in het volgende scherm de optie Gegevensset **[!UICONTROL maken van schema]**.
    ![](../images/models-recipes/enrich-rtcdp/dataset_overview.png)
 
-6. Gebruikend schemabrowser, vind en selecteer het onlangs gecreeerd schema, dan klik **[!UICONTROL daarna]**.
+6. Zoek en selecteer het nieuwe schema met de schemabrowser en klik op **[!UICONTROL Volgende]**.
    ![](../images/models-recipes/enrich-rtcdp/choose_schema.png)
 
 7. Geef een naam en een optionele beschrijving op en klik vervolgens op **[!UICONTROL Voltooien]** om de gegevensset te maken.
@@ -105,7 +105,7 @@ Wanneer het gegeven in een [!DNL Profile]-Toegelaten dataset wordt opgenomen, wo
 
 Nu u inzichten in uw [!DNL Profile]-Toegelaten dataset hebt geproduceerd en opgenomen, kunt u die gegevens beheren door ondergroepen van verwante elementen te identificeren gebruikend de Bouwer van het Segment. Volg de onderstaande stappen om uw eigen segmenten te maken.
 
-1. Voor Adobe Experience Platform, klik het lusje van **[!UICONTROL Segmenten]** door Segment **[!UICONTROL wordt gevolgd te]** creëren om tot de Bouwer van het Segment toegang te hebben dat.
+1. In Adobe Experience Platform klikt u op het tabblad **[!UICONTROL Segmenten]** gevolgd door Segment **** maken voor toegang tot de Segment Builder.
    ![](../images/models-recipes/enrich-rtcdp/segments_overview.png)
 
 2. Binnen de Bouwer van het Segment, verleent de linkerspoorlijn toegang tot de kernbouwstenen van segmenten: kenmerken, gebeurtenissen en bestaande segmenten. Elke bouwsteen verschijnt in zijn eigen respectieve lusje. Selecteer de klasse tot waar uw [!DNL Profile]-toegelaten schema zich dan uitbreidt doorblader en vind de bouwstenen voor uw segment.
