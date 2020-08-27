@@ -5,9 +5,9 @@ title: Een schema maken met de Schema-editor
 topic: tutorials
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in het Experience Platform.
 translation-type: tm+mt
-source-git-commit: ed100e2acfcfc3dfabef6ccfbe88e98489193567
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '3512'
+source-wordcount: '3528'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,9 @@ Als u liever een schema samenstelt met de [!DNL Schema Registry] API, begint u m
 
 Deze zelfstudie vereist een goed begrip van de verschillende aspecten van Adobe Experience Platform die bij het maken van schema&#39;s betrokken zijn. Lees vóór het starten van deze zelfstudie de documentatie voor de volgende concepten:
 
-* [!DNL Experience Data Model (XDM)](../home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
+* [[!DNL Experience Data Model (XDM)]](../home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Een overzicht van schema&#39;s XDM en hun bouwstenen, met inbegrip van klassen, mengen, gegevenstypes, en gebieden.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ## Door bestaande schema&#39;s in de [!UICONTROL werkruimte Schema] &#39;s bladeren {#browse}
 
@@ -225,7 +225,7 @@ Er kunnen bijvoorbeeld duizenden leden van het loyaliteitsprogramma zijn die tot
 
 >[!IMPORTANT]
 >
->De stappen hieronder beschrijven hoe te om een identiteitsbeschrijver aan een bestaand schemagebied toe te voegen. Als alternatief voor het definiëren van identiteitsvelden binnen de structuur van het schema zelf, kunt u in plaats daarvan ook een `identityMap` veld gebruiken om identiteitsgegevens te bevatten.
+>De stappen hieronder beschrijven hoe te om een identiteitsbeschrijver aan een bestaand schemagebied toe te voegen. Als alternatief voor het definiëren van identiteitsvelden binnen de structuur van het schema zelf, kunt u in plaats daarvan ook een `identityMap` veld gebruiken voor het bevatten van identiteitsgegevens.
 >
 >Als u van plan bent om te gebruiken `identityMap`, houd in mening dat het om het even welke primaire identiteit zal met voeten treden u direct aan het schema toevoegt. Zie de sectie op `identityMap` in de [grondbeginselen van de gids](../schema/composition.md#identityMap) van de schemacompositie voor meer informatie.
 
@@ -245,11 +245,11 @@ Nu zullen alle gegevens die in het &quot;[!DNL loyaltyId]&quot;gebied worden opg
 >
 >Als een schemaveld eenmaal is ingesteld als primaire identiteit, ontvangt u een foutbericht als u later probeert een ander veld in het schema in te stellen als primaire identiteit. Elk schema mag slechts één primair identiteitsveld bevatten.
 
-Raadpleeg de [!DNL Experience Platform]documentatie voor meer informatie over het werken met identiteiten in [!DNL Identity Service](../../identity-service/home.md) .
+Raadpleeg de documentatie bij [!DNL Experience Platform][!DNL Identity Service] [voor meer informatie over het werken met identiteiten in](../../identity-service/home.md) .
 
 ## Het schema inschakelen voor gebruik in [!DNL Real-time Customer Profile] {#profile}
 
-[!DNL Real-time Customer Profile](../../profile/home.md) Gebruikt identiteitsgegevens in [!DNL Experience Platform] om een holistische mening van elke individuele klant te verstrekken. De service bouwt robuuste, 360°-profielen van klantkenmerken en accounts met tijdstempels van elke interactie die klanten hebben gehad in elk systeem dat is geïntegreerd met [!DNL Experience Platform].
+[[!DNL Real-time Klantprofiel]](../../profile/home.md) gebruikt identiteitsgegevens in [!DNL Experience Platform] om een holistische weergave van elke individuele klant te bieden. De service bouwt robuuste, 360°-profielen van klantkenmerken en accounts met tijdstempels van elke interactie die klanten hebben gehad in elk systeem dat is geïntegreerd met [!DNL Experience Platform].
 
 Als u wilt dat een schema kan worden gebruikt met, moet er een primaire identiteit zijn gedefinieerd. [!DNL Real-time Customer Profile] Er wordt een foutbericht weergegeven als u een schema wilt inschakelen zonder eerst een primaire identiteit te definiëren.
 
@@ -273,7 +273,7 @@ Selecteer **[!UICONTROL Inschakelen]** om uw keuze te bevestigen. U kunt desgewe
 
 ## Volgende stappen en extra bronnen
 
-Nu u klaar bent met het samenstellen van het schema &quot;Loyalty Member&quot;, kunt u het volledige schema in het canvas zien. Selecteer **[!UICONTROL Opslaan]** en het schema wordt opgeslagen naar de [!DNL Schema Library]server, zodat deze toegankelijk is voor de [!DNL Schema Registry].
+Nu u klaar bent met het samenstellen van het schema &quot;Loyalty Member&quot;, kunt u het volledige schema in het canvas zien. Selecteer **[!UICONTROL Opslaan]** en het schema wordt opgeslagen in de [!DNL Schema Library]toepassing, zodat deze toegankelijk is voor de [!DNL Schema Registry]gebruiker.
 
 Het nieuwe schema kan nu worden gebruikt om gegevens in te voeren [!DNL Platform]. Herinner dat zodra het schema is gebruikt om gegevens in te voeren, slechts de additieve veranderingen kunnen worden aangebracht. Zie de [grondbeginselen van schemacompositie](../schema/composition.md) voor meer informatie over schema versioning.
 
@@ -307,7 +307,7 @@ Selecteer in de **[!UICONTROL werkruimte Schema]** de optie **[!UICONTROL Schema
 
 ![](../images/tutorials/create-schema/browse-classes.png)
 
-Er wordt een dialoogvenster weergegeven waarin u een keuze kunt maken uit een lijst met beschikbare klassen. Selecteer Nieuwe klasse **[!UICONTROL maken boven aan het dialoogvenster]**. U kunt uw nieuwe klasse dan een Naam **[!UICONTROL van de]** Vertoning (een korte, beschrijvende, unieke, en gebruikersvriendelijke naam voor de klasse), een **[!UICONTROL Beschrijving]**, en een **[!UICONTROL Gedrag]** (&quot;[!UICONTROL Verslag]&quot; of &quot;de Reeks[!UICONTROL van de]Tijd&quot;) voor de gegevens geven het schema zal bepalen.
+Er wordt een dialoogvenster weergegeven waarin u een keuze kunt maken uit een lijst met beschikbare klassen. Selecteer Nieuwe klasse **** maken boven in het dialoogvenster. U kunt uw nieuwe klasse dan een Naam **[!UICONTROL van de]** Vertoning (een korte, beschrijvende, unieke, en gebruikersvriendelijke naam voor de klasse), een **[!UICONTROL Beschrijving]**, en een **[!UICONTROL Gedrag]** (&quot;[!UICONTROL Verslag]&quot; of &quot;de Reeks[!UICONTROL van de]Tijd&quot;) voor de gegevens geven het schema zal bepalen.
 
 ![](../images/tutorials/create-schema/create_new_class.png)
 
