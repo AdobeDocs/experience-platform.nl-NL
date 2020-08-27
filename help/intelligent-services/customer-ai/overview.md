@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;overview;customer ai;popular topics
+keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
 solution: Experience Platform
 title: AI-overzicht van klant
 topic: Customer AI overview
+description: AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -34,9 +35,9 @@ AI van de klant is gebouwd aan:
 Klant is niet gebouwd op:
 
 - De AI van de klant mag niet worden gebruikt om dynamische prijzen te voorspellen, noch het prijspunt waarop de klant een aankoop gaat doen.
-- Klantenservice-AI kan niet bepalen of het aanbieden van een aanbieding de kans van de klant om een object te kopen zal vergroten. Hoewel u kunt besluiten kortingsvoorstellen te verzenden op basis van de score voor volheid, is het niet noodzakelijk de beste manier om die klanten om te zetten.
+- Klantenservice-AI kan niet bepalen of het aanbieden van een aanbieding de kans van de klant om een object te kopen zal vergroten. Hoewel u kunt besluiten kortingsvoorstellen te verzenden op basis van de score voor volheid, is het niet altijd de beste manier om die klanten om te zetten.
 - AI van de klant is geen hulpmiddel voor productaanbevelingen. Als u duizenden SKU&#39;s hebt, gebruik geen AI van de Klant als volmacht voor een echte oplossing van productaanbevelingen zoals [!DNL Adobe Target].
-- Klantenservice-AI kan niet voorspellen in welke fase van de koopgedrag de klant zich bevindt, bijvoorbeeld in de fasen &quot;aware&quot;, &quot;achting&quot;, &quot;purchase&quot; of &quot;retentie&quot;.
+- Klantenservice-AI kan niet voorspellen in welk stadium van de koopgedrag de klant zich bevindt, bijvoorbeeld in de fase waarin de klant zich bewust is van de situatie, de &quot;vergoeding&quot;, de &quot;aankoop&quot; of de &quot;retentie&quot;.
 - Gebruik geen AI van de Klant om klanten te bepalen die waarschijnlijk een product kopen dat in de toekomst lanceert. Dit vereist bepaalde succesgebeurtenissen om in het verleden aanwezig te zijn voor de AI van de Klant om het systeemleeralgoritme op uw gegevens te trainen.
 
 De volgende video is ontworpen ter ondersteuning van uw inzicht in de AI van de Klant.
