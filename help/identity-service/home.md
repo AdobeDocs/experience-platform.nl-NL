@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1711'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 # [!DNL Identity Service] overzicht
 
-Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van uw klant vereist. Dit wordt bemoeilijkt wanneer uw klantengegevens over verschillende systemen worden gefragmenteerd, die elke individuele klant ertoe brengen om veelvoudige &quot;identiteiten&quot;te hebben te schijnen. Adobe Experience Platform [!DNL Identity Service] helpt u om een beter inzicht te krijgen in uw klant en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
+Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van uw klant vereist. Dit wordt bemoeilijkt wanneer uw klantengegevens over verschillende systemen worden gefragmenteerd, die elke individuele klant ertoe brengen om veelvoudige &quot;identiteiten&quot;te hebben te schijnen. Adobe Experience Platform [!DNL Identity Service] helpt u om een beter beeld te krijgen van uw klant en van hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 
-## Begrijpen [!DNL Identity Service]
+## [!DNL Identity Service] begrijpen
 
 Elke dag, interactie van klanten met uw zaken en vestigen een onophoudelijk groeiende verhouding met uw merk. Een typische klant kan in om het even welk aantal systemen binnen de gegevensinfrastructuur van uw organisatie, zoals uw eCommerce, loyaliteit, en helpdesksystemen actief zijn. Die zelfde klant kan ook anoniem op om het even welk aantal apparaten in dienst nemen. [!DNL Identity Service] kunt u een volledig beeld van uw klant samenstellen, waarbij gerelateerde gegevens worden samengevoegd die anders over verschillende systemen zouden kunnen worden verspreid.
 
@@ -109,7 +109,7 @@ Hoewel u verschillende standaardnaamruimten [!DNL Experience Platform] biedt, mo
 
 ### Inclusief identiteitsgegevens in [!DNL Experience Data Model] (XDM)
 
-Als gestandaardiseerd kader waardoor [!DNL Platform] klantengegevens worden georganiseerd, [!DNL Experience Data Model] (XDM) staat gegevens toe om over [!DNL Experience Platform] en andere diensten worden gedeeld en worden begrepen die met [!DNL Platform]. Zie het [XDM System-overzicht](../xdm/home.md)voor meer informatie.
+Als gestandaardiseerd kader waardoor [!DNL Platform] klantengegevens worden georganiseerd, [!DNL Experience Data Model] (XDM) staat gegevens toe om over [!DNL Experience Platform] en andere diensten worden gedeeld en worden begrepen die met [!DNL Platform]. Zie het [XDM-systeemoverzicht](../xdm/home.md)voor meer informatie.
 
 Zowel de verslagen als de tijdreeksregelingen verstrekken de middelen om identiteitsgegevens te omvatten. Terwijl gegevens worden opgenomen, maakt de identiteitsgrafiek nieuwe relaties tussen gegevensfragmenten van verschillende naamruimten als deze gemeenschappelijke identiteitsgegevens delen.
 
@@ -146,4 +146,4 @@ Adobe Experience Platform is gemaakt met het oog op privacy en bevat een gegeven
 
 ## Volgende stappen
 
-Nu u de belangrijkste concepten van [!DNL Identity Service] en zijn rol binnen begrijpt, kunt u beginnen te leren hoe te met uw identiteitsgrafiek te werken gebruikend [!DNL Experience Platform][!DNL Identity Service API](./api/getting-started.md).
+Nu u de belangrijkste concepten van [!DNL Identity Service] en zijn rol binnen begrijpt, kunt u beginnen te leren hoe te met uw identiteitsgrafiek te werken gebruikend [!DNL Experience Platform][!DNL de Dienst API] [](./api/getting-started.md)van de Identiteit.
