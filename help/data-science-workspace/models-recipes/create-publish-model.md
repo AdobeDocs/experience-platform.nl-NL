@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een analyse van een model voor machinaal leren maken en publiceren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Voorbereid u een online detailhandelswebsite. Wanneer uw klanten op uw detailhandelswebsite winkelen, wilt u hen met gepersonaliseerde productaanbevelingen presenteren om een verscheidenheid van andere producten bloot te stellen uw bedrijfsaanbiedingen. Gedurende de periode dat uw website bestaat, hebt u voortdurend klantgegevens verzameld en wilt u deze gegevens op de een of andere manier gebruiken om gepersonaliseerde productaanbevelingen te genereren.
 
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] biedt de middelen om uw doel te bereiken met behulp van het vooraf gebouwde [Product Recommendations Recipe](../pre-built-recipes/product-recommendations.md). Volg deze zelfstudie om te zien hoe u toegang krijgt tot uw gegevens in de detailhandel en hoe u een model voor machinaal leren kunt maken en optimaliseren en inzichten kunt genereren in [!DNL Data Science Workspace].
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] biedt de middelen om uw doel te bereiken met behulp van het vooraf gebouwde [Product Recommendations Recipe](../pre-built-recipes/product-recommendations.md). Volg deze zelfstudie om te zien hoe u toegang hebt tot uw gegevens in de detailhandel en hoe u een model voor machinaal leren kunt maken en optimaliseren en inzichten kunt genereren in [!DNL Data Science Workspace].
 
 Deze zelfstudie weerspiegelt de workflow van [!DNL Data Science Workspace]en behandelt de volgende stappen voor het maken van een model voor machinaal leren:
 
@@ -45,10 +45,10 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 * Download de drie vereiste [!DNL Jupyter Notebook] bestanden van de openbare <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe- [!DNL Git] opslagplaats</a>. Deze bestanden worden gebruikt om de [!DNL JupyterLab] workflow in [!DNL Data Science Workspace]te demonstreren.
 
 * Een goed begrip van de volgende belangrijkste concepten die in deze zelfstudie worden gebruikt:
-   * [!DNL Experience Data Model](../../xdm/home.md): De standaardiseringsinspanning die door Adobe wordt geleid om standaardschema&#39;s zoals [!DNL Profile] en ExperienceEvent, voor het Beheer van de Ervaring van de Klant te bepalen.
+   * [[!DNL Experience Data Model]](../../xdm/home.md): De standaardiseringsinspanning die door Adobe wordt geleid om standaardschema&#39;s zoals [!DNL Profile] en ExperienceEvent, voor het Beheer van de Ervaring van de Klant te bepalen.
    * Gegevenssets: Een opslag- en beheerconstructie voor werkelijke gegevens. Een fysieke instantie van een [XDM-schema](../../xdm/schema/field-dictionary.md).
    * Batches: Datasets bestaan uit batches. Een batch is een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt.
-   * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is een open-bron web-based interface voor Project [!DNL Jupyter] en is strak geïntegreerd in [!DNL Experience Platform].
+   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is een open-bron web-based interface voor Project [!DNL Jupyter] en is nauw geïntegreerd in [!DNL Experience Platform].
 
 ## Uw gegevens voorbereiden {#prepare-your-data}
 
