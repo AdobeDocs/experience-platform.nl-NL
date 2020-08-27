@@ -5,9 +5,9 @@ title: Segmentatie van meerdere entiteiten
 topic: overview
 description: De segmentatie van meerdere entiteiten is de capaciteit om de gegevens van het Profiel met extra gegevens uit te breiden die op producten, opslag, of andere niet-profielklassen worden gebaseerd. Zodra verbonden, worden de gegevens van extra klassen beschikbaar alsof zij aan het schema van het Profiel inheems waren.
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ Als u meer wilt weten over segmentatie tussen meerdere entiteiten, blijft u de d
 
 Deze zelfstudie vereist een goed begrip van de verschillende Adobe Experience Platform-services die betrokken zijn bij het gebruik van segmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [!DNL Real-time Customer Profile](../profile/home.md): Verstrekt een verenigd consumentenprofiel in real time, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-time klantprofiel]](../profile/home.md): Verstrekt een verenigd consumentenprofiel in real time, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [Adobe Experience Platform Segmentation Service](./home.md): Staat u toe om segmenten van het Profiel van de Klant in real time te bouwen.
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
 ## XDM-relaties definiëren
 
