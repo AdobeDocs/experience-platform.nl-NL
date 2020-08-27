@@ -4,9 +4,9 @@ solution: Experience Platform
 title: De verzoekverwerking van de privacy in Real-time Profiel van de Klant
 topic: overview
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Behandeling van privacyverzoek in [!DNL Real-time Customer Profile]
 
-Adobe Experience Platform [!DNL Privacy Service] verwerkt verzoeken van klanten om toegang, om zich uit de verkoop te laten of om hun persoonsgegevens te verwijderen, zoals bepaald in privacyvoorschriften zoals de algemene gegevensbeschermingsverordening (GDPR) en [!DNL California Consumer Privacy Act] (CCPA).
+Adobe Experience Platform [!DNL Privacy Service] verwerkt verzoeken van klanten om toegang, om te weigeren of om hun persoonsgegevens te verwijderen zoals die zijn omschreven in privacyregels zoals de algemene gegevensbeschermingsverordening (GDPR) en [!DNL California Consumer Privacy Act] (CCPA).
 
 Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor [!DNL Real-time Customer Profile].
 
@@ -22,13 +22,13 @@ Dit document behandelt essentiële concepten met betrekking tot het verwerken va
 
 U wordt aangeraden de volgende [!DNL Experience Platform] services goed te begrijpen voordat u deze handleiding leest:
 
-* [!DNL Privacy Service](home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, uit de handel te nemen of te verwijderen.
-* [!DNL Identity Service](../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
-* [!DNL Real-time Customer Profile](../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL-Privacy Service]](home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, uit de handel te nemen of te verwijderen.
+* [[!DNL Identity Service]](../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
+* [[!DNL Real-time klantprofiel]](../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ## Naamruimten voor identiteiten {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] biedt een brug tussen identiteitsgegevens van klanten op verschillende systemen en apparaten. [!DNL Identity Service] gebruikt **naamruimten** om context aan identiteitswaarden te verstrekken door hen met hun systeem van oorsprong te verbinden. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;e-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] biedt een brug tussen identiteitsgegevens van klanten op systemen en apparaten. [!DNL Identity Service] gebruikt **naamruimten** om context aan identiteitswaarden te verstrekken door hen met hun systeem van oorsprong te verbinden. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;e-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
 
 De Dienst van de identiteit handhaaft een opslag van globaal bepaalde (standaard) en user-defined (douane) identiteitsnamespaces. Standaard naamruimten zijn beschikbaar voor alle organisaties (bijvoorbeeld E-mail en ECID), terwijl uw organisatie aangepaste naamruimten kan maken die aan de specifieke behoeften voldoen.
 
@@ -93,13 +93,13 @@ curl -X POST \
 
 ### De gebruikersinterface gebruiken
 
-Wanneer het creëren van baanverzoeken in UI, ben zeker om **[!UICONTROL AEP Gegevensmeer]** en/of **[!UICONTROL Profiel]** onder _[!UICONTROL Producten]_te selecteren om banen voor gegevens te verwerken die in[!DNL Data Lake]of[!DNL Real-time Customer Profile], respectievelijk worden opgeslagen.
+Wanneer het creëren van baanverzoeken in UI, ben zeker om **[!UICONTROL AEP Gegevensmeer]** en/of **[!UICONTROL Profiel]** onder _[!UICONTROL Producten]_ te selecteren om banen voor gegevens te verwerken die in [!DNL Data Lake] of [!DNL Real-time Customer Profile], respectievelijk worden opgeslagen.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
 ## Verzoek om verwerking verwijderen
 
-Wanneer [!DNL Experience Platform] een verwijderingsverzoek van [!DNL Privacy Service]ontvangt, [!DNL Platform] verzendt bevestiging aan [!DNL Privacy Service] dat het verzoek is ontvangen en de beïnvloede gegevens voor schrapping duidelijk zijn. De records worden vervolgens binnen zeven dagen uit de [!DNL Data Lake] winkel of in de [!DNL Profile] winkel verwijderd. Tijdens dat venster van zeven dagen, worden de gegevens zachte geschrapt en daarom niet toegankelijk door om het even welke [!DNL Platform] dienst.
+Wanneer [!DNL Experience Platform] een verwijderingsverzoek van [!DNL Privacy Service]ontvangt, [!DNL Platform] verzendt bevestiging aan [!DNL Privacy Service] dat het verzoek is ontvangen en de beïnvloede gegevens voor schrapping duidelijk zijn. De records worden vervolgens binnen zeven dagen uit de [!DNL Data Lake] winkel of de [!DNL Profile] opslagplaats verwijderd. Tijdens dat venster van zeven dagen, worden de gegevens zachte geschrapt en daarom niet toegankelijk door om het even welke [!DNL Platform] dienst.
 
 In toekomstige versies [!DNL Platform] wordt een bevestiging verzonden naar [!DNL Privacy Service] nadat gegevens fysiek zijn verwijderd.
 
