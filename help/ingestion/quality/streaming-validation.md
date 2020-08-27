@@ -5,9 +5,9 @@ title: Validatie van gestreamde invoer
 topic: overview
 description: 'Met streaming opname kunt u uw gegevens naar Adobe Experience Platform uploaden met streaming eindpunten in real-time. API''s voor streaming opname ondersteunen twee validatiemodi: synchroon en asynchroon.'
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '852'
 ht-degree: 2%
 
 ---
@@ -21,8 +21,8 @@ Met streaming opname kunt u uw gegevens naar Adobe Experience Platform uploaden 
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
-- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md): Een van de methoden waarmee gegevens kunnen worden verzonden naar [!DNL Experience Platform].
+- [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+- [[!DNL-streaming congestie]](../streaming-ingestion/overview.md): Een van de methoden waarmee gegevens kunnen worden verzonden naar [!DNL Experience Platform].
 
 ### API-voorbeeldaanroepen lezen
 
@@ -197,7 +197,7 @@ Deze sectie bevat informatie over wat de verschillende statuscodes voor reacties
 | Statuscode | Wat het betekent |
 | ----------- | ------------- |
 | 200 | Geslaagd. Voor synchrone validatie betekent dit dat de validatiecontroles zijn geslaagd. Voor asynchrone validatie betekent dit dat alleen het bericht is ontvangen. De gebruikers kunnen de uiteindelijke berichtstatus door de dataset te observeren te weten komen. |
-| 400 | Fout. Er is iets mis met uw verzoek. Er wordt een foutbericht met meer informatie ontvangen van de Streaming Validation Services. |
+| 400 | Fout. Er is iets mis met uw verzoek. Er wordt een foutbericht met meer details ontvangen van de streamingvalidatieservices. |
 | 401 | Fout. Uw verzoek is niet geautoriseerd. U moet een aanvraag indienen met een token voor toonder. Voor meer informatie over het aanvragen van toegang raadpleegt u deze [zelfstudie](../../tutorials/authentication.md) of dit [blogbericht](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | Fout. Er is een interne systeemfout opgetreden. |
 | 501 | Fout. Dit betekent dat synchrone validatie **niet** wordt ondersteund voor deze locatie. |
