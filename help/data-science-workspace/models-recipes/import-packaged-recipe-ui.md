@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;ui;create engine
 solution: Experience Platform
 title: Een verpakt recept (UI) importeren
 topic: Tutorial
+description: Deze zelfstudie biedt inzicht in het configureren en importeren van een verpakt recept met behulp van het meegeleverde voorbeeld Detailhandel. Aan het einde van deze zelfstudie bent u klaar om een model te maken, te trainen en te evalueren in de Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '1760'
+source-wordcount: '1803'
 ht-degree: 0%
 
 ---
