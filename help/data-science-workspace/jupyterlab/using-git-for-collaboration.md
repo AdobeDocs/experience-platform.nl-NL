@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Samenwerken in JupyterLab met behulp van Git
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '255'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ De [!DNL Data Science Workspace JupyterLab] omgeving is een gehoste omgeving en 
 
 ## Verbinding maken [!DNL Git] met de [!DNL Data Science Workspace JupyterLab Notebooks] omgeving
 
-Begin door te lanceren [!DNL Adobe Experience Platform] en naar het [!DNL JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) milieu te navigeren.
+Start door te navigeren [!DNL Adobe Experience Platform] naar de omgeving [[!DNL JupyterLabs-laptops]](https://platform.adobe.com/notebooks/jupyterLab) .
 
 Selecteer [!DNL JupyterLab]Bestand **[!UICONTROL en houd de muisaanwijzer boven]** Nieuw ****. Van dropdown die verschijnt, uitgezochte **[!UICONTROL Terminal]**.
 
@@ -58,4 +58,4 @@ Vervolgens kloont u de opslagplaats die u wilt gebruiken met de `git clone` opdr
 
 ## Volgende stappen
 
-Nadat u klaar bent met het klonen van uw opslagplaats, kunt u Git gebruiken zoals u gewoonlijk op uw lokale computer zou doen om met anderen samen te werken aan laptops. Raadpleeg de [!DNL JupyterLab]pagina voor meer informatie over wat u binnen kunt doen [!DNL JupyterLab user guide](./overview.md).
+Nadat u klaar bent met het klonen van uw opslagplaats, kunt u Git gebruiken zoals u gewoonlijk op uw lokale computer zou doen om met anderen samen te werken aan laptops. Raadpleeg voor meer informatie over wat u kunt doen [!DNL JupyterLab]de [[!DNL JupyterLab-gebruikershandleiding]](./overview.md).
