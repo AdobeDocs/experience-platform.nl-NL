@@ -5,7 +5,7 @@ title: Analyseer uw gegevens met notebooks
 topic: Tutorial
 description: Deze zelfstudie richt zich op het gebruik van Jupyter-laptops, die zijn gemaakt in de Data Science Workspace, voor toegang tot uw gegevens, verkenning en visualisatie.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Nu, kunnen wij op de `Retail-Training-<your-alias>` dataset met de rechtermuiskn
 
 >[!TIP]
 >
->raadpleeg de handleiding [[!DNL Platform SDK]](../authoring/platform-sdk.md) voor het converteren van uw code.
+>Raadpleeg de handleiding [[!DNL Platform SDK]](../authoring/platform-sdk.md) voor het converteren van uw code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
