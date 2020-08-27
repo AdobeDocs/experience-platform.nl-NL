@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een CSV-bestand toewijzen aan een XDM-schema
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7876e6d52815968802bd73bb5e340c99ea3387a8
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1371'
 ht-degree: 1%
 
 ---
@@ -22,14 +22,14 @@ Daarnaast bevat het aanhangsel bij deze zelfstudie nadere informatie over het ge
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van [!DNL Platform]:
 
-- [!DNL Experience Data Model (XDM System)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
-- [!DNL Batch ingestion](../batch-ingestion/overview.md): De methode waarmee gegevens uit door de gebruiker opgegeven gegevensbestanden worden [!DNL Platform] ingesloten.
+- [[!DNL-ervaringsgegevensmodel (XDM-systeem)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
+- [[!DNL Batch-inname]](../batch-ingestion/overview.md): De methode waarmee gegevens uit door de gebruiker opgegeven gegevensbestanden worden [!DNL Platform] ingesloten.
 
 Deze zelfstudie vereist ook dat u al een dataset hebt gemaakt om uw CSV-gegevens in te voeren. Voor stappen bij het creëren van een dataset in UI, zie de [gegevens ingest leerprogramma](./ingest-batch-data.md).
 
 ## Kies een bestemming
 
-Meld u aan bij [!DNL Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Workflows]** in de linkernavigatiebalk voor toegang tot de *[!UICONTROL werkruimte Workflows]* .
+Meld u aan bij [[!DNL Adobe Experience Platform]](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Workflows]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Workflows]* .
 
 Selecteer in het scherm **[!UICONTROL Workflows]** de optie CSV **[!UICONTROL toewijzen aan XDM-schema]** onder de sectie **[!UICONTROL Gegevensinvoer]** en selecteer vervolgens **[!UICONTROL Starten]**.
 
@@ -59,7 +59,7 @@ De sectie *[!UICONTROL Voorbeeldgegevens]* wordt weergegeven wanneer het bestand
 
 ## CSV-velden toewijzen aan XDM-schemavelden
 
-De stap *[!UICONTROL Toewijzing]* wordt weergegeven. De kolommen van het CSV-bestand worden weergegeven onder *[!UICONTROL Bronveld]*, met de bijbehorende XDM-schemavelden onder *[!UICONTROL Target-veld]*. Niet-geselecteerde doelvelden krijgen een rode omtrek. Met de optie Filtervelden kunt u de lijst met beschikbare bronvelden verkleinen.
+De stap *[!UICONTROL Toewijzing]* wordt weergegeven. De kolommen van het CSV-bestand worden weergegeven onder *[!UICONTROL Bronveld]*, met de bijbehorende XDM-schemavelden onder *[!UICONTROL Doelveld]*. Niet-geselecteerde doelvelden krijgen een rode omtrek. Met de optie Filtervelden kunt u de lijst met beschikbare bronvelden verkleinen.
 
 Als u een CSV-kolom wilt toewijzen aan een XDM-veld, selecteert u het schemapictogram naast het bijbehorende doelveld van de kolom.
 
@@ -69,7 +69,7 @@ Het venster *[!UICONTROL Selectieschemaveld]* wordt weergegeven. Hier kunt u de 
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-Het scherm *[!UICONTROL Toewijzing]* wordt opnieuw weergegeven, waarbij het geselecteerde XDM-veld nu wordt weergegeven onder *[!UICONTROL Target-veld]*.
+Het scherm *[!UICONTROL Toewijzing]* wordt opnieuw weergegeven, waarbij het geselecteerde XDM-veld nu wordt weergegeven onder *[!UICONTROL Doelveld]*.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
@@ -117,7 +117,7 @@ Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens controleren d
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een vlak CSV-bestand toegewezen aan een XDM-schema en het ingepakt in [!DNL Platform]. Deze gegevens kunnen nu worden gebruikt door downstreamdiensten [!DNL Platform] zoals [!DNL Real-time Customer Profile]. Zie het overzicht voor [!DNL Real-time Customer Profile](../../profile/home.md) meer informatie.
+Door deze zelfstudie te volgen, hebt u een vlak CSV-bestand toegewezen aan een XDM-schema en het ingepakt in [!DNL Platform]. Deze gegevens kunnen nu worden gebruikt door downstreamdiensten [!DNL Platform] zoals [!DNL Real-time Customer Profile]. Zie het overzicht voor [[!DNL Real-time klantprofiel]](../../profile/home.md) voor meer informatie.
 
 ## Aanhangsel
 
