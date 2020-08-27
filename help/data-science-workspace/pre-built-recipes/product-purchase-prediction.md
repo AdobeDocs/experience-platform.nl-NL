@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Product kooprecept
 topic: overview
+description: Met het product Purchase Prediction recipe kunt u de waarschijnlijkheid voorspellen van een bepaald type aankoopgebeurtenis van de klant, bijvoorbeeld een aankoop van een product.
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '382'
 ht-degree: 2%
 
 ---
@@ -38,7 +39,7 @@ In dit recept worden [XDM-schema&#39;s](../../xdm/home.md) gebruikt om de gegeve
 
 | Veldnaam | Type |
 --- | ---
-| userId | String |
+| userId | Tekenreeks |
 | genderRatio | Getal |
 | ageY | Getal |
 | ageM | Getal |
