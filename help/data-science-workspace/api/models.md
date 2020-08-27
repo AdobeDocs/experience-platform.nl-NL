@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;models;sensei machine learning api
 solution: Experience Platform
 title: Modellen
 topic: Developer guide
+description: Een model is een geval van een machine het leren recept dat gebruikend historische gegevens en configuraties wordt opgeleid om voor een bedrijfs geval op te lossen.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '846'
 ht-degree: 1%
 
 ---
@@ -281,7 +282,7 @@ Een geslaagde reactie retourneert een lading die de bijgewerkte gegevens van de 
 
 ## Model op id verwijderen
 
-U kunt één enkel Model schrappen door een DELETE verzoek uit te voeren die identiteitskaart van het doelModel in de verzoekweg omvat.
+U kunt één enkel Model schrappen door een verzoek van de DELETE uit te voeren dat identiteitskaart van het doelModel in de verzoekweg omvat.
 
 **API-indeling**
 
