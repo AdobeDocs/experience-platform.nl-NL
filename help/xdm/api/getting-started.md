@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van de API voor schemaregister
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f7fe8f9ac8d6f0e2eaec53d96f2ced0904061c89
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1237'
 ht-degree: 0%
 
 ---
@@ -167,9 +167,21 @@ Oproepen aan [!DNL Schema Registry] API vereisen het gebruik van een `CONTAINER_
 
 De globale container houdt alle standaard Adobe en [!DNL Experience Platform] partner verstrekte klassen, mixins, gegevenstypes, en schema&#39;s. U kunt lijst en raadplegings (GET) verzoeken tegen de globale container slechts uitvoeren.
 
+Een voorbeeld van een vraag die de globale container gebruikt zou als het volgende kijken:
+
+```http
+GET /global/classes
+```
+
 ### Trekcontainer
 
 Om niet met uw uniek te worden verward `TENANT_ID`, houdt de huurderscontainer alle klassen, mixins, gegevenstypes, schema&#39;s, en beschrijvers die door een IMS Organisatie worden bepaald. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle verrichtingen CRUD (GET, POST, PUT, PATCH, DELETE) tegen middelen uitvoeren die u in de huurderscontainer creeert.
+
+Een voorbeeld van een vraag die de huurderscontainer gebruikt zou als het volgende kijken:
+
+```http
+POST /tenant/mixins
+```
 
 Wanneer u een klasse, een mixin, een schema of een gegevenstype in de huurderscontainer creeert, wordt het bewaard aan [!DNL Schema Registry] en toegewezen URI die uw `$id` `TENANT_ID`. omvat. Dit `$id` wordt in de gehele API gebruikt om naar specifieke bronnen te verwijzen. De voorbeelden van `$id` waarden worden verstrekt in de volgende sectie.
 
