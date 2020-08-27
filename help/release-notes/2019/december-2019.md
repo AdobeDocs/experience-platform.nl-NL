@@ -1,41 +1,41 @@
 ---
-title: Opmerkingen bij de release Adobe Experience Platform
+title: Opmerkingen bij de release van Adobe Experience Platform
 description: Opmerkingen bij de release van Experience Platform van 11 december 2019
 doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '682'
 ht-degree: 3%
 
 ---
 
 
-# Opmerkingen bij de release Adobe Experience Platform
+# Opmerkingen bij de release van Adobe Experience Platform
 
 **Releasedatum: 11 december 2019**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-* [!DNL Segmentation Service](#segmentation)
-* [!DNL Decisioning Service](#decisioning)
-* [!DNL Sources](#sources)
-* [!DNL Experience Data Model (XDM) System](#xdm)
+* [[!DNL Segmentation Service]](#segmentation)
+* [[!DNL-beslissingsservice]](#decisioning)
+* [[!DNL-bronnen]](#sources)
+* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](#xdm)
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-De Dienst van de Segmentatie van het Adobe Experience Platform verstrekt een gebruikersinterface en RESTful API die u toestaat om segmenten te bouwen en publiek van uw [!DNL Real-time Customer Profile] gegevens te produceren. Deze segmenten worden centraal gevormd en gehandhaafd [!DNL Platform], die hen gemakkelijk toegankelijk door om het even welke toepassing van de Adobe maken.
+Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en RESTful API waarmee u segmenten kunt bouwen en doelgroepen kunt genereren op basis van uw [!DNL Real-time Customer Profile] gegevens. Deze segmenten worden centraal gevormd en gehandhaafd [!DNL Platform], die hen gemakkelijk toegankelijk door om het even welke toepassing van de Adobe maken.
 
-[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. De segmenten kunnen op verslaggegevens (zoals demografische informatie) of tijdreeksgebeurtenissen worden gebaseerd die klanteninteractie met uw merk vertegenwoordigen.
+[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 |--- | ---|
-| Het tabblad Samengevoegd publiek in [!DNL Segment Builder] | De tabbladen [!UICONTROL _Segmenten _]en[!UICONTROL _Soorten publiek_] in het dialoogvenster [!DNL Segment Builder] zijn gecombineerd tot één [!UICONTROL _tabblad Soorten publiek _]. Dit lusje staat u toe om naar bestaand publiek te doorbladeren en te zoeken, dat u dan en in het canvas van de regelbouwer kunt slepen om een nieuwe segmentdefinitie tot stand te brengen. Verwijzen naar een publiek kan één van de volgende reeksen regellogica aan de nieuwe segmentdefinitie toevoegen: Het lidmaatschap van het publiek als regel, de volledige reeks regellogica die het referenced publiek bepaalde. |
-| Nieuwe locatie voor de kiezer voor het samenvoegbeleid | De locatie van de kiezer voor het samenvoegbeleid in de map [!DNL Segment Builder] is gewijzigd. Als u een samenvoegbeleid voor een segmentdefinitie wilt selecteren, klikt u op het tandwielpictogram op het tabblad [!UICONTROL _Velden _]en gebruikt u het vervolgkeuzemenu Beleid__ samenvoegen om het samenvoegbeleid te selecteren dat u wilt gebruiken. |
+| Het tabblad Samengevoegd publiek in [!DNL Segment Builder] | De tabbladen [!UICONTROL _Segmenten_] en [!UICONTROL _Soorten publiek_] in het dialoogvenster [!DNL Segment Builder] zijn gecombineerd tot één [!UICONTROL _tabblad Soorten publiek_] . Dit lusje staat u toe om naar bestaand publiek te doorbladeren en te zoeken, dat u dan en in het canvas van de regelbouwer kunt slepen om een nieuwe segmentdefinitie tot stand te brengen. Verwijzen naar een publiek kan één van de volgende reeksen regellogica aan de nieuwe segmentdefinitie toevoegen: Het lidmaatschap van het publiek als regel, de volledige reeks regellogica die het referenced publiek bepaalde. |
+| Nieuwe locatie voor de kiezer voor het samenvoegbeleid | De locatie van de kiezer voor het samenvoegbeleid in de map [!DNL Segment Builder] is gewijzigd. Als u een samenvoegbeleid voor een segmentdefinitie wilt selecteren, klikt u op het tandwielpictogram op het tabblad [!UICONTROL _Velden_] en gebruikt u het vervolgkeuzemenu Beleid __ samenvoegen om het samenvoegbeleid te selecteren dat u wilt gebruiken. |
 
 **Bekende problemen**
 
@@ -45,7 +45,7 @@ Voor meer informatie, gelieve te zien het overzicht [van de Dienst van de](../..
 
 ## [!DNL Decisioning Service] {#decisioning}
 
-Adobe Experience Platform [!DNL Decisioning Service] biedt de mogelijkheid om programmatisch en intelligent de &quot;Next Best Experience&quot; te selecteren uit een set beschikbare opties voor een bepaalde persoon, deze te leveren aan een willekeurig kanaal of een toepassing en rapportage en analyse uit te voeren.
+Adobe Experience Platform [!DNL Decisioning Service] biedt de mogelijkheid om programmatisch en intelligent de &quot;Next Best Experience&quot; te selecteren uit een reeks beschikbare opties voor een bepaalde persoon, deze te leveren aan een willekeurig kanaal of een toepassing en rapportage en analyse uit te voeren.
 
 **Nieuwe functies**
 
@@ -61,7 +61,7 @@ Zie het overzicht [van de Dienst van het](../../decisioning-service/home.md) Bes
 
 ## [!DNL Sources] {#sources}
 
-Het Adobe Experience Platform kan gegevens uit externe bronnen opnemen terwijl het toestaan van u om die gegevens te structureren, te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten. U kunt gegevens van een verscheidenheid van bronnen zoals de Oplossingen van Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Platform] services. U kunt gegevens van een verscheidenheid van bronnen zoals de Oplossingen van Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
 
 [!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om aan uw opslagsystemen en de diensten van CRM voor authentiek te verklaren, tijden voor inname looppas te plaatsen, en gegevensinvoer te beheren.
 
