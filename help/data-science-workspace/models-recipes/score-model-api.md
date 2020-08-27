@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;Score a model;Data Science Workspace;popular topics
+keywords: Experience Platform;Score a model;Data Science Workspace;popular topics;sensei machine learning api
 solution: Experience Platform
 title: Score een model (API)
 topic: Tutorial
+description: Deze zelfstudie laat u zien hoe u de API's voor leren van Sensei-machines kunt gebruiken om een experimentele en experimentele versie te maken.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -36,7 +37,7 @@ curl -X POST \
 
 `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.\
+`{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{JSON_PAYLOAD}`: Experiment Run-object dat moet worden verzonden. Het voorbeeld dat wij in onze zelfstudie gebruiken, wordt hier getoond:
 
 ```JSON
@@ -124,7 +125,7 @@ curl -X POST \
 
 `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
-`{API_KEY}`: De specifieke API-sleutelwaarde die u hebt gevonden bij de integratie van uw unieke Adobe Experience Platform.\
+`{API_KEY}`: Uw specifieke API-sleutelwaarde in uw unieke Adobe Experience Platform-integratie.\
 `{EXPERIMENT_ID}`: De id die overeenkomt met het experiment dat u als doel wilt instellen. Dit vindt u in het antwoord bij het maken van uw experiment.\
 `{JSON_PAYLOAD}`: Te verzenden gegevens. Het voorbeeld dat we in onze zelfstudie gebruiken is:
 
@@ -217,7 +218,7 @@ Aangezien er meerdere experimentele runtime&#39;s zijn voor een specifiek experi
 
 ### Een geplande expert stoppen en verwijderen
 
-Als u de uitvoering van een gepland experiment vóór de uitvoering wilt stoppen `endTime`, kunt u dit doen door een DELETE-verzoek naar de `{EXPERIMENT_ID}`
+Als u de uitvoering van een gepland experiment vóór de uitvoering wilt stoppen `endTime`, kunt u dit doen door een verzoek van DELETE naar de `{EXPERIMENT_ID}`
 
 **Verzoek**
 
