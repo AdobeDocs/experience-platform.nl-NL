@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;experiments;sensei machine learning api
 solution: Experience Platform
 title: Experimenten
 topic: Developer guide
+description: Modelontwikkeling en -training vinden plaats op het niveau van de experimenten, waarbij een experiment bestaat uit een MLInstance, trainingsrun en scoring run.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '765'
 ht-degree: 1%
 
 ---
@@ -374,7 +375,7 @@ Een geslaagde reactie retourneert een lading die de bijgewerkte gegevens van de 
 
 ## Een experiment verwijderen
 
-U kunt één enkele Experiment schrappen door een DELETE verzoek uit te voeren die identiteitskaart van de doelExperiment in de verzoekweg omvat.
+U kunt één Experiment verwijderen door een DELETE-aanvraag uit te voeren die de id van de doelexpert in het aanvraagpad bevat.
 
 **API-indeling**
 
@@ -409,7 +410,7 @@ curl -X DELETE \
 
 ## Experimenten door MLInstance ID verwijderen
 
-U kunt alle Experimenten schrappen die tot een bepaalde instantie behoren MLInstance door een DELETE verzoek uit te voeren dat identiteitskaart MLInstance als vraagparameter omvat.
+U kunt alle Experimenten schrappen die tot een bepaalde instantie behoren MLI door een verzoek van de DELETE uit te voeren dat identiteitskaart MLInstance als vraagparameter omvat.
 
 **API-indeling**
 
