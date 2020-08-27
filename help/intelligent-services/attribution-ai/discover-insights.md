@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;insights;attribution ai;popular topics
+keywords: Experience Platform;insights;attribution ai;popular topics;attribution ai insights
 solution: Experience Platform
 title: Inzichten in Attribution AI ontdekken
 topic: Attribution AI insights
+description: Dit document fungeert als richtlijn voor het communiceren met de inzichten van serviceversies in de gebruikersinterface van Adobe Intelligent Services.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1183'
 ht-degree: 0%
 
 ---
@@ -80,7 +81,7 @@ Met Attribution AI-inzichten kunt u uw gegevens filteren en de gebruikersinterfa
 
 ### Conversion-gebeurtenis
 
-Wanneer u een nieuwe instantie maakt in Attribution AI, is een van de vereiste velden Conversiegebeurtenissen. Conversiegebeurtenissen zijn bedrijfsdoelstellingen die het effect van marketing activiteiten, zoals, e-commerceorders, in-store aankopen, en websitebezoeken identificeren.
+Wanneer u een nieuwe instantie maakt in Attribution AI, is een van de vereiste velden Conversiegebeurtenissen. Conversiegebeurtenissen zijn bedrijfsdoelstellingen die het effect van marketingactiviteiten, zoals e-commerceorders, aankopen in winkel en websitebezoeken, identificeren.
 
 Vanuit de instantie kunt u met het vervolgkeuzemenu *Conversiegebeurtenissen* een van de gebeurtenissen selecteren die voor de instantie zijn gedefinieerd om uw gegevens te filteren. Als u specifieke gebeurtenissen selecteert, worden de gebruikersinterfacevisualisaties gewijzigd en worden conversies die bij die gebeurtenissen horen alleen gevuld.
 
