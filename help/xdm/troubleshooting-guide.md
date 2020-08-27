@@ -4,9 +4,9 @@ solution: Experience Platform
 title: De gids van de het oplossen van problemen van het Systeem van de Gegevens van de Ervaring Model (XDM)
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # [!DNL Experience Data Model] (XDM) Handleiding voor systeemprobleemoplossing
 
-Dit document biedt antwoorden op veelgestelde vragen over [!DNL Experience Data Model] (XDM) System en een gids voor probleemoplossing voor algemene fouten. Voor vragen en het oplossen van problemen met betrekking tot andere diensten in Adobe Experience Platform, gelieve te verwijzen naar de het oplossen van problemengids [van het](../landing/troubleshooting.md)Experience Platform.
+Dit document biedt antwoorden op veelgestelde vragen over [!DNL Experience Data Model] (XDM) System en een gids voor probleemoplossing voor algemene fouten. Raadpleeg de handleiding voor het oplossen van problemen met [Experience Platforms voor vragen en het oplossen van problemen met betrekking tot andere services in Adobe Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model](XDM)**is een open-bronspecificatie die gestandaardiseerde schema&#39;s voor het beheer van de klantenervaring bepaalt. De methodologie waarop[!DNL Experience Platform]wordt gebouwd,**Systeem **XDM, exploiteert[!DNL Experience Data Model]schema&#39;s voor gebruik door de[!DNL Platform]diensten. De **[!DNL Schema Registry]**toepassing biedt een gebruikersinterface en een RESTful-API voor toegang tot de **[!DNL Schema Library]**binnenste API[!DNL Experience Platform]. Zie de[XDM documentatie](home.md)voor meer informatie.
+**[!DNL Experience Data Model](XDM)** is een open-bronspecificatie die gestandaardiseerde schema&#39;s voor het beheer van de klantenervaring bepaalt. De methodologie waarop [!DNL Experience Platform] wordt gebouwd, **Systeem** XDM, exploiteert [!DNL Experience Data Model] schema&#39;s voor gebruik door de [!DNL Platform] diensten. De **[!DNL Schema Registry]** toepassing biedt een gebruikersinterface en een RESTful-API voor toegang tot de **[!DNL Schema Library]** binnenste API [!DNL Experience Platform]. Zie de [XDM documentatie](home.md) voor meer informatie.
 
 ## Veelgestelde vragen
 
@@ -42,7 +42,7 @@ Zie de sectie [Schema-identificatie](api/getting-started.md#schema-identificatio
 
 ### Wanneer begint een schema het breken van veranderingen te verhinderen?
 
-De brekende veranderingen kunnen in een schema worden aangebracht zolang het nooit in de verwezenlijking van een dataset of toegelaten voor gebruik binnen is gebruikt [!DNL Real-time Customer Profile](../profile/home.md). Zodra een schema in datasetverwezenlijking of toegelaten voor gebruik met is gebruikt, worden de regels van de Evolutie [!DNL Real-time Customer Profile]van het [](schema/composition.md#evolution) Schema strikt gehandhaafd door het systeem.
+Er kunnen verbreken wijzigingen in een schema worden aangebracht zolang het schema nog nooit is gebruikt bij het maken van een gegevensset of is ingeschakeld voor gebruik in [[!DNL Real-time klantprofiel]](../profile/home.md). Zodra een schema in datasetverwezenlijking of toegelaten voor gebruik met is gebruikt, worden de regels van de Evolutie [!DNL Real-time Customer Profile]van het [](schema/composition.md#evolution) Schema strikt gehandhaafd door het systeem.
 
 ### Wat is de maximumgrootte van een lang gebiedstype?
 
@@ -52,7 +52,7 @@ Zie de sectie [XDM-veldtypen](api/appendix.md#field-types) definiëren in de han
 
 ### Hoe definieer ik identiteiten voor mijn schema?
 
-In [!DNL Experience Platform]dat geval worden identiteiten gebruikt om een onderwerp (doorgaans een individuele persoon) te identificeren, ongeacht de bronnen van gegevens die worden geïnterpreteerd. Ze worden in schema&#39;s gedefinieerd door de sleutelvelden als &quot;Identiteit&quot; te markeren. Veelgebruikte velden voor identiteiten zijn e-mailadres, telefoonnummer, CRM-id [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html)en andere unieke id-velden.
+In [!DNL Experience Platform]dat geval worden identiteiten gebruikt om een onderwerp (doorgaans een individuele persoon) te identificeren, ongeacht de bronnen van gegevens die worden geïnterpreteerd. Ze worden in schema&#39;s gedefinieerd door de sleutelvelden als &quot;Identiteit&quot; te markeren. Veelgebruikte velden voor identiteiten zijn e-mailadres, telefoonnummer, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html), CRM-id en andere unieke id-velden.
 
 Velden kunnen als id&#39;s worden gemarkeerd met de API of de gebruikersinterface.
 
@@ -76,7 +76,7 @@ Primaire id&#39;s zijn optioneel omdat schema&#39;s er 0 of 1 kunnen hebben. Noc
 
 ### Hoe laat ik een schema voor gebruik binnen toe [!DNL Real-time Customer Profile]?
 
-De schema&#39;s worden toegelaten voor gebruik binnen [!DNL Real-time Customer Profile](../profile/home.md) door de toevoeging van een &quot;unie&quot;markering, die in de `meta:immutableTags` attributen van het schema wordt gevestigd. Het toelaten van een schema voor gebruik met [!DNL Profile] kan worden gedaan gebruikend API of de gebruikersinterface.
+De schema&#39;s worden toegelaten voor gebruik in [[!DNL Real-time het Profiel van de Klant]](../profile/home.md) door de toevoeging van een &quot;unie&quot;markering, die in de `meta:immutableTags` attributen van het schema wordt gevestigd. Het toelaten van een schema voor gebruik met [!DNL Profile] kan worden gedaan gebruikend API of de gebruikersinterface.
 
 #### Een bestaand schema inschakelen voor het [!DNL Profile] gebruik van de API
 
