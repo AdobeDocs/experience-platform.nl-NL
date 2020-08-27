@@ -3,11 +3,12 @@ keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science W
 solution: Experience Platform
 title: Handleiding SDK Platform
 topic: SDK authoring
+description: Deze zelfstudie biedt u informatie over het omzetten van data_access_sdk_python in het nieuwe Python platform_sdk in zowel Python als R.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 2%
+source-wordcount: '470'
+ht-degree: 5%
 
 ---
 
@@ -151,10 +152,10 @@ De nieuwe [!DNL Platform] SDK ondersteunt de volgende bewerkingen:
 | Bewerking | -functie |
 | --------- | -------- |
 | Equals (`=`) | `eq()` |
-| Groter dan (`>`) | `gt()` |
-| Groter dan of gelijk aan (`>=`) | `ge()` |
-| Kleiner dan (`<`) | `lt()` |
-| Kleiner dan of gelijk aan (`<=`) | `le()` |
+| Greater than (`>`) | `gt()` |
+| Greater than or equal to (`>=`) | `ge()` |
+| Less than (`<`) | `lt()` |
+| Less than or equal to (`<=`) | `le()` |
 | And (`&`) | `And()` |
 | Or (`|`) | `Or()` |
 
