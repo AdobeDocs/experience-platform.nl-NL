@@ -5,9 +5,9 @@ title: Overzicht van sandboxen
 topic: overview
 description: Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '706'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ In de gebruikersinterface [van het](https://platform.adobe.com)Experience Platfo
 
 ## Sandboxen in Experience Platform-API&#39;s
 
-Bij het aanroepen van Experience Platform-API&#39;s moet een naam voor de sandbox worden opgegeven onder de koptekst `x-sandbox-name`. Wanneer u bijvoorbeeld een aanroep naar de component maakt [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) om alle gegevenssets in de productiesandbox weer te geven, wordt de naam van de sandbox (&quot;prod&quot;) als een header weergegeven in de API-aanvraag:
+Bij het aanroepen van Experience Platform-API&#39;s moet een naam voor de sandbox worden opgegeven onder de koptekst `x-sandbox-name`. Wanneer u bijvoorbeeld een aanroep doet naar de [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) om alle gegevenssets in de productiesandbox weer te geven, wordt de naam van de sandbox (&quot;prod&quot;) als een header weergegeven in de API-aanvraag:
 
 ```shell
 curl -X GET \
