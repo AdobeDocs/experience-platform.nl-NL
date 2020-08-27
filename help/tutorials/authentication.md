@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API's van Experience Platforms verifiëren en benaderen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '853'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ De volgende secties lopen door de stappen om een Adobe ID tot stand te brengen e
 
 ### Een Adobe ID maken
 
-Als u geen Adobe ID hebt, kunt u een van de volgende stappen maken:
+Als u geen Adobe ID hebt, kunt u er een maken door de volgende stappen uit te voeren:
 
 1. Ga naar [Adobe Developer Console](https://console.adobe.io)
 2. Klik op Een nieuw account **[!UICONTROL maken]**
@@ -47,7 +47,7 @@ Voordat u integratie op Adobe I/O maakt, moet uw account beschikken over ontwikk
 
 **Toegang voor ontwikkelaars verkrijgen**
 
-Neem contact op met een [!DNL Admin Console] beheerder in uw organisatie om u toe te voegen als ontwikkelaar voor een van de producten van uw organisatie die de [!DNL Admin Console](https://adminconsole.adobe.com/)software gebruiken.
+Neem contact op met een [!DNL Admin Console] beheerder in uw organisatie om u toe te voegen als ontwikkelaar voor een van de producten van uw organisatie met de [[!DNL-Admin Console]](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
@@ -155,7 +155,7 @@ Als uw reactie vergelijkbaar is met de hieronder weergegeven reactie, zijn uw ge
 
 ## Postman gebruiken voor JWT-verificatie en API-aanroepen
 
-[Postman](https://www.getpostman.com/) is een populair hulpmiddel om met RESTful APIs te werken. In dit [artikel](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) wordt beschreven hoe u een postman kunt instellen om automatisch JWT-verificatie uit te voeren en deze te gebruiken voor het gebruik van Adobe Experience Platform-API&#39;s.
+[Postman](https://www.getpostman.com/) is een populair hulpmiddel om met RESTful APIs te werken. In dit [artikel](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) wordt beschreven hoe u een postman kunt instellen om automatisch JWT-verificatie uit te voeren en deze te gebruiken voor het gebruik van Adobe Experience Platform API&#39;s.
 
 ## Volgende stappen
 
