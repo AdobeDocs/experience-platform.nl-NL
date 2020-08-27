@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Compatibiliteit van gegevensgebruik voor publiekssegmenten afdwingen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1335'
 ht-degree: 0%
 
 ---
@@ -20,10 +20,10 @@ In deze zelfstudie worden de stappen beschreven voor het afdwingen van compatibi
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van [!DNL Adobe Experience Platform]:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] is een generische opslag van de raadplegingsentiteit, en wordt gebruikt om [!DNL Experience Data Model] (XDM) gegevens binnen te beheren [!DNL Platform]. Het profiel voegt gegevens over diverse activa van ondernemingsgegevens samen en verleent toegang tot die gegevens in een verenigde presentatie.
+- [[!DNL Real-time klantprofiel]](../../profile/home.md): [!DNL Real-time Customer Profile] is een generische opslag van de raadplegingsentiteit, en wordt gebruikt om [!DNL Experience Data Model] (XDM) gegevens binnen te beheren [!DNL Platform]. Het profiel voegt gegevens over diverse activa van ondernemingsgegevens samen en verleent toegang tot die gegevens in een verenigde presentatie.
    - [Beleid](../../profile/api/merge-policies.md)voor samenvoegen: Regels die door worden gebruikt [!DNL Real-time Customer Profile] om te bepalen welke gegevens onder bepaalde omstandigheden in één weergave kunnen worden samengevoegd. Het beleid van de fusie kan voor [!DNL Data Governance] doeleinden worden gevormd.
-- [!DNL Segmentation](../home.md): Hoe [!DNL Real-time Customer Profile] verdeelt een grote groep individuen in de profielopslag in kleinere groepen die gelijkaardige eigenschappen delen en op gelijkaardige wijze aan marketing strategieën zullen antwoorden.
-- [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] voorziet in de infrastructuur voor de etikettering en handhaving van gegevensgebruik (DULE), waarbij de volgende componenten worden gebruikt:
+- [[!DNL-segmentatie]](../home.md): Hoe [!DNL Real-time Customer Profile] verdeelt een grote groep individuen in de profielopslag in kleinere groepen die gelijkaardige eigenschappen delen en op gelijkaardige wijze aan marketing strategieën zullen antwoorden.
+- [[!DNL-gegevensbeheer]](../../data-governance/home.md): [!DNL Data Governance] voorziet in de infrastructuur voor de etikettering en handhaving van gegevensgebruik (DULE), waarbij de volgende componenten worden gebruikt:
    - [Labels](../../data-governance/labels/user-guide.md)voor gegevensgebruik: Etiketten die worden gebruikt om gegevenssets en velden te beschrijven in termen van het gevoeligheidsniveau waarmee hun respectieve gegevens worden verwerkt.
    - [Beleid](../../data-governance/policies/overview.md)voor gegevensgebruik: Configuraties die aangeven welke marketingacties zijn toegestaan op gegevens die zijn gecategoriseerd door bepaalde labels voor gegevensgebruik.
    - [Beleidshandhaving](../../data-governance/enforcement/overview.md): Hiermee kunt u beleid voor gegevensgebruik afdwingen en gegevensbewerkingen die beleidsovertredingen vormen, voorkomen.
@@ -179,7 +179,7 @@ Een succesvolle reactie retourneert de details van het samenvoegbeleid.
 | -------- | ----------- |
 | `schema.name` | De naam van het schema verbonden aan het fusiebeleid. |
 | `attributeMerge.type` | Het configuratietype van de gegevensbelangrijkheid voor het samenvoegbeleid. Als de waarde is `dataSetPrecedence`, zijn de datasets verbonden aan dit fusiebeleid vermeld onder `attributeMerge > data > order`. Als de waarde is `timestampOrdered`, dan worden alle datasets verbonden aan het schema binnen van verwijzingen voorzien `schema.name` gebruikt door het fusiebeleid. |
-| `attributeMerge.data.order` | Als `attributeMerge.type` is `dataSetPrecedence`, zal dit attribuut een serie die IDs van de datasets bevatten door dit fusiebeleid wordt gebruikt. Deze id&#39;s worden in de volgende stap gebruikt. |
+| `attributeMerge.data.order` | Als het `attributeMerge.type` is `dataSetPrecedence`, zal dit attribuut een serie zijn die IDs van de datasets bevatten door dit fusiebeleid wordt gebruikt dat. Deze id&#39;s worden in de volgende stap gebruikt. |
 
 ## Gegevenssets evalueren voor beleidsovertredingen
 
@@ -383,4 +383,4 @@ Zie de sectie over het [exporteren van een segment](./evaluate-a-segment.md#expo
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u de labels van het gegevensgebruik verbonden aan een publiekssegment opgezocht en hen getest voor beleidsschendingen tegen specifieke marketing acties. Lees het overzicht voor meer informatie over [!DNL Data Governance] in [!DNL Experience Platform][!DNL Data Governance](../../data-governance/home.md).
+Door deze zelfstudie te volgen, hebt u de labels van het gegevensgebruik verbonden aan een publiekssegment opgezocht en hen getest voor beleidsschendingen tegen specifieke marketing acties. Lees voor meer informatie over [!DNL Data Governance] in [!DNL Experience Platform]het overzicht voor [[!DNL-gegevensbeheer]](../../data-governance/home.md).
