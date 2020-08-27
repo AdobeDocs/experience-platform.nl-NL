@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Problemen met streaming opname oplossen
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -100,4 +100,4 @@ Als een bericht wordt [!DNL Real-time Customer Profile] afgewezen, is dit waarsc
 
 Er zijn twee typen naamruimten: standaard en aangepast. Wanneer u aangepaste naamruimten gebruikt, moet u ervoor zorgen dat de naamruimte is geregistreerd binnen [!DNL Identity Service]. Zie het overzicht [van naamruimte](../../identity-service/namespaces.md) voor identiteiten voor meer informatie over het gebruik van standaard- en aangepaste naamruimten.
 
-U kunt het gebruiken [!DNL Experience Platform UI](https://platform.adobe.com) om meer informatie te zien over waarom een bericht ontbrak het opnemen. Klik op **[!UICONTROL Controle]** in de linkernavigatie en bekijk het tabblad _[!UICONTROL Streaming end-to-end]_om de berichtbatches te zien die tijdens een geselecteerde tijdsperiode worden gestreamd.
+U kunt de [[!DNL Experience Platform UI]](https://platform.adobe.com) gebruiken om meer informatie te zien over waarom een bericht mislukte opname. Klik op **[!UICONTROL Controle]** in de linkernavigatie en bekijk het tabblad _[!UICONTROL Streaming end-to-end]_ om de berichtbatches te zien die tijdens een geselecteerde tijdsperiode worden gestreamd.
