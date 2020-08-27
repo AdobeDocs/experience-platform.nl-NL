@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;
 solution: Experience Platform
 title: Aanhangsel
 topic: Developer guide
+description: In de volgende secties vindt u informatie over verschillende functies van de API voor leren van Sensei-machines.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 1%
+source-wordcount: '313'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +34,7 @@ De [!DNL Sensei Machine Learning] API biedt ondersteuning voor queryparameters m
 
 ## Python CPU- en GPU-configuraties {#cpu-gpu-config}
 
-Python-motoren kunnen kiezen tussen een CPU of een GPU voor trainings- of scoring-doeleinden en worden op een [MLInstance](./mlinstances.md) gedefinieerd als een taakspecificatie (`tasks.specification`).
+Python Engines kunnen kiezen tussen een CPU of een GPU voor trainings- of scoring-doeleinden en worden op een [MLInstance](./mlinstances.md) gedefinieerd als een taakspecificatie (`tasks.specification`).
 
 Hieronder volgt een voorbeeldconfiguratie die het gebruik van een CPU voor training en een GPU voor scoring opgeeft:
 
