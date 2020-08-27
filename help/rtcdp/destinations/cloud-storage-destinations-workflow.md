@@ -5,9 +5,9 @@ seo-title: Workflow voor opslagdoelen voor cloud
 description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 seo-description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Op deze pagina wordt uitgelegd hoe u verbinding kunt maken met cloudopslaglocati
    >
    >Als er al een verbinding met dit doel bestaat, ziet u een knop **[!UICONTROL Activeren]** op de doelkaart. Voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]**, verwijs naar de sectie van de [Catalogus](/help/rtcdp/destinations/destinations-workspace.md#catalog) van de documentatie van de bestemmingswerkruimte.
 
-2. Als u in de stap **[!UICONTROL Verificatie]** eerder een verbinding met uw bestemming voor cloudopslag had ingesteld, selecteert u **[!UICONTROL Bestaande account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL Nieuwe account]** selecteren om een nieuwe verbinding met de bestemming voor cloudopslag in te stellen. Vul de verificatiereferenties van uw account in en selecteer **[!UICONTROL Verbinding maken met doel]**. <br> Zie [bestemming Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) , [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) bestemming, [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) bestemming, en bestemming [SFTP](/help/rtcdp/destinations/sftp-destination.md) voor details rond geloofsbrieven input in de stap van de **Authentificatie** .
+2. Als u in de stap **[!UICONTROL Verificatie]** eerder een verbinding met uw bestemming voor cloudopslag had ingesteld, selecteert u **[!UICONTROL Bestaande account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL Nieuwe account]** selecteren om een nieuwe verbinding met de bestemming voor cloudopslag in te stellen. Vul de verificatiereferenties van uw account in en selecteer **[!UICONTROL Verbinding maken met doel]**. <br> Zie [Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) -bestemming, [[!DNL Amazon Kinesis]](/help/rtcdp/destinations/amazon-kinesis-destination.md) -bestemming, [[!DNL Azure Event Hubs]](/help/rtcdp/destinations/azure-event-hubs-destination.md) -bestemming en [SFTP](/help/rtcdp/destinations/sftp-destination.md) -bestemming voor details rondom aanmeldingsgegevens in de **verificatiestap** .
 
    >[!NOTE]
    >
