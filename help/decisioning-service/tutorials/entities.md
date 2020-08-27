@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Entiteiten van beslissingsservice beheren met behulp van API's
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '7207'
+source-wordcount: '7220'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ De zelfstudie bestaat uit twee onderdelen:
 
 Deze zelfstudie vereist een goed begrip van de [!DNL Experience Platform] services en de API-conventies. De [!DNL Platform] opslagplaats is de dienst die door verscheidene andere [!DNL Platform] diensten wordt gebruikt om bedrijfsvoorwerpen en diverse soorten meta-gegevens op te slaan. Het verstrekt een veilige en flexibele manier om die voorwerpen voor gebruik door verscheidene runtime diensten te beheren en te vragen. Het [!DNL Decisioning Service] is er een van. Lees de documentatie voor het volgende voordat u met deze zelfstudie begint:
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
-- [!DNL Decisioning Service](./../home.md): Verklaart de concepten en de componenten die voor het Beslissen van de Ervaring in het algemeen en het besluit van de Aanbieding in het bijzonder worden gebruikt. Toont de strategieën die voor het kiezen van de beste optie worden gebruikt om tijdens de ervaring van een klant voor te stellen.
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL is een krachtige taal voor het schrijven van expressies over XDM-instanties. PQL wordt gebruikt om besluitvormingsregels te bepalen.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+- [[!DNL-beslissingsservice]](./../home.md): Verklaart de concepten en de componenten die voor het Beslissen van de Ervaring in het algemeen en het besluit van de Aanbieding in het bijzonder worden gebruikt. Toont de strategieën die voor het kiezen van de beste optie worden gebruikt om tijdens de ervaring van een klant voor te stellen.
+- [[!DNL Profile Query Language (PQL)]](../../segmentation/pql/overview.md): PQL is een krachtige taal voor het schrijven van expressies over XDM-instanties. PQL wordt gebruikt om besluitvormingsregels te bepalen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan APIs te maken. [!DNL Platform]
 
@@ -823,7 +823,7 @@ De subsidiabiliteitsregels bevatten de voorwaarden die worden beoordeeld om te b
 
 > &quot;Inclusief personen die de status van elite hebben en in de laatste zes maanden driemaal hebben gevlogen op een vlucht met het vluchtnummer van de huidige vlucht.&quot;
 
-De instanties worden gemaakt met schema-idhttps://ns.adobe.com/experience/offer-management/eligibility-rule. De `_instance` eigenschap voor de aanroep van het maken of bijwerken ziet er als volgt uit:
+De instanties worden gemaakt met schema-idhttps://ns.adobe.com/experience/offer-management/eligibility-rule. De `_instance` eigenschap voor de aanroep van het bestand create of update ziet er als volgt uit:
 
 ```json
 {
@@ -949,7 +949,7 @@ De volgende vraag illustreert hoe het `_instance` bezit voor creeert of updatevr
 
 Een aanbiedingsactiviteit wordt gebruikt om het besluitvormingsproces te controleren. Het specificeert het aanbiedingsfilter dat op de totale inventaris wordt toegepast om aanbiedingen door onderwerp/categorie te versmallen, de plaatsing om de inventaris aan die aanbiedingen te versmallen die in de gereserveerde ruimte passen en specificeert een reserveoptie als de gecombineerde beperkingen alle beschikbare verpersoonlijkingsopties (aanbiedingen) onbruikbaar maken.
 
-De activity-instanties worden gemaakt met schema-id`https://ns.adobe.com/experience/offer-management/offer-activity`. De `_instance` eigenschap voor de aanroep van het maken of bijwerken ziet er als volgt uit:
+De activity-instanties worden gemaakt met schema-id`https://ns.adobe.com/experience/offer-management/offer-activity`. De `_instance` eigenschap voor de aanroep van het bestand create of update ziet er als volgt uit:
 
 ```json
 {
