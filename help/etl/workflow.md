@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ETL;etl;etl workflow;ETL workflow
 solution: Experience Platform
 title: ETL-workflow
 topic: overview
+description: Verschillende extractie-, transformatie- en laadprogramma's (ETL) verschillen mogelijk in indeling, maar de meeste van deze gereedschappen bieden vergelijkbare functionaliteit als hulpmiddel bij het combineren van meerdere gegevensbronnen.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ De volgende diagrammen verstrekken mock-ups van gemeenschappelijke acties ETL en
 
 De hieronder weergegeven acties worden beschreven in de stappen die worden beschreven in de [ETL Integration Guide](home.md). In sommige stappen wordt verwezen naar specifieke figuren, in andere worden vergelijkbare acties beschreven als in de hier weergegeven workflow.
 
-### Afbeelding 1 - Nieuwe aansluiting voor Adobe Experience Platform configureren:
+### Afbeelding 1 - Nieuwe Adobe Experience Platform-connector configureren:
 
 ![](images/image2.png)
 
