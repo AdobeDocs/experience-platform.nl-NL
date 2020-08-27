@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een model publiceren als service (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1483'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Een model publiceren als service (API)
 
-Deze zelfstudie behandelt het proces voor het publiceren van een model als service met behulp van de [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+Deze zelfstudie behandelt het publiceren van een model als service met behulp van de [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de Werkruimte van de Wetenschap van de Gegevens van het Adobe Experience Platform. Voordat u met deze zelfstudie begint, bekijkt u eerst het overzicht [van de](../home.md) Data Science Workspace voor een introductie op hoog niveau van de service.
+Deze zelfstudie vereist een goed begrip van de Adobe Experience Platform Data Science Workspace. Voordat u met deze zelfstudie begint, bekijkt u eerst het overzicht [van de](../home.md) Data Science Workspace voor een introductie op hoog niveau van de service.
 
 Om samen met dit leerprogramma te volgen, moet u een bestaande Motor van ML, Instantie van XML, en Experiment hebben. Raadpleeg de zelfstudie over het [importeren van een verpakt recept](./import-packaged-recipe-api.md)voor informatie over het maken van deze methoden in de API.
 
@@ -82,7 +82,7 @@ curl -X POST
 
 | Eigenschap | Beschrijving |
 --- | ---
-| `mlInstanceId` | De bestaande Instantie van XML identificatie, de opleiding de Looppas van de Experiment die wordt gebruikt om de Dienst van ML tot stand te brengen zou aan dit bepaalde Instantie van XML moeten beantwoorden. |
+| `mlInstanceId` | De bestaande die Instantie van XML identificatie, de opleidingUitvoer van de Experiment wordt gebruikt om de Dienst van ML tot stand te brengen zou aan dit bepaalde Instantie van XML moeten beantwoorden. |
 | `trainingExperimentId` | Identificatie van het experiment overeenkomstig de identificatie van het XML-exemplaar. |
 | `trainingExperimentRunId` | Een bepaalde opleiding van de Experimentlooppas die voor het publiceren van de Dienst van ML moet worden gebruikt. |
 | `scoringDataSetId` | Identificatie die verwijst naar de specifieke gegevensset die moet worden gebruikt voor geplande scoring-experimentuitvoeren. |
