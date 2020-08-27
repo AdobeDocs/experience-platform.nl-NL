@@ -5,9 +5,9 @@ title: 'Gegevensgebruikslabels beheren met API''s '
 topic: developer guide
 description: Met de Dataset Service API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Deze klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API voor catalogusservice die metagegevens van gegevenssets beheert.
 translation-type: tm+mt
-source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
+source-git-commit: 4096a7c1ec2b3640886d3a8c69b578987fe96dd4
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1007'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 In dit document worden stappen beschreven voor het beheren van labels voor gegevensgebruik met de [!DNL Policy Service] API en de [!DNL Dataset Service] API.
 
-Het [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) biedt verschillende eindpunten waarmee u labels voor gegevensgebruik voor uw organisatie kunt maken en beheren.
+De [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) biedt verschillende eindpunten waarmee u labels voor gegevensgebruik voor uw organisatie kunt maken en beheren.
 
 Met de [!DNL Dataset Service] API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Het maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de [!DNL Catalog Service] API die metagegevens van gegevenssets beheert.
 
