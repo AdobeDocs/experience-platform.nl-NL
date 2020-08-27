@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Detailhandelrecept
 topic: overview
+description: Met het recept voor detailhandel kunt u de verkoopprognose voor alle winkels die gedurende een bepaalde periode worden ingezaaid, voorspellen. Met een accuraat voorspellingsmodel zou de detailhandelaar de relatie tussen vraag en prijsbeleid kunnen vinden en geoptimaliseerde prijsbeslissingen kunnen nemen om verkoop en inkomsten te maximaliseren.
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '571'
 ht-degree: 0%
 
 ---
@@ -41,9 +42,9 @@ In dit recept worden [XDM-schema&#39;s](../../xdm/schema/field-dictionary.md) ge
 
 | Veldnaam | Type |
 --- | ---
-| date | String |
+| date | Tekenreeks |
 | winkel | Geheel |
-| storeType | String |
+| storeType | Tekenreeks |
 | wekelijkseVerkoop | Getal |
 | storeSize | Geheel |
 | temperatuur | Getal |
