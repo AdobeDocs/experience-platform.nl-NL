@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlservices;sensei machine learning api
 solution: Experience Platform
 title: Services
 topic: Developer guide
+description: Een dienst MLService is een gepubliceerd opgeleid model dat uw organisatie van de capaciteit voorziet om tot eerder ontwikkelde modellen toegang te hebben en te hergebruiken. Een belangrijk kenmerk van MLServices is de mogelijkheid om training en scoring op een geplande basis te automatiseren. De geplande trainingslooppas kan helpen de efficiency en nauwkeurigheid van een model handhaven, terwijl de geplande scoring looppas kan ervoor zorgen dat de nieuwe inzichten constant worden geproduceerd.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
@@ -288,7 +289,7 @@ Een succesvolle reactie keert een lading terug die de bijgewerkte details van ML
 
 ## Een MLService verwijderen
 
-U kunt één enkele dienst schrappen MLService door een DELETE verzoek uit te voeren dat identiteitskaart van doelMLService in de verzoekweg omvat.
+U kunt één enkele dienst schrappen MLService door een verzoek van de DELETE uit te voeren dat identiteitskaart van doelMLService in de verzoekweg omvat.
 
 **API-indeling**
 
@@ -323,7 +324,7 @@ curl -X DELETE \
 
 ## MLServices verwijderen op MLInstance ID
 
-U kunt alle diensten schrappen MLServices die tot een bepaalde instantie behoren door een DELETE verzoek uit te voeren dat een identiteitskaart MLInstance als vraagparameter specificeert.
+U kunt alle diensten schrappen MLServices die tot een bepaalde instantie behoren door een verzoek van de DELETE uit te voeren die een identiteitskaart MLInstance als vraagparameter specificeert.
 
 **API-indeling**
 
