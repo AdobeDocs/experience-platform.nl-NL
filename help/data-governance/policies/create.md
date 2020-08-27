@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Een beleid voor gegevensgebruik maken
 topic: policies
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 0%
+source-wordcount: '1194'
+ht-degree: 1%
 
 ---
 
@@ -22,9 +22,9 @@ Dit document biedt een stapsgewijze zelfstudie voor het maken van een DULE-belei
 
 Dit leerprogramma vereist een werkend inzicht in de volgende belangrijkste concepten betrokken bij het creëren van en het evalueren van DULE beleid:
 
-* [!DNL Data Governance](../home.md): Het kader waarmee de naleving van het gegevensgebruik wordt [!DNL Platform] afgedwongen.
+* [[!DNL-gegevensbeheer]](../home.md): Het kader waarmee de naleving van het gegevensgebruik wordt [!DNL Platform] afgedwongen.
 * [Labels](../labels/overview.md)voor gegevensgebruik: Labels voor gegevensgebruik worden toegepast op XDM-gegevensvelden en geven beperkingen op voor de manier waarop die gegevens kunnen worden benaderd.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 * [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om aanroepen naar de DULE [!DNL Policy Service] API te kunnen uitvoeren, inclusief vereiste headers en hoe u API-voorbeeldaanroepen kunt lezen.
@@ -123,7 +123,7 @@ Een succesvolle reactie retourneert het totale aantal gevonden marketingacties (
 
 Wanneer u de marketing actie vindt die u wilt gebruiken, registreer de waarde van zijn `href` bezit. Deze waarde wordt gebruikt tijdens de volgende stap van het [creëren van een DULE beleid](#create-policy).
 
-### Nieuwe marketingactie maken {#create-new}
+### Create a new marketing action {#create-new}
 
 U kunt een nieuwe marketing actie tot stand brengen door een verzoek van de PUT aan het `/marketingActions/custom/` eindpunt te doen en een naam voor de marketing actie aan het eind van de verzoekweg te verstrekken.
 
