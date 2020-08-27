@@ -1,28 +1,28 @@
 ---
-title: Opmerkingen bij de release Adobe Experience Platform
+title: Opmerkingen bij de release van Adobe Experience Platform
 description: Opmerkingen bij de release van Experience Platform van 15 januari 2020
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '894'
 ht-degree: 3%
 
 ---
 
 
-# Opmerkingen bij de release Adobe Experience Platform
+# Opmerkingen bij de release van Adobe Experience Platform
 
 **Releasedatum: 15 januari 2020**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Privacy Service](#privacy)
-* [!DNL Sources](#sources)
-* [!DNL Destinations](#destinations)
+* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](#xdm)
+* [[!DNL-Privacy Service]](#privacy)
+* [[!DNL-bronnen]](#sources)
+* [[!DNL-doelen]](#destinations)
 
 ## [!DNL Experience Data Model] (XDM) System {#xdm}
 
@@ -35,7 +35,7 @@ XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht
 | Functie | Beschrijving |
 |--- | ---|
 | Beperkingen van veldtype voor velden met gelijke hiërarchie | Nadat een XDM-veld is gedefinieerd als een bepaald type, moeten andere velden met dezelfde naam en hiërarchie hetzelfde veldtype gebruiken, ongeacht de klassen of mixen waarin ze worden gebruikt. Als een mixin voor de XDM- [!DNL Profile] klasse bijvoorbeeld een `profile.age` veld van het type &quot;integer&quot; bevat, [!DNL ExperienceEvent] kan een vergelijkbare mix voor XDM geen `profile.age` veld van het type &quot;string&quot; hebben. Als u een ander veldtype wilt gebruiken, moet het veld een andere hiërarchie hebben dan het eerder gedefinieerde veld (bijvoorbeeld `profile.person.age`). Deze functie is bedoeld om conflicten te voorkomen wanneer schema&#39;s in een unie worden samengebracht. Hoewel de beperking geen retroactief effect heeft op bestaande schema&#39;s, wordt sterk geadviseerd dat u uw schema&#39;s voor field-type conflicten herziet en hen zonodig uitgeeft. |
-| Hoofdlettergevoelige veldvalidatie | Aangepaste velden op hetzelfde niveau moeten verschillende namen hebben, ongeacht het hoofdlettergebruik. Als u bijvoorbeeld een aangepast veld met de naam &quot;E-mail&quot; toevoegt en hieraan een aangepaste waarde toevoegt, kunt u geen ander aangepast veld op hetzelfde niveau met de naam &quot;e-mail&quot; toevoegen. |
+| Hoofdlettergevoelige veldvalidatie | Aangepaste velden op hetzelfde niveau moeten verschillende namen hebben, ongeacht het hoofdlettergebruik. Als u bijvoorbeeld een aangepast veld met de naam &quot;E-mail&quot; toevoegt, kunt u geen ander aangepast veld op hetzelfde niveau met de naam &quot;e-mail&quot; toevoegen. |
 
 **Bekende problemen**
 
@@ -65,7 +65,7 @@ Voor meer informatie over [!DNL Privacy Service], gelieve te beginnen door het o
 
 ## Bronnen {#sources}
 
-Het Adobe Experience Platform kan gegevens uit externe bronnen opnemen terwijl het toestaan van u om die gegevens te structureren, te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Platform] services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
 
 [!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
@@ -98,14 +98,14 @@ In [Adobe in real time CDP](../../rtcdp/overview.md), zijn de bestemmingen pre-g
 
 | Functie | Beschrijving |
 |--- | ---|
-| Ondersteuning voor toegangsbeheermachtigingen | De functionaliteit van Doelen in Echt - tijd CDP werkt met de toestemmingen van de de toegangscontrole van het Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. |
+| Ondersteuning voor toegangsbeheermachtigingen | De functionaliteit van Doelen in Echt - tijd CDP werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. |
 
 **Toegangsbeheermachtigingen**
 
 | Categorie | Machtiging | Beschrijving |
 |--- | --- | ---|
 | Doelen | Doelen beheren | Toegang tot het lezen, creëren, uitgeven, en onbruikbaar maken bestemmingen. |
-| Doelen | Doelen weergeven | Alleen-lezen toegang tot beschikbare doelen op het tabblad [!UICONTROL _Catalogus _]en geverifieerde doelen op het tabblad_ Bladeren _. |
+| Doelen | Doelen weergeven | Alleen-lezen toegang tot beschikbare doelen op het tabblad [!UICONTROL _Catalogus_] en geverifieerde doelen op het tabblad _Bladeren_ . |
 | Doelen | Doelen activeren | Mogelijkheid om gegevens naar doelen te activeren. Voor deze machtiging moet &quot;Doelen beheren&quot; of &quot;Doelen weergeven&quot; worden toegevoegd aan het productprofiel. |
 
 **Bekende problemen**
