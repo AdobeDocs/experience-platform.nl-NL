@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e9d7a045a88e0126549adcfa6136684e7b933b71
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '307'
 ht-degree: 3%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 3%
 
 Nieuwe functies in Adobe Experience Platform:
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
+- [[!DNL Access control]](#access-control)
+- [[!DNL-sandboxen]](#sandboxes)
 
 ## [!DNL Access control] {#access-control}
 
@@ -31,7 +31,7 @@ Nieuwe functies in Adobe Experience Platform:
 | Functie | Beschrijving |
 |--- | ---|
 | Toestemmingen | Op de [!DNL Admin Console]tab in een [!DNL Platform] productprofiel kunt u aanpassen welke [!DNL Platform] mogelijkheden beschikbaar zijn voor de gebruikers die aan dat profiel zijn gekoppeld. Beschikbare machtigingscategorieën zijn: [!UICONTROL Gegevensmodellering], [!UICONTROL gegevensbeheer], [!UICONTROL profielbeheer], [!UICONTROL identiteiten], [!UICONTROL gegevenscontrole], Sandbox-beheer, Destination, Sources. |
-| Toegang tot sandboxen | Met het tabblad [!UICONTROL _Machtigingen _]in een[!DNL Platform]productprofiel kunnen gebruikers toegang krijgen tot specifieke sandboxen. Zie de sectie over[sandboxen](#sandboxes)hieronder voor meer informatie. |
+| Toegang tot sandboxen | Met het tabblad [!UICONTROL _Machtigingen_] in een [!DNL Platform] productprofiel kunnen gebruikers toegang krijgen tot specifieke sandboxen. Zie de sectie over [sandboxen](#sandboxes) hieronder voor meer informatie. |
 
 Zie het overzicht [van](../../access-control/home.md)toegangsbeheer voor meer informatie.
 
