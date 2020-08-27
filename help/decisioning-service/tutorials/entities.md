@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;manage decisioning;decisioning objects api;manage decisioning objects
 solution: Experience Platform
 title: Entiteiten van beslissingsservice beheren met behulp van API's
 topic: tutorial
+description: 'Dit document bevat een zelfstudie voor het werken met de bedrijfsentiteiten van de Decisioning Service die Adobe Experience Platform API''s gebruiken. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '7220'
+source-wordcount: '7239'
 ht-degree: 0%
 
 ---
@@ -823,7 +824,7 @@ De subsidiabiliteitsregels bevatten de voorwaarden die worden beoordeeld om te b
 
 > &quot;Inclusief personen die de status van elite hebben en in de laatste zes maanden driemaal hebben gevlogen op een vlucht met het vluchtnummer van de huidige vlucht.&quot;
 
-De instanties worden gemaakt met schema-idhttps://ns.adobe.com/experience/offer-management/eligibility-rule. De `_instance` eigenschap voor de aanroep van het bestand create of update ziet er als volgt uit:
+De instanties worden gemaakt met schema-idhttps://ns.adobe.com/experience/offer-management/eligibility-rule. De `_instance` eigenschap voor de aanroep van het maken of bijwerken ziet er als volgt uit:
 
 ```json
 {
@@ -863,7 +864,7 @@ Tags zijn eenvoudige instanties die instanties kunnen bieden. Het zijn op zichze
 
 De voorwerpen van de markering dienen om een categorisering onder besluitvormingsopties (aanbiedingen) te vestigen. Een tag kan door veel aanbiedingen worden gekoppeld en een aanbieding kan veel tagverwijzingen bevatten. Een categorie aanbiedingen wordt vastgesteld door te verwijzen naar alle aanbiedingen die betrekking hebben op een bepaalde set taginstanties.
 
-De taginstanties worden gemaakt met de schema-idhttps://ns.adobe.com/experience/offer-management/tag. De `_instance` eigenschap voor de aanroep van het maken of bijwerken ziet er als volgt uit:
+De taginstanties worden gemaakt met de schema-idhttps://ns.adobe.com/experience/offer-management/tag. De `_instance` eigenschap voor de aanroep van het bestand create of update ziet er als volgt uit:
 
 ```json
 {
@@ -949,7 +950,7 @@ De volgende vraag illustreert hoe het `_instance` bezit voor creeert of updatevr
 
 Een aanbiedingsactiviteit wordt gebruikt om het besluitvormingsproces te controleren. Het specificeert het aanbiedingsfilter dat op de totale inventaris wordt toegepast om aanbiedingen door onderwerp/categorie te versmallen, de plaatsing om de inventaris aan die aanbiedingen te versmallen die in de gereserveerde ruimte passen en specificeert een reserveoptie als de gecombineerde beperkingen alle beschikbare verpersoonlijkingsopties (aanbiedingen) onbruikbaar maken.
 
-De activity-instanties worden gemaakt met schema-id`https://ns.adobe.com/experience/offer-management/offer-activity`. De `_instance` eigenschap voor de aanroep van het bestand create of update ziet er als volgt uit:
+De activity-instanties worden gemaakt met schema-id`https://ns.adobe.com/experience/offer-management/offer-activity`. De `_instance` eigenschap voor de aanroep van het maken of bijwerken ziet er als volgt uit:
 
 ```json
 {
