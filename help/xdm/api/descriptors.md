@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Beschrijvers
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1477'
+source-wordcount: '1481'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ POST /tenant/descriptors
 
 **Verzoek**
 
-In het volgende verzoek wordt een identiteitsdescriptor gedefinieerd in een voorbeeldschema in het veld E-mailadres. Zo kunt u het e-mailadres gebruiken als id om informatie over het individu aan elkaar te koppelen. [!DNL Experience Platform]
+In het volgende verzoek wordt een identiteitsbeschrijving gedefinieerd in een veld &quot;E-mailadres&quot; in een voorbeeldschema. Zo kunt u het e-mailadres gebruiken als id om informatie over het individu aan elkaar te koppelen. [!DNL Experience Platform]
 
 ```SHELL
 curl -X POST \
@@ -238,7 +238,7 @@ Als u een opzoekverzoek (GET) uitvoert om de beschrijving weer te geven, wordt w
 
 ## descriptor verwijderen
 
-Het kan voorkomen dat u een descriptor moet verwijderen die u in het document hebt gedefinieerd [!DNL Schema Registry]. Dit wordt gedaan door een DELETE verzoek te maken van verwijzingen `@id` van de beschrijver u wenst te verwijderen.
+Het kan voorkomen dat u een descriptor moet verwijderen die u in het document hebt gedefinieerd [!DNL Schema Registry]. Dit wordt gedaan door een verzoek van de DELETE te maken van verwijzingen `@id` van de beschrijver u wenst te verwijderen.
 
 **API-indeling**
 
@@ -279,7 +279,7 @@ In de volgende secties vindt u een overzicht van de beschikbare descriptortypen,
 
 #### Identiteitsbeschrijving
 
-Een identiteitsbeschrijver signaleert dat &quot;[!UICONTROL sourceProperty]&quot;van &quot;[!UICONTROL sourceSchema]&quot;een [!DNL Identity] gebied is zoals die door de Dienst [van de Identiteit van het](../../identity-service/home.md)Adobe Experience Platform wordt beschreven.
+Een identiteitsbeschrijver signaleert dat &quot;[!UICONTROL sourceProperty]&quot;van &quot;[!UICONTROL sourceSchema]&quot;een [!DNL Identity] gebied is zoals die door de Dienst [van de Identiteit van](../../identity-service/home.md)Adobe Experience Platform wordt beschreven.
 
 ```json
 {
@@ -300,7 +300,7 @@ Een identiteitsbeschrijver signaleert dat &quot;[!UICONTROL sourceProperty]&quot
 | `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
 | `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
 | `xdm:sourceProperty` | Het pad naar de specifieke eigenschap die de identiteit zal zijn. Het pad moet beginnen met een &quot;/&quot; en niet eindigen met een pad. Plaats geen &quot;eigenschappen&quot; in het pad (gebruik bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;) |
-| `xdm:namespace` | De `id` of `code` waarde van de naamruimte identity. U kunt een lijst met naamruimten vinden met de [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)instructies. |
+| `xdm:namespace` | De `id` of `code` waarde van de naamruimte identity. Een lijst met naamruimten vindt u met de [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | Of `xdm:id` of `xdm:code`, afhankelijk van de `xdm:namespace` gebruikte methode. |
 | `xdm:isPrimary` | Een optionele booleaanse waarde. Indien waar (true), wordt het veld als de primaire identiteit aangegeven. Schema&#39;s mogen slechts één primaire identiteit bevatten. |
 
