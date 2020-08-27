@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevens verzamelen van een database van derden via bronconnectors en API's
 topic: overview
 translation-type: tm+mt
-source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1745'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Gegevens verzamelen van een database van derden via bronconnectors en API&#39;s
 
-[!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) wordt gebruikt om klantgegevens van verschillende bronnen in Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
 Deze zelfstudie behandelt de stappen voor het ophalen van gegevens uit een database van derden en het innemen van gegevens [!DNL Platform] via bronconnectors en API&#39;s.
 
@@ -31,7 +31,7 @@ Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen
 * [Inname](../../../../ingestion/batch-ingestion/overview.md)in batch: Met de API voor batchverwerking kunt u gegevens invoeren in [!DNL Experience Platform] als batchbestanden.
 * [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-In de volgende secties vindt u aanvullende informatie die u nodig hebt om verbinding te kunnen maken met een database van derden met behulp van de [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
+De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met een database van derden met behulp van de [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -285,7 +285,7 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de pas ge
 
 ## Een doelverbinding maken {#target-connection}
 
-U hebt nu de unieke herkenningstekens voor een gegevenssetbasisverbinding, een doelschema, en een doeldataset. Gebruikend deze herkenningstekens, kunt u een doelverbinding tot stand brengen gebruikend API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten. [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)
+U hebt nu de unieke herkenningstekens voor een gegevenssetbasisverbinding, een doelschema, en een doeldataset. Gebruikend deze herkenningstekens, kunt u een doelverbinding tot stand brengen gebruikend [[!DNL de Dienst van de Stroom]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten.
 
 **API-indeling**
 
@@ -414,7 +414,7 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing, inclusief de
 
 ## Gegevensstroomspecificaties ophalen {#specs}
 
-Een gegevensstroom is verantwoordelijk voor het verzamelen van gegevens uit bronnen en het brengen van hen in [!DNL Platform]. Als u een gegevensstroom wilt maken, moet u eerst de gegevensstroomspecificaties verkrijgen door een GET-aanvraag voor de [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API uit te voeren. Dataflow-specificaties zijn verantwoordelijk voor het verzamelen van gegevens van een externe database of een NoSQL-systeem.
+Een gegevensstroom is verantwoordelijk voor het verzamelen van gegevens uit bronnen en het brengen van hen in [!DNL Platform]. Als u een gegevensstroom wilt maken, moet u eerst de gegevensstroomspecificaties verkrijgen door een GET-aanvraag uit te voeren naar de [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) -API. Dataflow-specificaties zijn verantwoordelijk voor het verzamelen van gegevens van een externe database of een NoSQL-systeem.
 
 **API-indeling**
 
