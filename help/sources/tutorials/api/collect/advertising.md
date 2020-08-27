@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Reclamegegevens verzamelen via bronconnectors en API's
 topic: overview
 translation-type: tm+mt
-source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1632'
+source-wordcount: '1644'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,11 @@ Deze zelfstudie vereist dat u informatie hebt over het bestand waarin u het best
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [!DNL Experience Data Model (XDM) System](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [Handleiding](../../../../xdm/api/getting-started.md)voor ontwikkelaars van het schemaregister: Omvat belangrijke informatie die u moet weten om vraag aan de Registratie API van het Schema met succes uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
-* [!DNL Catalog Service](../../../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen [!DNL Experience Platform].
-* [!DNL Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens invoeren in [!DNL Experience Platform] als batchbestanden.
+* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen [!DNL Experience Platform].
+* [[!DNL Batch-inname]](../../../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens invoeren in [!DNL Experience Platform] als batchbestanden.
 * [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u nodig hebt om verbinding te kunnen maken met een advertentiesysteem met behulp van de [!DNL Flow Service] API.
