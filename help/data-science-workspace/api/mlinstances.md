@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlinstances;sensei machine learning api
 solution: Experience Platform
 title: MLInstances
 topic: Developer guide
+description: Een MLInstance is een huur van een bestaande Motor met een aangewezen reeks configuraties die om het even welke trainingsparameters, het scoren parameters, of configuraties van hardwaremiddelen bepalen.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 1%
+source-wordcount: '601'
+ht-degree: 0%
 
 ---
 
@@ -405,7 +406,7 @@ Een succesvolle reactie keert een lading terug die de bijgewerkte details van ML
 
 ## MLInstances by Engine ID verwijderen
 
-U kunt alle instanties schrappen MLI die de zelfde Motor delen door een DELETE verzoek uit te voeren dat identiteitskaart van de Motor als vraagparameter omvat.
+U kunt alle instanties schrappen MLI die de zelfde Motor delen door een verzoek uit te voeren van de DELETE dat identiteitskaart van de Motor als vraagparameter omvat.
 
 **API-indeling**
 
@@ -440,7 +441,7 @@ curl -X DELETE \
 
 ## Een MLInstance verwijderen
 
-U kunt één enkele instantie schrappen MLI door een DELETE verzoek uit te voeren dat identiteitskaart van doelMLInstance in de verzoekweg omvat.
+U kunt één enkele instantie verwijderen MLI door een verzoek van DELETE uit te voeren dat identiteitskaart van doelMLInstance in de verzoekweg omvat.
 
 **API-indeling**
 
