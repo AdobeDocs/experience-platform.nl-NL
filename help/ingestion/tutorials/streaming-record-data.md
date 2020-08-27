@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Opnamegegevens streamen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1072'
 ht-degree: 0%
 
 ---
@@ -20,8 +20,8 @@ Deze zelfstudie helpt u bij het gebruik van streaming opname-API&#39;s, onderdee
 
 Deze zelfstudie vereist een praktische kennis van verschillende Adobe Experience Platform-services. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Het gestandaardiseerde kader voor het [!DNL Platform] organiseren van ervaringsgegevens.
-- [!DNL Real-time Customer Profile](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader voor het [!DNL Platform] organiseren van ervaringsgegevens.
+- [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [Handleiding](../../xdm/api/getting-started.md)voor ontwikkelaars van het schemaregister: Een uitvoerige gids die elk van de beschikbare eindpunten van API behandelt en hoe te om vraag aan hen te maken. [!DNL Schema Registry] Dit omvat het kennen van uw `{TENANT_ID}`, die in vraag door dit leerprogramma verschijnt, evenals het weten hoe te schema&#39;s tot stand te brengen, die in het creëren van een dataset voor opname wordt gebruikt.
 
 Bovendien is voor deze zelfstudie vereist dat u al een streamingverbinding hebt gemaakt. Lees voor meer informatie over het maken van een streamingverbinding de zelfstudie voor het [maken van een streamingverbinding](./create-streaming-connection.md).
@@ -96,7 +96,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | De naam die u voor het schema wilt gebruiken. Deze naam moet uniek zijn. |
 | `description` | Een betekenisvolle beschrijving van het schema dat u maakt. |
-| `meta:immutableTags` | In dit voorbeeld wordt de `union` tag gebruikt om uw gegevens door te zetten in [!DNL Real-time Customer Profile](../../profile/home.md). |
+| `meta:immutableTags` | In dit voorbeeld wordt de `union` -tag gebruikt om uw gegevens door te zetten in [[!DNL Real-time klantprofiel]](../../profile/home.md). |
 
 **Antwoord**
 
@@ -348,7 +348,7 @@ Een geslaagde reactie retourneert HTTP status 200 met details van het net gestre
 
 ## De nieuw opgenomen recordgegevens ophalen
 
-Om de eerder opgenomen verslagen te bevestigen, kunt u gebruiken [!DNL Profile Access API](../../profile/api/entities.md) om de verslaggegevens terug te winnen.
+Als u de eerder opgenomen records wilt valideren, gebruikt u de [[!DNL Profile Access API]](../../profile/api/entities.md) om de recordgegevens op te halen.
 
 >[!NOTE]
 >
