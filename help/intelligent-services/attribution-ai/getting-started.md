@@ -3,10 +3,11 @@ keywords: Experience Platform;getting started;attribution ai;popular topics
 solution: Experience Platform
 title: Aan de slag met Attribution AI
 topic: Getting started
+description: De volgende gidsen vereisen een inzicht in de diverse diensten van Adobe Experience Platform betrokken bij het gebruiken van Attribution AI. Lees de volgende documenten voordat u de zelfstudies start.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
