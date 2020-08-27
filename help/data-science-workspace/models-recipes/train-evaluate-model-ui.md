@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics
+keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;create a model;create a training run
 solution: Experience Platform
 title: Een model trainen en evalueren (UI)
 topic: Tutorial
+description: In de Werkruimte van de Wetenschap van Gegevens van Adobe Experience Platform, wordt een machine het leren Model gecreeerd door bestaande Ontvanger op te nemen die voor de intentie van het Model aangewezen is. Het model wordt vervolgens getraind en geëvalueerd om de efficiëntie en werkzaamheid van de werking te optimaliseren door de bijbehorende hyperparameters te verfijnen. Ontvangers zijn herbruikbaar, wat betekent dat er meerdere modellen kunnen worden gemaakt en op specifieke doeleinden kunnen worden afgestemd met één ontvanger.
 translation-type: tm+mt
-source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '975'
-ht-degree: 2%
+source-wordcount: '1038'
+ht-degree: 1%
 
 ---
 
@@ -82,7 +83,7 @@ Voor deze zelfstudie is een bestaande ontvanger vereist. Als u geen Ontvanger he
    Klik op een specifieke trainingsrun om de details van die run weer te geven. Dit kan zelfs worden gedaan alvorens de looppas is voltooid. Op de looppasdetailpagina, kunt u andere evaluatiemetriek, configuratieparameters, en visualisaties zien specifiek voor de trainingslooppas. U kunt activiteitenlogboeken ook downloaden om de details van de looppas te zien. Logs zijn vooral nuttig voor mislukte looppas om te zien wat verkeerd ging.
    ![](../images/models-recipes/train-evaluate-ui/activity_logs.png)
 
-3. Hyperparameters kunnen niet worden getraind en een model moet worden geoptimaliseerd door verschillende combinaties van Hyperparameters te testen. Herhaal deze training en evaluatie-procedure voor het model totdat u een geoptimaliseerd model hebt behaald.
+3. Hyperparameters kunnen niet worden getraind en een model moet worden geoptimaliseerd door verschillende combinaties van Hyperparameters te testen. Herhaal dit training- en evaluatieproces voor het model totdat u tot een geoptimaliseerd model bent gekomen.
 
 ## Volgende stappen
 
@@ -107,7 +108,7 @@ Aanvullende parameters bepalen de technische eigenschappen van het model:
 | `ACP_DSW_INPUT_FEATURES` | Tekenreeks | Lijst met door komma&#39;s gescheiden invoerschemakenmerken. |
 | `ACP_DSW_TARGET_FEATURES` | Tekenreeks | Lijst met door komma&#39;s gescheiden kenmerken van het uitvoerschema. |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Boolean | Hiermee wordt bepaald of invoer- en uitvoerfuncties kunnen worden gewijzigd |
-| `tenantId` | Tekenreeks | Deze id zorgt ervoor dat bronnen die u maakt, op de juiste wijze worden benoemd en zich binnen uw IMS-organisatie bevinden. [Volg de stappen hier](../../xdm/api/getting-started.md#know-your-tenant_id) om uw huurder te vinden identiteitskaart |
+| `tenantId` | Tekenreeks | Deze id zorgt ervoor dat bronnen die u maakt, op de juiste wijze worden benoemd en zich in uw IMS-organisatie bevinden. [Volg de stappen hier](../../xdm/api/getting-started.md#know-your-tenant_id) om uw huurder te vinden identiteitskaart |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | Tekenreeks | Het invoerschema dat wordt gebruikt voor het trainen van een model. |
 | `evaluation.labelColumn` | Tekenreeks | Kolomlabel voor evaluatievisualisaties. |
 | `evaluation.metrics` | Tekenreeks | Door komma&#39;s gescheiden lijst met evaluatiemetriek die moet worden gebruikt voor de evaluatie van een model. |
