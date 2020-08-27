@@ -5,9 +5,9 @@ title: Overzicht van Adobe Experience Platform-batchverwerking
 topic: overview
 description: Met de API voor batchverwerking kunt u gegevens als batchbestanden in Adobe Experience Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een parquetdossier), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1199'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Met de [!DNL Data Ingestion] [!DNL Experience Platform] API kunt u gegevens als 
 ### [!DNL Data Ingestion] voorwaarden
 
 - De gegevens die moeten worden geüpload, moeten de indeling Parquet of JSON hebben.
-- Een dataset die in de [!DNL Catalog services](../../catalog/home.md)wordt gecreeerd.
+- Een gegevensset die is gemaakt in de [[!DNL-catalogusservices]](../../catalog/home.md).
 - De inhoud van het ouderdossier moet een ondergroep van het schema van de dataset aanpassen die in wordt geupload.
 - Heb uw uniek Token van de Toegang na authentificatie.
 
@@ -390,7 +390,7 @@ In dit `"status"` veld wordt de huidige status van de aangevraagde batch weergeg
 | ------ | ----------- |
 | Verlaten | De batch is niet binnen de verwachte tijd voltooid. |
 | Afgebroken | Er is **expliciet** een afbreekbewerking aangeroepen (via de Batch Ingest-API) voor de opgegeven batch. Als de batch eenmaal is **geladen** , kan deze niet worden afgebroken. |
-| Actief | De partij is met succes bevorderd en is beschikbaar voor downstreamconsumptie. Deze status kan onderling verwisselbaar met **Succes** worden gebruikt. |
+| Actief | De partij is met succes bevorderd en is beschikbaar voor downstreamconsumptie. Deze status kan met **Succes** onderling verwisselbaar worden gebruikt. |
 | Verwijderd | De gegevens voor de batch zijn volledig verwijderd. |
 | Mislukt | Een eindstaat die uit of slechte configuratie en/of slechte gegevens voortvloeit. Gegevens voor een mislukte batch worden **niet** weergegeven. Deze status kan onderling verwisselbaar met **Mislukking** worden gebruikt. |
 | Inactief | De batch is gepromoveerd, maar is teruggezet of verlopen. De partij is niet meer beschikbaar voor downstreamconsumptie. |
