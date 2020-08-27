@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform-productdocumentatie
 topic: getting started
 translation-type: tm+mt
-source-git-commit: c91bcdff5b57ef69f79e211fbeb912e3d7fcdb39
+source-git-commit: 18ea9482b9c6691c6326d91b2d0d3da9a8dc7195
 workflow-type: tm+mt
-source-wordcount: '7245'
+source-wordcount: '7187'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 **Activeren:** In [!DNL Real-time Customer Data Platform], activeer is de actie die door een gebruiker wordt genomen om een segment of profielen aan een bestemming zoals in kaart te brengen, [!DNL Oracle Eloqua], of [!DNL Google][!DNL Salesforce Marketing Cloud].
 
-**Activiteit:** In de [!DNL Decisioning Service], is een activiteit een reeks aanbiedingen de marktleider wil de besluitvormingsmotor de beste aanbieding van selecteren.
+**Activiteit:** In [!DNL Offer Decisioning], is een activiteit een reeks aanbiedingen de marktleider wil de besluitvormingsmotor de beste aanbieding van selecteren.
 
 **Beheerder:** Één of meerdere individuen in uw organisatie die de toestemmingen voor Experience Platform kunnen vormen en aanpassen.
 
@@ -33,8 +33,6 @@ ht-degree: 0%
 **Adobe-aansluitingen:** Adobe de Verbindingen zijn pre-gevormde verbindingen die door Adobe worden gecreeerd om gegevens toe te laten om binnen en uit te stromen [!DNL Experience Platform]. De schakelaars omvatten [!DNL Microsoft Dynamics], [!DNL Salesforce], [!DNL Amazon S3], en [!DNL Azure Blob].
 
 **Adobe Experience Platform:** Adobe Experience Platform standaardiseert gegevens en inhoud in de hele onderneming, biedt realtime consumentenprofielen, maakt gegevenswetenschap mogelijk en versnelt de snelheid van de inhoud om de persoonlijke functionaliteit van de klant te verbeteren.
-
-**Adobe Experience Platform-beslissingsservice** maakt gebruik van realtime-klantprofiel om te bepalen welke keuze een klant het meest waarschijnlijk zal maken uit een reeks opties, op basis van de gedragsgegevens die het profiel ophaalt van ingeschakelde datasets.
 
 **Adobe Experience Platform Launch:** [!DNL Launch] is een ecosysteem voor tags- en SDK-beheer, geïntegreerd met [!DNL Experience Platform] en [!DNL Experience Cloud] toepassingen. [!DNL Launch] biedt tools voor het implementeren, verenigen en beheren van analyses, marketing en advertentie-integratie die nodig zijn om relevante ervaringen van klanten op alle clientapparaten te benutten.
 
@@ -98,7 +96,7 @@ ht-degree: 0%
 
 ## C
 
-**Afbeelding:** In de [!DNL Decisioning Service]code wordt de optie Afdekkend gebruikt in beslissingsregels om te bepalen hoe vaak een aanbieding wordt gepresenteerd. Er zijn twee soorten plafonds, hoeveel keer een aanbod kan worden voorgesteld over het gecombineerde doelpubliek, ook bekend als &quot;Global Cap&quot; en hoeveel keer een aanbod kan worden voorgesteld aan dezelfde eindgebruiker, ook wel bekend als &quot;Profile Cap&quot;.
+**Afbeelding:** In [!DNL Offer Decisioning], wordt het maximum gebruikt in besluitvormingsregels om te bepalen hoe vaak een aanbieding wordt voorgesteld. Er zijn twee typen uiteinden: hoe vaak een aanbieding kan worden voorgesteld over het gecombineerde doelpubliek, ook bekend als &quot;Global Cap&quot;, en hoeveel keer een aanbieding aan dezelfde eindgebruiker kan worden voorgesteld, ook bekend als &quot;Profile Cap&quot;.
 
 **Catalogus:** In [!DNL Real-time Customer Data Platform], in bronnen en bestemmingen, is een catalogus een galerij met beschikbare verbindingen aan de toepassingen van Adobe en de technologieën van de derde partij.
 
@@ -106,7 +104,7 @@ ht-degree: 0%
 
 **Client:** Een client is een extern hulpprogramma of een externe toepassing waarmee verbinding wordt gemaakt [!DNL Query Service] via het postgres-protocol of de HTTP-API.
 
-**Verzameling:** In de [!DNL Decisioning Service]lijst zijn verzamelingen subsets van aanbiedingen die zijn gebaseerd op vooraf gedefinieerde voorwaarden die door een marketmaker zijn gedefinieerd, zoals de categorie van de aanbieding.
+**Verzameling:** In [!DNL Offer Decisioning]dit geval zijn verzamelingen subsets van aanbiedingen op basis van vooraf gedefinieerde voorwaarden die door een marketmaker zijn gedefinieerd, zoals de categorie van de aanbieding.
 
 **Combineer met PII-marketingactie** Een marketingactie waarbij alle persoonlijk identificeerbare informatie (PII) wordt gecombineerd met anonieme gegevens. Contracten voor gegevens die afkomstig zijn van advertentienetwerken, servers en derde gegevensleveranciers bevatten vaak specifieke contractuele verbodsbepalingen inzake het gebruik van dergelijke gegevens met rechtstreeks identificeerbare gegevens.
 
@@ -124,7 +122,7 @@ ht-degree: 0%
 
 **Contractgegevens &quot;C&quot;-labels:** Contractlabels worden gebruikt om gegevens te categoriseren die contractuele verplichtingen hebben of verband houden met het beleid van een klant inzake gegevensbeheer. `C`
 
-**C1-contractlabel:** `C1` op het label voor het beheer van contractgegevens worden alleen gegevens uit Adobe Experience Cloud in geaggregeerde vorm geëxporteerd, zonder individuele of apparaatid&#39;s. Bijvoorbeeld gegevens die afkomstig zijn van sociale netwerken.
+**C1-contractlabel:** `C1` op het label voor contractgegevensbeheer kunnen alleen gegevens uit Adobe Experience Cloud worden geëxporteerd in een geaggregeerde vorm, zonder individuele of apparaat-id&#39;s. Bijvoorbeeld gegevens die afkomstig zijn van sociale netwerken.
 
 **C2-contractlabel:** `C2` Op het label voor contractgegevensbeheer worden gegevens vermeld die niet naar derden kunnen worden geëxporteerd. Sommige gegevensleveranciers hebben bedingen in hun contracten die de uitvoer van gegevens van waar het oorspronkelijk werd verzameld verbieden.  Sociale netwerkcontracten beperken bijvoorbeeld vaak de overdracht van gegevens die u van hen ontvangt. C2 is restrictiever dan C1, die slechts samenvoeging en anonieme gegevens vereist.
 
@@ -136,7 +134,7 @@ ht-degree: 0%
 
 **C6-contractlabel:** `C6` op het label voor contractgegevensbeheer worden gegevens vermeld die niet kunnen worden gebruikt voor on-site en doelgerichte toepassingen. Gegevens kunnen niet worden gebruikt voor doelgerichte advertenties ter plaatse, zoals de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten.  Hiertoe behoren het gebruik van eerder verzamelde onsite gegevens over het belang van de gebruiker bij het selecteren van advertenties, het verwerken van gegevens over welke advertenties werden weergegeven, het tijdstip en de plaats waar deze werden weergegeven en het nemen van maatregelen met betrekking tot de advertentie, zoals het klikken op een advertentie of het maken van een aankoop.
 
-**C7 Contractlabel:** `C7` op het label voor het beheer van contractgegevens worden gegevens vermeld die niet kunnen worden gebruikt voor het on-site maken van inhoud.  Gegevens kunnen niet worden gebruikt voor het maken van onsite inhoud die als doel heeft, zoals de selectie en levering van inhoud op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke inhoud te meten.  Dit omvat eerder verzamelde informatie over het belang van gebruikers om inhoud te selecteren, gegevens te verwerken over welke inhoud werd getoond, hoe vaak of hoe lang het werd getoond, wanneer en waar het werd getoond, en of de gebruikers om het even welke acties met betrekking tot de inhoud, met inbegrip van bijvoorbeeld het klikken op inhoud hebben ondernomen.
+**C7 Contractlabel:** `C7` op het label voor het beheer van contractgegevens worden gegevens vermeld die niet kunnen worden gebruikt voor het on-site adresseren van inhoud.  Gegevens kunnen niet worden gebruikt voor het maken van onsite inhoud die als doel heeft, zoals de selectie en levering van inhoud op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke inhoud te meten.  Dit omvat eerder verzamelde informatie over het belang van gebruikers om inhoud te selecteren, gegevens te verwerken over welke inhoud werd getoond, hoe vaak of hoe lang het werd getoond, wanneer en waar het werd getoond, en of de gebruikers om het even welke acties met betrekking tot de inhoud, met inbegrip van bijvoorbeeld het klikken op inhoud hebben ondernomen.
 
 **C8 Contractlabel:** `C8` Op het label voor contractgegevensbeheer worden gegevens opgegeven die niet kunnen worden gebruikt voor het meten van de websites of apps van uw organisatie. Gegevens kunnen niet worden gebruikt voor het meten, begrijpen en rapporteren van het gebruik van de sites of apps van uw organisatie door gebruikers. Dit omvat geen op rente-gebaseerde gericht richten, die de inzameling van informatie over uw gebruik van deze dienst is om inhoud en/of reclame in andere contexten te personaliseren.
 
@@ -202,7 +200,7 @@ ht-degree: 0%
 
 **Gebeurtenis besluit:** Een beslissingsgebeurtenis wordt gebruikt om opmerkingen te maken over het resultaat en de context van een besluitvormingsactiviteit. De beslissingsgebeurtenis bevat informatie over de wijze waarop het besluit is genomen, toen het plaatsvond, welke opties werden voorgesteld (gekozen) en welke context-afhankelijke staat bestond die het besluit heeft beïnvloed of tijdens het besluitvormingsproces in acht kon worden genomen. De beslissingsgebeurtenis legt ook de propositie-id vast, een globaal unieke id die kan worden gebruikt om het besluit te correleren met andere gebeurtenissen.
 
-**Beslissingsregel:** In de [!DNL Decisioning Service]regel is een beslissingsregel de logica die bepaalt en controleert wat, wanneer, waar, en hoe een aanbieding aan eindgebruikers wordt voorgesteld.
+**Beslissingsregel:** Een besluitvormingsregel is de logica die bepaalt en controleert wat, wanneer, waar, en hoe een aanbieding aan eindgebruikers wordt voorgesteld.
 
 **Beslissingsservice:** Het [!DNL Decisioning Service] is inzameling van de diensten en UI die marketers toelaat om de gepersonaliseerde aanbiedingservaringen van de eindgebruiker over kanalen en toepassingen tot stand te brengen en te leveren gebruikend bedrijfslogica en besluitvormingsregels.
 
@@ -226,9 +224,9 @@ ht-degree: 0%
 
 ## E
 
-**In aanmerking komend voorstel:** In het [!DNL Decisioning Service]geval voldoet een in aanmerking komende aanbieding aan de stroomopwaarts gedefinieerde beperkingen die consistent aan een profiel kunnen worden aangeboden.
+**In aanmerking komend voorstel:** Een in aanmerking komende aanbieding voldoet aan de stroomopwaarts gedefinieerde beperkingen die consistent aan een profiel kunnen worden aangeboden.
 
-**Subsidiabele regels:** In het [!DNL Decisioning Service]document worden de subsidiabiliteitsregels toegepast op een profiel dat betrekking heeft op kalender-, schema- en plafondbeperkingen.
+**Subsidiabele regels:** In [!DNL Offer Decisioning]dat geval worden de subsidiabiliteitsregels toegepast op een profiel dat betrekking heeft op kalender-, schema- en plafondbeperkingen.
 
 **E-mailgerichte marketingactie** Een marketingactie waarbij gegevens worden gebruikt in campagnes voor het aanwijzen van e-mail.
 
@@ -260,7 +258,7 @@ ht-degree: 0%
 
 ## F
 
-**Extra voorstellen:** In [!DNL Decisioning Service], is een reserveaanbieding de standaardaanbieding getoond wanneer een eindgebruiker niet verkiesbaar voor om het even welke aanbiedingen in de gebruikte inzameling is.
+**Extra voorstellen:** Een fallback-aanbieding is de standaardaanbieding die wordt weergegeven wanneer een eindgebruiker niet in aanmerking komt voor een van de aanbiedingen in de gebruikte collectie.
 
 **Functietoewijzing:** De Toewijzing van de eigenschap verwijst naar het proces om eigenschappen van gegevens in input en doeleigenschappen toe te wijzen die door een machine het leren model worden vereist.
 
@@ -354,7 +352,7 @@ ht-degree: 0%
 
 **Samenvoegingsbeleid:** Een samenvoegingsbeleid is een reeks regels die door worden gebruikt [!DNL Profile] om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en in een verenigde mening onder bepaalde voorwaarden zullen worden gecombineerd.
 
-**Mengsel:** Met een mix kunnen gebruikers herbruikbare velden uitbreiden die variabelen bevatten die een of meer kenmerken definiëren die in een schema moeten worden opgenomen of aan een klasse moeten worden toegevoegd.
+**Mengsel:** Met een mix kunnen gebruikers herbruikbare velden uitbreiden die variabelen bevatten die een of meer kenmerken definiëren die zijn bedoeld om in een schema te worden opgenomen of aan een klasse te worden toegevoegd.
 
 **Wijzigingsdatumkolom:** Het selecteren van een `Modified Date` kolom is een optie wanneer het specificeren van derdegegevens via een verbinding. Wanneer de `Delta` opslagstrategie wordt geselecteerd en de dataset veelvoudige datum met betrekking tot schema bevat, moet de gebruiker van het beschikbare datum/tijdtypeschema kiezen om de gewijzigde kolom van de datumsleutel te specificeren. `Modified Date` is niet beschikbaar als de `Overwrite` opslagstrategie is geselecteerd.
 
@@ -372,13 +370,13 @@ ht-degree: 0%
 
 ## O
 
-**Voorstel:** In het [!DNL Decisioning Service]artikel is een aanbieding een marketingbericht waaraan regels kunnen zijn gekoppeld die bepalen wie in aanmerking komt om de aanbieding te zien.
+**Voorstel:** Een aanbieding is een marketingbericht waaraan regels kunnen zijn gekoppeld, waarin wordt aangegeven wie in aanmerking komt om de aanbieding te zien.
 
-**Beslissing voorstel:** In [!DNL Decisioning Service], laat de aanbiedingsbeslissing een marktleider toe om de regels en de opgeleide modellen van aanbiedingsvoorstellen te beheren wanneer het in dienst nemen met een eindgebruiker die op gegevens wordt gebaseerd die over kanalen en toepassingen worden verzameld.
+**Beslissing voorstel:** De beslissing van de aanbieding laat een marktleider toe om regels en getrainde modellen van aanbiedingsvoorstellen te beheren wanneer het in dienst nemen met een eindgebruiker die op gegevens wordt gebaseerd die over kanalen en toepassingen worden verzameld.
 
-**Bibliotheek voorstel:** In de [!DNL Decisioning Service], is de aanbiedingsbibliotheek een centrale bibliotheek die wordt gebruikt om gepersonaliseerde en reserveaanbiedingen, besluitvormingsregels en activiteiten te beheren.
+**Bibliotheek voorstel:** De aanbiedingsbibliotheek is een centrale bibliotheek die wordt gebruikt om gepersonaliseerde en reserveaanbiedingen, besluitvormingsregels, en activiteiten te beheren.
 
-**On-site actie voor het op de markt brengen van personalisatie** Een marketing actie die gegevens voor onsite inhoudpersonalisatie gebruikt. De verpersoonlijking onsite is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over gebruikersbelangen te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend.
+**On-site actie voor het op de markt brengen van personalisatie** Een marketing actie die gegevens voor onsite inhoudpersonalisatie gebruikt. De verpersoonlijking op locatie is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over gebruikersbelangen te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend.
 
 **On-site gerichte marketingactie** Een marketingactie die gegevens gebruikt voor onsite advertenties, waaronder de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten.
 
@@ -394,9 +392,9 @@ ht-degree: 0%
 
 **Parketbestanden:** Een parketbestand is een kolombestandsindeling met complexe geneste gegevensstructuren. De dossiers van de parket worden vereist voor het toevoegen van gegevens om een schemadataset te bevolken.
 
-**Persoonlijke aanbiedingen:** In de [!DNL Decisioning Service], is een gepersonaliseerde aanbieding een klantgericht marketing bericht dat op geschiktheidsregels en beperkingen wordt gebaseerd.
+**Persoonlijke aanbiedingen:** Een gepersonaliseerd aanbod is een aanpasbaar marketingbericht op basis van geschiktheidsregels en -beperkingen.
 
-**Plaatsen:** In het [!DNL Decisioning Service]gedeelte is een plaatsing de locatie en/of context waarin een aanbieding voor een eindgebruiker wordt weergegeven.
+**Plaatsen:** Een plaatsing is de plaats en of de context waarin een aanbieding voor een eindgebruiker verschijnt.
 
 **De Werkruimte** van beleid laat gegevens toe om kern en douanelabels voor uw organisatie te bekijken en te beheren.
 
@@ -406,7 +404,7 @@ ht-degree: 0%
 
 **Primaire sleutel:** De primaire sleutel is een aanwijzing in een schema om alle verslagen uniek te identificeren.
 
-**Prioriteit:** In het [!DNL Decisioning Service]document wordt prioriteit gebruikt om aanbiedingen te rangschikken die aan alle beperkingen voldoen, zoals geschiktheid, kalender en aftopping.
+**Prioriteit:** In [!DNL Offer Decisioning]dat geval wordt prioriteit gebruikt om aanbiedingen te rangschikken die aan alle beperkingen voldoen, zoals geschiktheid, kalender en aftopping.
 
 **Persoonlijke identiteitsgrafiek:** De particuliere Grafiek van de Identiteit is een privé kaart van verhoudingen tussen vastgemaakte en verbonden identiteiten die door slechts uw organisatie zichtbaar en gebouwd op uw eerste-partijgegevens wordt gebaseerd.
 
@@ -448,7 +446,7 @@ ht-degree: 0%
 
 **Herhaling:** Een herhaling bepaalt of een [!DNL Query Service] vraag om slechts één keer of op een terugkomende basis gepland is te lopen.
 
-**Weergave:** In de [!DNL Decisioning Service]afbeelding is een representatie informatie die door een kanaal wordt gebruikt, zoals een locatie of taal om een aanbieding weer te geven.
+**Weergave:** In [!DNL Offer Decisioning], is een vertegenwoordiging informatie die door een kanaal, zoals plaats of taal wordt gebruikt om een aanbieding te tonen.
 
 **Bron:** In [!DNL Experience Platform Launch], is het middel een generische termijn die naar opties verwijst de [!DNL Launch] gebruiker binnen het cliëntmilieu, met inbegrip van uitbreidingen, gegevenselementen, en regels kan vormen.
 
@@ -508,7 +506,7 @@ ht-degree: 0%
 
 **Services:** Een krachtig kader om de diensten van AI en van ML in werking te stellen door Adobe Intelligente Diensten te leveraging. De diensten leveren in real time, gepersonaliseerde klantenervaringen of operationeel douane intelligente diensten.
 
-**Single Identity Personalization Marketing Action** A marketing action that uses data for onsite content personalization. De verpersoonlijking onsite is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over gebruikersbelangen te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend.
+**Single Identity Personalization Marketing Action** A marketing action that uses data for onsite content personalization. De verpersoonlijking op locatie is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over gebruikersbelangen te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend.
 
 **S1-gegevenslabel:** `S1` het gegevensetiket wordt gebruikt om gegevens te classificeren die breedte en lengte specificeren die kunnen worden gebruikt om de nauwkeurige plaats van een apparaat te bepalen.
 
