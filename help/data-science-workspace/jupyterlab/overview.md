@@ -3,11 +3,11 @@ keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popula
 solution: Experience Platform
 title: Gebruikershandleiding voor JupyterLab
 topic: Overview
-description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens.
+description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het biedt een interactieve ontwikkelomgeving voor gegevenswetenschappers die werken met Jupyter-laptops, -code en -gegevens. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies voor het uitvoeren van veelvoorkomende handelingen.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '3684'
+source-wordcount: '3702'
 ht-degree: 10%
 
 ---
@@ -682,11 +682,11 @@ timedf.show()
 | r-lubridate | 1.7.4 |
 | r-randomforest | 4.6_14 |
 | r-tidyverse | 1.2.1 |
-| volume | 1.0_39 |
+| r-tree | 1.0_39 |
 | pymongo | 3.8.0 |
 | pijltje | 0.14.1 |
 | boto3 | 1.9.199 |
-| brussel | 0.5.2 |
+| ipyvolume | 0.5.2 |
 | fastparket | 0.3.2 |
 | python-snappy | 0.5.4 |
 | ipywebrtc | 0.5.0 |
