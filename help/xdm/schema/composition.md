@@ -5,9 +5,9 @@ title: Basisbeginselen van de schemacompositie
 topic: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 translation-type: tm+mt
-source-git-commit: 23a69653ee773562cb0261b8e0bb67411eb4856e
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2811'
+source-wordcount: '2839'
 ht-degree: 0%
 
 ---
@@ -62,9 +62,9 @@ Zowel de verslagen als de tijdreeksschema&#39;s bevatten een kaart van identitei
 
 Schema&#39;s worden gebruikt om gegevens in te voeren [!DNL Experience Platform]. Deze gegevens kunnen over de veelvoudige diensten worden gebruikt om één enkele, verenigde mening van een individuele entiteit tot stand te brengen. Daarom is het belangrijk wanneer het denken over schema&#39;s om over klantenidentiteiten te denken en welke gebieden kunnen worden gebruikt om een onderwerp te identificeren ongeacht waar de gegevens uit kunnen komen.
 
-Om dit proces te helpen, kunnen de belangrijkste gebieden binnen uw schema&#39;s als identiteiten worden gemerkt. Bij gegevensinvoer worden de gegevens in die velden ingevoegd in de &quot;[!UICONTROL Identiteitsgrafiek]&quot; voor die persoon. De grafiekgegevens kunnen dan door [!DNL Real-time Customer Profile](../../profile/home.md) en andere [!DNL Experience Platform] diensten worden betreden om een geneutraliseerde mening van elke individuele klant te verstrekken.
+Om dit proces te helpen, kunnen de belangrijkste gebieden binnen uw schema&#39;s als identiteiten worden gemerkt. Bij gegevensinvoer worden de gegevens in die velden ingevoegd in de &quot;[!UICONTROL Identiteitsgrafiek]&quot; voor die persoon. De grafiekgegevens zijn dan toegankelijk voor [[!DNL Real-time klantprofiel]](../../profile/home.md) en andere [!DNL Experience Platform] services voor een op één lijn geplaatste weergave van elke afzonderlijke klant.
 
-Velden die algemeen als &quot;[!UICONTROL Identiteit]&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html)CRM-id of andere unieke id-velden. U zou ook om het even welke unieke herkenningstekens moeten overwegen specifiek voor uw organisatie, aangezien zij ook goede &quot;[!UICONTROL Identiteit]&quot;gebieden kunnen zijn.
+Velden die algemeen als &quot;[!UICONTROL Identiteit]&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html), CRM-id of andere unieke id-velden. U zou ook om het even welke unieke herkenningstekens moeten overwegen specifiek voor uw organisatie, aangezien zij ook goede &quot;[!UICONTROL Identiteit]&quot;gebieden kunnen zijn.
 
 Het is belangrijk om over klantenidentiteiten tijdens de schema planningsfase te denken helpen ervoor zorgen de gegevens worden samengebracht om het meest robuuste profiel mogelijk te bouwen. Zie het overzicht over [Adobe Experience Platform Identity Service](../../identity-service/home.md) voor meer informatie over hoe identiteitsgegevens u kunnen helpen uw klanten digitale ervaringen te bieden.
 
@@ -105,7 +105,7 @@ Zoals in het bovenstaande voorbeeld wordt getoond, vertegenwoordigt elke sleutel
 
 >[!NOTE]
 >
->Een Booleaanse waarde die aangeeft of de waarde een primaire identiteit (`primary`) is, kan ook worden opgegeven voor elke identiteitswaarde. De primaire identiteiten hoeven alleen te worden vastgesteld voor schema&#39;s die bestemd zijn om te worden gebruikt in [!DNL Real-time Customer Profile]. Zie de sectie over [samenvoegingsschema&#39;s](#union) voor meer informatie.
+>Voor elke identiteitswaarde kan ook een booleaanse waarde worden opgegeven, of de waarde een primaire identiteit (`primary`) is. De primaire identiteiten hoeven alleen te worden vastgesteld voor schema&#39;s die bestemd zijn om te worden gebruikt in [!DNL Real-time Customer Profile]. Zie de sectie over [samenvoegingsschema&#39;s](#union) voor meer informatie.
 
 ### Beginselen voor de ontwikkeling van schema&#39;s {#evolution}
 
@@ -123,7 +123,7 @@ Aangezien het handhaven van achterwaartse verenigbaarheid essentieel voor schema
 
 ### Schema&#39;s en gegevensinvoer
 
-Om gegevens in te voeren in [!DNL Experience Platform], moet een dataset eerst worden gecreeerd. Datasets zijn de bouwstenen voor gegevenstransformatie en -tracking voor [!DNL Catalog Service](../../catalog/home.md), en vertegenwoordigen over het algemeen tabellen of bestanden die ingesloten gegevens bevatten. Alle datasets zijn gebaseerd op bestaande schema&#39;s XDM, die beperkingen voor wat verstrekken de ingebedde gegevens zouden moeten bevatten en hoe het zou moeten worden gestructureerd. Zie het overzicht over [Adobe Experience Platform Data Ingestie](../../ingestion/home.md) voor meer informatie.
+Om gegevens in te voeren in [!DNL Experience Platform], moet een dataset eerst worden gecreeerd. Datasets zijn de bouwstenen voor gegevenstransformatie en het volgen voor [[!DNL de Dienst van de Catalogus]](../../catalog/home.md), en vertegenwoordigen over het algemeen lijsten of dossiers die ingebedde gegevens bevatten. Alle datasets zijn gebaseerd op bestaande schema&#39;s XDM, die beperkingen voor wat verstrekken de ingebedde gegevens zouden moeten bevatten en hoe het zou moeten worden gestructureerd. Zie het overzicht over [Adobe Experience Platform Data Ingestie](../../ingestion/home.md) voor meer informatie.
 
 ## Bouwstenen van een schema
 
@@ -157,7 +157,7 @@ Mixins definiëren met welke klasse(n) ze compatibel zijn op basis van het gedra
 
 Mixinen hebben hetzelfde bereik en dezelfde definitie als klassen: Er zijn industriemengsels, leveranciersmixen, en de mixins van de Klant die door individuele organisaties worden bepaald gebruikend [!DNL Platform]. [!DNL Experience Platform] omvat vele standaardMengsels van de Industrie terwijl ook het toestaan van verkopers om mengsels voor hun gebruikers te bepalen, en individuele gebruikers om mengsels voor hun eigen specifieke concepten te bepalen.
 
-Bijvoorbeeld, om details zoals &quot;[!UICONTROL Voornaam]&quot;en &quot;Adres[!UICONTROL van het]Huis&quot;voor uw schema &quot;van de[!UICONTROL Waardigheid Leden]&quot;te vangen, zou u standaardmengelingen kunnen gebruiken die die gemeenschappelijke concepten bepalen. Concepten die specifiek zijn voor minder gangbare gebruiksgevallen (zoals &quot;[!UICONTROL Loyalty Program Level]&quot;) hebben echter vaak geen vooraf gedefinieerde mix. In dit geval moet u uw eigen mix definiëren om deze informatie vast te leggen.
+Bijvoorbeeld, om details zoals &quot;[!UICONTROL Voornaam]&quot;en &quot;Adres[!UICONTROL van het]Huis&quot;voor uw schema van &quot;[!UICONTROL Loyalty Leden]&quot;te vangen, zou u standaardmengingen kunnen gebruiken die die gemeenschappelijke concepten bepalen. Concepten die specifiek zijn voor minder gangbare gebruiksgevallen (zoals &quot;[!UICONTROL Loyalty Program Level]&quot;) hebben echter vaak geen vooraf gedefinieerde mix. In dit geval moet u uw eigen mix definiëren om deze informatie vast te leggen.
 
 Herinner dat de schema&#39;s uit &quot;nul of meer&quot;mengen bestaan, zodat betekent dit dat u een geldig schema kon samenstellen zonder enige mengen bij allen te gebruiken.
 
@@ -194,11 +194,11 @@ De geldige waaiers van deze scalaire types kunnen verder tot bepaalde patronen, 
 
 Sommige gegevensverrichtingen die door stroomafwaartse diensten en toepassingen worden gebruikt dwingen beperkingen op specifieke gebiedstypes af. De betrokken diensten omvatten, maar zijn niet beperkt tot:
 
-* [!DNL Real-time Customer Profile](../../profile/home.md)
-* [!DNL Identity Service](../../identity-service/home.md)
-* [!DNL Segmentation](../../segmentation/home.md)
-* [!DNL Query Service](../../query-service/home.md)
-* [!DNL Data Science Workspace](../../data-science-workspace/home.md)
+* [[!DNL Real-time klantprofiel]](../../profile/home.md)
+* [[!DNL-identiteitsservice]](../../identity-service/home.md)
+* [[!DNL-segmentatie]](../../segmentation/home.md)
+* [[!DNL Query Service]](../../query-service/home.md)
+* [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
 
 Alvorens een schema voor gebruik in de stroomafwaartse diensten te creëren, te herzien gelieve de aangewezen documentatie voor die diensten om de gebiedsvereisten en de beperkingen voor de gegevensverrichtingen beter te begrijpen het schema voor bedoeld is.
 
