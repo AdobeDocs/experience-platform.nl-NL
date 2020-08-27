@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics
+keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
 solution: Experience Platform
 title: Invoer en uitvoer van AI van de klant
 topic: Getting started
+description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in de AI van de Klant worden gebruikt.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '841'
 ht-degree: 0%
 
 ---
