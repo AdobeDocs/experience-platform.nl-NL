@@ -5,9 +5,9 @@ title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 translation-type: tm+mt
-source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '863'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -41,74 +41,74 @@ De bronnen in [!DNL Experience Platform] worden gegroepeerd in de volgende categ
 
 [!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [!DNL Google AdWords](connectors/advertising/ads.md) connector
+- [[!DNL Google AdWords]](connectors/advertising/ads.md) -connector
 
 ### Cloud Storage
 
 Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen [!DNL Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
 
-- [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) connector
-- [!DNL Azure Blob](connectors/cloud-storage/blob.md) connector
-- [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) connector
-- [!DNL Amazon S3](connectors/cloud-storage/s3.md) connector
-- [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) connector
-- [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) connector
-- [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) connector
-- [!DNL FTP and SFTP](connectors/cloud-storage/ftp-sftp.md) connector
-- [!DNL Google Cloud Storage](connectors/cloud-storage/google-cloud-storage.md) connector
+- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) -connector
+- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) -connector
+- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) -connector
+- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) -connector
+- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) -connector
+- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) -connector
+- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) -connector
+- [[!DNL FTP- en SFTP]](connectors/cloud-storage/ftp-sftp.md) -connector
+- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) -connector
 
 ### Customer Relationship Management (CRM)
 
 De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen bouwen, die beurtelings, loyaliteit creëren en klantenbehoud drijven. [!DNL Experience Platform] verleent steun voor het opnemen van de gegevens van CRM van [!DNL Microsoft Dynamics 365] en [!DNL Salesforce]. Zie de volgende verwante documenten voor meer informatie:
 
-- [!DNL Microsoft Dynamics](connectors/crm/ms-dynamics.md) connector
-- [!DNL Salesforce](connectors/crm/salesforce.md) connector
+- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) -connector
+- [[!DNL Salesforce]](connectors/crm/salesforce.md) -connector
 
 ### Klant geslaagd
 
 [!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een toepassing van het de succes van de derdeklant. Zie de volgende verwante documenten voor meer informatie:
 
-- [!DNL Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md) connector
-- [!DNL ServiceNow](connectors/customer-success/servicenow.md) connector
+- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) -connector
+- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) -connector
 
 ### Database
 
 [!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [!DNL Amazon Redshift](connectors/databases/redshift.md) connector
-- [!DNL Apache Hive on Azure HDInsights](connectors/databases/hive.md) connector
-- [!DNL Apache Spark on Azure HDInsights](connectors/databases/spark.md) connector
-- [!DNL Azure Data Explorer](connectors/databases/data-explorer.md) connector
-- [!DNL Azure Synapse Analytics](connectors/databases/synapse-analytics.md) connector
-- [!DNL Azure Table Storage](connectors/databases/ats.md) connector
-- [!DNL Couchbase](connectors/databases/couchbase.md) connector
-- [!DNL Google BigQuery](connectors/databases/bigquery.md) connector
-- [!DNL GreenPlum](connectors/databases/greenplum.md) connector
-- [!DNL HP Vertica](connectors/databases/hp-vertica.md) connector
-- [!DNL IBM DB2](connectors/databases/ibm-db2.md) connector
-- [!DNL Microsoft SQL Server](connectors/databases/sql-server.md) connector
-- [!DNL MySQL](connectors/databases/mysql.md) connector
-- [!DNL Oracle](connectors/databases/oracle.md) connector
-- [!DNL Phoenix](connectors/databases/phoenix.md) connector
-- [!DNL PostgreSQL](connectors/databases/postgres.md) connector
+- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) -connector
+- [[!DNL Apache Hive op Azure HDInsights]](connectors/databases/hive.md) -connector
+- [[!DNL Apache Spark op Azure HDInsights]](connectors/databases/spark.md) -connector
+- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) -connector
+- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) -connector
+- [[!DNL Azure Table Storage]](connectors/databases/ats.md) -connector
+- [[!DNL Couchbase]](connectors/databases/couchbase.md) -connector
+- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) -connector
+- [[!DNL GreenPlum]](connectors/databases/greenplum.md) -connector
+- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) -connector
+- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) -connector
+- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) -aansluiting
+- [[!DNL MySQL]](connectors/databases/mysql.md) -connector
+- [[!DNL Oracle]](connectors/databases/oracle.md) -connector
+- [[!DNL Phoenix]](connectors/databases/phoenix.md) -connector
+- [[!DNL PostgreSQL]](connectors/databases/postgres.md) -connector
 
 ### Marketing Automation
 
 [!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens van een derde marketingautomatiseringssysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [!DNL HubSpot](connectors/marketing-automation/hubspot.md) connector
+- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) -connector
 
 ### Betalingen
 
 [!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens uit een betalingssysteem van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [!DNL PayPal](connectors/payments/paypal.md) connector
+- [[!DNL PayPal]](connectors/payments/paypal.md) -connector
 
 ### Protocollen
 
 [!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een systeem van derdeprotocollen. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [!DNL Generic OData](connectors/protocols/odata.md) connector
+- [[!DNL Generic OData]](connectors/protocols/odata.md) -connector
 
 ## Toegangsbeheer voor bronnen bij gegevensinvoer
 
