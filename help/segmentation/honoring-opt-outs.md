@@ -5,9 +5,9 @@ title: Optie-outs respecteren
 topic: overview
 description: 'Met Experience Platform kunnen uw klanten weigeren-aanvragen betreffende het gebruik en de opslag van hun gegevens verzenden binnen het realtime profiel van de klant]. Deze "opt-out"-verzoeken maken deel uit van de California Consumer Privacy Act (CCPA), die de inwoners van Californië het recht geeft toegang te krijgen tot hun persoonsgegevens en deze te verwijderen en te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie). '
 translation-type: tm+mt
-source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,10 @@ Zodra een klant heeft gekozen-uit, is het belangrijk dat uw organisatie die opt-
 
 Voor het naleven van de &quot;opt-out&quot;-verzoeken moet inzicht worden verkregen in de verschillende betrokken [!DNL Adobe Experience Platform] diensten. Lees de documentatie voor de volgende services voordat u gaat werken met opt-out-verzoeken:
 
-- [!DNL Real-time Customer Profile](../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [!DNL Adobe Experience Platform Segmentation Service](./home.md): Staat u toe om publiekssegmenten van [!DNL Real-time Customer Profile] gegevens te bouwen.
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
-- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): Helpt organisaties om naleving van de regels van de gegevensprivacy te automatiseren die klantengegevens binnen impliceren [!DNL Platform].
+- [[!DNL Real-time klantprofiel]](../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Staat u toe om publiekssegmenten van [!DNL Real-time Customer Profile] gegevens te bouwen.
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+- [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Helpt organisaties om naleving van de regels van de gegevensprivacy te automatiseren die klantengegevens binnen impliceren [!DNL Platform].
 
 ## Opt-out-mixen
 
@@ -132,4 +132,4 @@ In some instances, such as building a segment of people who have opted out, it m
 
 Voor meer informatie over segmentatie, zoals het werken met segmentdefinities en publiek via de API en gebruikersinterface, gelieve te beginnen door het [segmentatieoverzicht](./home.md)te lezen.
 
-Raadpleeg de documentatie op voor meer informatie over de privacy van gegevens binnen [!DNL Platform]en over hoe u de automatische naleving van wettelijke en organisatorische privacyregels [!DNL Privacy Service] kunt vergemakkelijken. [!DNL Privacy Service](../privacy-service/home.md).
+Raadpleeg de documentatie over [!DNL Platform][!DNL-Privacy Service] [!DNL Privacy Service] voor meer informatie over de privacy van gegevens binnen, inclusief hoe u de automatische naleving van wettelijke en organisatorische privacyregels [](../privacy-service/home.md)kunt vergemakkelijken.
