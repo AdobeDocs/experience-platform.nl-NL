@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor ontwikkelaars van toegangsbeheer
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: d059f48a2a3ba6398418fd3d5b0b3fd837ff69a2
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '333'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [!DNL Access control] for [!DNL Experience Platform] wordt toegediend via de [Adobe Admin Console](https://adminconsole.adobe.com). Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden. Zie het [toegangsbeheeroverzicht](../home.md) voor meer informatie.
 
-Deze ontwikkelaarsgids verstrekt informatie over hoe te om uw verzoeken aan te maken, [!DNL Access Control API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)en behandelt de volgende verrichtingen:
+Deze ontwikkelaarsgids verstrekt informatie over hoe te om uw verzoeken aan [[!DNL Toegangsbeheer API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)te formatteren, en behandelt de volgende verrichtingen:
 
 - [De namen van de lijst van toestemmingen en middeltypes](./permissions-and-resource-types.md)
 - [Effectief beleid voor de huidige gebruiker weergeven](./effective-policies.md)
