@@ -5,7 +5,7 @@ title: Een recept maken met Jupyter-laptops
 topic: Tutorial
 description: Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst, zult u een machine het leren model gebruikend een malplaatje binnen Notitieboekje JupyterLab creëren. Vervolgens gebruikt u de workflow voor het maken van een notebook naar het recept in JupyterLab om een recept te maken in de Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '2336'
 ht-degree: 0%
@@ -475,6 +475,7 @@ Zodra het proces is voltooid, zal het recept er ongeveer als volgt uitzien:
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 
 >[!CAUTION]
+>
 > - Geen van de bestandscellen verwijderen
 > - De `%%writefile` regel boven aan de bestandscellen niet bewerken
 > - Geen recepten in verschillende notebooks tegelijk maken
