@@ -5,7 +5,7 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens u in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens u in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 0%
@@ -51,9 +51,9 @@ Selecteer in de workflow Doel **** activeren op de pagina Segmenten **** selecte
 
 ### **[!UICONTROL stap Identiteitstoewijzing]** {#identity-mapping}
 
-![Identiteitstoewijzingsstap](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
-
 Van toepassing op: sociale bestemmingen en Google Customer Match-advertentiebestemming
+
+![Identiteitstoewijzingsstap](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
 
 Voor *sociale bestemmingen*, in de het in kaart brengen **[!UICONTROL van de]** Identiteit stap, kunt u bronattributen selecteren om als doelidentiteiten in de bestemming in kaart te brengen. Deze stap is optioneel of verplicht, afhankelijk van de primaire identiteit die u in het schema gebruikt. <br> 
 
