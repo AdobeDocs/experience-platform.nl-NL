@@ -5,7 +5,7 @@ title: Overzicht van Adobe Experience Platform-gegevensinname
 topic: overview
 description: Dit document introduceert de drie belangrijkste manieren waarop gegevens in Platform worden opgenomen, met koppelingen naar hun respectieve overzichtsdocumentatie voor meer gedetailleerde informatie.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -47,6 +47,6 @@ Dit document bevatte een korte inleiding over de verschillende aspecten van [!DN
 
 >[!WARNING]
 >
-> De term &quot;Verenigd Profiel&quot;die in de volgende video wordt gebruikt is verouderd. De termen [!DNL "Profile"] of termen [!DNL "Real-time Customer Profile"] zijn de juiste termen die in de [!DNL Experience Platform] documentatie worden gebruikt. Raadpleeg de documentatie voor de meest recente functionaliteit.
+>De term &quot;Verenigd Profiel&quot;die in de volgende video wordt gebruikt is verouderd. De termen [!DNL "Profile"] of termen [!DNL "Real-time Customer Profile"] zijn de juiste termen die in de [!DNL Experience Platform] documentatie worden gebruikt. Raadpleeg de documentatie voor de meest recente functionaliteit.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
