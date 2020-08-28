@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Help bij Adobe Experience Platform Source Connectors
 user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%
@@ -184,7 +184,7 @@ ht-degree: 0%
    - Een gegevensstroom configureren {#dataflow}
       - [Een dataflow configureren voor een advertentieverbinding](tutorials/ui/dataflow/advertising.md)
       - [Een dataflow configureren voor een batch-cloudopslagconnector](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [Een dataflow configureren voor een streamingaansluiting voor cloudopslag](tutorials/ui/dataflow/streaming/cloud-storage.md)
+      - [Een dataflow configureren voor een streamingaansluiting voor cloudopslag](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [Een gegevensstroom configureren voor een databaseverbinding](tutorials/ui/dataflow/databases.md)
       - [Een gegevensstroom configureren voor een CRM-aansluiting](tutorials/ui/dataflow/crm.md)
       - [Een dataflow configureren voor een klantsuccesconnector](tutorials/ui/dataflow/customer-success.md)
