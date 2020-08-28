@@ -5,7 +5,7 @@ seo-title: Homepage en dashboards van klantgegevens in realtime Platform
 description: Dashboards, Home Page en First-Time User Experience of Adobe Experience Platform
 seo-description: Dashboards, Home Page en First-Time User Experience of Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 0%
@@ -19,7 +19,7 @@ De Adobe Echte de homepage van Gegevens van de Klant - tijdGegevens (CDP in real
 
 De homepage is slechts een van de plaatsen waar metrische kaarten verschijnen. CDP in real time verstrekt metrische kaarten door uw ervaring. Deze metriek informeren u over de gegevens, het profiel, en het segmentpubliek in het systeem.
 
-![afbeelding](assets/home2.jpg)
+![afbeelding](assets/home.png)
 
 Als er geen gegevens in het systeem zijn wanneer u login aan CDP in real time, verschijnt het dashboard op de homepage niet. In dit geval biedt de startpagina leermateriaal voor een eerste gebruikerservaring. Aangezien het gegeven wordt verzameld-in andere woorden, aangezien de <!--sources-->datasets, de profielen, de segmenten, en de bestemmingen worden gecreeerd en de gegevens stromen in systeem-dashboard automatisch bijgewerkt om informatie over die gegevens<!-- in metric cards-->te tonen.
 
@@ -31,14 +31,14 @@ Het dashboard bestaat uit<!-- two areas.-->:
 
 * **Het leaderboard** bevindt zich boven aan het dashboard. Het leaderboard toont het aantal gegevenssets, profielen, segmenten en doelen in het systeem.
 
-   ![afbeelding](assets/home-leaderboard2.jpg)
+   ![afbeelding](assets/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
 * **De recente punten** maken een lijst van de vijf meest recente datasets, bronnen, segmenten, en bestemmingen die aan het systeem worden toegevoegd.
 
-   ![afbeelding](assets/home-recent.jpg)
+   ![afbeelding](assets/recent.png)
 
 De extra metriek-bijvoorbeeld voor profielen en segmenten-zijn beschikbaar in andere delen van het Platform van Gegevens van de Klant in real time.
 
