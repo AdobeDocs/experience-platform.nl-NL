@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Amazon Kinesis-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%
@@ -65,4 +65,4 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 ## Verbinding maken [!DNL Amazon Kinesis] met [!DNL Platform] de gebruikersinterface
 
 - [Een Amazon Kinesis-bronaansluiting maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
+- [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
