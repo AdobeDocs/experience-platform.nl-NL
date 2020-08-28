@@ -5,7 +5,7 @@ title: Hulplijnen voor recept- en laptopmigratie
 topic: Tutorial
 description: In de volgende handleidingen worden de stappen en informatie beschreven die nodig zijn voor het migreren van bestaande recepten en laptops in de Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '3330'
 ht-degree: 0%
@@ -16,6 +16,7 @@ ht-degree: 0%
 # Hulplijnen voor recept- en laptopmigratie
 
 >[!NOTE]
+>
 >Laptops en recepten die gebruikmaken van [!DNL Python]R blijven ongewijzigd. De migratie geldt alleen voor PySpark/[!DNL Spark] (2.3) recepten en notebooks.
 
 In de volgende handleidingen worden de stappen en informatie beschreven die nodig zijn voor het migreren van bestaande recepten en laptops.
@@ -85,6 +86,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > De interactieve wijzetijden uit als de vragen langer dan 10 minuten lopen. Als u meer dan een paar gigabytes aan gegevens opneemt, adviseert men dat u op &quot;partij&quot;wijze overschakelt. De batterijmodus duurt langer om te starten, maar kan grotere gegevenssets verwerken.
 
 #### Schrijven naar een gegevensset
@@ -138,6 +140,7 @@ Het Scala-recept bevindt zich in de volgende directory `experience-platform-dsw-
 Er is een nieuw bestand nodig in de map Recept om de op docker gebaseerde workflow te kunnen gebruiken. Kopieer en plak het Dockerbestand vanuit de map recipes in `experience-platform-dsw-reference/recipes/scala/Dockerfile`de map. U kunt desgewenst ook de onderstaande code kopiëren en plakken in een nieuw bestand met de naam `Dockerfile`.
 
 >[!IMPORTANT]
+>
 > Het hieronder weergegeven voorbeeldjar-bestand `ml-retail-sample-spark-*-jar-with-dependencies.jar` moet worden vervangen door de naam van het jar-bestand van uw recept.
 
 ```scala
@@ -175,7 +178,7 @@ Als u een recept wilt maken, moet u eerst de zelfstudie over bronbestanden [in h
 
 Als u uw recept wilt maken met de gebruikersinterface, volgt u de zelfstudie voor het verpakken van een recept (UI) [voor het](./models-recipes/import-packaged-recipe-ui.md) importeren van Scala.
 
-Als u het recept wilt maken met de API, volgt u de zelfstudie [voor het verpakte recept (API)](./models-recipes/import-packaged-recipe-api.md) voor Scala.
+Als u uw recept wilt maken met de API, volgt u de zelfstudie [voor het verpakte recept (API)](./models-recipes/import-packaged-recipe-api.md) voor Scala.
 
 ## PySpark-migratiegids {#pyspark-migration-guide}
 
@@ -222,6 +225,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > De interactieve wijzetijden uit als de vragen langer dan 10 minuten lopen. Als u meer dan een paar gigabytes aan gegevens opneemt, adviseert men dat u op &quot;partij&quot;wijze overschakelt. De batterijmodus duurt langer om te starten, maar kan grotere gegevenssets verwerken.
 
 #### Schrijven naar een gegevensset
@@ -275,6 +279,7 @@ Het PySpark-recept bevindt zich in de volgende directory `experience-platform-ds
 Er is een nieuw bestand nodig in de map Recept om de op docker gebaseerde workflow te kunnen gebruiken. Kopieer en plak het Dockerbestand vanuit de map recipes in `experience-platform-dsw-reference/recipes/pyspark/Dockerfile`de map. U kunt desgewenst ook de onderstaande code kopiëren en plakken en een nieuw bestand maken met de naam `Dockerfile`.
 
 >[!IMPORTANT]
+>
 > Het onderstaande voorbeeld-eibestand `pysparkretailapp-*.egg` moet worden vervangen door de naam van het eibestand van uw recept.
 
 ```scala
@@ -640,7 +645,7 @@ De afbeelding Scala ([!DNL Spark] 2.4) hieronder markeert het belangrijkste vers
 
 **[!DNL Spark]([!DNL Spark]2.3 - afgekeurd)**
 
-[!DNL Spark] ([!DNL Spark] 2.3 - afgekeurd) gebruikt de [!DNL Spark] kernel, en daarom was u niet verplicht te bepalen [!DNL Spark].
+[!DNL Spark] ([!DNL Spark] 2.3 - afgekeurd) gebruikt de [!DNL Spark] kernel en daarom was u niet verplicht om te definiëren [!DNL Spark].
 
 **Scala ([!DNL Spark]2.4)**
 
