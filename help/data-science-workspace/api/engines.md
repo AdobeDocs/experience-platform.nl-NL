@@ -5,7 +5,7 @@ title: Motoren
 topic: Developer guide
 description: Motoren vormen de basis voor het leren van machines Modellen in de werkruimte van de wetenschap van gegevens. Zij bevatten machinaal leeralgoritmen die specifieke problemen oplossen, eigenschappijpleidingen om eigenschapengineering uit te voeren, of allebei.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 0%
@@ -20,6 +20,7 @@ Motoren vormen de basis voor het leren van machines Modellen in de werkruimte va
 ## Zoek uw registratie van de Docker
 
 >[!TIP]
+>
 >Als u geen Docker URL hebt, bezoek de brondossiers van het [Pakket in een recept](../models-recipes/package-source-files-recipe.md) leerprogramma voor een geleidelijke analyse bij het creëren van een de gastheer URL van het Docker.
 
 Uw Docker-registergegevens zijn vereist voor het uploaden van een pakket Recipe-bestand, inclusief de URL van de Docker-host, gebruikersnaam en wachtwoord. U kunt deze informatie opzoeken door de volgende GET-aanvraag uit te voeren:
