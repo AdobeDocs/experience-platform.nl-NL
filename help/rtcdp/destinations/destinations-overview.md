@@ -2,12 +2,12 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;destinations;destination;rtcdp
 title: Overzicht van bestemmingen
 seo-title: Overzicht van bestemmingen
-description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Adobe Real-time Platform van de Gegevens van de Klant gebruiken om uw bekende en onbekende gegevens voor dwars-kanaal marketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-seo-description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Adobe Real-time Platform van de Gegevens van de Klant gebruiken om uw bekende en onbekende gegevens voor dwars-kanaal marketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Adobe Real-time Platform van de Gegevens van de Klant gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+seo-description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Adobe Real-time Platform van de Gegevens van de Klant gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
@@ -67,4 +67,4 @@ Voor meer informatie over het selecteren van marketing gebruiksgevallen in creee
 * [E-mailmarketingdoelen](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Sociale netwerkbestemmingen](/help/rtcdp/destinations/social-network-destinations-workflow.md)
 
-Voor meer informatie over de schendingen van het gegevensbeleid in het werkschema van de segmentactivering, zie stap 7 in profielen en segmenten [Activate aan een bestemming](/help/rtcdp/destinations/activate-destinations.md).
+Voor meer informatie over de schendingen van het gegevensbeleid in het werkschema van de segmentactivering, zie de stap van het Overzicht in [activeert profielen en segmenten aan een bestemming](/help/rtcdp/destinations/activate-destinations.md#review).
