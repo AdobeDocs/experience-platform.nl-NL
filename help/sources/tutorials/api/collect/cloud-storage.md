@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; cloud storage
 solution: Experience Platform
 title: Gegevens voor cloudopslag verzamelen via bronconnectors en API's
 topic: overview
+description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een externe cloudopslag en het opnemen ervan in het Platform via bronconnectors en de Flow Service API.
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1583'
 ht-degree: 0%
 
 ---
@@ -16,21 +17,20 @@ ht-degree: 0%
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens van externe cloudopslag en het doorvoeren van deze gegevens [!DNL Platform] via bronconnectors en API&#39;s.
+Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
-Deze zelfstudie vereist dat u toegang hebt tot cloudopslag van derden via een geldige verbinding en informatie over het bestand dat u wilt binnenbrengen [!DNL Platform], inclusief het pad en de structuur van het bestand. Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van cloudopslag van derden met de Flow Service API](../explore/cloud-storage.md) voordat u deze zelfstudie probeert.
+Deze zelfstudie vereist dat u toegang hebt tot cloudopslag van derden via een geldige verbinding en informatie over het bestand dat u in het DNL-Platform wilt plaatsen, inclusief het pad en de structuur van het bestand. Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van cloudopslag van derden met behulp [!DNL Flow Service] van de API](../explore/cloud-storage.md) voordat u deze zelfstudie probeert.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-- [XDM-systeem](../../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+- [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    - [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    - [Handleiding](../../../../xdm/api/getting-started.md)voor ontwikkelaars van het schemaregister: Omvat belangrijke informatie die u moet weten om vraag aan de Registratie API van het Schema met succes uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
-- [Catalogusservice](../../../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen [!DNL Experience Platform].
-- [Inname](../../../../ingestion/batch-ingestion/overview.md)in batch: Met de API voor batchverwerking kunt u gegevens invoeren in [!DNL Experience Platform] als batchbestanden.
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen [!DNL Experience Platform].
+- [[!DNL Batch-inname]](../../../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens invoeren in [!DNL Experience Platform] als batchbestanden.
 - [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
-
 In de volgende secties vindt u aanvullende informatie die u moet weten om verbinding te kunnen maken met een cloudopslag met de [!DNL Flow Service] API.
 
 ### API-voorbeeldaanroepen lezen
@@ -41,29 +41,21 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
-- Autorisatie: Drager `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot [!DNL Flow Service]behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
-- Inhoudstype: `application/json`
-
-## Een ad-hoc XDM-klasse en -schema maken
-
-Om externe gegevens door bronschakelaars in te brengen, moet een ad hoc klasse XDM en een schema voor de ruwe brongegevens worden gecreeerd. [!DNL Platform]
-
-Als u een ad-hocklasse en -schema wilt maken, volgt u de stappen in de zelfstudie over het [ad-hocschema](../../../../xdm/tutorials/ad-hoc.md). Wanneer u een ad-hocklasse maakt, moeten alle velden in de brongegevens worden beschreven in de aanvraaginstantie.
-
-Ga door met het volgen van de stappen die in de ontwikkelaarsgids worden beschreven tot u een ad-hocschema hebt gecreeerd. De unieke id (`$id`) van het ad-hocschema is vereist om door te gaan naar de volgende stap van deze zelfstudie.
+- `Content-Type: application/json`
 
 ## Een bronverbinding maken {#source}
 
-Als een ad-hoc XDM-schema is gemaakt, kan nu een bronverbinding worden gemaakt met behulp van een verzoek van de POST aan de [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbindingsID, een brongegevensbestand, en een verwijzing naar het schema dat de brongegevens beschrijft.
+U kunt een bronverbinding tot stand brengen door een verzoek van de POST aan [!DNL Flow Service] API te doen. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
 
 Als u een bronverbinding wilt maken, moet u ook een opsommingswaarde voor het kenmerk voor de gegevensindeling definiëren.
 
@@ -94,22 +86,18 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Test source connection for a Cloud Storage connector",
-        "baseConnectionId": "ac33bd66-1565-4915-b3bd-6615657915c4",
-        "description": "Test source connection for a Cloud Storage connector",
+        "name": "Cloud storage source connector",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "description": "Cloud storage source connector",
         "data": {
-            "format": "delimited",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/22a4ab59462a64de551d42dd10ec1f19d8d7246e3f90072a",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
+            "format": "delimited"
         },
         "params": {
-            "path": "/backfil/data8.csv",
+            "path": "/demo/data7.csv",
             "recursive": "true"
         },
-        "connectionSpec": {
-            "id": "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+            "connectionSpec": {
+            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
             "version": "1.0"
         }
     }'
@@ -118,7 +106,6 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `baseConnectionId` | De unieke verbinding-id van het externe cloudopslagsysteem dat u benadert. |
-| `data.schema.id` | De id van het ad-hoc XDM-schema. |
 | `params.path` | Het pad van het bronbestand dat u opent. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan uw specifieke externe cloudopslagsysteem. Zie de [bijlage](#appendix) voor een lijst van verbindingsspecificaties - IDs. |
 
@@ -128,14 +115,14 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 
 ```json
 {
-    "id": "8bae595c-8548-4716-ae59-5c85480716e9",
-    "etag": "\"4a00038b-0000-0200-0000-5ebc47fd0000\""
+    "id": "26b53912-1005-49f0-b539-12100559f0e2",
+    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
 }
 ```
 
 ## Een doel-XDM-schema maken {#target-schema}
 
-In eerdere stappen werd een ad-hoc XDM-schema gemaakt om de brongegevens te structureren. Als u de brongegevens in wilt gebruiken, moet u ook een doelschema maken om de brongegevens te structureren op basis van uw behoeften. [!DNL Platform] Het doelschema wordt dan gebruikt om een [!DNL Platform] dataset tot stand te brengen waarin de brongegevens bevat zijn.
+Als u de brongegevens in wilt gebruiken, moet u een doelschema maken om de brongegevens te structureren op basis van uw behoeften. [!DNL Platform] Het doelschema wordt dan gebruikt om een [!DNL Platform] dataset tot stand te brengen waarin de brongegevens bevat zijn.
 
 Een doelXDM schema kan worden gecreeerd door een verzoek van de POST aan de Registratie API [van het](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schema uit te voeren.
 
@@ -190,13 +177,13 @@ Een geslaagde reactie retourneert details van het nieuwe schema, inclusief de un
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
-    "meta:altId": "_{TENANT_ID}.schemas.e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
+    "meta:altId": "_{TENANT_ID}.schemas.995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for a Cloud Storage connector",
+    "title": "Target schema cloud storage",
     "type": "object",
-    "description": "Target schema for Cloud Storage",
+    "description": "Target schema for cloud storage",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -205,11 +192,6 @@ Een geslaagde reactie retourneert details van het nieuwe schema, inclusief de un
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile-person-details",
-            "type": "object",
-            "meta:xdmType": "object"
-        },
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
             "type": "object",
             "meta:xdmType": "object"
         },
@@ -236,18 +218,18 @@ Een geslaagde reactie retourneert details van het nieuwe schema, inclusief de un
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1589398474190,
-        "repo:lastModifiedDate": 1589398474190,
+        "repo:createdDate": 1597783248870,
+        "repo:lastModifiedDate": 1597783248870,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
         "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
         "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "f07723475e933dc30ed411d97986a36f13aa20c820463dd8cf7b74e63f4e7801",
-        "meta:globalLibVersion": "1.10.1.1"
+        "eTag": "596661ec6c7a9c6ae530676e98290a4a58ca29540ed92489cf4478b2bf013a65",
+        "meta:globalLibVersion": "1.13.3"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
-    "meta:tenantNamespace": "_{TENANT_ID}"
+    "meta:tenantNamespace": "{TENANT_ID}"
 }
 ```
 
@@ -272,9 +254,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target dataset for a Cloud Storage connector",
+        "name": "Target dataset for cloud storage",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -290,7 +272,7 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de pas ge
 
 ```json
 [
-    "@/dataSets/5ebc4be8590b1b191a8dc4ca"
+    "@/dataSets/5f3c3cedb2805c194ff0b69a"
 ]
 ```
 
@@ -321,12 +303,12 @@ curl -X POST \
         "description": "Target Connection for a Cloud Storage connector",
         "data": {
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
-            "dataSetId": "5ebc4be8590b1b191a8dc4ca"
+            "dataSetId": "5f3c3cedb2805c194ff0b69a"
         },
             "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
@@ -347,8 +329,8 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe doelverbindi
 
 ```json
 {
-    "id": "1f5af99c-f1ef-4076-9af9-9cf1ef507678",
-    "etag": "\"530013e2-0000-0200-0000-5ebc4c110000\""
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
 
@@ -374,13 +356,21 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
+                "destinationXdmPath": "_id",
+                "sourceAttribute": "Id",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
                 "destinationXdmPath": "person.name.firstName",
-                "sourceAttribute": "first_name",
+                "sourceAttribute": "FirstName",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -388,23 +378,7 @@ curl -X POST \
             },
             {
                 "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "last_name",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "_id",
-                "sourceAttribute": "id",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "email",
+                "sourceAttribute": "LastName",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -424,10 +398,10 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing, inclusief de
 
 ```json
 {
-    "id": "febec6a6785e45ea9ed594422cc483d7",
+    "id": "bf5286a9c1ad4266baca76ba3adc9366",
     "version": 0,
-    "createdDate": 1589398562232,
-    "modifiedDate": 1589398562232,
+    "createdDate": 1597784069368,
+    "modifiedDate": 1597784069368,
     "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
     "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
@@ -611,29 +585,29 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud Storage flow to AEP",
-        "description": "Cloud Storage flow to AEP",
+        "name": "Cloud Storage flow to Platform",
+        "description": "Cloud Storage flow to Platform",
         "flowSpec": {
             "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "8bae595c-8548-4716-ae59-5c85480716e9"
+            "26b53912-1005-49f0-b539-12100559f0e2"
         ],
         "targetConnectionIds": [
-            "1f5af99c-f1ef-4076-9af9-9cf1ef507678"
+            "f7eb08fa-5f04-4e45-ab08-fa5f046e45ee"
         ],
         "transformations": [
             {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "febec6a6785e45ea9ed594422cc483d7",
+                    "mappingId": "bf5286a9c1ad4266baca76ba3adc9366",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1589398646",
+            "startTime": "1597784298",
             "frequency":"minute",
             "interval":"30"
         }
@@ -656,14 +630,14 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom.
 
 ```json
 {
-    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
-    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
 
 ## Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor meer informatie over hoe te om gegevensstromen te controleren, zie de zelfstudie over het [controleren van gegevensstromen in API ](../monitor.md)
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor meer informatie over hoe te om gegevensstromen te controleren, zie de zelfstudie over het [controleren van gegevensstromen in API](../monitor.md)
 
 ## Volgende stappen
 
