@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Verbinding maken met streaming doelen en gegevens activeren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '1819'
 ht-degree: 0%
 
 ---
 
 
-# Verbinding maken met streaming doelen en gegevens activeren in realtime Platforms van klantgegevens in Adobe met API&#39;s
+# Verbind met het stromen bestemmingen gebruikend API vraag in Adobe Real-time het Platform van de Gegevens van de Klant
 
 >[!NOTE]
 >
