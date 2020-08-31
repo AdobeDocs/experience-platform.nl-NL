@@ -4,15 +4,15 @@ solution: Experience Platform
 title: E-mailmarketingdoelen maken
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1624'
 ht-degree: 0%
 
 ---
 
 
-# Maak marketingbestemmingen voor e-mail en activeer gegevens in Adobe [!DNL Real-time Customer Data Platform]
+# Maak e-mail marketing marketing en activeer gegevens gebruikend API vraag in Adobe [!DNL Real-time Customer Data Platform]
 
 Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw Adobe Experience Platform-gegevens, een [e-mailmarketingbestemming](../../rtcdp/destinations/email-marketing-destinations.md)te maken, een gegevensstroom te maken naar uw nieuwe bestemming en gegevens te activeren voor uw nieuwe bestemming.
 
