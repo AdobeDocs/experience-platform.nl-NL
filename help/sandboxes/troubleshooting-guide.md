@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Richtlijnen voor het oplossen van problemen met sandboxen
 topic: troubleshooting guide
 translation-type: tm+mt
-source-git-commit: f15049ca917818d325b5783c70faaa53ba669aba
+source-git-commit: d4ae318f43904dd73756985512c303fa7149b678
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Richtlijnen voor het oplossen van problemen met sandboxen
 
-Dit document biedt antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere diensten van de Platform, gelieve te verwijzen naar de het oplossen van problemengids [van het](../landing/troubleshooting.md)Experience Platform.
+Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere diensten van de Platform, gelieve te verwijzen naar de het oplossen van problemengids [van het](../landing/troubleshooting.md)Experience Platform.
 
 Sandboxen verdelen één enkele instantie van het Platform in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen. Zie het [sandboxoverzicht](home.md) voor meer informatie.
 
@@ -31,7 +31,7 @@ Het Experience Platform bevat twee sandboxtypen:
 
 Experience Platform biedt één **productiesandbox** die niet kan worden verwijderd of opnieuw ingesteld. Er kan slechts één productiesandbox bestaan voor één enkele instantie van het Platform.
 
-Daarentegen kunnen **niet-productiesandboxen** door sandboxbeheerders voor één Platform-instantie worden gemaakt. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op de productiesandbox. Daarnaast beschikken niet-productiesandboxen over een functie voor het opnieuw instellen die alle door de klant gemaakte bronnen uit de sandbox verwijdert. Niet-productiesandboxen kunnen niet worden omgezet in productiesandboxen.
+Daarentegen kunnen **niet-productiesandboxen** door sandboxbeheerders voor één Platform-instantie worden gemaakt. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op de productiesandbox. Daarnaast beschikken niet-productiesandboxen over een functie voor het opnieuw instellen die alle door de klant gemaakte bronnen uit de sandbox verwijdert. Niet-productiesandboxen kunnen niet worden omgezet in productiesandboxen. Een standaardlicentie voor Experience Platforms geeft u vijf sandboxen (één productie en vier niet-productie). U kunt maximaal 75 sandboxen toevoegen voor maximaal tien niet-productiesandboxen. Neem voor meer informatie contact op met uw IMS Org Administrator of uw Adobe-vertegenwoordiger.
 
 Zie het [sandboxoverzicht](./home.md) voor meer informatie.
 
