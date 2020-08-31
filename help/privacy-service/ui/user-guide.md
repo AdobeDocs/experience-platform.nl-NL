@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruikershandleiding voor Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -121,7 +121,7 @@ Wanneer u het _aangepaste_ naamruimtetype gebruikt, moet u de naamruimte handmat
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
-Klik op **[!UICONTROL Maken]** als u klaar bent.
+When finished, click **[!UICONTROL Create]**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
@@ -147,7 +147,7 @@ Als u geen JSON-bestand hebt om te uploaden, klikt u op **[!UICONTROL Download A
 
 Zoek het JSON-bestand op uw computer en sleep het naar het dialoogvenster. Als het uploaden is voltooid, wordt de bestandsnaam weergegeven in het dialoogvenster. U kunt desgewenst meer JSON-bestanden toevoegen door deze naar het dialoogvenster te slepen.
 
-Klik op **[!UICONTROL Maken]** als u klaar bent. Het dialoogvenster verdwijnt en de nieuwe taak (of taken) worden samen met de huidige verwerkingsstatus weergegeven in de widget _Taakverzoeken_ .
+When finished, click **[!UICONTROL Create]**. Het dialoogvenster verdwijnt en de nieuwe taak (of taken) worden samen met de huidige verwerkingsstatus weergegeven in de widget _Taakverzoeken_ .
 
 ### Volgende stappen
 
