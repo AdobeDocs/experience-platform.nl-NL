@@ -5,7 +5,7 @@ title: Inname van gegevens controleren
 topic: overview
 description: Deze gebruikershandleiding bevat een aantal stappen voor het controleren van uw gegevens in de gebruikersinterface van Adobe Experience Platform. Voor deze handleiding hebt u een Adobe ID nodig en hebt u toegang tot Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Klik in de gebruikersinterface [van het](https://platform.adobe.com)Experience P
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-De *[!UICONTROL overzichtspagina voor streaming van begin tot einde]* wordt weergegeven. Deze werkruimte biedt een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die worden ontvangen door [!DNL Platform], een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die zijn verwerkt door [[!DNL Real-time klantprofiel]](../../profile/home.md), en een gedetailleerde lijst met binnenkomende gegevens.
+De **[!UICONTROL overzichtspagina voor streaming van begin tot einde]** wordt weergegeven. Deze werkruimte biedt een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die worden ontvangen door [!DNL Platform], een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die zijn verwerkt door [[!DNL Real-time klantprofiel]](../../profile/home.md), en een gedetailleerde lijst met binnenkomende gegevens.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
