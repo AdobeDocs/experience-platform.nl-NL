@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;update sandbox
 solution: Experience Platform
 title: Een sandbox bijwerken
 topic: developer guide
+description: U kunt een of meer velden in een sandbox bijwerken door een PATCH-aanvraag in te dienen die de naam van de sandbox bevat in het aanvraagpad en de eigenschap die moet worden bijgewerkt in de aanvraaglading.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 1%
+source-wordcount: '120'
+ht-degree: 0%
 
 ---
 
