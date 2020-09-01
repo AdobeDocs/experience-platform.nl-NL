@@ -5,7 +5,7 @@ title: Gebruikershandleiding voor laptop in realtime leren van machines
 topic: Training and scoring a ML model
 description: In de volgende handleiding worden de stappen beschreven die nodig zijn om een toepassing voor het leren van machines in realtime te maken in Adobe Experience Platform JupyterLab.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 0%
@@ -92,7 +92,7 @@ Als u een gegevensset wilt gebruiken vanuit Adobe Experience Platform, verwijder
 
 ![rtml-gegevensset](../images/rtml/rtml-dataset.png)
 
-Om tot een dataset in uw [!DNL JupyterLab] notitieboekje toegang te hebben, selecteer het lusje van **Gegevens** in de linkernavigatie van [!DNL JupyterLab]. De mappen *[!UICONTROL Datasets]* en *[!UICONTROL Schemas]* worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteren **[!UICONTROL onderzoek Gegevens in Notitie]** van het drop-down menu op de dataset u wenst te gebruiken. Onder aan de laptop wordt een uitvoerbaar code-item weergegeven. Deze cel heeft je `dataset_id`.
+Om tot een dataset in uw [!DNL JupyterLab] notitieboekje toegang te hebben, selecteer het lusje van **Gegevens** in de linkernavigatie van [!DNL JupyterLab]. De mappen **[!UICONTROL Datasets]** en **[!UICONTROL Schemas]** worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteren **[!UICONTROL onderzoek Gegevens in Notitie]** van het drop-down menu op de dataset u wenst te gebruiken. Onder aan de laptop wordt een uitvoerbaar code-item weergegeven. Deze cel heeft je `dataset_id`.
 
 ![toegang tot gegevensset](../images/rtml/access-dataset.png)
 
@@ -113,11 +113,11 @@ config_properties = {
 
 ### Uw model voorbereiden
 
-Met de *[!UICONTROL Real-Time ML]* -sjabloon moet u uw ML-model analyseren, vooraf verwerken, trainen en evalueren. Dit wordt gedaan door gegevenstransformaties toe te passen en een opleidingspijpleiding te bouwen.
+Met de **[!UICONTROL Real-Time ML]** -sjabloon moet u uw ML-model analyseren, vooraf verwerken, trainen en evalueren. Dit wordt gedaan door gegevenstransformaties toe te passen en een opleidingspijpleiding te bouwen.
 
 **Gegevenstransformaties**
 
-De *[!UICONTROL Echte cel van de Transformaties]* van XML *malplaatjes van* Gegevens moet worden gewijzigd om met uw eigen dataset te werken. Doorgaans gaat het hier om het wijzigen van de naam van kolommen, rollup van gegevens en het voorbereiden en bewerken van gegevens.
+De **[!UICONTROL Echte cel van de Transformaties]** van XML *malplaatjes van* Gegevens moet worden gewijzigd om met uw eigen dataset te werken. Doorgaans gaat het hier om het wijzigen van de naam van kolommen, rollup van gegevens en het voorbereiden en bewerken van gegevens.
 
 >[!NOTE]
 >
@@ -410,7 +410,7 @@ U bent teruggekeerd bijgewerkte DSL.
 
 ## Scores {#scoring}
 
-Na het publiceren aan [!DNL Edge], wordt het scoren gedaan door een verzoek van de POST van een cliënt. Dit kan doorgaans worden gedaan vanuit een clienttoepassing waarvoor XML-scores vereist zijn. Je kunt het ook van Postman doen. Het *[!UICONTROL malplaatje van HTML]* in real time gebruikt EdgeUtils om dit proces aan te tonen.
+Na het publiceren aan [!DNL Edge], wordt het scoren gedaan door een verzoek van de POST van een cliënt. Dit kan doorgaans worden gedaan vanuit een clienttoepassing waarvoor XML-scores vereist zijn. Je kunt het ook van Postman doen. Het **[!UICONTROL malplaatje van HTML]** in real time gebruikt EdgeUtils om dit proces aan te tonen.
 
 >[!NOTE]
 >
