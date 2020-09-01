@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Zelfstudies over gegevensbeheer en privacy
 topic: tutorial
-description: De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste mechanisme van het Beheer van Gegevens van Adobe Experience Platform. De eigenschappen DULE laten u toe om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen, die elk volgens het verwante beleid van het gegevensgebruik categoriseren.
+description: Dit document biedt een overzicht van de verschillende beschikbare zelfstudies met betrekking tot Adobe Experience Platform Data Governance en Adobe Experience Platform Privacy Service.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Data Governance] en [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE) is het kernmechanisme van Adobe Experience Platform [!DNL Data Governance]. De eigenschappen DULE laten u toe om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen, die elk volgens het verwante beleid van het gegevensgebruik categoriseren. Voordat u aan de slag gaat met labels, raadpleegt u het overzicht [van](../data-governance/home.md) gegevensbeheer voor een robuustere inleiding op het DULE-framework binnen [!DNL Platform].
+Met Adobe Experience Platform Data Governance kunt u gegevensgebruikslabels toepassen op gegevenssets en velden, waarbij elke code wordt ingedeeld op basis van het beleid voor het gebruik van verwante gegevens, en kunt u overtredingen van het beleid beoordelen wanneer bepaalde handelingen op die gegevenssets en/of velden worden uitgevoerd. Voordat u aan de slag gaat met de zelfstudies die in dit document worden vermeld, raadpleegt u het [[!DNL Data Governance] overzicht](../data-governance/home.md) voor een robuustere introductie van het framework.
 
 Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u privacy- en compatibiliteitsverzoeken op verschillende oplossingen kunt coördineren. Als u meer informatie wilt, leest u eerst het overzicht [van de](../privacy-service/home.md)Privacy Service.
 
@@ -25,11 +25,11 @@ Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op b
 
 ## Beleid voor gegevensgebruik maken
 
-DULE [!DNL Policy Service] API staat u toe om DULE beleid tot stand te brengen en te beheren om te bepalen welke marketing acties tegen gegevens kunnen worden genomen die bepaalde etiketten DULE bevatten. Lees eerst het overzicht [van het beleid voor](../data-governance/policies/overview.md)gegevensgebruik.
+Met de [!DNL Policy Service] API kunt u beleid voor gegevensgebruik maken en beheren om te bepalen welke marketingacties kunnen worden uitgevoerd tegen gegevens die bepaalde gebruikslabels bevatten. Lees eerst het overzicht [van het beleid voor](../data-governance/policies/overview.md)gegevensgebruik.
 
 ## Beleid voor gegevensgebruik afdwingen
 
-Zodra u de etiketten van de Etikettering en van het Gebruik van Gegevens (DULE) voor uw gegevens hebt gecreeerd, en DULE beleid voor marketing acties tegen die etiketten hebt gecreeerd, kunt u DULE [!DNL Policy Service] API gebruiken om te evalueren of een marketing actie die op een dataset, of een willekeurige groep etiketten van DULE wordt uitgevoerd, een beleidsschending vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie. Ga om aan de slag te gaan naar het overzicht [van de](../data-governance/enforcement/overview.md)beleidshandhaving.
+Zodra u gebruiksetiketten voor uw gegevens hebt toegevoegd, en beleid voor marketing acties tegen die etiketten gecreeerd, kunt u gebruiken [!DNL Policy Service API] om te evalueren of een marketing actie een beleidsschending wanneer uitgevoerd op een dataset of een willekeurige groep gebruiksetiketten vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie. Ga om aan de slag te gaan naar het overzicht [van de](../data-governance/enforcement/overview.md)beleidshandhaving.
 
 ## Compatibiliteit met gegevensgebruik afdwingen voor een publiekssegment
 
