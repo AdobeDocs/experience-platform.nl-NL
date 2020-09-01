@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een streamingverbinding maken met de gebruikersinterface
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een streamingverbinding maken met de gebruikersinterface
 
-Deze UI-handleiding helpt u bij het maken van een streamingverbinding met behulp van Adobe Experience Platform.
+Deze UI-handleiding helpt u bij het maken van een streamingverbinding met Adobe Experience Platform.
 
 ## Aan de slag
 
@@ -22,34 +22,34 @@ Als u wilt beginnen met het streamen van gegevens naar, moet u eerst een streami
 
 Nadat u een streamingverbinding hebt geregistreerd, hebt u een unieke URL die kan worden gebruikt om gegevens naar te streamen [!DNL Platform].
 
-Houd er rekening mee dat u toegang tot het Adobe Experience Platform nodig hebt om deze handleiding te voltooien. Als u geen toegang tot hebt, gelieve uw systeembeheerder te contacteren alvorens te werk te gaan. [!DNL Platform]
+Je hebt toegang tot Adobe Experience Platform nodig om deze gids te voltooien. Als u geen toegang tot hebt, gelieve uw systeembeheerder te contacteren alvorens te werk te gaan. [!DNL Platform]
 
 ## Een streamingverbinding maken
 
-Nadat u zich hebt aangemeld bij de [!DNL Experience Platform] UI, klikt u op **[!UICONTROL Bronnen]** om het tabblad *[!UICONTROL Catalogus]* te openen. Deze pagina toont de beschikbare brontypes als individuele kaarten, met elke kaart die een bel bevat die het aantal gegevensstromen toont die van het stromen verbindingen aan datasets zijn gecreeerd.
+Nadat u zich hebt aangemeld bij de [!DNL Experience Platform] UI, klikt u op **[!UICONTROL Bronnen]** om het tabblad **[!UICONTROL Catalogus]** te openen. Deze pagina toont de beschikbare brontypes als individuele kaarten, met elke kaart die een bel bevat die het aantal gegevensstromen toont die van het stromen verbindingen aan datasets zijn gecreeerd.
 
 ![](../images/streaming-ingestion/ui/click-sources.png)
 
-Klik op de pagina *[!UICONTROL Bronnen]* op **[!UICONTROL HTTP API]** en vervolgens op **[!UICONTROL Connect-bron]**.
+Klik op de pagina **[!UICONTROL Bronnen]** op **[!UICONTROL HTTP API]** en vervolgens op **[!UICONTROL Connect-bron]**.
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-Het scherm *[!UICONTROL Verbinding maken met HTTP]* wordt weergegeven. Geef onder *[!UICONTROL Servicedetails]* zowel de **[!UICONTROL naam]** als een **[!UICONTROL beschrijving]** voor de nieuwe streamingverbinding op.
+Het scherm **[!UICONTROL Verbinding maken met HTTP]** wordt weergegeven. Geef onder **[!UICONTROL Servicedetails]** zowel de **[!UICONTROL naam]** als een **[!UICONTROL beschrijving]** voor de nieuwe streamingverbinding op.
 
-Selecteer onder *[!UICONTROL Accountverificatie]* de volgende configuratie-eigenschappen voor uw streamingverbinding:
+Selecteer onder **[!UICONTROL Accountverificatie]** de volgende configuratie-eigenschappen voor uw streamingverbinding:
 
-- **[!UICONTROL Verificatie]:**Of verificatie vereist is voor de streamingverbinding. Verificatie zorgt ervoor dat gegevens worden verzameld van vertrouwde bronnen. Aanbevolen wordt deze optie in te schakelen als het gaat om PII (Personal Identified Information).
-- **[!UICONTROL Compatibiliteit met]XDM-schema:**Of deze streamingverbinding gebeurtenissen verzendt die compatibel zijn met XDM-schema&#39;s. Deze eigenschap is standaard**ingeschakeld **.
+- **[!UICONTROL Verificatie]:** Of verificatie vereist is voor de streamingverbinding. Verificatie zorgt ervoor dat gegevens worden verzameld van vertrouwde bronnen. Aanbevolen wordt deze optie in te schakelen als het gaat om PII (Personal Identified Information).
+- **[!UICONTROL Compatibiliteit met]XDM-schema:** Of deze streamingverbinding gebeurtenissen verzendt die compatibel zijn met XDM-schema&#39;s. Deze eigenschap is standaard **ingeschakeld**.
 
-Nadat u de configuratie-eigenschappen hebt geselecteerd, klikt u op **[!UICONTROL Verbinden]**. Uw streaming HTTP-verbinding wordt nu gemaakt en kan nu worden weergegeven onder het tabblad *[!UICONTROL Bladeren]* in de werkruimte *[!UICONTROL Bronnen]* .
+Nadat u de configuratie-eigenschappen hebt geselecteerd, klikt u op **[!UICONTROL Verbinden]**. Uw streaming HTTP-verbinding wordt nu gemaakt en kan nu worden weergegeven onder het tabblad **[!UICONTROL Bladeren]** in de werkruimte **[!UICONTROL Bronnen]** .
 
 ![](../images/streaming-ingestion/ui/http-sources-details.png)
 
-Via het tabblad *[!UICONTROL Bladeren]* kunt u op de nieuwe streamingverbinding van HTTP klikken en de details van die verbinding weergeven.
+Via het tabblad **[!UICONTROL Bladeren]** kunt u op de nieuwe streamingverbinding van HTTP klikken en de details van die verbinding weergeven.
 
 ![](../images/streaming-ingestion/ui/browse-sources.png)
 
-Door op hyperlink van de verbindingsnaam te klikken, kunt u gegevens selecteren die moeten worden getoond door te vormen welke dataset wordt aangesloten, door *[!UICONTROL Uitgezochte gegevens]* te klikken.
+Door op hyperlink van de verbindingsnaam te klikken, kunt u gegevens selecteren die moeten worden getoond door te vormen welke dataset wordt aangesloten, door **[!UICONTROL Uitgezochte gegevens]** te klikken.
 
 ![](../images/streaming-ingestion/ui/select-data.png)
 
