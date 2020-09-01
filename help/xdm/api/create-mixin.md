@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
 solution: Experience Platform
 title: Een mix maken
 topic: developer guide
+description: Mixins zijn een set velden die worden gebruikt om een bepaald concept te beschrijven, zoals "adres" of "profielvoorkeuren". Er zijn talrijke standaardmixins beschikbaar, of u kunt uw bepalen wanneer u wenst om informatie te vangen die voor uw organisatie uniek is.
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -33,7 +34,7 @@ POST /tenant/mixins
 
 **Verzoek**
 
-Wanneer u een nieuwe mix definieert, moet deze een `meta:intendedToExtend` kenmerk bevatten met een overzicht `$id` van de klassen waarmee de mix compatibel is. In dit voorbeeld is de mix compatibel met de klasse Property die u eerder hebt gedefinieerd. Aangepaste velden moeten onder `_{TENANT_ID}` (zoals in het voorbeeld) worden genest om conflicten met andere combinaties of velden uit de klasseschema&#39;s te voorkomen. Het `propertyConstruction` veld is een verwijzing naar het gegevenstype dat in de vorige aanroep is gemaakt.
+Wanneer u een nieuwe mix definieert, moet deze een `meta:intendedToExtend` kenmerk bevatten met een overzicht `$id` van de klassen waarmee de mix compatibel is. In dit voorbeeld is de mix compatibel met de klasse Property die u eerder hebt gedefinieerd. De gebieden van de douane moeten onder `_{TENANT_ID}` (zoals aangetoond in het voorbeeld) worden genest om het even welke botsingen met andere mengen of gebieden van de klassenschema&#39;s te vermijden. Het `propertyConstruction` veld is een verwijzing naar het gegevenstype dat in de vorige aanroep is gemaakt.
 
 ```SHELL
 curl -X POST \
