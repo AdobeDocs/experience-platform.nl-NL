@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Vorm een dataflow voor een schakelaar van de marketing automatisering in UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 0%
@@ -108,7 +108,7 @@ Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTR
 
 De stap met **[!UICONTROL details]** over gegevensstroom wordt weergegeven, zodat u een naam kunt geven en een korte beschrijving kunt geven van uw nieuwe gegevensstroom.
 
-Tijdens dit proces kunt u ook **[!UICONTROL gedeeltelijke inname]** en **[!UICONTROL foutdiagnose]** inschakelen. Als u **[!UICONTROL Gedeeltelijke inname]** inschakelt, kunt u gegevens met fouten tot een bepaalde drempel innemen. Wanneer **[!UICONTROL Partiële inname]** is ingeschakeld, sleept u de *[!UICONTROL foutdrempel %]* voor een wijziging van de foutdrempel van de batch. U kunt de drempelwaarde ook handmatig aanpassen door het invoervak te selecteren. Voor meer informatie, zie het [gedeeltelijke partijingestie overzicht](../../../../ingestion/batch-ingestion/partial.md).
+Tijdens dit proces kunt u ook **[!UICONTROL gedeeltelijke inname]** en **[!UICONTROL foutdiagnose]** inschakelen. Als u **[!UICONTROL Gedeeltelijke inname]** inschakelt, kunt u gegevens met fouten tot een bepaalde drempel innemen. Wanneer **[!UICONTROL Partiële inname]** is ingeschakeld, sleept u de **[!UICONTROL foutdrempel %]** voor een wijziging van de foutdrempel van de batch. U kunt de drempelwaarde ook handmatig aanpassen door het invoervak te selecteren. Voor meer informatie, zie het [gedeeltelijke partijingestie overzicht](../../../../ingestion/batch-ingestion/partial.md).
 
 Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Volgende]**.
 
