@@ -5,7 +5,7 @@ title: Gegevens voorbereiden voor gebruik in intelligente services
 topic: Intelligent Services
 description: 'Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services hefboomwerkervaringsgegevensmodel (XDM) om dit te bereiken. Specifiek, moeten alle datasets die in de Intelligente Diensten worden gebruikt] met het schema van XDM van Consumer ExperienceEvent (CEE) in overeenstemming zijn. '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 0%
@@ -272,7 +272,7 @@ Zodra u het schema hebt gecreeerd en bewaard, kunt u een nieuwe dataset tot stan
 * [Creeer een dataset in UI](../catalog/datasets/user-guide.md#create) (volg het werkschema voor het gebruiken van een bestaand schema)
 * [Een gegevensset maken in de API](../catalog/datasets/create.md)
 
-Nadat de dataset wordt gecreeerd, kunt u het in het Platform UI binnen de *[!UICONTROL werkruimte van Datasets]* vinden.
+Nadat de dataset wordt gecreeerd, kunt u het in het Platform UI binnen de **[!UICONTROL werkruimte van Datasets]** vinden.
 
 ![](images/data-preparation/dataset-location.png)
 
