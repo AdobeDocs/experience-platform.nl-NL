@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; protocol; generic odata
+keywords: Experience Platform;home;popular topics;Collect protocol data;protocol data
 solution: Experience Platform
 title: Verzamel protocolgegevens door bronschakelaars en APIs
 topic: overview
-description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een externe protocolprovider en het opnemen ervan in het Platform via bronconnectors en de Flow Service API.
+description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een protocoltoepassing en het opnemen van gegevens in het Platform via bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1587'
 ht-degree: 0%
 
 ---
