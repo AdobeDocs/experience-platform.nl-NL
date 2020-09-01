@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming
+keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming;overview;streaming ingestion;latency;streaming latency;
 solution: Experience Platform
 title: Overzicht van Adobe Experience Platform Streaming-integratie
 topic: overview
 description: Streaming opname voor Adobe Experience Platform biedt gebruikers een methode om gegevens van client- en serverapparaten in real-time naar het Experience Platform te verzenden.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Streaming opname voor Adobe Experience Platform biedt gebruikers een methode om 
 
 ## Wat kan je doen met streaming opname?
 
-Met Adobe Experience Platform kunt u gecoördineerde, consistente en relevante ervaringen aansturen door een [!DNL Real-time Customer Profile] voor elk van uw individuele klanten te genereren. Streaming opname speelt een belangrijke rol bij het samenstellen van deze profielen door u in staat te stellen [!DNL Profile] gegevens met zo weinig mogelijk latentie in de [!DNL Data Lake] omgeving te leveren.
+Met Adobe Experience Platform kunt u gecoördineerde, consistente en relevante ervaringen opdoen door een [!DNL Real-time Customer Profile] voor elk van uw individuele klanten te genereren. Streaming opname speelt een belangrijke rol bij het samenstellen van deze profielen door u in staat te stellen [!DNL Profile] gegevens met zo weinig mogelijk latentie in de [!DNL Data Lake] omgeving te leveren.
 
 De volgende video is ontworpen om u te helpen bij het begrijpen van streaming opname en geeft een overzicht van de bovenstaande concepten.
 
