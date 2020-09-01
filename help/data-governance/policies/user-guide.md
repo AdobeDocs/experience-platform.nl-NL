@@ -5,9 +5,9 @@ title: Gebruikershandleiding voor gegevensgebruiksbeleid
 topic: policies
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ Als de marketingactie niet wordt gebruikt door een bestaand gebruiksbeleid, kunt
 
 ## Volgende stappen
 
-In dit document wordt een overzicht gegeven van de manier waarop beleidsregels voor gegevensgebruik in de [!DNL Experience Platform] gebruikersinterface kunnen worden beheerd. Voor stappen op hoe te om beleid te beheren gebruikend DULE Beleid API, zie de [ontwikkelaarsgids](../api/getting-started.md). Voor informatie over hoe te om het beleid van het gegevensgebruik af te dwingen, zie het [beleidshandhavingsoverzicht](../enforcement/overview.md).
+In dit document wordt een overzicht gegeven van de manier waarop beleidsregels voor gegevensgebruik in de [!DNL Experience Platform] gebruikersinterface kunnen worden beheerd. Raadpleeg de handleiding voor [!DNL Policy Service API]ontwikkelaars voor informatie over het beheren van beleidsregels met behulp van [de handleiding](../api/getting-started.md). Voor informatie over hoe te om het beleid van het gegevensgebruik af te dwingen, zie het [beleidshandhavingsoverzicht](../enforcement/overview.md).
 
 De volgende video biedt een demonstratie van hoe u met gebruiksbeleid kunt werken in de [!DNL Experience Platform] gebruikersinterface:
 
