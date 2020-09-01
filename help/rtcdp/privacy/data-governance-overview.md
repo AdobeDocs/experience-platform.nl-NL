@@ -5,9 +5,9 @@ seo-title: Gegevensbeheer in Real-time Customer Data Platform
 description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 seo-description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Het volgende diagram illustreert hoe de beleidshandhaving in de gegevensstroom v
 
 ![](assets/enforcement-flow.png)
 
-Wanneer een segment voor het eerst wordt geactiveerd, controleert DULE op beleidsovertredingen op basis van de volgende factoren: [!DNL Policy Service]
+Wanneer een segment voor het eerst wordt geactiveerd, wordt op basis van de volgende factoren [!DNL Policy Service] gecontroleerd op beleidsovertredingen:
 
 * De labels voor gegevensgebruik die worden toegepast op velden en gegevenssets binnen het segment dat moet worden geactiveerd.
 * Het marketingdoel van de bestemming.
