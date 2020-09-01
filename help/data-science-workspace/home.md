@@ -5,7 +5,7 @@ title: Overzicht van de Data Science Workspace
 topic: overview
 description: Deze gids verstrekt een overzicht van de belangrijkste concepten met betrekking tot de Werkruimte van de Wetenschap van Gegevens.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '2584'
 ht-degree: 0%
@@ -62,7 +62,7 @@ De volgende grafiek schetst de hiërarchische verhouding tussen Ontvangers, Mode
 
 ![](./images/home/recipe_hiearchy_ui.png)
 
-## Begrijpen [!DNL Data Science Workspace]
+## [!DNL Data Science Workspace] begrijpen
 
 Met [!DNL Data Science Workspace], kunnen uw gegevenswetenschappers het lastige proces stroomlijnen om inzichten in grote datasets te ontdekken. Gebaseerd op een algemeen computerleerframework en runtime, [!DNL Data Science Workspace] biedt geavanceerd workflowbeheer, modelbeheer en schaalbaarheid. De intelligente diensten steunen hergebruik van machine het leren recepten om een verscheidenheid van toepassingen tot stand te brengen die gebruikend Adobe producten en oplossingen worden gecreeerd.
 
@@ -132,7 +132,7 @@ In de volgende tabel worden de effecten weergegeven van het inschakelen of uitsc
 
 | Machtiging | Ingeschakeld | Uitgeschakeld |
 |---|---|---|
-| [!DNL Manage Data Science Workspace] | Verleent toegang tot alle diensten binnen [!DNL Data Science Workspace]. | API- en UI-toegang tot alle services binnen [!DNL Data Science Workspace] is uitgeschakeld. Terwijl gehandicapt, wordt het verpletteren aan de pagina&#39;s van [!DNL Data Science Workspace] Modellen *[!UICONTROL en van de]* Diensten ** verhinderd. |
+| [!DNL Manage Data Science Workspace] | Verleent toegang tot alle diensten binnen [!DNL Data Science Workspace]. | API- en UI-toegang tot alle services binnen [!DNL Data Science Workspace] is uitgeschakeld. Terwijl gehandicapt, wordt het verpletteren aan de pagina&#39;s van [!DNL Data Science Workspace] Modellen **[!UICONTROL en van de]** Diensten **** verhinderd. |
 
 ### Veiligheid en gemoedsrust
 
