@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query service;query service;Looker;looker;connect to query service;
 solution: Experience Platform
 title: Verbinding maken met Looker
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Verbinden met [!DNL Looker]
 
-Volg onderstaande stappen om verbinding te maken [!DNL Looker] met [!DNL Query Service] een Adobe Experience Platform:
+Volg onderstaande stappen om verbinding te maken [!DNL Looker] met [!DNL Query Service] Adobe Experience Platform:
 
 Nadat u zich hebt aangemeld [!DNL Looker], klikt u op **[!UICONTROL Beheer]**, gevolgd door **[!UICONTROL Verbindingen]**.
 
