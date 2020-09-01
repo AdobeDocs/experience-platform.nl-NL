@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;datatype;Datatype
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;datatype;Datatype;data type;Data type;create
 solution: Experience Platform
 title: Een gegevenstype maken
 topic: developer guide
 description: 'Wanneer er gemeenschappelijke gegevensstructuren zijn die uw organisatie op veelvoudige manieren wenst te gebruiken, kunt u wensen om een gegevenstype te bepalen. Gegevenstypen maken een consistent gebruik van structuren met meerdere velden mogelijk, met meer flexibiliteit dan mixen, omdat ze overal in een schema kunnen worden opgenomen door ze toe te voegen als het ''type'' van een veld. '
 translation-type: tm+mt
-source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
+source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
