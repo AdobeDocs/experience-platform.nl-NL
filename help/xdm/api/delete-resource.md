@@ -1,10 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;delete
 solution: Experience Platform
 title: Een bron verwijderen
+describe: It may occasionally be necessary to remove resource from the Schema Registry. Only resources that you create in the tenant container may be deleted. This is done by performing a DELETE request using the $id of the resource you wish to delete.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Een bron verwijderen
 
-Het kan soms nodig zijn om een bron uit de bron te verwijderen (DELETE) [!DNL Schema Registry]. Slechts kunnen de middelen die u in de huurderscontainer creeert worden geschrapt. Dit wordt gedaan door een DELETE verzoek uit te voeren gebruikend de bron `$id` u wenst om te schrappen.
+Het kan soms nodig zijn om een bron uit de bron te verwijderen (DELETE) [!DNL Schema Registry]. Slechts kunnen de middelen die u in de huurderscontainer creeert worden geschrapt. Dit wordt gedaan door een verzoek `$id` van de DELETE uit te voeren gebruikend de bron u wenst om te schrappen.
 
 **API-indeling**
 
