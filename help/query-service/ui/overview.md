@@ -5,7 +5,7 @@ title: Handleiding gebruikersinterface Adobe Experience Platform Query Service
 topic: guide
 description: De Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query's, het weergeven van eerder uitgevoerde query's en het openen van query's die zijn opgeslagen door gebruikers binnen uw IMS-organisatie.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 1%
@@ -19,17 +19,17 @@ De Adobe Experience Platform [!DNL Query Service] biedt een gebruikersinterface 
 
 ## [!DNL Query Editor]
 
-Met [!DNL Query Editor] deze optie kunt u query&#39;s schrijven en uitvoeren zonder een externe client te gebruiken. Klik op Query **** maken om de query te openen [!DNL Query Editor] en een nieuwe query te maken. U kunt tot de toegang ook toegang hebben [!DNL Query Editor] door een vraag van de *[!UICONTROL Logboek]* te selecteren of *[!UICONTROL doorbladert]* lusjes. Als u een eerder uitgevoerde of opgeslagen query selecteert, wordt de query geopend [!DNL Query Editor] en wordt de SQL voor de geselecteerde query weergegeven.
+Met [!DNL Query Editor] deze optie kunt u query&#39;s schrijven en uitvoeren zonder een externe client te gebruiken. Klik op Query **** maken om de query te openen [!DNL Query Editor] en een nieuwe query te maken. U kunt tot de toegang ook toegang hebben [!DNL Query Editor] door een vraag van de **[!UICONTROL Logboek]** te selecteren of **[!UICONTROL doorbladert]** lusjes. Als u een eerder uitgevoerde of opgeslagen query selecteert, wordt de query geopend [!DNL Query Editor] en wordt de SQL voor de geselecteerde query weergegeven.
 
 ![Image](../images/queries/ui-overview/overview.png)
 
-[!DNL Query Editor] biedt bewerkruimte waarin u een query kunt typen. Terwijl u typt, wordt in de editor automatisch de voor SQL gereserveerde woorden, tabellen en veldnamen in tabellen ingevuld. Wanneer u klaar bent met het schrijven van uw query, klikt u op de knop **Afspelen** om de query uit te voeren. Op het tabblad *[!UICONTROL Console]* onder de editor ziet u wat er op dit moment [!DNL Query Service] gebeurt. Dit geeft aan wanneer een query is geretourneerd. Op het tabblad *[!UICONTROL Resultaat]* naast de Console worden de resultaten van de query weergegeven. Zie de gids [van de Redacteur van de][query-editor] Vraag voor meer informatie bij het gebruiken van [!DNL Query Editor].
+[!DNL Query Editor] biedt bewerkruimte waarin u een query kunt typen. Terwijl u typt, wordt in de editor automatisch de voor SQL gereserveerde woorden, tabellen en veldnamen in tabellen ingevuld. Wanneer u klaar bent met het schrijven van uw query, klikt u op de knop **Afspelen** om de query uit te voeren. Op het tabblad **[!UICONTROL Console]** onder de editor ziet u wat er op dit moment [!DNL Query Service] gebeurt. Dit geeft aan wanneer een query is geretourneerd. Op het tabblad **[!UICONTROL Resultaat]** naast de Console worden de resultaten van de query weergegeven. Zie de gids [van de Redacteur van de][query-editor] Vraag voor meer informatie bij het gebruiken van [!DNL Query Editor].
 
 ![Image](../images/queries/ui-overview/query-editor.png)
 
 ## Bladeren
 
-Op het tabblad *[!UICONTROL Bladeren]* worden query&#39;s weergegeven die door gebruikers in uw organisatie zijn opgeslagen. Het is nuttig om van deze als vraagprojecten te denken, aangezien de vragen hier worden bewaard nog onder bouw kunnen zijn. De vragen die op het *[!UICONTROL Browse]* lusje worden getoond tonen ook als looppasvragen op het lusje van het *[!UICONTROL Logboek]* als zij eerder door [!DNL Query Service]zijn uitgevoerd.
+Op het tabblad **[!UICONTROL Bladeren]** worden query&#39;s weergegeven die door gebruikers in uw organisatie zijn opgeslagen. Het is nuttig om van deze als vraagprojecten te denken, aangezien de vragen hier worden bewaard nog onder bouw kunnen zijn. De vragen die op het **[!UICONTROL Browse]** lusje worden getoond tonen ook als looppasvragen op het lusje van het **[!UICONTROL Logboek]** als zij eerder door [!DNL Query Service]zijn uitgevoerd.
 
 ![Image](../images/queries/ui-overview/browse.png)
 
@@ -42,7 +42,7 @@ Op het tabblad *[!UICONTROL Bladeren]* worden query&#39;s weergegeven die door g
 
 ## Logboek
 
-Het tabblad *[!UICONTROL Logboek]* bevat een lijst met query&#39;s die eerder zijn uitgevoerd. Door gebrek, maakt een lijst van het logboek van de vragen in omgekeerde chronologie.
+Het tabblad **[!UICONTROL Logboek]** bevat een lijst met query&#39;s die eerder zijn uitgevoerd. Door gebrek, maakt een lijst van het logboek van de vragen in omgekeerde chronologie.
 
 ![Image](../images/queries/ui-overview/log.png)
 
@@ -58,7 +58,7 @@ Het tabblad *[!UICONTROL Logboek]* bevat een lijst met query&#39;s die eerder zi
 
 ## Credentials
 
-Op het tabblad *[!UICONTROL Referenties]* worden uw [!DNL Postgres] referenties weergegeven. Klik op het pictogram **[!UICONTROL Kopiëren]** naast een veld om de inhoud ervan op te slaan in uw toetsenbordbuffer. Lees de handleiding [Verbinding maken met clients voor meer informatie over hoe u deze gegevens kunt gebruiken om verbinding te maken met externe clients][connect-clients].
+Op het tabblad **[!UICONTROL Referenties]** worden uw [!DNL Postgres] referenties weergegeven. Klik op het pictogram **[!UICONTROL Kopiëren]** naast een veld om de inhoud ervan op te slaan in uw toetsenbordbuffer. Lees de handleiding [Verbinding maken met clients voor meer informatie over hoe u deze gegevens kunt gebruiken om verbinding te maken met externe clients][connect-clients].
 
 ![Image](../images/queries/ui-overview/credentials.png)
 
