@@ -5,7 +5,7 @@ title: Invoer en uitvoer van Attribution AI
 topic: Input and Output data for Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 0%
@@ -136,11 +136,11 @@ In de volgende tabel worden de schemavelden in de voorbeelduitvoer van onbewerkt
 
 ### Onbewerkte muziekpaden weergeven (UI) {#raw-score-path}
 
-U kunt het pad naar de onbewerkte scores weergeven in de gebruikersinterface. Selecteer eerst **[!UICONTROL Schema&#39;s]** in de gebruikersinterface van het Platform en zoek en selecteer het gewenste AI-scoreschema voor de toewijzing in het tabblad *[!UICONTROL Bladeren]* .
+U kunt het pad naar de onbewerkte scores weergeven in de gebruikersinterface. Selecteer eerst **[!UICONTROL Schema&#39;s]** in de gebruikersinterface van het Platform en zoek en selecteer het gewenste AI-scoreschema voor de toewijzing in het tabblad **[!UICONTROL Bladeren]** .
 
 ![Schema kiezen](./images/input-output/schemas_browse.png)
 
-Selecteer vervolgens een veld in het venster *[!UICONTROL Structuur]* van de gebruikersinterface en open het tabblad Eigenschappen *[!UICONTROL van]* veld. Binnen *[!UICONTROL de eigenschappen]* van het Gebied is het gebied van de *[!UICONTROL Weg]* dat aan uw ruwe scores toewijst.
+Selecteer vervolgens een veld in het venster **[!UICONTROL Structuur]** van de gebruikersinterface en open het tabblad Eigenschappen **[!UICONTROL van]** veld. Binnen **[!UICONTROL de eigenschappen]** van het Gebied is het gebied van de **[!UICONTROL Weg]** dat aan uw ruwe scores toewijst.
 
 ![Een schema kiezen](./images/input-output/field_properties.png)
 
