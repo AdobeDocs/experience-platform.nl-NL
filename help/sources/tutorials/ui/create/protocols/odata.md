@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;OData;odata;Generic Open Data Protocol
 solution: Experience Platform
 title: Een Generic OData-bronconnector maken in de gebruikersinterface
 topic: overview
+description: Deze zelfstudie bevat stappen voor het maken van een algemene bronconnector van het Open Data Protocol (hierna "OData" genoemd) met behulp van de gebruikersinterface van het Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '468'
 ht-degree: 1%
 
 ---
