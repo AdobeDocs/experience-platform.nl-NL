@@ -5,7 +5,7 @@ title: Behandeling van een privacyverzoek in het Data Lake
 topic: overview
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonsgegevens te verwijderen, zoals bepaald in wettelijke en organisatorische privacyregels. Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor klantgegevens die in het Datameer zijn opgeslagen.
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Er zijn twee methodes om een identiteitsbeschrijver aan een datasetschema toe te
 
 ### De gebruikersinterface gebruiken {#identity-ui}
 
-In de [!DNL Experience Platform ]gebruikersinterface kunt u met de werkruimte _[!UICONTROL Schema]_ uw bestaande XDM-schema&#39;s bewerken. Om een identiteitsbeschrijver aan een schema toe te voegen, selecteer het schema van de lijst en volg de stappen voor het [plaatsen van een schemagebied als identiteitsgebied](../xdm/tutorials/create-schema-ui.md#identity-field) in het [!DNL Schema Editor] leerprogramma.
+In de [!DNL Experience Platform ]gebruikersinterface kunt u met de werkruimte **[!UICONTROL Schema]** uw bestaande XDM-schema&#39;s bewerken. Om een identiteitsbeschrijver aan een schema toe te voegen, selecteer het schema van de lijst en volg de stappen voor het [plaatsen van een schemagebied als identiteitsgebied](../xdm/tutorials/create-schema-ui.md#identity-field) in het [!DNL Schema Editor] leerprogramma.
 
 Als u de juiste velden in het schema hebt ingesteld als identiteitsvelden, kunt u doorgaan naar de volgende sectie over het [verzenden van privacyverzoeken](#submit).
 
@@ -139,7 +139,7 @@ In de volgende sectie wordt beschreven hoe u privacyverzoeken voor het [!DNL Dat
 
 ### De gebruikersinterface gebruiken
 
-Wanneer het creëren van baanverzoeken in UI, ben zeker om **[!UICONTROL AEP Gegevensmeer]** en/of **[!UICONTROL Profiel]** onder _[!UICONTROL Producten]_ te selecteren om banen voor gegevens te verwerken die in [!DNL Data Lake] of [!DNL Real-time Customer Profile], respectievelijk worden opgeslagen.
+Wanneer het creëren van baanverzoeken in UI, ben zeker om **[!UICONTROL AEP Gegevensmeer]** en/of **[!UICONTROL Profiel]** onder **[!UICONTROL Producten]** te selecteren om banen voor gegevens te verwerken die in [!DNL Data Lake] of [!DNL Real-time Customer Profile], respectievelijk worden opgeslagen.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
