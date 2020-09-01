@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;HP Vertica
 solution: Experience Platform
 title: Creeer HP Vertica bronschakelaar in UI
 topic: overview
+description: Dit leerprogramma verstrekt stappen voor het creëren van een HP Vertica bronschakelaar gebruikend het gebruikersinterface van het Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '494'
 ht-degree: 1%
 
 ---
