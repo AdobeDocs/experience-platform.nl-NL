@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;data governance;data usage lab
 solution: Experience Platform
 title: Gebruiksaanwijzing voor labels voor gegevensgebruik
 topic: labels
-description: In deze gebruikershandleiding vindt u de stappen voor het werken met labels voor gegevensgebruik (ook wel DULE-labels genoemd) in de Adobe Experience Platform-gebruikersinterface.
+description: In deze gebruikershandleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1119'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Gebruiksaanwijzing voor labels voor gegevensgebruik
 
-In deze gebruikershandleiding vindt u de stappen voor het werken met labels voor gegevensgebruik (ook wel DULE-labels genoemd) in de [!DNL Experience Platform] gebruikersinterface. Voordat u de gids gebruikt, raadpleegt u het overzicht [van](../home.md) gegevensbeheer voor een robuustere inleiding op het DULE-kader.
+In deze gebruikershandleiding worden de stappen beschreven voor het werken met labels voor gegevensgebruik in de [!DNL Experience Platform] gebruikersinterface. Voordat u de handleiding gaat gebruiken, raadpleegt u het [[!DNL Data Governance] overzicht](../home.md) voor een robuustere introductie van het [!DNL Data Governance] kader.
 
 ## De etiketten van het gegevensgebruik op het datasetniveau beheren
 
