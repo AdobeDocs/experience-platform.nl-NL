@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruikershandleiding voor Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -70,7 +70,7 @@ U kunt de lijst filteren door trefwoorden in de zoekbalk onder de titel Taakverz
 
 ![Zoekopties voor taakaanvraag](../images/user-guide/job-search.png)
 
-Als u de details van een bepaalde taakaanvraag wilt weergeven, klikt u in de lijst op de taak-id van de aanvraag om de pagina *[!UICONTROL Taakdetails]* te openen.
+Als u de details van een bepaalde taakaanvraag wilt weergeven, klikt u in de lijst op de taak-id van de aanvraag om de pagina **[!UICONTROL Taakdetails]** te openen.
 
 ![Taakgegevens GDPR-gebruikersinterface](../images/user-guide/job-details.png)
 
@@ -101,7 +101,7 @@ Klik op Verzoek **** maken onder de widget Statusrapport aan de rechterkant van 
 
 ![Klik op Verzoek maken](../images/user-guide/create-request.png)
 
-Het dialoogvenster *[!UICONTROL Aanvraag]* maken wordt geopend en hierin worden de beschikbare opties weergegeven voor het indienen van een aanvraag voor een privacytaak voor het momenteel geselecteerde regulatietype.
+Het dialoogvenster **[!UICONTROL Aanvraag]** maken wordt geopend en hierin worden de beschikbare opties weergegeven voor het indienen van een aanvraag voor een privacytaak voor het momenteel geselecteerde regulatietype.
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
@@ -109,7 +109,7 @@ Selecteer het **[!UICONTROL Taaktype]** van de aanvraag (&quot;Schrapping&quot;o
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Selecteer onder *[!UICONTROL Type]* naamruimte het juiste naamruimtetype voor de klant-id&#39;s waarnaar wordt verzonden [!DNL Privacy Service].
+Selecteer onder **[!UICONTROL Type]** naamruimte het juiste naamruimtetype voor de klant-id&#39;s waarnaar wordt verzonden [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -135,7 +135,7 @@ Klik op de pijl naast Verzoek **** maken onder de widget Statusrapport aan de re
 
 ![Aanmaakopties aanvragen](../images/user-guide/create-options.png)
 
-Het dialoogvenster JSON ** uploaden wordt weergegeven en u krijgt een venster waarin u uw JSON-bestand kunt slepen en neerzetten.
+Het dialoogvenster JSON **** uploaden wordt weergegeven en u krijgt een venster waarin u uw JSON-bestand kunt slepen en neerzetten.
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
