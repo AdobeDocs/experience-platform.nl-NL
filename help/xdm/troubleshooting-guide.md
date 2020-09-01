@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience eventExperience event;XDM Experience Event;XDM ExperienceEvent;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema;troubleshooting;FAQ;faq;
 solution: Experience Platform
 title: De gids van de het oplossen van problemen van het Systeem van de Gegevens van de Ervaring Model (XDM)
+description: Dit document biedt antwoorden op veelgestelde vragen over het Systeem van de Gegevens van de Ervaring (XDM), evenals een het oplossen van problemengids voor gemeenschappelijke fouten.
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1862'
 ht-degree: 0%
 
 ---
