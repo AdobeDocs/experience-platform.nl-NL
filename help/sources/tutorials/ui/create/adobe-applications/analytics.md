@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics source connector;Analytics connector;Analytics source;analytics
 solution: Experience Platform
 title: Een Adobe Analytics-bronaansluiting maken in de gebruikersinterface
 topic: overview
+description: Deze zelfstudie biedt stappen voor het maken van een Adobe Analytics-bronaansluiting in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0479f5097b530dd97e28474d8e5eb832e5e44e5a
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
