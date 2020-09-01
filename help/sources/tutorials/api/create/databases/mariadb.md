@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;MariaDB;mariadb
 solution: Experience Platform
 title: Een MariaDB-connector maken met de Flow Service API
 topic: overview
+description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform] aan MariaDB te verbinden.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '556'
 ht-degree: 1%
 
 ---
