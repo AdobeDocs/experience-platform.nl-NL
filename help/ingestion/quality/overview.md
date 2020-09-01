@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;Supported validation;Validation;supported validation;
 solution: Experience Platform
 title: Kwaliteit van gegevensinvoer
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Gegevenskwaliteit in Adobe Experience Platform
 
-Adobe Experience Platform biedt duidelijk gedefinieerde garanties voor volledigheid, nauwkeurigheid en consistentie voor alle gegevens die via batch- of streaming opname worden geüpload. Het volgende document bevat een overzicht van de ondersteunde controles en validatiegedragingen voor batch- en streaming-opname in [!DNL Experience Platform].
+Adobe Experience Platform biedt duidelijk gedefinieerde garanties voor volledigheid, nauwkeurigheid en consistentie voor alle gegevens die via batch- of streaming opname zijn geüpload. Het volgende document bevat een overzicht van de ondersteunde controles en validatiegedragingen voor batch- en streaming-opname in [!DNL Experience Platform].
 
 ## Ondersteunde controles
 
@@ -39,7 +39,7 @@ De volgende validaties worden uitgevoerd voor batchinvoer:
 | --------------- | ----------- |
 | Schema | Zorgt ervoor dat het schema **niet** leeg is en een verwijzing naar het verenigingsschema bevat, als volgt: `"meta:immutableTags": ["union"]` |
 | `identityField` | Hiermee zorgt u ervoor dat alle geldige identiteitsbeschrijvingen zijn gedefinieerd. |
-| `createdUser` | Hiermee zorgt u ervoor dat de gebruiker die de batch heeft ingeslikt, de batch mag innemen. |
+| `createdUser` | Zorgt ervoor dat de gebruiker die de partij heeft ingenomen de partij mag innemen. |
 
 ### Streaming opname
 
