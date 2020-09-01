@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: 'Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name<span>@email.com" als e-mailadres of "443522" als een numerieke CRM-id. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '774'
 ht-degree: 1%
@@ -53,7 +53,7 @@ De volgende identiteitstypen zijn beschikbaar binnen [!DNL Platform]:
 
 Adobe Experience Platform biedt verschillende naamruimten die beschikbaar zijn voor alle organisaties. Deze worden standaardnaamruimten genoemd en zijn zichtbaar met de [!DNL Identity Service] API of via de [!DNL Platform] interface.
 
-Als u de standaardnaamruimten in de gebruikersinterface wilt weergeven, klikt u op **[!UICONTROL Identiteiten]** in de linkertrack en klikt u vervolgens op het tabblad *[!UICONTROL Bladeren]* . Alle naamruimten die voor uw organisatie toegankelijk zijn, worden weergegeven. De naamruimten met &quot;[!UICONTROL Standaard]&quot; als &quot;[!UICONTROL Eigenaar]&quot; zijn echter de standaardnaamruimten die door Adobe worden verschaft.
+Als u de standaardnaamruimten in de gebruikersinterface wilt weergeven, klikt u op **[!UICONTROL Identiteiten]** in de linkertrack en klikt u vervolgens op het tabblad **[!UICONTROL Bladeren]** . Alle naamruimten die voor uw organisatie toegankelijk zijn, worden weergegeven. De naamruimten met &quot;[!UICONTROL Standaard]&quot; als &quot;[!UICONTROL Eigenaar]&quot; zijn echter de standaardnaamruimten die door Adobe worden verschaft.
 
 Vervolgens kunt u op een van de weergegeven naamruimten klikken om details weer te geven.
 
@@ -71,7 +71,7 @@ De naamruimten die u definieert, zijn persoonlijk voor uw organisatie en hebben 
 
 ![](./images/create-identity-namespace.png)
 
-Net als bij Standaard-naamruimten kunt u op een aangepaste naamruimte in het tabblad *[!UICONTROL Bladeren]* klikken om de details weer te geven. Met een aangepaste naamruimte kunt u echter ook de weergavenaam en -beschrijving van de naamruimte bewerken vanuit het detailgebied.
+Net als bij Standaard-naamruimten kunt u op een aangepaste naamruimte in het tabblad **[!UICONTROL Bladeren]** klikken om de details weer te geven. Met een aangepaste naamruimte kunt u echter ook de weergavenaam en -beschrijving van de naamruimte bewerken vanuit het detailgebied.
 
 >[!NOTE]
 >
