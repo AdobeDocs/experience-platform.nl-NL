@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create;relationship;Relationship;reference;Reference;
 solution: Experience Platform
 title: Bepaal een verband tussen twee schema's gebruikend de Redacteur van het Schema van het Schema
+description: Dit document verstrekt een zelfstudie voor het bepalen van een verband tussen twee schema's gebruikend de Redacteur van het Schema in het gebruikersinterface van het Experience Platform.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d847329f675c7ac34a4feabb9e57a9e97f7e3ed1
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---
@@ -30,7 +31,7 @@ Deze zelfstudie vereist een goed begrip van [!DNL XDM System] en de Schema-edito
 
 ## Een bron- en doelschema definiëren
 
-Verwacht wordt dat u reeds de twee schema&#39;s hebt gecreeerd die in de verhouding zullen worden bepaald. Voor demonstratiedoeleinden creëert deze zelfstudie een relatie tussen leden van het loyaliteitsprogramma van een organisatie (gedefinieerd in een schema &quot;[!UICONTROL Loyalty Member]&quot;) en hun favoriete hotels (gedefinieerd in een &quot;[!DNL Hotels]&quot; schema).
+Verwacht wordt dat u reeds de twee schema&#39;s hebt gecreeerd die in de verhouding zullen worden bepaald. Voor demonstratiedoeleinden creëert deze zelfstudie een relatie tussen leden van het loyaliteitsprogramma van een organisatie (gedefinieerd in een schema &quot;[!UICONTROL Loyalty-leden]&quot;) en hun favoriete hotels (gedefinieerd in een &quot;[!DNL Hotels]&quot; schema).
 
 >[!IMPORTANT]
 >
@@ -42,7 +43,7 @@ Voor verwijzingsdoeleinden, beschrijven de volgende secties de structuur van elk
 
 ### [!UICONTROL Schema voor leden] van Loyalty
 
-Het bronschema &quot;Leden[!UICONTROL van de]Loyalty&quot;is gebaseerd op de klasse XDM, en is het schema dat in het leerprogramma voor het [!DNL Individual Profile] creëren van een schema in UI [](create-schema-ui.md)werd geconstrueerd. Het omvat een &quot;[!UICONTROL loyalty]&quot;voorwerp onder zijn \_huurderId&quot;namespace, die verscheidene loyaliteitspecifieke gebieden omvat. Één van deze gebieden, &quot;loyaltyId&quot;, dient als primaire identiteit voor het schema onder &quot;[!UICONTROL E-mail]&quot;namespace. Zoals u onder _[!UICONTROL Schemaeigenschappen]_ziet, is dit schema ingeschakeld voor gebruik in[!DNL Real-time Customer Profile].
+Het bronschema &quot;Leden[!UICONTROL van de]Loyalty&quot;is gebaseerd op de klasse XDM, en is het schema dat in het leerprogramma voor het [!DNL Individual Profile] creëren van een schema in UI [](create-schema-ui.md)werd geconstrueerd. Het omvat een &quot;[!UICONTROL loyalty]&quot;voorwerp onder zijn \_huurderId&quot;namespace, die verscheidene loyaliteitspecifieke gebieden omvat. Één van deze gebieden, &quot;loyaltyId&quot;, dient als primaire identiteit voor het schema onder &quot;[!UICONTROL E-mail]&quot;namespace. Zoals u onder _[!UICONTROL Schemaeigenschappen]_ ziet, is dit schema ingeschakeld voor gebruik in [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -60,19 +61,19 @@ Het doelschema &quot;[!UICONTROL Hotels]&quot; is gebaseerd op een aangepaste kl
 
 Om een verband tussen twee schema&#39;s te bepalen, moet het bronschema een specifiek gebied hebben dat als verwijzing naar het bestemmingsschema moet worden gebruikt. U kunt dit veld toevoegen aan het bronschema door een nieuwe mix te maken.
 
-Klik eerst op **[!UICONTROL Toevoegen]** in de sectie _[!UICONTROL Mixins]_.
+Klik eerst op **[!UICONTROL Toevoegen]** in de sectie _[!UICONTROL Mixins]_ .
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-Het dialoogvenster _[!UICONTROL Mixin]_toevoegen wordt weergegeven. Klik hier op**[!UICONTROL  Nieuwe mixer ]**maken. Voer in de tekstvelden die worden weergegeven een weergavenaam en beschrijving in voor de nieuwe mix. Klik op**[!UICONTROL  Mixin ]**toevoegen wanneer u klaar bent.
+Het dialoogvenster _[!UICONTROL Mixin]_ toevoegen wordt weergegeven. Klik hier op **[!UICONTROL Nieuwe mixer]** maken. Voer in de tekstvelden die worden weergegeven een weergavenaam en beschrijving in voor de nieuwe mix. Klik op **[!UICONTROL Mixin]** toevoegen wanneer u klaar bent.
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-Het canvas verschijnt weer met &quot;[!UICONTROL Loyalty Relationship]&quot; in de sectie _[!UICONTROL Mixins]_. Klik op de mixnaam en klik vervolgens op Veld****toevoegen naast het veld[!UICONTROL Loyalty-leden]op hoofdniveau.
+Het canvas verschijnt weer met &quot;[!UICONTROL Loyalty Relationship]&quot; in de sectie _[!UICONTROL Mixins]_ . Klik op de mixnaam en klik vervolgens op Veld **** toevoegen naast het veld[!UICONTROL Loyalty-leden]op hoofdniveau.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Er wordt een nieuw veld weergegeven op het canvas onder de naamruimte &quot;\_huurderId&quot;. Geef onder _[!UICONTROL Veldeigenschappen]_een veldnaam en weergavenaam voor het veld op en stel het type in op &quot;[!UICONTROL String]&quot;.
+Er wordt een nieuw veld weergegeven op het canvas onder de naamruimte &quot;\_huurderId&quot;. Geef onder _[!UICONTROL Veldeigenschappen]_ een veldnaam en weergavenaam voor het veld op en stel het type in op &quot;[!UICONTROL String]&quot;.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
@@ -88,7 +89,7 @@ Het bijgewerkte veld[!UICONTROL FavorietHotel]wordt weergegeven op het canvas. K
 
 Zodra uw bronschema een specifiek die verwijzingsgebied heeft wordt bepaald, kunt u het als relatiegebied aanwijzen.
 
-Selecteer het referentieveld op het canvas en schuif omlaag onder _[!UICONTROL Veldeigenschappen]_totdat het selectievakje**[!UICONTROL  Relatie ]**wordt weergegeven. Schakel het selectievakje in om de vereiste parameters voor het configureren van een relatieveld weer te geven.
+Selecteer het referentieveld op het canvas en schuif omlaag onder _[!UICONTROL Veldeigenschappen]_ totdat het selectievakje **[!UICONTROL Relatie]** wordt weergegeven. Schakel het selectievakje in om de vereiste parameters voor het configureren van een relatieveld weer te geven.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
