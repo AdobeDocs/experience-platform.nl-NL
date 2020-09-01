@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Zelfstudies over gegevensbeheer en privacy
 topic: tutorial
+description: De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste mechanisme van het Beheer van Gegevens van Adobe Experience Platform. De eigenschappen DULE laten u toe om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen, die elk volgens het verwante beleid van het gegevensgebruik categoriseren.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -14,9 +15,9 @@ ht-degree: 0%
 
 # [!DNL Data Governance] en [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE) is het kernmechanisme van Adobe Experience Platform [!DNL Data Governanc]e. De eigenschappen DULE laten u toe om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen, die elk volgens het verwante beleid van het gegevensgebruik categoriseren. Voordat u aan de slag gaat met labels, raadpleegt u het overzicht [van](../data-governance/home.md) gegevensbeheer voor een robuustere inleiding op het DULE-framework binnen [!DNL Platform].
+[!DNL Data Usage Labeling and Enforcement] (DULE) is het kernmechanisme van Adobe Experience Platform [!DNL Data Governance]. De eigenschappen DULE laten u toe om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen, die elk volgens het verwante beleid van het gegevensgebruik categoriseren. Voordat u aan de slag gaat met labels, raadpleegt u het overzicht [van](../data-governance/home.md) gegevensbeheer voor een robuustere inleiding op het DULE-framework binnen [!DNL Platform].
 
-Adobe Experience Platform [!DNL Privacy Service] verstrekt een RESTful API en gebruikersinterface die u toestaan om privacy en nalevingsverzoeken over diverse oplossingen te coördineren. Als u meer informatie wilt, leest u eerst het overzicht [van de](../privacy-service/home.md)Privacy Service.
+Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u privacy- en compatibiliteitsverzoeken op verschillende oplossingen kunt coördineren. Als u meer informatie wilt, leest u eerst het overzicht [van de](../privacy-service/home.md)Privacy Service.
 
 ## Labels voor gegevensgebruik toevoegen
 
