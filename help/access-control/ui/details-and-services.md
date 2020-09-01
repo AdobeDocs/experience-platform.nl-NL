@@ -5,7 +5,7 @@ title: Details en aanvullende services voor een productprofiel beheren
 topic: user guide
 description: In dit document worden de stappen beschreven die nodig zijn om details en aanvullende services voor een productprofiel in de Adobe Admin Console te beheren. U kunt de details van een profiel en toegang tot extra diensten van binnen het menu van de Montages van het Profiel vormen.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
@@ -15,19 +15,19 @@ ht-degree: 0%
 
 # Details en aanvullende services voor een productprofiel beheren
 
-U kunt de details van een profiel en toegang tot extra diensten van binnen het menu van de Montages *[!UICONTROL van het]* Profiel vormen. Klik op **[!UICONTROL Instellingen]** op de pagina *[!UICONTROL Productprofiel]* om het menu te openen.
+U kunt de details van een profiel en toegang tot extra diensten van binnen het menu van de Montages **[!UICONTROL van het]** Profiel vormen. Klik op **[!UICONTROL Instellingen]** op de pagina **[!UICONTROL Productprofiel]** om het menu te openen.
 
 ![profiel-instellingen](../images/profile-settings.png)
 
-Het menu *[!UICONTROL Profielinstellingen]* wordt weergegeven, te beginnen op het tabblad *[!UICONTROL Details]* . Op dit tabblad kunt u de **[!UICONTROL profielnaam]** en **[!UICONTROL beschrijving]** invoeren en bewerken. U kunt ook uw **[!UICONTROL weergavenaam]** en de instellingen voor e-mailmeldingen voor uw account wijzigen.
+Het menu **[!UICONTROL Profielinstellingen]** wordt weergegeven, te beginnen op het tabblad **[!UICONTROL Details]** . Op dit tabblad kunt u de **[!UICONTROL profielnaam]** en **[!UICONTROL beschrijving]** invoeren en bewerken. U kunt ook uw **[!UICONTROL weergavenaam]** en de instellingen voor e-mailmeldingen voor uw account wijzigen.
 
 ![bewerken-details-instellingen](../images/edit-details-settings.png)
 
-Klik op **[!UICONTROL Services]** om de pagina *[!UICONTROL Services]* te openen.
+Klik op **[!UICONTROL Services]** om de pagina **[!UICONTROL Services]** te openen.
 
 ![servicepagina](../images/services-page.png)
 
-Met het menu *[!UICONTROL Services]* kunt u de toegang van een profiel tot aanvullende [!DNL Platform] services wijzigen die aanvankelijk waren geconfigureerd toen het profiel werd gemaakt. Afhankelijk van uw [!DNL Platform] abonnement kunnen deze services het volgende bevatten:
+Met het menu **[!UICONTROL Services]** kunt u de toegang van een profiel tot aanvullende [!DNL Platform] services wijzigen die aanvankelijk waren geconfigureerd toen het profiel werd gemaakt. Afhankelijk van uw [!DNL Platform] abonnement kunnen deze services het volgende bevatten:
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
