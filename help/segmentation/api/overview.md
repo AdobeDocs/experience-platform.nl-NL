@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
 solution: Adobe Experience Platform
-title: Handleiding voor ontwikkelaars van Adobe Experience Platform Segmentation Service
+title: Adobe Experience Platform Segmentation Service-ontwikkelaarshandleiding
 topic: guide
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: 467
 ht-degree: 0%
 
 ---
 
 
-# Handleiding voor ontwikkelaars van Adobe Experience Platform-API [!DNL Segmentation Service]
+# Handleiding voor ontwikkelaars van Adobe Experience Platform [!DNL Segmentation Service] API
 
 [!DNL Adobe Experience Platform Segmentation Service] kunt u segmenten maken en publiek genereren [!DNL Adobe Experience Platform] op basis van uw [!DNL Real-time Customer Profile] gegevens.
 
@@ -24,7 +24,7 @@ Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, raadpleegt
 
 De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. Met het `/export/jobs` eindpunt kunt u alle exporttaken ophalen, een nieuwe exporttaak maken, details van een specifieke exporttaak ophalen of een specifieke exporttaak annuleren.
 
-Voor meer informatie bij het gebruiken van dit eindpunt, te lezen gelieve de gids [van het de](./export-jobs.md)uitvoerbaaneindpunt.
+Voor meer informatie bij het gebruiken van dit eindpunt, gelieve te lezen de gids [van het de eindpunt van](./export-jobs.md)uitvoerbanen.
 
 ## Voorvertoningen en ramingen
 
