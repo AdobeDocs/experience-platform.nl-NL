@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;list;List;get;GET
 solution: Experience Platform
 title: Bronnen weergeven
+description: U kunt een lijst van alle middelen van de Registratie van het Schema van een bepaald type (klassen, mixins, schema's, gegevenstypes, of beschrijvers) binnen een container bekijken door één enkel verzoek van de GET uit te voeren.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '538'
 ht-degree: 1%
 
 ---
@@ -50,7 +51,7 @@ De responsindeling is afhankelijk van de Accept-header die in de aanvraag wordt 
 | Koptekst accepteren | Beschrijving |
 | ------- | ------------ |
 | application/vnd.adobe.xed-id+json | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
-| application/vnd.adobe.xed+json | Retourneert het volledige JSON-schema voor elke bron, met origineel `$ref` en `allOf` opgenomen. (Limiet: 300) |
+| application/vnd.adobe.xed+json | Retourneert het volledige JSON-schema voor elke bron, met origineel `$ref` en `allOf` ingesloten. (Limiet: 300) |
 | application/vnd.adobe.xdm-v2+json | Wanneer het gebruiken van het `/descriptors` eindpunt, moet deze Accept kopbal worden gebruikt om het pagineren mogelijkheden te gebruiken. |
 
 **Antwoord**
