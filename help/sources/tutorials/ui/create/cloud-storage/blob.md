@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Blob;azure blob;Azure blob connector
 solution: Experience Platform
 title: Een Azure Blob-bronconnector maken in de gebruikersinterface
 topic: overview
+description: Deze zelfstudie bevat stappen voor het maken van een Azure Blob (hierna "Blob" genoemd) met behulp van de gebruikersinterface van het Platform.
 translation-type: tm+mt
-source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '549'
 ht-degree: 1%
 
 ---
