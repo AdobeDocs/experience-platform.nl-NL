@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
 solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Adobe Experience Platform Batch-insluiting
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3eaef72de2999fc088b92562c08a896d1cb08e55
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '2670'
 ht-degree: 3%
@@ -28,7 +28,7 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 
 - [Inname](./overview.md)in batch: Hiermee kunt u gegevens als batchbestanden in Adobe Experience Platform invoeren.
 - [[!DNL Experience Data Model] (XDM) Systeem](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
-- [[!DNL -sandboxen]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [[!DNL-sandboxen]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### API-voorbeeldaanroepen lezen
 
