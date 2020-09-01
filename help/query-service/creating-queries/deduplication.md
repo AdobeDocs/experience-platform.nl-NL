@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;data deduplication;deduplication;
 solution: Experience Platform
 title: Gegevensdeduplicatie
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Query Service] ondersteunt gegevensdeduplicatie wanneer het nodig kan zijn een hele rij uit een berekening te verwijderen of een specifieke set velden te negeren omdat slechts een deel van de gegevens in de rij een duplicaat is. Het gemeenschappelijke patroon voor deduplicatie impliceert het gebruiken van de `ROW_NUMBER()` functie over een venster voor een identiteitskaart, of paar IDs, over geordende tijd (gebruikend het [!DNL Experience Data Model] (XDM) `timestamp` gebied) om een nieuw gebied terug te keren dat het aantal tijden vertegenwoordigt een duplicaat is ontdekt. Wanneer deze waarde is `1`, verwijst dat naar de oorspronkelijke instantie en in de meeste gevallen die instantie is die u wilt gebruiken, waarbij elke andere instantie wordt genegeerd. Dit zal het vaakst binnen een sub-uitgezochte worden gedaan waar deduplicatie in een hoger niveau wordt gedaan `SELECT` zoals het uitvoeren van een gezamenlijke telling.
 
-## Gebruik hoofdletters
+## Gebruiksscenario’s
 
 Sommige gevallen van gebruik voor deduplicatie zijn globaal in het datumbereik en sommige zijn beperkt tot één bezoeker of eindgebruiker-id binnen het `identityMap`datumbereik.
 
