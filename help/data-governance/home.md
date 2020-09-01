@@ -5,9 +5,9 @@ title: Adobe Experience Platform Data Governance
 topic: overview
 description: Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een sleutelrol binnen Experience Platform op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, en het controleren van het gebruik van gegevens voor marketing acties
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1326'
 ht-degree: 0%
 
 ---
@@ -39,15 +39,15 @@ Gegevensstewards vormen de kern van gegevensbeheer. Deze rol is verantwoordelijk
 
 Marktdeelnemers zijn het eindpunt van gegevensbeheer. Ze vragen gegevens van de infrastructuur voor gegevensbeheer die is gemaakt door data stewards, wetenschappers en engineers. Marktdeelnemers omvatten een aantal verschillende specialiteiten onder de marketingparaplu, waaronder:
 
-* De analisten van de marketing verzoeken gegevens om begrip van klanten, zowel als individuen als in groepen (ook die als segmenten worden bekend) toe te laten.
+* De analisten van de marketing verzoeken gegevens om inzicht in klanten, zowel als individuen als in groepen (ook die als segmenten worden bekend) toe te laten.
 * De Specialisten van de marketing en Ontwerpers van de Ervaring gebruiken gegevens om nieuwe klantenervaringen te ontwerpen.
 
 
-## DULE-kader
+## [!DNL Data Governance] kader
 
-De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste kader voor [!DNL Experience Platform] [!DNL Data Governance]. DULE vereenvoudigt en stroomlijnt het proces om gegevens te categoriseren en het beleid van het gegevensgebruik te creëren. Zodra gegevensetiketten zijn toegepast en het beleid van het gegevensgebruik is op zijn plaats, kunnen de marketing acties worden geëvalueerd om het correcte gebruik van gegevens te verzekeren.
+Het [!DNL Data Governance] kader vereenvoudigt en stroomlijnt het proces om gegevens te categoriseren en het beleid van het gegevensgebruik te creëren. Zodra gegevensetiketten zijn toegepast en het beleid van het gegevensgebruik op zijn plaats is, kunnen de marketing acties worden geëvalueerd om het correcte gebruik van gegevens te verzekeren.
 
-Het DULE-raamwerk bestaat uit drie hoofdelementen: Labels, Beleid en Handhaving.
+Het [!DNL Data Governance] kader kent drie belangrijke elementen: Labels, Beleid en Handhaving.
 
 1. **Labels:** Gegevens indelen die privacygerelateerde overwegingen en contractuele voorwaarden weerspiegelen, zodat deze in overeenstemming zijn met regelgeving en organisatiebeleid.
 1. **Beleid:** Beschrijf welke marketingacties al dan niet zijn toegestaan voor specifieke gegevens.
@@ -57,7 +57,7 @@ Het DULE-raamwerk bestaat uit drie hoofdelementen: Labels, Beleid en Handhaving.
 
 [!DNL Data Governance] laat gegevens toe stewards om gebruiksetiketten op de dataset en gebiedsniveau toe toe te passen om gegevens volgens het type van beleid te categoriseren dat van toepassing is.
 
-Het DULE-framework bevat vooraf gedefinieerde labels voor gegevensgebruik waarmee gegevens op drie manieren kunnen worden gecategoriseerd:
+Het [!DNL Data Governance] framework bevat vooraf gedefinieerde labels voor gegevensgebruik waarmee gegevens op drie manieren kunnen worden gecategoriseerd:
 
 ![Categorieën gegevensgebruikslabels](./images/overview/label-categories.png)
 
@@ -79,7 +79,7 @@ Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid
 
 Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naar een derdedienst uit te voeren. Als er een beleid bestaat dat zegt dat specifieke types van gegevens, zoals Persoonlijk Identificeerbare Informatie (PII), niet kunnen worden uitgevoerd en een &quot;I&quot;etiket (de Gegevens van de Identiteit) is toegepast op de dataset, zult u een antwoord van het [!DNL Policy Service] vertellen u ontvangen dat een beleid van het gegevensgebruik is geschonden.
 
-Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensstewards beleid tot stand brengen gebruikend DULE [!DNL Policy Service] API of het [!DNL Experience Platform] gebruikersinterface.
+Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensstewards beleid tot stand brengen gebruikend API of het [!DNL Policy Service] [!DNL Experience Platform] gebruikersinterface.
 
 >[!IMPORTANT]
 >
@@ -89,7 +89,7 @@ Zie het [beleidsoverzicht](./policies/overview.md)voor meer informatie over het 
 
 ## Volgende stappen
 
-Dit document bevatte een inleiding op hoog niveau op [!DNL Data Governance] en in het DULE-kader. U kunt nu doorgaan met de gebruikershandleiding [voor labels voor](labels/user-guide.md) gegevensgebruik en gebruikslabels toevoegen aan uw ervaringsgegevens.
+In dit document werd een inleiding op hoog niveau gegeven aan [!DNL Data Governance] en het[!DNL Data Governance] kader. U kunt nu doorgaan met de gebruikershandleiding [voor labels voor](labels/user-guide.md) gegevensgebruik en gebruikslabels toevoegen aan uw ervaringsgegevens.
 
 ## Aanhangsel
 
@@ -97,7 +97,7 @@ In de volgende sectie vindt u aanvullende informatie over [!DNL Data Governance]
 
 ### [!DNL Data Governance] terminologie
 
-In de volgende tabel worden de belangrijkste termen met betrekking tot [!DNL Data Governance] en het DULE-framework weergegeven.
+In de volgende tabel staan de belangrijkste termen met betrekking tot [!DNL Data Governance] en het[!DNL Data Governance] kader.
 
 | Term | Definitie |
 |---|---|
@@ -107,7 +107,6 @@ In de volgende tabel worden de belangrijkste termen met betrekking tot [!DNL Dat
 | **Data steward** | De gegevensbeheerder is de persoon die verantwoordelijk is voor het beheer, het toezicht en de handhaving van de gegevensactiva van een organisatie. Een gegevensgestuurde functie zorgt er ook voor dat het beleid inzake gegevensbeheer wordt gewaarborgd en gehandhaafd om in overeenstemming te zijn met de overheidsvoorschriften en het organisatiebeleid. |
 | **Labels voor gegevensgebruik** | Met labels voor gegevensgebruik kunnen gebruikers gegevens categoriseren die privacygerelateerde overwegingen en contractuele voorwaarden weerspiegelen om te voldoen aan de regels en het bedrijfsbeleid. |
 | **Dataset-labels** | De etiketten kunnen aan een dataset worden toegevoegd. Alle gebieden binnen een dataset erven de etiketten van de dataset. |
-| **DULE** | DULE is een acroniem voor &quot;de Etikettering en de Handhaving van het Gebruik van Gegevens.&quot; Een belangrijk onderdeel van gegevensbeheer, DULE, is een inzameling van eigenschappen die voor het etiketteren van het gegevensgebruik en het toepassen van het beleid van de gegevenstoegang voor bestuursbehoeften binnen een organisatie toestaan. |
 | **Veldlabels** | Veldlabels zijn labels voor gegevensbeheer die zijn overgeërfd van een gegevensset of die rechtstreeks op een veld zijn toegepast.  Labels voor gegevensbeheer die op een veld worden toegepast, worden niet overgeërfd tot een gegevensset. |
 | **Geofence** | Een geofence is een virtuele geografische grens, gedefinieerd door GPS- of RFID-technologie, die software in staat stelt een reactie te activeren wanneer een mobiel apparaat een bepaald gebied binnenkomt of verlaat. |
 | **Identiteitslabels** | De etiketten van de identiteit &quot;I&quot;worden gebruikt om gegevens te categoriseren die een specifieke persoon kunnen identificeren of contacteren. |
@@ -118,6 +117,6 @@ In de volgende tabel worden de belangrijkste termen met betrekking tot [!DNL Dat
 
 ## Aanvullende bronnen
 
-De volgende video is bedoeld om uw begrip van te steunen, [!DNL Data Governance]en schetst de belangrijkste aspecten van het Kader van de Etikettering en van de Handhaving van het Gebruik van Gegevens (DULE).
+De volgende video is bedoeld om uw begrip van het [!DNL Data Governance] framework te ondersteunen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
