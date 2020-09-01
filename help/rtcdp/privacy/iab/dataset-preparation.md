@@ -4,7 +4,7 @@ solution: Experience Platform
 title: IAB TCF 2.0-ondersteuning in Real-time Customer Data Platform
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: e7cbbd2e376ab109367d1d16cb9e033202866a6f
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Hoewel elke privacymix varieert in structuur en de typen velden die deze bevatte
 
 ## Goedkeuringsschema&#39;s voor klanten maken {#create-schemas}
 
-Klik in de gebruikersinterface van het Platform op **[!UICONTROL Schema]** in de linkernavigatie om de *[!UICONTROL werkruimte]Schema *te openen. Voer van hieruit de stappen in de onderstaande secties uit om elk vereist schema te maken.
+Klik in de gebruikersinterface van het Platform op **[!UICONTROL Schema]** in de linkernavigatie om de *[!UICONTROL werkruimte]Schema* te openen. Voer van hieruit de stappen in de onderstaande secties uit om elk vereist schema te maken.
 
 >[!NOTE]
 >
@@ -79,11 +79,11 @@ Klik in de gebruikersinterface van het Platform op **[!UICONTROL Schema]** in de
 
 ### Een op records gebaseerd toestemmingsschema maken {#profile-schema}
 
-Van het **[!UICONTROL Browse]** lusje in de werkruimte *[!UICONTROL van]Schema *, creeer een nieuw schema dat op de**[!DNL XDM Individual Profile]klasse **wordt gebaseerd. Als u het schema hebt geopend in de Schema-editor, klikt u op **[!UICONTROL Toevoegen]**onder de sectie *[!UICONTROL Mixins]*links op het canvas.
+Van het **[!UICONTROL Browse]** lusje in de werkruimte **[!UICONTROL van]Schema**, creeer een nieuw schema dat op de **[!DNL XDM Individual Profile]klasse** wordt gebaseerd. Als u het schema hebt geopend in de Schema-editor, klikt u op **[!UICONTROL Toevoegen]** onder de sectie **[!UICONTROL Mixins]** links op het canvas.
 
 ![](../assets/iab/add-mixin-profile.png)
 
-Het dialoogvenster *[!UICONTROL Toevoegen]* wordt geopend. Van hier, selecteer de privacy **[!UICONTROL van het]** Profiel van de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo gemakkelijker de mix te vinden. Als de mix is geselecteerd, klikt u op **[!UICONTROL Toevoegen]**.
+Het dialoogvenster **[!UICONTROL Toevoegen]** wordt geopend. Van hier, selecteer de privacy **[!UICONTROL van het]** Profiel van de lijst. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo gemakkelijker de mix te vinden. Als de mix is geselecteerd, klikt u op **[!UICONTROL Toevoegen]**.
 
 ![](../assets/iab/add-profile-privacy.png)
 
@@ -112,7 +112,7 @@ Om de toestemmingsgegevens [!DNL Real-time CDP] te associëren het aan specifiek
 >
 >De stappen op hoe te om een primair identiteitsgebied voor een schema te plaatsen kunnen in de [schemaverwezenlijking zelfstudie](../../../xdm/tutorials/create-schema-ui.md#identity-field)worden gevonden.
 
-Om het schema voor toe te laten [!DNL Profile], klik de naam van het schema in de linkerspoorstaaf om de de eigenschappen *[!UICONTROL van het]* Schema dialoog in het rechterspoor te openen. Klik vanaf hier op de schakelknop **[!UICONTROL Profiel]** .
+Om het schema voor toe te laten [!DNL Profile], klik de naam van het schema in de linkerspoorstaaf om de de eigenschappen **[!UICONTROL van het]** Schema dialoog in het rechterspoor te openen. Klik vanaf hier op de schakelknop **[!UICONTROL Profiel]** .
 
 ![](../assets/iab/profile-enable-profile.png)
 
@@ -126,11 +126,11 @@ Klik tot slot op **[!UICONTROL Opslaan]** om uw wijzigingen te bevestigen.
 
 ### Een op tijdreeksen gebaseerd toestemmingsschema maken {#event-schema}
 
-Van het **[!UICONTROL Browse]** lusje in de werkruimte *[!UICONTROL van]Schema *, creeer een nieuw schema dat op de**[!DNL XDM ExperienceEvent]klasse **wordt gebaseerd. Als u het schema hebt geopend in de Schema-editor, klikt u op **[!UICONTROL Toevoegen]**onder de sectie *[!UICONTROL Mixins]*links op het canvas.
+Van het **[!UICONTROL Browse]** lusje in de werkruimte **[!UICONTROL van]Schema**, creeer een nieuw schema dat op de **[!DNL XDM ExperienceEvent]klasse** wordt gebaseerd. Als u het schema hebt geopend in de Schema-editor, klikt u op **[!UICONTROL Toevoegen]** onder de sectie **[!UICONTROL Mixins]** links op het canvas.
 
 ![](../assets/iab/add-mixin-event.png)
 
-Het dialoogvenster *[!UICONTROL Toevoegen]* wordt geopend. Selecteer hier in de lijst de optie **[!UICONTROL Geniet van een privacymix]** voor gebeurtenissen. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo gemakkelijker de mix te vinden. Als de mix is geselecteerd, klikt u op **[!UICONTROL Toevoegen]**.
+Het dialoogvenster **[!UICONTROL Toevoegen]** wordt geopend. Selecteer hier in de lijst de optie **[!UICONTROL Geniet van een privacymix]** voor gebeurtenissen. U kunt de zoekbalk desgewenst gebruiken om de resultaten te beperken en zo gemakkelijker de mix te vinden. Als de mix is geselecteerd, klikt u op **[!UICONTROL Toevoegen]**.
 
 ![](../assets/iab/add-event-privacy.png)
 
@@ -161,11 +161,11 @@ Voor de volgende pagina, **[!UICONTROL creeer dataset van schema]**.
 
 ![](../assets/iab/dataset-create-from-schema.png)
 
-De _[!UICONTROL Create dataset van het schemawerkschema]_verschijnt, die bij de_[!UICONTROL  Uitgezochte schemastap]_ beginnen. Zoek in de opgegeven lijst een van de toestemmingsschema&#39;s die u eerder hebt gemaakt. U kunt optioneel de zoekopdracht gebruiken om de resultaten te beperken en het schema gemakkelijker te vinden. Klik op het keuzerondje naast het schema om het te selecteren en klik vervolgens op **[!UICONTROL Volgende]** om door te gaan.
+De **[!UICONTROL Create dataset van het schemawerkschema]** verschijnt, die bij de **[!UICONTROL Uitgezochte schemastap]** beginnen. Zoek in de opgegeven lijst een van de toestemmingsschema&#39;s die u eerder hebt gemaakt. U kunt optioneel de zoekopdracht gebruiken om de resultaten te beperken en het schema gemakkelijker te vinden. Klik op het keuzerondje naast het schema om het te selecteren en klik vervolgens op **[!UICONTROL Volgende]** om door te gaan.
 
 ![](../assets/iab/dataset-select-schema.png)
 
-De stap Gegevensset __configureren wordt weergegeven. Geef een unieke, gemakkelijk herkenbare naam en beschrijving voor de gegevensset op voordat u op**[!UICONTROL  Voltooien ]**klikt.
+De stap Gegevensset **** configureren wordt weergegeven. Geef een unieke, gemakkelijk herkenbare naam en beschrijving voor de gegevensset op voordat u op **[!UICONTROL Voltooien]** klikt.
 
 ![](../assets/iab/dataset-configure.png)
 
