@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Explorer;azure data explorer
 solution: Experience Platform
 title: Azure Data Explorer-connector
 topic: overview
+description: De documentatie hieronder verstrekt informatie over hoe te om Azure Data Explorer aan Platform te verbinden gebruikend APIs of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
