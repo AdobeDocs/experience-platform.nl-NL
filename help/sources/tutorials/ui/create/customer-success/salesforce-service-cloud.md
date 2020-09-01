@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Salesforce Service Cloud;salesforce service cloud
 solution: Experience Platform
 title: Een Salesforce Service Cloud-bronconnector maken in de gebruikersinterface
 topic: overview
+description: Deze zelfstudie biedt stappen voor het maken van een Salesforce Service Cloud-bronconnector (hierna "SSC" genoemd) via de gebruikersinterface van het Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
