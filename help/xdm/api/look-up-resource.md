@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;lookup;Lookup;get;GET
 solution: Experience Platform
 title: Een resource opzoeken
+description: U kunt specifieke middelen in de Registratie API van het Schema omhoog kijken door een verzoek te doen van de GET dat $id (URL-Gecodeerde URI) van het middel in de verzoekweg omvat.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 1%
+source-wordcount: '203'
+ht-degree: 0%
 
 ---
 
