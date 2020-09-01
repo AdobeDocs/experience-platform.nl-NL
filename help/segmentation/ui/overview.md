@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruikershandleiding voor segmentatieservice
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1359'
 ht-degree: 0%
 
 ---
@@ -155,13 +155,13 @@ Meer informatie over streamingsegmentatie vindt u in de gebruikershandleiding vo
 >
 >Opdat het stromen segmentatie aan het werk is, zult u geplande segmentatie voor de organisatie moeten toelaten. Voor meer informatie over het inschakelen van geplande segmentatie raadpleegt u [de sectie streamingsegmentatie in deze gebruikershandleiding](#scheduled-segmentation).
 
-## Beleidsovertredingen DULE
+## Beleidsovertredingen
 
 >[!NOTE]
 >
->De DULE beleidsschendingen zijn slechts van toepassing als u een segment creeert dat aan een bestemming is toegewezen.
+>Beleidsovertredingen zijn alleen van toepassing als u een segment maakt dat aan een doel is toegewezen.
 
-Zodra u klaar bent creërend uw segment, zal het segment door worden geanalyseerd [!DNL Data Governance] om ervoor te zorgen dat er geen beleidsschendingen binnen het segment zijn. Voor meer informatie over DULE en beleidsovertredingen raadpleegt u het overzicht [van de](../../data-governance/labels/overview.md)gegevensgebruikslabel.
+Als u klaar bent met het maken van uw segment, wordt het segment geanalyseerd door Adobe Experience Platform Data Governance om ervoor te zorgen dat er geen beleidsovertredingen binnen het segment plaatsvinden. Zie het [[!DNL Data Governance] overzicht](../../data-governance/home.md) voor meer informatie.
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
