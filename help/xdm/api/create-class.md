@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;class;Class;classes;Classes;create
 solution: Experience Platform
 title: Een klasse maken
+description: De primaire bouwsteen van een schema is een klasse. De klasse bevat de minimale set velden die moet worden gedefinieerd om de kerngegevens van een schema vast te leggen. Als u bijvoorbeeld een schema voor auto's en vrachtwagens zou ontwerpen, zouden deze waarschijnlijk een klasse gebruiken met de naam Vehicle die de algemene basiseigenschappen van alle voertuigen beschrijft.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Een klasse maken
 
-De primaire bouwsteen van een schema is een klasse. De klasse bevat de minimale set velden die moet worden gedefinieerd om de kerngegevens van een schema vast te leggen. Als u bijvoorbeeld een schema voor auto&#39;s en vrachtwagens zou ontwerpen, zou het meest waarschijnlijk een klasse gebruiken met de naam Vehicle die de algemene basiseigenschappen van alle voertuigen beschrijft.
+De primaire bouwsteen van een schema is een klasse. De klasse bevat de minimale set velden die moet worden gedefinieerd om de kerngegevens van een schema vast te leggen. Als u bijvoorbeeld een schema voor auto&#39;s en vrachtwagens zou ontwerpen, zouden deze waarschijnlijk een klasse gebruiken met de naam Vehicle die de algemene basiseigenschappen van alle voertuigen beschrijft.
 
 Er zijn verscheidene standaardklassen die door Adobe en andere [!DNL Experience Platform] partners worden verstrekt, maar u kunt uw eigen klassen ook bepalen en hen bewaren aan [!DNL Schema Registry]. Vervolgens kunt u een schema samenstellen waarmee de gemaakte klasse wordt geïmplementeerd en combinaties definiëren die compatibel zijn met de zojuist gedefinieerde klasse.
 
