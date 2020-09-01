@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Abonneren op gebeurtenissen voor gegevensinvoer
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Nadat u een nieuw project hebt gemaakt, navigeert u naar het overzichtsscherm va
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-Het dialoogvenster Gebeurtenissen __ toevoegen wordt weergegeven. Klik op **[!UICONTROL Experience Platform]** om de lijst met beschikbare opties te filteren en klik vervolgens op **[!UICONTROL Platform-meldingen]** voordat u op **[!UICONTROL Volgende]** klikt.
+Het dialoogvenster Gebeurtenissen **** toevoegen wordt weergegeven. Klik op **[!UICONTROL Experience Platform]** om de lijst met beschikbare opties te filteren en klik vervolgens op **[!UICONTROL Platform-meldingen]** voordat u op **[!UICONTROL Volgende]** klikt.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
