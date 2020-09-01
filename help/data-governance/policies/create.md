@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;data governance;data usage pol
 solution: Experience Platform
 title: Een beleid voor gegevensgebruik maken
 topic: policies
-description: De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste mechanisme van het Beheer van Gegevens van Adobe Experience Platform. De DULE Dienst API van het Beleid staat u toe om DULE beleid tot stand te brengen en te beheren om te bepalen welke marketing acties tegen gegevens kunnen worden genomen die bepaalde etiketten DULE bevatten. Dit document verstrekt een geleidelijke zelfstudie voor het creëren van een DULE beleid gebruikend de Dienst API van het Beleid.
+description: De dienst API van het Beleid staat u toe om het beleid van het gegevensgebruik tot stand te brengen en te beheren om te bepalen welke marketing acties tegen gegevens kunnen worden genomen die bepaalde etiketten van het gegevensgebruik bevatten. Dit document verstrekt een geleidelijke zelfstudie voor het creëren van een beleid gebruikend de Dienst API van het Beleid.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1209'
 ht-degree: 0%
 
 ---
@@ -15,33 +15,33 @@ ht-degree: 0%
 
 # Een beleid voor gegevensgebruik maken in de API
 
-De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste mechanisme van Adobe Experience Platform [!DNL Data Governance]. De [DULE Dienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) van het Beleid staat u toe om DULE beleid tot stand te brengen en te beheren om te bepalen welke marketing acties tegen gegevens kunnen worden genomen die bepaalde etiketten DULE bevatten.
+Met de API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) Beleidsservice kunt u beleid voor gegevensgebruik maken en beheren om te bepalen welke marketingacties kunnen worden uitgevoerd tegen gegevens die bepaalde labels voor gegevensgebruik bevatten.
 
-Dit document biedt een stapsgewijze zelfstudie voor het maken van een DULE-beleid met de [!DNL Policy Service] API. Voor een uitvoerigere gids voor de verschillende verrichtingen beschikbaar in API, zie de de ontwikkelaarsgids [van de Dienst van het](../api/getting-started.md)Beleid.
+Dit document bevat een stapsgewijze zelfstudie voor het maken van beleid met de [!DNL Policy Service] API. Voor een uitvoerigere gids voor de verschillende verrichtingen beschikbaar in API, zie de de ontwikkelaarsgids [van de Dienst van het](../api/getting-started.md)Beleid.
 
 ## Aan de slag
 
-Dit leerprogramma vereist een werkend inzicht in de volgende belangrijkste concepten betrokken bij het creëren van en het evalueren van DULE beleid:
+Deze zelfstudie vereist een goed begrip van de volgende belangrijke concepten betrokken bij het creëren en evalueren van beleid:
 
 * [[!DNL-gegevensbeheer]](../home.md): Het kader waarmee de naleving van het gegevensgebruik wordt [!DNL Platform] afgedwongen.
 * [Labels](../labels/overview.md)voor gegevensgebruik: Labels voor gegevensgebruik worden toegepast op XDM-gegevensvelden en geven beperkingen op voor de manier waarop die gegevens kunnen worden benaderd.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 * [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om aanroepen naar de DULE [!DNL Policy Service] API te kunnen uitvoeren, inclusief vereiste headers en hoe u API-voorbeeldaanroepen kunt lezen.
+Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de [!DNL Policy Service] API te kunnen uitvoeren, inclusief vereiste headers en hoe u API-voorbeeldaanroepen kunt lezen.
 
 ## Een marketingactie definiëren {#define-action}
 
 In het [!DNL Data Governance] kader is een marketingactie een actie die een [!DNL Experience Platform] gegevensconsument onderneemt en waarvoor moet worden gecontroleerd op schendingen van het beleid inzake gegevensgebruik.
 
-De eerste stap bij het creëren van een DULE beleid is te bepalen welke marketing actie het beleid zal evalueren. U kunt dit op een van de volgende manieren doen:
+De eerste stap bij het creëren van een beleid van het gegevensgebruik is te bepalen welke marketing actie het beleid zal evalueren. U kunt dit op een van de volgende manieren doen:
 
 * [Een bestaande marketingactie opzoeken](#look-up)
 * [Nieuwe marketingactie maken](#create-new)
 
 ### Een bestaande marketingactie opzoeken {#look-up}
 
-U kunt bestaande marketing acties opzoeken die door uw DULE beleid moeten worden geëvalueerd door een verzoek van de GET tot één van de `/marketingActions` eindpunten te richten.
+U kunt bestaande marketingacties opzoeken die door uw beleid moeten worden geëvalueerd door een GET-aanvraag in te dienen bij een van de `/marketingActions` eindpunten.
 
 **API-indeling**
 
@@ -122,7 +122,7 @@ Een succesvolle reactie retourneert het totale aantal gevonden marketingacties (
 | --- | --- |
 | `_links.self.href` | Elk item in de `children` array bevat een URI-id voor de vermelde marketingactie. |
 
-Wanneer u de marketing actie vindt die u wilt gebruiken, registreer de waarde van zijn `href` bezit. Deze waarde wordt gebruikt tijdens de volgende stap van het [creëren van een DULE beleid](#create-policy).
+Wanneer u de marketing actie vindt die u wilt gebruiken, registreer de waarde van zijn `href` bezit. Deze waarde wordt gebruikt tijdens de volgende stap van het [creëren van een beleid](#create-policy).
 
 ### Create a new marketing action {#create-new}
 
@@ -188,13 +188,13 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de
 | --- | --- |
 | `_links.self.href` | De URI-id van de marketingactie. |
 
-Registreer URI identiteitskaart van de pas gecreëerde marketing actie, aangezien het in de volgende stap van het creëren van een DULE beleid zal worden gebruikt.
+Registreer de URI-id van de zojuist gemaakte marketingactie, zoals deze wordt gebruikt in de volgende stap van het maken van een beleid.
 
-## Een DULE-beleid maken {#create-policy}
+## Een beleid maken {#create-policy}
 
-Als u een nieuw beleid wilt maken, moet u de URI-id van een marketingactie opgeven met een expressie van de DULE-labels die die marketingactie verbieden.
+Als u een nieuw beleid wilt maken, moet u de URI-id van een marketingactie opgeven met een expressie van de gebruikslabels die die marketingactie verbiedt.
 
-Deze expressie wordt een **beleidsexpressie** genoemd en is een object dat (A) een label DULE bevat, of (B) een operator en operanden, maar niet beide. Elke operand is op zijn beurt ook een beleidsexpressieobject. Een beleid voor het exporteren van gegevens naar derden kan bijvoorbeeld worden verboden als er `C1 OR (C3 AND C7)` labels aanwezig zijn. Deze expressie wordt opgegeven als:
+Deze expressie wordt een **beleidsexpressie** genoemd en is een object dat (A) een label of (B) een operator en operanden bevat, maar niet beide. Elke operand is op zijn beurt ook een beleidsexpressieobject. Een beleid voor het exporteren van gegevens naar derden kan bijvoorbeeld worden verboden als er `C1 OR (C3 AND C7)` labels aanwezig zijn. Deze expressie wordt opgegeven als:
 
 ```json
 "deny": {
@@ -222,7 +222,7 @@ Deze expressie wordt een **beleidsexpressie** genoemd en is een object dat (A) e
 >
 >Alleen de operatoren OR en AND worden ondersteund.
 
-Zodra u uw beleidsuitdrukking hebt gevormd, kunt u een nieuw DULE beleid tot stand brengen door een verzoek van de POST aan het `/policies/custom` eindpunt te doen.
+Zodra u uw beleidsuitdrukking hebt gevormd, kunt u een nieuw beleid tot stand brengen door een verzoek van de POST aan het `/policies/custom` eindpunt te doen.
 
 **API-indeling**
 
@@ -232,7 +232,7 @@ POST /policies/custom
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een DULE beleid genoemd &quot;Gegevens van de Uitvoer aan Derde door een marketing actie en beleidsuitdrukking in de verzoeklading te verstrekken.
+Met het volgende verzoek wordt een beleid gemaakt met de naam &quot;Gegevens exporteren naar derden&quot; door een marketingactie en een beleidsexpressie op te geven in de payload van het verzoek.
 
 ```shell
 curl -X POST \
@@ -268,7 +268,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `marketingActionRefs` | Een array met de `href` waarde van een marketingactie, verkregen in de [vorige stap](#define-action). In het bovenstaande voorbeeld wordt slechts één marketingactie vermeld, maar er kunnen ook meerdere acties worden uitgevoerd. |
-| `deny` | Het beleidsexpressieobject. Bepaalt de etiketten DULE en de voorwaarden die het beleid zouden veroorzaken om de marketing actie te verwerpen in `marketingActionRefs`. |
+| `deny` | Het beleidsexpressieobject. Definieert de gebruikslabels en -voorwaarden die ertoe zouden leiden dat het beleid de marketingactie waarnaar wordt verwezen in `marketingActionRefs`. |
 
 **Antwoord**
 
@@ -319,17 +319,17 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van he
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `id` | Een read-only, systeem-geproduceerde waarde die uniek het DULE beleid identificeert. |
+| `id` | Een alleen-lezen, door het systeem gegenereerde waarde die het beleid op unieke wijze identificeert. |
 
-Registreer identiteitskaart van URI van het pas gecreëerde DULE beleid, aangezien het in de volgende stap wordt gebruikt om het beleid toe te laten.
+Registreer URI identiteitskaart van het onlangs gecreëerde beleid, aangezien het in de volgende stap wordt gebruikt om het beleid toe te laten.
 
-## Het DULE-beleid inschakelen
+## Het beleid inschakelen
 
 >[!NOTE]
 >
->Hoewel deze stap facultatief is als u uw DULE beleid in `DRAFT` status wilt verlaten, gelieve te merken dat door gebrek een beleid zijn status moet hebben aan `ENABLED` om aan evaluatie deel te nemen. Zie de zelfstudie over het [afdwingen van DULE-beleid](../enforcement/api-enforcement.md) voor informatie over het maken van uitzonderingen voor beleid in `DRAFT` status.
+>Hoewel deze stap optioneel is als u uw beleid in de `DRAFT` `ENABLED` status wilt laten, moet een beleid standaard zijn status hebben ingesteld om aan de evaluatie te kunnen deelnemen. Zie de handleiding over [beleidshandhaving](../enforcement/api-enforcement.md) voor informatie over hoe u uitzonderingen voor beleid in `DRAFT` status kunt maken.
 
-Door gebrek, DULE beleid dat hun `status` bezit heeft worden geplaatst om `DRAFT` niet aan evaluatie deel te nemen. U kunt uw beleid voor evaluatie toelaten door een verzoek van PATCH aan het `/policies/custom/` eindpunt te doen en het unieke herkenningsteken voor het beleid aan het eind van de verzoekweg te verstrekken.
+Door gebrek, nemen het beleid dat hun `status` bezit heeft aan `DRAFT` niet aan evaluatie deel. U kunt uw beleid voor evaluatie toelaten door een verzoek van PATCH aan het `/policies/custom/` eindpunt te doen en het unieke herkenningsteken voor het beleid aan het eind van de verzoekweg te verstrekken.
 
 **API-indeling**
 
@@ -343,7 +343,7 @@ PATCH /policies/custom/{POLICY_ID}
 
 **Verzoek**
 
-Het volgende verzoek voert een verrichting van de PATCH op het `status` bezit van het DULE beleid uit, veranderend zijn waarde van `DRAFT` in `ENABLED`.
+Het volgende verzoek voert een verrichting van de PATCH op het `status` bezit van het beleid uit, veranderend zijn waarde van `DRAFT` in `ENABLED`.
 
 ```shell
 curl -X PATCH \
