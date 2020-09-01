@@ -5,9 +5,9 @@ title: Gebruikershandleiding voor gegevensbestanden
 topic: datasets
 description: Deze gebruikershandleiding voor gegevenssets bevat instructies voor het uitvoeren van algemene handelingen bij het werken met gegevenssets in de gebruikersinterface van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen va
    * [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [Schema-editor](../../xdm/tutorials/create-schema-ui.md): Leer hoe u uw eigen aangepaste XDM-schema&#39;s maakt met behulp van de [!DNL Schema Editor] [!DNL Platform] gebruikersinterface.
 * [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [[!DNL-gegevensbeheer]](../../data-governance/home.md): Ervoor zorgen dat de regels, beperkingen en beleidsregels betreffende het gebruik van klantgegevens worden nageleefd.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Ervoor zorgen dat de regels, beperkingen en beleidsregels betreffende het gebruik van klantgegevens worden nageleefd.
 
 ## Gegevensbestanden weergeven
 
@@ -114,7 +114,7 @@ Als een dataset reeds gegevens bevat en dan toegelaten voor [!DNL Profile], word
 
 ## Beheer van gegevens beheren en afdwingen op een gegevensset
 
-De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste mechanisme van het gegevensbeheer voor [!DNL Experience Platform]. De etiketten van DULE staan u toe om datasets en gebieden volgens gebruiksbeleid te categoriseren die op die gegevens van toepassing zijn. Zie het overzicht [van het Beheer van](../../data-governance/home.md) Gegevens om meer over etiketten te leren, of naar de de etiketteringsgebruikersgids [van het](../../data-governance/labels/overview.md) gegevensgebruik voor instructies te verwijzen over hoe te om etiketten op datasets toe te passen.
+Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Zie het overzicht [van het Beheer van](../../data-governance/home.md) Gegevens om meer over etiketten te leren, of naar de de etiketteringsgebruikersgids [van het](../../data-governance/labels/overview.md) gegevensgebruik voor instructies te verwijzen over hoe te om etiketten op datasets toe te passen.
 
 ## Een gegevensset verwijderen
 
