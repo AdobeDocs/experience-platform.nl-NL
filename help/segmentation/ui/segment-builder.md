@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;segment;Segment;segment builder;Segment builder
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: Gebruikershandleiding voor Segmentatiesegment Builder
 topic: ui guide
 description: 'De Bouwer van het segment verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
 source-wordcount: '1723'
 ht-degree: 0%
