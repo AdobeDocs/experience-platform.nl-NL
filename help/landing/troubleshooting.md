@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Handleiding voor veelgestelde vragen over Adobe Experience Platforms en probleemoplossing
+title: Adobe Experience Platform - Veelgestelde vragen en handleiding voor probleemoplossing
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 9eeddfaf3e704d66b81f983afcdf5ef3c45c6075
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '1951'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # [!DNL Platform] Veelgestelde vragen en handleiding voor probleemoplossing
 
-Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform en een gids voor probleemoplossing op hoog niveau voor algemene fouten die in elke [!DNL Experience Platform] API kunnen worden aangetroffen. Voor het oplossen van problemengidsen op de individuele [!DNL Platform] diensten, zie de hieronder [dienst het oplossen van problemenfolder](#service-troubleshooting-directory) .
+Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform en een gids voor probleemoplossing op hoog niveau voor algemene fouten die in een [!DNL Experience Platform] API kunnen worden aangetroffen. Voor het oplossen van problemengidsen op de individuele [!DNL Platform] diensten, zie de hieronder [dienst het oplossen van problemenfolder](#service-troubleshooting-directory) .
 
 ## Veelgestelde vragen {#faq}
 
@@ -22,7 +22,7 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over Adobe Exper
 
 ## Wat zijn API&#39; [!DNL Experience Platform] s? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] biedt veelvoudige RESTful APIs aan die HTTP- verzoeken om tot [!DNL Platform] middelen gebruiken. Deze dienst APIs elk stelt veelvoudige eindpunten bloot, en staat u toe om verrichtingen aan lijst (GET), raadpleging (GET) uit te voeren, (PUT en/of PATCH) uit te geven, en (DELETE) middelen te schrappen. Raadpleeg de [API-naslagdocumentatie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) bij Adobe I/O voor meer informatie over specifieke eindpunten en bewerkingen die beschikbaar zijn voor elke service.
+[!DNL Experience Platform] biedt veelvoudige RESTful APIs aan die HTTP- verzoeken om tot [!DNL Platform] middelen gebruiken. Deze dienst APIs elk stelt veelvoudige eindpunten bloot, en staat u toe om verrichtingen aan lijst (GET), raadpleging (GET) uit te voeren, (PUT en/of PATCH), en (DELETE) middelen uit te geven. Raadpleeg de [API-naslagdocumentatie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) bij Adobe I/O voor meer informatie over specifieke eindpunten en bewerkingen die beschikbaar zijn voor elke service.
 
 ## Hoe kan ik een API-aanvraag opmaken? {#how-do-i-format-an-api-request}
 
@@ -30,7 +30,7 @@ De aanvraagindelingen variëren afhankelijk van de gebruikte [!DNL Platform] API
 
 ### Voorbeeld-API-aanroepen lezen
 
-De documentatie voor [!DNL Experience Platform] toont voorbeeld API vraag op twee verschillende manieren. Eerst, wordt de vraag voorgesteld in zijn **API formaat**, een malplaatjevertegenwoordiging die slechts de verrichting (GET, POST, PUT, PATCH, DELETE) en het eindpunt toont dat (bijvoorbeeld, `/global/classes`) wordt gebruikt. Sommige malplaatjes tonen ook de plaats van variabelen helpen illustreren hoe een vraag zou moeten worden geformuleerd, zoals `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
+De documentatie voor [!DNL Experience Platform] toont voorbeeld API vraag op twee verschillende manieren. Eerst, wordt de vraag voorgesteld in zijn **API formaat**, een malplaatjevertegenwoordiging die slechts de verrichting (GET, POST, PUT, PATCH, DELETE) toont en het eindpunt dat (bijvoorbeeld, `/global/classes`) wordt gebruikt. Sommige malplaatjes tonen ook de plaats van variabelen helpen illustreren hoe een vraag zou moeten worden geformuleerd, zoals `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
 
 De vraag wordt dan getoond als cURL bevelen in een **Verzoek**, die de noodzakelijke kopballen en volledige &quot;basisweg&quot;nodig omvat om met API met succes in wisselwerking te staan. Het basispad moet vooraf aan alle eindpunten worden toegevoegd. Het eerder vermelde `/global/classes` eindpunt wordt bijvoorbeeld `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. U zult het formaat van API/verzoekpatroon door de documentatie zien, en zal naar verwachting de volledige weg gebruiken die in het voorbeeldVerzoek wordt getoond wanneer het maken van uw eigen vraag aan Platform APIs.
 
@@ -142,11 +142,11 @@ De volgende statuscodes kunnen worden gevonden op elke [!DNL Experience Platform
 
 | Statuscode | Beschrijving | Mogelijke oorzaken |
 --- | --- | ---
-| 400 | Ongeldig verzoek | Het verzoek is niet correct samengesteld, bevat geen sleutelinformatie en/of bevat een onjuiste syntaxis. |
+| 400 | Ongeldig verzoek | Het verzoek is onjuist samengesteld, bevat geen sleutelinformatie en/of bevat een onjuiste syntaxis. |
 | 401 | Verificatie mislukt | De aanvraag heeft geen verificatiecontrole doorstaan. Uw toegangstoken ontbreekt of is ongeldig. Zie de [sectie voor tokenfouten](#oauth-token-is-missing) hieronder voor meer informatie. |
 | 403 | Verboden | De bron is gevonden, maar u hebt niet de juiste referenties om deze te bekijken. |
 | 404 | Niet gevonden | De gevraagde bron is niet gevonden op de server. De bron is mogelijk verwijderd of het gevraagde pad is onjuist ingevoerd. |
-| 500 | Interne serverfout | Dit is een serverfout. Als u vele gelijktijdige vraag maakt, kunt u de API grens bereiken en moet uw resultaten filtreren. (Zie de subhandleiding voor [!DNL Catalog Service] API-ontwikkelaars over het [filteren van gegevens](../catalog/api/filter-data.md) voor meer informatie.) Wacht even voordat u uw verzoek opnieuw probeert en neem contact op met de beheerder als het probleem zich blijft voordoen. |
+| 500 | Interne serverfout | Dit is een serverfout. Als u vele gelijktijdige vraag maakt, kunt u de API grens bereiken en moet uw resultaten filtreren. (Zie de subhandleiding voor [!DNL Catalog Service] API-ontwikkelaars voor [het filteren van gegevens](../catalog/api/filter-data.md) voor meer informatie.) Wacht even voordat u uw verzoek opnieuw probeert en neem contact op met de beheerder als het probleem zich blijft voordoen. |
 
 ## Koptekstfouten aanvragen {#request-header-errors}
 
@@ -238,16 +238,15 @@ Dit foutbericht wordt weergegeven wanneer een POST-, PUT- of PATCH-aanvraag een 
 Hieronder volgt een lijst met probleemoplossingsgidsen en API-naslagdocumentatie voor [!DNL Experience Platform] API&#39;s. Elke het oplossen van problemengids verstrekt antwoorden aan vaak gestelde vragen en oplossingen aan problemen die voor de individuele [!DNL Platform] diensten specifiek zijn. De API verwijzingsdocumenten verstrekken een uitvoerige gids aan alle beschikbare eindpunten voor elke dienst, en tonen de instanties van de steekproefaanvraag, reacties, en foutencodes die u kunt ontvangen.
 
 | Service | API-referentie | Problemen oplossen |
---- | --- | ---
+| --- | --- | --- |
 | Toegangsbeheer | [API voor toegangsbeheer](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Handleiding voor probleemoplossing bij toegangsbeheer](../access-control/troubleshooting-guide.md) |
-| Catalogus | [Catalogusservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
-| Gegevensinname (batch) | [Data Ingestie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Handleiding voor het oplossen van problemen met inslikken](../ingestion/batch-ingestion/troubleshooting.md) |
-| Gegevensverwerking (streaming) | [Data Ingestie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Handleiding voor het oplossen van problemen bij het streamen](../ingestion/streaming-ingestion/troubleshooting.md) |
-| Werkruimte voor gegevenswetenschap | [API Sensei Machine Learning](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [Handleiding voor het oplossen van problemen in de Data Science Workspace](../data-science-workspace/troubleshooting-guide.md) |
-| Etikettering en handhaving van gegevensgebruik (DULE) | [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
-| Experience Data Model (XDM) | [Schema-register-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [Handleiding Veelgestelde vragen over XDM-systemen en probleemoplossing](../xdm/troubleshooting-guide.md) |
-| Identiteitsservice | [Identiteitsservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [Handleiding voor het oplossen van problemen met identiteitsservice](../identity-service/troubleshooting-guide.md) |
-| Query-service | [Query Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [Handleiding voor het oplossen van problemen bij Query Service](../query-service/troubleshooting-guide.md) |
-| Klantprofiel in realtime | [Real-time API voor klantprofiel](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [Handleiding voor probleemoplossing voor profielen](../profile/troubleshooting.md) |
+| Adobe Experience Platform-gegevensinscriptie | [[!DNL-API voor gegevensverwerking]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Handleiding voor](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[het oplossen van problemen bij het opnemen van batterijenHandleiding voor het oplossen van problemen bij het opnemen van streaming](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] gids voor problemen](../data-science-workspace/troubleshooting-guide.md) |
+| Adobe Experience Platform Data Governance | [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
+| Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [[!DNL Identity Service] gids voor problemen](../identity-service/troubleshooting-guide.md) |
+| Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [[!DNL Query Service] gids voor problemen](../query-service/troubleshooting-guide.md) |
+| Adobe Experience Platform-segmentatie | [[!DNL Segmentation API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
+| [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
+| [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] Veelgestelde vragen en handleiding voor probleemoplossing](../xdm/troubleshooting-guide.md) |
+| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] gids voor problemen](../profile/troubleshooting.md) |
 | Sandboxen | [Sandbox-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Richtlijnen voor het oplossen van problemen met sandboxen](../sandboxes/troubleshooting-guide.md) |
-| Segmentatie | [Segmentatie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
