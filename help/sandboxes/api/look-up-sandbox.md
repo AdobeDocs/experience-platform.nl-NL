@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;find sandbox;look up a sandbox
 solution: Experience Platform
 title: Sandbox opzoeken
 topic: developer guide
+description: U kunt een afzonderlijke sandbox opzoeken door een aanvraag voor een GET in te dienen waarin de eigenschap name van de sandbox is opgenomen in het aanvraagpad.
 translation-type: tm+mt
-source-git-commit: ef423a8c1b412315d03cddf7d8c351a232eb509b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
