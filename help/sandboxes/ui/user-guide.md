@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruikershandleiding voor sandbox
 topic: user guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met 
 
 ## Sandboxen weergeven
 
-Klik in de interface van het Experience Platform op **[!UICONTROL Sandboxen]** in de linkernavigatie om het dashboard _[!UICONTROL Sandboxen]_ te openen. Het dashboard bevat alle beschikbare sandboxen voor uw organisatie, inclusief het type sandbox (productie of ontwikkeling) en de status (actief, maken, verwijderen of mislukt).
+Klik in de interface van het Experience Platform op **[!UICONTROL Sandboxen]** in de linkernavigatie om het dashboard **[!UICONTROL Sandboxen]** te openen. Het dashboard bevat alle beschikbare sandboxen voor uw organisatie, inclusief het type sandbox (productie of ontwikkeling) en de status (actief, maken, verwijderen of mislukt).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -46,7 +46,7 @@ Als u een nieuwe sandbox wilt maken in de gebruikersinterface, klikt u op **[!UI
 
 ![](../images/ui/create-sandbox-button.png)
 
-Het dialoogvenster Sandbox __ maken wordt weergegeven en u wordt gevraagd een weergavetoetitel en naam voor de sandbox op te geven. De **weergavetitel** moet leesbaar zijn en moet beschrijvend genoeg zijn om gemakkelijk te kunnen worden herkend. De **[!UICONTROL naam]** van de sandbox is een id in kleine letters voor gebruik in API-aanroepen en moet daarom uniek en beknopt zijn.
+Het dialoogvenster Sandbox **** maken wordt weergegeven en u wordt gevraagd een weergavetoetitel en naam voor de sandbox op te geven. De **weergavetitel** moet leesbaar zijn en moet beschrijvend genoeg zijn om gemakkelijk te kunnen worden herkend. De **[!UICONTROL naam]** van de sandbox is een id in kleine letters voor gebruik in API-aanroepen en moet daarom uniek en beknopt zijn.
 
 When finished, click **[!UICONTROL Create]**.
 
@@ -56,7 +56,7 @@ When finished, click **[!UICONTROL Create]**.
 >
 >Aangezien u beperkt bent tot het maken van alleen niet-productie-sandboxtypen, is de optie **[!UICONTROL type]** vergrendeld bij Niet-productie en kan deze optie niet worden gemanipuleerd.
 
-Nadat u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe sandbox in het dashboard _[!UICONTROL Sandboxen]_ met de status &quot;[!UICONTROL Creating]&quot;. Nieuwe sandboxen nemen ongeveer 15 minuten in beslag om door het systeem te worden ingericht, waarna de status van deze sandboxen verandert in[!UICONTROL Actief].
+Nadat u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe sandbox in het dashboard **[!UICONTROL Sandboxen]** met de status &quot;[!UICONTROL Creating]&quot;. Nieuwe sandboxen nemen ongeveer 15 minuten in beslag om door het systeem te worden ingericht, waarna de status van deze sandboxen verandert in[!UICONTROL Actief].
 
 ![](../images/ui/sandbox-created.png)
 
@@ -96,7 +96,7 @@ Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen.
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
-Er wordt een bevestigingsbericht weergegeven en de sandbox wordt verwijderd uit de _[!UICONTROL sandboxwerkruimte]_ .
+Er wordt een bevestigingsbericht weergegeven en de sandbox wordt verwijderd uit de **[!UICONTROL sandboxwerkruimte]** .
 
 ## Volgende stappen
 
