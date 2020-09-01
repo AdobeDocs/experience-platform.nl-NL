@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 3%
@@ -35,7 +35,7 @@ Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en 
 | Functie | Beschrijving |
 |--- | ---|
 | Het tabblad Samengevoegd publiek in [!DNL Segment Builder] | De tabbladen [!UICONTROL _Segmenten_] en [!UICONTROL _Soorten publiek_] in het dialoogvenster [!DNL Segment Builder] zijn gecombineerd tot één [!UICONTROL _tabblad Soorten publiek_] . Dit lusje staat u toe om naar bestaand publiek te doorbladeren en te zoeken, dat u dan en in het canvas van de regelbouwer kunt slepen om een nieuwe segmentdefinitie tot stand te brengen. Verwijzen naar een publiek kan één van de volgende reeksen regellogica aan de nieuwe segmentdefinitie toevoegen: Het lidmaatschap van het publiek als regel, de volledige reeks regellogica die het referenced publiek bepaalde. |
-| Nieuwe locatie voor de kiezer voor het samenvoegbeleid | De locatie van de kiezer voor het samenvoegbeleid in de map [!DNL Segment Builder] is gewijzigd. Als u een samenvoegbeleid voor een segmentdefinitie wilt selecteren, klikt u op het tandwielpictogram op het tabblad [!UICONTROL _Velden_] en gebruikt u het vervolgkeuzemenu Beleid __ samenvoegen om het samenvoegbeleid te selecteren dat u wilt gebruiken. |
+| Nieuwe locatie voor de kiezer voor het samenvoegbeleid | De locatie van de kiezer voor het samenvoegbeleid in de map [!DNL Segment Builder] is gewijzigd. Als u een samenvoegbeleid voor een segmentdefinitie wilt selecteren, klikt u op het tandwielpictogram op het tabblad **[!UICONTROL Velden]** en gebruikt u het vervolgkeuzemenu Beleid **** samenvoegen om het samenvoegbeleid te selecteren dat u wilt gebruiken. |
 
 **Bekende problemen**
 
