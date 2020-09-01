@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Activeer binnenkomende brongegevens om klantenprofielen te bevolken
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Het scherm **[!UICONTROL Dataset-activiteit]** wordt weergegeven. De **[!UICONTR
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-De **[!UICONTROL Schema-editor]** wordt weergegeven en toont de structuur van het schema in het middelste canvas. Selecteer in het canvas het veld dat u als primaire identiteit wilt instellen. Selecteer onder het tabblad *[!UICONTROL Veldeigenschappen]* dat wordt weergegeven het selectievakje **[!UICONTROL Identiteit]** en vervolgens **[!UICONTROL Primaire identiteit]**. Selecteer ten slotte een geschikte naamruimte **** Identiteit en klik op **[!UICONTROL Toepassen]**.
+De **[!UICONTROL Schema-editor]** wordt weergegeven en toont de structuur van het schema in het middelste canvas. Selecteer in het canvas het veld dat u als primaire identiteit wilt instellen. Selecteer onder het tabblad **[!UICONTROL Veldeigenschappen]** dat wordt weergegeven het selectievakje **[!UICONTROL Identiteit]** en vervolgens **[!UICONTROL Primaire identiteit]**. Selecteer ten slotte een geschikte naamruimte **** Identiteit en klik op **[!UICONTROL Toepassen]**.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
