@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; payment; paypal
+keywords: Experience Platform;home;popular topics;Collect payment data;payment data
 solution: Experience Platform
 title: Betalingsgegevens verzamelen via bronconnectors en API's
 topic: overview
-description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een betalingstoepassing van een derde en het opnemen van gegevens in het Platform via bronconnectors en de Flow Service API.
+description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een betalingstoepassing en het opnemen ervan in het Platform via bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1743'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens va
 
 ## Aan de slag
 
-Deze zelfstudie vereist dat u toegang hebt tot een betalingssysteem via een geldige verbinding, en dat u informatie hebt over het bestand waarin u het bestand wilt plaatsen [!DNL Platform] (inclusief het pad en de structuur van het bestand). Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van een betalingstoepassing met de Flow Service API](../explore/payments.md) voordat u deze zelfstudie probeert.
+Deze zelfstudie vereist dat u toegang hebt tot een betalingssysteem via een geldige verbinding, en dat u informatie hebt over het bestand waarin u het bestand wilt plaatsen [!DNL Platform] (inclusief het pad en de structuur van het bestand). Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van een betalingstoepassing met behulp van de Flow Service API](../explore/payments.md) voordat u deze zelfstudie probeert.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
