@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;prepared statements;prepared;sql;
 solution: Experience Platform
 title: Vooraf voorbereide instructies
 topic: prepared statements
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 7%
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 # Vooraf voorbereide instructies
 
-In SQL, worden de voorbereide verklaringen gebruikt om gelijkaardige vragen of updates te templatiseren. Adobe Experience Platform [!DNL Query Service] steunt voorbereide verklaringen door een geparameterized vraag te gebruiken. Dit kan worden gebruikt om prestaties te optimaliseren, aangezien u een vraag niet meer zult moeten opnieuw parseren opnieuw en opnieuw.
+In SQL, worden de voorbereide verklaringen gebruikt om gelijkaardige vragen of updates te templatiseren. Adobe Experience Platform [!DNL Query Service] ondersteunt voorbereide instructies met behulp van een parameterized query. Dit kan worden gebruikt om prestaties te optimaliseren, aangezien u een vraag niet meer zult moeten opnieuw parseren opnieuw en opnieuw.
 
 ## Vooraf voorbereide instructies gebruiken
 
@@ -110,7 +110,7 @@ Wanneer dit wordt aangeroepen, ziet u precies dezelfde resultaten als voorheen:
 | 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canada |
 | 10001 | antoïne | duboe | 1967-03-14 | example2@example.com | Parijs | Frankrijk |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokyo | Japan |
-| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stockholm | Zweden |
+| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stockholm | Stockholm |
 | 10004 | aasir | kwijthaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
 | 10005 | fernando | rio | 2002-07-30 | example6@example.com | Santiago | Chili |
 
