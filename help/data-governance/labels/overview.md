@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;data governance;data usage lab
 solution: Experience Platform
 title: Overzicht van labels voor gegevensgebruik
 topic: labels
-description: De Etikettering en de Handhaving van het Gebruik van gegevens (DULE) is het belangrijkste mechanisme van het Beheer van Gegevens van Adobe Experience Platform. De eigenschappen DULE laten u toe om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen, die elk volgens het verwante beleid van het gegevensgebruik categoriseren. Dit document biedt een overzicht van labels voor gegevensgebruik (ook wel DULE-labels genoemd) in Experience Platform.
+description: Met Adobe Experience Platform Data Governance kunt u gegevensgebruikslabels toepassen op gegevenssets en velden, waarbij elk veld wordt ingedeeld volgens het beleid voor het gebruik van verwante gegevens. Dit document biedt een overzicht van labels voor gegevensgebruik in Experience Platform.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '614'
 ht-degree: 0%
 
 ---
