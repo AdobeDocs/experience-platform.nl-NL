@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Google Cloud Storage-connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -60,7 +60,7 @@ De pagina **[!UICONTROL Instellingen]** wordt weergegeven. Hier kunt u informati
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-De pagina **[!UICONTROL Interoperability]** bevat informatie over authentificatie, toegangstoetsen, en het standaardproject verbonden aan uw gebruikersrekening. Als u nog geen standaardproject voor interoperabele toegang hebt opgezet, kunt u omhoog van binnen het *[!UICONTROL Standaardproject voor interoperabele toegangssectie]* opstelling. Als reeds een standaardproject is gevestigd, zal de sectie een bevestiging tonen dat een project als gebrek is geplaatst.
+De pagina **[!UICONTROL Interoperability]** bevat informatie over authentificatie, toegangstoetsen, en het standaardproject verbonden aan uw gebruikersrekening. Als u nog geen standaardproject voor interoperabele toegang hebt opgezet, kunt u omhoog van binnen het **[!UICONTROL Standaardproject voor interoperabele toegangssectie]** opstelling. Als reeds een standaardproject is gevestigd, zal de sectie een bevestiging tonen dat een project als gebrek is geplaatst.
 
 Selecteer **[!UICONTROL Een sleutel]** maken om een nieuwe toegangs-id en een geheime toegangssleutel voor uw gebruikersaccount te genereren.
 
