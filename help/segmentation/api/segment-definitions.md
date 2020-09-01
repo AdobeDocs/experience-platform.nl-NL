@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment definition;segment definitions;api;API;
 solution: Experience Platform
 title: Segmentdefinities
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1041'
 ht-degree: 1%
@@ -465,7 +465,7 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefini
 
 ## Een specifieke segmentdefinitie verwijderen {#delete}
 
-U kunt verzoeken om een specifieke segmentdefinitie te schrappen door een DELETE verzoek aan het `/segment/definitions` eindpunt te doen en identiteitskaart van de segmentdefinitie te verstrekken u wenst om in de verzoekweg te schrappen.
+U kunt verzoeken om een specifieke segmentdefinitie te schrappen door een verzoek van DELETE aan het `/segment/definitions` eindpunt te doen en identiteitskaart van de segmentdefinitie te verstrekken u wenst om in de verzoekweg te schrappen.
 
 **API-indeling**
 
