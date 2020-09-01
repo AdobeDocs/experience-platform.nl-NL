@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;SFTP;FTP;ftp;sftp
 solution: Experience Platform
 title: Een FTP- of SFTP-bronconnector maken in de gebruikersinterface
 topic: overview
+description: Deze zelfstudie biedt stappen voor het maken van een FTP- of SFTP-bronconnector met behulp van de gebruikersinterface van het Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '562'
 ht-degree: 1%
 
 ---
