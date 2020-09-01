@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ingestion;ingest batch data;tutorial;batch ingestion;tutorial;ui guide;
 solution: Experience Platform
 title: Gegevens opnemen in Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Klik op **[!UICONTROL Inschakelen]** en de schakeloptie wordt blauw om aan te ge
 
 ## Gegevens toevoegen aan gegevensset
 
-Gegevens kunnen op verschillende manieren aan een gegevensset worden toegevoegd. U zou kunnen verkiezen om APIs of een partner van ETL zoals [!DNL Data Ingestion] of [!DNL Unifi] [!DNL Informatica]te gebruiken. Voor dit leerprogramma, zullen de gegevens aan de dataset worden toegevoegd gebruikend het **[!UICONTROL Add lusje van Gegevens]** binnen UI.
+Gegevens kunnen op verschillende manieren aan een gegevensset worden toegevoegd. U kunt ervoor kiezen API&#39; [!DNL Data Ingestion] s of een ETL-partner, zoals [!DNL Unifi] of [!DNL Informatica]. Voor dit leerprogramma, zullen de gegevens aan de dataset worden toegevoegd gebruikend het **[!UICONTROL Add lusje van Gegevens]** binnen UI.
 
 Als u gegevens aan de gegevensset wilt toevoegen, klikt u op het tabblad Gegevens **** toevoegen. U kunt nu bestanden slepen en neerzetten of op uw computer bladeren naar de bestanden die u wilt toevoegen.
 
