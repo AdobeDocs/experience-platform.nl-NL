@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van gedeeltelijke invoer van Adobe Experience Platform-batch
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 0%
@@ -89,7 +89,7 @@ Om een nieuwe bronverbinding tot stand te brengen, volg de vermelde stappen in h
 
 Met de **[!UICONTROL optie Partiële]** inname kunt u het gebruik van gedeeltelijke batch-inname in- of uitschakelen.
 
-De schakeloptie **[!UICONTROL Foutdiagnostiek]** wordt alleen weergegeven wanneer de schakeloptie **[!UICONTROL Partiële inname]** is uitgeschakeld. Met deze functie kunt u gedetailleerde foutberichten genereren [!DNL Platform] over ingesloten batches. Als de *[!UICONTROL schakeloptie Partiële inname]* is ingeschakeld, wordt de uitgebreide foutdiagnose automatisch afgedwongen.
+De schakeloptie **[!UICONTROL Foutdiagnostiek]** wordt alleen weergegeven wanneer de schakeloptie **[!UICONTROL Partiële inname]** is uitgeschakeld. Met deze functie kunt u gedetailleerde foutberichten genereren [!DNL Platform] over ingesloten batches. Als de **[!UICONTROL schakeloptie Partiële inname]** is ingeschakeld, wordt de uitgebreide foutdiagnose automatisch afgedwongen.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
