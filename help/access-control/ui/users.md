@@ -5,7 +5,7 @@ title: Gebruikers beheren voor een productprofiel
 topic: user guide
 description: In dit document wordt weergegeven hoe u gebruikers voor een productprofiel in de gebruikersinterface voor Adobe Experience Platform kunt beheren.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 1%
@@ -15,11 +15,11 @@ ht-degree: 1%
 
 # Gebruikers beheren voor een productprofiel
 
-Als u gebruikers wilt toewijzen aan of verwijderen uit een productprofiel, opent u de detailpagina van het profiel en gaat u naar het tabblad *[!UICONTROL Gebruikers]* . Klik hier op Gebruiker **** toevoegen.
+Als u gebruikers wilt toewijzen aan of verwijderen uit een productprofiel, opent u de detailpagina van het profiel en gaat u naar het tabblad **[!UICONTROL Gebruikers]** . Klik hier op Gebruiker **** toevoegen.
 
 ![add-users-button](../images/add-users-button.png)
 
-Het dialoogvenster Gebruiker ** toevoegen wordt weergegeven. Met het zoekveld kunt u gebruikers opzoeken en toevoegen op naam of via e-mail. Terwijl u typt, verschijnen de overeenstemmende gebruikers in een automatisch voltooid venster onder het tekstvak.
+Het dialoogvenster Gebruiker **** toevoegen wordt weergegeven. Met het zoekveld kunt u gebruikers opzoeken en toevoegen op naam of via e-mail. Terwijl u typt, verschijnen de overeenstemmende gebruikers in een automatisch voltooid venster onder het tekstvak.
 
 ![add-user-autocomplete](../images/add-user-autocomplete.png)
 
@@ -31,7 +31,7 @@ Als u een gebruiker hebt geselecteerd, klikt u op **[!UICONTROL Opslaan]** om de
 
 ![add-user-save](../images/add-user-save.png)
 
-Het tabblad *[!UICONTROL Gebruikers]* voor het productprofiel wordt opnieuw weergegeven, waar de toegevoegde gebruiker nu wordt weergegeven.
+Het tabblad **[!UICONTROL Gebruikers]** voor het productprofiel wordt opnieuw weergegeven, waar de toegevoegde gebruiker nu wordt weergegeven.
 
 ![toegevoegd door gebruiker](../images/user-added.png)
 
