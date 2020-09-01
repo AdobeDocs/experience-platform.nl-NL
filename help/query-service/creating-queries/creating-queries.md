@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;create queries;
 solution: Experience Platform
-title: Vragen maken
+title: Query’s maken
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '114'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
 
-# Vragen maken
+# Query’s maken
 
 Adobe Experience Platform [!DNL Query Service] verstrekt de macht om SQL vragen tegen datasets in [!DNL Data Lake] binnen in werking te stellen [!DNL Experience Platform]. Aangezien u SQL gebruikt om met datasets in het meer van Gegevens in wisselwerking te staan, is het belangrijk om te begrijpen dat [!DNL Query Service] automatisch bepaalde aspecten, zoals het creëren van SQL-veilige lijstnamen voor elke dataset in [!DNL Data Lake]het. Er zijn ook overwegingen rond het werken met hiërarchische gegevens in het [!DNL Data Lake], met inbegrip van het ontdekken van het schema waarop een dataset wordt gebaseerd en het verzekeren dat u het correcte gebied binnen het hiërarchische model selecteert.
 
