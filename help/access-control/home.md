@@ -5,7 +5,7 @@ topic: overview
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 translation-type: tm+mt
-source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 1%
@@ -32,7 +32,7 @@ Een werkschema op hoog niveau voor het verkrijgen en toewijzen van toegangsmacht
 - De beheerder kan de standaardprofielen [van het](#product-profiles) product bekijken of nieuwe profielen van het klantenproduct tot stand brengen zoals nodig.
 - De beheerder kan de machtigingen en gebruikers voor bestaande productprofielen bewerken.
 - Wanneer de beheerder een productprofiel maakt of bewerkt, voegt hij gebruikers aan het profiel toe met behulp van het tabblad **[!UICONTROL Gebruikers]** en verleent hij deze gebruikers machtigingen (zoals &quot;Datasetslezen&quot; of &quot;Schema&#39;sbeheren&quot;) via het tabblad **[!UICONTROL machtigingen]** . Op dezelfde manier kan de beheerder toegang tot sandboxen toewijzen via hetzelfde machtigingentabblad.
-- Wanneer de gebruikers login aan het [!DNL Experience Platform] gebruikersinterface, hun toegang tot [!DNL Platform] mogelijkheden wordt gedreven door de toestemmingen die aan hen van Stap 2 zijn verleend. Als een gebruiker bijvoorbeeld niet beschikt over de machtiging &quot;Datasetsweergeven&quot;, is het tabblad *[!UICONTROL Datasets]* in het zijmenu niet zichtbaar voor die gebruiker.
+- Wanneer de gebruikers login aan het [!DNL Experience Platform] gebruikersinterface, hun toegang tot [!DNL Platform] mogelijkheden wordt gedreven door de toestemmingen die aan hen van Stap 2 zijn verleend. Als een gebruiker bijvoorbeeld niet beschikt over de machtiging &quot;Datasetsweergeven&quot;, is het tabblad **[!UICONTROL Datasets]** in het zijmenu niet zichtbaar voor die gebruiker.
 
 Voor meer gedetailleerde stappen op hoe te om toegangsbeheer binnen te beheren, zie de [!DNL Experience Platform]gebruikershandleiding [](./ui/overview.md)van de toegangscontrole.
 
@@ -95,10 +95,10 @@ De volgende lijst schetst de beschikbare toestemmingen voor [!DNL Experience Pla
 | [!DNL Sandbox Administration] | [!UICONTROL Sandboxen weergeven] | Alleen-lezen toegang voor sandboxen die tot uw organisatie behoren. |
 | [!DNL Sandbox Administration] | [!UICONTROL Een sandbox opnieuw instellen] | Mogelijkheid om een sandbox opnieuw in te stellen. |
 | [!DNL Destinations] | [!UICONTROL Doelen beheren] | Toegang tot het lezen, creëren, uitgeven, en onbruikbaar maken bestemmingen.* |
-| [!DNL Destinations] | [!UICONTROL Doelen weergeven] | Alleen-lezen toegang tot beschikbare doelen op het tabblad *[!UICONTROL Catalogus]* en geverifieerde doelen op het tabblad *[!UICONTROL Bladeren]* .* |
+| [!DNL Destinations] | [!UICONTROL Doelen weergeven] | Alleen-lezen toegang tot beschikbare doelen op het tabblad **[!UICONTROL Catalogus]** en geverifieerde doelen op het tabblad **[!UICONTROL Bladeren]** .* |
 | [!DNL Destinations] | [!UICONTROL Doelen activeren] | Mogelijkheid om gegevens te activeren naar actieve doelen die zijn gemaakt. Voor deze machtiging is het vereist dat &quot;Doelen weergeven&quot; of &quot; [!UICONTROL Doelen beheren&quot;] wordt toegekend aan de gebruiker die bestemmingen activeert.* |
 | [!DNL Data Ingestion] | [!UICONTROL Bronnen beheren] | Toegang tot het lezen, maken, bewerken en uitschakelen van bronnen. |
-| [!DNL Data Ingestion] | [!UICONTROL Bronnen weergeven] | Alleen-lezen toegang tot beschikbare bronnen op het tabblad *[!UICONTROL Catalogus]* en geverifieerde bronnen op het tabblad *[!UICONTROL Bladeren]* . |
+| [!DNL Data Ingestion] | [!UICONTROL Bronnen weergeven] | Alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalogus]** en geverifieerde bronnen op het tabblad **[!UICONTROL Bladeren]** . |
 | [!DNL Data Science Workspace] | [!UICONTROL Werkruimte voor gegevenswetenschap beheren] | Toegang tot lezen, maken, bewerken en verwijderen [!DNL Data Science Workspace]. |
 
 _(*) Deze toestemming vereist bepalingen aan[!DNL Real-time Customer Data Platform]. Voor meer informatie betreffende real time CDP, gelieve te beginnen door het[overzicht](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)in real time te lezen CDP._
