@@ -5,9 +5,9 @@ title: Overzicht van gegevenssets
 topic: datasets
 description: Dit document verstrekt een overzicht op hoog niveau van datasets in Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '722'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Zie het [Overzicht](../../ingestion/home.md) van de Ingestie van Gegevens voor m
 
 ## Gebruikslabels toepassen op gegevenssets
 
-Met Adobe Experience Platform [!DNL Data Governance] kunt u klantgegevens beheren om ervoor te zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. Door de labels en handhaving van gegevensverbruik (DULE) als kernframework te gebruiken, [!DNL Data Governance] kunt u gebruikslabels toepassen om gegevens te categoriseren volgens het gebruiksbeleid dat op die gegevens van toepassing is.
+Met Adobe Experience Platform [!DNL Data Governance] kunt u klantgegevens beheren om ervoor te zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. Met het [!DNL Data Governance] framework kunt u gebruikslabels toepassen om gegevens te categoriseren volgens het gebruiksbeleid dat op die gegevens van toepassing is.
 
 De etiketten van het gebruik van gegevens kunnen op volledige datasets of individuele datasetgebieden worden toegepast. De etiketten die op het datasetniveau worden toegevoegd worden geërft door alle gebieden binnen die dataset.
 
