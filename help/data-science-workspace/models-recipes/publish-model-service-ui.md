@@ -5,7 +5,7 @@ title: Een model publiceren als service (UI)
 topic: Tutorial
 description: Met de Adobe Experience Platform Data Science Workspace kunt u uw getrainde en geëvalueerde Model als service publiceren, zodat gebruikers binnen uw IMS-organisatie gegevens kunnen scoren zonder dat ze zelf modellen hoeven te maken.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Raadpleeg de [API-zelfstudie](./publish-model-service-api.md)als u een model wil
 
 ## Score met een service {#access-a-service}
 
-1. Klik in Adobe Experience Platform op het tabblad **[!UICONTROL Services]** in de linkernavigatiekolom voor toegang tot de *[!UICONTROL servicegalerie]*. Zoek de service die u wilt gebruiken en klik op **[!UICONTROL Score]**.
+1. Klik in Adobe Experience Platform op het tabblad **[!UICONTROL Services]** in de linkernavigatiekolom voor toegang tot de **[!UICONTROL servicegalerie]**. Zoek de service die u wilt gebruiken en klik op **[!UICONTROL Score]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. Selecteer een aangewezen inputdataset voor de het scoren looppas, dan klik **[!UICONTROL daarna]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
@@ -53,4 +53,4 @@ Raadpleeg de [API-zelfstudie](./publish-model-service-api.md)als u een model wil
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen, hebt u met succes een Model als toegankelijke Dienst gepubliceerd, en gegevens die de nieuwe Dienst door de Galerij *[!UICONTROL van de]* Dienst worden gescoord. Ga verder met de volgende zelfstudie om te leren hoe u geautomatiseerde training en scoring op een service [kunt](./schedule-models-ui.md)plannen.
+Door deze zelfstudie te volgen, hebt u met succes een Model als toegankelijke Dienst gepubliceerd, en gegevens die de nieuwe Dienst door de Galerij **[!UICONTROL van de]** Dienst worden gescoord. Ga verder met de volgende zelfstudie om te leren hoe u geautomatiseerde training en scoring op een service [kunt](./schedule-models-ui.md)plannen.
