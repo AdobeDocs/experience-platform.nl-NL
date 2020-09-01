@@ -5,7 +5,7 @@ title: Verbinding maken met PSQL
 topic: connect
 description: 'PSQL is een opdrachtregelinterface die wordt weergegeven wanneer u Postgres op uw computer installeert. U kunt het installeren door deze instructies te volgen. '
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 1%
@@ -63,9 +63,9 @@ psql (PostgreSQL) 9.5.14
 
 ## Connect PSQL en [!DNL Query Service]
 
-Ga terug naar de [!DNL Platform] gebruikersinterface op de pagina Tools *[!UICONTROL voor]* Connect BI.
+Ga terug naar de [!DNL Platform] gebruikersinterface op de pagina Tools **[!UICONTROL voor]** Connect BI.
 
-Klik **[!UICONTROL exemplaar]** voor *[!UICONTROL Bevel]* PSQL.
+Klik **[!UICONTROL exemplaar]** voor **[!UICONTROL Bevel]** PSQL.
 
 ![Image](../images/clients/psql/connect-bi.png)
 
