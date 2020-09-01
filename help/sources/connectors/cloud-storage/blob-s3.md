@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Blob;Amazon S3;blob;Blob;S3;s3
 solution: Experience Platform
 title: Azure Blob- en Amazon S3-connector
 topic: overview
+description: In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen Azure Blob en Amazon S3 met Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 3cee9b2515d833a640b091a90cd2152f0c1b1e64
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
