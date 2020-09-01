@@ -5,7 +5,7 @@ seo-title: Gegevensbeheer in Real-time Customer Data Platform
 description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 seo-description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 0%
@@ -37,7 +37,7 @@ U kunt beperkingen voor het gegevensgebruik op een bestemming instellen door gev
 
 >[!NOTE]
 >
->Zie het overzicht [van beleidsregels voor](../../data-governance/policies/overview.md) gegevensgebruik in de [!DNL Experience Platform] documentatie voor meer informatie over marketingacties en het gebruik ervan in het gegevensgebruiksbeleid.
+>Zie het overzicht [van beleidsregels voor](../../data-governance/policies/overview.md) gegevensgebruik in de [!DNL Experience Platform] documentatie voor meer informatie over marketingacties en het gebruik ervan in het beleid voor gegevensgebruik.
 
 Het bepalen van marketing gebruiksgevallen op bestemmingen staat u toe om ervoor te zorgen dat om het even welke profielen of segmenten die naar die bestemmingen worden verzonden volgzaam met het beleid van het gegevensgebruik zijn. Daarom zou u aangewezen gevallen van het marketinggebruik aan uw bestemmingen moeten toevoegen die op de behoeften van uw organisatie worden gebaseerd om beleidsbeperkingen op activering af te dwingen.
 
@@ -76,7 +76,7 @@ Als een beleidsovertreding voorkomt in een poging om een segment te activeren (o
 
 ![](assets/violation-popover.png)
 
-Het tabblad *[!UICONTROL Details]* van de popover geeft de actie aan die de schending heeft veroorzaakt, de reden waarom de schending heeft plaatsgevonden en bevat suggesties voor het mogelijk oplossen van het probleem.
+Het tabblad **[!UICONTROL Details]** van de popover geeft de actie aan die de schending heeft veroorzaakt, de reden waarom de schending heeft plaatsgevonden en bevat suggesties voor het mogelijk oplossen van het probleem.
 
 Klik op **[!UICONTROL Gegevenslijn]** om de doelen, segmenten, samenvoegbeleidsregels of gegevenssets bij te houden waarvan de gegevenslabels de schending hebben veroorzaakt.
 
