@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;
 solution: Adobe Experience Platform
 title: Overzicht van het mixen van privacy
+description: De combinatie van de Voorkeur van de Privacy/van de Marketing (Toestemming) is een mengsel van de Gegevens van de Ervaring (XDM) dat bedoeld is om de inzameling van gebruikerstoestemmingen en voorkeur te steunen die door CMPs en andere bronnen van klanten worden geproduceerd. Dit document behandelt de structuur en het beoogde gebruik van de verschillende velden die door de vermenging worden verschaft.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 02014c503dc9d4597e1129cafe3ba86f4abe37e9
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1827'
 ht-degree: 0%
 
 ---
@@ -266,7 +267,7 @@ In de volgende tabel worden de toegestane waarden voor `xdm:basisOfProcessing`:
 
 | Waarde | Beschrijving |
 | --- | --- |
-| `consent` **(Standaard)** | Het verzamelen van gegevens voor het opgegeven doel is toegestaan, aangezien de persoon hiervoor uitdrukkelijk toestemming heeft gegeven. Dit is de standaardwaarde van `xdm:basisOfProcessing` als geen andere waarde wordt verstrekt. <br><br>**BELANGRIJK **: De waarden voor`xdm:choice`en`xdm:optOutValue`worden alleen ondersteund wanneer`xdm:basisOfProcessing`deze zijn ingesteld op`consent`. Als in`xdm:basisOfProcessing`plaats daarvan een van de andere waarden in deze tabel wordt gebruikt, worden de keuzes voor toestemming van het individu genegeerd. |
+| `consent` **(Standaard)** | Het verzamelen van gegevens voor het opgegeven doel is toegestaan, aangezien de persoon hiervoor uitdrukkelijk toestemming heeft gegeven. Dit is de standaardwaarde van `xdm:basisOfProcessing` als geen andere waarde wordt verstrekt. <br><br>**BELANGRIJK**: De waarden voor `xdm:choice` en `xdm:optOutValue` worden alleen ondersteund wanneer `xdm:basisOfProcessing` deze zijn ingesteld op `consent`. Als in `xdm:basisOfProcessing` plaats daarvan een van de andere waarden in deze tabel wordt gebruikt, worden de keuzes voor toestemming van het individu genegeerd. |
 | `compliance` | De verzameling van gegevens voor het gespecificeerde doel is vereist om te voldoen aan de wettelijke verplichtingen van het bedrijf. |
 | `contract` | De verzameling van gegevens voor het opgegeven doel is vereist om te voldoen aan contractuele verplichtingen met de betrokkene. |
 | `legitimate_interest` | Het legitieme zakelijke belang om deze gegevens voor het opgegeven doel te verzamelen en te verwerken, weegt zwaarder dan de potentiële schade die het voor het individu oplevert. |
@@ -304,7 +305,7 @@ In de volgende tabel worden de toegestane waarden voor `xdm:type`:
 | `offers` | Speciale aanbiedingen. |
 | `phone_calls` | Gegevens met betrekking tot telefoongesprekken. |
 | `push_notifications` | Pushmeldingen. |
-| `sms` | SMS-berichten. |
+| `sms` | Sms-berichten. |
 | `social_media` | Inhoud van sociale media. |
 | `snail_mail` | Berichten die via conventionele postbezorging worden verzonden. |
 | `third_party_content` | Inhoud of artikelen die op uw website worden weergegeven en die door een niet-verwante entiteit worden aangeboden. |
