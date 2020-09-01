@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Salesforce;salesforce
 solution: Experience Platform
 title: Een Salesforce-connector maken met de Flow Service API
 topic: overview
+description: Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om Platform met een rekening te verbinden Salesforce voor het verzamelen van de gegevens van CRM.
 translation-type: tm+mt
-source-git-commit: 5839e4695589455bd32b6e3e33a7c377343f920d
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '707'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Een [!DNL Salesforce] aansluiting maken met de [!DNL Flow Service] API
 
-De Dienst van de stroom wordt gebruikt om klantengegevens van diverse verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
 Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om verbinding [!DNL Platform] te maken met een [!DNL Salesforce] account voor het verzamelen van CRM-gegevens.
 
@@ -22,7 +23,7 @@ Als u liever de gebruikersinterface in wilt gebruiken [!DNL Experience Platform]
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
 * [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
