@@ -5,7 +5,7 @@ title: Handleiding voor ontwikkelaars van Privacys Service
 description: Gebruik de RESTful-API om de persoonlijke gegevens van de betrokkenen in Adobe Experience Cloud-toepassingen te beheren
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 0%
@@ -61,15 +61,15 @@ De stappen voor het genereren van deze waarden worden hieronder in detail bespro
 
 Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Voer vervolgens de stappen uit die worden beschreven in de zelfstudie over het [maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.
 
-Nadat u een nieuw project hebt gemaakt, klikt u op API **** toevoegen in het scherm _[!UICONTROL Projectoverzicht]_ .
+Nadat u een nieuw project hebt gemaakt, klikt u op API **** toevoegen in het scherm **[!UICONTROL Projectoverzicht]** .
 
 ![](../images/api/getting-started/add-api-button.png)
 
-Het scherm _[!UICONTROL Een API]_ toevoegen wordt weergegeven. Selecteer **[!UICONTROL Privacy Service-API]** in de lijst met beschikbare API&#39;s voordat u op **[!UICONTROL Volgende]** klikt.
+Het scherm **[!UICONTROL Een API]** toevoegen wordt weergegeven. Selecteer **[!UICONTROL Privacy Service-API]** in de lijst met beschikbare API&#39;s voordat u op **[!UICONTROL Volgende]** klikt.
 
 ![](../images/api/getting-started/add-privacy-service-api.png)
 
-Het scherm _[!UICONTROL Configure API]_ verschijnt. Selecteer de optie om een sleutelpaar **[!UICONTROL te]** produceren, dan klik **[!UICONTROL produceer sleutelpaar]** in de bodem-juiste hoek.
+Het scherm **[!UICONTROL Configure API]** verschijnt. Selecteer de optie om een sleutelpaar **[!UICONTROL te]** produceren, dan klik **[!UICONTROL produceer sleutelpaar]** in de bodem-juiste hoek.
 
 ![](../images/api/getting-started/generate-key-pair.png)
 
@@ -77,7 +77,7 @@ Het sleutelpaar wordt automatisch geproduceerd, en een dossier van het ZIP dat e
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-Zodra API aan het project is toegevoegd, verschijnt de projectpagina opnieuw op de _Privacy Service API overzichtspagina_ . Van hier, scrol neer aan de sectie van de Rekening van de _[!UICONTROL Dienst (JWT)]_ , die de volgende toegangsgeloofsbrieven verstrekt die in alle vraag aan [!DNL Privacy Service] API worden vereist:
+Zodra API aan het project is toegevoegd, verschijnt de projectpagina opnieuw op de _Privacy Service API overzichtspagina_ . Van hier, scrol neer aan de sectie van de Rekening van de **[!UICONTROL Dienst (JWT)]** , die de volgende toegangsgeloofsbrieven verstrekt die in alle vraag aan [!DNL Privacy Service] API worden vereist:
 
 * **[!UICONTROL CLIENT-ID]**: De client-id is de vereiste `{API_KEY}` voor die id die moet worden opgegeven in de header x-api-key.
 * **[!UICONTROL ORGANISATIE-ID]**: De organisatie-id is de `{IMS_ORG}` waarde die moet worden gebruikt in de header x-gw-ims-org-id.
@@ -88,7 +88,7 @@ Zodra API aan het project is toegevoegd, verschijnt de projectpagina opnieuw op 
 
 De laatste vereiste referentie die u moet verzamelen, is uw `{ACCESS_TOKEN}`, die wordt gebruikt in de machtigingheader. In tegenstelling tot de waarden voor `{API_KEY}` en `{IMS_ORG}`, moet om de 24 uur een nieuw token worden gegenereerd om API&#39; [!DNL Platform] s te kunnen blijven gebruiken.
 
-Als u een nieuwe sleutel wilt genereren, opent u de eerder gedownloade persoonlijke sleutel en plakt u de inhoud ervan in het tekstvak naast Toegangstoken `{ACCESS_TOKEN}`_[!UICONTROL genereren voordat u op Token]_ **** genereren klikt.
+Als u een nieuwe sleutel wilt genereren, opent u de eerder gedownloade persoonlijke sleutel en plakt u de inhoud ervan in het tekstvak naast Toegangstoken `{ACCESS_TOKEN}`**[!UICONTROL genereren voordat u op Token]** **** genereren klikt.
 
 ![](../images/api/getting-started/paste-private-key.png)
 
