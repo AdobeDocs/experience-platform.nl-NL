@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
 solution: Experience Platform
 title: Unies
+description: De verenigingen (of verenigingsmeningen) zijn systeem-geproduceerde, read-only schema's die de gebieden van alle schema's samenvoegen die de zelfde klasse (XDM ExperienceEvent of Individueel Profiel XDM) delen en voor het Profiel van de Klant in real time worden toegelaten.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
