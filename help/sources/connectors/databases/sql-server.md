@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft SQL;microsoft sql;SQL;sql
 solution: Experience Platform
 title: SQL Server-aansluiting
 topic: overview
+description: De documentatie hieronder verstrekt informatie over hoe te om de Server van Microsoft SQL aan Platform te verbinden gebruikend APIs of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -14,9 +15,9 @@ ht-degree: 0%
 
 # (Bèta) [!DNL Microsoft] SQL Server-connector
 
-Met Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
-[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een derdegegevensbestand. [!DNL Platform] kan verbinding maken met verschillende typen databases, zoals relationeel, NoSQL of data warehouse. De steun voor gegevensbestandleveranciers omvat [!DNL Microsoft] SQL Server.
+[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een derdegegevensbestand. [!DNL Platform] kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. De steun voor gegevensbestandleveranciers omvat [!DNL Microsoft] SQL Server.
 
 ## IP adres lijst van gewenste personen
 
