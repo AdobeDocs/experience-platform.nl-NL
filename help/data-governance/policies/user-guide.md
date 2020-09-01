@@ -5,7 +5,7 @@ title: Gebruikershandleiding voor gegevensgebruiksbeleid
 topic: policies
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Deze gids vereist een werkend begrip van de volgende [!DNL Experience Platform] 
 
 ## Beleid voor gegevensgebruik weergeven {#view-policies}
 
-Klik in de [!DNL Experience Platform] gebruikersinterface op **[!UICONTROL Beleid]** om de werkruimte *[!UICONTROL Beleid]* te openen. Op het tabblad **[!UICONTROL Bladeren]** ziet u een lijst met beschikbare beleidsregels, inclusief de bijbehorende labels, marketingacties en status.
+Klik in de [!DNL Experience Platform] gebruikersinterface op **[!UICONTROL Beleid]** om de werkruimte **[!UICONTROL Beleid]** te openen. Op het tabblad **[!UICONTROL Bladeren]** ziet u een lijst met beschikbare beleidsregels, inclusief de bijbehorende labels, marketingacties en status.
 
 ![](../images/policies/browse-policies.png)
 
@@ -40,11 +40,11 @@ Klik op een vermeld beleid om de beschrijving en het type ervan weer te geven. A
 
 ## Een aangepast beleid voor gegevensgebruik maken {#create-policy}
 
-Als u een nieuw beleid voor het gebruik van aangepaste gegevens wilt maken, klikt u op **[!UICONTROL Beleid]** maken in de rechterbovenhoek van het tabblad **[!UICONTROL Bladeren]** in de werkruimte *[!UICONTROL Beleid]* .
+Als u een nieuw beleid voor het gebruik van aangepaste gegevens wilt maken, klikt u op **[!UICONTROL Beleid]** maken in de rechterbovenhoek van het tabblad **[!UICONTROL Bladeren]** in de werkruimte **[!UICONTROL Beleid]** .
 
 ![](../images/policies/create-policy-button.png)
 
-De *[!UICONTROL workflow Beleid]* maken wordt weergegeven. Begin door een naam en een beschrijving voor het nieuwe beleid te verstrekken.
+De **[!UICONTROL workflow Beleid]** maken wordt weergegeven. Begin door een naam en een beschrijving voor het nieuwe beleid te verstrekken.
 
 ![](../images/policies/create-policy-description.png)
 
@@ -52,7 +52,7 @@ Selecteer vervolgens de labels voor gegevensgebruik waarop het beleid wordt geba
 
 ![](../images/policies/add-labels.png)
 
-De stap *[!UICONTROL Marketingacties]* selecteren wordt weergegeven. Kies de gewenste marketingacties in de lijst en klik op **[!UICONTROL Volgende]** om door te gaan.
+De stap **[!UICONTROL Marketingacties]** selecteren wordt weergegeven. Kies de gewenste marketingacties in de lijst en klik op **[!UICONTROL Volgende]** om door te gaan.
 
 >[!NOTE]
 >
@@ -60,11 +60,11 @@ De stap *[!UICONTROL Marketingacties]* selecteren wordt weergegeven. Kies de gew
 
 ![](../images/policies/add-marketing-actions.png)
 
-De stap *[!UICONTROL Revisie]* wordt weergegeven, zodat u de details van het nieuwe beleid kunt bekijken voordat u het maakt. Als u tevreden bent, klikt u op **[!UICONTROL Voltooien]** om het beleid te maken.
+De stap **[!UICONTROL Revisie]** wordt weergegeven, zodat u de details van het nieuwe beleid kunt bekijken voordat u het maakt. Als u tevreden bent, klikt u op **[!UICONTROL Voltooien]** om het beleid te maken.
 
 ![](../images/policies/policy-review.png)
 
-Het tabblad *[!UICONTROL Bladeren]* wordt opnieuw weergegeven. Hierin wordt nu het nieuwe beleid in de status &quot;Concept&quot; weergegeven. Zie de volgende sectie om het beleid in te schakelen.
+Het tabblad **[!UICONTROL Bladeren]** wordt opnieuw weergegeven. Hierin wordt nu het nieuwe beleid in de status &quot;Concept&quot; weergegeven. Zie de volgende sectie om het beleid in te schakelen.
 
 ![](../images/policies/created-policy.png)
 
@@ -72,7 +72,7 @@ Het tabblad *[!UICONTROL Bladeren]* wordt opnieuw weergegeven. Hierin wordt nu h
 
 Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten door API of UI.
 
-U kunt beleid van het *[!UICONTROL Browse]* lusje in of onbruikbaar maken in de werkruimte van *[!UICONTROL Beleid]* . Selecteer een aangepast beleid in de lijst om de details aan de rechterkant weer te geven. Selecteer onder *[!UICONTROL Status]* de schakelknop om het beleid in of uit te schakelen.
+U kunt beleid van het **[!UICONTROL Browse]** lusje in of onbruikbaar maken in de werkruimte van **[!UICONTROL Beleid]** . Selecteer een aangepast beleid in de lijst om de details aan de rechterkant weer te geven. Selecteer onder **[!UICONTROL Status]** de schakelknop om het beleid in of uit te schakelen.
 
 ![](../images/policies/enable-policy.png)
 
@@ -84,15 +84,15 @@ In de werkruimte **[!UICONTROL Beleid]** , selecteer het lusje van de Acties **[
 
 ## Een marketingactie maken {#create-marketing-action}
 
-Als u een nieuwe aangepaste marketingactie wilt maken, klikt u op **[!UICONTROL Marketing-actie]** maken in de rechterbovenhoek van het tabblad **[!UICONTROL Handelingen]** voor marketing in de werkruimte *[!UICONTROL Beleid]* .
+Als u een nieuwe aangepaste marketingactie wilt maken, klikt u op **[!UICONTROL Marketing-actie]** maken in de rechterbovenhoek van het tabblad **[!UICONTROL Handelingen]** voor marketing in de werkruimte **[!UICONTROL Beleid]** .
 
 ![](../images/policies/create-marketing-action.png)
 
-Het dialoogvenster *[!UICONTROL Handeling]* voor marketingacties maken wordt weergegeven. Voer een naam en beschrijving in voor de marketingactie en klik op **[!UICONTROL Maken]**.
+Het dialoogvenster **[!UICONTROL Handeling]** voor marketingacties maken wordt weergegeven. Voer een naam en beschrijving in voor de marketingactie en klik op **[!UICONTROL Maken]**.
 
 ![](../images/policies/create-marketing-action-details.png)
 
-De nieuwe actie wordt weergegeven op het tabblad *[!UICONTROL Handelingen]* voor marketingdoeleinden. U kunt de marketingactie nu gebruiken bij het [maken van nieuw beleid](#create-policy)voor gegevensgebruik.
+De nieuwe actie wordt weergegeven op het tabblad **[!UICONTROL Handelingen]** voor marketingdoeleinden. U kunt de marketingactie nu gebruiken bij het [maken van nieuw beleid](#create-policy)voor gegevensgebruik.
 
 ![](../images/policies/created-marketing-action.png)
 
