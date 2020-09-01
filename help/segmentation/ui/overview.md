@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: Gebruikershandleiding voor segmentatieservice
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Meer gedetailleerde informatie over elk [!DNL Profile] [!DNL Profile] kan worden
 
 ![](../images/ui/overview/segment-details-profiles.png)
 
-## Een segment maken {#create-segment}
+## Segment maken {#create-segment}
 
 Als u Segment **** maken in de rechterbovenhoek selecteert, wordt de [!DNL Segment Builder] werkruimte geopend waarin u een segmentdefinitie kunt maken.
 
