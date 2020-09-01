@@ -5,7 +5,7 @@ title: Een schema maken met de Schema-editor
 topic: tutorials
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in het Experience Platform.
 translation-type: tm+mt
-source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
+source-git-commit: d946f5014707bf73f373d712b287de259c3df5cd
 workflow-type: tm+mt
 source-wordcount: '3528'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Net als in het veld &quot;[!UICONTROL naam]&quot; vertegenwoordigen de velden di
 
 Het schema &quot;[!UICONTROL Loyalty-leden]&quot; is bedoeld voor het vastleggen van gegevens die betrekking hebben op de leden van een loyaliteitsprogramma, zodat het een aantal specifieke velden met betrekking tot loyaliteit vereist. Er zijn geen standaardmengingen beschikbaar die de noodzakelijke gebieden bevatten, daarom zult u een nieuwe mix moeten bepalen.
 
-Wanneer u dit keer het dialoogvenster *[!UICONTROL Mixin]* toevoegen opent, selecteert u Nieuwe **[!UICONTROL mixer]** maken. Vervolgens wordt u gevraagd een **[!UICONTROL weergavenaam]** en een **[!UICONTROL beschrijving]** voor de mix op te geven.
+Wanneer u dit keer het dialoogvenster **[!UICONTROL Mixin]** toevoegen opent, selecteert u Nieuwe **[!UICONTROL mixer]** maken. Vervolgens wordt u gevraagd een **[!UICONTROL weergavenaam]** en een **[!UICONTROL beschrijving]** voor de mix op te geven.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
