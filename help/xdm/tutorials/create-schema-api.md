@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;create schema;schema api;enum;primary identity;primary idenity;enum datatype;schema design
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: Een schema maken met de API voor schemaregistratie
 topic: tutorials
 description: Deze zelfstudie gebruikt de API voor schemaregistratie om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
 workflow-type: tm+mt
 source-wordcount: '2368'
 ht-degree: 0%
