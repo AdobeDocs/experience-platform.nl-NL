@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Compatibiliteit van gegevensgebruik voor publiekssegmenten afdwingen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1333'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van [!DNL Ado
 - [[!DNL Real-time klantprofiel]](../../profile/home.md): [!DNL Real-time Customer Profile] is een generische opslag van de raadplegingsentiteit, en wordt gebruikt om [!DNL Experience Data Model] (XDM) gegevens binnen te beheren [!DNL Platform]. Het profiel voegt gegevens over diverse activa van ondernemingsgegevens samen en verleent toegang tot die gegevens in een verenigde presentatie.
    - [Beleid](../../profile/api/merge-policies.md)voor samenvoegen: Regels die door worden gebruikt [!DNL Real-time Customer Profile] om te bepalen welke gegevens onder bepaalde omstandigheden in één weergave kunnen worden samengevoegd. Het beleid van de fusie kan voor [!DNL Data Governance] doeleinden worden gevormd.
 - [[!DNL-segmentatie]](../home.md): Hoe [!DNL Real-time Customer Profile] verdeelt een grote groep individuen in de profielopslag in kleinere groepen die gelijkaardige eigenschappen delen en op gelijkaardige wijze aan marketing strategieën zullen antwoorden.
-- [[!DNL-gegevensbeheer]](../../data-governance/home.md): [!DNL Data Governance] voorziet in de infrastructuur voor de etikettering en handhaving van gegevensgebruik (DULE), waarbij de volgende componenten worden gebruikt:
+- [[!DNL-gegevensbeheer]](../../data-governance/home.md): [!DNL Data Governance] voorziet in de infrastructuur voor de etikettering en handhaving van gegevensgebruik, waarbij de volgende componenten worden gebruikt:
    - [Labels](../../data-governance/labels/user-guide.md)voor gegevensgebruik: Etiketten die worden gebruikt om gegevenssets en velden te beschrijven in termen van het gevoeligheidsniveau waarmee hun respectieve gegevens worden verwerkt.
    - [Beleid](../../data-governance/policies/overview.md)voor gegevensgebruik: Configuraties die aangeven welke marketingacties zijn toegestaan op gegevens die zijn gecategoriseerd door bepaalde labels voor gegevensgebruik.
    - [Beleidshandhaving](../../data-governance/enforcement/overview.md): Hiermee kunt u beleid voor gegevensgebruik afdwingen en gegevensbewerkingen die beleidsovertredingen vormen, voorkomen.
@@ -187,7 +187,7 @@ Een succesvolle reactie retourneert de details van het samenvoegbeleid.
 >
 > In deze stap wordt ervan uitgegaan dat u ten minste één actief beleid voor gegevensgebruik hebt dat voorkomt dat specifieke marketingacties worden uitgevoerd op gegevens die bepaalde labels bevatten. Als u geen toepasselijk gebruiksbeleid voor de datasets hebt die worden geëvalueerd, gelieve het [beleidsscheppingsleerprogramma](../../data-governance/policies/create.md) te volgen om tot één te leiden alvorens met deze stap verder te gaan.
 
-Zodra u IDs van de brondatasets van het fusiebeleid hebt verkregen, kunt u de [DULE Dienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) van het Beleid gebruiken om die datasets tegen specifieke marketing acties te evalueren om op de schendingen van het beleid van het gegevensgebruik te controleren.
+Zodra u IDs van de brondatasets van het fusiebeleid hebt verkregen, kunt u de [Dienst API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) van het Beleid gebruiken om die datasets tegen specifieke marketing acties te evalueren om op de schendingen van het beleid van het gegevensgebruik te controleren.
 
 Om de datasets te evalueren, moet u de naam van de marketing actie in de weg van een verzoek van de POST verstrekken, terwijl het verstrekken van dataset IDs binnen het verzoeklichaam, zoals aangetoond in het voorbeeld hieronder.
 
