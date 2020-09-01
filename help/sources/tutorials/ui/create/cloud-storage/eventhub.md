@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Event Hubs;Event Hubs;azure event hubs
 solution: Experience Platform
 title: Creeer een Azure de bronschakelaar van de Hubs van de Gebeurtenis in UI
 topic: overview
+description: Deze zelfstudie biedt stappen voor het verifiëren van een Azure Event Hubs-bronconnector (hierna "Event Hubs" genoemd) die de gebruikersinterface van het Platform gebruikt.
 translation-type: tm+mt
-source-git-commit: a664a0420189d6a2dda9f33b3aa58cb4883e252f
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '495'
 ht-degree: 1%
 
 ---
