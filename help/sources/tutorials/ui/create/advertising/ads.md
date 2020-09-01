@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google AdWords;Google AdWords source connector;google adwords connector
 solution: Experience Platform
 title: Een Google AdWords-bronconnector maken in de gebruikersinterface
 topic: overview
+description: Deze zelfstudie bevat stappen voor het maken van een Google AdWords-bronconnector via de gebruikersinterface van het Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
