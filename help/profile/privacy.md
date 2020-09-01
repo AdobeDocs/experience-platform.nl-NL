@@ -4,7 +4,7 @@ solution: Experience Platform
 title: De verzoekverwerking van de privacy in Real-time Profiel van de Klant
 topic: overview
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%
@@ -93,7 +93,7 @@ curl -X POST \
 
 ### De gebruikersinterface gebruiken
 
-Wanneer het creëren van baanverzoeken in UI, ben zeker om **[!UICONTROL AEP Gegevensmeer]** en/of **[!UICONTROL Profiel]** onder _[!UICONTROL Producten]_ te selecteren om banen voor gegevens te verwerken die in [!DNL Data Lake] of [!DNL Real-time Customer Profile], respectievelijk worden opgeslagen.
+Wanneer het creëren van baanverzoeken in UI, ben zeker om **[!UICONTROL AEP Gegevensmeer]** en/of **[!UICONTROL Profiel]** onder **[!UICONTROL Producten]** te selecteren om banen voor gegevens te verwerken die in [!DNL Data Lake] of [!DNL Real-time Customer Profile], respectievelijk worden opgeslagen.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
