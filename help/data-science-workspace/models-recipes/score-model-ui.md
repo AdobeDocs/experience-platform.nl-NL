@@ -5,7 +5,7 @@ title: Score een model (UI)
 topic: Tutorial
 description: 'Scores in de Adobe Experience Platform Data Science Workspace kunnen worden bereikt door invoergegevens in te voeren in een bestaand getraind model. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij. '
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Er wordt een scoring-run gemaakt met geoptimaliseerde configuraties van een eerd
 5. In de laatste stap in de workflow wordt u gevraagd uw scoring uit te voeren. Deze configuraties worden gebruikt door het Model voor de scoring looppas.
 U kunt overgeërfde parameters die tijdens het maken van het model zijn ingesteld, niet verwijderen. U kunt niet-overgeërfde parameters bewerken of herstellen door te dubbelklikken op de waarde of te klikken op het pictogram Omkeren terwijl u de muisaanwijzer op de invoer plaatst.
    ![](../images/models-recipes/score/configuration.png)
-Controleer en bevestig de scoreconfiguraties en klik op **[!UICONTROL Voltooien]** om de scoringbewerking te maken en uit te voeren. U wordt omgeleid naar het tabblad *Scoringuitvoering* en de nieuwe scoringstijd geeft een status weer.
+Controleer en bevestig de scoreconfiguraties en klik op **[!UICONTROL Voltooien]** om de scoringbewerking te maken en uit te voeren. U wordt omgeleid naar het tabblad **[!UICONTROL Scoringuitvoering]** en de nieuwe scoringstijd geeft een status weer.
    ![](../images/models-recipes/score/scoring_runs_tab.png)
 In een scoring worden de volgende statussen weergegeven: In behandeling, Voltooid, Mislukt of Running en worden automatisch bijgewerkt. Ga naar de volgende stap als de status &quot;Voltooid&quot; of &quot;Mislukt&quot; is.
 
