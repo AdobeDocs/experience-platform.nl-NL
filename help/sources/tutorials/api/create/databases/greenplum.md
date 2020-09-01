@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;greenplum;Greenplum
 solution: Experience Platform
 title: Een GreenPlum-aansluiting maken met de Flow Service API
 topic: overview
+description: Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om GreenPlum aan Experience Platform aan te sluiten.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '547'
 ht-degree: 1%
 
 ---
