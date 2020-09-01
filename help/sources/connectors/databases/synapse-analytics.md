@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;azure synapse analytics;Synapse;synapse
 solution: Experience Platform
 title: Azure Synapse Analytics-connector
 topic: overview
+description: In de onderstaande documentatie vindt u informatie over hoe u Azure Synapse Analytics kunt verbinden met Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -14,9 +15,9 @@ ht-degree: 0%
 
 # (Beta) [!DNL Azure Synapse Analytics] -connector
 
-Met Adobe Experience Platform kunnen gegevens uit externe bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
-[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een derdegegevensbestand. [!DNL Platform] kan verbinding maken met verschillende typen databases, zoals relationeel, NoSQL of data warehouse. Tot de ondersteuning voor databaseproviders behoren [!DNL Azure Synapse Analytics].
+[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een derdegegevensbestand. [!DNL Platform] kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. Tot de ondersteuning voor databaseproviders behoren [!DNL Azure Synapse Analytics].
 
 ## IP adres lijst van gewenste personen
 
@@ -60,5 +61,5 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 
 ## Verbinding maken [!DNL Azure Synapse Analytics] met [!DNL Platform] de gebruikersinterface
 
-- [Een Azure Synapse Analytics-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [Een Azure Synapse Analytics-bronconnector in de gebruikersinterface maken](../../tutorials/ui/create/databases/synapse-analytics.md)
 - [Vorm een dataflow voor een gegevensbestandschakelaar in UI](../../tutorials/ui/dataflow/databases.md)
