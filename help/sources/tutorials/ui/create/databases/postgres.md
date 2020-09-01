@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PSQL;psql;PostgreSQL
 solution: Experience Platform
 title: Een PostgreSQL-bronconnector maken in de UI
 topic: overview
+description: Deze zelfstudie biedt stappen voor het maken van een PSQL-bronconnector (PostgreSQL) via de gebruikersinterface van het Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '474'
 ht-degree: 1%
 
 ---
