@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
 solution: Experience Platform
 title: Bezig met schrijven van query's
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Algemene richtlijnen voor het uitvoeren van query&#39;s in [!DNL Query Service]
 
-Dit document bevat belangrijke informatie die u moet weten wanneer u query&#39;s schrijft in het Adobe Experience Platform [!DNL Query Service].
+Dit document bevat belangrijke informatie die u moet weten wanneer u query&#39;s schrijft in Adobe Experience Platform [!DNL Query Service].
 
 Lees voor meer informatie over de SQL-syntaxis die wordt gebruikt in [!DNL Query Service]de [SQL-syntaxisdocumentatie](../sql/syntax.md).
 
@@ -169,7 +169,7 @@ FROM {ANALYTICS_TABLE_NAME}
 LIMIT 10
 ```
 
-Achteraanhalingstekens worden ook gebruikt om toegang te krijgen tot een veld dat met een getal begint. Als u bijvoorbeeld toegang wilt krijgen tot het veld, moet u `30_day_value`de notatie voor aanhalingstekens gebruiken.
+Achteraanhalingstekens worden ook gebruikt om toegang te krijgen tot een veld dat met een getal begint. Als u bijvoorbeeld toegang wilt krijgen tot het veld, moet u de notatie voor aanhalingstekens gebruiken. `30_day_value`
 
 ```SQL
 SELECT
