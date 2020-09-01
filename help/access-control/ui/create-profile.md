@@ -5,7 +5,7 @@ title: Een nieuw productprofiel maken
 topic: user guide
 description: In dit document worden de stappen beschreven die nodig zijn om een nieuw productprofiel in de Adobe Admin Console te maken. Als u een nieuw profiel wilt maken, navigeert u naar het tabblad Productprofielen en klikt u op Nieuw profiel.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 0%
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 # Een nieuw productprofiel maken
 
-Als u een nieuw profiel wilt maken, navigeert u naar het tabblad *[!UICONTROL Productprofielen]* en klikt u op **[!UICONTROL Nieuw profiel]**.
+Als u een nieuw profiel wilt maken, navigeert u naar het tabblad **[!UICONTROL Productprofielen]** en klikt u op **[!UICONTROL Nieuw profiel]**.
 
 ![new-profile-button](../images/new-profile-button.png)
 
-Het dialoogvenster _[!UICONTROL Nieuw profiel]_ maken wordt weergegeven en u wordt gevraagd een **[!UICONTROL profielnaam]** en **[!UICONTROL beschrijving]** voor het nieuwe profiel in te voeren. Als u de weergavenaam van het profiel wilt wijzigen, schakelt u **[!UICONTROL Gelijk aan als profielnaam]** uit en voert u de weergavenaam in het tekstvak in dat verschijnt. Onder *[!UICONTROL Gebruikersmeldingen]* kunt u bepalen of gebruikers via e-mail op de hoogte worden gesteld wanneer ze uit het profiel worden toegevoegd of verwijderd.
+Het dialoogvenster **[!UICONTROL Nieuw profiel]** maken wordt weergegeven en u wordt gevraagd een **[!UICONTROL profielnaam]** en **[!UICONTROL beschrijving]** voor het nieuwe profiel in te voeren. Als u de weergavenaam van het profiel wilt wijzigen, schakelt u **[!UICONTROL Gelijk aan als profielnaam]** uit en voert u de weergavenaam in het tekstvak in dat verschijnt. Onder **[!UICONTROL Gebruikersmeldingen]** kunt u bepalen of gebruikers via e-mail op de hoogte worden gesteld wanneer ze uit het profiel worden toegevoegd of verwijderd.
 
 When finished, click **[!UICONTROL Next]**.
 
