@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; marketing automation; hubspot
+keywords: Experience Platform;home;popular topics;marketing automation system;Collect marketing automation data
 solution: Experience Platform
 title: Gegevens over marketingautomatisering verzamelen via bronconnectors en API's
 topic: overview
-description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een derde marketingautomatiseringssysteem en het opnemen ervan in het Platform via bronconnectors en de Flow Service API.
+description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een marketingautomatiseringssysteem en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1587'
+source-wordcount: '1584'
 ht-degree: 0%
 
 ---
