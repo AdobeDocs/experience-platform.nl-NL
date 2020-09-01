@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic e
 solution: Experience Platform
 title: Beleid voor gegevensgebruik afdwingen met de API voor beleidsservice
 topic: enforcement
-description: Zodra u de etiketten van het gegevensgebruik voor uw gegevens hebt gecreeerd, en gebruiksbeleid voor marketing acties tegen die etiketten hebt gecreeerd, kunt u de Dienst API van het Beleid DULE gebruiken om te evalueren of een marketing actie die op een dataset of een willekeurige groep etiketten wordt uitgevoerd een beleidsschending vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie.
+description: Zodra u de etiketten van het gegevensgebruik voor uw gegevens hebt gecreeerd, en gebruiksbeleid voor marketing acties tegen die etiketten hebt gecreeerd, kunt u de Dienst API van het Beleid gebruiken om te evalueren of een marketing actie die op een dataset of een willekeurige groep etiketten wordt uitgevoerd een beleidsschending vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Beleid voor gegevensgebruik afdwingen met de [!DNL Policy Service] API
 
-Zodra u de etiketten van het gegevensgebruik voor uw gegevens hebt gecreeerd, en gebruiksbeleid voor marketing acties tegen die etiketten hebt gecreeerd, kunt u [[!DNL DULE Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) gebruiken om te evalueren of een marketing actie die op een dataset of een willekeurige groep etiketten wordt uitgevoerd een beleidsschending vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie.
+Zodra u de etiketten van het gegevensgebruik voor uw gegevens hebt gecreeerd, en gebruiksbeleid voor marketing acties tegen die etiketten hebt gecreeerd, kunt u [[!DNL de Dienst API van het Beleid]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) gebruiken om te evalueren of een marketing actie die op een dataset of een willekeurige groep etiketten wordt uitgevoerd een beleidsschending vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie.
 
 >[!NOTE]
 >
@@ -25,18 +25,18 @@ Dit document bevat stappen voor het controleren op beleidsovertredingen in versc
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende belangrijke concepten betrokken bij het afdwingen van DULE-beleid:
+Deze zelfstudie vereist een goed begrip van de volgende belangrijke concepten die betrokken zijn bij het afdwingen van beleidsregels voor gegevensgebruik:
 
 * [Gegevensbeheer](../home.md): Het kader waarmee de naleving van het gegevensgebruik wordt [!DNL Platform] afgedwongen.
    * [Labels](../labels/overview.md)voor gegevensgebruik: De etiketten van het gebruik van gegevens worden toegepast op datasets (en/of individuele gebieden binnen die datasets), die beperkingen specificeren voor hoe die gegevens kunnen worden gebruikt.
-   * [Beleid](../policies/overview.md)voor gegevensgebruik: Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die voor bepaalde reeksen etiketten van DULE worden toegestaan of beperkt.
+   * [Beleid](../policies/overview.md)voor gegevensgebruik: Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die voor bepaalde reeksen etiketten van het gegevensgebruik worden toegestaan of beperkt.
 * [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om aanroepen naar de DULE [!DNL Policy Service] API te kunnen uitvoeren, inclusief vereiste headers en hoe u API-voorbeeldaanroepen kunt lezen.
+Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de [!DNL Policy Service] API te kunnen uitvoeren, inclusief vereiste headers en hoe u API-voorbeeldaanroepen kunt lezen.
 
-## Evalueren met DULE-labels en een marketingactie
+## Evalueren met labels en een marketingactie
 
-U kunt een beleid evalueren door een marketing actie tegen een reeks etiketten te testen DULE die hypothetisch binnen een dataset aanwezig zouden zijn. Dit wordt gedaan door het gebruik van de `duleLabels` vraagparameter, waar de etiketten van de DULE als komma-gescheiden lijst van waarden, zoals aangetoond in het hieronder voorbeeld worden verstrekt.
+U kunt een beleid evalueren door een marketing actie tegen een reeks etiketten van het gegevensgebruik te testen die hypothetisch binnen een dataset aanwezig zouden zijn. Dit wordt gedaan door het gebruik van de `duleLabels` vraagparameter, waar de etiketten als komma-gescheiden lijst van waarden, zoals aangetoond in het hieronder voorbeeld worden verstrekt.
 
 **API-indeling**
 
@@ -47,7 +47,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | De naam van de marketing actie verbonden aan het DULE beleid u evalueert. |
+| `{MARKETING_ACTION_NAME}` | De naam van de marketingactie die is gekoppeld aan het gegevensgebruiksbeleid dat u evalueert. |
 | `{LABEL_1}` | Een label voor gegevensgebruik waarmee de marketingactie wordt getest. Er moet ten minste één etiket worden verstrekt. Wanneer u meerdere labels aanbiedt, moeten deze worden gescheiden door komma&#39;s. |
 
 **Verzoek**
@@ -69,7 +69,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de URL voor de marketingactie, de DULE-labels waarop de actie is getest en een lijst met DULE-beleidsregels die zijn overtreden als gevolg van het testen van de actie op deze labels. In dit voorbeeld wordt het beleid Gegevens exporteren naar derde weergegeven in de `violatedPolicies` array om aan te geven dat de marketingactie de verwachte beleidsschending heeft veroorzaakt.
+Een geslaagde reactie retourneert de URL voor de marketingactie, de gebruikslabels waarop de actie is getest en een lijst met beleidsregels die zijn overtreden als gevolg van het testen van de actie op die labels. In dit voorbeeld wordt het beleid Gegevens exporteren naar derde weergegeven in de `violatedPolicies` array om aan te geven dat de marketingactie de verwachte beleidsschending heeft veroorzaakt.
 
 ```json
 {
@@ -129,11 +129,11 @@ Een geslaagde reactie retourneert de URL voor de marketingactie, de DULE-labels 
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `violatedPolicies` | Een array met alle DULE-beleidsregels die zijn overtreden door de marketingactie (opgegeven in `marketingActionRef`) te testen op basis van de opgegeven actie `duleLabels`. |
+| `violatedPolicies` | Een array met alle beleidsregels die zijn overtreden door de marketingactie (opgegeven in `marketingActionRef`) te testen op basis van de opgegeven actie `duleLabels`. |
 
 ## Evalueren met gebruik van gegevenssets
 
-U kunt een DULE beleid evalueren door een marketing actie tegen één of meerdere datasets te testen waarvan de etiketten DULE kunnen worden verzameld. Dit wordt gedaan door een verzoek van de POST aan `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` en het verstrekken van dataset IDs binnen het verzoeklichaam, zoals aangetoond in het hieronder voorbeeld te doen.
+U kunt een beleid van het gegevensgebruik evalueren door een marketing actie tegen één of meerdere datasets te testen waarvan de etiketten kunnen worden verzameld. Dit wordt gedaan door een verzoek van de POST aan `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` en het verstrekken van dataset IDs binnen het verzoeklichaam, zoals aangetoond in het hieronder voorbeeld te doen.
 
 **API-indeling**
 
@@ -144,7 +144,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | De naam van de marketing actie verbonden aan het DULE beleid u evalueert. |
+| `{MARKETING_ACTION_NAME}` | De naam van de marketingactie die is gekoppeld aan het beleid dat u evalueert. |
 
 **Verzoek**
 
@@ -181,7 +181,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert URL voor de marketing actie, de etiketten DULE terug die uit de verstrekte datasets werden verzameld, en een lijst van om het even welk beleid DULE die als resultaat van het testen van de actie tegen die etiketten werden geschonden. In dit voorbeeld wordt het beleid Gegevens exporteren naar derde weergegeven in de `violatedPolicies` array om aan te geven dat de marketingactie de verwachte beleidsschending heeft veroorzaakt.
+Een succesvolle reactie keert URL voor de marketing actie, de gebruiksetiketten terug die uit de verstrekte datasets werden verzameld, en een lijst van om het even welk beleid dat als resultaat van het testen van de actie tegen die etiketten werd geschonden. In dit voorbeeld wordt het beleid Gegevens exporteren naar derde weergegeven in de `violatedPolicies` array om aan te geven dat de marketingactie de verwachte beleidsschending heeft veroorzaakt.
 
 ```json
 {
@@ -362,12 +362,12 @@ Een succesvolle reactie keert URL voor de marketing actie, de etiketten DULE ter
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `duleLabels` | Een lijst van etiketten DULE die uit de datasets werden gehaald die in de verzoeklading worden verstrekt. |
-| `discoveredLabels` | Een lijst van de datasets die in de verzoeklading werden verstrekt, tonend de dataset-niveau en gebied-vlakke DULE etiketten die in elk werden gevonden. |
-| `violatedPolicies` | Een array met alle DULE-beleidsregels die zijn overtreden door de marketingactie (opgegeven in `marketingActionRef`) te testen op basis van de opgegeven actie `duleLabels`. |
+| `duleLabels` | Een lijst van de etiketten van het gegevensgebruik die uit de datasets werden gehaald die in de verzoeklading worden verstrekt. |
+| `discoveredLabels` | Een lijst van de datasets die in de verzoeklading werden verstrekt, tonend de datasetniveau en gebied-vlakke etiketten die in elk werden gevonden. |
+| `violatedPolicies` | Een array met alle beleidsregels die zijn overtreden door de marketingactie (opgegeven in `marketingActionRef`) te testen op basis van de opgegeven actie `duleLabels`. |
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u met succes gecontroleerd op beleidsschendingen wanneer het uitvoeren van een marketing actie op een dataset of een reeks etiketten DULE. Met de gegevens die in API-reacties worden geretourneerd, kunt u protocollen in uw ervaringstoepassing instellen om beleidsovertredingen op de juiste wijze af te dwingen.
+Door dit document te lezen, hebt u met succes gecontroleerd op beleidsschendingen wanneer het uitvoeren van een marketing actie op een dataset of een reeks etiketten van het gegevensgebruik. Met de gegevens die in API-reacties worden geretourneerd, kunt u protocollen in uw ervaringstoepassing instellen om beleidsovertredingen op de juiste wijze af te dwingen.
 
 Voor stappen op hoe te om het beleid van het gegevensgebruik voor publiekssegmenten in af te dwingen, gelieve te verwijzen naar het volgende [!DNL Real-time Customer Profile]leerprogramma [](../../segmentation/tutorials/governance.md).
