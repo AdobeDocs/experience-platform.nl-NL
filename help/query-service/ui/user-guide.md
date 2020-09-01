@@ -5,7 +5,7 @@ title: Gebruikershandleiding voor de Query Editor
 topic: query editor
 description: De Redacteur van de vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens te schrijven te bevestigen en in werking te stellen binnen het gebruikersinterface van het Experience Platform. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 translation-type: tm+mt
-source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 1%
@@ -37,7 +37,7 @@ De vragen die van looppas interactively worden uitgevoerd. [!DNL Query Editor] D
 
 Gebruikend [!DNL Query Editor], kunt u schrijven, uitvoeren en sparen vragen voor de gegevens van de klantenervaring. Alle query&#39;s die worden uitgevoerd in [!DNL Query Editor]of opgeslagen, zijn beschikbaar voor alle gebruikers in uw organisatie die toegang hebben tot [!DNL Query Service].
 
-### Toegang tot [!DNL Query Editor]
+### Toegang tot het [!DNL Query Editor]
 
 Klik in de [!DNL Experience Platform] gebruikersinterface op **[!UICONTROL Vragen]** in het navigatiemenu links om de [!DNL Query Service] werkruimte te openen. Klik vervolgens **[!UICONTROL op Query]** maken rechtsboven in het scherm om query&#39;s te schrijven. Deze koppeling is beschikbaar op alle pagina&#39;s in de [!DNL Query Service] werkruimte.
 
@@ -77,19 +77,19 @@ Wanneer fouten worden ontdekt, kunt u de specifieke foutenmeldingen bekijken doo
 
 ### Query-details
 
-Terwijl u een query bekijkt in [!DNL Query Editor], bevat het deelvenster *[!UICONTROL Query-details]* gereedschappen voor het beheer van de geselecteerde query.
+Terwijl u een query bekijkt in [!DNL Query Editor], bevat het deelvenster **[!UICONTROL Query-details]** gereedschappen voor het beheer van de geselecteerde query.
 
 ![Image](../images/queries/query-editor-overview/query-details.png)
 
-In dit deelvenster kunt u rechtstreeks vanuit de gebruikersinterface een uitvoergegevensset genereren, de weergegeven query verwijderen of een naam geven en de SQL-code in een gemakkelijk te kopiëren indeling weergeven op het tabblad *[!UICONTROL SQL-query]* . In dit deelvenster worden ook nuttige metagegevens weergegeven, zoals de laatste keer dat de query werd gewijzigd en de eventuele wijziging. Als u een gegevensset wilt genereren, klikt u op Gegevensset **[!UICONTROL Uitvoer]**. Het dialoogvenster *[!UICONTROL Uitvoergegevensset]* wordt geopend. Voer een naam en beschrijving in en klik vervolgens op **[!UICONTROL Query]** uitvoeren. De nieuwe dataset wordt getoond in het lusje van *[!UICONTROL Datasets]* op het [!DNL Query Service] gebruikersinterface op [!DNL Platform].
+In dit deelvenster kunt u rechtstreeks vanuit de gebruikersinterface een uitvoergegevensset genereren, de weergegeven query verwijderen of een naam geven en de SQL-code in een gemakkelijk te kopiëren indeling weergeven op het tabblad **[!UICONTROL SQL-query]** . In dit deelvenster worden ook nuttige metagegevens weergegeven, zoals de laatste keer dat de query werd gewijzigd en de eventuele wijziging. Als u een gegevensset wilt genereren, klikt u op Gegevensset **[!UICONTROL Uitvoer]**. Het dialoogvenster **[!UICONTROL Uitvoergegevensset]** wordt geopend. Voer een naam en beschrijving in en klik vervolgens op **[!UICONTROL Query]** uitvoeren. De nieuwe dataset wordt getoond in het lusje van **[!UICONTROL Datasets]** op het [!DNL Query Service] gebruikersinterface op [!DNL Platform].
 
 ### Bezig met opslaan van query&#39;s
 
-[!DNL Query Editor] beschikt over een opslagfunctie waarmee u een query kunt opslaan en er later aan kunt werken. Als u een query wilt opslaan, klikt u op **[!UICONTROL Opslaan]** in de rechterbovenhoek van [!DNL Query Editor]. Voordat een query kan worden opgeslagen, moet u een naam opgeven voor de query via het deelvenster *[!UICONTROL Query-details]* .
+[!DNL Query Editor] beschikt over een opslagfunctie waarmee u een query kunt opslaan en er later aan kunt werken. Als u een query wilt opslaan, klikt u op **[!UICONTROL Opslaan]** in de rechterbovenhoek van [!DNL Query Editor]. Voordat een query kan worden opgeslagen, moet u een naam opgeven voor de query via het deelvenster **[!UICONTROL Query-details]** .
 
 ### Hoe te om vorige vragen te vinden
 
-Alle query&#39;s die vanuit [!DNL Query Editor] worden uitgevoerd, worden vastgelegd in de logbestandentabel. U kunt de zoekfunctionaliteit op het tabblad *[!UICONTROL Logboek]* gebruiken om query-uitvoeringen te zoeken. Opgeslagen query&#39;s worden weergegeven op het tabblad *[!UICONTROL Bladeren]* .
+Alle query&#39;s die vanuit [!DNL Query Editor] worden uitgevoerd, worden vastgelegd in de logbestandentabel. U kunt de zoekfunctionaliteit op het tabblad **[!UICONTROL Logboek]** gebruiken om query-uitvoeringen te zoeken. Opgeslagen query&#39;s worden weergegeven op het tabblad **[!UICONTROL Bladeren]** .
 
 Zie het overzicht [van de Dienst van de][query-service-ui] Vraag UI voor meer informatie.
 
@@ -99,7 +99,7 @@ Zie het overzicht [van de Dienst van de][query-service-ui] Vraag UI voor meer in
 
 ## Vragen uitvoeren met de Query Editor
 
-Als u een query wilt uitvoeren in, [!DNL Query Editor]kunt u SQL invoeren in de editor of een vorige query laden via het tabblad *Logboek* of *[!UICONTROL Bladeren]* en op **Afspelen** klikken. De status van de vraaguitvoering wordt getoond op het lusje van de *[!UICONTROL Console]* hieronder, en de outputgegevens worden getoond op het lusje van *[!UICONTROL Resultaten]* .
+Als u een query wilt uitvoeren in, [!DNL Query Editor]kunt u SQL invoeren in de editor of een vorige query laden via het tabblad *Logboek* of **[!UICONTROL Bladeren]** en op **Afspelen** klikken. De status van de vraaguitvoering wordt getoond op het lusje van de **[!UICONTROL Console]** hieronder, en de outputgegevens worden getoond op het lusje van **[!UICONTROL Resultaten]** .
 
 ### Console
 
@@ -113,7 +113,7 @@ De console verstrekt informatie over de status en de verrichting van [!DNL Query
 
 ### Zoekresultaten
 
-Nadat een query is voltooid, worden de resultaten weergegeven op het tabblad *[!UICONTROL Resultaten]* , naast het tabblad *[!UICONTROL Console]* . In deze weergave wordt de tabeluitvoer van uw query weergegeven, met maximaal 100 rijen. In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met in werking `CREATE TABLE tablename AS SELECT` om een dataset met de output te produceren. Zie het [produceren datasetleerprogramma][query-service-create-datasets] voor instructies op hoe te om een dataset van vraagresultaten in te produceren [!DNL Query Editor].
+Nadat een query is voltooid, worden de resultaten weergegeven op het tabblad **[!UICONTROL Resultaten]** , naast het tabblad **[!UICONTROL Console]** . In deze weergave wordt de tabeluitvoer van uw query weergegeven, met maximaal 100 rijen. In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met in werking `CREATE TABLE tablename AS SELECT` om een dataset met de output te produceren. Zie het [produceren datasetleerprogramma][query-service-create-datasets] voor instructies op hoe te om een dataset van vraagresultaten in te produceren [!DNL Query Editor].
 
 ![Image](../images/queries/query-editor-overview/query-results.png)
 
