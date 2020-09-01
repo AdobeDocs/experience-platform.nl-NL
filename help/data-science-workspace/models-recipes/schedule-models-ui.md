@@ -5,7 +5,7 @@ title: Een model plannen (UI)
 topic: Tutorial
 description: Met de Adobe Experience Platform Data Science Workspace kunt u geplande scoring- en trainingsprogramma's instellen voor een computerleerservice. Door het trainings- en scoringsproces te automatiseren, kunt u de efficiëntie van een service op tijd behouden en verbeteren door patronen in uw gegevens bij te houden.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Met Adobe Experience Platform [!DNL Data Science Workspace] kunt u geplande scoring- en trainingsprogramma&#39;s instellen op een computerleerservice. Door het trainings- en scoringsproces te automatiseren, kunt u de efficiëntie van een service op tijd behouden en verbeteren door patronen in uw gegevens bij te houden.
 
-Dit leerprogramma doorloopt de stappen om opleiding en het schrapen programma&#39;s op een bestaande Dienst door de Galerij *[!UICONTROL van de]* Dienst te vormen. Het is opgedeeld in de volgende hoofdsecties:
+Dit leerprogramma doorloopt de stappen om opleiding en het schrapen programma&#39;s op een bestaande Dienst door de Galerij **[!UICONTROL van de]** Dienst te vormen. Het is opgedeeld in de volgende hoofdsecties:
 
 - [Geplande scoring configureren](#configure-scheduled-scoring)
 - [Geplande training configureren](#configure-scheduled-training)
@@ -51,7 +51,7 @@ Het vormen van geplande trainingslooppas op de Dienst zorgt ervoor dat het machi
 
 Zodra een Dienst wordt gecreeerd, kunt u de hieronder stappen volgen om een trainingsprogramma te vormen en toe te passen:
 
-1. Klik in Adobe Experience Platform op het tabblad **[!UICONTROL Services]** in de linkernavigatiekolom voor toegang tot de *[!UICONTROL servicegalerie]*. Zoek de Dienst u wenst om trainingslooppas te plannen en **[!UICONTROL Open]** te klikken om zijn pagina van het *Overzicht* te bekijken.
+1. Klik in Adobe Experience Platform op het tabblad **[!UICONTROL Services]** in de linkernavigatiekolom voor toegang tot de **[!UICONTROL servicegalerie]**. Zoek de Dienst u wenst om trainingslooppas te plannen en **[!UICONTROL Open]** te klikken om zijn pagina van het *Overzicht* te bekijken.
    ![](../images/models-recipes/schedule/click_to_open.png)
 
 2. De overzichtspagina toont de de opleidingsinformatie van de Dienst. Klik op de koppeling **[!UICONTROL Update Schedule]** om een trainingsprogramma te configureren.
