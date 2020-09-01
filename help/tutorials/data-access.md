@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access data sources
 solution: Experience Platform
 title: Zelfstudies voor gegevenstoegang
 topic: tutorial
+description: Met Adobe Experience Platform kunnen gebruikers ingesloten gegevenssets binnen Experience Platform detecteren en benaderen met behulp van de API voor gegevenstoegang.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '121'
 ht-degree: 0%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 0%
 
 # Gegevens Experience Platform openen
 
-Adobe Experience Platform laat gebruikers toe om ingebedde datasets binnen het [!DNL Experience Platform] gebruiken van de Toegang API van Gegevens te ontdekken en toegang te hebben.
+Met Adobe Experience Platform kunnen gebruikers ingesloten gegevenssets detecteren en openen met behulp van de API voor gegevenstoegang. [!DNL Experience Platform]
 
 ## Gegevens benaderen met API&#39;s
 
-Leer hoe te om van gegevens de plaats te bepalen, toegang te hebben en te downloaden die binnen een dataset gebruikend de Toegang API van Gegevens in Adobe Experience Platform worden opgeslagen, evenals enkele unieke eigenschappen van de Toegang API van Gegevens, zoals het pagineren en gedeeltelijke downloads. Volg de zelfstudie over de API voor [gegevenstoegang om aan de slag te gaan](../data-access/tutorials/dataset-data.md).
+Leer hoe u gegevens kunt zoeken, openen en downloaden die zijn opgeslagen in een gegevensset met behulp van de API voor gegevenstoegang in Adobe Experience Platform en met enkele unieke functies van de API voor gegevenstoegang, zoals pagineren en gedeeltelijke downloads. Volg de zelfstudie over de API voor [gegevenstoegang om aan de slag te gaan](../data-access/tutorials/dataset-data.md).
 
 ## Een gegevensset maken
 
