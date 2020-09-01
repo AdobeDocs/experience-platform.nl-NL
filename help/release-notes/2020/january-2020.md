@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 3%
@@ -82,7 +82,7 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 | Categorie | Machtiging | Beschrijving |
 |--- | --- | ---|
 | Gegevensinname | Bronnen beheren | Toegang tot het lezen, maken, bewerken en uitschakelen van bronnen. |
-| Gegevensinname | Bronnen weergeven | Alleen-lezen toegang tot beschikbare bronnen op het tabblad *[!UICONTROL Catalogus]* en geverifieerde bronnen op het tabblad *[!UICONTROL Bladeren]* . |
+| Gegevensinname | Bronnen weergeven | Alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalogus]** en geverifieerde bronnen op het tabblad **[!UICONTROL Bladeren]** . |
 
 **Bekende problemen**
 
