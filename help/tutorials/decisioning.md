@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Zelfstudies voor besluitvorming
 topic: tutorial
+description: De beslissingsservice biedt de mogelijkheid om persoonlijke, geoptimaliseerde en georkestreerde ervaringen te maken in toepassingen die op Adobe Experience Platform worden uitgevoerd. Gebruikend de Dienst van Beslissing, kunt u de beste optie van een reeks beschikbare keuzen bepalen.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
@@ -14,12 +15,12 @@ ht-degree: 0%
 
 # Get started with [!DNL Decisioning Service]
 
-[!DNL Decisioning Service] biedt de mogelijkheid om persoonlijke, geoptimaliseerde en geordende ervaringen te maken in toepassingen die op het Adobe Experience Platform worden uitgevoerd. Met behulp [!DNL Decisioning Service]van een set beschikbare opties kunt u de beste optie bepalen. Deze opties, ook genoemd alternatieven, zouden aanbiedingen, productaanbevelingen, inhoudscomponenten voor een Webervaring, gespreksmanuscripten, en te nemen acties kunnen zijn. Ga voor meer informatie naar het overzicht [van de](../decisioning-service/home.md)beslissingsservice.
+[!DNL Decisioning Service] biedt de mogelijkheid om persoonlijke, geoptimaliseerde en geordende ervaringen te maken met toepassingen die op Adobe Experience Platform worden uitgevoerd. Met behulp [!DNL Decisioning Service]van een set beschikbare opties kunt u de beste optie bepalen. Deze opties, ook genoemd alternatieven, zouden aanbiedingen, productaanbevelingen, inhoudscomponenten voor een Webervaring, gespreksmanuscripten, en te nemen acties kunnen zijn. Ga voor meer informatie naar het overzicht [van de](../decisioning-service/home.md)beslissingsservice.
 
 ## Werken met [!DNL Decisioning Service] runtime
 
-Leer hoe te met de runtime diensten van het [!DNL Decisioning Service] gebruiken van Adobe Experience Platform APIs door het [werk met de runtime van de Dienst van de Beslissing te volgen zelfstudie](../decisioning-service/tutorials/runtime.md).
+Leer hoe u met de runtimeservices van het [!DNL Decisioning Service] gebruik van Adobe Experience Platform API&#39;s kunt werken door het [werk met de zelfstudie](../decisioning-service/tutorials/runtime.md)bij de uitvoering van de beslissingsservice te volgen.
 
 ## Entiteiten [!DNL Decisioning Service] beheren
 
-Voor een zelfstudie die laat zien hoe u met de bedrijfsentiteiten kunt werken om Adobe Experience Platform API&#39;s te [!DNL Decisioning Service] gebruiken, raadpleegt u de zelfstudie over het [beheren van beslissingsobjecten en -regels](../decisioning-service/tutorials/entities.md).
+Ga naar de zelfstudie over het [!DNL Decisioning Service] beheren van beslissingsobjecten en -regels voor een zelfstudie waarin wordt uitgelegd hoe u met de zakelijke entiteiten kunt werken [met Adobe Experience Platform API&#39;s](../decisioning-service/tutorials/entities.md).
