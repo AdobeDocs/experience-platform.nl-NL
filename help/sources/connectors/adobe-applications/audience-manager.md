@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Audience Manager connector;Audience manager;audience manager
 solution: Experience Platform
 title: Audience Manager-aansluiting
 topic: overview
+description: De Adobe Audience Manager-gegevensconnector streamt gegevens van de eerste partij die in Adobe Audience Manager naar Adobe Experience Platform zijn verzameld. De schakelaar van de Audience Manager neemt drie categorieën gegevens aan Platform in.
 translation-type: tm+mt
-source-git-commit: a1b09f3e88e489f1b0ec0c1fcb72a2a5a4356d87
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -73,5 +74,5 @@ Adobe Audience Manager maakt één verbinding in Catalog: **Verbinding met** Aud
 | Gegevens Audience Manager | Latentie | Notities |
 | --- | --- | --- |
 | Realtime gegevens | &lt; 35 minuten. | Tijd vanaf het vastleggen op het knooppunt Realtime tot het verschijnen op het Platform Data Lake. |
-| Binnenkomende data | &lt; 13 uur | Tijd vanaf het vastleggen op S3-emmers tot het verschijnen op het Platform Data Lake. |
+| Binnenkomende data | &lt; 13 uur | De tijd vanaf het vastleggen op S3-emmers tot het verschijnen op het Platform Data Lake. |
 | Profielgegevens | &lt; 2 dagen | Tijd vanaf het vastleggen vanaf Realtime/Inbound-gegevens tot het toevoegen aan een gebruikersprofiel en ten slotte verschijnen op het Platform Data Lake. |
