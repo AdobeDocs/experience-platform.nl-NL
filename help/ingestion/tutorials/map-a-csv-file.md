@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Een CSV-bestand toewijzen aan een XDM-schema
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1371'
 ht-degree: 1%
@@ -29,13 +29,13 @@ Deze zelfstudie vereist ook dat u al een dataset hebt gemaakt om uw CSV-gegevens
 
 ## Kies een bestemming
 
-Meld u aan bij [[!DNL Adobe Experience Platform]](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Workflows]** in de linkernavigatiebalk voor toegang tot de werkruimte *[!UICONTROL Workflows]* .
+Meld u aan bij [[!DNL Adobe Experience Platform]](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Workflows]** in de linkernavigatiebalk voor toegang tot de werkruimte **[!UICONTROL Workflows]** .
 
 Selecteer in het scherm **[!UICONTROL Workflows]** de optie CSV **[!UICONTROL toewijzen aan XDM-schema]** onder de sectie **[!UICONTROL Gegevensinvoer]** en selecteer vervolgens **[!UICONTROL Starten]**.
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
-De werkstroom CSV *[!UICONTROL toewijzen aan XDM-schema]* wordt weergegeven, te beginnen bij de stap *[!UICONTROL Doel]* . Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U kunt of een bestaande dataset gebruiken of nieuwe creëren.
+De werkstroom CSV **[!UICONTROL toewijzen aan XDM-schema]** wordt weergegeven, te beginnen bij de stap **[!UICONTROL Doel]** . Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U kunt of een bestaande dataset gebruiken of nieuwe creëren.
 
 **Een bestaande gegevensset gebruiken**
 
@@ -49,27 +49,27 @@ Als u uw CSV-gegevens wilt opnemen in een nieuwe gegevensset, selecteert u **[!U
 
 ## Gegevens toevoegen
 
-De stap Gegevens ** toevoegen wordt weergegeven. Sleep het CSV-bestand naar de beschikbare ruimte en zet het neer of selecteer Bestanden **** kiezen om het CSV-bestand handmatig in te voeren.
+De stap Gegevens **** toevoegen wordt weergegeven. Sleep het CSV-bestand naar de beschikbare ruimte en zet het neer of selecteer Bestanden **** kiezen om het CSV-bestand handmatig in te voeren.
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-De sectie *[!UICONTROL Voorbeeldgegevens]* wordt weergegeven wanneer het bestand is geüpload. De eerste tien rijen met gegevens worden weergegeven. Nadat u hebt bevestigd dat de gegevens naar behoren zijn geüpload, selecteert u **[!UICONTROL Volgende]**.
+De sectie **[!UICONTROL Voorbeeldgegevens]** wordt weergegeven wanneer het bestand is geüpload. De eerste tien rijen met gegevens worden weergegeven. Nadat u hebt bevestigd dat de gegevens naar behoren zijn geüpload, selecteert u **[!UICONTROL Volgende]**.
 
 ![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## CSV-velden toewijzen aan XDM-schemavelden
 
-De stap *[!UICONTROL Toewijzing]* wordt weergegeven. De kolommen van het CSV-bestand worden weergegeven onder *[!UICONTROL Bronveld]*, met de bijbehorende XDM-schemavelden onder *[!UICONTROL Doelveld]*. Niet-geselecteerde doelvelden krijgen een rode omtrek. Met de optie Filtervelden kunt u de lijst met beschikbare bronvelden verkleinen.
+De stap **[!UICONTROL Toewijzing]** wordt weergegeven. De kolommen van het CSV-bestand worden weergegeven onder **[!UICONTROL Bronveld]**, met de bijbehorende XDM-schemavelden onder **[!UICONTROL Doelveld]**. Niet-geselecteerde doelvelden krijgen een rode omtrek. Met de optie Filtervelden kunt u de lijst met beschikbare bronvelden verkleinen.
 
 Als u een CSV-kolom wilt toewijzen aan een XDM-veld, selecteert u het schemapictogram naast het bijbehorende doelveld van de kolom.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
 
-Het venster *[!UICONTROL Selectieschemaveld]* wordt weergegeven. Hier kunt u de structuur van het XDM-schema navigeren en van het gebied de plaats bepalen u wenst om de kolom in kaart te brengen CSV aan. Klik op een XDM-veld om dit te selecteren en klik vervolgens op **[!UICONTROL Selecteren]**.
+Het venster **[!UICONTROL Selectieschemaveld]** wordt weergegeven. Hier kunt u de structuur van het XDM-schema navigeren en van het gebied de plaats bepalen u wenst om de kolom in kaart te brengen CSV aan. Klik op een XDM-veld om dit te selecteren en klik vervolgens op **[!UICONTROL Selecteren]**.
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-Het scherm *[!UICONTROL Toewijzing]* wordt opnieuw weergegeven, waarbij het geselecteerde XDM-veld nu wordt weergegeven onder *[!UICONTROL Doelveld]*.
+Het scherm **[!UICONTROL Toewijzing]** wordt opnieuw weergegeven, waarbij het geselecteerde XDM-veld nu wordt weergegeven onder **[!UICONTROL Doelveld]**.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
@@ -77,7 +77,7 @@ Als u geen bepaalde CSV-kolom wilt toewijzen, kunt u de toewijzing verwijderen d
 
 ![](../images/tutorials/map-a-csv-file/remove-mapping.png)
 
-Als u een nieuwe afbeelding wilt toevoegen, selecteert u Nieuwe toewijzing **** toevoegen boven aan de lijst *[!UICONTROL Bronveld]* .
+Als u een nieuwe afbeelding wilt toevoegen, selecteert u Nieuwe toewijzing **** toevoegen boven aan de lijst **[!UICONTROL Bronveld]** .
 
 ![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
@@ -125,7 +125,7 @@ De volgende sectie verstrekt extra informatie voor het in kaart brengen CSV kolo
 
 ### Toewijzingsfuncties
 
-Bepaalde toewijzingsfuncties kunnen worden gebruikt om waarden te berekenen en te berekenen op basis van wat is ingevoerd in bronvelden. Als u een functie wilt gebruiken, typt u deze onder *[!UICONTROL Bronveld]* met de juiste syntaxis en invoer.
+Bepaalde toewijzingsfuncties kunnen worden gebruikt om waarden te berekenen en te berekenen op basis van wat is ingevoerd in bronvelden. Als u een functie wilt gebruiken, typt u deze onder **[!UICONTROL Bronveld]** met de juiste syntaxis en invoer.
 
 Als u bijvoorbeeld CSV-velden voor **steden** en **landen** wilt samenvoegen en deze aan het XDM-veld **Plaats** wilt toewijzen, stelt u het bronveld in als `concat(city, ", ", county)`.
 
