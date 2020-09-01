@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics mapping fields;analytics mapping
 solution: Experience Platform
-title: Analytics-toewijzingsvelden
+title: Toewijzingsvelden voor analysemogelijkheden
 topic: overview
+description: Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de Analytics Data Connector (ADC). Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes in kaart te worden gebracht.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '3328'
+source-wordcount: '3378'
 ht-degree: 0%
 
 ---
 
 
-# Analytics-toewijzingsvelden
+# Toewijzingsvelden voor analysemogelijkheden
 
-Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de Analytics Data Connector (ADC). Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van Analytics-velden worden toegewezen aan XDM-velden (Experience Data Model), terwijl andere gegevens transformaties en specifieke functies vereisen om correct te kunnen worden toegewezen.
+Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de Analytics Data Connector (ADC). Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes in kaart te worden gebracht.
 
 ![](../images/analytics-data-experience-platform.png)
 
@@ -22,13 +23,13 @@ Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de An
 
 Bepaalde velden worden rechtstreeks toegewezen vanuit Adobe Analytics naar het XDM-model (Experience Data Model).
 
-De volgende tabel bevat kolommen met de naam van het Analytics-veld (*Analytics-veld*), het bijbehorende XDM-veld (*XDM-veld*) en het type veld (*XDM-type*) en een beschrijving van het veld (*Beschrijving*).
+De volgende tabel bevat kolommen met de naam van het veld Analytics (*veld* Analytics), het corresponderende veld XDM (veld *XDM) en het type ervan (type**XDM) en een beschrijving van het veld (* beschrijving **).
 
 >[!NOTE]
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| Analytics-veld | XDM-veld | XDM-type | Beschrijving |
+| Veld Analyse | XDM-veld | XDM-type | Beschrijving |
 | --------------- | --------- | -------- | ---------- |
 | m_evar1 - m_evar250 | _experience.analytics.customDimensions.eVars.eVar1 - _experience.analytics.customDimensions.eVars.eVar250 | string | Een aangepaste variabele, die kan variëren van 1 tot en met 250. Elke organisatie gebruikt deze aangepaste eVars anders. |
 | m_prop1 - m_prop75 | _experience.analytics.customDimensions.props.prop1 - _experience.analytics.customDimensions.props.prop75 | string | Aangepaste verkeersvariabelen, die kunnen variëren van 1 tot 75. |
@@ -83,7 +84,7 @@ De volgende tabel bevat kolommen met de naam van het Analytics-veld (*Analytics-
 | videofeedtype | media.mediaTimed.primaryAssetViewDetails.sourceFeed | string | Type videofeed. |
 | mobilebeaconmajor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMajor | getal | Belangrijkste baken voor mobiele services. |
 | mobilebeaconminor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMinor | getal | Beacon minor mobiele diensten. |
-| mobilebeaconuid | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximityUUID | string | Mobile Services beacon UUID. |
+| mobilebeaconuid | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximityUUID | string | Mobile Services-baken UUID. |
 | videosessionid | media.mediaTimed.primaryAssetViewDetails._id | string | Video sessie-id. |
 | videogene | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Genre | array | Videogenre. | {title (Object), description (Object), type (Object), meta:xdmType (Object), items (tekenreeks), meta:xdmField (Object)} |
 | mobiele installaties | application.firstLaunches | Object | Dit wordt geactiveerd bij de eerste uitvoering na installatie of herinstallatie | {id (string), value (number)} |
@@ -105,11 +106,11 @@ De volgende tabel bevat kolommen met de naam van het Analytics-veld (*Analytics-
 | videochaptime | media.mediaTimed.mediaChapter.timePlayed | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videoplay | media.mediaTimed.starts | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videototaltime | media.mediaTimed.totalTimePlayed | Object | <!-- MISSING --> | {id (string), value (number)} |
-| videoqoetimetostart | media.mediaTimed.primaryAssetViewDetails.qoe.timeToStart | Object | De tijd van de videokwaliteit om te beginnen. | {id (string), value (number)} |
+| videoqoetimetostart | media.mediaTimed.primaryAssetViewDetails.qoe.timeToStart | Object | De videokwaliteitstijd die moet worden gestart. | {id (string), value (number)} |
 | videoqoedropbefore estart | media.mediaTimed.dropBeforeStarts | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videoqoebuffercount | media.mediaTimed.primaryAssetViewDetails.qoe.buffers | Object | Aantal buffer voor videokwaliteit | {id (string), value (number)} |
 | videoqoebuffertime | media.mediaTimed.primaryAssetViewDetails.qoe.bufferTime | Object | Buffertijd videokwaliteit | {id (string), value (number)} |
-| videoquebitratechangecount | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | Object | Aantal wijzigingen in videokwaliteit | {id (string), value (number)} |
+| videobeelden | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | Object | Aantal wijzigingen in videokwaliteit | {id (string), value (number)} |
 | videoquobitrateavere | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateAverage | Object | Gemiddelde bitsnelheid videokwaliteit | {id (string), value (number)} |
 | videobeelden | media.mediaTimed.primaryAssetViewDetails.qoe.errors | Object | Aantal fouten in videokwaliteit | {id (string), value (number)} |
 | videoqoedroppedframecount | media.mediaTimed.primaryAssetViewDetails.qoe.droppedFrames | Object | <!-- MISSING --> | {id (string), value (number)} |
@@ -127,7 +128,7 @@ De volgende tabel bevat kolommen met de naam van het Analytics-veld (*Analytics-
 
 Deze velden hebben één bron, maar koppelen aan **meerdere** XDM-locaties.
 
-| Analytics-veld | XDM-veld | XDM-type | Beschrijving |
+| Veld Analyse | XDM-veld | XDM-type | Beschrijving |
 | --------------- | --------- | -------- | ---------- |
 | s_resolution | device.screenWidth, device.screenHeight | integer | Numerieke id die de resolutie van de monitor vertegenwoordigt. |
 | mobileosversion | environment.operatingSystem, environment.operatingSystemVersion | string | Versie van mobiel besturingssysteem. |
@@ -137,13 +138,13 @@ Deze velden hebben één bron, maar koppelen aan **meerdere** XDM-locaties.
 
 Selecteer velden die afkomstig zijn van ADC moeten worden getransformeerd. Voor het genereren in XDM is logica vereist die verder gaat dan een directe kopie van Adobe Analytics.
 
-De volgende tabel bevat kolommen met de naam van het Analytics-veld (*Analytics-veld*), het bijbehorende XDM-veld (*XDM-veld*) en het type veld (*XDM-type*) en een beschrijving van het veld (*Beschrijving*).
+De volgende tabel bevat kolommen met de naam van het veld Analytics (*veld* Analytics), het corresponderende veld XDM (veld *XDM) en het type ervan (type**XDM) en een beschrijving van het veld (* beschrijving **).
 
 >[!NOTE]
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| Analytics-veld | XDM-veld | XDM-type | Beschrijving |
+| Veld Analyse | XDM-veld | XDM-type | Beschrijving |
 | --------------- | --------- | -------- | ----------- |
 | m_prop1 - m_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprops.prop75 | Object | Aangepaste verkeersvariabelen, variërend van 1-75 | {} |
 | m_hier1 - m_hier5 | _experience.analytics.customDimensions.hiërarchies.hier1 - _experience.analytics.customDimensions.hiërarchies.hier5 | Object | Wordt gebruikt door hiërarchievariabelen. Bevat een | lijst met gescheiden waarden. | {values (array), delimiter (tekenreeks)} |
@@ -197,13 +198,13 @@ Selecteer velden (ook wel &quot;postwaarden&quot; genoemd) vereisen geavanceerde
 
 Meer over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, gelieve de [Adobe-bepaalde functiedocumentatie](../../../../query-service/sql/adobe-defined-functions.md) te bezoeken.
 
-De volgende tabel bevat kolommen met de naam van het Analytics-veld (*Analytics-veld*), het bijbehorende XDM-veld (*XDM-veld*) en het type veld (*XDM-type*) en een beschrijving van het veld (*Beschrijving*).
+De volgende tabel bevat kolommen met de naam van het veld Analytics (*veld* Analytics), het corresponderende veld XDM (veld *XDM) en het type ervan (type**XDM) en een beschrijving van het veld (* beschrijving **).
 
 >[!NOTE]
 >
 >Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
-| Analytics-veld | XDM-veld | XDM-type | Beschrijving |
+| Veld Analyse | XDM-veld | XDM-type | Beschrijving |
 | --------------- | --------- | -------- | ---------- |
 | post_evar1 - post_evar250 | _experience.analytics.customDimensions.eVars.eVar1 - _experience.analytics.customDimensions.eVars.eVar250 | string | Een aangepaste variabele, die kan variëren van 1 tot en met 250. Elke organisatie gebruikt deze aangepaste eVars anders. |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.props.prop1 - _experience.analytics.customDimensions.props.prop75 | string | Aangepaste verkeersvariabelen, die kunnen variëren van 1 tot 75. |
