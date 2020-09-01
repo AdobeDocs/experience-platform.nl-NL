@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure File Storage;azure file storage
 solution: Experience Platform
 title: Azure File Storage-aansluiting
 topic: overview
+description: In de onderstaande documentatie vindt u informatie over het maken van een verbinding tussen Azure File Storage en Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
