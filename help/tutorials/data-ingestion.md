@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Zelfstudies voor gegevensinsluiting
 topic: tutorial
+description: De Ingestie van gegevens omvat partijingestie, het stromen ingestie, en ingestie gebruikend bronschakelaars.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Gegevens verzamelen in [!DNL Experience Platform]
 
-Adobe Experience Platform brengt gegevens uit meerdere bronnen samen, zodat marketers het gedrag van hun klanten beter kunnen begrijpen. Adobe vertegenwoordigt de veelvoudige methodes waardoor gegevens uit deze bronnen [!DNL Experience Platform Data Ingestion] opnemen, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door stroomafwaartse [!DNL Platform] [!DNL Platform services]. [!DNL Data Ingestion] omvat batch-opname, streaming opname en inname via bronconnectors. Meer leren, lees het overzicht [van de Ingestie van](../ingestion/home.md) Gegevens of ga direct aan de [Brondocumentatie](../sources/home.md)te werk.
+Adobe Experience Platform brengt gegevens uit meerdere bronnen samen om marketers te helpen het gedrag van hun klanten beter te begrijpen. Adobe vertegenwoordigt de veelvoudige methodes waardoor gegevens uit deze bronnen [!DNL Experience Platform Data Ingestion] opnemen, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door stroomafwaartse [!DNL Platform] [!DNL Platform services]. [!DNL Data Ingestion] omvat batch-opname, streaming opname en inname via bronconnectors. Meer leren, lees het overzicht [van de Ingestie van](../ingestion/home.md) Gegevens of ga direct aan de [Brondocumentatie](../sources/home.md)te werk.
 
 ## Een bronaansluiting maken in de gebruikersinterface en de API
 
@@ -22,11 +23,11 @@ De bron schakelaars staan u toe om gegevens van veelvoudige bronnen in te voeren
 
 ## Gegevens van groep samenvoegen
 
-Met Adobe Experience Platform kunt u gegevens gemakkelijk importeren in [!DNL Platform] de vorm van batchbestanden. Voorbeelden van gegevens die moeten worden opgenomen, kunnen profielgegevens bevatten van een plat bestand in een CRM-systeem (zoals een parketbestand) of gegevens die in overeenstemming zijn met een bekend [!DNL Experience Data Model] (XDM) schema in de Schemaregistratie. Ga om te beginnen naar de [innamegegevens in de zelfstudie](../ingestion/tutorials/ingest-batch-data.md)Platform.
+Met Adobe Experience Platform kunt u gegevens eenvoudig importeren in [!DNL Platform] de vorm van batchbestanden. Voorbeelden van gegevens die moeten worden opgenomen, kunnen profielgegevens bevatten van een plat bestand in een CRM-systeem (zoals een parketbestand) of gegevens die in overeenstemming zijn met een bekend [!DNL Experience Data Model] (XDM) schema in de Schemaregistratie. Ga om te beginnen naar de [innamegegevens in de zelfstudie](../ingestion/tutorials/ingest-batch-data.md)Platform.
 
 ## Een CSV-bestand toewijzen aan een XDM-schema
 
-Om CSV-gegevens in Adobe Experience Platform in te voeren, moeten de gegevens worden toegewezen aan een [!DNL Experience Data Model] (XDM) schema. Voor stappen die tonen hoe te om een Csv- dossier aan een schema toe te wijzen XDM gebruikend het [!DNL Experience Platform] gebruikersinterface, volg de [kaart een Csv- dossier aan een XDM schemazelfstudie](../ingestion/tutorials/map-a-csv-file.md).
+Als u CSV-gegevens in Adobe Experience Platform wilt invoeren, moeten de gegevens worden toegewezen aan een [!DNL Experience Data Model] (XDM)-schema. Voor stappen die tonen hoe te om een Csv- dossier aan een schema toe te wijzen XDM gebruikend het [!DNL Experience Platform] gebruikersinterface, volg de [kaart een Csv- dossier aan een XDM schemazelfstudie](../ingestion/tutorials/map-a-csv-file.md).
 
 ## Een streamingverbinding maken
 
@@ -34,7 +35,7 @@ Wanneer u wilt beginnen met streamen van gegevens, moet u eerst een HTTP-eindpun
 
 ## Een geverifieerde streamingverbinding maken
 
-De voor authentiek verklaarde Inzameling van Gegevens staat de diensten van het Adobe Experience Platform, zoals [!DNL Real-time Customer Profile] en [!DNL Identity], toe om tussen verslagen te onderscheiden die uit vertrouwde op bronnen en onbetrouwbare bronnen komen. Volg de zelfstudie voor het [maken van een geverifieerde streamingverbinding](../ingestion/tutorials/create-authenticated-streaming-connection.md)om aan de slag te gaan.
+De voor authentiek verklaarde Inzameling van Gegevens staat de diensten van Adobe Experience Platform, zoals [!DNL Real-time Customer Profile] en [!DNL Identity], toe om tussen verslagen te onderscheiden die uit vertrouwde op bronnen en onbetrouwbare bronnen komen. Volg de zelfstudie voor het [maken van een geverifieerde streamingverbinding](../ingestion/tutorials/create-authenticated-streaming-connection.md)om aan de slag te gaan.
 
 ## Gegevens van stroomrecord- en tijdreeksen
 
