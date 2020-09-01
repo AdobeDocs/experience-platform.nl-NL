@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;Dynamics;dynamics
 solution: Experience Platform
 title: Creeer een de bronschakelaar van de Dynamica van Microsoft in UI
 topic: overview
+description: Dit leerprogramma verstrekt stappen voor het creëren van een de bronschakelaar van de Dynamiek van Microsoft (hierna genoemd "Dynamica") gebruikend het gebruikersinterface van het Platform.
 translation-type: tm+mt
-source-git-commit: 7cc76eab53adf6a40d16b368854a2e7f178e7244
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '451'
 ht-degree: 1%
 
 ---
