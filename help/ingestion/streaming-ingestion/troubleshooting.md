@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Problemen met streaming opname oplossen
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 0%
@@ -58,7 +58,7 @@ U kunt veelvoudige berichten binnen één enkele verzoeklading groeperen en hen 
 
 Alle gegevens die naar [!DNL Platform] (met succes of anders) worden verzonden worden opgeslagen als partijdossiers alvorens in datasets worden voortgeduurd. De verwerkingsstatus van batches wordt weergegeven in de gegevensset waarnaar ze zijn verzonden.
 
-U kunt verifiëren of de gegevens met succes zijn opgenomen door datasetactiviteit te controleren gebruikend het [gebruikersinterface](https://platform.adobe.com)van het Experience Platform. Klik **[!UICONTROL Datasets]** in de linkernavigatie om een lijst van datasets te tonen. Selecteer de dataset u aan van de getoonde lijst stroomt om zijn de activiteitenpagina *[!UICONTROL van de]* Dataset te openen, tonend alle partijen die tijdens een geselecteerde tijdspanne worden verzonden. Zie de handleiding voor het [!DNL Experience Platform] controleren van streaming gegevensstromen voor meer informatie over het gebruik [voor het controleren van gegevensstromen](../quality/monitor-data-flows.md).
+U kunt verifiëren of de gegevens met succes zijn opgenomen door datasetactiviteit te controleren gebruikend het [gebruikersinterface](https://platform.adobe.com)van het Experience Platform. Klik **[!UICONTROL Datasets]** in de linkernavigatie om een lijst van datasets te tonen. Selecteer de dataset u aan van de getoonde lijst stroomt om zijn de activiteitenpagina **[!UICONTROL van de]** Dataset te openen, tonend alle partijen die tijdens een geselecteerde tijdspanne worden verzonden. Zie de handleiding voor het [!DNL Experience Platform] controleren van streaming gegevensstromen voor meer informatie over het gebruik [voor het controleren van gegevensstromen](../quality/monitor-data-flows.md).
 
 Als uw gegevens niet kunnen worden ingevoerd en u wilt het van terugkrijgen [!DNL Platform], kunt u de ontbroken partijen terugwinnen door hun IDs naar [!DNL Data Access API]te verzenden. Zie de handleiding over het [ophalen van mislukte batches](../quality/retrieve-failed-batches.md) voor meer informatie.
 
@@ -100,4 +100,4 @@ Als een bericht wordt [!DNL Real-time Customer Profile] afgewezen, is dit waarsc
 
 Er zijn twee typen naamruimten: standaard en aangepast. Wanneer u aangepaste naamruimten gebruikt, moet u ervoor zorgen dat de naamruimte is geregistreerd binnen [!DNL Identity Service]. Zie het overzicht [van naamruimte](../../identity-service/namespaces.md) voor identiteiten voor meer informatie over het gebruik van standaard- en aangepaste naamruimten.
 
-U kunt de [[!DNL Experience Platform UI]](https://platform.adobe.com) gebruiken om meer informatie te zien over waarom een bericht mislukte opname. Klik op **[!UICONTROL Controle]** in de linkernavigatie en bekijk het tabblad _[!UICONTROL Streaming end-to-end]_ om de berichtbatches te zien die tijdens een geselecteerde tijdsperiode worden gestreamd.
+U kunt de [[!DNL Experience Platform UI]](https://platform.adobe.com) gebruiken om meer informatie te zien over waarom een bericht mislukte opname. Klik op **[!UICONTROL Controle]** in de linkernavigatie en bekijk het tabblad **[!UICONTROL Streaming end-to-end]** om de berichtbatches te zien die tijdens een geselecteerde tijdsperiode worden gestreamd.
