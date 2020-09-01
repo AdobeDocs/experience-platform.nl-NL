@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;GCS;gcs
 solution: Experience Platform
-title: Een Google Cloud Storage-bronconnector maken in de gebruikersinterface
+title: Google Cloud Storage-bronconnector (UI)
 topic: overview
+description: Deze zelfstudie bevat stappen voor het maken van een GCS-bronconnector (Google Cloud Storage) via de gebruikersinterface van het Platform.
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '555'
 ht-degree: 1%
 
 ---
