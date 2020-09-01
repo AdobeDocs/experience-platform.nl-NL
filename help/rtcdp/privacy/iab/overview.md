@@ -4,7 +4,7 @@ solution: Experience Platform
 title: IAB TCF 2.0-ondersteuning in Real-time Customer Data Platform
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 06eda1502d34da1caeebbe9b753dd437bbd9d6ab
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -93,7 +93,7 @@ Ongeacht de methode u gebruikt om de gegevens te verzamelen, is het doel een koo
 
 In de TCF specificatie, worden de toestemmingskoorden gebruikt om relevante details over de toestemmingsmontages van een klant, in termen van specifieke marketing doeleinden te coderen zoals die door beleid en verkopers worden bepaald. [!DNL Real-time CDP] gebruikt deze tekenreeksen om de toestemmingsmontages voor elke klant op te slaan, en daarom moet een nieuwe toestemmingskoord worden geproduceerd telkens als die montages veranderen.
 
-Constante tekenreeksen kunnen alleen worden gemaakt door een CMP die is geregistreerd bij de IAB TCF. Voor meer informatie over hoe te om toestemmingskoorden te produceren gebruikend uw bepaald CMP, verwijs naar de het formatteren van het [toestemmingskoord gids](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md) in het IAB TCF rapport GitHub.
+Constante tekenreeksen kunnen alleen worden gemaakt door een CMP die is geregistreerd bij de IAB TCF. Voor meer informatie over hoe te om toestemmingskoorden te produceren gebruikend uw bepaald CMP, verwijs naar de het formatteren van het [toestemmingstekengids](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md) in het IAB TCF rapport GitHub.
 
 ## Gegevenssets maken met IAB-toestemmingsvelden {#datasets}
 
@@ -121,7 +121,7 @@ Zodra u CMP hebt gevormd om toestemmingskoorden te produceren, moet u SDK van he
 
 De SDK kan alleen gegevens verzenden naar [!DNL Experience Platform]als u eerst een nieuwe randconfiguratie maakt voor [!DNL Platform] in [!DNL Adobe Experience Platform Launch]. De specifieke stappen voor hoe te om een nieuwe configuratie tot stand te brengen worden verstrekt in de documentatie [van](../../../edge/fundamentals/edge-configuration.md)SDK.
 
-Nadat u een unieke naam voor de configuratie hebt opgegeven, selecteert u de schakelknop naast *[!UICONTROL Adobe Experience Platform]*. Gebruik vervolgens de volgende waarden om de rest van het formulier in te vullen:
+Nadat u een unieke naam voor de configuratie hebt opgegeven, selecteert u de schakelknop naast **[!UICONTROL Adobe Experience Platform]**. Gebruik vervolgens de volgende waarden om de rest van het formulier in te vullen:
 
 | Edge-configuratieveld | Waarde |
 | --- | --- |
@@ -142,7 +142,7 @@ Zodra u de randconfiguratie hebt gecreeerd die in de vorige sectie wordt beschre
 >
 >Voor een inleiding aan de gemeenschappelijke syntaxis voor alle bevelen [!DNL Platform] SDK, zie het document over het [uitvoeren van bevelen](../../../edge/fundamentals/executing-commands.md).
 
-#### Kantaarnhaken voor wijzigen van CMP-toestemming gebruiken
+#### Kantaarnhaken voor wijziging van CMP-toestemming gebruiken
 
 Vele CMPs verstrekt uit-van-de-doos haken die aan toestemmings-verandering gebeurtenissen luisteren. Wanneer deze gebeurtenissen voorkomen, kunt u het `setConsent` bevel gebruiken om de toestemmingsgegevens van die klant bij te werken.
 
