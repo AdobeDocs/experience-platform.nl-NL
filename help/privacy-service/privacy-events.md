@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Abonneren op privacygebeurtenissen
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Abonneren op [!DNL Privacy Events]
 
-[!DNL Privacy Events] zijn berichten die door Adobe Experience Platform worden verstrekt [!DNL Privacy Service], die hefboomwerking I/O Gebeurtenissen die van Adobe naar een gevormde webhaak worden verzonden om efficiënte baanverzoekautomatisering te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een werkstroom is bereikt.
+[!DNL Privacy Events] Dit zijn berichten van Adobe Experience Platform [!DNL Privacy Service], die gebruikmaken van Adobe I/O-gebeurtenissen die naar een geconfigureerde webhaak worden verzonden om een efficiënte automatisering van taakaanvragen te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een werkstroom is bereikt.
 
 Er zijn momenteel vier typen meldingen die betrekking hebben op de levenscyclus van de privacytaakaanvraag:
 
@@ -86,7 +86,7 @@ Het dialoogvenster Gebeurtenissen __ toevoegen wordt weergegeven. Selecteer **[!
 
 ![](./images/privacy-events/add-privacy-events.png)
 
-Het dialoogvenster _Gebeurtenisregistratie_ configureren wordt weergegeven. Selecteer welke gebeurtenissen u wilt ontvangen door hun overeenkomstige checkboxes te selecteren. Gebeurtenissen die u selecteert, verschijnen onder _[!UICONTROL Geabonneerde Gebeurtenissen]_in de linkerkolom. Klik op**[!UICONTROL  Volgende ]**als u klaar bent.
+Het dialoogvenster _Gebeurtenisregistratie_ configureren wordt weergegeven. Selecteer welke gebeurtenissen u wilt ontvangen door hun overeenkomstige checkboxes te selecteren. Gebeurtenissen die u selecteert, verschijnen onder **[!UICONTROL Geabonneerde Gebeurtenissen]** in de linkerkolom. When finished, click **[!UICONTROL Next]**.
 
 ![](./images/privacy-events/choose-subscriptions.png)
 
@@ -106,11 +106,11 @@ Geef in het volgende scherm een naam en een beschrijving op voor de registratie 
 
 ![](./images/privacy-events/event-details.png)
 
-Verderop op het zelfde scherm, krijgt u twee opties om te vormen hoe te om gebeurtenissen te ontvangen. Selecteer **[!UICONTROL Webhaak]** en geef de `Forwarding` URL op voor de bovenstaande webhaak die u eerder onder _[!UICONTROL Webhaak URL]_hebt gemaakt. Selecteer vervolgens de gewenste leveringsstijl (enkele of batch) voordat u op**[!UICONTROL  geconfigureerde gebeurtenissen ]**opslaan klikt om de gebeurtenisregistratie te voltooien.
+Verderop op het zelfde scherm, krijgt u twee opties om te vormen hoe te om gebeurtenissen te ontvangen. Selecteer **[!UICONTROL Webhaak]** en geef de `Forwarding` URL op voor de bovenstaande webhaak die u eerder onder **[!UICONTROL Webhaak URL]** hebt gemaakt. Selecteer vervolgens de gewenste leveringsstijl (enkele of batch) voordat u op **[!UICONTROL geconfigureerde gebeurtenissen]** opslaan klikt om de gebeurtenisregistratie te voltooien.
 
 ![](./images/privacy-events/webhook-details.png)
 
-De detailpagina voor uw project verschijnt opnieuw, met [!DNL Privacy Events] verschijnt onder _[!UICONTROL Gebeurtenissen]_in de linkernavigatie.
+De detailpagina voor uw project verschijnt opnieuw, met [!DNL Privacy Events] verschijnt onder **[!UICONTROL Gebeurtenissen]** in de linkernavigatie.
 
 ## Gebeurtenisgegevens weergeven
 
@@ -126,7 +126,7 @@ Klik op het tabblad **[!UICONTROL Foutopsporing overtrekken]** om een lijst met 
 
 ![](images/privacy-events/debug-tracing.png)
 
-In de sectie _[!UICONTROL Payload]_vindt u details over de geselecteerde gebeurtenis, inclusief het gebeurtenistype (`com.adobe.platform.gdpr.productcomplete`), zoals in het bovenstaande voorbeeld wordt aangegeven.
+In de sectie **[!UICONTROL Payload]** vindt u details over de geselecteerde gebeurtenis, inclusief het gebeurtenistype (`com.adobe.platform.gdpr.productcomplete`), zoals in het bovenstaande voorbeeld wordt aangegeven.
 
 ## Volgende stappen
 
