@@ -30,7 +30,7 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 - Een goed begrip van de volgende belangrijkste concepten die in deze zelfstudie worden gebruikt:
    - [[!DNL het Model van de Gegevens van de Ervaring (XDM) en XDM Systeem]](../../xdm/home.md)
    - [[!DNL Query Service]](../../query-service/home.md)
-   - [[!SQL-syntaxis voor DNL Query Service](../../query-service/sql/overview.md)
+   - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - [Adobe Analytics]
 
 ## Toegang [!DNL JupyterLab] en [!DNL Query Service] {#access-jupyterlab-and-query-service}
