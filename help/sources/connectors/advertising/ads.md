@@ -5,9 +5,9 @@ title: Google AdWords-connector
 topic: overview
 description: In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen Google AdWords en Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: ca3084a9c30cc2dd9e0ebc9cef5ae630cbe47b98
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
@@ -55,15 +55,17 @@ De volgende IP adressen moeten aan een lijst van gewenste personen worden toegev
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Verbinden [!DNL Google AdWords] met [!DNL Platform]
+
 In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Google AdWords] [!DNL Platform] met API&#39;s of de gebruikersinterface:
 
-## Verbinding maken [!DNL Google AdWords] met API&#39; [!DNL Platform] s
+### API&#39;s gebruiken
 
 - [Een Google AdWords-connector maken met de Flow Service API](../../tutorials/api/create/advertising/ads.md)
 - [Een reclamesysteem verkennen met de Flow Service API](../../tutorials/api/explore/advertising.md)
 - [Reclamegegevens verzamelen met behulp van de Flow Service API](../../tutorials/api/collect/advertising.md)
 
-## Verbinding maken [!DNL Google AdWords] met [!DNL Platform] de gebruikersinterface
+### De gebruikersinterface gebruiken
 
 - [Een Google AdWords-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/advertising/ads.md)
 - [Een dataflow configureren voor een advertentieverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/advertising.md)
