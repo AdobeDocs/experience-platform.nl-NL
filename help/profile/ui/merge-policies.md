@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Gebruikershandleiding voor beleid samenvoegen
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 95b4964f4d506a7f5618590fe43116e2297be22e
 workflow-type: tm+mt
-source-wordcount: '1433'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -55,16 +55,16 @@ Het scherm **[!UICONTROL Samenvoegbeleid]** maken wordt weergegeven, zodat u bel
 * **[!UICONTROL ID stitching]**: In dit veld wordt gedefinieerd hoe de verwante identiteiten van een klant worden bepaald. Er zijn twee mogelijke waarden:
    * **[!UICONTROL Geen]**: Geen identiteitsstitching uitvoeren.
    * **[!UICONTROL Privégrafiek]**: Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek.
-* **[!UICONTROL Kenmerk samenvoegen]**: Een profielfragment is de profielinformatie voor slechts één identiteit uit de lijst van identiteiten die voor een individuele klant bestaan. Wanneer het gebruikte grafiektype van de identiteit in meer dan één identiteit resulteert, is er de mogelijkheid voor conflicterende profielattributen en de prioriteit moet worden gespecificeerd. Door [!UICONTROL kenmerksamenvoeging] te gebruiken, kunt u opgeven welke waarden voor het gegevenssetprofiel moeten worden prioriteerd als er een samenvoegconflict optreedt tussen gegevenssets van het type Key Value (recordgegevens). Er zijn twee mogelijke waarden:
-   * **[!UICONTROL Tijdstempel geordend]**: Geef in geval van een conflict prioriteit aan het profiel dat het laatst is bijgewerkt. [!UICONTROL Tijdstempel dat is geordend] , ondersteunt ook aangepaste tijdstempels die voorrang hebben op systeemtijdstempels bij het samenvoegen van gegevens binnen dezelfde gegevensset (meerdere identiteiten) of over gegevenssets heen. Zie de [sectie met geordende](#timestamp-ordered) tijdstempels voor meer informatie.
-   * **[!UICONTROL Prioriteit]** gegevensset: Geef voorrang aan profielfragmenten die op de dataset worden gebaseerd waaruit zij kwamen. Wanneer het selecteren van deze optie, moet u de verwante datasets en hun orde van prioriteit selecteren. Zie de details over [datasetbelangrijkheid](#dataset-precedence) hieronder voor meer informatie.
+* **[!UICONTROL Kenmerk samenvoegen]**: Een profielfragment bevat informatie voor slechts één identiteit uit de lijst met identiteiten die voor een individuele klant bestaan. Wanneer het gebruikte grafiektype van de identiteit in meer dan één identiteit resulteert, is er de mogelijkheid voor conflicterende profielattributen en de prioriteit moet worden gespecificeerd. Door [!UICONTROL kenmerksamenvoeging] te gebruiken, kunt u opgeven welke waarden voor het gegevenssetprofiel moeten worden prioriteerd als er een samenvoegconflict optreedt tussen gegevenssets van het type key-value (recordgegevens). Er zijn twee mogelijke waarden:
+   * **[!UICONTROL Tijdstempel geordend]**: In geval van een conflict wordt prioriteit gegeven aan het profiel dat het laatst is bijgewerkt. [!UICONTROL Tijdstempel dat is geordend] , ondersteunt ook aangepaste tijdstempels die voorrang hebben op systeemtijdstempels bij het samenvoegen van gegevens binnen dezelfde gegevensset (meerdere identiteiten) of over gegevenssets heen. Zie de [sectie met geordende](#timestamp-ordered) tijdstempels voor meer informatie.
+   * **[!UICONTROL Prioriteit]** gegevensset: In geval van een conflict, geef prioriteit aan profielfragmenten die op de dataset worden gebaseerd waaruit zij kwamen. Wanneer het selecteren van deze optie, moet u de verwante datasets en hun orde van prioriteit kiezen. Zie de details over [datasetbelangrijkheid](#dataset-precedence) hieronder voor meer informatie.
 * **[!UICONTROL Standaardsamenvoegbeleid]**: Een schakelknop waarmee u kunt bepalen of dit samenvoegbeleid al dan niet de standaardinstelling voor uw organisatie is. Als de kiezer wordt ingeschakeld en het nieuwe beleid wordt opgeslagen, wordt het vorige standaardbeleid automatisch bijgewerkt zodat het niet langer de standaardbeleid is.
 
 ### Tijdstempel geordend {#timestamp-ordered}
 
 Aangezien de verslagen van het Profiel in Experience Platform worden opgenomen, wordt een systeemtimestamp verkregen op het tijdstip van opneming en toegevoegd aan het verslag. Wanneer [!UICONTROL Tijdstempel geordend] is geselecteerd als het samenvoegtype [!UICONTROL voor] kenmerken voor een samenvoegbeleid, worden profielen samengevoegd op basis van de tijdstempel van het systeem. Met andere woorden, het samenvoegen wordt uitgevoerd op basis van de tijdstempel voor het tijdstip waarop de record in het Platform is opgenomen.
 
-Er kunnen soms gebruiksgevallen zijn, zoals het terugvullen van gegevens of het verzekeren van de correcte orde van gebeurtenissen als de verslagen uit orde worden opgenomen, waar het noodzakelijk is om een douantimestamp te leveren en het fusiebeleid te hebben de douane timestamp eerder dan de systeemtimestamp respecteren.
+Soms zijn er gebruiksgevallen waarin het nodig is een aangepaste tijdstempel op te geven en het samenvoegbeleid de aangepaste tijdstempel moet gebruiken in plaats van de systeemtijdstempel. Voorbeelden hiervan zijn het terugvullen van gegevens of het garanderen van de juiste volgorde van gebeurtenissen als records buiten de bestelling worden opgenomen.
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ In de volgende schermafbeelding worden de velden weergegeven in de [!UICONTROL E
 
 ![](../images/merge-policies/custom-timestamp-mixin.png)
 
-Als u met aangepaste tijdstempels wilt werken met de API, raadpleegt u de bijlage bij de eindgebruikershandleiding [voor](../api/merge-policies.md) samenvoegbeleid en vervolgens de sectie over het [gebruik van aangepaste tijdstempels](../api/merge-policies.md#custom-timestamps).
+Als u met aangepaste tijdstempels wilt werken met de API, raadpleegt u de bijlage bij de eindgebruikershandleiding [voor](../api/merge-policies.md) samenvoegbeleid en de sectie over het [gebruik van aangepaste tijdstempels](../api/merge-policies.md#custom-timestamps).
 
 ### Dataset-prioriteit {#dataset-precedence}
 
@@ -92,7 +92,7 @@ Wanneer het selecteren van een waarde van de samenvoeging [!UICONTROL van] Attri
 
 Een geval van het voorbeeldgebruik zou zijn als uw organisatie informatie aanwezig in één dataset had die over gegevens in een andere dataset voorkeur of vertrouwd is.
 
-Wanneer het selecteren van de belangrijkheid [!UICONTROL van de]Dataset, opent een afzonderlijk paneel dat u van [!UICONTROL Beschikbare datasets] vereist (of gebruik checkbox om allen te selecteren) welke datasets zullen worden omvat. U kunt die datasets dan slepen en neerzetten in het [!UICONTROL Geselecteerde paneel van Datasets] en hen slepen in de correcte orde van prioriteit. De hoogste dataset zal hoogste prioriteit worden gegeven, dan zal tweede dataset tweede-hoogste zijn, etc.
+Wanneer het selecteren van de belangrijkheid [!UICONTROL van de]Dataset, opent een afzonderlijk paneel dat u van [!UICONTROL Beschikbare datasets] vereist om te selecteren welke datasets zullen worden omvat (of gebruik checkbox om allen te selecteren). U kunt die datasets dan slepen en neerzetten in het [!UICONTROL Geselecteerde paneel van Datasets] en hen slepen in de correcte orde van prioriteit. De hoogste dataset zal hoogste prioriteit worden gegeven, zal de tweede dataset tweede-hoogste zijn, etc.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
@@ -100,11 +100,11 @@ Als u klaar bent met het maken van het samenvoegbeleid, selecteert u **[!UICONTR
 
 ## Een samenvoegingsbeleid bewerken
 
-U kunt een bestaand samenvoegbeleid wijzigen via het tabblad [!UICONTROL Samenvoegen van beleidsregels] door op de [!UICONTROL beleidsnaam]* te klikken voor het samenvoegbeleid dat u wilt bewerken.
+U kunt een bestaand samenvoegbeleid wijzigen via het tabblad [!UICONTROL Samenvoegen van beleidsregels] door de **[!UICONTROL beleidsnaam]** te selecteren voor het samenvoegbeleid dat u wilt bewerken.
 
 ![Landingspagina van beleid samenvoegen](../images/merge-policies/select-edit.png)
 
-Wanneer het [!UICONTROL Edit scherm van het Samenvoegingsbeleid] verschijnt, kunt u veranderingen in de [!UICONTROL Naam], het [!UICONTROL Schema], het [!UICONTROL identiteitskaart stitching] type, en de samenvoegingstype [!UICONTROL van]  Attributen aanbrengen, evenals selecteren of dit beleid al dan niet het Default samenvoegbeleid voor uw organisatie zal zijn.
+Wanneer het **[!UICONTROL Edit scherm van het Samenvoegingsbeleid]** verschijnt, kunt u veranderingen in de [!UICONTROL Naam], het [!UICONTROL Schema], het [!UICONTROL identiteitskaart stitching] type, en de samenvoegingstype [!UICONTROL van]  Attributen aanbrengen, evenals selecteren of dit beleid al dan niet het Default samenvoegbeleid voor uw organisatie zal zijn.
 
 >[!NOTE]
 >
