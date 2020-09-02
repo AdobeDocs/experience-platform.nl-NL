@@ -5,9 +5,9 @@ title: Azure Event Hubs-connector
 topic: overview
 description: De documentatie hieronder verstrekt informatie over hoe te om Azure Event Hubs aan Platform te verbinden gebruikend APIs of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 7b92327cfeb2410baf313dd650f68cfeb6db36e6
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -55,15 +55,17 @@ De volgende IP adressen moeten aan een lijst van gewenste personen worden toegev
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Verbinden [!DNL Azure Event Hubs] met [!DNL Platform]
+
 In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Azure Event Hubs] [!DNL Platform] met API&#39;s of de gebruikersinterface:
 
-## Verbinding maken [!DNL Azure Event Hubs] met API&#39; [!DNL Platform] s
+### API&#39;s gebruiken
 
 - [Een Azure Event Hubs-connector maken met de Flow Service API](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Een systeem voor cloudopslag verkennen met de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Gegevens voor cloudopslag verzamelen met de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## Verbinding maken [!DNL Azure Event Hubs] met [!DNL Platform] de gebruikersinterface
+### De gebruikersinterface gebruiken
 
 - [Creeer een Azure de bronschakelaar van de Hubs van de Gebeurtenis in UI](../../tutorials/ui/create/cloud-storage/eventhub.md)
 - [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
