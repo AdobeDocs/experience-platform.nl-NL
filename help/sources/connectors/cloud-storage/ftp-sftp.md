@@ -5,9 +5,9 @@ title: FTP- en SFTP-aansluiting
 topic: overview
 description: De documentatie hieronder verstrekt informatie over hoe te om een FTP of een server te verbinden STFP met Platform gebruikend APIs of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---
@@ -55,15 +55,28 @@ De volgende IP adressen moeten aan een lijst van gewenste personen worden toegev
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
-De documentatie hieronder verstrekt informatie over hoe te om een FTP of een server te verbinden met het [!DNL Platform] gebruiken van APIs of de gebruikersinterface:
+## Naamgevingsbeperkingen voor bestanden en mappen
 
-## FTP en SFTP verbinden met het [!DNL Platform] gebruik van API&#39;s
+Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer u een naam geeft aan uw bestand of map voor cloudopslag.
+
+- Namen van mappen en bestandscomponenten mogen niet langer zijn dan 255 tekens.
+- Directory- en bestandsnamen mogen niet eindigen met een slash (`/`). Indien beschikbaar wordt deze automatisch verwijderd.
+- De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?`.
+- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`, zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Zie [RFC 2616, Section 2.2 voor regels die Unicode-tekenreeksen in HTTP/1.1 bepalen: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM4, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (..), en twee stiptekens (.).
+
+## FTP en SFTP verbinden met [!DNL Platform]
+
+In de onderstaande documentatie vindt u informatie over hoe u een FTP- of SFTP-server kunt verbinden met het [!DNL Platform] gebruik van API&#39;s of de gebruikersinterface:
+
+### API&#39;s gebruiken
 
 - [Een FTP- of SFTP-connector maken met de Flow Service API](../../tutorials/api/create/cloud-storage/sftp.md)
 - [Een systeem voor cloudopslag verkennen met de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Gegevens voor cloudopslag verzamelen met de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## FTP of SFTP verbinden om UI te [!DNL Platform] gebruiken
+### De gebruikersinterface gebruiken
 
 - [Een FTP- of SFTP-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/ftp-sftp.md)
 - [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
