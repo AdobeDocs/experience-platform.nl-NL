@@ -5,9 +5,9 @@ title: Azure Data Lake Storage Gen2-connector
 topic: overview
 description: In de onderstaande documentatie vindt u informatie over de verbinding van Azure Data Lake Storage Gen2 met Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,17 @@ De volgende IP adressen moeten aan een lijst van gewenste personen worden toegev
 - `20.37.198.224/29`
 - `40.79.163.80/28`
 - `40.79.171.160/28`
+
+## Naamgevingsbeperkingen voor bestanden en mappen
+
+Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer u een naam geeft aan uw bestand of map voor cloudopslag.
+
+- Namen van mappen en bestandscomponenten mogen niet langer zijn dan 255 tekens.
+- Directory- en bestandsnamen mogen niet eindigen met een slash (`/`). Indien beschikbaar wordt deze automatisch verwijderd.
+- De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?`.
+- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`, zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Zie [RFC 2616, Section 2.2 voor regels die Unicode-tekenreeksen in HTTP/1.1 bepalen: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM4, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (..), en twee stiptekens (.).
 
 ## Verbinden [!DNL Azure Data Lake Storage Gen2] met [!DNL Platform]
 
