@@ -5,9 +5,9 @@ title: Google Cloud Storage-connector
 topic: overview
 description: In de onderstaande documentatie vindt u informatie over hoe u Google Cloud Storage met Platform kunt verbinden via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,17 @@ Selecteer **[!UICONTROL Een sleutel]** maken om een nieuwe toegangs-id en een ge
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
 U kunt uw onlangs gegenereerde toegangs sleutel-id en geheime toegangssleutel gebruiken om uw [!DNL Google Cloud Storage] account aan te sluiten op [!DNL Platform].
+
+## Naamgevingsbeperkingen voor bestanden en mappen
+
+Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer u een naam geeft aan uw bestand of map voor cloudopslag.
+
+- Namen van mappen en bestandscomponenten mogen niet langer zijn dan 255 tekens.
+- Directory- en bestandsnamen mogen niet eindigen met een slash (`/`). Indien beschikbaar wordt deze automatisch verwijderd.
+- De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?`.
+- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`, zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Zie [RFC 2616, Section 2.2 voor regels die Unicode-tekenreeksen in HTTP/1.1 bepalen: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM4, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (..), en twee stiptekens (.).
 
 ## Verbinden [!DNL Google Cloud Storage] met [!DNL Platform]
 
