@@ -5,9 +5,9 @@ title: Amazon Kinesis-connector
 topic: overview
 description: In de onderstaande documentatie vindt u informatie over hoe u Amazon Kinesis kunt verbinden met Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 7b92327cfeb2410baf313dd650f68cfeb6db36e6
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -55,15 +55,17 @@ De volgende IP adressen moeten aan een lijst van gewenste personen worden toegev
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Verbinden [!DNL Amazon Kinesis] met [!DNL Platform]
+
 In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Amazon Kinesis] [!DNL Platform] met API&#39;s of de gebruikersinterface:
 
-## Verbinding maken [!DNL Amazon Kinesis] met API&#39; [!DNL Platform] s
+### API&#39;s gebruiken
 
 - [Een Amazon Kinesis-connector maken met de Flow Service API](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Een systeem voor cloudopslag verkennen met de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Gegevens voor cloudopslag verzamelen met de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## Verbinding maken [!DNL Amazon Kinesis] met [!DNL Platform] de gebruikersinterface
+### De gebruikersinterface gebruiken
 
 - [Een Amazon Kinesis-bronaansluiting maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
