@@ -5,9 +5,9 @@ title: Profieldetails aanpassen
 description: 'Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop gegevens van het realtime-klantprofiel worden weergegeven in de gebruikersinterface van Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: c3076b37d2242fce4fa62e747adeb8b0534e995d
+source-git-commit: b08644102e6455d4c4c8b03e747411d3c05c7deb
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1224'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ Na het opslaan gaat u terug naar het tabblad [!UICONTROL Details] waar uw nieuwe
 
 ## Standaardkaarten herstellen
 
-Als u op een gegeven moment besluit dat u uw bewerkingen wilt verwijderen en wilt terugkeren naar de standaardweergave, kunt u snel en eenvoudig alle standaardkaarten en -kenmerken herstellen. Selecteer hiervoor **[UICONTROL Modify dashboard]** en selecteer vervolgens **[UICONTROL Restore default cards]**. Hiermee verwijdert u alle aanpassingen (inclusief vergroten/verkleinen) die u hebt gemaakt. Als u wilt doorgaan, selecteert u **[UICONTROL Save]** om uw wijzigingen op te slaan. Als u hebt opgegeven dat u de wijzigingen wilt herstellen, selecteert u **[UICONTROL Cancel]** (Annuleren) om het opslaan van de wijzigingen te voorkomen en de wijzigingen die u hebt aangebracht te behouden.
+Als u op een gegeven moment besluit dat u uw bewerkingen wilt verwijderen en wilt terugkeren naar de standaardweergave, kunt u snel en eenvoudig alle standaardkaarten en -kenmerken herstellen. Selecteer hiervoor **[!UICONTROL Het dashboard]** wijzigen en selecteer **[!UICONTROL Standaardkaarten]** herstellen. Hiermee verwijdert u alle aanpassingen (inclusief vergroten/verkleinen) die u hebt gemaakt. Vervolgens kunt u **[!UICONTROL Opslaan]** selecteren om de wijzigingen op te slaan. Als u de standaardinstelling niet wilt herstellen, selecteert u **[!UICONTROL Annuleren]** om de gemaakte wijzigingen te behouden.
 
 >[!NOTE]
 >
