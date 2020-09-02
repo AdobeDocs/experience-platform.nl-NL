@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Beleid voor samenvoegen - Real-time klantprofiel-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 95b4964f4d506a7f5618590fe43116e2297be22e
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2382'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,7 @@ Een profielfragment is de profielinformatie voor slechts één identiteit uit de
 
 Waar `{ATTRIBUTE_MERGE_TYPE}` is een van de volgende:
 
-* **`timestampOrdered`**: (standaardwaarde) Geef prioriteit aan het profiel dat als laatste is bijgewerkt in geval van een conflict. Met dit samenvoegtype is het `data` kenmerk niet vereist. `timestampOrdered` ondersteunt ook aangepaste tijdstempels die voorrang hebben bij het samenvoegen van profielfragmenten binnen of tussen gegevenssets. Zie de sectie Bijlage over het [gebruik van aangepaste tijdstempels](#custom-timestamps)voor meer informatie.
+* **`timestampOrdered`**: (standaardwaarde) Geef prioriteit aan het profiel dat het laatst is bijgewerkt. Met dit samenvoegtype is het `data` kenmerk niet vereist. `timestampOrdered` ondersteunt ook aangepaste tijdstempels die voorrang hebben bij het samenvoegen van profielfragmenten binnen of tussen gegevenssets. Zie de sectie Bijlage over het [gebruik van aangepaste tijdstempels](#custom-timestamps)voor meer informatie.
 * **`dataSetPrecedence`** : Geef voorrang aan profielfragmenten die op de dataset worden gebaseerd waaruit zij kwamen. Dit zou kunnen worden gebruikt wanneer de informatie aanwezig in één dataset over gegevens in een andere dataset wordt aangewezen of wordt vertrouwd. Wanneer het gebruiken van dit fusietype, wordt het `order` attribuut vereist, aangezien het van de datasets in de orde van prioriteit een lijst maakt.
    * **`order`**: Wanneer &quot;dataSetPrecedence&quot; wordt gebruikt, moet een `order` array worden voorzien van een lijst met gegevenssets. Gegevenssets die niet in de lijst zijn opgenomen, worden niet samengevoegd. Met andere woorden, gegevenssets moeten expliciet worden vermeld om te worden samengevoegd in een profiel. De `order` array bevat de id&#39;s van de gegevenssets in volgorde van prioriteit.
 
@@ -734,23 +734,23 @@ Deze sectie verstrekt extra informatie met betrekking tot het werken met fusiebe
 
 ### Aangepaste tijdstempels gebruiken {#custom-timestamps}
 
-Aangezien de verslagen van het Profiel in Experience Platform worden opgenomen, wordt een systeemtimestamp verkregen op het tijdstip van opneming en toegevoegd aan het verslag. Wanneer `timestampOrdered` is geselecteerd als het `attributeMerge` type voor een samenvoegbeleid, worden profielen samengevoegd op basis van de tijdstempel van het systeem. Met andere woorden, het samenvoegen wordt uitgevoerd op basis van de tijdstempel voor het tijdstip waarop de record in het Platform is opgenomen.
+Wanneer records in het Experience Platform worden opgenomen, wordt een systeemtijdstempel opgehaald op het moment van inname en aan de record toegevoegd. Wanneer `timestampOrdered` is geselecteerd als het `attributeMerge` type voor een samenvoegbeleid, worden profielen samengevoegd op basis van de tijdstempel van het systeem. Met andere woorden, het samenvoegen wordt uitgevoerd op basis van de tijdstempel voor het tijdstip waarop de record in het Platform is opgenomen.
 
 Er kunnen soms gebruiksgevallen zijn, zoals het terugvullen van gegevens of het verzekeren van de correcte orde van gebeurtenissen als de verslagen uit orde worden opgenomen, waar het noodzakelijk is om een douantimestamp te leveren en het fusiebeleid te hebben de douane timestamp eerder dan de systeemtimestamp respecteren.
 
-Als u een aangepaste tijdstempel wilt gebruiken, moet u de [External Source System Audit Details Mixin](#mixin-details) toevoegen aan uw profielschema. Nadat u de aangepaste tijdstempel hebt toegevoegd, kunt u deze in het `xdm:lastUpdatedDate` veld vullen. Wanneer een verslag met het bevolkte `xdm:lastUpdatedDate` gebied wordt opgenomen, zal het Experience Platform dat gebied gebruiken om verslagen of profielfragmenten binnen en over datasets samen te voegen. Als `xdm:lastUpdatedDate` het Platform niet aanwezig of niet gevuld is, blijft het de tijdstempel van het systeem gebruiken.
+Als u een aangepaste tijdstempel wilt gebruiken, moet de [[!DNL External Source System Audit Details Mixin]](#mixin-details) worden toegevoegd aan het profielschema. Nadat u de aangepaste tijdstempel hebt toegevoegd, kunt u deze in het `xdm:lastUpdatedDate` veld vullen. Wanneer een verslag met het bevolkte `xdm:lastUpdatedDate` gebied wordt opgenomen, zal het Experience Platform dat gebied gebruiken om verslagen of profielfragmenten binnen en over datasets samen te voegen. Als `xdm:lastUpdatedDate` het Platform niet aanwezig of niet gevuld is, blijft het de tijdstempel van het systeem gebruiken.
 
 >[!NOTE]
 >
 >U moet ervoor zorgen dat de `xdm:lastUpdatedDate` tijdstempel wordt gevuld wanneer u een PATCH in dezelfde record verzendt.
 
-Voor geleidelijke instructies bij het werken met schema&#39;s die de schemaregistratie API gebruiken, met inbegrip van hoe te om mengelingen aan schema&#39;s toe te voegen, gelieve de [zelfstudie voor het creëren van een schema te bezoeken gebruikend API](../../xdm/tutorials/create-schema-api.md).
+Voor geleidelijke instructies bij het werken met schema&#39;s die de Registratie API van het Schema gebruiken, met inbegrip van hoe te om mengelingen aan schema&#39;s toe te voegen, te bezoeken gelieve de [zelfstudie voor het creëren van een schema gebruikend API](../../xdm/tutorials/create-schema-api.md).
 
 Als u met aangepaste tijdstempels wilt werken met de gebruikersinterface, raadpleegt u de sectie over het [gebruik van aangepaste tijdstempels](../ui/merge-policies.md#custom-timestamps) in de gebruikershandleiding [voor](../ui/merge-policies.md)samenvoegingsbeleid.
 
-#### Details van de Mixingdetails van de controle van het externe bronsysteem {#mixin-details}
+#### [!DNL External Source System Audit Details Mixin] details {#mixin-details}
 
-Het volgende voorbeeld toont correct bevolkte gebieden in de Externe Mixin van de Details van de Controle van het Bronsysteem. De volledige mix JSON kan ook in het [openbare Model van de Gegevens van de Ervaring (XDM) repo](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) op GitHub worden bekeken.
+In het volgende voorbeeld worden correct gevulde velden in de [!DNL External Source System Audit Details Mixin]map weergegeven. De volledige mix JSON kan ook in het [openbare Model van de Gegevens van de Ervaring (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) op GitHub worden bekeken.
 
 ```json
 {
