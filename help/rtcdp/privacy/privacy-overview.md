@@ -5,10 +5,10 @@ seo-title: Privacy in realtime gegevensprofiel van klanten
 description: Met het realtime gegevensprofiel voor klanten kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen in overeenstemming worden gehouden met privacyregels.
 seo-description: Met het realtime gegevensprofiel voor klanten kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen in overeenstemming worden gehouden met privacyregels.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f9b21ee51d6246dbdae4500aad050b200539ff88
 workflow-type: tm+mt
 source-wordcount: '312'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ Met Adobe Experience Platform [!DNL Privacy Service] kunt u het proces stroomlij
 
 Er zijn twee methoden voor het indienen van individuele aanvragen voor GDPR- en CCPA-gegevens voor de toegang tot en het verwijderen van klantgegevens:
 
-* Gebruik de [[!DNL Privacy Service-UI]](https://gdprui.cloud.adobe.io/) om aanvragen voor toegang en verwijdering te maken en te controleren in een visuele werkruimte. Zie de zelfstudie [over de gebruikersinterface van de](../../privacy-service/ui/overview.md) Privacy Service voor stapsgewijze instructies.
+* Gebruik de [[!DNL Privacy Service-UI]](https://privacyui.cloud.adobe.io/) om aanvragen voor toegang en verwijdering te maken en te controleren in een visuele werkruimte. Zie de gebruikershandleiding [van de](../../privacy-service/ui/overview.md) Privacy Service voor stapsgewijze instructies.
 * Gebruik de [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) om toegang te beheren en verzoeken met RESTful API-aanroepen te verwijderen. Zie de API-zelfstudie voor [Privacy Service](../../privacy-service/api/getting-started.md) voor stapsgewijze instructies.
 
 <!-- (Capability will not be available for November GA) 
