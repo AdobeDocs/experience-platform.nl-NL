@@ -5,9 +5,9 @@ title: Profielvoorvertoning - Real-time API voor klantprofiel
 description: Met Adobe Experience Platform kunt u klantgegevens uit meerdere bronnen invoeren om robuuste, uniforme profielen voor individuele klanten te maken. Aangezien gegevens die voor het Profiel van de Klant in real time worden toegelaten in Platform worden opgenomen, wordt het opgeslagen binnen de gegevensopslag van het Profiel. Aangezien het aantal verslagen in de opslag van het Profiel stijgt of vermindert, wordt een steekproefbaan in werking gesteld die informatie betreffende hoeveel profielfragmenten en samengevoegde profielen in de gegevensopslag omvat. Met behulp van de profiel-API kunt u een voorvertoning weergeven van het meest recente voorbeeld en van de distributie van het lijstprofiel via gegevensset en naamruimte.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 75a07abd27f74bcaa2c7348fcf43820245b02334
+source-git-commit: 2edba7cba4892f5c8dd41b15219bf45597bd5219
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1478'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Met Adobe Experience Platform kunt u klantgegevens uit meerdere bronnen invoeren om robuuste, uniforme profielen voor individuele klanten te maken. Aangezien gegevens die voor het Profiel van de Klant in real time worden toegelaten in worden opgenomen [!DNL Platform], wordt het opgeslagen binnen de gegevensopslag van het Profiel.
 
-Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 5% verhoogt of verlaagt, wordt een taak geactiveerd om het aantal bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om de telling bij te werken. Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal bij te werken als aan de drempel van 5% voor verhogen of verlagen is voldaan. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte op naam.
+Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 5% verhoogt of verlaagt, wordt een taak geactiveerd om het aantal bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om de telling bij te werken. Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal bij te werken als aan de drempel van 5% voor verhogen of verlagen is voldaan. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte.
 
 Deze cijfers zijn ook beschikbaar in de sectie [!UICONTROL Profielen] van de gebruikersinterface van het Experience Platform. Ga naar de [[!DNL Profile] gebruikershandleiding](../ui/user-guide.md)voor informatie over hoe u toegang kunt krijgen tot profielgegevens via de gebruikersinterface.
 
@@ -59,6 +59,10 @@ De reactie bevat de details voor de laatste geslaagde voorbeeldtaak die voor de 
 ```json
 {
   "numRowsToRead": "41003",
+  "sampleJobRunning": {
+    "status": true,
+    "submissionTimestamp": "2020-08-01 17:57:57.0"
+  },
   "cosmosDocCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
@@ -75,6 +79,7 @@ De reactie bevat de details voor de laatste geslaagde voorbeeldtaak die voor de 
 | Eigenschap | Beschrijving |
 |---|---|
 | `numRowsToRead` | Het totale aantal samengevoegde profielen in de steekproef. |
+| `sampleJobRunning` | Een Booleaanse waarde die wordt geretourneerd `true` wanneer een voorbeeldtaak wordt uitgevoerd. Hiermee krijgt u transparantie in de latentie die optreedt wanneer een batchbestand wordt geüpload naar het moment dat het daadwerkelijk wordt toegevoegd aan de profielopslag. |
 | `cosmosDocCount` | Het totale aantal documenten in Cosmos. |
 | `totalFragmentCount` | Het totale aantal profielfragmenten in het profielarchief. |
 | `lastSuccessfulBatchTimestamp` | Laatste succesvolle tijdstempel voor batch-opname. |
@@ -206,7 +211,7 @@ Het volgende verzoek specificeert geen `date` parameter en zal daarom het meest 
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -268,7 +273,7 @@ De reactie bevat een `data` array met afzonderlijke objecten die de details voor
 | Eigenschap | Beschrijving |
 |---|---|
 | `sampleCount` | Het totale aantal gesamplede profielen in de naamruimte. |
-| `samplePercentage` | De waarde `sampleCount` als een percentage samengevoegde profielen (de `numRowsToRead` waarde die in de [laatste voorbeeldstatus](#view-last-sample-status)is geretourneerd), uitgedrukt in decimale notatie. |
+| `samplePercentage` | De waarde `sampleCount` als een percentage samengevoegde profielen (de `numRowsToRead` waarde die wordt geretourneerd in de [laatste voorbeeldstatus](#view-last-sample-status)), uitgedrukt in decimale notatie. |
 | `reportTimestamp` | De tijdstempel van het rapport. Als een `date` parameter tijdens het verzoek werd verstrekt, is het teruggekeerde rapport voor de verstrekte datum. Als er geen `date` parameter is opgegeven, wordt het meest recente rapport geretourneerd. |
 | `fullIDsFragmentCount` | Het totale aantal profielfragmenten in de naamruimte. |
 | `fullIDsCount` | Het totale aantal samengevoegde profielen in de naamruimte. |
