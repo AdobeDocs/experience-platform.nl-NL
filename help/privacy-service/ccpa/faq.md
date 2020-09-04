@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;consent;Consent
 solution: Experience Platform
 title: Veelgestelde vragen over CCPA
 topic: troubleshooting
+description: In dit document worden antwoorden gegeven op veelgestelde vragen over de California Consumer Protection Act (CCPA) en de uitvoering ervan in Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '809'
 ht-degree: 0%
 
 ---
@@ -75,7 +76,7 @@ Adobe-diensten kunnen worden gebruikt om bepaalde gegevensuitwisseling en -overd
 
 ## Hoe kan ik de privacyvereisten voor consumenten in het kader van de CCPA ondersteunen als ik bepaalde soorten gegevens handhaaf die onder de vereisten vallen?
 
-Zodra u de noodzakelijke stappen hebt genomen om consumenten van CA voor authentiek te verklaren, [!DNL Privacy Service] staat het Adobe Experience Platform u toe om de privacyverzoeken van de consument aan compatibele [!DNL Experience Cloud] toepassingen voor te leggen. Zie het overzicht [van de](../home.md) Privacy Service voor meer informatie. Voor informatie over hoe uw specifieke [!DNL Experience Cloud] toepassingen privacyverzoeken kunnen honoreren, raadpleegt u de handleiding over [Privacy Service- en Experience Cloud-toepassingen](../experience-cloud-apps.md).
+Zodra u de noodzakelijke stappen hebt genomen om consumenten van CA voor authentiek te verklaren, [!DNL Privacy Service] staat Adobe Experience Platform u toe om verzoeken van de consumentenprivacy aan compatibele [!DNL Experience Cloud] toepassingen voor te leggen. Zie het overzicht [van de](../home.md) Privacy Service voor meer informatie. Voor informatie over hoe uw specifieke [!DNL Experience Cloud] toepassingen privacyverzoeken kunnen honoreren, raadpleegt u de handleiding over [Privacy Service- en Experience Cloud-toepassingen](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
