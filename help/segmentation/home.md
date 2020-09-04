@@ -5,9 +5,9 @@ title: Adobe Experience Platform Segmentation Service
 topic: overview
 description: Dit document biedt een overzicht van de Segmentatieservice en de rol die deze speelt in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
 workflow-type: tm+mt
-source-wordcount: '1991'
+source-wordcount: '1387'
 ht-degree: 0%
 
 ---
@@ -129,97 +129,11 @@ Door een variabele toe te wijzen aan het attribuut van de koopstaat, vereenvoudi
 
 ## Segmentatie van meerdere entiteiten {#multi-entity}
 
-Met de geavanceerde functie voor segmentatie van meerdere entiteiten kunt u segmenten maken met behulp van meerdere XDM-klassen en zo extensies toevoegen aan persoonlijke schema&#39;s. Dit betekent dat u tijdens de segmentdefinitie toegang [!DNL Segmentation Service] kunt krijgen tot aanvullende velden alsof deze native zijn in de profielgegevensopslag.
-
-De segmentatie van meerdere entiteiten verstrekt de flexibiliteit nodig om publiek te identificeren dat op gegevens wordt gebaseerd relevant voor uw bedrijfsbehoeften. Dit proces kan snel en gemakkelijk worden gedaan zonder deskundigheid in het vragen van gegevensbestanden te vereisen. Dit laat u toe om zeer belangrijke gegevens aan uw segmenten toe te voegen zonder het moeten dure veranderingen in gegevensstromen aanbrengen of op een achterste-eindgegevenssamenvoeging wachten.
-
-De volgende video is bedoeld om uw begrip van multi-entiteitsegmentatie te steunen, en schetst zowel multi-entiteitsegmentatie als segmentcontext (segmentlading).
-
->[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
-
-### Hoofdlettergebruik: Prijsgerichte promotie
-
-Als u de waarde van deze geavanceerde segmentatiefunctie wilt illustreren, kunt u overwegen om een gegevensarchitect samen te voegen met een marketer.
-
-In dit voorbeeld verbindt de gegevensarchitect gegevens voor een individu (samengesteld uit schema&#39;s met [!DNL XDM Individual Profile] en [!DNL XDM ExperienceEvent] als hun basisklassen) met een andere klasse gebruikend een sleutel. Zodra verbonden, kan de gegevensarchitect of de telleraar deze nieuwe gebieden tijdens segmentdefinitie gebruiken alsof zij aan het schema van de basisklasse inheems waren.
-
-**Het probleem**
-
-De gegevensarchitect en de markator werken beide voor dezelfde kledingdetailhandelaar. De detailhandelaar heeft meer dan 1000 winkels in Noord-Amerika en verlaagt periodiek de productprijzen gedurende hun levenscyclus. Als gevolg hiervan wil de marketeter een speciale campagne voeren om kopers die voor deze objecten hebben gewinkeld de kans te geven ze tegen de verlaagde prijs te kopen.
-
-De middelen van de gegevensarchitect omvatten toegang tot Webgegevens van klant het doorbladeren evenals de gegevens van de karttoevoeging die productSKU herkenningstekens bevatten. Zij hebben ook toegang tot een aparte &quot;producten&quot;-klasse, waar aanvullende productinformatie (inclusief productprijs) wordt opgeslagen. Hun advies is om zich te concentreren op klanten die de afgelopen 14 dagen een product aan hun winkelwagentje hebben toegevoegd, maar het object niet hebben gekocht, waarvan de prijs nu is gedaald.
-
-**De oplossing**
-
->[!NOTE]
->
->In dit voorbeeld gaan we ervan uit dat de gegevensarchitect al een id-naamruimte heeft ingesteld.
-
-Gebruikend API, brengt de gegevensarchitect de sleutel van het [!DNL ExperienceEvent] schema met de &quot;producten&quot;klasse in verband. Dit staat de gegevensarchitect toe om van de extra gebieden van de &quot;producten&quot;klasse gebruik te maken alsof zij aan het [!DNL ExperienceEvent] schema inheems zijn. Als laatste stap van het configuratiewerk, moet de gegevensarchitect de aangewezen gegevens in brengen [!DNL Real-time Customer Profile]. Dit wordt gedaan door de &quot;producten&quot;dataset voor gebruik met toe te laten [!DNL Profile]. Met het configuratiewerk volledig, of de gegevensarchitect of de telleraar kan het doelsegment binnen bouwen [!DNL Segment Builder].
-
-Zie het overzicht [van de](../xdm/schema/composition.md#union) schemacompositie leren hoe te om verhoudingen over klassen te bepalen XDM.
-
-<!-- ## Personalization payload
-
-Segments can now carry a payload of contextual details to enable deep personalization of Adobe Solutions as well as external non-Adobe applications. These payloads can be added while defining your target segment.
-
-With contextual data built into the segment itself, this advanced Segmentation Service feature allows you to better connect with your customer.
-
-Segment Payload helps you answer questions surrounding your customer’s frame of reference such as:
-- What: What product was purchased? What product should be recommended next?
-- When: At what time and date did the purchase occur?
-- Where: In which store or city did the customer make their purchase?
-
-While this solution does not change the binary nature of segment membership, it does add additional context to each profile through an associated segment membership object. Each segment membership object has the capacity to include three kinds of contextual data:
-
-- **Identifier**: this is the ID for the segment 
-- **Attributes**: this would include information about the segment ID such as last qualification time, XDM version, status and so on.
-- **Event data**: Specific aspects of experience events which resulted in the profile qualifying for the segment
-
-Adding this specific data to the segment itself allows execution engines to personalize the experience for the customers in their target audience. -->
-
-### Gebruiksscenario’s
-
-Om de waarde van deze geavanceerde segmenteringseigenschap te illustreren, overweeg drie standaardgebruiksgevallen die de uitdagingen illustreren die in marketing toepassingen voorafgaand aan de verhoging van de Lading van het Segment aanwezig waren:
-- E-mailpersonalisatie
-- E-mailheroriëntering
-- Opnieuw richten van advertenties
-
-**E-mailpersonalisatie**
-
-Een marketeer die een e-mailcampagne bouwt kan geprobeerd hebben om een segment voor een doelpubliek te bouwen door recente aankopen van de klantenopslag binnen de laatste drie maanden te gebruiken. In het ideale geval vereist dit segment zowel de naam van het item als de naam van de winkel waar de aankoop is gedaan. Voorafgaand aan verbetering, de uitdaging was het vangen van het opslagherkenningsteken van de aankoopgebeurtenis en het toewijzen van het aan het profiel van die klant.
-
-**E-mailheroriëntering**
-
-Het is vaak complex om segmenten te maken en te kwalificeren voor e-mailcampagnes die gericht zijn op het verlaten van een winkelwagentje. Voorafgaand aan de verbetering, wist welke producten om in een gepersonaliseerd bericht te omvatten moeilijk was toe te schrijven aan de beschikbaarheid van de vereiste gegevens. De gegevens waarvoor de producten werden verlaten zijn gebonden aan ervaringsgebeurtenissen die vroeger om gegevens te controleren en te halen uitbraken.
-
-**Opnieuw richten van advertenties**
-
-Een andere traditionele uitdaging voor marketers is het creëren van advertenties om klanten met verlaten winkelwagentjes te richten. Hoewel de segmentdefinities deze uitdaging aanpasten, was er vóór de verbetering geen formele methode om onderscheid te maken tussen aangekochte en verlaten producten. Nu kunt u specifieke datasets tijdens segmentdefinitie richten.
+Met de geavanceerde functie voor segmentatie van meerdere entiteiten hebt u de mogelijkheid om [!DNL Real-time Customer Profile] gegevens uit te breiden met aanvullende gegevens op basis van producten, winkels of andere personen, ook wel &#39;dimensie&#39;-entiteiten genoemd. Dientengevolge, [!DNL Segmentation Service] kan tot extra gebieden tijdens segmentdefinitie toegang hebben alsof zij aan de [!DNL Profile] gegevensopslag inheems waren. De segmentatie van meerdere entiteiten verstrekt flexibiliteit wanneer het identificeren van publiek dat op gegevens wordt gebaseerd relevant voor uw unieke bedrijfsbehoeften. Raadpleeg de segmentatiehandleiding voor [meerdere entiteiten voor meer informatie, zoals gebruiksgevallen en workflows](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] gegevenstypen
 
-[!DNL Segmentation Service] ondersteunt diverse gegevenstypen, waaronder:
-
-- Tekenreeks
-- Uniforme resource-id
-- Enum
-- Getal
-- Lang
-- Geheel
-- Kort
-- Byte
-- Boolean
-- Datum
-- Datum/tijd
-- Array
-- Object
-- Kaart
-- Gebeurtenissen
-- Extern publiek
-- Segmenten
-
-Meer gedetailleerde informatie over deze ondersteunde gegevenstypen vindt u in het document [met](./data-types.md)ondersteunde gegevenstypen.
+[!DNL Segmentation Service] ondersteunt diverse primitieve en complexe gegevenstypen. Gedetailleerde informatie, waaronder een lijst met ondersteunde gegevenstypen, vindt u in de [ondersteunde gegevenstypehandleiding](./data-types.md).
 
 ## Volgende stappen
 
