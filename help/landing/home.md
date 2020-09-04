@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
 solution: Experience Platform
 title: Adobe Experience Platform-overzicht
 topic: getting started
 description: Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. Experience Platform stelt organisaties in staat om klantgegevens en -inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
 translation-type: tm+mt
-source-git-commit: 96be9401b3d3bf28176cbce5d139c42f63707c81
+source-git-commit: e94278c1b64e1d940f55861518c78cca24822c1b
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 2%
