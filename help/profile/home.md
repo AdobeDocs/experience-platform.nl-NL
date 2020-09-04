@@ -5,9 +5,9 @@ title: Overzicht van het realtime klantprofiel
 topic: guide
 description: Klantprofiel in real-time is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1649'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,26 @@ ht-degree: 0%
 
 Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met [!DNL Real-time Customer Profile], kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. [!DNL Profile] staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt. Dit overzicht zal u helpen de rol en het gebruik van [!DNL Real-time Customer Profile] in begrijpen [!DNL Experience Platform].
 
-## [!DNL Real-time Customer Profile] begrijpen
+
+## [!DNL Profile] in Experience Platform
+
+De verhouding tussen het Profiel van de Klant in real time en andere diensten binnen Experience Platform wordt benadrukt in het volgende diagram:
+
+![Adobe Experience Platform-services.](images/profile-overview/profile-in-platform.png)
+
+## Profielgegevens
 
 [!DNL Real-time Customer Profile] is een generische opslag van raadplegingsentiteiten die gegevens van diverse activa van ondernemingsgegevens samenvoegt, en dan toegang tot die gegevens in de vorm van individuele klantenprofielen en verwante gebeurtenissen van de tijdreeks verleent. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 
-### [!DNL Profile] gegevensopslag
+### Profielhulplijnen
+
+Experience Platform biedt een reeks instructies om u te helpen het maken van XDM-schema&#39;s ( [Experience Data Model) te voorkomen](../xdm/home.md) die niet kunnen worden ondersteund door het Real-Time Customer Profile. Dit omvat zachte grenzen die in prestatiesdegradatie zullen resulteren, evenals harde grenzen die in fouten en systeembreuken zullen resulteren. Lees voor meer informatie, zoals een lijst met richtlijnen en voorbeelden van gevallen van gebruik, de documentatie bij [Profielhulplijnen](guardrails.md) .
+
+### Profielenarchief
 
 Hoewel [!DNL Real-time Customer Profile] ingesloten gegevens verwerkt en Adobe Experience Platform gebruikt [!DNL Identity Service] om verwante gegevens samen te voegen via identiteitstoewijzing, blijven de gegevens in de [!DNL Profile] opslag behouden. Met andere woorden, de [!DNL Profile] opslag staat los van [!DNL Catalog] gegevens ([!DNL Data Lake]) en [!DNL Identity Service] gegevens (identiteitsgrafiek).
 
-### [!DNL Profile] en [!DNL Platform] diensten
-
-De verhouding tussen [!DNL Real-time Customer Profile] en andere diensten binnen [!DNL Experience Platform] wordt benadrukt in het volgende diagram:
-
-![De relatie tussen Profiel en andere diensten van het Experience Platform.](images/profile-overview/profile-in-platform.png)
-
-### Profielen en gegevens opnemen
+### Gegevens opnemen
 
 Een profiel is een weergave van een onderwerp, een organisatie of een individu, ook wel recordgegevens genoemd. Het profiel van een product kan bijvoorbeeld een SKU en een beschrijving bevatten, terwijl het profiel van een persoon informatie bevat zoals voornaam, achternaam en e-mailadres. Met behulp [!DNL Experience Platform]van profielen kunt u profielen aanpassen om gegevenstypen te gebruiken die relevant zijn voor uw bedrijf. De standaard [!DNL Experience Data Model] (XDM) [!DNL Individual Profile] klasse is de aangewezen klasse waarop om een schema te bouwen wanneer het beschrijven van de gegevens van het klantenverslag, en levert de gegevensintegraal aan vele interactie tussen de diensten van het Platform. Voor meer informatie over het werken met schema&#39;s in [!DNL Experience Platform], gelieve te beginnen door het [XDM systeemoverzicht](../xdm/home.md)te lezen.
 
@@ -59,7 +64,7 @@ Wanneer het samenbrengen van gegevens uit veelvoudige bronnen en het combineren 
 
 >[!IMPORTANT]
 >
->De berekende kenmerkfunctionaliteit die in dit document wordt beschreven is in alpha. De documentatie en de functionaliteit kunnen worden gewijzigd.
+>De berekende kenmerkfunctionaliteit staat in alpha. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op basis van andere waarden, berekeningen en expressies. De berekende attributen werken op het profielniveau, betekenend kunt u waarden over alle verslagen en gebeurtenissen bijeenvoegen. Elk berekend kenmerk bevat een expressie, of &#39;regel&#39;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. Voor meer informatie over gegevens verwerkte attributen, en geleidelijke instructies voor het werken met hen die API gebruiken, gelieve de [!DNL Real-time Customer Profile] gegevens verwerkte gids [](api/computed-attributes.md)van het attributeneindpunt te zien. Deze handleiding geeft u een beter inzicht in de rol die berekende kenmerken spelen in Adobe Experience Platform en bevat voorbeelden van API-aanroepen voor het uitvoeren van standaard CRUD-bewerkingen.
 
@@ -75,7 +80,7 @@ Invoer in realtime wordt mogelijk gemaakt via een proces dat streaming opname wo
 
 Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in real time te drijven, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe Experience Platform biedt realtime toegang tot gegevens via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. Bijvoorbeeld, gebruiken de toepassingen van de Adobe zoals Adobe Target en Adobe Campaign randen om gepersonaliseerde klantenervaringen in real time te verstrekken. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt. Raadpleeg de handleiding voor de eindpunten van de [!DNL Real-time Customer Profile] randprojectie voor meer informatie en voor meer informatie over het werken met projecties met de [](api/edge-projections.md)API.
 
-## Gegevens toevoegen aan [!DNL Real-time Customer Profile]
+## Gegevens verzamelen in [!DNL Profile]
 
 [!DNL Platform] kan worden gevormd om uw verslag en tijdreeksgegevens naar te verzenden [!DNL Profile], ondersteunend het stromen in real time en partijingestie. Voor meer informatie, zie de zelfstudie die schetst hoe te om gegevens aan het Profiel [van de Klant in real time](tutorials/add-profile-data.md)toe te voegen.
 
@@ -101,39 +106,6 @@ Met betrekking tot de toegang tot gegevens speelt gegevensbeheer een sleutelrol 
 ### Verzoeken om opt-out en privacy van gegevens verwerken
 
 [!DNL Experience Platform] biedt uw klanten de mogelijkheid om weigeren-aanvragen te verzenden met betrekking tot het gebruik en de opslag van hun gegevens binnen [!DNL Real-time Customer Profile]. Raadpleeg de documentatie over het [naleven van opt-out-verzoeken](../segmentation/honoring-opt-outs.md)voor meer informatie over de manier waarop aanvragen vooropt-out worden afgehandeld.
-
-## [!DNL Profile] richtlijnen
-
-[!DNL Experience Platform] beschikt over een aantal richtsnoeren die moeten worden gevolgd om doeltreffend gebruik te kunnen maken [!DNL Profile].
-
-| Sectie | Grens |
-| ------- | -------- |
-| [!DNL Profile] samenvoegingsschema | Een maximum van **20** datasets kan tot het [!DNL Profile] verenigingsschema bijdragen. |
-| Relaties met meerdere entiteiten | Er kunnen maximaal **5** relaties met meerdere entiteiten worden gemaakt. |
-| JSON-diepte voor associatie met meerdere entiteiten | De maximale JSON-diepte is **4**. |
-| Gegevens uit tijdreeksen | Gegevens uit tijdreeksen zijn **niet** toegestaan in entiteiten [!DNL Profile] die geen personen zijn. |
-| Schema-relaties van derden | Schema-relaties van derden zijn **niet** toegestaan. |
-| Profielfragment | De aanbevolen maximale grootte van een profielfragment is **10kB**.<br><br> De absolute maximumgrootte van een profielfragment is **1 MB**. |
-| Niet-persoonlijke entiteit | De maximale totale grootte voor één niet-persoonlijke entiteit is **200 MB**. |
-| Gegevensbestanden per niet-persoonlijke entiteit | Een maximum van **1** dataset kan aan een niet persoonentiteit worden geassocieerd. |
-
-<!--
-| Section | Boundary | Enforcement |
-| ------- | -------- | ----------- |
-| Profile union schema | A maximum of **20** datasets can contribute to the Profile union schema. | A message stating you've reached the maximum number of datasets appears. You must either disable or clean up other obsolete datasets in order to create a new dataset. |
-| Multi-entity relationships | A maximum of **5** multi-entity relationship can be created. | A message stating all available mappings have been used appears when the fifth relationship is mapped. An error message letting you know you have exceeded the number of available mappings appears when attempting to map a sixth relationship. | 
-| JSON depth for multi-entity association | The maximum JSON depth is **4**. | When trying to use the relationship selector with a field that is more than four levels deep, an error message appears, stating it is ineligible for multi-entity association. |
-| Time series data | Time-series data is **not** permitted in Profile for non-people entities. | A message stating that this data cannot be enabled for Profile because it is of an unsupported type appears. |
-| Non-people schema relationships | Non-people schema relationships are **not** permitted. | Relationships between two non-people schemas cannot be created. The relationships checkbox will be disabled. |
-| Profile fragment | The recommended maximum size of a profile fragment is **10kB**.<br><br> The absolute maximum size of a profile fragment is **1MB**. | If you upload a fragment that is larger than 10kB, a warning appears, stating that performance may be degraded since the fragment exceeds the recommended maximum working size.<br><br> If you upload a fragment that is larger than 1MB, ingestion will fail, and an alert letting you know that records have failed will be sent. |
-| Non-person entity | The maximum total size for a single non-person entity is **200MB**. | If you load an object as a non-person entity that is larger than 200MB, an alert will appear, stating that the entity has exceeded the maximum allowable size and will not be useable for segmentation. |
-| Datasets per non-person entity | A maximum of **1** dataset can be associated to a non-person entity. | If you try to create a second dataset that is associated to the same non-person entity, an error appears, stating that only one dataset can be active per non-person entity. |
-
---->
-
->[!NOTE]
->
->Een niet-persoonlijke entiteit verwijst naar elke XDM-klasse die **geen** deel uitmaakt van [!DNL Profile].
 
 ## Volgende stappen en extra bronnen
 
