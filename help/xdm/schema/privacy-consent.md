@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
 solution: Adobe Experience Platform
 title: Overzicht van het mixen van privacy
 description: De combinatie van de Voorkeur van de Privacy/van de Marketing (Toestemming) is een mengsel van de Gegevens van de Ervaring (XDM) dat bedoeld is om de inzameling van gebruikerstoestemmingen en voorkeur te steunen die door CMPs en andere bronnen van klanten worden geproduceerd. Dit document behandelt de structuur en het beoogde gebruik van de verschillende velden die door de vermenging worden verschaft.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
 source-wordcount: '1827'
 ht-degree: 0%
