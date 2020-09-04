@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;workflow
 solution: Experience Platform
 title: Adobe Experience Platform Query Service
 topic: overview
 description: Deze zelfstudies zijn ontworpen als aanvulling op de informatie in de documentatie van het Experience Platform, zodat u de documenten voor de beste resultaten bij de voltooiing van de lesbestanden kunt bewaren.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 0%
