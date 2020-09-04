@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
 solution: Experience Platform
 title: Adobe Experience Platform-overzicht
 topic: getting started
 description: Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. Experience Platform stelt organisaties in staat om klantgegevens en -inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
 translation-type: tm+mt
-source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
+source-git-commit: 96be9401b3d3bf28176cbce5d139c42f63707c81
 workflow-type: tm+mt
-source-wordcount: '872'
-ht-degree: 0%
+source-wordcount: '936'
+ht-degree: 2%
 
 ---
 
@@ -82,6 +82,13 @@ De documentatie van Adobe Experience Platform is beschikbaar in verscheidene tal
 
 [!DNL Experience Platform] documentatie wordt verstrekt in veelvoudige formaten voor een verscheidenheid van eigenschappen en de diensten. Voor meer informatie over de typen documentatie die beschikbaar zijn en voor een korte beschrijving van elk van de [!DNL Platform] services, raadpleegt u het documentatieoverzicht [van het](documentation/overview.md)Experience Platform. Als u meer wilt weten over een bepaalde [!DNL Platform] service, selecteert u een hulplijn in de alfabetische lijst in de linkernavigatie.
 
+### Documentatie voor toepassingsservices die zijn gebouwd boven op [!DNL Experience Platform]
+
+Naast de diensten in de linkernavigatie, heeft Adobe andere toepassingsdiensten bovenop Experience Platform gebouwd. U vindt documentatie voor deze services in hun eigen documentatieopslagplaatsen, die hieronder zijn gekoppeld:
+
+* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/en/analytics-platform/using/cja-landing.html)
+* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/nl-NL/journeys/using/journey-orchestration-home.html)
+
 >[!NOTE]
 >
 >Adobe begint in mei 2020 en implementeert updates voor het domein en de headerbalk om uw ervaring in alle Experience Cloud-toepassingen te verenigen en te verbeteren. Dit omvat een nieuw menu van de Hulp. Het nieuwe menu van de Hulp omvat het volgende:
@@ -97,7 +104,7 @@ Van tijd tot tijd, zou u een onderzoek voor extra terugkoppelen kunnen ontvangen
 >
 >Deze uitrol is geleidelijk, zodat zou u de veranderingen niet onmiddellijk kunnen zien. U kunt de bijgewerkte ervaring op elk ogenblik bekijken door naar [https://experience.adobe.com/platform](https://experience.adobe.com/platform)te gaan.
 
-## [!DNL Experience Platform] zelfstudies
+## [!DNL Experience Platform]-tutorials
 
 Ga snel en eenvoudig aan de slag met [!DNL Platform] stapsgewijze zelfstudies voor alles, van het voorbereiden van uw gegevens voor opname tot geavanceerde computerleeralgoritmen. Deze zelfstudies zijn ontworpen als aanvulling op de informatie in de [!DNL Experience Platform] documentatie, zodat u de documenten voor de beste resultaten bij de voltooiing van de zelfstudies kunt bewaren. Ga naar de zelfstudies voor [Experience Platforms](../tutorials/home.md) om aan de slag te gaan.
 
@@ -131,7 +138,7 @@ Een van de belangrijkste voordelen van Adobe Experience Platform is zijn vermoge
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
-Bekijk de volgende video voor aanvullende informatie over de architectuur die Adobe Experience Platform bevoegdheden heeft:
+Bekijk de volgende video voor aanvullende informatie over de architectuur die Adobe Experience Platform de macht geeft:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
 
@@ -146,11 +153,6 @@ In de volgende video&#39;s wordt een overzicht gegeven van de belangrijkste moge
 **Gebruiksscenario’s:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
-
-
-
-
-
 
 
 
