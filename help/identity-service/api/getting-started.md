@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide
+keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide;region
 solution: Experience Platform
 title: Aan de slag
 topic: API guide
-description: null
+description: 'De identiteitsservice van Adobe Experience Platform beheert de identificatie van uw klanten op verschillende apparaten, in verschillende kanalen en bijna realtime in een identiteitsgrafiek in Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '754'
 ht-degree: 1%
 
 ---
