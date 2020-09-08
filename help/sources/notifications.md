@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Meldingen voor stroomuitvoering
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 0%
+source-wordcount: '787'
+ht-degree: 1%
 
 ---
 
@@ -25,34 +25,23 @@ In dit document worden stappen beschreven voor het abonneren op gebeurtenissen, 
 
 ## Aan de slag
 
-Voor dit document is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
+In deze zelfstudie wordt ervan uitgegaan dat u al ten minste één bronverbinding hebt gemaakt waarvan u de stroom wilt controleren. Als u nog geen bronverbinding hebt gevormd, begin door het [bronoverzicht](./home.md) te bezoeken om de bron van uw keus te vormen alvorens aan deze gids terug te keren.
 
-* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
-* [[!DNL Real-time klantprofiel]](../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [[!DNL Adobe Experience Platform-gegevensinvoer]](../ingestion/home.md): [!DNL Data Ingestion] vertegenwoordigt de veelvoudige methodes waardoor gegevens uit deze bronnen [!DNL Platform] opnemen, evenals hoe die gegevens binnen [!DNL Data Lake] voor gebruik door stroomafwaartse [!DNL Platform] diensten worden voortgeduurd.
+Dit document vereist ook een goed begrip van webhaken en hoe te om een webhaak van één toepassing aan een andere aan te sluiten. Raadpleeg de [[!DNL I/O Events] documentatie](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) voor een inleiding op websites.
 
-Dit document vereist ook een goed begrip van webhaken en hoe te om een webhaak van één toepassing aan een andere aan te sluiten. Raadpleeg de volgende [documentatie](https://requestbin.com/blog/working-with-webhooks/) voor meer informatie over webhooks.
+## Webhaak registreren voor meldingen bij uitvoering van stroom
 
-## Webhaak registreren
+Als u meldingen over flowuitvoering wilt ontvangen, moet u Adobe Developer Console gebruiken om een webhaak voor uw [!DNL Experience Platform] integratie te registreren.
 
-Als u meldingen wilt ontvangen over de status van uw workflow, moet u een webhaak registreren door een unieke URL voor de webhaak op te geven als onderdeel van de registratiegegevens van de gebeurtenis. Als u een webhaak wilt koppelen aan uw [!DNL I/O Events] abonnement, gaat u naar de [webhaakservice](https://webhook.site/) en kopieert u de opgegeven unieke URL.
-
-![webhaak](./images/notifications/webhook-url.png)
-
-## Abonneren op gebeurtenissen
-
-Nadat u een unieke URL voor de webhaak hebt verkregen, gaat u naar [Adobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events.html) en volgt u de stappen in het document met [gegevensinvoer](../ingestion/quality/subscribe-events.md) om u te abonneren op gebeurtenissen.
+Volg de zelfstudie over het [abonneren van [!DNL I/O Event] toonmeldingen](../observability/notifications/subscribe.md) voor gedetailleerde stappen over hoe u dit kunt doen.
 
 >[!IMPORTANT]
 >
->Zorg tijdens het abonnementsproces dat u [!DNL Platform] meldingen selecteert als gebeurtenisprovider en selecteer de volgende gebeurtenisabonnementen:
+>Zorg er tijdens het abonnementsproces voor dat u **[!UICONTROL Platform-berichten]** als gebeurtenisprovider selecteert en selecteer de volgende abonnementen voor gebeurtenissen:
 >
 >* **[!UICONTROL Experience Platform Source&#39;s Flow Run geslaagd]**
 >* **[!UICONTROL Doorloop van bron van Experience Platform is mislukt]**
 
->
->
-Wanneer u wordt gevraagd om een webhaadres op te geven, gebruikt u de eerder verkregen webhaak-URL.
 
 ## Meldingen ontvangen voor uitvoering van flow
 
