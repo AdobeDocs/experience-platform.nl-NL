@@ -3,11 +3,11 @@ keywords: text classification;Text classification
 solution: Experience Platform
 title: API-eindpunt tekstclassificatie
 topic: Developer guide
-description: Wanneer de tekstclassificatiedienst een tekstfragment geeft, kan deze in een of meer labels indelen. De classificatie kan single-label, multi-label, of hiërarchisch zijn.
+description: Als de tekstclassificatiedienst een tekstfragment opgeeft, kan deze classificeren in een of meer labels. De classificatie kan single-label, multi-label, of hiërarchisch zijn.
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '431'
 ht-degree: 2%
 
 ---
@@ -19,9 +19,7 @@ ht-degree: 2%
 >
 >AI van de Inhoud en van de Handel is in bèta. De documentatie kan worden gewijzigd.
 
-Wanneer de tekstclassificatiedienst een tekstfragment geeft, kan deze in een of meer labels indelen. De classificatie kan single-label, multi-label, of hiërarchisch zijn.
-
-De classificatie van de tekst gebruikt een op [FastText](https://fasttext.cc/) gebaseerd model dat gebruikend douanegegevens is opgeleid.
+Als de tekstclassificatiedienst een tekstfragment opgeeft, kan deze classificeren in een of meer labels. De classificatie kan single-label, multi-label, of hiërarchisch zijn.
 
 **API-indeling**
 
