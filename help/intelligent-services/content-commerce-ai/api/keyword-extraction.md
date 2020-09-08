@@ -5,9 +5,9 @@ title: Kleurextractie
 topic: Developer guide
 description: De service voor het uitnemen van trefwoorden extraheert bij een tekstdocument automatisch trefwoorden of trefwoorden die het onderwerp van het document het best beschrijven. Voor het uitpakken van trefwoorden wordt een combinatie van algoritmen voor herkenning van benoemde entiteit (NER) en zonder toezicht gebruikt voor het extraheren van trefwoorden.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '625'
 ht-degree: 2%
 
 ---
@@ -20,14 +20,6 @@ ht-degree: 2%
 >[!DNL Content and Commerce AI] is in bèta. De documentatie kan worden gewijzigd.
 
 De service voor het uitnemen van trefwoorden extraheert bij een tekstdocument automatisch trefwoorden of trefwoorden die het onderwerp van het document het best beschrijven. Voor het uitpakken van trefwoorden wordt een combinatie van algoritmen voor herkenning van benoemde entiteit (NER) en zonder toezicht gebruikt voor het extraheren van trefwoorden.
-
-**Ongecontroleerde uitwinning van trefwoorden**
-
-Voor het extraheren van trefwoorden zonder toezicht wordt [[!DNL YAKE]](http://yake.inesctec.pt/) gebruikt. [!DNL YAKE] is een snelle en nauwkeurige automatische methode voor het automatisch uitpakken van trefwoorden zonder toezicht die wordt gebruikt om de belangrijkste trefwoorden in een document te selecteren. De uittreksels van trefwoorden [!DNL YAKE] worden vervolgens gefilterd om alleen zelfstandig naamwoorden te selecteren.
-
-**Erkenning van benoemde entiteit**
-
-Voor herkenning van benoemde entiteit wordt het OntoNotes-model van [[!DNL spaCy]](https://spacy.io/)gebruikt. Dit model wijst context-specifieke symbolische vectoren, deel-van-toespraak (POS) markeringen, gebiedsdeelontleding, en genoemde entiteiten toe. Het OntoNotes-model is een van de belangrijkste [!DNL spaCy] modellen. Meer informatie over het OntoNotes-model vindt u [hier](https://spacy.io/models/en).
 
 De benoemde entiteiten die door [!DNL Content and Commerce AI] worden herkend, worden weergegeven in de volgende tabel:
 
@@ -44,8 +36,6 @@ De benoemde entiteiten die door [!DNL Content and Commerce AI] worden herkend, w
 | WORK_OF_ART | Titels van boeken, liederen, enz. |
 | WET | Benoemde documenten die in wetten zijn gemaakt. |
 | TAAL | Elke benoemde taal. |
-
-De resultaten van [!DNL OntoNotes] worden gecombineerd met de trefwoorden van [!DNL YAKE], en worden vervolgens gerangschikt op basis van hun belang.
 
 **API-indeling**
 
