@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Taken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: e7bb3e8a418631e9220865e49a1651e4dc065daf
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1782'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Accepteerde waarden zijn `gdpr`, `ccpa`en `pdpa_tha`. |
+| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Accepteerde waarden zijn `gdpr`, `ccpa`, `lgpd_bra`en `pdpa_tha`. |
 | `{PAGE}` | De pagina met gegevens die moet worden weergegeven met een op 0 gebaseerde nummering. De standaardwaarde is `0`. |
 | `{SIZE}` | Het aantal resultaten dat op elke pagina moet worden weergegeven. De standaardwaarde is `1` en het maximum is `100`. Als het maximum wordt overschreden, retourneert de API een fout van 400 code. |
 
@@ -153,7 +153,7 @@ curl -X POST \
 | `expandIDs` | Een optionele eigenschap die, wanneer ingesteld op `true`, een optimalisatie vertegenwoordigt voor het verwerken van de id&#39;s in de toepassingen (momenteel alleen ondersteund door [!DNL Analytics]). Als deze waarde wordt weggelaten, wordt deze standaard ingesteld op `false`. |
 | `priority` | An optional property used by Adobe Analytics that sets the priority for processing request. Accepteerde waarden zijn `normal` en `low`. Als `priority` wordt weggelaten, is het standaardgedrag `normal`. |
 | `analyticsDeleteMethod` | Een optionele eigenschap die aangeeft hoe Adobe Analytics de persoonlijke gegevens moet verwerken. Voor dit kenmerk worden twee mogelijke waarden geaccepteerd: <ul><li>`anonymize`: Alle gegevens waarnaar door de opgegeven verzameling gebruikers-id&#39;s wordt verwezen, worden anoniem gemaakt. Als `analyticsDeleteMethod` wordt weggelaten, is dit het standaardgedrag.</li><li>`purge`: Alle gegevens worden volledig verwijderd.</li></ul> |
-| `regulation` **(Vereist)** | De verordening voor het verzoek. Moet een van de volgende drie waarden zijn: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `regulation` **(Vereist)** | De verordening voor het verzoek. Moet een van de volgende vier waarden zijn: <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **Antwoord**
 
@@ -286,7 +286,7 @@ curl -X POST \
 | `expandIDs` | Een optionele eigenschap die, wanneer ingesteld op `true`, een optimalisatie vertegenwoordigt voor het verwerken van de id&#39;s in de toepassingen (momenteel alleen ondersteund door [!DNL Analytics]). Als deze waarde wordt weggelaten, wordt deze standaard ingesteld op `false`. |
 | `priority` | An optional property used by Adobe Analytics that sets the priority for processing request. Accepteerde waarden zijn `normal` en `low`. Als `priority` wordt weggelaten, is het standaardgedrag `normal`. |
 | `analyticsDeleteMethod` | Een optionele eigenschap die aangeeft hoe Adobe Analytics de persoonlijke gegevens moet verwerken. Voor dit kenmerk worden twee mogelijke waarden geaccepteerd: <ul><li>`anonymize`: Alle gegevens waarnaar door de opgegeven verzameling gebruikers-id&#39;s wordt verwezen, worden anoniem gemaakt. Als `analyticsDeleteMethod` wordt weggelaten, is dit het standaardgedrag.</li><li>`purge`: Alle gegevens worden volledig verwijderd.</li></ul> |
-| `regulation` **(Vereist)** | De verordening voor het verzoek. Moet een van de volgende drie waarden zijn: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `regulation` **(Vereist)** | De verordening voor het verzoek. Moet een van de volgende vier waarden zijn: <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **Antwoord**
 
@@ -449,14 +449,14 @@ In de volgende tabel worden de verschillende mogelijke taakstatuscategorieën en
 
 | Statuscategorie | Betekenis |
 | -------------- | -------- |
-| Voltooid | De taak is voltooid en (indien vereist) worden bestanden vanuit elke toepassing geüpload. |
-| Verwerking | Toepassingen hebben de taak erkend en worden momenteel verwerkt. |
-| Verzonden | De taak wordt voorgelegd aan elke toepasselijke toepassing. |
-| Fout | Er is iets misgegaan in de verwerking van de taak - er kan meer specifieke informatie worden verkregen door individuele taakdetails op te halen. |
+| `complete` | De taak is voltooid en (indien vereist) worden bestanden vanuit elke toepassing geüpload. |
+| `processing` | Toepassingen hebben de taak erkend en worden momenteel verwerkt. |
+| `submitted` | De taak wordt voorgelegd aan elke toepasselijke toepassing. |
+| `error` | Er is iets misgegaan in de verwerking van de taak - er kan meer specifieke informatie worden verkregen door individuele taakdetails op te halen. |
 
 >[!NOTE]
 >
->Een voorgelegde baan kan in een verwerkingsstaat blijven als het een afhankelijke kindbaan heeft die nog wordt verwerkt.
+>Een voorgelegde baan kan in een `processing` staat blijven als het een afhankelijke kindbaan heeft die nog wordt verwerkt.
 
 ## Volgende stappen
 
