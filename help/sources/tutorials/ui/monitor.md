@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Accounts en gegevensstromen bewaken
 topic: overview
 translation-type: tm+mt
-source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
+source-git-commit: b900ea05cc046cf19d415543c581d0bcdc4296ba
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -42,15 +42,25 @@ Selecteer het trechter-pictogram linksboven om het sorteervenster te openen.
 
 Via het sorteervenster hebt u toegang tot accounts vanuit een specifieke bron. Selecteer de bron waarmee u wilt werken en selecteer het account in de lijst aan de rechterkant.
 
+>[!TIP]
+>
+> Gebruik de ![spectrum-controle](../../images/tutorials/monitor/spectrum-control.png) knoop in de kolom van de **[!UICONTROL Naam]** om een nieuwe brondataflow voor de geselecteerde rekening tot stand te brengen.
+
 ![accounts selecteren](../../images/tutorials/monitor/accounts-sort.png)
 
-Van de pagina van **[!UICONTROL Rekeningen]** , kunt u een lijst van bestaande gegevensstromen of doeldatasets bekijken verbonden aan de rekening u toegang had tot.
+Van de pagina van **[!UICONTROL Rekeningen]** , kunt u een lijst van bestaande gegevensstromen of doeldatasets bekijken verbonden aan de rekening u toegang had.Selecteer de secundaire controle om meer opties te brengen beschikbaar voor uw geselecteerde gegevensstroom. Deze opties worden hieronder nader beschreven:
+
+| Control | Beschrijving |
+| ------- | ----------- |
+| [!UICONTROL Plan bewerken] | Staat u toe om het innameschema van dataflow uit te geven. |
+| [!UICONTROL Gegevensstroom uitschakelen] | Hiermee kunt u gegevensinvoer uitschakelen voor de geselecteerde gegevensstroom. |
+| [!UICONTROL Verwijderen] | Hiermee kunt u de geselecteerde gegevensstroom verwijderen. |
 
 ![dataflows](../../images/tutorials/monitor/dataflows.png)
 
 ## Dataflows bewaken
 
-Dataflows zijn rechtstreeks vanuit de **[!UICONTROL Cataloguspagina]** toegankelijk zonder **[!UICONTROL accounts]** weer te geven. Selecteer **[!UICONTROL Gegevensstromen]** van de hoogste kopbal om een lijst van bestaande gegevensstromen te bekijken.
+Dataflows zijn rechtstreeks vanuit de **[!UICONTROL Cataloguspagina]** toegankelijk zonder **[!UICONTROL accounts]** weer te geven. Selecteer **[!UICONTROL Gegevensstromen]** van de hoogste kopbal om een lijst van gegevensstromen te bekijken.
 
 ![catalogusgegevensstromen](../../images/tutorials/monitor/catalog-dataflows.png)
 
@@ -58,7 +68,7 @@ Er wordt een lijst met bestaande gegevensstromen weergegeven. Op deze pagina vin
 
 ![dataflows-list](../../images/tutorials/monitor/dataflows-list.png)
 
-Het sorteervenster wordt weergegeven. Selecteer de bron die u wilt openen in het schuifmenu en selecteer de gegevensstroom in de lijst aan de rechterkant.
+Het sorteervenster wordt weergegeven. Selecteer de bron die u wilt openen in het schuifmenu en selecteer de gegevensstroom in de lijst aan de rechterkant. U kunt de secundaire controle ook selecteren om meer opties beschikbaar voor uw geselecteerde dataflow te brengen.
 
 ![sortDataFlow](../../images/tutorials/monitor/dataflows-sort.png)
 
@@ -82,11 +92,10 @@ Het **[!UICONTROL Dataflow looppas overzicht]** toont informatie over dataflow m
 
 Raadpleeg de volgende tabel voor foutcodes die u kunt zien in het overzicht **** Fout.
 
-| Foutcode | Foutbericht |
+| Fout | Beschrijving |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | &quot;Er is een probleem opgetreden met de kopieeractiviteit.&quot; |
-| `CONNECTOR-2001-500` | &quot;Er is een probleem opgetreden bij het kopiëren van de bron van het Experience Platform naar de gegevensset.&quot; |
-| `CONNECTOR-3001-500` | &quot;Er is een probleem opgetreden met de stroomprovider tijdens het maken van batch met de bulkingest-API.&quot; |
+| `CONNECTOR-1001-500` | Er is een fout opgetreden tijdens het kopiëren van gegevens uit een bron. |
+| `CONNECTOR-2001-500` | Er is een fout opgetreden tijdens het verwerken van gekopieerde gegevens naar [!DNL Platform]. Deze fout kan betrekking hebben op parseren, valideren of transformeren. |
 
 De onderste helft van het scherm bevat informatie over **[!UICONTROL Dataflow-uitvoerfouten]**. Van hier kunt u ook de opgenomen bestanden weergeven, een voorbeeld bekijken en fouten downloaden of het bestandmanifest downloaden.
 
