@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruikershandleiding voor Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1059'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,12 @@ Het dashboard voor de [!DNL Privacy Service] UI verstrekt twee widgets die u toe
 
 ### Type verordening
 
-[!DNL Privacy Service] steunt verzoeken om werk voor drie soorten regelgeving :
+[!DNL Privacy Service] steunt verzoeken om werk voor vier soorten regelgeving :
 
-* De [!DNL General Data Protection Regulation] GDPR van de Europese Unie
-* De [!DNL California Consumer Privacy Act] (CCPA)
-* Thailand [!DNL Personal Data Protection Act] (PDPA_THA)
+* De Europese Unie [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
+* De [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
+* Brazilië&#39;s [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* Thailand [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
 
 Taken voor elk type regelgeving worden afzonderlijk bijgehouden. Als u wilt schakelen tussen regelgevingstypen, klikt u op het vervolgkeuzemenu **[!UICONTROL Type]** regelgeving en selecteert u de gewenste regeling in de lijst.
 
@@ -56,7 +57,7 @@ Als u meer details over een bepaald gegevenspunt wilt weergeven, klikt u op het 
 
 >[!NOTE]
 >
->Wanneer een filter is toegepast op de widget Taakverzoeken, kunt u het filter verwijderen door op de **[!UICONTROL X]** van de filtervulling te klikken. De Verzoeken van de baan keren dan aan het gebrek volgende lijst terug.
+>Wanneer een filter is toegepast op de widget Taakverzoeken, kunt u het filter verwijderen door op de **X** van de filtervulling te klikken. De Verzoeken van de baan keren dan aan het gebrek volgende lijst terug.
 
 ### Taakverzoeken
 
