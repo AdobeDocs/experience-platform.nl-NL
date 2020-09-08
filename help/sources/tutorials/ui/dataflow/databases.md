@@ -5,9 +5,9 @@ title: Vorm een dataflow voor een gegevensbestandschakelaar in UI
 topic: overview
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen om een nieuwe gegevensstroom te configureren met behulp van uw databaseaccount.
 translation-type: tm+mt
-source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1328'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,16 @@ Nadat u uw databaseaccount hebt gemaakt, wordt de stap Gegevens **** selecteren 
 - De linkerhelft van de interface is een browser die de lijst met databases van uw account weergeeft.
 - Met de rechterhelft van de interface kunt u maximaal 100 rijen met gegevens voorvertonen.
 
-Selecteer de database die u wilt gebruiken en klik op **[!UICONTROL Volgende]**.
+Met de optie **[!UICONTROL Zoeken]** boven aan de pagina kunt u snel de brongegevens identificeren die u wilt gebruiken.
 
-![](../../../images/tutorials/dataflow/databases/add-data.png)
+>[!NOTE]
+>
+>De optie van onderzoeksbrongegevens is beschikbaar aan alle op tabelvorm-gebaseerde bronschakelaars behalve de Analytics, Classifications, de Hubs van de Gebeurtenis, en de schakelaars van Kinesis.
+
+Nadat u de brongegevens hebt gevonden, selecteert u de map en klikt u op **[!UICONTROL Volgende]**.
+
+![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
+
 
 ## Gegevensvelden toewijzen aan een XDM-schema
 
