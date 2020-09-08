@@ -5,9 +5,9 @@ title: Vorm een dataflow voor een schakelaar van CRM in UI
 topic: overview
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie biedt stappen om een nieuwe gegevensstroom te configureren met behulp van uw CRM-account.
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,15 @@ Nadat u uw CRM-account hebt gemaakt, wordt de stap Gegevens ** selecteren weerge
 * De linkerhelft van de interface is een directorybrowser waarin de bestanden en mappen van uw server worden weergegeven.
 * Met de rechterhelft van de interface kunt u maximaal 100 rijen gegevens uit een compatibel bestand voorvertonen.
 
-Selecteer de directory die u wilt gebruiken en klik op **[!UICONTROL Volgende]**.
+Met de optie **[!UICONTROL Zoeken]** boven aan de pagina kunt u snel de brongegevens identificeren die u wilt gebruiken.
 
-![select-data](../../../images/tutorials/dataflow/crm/select-data.png)
+>[!NOTE]
+>
+>De optie van onderzoeksbrongegevens is beschikbaar aan alle op tabelvorm-gebaseerde bronschakelaars behalve de Analytics, Classifications, de Hubs van de Gebeurtenis, en de schakelaars van Kinesis.
+
+Nadat u de brongegevens hebt gevonden, selecteert u de map en klikt u op **[!UICONTROL Volgende]**.
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## Gegevensvelden toewijzen aan een XDM-schema
 
