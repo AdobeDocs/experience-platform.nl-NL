@@ -1,133 +1,78 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Abonneren op privacygebeurtenissen
+title: Abonneren op Privacy Service Events
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 0%
+source-wordcount: '420'
+ht-degree: 1%
 
 ---
 
 
-# Abonneren op [!DNL Privacy Events]
+# Abonneren op [!DNL Privacy Service Events]
 
-[!DNL Privacy Events] Dit zijn berichten van Adobe Experience Platform [!DNL Privacy Service], die gebruikmaken van Adobe I/O-gebeurtenissen die naar een geconfigureerde webhaak worden verzonden om een efficiënte automatisering van taakaanvragen te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een werkstroom is bereikt.
+[!DNL Privacy Service Events] Dit zijn berichten van Adobe Experience Platform [!DNL Privacy Service], die gebruikmaken van Adobe I/O-gebeurtenissen die naar een geconfigureerde webhaak worden verzonden om een efficiënte automatisering van taakaanvragen te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een werkstroom is bereikt.
 
 Er zijn momenteel vier typen meldingen die betrekking hebben op de levenscyclus van de privacytaakaanvraag:
 
 | Type | Beschrijving |
---- | ---
-| Taak voltooid | Alle [!DNL Experience Cloud] oplossingen zijn gemeld en de algemene of algemene status van de baan is als volledig gemarkeerd. |
-| Taakfout | Een of meer oplossingen hebben een fout gemeld tijdens de verwerking van het verzoek. |
-| Product voltooid | Een van de oplossingen voor deze taak heeft zijn werk voltooid. |
-| Productfout | Een van de oplossingen rapporteerde een fout tijdens de verwerking van het verzoek. |
+| --- | --- |
+| Taak voltooid | Alle [!DNL Experience Cloud] toepassingen zijn gemeld en de algemene of algemene status van de taak is als voltooid gemarkeerd. |
+| Taakfout | Een of meer toepassingen hebben een fout gemeld tijdens het verwerken van de aanvraag. |
+| Product voltooid | Een van de toepassingen voor deze taak heeft zijn werk voltooid. |
+| Productfout | Een van de toepassingen heeft een fout gemeld tijdens het verwerken van de aanvraag. |
 
-Dit document bevat stappen voor het instellen van een integratie voor [!DNL Privacy Service] meldingen binnen Adobe I/O. Voor een overzicht op hoog niveau van [!DNL Privacy Service] en zijn eigenschappen, zie het overzicht [van de](home.md)Privacy Service.
+Dit document bevat stappen voor het instellen van een gebeurtenisregistratie voor [!DNL Privacy Service] meldingen en voor het interpreteren van berichtladingen.
 
 ## Aan de slag
 
-Deze zelfstudie maakt gebruik van **ngrok**, een softwareproduct dat lokale servers via veilige tunnels toegankelijk maakt voor het publiek internet. Installeer voordat u deze zelfstudie start een [notitie](https://ngrok.com/download) om de zelfstudie te volgen en een webhaak voor uw lokale computer te maken. Voor deze handleiding moet u ook een GIT-opslagplaats downloaden die een eenvoudige [Node.js](https://nodejs.org/) -server bevat.
+Raadpleeg de volgende documentatie bij de Privacy Service voordat u deze zelfstudie start:
 
-## Een lokale server maken
+* [Overzicht van Privacy Service](./home.md)
+* [Handleiding voor ontwikkelaars van Privacy Service-API](./api/getting-started.md)
 
-Uw server Node.js moet een `challenge` parameter terugkeren die door een verzoek aan het wortel (`/`) eindpunt wordt verzonden. Stel uw `index.js` bestand in met de volgende JavaScript-code om dit te bereiken:
+## Webhaak registreren voor [!DNL Privacy Service Events]
 
-```js
-var express = require('express')
-var app = express()
+Om te worden ontvangen [!DNL Privacy Service Events], moet u de Console van de Ontwikkelaar van Adobe gebruiken om een webhaak aan uw [!DNL Privacy Service] integratie te registreren.
 
-app.set('port', (process.env.PORT || 3000))
-app.use(express.static(__dirname + '/public'))
+Volg de zelfstudie over het [abonneren van [!DNL I/O Event] toonmeldingen](../observability/notifications/subscribe.md) voor gedetailleerde stappen over hoe u dit kunt doen. Zorg ervoor dat u Gebeurtenissen **[!UICONTROL van de]** Privacy Service als uw gebeurtenisleverancier kiest om tot de hierboven vermelde gebeurtenissen toegang te hebben.
 
-app.get('/', function(request, response) {
-  response.send(request.originalUrl.split('?challenge=')[1]);
-})
+## Meldingen ontvangen [!DNL Privacy Service Event]
 
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-})
-```
-
-Navigeer met behulp van de opdrachtregel naar de hoofdmap van uw Node.js-server. Typ vervolgens de volgende opdrachten:
-
-1. `npm install`
-1. `npm start`
-
-Met deze opdrachten installeert u alle afhankelijkheden en initialiseert u de server. Als dit lukt, kunt u de server vinden op http://localhost:3000/.
-
-## Webhaak maken met notitie
-
-Open een nieuw opdrachtregelvenster en navigeer naar de map waarin u vroeger op de opdrachtregel hebt geïnstalleerd. Typ hier de volgende opdracht:
-
-```shell
-./ngrok http -bind-tls=true 3000
-```
-
-Een geslaagde uitvoer ziet er ongeveer als volgt uit:
-
-![inktuitvoer](images/privacy-events/ngrok-output.png)
-
-Neem nota van `Forwarding` URL (`https://212d6cd2.ngrok.io`), aangezien dit zal worden gebruikt om uw webhaak de volgende stap te identificeren.
-
-## Nieuw project maken in Adobe Developer Console
-
-Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Voer vervolgens de stappen uit die worden beschreven in de zelfstudie over het [maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.
-
-## Privacy-gebeurtenissen toevoegen aan het project
-
-Nadat u een nieuw project in de console hebt gemaakt, klikt u op **[!UICONTROL Gebeurtenis]** toevoegen in het scherm _Projectoverzicht_ .
-
-![](./images/privacy-events/add-event-button.png)
-
-Het dialoogvenster Gebeurtenissen __ toevoegen wordt weergegeven. Selecteer **[!UICONTROL Experience Cloud]** om de lijst met beschikbare gebeurtenistypen omlaag te filteren en selecteer vervolgens Gebeurtenissen **** Privacys Service voordat u op **[!UICONTROL Volgende]** klikt.
-
-![](./images/privacy-events/add-privacy-events.png)
-
-Het dialoogvenster _Gebeurtenisregistratie_ configureren wordt weergegeven. Selecteer welke gebeurtenissen u wilt ontvangen door hun overeenkomstige checkboxes te selecteren. Gebeurtenissen die u selecteert, verschijnen onder **[!UICONTROL Geabonneerde Gebeurtenissen]** in de linkerkolom. When finished, click **[!UICONTROL Next]**.
-
-![](./images/privacy-events/choose-subscriptions.png)
-
-In het volgende scherm wordt u gevraagd een openbare sleutel voor de gebeurtenisregistratie op te geven. U wordt gegeven de optie om een zeer belangrijk paar automatisch te produceren, of uw eigen openbare sleutel te uploaden die in de terminal wordt geproduceerd.
-
-In deze zelfstudie wordt de eerste optie gevolgd. Klik op het optievak voor het **[!UICONTROL genereren van een sleutelpaar]** en klik vervolgens op de knop Hoofdpaar **** genereren in de rechterbenedenhoek.
-
-![](./images/privacy-events/generate-key-value.png)
-
-Wanneer het sleutelpaar produceert, wordt het automatisch gedownload door browser. U moet dit bestand zelf opslaan omdat het niet wordt voortgezet in de Developer Console.
-
-In het volgende scherm kunt u de details van het nieuwe sleutelpaar bekijken. Klik op **[!UICONTROL Volgende]** om door te gaan.
-
-![](./images/privacy-events/keypair-generated.png)
-
-Geef in het volgende scherm een naam en een beschrijving op voor de registratie van de gebeurtenis. De beste manier is om een unieke, gemakkelijk identificeerbare naam te maken om deze gebeurtenisregistratie te onderscheiden van andere registraties voor hetzelfde project.
-
-![](./images/privacy-events/event-details.png)
-
-Verderop op het zelfde scherm, krijgt u twee opties om te vormen hoe te om gebeurtenissen te ontvangen. Selecteer **[!UICONTROL Webhaak]** en geef de `Forwarding` URL op voor de bovenstaande webhaak die u eerder onder **[!UICONTROL Webhaak URL]** hebt gemaakt. Selecteer vervolgens de gewenste leveringsstijl (enkele of batch) voordat u op **[!UICONTROL geconfigureerde gebeurtenissen]** opslaan klikt om de gebeurtenisregistratie te voltooien.
-
-![](./images/privacy-events/webhook-details.png)
-
-De detailpagina voor uw project verschijnt opnieuw, met [!DNL Privacy Events] verschijnt onder **[!UICONTROL Gebeurtenissen]** in de linkernavigatie.
-
-## Gebeurtenisgegevens weergeven
-
-Nadat u zich hebt geregistreerd [!DNL Privacy Events] bij uw project en privacytaken zijn verwerkt, kunt u ontvangen meldingen voor die registratie weergeven. Selecteer op het tabblad **[!UICONTROL Projecten]** in Developer Console uw project in de lijst om de pagina met het overzicht _van het_ product te openen. Van hier, selecteer de Gebeurtenissen **[!UICONTROL van de]** Privacy van de linkernavigatie.
-
-![](./images/privacy-events/events-left-nav.png)
-
-Het tabblad _Registratiedetails_ wordt weergegeven, zodat u meer informatie over de registratie kunt bekijken, de configuratie kunt bewerken of de werkelijke gebeurtenissen kunt bekijken die zijn ontvangen sinds u de webhaak hebt geactiveerd.
-
-![](./images/privacy-events/registration-details.png)
-
-Klik op het tabblad **[!UICONTROL Foutopsporing overtrekken]** om een lijst met ontvangen gebeurtenissen weer te geven. Klik op een vermelde gebeurtenis om de details ervan weer te geven.
+Nadat u de webhaak en privacytaken hebt geregistreerd, kunt u gebeurtenismeldingen ontvangen. Deze gebeurtenissen kunnen worden bekeken gebruikend webhaak zelf, of door het **** Debug vinden lusje in het overzicht van de gebeurtenisregistratie van uw project in de Console van de Ontwikkelaar van de Adobe te selecteren.
 
 ![](images/privacy-events/debug-tracing.png)
 
-In de sectie **[!UICONTROL Payload]** vindt u details over de geselecteerde gebeurtenis, inclusief het gebeurtenistype (`com.adobe.platform.gdpr.productcomplete`), zoals in het bovenstaande voorbeeld wordt aangegeven.
+De volgende JSON is een voorbeeld van een [!DNL Privacy Service Event] berichtlading die naar uw webhaak zou worden verzonden wanneer één van de toepassingen verbonden aan een privacybaan zijn werk heeft voltooid:
+
+```json
+{
+  "id":"b472e249-368b-4706-90f3-1d774713f827",
+  "event_id":"b116f797-e50b-432e-9c65-189106a34820",
+  "specversion":"0.2",
+  "type":"com.adobe.platform.gdpr.productcomplete",
+  "source":"https://ns.adobe.com/platform/gdpr",
+  "time":"Wed Oct 23 18:52:32 GMT 2019",
+  "data":{
+    "imsOrg":"{IMS_ORG}",
+    "value":{
+      "jobId":"6f0f2b62-88a7-4515-ba05-432d9a7021c5",
+      "message":"analytics.access.complete"
+    }
+  }
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `id` | Een unieke, door het systeem gegenereerde id voor het bericht. |
+| `type` | Het soort kennisgeving dat wordt verzonden, met vermelding van de context van de krachtens `data`deze verordening verstrekte informatie. Mogelijke waarden zijn: <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
+| `time` | Een tijdstempel van wanneer de gebeurtenis heeft plaatsgevonden. |
+| `data.value` | Bevat aanvullende informatie over de aanleiding voor de kennisgeving: <ul><li>`jobId`: De id van de privacytaak die de melding heeft geactiveerd.</li><li>`message`: Een bericht over de specifieke status van de baan. Voor `productcomplete` of `producterror` meldingen geeft dit veld de desbetreffende Experience Cloud-toepassing aan.</li></ul> |
 
 ## Volgende stappen
 
-U kunt de bovenstaande stappen herhalen voor het toevoegen van nieuwe integratie voor verschillende webhaakadressen waar nodig.
+In dit document wordt beschreven hoe u Privacy Service-gebeurtenissen kunt registreren voor een geconfigureerde webhaak en hoe u berichtladingen kunt interpreteren. Raadpleeg de gebruikershandleiding bij de [Privacy Service voor informatie over het bijhouden van privacytaken via de gebruikersinterface](./ui/user-guide.md).
