@@ -5,9 +5,9 @@ title: Overzicht van het realtime klantprofiel
 topic: guide
 description: Klantprofiel in real-time is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: cef27082fec97530031061476b46f60859717825
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1650'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten
 
 ### [!DNL Profile] metriek
 
-Met observability Insights kunt u belangrijke metriek in Adobe Experience Platform onthullen. Naast [!DNL Platform] gebruiksstatistieken en prestatie-indicatoren voor diverse [!DNL Platform] functies, zijn er specifieke [!DNL Profile]verwante metriek die u toestaan om inzicht in inkomende verzoektarieven, succesvolle innamepercentages, ingebedde verslaggrootte, en meer te krijgen. Meer leren, begin door het overzicht [van de Inzichten van de](../observability/home.md)Waarnemelijkheid te lezen, en voor een volledige lijst van [!DNL Profile] metriek, zie de documentatie over [beschikbare metriek](../observability/metrics.md).
+Met observability Insights kunt u belangrijke metriek in Adobe Experience Platform onthullen. Naast [!DNL Platform] gebruiksstatistieken en prestatie-indicatoren voor diverse [!DNL Platform] functies, zijn er specifieke [!DNL Profile]verwante metriek die u toestaan om inzicht in inkomende verzoektarieven, succesvolle innamepercentages, ingebedde verslaggrootte, en meer te krijgen. Voor meer informatie, begin door het overzicht [van](../observability/api/overview.md)Observability Insights API te lezen, en voor een volledige lijst van [!DNL Profile] metriek, zie de documentatie over [beschikbare metriek](../observability/api/metrics.md#available-metrics).
 
 ## [!DNL Data governance] en [!DNL Privacy]
 
