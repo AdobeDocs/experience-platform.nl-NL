@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Abonneren op gebeurtenissen voor gegevensinvoer
 topic: overview
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 80a1694f11cd2f38347989731ab7c56c2c198090
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '621'
 ht-degree: 0%
 
 ---
@@ -20,75 +20,77 @@ De gegevens die in worden geladen [!DNL Platform] moeten door veelvoudige stappe
 
 Als u wilt helpen bij het controleren van het innameproces, [!DNL Experience Platform] kunt u zich abonneren op een set gebeurtenissen die door elke stap van het proces worden gepubliceerd, waarbij u op de hoogte wordt gebracht van de status van de ingesloten gegevens en van mogelijke fouten.
 
-## Beschikbare statusmeldingsgebeurtenissen
+## Webhaak registreren voor meldingen over gegevensinvoer
 
-Hieronder vindt u een lijst met beschikbare gegevensinvoerstatusmeldingen waarop u zich kunt abonneren.
+Als u meldingen over gegevensinvoer wilt ontvangen, moet u de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) gebruiken om een webhaak te registreren voor de integratie van uw Experience Platform.
+
+Volg de zelfstudie over het [abonneren van [!DNL Adobe I/O Event] toonmeldingen](../../observability/notifications/subscribe.md) voor gedetailleerde stappen over hoe u dit kunt doen.
+
+>[!IMPORTANT]
+>
+>Zorg er tijdens het abonnementsproces voor dat u **[!UICONTROL Platform-berichten]** selecteert als gebeurtenisprovider en selecteer het **[!UICONTROL gegevensinvoer-berichtgebeurtenisabonnement]** wanneer hierom wordt gevraagd.
+
+## Meldingen over gegevensinvoer ontvangen
+
+Nadat u de webhaak hebt geregistreerd en nieuwe gegevens zijn ingevoerd, kunt u gebeurtenismeldingen ontvangen. Deze gebeurtenissen kunnen worden bekeken gebruikend webhaak zelf, of door het **** Debug vinden lusje in het overzicht van de gebeurtenisregistratie van uw project in de Console van de Ontwikkelaar van de Adobe te selecteren.
+
+De volgende JSON is een voorbeeld van een berichtlading die naar uw webhaak in het geval van een ontbroken partijingestitie gebeurtenis zou worden verzonden:
+
+```json
+{
+  "event_id": "93a5b11a-b0e6-4b29-ad82-81b1499cb4f2",
+  "event": {
+    "xdm:ingestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
+    "xdm:customerIngestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
+    "xdm:imsOrg": "{IMS_ORG}",
+    "xdm:completed": 1598374341560,
+    "xdm:datasetId": "5e55b556c2ae4418a8446037",
+    "xdm:eventCode": "ing_load_failure",
+    "xdm:sandboxName": "prod",
+    "sentTime": "1598374341595",
+    "processStartTime": 1598374342614,
+    "transformedTime": 1598374342621,
+    "header": {
+      "_adobeio": {
+        "imsOrgId": "{IMS_ORG}",
+        "providerMetadata": "aep_observability_catalog_events",
+        "eventCode": "platform_event"
+      }
+    }
+  }
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `event_id` | Een unieke, door het systeem gegenereerde id voor het bericht. |
+| `event` | Een object dat de details bevat van de gebeurtenis die de melding heeft geactiveerd. |
+| `event.xdm:datasetId` | De id van de gegevensset waarop de insluitingsgebeurtenis van toepassing is. |
+| `event.xdm:eventCode` | Een statuscode die het type gebeurtenis aangeeft dat voor de gegevensset is geactiveerd. Zie de [bijlage](#event-codes) voor specifieke waarden en de bijbehorende definities. |
+
+Om het volledige schema voor gebeurtenisberichten te bekijken, verwijs naar de [openbare bewaarplaats](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json)van GitHub.
+
+## Volgende stappen
+
+Zodra u [!DNL Platform] berichten aan uw project hebt geregistreerd, kunt u ontvangen gebeurtenissen van het overzicht [!UICONTROL van het]Project bekijken. Raadpleeg de handleiding voor het [overtrekken van I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) voor Adobe voor gedetailleerde instructies over het overtrekken van gebeurtenissen.
+
+## Aanhangsel
+
+De volgende sectie bevat aanvullende informatie over het interpreteren van gegevensinvoer-berichtladingen.
+
+### Beschikbare statusmeldingsgebeurtenissen {#event-codes}
+
+In de volgende tabel staan de statusmeldingen voor gegevensinvoer waarop u zich kunt abonneren.
+
+| Gebeurteniscode | Platform Service | Status | Beschrijving van gebeurtenis |
+| --- | ---------------- | ------ | ----------------- |
+| `ing_load_success` | [!DNL Data Ingestion] | succes | Een partij werd succesvol opgenomen in een dataset binnen [!DNL Data Lake]. |
+| `ing_load_failure` | [!DNL Data Ingestion] | fout | Een partij kon niet in een dataset binnen [!DNL Data Lake]worden opgenomen. |
+| `ps_load_success` | [!DNL Real-time Customer Profile] | succes | Een batch is opgenomen in de [!DNL Profile] gegevensopslag. |
+| `ps_load_failure` | [!DNL Real-time Customer Profile] | fout | Een batch kan niet in de [!DNL Profile] gegevensopslag worden opgenomen. |
+| `ig_load_success` | [!DNL Identity Service] | succes | Gegevens zijn geladen in de identiteitsgrafiek. |
+| `ig_load_failure` | [!DNL Identity Service] | fout | Gegevens kunnen niet in de identiteitsgrafiek worden geladen. |
 
 >[!NOTE]
 >
 >Er is slechts één gebeurtenisonderwerp dat voor alle gegevens wordt verstrekt die berichten invoeren. Om onderscheid te maken tussen verschillende statussen, kan de gebeurteniscode worden gebruikt.
-
-| Platform Service | Status | Beschrijving van gebeurtenis | Gebeurteniscode |
-| ---------------- | ------ | ----------------- | ---------- |
-| Gegevenslanding | succes | Opname - Batch voltooid | ing_load_success |
-| Gegevenslanding | fout | Opname - Batch mislukt | ing_load_failure |
-| Klantprofiel in realtime | succes | Profielservice - Gegevensladingbatch geslaagd | ps_load_success |
-| Klantprofiel in realtime | fout | Profielservice - Gegevensbatch is mislukt | ps_load_failure |
-| Identiteitsgrafiek | succes | Identiteitsgrafiek - Gegevensladingbatch geslaagd | ig_load_success |
-| Identiteitsgrafiek | fout | Identiteitsgrafiek: batch voor laden van gegevens is mislukt | ig_load_failure |
-
-## Payloadschema voor berichten
-
-Het gebeurtenisschema voor gegevensinvoer is een [!DNL Experience Data Model] (XDM)-schema dat velden en waarden bevat die gegevens bevatten over de status van de gegevens die worden ingevoerd. Ga naar het openbare XDM- [!DNL GitHub] repo om het meest recente [berichtladingsschema](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json)te bekijken.
-
-## Abonneren op statusmeldingen voor gegevensinvoer
-
-Via [Adobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events.html)kunt u zich op meerdere berichttypen abonneren met behulp van websites. In de onderstaande secties vindt u een overzicht van de stappen voor het abonneren op [!DNL Platform] meldingen voor gegevensinsluitingsgebeurtenissen met behulp van Adobe Developer Console.
-
-### Nieuw project maken in Adobe Developer Console
-
-Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Voer vervolgens de stappen uit die worden beschreven in de zelfstudie over het [maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.
-
-### Voeg [!DNL Experience Platform] gebeurtenissen aan het project toe
-
-Nadat u een nieuw project hebt gemaakt, navigeert u naar het overzichtsscherm van dat project. Klik hier op **[!UICONTROL Gebeurtenis]** toevoegen.
-
-![](../images/quality/subscribe-events/add-event-button.png)
-
-Het dialoogvenster Gebeurtenissen **** toevoegen wordt weergegeven. Klik op **[!UICONTROL Experience Platform]** om de lijst met beschikbare opties te filteren en klik vervolgens op **[!UICONTROL Platform-meldingen]** voordat u op **[!UICONTROL Volgende]** klikt.
-
-![](../images/quality/subscribe-events/select-platform-events.png)
-
-In het volgende scherm wordt een lijst weergegeven met gebeurtenistypen waarop u zich wilt abonneren. Selecteer **[!UICONTROL Gegevensinvoer bericht]**, dan klik **[!UICONTROL daarna]**.
-
-![](../images/quality/subscribe-events/choose-event-subscriptions.png)
-
-In het volgende scherm wordt u gevraagd een JSON Web Token (JWT) te maken. U wordt gegeven de optie om een zeer belangrijk paar automatisch te produceren, of uw eigen openbare sleutel te uploaden die in de terminal wordt geproduceerd.
-
-In deze zelfstudie wordt de eerste optie gevolgd. Klik op het optievak voor **[!UICONTROL Een sleutelpaar]** genereren en klik vervolgens op de knop **[!UICONTROL Keypair]** genereren in de rechterbenedenhoek.
-
-![](../images/quality/subscribe-events/generate-keypair.png)
-
-Wanneer het sleutelpaar produceert, wordt het automatisch gedownload door browser. U moet dit bestand zelf opslaan omdat het niet wordt voortgezet in de Developer Console.
-
-In het volgende scherm kunt u de details van het nieuwe sleutelpaar bekijken. Klik op **[!UICONTROL Volgende]** om door te gaan.
-
-![](../images/quality/subscribe-events/keypair-generated.png)
-
-Geef in het volgende scherm een naam en een beschrijving op voor de registratie van de gebeurtenis. De beste manier is om een unieke, gemakkelijk identificeerbare naam te maken om deze gebeurtenisregistratie te onderscheiden van andere registraties voor hetzelfde project.
-
-![](../images/quality/subscribe-events/registration-details.png)
-
-Verderop op het zelfde scherm, kunt u naar keuze vormen hoe te om gebeurtenissen te ontvangen. **[!UICONTROL Met WebHaak]** kunt u een aangepast webhaadres opgeven voor het ontvangen van gebeurtenissen, terwijl u met **[!UICONTROL Runtime-actie]** hetzelfde kunt doen met [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
-
-Deze zelfstudie slaat deze optionele configuratiestap over. Als u klaar bent, klikt u op **[!UICONTROL geconfigureerde gebeurtenissen]** opslaan om de gebeurtenisregistratie te voltooien.
-
-![](../images/quality/subscribe-events/receive-events.png)
-
-De detailspagina voor de pas gecreëerde gebeurtenisregistratie verschijnt, waar u ontvangen gebeurtenissen kunt herzien, zuivert het vinden uitvoeren, en zijn configuratie uitgeven.
-
-![](../images/quality/subscribe-events/registration-complete.png)
-
-## Volgende stappen
-
-Zodra u [!DNL Platform] berichten aan uw project hebt geregistreerd, kunt u ontvangen gebeurtenissen van het projectdashboard bekijken. Raadpleeg de handleiding [Adobe I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) overtrekken voor gedetailleerde instructies over het overtrekken van gebeurtenissen.
