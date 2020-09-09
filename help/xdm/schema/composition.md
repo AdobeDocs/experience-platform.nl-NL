@@ -5,7 +5,7 @@ title: Basisbeginselen van de schemacompositie
 topic: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 translation-type: tm+mt
-source-git-commit: 4251dc292ead3ce4dc8aef68ff04bb774047160d
+source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
@@ -173,7 +173,7 @@ Een veld is de eenvoudigste bouwsteen van een schema. Velden bieden beperkingen 
 
 * Tekenreeks
 * Geheel
-* Getal
+* Dubbel
 * Boolean
 * Array
 * Object
