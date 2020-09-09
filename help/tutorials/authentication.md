@@ -5,7 +5,7 @@ title: API's van Experience Platforms verifiëren en benaderen
 topic: tutorial
 description: 'Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API''s. '
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
@@ -156,7 +156,7 @@ Als uw reactie vergelijkbaar is met de hieronder weergegeven reactie, zijn uw ge
 
 ## Postman gebruiken voor JWT-verificatie en API-aanroepen
 
-[Postman](https://www.getpostman.com/) is een populair hulpmiddel om met RESTful APIs te werken. In dit [artikel](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) wordt beschreven hoe u een postman kunt instellen om automatisch JWT-verificatie uit te voeren en deze te gebruiken voor het gebruik van Adobe Experience Platform API&#39;s.
+[Postman](https://www.postman.com/) is een populair hulpmiddel om met RESTful APIs te werken. In dit [artikel](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) wordt beschreven hoe u een postman kunt instellen om automatisch JWT-verificatie uit te voeren en deze te gebruiken voor het gebruik van Adobe Experience Platform API&#39;s.
 
 ## Volgende stappen
 
