@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 9a9b1294507986723c1e4d1230a854630131be3a
+source-git-commit: 9436779e91bf82382056acd526671b30b55e11d4
 workflow-type: tm+mt
-source-wordcount: '805'
-ht-degree: 2%
+source-wordcount: '883'
+ht-degree: 3%
 
 ---
 
@@ -21,6 +21,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL-gegevensbeheer]](#governance)
 - [[!DNL-doelen]](#destinations)
+- [[!DNL Observability Insights]](#observability)
 - [[!DNL-Privacy Service]](#privacy)
 - [[!DNL Real-time klantprofiel]](#profile)
 - [[!DNL Segmentation Service]](#segmentation)
@@ -50,6 +51,30 @@ In [Adobe Real-time het Platform](../../rtcdp/overview.md)van de Gegevens van de
 
 Ga voor meer informatie naar het overzicht met [bestemmingen](../../rtcdp/destinations/destinations-overview.md)
 
+## [!DNL Observability Insights] {#observability}
+
+[!DNL Observability Insights] kunt u de activiteiten op Adobe Experience Platform volgen door statistische gegevens en gebeurtenismeldingen te gebruiken.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Adobe I/O-gebeurtenismeldingen | [!DNL Observability Insights] hefboomwerkingen Adobe I/O Gebeurtenissen om gebeurtenisberichten voor verscheidene diensten van het Experience Platform tot stand te brengen. De lading van het bericht wordt verzonden naar een gevormde webhaak die u kunt dan gebruiken om verdere stroomafwaartse processen te automatiseren. Zie het overzicht [van](../../observability/notifications/overview.md) meldingen voor meer informatie. |
+
+Zie het [[!DNL Observability Insights] overzicht](../../observability/home.md) voor meer informatie over de dienst.
+
+## [!DNL Privacy Service] {#privacy}
+
+Verschillende wettelijke en organisatorische regelingen geven gebruikers het recht om hun persoonsgegevens op verzoek in uw gegevensopslag te openen of te verwijderen. Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u deze gegevensaanvragen van uw klanten kunt beheren. Met [!DNL Privacy Service]kunt u verzoeken indienen om toegang te krijgen tot persoonlijke of persoonlijke klantgegevens en deze te verwijderen uit Adobe Experience Cloud-toepassingen, waardoor u gemakkelijker kunt voldoen aan wettelijke en organisatorische privacyregels.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Ondersteuning voor LGPD (Brazilië) | Privacy jobs kunnen nu worden gecreëerd in het kader van de Braziliaanse [!DNL Lei Geral de Proteção de Dados] (LGPD) verordening. Deze banen worden bijgehouden onder de code van de verordening `lgpd_bra`. |
+
+Zie het overzicht [van de](../../privacy-service/home.md) Privacy Service voor meer informatie over de dienst.
+
 ## Klantprofiel in realtime {#profile}
 
 Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met [!DNL Real-time Customer Profile], kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. [!DNL Profile] staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
@@ -74,18 +99,6 @@ Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en 
 | Beleid samenvoegen | Het veelvoudige samenvoegbeleid kan in één enkele baan van de partijsegmentatie worden omvat. |
 
 Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het overzicht van de [Segmentatie](../../segmentation/home.md)
-
-## [!DNL Privacy Service] {#privacy}
-
-Verschillende wettelijke en organisatorische regelingen geven gebruikers het recht om hun persoonsgegevens op verzoek in uw gegevensopslag te openen of te verwijderen. Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u deze gegevensaanvragen van uw klanten kunt beheren. Met [!DNL Privacy Service]kunt u verzoeken indienen om toegang te krijgen tot persoonlijke of persoonlijke klantgegevens en deze te verwijderen uit Adobe Experience Cloud-toepassingen, waardoor u gemakkelijker kunt voldoen aan wettelijke en organisatorische privacyregels.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Ondersteuning voor LGPD (Brazilië) | Privacy jobs kunnen nu worden gecreëerd in het kader van de Braziliaanse [!DNL Lei Geral de Proteção de Dados] (LGPD) verordening. Deze banen worden bijgehouden onder de code van de verordening `lgpd_bra`. |
-
-Zie het overzicht [van de](../../privacy-service/home.md) Privacy Service voor meer informatie over de dienst.
 
 ## Bronnen {#sources}
 
