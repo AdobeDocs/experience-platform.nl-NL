@@ -5,7 +5,7 @@ title: Een functiepijplijn maken
 topic: Tutorial
 description: Met Adobe Experience Platform kunt u aangepaste functiepijpleidingen maken en maken die op schaal functionaliteit kunnen bieden via de Sensei Machine Learning Framework-runtime. Dit document beschrijft de diverse klassen die in een eigenschappijpleiding worden gevonden, en verstrekt een geleidelijke zelfstudie voor het creëren van een pijpleiding van de douaneeigenschap gebruikend ModelAuthoring SDK in PySpark.
 translation-type: tm+mt
-source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
+source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 0%
@@ -397,7 +397,7 @@ Nu u uw eigenschappijpleiding hebt ontworpen, moet u een beeld van het Dok tot s
 
 Naar keuze, kunt u de volgende inzameling van Postman ook gebruiken om in de voltooiing van het werkschema van de eigenschappijpleiding te helpen API:
 
-https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
+https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Een pijplijnengine maken {#create-engine-api}
 
