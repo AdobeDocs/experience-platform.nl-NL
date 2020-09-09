@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Opmerkingen bij de release Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 4cfa64e3371496e2408fe8fee64d49883334917c
+source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '538'
 ht-degree: 5%
 
 ---
@@ -19,6 +19,14 @@ Dit document bevat informatie over nieuwe functies voor Adobe Experience Platfor
 >[!NOTE]
 >
 >De meest recente releaseopmerkingen voor andere [!DNL Experience Platform] services zijn [hier](../release-notes/latest/latest.md)te vinden.
+
+## 9 september 2020
+
+### Nieuwe functies
+
+| Functie | Beschrijving |
+| --- | --- |
+| Ondersteuning voor LGPD (Brazilië) | Privacy jobs kunnen nu worden gecreëerd in het kader van de Braziliaanse [!DNL Lei Geral de Proteção de Dados] (LGPD) verordening. Deze banen worden bijgehouden onder de code van de verordening `lgpd_bra`. |
 
 ## 8 april 2020
 
