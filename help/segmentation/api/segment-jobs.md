@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmenttaken
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 3926c989a05ee97f2a09c0ab38d6a444674563cb
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1002'
 ht-degree: 1%
 
 ---
@@ -191,7 +191,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `segmentId` | De id van de segmentdefinitie waarvoor u een segmenttaak wilt maken. Meer informatie over segmentdefinities kan in de gids [van het](./segment-definitions.md)segmentdefinitieeindpunt worden gevonden. |
+| `segmentId` | De id van de segmentdefinitie waarvoor u een segmenttaak wilt maken. Deze segmentdefinities kunnen tot verschillende samenvoegbeleidsregels behoren. Meer informatie over segmentdefinities kan in de gids [van het](./segment-definitions.md)segmentdefinitieeindpunt worden gevonden. |
 
 **Antwoord**
 
