@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Richtlijnen voor Experience Platform
 topic: guide
 translation-type: tm+mt
-source-git-commit: d9e4812e3506de3082670a8afde5480cd8f865d6
+source-git-commit: 51111b2e831a37949150b107eb76711e2470523c
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1201'
 ht-degree: 1%
 
 ---
@@ -96,5 +96,5 @@ De volgende instructies verwijzen naar de gegevensgrootte en worden aanbevolen o
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Maximale totale grootte per dimensionale entiteit | 1GB | Zacht | **De maximale aanbevolen totale grootte voor een dimensie-entiteit is 1 GB.** Het inzetten van entiteiten met een grote dimensie zal leiden tot verminderde systeemprestaties. Het wordt bijvoorbeeld niet aanbevolen een productcatalogus van 10 GB als een dimensie-entiteit te laden. |
+| Maximale totale grootte voor alle dimensionale entiteiten | 5GB | Zacht | **De maximale aanbevolen totale grootte voor alle dimensionale entiteiten is 5 GB.** Het inzetten van entiteiten met een grote dimensie zal leiden tot verminderde systeemprestaties. Het wordt bijvoorbeeld niet aanbevolen een productcatalogus van 10 GB als een dimensie-entiteit te laden. |
 | Datasets per dimensionaal eenheidschema | 5 | Zacht | **Het wordt aanbevolen maximaal vijf datasets toe te voegen aan elk dimensionaal eenheidschema.** Bijvoorbeeld, als u een schema voor &quot;producten&quot;creeert en vijf bijdragende datasets toevoegt, zou u geen zesde dataset moeten creëren verbonden aan het productschema. |
