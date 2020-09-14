@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Accounts en gegevensstromen bewaken
 topic: overview
 translation-type: tm+mt
-source-git-commit: 737ee0bd55dbf178505c9be0875b2a0b75d3217a
+source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,14 @@ Via het sorteervenster hebt u toegang tot accounts vanuit een specifieke bron. S
 > Gebruik de ![spectrum-controle](../../images/tutorials/monitor/spectrum-control.png) knoop in de kolom van de **[!UICONTROL Naam]** om een nieuwe brondataflow voor de geselecteerde rekening tot stand te brengen.
 
 ![accounts selecteren](../../images/tutorials/monitor/accounts-sort.png)
+
+Daarnaast kunt u bestaande accountgegevens bewerken en uw accountgegevens bijwerken. Selecteer het potloodpictogram voor de accountgegevens die u wilt bewerken.
+
+![](../../images/tutorials/monitor/click-edit.png)
+
+Het modaal **[!UICONTROL dialoogvenster Accountdetails]** bewerken wordt weergegeven. Vanaf deze pagina kunt u uw bestaande accountgegevens en verificatiereferenties bijwerken.
+
+![](../../images/tutorials/monitor/edit-account.png)
 
 Van de pagina van **[!UICONTROL Rekeningen]** , kunt u een lijst van bestaande gegevensstromen of doeldatasets bekijken verbonden aan de rekening u toegang had tot. Selecteer de ellipsen (`...`) knoop om meer beschikbare opties voor uw geselecteerde gegevensstroom te verhogen. Deze opties worden hieronder nader beschreven:
 
