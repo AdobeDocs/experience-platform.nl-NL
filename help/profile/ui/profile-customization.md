@@ -5,9 +5,9 @@ title: Profieldetails aanpassen
 description: 'Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop gegevens van het realtime-klantprofiel worden weergegeven in de gebruikersinterface van Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: b08644102e6455d4c4c8b03e747411d3c05c7deb
+source-git-commit: 52cccd7436e203725a9fb4be8406332d8f23a71d
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,7 @@ Na het opslaan gaat u terug naar het tabblad [!UICONTROL Details] waar uw nieuwe
 
 ## Standaardkaarten herstellen
 
-Als u op een gegeven moment besluit dat u uw bewerkingen wilt verwijderen en wilt terugkeren naar de standaardweergave, kunt u snel en eenvoudig alle standaardkaarten en -kenmerken herstellen. Selecteer hiervoor **[!UICONTROL Het dashboard]** wijzigen en selecteer **[!UICONTROL Standaardkaarten]** herstellen. Hiermee verwijdert u alle aanpassingen (inclusief vergroten/verkleinen) die u hebt gemaakt. Vervolgens kunt u **[!UICONTROL Opslaan]** selecteren om de wijzigingen op te slaan. Als u de standaardinstelling niet wilt herstellen, selecteert u **[!UICONTROL Annuleren]** om de gemaakte wijzigingen te behouden.
-
->[!NOTE]
->
->Wees voorzichtig bij het herstellen van standaardkaarten en -kenmerken. Nadat de standaardinstelling is hersteld en opgeslagen, kunt u alleen terugkeren naar de weergaveaanpassingen door deze opnieuw te maken met de stappen die in dit document worden beschreven.
+Als u op een gegeven moment besluit dat u de standaardkaarten die sindsdien zijn verwijderd, wilt herstellen, kunt u dit snel en eenvoudig doen. Selecteer eerst **[!UICONTROL Het dashboard]** wijzigen en selecteer vervolgens **[!UICONTROL Standaardkaarten]** herstellen. Als de standaardkaarten zichtbaar zijn, kunt u **[!UICONTROL Opslaan]** selecteren om uw wijzigingen op te slaan of **[!UICONTROL Annuleren]** selecteren als u de standaardkaarten niet wilt herstellen.
 
 ![](../images/profile-customization/profiles-restore-default.png)
 
