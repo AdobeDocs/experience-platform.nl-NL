@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevens opnemen in Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 0816781620ca73a0511290d8d04b8f1a96db8a11
+source-git-commit: 2eef47cd4afe8c6dfd71d7b78035861ba1b368f7
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1278'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ Klik op **[!UICONTROL Inschakelen]** en de schakeloptie wordt blauw om aan te ge
 
 ## Gegevens toevoegen aan gegevensset
 
-Gegevens kunnen op verschillende manieren aan een gegevensset worden toegevoegd. U kunt ervoor kiezen API&#39; [!DNL Data Ingestion] s of een ETL-partner, zoals [!DNL Unifi] of [!DNL Informatica]. Voor dit leerprogramma, zullen de gegevens aan de dataset worden toegevoegd gebruikend het **[!UICONTROL Add lusje van Gegevens]** binnen UI.
+Gegevens kunnen op verschillende manieren aan een gegevensset worden toegevoegd. U zou kunnen verkiezen om APIs of een partner van ETL zoals [!DNL Data Ingestion] of [!DNL Unifi] [!DNL Informatica]te gebruiken. Voor dit leerprogramma, zullen de gegevens aan de dataset worden toegevoegd gebruikend het **[!UICONTROL Add lusje van Gegevens]** binnen UI.
 
 Als u gegevens aan de gegevensset wilt toevoegen, klikt u op het tabblad Gegevens **** toevoegen. U kunt nu bestanden slepen en neerzetten of op uw computer bladeren naar de bestanden die u wilt toevoegen.
 
@@ -153,4 +153,3 @@ Lees voor meer informatie over batch-opname het overzicht [van de](../batch-inge
 >De [!DNL Platform] UI die in de volgende video wordt getoond is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
-slepen
