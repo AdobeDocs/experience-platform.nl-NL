@@ -5,9 +5,9 @@ description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience
 seo-description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience Platforms te volgen
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 69ddfca041624123b03eb01d0f10a5bdb36cd119
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,7 @@ Gegevens die naar Adobe Experience Cloud worden verzonden, vallen in twee catego
 XDM-gegevens zijn een object waarvan de inhoud en structuur overeenkomen met een schema dat u in Adobe Experience Platform hebt gemaakt. [Meer informatie over het maken van een schema.](../../xdm/tutorials/create-schema-ui.md)
 
 Om het even welke gegevens XDM die u deel van uw analyses, verpersoonlijking, publiek, of bestemmingen zou willen uitmaken zouden moeten worden verzonden gebruikend de `xdm` optie.
+
 
 ```javascript
 alloy("sendEvent", {
@@ -53,7 +54,37 @@ Het verzenden van gegevens die niet overeenkomen met een XDM-schema wordt moment
 
 ### Instelling `eventType`
 
-In een XDM ervaringsgebeurtenis, is er een `eventType` gebied. Dit houdt het primaire gebeurtenistype voor het verslag. Dit kan als deel van de `xdm` optie worden overgegaan.
+In een XDM-ervaringsgebeurtenis is er een optioneel `eventType` veld. Dit houdt het primaire gebeurtenistype voor het verslag. Door een gebeurtenistype in te stellen kunt u onderscheid maken tussen de verschillende gebeurtenissen die u wilt verzenden. XDM biedt verschillende vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken of u maakt altijd uw eigen aangepaste gebeurtenistypen voor uw gebruiksgevallen. Hieronder vindt u een lijst met alle vooraf gedefinieerde gebeurtenistypen die door XDM worden geleverd.
+
+
+| **Type gebeurtenis:** | **Definitie:** |
+| ---------------------------------- | ------------ |
+| advertising.completes | Geeft aan of een getimed media-element is gecontroleerd op voltooiing, wat niet noodzakelijkerwijs betekent dat de kijker de hele video heeft bekeken. viewer had voorsprong kunnen overslaan |
+| advertising.timePlayed | Beschrijft de hoeveelheid tijd die door een gebruiker aan een specifiek getimed media activa wordt doorgebracht |
+| advertising.federated | Geeft aan of een ervaringsgebeurtenis is gemaakt via gegevensfederatie (gegevensdeling tussen klanten) |
+| advertising.clicks | Klikken op acties op een advertentie |
+| advertising.conversions | Een vooraf gedefinieerde actie(s) van de klant die een gebeurtenis voor prestatiebeoordeling activeert |
+| advertising.firstQuartiles | Een digitale video heeft 25% van de duur bij normale snelheid afgespeeld |
+| advertising.impressions | Indrukking(en) van een advertentie voor een eindgebruiker met de mogelijkheid te worden bekeken |
+| advertising.midpoints | Een digitale video heeft 50% van de duur bij normale snelheid afgespeeld |
+| advertising.starts | Er is een digitale video afgespeeld |
+| advertising.thirdQuartiles | Een digitale video heeft 75% van de duur bij normale snelheid afgespeeld |
+| web.webpagedetails.pageViews | Weergave(s) van een webpagina is opgetreden |
+| web.webinteraction.linkClicks | Klik van een Web-verbinding is voorgekomen |
+| commerce.checkouts | Een actie tijdens een uitcheckproces van een productlijst, kan er meer dan één controlegebeurtenis zijn als er veelvoudige stappen in een controleproces zijn. Als er meerdere stappen zijn, worden de informatie over de tijd van de gebeurtenis en de pagina waarnaar wordt verwezen of de ervaring gebruikt om de stap te identificeren die individuele gebeurtenissen in volgorde vertegenwoordigen |
+| commerce.productListAdds | Toevoeging van een product aan de productlijst. Voorbeeld van een product dat aan een winkelwagentje wordt toegevoegd |
+| commerce.productListOpens | Initialisaties van een nieuwe productlijst. Voorbeeld van een winkelwagentje |
+| commerce.productListRemovals | Een product uit een productlijst verwijderen. Voorbeeld: een product wordt uit een winkelwagentje verwijderd |
+| commerce.productListReopens | Een productlijst die niet meer toegankelijk (verlaten) was is opnieuw geactiveerd door de gebruiker. Voorbeeld via een hermarketingactiviteit |
+| commerce.productListViews | Weergave(s) van een productlijst is opgetreden |
+| commerce.productViews | Weergave(s) van een product is/zijn opgetreden |
+| commerce.purchases | Er is een bestelling geaccepteerd. De aankoop is de enige vereiste actie in een handelsomzetting. De aanschaf moet een productlijst bevatten waarnaar wordt verwezen |
+| commerce.saveForLaters | De productlijst wordt opgeslagen voor toekomstig gebruik. Voorbeeld van een verlanglijst voor een product |
+| delivery.feedback | Feedbackgebeurtenissen voor een levering. Voorbeeld van feedbackgebeurtenissen voor een e-maillevering |
+
+
+Deze gebeurtenistypen worden weergegeven in een vervolgkeuzelijst als u de extensie Starten gebruikt of u kunt ze altijd doorgeven zonder Starten. U kunt ze doorgeven als onderdeel van de `xdm` optie.
+
 
 ```javascript
 alloy("sendEvent", {
@@ -73,6 +104,7 @@ alloy("sendEvent", {
 
 U kunt de opdracht ook aan de gebeurtenisopdracht `eventType` doorgeven met de `type` optie. Achter de scènes wordt dit toegevoegd aan de XDM-gegevens. Als u de optie `type` als een optie hebt, kunt u de XDM-lading eenvoudiger instellen `eventType` zonder dat u de XDM-lading hoeft te wijzigen.
 
+
 ```javascript
 var myXDMData = { ... };
 
@@ -85,6 +117,7 @@ alloy("sendEvent", {
 ### De gegevensset-id overschrijven
 
 In sommige gebruiksgevallen, zou u een gebeurtenis naar een dataset buiten kunnen willen verzenden die in de Configuratie UI wordt gevormd. Hiervoor moet u de `datasetId` optie voor de `sendEvent` opdracht instellen:
+
 
 ```javascript
 var myXDMData = { ... };
@@ -103,6 +136,7 @@ U kunt ook aangepaste identiteitsgegevens toevoegen aan de gebeurtenis. Zie Expe
 ## De sendBeacon-API gebruiken
 
 Het kan lastig zijn om gebeurtenisgegevens te verzenden vlak voordat de gebruiker van de webpagina weg is genavigeerd. Als de aanvraag te lang duurt, kan de browser de aanvraag annuleren. Sommige browsers hebben een webstandaard-API geïmplementeerd, die wordt aangeroepen `sendBeacon` om gegevens tijdens deze periode gemakkelijker te kunnen verzamelen. Wanneer `sendBeacon`de browser wordt gebruikt, wordt de webaanvraag uitgevoerd in de algemene browsercontext. Dit betekent browser maakt het bakenverzoek op de achtergrond en houdt niet de paginanavigatie op. Als u Adobe Experience Platform wilt vertellen [!DNL Web SDK] dat het moet worden gebruikt, voegt u de optie toe `sendBeacon``"documentUnloading": true` aan de gebeurtenisopdracht.  Hier volgt een voorbeeld:
+
 
 ```javascript
 alloy("sendEvent", {
@@ -125,6 +159,7 @@ Browsers hebben limieten ingesteld voor de hoeveelheid gegevens die `sendBeacon`
 ## Reacties van gebeurtenissen afhandelen
 
 Als u een reactie van een gebeurtenis wilt afhandelen, kunt u als volgt op de hoogte worden gesteld van een succes of mislukking:
+
 
 ```javascript
 alloy("sendEvent", {
@@ -151,6 +186,7 @@ alloy("sendEvent", {
 
 Als u velden wilt toevoegen aan, verwijderen uit of wijzigen uit de gebeurtenis, kunt u een `onBeforeEventSend` callback configureren.  Deze callback wordt geroepen telkens als een gebeurtenis wordt verzonden.  Deze callback wordt doorgegeven in een gebeurtenisobject met een `xdm` veld.  Wijzigen `event.xdm` om de gegevens te wijzigen die in de gebeurtenis worden verzonden.
 
+
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
@@ -176,6 +212,6 @@ Als callback een uitzondering werpt, wordt de gebeurtenis nog verzonden; `onBefo
 
 ## Mogelijke uitvoerbare fouten
 
-Bij het verzenden van een gebeurtenis kan een fout optreden als de gegevens die worden verzonden te groot zijn (meer dan 32 kB voor de volledige aanvraag). In dit geval moet u de hoeveelheid gegevens die wordt verzonden verminderen.
+Bij het verzenden van een gebeurtenis kan een fout optreden als de gegevens die worden verzonden te groot zijn (meer dan 32 kB voor de volledige aanvraag). In dit geval moet u de hoeveelheid gegevens die wordt verzonden, verminderen.
 
 Wanneer het zuiveren wordt toegelaten, bevestigt de server synchroon gebeurtenisgegevens die tegen het gevormde schema XDM worden verzonden. Als de gegevens niet overeenkomen met het schema, worden gegevens over de niet-overeenkomende gegevens geretourneerd van de server en wordt een fout gegenereerd. In dit geval past u de gegevens aan het schema aan. Wanneer het zuiveren niet wordt toegelaten, controleert de server asynchroon gegevens en, daarom, wordt geen overeenkomstige fout geworpen.
