@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verbinding maken met streaming doelen en gegevens activeren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
+source-git-commit: f31b03f027d8b44f761917f4edf19a0b5eedd76c
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1822'
 ht-degree: 0%
 
 ---
@@ -468,7 +468,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: Gebruik de gegevensstroom die u in de vorige stap hebt verkregen.
 * `{ETAG}`: Gebruik het label dat u in de vorige stap hebt verkregen.
-* `{SEGMENT_ID}`: Geef de segment-id op die u naar dit doel wilt exporteren. Als u segment-id&#39;s wilt ophalen voor de segmenten die u wilt activeren, gaat u naar https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/, selecteert u **[!UICONTROL Segmenteringsservice-API]** in het navigatiemenu links en zoekt u de `GET /segment/jobs` bewerking.
+* `{SEGMENT_ID}`: Geef de segment-id op die u naar dit doel wilt exporteren. Om segment IDs voor de segmenten terug te winnen die u wilt activeren, ga naar **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, de uitgezochte **[!UICONTROL Dienst API]** van de Segmentatie in het linkernavigatiemenu, en zoek de `GET /segment/definitions` verrichting in de Definities **[!UICONTROL van het]** Segment.
 * `{PROFILE_ATTRIBUTE}`: Bijvoorbeeld, `personalEmail.address` of `person.lastName`
 
 **Antwoord**
