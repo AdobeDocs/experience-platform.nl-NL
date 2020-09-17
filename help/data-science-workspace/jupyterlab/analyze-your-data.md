@@ -5,7 +5,7 @@ title: Analyseer uw gegevens met notebooks
 topic: Tutorial
 description: Deze zelfstudie richt zich op het gebruik van Jupyter-laptops, die zijn gemaakt in de Data Science Workspace, voor toegang tot uw gegevens, verkenning en visualisatie.
 translation-type: tm+mt
-source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Standaard werkt Tensorflow-recept in een GPU-cluster en Python in een CPU-cluste
 
 In [!DNL Adobe Experience Platform] UI, klik op het lusje van de Wetenschap van Gegevens in het hoogste menu om u aan de Werkruimte van de Wetenschap van Gegevens te nemen. Klik op de tab van deze pagina waarop de [!DNL JupyterLab] [!DNL JupyterLab] starter wordt geopend. U zou een pagina moeten zien gelijkend op dit.
 
-![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
+![](../images/jupyterlab/analyze-data/jupyterlab-launcher.png)
 
 In onze zelfstudie gebruiken we [!DNL Python] 3 in het Jupyter-notebook om te tonen hoe we de gegevens kunnen openen en verkennen. Op de pagina Launcher staan voorbeelden van laptops. Voor [!DNL Python] 3 gebruiken we het winkelrecept.
 
