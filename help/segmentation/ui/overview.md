@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruikershandleiding voor segmentatieservice
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: c9ff4d26accd880d5169526f84be607fc722883b
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1452'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,19 @@ Selecteer het tabblad **[!UICONTROL Bladeren]** om een lijst met alle segmentdef
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-Deze mening maakt een lijst van informatie over de segmentdefinitie met inbegrip van de evaluatiemethode, gecreeerd datum, en laatst gewijzigde datum.
+Deze mening maakt een lijst van informatie over de segmentdefinitie met inbegrip van de uitsplitsing, de koeling, de profieltelling, de evaluatiemethode, gecreeerd datum, en laatst gewijzigde datum.
+
+De uitsplitsing toont een staafgrafiek die het percentage van profielen schetst die tot elk van de volgende statussen behoren: [!UICONTROL Ingegaan], [!UICONTROL Gelaliseerd], en [!UICONTROL Beëindigen].
+
+![](../images/ui/overview/segment-browse-breakdown.png)
+
+| Status | Beschrijving |
+| ------ | ----------- |
+| Ingegaan | Een nieuw profiel binnen het segment. |
+| Gerealiseerd | Een bestaand profiel dat binnen het segment is gebleven. |
+| Afsluiten | Een bestaand profiel dat het segment verlaat. |
+
+De kolom vertegenwoordigt het percentage profielen die binnen een segmentdefinitie in vergelijking met de laatste tijd veranderen de segmentbaan liep, terwijl de profieltelling het totale aantal profielen vertegenwoordigt die voor het segment kwalificeren.
 
 De evaluatiemethode kan streaming of batch zijn. Streaming segmenten worden voortdurend geëvalueerd terwijl gegevens in het systeem worden ingevoerd. De segmenten van de partij worden geëvalueerd volgens een vastgesteld programma.
 
