@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Een CSV-bestand toewijzen aan een XDM-schema
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1371'
-ht-degree: 1%
+source-wordcount: '1350'
+ht-degree: 2%
 
 ---
 
@@ -61,6 +61,10 @@ De sectie **[!UICONTROL Voorbeeldgegevens]** wordt weergegeven wanneer het besta
 
 De stap **[!UICONTROL Toewijzing]** wordt weergegeven. De kolommen van het CSV-bestand worden weergegeven onder **[!UICONTROL Bronveld]**, met de bijbehorende XDM-schemavelden onder **[!UICONTROL Doelveld]**. Niet-geselecteerde doelvelden krijgen een rode omtrek. Met de optie Filtervelden kunt u de lijst met beschikbare bronvelden verkleinen.
 
+>[!TIP]
+>
+>[!DNL Platform] verstrekt intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd dat u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
+
 Als u een CSV-kolom wilt toewijzen aan een XDM-veld, selecteert u het schemapictogram naast het bijbehorende doelveld van de kolom.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
@@ -69,17 +73,9 @@ Het venster **[!UICONTROL Selectieschemaveld]** wordt weergegeven. Hier kunt u d
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-Het scherm **[!UICONTROL Toewijzing]** wordt opnieuw weergegeven, waarbij het geselecteerde XDM-veld nu wordt weergegeven onder **[!UICONTROL Doelveld]**.
+Nadat u de stappen voor de resterende niet-toegewezen bronvelden hebt uitgevoerd, wordt het scherm **[!UICONTROL Toewijzing]** opnieuw weergegeven met het geselecteerde XDM-veld dat nu onder **[!UICONTROL Doelveld]** wordt weergegeven.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
-
-Als u geen bepaalde CSV-kolom wilt toewijzen, kunt u de toewijzing verwijderen door op het pictogram **** Verwijderen naast het doelveld te klikken. U kunt ook alle toewijzingen verwijderen door de knop **[!UICONTROL Alle toewijzingen]** wissen te selecteren.
-
-![](../images/tutorials/map-a-csv-file/remove-mapping.png)
-
-Als u een nieuwe afbeelding wilt toevoegen, selecteert u Nieuwe toewijzing **** toevoegen boven aan de lijst **[!UICONTROL Bronveld]** .
-
-![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 Bij het toewijzen van velden kunt u ook functies opnemen om waarden te berekenen op basis van invoerbronvelden. Zie de sectie [toewijzingsfuncties](#mapping-functions) in de bijlage voor meer informatie.
 
@@ -89,7 +85,7 @@ Met berekende velden kunnen waarden worden gemaakt op basis van de kenmerken in 
 
 Selecteer de knop Berekend veld **** toevoegen om door te gaan.
 
-![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
+![](../images/tutorials/map-a-csv-file/add-calculate-field.png)
 
 Het **[!UICONTROL deelvenster Berekend veld]** maken wordt weergegeven. Het linkerdialoogvenster bevat de velden, functies en operatoren die in berekende velden worden ondersteund. Selecteer een van de tabbladen om functies, velden of operatoren toe te voegen aan de expressie-editor.
 
