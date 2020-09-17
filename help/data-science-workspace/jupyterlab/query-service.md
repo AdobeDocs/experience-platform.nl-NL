@@ -5,7 +5,7 @@ title: Query-service in Jupyter-laptop
 topic: Tutorial
 description: Met Adobe Experience Platform kunt u SQL (Structured Query Language) gebruiken in de Data Science Workspace door Query Service te integreren in JupyterLab als een standaardfunctie. In deze zelfstudie wordt een voorbeeld gegeven van SQL-query's voor veelvoorkomende gebruiksscenario's voor het verkennen, transformeren en analyseren van Adobe Analytics-gegevens.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -30,14 +30,14 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 - Een goed begrip van de volgende belangrijkste concepten die in deze zelfstudie worden gebruikt:
    - [[!DNL het Model van de Gegevens van de Ervaring (XDM) en XDM Systeem]](../../xdm/home.md)
    - [[!DNL Query Service]](../../query-service/home.md)
-   - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
+   - [[!SQL-syntaxis voor DNL Query Service](../../query-service/sql/overview.md)
    - [Adobe Analytics]
 
 ## Toegang [!DNL JupyterLab] en [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
 1. Navigeer in [[!DNL-Experience Platform]](https://platform.adobe.com)naar **[!UICONTROL laptops]** vanuit de linkernavigatiekolom. Laat JupyterLab even laden.
 
-   ![](../images/jupyterlab/query/jupyterlab_launcher.png)
+   ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
@@ -289,6 +289,6 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-## Volgende stappen <!-- omit in toc -->
+## Volgende stappen
 
 Deze zelfstudie laat een aantal voorbeelden zien van gebruiksscenario&#39;s voor gebruik [!DNL Query Service] in [!DNL Jupyter] laptops. Volg de [Analyze uw gegevens gebruikend de zelfstudie van Notities](./analyze-your-data.md) van de Jupyter om te zien hoe de gelijkaardige verrichtingen gebruikend de Toegang SDK van Gegevens worden uitgevoerd.
