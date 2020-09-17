@@ -5,9 +5,9 @@ title: Een dataflow configureren voor een advertentieverbinding in de gebruikers
 topic: overview
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van Adobe Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw advertentieaccount.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: 33b0f69c1552957984c131c72a13e88167211295
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -80,9 +80,15 @@ Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wij
 >
 >[!DNL Platform] verstrekt intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd dat u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
 
-Als uw brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Volgende]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Selecteer Gegevens **[!UICONTROL van de]** Voorproef om afbeeldingsresultaten van maximaal 100 rijen steekproefgegevens van de geselecteerde dataset te zien.
+
+Tijdens de voorvertoning krijgt de identiteitskolom de prioriteit als het eerste veld, omdat dit de belangrijkste informatie is die nodig is voor het valideren van toewijzingsresultaten.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Sluiten]**.
 
 ## Planninguitvoering
 
