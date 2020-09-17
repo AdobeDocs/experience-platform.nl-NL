@@ -5,9 +5,9 @@ title: Een dataflow configureren voor een advertentieverbinding in de gebruikers
 topic: overview
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van Adobe Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw advertentieaccount.
 translation-type: tm+mt
-source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1377'
 ht-degree: 0%
 
 ---
@@ -76,9 +76,13 @@ Het dialoogvenster Schema **** selecteren wordt geopend. Selecteer het schema u 
 
 Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of mapperfuncties te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Raadpleeg de zelfstudie over het [toewijzen van CSV-gegevens aan XDM-schemavelden](../../../../ingestion/tutorials/map-a-csv-file.md)voor meer informatie over gegevenstoewijzing en mapperfuncties.
 
-Klik op **[!UICONTROL Volgende]** als de brongegevens zijn toegewezen.
+>[!TIP]
+>
+>[!DNL Platform] verstrekt intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd dat u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
+Als uw brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Volgende]**.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
 ## Planninguitvoering
 
