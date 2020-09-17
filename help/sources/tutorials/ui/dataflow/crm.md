@@ -5,9 +5,9 @@ title: Vorm een dataflow voor een schakelaar van CRM in UI
 topic: overview
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie biedt stappen om een nieuwe gegevensstroom te configureren met behulp van uw CRM-account.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1466'
 ht-degree: 0%
 
 ---
@@ -79,9 +79,15 @@ Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wij
 >
 >[!DNL Platform] verstrekt intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd dat u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
 
-Als uw brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Volgende]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Selecteer Gegevens **[!UICONTROL van de]** Voorproef om afbeeldingsresultaten van maximaal 100 rijen steekproefgegevens van de geselecteerde dataset te zien.
+
+Tijdens de voorvertoning krijgt de identiteitskolom de prioriteit als het eerste veld, omdat dit de belangrijkste informatie is die nodig is voor het valideren van toewijzingsresultaten.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Sluiten]**.
 
 ## Planninguitvoering
 
@@ -92,7 +98,7 @@ De **[!UICONTROL Plannende]** stap verschijnt, toestaand u om een innameprogramm
 | Frequentie | De selecteerbare frequenties omvatten `Once`, `Minute`, `Hour`, `Day`, en `Week`. |
 | Interval | Een geheel getal dat het interval voor de geselecteerde frequentie instelt. |
 | Begintijd | Een UTC-tijdstempel die aangeeft wanneer de eerste opname wordt uitgevoerd. |
-| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als **[!UICONTROL Backfill ]*is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Als*Backfill *is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de*[!UICONTROL begintijd ]*worden geladen. Bestanden die vóór het begin van het*[!UICONTROL starten]** zijn geladen, worden niet opgenomen. |
+| Achtergrond | Een booleaanse waarde die bepaalt welke gegevens eerst worden ingevoerd. Als **[!UICONTROL Backfill]** is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande opname opgenomen. Als **[!UICONTROL Backfill]** is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de **[!UICONTROL begintijd]** worden geladen. Bestanden die vóór het begin van het **[!UICONTROL starten]** zijn geladen, worden niet opgenomen. |
 | Delta-kolom | Een optie met een gefilterde reeks gebieden van het bronschema van type, datum, of tijd. Dit veld wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. |
 
 Dataflows worden ontworpen om gegevens automatisch in te voeren op een geplande basis. Begin door de innamefrequentie te selecteren. Daarna, plaats het interval om de periode tussen twee stroomlooppas aan te wijzen. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul en moet worden ingesteld op groter dan of gelijk aan 15.
