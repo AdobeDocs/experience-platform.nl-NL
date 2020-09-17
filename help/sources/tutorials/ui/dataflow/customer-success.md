@@ -5,9 +5,9 @@ title: Vorm een dataflow voor een schakelaar van het klantensucces in UI
 topic: overview
 description: Een dataflow is een geplande taak die gegevens van een bron aan [!DNL Platform] adataset terugwint en opneemt. Deze zelfstudie biedt stappen om een nieuwe gegevensstroom te configureren met behulp van uw account voor klantsucces.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
 workflow-type: tm+mt
-source-wordcount: '1393'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -79,9 +79,15 @@ Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wij
 >
 >[!DNL Platform] verstrekt intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd dat u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
 
-Als uw brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Volgende]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Selecteer Gegevens **[!UICONTROL van de]** Voorproef om afbeeldingsresultaten van maximaal 100 rijen steekproefgegevens van de geselecteerde dataset te zien.
+
+Tijdens de voorvertoning krijgt de identiteitskolom de prioriteit als het eerste veld, omdat dit de belangrijkste informatie is die nodig is voor het valideren van toewijzingsresultaten.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Als de brongegevens eenmaal zijn toegewezen, selecteert u **[!UICONTROL Sluiten]**.
 
 ## Planninguitvoering
 
