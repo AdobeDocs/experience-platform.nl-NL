@@ -5,7 +5,7 @@ title: Een recept maken met Jupyter-laptops
 topic: Tutorial
 description: Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst, zult u een machine het leren model gebruikend een malplaatje binnen Notitieboekje JupyterLab creëren. Vervolgens gebruikt u de workflow voor het maken van een notebook naar het recept in JupyterLab om een recept te maken in de Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
+source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Met de [!UICONTROL Recipe Builder] -laptop kunt u trainingen en scoring uitvoere
 
 Wanneer u klikt op de Recipe Builder-laptop van de startprogramma, wordt de laptop geopend op het tabblad. Het model dat in de laptop wordt gebruikt, is de Python Retail Sales Forecasting Recipe die ook in [deze openbare opslagplaats te vinden is](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-U zult zien dat er op de werkbalk drie extra acties staan, namelijk **[!UICONTROL Trein]**, **[!UICONTROL Score]** en Ontvanger **[!UICONTROL maken]**. Deze pictogrammen worden alleen weergegeven in het [!UICONTROL notebook van de Recipe Builder] . Meer informatie over deze acties wordt besproken [in de sectie](#training-and-scoring) Training en score nadat u de Recipe hebt gemaakt in de laptop.
+U zult zien dat er op de werkbalk drie extra handelingen staan: **[!UICONTROL Trein]**, **[!UICONTROL Score]** en Ontvanger **[!UICONTROL maken]**. Deze pictogrammen worden alleen weergegeven in het [!UICONTROL notebook van de Recipe Builder] . Meer informatie over deze acties wordt besproken [in de sectie](#training-and-scoring) Training en score nadat u de Recipe hebt gemaakt in de laptop.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
