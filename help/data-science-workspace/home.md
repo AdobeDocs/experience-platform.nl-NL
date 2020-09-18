@@ -5,9 +5,9 @@ title: Overzicht van de Data Science Workspace
 topic: overview
 description: Deze gids verstrekt een overzicht van de belangrijkste concepten met betrekking tot de Werkruimte van de Wetenschap van Gegevens.
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 581d11bdb934f46c53a6703829b4dc470076e195
 workflow-type: tm+mt
-source-wordcount: '2584'
+source-wordcount: '2578'
 ht-degree: 0%
 
 ---
@@ -196,7 +196,7 @@ Tijdens het trainen van uw modellen worden trainingsreeksen en evaluaties gegene
 
 ![](./images/home/evaluation_metrics.png)
 
-Bezoek [deze sectie](https://www.adobe.io/apis/experienceplatform/home/tutorials/data-science-workspace/dsw-tutorials/trainmodel.html) voor zelfstudies over het trainen en evalueren van modellen in [!DNL Data Science Workspace].
+Bezoek de [API](./models-recipes/train-evaluate-model-api.md) - of [UI](./models-recipes/train-evaluate-model-ui.md) -zelfstudie over het trainen en evalueren van modellen in [!DNL Data Science Workspace].
 
 ### Het model opereren
 
@@ -206,7 +206,7 @@ Een gepubliceerde intelligente dienst is configureerbaar om zich van tijd tot ti
 
 ## Volgende stappen
 
-[!DNL Data Science Workspace] helpt de workflow voor gegevenswetenschap te stroomlijnen en te vereenvoudigen, van gegevensverzameling tot algoritmen tot intelligente services, voor gegevenswetenschappers van alle vaardigheidsniveaus. Met de geavanceerde tools [!DNL Data Science Workspace] kunt u de tijd van gegevens tot inzichten aanzienlijk verkorten.
+[!DNL Data Science Workspace] helpt de workflow voor gegevenswetenschap te stroomlijnen en te vereenvoudigen, van gegevensverzameling tot algoritmen tot intelligente services voor gegevenswetenschappers van alle vaardigheidsniveaus. Met de geavanceerde tools [!DNL Data Science Workspace] kunt u de tijd van gegevens tot inzichten aanzienlijk verkorten.
 
 Nog belangrijker is dat de mogelijkheden voor gegevenswetenschap en algoritmische optimalisatie van Adobe toonaangevend marketingplatform in handen van wetenschappers op het gebied van bedrijfsgegevens worden gelegd. [!DNL Data Science Workspace] Voor de eerste keer kunnen bedrijven bedrijfseigen algoritmen aan het platform aanbieden, waarbij ze profiteren van krachtige machinemogelijkheden en AI-mogelijkheden om zeer gepersonaliseerde klantervaringen op grote schaal te bieden.
 
