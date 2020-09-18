@@ -5,9 +5,9 @@ title: Zelfstudies over de werkruimte voor gegevenswetenschap
 topic: tutorial
 description: De Adobe Experience Platform Data Science Workspace maakt gebruik van machinaal leren en kunstmatige intelligentie om inzichten van uw gegevens te creëren. De Data Science Workspace is geïntegreerd in Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 10c9ce66b0fb3b5d1be931f37d95d283673bef15
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1297'
 ht-degree: 0%
 
 ---
@@ -41,10 +41,18 @@ Voor meer informatie en de vereiste waarden voor het uitvoeren van CRUD-bewerkin
 - Heb toegang tot en begrijp de [!DNL JupyterLab] interface.
 - Begrijp codecellen en de beschikbare kernels binnen [!DNL JupyterLab].
 - Begrijp GPU en de configuratie van de geheugenserver in [!DNL Python]/R.
-- Lees en vraag [!DNL Platform] gegevens gebruikend Notities.
-- Begrijp de gegevenslimieten voor laptops.
 
 Ga voor meer informatie naar de [JupyterLab-gebruikershandleiding](../data-science-workspace/jupyterlab/overview.md).
+
+## Toegang tot gegevens in JupyterLab-laptops
+
+JupyterLab in de Werkruimte van de Wetenschap van Gegevens steunt laptops voor [!DNL Python], R, PySpark, en Scala. Elke ondersteunde kernel biedt ingebouwde functies waarmee u gegevens van een Platform in een notitieboekje kunt lezen. De ondersteuning voor pagineringsgegevens is echter beperkt tot laptops [!DNL Python] en R-laptops. Deze handleiding is gericht op het gebruik van JupyterLab-laptops voor toegang tot uw gegevens.
+
+**Deze handleiding helpt u:**
+- Lees, schrijf, en vraag de gegevens van het Platform gebruikend de laptops van Python, R, PySpark, of Scala.
+- Begrijp de leesbeperkingen van elk type laptop.
+
+Ga voor meer informatie naar de [JupyterLab-handleiding voor de ontwikkelaars van laptoptoegang](../data-science-workspace/jupyterlab/access-notebook-data.md)
 
 ## Bronbestanden verpakken voor het schrijven van [!DNL Docker] recept
 
