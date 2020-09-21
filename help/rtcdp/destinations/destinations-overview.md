@@ -2,12 +2,12 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;destinations;destination;rtcdp
 title: Overzicht van bestemmingen
 seo-title: Overzicht van bestemmingen
-description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Adobe Real-time Platform van de Gegevens van de Klant gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+description: Gebruik de bestemmingen in de Adobe Experience Platform om uw bekende en onbekende gegevens te activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 seo-description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Adobe Real-time Platform van de Gegevens van de Klant gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 translation-type: tm+mt
-source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
+source-git-commit: 5c3016e822ea23407af5de525c27785df8e2f795
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
