@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Accounts en gegevensstromen bewaken
 topic: overview
 translation-type: tm+mt
-source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
+source-git-commit: 8f752d6a08496f9583627781d9143ee7f9159bf0
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1097'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,18 @@ Dataflows zijn rechtstreeks vanuit de **[!UICONTROL Cataloguspagina]** toegankel
 
 ![catalogusgegevensstromen](../../images/tutorials/monitor/catalog-dataflows.png)
 
-Er wordt een lijst met bestaande gegevensstromen weergegeven. Op deze pagina vindt u een lijst met zichtbare gegevensstromen, waaronder informatie over de bron, gebruikersnaam, het aantal gegevensstromen en de status. Selecteer het trechter-pictogram linksboven om te sorteren.
+Er wordt een lijst met bestaande gegevensstromen weergegeven. Op deze pagina vindt u een lijst met zichtbare gegevensstromen, waaronder informatie over de bron, gebruikersnaam, het aantal gegevensstromen en de status.
+
+Zie de volgende tabel voor meer informatie over statussen:
+
+| Status | Beschrijving |
+| ------ | ----------- |
+| Ingeschakeld | De `Enabled` status wijst erop dat een dataflow actief is en gegevens volgens het programma opneemt het werd verstrekt. |
+| Uitgeschakeld | De `Disabled` status geeft aan dat een gegevensstroom inactief is en geen gegevens opneemt. |
+| Verwerking | De `Processing` status geeft aan dat een gegevensstroom nog niet actief is. Deze status wordt vaak direct na het maken van een nieuwe gegevensstroom aangetroffen. |
+| Fout | De `Error` status geeft aan dat het activeringsproces van een gegevensstroom is onderbroken. |
+
+Selecteer het trechter-pictogram linksboven om te sorteren.
 
 ![dataflows-list](../../images/tutorials/monitor/dataflows-list.png)
 
