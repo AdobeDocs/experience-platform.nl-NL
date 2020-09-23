@@ -5,9 +5,9 @@ title: Segmentatie van meerdere entiteiten
 topic: overview
 description: De segmentatie van meerdere entiteiten is de capaciteit om de gegevens van het Profiel met extra gegevens uit te breiden die op producten, opslag, of andere niet-profielklassen worden gebaseerd. Zodra verbonden, worden de gegevens van extra klassen beschikbaar alsof zij aan het schema van het Profiel inheems waren.
 translation-type: tm+mt
-source-git-commit: 8568c55003127a295acff9cfbbc3bbf6005e7a51
+source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -45,14 +45,16 @@ Het creëren van een multi-entiteitsegment vereist eerst het bepalen van relatie
 
 ### Relaties definiëren
 
-Het bepalen van verhoudingen binnen de structuur van uw schema&#39;s van de Gegevens van de Ervaring (XDM) is een integraal deel van multi-entiteitsegmentverwezenlijking. Dit proces kan of gebruikend de Registratie API van het Schema of de Redacteur van het Schema worden gedaan. Voor gedetailleerde stappen die tonen hoe te om een verhouding tussen twee schema&#39;s te bepalen, gelieve te kiezen van de volgende leerprogramma&#39;s:
+Het bepalen van verhoudingen binnen de structuur van uw schema&#39;s van de Gegevens van de Ervaring (XDM) is een integraal deel van multi-entiteitsegmentverwezenlijking. Voor verhoudingen, moet het gebied in de bestemming als primaire identiteit van dat schema worden gemerkt. Een identiteit kan alleen worden gemarkeerd op tekenreeksen en kan niet worden gemarkeerd op arrays. Bovendien, moeten de verhoudingen niet noodzakelijk één-op-één zijn, aangezien u profielen en ervaringsgebeurtenissen met veelvoudige bestemmingen kunt verbinden.
+
+Het bepalen van verhoudingen kan of gebruikend de Registratie API van het Schema of de Redacteur van het Schema worden gedaan. Voor gedetailleerde stappen die tonen hoe te om een verhouding tussen twee schema&#39;s te bepalen, gelieve te kiezen van de volgende leerprogramma&#39;s:
 
 * [Een relatie tussen twee schema&#39;s definiëren met behulp van de API](../xdm/tutorials/relationship-api.md)
 * [Het bepalen van een verhouding tussen twee schema&#39;s gebruikend de Redacteur UI van het Schema](../xdm/tutorials/relationship-ui.md)
 
 ### Een segment met meerdere entiteiten maken
 
-Zodra u de noodzakelijke verhoudingen XDM hebt bepaald, kunt u beginnen om een multi-entiteitsegment te bouwen. Dit proces kan worden gedaan gebruikend of de Segmentatie API of de Bouwer UI van het Segment. Kies voor meer informatie een van de volgende hulplijnen:
+Zodra u de noodzakelijke verhoudingen XDM hebt bepaald, kunt u beginnen om een multi-entiteitsegment te bouwen. Dit kan worden gedaan gebruikend of de Segmentatie API of de Bouwer UI van het Segment. Kies voor meer informatie een van de volgende hulplijnen:
 
 * [Een segment maken met de segmentatie-API](./tutorials/create-a-segment.md)
 * [Een segment maken met de gebruikersinterface van Segment Builder](./ui/overview.md)
