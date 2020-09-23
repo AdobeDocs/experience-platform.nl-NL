@@ -5,9 +5,9 @@ title: Vorm een dataflow voor een protocolschakelaar in UI
 topic: overview
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van Adobe Experience Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen om een nieuwe dataflow te vormen gebruikend uw protocolrekening.
 translation-type: tm+mt
-source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1411'
+source-wordcount: '1460'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,11 @@ Om gegevens in een nieuwe dataset in te voeren, **[!UICONTROL creeer nieuwe data
 
 U kunt een schemagebied vastmaken door een schemanaam in te gaan in de **[!UICONTROL Uitgezochte bar van het schemaonderzoek]** . U kunt ook het vervolgkeuzepictogram selecteren om een lijst met bestaande schema&#39;s weer te geven. U kunt ook **[!UICONTROL Geavanceerd zoeken]** selecteren om toegang te krijgen tot het scherm met bestaande schema&#39;s en de bijbehorende details.
 
-![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+Tijdens deze stap, kunt u uw dataset voor toelaten [!DNL Real-time Customer Profile] en tot een holistische mening van de attributen en het gedrag van een entiteit leiden. De gegevens van alle toegelaten datasets zullen in worden omvat [!DNL Profile] en de veranderingen worden toegepast wanneer u uw gegevensstroom bewaart.
+
+Schakel de knop Gegevensset **[!UICONTROL Profiel]** in of uit om uw doelgegevensset in te schakelen [!DNL Profile].
+
+![create-new-dataset](../../../images/tutorials/dataflow/protocols/new-dataset.png)
 
 Het dialoogvenster Schema **** selecteren wordt geopend. Selecteer het schema u wenst om op de nieuwe dataset toe te passen, dan klik **[!UICONTROL Gedaan]**.
 
