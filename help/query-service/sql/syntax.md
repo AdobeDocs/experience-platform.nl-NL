@@ -5,9 +5,9 @@ title: SQL-syntaxis
 topic: syntax
 description: Dit document toont SQL syntaxis die door de Dienst van de Vraag wordt gesteund.
 translation-type: tm+mt
-source-git-commit: 041165f501d35b811202362b524523b103d18113
+source-git-commit: 2672d0bdf1f34deb715415e7b660a35076edb06b
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '2004'
 ht-degree: 0%
 
 ---
@@ -115,10 +115,10 @@ SELECT statement 2
 De volgende syntaxis definieert een `CREATE TABLE AS SELECT` (CTAS)-query die wordt ondersteund door [!DNL Query Service]:
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
+CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-waarbij `target_schema_title` is de titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om een bestaand schema XDM voor de nieuwe dataset te gebruiken die door vraag CTAS wordt gecreeerd.
+waarbij`target_schema_title` de titel van het XDM-schema is. Gebruik deze clausule slechts als u wenst om een bestaand schema XDM voor de nieuwe dataset te gebruiken die door vraag`rowvalidation` CTAS wordt gecreeerd specificeert als de gebruiker rijniveaubevestiging van elke nieuwe partijen wil die voor de nieuwe gemaakte dataset worden opgenomen. Standaardwaarde is &#39;false&#39;
 
 en `select_query` is een `SELECT` instructie waarvan de syntaxis hierboven in dit document wordt gedefinieerd.
 
