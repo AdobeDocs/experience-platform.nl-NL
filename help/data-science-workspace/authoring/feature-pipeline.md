@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;popular topics
-solution: Adobe Experience Platform Data Science Workspace
 title: Een functiepijplijn maken
 topic: Tutorial
 description: Met Adobe Experience Platform kunt u aangepaste functiepijpleidingen maken en maken die op schaal functionaliteit kunnen bieden via de Sensei Machine Learning Framework-runtime. Dit document beschrijft de diverse klassen die in een eigenschappijpleiding worden gevonden, en verstrekt een geleidelijke zelfstudie voor het creëren van een pijpleiding van de douaneeigenschap gebruikend ModelAuthoring SDK in PySpark.
 translation-type: tm+mt
-source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 0%
