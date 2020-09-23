@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: Handleiding voor het oplossen van problemen in realtime van klantprofielen
 topic: guide
 translation-type: tm+mt
-source-git-commit: 94fd6ee324b35acb7ef1185f7851d76d76f3e91c
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 0%
@@ -14,9 +13,9 @@ ht-degree: 0%
 
 # Handleiding voor het oplossen van problemen in realtime van klantprofielen
 
-Dit document biedt antwoorden op veelgestelde vragen over het Real-time profiel van de Klant en een gids voor probleemoplossing voor algemene fouten. Voor vragen en het oplossen van problemen met betrekking tot andere diensten in Adobe Experience Platform, gelieve te verwijzen naar de het oplossen van problemengids [van het](../landing/troubleshooting.md)Experience Platform.
+Dit document biedt antwoorden op veelgestelde vragen over het Real-time profiel van de Klant en een gids voor probleemoplossing voor algemene fouten. Raadpleeg de handleiding voor het oplossen van problemen met [Experience Platforms voor vragen en het oplossen van problemen met betrekking tot andere services in Adobe Experience Platform](../landing/troubleshooting.md).
 
-Klantprofiel in real-time is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen gecoördineerde, consistente en relevante ervaringen opdoen met hun publiek.
+Klantprofiel in real-time is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 
 ## Veelgestelde vragen
 
@@ -48,7 +47,7 @@ Er zijn meerdere methoden om profielgegevens weer te geven, afhankelijk van het 
 
 Als u de id&#39;s kent van de profielentiteiten waartoe u toegang wilt hebben, kunt u het eindpunt `/entities` (toegang profiel) in de profiel-API gebruiken om die entiteiten op te zoeken. Zie de sectie over [entiteiten](./api/entities.md) in de ontwikkelaarsgids voor meer informatie.
 
-U kunt de Dienst API van de Segmentatie van het Adobe Experience Platform ook gebruiken om tot de individuele profielen van klanten toegang te hebben die voor een segmentlidmaatschap gekwalificeerd zijn. Zie het overzicht [van de Dienst van de](../segmentation/home.md) Segmentatie voor meer informatie.
+U kunt de Adobe Experience Platform Segmentation Service API ook gebruiken om tot de individuele profielen van klanten toegang te hebben die voor een segmentlidmaatschap gekwalificeerd zijn. Zie het overzicht [van de Dienst van de](../segmentation/home.md) Segmentatie voor meer informatie.
 
 #### De gebruikersinterface gebruiken
 
