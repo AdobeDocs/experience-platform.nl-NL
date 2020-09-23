@@ -5,9 +5,9 @@ title: Een gegevensstroom configureren voor een batchaansluiting voor cloudopsla
 topic: overview
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
 translation-type: tm+mt
-source-git-commit: a4fd95904159a7b3e9c420f720a315641fd6706f
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1674'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,11 @@ Het dialoogvenster **[!UICONTROL Gegevensset]** selecteren wordt geopend. Zoek d
 
 Om gegevens in een nieuwe dataset in te voeren, selecteer **[!UICONTROL Nieuwe dataset]** en ga een naam en een beschrijving voor de dataset op de verstrekte gebieden in. Als u een schema wilt toevoegen, kunt u een bestaande schemanaam in het dialoogvenster Schema **** selecteren invoeren. Alternatief, kunt u het **[!UICONTROL Schema Geavanceerde onderzoek]** selecteren om naar een aangewezen schema te zoeken.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
+Tijdens deze stap, kunt u uw dataset voor toelaten [!DNL Real-time Customer Profile] en tot een holistische mening van de attributen en het gedrag van een entiteit leiden. De gegevens van alle toegelaten datasets zullen in worden omvat [!DNL Profile] en de veranderingen worden toegepast wanneer u uw gegevensstroom bewaart.
+
+Schakel de knop Gegevensset **[!UICONTROL Profiel]** in of uit om uw doelgegevensset in te schakelen [!DNL Profile].
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
 Het dialoogvenster Schema **** selecteren wordt geopend. Selecteer het schema u wenst om op de nieuwe dataset toe te passen, dan uitgezocht **[!UICONTROL Gedaan]**.
 
