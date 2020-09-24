@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;manage decisioning;decisioning
 solution: Experience Platform
 title: Entiteiten van beslissingsservice beheren met behulp van API's
 topic: tutorial
+type: Tutorial
 description: 'Dit document bevat een zelfstudie voor het werken met de bedrijfsentiteiten van de Decisioning Service die Adobe Experience Platform API''s gebruiken. '
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '7239'
 ht-degree: 0%
