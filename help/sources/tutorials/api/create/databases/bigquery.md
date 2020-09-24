@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;bigquery;Google;google;Google 
 solution: Experience Platform
 title: Een Google BigQuery-connector maken met de Flow Service API
 topic: overview
+type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform aan Google BigQuery (hierna "BigQuery" genoemd) te verbinden.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
