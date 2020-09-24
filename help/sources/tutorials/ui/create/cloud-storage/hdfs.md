@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Apache HDFS;HDFS;hdfs
 solution: Experience Platform
 title: Een Apache HDFS-bronaansluiting maken in de gebruikersinterface
 topic: overview
+type: Tutorial
 description: Deze zelfstudie bevat stappen voor het verifiëren van een Apache Hadoop Distributed File System (hierna "HDFS" genoemd)-bronconnector via de gebruikersinterface van het Platform.
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 1%
