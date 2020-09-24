@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experien
 solution: Experience Platform
 title: Bepaal een verband tussen twee schema's gebruikend de Redacteur van het Schema van het Schema
 description: Dit document verstrekt een zelfstudie voor het bepalen van een verband tussen twee schema's gebruikend de Redacteur van het Schema in het gebruikersinterface van het Experience Platform.
-topic: tutorials
+topic: tutorial
+type: Tutorials
 translation-type: tm+mt
-source-git-commit: 348ac63c0b13ddf87bf786a42688962b0b220ded
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 0%
