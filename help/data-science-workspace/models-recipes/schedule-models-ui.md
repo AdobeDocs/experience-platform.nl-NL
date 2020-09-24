@@ -2,10 +2,11 @@
 keywords: Experience Platform;schedule a model;Data Science Workspace;popular topics;schedule scoring;schedule training
 solution: Experience Platform
 title: Een model plannen (UI)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Met de Adobe Experience Platform Data Science Workspace kunt u geplande scoring- en trainingsprogramma's instellen voor een computerleerservice. Door het trainings- en scoringsproces te automatiseren, kunt u de efficiëntie van een service op tijd behouden en verbeteren door patronen in uw gegevens bij te houden.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%
