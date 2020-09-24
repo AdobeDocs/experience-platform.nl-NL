@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;hubspot;Hubspot
 solution: Experience Platform
 title: Creeer een schakelaar HubSpot gebruikend de Dienst API van de Stroom
 topic: overview
+type: Tutorial
 description: Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om Experience Platform met HubSpot te verbinden.
 translation-type: tm+mt
-source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 0%
