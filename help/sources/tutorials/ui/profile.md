@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;activate inbound data;populate
 solution: Experience Platform
 title: Activeer binnenkomende brongegevens om klantenprofielen te bevolken
 topic: overview
+type: Tutorial
 description: De binnenkomende gegevens van uw bronschakelaar kunnen worden gebruikt om uw gegevens van het Profiel van de Klant in real time te verrijken en te bevolken.
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%
