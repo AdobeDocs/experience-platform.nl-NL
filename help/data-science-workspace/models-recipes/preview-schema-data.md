@@ -2,10 +2,11 @@
 keywords: Experience Platform;preview schema data;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Voorvertoningsschema's en gegevenssets
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Het volgende document schetst het voorvertonen van schema's en datasets op Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
@@ -21,7 +22,7 @@ Na succesvolle voltooiing van het laarzentrekkerscript van [Create het detailhan
 
    ![](../images/models-recipes/access-data/schema_overview.png)
 
-2. Klik op de koppeling **[!UICONTROL Datasets]** in de linkernavigatiekolom en open de gegevensset die is gemaakt door op de naam van de lijst te klikken. De naam van de gegevensset komt overeen met de naam die is gedefinieerd in `config.yaml` de vorige stap.
+2. Klik op de koppeling **[!UICONTROL Datasets]** in de linkernavigatiekolom en open de gegevensset die is gemaakt door op de naam van de lijst te klikken. De naam van de dataset zal beantwoorden aan wat binnen `config.yaml` van de vorige stap werd bepaald.
 
    ![](../images/models-recipes/access-data/dataset_overview.png)
 
