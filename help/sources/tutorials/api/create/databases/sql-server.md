@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Microsoft SQL;microsoft sql;sq
 solution: Experience Platform
 title: Maak een SQL Server-aansluiting met behulp van de Flow Service API
 topic: overview
+type: Tutorial
 description: Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om Experience Platform met een Server van Microsoft te verbinden SQL (verder die als "SQL Server"wordt bedoeld).
 translation-type: tm+mt
-source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 0%
