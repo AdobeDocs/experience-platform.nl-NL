@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Zelfstudies voor segmentatie
 topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en RESTful API waarmee u segmenten kunt samenstellen en doelgroepen kunt genereren op basis van uw gegevens in het realtime-klantprofiel. Deze segmenten worden centraal gevormd en gehandhaafd op Platform, en gemakkelijk toegankelijk door om het even welke oplossing van Adobe.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '584'
 ht-degree: 0%
