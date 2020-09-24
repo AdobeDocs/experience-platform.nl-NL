@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;servicenow;ServiceNow
 solution: Experience Platform
 title: Creeer een schakelaar ServiceNow gebruikend de Dienst API van de Stroom
 topic: overview
+type: Tutorial
 description: Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om Experience Platform met een server te verbinden ServiceNow.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 0%
