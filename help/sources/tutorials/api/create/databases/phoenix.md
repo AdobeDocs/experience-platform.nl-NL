@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
 title: Een Phoenix-connector maken met de Flow Service API
 topic: overview
+type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om een Phoenix-database aan te sluiten op een Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 0%
