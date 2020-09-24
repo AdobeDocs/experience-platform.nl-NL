@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;customer attributes
 solution: Experience Platform
 title: Creeer een van de klantenattributen bronschakelaar in UI
 topic: overview
+type: Tutorial
 description: Deze zelfstudie biedt stappen voor het maken van een bronaansluiting in de gebruikersinterface voor het verzamelen van profielgegevens van klantkenmerken naar Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 2%
