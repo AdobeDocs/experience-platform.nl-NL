@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;cloud storage connector;cloud 
 solution: Experience Platform
 title: Een dataflow configureren voor een streamingconnector voor cloudopslag in de gebruikersinterface
 topic: overview
+type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met behulp van de basisaansluiting voor cloudopslag.
 translation-type: tm+mt
-source-git-commit: c1b493de7374cbd1c916d90f9382574f831e11e3
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '700'
 ht-degree: 0%
