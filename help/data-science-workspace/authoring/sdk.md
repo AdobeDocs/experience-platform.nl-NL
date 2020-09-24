@@ -5,7 +5,7 @@ title: Handleiding voor SDK-ontwikkelaars
 topic: Overview
 description: De ModelAuthoring SDK stelt u in staat om aangepaste machines te ontwikkelen voor het leren van Ontvangers en functies die kunnen worden gebruikt in de Adobe Experience Platform Data Science Workspace en implementeerbare sjablonen te bieden in PySpark en Spark (Scala).
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: e1b8bc378c2f72862c0c28e44dceb8a35e44a29e
 workflow-type: tm+mt
 source-wordcount: '964'
 ht-degree: 0%
@@ -37,14 +37,14 @@ In de volgende tabel worden de abstracte methoden van de klasse PySpark Data Loa
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
+                <p><code>load(self, configProperties, spark)</code></p>
                 <p>Gegevens van Platforms laden en retourneren als een Pandas DataFrame</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Zelfverwijzing</li>
-                    <li><code class=" language-undefined">configProperties</code>: Toewijzingseigenschappen</li>
-                    <li><code class=" language-undefined">spark</code>: Spark-sessie</li>
+                    <li><code>self</code>: Zelfverwijzing</li>
+                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
+                    <li><code>spark</code>: Spark-sessie</li>
                 </ul>
             </td>
         </tr>
@@ -65,13 +65,13 @@ In de volgende tabel worden de abstracte methoden van een klasse [!DNL Spark] Da
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
+                <p><code>load(configProperties, sparkSession)</code></p>
                 <p>Gegevens van Platforms laden en retourneren als een DataFrame</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Toewijzingseigenschappen</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark-sessie</li>
+                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
+                    <li><code>sparkSession</code>: Spark-sessie</li>
                 </ul>
             </td>
         </tr>
@@ -211,14 +211,14 @@ In de volgende tabel worden de abstracte methoden van een klasse [!DNL PySpark] 
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(self, configProperties, dataframe)</code></p>
+                <p><code>save(self, configProperties, dataframe)</code></p>
                 <p>Ontvang outputgegevens als DataFrame en sla het in een dataset van het Platform op</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Zelfverwijzing</li>
-                    <li><code class=" language-undefined">configProperties</code>: Toewijzingseigenschappen</li>
-                    <li><code class=" language-undefined">dataframe</code>: Gegevens die moeten worden opgeslagen in de vorm van een DataFrame</li>
+                    <li><code>self</code>: Zelfverwijzing</li>
+                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
+                    <li><code>dataframe</code>: Gegevens die moeten worden opgeslagen in de vorm van een DataFrame</li>
                 </ul>
             </td>
         </tr>
@@ -239,13 +239,13 @@ In de volgende tabel worden de abstracte methoden van een klasse [!DNL Spark] Da
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
+                <p><code>save(configProperties, dataFrame)</code></p>
                 <p>Ontvang outputgegevens als DataFrame en sla het in een dataset van het Platform op</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Toewijzingseigenschappen</li>
-                    <li><code class=" language-undefined">dataFrame</code>: Gegevens die moeten worden opgeslagen in de vorm van een DataFrame</li>
+                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
+                    <li><code>dataFrame</code>: Gegevens die moeten worden opgeslagen in de vorm van een DataFrame</li>
                 </ul>
             </td>
         </tr>
@@ -413,14 +413,14 @@ De volgende lijst beschrijft de klassenmethodes van een PySpark dataset transfor
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">transform(self, configProperties, dataset)</code></p>
+                <p><i>abstract</i><br/><code>transform(self, configProperties, dataset)</code></p>
                 <p>Neemt een dataset als input en output een nieuwe afgeleide dataset</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Zelfverwijzing</li>
-                    <li><code class=" language-undefined">configProperties</code>: Toewijzingseigenschappen</li>
-                    <li><code class=" language-undefined">dataset</code>: De gegevensset voor invoer voor transformatie</li>
+                    <li><code>self</code>: Zelfverwijzing</li>
+                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
+                    <li><code>dataset</code>: De gegevensset voor invoer voor transformatie</li>
                 </ul>
             </td>
         </tr>
@@ -441,13 +441,13 @@ De volgende lijst beschrijft de abstracte methodes van een klasse van de [!DNL S
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">transform(configProperties, dataset)</code></p>
+                <p><code>transform(configProperties, dataset)</code></p>
                 <p>Neemt een dataset als input en output een nieuwe afgeleide dataset</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Toewijzingseigenschappen</li>
-                    <li><code class=" language-undefined">dataset</code>: De gegevensset voor invoer voor transformatie</li>
+                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
+                    <li><code>dataset</code>: De gegevensset voor invoer voor transformatie</li>
                 </ul>
             </td>
         </tr>
@@ -472,26 +472,26 @@ In de volgende tabel worden de klassemethoden van een PySpark FeaturePipelineFac
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">create_pipeline(self, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>create_pipeline(self, configProperties)</code></p>
                 <p>Creeer en terugkeer een Pijpleiding van de Vonk die een reeks Transformers van de Vonk bevat</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Zelfverwijzing</li>
-                    <li><code class=" language-undefined">configProperties</code>: Toewijzingseigenschappen</li>
+                    <li><code>self</code>: Zelfverwijzing</li>
+                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
                 <p>Haal paramomkaart van configuratie-eigenschappen op en retourneer deze</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Zelfverwijzing</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuratieeigenschappen</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark-sessie</li>
+                    <li><code>self</code>: Zelfverwijzing</li>
+                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>sparkSession</code>: Spark-sessie</li>
                 </ul>
             </td>
         </tr>
@@ -512,24 +512,24 @@ In de volgende tabel worden de klassemethoden van een [!DNL Spark] FeaturePipeli
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">createPipeline(configProperties)</code></p>
+                <p><i>abstract</i><br/><code>createPipeline(configProperties)</code></p>
                 <p>Creeer en terugkeer een Pijpleiding die een reeks Transformers bevat</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Toewijzingseigenschappen</li>
+                    <li><code>configProperties</code>: Toewijzingseigenschappen</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
                 <p>Haal paramomkaart van configuratie-eigenschappen op en retourneer deze</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuratieeigenschappen</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark-sessie</li>
+                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>sparkSession</code>: Spark-sessie</li>
                 </ul>
             </td>
         </tr>
@@ -554,53 +554,53 @@ In de volgende tabel worden de klassemethoden van een PySpark PipelineFactory be
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">apply(self, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>apply(self, configProperties)</code></p>
                 <p>Creeer en terugkeer een Pijpleiding van de Vonk die de logica en het algoritme voor modelopleiding en het scoring bevat</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Zelfverwijzing</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>self</code>: Zelfverwijzing</li>
+                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">train(self, configProperties, dataframe)</code></p>
+                <p><i>abstract</i><br/><code>train(self, configProperties, dataframe)</code></p>
                 <p>Retourneer een aangepaste pijpleiding die de logica en het algoritme voor het trainen van een model bevat. Deze methode is niet vereist als een Spark Pipeline wordt gebruikt</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Zelfverwijzing</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuratieeigenschappen</li>
-                    <li><code class=" language-undefined">dataframe</code>: Gegevensset met functies voor trainingsinvoer</li>
+                    <li><code>self</code>: Zelfverwijzing</li>
+                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>dataframe</code>: Gegevensset met functies voor trainingsinvoer</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">score(self, configProperties, dataframe, model)</code></p>
+                <p><i>abstract</i><br/><code>score(self, configProperties, dataframe, model)</code></p>
                 <p>Score met behulp van het getrainde model en retourneert de resultaten</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Zelfverwijzing</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuratieeigenschappen</li>
-                    <li><code class=" language-undefined">dataframe</code>: Invoergegevensset voor scoring</li>
-                    <li><code class=" language-undefined">model</code>: Een getraind model dat wordt gebruikt voor scores</li>
+                    <li><code>self</code>: Zelfverwijzing</li>
+                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>dataframe</code>: Invoergegevensset voor scoring</li>
+                    <li><code>model</code>: Een getraind model dat wordt gebruikt voor scores</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
                 <p>Haal paramomkaart van configuratie-eigenschappen op en retourneer deze</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Zelfverwijzing</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuratieeigenschappen</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark-sessie</li>
+                    <li><code>self</code>: Zelfverwijzing</li>
+                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>sparkSession</code>: Spark-sessie</li>
                 </ul>
             </td>
         </tr>
@@ -621,24 +621,24 @@ In de volgende tabel worden de klassemethoden van een [!DNL Spark] PipelineFacto
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">apply(configProperties)</code></p>
+                <p><i>abstract</i><br/><code>apply(configProperties)</code></p>
                 <p>Creeer en terugkeer een Pijpleiding die de logica en het algoritme voor modelopleiding en het scoring bevat</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
                 <p>Haal paramomkaart van configuratie-eigenschappen op en retourneer deze</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuratieeigenschappen</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark-sessie</li>
+                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>sparkSession</code>: Spark-sessie</li>
                 </ul>
             </td>
         </tr>
@@ -663,28 +663,28 @@ In de volgende tabel worden de klassemethoden van een PySpark MLEvaluator beschr
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">split(self, configProperties, dataframe)</code></p>
+                <p><i>abstract</i><br/><code>split(self, configProperties, dataframe)</code></p>
                 <p>Splitst de inputdataset in opleiding en testondergroepen</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Zelfverwijzing</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuratieeigenschappen</li>
-                    <li><code class=" language-undefined">dataframe</code>: Te splitsen gegevensset invoer</li>
+                    <li><code>self</code>: Zelfverwijzing</li>
+                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>dataframe</code>: Te splitsen gegevensset invoer</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">evaluate(self, dataframe, model, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>evaluate(self, dataframe, model, configProperties)</code></p>
                 <p>Evalueert een opgeleid model en retourneert de evaluatieresultaten</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Zelfverwijzing</li>
-                    <li><code class=" language-undefined">dataframe</code>: Een gegevenskader bestaande uit opleidings- en testgegevens</li>
-                    <li><code class=" language-undefined">model</code>: Een getraind model</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>self</code>: Zelfverwijzing</li>
+                    <li><code>dataframe</code>: Een gegevenskader bestaande uit opleidings- en testgegevens</li>
+                    <li><code>model</code>: Een getraind model</li>
+                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
                 </ul>
             </td>
         </tr>
@@ -705,26 +705,26 @@ In de volgende tabel worden de klassemethoden van een [!DNL Spark] MLEvaluator b
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">split(configProperties, data)</code></p>
+                <p><i>abstract</i><br/><code>split(configProperties, data)</code></p>
                 <p>Splitst de inputdataset in opleiding en testondergroepen</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuratieeigenschappen</li>
-                    <li><code class=" language-undefined">data</code>: Te splitsen gegevensset invoer</li>
+                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>data</code>: Te splitsen gegevensset invoer</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">evaluate(configProperties, model, data)</code></p>
+                <p><i>abstract</i><br/><code>evaluate(configProperties, model, data)</code></p>
                 <p>Evalueert een opgeleid model en retourneert de evaluatieresultaten</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuratieeigenschappen</li>
-                    <li><code class=" language-undefined">model</code>: Een getraind model</li>
-                    <li><code class=" language-undefined">data</code>: Een gegevenskader bestaande uit opleidings- en testgegevens</li>
+                    <li><code>configProperties</code>: Configuratieeigenschappen</li>
+                    <li><code>model</code>: Een getraind model</li>
+                    <li><code>data</code>: Een gegevenskader bestaande uit opleidings- en testgegevens</li>
                 </ul>
             </td>
         </tr>
