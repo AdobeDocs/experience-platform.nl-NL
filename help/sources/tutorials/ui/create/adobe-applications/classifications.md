@@ -4,8 +4,9 @@ description: Deze zelfstudie bevat stappen voor het maken van een Adobe Analytic
 solution: Experience Platform
 title: Een Adobe Analytics Classifications Data-connector maken in de gebruikersinterface
 topic: overview
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 0%
