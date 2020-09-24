@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;configure dataflow;advertising
 solution: Experience Platform
 title: Een dataflow configureren voor een advertentieverbinding in de gebruikersinterface
 topic: overview
+type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van Adobe Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw advertentieaccount.
 translation-type: tm+mt
-source-git-commit: e504e0be465c755a77aa30589731941ca50426d2
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1467'
 ht-degree: 0%
