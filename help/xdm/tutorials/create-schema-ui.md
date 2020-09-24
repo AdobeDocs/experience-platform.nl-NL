@@ -5,9 +5,9 @@ title: Een schema maken met de Schema-editor
 topic: tutorials
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in het Experience Platform.
 translation-type: tm+mt
-source-git-commit: 58e0ee234492731d5f875ab845fca11fcda3539b
+source-git-commit: f0d3aad649fa550443db0fc5168c848ae85fb459
 workflow-type: tm+mt
-source-wordcount: '3797'
+source-wordcount: '3835'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ Selecteer eerst de naam van de mix in de sectie **[!UICONTROL Mixins]** . Zodra 
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-Selecteer het veld **** Toevoegen naast &quot;[!DNL Loyalty Members]&quot; om een nieuw knooppunt in de structuur te maken. Dit knooppunt (in dit voorbeeld &#39;_huurderId&#39; genoemd) vertegenwoordigt de huurder-id van uw IMS-organisatie, voorafgegaan door een onderstrepingsteken. De aanwezigheid van huurder identiteitskaart wijst erop dat de gebieden u toevoegt in namespace van uw organisatie bevat zijn.
+Selecteer het veld **** Toevoegen naast &quot;[!DNL Loyalty Members]&quot; om een nieuw knooppunt in de structuur te maken. Dit knooppunt (in dit voorbeeld aangeroepen) vertegenwoordigt de huurder-id van uw IMS-organisatie, voorafgegaan door een onderstrepingsteken. `_tenantId` De aanwezigheid van huurder identiteitskaart wijst erop dat de gebieden u toevoegt in namespace van uw organisatie bevat zijn.
 
 Met andere woorden, de velden die u toevoegt, zijn uniek voor uw organisatie en worden opgeslagen in een specifiek gebied dat alleen voor uw organisatie toegankelijk is. [!DNL Schema Registry] De gebieden u bepaalt moeten altijd aan uw huurdersnamespace worden toegevoegd om botsingen met namen van andere standaardklassen, mixins, gegevenstypes, en gebieden te verhinderen.
 
@@ -236,6 +236,10 @@ Het schema bevat nu verschillende combinaties naast de velden die door de basisk
 Als u naar een specifiek veld in uw schema zoekt, kunt u ook de zoekbalk gebruiken om weergegeven velden op naam te filteren, ongeacht onder welke combinatie deze velden staan.
 
 ![](../images/tutorials/create-schema/search.png)
+
+>[!IMPORTANT]
+>
+>Bij de weergave van overeenkomende velden houdt de zoekfunctie rekening met eventuele geselecteerde mixfilters. Als een onderzoeksvraag niet de resultaten toont u verwacht, kunt u moeten tweemaal controleren dat u geen relevante mengen filtreert.
 
 ## Een schemaveld instellen als een identiteitsveld {#identity-field}
 
