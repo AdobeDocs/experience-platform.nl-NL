@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;payment connector
 solution: Experience Platform
 title: Een gegevensstroom configureren voor een betalingsconnector in de gebruikersinterface
 topic: overview
+type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van Adobe Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw betaalaccount.
 translation-type: tm+mt
-source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1460'
 ht-degree: 0%
