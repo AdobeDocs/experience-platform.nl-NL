@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;protocol connector
 solution: Experience Platform
 title: Vorm een dataflow voor een protocolschakelaar in UI
 topic: overview
+type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van Adobe Experience Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen om een nieuwe dataflow te vormen gebruikend uw protocolrekening.
 translation-type: tm+mt
-source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1460'
 ht-degree: 0%
