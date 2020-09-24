@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Zelfstudies voor besluitvorming
 topic: tutorial
+type: Tutorial
 description: De beslissingsservice biedt de mogelijkheid om persoonlijke, geoptimaliseerde en georkestreerde ervaringen te maken in toepassingen die op Adobe Experience Platform worden uitgevoerd. Gebruikend de Dienst van Beslissing, kunt u de beste optie van een reeks beschikbare keuzen bepalen.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
