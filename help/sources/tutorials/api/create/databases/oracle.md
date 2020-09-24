@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
 title: Een Oracle-connector maken met de Flow Service API
 topic: overview
+type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Oracle aan Experience Platform te verbinden.
 translation-type: tm+mt
-source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 1%
