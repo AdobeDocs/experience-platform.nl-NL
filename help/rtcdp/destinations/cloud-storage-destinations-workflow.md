@@ -2,10 +2,11 @@
 keywords: cloud storage destination;cloud storage
 title: Workflow voor opslagdoelen voor cloud
 seo-title: Workflow voor opslagdoelen voor cloud
+type: Tutorial
 description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 seo-description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 0%
