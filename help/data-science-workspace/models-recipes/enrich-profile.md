@@ -2,10 +2,11 @@
 keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
 solution: Experience Platform
 title: Klantprofiel in realtime verrijken met kennis van machinaal leren
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Dit document verstrekt een geleidelijke zelfstudie om het Profiel van de Klant in real time met machine het leren inzichten te verrijken, zijn de stappen gebroken in de volgende secties, tot een outputschema/dataset leiden, een outputschema/dataset vormen, en segmenten creëren gebruikend de Bouwer van het Segment.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 0%
