@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verbinding maken met Aqua Data Studio
 topic: connect
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 106d5150371a890e2d4c295bf5d12c110c593568
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Het dialoogvenster **[!UICONTROL Server]** registreren wordt geopend. Selecteer 
 
 - **[!UICONTROL Naam]**: De naam van de verbinding.
 - **[!UICONTROL Aanmeldnaam en wachtwoord]**: De aanmeldingsgegevens die worden gebruikt. De gebruikersnaam heeft de vorm van `ORG_ID@AdobeOrg`.
-- **[!UICONTROL Host en poort]**: Het gastheereindpunt en zijn haven voor [!DNL Query Service].
+- **[!UICONTROL Host en poort]**: Het gastheereindpunt en zijn haven voor [!DNL Query Service]. U moet poort 80 gebruiken om verbinding te maken met [!DNL Query Service].
 - **[!UICONTROL Database]:** De database die wordt gebruikt.
 
 >[!NOTE]
