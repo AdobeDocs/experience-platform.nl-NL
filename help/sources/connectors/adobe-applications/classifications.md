@@ -5,9 +5,9 @@ title: Adobe Analytics Classifications Data-connector
 topic: overview
 description: In de onderstaande documentatie vindt u informatie over hoe u analytische classificaties kunt koppelen aan het Platform via de gebruikersinterface
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 1a49cccfbf8d565c8154329cf1f94382911b2f85
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '172'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 
 [!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens uit Analytics Classifications in Adobe Experience Platform.
 
-Met classificaties kunnen variabele-analysegegevens op verschillende manieren worden gecategoriseerd en weergegeven wanneer rapporten worden gegenereerd.
+Met classificaties kunnen variabele-analysegegevens op verschillende manieren worden gecategoriseerd en weergegeven wanneer rapporten worden gegenereerd. Voor de gegevensverbinding Analytics Classifications moeten uw gegevens zijn gemigreerd naar de nieuwe [!DNL Classifications] infrastructuur van Adobe Analytics voordat ze kunnen worden gebruikt. Neem contact op met uw Adobe Customer Success Manager om de migratiestatus van uw gegevens te bevestigen.
 
 In de onderstaande documentatie vindt u informatie over hoe u Analytics Classifications via de gebruikersinterface kunt verbinden met het Platform:
 
