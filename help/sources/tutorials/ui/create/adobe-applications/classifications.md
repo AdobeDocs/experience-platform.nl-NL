@@ -6,9 +6,9 @@ title: Een Adobe Analytics Classifications Data-connector maken in de gebruikers
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 1a49cccfbf8d565c8154329cf1f94382911b2f85
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '661'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,8 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 * [[!DNL Experience Data Model] (XDM) Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
 * [[!DNL Real-time klantprofiel]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL-sandboxen]](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+
+Voor de gegevensverbinding Analytics Classifications moeten uw gegevens zijn gemigreerd naar de nieuwe [!DNL Classifications] infrastructuur van Adobe Analytics voordat ze kunnen worden gebruikt. Neem contact op met uw Adobe Customer Success Manager om de migratiestatus van uw gegevens te bevestigen.
 
 ## Uw classificaties selecteren
 
