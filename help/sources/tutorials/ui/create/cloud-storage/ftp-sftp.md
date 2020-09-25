@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Deze zelfstudie biedt stappen voor het maken van een FTP- of SFTP-bronconnector met behulp van de gebruikersinterface van het Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: c3352c090ce9e5a89d9285aabdc4851632d4d437
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '702'
 ht-degree: 1%
 
 ---
@@ -61,9 +61,24 @@ De pagina **[!UICONTROL Verbinding maken met SFTP]** wordt weergegeven. Op deze 
 
 ### Nieuwe account
 
-Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw FTP- of SFTP-referenties op. Wanneer u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
+Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Voer in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw referenties in. Wanneer u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![verbinden](../../../../images/tutorials/create/sftp/new.png)
+De schakelaar SFTP verstrekt u verschillende authentificatietypen voor toegang. Selecteer onder **[!UICONTROL Accountverificatie]** de optie **[!UICONTROL Wachtwoord]** om een op een wachtwoord gebaseerde referentie te gebruiken.
+
+![connect-password](../../../../images/tutorials/create/sftp/password.png)
+
+Alternatief, kunt u openbare sleutel **[van]** SSH selecteren en uw rekening verbinden SFTP gebruikend een combinatie **[!UICONTROL Persoonlijke zeer belangrijke inhoud]** en **[!UICONTROL Passphrase]**.
+
+>[!IMPORTANT]
+>
+>De schakelaar SFTP steunt een sleutel RSA/DSA OpenSSH. Zorg ervoor dat de inhoud van het sleutelbestand begint met `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`. Als het bestand met de persoonlijke sleutel een PPK-bestand is, gebruikt u het gereedschap PuTTY om de PPK-indeling om te zetten in de OpenSSH-indeling.
+
+![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
+
+| Credentials | Beschrijving |
+| ---------- | ----------- |
+| Persoonlijke toetsinhoud | A Base64 encoded SSH private key content. De persoonlijke sleutel van SSH zou OpenSSH formaat moeten zijn. |
+| Passphrase | Hiermee geeft u de woordgroep of het wachtwoord op waarmee de persoonlijke sleutel wordt gedecodeerd als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als PrivateKeyContent met een wachtwoord beveiligd is, moet deze parameter worden gebruikt met de wachtwoordzin van PrivateKeyContent als waarde. |
 
 ### Bestaande account
 
