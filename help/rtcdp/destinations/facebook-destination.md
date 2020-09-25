@@ -1,14 +1,14 @@
 ---
-keywords: facebook extensions;facebook extension;facebook destinations;facebook
+keywords: facebook extensions;facebook extension;facebook destinations;facebook;instagram;messenger;facebook messenger
 title: Facebook-bestemming
 seo-title: Facebook-bestemming
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 seo-description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 2%
+source-wordcount: '758'
+ht-degree: 4%
 
 ---
 
@@ -19,11 +19,14 @@ ht-degree: 2%
 
 Activeer profielen voor uw [!DNL Facebook] campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 
+U kunt deze bestemming gebruiken voor doelgroepen voor verschillende [!DNL Facebook’s] apps die worden ondersteund door [!DNL Custom Audiences], inclusief [!DNL Facebook], [!DNL Instagram][!DNL Audience Network] en [!DNL Messenger]. De selectie van de app waarin u de campagne wilt voeren, wordt aangegeven op het plaatsingsniveau in [!DNL Facebook Ads Manager].
+
 ![De bestemming van Facebook in Echte - tijd CDP UI](/help/rtcdp/destinations/assets/facebook-destination.png)
+
 
 ## Gevallen gebruiken
 
-Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Facebook] bestemming zou moeten gebruiken, zijn hier twee gevallen van het steekproefgebruik die de klanten van het Platform van Gegevens van de Adobe in real time van de Klant kunnen oplossen door deze eigenschap te gebruiken.
+Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Facebook] bestemming zou moeten gebruiken, zijn hier twee gevallen van het steekproefgebruik die de klanten van het Platform van de Gegevens van de Klant in real time van de Adobe kunnen oplossen door deze eigenschap te gebruiken.
 
 
 ### Hoofdletters en kleine letters gebruiken 1
