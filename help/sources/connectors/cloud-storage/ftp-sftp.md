@@ -5,7 +5,7 @@ title: FTP- en SFTP-aansluiting
 topic: overview
 description: De documentatie hieronder verstrekt informatie over hoe te om een FTP of een server te verbinden STFP met Platform gebruikend APIs of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 2aa6ef66444dbcd397e91e6f3075e020ba963579
+source-git-commit: 93584ecbbe3be40c6ebee09cac85d497e4a99317
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
@@ -68,7 +68,9 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer
 
 ## FTP en SFTP verbinden met [!DNL Platform]
 
-> [!IMPORTANT]: Gebruikers moeten de interactieve verificatie van het toetsenbord uitschakelen in de configuratie van de SFTP-server voordat ze verbinding maken. Als u de instelling uitschakelt, kunnen wachtwoorden handmatig worden ingevoerd in plaats van via een service of programma. Raadpleeg het [Component Pro-document](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) voor meer informatie over Interactieve toetsenbordverificatie.
+>[!IMPORTANT]
+>
+>Gebruikers moeten de interactieve verificatie van het toetsenbord uitschakelen in de configuratie van de SFTP-server voordat ze verbinding maken. Als u de instelling uitschakelt, kunnen wachtwoorden handmatig worden ingevoerd in plaats van via een service of programma. Raadpleeg het [Component Pro-document](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) voor meer informatie over Interactieve toetsenbordverificatie.
 
 In de onderstaande documentatie vindt u informatie over hoe u een FTP- of SFTP-server kunt verbinden met het [!DNL Platform] gebruik van API&#39;s of de gebruikersinterface:
 
