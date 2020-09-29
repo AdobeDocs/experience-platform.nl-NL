@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van gedeeltelijke invoer van Adobe Experience Platform-batch
 topic: overview
 translation-type: tm+mt
-source-git-commit: 01b1d9a0d0af82f5380bbc204e65b682d4a50ac1
+source-git-commit: 4652722b17a290c9ef53244498257eb4cb97ac6d
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '881'
 ht-degree: 1%
 
 ---
@@ -292,7 +292,15 @@ Als de partij één of meerdere fouten heeft en toegelaten foutendiagnostiek hee
 >}
 >```
 
-## Typen fout bij gedeeltelijk in batch opnemen {#appendix}
+## Volgende stappen {#next-steps}
+
+Deze zelfstudie besprak hoe u fouten met gedeeltelijke inname van batch kunt controleren. Lees voor meer informatie over het in de partij innemen van de [partij de ontwikkelaarsgids](../batch-ingestion/api-overview.md).
+
+## Aanhangsel {#appendix}
+
+Deze sectie verstrekt aanvullende informatie over de types van inname fout.
+
+### Typen fout bij gedeeltelijk in batch opnemen {#partial-ingestion-types}
 
 Gedeeltelijke batch-opname heeft drie verschillende fouttypen bij het invoeren van gegevens:
 
@@ -379,7 +387,3 @@ Hieronder ziet u een voorbeeldreactie van het ophalen van het foutbestand:
     "_filename": "parsing_errors_0.json"
 }
 ```
-
-## Volgende stappen {#next-steps}
-
-Deze zelfstudie besprak hoe u fouten met gedeeltelijke inname van batch kunt controleren. Lees voor meer informatie over het in de partij innemen van de [partij de ontwikkelaarsgids](../batch-ingestion/api-overview.md).
