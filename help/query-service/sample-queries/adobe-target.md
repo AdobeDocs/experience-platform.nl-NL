@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sa
 solution: Experience Platform
 title: Voorbeeldquery's
 topic: queries
+description: Gegevens uit Adobe Target worden omgezet in XDM-schema voor Experience Event en worden als datasets voor u opgenomen in Experience Platform. Dit document bevat steekproefvragen voor het gebruiken van de Dienst van de Vraag met uw datasets van Adobe Target.
 translation-type: tm+mt
-source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
