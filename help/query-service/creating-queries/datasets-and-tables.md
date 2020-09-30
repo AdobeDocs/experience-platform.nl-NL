@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Datasets vs tabellen en schema's
 topic: queries
 type: Tutorial
+description: Dit document bevat informatie over het bekijken van uw datasets binnen de structuur van het datasetschema en het gebruiken van bevelen PostgreSQL.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '198'
 ht-degree: 1%
 
 ---
