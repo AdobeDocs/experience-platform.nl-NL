@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Samenvoegingsfuncties
 topic: developer guide
+description: 'Samenvoegfuncties worden gebruikt om meerdere waarden binnen PQL-arrays (Profile Query Language) te groeperen en één samenvattingswaarde te maken. '
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '226'
 ht-degree: 3%
 
 ---
