@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;S
 solution: Experience Platform
 title: Kwaliteit van gegevensinvoer
 topic: overview
+description: Het volgende document bevat een overzicht van de ondersteunde controles en validatiegedragingen voor batch- en streaming-opname in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '304'
 ht-degree: 4%
 
 ---
