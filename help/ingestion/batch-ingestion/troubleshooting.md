@@ -1,13 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestion;batch ingestion;
 solution: Experience Platform
-title: Adobe Experience Platform-handleiding voor het oplossen van problemen met de inname van batterijen
+title: Handleiding voor het oplossen van problemen met de inname van batterijen
 topic: troubleshooting
+description: 'Deze documentatie helpt veelgestelde vragen over Adobe Experience Platform Batch Data Ingestie-API''s te beantwoorden. '
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1389'
-ht-degree: 1%
+source-wordcount: '1402'
+ht-degree: 0%
 
 ---
 
