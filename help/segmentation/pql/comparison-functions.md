@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Vergelijkingsfuncties
 topic: developer guide
+description: Vergelijkingsfuncties worden gebruikt om verschillende expressies en waarden met elkaar te vergelijken, waarbij "true" of "false" overeenkomstig wordt geretourneerd.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '308'
 ht-degree: 7%
 
 ---
