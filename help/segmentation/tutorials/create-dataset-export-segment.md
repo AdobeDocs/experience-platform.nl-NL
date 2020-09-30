@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Een dataset maken voor het exporteren van een publiekssegment
 topic: tutorial
 type: Tutorial
+description: Deze zelfstudie doorloopt de stappen die worden vereist om een dataset tot stand te brengen die voor het uitvoeren van een publiekssegment kan worden gebruikt gebruikend het Experience Platform UI.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
