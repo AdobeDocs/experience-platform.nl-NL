@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Gegevenssets genereren op basis van queryresultaten
 topic: queries
 type: Tutorial
+description: 'De Dienst van de vraag staat de verwezenlijking van datasets van UI toe. Nadat een dataset wordt gecreeerd, kan het als een andere dataset in het meer van Gegevens worden betreden en voor een verscheidenheid van gebruiksgevallen worden gebruikt. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
