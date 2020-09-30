@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Voorvertoningen en schattingen van eindpunten
 topic: developer guide
+description: Terwijl u de segmentdefinitie ontwikkelt, kunt u de schatting- en voorvertoningsgereedschappen in Adobe Experience Platform gebruiken om informatie op overzichtsniveau weer te geven, zodat u zeker weet dat u het verwachte publiek isoleert.
 translation-type: tm+mt
-source-git-commit: 69d173e163720c962d910fa4c1e2491fb1262251
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '777'
 ht-degree: 1%
 
 ---
