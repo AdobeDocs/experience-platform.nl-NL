@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
 solution: Experience Platform
-title: Handleiding voor ontwikkelaars van Adobe Experience Platform Batch-insluiting
+title: Handleiding voor ontwikkelaars van batchverwerking
 topic: developer guide
+description: Dit document biedt een uitgebreid overzicht van het gebruik van batch-opname-API's.
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2678'
 ht-degree: 3%
 
 ---
