@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;tableau;Tableau;query service;
 solution: Experience Platform
 title: Verbinding maken met Tableau
 topic: connect
+description: Dit document doorloopt de stappen voor het verbinden van Tableau met de Dienst van de Vraag van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '89'
 ht-degree: 2%
 
 ---
