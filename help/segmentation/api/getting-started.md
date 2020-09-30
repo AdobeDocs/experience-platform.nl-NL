@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Segmentatieservice
 topic: developer guide
+description: De volgende documentatie verstrekt extra informatie die u moet weten om met de Segmentatie API met succes te werken.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
