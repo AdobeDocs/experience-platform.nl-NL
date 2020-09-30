@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;query service;Query service;pr
 solution: Experience Platform
 title: Vooraf voorbereide instructies
 topic: prepared statements
+description: In SQL, worden de voorbereide verklaringen gebruikt aan malplaatje gelijkaardige vragen of updates. De Dienst van de Vraag van Adobe Experience Platform steunt voorbereide verklaringen door een parameterized vraag te gebruiken.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 7%
+source-wordcount: '365'
+ht-degree: 6%
 
 ---
 
@@ -107,10 +108,10 @@ Wanneer dit wordt aangeroepen, ziet u precies dezelfde resultaten als voorheen:
 
 | id | firstname | lastname | geboortedatum | email | stad | land |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canada |
+| 10000 | alexander | davis | 1993-09-15 | stexample@example.com | Vancouver | Canada |
 | 10001 | antoïne | duboe | 1967-03-14 | example2@example.com | Parijs | Frankrijk |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokyo | Japan |
-| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stockholm | Stockholm |
+| 10003 | linus | pettersson | 1982-06-03 | first | Stockholm | Zweden |
 | 10004 | aasir | kwijthaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
 | 10005 | fernando | rio | 2002-07-30 | example6@example.com | Santiago | Chili |
 
