@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Een streamingverbinding maken met de API
 topic: tutorial
 type: Tutorial
+description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
