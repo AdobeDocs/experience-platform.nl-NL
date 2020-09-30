@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Gegevenssets samenvoegen
 topic: queries
 type: Tutorial
+description: Het aansluiten van datasets staat u toe om gegevens van andere datasets in uw vraag te omvatten. In dit voorbeeld wordt een aangepaste gegevensset van het besturingssysteem gebruikt om de besturingssysteemid toe te wijzen aan de waarde van het besturingssysteem.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '53'
+source-wordcount: '82'
 ht-degree: 1%
 
 ---
