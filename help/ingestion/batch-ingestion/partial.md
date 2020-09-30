@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;partial ingestion;Partial ingestion;Retrieve error;retrieve error;Partial batch ingestion;partial batch ingestion;partial;ingestion;Ingestion;
 solution: Experience Platform
-title: Overzicht van gedeeltelijke invoer van Adobe Experience Platform-batch
+title: Gedeeltelijk overzicht van het gebruik van batch
 topic: overview
+description: Dit document bevat een zelfstudie voor het beheren van gedeeltelijke batch-opname.
 translation-type: tm+mt
-source-git-commit: 9e579f115f1792774e7590bcb192fb5c4f79791a
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '917'
 ht-degree: 0%
 
 ---
