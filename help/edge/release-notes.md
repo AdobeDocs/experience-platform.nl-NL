@@ -5,15 +5,20 @@ description: Opmerkingen bij de release van Adobe Experience Platform Web SDK.
 seo-description: Opmerkingen bij de release van Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 738dfe782ee7d6bef06d14910e0c26540b0ec734
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 2%
+source-wordcount: '108'
+ht-degree: 1%
 
 ---
 
 
 # Release-opmerkingen
+
+## Versie 2.2.0
+
+* Opgeloste problemen: Het object Opt-in blokkeerde het gebruik van Alloy voor het maken van aanroepen wanneer `idMigrationEnabled` dat wel het geval is `true`.
+* Opgeloste problemen: Alloy bewust maken van verzoeken die de aanbiedingen van de verpersoonlijking zouden moeten terugkeren om een flikkerende kwestie te verhinderen.
 
 ## Versie 2.1.0
 
