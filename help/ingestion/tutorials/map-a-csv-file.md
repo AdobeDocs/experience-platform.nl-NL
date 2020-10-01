@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand via de Adobe Experience Platform-gebruikersinterface toewijst aan een XDM-schema.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 7adf18e4251f377fee586c8a0f23b89acd75afca
 workflow-type: tm+mt
-source-wordcount: '1370'
-ht-degree: 1%
+source-wordcount: '886'
+ht-degree: 0%
 
 ---
 
@@ -113,50 +113,16 @@ Het kaartscherm verschijnt weer met het nieuwe bronveld. Pas het desbetreffende 
 
 Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Raadpleeg de zelfstudie over het [controleren van streaming dataflows voor meer informatie over het controleren van gegevensstromen](../../ingestion/quality/monitor-data-flows.md).
 
-## Volgende stappen
+## Toewijzingsfuncties gebruiken
 
-Door deze zelfstudie te volgen, hebt u een vlak CSV-bestand toegewezen aan een XDM-schema en het ingepakt in [!DNL Platform]. Deze gegevens kunnen nu worden gebruikt door downstreamdiensten [!DNL Platform] zoals [!DNL Real-time Customer Profile]. Zie het overzicht voor [[!DNL Real-time klantprofiel]](../../profile/home.md) voor meer informatie.
-
-## Aanhangsel
-
-De volgende sectie verstrekt extra informatie voor het in kaart brengen CSV kolommen aan XDM gebieden.
-
-### Toewijzingsfuncties
-
-Bepaalde toewijzingsfuncties kunnen worden gebruikt om waarden te berekenen en te berekenen op basis van wat is ingevoerd in bronvelden. Als u een functie wilt gebruiken, typt u deze onder **[!UICONTROL Bronveld]** met de juiste syntaxis en invoer.
+Als u een functie wilt gebruiken, typt u deze onder **[!UICONTROL Bronveld]** met de juiste syntaxis en invoer.
 
 Als u bijvoorbeeld CSV-velden voor **steden** en **landen** wilt samenvoegen en deze aan het XDM-veld **Plaats** wilt toewijzen, stelt u het bronveld in als `concat(city, ", ", county)`.
 
 ![](../images/tutorials/map-a-csv-file/mapping-function.png)
 
-De volgende tabel bevat een lijst met alle ondersteunde toewijzingsfuncties, inclusief voorbeeldexpressies en de resulterende uitvoer.
+Meer over het in kaart brengen van kolommen aan gebieden XDM, lees de gids bij het [gebruiken van de functies](../../data-prep/functions.md)van de Prep van Gegevens (Mapper).
 
-| -functie | Beschrijving | Voorbeeldexpressie | Voorbeelduitvoer |
-| -------- | ----------- | ----------------- | ------------- |
-| concat | Voegt bepaalde tekenreeksen samen. | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
-| ontploffen | Splitst de tekenreeks op basis van een regex en retourneert een array met onderdelen. | explode(&quot;Hallo, daar!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
-| instr | Retourneert de locatie/index van een subtekenreeks. | instr(&quot;adobe<span>.com&quot;, &quot;com&quot;) | 6 |
-| vervanger | Vervangt de zoektekenreeks indien aanwezig in de oorspronkelijke tekenreeks. | replacestr(&quot;This is a string re test&quot;, &quot;re&quot;, &quot;replace&quot;) | &quot;Dit is een test ter vervanging van een tekenreeks |
-| substr | Retourneert een subtekenreeks van een bepaalde lengte. | substr(&quot;This is a substring test&quot;, 7, 8) | &quot; a subst&quot; |
-| lower /<br>lcase | Zet een tekenreeks om in kleine letters. | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hallo&quot; |
-| upper/<br>ucase | Zet een tekenreeks om in hoofdletters. | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
-| splitsen | Splitst een invoertekenreeks op een scheidingsteken. | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
-| join | Hiermee wordt een lijst met objecten samengevoegd met het scheidingsteken. | `join(" ", ["Hello", "world"]`) | &quot;Hello world&quot; |
-| samenvoegen | Retourneert het eerste object in een bepaalde lijst dat niet null is. | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
-| decoderen | Op basis van een sleutel en een lijst met sleutelwaardeparen die als een array zijn samengevoegd, retourneert de functie de waarde als een sleutel wordt gevonden of retourneert deze een standaardwaarde als deze aanwezig is in de array. | decode(&quot;k2&quot;, &quot;k1&quot;, &quot;v1&quot;, &quot;k2&quot;, &quot;v2&quot;, &quot;default&quot;) | &quot;v2&quot; |
-| iif | Evalueert een bepaalde booleaanse expressie en retourneert de opgegeven waarde op basis van het resultaat. | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;Waar&quot; |
-| min | Geeft als resultaat het minimum van de opgegeven argumenten. Gebruikt natuurlijke volgorde. | min(3, 1, 4) | 1 |
-| max | Geeft als resultaat het maximum van de opgegeven argumenten. Gebruikt natuurlijke volgorde. | max(3, 1, 4) | 4 |
-| first | Haalt het eerste opgegeven argument op. | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
-| last | Haalt het laatst opgegeven argument op. | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
-| uuid /<br>guid | Hiermee genereert u een pseudo-willekeurige id. | uuid()<br>guid() | {UNIQUE_ID} |
-| now | Hiermee wordt de huidige tijd opgehaald. | now() | `2019-10-23T10:10:24.556-07:00[America/Los_Angeles]` |
-| timestamp | Hiermee wordt de huidige Unix-tijd opgehaald. | timestamp() | 1571850624571 |
-| format | Hiermee wordt de invoerdatum opgemaakt volgens een opgegeven notatie. | format({DATE}, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| dformat | Converteert een tijdstempel naar een datumtekenreeks volgens een opgegeven notatie. | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;23-okt-2019 11:24&quot; |
-| date | Converteert een datumtekenreeks naar een ZonedDateTime-object (ISO 8601-indeling). | date(&quot;23-okt-2019 11:24&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
-| date_part | Hiermee worden de delen van de datum opgehaald. De volgende componentwaarden worden ondersteund: <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarters&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;m&quot;m&quot;<br>&quot;m&quot;m&quot;of&quot;dy&quot;y&quot;dag&quot;y&quot;dag&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&quot;dag&quot;dd&quot;d&quot;d&quot;d&quot;week&quot;week&quot;week&quot;ww&quot;&quot;w&quot;week&quot;dag&quot;dag&quot;&quot;uur&quot;uur&quot;&quot;h&quot;&quot;hh24&quot;&quot;hh12&quot;&quot;minute&quot;&quot;mi&quot;&quot;tweede&quot;&quot;ss&quot;&quot;&quot;s&quot;&quot;millisecond&quot;&quot;ms&quot; | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
-| set_date_part | Hiermee vervangt u een component in een bepaalde datum. De volgende onderdelen worden geaccepteerd: <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hh&quot;&quot;minute&quot;&quot;mi&quot;&quot;n&quot;tweede&quot;&quot;ss&quot;ss&quot;&quot;s&quot;<br><br><br><br><br><br><br><br><br>&quot;s&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
-| make_date_time /<br>make_timestamp | Hiermee maakt u een datum op basis van onderdelen. | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
-| current_timestamp | Retourneert de huidige tijdstempel. | current_timestamp() | 1571850624571 |
-| current_date | Retourneert de huidige datum zonder een tijdcomponent. | current_date() | &quot;18-nov-2019&quot; |
+## Volgende stappen
+
+Door deze zelfstudie te volgen, hebt u een vlak CSV-bestand toegewezen aan een XDM-schema en het ingepakt in [!DNL Platform]. Deze gegevens kunnen nu worden gebruikt door downstreamdiensten [!DNL Platform] zoals [!DNL Real-time Customer Profile]. Zie het overzicht voor [[!DNL Real-time klantprofiel]](../../profile/home.md) voor meer informatie.
