@@ -5,17 +5,17 @@ description: Snelle startgids voor het gebruiken van het Web SDK van het Experie
 seo-description: Snelle startgids voor het gebruiken van het Web SDK van het Experience Platform om gegevens te verzamelen
 keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 translation-type: tm+mt
-source-git-commit: 7aa0e654300f10db774794d66ece9d0d040cb2ba
+source-git-commit: f178da80d0902f76868986426600f3da426cf24d
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '530'
 ht-degree: 1%
 
 ---
 
 
-# Welkom
+# Handleiding voor snel starten van Adobe Experience Platform Web SDK JavaScript
 
-Deze gids leidt u door de verschillende manieren om SDK van het Web van Adobe Experience Platform te plaatsen. Als u deze functie wilt gebruiken, moet u een whitelist hebben. Neem contact op met uw CSM als u op de wachtlijst wilt staan.
+Deze gids leidt u door de verschillende manieren om SDK van het Web van Adobe Experience Platform te plaatsen. Om deze eigenschap te gebruiken, moet u op de lijst van gewenste personen zijn. Als u op de wachtlijst wilt staan, neemt u contact op met uw Certified Software Manager (CSM).
 
 - Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als u al een CNAME voor Analytics hebt, zou u dat moeten gebruiken. Het testen in ontwikkeling werkt zonder een CNAME maar u hebt één nodig alvorens u aan productie gaat.
 - Mag Adobe Experience Platform gebruiken.  Als u geen Platform hebt gekocht, zal Adobe u van de Stichting van de Diensten van de Gegevens van het Experience Platform voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
