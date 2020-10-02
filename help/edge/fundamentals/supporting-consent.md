@@ -5,7 +5,7 @@ description: Leer hoe u toestemmingsvoorkeuren met Experience Platform Web SDK k
 seo-description: Leer hoe u toestemmingsvoorkeuren met Experience Platform Web SDK kunt ondersteunen
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
+source-git-commit: f178da80d0902f76868986426600f3da426cf24d
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -97,7 +97,7 @@ alloy("setConsent", {
 });
 ```
 
-Wanneer de toestemming op deze manier wordt geplaatst, wordt het Verenigde Profiel bijgewerkt met de toestemmingsinformatie. Dit werkt alleen als het profiel-XDM-schema de [profielprivacymixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md)bevat. Bij het verzenden van gebeurtenissen moet de informatie over de IAB-toestemming handmatig worden toegevoegd aan het xdm-gebeurtenisobject. De SDK neemt niet automatisch de informatie over de toestemming op in de gebeurtenissen. Om de toestemmingsinformatie in gebeurtenissen te verzenden, moet de [Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) van de Privacy van de Gebeurtenis van de Ervaring aan het schema van de ervaringsgebeurtenis worden toegevoegd.
+Wanneer de toestemming op deze manier wordt geplaatst, wordt het Profiel van de Klant in real time bijgewerkt met de toestemmingsinformatie. Dit werkt alleen als het profiel-XDM-schema de [profielprivacymixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md)bevat. Bij het verzenden van gebeurtenissen moet de informatie over de IAB-toestemming handmatig worden toegevoegd aan het XDM-gebeurtenisobject. De SDK neemt niet automatisch de informatie over de toestemming op in de gebeurtenissen. Om de toestemmingsinformatie in gebeurtenissen te verzenden, moet de [Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) van de Privacy van de Gebeurtenis van de Ervaring aan het schema van de Gebeurtenis van de Ervaring worden toegevoegd.
 
 ## Beide standaarden verzenden in één aanvraag
 
