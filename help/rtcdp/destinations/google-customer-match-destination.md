@@ -5,7 +5,7 @@ seo-title: Google Customer Match Destination
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 seo-description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Om de versie te bevorderen, uploaden zij e-mailadressen van hun gegevensbestand 
 
 De bestemmingen in Adobe real time CDP kunnen bepaalde regels en verplichtingen voor gegevens hebben die naar, of van, het bestemmingsplatform worden verzonden ontvangen. U bent verantwoordelijk voor het begrijpen van de beperkingen en verplichtingen van uw gegevens en hoe u die gegevens gebruikt in Adobe Experience Platform en het doelplatform. Adobe Experience Platform biedt tools voor gegevensbeheer om u te helpen bij het beheren van een aantal van deze gegevensgebruiksverplichtingen. [Meer](/help/data-governance/labels/overview.md) informatie over tools en beleid voor gegevensbeheer.
 
-## Activeringstype en -identiteiten {#activation-type}
+## Exporttype en -identiteiten {#export-type}
 
 **Segmentexport** - u exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer, enzovoort) gebruikt in de [!DNL Google Customer Match] bestemming.
 
@@ -176,7 +176,7 @@ Insert in Step 6 when mobile device ID activation is available
 
 ## Controleren of segmentactivering is gelukt {#verify-activation}
 
-Schakel na het voltooien van de activeringsstroom over naar uw **[!UICONTROL Google Ads]** -account. De geactiveerde segmenten worden nu in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van het segment, alleen worden gevuld als er meer dan 100 actieve gebruikers zijn.
+Schakel na het voltooien van de activeringsstroom over naar uw **[!UICONTROL Google Ads]** -account. De geactiveerde segmenten worden nu in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van uw segment, alleen vullen met meer dan 100 actieve gebruikers.
 
 ## Aanvullende bronnen {#additional-resources}
 
