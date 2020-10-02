@@ -5,7 +5,7 @@ description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
+source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 4%
@@ -103,7 +103,7 @@ Plaats dit om callback te vormen die voor elke gebeurtenis vlak alvorens het wor
 
 ## Privacyopties
 
-### `defaultConsent`
+### `defaultConsent` {#default-consent}
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
