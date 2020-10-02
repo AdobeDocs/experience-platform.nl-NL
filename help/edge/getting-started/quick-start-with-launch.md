@@ -5,25 +5,25 @@ description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van 
 seo-description: Snelle startgids voor het gebruiken van de uitbreiding van SDK van het Web van het Experience Platform om gegevens te verzamelen
 keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a9c45aed92dc7c7148db7c9383060bbeab763447
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '566'
 ht-degree: 1%
 
 ---
 
 
-# Welkom
+# Handleiding voor snel starten van Adobe Experience Platform Web SDK
 
-Deze handleiding leidt u door de verschillende manieren om de Adobe Experience Platform Web SDK in te stellen bij Starten. Als u deze functie wilt gebruiken, moet u een whitelist hebben. Neem contact op met uw CSM als u op de wachtlijst wilt staan.
+Deze handleiding leidt u door de verschillende manieren om de Adobe Experience Platform Web SDK in te stellen bij Starten. Om deze eigenschap te gebruiken moet u op de lijst van gewenste personen zijn. Als u op de wachtlijst wilt staan, neemt u contact op met uw Certified Software Manager (CSM).
 
-- Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als u al een CNAME voor Analytics hebt, zou u dat moeten gebruiken. Het testen in ontwikkeling werkt zonder CNAME, maar u hebt er een nodig voordat u naar productie gaat.
+- Heb een [1st-partijdomein (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) toegelaten. Als u al een CNAME voor Analytics hebt, zou u dat moeten gebruiken. Het testen in ontwikkeling werkt zonder een CNAME, maar u hebt één nodig alvorens u aan productie gaat.
 - Mag Adobe Experience Platform gebruiken. Als u geen Platform hebt gekocht, zal Adobe u van de Stichting van de Diensten van de Gegevens van het Experience Platform voor gebruik op een beperkte manier met SDK zonder extra kosten voorzien.
 - Gebruik de nieuwste versie van de service Bezoeker-id.
 
 ## Een schema voorbereiden
 
-Het Netwerk van de Rand van het Experience Platform neemt gegevens als XDM. XDM is een gegevensformaat dat u schema&#39;s laat bepalen. Het schema bepaalt hoe het Netwerk van de Rand verwacht dat de gegevens worden geformatteerd. Als u gegevens wilt verzenden, moet u het schema definiëren.
+Het Netwerk van de Rand van het Experience Platform gebruikt het Model van de Gegevens van de Ervaring (XDM). XDM is een gegevensformaat dat u schema&#39;s laat bepalen. Het schema bepaalt hoe het Netwerk van de Rand verwacht dat de gegevens worden geformatteerd. Als u gegevens wilt verzenden, moet u het schema definiëren.
 
 1. [Een schema maken](../../xdm/tutorials/create-schema-ui.md)
 2. Voeg de AEP- [!DNL Web SDK ExperienceEvent] mix toe aan het schema dat u hebt gemaakt.
@@ -45,7 +45,7 @@ U kunt een configuratie-id maken met het gereedschap [](../fundamentals/edge-con
 
 >[!NOTE]
 >
->Voor deze functie moet een whitelist zijn voor uw organisatie. Neem contact op met uw CSM om op de lijst te komen voor eventuele whitelisting.
+>Uw organisatie moet op de lijst van gewenste personen voor deze eigenschap zijn. Neem contact op met uw Certified Software Manager (CSM) om de lijst van gewenste personen te starten.
 
 ## Een gegevenselement maken op basis van uw schema
 
@@ -66,6 +66,7 @@ Nadat u gegevens hebt laten stromen, kunt u het volgende doen.
 - [Uw schema samenstellen](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
 - [Meer informatie over foutopsporing](../fundamentals/debugging.md)
 - Leer hoe u de ervaring kunt [aanpassen](../fundamentals/rendering-personalization-content.md)
+- Integreer [IAB Transparency &amp; Consent Framework 2.0](../solution-specific/iab-tcf/with-launch.md) in Adobe Experience Platform Launch.
 - Meer informatie over het verzenden van gegevens naar meerdere oplossingen
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
    - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
