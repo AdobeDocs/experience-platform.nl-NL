@@ -5,7 +5,7 @@ seo-title: Facebook-bestemming
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 seo-description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 4%
@@ -26,7 +26,7 @@ U kunt deze bestemming gebruiken voor doelgroepen voor verschillende [!DNL Faceb
 
 ## Gevallen gebruiken
 
-Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Facebook] bestemming zou moeten gebruiken, zijn hier twee gevallen van het steekproefgebruik die de klanten van het Platform van de Gegevens van de Klant in real time van de Adobe kunnen oplossen door deze eigenschap te gebruiken.
+Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Facebook] bestemming zou moeten gebruiken, zijn hier twee gevallen van het steekproefgebruik die de klanten van het Platform van Gegevens van de Adobe in real time van de Klant kunnen oplossen door deze eigenschap te gebruiken.
 
 
 ### Hoofdletters en kleine letters gebruiken 1
@@ -52,7 +52,7 @@ Daarna, kunnen zij hun off-line gegevens met inbegrip van bijbehorende lidmaatsc
 >
 >De gegevens die naar [!DNL Facebook] worden verzonden, mogen geen gestippelde identiteiten bevatten. U bent verantwoordelijk voor het nakomen van deze verplichting en kunt dit doen door ervoor te zorgen dat de segmenten die voor activering worden geselecteerd geen het stitching optie in hun fusiebeleid gebruiken. Meer weten over [samenvoegbeleid](/help/profile/ui/merge-policies.md)?
 
-### Activeringstype {#activation-type}
+### Exporttype {#export-type}
 
 **Segmentexport** - u exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer, enzovoort) gebruikt in de Facebook-bestemming.
 
