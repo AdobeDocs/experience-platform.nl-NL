@@ -4,9 +4,9 @@ seo-title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Veelgestelde vragen over Adobe Experience Platform Web SDK
 seo-description: Veelgestelde vragen over Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: f51513e66945c41d06f12f4ac8f05ddad0d32898
+source-git-commit: f178da80d0902f76868986426600f3da426cf24d
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1683'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Veelgestelde vragen
 
-Deze veelgestelde vragen bevatten vragen die vaak worden gesteld over de Adobe Web SDK/
+Deze veelgestelde vragen bevatten vragen die vaak worden gesteld over de Adobe Web SDK.
 
 ## Wat is Adobe Experience Platform Web SDK?
 
@@ -105,7 +105,7 @@ De SDK van het Web van Adobe Experience Platform is ontwikkeld voor de volgende 
 
 ## Hoe krijg ik toegang om te beginnen de SDK van het Web van Adobe Experience Platform te gebruiken?
 
-De SDK van het Web is momenteel beschikbaar aan het grote publiek en kan worden gebruikt om gegevens naar de producten van Adobe Experience Cloud te verzenden. De capaciteit om gegevens naar derdeoplossingen te verzenden komt in de nabije toekomst. Als u toegang tot het Web SDK zou willen krijgen contacteer uw CSM om het verzoekproces te beginnen.
+De SDK van het Web is momenteel beschikbaar aan het grote publiek en kan worden gebruikt om gegevens naar de producten van Adobe Experience Cloud te verzenden. De capaciteit om gegevens naar derdeoplossingen te verzenden komt in de nabije toekomst. Als u toegang tot de Web SDK wilt krijgen, neemt u contact op met uw Certified Software Manager (CSM) om het aanvraagproces te starten.
 
 ## Welke gebruiksgevallen worden momenteel ondersteund door de Web SDK?
 
