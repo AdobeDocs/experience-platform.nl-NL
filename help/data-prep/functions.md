@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;mapping fields;mapping functions;
 solution: Experience Platform
-title: Toewijzingsfuncties
+title: Functies Data Prep
 topic: overview
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: d47410106a6d3955cc9af78e605c893f08185ffa
 workflow-type: tm+mt
-source-wordcount: '3288'
-ht-degree: 4%
+source-wordcount: '3432'
+ht-degree: 2%
 
 ---
 
 
-# Toewijzingsfuncties
+# Functies Data Prep
 
-Toewijzingsfuncties kunnen worden gebruikt om waarden te berekenen en te berekenen op basis van wat in bronvelden wordt ingevoerd.
+De functies van de Prep van gegevens kunnen worden gebruikt om waarden te berekenen en te berekenen die op wat in brongebieden zijn ingegaan.
 
 ## Velden
 
@@ -37,6 +37,10 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 
 ### Reeksfuncties
 
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
+
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | Voegt de opgegeven tekenreeksen samen. | <ul><li>TEKENREEKS: De tekenreeksen die worden samengevoegd.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
@@ -47,7 +51,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | lower /<br>lcase | Zet een tekenreeks om in kleine letters. | <ul><li>INVOER: **Vereist** De tekenreeks die wordt omgezet in kleine letters.</li></ul> | lower (INPUT) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hallo&quot; |
 | upper/<br>ucase | Zet een tekenreeks om in hoofdletters. | <ul><li>INVOER: **Vereist** De tekenreeks die wordt omgezet in hoofdletters.</li></ul> | upper(INPUT) | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
 | splitsen | Splitst een invoertekenreeks op een scheidingsteken. | <ul><li>INVOER: **Vereist** de invoertekenreeks die wordt gesplitst.</li><li>SCHEIDINGSTEKEN: **Vereist** de tekenreeks die wordt gebruikt om de invoer te splitsen.</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
-| join | Hiermee wordt een lijst met objecten samengevoegd met het scheidingsteken. | <ul><li>SCHEIDINGSTEKEN: **Vereist** de tekenreeks die wordt gebruikt om de objecten met elkaar te verbinden.</li><li>OBJECTEN: **Vereist** een array met tekenreeksen die worden gekoppeld.</li></ul> | join(SCHEIDINGSTEKEN, [OBJECTEN]) | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
+| join | Hiermee wordt een lijst met objecten samengevoegd met het scheidingsteken. | <ul><li>SCHEIDINGSTEKEN: **Vereist** de tekenreeks die wordt gebruikt om de objecten met elkaar te verbinden.</li><li>OBJECTEN: **Vereist** een array met tekenreeksen die worden gekoppeld.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
 | lpad | Hiermee wordt de linkerzijde van een tekenreeks met de andere opgegeven tekenreeks geplakt. | <ul><li>INVOER: **Vereist** de tekenreeks die wordt opgevuld. Deze tekenreeks kan null zijn.</li><li>TELLING: **Vereist** de grootte van de tekenreeks die moet worden opgevuld.</li><li>TOEVOEGEN: **Vereiste** de tekenreeks waarmee de invoer moet worden gecomprimeerd. Als deze null of leeg is, wordt deze behandeld als één spatie.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzyzybat&quot; |
 | rpad | Hiermee wordt de rechterzijde van een tekenreeks overgeladen met de andere opgegeven tekenreeks. | <ul><li>INVOER: **Vereist** de tekenreeks die wordt opgevuld. Deze tekenreeks kan null zijn.</li><li>TELLING: **Vereist** de grootte van de tekenreeks die moet worden opgevuld.</li><li>TOEVOEGEN: **Vereiste** de tekenreeks waarmee de invoer moet worden gecomprimeerd. Als deze null of leeg is, wordt deze behandeld als één spatie.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
 | left | Haalt de eerste &#39;n&#39;-tekens van de opgegeven tekenreeks op. | <ul><li>TEKENREEKS: **Vereist** De tekenreeks waarvoor u de eerste &#39;n&#39;-tekens krijgt.</li><li>TELLING: **** RequiredThe &quot;n&quot;karakters u van het koord wilt krijgen.</li></ul> | left(STRING, COUNT) | left(&quot;abcde&quot;, 2) | &quot;ab&quot; |
@@ -60,15 +64,23 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 
 ### Hashingfuncties
 
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
+
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| sha1 | Neemt een input en veroorzaakt een knoeiboelwaarde gebruikend Veilig algoritme 1 van de Hash (SHA-1). | <ul><li>INVOER: **Vereist** de onbewerkte tekst die moet worden gehasht.</li><li>TEKEN: *Optioneel* de naam van de tekenset. Mogelijke waarden zijn UTF-8, UTF-16, ISO-8859-1 en US-ASCII.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a2448690840c5dfcce3c80 |
-| sha256 | Neemt een input en veroorzaakt een knoeiboelwaarde gebruikend Veilig algoritme 256 van de Hash (SHA-256). | <ul><li>INVOER: **Vereist** de onbewerkte tekst die moet worden gehasht.</li><li>TEKEN: *Optioneel* de naam van de tekenset. Mogelijke waarden zijn UTF-8, UTF-16, ISO-8859-1 en US-ASCII.</li></ul> | sha256 (INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21ee6a39af698154a83a586ee270a0d372104 |
-| sha512 | Neemt een input en veroorzaakt een knoeiboelwaarde gebruikend Veilig algoritme 512 van de Hash (SHA-512). | <ul><li>INVOER: **Vereist** de onbewerkte tekst die moet worden gehasht.</li><li>TEKEN: *Optioneel* de naam van de tekenset. Mogelijke waarden zijn UTF-8, UTF-16, ISO-8859-1 en US-ASCII.</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef708bf11b4232bb21d2a8704ada2cdcd7b367dd0788a89a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
-| md5 | Gebruikt invoer en produceert een knoeiboelwaarde gebruikend MD5. | <ul><li>INVOER: **Vereist** de onbewerkte tekst die moet worden gehasht.</li><li>TEKEN: *Optioneel* de naam van de tekenset. Mogelijke waarden zijn UTF-8, UTF-16, ISO-8859-1 en US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4e9bd0198d03ba6852c7 |
+| sha1 | Neemt een input en veroorzaakt een knoeiboelwaarde gebruikend Veilig algoritme 1 van de Hash (SHA-1). | <ul><li>INVOER: **Vereist** de onbewerkte tekst die moet worden gehasht.</li><li>TEKEN: *Optioneel* de naam van de tekenset. Mogelijke waarden zijn UTF-8, UTF-16, ISO-8859-1 en US-ASCII.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
+| sha256 | Neemt een input en veroorzaakt een knoeiboelwaarde gebruikend Veilig algoritme 256 van de Hash (SHA-256). | <ul><li>INVOER: **Vereist** de onbewerkte tekst die moet worden gehasht.</li><li>TEKEN: *Optioneel* de naam van de tekenset. Mogelijke waarden zijn UTF-8, UTF-16, ISO-8859-1 en US-ASCII.</li></ul> | sha256 (INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B; ee6a39af698154a83a586ee270a0d372104 |
+| sha512 | Neemt een input en veroorzaakt een knoeiboelwaarde gebruikend Veilig algoritme 512 van de Hash (SHA-512). | <ul><li>INVOER: **Vereist** de onbewerkte tekst die moet worden gehasht.</li><li>TEKEN: *Optioneel* de naam van de tekenset. Mogelijke waarden zijn UTF-8, UTF-16, ISO-8859-1 en US-ASCII.</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232bb21d2a8704ada2cdcd7b367dd07 88a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
+| md5 | Gebruikt invoer en produceert een knoeiboelwaarde gebruikend MD5. | <ul><li>INVOER: **Vereist** de onbewerkte tekst die moet worden gehasht.</li><li>TEKEN: *Optioneel* de naam van de tekenset. Mogelijke waarden zijn UTF-8, UTF-16, ISO-8859-1 en US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | Gebruikt een input een algoritme van de cyclische overtolligheidscontrole (CRC) om een cyclische code met 32 bits te produceren. | <ul><li>INVOER: **Vereist** de onbewerkte tekst die moet worden gehasht.</li><li>TEKEN: *Optioneel* de naam van de tekenset. Mogelijke waarden zijn UTF-8, UTF-16, ISO-8859-1 en US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
 ### URL-functies
+
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -79,6 +91,10 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | get_url_query_str | Retourneert de queryreeks van een opgegeven URL. | <ul><li>URL: **Vereiste** URL die u probeert om het vraagkoord van te krijgen.</li><li>ANKER: **Vereist** Hiermee wordt bepaald wat er met het anker in de queryreeks wordt gedaan. Kan een van de volgende drie waarden hebben: &quot;preserve&quot;, &quot;remove&quot; of &quot;append&quot;.<br><br>Als de waarde &quot;preserve&quot; is, wordt het anker aan de geretourneerde waarde gekoppeld.<br>Als de waarde &quot;remove&quot; is, wordt het anker verwijderd van de geretourneerde waarde.<br>Als de waarde &quot;append&quot; is, wordt het anker geretourneerd als een aparte waarde.</li></ul> | get_url_query_str(URL, ANCHOR) | get_url_query_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;preserve&quot;)<br>get_url_query_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 ### Datum- en tijdfuncties
+
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -97,6 +113,10 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 
 ### Hiërarchieën - Objecten
 
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
+
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | size_of | Retourneert de grootte van de invoer. | <ul><li>INVOER: **Vereist** het object waarvan u de grootte wilt zoeken.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
@@ -108,6 +128,10 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 
 ### Hiërarchieën - arrays
 
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
+
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | samenvoegen | Retourneert het eerste niet-null-object in een opgegeven array. | <ul><li>INVOER: **Vereist** De array waarvan u het eerste object met een andere waarde dan null wilt zoeken.</li></ul> | kool(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
@@ -117,6 +141,10 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 
 ### Logische operatoren
 
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
+
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decoderen | Op basis van een sleutel en een lijst met sleutelwaardeparen die als een array zijn samengevoegd, retourneert de functie de waarde als een sleutel wordt gevonden of retourneert deze een standaardwaarde als deze aanwezig is in de array. | <ul><li>SLEUTEL: **Vereist** de sleutel om te passen.</li><li>OPTIONS: **Vereist** een samengevoegde array van sleutel/waardeparen. Optioneel kan een standaardwaarde aan het einde worden geplaatst.</li></ul> | decoderen (SLEUTEL, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N.v.t.&quot;) | Als stateCode gegeven &quot;ca&quot;, &quot;Californië&quot; is.<br>Als stateCode gegeven &quot;pa&quot; is, &quot;Pennsylvania&quot;.<br>Als stateCode niet het volgende aanpast, &quot;n.v.t.&quot;. |
@@ -124,12 +152,20 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 
 ### Samenvoeging
 
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
+
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | Geeft als resultaat het minimum van de opgegeven argumenten. Gebruikt natuurlijke volgorde. | <ul><li>OPTIONS: **Vereist** een of meer objecten die met elkaar kunnen worden vergeleken.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Geeft als resultaat het maximum van de opgegeven argumenten. Gebruikt natuurlijke volgorde. | <ul><li>OPTIONS: **Vereist** een of meer objecten die met elkaar kunnen worden vergeleken.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
 ### Typeomzettingen
+
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -140,17 +176,29 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 
 ### JSON-functies
 
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
+
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Maak JSON-inhoud deserialize vanuit de opgegeven tekenreeks. | <ul><li>TEKENREEKS: **De JSON-tekenreeks moest** worden gedeserialiseerd.</li></ul> | json_to_object(STRING) | json_to_object({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}) | Een object dat de JSON vertegenwoordigt. |
 
 ### Bijzondere verrichtingen
 
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
+
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Hiermee genereert u een pseudo-willekeurige id. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c20633 |
 
 ### Functies van gebruikersagent
+
+>[!NOTE]
+>
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
 
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
