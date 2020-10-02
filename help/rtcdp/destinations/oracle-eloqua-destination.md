@@ -5,9 +5,9 @@ seo-title: Oracle Eloqua-bestemming
 description: Oracle Eloqua is een SaaS-platform (software as a service) voor marketingautomatisering dat door Oracle wordt aangeboden en bedoeld is om B2B-marketers en -organisaties te helpen bij het beheren van marketingcampagnes en het genereren van verkooplood.
 seo-description: Oracle Eloqua is een SaaS-platform (software as a service) voor marketingautomatisering dat door Oracle wordt aangeboden en bedoeld is om B2B-marketers en -organisaties te helpen bij het beheren van marketingcampagnes en het genereren van verkooplood.
 translation-type: tm+mt
-source-git-commit: 31b74067903cf7a2ecc4b8f81c11585b672a75ad
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 0%
 [Eloqua](https://www.oracle.com/marketingcloud/products/marketing-automation/) is een softwareplatform als service (SaaS) voor het automatiseren van de marketing dat door [!DNL Oracle] die wordt aangeboden bedoeld om B2B-marketers en -organisaties te helpen marketing campagnes en verkooploodproductie te beheren.
 
 Om segmentgegevens naar te verzenden [!DNL Oracle Eloqua], moet u eerst de bestemming [in het Platform van de Gegevens van de Klant van Adobe in real time](#connect-destination) verbinden, en dan [opstelling een gegevensimport](#import-data-into-eloqua) van uw opslagplaats in [!DNL Oracle Eloqua].
+
+## Exporttype {#export-type}
+
+**Profielexport** - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met kenmerken selecteren van de workflow voor [doelactivering](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
 
 ## Verbinden met doel {#connect-destination}
 
