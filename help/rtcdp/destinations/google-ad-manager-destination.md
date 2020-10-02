@@ -5,9 +5,9 @@ seo-title: Doel van Google Ad Manager
 description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 seo-description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Overzicht
 
-[!DNL Google Ad Manager], voorheen bekend [!DNL DoubleClick] bij Publishers of [!DNL DoubleClick AdX], is een advertentieplatform van [!DNL Google] uitgevers dat uitgevers de middelen geeft om de weergave van advertenties op hun websites te beheren, via video en in mobiele apps.
+[!DNL Google Ad Manager], voorheen bekend [!DNL DoubleClick] bij Publishers of [!DNL DoubleClick AdX], is een advertentieplatform van [!DNL Google] waaruit uitgevers de middelen krijgen om de weergave van advertenties op hun websites te beheren, via video en in mobiele apps.
 
 ## Doelspecificaties
 
@@ -30,6 +30,10 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ad Manager] best
 >[!IMPORTANT]
 >
 >Als u uw eerste bestemming wilt maken met [!DNL Google Ad Manager] en in het verleden (met Audience Manager of andere toepassingen) de functionaliteit [voor het synchroniseren van](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) id&#39;s niet hebt ingeschakeld in de Experience Cloud-id-service, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder opstellings [!DNL Google] integraties in Audience Manager had, de syncs van identiteitskaart u opstelling dragen over aan Adobe in real time CDP.
+
+### Exporttype {#export-type}
+
+**Segmentexport** - u exporteert alle leden van een segment (publiek) naar de Google-bestemming.
 
 ## Vereisten
 
