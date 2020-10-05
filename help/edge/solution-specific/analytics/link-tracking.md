@@ -5,9 +5,9 @@ description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met 
 seo-description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met het Web SDK van het Experience Platform te verzenden
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: c6b572f8757e46ccb22ccea326a7537747f81893
+source-git-commit: 8840e00ec3aa28d43c371b793da4a4b9bfc8d259
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Gegevens verzenden naar Adobe Analytics
 
-Terwijl er in het verleden verschillende functies waren om tussen een paginamening en een verbinding (bijvoorbeeld, `s.t(), s.tl()`) te onderscheiden, in SDK van het Web is er enkel het `sendEvent` bevel. De gegevens die u met een gebeurtenis verzendt, bepalen of het een paginaweergave of een koppeling moet zijn.
+Terwijl er in het verleden verschillende functies waren om tussen een paginamening en een verbinding (bijvoorbeeld, `s.t(), s.tl()`) te onderscheiden, in het Web SDK is er enkel het `sendEvent` bevel. De gegevens die u met een gebeurtenis verzendt, bepalen of het een paginaweergave of een koppeling moet zijn.
 
 ## Een paginaweergave verzenden
 
@@ -35,7 +35,7 @@ alloy("sendEvent", {
 });
 ```
 
-Hoewel analyses technisch gezien een paginaweergave registreren, zelfs als deze variabele niet is ingesteld, is het aan te raden deze variabele in te stellen wanneer u een paginaweergave wilt opnemen om expliciet in uw gegevens te zijn en de implementatie in de toekomst te controleren.
+Hoewel analyses technisch gezien een paginaweergave registreren, zelfs als deze variabele niet is ingesteld, is het aan te raden deze variabele in te stellen wanneer u een paginaweergave wilt opnemen om expliciet in uw gegevens te worden opgenomen en om in de toekomst uw implementatie te controleren.
 
 ## Koppelingen bijhouden
 
