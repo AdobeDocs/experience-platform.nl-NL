@@ -4,9 +4,9 @@ solution: Experience Platform
 title: De verzoekverwerking van de privacy in Real-time Profiel van de Klant
 topic: overview
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
@@ -36,20 +36,25 @@ Zie het overzicht [!DNL Experience Platform]van naamruimte voor [identiteiten in
 
 ## Verzoeken indienen {#submit}
 
->[!NOTE]
->
->In deze sectie wordt beschreven hoe u privacyverzoeken voor de [!DNL Profile] gegevensopslag kunt maken. Het wordt ten zeerste aanbevolen de API [-](../privacy-service/api/getting-started.md) Privacy Service of de [Privacy Service-UI](../privacy-service/ui/overview.md) -documentatie te raadplegen voor volledige stappen over het verzenden van een privacytaak, waaronder het correct indelen van verzonden identiteitsgegevens van gebruikers in aanvragen.
+In de volgende secties wordt beschreven hoe u privacyverzoeken kunt indienen voor het [!DNL Real-time Customer Profile] gebruik van de [!DNL Privacy Service] API of UI. Voordat u deze secties leest, wordt u ten zeerste aangeraden de API [-](../privacy-service/api/getting-started.md) Privacy Service of de [Privacy Service-UI](../privacy-service/ui/overview.md) -documentatie te raadplegen voor de volledige stappen voor het verzenden van een privacytaak, waaronder het correct opmaken van verzonden identiteitsgegevens van gebruikers in de payloads voor aanvragen.
 
-In de volgende sectie wordt beschreven hoe u privacyaanvragen kunt indienen voor [!DNL Real-time Customer Profile] en de API of UI [!DNL Data Lake] [!DNL Privacy Service] kunt gebruiken.
+>[!IMPORTANT]
+>
+>Privacy Service kan alleen [!DNL Profile] gegevens verwerken met een samenvoegbeleid dat geen identiteitsstitching uitvoert. Als u de UI gebruikt om te bevestigen of uw privacyverzoeken worden verwerkt, zorg ervoor dat u een beleid met &quot;[!DNL None]&quot;als zijn [!UICONTROL identiteitskaart het stitching] type gebruikt. Met andere woorden, u kunt geen samenvoegbeleid gebruiken waarbij [!UICONTROL id-stitching] is ingesteld op &#39;[!UICONTROL Privégrafiek]&#39;.
+>
+>![](./images/privacy/no-id-stitch.png)
 
 ### De API gebruiken
 
-Bij het maken van taakaanvragen in de API moeten alle beschikbare bestanden een specifieke `userIDs` en `namespace` `type` afhankelijk van de gegevensopslag gebruiken waarop ze van toepassing zijn. Id&#39;s voor de [!DNL Profile] winkel moeten &#39;standard&#39; of &#39;custom&#39; gebruiken voor hun `type` waarde, en een geldige [naamruimte](#namespaces) voor identiteit wordt door [!DNL Identity Service] herkend voor hun `namespace` waarde.
+Bij het maken van taakaanvragen in de API `userIDs` moeten alle id&#39;s in de API een specifieke `namespace` en `type`specifieke id gebruiken. Voor de [waarde](#namespaces) moet een geldige naamruimte [!DNL Identity Service] voor de `namespace` identiteit worden opgegeven, terwijl de naam `type` of `standard` `unregistered` (voor respectievelijk standaard- en aangepaste naamruimten) moet zijn.
 
+>[!NOTE]
+>
+>Afhankelijk van de identiteitsgrafiek en de manier waarop uw profielfragmenten in gegevenssets van Platforms worden gedistribueerd, moet u mogelijk meer dan één id opgeven voor elke klant. Zie de volgende sectie [profielfragmenten](#fragments) voor meer informatie.
 
 Bovendien moet de `include` array van de aanvraaglading de productwaarden voor de verschillende gegevensopslag bevatten het verzoek wordt ingediend. Wanneer u een aanvraag naar de array indient, moet de array de waarde &quot;ProfileService&quot; bevatten. [!DNL Data Lake]
 
-Met de volgende aanvraag wordt een nieuwe privacytaak voor beide gemaakt [!DNL Real-time Customer Profile], waarbij de standaardnaamruimte E-mail wordt gebruikt. Het omvat ook de productwaarde voor [!DNL Profile] in de `include` serie:
+Met de volgende aanvraag wordt een nieuwe privacytaak gemaakt voor de gegevens van één klant in de [!DNL Profile] winkel. Er worden twee identiteitswaarden opgegeven voor de klant in de `userIDs` array. de ene met de standaardnaamruimte voor `Email` identiteit en de andere met een aangepaste `Customer_ID` naamruimte. Het omvat ook de productwaarde voor [!DNL Profile] (`ProfileService`) in de `include` serie:
 
 ```shell
 curl -X POST \
@@ -58,6 +63,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "companyContexts": [
       {
@@ -76,14 +82,14 @@ curl -X POST \
             "type": "standard"
           },
           {
-            "namespace": "email_label",
-            "value": "ajones@acme.com",
+            "namespace": "Customer_ID",
+            "value": "12345678",
             "type": "unregistered"
           }
         ]
       }
     ],
-    "include": ["ProfileService", "aepDataLake"],
+    "include": ["ProfileService"],
     "expandIds": false,
     "priority": "normal",
     "analyticsDeleteMethod": "anonymize",
@@ -97,9 +103,35 @@ Wanneer het creëren van baanverzoeken in UI, ben zeker om **[!UICONTROL AEP Geg
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
+## Profielfragmenten in privacyverzoeken {#fragments}
+
+In de [!DNL Profile] gegevensopslag, zullen de persoonlijke gegevens voor een individuele klant vaak van veelvoudige profielfragmenten bestaan, die met de persoon door de identiteitsgrafiek worden geassocieerd. Wanneer u een privacyaanvraag naar de [!DNL Profile] winkel verzendt, is het belangrijk om te weten dat aanvragen alleen op profielfragmentniveau worden verwerkt in plaats van op het volledige profiel.
+
+Bijvoorbeeld, overweeg een situatie waar u de gegevens van de klantenattributen in drie afzonderlijke datasets opslaat, die verschillende herkenningstekens gebruiken om die gegevens met individuele klanten te associëren:
+
+| Naam gegevensset | Primair identiteitsveld | Opgeslagen kenmerken |
+| --- | --- | --- |
+| Dataset 1 | `customer_id` | `address` |
+| Gegevensset 2 | `email_id` | `firstName`, `lastName` |
+| Gegevensset 3 | `email_id` | `mlScore` |
+
+Één van de datasets gebruikt `customer_id` als zijn primaire herkenningsteken, terwijl de andere twee gebruiken `email_id`. Als u een privacyverzoek (toegang of schrapping) zou verzenden gebruikend slechts `email_id` als de waarde van identiteitskaart van de gebruiker, slechts zouden `firstName`, `lastName`, en de `mlScore` attributen worden verwerkt, terwijl `address` niet zou worden beïnvloed.
+
+Om ervoor te zorgen dat uw privacyverzoeken alle relevante klantenattributen verwerken, moet u de primaire identiteitswaarden voor alle toepasselijke datasets verstrekken waar die attributen (tot een maximum van negen IDs per klant) kunnen worden opgeslagen. Zie de sectie over identiteitsgebieden in de [grondbeginselen van schemacompositie](../xdm/schema/composition.md#identity) voor meer informatie over gebieden die algemeen als identiteiten worden gemerkt.
+
+>[!NOTE]
+>
+>Als u verschillende [sandboxen](../sandboxes/home.md) gebruikt om uw [!DNL Profile] gegevens op te slaan, moet u voor elke sandbox een afzonderlijke privacyaanvraag indienen die de juiste naam van de sandbox in de `x-sandbox-name` header aangeeft.
+
 ## Verzoek om verwerking verwijderen
 
-Wanneer [!DNL Experience Platform] een verwijderingsverzoek van [!DNL Privacy Service]ontvangt, [!DNL Platform] verzendt bevestiging aan [!DNL Privacy Service] dat het verzoek is ontvangen en de beïnvloede gegevens voor schrapping duidelijk zijn. De records worden vervolgens binnen zeven dagen uit de [!DNL Data Lake] winkel of de [!DNL Profile] opslagplaats verwijderd. Tijdens dat venster van zeven dagen, worden de gegevens zachte geschrapt en daarom niet toegankelijk door om het even welke [!DNL Platform] dienst.
+Wanneer [!DNL Experience Platform] een verwijderingsverzoek van [!DNL Privacy Service]ontvangt, [!DNL Platform] verzendt bevestiging aan [!DNL Privacy Service] dat het verzoek is ontvangen en de beïnvloede gegevens voor schrapping duidelijk zijn. De records worden vervolgens uit de [!DNL Data Lake] of [!DNL Profile] winkel verwijderd als de privacytaak is voltooid. Hoewel de verwijdertaak nog steeds wordt verwerkt, worden de gegevens via de elektronische weg verwijderd en zijn ze daarom niet toegankelijk voor enige [!DNL Platform] service. Raadpleeg de [[!DNL Privacy Service] documentatie](../privacy-service/home.md#monitor) voor meer informatie over het bijhouden van de taakstatus.
+
+>[!IMPORTANT]
+>
+>Terwijl een succesvol schrappingsverzoek de verzamelde kenmerkgegevens voor een klant (of reeks klanten) verwijdert, verwijdert het verzoek niet de verenigingen die in de identiteitsgrafiek worden gevestigd.
+>
+>Bijvoorbeeld, verwijdert een schrappingsverzoek dat klant gebruikt `email_id` `customer_id` en alle kenmerkgegevens verwijdert die onder die IDs worden opgeslagen. Eventuele gegevens die daarna onder dezelfde regel worden opgenomen, `customer_id` zullen echter nog steeds in verband worden gebracht met het passende `email_id`, aangezien de koppeling nog steeds bestaat.
 
 In toekomstige versies [!DNL Platform] wordt een bevestiging verzonden naar [!DNL Privacy Service] nadat gegevens fysiek zijn verwijderd.
 
