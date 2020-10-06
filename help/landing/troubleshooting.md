@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Adobe Experience Platform - Veelgestelde vragen en handleiding voor probleemoplossing
 description: Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform en een gids voor probleemoplossing op hoog niveau voor algemene fouten die kunnen worden aangetroffen in elke Experience Platform-API.
 topic: getting started
+user-guide-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 translation-type: tm+mt
-source-git-commit: ed0bbe1017790cd0b01757a2e43c0040a125be18
+source-git-commit: 9981c5e34d675f7fcb767a097af3b2d3c56ec091
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1996'
+ht-degree: 1%
 
 ---
 
