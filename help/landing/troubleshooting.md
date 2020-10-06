@@ -2,13 +2,14 @@
 keywords: Experience Platform;home;popular topics;API error codes;API error code;error code API;error codes API;API request error;API troubleshooting;API error
 solution: Experience Platform
 title: Adobe Experience Platform - Veelgestelde vragen en handleiding voor probleemoplossing
-description: Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform en een gids voor probleemoplossing op hoog niveau voor algemene fouten die kunnen worden aangetroffen in elke Experience Platform-API.
+description: Vind antwoorden op vaak gestelde vragen en een gids voor het oplossen van problemen gemeenschappelijke fouten in Experience Platform.
 topic: getting started
+type: Documentation
 user-guide-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9981c5e34d675f7fcb767a097af3b2d3c56ec091
+source-git-commit: bc7c0a5d59c666ba80fac81a859b5ecf4dd37412
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '1981'
 ht-degree: 1%
 
 ---
