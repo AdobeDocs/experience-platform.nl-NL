@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 39668013723dcda332558b74cf72b5f93db04461
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 3%
+source-wordcount: '109'
+ht-degree: 5%
 
 ---
 
@@ -17,35 +17,17 @@ ht-degree: 3%
 
 **Releasedatum: Oktober 2020**
 
-Nieuwe functies in Adobe Experience Platform:
+- [Gegevensprep](#data-prep)
 
-- [[!DNL Access control]](#access-control)
-- [[!DNL-sandboxen]](#sandboxes)
+## Gegevensprep {#data-prep}
 
-## [!DNL Access control] {#access-control}
-
-[!DNL Experience Platform] Gebruikt [Adobe Admin Console](https://adminconsole.adobe.com) -productprofielen om gebruikers te koppelen aan machtigingen en sandboxen. Machtigingen beheren de toegang tot verschillende mogelijkheden van Platforms, waaronder gegevensmodellering, profielbeheer en sandboxbeheer.
+Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience Data Model).
 
 **Belangrijkste kenmerken**
 
 | Functie | Beschrijving |
-|--- | ---|
-| Toestemmingen | Op de [!DNL Admin Console]tab in een [!DNL Platform] productprofiel kunt u aanpassen welke [!DNL Platform] mogelijkheden beschikbaar zijn voor de gebruikers die aan dat profiel zijn gekoppeld. Beschikbare machtigingscategorieën zijn: [!UICONTROL Gegevensmodellering], [!UICONTROL gegevensbeheer], [!UICONTROL profielbeheer], [!UICONTROL identiteiten], [!UICONTROL gegevenscontrole], Sandbox-beheer, Destination, Sources. |
-| Toegang tot sandboxen | Met het tabblad [!UICONTROL _Machtigingen_] in een [!DNL Platform] productprofiel kunnen gebruikers toegang krijgen tot specifieke sandboxen. Zie de sectie over [sandboxen](#sandboxes) hieronder voor meer informatie. |
+| ------- | ----------- |
+| `is_set` -functie | Met de `is_set` functie kunt u de aanwezigheid van een kenmerk in de brongegevens controleren. `is_set` kan worden gebruikt in combinatie met `is_empty` om zowel de aanwezigheid van het kenmerk als de aanwezigheid van de waarde binnen het kenmerk te controleren. |
+| `get_values` -functie | Met de `get_values` functie kunt u de waarden van de invoerkaart voor een bepaalde toets ophalen. |
 
-Zie het overzicht [van](../../access-control/home.md)toegangsbeheer voor meer informatie.
-
-## [!DNL Sandboxes] {#sandboxes}
-
-[!DNL Experience Platform] is ontworpen om toepassingen voor digitale ervaring wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen. Om aan deze behoefte tegemoet te komen, [!DNL Experience Platform] verstrekt zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
-
-**Belangrijkste kenmerken**
-
-| Functie | Beschrijving |
-|--- | ---|
-| Productiesandbox | [!DNL Experience Platform] biedt één productiesandbox die niet kan worden verwijderd of opnieuw ingesteld. |
-| Niet-productie sandboxen | Er kunnen meerdere niet-productiesandboxen voor één [!DNL Platform] instantie worden gemaakt, zodat u functies kunt testen, experimenten kunt uitvoeren en aangepaste configuraties kunt maken zonder dat dit invloed heeft op de productiesandbox. |
-| Sandboxschakelaar | In de [!DNL Experience Platform] gebruikersinterface kunt u met de sandboxschakelaar in de linkerbovenhoek van het scherm schakelen tussen beschikbare sandboxen via een vervolgkeuzemenu. |
-| `x-sandbox-name` header | Alle aanroepen van [!DNL Experience Platform] API&#39;s moeten nu de nieuwe `x-sandbox-name` header bevatten, waarvan de waarde verwijst naar het `name` kenmerk van de sandbox waarin de bewerking plaatsvindt. |
-
-Zie het [sandboxoverzicht](../../sandboxes/home.md)voor meer informatie.
+Lees voor meer informatie het overzicht [van de](../../data-prep/home.md)Data Prep.
