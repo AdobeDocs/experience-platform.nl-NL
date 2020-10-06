@@ -5,9 +5,9 @@ title: API-eindpunt tekstclassificatie
 topic: Developer guide
 description: Als de tekstclassificatiedienst een tekstfragment opgeeft, kan deze classificeren in een of meer labels. De classificatie kan single-label, multi-label, of hiërarchisch zijn.
 translation-type: tm+mt
-source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
+source-git-commit: 09200be6eb078ecbefc91c6449373f811b602797
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '432'
 ht-degree: 2%
 
 ---
