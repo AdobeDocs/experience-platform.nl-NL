@@ -5,7 +5,7 @@ title: Verbinding maken met Power BI
 topic: connect
 description: Dit document doorloopt de stappen voor het verbinden van Power BI met de Dienst van de Vraag van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -61,7 +61,7 @@ ORDER BY SUM(web.webPageDetails.pageviews.value) DESC
 LIMIT 10
 ```
 
-- Selecteer de **[!UICONTROL modus DirectQuery]** of **[!UICONTROL Importeren]** . In de modus **[!UICONTROL Importeren]** worden gegevens geïmporteerd in [!DNL Power BI]. In de **[!UICONTROL modus DirectQuery]** worden alle query&#39;s ter uitvoering verzonden [!DNL Query Service] .
+- Selecteer de modus &quot;[!UICONTROL DirectQuery]&quot; of &quot;[!UICONTROL Importeren]&quot;. In de [!UICONTROL modus DirectQuery] worden alle query&#39;s ter uitvoering verzonden [!DNL Query Service] . In de modus [!UICONTROL Importeren] worden gegevens geïmporteerd in [!DNL Power BI].
 
 - Klik op **[!UICONTROL OK]**. Maakt nu [!DNL Power BI] verbinding met de toepassing [!DNL Query Service] en produceert een voorvertoning als er geen fouten zijn. Er is een bekend probleem met de weergave Voorvertoning van numerieke kolommen. Ga verder met de volgende stap.
 
