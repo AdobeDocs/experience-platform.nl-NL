@@ -5,15 +5,15 @@ title: Overzicht van gegevenstoegang
 topic: overview
 description: De Toegang van gegevens steunt Adobe Experience Platform door gebruikershulpmiddelen te verstrekken die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen Experience Platform worden geconcentreerd.
 translation-type: tm+mt
-source-git-commit: 75e1d3c9912e54e925032bbc2ae4e984948a30eb
+source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 0%
+source-wordcount: '173'
+ht-degree: 1%
 
 ---
 
 
-# [!DNL Data Access] overzicht
+# [!DNL Data Access] - overzicht
 
 [!DNL Data Access] biedt ondersteuning voor Adobe Experience Platform door gebruikers hulpmiddelen te bieden die zijn gericht op de ontdekkingsmogelijkheden en toegankelijkheid van ingesloten gegevenssets binnen [!DNL Experience Platform].
 
@@ -23,17 +23,11 @@ ht-degree: 0%
 
 Gedetailleerde informatie over het gebruik van de [!DNL Data Access] API voor het maken van een verbinding met [!DNL Platform] Data Access vindt u in de [handleiding](api.md)voor ontwikkelaars van Data Access.
 
-## [!DNL Python] SDK
+## Toegang verkrijgen tot gegevens in de werkruimte voor wetenschap van gegevens
 
-U kunt met datasets lezen en schrijven gebruikend [!DNL Python] SDK. Meer gedetailleerde informatie over de [!DNL Python] SDK vindt u in de zelfstudie van [Python SDK](./tutorials/python-sdk.md).
+U kunt naar datasets lezen en schrijven gebruikend [!DNL Python] en [!DNL Spark] voor recept en modelontwikkeling in de Werkruimte van de Wetenschap van Gegevens. Meer over de toegang tot van uw gegevens, bezoek de de gegevenstoegang [van](../data-science-workspace/authoring/python.md) Python of de documentatie van de de gegevenstoegang [van de](../data-science-workspace/authoring/spark.md) Vonk.
 
-[!DNL Data Science Workspace] gebruikt de [!DNL Python] SDK in Laptops en Ontvangers. Voor meer informatie over [!DNL Data Science Workspace], gelieve te beginnen door het overzicht [van de Werkruimte van de Wetenschap van](../data-science-workspace/home.md)Gegevens te lezen.
-
-## [!DNL Spark] SDK
-
-U kunt met datasets lezen en schrijven gebruikend [!DNL Spark] SDK. Meer gedetailleerde informatie over de [!DNL Spark] SDK vindt u in de zelfstudie [van de](./tutorials/spark-sdk.md)Spark SDK.
-
-[!DNL Data Science Workspace] gebruikt de [!DNL Spark] SDK in Laptops en Ontvangers. Voor meer informatie over [!DNL Data Science Workspace], gelieve te beginnen door het overzicht [van de Werkruimte van de Wetenschap van](../data-science-workspace/home.md)Gegevens te lezen.
+Voor meer informatie over [!DNL Data Science Workspace], begin door het overzicht [van de Werkruimte van de Wetenschap van](../data-science-workspace/home.md)Gegevens te lezen.
 
 ## Abonneren op gebeurtenissen voor gegevensinvoer
 
