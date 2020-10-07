@@ -6,9 +6,9 @@ type: Tutorial
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 seo-description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ In de verbindingsbestemmingsstroom, die in de sectie hieronder wordt beschreven,
 
    ![Verbinden met doel](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. Als u in de stap **[!UICONTROL Verificatie]** eerder een verbinding met uw e-mailmarketingbestemming had ingesteld, selecteert u **[!UICONTROL Bestaande account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL Nieuwe account]** selecteren om een nieuwe verbinding in te stellen met uw marketingbestemming voor e-mail. In de het type **[!UICONTROL van]** Verbinding selecteur, kunt u tussen **Amazon S3**, **SFTP met Wachtwoord**, **SFTP met de Sleutel** van SSH selecteren. Vul de informatie hieronder in, afhankelijk van het verbindingstype en selecteer vervolgens **[!UICONTROL Connect]**.
+2. Als u in de stap **[!UICONTROL Verificatie]** eerder een verbinding met uw e-mailmarketingbestemming had ingesteld, selecteert u **[!UICONTROL Bestaande account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL Nieuwe account]** selecteren om een nieuwe verbinding in te stellen met uw marketingbestemming voor e-mail. In de het type **[!UICONTROL van]** Verbinding selecteur, kunt u tussen Amazon S3, SFTP met Wachtwoord, of SFTP met de Sleutel van SSH selecteren. Vul de informatie hieronder in, afhankelijk van het verbindingstype en selecteer vervolgens **[!UICONTROL Connect]**.
 
    Voor **S3-verbindingen** moet u de Amazon Access Key-id en de Secure Access-sleutel opgeven.
 
@@ -38,9 +38,9 @@ In de verbindingsbestemmingsstroom, die in de sectie hieronder wordt beschreven,
 
    Voor **SFTP met SSH Zeer belangrijke** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Sleutel SSH voor uw server van SFTP verstrekken.
 
-3. Voer in de stap **[!UICONTROL Setup]** een **[!UICONTROL naam]** en een **[!UICONTROL beschrijving]** in voor uw nieuwe bestemming en de indeling **** Bestand voor de geëxporteerde bestanden. <br>
-Als u in de vorige stap Amazon S3 als opslagoptie hebt geselecteerd, voegt u de naam **[!UICONTROL van het]** emmertje en het pad **[!UICONTROL naar de]** map in in de opslaglocatie van de cloud waar de bestanden worden geleverd. Voeg voor de opslagoptie SFTP het **[!UICONTROL mappad]** in waarin de bestanden worden geleverd. <br>
-Ook in deze stap kunt u elke **[!UICONTROL Gebruikszaak]** voor marketingdoeleinden selecteren die op deze bestemming moet worden toegepast. Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het op de markt brengen van gebruiksgevallen, zie de [Governance van Gegevens in Echte tijd CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) pagina. Voor informatie over de individuele Adobe-bepaalde het in de handel brengen gebruiksgevallen, zie het overzicht [van het het gebruiksbeleid van](/help/data-governance/policies/overview.md#core-actions)Gegevens. <br>
+3. Voer in de stap **[!UICONTROL Setup]** een [!UICONTROL naam] en een [!UICONTROL beschrijving] in voor uw nieuwe bestemming en de indeling  Bestand voor de geëxporteerde bestanden. <br>
+Als u in de vorige stap Amazon S3 als opslagoptie hebt geselecteerd, voegt u de naam [!UICONTROL van het] emmertje en het pad [!UICONTROL naar de] map in in de opslaglocatie van de cloud waar de bestanden worden geleverd. Voeg voor de opslagoptie SFTP het [!UICONTROL mappad] in waarin de bestanden worden geleverd. <br>
+Ook in deze stap kunt u elke [!UICONTROL Gebruikszaak] voor marketingdoeleinden selecteren die op deze bestemming moet worden toegepast. Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het op de markt brengen van gebruiksgevallen, zie de [Governance van Gegevens in Echte tijd CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) pagina. Voor informatie over de individuele Adobe-bepaalde het in de handel brengen gebruiksgevallen, zie het overzicht [van het het gebruiksbeleid van](/help/data-governance/policies/overview.md#core-actions)Gegevens. <br>
    ![E-mailinstallatiestap](/help/rtcdp/destinations/assets/email-setup-step.png)
 
 ## Stap 2 - selecteer welke segmentleden om in uw bestemmingsuitvoer te omvatten {#select-segments}
