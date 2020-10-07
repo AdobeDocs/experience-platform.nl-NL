@@ -5,7 +5,7 @@ title: Adobe Experience Platform-overzicht
 topic: getting started
 description: Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. Experience Platform stelt organisaties in staat om klantgegevens en -inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
 translation-type: tm+mt
-source-git-commit: e94278c1b64e1d940f55861518c78cca24822c1b
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 2%
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. [!DNL Experience Platform] stelt organisaties in staat om klantgegevens en inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
 
-Gebaseerd op open APIs, [!DNL Experience Platform] stelt de volledige functionaliteit van het systeem aan ontwikkelaars bloot, die de gemakkelijke integratie van ondernemingsoplossingen steunen gebruikend vertrouwde hulpmiddelen. [!DNL Experience Platform] steunt ook partners om hun eigen producten en technologieën waar nodig op te bouwen en te integreren. Deze macht en flexibiliteit maken [!DNL Experience Platform] uniek in de markt. Het geeft partners, klanten, en een gemeenschap van ontwikkelaars een stichting waarop om innovaties te bouwen die de ErvingsZaken drijven: Het overschrijden van klantenverwachtingen door een voortdurend verbeterende, volledig-gepersonaliseerde ervaring te leveren die uit een 360 graadmening van de klant en hun individuele voorkeur wordt getrokken.
+Gebaseerd op open APIs, [!DNL Experience Platform] stelt de volledige functionaliteit van het systeem aan ontwikkelaars bloot, die de gemakkelijke integratie van ondernemingsoplossingen steunen gebruikend vertrouwde hulpmiddelen. [!DNL Experience Platform] steunt ook partners om hun eigen producten en technologieën waar nodig op te bouwen en te integreren. Deze macht en flexibiliteit maken [!DNL Experience Platform] uniek in de markt. Het geeft partners, klanten, en een gemeenschap van ontwikkelaars een stichting waarop om innovaties te bouwen die de Ervaring Bedrijfs drijven: Het overschrijden van klantenverwachtingen door een voortdurend verbeterende, volledig-gepersonaliseerde ervaring te leveren die uit een 360 graadmening van de klant en hun individuele voorkeur wordt getrokken.
 
 In de volgende video&#39;s wordt beschreven hoe u rijke, relevante, real-time ervaringen [!DNL Experience Platform] maakt, eerst vanuit het perspectief van de klant en vervolgens vanuit een technisch perspectief achter de schermen.
 
@@ -110,7 +110,7 @@ Ga snel en eenvoudig aan de slag met [!DNL Platform] stapsgewijze zelfstudies vo
 
 ## Videozelfstudies
 
-Bekijk [videozelfstudies](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) voor een groot aantal verschillende [!DNL Experience Platform] onderwerpen.
+Bekijk [videozelfstudies](https://docs.adobe.com/content/help/nl-NL/platform-learn/tutorials/overview.html) voor een groot aantal verschillende [!DNL Experience Platform] onderwerpen.
 
 Bekijk de volgende video voor een snelle rondleiding door de [!DNL Experience Platform's] gebruikersinterface:
 
@@ -153,9 +153,6 @@ In de volgende video&#39;s wordt een overzicht gegeven van de belangrijkste moge
 **Gebruiksscenario’s:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
-
-
-
 
 <!-- 
 ## What's New
