@@ -5,7 +5,7 @@ title: Muziek downloaden in AI van klant
 topic: Downloading scores
 description: Met AI van de klant kunt u scores downloaden in de bestandsindeling van het pakket.
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 0%
