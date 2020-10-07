@@ -6,7 +6,7 @@ topic: policies
 type: Tutorial
 description: De dienst API van het Beleid staat u toe om het beleid van het gegevensgebruik tot stand te brengen en te beheren om te bepalen welke marketing acties tegen gegevens kunnen worden genomen die bepaalde etiketten van het gegevensgebruik bevatten. Dit document verstrekt een geleidelijke zelfstudie voor het creëren van een beleid gebruikend de Dienst API van het Beleid.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 0%
@@ -195,7 +195,7 @@ Registreer de URI-id van de zojuist gemaakte marketingactie, zoals deze wordt ge
 
 Als u een nieuw beleid wilt maken, moet u de URI-id van een marketingactie opgeven met een expressie van de gebruikslabels die die marketingactie verbiedt.
 
-Deze expressie wordt een **beleidsexpressie** genoemd en is een object dat (A) een label of (B) een operator en operanden bevat, maar niet beide. Elke operand is op zijn beurt ook een beleidsexpressieobject. Een beleid voor het exporteren van gegevens naar derden kan bijvoorbeeld worden verboden als er `C1 OR (C3 AND C7)` labels aanwezig zijn. Deze expressie wordt opgegeven als:
+Deze expressie wordt een beleidsexpressie genoemd en is een object dat (A) een label of (B) een operator en operanden bevat, maar niet beide. Elke operand is op zijn beurt ook een beleidsexpressieobject. Een beleid voor het exporteren van gegevens naar derden kan bijvoorbeeld worden verboden als er `C1 OR (C3 AND C7)` labels aanwezig zijn. Deze expressie wordt opgegeven als:
 
 ```json
 "deny": {
