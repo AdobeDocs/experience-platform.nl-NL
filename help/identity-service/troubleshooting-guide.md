@@ -5,7 +5,7 @@ title: Handleiding voor het oplossen van problemen met de identiteitsservice van
 topic: troubleshooting
 description: Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform Identity Service en een gids voor probleemoplossing voor algemene fouten.
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '2248'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Gebruikend de Dienst API [van de](https://www.adobe.io/apis/experienceplatform/h
 
 ## Wat zijn samengestelde identiteiten en XIDs?
 
-In API-aanroepen wordt naar identiteiten verwezen door hun samengestelde identiteit of XID. Een **samengestelde identiteit** is een representatie van een identiteit die een id-waarde en een naamruimte bevat. Een **XID** is een single-value herkenningsteken die het zelfde concept zoals een samengestelde identiteit (identiteitskaart en een namespace) vertegenwoordigt, en automatisch toegewezen aan nieuwe identiteiten wanneer voortgeduurd door de Dienst van de Identiteit. Zie het API-overzicht [van de](./home.md) identiteitsservice voor meer informatie.
+In API-aanroepen wordt naar identiteiten verwezen door hun samengestelde identiteit of XID. Een samengestelde identiteit is een representatie van een identiteit die een id-waarde en een naamruimte bevat. Een XID is een single-value herkenningsteken die het zelfde concept zoals een samengestelde identiteit (identiteitskaart en een namespace) vertegenwoordigt, en automatisch toegewezen aan nieuwe identiteiten wanneer voortgeduurd door de Dienst van de Identiteit. Zie het API-overzicht [van de](./home.md) identiteitsservice voor meer informatie.
 
 ## Hoe verwerkt de Identiteitsdienst persoonlijk identificeerbare informatie (PII)?
 
