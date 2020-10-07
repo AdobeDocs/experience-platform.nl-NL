@@ -5,7 +5,7 @@ title: Gebruikershandleiding voor Attribution AI
 topic: User guide
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Dit document fungeert als richtlijn voor interactie met Attribution AI in de geb
 
 ## Een instantie maken
 
-Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **Services** in de linkernavigatie. De browser van de *Diensten* verschijnt en toont beschikbare Adobe intelligente diensten. Klik in de container voor Attribution AI op **Openen**.
+Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **[!UICONTROL Services]** in de linkernavigatie. De browser van de **[!UICONTROL Diensten]** verschijnt en toont beschikbare Adobe intelligente diensten. Klik in de container voor Attribution AI op **[!UICONTROL Openen]**.
 
 ![Toegang tot uw exemplaar](./images/user-guide/open_Attribution_ai.png)
 
@@ -35,7 +35,7 @@ Daarna, verschijnt de opstellingspagina voor Attribution AI, waar u basisinforma
 
 ### De instantie een naam geven
 
-Geef onder *Basisinformatie* een naam en een optionele beschrijving op voor uw serviceexemplaar.
+Geef onder **[!UICONTROL Basisinformatie]** een naam en een optionele beschrijving op voor uw serviceexemplaar.
 
 ![een instantie een naam geven](./images/user-guide/naming_instance.png)
 
@@ -67,11 +67,11 @@ Zodra een gebeurtenis wordt geselecteerd, verschijnt een nieuw drop-down aan zij
 
 ![geen vervolgkeuzelijst](./images/user-guide/conversion_event_1.png)
 
-De knoppen *Gebeurtenis* toevoegen en Groep ** toevoegen worden gebruikt om de conversie verder te definiëren. Afhankelijk van de conversie die u definieert, moet u mogelijk de knoppen Gebeurtenis ** toevoegen en Groep ** toevoegen gebruiken om verdere context te bieden.
+De knoppen **[!UICONTROL Gebeurtenis]** toevoegen en Groep **** toevoegen worden gebruikt om de conversie verder te definiëren. Afhankelijk van de conversie die u definieert, moet u mogelijk de knoppen Gebeurtenis **** toevoegen en Groep **** toevoegen gebruiken om verdere context te bieden.
 
 ![add, gebeurtenis](./images/user-guide/add_event.png)
 
-Als u op Gebeurtenis **** toevoegen klikt, worden aanvullende velden gemaakt die met dezelfde methode kunnen worden ingevuld als hierboven is beschreven. Hiermee voegt u een *AND* -instructie toe aan de tekenreeksdefinitie onder de *conversienaam*. Klik op de **x** om een toegevoegde gebeurtenis te verwijderen.
+Als u op Gebeurtenis **** toevoegen klikt, worden aanvullende velden gemaakt die met dezelfde methode kunnen worden ingevuld als hierboven is beschreven. Hiermee voegt u een AND-instructie toe aan de tekenreeksdefinitie onder de conversienaam. Klik op de **x** om een toegevoegde gebeurtenis te verwijderen.
 
 ![Gebeurtenismenu toevoegen](./images/user-guide/add_event_result.png)
 
@@ -157,7 +157,7 @@ Klik op het klokpictogram om de tijd van de dag te wijzigen die u wilt scoren. V
 
 Het gedrag van uw klanten kan per land en geografische regio aanzienlijk verschillen. Voor globale ondernemingen, die op land-gebaseerde of op regio-gebaseerde modellen gebruiken kan attributienauwkeurigheid verhogen. Elk toegevoegd gebied leidt tot een nieuw model met de gegevens van dat gebied.
 
-Als u een nieuw gebied wilt definiëren, klikt u eerst op Gebied **** toevoegen. Geef in de container die wordt weergegeven een naam voor het gebied op. Slechts één waarde (&quot;placeContext.geo.countryCode&quot;) wordt gevuld vanuit het vervolgkeuzemenu Veldnaam ** invoeren. Selecteer deze waarde.
+Als u een nieuw gebied wilt definiëren, klikt u eerst op Gebied **** toevoegen. Geef in de container die wordt weergegeven een naam voor het gebied op. Slechts één waarde (&quot;placeContext.geo.countryCode&quot;) wordt gevuld vanuit het vervolgkeuzemenu Veldnaam **** invoeren. Selecteer deze waarde.
 
 ![Gebied selecteren bij](./images/user-guide/select_region_att.png)
 
@@ -165,7 +165,7 @@ Selecteer vervolgens een operator.
 
 ![regionale operator](./images/user-guide/region_operators.png)
 
-Typ ten slotte de landcode in het vervolgkeuzemenu *Veldwaarde* invoeren.
+Typ ten slotte de landcode in het vervolgkeuzemenu **[!UICONTROL Veldwaarde]** invoeren.
 
 >[!NOTE]
 >
@@ -183,7 +183,7 @@ Om ervoor te zorgen dat u het meest nauwkeurige model mogelijk krijgt, is het be
 
 ![trainingsvenster](./images/user-guide/training_window.png)
 
-Als u uw trainingsvenster hebt geselecteerd, klikt u op **Voltooien** in de rechterbovenhoek. Laat de gegevens enige tijd verwerken. Na voltooiing, lijkt een popover dialoog bevestigend dat de instantie opstelling volledig is. Klik op **OK** om te worden omgeleid naar de pagina met *Service-instanties* waar u uw serviceexemplaar kunt zien.
+Als u uw trainingsvenster hebt geselecteerd, klikt u op **[!UICONTROL Voltooien]** in de rechterbovenhoek. Laat de gegevens enige tijd verwerken. Na voltooiing, lijkt een popover dialoog bevestigend dat de instantie opstelling volledig is. Klik op **[!UICONTROL OK]** om te worden omgeleid naar de pagina met **[!UICONTROL Service-instanties]** waar u uw serviceexemplaar kunt zien.
 
 ![installatie voltooid](./images/user-guide/instance_setup_complete.png)
 
