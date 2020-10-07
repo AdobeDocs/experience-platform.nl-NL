@@ -5,7 +5,7 @@ title: Overzicht van beleidshandhaving
 topic: enforcement
 description: Zodra de etiketten van het gegevensgebruik op de datasets van Adobe Experience Platform zijn toegepast, en het beleid van het gegevensgebruik voor marketing acties tegen die etiketten is bepaald, staat de mogelijkheden van het Beleid van Gegevens u toe om dat beleid te handhaven en gegevensverrichtingen te verhinderen die beleidsschendingen vormen. Er zijn twee methodes van beleidshandhaving die door de eigenschappen van het Beleid van Gegevens op Platform, op API-Gebaseerde handhaving en automatische handhaving worden verstrekt.
 translation-type: tm+mt
-source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Zodra de etiketten van het gegevensgebruik op [!DNL Platform] [!DNL Data Governance] datasets zijn toegepast, en het beleid van het gegevensgebruik is bepaald voor marketing acties tegen die etiketten, staan de mogelijkheden u toe om dat beleid te handhaven en gegevensverrichtingen te verhinderen die beleidsschendingen vormen.
 
-Er zijn twee methodes van beleidshandhaving die door [!DNL Data Governance] eigenschappen op worden verstrekt [!DNL Platform]: **Op API gebaseerde handhaving** en **automatische handhaving**.
+Er zijn twee methodes van beleidshandhaving die door [!DNL Data Governance] eigenschappen op worden verstrekt [!DNL Platform]: Op API gebaseerde handhaving en automatische handhaving.
 
 ## Op API gebaseerde handhaving
 
