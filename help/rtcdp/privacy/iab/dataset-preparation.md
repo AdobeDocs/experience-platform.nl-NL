@@ -5,7 +5,7 @@ title: IAB TCF 2.0-ondersteuning in Real-time Customer Data Platform
 topic: privacy events
 description: Dit document verstrekt stappen voor vestiging de twee vereiste datasets om IAB TCF 2.0 toestemmingsgegevens te verzamelen.
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 0%
@@ -72,7 +72,7 @@ Hoewel elke privacymix varieert in structuur en de typen velden die deze bevatte
 
 ## Goedkeuringsschema&#39;s voor klanten maken {#create-schemas}
 
-Klik in de gebruikersinterface van het Platform op **[!UICONTROL Schema]** in de linkernavigatie om de *[!UICONTROL werkruimte]Schema* te openen. Voer van hieruit de stappen in de onderstaande secties uit om elk vereist schema te maken.
+Klik in de gebruikersinterface van het Platform op **[!UICONTROL Schema]** in de linkernavigatie om de werkruimte **[!UICONTROL Schema]** te openen. Voer van hieruit de stappen in de onderstaande secties uit om elk vereist schema te maken.
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ Klik in de gebruikersinterface van het Platform op **[!UICONTROL Schema]** in de
 
 ### Een op records gebaseerd toestemmingsschema maken {#profile-schema}
 
-Van het **[!UICONTROL Browse]** lusje in de werkruimte **[!UICONTROL van]Schema**, creeer een nieuw schema dat op de **[!DNL XDM Individual Profile]klasse** wordt gebaseerd. Als u het schema hebt geopend in de Schema-editor, klikt u op **[!UICONTROL Toevoegen]** onder de sectie **[!UICONTROL Mixins]** links op het canvas.
+Van het **[!UICONTROL Browse]** lusje in de werkruimte **[!UICONTROL van]Schema**, creeer een nieuw schema dat op de [!DNL XDM Individual Profile] klasse wordt gebaseerd. Als u het schema hebt geopend in de Schema-editor, klikt u op **[!UICONTROL Toevoegen]** onder de sectie **[!UICONTROL Mixins]** links op het canvas.
 
 ![](../assets/iab/add-mixin-profile.png)
 
@@ -127,7 +127,7 @@ Klik tot slot op **[!UICONTROL Opslaan]** om uw wijzigingen te bevestigen.
 
 ### Een op tijdreeksen gebaseerd toestemmingsschema maken {#event-schema}
 
-Van het **[!UICONTROL Browse]** lusje in de werkruimte **[!UICONTROL van]Schema**, creeer een nieuw schema dat op de **[!DNL XDM ExperienceEvent]klasse** wordt gebaseerd. Als u het schema hebt geopend in de Schema-editor, klikt u op **[!UICONTROL Toevoegen]** onder de sectie **[!UICONTROL Mixins]** links op het canvas.
+Van het **[!UICONTROL Browse]** lusje in de werkruimte van **[!UICONTROL Schema]** , creeer een nieuw schema dat op de [!DNL XDM ExperienceEvent] klasse wordt gebaseerd. Als u het schema hebt geopend in de Schema-editor, klikt u op **[!UICONTROL Toevoegen]** onder de sectie **[!UICONTROL Mixins]** links op het canvas.
 
 ![](../assets/iab/add-mixin-event.png)
 
