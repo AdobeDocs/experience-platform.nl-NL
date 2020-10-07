@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Edge-projecties - Real-time API voor klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 0%
@@ -226,7 +226,7 @@ Het reactieobject geeft de details van de projectiebestemming weer. Het `id` att
 
 ### Een doel bijwerken
 
-Een bestaande bestemming kan worden bijgewerkt door een verzoek van de PUT aan het `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming om in de verzoekweg worden bijgewerkt te doen. Deze bewerking _herschrijft_ in wezen de bestemming en daarom moeten in de hoofdtekst van het verzoek dezelfde kenmerken worden opgegeven als bij het maken van een nieuwe bestemming.
+Een bestaande bestemming kan worden bijgewerkt door een verzoek van de PUT aan het `/config/destinations` eindpunt en met inbegrip van identiteitskaart van de bestemming om in de verzoekweg worden bijgewerkt te doen. Deze verrichting herschrijft hoofdzakelijk de bestemming, daarom moeten de zelfde attributen in het lichaam van het verzoek worden verstrekt zoals wanneer het creëren van een nieuwe bestemming wordt verstrekt.
 
 >[!CAUTION]
 >
