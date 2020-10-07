@@ -5,7 +5,7 @@ title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 0%
@@ -118,7 +118,7 @@ De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combin
 
 | Machtigingsniveau | Beschrijving |
 | ---- | ----|
-| **[!UICONTROL Bronnen]** weergeven op | Alleen-lezen toegang verlenen tot bronnen in elk brontype op het tabblad *Catalogus* en op de tabbladen *Bladeren*, *Accounts* en *DataFlow* . |
+| **[!UICONTROL Bronnen]** weergeven op | De read-only toegang van de subsidie tot bronnen in elk bron-type op het lusje van de Catalogus, evenals doorbladeren, Rekeningen, en lusjes Dataflow. |
 | **[!UICONTROL Bronnen]** beheren op | Naast de functies die zijn opgenomen in **[!UICONTROL Bronnen]** weergeven, verleent u toegang tot de optie **[!UICONTROL Bron]** verbinden in de **[!UICONTROL catalogus]** en **[!UICONTROL Gegevens]** selecteren in **[!UICONTROL Bladeren]**. **[!UICONTROL Beheer Bronnen]** staat u ook toe om **[!UICONTROL DataFlows]** toe te laten of onbruikbaar te maken en hun programma&#39;s uit te geven. |
 | **[!UICONTROL Bronnen]** weergeven en bronnen **** beheren uitgeschakeld | Alle toegang tot bronnen intrekken. |
 
