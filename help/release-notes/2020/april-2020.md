@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '991'
 ht-degree: 2%
@@ -79,7 +79,7 @@ Het [!DNL Data Governance] framework vereenvoudigt en stroomlijnt het proces voo
 
 | Functie | Beschrijving |
 | -----------| ---------- |
-| Beleid voor gegevensgebruik beheren in de gebruikersinterface | Het beleid voor gegevensgebruik kan nu worden beheerd in de werkruimte _Beleid_ in de [!DNL Experience Platform] gebruikersinterface. Zie de gids [van de](../../data-governance/policies/user-guide.md) beleidsgebruiker voor meer informatie. |
+| Beleid voor gegevensgebruik beheren in de gebruikersinterface | Het beleid voor gegevensgebruik kan nu worden beheerd in de werkruimte **Beleid** in de [!DNL Experience Platform] gebruikersinterface. Zie de gids [van de](../../data-governance/policies/user-guide.md) beleidsgebruiker voor meer informatie. |
 
 **Bekende problemen**
 
