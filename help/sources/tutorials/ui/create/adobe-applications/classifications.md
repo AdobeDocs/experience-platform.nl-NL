@@ -6,7 +6,7 @@ title: Een Adobe Analytics Classifications Data-connector maken in de gebruikers
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1a49cccfbf8d565c8154329cf1f94382911b2f85
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Selecteer onder de categorie **[!UICONTROL Adobe-toepassingen]** de **[!UICONTRO
 
 ![](../../../../images/tutorials/create/classifications/catalog.png)
 
-De **[!UICONTROL bron Analytics voegt gegevensstap]** toe verschijnt. Selecteer **[!UICONTROL Classificaties]** in de bovenste koptekst om een lijst met [!DNL Classifications] gegevenssets weer te geven, inclusief informatie over de **[!UICONTROL Dimension-id]**, de naam **[!UICONTROL van de]** rapportsuite en de id **[!UICONTROL van de]** rapportsuite.
+De **[!UICONTROL bron Analytics voegt gegevensstap]** toe verschijnt. Selecteer **[!UICONTROL Classificaties]** van de hoogste kopbal om een lijst van [!DNL Classifications] datasets, met inbegrip van informatie over hun afmeting ID, de naam van de rapportsuite, en identiteitskaart van de rapportreeks te zien.
 
 Elke pagina toont tot tien verschillende [!DNL Classifications] datasets u van kunt kiezen. Selecteer **[!UICONTROL Volgende]** onder aan de pagina om naar meer opties te bladeren. Het paneel op het recht toont het totale aantal [!DNL Classifications] datasets u selecteerde, evenals hun namen. In dit deelvenster kunt u ook gegevenssets verwijderen die u per ongeluk hebt geselecteerd of alle selecties wissen met één actie. [!DNL Classifications]
 
