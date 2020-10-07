@@ -5,7 +5,7 @@ title: Beschrijvers
 description: 'De schema''s bepalen een statische mening van gegevensentiteiten, maar verstrekken geen specifieke details over hoe gegevens die op deze regelingen (datasets, bijvoorbeeld) worden gebaseerd op elkaar kunnen betrekking hebben. Met Adobe Experience Platform kunt u deze relaties en andere interpreterende metagegevens over een schema beschrijven aan de hand van beschrijvingen. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 0%
@@ -200,7 +200,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Verzoek**
 
-Dit verzoek _herschrijft_ in wezen de descriptor, zodat de aanvraaginstantie alle velden moet bevatten die vereist zijn voor het definiëren van een descriptor van dat type. Met andere woorden, de aanvraaglading om (PUT) een beschrijver bij te werken is het zelfde als nuttige lading om (POST) een beschrijver van het zelfde type tot stand te brengen.
+Dit verzoek herschrijft in wezen de descriptor, zodat de aanvraaginstantie alle velden moet bevatten die vereist zijn voor het definiëren van een descriptor van dat type. Met andere woorden, de aanvraaglading om (PUT) een beschrijver bij te werken is het zelfde als nuttige lading om (POST) een beschrijver van het zelfde type tot stand te brengen.
 
 In dit voorbeeld wordt de identiteitsbeschrijving bijgewerkt om naar een andere `xdm:sourceProperty` (&quot;mobiele telefoon&quot;) te verwijzen en de naam `xdm:namespace` te wijzigen in &quot;Telefoon&quot;.
 
