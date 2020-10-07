@@ -6,7 +6,7 @@ title: Accounts en gegevensstromen bewaken
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 0%
@@ -96,7 +96,7 @@ De **[!UICONTROL Dataflow-activiteitenpagina]** bevat details over het aantal re
 
 ![datflow-activity](../../images/tutorials/monitor/dataflow-activity.png)
 
-Met de kalender kunt u de verschillende tijdframes voor opgenomen records bekijken. U kunt kiezen of u een van de twee vooraf ingestelde opties **[!UICONTROL Laatste 7 dagen]** of **[!UICONTROL Laatste 30 dagen]** selecteert. U kunt ook een aangepast tijdframe instellen met de kalender. Selecteer het gewenste tijdkader en selecteer **[!UICONTROL Toepassen]** om door te gaan.
+Met de kalender kunt u de verschillende tijdframes voor opgenomen records bekijken. U kunt kiezen tussen een van de twee vooraf ingestelde opties &quot;[!UICONTROL Laatste 7 dagen]&quot; of &quot;[!UICONTROL Laatste 30 dagen]&quot;. U kunt ook een aangepast tijdframe instellen met de kalender. Selecteer het gewenste tijdkader en selecteer **[!UICONTROL Toepassen]** om door te gaan.
 
 ![stroomkalender](../../images/tutorials/monitor/flow-calendar.png)
 
@@ -106,7 +106,7 @@ Selecteer **[!UICONTROL Dataflow run start]** om het **[!UICONTROL Dataflow run 
 
 ![run](../../images/tutorials/monitor/run-metadata.png)
 
-Het **[!UICONTROL Dataflow looppas overzicht]** toont informatie over dataflow met inbegrip van zijn meta-gegevens, **[!UICONTROL Gedeeltelijke inname]** status, en toegewezen **[!UICONTROL Fout drempel]**. De bovenste koptekst bevat ook een **[!UICONTROL foutoverzicht]**. De **[!UICONTROL foutensamenvatting]** bevat de specifieke fout op hoofdniveau die toont bij welke stap het innameproces een fout tegenkwam.
+Het **[!UICONTROL Dataflow looppas overzicht]** toont informatie over de dataflow met inbegrip van zijn meta-gegevens, gedeeltelijke innamestatus, en toegewezen foutendrempel. De bovenste koptekst bevat ook een foutoverzicht. De **[!UICONTROL foutensamenvatting]** bevat de specifieke fout op hoofdniveau die toont bij welke stap het innameproces een fout tegenkwam.
 
 ![data-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
@@ -119,13 +119,13 @@ Raadpleeg de volgende tabel voor fouten die u kunt zien in het overzicht **** Fo
 
 De onderste helft van het scherm bevat informatie over **[!UICONTROL Dataflow-uitvoerfouten]**. Van hier kunt u ook de opgenomen bestanden weergeven, een voorbeeld bekijken en fouten downloaden of het bestandmanifest downloaden.
 
-In de **[!UICONTROL sectie met uitvoerfouten]** in DataFlow worden de **[!UICONTROL foutcode]**, het aantal mislukte records en informatie over de fout weergegeven.
+In de **[!UICONTROL sectie met uitvoerfouten]** in DataFlow worden de foutcode, het aantal mislukte records en informatie over de fout weergegeven.
 
 Selecteer **[!UICONTROL Voorvertoning van foutdiagnostiek]** voor meer informatie over de innamefout.
 
 ![Dataflow-run-fouten](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-Het voorvertoningsvenster voor **[!UICONTROL foutdiagnostiek]** wordt weergegeven. In dit scherm wordt specifieke informatie weergegeven over de fout bij insluiten, zoals de **[!UICONTROL bestandsnaam]**, de **[!UICONTROL foutcode]**, de naam van de kolom waarin de fout is opgetreden en een beschrijving van de fout.
+Het voorvertoningsvenster voor **[!UICONTROL foutdiagnostiek]** wordt weergegeven. In dit scherm wordt specifieke informatie weergegeven over de fout bij het opnemen, zoals de bestandsnaam, foutcode, de naam van de kolom waarin de fout is opgetreden en een beschrijving van de fout.
 
 Deze sectie bevat ook een voorvertoning van de kolom die de fout bevat.
 
