@@ -5,7 +5,7 @@ seo-title: Gegevensbeheer in Real-time Customer Data Platform
 description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 seo-description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Gebruiksscenario&#39;s voor marketingdoeleinden kunnen alleen worden geselecteer
 
 Om gegevensgebruikslabels effectief gegevensnaleving te steunen, moet het beleid van het gegevensgebruik worden bepaald en worden toegelaten. Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen CDP in real time mag uitvoeren. Zie de sectie &quot;Beleid voor gegevensgebruik&quot; in het overzicht [!DNL Experience Platform] van [](../../data-governance/home.md) gegevensbeheer voor meer informatie.
 
-Adobe Experience Platform biedt verschillende **basisbeleidsregels** voor veelvoorkomende gebruiksgevallen voor de klantervaring. Dit beleid kan in UI worden bekeken door aan de werkruimte van **[!UICONTROL Beleid]** te navigeren en het **[!UICONTROL Browse]** lusje te selecteren. Zie de gids [van de](../../data-governance/policies/user-guide.md) beleidsgebruiker in de [!DNL Experience Platform] documentatie voor meer gedetailleerde stappen bij het werken met beleid in UI, met inbegrip van hoe te om uw eigen douanebeleid te maken.
+Adobe Experience Platform biedt verschillende basisbeleidsregels voor veelvoorkomende gebruiksgevallen voor de ervaring van klanten. Dit beleid kan in UI worden bekeken door aan de werkruimte van **[!UICONTROL Beleid]** te navigeren en het **[!UICONTROL Browse]** lusje te selecteren. Zie de gids [van de](../../data-governance/policies/user-guide.md) beleidsgebruiker in de [!DNL Experience Platform] documentatie voor meer gedetailleerde stappen bij het werken met beleid in UI, met inbegrip van hoe te om uw eigen douanebeleid te maken.
 
 ## Compatibiliteit met gegevensgebruik afdwingen {#enforce-data-usage-compliance}
 
