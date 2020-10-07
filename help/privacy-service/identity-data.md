@@ -5,7 +5,7 @@ title: Identiteitsgegevens voor privacyverzoeken
 topic: overview
 description: Dit document biedt algemene richtlijnen voor het configureren van gegevensbewerkingen en het benutten van Adobe-technologieën om de juiste identiteitsgegevens voor privacyverzoeken van klanten op te halen.
 translation-type: tm+mt
-source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Wanneer een klant met uw merk door verscheidene verschillende kanalen kan in wis
 
 Bijvoorbeeld, wanneer het behandelen van de verzoeken van klantengegevens binnen [!DNL Privacy Service], kan een identiteit een kokerwaarde vertegenwoordigen die onder een Adobe-gecontroleerd domein, een kokerwaarde onder een derdedomein wordt geplaatst en met Adobe wordt gedeeld, of een douaneherkenningsteken dat u uitdrukkelijk binnen uw IMS Organisatie bepaalt.
 
-Daarom is het vereist dat elke identiteit waarnaar wordt verzonden vergezeld [!DNL Privacy Service] gaat van een **naamruimte** die context biedt door de identiteitswaarde te koppelen aan het systeem van oorsprong. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;e-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
+Daarom moet elke verzonden identiteit vergezeld gaan van een naamruimte die context biedt door de identiteitswaarde te koppelen aan het systeem van oorsprong. [!DNL Privacy Service] Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;e-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
 
 Adobe Experience Platform Identity Service bewaart een opslag van wereldwijd gedefinieerde en door de gebruiker gedefinieerde naamruimten. Zie het overzicht [](../identity-service/namespaces.md)van naamruimten voor meer informatie over naamruimten. Voor een lijst van standaardnamespaces en namespace kwalificfiers die algemeen binnen worden gebruikt, zie de [!DNL Privacy Service]bijlage sectie [](api/appendix.md) in de ontwikkelaarsgids.
 
@@ -35,7 +35,7 @@ Adobe Experience Cloud [!DNL Identity Service] fungeert als een gemeenschappelij
 
 De open-binnen Dienst, een uitbreiding van [!DNL Experience Cloud Identity Service], staat u opstellings protocollen op uw toepassing toe om bezoekers te laten bepalen of u een koekje op het apparaat of browser van de bezoeker kunt plaatsen. Raadpleeg de [documentatie](https://docs.adobe.com/content/help/nl-NL/id-service/using/implementation/opt-in-service/optin-overview.html)van de Opt-in-service voor meer informatie over de Opt-in-service, inclusief hoe u de service voor uw toepassing kunt instellen.
 
-Nadat aan uw sitebezoekers ECID&#39;s zijn toegewezen, kunt u de Adobe gebruiken [!DNL Privacy JavaScript Library] om die id&#39;s op te halen voor gebruik in privacyverzoeken, zoals beschreven in de volgende sectie.
+Nadat aan uw sitebezoekers ECID&#39;s zijn toegewezen, kunt u de Adobe gebruiken [!DNL Privacy JavaScript Library] om deze id&#39;s op te halen voor gebruik in privacyverzoeken, zoals beschreven in de volgende sectie.
 
 ## [!DNL Privacy JS Library]
 
