@@ -6,7 +6,7 @@ seo-title: Workflow voor sociale netwerkdoelen
 description: Instructies om verbinding te maken met uw sociale netwerk en accounts
 seo-description: Instructies om verbinding te maken met uw sociale netwerk en accounts
 translation-type: tm+mt
-source-git-commit: 120ba866cf6e6509c51a29cb07e73550006fe5eb
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Deze zelfstudie gebruikt [!DNL Facebook] als voorbeeld, maar de workflow in het 
 
    ![Credentials bevestigd](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. Voer in de stap **[!UICONTROL Setup]** een **[!UICONTROL naam]** en een **[!UICONTROL beschrijving]** in voor de activeringsstroom en vul de **[!UICONTROL account-id]** van uw sociale netwerk en account in. <br> Ook in deze stap kunt u elke **[!UICONTROL Gebruikszaak]** voor marketingdoeleinden selecteren die op deze bestemming moet worden toegepast. Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het op de markt brengen van gebruiksgevallen, zie de [Governance van Gegevens in Echte tijd CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) pagina. Voor informatie over de individuele Adobe-bepaalde het in de handel brengen gebruiksgevallen, zie het overzicht [van het het gebruiksbeleid van](/help/data-governance/policies/overview.md#core-actions)Gegevens. <br> Selecteer Doel **** maken nadat u de bovenstaande velden hebt ingevuld.
+4. Voer in de stap **[!UICONTROL Setup]** een [!UICONTROL naam] en een [!UICONTROL beschrijving] in voor de activeringsstroom en vul de [!UICONTROL account-id] van uw sociale netwerk en account in. <br> Ook in deze stap kunt u elke **[!UICONTROL Gebruikszaak]** voor marketingdoeleinden selecteren die op deze bestemming moet worden toegepast. Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het op de markt brengen van gebruiksgevallen, zie de [Governance van Gegevens in Echte tijd CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) pagina. Voor informatie over de individuele Adobe-bepaalde het in de handel brengen gebruiksgevallen, zie het overzicht [van het het gebruiksbeleid van](/help/data-governance/policies/overview.md#core-actions)Gegevens. <br> Selecteer Doel **** maken nadat u de bovenstaande velden hebt ingevuld.
 
    >[!IMPORTANT]
    >
