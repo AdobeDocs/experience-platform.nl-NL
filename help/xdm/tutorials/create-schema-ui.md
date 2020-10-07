@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorials
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in het Experience Platform.
 translation-type: tm+mt
-source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
+source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
 workflow-type: tm+mt
 source-wordcount: '3835'
 ht-degree: 0%
@@ -126,7 +126,7 @@ Net als in het `name` veld vertegenwoordigen de velden die u zojuist hebt toegev
 
 Het schema &quot;[!UICONTROL Loyalty-leden]&quot; is bedoeld voor het vastleggen van gegevens die betrekking hebben op de leden van een loyaliteitsprogramma, zodat het een aantal specifieke velden met betrekking tot loyaliteit vereist. Er zijn geen standaardmengingen beschikbaar die de noodzakelijke gebieden bevatten, daarom zult u een nieuwe mix moeten bepalen.
 
-Wanneer u dit keer het dialoogvenster **[!UICONTROL Mixin]** toevoegen opent, selecteert u Nieuwe **[!UICONTROL mixer]** maken. Vervolgens wordt u gevraagd een **[!UICONTROL weergavenaam]** en een **[!UICONTROL beschrijving]** voor de mix op te geven.
+Wanneer u dit keer het dialoogvenster **[!UICONTROL Mixin]** toevoegen opent, selecteert u Nieuwe **[!UICONTROL mixer]** maken. Vervolgens wordt u gevraagd een weergavenaam en een beschrijving voor de mix op te geven.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
@@ -167,7 +167,7 @@ Voor elk veld is de volgende informatie vereist:
 * **[!UICONTROL Type]:** Het gegevenstype van het veld. Dit omvat fundamentele scalaire types en om het even welke die gegevenstypes in [!DNL Schema Registry]worden bepaald. Voorbeelden: [!UICONTROL Tekenreeks], [!UICONTROL Geheel getal], [!UICONTROL Boolean], [!UICONTROL Persoon], [!UICONTROL Adres], Telefoonnummer, enz.
 * **[!UICONTROL Omschrijving]:** Er moet een optionele beschrijving van het veld worden opgenomen, geschreven in een zin met maximaal 200 tekens.
 
-Het eerste veld voor het `Loyalty` object is een tekenreeks met de naam `loyaltyId`. Wanneer u het type van het nieuwe veld instelt op &quot;[!UICONTROL String]&quot;, wordt de sectie **[!UICONTROL Eigenschappen]** van veld gevuld met verschillende opties voor het toepassen van beperkingen, waaronder **[!UICONTROL Standaardwaarde]**, **[!UICONTROL Opmaak]** en **[!UICONTROL Maximumlengte]**.
+Het eerste veld voor het `Loyalty` object is een tekenreeks met de naam `loyaltyId`. Wanneer u het type van het nieuwe veld instelt op &quot;[!UICONTROL String]&quot;, wordt de sectie met **[!UICONTROL veldeigenschappen]** gevuld met verschillende opties voor het toepassen van beperkingen, zoals standaardwaarde, opmaak en maximumlengte.
 
 ![](../images/tutorials/create-schema/string_constraints.png)
 
@@ -226,7 +226,7 @@ Als u nu onder **[!UICONTROL Structuur]** kijkt, ziet u dat het `loyalty` veld e
 
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
-In een toekomstig schema, kon u een gebied nu toewijzen het **[!UICONTROL Type]** van &quot;[!DNL Loyalty]&quot;en het zou automatisch gebieden voor identiteitskaart, loyaliteitsniveau, lid sinds, en punten omvatten.
+In een toekomstig schema, kon u een gebied nu toewijzen als &quot;[!DNL Loyalty]&quot;type en het zou automatisch gebieden voor identiteitskaart, loyaliteitsniveau, lid sinds, en punten omvatten.
 
 ## Schema-velden zoeken en filteren
 
@@ -336,7 +336,7 @@ Selecteer in de **[!UICONTROL werkruimte Schema]** de optie **[!UICONTROL Schema
 
 ![](../images/tutorials/create-schema/browse-classes.png)
 
-Er wordt een dialoogvenster weergegeven waarin u een keuze kunt maken uit een lijst met beschikbare klassen. Selecteer boven aan het dialoogvenster de optie **[!UICONTROL Nieuwe klasse]** maken. U kunt uw nieuwe klasse dan een naam **[!UICONTROL van de]** Vertoning (een korte, beschrijvende, unieke, en gebruikersvriendelijke naam voor de klasse), een **[!UICONTROL Beschrijving]**, en een **[!UICONTROL Gedrag]** (&quot;[!UICONTROL Verslag]&quot; of &quot;[!UICONTROL Tijdreeks]&quot;) voor de gegevens geven het schema zal bepalen.
+Er wordt een dialoogvenster weergegeven waarin u een keuze kunt maken uit een lijst met beschikbare klassen. Selecteer boven aan het dialoogvenster de optie **[!UICONTROL Nieuwe klasse]** maken. U kunt uw nieuwe klasse dan een vertoningsnaam (een korte, beschrijvende, unieke, en gebruikersvriendelijke naam voor de klasse), een beschrijving, en een gedrag (&quot;[!UICONTROL Verslag]&quot;of &quot;Reeks[!UICONTROL van de]Tijd&quot;) voor de gegevens geven het schema zal bepalen.
 
 ![](../images/tutorials/create-schema/create_new_class.png)
 
