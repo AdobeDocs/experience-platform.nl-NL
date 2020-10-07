@@ -5,7 +5,7 @@ title: Handleiding voor ontwikkelaars van sandbox-API
 topic: developer guide
 description: Deze handleiding voor ontwikkelaars bevat stappen waarmee u sandbox-API kunt gebruiken voor het beheer van sandboxen in Experience Platform en voorbeelden van API-aanroepen voor het uitvoeren van verschillende bewerkingen.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
@@ -45,4 +45,4 @@ Alle verzoeken die een nuttige lading (POST, PUT, en PATCH) bevatten vereisen ee
 
 ## Volgende stappen
 
-Nu u de vereiste geloofsbrieven hebt verzameld, kunt u nu de rest gids van de ontwikkelaar blijven lezen. Elke sectie verstrekt belangrijke informatie betreffende hun eindpunten en toon voorbeeld API vraag voor het uitvoeren van verrichtingen CRUD aan. Elke vraag omvat het algemene **API formaat**, een steekproef **verzoek** die vereiste kopballen tonen en behoorlijk geformatteerde lading, en een steekproefreactie **** voor een succesvolle vraag.
+Nu u de vereiste geloofsbrieven hebt verzameld, kunt u nu de rest gids van de ontwikkelaar blijven lezen. Elke sectie verstrekt belangrijke informatie betreffende hun eindpunten en toon voorbeeld API vraag voor het uitvoeren van verrichtingen CRUD aan. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen en behoorlijk geformatteerde lading toont, en een steekproefreactie voor een succesvolle vraag.
