@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 3%
@@ -55,7 +55,7 @@ De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het rech
 | Nieuwe API-eindpunten | Het basispad voor de [!DNL Privacy Service] API is bijgewerkt van `/data/privacy/gdpr` naar `/data/core/privacy/jobs`. |
 | Nieuwe vereiste `regulation` eigenschap | Bij het maken van nieuwe taken in de [!DNL Privacy Service] API moet een `regulation` eigenschap worden opgegeven in de payload van de aanvraag om aan te geven welke regelgeving moet worden gebruikt om de taak onder te volgen. Accepteerde waarden zijn `gdpr` en `ccpa`. |
 | Ondersteuning voor [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] Accepteert nu toegang/schrappingsverzoeken van Adobe [!DNL Primetime Authentication], die `primetimeAuthentication` als zijn productwaarde gebruiken. |
-| Verbeteringen in de gebruikersinterface van Privacy Service | Afzonderlijke pagina&#39;s voor het volgen van taken voor GDPR en CCPA verordeningen. Het nieuwe _Regeltype_ dropdown om tussen het volgen gegevens voor GDPR en CCPA te schakelen. |
+| Verbeteringen in de gebruikersinterface van Privacy Service | Afzonderlijke pagina&#39;s voor het volgen van taken voor GDPR en CCPA verordeningen. Nieuw **Type verordening **dropdown om tussen het volgen gegevens voor GDPR en CCPA te schakelen. |
 
 **Bekende problemen**
 
@@ -105,7 +105,7 @@ In [Adobe in real time CDP](../../rtcdp/overview.md), zijn de bestemmingen pre-g
 | Categorie | Machtiging | Beschrijving |
 |--- | --- | ---|
 | Doelen | Doelen beheren | Toegang tot het lezen, creëren, uitgeven, en onbruikbaar maken bestemmingen. |
-| Doelen | Doelen weergeven | Alleen-lezen toegang tot beschikbare doelen op het tabblad [!UICONTROL _Catalogus_] en geverifieerde doelen op het tabblad _Bladeren_ . |
+| Doelen | Doelen weergeven | Alleen-lezen toegang tot beschikbare doelen op het tabblad **[!UICONTROL Catalogus]** en geverifieerde doelen op het tabblad **Bladeren** . |
 | Doelen | Doelen activeren | Mogelijkheid om gegevens naar doelen te activeren. Voor deze machtiging moet &quot;Doelen beheren&quot; of &quot;Doelen weergeven&quot; worden toegevoegd aan het productprofiel. |
 
 **Bekende problemen**
