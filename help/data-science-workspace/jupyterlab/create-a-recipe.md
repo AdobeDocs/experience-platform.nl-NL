@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst, zult u een machine het leren model gebruikend een malplaatje binnen Notitieboekje JupyterLab creëren. Vervolgens gebruikt u de workflow voor het maken van een notebook naar het recept in JupyterLab om een recept te maken in de Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 0%
@@ -302,7 +302,7 @@ Het doel van opleiding is een model te creëren gebruikend eigenschappen en etik
 
 >[!NOTE]
 > 
->_Functies_ verwijzen naar de invoervariabele die door het model voor machinaal leren wordt gebruikt om de _labels_ te voorspellen.
+>Functies verwijzen naar de invoervariabele die door het model voor machinaal leren wordt gebruikt om de labels te voorspellen.
 
 De `train()` functie moet het trainingsmodel bevatten en het getrainde model retourneren. Sommige voorbeelden van verschillende modellen zijn te vinden in de documentatie [van de](https://scikit-learn.org/stable/user_guide.html)handleiding van scikit-learn.
 
