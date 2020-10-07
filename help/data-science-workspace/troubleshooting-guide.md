@@ -5,7 +5,7 @@ title: Handleiding voor het oplossen van problemen in de Data Science Workspace
 topic: Troubleshooting
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over de Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 76e598c743df320e4b3cb821e118749fe7304d9c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Navigeer in uw [!DNL Chrome] browser naar de rechterbovenhoek en selecteer **Ins
 
 ![chroom geavanceerd](./images/faq/chrome-advanced.png)
 
-De sectie *Privacy en beveiliging* wordt weergegeven. Klik vervolgens op **Site-instellingen** gevolgd door **cookies en sitegegevens**.
+De sectie **Privacy en beveiliging** wordt weergegeven. Klik vervolgens op **Site-instellingen** gevolgd door **cookies en sitegegevens**.
 
 ![chroom geavanceerd](./images/faq/privacy-security.png)
 
@@ -63,7 +63,7 @@ Selecteer **Geavanceerd** in het voorkeurenvenster van Safari. Schakel vervolgen
 
 ![Safari, geavanceerd](./images/faq/advanced.png)
 
-Selecteer vervolgens in de bovenste navigatiebalk het menu **Ontwikkelen** . Houd de muisaanwijzer boven *Gebruikersagent* in het vervolgkeuzemenu *Ontwikkelen*. U kunt de tekenreeks **[!DNL Chrome]** **[!DNL Firefox]** of de tekenreeks Gebruikersagent selecteren die u wilt gebruiken.
+Selecteer vervolgens in de bovenste navigatiebalk het menu **Ontwikkelen** . Houd de muisaanwijzer boven **Gebruikersagent** in het vervolgkeuzemenu **Ontwikkelen**. U kunt de tekenreeks **[!DNL Chrome]** **[!DNL Firefox]** of de tekenreeks Gebruikersagent selecteren die u wilt gebruiken.
 
 ![Ontwikkelen, menu](./images/faq/user-agent.png)
 
