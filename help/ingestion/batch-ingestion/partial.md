@@ -5,9 +5,9 @@ title: Gedeeltelijk overzicht van het gebruik van batch
 topic: overview
 description: Dit document bevat een zelfstudie voor het beheren van gedeeltelijke batch-opname.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '916'
 ht-degree: 0%
 
 ---
@@ -121,7 +121,7 @@ De schakeloptie **[!UICONTROL Foutdiagnostiek]** wordt alleen weergegeven wannee
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-Met de **[!UICONTROL foutdrempel]** kunt u het percentage acceptabele fouten instellen voordat de gehele batch mislukt. Deze waarde is standaard ingesteld op 5%.
+**[!UICONTROL De drempel]** van de fout staat u toe om het percentage aanvaardbare fouten te plaatsen alvorens de volledige partij zal ontbreken. Deze waarde is standaard ingesteld op 5%.
 
 ## Volgende stappen {#next-steps}
 
