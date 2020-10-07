@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Deze zelfstudie bevat instructies voor het verpakken van de voorbeeldbronbestanden voor de detailhandel in een archiefbestand. Deze kan worden gebruikt om een recept te maken in de Adobe Experience Platform Data Science Workspace door de workflow voor het importeren van recept in de gebruikersinterface of met de API uit te voeren.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com)om uw Azur
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-De pagina *Configureren* wordt geopend. Geef een geschikte *recept-naam* op, bijvoorbeeld &quot;Retail Sales recipe&quot;, en geef desgewenst een beschrijving of documentatie-URL op. Klik op **[!UICONTROL Volgende]** als de bewerking is voltooid.
+De pagina **[!UICONTROL Configureren]** wordt geopend. Geef een geschikte **[!UICONTROL recept-naam]** op, bijvoorbeeld &quot;Retail Sales recipe&quot;, en geef desgewenst een beschrijving of documentatie-URL op. Klik op **[!UICONTROL Volgende]** als de bewerking is voltooid.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
@@ -64,7 +64,7 @@ Selecteer de juiste *runtime* en kies een **[!UICONTROL classificatie]** voor *T
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Maak een notitie van de waarden voor *Docker Host*, *Gebruikersnaam* en *Wachtwoord*. Deze worden gebruikt om uw [!DNL Docker] afbeelding samen te stellen en te duwen in de hieronder beschreven workflows.
+Noteer de waarden voor Docker-host, gebruikersnaam en wachtwoord. Deze worden gebruikt om uw [!DNL Docker] afbeelding samen te stellen en te duwen in de hieronder beschreven workflows.
 
 >[!NOTE]
 >
