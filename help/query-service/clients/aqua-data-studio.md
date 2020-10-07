@@ -5,7 +5,7 @@ title: Verbinding maken met Aqua Data Studio
 topic: connect
 description: Dit document doorloopt de stappen voor het verbinden van de Studio van Gegevens Aqua met de Dienst van de Vraag van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Select the **[!UICONTROL Driver]** tab. Stel onder **[!UICONTROL Parameters]** d
 
 ![](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
-Nadat u de verbindingsgegevens hebt ingevoerd, klikt u op Verbinding **** testen om te controleren of uw referenties naar behoren werken. Als de verbinding tot stand is gebracht, klikt u op **[!UICONTROL Opslaan]** om de server te registreren. De verbinding wordt op het *dashboard* weergegeven als de registratie is gelukt. Hierbij wordt bevestigd dat u nu verbinding kunt maken met de server en de schemaobjecten kunt bekijken.
+Nadat u de verbindingsgegevens hebt ingevoerd, klikt u op Verbinding **** testen om te controleren of uw referenties naar behoren werken. Als de verbinding tot stand is gebracht, klikt u op **[!UICONTROL Opslaan]** om de server te registreren. De verbinding wordt op het **dashboard** weergegeven als de registratie is gelukt. Hierbij wordt bevestigd dat u nu verbinding kunt maken met de server en de schemaobjecten kunt bekijken.
 
 ## Volgende stappen
 
