@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform-productdocumentatie
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '7145'
 ht-degree: 0%
@@ -214,7 +214,7 @@ ht-degree: 0%
 
 **Doelcatalogus:** Een doelcatalogus is een lijst met beschikbare doelen in de [!DNL Real-time Customer Data Platform]doelcatalogus.
 
-**Regels voor directe oproepen:** in [!DNL Experience Platform Launch], kunt u opstelling een [!UICONTROL directe vraag] [!UICONTROL regel] die uitvoert wanneer het direct van de pagina wordt geroepen. Als het laden van de pagina of de actie op uw site heel eenvoudig is, of als deze uniek is en elke keer een specifieke set instructies kan uitvoeren (ingesteld [!DNL eVar4] op X en geactiveerd [!DNL event2] ), kunt u een [!UICONTROL directe] aanroepregel gebruiken. Zie [!DNL Launch] documentatie betreffende het creëren van [!UICONTROL directe vraag] [!UICONTROL regels].
+**Regels voor directe oproepen:** binnen, kunt u opstelling een directe vraagregel die uitvoert wanneer het direct van de pagina wordt geroepen. [!DNL Experience Platform Launch] Als het laden van de pagina of de actie op uw site heel eenvoudig is, of als deze uniek is en elke keer een specifieke set instructies kan uitvoeren (ingesteld [!DNL eVar4] op X en geactiveerd [!DNL event2] ), kunt u een directe aanroepregel gebruiken. Zie [!DNL Launch] documentatie betreffende het creëren van directe vraagregels.
 
 **Weergavenaam:** De naam van de vertoning is een gebruikersvriendelijke naam van een gebied dat in UI wordt getoond.
 
@@ -370,7 +370,7 @@ ht-degree: 0%
 
 **Voorstel:** Een aanbieding is een marketingbericht waaraan regels kunnen zijn gekoppeld, waarin wordt aangegeven wie in aanmerking komt om de aanbieding te zien.
 
-**Beslissing voorstel:** De beslissing van de aanbieding laat een marktleider toe om regels en getrainde modellen van aanbiedingsvoorstellen te beheren wanneer het in dienst nemen met een eindgebruiker die op gegevens wordt gebaseerd die over kanalen en toepassingen worden verzameld.
+**Offer Decisioning:** De beslissing van de aanbieding laat een marktleider toe om regels en getrainde modellen van aanbiedingsvoorstellen te beheren wanneer het in dienst nemen met een eindgebruiker die op gegevens wordt gebaseerd die over kanalen en toepassingen worden verzameld.
 
 **Bibliotheek voorstel:** De aanbiedingsbibliotheek is een centrale bibliotheek die wordt gebruikt om gepersonaliseerde en reserveaanbiedingen, besluitvormingsregels, en activiteiten te beheren.
 
