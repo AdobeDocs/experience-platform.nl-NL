@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 'Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API''s. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
@@ -89,17 +89,17 @@ De stappen worden hieronder in detail besproken.
 
 Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Voer vervolgens de stappen uit die worden beschreven in de zelfstudie over het [maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.
 
-Nadat u een nieuw project hebt gemaakt, klikt u op API **** toevoegen in het scherm _Projectoverzicht_ .
+Nadat u een nieuw project hebt gemaakt, klikt u op API **** toevoegen in het scherm **Projectoverzicht** .
 
 ![](images/authentication/add-api-button.png)
 
-Het scherm _Een API_ toevoegen wordt weergegeven. Klik op het productpictogram voor Adobe Experience Platform en selecteer vervolgens de **[!UICONTROL Experience Platform-API]** voordat u op **[!UICONTROL Volgende]** klikt.
+Het scherm **Een API** toevoegen wordt weergegeven. Klik op het productpictogram voor Adobe Experience Platform en selecteer vervolgens de **[!UICONTROL Experience Platform-API]** voordat u op **[!UICONTROL Volgende]** klikt.
 
 ![](images/authentication/add-platform-api.png)
 
 Nadat u hebt geselecteerd [!DNL Experience Platform] als de API die aan het project moet worden toegevoegd, volgt u de stappen in de zelfstudie over het [toevoegen van een API aan een project met een serviceaccount (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (vanaf de stap API configureren) om het proces te voltooien.
 
-Zodra API aan het project is toegevoegd, toont de het overzichtspagina _van het_ [!DNL Experience Platform] Project de volgende geloofsbrieven die in alle vraag aan APIs worden vereist:
+Zodra API aan het project is toegevoegd, toont de het overzichtspagina **van het** [!DNL Experience Platform] Project de volgende geloofsbrieven die in alle vraag aan APIs worden vereist:
 
 * `{API_KEY}` (Client-id)
 * `{IMS_ORG}` (Organisatie-id)
