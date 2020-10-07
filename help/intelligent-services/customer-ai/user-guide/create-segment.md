@@ -5,7 +5,7 @@ title: Maak klantsegmenten met voorspelde scores
 topic: Create a segment
 description: Wanneer een voorspelling is voltooid, worden voorspelde scores voor de dichtheid automatisch verbruikt door profielen. Door profielen te verrijken met AI-scores van de Klant, kunnen klantsegmenten worden gemaakt om een publiek te zoeken op basis van hun populatiescore. Deze sectie verstrekt stappen voor het creëren van segmenten gebruikend de Bouwer van het Segment.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
@@ -25,7 +25,7 @@ In het Platform UI, klik **[!UICONTROL Segmenten]** in de linkernavigatie, en kl
 
 ![](../images/user-guide/segments.png)
 
-De *Segment Builder* wordt weergegeven. Klik in de linkerkolom *Velden* en onder het tabblad *Kenmerken* op de map **[!UICONTROL XDM Individueel profiel]** en klik vervolgens op de map met de naamruimte van uw organisatie. De map met de naam **[!UICONTROL Customer AI]** bevat de resultaten van voorspellingen en krijgt de naam van de instantie waartoe de scores behoren. Klik op een instantiemap om de resultaten van de gewenste instantie te openen.
+De **Segment Builder** wordt weergegeven. Klik in de linkerkolom **[!UICONTROL Velden]** en onder het tabblad **[!UICONTROL Kenmerken]** op de map **[!UICONTROL XDM Individueel profiel]** en klik vervolgens op de map met de naamruimte van uw organisatie. De map met de naam **[!UICONTROL Customer AI]** bevat de resultaten van voorspellingen en krijgt de naam van de instantie waartoe de scores behoren. Klik op een instantiemap om de resultaten van de gewenste instantie te openen.
 
 ![](../images/user-guide/results.png)
 
