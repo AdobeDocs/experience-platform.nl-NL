@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gebruikershandleiding voor Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Dit document bevat stappen voor het maken en beheren van privacyverzoeken via de
 
 ## Bladeren in het [!DNL Privacy Service] UI-dashboard
 
-Het dashboard voor de [!DNL Privacy Service] UI verstrekt twee widgets die u toestaan om de status van uw privacybanen te bekijken: **[!UICONTROL Statusrapport]** en **[!UICONTROL taakverzoeken]**. Op het dashboard wordt ook de huidige geselecteerde regelgeving voor de weergegeven taken weergegeven.
+Het dashboard voor de [!DNL Privacy Service] UI verstrekt twee widgets die u toestaan om de status van uw privacybanen te bekijken: &quot;[!UICONTROL Statusrapport]&quot; en &quot;[!UICONTROL Taakverzoeken]&quot;. Op het dashboard wordt ook de huidige geselecteerde regelgeving voor de weergegeven taken weergegeven.
 
 ![UI-dashboard](../images/user-guide/dashboard.png)
 
@@ -106,7 +106,7 @@ Het dialoogvenster **[!UICONTROL Aanvraag]** maken wordt geopend en hierin worde
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Selecteer het **[!UICONTROL Taaktype]** van de aanvraag (&quot;Schrapping&quot;of &quot;Toegang&quot;) en één of meerdere beschikbare **[!UICONTROL Producten]** van de lijst.
+Selecteer het **[!UICONTROL taaktype]** van de aanvraag (&quot;Verwijderen&quot; of &quot;Toegang&quot;) en een of meer beschikbare producten in de lijst.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
@@ -114,11 +114,11 @@ Selecteer onder **[!UICONTROL Type]** naamruimte het juiste naamruimtetype voor 
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-Wanneer u het _standaardnaamruimtetype_ gebruikt, selecteert u een naamruimte in het keuzemenu (e-mail, ECID of AID) en typt u vervolgens de id-waarden in het tekstvak rechts, waarbij u op **\&lt;enter>** drukt voor elke id om deze toe te voegen aan de lijst.
+Als u het standaardnaamruimtetype gebruikt, selecteert u een naamruimte in het keuzemenu (e-mail, ECID of AID) en typt u vervolgens de id-waarden in het tekstvak rechts, waarbij u op **\&lt;enter>** drukt voor elke id om deze toe te voegen aan de lijst.
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
-Wanneer u het _aangepaste_ naamruimtetype gebruikt, moet u de naamruimte handmatig typen voordat u de onderstaande id-waarden opgeeft.
+Wanneer u het aangepaste naamruimtetype gebruikt, moet u de naamruimte handmatig typen voordat u de onderstaande id-waarden opgeeft.
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
@@ -148,7 +148,7 @@ Als u geen JSON-bestand hebt om te uploaden, klikt u op **[!UICONTROL Download A
 
 Zoek het JSON-bestand op uw computer en sleep het naar het dialoogvenster. Als het uploaden is voltooid, wordt de bestandsnaam weergegeven in het dialoogvenster. U kunt desgewenst meer JSON-bestanden toevoegen door deze naar het dialoogvenster te slepen.
 
-When finished, click **[!UICONTROL Create]**. Het dialoogvenster verdwijnt en de nieuwe taak (of taken) worden samen met de huidige verwerkingsstatus weergegeven in de widget _Taakverzoeken_ .
+When finished, click **[!UICONTROL Create]**. Het dialoogvenster verdwijnt en de nieuwe taak (of taken) worden samen met de huidige verwerkingsstatus weergegeven in de widget Taakverzoeken.
 
 ### Volgende stappen
 
