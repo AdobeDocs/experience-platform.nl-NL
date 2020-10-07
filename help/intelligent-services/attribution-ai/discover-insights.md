@@ -5,7 +5,7 @@ title: Inzichten in Attribution AI ontdekken
 topic: Attribution AI insights
 description: Dit document fungeert als richtlijn voor het communiceren met de inzichten van serviceversies in de gebruikersinterface van Adobe Intelligent Services.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Om inzichten voor Attribution AI te gebruiken, moet u een de dienstinstantie heb
 
 ## Overzicht van inzichten in servicevergaderingen
 
-Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **Services** in de linkernavigatie. De browser *Services* wordt weergegeven en geeft de beschikbare Adobe Intelligente services weer. Klik in de container voor Attribution AI op **Openen**.
+Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **[!UICONTROL Services]** in de linkernavigatie. De browser **[!UICONTROL Services]** wordt weergegeven en geeft de beschikbare Adobe Intelligente services weer. Klik in de container voor Attribution AI op **[!UICONTROL Openen]**.
 
 ![Toegang tot uw exemplaar](./images/insights/open_Attribution_ai.png)
 
@@ -53,20 +53,20 @@ Er wordt een gedetailleerde lijst weergegeven. Raadpleeg de gebruikershandleidin
 
 ### Een instantie bewerken
 
-Als u een instantie wilt bewerken, klikt u op *Bewerken* in de navigatie rechtsboven.
+Als u een instantie wilt bewerken, klikt u op **[!UICONTROL Bewerken]** in de navigatie rechtsboven.
 ![Klik op de knop Bewerken](./images/insights/edit-button.png)
 
-Het dialoogvenster Bewerken wordt geopend, waarin u de beschrijving en de scores van de instantie kunt bewerken. Klik in de rechterbenedenhoek op *Bewerken* om de wijzigingen te bevestigen en het dialoogvenster te sluiten.
+Het dialoogvenster Bewerken wordt geopend, waarin u de beschrijving en de scores van de instantie kunt bewerken. Klik in de rechterbenedenhoek op **[!UICONTROL Bewerken]** om de wijzigingen te bevestigen en het dialoogvenster te sluiten.
 
 ![popup bewerken](./images/insights/edit-popover.png)
 
 ### Meer handelingen {#more-actions}
 
-De knop *Meer handelingen* bevindt zich in de navigatie rechtsboven naast *Bewerken*. Klik op **Meer handelingen** om een vervolgkeuzelijst te openen waarin u een van de volgende bewerkingen kunt selecteren:
+De knop **[!UICONTROL Meer handelingen]** bevindt zich in de navigatie rechtsboven naast *Bewerken*. Klik op **[!UICONTROL Meer handelingen]** om een vervolgkeuzelijst te openen waarin u een van de volgende bewerkingen kunt selecteren:
 
 - **Verwijderen**: Hiermee wordt de instantie verwijderd.
 - **Samenvattingsgegevens** downloaden: Hiermee downloadt u een CSV-bestand met de overzichtsgegevens.
-- **Toegangscores**: Als u op *Toegangsscores* klikt, wordt u omgeleid naar de [toegangscores voor de zelfstudie](./download-scores.md)Attribution AI.
+- **Toegangscores**: Als u op **Toegangsscores** klikt, wordt u omgeleid naar de [toegangscores voor de zelfstudie](./download-scores.md)Attribution AI.
 - **Runtimegeschiedenis** weergeven: Er wordt een pop-upmenu weergegeven met een lijst van alle scoring-reeksen die aan de service-instantie zijn gekoppeld.
 
 ![meer acties](./images/insights/more-actions.png)
@@ -77,31 +77,31 @@ Met Attribution AI-inzichten kunt u uw gegevens filteren en de gebruikersinterfa
 
 >[!NOTE]
 >
->Standaard is elk filter ingesteld op Alles, behalve het filter *Attributiemodel* , dat is ingesteld op &quot;Incrementele en Influenced toewijzingsconversies&quot;.
+>Standaard is elk filter ingesteld op Alles, behalve het filter &quot;[!UICONTROL Attributiemodel]&quot;, dat is ingesteld op &quot;Incrementele en Influenced toewijzingsconversies&quot;.
 
 ### Conversion-gebeurtenis
 
 Wanneer u een nieuwe instantie maakt in Attribution AI, is een van de vereiste velden Conversiegebeurtenissen. Conversiegebeurtenissen zijn bedrijfsdoelstellingen die het effect van marketingactiviteiten, zoals e-commerceorders, aankopen in winkel en websitebezoeken, identificeren.
 
-Vanuit de instantie kunt u met het vervolgkeuzemenu *Conversiegebeurtenissen* een van de gebeurtenissen selecteren die voor de instantie zijn gedefinieerd om uw gegevens te filteren. Als u specifieke gebeurtenissen selecteert, worden de gebruikersinterfacevisualisaties gewijzigd en worden conversies die bij die gebeurtenissen horen alleen gevuld.
+Vanuit de instantie kunt u met het vervolgkeuzemenu **[!UICONTROL Conversiegebeurtenissen]** een van de gebeurtenissen selecteren die voor de instantie zijn gedefinieerd om uw gegevens te filteren. Als u specifieke gebeurtenissen selecteert, worden de gebruikersinterfacevisualisaties gewijzigd en worden conversies die bij die gebeurtenissen horen alleen gevuld.
 
 ![conversiegebeurtenis](./images/insights/conversion-event.png)
 
 ### Attributiemodel
 
-Als u op het *kenmerkingsmodel* klikt, wordt een vervolgkeuzelijst geopend met alle verschillende beschikbare attributiemodellen. U kunt meerdere modellen selecteren om de resultaten te vergelijken. Voor meer informatie over de verschillende attributiemodellen en hoe zij werken, bezoek het overzicht van de [Attribution AI](./overview.md) dat een lijst met informatie over elk model bevat.
+Als u op **[!UICONTROL Attributiemodel]** klikt, wordt een vervolgkeuzelijst geopend met alle verschillende beschikbare attributiemodellen. U kunt meerdere modellen selecteren om de resultaten te vergelijken. Voor meer informatie over de verschillende attributiemodellen en hoe zij werken, bezoek het overzicht van de [Attribution AI](./overview.md) dat een lijst met informatie over elk model bevat.
 
 ![toewijzingsmodel](./images/insights/attribution-model.png)
 
 ### Product
 
-Met het filter *Product* kunt u een keuze maken uit alle producten die u aanvankelijk hebt opgenomen in het ontwerp van uw instantie. Klik op het vervolgkeuzemenu en gebruik de zoekfunctie om snel alle producten te selecteren die u wilt vergelijken.
+Met het filter **[!UICONTROL Product]** kunt u een keuze maken uit alle producten die u aanvankelijk hebt opgenomen in het ontwerp van uw instantie. Klik op het vervolgkeuzemenu en gebruik de zoekfunctie om snel alle producten te selecteren die u wilt vergelijken.
 
 ![productfilter](./images/insights/product-filter.png)
 
 ### Geografie
 
-Met het filter *Geografie* worden landcodes gevuld op basis van regionale modellen. Afhankelijk van uw gegevens kan dit filter al dan niet aanwezig zijn.
+Met het filter **[!UICONTROL Geografie]** worden landcodes gevuld op basis van regionale modellen. Afhankelijk van uw gegevens kan dit filter al dan niet aanwezig zijn.
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ Met dit filter kunt u alle gebieden selecteren die u hebt ingesteld in het proce
 
 ### Kanaal
 
-Klik op het filter *Kanaal* om een vervolgkeuzelijst weer te geven met al uw beschikbare marketingkanalen. U kunt meerdere kanalen selecteren om ze te vergelijken.
+Klik op het filter **[!UICONTROL Kanaal]** om een vervolgkeuzelijst weer te geven met al uw beschikbare marketingkanalen. U kunt meerdere kanalen selecteren om ze te vergelijken.
 
 ![Kanaal](./images/insights/channel.png)
 
@@ -129,13 +129,13 @@ Klik op het kalenderpictogram om de popover van het datumbereik te openen. De be
 
 ## Overzicht van uw gegevens
 
-De *kaart van het Overzicht* toont uw totale omzettingen door attributiemodel. Het totale aantal verandert op basis van hoe specifiek u de zoekopdracht maakt met de filters die eerder in dit document zijn beschreven. Als u meer modellen selecteert, worden extra cirkels aan het overzicht toegevoegd, elk met een eigen kleur die overeenkomt met de legenda.
+De **[!UICONTROL kaart van het Overzicht]** toont uw totale omzettingen door attributiemodel. Het totale aantal verandert op basis van hoe specifiek u de zoekopdracht maakt met de filters die eerder in dit document zijn beschreven. Als u meer modellen selecteert, worden extra cirkels aan het overzicht toegevoegd, elk met een eigen kleur die overeenkomt met de legenda.
 
-![overzicht](./images/insights/Overview.png)
+![ - overzicht](./images/insights/Overview.png)
 
 ## Wekelijkse trends
 
-De *kaart voor wekelijkse trends* splitst uw totale conversie in op het datumbereik dat u instelt tijdens het filterproces.
+De **[!UICONTROL kaart voor wekelijkse trends]** splitst uw totale conversie in op het datumbereik dat u instelt tijdens het filterproces.
 
 ![trends](./images/insights/weekly-trends.png)
 
@@ -147,17 +147,17 @@ Als u de muis boven de gegevensregel van een specifiek toewijzingsmodel houdt, w
 
 ## Uitsplitsing naar kanaal
 
-De *uitsplitsing per kanaal* wordt gebruikt om het totale aantal omzettingen met betrekking tot elk kanaal te bepalen. Deze kaart kan worden gebruikt om beslissingen te nemen over de doeltreffendheid van elk kanaal en het rendement van investeringen.
+De **[!UICONTROL uitsplitsing per kanaal]** wordt gebruikt om het totale aantal omzettingen met betrekking tot elk kanaal te bepalen. Deze kaart kan worden gebruikt om beslissingen te nemen over de doeltreffendheid van elk kanaal en het rendement van investeringen.
 
 ![uitsplitsingskanaal](./images/insights/channel-breakdown.png)
 
-Als u klikt op de ellipsen rechtsboven in de kaart *Onderbreken via kanaal* , wordt een vervolgkeuzelijst geopend waarin u gegevens kunt vullen op basis van aanraakpunten.
+Als u klikt op de ellipsen rechtsboven in de kaart **[!UICONTROL Onderbreken via kanaal]** , wordt een vervolgkeuzelijst geopend waarin u gegevens kunt vullen op basis van aanraakpunten.
 
 ![aanraakpunten](./images/insights/breakdown-by-touchpoints.png)
 
 ## Beste campagnes
 
-De *bovenste campagnerekaart* geeft een overzicht van uw campagnes en hoe de campagne in elk kanaal presteert. Deze kaart kan uw team helpen de doeltreffendheid van een specifieke campagne voor een bepaald kanaal te informeren en inzicht te geven in waar te om verder te investeren.
+De **[!UICONTROL bovenste campagnerekaart]** geeft een overzicht van uw campagnes en hoe de campagne in elk kanaal presteert. Deze kaart kan uw team helpen de doeltreffendheid van een specifieke campagne voor een bepaald kanaal te informeren en inzicht te geven in waar te om verder te investeren.
 
 ![topcampagnes](./images/insights/top-campaigns.png)
 
