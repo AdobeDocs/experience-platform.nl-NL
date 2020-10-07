@@ -5,7 +5,7 @@ title: Behandeling van een privacyverzoek in het Data Lake
 topic: overview
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonsgegevens te verwijderen, zoals bepaald in wettelijke en organisatorische privacyregels. Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor klantgegevens die in het Datameer zijn opgeslagen.
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 0%
@@ -30,7 +30,7 @@ U wordt aangeraden de volgende [!DNL Experience Platform] services goed te begri
 
 ## Naamruimten voor identiteiten {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] biedt een brug tussen identiteitsgegevens van klanten op systemen en apparaten. [!DNL Identity Service] gebruikt **[!UICONTROL naamruimten]** om context aan identiteitswaarden te verstrekken door hen met hun systeem van oorsprong te verbinden. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;e-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] biedt een brug tussen identiteitsgegevens van klanten op systemen en apparaten. [!DNL Identity Service] gebruikt naamruimten om context aan identiteitswaarden te verstrekken door hen met hun systeem van oorsprong te verbinden. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;e-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
 
 [!DNL Identity Service] onderhoudt een opslag van algemeen gedefinieerde (standaard) en door de gebruiker gedefinieerde (aangepaste) naamruimten. Standaard naamruimten zijn beschikbaar voor alle organisaties (bijvoorbeeld E-mail en ECID), terwijl uw organisatie aangepaste naamruimten kan maken die aan de specifieke behoeften voldoen.
 
@@ -38,7 +38,7 @@ Zie het overzicht [!DNL Experience Platform]van naamruimte voor [identiteiten in
 
 ## Identiteitsgegevens toevoegen aan gegevenssets
 
-Wanneer het creëren van privacyverzoeken voor [!DNL Data Lake], moeten de geldige identiteitswaarden (en hun bijbehorende namespaces) voor elke individuele klant worden verstrekt om van hun gegevens de plaats te bepalen en het dienovereenkomstig te verwerken. Daarom moeten alle datasets die aan privacyverzoeken onderworpen zijn een **[!UICONTROL identiteitsbeschrijver]** in hun bijbehorend schema XDM bevatten.
+Wanneer het creëren van privacyverzoeken voor [!DNL Data Lake], moeten de geldige identiteitswaarden (en hun bijbehorende namespaces) voor elke individuele klant worden verstrekt om van hun gegevens de plaats te bepalen en het dienovereenkomstig te verwerken. Daarom moeten alle datasets die aan privacyverzoeken onderworpen zijn een identiteitsbeschrijver in hun bijbehorend schema XDM bevatten.
 
 >[!NOTE]
 >
