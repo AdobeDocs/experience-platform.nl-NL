@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 'Scores in de Adobe Experience Platform Data Science Workspace kunnen worden bereikt door invoergegevens in te voeren in een bestaand getraind model. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Er wordt een scoring-run gemaakt met geoptimaliseerde configuraties van een eerd
 
 1. Vind de meest optimale trainingslooppas om zijn configuraties voor het scoren te gebruiken. Open de gewenste trainingsrun door op de naam ervan te klikken.
 
-2. Klik op het tabblad **[!UICONTROL Evaluatie]** van trainingsrun op de knop **[!UICONTROL Score]** rechtsboven in het scherm. Hiermee wordt een nieuwe workflow voor *Run Scoring* gestart.
+2. Klik op het tabblad **[!UICONTROL Evaluatie]** van trainingsrun op de knop **[!UICONTROL Score]** rechtsboven in het scherm. Hiermee wordt een nieuwe workflow voor **Run Scoring** gestart.
    ![](../images/models-recipes/score/training_run_overview.png)
 
 3. Selecteer de gegevensset voor het noteren van de invoer en klik op **[!UICONTROL Volgende]**.
