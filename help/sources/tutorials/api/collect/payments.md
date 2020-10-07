@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een betalingstoepassing en het opnemen ervan in het Platform via bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1743'
 ht-degree: 0%
@@ -22,7 +22,7 @@ In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens va
 
 ## Aan de slag
 
-Deze zelfstudie vereist dat u toegang hebt tot een betalingssysteem via een geldige verbinding, en dat u informatie hebt over het bestand waarin u het bestand wilt plaatsen [!DNL Platform] (inclusief het pad en de structuur van het bestand). Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van een betalingstoepassing met behulp van de Flow Service API](../explore/payments.md) voordat u deze zelfstudie probeert.
+Deze zelfstudie vereist dat u toegang hebt tot een betalingssysteem via een geldige verbinding, en dat u informatie hebt over het bestand waarin u het bestand wilt plaatsen [!DNL Platform] (inclusief het pad en de structuur van het bestand). Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van een betalingstoepassing met de Flow Service API](../explore/payments.md) voordat u deze zelfstudie probeert.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
@@ -69,7 +69,7 @@ Als een ad-hoc XDM-schema is gemaakt, kan nu een bronverbinding worden gemaakt m
 
 Als u een bronverbinding wilt maken, moet u ook een opsommingswaarde voor het kenmerk voor de gegevensindeling definiëren.
 
-Gebruik de volgende opsommingswaarden voor op **bestanden gebaseerde connectors**:
+Gebruik de volgende enum waarden voor op dossier-gebaseerde schakelaars:
 
 | Data.format | Enumwaarde |
 | ----------- | ---------- |
@@ -77,7 +77,7 @@ Gebruik de volgende opsommingswaarden voor op **bestanden gebaseerde connectors*
 | JSON-bestanden | `json` |
 | Parketbestanden | `parquet` |
 
-Voor alle op **lijst-gebaseerde schakelaars** gebruik de enum waarde: `tabular`.
+Voor alle op lijst-gebaseerde schakelaars gebruiken de enum waarde: `tabular`.
 
 **API-indeling**
 
