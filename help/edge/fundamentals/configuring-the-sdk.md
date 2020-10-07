@@ -5,7 +5,7 @@ description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 4%
@@ -143,7 +143,7 @@ Laat [!DNL Audience Manager] koekjesbestemmingen toe, die het plaatsen van koekj
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | `true` |
 
-Laat [!DNL Audience Manager] URL bestemmingen toe, die het vuren van URLs toestaat die op segmentkwalificatie wordt gebaseerd.
+Hiermee schakelt u [!DNL Audience Manager] URL-doelen in, zodat URL&#39;s kunnen worden geactiveerd op basis van segmentkwalificatie.
 
 ## Identiteitsopties
 
