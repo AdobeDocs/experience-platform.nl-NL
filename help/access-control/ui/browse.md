@@ -5,7 +5,7 @@ title: Bladeren in de werkruimte voor toegangsbeheer
 topic: user guide
 description: In dit document worden de stappen beschreven die nodig zijn om door de werkruimte voor toegangsbeheer te bladeren. Om toegangsbeheer voor Experience Platform door Adobe Admin Console te vormen, moet u een beheerder voor een IMS Organisatie zijn die een abonnement op Experience Platform heeft.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 # Bladeren in de werkruimte voor toegangsbeheer
 
-Als u toegangsbeheer voor [!DNL Experience Platform] via de Adobe Admin Console wilt configureren, moet u een beheerder zijn voor een IMS-organisatie die een abonnement heeft op [!DNL Experience Platform]. Terwijl Adobe flexibele beheerderhiërarchieën voor IMS Orgs steunt, moet u **[!UICONTROL systeembeheerder]**, **[!UICONTROL productbeheerder]**, of de beheerdervoorrechten **[!UICONTROL van het]** productprofiel hebben om toegangsbeheer te vormen. Zie het Adobe Help Center-artikel over [administratieve rollen](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie.
+Als u toegangsbeheer voor [!DNL Experience Platform] via de Adobe Admin Console wilt configureren, moet u een beheerder zijn voor een IMS-organisatie die een abonnement heeft op [!DNL Experience Platform]. Terwijl Adobe flexibele beheerderhiërarchieën voor IMS Orgs steunt, moet u systeembeheerder, productbeheerder, of de beheerdervoorrechten van het productprofiel hebben om toegangsbeheer te vormen. Zie het Adobe Help Center-artikel over [administratieve rollen](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie.
 
 Als u geen beheerdersrechten hebt, neemt u contact op met de systeembeheerder om toegang te krijgen.
 
