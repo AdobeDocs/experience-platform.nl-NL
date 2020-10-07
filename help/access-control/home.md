@@ -5,7 +5,7 @@ topic: overview
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 1%
@@ -19,7 +19,7 @@ Toegangsbeheer voor [!DNL Experience Platform] wordt verstrekt door [Adobe Admin
 
 ## Toegangsbeheerhiërarchie en -workflow
 
-Om toegangsbeheer voor te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een [!DNL Experience Platform][!DNL Experience Platform] productintegratie heeft. De minimale rol die machtigingen verleent of intrekt, is een beheerder **[!UICONTROL van het]** productprofiel. Andere beheerdersrollen die machtigingen kunnen beheren, zijn **[!UICONTROL productbeheerders]** (die alle profielen binnen een product kunnen beheren) en **[!UICONTROL systeembeheerders]** (geen beperkingen). Zie het Adobe Help Center-artikel over [administratieve rollen](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie.
+Om toegangsbeheer voor te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een [!DNL Experience Platform][!DNL Experience Platform] productintegratie heeft. De minimale rol die machtigingen verleent of intrekt, is een beheerder van het productprofiel. Andere beheerdersrollen die machtigingen kunnen beheren, zijn productbeheerders (die alle profielen binnen een product kunnen beheren) en systeembeheerders (geen beperkingen). Zie het Adobe Help Center-artikel over [administratieve rollen](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Adobe Admin Console biedt een centrale locatie voor het beheer van Adobe-product
 
 ### Productprofielen
 
-In de [!DNL Admin Console]sectie worden machtigingen aan gebruikers toegewezen via het gebruik van **[!UICONTROL productprofielen]**. Met productprofielen kunt u machtigingen verlenen aan een of meerdere gebruikers en ook toegang tot het bereik van de sandboxen bevatten die via productprofielen aan hen zijn toegewezen. Gebruikers kunnen worden toegewezen aan een of meerdere productprofielen die bij uw organisatie horen.
+In de [!DNL Admin Console]sectie worden machtigingen aan gebruikers toegewezen via het gebruik van productprofielen. Met productprofielen kunt u machtigingen verlenen aan een of meerdere gebruikers en ook toegang tot het bereik van de sandboxen bevatten die via productprofielen aan hen zijn toegewezen. Gebruikers kunnen worden toegewezen aan een of meerdere productprofielen die bij uw organisatie horen.
 
 ### Standaardproductprofielen
 
@@ -57,7 +57,7 @@ In de [!DNL Admin Console]sectie worden machtigingen aan gebruikers toegewezen v
 
 ## Sandboxen en machtigingen
 
-Niet-productiesandboxen zijn een vorm van gegevensvirtualisatie waarmee u gegevens kunt isoleren van andere sandboxen. Deze sandboxen worden doorgaans gebruikt voor ontwikkelingsexperimenten, -tests of -tests. De **[!UICONTROL machtigingen]** van een productprofiel geven de gebruikers van het profiel toegang tot [!DNL Platform] functies in de sandboxomgevingen waartoe zij toegang hebben. Een standaardlicentie voor Experience Platforms geeft u vijf sandboxen (één productie en vier niet-productie). U kunt in totaal maximaal 75 sandboxen toevoegen aan pakketten van tien niet-productiesandboxen. Neem voor meer informatie contact op met uw IMS Org Administrator of uw Adobe-vertegenwoordiger.
+Niet-productiesandboxen zijn een vorm van gegevensvirtualisatie waarmee u gegevens kunt isoleren van andere sandboxen. Deze sandboxen worden doorgaans gebruikt voor ontwikkelingsexperimenten, -tests of -tests. De machtigingen van een productprofiel geven de gebruikers van het profiel toegang tot [!DNL Platform] functies in de sandboxomgevingen waartoe zij toegang hebben. Een standaardlicentie voor Experience Platforms geeft u vijf sandboxen (één productie en vier niet-productie). U kunt in totaal maximaal 75 sandboxen toevoegen aan pakketten van tien niet-productiesandboxen. Neem voor meer informatie contact op met uw IMS Org Administrator of uw Adobe-vertegenwoordiger.
 
 Raadpleeg het overzicht [!DNL Experience Platform]van de [sandboxen voor meer informatie over de sandboxen in](../sandboxes/home.md)de.
 
@@ -71,7 +71,7 @@ Met de machtiging Sandboxbeheer kunnen gebruikers sandboxen beheren, weergeven o
 
 ### Toestemmingen
 
-Op het tabblad **Machtigingen** in een productprofiel worden de sandboxen en machtigingen weergegeven die actief zijn voor dat profiel:
+Op het tabblad Machtigingen in een productprofiel worden de sandboxen en machtigingen weergegeven die actief zijn voor dat profiel:
 
 ![](./images/permissions-overview.png)
 
