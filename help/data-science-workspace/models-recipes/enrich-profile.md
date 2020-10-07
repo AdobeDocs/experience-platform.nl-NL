@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Dit document verstrekt een geleidelijke zelfstudie om het Profiel van de Klant in real time met machine het leren inzichten te verrijken, zijn de stappen gebroken in de volgende secties, tot een outputschema/dataset leiden, een outputschema/dataset vormen, en segmenten creëren gebruikend de Bouwer van het Segment.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 0%
@@ -43,10 +43,10 @@ De eerste stap naar verrijking [!DNL Real-time Customer Profile] met inzichten i
 
 Het samenstellen van een schema begint door een klasse toe te wijzen. De klassen bepalen de gedragsaspecten van de gegevens het schema (verslag of tijdreeks) zal bevatten. Deze sectie verstrekt basisinstructies om een schema tot stand te brengen gebruikend de schemabouwer. Voor een meer diepgaande zelfstudie raadpleegt u de zelfstudie over het [maken van een schema met de Schema-editor](../../xdm/tutorials/create-schema-ui.md).
 
-1. Klik in Adobe Experience Platform op het tabblad **[!UICONTROL Schema]** om de schemabrowser te openen. Klik **[!UICONTROL creëren Schema]** toegang tot de Redacteur *van het*Schema, waar u schema&#39;s op elkaar inwerkend kunt bouwen en creëren.
+1. Klik in Adobe Experience Platform op het tabblad **[!UICONTROL Schema]** om de schemabrowser te openen. Klik **[!UICONTROL creëren Schema]** toegang tot de Redacteur **van het**Schema, waar u schema&#39;s op elkaar inwerkend kunt bouwen en creëren.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. Klik in het venster *Compositie* op **[!UICONTROL Toewijzen]** om door de beschikbare klassen te bladeren.
+2. Klik in het venster **Compositie** op **[!UICONTROL Toewijzen]** om door de beschikbare klassen te bladeren.
    * Als u een bestaande klasse wilt toewijzen, klikt u op de gewenste klasse en markeert u deze. Klik vervolgens op Klasse ****toewijzen.
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
@@ -55,7 +55,7 @@ Het samenstellen van een schema begint door een klasse toe te wijzen. De klassen
 
    Op dit punt moet de structuur van uw schema enkele klassevelden bevatten en u kunt nu mixen toewijzen. Een mix is een groep van één of meerdere gebieden die een bepaald concept beschrijven.
 
-3. Klik in het venster *Compositie* op **[!UICONTROL Toevoegen]** in de subsectie *Mixins* .
+3. Klik in het venster **Compositie** op **[!UICONTROL Toevoegen]** in de subsectie **Mixins** .
    * Als u een bestaande mix wilt toewijzen, klikt u op de gewenste mix en markeert u deze. Klik vervolgens op **[!UICONTROL Mixin]**toevoegen. In tegenstelling tot klassen, kunnen de veelvoudige mengen aan één enkel schema worden toegewezen zolang het aangewezen is om dit te doen.
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
