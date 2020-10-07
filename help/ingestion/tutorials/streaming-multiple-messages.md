@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Dit document bevat een zelfstudie voor het verzenden van meerdere berichten naar Adobe Experience Platform binnen één HTTP-aanvraag via streaming invoer.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1487'
 ht-degree: 1%
@@ -45,7 +45,7 @@ Na het registreren van een het stromen verbinding, zult u, als gegevensproducent
 
 Het volgende voorbeeld toont hoe te om veelvoudige berichten naar een specifieke dataset binnen één enkel HTTP- verzoek te verzenden. Neem identiteitskaart van de dataset in de berichtkopbal op om dat bericht direct in het te hebben worden opgenomen.
 
-U kunt de id voor een bestaande gegevensset ophalen met behulp van de [!DNL Platform] UI of met behulp van een lijstbewerking in de API. De dataset identiteitskaart kan op [Experience Platform](https://platform.adobe.com) worden gevonden door naar het lusje van **[!UICONTROL Datasets]** te gaan, op de dataset te klikken u identiteitskaart voor, en het kopiëren van het koord van het gebied van identiteitskaart **[!UICONTROL van de]** Dataset op het **[!UICONTROL Info]** lusje wilt. Zie het overzicht [van de Dienst van de](../../catalog/home.md) Catalogus voor informatie over hoe te om datasets terug te winnen gebruikend API.
+U kunt de id voor een bestaande gegevensset ophalen met behulp van de [!DNL Platform] UI of met behulp van een lijstbewerking in de API. De dataset identiteitskaart kan op [Experience Platform](https://platform.adobe.com) worden gevonden door naar het lusje van **[!UICONTROL Datasets]** te gaan, op de dataset te klikken u identiteitskaart voor, en het kopiëren van het koord van het gebied van identiteitskaart van de dataset op het **[!UICONTROL lusje van Info]** wilt. Zie het overzicht [van de Dienst van de](../../catalog/home.md) Catalogus voor informatie over hoe te om datasets terug te winnen gebruikend API.
 
 In plaats van een bestaande dataset te gebruiken, kunt u een nieuwe dataset tot stand brengen. Lees gelieve te [creëren een dataset gebruikend APIs](../../catalog/api/create-dataset.md) zelfstudie voor meer informatie over het creëren van een dataset gebruikend APIs.
 
@@ -543,7 +543,7 @@ In de volgende tabel worden statuscodes weergegeven die zijn geretourneerd door 
 
 | Statuscode | Beschrijving |
 | :---: | --- |
-| 207 | Hoewel &#39;207&#39; wordt gebruikt als de algemene antwoordstatuscode, moet de ontvanger de inhoud van het multistatus responsorgaan raadplegen voor meer informatie over het al dan niet slagen van de methodeuitvoering. De antwoordcode wordt gebruikt in succes, gedeeltelijk succes, en ook in mislukkingssituaties. |
+| 207 | Hoewel &#39;207&#39; wordt gebruikt als de algemene responsstatuscode, moet de ontvanger de inhoud van het multi-status responsorgaan raadplegen voor meer informatie over het al dan niet slagen van de methodeuitvoering. De antwoordcode wordt gebruikt in succes, gedeeltelijk succes, en ook in mislukkingssituaties. |
 | 400 | Er is een probleem met het verzoek. Zie de antwoordtekst voor een specifieker foutbericht (Bericht dat vereiste velden voor de payload ontbreken of Bericht dat de indeling xdm onbekend is). |
 | 401 | Niet bevoegd: verzoek bevat geen geldige machtigingheader. Dit is slechts teruggekeerd voor inlaten die toegelaten authentificatie hebben. |
 | 403 | Niet bevoegd:  Opgegeven machtigingstoken is ongeldig of verlopen. Dit is slechts teruggekeerd voor inlaten die toegelaten authentificatie hebben. |
