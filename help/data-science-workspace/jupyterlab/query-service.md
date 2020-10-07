@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Met Adobe Experience Platform kunt u SQL (Structured Query Language) gebruiken in de Data Science Workspace door Query Service te integreren in JupyterLab als een standaardfunctie. In deze zelfstudie wordt een voorbeeld gegeven van SQL-query's voor veelvoorkomende gebruiksscenario's voor het verkennen, transformeren en analyseren van Adobe Analytics-gegevens.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -104,7 +104,7 @@ Wanneer een laptop gedurende langere tijd inactief is, kan de verbinding tussen 
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-De notebookkernel wordt opnieuw ingesteld, maar de cellen blijven, en **[!UICONTROL alle]** cellen worden opnieuw uitgevoerd om verder te gaan waar u was weggegaan.
+De notebookkernel wordt opnieuw ingesteld, maar de cellen blijven, en **alle** cellen worden opnieuw uitgevoerd om verder te gaan waar u was weggegaan.
 
 ### Aantal uren bezoeker {#hourly-visitor-count}
 
