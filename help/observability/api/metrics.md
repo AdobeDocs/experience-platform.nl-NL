@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Beschikbare cijfers
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: ae6f220cdec54851fb78b7ba8a8eb19f2d06b684
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 2%
+source-wordcount: '2007'
+ht-degree: 1%
 
 ---
 
@@ -22,11 +22,18 @@ Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [
 
 ## Metrische waarden voor waarneembaarheid ophalen
 
-U kunt de metriek van de waarneembaarheid terugwinnen door een verzoek van de GET tot het `/metrics` eindpunt in [!DNL Observability Insights] API te richten.
+Er zijn twee ondersteunde methoden voor het ophalen van metrische gegevens met behulp van de API:
+
+* [Versie 1](#v1): Geef metrische gegevens op met behulp van queryparameters.
+* [Versie 2](#v2): Geef filters op en pas ze toe op metrische getallen met behulp van een JSON-payload.
+
+### Versie 1 {#v1}
+
+U kunt metrische gegevens terugwinnen door een verzoek van de GET aan het `/metrics` eindpunt te doen, die metriek door het gebruik van vraagparameters specificeren.
 
 **API-indeling**
 
-Wanneer het gebruiken van het `/metrics` eindpunt, moet minstens één metrische verzoekparameter worden verstrekt. Andere vraagparameters zijn facultatief voor het filtreren resultaten.
+In de `metric` parameter moet ten minste één metrische waarde worden opgegeven. Andere vraagparameters zijn facultatief voor het filtreren resultaten.
 
 ```http
 GET /metrics?metric={METRIC}
@@ -39,7 +46,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{METRIC}` | De metrisch u wilt blootstellen. Wanneer het combineren van veelvoudige metriek in één enkele vraag, moet u ampersand (`&`) gebruiken om individuele metriek te scheiden. Bijvoorbeeld, `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | De id voor een bepaalde [!DNL Platform] bron waarvan u de meetgegevens wilt weergeven. Deze id kan optioneel, vereist of niet van toepassing zijn, afhankelijk van de gebruikte maatstaven. Zie de [bijlage](#available-metrics) voor een lijst van beschikbare metriek, evenals gesteunde IDs (zowel vereist als facultatief) voor elke metrisch. |
+| `{ID}` | De id voor een bepaalde [!DNL Platform] bron waarvan u de meetgegevens wilt weergeven. Deze id kan optioneel, vereist of niet van toepassing zijn, afhankelijk van de gebruikte maatstaven. Zie de [bijlage](#available-metrics) voor een lijst van beschikbare metriek, met inbegrip van gesteunde (zowel vereiste als facultatieve) identiteitskaarts voor elke metrisch. |
 | `{DATE_RANGE}` | Het datumbereik voor de metriek die u wilt weergeven, in de ISO 8601-indeling (bijvoorbeeld `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
 
 **Verzoek**
@@ -59,53 +66,208 @@ Een geslaagde reactie retourneert een lijst met objecten die elk een tijdstempel
 
 ```json
 {
-    "id": "5cf8ab4ec48aba145214abeb",
-    "imsOrgId": "{IMS_ORG}",
-    "timeseries": {
-        "granularity": "MONTH",
-        "items": [
-            {
-                "timestamp": "2019-06-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 1125,
-                    "timeseries.ingestion.dataset.size": 32320
-                }
-            },
-            {
-                "timestamp": "2019-05-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 1003,
-                    "timeseries.ingestion.dataset.size": 31409
-                }
-            },
-            {
-                "timestamp": "2019-04-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 740,
-                    "timeseries.ingestion.dataset.size": 25809
-                }
-            },
-            {
-                "timestamp": "2019-03-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 740,
-                    "timeseries.ingestion.dataset.size": 25809
-                }
-            },
-            {
-                "timestamp": "2019-02-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 390,
-                    "timeseries.ingestion.dataset.size": 16801
-                }
-            }
-        ],
-        "_page": null,
-        "_links": null
-    },
-    "stats": {}
+  "id": "5cf8ab4ec48aba145214abeb",
+  "imsOrgId": "{IMS_ORG}",
+  "timeseries": {
+    "granularity": "MONTH",
+    "items": [
+      {
+        "timestamp": "2019-06-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 1125,
+          "timeseries.ingestion.dataset.size": 32320
+        }
+      },
+      {
+        "timestamp": "2019-05-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 1003,
+          "timeseries.ingestion.dataset.size": 31409
+        }
+      },
+      {
+        "timestamp": "2019-04-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 740,
+          "timeseries.ingestion.dataset.size": 25809
+        }
+      },
+      {
+        "timestamp": "2019-03-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 740,
+          "timeseries.ingestion.dataset.size": 25809
+        }
+      },
+      {
+        "timestamp": "2019-02-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 390,
+          "timeseries.ingestion.dataset.size": 16801
+        }
+      }
+    ],
+    "_page": null,
+    "_links": null
+  },
+  "stats": {}
 }
 ```
+
+### Versie 2 {#v2}
+
+U kunt metrieke gegevens terugwinnen door een verzoek van de POST aan het `/metrics` eindpunt te doen, specificerend de metriek u wenst om in de nuttige lading terug te winnen.
+
+**API-indeling**
+
+```http
+POST /metrics
+```
+
+**Verzoek**
+
+```sh
+curl -X POST \
+  https://platform.adobe.io/data/infrastructure/observability/insights/metrics \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "start": "2020-07-14T00:00:00.000Z",
+        "end": "2020-07-22T00:00:00.000Z",
+        "granularity": "day",
+        "metrics": [
+          {
+            "name": "timeseries.ingestion.dataset.recordsuccess.count",
+            "filters": [
+              {
+                "name": "dataSetId",
+                "value": "5edcfb2fbb642119194c7d94|5eddb21420f516191b7a8dad",
+                "groupBy": true
+              }
+            ],
+            "aggregator": "sum",
+            "downsample": "sum"
+          },
+          {
+            "name": "timeseries.ingestion.dataset.dailysize",
+            "filters": [
+              {
+                "name": "dataSetId",
+                "value": "5eddb21420f516191b7a8dad",
+                "groupBy": false
+              }
+            ],
+            "aggregator": "sum",
+            "downsample": "sum"
+          }
+        ]
+      }'
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `start` | De vroegste datum/tijd waarvan om metrische gegevens terug te winnen. |
+| `end` | De recentste datum/tijd waarvan om metrische gegevens terug te winnen. |
+| `granularity` | Een optioneel veld waarmee het tijdsinterval wordt aangegeven waarbinnen metrische gegevens moeten worden verdeeld. Bijvoorbeeld, `DAY` keert een waarde van metriek voor elke dag tussen de `start` en `end` datum terug, terwijl een waarde van metrische resultaten door maand in plaats daarvan `MONTH` zou groeperen. Wanneer u dit veld gebruikt, moet ook een corresponderende `downsample` eigenschap worden opgegeven die de samenvoegfunctie aangeeft waarmee gegevens moeten worden gegroepeerd. |
+| `metrics` | Een array van objecten, één voor elke metrische waarde die u wilt ophalen. |
+| `name` | De naam van een metrische waarde die wordt erkend door Observability Insights. Zie het [bijlage](#available-metrics) voor een volledige lijst van toegelaten metrische namen. |
+| `filters` | Een facultatief gebied dat u toestaat om metriek door specifieke datasets te filtreren. Het veld is een array van objecten (één voor elk filter), waarbij elk object de volgende eigenschappen bevat: <ul><li>`name`: Het type entiteit waarop maatgegevens moeten worden gefilterd. Momenteel wordt alleen `dataSets` ondersteund.</li><li>`value`: De id van een of meer gegevenssets. De veelvoudige dataset IDs kan als één enkel koord worden verstrekt, met elke identiteitskaart die door verticale barkarakters (`|`) wordt gescheiden.</li><li>`groupBy`: Wanneer geplaatst aan waar, wijst erop dat het corresponderen veelvoudige datasets `value` vertegenwoordigt de waarvan metrische resultaten afzonderlijk zouden moeten zijn teruggekeerd. Indien ingesteld op false, worden de metrische resultaten voor die datasets gegroepeerd.</li></ul> |
+| `aggregator` | Geeft de aggregatiefunctie aan die moet worden gebruikt om records met meerdere tijdreeksen te groeperen in één resultaat. Raadpleeg de [OpenTSDB-documentatie](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html)voor gedetailleerde informatie over beschikbare aggregators. |
+| `downsample` | Een optioneel veld waarmee u een samenvoegfunctie kunt opgeven om de bemonsteringsfrequentie van metrische gegevens te verminderen door velden in intervallen te sorteren (of &quot;emmers&quot;). Het interval voor downsampling wordt bepaald door het `granularity` bezit. Raadpleeg de [OpenTSDB-documentatie](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html)voor gedetailleerde informatie over downsampling. |
+
+**Antwoord**
+
+Een succesvolle reactie keert de resulterende datapoints voor de metriek en de filters terug die in het verzoek worden gespecificeerd.
+
+```json
+{
+  "metricResponses": [
+    {
+      "metric": "timeseries.ingestion.dataset.recordsuccess.count",
+      "filters": [
+        {
+          "name": "dataSetId",
+          "value": "5edcfb2fbb642119194c7d94|5eddb21420f516191b7a8dad",
+          "groupBy": true
+        }
+      ],
+      "datapoints": [
+        {
+          "groupBy": {
+            "dataSetId": "5edcfb2fbb642119194c7d94"
+          },
+          "dps": {
+            "2020-07-14T00:00:00Z": 44.0,
+            "2020-07-15T00:00:00Z": 46.0,
+            "2020-07-16T00:00:00Z": 36.0,
+            "2020-07-17T00:00:00Z": 50.0,
+            "2020-07-18T00:00:00Z": 38.0,
+            "2020-07-19T00:00:00Z": 40.0,
+            "2020-07-20T00:00:00Z": 42.0,
+            "2020-07-21T00:00:00Z": 42.0,
+            "2020-07-22T00:00:00Z": 50.0
+          }
+        },
+        {
+          "groupBy": {
+            "dataSetId": "5eddb21420f516191b7a8dad"
+          },
+          "dps": {
+            "2020-07-14T00:00:00Z": 44.0,
+            "2020-07-15T00:00:00Z": 46.0,
+            "2020-07-16T00:00:00Z": 36.0,
+            "2020-07-17T00:00:00Z": 50.0,
+            "2020-07-18T00:00:00Z": 38.0,
+            "2020-07-19T00:00:00Z": 40.0,
+            "2020-07-20T00:00:00Z": 42.0,
+            "2020-07-21T00:00:00Z": 42.0,
+            "2020-07-22T00:00:00Z": 50.0
+          }
+        }
+      ],
+      "granularity": "DAY"
+    },
+    {
+      "metric": "timeseries.ingestion.dataset.dailysize",
+      "filters": [
+        {
+          "name": "dataSetId",
+          "value": "5eddb21420f516191b7a8dad",
+          "groupBy": false
+        }
+      ],
+      "datapoints": [
+        {
+          "groupBy": {},
+          "dps": {
+            "2020-07-14T00:00:00Z": 38455.0,
+            "2020-07-15T00:00:00Z": 40213.0,
+            "2020-07-16T00:00:00Z": 31476.0,
+            "2020-07-17T00:00:00Z": 43705.0,
+            "2020-07-18T00:00:00Z": 33227.0,
+            "2020-07-19T00:00:00Z": 34977.0,
+            "2020-07-20T00:00:00Z": 36735.0,
+            "2020-07-21T00:00:00Z": 36737.0,
+            "2020-07-22T00:00:00Z": 43715.0
+          }
+        }
+      ],
+      "granularity": "DAY"
+    }
+  ]
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `metricResponses` | Een array waarvan de objecten elk van de metriek vertegenwoordigen die in de aanvraag is opgegeven. Elk object bevat informatie over de filterconfiguratie en heeft metrische gegevens geretourneerd. |
+| `metric` | De naam van een van de metriek die in de aanvraag wordt opgegeven. |
+| `filters` | De filterconfiguratie voor gespecificeerde metrisch. |
+| `datapoints` | Een array waarvan de objecten de resultaten van de opgegeven metrische waarde en filters vertegenwoordigen. Het aantal objecten in de array is afhankelijk van de filteropties in de aanvraag. Als er geen filters zijn opgegeven, bevat de array slechts één object dat alle gegevenssets vertegenwoordigt. |
+| `groupBy` | Als de veelvoudige datasets in het `filter` bezit voor metrisch werden gespecificeerd, en de `groupBy` optie werd geplaatst aan waar in het verzoek, zal dit voorwerp identiteitskaart van de dataset bevatten die het overeenkomstige `dps` bezit op van toepassing is.<br><br>Als dit object leeg lijkt in de reactie, is de corresponderende `dps` eigenschap van toepassing op alle gegevenssets die in de `filters` array zijn opgenomen (of op alle gegevenssets waarin [!DNL Platform] als er geen filters zijn opgegeven). |
+| `dps` | De teruggekeerde gegevens voor bepaalde metrisch, filter, en tijdwaaier. Elke sleutel in dit object vertegenwoordigt een tijdstempel met een overeenkomende waarde voor de opgegeven metrische waarde. De tijdspanne tussen elke datapoint hangt van de `granularity` waarde af die in het verzoek wordt gespecificeerd. |
 
 ## Aanhangsel
 
@@ -206,3 +368,46 @@ In de volgende tabel worden de metriek voor [!DNL Real-time Customer Profile].
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Tijdstempel voor laatste verzoek van updaterecord voor een gegevensset. | Gegevensset-id (**vereist**) |
 | platform.ups.ingest.streaming.record.size.m1_rate | Gemiddelde recordgrootte. | IMS Org (**vereist**) |
 | platform.ups.ingest.streaming.records.updated.m15_rate | Snelheid van updateverzoeken voor verslagen die voor een dataset worden opgenomen. | Gegevensset-id (**vereist**) |
+
+### Foutberichten
+
+De reacties van het `/metrics` eindpunt kunnen foutenmeldingen onder bepaalde voorwaarden terugkeren. Deze foutberichten worden in de volgende indeling geretourneerd:
+
+```json
+{
+    "type": "http://ns.adobe.com/aep/errors/INSGHT-1000-400",
+    "title": "Bad Request - Start date cannot be after end date.",
+    "status": 400,
+    "report": {
+        "tenantInfo": {
+            "sandboxName": "prod",
+            "sandboxId": "49f58060-5d47-34rd-aawf-a5384333ff12",
+            "imsOrgId": "{IMS_ORG}"
+        },
+        "additionalContext": null
+    },
+    "error-chain": [
+        {
+            "serviceId": "INSGHT",
+            "errorCode": "INSGHT-1000-400",
+            "invokingServiceId": "INSGHT",
+            "unixTimeStampMs": 1602095177129
+        }
+    ]
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `title` | Een tekenreeks met het foutbericht en de mogelijke reden waarom het is opgetreden. |
+| `report` | Bevat contextafhankelijke informatie over de fout, inclusief de sandbox en IMS Org die worden gebruikt in de bewerking die de fout heeft geactiveerd. |
+
+In de volgende tabel worden de verschillende foutcodes weergegeven die door de API kunnen worden geretourneerd:
+
+| Foutcode | Titel | Beschrijving |
+| --- | --- | --- |
+| `INSGHT-1000-400` | Ongeldige payload verzoek | Er is iets mis met de lading van de aanvraag. Zorg ervoor dat de ladingsopmaak exact overeenkomt met de [bovenstaande](#v2)weergave. Om het even welke mogelijke redenen kunnen deze fout teweegbrengen:<ul><li>Vereiste velden ontbreken, zoals `aggregator`</li><li>Ongeldige meetgegevens</li><li>De aanvraag bevat een ongeldige aggregator</li><li>Een begindatum vindt plaats na een einddatum</li></ul> |
+| `INSGHT-1001-400` | Metrische query mislukt | Er is een fout opgetreden bij het zoeken naar de metrische database, omdat een onjuiste aanvraag of de query zelf niet kan worden gescheiden. Zorg ervoor dat uw verzoek correct is geformatteerd alvorens opnieuw te proberen. |
+| `INSGHT-1001-500` | Metrische query mislukt | Er is een fout opgetreden tijdens het zoeken naar de metrieke-database vanwege een serverfout. Probeer het verzoek opnieuw. Neem contact op met de Adobe-ondersteuning als het probleem zich blijft voordoen. |
+| `INSGHT-1002-500` | Servicefout | De aanvraag kan niet worden verwerkt vanwege een interne fout. Probeer het verzoek opnieuw. Neem contact op met de Adobe-ondersteuning als het probleem zich blijft voordoen. |
+| `INSGHT-1003-401` | Validatiefout van sandbox | De aanvraag kan niet worden verwerkt vanwege een sandboxvalidatiefout. Zorg ervoor dat de naam van de sandbox die u in de `x-sandbox-name` header hebt opgegeven, een geldige, ingeschakelde sandbox voor uw IMS-organisatie vertegenwoordigt voordat u het verzoek opnieuw probeert. |
