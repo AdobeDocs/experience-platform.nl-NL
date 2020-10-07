@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Deze zelfstudie doorloopt de stappen die worden vereist om een dataset tot stand te brengen die voor het uitvoeren van een publiekssegment kan worden gebruikt gebruikend het Experience Platform UI.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '756'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Om verenigingsschema&#39;s in UI te bekijken, klik **[!UICONTROL Profielen]** in
 
 De datasetwerkruimte binnen [!DNL Experience Platform] UI staat u toe om alle datasets te bekijken en te beheren die uw organisatie IMS heeft gemaakt, evenals nieuwe degenen te creëren.
 
-Om de datasetwerkruimte te bekijken, klik **[!UICONTROL Datasets]** in de linkernavigatie, dan klik op het **[!UICONTROL Browse]** lusje. De werkruimte van datasets bevat een lijst van datasets, met inbegrip van kolommen die **[!UICONTROL Naam]**, **[!UICONTROL Gemaakt]** (datum en tijd), **[!UICONTROL Bron]**, **[!UICONTROL Schema]**, en de Status **[!UICONTROL van de]****** Laatste Partij tonen, evenals de datum en de tijd de dataset werd Last Updated. Afhankelijk van de breedte van elke kolom moet u mogelijk naar links of rechts schuiven om alle kolommen weer te geven.
+Om de datasetwerkruimte te bekijken, klik **[!UICONTROL Datasets]** in de linkernavigatie, dan klik op het **[!UICONTROL Browse]** lusje. De werkruimte van datasets bevat een lijst van datasets, met inbegrip van kolommen die naam tonen, (datum en tijd), bron, schema, en laatste partijstatus, evenals de datum en de tijd de dataset het laatst werd bijgewerkt. Afhankelijk van de breedte van elke kolom moet u mogelijk naar links of rechts schuiven om alle kolommen weer te geven.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Om de datasetwerkruimte te bekijken, klik **[!UICONTROL Datasets]** in de linker
 
 ## Een gegevensset maken
 
-Als u een gegevensset wilt maken, klikt u op Gegevensset **** maken rechtsboven in de werkruimte [!UICONTROL Gegevenssets] .
+Als u een gegevensset wilt maken, klikt u op Gegevensset **** maken rechtsboven in de werkruimte **[!UICONTROL Gegevenssets]** .
 
 ![Klik op Gegevensset maken](../images/tutorials/segment-export-dataset/dataset-click-create.png)
 
@@ -63,7 +63,7 @@ Selecteer het keuzerondje naast **[!UICONTROL XDM Individueel Profiel]** en klik
 
 ## Gegevensset configureren
 
-Op het **[!UICONTROL Configure scherm van de Dataset]** , zult u uw dataset een **[!UICONTROL Naam]** moeten geven en kan ook een **[!UICONTROL Beschrijving]** van de dataset eveneens verstrekken.
+Op het **[!UICONTROL Configure scherm van de Dataset]** , zult u uw dataset een naam moeten geven en kan een beschrijving van de dataset ook verstrekken.
 
 **Opmerkingen over gegevenssetnamen:**
 - De namen van gegevenssets moeten kort en beschrijvend zijn, zodat de gegevensset later gemakkelijk in de bibliotheek kan worden gevonden.
@@ -76,9 +76,9 @@ Als de gegevensset een naam en een beschrijving heeft, klikt u op **[!UICONTROL 
 
 ## Gegevensactiviteit
 
-Een lege dataset is nu gecreeerd en u bent teruggekeerd aan het lusje van de Activiteit **[!UICONTROL van de]** Dataset in de werkruimte van [!UICONTROL Datasets] . U zou de naam van de dataset in de upper-left hoek van de werkruimte, samen met een bericht moeten zien dat &quot;Geen partijen zijn toegevoegd.&quot; Dit moet worden verwacht aangezien u nog geen partijen aan deze dataset hebt toegevoegd.
+Een lege dataset is nu gecreeerd en u bent teruggekeerd aan het lusje van de Activiteit **[!UICONTROL van de]** Dataset in de werkruimte van **[!UICONTROL Datasets]** . U zou de naam van de dataset in de upper-left hoek van de werkruimte, samen met een bericht moeten zien dat &quot;Geen partijen zijn toegevoegd.&quot; Dit moet worden verwacht aangezien u nog geen partijen aan deze dataset hebt toegevoegd.
 
-Rechts in de werkruimte Datasets ziet u het tabblad **[!UICONTROL Info]** met informatie over uw nieuwe gegevensset, zoals de id **[!UICONTROL van de]** gegevensset, de **[!UICONTROL naam]**, de **[!UICONTROL beschrijving]**, de naam **[!UICONTROL van de]** tabel, de naam ************ van deTabel, de combinatieSchema, de combinatieStreamingen deBron. Het tabblad [!UICONTROL Info] bevat ook informatie over het tijdstip waarop de gegevensset is **[!UICONTROL gemaakt]** en de datum waarop deze voor het **[!UICONTROL laatst is gewijzigd]** .
+Aan de rechterkant van de werkruimte van Datasets zult u het lusje zien van **[!UICONTROL Info]** dat informatie met betrekking tot uw nieuwe dataset zoals dataset ID, naam, beschrijving, lijstnaam, schema], het stromen, en bron omvat. Het tabblad **[!UICONTROL Info]** bevat ook informatie over het tijdstip waarop de gegevensset is gemaakt en de datum waarop deze voor het laatst is gewijzigd.
 
 Noteer de **[!UICONTROL gegevensset-id]**, omdat deze waarde vereist is om de exportworkflow voor het publiekssegment te voltooien.
 
@@ -86,6 +86,6 @@ Noteer de **[!UICONTROL gegevensset-id]**, omdat deze waarde vereist is om de ex
 
 ## Volgende stappen
 
-Nu u een dataset hebt gecreeerd die op wordt gebaseerd [!DNL XDM Individual Profile Union Schema], kunt u identiteitskaart **[!UICONTROL van de]** Dataset gebruiken om de [evaluatie voort te zetten en tot segment toegang te hebben resulterend](./evaluate-a-segment.md) leerprogramma.
+Nu u een dataset hebt gecreeerd die op wordt gebaseerd [!DNL XDM Individual Profile Union Schema], kunt u datasetidentiteitskaart gebruiken om tot de [evaluatie en de toegang tot van segmentresultaten](./evaluate-a-segment.md) leerprogramma voort te gaan.
 
 Op dit ogenblik, gelieve terug te keren naar de evaluerende zelfstudie van segmentresultaten en van het [produceren profielen voor publieksleden](./evaluate-a-segment.md#generate-profiles) stap van het uitvoeren van een segmentwerkschema te plukken.
