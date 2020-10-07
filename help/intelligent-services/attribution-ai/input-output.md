@@ -5,7 +5,7 @@ title: Invoer en uitvoer van Attribution AI
 topic: Input and Output data for Attribution AI
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in Attribution AI worden gebruikt.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 0%
@@ -140,7 +140,7 @@ U kunt het pad naar de onbewerkte scores weergeven in de gebruikersinterface. Se
 
 ![Schema kiezen](./images/input-output/schemas_browse.png)
 
-Selecteer vervolgens een veld in het venster **[!UICONTROL Structuur]** van de gebruikersinterface en open het tabblad Eigenschappen **[!UICONTROL van]** veld. Binnen **[!UICONTROL de eigenschappen]** van het Gebied is het gebied van de **[!UICONTROL Weg]** dat aan uw ruwe scores toewijst.
+Selecteer vervolgens een veld in het venster **[!UICONTROL Structuur]** van de gebruikersinterface en open het tabblad Eigenschappen **[!UICONTROL van]** veld. Binnen **[!UICONTROL de eigenschappen]** van het Gebied is het weggebied dat aan uw ruwe scores toewijst.
 
 ![Een schema kiezen](./images/input-output/field_properties.png)
 
