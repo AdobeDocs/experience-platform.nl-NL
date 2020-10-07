@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Deze zelfstudie biedt inzicht in het configureren en importeren van een verpakt recept met behulp van het meegeleverde voorbeeld Detailhandel. Aan het einde van deze zelfstudie bent u klaar om een model te maken, te trainen en te evalueren in de Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1803'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Voor deze zelfstudie is een recept in een pakket nodig in de vorm van een URL vo
 
 ## UI-workflow
 
-Voor het importeren van een verpakt recept in [!DNL Data Science Workspace] specifieke recept-configuraties, gecompileerd in één JSON-bestand (JavaScript Object Notation), wordt deze compilatie van recept-configuraties het **configuratiebestand** genoemd. Een verpakt recept met een bepaalde reeks configuraties wordt bedoeld als **recept geval**. Eén recept kan worden gebruikt om veel recept-varianten in te voeren [!DNL Data Science Workspace].
+Voor het importeren van een verpakt recept in [!DNL Data Science Workspace] specifieke recept-configuraties, gecompileerd in één JSON-bestand (JavaScript Object Notation), wordt deze compilatie van recept-configuraties het configuratiebestand genoemd. Een verpakt recept met een bepaalde set configuraties wordt een recept-exemplaar genoemd. Eén recept kan worden gebruikt om veel recept-varianten in te voeren [!DNL Data Science Workspace].
 
 De workflow voor het importeren van een pakketrecept bestaat uit de volgende stappen:
 - [Een recept configureren](#configure)
@@ -124,11 +124,11 @@ Voor dit leerprogramma, kunt u de standaardconfiguratiedossiers voor het Recept 
 
 ### Op Docker gebaseerde recept importeren - [!DNL Python] {#python}
 
-Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren die zich in de linkerbovenhoek van de [!DNL Platform] gebruikersinterface bevinden. Selecteer vervolgens *Importeren* en klik op **[!UICONTROL Starten]**.
+Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren die zich in de linkerbovenhoek van de [!DNL Platform] gebruikersinterface bevinden. Selecteer vervolgens **Importeren** en klik op **[!UICONTROL Starten]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven. Voer een naam en beschrijving voor het recept in en selecteer vervolgens **[!UICONTROL Volgende]** in de rechterbovenhoek.
+De pagina **Configureren** voor de workflow voor **Importrecept** wordt weergegeven. Voer een naam en beschrijving voor het recept in en selecteer vervolgens **[!UICONTROL Volgende]** in de rechterbovenhoek.
 
 ![workflow configureren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -136,19 +136,19 @@ De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven.
 >
 > In de brondossiers van het [Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Retailrecept van de Verkoop gebruikend Python brondossiers.
 
-Wanneer u zich op de *pagina Bron* selecteren bevindt, plakt u de URL van de Docker die overeenkomt met het verpakte recept dat is samengesteld met [!DNL Python] bronbestanden in het veld **[!UICONTROL Bron-URL]** . Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Selecteer **[!UICONTROL Python]** in de vervolgkeuzelijst *Runtime* en **[!UICONTROL Classificatie]** in de vervolgkeuzelijst *Type* . Als alles is ingevuld, klikt u op **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan naar *Schema&#39;s* beheren.
+Wanneer u zich op de **pagina Bron** selecteren bevindt, plakt u de URL van de Docker die overeenkomt met het verpakte recept dat is samengesteld met [!DNL Python] bronbestanden in het veld **[!UICONTROL Bron-URL]** . Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Selecteer **[!UICONTROL Python]** in de vervolgkeuzelijst **Runtime** en **[!UICONTROL Classificatie]** in de vervolgkeuzelijst **Type** . Als alles is ingevuld, klikt u op **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan naar **Schema&#39;s** beheren.
 
 >[!NOTE]
 >
-> *Type* ondersteunt **[!UICONTROL Classificatie]** en **[!UICONTROL Regressie]**. Selecteer **[!UICONTROL Aangepast]** als uw model niet onder een van deze typen valt.
+> Type ondersteunt **[!UICONTROL Classificatie]** en **[!UICONTROL Regressie]**. Selecteer **[!UICONTROL Aangepast]** als uw model niet onder een van deze typen valt.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
-Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie *leidt Schema*, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en de datasetzelfstudie](../models-recipes/create-retails-sales-dataset.md) .
+Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie **leidt Schema**, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en de datasetzelfstudie](../models-recipes/create-retails-sales-dataset.md) .
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Invoerfunctie]** of **[!UICONTROL Doelfunctie]** in het rechtervenster **[!UICONTROL Veldeigenschappen]** . Voor deze zelfstudie stelt u **[!UICONTROL wekelijkseSales]** in als de **[!UICONTROL doelfunctie]** en alles als **[!UICONTROL invoerfunctie]**. Klik op **[!UICONTROL Volgende]** om uw nieuwe geconfigureerde recept te bekijken.
+Onder de sectie van het Beheer van de **Eigenschap** , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Invoerfunctie]** of **[!UICONTROL Doelfunctie]** in het rechtervenster **[!UICONTROL Veldeigenschappen]** . Voor deze zelfstudie stelt u **[!UICONTROL wekelijkseSales]** in als de **[!UICONTROL doelfunctie]** en alles als **[!UICONTROL invoerfunctie]**. Klik op **[!UICONTROL Volgende]** om uw nieuwe geconfigureerde recept te bekijken.
 
 Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **[!UICONTROL Voltooien]** om het recept te maken.
 
@@ -158,11 +158,11 @@ Ga aan de [volgende stappen](#next-steps) te werk om te weten te komen hoe te om
 
 ### Op Docker gebaseerde recept importeren - R {#r}
 
-Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren die zich in de linkerbovenhoek van de [!DNL Platform] gebruikersinterface bevinden. Selecteer vervolgens *Importeren* en klik op **[!UICONTROL Starten]**.
+Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren die zich in de linkerbovenhoek van de [!DNL Platform] gebruikersinterface bevinden. Selecteer vervolgens **Importeren** en klik op **[!UICONTROL Starten]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven. Voer een naam en beschrijving voor het recept in en selecteer vervolgens **[!UICONTROL Volgende]** in de rechterbovenhoek.
+De pagina **Configureren** voor de workflow voor **Importrecept** wordt weergegeven. Voer een naam en beschrijving voor het recept in en selecteer vervolgens **[!UICONTROL Volgende]** in de rechterbovenhoek.
 
 ![workflow configureren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -170,7 +170,7 @@ De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven.
 >
 > In de brondossiers van het [Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Retailrecept van de Verkoop gebruikend de brondossiers van R.
 
-Wanneer u zich op de *Uitgezochte bronpagina* bevindt, plakt u de URL van Docker die overeenkomt met het verpakte recept dat is samengesteld met R-bronbestanden in het veld **[!UICONTROL Bron-URL]** . Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Selecteer **[!UICONTROL R]** in de vervolgkeuzelijst *Runtime* en **[!UICONTROL Classificatie]** in de vervolgkeuzelijst *Type* . Als alles is ingevuld, klikt u op **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan naar *Schema&#39;s* beheren.
+Wanneer u zich op de **Uitgezochte bronpagina** bevindt, plakt u de URL van Docker die overeenkomt met het verpakte recept dat is samengesteld met R-bronbestanden in het veld **[!UICONTROL Bron-URL]** . Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Selecteer **[!UICONTROL R]** in de vervolgkeuzelijst **Runtime** en **[!UICONTROL Classificatie]** in de vervolgkeuzelijst **Type** . Als alles is ingevuld, klikt u op **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan naar **Schema&#39;s** beheren.
 
 >[!NOTE]
 >
@@ -178,7 +178,7 @@ Wanneer u zich op de *Uitgezochte bronpagina* bevindt, plakt u de URL van Docker
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
-Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie *leidt Schema*, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en de datasetzelfstudie](../models-recipes/create-retails-sales-dataset.md) .
+Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie **leidt Schema**, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en de datasetzelfstudie](../models-recipes/create-retails-sales-dataset.md) .
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
@@ -192,11 +192,11 @@ Ga aan de [volgende stappen](#next-steps) te werk om te weten te komen hoe te om
 
 ### Op docker gebaseerde recept importeren - PySpark {#pyspark}
 
-Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren die zich in de linkerbovenhoek van de [!DNL Platform] gebruikersinterface bevinden. Selecteer vervolgens *Importeren* en klik op **[!UICONTROL Starten]**.
+Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren die zich in de linkerbovenhoek van de [!DNL Platform] gebruikersinterface bevinden. Selecteer vervolgens **Importeren** en klik op **[!UICONTROL Starten]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven. Voer een naam en beschrijving voor het recept in en selecteer vervolgens **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan.
+De pagina **Configureren** voor de workflow voor **Importrecept** wordt weergegeven. Voer een naam en beschrijving voor het recept in en selecteer vervolgens **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan.
 
 ![workflow configureren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -204,7 +204,7 @@ De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven.
 >
 > In de brondossiers van het [Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Detailhandelrecept van de Verkoop gebruikend PySpark brondossiers.
 
-Zodra u op de *Uitgezochte bronpagina* bent, kleef de Docker URL die aan het verpakte recept beantwoordt dat gebruikend PySpark brondossiers in het **[!UICONTROL BronURL]** gebied wordt gebouwd. Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Selecteer **[!UICONTROL PySpark]** in de drop-down *Runtime* . Nadat de PySpark-runtime is geselecteerd, wordt het standaardartefact automatisch ingevuld in **[!UICONTROL Docker]**. Selecteer vervolgens **[!UICONTROL Classificatie]** in de vervolgkeuzelijst *Type* . Als alles is ingevuld, klikt u op **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan naar *Schema&#39;s* beheren.
+Zodra u op de **Uitgezochte bronpagina** bent, kleef de Docker URL die aan het verpakte recept beantwoordt dat gebruikend PySpark brondossiers in het **[!UICONTROL BronURL]** gebied wordt gebouwd. Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Selecteer **[!UICONTROL PySpark]** in de drop-down **Runtime** . Nadat de PySpark-runtime is geselecteerd, wordt het standaardartefact automatisch ingevuld in **[!UICONTROL Docker]**. Selecteer vervolgens **[!UICONTROL Classificatie]** in de vervolgkeuzelijst **Type** . Als alles is ingevuld, klikt u op **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan naar **Schema&#39;s** beheren.
 
 >[!NOTE]
 >
@@ -212,11 +212,11 @@ Zodra u op de *Uitgezochte bronpagina* bent, kleef de Docker URL die aan het ver
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
-Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie *leidt Schema*, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en de datasetzelfstudie](../models-recipes/create-retails-sales-dataset.md) .
+Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie **leidt Schema**, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en de datasetzelfstudie](../models-recipes/create-retails-sales-dataset.md) .
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Invoerfunctie]** of **[!UICONTROL Doelfunctie]** in het rechtervenster **[!UICONTROL Veldeigenschappen]** . Voor deze zelfstudie stelt u **[!UICONTROL wekelijkseSales]** in als de **[!UICONTROL doelfunctie]** en alles als **[!UICONTROL invoerfunctie]**. Klik op **[!UICONTROL Volgende]** om uw nieuwe geconfigureerde recept te bekijken.
+Onder de sectie van het Beheer van de **Eigenschap** , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Invoerfunctie]** of **[!UICONTROL Doelfunctie]** in het rechtervenster **[!UICONTROL Veldeigenschappen]** . Voor deze zelfstudie stelt u **[!UICONTROL wekelijkseSales]** in als de **[!UICONTROL doelfunctie]** en alles als **[!UICONTROL invoerfunctie]**. Klik op **[!UICONTROL Volgende]** om uw nieuwe geconfigureerde recept te bekijken.
 
 Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **[!UICONTROL Voltooien]** om het recept te maken.
 
@@ -226,11 +226,11 @@ Ga aan de [volgende stappen](#next-steps) te werk om te weten te komen hoe te om
 
 ### Op Docker gebaseerde recept importeren - Scala {#scala}
 
-Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren die zich in de linkerbovenhoek van de [!DNL Platform] gebruikersinterface bevinden. Selecteer vervolgens *Importeren* en klik op **[!UICONTROL Starten]**.
+Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren die zich in de linkerbovenhoek van de [!DNL Platform] gebruikersinterface bevinden. Selecteer vervolgens **Importeren** en klik op **[!UICONTROL Starten]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven. Voer een naam en beschrijving voor het recept in en selecteer vervolgens **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan.
+De pagina **Configureren** voor de workflow voor **Importrecept** wordt weergegeven. Voer een naam en beschrijving voor het recept in en selecteer vervolgens **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan.
 
 ![workflow configureren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -238,19 +238,19 @@ De pagina *Configureren* voor de workflow voor *Importrecept* wordt weergegeven.
 >
 > In de brondossiers van het [Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Retailrecept van de Verkoop gebruikend Scala ([!DNL Spark]) brondossiers.
 
-Wanneer u zich op de *pagina Bron* selecteren bevindt, plakt u de URL van Docker die overeenkomt met het verpakte recept dat is samengesteld met de bronbestanden Scala in het veld *Bron-URL* . Importeer vervolgens het configuratiebestand door te slepen en neer te zetten of gebruik de **browser** van het bestandssysteem. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Selecteer **[!UICONTROL Vonk]** in de drop-down *Runtime* . Als de [!DNL Spark] runtime is geselecteerd, wordt de standaardeigenschap automatisch in **[!UICONTROL Docker]** ingevuld. Selecteer vervolgens **[!UICONTROL Regressie]** in de vervolgkeuzelijst *Type* . Als alles is ingevuld, klikt u op **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan naar *Schema&#39;s* beheren.
+Als u op de **pagina Bron** selecteren staat, plakt u de URL van de docker die overeenkomt met het verpakte recept dat u met de bronbestanden Scala in het veld Bron-URL hebt gemaakt. Importeer vervolgens het opgegeven configuratiebestand door te slepen en neer te zetten of gebruik de bestandssysteembrowser. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Selecteer **[!UICONTROL Vonk]** in de drop-down **Runtime** . Als de [!DNL Spark] runtime is geselecteerd, wordt de standaardeigenschap automatisch in **[!UICONTROL Docker]** ingevuld. Selecteer vervolgens **[!UICONTROL Regressie]** in de vervolgkeuzelijst **Type** . Als alles is ingevuld, klikt u op **[!UICONTROL Volgende]** in de rechterbovenhoek om door te gaan naar **Schema&#39;s** beheren.
 
 >[!NOTE]
 >
-> *Type* ondersteunt **[!UICONTROL Classificatie]** en **[!UICONTROL Regressie]**. Selecteer **[!UICONTROL Aangepast]** als uw model niet onder een van deze typen valt.
+> Type ondersteunt **[!UICONTROL Classificatie]** en **[!UICONTROL Regressie]**. Selecteer **[!UICONTROL Aangepast]** als uw model niet onder een van deze typen valt.
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
-Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie *leidt Schema*, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en de datasetzelfstudie](../models-recipes/create-retails-sales-dataset.md) .
+Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detailhandel onder de sectie **leidt Schema**, werden zij gecreeerd gebruikend het verstrekte laarzentrekkermanuscript in [creeer het detailhandelschema en de datasetzelfstudie](../models-recipes/create-retails-sales-dataset.md) .
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Onder de sectie van het Beheer van de *Eigenschap* , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Invoerfunctie]** of **[!UICONTROL Doelfunctie]** in het rechtervenster **[!UICONTROL Veldeigenschappen]** . Voor deze zelfstudie stelt u **[!UICONTROL wekelijkseSales]** in als de **[!UICONTROL doelfunctie]** en alles als **[!UICONTROL invoerfunctie]**. Klik op **[!UICONTROL Volgende]** om uw nieuwe geconfigureerde recept te bekijken.
+Onder de sectie van het Beheer van de **Eigenschap** , klik op uw huurdersidentificatie in de schemakijker om het Retailschema van de input van de Verkoop uit te breiden. Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Invoerfunctie]** of **[!UICONTROL Doelfunctie]** in het rechtervenster **[!UICONTROL Veldeigenschappen]** . Voor deze zelfstudie stelt u &quot;[!UICONTROL wekelijkseSales]&quot; in als de **[!UICONTROL doelfunctie]** en alles als **[!UICONTROL invoerfunctie]**. Klik op **[!UICONTROL Volgende]** om uw nieuwe geconfigureerde recept te bekijken.
 
 Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Klik op **[!UICONTROL Voltooien]** om het recept te maken.
 
