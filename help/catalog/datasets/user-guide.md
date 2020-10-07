@@ -5,9 +5,9 @@ title: Gebruikershandleiding voor gegevensbestanden
 topic: datasets
 description: Deze gebruikershandleiding voor gegevenssets bevat instructies voor het uitvoeren van algemene handelingen bij het werken met gegevenssets in de gebruikersinterface van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Klik de naam van een dataset om tot zijn de activiteitenscherm van de **[!UICONT
 
 ## Een voorbeeld van een gegevensset bekijken
 
-Klik in het scherm **[!UICONTROL Dataset-activiteit]** op Gegevensset **[!UICONTROL voorvertonen]** in de rechterbovenhoek van het scherm om maximaal 100 rijen gegevens voor te vertonen. Als de dataset leeg is, zal de voorproefverbinding worden gedeactiveerd en in plaats daarvan zal zeggen **[!UICONTROL Voorproef niet beschikbaar]**.
+Klik in het scherm **[!UICONTROL Dataset-activiteit]** op Gegevensset **[!UICONTROL voorvertonen]** in de rechterbovenhoek van het scherm om maximaal 100 rijen gegevens voor te vertonen. Als de dataset leeg is, zal de voorproefverbinding worden gedeactiveerd en in plaats daarvan zal zeggen dat de voorproef niet beschikbaar is.
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 
