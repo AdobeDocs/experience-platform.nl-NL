@@ -5,7 +5,7 @@ seo-title: Pagina Gegevens bestemming
 description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 seo-description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 1%
@@ -53,8 +53,8 @@ De juiste spoorlijn omvat informatie over uw bestemming. Zie de onderstaande tab
 | Platform | Vertegenwoordigt het bestemmingsplatform dat het publiek wordt verzonden naar. Zie Catalogus [](/help/rtcdp/destinations/destinations-catalog.md) Doelen voor meer informatie. |
 | Beschrijving | U kunt de beschrijving van de doelstroom bewerken. |
 | Categorie | Geeft het type doel aan. Zie Catalogus [](/help/rtcdp/destinations/destinations-catalog.md) Doelen voor meer informatie. |
-| Verbindingstype | Hiermee geeft u aan in welke vorm uw publiek naar de bestemming wordt gestuurd. Dit kan **[!UICONTROL cookie]** of **[!UICONTROL op profiel gebaseerde]** zijn. |
-| Frequentie | Geeft aan hoe vaak het publiek naar de bestemming wordt gestuurd. Kan **[!UICONTROL streaming]** of **[!UICONTROL batch]** zijn. |
+| Verbindingstype | Hiermee geeft u aan in welke vorm uw publiek naar de bestemming wordt gestuurd. Dit kan [!UICONTROL cookie] of [!UICONTROL op profiel gebaseerde]zijn. |
+| Frequentie | Geeft aan hoe vaak het publiek naar de bestemming wordt gestuurd. Kan [!UICONTROL streaming] of [!UICONTROL batch]zijn. |
 | Identiteit | Vertegenwoordigt de identiteitsnaamruimte die door de bestemming wordt geaccepteerd. Het veld Identiteit kan bijvoorbeeld GAID, IDFA en e-mail zijn. Zie standaardnaamruimten in het naamruimteoverzicht [](../../identity-service/namespaces.md)Identiteit voor alle geaccepteerde naamruimten. |
 | Gemaakt door | Geeft de gebruiker aan die deze doelstroom heeft gemaakt. |
 | Gemaakt | Geeft de UTC-datum en -tijd aan waarop deze doelstroom is gemaakt. |
