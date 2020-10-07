@@ -5,7 +5,7 @@ description: Meer weten over Adobe Experience Cloud-id?
 seo-description: Meer weten over Adobe Experience Cloud-id?
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 1%
@@ -91,7 +91,7 @@ alloy("sendEvent", {
 | -------- | ------------ | ----------------- |
 | Tekenreeks | Ja | none |
 
-De sleutel voor het object is het symbool [Identiteitsnaamruimte](../../identity-service/namespaces.md) . U vindt dit in de Adobe Experience Platform-gebruikersinterface onder [!UICONTROL Id].
+De sleutel voor het object is het symbool [Identiteitsnaamruimte](../../identity-service/namespaces.md) . U vindt dit in de gebruikersinterface van Adobe Experience Platform onder &quot;[!UICONTROL Identiteiten]&quot;.
 
 #### `id`
 
