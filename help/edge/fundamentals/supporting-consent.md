@@ -5,7 +5,7 @@ description: Leer hoe u toestemmingsvoorkeuren met Experience Platform Web SDK k
 seo-description: Leer hoe u toestemmingsvoorkeuren met Experience Platform Web SDK kunt ondersteunen
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: f178da80d0902f76868986426600f3da426cf24d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -56,7 +56,7 @@ alloy("setConsent", {
 });
 ```
 
-Omdat de gebruiker nu heeft gekozen, voert de SDK alle eerder in de wachtrij geplaatste opdrachten uit. Toekomstige opdrachten die afhankelijk zijn van het inchecken door de gebruiker, worden _niet_ in de wachtrij geplaatst en worden direct uitgevoerd.
+Omdat de gebruiker nu heeft gekozen, voert de SDK alle eerder in de wachtrij geplaatste opdrachten uit. Toekomstige opdrachten die afhankelijk zijn van het inchecken door de gebruiker, worden niet in de wachtrij geplaatst en worden direct uitgevoerd.
 
 Als de gebruiker ervoor kiest om te weigeren, voert u de `setConsent` opdracht uit met de `general` optie ingesteld op `out` als volgt:
 
