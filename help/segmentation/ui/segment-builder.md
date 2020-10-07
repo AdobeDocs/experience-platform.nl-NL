@@ -5,7 +5,7 @@ title: Gebruikershandleiding voor Segmentatiesegment Builder
 topic: ui guide
 description: 'De Bouwer van het segment verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen. '
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1723'
 ht-degree: 0%
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 ## Bouwstenen voor segmentdefinitie
 
-De basisbouwstenen van segmentdefinities zijn **[!UICONTROL Attributen]** en **[!UICONTROL Gebeurtenissen]**. Daarnaast kunnen de kenmerken en gebeurtenissen in het bestaande **[!UICONTROL publiek]** ook worden gebruikt als componenten voor nieuwe definities.
+De basisbouwstenen van segmentdefinities zijn attributen en gebeurtenissen. Daarnaast kunnen de kenmerken en gebeurtenissen in bestaande doelgroepen ook worden gebruikt als componenten voor nieuwe definities.
 
-U kunt deze bouwstenen in de sectie van **[!UICONTROL Gebieden]** op de linkerkant van de [!DNL Segment Builder] werkruimte zien. **[!UICONTROL De gebieden]** bevatten een lusje voor elk van de belangrijkste bouwstenen: **[!UICONTROL Kenmerken]**, **[!UICONTROL Gebeurtenissen]** en **[!UICONTROL Soorten publiek]**.
+U kunt deze bouwstenen in de sectie van **[!UICONTROL Gebieden]** op de linkerkant van de [!DNL Segment Builder] werkruimte zien. **[!UICONTROL De gebieden]** bevatten een lusje voor elk van de belangrijkste bouwstenen: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot; en &quot;[!UICONTROL Audiences]&quot;.
 
 ![](../images/ui/segment-builder/segment-fields.png)
 
@@ -45,11 +45,11 @@ Elk type component kan worden gezocht door zijn naam in de onderzoeksbar te type
 >
 >De het schemagebieden van de douane die door uw organisatie worden bepaald kunnen tot 24 uren aan verschijnen en beschikbaar voor gebruik in het bouwen van regels vergen.
 
-U kunt dan gemakkelijk slepen en laten vallen [!DNL ExperienceEvents] en de Types [!UICONTROL van] Gebeurtenis in uw segmentdefinitie.
+U kunt dan gemakkelijk slepen en laten vallen [!DNL ExperienceEvents] en &quot;de Types[!UICONTROL van]Gebeurtenis&quot;in uw segmentdefinitie.
 
 ![](../images/ui/segment-builder/events-eventTypes.png)
 
-Standaard worden alleen gevulde schemavelden uit de gegevensopslag weergegeven. Dit geldt ook voor [!UICONTROL gebeurtenistypen]. Als de lijst [!UICONTROL Gebeurtenistypen] niet zichtbaar is of u alleen &quot;[!UICONTROL Willekeurig]&quot; als [!UICONTROL gebeurtenistype]kunt selecteren, selecteert u het tandwielpictogram naast **[!UICONTROL Velden]** en selecteert u Volledig XDM-schema **** **** tonen onder Beschikbare velden. Selecteer opnieuw het tandwielpictogram om naar het tabblad **[!UICONTROL Velden]** terug te keren en u moet nu meerdere [!UICONTROL gebeurtenistypen] en schemavelden kunnen weergeven, ongeacht of deze gegevens bevatten of niet.
+Standaard worden alleen gevulde schemavelden uit de gegevensopslag weergegeven. Dit geldt ook voor &quot;[!UICONTROL gebeurtenistypen]&quot;. Als de lijst &quot;[!UICONTROL Gebeurtenistypen]&quot; niet zichtbaar is of u alleen &quot;[!UICONTROL Willekeurig]&quot; kunt selecteren als &quot;[!UICONTROL Gebeurtenistype]&quot;, selecteert u het **tandwielpictogram** naast **[!UICONTROL Velden]****** **** en selecteert u vervolgens de optie Volledig XDM-schema weergeven onder Beschikbare velden. Selecteer opnieuw het **tandwielpictogram** om naar het lusje van **[!UICONTROL Gebieden]** terug te keren en u zou veelvoudige &quot;Types[!UICONTROL van]Gebeurtenis&quot;en schemagebieden nu moeten kunnen bekijken, ongeacht of zij gegevens bevatten of niet.
 
 ![](../images/ui/segment-builder/show-populated.png)
 
@@ -63,13 +63,13 @@ U kunt de muisaanwijzer boven de ⓘ naast een doelgroep houden om informatie ov
 
 ![](../images/ui/segment-builder/audience-folder-structure.png)
 
-U kunt ook naar [!UICONTROL Soorten publiek] zoeken met de zoekbalk, die de zoeksyntaxis [van](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene gebruikt. Als u op het tabblad **[!UICONTROL Soorten publiek]** een map op hoofdniveau selecteert, wordt de zoekbalk weergegeven, zodat u in die map kunt zoeken. Zoekresultaten beginnen pas te worden gevuld wanneer hele woorden zijn ingevoerd. Als u bijvoorbeeld een [!UICONTROL publiek] wilt zoeken met de naam `Online Shoppers`, typt u &quot;Online&quot; in de zoekbalk. Nadat het woord &quot;Online&quot; volledig is getypt, worden zoekresultaten met het woord &quot;Online&quot; weergegeven.
+U kunt ook naar publiek zoeken met de zoekbalk, die de zoeksyntaxis [van](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene gebruikt. Als u op het tabblad **[!UICONTROL Soorten publiek]** een map op hoofdniveau selecteert, wordt de zoekbalk weergegeven, zodat u in die map kunt zoeken. Zoekresultaten beginnen pas te worden gevuld wanneer hele woorden zijn ingevoerd. Als u bijvoorbeeld een publiek zoekt met de naam `Online Shoppers`, typt u &quot;Online&quot; in de zoekbalk. Nadat het woord &quot;Online&quot; volledig is getypt, worden zoekresultaten met het woord &quot;Online&quot; weergegeven.
 
 ## Rule builder canvas {#rule-builder-canvas}
 
 Een segmentdefinitie is een inzameling van regels die worden gebruikt om zeer belangrijke kenmerken of gedrag van een doelpubliek te beschrijven. Deze regels worden gecreeerd gebruikend het canvas van de regelbouwer, dat in het centrum van wordt gevestigd [!DNL Segment Builder].
 
-Als u een nieuwe regel wilt toevoegen aan de segmentdefinitie, sleept u een tegel van het tabblad **[!UICONTROL Velden]** en zet u deze neer op het canvas van de regelbuilder. Vervolgens krijgt u contextspecifieke opties, afhankelijk van het type gegevens dat u wilt toevoegen. Beschikbare gegevenstypen zijn: tekenreeksen, datums, [!DNL ExperienceEvents], [!UICONTROL gebeurtenistypen]en [!UICONTROL Soorten publiek].
+Als u een nieuwe regel wilt toevoegen aan de segmentdefinitie, sleept u een tegel van het tabblad **[!UICONTROL Velden]** en zet u deze neer op het canvas van de regelbuilder. Vervolgens krijgt u contextspecifieke opties, afhankelijk van het type gegevens dat u wilt toevoegen. Beschikbare gegevenstypen zijn: tekenreeksen, datums, [!DNL ExperienceEvents]&#39;[!UICONTROL Gebeurtenistypen]&#39; en doelgroepen.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
 
@@ -133,7 +133,7 @@ Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u
 
 Wanneer het bouwen van een segmentdefinitie, toont de sectie van de Eigenschappen **[!UICONTROL van het]** Segment op de rechterkant van de werkruimte een schatting van de grootte van het resulterende segment, toestaand u om uw segmentdefinitie zonodig aan te passen alvorens het publiek zelf te bouwen.
 
-In de sectie **[!UICONTROL Segmenteigenschappen]** kunt u ook belangrijke informatie over de segmentdefinitie opgeven, zoals de **[!UICONTROL naam]** en de **[!UICONTROL beschrijving]**. De definitienamen van het segment worden gebruikt om uw segment onder die te identificeren die door uw organisatie worden bepaald en zouden daarom beschrijvend, beknopt, en uniek moeten zijn.
+In de sectie **[!UICONTROL Segmenteigenschappen]** kunt u ook belangrijke informatie over de segmentdefinitie opgeven, zoals de naam en beschrijving. De definitienamen van het segment worden gebruikt om uw segment onder die te identificeren die door uw organisatie worden bepaald en zouden daarom beschrijvend, beknopt, en uniek moeten zijn.
 
 Terwijl u de segmentdefinitie verder ontwikkelt, kunt u een gepagineerde voorvertoning van het publiek weergeven door Profielen **** weergeven te selecteren.
 
