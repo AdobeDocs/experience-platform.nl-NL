@@ -5,7 +5,7 @@ title: Informatie over inzichten met Customer AI
 topic: Discovering insights
 description: Klantenservice AI biedt marketers de mogelijkheid om Adobe Sensei te gebruiken om te anticiperen op wat uw klanten de volgende actie zullen gaan ondernemen. AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, het kiezen van een algoritme, een opleiding, of plaatsing.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Scoreoverzicht geeft het totale aantal profielen weer dat wordt gescoord en cate
 
 ## Verdeling van scores
 
-De *Verspreiding van Scores* kaart geeft u een visuele samenvatting van de bevolking die op de score wordt gebaseerd. De kleuren die u in de *Verdeling van Scores* kaart ziet vertegenwoordigen het type van geproduceerde aandrijvingsscore.
+De **[!UICONTROL Verspreiding van Scores]** kaart geeft u een visuele samenvatting van de bevolking die op de score wordt gebaseerd. De kleuren die u in de *Verdeling van Scores* kaart ziet vertegenwoordigen het type van geproduceerde aandrijvingsscore.
 
 ![verdeling van scores](../images/insights/distribution-of-scores.png)
 
@@ -128,7 +128,7 @@ De segmentbouwer wordt gebruikt om een segment te bepalen. Als u Segment **** ma
 
 ![Segmentvulling in](../images/insights/segment-saving.png)
 
-Als u het nieuwe segment wilt weergeven in de gebruikersinterface van het Platform, klikt u op **[!UICONTROL Segmenten]** in de linkernavigatie. De pagina *Bladeren* wordt weergegeven met alle beschikbare segmenten.
+Als u het nieuwe segment wilt weergeven in de gebruikersinterface van het Platform, klikt u op **[!UICONTROL Segmenten]** in de linkernavigatie. De pagina **[!UICONTROL Bladeren]** wordt weergegeven met alle beschikbare segmenten.
 
 ![Alle segmenten](../images/insights/Segments-dashboard.png)
 
