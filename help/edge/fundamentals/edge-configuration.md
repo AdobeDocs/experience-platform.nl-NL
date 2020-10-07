@@ -5,7 +5,7 @@ description: 'Leer hoe te om het Netwerk van de Rand van het Experience Platform
 seo-description: 'Leer hoe te om het Netwerk van de Rand van het Experience Platform te vormen. '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Hieronder vindt u een van de instellingen die beschikbaar zijn voor een omgeving
 
 #### [!UICONTROL Identiteit]
 
-Het identiteitsgedeelte is het enige gedeelte dat altijd ingeschakeld is. Er zijn twee beschikbare instellingen: [!UICONTROL ID Syncs Enabled] en [!UICONTROL ID Sync Container ID].
+Het identiteitsgedeelte is het enige gedeelte dat altijd ingeschakeld is. Er zijn twee beschikbare instellingen: &quot;[!UICONTROL ID Syncs Enabled]&quot; en &quot;[!UICONTROL ID Sync Container ID]&quot;.
 
 ![Het gedeelte Identiteit van de configuratie-interface](../../assets/edge_configuration_identity.png)
 
@@ -65,7 +65,7 @@ Sandboxen zijn locaties in de Adobe Experience Platform die klanten in staat ste
 
 ##### [!UICONTROL Streaming-ingang]
 
-Een streaminginlaat is een HTTP-bron in de Adobe Experience Platform. Deze worden onder het tabblad [!UICONTROL Bronnen] in de Adobe Experience Platform gemaakt als een HTTP-API.
+Een streaminginlaat is een HTTP-bron in de Adobe Experience Platform. Deze worden gemaakt onder het tabblad &quot;[!UICONTROL Bronnen]&quot; in de Adobe Experience Platform als een HTTP-API.
 
 ##### [!UICONTROL Gebeurtenisgegevens]
 
@@ -95,7 +95,7 @@ De eigenschap token vindt u in [!UICONTROL Adobe Target] > [!UICONTROL setup] > 
 
 [Met omgevingen](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target kunt u uw implementatie in alle ontwikkelingsstadia beheren. Deze instelling geeft aan welke omgeving u voor elke omgeving wilt gebruiken.
 
-Adobe raadt u aan dit anders in te stellen voor elk van uw `dev`-, `stage`- en `prod` randconfiguratieomgevingen om de zaken eenvoudig te houden. Als u echter al [!UICONTROL Adobe Target-omgevingen] hebt gedefinieerd, kunt u deze gebruiken.
+Adobe raadt u aan dit anders in te stellen voor elk van uw `dev`-, `stage`- en `prod` randconfiguratieomgevingen om de zaken eenvoudig te houden. Als u echter al Adobe Target-omgevingen hebt gedefinieerd, kunt u deze gebruiken.
 
 #### Adobe Audience Manager
 
