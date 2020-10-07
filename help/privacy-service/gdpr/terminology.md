@@ -5,7 +5,7 @@ title: GDPR-terminologie
 topic: troubleshooting
 description: Hieronder volgt een lijst van definities voor sleuteltermen die betrekking hebben op de algemene gegevensbeschermingsverordening (GDPR).
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 13%
@@ -21,63 +21,63 @@ Hieronder volgt een lijst van definities voor sleuteltermen die betrekking hebbe
 
 ## B
 
-__Bindende bedrijfsvoorschriften (BCR’s):__ Een reeks bindende regels die zijn ingevoerd om multinationale ondernemingen en organisaties toe te staan persoonsgegevens die zij van de EU controleren, over te dragen aan hun filialen buiten de EU (maar binnen de organisatie).
+**Bindende bedrijfsvoorschriften (BCR’s):** Een reeks bindende regels die zijn ingevoerd om multinationale ondernemingen en organisaties toe te staan persoonsgegevens die zij van de EU controleren, over te dragen aan hun filialen buiten de EU (maar binnen de organisatie).
 
-__Biometrische gegevens__ Alle persoonsgegevens die verband houden met de fysieke, fysiologische of gedragskenmerken van een individu en die hun unieke identificatie mogelijk maken.
+**Biometrische gegevens** Alle persoonsgegevens die verband houden met de fysieke, fysiologische of gedragskenmerken van een individu en die hun unieke identificatie mogelijk maken.
 
 ## C
 
-__Toestemming:__ Vrijwillig gegeven, specifieke, geïnformeerde en uitdrukkelijke toestemming door middel van een verklaring of handeling, hetgeen inhoudt dat de verwerking van hun persoonsgegevens wordt goedgekeurd.
+**Toestemming:** Vrijwillig gegeven, specifieke, geïnformeerde en uitdrukkelijke toestemming door middel van een verklaring of handeling, hetgeen inhoudt dat de verwerking van hun persoonsgegevens wordt goedgekeurd.
 
 ## D
 
-__Gegevens over de gezondheid:__ Persoonsgegevens met betrekking tot de lichamelijke of geestelijke gezondheid van een persoon of de verstrekking van gezondheidsdiensten aan die persoon.
+**Gegevens over de gezondheid:** Persoonsgegevens met betrekking tot de lichamelijke of geestelijke gezondheid van een persoon of de verstrekking van gezondheidsdiensten aan die persoon.
 
-__Gegevenscontroller:__ De entiteit die het doel, de voorwaarden en de middelen voor de verwerking van persoonsgegevens bepaalt.
+**Gegevenscontroller:** De entiteit die het doel, de voorwaarden en de middelen voor de verwerking van persoonsgegevens bepaalt.
 
-__Gegevens wissen:__ Ook bekend als het recht om te worden vergeten, geeft het de betrokkene het recht om de verantwoordelijke voor de verwerking te verzoeken zijn persoonsgegevens te wissen, de verdere verspreiding van de gegevens te staken en mogelijk derden te verplichten de verwerking van de gegevens te staken.
+**Gegevens wissen:** Ook bekend als het recht om te worden vergeten, geeft het de betrokkene het recht om de verantwoordelijke voor de verwerking te verzoeken zijn persoonsgegevens te wissen, de verdere verspreiding van de gegevens te staken en mogelijk derden te verplichten de verwerking van de gegevens te staken.
 
-__Gegevensdraagbaarheid:__ De verplichting voor de verwerkingsverantwoordelijken om de betrokkene een kopie van zijn gegevens te verstrekken in een formaat dat gemakkelijk kan worden gebruikt met een andere verwerkingsverantwoordelijke.
+**Gegevensdraagbaarheid:** De verplichting voor de verwerkingsverantwoordelijken om de betrokkene een kopie van zijn gegevens te verstrekken in een formaat dat gemakkelijk kan worden gebruikt met een andere verwerkingsverantwoordelijke.
 
-__Gegevensprocessor:__ De entiteit die gegevens verwerkt namens de Data Controller.
+**Gegevensprocessor:** De entiteit die gegevens verwerkt namens de Data Controller.
 
-__Autoriteit voor gegevensbescherming:__ Nationale autoriteiten belast met de bescherming van gegevens en de persoonlijke levenssfeer en met het toezicht op en de handhaving van de gegevensbeschermingsvoorschriften in de Unie.
+**Autoriteit voor gegevensbescherming:** Nationale autoriteiten belast met de bescherming van gegevens en de persoonlijke levenssfeer en met het toezicht op en de handhaving van de gegevensbeschermingsvoorschriften in de Unie.
 
-__Functionaris voor gegevensbescherming:__ Een deskundige op het gebied van gegevensbescherming die onafhankelijk werkt om ervoor te zorgen dat een entiteit zich houdt aan de in de GDPR vastgelegde beleidslijnen en procedures.
+**Functionaris voor gegevensbescherming:** Een deskundige op het gebied van gegevensbescherming die onafhankelijk werkt om ervoor te zorgen dat een entiteit zich houdt aan de in de GDPR vastgelegde beleidslijnen en procedures.
 
-__Betrokkene:__ Een natuurlijke persoon wiens persoonsgegevens door een verwerkingsverantwoordelijke of verwerker worden verwerkt.
+**Betrokkene:** Een natuurlijke persoon wiens persoonsgegevens door een verwerkingsverantwoordelijke of verwerker worden verwerkt.
 
-__Gedelegeerde handelingen:__ Niet-wetgevingshandelingen die zijn vastgesteld ter aanvulling van bestaande wetgeving en ter waarborging van criteria of duidelijkheid.
+**Gedelegeerde handelingen:** Niet-wetgevingshandelingen die zijn vastgesteld ter aanvulling van bestaande wetgeving en ter waarborging van criteria of duidelijkheid.
 
-__Afwijking:__ Een vrijstelling van een wet.
+**Afwijking:** Een vrijstelling van een wet.
 
-__Richtlijn:__ Een wetgevingshandeling die een doel vastlegt dat alle EU-landen moeten bereiken via hun eigen nationale wetgeving.
+**Richtlijn:** Een wetgevingshandeling die een doel vastlegt dat alle EU-landen moeten bereiken via hun eigen nationale wetgeving.
 
 ## E
 
-__Gecodeerde gegevens:__ Persoonsgegevens die worden beschermd door middel van technologische maatregelen om ervoor te zorgen dat de gegevens alleen toegankelijk/leesbaar zijn voor personen met specifieke toegang.
+**Gecodeerde gegevens:** Persoonsgegevens die worden beschermd door middel van technologische maatregelen om ervoor te zorgen dat de gegevens alleen toegankelijk/leesbaar zijn voor personen met specifieke toegang.
 
-__Ondernemingen:__ Elke entiteit die een economische activiteit uitoefent, ongeacht haar rechtsvorm, met inbegrip van personen, partnerschappen, verenigingen enz.
+**Ondernemingen:** Elke entiteit die een economische activiteit uitoefent, ongeacht haar rechtsvorm, met inbegrip van personen, partnerschappen, verenigingen enz.
 
 ## F
 
-__Bestandssysteem:__ Elke specifieke verzameling persoonsgegevens die volgens specifieke criteria toegankelijk is of kan worden opgevraagd.
+**Bestandssysteem:** Elke specifieke verzameling persoonsgegevens die volgens specifieke criteria toegankelijk is of kan worden opgevraagd.
 
 ## G
 
-__GDPR:__ De [!DNL General Data Protection Regulation] (GDPR) is een juridisch kader dat richtsnoeren vaststelt voor het verzamelen en verwerken van persoonlijke gegevens van personen binnen de Europese Unie (EU). In de GDPR worden de principes van databeheer en de rechten van het individu uiteengezet en worden tevens boetes opgelegd die op inkomsten kunnen worden gebaseerd. De GDPR geldt voor alle bedrijven die te maken hebben met data van EU-burgers. Het is dus een essentiële wetgeving voor bedrijfsnalevingsfunctionarissen bij banken, verzekeraars en andere financiële ondernemingen. De GDPR is op 25 mei 2018 in de hele EU ingegaan.
+**GDPR:** De [!DNL General Data Protection Regulation] (GDPR) is een juridisch kader dat richtsnoeren vaststelt voor het verzamelen en verwerken van persoonlijke gegevens van personen binnen de Europese Unie (EU). In de GDPR worden de principes van databeheer en de rechten van het individu uiteengezet en worden tevens boetes opgelegd die op inkomsten kunnen worden gebaseerd. De GDPR geldt voor alle bedrijven die te maken hebben met data van EU-burgers. Het is dus een essentiële wetgeving voor bedrijfsnalevingsfunctionarissen bij banken, verzekeraars en andere financiële ondernemingen. De GDPR is op 25 mei 2018 in de hele EU ingegaan.
 
-__Genetische gegevens:__ Gegevens over de kenmerken van een persoon die geërfd of verworven is en unieke informatie over de gezondheid of fysiologie van het individu opleveren.
+**Genetische gegevens:** Gegevens over de kenmerken van een persoon die geërfd of verworven is en unieke informatie over de gezondheid of fysiologie van het individu opleveren.
 
-__Groep ondernemingen:__ Een controlerende onderneming en de ondernemingen waarover zij zeggenschap heeft.
+**Groep ondernemingen:** Een controlerende onderneming en de ondernemingen waarover zij zeggenschap heeft.
 
 ## H
 
 ## I
 
-__Identity Management Services (IMS):__ De Adobe implementatie van Federated ID en OAuth 2.0 voor authentificatie van de gebruikers van Adobe ID en vergunning voor de middelen van Adobe. U moet IMS integreren met uw Adobe-applicatie of -service om uw gebruikers zich te laten aanmelden en toegang te geven tot Adobe-services. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
+**Identity Management Services (IMS):** De Adobe implementatie van Federated ID en OAuth 2.0 voor authentificatie van de gebruikers van Adobe ID en vergunning voor de middelen van Adobe. U moet IMS integreren met uw Adobe-applicatie of -service om uw gebruikers zich te laten aanmelden en toegang te geven tot Adobe-services. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
 
-__IMS-organisatie-id:__ Verwijst naar een Adobe toestemmingstoken voor dienst-aan-dienst authentificatie, die gebruikerslogin niet vereist. Deze wordt uitgegeven aan een IMS-client en heeft geen bijbehorende gebruiker. Een IMS-client heeft een servicetoken nodig voor de verificatie van back-channelaanvragen tussen services goed te keuren. (De term “systeemtoken” wordt soms gebruikt voor een servicetoken.)
+**IMS-organisatie-id:** Verwijst naar een Adobe toestemmingstoken voor dienst-aan-dienst authentificatie, die gebruikerslogin niet vereist. Deze wordt uitgegeven aan een IMS-client en heeft geen bijbehorende gebruiker. Een IMS-client heeft een servicetoken nodig voor de verificatie van back-channelaanvragen tussen services goed te keuren. (De term “systeemtoken” wordt soms gebruikt voor een servicetoken.)
 
 ## J
 
@@ -87,7 +87,7 @@ __IMS-organisatie-id:__ Verwijst naar een Adobe toestemmingstoken voor dienst-aa
 
 ## M
 
-__Hoofdvestiging:__ de plaats binnen de Unie waar de belangrijkste beslissingen met betrekking tot de gegevensverwerking worden genomen; wat de verwerker betreft.
+**Hoofdvestiging:** de plaats binnen de Unie waar de belangrijkste beslissingen met betrekking tot de gegevensverwerking worden genomen; wat de verwerker betreft.
 
 ## N
 
@@ -95,43 +95,43 @@ __Hoofdvestiging:__ de plaats binnen de Unie waar de belangrijkste beslissingen 
 
 ## P
 
-__Persoonlijke gegevens:__ Alle informatie met betrekking tot een natuurlijke persoon of &quot;betrokkene&quot; die kan worden gebruikt om de persoon direct of indirect te identificeren.
+**Persoonlijke gegevens:** Alle informatie met betrekking tot een natuurlijke persoon of &quot;betrokkene&quot; die kan worden gebruikt om de persoon direct of indirect te identificeren.
 
-__Schending van persoonsgegevens:__ Een inbreuk op de beveiliging die leidt tot onbedoelde of onrechtmatige toegang tot, vernietiging, misbruik, enz. van persoonlijke data.
+**Schending van persoonsgegevens:** Een inbreuk op de beveiliging die leidt tot onbedoelde of onrechtmatige toegang tot, vernietiging, misbruik, enz. van persoonlijke data.
 
-__Privacy via ontwerp:__ Een beginsel dat vereist dat de gegevensbescherming vanaf het begin van het ontwerpen van systemen wordt opgenomen in plaats van een toevoeging.
+**Privacy via ontwerp:** Een beginsel dat vereist dat de gegevensbescherming vanaf het begin van het ontwerpen van systemen wordt opgenomen in plaats van een toevoeging.
 
-__Privacyeffectbeoordeling__: Een hulpmiddel dat wordt gebruikt om de privacyrisico&#39;s van entiteiten te identificeren en te verminderen door de persoonsgegevens te analyseren die worden verwerkt en het beleid te voeren om de gegevens te beschermen.
+**Privacyeffectbeoordeling**: Een hulpmiddel dat wordt gebruikt om de privacyrisico&#39;s van entiteiten te identificeren en te verminderen door de persoonsgegevens te analyseren die worden verwerkt en het beleid te voeren om de gegevens te beschermen.
 
-__Verwerking:__ Elke bewerking die op persoonsgegevens wordt uitgevoerd, al dan niet met geautomatiseerde middelen, met inbegrip van het verzamelen, gebruiken, registreren enz.
+**Verwerking:** Elke bewerking die op persoonsgegevens wordt uitgevoerd, al dan niet met geautomatiseerde middelen, met inbegrip van het verzamelen, gebruiken, registreren enz.
 
-__Profielen:__ Elke geautomatiseerde verwerking van persoonsgegevens die bedoeld is om het gedrag van de betrokkene te evalueren, analyseren of voorspellen.
+**Profielen:** Elke geautomatiseerde verwerking van persoonsgegevens die bedoeld is om het gedrag van de betrokkene te evalueren, analyseren of voorspellen.
 
-__Pseudonimisatie:__ De verwerking van persoonsgegevens zodat deze niet langer aan één betrokkene kan worden toegeschreven zonder gebruik te maken van aanvullende gegevens, zolang deze aanvullende gegevens afzonderlijk blijven om niet-toerekening te waarborgen.
+**Pseudonimisatie:** De verwerking van persoonsgegevens zodat deze niet langer aan één betrokkene kan worden toegeschreven zonder gebruik te maken van aanvullende gegevens, zolang deze aanvullende gegevens afzonderlijk blijven om niet-toerekening te waarborgen.
 
 ## Q
 
 ## R
 
-__Ontvanger:__ Entiteit waaraan de persoonsgegevens worden verstrekt.
+**Ontvanger:** Entiteit waaraan de persoonsgegevens worden verstrekt.
 
-__Verordening:__ Een bindende wetgevingshandeling die in de gehele Unie moet worden toegepast.
+**Verordening:** Een bindende wetgevingshandeling die in de gehele Unie moet worden toegepast.
 
-__Vertegenwoordiger:__ Elke persoon in de Unie die expliciet door de voor de verwerking verantwoordelijke is aangewezen en tot wie de toezichthoudende autoriteiten zich moeten wenden.
+**Vertegenwoordiger:** Elke persoon in de Unie die expliciet door de voor de verwerking verantwoordelijke is aangewezen en tot wie de toezichthoudende autoriteiten zich moeten wenden.
 
-__Het recht om te worden vergeten:__ Ook bekend als het wissen van gegevens, geeft het de betrokkene het recht om de verantwoordelijke voor de verwerking te verzoeken zijn persoonsgegevens te wissen, de verdere verspreiding van de gegevens te staken en mogelijk derden te verplichten de verwerking van de gegevens te staken.
+**Het recht om te worden vergeten:** Ook bekend als het wissen van gegevens, geeft het de betrokkene het recht om de verantwoordelijke voor de verwerking te verzoeken zijn persoonsgegevens te wissen, de verdere verspreiding van de gegevens te staken en mogelijk derden te verplichten de verwerking van de gegevens te staken.
 
-__Recht op toegang:__ Het recht op toegang tot en informatie over de persoonsgegevens die een voor de verwerking verantwoordelijke over hem heeft, wordt ook wel bekend als het recht op toegang tot de betrokkene.
+**Recht op toegang:** Het recht op toegang tot en informatie over de persoonsgegevens die een voor de verwerking verantwoordelijke over hem heeft, wordt ook wel bekend als het recht op toegang tot de betrokkene.
 
 ## S
 
-__Toegangsrecht onderwerp:__ Het recht op toegang, ook wel het recht op toegang genoemd, geeft de betrokkene recht op toegang tot en informatie over de persoonsgegevens die een voor de verwerking verantwoordelijke voor hen heeft.
+**Toegangsrecht onderwerp:** Het recht op toegang, ook wel het recht op toegang genoemd, geeft de betrokkene recht op toegang tot en informatie over de persoonsgegevens die een voor de verwerking verantwoordelijke voor hen heeft.
 
-__Toezichtautoriteit:__ Een overheidsinstantie die door een lidstaat is opgericht overeenkomstig artikel 46.
+**Toezichtautoriteit:** Een overheidsinstantie die door een lidstaat is opgericht overeenkomstig artikel 46.
 
 ## T
 
-__Trillen:__ Informele onderhandelingen tussen de Europese Commissie, het Europees Parlement en de Raad van de Europese Unie hebben gewoonlijk plaatsgevonden na de eerste lezing van de voorgestelde wetgeving, zodat er sneller overeenstemming kan worden bereikt over een goed te keuren compromistekst.
+**Trillen:** Informele onderhandelingen tussen de Europese Commissie, het Europees Parlement en de Raad van de Europese Unie hebben gewoonlijk plaatsgevonden na de eerste lezing van de voorgestelde wetgeving, zodat er sneller overeenstemming kan worden bereikt over een goed te keuren compromistekst.
 
 ## U
 
