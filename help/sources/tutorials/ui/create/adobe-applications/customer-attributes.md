@@ -6,17 +6,17 @@ topic: overview
 type: Tutorial
 description: Deze zelfstudie biedt stappen voor het maken van een bronaansluiting in de gebruikersinterface voor het verzamelen van profielgegevens van klantkenmerken naar Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '374'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
 
 # Creeer een van de klantenattributen bronschakelaar in UI
 
-Deze zelfstudie bevat stappen voor het maken van een bronaansluiting in de gebruikersinterface voor het verzamelen van profielgegevens van klantkenmerken naar Adobe Experience Platform. Raadpleeg het [overzichtsdocument](https://docs.adobe.com/content/help/nl-NL/core-services/interface/customer-attributes/attributes.html)voor meer informatie over klantkenmerken.
+Deze zelfstudie biedt stappen voor het maken van een bronaansluiting in de gebruikersinterface voor het verzamelen van profielgegevens van klantkenmerken naar Adobe Experience Platform. Raadpleeg het [overzichtsdocument](https://docs.adobe.com/content/help/nl-NL/core-services/interface/customer-attributes/attributes.html)voor meer informatie over klantkenmerken.
 
 ## Een bronverbinding maken
 
@@ -28,7 +28,7 @@ Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en select
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
-In het scherm *Bronactiviteit* worden alle eerder ingestelde verbindingen voor profielgegevens van klantkenmerken weergegeven. U kunt een nieuwe verbinding maken door op Gegevens **** selecteren te klikken.
+In het scherm **Bronactiviteit** worden alle eerder ingestelde verbindingen voor profielgegevens van klantkenmerken weergegeven. U kunt een nieuwe verbinding maken door op Gegevens **** selecteren te klikken.
 
 >[!NOTE]
 >
@@ -44,10 +44,10 @@ Van de lijst van beschikbare het profieldatasets van klantenattributen, selectee
 
 ![](../../../../images/tutorials/create/customer-attributes/select_data.png)
 
-De stap *Revisie* wordt weergegeven, zodat u de nieuwe binnenkomende verbinding kunt controleren voordat deze wordt gemaakt. De details van de verbinding worden gegroepeerd per categorieën, die omvatten:
+De stap **Revisie** wordt weergegeven, zodat u de nieuwe binnenkomende verbinding kunt controleren voordat deze wordt gemaakt. De details van de verbinding worden gegroepeerd per categorieën, die omvatten:
 
-* *Brongegevens*: Hiermee geeft u het type van de bronverbinding en de geselecteerde brongegevens weer.
-* *Doelgegevens*: Wanneer het creëren van andere bronschakelaars, toont deze container welke dataset de brongegevens opnemen in, met inbegrip van het schema de dataset zich aan houdt. Klantkenmerkprofielgegevens worden automatisch toegewezen en opgenomen in realtime profielen van klanten.
+* **Brongegevens**: Hiermee geeft u het type van de bronverbinding en de geselecteerde brongegevens weer.
+* **Doelgegevens**: Wanneer het creëren van andere bronschakelaars, toont deze container welke dataset de brongegevens opnemen in, met inbegrip van het schema de dataset zich aan houdt. Klantkenmerkprofielgegevens worden automatisch toegewezen en opgenomen in realtime profielen van klanten.
 
 ![](../../../../images/tutorials/create/customer-attributes/review.png)
 
@@ -55,5 +55,5 @@ De stap *Revisie* wordt weergegeven, zodat u de nieuwe binnenkomende verbinding 
 
 Zodra de verbinding wordt gecreeerd, wordt een doelschema en een dataset automatisch gecreeerd om de inkomende gegevens te bevatten. Wanneer de aanvankelijke opname voltooit, kunnen de gegevens van het klantenkenmerkprofiel door downstream [!DNL Platform] diensten zoals [!DNL Real-time Customer Profile] en [!DNL Segmentation Service]worden gebruikt. Raadpleeg de volgende documenten voor meer informatie:
 
-* [[!DNL Real-time Customer Profile] overzicht](../../../../../profile/home.md)
-* [[!DNL Segmentation Service] overzicht](../../../../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile]  - overzicht](../../../../../profile/home.md)
+* [[!DNL Segmentation Service]  - overzicht](../../../../../segmentation/home.md)
