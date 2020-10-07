@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Veelgestelde vragen over Privacy Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Privacy Service] gids voor problemen
 
-Adobe Experience Platform [!DNL Privacy Service] verstrekt RESTful API en gebruikersinterface om bedrijven te helpen verzoeken van de privacy van klantengegevens beheren. Met [!DNL Privacy Service]kunt u verzoeken indienen om toegang te krijgen tot persoonlijke of persoonlijke klantgegevens en deze te verwijderen, zodat u gemakkelijker kunt voldoen aan de regels van de organisatie en de wettelijke privacy.
+Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee bedrijven privacyverzoeken voor klantgegevens kunnen beheren. Met [!DNL Privacy Service]kunt u verzoeken indienen om toegang te krijgen tot persoonlijke of persoonlijke klantgegevens en deze te verwijderen, zodat u gemakkelijker kunt voldoen aan de regels van de organisatie en de wettelijke privacy.
 
 Dit document bevat antwoorden op veelgestelde vragen over [!DNL Privacy Service]en informatie over veelvoorkomende fouten in de API.
 
@@ -94,7 +94,7 @@ Zie de sectie over het [opzoeken van een taak aan de hand van de id](api/privacy
 
 ### De gebruikersinterface gebruiken
 
-Zoek op het [!DNL Privacy Service] UI-dashboard de taak die u wilt downloaden van de widget **Taakverzoeken** . Klik op de id van de taak om de pagina _Taakdetails_ te openen. Klik van hieruit op **Downloaden** in de rechterbovenhoek om het ZIP-bestand te downloaden. Raadpleeg de gebruikershandleiding [bij de](ui/user-guide.md) Privacy Service voor meer informatie.
+Zoek op het [!DNL Privacy Service] UI-dashboard de taak die u wilt downloaden van de widget **Taakverzoeken** . Klik op de id van de taak om de pagina Taakdetails te openen. Klik van hieruit op **Downloaden** in de rechterbovenhoek om het ZIP-bestand te downloaden. Raadpleeg de gebruikershandleiding [bij de](ui/user-guide.md) Privacy Service voor meer informatie.
 
 ## Algemene foutberichten
 
