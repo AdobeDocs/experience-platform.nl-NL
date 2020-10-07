@@ -5,7 +5,7 @@ title: Richtlijnen voor het oplossen van problemen met sandboxen
 topic: troubleshooting guide
 description: Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 0%
@@ -30,9 +30,9 @@ Het Experience Platform bevat twee sandboxtypen:
 * Productiesandbox
 * Niet-productiesandbox
 
-Experience Platform biedt één **productiesandbox** die niet kan worden verwijderd of opnieuw ingesteld. Er kan slechts één productiesandbox bestaan voor één enkele instantie van het Platform.
+Experience Platform biedt één productiesandbox die niet kan worden verwijderd of opnieuw ingesteld. Er kan slechts één productiesandbox bestaan voor één enkele instantie van het Platform.
 
-Daarentegen kunnen **niet-productiesandboxen** door sandboxbeheerders voor één Platform-instantie worden gemaakt. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op de productiesandbox. Daarnaast beschikken niet-productiesandboxen over een functie voor het opnieuw instellen die alle door de klant gemaakte bronnen uit de sandbox verwijdert. Niet-productiesandboxen kunnen niet worden omgezet in productiesandboxen. Een standaardlicentie voor Experience Platforms geeft u vijf sandboxen (één productie en vier niet-productie). U kunt maximaal 75 sandboxen toevoegen voor maximaal tien niet-productiesandboxen. Neem voor meer informatie contact op met uw IMS Org Administrator of uw Adobe-vertegenwoordiger.
+Daarentegen kunnen sandboxbeheerders voor één Platform-instantie meerdere niet-productiesandboxen maken. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op de productiesandbox. Daarnaast beschikken niet-productiesandboxen over een functie voor het opnieuw instellen die alle door de klant gemaakte bronnen uit de sandbox verwijdert. Niet-productiesandboxen kunnen niet worden omgezet in productiesandboxen. Een standaardlicentie voor Experience Platforms geeft u vijf sandboxen (één productie en vier niet-productie). U kunt maximaal 75 sandboxen toevoegen voor maximaal tien niet-productiesandboxen. Neem voor meer informatie contact op met uw IMS Org Administrator of uw Adobe-vertegenwoordiger.
 
 Zie het [sandboxoverzicht](./home.md) voor meer informatie.
 
@@ -50,7 +50,7 @@ Met Experience Platform kunnen momenteel maximaal 15 niet voor productie bestemd
 
 ## Ik heb zojuist een zandbak gemaakt. Hoe kan ik machtigingen instellen voor de gebruikers die met deze sandbox gaan werken?
 
-De Adobe Admin Console koppelt gebruikers aan sandboxen en machtigingen via het gebruik van **productprofielen**. Nadat u een nieuwe sandbox hebt gemaakt, navigeert u naar het tabblad _Machtigingen_ van het productprofiel waartoe u toegang wilt verlenen en klikt u op **Sandboxen**. Van hieruit kunt u op dezelfde manier als andere machtigingen toegang tot de nieuwe sandbox toevoegen of verwijderen.
+De Adobe Admin Console koppelt gebruikers aan sandboxen en machtigingen via het gebruik van productprofielen. Nadat u een nieuwe sandbox hebt gemaakt, navigeert u naar het tabblad **Machtigingen** van het productprofiel waartoe u toegang wilt verlenen en klikt u op **Sandboxen**. Van hieruit kunt u op dezelfde manier als andere machtigingen toegang tot de nieuwe sandbox toevoegen of verwijderen.
 
 Als u unieke machtigingen wilt toevoegen aan gebruikers van een bepaalde sandbox, moet u mogelijk een nieuw productprofiel maken met de desbetreffende sandboxen en machtigingen die zijn toegepast, en die gebruikers toewijzen aan dat profiel.
 
