@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Deze UI-handleiding helpt u bij het maken van een streamingverbinding met Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Klik op de pagina **[!UICONTROL Bronnen]** op **[!UICONTROL HTTP API]** en vervo
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-Het scherm **[!UICONTROL Verbinding maken met HTTP]** wordt weergegeven. Geef onder **[!UICONTROL Servicedetails]** zowel de **[!UICONTROL naam]** als een **[!UICONTROL beschrijving]** voor de nieuwe streamingverbinding op.
+Het scherm **[!UICONTROL Verbinding maken met HTTP]** wordt weergegeven. Geef onder **[!UICONTROL Servicedetails]** zowel de naam als een beschrijving op voor uw nieuwe streamingverbinding.
 
 Selecteer onder **[!UICONTROL Accountverificatie]** de volgende configuratie-eigenschappen voor uw streamingverbinding:
 
@@ -59,7 +59,7 @@ U kunt of een nieuwe dataset [](#create-a-new-dataset) creëren of een bestaande
 
 ### Een nieuwe gegevensset maken
 
-Om een nieuwe dataset tot stand te brengen, verstrek de **[!UICONTROL Naam]**, de **[!UICONTROL Beschrijving]**, evenals het doel **[!UICONTROL Schema]** voor de dataset.
+Om een nieuwe dataset tot stand te brengen, verstrek de naam, de beschrijving, evenals het doelschema voor de dataset.
 
 ![](../images/streaming-ingestion/ui/create-new-dataset.png)
 
