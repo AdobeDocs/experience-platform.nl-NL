@@ -1,13 +1,13 @@
 ---
-keywords: text classification;Text classification
+keywords: OCR;text presence;optical character recognition
 solution: Experience Platform
-title: API-eindpunt tekstclassificatie
+title: Optische tekenherkenning
 topic: Developer guide
-description: Als de tekstclassificatiedienst een tekstfragment opgeeft, kan deze classificeren in een of meer labels. De classificatie kan single-label, multi-label, of hiërarchisch zijn.
+description: De service Aanwezigheid tekst/Optische tekenherkenning (OCR) kan bij een afbeelding aangeven of er tekst aanwezig is in de afbeelding. Als er tekst aanwezig is, kan OCR de tekst retourneren
 translation-type: tm+mt
-source-git-commit: d57d4412ffd8beccc529681db559007a14ff8120
+source-git-commit: 4d12caf949aeb6619cd27b55855014a61d4e54bb
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '512'
 ht-degree: 2%
 
 ---
