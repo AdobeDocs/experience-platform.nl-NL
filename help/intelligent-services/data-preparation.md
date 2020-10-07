@@ -5,7 +5,7 @@ title: Gegevens voorbereiden voor gebruik in intelligente services
 topic: Intelligent Services
 description: 'Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services hefboomwerkervaringsgegevensmodel (XDM) om dit te bereiken. Specifiek, moeten alle datasets die in de Intelligente Diensten worden gebruikt] met het schema van XDM van Consumer ExperienceEvent (CEE) in overeenstemming zijn. '
 translation-type: tm+mt
-source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1979'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Gegevens voorbereiden voor gebruik in [!DNL Intelligent Services]
 
-Om inzichten van uw gegevens van marketinggebeurtenissen [!DNL Intelligent Services] te kunnen ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. [!DNL Intelligent Services] hefboomwerking [!DNL Experience Data Model] (XDM) regelingen om dit te bereiken. Specifiek, moeten alle datasets die binnen worden gebruikt [!DNL Intelligent Services] met het schema **Consumer ExperienceEvent (CEE)** XDM in overeenstemming zijn.
+Om inzichten van uw gegevens van marketinggebeurtenissen [!DNL Intelligent Services] te kunnen ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. [!DNL Intelligent Services] hefboomwerking [!DNL Experience Data Model] (XDM) regelingen om dit te bereiken. Specifiek, [!DNL Intelligent Services] moeten alle datasets die binnen worden gebruikt met het schema van XDM van Consumer ExperienceEvent (CEE) in overeenstemming zijn.
 
 Dit document verstrekt algemene begeleiding bij het in kaart brengen van uw marketing gebeurtenisgegevens van veelvoudige kanalen aan dit schema, schetsend informatie over belangrijke gebieden binnen het schema om u te helpen bepalen hoe te om uw gegevens aan zijn structuur effectief in kaart te brengen.
 
