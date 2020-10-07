@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Deze zelfstudie biedt stappen voor het maken van een FTP- of SFTP-bronconnector met behulp van de gebruikersinterface van het Platform.
 translation-type: tm+mt
-source-git-commit: c3352c090ce9e5a89d9285aabdc4851632d4d437
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '701'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ Als u al een geldige FTP- of SFTP-verbinding hebt, kunt u de rest van dit docume
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt tot uw FTP- of SFTP-server [!DNL Platform], moet u de **hostnaam** van de server, een **gebruikersnaam** en een **wachtwoord** opgeven.
+Als u toegang wilt tot uw FTP- of SFTP-server, moet u de hostnaam, een gebruikersnaam en een wachtwoord van de server opgeven. [!DNL Platform]
 
 ## Verbinding maken met uw FTP- of SFTP-server
 
