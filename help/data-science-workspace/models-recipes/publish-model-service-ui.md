@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Met de Adobe Experience Platform Data Science Workspace kunt u uw getrainde en geëvalueerde Model als service publiceren, zodat gebruikers binnen uw IMS-organisatie gegevens kunnen scoren zonder dat ze zelf modellen hoeven te maken.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -49,9 +49,9 @@ Raadpleeg de [API-zelfstudie](./publish-model-service-api.md)als u een model wil
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
 4. Wanneer een Dienst wordt gecreeerd, erft het gebrek die configuraties scoring. U kunt deze configuraties bekijken en deze naar wens aanpassen door op de waarden te dubbelklikken. Als u tevreden bent met de configuraties, klikt u op **[!UICONTROL Voltooien]** om de scoring uit te voeren.
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-5. Op de *overzichtspagina* van de Dienst, worden de details van de nieuwe het scoren baan en zijn vooruitgang getoond. Nadat de taak is voltooid, wordt de **[!UICONTROL meest recente]** scores-taak bijgewerkt.
+5. Op de **overzichtspagina** van de Dienst, worden de details van de nieuwe het scoren baan en zijn vooruitgang getoond. Zodra de baan voltooit, zal de **[!UICONTROL Recentste]** kopbal binnen de container van het **[!UICONTROL Scorebord]** worden bijgewerkt.
    ![](../images/models-recipes/publish-model/score_pending.png)
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen, hebt u met succes een Model als toegankelijke Dienst gepubliceerd, en gegevens die de nieuwe Dienst door de Galerij **[!UICONTROL van de]** Dienst worden gescoord. Ga verder met de volgende zelfstudie om te leren hoe u geautomatiseerde training en scoring op een service [kunt](./schedule-models-ui.md)plannen.
+Door deze zelfstudie te volgen, hebt u met succes een Model als toegankelijke Dienst gepubliceerd, en gegevens die de nieuwe Dienst door de Galerij [!UICONTROL van de]Dienst worden gescoord. Ga verder met de volgende zelfstudie om te leren hoe u geautomatiseerde training en scoring op een service [kunt](./schedule-models-ui.md)plannen.
