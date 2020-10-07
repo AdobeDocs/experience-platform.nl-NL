@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Deze zelfstudie biedt stappen voor het maken van een Adobe Analytics-bronaansluiting in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 ## Een bronverbinding maken met Adobe Analytics
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte Bronnen. Het scherm van de *Catalogus* toont beschikbare bronnen om binnenkomende verbindingen met tot stand te brengen, en elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte Bronnen. Het scherm van de **Catalogus** toont beschikbare bronnen om binnenkomende verbindingen met tot stand te brengen, en elke bron toont het aantal bestaande rekeningen en datasetstromen verbonden aan hen.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -73,7 +73,7 @@ Zodra uw datasetstroom is gecreeerd, kunt u de gegevens controleren die door het
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
-Het scherm *Dataset-stromen* wordt weergegeven. Op deze pagina is een paar gegevenssetstromen, met inbegrip van informatie over hun naam, brongegevens, aanmaaktijd, en status.
+Het scherm **Dataset-stromen** wordt weergegeven. Op deze pagina is een paar gegevenssetstromen, met inbegrip van informatie over hun naam, brongegevens, aanmaaktijd, en status.
 
 De schakelaar concretiseert twee datasetstromen. De ene flow vertegenwoordigt de backfill-gegevens en de andere stroom is bedoeld voor live-gegevens. De gegevens van de backfill worden niet gevormd voor Profiel maar wordt verzonden naar het gegevensmeer voor analytische en gegeven-wetenschapsgebruik-gevallen.
 
@@ -83,7 +83,7 @@ Selecteer de datasetstroom u wenst om van de lijst te bekijken.
 
 ![](../../../../images/tutorials/create/analytics/backfill.png)
 
-De pagina *Dataset-activiteit* wordt weergegeven. Op deze pagina wordt de snelheid van berichten weergegeven die in de vorm van een grafiek worden gebruikt. Selecteer *Gegevensbeheer* in de bovenste koptekst om de labelvelden te openen.
+De pagina **Dataset-activiteit** wordt weergegeven. Op deze pagina wordt de snelheid van berichten weergegeven die in de vorm van een grafiek worden gebruikt. Selecteer *Gegevensbeheer* in de bovenste koptekst om de labelvelden te openen.
 
 ![](../../../../images/tutorials/create/analytics/batches.png)
 
@@ -91,7 +91,7 @@ U kunt de geërfte etiketten van een datasetstroom van het scherm van het *Belei
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-Het deelvenster *Regellabels* bewerken wordt weergegeven. Dit scherm staat u toe om tot het contract, de identiteit, en de gevoelige etiketten van een datasetstroom toegang te hebben en uit te geven.
+Het deelvenster **Regellabels** bewerken wordt weergegeven. Dit scherm staat u toe om tot het contract, de identiteit, en de gevoelige etiketten van een datasetstroom toegang te hebben en uit te geven.
 
 Voor meer informatie over hoe te om gegevens te etiketteren die uit Analytics komen, bezoek de gids [van de etiketten van het](../../../../../data-governance/labels/user-guide.md)gegevensgebruik.
 
