@@ -5,7 +5,7 @@ title: Handleiding voor ontwikkelaars van Privacys Service
 description: Gebruik de RESTful-API om de persoonlijke gegevens van de betrokkenen in Adobe Experience Cloud-toepassingen te beheren
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 0%
@@ -77,7 +77,7 @@ Het sleutelpaar wordt automatisch geproduceerd, en een dossier van het ZIP dat e
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-Zodra API aan het project is toegevoegd, verschijnt de projectpagina opnieuw op de _Privacy Service API overzichtspagina_ . Van hier, scrol neer aan de sectie van de Rekening van de **[!UICONTROL Dienst (JWT)]** , die de volgende toegangsgeloofsbrieven verstrekt die in alle vraag aan [!DNL Privacy Service] API worden vereist:
+Zodra API aan het project is toegevoegd, verschijnt de projectpagina opnieuw op de **Privacy Service API overzichtspagina** . Van hier, scrol neer aan de sectie van de Rekening van de **[!UICONTROL Dienst (JWT)]** , die de volgende toegangsgeloofsbrieven verstrekt die in alle vraag aan [!DNL Privacy Service] API worden vereist:
 
 * **[!UICONTROL CLIENT-ID]**: De client-id is de vereiste `{API_KEY}` voor die id die moet worden opgegeven in de header x-api-key.
 * **[!UICONTROL ORGANISATIE-ID]**: De organisatie-id is de `{IMS_ORG}` waarde die moet worden gebruikt in de header x-gw-ims-org-id.
