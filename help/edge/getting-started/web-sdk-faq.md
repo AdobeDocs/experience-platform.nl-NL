@@ -4,7 +4,7 @@ seo-title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Veelgestelde vragen over Adobe Experience Platform Web SDK
 seo-description: Veelgestelde vragen over Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: f178da80d0902f76868986426600f3da426cf24d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1683'
 ht-degree: 1%
@@ -117,7 +117,7 @@ Dat hangt ervan af. De SDK van het Web van Adobe Experience Platform kan in twee
 
 * **Nog een tag:** Als de site al is gelabeld voor oplossingen en u kunt deze niet opnieuw labelen, maar u wilt gegevens naar het Adobe Experience Platform Edge Network verzenden voor gebruik van Experience Platforms of naar de volgende functies op de server (zie hieronder), kunt u de `alloy.js` tag toevoegen aan de site, waar deze werkt als &quot;gewoon een andere tag&quot;.
 
-* **Het enige label:** Als u het Web SDK voor een oplossing van Experience Cloud wilt gebruiken, moet u het voor _alle_ oplossingen op die pagina gebruiken. Als uw site bijvoorbeeld al is gecodeerd voor Analytics en u deze wilt gebruiken voor Target, moet u deze zowel voor als voor andere sites in de toekomst gebruiken.
+* **Het enige label:** Als u het Web SDK voor een oplossing van Experience Cloud wilt gebruiken, moet u het voor alle oplossingen op die pagina gebruiken. Als uw site bijvoorbeeld al is gecodeerd voor Analytics en u deze wilt gebruiken voor Target, moet u deze zowel voor als voor andere sites in de toekomst gebruiken.
 
 Met andere woorden, als u besluit om het Web SDK van Adobe Experience Platform voor niet-oplossingsgebruiksgevallen te gebruiken, kunt u de plaats etiketteren met `alloy.js` en zich bewegen alsof het een nieuwe oplossing is. Als u het voor Adobe Analytics, Doel, of Audience Manager, of voor toepassingsgebruiksgevallen wilt gebruiken, zou u om het even welke erfeniscode op uw pagina kunnen moeten verwijderen.
 
@@ -141,7 +141,7 @@ Echter:
 
 * De Adobe Experience Platform Web SDK vereist iets genoemd een de configuratieidentiteitskaart van de Rand van de Ervaring zodat kan het randnetwerk de stroom identificeren en bepalen wat met de gegevens te doen. Deze id wordt gemaakt in Launch. Dit betekent niet dat u Launch moet gebruiken om eigenschappen te maken of de JavaScript-code te implementeren, maar u moet Launch gebruiken om een configuratie-id te maken.
 
-* Adobe Experience Platform Launch is niet alleen de beste beschikbare tag en SDK-manager, maar maakt het heel eenvoudig om gegevens te implementeren `alloy.js` en toe te wijzen aan XDM-schema&#39;s. Als u besluit om Lancering niet te gebruiken, zult u het opstellen `alloy.js`, het verhinderen, en het in kaart brengen van uw gegevens in XDM moeten beheren alvorens het te verzenden. Dit is een _veel_ lastiger proces dan het gebruiken van Lancering.
+* Adobe Experience Platform Launch is niet alleen de beste beschikbare tag en SDK-manager, maar maakt het heel eenvoudig om gegevens te implementeren `alloy.js` en toe te wijzen aan XDM-schema&#39;s. Als u besluit om Lancering niet te gebruiken, zult u het opstellen `alloy.js`, het verhinderen, en het in kaart brengen van uw gegevens in XDM moeten beheren alvorens het te verzenden. Dit is een veel lastiger proces dan het gebruiken van Lancering.
 
 * U wordt aangeraden Launch te gebruiken voor implementatie `alloy.js`, zelfs als dit de enige tag is waarvoor u het gebruikt.
 
