@@ -5,7 +5,7 @@ title: XDM-systeem (Experience Data Model)
 topic: overview
 description: 'Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema''s voor het beheer van de klantenervaring te bepalen. '
 translation-type: tm+mt
-source-git-commit: d49bbc91b67dec0468b46d165521c7d097a801ee
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 0%
@@ -19,13 +19,13 @@ Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Ad
 
 XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor om het even welke toepassing om met de [!DNL Platform] diensten te gebruiken te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier kan leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden uitdrukken.
 
-XDM is het grondkader dat Adobe Experience Cloud, aangedreven door [!DNL Experience Platform], toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op het juiste moment te leveren. De methodologie waarop [!DNL Experience Platform] wordt gebouwd, **Systeem** XDM, exploiteert [!DNL Experience Data Model] schema&#39;s voor gebruik door de [!DNL Platform] diensten.
+XDM is het grondkader dat Adobe Experience Cloud, aangedreven door [!DNL Experience Platform], toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op het juiste moment te leveren. De methodologie waarop [!DNL Experience Platform] wordt gebouwd, het Systeem XDM, exploiteert [!DNL Experience Data Model] schema&#39;s voor gebruik door de [!DNL Platform] diensten.
 
 Dit document biedt een overzicht van de rol van XDM System in [!DNL Experience Platform].
 
 ## XDM-schema&#39;s
 
-[!DNL Experience Platform] gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens.
+[!DNL Experience Platform] gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het gemakkelijker om betekenis te behouden en zo waarde te verkrijgen van gegevens.
 
 Voordat gegevens kunnen worden opgenomen in [!DNL Platform], moet een schema zijn samengesteld om de gegevensstructuur te beschrijven en om beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. Schema&#39;s bestaan uit een basisklasse en nul of meer mixen.
 
@@ -44,7 +44,7 @@ Gegevens die bestemd zijn voor gebruik in [!DNL Experience Platform] worden gegr
 * **Opnamegegevens**: Verstrekt informatie over de attributen van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
 * **Gegevens** tijdreeks: Biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
 
-Alle XDM schema&#39;s beschrijven gegevens die als verslag of tijdreeks kunnen worden gecategoriseerd. Het gegevensgedrag van een schema wordt bepaald door de **klasse** van het schema, die aan een schema wordt toegewezen wanneer het eerst wordt gecreeerd. De klassen XDM beschrijven het kleinste aantal eigenschappen een schema moet bevatten om een bepaald gegevensgedrag te vertegenwoordigen.
+Alle XDM schema&#39;s beschrijven gegevens die als verslag of tijdreeks kunnen worden gecategoriseerd. Het gegevensgedrag van een schema wordt bepaald door de klasse van het schema, die aan een schema wordt toegewezen wanneer het eerst wordt gecreeerd. De klassen XDM beschrijven het kleinste aantal eigenschappen een schema moet bevatten om een bepaald gegevensgedrag te vertegenwoordigen.
 
 Hoewel u uw eigen klassen in de map kunt definiëren, wordt u aangeraden de voorkeursklassen [!DNL Schema Registry]en **[!DNL XDM Individual Profile]** **[!DNL XDM ExperienceEvent]** voor record- en tijdreeksgegevens te gebruiken. Deze klassen worden hieronder gedetailleerder beschreven.
 
