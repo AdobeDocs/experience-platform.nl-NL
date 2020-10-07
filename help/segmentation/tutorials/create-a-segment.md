@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Dit document biedt een zelfstudie voor het ontwikkelen, testen, voorvertonen en opslaan van een segmentdefinitie met de Adobe Experience Platform Segmentation Service API.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Een segmentdefinitie ontwikkelen
 
-De eerste stap in segmentatie is een segment te bepalen dat in een constructie wordt vertegenwoordigd genoemd een **segmentdefinitie**. Een segmentdefinitie is een object waarin een query wordt ingekapseld die is geschreven in [!DNL Profile Query Language] (PQL). Dit object wordt ook wel een **PQL-voorspelling** genoemd. In PQL worden de regels voor het segment gedefinieerd op basis van voorwaarden die betrekking hebben op record- of tijdreeksgegevens die u opgeeft aan [!DNL Real-time Customer Profile]. Raadpleeg de [PQL-handleiding](../pql/overview.md) voor meer informatie over het schrijven van PQL-query&#39;s.
+De eerste stap in segmentatie is een segment te bepalen, dat in een constructie wordt vertegenwoordigd genoemd een segmentdefinitie. Een segmentdefinitie is een object waarin een query wordt ingekapseld die is geschreven in [!DNL Profile Query Language] (PQL). Dit object wordt ook wel een PQL-voorspelling genoemd. In PQL worden de regels voor het segment gedefinieerd op basis van voorwaarden die betrekking hebben op record- of tijdreeksgegevens die u opgeeft aan [!DNL Real-time Customer Profile]. Raadpleeg de [PQL-handleiding](../pql/overview.md) voor meer informatie over het schrijven van PQL-query&#39;s.
 
 U kunt een nieuwe segmentdefinitie tot stand brengen door een verzoek van de POST aan het `/segment/definitions` eindpunt in [!DNL Segmentation] API te doen. Het volgende voorbeeld schetst hoe te om een definitieverzoek te formatteren, die welke informatie wordt vereist opdat een segment met succes wordt bepaald.
 
