@@ -5,7 +5,7 @@ topic: tutorial
 type: Tutorial
 description: Met Adobe Experience Platform kunt u aangepaste functiepijpleidingen maken en maken die op schaal functionaliteit kunnen bieden via de Sensei Machine Learning Framework-runtime. Dit document beschrijft de diverse klassen die in een eigenschappijpleiding worden gevonden, en verstrekt een geleidelijke zelfstudie voor het creëren van een pijpleiding van de douaneeigenschap gebruikend ModelAuthoring SDK in PySpark.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Het configuratie-JSON-bestand bestaat uit sleutel-waardeparen en is bedoeld om a
 
 In het volgende voorbeeld ziet u hoe sleutel-waardeparen worden gevonden in een configuratiebestand:
 
-**JSON-voorbeeld voor configuratie**
+**Configuration JSON-voorbeeld**
 
 ```json
 [
