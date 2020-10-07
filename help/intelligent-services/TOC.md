@@ -5,9 +5,9 @@ user-guide-title: Help bij Intelligente services
 breadcrumb-title: Intelligent Services Guide
 user-guide-description: Utilize intelligent AI services to generate scores, discover insights, and create segments from your marketing events data.
 translation-type: tm+mt
-source-git-commit: 0c5842b843f5a2c3c1209178237a0d7ba0441c4f
+source-git-commit: ada5a34ffa3ea9c90ff578ab27f425b82f7ed18c
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '94'
 ht-degree: 5%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 5%
       * [Trefwoordextractie](content-commerce-ai/api/keyword-extraction.md)
       * [Tekstclassificatie](content-commerce-ai/api/text-classification.md)
       * [Visuele gelijkenis](content-commerce-ai/api/visual-similarity.md)
+      * [Tekstaanwezigheid en optische tekenherkenning](content-commerce-ai/api/optical-character-recognition.md)
 * Customer AI {#customer-ai}
    * [Overzicht](customer-ai/overview.md)
    * [Aan de slag met Customer AI](customer-ai/getting-started.md)
