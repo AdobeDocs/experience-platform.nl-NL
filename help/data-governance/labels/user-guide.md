@@ -5,7 +5,7 @@ title: Gebruiksaanwijzing voor labels voor gegevensgebruik
 topic: labels
 description: In deze gebruikershandleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1119'
 ht-degree: 0%
@@ -19,7 +19,7 @@ In deze gebruikershandleiding worden de stappen beschreven voor het werken met l
 
 ## De etiketten van het gegevensgebruik op het datasetniveau beheren
 
-Om de etiketten van het gegevensgebruik op het datasetniveau te beheren, moet u een bestaande dataset selecteren of nieuwe creëren. Nadat u zich hebt aangemeld bij Adobe Experience Platform, selecteert u **[!UICONTROL Datasets]** in de linkernavigatie om de werkruimte _Datasets_ te openen. Deze pagina maakt een lijst van alle gecreeerde datasets die tot uw organisatie behoren, samen met nuttige details met betrekking tot elke dataset.
+Om de etiketten van het gegevensgebruik op het datasetniveau te beheren, moet u een bestaande dataset selecteren of nieuwe creëren. Nadat u zich hebt aangemeld bij Adobe Experience Platform, selecteert u **[!UICONTROL Datasets]** in de linkernavigatie om de werkruimte **[!UICONTROL Datasets]** te openen. Deze pagina maakt een lijst van alle gecreeerde datasets die tot uw organisatie behoren, samen met nuttige details met betrekking tot elke dataset.
 
 ![Tabblad Gegevensset in werkruimte Gegevens](../images/labels/datasets.png)
 
@@ -43,7 +43,7 @@ Het **[!UICONTROL Uitgezochte scherm van het Schema]** verschijnt, dat van alle 
 
 ![Datasetschema selecteren](../images/labels/dataset_schema.png)
 
-Het scherm Gegevensset **[!UICONTROL configureren]** wordt weergegeven. Geef een **naam** (vereist) en een **beschrijving** (optioneel, maar aanbevolen) voor de nieuwe gegevensset op en klik vervolgens op **[!UICONTROL Voltooien]**.
+Het scherm Gegevensset **[!UICONTROL configureren]** wordt weergegeven. Geef een naam (vereist) en beschrijving (optioneel, maar aanbevolen) voor de nieuwe gegevensset op en klik op **[!UICONTROL Voltooien]**.
 
 ![Gegevensset configureren met naam en beschrijving](../images/labels/dataset_configure.png)
 
