@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Identity Service] overzicht
+# [!DNL Identity Service] - overzicht
 
 Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van uw klant vereist. Dit wordt bemoeilijkt wanneer uw klantengegevens over verschillende systemen worden gefragmenteerd, die elke individuele klant ertoe brengen om veelvoudige &quot;identiteiten&quot;te hebben te schijnen. Adobe Experience Platform [!DNL Identity Service] helpt u om een beter beeld te krijgen van uw klant en van hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 
@@ -35,11 +35,11 @@ De identiteitsrelaties die [!DNL Identity Service] definiëren en onderhouden, w
 
 ### Identiteiten
 
-Een identiteit is gegevens die uniek zijn voor een entiteit, doorgaans een individuele persoon. Een identiteit zoals een login identiteitskaart, ECID, of loyaliteitsidentiteitskaart wordt bedoeld als **bekende identiteit**.
+Een identiteit is gegevens die uniek zijn voor een entiteit, doorgaans een individuele persoon. Een identiteit zoals een login identiteitskaart, ECID, of loyaliteitsidentiteitskaart wordt bedoeld als bekende identiteit.
 
 PII, zoals e-mailadres en telefoonnummer, dient om een klant rechtstreeks te identificeren. Als gevolg hiervan wordt PII gebruikt om de verschillende identiteiten van een klant op verschillende systemen af te stemmen.
 
-**Onbekende of anonieme identiteiten** wijzen een apparaat uit zonder de werkelijke persoon te identificeren die het gebruikt. Deze categorie bevat informatie zoals het IP-adres en de cookie-id van een bezoeker. Terwijl gedragsgegevens van een apparaat kunnen worden verzameld gebruikend onbekende identiteiten, associating deze identiteiten over apparaten of media is beperkt tot uw klant PII tijdens hun reis levert.
+Onbekende of anonieme identiteiten wijzen een apparaat uit zonder de werkelijke persoon te identificeren die het gebruikt. Deze categorie bevat informatie zoals het IP-adres en de cookie-id van een bezoeker. Terwijl gedragsgegevens van een apparaat kunnen worden verzameld gebruikend onbekende identiteiten, associating deze identiteiten over apparaten of media is beperkt tot uw klant PII tijdens hun reis levert.
 
 Zoals in de onderstaande afbeelding wordt getoond, zijn bekende en anonieme identiteiten beide belangrijke componenten van [identiteitsgrafieken](#identity-graphs), die later in dit document worden besproken.
 
