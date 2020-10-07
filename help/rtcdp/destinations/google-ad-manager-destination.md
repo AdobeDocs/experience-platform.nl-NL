@@ -5,7 +5,7 @@ seo-title: Doel van Google Ad Manager
 description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 seo-description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 0%
@@ -49,11 +49,11 @@ Voordat u de [!DNL Google Ad Manager] bestemming maakt in CDP in real-time Adobe
 * **Klant-id** : Dit is Adobe-klant-id met [!DNL Google]. Neem contact op met de klantenservice van Adobe of uw Adobe om deze id te verkrijgen.
 * **Netwerk-id** : dit is je account met [!DNL Google Ad Manager]
 * **Koppelings-id** publiek: dit is je account met [!DNL Google Ad Manager]
-* Je accounttype. **DFP door Google** - of **AdX-koper**.
+* Je accounttype. DFP door koper van Google of AdX.
 
 ## Doel configureren
 
-1. Selecteer in **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** de optie [!DNL Google Ad Manager]en selecteer **[!UICONTROL Configureren]**.
+1. Selecteer in **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** de optie **[!DNL Google Ad Manager]** en selecteer **[!UICONTROL Configureren]**.
    ![Doel van Google Ad Manager verbinden](/help/rtcdp/destinations/assets/google-1-destination.png)
 
    >[!NOTE]
