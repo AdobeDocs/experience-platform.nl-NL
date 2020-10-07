@@ -5,7 +5,7 @@ description: Leer hoe te om de gebeurtenisgegevens van SDK van het Web van het E
 seo-description: Leer hoe te om de gebeurtenisgegevens van SDK van het Web van het Experience Platform samen te voegen
 keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >Deze functie is nog in ontwikkeling. Niet alle oplossingen kunnen gebeurtenisgegevens samenvoegen zoals op deze pagina wordt beschreven.
 
-Soms zijn niet alle gegevens beschikbaar wanneer een gebeurtenis plaatsvindt. U zou de gegevens kunnen willen vangen u _hebt_ zodat wordt het niet verloren als, bijvoorbeeld, de gebruiker browser sluit. Anderzijds kunt u ook gegevens opnemen die later beschikbaar komen.
+Soms zijn niet alle gegevens beschikbaar wanneer een gebeurtenis plaatsvindt. U zou de gegevens kunnen willen vangen u hebt zodat wordt het niet verloren als, bijvoorbeeld, de gebruiker browser sluit. Anderzijds kunt u ook gegevens opnemen die later beschikbaar komen.
 
 In dergelijke gevallen kunt u gegevens samenvoegen met eerdere gebeurtenissen door `eventMergeId` als volgt een optie aan `event` opdrachten door te geven:
 
@@ -111,7 +111,7 @@ eventMergeIdPromise.then(function(results) {
 });
 ```
 
-Volg dit zelfde patroon als u toegang tot het `eventMergeID` om andere redenen (bijvoorbeeld, om het naar een derdeleverancier te verzenden) wilt:
+Volg dit zelfde patroon als u toegang tot het `eventMergeID` om andere redenen (bijvoorbeeld, om het naar een derdeleverancier te verzenden) zou willen:
 
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
