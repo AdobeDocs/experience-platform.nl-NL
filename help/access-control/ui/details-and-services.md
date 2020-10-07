@@ -5,7 +5,7 @@ title: Details en aanvullende services voor een productprofiel beheren
 topic: user guide
 description: In dit document worden de stappen beschreven die nodig zijn om details en aanvullende services voor een productprofiel in de Adobe Admin Console te beheren. U kunt de details van een profiel en toegang tot extra diensten van binnen het menu van de Montages van het Profiel vormen.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
@@ -19,7 +19,7 @@ U kunt de details van een profiel en toegang tot extra diensten van binnen het m
 
 ![profiel-instellingen](../images/profile-settings.png)
 
-Het menu **[!UICONTROL Profielinstellingen]** wordt weergegeven, te beginnen op het tabblad **[!UICONTROL Details]** . Op dit tabblad kunt u de **[!UICONTROL profielnaam]** en **[!UICONTROL beschrijving]** invoeren en bewerken. U kunt ook uw **[!UICONTROL weergavenaam]** en de instellingen voor e-mailmeldingen voor uw account wijzigen.
+Het menu **[!UICONTROL Profielinstellingen]** wordt weergegeven, te beginnen op het tabblad **[!UICONTROL Details]** . Op dit tabblad kunt u de naam en beschrijving van uw profiel invoeren en bewerken. U kunt ook de weergavenaam en de instellingen voor e-mailmeldingen voor uw account wijzigen.
 
 ![bewerken-details-instellingen](../images/edit-details-settings.png)
 
