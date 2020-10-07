@@ -5,7 +5,7 @@ title: Gebruikershandleiding voor laptop in realtime leren van machines
 topic: Training and scoring a ML model
 description: In de volgende handleiding worden de stappen beschreven die nodig zijn om een toepassing voor het leren van machines in realtime te maken in Adobe Experience Platform JupyterLab.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 0%
@@ -23,7 +23,7 @@ In de volgende handleiding worden de stappen beschreven die nodig zijn om een to
 
 ## Een laptop voor real-time leren van machines maken
 
-In Adobe Experience Platform UI, uitgezochte **[!UICONTROL Notitieboeken]** van binnen *Gegevens Wetenschap*. Selecteer vervolgens **[!UICONTROL JupyterLab]** en laat de omgeving enige tijd laden.
+In Adobe Experience Platform UI, uitgezochte **[!UICONTROL Notitieboeken]** van binnen **Gegevens Wetenschap**. Selecteer vervolgens **[!UICONTROL JupyterLab]** en laat de omgeving enige tijd laden.
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
@@ -117,7 +117,7 @@ Met de **[!UICONTROL Real-Time ML]** -sjabloon moet u uw ML-model analyseren, vo
 
 **Gegevenstransformaties**
 
-De **[!UICONTROL Echte cel van de Transformaties]** van XML *malplaatjes van* Gegevens moet worden gewijzigd om met uw eigen dataset te werken. Doorgaans gaat het hier om het wijzigen van de naam van kolommen, rollup van gegevens en het voorbereiden en bewerken van gegevens.
+De **[!UICONTROL Echte cel van de Transformaties]** van XML **malplaatjes van** Gegevens moet worden gewijzigd om met uw eigen dataset te werken. Doorgaans gaat het hier om het wijzigen van de naam van kolommen, rollup van gegevens en het voorbereiden en bewerken van gegevens.
 
 >[!NOTE]
 >
@@ -355,7 +355,7 @@ Wanneer de bewerking is voltooid, wordt een `edge` object geretourneerd dat elk 
 
 >[!NOTE]
 >
->Het leren van de machine in real time wordt tijdelijk opgesteld aan en beheerd door de Hub van het Platform van de Expereence van de Adobe. Voor meer details, bezoek de overzichtssectie over de [Echte architectuur](./home.md#architecture)van het Leren van de Machine.
+>Het leren van de machine in real time wordt tijdelijk opgesteld aan en beheerd door de Hub van Adobe Experience Platform. Voor meer details, bezoek de overzichtssectie over de [Echte architectuur](./home.md#architecture)van het Leren van de Machine.
 
 Nu u een grafiek van DSL hebt gecreeerd, kunt u uw grafiek aan [!DNL Edge]opstellen.
 
