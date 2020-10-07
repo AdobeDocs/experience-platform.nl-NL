@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Opmerkingen bij de release Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 5%
@@ -53,7 +53,7 @@ Dit document bevat informatie over nieuwe functies voor Adobe Experience Platfor
 
 * [!DNL Privacy Service] Verbeteringen voor gebruikersinterface:
    * Afzonderlijke pagina&#39;s voor het volgen van taken voor GDPR en CCPA verordeningen.
-   * Het nieuwe _Regeltype_ dropdown om tussen het volgen gegevens voor GDPR en CCPA te schakelen.
+   * Het nieuwe *Regeltype* dropdown om tussen het volgen gegevens voor GDPR en CCPA te schakelen.
 
 ## 25 juli 2019
 
