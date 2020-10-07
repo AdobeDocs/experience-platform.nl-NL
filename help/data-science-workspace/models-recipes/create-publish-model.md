@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: De Adobe Experience Platform Data Science Workspace biedt de middelen om uw doel te bereiken met behulp van het vooraf gebouwde Product Recommendations Recipe. Volg deze zelfstudie om te zien hoe u toegang hebt tot uw gegevens in de detailhandel, een model voor machinaal leren kunt maken en optimaliseren en inzichten kunt genereren in de werkruimte voor wetenschap van gegevens.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -85,7 +85,7 @@ Ontvangers vormen de basis voor een model aangezien zij machine het leren algori
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Zoek en open de opgegeven **[!UICONTROL Recommendations Recipe]** door op de naam ervan te klikken.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Klik in het rechterspoor op **[!UICONTROL Recommendations Input Schema]** om het schema voor het recept weer te geven. De schemagebieden **[!UICONTROL itemId]** en **[!UICONTROL userId]** beantwoorden aan een product dat door die klant op een specifiek tijdstip (**[!UICONTROL timestamp]**) wordt gekocht (**[!UICONTROL interactionType]**). Voer dezelfde stappen uit om de velden voor het **[!UICONTROL Recommendations-uitvoerschema]**te bekijken.
+3. Klik in het rechterspoor op **[!UICONTROL Recommendations Input Schema]** om het schema voor het recept weer te geven. De schemagebieden &quot;[!UICONTROL itemId]&quot;en &quot;[!UICONTROL userId]&quot;beantwoorden aan een product dat ([!UICONTROL interactionType]) door die klant op een specifiek tijdstip ([!UICONTROL timestamp]) wordt gekocht. Voer dezelfde stappen uit om de velden voor het **[!UICONTROL Recommendations-uitvoerschema]**te bekijken.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 U hebt nu de invoer- en uitvoerschema&#39;s gecontroleerd die vereist zijn voor de Product Recommendations Recipe. U kunt nu verdergaan naar de volgende sectie om te weten te komen hoe u een product-Recommendations-model kunt maken, trainen en evalueren.
@@ -113,9 +113,9 @@ U kunt ervoor kiezen te wachten totdat de trainingsreeks is voltooid of een nieu
 
 ### Het model trainen met aangepaste hyperparameters
 
-1. Voor de pagina van het Overzicht *van het* Model, klik **[!UICONTROL Lijn]** bij het hoogste recht om een nieuwe trainingslooppas tot stand te brengen. Selecteer de zelfde inputdataset u toen het creëren van het Model gebruikte en klik **[!UICONTROL daarna]**.
+1. Voor de pagina van het Overzicht **van het** Model, klik **[!UICONTROL Lijn]** bij het hoogste recht om een nieuwe trainingslooppas tot stand te brengen. Selecteer de zelfde inputdataset u toen het creëren van het Model gebruikte en klik **[!UICONTROL daarna]**.
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. De pagina *Configuratie* wordt weergegeven. Hier kunt u de waarde **[!UICONTROL num_recommendations]** van de trainingslooppas vormen, die ook als Hyperparameter wordt bekend. Een getraind en geoptimaliseerd model zal de best-presterende Hyperparameters gebruiken die op de resultaten van de trainingslooppas worden gebaseerd.
+2. De pagina **Configuratie** wordt weergegeven. Hier kunt u de waarde &quot;[!UICONTROL num_recommendations]&quot;van de trainingslooppas vormen, die ook als Hyperparameter wordt bekend. Een getraind en geoptimaliseerd model zal de best-presterende Hyperparameters gebruiken die op de resultaten van de trainingslooppas worden gebaseerd.
 
    Hyperparameters kunnen niet worden geleerd, daarom moeten zij worden toegewezen alvorens de opleidingslooppas voorkomt. Het aanpassen van Hyperparameters kan de nauwkeurigheid van het Getrainde Model veranderen. Aangezien het optimaliseren van een model een herhalend proces is, kunnen meerdere trainingen nodig zijn voordat een bevredigende evaluatie wordt uitgevoerd.
 
@@ -159,7 +159,7 @@ Nadat de scoring is voltooid, kunt u een voorvertoning van de resultaten bekijke
 
 1. Klik op de pagina met scoring-resultaten op de voltooide scoring-run en klik vervolgens op Gegevensset **[!UICONTROL met]** voorvertoning van scores in de rechtertrack.
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. In de voorproeflijst, bevat elke rij productaanbevelingen voor een bepaalde klant, geëtiketteerd als **[!UICONTROL aanbevelingen]** en **[!UICONTROL userId]** respectievelijk. Aangezien de **[!UICONTROL num_recommendations]** Hyperparameter aan 10 in de steekproefscreenshots werd geplaatst, kan elke rij van aanbevelingen tot 10 productidentiteiten bevatten die door een aantalteken (#) worden afgebakend.
+2. In de voorproeflijst, bevat elke rij productaanbevelingen voor een bepaalde klant, geëtiketteerd als [!UICONTROL aanbevelingen] en [!UICONTROL userId] respectievelijk. Aangezien de [!UICONTROL num_recommendations] Hyperparameter aan 10 in de steekproefscreenshots werd geplaatst, kan elke rij van aanbevelingen tot 10 productidentiteiten bevatten die door een aantalteken (#) worden afgebakend.
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## Volgende stappen {#next-steps}
