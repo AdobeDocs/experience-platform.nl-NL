@@ -5,7 +5,7 @@ title: Gebruikershandleiding voor gegevensgebruiksbeleid
 topic: policies
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Gebruikershandleiding voor gegevensgebruiksbeleid
 
-Adobe Experience Platform [!DNL Data Governance] biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte _Beleid_ in de [!DNL Experience Platform] gebruikersinterface.
+Adobe Experience Platform [!DNL Data Governance] biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte **Beleid** in de [!DNL Experience Platform] gebruikersinterface.
 
 >[!IMPORTANT]
 >
@@ -56,7 +56,7 @@ De stap **[!UICONTROL Marketingacties]** selecteren wordt weergegeven. Kies de g
 
 >[!NOTE]
 >
->Wanneer het selecteren van veelvoudige marketing acties, interpreteert het beleid hen als &quot;OF&quot;regel. Met andere woorden, het beleid is van toepassing als _om het even welke_ geselecteerde marketing acties worden uitgevoerd.
+>Wanneer het selecteren van veelvoudige marketing acties, interpreteert het beleid hen als &quot;OF&quot;regel. Met andere woorden, het beleid is van toepassing als **om het even welke** geselecteerde marketing acties worden uitgevoerd.
 
 ![](../images/policies/add-marketing-actions.png)
 
