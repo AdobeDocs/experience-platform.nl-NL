@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Berekende kenmerken - Real-time Customer Profile API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van het [Real-ti
 
 Met Adobe Experience Platform kunt u eenvoudig gegevens uit meerdere bronnen importeren en samenvoegen om te genereren [!DNL Real-time Customer Profiles]. Elk profiel bevat belangrijke informatie met betrekking tot een persoon, zoals zijn contactgegevens, voorkeuren en aankoopgeschiedenis, die een 360 graden mening van de klant verstrekken.
 
-Een deel van de informatie die in het profiel wordt verzameld, is gemakkelijk te begrijpen wanneer de gegevensvelden rechtstreeks worden gelezen (bijvoorbeeld &quot;voornaam&quot;), terwijl andere gegevens meerdere berekeningen vereisen of op andere velden en waarden vertrouwen om de informatie te genereren (bijvoorbeeld &quot;totaal voor levenslange aanschaf&quot;). Om deze gegevens in één oogopslag begrijpelijker te maken, [!DNL Platform] kunt u **[!UICONTROL berekende attributen]** tot stand brengen die deze verwijzingen en berekeningen automatisch uitvoeren, die de waarde op het aangewezen gebied terugkeren.
+Een deel van de informatie die in het profiel wordt verzameld, is gemakkelijk te begrijpen wanneer de gegevensvelden rechtstreeks worden gelezen (bijvoorbeeld &quot;voornaam&quot;), terwijl andere gegevens meerdere berekeningen vereisen of op andere velden en waarden vertrouwen om de informatie te genereren (bijvoorbeeld &quot;totaal voor levenslange aanschaf&quot;). Om deze gegevens in één oogopslag begrijpelijker te maken, [!DNL Platform] kunt u berekende attributen tot stand brengen die deze verwijzingen en berekeningen automatisch uitvoeren, die de waarde op het aangewezen gebied terugkeren.
 
 De berekende attributen omvatten het creëren van een uitdrukking, of &quot;regel&quot;, die op inkomende gegevens werkt en de resulterende waarde in een profielattribuut of een gebeurtenis opslaat. Expressies kunnen op meerdere verschillende manieren worden gedefinieerd, zodat u kunt opgeven dat een regel alleen binnenkomende gebeurtenissen, binnenkomende gebeurtenis- en profielgegevens of binnenkomende gebeurtenissen, profielgegevens en historische gebeurtenissen evalueert.
 
@@ -69,7 +69,7 @@ Als u het schema hebt gevonden, klikt u op de naam van het schema om het te open
 
 ### Een mix maken
 
-Als u een nieuwe mix wilt maken, klikt u op **[!UICONTROL Toevoegen]** naast *Mixins* in de sectie **[!UICONTROL Compositie]** links in de editor. Hierdoor wordt het dialoogvenster **[!UICONTROL Toevoegen]** geopend waarin u bestaande mixen kunt zien. Klik op het keuzerondje voor **[!UICONTROL Nieuwe mix]** maken om de nieuwe mix te definiëren.
+Als u een nieuwe mix wilt maken, klikt u op **[!UICONTROL Toevoegen]** naast **[!UICONTROL Mixins]** in de sectie **[!UICONTROL Compositie]** links in de editor. Hierdoor wordt het dialoogvenster **[!UICONTROL Toevoegen]** geopend waarin u bestaande mixen kunt zien. Klik op het keuzerondje voor **[!UICONTROL Nieuwe mix]** maken om de nieuwe mix te definiëren.
 
 Geef de mix een naam en een beschrijving en klik op Mengsel **[!UICONTROL toevoegen]** wanneer u klaar bent.
 
@@ -77,7 +77,7 @@ Geef de mix een naam en een beschrijving en klik op Mengsel **[!UICONTROL toevoe
 
 ### Een veld voor berekende kenmerken toevoegen aan het schema
 
-Het nieuwe mengsel moet nu worden weergegeven in de sectie **[!UICONTROL Mixins]** onder **[!UICONTROL Compositie]**. Klik op de naam van de mixin en de veelvoudige **[!UICONTROL Add gebiedsknopen]** zullen in de sectie van de *[!UICONTROL Structuur]** van de redacteur verschijnen.
+Het nieuwe mengsel moet nu worden weergegeven in de sectie &quot;[!UICONTROL Mixins]&quot; onder &quot;[!UICONTROL Compositie]&quot;. Klik op de naam van de mixin en de veelvoudige **[!UICONTROL Add gebiedsknopen]** zullen in de sectie van de **[!UICONTROL Structuur]** van de redacteur verschijnen.
 
 Selecteer het veld **** Toevoegen naast de naam van het schema om een veld op hoofdniveau toe te voegen. U kunt ook selecteren om het veld toe te voegen binnen het gewenste schema.
 
