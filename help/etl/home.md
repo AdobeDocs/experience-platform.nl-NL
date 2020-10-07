@@ -5,7 +5,7 @@ title: ETL-integratie maken
 topic: overview
 description: De ETL-integratiehandleiding beschrijft algemene stappen voor het maken van krachtige, veilige connectors voor Experience Platform en het opnemen van gegevens in het Platform.
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '4173'
 ht-degree: 0%
@@ -95,7 +95,7 @@ Met de gegevensbron voor toewijzing, kan een lijst van alle beschikbare datasets
 
 U kunt één API-verzoek indienen om alle beschikbare gegevenssets te bekijken (bijvoorbeeld `GET /dataSets`), met best practices om queryparameters op te nemen die de grootte van de reactie beperken.
 
-In gevallen waarin om _volledige_ gegevenssetinformatie wordt verzocht, kan de antwoordlading voorbij 3 GB in grootte bereiken, die algemene prestaties kan vertragen. Daarom zal het gebruiken van vraagparameters om slechts de benodigde informatie te filtreren [!DNL Catalog] vragen efficiënter maken.
+In gevallen waarin volledige gegevenssetinformatie wordt gevraagd, kan de antwoordlading voorbij 3 GB in grootte bereiken, die algemene prestaties kan vertragen. Daarom zal het gebruiken van vraagparameters om slechts de benodigde informatie te filtreren [!DNL Catalog] vragen efficiënter maken.
 
 #### Filteren op List
 
@@ -165,7 +165,7 @@ De reactie omvat drie (`limit=3`) datasets die de &quot;naam&quot;, &quot;beschr
 
 ### Gegevenssetschema weergeven
 
-Het &quot;schemaRef&quot;bezit van een dataset bevat URI die het XDM schema van verwijzingen voorzien waarop de dataset gebaseerd is. Het XDM-schema (&quot;schemaRef&quot;) vertegenwoordigt alle _potentiële_ velden die door de dataset kunnen worden gebruikt, niet noodzakelijkerwijs de velden die _worden_ gebruikt (zie &quot;observableSchema&quot; hieronder).
+Het &quot;schemaRef&quot;bezit van een dataset bevat URI die het XDM schema van verwijzingen voorzien waarop de dataset gebaseerd is. Het XDM-schema (&quot;schemaRef&quot;) vertegenwoordigt alle potentiële velden die door de dataset kunnen worden gebruikt, niet noodzakelijkerwijs de velden die worden gebruikt (zie &quot;observableSchema&quot; hieronder).
 
 Het XDM-schema is het schema dat u gebruikt wanneer u de gebruiker een lijst moet geven met alle beschikbare velden waarnaar kan worden geschreven.
 
@@ -601,7 +601,7 @@ Details voor het maken van een batch, inclusief voorbeeldaanvragen en reacties, 
 
 ### Schrijven naar gegevensset
 
-Nadat een nieuwe partij met succes tot stand is gebracht, kunnen de dossiers dan aan een specifieke dataset worden geupload. U kunt meerdere bestanden in een batch plaatsen totdat deze worden gepromoot. Bestanden kunnen worden geüpload met de _Small File Upload API_; als uw bestanden echter te groot zijn en de gatewaylimiet wordt overschreden, kunt u de API _voor het uploaden van_ grote bestanden gebruiken. Meer informatie over het gebruik van zowel grote als kleine bestanden kunt u vinden in het overzicht [van de](../ingestion/batch-ingestion/overview.md)batchverwerking.
+Nadat een nieuwe partij met succes tot stand is gebracht, kunnen de dossiers dan aan een specifieke dataset worden geupload. U kunt meerdere bestanden in een batch plaatsen totdat deze worden gepromoot. Bestanden kunnen worden geüpload met de API voor het uploaden van kleine bestanden. als uw bestanden echter te groot zijn en de gatewaylimiet wordt overschreden, kunt u de API voor het uploaden van grote bestanden gebruiken. Meer informatie over het gebruik van zowel grote als kleine bestanden kunt u vinden in het overzicht [van de](../ingestion/batch-ingestion/overview.md)batchverwerking.
 
 **Verzoek**
 
