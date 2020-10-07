@@ -5,7 +5,7 @@ title: Overzicht van inname in batch
 topic: overview
 description: Met de API voor batchverwerking kunt u gegevens als batchbestanden in Adobe Experience Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een parquetdossier), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1196'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 ---
 
 
-# [!DNL Batch Ingestion] overzicht
+# [!DNL Batch Ingestion] - overzicht
 
 Met de [!DNL Batch Ingestion] API kunt u gegevens als batchbestanden in Adobe Experience Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een ouderdossier), of gegevens zijn die aan een bekend schema in het [!DNL Experience Data Model] (XDM) register in overeenstemming zijn.
 
@@ -127,7 +127,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 Nadat een nieuwe batch is gemaakt om te uploaden, kunnen bestanden vervolgens naar een specifieke gegevensset worden geüpload.
 
-U kunt bestanden uploaden met de **Small File Upload API**. Als uw bestanden echter te groot zijn en de gatewaylimiet wordt overschreden (zoals uitgebreide time-outs, overschrijdingen van aanvragen voor een grotere bestandsgrootte en andere beperkingen), kunt u overschakelen naar de API **voor** grote bestanden uploaden. Deze API uploadt het bestand in delen en koppelt gegevens aan elkaar met behulp van de volledige API **-aanroep voor** groot bestand uploaden.
+U kunt bestanden uploaden met de API voor kleine bestanden uploaden. Als uw bestanden echter te groot zijn en de gatewaylimiet wordt overschreden (zoals uitgebreide time-outs, aanvragen voor een grotere bestandsgrootte en andere beperkingen), kunt u overschakelen naar de API voor het uploaden van grote bestanden. Deze API uploadt het bestand in delen en koppelt gegevens aan elkaar met behulp van de API-aanroep voor groot uploaden van bestand voltooid.
 
 >[!NOTE]
 >
@@ -238,7 +238,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Signaalbatchverwerking
 
-Nadat alle bestanden naar de batch zijn geüpload, kan de batch worden gemarkeerd als voltooid. Op deze manier worden de [!DNL Catalog] DataSetFile **** -items gemaakt voor de voltooide bestanden en gekoppeld aan de hierboven gegenereerde batch. De [!DNL Catalog] batch wordt vervolgens gemarkeerd als succesvol, waardoor stroomafwaartse stromen worden geactiveerd om de beschikbare gegevens in te voeren.
+Nadat alle bestanden naar de batch zijn geüpload, kan de batch worden gemarkeerd als voltooid. Op deze manier worden de [!DNL Catalog] DataSetFile-items gemaakt voor de voltooide bestanden en gekoppeld aan de hierboven gegenereerde batch. De [!DNL Catalog] batch wordt vervolgens gemarkeerd als succesvol, waardoor stroomafwaartse stromen worden geactiveerd om de beschikbare gegevens in te voeren.
 
 **Verzoek**
 
@@ -389,10 +389,10 @@ In dit `"status"` veld wordt de huidige status van de aangevraagde batch weergeg
 | Status | Beschrijving |
 | ------ | ----------- |
 | Verlaten | De batch is niet binnen de verwachte tijd voltooid. |
-| Afgebroken | Er is **expliciet** een afbreekbewerking aangeroepen (via de Batch Ingest-API) voor de opgegeven batch. Als de batch eenmaal is **geladen** , kan deze niet worden afgebroken. |
-| Actief | De partij is met succes bevorderd en is beschikbaar voor downstreamconsumptie. Deze status kan met **Succes** onderling verwisselbaar worden gebruikt. |
+| Afgebroken | Er is **expliciet** een afbreekbewerking aangeroepen (via de Batch Ingest-API) voor de opgegeven batch. Wanneer de batch in de status &quot;Geladen&quot; is, kan deze niet worden afgebroken. |
+| Actief | De partij is met succes bevorderd en is beschikbaar voor downstreamconsumptie. Deze status kan door elkaar worden gebruikt met &quot;Succes&quot;. |
 | Verwijderd | De gegevens voor de batch zijn volledig verwijderd. |
-| Mislukt | Een eindstaat die uit of slechte configuratie en/of slechte gegevens voortvloeit. Gegevens voor een mislukte batch worden **niet** weergegeven. Deze status kan onderling verwisselbaar met **Mislukking** worden gebruikt. |
+| Mislukt | Een eindstaat die uit of slechte configuratie en/of slechte gegevens voortvloeit. Gegevens voor een mislukte batch worden **niet** weergegeven. Deze status kan door elkaar worden gebruikt met &quot;Mislukking&quot;. |
 | Inactief | De batch is gepromoveerd, maar is teruggezet of verlopen. De partij is niet meer beschikbaar voor downstreamconsumptie. |
 | Geladen | De gegevens voor de partij zijn volledig en de partij is klaar voor bevordering. |
 | Laden | De gegevens voor deze batch worden geüpload en de batch is momenteel **niet** klaar om te worden gepromoveerd. |
