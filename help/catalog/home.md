@@ -5,7 +5,7 @@ title: Overzicht van Catalog Service
 topic: overview
 description: Catalogusservice is het systeem voor het vastleggen van de gegevenslocatie en -lijn in Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het meer van Gegevens als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
 translation-type: tm+mt
-source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Catalog Service] overzicht
+# [!DNL Catalog Service] - overzicht
 
 [!DNL Catalog Service] is het registratiesysteem voor gegevenslocatie en -lijn in Adobe Experience Platform. Terwijl alle gegevens die in worden opgenomen in [!DNL Experience Platform] in [!DNL Data Lake] als dossiers en folders worden opgeslagen, [!DNL Catalog] houdt de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
 
-Eenvoudig gezet, handelt [!DNL Catalog] als meta-gegevensopslag of &quot;[!UICONTROL catalogus]&quot;waar u informatie over uw gegevens binnen kunt vinden [!DNL Experience Platform]. U kunt de volgende vragen [!DNL Catalog] beantwoorden:
+Eenvoudig gezet, handelt [!DNL Catalog] als meta-gegevensopslag of &quot;catalogus&quot;waar u informatie over uw gegevens binnen kunt vinden [!DNL Experience Platform]. U kunt de volgende vragen [!DNL Catalog] beantwoorden:
 
 * Waar bevinden mijn gegevens zich?
 * In welk stadium van verwerking bevinden deze gegevens zich?
@@ -35,7 +35,7 @@ De middelen die [!DNL Catalog Service] sporen worden gebruikt door de veelvoudig
 
 [!DNL Experience Data Model] (XDM) Het systeem is het gestandaardiseerde kader waardoor de gegevens van de klantenervaring [!DNL Platform] organiseren. [!DNL Experience Platform] hefboomwerkingen XDM schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven.
 
-Wanneer het gegeven in wordt opgenomen [!DNL Platform], wordt de structuur van dat gegeven in kaart gebracht aan een schema XDM en binnen [!DNL Data Lake] als deel van een **dataset** opgeslagen. De meta-gegevens voor elke dataset wordt gevolgd door [!DNL Catalog Service], die een verwijzing naar het schema XDM omvat dat de dataset met inachtneming is.
+Wanneer het gegeven in wordt opgenomen [!DNL Platform], wordt de structuur van dat gegeven in kaart gebracht aan een schema XDM en binnen [!DNL Data Lake] als deel van een dataset opgeslagen. De meta-gegevens voor elke dataset wordt gevolgd door [!DNL Catalog Service], die een verwijzing naar het schema XDM omvat dat de dataset met inachtneming is.
 
 Voor meer algemene informatie over XDM System, gelieve te zien het [XDM systeemoverzicht](../xdm/home.md).
 
@@ -43,7 +43,7 @@ Voor meer algemene informatie over XDM System, gelieve te zien het [XDM systeemo
 
 [!DNL Experience Platform] Neemt gegevens van veelvoudige bronnen op en handhaaft verslagen als datasets binnen [!DNL Data Lake]. [!DNL Catalog] volgt de meta-gegevens voor deze datasets, ongeacht hun bron of methode van opname.
 
-Wanneer u de methode voor het toevoegen van batches gebruikt, worden [!DNL Catalog] ook aanvullende metagegevens voor **batchbestanden** bijgehouden. Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. [!DNL Catalog] volgt de meta-gegevens voor deze partijdossiers, evenals de datasets zij binnen na opname worden voortgeduurd. De meta-gegevens van de partij omvatten informatie over het aantal met succes opgenomen verslagen, evenals om het even welke ontbroken verslagen en bijbehorende foutenmeldingen.
+Wanneer u de methode voor het toevoegen van batches gebruikt, worden [!DNL Catalog] ook aanvullende metagegevens voor batchbestanden bijgehouden. Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. [!DNL Catalog] volgt de meta-gegevens voor deze partijdossiers, evenals de datasets zij binnen na opname worden voortgeduurd. De meta-gegevens van de partij omvatten informatie over het aantal met succes opgenomen verslagen, evenals om het even welke ontbroken verslagen en bijbehorende foutenmeldingen.
 
 Zie het overzicht [van](../ingestion/home.md) gegevensinvoer voor meer informatie.
 
