@@ -5,7 +5,7 @@ seo-title: Werkruimte Doelen
 description: De werkruimte Doelen bestaat uit vier secties, Catalogus, Bladeren, Rekeningen, en de Mening van het Systeem, die in de hieronder secties worden beschreven.
 seo-description: In het Platform van de Gegevens van de Klant van Adobe in real time, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 translation-type: tm+mt
-source-git-commit: 59ac673c35954696fbb37417510035bdebff6f62
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '825'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 In het Platform van de Gegevens van de Klant van Adobe in real time, uitgezochte **[!UICONTROL Doelen]** van de linkernavigatiebar om tot de werkruimte van [!UICONTROL Doelen] toegang te hebben.
 
-De [!UICONTROL werkruimte van Doelen] bestaat uit vier secties, **[!UICONTROL Catalogus]**, **[!UICONTROL doorbladeren]**, **[!UICONTROL Rekeningen]**, en de Mening **[!UICONTROL van]** het Systeem, die in de hieronder secties worden beschreven.
+De [!UICONTROL werkruimte van Doelen] bestaat uit vier secties, [!UICONTROL Catalogus], [!UICONTROL doorbladeren], [!UICONTROL Rekeningen], en de Mening [!UICONTROL van]het Systeem, die in de hieronder secties worden beschreven.
 
 ![Overzicht van bestemmingen](/help/rtcdp/destinations/assets/destinations-overview.png)
 
@@ -28,8 +28,8 @@ Het **[!UICONTROL lusje van de Catalogus]** toont een lijst van alle bestemminge
 De Echte Adobe - tijd CDP gebruikersinterface verstrekt een aantal onderzoek en filteropties op de pagina van de bestemmingscatalogus:
 
 * Gebruik de zoekfunctionaliteit op de pagina om een specifiek doel te zoeken.
-* Doelen filteren met het besturingselement **[!UICONTROL Categorieën]** .
-* Wissel tussen **[!UICONTROL Alle bestemmingen]** en **[!UICONTROL Mijn bestemmingen]**. Wanneer **[!UICONTROL Alle bestemmingen]** wordt geselecteerd, worden alle beschikbare Adobe in real time CDP bestemmingen getoond. Wanneer **[!UICONTROL Mijn bestemmingen]** wordt geselecteerd, kunt u slechts de bestemmingen zien waarmee u een verbinding hebt gevestigd.
+* Doelen filteren met het besturingselement [!UICONTROL Categorieën] .
+* Wissel tussen [!UICONTROL Alle bestemmingen] en [!UICONTROL Mijn bestemmingen]. Wanneer **[!UICONTROL Alle bestemmingen]** wordt geselecteerd, worden alle beschikbare Adobe in real time CDP bestemmingen getoond. Wanneer **[!UICONTROL Mijn bestemmingen]** wordt geselecteerd, kunt u slechts de bestemmingen zien waarmee u een verbinding hebt gevestigd.
 * Selecteer deze optie om **[!UICONTROL verbindingen]** en/of **[!UICONTROL extensies]** weer te geven. Om het verschil tussen de twee categorieën te begrijpen, zie de Types en de Categorieën van [Bestemming](/help/rtcdp/destinations/destination-types.md).
 
 ![doelen filteren en zoeken, demo](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
