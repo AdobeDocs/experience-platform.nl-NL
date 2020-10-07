@@ -5,7 +5,7 @@ title: Basisbeginselen van de schemacompositie
 topic: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Gegevens die bestemd zijn voor gebruik in [!DNL Experience Platform] worden gegr
 * **Opnamegegevens**: Verstrekt informatie over de attributen van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
 * **Gegevens** tijdreeks: Biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
 
-Alle XDM schema&#39;s beschrijven gegevens die als verslag of tijdreeks kunnen worden gecategoriseerd. Het gegevensgedrag van een schema wordt bepaald door de **klasse** van het schema, die aan een schema wordt toegewezen wanneer het eerst wordt gecreeerd. XDM-klassen worden later in dit document nader beschreven.
+Alle XDM schema&#39;s beschrijven gegevens die als verslag of tijdreeks kunnen worden gecategoriseerd. Het gegevensgedrag van een schema wordt bepaald door de klasse van het schema, die aan een schema wordt toegewezen wanneer het eerst wordt gecreeerd. XDM-klassen worden later in dit document nader beschreven.
 
 Zowel de verslagen als de tijdreeksschema&#39;s bevatten een kaart van identiteiten (`xdm:identityMap`). Dit veld bevat de identiteitsrepresentatie van een onderwerp, getekend vanuit velden die zijn gemarkeerd als Identiteit zoals beschreven in de volgende sectie.
 
@@ -133,7 +133,7 @@ De schema&#39;s worden samengesteld gebruikend de volgende formule:
 
 **Klasse + Mixin&amp;ast; = XDM-schema**
 
-&amp;ast;Een schema bestaat uit een klasse en _nul of meer_ mixins. Dit betekent dat u een datasetschema kon samenstellen zonder mixins bij allen te gebruiken.
+&amp;ast;Een schema bestaat uit een klasse en nul of meer mixins. Dit betekent dat u een datasetschema kon samenstellen zonder mixins bij allen te gebruiken.
 
 ### Klasse
 
