@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Gebruikershandleiding voor beleid samenvoegen
 topic: guide
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: fcced39c0a78457ebb108b7378e32f1b2f75808b
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Het scherm **[!UICONTROL Samenvoegbeleid]** maken wordt weergegeven, zodat u bel
 
 ### Tijdstempel geordend {#timestamp-ordered}
 
-Aangezien de verslagen van het Profiel in Experience Platform worden opgenomen, wordt een systeemtimestamp verkregen op het tijdstip van opneming en toegevoegd aan het verslag. Wanneer de geordende **** tijdstempel is geselecteerd als het type &quot;[!UICONTROL Kenmerk samenvoegen]&quot; voor een samenvoegbeleid, worden profielen samengevoegd op basis van de tijdstempel van het systeem. Met andere woorden, het samenvoegen wordt uitgevoerd op basis van de tijdstempel voor het tijdstip waarop de record in het Platform is opgenomen.
+Aangezien de verslagen van het Profiel in Experience Platform worden opgenomen, wordt een systeemtimestamp verkregen op het tijdstip van opneming en toegevoegd aan het verslag. Wanneer **[!UICONTROL Tijdstempel geordend]** is geselecteerd als het samenvoegtype **[!UICONTROL voor]** kenmerken voor een samenvoegbeleid, worden profielen samengevoegd op basis van de tijdstempel van het systeem. Met andere woorden, het samenvoegen wordt uitgevoerd op basis van de tijdstempel voor het tijdstip waarop de record in het Platform is opgenomen.
 
 Soms zijn er gebruiksgevallen waarin het nodig is een aangepaste tijdstempel op te geven en het samenvoegbeleid de aangepaste tijdstempel moet gebruiken in plaats van de systeemtijdstempel. Voorbeelden hiervan zijn het terugvullen van gegevens of het garanderen van de juiste volgorde van gebeurtenissen als records buiten de bestelling worden opgenomen.
 
@@ -119,7 +119,7 @@ Nadat u de benodigde wijzigingen hebt aangebracht, selecteert u **[!UICONTROL Op
 
 Wanneer het creëren van of het bijwerken van een samenvoegbeleid, wordt een controle uitgevoerd om te bepalen als het fusiebeleid om het even welk beleid van het gegevensgebruik schendt dat door uw organisatie wordt bepaald. Het beleid voor gegevensgebruik maakt deel uit van Adobe Experience Platform [!DNL Data Governance] en is een regel die het soort marketingacties beschrijft dat u op specifieke [!DNL Platform] gegevens mag uitvoeren of waarvan u een beperking hebt. Bijvoorbeeld, als een fusiebeleid werd gebruikt om een segment tot stand te brengen dat aan een derdebestemming activeerde, en uw organisatie een beleid van het gegevensgebruik had dat de uitvoer van specifieke gegevens naar derden verhindert, zou u een &quot;[!UICONTROL Gegevens behoorlijk ontdekte]&quot;bericht ontvangen wanneer het proberen om uw fusiebeleid te bewaren.
 
-Deze melding bevat een lijst met beleidsregels voor gegevensgebruik die zijn overtreden. U kunt de details van de schending bekijken door een beleid in de lijst te selecteren. Als u een overtreden beleid selecteert, biedt het tabblad **[!UICONTROL Gegevenskoppeling]** de reden voor de schending en de desbetreffende activering]. Elk tabblad geeft u meer details over de manier waarop het beleid voor gegevensgebruik is overtreden.
+Deze melding bevat een lijst met beleidsregels voor gegevensgebruik die zijn overtreden. U kunt de details van de schending bekijken door een beleid in de lijst te selecteren. Wanneer u een overtreden beleid selecteert, biedt het tabblad **[!UICONTROL Gegevenskoppeling]** de reden voor de schending en de desbetreffende activering, elk met meer details over de manier waarop het beleid voor gegevensgebruik is overtreden.
 
 Als u meer wilt weten over de manier waarop gegevensbeheer in Adobe Experience Platform wordt uitgevoerd, leest u eerst het overzicht [van](../../data-governance/home.md)gegevensbeheer.
 
