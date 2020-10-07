@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Deze zelfstudie laat u zien hoe u een model kunt maken, trainen en evalueren met API-aanroepen van Sensei Machine Learning.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 0%
@@ -35,7 +35,7 @@ In de zelfstudie hebt u nu de volgende waarden:
 
 ## API-workflow
 
-We gebruiken de API&#39;s om een Experiment Run voor training te maken. Voor deze zelfstudie zullen we ons richten op de eindpunten **Engines**, **MLInstances** en **Experimenten** . De volgende grafiek schetst de verhouding tussen drie en introduceert ook het idee van een Looppas en een Model.
+We gebruiken de API&#39;s om een Experiment Run voor training te maken. Voor deze zelfstudie zullen we ons richten op de eindpunten Engines, MLInstances en Experiments. De volgende grafiek schetst de verhouding tussen drie en introduceert ook het idee van een Looppas en een Model.
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
