@@ -5,7 +5,7 @@ title: Overzicht van beleidsregels voor gegevensgebruik
 topic: policies
 description: Om gegevensgebruikslabels effectief te steunen gegevensnaleving, moet het beleid van het gegevensgebruik worden uitgevoerd. Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens binnen het Experience Platform, of dat u er een beperking voor hebt.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Dit document biedt een overzicht op hoog niveau van het beleid voor gegevensgebr
 
 ## Marketingacties {#marketing-actions}
 
-**Marketing-acties**(ook wel **marketinggebruiksgevallen** genoemd) in het kader van het gegevensbeheerkader zijn acties die een [!DNL Experience Platform] gegevensconsument kan ondernemen en waarvoor uw organisatie het gegevensgebruik wil beperken. Daarom wordt een beleid voor gegevensgebruik als volgt gedefinieerd:
+Marketing-acties (ook wel marketinggebruiksgevallen genoemd) in het kader van het gegevensbeheerkader zijn acties die een [!DNL Experience Platform] gegevensconsument kan ondernemen en waarvoor uw organisatie het gegevensgebruik wil beperken. Daarom wordt een beleid voor gegevensgebruik als volgt gedefinieerd:
 
 1. Een specifieke marketingactie
 2. De labels voor gegevensgebruik waarvoor de handeling niet kan worden uitgevoerd
