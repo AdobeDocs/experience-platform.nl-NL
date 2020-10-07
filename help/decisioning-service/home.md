@@ -5,7 +5,7 @@ title: Beslissingsservice
 topic: overview
 description: De beslissingsservice biedt de mogelijkheid om persoonlijke, geoptimaliseerde en georkestreerde ervaringen te maken in toepassingen die op Adobe Experience Platform worden uitgevoerd. Gebruikend de Dienst van Beslissing, kunt u de beste optie van een reeks beschikbare keuzen bepalen. Deze opties, ook genoemd alternatieven, zouden aanbiedingen, productaanbevelingen, inhoudscomponenten voor een Webervaring, gespreksmanuscripten, en te nemen acties kunnen zijn.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Overzicht van de beslissingsservice
 
-[!DNL Decisioning Service] biedt de mogelijkheid om persoonlijke, geoptimaliseerde en geordende ervaringen te maken met toepassingen die op Adobe Experience Platform worden uitgevoerd. Met behulp [!DNL Decisioning Service]van een set beschikbare opties kunt u de beste *optie* bepalen. Deze opties, ook genoemd alternatieven, zouden aanbiedingen, productaanbevelingen, inhoudscomponenten voor een Webervaring, gespreksmanuscripten, en te nemen acties kunnen zijn. Momenteel wordt het gebruiksgeval en het domein van de Beslissing *van de* Aanbieding gesteund, waar de besluitvormingsopties specifiek als aanbiedingen worden gemodelleerd, met steun voor meer te gebruiken gevallen om te komen.
+[!DNL Decisioning Service] biedt de mogelijkheid om persoonlijke, geoptimaliseerde en geordende ervaringen te maken met toepassingen die op Adobe Experience Platform worden uitgevoerd. Met behulp [!DNL Decisioning Service]van een set beschikbare opties kunt u de beste *optie* bepalen. Deze opties, ook genoemd alternatieven, zouden aanbiedingen, productaanbevelingen, inhoudscomponenten voor een Webervaring, gespreksmanuscripten, en te nemen acties kunnen zijn. Momenteel worden het gebruiksgeval en het domein van *Offer Decisioning* ondersteund, waar de beslissingsopties specifiek als aanbiedingen worden gemodelleerd, met ondersteuning voor meer gebruiksgevallen.
 
 Met [!DNL Decisioning Service], kunnen de klanten bedrijfslogica opnieuw gebruiken en een catalogus van opties over kanalen en toepassingen delen. In plaats van het beheren van besluitvormingsopties - en strategieën om hen te selecteren - diep binnen een toepassing, kunnen zij nu worden leveraged ongeacht wanneer, hoe en op welk kanaal de eindgebruiker van een klant met een zaken of organisatie interactie aangaat.
 
@@ -49,7 +49,7 @@ Een strategie kan ook of aanvullend gebaseerd zijn op resultaten die zijn verzam
 
 ### Beslissingsstrategie
 
-Beslissingsstrategieën worden geconfigureerd via objecten die _activiteiten_ worden genoemd. Elke beslissingsstrategie is in feite een algoritme of een functie die N-opties {o1, o2, ...oN} als invoer gebruikt en een geordende lijst met opties (o1, o2,...oK) produceert, waarbij de eerste optie in de lijst als de beste wordt beschouwd volgens een optimalisatiecriteria, wordt de tweede optie in de resultatenlijst vervolgens als de tweede beste optie beschouwd enzovoort.
+Beslissingsstrategieën worden geconfigureerd via objecten die activiteiten worden genoemd. Elke beslissingsstrategie is in feite een algoritme of een functie die N-opties {o1, o2, ...oN} als invoer gebruikt en een geordende lijst met opties (o1, o2,...oK) produceert, waarbij de eerste optie in de lijst als de beste wordt beschouwd volgens een optimalisatiecriteria, wordt de tweede optie in de resultatenlijst vervolgens als de tweede beste optie beschouwd enzovoort.
 
 Op elk bepaald tijdstip tijdens de reis van een klant, wordt de beste optie voor een bepaalde activiteit opnieuw geëvalueerd gebaseerd op de huidigste reeks contextvariabelen, regels, en beperkingen. Contextvariabelen omvatten de records die zijn opgeslagen in [!DNL Real Time Customer Profile]. Een centrale recordentiteit is het profiel van een klant, maar andere entiteiten zoals operationele bedrijfsgegevens zijn ook beschikbaar voor de activiteit.
 
