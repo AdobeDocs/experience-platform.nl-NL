@@ -4,7 +4,7 @@ title: Gebruikershandleiding voor het profiel van de klant in realtime
 topic: guide
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-time klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 0%
@@ -40,11 +40,11 @@ Selecteer het tabblad **[!UICONTROL Bladeren]** om door profielen te bladeren op
 
 ### Profielafmetingen {#profile-metrics}
 
-Aan de rechterkant van het tabblad [!UICONTROL Bladeren] staan verschillende belangrijke metingen voor uw profielgegevens, zoals het totale aantal [](#profile-count) profielen en een lijst met [profielen per naamruimte](#profiles-by-namespace).
+Aan de rechterkant van het tabblad **[!UICONTROL Bladeren]** staan verschillende belangrijke metingen voor uw profielgegevens, zoals het totale aantal [](#profile-count) profielen en een lijst met [profielen per naamruimte](#profiles-by-namespace).
 
 Deze profielmetriek worden geëvalueerd gebruikend het standaardsamenvoegbeleid van uw organisatie. Voor meer informatie bij het werken met fusiebeleid, met inbegrip van hoe te om een standaardfusiebeleid te bepalen, zie de de gebruikersgids [van het Beleid van de](merge-policies.md)Fusie.
 
-Naast deze metriek, verstrekt de sectie van profielmetriek ook een [!UICONTROL Laatst bijgewerkte] datum en tijd, die tonen wanneer de metriek het laatst werden geëvalueerd.
+Naast deze metriek, verstrekt de sectie van profielmetriek ook een laatste bijgewerkte datum en tijd, die tonen wanneer de metriek het laatst werden geëvalueerd.
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
@@ -80,7 +80,7 @@ Kies in het dialoogvenster Naamruimte **** selecteren de naamruimte waarin u wil
 
 ### Identiteitswaarde
 
-Nadat u een naamruimte Identiteit hebt geselecteerd, gaat u terug naar het tabblad [!UICONTROL Bladeren] waar u een waarde **** Identiteit kunt invoeren. Deze waarde is specifiek voor een individueel klantprofiel en moet een geldige waarde zijn voor de opgegeven naamruimte. Als u bijvoorbeeld de naamruimte  Identiteit &quot;E-mail&quot; selecteert, hebt u een [!UICONTROL identiteitswaarde] nodig in de vorm van een geldig e-mailadres.
+Nadat u een naamruimte voor identiteit hebt geselecteerd, gaat u terug naar het tabblad **[!UICONTROL Bladeren]** waar u een waarde **[!UICONTROL voor]** Identiteit kunt invoeren. Deze waarde is specifiek voor een individueel klantprofiel en moet een geldige waarde zijn voor de opgegeven naamruimte. Als u bijvoorbeeld de naamruimte E-mail selecteert, hebt u een identiteitswaarde nodig in de vorm van een geldig e-mailadres.
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -90,17 +90,17 @@ Nadat een waarde is ingevoerd, selecteert u Profiel **** tonen en geeft u één 
 
 ### Profieldetails {#profile-detail}
 
-Als u de [!UICONTROL profiel-id]selecteert, wordt het tabblad **[!UICONTROL Details]** geopend. De profielgegevens die op het tabblad [!UICONTROL Details] worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van de individuele klant. Dit omvat klantgegevens zoals basiskenmerken, gekoppelde identiteiten en kanaalvoorkeuren. De weergegeven standaardvelden kunnen ook op organisatorisch niveau worden gewijzigd om de voorkeursprofielkenmerken weer te geven. Lees de handleiding voor het aanpassen van de [profieldetails voor meer informatie over het aanpassen van deze velden, inclusief stapsgewijze instructies voor het toevoegen en verwijderen van kenmerken en het wijzigen van het formaat van dashboarddeelvensters](profile-customization.md).
+Als u de **[!UICONTROL profiel-id]** selecteert, wordt het tabblad **[!UICONTROL Details]** geopend. De profielgegevens die op het tabblad **[!UICONTROL Details]** worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van de individuele klant. Dit omvat klantgegevens zoals basiskenmerken, gekoppelde identiteiten en kanaalvoorkeuren. De weergegeven standaardvelden kunnen ook op organisatorisch niveau worden gewijzigd om de voorkeursprofielkenmerken weer te geven. Lees de handleiding voor het aanpassen van de [profieldetails voor meer informatie over het aanpassen van deze velden, inclusief stapsgewijze instructies voor het toevoegen en verwijderen van kenmerken en het wijzigen van het formaat van dashboarddeelvensters](profile-customization.md).
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-U kunt aanvullende informatie over het afzonderlijke profiel weergeven door een andere beschikbare tabbladen te selecteren. Deze lusjes omvatten [!UICONTROL Attributen], [!UICONTROL Gebeurtenissen], en het lidmaatschap [!UICONTROL van het]Segment, dat de [!UICONTROL Segmenten] toont waarvoor het profiel momenteel gekwalificeerd is.
+U kunt aanvullende informatie over het afzonderlijke profiel weergeven door een andere beschikbare tabbladen te selecteren. Deze lusjes omvatten attributen, gebeurtenissen, en segmentlidmaatschap, die de segmenten tonen waarvoor het profiel momenteel gekwalificeerd is.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Beleid samenvoegen
 
-Selecteer in het hoofdmenu [!UICONTROL Profielen] het tabblad Beleid **[!UICONTROL voor]** samenvoegen om een lijst weer te geven met samenvoegingsbeleid dat tot uw organisatie behoort. Elk vermeld beleid toont zijn naam, al dan niet het standaardsamenvoegbeleid, en het schema dat het op van toepassing is.
+Selecteer in het hoofdmenu **[!UICONTROL Profielen]** het tabblad Beleid **[!UICONTROL voor]** samenvoegen om een lijst weer te geven met samenvoegingsbeleid dat tot uw organisatie behoort. Elk vermeld beleid toont zijn naam, al dan niet het standaardsamenvoegbeleid, en het schema dat het op van toepassing is.
 
 Raadpleeg de gebruikershandleiding [voor](merge-policies.md)samenvoegbeleidsregels voor meer informatie over samenvoegingsbeleid.
 
@@ -108,7 +108,7 @@ Raadpleeg de gebruikershandleiding [voor](merge-policies.md)samenvoegbeleidsrege
 
 ## Unieschema {#union-schema}
 
-Selecteer in het menu [!UICONTROL Profielen] het tabblad **[!UICONTROL Unieschema]** om de samenvoegingsschema&#39;s voor uw profielgegevens weer te geven. Een verenigingsschema is een samenvoeging van alle [!DNL Experience Data Model] (XDM) gebieden onder de zelfde klasse, de waarvan schema&#39;s voor gebruik binnen zijn toegelaten [!DNL Real-time Customer Profile]. Als u een klasse selecteert in de lijst [!UICONTROL Klasse] aan de linkerkant, kunt u de structuur van het schema weergeven op het canvas. Als u bijvoorbeeld &quot;[!DNL XDM Profile]&quot; selecteert, wordt het samenvoegingsschema voor de [!DNL XDM Individual Profile] klasse weergegeven.
+Selecteer in het menu **[!UICONTROL Profielen]** het tabblad **[!UICONTROL Unieschema]** om de samenvoegingsschema&#39;s voor uw profielgegevens weer te geven. Een verenigingsschema is een samenvoeging van alle [!DNL Experience Data Model] (XDM) gebieden onder de zelfde klasse, de waarvan schema&#39;s voor gebruik binnen zijn toegelaten [!DNL Real-time Customer Profile]. Als u een klasse selecteert in de lijst[!UICONTROL Klasse]aan de linkerkant, kunt u de structuur van het schema op het canvas weergeven. Als u bijvoorbeeld &quot;[!DNL XDM Profile]&quot; selecteert, wordt het samenvoegingsschema voor de [!DNL XDM Individual Profile] klasse weergegeven.
 
 Voor meer informatie over verenigingsschema&#39;s en hun rol binnen Adobe Experience Platform, zie de sectie over verenigingsschema&#39;s in de [schemacompositie gids](../../xdm/schema/composition.md).
 
