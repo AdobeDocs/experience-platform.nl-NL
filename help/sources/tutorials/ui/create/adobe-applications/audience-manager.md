@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Deze zelfstudie begeleidt u door de stappen om een bronschakelaars voor Adobe Audience Manager tot stand te brengen om de gegevens van de Gebeurtenis van de Consumentenervaring in Platform te brengen gebruikend het gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 2%
@@ -20,9 +20,9 @@ Deze zelfstudie begeleidt u door de stappen om een bronschakelaars voor Adobe Au
 
 ## Een bronverbinding maken met Adobe Audience Manager
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **Bronnen** in de linkernavigatiebalk voor toegang tot de werkruimte Bronnen. In het scherm *Catalogus* worden diverse bronnen weergegeven waarmee u bronverbindingen kunt maken. Elke bron toont het aantal bestaande verbindingen dat aan deze bronnen is gekoppeld.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **Bronnen** in de linkernavigatiebalk voor toegang tot de werkruimte Bronnen. In het scherm **Catalogus** worden diverse bronnen weergegeven waarmee u bronverbindingen kunt maken. Elke bron toont het aantal bestaande verbindingen dat aan deze bronnen is gekoppeld.
 
-Selecteer onder de categorie *Adobe-toepassingen* de optie **Adobe Audience Manager** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het weergeven van de documentatie of het maken van een verbinding met de bron.
+Selecteer onder de categorie **Adobe-toepassingen** de optie **Adobe Audience Manager** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het weergeven van de documentatie of het maken van een verbinding met de bron.
 
 Als u een nieuwe bronaansluiting voor Adobe Audience Manager wilt maken, klikt u op Gegevens **** toevoegen.
 
@@ -32,7 +32,7 @@ Er wordt een dialoogvenster weergegeven. Klik op **Verbinden** om de verbinding 
 
 ![](../../../../images/tutorials/create/aam/connect_full.png)
 
-Als een bronverbinding met Adobe Audience Manager wordt gevestigd, wordt de pagina van de *Bron activiteit* voor de schakelaar van de Audience Manager getoond.
+Als een bronverbinding met Adobe Audience Manager wordt gevestigd, wordt de pagina van de **Bron activiteit** voor de schakelaar van de Audience Manager getoond.
 
 ![](../../../../images/tutorials/create/aam/flow.png)
 
