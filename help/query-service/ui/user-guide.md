@@ -5,7 +5,7 @@ title: Gebruikershandleiding voor de Query Editor
 topic: query editor
 description: De Redacteur van de vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens te schrijven te bevestigen en in werking te stellen binnen het gebruikersinterface van het Experience Platform. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 1%
@@ -99,7 +99,7 @@ Zie het overzicht [van de Dienst van de][query-service-ui] Vraag UI voor meer in
 
 ## Vragen uitvoeren met de Query Editor
 
-Als u een query wilt uitvoeren in, [!DNL Query Editor]kunt u SQL invoeren in de editor of een vorige query laden via het tabblad *Logboek* of **[!UICONTROL Bladeren]** en op **Afspelen** klikken. De status van de vraaguitvoering wordt getoond op het lusje van de **[!UICONTROL Console]** hieronder, en de outputgegevens worden getoond op het lusje van **[!UICONTROL Resultaten]** .
+Als u een query wilt uitvoeren in, [!DNL Query Editor]kunt u SQL invoeren in de editor of een vorige query laden via het tabblad **[!UICONTROL Logboek]** of **[!UICONTROL Bladeren]** en op **Afspelen** klikken. De status van de vraaguitvoering wordt getoond op het lusje van de **[!UICONTROL Console]** hieronder, en de outputgegevens worden getoond op het lusje van **[!UICONTROL Resultaten]** .
 
 ### Console
 
