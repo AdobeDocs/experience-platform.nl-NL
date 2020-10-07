@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;offer management;Offer Management
 solution: Experience Platform
-title: Het domeinmodel van de Beslissing van de aanbieding
+title: Offer Decisioning-domeinmodel
 topic: overview
 description: Het besluit van de aanbieding is een gebruiksgeval van de Dienst van Beslissing waarin u de regels en de voorspellingen formaliseert en centraal beheert die voor het in dienst nemen van klanten met aanbiedingen worden gebruikt.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '2640'
 ht-degree: 0%
@@ -13,25 +13,25 @@ ht-degree: 0%
 ---
 
 
-# Overzicht van het besluitvormingsdomeinmodel van de aanbieding
+# Overzicht van Offer Decisioning-domeinmodel
 
-Het besluit van de aanbieding is een gebruiksgeval van [!DNL Decisioning Service] waarin u de regels en de voorspellingen formaliseert en centraal beheert die voor het in dienst nemen van klanten met aanbiedingen worden gebruikt. Beslissing van aanbiedingen wordt beschouwd als een type _**inhoudbeslissing**_. In dit geval worden de _**beslissingsopties**_ aangeduid als _**aanbiedingen**_ en worden zij als zodanig gekenmerkt door de inhoud die eraan is gehecht. Voor een inleiding van het objecten model dat door wordt gebruikt [!DNL Decisioning Service], gelieve te verwijzen naar het Model [van het Domein van de Dienst van de](experience-model.md)Beslissing.
+Het besluit van de aanbieding is een gebruiksgeval van [!DNL Decisioning Service] waarin u de regels en de voorspellingen formaliseert en centraal beheert die voor het in dienst nemen van klanten met aanbiedingen worden gebruikt. Beslissing van aanbiedingen wordt beschouwd als een soort inhoudbeslissing. In dit geval worden de beslissingsopties aangeduid als aanbiedingen en worden zij als zodanig gekenmerkt door de inhoud die eraan is gehecht. Voor een inleiding van het objecten model dat door wordt gebruikt [!DNL Decisioning Service], gelieve te verwijzen naar het Model [van het Domein van de Dienst van de](experience-model.md)Beslissing.
 
 Het doel is de eindgebruiker een &quot;beste voorstel&quot; te bieden in elk kanaal op basis van doelcriteria, kosten en frequentievereisten, alsmede eerdere interacties tussen kanalen, waaronder eerder voorgestelde aanbiedingen.
 
-Net als bij alle gevallen waarin beslissingen worden genomen, worden de beslissingsopties (aanbiedingen) beheerd in een register dat door een willekeurig aantal toepassingen wordt gedeeld. De aanbiedingen zouden door verschillende afdelingen van uw organisatie of door partners kunnen worden gecreeerd, en die aanbiedingen zouden kunnen worden toegevoegd en worden verwijderd dagelijks.
+Net als bij alle gevallen waarin beslissingen worden genomen, worden de beslissingsopties (aanbiedingen) beheerd in een opslagplaats die door een willekeurig aantal toepassingen wordt gedeeld. De aanbiedingen zouden door verschillende afdelingen van uw organisatie of door partners kunnen worden gecreeerd, en die aanbiedingen zouden kunnen worden toegevoegd en worden verwijderd dagelijks.
 
-Aanbiedingen worden visueel geplaatst in grotere ervaringen door de toepassing die de ervaring levert. _**Plaatsen**_, ook wel &#39;spts&#39; of &#39;slots&#39; genoemd, zijn belangrijke onderdelen voor het maken van een strategie. Het ontwerpen van een aanbiedingsstrategie begint vaak met de definitie van die stages. Een aanbieding heeft doorgaans meerdere _**inhoudrepresentaties**_ , zodat deze correct kan worden geïntegreerd in een groot aantal verschillende ervaringen, waarbij elke aanbieding een verschillende afmeting of andere beperkingen heeft en verschillende media-indelingen vereist.
+Aanbiedingen worden visueel geplaatst in grotere ervaringen door de toepassing die de ervaring levert. Plaatsen, ook wel &#39;vlekken&#39; of &#39;groeven&#39; genoemd, zijn belangrijke onderdelen voor het maken van een strategie. Het ontwerpen van een aanbiedingsstrategie begint vaak met de definitie van die stages. Een aanbieding heeft doorgaans meerdere inhoudrepresentaties, zodat deze correct kan worden geïntegreerd in een groot aantal verschillende ervaringen, waarbij elke aanbieding een verschillende afmeting of andere restricties heeft en verschillende media-indelingen vereist.
 
-Aanbiedingen houden vaak verband met fysieke goederen of diensten en er is een kostenberekening mee gemoeid. Een organisatie moet de middelen kunnen beperken die door aanbiedingen worden verbruikt en moet daarom het totale aantal _**keren dat een aanbod kan worden voorgesteld, kunnen beperken**_ .
+Aanbiedingen houden vaak verband met fysieke goederen of diensten en er is een kostenberekening mee gemoeid. Een organisatie moet de middelen die door aanbiedingen worden verbruikt kunnen beperken en moet daarom het totale aantal keren kunnen beperken dat een aanbod kan worden voorgesteld.
 
 De voorspelde waarde van een geaccepteerde aanbieding aan de organisatie is de optimalisatiecriteria en staat tegenover de kosten van een aanbieding. De kosten, de waarschijnlijkheid van aanvaarding en de voorspelde waarde worden gebruikt om de aanbiedingen te rangschikken. Het beste voorstel is het voorstel met de hoogst voorspelde positieve impact op de doelstellingen van je aanbiedingsactiviteiten.
 
-Het Beslissen van de aanbieding overweegt de interactie een eindgebruiker, _**over vele kanalen**_ en toepassingen had, het hefboomwerkingen het profiel van een eindgebruiker en ervaringsgebeurtenisgegevens. Een callcentertoepassing kan bijvoorbeeld de Beslissing van de Aanbieding gebruiken om een aanbieding toe te laten of te onderdrukken die op aankopen wordt gebaseerd en revisies die door de eindgebruiker worden geplaatst; Of een e-mailbeheertoepassing kan afhankelijk zijn van de beslissing van de aanbieding om de volgende beste aanbieding te selecteren in een wekelijkse nieuwsbrief op basis van de browsergeschiedenis op een website.
+Offer Decisioning beschouwt de interacties die een eindgebruiker op vele kanalen en toepassingen had, het hefboomwerkingen het profiel en de gegevens van de ervaringsgebeurtenis van een eindgebruiker. Een callcenter-toepassing kan bijvoorbeeld Offer Decisioning gebruiken om een aanbieding in of uit te schakelen op basis van aankopen en revisies die door de eindgebruiker zijn geplaatst; of een toepassing voor e-mailbeheer kan Offer Decisioning gebruiken om het volgende beste voorstel te selecteren in een wekelijkse nieuwsbrief op basis van de browsergeschiedenis op een website.
 
-Aanbiedingen hebben andere interessante eigenschappen. Vaak is er een bepaald _**schema**_ of een bepaald datum- en tijdbereik wanneer de aanbieding geldig is en wanneer de aanbieding ongeldig moet worden verklaard.
+Aanbiedingen hebben andere interessante eigenschappen. Vaak is er een bepaald tijdschema of een bepaalde datum en tijdspanne wanneer de aanbieding geldig is en wanneer de aanbieding ongeldig moet worden verklaard.
 
-Tot slot wordt de aantrekkingskracht van een bod steeds verder verslechterd met de frequentie waarmee het wordt ingediend. Een voorstel dat na herhaalde indiening niet wordt aanvaard, is een gemiste kans omdat er een ander aanbod had kunnen worden gedaan. Daarom moet de _**vermoeidheid**_ van de eindgebruiker worden beheerd.
+Tot slot wordt de aantrekkingskracht van een bod steeds verder verslechterd met de frequentie waarmee het wordt ingediend. Een voorstel dat na herhaalde indiening niet wordt aanvaard, is een gemiste kans omdat er een ander aanbod had kunnen worden gedaan. Daarom moet de vermoeidheid van de eindgebruiker worden beheerd.
 
 ## Beslissingsstrategie in één oogopslag aanbieden
 
@@ -52,7 +52,7 @@ De algemene benadering is de selectie van Aanbiedingen te beperken tot alle bepe
 | Model voor *verwacht hulpprogramma* | Offerte of prioriteit |
 
 Het totale aantal aanbiedingen in de inventaris van opties is doorgaans vrij groot (in de orde van 10.000) en elke aanbiedingsactiviteit kan worden geconcentreerd op aanbiedingen die in een verschillende categorie (onderwerp) vallen. Met de strategie voor het nemen van voorstellen kunt u een aanbiedingsfilter toevoegen aan een aanbiedingsactiviteit. Extra beperkingen zullen worden geëvalueerd op het moment dat het besluit wordt gevraagd.
-De volgende secties verklaren de componenten voor het domein van de Beslissing van de Aanbieding in detail.
+In de volgende secties worden de componenten voor het Offer Decisioning-domein uitgebreid uitgelegd.
 
 ## Algemene aanbiedingen
 
@@ -126,7 +126,7 @@ Wanneer opties expliciet in een verzameling worden geplaatst, wordt de tagset ge
 
 ## Aanbiedingsactiviteiten
 
-De activiteiten vormen en controleren het besluitvormingsproces. Momenteel is de beslissingsstrategie hoofdzakelijk vooraf bepaald, maar in toekomstige versies van het domeinmodel voor de besluitvorming van het aanbod zal de keuze van modellen, aanvullende regels en beperkingen mogelijk zijn.
+De activiteiten vormen en controleren het besluitvormingsproces. Op dit moment is de beslissingsstrategie voornamelijk vooraf bepaald, maar toekomstige versies van het Offer Decisioning-domeinmodel zullen de keuze van modellen, aanvullende regels en beperkingen mogelijk maken.
 
 Een ervaring kan worden samengesteld gebruikend vele activiteiten gelijktijdig. Op dit moment kunnen maximaal 30 activiteiten in één beslissingsverzoek worden behandeld. Als meer dan 30 activiteiten of slots in een ervaring met inhoud moeten worden gevuld, kunnen meerdere aanvragen voor hetzelfde profiel worden ingediend. Wanneer in hetzelfde verzoek om een besluit activiteiten worden opgenomen, worden de voorstellen tot het aanbieden van een aanbod onder die activiteiten gededupliceerd.
 
