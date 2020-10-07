@@ -5,7 +5,7 @@ title: Handleiding voor ontwikkelaars van de API voor schemaregister
 description: Het schemaregister wordt gebruikt om tot de Bibliotheek van het Schema binnen Adobe Experience Platform toegang te hebben, die een gebruikersinterface en RESTful API verstrekken waarvan alle beschikbare bibliotheekmiddelen toegankelijk zijn. Met behulp van de API voor schemaregistratie kunt u standaard CRUD-bewerkingen uitvoeren om alle schema's en gerelateerde bronnen die binnen Adobe Experience Platform voor u beschikbaar zijn, weer te geven en te beheren.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '1295'
 ht-degree: 0%
@@ -162,7 +162,7 @@ Een succesvolle reactie keert informatie betreffende het gebruik van uw organisa
 
 ## Begrijp het `CONTAINER_ID` {#container}
 
-Oproepen aan [!DNL Schema Registry] API vereisen het gebruik van een `CONTAINER_ID`. Er zijn twee containers waartegen API-aanroepen kunnen worden uitgevoerd: de **globale container** en de **huurderscontainer**.
+Oproepen aan [!DNL Schema Registry] API vereisen het gebruik van een `CONTAINER_ID`. Er zijn twee containers waartegen API-aanroepen kunnen worden uitgevoerd: de globale container en de huurderscontainer.
 
 ### Algemene container
 
