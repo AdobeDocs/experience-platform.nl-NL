@@ -5,7 +5,7 @@ title: Overzicht van PQL (Profile Query Language)
 topic: developer guide
 description: Deze handleiding biedt een algemeen overzicht van PQL, met opmaakrichtlijnen en voorbeelden van PQL-expressies.
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 1%
@@ -29,7 +29,7 @@ PQL-query&#39;s hebben de volgende handtekening:
 
 De invoerparameter kan een eenvoudige primitieve parameter zijn, zoals een booleaanse tekenreeks of een complexer type, zoals een object, array of kaart.
 
-Er zijn **drie** verschillende manieren om naar inputparameters binnen het lichaam van een uitdrukking te verwijzen PQL:
+Er zijn drie verschillende manieren om naar inputparameters binnen het lichaam van een uitdrukking te verwijzen PQL:
 
 ### Impliciete verwijzing naar de eerste parameter
 
