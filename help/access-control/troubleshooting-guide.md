@@ -5,7 +5,7 @@ title: Handleiding voor probleemoplossing bij toegangsbeheer
 topic: troubleshooting guide
 description: Dit document bevat antwoorden op veelgestelde vragen over toegangsbeheer in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Dit document bevat antwoorden op veelgestelde vragen over toegangsbeheer in Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere [!DNL Platform] diensten, gelieve te verwijzen naar de het oplossen van problemengids [van](../landing/troubleshooting.md)Experience Platforms.
 
-[!DNL Experience Platform] Gebruikt productprofielen in [Adobe Admin Console](http://adminconsole.adobe.com) om op rol-gebaseerde **toegangscontrole** te verstrekken, die gebruikers met toestemmingen en zandbakken verbindt.  Zie het [toegangsbeheeroverzicht](home.md) voor meer informatie.
+[!DNL Experience Platform] Gebruikt productprofielen in de [Adobe Admin Console](http://adminconsole.adobe.com) om op rol-gebaseerde toegangscontrole te verstrekken, die gebruikers met toestemmingen en zandbakken verbinden.  Zie het [toegangsbeheeroverzicht](home.md) voor meer informatie.
 
 ## Waar kan ik mijn huidige toegangstoestemmingen vinden?
 
