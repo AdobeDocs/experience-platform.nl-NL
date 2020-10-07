@@ -5,7 +5,7 @@ description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Exp
 seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 43a2074d4d1b9f642c3cbfb0c29217eb2fb112c3
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 2%
@@ -87,7 +87,7 @@ alloy
 
 `decisionScopes` Hiermee definieert u secties, locaties of delen van uw pagina&#39;s waar u een persoonlijke ervaring wilt weergeven. Deze `decisionScopes` zijn aanpasbaar en door de gebruiker gedefinieerd. Voor huidige [!DNL Target] klanten, `decisionScopes` zijn ook gekend als &quot;dozen.&quot; In de [!DNL Target] UI, `decisionScopes` verschijnen als &quot;plaatsen.&quot;
 
-## __weergavebereik__
+## Het `__view__` toepassingsgebied
 
 AEP [!DNL Web SDK] verstrekt een functionaliteit waar u acties kunt terugwinnen VEC zonder het steunen van AEP [!DNL Web SDK] om de acties VEC voor u terug te geven. Verzend een gebeurtenis met `__view__` als een `decisionScopes`gedefinieerd item.
 
@@ -127,10 +127,10 @@ Als u doelactiviteiten hebt met vooraf gedefinieerde doelgroepen die aangepaste 
 
 ## Terminologie
 
-__Beslissingen__ - In [!DNL Target]verband hiermee hebben deze betrekking op de ervaring die is gekozen uit een activiteit.
+**Beslissingen** - In [!DNL Target]verband hiermee hebben deze betrekking op de ervaring die is gekozen uit een activiteit.
 
-__Toepassingsgebied__ - Het toepassingsgebied van de beschikking. In [!DNL Target], dit is de mBox. Het algemene mBox is het `__view__` bereik.
+**Toepassingsgebied** - Het toepassingsgebied van de beschikking. In [!DNL Target], dit is de mBox. Het algemene mBox is het `__view__` bereik.
 
-__Schema__ - Het schema van een besluit is het soort aanbod in [!DNL Target].
+**Schema** - Het schema van een besluit is het soort aanbod in [!DNL Target].
 
-__XDM__ - XDM wordt in series vervaardigd in puntaantekening en dan gezet in [!DNL Target] als parameters mBox.
+**XDM** - XDM wordt in series vervaardigd in puntaantekening en dan gezet in [!DNL Target] als parameters mBox.
