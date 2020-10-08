@@ -5,9 +5,9 @@ title: Gebruikershandleiding voor Segmentatiesegment Builder
 topic: ui guide
 description: 'De Bouwer van het segment verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen. '
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,10 @@ Een segmentdefinitie is een inzameling van regels die worden gebruikt om zeer be
 Als u een nieuwe regel wilt toevoegen aan de segmentdefinitie, sleept u een tegel van het tabblad **[!UICONTROL Velden]** en zet u deze neer op het canvas van de regelbuilder. Vervolgens krijgt u contextspecifieke opties, afhankelijk van het type gegevens dat u wilt toevoegen. Beschikbare gegevenstypen zijn: tekenreeksen, datums, [!DNL ExperienceEvents]&#39;[!UICONTROL Gebeurtenistypen]&#39; en doelgroepen.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
+
+>[!IMPORTANT]
+>
+>De meest recente wijzigingen in Adobe Experience Platform hebben het gebruik van de `OR` en `AND` logische operatoren tussen gebeurtenissen bijgewerkt. Deze updates zijn niet van invloed op bestaande segmenten. Deze wijzigingen zijn echter van invloed op alle volgende updates van bestaande segmenten en nieuwe segmentcreaties. Lees de update [van de](./segment-refactoring.md) tijdconstanten voor meer informatie.
 
 ### Soorten publiek toevoegen
 
