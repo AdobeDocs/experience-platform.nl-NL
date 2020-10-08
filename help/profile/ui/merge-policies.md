@@ -61,7 +61,7 @@ Het scherm **[!UICONTROL Samenvoegbeleid]** maken wordt weergegeven, zodat u bel
 
 ### Tijdstempel geordend {#timestamp-ordered}
 
-Aangezien de verslagen van het Profiel in Experience Platform worden opgenomen, wordt een systeemtimestamp verkregen op het tijdstip van opneming en toegevoegd aan het verslag. Wanneer **[!UICONTROL Tijdstempel geordend]** is geselecteerd als het samenvoegtype **[!UICONTROL voor]** kenmerken voor een samenvoegbeleid, worden profielen samengevoegd op basis van de tijdstempel van het systeem. Met andere woorden, het samenvoegen wordt uitgevoerd op basis van de tijdstempel voor het tijdstip waarop de record in het Platform is opgenomen.
+Aangezien de verslagen van het Profiel in Experience Platform worden opgenomen, wordt een systeemtimestamp verkregen op het tijdstip van opneming en toegevoegd aan het verslag. Wanneer de geordende **** tijdstempel is geselecteerd als het type &quot;[!UICONTROL Kenmerk samenvoegen]&quot; voor een samenvoegbeleid, worden profielen samengevoegd op basis van de tijdstempel van het systeem. Met andere woorden, het samenvoegen wordt uitgevoerd op basis van de tijdstempel voor het tijdstip waarop de record in het Platform is opgenomen.
 
 Soms zijn er gebruiksgevallen waarin het nodig is een aangepaste tijdstempel op te geven en het samenvoegbeleid de aangepaste tijdstempel moet gebruiken in plaats van de systeemtijdstempel. Voorbeelden hiervan zijn het terugvullen van gegevens of het garanderen van de juiste volgorde van gebeurtenissen als records buiten de bestelling worden opgenomen.
 
