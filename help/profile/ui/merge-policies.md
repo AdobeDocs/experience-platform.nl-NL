@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Gebruikershandleiding voor beleid samenvoegen
 topic: guide
 translation-type: tm+mt
-source-git-commit: fcced39c0a78457ebb108b7378e32f1b2f75808b
+source-git-commit: 45f42bae4060e107e6c131659cea5d10457c34f8
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Het scherm **[!UICONTROL Samenvoegbeleid]** maken wordt weergegeven, zodat u bel
 
 ### Tijdstempel geordend {#timestamp-ordered}
 
-Aangezien de verslagen van het Profiel in Experience Platform worden opgenomen, wordt een systeemtimestamp verkregen op het tijdstip van opneming en toegevoegd aan het verslag. Wanneer de geordende **** tijdstempel is geselecteerd als het type &quot;[!UICONTROL Kenmerk samenvoegen]&quot; voor een samenvoegbeleid, worden profielen samengevoegd op basis van de tijdstempel van het systeem. Met andere woorden, het samenvoegen wordt uitgevoerd op basis van de tijdstempel voor het tijdstip waarop de record in het Platform is opgenomen.
+Aangezien de verslagen van het Profiel in Experience Platform worden opgenomen, wordt een systeemtimestamp verkregen op het tijdstip van opneming en toegevoegd aan het verslag. Wanneer **[!UICONTROL Tijdstempel geordend]** is geselecteerd als het samenvoegtype **[!UICONTROL voor]** kenmerken voor een samenvoegbeleid, worden profielen samengevoegd op basis van de tijdstempel van het systeem. Met andere woorden, het samenvoegen wordt uitgevoerd op basis van de tijdstempel voor het tijdstip waarop de record in het Platform is opgenomen.
 
 Soms zijn er gebruiksgevallen waarin het nodig is een aangepaste tijdstempel op te geven en het samenvoegbeleid de aangepaste tijdstempel moet gebruiken in plaats van de systeemtijdstempel. Voorbeelden hiervan zijn het terugvullen van gegevens of het garanderen van de juiste volgorde van gebeurtenissen als records buiten de bestelling worden opgenomen.
 
@@ -91,7 +91,7 @@ Wanneer het selecteren van een waarde van de samenvoeging **[!UICONTROL van]** A
 
 Een geval van het voorbeeldgebruik zou zijn als uw organisatie informatie aanwezig in één dataset had die over gegevens in een andere dataset voorkeur of vertrouwd is.
 
-Wanneer het selecteren van de belangrijkheid **[!UICONTROL van de]** Dataset, opent een afzonderlijk paneel dat u van **[!UICONTROL Beschikbare datasets]** vereist om te selecteren welke datasets zullen worden omvat (of gebruik checkbox om allen te selecteren). Vervolgens kunt u deze gegevenssets slepen naar het deelvenster [**!UICONTROL Selected Datasets]** en ze naar de juiste volgorde van prioriteit slepen. De hoogste dataset zal hoogste prioriteit worden gegeven, zal de tweede dataset tweede-hoogste zijn, etc.
+Wanneer het selecteren van de belangrijkheid **[!UICONTROL van de]** Dataset, opent een afzonderlijk paneel dat u van **[!UICONTROL Beschikbare datasets]** vereist om te selecteren welke datasets zullen worden omvat (of gebruik checkbox om allen te selecteren). U kunt die datasets dan slepen en neerzetten in het **[!UICONTROL Geselecteerde paneel van Datasets]** en hen slepen in de correcte orde van prioriteit. De hoogste dataset zal hoogste prioriteit worden gegeven, zal de tweede dataset tweede-hoogste zijn, etc.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
