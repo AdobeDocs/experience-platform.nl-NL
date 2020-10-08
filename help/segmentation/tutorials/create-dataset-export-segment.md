@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Deze zelfstudie doorloopt de stappen die worden vereist om een dataset tot stand te brengen die voor het uitvoeren van een publiekssegment kan worden gebruikt gebruikend het Experience Platform UI.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Als de gegevensset een naam en een beschrijving heeft, klikt u op **[!UICONTROL 
 
 Een lege dataset is nu gecreeerd en u bent teruggekeerd aan het lusje van de Activiteit **[!UICONTROL van de]** Dataset in de werkruimte van **[!UICONTROL Datasets]** . U zou de naam van de dataset in de upper-left hoek van de werkruimte, samen met een bericht moeten zien dat &quot;Geen partijen zijn toegevoegd.&quot; Dit moet worden verwacht aangezien u nog geen partijen aan deze dataset hebt toegevoegd.
 
-Aan de rechterkant van de werkruimte van Datasets zult u het lusje zien van **[!UICONTROL Info]** dat informatie met betrekking tot uw nieuwe dataset zoals dataset ID, naam, beschrijving, lijstnaam, schema], het stromen, en bron omvat. Het tabblad **[!UICONTROL Info]** bevat ook informatie over het tijdstip waarop de gegevensset is gemaakt en de datum waarop deze voor het laatst is gewijzigd.
+Aan de rechterkant van de werkruimte van Datasets zult u het lusje zien van **[!UICONTROL Info]** dat informatie met betrekking tot uw nieuwe dataset zoals dataset identiteitskaart, naam, beschrijving, lijstnaam, schema, het stromen, en bron omvat. Het tabblad **[!UICONTROL Info]** bevat ook informatie over het tijdstip waarop de gegevensset is gemaakt en de datum waarop deze voor het laatst is gewijzigd.
 
 Noteer de **[!UICONTROL gegevensset-id]**, omdat deze waarde vereist is om de exportworkflow voor het publiekssegment te voltooien.
 
