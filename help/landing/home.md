@@ -5,7 +5,7 @@ title: Adobe Experience Platform-overzicht
 topic: getting started
 description: Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. Experience Platform stelt organisaties in staat om klantgegevens en -inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
 translation-type: tm+mt
-source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
+source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 2%
@@ -76,7 +76,7 @@ De standaardtaal van de gebruikersinterface wordt bepaald door het gebied dat in
 
 De documentatie van Adobe Experience Platform is beschikbaar in verscheidene talen. Als u de taal wilt wijzigen, klikt u op de vervolgkeuzelijst Taal en selecteert u de gewenste taal.
 
-![afbeelding](assets/lang.jpg)
+![afbeelding](images/overview/lang.jpg)
 
 ## [!DNL Experience Platform] documentatie
 
