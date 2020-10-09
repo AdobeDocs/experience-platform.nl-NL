@@ -5,7 +5,7 @@ title: Gebruikershandleiding voor gegevensbestanden
 topic: datasets
 description: Deze gebruikershandleiding voor gegevenssets bevat instructies voor het uitvoeren van algemene handelingen bij het werken met gegevenssets in de gebruikersinterface van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
+source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 0%
@@ -62,10 +62,10 @@ Om een nieuwe dataset tot stand te brengen, begin door **[!UICONTROL Create data
 
 In het volgende scherm, wordt u voorgesteld met de volgende twee opties om een nieuwe dataset tot stand te brengen:
 
-* [Gegevensset maken van schema](#create-a-dataset-with-an-existing-schema)
-* [Gegevensset maken van CSV-bestand](#create-a-dataset-with-a-csv-file)
+* [Gegevensset maken van schema](#schema)
+* [Gegevensset maken van CSV-bestand](#csv)
 
-### Creeer een dataset met een bestaand schema
+### Creeer een dataset met een bestaand schema {#schema}
 
 In het **[!UICONTROL Create scherm van de dataset]** , leidt de klik **[!UICONTROL dataset van schema]** tot om een nieuwe lege dataset tot stand te brengen.
 
@@ -79,7 +79,7 @@ De stap Gegevensset **** configureren wordt weergegeven. Geef de gegevensset een
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
-### Een gegevensset maken met een CSV-bestand
+### Een gegevensset maken met een CSV-bestand {#csv}
 
 Wanneer een dataset gebruikend een Csv- dossier wordt gecreeerd, wordt een ad hoc schema gecreeerd om de dataset van een structuur te voorzien die het verstrekte Csv- dossier aanpast. Klik in het scherm **[!UICONTROL Gegevensset]** maken op het vakje Gegevensset **[!UICONTROL maken van CSV-bestand]**.
 
