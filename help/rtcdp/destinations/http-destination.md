@@ -5,7 +5,7 @@ seo-title: De bestemming van HTTP is een Echte bestemming van het Platform van d
 description: De bestemming van HTTP is een Echte bestemming van het Platform van de Gegevens van de Klant van Adobe - tijd die u helpt profielgegevens naar eindpunten van HTTP verzenden van derde.
 seo-description: De bestemming van HTTP is een Echte bestemming van het Platform van de Gegevens van de Klant van Adobe - tijd die u helpt profielgegevens naar eindpunten van HTTP verzenden van derde.
 translation-type: tm+mt
-source-git-commit: cf100e8df225a665eade5ee6ddab071707e93f8b
+source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Het [!DNL HTTP] doel is een [!DNL Adobe Real-Time Customer Data Platform] streamingdoel waarmee u profielgegevens naar eindpunten van derden kunt verzenden [!DNL HTTP] .
 
-Als u profielgegevens naar [!DNL HTTP] eindpunten wilt verzenden, moet u eerst verbinding maken met het doel in de [!DNL Adobe Real-Time Customer Data Platform](#connect-destination)map.
+Als u profielgegevens naar [!DNL HTTP] eindpunten wilt verzenden, moet u eerst verbinding maken met het doel in de [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination)map.
 
 ## Use Cases {#use-cases}
 
@@ -33,14 +33,15 @@ De [!DNL HTTP] bestemming wordt gericht op klanten die XDM profielgegevens en pu
 
 ## Verbinden met doel {#connect-destination}
 
-1. Selecteer in **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** de optie [!DNL  HTTP API]en selecteer **[!UICONTROL Configureren]**.
+1. Selecteer in **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** de optie [!DNL HTTP API]en selecteer **[!UICONTROL Configureren]**.
 
    ![HTTP-bestemming activeren](assets/activate-http-destination.png)
 
    >[!NOTE]
    >
    >Als er al een verbinding met dit doel bestaat, ziet u een knop **[!UICONTROL Activeren]** op de doelkaart. Voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]**, verwijs naar de sectie van de [Catalogus](../destinations/destinations-workspace.md#catalog) van de documentatie van de bestemmingswerkruimte.
-   ![HTTP-bestemming activeren](assets/connect-http-destination.png)
+   >
+   >![HTTP-bestemming activeren](assets/connect-http-destination.png)
 
 2. In de stap van de [!UICONTROL Rekening] , moet u de details van de HTTP- eindpuntverbinding bepalen. Selecteer **[!UICONTROL Nieuwe account]** en voer de verbindingsgegevens in voor het HTTP-eindpunt waarmee u verbinding wilt maken.
    * **[!UICONTROL httpEndpoint]**: de volledige voltooiing [!DNL URL] van het eindpunt van HTTP dat u de profielgegevens wilt verzenden naar.
