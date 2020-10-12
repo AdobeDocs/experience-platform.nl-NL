@@ -2,11 +2,11 @@
 product: adobe experience platform
 audience: user
 user-guide-title: Handleiding Platform voor realtime klantgegevens
-user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
+user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
 translation-type: tm+mt
-source-git-commit: e3017744bfe35c6a60cf921121135352a1119bdd
+source-git-commit: ac114a7d0313582c6adf05404e0626c618a13253
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '489'
 ht-degree: 4%
 
 ---
@@ -31,6 +31,7 @@ ht-degree: 4%
       * [Pagina met doeldetails](destinations/destination-details-page.md)
    * Doelcatalogus {#destinations-cat}
       * [Overzicht van de doelcatalogus](destinations/destinations-catalog.md)
+      * [HTTP-bestemming](/help/rtcdp/destinations/http-destination.md)
       * Adobe-bestemmingen{#adobe-destinations}
          * [Overzicht van Adobe-doelen](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
