@@ -5,9 +5,9 @@ seo-title: Typen bestemmingen en categorieën
 description: 'In het Platform van de Gegevens van de Klant van Adobe in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen. '
 seo-description: In het Platform van de Gegevens van de Klant van Adobe in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ In het Platform van de Gegevens van de Klant van Adobe in real time, maken wij o
 
 <br> 
 
-### Verbindingen
+### Verbindingen {#connections}
 
 **[!UICONTROL De bestemmingen van de Uitvoer]** en van het **[!UICONTROL Segment van het profiel van de Uitvoer]** in het Platform van de Gegevens van de Klant van Adobe Real-time vangen gebeurtenisgegevens, combineren het met andere gegevensbronnen om het [real-time klantenprofiel](/help/profile/home.md)te vormen, segmentatie, en de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe te passen.
 
@@ -37,7 +37,7 @@ Profielexportdoelen genereren een bestand met profielen en/of kenmerken. Deze be
 
 #### Exportbestemmingen segment
 
-De de uitvoerbestemmingen van het segment verzenden de profielen en de segmenten die zij voor aan bestemmingsplatforms kwalificeerden. Deze bestemmingen gebruiken segment ID of gebruiker IDs. Adverteerdoelen zoals [[!DNL Google Display &amp; Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) of [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) zijn voorbeelden van deze soorten doelen.
+De de uitvoerbestemmingen van het segment verzenden de profielen en de segmenten die zij voor aan bestemmingsplatforms kwalificeerden. Deze bestemmingen gebruiken segment ID of gebruiker IDs. Reclamebestemmingen zoals [[!DNL Google Display & Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) of [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) zijn voorbeelden van dit soort bestemmingen.
 
 #### Exportdoelen profiel en segment - video-overzicht
 
@@ -47,7 +47,7 @@ In de onderstaande video worden de bijzonderheden van de twee soorten doelen uit
 
 <br> 
 
-### Extensies
+### Extensies {#extensions}
 
 Adobe In real time CDP hefboomwerkingen de macht en de flexibiliteit van Experience Platform Launch om de uitbreidingen van de Lancering in de Adobe in real time CDP interface te omvatten.
 
