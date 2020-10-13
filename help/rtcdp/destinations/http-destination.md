@@ -5,7 +5,7 @@ seo-title: De bestemming van HTTP is een Echte bestemming van het Platform van d
 description: De bestemming van HTTP is een Echte bestemming van het Platform van de Gegevens van de Klant van Adobe - tijd die u helpt profielgegevens naar eindpunten van HTTP verzenden van derde.
 seo-description: De bestemming van HTTP is een Echte bestemming van het Platform van de Gegevens van de Klant van Adobe - tijd die u helpt profielgegevens naar eindpunten van HTTP verzenden van derde.
 translation-type: tm+mt
-source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
+source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 0%
