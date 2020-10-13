@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Handleiding Platform voor realtime klantgegevens
 user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
 translation-type: tm+mt
-source-git-commit: 797aff558f0f8b818609631792e96be3f6277b62
+source-git-commit: d9e9440bb8a7735aa8a5d24285c1fb56f32733cb
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 4%
+source-wordcount: '507'
+ht-degree: 3%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 4%
       * Adobe-bestemmingen{#adobe-destinations}
          * [Overzicht van Adobe-doelen](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
+         * [Het segmentdelen van het Experience Platform (opent de documentatie van de Audience Manager)](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * Reclamebestemmingen{#advertising-destinations}
          * [Overzicht van advertentiebestemmingen](destinations/advertising-destinations.md)
          * [Adobe Advertising Cloud-extensie](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
