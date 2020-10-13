@@ -1,14 +1,14 @@
 ---
-keywords: destinations;experience cloud solutions
+keywords: destinations;experience cloud solutions; target;target destination; ad cloud; audience manager; audience manager destination
 title: Adobe Doelen
 seo-title: Adobe Doelen
 description: Beheer uw klantenervaring door uw gegevens in Adobe Real-time CDP met andere oplossingen van Adobe Experience Cloud voor het richten van en het richten, personalisatie, marketing automatisering en meer te verbinden
 seo-description: Beheer uw klantenervaring door uw gegevens in Adobe Real-time CDP met andere oplossingen van Adobe Experience Cloud voor het richten van en het richten, personalisatie, marketing automatisering en meer te verbinden
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: d1b87d696e113d229d69059a3a0f1b7786fa5add
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 1%
+source-wordcount: '226'
+ht-degree: 0%
 
 ---
 
@@ -17,9 +17,18 @@ ht-degree: 1%
 
 Beheer uw klantenervaring door uw gegevens in Adobe Real-Time CDP met andere oplossingen van Adobe Experience Cloud voor het richten van en het richten, personalisatie, marketing automatisering en meer te verbinden.
 
+## Verbindingen
+
+Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [Verbindingen](/help/rtcdp/destinations/destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
+
+* [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md)
+
+## Extensies
+
+Als u het verschil tussen verbindingen en extensies wilt begrijpen, raadpleegt u [Extensies](/help/rtcdp/destinations/destination-types.md#extensions) op de pagina Doeltypen en -categorieën.
+
 * [Adobe Advertising Cloud-extensie](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
 * [Adobe Analytics-extensie](/help/rtcdp/destinations/adobe-analytics-extension.md)
-* [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md)
 * [Adobe Livefyre-extensie](/help/rtcdp/destinations/adobe-livefyre-extension.md)
 * [Adobe Media Analytics voor audio- en video-extensie](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
 * [Adobe Target-extensie](/help/rtcdp/destinations/adobe-target-extension.md)
@@ -29,3 +38,9 @@ Beheer uw klantenervaring door uw gegevens in Adobe Real-Time CDP met andere opl
 * [Marketo-extensie](/help/rtcdp/destinations/marketo-extension.md)
 * [Marketo Munchkin-extensie](/help/rtcdp/destinations/marketo-munchkin-extension.md)
 * [Marketo Web Personalization extension](/help/rtcdp/destinations/marketo-web-personalization-extension.md)
+
+## Delen van Experience Platform
+
+Gebruik het segment dat van het Experience Platform vermogen deelt om uw segmenten van het Experience Platform aan extra Adobe bestemmingen te delen. Lees de pagina hieronder voor meer informatie (opent in het de documentatieportaal van de Audience Manager):
+
+* [Delen van Experience Platforms met Adobe Audience Manager, Ad Cloud en Target via de Core Services-integratie](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
