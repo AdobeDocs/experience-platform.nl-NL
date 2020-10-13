@@ -1,13 +1,13 @@
 ---
-keywords: destinations;experience cloud solutions; target;target destination; ad cloud; audience manager; audience manager destination
+keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
 title: Adobe Doelen
 seo-title: Adobe Doelen
 description: Beheer uw klantenervaring door uw gegevens in Adobe Real-time CDP met andere oplossingen van Adobe Experience Cloud voor het richten van en het richten, personalisatie, marketing automatisering en meer te verbinden
 seo-description: Beheer uw klantenervaring door uw gegevens in Adobe Real-time CDP met andere oplossingen van Adobe Experience Cloud voor het richten van en het richten, personalisatie, marketing automatisering en meer te verbinden
 translation-type: tm+mt
-source-git-commit: d1b87d696e113d229d69059a3a0f1b7786fa5add
+source-git-commit: e3e01474fcd6874f50b929116eff5bdfd4298f22
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -43,4 +43,4 @@ Als u het verschil tussen verbindingen en extensies wilt begrijpen, raadpleegt u
 
 Gebruik het segment dat van het Experience Platform vermogen deelt om uw segmenten van het Experience Platform aan extra Adobe bestemmingen te delen. Lees de pagina hieronder voor meer informatie (opent in het de documentatieportaal van de Audience Manager):
 
-* [Delen van Experience Platforms met Adobe Audience Manager, Ad Cloud en Target via de Core Services-integratie](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [Delen van Experience Platforms met Adobe Audience Manager, Adobe Advertising Cloud en Adobe Target via de Core Services-integratie](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
