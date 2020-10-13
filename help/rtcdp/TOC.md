@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Handleiding Platform voor realtime klantgegevens
 user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
 translation-type: tm+mt
-source-git-commit: ac114a7d0313582c6adf05404e0626c618a13253
+source-git-commit: 797aff558f0f8b818609631792e96be3f6277b62
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '490'
 ht-degree: 4%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 4%
       * [Pagina met doeldetails](destinations/destination-details-page.md)
    * Doelcatalogus {#destinations-cat}
       * [Overzicht van de doelcatalogus](destinations/destinations-catalog.md)
-      * [HTTP-bestemming](/help/rtcdp/destinations/http-destination.md)
+      * [ (Alpha) HTTP-bestemming](/help/rtcdp/destinations/http-destination.md)
       * Adobe-bestemmingen{#adobe-destinations}
          * [Overzicht van Adobe-doelen](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
