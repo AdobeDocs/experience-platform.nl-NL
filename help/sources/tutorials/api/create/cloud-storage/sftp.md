@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform te verbinden met een SFTP-server (Secure File Transfer Protocol).
 translation-type: tm+mt
-source-git-commit: 781a26486a42f304308f567284cef53d591aa124
+source-git-commit: 71653681a0f4b31319bd352202bf55fb3947a455
 workflow-type: tm+mt
 source-wordcount: '793'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Verbinding maken
 
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per SFTP-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per SFTP-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
 
 ### Een SFTP-verbinding maken met behulp van basisverificatie
 
@@ -85,25 +85,28 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
-    -d  "auth": {
-        "specName": "Basic Authentication for sftp",
-        "params": {
-            "host": "{HOST_NAME}",
-            "userName": "{USER_NAME}",
-            "password": "{PASSWORD}"
+    -d  '{
+        "name": "SFTP connector with password",
+        "description": "SFTP connector password",
+        "auth": {
+            "specName": "Basic Authentication for sftp",
+            "params": {
+                "host": "{HOST}",
+                "userName": "{USERNAME}",
+                "password": "{PASSWORD}"
+            }
+        },
+        "connectionSpec": {
+            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+            "version": "1.0"
         }
-    },
-    "connectionSpec": {
-        "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-        "version": "1.0"
-    }
-}
+    }'
 ```
 
 | Eigenschap | Beschrijving |
@@ -138,26 +141,29 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
-    -d  "auth": {
-        "specName": "SSH PublicKey Authentication for sftp",
-        "params": {
-            "host": "{HOST_NAME}",
-            "userName": "{USER_NAME}",
-            "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
-            "passPhrase": "{PASS_PHRASE}"
+    -d '{
+        "name": "SFTP connector with SSH authentication",
+        "description": "SFTP connector with SSH authentication",
+        "auth": {
+            "specName": "SSH PublicKey Authentication for sftp",
+            "params": {
+                "host": "{HOST}",
+                "userName": "{USERNAME}",
+                "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
+                "passPhrase": "{PASSPHRASE}"
+            }
+        },
+        "connectionSpec": {
+            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+            "version": "1.0"
         }
-    },
-    "connectionSpec": {
-        "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-        "version": "1.0"
-    }
-}
+    }'
 ```
 
 | Eigenschap | Beschrijving |
