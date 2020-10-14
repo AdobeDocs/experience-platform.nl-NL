@@ -5,9 +5,9 @@ title: Datumfuncties
 topic: overview
 description: In dit document worden de datumfuncties geïntroduceerd die worden gebruikt met Data Prep.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '384'
 ht-degree: 13%
 
 ---
@@ -80,4 +80,4 @@ In de volgende tabel wordt aangegeven welke patroonletters zijn gedefinieerd voo
 
 **Voorbeeld**
 
-De expressie `date(orderDate, 'yyyy-MM-dd')` converteert de orderDate als de waarde &quot;31 december 2020&quot; is, naar een datumtijd met de waarde &quot;2020-12-31&quot;.
+De expressie `date(orderDate, 'yyyy-MM-dd')` converteert een `orderDate` waarde van &quot;31 december 2020&quot; naar een datumtijdwaarde van &quot;2020-12-31&quot;.
