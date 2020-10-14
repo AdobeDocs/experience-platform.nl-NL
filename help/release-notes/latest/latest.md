@@ -1,79 +1,38 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
-description: Opmerkingen bij de release van Experience Platform 9 september 2020
+description: Opmerkingen bij de release van Experience Platform van 14 oktober 2020
 doc-type: release notes
-last-update: September 8, 2020
+last-update: October 13, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 312794af2cdb111fb81c0aa226dec68db2cbc374
+source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 3%
+source-wordcount: '478'
+ht-degree: 2%
 
 ---
 
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 9 september 2020**
+**Releasedatum: 14 oktober 2020**
 
-Updates voor bestaande functies in Adobe Experience Platform:
+- [Gegevensprep](#data-prep)
+- [Klantprofiel in realtime](#profile)
+- [Bronnen](#sources)
 
-- [[!DNL-gegevensbeheer]](#governance)
-- [[!DNL-doelen]](#destinations)
-- [[!DNL Observability Insights]](#observability)
-- [[!DNL-Privacy Service]](#privacy)
-- [[!DNL Real-time klantprofiel]](#profile)
-- [[!DNL Segmentation Service]](#segmentation)
-- [[!DNL-bronnen]](#sources)
+## Gegevensprep {#data-prep}
 
-## [!DNL Data Governance] {#governance}
+Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience Data Model).
 
-Adobe Experience Platform Data Governance is een reeks strategieën en technologieën die worden gebruikt om klantgegevens te beheren en naleving van regelgeving, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik te waarborgen. Het speelt een sleutelrol binnen [!DNL Experience Platform] op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van de gegevenstoegang, en toegangscontrole over gegevens voor marketing acties.
-
-**Nieuwe functies**
+**Belangrijkste kenmerken**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Verbeteringen in de gebruikersinterface voor de labels van gegevenssets | Verschillende nieuwe besturingselementen voor sorteren en filteren zijn toegevoegd aan de interface van de gegevenssetlabels om het werken met grote schema&#39;s eenvoudiger te maken: <ul><li>U kunt velden sorteren op alfabetische volgorde op basis van het volledige schema-pad.</li><li>Gedeeltelijke zoekopdrachten uitvoeren op padnamen van velden.</li><li>Velden filteren zonder labels, met een geselecteerd label of met een labelcategorie.</li></ul> |
+| `is_set` -functie | Met de `is_set` functie kunt u de aanwezigheid van een kenmerk in de brongegevens controleren. `is_set` kan worden gebruikt in combinatie met `is_empty` om zowel de aanwezigheid van het kenmerk als de aanwezigheid van de waarde binnen het kenmerk te controleren. |
+| `get_values` -functie | Met de `get_values` functie kunt u de waarden van de invoerkaart voor een bepaalde toets ophalen. |
 
-Zie het overzicht [van](../../data-governance/home.md) Gegevensbeheer voor meer informatie over de dienst.
-
-## Doelen {#destinations}
-
-In [Adobe Real-time het Platform](../../rtcdp/overview.md)van de Gegevens van de Klant, zijn de bestemmingen prebuilt integraties met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| UX-verbeteringen | Gebruikers kunnen inline tabelhandelingen gebruiken om gemakkelijker toegang te krijgen tot primaire handelingen, zoals het toevoegen van gegevens, het bewerken van planningen en het toevoegen van segmenten. Zie het document van de [bestemmingswerkruimte](../../rtcdp/destinations/destinations-workspace.md) voor meer informatie. |
-
-Ga voor meer informatie naar het overzicht met [bestemmingen](../../rtcdp/destinations/destinations-overview.md)
-
-## [!DNL Observability Insights] {#observability}
-
-[!DNL Observability Insights] kunt u de activiteiten op Adobe Experience Platform volgen door statistische gegevens en gebeurtenismeldingen te gebruiken.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Adobe I/O-gebeurtenismeldingen | [!DNL Observability Insights] hefboomwerkingen Adobe I/O Gebeurtenissen om gebeurtenisberichten voor verscheidene diensten van het Experience Platform tot stand te brengen. De lading van het bericht wordt verzonden naar een gevormde webhaak die u kunt dan gebruiken om verdere stroomafwaartse processen te automatiseren. Zie het overzicht [van](../../observability/notifications/overview.md) meldingen voor meer informatie. |
-
-Zie het [[!DNL Observability Insights] overzicht](../../observability/home.md) voor meer informatie over de dienst.
-
-## [!DNL Privacy Service] {#privacy}
-
-Verschillende wettelijke en organisatorische regelingen geven gebruikers het recht om hun persoonsgegevens op verzoek in uw gegevensopslag te openen of te verwijderen. Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u deze gegevensaanvragen van uw klanten kunt beheren. Met [!DNL Privacy Service]kunt u verzoeken indienen om toegang te krijgen tot persoonlijke of persoonlijke klantgegevens en deze te verwijderen uit Adobe Experience Cloud-toepassingen, waardoor u gemakkelijker kunt voldoen aan wettelijke en organisatorische privacyregels.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Ondersteuning voor LGPD (Brazilië) | Privacy jobs kunnen nu worden gecreëerd in het kader van de Braziliaanse [!DNL Lei Geral de Proteção de Dados] (LGPD) verordening. Deze banen worden bijgehouden onder de code van de verordening `lgpd_bra`. |
-
-Zie het overzicht [van de](../../privacy-service/home.md) Privacy Service voor meer informatie over de dienst.
+Lees voor meer informatie het overzicht [van de](../../data-prep/home.md)Data Prep.
 
 ## Klantprofiel in realtime {#profile}
 
@@ -81,24 +40,10 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Profielviewer | De profielviewer is in de gebruikersinterface van het Platform bijgewerkt tot een dashboard met volledige aanpassing. De gebruiker heeft nu de optie om de volgende taken uit te voeren: <ul><li>Werk de geselecteerde standaard- en aangepaste kenmerken bij in de basisinformatiewidget.</li><li>Aangepaste widgets maken, bewerken en verwijderen</li><li>Widgets vergroten of verkleinen en opnieuw rangschikken</li></ul> |
+| API-uitbreidingen voor voorvertoning van profiel | De API (`/previewsamplestatus`) voor de voorvertoning van profielen bevat nu de mogelijkheid om een uitsplitsing te bekijken van de totale profielfragmenten in uw IMS-organisatie en om de distributie van profielfragmenten in verschillende naamruimten te bekijken. |
+| Updates van de Unieschemaweergave | In het Experience Platform UI, kunnen de gebruikers informatie over alle schema&#39;s en datasets gemakkelijker vinden die tot het unieschema bijdragen, evenals oppervlakte zeer belangrijke attributen zoals identiteit en relatievelden. Deze updates verbeteren de capaciteit om problemen op te lossen en te bevestigen dat de profielen correct worden gevormd, worden de identiteiten correct vastgemaakt, en de gegevens zijn met succes opgenomen. |
 
 Lees voor meer informatie over [!DNL Real-time Customer Profile], waaronder zelfstudies en aanbevolen procedures voor het werken met [!DNL Profile] gegevens, het overzicht [](../../profile/home.md)van het realtime-klantprofiel.
-
-## Segmenteringsservice {#segmentation}
-
-Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en RESTful API waarmee u segmenten kunt bouwen en doelgroepen kunt genereren op basis van uw [!DNL Real-time Customer Profile] gegevens. Deze segmenten worden centraal gevormd en gehandhaafd [!DNL Platform], die hen gemakkelijk toegankelijk door om het even welke toepassing van de Adobe maken.
-
-[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Exporttaken | Er is een vlag toegevoegd waarmee segmenten kunnen worden geëvalueerd als onderdeel van een exporttaak. Hierdoor kunnen gebruikers zowel segmentatie als export in één taak uitvoeren. |
-| Beleid samenvoegen | Het veelvoudige samenvoegbeleid kan in één enkele baan van de partijsegmentatie worden omvat. |
-
-Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het overzicht van de [Segmentatie](../../segmentation/home.md)
 
 ## Bronnen {#sources}
 
@@ -110,7 +55,8 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Automatisch toewijzen | [!DNL Platform] verstrekt intelligente aanbevelingen voor auto afbeelding tijdens het werkschema van de gegevensopname, dat op een user-selected doelschema of dataset wordt gebaseerd. U kunt flexibele regels voor automatische toewijzingen handmatig aanpassen aan uw gebruiksgevallen. |
-| UX-verbeteringen | Gebruikers kunnen inline tabelhandelingen gebruiken om gemakkelijker toegang te krijgen tot primaire handelingen, zoals het toevoegen van gegevens, het bewerken van planningen en het toevoegen van segmenten. Zie het document met [controlegegevens](../../sources/tutorials/ui/monitor.md) voor meer informatie. |
+| Hiërarchische toewijzing | U kunt een hiërarchisch bronbestand, zoals JSON of Parquet, voorvertonen tijdens het invoeren van gegevens. |
+| SSH-verificatieondersteuning voor SFTP | U kunt uw rekening SFTP met het [!DNL Platform] gebruiken van RSA/DSA Open SSH sleutels verbinden. Zie het [SFTP-overzicht](../../sources/connectors/cloud-storage/ftp-sftp.md) voor meer informatie. |
+| UX-verbeteringen | U kunt uw dataset voor [!DNL Profile] tijdens het proces van gegevensinvoer toelaten. Raadpleeg de zelfstudie over de workflow [](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) voor gegevens over cloudopslag voor meer informatie. |
 
 Zie het [bronoverzicht](../../sources/home.md)voor meer informatie over bronnen.
