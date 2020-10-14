@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
+source-git-commit: fc1174c8435c1afc3c58dd748daf89f387a19980
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '591'
 ht-degree: 2%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 2%
 
 - [Gegevensprep](#data-prep)
 - [Klantprofiel in realtime](#profile)
+- [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
 
 ## Gegevensprep {#data-prep}
@@ -44,6 +45,20 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 | Updates van de Unieschemaweergave | In het Experience Platform UI, kunnen de gebruikers informatie over alle schema&#39;s en datasets gemakkelijker vinden die tot het unieschema bijdragen, evenals oppervlakte zeer belangrijke attributen zoals identiteit en relatievelden. Deze updates verbeteren de capaciteit om problemen op te lossen en te bevestigen dat de profielen correct worden gevormd, worden de identiteiten correct vastgemaakt, en de gegevens zijn met succes opgenomen. |
 
 Lees voor meer informatie over [!DNL Real-time Customer Profile], waaronder zelfstudies en aanbevolen procedures voor het werken met [!DNL Profile] gegevens, het overzicht [](../../profile/home.md)van het realtime-klantprofiel.
+
+## Segmenteringsservice {#segmentation}
+
+Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en RESTful API waarmee u segmenten kunt bouwen en doelgroepen kunt genereren op basis van uw [!DNL Real-time Customer Profile] gegevens. Deze segmenten worden centraal gevormd en gehandhaafd [!DNL Platform], die hen gemakkelijk toegankelijk door om het even welke toepassing van de Adobe maken.
+
+[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Verwijdering segmentatielimiet streaming | De limiet van zeven dagen voor de terugzoekperiode is verwijderd. |
+
+Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het overzicht van de [Segmentatie](../../segmentation/home.md)
 
 ## Bronnen {#sources}
 
