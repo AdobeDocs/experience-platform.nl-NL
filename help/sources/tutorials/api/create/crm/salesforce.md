@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om Platform met een rekening te verbinden Salesforce voor het verzamelen van de gegevens van CRM.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -145,11 +145,9 @@ Een geslaagde reactie retourneert de verbindingsspecificaties voor [!DNL Salesfo
 }
 ```
 
-## Een basisverbinding maken
+## Verbinding maken voor de API
 
-Een basisverbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL Salesforce] account is slechts één basisverbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
-
-Voer het volgende verzoek van de POST uit om een basisverbinding tot stand te brengen.
+Een verbinding voor API specificeert een bronnen en bevat uw geloofsbrieven voor die bron. Per [!DNL Salesforce] account is slechts één verbinding voor de API vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het opnemen van verschillende gegevens.
 
 **API-indeling**
 
@@ -161,7 +159,7 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -205,4 +203,4 @@ Een geslaagde reactie bevat de unieke id (`id`) van de basisverbinding. Deze id 
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een basisverbinding voor uw [!DNL Salesforce] account gemaakt met behulp van API&#39;s en is een unieke id verkregen als onderdeel van de hoofdtekst van de reactie. U kunt deze basis verbindings identiteitskaart in de volgende zelfstudie gebruiken aangezien u leert hoe te om de systemen van CRM te [onderzoeken gebruikend de Dienst API](../../explore/crm.md)van de Stroom.
+Door deze zelfstudie te volgen, hebt u een verbinding voor uw [!DNL Salesforce] account gemaakt met behulp van API&#39;s en is een unieke id verkregen als onderdeel van de hoofdtekst van de reactie. U kunt deze verbindingsidentiteitskaart in de volgende zelfstudie gebruiken aangezien u leert hoe te om de systemen van CRM te [onderzoeken gebruikend de Dienst API](../../explore/crm.md)van de Stroom.
