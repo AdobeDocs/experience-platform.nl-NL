@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: ab87cac94ae69acde3be75ae95b11cf003a274e9
+source-git-commit: bf4271cec6126de3b5d9f98df280afdcc798589d
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 3%
+source-wordcount: '478'
+ht-degree: 2%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 3%
 **Releasedatum: Oktober 2020**
 
 - [Gegevensprep](#data-prep)
+- [Klantprofiel in realtime](#profile)
 - [Bronnen](#sources)
 
 ## Gegevensprep {#data-prep}
@@ -32,6 +33,17 @@ Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en vali
 | `get_values` -functie | Met de `get_values` functie kunt u de waarden van de invoerkaart voor een bepaalde toets ophalen. |
 
 Lees voor meer informatie het overzicht [van de](../../data-prep/home.md)Data Prep.
+
+## Klantprofiel in realtime {#profile}
+
+Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met [!DNL Real-time Customer Profile], kunt u een holistische mening van elke individuele klant zien die gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens combineert. [!DNL Profile] staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| API-uitbreidingen voor voorvertoning van profiel | De API (`/previewsamplestatus`) voor de voorvertoning van profielen bevat nu de mogelijkheid om een uitsplitsing te bekijken van de totale profielfragmenten in uw IMS-organisatie en om de distributie van profielfragmenten in verschillende naamruimten te bekijken. |
+| Updates van de Unieschemaweergave | In het Experience Platform UI, kunnen de gebruikers informatie over alle schema&#39;s en datasets gemakkelijker vinden die tot het unieschema bijdragen, evenals oppervlakte zeer belangrijke attributen zoals identiteit en relatievelden. Deze updates verbeteren de capaciteit om problemen op te lossen en te bevestigen dat de profielen correct worden gevormd, worden de identiteiten correct vastgemaakt, en de gegevens zijn met succes opgenomen. |
+
+Lees voor meer informatie over [!DNL Real-time Customer Profile], waaronder zelfstudies en aanbevolen procedures voor het werken met [!DNL Profile] gegevens, het overzicht [](../../profile/home.md)van het realtime-klantprofiel.
 
 ## Bronnen {#sources}
 
