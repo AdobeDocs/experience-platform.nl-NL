@@ -5,9 +5,9 @@ description: 'Leer hoe te om het Netwerk van de Rand van het Experience Platform
 seo-description: 'Leer hoe te om het Netwerk van de Rand van het Experience Platform te vormen. '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '891'
 ht-degree: 1%
 
 ---
@@ -17,21 +17,23 @@ ht-degree: 1%
 
 De configuratie voor de Adobe Experience Platform [!DNL Web SDK] wordt gesplitst tussen twee plaatsen. Het [vormt bevel](configuring-the-sdk.md) in SDK controleert dingen die op de cliënt, zoals de `edgeDomain`. moeten worden behandeld. De randconfiguratie behandelt alle andere configuratie voor SDK. Wanneer een verzoek naar de Adobe Experience Platform wordt verzonden [!DNL Edge Network], `edgeConfigId` wordt het gebruikt om naar de server zijconfiguratie te verwijzen. Hierdoor kunt u de configuratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
 
+Voor deze functie moet uw organisatie zijn ingericht. Neem contact op met uw Certified Software Manager (CSM) om de lijst van gewenste personen te starten.
+
 ## Een Edge-configuratie-id maken
 
-De de configuratie IDs van de rand kan in Adobe worden gecreeerd [!DNL Launch] gebruikend het hulpmiddel van de randconfiguratie. Met dit gereedschap kunt u zowel de randconfiguratie als omgevingen binnen die configuraties maken.
+De de configuratie IDs van de rand kan in Adobe worden gecreeerd [!DNL Experience Platform Launch] gebruikend het hulpmiddel van de randconfiguratie. Met dit gereedschap kunt u zowel de randconfiguratie als omgevingen binnen die configuraties maken.
 
 ![Edge Configuration Tool navigation](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
 >
->Het gereedschap voor randconfiguratie is beschikbaar voor klanten op de lijst van gewenste personen, ongeacht of ze [!DNL Launch] als tagbeheer gebruiken. Bovendien vereisen gebruikers ontwikkelmachtigingen in [!DNL Launch]. Zie het artikel [Gebruikersmachtigingen](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) in de [!DNL Launch] documentatie voor meer informatie.
+>Het gereedschap voor randconfiguratie is beschikbaar voor klanten op de lijst van gewenste personen, ongeacht of ze [!DNL Experience Platform Launch] als tagbeheer gebruiken. Bovendien vereisen gebruikers ontwikkelmachtigingen in [!DNL Experience Platform Launch]. Zie het artikel [Gebruikersmachtigingen](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) in de [!DNL Experience Platform Launch] documentatie voor meer informatie.
 
 U kunt een randconfiguratie tot stand brengen door op **[!UICONTROL Nieuwe Configuratie]** van de Rand in het hoogste juiste gebied van het scherm te klikken. Nadat u een naam en een beschrijving hebt opgegeven, wordt u gevraagd om de standaardinstellingen voor elke omgeving.
 
-### Standaardinstellingen voor omgeving
+### Standaardomgevingen
 
-Deze standaardinstellingen worden gebruikt om de eerste drie omgevingen met identieke instellingen te maken. Deze drie omgevingen zijn *dev*, *stage* en *prod*. Ze komen overeen met de drie standaardomgevingen in [!DNL Launch]. Wanneer u een [!DNL Launch] bibliotheek aan een ontwikkelomgeving bouwt, gebruikt de bibliotheek automatisch het dev milieu van uw configuratie. U kunt instellingen in afzonderlijke omgevingen naar wens bewerken.
+Deze standaardinstellingen worden gebruikt om de eerste drie omgevingen met identieke instellingen te maken. Deze drie omgevingen zijn *dev*, *stage* en *prod*. Ze komen overeen met de drie standaardomgevingen in [!DNL Experience Platform Launch]. Wanneer u een [!DNL Experience Platform Launch] bibliotheek aan een ontwikkelomgeving bouwt, gebruikt de bibliotheek automatisch het dev milieu van uw configuratie. U kunt instellingen in afzonderlijke omgevingen naar wens bewerken.
 
 De id die in de SDK als de id wordt gebruikt, `edgeConfigId` is een samengestelde id die de configuratie en de omgeving opgeeft. Als er geen omgeving is, wordt de productieomgeving gebruikt.
 
@@ -113,7 +115,7 @@ Staat SDK toe om segmentinformatie via Doelen [URL](https://docs.adobe.com/conte
 
 #### Adobe Analytics
 
-Bepaalt of gegevens naar Adobe Analytics worden verzonden. De extra details zijn in het Overzicht [van](../solution-specific/analytics/analytics-overview.md)Analytics.
+Bepaalt of gegevens naar Adobe Analytics worden verzonden. De extra details zijn in het Overzicht [van](../data-collection/adobe-analytics/analytics-overview.md)Analytics.
 
 ![Adobe Analytics Settings Block](../../assets/edge_configuration_aa.png)
 
