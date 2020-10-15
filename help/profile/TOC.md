@@ -2,29 +2,29 @@
 product: experience-platform
 audience: user
 user-guide-title: Handleiding voor realtime-klantprofiel
-user-guide-description: Merge customer data to create a unified view of customer interactions across channels.
+user-guide-description: De klantengegevens van de fusie om een verenigde mening van klanteninteractie over kanalen tot stand te brengen.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 4%
+source-wordcount: '96'
+ht-degree: 5%
 
 ---
 
 
 # [!DNL Real-time Customer Profile] {#profile}
 
-* [[!DNL Profile] overzicht](home.md)
+* [[!DNL Profile]  - overzicht](home.md)
 * [[!DNL Profile] guardrails](guardrails.md)
 * [!DNL Profile] Handleiding voor API-ontwikkelaars {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
    * [(Alpha) Berekende kenmerken](api/computed-attributes.md)
    * [Edge-prognoses](api/edge-projections.md)
-   * [Entiteiten ([!DNL Profile])](api/entities.md)
-   * [Exporttaken ([!DNL-profiel])](api/export-jobs.md)
+   * [Entiteiten ([!DNL Profile] toegang)](api/entities.md)
+   * [Exporttaken ([!DNL Profile] exporteren)](api/export-jobs.md)
    * [Beleid samenvoegen](api/merge-policies.md)
-   * [Voorvertoning voorbeeldstatus ([!DNL-profiel] voorvertoning)](api/preview-sample-status.md)
+   * [Voorvertoning voorbeeldstatus ([!DNL Profile] voorvertoning)](api/preview-sample-status.md)
    * [[!DNL Profile] systeemtaken (aanvragen verwijderen)](api/profile-system-jobs.md)
 * UI-hulplijnen {#ui}
    * [[!DNL Profile] gebruikershandleiding](ui/user-guide.md)
