@@ -4,7 +4,7 @@ solution: Experience Platform
 title: IAB TCF 2.0-ondersteuning in Real-time Customer Data Platform
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
+source-git-commit: b24c624df188be3cbe7f71dcdf8a23d2478c287c
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -42,7 +42,7 @@ Deze handleiding vereist ook een goed begrip van de volgende Adobe Experience Pl
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
 * [Klantprofiel](../../../profile/home.md)in realtime: Hefboomwerkingen [!DNL Identity Service] om gedetailleerde klantenprofielen van uw datasets in real time tot stand te brengen. [!DNL Real-time Customer Profile] trekt gegevens van het meer van Gegevens en handhaaft klantenprofielen in zijn eigen afzonderlijke gegevensopslag.
 * [Adobe Experience Platform Web SDK](../../../edge/home.md): Een JavaScript-bibliotheek aan de clientzijde waarmee u verschillende [!DNL Platform] services kunt integreren in uw klantgerichte website.
-   * [Opdrachten](../../../edge/fundamentals/supporting-consent.md)voor SDK-toestemming: Een gebruiksscenario-overzicht van de toestemmingsgerelateerde bevelen van SDK in deze gids wordt getoond die.
+   * [Opdrachten](../../../edge/consent/supporting-consent.md)voor SDK-toestemming: Een gebruiksscenario-overzicht van de toestemmingsgerelateerde bevelen van SDK in deze gids wordt getoond die.
 * [Adobe Experience Platform Segmentation Service](../../../segmentation/home.md): Hiermee kunt u [!DNL Real-time Customer Profile] gegevens opsplitsen in groepen van personen die vergelijkbare kenmerken delen en op vergelijkbare wijze reageren op marketingstrategieën.
 
 Naast de hierboven vermelde [!DNL Platform] diensten, zou u ook met [bestemmingen](../../destinations/destinations-overview.md) en hun gebruik in moeten vertrouwd zijn [!DNL Real-time CDP].
