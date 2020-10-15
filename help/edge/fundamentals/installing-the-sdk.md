@@ -5,9 +5,9 @@ description: Leer hoe te om SDK van het Web van het Experience Platform te insta
 seo-description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: 7aa0e654300f10db774794d66ece9d0d040cb2ba
+source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # De SDK installeren {#installing-the-sdk}
 
-De aangewezen manier om het Web SDK van Adobe Experience Platform te gebruiken is via [Lancering](http://launch.adobe.com/). Zoek naar `AEP Web SDK` in de catalogus van uitbreidingen, installeer dan de uitbreiding.
+De voorkeursmanier om de Adobe Experience Platform Web SDK te gebruiken is via [Adobe Experience Platform Launch](http://launch.adobe.com/). Zoek naar `AEP Web SDK` in de catalogus van uitbreidingen, installeer dan de uitbreiding.
 
 De AEP web SDK is ook beschikbaar op een CDN die u kunt gebruiken. U kunt naar dit bestand verwijzen of het downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in een geminificeerde en niet-geminiaterde versie. De niet-geminificeerde versie is handig voor foutopsporingsdoeleinden.
 
