@@ -8,12 +8,12 @@ translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
 source-wordcount: '491'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
-# [!DNL Destinations] overzicht {#overview}
+# [!DNL Destinations] - overzicht{#overview}
 
 ![Overzicht van doelen banner](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
