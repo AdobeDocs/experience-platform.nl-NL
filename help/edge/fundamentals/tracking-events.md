@@ -5,9 +5,9 @@ description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience
 seo-description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience Platforms te volgen
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 69ddfca041624123b03eb01d0f10a5bdb36cd119
+source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Het verzenden van gegevens die niet overeenkomen met een XDM-schema wordt moment
 
 ### Instelling `eventType`
 
-In een XDM-ervaringsgebeurtenis is er een optioneel `eventType` veld. Dit houdt het primaire gebeurtenistype voor het verslag. Door een gebeurtenistype in te stellen kunt u onderscheid maken tussen de verschillende gebeurtenissen die u wilt verzenden. XDM biedt verschillende vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken of u maakt altijd uw eigen aangepaste gebeurtenistypen voor uw gebruiksgevallen. Hieronder vindt u een lijst met alle vooraf gedefinieerde gebeurtenistypen die door XDM worden geleverd.
+In een XDM-ervaringsgebeurtenis is er een optioneel `eventType` veld. Dit houdt het primaire gebeurtenistype voor het verslag. Door een gebeurtenistype in te stellen kunt u onderscheid maken tussen de verschillende gebeurtenissen die u wilt verzenden. XDM biedt verschillende vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken of u maakt altijd uw eigen aangepaste gebeurtenistypen voor uw gebruiksgevallen. Hieronder vindt u een lijst met alle vooraf gedefinieerde gebeurtenistypen die door XDM worden geleverd. [Meer informatie in het XDM-openbare antwoord](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)
 
 
 | **Type gebeurtenis:** | **Definitie:** |
@@ -83,7 +83,7 @@ In een XDM-ervaringsgebeurtenis is er een optioneel `eventType` veld. Dit houdt 
 | delivery.feedback | Feedbackgebeurtenissen voor een levering. Voorbeeld van feedbackgebeurtenissen voor een e-maillevering |
 
 
-Deze gebeurtenistypen worden weergegeven in een vervolgkeuzelijst als u de extensie Starten gebruikt of u kunt ze altijd doorgeven zonder Starten. U kunt ze doorgeven als onderdeel van de `xdm` optie.
+Deze gebeurtenistypen worden weergegeven in een vervolgkeuzelijst als u de Adobe Experience Platform Launch-extensie gebruikt of u kunt ze altijd zonder Experience Platform Launch doorgeven. U kunt ze doorgeven als onderdeel van de `xdm` optie.
 
 
 ```javascript
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 ### Identiteitsgegevens toevoegen
 
-U kunt ook aangepaste identiteitsgegevens toevoegen aan de gebeurtenis. Zie Experience Cloud-id [ophalen](./identity.md)
+U kunt ook aangepaste identiteitsgegevens toevoegen aan de gebeurtenis. Zie Experience Cloud-id [ophalen](../identity/overview.md)
 
 ## De sendBeacon-API gebruiken
 
@@ -205,7 +205,7 @@ alloy("configure", {
 `xdm` velden worden in deze volgorde ingesteld:
 
 1. Waarden die als opties worden doorgegeven aan de gebeurtenisopdracht `alloy("sendEvent", { xdm: ... });`
-2. Automatisch verzamelde waarden.  (Zie [Automatische informatie](../reference/automatic-information.md).)
+2. Automatisch verzamelde waarden.  (Zie [Automatische informatie](../data-collection/automatic-information.md).)
 3. De wijzigingen die zijn aangebracht in de `onBeforeEventSend` callback.
 
 Als callback een uitzondering werpt, wordt de gebeurtenis nog verzonden; `onBeforeEventSend` echter, worden geen van de veranderingen die binnen callback werden aangebracht toegepast op de definitieve gebeurtenis.
