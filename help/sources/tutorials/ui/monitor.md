@@ -6,9 +6,9 @@ title: Accounts en gegevensstromen bewaken
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 2514c282d16a1b6ddb2232e46e6283ab2ab3d356
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 - [[!DNL Experience Data Model] (XDM) Systeem](../../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    - [Basisbeginselen van de schemacompositie](../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    - [Zelfstudie](../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-- [[!DNL Real-time klantprofiel]](../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ## Accounts controleren
 
@@ -54,6 +54,10 @@ Daarnaast kunt u bestaande accountgegevens bewerken en uw accountgegevens bijwer
 ![](../../images/tutorials/monitor/click-edit.png)
 
 Het modaal **[!UICONTROL dialoogvenster Accountdetails]** bewerken wordt weergegeven. Vanaf deze pagina kunt u uw bestaande accountgegevens en verificatiereferenties bijwerken.
+
+>[!NOTE]
+>
+> Het uitgeven van rekeningsdetails is beschikbaar op alle partijbronschakelaars.
 
 ![](../../images/tutorials/monitor/edit-account.png)
 
