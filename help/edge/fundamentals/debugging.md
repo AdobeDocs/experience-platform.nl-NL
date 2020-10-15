@@ -5,9 +5,9 @@ description: Leer hoe te om het zuiveren van SDK van het Web van het Experience 
 seo-description: Leer hoe te om het zuiveren van SDK van het Web van het Experience Platform van een knevel te voorzien
 keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: e21374eb51ec1d572f6a4973d33cadf9ae17969b
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
@@ -68,3 +68,17 @@ Wanneer het zuiveren door het `debug` bevel of de parameter van het vraagkoord w
 * Het einde van uw sessie
 * U voert het `debug` bevel in werking
 * U stelt de parameter voor de queryreeks opnieuw in
+
+## Bibliotheekgegevens ophalen
+
+Het is vaak handig om toegang te krijgen tot enkele details achter de bibliotheek die u op uw website hebt geladen. Hiervoor voert u de `getLibraryInfo` opdracht als volgt uit:
+
+```js
+alloy("getLibraryInfo").then(function(libraryInfo) {
+  console.log(libraryInfo.version);
+});
+```
+
+Het opgegeven `libraryInfo` object bevat momenteel de volgende eigenschappen:
+
+* `version` Dit is de versie van de geladen bibliotheek. Als de versie van de bibliotheek die wordt geladen bijvoorbeeld 1,0,0 was, zou de waarde `1.0.0`zijn.
