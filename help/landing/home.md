@@ -5,9 +5,9 @@ title: Adobe Experience Platform-overzicht
 topic: getting started
 description: Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. Experience Platform stelt organisaties in staat om klantgegevens en -inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '466'
 ht-degree: 4%
 
 ---
@@ -44,7 +44,7 @@ U kunt [!DNL Platform] snel en eenvoudig aan de slag door stapsgewijze zelfstudi
 * [**API-basisbeginselen**](api-fundamentals.md)\
    Leer de basisbeginselen van het werken met [!DNL Platform] API&#39;s.
 
-* [**API-referentie**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)\
+* [**API-naslagdocumenten**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)\
    Ontdek API&#39; [!DNL Experience Platform] s, waaronder headers, parameters, voorbeeldaanvragen en reacties.<br/>*Deze documenten worden gehost op Adobe I/O.*
 
 * [**Verklarende woordenlijst**](glossary.md)\
