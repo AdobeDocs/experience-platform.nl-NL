@@ -5,9 +5,9 @@ title: E-mailmarketingdoelen maken
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
+source-git-commit: 65ad4d09d95cdd52e75221e6646a684bab3c277d
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,9 @@ Als u verkiest gebruik het gebruikersinterface in Adobe aan Echt - tijd CDP om e
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] is het registratiesysteem voor gegevenslocatie en -lijn binnen [!DNL Experience Platform].
-* [[!DNL-sandboxen]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om gegevens aan e-mail marketing bestemmingen in Adobe in real time CDP te activeren.
 
@@ -210,7 +210,7 @@ Een geslaagde reactie bevat de unieke id (`id`) van de basisverbinding. Sla deze
 }
 ```
 
-### Verbinding maken met uw [!DNL Experience Platform] gegevens
+### Verbinding maken met uw [!DNL Experience Platform] gegevens {#connect-to-platform-data}
 
 **API-indeling**
 
@@ -218,7 +218,7 @@ Een geslaagde reactie bevat de unieke id (`id`) van de basisverbinding. Sla deze
 POST /sourceConnections
 ```
 
-**Verzoek**
+**Request**
 
 <!--
 
