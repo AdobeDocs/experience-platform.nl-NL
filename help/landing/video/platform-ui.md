@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32792.jpg
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 86d6476877eb7a0413658e476802a1cd8905dcc3
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
@@ -20,5 +20,10 @@ ht-degree: 0%
 # Rondleiding gebruikersinterface Experience Platform
 
 Deze video biedt een snelle rondleiding van de gebruikersinterface van Adobe Experience Platform (UI), met inbegrip van het tonen van u hoe te om aan Experience Platform van Experience Cloud te navigeren, met de homepage in wisselwerking te staan, schakelaarzandbakken, en hoe te om diverse navigatie elementen binnen UI te gebruiken.
+
+>[!NOTE]
+>
+>De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd.
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
