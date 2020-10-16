@@ -5,9 +5,9 @@ title: Handleiding Adobe Experience Platform UI
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 84f1f840e15cb4487807c13131d0787772fa063a
+source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1597'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ De navigatie op de linkerkant van het scherm maakt een lijst van alle verschille
 
 In de sectie **[!UICONTROL Home]** kunt u terugkeren naar de startpagina van de gebruikersinterface van het Platform.
 
-In de sectie **[!UICONTROL Workflows]** wordt een lijst weergegeven met uit meerdere stappen bestaande workflows voor het uitvoeren van bewerkingen binnen het Platform.
+In de sectie **[!UICONTROL Workflows]** wordt een lijst weergegeven met uit meerdere stappen bestaande workflows voor het uitvoeren van bewerkingen binnen het Platform. Meer informatie over workflows vindt u in het overzicht [van](./workflows.md)workflows.
 
 ### [!UICONTROL Verbindingen]
 
