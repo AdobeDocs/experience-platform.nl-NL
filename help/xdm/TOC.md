@@ -5,10 +5,10 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding gegevensmodel (XDM)
 user-guide-description: Gebruik XDM-klassen (Experience Data Model) en -mixen om ervaringsgegevens te standaardiseren.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 2%
+source-wordcount: '194'
+ht-degree: 3%
 
 ---
 
@@ -16,12 +16,43 @@ ht-degree: 2%
 # XDM-systeem (Experience Data Model) {#xdm}
 
 * [XDM System, overzicht](home.md)
-* XDM-schema&#39;s {#schema}
+* Schemas {#schema}
    * [Basisbeginselen van de schemacompositie](schema/composition.md)
    * [Beperkingen voor XDM-veldtypen](schema/field-constraints.md)
    * [XDM-veldwoordenboek](schema/field-dictionary.md)
    * Gebruiksgevallen voor schema {#use-cases}
       * [Toevoeging privacy, mix](schema/privacy-consent.md)
+* Klassen {#classes}
+   * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
+   * [XDM ExperienceEvent](./classes/experienceevent.md)
+* Mixins {#mixins}
+   * Profielmixen {#profile}
+      * [IdentityMap](./mixins/profile/identitymap.md)
+      * [Details van profielpersoon](./mixins/profile/person-details.md)
+      * [Persoonlijke gegevens registreren](./mixins/profile/personal-details.md)
+      * [Profielsegmentatie](./mixins/profile/segmentation.md)
+      * [Profielwerkdetails](./mixins/profile/work-details.md)
+   * Gebeurtenismixen {#event}
+      * [ExperienceEvent EndUserIDs](./mixins/event/enduserids.md)
+      * [Omgevingsdetails van ExperienceEvent](./mixins/event/environment-details.md)
+* Datatypen {#data-types}
+   * [Beacon](./data-types/beacon.md)
+   * [Browserdetails](./data-types/browser-details.md)
+   * [Apparaat](./data-types/device.md)
+   * [E-mailadres](./data-types/email-address.md)
+   * [Omgeving](./data-types/environment.md)
+   * [Geo](./data-types/geo.md)
+   * [Geo Circle](./data-types/geo-circle.md)
+   * [Geo-coördinaten](./data-types/geo-coordinates.md)
+   * [Gegevens over geointeractie](./data-types/geo-interaction-details.md)
+   * [Geo-vorm](./data-types/geo-shape.md)
+   * [Identiteit](./data-types/identity.md)
+   * [Naam persoon](./data-types/person-name.md)
+   * [Telefoonnummer](./data-types/phone-number.md)
+   * [Context plaatsen](./data-types/place-context.md)
+   * [Details van POI](./data-types/poi-details.md)
+   * [POI-interactie](./data-types/poi-interaction.md)
+   * [Postadres](./data-types/postal-address.md)
 * Schema-register-API {#api}
    * [Aan de slag](api/getting-started.md)
    * [Bronnen weergeven](api/list-resources.md)
