@@ -5,9 +5,9 @@ title: Basisbeginselen van de schemacompositie
 topic: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
 workflow-type: tm+mt
-source-wordcount: '2839'
+source-wordcount: '2834'
 ht-degree: 0%
 
 ---
@@ -62,9 +62,9 @@ Zowel de verslagen als de tijdreeksschema&#39;s bevatten een kaart van identitei
 
 Schema&#39;s worden gebruikt om gegevens in te voeren [!DNL Experience Platform]. Deze gegevens kunnen over de veelvoudige diensten worden gebruikt om één enkele, verenigde mening van een individuele entiteit tot stand te brengen. Daarom is het belangrijk wanneer het denken over schema&#39;s om over klantenidentiteiten te denken en welke gebieden kunnen worden gebruikt om een onderwerp te identificeren ongeacht waar de gegevens uit kunnen komen.
 
-Om dit proces te helpen, kunnen de belangrijkste gebieden binnen uw schema&#39;s als identiteiten worden gemerkt. Bij gegevensinvoer worden de gegevens in die velden ingevoegd in de &quot;[!UICONTROL Identiteitsgrafiek]&quot; voor die persoon. De grafiekgegevens zijn dan toegankelijk voor [[!DNL Real-time klantprofiel]](../../profile/home.md) en andere [!DNL Experience Platform] services voor een op één lijn geplaatste weergave van elke afzonderlijke klant.
+Om dit proces te helpen, kunnen de belangrijkste gebieden binnen uw schema&#39;s als identiteiten worden gemerkt. Bij gegevensinvoer worden de gegevens in die velden ingevoegd in de &quot;[!UICONTROL Identiteitsgrafiek]&quot; voor die persoon. De grafiekgegevens kunnen dan door [[!DNL Real-time Customer Profile]](../../profile/home.md) en andere [!DNL Experience Platform] diensten worden betreden om een geneutraliseerde mening van elke individuele klant te verstrekken.
 
-Velden die algemeen als &quot;[!UICONTROL Identiteit]&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html), CRM-id of andere unieke id-velden. U zou ook om het even welke unieke herkenningstekens moeten overwegen specifiek voor uw organisatie, aangezien zij ook goede &quot;[!UICONTROL Identiteit]&quot;gebieden kunnen zijn.
+Velden die algemeen als &quot;[!UICONTROL Identiteit]&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html)CRM-id of andere unieke id-velden. U zou ook om het even welke unieke herkenningstekens moeten overwegen specifiek voor uw organisatie, aangezien zij ook goede &quot;[!UICONTROL Identiteit]&quot;gebieden kunnen zijn.
 
 Het is belangrijk om over klantenidentiteiten tijdens de schema planningsfase te denken helpen ervoor zorgen de gegevens worden samengebracht om het meest robuuste profiel mogelijk te bouwen. Zie het overzicht over [Adobe Experience Platform Identity Service](../../identity-service/home.md) voor meer informatie over hoe identiteitsgegevens u kunnen helpen uw klanten digitale ervaringen te bieden.
 
@@ -123,7 +123,7 @@ Aangezien het handhaven van achterwaartse verenigbaarheid essentieel voor schema
 
 ### Schema&#39;s en gegevensinvoer
 
-Om gegevens in te voeren in [!DNL Experience Platform], moet een dataset eerst worden gecreeerd. Datasets zijn de bouwstenen voor gegevenstransformatie en het volgen voor [[!DNL de Dienst van de Catalogus]](../../catalog/home.md), en vertegenwoordigen over het algemeen lijsten of dossiers die ingebedde gegevens bevatten. Alle datasets zijn gebaseerd op bestaande schema&#39;s XDM, die beperkingen voor wat verstrekken de ingebedde gegevens zouden moeten bevatten en hoe het zou moeten worden gestructureerd. Zie het overzicht over [Adobe Experience Platform Data Ingestie](../../ingestion/home.md) voor meer informatie.
+Om gegevens in te voeren in [!DNL Experience Platform], moet een dataset eerst worden gecreeerd. Datasets zijn de bouwstenen voor gegevenstransformatie en -tracking voor [[!DNL Catalog Service]](../../catalog/home.md), en vertegenwoordigen over het algemeen tabellen of bestanden die ingesloten gegevens bevatten. Alle datasets zijn gebaseerd op bestaande schema&#39;s XDM, die beperkingen voor wat verstrekken de ingebedde gegevens zouden moeten bevatten en hoe het zou moeten worden gestructureerd. Zie het overzicht over [Adobe Experience Platform Data Ingestie](../../ingestion/home.md) voor meer informatie.
 
 ## Bouwstenen van een schema
 
@@ -194,9 +194,9 @@ De geldige waaiers van deze scalaire types kunnen verder tot bepaalde patronen, 
 
 Sommige gegevensverrichtingen die door stroomafwaartse diensten en toepassingen worden gebruikt dwingen beperkingen op specifieke gebiedstypes af. De betrokken diensten omvatten, maar zijn niet beperkt tot:
 
-* [[!DNL Real-time klantprofiel]](../../profile/home.md)
-* [[!DNL-identiteitsservice]](../../identity-service/home.md)
-* [[!DNL-segmentatie]](../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile]](../../profile/home.md)
+* [[!DNL Identity Service]](../../identity-service/home.md)
+* [[!DNL Segmentation]](../../segmentation/home.md)
 * [[!DNL Query Service]](../../query-service/home.md)
 * [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
 
@@ -238,7 +238,12 @@ Alle gegevensbestanden die in worden opgenomen [!DNL Experience Platform] moeten
 
 ## Volgende stappen
 
-Nu u de grondbeginselen van schemacompositie begrijpt, bent u bereid beginnen bouwend schema&#39;s gebruikend [!DNL Schema Registry].
+Nu u de grondbeginselen van schemacompositie begrijpt, bent u bereid beginnen het onderzoeken en het bouwen van schema&#39;s gebruikend [!DNL Schema Registry].
+
+Zie de volgende referentiedocumentatie voor een overzicht van de structuur van de twee belangrijkste XDM-klassen en hun algemeen gebruikte compatibele mixen:
+
+* [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
+* [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
 Het [!DNL Schema Registry] wordt gebruikt om toegang te krijgen tot het [!DNL Schema Library] binnen Adobe Experience Platform en biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen. Het [!DNL Schema Library] bevat de middelen van de Industrie die door Adobe worden bepaald, de middelen van de Leverancier door [!DNL Experience Platform] partners, en klassen, mengen, gegevenstypes, en schema&#39;s worden bepaald die door leden van uw organisatie zijn samengesteld die.
 
