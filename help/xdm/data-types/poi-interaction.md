@@ -5,7 +5,7 @@ title: Gegevenstype van interactie van het punt van belang
 topic: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype Point of Interest Interaction.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: 032adc72db7f094b268f14e8f7d48810830a84e4
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `poiDetail` | [!UICONTROL Details van het belangenpunt](./poi-details.md) | Beschrijft de details van POI die de gebeurtenis veroorzaakte. |
+| `poiDetail` | [[!UICONTROL Details van het belangenpunt]](./poi-details.md) | Beschrijft de details van POI die de gebeurtenis veroorzaakte. |
 | `poiEntries` | Object | Beschrijft het aantal tijden een persoon POI is ingegaan. Bevat twee eigenschappen: <ul><li>`id`: Een unieke id voor de maat.</li><li>`value`: De kwantificeerbare waarde van de maatregel.</li></ul> |
 | `poiExits` | Object | Beschrijft het aantal tijden een persoon POI heeft verlaten. Bevat twee eigenschappen: <ul><li>`id`: Een unieke id voor de maat.</li><li>`value`: De kwantificeerbare waarde van de maatregel.</li></ul> |
 
