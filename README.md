@@ -1,18 +1,25 @@
 ---
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: e647db615371f5a153e180e5a0d06fd7439a45c6
+workflow-type: tm+mt
 translation-type: tm+mt
+source-wordcount: '643'
+ht-degree: 16%
 
 ---
 # Inhoud bijdragen
 
-| Productie | Werkgebied |
+| EXL-PR | EXL | Voorvertoning | Activeren | Gepubliceerd | Help |
+|--- |--- |--- |--- |--- |--- |
+| [![Status samenstellen](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/lastBuild/) | [![Status samenstellen](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/lastBuild) | [Voorbeeld-URL](https://experienceleague.corp.adobe.com/docs/experience-platform/using/home.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/experience-platform/build/) | [Live URL](https://experienceleague.adobe.com/docs/experience-platform/using/home.html?lang=en) | [Ontwerphandleiding](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
+
+| Productie | Stage |
 |---|---|
 | [![Status samenstellen](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/lastBuild) | [![Status samenstellen](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/lastBuild) |
 | [Uitvoerpod](https://docs.adobe.com/content/help/en/experience-platform/landing/home.html) | [Uitvoerinstelling](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/landing/home.html) |
 
-Wij verwelkomen de bijdragen van onze gemeenschap en medewerkers van Adobe buiten de documentatieteams.
+Wij verwelkomen de bijdragen van onze gemeenschap en Adobe werknemers buiten de documentatieteams.
 
-## Adobe Open Source Code of Conduct
+## Adobe Open-Source-gedragscode
 
 Dit project heeft de [Adobe-gedragscode voor open source](code-of-conduct.md) of de [.NET Foundation-gedragscode](https://dotnetfoundation.org/code-of-conduct) overgenomen. Zie het artikel [Bijdragen](contributing.md) voor meer informatie.
 
@@ -26,9 +33,9 @@ Hoe u een bijdrage levert, hangt af van wie u bent en van het soort veranderinge
 
 Om een verzoek voor te leggen, klik het **Logboek een kwestie** verbinding in een artikel, dat een kwestie in GitHub opent. Geef een titel en een beschrijving op en klik op **Nieuwe uitgave** verzenden.
 
-Om minder belangrijke updates te verzoeken, klik **geef deze paginakoppeling** in een artikel uit, dat het bronartikel in GitHub opent. Gebruik GitHub UI om uw updates te maken. Zie de algemene handleiding voor [Adobe Docs-medewerkers](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) voor meer informatie.
+Om minder belangrijke updates te verzoeken, klik **geef deze paginakoppeling** in een artikel uit, dat het bronartikel in GitHub opent. Gebruik GitHub UI om uw updates te maken. Raadpleeg de algemene handleiding voor [Adobe Docs-contribuanten](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) voor meer informatie.
 
-Kleine correcties of verduidelijkingen die u voor documentatie en codevoorbeelden in dit antwoord opgeeft, worden behandeld in de gebruiksvoorwaarden van Adobe.
+Kleine correcties of verduidelijkingen die u ter documentatie en codevoorbeelden in dit antwoord aanbrengt, worden behandeld in de gebruiksvoorwaarden van de Adobe.
 
 ### Belangrijke wijzigingen of nieuwe artikelen van leden van de gemeenschap
 
@@ -40,13 +47,13 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Belangrijke wijzigingen of nieuwe artikelen van Adobe-medewerkers
 
-Als u een technisch schrijver, programmamanager of ontwikkelaar van het productteam bent voor een Adobe Experience Cloud-oplossing en het uw taak is om een bijdrage te leveren aan technische artikelen of om technische artikelen te schrijven, moet u de privéopslagruimte gebruiken op `https://git.corp.adobe.com/AdobeDocs`. Zie de [interne handleiding](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) voor samenwerking voor meer informatie.
+Als u een technisch schrijver, programmamanager, of ontwikkelaar van het productteam voor een oplossing van Adobe Experience Cloud bent, en het uw baan is om aan of auteur technische artikelen bij te dragen, zou u de privé bewaarplaats bij moeten gebruiken `https://git.corp.adobe.com/AdobeDocs`. Zie de [interne handleiding](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) voor samenwerking voor meer informatie.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
-## Contact opnemen met het documentatieteam van het Experience Platform
+## Verbinding maken met het documentatieteam voor Experience Platforms
 
-Zoals hierboven vermeld, kunnen leden van de Adobe-gemeenschap een probleem indienen dat wordt toegewezen aan de juiste schrijver. Als u Adobe-medewerker bent, kunt u een probleem indienen of rechtstreeks contact opnemen met het documentatieteam van het Experience Platform. Raadpleeg de documentatiewiki voor het [Adobe Experience Platform voor meer informatie over een bepaald platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+Zoals hierboven vermeld, kunnen leden van de Adobe-gemeenschap een kwestie indienen die aan de juiste schrijver zal worden toegewezen. Als u medewerker van de Adobe bent, kunt u een kwestie voorleggen of het team van de Documentatie van het Experience Platform direct contacteren. Om de lood schrijver voor een specifiek gebied van het Platform te vinden, zie de Documentatie van [Adobe Experience Platform wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Gereedschappen en instellen
 
