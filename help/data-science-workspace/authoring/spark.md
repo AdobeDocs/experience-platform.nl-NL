@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Het volgende document bevat voorbeelden op hoe te om tot gegevens toegang te hebben gebruikend Vonk voor gebruik in de Werkruimte van de Wetenschap van Gegevens.
 translation-type: tm+mt
-source-git-commit: fcb4088ecac76d10b0cb69b04ad55167f5cdac3e
+source-git-commit: e1035f3d1ad225a0892c5f97ca51618cd6b47412
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -38,7 +38,6 @@ Class Helper {
 
    def load_dataset(configProperties: ConfigProperties, sparkSession: SparkSession, taskId: String): DataFrame = {
             // Read the configs
-            val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
             val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
             val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
             val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
@@ -60,7 +59,6 @@ Een voorbeeld van het lezen van een dataset in interactieve wijze kan hieronder 
 
 ```scala
   // Read the configs
-    val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
     val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
     val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
     val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
@@ -71,7 +69,6 @@ Een voorbeeld van het lezen van een dataset in interactieve wijze kan hieronder 
     // Load the dataset
     var df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
       .option(QSOption.userToken, userToken)
-      .option(QSOption.serviceToken, serviceToken)
       .option(QSOption.imsOrg, orgId)
       .option(QSOption.apiKey, apiKey)
       .option(QSOption.mode, "interactive")
@@ -88,7 +85,6 @@ Op dezelfde manier kan een voorbeeld van het lezen van een dataset op partijwijz
 ```scala
 val df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
       .option(QSOption.userToken, userToken)
-      .option(QSOption.serviceToken, serviceToken)
       .option(QSOption.imsOrg, orgId)
       .option(QSOption.apiKey, apiKey)
       .option(QSOption.mode, "batch")
@@ -158,7 +154,6 @@ df = df.limit(100)
 Gebruikend uw `configProperties` afbeelding, kunt u aan een dataset in Experience Platform schrijven gebruikend `QSOption`.
 
 ```scala
-val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
 val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
 val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
 val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
@@ -166,7 +161,6 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
 
     df.write.format(PLATFORM_SDK_PQS_PACKAGE)
       .option(QSOption.userToken, userToken)
-      .option(QSOption.serviceToken, serviceToken)
       .option(QSOption.imsOrg, orgId)
       .option(QSOption.apiKey, apiKey)
       .option(QSOption.datasetId, scoringResultsDataSetId)
