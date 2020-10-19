@@ -5,9 +5,9 @@ title: XDM-systeem (Experience Data Model)
 topic: overview
 description: 'Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema''s voor het beheer van de klantenervaring te bepalen. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1639'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Dit document biedt een overzicht van de rol van XDM System in [!DNL Experience P
 
 ## XDM-schema&#39;s
 
-[!DNL Experience Platform] gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het gemakkelijker om betekenis te behouden en zo waarde te verkrijgen van gegevens.
+[!DNL Experience Platform] gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens.
 
 Voordat gegevens kunnen worden opgenomen in [!DNL Platform], moet een schema zijn samengesteld om de gegevensstructuur te beschrijven en om beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. Schema&#39;s bestaan uit een basisklasse en nul of meer mixen.
 
@@ -48,7 +48,7 @@ Alle XDM schema&#39;s beschrijven gegevens die als verslag of tijdreeks kunnen w
 
 Hoewel u uw eigen klassen in de map kunt definiëren, wordt u aangeraden de voorkeursklassen [!DNL Schema Registry]en **[!DNL XDM Individual Profile]** **[!DNL XDM ExperienceEvent]** voor record- en tijdreeksgegevens te gebruiken. Deze klassen worden hieronder gedetailleerder beschreven.
 
-### [!DNL XDM Individual Profile]
+### [!DNL XDM Individual Profile] (#xdm-individual-profile)
 
 [!DNL XDM Individual Profile] is een op records gebaseerde klasse die een unieke representatie vormt van de kenmerken van zowel geïdentificeerde als gedeeltelijk geïdentificeerde onderwerpen. De profielen die hoogst geïdentificeerd zijn kunnen voor persoonlijke mededelingen of gerichte overeenkomsten worden gebruikt, en kunnen gedetailleerde persoonlijke informatie zoals naam, geslacht, geboortedatum, plaats, en contactinformatie met inbegrip van telefoonaantallen en e-mailadressen bevatten.
 
