@@ -8,7 +8,7 @@ description: Deze zelfstudie behandelt de stappen voor het maken van een schema 
 translation-type: tm+mt
 source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
 workflow-type: tm+mt
-source-wordcount: '3835'
+source-wordcount: '3819'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Deze zelfstudie vereist een goed begrip van de verschillende aspecten van Adobe 
 
 * [[!DNL Experience Data Model (XDM)]](../home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Een overzicht van schema&#39;s XDM en hun bouwstenen, met inbegrip van klassen, mengen, gegevenstypes, en gebieden.
-* [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ## Door bestaande schema&#39;s in de [!UICONTROL werkruimte Schema] &#39;s bladeren {#browse}
 
@@ -274,11 +274,11 @@ Nadat u de wijziging hebt toegepast, wordt op het pictogram voor `loyaltyId` een
 
 ![](../images/tutorials/create-schema/identity-applied.png)
 
-Alle gegevens die in het `loyaltyId` veld worden ingevoerd, worden nu gebruikt om die persoon te identificeren en één weergave van die klant samen te voegen. Raadpleeg de documentatie bij [!DNL Experience Platform][!DNL Identity Service] [voor meer informatie over het werken met identiteiten in](../../identity-service/home.md) .
+Alle gegevens die in het `loyaltyId` veld worden ingevoerd, worden nu gebruikt om die persoon te identificeren en één weergave van die klant samen te voegen. Raadpleeg de [!DNL Experience Platform]documentatie voor meer informatie over het werken met identiteiten in [[!DNL Identity Service]](../../identity-service/home.md) .
 
 ## Het schema inschakelen voor gebruik in [!DNL Real-time Customer Profile] {#profile}
 
-[[!DNL Real-time Klantprofiel]](../../profile/home.md) gebruikt identiteitsgegevens in [!DNL Experience Platform] om een holistische weergave van elke individuele klant te bieden. De service bouwt robuuste, 360°-profielen van klantkenmerken en accounts met tijdstempels van elke interactie die klanten hebben gehad in elk systeem dat is geïntegreerd met [!DNL Experience Platform].
+[[!DNL Real-time Customer Profile]](../../profile/home.md) Gebruikt identiteitsgegevens in [!DNL Experience Platform] om een holistische mening van elke individuele klant te verstrekken. De service bouwt robuuste, 360°-profielen van klantkenmerken en accounts met tijdstempels van elke interactie die klanten hebben gehad in elk systeem dat is geïntegreerd met [!DNL Experience Platform].
 
 Als u wilt dat een schema kan worden gebruikt met, moet er een primaire identiteit zijn gedefinieerd. [!DNL Real-time Customer Profile] Er wordt een foutbericht weergegeven als u een schema wilt inschakelen zonder eerst een primaire identiteit te definiëren.
 
