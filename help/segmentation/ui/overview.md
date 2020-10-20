@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;realized;existing;exiting;
 solution: Experience Platform
 title: Gebruikershandleiding voor segmentatieservice
 topic: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 1aff9329e1ae97caa34a205bbfbbc6f51b54b8fb
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 Het werken met segmentdefinities vereist een begrip van de diverse [!DNL Experience Platform] diensten betrokken bij segmentatie. Lees de documentatie voor de volgende services voordat u deze gebruikershandleiding leest:
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] staat u toe om gegevens te verdelen in [!DNL Experience Platform] die op individuen (zoals klanten, vooruitzichten, gebruikers, of organisaties) betrekking hebben in kleinere groepen.
-- [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Maakt het mogelijk om klantprofielen te maken door identiteiten te overbruggen van verschillende gegevensbronnen waarin ze worden opgenomen [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
@@ -94,7 +94,7 @@ Bovendien kunt u het segment bewerken. Als u Segment **** bewerken selecteert, k
 
 Het **[!UICONTROL totale publiek in segmentsectie]** toont het totale aantal profielen dat voor het segment kwalificeert.
 
-Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de samplegegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het produceren van segmentramingen kan in de sectie [van de de](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) schattingsproductie van de sectievan de segmentverwezenlijking worden gevonden.
+Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de voorbeeldgegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het produceren van segmentramingen kan in de sectie [van de de](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) schattingsproductie van de sectievan de segmentverwezenlijking worden gevonden.
 
 ### Geactiveerde doelen
 
