@@ -5,7 +5,7 @@ description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met 
 seo-description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met het Web SDK van het Experience Platform te verzenden
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: ab1618a9d8c6cc60407d301dad03983ce432bbbe
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Het verbindingstype kan één van drie waarden zijn:
 
 ## Automatisch koppelingen bijhouden {#automaticLinkTracking}
 
-Standaard legt de SDK van het Web vast, [etiketteert](#labelingLinks), en [registreert](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) klikt op [kwalificerende](#qualifyingLinks) verbindingsmarkeringen. Klikken worden vastgelegd met een [vastleggen](https://www.w3.org/TR/uievents/#capture-phase) , klik op de gebeurtenislistener die aan het document is gekoppeld.
+Standaard legt de SDK van het Web vast, [etiketteert](#labelingLinks), en [registreert](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) klikt op [kwalificerende](#qualifyingLinks) verbindingsmarkeringen. Klikken worden vastgelegd met een [vastleggen](https://www.w3.org/TR/uievents/#capture-phase) , klik op de gebeurtenislistener die aan het document is gekoppeld.
 
 Het onbruikbaar maken van automatische verbinding het volgen kan worden gedaan door SDK van het Web te [vormen](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) .
 
