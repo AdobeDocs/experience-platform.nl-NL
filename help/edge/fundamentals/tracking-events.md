@@ -5,7 +5,7 @@ description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience
 seo-description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience Platforms te volgen
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 14b10aeeb382e9d638cf9fdf62deddbee3e72600
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Het verzenden van gegevens die niet overeenkomen met een XDM-schema wordt moment
 
 ### Instelling `eventType`
 
-In een XDM-ervaringsgebeurtenis is er een optioneel `eventType` veld. Dit houdt het primaire gebeurtenistype voor het verslag. Door een gebeurtenistype in te stellen kunt u onderscheid maken tussen de verschillende gebeurtenissen die u wilt verzenden. XDM biedt verschillende vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken of u maakt altijd uw eigen aangepaste gebeurtenistypen voor uw gebruiksgevallen. Hieronder vindt u een lijst met alle vooraf gedefinieerde gebeurtenistypen die door XDM worden geleverd. [Meer informatie in het XDM-openbare antwoord](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)
+In een XDM-ervaringsgebeurtenis is er een optioneel `eventType` veld. Dit houdt het primaire gebeurtenistype voor het verslag. Door een gebeurtenistype in te stellen kunt u onderscheid maken tussen de verschillende gebeurtenissen die u wilt verzenden. XDM biedt verschillende vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken of u maakt altijd uw eigen aangepaste gebeurtenistypen voor uw gebruiksgevallen. Hieronder vindt u een lijst met alle vooraf gedefinieerde gebeurtenistypen die door XDM worden geleverd. [Lees meer in het openbare XDM-rapport](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
 
 
 | **Type gebeurtenis:** | **Definitie:** |
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 ### Identiteitsgegevens toevoegen
 
-U kunt ook aangepaste identiteitsgegevens toevoegen aan de gebeurtenis. Zie Experience Cloud-id [ophalen](../identity/overview.md)
+U kunt ook aangepaste identiteitsgegevens toevoegen aan de gebeurtenis. Zie Experience Cloud-id [ophalen](../identity/overview.md).
 
 ## De sendBeacon-API gebruiken
 
