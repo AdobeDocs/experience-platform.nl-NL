@@ -5,7 +5,7 @@ description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 4%
@@ -85,7 +85,7 @@ Uw toegewezen [!DNL Experience Cloud] organisatie-id.  Wanneer het vormen van ve
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | `true` |
 
-Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch moeten worden verzameld. Voor kliks die als verbinding kwalificeren klikt, worden de volgende gegevens van de Interactie [van het](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) Web verzameld:
+Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch moeten worden verzameld. Voor kliks die als verbinding kwalificeren klikt, worden de volgende gegevens van de Interactie [van het](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) Web verzameld:
 
 | **Eigenschap** | **Beschrijving** |
 | ------------ | ----------------------------------- |
