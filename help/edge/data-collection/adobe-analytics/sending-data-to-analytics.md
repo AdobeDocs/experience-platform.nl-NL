@@ -5,7 +5,7 @@ description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met 
 seo-description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met het Web SDK van het Experience Platform te verzenden
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: 9e1ad05285b27a9fc8b56db903609add3fef144e
+source-git-commit: c9d777f4350f0b039608c4f9b01d5206994e2572
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Gegevens verzenden naar Adobe Analytics
 
-Terwijl er in het verleden verschillende functies waren om tussen een paginamening en een verbinding (bijvoorbeeld, `s.t(), s.tl()`) te onderscheiden, in het Web SDK is er enkel het `sendEvent` bevel. De gegevens die u met een gebeurtenis verzendt, bepalen of het een paginaweergave of een koppeling moet zijn. [Meer informatie over het bijhouden van koppelingen](../track-links.md)
+Terwijl er in het verleden verschillende functies waren om tussen een paginamening en een verbinding (bijvoorbeeld, `s.t(), s.tl()`) te onderscheiden, in het Web SDK is er enkel het `sendEvent` bevel. De gegevens die u met een gebeurtenis verzendt, bepalen of het een paginaweergave of een koppeling moet zijn. [Meer weten over het bijhouden van koppelingen](../track-links.md)?
 
 ## Een paginaweergave verzenden
 
