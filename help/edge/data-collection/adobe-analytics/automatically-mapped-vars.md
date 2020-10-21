@@ -5,7 +5,7 @@ description: Leer welke Variabelen automatisch in Adobe Analytics met het Web SD
 seo-description: Leer welke Variabelen automatisch in Adobe Analytics met het Web SDK van het Experience Platform worden toegewezen
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 Hieronder ziet u een lijst met variabelen die de Adobe Experience Platform [!DNL Edge Network] automatisch in kaart brengt [!DNL Analytics].
 
 | XDM-veldpad | [!DNL Analytics Query String] / HTTP-koptekst | Beschrijving |
-| ---------- | ------------------------- | -------- |
+| ---------- | ------------------------- | ----------------------------------------- |
 | `commerce.order.purchaseID` | `pi` | PURCHASEID-toewijzing voor queryparameter AppMeturement. |
 | `commerce.order.currencyCode` | `cc` | Toewijzing van de query voor de parameter CURRENCY voor AppMeasurement. |
 | `commerce.purchases.value` | `events` | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_PURCHASE, met behulp van scheidingsteken `,`. |
