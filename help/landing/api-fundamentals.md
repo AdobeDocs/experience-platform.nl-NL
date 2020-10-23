@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Basisprincipes van Adobe Experience Platform API
 topic: getting started
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: fac4b3d02a6e58a9d2c298f9b849fa7345e4fa93
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '483'
 ht-degree: 2%
 
 ---
@@ -22,63 +22,74 @@ JSON Pointer is een gestandaardiseerde tekenreekssyntaxis ([RFC 6901](https://to
 
 ### Voorbeeld-JSON-schemaobject
 
+De volgende JSON vertegenwoordigt een vereenvoudigd XDM-schema waarvan met behulp van JSON-aanwijzertekenreeksen naar velden kan worden verwezen. Merk op dat alle gebieden die gebruikend douanemixins (zoals `loyaltyLevel`) zijn toegevoegd namespaced onder een `_{TENANT_ID}` voorwerp zijn, terwijl de gebieden die gebruikend kernmengen (zoals `fullName`) zijn toegevoegd niet zijn.
+
 ```json
 {
-    "type": "object",
-    "title": "Loyalty Member Details",
-    "meta:intendedToExtend": [
-        "https://ns.adobe.com/xdm/context/profile"
-    ],
-    "description": "Loyalty Program Mixin.",
-    "definitions": {
-        "loyalty": {
-            "properties": {
-                "_{TENANT_ID}": {
-                    "type": "object",
-                    "properties": {
-                        "loyaltyId": {
-                            "title": "Loyalty Identifier",
-                            "type": "string",
-                            "description": "Loyalty Identifier.",
-                            "meta:xdmType": "string"
-                        },
-                        "loyaltyLevel": {
-                            "title": "Loyalty Level",
-                            "description": "The current loyalty program level to which the individual member belongs.",
-                            "type": "string",
-                            "enum": [
-                                "platinum",
-                                "gold",
-                                "silver",
-                                "bronze"
-                            ],
-                            "meta:enum": {
-                                "platinum": "Platinum",
-                                "gold": "Gold",
-                                "silver": "Silver",
-                                "bronze": "Bronze"
-                            },
-                            "meta:xdmType": "string"
-                        }
-                    },
-                    "meta:xdmType": "object"
-                }
-            },
-            "type": "object",
-            "meta:xdmType": "object"
+  "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/85a4bdaa168b01bf44384e049fbd3d2e9b2ffaca440d35b9",
+  "meta:altId": "_{TENANT_ID}.schemas.85a4bdaa168b01bf44384e049fbd3d2e9b2ffaca440d35b9",
+  "meta:resourceType": "schemas",
+  "version": "1.0",
+  "title": "Example schema",
+  "type": "object",
+  "description": "This is an example schema.",
+  "properties": {
+    "_{TENANT_ID}": {
+      "type": "object",
+      "properties": {
+        "loyaltyLevel": {
+          "title": "Loyalty Level",
+          "description": "",
+          "type": "string",
+          "isRequired": false,
+          "enum": [
+            "platinum",
+            "gold",
+            "silver",
+            "bronze"
+          ]
         }
+      }
+    },
+    "person": {
+      "title": "Person",
+      "description": "An individual actor, contact, or owner.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Full name",
+          "description": "The person's full name.",
+          "type": "object",
+          "properties": {
+            "fullName": {
+              "title": "Full name",
+              "type": "string",
+              "description": "The full name of the person, in writing order most commonly accepted in the language of the name.",
+            },
+            "suffix": {
+              "title": "Suffix",
+              "type": "string",
+              "description": "A group of letters provided after a person's name to provide additional information. The `suffix` is used at the end of someones name. For example Jr., Sr., M.D., PhD, I, II, III, etc.",
+            }
+          },
+          "meta:referencedFrom": "https://ns.adobe.com/xdm/context/person-name",
+          "meta:xdmField": "xdm:name"
+        }
+      }
     }
+  }
 }
 ```
 
 ### Voorbeeld-JSON-aanwijzers op basis van een schemaobject
 
 | JSON-aanwijzer | Oplossen naar |
-|--- | ---|
-| `"/title"` | &quot;Details van het lid Loyalty&quot; |
-| `"/definitions/loyalty"` | (Retourneert de inhoud van het `loyalty` object) |
-| `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
-| `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
+| --- | --- |
+| `"/title"` | `"Example schema"` |
+| `"/properties/person/properties/name/properties/fullName"` | (Retourneert een verwijzing naar het `fullName` veld, opgegeven door een kernmix.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Retourneert een verwijzing naar het `loyaltyLevel` veld, opgegeven door een aangepaste mix.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!NOTE]
 >
