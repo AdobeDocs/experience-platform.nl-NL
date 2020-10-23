@@ -6,9 +6,9 @@ topic: enforcement
 type: Tutorial
 description: Zodra u de etiketten van het gegevensgebruik voor uw gegevens hebt gecreeerd, en gebruiksbeleid voor marketing acties tegen die etiketten hebt gecreeerd, kunt u de Dienst API van het Beleid gebruiken om te evalueren of een marketing actie die op een dataset of een willekeurige groep etiketten wordt uitgevoerd een beleidsschending vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 00688e271b3c1e3ad1a17ceb6045e3316bd65961
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Beleid voor gegevensgebruik afdwingen met de [!DNL Policy Service] API
 
-Zodra u de etiketten van het gegevensgebruik voor uw gegevens hebt gecreeerd, en gebruiksbeleid voor marketing acties tegen die etiketten hebt gecreeerd, kunt u [[!DNL de Dienst API van het Beleid]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) gebruiken om te evalueren of een marketing actie die op een dataset of een willekeurige groep etiketten wordt uitgevoerd een beleidsschending vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie.
+Zodra u de etiketten van het gegevensgebruik voor uw gegevens hebt gecreeerd, en gebruiksbeleid voor marketing acties tegen die etiketten hebt gecreeerd, kunt u gebruiken [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) om te evalueren of een marketing actie die op een dataset of een willekeurige groep etiketten wordt uitgevoerd een beleidsschending vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie.
 
 >[!NOTE]
 >
@@ -170,7 +170,13 @@ curl -X POST \
     },
     {
       "entityType": "dataSet",
-      "entityId": "5cc1fb685410ef14b748c55f"
+      "entityId": "5cc1fb685410ef14b748c55f",
+      "entityMeta": {
+          "fields": [
+              "/properties/personalEmail/properties/address",
+              "/properties/person/properties/name/properties/fullName"
+          ]
+      }
     }
   ]'
 ```
@@ -179,6 +185,7 @@ curl -X POST \
 | --- | --- |
 | `entityType` | Elk item in de payload-array moet het type entiteit aangeven dat wordt gedefinieerd. Voor dit gebruik is de waarde altijd &quot;dataSet&quot;. |
 | `entityId` | Elk punt in de ladingsserie moet unieke identiteitskaart voor een dataset verstrekken. |
+| `entityMeta.fields` | (Optioneel) Een array met [JSON-aanwijzertekenreeksen](../../landing/api-fundamentals.md#json-pointer) die verwijzen naar specifieke velden in het schema van de gegevensset. Als deze array is opgenomen, nemen alleen de velden in de array deel aan de evaluatie. Schema-velden die niet in de array zijn opgenomen, nemen niet deel aan de evaluatie.<br><br>Als dit gebied niet inbegrepen is, zullen alle gebieden binnen het datasetschema in evaluatie worden omvat. |
 
 **Antwoord**
 
@@ -304,13 +311,13 @@ Een succesvolle reactie keert URL voor de marketing actie, de gebruiksetiketten 
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/createdByBatchID"
+                        "path": "/properties/personalEmail/properties/address",
                     },
                     {
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/faxPhone"
+                        "path": "/properties/person/properties/name/properties/fullName"
                     }
                 ]
             }
