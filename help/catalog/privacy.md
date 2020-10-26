@@ -5,9 +5,9 @@ title: Behandeling van een privacyverzoek in het Data Lake
 topic: overview
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonsgegevens te verwijderen, zoals bepaald in wettelijke en organisatorische privacyregels. Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor klantgegevens die in het Datameer zijn opgeslagen.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Dit document behandelt essentiële concepten met betrekking tot het verwerken va
 
 U wordt aangeraden de volgende [!DNL Experience Platform] services goed te begrijpen voordat u deze handleiding leest:
 
-* [[!DNL-Privacy Service]](../privacy-service/home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, uit de handel te nemen of te verwijderen.
+* [[!DNL Privacy Service]](../privacy-service/home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, uit de handel te nemen of te verwijderen.
 * [[!DNL Catalog Service]](home.md): The system of record for data location and lineage within [!DNL Experience Platform]. Biedt een API die kan worden gebruikt om metagegevens van gegevenssets bij te werken.
-* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
 * [[!DNL Identity Service]](../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
 
 ## Naamruimten voor identiteiten {#namespaces}
@@ -136,6 +136,10 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de
 >In deze sectie wordt beschreven hoe u privacyverzoeken voor de [!DNL Data Lake]website kunt opmaken. We raden u ten zeerste aan de [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) - of [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) -documentatie te raadplegen voor volledige stappen op het gebied van het verzenden van een privacytaak, waaronder het correct indelen van verzonden identiteitsgegevens van gebruikers in aanvragen.
 
 In de volgende sectie wordt beschreven hoe u privacyverzoeken voor het [!DNL Data Lake] gebruik van de [!DNL Privacy Service] gebruikersinterface of API kunt indienen.
+
+>[!IMPORTANT]
+>
+>De hoeveelheid tijd die een privacyverzoek kan duren om te voltooien, kan niet worden gegarandeerd. Als er zich wijzigingen voordoen in het datameer terwijl een aanvraag nog wordt verwerkt, kan ook niet worden gegarandeerd of die records al dan niet worden verwerkt.
 
 ### De gebruikersinterface gebruiken
 
