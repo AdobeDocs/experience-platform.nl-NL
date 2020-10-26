@@ -4,9 +4,9 @@ solution: Experience Platform
 title: De verzoekverwerking van de privacy in Real-time Profiel van de Klant
 topic: overview
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Dit document behandelt essentiële concepten met betrekking tot het verwerken va
 
 U wordt aangeraden de volgende [!DNL Experience Platform] services goed te begrijpen voordat u deze handleiding leest:
 
-* [[!DNL-Privacy Service]](home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, uit de handel te nemen of te verwijderen.
+* [[!DNL Privacy Service]](home.md): Beheert verzoeken van klanten om hun persoonlijke gegevens in Adobe Experience Cloud-toepassingen te openen, uit de handel te nemen of te verwijderen.
 * [[!DNL Identity Service]](../identity-service/home.md): Oplost de fundamentele uitdaging die door de fragmentatie van de gegevens van de klantenervaring wordt gesteld door identiteiten over apparaten en systemen te overbruggen.
-* [[!DNL Real-time klantprofiel]](../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-time Customer Profile]](../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ## Naamruimten voor identiteiten {#namespaces}
 
@@ -43,6 +43,8 @@ In de volgende secties wordt beschreven hoe u privacyverzoeken kunt indienen voo
 >Privacy Service kan alleen [!DNL Profile] gegevens verwerken met een samenvoegbeleid dat geen identiteitsstitching uitvoert. Als u de UI gebruikt om te bevestigen of uw privacyverzoeken worden verwerkt, zorg ervoor dat u een beleid met &quot;[!DNL None]&quot;als zijn [!UICONTROL identiteitskaart het stitching] type gebruikt. Met andere woorden, u kunt geen samenvoegbeleid gebruiken waarbij [!UICONTROL id-stitching] is ingesteld op &#39;[!UICONTROL Privégrafiek]&#39;.
 >
 >![](./images/privacy/no-id-stitch.png)
+>
+>Het is ook belangrijk om op te merken dat de hoeveelheid tijd die een privacyverzoek kan duren om te voltooien niet kan worden gewaarborgd. Als er wijzigingen optreden in uw [!DNL Profile] gegevens terwijl een aanvraag nog wordt verwerkt, kan niet worden gegarandeerd of deze records al dan niet worden verwerkt.
 
 ### De API gebruiken
 
