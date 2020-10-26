@@ -5,9 +5,9 @@ title: Basisbeginselen van de schemacompositie
 topic: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: 7aac7b717b47466527434024e40d19ae70296e55
 workflow-type: tm+mt
-source-wordcount: '2834'
+source-wordcount: '3099'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Naast het beschrijven van de structuur van gegevens, passen de schema&#39;s bepe
 
 Wanneer het werken met relationele gegevensbestanden, impliceren de beste praktijken het normaliseren van gegevens, of het nemen van een entiteit en het verdelen van het in discrete stukken die dan over veelvoudige lijsten worden getoond. Om de gegevens als geheel te lezen of de entiteit bij te werken, lees en schrijf verrichtingen over vele individuele lijsten moeten worden gemaakt gebruikend JOIN.
 
-Door het gebruik van ingebedde voorwerpen, kunnen de schema&#39;s XDM complexe gegevens direct vertegenwoordigen en het opslaan in op zichzelf staande documenten met hiërarchische structuur. Één van de belangrijkste voordelen aan deze structuur is dat het u toestaat om de gegevens te vragen zonder het moeten de entiteit door dure verbindingen aan veelvoudige gedenormaliseerde lijsten reconstrueren.
+Door het gebruik van ingebedde voorwerpen, kunnen de schema&#39;s XDM complexe gegevens direct vertegenwoordigen en het opslaan in op zichzelf staande documenten met een hiërarchische structuur. Één van de belangrijkste voordelen aan deze structuur is dat het u toestaat om de gegevens te vragen zonder het moeten de entiteit door dure verbindingen aan veelvoudige gedenormaliseerde lijsten reconstrueren. Er zijn geen harde beperkingen aan hoeveel niveaus uw schemahiërarchie kan zijn.
 
 ### Schema&#39;s en grote gegevens
 
@@ -42,6 +42,8 @@ De schema&#39;s lossen dit probleem op door gegevens toe te laten om uit veelvou
 Standaardisering is een essentieel concept achter [!DNL Experience Platform]. XDM, die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en standaardschema&#39;s voor het beheer van de klantenervaring te bepalen.
 
 De infrastructuur waarop [!DNL Experience Platform] wordt gebouwd, die als [!DNL XDM System], op schema-gebaseerde werkschema&#39;s wordt bekend en omvat de [!DNL Schema Registry], [!DNL Schema Editor], schemameta-gegevens, en de patronen van het de dienstconsumptie. Zie het [XDM-systeemoverzicht](../home.md) voor meer informatie.
+
+Er zijn verscheidene belangrijke voordelen aan bouw en het gebruiken van schema&#39;s in [!DNL Experience Platform]. In de eerste plaats zorgen schema&#39;s voor een beter gegevensbeheer en gegevensminimalisering, wat vooral belangrijk is bij privacyregels. Ten tweede, staat het bouwen van schema&#39;s met standaard componenten Adobe voor uit-van-de-doos inzichten en gebruik van de diensten AI/ML met minimale aanpassingen toe. Ten slotte bieden schema&#39;s infrastructuren voor het uitwisselen van inzichten in gegevens en een efficiënte orchestratie.
 
 ## Uw schema plannen
 
@@ -135,19 +137,13 @@ De schema&#39;s worden samengesteld gebruikend de volgende formule:
 
 &amp;ast;Een schema bestaat uit een klasse en nul of meer mixins. Dit betekent dat u een datasetschema kon samenstellen zonder mixins bij allen te gebruiken.
 
-### Klasse
+### Class {#class}
 
 Het samenstellen van een schema begint door een klasse toe te wijzen. De klassen bepalen de gedragsaspecten van de gegevens het schema (verslag of tijdreeks) zal bevatten. Bovendien beschrijven de klassen het kleinste aantal gemeenschappelijke eigenschappen die alle die schema&#39;s op die klasse worden gebaseerd zouden moeten omvatten en een manier verstrekken om veelvoudige compatibele datasets worden samengevoegd.
 
-Een klasse bepaalt ook welke mengen voor gebruik in het schema in aanmerking komen. Dit wordt meer in detail besproken in de [mixinsectie](#mixin) die volgt.
+De klasse van een schema bepaalt welke mengen voor gebruik in dat schema in aanmerking komen. Dit wordt meer in detail besproken in de [volgende sectie](#mixin).
 
-Er zijn standaardklassen voorzien van elke integratie van [!DNL Experience Platform], die als &quot;Industrie&quot;klassen wordt bekend. Industrieklassen zijn algemeen aanvaarde industriestandaarden die van toepassing zijn op een breed scala van gebruiksgevallen. De voorbeelden van de klassen van de Industrie omvatten de [!DNL XDM Individual Profile] en [!DNL XDM ExperienceEvent] klassen door Adobe worden verstrekt die.
-
-[!DNL Experience Platform] staat ook voor klassen &quot;van de Leverancier&quot;toe, die klassen door [!DNL Experience Platform] partners worden bepaald en ter beschikking gesteld aan alle klanten die die verkopersdienst of toepassing binnen gebruiken [!DNL Platform].
-
-Er zijn ook klassen die worden gebruikt om specifiekere gebruiksgevallen voor individuele organisaties binnen te beschrijven [!DNL Platform], de &quot;Klant&quot;klassen. Klantklassen worden gedefinieerd door een organisatie wanneer er geen branche- of leveranciersklassen beschikbaar zijn om een uniek geval van gebruik te beschrijven.
-
-Een schema dat bijvoorbeeld leden van een Loyalty-programma vertegenwoordigt, beschrijft recordgegevens over een individu en kan daarom op de [!DNL XDM Individual Profile] klasse worden gebaseerd, een standaardklasse van de Industrie die door Adobe wordt bepaald.
+Adobe biedt twee standaard XDM-klassen (&quot;core&quot;): [!DNL XDM Individual Profile] en [!DNL XDM ExperienceEvent]. Naast deze kernklassen kunt u ook uw eigen aangepaste klassen maken om specifieke gebruiksgevallen voor uw organisatie te beschrijven. Aangepaste klassen worden gedefinieerd door een organisatie wanneer er geen door Adobe gedefinieerde kernklassen beschikbaar zijn om een uniek gebruiksgeval te beschrijven.
 
 ### Mixin {#mixin}
 
@@ -155,15 +151,21 @@ Een mix is een herbruikbare component die een of meer velden definieert die bepa
 
 Mixins definiëren met welke klasse(n) ze compatibel zijn op basis van het gedrag van de gegevens die ze vertegenwoordigen (record- of tijdreeks). Dit betekent dat niet alle mengsels beschikbaar zijn voor gebruik met alle klassen.
 
-Mixinen hebben hetzelfde bereik en dezelfde definitie als klassen: Er zijn industriemengsels, leveranciersmixen, en de mixins van de Klant die door individuele organisaties worden bepaald gebruikend [!DNL Platform]. [!DNL Experience Platform] omvat vele standaardMengsels van de Industrie terwijl ook het toestaan van verkopers om mengsels voor hun gebruikers te bepalen, en individuele gebruikers om mengsels voor hun eigen specifieke concepten te bepalen.
+[!DNL Experience Platform] omvat vele standaard Adobe mixins terwijl ook het toestaan van verkopers om mengsels voor hun gebruikers te bepalen, en individuele gebruikers om mengsels voor hun eigen specifieke concepten te bepalen.
 
 Bijvoorbeeld, om details zoals &quot;[!UICONTROL Voornaam]&quot;en &quot;Adres[!UICONTROL van het]Huis&quot;voor uw schema van &quot;[!UICONTROL Loyalty Leden]&quot;te vangen, zou u standaardmengingen kunnen gebruiken die die gemeenschappelijke concepten bepalen. Concepten die specifiek zijn voor minder gangbare gebruiksgevallen (zoals &quot;[!UICONTROL Loyalty Program Level]&quot;) hebben echter vaak geen vooraf gedefinieerde mix. In dit geval moet u uw eigen mix definiëren om deze informatie vast te leggen.
 
 Herinner dat de schema&#39;s uit &quot;nul of meer&quot;mengen bestaan, zodat betekent dit dat u een geldig schema kon samenstellen zonder enige mengen bij allen te gebruiken.
 
+Raadpleeg de [officiële XDM-opslagplaats](https://github.com/adobe/xdm/tree/master/components/mixins)voor een lijst met alle huidige standaardmixen.
+
 ### Data type {#data-type}
 
 Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als referentieveldtypen in klassen of schema&#39;s. Het belangrijkste verschil is dat gegevenstypen meerdere subvelden kunnen definiëren. Vergelijkbaar met een mixin, staat een gegevenstype voor het verenigbare gebruik van een multi-gebiedstructuur toe, maar heeft meer flexibiliteit dan een mixin omdat een gegevenstype overal in een schema kan worden omvat door het als &quot;gegevenstype&quot;van een gebied toe te voegen.
+
+>[!NOTE]
+>
+>Zie de [bijlage](#mixins-v-datatypes) voor meer informatie over de verschillen tussen mengsels en gegevenstypen, en de voor- en nadelen van het gebruik van de ene over de andere voor gelijksoortige gebruikscenario&#39;s.
 
 [!DNL Experience Platform] bevat een aantal gangbare gegevenstypen als onderdeel van het programma [!DNL Schema Registry] ter ondersteuning van het gebruik van standaardpatronen voor het beschrijven van gemeenschappelijke gegevensstructuren. Dit wordt meer in detail uitgelegd in de [!DNL Schema Registry] zelfstudies, waar het duidelijker zal worden aangezien u door de stappen loopt om gegevenstypes te bepalen.
 
@@ -177,6 +179,10 @@ Een veld is de eenvoudigste bouwsteen van een schema. Velden bieden beperkingen 
 * Boolean
 * Array
 * Object
+
+>[!TIP]
+>
+>Zie de [bijlage](#objects-v-freeform) voor informatie over de voor- en nadelen van het gebruik van vrije-formuliervelden boven objecttypevelden.
 
 De geldige waaiers van deze scalaire types kunnen verder tot bepaalde patronen, formaten, minimum/maximum, of vooraf bepaalde waarden worden beperkt. Gebruikend deze beperkingen, kan een brede waaier van specifiekere gebiedstypes worden vertegenwoordigd, die omvatten:
 
@@ -250,3 +256,44 @@ Het [!DNL Schema Registry] wordt gebruikt om toegang te krijgen tot het [!DNL Sc
 Als u wilt beginnen met het samenstellen van een schema met behulp van de UI, volgt u de zelfstudie [van de](../tutorials/create-schema-ui.md) Schema-editor om het schema &quot;Loyalty-leden&quot; te bouwen dat in dit document wordt vermeld.
 
 Als u de [!DNL Schema Registry] API wilt gaan gebruiken, begint u met het lezen van de ontwikkelaarsgids [van de](../api/getting-started.md)schemaregistratie-API. Na het lezen van de ontwikkelaarsgids, volg de stappen die in het leerprogramma worden geschetst over het [creëren van een schema gebruikend de Registratie API](../tutorials/create-schema-api.md)van het Schema.
+
+## Aanhangsel
+
+De volgende sectie bevat extra informatie betreffende de principes van schemacompositie.
+
+### Objecten versus vrije-formuliervelden {#objects-v-freeform}
+
+Bij het ontwerpen van uw schema&#39;s moet u rekening houden met een aantal belangrijke factoren wanneer u objecten kiest op vrije-formuliervelden:
+
+| Objecten | Velden met vrije vorm |
+| --- | --- |
+| Meer nesten | Minder of geen nesten |
+| Hiermee maakt u logische veldgroepen | Velden worden op ad-hoclocaties geplaatst |
+
+#### Objecten
+
+Hieronder ziet u de voor- en nadelen van het gebruik van objecten op vrije velden.
+
+**Pros**:
+
+* Objecten kunt u het beste gebruiken als u een logische groepering van bepaalde velden wilt maken.
+* Objecten ordenen het schema op een meer gestructureerde manier.
+* Objecten helpen indirect bij het maken van een goede menustructuur in de gebruikersinterface van Segment Builder. De gegroepeerde velden in het schema worden direct weerspiegeld in de mappenstructuur die is opgegeven in de gebruikersinterface van Segment Builder.
+
+**Cons**:
+
+* Velden worden meer genest.
+* Wanneer u de [Adobe Experience Platform Query Service](../../query-service/home.md)gebruikt, moeten langere verwijzingstekenreeksen worden opgegeven voor queryvelden die in objecten zijn genest.
+
+#### Velden met vrije vorm
+
+De voor- en nadelen van het gebruik van vrije-formuliervelden op objecten worden hieronder weergegeven.
+
+**Pros**:
+
+* Velden met vrije vorm worden direct onder het basisobject van het schema (`_tenantId`) gemaakt, waardoor de zichtbaarheid toeneemt.
+* De koorden van de verwijzing voor vrije-vormgebieden zijn gewoonlijk korter wanneer het gebruiken van de Dienst van de Vraag.
+
+**Cons**:
+
+* De locatie van vrije-formuliervelden in het schema is ad hoc. Dit betekent dat deze velden in alfabetische volgorde worden weergegeven in de Schema-editor. Hierdoor kunnen schema&#39;s minder gestructureerd worden, en vergelijkbare vrije-vormgebieden kunnen uiteindelijk ver worden gescheiden afhankelijk van hun namen.
