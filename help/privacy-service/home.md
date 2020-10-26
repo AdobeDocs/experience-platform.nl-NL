@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5d88aca08b7cf1d55e1eed989de6aa514f82e113
+source-git-commit: f3872d433949e6c14c28c6833b8498d4d01b8de3
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +30,7 @@ Deze besluiten kunnen als volgt worden samengevat:
    * Om optimaal gebruik te maken van [!DNL Privacy Service], moet u een gedetailleerd inzicht hebben in de soorten gegevens u van uw klanten verzamelt, en welke van het onderworpen is aan privacyverordeningen. Zie de sectie over het [bepalen van privacyvereisten](#requirements) voor meer informatie.
 1. **Heb ik mijn gegevens correct gelabeld?**
    * De gegevens moeten correct geëtiketteerd zijn opdat de dienst kan bepalen welke gebieden om tijdens privacybanen toegang te hebben of te schrappen. Zie de sectie over [etiketteringsgegevens](#label) voor meer informatie.
-1. **Weet ik naar welke id&#39;s u wilt verzenden[!DNL Privacy Service]?**
+1. **Weet ik naar welke id&#39;s u wilt verzenden [!DNL Privacy Service]?**
    * Bij het verzenden van privacyverzoeken moeten individuele klant-id&#39;s worden opgegeven die specifiek zijn voor bepaalde Adobe-toepassingen. Zie de secties over het [verstrekken van identiteitsgegevens](#identity) en het [maken van privacyverzoeken](#requests) voor meer informatie.
 1. **Hoe volg ik mijn privacytaken?**
    * Nadat u een privacyverzoek hebt ingediend, kunt u de status en de resultaten van dat verzoek op verschillende manieren volgen. Zie de sectie over het [controleren van privacytaken](#monitor) voor meer informatie.
@@ -75,10 +75,12 @@ Nadat u de privacybehoeften van uw bedrijf hebt bepaald en hebt bepaald naar wel
 >In de volgende secties vindt u koppelingen naar documentatie over het maken van algemene privacyverzoeken in de API of UI. Afhankelijk van de [!DNL Experience Cloud] toepassingen die u gebruikt, kunnen de velden die u in de aanvraag moet verzenden, echter afwijken van de voorbeelden in deze handleidingen.
 >
 >Als u de API- of UI-handleidingen volgt, raadpleegt u het document over [Privacy Service- en Experience Cloud-toepassingen](./experience-cloud-apps.md) voor meer documentatie over het opmaken van privacyverzoeken voor uw specifieke [!DNL Experience Cloud] toepassing(en).
+>
+>Het is ook belangrijk om op te merken dat de privacyverzoeken asynchroon over Experience Cloud toepassingen worden verwerkt. Zodra een verzoek door Privacy Service wordt ontvangen, kan elke toepassing overal van minuten tot weken duren om het verzoek te voltooien. De hoeveelheid tijd die nodig is om elk verzoek te voltooien, is specifiek voor de toepassing waarmee u werkt en de hoeveelheid gegevens die moet worden verwerkt.
 
 #### De API gebruiken
 
-De [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) biedt verschillende eindpunten voor het maken en beheren van privacytaken met behulp van RESTful API-aanroepen, zodat u programmatisch kunt voldoen aan privacyregels voor uw [!DNL Experience Cloud] toepassingen. Zie de handleiding voor ontwikkelaars van de [Privacy Service-API voor meer informatie over het gebruik van de API](api/getting-started.md).
+Het [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) biedt verschillende eindpunten voor het maken en beheren van privacytaken met behulp van RESTful API-aanroepen, waarmee u programmatisch de naleving van privacyregelgeving voor uw [!DNL Experience Cloud] toepassingen kunt benaderen. Zie de handleiding voor ontwikkelaars van de [Privacy Service-API voor meer informatie over het gebruik van de API](api/getting-started.md).
 
 #### De gebruikersinterface gebruiken
 
