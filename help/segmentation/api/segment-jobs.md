@@ -5,9 +5,9 @@ title: Segmenttaken
 topic: developer guide
 description: Deze handleiding bevat informatie die u helpt segmenttaken beter te begrijpen en voorbeelden van API-aanroepen voor het uitvoeren van basishandelingen met de API.
 translation-type: tm+mt
-source-git-commit: 8c5c3aed4d46c8b3873009ab9f17ff9bca93302c
+source-git-commit: 521b760da850144d7a8e75126453c2aae5c2ce72
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1152'
 ht-degree: 1%
 
 ---
@@ -177,7 +177,7 @@ Een succesvolle reactie keert HTTP status 200 met een lijst van segmentbanen voo
 | `metrics.profileSegmentationTime` | Een object dat informatie bevat over de tijd waarop de segmentatieevaluatie is gestart en beëindigd, en over de totale tijd die is verstreken. |
 | `metrics.segmentProfileCounter` | Het aantal profielen dat per segment wordt gekwalificeerd. |
 | `metrics.segmentedProfileByNamespaceCounter` | Het aantal profielen dat voor elke identiteitsnaamruimte op een per-segmentbasis wordt gekwalificeerd. |
-| `metrics.segmentProfileByStatusCounter` | Het aantal **profielfragmenten** voor elke status. De volgende drie statussen worden ondersteund: <ul><li>&quot;gerealiseerde&quot; - Het aantal nieuwe profielen dat in het segment is ingevoerd.</li><li>&quot;existing&quot; - Het aantal profielen dat in het segment blijft bestaan.</li><li>&quot;exited&quot; - Het aantal profielsegmenten dat niet meer in het segment bestaat.</li></ul> |
+| `metrics.segmentProfileByStatusCounter` | Het aantal profielen voor elke status. De volgende drie statussen worden ondersteund: <ul><li>&quot;gerealiseerde&quot; - Het aantal nieuwe profielen dat in het segment is ingevoerd.</li><li>&quot;existing&quot; - Het aantal profielen dat in het segment blijft bestaan.</li><li>&quot;exited&quot; - Het aantal profielsegmenten dat niet meer in het segment bestaat.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Het totale aantal samengevoegde profielen op een per de beleidsbasis van de fusie. |
 
 ## Een nieuwe segmenttaak maken {#create}
