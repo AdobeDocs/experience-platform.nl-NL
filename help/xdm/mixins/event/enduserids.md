@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
 solution: Experience Platform
-title: ExperienceEvent EndUserIDs mixin
+title: Mengsel Eindgebruikersgegevens
 topic: overview
-description: Dit document biedt een overzicht van de mix van ExperienceEvent EndUserID's.
+description: Dit document bevat een overzicht van de mix Details van de eindgebruiker.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL ExperienceEvent EndUserIDs] mixin
+# [!UICONTROL Mengsel Details] eindgebruiker-id
 
-[!UICONTROL ExperienceEvent EndUserIDs] is een standaardmengeling voor de [[!DNL XDM ExperienceEvent] klasse](../../classes/individual-profile.md), die wordt gebruikt om de identiteitsinformatie van een individu over verscheidene toepassingen van Adobe te beschrijven. De mix biedt een `endUserIDs` `_experience` object op hoofdniveau dat zelf een alleen-lezen veld bevat waarvan de waarden automatisch worden bijgewerkt terwijl er gegevens worden ingevoerd.
+>[!NOTE]
+>
+>De namen van verschillende mengsels zijn gewijzigd. Zie het document over de updates [van de](../name-updates.md) mixnaam voor meer informatie.
+
+[!UICONTROL Details] van de eindgebruiker - identiteitskaart is een standaardmengeling voor de [[!DNL XDM ExperienceEvent] klasse](../../classes/individual-profile.md), die wordt gebruikt om de identiteitsinformatie van een individu over verscheidene toepassingen van Adobe te beschrijven. De mix biedt een `endUserIDs` `_experience` object op hoofdniveau dat zelf een alleen-lezen veld bevat waarvan de waarden automatisch worden bijgewerkt terwijl er gegevens worden ingevoerd.
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
