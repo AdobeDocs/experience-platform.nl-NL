@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixin;person;person details;profile person details;person;
 solution: Experience Platform
-title: Gedetailleerde mix van profielgegevens
+title: Demografische details, mix
 topic: overview
-description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
+description: Dit document biedt een overzicht van de mix Demographic Details.
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 3%
+source-wordcount: '241'
+ht-degree: 2%
 
 ---
 
 
-# [!UICONTROL Gedetailleerde] mix van profielgegevens
+# [!UICONTROL Demografische details] , mix
 
-[!UICONTROL Details] van de profielpersoon is een standaardmix voor de [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md). De mix biedt een `person` object op hoofdniveau, waarvan de subvelden informatie over een individuele persoon beschrijven.
+>[!NOTE]
+>
+>De namen van verschillende mengsels zijn gewijzigd. Zie het document over de updates [van de](../name-updates.md) mixnaam voor meer informatie.
+
+[!UICONTROL Demografische details] is een standaardmix voor de [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md). De mix biedt een `person` object op hoofdniveau, waarvan de subvelden informatie over een individuele persoon beschrijven.
 
 <img src="../../images/mixins/profile-person-details.png" width="600" /><br />
 
@@ -33,4 +37,4 @@ ht-degree: 3%
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de mix:
 
 * [Voorbeeld van vulling](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
-* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
+* [Volledig schema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)å
