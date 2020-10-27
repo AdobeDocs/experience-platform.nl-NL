@@ -5,9 +5,9 @@ title: XDM-systeem (Experience Data Model)
 topic: overview
 description: 'Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema''s voor het beheer van de klantenervaring te bepalen. '
 translation-type: tm+mt
-source-git-commit: 1aceddc02a5120b0bf7413db33c2c03d0ab2948c
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1586'
 ht-degree: 0%
 
 ---
@@ -109,14 +109,6 @@ Adobe Experience Platform [!DNL Data Science Workspace] maakt gebruik van machin
 Met [!DNL Data Science Workspace]behulp van computerleren kunnen gegevenswetenschappers eenvoudig intelligente services-API&#39;s maken. Deze services werken samen met andere Adobe-oplossingen, zoals Adobe Target en Adobe Analytics Cloud, om u te helpen persoonlijke, doelgerichte digitale ervaringen te automatiseren.
 
 Voor meer informatie bij het gebruiken van [!DNL Experience Platform] gegevens aan machtsinzichten, zie het Overzicht [van de Werkruimte van de Wetenschap van](../data-science-workspace/home.md)Gegevens.
-
-### [!DNL Decisioning Service]
-
-[!DNL Decisioning Service] verstrekt het vermogen om gepersonaliseerd aanbiedingsbesluit in [!DNL Platform]-geïntegreerde toepassingen te vormen. Aanbiedingen zouden productaanbevelingen, inhoudcomponenten voor een Webervaring, gespreksmanuscripten, en te nemen acties kunnen zijn.
-
-[!DNL Decisioning Service] hefboomwerkings [!DNL Real-time Customer Profile] gegevens, en is daarom slechts compatibel met datasets die op schema&#39;s worden gebaseerd die de [!DNL XDM Individual Profile] of de [!DNL XDM ExperienceEvent] klasse uitvoeren.
-
-Zie het overzicht [van de Dienst van het](../decisioning-service/home.md) Beslissen voor meer informatie.
 
 ## Volgende stappen en extra bronnen
 
