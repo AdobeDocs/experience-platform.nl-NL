@@ -5,9 +5,9 @@ title: Gebruikershandleiding voor gegevensbestanden
 topic: datasets
 description: Deze gebruikershandleiding voor gegevenssets bevat instructies voor het uitvoeren van algemene handelingen bij het werken met gegevenssets in de gebruikersinterface van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,10 @@ Deze gebruikershandleiding bevat instructies voor het uitvoeren van veelvoorkome
 Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [Gegevenssets](overview.md): De opslag- en beheerconstructie voor gegevenspersistentie in [!DNL Experience Platform].
-* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    * [Basisbeginselen van de schemacompositie](../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [Schema-editor](../../xdm/tutorials/create-schema-ui.md): Leer hoe u uw eigen aangepaste XDM-schema&#39;s maakt met behulp van de [!DNL Schema Editor] [!DNL Platform] gebruikersinterface.
-* [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Ervoor zorgen dat de regels, beperkingen en beleidsregels betreffende het gebruik van klantgegevens worden nageleefd.
 
 ## Gegevensbestanden weergeven
@@ -122,7 +122,7 @@ U kunt een dataset schrappen door tot zijn de activiteitenscherm van de **[!UICO
 
 >[!NOTE]
 >
->Datasets die zijn gemaakt en gebruikt door Adobe-toepassingen en -services (zoals Adobe Analytics, Adobe Audience Manager of [!DNL Decisioning Service]) kunnen niet worden verwijderd.
+>Datasets die zijn gemaakt en gebruikt door Adobe-toepassingen en -services (zoals Adobe Analytics, Adobe Audience Manager of [!DNL Offer Decisioning]) kunnen niet worden verwijderd.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
