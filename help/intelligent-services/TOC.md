@@ -1,11 +1,12 @@
 ---
 product: experience-platform
+solution: Experience Platform, Intelligent Services
 audience: user
 user-guide-title: Help bij Intelligente services
 breadcrumb-title: Handleiding voor intelligente services
 user-guide-description: Gebruik intelligente AI-services om scores te genereren, inzichten te ontdekken en segmenten te maken van uw gegevens over marketinggebeurtenissen.
 translation-type: tm+mt
-source-git-commit: ada5a34ffa3ea9c90ff578ab27f425b82f7ed18c
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 4%
