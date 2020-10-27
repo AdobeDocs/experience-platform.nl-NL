@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experi
 solution: Experience Platform
 title: Een schema maken met de API voor schemaregistratie
 topic: tutorial
-type: Tutorials
+type: Tutorial
 description: Deze zelfstudie gebruikt de API voor schemaregistratie om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse.
 translation-type: tm+mt
-source-git-commit: de3d3a12e5e362bfa5d3149481a0eb7a6b278b70
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '2343'
 ht-degree: 0%
