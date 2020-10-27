@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;mixin;Mixin;
 solution: Experience Platform
-title: Persoonlijke gegevens in profiel mengen
+title: Persoonlijke contactpersoon
 topic: overview
-description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
+description: Dit document geeft een overzicht van de mix Persoonlijke contactgegevens.
 translation-type: tm+mt
-source-git-commit: e58c669b5542453b7fbf6d90deedcd2cf349c0b6
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '133'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL Profiel van persoonlijke gegevens] mengen
+# [!UICONTROL Persoonlijke contactgegevens] , mix
 
-[!UICONTROL Persoonlijke gegevens] van profielen zijn een standaardmix voor de [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md). De mix biedt een `person` object op hoofdniveau, waarvan de subvelden contactgegevens over een individuele persoon beschrijven.
+>[!NOTE]
+>
+>De namen van verschillende mengsels zijn gewijzigd. Zie het document over de updates [van de](../name-updates.md) mixnaam voor meer informatie.
+
+[!UICONTROL De persoonlijke Details] van het Contact is een standaardmengeling voor de [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md) die de contactinformatie voor een individuele persoon beschrijft.
 
 <img src="../../images/mixins/profile-personal-details.png" width="700" /><br />
 
