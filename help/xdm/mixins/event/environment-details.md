@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;environment;environment details;
 solution: Experience Platform
-title: ExperienceEvent-omgevingsdetails mixen
+title: Mengsel van omgevingsdetails
 topic: overview
 description: Dit document biedt een overzicht van de mix ExperienceEvent Environment Details.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '179'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL ExperienceEvent-omgevingsdetails] mixin
+# [!UICONTROL Mengsel van omgevingsdetails]
 
-[!UICONTROL De de milieudetails] van ExperienceEvent is een standaardmengeling voor de [[!DNL XDM ExperienceEvent] klasse](../../classes/individual-profile.md) die wordt gebruikt om informatie betreffende omgevingsdetails met betrekking tot een Gebeurtenis van de Ervaring zoals apparatendetails, browser informatie, lokale tijd, en andere geografische informatie te vangen.
+>[!NOTE]
+>
+>De namen van verschillende mengsels zijn gewijzigd. Zie het document over de updates [van de](../name-updates.md) mixnaam voor meer informatie.
+
+[!UICONTROL De Details] van het milieu is een standaardmengeling voor de [[!DNL XDM ExperienceEvent] klasse](../../classes/individual-profile.md) die wordt gebruikt om informatie betreffende omgevingsdetails met betrekking tot een Gebeurtenis van de Ervaring zoals apparatendetails, browser informatie, lokale tijd, en andere geografische informatie te vangen.
 
 <img src="../../images/mixins/environment-details.png" width="500" /><br />
 
