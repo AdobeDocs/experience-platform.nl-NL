@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October 13, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 133aa5ace2567e9380eb970b5737d7327d0c99b2
+source-git-commit: 8f646c26ce73671ef4e427d8cba51091a8884795
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1028'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 1%
 - [Klantprofiel in realtime](#profile)
 - [Segmenteringsservice](#segmentation)
 - [Bronnen](#sources)
+- [Tijd tot waarde](#time-to-value)
 
 ## Gegevensprep {#data-prep}
 
@@ -76,7 +77,7 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 Zie het [bronoverzicht](../../sources/home.md)voor meer informatie over bronnen.
 
-## Tijd tot waarde
+## Tijd tot waarde {#time-to-value}
 
 Adobe Experience Platform biedt marketingteams de volledige mogelijkheid om een 360-gradenweergave van hun klanten te maken zonder dat hiervoor uitgebreide expertise op het gebied van gegevenstechniek nodig is. Het doel is teams en waarde door gegevenssnelheid te versnellen.
 
