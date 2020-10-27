@@ -6,9 +6,9 @@ title: Gegevensstromen verwijderen
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: cbd9b3ed0cf43d582d734098b9ce58fc074fb375
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Gegevensstromen verwijderen
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het verwijderen van gegevensstromen uit de werkruimte [!UICONTROL Bronnen] .
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het verwijderen van gegevensstromen uit de werkruimte **[!UICONTROL Bronnen]** .
 
 ## Aan de slag
 
@@ -25,7 +25,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 - [[!DNL Experience Data Model] (XDM) Systeem](../../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    - [Basisbeginselen van de schemacompositie](../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    - [Zelfstudie](../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-- [[!DNL Real-time klantprofiel]](../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ## Gegevensstromen verwijderen met behulp van de gebruikersinterface
 
@@ -64,7 +64,6 @@ Na enkele ogenblikken verschijnt er een groen bevestigingsvak onder aan het sche
 
 ## Volgende stappen
 
-Door dit leerprogramma te volgen, hebt u met succes bestaande rekeningen en gegevensstromen van de **[!UICONTROL werkruimte van Bronnen]** betreden. Inkomende gegevens kunnen nu worden gebruikt door downstreamdiensten [!DNL Platform] zoals [!DNL Real-time Customer Profile] en [!DNL Data Science Workspace]. Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u met succes de werkruimte **[!UICONTROL Bronnen]** gebruikt om bestaande gegevensstromen te schrappen.
 
-- [[!DNL Real-time Customer Profile] overzicht](../../../profile/home.md)
-- [[!DNL Data Science Workspace] overzicht](../../../data-science-workspace/home.md)
+Raadpleeg de zelfstudie over het [!DNL Flow Service] verwijderen van verbindingen met de Flow Service API voor informatie over hoe u deze bewerkingen programmatisch kunt uitvoeren met de [API.](../../tutorials/api/delete.md)
