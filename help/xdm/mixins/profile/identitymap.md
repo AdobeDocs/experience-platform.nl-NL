@@ -5,15 +5,19 @@ title: IdentityMap-mix
 topic: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
 translation-type: tm+mt
-source-git-commit: fd5bd4134bd35d5d87c79bf1e75bc88c67511b2b
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
 
 # [!UICONTROL IdentityMap] , mix
+
+>[!NOTE]
+>
+>De namen van verschillende mengsels zijn gewijzigd. Zie het document over de updates [van de](../name-updates.md) mixnaam voor meer informatie.
 
 [!UICONTROL IdentityMap] is een standaardmix voor de [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md). De mix biedt één kaartveld dat een set gebruikersidentiteiten bevat die door naamruimte worden vastgehouden.
 
