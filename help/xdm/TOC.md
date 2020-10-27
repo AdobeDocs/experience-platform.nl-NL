@@ -5,9 +5,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding gegevensmodel (XDM)
 user-guide-description: Gebruik XDM-klassen (Experience Data Model) en -mixen om ervaringsgegevens te standaardiseren.
 translation-type: tm+mt
-source-git-commit: a091acf1cfc572df7b300a7be6a673b1e7469be5
+source-git-commit: 6c52998421b6a5d9719f287ec8cb7099780cb1ff
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '198'
 ht-degree: 3%
 
 ---
@@ -28,13 +28,13 @@ ht-degree: 3%
 * Mixins {#mixins}
    * Profielmixen {#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
-      * [Details van profielpersoon](./mixins/profile/person-details.md)
-      * [Persoonlijke gegevens registreren](./mixins/profile/personal-details.md)
-      * [Profielsegmentatie](./mixins/profile/segmentation.md)
-      * [Profielwerkdetails](./mixins/profile/work-details.md)
+      * [Demografische details](./mixins/profile/person-details.md)
+      * [Persoonlijke contactgegevens](./mixins/profile/personal-details.md)
+      * [Details segmentlidmaatschap](./mixins/profile/segmentation.md)
+      * [Contactgegevens werken](./mixins/profile/work-details.md)
    * Gebeurtenismixen {#event}
-      * [ExperienceEvent EndUserIDs](./mixins/event/enduserids.md)
-      * [Omgevingsdetails van ExperienceEvent](./mixins/event/environment-details.md)
+      * [Gegevens van eindgebruiker](./mixins/event/enduserids.md)
+      * [Omgevingsdetails](./mixins/event/environment-details.md)
    * [Updates van Mixernamen](./mixins/name-updates.md)
 * Datatypen {#data-types}
    * [Beacon](./data-types/beacon.md)
