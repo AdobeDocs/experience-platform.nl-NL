@@ -5,9 +5,9 @@ title: XDM ExperienceEvent, klasse
 topic: overview
 description: Dit document biedt een overzicht van de klasse XDM ExperienceEvent.
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '784'
 ht-degree: 0%
 
 ---
@@ -33,10 +33,14 @@ De [!DNL XDM ExperienceEvent] klasse zelf verstrekt verscheidene op tijd-reeksen
 
 ## Compatibele combinaties {#mixins}
 
+>[!NOTE]
+>
+>De namen van verschillende mengsels zijn gewijzigd. Zie het document over de updates [van de](../mixins/name-updates.md) mixnaam voor meer informatie.
+
 Adobe biedt verschillende standaardmixen voor gebruik met de [!DNL XDM ExperienceEvent] klasse. Hieronder volgt een lijst met enkele veelgebruikte combinaties voor de klasse:
 
-* [[!UICONTROL ExperienceEvent EndUserIDs]](../mixins/event/enduserids.md)
-* [[!UICONTROL Omgevingsdetails van ExperienceEvent]](../mixins/event/environment-details.md)
+* [[!UICONTROL Gegevens van eindgebruiker]](../mixins/event/enduserids.md)
+* [[!UICONTROL Omgevingsdetails]](../mixins/event/environment-details.md)
 
 ## Aanhangsel
 
