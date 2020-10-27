@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: 26d117726a59dea0c08cf6ca5a13bf54951f7f44
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -134,6 +134,7 @@ ht-degree: 0%
    - [Creeer een verbinding van de datasetbasis gebruikend de Dienst API van de Stroom](tutorials/api/create-dataset-base-connection.md)
    - [Dataflows gebruiken met de Flow Service API](tutorials/api/monitor.md)
    - [Verbindingsgegevens bijwerken met de Flow Service API](tutorials/api/update.md)
+   - [Verbindingen verwijderen met de Flow Service API](tutorials/api/delete.md)
 - UI-zelfstudies {#ui-tutorials}
    - Een bronaansluiting maken {#create}
       - Adobe-toepassingen {#adobe-applications}
@@ -195,6 +196,7 @@ ht-degree: 0%
       - [Vorm een dataflow voor een protocolschakelaar](tutorials/ui/dataflow/protocols.md)
    - [Inkomende gegevens activeren om klantprofielen te vullen](tutorials/ui/profile.md)
    - [Accounts en gegevensstromen bewaken](tutorials/ui/monitor.md)
+   - [Accounts verwijderen](tutorials/ui/delete-accounts.md)
    - [Gegevensstromen verwijderen](tutorials/ui/delete.md)
 - [Meldingen voor stroomuitvoering](notifications.md)
 - [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
