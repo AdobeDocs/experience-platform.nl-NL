@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: 801da8a705360688f230eae5772a8bed9a1e856e
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '656'
 ht-degree: 3%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 3%
 Updates voor bestaande functies in Adobe Experience Platform:
 
 * [[!DNL Segmentation Service]](#segmentation)
-* [[!DNL-beslissingsservice]](#decisioning)
-* [[!DNL-bronnen]](#sources)
-* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](#xdm)
+* [[!DNL Decisioning Service]](#decisioning)
+* [[!DNL Sources]](#sources)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
 
 ## [!DNL Segmentation Service] {#segmentation}
 
@@ -56,8 +56,6 @@ Adobe Experience Platform [!DNL Decisioning Service] biedt de mogelijkheid om pr
 **Bekende problemen**
 
 * Geen.
-
-Zie het overzicht [van de Dienst van het](../../decisioning-service/home.md) Beslissen voor een volledige inleiding aan de dienst.
 
 ## [!DNL Sources] {#sources}
 
