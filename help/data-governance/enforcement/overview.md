@@ -5,9 +5,9 @@ title: Overzicht van beleidshandhaving
 topic: enforcement
 description: Zodra de etiketten van het gegevensgebruik op de datasets van Adobe Experience Platform zijn toegepast, en het beleid van het gegevensgebruik voor marketing acties tegen die etiketten is bepaald, staat de mogelijkheden van het Beleid van Gegevens u toe om dat beleid te handhaven en gegevensverrichtingen te verhinderen die beleidsschendingen vormen. Er zijn twee methodes van beleidshandhaving die door de eigenschappen van het Beleid van Gegevens op Platform, op API-Gebaseerde handhaving en automatische handhaving worden verstrekt.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: 83f1392ffab3571ebd91325123fbe7095ad59e28
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -29,4 +29,4 @@ Zie de zelfstudie over [beleidshandhaving](api-enforcement.md) voor stappen over
 
 Bepaalde toepassingen die bovenop [!DNL Experience Platform] (zoals [!DNL Real-time Customer Data Platform]) worden gebouwd verstrekken automatische handhaving voor het beleid van het gegevensgebruik. Elke toepassing handhaaft zijn eigen methode om beleidsschendingen te onderzoeken en stappen te verstrekken om kwesties op te lossen.
 
-Raadpleeg de documentatie bij de [!DNL Platform]toepassing die u gebruikt voor meer informatie over de automatische handhaving van het gegevensgebruiksbeleid. Voor informatie over automatische beleidshandhaving in Echt - tijd CDP, gelieve te verwijzen naar het overzicht [van het Beheer van Gegevens CDP in](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)real time.
+De automatische beleidshandhaving in Realtime CDP hefboomwerkingen gegevenslijn, gegevensclassificatie, en de mogelijkheden van het beleidsbeheer om beleidsschendingen te evalueren en te oppervlakte. Raadpleeg het [Real-time CDP-overzicht](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) voor gegevensbeheer voor meer informatie.
