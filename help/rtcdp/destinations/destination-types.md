@@ -2,12 +2,12 @@
 keywords: destinations;destination;destination types
 title: Typen bestemmingen en categorieën
 seo-title: Typen bestemmingen en categorieën
-description: 'In het Platform van de Gegevens van de Klant van Adobe in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen. '
-seo-description: In het Platform van de Gegevens van de Klant van Adobe in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe. Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen.
+description: 'In het Platform van de Gegevens van de Klant van Adobe in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe. Experience Platform Launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. '
+seo-description: In het Platform van de Gegevens van de Klant van Adobe in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe. Experience Platform Launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen.
 translation-type: tm+mt
-source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
+source-git-commit: e6276eac05f0a20a668051034e83831002a464f0
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -49,13 +49,13 @@ In de onderstaande video worden de bijzonderheden van de twee soorten doelen uit
 
 ### Extensies {#extensions}
 
-Adobe In real time CDP hefboomwerkingen de macht en de flexibiliteit van Experience Platform Launch om de uitbreidingen van de Lancering in de Adobe in real time CDP interface te omvatten.
+Adobe In real time CDP hefboomwerkingen de macht en de flexibiliteit van Adobe Experience Platform Launch om de uitbreidingen van de Lancering van het Platform in de Adobe in real time CDP interface te omvatten.
 
 >[!TIP]
 >
->Zie het overzicht [Extensies](/help/rtcdp/destinations/experience-platform-launch-extensions.md)starten voor meer informatie over extensies van Experience Platforms Launch, waaronder gebruiksgevallen en het zoeken van deze extensies in de interface.
+>Zie het overzicht [](/help/rtcdp/destinations/experience-platform-launch-extensions.md)van Adobe Experience Platform Launch-extensies voor meer informatie over Adobe Experience Platform Launch-extensies, zoals use cases en hoe u deze kunt vinden in de interface.
 
-Start extensies om onbewerkte gebeurtenisgegevens door te sturen naar verschillende typen doelen. Beschouw extensies als een **type bestemming voor doorsturen** van gebeurtenissen. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Gegineerde personalisatieuitbreiding](/help/rtcdp/destinations/gainsight-extension.md) of de [Bevestiging Stem van de uitbreiding](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)van de Klant.
+Platform Start extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. Beschouw extensies als een **type bestemming voor doorsturen** van gebeurtenissen. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Gegineerde personalisatieuitbreiding](/help/rtcdp/destinations/gainsight-extension.md) of de [Bevestiging Stem van de uitbreiding](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)van de Klant.
 
 ![Extensies van Experience Platforms Launch vergeleken met andere bestemmingen](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
