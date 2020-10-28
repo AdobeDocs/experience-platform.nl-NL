@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;updates;
 solution: Experience Platform
 title: Updates van Mixernamen
 topic: overview
 description: Een lijst met recente wijzigingen in de naam van een XDM-mix.
 translation-type: tm+mt
-source-git-commit: 0f36cf30e94c53aad8cdd11174a3656fda32d961
+source-git-commit: 4f50926a9c5bc02255bd62c51cca13fc9094a9e8
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,6 @@ In de volgende tabel worden de bestaande mix beschreven die is bijgewerkt, samen
 
 | Vorige naam | Bijgewerkte naam |
 | --- | --- |
-| [!UICONTROL Consumer ExperienceEvent-mix] | [!UICONTROL Informatie over inhoudsverbruik] |
 | [!UICONTROL Geniet van privacymix voor gebeurtenissen] | [!UICONTROL Privacy-details] |
 | [!UICONTROL Toepassingsgegevens van ExperienceEvent] | [!UICONTROL Toepassingsdetails] |
 | [!UICONTROL Meer informatie over het kanaal ExperienceEvent] | [!UICONTROL Kanaaldetails] |
@@ -44,7 +43,7 @@ In de volgende tabel worden de bestaande mix beschreven die is bijgewerkt, samen
 | [!UICONTROL Profieltelefoons] | [!UICONTROL Telefoonnummer - details] |
 | [!UICONTROL Details van voorkeuren voor profiel] | [!UICONTROL Voorkeursdetails] |
 | [!UICONTROL Profielprivacy] | [!UICONTROL Privacy-details] |
-| [!UICONTROL Pushdetails profiel] | [!UICONTROL Details pushmelding] |
+| [!UICONTROL Pushdetails profiel] | [!UICONTROL Tokengegevens pushmelding] |
 | [!UICONTROL Profielsegmentatie] | [!UICONTROL Details segmentlidmaatschap] |
 | [!UICONTROL Profielabonnementen] | [!UICONTROL Abonnementsgegevens] |
 | [!UICONTROL Profielwerkdetails] | [!UICONTROL Contactgegevens werken] |
