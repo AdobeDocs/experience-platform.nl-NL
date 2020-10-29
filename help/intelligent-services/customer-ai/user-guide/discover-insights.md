@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
 solution: Experience Platform
 title: Informatie over inzichten met Customer AI
 topic: Discovering insights
-description: Klantenservice AI biedt marketers de mogelijkheid om Adobe Sensei te gebruiken om te anticiperen op wat uw klanten de volgende actie zullen gaan ondernemen. AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, het kiezen van een algoritme, een opleiding, of plaatsing.
+description: Dit document fungeert als hulpmiddel bij de interactie met de inzichten van serviceversies in de Intelligent Services Customer AI-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 0b92346065b7c9615d8aef4c9b13c84e0383b4b9
 workflow-type: tm+mt
-source-wordcount: '1125'
+source-wordcount: '1389'
 ht-degree: 0%
 
 ---
@@ -48,15 +48,22 @@ Vervolgens wordt de pagina met inzichten voor die service-instantie weergegeven,
 
 ### Details van serviceinstantie
 
-Er zijn twee manieren om de details van de de dienstinstantie te bekijken, eerste is van het dashboard en tweede van binnen de de dienstinstantie.
+Er zijn twee manieren om de details van de de dienstinstantie te bekijken: van het dashboard of in de service-instantie.
 
-Als u details wilt weergeven vanuit het dashboard, klikt u op een servicecontainer waarbij de hyperlink die aan de naam is gekoppeld, wordt vermeden. Hierdoor wordt een rechterspoor geopend dat aanvullende details biedt zoals de beschrijving, de scorefrequentie, het voorspellingsdoel en de in aanmerking komende bevolking. Daarnaast kunt u desgewenst het exemplaar bewerken en verwijderen door op **[!UICONTROL Bewerken]** of **[!UICONTROL Verwijderen]** te klikken.
+Om een overzicht van de details van de de dienstinstantie binnen het dashboard te bekijken, selecteer een container van de de dienstinstantie, vermijdend de hyperlink die aan de naam in bijlage is. Dit opent een rechterspoor dat extra details verstrekt. De besturingselementen bevatten het volgende:
 
-![rechterspoor](../images/insights/success-run.png)
+- **[!UICONTROL Bewerken]**: Als u **[!UICONTROL Bewerken]** selecteert, kunt u een bestaande service-instantie wijzigen. U kunt de naam, de beschrijving en de scorefrequentie van de instantie bewerken.
+- **[!UICONTROL Klonen]**: Als u **[!UICONTROL Klonen]** selecteert, wordt de momenteel geselecteerde service-instantie gekopieerd. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
+- **[!UICONTROL Verwijderen]**: U kunt een de dienstinstantie, met inbegrip van om het even welke historische looppas schrappen.
+- **[!UICONTROL Gegevensbron]**: Een koppeling naar de gegevensset die door dit exemplaar wordt gebruikt.
+- **[!UICONTROL Uitvoerfrequentie]**: Hoe vaak en wanneer een scoring wordt uitgevoerd.
+- **[!UICONTROL Score-definitie]**: Een snel overzicht van het doel u voor deze instantie vormde.
+
+![](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
->Als een scoring mislukt, wordt een foutbericht weergegeven. Het foutbericht wordt weergegeven onder *Laatste run details* in de rechterrail die alleen zichtbaar is voor mislukte run.
+>Als een scoring mislukt, wordt een foutbericht weergegeven. Het foutbericht wordt weergegeven onder **Laatste run details** in de rechterrail die alleen zichtbaar is voor mislukte run.
 
 ![bericht voor mislukte uitvoering](../images/insights/failed-run.png)
 
@@ -72,7 +79,7 @@ Als u een instantie wilt bewerken, klikt u op **[!UICONTROL Bewerken]** in de na
 
 ![Klik op de knop Bewerken](../images/insights/edit-button.png)
 
-Het dialoogvenster Bewerken wordt geopend, waarin u de *beschrijving* en *scorefrequentie* van de instantie kunt bewerken. Klik in de rechterbenedenhoek op **[!UICONTROL Bewerken]** om de wijzigingen te bevestigen en het dialoogvenster te sluiten.
+Het dialoogvenster Bewerken wordt weergegeven. In dit dialoogvenster kunt u de naam, beschrijving, status en scorefrequentie van de instantie bewerken. Als u uw wijzigingen wilt bevestigen en het dialoogvenster wilt sluiten, selecteert u **[!UICONTROL Opslaan]** in de rechterbenedenhoek.
 
 ![popup bewerken](../images/insights/edit-instance.png)
 
@@ -80,15 +87,16 @@ Het dialoogvenster Bewerken wordt geopend, waarin u de *beschrijving* en *scoref
 
 De knop **[!UICONTROL Meer handelingen]** bevindt zich in de navigatie rechtsboven naast **[!UICONTROL Bewerken]**. Klik op **[!UICONTROL Meer handelingen]** om een vervolgkeuzelijst te openen waarin u een van de volgende bewerkingen kunt selecteren:
 
+- **[!UICONTROL Klonen]**: Als u **[!UICONTROL Klonen]** selecteert, wordt de instelling van de service-instantie gekopieerd. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
 - **[!UICONTROL Verwijderen]**: Hiermee wordt de instantie verwijderd.
-- **[!UICONTROL Toegangscores]**: Als u op *Toegangsscores* klikt, wordt een dialoogvenster geopend met een koppeling naar de [downloadscores voor de zelfstudie van Customer AI](./download-scores.md) . Het dialoogvenster bevat ook de id van de gegevensset die is vereist voor het uitvoeren van API-aanroepen.
+- **[!UICONTROL Toegangscores]**: Als u **[!UICONTROL Toegangsscores]** selecteert, wordt een dialoogvenster geopend met een koppeling naar de [downloadscores voor de zelfstudie van Klant AI](./download-scores.md) . Het dialoogvenster bevat ook de id van de gegevensset die is vereist voor het uitvoeren van API-aanroepen.
 - **[!UICONTROL Runtimegeschiedenis]** weergeven: Er wordt een dialoogvenster weergegeven met een lijst van alle scores die zijn gekoppeld aan de service-instantie.
 
 ![meer acties](../images/insights/more-actions.png)
 
-## Scoreoverzicht {#scoring-summary}
+## Overzicht van scores {#scoring-summary}
 
-Scoreoverzicht geeft het totale aantal profielen weer dat wordt gescoord en categoriseert deze in emmers met een hoge, gemiddelde en lage dichtheid. De dichtheidsemmers worden bepaald op basis van het score-bereik, laag is minder dan 24, gemiddeld 25 tot 74 en hoog is boven 74. Elk emmertje heeft een kleur die overeenkomt met de legenda.
+In het overzicht met de scores wordt het totale aantal profielen weergegeven met een score en worden de profielen ingedeeld in emmers met een hoge, gemiddelde en lage dichtheid. De dichtheidsemmers worden bepaald op basis van het score-bereik, laag is minder dan 24, gemiddeld 25 tot 74 en hoog is boven 74. Elk emmertje heeft een kleur die overeenkomt met de legenda.
 
 >[!NOTE]
 >
@@ -96,9 +104,13 @@ Scoreoverzicht geeft het totale aantal profielen weer dat wordt gescoord en cate
 
 ![overzicht van scores](../images/insights/scoring-summary.png)
 
+U kunt over om het even welke kleur op de ring houden om extra informatie, zoals een percentage en totaal aantal profielen te bekijken die tot een emmertje behoren.
+
+![](../images/insights/scoring-ring.png)
+
 ## Verdeling van scores
 
-De **[!UICONTROL Verspreiding van Scores]** kaart geeft u een visuele samenvatting van de bevolking die op de score wordt gebaseerd. De kleuren die u in de *Verdeling van Scores* kaart ziet vertegenwoordigen het type van geproduceerde aandrijvingsscore.
+De **[!UICONTROL Verspreiding van Scores]** kaart geeft u een visuele samenvatting van de bevolking die op de score wordt gebaseerd. De kleuren die u in de [!UICONTROL Verdeling van Scores] kaart ziet vertegenwoordigen het type van geproduceerde aandrijvingsscore. Als u de muis boven een van de scoringdistributies houdt, wordt het exacte aantal dat bij die distributie hoort, weergegeven.
 
 ![verdeling van scores](../images/insights/distribution-of-scores.png)
 
@@ -108,9 +120,21 @@ Voor elk scoreemmertje, wordt een kaart geproduceerd die de hoogste 10 invloedri
 
 ![Influentiële factoren](../images/insights/influential-factors.png)
 
+### Influentiefactor-drilldowns
+
+Als u de gegevens boven een van de invloedrijke factoren houdt, worden de gegevens verder uitgesplitst. U krijgt een overzicht van de redenen waarom bepaalde profielen tot een eigenschapsemmer behoren. Afhankelijk van de factor, kunt u aantal, categorische, of booleaanse waarden worden gegeven. In het onderstaande voorbeeld worden categorische waarden per regio weergegeven.
+
+![drilldown screenshot](../images/insights/drilldown.png)
+
+Bovendien, gebruikend boor-downs, kunt u een distributiefactor vergelijken als het in twee of meer aandrijvingsemmers voorkomt en specifiekere segmenten tot stand brengen met deze waarden. In het volgende voorbeeld wordt het eerste gebruiksgeval geïllustreerd:
+
+![](../images/insights/drilldown-compare.png)
+
+U ziet dat profielen met een lage conversiemogelijkheid waarschijnlijk geen recent bezoek hebben gebracht aan de webpagina&#39;s van adobe.com. De factor &quot;Dagen sinds laatste webVisit&quot; heeft slechts een dekking van 8%, vergeleken met 26% in profielen met gemiddelde neiging. Met deze getallen kunt u de verdeling binnen elk emmertje voor de factor vergelijken. Deze informatie kan worden gebruikt om te concluderen dat de recentie in webbezoek niet zo invloedrijk is in het emmertje met lage dichtheid als in het emmer met gemiddelde dichtheid.
+
 ### Een segment maken
 
-Als u klikt op de knop Segment **** maken in een van de emmers voor Laag, Normaal en Hoog, wordt u omgeleid naar de segmentbuilder.
+Als u de knop Segment **** maken in een van de emmers voor lage, gemiddelde en hoge dichtheid selecteert, wordt u omgeleid naar de segmentbuilder.
 
 >[!NOTE]
 >
