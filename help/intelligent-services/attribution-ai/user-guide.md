@@ -5,9 +5,9 @@ title: Gebruikershandleiding voor Attribution AI
 topic: User guide
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 4c1aa1fc5ca1f335dedba47623709d5d2ce12c6e
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1746'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,29 @@ Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **[!UICONTROL
 
 ![Toegang tot uw exemplaar](./images/user-guide/open_Attribution_ai.png)
 
-De de dienstpagina van de Attribution AI verschijnt. Deze pagina bevat een overzicht van de service-instanties van Attribution AI en informatie over deze instanties, zoals de naam van de instantie, conversiegebeurtenissen, hoe vaak de instantie wordt uitgevoerd en de status van de laatste update. Klik op **Instantie** maken om te beginnen.
+De de dienstpagina van de Attribution AI verschijnt. Deze pagina bevat een overzicht van de service-instanties van Attribution AI en informatie over deze instanties, zoals de naam van de instantie, conversiegebeurtenissen, hoe vaak de instantie wordt uitgevoerd en de status van de laatste update.
+
+U kunt de **[!UICONTROL Totale die omzettingsgebeurtenissen vinden metrisch in de bodem-juiste kant van de]** Create instantiecontainer **** wordt gevestigd. Deze metrisch spoor het totale aantal omzettingsgebeurtenissen door Attribution AI voor het huidige kalenderjaar met inbegrip van alle zandbakmilieu&#39;s en om het even welke geschrapte de dienstinstanties worden gemeten die.
+
+![](./images/user-guide/total_conversions.png)
+
+De instanties van de dienst kunnen worden uitgegeven, worden gekloond, en worden geschrapt door de controles op de rechterkant van UI te gebruiken. Om deze controles te tonen, selecteer een geval van uw bestaande instanties **[!UICONTROL van de]** Dienst. De besturingselementen bevatten de volgende informatie:
+
+- **[!UICONTROL Bewerken]**: Als u **[!UICONTROL Bewerken]** selecteert, kunt u een bestaande service-instantie wijzigen. U kunt de naam, beschrijving, status en scores van de instantie bewerken.
+- **[!UICONTROL Klonen]**: Als u **[!UICONTROL Klonen]** selecteert, wordt de geselecteerde service-instantie gekopieerd. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
+- **[!UICONTROL Verwijderen]**: U kunt een de dienstinstantie met inbegrip van om het even welke historische looppas schrappen.
+- **[!UICONTROL Gegevensbron]**: Een verbinding aan de dataset die door dit geval wordt gebruikt.
+- **[!UICONTROL Details]** laatste uitvoering: Dit wordt alleen weergegeven wanneer een run mislukt. Hier wordt informatie weergegeven over waarom de uitvoering is mislukt, zoals foutcodes.
+
+![](./images/user-guide/side_panel.png)
+
+- **[!UICONTROL Conversiegebeurtenissen]**: Een kort overzicht van de conversiegebeurtenissen die voor deze instantie zijn geconfigureerd.
+- **[!UICONTROL Venster]** Opzoeken: Het tijdframe dat u hebt gedefinieerd, geeft aan hoeveel dagen voor de conversiegebeurtenis de aanraakpunten worden opgenomen.
+- **[!UICONTROL Aanraakpunten]**: Een lijst met alle aanraakpunten die u tijdens het maken van deze instantie hebt gedefinieerd.
+
+![](./images/user-guide/side_panel_2.png)
+
+Selecteer **[!UICONTROL instantie]** maken om te beginnen.
 
 ![Instantie maken](./images/user-guide/landing_page.png)
 
@@ -133,7 +155,7 @@ Als u alle benodigde aanraakpunten hebt gedefinieerd, schuift u omhoog en klikt 
 
 ## Geavanceerde instellingen voor training en scores
 
-De laatste pagina in Attribution AI is de pagina *Geavanceerd* die wordt gebruikt voor het instellen van training en scoring.
+De laatste pagina in Attribution AI is de pagina **[!UICONTROL Geavanceerd]** die wordt gebruikt voor het instellen van training en scoring.
 
 ![nieuwe pagina, geavanceerd](./images/user-guide/advanced_settings.png)
 
@@ -152,6 +174,12 @@ Klik op het klokpictogram om de tijd van de dag te wijzigen die u wilt scoren. V
 >Het kan tot 24 uur duren voor elk scoringsproces wordt voltooid.
 
 ![klokpictogram](./images/user-guide/time_of_day.png)
+
+### Aanvullende kolommen met scoregegevens (optioneel)
+
+Door gebrek, wordt een score dataset gecreeerd voor elke de dienstinstantie in een standaardschema. U kunt extra kolommen toevoegen op basis van uw Conversion-gebeurtenis en aanraakpuntconfiguraties aan de uitvoer van de score-dataset. Begin door kolommen te selecteren uit uw inputdataset, kunt u hen dan slepen en laten vallen om de orde te veranderen door de linkermuisknoop over het hamburgerpictogram te onderdrukken.
+
+![optellen van kolom met scoregegevens](./images/user-guide/Add-score-dataset.png)
 
 ### Regionaal modelleren (optioneel) {#region-based-modeling-optional}
 
@@ -189,7 +217,7 @@ Als u uw trainingsvenster hebt geselecteerd, klikt u op **[!UICONTROL Voltooien]
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een de dienstinstantie in Attribution AI gecreeerd. Zodra de instantie het scoren heeft gebeëindigd (sta tot 24 uren toe), bent u bereid om Attribution AI inzichten [te](./discover-insights.md)ontdekken. Als u de resultaten van uw scores wilt downloaden, gaat u ook naar de documentatie over het [downloaden van onbewerkte scores](./download-scores.md) .
+Door deze zelfstudie te volgen, hebt u met succes een de dienstinstantie in Attribution AI gecreeerd. Zodra de instantie het scoren heeft gebeëindigd (sta tot 24 uren toe), bent u bereid om Attribution AI inzichten [te](./discover-insights.md)ontdekken. Als u de resultaten van uw scores wilt downloaden, gaat u ook naar de documentatie voor [downloadscores](./download-scores.md) .
 
 ## Aanvullende bronnen
 
