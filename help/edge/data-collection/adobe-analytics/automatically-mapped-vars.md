@@ -5,9 +5,9 @@ description: Leer welke Variabelen automatisch in Adobe Analytics met het Web SD
 seo-description: Leer welke Variabelen automatisch in Adobe Analytics met het Web SDK van het Experience Platform worden toegewezen
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 8e3bef77b84e40c836a6279a9a3e3901565c9920
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '681'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,12 @@ Hieronder ziet u een lijst met variabelen die de Adobe Experience Platform [!DNL
 | `commerce.checkouts.value` | `events` | De vraagparameter EVENT_LIST_FULL van de AppMeasurement van de vraag met omzetting COMMERCE_SC_CHECKOUT, gebruikend afbakening `,`. |
 | `commerce.productListAdds.value` | `events` | De vraagparameter EVENT_LIST_FULL van AppMeasurement met omzetting COMMERCE_SC_ADD, gebruikend afbakening `,`. |
 | `commerce.productListRemovals.value` | `events` | De vraagparameter EVENT_LIST_FULL van AppMeasurement met omzetting COMMERCE_SC_REMOVE, gebruikend afbakening `,`. |
-| `commerce.productViews.id` | `events` | `prodView` Serienummering van gebeurtenissen. |
-| `commerce.productListOpens.id` | `events` | `scOpen` Serienummering van gebeurtenissen. |
-| `commerce.productListViews.id` | `events` | `scView` Serienummering van gebeurtenissen. |
-| `commerce.productListAdds.id` | `events` | `scAdd` Serienummering van gebeurtenissen. |
-| `commerce.productListRemovals.id` | `events` | `scRemove` Serienummering van gebeurtenissen. |
+| `commerce.productViews.id` | `events` | (Optioneel) `prodView` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
+| `commerce.productListOpens.id` | `events` | (Optioneel) `scOpen` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
+| `commerce.productListViews.id` | `events` | (Optioneel) `scView` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
+| `commerce.productListAdds.id` | `events` | (Optioneel) `scAdd` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
+| `commerce.productListRemovals.id` | `events` | (Optioneel) `scRemove` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
+| `commerce.checkouts.id` | `events` | (Optioneel) `scCheckout` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
 | `commerce.checkouts.id` | `events` | `scCheckout` Serienummering van gebeurtenissen. |
 | `device.screenHeight` | `s` | Schermresolutie toepassingsparameters. |
 | `device.screenWidth` | `s` | Schermresolutie toepassingsparameters. |
