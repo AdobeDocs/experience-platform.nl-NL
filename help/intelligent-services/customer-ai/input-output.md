@@ -5,9 +5,9 @@ title: Invoer en uitvoer van AI van de klant
 topic: Getting started
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in de AI van de Klant worden gebruikt.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 0f45f12ca4f43de9489eb609fd541aa2be3bae78
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ AI van de Klant gebruikt de gegevens van de Gebeurtenis van de Ervaring van de C
 
 Klanten-AI hebben historische gegevens nodig voor modeltraining, maar de hoeveelheid vereiste gegevens is gebaseerd op twee sleutelelementen: resultaatvenster en in aanmerking komende populatie.
 
-Standaard zoekt de AI van de Klant naar een gebruiker die activiteit heeft gehad in de laatste 120 dagen als er tijdens de toepassingsconfiguratie geen definitie van de in aanmerking komende populatie is opgegeven. Naast de vereiste minimale hoeveelheid gegevens van de Consumer Experience Event, heeft de AI van de Klant ook een minimale hoeveelheid succesgebeurtenissen nodig op basis van een voorspelde doeldefinitie. Momenteel heeft de AI van de Klant minimaal 500 succesgebeurtenissen nodig.
+Standaard zoekt de AI van de Klant naar een gebruiker die activiteit heeft gehad in de laatste 120 dagen als er tijdens de toepassingsconfiguratie geen definitie van de in aanmerking komende populatie is opgegeven. Daarnaast vereist de AI van de Klant minimaal 500 gekwalificeerde en 500 niet-kwalificerende gebeurtenissen (in totaal 1000) van historische gegevens op basis van een voorspelde doeldefinitie.
 
 In de volgende voorbeelden wordt een eenvoudige formule gebruikt om u te helpen de minimale vereiste hoeveelheid gegevens te bepalen. Als u meer dan de minimumvereiste hebt, zal uw model waarschijnlijk nauwkeurigere resultaten verstrekken. Als u minder dan het vereiste minimumbedrag hebt, zal het model ontbreken aangezien er geen voldoende hoeveelheid gegevens voor modelopleiding is.
 
