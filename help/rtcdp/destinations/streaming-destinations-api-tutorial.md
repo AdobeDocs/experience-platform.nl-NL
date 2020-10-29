@@ -5,9 +5,9 @@ title: Verbinding maken met streaming doelen en gegevens activeren
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 51dd255156229adcb80c2a04aa1ccd5b01208a66
+source-git-commit: 34bf1c8aba555c5c8a527f4c0162cec4535b1dcf
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1871'
 ht-degree: 0%
 
 ---
@@ -231,6 +231,10 @@ POST /connections
 
 **Verzoek**
 
+>[!IMPORTANT]
+>
+>Het onderstaande voorbeeld bevat vooraf ingestelde codeopmerkingen `//`. Deze commentaren benadrukken waar de verschillende waarden voor verschillende het stromen bestemmingen moeten worden gebruikt. Verwijder de opmerkingen voordat u het fragment gebruikt.
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -240,7 +244,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "Connection for Amazon Kinesis/ Azure Event Hubs",
-    "description": "your company's holiday campaign",
+    "description": "summer advertising campaign",
     "connectionSpec": {
         "id": "{_CONNECTION_SPEC_ID}",
         "version": "1.0"
@@ -289,6 +293,10 @@ POST /targetConnections
 ```
 
 **Verzoek**
+
+>[!IMPORTANT]
+>
+>Het onderstaande voorbeeld bevat vooraf ingestelde codeopmerkingen `//`. Deze commentaren benadrukken waar de verschillende waarden voor verschillende het stromen bestemmingen moeten worden gebruikt. Verwijder de opmerkingen voordat u het fragment gebruikt.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
