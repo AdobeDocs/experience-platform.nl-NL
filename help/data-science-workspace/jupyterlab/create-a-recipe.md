@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst, zult u een machine het leren model gebruikend een malplaatje binnen Notitieboekje JupyterLab creëren. Vervolgens gebruikt u de workflow voor het maken van een notebook naar het recept in JupyterLab om een recept te maken in de Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: adaa7fbaf78a37131076501c21bf18559c17ed94
 workflow-type: tm+mt
-source-wordcount: '2335'
+source-wordcount: '2350'
 ht-degree: 0%
 
 ---
@@ -67,10 +67,10 @@ Nu u de basisbeginselen van de [!DNL JupyterLab] laptopomgeving kent, kunt u beg
 
 ### Vereisten, bestand {#requirements-file}
 
-Het bestand requirements wordt gebruikt om extra bibliotheken te declareren die u in het recept wilt gebruiken. U kunt het versienummer specificeren als er een gebiedsdeel is. Ga naar https://anaconda.org als u meer bibliotheken wilt zoeken. De lijst met hoofdbibliotheken die al worden gebruikt, bevat:
+Het bestand requirements wordt gebruikt om extra bibliotheken te declareren die u in het recept wilt gebruiken. U kunt het versienummer specificeren als er een gebiedsdeel is. Ga naar [anaconda.org](https://anaconda.org)om naar extra bibliotheken te zoeken. Ga naar [Conda voor meer informatie over het opmaken van het bestand met vereisten](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). De lijst met hoofdbibliotheken die al worden gebruikt, bevat:
 
 ```JSON
-python=3.5.2
+python=3.6.7
 scikit-learn
 pandas
 numpy
@@ -79,7 +79,7 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->Bibliotheken of specifieke versies die u toevoegt, zijn mogelijk niet compatibel met de bovenstaande bibliotheken.
+>Bibliotheken of specifieke versies die u toevoegt, zijn mogelijk niet compatibel met de bovenstaande bibliotheken. Als u ervoor kiest om handmatig een omgevingsbestand te maken, mag het `name` veld niet worden overschreven.
 
 ### Configuratiebestanden {#configuration-files}
 
@@ -148,30 +148,32 @@ df = pd.read_json(data)
 
 Uw gegevens bevinden zich nu in het dataframe-object en kunnen in de [volgende sectie](#data-preparation-and-feature-engineering)worden geanalyseerd en gemanipuleerd.
 
-### Van SDK voor gegevenstoegang (afgekeurd)
+### Van Platform SDK
 
->[!CAUTION]
->
-> `data_access_sdk_python` wordt niet meer aanbevolen. Zie [Gegevenstoegangscode converteren naar Platform SDK](../authoring/platform-sdk.md) voor een handleiding over het gebruik van de `platform_sdk` gegevenslader.
+U kunt gegevens laden met de SDK van het Platform. De bibliotheek kan boven aan de pagina worden geïmporteerd door de volgende regel op te nemen:
 
-Gebruikers kunnen gegevens laden met de SDK voor gegevenstoegang. De bibliotheek kan boven aan de pagina worden geïmporteerd door de volgende regel op te nemen:
-
-`from data_access_sdk_python.reader import DataSetReader`
+`from platform_sdk.dataset_reader import DatasetReader`
 
 Wij gebruiken dan de `load()` methode om de trainingsdataset van `trainingDataSetId` zoals die in ons configuratie (`recipe.conf`) dossier wordt geplaatst te pakken.
 
 ```PYTHON
-prodreader = DataSetReader(client_id=configProperties['ML_FRAMEWORK_IMS_USER_CLIENT_ID'],
-                           user_token=configProperties['ML_FRAMEWORK_IMS_TOKEN'],
-                           service_token=configProperties['ML_FRAMEWORK_IMS_ML_TOKEN'])
+def load(config_properties):
+    print("Training Data Load Start")
 
-df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
-                     ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
+    #########################################
+    # Load Data
+    #########################################    
+    client_context = get_client_context(config_properties)
+    
+    dataset_reader = DatasetReader(client_context, config_properties['trainingDataSetId'])
+    
+    timeframe = config_properties.get("timeframe")
+    tenant_id = config_properties.get("tenant_id")
 ```
 
 >[!NOTE]
 >
->Zoals vermeld in de sectie [van het Dossier van de](#configuration-files)Configuratie, worden de volgende configuratieparameters geplaatst voor u wanneer u tot gegevens van toegang hebt [!DNL Experience Platform]:
+>Zoals vermeld in de sectie [van het Dossier van de](#configuration-files)Configuratie, worden de volgende configuratieparameters geplaatst voor u wanneer u tot gegevens van Experience Platform toegang hebt gebruikend `client_context`:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -227,46 +229,51 @@ De `load()` functie zou met de `train` en `val` dataset als output moeten voltoo
 De procedure voor het laden van gegevens voor scoring is vergelijkbaar met de trainingsgegevens voor het laden van de `split()` functie. We gebruiken de SDK voor gegevenstoegang om gegevens te laden uit de `scoringDataSetId` gegevens in ons `recipe.conf` bestand.
 
 ```PYTHON
-def load(configProperties):
+def load(config_properties):
 
     print("Scoring Data Load Start")
 
     #########################################
     # Load Data
     #########################################
-    prodreader = DataSetReader(client_id=configProperties['ML_FRAMEWORK_IMS_USER_CLIENT_ID'],
-                               user_token=configProperties['ML_FRAMEWORK_IMS_TOKEN'],
-                               service_token=configProperties['ML_FRAMEWORK_IMS_ML_TOKEN'])
+    client_context = get_client_context(config_properties)
 
-    df = prodreader.load(data_set_id=configProperties['scoringDataSetId'],
-                         ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
+    dataset_reader = DatasetReader(client_context, config_properties['scoringDataSetId'])
+    timeframe = config_properties.get("timeframe")
+    tenant_id = config_properties.get("tenant_id")
 ```
 
 Nadat de gegevens zijn geladen, worden de gegevens voorbereid en worden de functies verbeterd.
 
 ```PYTHON
-#########################################
-# Data Preparation/Feature Engineering
-#########################################
-df.date = pd.to_datetime(df.date)
-df['week'] = df.date.dt.week
-df['year'] = df.date.dt.year
+    #########################################
+    # Data Preparation/Feature Engineering
+    #########################################
+    if '_id' in dataframe.columns:
+        #Rename columns to strip tenantId
+        dataframe = dataframe.rename(columns = lambda x : str(x)[str(x).find('.')+1:])
+        #Drop id, eventType and timestamp
+        dataframe.drop(['_id', 'eventType', 'timestamp'], axis=1, inplace=True)
 
-df = pd.concat([df, pd.get_dummies(df['storeType'])], axis=1)
-df.drop('storeType', axis=1, inplace=True)
-df['isHoliday'] = df['isHoliday'].astype(int)
+    dataframe.date = pd.to_datetime(dataframe.date)
+    dataframe['week'] = dataframe.date.dt.week
+    dataframe['year'] = dataframe.date.dt.year
 
-df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
-df['weeklySalesLag'] = df.shift(45)['weeklySales']
-df['weeklySalesDiff'] = (df['weeklySales'] - df['weeklySalesLag']) / df['weeklySalesLag']
-df.dropna(0, inplace=True)
+    dataframe = pd.concat([dataframe, pd.get_dummies(dataframe['storeType'])], axis=1)
+    dataframe.drop('storeType', axis=1, inplace=True)
+    dataframe['isHoliday'] = dataframe['isHoliday'].astype(int)
 
-df = df.set_index(df.date)
-df.drop('date', axis=1, inplace=True)
+    dataframe['weeklySalesAhead'] = dataframe.shift(-45)['weeklySales']
+    dataframe['weeklySalesLag'] = dataframe.shift(45)['weeklySales']
+    dataframe['weeklySalesDiff'] = (dataframe['weeklySales'] - dataframe['weeklySalesLag']) / dataframe['weeklySalesLag']
+    dataframe.dropna(0, inplace=True)
 
-print("Scoring Data Load Finish")
+    dataframe = dataframe.set_index(dataframe.date)
+    dataframe.drop('date', axis=1, inplace=True)
 
-return df
+    print("Scoring Data Load Finish")
+
+    return dataframe
 ```
 
 Aangezien het doel van ons model de toekomstige wekelijkse verkoop moet voorspellen, zult u een het scoren dataset moeten creëren die wordt gebruikt om te evalueren hoe goed de voorspelling van het model presteert.
