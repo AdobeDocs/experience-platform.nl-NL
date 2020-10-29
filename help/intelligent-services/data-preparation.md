@@ -5,9 +5,9 @@ title: Gegevens voorbereiden voor gebruik in intelligente services
 topic: Intelligent Services
 description: 'Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services hefboomwerkervaringsgegevensmodel (XDM) om dit te bereiken. Specifiek, moeten alle datasets die in de Intelligente Diensten worden gebruikt] met het schema van XDM van Consumer ExperienceEvent (CEE) in overeenstemming zijn. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
 workflow-type: tm+mt
-source-wordcount: '1979'
+source-wordcount: '1882'
 ht-degree: 0%
 
 ---
@@ -276,81 +276,15 @@ Nadat de dataset wordt gecreeerd, kunt u het in het Platform UI binnen de **[!UI
 
 ![](images/data-preparation/dataset-location.png)
 
-#### Een primaire naamruimte-tag toevoegen aan de gegevensset
+#### Identiteitsvelden toevoegen aan de gegevensset
 
 >[!NOTE]
 >
 >Toekomstige versies van [!DNL Intelligent Services] zullen [Adobe Experience Platform Identity Service](../identity-service/home.md) in hun mogelijkheden voor klantidentificatie integreren. De hieronder beschreven stappen kunnen dan ook worden gewijzigd.
 
-Als u gegevens uit [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]of een andere externe bron inbrengt, dan moet u een `primaryIdentityNameSpace` markering aan de dataset toevoegen. U doet dit door een PATCH-aanvraag in te dienen bij de Catalog Service API.
+Als u gegevens van [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]of een andere externe bron inbrengt, dan hebt u de optie om een schemagebied als identiteitsgebied te plaatsen. Als u een schemaveld als een identiteitsveld wilt instellen, bekijkt u de sectie over het instellen van identiteitsvelden in de [UI-zelfstudie](../xdm/tutorials/create-schema-ui.md#identity-field) voor het maken van een schema met de Schema-editor of de [API-zelfstudie](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor).
 
 Als u gegevens uit een lokaal CSV-bestand opneemt, kunt u verdergaan met de volgende sectie over het [toewijzen en invoeren van gegevens](#ingest).
-
-Voordat u de voorbeeld-API-aanroep hieronder volgt, raadpleegt u de sectie [Aan de](../catalog/api/getting-started.md) slag in de handleiding voor ontwikkelaars van catalogi voor belangrijke informatie over vereiste koppen.
-
-**API-indeling**
-
-```http
-PATCH /dataSets/{DATASET_ID}
-```
-
-| Parameter | Beschrijving |
-| --- | --- |
-| `{DATASET_ID}` | De id van de gegevensset die u eerder hebt gemaakt. |
-
-**Verzoek**
-
-Afhankelijk van de bron waaruit u gegevens opgeeft, moet u de juiste waarden opgeven `primaryIdentityNamespace` en de juiste `sourceConnectorId` waarden opgeven in de payload van de aanvraag.
-
-In het volgende verzoek worden de juiste tagwaarden voor Audience Manager toegevoegd:
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["mcid"],
-          "sourceConnectorId": ["audiencemanager"],
-        }
-      }'
-```
-
-In het volgende verzoek worden de juiste tagwaarden voor Analytics toegevoegd:
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["aaid"],
-          "sourceConnectorId": ["analytics"],
-        }
-      }'
-```
-
->[!NOTE]
->
->Zie het overzicht [van naamruimte voor](../identity-service/namespaces.md)identiteiten voor meer informatie over het werken met naamruimten in het Platform.
-
-**Antwoord**
-
-Een succesvolle reactie keert een serie terug die identiteitskaart van de bijgewerkte dataset bevat. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden.
-
-```json
-[
-    "@/dataSets/5ba9452f7de80400007fc52a"
-]
-```
 
 #### Gegevens toewijzen en opnemen {#ingest}
 
