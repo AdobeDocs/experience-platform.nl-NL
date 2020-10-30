@@ -5,9 +5,9 @@ description: Leer welke Variabelen automatisch in Adobe Analytics met het Web SD
 seo-description: Leer welke Variabelen automatisch in Adobe Analytics met het Web SDK van het Experience Platform worden toegewezen
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: aa9789768cbcbb13a36c200ef7540c045c30a3fe
+source-git-commit: 3ed89011313006cf627945bf8c75bfd0b87a69bc
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -21,19 +21,19 @@ Hieronder ziet u een lijst met variabelen die de Adobe Experience Platform [!DNL
 | ---------- | ------------------------- | ----------------------------------------- |
 | `application.id` | `c.a.appid` | Contextgegevenstoewijzing `c.a.appid` voor AppMeasurement. |
 | `application.launches.value` | `c.a.launches` | Contextgegevenstoewijzing `c.a.launches` voor AppMeasurement. |
-| `commerce.checkouts.id` | `events` | `scCheckout` Serienummering van gebeurtenissen. |
+| `commerce.checkouts.id` | `events` | `scCheckout` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
 | `commerce.checkouts.value` | `events` | De vraagparameter EVENT_LIST_FULL van de AppMeasurement van de vraag met omzetting COMMERCE_SC_CHECKOUT, gebruikend afbakening `,`. |
 | `commerce.order.currencyCode` | `cc` | Toewijzing van de query voor de parameter CURRENCY voor AppMeasurement. |
 | `commerce.order.purchaseID` | `pi` | PURCHASEID-toewijzing voor queryparameter AppMeturement. |
-| `commerce.productListAdds.id` | `events` | `scAdd` Serienummering van gebeurtenissen. |
+| `commerce.productListAdds.id` | `events` | `scAdd` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
 | `commerce.productListAdds.value` | `events` | De vraagparameter EVENT_LIST_FULL van AppMeasurement met omzetting COMMERCE_SC_ADD, gebruikend afbakening `,`. |
-| `commerce.productListOpens.id` | `events` | `scOpen` Serienummering van gebeurtenissen. |
+| `commerce.productListOpens.id` | `events` | `scOpen` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
 | `commerce.productListOpens.value` | `events` | De vraagparameter EVENT_LIST_FULL van AppMeturement met omzetting COMMERCE_SC_OPEN, gebruikend afbakening `,`. |
-| `commerce.productListRemovals.id` | `events` | `scRemove` Serienummering van gebeurtenissen. |
+| `commerce.productListRemovals.id` | `events` | `scRemove` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
 | `commerce.productListRemovals.value` | `events` | De vraagparameter EVENT_LIST_FULL van AppMeasurement met omzetting COMMERCE_SC_REMOVE, gebruikend afbakening `,`. |
-| `commerce.productListViews.id` | `events` | `scView` Serienummering van gebeurtenissen. |
+| `commerce.productListViews.id` | `events` | `scView` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
 | `commerce.productListViews.value` | `events` | De vraagparameter EVENT_LIST_FULL van AppMeasurement met omzetting COMMERCE_SC_VIEW, gebruikend afbakening `,`. |
-| `commerce.productViews.id` | `events` | `prodView` Serienummering van gebeurtenissen. |
+| `commerce.productViews.id` | `events` | `prodView` gebeurtenisserialisatie. Als dit veld wordt uitgesloten (d.w.z. voor gebeurtenissen zonder serienummering), genereert het systeem een eigen id-waarde en wijst het deze toe aan de entiteit. |
 | `commerce.productViews.value` | `events` | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_PROD_VIEW, met behulp van scheidingsteken `,`. |
 | `commerce.purchases.value` | `events` | Toepassingsmetingqueryparameter EVENT_LIST_FULL-toewijzing met conversie COMMERCE_PURCHASE, met behulp van scheidingsteken `,`. |
 | `device.colorDepth` | `c` | Query-parameter C_COLOR voor AppMeasurement. |
