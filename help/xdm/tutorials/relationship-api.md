@@ -6,7 +6,7 @@ description: Dit document verstrekt een zelfstudie voor het bepalen van een éé
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 0%
@@ -117,7 +117,7 @@ Binnen de [!DNL Schema Registry], werken de relatiebeschrijvers gelijkaardig aan
 >
 >In tegenstelling tot het bestemmingsschema, kan het bronschema zijn primaire identiteit als verwijzingsgebied niet gebruiken.
 
-In dit leerprogramma, bevat het bestemmingsschema &quot;[!DNL Hotels]&quot;een `email` gebied dat als primaire identiteit van het schema dient, en daarom ook als zijn verwijzingsgebied zal handelen. Nochtans, heeft het bronschema &quot;[!DNL Loyalty Members]&quot;geen specifiek gebied dat als verwijzing moet worden gebruikt, en moet een nieuwe mengeling worden gegeven die een nieuw gebied aan het schema toevoegt: `favoriteHotel`.
+In dit leerprogramma, bevat het bestemmingsschema &quot;[!DNL Hotels]&quot;een `hotelId` gebied dat als primaire identiteit van het schema dient, en daarom ook als zijn verwijzingsgebied zal handelen. Nochtans, heeft het bronschema &quot;[!DNL Loyalty Members]&quot;geen specifiek gebied dat als verwijzing moet worden gebruikt, en moet een nieuwe mengeling worden gegeven die een nieuw gebied aan het schema toevoegt: `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -339,7 +339,7 @@ Een succesvolle reactie retourneert de details van het bijgewerkte schema, dat n
 
 ## Een beschrijving voor een referentie-id maken {#reference-identity}
 
-Op schemavelden moet een identiteitsreferentie-descriptor zijn toegepast als deze worden gebruikt als referentie van andere schema&#39;s in een relatie. Aangezien het `favoriteHotel` veld in &quot;[!DNL Loyalty Members]&quot; verwijst naar het `email` veld in &quot;[!DNL Hotels]&quot;, moet `email` een identiteitsbeschrijving van een referentie worden gegeven.
+Op schemavelden moet een identiteitsreferentie-descriptor zijn toegepast als deze worden gebruikt als referentie van andere schema&#39;s in een relatie. Aangezien het `favoriteHotel` veld in &quot;[!DNL Loyalty Members]&quot; verwijst naar het `hotelId` veld in &quot;[!DNL Hotels]&quot;, moet `favoriteHotel` een identiteitsbeschrijving van een referentie worden gegeven.
 
 Creeer een verwijzingsbeschrijver voor het bestemmingsschema door een verzoek van de POST aan het `/tenant/descriptors` eindpunt te doen.
 
@@ -351,7 +351,7 @@ POST /tenant/descriptors
 
 **Verzoek**
 
-Met het volgende verzoek wordt een verwijzingsdescriptor voor het `email` veld in het doelschema &quot;[!DNL Hotels]&quot; gemaakt.
+Met het volgende verzoek wordt een verwijzingsdescriptor voor het `hotelId` veld in het doelschema &quot;[!DNL Hotels]&quot; gemaakt.
 
 ```shell
 curl -X POST \
@@ -365,8 +365,8 @@ curl -X POST \
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email"
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
@@ -387,8 +387,8 @@ Een succesvolle reactie keert de details van de pas gecreëerde verwijzingsbesch
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email",
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
 }
@@ -423,7 +423,7 @@ curl -X POST \
     "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:destinationVersion": 1,
-    "xdm:destinationProperty": "/_{TENANT_ID}/email"
+    "xdm:destinationProperty": "/_{TENANT_ID}/hotelId"
   }'
 ```
 
