@@ -4,9 +4,9 @@ title: Profielvoorvertoning - Real-time API voor klantprofiel
 description: Met Adobe Experience Platform kunt u klantgegevens uit meerdere bronnen invoeren om robuuste, uniforme profielen voor individuele klanten te maken. Aangezien gegevens die voor het Profiel van de Klant in real time worden toegelaten in Platform worden opgenomen, wordt het opgeslagen binnen de gegevensopslag van het Profiel. Aangezien het aantal verslagen in de opslag van het Profiel stijgt of vermindert, wordt een steekproefbaan in werking gesteld die informatie betreffende hoeveel profielfragmenten en samengevoegde profielen in de gegevensopslag omvat. Met behulp van de profiel-API kunt u een voorvertoning weergeven van het meest recente voorbeeld en van de distributie van het lijstprofiel via gegevensset en naamruimte.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1608'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,12 @@ Deze cijfers zijn ook beschikbaar in de sectie [!UICONTROL Profielen] van de geb
 ## Aan de slag
 
 Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een willekeurige [!DNL Experience Platform] API mogelijk te maken.
+
+## Profielfragmenten versus samengevoegde profielen
+
+Deze handleiding verwijst naar zowel &quot;profielfragmenten&quot; als &quot;samengevoegde profielen&quot;. Het is belangrijk dat u het verschil tussen deze termen begrijpt voordat u verdergaat.
+
+Elk individueel klantprofiel bestaat uit meerdere profielfragmenten die zijn samengevoegd tot één weergave van die klant. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Platform worden opgenomen, worden ze samengevoegd (op basis van het samenvoegbeleid) om één profiel voor die klant te maken. Daarom is het totale aantal profielfragmenten waarschijnlijk altijd hoger dan het totale aantal samengevoegde profielen, aangezien elk profiel uit veelvoudige fragmenten bestaat.
 
 ## Laatste voorbeeldstatus weergeven {#view-last-sample-status}
 
