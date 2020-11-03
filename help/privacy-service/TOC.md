@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Privacy Service Help
 breadcrumb-title: Handleiding voor Privacy Service
 user-guide-description: Beheer verzoeken om klantgegevens om te voldoen aan wettelijke privacyregels zoals GDPR en CCPA.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 37f07e11abe3c6757edc635153454339118fc45c
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 3%
+source-wordcount: '91'
+ht-degree: 7%
 
 ---
 
@@ -28,14 +28,10 @@ ht-degree: 3%
    * [Overzicht van de gebruikersinterface voor Privacys Service](ui/overview.md)
    * [Gebruikershandleiding voor Privacy Service](ui/user-guide.md)
 * [Abonneren op privacygebeurtenissen](privacy-events.md)
-* GDPR-hulplijnen {#gdpr}
-   * [Veelgestelde vragen over GDPR](gdpr/faq.md)
-   * [GDPR-terminologie](gdpr/terminology.md)
-* CCPA-hulplijnen {#ccpa}
-   * [Veelgestelde vragen over CCPA](ccpa/faq.md)
-* PDPA-hulplijnen (Thailand) {#pdpa-tha}
-   * [Veelgestelde vragen PDPA (Thailand)](./pdpa-tha/faq.md)
-   * [terminologie PDPA (Thailand)](./pdpa-tha/terminology.md)
+* Handleidingen voor privacyregelgeving {#regulations}
+   * [Overzicht](regulations/overview.md)
+   * [Veelgestelde vragen](regulations/faq.md)
+   * [Terminologie](regulations/terminology.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
 * [Releaseopmerkingen](release-notes.md)
