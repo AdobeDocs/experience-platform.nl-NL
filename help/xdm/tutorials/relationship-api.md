@@ -6,7 +6,7 @@ description: Dit document verstrekt een zelfstudie voor het bepalen van een éé
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
+source-git-commit: ce06550e9608163e6e5819d79cc73a4b1f92e915
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 0%
@@ -339,7 +339,7 @@ Een succesvolle reactie retourneert de details van het bijgewerkte schema, dat n
 
 ## Een beschrijving voor een referentie-id maken {#reference-identity}
 
-Op schemavelden moet een identiteitsreferentie-descriptor zijn toegepast als deze worden gebruikt als referentie van andere schema&#39;s in een relatie. Aangezien het `favoriteHotel` veld in &quot;[!DNL Loyalty Members]&quot; verwijst naar het `hotelId` veld in &quot;[!DNL Hotels]&quot;, moet `favoriteHotel` een identiteitsbeschrijving van een referentie worden gegeven.
+Op schemavelden moet een identiteitsreferentie-descriptor zijn toegepast als deze worden gebruikt als referentie van andere schema&#39;s in een relatie. Aangezien het `favoriteHotel` veld in &quot;[!DNL Loyalty Members]&quot; verwijst naar het `hotelId` veld in &quot;[!DNL Hotels]&quot;, moet `hotelId` een identiteitsbeschrijving van een referentie worden gegeven.
 
 Creeer een verwijzingsbeschrijver voor het bestemmingsschema door een verzoek van de POST aan het `/tenant/descriptors` eindpunt te doen.
 
