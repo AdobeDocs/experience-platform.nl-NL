@@ -1,28 +1,26 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
-title: Gebruikershandleiding voor het profiel van de klant in realtime
+title: Gebruikershandleiding voor gebruikersprofiel voor realtime klanten
 topic: guide
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-time klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 342a05e4c378732331968ab7695a3ba7b47f2956
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] gebruikershandleiding
+# [!DNL Real-time Customer Profile] UI-hulplijn
 
-[!DNL Real-time Customer Profile] leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren.
-
-Dit document fungeert als richtlijn voor interactie met [!DNL Real-time Customer Profile] gegevens in de Adobe Experience Platform-gebruikersinterface.
+[!DNL Real-time Customer Profile] leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor interactie met [!DNL Real-time Customer Profile] gegevens in de gebruikersinterface van Adobe Experience Platform (UI).
 
 ## Aan de slag
 
-Deze gebruikershandleiding vereist inzicht in de verschillende [!DNL Experience Platform] services die bij het beheer van de software betrokken zijn [!DNL Real-time Customer Profiles]. Lees de documentatie voor de volgende services voordat u deze gebruikershandleiding leest:
+Deze gids UI vereist een inzicht in de diverse [!DNL Experience Platform] diensten betrokken bij het leiden [!DNL Real-time Customer Profiles]. Voordat u deze handleiding leest of in de gebruikersinterface werkt, raadpleegt u de documentatie voor de volgende services:
 
-* [[!DNL Real-time klantprofiel]](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-time Customer Profile]](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [[!DNL Identity Service]](../../identity-service/home.md): Schakelt [!DNL Real-time Customer Profile] het overbruggen van identiteiten uit verschillende gegevensbronnen in wanneer deze worden ingepakt [!DNL Platform].
 * [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
@@ -102,15 +100,15 @@ U kunt aanvullende informatie over het afzonderlijke profiel weergeven door een 
 
 Selecteer in het hoofdmenu **[!UICONTROL Profielen]** het tabblad Beleid **[!UICONTROL voor]** samenvoegen om een lijst weer te geven met samenvoegingsbeleid dat tot uw organisatie behoort. Elk vermeld beleid toont zijn naam, al dan niet het standaardsamenvoegbeleid, en het schema dat het op van toepassing is.
 
-Raadpleeg de gebruikershandleiding [voor](merge-policies.md)samenvoegbeleidsregels voor meer informatie over samenvoegingsbeleid.
+Voor meer informatie over fusiebeleid, zie de gids [UI van het](merge-policies.md)fusiebeleid.
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
 ## Unieschema {#union-schema}
 
-Selecteer in het menu **[!UICONTROL Profielen]** het tabblad **[!UICONTROL Unieschema]** om de samenvoegingsschema&#39;s voor uw profielgegevens weer te geven. Een verenigingsschema is een samenvoeging van alle [!DNL Experience Data Model] (XDM) gebieden onder de zelfde klasse, de waarvan schema&#39;s voor gebruik binnen zijn toegelaten [!DNL Real-time Customer Profile]. Als u een klasse selecteert in de lijst[!UICONTROL Klasse]aan de linkerkant, kunt u de structuur van het schema op het canvas weergeven. Als u bijvoorbeeld &quot;[!DNL XDM Profile]&quot; selecteert, wordt het samenvoegingsschema voor de [!DNL XDM Individual Profile] klasse weergegeven.
+Selecteer in het menu **[!UICONTROL Profielen]** het tabblad **[!UICONTROL Unieschema]** om de samenvoegingsschema&#39;s voor uw opgenomen gegevens weer te geven. Een verenigingsschema is een samenvoeging van alle [!DNL Experience Data Model] (XDM) gebieden onder de zelfde klasse, de waarvan schema&#39;s voor gebruik binnen zijn toegelaten [!DNL Real-time Customer Profile].
 
-Voor meer informatie over verenigingsschema&#39;s en hun rol binnen Adobe Experience Platform, zie de sectie over verenigingsschema&#39;s in de [schemacompositie gids](../../xdm/schema/composition.md).
+Voor meer informatie over verenigingsschema&#39;s, zie de gids [UI van het](union-schema.md)uniesschema.
 
 ![](../images/user-guide/profiles-union-schema.png)
 
