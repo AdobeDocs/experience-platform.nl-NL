@@ -5,9 +5,9 @@ title: Gegevens voorbereiden voor gebruik in intelligente services
 topic: Intelligent Services
 description: 'Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services hefboomwerkervaringsgegevensmodel (XDM) om dit te bereiken. Specifiek, moeten alle datasets die in de Intelligente Diensten worden gebruikt] met het schema van XDM van Consumer ExperienceEvent (CEE) in overeenstemming zijn. '
 translation-type: tm+mt
-source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
+source-git-commit: 630f3bd0249dc3d0e73ace52c534d5f20ec0f87a
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1851'
 ht-degree: 0%
 
 ---
@@ -278,11 +278,7 @@ Nadat de dataset wordt gecreeerd, kunt u het in het Platform UI binnen de **[!UI
 
 #### Identiteitsvelden toevoegen aan de gegevensset
 
->[!NOTE]
->
->Toekomstige versies van [!DNL Intelligent Services] zullen [Adobe Experience Platform Identity Service](../identity-service/home.md) in hun mogelijkheden voor klantidentificatie integreren. De hieronder beschreven stappen kunnen dan ook worden gewijzigd.
-
-Als u gegevens van [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]of een andere externe bron inbrengt, dan hebt u de optie om een schemagebied als identiteitsgebied te plaatsen. Als u een schemaveld als een identiteitsveld wilt instellen, bekijkt u de sectie over het instellen van identiteitsvelden in de [UI-zelfstudie](../xdm/tutorials/create-schema-ui.md#identity-field) voor het maken van een schema met de Schema-editor of de [API-zelfstudie](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor).
+Als u gegevens van [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]of een andere externe bron inbrengt, dan hebt u de optie om een schemagebied als identiteitsgebied te plaatsen. Als u een schemaveld als een identiteitsveld wilt instellen, bekijkt u de sectie over het instellen van identiteitsvelden in de zelfstudie [over de](../xdm/tutorials/create-schema-ui.md#identity-field) gebruikersinterface of de zelfstudie over de [API](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) voor het maken van een schema.
 
 Als u gegevens uit een lokaal CSV-bestand opneemt, kunt u verdergaan met de volgende sectie over het [toewijzen en invoeren van gegevens](#ingest).
 
