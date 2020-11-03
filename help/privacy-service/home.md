@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: f3872d433949e6c14c28c6833b8498d4d01b8de3
+source-git-commit: d2f1255be48c1df04757f7e071221e0552a0b921
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
@@ -41,16 +41,9 @@ In de volgende secties worden algemene richtsnoeren gegeven voor deze belangrijk
 
 Afhankelijk van de aard van uw bedrijf en de rechtsgebieden waaronder het werkt, zijn uw gegevensbewerkingen mogelijk onderworpen aan wettelijke privacyregels. Deze verordeningen geven uw klanten vaak het recht om toegang tot de gegevens te verzoeken u van hen verzamelt, en het recht om de schrapping van die opgeslagen gegevens te verzoeken. Deze verzoeken van klanten om hun persoonsgegevens worden bedoeld als &quot;privacyverzoeken&quot;door de documentatie.
 
-In de volgende tabel worden de wettelijke privacyregels beschreven die aanvragen [!DNL Privacy Service] beheren, waaronder koppelingen naar documentatie voor meer informatie:
+Raadpleeg de documentatie bij de [!DNL Privacy Service] privacyregels [voor meer informatie over de verschillende wettelijke privacyregels die verzoeken](./regulations/overview.md)beheren, inclusief sleuteltermen en antwoorden op veelgestelde vragen.
 
-| Verordening | Beschrijving |
-| --- | --- |
-| CCPA (Californië) | De [!DNL California Consumer Privacy Act] (CCPA) verbetert de privacyrechten en de consumentenbescherming voor inwoners van Californië in de Verenigde Staten. De CCPA biedt de inwoners van Californië nieuwe privacyrechten op het gebied van gegevens, waaronder het recht op toegang tot en verwijdering van hun persoonsgegevens, om te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie), en het recht om te weigeren hun gegevens aan derden te laten verkopen.<br/><br/>Koppelingen voor nadere documentatie: <ul><li>[Juridisch overzicht](https://oag.ca.gov/privacy/ccpa)</li><li>[Veelgestelde vragen over CCPA](ccpa/faq.md)</li></ul> |
-| GDPR (Europese Unie) | De [!DNL General Data Protection Regulation] (GDPR, ofwel Algemene verordening gegevensbescherming (AVG)) heeft diverse nieuwe dataprivacyrechten geïntroduceerd voor leden van de Europese Unie, waaronder het **recht op toegang** en het **recht om vergeten te worden**. Dit betekent dat iedere EU-burger wiens persoonlijke data door uw bedrijf zijn verzameld, op elk moment kan vragen om toegang tot of verwijdering van zijn of haar data. <br/><br/>Koppelingen voor nadere documentatie: <ul><li>[Juridisch overzicht](https://gdpr-info.eu/)</li><li>[Veelgestelde vragen over GDPR](gdpr/faq.md)</li><li>[GDPR-terminologie](gdpr/terminology.md)</li></ul> |
-| LGPD (Brazilië) | De [!DNL Lei Geral de Proteção de Dados] (GPD) heeft tot doel de behandeling van persoonsgegevens van alle natuurlijke personen of natuurlijke personen in Brazilië te reguleren. De LGPD geeft de burgers van Brazilië het recht om hun persoonsgegevens te raadplegen en te wissen, te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie), en het recht om te weigeren hun gegevens aan derden te laten verkopen.<br/><br/>Koppelingen voor nadere documentatie: <ul><li>[Juridisch overzicht](https://gdpr.eu/gdpr-vs-lgpd/)</li></ul> |
-| PDPA (Thailand) | De [!DNL Personal Data Protection Act] Thaise gegevensbezitters werden beschermd tegen het illegaal verzamelen, gebruiken of openbaar maken van hun persoonsgegevens. De verordening is geïnspireerd door de GDPR van de Europese Unie en verleent Thaise burgers het recht om toegang te vragen tot of te verwijderen van hun opgeslagen persoonsgegevens.<br/><br/>Koppelingen voor nadere documentatie: <ul><li>[Juridisch overzicht](https://www.dataprotectionreport.com/2020/02/thailand-personal-data-protection-law/)</li><li>[Veelgestelde vragen PDPA](pdpa-tha/faq.md)</li><li>[terminologie PDPA](pdpa-tha/terminology.md)</li></ul> |
-
-Als uw gegevensbewerkingen onder een van de bovenstaande verordeningen vallen, raadpleegt u de documentatie bij deze bewerkingen voor belangrijke informatie, zoals de specifieke privacyrechten die zij aan uw klanten verlenen, en compatibiliteitsvensters voor het uitvoeren van privacyverzoeken. Met deze informatie moet rekening worden gehouden wanneer u bepaalt hoe u uw CRM-systeem kunt integreren en hoe klanten met uw website moeten communiceren om privacyverzoeken te kunnen indienen. [!DNL Privacy Service]
+Als uw gegevensbewerkingen onder de ondersteunde regelgeving vallen, raadpleegt u de documentatie bij deze bewerkingen voor belangrijke informatie, zoals de specifieke privacyrechten die ze aan uw klanten verlenen en compatibiliteitsvensters voor het uitvoeren van privacyverzoeken. Met deze informatie moet rekening worden gehouden wanneer u bepaalt hoe u uw CRM-systeem kunt integreren en hoe klanten met uw website moeten communiceren om privacyverzoeken te kunnen indienen. [!DNL Privacy Service]
 
 Naast wettelijke voorschriften, zouden om het even welke organisatie of industrienormen die op uw organisatie van toepassing zijn ook in overweging moeten worden genomen wanneer het nemen van deze besluiten.
 
