@@ -5,15 +5,25 @@ description: Opmerkingen bij de release van Adobe Experience Platform Web SDK.
 seo-description: Opmerkingen bij de release van Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 translation-type: tm+mt
-source-git-commit: 738dfe782ee7d6bef06d14910e0c26540b0ec734
+source-git-commit: 77c1e693668bc50a81713d02cfe4b0fabc661404
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 1%
+source-wordcount: '221'
+ht-degree: 0%
 
 ---
 
 
 # Release-opmerkingen
+
+## Versie 2.3.0
+
+* Nonce-ondersteuning toegevoegd om een strenger beleid voor inhoudsbeveiliging mogelijk te maken.
+* Extra ondersteuning voor personalisatie voor toepassingen van één pagina.
+* Verbeterde compatibiliteit met andere JavaScript-code op de pagina die mogelijk API&#39; `window.console` s overschrijft.
+* Opgeloste problemen: `sendBeacon` werd niet gebruikt toen `documentUnloading` werd geplaatst aan `true` of wanneer de verbinding klikte automatisch werd gevolgd.
+* Opgeloste problemen: Een koppeling wordt niet automatisch bijgehouden als het ankerelement HTML-inhoud bevat.
+* Opgeloste problemen: Bepaalde browserfouten met een alleen-lezen- `message` eigenschap zijn niet correct verwerkt, waardoor een andere fout aan de klant wordt gemeld.
+* Opgeloste problemen: Als de SDK in een iframe wordt uitgevoerd, treedt een fout op als de HTML-pagina van het iframe afkomstig is uit een ander subdomein dan de HTML-pagina van het bovenliggende venster.
 
 ## Versie 2.2.0
 
