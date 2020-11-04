@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Overzicht van Adobe Privacy JavaScript-bibliotheek
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 6d706b33573e88b2f1ea9d386928dcfdb089a9c5
 workflow-type: tm+mt
-source-wordcount: '921'
-ht-degree: 3%
+source-wordcount: '922'
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Als gegevensverwerker verwerkt Adobe persoonlijke gegevens volgens de toestemming en instructies van uw bedrijf. Als datacontroller bepaalt u welke persoonlijke data Adobe namens u verwerkt en opslaat. Afhankelijk van de informatie die u kiest om via Adobe Experience Cloud-oplossingen te verzenden, kan Adobe persoonlijke informatie opslaan die van toepassing is op privacyregels zoals de [!DNL General Data Protection Regulation] (GDPR) en [!DNL California Consumer Privacy Act] (CCPA). Raadpleeg het document over [privacy in Adobe Experience Cloud](https://www.adobe.com/privacy/marketing-cloud.html) voor meer informatie over hoe Experience Cloud-oplossingen privégegevens verzamelen.
 
-Met de JavaScript-bibliotheek **** Adobe Privacy kunnen gegevenscontrollers het ophalen van alle gegevensonderwerpidentiteiten automatiseren die zijn gegenereerd door [!DNL Experience Cloud] oplossingen voor een bepaald domein. Met behulp van de API die door de [Adobe Experience Platform Privacy Service](home.md)wordt geboden, kunnen deze identiteiten vervolgens worden gebruikt om toegang- en verwijderingsverzoeken te maken voor privégegevens van die betrokkenen.
+Met de JavaScript-bibliotheek **** Adobe Privacy kunnen gegevenscontrollers het ophalen van alle gegevensonderwerpidentiteiten automatiseren die zijn gegenereerd door [!DNL Experience Cloud] oplossingen voor een bepaald domein. Met behulp van de API die door [Adobe Experience Platform Privacy Service](home.md)wordt aangeboden, kunnen deze identiteiten vervolgens worden gebruikt om toegang- en verwijderingsverzoeken te maken voor privégegevens die bij deze betrokkenen horen.
 
 >[!NOTE]
 >
@@ -31,12 +31,12 @@ In de volgende tabel worden de verschillende functies beschreven die door de bib
 | -functie | Beschrijving |
 | --- | --- |
 | `retrieveIdentities` | Retourneert een array van overeenkomende identiteiten (`validIds`) die zijn opgehaald van [!DNL Privacy Service], en een array van identiteiten die niet zijn gevonden (`failedIds`). |
-| `removeIdentities` | Hiermee verwijdert u elke overeenkomende (geldige) identiteit uit de browser. Retourneert een array van overeenkomende identiteiten (`validIds`), met elke identiteit die een `isDeleteClientSide` Booleaanse id bevat die aangeeft of deze id is verwijderd. |
+| `removeIdentities` | Hiermee verwijdert u elke overeenkomende (geldige) identiteit uit de browser. Retourneert een array van overeenkomende identiteiten (`validIds`), met elke identiteit die een `isDeletedClientSide` booleaanse id bevat die aangeeft of deze id is verwijderd. |
 | `retrieveThenRemoveIdentities` | Haalt een array van overeenkomende identiteiten (`validIds`) op en verwijdert deze identiteiten vervolgens uit de browser. Terwijl deze functie aan gelijkaardig is, wordt het best gebruikt wanneer de oplossing van Adobe u gebruikt een toegangsverzoek vereist alvorens schrapping mogelijk is (zoals wanneer een uniek herkenningsteken moet worden teruggewonnen alvorens het in een schrappingsverzoek te verstrekken). `removeIdentities` |
 
 >[!NOTE]
 >
->`removeIdentities` en verwijder `retrieveThenRemoveIdentities` alleen identiteiten uit de browser voor specifieke Adobe-oplossingen die deze ondersteunen. Adobe Audience Manager verwijdert bijvoorbeeld niet de index-id&#39;s die zijn opgeslagen in cookies van derden, terwijl Adobe Target alle cookies verwijdert waarin de id&#39;s zijn opgeslagen.
+>`removeIdentities` en verwijder `retrieveThenRemoveIdentities` alleen identiteiten uit de browser voor specifieke Adobe-oplossingen die deze ondersteunen. Adobe Audience Manager verwijdert bijvoorbeeld de index-id&#39;s die zijn opgeslagen in cookies van derden niet, terwijl Adobe Target alle cookies verwijdert waarin de id&#39;s zijn opgeslagen.
 
 Aangezien alle drie functies asynchrone processen vertegenwoordigen, moeten om het even welke teruggewonnen identiteiten worden behandeld gebruikend callbacks of beloftes.
 
@@ -47,7 +47,7 @@ Als u de toepassing wilt gaan gebruiken, moet u deze op een van de volgende mani
 
 * Installeer met npm door de volgende opdracht uit te voeren: `npm install @adobe/adobe-privacy`
 * De extensie Adobe starten onder de naam `AdobePrivacy`
-* Downloaden vanaf [https://github.com/Adobe-Marketing-Cloud/adobe-privacy](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+* Download van de [Experience Cloud GitHub-opslagplaats](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## Instantiëren van de [!DNL Privacy JS Library]
 
@@ -56,7 +56,6 @@ Alle apps die het gebruiken [!DNL Privacy JS Library] moeten een nieuw `AdobePri
 ```js
 var adobePrivacy = new AdobePrivacy({
     imsOrgID: "{IMS_ORG}",
-    key: "{DATA_SUBJECT_ID}",
     reportSuite: "{REPORT_SUITE_ID}",
     trackingServer: "{SERVER_URL}",
     clientCode: "{TARGET_CLIENT_CODE}"
@@ -202,9 +201,9 @@ Hieronder volgt een lijst met de geaccepteerde configuratieparameters voor onder
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `aamUUIDCookieName` | Naam van het cookie van de eerste partij met de unieke gebruikersnaam die door de Adobe Audience Manager is geretourneerd. |
+| `aamUUIDCookieName` | Naam van de cookie van de eerste partij met de unieke gebruikersnaam die door Adobe Audience Manager is geretourneerd. |
 
-**Adobe ID-service (ECID)**
+**Adobe ID Service (ECID)**
 
 | Parameter | Beschrijving |
 | --- | --- |
