@@ -5,9 +5,9 @@ description: De Adobe Experience Platform Web SDK kan gepersonaliseerde aanbiedi
 seo-description: De Adobe Experience Platform Web SDK kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer Decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van Offer Decisioning.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: b10b930dca504b7672eb05bd88ab44d09d9e5c0a
+source-git-commit: 86d819daf26eaf1b46afe76054d475e61720dd27
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '839'
 ht-degree: 4%
 
 ---
@@ -56,9 +56,9 @@ Het is belangrijk dat u de volgende terminologie begrijpt wanneer u met Offer De
 
    ![](assets/decision-scope-copy.png)
 
-**Randconfiguratie:** Lees de documentatie over de [randconfiguratie](../../fundamentals/edge-configuration.md) voor meer informatie.
+* **Randconfiguratie:** Lees de documentatie over de [randconfiguratie](../../fundamentals/edge-configuration.md) voor meer informatie.
 
-**Identiteit**: Lees voor meer informatie deze documentatie waarin wordt beschreven hoe de Identiteitsservice [van](../../identity/overview.md)Platform Web SDK wordt gebruikt.
+* **Identiteit**: Lees voor meer informatie deze documentatie waarin wordt beschreven hoe de Identiteitsservice [van](../../identity/overview.md)Platform Web SDK wordt gebruikt.
 
 ## Offer Decisioning inschakelen
 
@@ -66,7 +66,7 @@ Als u Offer Decisioning wilt inschakelen, moet u de volgende stappen uitvoeren:
 
 1. Adobe Experience Platform ingeschakeld in uw [randconfiguratie](../../fundamentals/edge-configuration.md) en schakel het vakje &quot;Offer Decisioning&quot; in
    ![aanbieding-beslist-rand-config](./assets/offer-decisioning-edge-config.png)
-2. Volg de instructies om de SDK [te](../../fundamentals/installing-the-sdk.md) installeren (De SDK kan zelfstandig of via [Adobe Experience Platform Launch](http://launch.adobe.com/)worden geïnstalleerd. Hier volgt een [handleiding voor snel starten (Starten](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html)).
+2. Volg de instructies om de SDK [te](../../fundamentals/installing-the-sdk.md) installeren (De SDK kan zelfstandig of via [Adobe Experience Platform Launch](http://launch.adobe.com/)worden geïnstalleerd. Hier volgt een [handleiding voor snel starten (Platform starten](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html)).
 3. [Configureer de SDK](../../fundamentals/configuring-the-sdk.md) voor Offer Decisioning. Hieronder vindt u aanvullende specifieke Offer Decisioning-stappen.
    * Zelfstandige geïnstalleerde SDK
       1. Configureer de actie &quot;sendEvent&quot; met uw `decisionScopes`
@@ -80,19 +80,19 @@ Als u Offer Decisioning wilt inschakelen, moet u de volgende stappen uitvoeren:
           ]
       })
       ```
-   * Geïnstalleerde SDK starten
-      1. [Een starteigenschap maken](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html)
-      2. [De insluitcode starten toevoegen](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Installeer en vorm de uitbreiding van SDK van het Web AEP met de Configuratie van de Rand u enkel door de configuratie van de drop-down &quot;Configuratie van de Rand&quot;te selecteren creeerde. Nuttige documentatie over [extensies](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+   * Geïnstalleerde SDK voor Platform starten
+      1. [Een Platform starten-eigenschap maken](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html)
+      2. [De Platform Insluitcode starten toevoegen](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      3. Installeer en vorm de uitbreiding van SDK van het Web van Adobe Experience Platform met de Configuratie van de Rand u enkel door de configuratie van de drop-down &quot;Configuratie van de Rand&quot;te selecteren creeerde. Nuttige documentatie over [extensies](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. Maak de benodigde [gegevenselementen](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html). Bij het absolute minimum, zult u een Kaart van de Identiteit van AEP Web SDK en een AEP XDM van het Web SDK gegevenselement van Objecten moeten creëren. (hopelijk is er meer documentatie op het Web SDK van AEP gegevenselementen die wij hier kunnen verbinden)
+      4. Maak de benodigde [gegevenselementen](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html). Bij het absolute minimum, zult u een Identiteitskaart van SDK van het Web van het Platform en een gegevenselement van de Objecten van SDK van het Web van het Platform XDM moeten tot stand brengen.
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
       5. Maak uw [regels](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html).
-         * Voeg een AEP Web SDK toe verzendt de actie van de Gebeurtenis en voeg relevant `decisionScopes` aan de configuratie van die actie toe
+         * Voeg een Platform SDK toe verzendt de actie van de Gebeurtenis en voegt relevant `decisionScopes` aan de configuratie van die actie toe
             ![send-event-action-decisionsScopes](./assets/send-event-action-decisionScopes.png)
       6. [Een bibliotheek](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html) maken en publiceren met alle relevante regels, gegevenselementen en extensies die u hebt geconfigureerd
 
