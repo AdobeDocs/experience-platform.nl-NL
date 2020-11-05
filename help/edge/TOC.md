@@ -6,9 +6,9 @@ user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het Netwerk van de Rand.
 translation-type: tm+mt
-source-git-commit: 502da50576dfd550598111658b41da6a62bb7e79
+source-git-commit: cea3e2f32d9489f5f06be70581bd974b9374646d
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '128'
 ht-degree: 10%
 
 ---
@@ -44,6 +44,8 @@ ht-degree: 10%
    * Adobe Target {#adobe-target}
       * [Doeloverzicht](personalization/adobe-target/target-overview.md)
       * [Toepassing van één pagina](personalization/adobe-target/spa-implementation.md)
+   * Offer Decisioning {#offer-decisioning}
+      * [Offer Decisioning-overzicht](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consent {#consent}
    * [Ondersteunende toestemming](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
