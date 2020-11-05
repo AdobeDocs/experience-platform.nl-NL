@@ -5,9 +5,9 @@ description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Exp
 seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: f08452fa9a6ece93e40ef8ca811530feb0620969
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '621'
 ht-degree: 2%
 
 ---
@@ -20,10 +20,6 @@ De Adobe Experience Platform [!DNL Web SDK] kan persoonlijke ervaringen die in A
 ## Adobe Target inschakelen
 
 U moet het volgende doen om in te schakelen [!DNL Target]:
-
-1. Schakel activity.id- en experience.id-reponsettokens in de [!DNL Target] gebruikersinterface in.
-
-![target_reponse_token](./assets/target_response_token.png)
 
 1. Laat doel in uw [randconfiguratie](../../fundamentals/edge-configuration.md) met de aangewezen cliëntcode toe.
 1. Voeg de `renderDecisions` optie toe aan uw gebeurtenissen.
