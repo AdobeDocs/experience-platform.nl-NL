@@ -5,9 +5,9 @@ title: Alle sandboxen weergeven
 topic: developer guide
 description: Als u alle sandboxen wilt weergeven die tot uw IMS-organisatie behoren (actief of anderszins), vraagt u een GET aan bij het eindpunt /sandboxen.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -20,14 +20,18 @@ Als u alle sandboxen wilt weergeven die tot uw IMS-organisatie behoren (actief o
 **API-indeling**
 
 ```http
-GET /sandboxes
+GET /sandboxes?{QUERY_PARAMS}
 ```
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [vraagparameters](#query) voor meer informatie. |
 
 **Verzoek**
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes?&limit=4&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -93,7 +97,25 @@ Een geslaagde reactie retourneert een lijst met sandboxen die tot uw organisatie
             "createdBy": "{USER_ID}",
             "modifiedBy": "{USER_ID}"
         }
-    ]
+    ],
+    "_page": {
+        "limit": 4,
+        "count": 4
+    },
+    "_links": {
+        "next": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/sandboxes/?limit={limit}&offset={offset}",
+            "templated": true
+        },
+        "prev": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/sandboxes?offset=0&limit=1",
+            "templated": null
+        },
+        "page": {
+            "href": "https://platform-int.adobe.io:443/data/foundation/sandbox-management/sandboxes?offset=1&limit=1",
+            "templated": null
+        }
+    }
 }
 ```
 
@@ -105,3 +127,16 @@ Een geslaagde reactie retourneert een lijst met sandboxen die tot uw organisatie
 | `type` | Het type sandbox, &#39;development&#39; of &#39;production&#39;. |
 | `isDefault` | Een Booleaanse eigenschap die aangeeft of deze sandbox de standaardsandbox voor de organisatie is. Dit is doorgaans de productiesandbox. |
 | `eTag` | Een id voor een specifieke versie van de sandbox. Deze waarde wordt gebruikt voor versiebeheer en caching-efficiëntie en wordt telkens bijgewerkt wanneer een wijziging in de sandbox wordt aangebracht. |
+
+## Query-parameters gebruiken {#query}
+
+De [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API ondersteunt het gebruik van queryparameters voor pagina- en filterresultaten bij het weergeven van sandboxen.
+
+>[!NOTE]
+>
+>De parameters `limit` en `offset` query moeten samen worden opgegeven. Als u slechts één specificeert, zal API een fout terugkeren. Als u geen opgeeft, is de standaardlimiet 50 en is de verschuiving 0.
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `limit` | Het maximumaantal records dat in de reactie moet worden geretourneerd. |
+| `offset` | Het aantal entiteiten van de eerste record waaruit de lijst met reacties moet worden gestart (verschuiving). |
