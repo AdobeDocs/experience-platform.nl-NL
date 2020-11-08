@@ -5,9 +5,9 @@ title: Actieve sandboxen weergeven voor de huidige gebruiker
 topic: developer guide
 description: U kunt een lijst maken van de sandboxen die actief zijn voor de huidige gebruiker door een GET-aanvraag in te dienen bij het hoofdeindpunt.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -24,14 +24,18 @@ U kunt een lijst maken van de sandboxen die actief zijn voor de huidige gebruike
 **API-indeling**
 
 ```http
-GET /
+GET /{QUERY_PARAMS}
 ```
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [vraagparameters](#query) voor meer informatie. |
 
 **Verzoek**
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/ \
+  https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -84,7 +88,17 @@ Een geslaagde reactie retourneert een lijst met sandboxen die actief zijn voor d
             "createdBy": "{USER_ID}",
             "modifiedBy": "{USER_ID}"
         }
-    ]
+    ],
+    "_page": {
+        "limit": 3,
+        "count": 1
+    },
+    "_links": {
+        "page": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/?limit={limit}&offset={offset}",
+            "templated": true
+        }
+    }
 }
 ```
 
@@ -96,3 +110,16 @@ Een geslaagde reactie retourneert een lijst met sandboxen die actief zijn voor d
 | `type` | Het type sandbox, &#39;development&#39; of &#39;production&#39;. |
 | `isDefault` | Een Booleaanse eigenschap die aangeeft of deze sandbox de standaardsandbox voor de organisatie is. Dit is doorgaans de productiesandbox. |
 | `eTag` | Een id voor een specifieke versie van de sandbox. Deze waarde wordt gebruikt voor versiebeheer en caching-efficiëntie en wordt telkens bijgewerkt wanneer een wijziging in de sandbox wordt aangebracht. |
+
+## Query-parameters gebruiken {#query}
+
+De [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API ondersteunt het gebruik van queryparameters voor pagina- en filterresultaten bij het weergeven van sandboxen.
+
+>[!NOTE]
+>
+>De parameters `limit` en `offset` query moeten samen worden opgegeven. Als u slechts één specificeert, zal API een fout terugkeren. Als u geen opgeeft, is de standaardlimiet 50 en is de verschuiving 0.
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `limit` | Het maximumaantal records dat in de reactie moet worden geretourneerd. |
+| `offset` | Het aantal entiteiten van de eerste record waaruit de lijst met reacties moet worden gestart (verschuiving). |
