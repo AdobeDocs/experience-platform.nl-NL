@@ -5,10 +5,10 @@ topic: overview
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 1%
+source-wordcount: '1299'
+ht-degree: 0%
 
 ---
 
@@ -73,7 +73,7 @@ Met de machtiging Sandboxbeheer kunnen gebruikers sandboxen beheren, weergeven o
 
 Op het tabblad Machtigingen in een productprofiel worden de sandboxen en machtigingen weergegeven die actief zijn voor dat profiel:
 
-![](./images/permissions-overview.png)
+![permissie-overzicht](./images/permissions-overview.png)
 
 Machtigingen die via de methode worden verleend, [!DNL Admin Console] worden gesorteerd op categorie, waarbij bepaalde machtigingen toegang verlenen tot verschillende functies op laag niveau.
 
@@ -83,12 +83,19 @@ De volgende lijst schetst de beschikbare toestemmingen voor [!DNL Experience Pla
 | --- | --- | --- |
 | [!DNL Data Modeling] | [!UICONTROL Schema&#39;s beheren] | Toegang tot het lezen, maken, bewerken en verwijderen van schema&#39;s en gerelateerde bronnen. |
 | [!DNL Data Modeling] | [!UICONTROL Schema&#39;s weergeven] | Alleen-lezen toegang tot schema&#39;s en gerelateerde bronnen. |
+| [!DNL Data Modeling] | [!UICONTROL Relaties beheren] | Toegang tot het lezen, maken, bewerken en verwijderen van schemarelaties. |
+| [!DNL Data Modeling] | [!UICONTROL Identiteitsmetagegevens beheren] | Toegang tot het lezen, maken, bewerken en verwijderen van identiteitsmetagegevens voor schema&#39;s. |
 | [!DNL Data Management] | [!UICONTROL Gegevensbestanden beheren] | Toegang tot het lezen, creëren, uitgeven, en schrappen datasets. Alleen-lezen toegang voor schema&#39;s. |
 | [!DNL Data Management] | [!UICONTROL Gegevensbestanden weergeven] | Alleen-lezen toegang voor gegevenssets en schema&#39;s. |
 | [!DNL Data Management] | [!UICONTROL Gegevenscontrole] | Alleen-lezen toegang tot gegevenssets en streams controleren. |
 | [!DNL Profile Management] | [!UICONTROL Profielen beheren] | Toegang tot gelezen, creeer, geef, en schrap datasets uit die voor klantenprofielen worden gebruikt. Alleen-lezen toegang tot beschikbare profielen. |
 | [!DNL Profile Management] | [!UICONTROL Profielen weergeven] | Alleen-lezen toegang tot beschikbare profielen. |
+| [!DNL Profile Management] | [!UICONTROL Segmenten beheren] | Toegang tot het lezen, maken, bewerken en verwijderen van segmenten. |
+| [!DNL Profile Management] | [!UICONTROL Segmenten weergeven] | Alleen-lezen toegang tot beschikbare segmenten. |
+| [!DNL Profile Management] | [!UICONTROL Beleid voor samenvoegen beheren] | Toegang tot het lezen, maken, bewerken en verwijderen van samenvoegbeleidsregels. |
+| [!DNL Profile Management] | [!UICONTROL Beleid voor samenvoegen weergeven] | Alleen-lezen toegang tot beschikbaar samenvoegbeleid. |
 | [!DNL Profile Management] | [!UICONTROL Publiek exporteren voor segment] | Capaciteit om een geëvalueerd publiekssegment naar een dataset uit te voeren. |
+| [!DNL Profile Management] | [!UICONTROL Een segment evalueren naar een publiek] | Mogelijkheid om profielen te genereren voor een publiek door een segmentdefinitie te evalueren. |
 | [!DNL Identities] | [!UICONTROL Identiteitsnaamruimten beheren] | Toegang tot het lezen, maken, bewerken en verwijderen van naamruimten. |
 | [!DNL Identities] | [!UICONTROL Identiteitsnaamruimten weergeven] | Alleen-lezen toegang voor naamruimten. |
 | [!DNL Sandbox Administration] | [!UICONTROL Sandboxen beheren] | Toegang tot het lezen, maken, bewerken en verwijderen van sandboxen. |
@@ -100,8 +107,12 @@ De volgende lijst schetst de beschikbare toestemmingen voor [!DNL Experience Pla
 | [!DNL Data Ingestion] | [!UICONTROL Bronnen beheren] | Toegang tot het lezen, maken, bewerken en uitschakelen van bronnen. |
 | [!DNL Data Ingestion] | [!UICONTROL Bronnen weergeven] | Alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalogus]** en geverifieerde bronnen op het tabblad **[!UICONTROL Bladeren]** . |
 | [!DNL Data Science Workspace] | [!UICONTROL Werkruimte voor gegevenswetenschap beheren] | Toegang tot lezen, maken, bewerken en verwijderen [!DNL Data Science Workspace]. |
+| [!DNL Data Governance] | [!UICONTROL Labels voor gegevensgebruik toepassen] | Toegang tot het lezen, maken en verwijderen van gebruikslabels. |
+| [!DNL Data Governance] | [!UICONTROL Beleid voor gegevensgebruik beheren] | Toegang tot het lezen, maken, bewerken en verwijderen van beleidsregels voor gegevensgebruik. |
+| [!DNL Data Governance] | [!UICONTROL Beleid voor gegevensgebruik weergeven] | Alleen-lezen toegang voor beleidsregels voor gegevensgebruik die tot uw organisatie behoren. |
+| [!DNL Query Service] | [!UICONTROL Query&#39;s beheren] | Toegang tot het lezen, maken, bewerken en verwijderen van gestructureerde SQL-query&#39;s voor Platform-gegevens. |
 
-_(*) Deze toestemming vereist bepalingen aan[!DNL Real-time Customer Data Platform]. Voor meer informatie betreffende real time CDP, gelieve te beginnen door het[overzicht](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)in real time te lezen CDP._
+_(*) Deze toestemming vereist bepalingen aan [!DNL Real-time Customer Data Platform]. Voor meer informatie betreffende real time CDP, gelieve te beginnen door het [overzicht](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)in real time te lezen CDP._
 
 ## Volgende stappen
 
