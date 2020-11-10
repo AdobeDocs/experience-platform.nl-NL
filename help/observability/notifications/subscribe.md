@@ -5,9 +5,9 @@ title: Abonneren op Adobe I/O-gebeurtenismeldingen
 topic: developer guide
 description: Dit document bevat stappen voor het abonneren op Adobe I/O-gebeurtenismeldingen voor Adobe Experience Platform-services. Er wordt ook informatie over de beschikbare gebeurtenistypen gegeven, samen met koppelingen naar verdere documentatie over de manier waarop de geretourneerde gebeurtenisgegevens voor elke [!DNL Platform] toepasbare service moeten worden geïnterpreteerd.
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ In het volgende scherm wordt een lijst weergegeven met gebeurtenistypen waarop u
 >
 >* [[!DNL Privacy Service] meldingen](../../privacy-service/privacy-events.md)
 >* [[!DNL Data Ingestion] meldingen](../../ingestion/quality/subscribe-events.md)
->* [[!DNL Flow Service] (bronnen) meldingen](../../sources/notifications.md)
+>* [[!DNL Flow Service (sources)] meldingen](../../sources/notifications.md)
 
 
 ![](../images/notifications/choose-event-subscriptions.png)
@@ -99,6 +99,6 @@ Door deze zelfstudie te volgen, hebt u een webhaak geregistreerd voor het ontvan
 
 * [[!DNL Privacy Service] meldingen](../../privacy-service/privacy-events.md)
 * [[!DNL Data Ingestion] meldingen](../../ingestion/quality/subscribe-events.md)
-* [[!DNL Flow Service] (bronnen) meldingen](../../sources/notifications.md)
+* [[!DNL Flow Service (sources)] meldingen](../../sources/notifications.md)
 
 Zie het [[!DNL Observability Insights] overzicht](../home.md) voor meer informatie over hoe u uw activiteiten kunt controleren op [!DNL Experience Platform] en [!DNL Privacy Service].
