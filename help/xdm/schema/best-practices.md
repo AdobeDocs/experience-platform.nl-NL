@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;best practices
 solution: Experience Platform
 title: Aanbevolen procedures voor gegevensmodellering in Adobe Experience Platform
 topic: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 translation-type: tm+mt
-source-git-commit: e15df78978c06da254319d9d394be35c4668caa9
+source-git-commit: 5fe75ab7c939c8437d675212b71229fe3fb70c01
 workflow-type: tm+mt
-source-wordcount: '2477'
+source-wordcount: '2485'
 ht-degree: 1%
 
 ---
@@ -220,7 +220,7 @@ In dit document worden de algemene richtlijnen en aanbevolen procedures voor het
 
 * Gebruik een top-down benadering door uw gegevenslijsten in profiel, raadpleging, en gebeurteniscategorieën te sorteren alvorens uw schema&#39;s te construeren.
 * Er zijn vaak meerdere benaderingen en opties als het gaat om het ontwerpen van schema&#39;s voor verschillende doeleinden.
-* Uw gegevensmodel moet ondersteuning bieden voor segmentatiegebruik.
+* Uw gegevensmodel zou uw zaken van het bedrijfsgebruik zoals segmentatie of de analyse van de klantenreis moeten steunen.
 * Maak uw schema&#39;s zo eenvoudig mogelijk, en voeg slechts nieuwe gebieden toe wanneer absoluut noodzakelijk.
 
 Zodra u klaar bent, zie de zelfstudie over het [creëren van een schema in UI](../tutorials/create-schema-ui.md) voor geleidelijke instructies op hoe te om een schema tot stand te brengen, de aangewezen klasse voor de entiteit toe te wijzen, en gebieden toe te voegen om uw gegevens aan in kaart te brengen.
