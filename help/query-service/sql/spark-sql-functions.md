@@ -5,7 +5,7 @@ title: SQL-functies in Spark
 topic: spark sql functions
 description: Deze documentatie bevat informatie over de helpers van SQL van de Vonk die ingebouwde SQL functies verstrekken van de Vonk om SQL functionaliteit uit te breiden.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: d0fa57effb45fad6934345323366ef45383bed01
 workflow-type: tm+mt
 source-wordcount: '5009'
 ht-degree: 5%
@@ -2813,7 +2813,7 @@ De expressies `start` en `stop` expressies moeten hetzelfde type hebben. Als `st
 Argumenten:
 - `start`: Een expressie. Het begin van het bereik.
 - `stop`: Een expressie. Het einde van het bereik (inclusief).
-- `step`: Een optionele expressie. De stap van het bereik. Standaard `step` is 1 als `start` kleiner dan of gelijk aan `stop`, anders -1. Voor de tijdsequenties is het respectievelijk 1 dag en -1 dag. Als `start` groter dan `stop`, `step` moet negatief zijn, en vice versa.
+- `step`: Een optionele expressie. De stap van het bereik. Standaard `step` &#39;1&#39; als `start` kleiner dan of gelijk aan `stop`, anders &#39;-1&#39;. Voor de tijdsequenties is het respectievelijk &#39;1&#39; dag en &#39;-1&#39; dag. Als `start` groter dan `stop`, `step` moet negatief zijn, en vice versa.
 
 Voorbeelden:
 
@@ -2822,7 +2822,7 @@ Voorbeelden:
  [1,2,3,4,5]
 > SELECT sequence(5, 1);
  [5,4,3,2,1]
-> SELECT sequence(to_date('2018-01-01'), to_date('2018-03-01'), interval 1 month);
+> SELECT sequence(to_date('2018-01-01'), to_date('2018-03-01'), interval '1' month);
  [2018-01-01,2018-02-01,2018-03-01]
 ```
 
