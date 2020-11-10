@@ -5,9 +5,9 @@ description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Exp
 seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 485c2e3b0ad7b38a8e4a482cac49c123a744c47b
+source-git-commit: 8aeeef09602386f219fd8284b332469c04e88ffb
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1671'
 ht-degree: 0%
 
 ---
@@ -223,7 +223,7 @@ Wanneer u klaar bent met het definiëren van uw XDM-weergaven en`sendEvent()` me
 
 >[!NOTE]
 >
->Om Visual Experience Composer voor uw SPA te gebruiken, moet u de Uitbreiding [van het Chroom van de Helper van](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak)Adobe Target VEC installeren.
+>Als u de VEC voor uw SPA wilt gebruiken, moet u de extensie [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) of [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper installeren en activeren.
 
 ### Deelvenster Wijzigingen
 
