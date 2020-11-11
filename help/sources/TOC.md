@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 translation-type: tm+mt
-source-git-commit: 26d117726a59dea0c08cf6ca5a13bf54951f7f44
+source-git-commit: 9e005b0b225e8a643a080fb3d4b014d981748973
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
@@ -62,6 +62,8 @@ ht-degree: 0%
       - [Oracle-connector](connectors/databases/oracle.md)
       - [Phoenix-aansluiting](connectors/databases/phoenix.md)
       - [PostgreSQL-connector](connectors/databases/postgres.md)
+   - eCommerce {#ecommerce}
+      - [Shopify-connector](connectors/ecommerce/shopify.md)
    - Marketing automatiseren {#marketing-automation}
       - [HubSpot-connector](connectors/marketing-automation/hubspot.md)
    - Betalingen {#payments}
@@ -106,6 +108,8 @@ ht-degree: 0%
          - [Phoenix-aansluiting](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL-connector](tutorials/api/create/databases/postgres.md)
          - [SQL Server-aansluiting](tutorials/api/create/databases/sql-server.md)
+      - eCommerce {#ecommerce}
+         - [Shopify-connector](tutorials/api/create/ecommerce/shopify.md)
       - Marketing automatiseren {#marketing-automation}
          - [HubSpot-connector](tutorials/api/create/marketing-automation/hubspot.md)
       - Betalingen {#payments}
@@ -118,6 +122,7 @@ ht-degree: 0%
       - [CRM-gegevens verkennen](tutorials/api/explore/crm.md)
       - [Ontdek de succesgegevens van klanten](tutorials/api/explore/customer-success.md)
       - [Database- of NoSQL-gegevens verkennen](tutorials/api/explore/database-nosql.md)
+      - [Gegevens over eCommerce verkennen](tutorials/api/explore/ecommerce.md)
       - [Gegevens over marketingautomatisering verkennen](tutorials/api/explore/marketing-automation.md)
       - [Betalingsgegevens verkennen](tutorials/api/explore/payments.md)
       - [protocolgegevens verkennen](tutorials/api/explore/protocols.md)
@@ -127,6 +132,7 @@ ht-degree: 0%
       - [CRM-gegevens verzamelen](tutorials/api/collect/crm.md)
       - [Gegevens over succes van klanten verzamelen](tutorials/api/collect/customer-success.md)
       - [Database- of NoSQL-gegevens verzamelen](tutorials/api/collect/database-nosql.md)
+      - [Gegevens over eCommerce verzamelen](tutorials/api/collect/ecommerce.md)
       - [Gegevens over marketingautomatisering verzamelen](tutorials/api/collect/marketing-automation.md)
       - [Betalingsgegevens verzamelen](tutorials/api/collect/payments.md)
       - [protocolgegevens verzamelen](tutorials/api/collect/protocols.md)
@@ -178,6 +184,8 @@ ht-degree: 0%
          - [Oracle-connector](tutorials/ui/create/databases/oracle.md)
          - [Phoenix-aansluiting](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL-connector](tutorials/ui/create/databases/postgres.md)
+      - eCommerce {#ecommerce}
+         - [Shopify-connector](tutorials/ui/create/ecommerce/shopify.md)
       - Marketing automatiseren {#marketing-automation}
          - [HubSpot-connector](tutorials/ui/create/marketing-automation/hubspot.md)
       - Betalingen {#payments}
@@ -188,9 +196,10 @@ ht-degree: 0%
       - [Een dataflow configureren voor een advertentieverbinding](tutorials/ui/dataflow/advertising.md)
       - [Een dataflow configureren voor een batch-cloudopslagconnector](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Een dataflow configureren voor een streamingaansluiting voor cloudopslag](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-      - [Een gegevensstroom configureren voor een databaseverbinding](tutorials/ui/dataflow/databases.md)
       - [Een gegevensstroom configureren voor een CRM-aansluiting](tutorials/ui/dataflow/crm.md)
       - [Een dataflow configureren voor een klantsuccesconnector](tutorials/ui/dataflow/customer-success.md)
+      - [Een gegevensstroom configureren voor een databaseverbinding](tutorials/ui/dataflow/databases.md)
+      - [Een gegevensstroom configureren voor een eCommerce-connector](tutorials/ui/dataflow/ecommerce.md)
       - [Een gegevensstroom configureren voor een marketingautomatiseringsaansluiting](tutorials/ui/dataflow/marketing-automation.md)
       - [Een gegevensstroom configureren voor een betalingsaansluiting](tutorials/ui/dataflow/payments.md)
       - [Vorm een dataflow voor een protocolschakelaar](tutorials/ui/dataflow/protocols.md)
