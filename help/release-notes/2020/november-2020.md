@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 49541c94d8f4891286ed3e9a9d314ca32fe1ed1b
+source-git-commit: 5f184de8c20001f7d9a78dab17130ccadb918dfb
 workflow-type: tm+mt
-source-wordcount: '2041'
+source-wordcount: '2049'
 ht-degree: 2%
 
 ---
@@ -203,7 +203,7 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 **Nieuwe bronnen**
 | Functie | Beschrijving |
 | — | — |
-| [!DNL Shopify] | U kunt nu verbinding maken [!DNL Shopify] met [!DNL Experience Platform] de [!DNL Flow Service] API of de interface. |
+| [!DNL Shopify] | U kunt nu verbinding maken [!DNL Shopify] met [!DNL Experience Platform] de [!DNL Flow Service] API of de interface. Zie het [verbindingsoverzicht](../../sources/connectors/ecommerce/shopify.md) Shopify voor meer informatie. |
 
 **Belangrijkste kenmerken**
 
