@@ -4,9 +4,9 @@ title: Gebruikershandleiding voor gebruikersprofiel voor realtime klanten
 topic: guide
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-time klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Vergelijkbaar met de metrische waarde van het [profielaantal](#profile-count) , 
 
 ### Samenvoegbeleid
 
-Met de **[!UICONTROL optie Samenvoegbeleid]** selecteren wordt automatisch het standaardsamenvoegbeleid voor uw organisatie geselecteerd. Als u dat samenvoegbeleid niet wilt gebruiken, kunt u het `X` naast het standaardsamenvoegbeleid selecteren om het dialoogvenster **[!UICONTROL Samenvoegbeleid]** selecteren te openen waarin u een ander samenvoegbeleid kunt kiezen. Raadpleeg de gebruikershandleiding [voor](merge-policies.md)samenvoegingsbeleid voor meer informatie over samenvoegingsbeleid en hun rol in het Platform.
+Met de **[!UICONTROL optie Samenvoegbeleid]** selecteren wordt automatisch het standaardsamenvoegbeleid voor uw organisatie geselecteerd. Als u dat samenvoegbeleid niet wilt gebruiken, kunt u het `X` naast het standaardsamenvoegbeleid selecteren om het dialoogvenster **[!UICONTROL Samenvoegbeleid]** selecteren te openen waarin u een ander samenvoegbeleid kunt kiezen. Meer over samenvoegingsbeleid en hun rol binnen Platform leren, zie de gids [UI van het](merge-policies.md)fusiebeleid.
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -98,7 +98,7 @@ U kunt aanvullende informatie over het afzonderlijke profiel weergeven door een 
 
 ## Beleid samenvoegen
 
-Selecteer in het hoofdmenu **[!UICONTROL Profielen]** het tabblad Beleid **[!UICONTROL voor]** samenvoegen om een lijst weer te geven met samenvoegingsbeleid dat tot uw organisatie behoort. Elk vermeld beleid toont zijn naam, al dan niet het standaardsamenvoegbeleid, en het schema dat het op van toepassing is.
+Selecteer in het hoofdmenu **[!UICONTROL Profielen]** het tabblad Beleid **[!UICONTROL voor]** samenvoegen om een lijst weer te geven met samenvoegingsbeleid dat tot uw organisatie behoort. Elk vermeld beleid toont zijn naam, al dan niet het standaardsamenvoegbeleid, en de schemaklasse die het op van toepassing is.
 
 Voor meer informatie over fusiebeleid, zie de gids [UI van het](merge-policies.md)fusiebeleid.
 
