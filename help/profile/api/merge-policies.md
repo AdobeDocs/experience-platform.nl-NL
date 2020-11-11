@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Beleid voor samenvoegen - Real-time klantprofiel-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2494'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,13 @@ Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [
 
 ## Componenten van samenvoegingsbeleid {#components-of-merge-policies}
 
-Het beleid van de fusie is privé aan uw organisatie IMS, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manier samen te voegen die u nodig hebt. Om het even welke API die tot [!DNL Profile] gegevens toegang hebben vereist een fusiebeleid, hoewel een gebrek zal worden gebruikt als niet uitdrukkelijk wordt verstrekt. [!DNL Platform] verstrekt een standaardsamenvoegbeleid, of u kunt een fusiebeleid voor een specifiek schema tot stand brengen en het merken als gebrek voor uw organisatie. Elke organisatie kan veelvoudige samenvoegingsbeleid per schema potentieel hebben, nochtans kan elk schema slechts één standaardsamenvoegbeleid hebben. Om het even welk die samenvoegbeleid als gebrek wordt geplaatst zal worden gebruikt in gevallen waar de schemanaam wordt verstrekt en een fusiebeleid wordt vereist maar niet verstrekt. Wanneer u een samenvoegbeleid als gebrek plaatst, zal om het even welk bestaand samenvoegbeleid dat eerder als gebrek werd geplaatst automatisch worden bijgewerkt om niet meer als gebrek te worden gebruikt.
+Het beleid van de fusie is privé aan uw organisatie IMS, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manieren samen te voegen die u nodig hebt. Om het even welke API die tot [!DNL Profile] gegevens toegang hebben vereist een fusiebeleid, hoewel een gebrek zal worden gebruikt als niet uitdrukkelijk wordt verstrekt. [!DNL Platform] voorziet organisaties van een standaardsamenvoegbeleid, of u kunt een samenvoegbeleid voor een specifieke het schemaklasse van de Gegevens van de Ervaring van het Model (XDM) tot stand brengen en het merken als gebrek voor uw organisatie.
+
+Hoewel elke organisatie mogelijk meerdere samenvoegbeleidsregels per schemaklasse kan hebben, kan elke klasse slechts één standaardsamenvoegbeleid hebben. Om het even welk samenvoegbeleid dat als gebrek wordt geplaatst zal worden gebruikt in gevallen waar de naam van de schemacategorie wordt verstrekt en een fusiebeleid wordt vereist maar niet verstrekt.
+
+>[!NOTE]
+>
+>Wanneer u een nieuw fusiebeleid als gebrek plaatst, zal om het even welk bestaand fusiebeleid dat eerder als gebrek werd geplaatst automatisch worden bijgewerkt om niet meer als gebrek te worden gebruikt.
 
 ### Object voor samenvoegbeleid voltooien
 
@@ -41,7 +47,7 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
         "name": "{NAME}",
         "imsOrgId": "{IMS_ORG}",
         "schema": {
-            "name": "{SCHEMA_NAME}"
+            "name": "{SCHEMA_CLASS_NAME}"
         },
         "version": 1,
         "identityGraph": {
@@ -62,7 +68,7 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 | `imsOrgId` | Organisatie-id waartoe dit samenvoegbeleid behoort |
 | `identityGraph` | [Object in identiteitsgrafiek](#identity-graph) dat de identiteitsgrafiek aangeeft waarvan gerelateerde identiteiten worden verkregen. Profielfragmenten die voor alle verwante identiteiten worden gevonden, worden samengevoegd. |
 | `attributeMerge` | [Kenmerksamenvoegobject](#attribute-merge) dat aangeeft op welke manier in het samenvoegbeleid de profielkenmerken voorrang krijgen bij gegevensconflicten. |
-| `schema` | Het [schemaobject](#schema) waarop het samenvoegbeleid kan worden gebruikt. |
+| `schema.name` | Een deel van het [`schema`](#schema) object, bevat het `name` veld de XDM-schemaklasse waarop het samenvoegbeleid betrekking heeft. Lees de [XDM-documentatie](../../xdm/home.md)voor meer informatie over schema&#39;s en klassen. |
 | `default` | Een Booleaanse waarde die aangeeft of dit samenvoegbeleid de standaardinstelling is voor het opgegeven schema. |
 | `version` | [!DNL Platform] onderhouden versie van samenvoegingsbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
 | `updateEpoch` | Datum van de laatste update van het samenvoegbeleid. |
@@ -132,7 +138,7 @@ Waar `{ATTRIBUTE_MERGE_TYPE}` is een van de volgende:
 * **`dataSetPrecedence`** : Geef voorrang aan profielfragmenten die op de dataset worden gebaseerd waaruit zij kwamen. Dit zou kunnen worden gebruikt wanneer de informatie aanwezig in één dataset over gegevens in een andere dataset wordt aangewezen of wordt vertrouwd. Wanneer het gebruiken van dit fusietype, wordt het `order` attribuut vereist, aangezien het van de datasets in de orde van prioriteit een lijst maakt.
    * **`order`**: Wanneer &quot;dataSetPrecedence&quot; wordt gebruikt, moet een `order` array worden voorzien van een lijst met gegevenssets. Gegevenssets die niet in de lijst zijn opgenomen, worden niet samengevoegd. Met andere woorden, gegevenssets moeten expliciet worden vermeld om te worden samengevoegd in een profiel. De `order` array bevat de id&#39;s van de gegevenssets in volgorde van prioriteit.
 
-**Object ExampleMerge met `dataSetPrecedence` type**
+#### Voorbeeld van `attributeMerge` object met `dataSetPrecedence` type
 
 ```json
     "attributeMerge": {
@@ -146,7 +152,7 @@ Waar `{ATTRIBUTE_MERGE_TYPE}` is een van de volgende:
     }
 ```
 
-**Object ExampleMerge met `timestampOrdered` type**
+#### Voorbeeld van `attributeMerge` object met `timestampOrdered` type
 
 ```json
     "attributeMerge": {
@@ -156,7 +162,7 @@ Waar `{ATTRIBUTE_MERGE_TYPE}` is een van de volgende:
 
 ### Schema {#schema}
 
-Het schemavoorwerp specificeert het schema van de Gegevens van de Ervaring (XDM) waarvoor dit fusiebeleid wordt gecreeerd.
+Het schemavoorwerp specificeert de het schemaklasse van de Gegevens van de Ervaring (XDM) waarvoor dit fusiebeleid wordt gecreeerd.
 
 **`schema`object**
 
@@ -731,7 +737,7 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege 
 
 ## Volgende stappen
 
-Nu u weet om samenvoegbeleid voor uw IMS Organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om publiekssegmenten van uw [!DNL Real-time Customer Profile] gegevens tot stand te brengen. Raadpleeg de documentatie [van de](../../segmentation/home.md) Adobe Experience Platform Segmentation Service om te beginnen met het definiëren en werken met segmenten.
+Nu u weet om samenvoegbeleid voor uw organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om de mening van klantenprofielen binnen Platform aan te passen en publiekssegmenten van uw [!DNL Real-time Customer Profile] gegevens tot stand te brengen. Raadpleeg de documentatie [van de](../../segmentation/home.md) Adobe Experience Platform Segmentation Service om te beginnen met het definiëren en werken met segmenten.
 
 ## Aanhangsel
 
