@@ -5,9 +5,9 @@ title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: d26eaf699a67a1bc7111f5f97da277368fcc4629
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ De bronnen in [!DNL Experience Platform] worden gegroepeerd in de volgende categ
 
 [!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL Google AdWords]](connectors/advertising/ads.md) -connector
+- [[!DNL Google AdWords]](connectors/advertising/ads.md) connector
 
 ### Cloud Storage
 
@@ -91,6 +91,12 @@ De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen b
 - [[!DNL Oracle] connector](connectors/databases/oracle.md)
 - [[!DNL Phoenix] connector](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
+
+### eCommerce
+
+[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een derdeeCommerce systeem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
 ### Marketing Automation
 
