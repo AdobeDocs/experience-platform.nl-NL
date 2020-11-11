@@ -3,12 +3,12 @@ keywords: activate destination;activate destinations;activate data
 title: Profielen en segmenten naar een doel activeren
 type: Tutorial
 seo-title: Profielen en segmenten naar een doel activeren
-description: Activeer de gegevens u in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
-seo-description: Activeer de gegevens u in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
+description: Activeer de gegevens u in het Platform van Gegevens van de Klant in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
+seo-description: Activeer de gegevens u in het Platform van Gegevens van de Klant in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 74f49db15028aa27fc7ee73a79ea236ee42f37e8
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1583'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Profielen en segmenten naar een doel activeren
 
-Activeer de gegevens u in het Platform van de Gegevens van de Klant van Adobe in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
+Activeer de gegevens u in het Platform van Gegevens van de Klant in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
 
 ## Vereisten {#prerequisites}
 
@@ -24,74 +24,73 @@ Om gegevens aan bestemmingen te activeren, moet u een bestemming [met succes heb
 
 ## Gegevens activeren {#activate-data}
 
-De stappen in het activeringswerkschema variëren lichtjes tussen bestemmingstypes. De volledige werkstroom voor alle bestemmingstypes wordt hieronder geschetst.
+De stappen in de activeringswerkstroom variëren enigszins per doeltype. De volledige werkstroom voor alle bestemmingstypes wordt hieronder geschetst.
 
 ### Selecteer het doel waarop de gegevens moeten worden geactiveerd {#select-destination}
 
 Van toepassing op: Alle bestemmingen
 
-1. In de Echte Adobe - tijdCDP gebruikersinterface, navigeer aan **[!UICONTROL Doelen]** > **[!UICONTROL doorbladeren]**, en selecteer de bestemming waar u uw segmenten wilt activeren.
-   ![naar doel bladeren](assets/oracle-eloqua-connect.png)
-2. Klik op de naam van het doel. Hiermee gaat u naar de activeringsworkflow.
-   ![activate-flow](assets/activate-flow.png)Merk op dat als een activeringswerkschema reeds voor een bestemming bestaat, u de segmenten kunt zien die momenteel aan de bestemming worden geactiveerd. Selecteer Activering **** bewerken in de rechtertrack en voer de onderstaande stappen uit om de activeringsdetails te wijzigen.
-3. Selecteer **[!UICONTROL Activeren]**.
+Navigeer in de gebruikersinterface in real time CDP naar **[!UICONTROL Doelen]** > **[!UICONTROL doorbladeren]**, en selecteer de bestemming waar u uw segmenten wilt activeren.
+![naar doel bladeren](assets/oracle-eloqua-connect.png)
 
-<br> 
+Selecteer de naam van het doel om naar de activeringsworkflow te navigeren.
 
-### **[!UICONTROL Segmenten]** selecteren {#select-segments}
+![activeren-flow](assets/activate-flow.png)
+
+Merk op dat als een activeringswerkschema reeds voor een bestemming bestaat, u de segmenten kunt zien die momenteel aan de bestemming worden geactiveerd. Selecteer Activering **** bewerken in de rechtertrack en voer de onderstaande stappen uit om de activeringsdetails te wijzigen.
+
+Als u een doel hebt geselecteerd, selecteert u **[!UICONTROL Activeren]**.
+
+### [!UICONTROL Segmenten] selecteren {#select-segments}
 
 Van toepassing op: Alle bestemmingen
 
-![Stap selecteren voor segmenten](/help/rtcdp/destinations/assets/select-segments-icon.png)
+![Stap selecteren voor segmenten](./assets/select-segments-icon.png)
 
-
-Selecteer in de workflow Doel **** activeren op de pagina Segmenten **** selecteren een of meer segmenten die u wilt activeren op de bestemming. Druk op **[!UICONTROL Volgende]** om door te gaan naar de volgende stap.
+Selecteer in de workflow Doel **** activeren op de pagina Segmenten **** selecteren een of meer segmenten die u wilt activeren op de bestemming. Selecteer **[!UICONTROL Volgende]** om door te gaan naar de volgende stap.
 ![segmenten-naar-bestemming](assets/email-select-segments.png)
 
-<br> 
-
-### **[!UICONTROL stap Identiteitstoewijzing]** {#identity-mapping}
+### [!UICONTROL stap Identiteitstoewijzing] {#identity-mapping}
 
 Van toepassing op: sociale bestemmingen en Google Customer Match-advertentiebestemming
 
-![Identiteitstoewijzingsstap](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
+![Identiteitstoewijzingsstap](./assets/identity-mapping-icon.png)
 
-Voor *sociale bestemmingen*, in de het in kaart brengen **[!UICONTROL van de]** Identiteit stap, kunt u bronattributen selecteren om als doelidentiteiten in de bestemming in kaart te brengen. Deze stap is optioneel of verplicht, afhankelijk van de primaire identiteit die u in het schema gebruikt. <br> 
+Voor sociale bestemmingen, kunt u bronattributen selecteren om als doelidentiteiten in de bestemming in kaart te brengen. Deze stap is optioneel of verplicht, afhankelijk van de primaire identiteit die u in het schema gebruikt.
 
-*E-mailadres als primaire identiteit*: Als u het e-mailadres als primaire identiteit in uw schema gebruikt, kunt u de stap Identiteitstoewijzing overslaan, zoals hieronder wordt getoond:
+Als u het e-mailadres als primaire identiteit in uw schema gebruikt, kunt u de stap Identiteitstoewijzing overslaan, zoals hieronder wordt getoond:
 
 ![E-mailadres als identiteit](assets/email-as-identity.gif)
 
-<br> 
-
-*Een andere id als primaire identiteit*: Als u een andere identiteitskaart, zoals *Uitkerings identiteitskaart* of identiteitskaart *van de* Loyalty, als primaire identiteit in uw schema gebruikt, moet u het e-mailadres van uw identiteitsschema als doelidentiteit in de sociale bestemming manueel in kaart brengen, zoals hieronder getoond:
+Als u een andere id, zoals &quot;Rewards ID&quot; of &quot;Loyalty ID&quot;, als primaire identiteit in uw schema gebruikt, moet u het e-mailadres uit uw identiteitsschema handmatig toewijzen als een doelidentiteit in de sociale bestemming, zoals hieronder wordt getoond:
 
 ![Loyalty-id als identiteit](assets/rewardsid-as-identity.gif)
 
+Selecteer deze optie `Email_LC_SHA256` als doel als u de e-mailadressen van de klant bij het invoeren van gegevens in Adobe Experience Platform hebt gewijzigd, afhankelijk van de vereisten voor [!DNL Facebook] e- [mailhashing](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements).
 
-Selecteer deze optie `Email_LC_SHA256` als doel als u de e-mailadressen van klanten bij het invoeren van gegevens in Adobe Experience Platform hebt gewijzigd volgens de vereisten voor [!DNL Facebook] e- [mailhashing](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). <br> Selecteer `Email` als doel-id als de e-mailadressen die u gebruikt geen hashing zijn. Adobe In real time CDP zal de e-mailadressen hash om aan [!DNL Facebook] vereisten te voldoen.
+Selecteer `Email` als doel-id als de e-mailadressen die u gebruikt geen hashing zijn. CDP in realtime zal de e-mailadressen hashen om aan [!DNL Facebook] vereisten te voldoen.
 
 ![identiteitstoewijzing na invullen van velden](assets/identity-mapping.png)
-
-<br> 
 
 ### **[!UICONTROL Stap configureren]** {#configure}
 
 Van toepassing op: E-mailmarketingbestemmingen en cloudopslagbestemmingen
 
-![Stap configureren](/help/rtcdp/destinations/assets/configure-icon.png)
+![Stap configureren](./assets/configure-icon.png)
 
-Deze stap is optioneel. In de **[!UICONTROL Configure]** stap, kunt u de dossiernamen voor elk segment vormen u uitvoert. De standaardbestandsnamen bestaan uit een doelnaam, segment-id en een datum- en tijdindicator. U kunt bijvoorbeeld uw geëxporteerde bestandsnamen bewerken om onderscheid te maken tussen verschillende campagnes of om de exporttijd van de gegevens aan de bestanden toe te voegen.
+In de **[!UICONTROL Configure]** stap, kunt u de dossiernamen voor elk segment vormen u uitvoert. Het configureren van de bestandsnaam is optioneel.
 
-Selecteer **[!UICONTROL Volgende]** om de standaardbestandsnamen te gebruiken of klik op het potloodpictogram om een modaal venster te openen en de bestandsnamen te bewerken. Bestandsnamen mogen maximaal 255 tekens bevatten.
+De standaardbestandsnamen bestaan uit een doelnaam, segment-id en een datum- en tijdindicator. U kunt bijvoorbeeld uw geëxporteerde bestandsnamen bewerken om onderscheid te maken tussen verschillende campagnes of om de exporttijd van de gegevens aan de bestanden toe te voegen.
 
-![bestandsnaam configureren](assets/activation-workflow-configure-step.png)
+Selecteer het potloodpictogram om een modaal venster te openen en de bestandsnamen te bewerken. Bestandsnamen mogen maximaal 255 tekens bevatten.
+
+![bestandsnaam configureren](./assets/activate-destinations/configure-name.png)
 
 In de bestandsnaameditor kunt u verschillende componenten selecteren om aan de bestandsnaam toe te voegen. De doelnaam en segment-id kunnen niet uit bestandsnamen worden verwijderd. Naast deze, kunt u het volgende toevoegen:
 
-* **[!UICONTROL Segmentnaam]**: U kunt de segmentnaam aan de bestandsnaam toevoegen.
-* **[!UICONTROL Datum en tijd]**: Selecteer tussen het toevoegen van een `MMDDYYYY_HHMMSS` indeling of een Unix 10-cijferig tijdstempel van het tijdstip waarop de bestanden worden gegenereerd. Selecteer een van deze opties als u voor de bestanden een dynamische bestandsnaam wilt genereren bij elke incrementele exportbewerking.
-* **[!UICONTROL Aangepaste tekst]**: Voeg aangepaste tekst toe aan de bestandsnamen.
+- **[!UICONTROL Segmentnaam]**: U kunt de segmentnaam aan de bestandsnaam toevoegen.
+- **[!UICONTROL Datum en tijd]**: Selecteer tussen het toevoegen van een `MMDDYYYY_HHMMSS` indeling of een Unix 10-cijferig tijdstempel van het tijdstip waarop de bestanden worden gegenereerd. Kies een van deze opties als u voor de bestanden een dynamische bestandsnaam wilt genereren bij elke incrementele exportbewerking.
+- **[!UICONTROL Aangepaste tekst]**: Voeg aangepaste tekst toe aan de bestandsnamen.
 
 Selecteer Wijzigingen **** toepassen om uw selectie te bevestigen.
 
@@ -99,15 +98,15 @@ Selecteer Wijzigingen **** toepassen om uw selectie te bevestigen.
 > 
 >Als u de component **[!UICONTROL Datum en tijd]** niet selecteert, zijn de bestandsnamen statisch en overschrijft het nieuwe geëxporteerde bestand het vorige bestand op uw opslaglocatie met elke exportbewerking. Als u een terugkerende importtaak uitvoert vanaf een opslaglocatie naar een e-mailmarketingplatform, is dit de aanbevolen optie.
 
-![Bestandsnaamopties bewerken](assets/activate-workflow-configure-step-2.png)
+![Bestandsnaamopties bewerken](./assets/activate-workflow-configure-step-2.png)
 
-<br> 
+Nadat u alle segmenten hebt geconfigureerd, selecteert u **[!UICONTROL Volgende]** om door te gaan.
 
-### **[!UICONTROL stap Segmentplanning]** {#segment-schedule}
+### **[!UICONTROL Stap in schema]** voor segment {#segment-schedule}
 
 Van toepassing op: reclamebestemmingen, sociale bestemmingen
 
-![stap voor segmentplanning](/help/rtcdp/destinations/assets/segment-schedule-icon.png)
+![stap voor segmentplanning](./assets/segment-schedule-icon.png)
 
 Op de **[!UICONTROL het programmapagina]** van het Segment, kunt u de begindatum voor het verzenden van gegevens naar de bestemming, evenals de frequentie plaatsen om gegevens naar de bestemming te verzenden.
 
@@ -115,61 +114,53 @@ Op de **[!UICONTROL het programmapagina]** van het Segment, kunt u de begindatum
 >
 >Voor sociale bestemmingen, moet u de oorsprong van uw publiek in deze stap selecteren. U kunt pas verdergaan met de volgende stap nadat u een van de opties in de onderstaande afbeelding hebt geselecteerd.
 
-![oorsprong van gegevens kiezen](assets/choose-data-origin.png)
-
-<br> 
+![oorsprong van gegevens kiezen](./assets/choose-data-origin.png)
 
 ### **[!UICONTROL Stap plannen]** {#scheduling}
 
 Van toepassing op: e-mailmarketingdoelen en cloudopslagdoelen
 
-![stap voor segmentplanning](assets/scheduling-icon.png)
+![stap voor segmentplanning](./assets/scheduling-icon.png)
 
 Op de **[!UICONTROL Plannende]** pagina, kunt u de begindatum zien voor het verzenden van gegevens naar de bestemming evenals de frequentie om gegevens naar de bestemming te verzenden. Deze waarden kunnen niet worden bewerkt.
-
-<br> 
 
 ### **[!UICONTROL stap Kenmerken]** selecteren {#select-attributes}
 
 Van toepassing op: e-mailmarketingdoelen en cloudopslagdoelen
 
-![stap Kenmerken selecteren](/help/rtcdp/destinations/assets/select-attributes-icon.png)
+![stap Kenmerken selecteren](./assets/select-attributes-icon.png)
 
-
-Selecteer op de pagina Kenmerken **** selecteren het veld **[!UICONTROL Nieuw]** toevoegen en selecteer de kenmerken die u naar het doel wilt verzenden.
+Selecteer op de pagina **[!UICONTROL Kenmerken]** selecteren het selectievakje Nieuw veld **** toevoegen en kies de kenmerken die u naar het doel wilt verzenden.
 
 >[!NOTE]
 >
-> Adobe CDP in real time vult uw selectie met vier geadviseerde, algemeen gebruikte attributen van uw schema vooraf in: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+> CDP in real time vult uw selectie met vier geadviseerde, algemeen gebruikte attributen van uw schema vooraf in: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
-Het exporteren van bestanden kan als volgt variëren, afhankelijk van of `segmentMembership.status` is geselecteerd:
-* Als het `segmentMembership.status` veld is geselecteerd, bevatten geëxporteerde bestanden **Actieve** leden in de eerste volledige opname en **Actieve** en **Verlopen** leden in volgende incrementele exportbewerkingen.
-* Als het `segmentMembership.status` veld niet is geselecteerd, bevatten geëxporteerde bestanden alleen **actieve** leden in de eerste volledige opname en in de volgende incrementele exportbewerkingen.
+Het exporteren van bestanden kan op de volgende manieren variëren, afhankelijk van of `segmentMembership.status` is geselecteerd:
+- Als het `segmentMembership.status` veld is geselecteerd, bevatten geëxporteerde bestanden **[!UICONTROL Actieve]** leden in de eerste volledige opname en **[!UICONTROL Actieve]** en **[!UICONTROL Verlopen]** leden in volgende incrementele exportbewerkingen.
+- Als het `segmentMembership.status` veld niet is geselecteerd, bevatten geëxporteerde bestanden alleen **[!UICONTROL actieve]** leden in de eerste volledige opname en in de volgende incrementele exportbewerkingen.
 
-![aanbevolen kenmerken](/help/rtcdp/destinations/assets/recommended-attributes.png)
+![aanbevolen kenmerken](./assets/activate-destinations/mark-mandatory.png)
 
+Bovendien kunt u verschillende kenmerken als verplicht markeren. Als u een kenmerk als verplicht markeert, moet het worden gemarkeerd zodat het geëxporteerde segment dat kenmerk moet bevatten. Het resultaat is dat het kan worden gebruikt als een aanvullende manier om te filteren. Een attribuut als verplicht markeren is **niet** vereist.
 
-Wij adviseren één van de attributen om een [uniek herkenningsteken](/help/rtcdp/destinations/email-marketing-destinations.md#identity) van uw schema te zijn. Zie Identiteit in het artikel [E-mailmarketingdoelen](/help/rtcdp/destinations/email-marketing-destinations.md#identity) voor meer informatie over verplichte kenmerken.
+Men adviseert dat één van de attributen een [unieke herkenningsteken](/help/rtcdp/destinations/email-marketing-destinations.md#identity) van uw schema is. Raadpleeg de identiteitssectie in de documentatie over [e-mailmarketingdoelen](/help/rtcdp/destinations/email-marketing-destinations.md#identity) voor meer informatie over verplichte kenmerken.
 
 >[!NOTE]
 > 
 >Als er labels voor gegevensgebruik zijn toegepast op bepaalde velden in een gegevensset (in plaats van op de gehele gegevensset), wordt de toepassing van die labels op veldniveau bij activering uitgevoerd onder de volgende voorwaarden:
->* De velden worden gebruikt in de segmentdefinitie.
->* De velden worden geconfigureerd als geprojecteerde kenmerken voor de doelbestemming.
+>- De velden worden gebruikt in de segmentdefinitie.
+>- De velden worden geconfigureerd als geprojecteerde kenmerken voor de doelbestemming.
 
 >
 > 
-Bekijk de onderstaande schermafbeelding. Als, bijvoorbeeld, het gebied bepaalde etiketten van het gegevensgebruik `person.name.firstName` had die met de marketing van de bestemming gebruiksgeval in conflict waren, zou u een schending van het beleid van het gegevensgebruik in de overzichtsstap (stap 9) worden getoond. Voor meer informatie, zie [het Beleid van Gegevens in Echt - tijd CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations).
-
-![bestemmingskenmerken](assets/select-attributes-step.png)
-
-<br> 
+Bijvoorbeeld, als het gebied bepaalde etiketten van het gegevensgebruik `person.name.firstName` heeft die met de marketing van de bestemming gebruiksgeval in conflict zijn, zou u een schending van het beleid van het gegevensgebruik in de overzichtsstap worden getoond. Voor meer informatie, zie [het Beleid van Gegevens in Echt - tijd CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations).
 
 ### **[!UICONTROL Revisiestap]** {#review}
 
 Van toepassing op: alle bestemmingen
 
-![beoordelingsstap](/help/rtcdp/destinations/assets/review-icon.png)
+![beoordelingsstap](./assets/review-icon.png)
 
 Op de pagina **[!UICONTROL Revisie]** ziet u een overzicht van uw selectie. Selecteer **[!UICONTROL Annuleren]** om de stroom te verbreken, **[!UICONTROL Terug]** om uw instellingen te wijzigen of **[!UICONTROL Voltooien]** om uw selectie te bevestigen en gegevens naar de bestemming te verzenden.
 
@@ -183,7 +174,6 @@ Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Vo
 
 ![selectie bevestigen](assets/confirm-selection.png)
 
-
 ## Activering bewerken {#edit-activation}
 
 Voer de onderstaande stappen uit om bestaande activeringsstromen in CDP in real time te bewerken:
@@ -195,7 +185,7 @@ Voer de onderstaande stappen uit om bestaande activeringsstromen in CDP in real 
 
 ### E-mailmarketingbestemmingen en cloudopslagbestemmingen {#esp-and-cloud-storage}
 
-Voor e-mailmarketingdoelen en cloudopslagdoelen maakt Adobe Real-time CDP een door tabs gescheiden `.csv` of `.txt` bestand op de opslaglocatie die u hebt opgegeven. Verwacht dat er elke dag een nieuw bestand op uw opslaglocatie wordt gemaakt. De standaardbestandsindeling is:
+Voor e-mailmarketingdoelen en cloudopslagdoelen maakt CDP in realtime een door tabs gescheiden `.csv` of `.txt` bestand in de opslaglocatie die u hebt opgegeven. Verwacht dat er elke dag een nieuw bestand op uw opslaglocatie wordt gemaakt. De standaardbestandsindeling is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 U kunt de bestandsindeling bewerken. Voor meer informatie, ga naar [Configure](/help/rtcdp/destinations/activate-destinations.md#configure) stap voor de bestemmingen van de wolkenopslag en e-mailmarketing van bestemmingen.
@@ -220,7 +210,7 @@ Een geslaagde activering betekent [!DNL Facebook]bijvoorbeeld dat er via de prog
 
 >[!TIP]
 >
->De integratie tussen Adobe in real time CDP en [!DNL Facebook] steunt historische publieksbackfills. Alle historische segmentkwalificaties worden verzonden naar [!DNL Facebook] wanneer u de segmenten naar de bestemming activeert.
+>De integratie tussen CDP In real time en [!DNL Facebook] steunt historische publieksbackfills. Alle historische segmentkwalificaties worden verzonden naar [!DNL Facebook] wanneer u de segmenten naar de bestemming activeert.
 
 ## Activering uitschakelen {#disable-activation}
 
