@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e2b0048703816dc481eb9486310d86a8f2483af2
+source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1009'
 ht-degree: 1%
 
 ---
@@ -71,7 +71,6 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Hiërarchische toewijzing | U kunt een hiërarchisch bronbestand, zoals JSON of Parquet, voorvertonen tijdens het invoeren van gegevens. |
 | SSH-verificatieondersteuning voor SFTP | U kunt uw rekening SFTP met het [!DNL Platform] gebruiken van RSA/DSA Open SSH sleutels verbinden. Zie het [SFTP-overzicht](../../sources/connectors/cloud-storage/ftp-sftp.md) voor meer informatie. |
 | UX-verbeteringen | U kunt uw dataset voor [!DNL Profile] tijdens het proces van gegevensinvoer toelaten. Raadpleeg de zelfstudie over de workflow [](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) voor gegevens over cloudopslag voor meer informatie. |
 
