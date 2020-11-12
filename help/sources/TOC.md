@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 translation-type: tm+mt
-source-git-commit: 9e005b0b225e8a643a080fb3d4b014d981748973
+source-git-commit: 89a807c0adbc3c9e4396adbb96764453034c8ea3
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -208,4 +208,5 @@ ht-degree: 0%
    - [Accounts verwijderen](tutorials/ui/delete-accounts.md)
    - [Gegevensstromen verwijderen](tutorials/ui/delete.md)
 - [Meldingen voor stroomuitvoering](notifications.md)
+- [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
