@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;keyword extraction;Keyword extraction
 solution: Experience Platform
-title: Kleurextractie
+title: Trefwoordextractie
 topic: Developer guide
 description: De service voor het uitnemen van trefwoorden extraheert bij een tekstdocument automatisch trefwoorden of trefwoorden die het onderwerp van het document het best beschrijven. Voor het uitpakken van trefwoorden wordt een combinatie van algoritmen voor herkenning van benoemde entiteit (NER) en zonder toezicht gebruikt voor het extraheren van trefwoorden.
 translation-type: tm+mt
-source-git-commit: eb92a7d57b1ef0ca19bc2d175ad1b2014ac1a8b0
+source-git-commit: e397711baf31092402de83b826887ebef16321eb
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 2%
