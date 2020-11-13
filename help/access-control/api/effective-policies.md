@@ -5,7 +5,7 @@ title: Effectief beleid weergeven
 topic: developer guide
 description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. Dit document dient als richtlijn voor het weergeven van effectief beleid met behulp van de API voor toegangsbeheer voor Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 481f093e52c8533d2919504051af9e63704a0f4a
+source-git-commit: 8967a820ab19bceb2be69f37e3399ed99f0b8e72
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
@@ -95,8 +95,6 @@ permissions/manage-privacy-workflows
 permissions/manage-profile-configs
 permissions/manage-profiles
 permissions/manage-queries
-permissions/manage-schema-identities
-permissions/manage-schema-relationships
 permissions/manage-schemas
 permissions/manage-segments
 permissions/manage-sources
