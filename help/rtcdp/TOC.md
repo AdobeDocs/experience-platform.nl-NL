@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Handleiding Platform voor realtime klantgegevens
 user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 77b1ffdd20cbc4e1645688da83769277f6729091
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '510'
 ht-degree: 3%
 
 ---
@@ -56,6 +56,7 @@ ht-degree: 3%
          * [Google-tag-extensie](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [LinkedIn Insight-tagextensie](/help/rtcdp/destinations/linkedin-extension.md)
          * [Pinterest Conversion Tracking extension](destinations/pinterest-extension.md)
+         * [De handelsbank](/help/rtcdp/destinations/tradedesk-destination.md)
          * [Twitter Universal Website Tag-extensie](destinations/twitter-uwt-extension.md)
       * Analysedoelen {#analytics-destinations}
          * [Overzicht van analysedoelen](destinations/analytics-destinations.md)
