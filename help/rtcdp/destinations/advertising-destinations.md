@@ -5,9 +5,9 @@ seo-title: Reclamebestemmingen
 description: Verbind uw Platform van Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 seo-description: Verbind uw Platform van Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 translation-type: tm+mt
-source-git-commit: 77b1ffdd20cbc4e1645688da83769277f6729091
+source-git-commit: d20b558a6f4518be74cd5969c50a5db310370c08
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,6 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [Verbindi
 * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
 * [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
-* [De handelsbank](/help/rtcdp/destinations/tradedesk-destination.md)
 
 
 ## Extensies
