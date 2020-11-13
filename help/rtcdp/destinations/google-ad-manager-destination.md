@@ -5,9 +5,9 @@ seo-title: Doel van Google Ad Manager
 description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 seo-description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
 translation-type: tm+mt
-source-git-commit: 485c4b1c3c68755396da087d4b5864c8a36e64df
+source-git-commit: d20b558a6f4518be74cd5969c50a5db310370c08
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ad Manager] best
 
 ### Exporttype {#export-type}
 
-**[!DNL Segment Export]** - u exporteert alle leden van een segment (publiek) naar de Google-bestemming.
+**Segmentexport** - u exporteert alle leden van een segment (publiek) naar de Google-bestemming.
 
 ## Vereisten
 
