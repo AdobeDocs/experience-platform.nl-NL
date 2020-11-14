@@ -5,9 +5,9 @@ topic: overview
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden.
 translation-type: tm+mt
-source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
+source-git-commit: 205bfb5f3b3fa083f64fc0160ea6bdf7bba74c9b
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1298'
 ht-degree: 0%
 
 ---
@@ -52,8 +52,8 @@ In de [!DNL Admin Console]sectie worden machtigingen aan gebruikers toegewezen v
 
 | Productprofiel | Toegang tot sandbox | Toestemmingen |
 | --- | --- | --- |
-| Standaardproductie - Alle toegang | Productie | Alle toestemmingen van toepassing op [!DNL Experience Platform], behalve de toestemmingen van het Beleid Sandbox. |
-| Standaardsandboxbeheer | N.v.t. | Verleent toegang slechts tot de toestemmingen van het Beleid Sandbox. |
+| Standaardproductie, alle toegang | Productie | Alle toestemmingen van toepassing op [!DNL Experience Platform], behalve de toestemmingen van het Beleid Sandbox. |
+| Sandbox-beheerders | N.v.t. | Verleent toegang slechts tot de toestemmingen van het Beleid Sandbox. |
 
 ## Sandboxen en machtigingen
 
