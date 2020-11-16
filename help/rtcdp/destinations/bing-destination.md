@@ -5,7 +5,7 @@ seo-title: Met de Microsoft Bing-bestemming kunt u profielgegevens naar Microsof
 description: Met de bestemming van de Bing van Microsoft, kunt u het opnieuw richten en publiek gerichte digitale campagnes over de Reclame van de Vertoning van Microsoft uitvoeren.
 seo-description: Met de bestemming van de Bing van Microsoft, kunt u het opnieuw richten en publiek gerichte digitale campagnes over de Reclame van de Vertoning van Microsoft uitvoeren.
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 0%
@@ -50,8 +50,8 @@ Wanneer het vormen van de bestemming zult u worden gevraagd om de volgende infor
    >[!NOTE]
    >
    >Als er al een verbinding met dit doel bestaat, ziet u een knop **[!UICONTROL Activeren]** op de doelkaart. Voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]**, verwijs naar de sectie van de [Catalogus](../destinations/destinations-workspace.md#catalog) van de documentatie van de bestemmingswerkruimte.
-
-   ![Microsoft Bing-doel activeren](assets/bing-destination-activate.png)
+   >
+   >![Microsoft Bing-doel activeren](assets/bing-destination-activate.png)
 
 1. In de stap [!UICONTROL Verificatie] moet u de gegevens van de doelverbinding invoeren:
 
