@@ -5,9 +5,9 @@ seo-title: De bestemming van het handelsbureau
 description: 'De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en de mobiele voorraad. '
 seo-description: De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en de mobiele voorraad.
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
@@ -46,9 +46,9 @@ Als markator, wil ik segmenten kunnen gebruiken die van of apparaat IDs worden g
    >[!NOTE]
    >
    >Als er al een verbinding met dit doel bestaat, ziet u een knop **[!UICONTROL Activeren]** op de doelkaart. Voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]**, verwijs naar de sectie van de [Catalogus](../destinations/destinations-workspace.md#catalog) van de documentatie van de bestemmingswerkruimte.
+   >
+   >![Activeer de bestemming van het handelsbureau](assets/tradedesk-destination-activate.png)
 
-       ![De bestemming van de handelsdesk activeren](assets/tradedesk-destination-activate.png)
-   
 2. In de stap [!UICONTROL Verificatie] moet u [!DNL The Trade Desk] verbindingsgegevens invoeren:
 
    * **[!UICONTROL Naam]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
