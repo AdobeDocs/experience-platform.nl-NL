@@ -5,7 +5,7 @@ seo-title: Met de Microsoft Bing-bestemming kunt u profielgegevens naar Microsof
 description: Met de bestemming van de Bing van Microsoft, kunt u het opnieuw richten en publiek gerichte digitale campagnes over de Reclame van de Vertoning van Microsoft uitvoeren.
 seo-description: Met de bestemming van de Bing van Microsoft, kunt u het opnieuw richten en publiek gerichte digitale campagnes over de Reclame van de Vertoning van Microsoft uitvoeren.
 translation-type: tm+mt
-source-git-commit: 979256ea975dcc0c1f6c59792b70d6899ee11376
+source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 0%
@@ -50,8 +50,8 @@ Wanneer het vormen van de bestemming zult u worden gevraagd om de volgende infor
    >[!NOTE]
    >
    >Als er al een verbinding met dit doel bestaat, ziet u een knop **[!UICONTROL Activeren]** op de doelkaart. Voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]**, verwijs naar de sectie van de [Catalogus](../destinations/destinations-workspace.md#catalog) van de documentatie van de bestemmingswerkruimte.
-   >
-   >![Microsoft Bing-doel activeren](assets/bing-destination-activate.png)
+
+   ![Microsoft Bing-doel activeren](assets/bing-destination-activate.png)
 
 1. In de stap [!UICONTROL Verificatie] moet u de gegevens van de doelverbinding invoeren:
 
@@ -68,7 +68,7 @@ Wanneer het vormen van de bestemming zult u worden gevraagd om de volgende infor
 
 Zie Profielen en segmenten [activeren naar een doel](activate-destinations.md#select-attributes) voor informatie over de workflow voor segmentactivering.
 
-Tijdens de het programmastap [van het](activate-destinations.md#segment-schedule) Segment, moet u uw segmenten aan hun overeenkomstige identiteitskaart of vriendschappelijke naam in de bestemming manueel in kaart brengen.
+In de het programmastap [van het](activate-destinations.md#segment-schedule) Segment, moet u uw segmenten aan hun overeenkomstige identiteitskaart of vriendschappelijke naam in de bestemming manueel in kaart brengen.
 
 Wanneer het in kaart brengen van segmenten, adviseren wij u de [!DNL Platform] segmentnaam of een kortere vorm van het, voor gebruiksgemak gebruiken. De segment-id of naam in uw bestemming hoeft echter niet overeen te komen met de id of naam in uw [!DNL Platform] account. Elke waarde die u in het toewijzingsveld invoegt, wordt weerspiegeld door het doel.
 
