@@ -5,9 +5,9 @@ seo-title: De bestemming van het handelsbureau
 description: 'De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en de mobiele voorraad. '
 seo-description: De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en de mobiele voorraad.
 translation-type: tm+mt
-source-git-commit: c9fb63b390d4c7dddcdb35a85710ff664614ad63
+source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
@@ -46,10 +46,10 @@ Als markator, wil ik segmenten kunnen gebruiken die van of apparaat IDs worden g
    >[!NOTE]
    >
    >Als er al een verbinding met dit doel bestaat, ziet u een knop **[!UICONTROL Activeren]** op de doelkaart. Voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]**, verwijs naar de sectie van de [Catalogus](../destinations/destinations-workspace.md#catalog) van de documentatie van de bestemmingswerkruimte.
-   >
-   >![Activeer de bestemming van het handelsbureau](assets/tradedesk-destination-activate.png)
 
-1. In de stap [!UICONTROL Verificatie] moet u [!DNL The Trade Desk] verbindingsgegevens invoeren:
+       ![De bestemming van de handelsdesk activeren](assets/tradedesk-destination-activate.png)
+   
+2. In de stap [!UICONTROL Verificatie] moet u [!DNL The Trade Desk] verbindingsgegevens invoeren:
 
    * **[!UICONTROL Naam]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
    * **[!UICONTROL Omschrijving]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -65,15 +65,15 @@ Als markator, wil ik segmenten kunnen gebruiken die van of apparaat IDs worden g
       * **[!UICONTROL Latijns-Amerika]**
    * **[!UICONTROL Geval]** voor gebruik bij het in de handel brengen: Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Raadpleeg de pagina [Data Governance in Adobe Experience Platform](../privacy/data-governance-overview.md#destinations) voor meer informatie over gevallen van marketinggebruik. Voor informatie over de individuele Adobe-bepaalde het in de handel brengen gebruiksgevallen, zie het overzicht [van het het gebruiksbeleid van](../../data-governance/policies/overview.md#core-actions)Gegevens.
 
-   ![De Stap van de Authentificatie van de Handelsdesk](assets/tradedesk-destination-authentication.png)
+   ![De Stap van de Authentificatie van het Handelsbureau](assets/tradedesk-destination-authentication.png)
 
-1. Klik op **[!UICONTROL Doel]** maken. Uw doel is nu gemaakt. U kunt op [!UICONTROL Opslaan en afsluiten] klikken als u de segmenten later wilt activeren. U kunt ook [!UICONTROL Volgende] selecteren om door te gaan met de workflow en de gewenste segmenten te selecteren. In beide gevallen raadpleegt u de volgende sectie Segmenten [](#activate-segments)activeren voor de rest van de workflow.
+3. Klik op **[!UICONTROL Doel]** maken. Uw doel is nu gemaakt. U kunt op [!UICONTROL Opslaan en afsluiten] klikken als u de segmenten later wilt activeren. U kunt ook [!UICONTROL Volgende] selecteren om door te gaan met de workflow en de gewenste segmenten te selecteren. In beide gevallen raadpleegt u de volgende sectie Segmenten [](#activate-segments)activeren voor de rest van de workflow.
 
 ## Segmenten activeren {#activate-segments}
 
 Zie Profielen en segmenten [activeren naar een doel](activate-destinations.md#select-attributes) voor informatie over de workflow voor segmentactivering.
 
-Tijdens de het programmastap [van het](activate-destinations.md#segment-schedule) Segment, moet u uw segmenten aan hun overeenkomstige identiteitskaart of vriendschappelijke naam in de bestemming manueel in kaart brengen.
+In de het programmastap [van het](activate-destinations.md#segment-schedule) Segment, moet u uw segmenten aan hun overeenkomstige identiteitskaart of vriendschappelijke naam in de bestemming manueel in kaart brengen.
 
 Wanneer het in kaart brengen van segmenten, adviseren wij u de [!DNL Platform] segmentnaam of een kortere vorm van het, voor gebruiksgemak gebruiken. De segment-id of naam in uw bestemming hoeft echter niet overeen te komen met de id of naam in uw [!DNL Platform] account. Elke waarde die u in het toewijzingsveld invoegt, wordt weerspiegeld door het doel.
 
