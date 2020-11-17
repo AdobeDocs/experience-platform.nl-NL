@@ -6,9 +6,9 @@ type: Tutorial
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 seo-description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 translation-type: tm+mt
-source-git-commit: 5238d98db0554d34c2b0bcd28b64354f544faa0f
+source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,8 @@ Als u in de stap **[!UICONTROL Verificatie]** eerder een verbinding met uw e-mai
 - Voor **S3-verbindingen** moet u de Amazon Access Key-id en de Secure Access-sleutel opgeven.
 - Voor **SFTP met de verbindingen van het Wachtwoord** , moet u Domein, Haven, Gebruikersnaam, en Wachtwoord voor uw server van SFTP verstrekken.
 - Voor **SFTP met SSH Zeer belangrijke** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Sleutel SSH voor uw server van SFTP verstrekken.
+
+U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan geëxporteerde bestanden onder de sectie **[!UICONTROL Key]** . Merk op dat deze openbare sleutel **als Base64 gecodeerde koord moet** worden geschreven.
 
 Voer in de stap **[!UICONTROL Setup]** een naam en beschrijving in voor uw nieuwe bestemming en voor de bestandsindeling voor de geëxporteerde bestanden.
 
