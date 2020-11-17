@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: af7eab0599b17be55d5a4c129f7ebaeba91333bc
 workflow-type: tm+mt
-source-wordcount: '1711'
+source-wordcount: '1719'
 ht-degree: 0%
 
 ---
@@ -87,6 +87,8 @@ Alle grafieken van de klantenidentiteit worden collectief beheerd en bijgewerkt 
 
 Als voorbeeld van de mogelijke typen factoren die in overweging moeten worden genomen bij het leveren en etiketteren van identiteitsgegevens, kan het gebruik van telefoonnummers zoals &quot;werktelefoon&quot; leiden tot meer relaties dan u in de identiteitsgrafiek wilt. Veel werknemers verwijzen naar hetzelfde aantal voor het werk en dat &quot;thuis&quot; en &quot;mobiel&quot; beter geschikt zijn om relaties zo nauwkeurig mogelijk te houden.
 
+Zie de zelfstudie over het [openen van de viewer voor identiteitsgrafieken voor meer informatie](./ui/identity-graph-viewer.md)
+
 ## Identiteitsgegevens leveren aan [!DNL Identity Service]
 
 In deze sectie wordt beschreven hoe aan Adobe Experience Platform verstrekte gegevens worden verwerkt voordat ze worden gebruikt om een identiteitsgrafiek voor elke klant [!DNL Identity Service] te maken.
@@ -146,4 +148,4 @@ Adobe Experience Platform is gemaakt met het oog op privacy en bevat een gegeven
 
 ## Volgende stappen
 
-Nu u de belangrijkste concepten van [!DNL Identity Service] en zijn rol binnen begrijpt, kunt u beginnen te leren hoe te met uw identiteitsgrafiek te werken gebruikend [!DNL Experience Platform][!DNL de Dienst API] [](./api/getting-started.md)van de Identiteit.
+Nu u de belangrijkste concepten van [!DNL Identity Service] en zijn rol binnen begrijpt, kunt u beginnen te leren hoe te met uw identiteitsgrafiek te werken gebruikend [!DNL Experience Platform][[!DNL Identity Service API]](./api/getting-started.md).
