@@ -3,19 +3,19 @@ keywords: RTCDP;rtcdp
 title: Werkruimte Doelen
 seo-title: Werkruimte Doelen
 description: De werkruimte Doelen bestaat uit vier secties, Catalogus, Bladeren, Rekeningen, en de Mening van het Systeem, die in de hieronder secties worden beschreven.
-seo-description: In het Platform van de Gegevens van de Klant van Adobe in real time, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
+seo-description: In het Platform van Gegevens van de Klant in real time, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: a3e35dee98b7b2758a4246a63bb0e1bde6b2f165
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 2%
+source-wordcount: '905'
+ht-degree: 1%
 
 ---
 
 
 # Werkruimte Doelen {#destinations-workspace}
 
-In het Platform van de Gegevens van de Klant van Adobe in real time, uitgezochte **[!UICONTROL Doelen]** van de linkernavigatiebar om tot de werkruimte van [!UICONTROL Doelen] toegang te hebben.
+In het Platform van Gegevens van de Klant in real time, uitgezochte **[!UICONTROL Doelen]** van de linkernavigatiebar om tot de werkruimte van [!UICONTROL Doelen] toegang te hebben.
 
 De [!UICONTROL werkruimte van Doelen] bestaat uit vier secties, [!UICONTROL Catalogus], [!UICONTROL doorbladeren], [!UICONTROL Rekeningen], en de Mening [!UICONTROL van]het Systeem, die in de hieronder secties worden beschreven.
 
@@ -23,13 +23,13 @@ De [!UICONTROL werkruimte van Doelen] bestaat uit vier secties, [!UICONTROL Cata
 
 ## [!UICONTROL Catalogus] {#catalog}
 
-Het **[!UICONTROL lusje van de Catalogus]** toont een lijst van alle bestemmingen beschikbaar in Adobe in real time CDP, dat u gegevens kunt verzenden naar.
+Op het tabblad **[!UICONTROL Catalogus]** wordt een lijst weergegeven met alle bestemmingen die beschikbaar zijn in CDP in real-time, waarnaar u gegevens kunt verzenden.
 
-De Echte Adobe - tijd CDP gebruikersinterface verstrekt een aantal onderzoek en filteropties op de pagina van de bestemmingscatalogus:
+De gebruikersinterface in real time CDP verstrekt een aantal onderzoek en filteropties op de pagina van de bestemmingscatalogus:
 
 * Gebruik de zoekfunctionaliteit op de pagina om een specifiek doel te zoeken.
 * Doelen filteren met het besturingselement [!UICONTROL Categorieën] .
-* Wissel tussen [!UICONTROL Alle bestemmingen] en [!UICONTROL Mijn bestemmingen]. Wanneer **[!UICONTROL Alle bestemmingen]** wordt geselecteerd, worden alle beschikbare Adobe in real time CDP bestemmingen getoond. Wanneer **[!UICONTROL Mijn bestemmingen]** wordt geselecteerd, kunt u slechts de bestemmingen zien waarmee u een verbinding hebt gevestigd.
+* Wissel tussen [!UICONTROL Alle bestemmingen] en [!UICONTROL Mijn bestemmingen]. Wanneer **[!UICONTROL Alle bestemmingen]** wordt geselecteerd, worden alle beschikbare bestemmingen in real time CDP getoond. Wanneer **[!UICONTROL Mijn bestemmingen]** wordt geselecteerd, kunt u slechts de bestemmingen zien waarmee u een verbinding hebt gevestigd.
 * Selecteer deze optie om **[!UICONTROL verbindingen]** en/of **[!UICONTROL extensies]** weer te geven. Om het verschil tussen de twee categorieën te begrijpen, zie de Types en de Categorieën van [Bestemming](/help/rtcdp/destinations/destination-types.md).
 
 ![doelen filteren en zoeken, demo](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
@@ -60,7 +60,7 @@ Op het tabblad **[!UICONTROL Accounts]** kunt u meer informatie krijgen over de 
 >
 >Gebruik de knop ![Gegevens](/help/rtcdp/destinations/assets/add-data-symbol.png) toevoegen in de kolom **[!UICONTROL Platform]** om een nieuwe doelverbinding voor die account te maken.
 
-![Het tabblad Accounts](/help/rtcdp/destinations/assets/accounts-tab.png)
+![Het tabblad Accounts](./assets/workspace/edit-account-destinations.png)
 
 | Element | Beschrijving |
 ---------|----------
@@ -69,6 +69,18 @@ Op het tabblad **[!UICONTROL Accounts]** kunt u meer informatie krijgen over de 
 | [!UICONTROL Gebruikersnaam] | De gebruikersnaam die u in de [Connect-doelwizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)hebt geselecteerd. |
 | [!UICONTROL Doelen] | Vertegenwoordigt het aantal unieke succesvolle bestemmingsstromen die met basisinformatie worden verbonden die voor een bestemming wordt gecreeerd. |
 | [!UICONTROL Geautoriseerd] | De datum waarop de verbinding met deze bestemming werd geautoriseerd. |
+
+Bovendien kunt u uw accountgegevens bewerken of bijwerken. Selecteer de knop ![Account](./assets/workspace/pencil-icon.png) bewerken in de kolom **[!UICONTROL Platform]** om de accountgegevens te bewerken.
+
+Voor accounts die een `OAuth2` verbindingstype gebruiken, kunt u OAuth **[!UICONTROL opnieuw verbinden selecteren]** om uw accountgegevens te vernieuwen.
+
+![Oautische afbeelding](./assets/workspace/reconnect-oauth.png)
+
+Voor accounts die een `Access Key` of `ConnectionString` verbindingstype gebruiken, kunt u de verificatiegegevens van uw account bewerken, zoals toegang-id, geheime sleutels of verbindingstekenreeksen.
+
+![Afbeelding met accountgegevens](./assets/workspace/edit-account-details.png)
+
+Als u klaar bent met het bewerken van uw accountgegevens, selecteert u **[!UICONTROL Opslaan]** om de update te voltooien.
 
 ## [!UICONTROL Bladeren] {#browse}
 
