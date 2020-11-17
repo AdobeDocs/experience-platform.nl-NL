@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand via de Adobe Experience Platform-gebruikersinterface toewijst aan een XDM-schema.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: d69d0dd8c5a3d3a5e92cc88e390c079ed46aba32
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -24,14 +24,14 @@ Daarnaast bevat het aanhangsel bij deze zelfstudie nadere informatie over het ge
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van [!DNL Platform]:
 
-- [[!DNL-ervaringsgegevensmodel (XDM-systeem)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
-- [[!DNL Batch-inname]](../batch-ingestion/overview.md): De methode waarmee gegevens uit door de gebruiker opgegeven gegevensbestanden worden [!DNL Platform] ingesloten.
+- [[!DNL Experience Data Model (XDM System)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
+- [[!DNL Batch ingestion]](../batch-ingestion/overview.md): De methode waarmee gegevens uit door de gebruiker opgegeven gegevensbestanden worden [!DNL Platform] ingesloten.
 
 Deze zelfstudie vereist ook dat u al een dataset hebt gemaakt om uw CSV-gegevens in te voeren. Voor stappen bij het creëren van een dataset in UI, zie de [gegevens ingest leerprogramma](./ingest-batch-data.md).
 
 ## Kies een bestemming
 
-Meld u aan bij [[!DNL Adobe Experience Platform]](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Workflows]** in de linkernavigatiebalk voor toegang tot de werkruimte **[!UICONTROL Workflows]** .
+Meld u aan bij [[!DNL Adobe Experience Platform]](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Workflows]** in de linkernavigatiebalk voor toegang tot de **[!UICONTROL werkruimte Workflows]** .
 
 Selecteer in het scherm **[!UICONTROL Workflows]** de optie CSV **[!UICONTROL toewijzen aan XDM-schema]** onder de sectie **[!UICONTROL Gegevensinvoer]** en selecteer vervolgens **[!UICONTROL Starten]**.
 
@@ -61,25 +61,29 @@ De sectie **[!UICONTROL Voorbeeldgegevens]** wordt weergegeven wanneer het besta
 
 ## CSV-velden toewijzen aan XDM-schemavelden
 
-De stap **[!UICONTROL Toewijzing]** wordt weergegeven. De kolommen van het CSV-bestand worden weergegeven onder **[!UICONTROL Bronveld]**, met de bijbehorende XDM-schemavelden onder **[!UICONTROL Doelveld]**. Niet-geselecteerde doelvelden krijgen een rode omtrek. Met de optie Filtervelden kunt u de lijst met beschikbare bronvelden verkleinen.
+De stap **[!UICONTROL Toewijzing]** wordt weergegeven. De kolommen van het CSV-bestand worden weergegeven onder **[!UICONTROL Bronveld]**, met de bijbehorende XDM-schemavelden onder **[!UICONTROL Doelveld]**.
 
->[!TIP]
->
->[!DNL Platform] verstrekt intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd dat u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
+[!DNL Platform] verstrekt automatisch intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd dat u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
 
-Als u een CSV-kolom wilt toewijzen aan een XDM-veld, selecteert u het schemapictogram naast het bijbehorende doelveld van de kolom.
+![](../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
-![](../images/tutorials/map-a-csv-file/mapping.png)
+Als u alle automatisch gegenereerde toewijzingswaarden wilt accepteren, schakelt u het selectievakje &quot;[!UICONTROL Alle doelvelden]accepteren&quot; in.
 
-Het venster **[!UICONTROL Selectieschemaveld]** wordt weergegeven. Hier kunt u de structuur van het XDM-schema navigeren en van het gebied de plaats bepalen u wenst om de kolom in kaart te brengen CSV aan. Klik op een XDM-veld om dit te selecteren en klik vervolgens op **[!UICONTROL Selecteren]**.
+![](../images/tutorials/map-a-csv-file/filled-mapping-with-suggestions.png)
 
-![](../images/tutorials/map-a-csv-file/select-schema-field.png)
+Soms is er meer dan één aanbeveling beschikbaar voor het bronschema. Als dit gebeurt, wordt op de kaart de meest prominente aanbeveling weergegeven, gevolgd door een blauwe cirkel die het aantal aanvullende aanbevelingen bevat dat beschikbaar is. Als u het gloeilamppictogram selecteert, wordt een lijst met aanvullende aanbevelingen weergegeven. U kunt één van de afwisselende aanbevelingen kiezen door checkbox naast de aanbeveling te selecteren u aan in plaats daarvan wilt in kaart brengen.
 
-Nadat u de stappen voor de resterende niet-toegewezen bronvelden hebt uitgevoerd, wordt het scherm **[!UICONTROL Toewijzing]** opnieuw weergegeven met het geselecteerde XDM-veld dat nu onder **[!UICONTROL Doelveld]** wordt weergegeven.
+![](../images/tutorials/map-a-csv-file/multiple-recommendations.png)
 
-![](../images/tutorials/map-a-csv-file/field-mapped.png)
+Alternatief, kunt u verkiezen om uw bronschema aan uw doelschema manueel in kaart te brengen. Houd de muisaanwijzer boven het bronschema dat u wilt toewijzen en selecteer vervolgens het plusteken.
 
-Bij het toewijzen van velden kunt u ook functies opnemen om waarden te berekenen op basis van invoerbronvelden. Zie de sectie [toewijzingsfuncties](#mapping-functions) in de bijlage voor meer informatie.
+![](../images/tutorials/map-a-csv-file/mapping-with-suggestions-and-buttons.png)
+
+De pop-up Bron **[!UICONTROL toewijzen aan doelveld]** wordt weergegeven. Van hieruit kunt u selecteren welk veld u wilt toewijzen, gevolgd door **[!UICONTROL Opslaan]** om de nieuwe toewijzing toe te voegen.
+
+![](../images/tutorials/map-a-csv-file/manual-mapping.png)
+
+Als u een van de toewijzingen wilt verwijderen, plaatst u de muisaanwijzer boven de toewijzing en selecteert u het minteken.
 
 ### Berekend veld toevoegen
 
@@ -87,7 +91,7 @@ Met berekende velden kunnen waarden worden gemaakt op basis van de kenmerken in 
 
 Selecteer de knop Berekend veld **** toevoegen om door te gaan.
 
-![](../images/tutorials/map-a-csv-file/add-calculate-field.png)
+![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
 Het **[!UICONTROL deelvenster Berekend veld]** maken wordt weergegeven. Het linkerdialoogvenster bevat de velden, functies en operatoren die in berekende velden worden ondersteund. Selecteer een van de tabbladen om functies, velden of operatoren toe te voegen aan de expressie-editor.
 
@@ -96,33 +100,23 @@ Het **[!UICONTROL deelvenster Berekend veld]** maken wordt weergegeven. Het link
 | Tab | Beschrijving |
 | --------- | ----------- |
 | Velden | Het tabblad Veld bevat velden en kenmerken die beschikbaar zijn in het bronschema. |
-| Functies | Op het tabblad Functies staan de functies die beschikbaar zijn voor het transformeren van de gegevens. |
+| Functies | Op het tabblad Functies staan de functies die beschikbaar zijn voor het transformeren van de gegevens. Voor meer informatie over de functies die u kunt gebruiken binnen berekende velden, leest u de handleiding over het [gebruik van de functies](../../data-prep/functions.md)Data Prep (Mapper). |
 | Operatoren | Het tabblad Operatoren bevat een lijst met operatoren die beschikbaar zijn om de gegevens te transformeren. |
 
 U kunt handmatig velden, functies en operatoren toevoegen met de expressieeditor in het midden. Selecteer de editor om een expressie te maken.
 
-![](../images/tutorials/map-a-csv-file/expression-editor.png)
+![](../images/tutorials/map-a-csv-file/create-calculated-field.png)
 
 Selecteer **[!UICONTROL Opslaan]** om door te gaan.
 
 Het kaartscherm verschijnt weer met het nieuwe bronveld. Pas het desbetreffende doelveld toe en selecteer **[!UICONTROL Voltooien]** om de toewijzing te voltooien.
 
-![](../images/tutorials/map-a-csv-file/new-field.png)
+![](../images/tutorials/map-a-csv-file/new-calculated-field.png)
 
 ## Uw gegevensstroom controleren
 
 Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Raadpleeg de zelfstudie over het [controleren van streaming dataflows voor meer informatie over het controleren van gegevensstromen](../../ingestion/quality/monitor-data-flows.md).
 
-## Toewijzingsfuncties gebruiken
-
-Als u een functie wilt gebruiken, typt u deze onder **[!UICONTROL Bronveld]** met de juiste syntaxis en invoer.
-
-Als u bijvoorbeeld CSV-velden voor stad en land wilt samenvoegen en deze aan het XDM-veld voor stad wilt toewijzen, stelt u het bronveld in als `concat(city, ", ", county)`.
-
-![](../images/tutorials/map-a-csv-file/mapping-function.png)
-
-Meer over het in kaart brengen van kolommen aan gebieden XDM, lees de gids bij het [gebruiken van de functies](../../data-prep/functions.md)van de Prep van Gegevens (Mapper).
-
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een vlak CSV-bestand toegewezen aan een XDM-schema en het ingepakt in [!DNL Platform]. Deze gegevens kunnen nu worden gebruikt door downstreamdiensten [!DNL Platform] zoals [!DNL Real-time Customer Profile]. Zie het overzicht voor [[!DNL Real-time klantprofiel]](../../profile/home.md) voor meer informatie.
+Door deze zelfstudie te volgen, hebt u een vlak CSV-bestand toegewezen aan een XDM-schema en het ingepakt in [!DNL Platform]. Deze gegevens kunnen nu worden gebruikt door downstreamdiensten [!DNL Platform] zoals [!DNL Real-time Customer Profile]. Zie het overzicht voor [[!DNL Real-time Customer Profile]](../../profile/home.md) meer informatie.
