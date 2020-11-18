@@ -1,19 +1,19 @@
 ---
 keywords: airship attributes;airship destination
-title: Doel kenmerken van luchtschip
-seo-title: Doel kenmerken van luchtschip
+title: Airship Attributes destination
+seo-title: Airship Attributes destination
 description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als publiekskenmerken voor het aansturen van vluchten binnen het luchtschip.
 seo-description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als publiekskenmerken voor het aansturen van vluchten binnen het luchtschip.
 translation-type: tm+mt
-source-git-commit: 0e065bbc0917d5009738b4cae890ffd13c0ab154
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 0%
 
 ---
 
 
-# (bèta) [!DNL Airship Attributes] Doel {#airship-attributes-destination}
+# (Beta) [!DNL Airship Attributes] bestemming {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
@@ -57,19 +57,19 @@ Adobe Experience Platform-profielkenmerken lijken op [!DNL Airship] kenmerken en
 1. Klik op **[!UICONTROL Token]** maken en sla de details op als vertrouwelijk.
 
 
-## Use Cases {#use-cases}
+## Gebruiksscenario’s {#use-cases}
 
 Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Airship Attributes] bestemming zou moeten gebruiken, zijn hier de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
-### Hoofdletters en kleine letters gebruiken 1
+### Hoofdletters gebruiken #1
 
 Gebruik profielgegevens die in Adobe Experience Platform zijn verzameld voor personalisatie van het bericht en rijke inhoud binnen [!DNL Airship]de kanalen van een van de kanalen. U kunt bijvoorbeeld [!DNL Experience Platform] profielgegevens gebruiken om locatiekenmerken in te stellen binnen [!DNL Airship]. Hierdoor kan een hotelmerk voor elke gebruiker een afbeelding weergeven voor de dichtstbijzijnde hotellocatie.
 
-### Hoofdletters en kleine letters gebruiken 2
+### Hoofdletters gebruiken #2
 
 Benut kenmerken van Adobe Experience Platform om profielen verder te verrijken en te combineren met SDK of [!DNL Airship] [!DNL Airship] voorspellende gegevens. Bijvoorbeeld, kan een detailhandelaar een segment met loyaliteitsstatus en plaatsgegevens (eigenschappen van Platform) tot stand brengen en [!DNL Airship] voorspeld aan koordgegevens om hoogst gerichte berichten naar gebruikers in de gouden loyaliteitsstatus te verzenden die in Las Vegas, NV wonen, en een hoge waarschijnlijkheid van het kuren hebben.
 
-## Verbinden met [!DNL Airship] kenmerken {#connect-airship-attributes}
+## Verbinden met [!DNL Airship Attributes] {#connect-airship-attributes}
 
 1. Blader in **[!UICONTROL Doelen]** > **[!UICONTROL Catalogus]** naar de categorie **[!UICONTROL Mobiele betrokkenheid]** . Selecteer **[!DNL Airship Attributes]**, dan uitgezocht **[!UICONTROL vormen]**.
 
