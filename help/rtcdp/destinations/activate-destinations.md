@@ -6,9 +6,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens u in het Platform van Gegevens van de Klant in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens u in het Platform van Gegevens van de Klant in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: 74f49db15028aa27fc7ee73a79ea236ee42f37e8
+source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1768'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,19 @@ Van toepassing op: E-mailmarketingbestemmingen en cloudopslagbestemmingen
 
 ![Stap configureren](./assets/configure-icon.png)
 
-In de **[!UICONTROL Configure]** stap, kunt u de dossiernamen voor elk segment vormen u uitvoert. Het configureren van de bestandsnaam is optioneel.
+In **[!UICONTROL Configure]** stap, kunt u het programma en de dossiernamen voor elk segment vormen u uitvoert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
+
+Om een programma voor het segment toe te voegen, **[!UICONTROL creeer programma]**.
+
+![](./assets/activate-destinations/configure-destination-schedule.png)
+
+Er verschijnt een pop-up met opties voor het maken van het segmentschema.
+
+- **Bestand exporteren**: U kunt volledige of incrementele bestanden exporteren. Wanneer u een volledig bestand exporteert, wordt een volledige momentopname gepubliceerd van alle profielen die voor dat segment in aanmerking komen. Wanneer u een incrementeel bestand exporteert, wordt de delta gepubliceerd van profielen die voor dat segment in aanmerking komen sinds de laatste exportbewerking.
+- **Frequentie**: Als **[!UICONTROL Volledige bestanden]** exporteren is geselecteerd, kunt u **[!UICONTROL Eenmaal]** of **[!UICONTROL Dagelijks]** exporteren. Als u Incrementele bestanden **** exporteren selecteert, kunt u alleen **[!UICONTROL Dagelijks]** exporteren. Het bestand wordt **[!UICONTROL eenmaal]** geëxporteerd wanneer u een bestand exporteert. Wanneer u een bestand exporteert, wordt het bestand dagelijks **** geëxporteerd vanaf de begindatum tot de einddatum om 12:00 uur (UTC, 7:00 uur (EST)) wanneer volledige bestanden zijn geselecteerd en 12:00 uur (UTC, 7:00 uur (EST) wanneer incrementele bestanden zijn geselecteerd.
+- **Datum**: Als **[!UICONTROL Eenmaal]** is geselecteerd, kunt u de datum voor de eenmalige export selecteren. Als u **[!UICONTROL Dagelijks]** selecteert, kunt u de begin- en einddatum voor het exporteren selecteren.
+
+![](./assets/activate-destinations/export-full-file.png)
 
 De standaardbestandsnamen bestaan uit een doelnaam, segment-id en een datum- en tijdindicator. U kunt bijvoorbeeld uw geëxporteerde bestandsnamen bewerken om onderscheid te maken tussen verschillende campagnes of om de exporttijd van de gegevens aan de bestanden toe te voegen.
 
