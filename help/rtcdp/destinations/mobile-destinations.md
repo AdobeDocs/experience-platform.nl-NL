@@ -1,23 +1,22 @@
 ---
 keywords: mobile messaging;mobile messaging destinations;Braze; Airship
-title: Mobiele bestemmingen
-seo-title: Mobiele bestemmingen
-description: Gebruiksscenario voor mobiele doelen invoegen
-seo-description: Gebruiksscenario voor mobiele doelen invoegen
+title: Mobiele betrokkenheidsdoelen
+seo-title: Mobiele betrokkenheidsdoelen
+description: Adobe Experience Platform biedt ondersteuning voor de onderstaande mobiele servicedoelen
+seo-description: Adobe Experience Platform biedt ondersteuning voor de onderstaande mobiele servicedoelen
 translation-type: tm+mt
-source-git-commit: 6c8084f35c4981b41a5beecd57ce5b3ef4e409d6
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
-source-wordcount: '38'
+source-wordcount: '41'
 ht-degree: 0%
 
 ---
 
 
-# Mobiele bestemmingen {#mobile-destinations}
+# Mobiele betrokkenheidsdoelen {#mobile-destinations}
 
-Een beschrijving voor mobiele doelen invoegen
+[!DNL Adobe Experience Platform] ondersteunt momenteel de volgende mobiele betrokkenheidsdoelen:
 
-[!DNL Adobe Experience Platform] ondersteunt momenteel de volgende mobiele doelen:
-
-* Luchtschip - link invoegen naar documentatiepagina voor luchtschepen
+* [Attributen van het luchtschip](airship-attributes-destination.md)
+* [Luchtvaartlabels](airship-tags-destination.md)
 * [Braze](braze-destination.md)
