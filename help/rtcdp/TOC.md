@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Handleiding Platform voor realtime klantgegevens
 user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
 translation-type: tm+mt
-source-git-commit: 97a4e335314d23a436817d46f9d218a2532acfe5
+source-git-commit: 44a129e5a92fc9994e43c199bf902459c012eca3
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 3%
@@ -102,7 +102,7 @@ ht-degree: 3%
          * [Salesforce-Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch-extensies{#launch-extensions}
          * [Overzicht van extensies voor Experience Platforms Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
-      * Mobiele betrokkenheidsdoelen {#mobile}
+      * Mobiele betrokkenheidsdoelen {#mobile-engagement-destinations}
          * [Overzicht van mobiele betrokkenheidsdoelen](destinations/mobile-destinations.md)
          * [Attributen van het luchtschip](destinations/airship-attributes-destination.md)
          * [Luchtvaartlabels](destinations/airship-tags-destination.md)
