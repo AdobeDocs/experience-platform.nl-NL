@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Handleiding Platform voor realtime klantgegevens
 user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
 translation-type: tm+mt
-source-git-commit: 8fa7642f90653ba11ad6ff90175a4bb705ae6d80
+source-git-commit: 97a4e335314d23a436817d46f9d218a2532acfe5
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '525'
 ht-degree: 3%
 
 ---
@@ -102,9 +102,11 @@ ht-degree: 3%
          * [Salesforce-Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch-extensies{#launch-extensions}
          * [Overzicht van extensies voor Experience Platforms Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
-      * Mobiele bestemmingen {#mobile}
-         * [Overzicht van mobiele doelen](destinations/mobile-destinations.md)
-         * [Braze bestemming](destinations/braze-destination.md)
+      * Mobiele betrokkenheidsdoelen {#mobile}
+         * [Overzicht van mobiele betrokkenheidsdoelen](destinations/mobile-destinations.md)
+         * [Attributen van het luchtschip](destinations/airship-attributes-destination.md)
+         * [Luchtvaartlabels](destinations/airship-tags-destination.md)
+         * [Braze](destinations/braze-destination.md)
       * Aanpassingsdoelen {#personalization-destinations}
          * [Overzicht van personalisatiedoelen](/help/rtcdp/destinations/personalization-destinations.md)
          * [Adobe Target-extensie](/help/rtcdp/destinations/adobe-target-extension.md)
