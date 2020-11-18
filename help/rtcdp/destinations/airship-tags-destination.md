@@ -5,7 +5,7 @@ seo-title: Doel van airship-tags
 description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als Publiek-tags voor doelwit binnen het luchtschip.
 seo-description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als Publiek-tags voor doelwit binnen het luchtschip.
 translation-type: tm+mt
-source-git-commit: f08b90531455cdbeb73deb83eed05ba7a9b19df6
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '1236'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# (bèta) [!DNL Airship Tags] Doel {#airship-tags-destination}
+# (Beta) [!DNL Airship Tags] bestemming {#airship-tags-destination}
 
 >[!IMPORTANT]
 >
@@ -63,15 +63,15 @@ Zie Taggroepen [](https://docs.airship.com/tutorials/manage-project/messaging/ta
 1. Klik op **[!UICONTROL Token]** maken en sla de details op als vertrouwelijk.
 
 
-## Gevallen gebruiken
+## Gebruiksscenario’s
 
 Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Airship Tags] bestemming zou moeten gebruiken, zijn hier de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
-### Hoofdletters en kleine letters gebruiken 1
+### Hoofdletters gebruiken #1
 
 De detailhandelaars of de entertainmentplatforms kunnen gebruikersprofielen op hun loyaliteitklanten tot stand brengen, en die segmenten overgaan in [!DNL Airship] voor bericht richtend op mobiele campagnes.
 
-### Hoofdletters en kleine letters gebruiken 2
+### Hoofdletters gebruiken #2
 
 U kunt een-op-een berichten in real-time activeren wanneer gebruikers binnen of buiten specifieke segmenten in Adobe Experience Platform vallen.
 
