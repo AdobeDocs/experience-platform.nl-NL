@@ -6,9 +6,9 @@ type: Tutorial
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 seo-description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 translation-type: tm+mt
-source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
+source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Selecteer op de pagina Segmenten **** selecteren welke segmenten u naar de beste
 
 ## Bestandsnamen configureren
 
-Voor informatie over de dossier - noem het uitgeven opties, verwijs naar de [Configure](/help/rtcdp/destinations/activate-destinations.md#configure) stap in de activerende bestemmingszelfstudie.
+Voor informatie over het segmentprogramma en dossier - noem het uitgeven opties, verwijs naar de [Configure](/help/rtcdp/destinations/activate-destinations.md#configure) stap in de activerende bestemmingsleerprogramma.
 
 ## Kenmerken selecteren - Selecteer welke schemavelden u als doelkenmerken wilt gebruiken in uw geëxporteerde bestanden {#destination-attributes}
 
