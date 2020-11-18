@@ -5,9 +5,9 @@ title: XDM ExperienceEvent, klasse
 topic: overview
 description: Dit document biedt een overzicht van de klasse XDM ExperienceEvent.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: 4d109244e57799c7e3837ceee3e2f5d17fbf0a18
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '797'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ De [!DNL XDM ExperienceEvent] klasse zelf verstrekt verscheidene op tijd-reeksen
 | `eventMergeId` | De id van de opgenomen batch die ervoor heeft gezorgd dat de record is gemaakt. Dit veld wordt automatisch ingevuld door het systeem bij het invoeren van gegevens. |
 | `eventType` | Een tekenreeks die het primaire gebeurtenistype voor de record aangeeft. De aanvaarde waarden en de definities daarvan zijn opgenomen in de [bijlage](#eventType). |
 | `identityMap` | Een toewijzingsveld dat een set naamloze identiteiten bevat voor de persoon op wie de gebeurtenis van toepassing is. Dit veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. Probeer niet handmatig de inhoud van het veld bij te werken in uw gegevensbewerkingen om dit veld correct te kunnen gebruiken voor [realtime klantprofiel](../../profile/home.md).<br /><br />Zie de sectie over identiteitskaarten in de [grondbeginselen van schemacompositie](../schema/composition.md#identityMap) voor meer informatie over hun gebruiksgeval. |
-| `timestamp` | Het tijdstip waarop de gebeurtenis of waarneming heeft plaatsgevonden. |
+| `timestamp` | Het tijdstip waarop de gebeurtenis of waarneming heeft plaatsgevonden. Alle datetime waarden moeten in [formaat RFC 3339](https://tools.ietf.org/html/rfc3339) worden verstrekt. |
 
 ## Compatibele combinaties {#mixins}
 
