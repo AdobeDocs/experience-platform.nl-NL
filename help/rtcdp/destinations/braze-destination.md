@@ -5,7 +5,7 @@ seo-title: Braze bestemming
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 seo-description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 translation-type: tm+mt
-source-git-commit: 9126a9b3a27aa0a0ecefb5d490475423d7840791
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 0%
@@ -57,6 +57,7 @@ Als markator, wil ik gebruikers in een mobiele betrokkenheidsbestemming richten,
    >![Braze doel activeren](assets/braze-destination-activate.png)
 
 1. In de stap [!UICONTROL Account] moet u uw [!DNL Braze] accounttoken opgeven. Dit is uw [!DNL Braze] [!DNL API] sleutel. Hier vindt u gedetailleerde instructies voor het verkrijgen van uw [!DNL API] sleutel: [Overzicht](https://www.braze.com/docs/api/api_key/)van REST API-sleutel. Voer het token in en klik op **[!UICONTROL Verbinden met doel]**.
+
    ![Stap Braze-doelaccount](assets/braze-destination-account.png)
 
 1. Klik op **[!UICONTROL Next]**.
