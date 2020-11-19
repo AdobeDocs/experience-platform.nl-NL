@@ -5,9 +5,9 @@ description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Exp
 seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven
 keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Overzicht van opties voor personalisatie
 
-De Adobe Experience Platform [!DNL Web SDK] biedt ondersteuning voor het opvragen van persoonlijke oplossingen bij Adobe, waaronder Adobe Target. Er zijn twee wijzen voor verpersoonlijking: ophalen, inhoud die automatisch kan worden gerenderd en inhoud die de ontwikkelaar moet renderen. De SDK biedt ook mogelijkheden om flikkering te [beheren](../personalization/manage-flicker.md).
+Adobe Experience Platform [!DNL Web SDK] ondersteunt het opvragen van personalisatieoplossingen bij Adobe, waaronder Adobe Target. Er zijn twee wijzen voor verpersoonlijking: ophalen, inhoud die automatisch kan worden gerenderd en inhoud die de ontwikkelaar moet renderen. De SDK biedt ook mogelijkheden om flikkering te [beheren](../personalization/manage-flicker.md).
 
 ## Inhoud automatisch renderen
 
@@ -51,12 +51,12 @@ alloy("sendEvent",{
     if (result.decisions){
       // Do something with the decisions.
     }
-  })
+  });
 ```
 
 Dit zal een lijst van besluiten als voorwerp JSON voor elke besluiten terugkeren.
 
-```javascript
+```json
 {
   "decisions": [
     {
