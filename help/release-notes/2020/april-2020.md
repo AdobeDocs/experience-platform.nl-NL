@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '972'
 ht-degree: 2%
 
 ---
@@ -19,14 +19,14 @@ ht-degree: 2%
 **Releasedatum: 8 april 2020**
 
 Nieuwe functies in Adobe Experience Platform:
-* [[!DNL Intelligente services]](#intelligent)
+* [[!DNL Intelligent Services]](#intelligent)
 
 Updates voor bestaande functies:
 * [[!DNL Experience Data Model (XDM)]](#xdm)
-* [[!DNL-gegevensbeheer]](#governance)
-* [[!DNL-doelen]](#destinations)
-* [[!DNL-Privacy Service]](#privacy)
-* [[!DNL-bronnen]](#sources)
+* [[!DNL Data Governance]](#governance)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Privacy Service]](#privacy)
+* [[!DNL Sources]](#sources)
 
 ## [!DNL Intelligent Services] {#intelligent}
 
@@ -90,7 +90,7 @@ Zie het overzicht [van](../../data-governance/home.md)gegevensbeheer voor meer i
 
 ## Doelen {#destinations}
 
-In [Adobe Real-time het Platform](../../rtcdp/overview.md)van de Gegevens van de Klant, zijn de bestemmingen prebuilt integraties met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In het Platform [van Gegevens van de Klant in](../../rtcdp/overview.md)real time, zijn de bestemmingen prebuilt integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe bestemmingen**
 
