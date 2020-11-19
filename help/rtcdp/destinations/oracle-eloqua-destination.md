@@ -2,12 +2,12 @@
 keywords: email;Email;e-mail;email destinations;oracle eloqua;oracle
 title: Oracle Eloqua-bestemming
 seo-title: Oracle Eloqua-bestemming
-description: Oracle Eloqua is een SaaS-platform (software as a service) voor marketingautomatisering dat door Oracle wordt aangeboden en bedoeld is om B2B-marketers en -organisaties te helpen bij het beheren van marketingcampagnes en het genereren van verkooplood.
-seo-description: Oracle Eloqua is een SaaS-platform (software as a service) voor marketingautomatisering dat door Oracle wordt aangeboden en bedoeld is om B2B-marketers en -organisaties te helpen bij het beheren van marketingcampagnes en het genereren van verkooplood.
+description: Oracle Eloqua is een SaaS-platform (software as a service) voor marketingautomatisering dat door Oracle wordt aangeboden en bedoeld is om B2B-marketers en -organisaties te helpen marketingcampagnes en het genereren van verkoopleads te beheren.
+seo-description: Oracle Eloqua is een SaaS-platform (software as a service) voor marketingautomatisering dat door Oracle wordt aangeboden en bedoeld is om B2B-marketers en -organisaties te helpen marketingcampagnes en het genereren van verkoopleads te beheren.
 translation-type: tm+mt
-source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 [Eloqua](https://www.oracle.com/marketingcloud/products/marketing-automation/) is een softwareplatform als service (SaaS) voor het automatiseren van de marketing dat door [!DNL Oracle] die wordt aangeboden bedoeld om B2B-marketers en -organisaties te helpen marketing campagnes en verkooploodproductie te beheren.
 
-Om segmentgegevens naar te verzenden [!DNL Oracle Eloqua], moet u eerst de bestemming [in het Platform van de Gegevens van de Klant van Adobe in real time](#connect-destination) verbinden, en dan [opstelling een gegevensimport](#import-data-into-eloqua) van uw opslagplaats in [!DNL Oracle Eloqua].
+Om segmentgegevens naar te verzenden [!DNL Oracle Eloqua], moet u eerst de bestemming [in het Platform van de Gegevens van de Klant in real time](#connect-destination) verbinden, en dan [opstelling een gegevensimport](#import-data-into-eloqua) van uw opslagplaats in [!DNL Oracle Eloqua].
 
 ## Exporttype {#export-type}
 
