@@ -2,12 +2,12 @@
 keywords: kickfire;Kickfire;kickfire extension;Kickfire Extension
 title: KickFire-extensie
 seo-title: KickFire-extensie
-description: De uitbreiding KickFire is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant van Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De uitbreiding KickFire is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant van Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De uitbreiding KickFire is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De uitbreiding KickFire is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '544'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 [!DNL KickFire's] IP adresintelligentie &amp; B2B firmographic gegevens staat u toe om IP adressen aan bedrijven te vertalen, anonieme Webbezoekers te identificeren, en rekeningsgegevens in uw technologiestapel te integreren - allen die op het IP van een bedrijf adres worden gebaseerd.
 
-[!DNL KickFire] is een verpersoonlijkingsuitbreiding in het Platform van de Gegevens van de Klant van de Adobe in real time. Zie de [Kickfire-website](https://www.kickfire.com/)voor meer informatie over de extensiefunctionaliteit.
+[!DNL KickFire] is een verpersoonlijkingsuitbreiding in het Platform van de Gegevens van de Klant in real time. Zie de [Kickfire-website](https://www.kickfire.com/)voor meer informatie over de extensiefunctionaliteit.
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
