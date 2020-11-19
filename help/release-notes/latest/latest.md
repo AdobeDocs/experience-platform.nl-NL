@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: b5fa40deb480f264b02a8be56aff2c50e4149cb2
+source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
 workflow-type: tm+mt
-source-wordcount: '2126'
+source-wordcount: '2180'
 ht-degree: 2%
 
 ---
@@ -113,20 +113,18 @@ In het Platform [van Gegevens van de Klant in](../../rtcdp/overview.md)real time
 
 | Bestemming | Beschrijving |
 | ----------- | ----------- |
+| Braze | Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt. |
 | Microsoft Bing | De bestemming van de Bing van Microsoft helpt u het opnieuw richten en publiek gerichte digitale campagnes over de Reclame van de Vertoning van Microsoft uitvoeren. |
 | De handelsbank | De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en mobiele inventarisatiebronnen. |
-
-<!-- | Braze | Braze is a comprehensive customer engagement platform that power relevant and memorable experiences between customers and the brands they love. |  -->
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Doeldetails UX-updates | De de bestemmingswerkschema&#39;s van CDP in real time omvatten nu gealigneerde controle zodat kunt u zien welke batch-activeringen succesvol waren. Met deze functie kunnen gebruikers problemen rechtstreeks in de workflow voor batchbestemmingen oplossen via waarschuwingen en een controledashboard om fouten in de verwerkingspijplijn bij te houden. |
+| Bestandsversleuteling | Voor op bestanden gebaseerde doelen kunnen gebruikers nu versleuteling toevoegen aan hun geëxporteerde bestanden. |
+| Bestanden plannen | Voor zowel e-mailopslagdoelen als cloudopslagdoelen kunnen gebruikers een eenmalige export maken of dagelijkse momentopnamen maken. |
 | Verplichte velden | Gebruikers kunnen velden markeren als verplicht, zodat alleen velden die het verplichte veld bevatten, worden geëxporteerd. |
-
-<!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
-| File encryption | For file based destinations, users can now add encryption to their exported files. | -->
 
 Zie het overzicht [](../../rtcdp/destinations/destinations-overview.md)Doelen voor meer informatie.
 
@@ -202,9 +200,10 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 [!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
 **Nieuwe bronnen**
+
 | Functie | Beschrijving |
-| — | — |
-| [!DNL Shopify] | U kunt nu verbinding maken [!DNL Shopify] met [!DNL Experience Platform] de [!DNL Flow Service] API of de interface. Zie het [verbindingsoverzicht](../../sources/connectors/ecommerce/shopify.md) Shopify voor meer informatie. |
+| ------- | ----------- |
+| [!DNL Shopify] | U kunt nu verbinding maken [!DNL Shopify] met [!DNL Experience Platform] de [!DNL Flow Service] API of de UI. Zie het [verbindingsoverzicht](../../sources/connectors/ecommerce/shopify.md) Shopify voor meer informatie. |
 
 **Belangrijkste kenmerken**
 
