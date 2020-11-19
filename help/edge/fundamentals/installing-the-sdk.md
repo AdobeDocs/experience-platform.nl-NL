@@ -1,13 +1,13 @@
 ---
-title: De SDK van Adobe Experience Platform Web installeren
+title: Adobe Experience Platform Web SDK installeren
 seo-title: Adobe Experience Platform Web SDK die de SDK installeert
 description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 seo-description: Leer hoe te om SDK van het Web van het Experience Platform te installeren
 keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: d23568f7ce63df5aa98dc237a6671eeadde0c9b2
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '623'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 # De SDK installeren {#installing-the-sdk}
 
-De voorkeursmanier om de Adobe Experience Platform Web SDK te gebruiken is via [Adobe Experience Platform Launch](http://launch.adobe.com/). Zoek naar `AEP Web SDK` in de catalogus van uitbreidingen, installeer dan de uitbreiding.
+Adobe Experience Platform Web SDK wordt bij voorkeur via [Adobe Experience Platform Launch](http://launch.adobe.com/)gebruikt. Zoek naar `AEP Web SDK` in de catalogus van uitbreidingen, installeer dan de uitbreiding.
 
-De AEP web SDK is ook beschikbaar op een CDN die u kunt gebruiken. U kunt naar dit bestand verwijzen of het downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in een geminificeerde en niet-geminiaterde versie. De niet-geminificeerde versie is handig voor foutopsporingsdoeleinden.
+Adobe Experience Platform Web SDK is ook beschikbaar op een CDN voor u aan gebruik. U kunt naar dit bestand verwijzen of het downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in een geminificeerde en niet-geminiaterde versie. De niet-geminificeerde versie is handig voor foutopsporingsdoeleinden.
 
 URL-structuur: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OF alloy.js voor de niet-geminificeerde versie.
 
@@ -28,7 +28,7 @@ Bijvoorbeeld:
 
 ## De code toevoegen {#adding-the-code}
 
-De eerste stap bij het implementeren van de Adobe Experience Platform [!DNL Web SDK] is het zo hoog mogelijk kopiëren en plakken van de volgende &quot;basiscode&quot; in de `<head>` tag van uw HTML:
+De eerste stap bij het implementeren van Adobe Experience Platform [!DNL Web SDK] is het zo hoog mogelijk kopiëren en plakken van de volgende &quot;basiscode&quot; in de `<head>` tag van uw HTML:
 
 ```markup
 <script>
