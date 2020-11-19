@@ -5,9 +5,9 @@ description: Leer welke Variabelen automatisch in Adobe Analytics met het Web SD
 seo-description: Leer welke Variabelen automatisch in Adobe Analytics met het Web SDK van het Experience Platform worden toegewezen
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: b81c0c450ddee4b0c0abedfd8ca53c3a599fb3cb
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Variabelen worden automatisch toegewezen in [!DNL Analytics]
 
-Hieronder ziet u een lijst met variabelen die de Adobe Experience Platform [!DNL Edge Network] automatisch in kaart brengt [!DNL Analytics].
+Hieronder volgt een lijst met variabelen die Adobe Experience Platform Edge Network automatisch in kaart brengt [!DNL Analytics].
 
 | XDM-veldpad | [!DNL Analytics Query String] / HTTP-koptekst | Beschrijving |
 | ---------- | ------------------------- | ----------------------------------------- |
