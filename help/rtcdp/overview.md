@@ -5,21 +5,21 @@ seo-title: Real-time overzicht van het Platform van klantgegevens
 description: Overzicht van het Platform van de Gegevens van de Klant in real time
 seo-description: Overzicht van het Platform van de Gegevens van de Klant in real time
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Real-time overzicht van het Platform voor klantgegevens
+# Overzicht van het Platform voor realtime klantgegevens
 
-Adobe In real time CDP (Customer Data Platform in real time) is gebaseerd op Adobe Experience Platform en helpt bedrijven bekende en anonieme gegevens uit meerdere bedrijfsbronnen bijeen te brengen om klantprofielen te maken die kunnen worden gebruikt om persoonlijke klantervaringen te bieden op alle kanalen en apparaten in real time.
+Het Real-Time Customer Data Platform (Real-time CDP) is gebaseerd op Adobe Experience Platform en helpt bedrijven bekende en anonieme gegevens uit meerdere bedrijfsbronnen samen te brengen om klantprofielen te maken die kunnen worden gebruikt om persoonlijke klantenervaringen op te doen op alle kanalen en apparaten in real-time.
 
 CDP in real time omvat hulpmiddelen voor gegevensbeheer, identiteitsbeheer, geavanceerde segmentatie, en gegevenswetenschap zodat u profielen kunt bouwen en publiek bepalen, evenals rijke inzichten af te leiden terwijl het kunnen strikte beleid van het gegevensbeheer afdwingen.
 
-Het Adobe Real-time Platform van de Gegevens van de Klant verbindt met een groot ecosysteem van partners, om het even welke inheemse integratie met Adobe Experience Cloud te noemen, zodat kunt u deze toehoorders naadloos activeren en grote klantenervaringen over alle kanalen, van onsite of in-app verpersoonlijking aan e-mail, betaalde media, callcenters, aangesloten apparaten, en meer leveren.
+Het Platform van Gegevens van de Klant in real time verbindt met een groot ecosysteem van partners, om het even welke inheemse integratie met Adobe Experience Cloud te noemen, zodat kunt u deze publiek naadloos activeren en grote klantenervaringen over alle kanalen leveren, van onsite of in-app verpersoonlijking tot e-mail, betaalde media, callcenters, aangesloten apparaten, en meer.
 
 Met het Platform van de Gegevens van de Klant in real time, kunt u:
 
