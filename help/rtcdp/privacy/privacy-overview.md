@@ -5,9 +5,9 @@ seo-title: Privacy in realtime gegevensprofiel van klanten
 description: Met het realtime gegevensprofiel voor klanten kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen in overeenstemming worden gehouden met privacyregels.
 seo-description: Met het realtime gegevensprofiel voor klanten kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen in overeenstemming worden gehouden met privacyregels.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: bdd80b15258bf4e3c0dee1e260fd3469c76d5885
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Zie het document over het [naleven van opt-out verzoeken](../../segmentation/hon
 
 ## IAB TCF 2.0-ondersteuning
 
-[!DNL Real-time CDP] maakt deel uit van de geregistreerde [leverancierslijst](https://iabeurope.eu/vendor-list-tcf-v2-0/) voor de [!DNL Transparency & Consent Framework (TCF)], zoals die door [!DNL Interactive Advertising Bureau] (IAB) wordt geschetst. In overeenstemming met TCF 2.0 vereisten, [!DNL Real-time CDP] staat u toe om gedetailleerde gegevens van de klantentoestemming te verzamelen en het in uw opgeslagen klantenprofielen te integreren. Deze toestemmingsgegevens kunnen dan in rekening worden gebracht in of bepaalde profielen in uitgevoerde publiekssegmenten, afhankelijk van hun gebruiksgeval inbegrepen zijn.
+[!DNL Real-time CDP] maakt deel uit van de geregistreerde [leverancierslijst](https://iabeurope.eu/vendor-list-tcf-v2-0/) voor de [!DNL Transparency & Consent Framework (TCF)], zoals geschetst door [!DNL Interactive Advertising Bureau (IAB)]. In overeenstemming met TCF 2.0 vereisten, [!DNL Real-time CDP] staat u toe om gedetailleerde gegevens van de klantentoestemming te verzamelen en het in uw opgeslagen klantenprofielen te integreren. Deze toestemmingsgegevens kunnen dan in rekening worden gebracht in of bepaalde profielen in uitgevoerde publiekssegmenten, afhankelijk van hun gebruiksgeval inbegrepen zijn.
 
 Zie het overzicht over [IAB TCF 2.0 steun in [!DNL Real-time CDP]](./iab/overview.md) voor meer informatie.
 
