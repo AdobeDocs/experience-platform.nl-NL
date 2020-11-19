@@ -5,9 +5,9 @@ seo-title: DMP-doelen (Data Management Platform)
 description: Met DMP's (Data Management Platforms) kunnen adverteerders, uitgevers en bureaus unieke profielen voor het publiek maken, hun meest waardevolle segmenten identificeren en ze via elk digitaal kanaal gebruiken. Zo kunt u een echte 360-weergave van een consumentenprofiel maken, een zinvol publiek maken en activeren.
 seo-description: Met DMP's (Data Management Platforms) kunnen adverteerders, uitgevers en bureaus unieke profielen voor het publiek maken, hun meest waardevolle segmenten identificeren en ze via elk digitaal kanaal gebruiken. Zo kunt u een echte 360-weergave van een consumentenprofiel maken, een zinvol publiek maken en activeren.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,6 @@ ht-degree: 0%
 
 [!DNL Data Management Platforms] (DMPs) laat adverteerders, uitgevers, en agentschappen toe om unieke publieksprofielen te bouwen, hun waardevolste segmenten te identificeren, en hen over om het even welk digitaal kanaal te gebruiken. Zo kunt u een echte 360-weergave van een consumentenprofiel maken, een zinvol publiek maken en activeren.
 
-Momenteel ondersteunt het Adobe Real-Time Customer Data Platform de hieronder vermelde doelen van het Data Management Platform (DMP). Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
+Momenteel ondersteunt het Real-Time Customer Data Platform de hieronder vermelde doelen van het Data Management Platform (DMP). Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
 
 * [Audience Manager DIL-extensie](/help/rtcdp/destinations/aam-dil-extension.md)
