@@ -2,12 +2,12 @@
 title: Adobe Experience Platform Web SDK Help
 seo-title: Adobe Experience Platform Web SDK Help
 description: Leer wat Adobe Experience Platform Web SDK is en hoe deze kan worden gebruikt.
-seo-description: klanten van de Adobe Experience Cloud in staat stellen te communiceren met de verschillende diensten in de Experience Cloud.
+seo-description: Leer hoe u klanten van Adobe Experience Cloud in staat stelt te communiceren met de verschillende services in de Experience Cloud.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: bdd80b15258bf4e3c0dee1e260fd3469c76d5885
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Wat is Adobe Experience Platform Web SDK
 
-Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van de Adobe Experience Cloud kunnen communiceren met de verschillende services in de [!DNL Experience Cloud] Adobe [!DNL Experience Platform Edge Network]. Naast de JavaScript-bibliotheek is er een extensie [voor](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) Experience Platforms Launch die u kunt helpen met uw Web SDK-configuraties.
+Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van Adobe Experience Cloud kunnen communiceren met de verschillende services in de SDK [!DNL Experience Cloud] via het Adobe Experience Platform Edge Network. Naast de JavaScript-bibliotheek is er een extensie [voor](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) Experience Platforms Launch die u kunt helpen met uw Web SDK-configuraties.
 
 ## Beleef de rand
 
@@ -42,7 +42,7 @@ Met één enkel geconsolideerd randsysteem kunnen klanten hun reclame-, marketin
 
 ## Video-overzicht
 
-De volgende video geeft een overzicht van de Adobe Experience Platform [!DNL Web SDK] en [!DNL Edge Network].
+De volgende video geeft een overzicht van de Adobe Experience Platform [!DNL Web SDK] en Adobe Experience Platform [!DNL Edge Network].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -59,13 +59,9 @@ Dit is niet alleen een omslag rond bestaande bibliotheken. Het is een volledige 
 
 Naast een nieuwe bibliotheek, is er een nieuw eindpunt dat de HTTP- verzoeken aan de oplossingen van Adobe stroomlijnt. Vóór, stuurde Visitor.js een blokkerende vraag naar de dienst van bezoekersidentiteitskaart, toen stuurde AT.js een vraag naar Adobe Target, zond DIL.js een vraag naar Adobe Audience Manager, en tenslotte stuurde AppMeasurement.js een vraag naar Adobe Analytics. Deze nieuwe bibliotheek en eindpunt kunnen een identiteitskaart terugwinnen, een [!DNL Target] ervaring halen, gegevens verzenden naar [!DNL Audience Manager], en de gegevens tot Adobe Experience Platform in één enkele vraag overgaan.
 
-De volgende video demonstreert de Adobe Experience Platform [!DNL Web SDK] en [!DNL Edge Network] in actie. Het videovoorbeeld gebruikt één enkele vraag aan Adobe die gegevens naar [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]en [!DNL Target]verzendt.
+In de volgende video ziet u hoe Adobe Experience Platform [!DNL Web SDK] en Adobe Experience Platform [!DNL Edge Network] in actie komen. Het videovoorbeeld gebruikt één enkele vraag aan Adobe die gegevens naar [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]en [!DNL Target]verzendt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
-
-## Aan de slag
-
-U wordt ten zeerste aangeraden de gids [Aan de slag uit te](fundamentals/prerequisite.md) checken voor een korte zelfstudie over hoe u aan de slag kunt met Adobe Experience Platform Launch.
 
 Dit product ontwikkelt zich voortdurend en groeit om steeds meer gebruiksgevallen te ondersteunen. Om de nieuwste ontwikkelingen bij te houden, bekijkt u ons [ondersteunde toetsenbord](https://github.com/adobe/alloy/projects/5). Wij houden dit bij met de gebruiksgevallen die wij momenteel steunen en de gevallen waarin wij aan het werk zijn om u in staat te stellen de beste beslissingen te nemen.
 
