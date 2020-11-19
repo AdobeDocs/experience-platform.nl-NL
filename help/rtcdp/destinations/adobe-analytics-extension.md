@@ -2,12 +2,12 @@
 keywords: Analytics extension;analytics extension;destination analytics
 title: Adobe Analytics-extensie
 seo-title: Adobe Analytics-extensie
-description: De extensie Adobe Analytics is een analysedoel in het Platform voor realtime klantgegevens in Adobe. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Adobe Analytics is een analysedoel in het Platform voor realtime klantgegevens in Adobe. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De Adobe Analytics-extensie is een analysedoel in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De Adobe Analytics-extensie is een analysedoel in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '540'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Adobe Analytics is een toonaangevende oplossing die u in staat stelt uw klanten als mensen te begrijpen en uw bedrijf te sturen met intelligentie van de klant.
 
-Adobe Analytics is een analytische extensie in het Adobe Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.100156.html).
+Adobe Analytics is een analyseextensie in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.100156.html).
 
 Dit doel is een [!DNL Adobe Experience Platform Launch] extensie. Voor meer informatie over hoe de [!DNL Platform Launch] uitbreidingen in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van het](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
