@@ -2,12 +2,12 @@
 keywords: demandbase extension;demandbase;demandbase destination
 title: Demandbase-extensie
 seo-title: Demandbase-extensie
-description: De extensie demandbase is een analysedoel in het Adobe Real-time Platform met klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie demandbase is een analysedoel in het Adobe Real-time Platform met klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De extensie Demandbase is een analysedoel in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De extensie Demandbase is een analysedoel in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '577'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Krijg [!DNL Demandbase] B2B rekeningsinzichten direct in Adobe Analytics waar u verkeer en gedrag door Industrie, Inkomsten en uw doelrekeningen kunt segmenteren. Deze op account gebaseerde weergave biedt unieke inzichten in betrokkenheid, conversie en de bron voor uw meest waardevolle bezoekers.
 
-[!DNL Demandbase] is een analytische uitbreiding in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.101605.html).
+[!DNL Demandbase] is een analytische uitbreiding in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.101605.html).
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
