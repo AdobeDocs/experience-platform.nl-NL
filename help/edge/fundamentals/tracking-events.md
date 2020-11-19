@@ -5,9 +5,9 @@ description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience
 seo-description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience Platforms te volgen
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 14b10aeeb382e9d638cf9fdf62deddbee3e72600
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1138'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Gebeurtenissen bijhouden
 
-Als u gebeurtenisgegevens naar de Adobe Experience Cloud wilt verzenden, gebruikt u de `sendEvent` opdracht. Het `sendEvent` bevel is de primaire manier om gegevens naar [!DNL Experience Cloud]te verzenden, en gepersonaliseerde inhoud, identiteiten, en publieksbestemmingen terug te winnen.
+Als u gebeurtenisgegevens naar Adobe Experience Cloud wilt verzenden, gebruikt u de `sendEvent` opdracht. Het `sendEvent` bevel is de primaire manier om gegevens naar [!DNL Experience Cloud]te verzenden, en gepersonaliseerde inhoud, identiteiten, en publieksbestemmingen terug te winnen.
 
 Gegevens die naar Adobe Experience Cloud worden verzonden, vallen in twee categorieën:
 
