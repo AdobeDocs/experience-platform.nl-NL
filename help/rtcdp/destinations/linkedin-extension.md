@@ -2,12 +2,12 @@
 keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insight Tag;insight tag;Insight Tag
 title: LinkedIn Insight-tagextensie
 seo-title: LinkedIn Insight-tagextensie
-description: De uitbreiding van de Markering LinkedIn van het Inzicht is een reclamebestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De uitbreiding van de Markering LinkedIn van het Inzicht is een reclamebestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De uitbreiding van de Markering LinkedIn van het Inzicht is een reclamebestemming in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De uitbreiding van de Markering LinkedIn van het Inzicht is een reclamebestemming in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '552'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Installeer de functie [!DNL LinkedIn Insight Tag] voor het bijhouden van conversies, herbestemming en demografie van websites.
 
-[!DNL LinkedIn Insight Tag] is een advertentie-uitbreiding in het Adobe Real-time Platform van de Gegevens van de Klant. Zie [LinkedIn Insight-tag](https://business.linkedin.com/marketing-solutions/insight-tag)voor meer informatie over de extensiefunctionaliteit.
+[!DNL LinkedIn Insight Tag] is een advertentie-uitbreiding in het Platform van de Gegevens van de Klant in real time. Zie [LinkedIn Insight-tag](https://business.linkedin.com/marketing-solutions/insight-tag)voor meer informatie over de extensiefunctionaliteit.
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
