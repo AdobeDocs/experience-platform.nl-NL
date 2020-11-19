@@ -5,9 +5,9 @@ description: Leer hoe u toestemmingsvoorkeuren met Experience Platform Web SDK k
 seo-description: Leer hoe u toestemmingsvoorkeuren met Experience Platform Web SDK kunt ondersteunen
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Omdat de gebruiker ervoor koos om te weigeren, worden de beloftes die van eerder
 
 >[!NOTE]
 >
->Momenteel ondersteunt de SDK alleen het `general` doel. Hoewel wij van plan zijn een robuustere reeks doelen of categorieën te ontwikkelen die aan de verschillende mogelijkheden en productaanbiedingen van de Adobe zullen beantwoorden, is de huidige implementatie een alles of niets benadering van opt-in.  Dit geldt alleen voor de Adobe Experience Platform [!DNL Web SDK] en NOT other Adobe JavaScript libraries.
+>Momenteel ondersteunt de SDK alleen het `general` doel. Hoewel wij van plan zijn een robuustere reeks doelen of categorieën te ontwikkelen die aan de verschillende mogelijkheden en productaanbiedingen van de Adobe zullen beantwoorden, is de huidige implementatie een alles of niets benadering van opt-in.  Dit geldt alleen voor Adobe Experience Platform [!DNL Web SDK] en NOT other Adobe JavaScript libraries.
 
 ## Voorkeuren voor machtigingen verzenden via de IAB TCF-standaard
 
