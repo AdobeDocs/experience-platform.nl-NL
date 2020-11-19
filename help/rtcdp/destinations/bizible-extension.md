@@ -2,12 +2,12 @@
 keywords: bizible;bizible extension;bizible destination
 title: Bizible-extensie
 seo-title: Bizible-extensie
-description: THe Bizible-extensie is een e-mailbestemming in het Adobe Real-time Platform voor klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Bizible-extensie is een e-mailbestemming in het Adobe Real-time Platform voor klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De Bizible-extensie is een e-mailbestemming in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De Bizible-extensie is een e-mailbestemming in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '526'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 [!DNL Bizible] is de toonaangevende B2B-attributieoplossing die u een ongekende zichtbaarheid in uw gegevens geeft, zodat u slimme beslissingen kunt nemen die de groei stimuleren.
 
-[!DNL Bizible] is een e-mailuitbreiding in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
+[!DNL Bizible] is een e-mailextensie in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
 
 Dit doel is een [!DNL Adobe Experience Platform Launch] extensie. Voor meer informatie over hoe de [!DNL Platform Launch] uitbreidingen in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van het](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
