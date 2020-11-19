@@ -5,9 +5,9 @@ seo-title: Google Customer Match Destination
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 seo-description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## Gevallen gebruiken
 
-Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Google Customer Match] bestemming zou moeten gebruiken, zijn hier de gevallen van het steekproefgebruik die de klanten van het Platform van Gegevens van de Adobe in real time van de Klant kunnen oplossen door deze eigenschap te gebruiken.
+Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Google Customer Match] bestemming zou moeten gebruiken, zijn hier de gevallen van het steekproefgebruik die de klanten in real time van de Gegevens van de Klant kunnen oplossen door deze eigenschap te gebruiken.
 
 
 ### Hoofdletters en kleine letters gebruiken 1
