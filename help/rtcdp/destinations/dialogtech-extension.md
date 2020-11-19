@@ -2,12 +2,12 @@
 keywords: dialogtech extension;dialogtech;dialogtech destination;DialogTech;DialogTech SourceTrak
 title: DialogTech-extensie
 seo-title: DialogTech-extensie
-description: De uitbreiding DialogTech is een analysebestemming in Adobe Real-time het Platform van Gegevens van de Klant. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De uitbreiding DialogTech is een analysebestemming in Adobe Real-time het Platform van Gegevens van de Klant. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De uitbreiding DialogTech is een analysebestemming in het Platform van Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De uitbreiding DialogTech is een analysebestemming in het Platform van Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '519'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Het [!DNL DialogTech SourceTrak] JavaScript-fragment opnemen in Adobe Launch
 
-[!DNL DialogTech] is een analytische uitbreiding in het Platform van de Gegevens van de Klant van de Adobe in real time. Raadpleeg de [Dialogtech-website](https://www.dialogtech.com/)voor meer informatie over de extensiefunctionaliteit.
+[!DNL DialogTech] is een analytische uitbreiding in het Platform van de Gegevens van de Klant in real time. Raadpleeg de [Dialogtech-website](https://www.dialogtech.com/)voor meer informatie over de extensiefunctionaliteit.
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
