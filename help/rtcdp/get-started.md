@@ -1,23 +1,23 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Aan de slag met het Adobe Real-time Platform voor klantgegevens
-seo-title: Aan de slag met het Adobe Real-time Platform voor klantgegevens
-description: Het scenario van de steekproef voor het Platform van de Gegevens van de Klant van Adobe in real time
-seo-description: Het scenario van de steekproef voor het Platform van de Gegevens van de Klant van Adobe in real time
+title: Aan de slag met Real-time Platform voor klantgegevens
+seo-title: Aan de slag met Real-time Platform voor klantgegevens
+description: Het scenario van de steekproef voor het Platform van Gegevens van de Klant in real time
+seo-description: Het scenario van de steekproef voor het Platform van Gegevens van de Klant in real time
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2318'
 ht-degree: 0%
 
 ---
 
 
-# Aan de slag met het Adobe Real-time Platform voor klantgegevens
+# Aan de slag met Real-time Platform voor klantgegevens
 
-Deze gids aan de slag leidt u door een steekproefimplementatie van het Platform van de Gegevens van de Klant van de Adobe in real time (in real time CDP). U kunt dit als voorbeeld gebruiken wanneer u uw eigen implementatie instelt. Hoewel in deze handleiding specifieke voorbeelden worden gegeven, wordt er een koppeling gemaakt naar aanvullende informatie die u kunt gebruiken tijdens het maken van de instellingen.
+Deze gids aan de slag leidt u door een steekproefimplementatie van het Platform van de Gegevens van de Klant in real time (in real time CDP). U kunt dit als voorbeeld gebruiken wanneer u uw eigen implementatie instelt. Hoewel in deze handleiding specifieke voorbeelden worden gegeven, wordt er een koppeling gemaakt naar aanvullende informatie die u kunt gebruiken tijdens het maken van de instellingen.
 
-Dit voorbeeld toont de macht van het Platform van de Gegevens van de Klant van de Adobe in real time, aangedreven door Adobe Experience Platform, aan:
+Dit voorbeeld toont de macht van het Platform van Gegevens van de Klant in real time, aangedreven door Adobe Experience Platform, aan:
 
 * Gegevens uit meerdere bronnen samenvoegen
 * Deze samenvoegen tot één geheel [!DNL real-time customer profile]
@@ -121,7 +121,7 @@ Deze persoonlijke inhoud helpt Sarah snel relevante items te vinden. Dit verhoog
 
 Sarah wordt afgeleid en verlaat de site en beëindigt haar sessie. Luma kan haar gegevens in Adobe Experience Platform gebruiken om haar terug te brengen naar de site.
 
-Adobe Real-time Customer Data Platform, aangedreven door Adobe Experience Platform, is gebouwd voor het beheer van de klantervaring. Organisaties kunnen:
+Het realtime Platform van klantgegevens, dat wordt aangedreven door Adobe Experience Platform, is gebouwd voor het beheer van de klantervaring. Organisaties kunnen:
 
 * Gegevensintegratie en -activering vereenvoudigen
 * Bekend en onbekend gegevensgebruik beheren
