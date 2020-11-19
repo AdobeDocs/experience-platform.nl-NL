@@ -1,18 +1,18 @@
 ---
 title: IAB TCF 2.0 zonder Experience Platform Launch gebruiken
-seo-title: De toestemming van IAB TCF 2.0 van de vestiging met de SDK van het Web van Adobe Experience Platform
-description: Leer hoe u IAB TCF 2.0 instelt met de Adobe Experience Platform Web SDK
-seo-description: Leer hoe u IAB TCF 2.0 instelt met de Adobe Experience Platform Web SDK
+seo-title: IAB TCF 2.0-toestemming instellen met Adobe Experience Platform Web SDK
+description: Meer informatie over het instellen van IAB TCF 2.0-toestemming met Adobe Experience Platform Web SDK
+seo-description: Meer informatie over het instellen van IAB TCF 2.0-toestemming met Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
 
 
-# Het gebruiken van IAB TCF 2.0 met de uitbreiding van SDK van het Web van Adobe Experience Platform
+# Het gebruiken van IAB TCF 2.0 met de uitbreiding van SDK van het Web AEP
 
 Deze gids toont hoe te om het Interactive Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0) met het Web SDK van Adobe Experience Platform te integreren zonder Experience Platform Launch te gebruiken. Voor een overzicht van het integreren met IAB TCF 2.0, lees het [overzicht](./overview.md). Voor een gids over hoe te met Experience Platform Launch te integreren, lees de [IAB TCF 2.0 gids voor Experience Platform Launch](./with-launch.md).
 
@@ -26,7 +26,7 @@ Deze gids gebruikt de `__tcfapi` interface voor de toegang tot van de toestemmin
 
 Om IAB TCF 2.0 met Experience Platform Launch en de uitbreiding van SDK van het Web te gebruiken AEP, moet u een beschikbaar schema XDM hebben. Als u geen van beide instellingen hebt ingesteld, begint u met het weergeven van deze pagina voordat u verdergaat.
 
-Bovendien, vereist deze gids u een werkend inzicht in de SDK van het Web van Adobe Experience Platform te hebben. Lees voor een snelle vernieuwing het overzicht [van de SDK van het](../../home.md) Adobe Experience Platform-web en de documentatie met [veelgestelde vragen](../../web-sdk-faq.md) .
+Bovendien vereist deze handleiding dat u een goed begrip hebt van de SDK van Adobe Experience Platform Web. Lees voor een snelle vernieuwing het overzicht [van de SDK van het](../../home.md) Adobe Experience Platform-web en de documentatie met [veelgestelde vragen](../../web-sdk-faq.md) .
 
 ## Standaardtoestemming inschakelen
 
@@ -58,7 +58,7 @@ In dit voorbeeld wordt de `configure` opdracht aangeroepen nadat deze `tcData` i
 
 ## De gebeurtenis setConsent gebruiken
 
-De IAB TCF 2.0 API verstrekt een gebeurtenis voor wanneer de toestemming door de klant wordt bijgewerkt. Dit gebeurt wanneer de klant eerst zijn voorkeuren instelt en wanneer de klant zijn voorkeuren bijwerkt.
+IAB TCF 2.0 API verstrekt een gebeurtenis voor wanneer de toestemming door de klant wordt bijgewerkt. Dit gebeurt wanneer de klant eerst zijn voorkeuren instelt en wanneer de klant zijn voorkeuren bijwerkt.
 
 In het volgende voorbeeld wordt een manier getoond om dit te doen:
 
@@ -110,4 +110,4 @@ De andere manier om de toestemmingsinformatie aan elk verzoek toe te voegen is m
 
 ## Volgende stappen
 
-Nu u hebt geleerd hoe te om IAB TCF 2.0 met de uitbreiding van SDK van het Web van Adobe Experience Platform te gebruiken, kunt u ook verkiezen om met andere oplossingen van de Adobe zoals Adobe Analytics of het platform van de Gegevens van de Klant in real time te integreren. Zie het overzicht [van](./overview.md) IAB Transparency &amp; Consent Framework 2.0 voor meer informatie.
+Nu u hebt geleerd hoe te om IAB TCF 2.0 met de uitbreiding van SDK van het Web van AEP te gebruiken, kunt u ook verkiezen om met andere oplossingen van Adobe zoals Adobe Analytics of platform van de Gegevens van de Klant in real time te integreren. Zie het overzicht [van](./overview.md) IAB Transparency &amp; Consent Framework 2.0 voor meer informatie.
