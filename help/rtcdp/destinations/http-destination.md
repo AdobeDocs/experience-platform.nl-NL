@@ -1,13 +1,13 @@
 ---
 keywords: streaming;
-title: De bestemming van HTTP is een Echte bestemming van het Platform van de Gegevens van de Klant van Adobe - tijd die u helpt profielgegevens naar eindpunten van HTTP verzenden van derde.
-seo-title: De bestemming van HTTP is een Echte bestemming van het Platform van de Gegevens van de Klant van Adobe - tijd die u helpt profielgegevens naar eindpunten van HTTP verzenden van derde.
-description: De bestemming van HTTP is een Echte bestemming van het Platform van de Gegevens van de Klant van Adobe - tijd die u helpt profielgegevens naar eindpunten van HTTP verzenden van derde.
-seo-description: De bestemming van HTTP is een Echte bestemming van het Platform van de Gegevens van de Klant van Adobe - tijd die u helpt profielgegevens naar eindpunten van HTTP verzenden van derde.
+title: De bestemming van HTTP is een bestemming van het Platform van Gegevens van de Klant In real time die u helpt profielgegevens naar derdeeindpunten van HTTP verzenden.
+seo-title: De bestemming van HTTP is een bestemming van het Platform van Gegevens van de Klant In real time die u helpt profielgegevens naar derdeeindpunten van HTTP verzenden.
+description: De bestemming van HTTP is een bestemming van het Platform van Gegevens van de Klant In real time die u helpt profielgegevens naar derdeeindpunten van HTTP verzenden.
+seo-description: De bestemming van HTTP is een bestemming van het Platform van Gegevens van de Klant In real time die u helpt profielgegevens naar derdeeindpunten van HTTP verzenden.
 translation-type: tm+mt
-source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Het [!DNL HTTP] doel is een [!DNL Adobe Real-Time Customer Data Platform] streamingdoel waarmee u profielgegevens naar eindpunten van derden kunt verzenden [!DNL HTTP] .
+Het [!DNL HTTP] doel is een [!DNL Real-time Customer Data Platform] streamingdoel waarmee u profielgegevens naar eindpunten van derden kunt verzenden [!DNL HTTP] .
 
-Als u profielgegevens naar [!DNL HTTP] eindpunten wilt verzenden, moet u eerst verbinding maken met het doel in de [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination)map.
+Als u profielgegevens naar [!DNL HTTP] eindpunten wilt verzenden, moet u eerst verbinding maken met het doel in de [[!DNL Real-time Customer Data Platform]](#connect-destination)map.
 
 ## Use Cases {#use-cases}
 
