@@ -2,12 +2,12 @@
 keywords: Marketo Web Personalization;marketo web personalization;Marketo Web Personalization extension;marketo web personalization extension;marketo;Marketo
 title: Marketo Web Personalization extension
 seo-title: Marketo Web Personalization extension
-description: De uitbreiding van de Personalisatie van het Web van Marketo is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De uitbreiding van de Personalisatie van het Web van Marketo is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De uitbreiding van de Personalisatie van het Web van Marketo is een verpersoonlijkingsbestemming in het Platform van Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De uitbreiding van de Personalisatie van het Web van Marketo is een verpersoonlijkingsbestemming in het Platform van Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '611'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Deze extensie implementeert het script voor [!DNL Marketo’s] Web Personalization en ContentAI-toepassingen. [!DNL Marketo] Webpersonalisatie identificeert en personaliseert inhoud op unieke wijze aan de kenmerken van webbezoekers, zoals zelfafbeeldingen voor anonieme bezoekers en een breed scala aan gedragskenmerken binnen het Platform [!DNL Marketo] Betrokkenheid voor bekende bezoekers. [!DNL Marketo] ContentAI bevat mogelijkheden voor door AI aangedreven aanbevelingen en personalisatie voor web- en e-mailcampagnes die uniek zijn voor B2B-klanten.
 
-[!DNL Marketo Web Personalization] is een verpersoonlijkingsuitbreiding in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html).
+[!DNL Marketo Web Personalization] is een verpersoonlijkingsuitbreiding in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html).
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
