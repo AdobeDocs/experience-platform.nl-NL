@@ -5,9 +5,9 @@ seo-title: Pagina Gegevens bestemming
 description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 seo-description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 translation-type: tm+mt
-source-git-commit: 0c2acd79492c474ba664ce32d1592969da71f385
+source-git-commit: ff36899f455848584ab2f5e236812795d2c81681
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '680'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ In de gebruikersinterface van Adobe Experience Platform, kunt u de attributen en
 >
 >De pagina met bestemmingsdetails maakt deel uit van de werkruimte [!UICONTROL Doelen] in de gebruikersinterface van het Platform. Zie het overzicht [[!UICONTROL van de werkruimte van] Doelen](./destinations-workspace.md) voor meer informatie.
 
-Navigeer in de werkruimte **[!UICONTROL Doelen]** in de interface van het Platform naar het tabblad **[!UICONTROL Bladeren]** en selecteer de naam van een batchbestemming die u wilt weergeven.
+Navigeer in de werkruimte **[!UICONTROL Doelen]** in de interface van het Platform naar het tabblad **[!UICONTROL Bladeren]** en selecteer de naam van een bestemming die u wilt weergeven.
 
 ![](./assets/details-page/select-destination.png)
 
