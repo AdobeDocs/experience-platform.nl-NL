@@ -2,12 +2,12 @@
 keywords: Google Global Site Tag;gtag;google gtag;google extension;google gtag extension;GTAG
 title: Google Global Site Tag-extensie
 seo-title: Google Global Site Tag-extensie
-description: De Google Global Site Tag-extensie is een analysedoel in het Adobe Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Google Global Site Tag-extensie is een analysedoel in het Adobe Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De Google Global Site Tag-extensie is een analysedoel in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De Google Global Site Tag-extensie is een analysedoel in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '563'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Gegevens verzenden naar [!DNL Google Analytics], [!DNL Google Ads]en [!DNL Google Marketing Platform] via [!DNL Google's Global Site Tag], of gtag.js. U kunt meerdere accounts per product configureren.
 
-[!DNL Google Global Site Tag] is een analytische uitbreiding in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html).
+[!DNL Google Global Site Tag] is een analytische uitbreiding in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html).
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
