@@ -2,12 +2,12 @@
 keywords: Medallia;medallia
 title: extensie Medallia
 seo-title: extensie Medallia
-description: De uitbreiding van Medallia is een stem van de klantenbestemming in het Platform van de Gegevens van de Klant van Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De uitbreiding Medallia is een stem van de klantenbestemming in het Platform van de Gegevens van de Klant van Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De uitbreiding Medallia is een stem van de klantenbestemming in het Platform van Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De uitbreiding Medallia is een stem van de klantenbestemming in het Platform van Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '586'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Implementeer [!DNL Medallia] snel en naadloos op uw webeigenschappen. De uitbreiding staat u ook toe om onderzoeksgebeurtenissen te ontdekken, klantenterugkoppelen in real time door de elementen van Gegevens te vangen, het in regels te gebruiken om de ervaring van uw klant te personaliseren en gegevens met Adobe Analytics te delen.
 
-[!DNL Medallia] is een stem van de klantenuitbreiding in het Platform van de Gegevens van de Klant van Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
+[!DNL Medallia] is een stem van de klantenuitbreiding in het Platform van Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
