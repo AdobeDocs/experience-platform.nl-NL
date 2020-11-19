@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: b4ce4c2e5ff5083f663c2daf23c32a1cec32124c
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '582'
 ht-degree: 3%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 3%
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
-- [[!DNL-doelen]](#destinations)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Real-time Customer Data Platform]](#rtcdp)
-- [[!DNL-bronnen]](#sources)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -38,7 +38,7 @@ Raadpleeg de [!DNL JupyterLab]gebruikershandleiding [[!DNL JupyterLab] voor meer
 
 ## Doelen {#destinations}
 
-In [Adobe Real-time het Platform](../../rtcdp/overview.md)van de Gegevens van de Klant, zijn de bestemmingen prebuilt integraties met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In het Platform [van Gegevens van de Klant in](../../rtcdp/overview.md)real time, zijn de bestemmingen prebuilt integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe bestemmingen**
 
@@ -57,7 +57,7 @@ Er zijn nieuwe doelen beschikbaar waar u uw Adobe Experience Platform-gegevens k
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Het Adobe Experience Platform Real-Time Customer Data Platform ([!DNL Real-time CDP]) is gebaseerd op  en helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren met intelligente beslissingen tijdens de reis van de klant. [!DNL Real-time CDP] combineert veelvoudige bronnen van ondernemingsgegevens om klantenprofielen in real time tot stand te brengen. De segmenten die van deze profielen worden gebouwd kunnen dan naar stroomafwaartse bestemmingen worden verzonden om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
+Het Real-Time Customer Data Platform ([!DNL Real-time CDP]) is gebaseerd op Experience Platform en helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren met intelligente beslissingen gedurende de hele reis van de klant. [!DNL Real-time CDP] combineert veelvoudige bronnen van ondernemingsgegevens om klantenprofielen in real time tot stand te brengen. De segmenten die van deze profielen worden gebouwd kunnen dan naar stroomafwaartse bestemmingen worden verzonden om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
 
 **Nieuwe functies**
 
