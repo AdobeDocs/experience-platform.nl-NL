@@ -5,9 +5,9 @@ description: Leer hoe u identiteiten kunt synchroniseren met Adobe Audience Mana
 seo-description: Leer hoe u identiteiten kunt synchroniseren met Adobe Audience Manager met Experience Platform Web SDK
 keywords: audience manager;aam;identities;sync identities;namespace;
 translation-type: tm+mt
-source-git-commit: 290792cd507248c41690c493cc18daaab869db50
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,6 @@ Kies uw naamruimten in de naamruimten [van de](../../identity/../identity-servic
 
 ![Weergave van de interface Namespaces](../../assets/edge_namespaceUI_identity-symbol.png)
 
-Als klant van de Audience Manager, al uw bestaande Gegevensbronnen die het Type van identiteitskaart gebruiken: Apparaatoverschrijdend heeft automatisch een overeenkomende naamruimte voor identiteit. Als u de overeenkomende naamruimte voor de gegevensbron van uw Audience Manager wilt zoeken, meldt u zich aan bij de Adobe Experience Platform en navigeert u naar de sectie Identiteiten.
+Als klant van de Audience Manager, al uw bestaande Gegevensbronnen die het Type van identiteitskaart gebruiken: Apparaatoverschrijdend heeft automatisch een overeenkomende naamruimte voor identiteit. Als u de overeenkomende naamruimte voor de gegevensbron van uw Audience Manager wilt zoeken, meldt u zich aan bij Adobe Experience Platform en navigeert u naar de sectie Identiteiten.
 
 Een nieuwe [!DNL Audience Manager] gegevensbron die gebruikmaakt van id-type: Op meerdere apparaten wordt een overeenkomende naamruimte gegenereerd. Cookie- en advertentie-id&#39;s voor gegevensbronid&#39;s worden momenteel niet ondersteund. Bovendien wordt bij elke naamruimte in Adobe Experience Platform een bijbehorende [!DNL Audience Manager] gegevensbron gegenereerd. De methode syncIdentity ondersteunt echter alleen Naamruimten-symbolen.
