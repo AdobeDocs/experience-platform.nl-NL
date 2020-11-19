@@ -2,12 +2,12 @@
 keywords: JW player;jw player;JW Player;jw extension;JW extension
 title: JW Player Analytics-extensie (BETA)
 seo-title: JW Player Analytics-extensie (BETA)
-description: De uitbreiding van de Analytics van de Speler JW (BETA) is een analysebestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De uitbreiding van de Analytics van de Speler JW (BETA) is een analysebestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De uitbreiding JW Player Analytics (BETA) is een analysedoel in het Platform van Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De uitbreiding JW Player Analytics (BETA) is een analysedoel in het Platform van Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '584'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Deze extensie installeert de [!DNL JW Player] [!DNL JW Player] adapter om gebeurtenissen te verbinden met Adobe Video Analytics. Maak gebruik van de kracht van Adobe Video Analytics om meer inzicht te krijgen in de videoweergavegewoonten van uw klanten.
 
-[!DNL JW Player Analytics] (BETA) is een analytische uitbreiding in het Adobe Real-time Platform van de Gegevens van de Klant. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
+[!DNL JW Player Analytics] (BETA) is een analytische uitbreiding in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
