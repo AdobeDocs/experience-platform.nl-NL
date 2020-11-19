@@ -2,12 +2,12 @@
 keywords: Advertising Cloud;advertising cloud extension; advertising cloud destination
 title: Adobe Advertising Cloud-extensie
 seo-title: Adobe Advertising Cloud-extensie
-description: De extensie Adobe Advertising Cloud is een advertentiebestemming in het Adobe Real-time Platform voor klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Adobe Advertising Cloud is een advertentiebestemming in het Adobe Real-time Platform voor klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De extensie Adobe Advertising Cloud is een advertentiebestemming in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De extensie Adobe Advertising Cloud is een advertentiebestemming in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Dit is de [!DNL Advertising Cloud] uitbreiding voor het uitvoeren van [!DNL Advertising Cloud] omzetting en segmentmarkeringen voor zowel de DSP als het Onderzoek (DCO wordt momenteel niet gesteund).
 
-Adobe Advertising Cloud is een advertentie-uitbreiding in Adobe Real-time Customer Data Platform.
+Adobe Advertising Cloud is een advertentie-uitbreiding in Real-time Customer Data Platform.
 
 Dit doel is een [!DNL Adobe Experience Platform Launch] extensie. Voor meer informatie over hoe de [!DNL Platform Launch] uitbreidingen in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van het](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
