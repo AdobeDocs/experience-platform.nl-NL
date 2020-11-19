@@ -5,9 +5,9 @@ seo-title: Facebook-bestemming
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 seo-description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '753'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ U kunt deze bestemming gebruiken voor doelgroepen voor verschillende [!DNL Faceb
 
 ## Gevallen gebruiken
 
-Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Facebook] bestemming zou moeten gebruiken, zijn hier twee gevallen van het steekproefgebruik die de klanten van het Platform van Gegevens van de Adobe in real time van de Klant kunnen oplossen door deze eigenschap te gebruiken.
+Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Facebook] bestemming zou moeten gebruiken, zijn hier twee gevallen van het steekproefgebruik die de klanten in real time van de Gegevens van de Klant kunnen oplossen door deze eigenschap te gebruiken.
 
 
 ### Hoofdletters en kleine letters gebruiken 1
@@ -101,7 +101,7 @@ Voor instructies op hoe te om segmenten te activeren, zie [!DNL Facebook]Gegeven
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Een geslaagde activering betekent [!DNL Facebook]bijvoorbeeld dat er via de programmacode een [!DNL Facebook] aangepast publiek wordt gemaakt in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Het lidmaatschap van een segment in het publiek zou worden toegevoegd en verwijderd aangezien de gebruikers voor de geactiveerde segmenten worden gekwalificeerd of worden uitgesloten.
+Een geslaagde activering betekent [!DNL Facebook]bijvoorbeeld dat er via programmacode een [!DNL Facebook] aangepast publiek wordt gemaakt [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Het lidmaatschap van een segment in het publiek zou worden toegevoegd en verwijderd aangezien de gebruikers voor de geactiveerde segmenten worden gekwalificeerd of worden uitgesloten.
 
 >[!TIP]
 >
