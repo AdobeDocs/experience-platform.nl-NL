@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Entiteiten - Real-time API voor klantprofiel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 3287203be574cf95d7e201dc99f681e237d96e67
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: '1695'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Met Adobe Experience Platform hebt u toegang tot [!DNL Real-time Customer Profil
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een willekeurige [!DNL Experience Platform] API mogelijk te maken.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)handleiding. Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een willekeurige [!DNL Experience Platform] API mogelijk te maken.
 
 ## Profielgegevens benaderen op identiteit
 
@@ -910,4 +910,5 @@ De volgende parameters worden gebruikt in de weg voor GET verzoeken aan het `/ac
 | `startTime` | Geef de begintijd op voor het filteren van tijdreeksobjecten (in milliseconden). | `startTime=1539838505` |
 | `endTime` | Geef de eindtijd op voor het filteren van tijdreeksobjecten (in milliseconden). | `endTime=1539838510` |
 | `limit` | Numerieke waarde die het maximumaantal objecten aangeeft dat moet worden geretourneerd. Standaard: 1000 | `limit=100` |
+| `property` | Filters op de eigenschapswaarde. Ondersteunt de volgende beoordelaars: =, !=, &lt;, &lt;=, >, >=. Kan alleen worden gebruikt met ervaringsgebeurtenissen, waarbij maximaal drie eigenschappen worden ondersteund. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
 | `withCA` | De vlag van de eigenschap voor het toelaten van gegevens verwerkte attributen voor raadpleging. Standaard: false | `withCA=true` |
