@@ -5,9 +5,9 @@ seo-title: Oracle Responsys-bestemming
 description: Responsys is een marketingtool voor e-mailberichten voor marketingcampagnes over meerdere kanalen die door Oracle worden aangeboden om interacties via e-mail, mobiele apparaten, displays en sociale media aan te passen.
 seo-description: Responsys is een marketingtool voor e-mailberichten voor marketingcampagnes over meerdere kanalen die door Oracle worden aangeboden om interacties via e-mail, mobiele apparaten, displays en sociale media aan te passen.
 translation-type: tm+mt
-source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) is een marketingtool voor e-mailberichten van bedrijven voor marketingcampagnes over meerdere kanalen die worden aangeboden door interacties via e-mail, mobiele apparaten, displays en sociale media [!DNL Oracle] aan te passen.
 
-Als u segmentgegevens wilt verzenden naar [!DNL Oracle Responsys], moet u eerst [verbinding maken met het doel](#connect-destination) in Adobe Real-time Customer Data Platform en vervolgens een gegevensimport [](#import-data-into-responsys) instellen vanaf uw opslaglocatie naar [!DNL Oracle Responsys].
+Als u segmentgegevens wilt verzenden naar [!DNL Oracle Responsys], moet u eerst [verbinding maken met het doel](#connect-destination) in Real-time Customer Data Platform en vervolgens een gegevensimport [](#import-data-into-responsys) instellen vanaf uw opslaglocatie naar [!DNL Oracle Responsys].
 
 ## Exporttype {#export-type}
 
