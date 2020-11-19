@@ -2,12 +2,12 @@
 keywords: Pinterest;pinterest;Pinterest Conversion Tracking;pintrest conversion tracking
 title: Pinterest Conversion Tracking extension
 seo-title: Pinterest Conversion Tracking extension
-description: THe Pinterest Conversion Tracking extension is an advertence destination in Adobe Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Pinterest Conversion Tracking is een advertentiebestemming in het Adobe Real-time Platform met klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De extensie Pinterest Conversion Tracking is een advertentie-bestemming in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De extensie Pinterest Conversion Tracking is een advertentie-bestemming in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '575'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Handelingen voor bezoekers bijhouden op uw website na weergaven van uw promotiepunt. De opbrengst van de maatregel op advertentie besteedt en creeert gericht publiek. Meer weten [hier](https://ads.pinterest.com/)?
 
-[!DNL Pinterest Conversion Tracking] is een advertentie-uitbreiding in het Adobe Real-time Platform van de Gegevens van de Klant. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
+[!DNL Pinterest Conversion Tracking] is een advertentie-uitbreiding in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
