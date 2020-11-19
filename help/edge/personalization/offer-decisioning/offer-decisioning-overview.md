@@ -5,9 +5,9 @@ description: Adobe Experience Platform Web SDK kan gepersonaliseerde aanbiedinge
 seo-description: Adobe Experience Platform Web SDK kan gepersonaliseerde aanbiedingen leveren en weergeven die in Offer Decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van Offer Decisioning.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: a0ede8c7d3088fe80d6ea014b4a4f9f08ee8a7aa
+source-git-commit: 5f90f238a8845cc7bf07d54b89c5c6ccff40469a
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '831'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 4%
 
 Adobe Experience Platform [!DNL Web SDK] kan persoonlijke aanbiedingen die in Offer Decisioning worden beheerd, aanbieden en weergeven. U kunt uw aanbiedingen en andere verwante objecten maken met de gebruikersinterface (UI) of API&#39;s van Offer Decisioning.
 
-## Voorwaarden
+## Vereisten
 
 * IMS-organisatie is ingeschakeld voor randbeslissingen
 * Aanbiedingen, gemaakte activiteiten
@@ -29,7 +29,7 @@ Adobe Experience Platform [!DNL Web SDK] kan persoonlijke aanbiedingen die in Of
 
 ## Terminologie
 
-Het is belangrijk dat u de volgende terminologie begrijpt wanneer u met Offer Decisioning werkt. <!--For more information and to view additional terms, please visit the [Offer Decisioning glossary](/docs/offer-decisioning/using/get-started/glossary.html)-->.
+Het is belangrijk dat u de volgende terminologie begrijpt wanneer u met Offer Decisioning werkt. Ga naar de [Offer Decisioning-woordenlijst](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)voor meer informatie en voor meer informatie.
 
 * **Container:** Een container is een isolatiemechanisme om verschillende zorgen van elkaar te onderscheiden. De container-id is het eerste padelement voor alle gegevensopslagruimte-API&#39;s. Alle beslissingsobjecten bevinden zich in een container.
 
