@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
+source-git-commit: ade9da107ee6dd100a33a7e7e9a20b4335721e0a
 workflow-type: tm+mt
-source-wordcount: '2086'
+source-wordcount: '2078'
 ht-degree: 2%
 
 ---
@@ -213,7 +213,7 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 | Verbindingen verwijderen | Batchverbindingen die fouten bevatten of onnodig zijn geworden, kunnen nu worden verwijderd met de API en de UI. [!DNL Flow Service] Voor meer informatie, zie de zelfstudie over het [schrappen van verbindingen gebruikend de Dienst API](../../sources/tutorials/api/delete.md) van de Stroom en het [schrappen van rekeningen gebruikend UI](../../sources/tutorials/ui/delete-accounts.md). |
 | Hiërarchische toewijzing | U kunt een hiërarchisch bronbestand, zoals JSON of Parquet, voorvertonen tijdens het invoeren van gegevens. Zie de zelfstudie over het [configureren van een gegevensstroom voor cloudopslagconnectors in de gebruikersinterface](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) voor meer informatie. |
 | API-ondersteuning voor toewijzing in streamingbronnen | U kunt nu API&#39;s gebruiken om toewijzingsfuncties uit te voeren met streamingbronnen. |
-| API-ondersteuning voor aangepaste scheidingstekens voor bronnen voor cloudopslag | U kunt bestanden die niet door CSV zijn gescheiden nu verzamelen met bronnen voor cloudopslag. U kunt elk scheidingsteken voor één kolom gebruiken, zoals een tab, komma, pipe, puntkomma of hash, om platte bestanden in elke gewenste indeling te verzamelen. De standaardwaarde is een komma als deze niet wordt opgegeven. |
+| API-ondersteuning voor aangepaste scheidingstekens voor bronnen voor cloudopslag | U kunt bestanden die niet door CSV zijn gescheiden nu verzamelen met bronnen voor cloudopslag. U kunt elk scheidingsteken voor één kolom gebruiken, zoals een tab, komma, pipe, puntkomma of hash, om platte bestanden in elke gewenste indeling te verzamelen. |
 | Sandbox-ondersteuning voor Adobe Audience Manager-connector | De Audience Manager-aansluiting is nu bekend met de sandbox. De gebruikers kunnen de schakelaar toelaten om de datasets van de Audience Manager aan de zandbak van hun kiezen (met inbegrip van niet productiesandboxen) te leiden. De configuratie is beperkt tot één sandbox per IMS Org. |
 | UX-verbeteringen | Op bestanden gebaseerde inname is nu toegankelijk via de broncatalogus. |
 
