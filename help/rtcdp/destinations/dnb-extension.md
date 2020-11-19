@@ -2,12 +2,12 @@
 keywords: D&B Visitor Intelligence;D&B;visitor intelligence extension
 title: D&B Bezoeker Intelligence-extensie
 seo-title: D&B Bezoeker Intelligence-extensie
-description: De uitbreiding van de Intelligentie van de Bezoeker D&B is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De uitbreiding van de Intelligentie van de Bezoeker D&B is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De uitbreiding van de Intelligentie van de Bezoeker D&B is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De uitbreiding van de Intelligentie van de Bezoeker D&B is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '540'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Analyseer uw onbekende bezoekers en zet hen in lood om.
 
-[!DNL D&B Visitor Intelligence] is een verpersoonlijkingsuitbreiding in het Platform van de Gegevens van de Klant van de Adobe in real time. Raadpleeg de [D&amp;B-website](https://www.dnb.com/)voor meer informatie over de extensiefunctionaliteit.
+[!DNL D&B Visitor Intelligence] is een verpersoonlijkingsuitbreiding in het Platform van de Gegevens van de Klant in real time. Raadpleeg de [D&amp;B-website](https://www.dnb.com/)voor meer informatie over de extensiefunctionaliteit.
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
