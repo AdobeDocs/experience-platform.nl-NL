@@ -5,9 +5,9 @@ seo-title: Experience Platform Launch-extensies
 description: Starten is de volgende generatie mogelijkheden voor tagbeheer van Adobe. De lancering geeft klanten een eenvoudige manier om alle analytische, marketing, en reclame markeringen noodzakelijk om relevante klantenervaringen op te stellen en te beheren.
 seo-description: Starten is de volgende generatie mogelijkheden voor tagbeheer van Adobe. De lancering geeft klanten een eenvoudige manier om alle analytische, marketing, en reclame markeringen noodzakelijk om relevante klantenervaringen op te stellen en te beheren.
 translation-type: tm+mt
-source-git-commit: 6bb7bbeaceac8a69641138248a1c41cf9fb3dc63
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '645'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Om de uitbreidingen van de Lancering van het Platform in de Adobe in real time C
 
 Platform Start extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. Beschouw extensies als een **type bestemming voor doorsturen** van gebeurtenissen. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Gegineerde personalisatieuitbreiding](/help/rtcdp/destinations/gainsight-extension.md) of de [Bevestiging Stem van de uitbreiding](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)van de Klant.
 
-**De bestemmingen van de Uitvoer** van het profiel/van het Segment in Adobe Real-time het Platform van de Gegevens van de Klant vangen gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe. Voorbeelden hiervan zijn de [Amazon S3 cloudopslagbestemming](/help/rtcdp/destinations/amazon-s3-destination.md) of de [Google Display &amp; Video 360 advertentiebestemming](/help/rtcdp/destinations/google-dv360-destination.md).
+**De bestemmingen van de Uitvoer** van het profiel/van het Segment in het Platform van de Gegevens van de Klant in real time vangen gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe. Voorbeelden hiervan zijn de [Amazon S3 cloudopslagbestemming](/help/rtcdp/destinations/amazon-s3-destination.md) of de [Google Display &amp; Video 360 advertentiebestemming](/help/rtcdp/destinations/google-dv360-destination.md).
 
 ![Extensies van Experience Platforms Launch vergeleken met andere bestemmingen](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
