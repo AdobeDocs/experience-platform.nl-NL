@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: ade9da107ee6dd100a33a7e7e9a20b4335721e0a
+source-git-commit: 5aa8dbcd85fa506f90515ce3e01d35993dd99c10
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2077'
 ht-degree: 2%
 
 ---
@@ -107,7 +107,7 @@ Lees voor meer informatie het document over het [maken van een recept met Jupyte
 
 ## [!DNL Destinations] Service {#destinations}
 
-In [Adobe Real-time het Platform](../../rtcdp/overview.md)van de Gegevens van de Klant, zijn de bestemmingen prebuilt integraties met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In het Platform [van Gegevens van de Klant in](../../rtcdp/overview.md)real time, zijn de bestemmingen prebuilt integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe bestemmingen**
 
