@@ -2,12 +2,12 @@
 keywords: twitter;Twitter;twitter universal website tag;Twitter universal website tag;Twitter UWT Tag;Twitter uwt;twitter uwt
 title: Twitter Universal Website Tag-extensie
 seo-title: Twitter Universal Website Tag-extensie
-description: THe Twitter Universal Website Tag extension is een advertentiebestemming in Adobe Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Twitter Universal Website Tag-extensie is een advertentiebestemming in het Adobe Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De Twitter Universal Website Tag-extensie is een advertentie-bestemming in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De Twitter Universal Website Tag-extensie is een advertentie-bestemming in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '540'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 [!DNL Twitter Universal Website Tag] biedt acties om bakens naar de UWT-tag Twitter te verzenden.
 
-[!DNL Twitter Universal Website Tag] is een advertentie-uitbreiding in het Adobe Real-time Platform van de Gegevens van de Klant. Zie [Geavanceerde omzettingscontrole](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html)voor meer informatie over de extensiefunctionaliteit.
+[!DNL Twitter Universal Website Tag] is een advertentie-uitbreiding in het Platform van de Gegevens van de Klant in real time. Zie [Geavanceerde omzettingscontrole](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html)voor meer informatie over de extensiefunctionaliteit.
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
