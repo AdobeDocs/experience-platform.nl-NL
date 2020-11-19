@@ -1,13 +1,13 @@
 ---
-title: 'Adobe Target en de Adobe Experience Platform Web SDK. '
+title: 'Adobe Target en Adobe Experience Platform Web SDK. '
 seo-title: Adobe Experience Platform Web SDK en Adobe Target gebruiken
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 8aeeef09602386f219fd8284b332469c04e88ffb
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1669'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Moderne webtoepassingen, zoals toepassingen voor één pagina, hebben in plaats 
 
 ## Voordelen van Platform Web SDK voor SPA
 
-Hier volgen enkele voordelen van de SDK van Adobe Experience Platform Web voor toepassingen voor één pagina:
+Hier volgen enkele voordelen van het gebruik van Adobe Experience Platform Web SDK voor toepassingen voor één pagina:
 
 * De capaciteit om alle aanbiedingen op pagina-lading in het voorgeheugen onder te brengen om veelvoudige servervraag aan één enkele servervraag te verminderen.
 * Verbeter de gebruikerservaring op uw site aanzienlijk omdat aanbiedingen direct via de cache worden weergegeven zonder vertraging die door traditionele serveraanroepen is geïntroduceerd.
@@ -68,15 +68,15 @@ XDM-weergaven kunnen in Adobe Target worden gebruikt om marketers in staat te st
 3. Na het bepalen van de Meningen XDM, om de activiteiten van AB of XT VEC te leveren, voer de `sendEvent()` functie met `renderDecisions` reeks aan `true` en de overeenkomstige Mening XDM in uw Enige Toepassing van de Pagina uit. De XDM-weergave moet worden doorgegeven `xdm.web.webPageDetails.viewName`. Met deze stap kunnen marketers de Visual Experience Composer gebruiken om A/B- en XT-tests voor die XDM te starten.
 
    ```javascript
-   alloy("sendEvent",  { 
-     "renderDecisions": true, 
-     "xdm": { 
-       "web": { 
-         "webPageDetails": { 
-            "viewName":"home" 
-         }      
+   alloy("sendEvent", { 
+     "renderDecisions": true, 
+     "xdm": { 
+       "web": { 
+         "webPageDetails": { 
+         "viewName":"home" 
+         }
        } 
-     } 
+     } 
    });
    ```
 
@@ -96,7 +96,7 @@ Het marketing team wil tests A/B op de volledige homepage in werking stellen.
 
 Om tests A/B op de volledige huisplaats in werking te stellen, `sendEvent()` moet worden aangehaald met XDM `viewName` geplaatst aan `home`:
 
-```javascript
+```jsx
 function onViewChange() { 
   
   var viewName = window.location.hash; // or use window.location.pathName if router works on path and not hash 
@@ -109,14 +109,15 @@ function onViewChange() {
     viewName = viewName.substr(1); 
   }
    
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
           "viewName":"home" 
         } 
       } 
+    }
   }); 
 } 
 
@@ -137,18 +138,18 @@ Het marketingteam wil de tweede rij producten aanpassen door de kleur van het pr
 
 ![](assets/use-case-2.png)
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
 
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
-       "web": { 
+      "web": { 
         "webPageDetails": { 
           "viewName": viewName
         }
       } 
-    } 
+    } 
   }); 
 } 
 
@@ -177,17 +178,16 @@ Het marketingteam wil een A/B-test uitvoeren om te zien of het wijzigen van de k
 
 Als u de inhoud op de site wilt aanpassen, afhankelijk van de geselecteerde leveringsvoorkeur, kunt u een weergave maken voor elke leveringsvoorkeur. Als **Normale levering** is geselecteerd, kan de weergave de naam &quot;uitchecken-normaal&quot; hebben. Als **Uitdrukkelijke Levering** wordt geselecteerd, kan de Mening &quot;checkout-express&quot;worden genoemd.
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
-
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
-          "viewName": viewName   
+          "viewName": viewName 
         }
-      }
+      }
     }
   }); 
 } 
@@ -219,7 +219,7 @@ class Checkout extends Component {
 
 ## Het gebruiken van Visual Experience Composer voor een SPA
 
-Wanneer u klaar bent met het definiëren van uw XDM-weergaven en`sendEvent()` met deze doorgegeven XDM Views hebt geïmplementeerd, kan de VEC deze weergaven detecteren en gebruikers toestaan handelingen en wijzigingen voor A/B- of XT-activiteiten te maken.
+Wanneer u klaar bent met het definiëren van uw XDM-weergaven en `sendEvent()` met deze doorgegeven XDM Views hebt geïmplementeerd, kan de VEC deze weergaven detecteren en gebruikers toestaan handelingen en wijzigingen voor A/B- of XT-activiteiten te maken.
 
 >[!NOTE]
 >
