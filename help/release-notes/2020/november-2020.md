@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5aa8dbcd85fa506f90515ce3e01d35993dd99c10
+source-git-commit: d6b603e2918b502635b11fb1aa693a4b4311c125
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2126'
 ht-degree: 2%
 
 ---
@@ -122,6 +122,7 @@ In het Platform [van Gegevens van de Klant in](../../rtcdp/overview.md)real time
 
 | Functie | Beschrijving |
 | ------- | ----------- |
+| Doeldetails UX-updates | De de bestemmingswerkschema&#39;s van CDP in real time omvatten nu gealigneerde controle zodat kunt u zien welke batch-activeringen succesvol waren. Met deze functie kunnen gebruikers problemen rechtstreeks in de workflow voor batchbestemmingen oplossen via waarschuwingen en een controledashboard om fouten in de verwerkingspijplijn bij te houden. |
 | Verplichte velden | Gebruikers kunnen velden markeren als verplicht, zodat alleen velden die het verplichte veld bevatten, worden geëxporteerd. |
 
 <!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
