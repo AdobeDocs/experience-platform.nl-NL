@@ -1,13 +1,13 @@
 ---
 title: Offer Decisioning - Overzicht
 seo-title: Offer Decisioning en Adobe Experience Platform Web SDK
-description: De Adobe Experience Platform Web SDK kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer Decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van Offer Decisioning.
-seo-description: De Adobe Experience Platform Web SDK kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer Decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van Offer Decisioning.
+description: Adobe Experience Platform Web SDK kan gepersonaliseerde aanbiedingen leveren en weergeven die in Offer Decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van Offer Decisioning.
+seo-description: Adobe Experience Platform Web SDK kan gepersonaliseerde aanbiedingen leveren en weergeven die in Offer Decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van Offer Decisioning.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: 86d819daf26eaf1b46afe76054d475e61720dd27
+source-git-commit: a0ede8c7d3088fe80d6ea014b4a4f9f08ee8a7aa
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '810'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 >
 >Het gebruik van Offer Decisioning in Adobe Experience Platform Web SDK is momenteel beschikbaar in een vroeg stadium om gebruikers te selecteren. Deze functionaliteit is niet beschikbaar voor alle IMS-organisaties.
 
-De Adobe Experience Platform [!DNL Web SDK] kan persoonlijke aanbiedingen aanbieden en weergeven die in Offer Decisioning worden beheerd. U kunt uw aanbiedingen en andere verwante objecten maken met de gebruikersinterface (UI) of API&#39;s van Offer Decisioning.
+Adobe Experience Platform [!DNL Web SDK] kan persoonlijke aanbiedingen die in Offer Decisioning worden beheerd, aanbieden en weergeven. U kunt uw aanbiedingen en andere verwante objecten maken met de gebruikersinterface (UI) of API&#39;s van Offer Decisioning.
 
 ## Voorwaarden
 
@@ -29,7 +29,7 @@ De Adobe Experience Platform [!DNL Web SDK] kan persoonlijke aanbiedingen aanbie
 
 ## Terminologie
 
-Het is belangrijk dat u de volgende terminologie begrijpt wanneer u met Offer Decisioning werkt. Ga naar de [Offer Decisioning-woordenlijst](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=en#get-started)voor meer informatie en voor meer informatie.
+Het is belangrijk dat u de volgende terminologie begrijpt wanneer u met Offer Decisioning werkt. <!--For more information and to view additional terms, please visit the [Offer Decisioning glossary](/docs/offer-decisioning/using/get-started/glossary.html)-->.
 
 * **Container:** Een container is een isolatiemechanisme om verschillende zorgen van elkaar te onderscheiden. De container-id is het eerste padelement voor alle gegevensopslagruimte-API&#39;s. Alle beslissingsobjecten bevinden zich in een container.
 
@@ -83,7 +83,7 @@ Als u Offer Decisioning wilt inschakelen, moet u de volgende stappen uitvoeren:
    * Geïnstalleerde SDK voor Platform starten
       1. [Een Platform starten-eigenschap maken](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html)
       2. [De Platform Insluitcode starten toevoegen](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Installeer en vorm de uitbreiding van SDK van het Web van Adobe Experience Platform met de Configuratie van de Rand u enkel door de configuratie van de drop-down &quot;Configuratie van de Rand&quot;te selecteren creeerde. Nuttige documentatie over [extensies](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+      3. Installeer en vorm de uitbreiding van SDK van het Web AEP met de Configuratie van de Rand u enkel door de configuratie van de drop-down &quot;Configuratie van de Rand&quot;te selecteren creeerde. Nuttige documentatie over [extensies](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
@@ -240,7 +240,7 @@ Als u Offer Decisioning wilt inschakelen, moet u de volgende stappen uitvoeren:
                 "language": [
                   "en-US"
                 ],
-                "content": "<p style="color:red;">20% Off on shipping</p>",
+                "content": "<p style=\"color:red;\">20% Off on shipping</p>",
                 "characteristics": {
                   "foo": "bar",
                   "foo1": "bar1"
