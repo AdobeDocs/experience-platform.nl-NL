@@ -1,13 +1,13 @@
 ---
 title: De SDK configureren
-seo-title: De SDK van Adobe Experience Platform Web configureren
+seo-title: Adobe Experience Platform Web SDK configureren
 description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '710'
 ht-degree: 4%
 
 ---
@@ -85,13 +85,7 @@ Uw toegewezen [!DNL Experience Cloud] organisatie-id.  Wanneer het vormen van ve
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | `true` |
 
-Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch moeten worden verzameld. Voor kliks die als verbinding kwalificeren klikt, worden de volgende gegevens van de Interactie [van het](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) Web verzameld:
-
-| **Eigenschap** | **Beschrijving** |
-| ------------ | ----------------------------------- |
-| Koppelingsnaam | Naam die wordt bepaald door de context van de koppeling |
-| Koppelings-URL | Genormaliseerde URL |
-| Koppelingstype | Instellen op downloaden, afsluiten of andere |
+Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch moeten worden verzameld. Zie [Automatisch koppelen bijhouden](../data-collection/track-links.md#automaticLinkTracking) voor meer informatie.
 
 ### `onBeforeEventSend`
 
@@ -153,7 +147,7 @@ Hiermee schakelt u [!DNL Audience Manager] URL-doelen in, zodat URL&#39;s kunnen
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | true |
 
-Indien waar (true), leest de SDK oude AMCV-cookies en stelt deze in. Dit helpt bij het overschakelen naar het gebruik van de AEP Web SDK terwijl sommige delen van de site wellicht nog steeds Visitor.js gebruiken. Als de API voor bezoekers op de pagina is gedefinieerd, vraagt de SDK bovendien naar de API voor bezoekers voor de ECID. Op deze manier kunt u pagina&#39;s met twee tags plaatsen met de AEP Web SDK en toch dezelfde ECID hebben.
+Indien waar (true), leest de SDK oude AMCV-cookies en stelt deze in. Dit helpt bij de overgang naar het gebruik van Adobe Experience Platform Web SDK, terwijl sommige delen van de site wellicht nog steeds Visitor.js gebruiken. Als de API voor bezoekers op de pagina is gedefinieerd, vraagt de SDK bovendien naar de API voor bezoekers voor de ECID. Op deze manier kunt u pagina&#39;s met twee tags plaatsen met de AEP Web SDK en toch dezelfde ECID hebben.
 
 ### `thirdPartyCookiesEnabled`
 
