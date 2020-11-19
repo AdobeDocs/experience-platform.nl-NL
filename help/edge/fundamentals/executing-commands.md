@@ -5,9 +5,9 @@ description: Leer hoe te om de bevelen van SDK van het Web van het Experience Pl
 seo-description: Leer hoe te om de bevelen van SDK van het Web van het Experience Platform uit te voeren
 keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Opdrachten uitvoeren
 
-Nadat de basiscode op uw webpagina is geïmplementeerd, kunt u beginnen met het uitvoeren van opdrachten met de SDK. U hoeft niet te wachten tot het externe bestand \(`alloy.js`\) van de server is geladen voordat u opdrachten uitvoert. Als het laden van de SDK nog niet is voltooid, worden opdrachten zo snel mogelijk in de wachtrij geplaatst en verwerkt door de SDK.
+Nadat de basiscode op uw webpagina is geïmplementeerd, kunt u beginnen met het uitvoeren van opdrachten met de SDK. U hoeft niet te wachten tot het externe bestand (alloy.js) van de server is geladen voordat u opdrachten uitvoert. Als het laden van de SDK nog niet is voltooid, worden opdrachten zo snel mogelijk in de wachtrij geplaatst en verwerkt door de SDK.
 
 Opdrachten worden uitgevoerd met de volgende syntaxis.
 
@@ -42,7 +42,7 @@ alloy("commandName", options)
   .catch(function(error) {
     // The command failed.
     // "error" is an error object with additional information
-  })
+  });
 ```
 
 Als het weten wanneer het bevel slaagt niet belangrijk voor u is, kunt u de `then` vraag verwijderen.
@@ -52,7 +52,7 @@ alloy("commandName", options)
   .catch(function(error) {
     // The command failed.
     // "error" is an error object with additional information
-  })
+  });
 ```
 
 Eveneens, als het weten wanneer het bevel niet belangrijk voor u is, kunt u de `catch` vraag verwijderen.
@@ -62,7 +62,7 @@ alloy("commandName", options)
   .then(function(result) {
     // The command succeeded.
     // "value" will be whatever the command returned
-  })
+  });
 ```
 
 ### Responsobjecten
@@ -70,9 +70,10 @@ alloy("commandName", options)
 Alle beloftes die door opdrachten worden geretourneerd, worden opgelost met een `result` object. Het resultaatobject bevat gegevens die afhankelijk zijn van de opdracht en de toestemming van de gebruiker. Bibliotheekinfo wordt bijvoorbeeld doorgegeven als een eigenschap van het resultaatobject in de volgende opdracht.
 
 ```js
-alloy("getLibraryInfo").then(function(result) {
-  console.log(results.libraryInfo.version);
-});
+alloy("getLibraryInfo")
+  .then(function(result) {
+    console.log(results.libraryInfo.version);
+  });
 ```
 
 ### Toestemming
