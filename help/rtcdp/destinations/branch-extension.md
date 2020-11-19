@@ -2,12 +2,12 @@
 keywords: branch;branch extension;branch destination
 title: Vertakkingsextensie
 seo-title: Vertakkingsextensie
-description: De uitbreiding van de Tak is een reclamebestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De uitbreiding van de Tak is een reclamebestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De uitbreiding van de Tak is een reclamebestemming in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De uitbreiding van de Tak is een reclamebestemming in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '536'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 De tak verstrekt krachtige verbindingen en oplossingen die u, over alle apparaten, kanalen, en platforms helpen verwerven in dienst nemen en meten.
 
-De tak is een reclameuitbreiding in het Platform van de Gegevens van de Klant van de Adobe in real time. Zie de pagina met [functies](https://branch.io/features/) op de website Branch voor meer informatie over de extensiefunctionaliteit.
+De tak is een reclameuitbreiding in het Platform van de Gegevens van de Klant in real time. Zie de pagina met [functies](https://branch.io/features/) op de website Branch voor meer informatie over de extensiefunctionaliteit.
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
