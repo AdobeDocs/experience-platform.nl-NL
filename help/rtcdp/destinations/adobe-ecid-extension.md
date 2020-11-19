@@ -2,12 +2,12 @@
 Keywords: ECID;ecid
 title: Experience Cloud ID Service-extensie
 seo-title: Experience Cloud ID Service-extensie
-description: De uitbreiding van de Dienst van identiteitskaart van Experience Cloud is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De uitbreiding van de Dienst van identiteitskaart van Experience Cloud is een verpersoonlijkingsbestemming in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De uitbreiding van de Dienst van identiteitskaart van Experience Cloud is een verpersoonlijkingsbestemming in Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De uitbreiding van de Dienst van identiteitskaart van Experience Cloud is een verpersoonlijkingsbestemming in Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '554'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Deze extensie implementeert de [!DNL Experience Cloud] ID-service, die bezoekers identificeert voor alle [!DNL Experience Cloud] oplossingen.
 
-[!DNL Experience Cloud] De Dienst van identiteitskaart is een verpersoonlijkingsuitbreiding in het Platform van de Gegevens van de Klant van Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de de uitbreidingspagina [van de Dienst van](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) Experience Cloud ID in [!DNL Experience Platform Launch] documentatie.
+[!DNL Experience Cloud] De Dienst van identiteitskaart is een verpersoonlijkingsuitbreiding in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de de uitbreidingspagina [van de Dienst van](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) Experience Cloud ID in [!DNL Experience Platform Launch] documentatie.
 
 Dit doel is een [!DNL Adobe Experience Platform Launch] extensie. Voor meer informatie over hoe de [!DNL Platform Launch] uitbreidingen in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van het](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
