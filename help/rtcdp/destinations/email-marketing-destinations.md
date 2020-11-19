@@ -6,9 +6,9 @@ type: Tutorial
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 seo-description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 translation-type: tm+mt
-source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '837'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # E-mailmarketingdoelen {#email-marketing-destinations}
 
-Met e-mailserviceproviders (ESP&#39;s) kunt u uw marketingactiviteiten voor e-mail beheren, zoals het verzenden van promotionele e-mailcampagnes. Het Platform van de Gegevens van de Klant van de Adobe in real time integreert met ESPs door u toe te staan om segmenten aan e-mail marketing bestemmingen te activeren.
+Met e-mailserviceproviders (ESP&#39;s) kunt u uw marketingactiviteiten voor e-mail beheren, zoals het verzenden van promotionele e-mailcampagnes. Het Platform van Gegevens van de Klant in real time integreert met ESPs door u toe te staan om segmenten aan e-mail marketing bestemmingen te activeren.
 
 Om segmenten naar e-mail marketing bestemmingen voor uw campagnes te verzenden, moet Adobe in real time CDP eerst met de bestemming verbinden.
 
