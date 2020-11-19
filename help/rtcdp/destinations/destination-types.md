@@ -2,12 +2,12 @@
 keywords: destinations;destination;destination types
 title: Typen bestemmingen en categorieën
 seo-title: Typen bestemmingen en categorieën
-description: 'In het Platform van de Gegevens van de Klant van Adobe in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe. Experience Platform Launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. '
-seo-description: In het Platform van de Gegevens van de Klant van Adobe in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe. Experience Platform Launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen.
+description: 'In het Platform van Gegevens van de Klant in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie toe, en voeren segmenten en gekwalificeerde profielen op bestemmingen uit. Experience Platform Launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. '
+seo-description: In het Platform van Gegevens van de Klant in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie toe, en voeren segmenten en gekwalificeerde profielen op bestemmingen uit. Experience Platform Launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen.
 translation-type: tm+mt
-source-git-commit: e6276eac05f0a20a668051034e83831002a464f0
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 # Doeltypen en -categorieën
 
-Lees deze pagina om de verschillende types en de categorieën van de bestemmingen van het Platform van de Gegevens van de Klant in real time van Adobe te begrijpen.
+Lees deze pagina om de verschillende types en de categorieën bestemmingen van het Platform van de Gegevens van de Klant in real time te begrijpen.
 
 ## Doeltypen
 
-In het Platform van de Gegevens van de Klant van Adobe in real time, maken wij onderscheid tussen twee bestemmingstypes - verbindingen en uitbreidingen. Er zijn twee soorten verbindingsbestemmingen, de bestemmingen van de Uitvoer van het Profiel en de bestemmingen van de Uitvoer van het Segment.
+In het Platform van Gegevens van de Klant in real time, maken wij onderscheid tussen twee bestemmingstypes - verbindingen en uitbreidingen. Er zijn twee soorten verbindingsbestemmingen, de bestemmingen van de Uitvoer van het Profiel en de bestemmingen van de Uitvoer van het Segment.
 
 ![Soorten bestemmingen](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -27,7 +27,7 @@ In het Platform van de Gegevens van de Klant van Adobe in real time, maken wij o
 
 ### Verbindingen {#connections}
 
-**[!UICONTROL De bestemmingen van de Uitvoer]** en van het **[!UICONTROL Segment van het profiel van de Uitvoer]** in het Platform van de Gegevens van de Klant van Adobe Real-time vangen gebeurtenisgegevens, combineren het met andere gegevensbronnen om het [real-time klantenprofiel](/help/profile/home.md)te vormen, segmentatie, en de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe te passen.
+**[!UICONTROL De bestemmingen van de Uitvoer]** en van het **[!UICONTROL Segment van het profiel van de Uitvoer]** in het Platform van de Gegevens van de Klant in real time vangen gebeurtenisgegevens, combineren het met andere gegevensbronnen om het [klantenprofiel](/help/profile/home.md)in real time te vormen, segmentatie toe te passen, en segmenten en gekwalificeerde profielen naar bestemmingen uit te voeren.
 
 <br> 
 
