@@ -5,9 +5,9 @@ description: Meer weten over Adobe Experience Cloud-id?
 seo-description: Meer weten over Adobe Experience Cloud-id?
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '731'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # Identiteit - De Experience Cloud-id wordt opgehaald
 
-De Adobe Experience Platform [!DNL Web SDK] gebruikt de [Adobe Identity Service](../../identity-service/ecid.md). Dit zorgt ervoor dat elk apparaat een unieke id heeft die op het apparaat blijft bestaan, zodat de activiteit tussen pagina&#39;s aan elkaar kan worden gekoppeld.
+Adobe Experience Platform Web SDK gebruikt [Adobe Identity Service](../../identity-service/ecid.md). Dit zorgt ervoor dat elk apparaat een unieke id heeft die op het apparaat blijft bestaan, zodat de activiteit tussen pagina&#39;s aan elkaar kan worden gekoppeld.
 
 ## Identiteit eerste partij
 
@@ -27,11 +27,11 @@ De [!DNL Identity Service] heeft de capaciteit om een identiteitskaart met een d
 
 ## ID-migratie
 
-Wanneer u migreert vanuit de Bezoeker-API, kunt u ook bestaande AMCV-cookies migreren. Stel de `idMigrationEnabled` parameter in de configuratie in om ECID-migratie in te schakelen. De migratie van id is opstelling om sommige gebruiksgevallen toe te laten:
+Wanneer u migreert vanuit de Bezoeker-API, kunt u ook bestaande AMCV-cookies migreren. Stel de `idMigrationEnabled` parameter in de configuratie in om ECID-migratie in te schakelen. Bij ID-migratie zijn de volgende gebruiksgevallen mogelijk:
 
-* Wanneer sommige pagina&#39;s van een domein de bezoeker-API gebruiken en andere pagina&#39;s deze SDK gebruiken. Ter ondersteuning van dit geval leest de SDK bestaande AMCV-cookies en schrijft hij een nieuw cookie met de bestaande ECID. Bovendien schrijft de SDK AMCV-cookies zodat, als de ECID eerst wordt verkregen op een pagina die van instrumenten is voorzien met de AEP Web SDK, de volgende pagina&#39;s die van instrumenten zijn voorzien met de Bezoeker-API dezelfde ECID hebben.
-* Wanneer de AEP Web SDK opstelling op een pagina is die ook bezoeker API heeft. Ter ondersteuning van dit geval zoekt de SDK, als het AMCV-cookie niet is ingesteld, naar de Bezoeker-API op de pagina en roept deze aan om de ECID op te halen.
-* Wanneer de hele site de SDK van AEP Web gebruikt en geen API voor bezoekers heeft, is het handig om de ECID&#39;s te migreren zodat de informatie van de retourbezoeker behouden blijft. Nadat de SDK gedurende een bepaalde periode is geïmplementeerd, zodat de meeste cookies van de bezoeker worden gemigreerd, kan de instelling worden uitgeschakeld. `idMigrationEnabled`
+* Wanneer sommige pagina&#39;s van een domein de bezoeker-API gebruiken en andere pagina&#39;s deze SDK gebruiken. Ter ondersteuning van dit geval leest de SDK bestaande AMCV-cookies en schrijft hij een nieuw cookie met de bestaande ECID. Daarnaast schrijft de SDK AMCV-cookies zodat, als de ECID als eerste wordt verkregen op een pagina die van instrumenten is voorzien met de SDK, de volgende pagina&#39;s die van instrumenten zijn voorzien met de Bezoeker-API dezelfde ECID hebben.
+* Wanneer de SDK van het Web van Adobe Experience Platform opstelling op een pagina is die ook bezoeker API heeft. Ter ondersteuning van dit geval zoekt de SDK, als het AMCV-cookie niet is ingesteld, naar de Bezoeker-API op de pagina en roept deze aan om de ECID op te halen.
+* Wanneer de hele site gebruikmaakt van Adobe Experience Platform Web SDK en geen API voor bezoekers heeft, is het handig om de ECID&#39;s te migreren zodat de informatie van de retourbezoeker behouden blijft. Nadat de SDK gedurende een bepaalde periode is geïmplementeerd, zodat de meeste cookies van de bezoeker worden gemigreerd, kan de instelling worden uitgeschakeld. `idMigrationEnabled`
 
 ## De bezoeker-id ophalen
 
@@ -43,13 +43,14 @@ Gebruik de `getIdentity` opdracht als u deze unieke id wilt gebruiken. `getIdent
 
 ```javascript
 alloy("getIdentity")
-  .then(function(result.identity.ECID) {
-    // This function will get called with Adobe Experience Cloud Id when the command promise is resolved
+  .then(function(result) {
+    // The command succeeded.
+    console.log(result.identity.ECID);
   })
   .catch(function(error) {
     // The command failed.
-    // "error" will be an error object with additional information
-  })
+    // "error" will be an error object with additional information.
+  });
 ```
 
 ## Identiteiten synchroniseren
@@ -79,21 +80,14 @@ alloy("sendEvent", {
       ]
     }
   }
-})
+});
 ```
 
+Elke eigenschap binnen `identityMap` vertegenwoordigt identiteiten die tot een bepaalde naamruimte [](../../identity-service/namespaces.md)behoren. De eigenschapnaam moet het naamruimtesymbool voor de identiteit zijn. Dit wordt weergegeven in de Adobe Experience Platform-gebruikersinterface onder[!UICONTROL Id]. De eigenschapswaarde moet een array zijn met identiteiten die betrekking hebben op die naamruimte identity.
 
-### Opties voor het synchroniseren van identiteiten
+Elk identiteitsobject in de array identities is als volgt gestructureerd:
 
-#### Naamruimtesymbool voor identiteit
-
-| **Type** | **Vereist** | **Standaardwaarde** |
-| -------- | ------------ | ----------------- |
-| Tekenreeks | Ja | none |
-
-De sleutel voor het object is het symbool [Identiteitsnaamruimte](../../identity-service/namespaces.md) . U vindt dit in de gebruikersinterface van Adobe Experience Platform onder &quot;[!UICONTROL Identiteiten]&quot;.
-
-#### `id`
+### `id`
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
@@ -101,7 +95,7 @@ De sleutel voor het object is het symbool [Identiteitsnaamruimte](../../identity
 
 Dit is de id die u voor de opgegeven naamruimte wilt synchroniseren.
 
-#### `authenticationState`
+### `authenticationState`
 
 | **Type** | **Vereist** | **Standaardwaarde** | **Mogelijke waarden** |
 | -------- | ------------ | ----------------- | ------------------------------------ |
@@ -109,18 +103,10 @@ Dit is de id die u voor de opgegeven naamruimte wilt synchroniseren.
 
 De verificatiestatus van de id.
 
-#### `primary`
+### `primary`
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
 | Boolean | optioneel | false |
 
 Hiermee wordt bepaald of deze identiteit moet worden gebruikt als primair fragment in het verenigde profiel. Standaard wordt de ECID ingesteld als de primaire id voor de gebruiker.
-
-#### `hashEnabled`
-
-| **Type** | **Vereist** | **Standaardwaarde** |
-| -------- | ------------ | ----------------- |
-| Boolean | optioneel | false |
-
-Als deze optie is ingeschakeld, wordt de identiteit verborgen met behulp van SHA256-hashing.
