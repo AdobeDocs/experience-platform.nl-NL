@@ -4,9 +4,9 @@ seo-title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Veelgestelde vragen over Adobe Experience Platform Web SDK
 seo-description: Veelgestelde vragen over Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1629'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Deze veelgestelde vragen bevatten vragen die vaak worden gesteld over de Adobe W
 
 ## Wat is Adobe Experience Platform Web SDK?
 
-Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van de Adobe Experience Cloud kunnen communiceren met de verschillende services in de Experience Cloud.
+Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van Adobe Experience Cloud kunnen communiceren met de verschillende services in de Experience Cloud.
 
 Het verzendt gegevens op een oplossing-agnostische manier (XDM) naar het Netwerk van de Rand van Adobe Experience Platform, dat dan de gegevens aan oplossing specifieke formaten en bestemmingen in kaart brengt en het in real time verzendt.
 
@@ -48,7 +48,7 @@ Er is momenteel ook geen JavaScript-bibliotheek die gegevens rechtstreeks naar A
 
 ### Met Adobe Experience Platform Web SDK
 
-De nieuwe SDK van het Web verzendt gegevens voor de volgende oplossingen naar één enkele bestemming (het Netwerk van de Rand van AEP) en lost voor de gemeenschappelijkste bovengenoemde gevallen van het oplossingsgebruik op.
+De nieuwe SDK van het Web verzendt gegevens voor de volgende oplossingen naar één enkele bestemming (het Netwerk van de Rand van Adobe Experience Platform) en lost voor de gemeenschappelijkste bovengenoemde gevallen van het oplossingsgebruik op.
 
 * Adobe Analytics
 * Adobe Audience Manager
@@ -67,7 +67,7 @@ Adobe Experience Platform Web SDK kan gegevens ook rechtstreeks naar Adobe Exper
 **Eenvoud:** De combinatie van XDM, Web SDK, Experience Platform Launch, Experience Edge, Adobe Experience Cloud-oplossingen en Adobe Experience Platform maakt een eenvoudig te begrijpen en eenvoudig te volgen artikel voor gegevensverzameling.
 
 * **XDM:** Het oplossing-agnostische schema u gebruikt om gegevens naar Adobe te verzenden. Geen codes meer voor verkenners of vakjes.
-* **Web SDK:** Hiermee kunt u eenvoudig gegevens naar het Adobe Experience Platform Edge-netwerk verzenden en ontvangen.
+* **Adobe Experience Platform Web SDK:** Hiermee kunt u gegevens eenvoudig verzenden naar en ontvangen van Adobe Experience Platform Edge Network.
 * **Experience Platform Launch:** Vereenvoudigt plaatsing en configuratie van Web SDK (en om het even welke andere markeringen JavaScript) op een plaats.
 * **Geniet van rand:** Verstuur de gegevens gemakkelijk naar Adobe Experience Platform en de oplossingen in het formaat dat zij nodig hebben.
 * **Adobe Experience Platform- en Adobe-oplossingen:** Schakel hun waardevoorstel in.
@@ -78,9 +78,9 @@ Adobe Experience Platform Web SDK kan gegevens ook rechtstreeks naar Adobe Exper
 
 **Tijd-aan-waarde:** Adobe heeft hard gewerkt (en zal) het zo gemakkelijk mogelijk maken om het Web SDK via Experience Platform Launch en kaartcliënt-zijgegevens aan XDM op te stellen.  Nadat dat werk wordt gedaan, kunnen alle andere Adobe oplossingen en de diensten van Adobe Experience Platform worden aangezet of van server-kant. Als u dit bijvoorbeeld gebruikt voor Adobe Analytics en u Target of Experience Platform wilt inschakelen, kunt u gewoon een schakeloptie voor de configuratie Experience Edge draaien en die gebruikstoepassingen oplichten.
 
-## Wat is `alloy.js`?
+## Wat is Alloy?
 
-`Alloy.js` is de bestandsnaam voor de Adobe Experience Platform Web SDK. Adobe Experience Platform Web SDK is de officiële naam, maar veel ontwikkelaars noemen het &quot;legering.&quot;
+Alloy is de codenaam voor het Web SDK van Adobe Experience Platform. Het wordt gebruikt binnen de broncode en filename van SDK, hoewel het Web SDK van Adobe Experience Platform de officiële naam is.
 
 ## Moeten klanten Adobe Experience Platform kopen om de SDK van het Web te gebruiken?
 
@@ -88,7 +88,7 @@ Nee. Elke Adobe Digital Experience die klant kan gebruiken. Volledig gratis. Om 
 
 ## Wie zou SDK van het Web moeten gebruiken?
 
-De SDK van het Web van Adobe Experience Platform is ontwikkeld voor de volgende mensen:
+Adobe Experience Platform Web SDK is ontwikkeld voor de volgende personen:
 
 * Adobe Experience Platform-gebruikers
 
@@ -103,7 +103,7 @@ De SDK van het Web van Adobe Experience Platform is ontwikkeld voor de volgende 
    Bestaande klanten die de meest geoptimaliseerde implementatie mogelijk willen krijgen, moeten de nieuwe Web SDK gebruiken.
 
 
-## Hoe krijg ik toegang om te beginnen de SDK van het Web van Adobe Experience Platform te gebruiken?
+## Hoe krijg ik toegang om te beginnen Adobe Experience Platform Web SDK te gebruiken?
 
 De SDK van het Web is momenteel beschikbaar aan het grote publiek en kan worden gebruikt om gegevens naar de producten van Adobe Experience Cloud te verzenden. De capaciteit om gegevens naar derdeoplossingen te verzenden komt in de nabije toekomst. Als u toegang tot de Web SDK wilt krijgen, neemt u contact op met uw Certified Software Manager (CSM) om het aanvraagproces te starten.
 
@@ -113,9 +113,9 @@ De SDK van het Web evolueert snel. Er wordt gewerkt aan meer gebruiksgevallen. H
 
 ## Moeten de huidige klanten hun plaatsen in de detailhandel brengen?
 
-Dat hangt ervan af. De SDK van het Web van Adobe Experience Platform kan in twee verschillende stijlen worden opgesteld. Een toekomstig migratiedocument zal extra details verstrekken.
+Dat hangt ervan af. Adobe Experience Platform Web SDK kan in twee verschillende stijlen worden opgesteld. Een toekomstig migratiedocument zal extra details verstrekken.
 
-* **Nog een tag:** Als de site al is gecodeerd voor oplossingen en u kunt deze niet opnieuw labelen, maar u wilt gegevens naar het Adobe Experience Platform Edge Network verzenden voor gebruik van Experience Platforms of de komende serverfuncties van het Experience Platform Launch (zie hieronder), kunt u de `alloy.js` tag toevoegen aan de site, waar deze werkt als &quot;gewoon een andere tag&quot;.
+* **Nog een tag:** Als de site al is gecodeerd voor oplossingen en u kunt deze niet opnieuw labelen, maar u wilt gegevens naar Adobe Experience Platform Edge Network verzenden voor gebruik van Experience Platforms of de komende serverfuncties van het Experience Platform Launch (zie hieronder), kunt u de `alloy.js` tag toevoegen aan de site, waar deze werkt als &quot;gewoon een andere tag&quot;.
 
 * **Het enige label:** Als u het Web SDK voor een oplossing van Experience Cloud wilt gebruiken, moet u het voor _alle_ oplossingen op die pagina gebruiken. Als uw site bijvoorbeeld al gelabeld is voor Adobe Analytics en u deze wilt gebruiken voor Target, moet u deze zowel voor als voor andere sites in de toekomst gebruiken.
 
@@ -123,7 +123,7 @@ Met andere woorden, als u besluit om het Web SDK van Adobe Experience Platform v
 
 ## Kan ik de ECID&#39;s migreren wanneer ik Alloy ga gebruiken, zodat mijn websitebezoekers niet beginnen op te dagen als nieuwe bezoekers?
 
-Ja, de SDK van het Web van Adobe Experience Platform verstrekt een eigenschap van de Migratie van de Identiteit. Volg de instructies in [dit document](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/identity.html#id-migration) voor meer informatie.
+Ja, Adobe Experience Platform Web SDK beschikt over de functie Identiteitsmigratie. Volg de instructies in [dit document](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/identity.html#id-migration) voor meer informatie.
 
 ## Hoe is de SDK van het Web anders dan Adobe Experience Platform Launch?
 
@@ -139,7 +139,7 @@ Nee. U kunt het `alloy.js` bestand zelf downloaden.
 
 Echter:
 
-* De Adobe Experience Platform Web SDK vereist iets genoemd een de configuratieidentiteitskaart van de Rand van de Ervaring zodat kan het randnetwerk de stroom identificeren en bepalen wat met de gegevens te doen. Deze id wordt gemaakt in het Experience Platform Launch. Dit betekent niet u Experience Platform Launch moet gebruiken om eigenschappen tot stand te brengen of de code op te stellen JavaScript, maar u moet Experience Platform Launch gebruiken om een configuratie-identiteitskaart tot stand te brengen.
+* Adobe Experience Platform Web SDK vereist iets genoemd een de configuratieidentiteitskaart van de Rand van de Ervaring zodat kan het randnetwerk de stroom identificeren en bepalen wat met de gegevens te doen. Deze id wordt gemaakt in het Experience Platform Launch. Dit betekent niet u Experience Platform Launch moet gebruiken om eigenschappen tot stand te brengen of de code op te stellen JavaScript, maar u moet Experience Platform Launch gebruiken om een configuratie-identiteitskaart tot stand te brengen.
 
 * Adobe Experience Platform Launch is niet alleen de beste beschikbare tag en SDK-manager, maar maakt het heel eenvoudig om gegevens te implementeren `alloy.js` en toe te wijzen aan XDM-schema&#39;s. Als u besluit om Experience Platform Launch niet te gebruiken, zult u het opstellen `alloy.js`, het verhinderen, en het in kaart brengen van uw gegevens in XDM moeten beheren alvorens het te verzenden. Dit is een _veel_ moeilijker proces dan het gebruik van Experience Platform Launch.
 
