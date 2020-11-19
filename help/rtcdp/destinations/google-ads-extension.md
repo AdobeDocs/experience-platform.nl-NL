@@ -2,12 +2,12 @@
 keywords: Google ads;google ads;google ads extension;Google Ads extension
 title: Google Ads-extensie
 seo-title: Google Ads-extensie
-description: De Google Ads-extensie is een advertentiebestemming in het Adobe Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Google Ads-extensie is een advertentiebestemming in het Adobe Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De Google Ads-extensie is een advertentiebestemming in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De Google Ads-extensie is een advertentiebestemming in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '573'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Deze extensie houdt de conversie bij van gebruikers die op de extensie klikken [!DNL Google Ads]. U moet ook de extensie gtag.js installeren en deze toevoegen aan uw bibliotheek, afhankelijk van de [!DNL Google Ads] optie.
 
-[!DNL Google Ads] is een advertentie-uitbreiding in het Adobe Real-time Platform van de Gegevens van de Klant. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
+[!DNL Google Ads] is een advertentie-uitbreiding in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
