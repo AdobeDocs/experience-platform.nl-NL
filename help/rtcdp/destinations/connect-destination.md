@@ -1,13 +1,13 @@
 ---
 keywords: connect destination;destination connect;how to connect destination
-title: Verbind met een Doel in het Platform van de Gegevens van de Klant van de Adobe Real-time
-seo-title: Verbind met een Doel in het Platform van de Gegevens van de Klant van de Adobe Real-time
+title: Verbind met een Doel in het Platform van de Gegevens van de Klant in real time
+seo-title: Verbind met een Doel in het Platform van de Gegevens van de Klant in real time
 type: Tutorial
-description: Dit leerprogramma maakt een lijst van de stappen om een bestemming in het Platform van de Gegevens van de Klant van de Adobe in real time te verbinden
+description: Dit leerprogramma maakt een lijst van de stappen om een bestemming in het Platform van Gegevens van de Klant in real time te verbinden
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Hoe te om een bestemming aan te sluiten
 
-Voer de onderstaande stappen uit om verbinding te maken met een doel in het Adobe Real-time Platform voor klantgegevens:
+Voer de onderstaande stappen uit om verbinding te maken met een bestemming in Real-time Customer Data Platform:
 
 1. Navigeer naar **[!UICONTROL Doelen]** vanaf de linkernavigatiebalk.
 2. Selecteer op het tabblad [[!UICONTROL Catalogus]](/help/rtcdp/destinations/destinations-workspace.md#catalog) het doel waarmee u verbinding wilt maken.
