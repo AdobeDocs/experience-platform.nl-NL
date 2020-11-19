@@ -2,12 +2,12 @@
 keywords: Parse. ly;parsely;Parsely;parse.ly;Parse.ly
 title: Parse.ly Analytics-extensie
 seo-title: Parse.ly Analytics-extensie
-description: De extensie Parse.ly Analytics is een analysedoel in het Adobe Real-time Platform van klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Parse.ly Analytics is een analysedoel in het Adobe Real-time Platform van klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De extensie Parse.ly Analytics is een analysedoel in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De extensie Parse.ly Analytics is een analysedoel in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '541'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 [!DNL Parse.ly Analytics] helpt meer dan 2500 bedrijven gegevens te gebruiken om hun online publiek te begrijpen . Met deze extensie installeert u een JavaScript-fragment dat bijhoudt hoe bezoekers de inhoud van uw site beïnvloeden.
 
-Parse.ly is een analytische uitbreiding in het Adobe Real-time Platform van de Gegevens van de Klant. Zie [Parse.ly Analytics](https://www.parse.ly/)voor meer informatie over de extensiefunctionaliteit.
+Parse.ly is een analytische uitbreiding in het Platform van de Gegevens van de Klant in real time. Zie [Parse.ly Analytics](https://www.parse.ly/)voor meer informatie over de extensiefunctionaliteit.
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
