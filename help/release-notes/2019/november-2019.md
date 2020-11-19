@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '1908'
+source-wordcount: '1878'
 ht-degree: 1%
 
 ---
@@ -19,18 +19,18 @@ ht-degree: 1%
 
 Nieuwe functies in Adobe Experience Platform:
 * [[!DNL Real-time Customer Data Platform]](#rtcdp)
-* [[!DNL-doelen]](#destinations)
-* [[!DNL-bronnen]](#sources)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Sources]](#sources)
 
 Updates voor bestaande functies:
 * [[!DNL Data Science Workspace]](#dsw)
-* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](#xdm)
-* [[!DNL Real-time klantprofiel]](#profile)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
+* [[!DNL Real-time Customer Profile]](#profile)
 * [[!DNL Segmentation Service]](#segmentation)
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Het Adobe Real-Time Customer Data Platform (Real-time CDP) is gebaseerd op Adobe Experience Platform en helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren door op intelligente wijze te beslissen tijdens de reis van de klant. CDP in real time combineert veelvoudige bronnen van ondernemingsgegevens om verenigde profielen in real time tot stand te brengen die kunnen worden gebruikt om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
+Het Real-Time Customer Data Platform (Real-time CDP) is gebaseerd op Adobe Experience Platform en helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren door op intelligente wijze te beslissen tijdens de reis van de klant. CDP in real time combineert veelvoudige bronnen van ondernemingsgegevens om verenigde profielen in real time tot stand te brengen die kunnen worden gebruikt om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
 
 [!DNL Real-time Customer Data Platform] omvat hulpmiddelen voor gegevensbeheer, identiteitsbeheer, geavanceerde segmentatie en gegevenswetenschap zodat u profielen kunt maken en het publiek kunt definiëren, en rijke inzichten kunt afleiden terwijl u strikte beleidsregels voor gegevensbeheer kunt afdwingen.
 
@@ -43,19 +43,19 @@ Met CDP in real time, kunt u:
 * Maak actionable inzichten en schaal publiek met AI en machine leren aangedreven door Adobe Sensei en gebouwd voor marketers.
 * Lever gepersonaliseerde ervaringen in real time over alle kanalen en bestemmingen.
 
-Voor meer informatie, zie de [Adobe Real-time documentatie](../../rtcdp/overview.md)van het Platform van Gegevens van de Klant.
+Voor meer informatie, zie de [Real-time documentatie](../../rtcdp/overview.md)van het Platform van Gegevens van de Klant.
 
 **Belangrijkste kenmerken**
 
 | Functie | Beschrijving |
 |---|---|
 | Doelen | Vooraf gebouwde integratie met doelplatforms die worden ondersteund door Adobe [!DNL Real-time Customer Data Platform] die gegevens naadloos activeren bij die partners. Zie [Doelen](#destinations) hieronder voor meer informatie. |
-| Metrisch dashboard voor startpagina | De Adobe Echte de homepage van de Gegevens van de Klant van de tijd van de Platform (CDP in real time) omvat een metriek dashboard dat informatie over profielen en segmenten toont. De homepage bevat ook koppelingen naar leermaterialen. Zie de sectie over de [gegevens van het Platform](#real-time-customer-data-platform-metrics) van de Klant in real time hieronder. |
+| Metrisch dashboard voor startpagina | De homepage van de Gegevens van de Klant in real time (CDP in real time) omvat een metriek dashboard dat informatie over profielen en segmenten toont. De homepage bevat ook koppelingen naar leermaterialen. Zie de sectie over de [gegevens van het Platform](#real-time-customer-data-platform-metrics) van de Klant in real time hieronder. |
 | Bronnen | U kunt gegevens van een verscheidenheid van bronnen zoals de Oplossingen van Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw CRM opnemen. Zie de sectie [Bronnen](#sources) hieronder voor meer informatie. |
 
 **[!DNL Real-time Customer Data Platform]cijfers**
 
-De Adobe Echte de homepage van Gegevens van de Klant - tijdGegevens (CDP in real time), die een metriek dashboard omvat, verschijnt wanneer u login aan CDP in real time.
+De homepage van de Gegevens van de Klant in real time (CDP in real time), die een metriek dashboard omvat, verschijnt wanneer u login aan CDP in real time.
 
 De homepage is slechts een van de plaatsen waar metrische kaarten verschijnen. CDP in real time verstrekt metrische kaarten door uw ervaring. Deze metriek informeren u over de gegevens, het profiel, en het segmentpubliek in het systeem.
 
