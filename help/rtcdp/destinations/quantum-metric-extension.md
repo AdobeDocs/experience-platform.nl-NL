@@ -2,12 +2,12 @@
 keywords: Quantum Metric Extension;Quantum Metric;quantum metric;Quantum metric
 title: Quantum Metric extension
 seo-title: Quantum Metric extension
-description: THe Quantum Metric-extensie is een analysedoel in het Adobe Real-time Platform met klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De metrische extensie Quantum is een analysedoel in het Adobe Real-time Platform van klantgegevens. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+description: De metrische extensie Quantum is een analysedoel in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
+seo-description: De metrische extensie Quantum is een analysedoel in Real-time Customer Data Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '572'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 [!DNL Quantum Metric's] integratie met Adobe Launch vergemakkelijkt de codeloze implementatie van de tag voor [!DNL Quantum Metric's] gegevensverzameling. Bovendien biedt deze extensie de mogelijkheid om Launch Data Elements vast te leggen die nuttige informatie van de [!DNL Quantum Metric] API bevatten.
 
-[!DNL Quantum Metric] is een analytische uitbreiding in het Platform van de Gegevens van de Klant van de Adobe in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html).
+[!DNL Quantum Metric] is een analytische uitbreiding in het Platform van de Gegevens van de Klant in real time. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van [Adobe](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html).
 
 Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie over hoe de uitbreidingen van de Lancering van het Platform in Adobe in real time CDP werken, zie het overzicht [van de uitbreidingen van](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
