@@ -5,9 +5,9 @@ seo-title: Homepage en dashboards van klantgegevens in realtime Platform
 description: Dashboards, Home Page en First-Time User Experience of Adobe Experience Platform
 seo-description: Dashboards, Home Page en First-Time User Experience of Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Real-time Customer Data Platform] metriek-overzicht
 
-De Adobe Echte de homepage van Gegevens van de Klant - tijdGegevens (CDP in real time), die een metriek dashboard omvat, verschijnt wanneer u login aan CDP in real time.
+De homepage van de Gegevens van de Klant in real time (CDP in real time), die een metriek dashboard omvat, verschijnt wanneer u login aan CDP in real time.
 
 De homepage is slechts een van de plaatsen waar metrische kaarten verschijnen. CDP in real time verstrekt metrische kaarten door uw ervaring. Deze metriek informeren u over de gegevens, het profiel, en het segmentpubliek in het systeem.
 
