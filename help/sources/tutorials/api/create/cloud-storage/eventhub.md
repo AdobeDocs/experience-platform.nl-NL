@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform te verbinden met een Azure Event Hubs-account.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 967585ba078edd13f90c820f6b1a0490140ca0cf
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '553'
 ht-degree: 1%
 
 ---
@@ -54,17 +54,17 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
-- Autorisatie: Drager `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DNL Flow Service]sandboxen behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
-- Inhoudstype: `application/json`
+- `Content-Type: application/json`
 
 ## Verbinding maken
 
@@ -124,4 +124,4 @@ Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, in
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een [!DNL Azure Event Hubs] verbinding gemaakt met behulp van API&#39;s en is een unieke id verkregen als onderdeel van de hoofdtekst van de reactie. U kunt deze verbindings-id gebruiken om cloudopslag te [verkennen met behulp van de Flow Service API](../../explore/cloud-storage.md).
+Door deze zelfstudie te volgen, hebt u een [!DNL Azure Event Hubs] verbinding gemaakt met behulp van API&#39;s en is een unieke id verkregen als onderdeel van de hoofdtekst van de reactie. U kunt deze verbinding-id gebruiken om streaminggegevens te [verzamelen met behulp van de Flow Service API](../../collect/streaming.md).
