@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 translation-type: tm+mt
-source-git-commit: 89a807c0adbc3c9e4396adbb96764453034c8ea3
+source-git-commit: 39e419b78938afd91e3d7471241e377f352214ee
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 0%
       - [Apache Hive op Azure HDInsights-connector](connectors/databases/hive.md)
       - [Apache Spark op Azure HDInsights-connector](connectors/databases/spark.md)
       - [Azure Data Explorer-connector](connectors/databases/data-explorer.md)
-      - [Azure Synapse Analytics-connector](connectors/databases/synapse-analytics.md)
+      - [azure synapse Analytics-connector](connectors/databases/synapse-analytics.md)
       - [Azure Table Storage-connector](connectors/databases/ats.md)
       - [Koppelaansluiting](connectors/databases/couchbase.md)
       - [Google BigQuery-connector](connectors/databases/bigquery.md)
@@ -96,7 +96,7 @@ ht-degree: 0%
          - [Apache Hive op Azure HDInsights-connector](tutorials/api/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights-connector](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorer-connector](tutorials/api/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics-connector](tutorials/api/create/databases/synapse-analytics.md)
+         - [azure synapse Analytics-connector](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage-connector](tutorials/api/create/databases/ats.md)
          - [Koppelaansluiting](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery-connector](tutorials/api/create/databases/bigquery.md)
@@ -136,6 +136,7 @@ ht-degree: 0%
       - [Gegevens over marketingautomatisering verzamelen](tutorials/api/collect/marketing-automation.md)
       - [Betalingsgegevens verzamelen](tutorials/api/collect/payments.md)
       - [protocolgegevens verzamelen](tutorials/api/collect/protocols.md)
+      - [Streaming gegevens verzamelen](tutorials/api/collect/streaming.md)
    - [Parketgegevens uit een cloudopslagsysteem van een andere fabrikant verzamelen](tutorials/api/cloud-storage-parquet.md)
    - [Creeer een verbinding van de datasetbasis gebruikend de Dienst API van de Stroom](tutorials/api/create-dataset-base-connection.md)
    - [Dataflows gebruiken met de Flow Service API](tutorials/api/monitor.md)
@@ -172,7 +173,7 @@ ht-degree: 0%
          - [Apache Hive op Azure HDInsights-connector](tutorials/ui/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights-connector](tutorials/ui/create/databases/spark.md)
          - [Azure Data Explorer-connector](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics-connector](tutorials/ui/create/databases/synapse-analytics.md)
+         - [azure synapse Analytics-connector](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage-connector](tutorials/ui/create/databases/ats.md)
          - [Koppelaansluiting](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query-connector](tutorials/ui/create/databases/bigquery.md)
