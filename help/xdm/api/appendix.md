@@ -5,9 +5,9 @@ title: Aanhangsel voor ontwikkelaar van het schemaregister
 description: Dit document bevat aanvullende informatie over het werken met de API voor het registreren van het schema.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 42d3bed14c5f926892467baeeea09ee7a140ebdc
+source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,43 @@ ht-degree: 0%
 # Aanhangsel
 
 Dit document bevat aanvullende informatie over het werken met de [!DNL Schema Registry] API.
+
+## Query-parameters gebruiken {#query}
+
+De [!DNL Schema Registry] functie ondersteunt het gebruik van queryparameters voor pagina- en filterresultaten bij het weergeven van bronnen.
+
+>[!NOTE]
+>
+>Wanneer het combineren van veelvoudige vraagparameters, moeten zij door ampersands (`&`) worden gescheiden.
+
+### Paginering {#paging}
+
+De gemeenschappelijkste vraagparameters voor het pagineren omvatten:
+
+| Parameter | Beschrijving |
+| --- | --- |
+| `start` | Geef op waar de weergegeven resultaten moeten beginnen. Deze waarde kan uit het `_page.next` attribuut van een lijstreactie worden verkregen, en worden gebruikt om tot de volgende pagina van resultaten toegang te hebben. Als de `_page.next` waarde null is, is er geen extra pagina beschikbaar. |
+| `limit` | Beperk het aantal geretourneerde bronnen. Voorbeeld: `limit=5` zal een lijst van vijf middelen terugkeren. |
+| `orderby` | Resultaten sorteren op een bepaalde eigenschap. Voorbeeld: `orderby=title` sorteert de resultaten op titel in oplopende volgorde (A-Z). Als u een waarde toevoegt `-` vóór de parameterwaarde (`orderby=-title`), worden items op titel gesorteerd in aflopende volgorde (Z-A). |
+
+### Filteren {#filtering}
+
+U kunt resultaten filtreren door de `property` parameter te gebruiken, die wordt gebruikt om een specifieke exploitant op een bepaalde bezit JSON binnen de teruggewonnen middelen toe te passen. Tot de ondersteunde operatoren behoren:
+
+| Operator | Beschrijving | Voorbeeld |
+| --- | --- | --- |
+| `==` | Filtert op of de eigenschap gelijk is aan de opgegeven waarde. | `property=title==test` |
+| `!=` | Filtert op of de eigenschap niet gelijk is aan de opgegeven waarde. | `property=title!=test` |
+| `<` | Filtert op of de eigenschap kleiner is dan de opgegeven waarde. | `property=version<5` |
+| `>` | Filtert op of de eigenschap groter is dan de opgegeven waarde. | `property=version>5` |
+| `<=` | Filtert op of de eigenschap kleiner dan of gelijk is aan de opgegeven waarde. | `property=version<=5` |
+| `>=` | Filtert op of de eigenschap groter dan of gelijk is aan de opgegeven waarde. | `property=version>=5` |
+| `~` | Filtert op of de eigenschap overeenkomt met een opgegeven reguliere expressie. | `property=title~test$` |
+| (Geen) | Wanneer alleen de naam van de eigenschap wordt opgegeven, worden alleen items geretourneerd waar de eigenschap bestaat. | `property=title` |
+
+>[!TIP]
+>
+>U kunt de `property` parameter aan filtermengen door hun compatibele klasse gebruiken. Retourneert bijvoorbeeld alleen `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` mixins die compatibel zijn met de [!DNL XDM Individual Profile] klasse.
 
 ## Compatibiliteitsmodus
 
