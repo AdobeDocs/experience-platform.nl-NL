@@ -5,9 +5,9 @@ title: De gids van de het oplossen van problemen van het Systeem van de Gegevens
 description: Dit document biedt antwoorden op veelgestelde vragen over het Systeem van de Gegevens van de Ervaring (XDM), evenals een het oplossen van problemengids voor gemeenschappelijke fouten.
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: e87fcd9f028bc6dedaec0435c4eef54e6aecae2d
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1831'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Dit document biedt antwoorden op veelgestelde vragen over [!DNL Experience Data Model] (XDM) System en een gids voor probleemoplossing voor algemene fouten. Raadpleeg de handleiding voor het oplossen van problemen met [Experience Platforms voor vragen en het oplossen van problemen met betrekking tot andere services in Adobe Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model](XDM)** is een open-bronspecificatie die gestandaardiseerde schema&#39;s voor het beheer van de klantenervaring bepaalt. De methodologie waarop [!DNL Experience Platform] wordt gebouwd, **Systeem** XDM, exploiteert [!DNL Experience Data Model] schema&#39;s voor gebruik door de [!DNL Platform] diensten. De **[!DNL Schema Registry]** toepassing biedt een gebruikersinterface en een RESTful-API voor toegang tot de **[!DNL Schema Library]** binnenste API [!DNL Experience Platform]. Zie de [XDM documentatie](home.md) voor meer informatie.
+**[!DNL Experience Data Model](XDM)** is een open-bronspecificatie die gestandaardiseerde schema&#39;s voor het beheer van de klantenervaring bepaalt. De methodologie waarop [!DNL Experience Platform] wordt gebouwd, **Systeem** XDM, exploiteert [!DNL Experience Data Model] schema&#39;s voor gebruik door de [!DNL Platform] diensten. De **[!DNL Schema Registry]** toepassing biedt een gebruikersinterface en een RESTful-API voor toegang tot de **[!DNL Schema Library]** binnenste API [!DNL Experience Platform]. See the [XDM documentation](home.md) for more information.
 
 ## Veelgestelde vragen
 
@@ -27,7 +27,7 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over XDM System 
 
 U kunt velden aan een schema toevoegen met behulp van een mix. Elke mix is compatibel met een of meer klassen, waardoor de mix kan worden gebruikt in elk schema dat een van die compatibele klassen implementeert. Hoewel Adobe Experience Platform verschillende industriemengsels van hun eigen vooraf gedefinieerde velden voorziet, kunt u uw eigen velden aan een schema toevoegen door nieuwe combinaties te maken met behulp van de API of de gebruikersinterface.
 
-Zie voor meer informatie over het maken van nieuwe combinaties in de API de handleiding voor [het maken van een mixindocument](api/create-mixin.md) in de [!DNL Schema Registry] API-ontwikkelaar. Als u UI gebruikt, zie het [leerprogramma](./tutorials/create-schema-ui.md)van de Redacteur van het Schema.
+Voor details bij het creëren van nieuwe mengen in [!DNL Schema Registry] API, zie de [mengpuntgids](api/mixins.md#create). Als u UI gebruikt, zie het [leerprogramma](./tutorials/create-schema-ui.md)van de Redacteur van het Schema.
 
 ### Wat zijn de beste toepassingen voor mixins versus gegevenstypes?
 
@@ -39,21 +39,21 @@ Zie voor meer informatie over het maken van nieuwe combinaties in de API de hand
 
 Alle [!DNL Schema Registry] middelen (schema&#39;s, mixins, gegevenstypes, klassen) hebben URI die als unieke identiteitskaart voor verwijzing en raadplegingsdoeleinden dienst doet. Wanneer u een schema in de API weergeeft, vindt u dit in de kenmerken op hoofdniveau `$id` en `meta:altId` kenmerken.
 
-Zie de sectie [Schema-identificatie](api/getting-started.md#schema-identification) in de [!DNL Schema Registry] API-ontwikkelaarsgids voor meer informatie.
+Zie de sectie [resource identification](api/getting-started.md#resource-identification) in de [!DNL Schema Registry] API developer guide voor meer informatie.
 
 ### Wanneer begint een schema het breken van veranderingen te verhinderen?
 
-Er kunnen verbreken wijzigingen in een schema worden aangebracht zolang het schema nog nooit is gebruikt bij het maken van een gegevensset of is ingeschakeld voor gebruik in [[!DNL Real-time klantprofiel]](../profile/home.md). Zodra een schema in datasetverwezenlijking of toegelaten voor gebruik met is gebruikt, worden de regels van de Evolutie [!DNL Real-time Customer Profile]van het [](schema/composition.md#evolution) Schema strikt gehandhaafd door het systeem.
+De brekende veranderingen kunnen in een schema worden aangebracht zolang het nooit in de verwezenlijking van een dataset of toegelaten voor gebruik binnen is gebruikt [[!DNL Real-time Customer Profile]](../profile/home.md). Zodra een schema in datasetverwezenlijking of toegelaten voor gebruik met is gebruikt, worden de regels van de Evolutie [!DNL Real-time Customer Profile]van het [](schema/composition.md#evolution) Schema strikt gehandhaafd door het systeem.
 
 ### Wat is de maximumgrootte van een lang gebiedstype?
 
 Een lang veldtype is een geheel getal met een maximale grootte van 53(+1) bits, waardoor het een mogelijk bereik heeft tussen -9007199254740992 en 9007199254740992. Dit komt door een beperking van de manier waarop JavaScript-implementaties van JSON lange gehele getallen vertegenwoordigen.
 
-Zie de sectie [XDM-veldtypen](api/appendix.md#field-types) definiëren in de handleiding voor ontwikkelaars van de [!DNL Schema Registry] API voor meer informatie over veldtypen.
+Voor meer informatie over gebiedstypes, zie het document over [XDM gebiedstype beperkingen](./schema/field-constraints.md).
 
 ### Hoe definieer ik identiteiten voor mijn schema?
 
-In [!DNL Experience Platform]dat geval worden identiteiten gebruikt om een onderwerp (doorgaans een individuele persoon) te identificeren, ongeacht de bronnen van gegevens die worden geïnterpreteerd. Ze worden in schema&#39;s gedefinieerd door de sleutelvelden als &quot;Identiteit&quot; te markeren. Veelgebruikte velden voor identiteiten zijn e-mailadres, telefoonnummer, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html), CRM-id en andere unieke id-velden.
+In [!DNL Experience Platform]dat geval worden identiteiten gebruikt om een onderwerp (doorgaans een individuele persoon) te identificeren, ongeacht de bronnen van gegevens die worden geïnterpreteerd. Ze worden in schema&#39;s gedefinieerd door de sleutelvelden als &quot;Identiteit&quot; te markeren. Veelgebruikte velden voor identiteiten zijn e-mailadres, telefoonnummer, CRM-id [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html)en andere unieke id-velden.
 
 Velden kunnen als id&#39;s worden gemarkeerd met de API of de gebruikersinterface.
 
@@ -77,7 +77,7 @@ Primaire id&#39;s zijn optioneel omdat schema&#39;s er 0 of 1 kunnen hebben. Noc
 
 ### Hoe laat ik een schema voor gebruik binnen toe [!DNL Real-time Customer Profile]?
 
-De schema&#39;s worden toegelaten voor gebruik in [[!DNL Real-time het Profiel van de Klant]](../profile/home.md) door de toevoeging van een &quot;unie&quot;markering, die in de `meta:immutableTags` attributen van het schema wordt gevestigd. Het toelaten van een schema voor gebruik met [!DNL Profile] kan worden gedaan gebruikend API of de gebruikersinterface.
+De schema&#39;s worden toegelaten voor gebruik binnen [[!DNL Real-time Customer Profile]](../profile/home.md) door de toevoeging van een &quot;unie&quot;markering, die in de `meta:immutableTags` attributen van het schema wordt gevestigd. Het toelaten van een schema voor gebruik met [!DNL Profile] kan worden gedaan gebruikend API of de gebruikersinterface.
 
 #### Een bestaand schema inschakelen voor het [!DNL Profile] gebruik van de API
 
@@ -120,7 +120,7 @@ Hieronder volgt een lijst met foutberichten die kunnen optreden wanneer u met de
 
 Deze fout wordt weergegeven wanneer het systeem een bepaalde bron niet kan vinden. De bron kan zijn verwijderd of het pad in de API-aanroep is ongeldig. Controleer of u een geldig pad voor uw API-aanroep hebt ingevoerd voordat u het opnieuw probeert. U kunt willen controleren dat u correcte identiteitskaart voor het middel bent ingegaan, en dat de weg behoorlijk namespaced met de aangewezen container (globaal of huurder) is.
 
-Zie de secties over [container](./api/getting-started.md#container) - en [schemaidentificatie](api/getting-started.md#schema-identification) in de handleiding voor [!DNL Schema Registry] ontwikkelaars voor meer informatie over het samenstellen van opzoekpaden in de API.
+Zie de secties [container](./api/getting-started.md#container) en [resource identification](api/getting-started.md#resource-identification) in de handleiding voor [!DNL Schema Registry] ontwikkelaars voor meer informatie over het samenstellen van opzoekpaden in de API.
 
 ### Titel moet uniek zijn
 
@@ -149,7 +149,7 @@ Dit foutbericht wordt weergegeven wanneer u een bron probeert te maken met een t
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer u een nieuwe mix probeert te maken met velden met een onjuiste naam. Mixins die door uw IMS-organisatie zijn gedefinieerd, moeten hun velden naamruimte geven met een naamruimte `TENANT_ID` om conflicten met andere bronnen in de branche en de leverancier te voorkomen. Gedetailleerde voorbeelden van juiste gegevensstructuren voor mixins vindt u in het document over het [maken van een mixinsectie](api/create-mixin.md) in de [!DNL Schema Registry] API-ontwikkelaarsgids.
+Dit foutbericht wordt weergegeven wanneer u een nieuwe mix probeert te maken met velden met een onjuiste naam. Mixins die door uw IMS-organisatie zijn gedefinieerd, moeten hun velden naamruimte geven met een naamruimte `TENANT_ID` om conflicten met andere bronnen in de branche en de leverancier te voorkomen. Gedetailleerde voorbeelden van juiste gegevensstructuren voor mengsels zijn te vinden in de gids [van het](./api/mixins.md#create)mixineindpunt.
 
 
 ### [!DNL Real-time Customer Profile] fouten
