@@ -5,10 +5,10 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding gegevensmodel (XDM)
 user-guide-description: Gebruik XDM-klassen (Experience Data Model) en -mixen om ervaringsgegevens te standaardiseren.
 translation-type: tm+mt
-source-git-commit: 0a5b6bab6a0a11a572a4cd5de95b33f8d61d34bc
+source-git-commit: 321dc16a1296aeb28ba78825f191a0368df16547
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 2%
+source-wordcount: '181'
+ht-degree: 4%
 
 ---
 
@@ -56,18 +56,14 @@ ht-degree: 2%
    * [POI-interactie](./data-types/poi-interaction.md)
    * [Postadres](./data-types/postal-address.md)
 * Schema-register-API {#api}
+   * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
-   * [Bronnen weergeven](api/list-resources.md)
-   * [Een resource opzoeken](api/look-up-resource.md)
-   * [Een bron bijwerken](api/update-resource.md)
-   * [Een bron vervangen](api/replace-resource.md)
-   * [Een bron verwijderen](api/delete-resource.md)
-   * [Een klasse maken](api/create-class.md)
-   * [Een mix maken](api/create-mixin.md)
-   * [Een gegevenstype maken](api/create-data-type.md)
-   * [Een schema maken](api/create-schema.md)
-   * [Unies](api/unions.md)
+   * [Schemas](api/schemas.md)
+   * [Klassen](api/classes.md)
+   * [Mixins](api/mixins.md)
+   * [Datatypen](api/data-types.md)
    * [Beschrijvers](api/descriptors.md)
+   * [Unies](api/unions.md)
    * [Ad-hocregelingen](api/ad-hoc.md)
    * [Aanhangsel](api/appendix.md)
 * Tutorials {#tutorials}
