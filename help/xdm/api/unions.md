@@ -2,125 +2,44 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
 solution: Experience Platform
 title: Unies
-description: De verenigingen (of verenigingsmeningen) zijn systeem-geproduceerde, read-only schema's die de gebieden van alle schema's samenvoegen die de zelfde klasse (XDM ExperienceEvent of Individueel Profiel XDM) delen en voor het Profiel van de Klant in real time worden toegelaten.
+description: Het /union eindpunt in de Registratie API van het Schema staat u toe om XDM vakingsschema's in uw ervaringstoepassing programmatically te beheren.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '877'
 ht-degree: 0%
 
 ---
 
 
-# Unies
+# Uniepunten
 
-Unions (of samenvoegweergaven) zijn door het systeem gegenereerde, alleen-lezen schema&#39;s die de velden samenvoegen van alle schema&#39;s die dezelfde klasse ([!DNL XDM ExperienceEvent] of [!DNL XDM Individual Profile]) delen en die zijn ingeschakeld voor [[!DNL Real-time klantprofiel]](../../profile/home.md).
+De unions (of verenigingsmeningen) zijn systeem-geproduceerde, read-only schema&#39;s die de gebieden van alle schema&#39;s samenvoegen die de zelfde klasse ([!DNL XDM ExperienceEvent] of [!DNL XDM Individual Profile]) delen en toegelaten voor [[!DNL Real-time Customer Profile]](../../profile/home.md).
 
 Dit document behandelt essentiële concepten voor het werken met vakbonden in de API van de Registratie van het Schema, met inbegrip van steekproefvraag voor diverse verrichtingen. Voor meer algemene informatie over unies in XDM, zie de sectie over unies in de [grondbeginselen van schemacompositie](../schema/composition.md#union).
 
-## Uniemengsels
+## Unieschemavelden
 
-Het [!DNL Schema Registry] omvat automatisch drie mengen binnen het verenigingsschema: `identityMap`, `timeSeriesEvents`en `segmentMembership`.
+Het omvat [!DNL Schema Registry] automatisch drie zeer belangrijke gebieden binnen een verenigingsschema: `identityMap`, `timeSeriesEvents`en `segmentMembership`.
 
 ### Identiteitskaart
 
-Een verenigingsschema `identityMap` is een vertegenwoordiging van de bekende identiteiten binnen de bijbehorende verslagschema&#39;s van de unie. In het identiteitsoverzicht worden identiteiten gescheiden in verschillende arrays die door naamruimte worden gebruikt. Elke vermelde identiteit is zelf een object dat een unieke `id` waarde bevat.
-
-Raadpleeg de documentatie [bij](../../identity-service/home.md) Identiteitsservice voor meer informatie.
+Een verenigingsschema `identityMap` is een vertegenwoordiging van de bekende identiteiten binnen de bijbehorende verslagschema&#39;s van de unie. In het identiteitsoverzicht worden identiteiten gescheiden in verschillende arrays die door naamruimte worden gebruikt. Elke vermelde identiteit is zelf een object dat een unieke `id` waarde bevat. Raadpleeg de documentatie [bij](../../identity-service/home.md) Identiteitsservice voor meer informatie.
 
 ### Gebeurtenissen uit de tijdreeks
 
-De `timeSeriesEvents` array is een lijst met tijdreeksgebeurtenissen die betrekking hebben op de recordschema&#39;s die aan de union zijn gekoppeld. Wanneer [!DNL Profile] gegevens naar datasets worden geëxporteerd, wordt deze array opgenomen voor elke record. Dit is handig voor verschillende gebruiksgevallen, zoals het leren van machines waarbij modellen naast de recordkenmerken ook de gehele gedragsgeschiedenis van een profiel nodig hebben.
+De `timeSeriesEvents` array is een lijst met tijdreeksgebeurtenissen die betrekking hebben op de recordschema&#39;s die aan de union zijn gekoppeld. Wanneer profielgegevens naar datasets worden geëxporteerd, wordt deze array opgenomen voor elke record. Dit is handig voor verschillende gebruiksgevallen, zoals het leren van machines waarbij modellen naast de recordkenmerken ook de gehele gedragsgeschiedenis van een profiel nodig hebben.
 
 ### Segmentlidmaatschapstoewijzing
 
-De `segmentMembership` kaart slaat de resultaten van segmentevaluaties op. Wanneer segmenttaken met succes worden uitgevoerd met de [segmentatie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), wordt de kaart bijgewerkt. `segmentMembership` slaat ook om het even welke vooraf beoordeelde publiekssegmenten op die in Platform worden opgenomen, die voor integratie met andere oplossingen zoals Adobe Audience Manager toestaan.
+De `segmentMembership` kaart slaat de resultaten van segmentevaluaties op. Wanneer segmenttaken met succes worden uitgevoerd met de [segmentatie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), wordt de kaart bijgewerkt. `segmentMembership` slaat ook om het even welke vooraf beoordeelde publiekssegmenten op die in Platform worden opgenomen, die voor integratie met andere oplossingen zoals Adobe Audience Manager toestaan. Zie de zelfstudie over het [maken van segmenten met behulp van API&#39;s](../../segmentation/tutorials/create-a-segment.md) voor meer informatie.
 
-Zie de zelfstudie over het [maken van segmenten met behulp van API&#39;s](../../segmentation/tutorials/create-a-segment.md) voor meer informatie.
+## Een lijst met vakbonden ophalen {#list}
 
-## Een schema voor samenvoeging inschakelen
+Wanneer u de `union` markering op een schema plaatst, voegt het schema [!DNL Schema Registry] automatisch aan de unie voor de klasse toe waarop het schema wordt gebaseerd. Als er voor de betreffende klasse geen vakbond bestaat, wordt automatisch een nieuwe vakbond gemaakt. De `$id` voor de Unie is vergelijkbaar met de standaard `$id` van andere [!DNL Schema Registry] middelen, met het enige verschil dat wordt toegevoegd door twee onderstrepingen en het woord &quot;unie&quot; (`__union`).
 
-Om een schema in de samengevoegde verenigingsmening te omvatten, moet de markering &quot;union&quot;aan de `meta:immutableTags` attributen van het schema worden toegevoegd. Dit wordt gedaan door een verzoek van PATCH om het schema bij te werken en de `meta:immutableTags` serie met een waarde van &quot;unie&quot;toe te voegen.
-
->[!NOTE]
->
->Onveranderbare tags zijn tags die zijn bedoeld om te worden ingesteld, maar die nooit worden verwijderd.
-
-**API-indeling**
-
-```http
-PATCH /tenant/schemas/{SCHEMA_ID}
-```
-
-| Parameter | Beschrijving |
-| --- | --- |
-| `{SCHEMA_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` het schema dat u wilt inschakelen voor gebruik in [!DNL Profile]. |
-
-**Verzoek**
-
-```SHELL
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '[
-        { "op": "add", "path": "/meta:immutableTags", "value": ["union"]}
-      ]'
-```
-
-**Antwoord**
-
-Een succesvol antwoord retourneert de details van het bijgewerkte schema, dat nu een `meta:immutableTags` array bevat met de tekenreekswaarde &quot;union&quot;.
-
-```JSON
-{
-    "title": "Property Information",
-    "description": "Property-related information.",
-    "type": "object",
-    "allOf": [
-        {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
-        },
-        {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
-        }
-    ],
-    "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
-    "meta:abstract": false,
-    "meta:extensible": false,
-    "meta:extends": [
-        "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
-        "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
-    ],
-    "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
-    "meta:immutableTags": [
-        "union"
-    ],
-    "meta:altId": "_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67",
-    "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/d5cc04eb8d50190001287e4c869ebe67",
-    "version": "1.2",
-    "meta:resourceType": "schemas",
-    "meta:registryMetadata": {
-        "repo:createDate": 1552088461236,
-        "repo:lastModifiedDate": 1552091263267,
-        "xdm:createdClientId": "{CREATED_CLIENT}",
-        "xdm:repositoryCreatedBy": "{CREATED_BY}"
-    }
-}
-```
-
-## Lijstverenigingen
-
-Wanneer u de tag union instelt op een schema, wordt automatisch een samenvoeging gemaakt en onderhouden voor de klasse waarop het schema is gebaseerd. [!DNL Schema Registry] De `$id` voor de Unie is vergelijkbaar met de standaard `$id` van een klasse, met als enige verschil dat twee onderstrepingen en het woord &quot;union&quot; (`"__union"`) worden toegevoegd.
-
-Om een lijst van beschikbare unies te bekijken, kunt u een verzoek van de GET aan het `/unions` eindpunt uitvoeren.
+U kunt een lijst van beschikbare unies bekijken door GET verzoek aan het `/tenant/unions` eindpunt te richten.
 
 **API-indeling**
 
@@ -140,9 +59,16 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
+De antwoordindeling is afhankelijk van de `Accept` header die in de aanvraag wordt verzonden. De volgende `Accept` kopteksten zijn beschikbaar voor samenvoegingen:
+
+| `Accept` header | Beschrijving |
+| --- | --- |
+| `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
+| `application/vnd.adobe.xed+json` | Retourneert de volledige JSON-klasse voor elke bron, met origineel `$ref` en `allOf` ingesloten. (Limiet: 300) |
+
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 200 (OK) en een `results` array in de hoofdtekst van de reactie. Als er samenvoegingen zijn gedefinieerd, worden de elementen `title`, `$id`, `meta:altId`en `version` voor elke samenvoeging als objecten in de array opgegeven. Als er geen samenvoegingen zijn gedefinieerd, wordt HTTP status 200 (OK) nog steeds geretourneerd, maar is de `results` array leeg.
+Een geslaagde reactie retourneert HTTP-status 200 (OK) en een `results` array in de hoofdtekst van de reactie. Als vakbonden zijn gedefinieerd, worden de gegevens voor elke samenvoeging als objecten in de array gegeven. Als er geen samenvoegingen zijn gedefinieerd, wordt HTTP status 200 (OK) nog steeds geretourneerd, maar is de `results` array leeg.
 
 ```JSON
 {
@@ -163,7 +89,7 @@ Een geslaagde reactie retourneert HTTP-status 200 (OK) en een `results` array in
 }
 ```
 
-## Een specifieke unie opzoeken
+## Vereniging opzoeken {#lookup}
 
 U kunt een specifieke samenvoeging bekijken door een verzoek van de GET uit te voeren die `$id` en, afhankelijk van de Accept- kopbal, sommige of alle details van de unie omvat.
 
@@ -248,11 +174,13 @@ De responsindeling is afhankelijk van de Accept-header die in de aanvraag wordt 
 }
 ```
 
-## Schema&#39;s weergeven in een union
+## Een schema voor samenvoeging inschakelen {#enable}
 
-Om te zien welke schema&#39;s deel van een specifieke unie uitmaken, kunt u een verzoek uitvoeren van de GET gebruikend vraagparameters om de schema&#39;s binnen de huurderscontainer te filtreren.
+Om een schema in de unie voor zijn klasse te omvatten, moet een markering aan de `union` `meta:immutableTags` attributen van het schema worden toegevoegd. U kunt dit bereiken door een PATCH-verzoek in te dienen om een `meta:immutableTags` array met één tekenreekswaarde aan het desbetreffende schema toe `union` te voegen. Zie de gids [van het](./schemas.md#union) schemaeindpunt voor een gedetailleerd voorbeeld.
 
-Gebruikend de `property` vraagparameter, kunt u de reactie vormen op slechts terugkeerschema&#39;s die een `meta:immutableTags` gebied en een `meta:class` gelijke aan de klasse bevatten waarvan unie u toegang hebt tot.
+## Schema&#39;s weergeven in een union {#list-schemas}
+
+Om te zien welke schema&#39;s deel van een specifieke unie uitmaken, kunt u een verzoek van de GET aan het `/tenant/schemas` eindpunt uitvoeren. Gebruikend de `property` vraagparameter, kunt u de reactie vormen op slechts terugkeerschema&#39;s die een `meta:immutableTags` gebied en een `meta:class` gelijke aan de klasse bevatten waarvan unie u toegang hebt tot.
 
 **API-indeling**
 
@@ -262,11 +190,11 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CLASS_ID}` | De `$id` klasse waartoe u toegang wilt hebben. |
+| `{CLASS_ID}` | De `$id` klasse waarvan de unie-Toegelaten schema&#39;s wilt een lijst maken. |
 
 **Verzoek**
 
-Het volgende verzoek kijkt omhoog alle schema&#39;s die deel van de [!DNL XDM Individual Profile] klassenunie uitmaken.
+Het volgende verzoek wint een lijst van alle schema&#39;s terug die deel van de unie voor de [!DNL XDM Individual Profile] klasse uitmaken.
 
 ```SHELL
 curl -X GET \
@@ -278,9 +206,16 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
+De antwoordindeling is afhankelijk van de `Accept` header die in de aanvraag wordt verzonden. De volgende `Accept` kopteksten zijn beschikbaar voor aanbiedingsschema&#39;s:
+
+| `Accept` header | Beschrijving |
+| --- | --- |
+| `application/vnd.adobe.xed-id+json` | Retourneert een korte samenvatting van elke bron. Dit is de aanbevolen koptekst voor aanbiedingsbronnen. (Limiet: 300) |
+| `application/vnd.adobe.xed+json` | Retourneert het volledige JSON-schema voor elke bron, met origineel `$ref` en `allOf` ingesloten. (Limiet: 300) |
+
 **Antwoord**
 
-Een succesvolle reactie keert een gefilterde lijst van schema&#39;s terug, die slechts die bevatten die aan beide vereisten voldoen. Herinner dat wanneer het gebruiken van veelvoudige vraagparameters, EN verhouding wordt verondersteld. De indeling van de reactie is afhankelijk van de header Accepteren die in de aanvraag wordt verzonden.
+Een succesvolle reactie keert een gefilterde lijst van schema&#39;s terug, die slechts die bevatten die tot de gespecificeerde klasse behoren die voor vakbondslidmaatschap zijn toegelaten. Herinner dat wanneer het gebruiken van veelvoudige vraagparameters, EN verhouding wordt verondersteld.
 
 ```JSON
 {
