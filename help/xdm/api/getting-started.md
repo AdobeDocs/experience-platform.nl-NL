@@ -1,66 +1,62 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
 solution: Experience Platform
-title: Handleiding voor ontwikkelaars van de API voor schemaregister
-description: Het schemaregister wordt gebruikt om tot de Bibliotheek van het Schema binnen Adobe Experience Platform toegang te hebben, die een gebruikersinterface en RESTful API verstrekken waarvan alle beschikbare bibliotheekmiddelen toegankelijk zijn. Met behulp van de API voor schemaregistratie kunt u standaard CRUD-bewerkingen uitvoeren om alle schema's en gerelateerde bronnen die binnen Adobe Experience Platform voor u beschikbaar zijn, weer te geven en te beheren.
+title: Aan de slag met de API voor het schemaregister
+description: Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan de Registratie API van het Schema te maken.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: b79482635d87efd5b79cf4df781fc0a3a6eb1b56
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Schema Registry] Handleiding voor API-ontwikkelaars
+# Getting started with the [!DNL Schema Registry] API
 
-Het [!DNL Schema Registry] wordt gebruikt om toegang te krijgen tot de Schemabibliotheek in Adobe Experience Platform, waarbij een gebruikersinterface en de RESTful-API worden opgegeven die toegang bieden tot alle beschikbare bibliotheekbronnen.
-
-Met behulp van de API voor schemaregistratie kunt u standaard CRUD-bewerkingen uitvoeren om alle schema&#39;s en gerelateerde bronnen die binnen Adobe Experience Platform voor u beschikbaar zijn, weer te geven en te beheren. Dit omvat die door Adobe, [!DNL Experience Platform] partners, en verkopers worden bepaald waarvan toepassingen u gebruikt. U kunt ook API-aanroepen gebruiken om nieuwe schema&#39;s en bronnen voor uw organisatie te maken, en bronnen die u al hebt gedefinieerd, weer te geven en te bewerken.
-
-Deze handleiding voor ontwikkelaars bevat stappen waarmee u de [!DNL Schema Registry] API kunt gaan gebruiken. De gids verstrekt dan steekproefAPI vraag voor het uitvoeren van zeer belangrijke verrichtingen gebruikend de [!DNL Schema Registry].
+Met de [!DNL Schema Registry] API kunt u verschillende XDM-bronnen (Experience Data Model) maken en beheren. Dit document biedt een inleiding tot de kernconcepten u moet kennen alvorens te proberen om vraag aan [!DNL Schema Registry] API te maken.
 
 ## Vereisten
 
-Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
+Voor het gebruik van de handleiding voor ontwikkelaars is een goed begrip van de volgende onderdelen van Adobe Experience Platform vereist:
 
-* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM.
-* [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [[!DNL-sandboxen]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan [!DNL Schema Registry] API te maken.
+XDM gebruikt het formatteren van het Schema JSON om de structuur van ingebedde gegevens van de klantenervaring te beschrijven en te bevestigen. Daarom wordt u ten zeerste aangeraden de [officiële JSON-schemadocumentatie](https://json-schema.org/) te herzien voor een beter inzicht in deze onderliggende technologie.
 
 ## API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+De API-documentatie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. [!DNL Schema Registry] Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ## Waarden verzamelen voor vereiste koppen
 
 Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
 
-* Autorisatie: Drager `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DNL Schema Registry]sandboxen behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
+>Raadpleeg de documentatie bij de [!DNL Platform]sandbox voor meer informatie over de sandboxen in [de](../../sandboxes/home.md)sandbox.
 
-Alle opzoekverzoeken (GET) aan de gebruiker [!DNL Schema Registry] vereisen een extra Accept-header, waarvan de waarde de indeling van de informatie bepaalt die door de API wordt geretourneerd. Zie de koptekstsectie [Accepteren](#accept) hieronder voor meer informatie.
+Alle opzoekverzoeken (GET) aan de gebruiker [!DNL Schema Registry] vereisen een extra `Accept` koptekst, waarvan de waarde de indeling van de informatie bepaalt die door de API wordt geretourneerd. Zie de koptekstsectie [Accepteren](#accept) hieronder voor meer informatie.
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
-* Inhoudstype: application/json
+* `Content-Type: application/json`
 
 ## Weet uw TENANT_ID {#know-your-tenant_id}
 
-In deze handleiding ziet u verwijzingen naar een `TENANT_ID`. Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich in uw IMS-organisatie bevinden. Als u uw id niet kent, kunt u deze openen door de volgende GET-aanvraag uit te voeren:
+In de API-hulplijnen worden verwijzingen naar een `TENANT_ID`voorbeeld weergegeven. Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich in uw IMS-organisatie bevinden. Als u uw id niet kent, kunt u deze openen door de volgende GET-aanvraag uit te voeren:
 
 **API-indeling**
 
@@ -158,17 +154,15 @@ Een succesvolle reactie keert informatie betreffende het gebruik van uw organisa
  }
 ```
 
-* `tenantId`: De `TENANT_ID` waarde voor uw IMS-organisatie.
-
 ## Begrijp het `CONTAINER_ID` {#container}
 
-Oproepen aan [!DNL Schema Registry] API vereisen het gebruik van een `CONTAINER_ID`. Er zijn twee containers waartegen API-aanroepen kunnen worden uitgevoerd: de globale container en de huurderscontainer.
+Oproepen aan [!DNL Schema Registry] API vereisen het gebruik van een `CONTAINER_ID`. Er zijn twee containers waartegen API-aanroepen kunnen worden uitgevoerd: de `global` container en de `tenant` container.
 
 ### Algemene container
 
-De globale container houdt alle standaard Adobe en [!DNL Experience Platform] partner verstrekte klassen, mixins, gegevenstypes, en schema&#39;s. U kunt lijst en raadplegings (GET) verzoeken tegen de globale container slechts uitvoeren.
+De `global` container houdt alle standaard Adobe en [!DNL Experience Platform] partner verstrekte klassen, mixins, gegevenstypes, en schema&#39;s. U kunt lijst en raadplegings (GET) verzoeken tegen de `global` container slechts uitvoeren.
 
-Een voorbeeld van een vraag die de globale container gebruikt zou als het volgende kijken:
+Een voorbeeld van een vraag die de `global` container gebruikt zou als het volgende kijken:
 
 ```http
 GET /global/classes
@@ -176,35 +170,38 @@ GET /global/classes
 
 ### Trekcontainer
 
-Om niet met uw uniek te worden verward `TENANT_ID`, houdt de huurderscontainer alle klassen, mixins, gegevenstypes, schema&#39;s, en beschrijvers die door een IMS Organisatie worden bepaald. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle verrichtingen CRUD (GET, POST, PUT, PATCH, DELETE) tegen middelen uitvoeren die u in de huurderscontainer creeert.
+Om niet met uw uniek te worden verward, houdt de `TENANT_ID``tenant` container alle klassen, mixins, gegevenstypes, schema&#39;s, en beschrijvers die door een organisatie IMS worden bepaald. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle CRUD verrichtingen (GET, POST, PUT, PATCH, DELETE) tegen middelen uitvoeren die u in de `tenant` container creeert.
 
-Een voorbeeld van een vraag die de huurderscontainer gebruikt zou als het volgende kijken:
+Een voorbeeld van een vraag die de `tenant` container gebruikt zou als het volgende kijken:
 
 ```http
 POST /tenant/mixins
 ```
 
-Wanneer u een klasse, een mixin, een schema of een gegevenstype in de huurderscontainer creeert, wordt het bewaard aan [!DNL Schema Registry] en toegewezen URI die uw `$id` `TENANT_ID`. omvat. Dit `$id` wordt in de gehele API gebruikt om naar specifieke bronnen te verwijzen. De voorbeelden van `$id` waarden worden verstrekt in de volgende sectie.
+Wanneer u een klasse, een combinatie, een schema of een gegevenstype in de `tenant` container creeert, wordt het bewaard aan [!DNL Schema Registry] en toegewezen `$id` URI die uw `TENANT_ID`. omvat. Dit `$id` wordt in de gehele API gebruikt om naar specifieke bronnen te verwijzen. De voorbeelden van `$id` waarden worden verstrekt in de volgende sectie.
 
-## Schema-identificatie {#schema-identification}
+## Bronidentificatie {#resource-identification}
 
-Schema&#39;s worden geïdentificeerd met een `$id` kenmerk in de vorm van een URI, zoals:
+XDM-bronnen worden aangeduid met een `$id` attribuut in de vorm van een URI, zoals de volgende voorbeelden:
+
 * `https://ns.adobe.com/xdm/context/profile`
 * `https://ns.adobe.com/{TENANT_ID}/schemas/7442343-abs2343-21232421`
 
 Om URI meer REST-vriendelijk te maken, hebben de schema&#39;s ook een punt-aantekening het coderen van URI in een genoemd bezit `meta:altId`:
+
 * `_xdm.context.profile`
 * `_{TENANT_ID}.schemas.7442343-abs2343-21232421`
 
-Oproepen aan de Registratie API van het Schema zullen of URL-Gecodeerde `$id` URI of het `meta:altId` (punt-aantekening formaat) steunen. De beste manier is om de URL-gecodeerde `$id` URI te gebruiken bij het maken van een REST-aanroep naar de API, zoals:
+Aanroepen naar de [!DNL Schema Registry] API ondersteunen de URL-gecodeerde `$id` URI of de `meta:altId` (puntnotatie). De beste manier is om de URL-gecodeerde `$id` URI te gebruiken bij het maken van een REST-aanroep naar de API, zoals:
+
 * `https%3A%2F%2Fns.adobe.com%2Fxdm%2Fcontext%2Fprofile`
 * `https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F7442343-abs2343-21232421`
 
 ## Koptekst accepteren {#accept}
 
-Bij het uitvoeren van lijst- en opzoekbewerkingen (GET) in de [!DNL Schema Registry] API is een header Accept vereist om de indeling van de gegevens te bepalen die door de API worden geretourneerd. Wanneer het omhoog zoeken van specifieke middelen, moet een versieaantal ook in de Accept kopbal worden omvat.
+Bij het uitvoeren van lijst- en opzoekbewerkingen (GET) in de [!DNL Schema Registry] API is een `Accept` header vereist om de indeling te bepalen van de gegevens die door de API worden geretourneerd. Wanneer u specifieke bronnen opzoekt, moet ook een versienummer in de `Accept` koptekst worden opgenomen.
 
-In de volgende tabel vindt u compatibele Accept-headerwaarden, inclusief waarden met versienummers, en een beschrijving van wat de API retourneert wanneer deze worden gebruikt.
+De volgende tabel bevat compatibele `Accept` koptekstwaarden, waaronder waarden met versienummers, en beschrijvingen van wat de API retourneert wanneer deze worden gebruikt.
 
 | Accepteren | Beschrijving |
 | ------- | ------------ |
@@ -218,7 +215,7 @@ In de volgende tabel vindt u compatibele Accept-headerwaarden, inclusief waarden
 
 >[!NOTE]
 >
->Indien alleen de `major` versie wordt geleverd (bv. 1, 2, 3), retourneert het register de laatste `minor` versie (bv. .1, .2, .3) automatisch.
+>Indien alleen de hoofdversie wordt geleverd (bv. 1, 2, 3), retourneert het register de laatste secundaire versie (bv. .1, .2, .3) automatisch.
 
 ## Beperkingen en aanbevolen procedures voor XDM-velden
 
@@ -248,11 +245,11 @@ In het volgende voorbeeldveld wordt een correct opgemaakt XDM-veld weergegeven m
 * Het veld vereist een `type`.
    * Voor het definiëren van bepaalde typen is mogelijk een optioneel type vereist `format`.
    * Wanneer een specifieke opmaak van gegevens vereist is, `examples` kan deze als een array worden toegevoegd.
-   * Het veldtype kan ook worden gedefinieerd aan de hand van elk gegevenstype in het register. Zie de sectie over het [maken van een gegevenstype](create-data-type.md) in deze handleiding voor meer informatie.
+   * Het veldtype kan ook worden gedefinieerd aan de hand van elk gegevenstype in het register. Zie de sectie over het [creëren van een gegevenstype](./data-types.md#create) in de gids van het gegevenstypeseindpunt voor meer informatie.
 * In dit hoofdstuk worden het veld en relevante informatie over veldgegevens `description` uitgelegd. Het zou in volledige zinnen met duidelijke taal moeten worden geschreven zodat iedereen die tot het schema toegang heeft de intentie van het gebied kan begrijpen.
 
-Zie de [bijlage](appendix.md) voor meer informatie over het definiëren van veldtypen in de API.
+Zie het document over [gebiedsbeperkingen](../schema/field-constraints.md) voor meer informatie over hoe te om verschillende gebiedstypes in API te bepalen.
 
 ## Volgende stappen
 
-Dit document bevatte de vereiste kennis die nodig was om oproepen te kunnen doen naar de [!DNL Schema Registry] API, inclusief de vereiste verificatiereferenties. U kunt nu aan de steekproefvraag verdergaan die in deze ontwikkelaarsgids wordt verstrekt en samen met hun instructies volgen. Voor een volledige geleidelijke analyse van hoe te om een schema in API te maken, gelieve te verwijzen naar het volgende [leerprogramma](../tutorials/create-schema-api.md).
+Om beginnen het maken vraag gebruikend [!DNL Schema Registry] API, selecteer één van de beschikbare eindpuntgidsen.
