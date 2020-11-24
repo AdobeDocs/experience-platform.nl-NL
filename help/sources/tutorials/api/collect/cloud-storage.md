@@ -6,17 +6,15 @@ topic: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: b0f6e51a784aec7850d92be93175c21c91654563
+source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1583'
 ht-degree: 0%
 
 ---
 
 
 # Gegevens voor cloudopslag verzamelen via bronconnectors en API&#39;s
-
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
 Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
@@ -62,13 +60,17 @@ Als u een bronverbinding wilt maken, moet u ook een opsommingswaarde voor het ke
 
 Gebruik de volgende enum waarden voor op dossier-gebaseerde schakelaars:
 
-| Data.format | Enumwaarde |
+| Gegevensindeling | Enumwaarde |
 | ----------- | ---------- |
-| Gescheiden bestanden | `delimited` |
-| JSON-bestanden | `json` |
-| Parketbestanden | `parquet` |
+| Gescheiden | `delimited` |
+| JSON | `json` |
+| Parquet | `parquet` |
 
-Voor alle op lijst-gebaseerde schakelaars gebruiken de enum waarde: `tabular`.
+Voor alle op lijst-gebaseerde schakelaars, plaats de waarde aan `tabular`.
+
+>[!NOTE]
+>
+>U kunt CSV- en TSV-bestanden opnemen met een bronaansluiting voor cloudopslag door een kolomscheidingsteken op te geven als een eigenschap. Elke waarde van één teken is een toegestaan kolomscheidingsteken. Indien niet opgegeven, `(,)` wordt een komma als standaardwaarde gebruikt.
 
 **API-indeling**
 
@@ -88,13 +90,14 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
-            "format": "delimited"
+            "format": "delimited",
+            "columnDelimiter": "\t"
         },
         "params": {
-            "path": "/demo/data7.csv",
+            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
             "connectionSpec": {
@@ -106,7 +109,9 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `baseConnectionId` | De unieke verbinding-id van het externe cloudopslagsysteem dat u benadert. |
+| `connectionId` | De unieke verbinding-id van het externe cloudopslagsysteem dat u benadert. |
+| `data.format` | Een opsommingswaarde die het kenmerk data format definieert. |
+| `data.columnDelimiter` | U kunt elk scheidingsteken voor kolommen van één teken gebruiken om platte bestanden te verzamelen. Deze eigenschap is alleen vereist bij het opnemen van CSV- of TSV-bestanden. |
 | `params.path` | Het pad van het bronbestand dat u opent. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan uw specifieke externe cloudopslagsysteem. Zie de [bijlage](#appendix) voor een lijst van verbindingsspecificaties - IDs. |
 
@@ -126,8 +131,6 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe bronverbindi
 Als u de brongegevens in wilt gebruiken, moet u een doelschema maken om de brongegevens te structureren op basis van uw behoeften. [!DNL Platform] Het doelschema wordt dan gebruikt om een [!DNL Platform] dataset tot stand te brengen waarin de brongegevens bevat zijn.
 
 Een doelXDM schema kan worden gecreeerd door een verzoek van de POST aan de Registratie API [van het](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schema uit te voeren.
-
-Als u de gebruikersinterface liever in wilt gebruiken, [!DNL Experience Platform]biedt de zelfstudie [van de](../../../../xdm/tutorials/create-schema-ui.md) Schema-editor stapsgewijze instructies voor het uitvoeren van vergelijkbare acties in de Schema-editor.
 
 **API-indeling**
 
@@ -279,9 +282,9 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de pas ge
 
 ## Een doelverbinding maken {#target-connection}
 
-Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Als u een doelverbinding wilt maken, moet u de vaste specificatie-id voor de verbinding opgeven die is gekoppeld aan het datumpeer. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Om een doelverbinding tot stand te brengen, moet u vaste identiteitskaart verstrekken van verbindingsspecificatie verbonden aan het meer van Gegevens. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-U hebt nu unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan gegevens meer. Gebruikend deze herkenningstekens, kunt u een doelverbinding tot stand brengen gebruikend API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten. [!DNL Flow Service]
+U hebt nu unieke herkenningstekens een doelschema een doeldataset en identiteitskaart van de verbindingsspecificatie aan het meer van Gegevens. Gebruikend deze herkenningstekens, kunt u een doelverbinding tot stand brengen gebruikend API om de dataset te specificeren die de binnenkomende brongegevens zal bevatten. [!DNL Flow Service]
 
 **API-indeling**
 
@@ -322,7 +325,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | Het `$id` doel-XDM-schema. |
 | `params.dataSetId` | De id van de doeldataset. |
-| `connectionSpec.id` | The fixed connection spec ID to data Lake. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | The fixed connection spec ID to the Data Lake. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwoord**
 
@@ -403,8 +406,8 @@ Een geslaagde reactie retourneert details van de nieuwe toewijzing, inclusief de
     "version": 0,
     "createdDate": 1597784069368,
     "modifiedDate": 1597784069368,
-    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
