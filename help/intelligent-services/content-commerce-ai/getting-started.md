@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
 solution: Experience Platform
-title: Aan de slag met Inhoud en Handel (AI)
+title: Aan de slag met Content and Commerce AI
 topic: Getting started
 description: De Inhoud en de Handel AI gebruikt Adobe I/O APIs. Om vraag aan Adobe I/O APIs en de Integratie I/O van de Console te maken, moet u het authentificatieleerprogramma eerst voltooien.
 translation-type: tm+mt
-source-git-commit: 9ee888b02b4a402200ca4fcaed4a59c0a7eb94cd
+source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
 
 
-# Aan de slag met [!DNL Content and Commerce AI]
+# Aan de slag met Content and Commerce AI
 
 >[!NOTE]
 >
@@ -75,4 +75,4 @@ Zodra u al uw referenties hebt, kunt u een aangepaste worker instellen voor [!DN
 
 Om meer over het Kader van de Rekbaarheid te leren, begin door de [inleiding aan rekbaarheiddocument](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html) te lezen. In dit document worden de voorwaarden en de inrichtingsvereisten beschreven.
 
-Voor meer informatie over het instellen van een omgeving voor [!DNL Content and Commerce AI], begint u met het lezen van de handleiding voor het [instellen van een ontwikkelomgeving](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html). Dit document bevat installatie-instructies waarmee u de Asset Compute Service kunt ontwikkelen.
+Voor meer informatie over het instellen van een omgeving voor [!DNL Content and Commerce AI], begint u met het lezen van de handleiding voor het [instellen van een ontwikkelomgeving](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html). Dit document bevat instellingsinstructies waarmee u de service Asset compute kunt ontwikkelen.
