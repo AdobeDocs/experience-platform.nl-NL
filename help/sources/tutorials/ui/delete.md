@@ -6,7 +6,7 @@ title: Gegevensstromen verwijderen
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: e327a3e195d97c0b547608f360c5b0b6a8aded61
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 0%
@@ -66,4 +66,4 @@ Na enkele ogenblikken verschijnt er een groen bevestigingsvak onder aan het sche
 
 Door deze zelfstudie te volgen, hebt u met succes de werkruimte **[!UICONTROL Bronnen]** gebruikt om bestaande gegevensstromen te schrappen.
 
-Raadpleeg de zelfstudie over het [!DNL Flow Service] verwijderen van verbindingen met de Flow Service API voor informatie over hoe u deze bewerkingen programmatisch kunt uitvoeren met de [API.](../../tutorials/api/delete.md)
+Voor stappen over hoe te om deze verrichtingen programmatically uit te voeren gebruikend [!DNL Flow Service] API, gelieve te verwijzen naar het leerprogramma over het [schrappen van gegevensstromen gebruikend de Dienst API van de Stroom](../../tutorials/api/delete-dataflows.md)
