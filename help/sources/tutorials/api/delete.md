@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; update connections
+keywords: Experience Platform;home;popular topics;flow service;delete connections;delete;api
 solution: Experience Platform
 title: Een verbinding verwijderen met de Flow Service API
 topic: overview
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het verwijderen van een verbinding met de Flow Service API.
 translation-type: tm+mt
-source-git-commit: 9c807270181084a94f288c248a678821ca58e194
+source-git-commit: 9e28591ef9f07217363cddf72356b8e5cd8a15a3
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen
 * [Bronnen](../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
 * [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om de verbindingsgegevens met de [!DNL Flow Service] API te kunnen bijwerken.
+De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met de [!DNL Flow Service] API te kunnen verwijderen.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -132,7 +132,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | De unieke `id` waarde voor de verbinding die u wilt bijwerken. |
+| `{CONNECTION_ID}` | De unieke `id` waarde voor de verbinding die u wilt verwijderen. |
 
 **Verzoek**
 
