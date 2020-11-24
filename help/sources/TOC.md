@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 translation-type: tm+mt
-source-git-commit: 39e419b78938afd91e3d7471241e377f352214ee
+source-git-commit: 68ed1ceb2f7410bd970fa43c5f0db11b1b8ea388
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
@@ -138,10 +138,11 @@ ht-degree: 0%
       - [protocolgegevens verzamelen](tutorials/api/collect/protocols.md)
       - [Streaming gegevens verzamelen](tutorials/api/collect/streaming.md)
    - [Parketgegevens uit een cloudopslagsysteem van een andere fabrikant verzamelen](tutorials/api/cloud-storage-parquet.md)
-   - [Creeer een verbinding van de datasetbasis gebruikend de Dienst API van de Stroom](tutorials/api/create-dataset-base-connection.md)
-   - [Dataflows gebruiken met de Flow Service API](tutorials/api/monitor.md)
-   - [Verbindingsgegevens bijwerken met de Flow Service API](tutorials/api/update.md)
-   - [Verbindingen verwijderen met de Flow Service API](tutorials/api/delete.md)
+   - [Een gegevenssetverbinding maken](tutorials/api/create-dataset-base-connection.md)
+   - [Dataflows bewaken](tutorials/api/monitor.md)
+   - [Verbindingen bijwerken](tutorials/api/update.md)
+   - [Verbindingen verwijderen](tutorials/api/delete.md)
+   - [Gegevensstromen verwijderen](tutorials/api/delete-dataflows.md)
 - UI-zelfstudies {#ui-tutorials}
    - Een bronaansluiting maken {#create}
       - Adobe-toepassingen {#adobe-applications}
