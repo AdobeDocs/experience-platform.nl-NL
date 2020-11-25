@@ -6,9 +6,9 @@ type: Tutorial
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 seo-description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 7903d6c715747dfc298a5e4a4615d8ecbbe5d359
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Als u in de stap **[!UICONTROL Verificatie]** eerder een verbinding met uw e-mai
 - Voor **SFTP met de verbindingen van het Wachtwoord** , moet u Domein, Haven, Gebruikersnaam, en Wachtwoord voor uw server van SFTP verstrekken.
 - Voor **SFTP met SSH Zeer belangrijke** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Sleutel SSH voor uw server van SFTP verstrekken.
 
-U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan geëxporteerde bestanden onder de sectie **[!UICONTROL Key]** . Merk op dat deze openbare sleutel **als Base64 gecodeerde koord moet** worden geschreven.
+Naar keuze, in de sectie van **[!UICONTROL de Encryptie PGP/GPG]** , kunt u uw RSA-Geformatteerde openbare sleutel vastmaken om encryptie met PGP/GPG aan uw uitgevoerde dossiers onder de **[!UICONTROL Zeer belangrijke]** sectie toe te voegen. Merk op dat deze openbare sleutel **als Base64 gecodeerde koord moet** worden geschreven.
 
 Voer in de stap **[!UICONTROL Setup]** een naam en beschrijving in voor uw nieuwe bestemming en voor de bestandsindeling voor de geëxporteerde bestanden.
 
