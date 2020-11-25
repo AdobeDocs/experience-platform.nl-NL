@@ -6,9 +6,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens u in het Platform van Gegevens van de Klant in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens u in het Platform van Gegevens van de Klant in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
+source-git-commit: 5928242537acdb1f130a0e8ac1bca3f14c184c6a
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1722'
 ht-degree: 0%
 
 ---
@@ -127,14 +127,6 @@ Op de **[!UICONTROL het programmapagina]** van het Segment, kunt u de begindatum
 >Voor sociale bestemmingen, moet u de oorsprong van uw publiek in deze stap selecteren. U kunt pas verdergaan met de volgende stap nadat u een van de opties in de onderstaande afbeelding hebt geselecteerd.
 
 ![oorsprong van gegevens kiezen](./assets/choose-data-origin.png)
-
-### **[!UICONTROL Stap plannen]** {#scheduling}
-
-Van toepassing op: e-mailmarketingdoelen en cloudopslagdoelen
-
-![stap voor segmentplanning](./assets/scheduling-icon.png)
-
-Op de **[!UICONTROL Plannende]** pagina, kunt u de begindatum zien voor het verzenden van gegevens naar de bestemming evenals de frequentie om gegevens naar de bestemming te verzenden. Deze waarden kunnen niet worden bewerkt.
 
 ### **[!UICONTROL stap Kenmerken]** selecteren {#select-attributes}
 
