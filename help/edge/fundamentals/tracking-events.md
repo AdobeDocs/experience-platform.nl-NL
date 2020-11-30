@@ -5,9 +5,9 @@ description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience
 seo-description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience Platforms te volgen
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1331'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,35 @@ alloy("sendEvent", {
   }
 });
 ```
+
+Enige tijd kan tussen overgaan wanneer het `sendEvent` bevel wordt uitgevoerd en wanneer het gegeven wordt verzonden naar de server (bijvoorbeeld, als de bibliotheek van SDK van het Web niet volledig heeft geladen of de toestemming nog niet is ontvangen). Als u een deel van het `xdm` object wilt wijzigen nadat u de `sendEvent` opdracht hebt uitgevoerd, wordt u ten zeerste aangeraden het `xdm` object te klonen _voordat_ u de `sendEvent` opdracht uitvoert. Bijvoorbeeld:
+
+```javascript
+var clone = function(value) {
+  return JSON.parse(JSON.stringify(value));
+};
+
+var dataLayer = {
+  "commerce": {
+    "order": {
+      "purchaseID": "a8g784hjq1mnp3",
+      "purchaseOrderNumber": "VAU3123",
+      "currencyCode": "USD",
+      "priceTotal": 999.98
+    }
+  }
+};
+
+alloy("sendEvent", {
+  "xdm": clone(dataLayer)
+});
+
+// This change will not be reflected in the data sent to the 
+// server for the prior sendEvent command.
+dataLayer.commerce = null;
+```
+
+In dit voorbeeld wordt de gegevenslaag gekloond door het in series te vervaardigen aan JSON, dan het deserializing van het. Vervolgens wordt het gekloonde resultaat doorgegeven aan de `sendEvent` opdracht. Dit zorgt ervoor dat het `sendEvent` bevel een momentopname van de gegevenslaag heeft zoals het bestond toen het `sendEvent` bevel werd uitgevoerd zodat de recentere wijzigingen in het originele voorwerp van de gegevenslaag niet in de gegevens zullen worden weerspiegeld die naar de server worden verzonden. Als u een gebeurtenisgestuurde gegevenslaag gebruikt, wordt het klonen van uw gegevens waarschijnlijk al automatisch verwerkt. Bijvoorbeeld, als u de Laag [van Gegevens van de Cliënt van](https://github.com/adobe/adobe-client-data-layer/wiki)Adobe gebruikt, verstrekt de `getState()` methode een gegevens verwerkte, gekloonde momentopname van alle vroegere veranderingen. Dit wordt ook automatisch voor u behandeld als u de uitbreiding van de Lancering van SDK van het Web AEP gebruikt.
 
 >[!NOTE]
 >
