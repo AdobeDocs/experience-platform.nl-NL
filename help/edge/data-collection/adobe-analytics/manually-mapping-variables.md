@@ -1,11 +1,11 @@
 ---
 title: Variabelen handmatig toewijzen in Adobe Analytics
 seo-title: Variabelen handmatig toewijzen in Adobe Analytics met Web SDK
-description: Hoe kan ik variabelen handmatig toewijzen aan Adobe Analytics met behulp van verwerkingsregels
-seo-description: manueel kaart variabelen in Adobe Analytics gebruikend verwerkingsregels met Web SDK
+description: Hoe te om variabelen in Adobe Analytics manueel in kaart te brengen gebruikend verwerkingsregels
+seo-description: Wijs manueel variabelen in Adobe Analytics toe gebruikend verwerkingsregels met Web SDK
 keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 translation-type: tm+mt
-source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
+source-git-commit: 206b5addd6baf5a120b469b21313ee86ac1fe53b
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Om door te worden gebruikt, worden de gegevens XDM afgevlakt gebruikend puntnota
 
 Alle gegevens die door het randnetwerk worden verzameld, zijn toegankelijk via [verwerkingsregels](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). In kunt [!DNL Analytics]u verwerkingsregels gebruiken om contextgegevens op te nemen in [!DNL Analytics] variabelen.
 
-In de volgende regel is Adobe Analytics bijvoorbeeld ingesteld op het vullen van **interne zoektermen (eVar2)** met de gegevens die zijn gekoppeld aan **a.x_atag.search.term(Context Data)**.
+In de volgende regel is Adobe Analytics bijvoorbeeld ingesteld op het vullen van **interne zoektermen (eVar2)** met de gegevens die zijn gekoppeld aan **a.x._atag.search.term(Context Data)**.
 
 ![](assets/examplerule.png)
 
