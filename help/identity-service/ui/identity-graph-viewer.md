@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
 translation-type: tm+mt
-source-git-commit: af7eab0599b17be55d5a4c129f7ebaeba91333bc
+source-git-commit: df165baceaf8dc2b21055201ec78bd392044b938
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '847'
 ht-degree: 1%
 
 ---
@@ -98,6 +98,7 @@ De grafiekviewer retourneert een fout als niet aan de volgende voorwaarden wordt
 - De identiteitswaarde bestaat niet in de geselecteerde naamruimte.
 - De grafiek heeft minder dan twee identiteiten.
 - De grafiek overschrijdt het maximum van 400 identiteiten.
+- U bevindt zich in een niet-productiesandbox-omgeving.
 
 ![groot cluster](../images/identity-graph-viewer/error-screen.png)
 
