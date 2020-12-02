@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;data flows
-description: De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het bekijken van bestaande rekeningen en dataflows van de Bronwerkruimte.
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows
+description: De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het bekijken van bestaande gegevensstromen van de werkruimte van Bronnen.
 solution: Experience Platform
-title: Accounts en gegevensstromen bewaken
+title: Dataflows bewaken
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 12b8ced6705c2b14b50ea237391d9f829c894b99
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '822'
 ht-degree: 0%
 
 ---
 
 
-# De rekeningen en de gegevensstromen van de monitor in UI
+# Gegevens controleren in de gebruikersinterface
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het bekijken van bestaande rekeningen en gegevensstromen van de [!UICONTROL werkruimte van Bronnen] .
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het bekijken van bestaande gegevensstromen van de [!UICONTROL werkruimte van Bronnen] .
 
 ## Aan de slag
 
@@ -27,53 +27,9 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
    - [Zelfstudie](../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-## Accounts controleren
-
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte **[!UICONTROL Bronnen]** . In het scherm **[!UICONTROL Catalogus]** worden diverse bronnen weergegeven waarvoor u accounts en gegevensstromen kunt maken. Elke bron toont het aantal bestaande rekeningen en gegevensstromen verbonden aan hen.
-
-Selecteer **[!UICONTROL Accounts]** in de bovenste koptekst om bestaande accounts weer te geven.
-
-![catalogus](../../images/tutorials/monitor/catalog-accounts.png)
-
-De pagina&#39;s **[!UICONTROL Accounts]** worden weergegeven. Op deze pagina vindt u een lijst met weer te geven accounts, waaronder informatie over de bron, gebruikersnaam, het aantal gegevensstromen en de aanmaakdatum.
-
-Selecteer het trechter-pictogram linksboven om het sorteervenster te openen.
-
-![rekeningen](../../images/tutorials/monitor/accounts-list.png)
-
-Via het sorteervenster hebt u toegang tot accounts vanuit een specifieke bron. Selecteer de bron waarmee u wilt werken en selecteer het account in de lijst aan de rechterkant.
-
->[!TIP]
->
-> Gebruik de ![spectrum-controle](../../images/tutorials/monitor/spectrum-control.png) knoop in de kolom van de **[!UICONTROL Naam]** om een nieuwe brondataflow voor de geselecteerde rekening tot stand te brengen.
-
-![accounts selecteren](../../images/tutorials/monitor/accounts-sort.png)
-
-Daarnaast kunt u bestaande accountgegevens bewerken en uw accountgegevens bijwerken. Selecteer het potloodpictogram voor de accountgegevens die u wilt bewerken.
-
-![](../../images/tutorials/monitor/click-edit.png)
-
-Het modaal **[!UICONTROL dialoogvenster Accountdetails]** bewerken wordt weergegeven. Vanaf deze pagina kunt u uw bestaande accountgegevens en verificatiereferenties bijwerken.
-
->[!NOTE]
->
-> Het uitgeven van rekeningsdetails is beschikbaar op alle partijbronschakelaars.
-
-![](../../images/tutorials/monitor/edit-account.png)
-
-Van de pagina van **[!UICONTROL Rekeningen]** , kunt u een lijst van bestaande gegevensstromen of doeldatasets bekijken verbonden aan de rekening u toegang had tot. Selecteer de ellipsen (`...`) knoop om meer beschikbare opties voor uw geselecteerde gegevensstroom te verhogen. Deze opties worden hieronder nader beschreven:
-
-| Control | Beschrijving |
-| ------- | ----------- |
-| [!UICONTROL Tijdschema bewerken] | Staat u toe om het innameschema van dataflow uit te geven. |
-| [!UICONTROL Gegevensstroom uitschakelen] | Hiermee kunt u gegevensinvoer uitschakelen voor de geselecteerde gegevensstroom. |
-| [!UICONTROL Verwijderen] | Hiermee kunt u de geselecteerde gegevensstroom verwijderen. |
-
-![dataflows](../../images/tutorials/monitor/dataflows.png)
-
 ## Dataflows bewaken
 
-Dataflows zijn rechtstreeks vanuit de **[!UICONTROL Cataloguspagina]** toegankelijk zonder **[!UICONTROL accounts]** weer te geven. Selecteer **[!UICONTROL Gegevensstromen]** van de hoogste kopbal om een lijst van gegevensstromen te bekijken.
+Login aan Login aan Login aan het [Experience Platform UI](https://platform.adobe.com) en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatie om tot de [!UICONTROL Bronwerkruimte] toegang te hebben. Selecteer **[!UICONTROL Gegevensstromen]** van de hoogste kopbal om bestaande gegevensstromen te bekijken.
 
 ![catalogusgegevensstromen](../../images/tutorials/monitor/catalog-dataflows.png)
 
