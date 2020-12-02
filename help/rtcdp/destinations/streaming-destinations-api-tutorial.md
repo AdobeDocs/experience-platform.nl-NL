@@ -5,9 +5,9 @@ title: Verbinding maken met streaming doelen en gegevens activeren
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 502d913400a8ddc0132c64253cd30ea9f9fcd239
+source-git-commit: f12b400ca95e23d8e6ac282fafa8f4bb141d703a
 workflow-type: tm+mt
-source-wordcount: '1870'
+source-wordcount: '2012'
 ht-degree: 0%
 
 ---
@@ -592,6 +592,31 @@ De geretourneerde reactie moet in de `transformations` parameter de segmenten en
   }
 }
 ```
+
+## Het gebruiken van de inzamelingen van Postman om met het stromen bestemmingen te verbinden  {#collections}
+
+Als u op een meer gestroomlijnde manier verbinding wilt maken met de streamingdoelen die in deze zelfstudie worden beschreven, kunt u deze gebruiken [[!DNL Postman]](https://www.postman.com/).
+
+[!DNL Postman] is een hulpmiddel dat u kunt gebruiken om API vraag te maken en bibliotheken van vooraf bepaalde vraag en milieu&#39;s te beheren.
+
+Voor deze specifieke zelfstudie hebben we de volgende [!DNL Postman] verzamelingen opgenomen, die bij dit artikel zijn gevoegd:
+
+* [!DNL AWS Kinesis] [!DNL Postman] collectie
+* [!DNL Azure Event Hubs] [!DNL Postman] collectie
+
+Klik [hier](assets/DestinationPostmanCollection.zip) om het archief met verzamelingen te downloaden.
+
+Elke verzameling bevat de vereiste verzoeken en omgevingsvariabelen voor [!DNL AWS Kinesis], respectievelijk, [!DNL Azure Event Hub].
+
+### Hoe de Postman-collecties te gebruiken
+
+Ga als volgt te werk om met succes verbinding te maken met de doelen die de gekoppelde [!DNL Postman] verzamelingen gebruiken:
+
+* downloaden en installeren [!DNL Postman];
+* [De bijgevoegde verzamelingen downloaden](assets/DestinationPostmanCollection.zip) en decomprimeren;
+* Importeer de verzamelingen uit de bijbehorende mappen naar Postman;
+* Vul de omgevingsvariabelen in volgens de instructies in dit artikel;
+* Voer de [!DNL API] aanvragen van Postman uit op basis van de instructies in dit artikel.
 
 ## Volgende stappen
 
