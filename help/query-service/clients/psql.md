@@ -5,10 +5,10 @@ title: Verbinding maken met PSQL
 topic: connect
 description: 'PSQL is een opdrachtregelinterface die wordt weergegeven wanneer u Postgres op uw computer installeert. U kunt het installeren door deze instructies te volgen. '
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 8ffe7c68c87cacb6b54d9634a5204fa24a9986ac
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 1%
+source-wordcount: '209'
+ht-degree: 0%
 
 ---
 
@@ -71,7 +71,7 @@ Klik **[!UICONTROL exemplaar]** voor **[!UICONTROL Bevel]** PSQL.
 
 >[!IMPORTANT]
 >
->Als u op PC bent, gebruik een tekstredacteur om de lijnonderbrekingen in het bevelkoord te verwijderen, dan kopieer het koord.
+>Als u op PC bent, gebruik een tekstredacteur om de lijnonderbrekingen in het bevelkoord te verwijderen, dan kopieer het koord. Als u versie 12.0 of hoger gebruikt, moet u bovendien een verbindingstekenreeks toevoegen `PGGSSENCMODE=disable` aan de verbindingstekenreeks.
 
 Plak de opdrachttekenreeks in een terminal- of opdrachtvenster en druk op Enter.
 
