@@ -5,9 +5,9 @@ seo-title: Aan de slag met Real-time Platform voor klantgegevens
 description: Het scenario van de steekproef voor het Platform van Gegevens van de Klant in real time
 seo-description: Het scenario van de steekproef voor het Platform van Gegevens van de Klant in real time
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 8369bd517639cc66eeb95a811c3ddf46b8c4c48d
 workflow-type: tm+mt
-source-wordcount: '2318'
+source-wordcount: '2317'
 ht-degree: 0%
 
 ---
@@ -237,7 +237,7 @@ Als je het segment &quot;Gift Giving Cart Abandoner&quot; hebt toegevoegd, kun j
 
 Klik op **[!UICONTROL Verzenden naar doelen]**.
 
-In Adobe Real-time CDP, kan Luma naadloos op hun publiekssegmenten voor verpersoonlijking handelen.\
+In CDP in real time, kan Luma naadloos op hun publiekssegmenten voor verpersoonlijking handelen.\
 Hier zien wij alle bestemmingen beschikbaar voor Luma om deze bestemming naar, zowel Adobe als niet-Adobe oplossingen te verzenden:
 
 ![afbeelding](assets/luma-dest.png)
