@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Leer om verschillende soorten bestemmingen tot stand te brengen en gegevens te activeren.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
@@ -20,8 +20,8 @@ Leer om verschillende soorten bestemmingen tot stand te brengen en gegevens te a
 
 ## E-mailmarketingdoelen {#email-destinations}
 
-* [Een e-mailmarketingbestemming maken en gegevens activeren](/help/rtcdp/destinations/email-marketing-api.md)
+* [Een e-mailmarketingbestemming maken en gegevens activeren](../destinations/api/email-marketing.md)
 
 ## Streaming naar cloudopslag {#streaming-destinations}
 
-* [Verbinding maken met streaming doelen en gegevens activeren](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+* [Verbinding maken met streaming doelen en gegevens activeren](../destinations/api/streaming-destinations.md)
