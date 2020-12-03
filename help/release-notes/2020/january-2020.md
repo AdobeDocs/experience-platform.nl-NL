@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '880'
 ht-degree: 3%
 
 ---
@@ -19,10 +19,10 @@ ht-degree: 3%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](#xdm)
-* [[!DNL-Privacy Service]](#privacy)
-* [[!DNL-bronnen]](#sources)
-* [[!DNL-doelen]](#destinations)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
+* [[!DNL Privacy Service]](#privacy)
+* [[!DNL Sources]](#sources)
+* [[!DNL Destinations]](#destinations)
 
 ## [!DNL Experience Data Model] (XDM) System {#xdm}
 
@@ -92,7 +92,7 @@ Voor meer informatie over bronnen, zie het [bronoverzicht](../../sources/home.md
 
 ## Doelen {#destinations}
 
-In [Adobe in real time CDP](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In [real time CDP](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe functies**
 
@@ -112,4 +112,4 @@ In [Adobe in real time CDP](../../rtcdp/overview.md), zijn de bestemmingen pre-g
 
 * Geen
 
-Zie het overzicht [](../../rtcdp/destinations/destinations-overview.md) Doelen voor meer informatie.
+Zie het overzicht [](../../destinations/home.md) Doelen voor meer informatie.
