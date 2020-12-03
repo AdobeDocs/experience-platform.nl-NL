@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 3%
@@ -47,9 +47,9 @@ In het Platform [van Gegevens van de Klant in](../../rtcdp/overview.md)real time
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| UX-verbeteringen | Gebruikers kunnen inline tabelhandelingen gebruiken om gemakkelijker toegang te krijgen tot primaire handelingen, zoals het toevoegen van gegevens, het bewerken van planningen en het toevoegen van segmenten. Zie het document van de [bestemmingswerkruimte](../../rtcdp/destinations/destinations-workspace.md) voor meer informatie. |
+| UX-verbeteringen | Gebruikers kunnen inline tabelhandelingen gebruiken om gemakkelijker toegang te krijgen tot primaire handelingen, zoals het toevoegen van gegevens, het bewerken van planningen en het toevoegen van segmenten. Zie het document van de [bestemmingswerkruimte](../../destinations/ui/destinations-workspace.md) voor meer informatie. |
 
-Ga voor meer informatie naar het overzicht met [bestemmingen](../../rtcdp/destinations/destinations-overview.md)
+Ga voor meer informatie naar het overzicht met [bestemmingen](../../destinations/home.md)
 
 ## [!DNL Observability Insights] {#observability}
 
@@ -59,7 +59,7 @@ Ga voor meer informatie naar het overzicht met [bestemmingen](../../rtcdp/destin
 
 | Functie | Beschrijving |
 | --- | --- |
-| Adobe I/O-gebeurtenismeldingen | [!DNL Observability Insights] hefboomwerkingen Adobe I/O Gebeurtenissen om gebeurtenisberichten voor verscheidene diensten van het Experience Platform tot stand te brengen. De lading van het bericht wordt verzonden naar een gevormde webhaak die u kunt dan gebruiken om verdere stroomafwaartse processen te automatiseren. Zie het overzicht [van](../../observability/notifications/overview.md) meldingen voor meer informatie. |
+| Adobe I/O-gebeurtenismeldingen | [!DNL Observability Insights] hefboomwerkingen Adobe I/O Events om gebeurtenisberichten voor verscheidene diensten van het Experience Platform tot stand te brengen. De lading van het bericht wordt verzonden naar een gevormde webhaak die u kunt dan gebruiken om verdere stroomafwaartse processen te automatiseren. Zie het overzicht [van](../../observability/notifications/overview.md) meldingen voor meer informatie. |
 
 Zie het [[!DNL Observability Insights] overzicht](../../observability/home.md) voor meer informatie over de dienst.
 
