@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform - Overzicht
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Leer hoe Experience Platform het mogelijk maakt om persoonlijke ervaringen aan uw klanten in real time te leveren.
 translation-type: tm+mt
-source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
+source-git-commit: 5761394285e56214fd59e31d530756eed1f5ad08
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '399'
 ht-degree: 14%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 14%
    * [Werkruimte voor gegevenswetenschap](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Foutopsporing](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)
    * [Foutopsporing 2.0 (bèta)](https://docs.adobe.com/content/help/en/debugger/using-v2/experience-cloud-debugger.html)
-   * [Doelen](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
+   * [Doelen](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html)
    * [ETL (Extraheren, Transformeren, Laden)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
    * [Identiteitsservice](https://docs.adobe.com/content/help/nl-NL/experience-platform/identity/home.html)
    * [Intelligente services](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
