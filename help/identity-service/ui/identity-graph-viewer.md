@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
 translation-type: tm+mt
-source-git-commit: df165baceaf8dc2b21055201ec78bd392044b938
+source-git-commit: ef1025dfacc91b13c064db99e6304f2c09abb3d9
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -93,14 +93,19 @@ Identiteitsgrafieken met grotere clusters van identiteiten zijn ook toegankelijk
 
 ## Aanhangsel
 
-De grafiekviewer retourneert een fout als niet aan de volgende voorwaarden wordt voldaan:
+In de volgende sectie vindt u aanvullende informatie over het werken met de viewer voor identiteitsgrafieken.
 
-- De identiteitswaarde bestaat niet in de geselecteerde naamruimte.
-- De grafiek heeft minder dan twee identiteiten.
-- De grafiek overschrijdt het maximum van 400 identiteiten.
-- U bevindt zich in een niet-productiesandbox-omgeving.
+### Foutberichten begrijpen
 
-![groot cluster](../images/identity-graph-viewer/error-screen.png)
+Er kunnen fouten optreden wanneer u de viewer voor identiteitsgrafieken opent. Hieronder volgt een lijst met voorwaarden en beperkingen waarmee u rekening kunt houden wanneer u werkt met de viewer voor identiteitsgrafieken.
+
+- De geselecteerde naamruimte moet een identiteitswaarde bevatten.
+- Voor het genereren van de identiteitsgrafiekviewer zijn minimaal twee gekoppelde identiteiten vereist.
+- De viewer voor identiteitsgrafieken kan het maximum van 400 identiteiten niet overschrijden.
+- De viewer voor identiteitsgrafieken is momenteel niet toegankelijk in niet-productiesandboxen.
+- De viewer voor identiteitsgrafieken ondersteunt momenteel alleen in batches opgenomen gegevens en geeft geen gegevens weer die via streaming bronnen zijn ingevoerd.
+
+![foutscherm](../images/identity-graph-viewer/error-screen.png)
 
 ## Volgende stappen
 
