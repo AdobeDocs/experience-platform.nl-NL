@@ -5,7 +5,7 @@ title: Handleiding Adobe Experience Platform UI
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1597'
 ht-degree: 0%
@@ -37,7 +37,7 @@ In de sectie **[!UICONTROL Profielen]** wordt het totale aantal personen met pro
 
 In de sectie **[!UICONTROL Segmenten]** ziet u het totale aantal segmenten dat binnen uw IMS-organisatie is gemaakt. Dit aantal wordt bijgewerkt wanneer een nieuw segment wordt gecreeerd. Meer informatie over segmenten vindt u in het overzicht [van de](../segmentation/home.md)Segmenteringsservice.
 
-De sectie **[!UICONTROL Doelen]** toont het totale aantal bestemmingen die voor de Organisatie IMS worden gecreeerd. Dit aantal wordt bijgewerkt wanneer een nieuwe bestemming wordt gecreeerd. Meer informatie over bestemmingen kan in het [bestemmingsoverzicht](../rtcdp/destinations/destinations-overview.md)worden gevonden.
+De sectie **[!UICONTROL Doelen]** toont het totale aantal bestemmingen die voor de Organisatie IMS worden gecreeerd. Dit aantal wordt bijgewerkt wanneer een nieuwe bestemming wordt gecreeerd. Meer informatie over bestemmingen kan in het [bestemmingsoverzicht](../destinations/home.md)worden gevonden.
 
 ### Recente gegevens
 
@@ -51,7 +51,7 @@ De **[!UICONTROL Recente bronsectie]** maakt een lijst van de vijf onlangs gecre
 
 De **[!UICONTROL Recente segmentsectie]** maakt een lijst van de vijf onlangs gecreeerde segmentdefinities binnen uw IMS Organisatie. Deze lijst wordt bijgewerkt telkens als een nieuwe segmentdefinitie wordt gecreeerd. U kunt een segmentdefinitie van de lijst selecteren om meer informatie over de gespecificeerde segmentdefinitie te bekijken of **[!UICONTROL Mening allen]** selecteren om een lijst van alle gecreeerde segmentdefinities te zien. Meer informatie over segmenten vindt u in het overzicht [van de](../segmentation/home.md)Segmenteringsservice.
 
-De **[!UICONTROL Recente bestemmingssectie]** maakt een lijst van de vijf onlangs gecreeerde bestemmingen binnen uw organisatie IMS. Deze lijst wordt bijgewerkt telkens wanneer een nieuwe bestemming wordt gecreeerd. U kunt een bestemming van de lijst selecteren om meer informatie over de gespecificeerde bestemming te bekijken of **[!UICONTROL Mening allen]** selecteren om een lijst van alle gecreeerde bestemmingen te zien. Meer informatie over bestemmingen kan in het [bestemmingsoverzicht](../rtcdp/destinations/destinations-overview.md)worden gevonden.
+De **[!UICONTROL Recente bestemmingssectie]** maakt een lijst van de vijf onlangs gecreeerde bestemmingen binnen uw organisatie IMS. Deze lijst wordt bijgewerkt telkens wanneer een nieuwe bestemming wordt gecreeerd. U kunt een bestemming van de lijst selecteren om meer informatie over de gespecificeerde bestemming te bekijken of **[!UICONTROL Mening allen]** selecteren om een lijst van alle gecreeerde bestemmingen te zien. Meer informatie over bestemmingen kan in het [bestemmingsoverzicht](../destinations/home.md)worden gevonden.
 
 ### Aanbevolen training
 
@@ -117,7 +117,7 @@ In de sectie **[!UICONTROL Workflows]** wordt een lijst weergegeven met uit meer
 
 Met de sectie **[!UICONTROL Bronnen]** kunt u bronverbindingen maken, bijwerken en verwijderen, zodat u gegevens van externe bronnen in Platform kunt invoeren. Meer informatie over bronnen vindt u in het overzicht [van](../sources/home.md)bronnen.
 
-Met de sectie **[!UICONTROL Doelen]** kunt u doelen maken, bijwerken en verwijderen, zodat u gegevens van Platform kunt exporteren naar vele externe doelen. Meer informatie over bestemmingen kan in het [bestemmingsoverzicht](../rtcdp/destinations/destinations-overview.md)worden gevonden.
+Met de sectie **[!UICONTROL Doelen]** kunt u doelen maken, bijwerken en verwijderen, zodat u gegevens van Platform kunt exporteren naar vele externe doelen. Meer informatie over bestemmingen kan in het [bestemmingsoverzicht](../destinations/home.md)worden gevonden.
 
 ### [!UICONTROL Klant]
 
