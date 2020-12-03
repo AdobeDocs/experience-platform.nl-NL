@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 2%
@@ -126,7 +126,7 @@ In het Platform [van Gegevens van de Klant in](../../rtcdp/overview.md)real time
 | Bestanden plannen | Voor zowel e-mailopslagdoelen als cloudopslagdoelen kunnen gebruikers een eenmalige export maken of dagelijkse momentopnamen maken. |
 | Verplichte velden | Gebruikers kunnen velden markeren als verplicht, zodat alleen velden die het verplichte veld bevatten, worden geëxporteerd. |
 
-Zie het overzicht [](../../rtcdp/destinations/destinations-overview.md)Doelen voor meer informatie.
+Zie het overzicht [](../../destinations/home.md)Doelen voor meer informatie.
 
 ## Intelligente services {#intelligent-services}
 
