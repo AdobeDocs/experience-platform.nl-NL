@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 1%
@@ -65,7 +65,7 @@ Meer leren, zie het [Realtime overzicht van de Metriek van het Platform van Gege
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] zijn pre-gebouwde integratie met bestemmingsplatforms die door het Platform van de Gegevens van de Klant van Adobe in real time worden gesteund die gegevens aan die partners op een naadloze manier activeren. Lees het overzichtsartikel [](../../rtcdp/destinations/destinations-overview.md) Doelen voor meer informatie.
+[!DNL Destinations] zijn pre-gebouwde integratie met bestemmingsplatforms die door het Platform van de Gegevens van de Klant van Adobe in real time worden gesteund die gegevens aan die partners op een naadloze manier activeren. Lees het overzichtsartikel [](../../destinations/home.md) Doelen voor meer informatie.
 
 **Beschikbare bestemmingen**
 
@@ -74,12 +74,12 @@ Met de versie van November, steunt het Adobe Real-time Platform van de Gegevens 
 * Advertising: [!DNL Google]
 * E-mailmarketing: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
-Zie de [bestemmingscatalogus](../../rtcdp/destinations/destinations-catalog.md) voor informatie over elk van de bestemmingen.
+Zie de [bestemmingscatalogus](../../destinations/catalog/overview.md) voor informatie over elk van de bestemmingen.
 
 **Bekende beperkingen**
 
-* Het besturingselement voor aangepaste activeringsschema&#39;s in de [activeringsstroom](../../rtcdp/destinations/activate-destinations.md#activate-data) (stap Planning) is niet beschikbaar bij de eerste release.
-* Er is momenteel geen manier om een bestemmingsconfiguratie uit te geven of te schrappen. Als u deze beperking wilt omzeilen, kunt u het doel in de rechterbovenhoek van de pagina [met](../../rtcdp/destinations/destination-details-page.md)doeldetails in- of uitschakelen.
+* Het besturingselement voor aangepaste activeringsschema&#39;s in de [activeringsstroom](../../destinations/ui/activate-destinations.md#activate-data) (stap Planning) is niet beschikbaar bij de eerste release.
+* Er is momenteel geen manier om een bestemmingsconfiguratie uit te geven of te schrappen. Als u deze beperking wilt omzeilen, kunt u het doel in de rechterbovenhoek van de pagina [met](../../destinations/ui/destination-details-page.md)doeldetails in- of uitschakelen.
 * Er is momenteel geen validatie voor accountdetails, paden of referenties wanneer verbinding wordt gemaakt met uw doel- of opslagaccount. Controleer of u de juiste referenties invoert en dubbelklik op spelfouten of typefouten.
 * Er zijn geen referentie-verlengingen beschikbaar bij de eerste release. Als een account is verlopen of moet worden vernieuwd, moet u een nieuwe doelverbinding maken en de eerder toegewezen segmenten opnieuw toewijzen.
 
