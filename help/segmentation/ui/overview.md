@@ -5,7 +5,7 @@ title: Gebruikershandleiding voor segmentatieservice
 topic: ui guide
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 translation-type: tm+mt
-source-git-commit: 1aff9329e1ae97caa34a205bbfbbc6f51b54b8fb
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 0%
@@ -102,7 +102,7 @@ De **[!UICONTROL Geactiveerde bestemmingssectie]** toont de bestemmingen waarvoo
 
 >[!NOTE]
 >
-> Doelen zijn een functie die beschikbaar is bij [!DNL Real-time Customer Data Platform]en waarmee u gegevens kunt exporteren naar externe platforms. Voor meer informatie over bestemmingen, gelieve het overzicht [van](../../rtcdp/destinations/destinations-overview.md)bestemmingen te lezen. Leer hoe te om een segment aan een bestemming te activeren, te lezen gelieve de [gids bij het activeren van segmenten aan een bestemming](../../rtcdp/destinations/activate-destinations.md).
+> Doelen zijn een functie die beschikbaar is bij [!DNL Real-time Customer Data Platform]en waarmee u gegevens kunt exporteren naar externe platforms. Voor meer informatie over bestemmingen, gelieve het overzicht [van](../../destinations/home.md)bestemmingen te lezen. Leer hoe te om een segment aan een bestemming te activeren, te lezen gelieve de [gids bij het activeren van segmenten aan een bestemming](../../destinations/ui/activate-destinations.md).
 
 ### Profielvoorbeelden
 
