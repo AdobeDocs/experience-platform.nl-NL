@@ -5,7 +5,7 @@ title: Audience Manager-aansluiting
 topic: overview
 description: De Adobe Audience Manager-gegevensconnector streamt gegevens van de eerste partij die in Adobe Audience Manager naar Adobe Experience Platform zijn verzameld. De schakelaar van de Audience Manager neemt drie categorieën gegevens aan Platform in.
 translation-type: tm+mt
-source-git-commit: 4ab5c3a8f9dbecc27686c7ce7db4f66ac18c2d2a
+source-git-commit: e51f750dae2a76cd05076edfe8c6423efe949891
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 0%
@@ -74,4 +74,4 @@ Adobe Audience Manager maakt één verbinding in Catalog: Verbinding met Audienc
 | Gegevens Audience Manager | Latentie | Notities |
 | --- | --- | --- |
 | Gegevens in realtime | &lt; 35 minuten. | Tijd vanaf het vastleggen bij het knooppunt Edge van de Audience Manager tot het verschijnen op het Data Lake van het Platform. |
-| Profielgegevens | &lt; 2 dagen | Tijd van vastleggen via DCS/PCS Edge-gegevens en gegevens aan boord, die worden verwerkt naar een gebruikersprofiel, tot weergave in profiel. Deze gegevens landen niet rechtstreeks op het Platform Data Lake. De knevel van het profiel kan op de datasets van het Profiel van de Audience Manager worden toegelaten om deze gegevens in Profiel direct in te gaan. |
+| Profielgegevens | &lt; 2 dagen | Tijd van vastleggen via DCS/PCS Edge-gegevens en gegevens aan boord, die worden verwerkt naar een gebruikersprofiel, tot weergave in profiel. Deze gegevens landen niet rechtstreeks op het Platform Data Lake. De knevel van het profiel kan voor de datasets van het Profiel van de Audience Manager worden toegelaten om deze gegevens in Profiel direct in te gaan. |
