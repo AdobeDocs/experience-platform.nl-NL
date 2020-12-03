@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '581'
 ht-degree: 3%
 
 ---
@@ -46,14 +46,14 @@ Er zijn nieuwe doelen beschikbaar waar u uw Adobe Experience Platform-gegevens k
 
 | Bestemming | Beschrijving |
 |--- | ---|
-| [!DNL Google Customer Match] | Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere klanten over de eigendommen en bediende eigenschappen van Google, zoals: [!DNL Search], [!DNL Shopping], Gmail en YouTube. <br><br> Bezoek de [!DNL Google Customer Match] pagina [](/help/rtcdp/destinations/google-customer-match-destination.md) in de bestemmingscatalogus voor meer informatie over de bestemming en hoe te opstelling het in Adobe in real time CDP. |
+| [!DNL Google Customer Match] | Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere klanten over de eigendommen en bediende eigenschappen van Google, zoals: [!DNL Search], [!DNL Shopping], Gmail en YouTube. <br><br> Bezoek de [!DNL Google Customer Match] pagina [](../../destinations/catalog/advertising/google-customer-match.md) in de bestemmingscatalogus voor meer informatie over de bestemming en hoe te opstelling het in real time CDP. |
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 |------- | -----------|
-| Aangepaste bestandsnaameditor | Update naar de workflow voor gegevensactivering voor marketingdoelen en opslagdoelen in de cloud waarmee u de naam van de geëxporteerde bestanden kunt bewerken. Voor meer informatie, verwijs naar de [ Configure stap](/help/rtcdp/destinations/activate-destinations.md#configure) in het activeringswerkschema. |
-| Aanbevolen kenmerken | Update naar de workflow voor gegevensactivering voor marketingdoelen en opslagdoelen in de cloud die aanbevolen kenmerken bevat om aan de geëxporteerde bestanden toe te voegen. Raadpleeg de stap [Kenmerken](/help/rtcdp/destinations/activate-destinations.md#select-attributes) selecteren in de activeringsworkflow voor meer informatie. |
+| Aangepaste bestandsnaameditor | Update naar de workflow voor gegevensactivering voor marketingdoelen en opslagdoelen in de cloud waarmee u de naam van de geëxporteerde bestanden kunt bewerken. Voor meer informatie, verwijs naar de [ Configure stap](../../destinations/ui/activate-destinations.md#configure) in het activeringswerkschema. |
+| Aanbevolen kenmerken | Update naar de workflow voor gegevensactivering voor marketingdoelen en opslagdoelen in de cloud die aanbevolen kenmerken bevat om aan de geëxporteerde bestanden toe te voegen. Raadpleeg de stap [Kenmerken](../../destinations/ui/activate-destinations.md#select-attributes) selecteren in de activeringsworkflow voor meer informatie. |
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
