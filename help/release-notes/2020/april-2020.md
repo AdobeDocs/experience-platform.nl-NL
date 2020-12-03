@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '969'
 ht-degree: 2%
 
 ---
@@ -94,14 +94,14 @@ In het Platform [van Gegevens van de Klant in](../../rtcdp/overview.md)real time
 
 **Nieuwe bestemmingen**
 
-Adobe CDP in real time steunt nu gegevensactivering aan meer dan vijftig [!DNL Experience Cloud Launch] uitbreidingen, toelatend analyses, verpersoonlijking, en andere gebruiksgevallen. Zie hieronder voor meer informatie:
+CDP in real time steunt nu gegevensactivering aan meer dan vijftig [!DNL Experience Cloud Launch] uitbreidingen, toelatend analyses, verpersoonlijking, en andere gebruiksgevallen. Zie hieronder voor meer informatie:
 
 | Documentatie | Beschrijving |
 |--- | ---|
-| [Doeltypen en -categorieën](/help/rtcdp/destinations/destination-types.md) | Dit artikel verklaart het verschil tussen verbindingen en uitbreidingen in de Adobe in real time CDP interface en adviseert wanneer om elk van deze bestemmingen te gebruiken. |
-| [Experience Platform Launch-extensies](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | Deze pagina verklaart wat [!DNL Launch] uitbreidingen zijn, maakt een lijst van gebruiksgevallen voor het gebruiken van hen, en verbindingen aan documentatie voor elke [!DNL Launch] uitbreiding in Adobe in real time CDP. |
+| [Doeltypen en -categorieën](../../destinations/destination-types.md) | Dit artikel verklaart het verschil tussen verbindingen en uitbreidingen in de interface In real time CDP en adviseert wanneer om elk van deze bestemmingen te gebruiken. |
+| [Experience Platform Launch-extensies](../../destinations/catalog/launch-extensions/overview.md) | Deze pagina verklaart wat [!DNL Launch] uitbreidingen zijn, maakt een lijst van gebruiksgevallen voor het gebruiken van hen, en verbindingen aan documentatie voor elke [!DNL Launch] uitbreiding in CDP in real time. |
 
-Zie het overzicht [](/help/rtcdp/destinations/destinations-overview.md)Doelen voor meer informatie.
+Zie het overzicht [](../../destinations/home.md)Doelen voor meer informatie.
 
 ## [!DNL Privacy Service] {#privacy}
 
