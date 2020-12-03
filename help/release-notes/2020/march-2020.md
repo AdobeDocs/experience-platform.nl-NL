@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '838'
 ht-degree: 2%
 
 ---
@@ -77,10 +77,10 @@ Er zijn nieuwe doelen beschikbaar waar u uw Adobe Experience Platform-gegevens k
 
 | Bestemming | Beschrijving |
 |--- | ---|
-| Opslagdoelen voor cloud | Adobe CDP in realtime kan uw segmenten nu als gegevensbestanden leveren aan uw [!DNL Amazon S3] of SFTP-locatie voor cloudopslag. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV- of tabgescheiden bestanden. |
-| Reclamebestemmingen | De [!DNL Google] bestemmingskaart wordt nu gesplitst in drie bestemmingskaarten, voor de drie verschillende [!DNL Google] platforms die momenteel in Adobe in real time CDP worden gesteund: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
+| Opslagdoelen voor cloud | CDP in real time kan uw segmenten nu als gegevensdossiers aan uw [!DNL Amazon S3] of de opslagplaatsen van de wolk SFTP leveren. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV- of tabgescheiden bestanden. |
+| Reclamebestemmingen | De [!DNL Google] bestemmingskaart wordt nu verdeeld in drie bestemmingskaarten, voor de drie verschillende [!DNL Google] platforms die momenteel in Echt - tijd CDP worden gesteund: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
 
-Ga voor meer informatie naar het overzicht met [bestemmingen](../../rtcdp/destinations/destinations-overview.md)
+Ga voor meer informatie naar het overzicht met [bestemmingen](../../destinations/home.md)
 
 ## [!DNL Identity Service] {#identity}
 
