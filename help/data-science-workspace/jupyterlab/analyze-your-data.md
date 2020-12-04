@@ -8,7 +8,7 @@ description: Deze zelfstudie richt zich op het gebruik van Jupyter-laptops, die 
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1723'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ Deze zelfstudie richt zich op het gebruik van Jupyter-laptops, die zijn gemaakt 
 
 De volgende concepten worden geïntroduceerd:
 
-- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is de webinterface van de volgende generatie voor Jupyter van project en is nauw geïntegreerd in [!DNL Adobe Experience Platform].
+- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is de webinterface van de volgende generatie voor Project Jupyter en is nauw geïntegreerd in [!DNL Adobe Experience Platform].
 - **Batches:** Datasets bestaan uit batches. Een batch is een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt. Nieuwe batches worden gemaakt wanneer gegevens aan een gegevensset worden toegevoegd.
-- **SDK voor gegevenstoegang (afgekeurd):** De SDK voor gegevenstoegang is nu afgekeurd. Gebruik de handleiding [[!DNL Platform SDK]](../authoring/platform-sdk.md) .
+- **SDK voor gegevenstoegang (afgekeurd):** De SDK voor gegevenstoegang is nu afgekeurd. Gebruik deze [[!DNL Platform SDK]](../authoring/platform-sdk.md) handleiding.
 
 ## Laptops verkennen in de werkruimte voor wetenschap van gegevens
 
@@ -92,7 +92,7 @@ Nu, kunnen wij op de `Retail-Training-<your-alias>` dataset met de rechtermuiskn
 
 >[!TIP]
 >
->Raadpleeg de handleiding [[!DNL Platform SDK]](../authoring/platform-sdk.md) voor het converteren van uw code.
+>Raadpleeg de [[!DNL Platform SDK]](../authoring/platform-sdk.md) handleiding voor het converteren van uw code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
