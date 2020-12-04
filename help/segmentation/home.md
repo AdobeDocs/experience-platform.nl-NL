@@ -19,7 +19,7 @@ Adobe Experience Platform [!DNL Segmentation Service] biedt een gebruikersinterf
 
 Dit document biedt een overzicht van [!DNL Segmentation Service] en de rol die het speelt in Adobe Experience Platform.
 
-## Aan de slag met [!DNL Segmentation Service]
+## Getting started with [!DNL Segmentation Service]
 
 Het is belangrijk dat u de volgende belangrijke termen kent die in dit document worden gebruikt:
 
