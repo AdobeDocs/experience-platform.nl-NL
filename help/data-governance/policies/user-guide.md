@@ -7,7 +7,7 @@ description: Adobe Experience Platform Data Governance biedt een gebruikersinter
 translation-type: tm+mt
 source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform [!DNL Data Governance] biedt een gebruikersinterface w
 
 Deze gids vereist een werkend begrip van de volgende [!DNL Experience Platform] concepten:
 
-- [[!DNL-gegevensbeheer]](../home.md)
+- [[!DNL Data Governance]](../home.md)
 - [Beleid voor gegevensgebruik](./overview.md)
 
 ## Beleid voor gegevensgebruik weergeven {#view-policies}
