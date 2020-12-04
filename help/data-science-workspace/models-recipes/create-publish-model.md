@@ -8,7 +8,7 @@ description: De Adobe Experience Platform Data Science Workspace biedt de middel
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1589'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
    * [[!DNL Experience Data Model]](../../xdm/home.md): De standaardiseringsinspanning die door Adobe wordt geleid om standaardschema&#39;s zoals [!DNL Profile] en ExperienceEvent, voor het Beheer van de Ervaring van de Klant te bepalen.
    * Gegevenssets: Een opslag- en beheerconstructie voor werkelijke gegevens. Een fysieke instantie van een [XDM-schema](../../xdm/schema/field-dictionary.md).
    * Batches: Datasets bestaan uit batches. Een batch is een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt.
-   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is een open-bron web-based interface voor Project [!DNL Jupyter] en is nauw geïntegreerd in [!DNL Experience Platform].
+   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is een open-bron web-based interface voor Project [!DNL Jupyter] en is strak geïntegreerd in [!DNL Experience Platform].
 
 ## Uw gegevens voorbereiden {#prepare-your-data}
 
