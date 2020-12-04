@@ -44,7 +44,7 @@ ht-degree: 0%
 
 **Adobe Intelligente services:** Adobe Sensei is het inlichtingenkader dat bevoegdheden heeft [!DNL Experience Platform]. Het verstrekt ook een reeks diensten AI die merken machtigt om hun capaciteit te verbeteren om in real time, gepersonaliseerde klantenervaringen te leveren.
 
-**Adobe I/O:** Adobe I/O maakt deel uit van [!DNL Experience Platform] en biedt toegang tot alles wat ontwikkelaars nodig hebben om Adobe Experience Platform te integreren, uit te breiden en aan te passen, inclusief API&#39;s, gebeurtenissen, ontwikkelaarsconsole en handige gereedschappen.
+**Adobe I/O:** Adobe I/O maakt deel uit van [!DNL Experience Platform] en biedt toegang tot alles wat ontwikkelaars nodig hebben om Adobe Experience Platform te integreren, uit te breiden en aan te passen, inclusief API&#39;s, gebeurtenissen, de ontwikkelaarsconsole en handige gereedschappen.
 
 **Adobe Sensei:** Adobe Sensei is het inlichtingenkader dat bevoegdheden heeft [!DNL Experience Platform]. Het verstrekt ook een reeks diensten AI die merken machtigt om hun capaciteit te verbeteren om in real time, gepersonaliseerde klantenervaringen te leveren.
 
