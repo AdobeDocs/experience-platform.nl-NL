@@ -7,7 +7,7 @@ seo-description: De Marketing Cloud van Salesforce is een digitale marketing ree
 translation-type: tm+mt
 source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Overzicht
 
-[[!DNL Salesforce-Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) is een digitale marketingsuite die voorheen ExactTarget werd genoemd en waarmee u ritten voor bezoekers en klanten kunt maken en aanpassen om hun ervaring aan te passen.
+[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) is een digitale marketingsuite die voorheen ExactTarget werd genoemd. Met deze suite kunt u reizen maken en aanpassen voor bezoekers en klanten om hun ervaring aan te passen.
 
 Om segmentgegevens naar te verzenden [!DNL Salesforce Marketing Cloud], moet u eerst de bestemming [in Adobe in real time CDP](#connect-destination) verbinden, en dan [opstelling een gegevensinvoer](#import-data-into-salesforce) van uw opslagplaats in [!DNL Salesforce Marketing Cloud].
 
