@@ -7,7 +7,7 @@ description: 'De identiteitsservice van Adobe Experience Platform beheert de ide
 translation-type: tm+mt
 source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '742'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platform [!DNL Identity Service] beheert de identificatie van u
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 - [[!DNL Identity Service]](../home.md): Oplost de fundamentele uitdaging die door de fragmentatie van gegevens van het klantenprofiel wordt gesteld. Het doet dit door identiteiten over apparaten en systemen te overbruggen waar de klanten met uw merk in wisselwerking staan.
-- [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
 De volgende secties verstrekken extra informatie die u zult moeten kennen of hebben om met succes vraag aan [!DNL Identity Service] API te maken.
