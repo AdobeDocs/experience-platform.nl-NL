@@ -3,7 +3,7 @@ keywords: Experience Platform;getting started;content ai;commerce ai;content and
 solution: Experience Platform
 title: Aan de slag met Content and Commerce AI
 topic: Getting started
-description: De Inhoud en de Handel AI gebruikt Adobe I/O APIs. Om vraag aan Adobe I/O APIs en de Integratie I/O van de Console te maken, moet u het authentificatieleerprogramma eerst voltooien.
+description: In de AI voor Inhoud en Handel worden Adobe I/O API's gebruikt. Als u aanroepen wilt uitvoeren naar Adobe I/O API's en de I/O Console-integratie, moet u eerst de zelfstudie voor verificatie voltooien.
 translation-type: tm+mt
 source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
 workflow-type: tm+mt
@@ -19,13 +19,13 @@ ht-degree: 0%
 >
 >AI van de Inhoud en van de Handel is in bèta. De documentatie kan worden gewijzigd.
 
-[!DNL Content and Commerce AI] gebruikt Adobe I/O-API&#39;s. Om vraag aan Adobe I/O APIs en de Integratie I/O van de Console te maken, moet u de [authentificatieleerprogramma](../../tutorials/authentication.md)eerst voltooien.
+[!DNL Content and Commerce AI] gebruikt Adobe I/O API&#39;s. Als u aanroepen wilt uitvoeren naar Adobe I/O API&#39;s en de I/O Console-integratie, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien.
 
 Wanneer u echter de stap API **** toevoegen uitvoert, bevindt de API zich onder Experience Cloud in plaats van Adobe Experience Platform, zoals in de volgende schermafbeelding wordt getoond:
 
 ![AI voor inhoud en handel toevoegen](./images/add-api.png)
 
-Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle I/O API-aanroepen van Adobe, zoals hieronder wordt getoond:
+Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle Adobe I/O API-aanroepen, zoals hieronder wordt getoond:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -63,7 +63,7 @@ U kunt nu de omgeving selecteren in het vervolgkeuzemenu rechtsboven in het sche
 
 ![voorbeeld](./images/select-environment.png)
 
-Voor meer informatie over het werken met Adobe I/O APIs die Postman gebruiken, zie de Middelgrote post over het [gebruiken van Postman voor authentificatie JWT op Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
+Zie het artikel Medium over het [gebruik van Postman voor JWT-verificatie op Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)voor meer informatie over het werken met Adobe I/O API&#39;s met Postman.
 
 ## API-voorbeeldaanroepen lezen
 
