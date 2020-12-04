@@ -8,7 +8,7 @@ description: 'Met streaming opname kunt u uw gegevens naar Adobe Experience Plat
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '843'
 ht-degree: 2%
 
 ---
@@ -22,8 +22,8 @@ Met streaming opname kunt u uw gegevens naar Adobe Experience Platform uploaden 
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
-- [[!DNL-streaming congestie]](../streaming-ingestion/overview.md): Een van de methoden waarmee gegevens kunnen worden verzonden naar [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Een van de methoden waarmee gegevens kunnen worden verzonden naar [!DNL Experience Platform].
 
 ### API-voorbeeldaanroepen lezen
 
