@@ -7,7 +7,7 @@ description: Terwijl u de segmentdefinitie ontwikkelt, kunt u de schatting- en v
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '773'
 ht-degree: 1%
 
 ---
@@ -172,7 +172,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. De opgegeven koppelingen kunnen worden gebruikt om de opgegeven entiteiten op te zoeken met de [[!DNL Profile Access API]](../../profile/api/entities.md). |
+| `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. Met de opgegeven koppelingen kunt u de opgegeven entiteiten opzoeken met de [[!DNL Profile Access API]](../../profile/api/entities.md)instructies. |
 
 ## De resultaten van een specifieke geschatte taak ophalen {#get-estimate}
 
