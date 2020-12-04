@@ -5,7 +5,7 @@ seo-title: Gegevensbeheer in Real-time Customer Data Platform
 description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 seo-description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 translation-type: tm+mt
-source-git-commit: 66042cb9397b9c7b507fc063f33e92f4f4c381c7
+source-git-commit: 91b60539010318ea8d545bff4e5cc7e2d0aa70fc
 workflow-type: tm+mt
 source-wordcount: '1588'
 ht-degree: 0%
@@ -41,7 +41,7 @@ U kunt beperkingen voor het gegevensgebruik op een bestemming instellen door gev
 
 Het bepalen van marketing gebruiksgevallen op bestemmingen staat u toe om ervoor te zorgen dat om het even welke profielen of segmenten die naar die bestemmingen worden verzonden volgzaam met het beleid van het gegevensgebruik zijn. Daarom zou u aangewezen gevallen van het marketinggebruik aan uw bestemmingen moeten toevoegen die op de behoeften van uw organisatie worden gebaseerd om beleidsbeperkingen op activering af te dwingen.
 
-Gebruiksscenario&#39;s voor marketingdoeleinden kunnen alleen worden geselecteerd wanneer u een bestemming voor het eerst instelt. Afhankelijk van het type van bestemming u met werkt, zal de kans om de gevallen van het marketinggebruik te vormen op verschillende punten in het opstellingswerkschema verschijnen. Zie de [bestemmingsdocumentatie](../destinations/destinations-overview.md#data-governance) voor stappen op hoe te om uw bijzondere bestemming te vormen.
+Gebruiksscenario&#39;s voor marketingdoeleinden kunnen alleen worden geselecteerd wanneer u een bestemming voor het eerst instelt. Afhankelijk van het type van bestemming u met werkt, zal de kans om de gevallen van het marketinggebruik te vormen op verschillende punten in het opstellingswerkschema verschijnen. Zie de [bestemmingsdocumentatie](../destinations/overview.md) voor stappen op hoe te om uw bijzondere bestemming te vormen.
 
 ## Beleid voor gegevensgebruik beheren {#policies}
 
