@@ -5,7 +5,7 @@ seo-title: Google Customer Match Destination
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 seo-description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 translation-type: tm+mt
-source-git-commit: 24c8dd0f01d7ea14b2fa5827722e797bd209f50c
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 0%
@@ -174,19 +174,6 @@ Op de pagina **[!UICONTROL Revisie]** ziet u een overzicht van uw selectie. Sele
 Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Voltooien]** om uw selectie te bevestigen en gegevens naar de bestemming te verzenden.
 
 ![selectie bevestigen](../../assets/catalog/advertising/google-customer-match/review.png)
-
-
-<!--
-
-Insert in Step 6 when mobile device ID activation is available
-
-    >[!IMPORTANT]
-    >
-    >If you select mobile device IDs (GAID or IDFA) as primary identity in the Identity mapping step, you must also provide an Application Id in this step. If you selected GAID as identity, see [Set the Application ID](https://developer.android.com/studio/build/application-id) in the Android developer documentation. IF you selected IDFA as identity, see [App ID](https://developer.android.com/studio/build/application-id) in the Apple developer documentation.
-
-    ![segment schedule page](/help/rtcdp/destinations/assets/gcm-segment-schedule.png) 
-
--->
 
 ## Controleren of segmentactivering is gelukt {#verify-activation}
 
