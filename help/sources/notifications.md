@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics; notifications
-description: Met de Adobe I/O-gebeurtenissen kunt u zich abonneren op gebeurtenissen en websites gebruiken om meldingen te ontvangen over de status van uw flowuitvoering. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
+description: Met de Adobe I/O Events kunt u zich abonneren op gebeurtenissen en websites gebruiken om meldingen te ontvangen over de status van uw flowuitvoering. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
 solution: Experience Platform
 title: Meldingen voor stroomuitvoering
 topic: overview
 translation-type: tm+mt
 source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '781'
 ht-degree: 1%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 1%
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) wordt gebruikt om klantgegevens van verschillende bronnen binnen te verzamelen en te centraliseren [!DNL Platform]. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen te verzamelen en te centraliseren [!DNL Platform]. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Met Adobe I/O-gebeurtenissen kunt u zich abonneren op gebeurtenissen en websites gebruiken om meldingen te ontvangen over de status van uw flowuitvoering. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
+Met Adobe I/O Events kunt u zich abonneren op gebeurtenissen en websites gebruiken om meldingen te ontvangen over de status van uw flowuitvoering. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
 
 In dit document worden stappen beschreven voor het abonneren op gebeurtenissen, het registreren van websites en het ontvangen van meldingen met informatie over de status van uw flowuitvoering.
 
