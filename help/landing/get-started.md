@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Productdocumentatie Adobe Experience Platform
+title: Adobe Experience Platform-productdocumentatie
 topic: getting started
 translation-type: tm+mt
 source-git-commit: b5503440aec5afd48cafdfa765fd3521f6ea4c68
