@@ -32,7 +32,7 @@ De interactieve vraaguitvoering heeft de volgende beperkingen:
 
 | Parameter | Beperking |
 | --------- | ---------- |
-| Time-out query | 30 minuten |
+| Time-out query | 10 minuten |
 | Maximumaantal geretourneerde rijen | 50,000 |
 | Maximum aantal gelijktijdige query&#39;s | 5 |
 
