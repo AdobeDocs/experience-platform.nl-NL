@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Query Service] overzicht
+# [!DNL Query Service] - overzicht
 
 Adobe Experience Platform neemt gegevens op uit een groot aantal verschillende bronnen. Een belangrijke uitdaging voor marketeers is het logisch van deze gegevens inzicht te krijgen in hun klanten. Adobe Experience Platform [!DNL Query Service] vergemakkelijkt dat door u toe te staan om standaardSQL aan vraaggegevens binnen te gebruiken [!DNL Platform]. Gebruikend [!DNL Query Service], kunt u zich bij om het even welke dataset in aansluiten [!DNL Data Lake] en de vraagresultaten vangen als nieuwe dataset voor gebruik in rapportering, machine het leren, of voor opname in [!DNL Real-time Customer Profile]. Dit document biedt een overzicht van de rol van [!DNL Query Service] binnen [!DNL Experience Platform].
 
@@ -27,7 +27,7 @@ Adobe Experience Platform neemt gegevens op uit een groot aantal verschillende b
 
 ## [!DNL Query Service] en [!DNL Experience Platform] diensten
 
-[!DNL Query Service] wisselt en kan samen met de veelvoudige [!DNL Experience Platform] diensten worden gebruikt. Als u optimaal gebruik wilt maken van de [!DNL Query Service's] mogelijkheden, wordt u aangeraden vertrouwd te raken met deze services en te weten te komen hoe deze werken met [!DNL Query Service].
+[!DNL Query Service] wisselt en kan samen met de veelvoudige [!DNL Experience Platform] diensten worden gebruikt. Als u optimaal gebruik wilt maken van de [!DNL Query Service's] mogelijkheden, is het raadzaam bekend te raken met deze services en met de manier waarop deze werken [!DNL Query Service].
 
 ### [!DNL Data Science Workspace]
 
@@ -45,7 +45,7 @@ Met Adobe Experience Platform kunt u alle opgeslagen datasets, waaronder gedrags
 
 ## Volgende stappen en extra bronnen
 
-Door dit document te lezen, bent u geïntroduceerd aan [!DNL Query Service] en hoe het binnen het grotere werkingsgebied van werkt [!DNL Experience Platform]. Voor meer informatie over het in wisselwerking staan met diverse eindpunten binnen [!DNL Query Service] API, te lezen gelieve de de ontwikkelaarsgids [van de Dienst van de](api/getting-started.md)Vraag. Voor meer informatie over het gebruiken van de interactieve dienst binnen [!DNL Platform], te lezen gelieve de de gebruikersinterfacegids [van de Dienst van de](ui/overview.md)Vraag. Voor een uitvoerige lijst over het verbinden van externe cliënten met [!DNL Query Service], te lezen gelieve het de cliëntoverzicht [van de](clients/overview.md)Dienst van de Vraag.
+Door dit document te lezen, bent u geïntroduceerd aan [!DNL Query Service] en hoe het binnen het grotere werkingsgebied van werkt [!DNL Experience Platform]. Voor meer informatie over het in wisselwerking staan met diverse eindpunten binnen [!DNL Query Service] API, te lezen gelieve de de ontwikkelaarsgids [van de Dienst van de](api/getting-started.md)Vraag. Voor meer informatie over het gebruiken van de interactieve dienst binnen [!DNL Platform], gelieve te lezen de de gebruikersinterfacegids [van de Dienst van de](ui/overview.md)Vraag. Voor een uitvoerige lijst over het verbinden van externe cliënten met [!DNL Query Service], te lezen gelieve het de cliëntoverzicht [van de](clients/overview.md)Dienst van de Vraag.
 
 Bekijk de volgende video om uzelf beter voor te bereiden op het uitvoeren van query&#39;s. Deze video deelt uiteinden en beste praktijken voor het runnen van vragen in de interface van de vraagredacteur, cliënten PSQL, bedrijfsintelligentie (BI) oplossingen, en HTTP API.
 
