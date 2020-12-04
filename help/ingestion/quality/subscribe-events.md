@@ -73,7 +73,7 @@ Om het volledige schema voor gebeurtenisberichten te bekijken, verwijs naar de [
 
 ## Volgende stappen
 
-Zodra u [!DNL Platform] berichten aan uw project hebt geregistreerd, kunt u ontvangen gebeurtenissen van het overzicht [!UICONTROL van het]Project bekijken. Raadpleeg de handleiding voor het [overtrekken van I/O-gebeurtenissen](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) voor Adobe voor gedetailleerde instructies over het overtrekken van gebeurtenissen.
+Zodra u [!DNL Platform] berichten aan uw project hebt geregistreerd, kunt u ontvangen gebeurtenissen van het overzicht [!UICONTROL van het]Project bekijken. Raadpleeg de handleiding voor het [overtrekken van Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) voor gedetailleerde instructies over het overtrekken van gebeurtenissen.
 
 ## Aanhangsel
 
