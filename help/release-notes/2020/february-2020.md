@@ -1,5 +1,5 @@
 ---
-title: Opmerkingen bij de release Adobe Experience Platform
+title: Opmerkingen bij de release van Adobe Experience Platform
 description: Opmerkingen bij de release van Experience Platform van 12 februari 2020
 doc-type: release notes
 last-update: February 14, 2019
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# Opmerkingen bij de release Adobe Experience Platform
+# Opmerkingen bij de release van Adobe Experience Platform
 
 **Releasedatum: 12 februari 2020**
 
@@ -23,7 +23,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 ## Bronnen {#sources}
 
-Het Adobe Experience Platform kan gegevens uit externe bronnen opnemen terwijl het toestaan van u om die gegevens te structureren, te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Platform] services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
 
 [!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
