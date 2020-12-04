@@ -8,7 +8,7 @@ description: De dienst API van het Beleid staat u toe om het beleid van het gege
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1201'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Dit document bevat een stapsgewijze zelfstudie voor het maken van beleid met de 
 
 Deze zelfstudie vereist een goed begrip van de volgende belangrijke concepten betrokken bij het creëren en evalueren van beleid:
 
-* [[!DNL-gegevensbeheer]](../home.md): Het kader waarmee de naleving van het gegevensgebruik wordt [!DNL Platform] afgedwongen.
+* [[!DNL Data Governance]](../home.md): Het kader waarmee de naleving van het gegevensgebruik wordt [!DNL Platform] afgedwongen.
 * [Labels](../labels/overview.md)voor gegevensgebruik: Labels voor gegevensgebruik worden toegepast op XDM-gegevensvelden en geven beperkingen op voor de manier waarop die gegevens kunnen worden benaderd.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 * [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
