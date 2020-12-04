@@ -8,7 +8,7 @@ description: Git is een gedistribueerd versiecontrolesysteem voor het bijhouden 
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '273'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ De [!DNL Data Science Workspace JupyterLab] omgeving is een gehoste omgeving en 
 
 ## Verbinding maken [!DNL Git] met de [!DNL Data Science Workspace JupyterLab Notebooks] omgeving
 
-Start door te navigeren [!DNL Adobe Experience Platform] naar de omgeving [[!DNL JupyterLabs-laptops]](https://platform.adobe.com/notebooks/jupyterLab) .
+Begin door te lanceren [!DNL Adobe Experience Platform] en naar het [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) milieu te navigeren.
 
 Selecteer [!DNL JupyterLab]Bestand **[!UICONTROL en houd de muisaanwijzer boven]** Nieuw ****. Van dropdown die verschijnt, uitgezochte **[!UICONTROL Terminal]**.
 
@@ -60,4 +60,4 @@ Vervolgens kloont u de opslagplaats die u wilt gebruiken met de `git clone` opdr
 
 ## Volgende stappen
 
-Nadat u klaar bent met het klonen van uw opslagplaats, kunt u Git gebruiken zoals u gewoonlijk op uw lokale computer zou doen om met anderen samen te werken aan laptops. Raadpleeg voor meer informatie over wat u kunt doen [!DNL JupyterLab]de [[!DNL JupyterLab-gebruikershandleiding]](./overview.md).
+Nadat u klaar bent met het klonen van uw opslagplaats, kunt u Git gebruiken zoals u gewoonlijk op uw lokale computer zou doen om met anderen samen te werken aan laptops. Raadpleeg de [!DNL JupyterLab]pagina voor meer informatie over wat u binnen kunt doen [[!DNL JupyterLab user guide]](./overview.md).
