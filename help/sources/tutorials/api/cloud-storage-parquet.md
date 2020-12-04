@@ -73,7 +73,7 @@ Als u de gebruikersinterface liever in wilt gebruiken, [!DNL Experience Platform
 POST /schemaregistry/tenant/schemas
 ```
 
-**Verzoek**
+**Request**
 
 Met de volgende voorbeeldaanvraag wordt een XDM-schema gemaakt dat de XDM- [!DNL Individual Profile] klasse uitbreidt.
 
