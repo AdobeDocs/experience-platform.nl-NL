@@ -25,7 +25,7 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over Adobe Exper
 
 ## Wat zijn API&#39; [!DNL Experience Platform] s? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] biedt veelvoudige RESTful APIs aan die HTTP- verzoeken om tot [!DNL Platform] middelen gebruiken. Deze dienst APIs elk stelt veelvoudige eindpunten bloot, en staat u toe om verrichtingen aan lijst (GET), raadpleging (GET) uit te voeren, (PUT en/of PATCH), en (DELETE) middelen uit te geven. Raadpleeg de [API-naslagdocumentatie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) bij Adobe I/O voor meer informatie over specifieke eindpunten en bewerkingen die beschikbaar zijn voor elke service.
+[!DNL Experience Platform] biedt veelvoudige RESTful APIs aan die HTTP- verzoeken om tot [!DNL Platform] middelen gebruiken. Deze dienst APIs elk stelt veelvoudige eindpunten bloot, en staat u toe om verrichtingen aan lijst (GET), raadpleging (GET) uit te voeren, (PUT en/of PATCH), en (DELETE) middelen uit te geven. Raadpleeg de [API-naslagdocumentatie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) op Adobe I/O voor meer informatie over specifieke eindpunten en bewerkingen die voor elke service beschikbaar zijn.
 
 ## Hoe kan ik een API-aanvraag opmaken? {#how-do-i-format-an-api-request}
 
@@ -175,7 +175,7 @@ Dit foutbericht wordt weergegeven wanneer een `Authorization` koptekst ontbreekt
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer het toegangstoken in de `Authorization` koptekst niet geldig is. Controleer of het token correct is ingevoerd of [genereer een nieuw token](../tutorials/authentication.md) in de I/O-console van Adobe.
+Dit foutbericht wordt weergegeven wanneer het toegangstoken in de `Authorization` koptekst niet geldig is. Controleer of het token correct is ingevoerd of [genereer een nieuw token](../tutorials/authentication.md) in de Adobe I/O-console.
 
 ### API-sleutel is vereist
 
@@ -197,7 +197,7 @@ Dit foutbericht wordt weergegeven wanneer een API-sleutelheader (`x-api-key`) on
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer de waarde van de opgegeven API-sleutelheader (`x-api-key`) ongeldig is. Controleer of u de sleutel correct hebt ingevoerd voordat u het opnieuw probeert. Als u de API-sleutel niet kent, vindt u deze in de I/O-console [van](https://console.adobe.io)Adobe: op het tabblad **Integraties** navigeert u naar de sectie **Overzicht** voor een specifieke integratie om de API-sleutel onder **Client Credentials** te vinden.
+Dit foutbericht wordt weergegeven wanneer de waarde van de opgegeven API-sleutelheader (`x-api-key`) ongeldig is. Controleer of u de sleutel correct hebt ingevoerd voordat u het opnieuw probeert. Als u de API-sleutel niet kent, vindt u deze in de [Adobe I/O-console](https://console.adobe.io): op het tabblad **Integraties** navigeert u naar de sectie **Overzicht** voor een specifieke integratie om de API-sleutel onder **Client Credentials** te vinden.
 
 
 ### Ontbrekende koptekst
@@ -220,7 +220,7 @@ Dit foutbericht wordt weergegeven wanneer een IMS org-header (`x-gw-ims-org-id`)
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer de gebruiker of Adobe I/O-integratie (geïdentificeerd door het [toegangstoken](#how-do-i-get-an-access-token) in de `Authorization` koptekst) niet het recht heeft om aanroepen uit te voeren naar API&#39; [!DNL Experience Platform] s voor de IMS-organisatie die in de `x-gw-ims-org-id` koptekst is opgegeven. Controleer of u de juiste id voor uw IMS-organisatie in de koptekst hebt opgegeven voordat u het opnieuw probeert. Als u uw organisatie-id niet kent, vindt u deze in de I/O-console [van](https://console.adobe.io)Adobe: op het tabblad **Integraties** navigeert u naar de sectie **Overzicht** voor een specifieke integratie om de id onder **Client Credentials** te vinden.
+Dit foutbericht wordt weergegeven wanneer de gebruiker of Adobe I/O-integratie (geïdentificeerd door het [toegangstoken](#how-do-i-get-an-access-token) in de `Authorization` koptekst) niet het recht heeft om aanroepen uit te voeren naar API&#39; [!DNL Experience Platform] s voor de IMS-organisatie die in de `x-gw-ims-org-id` koptekst is opgegeven. Controleer of u de juiste id voor uw IMS-organisatie in de koptekst hebt opgegeven voordat u het opnieuw probeert. Als u uw organisatie-id niet kent, vindt u deze in de [Adobe I/O-console](https://console.adobe.io): op het tabblad **Integraties** navigeert u naar de sectie **Overzicht** voor een specifieke integratie om de id onder **Client Credentials** te vinden.
 
 ### Geldig inhoudstype niet opgegeven
 
