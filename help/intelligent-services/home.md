@@ -31,7 +31,7 @@ Adobe beschikt over AI/ML-expertise in combinatie met uitgebreide CXM-ervaring, 
 
 ### Hogere nauwkeurigheid in voorspellende inzichten
 
-ontwikkeld met het hoogste nauwkeurigheidsniveau dat voortvloeit uit de toepassing van geavanceerde algoritmische AI/ML-modellen; de mogelijkheid om AI/ML op een gemeenschappelijke gegevensset met de diepte en granulariteit uit te voeren om het segmenteren en dicteren van voorspellingen mogelijk te maken; en intelligentie om de wat en waarom achter voorspellende klanteninzichten te verstrekken.
+ontwikkeld met het hoogste nauwkeurigheidsniveau dat voortvloeit uit de toepassing van geavanceerde algoritmische AI/ML-modellen; de mogelijkheid om AI/ML uit te voeren op een gemeenschappelijke gegevensset met de diepte en granulariteit, zodat voorspellingen gesegmenteerd en in kaart gebracht kunnen worden; en intelligentie om te verstrekken wat en waarom achter voorspelbare klanteninzichten.
 
 ### Snelle tijd aan inzicht en ROI
 
