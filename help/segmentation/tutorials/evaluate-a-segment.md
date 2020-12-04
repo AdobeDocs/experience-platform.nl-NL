@@ -8,7 +8,7 @@ description: Dit document biedt een zelfstudie voor het evalueren van segmenten 
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1535'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 # Evalueer en open segmentresultaten
 
-Dit document bevat een zelfstudie voor het evalueren van segmenten en het benaderen van segmentresultaten met de [[!DNL-segmentatie-API]](../api/getting-started.md).
+Dit document biedt een zelfstudie voor het evalueren van segmenten en het benaderen van segmentresultaten met behulp van de [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] services die betrokken zijn bij het maken van doelsegmenten. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Staat u toe om publiekssegmenten van [!DNL Real-time Customer Profile] gegevens te bouwen.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
 - [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
@@ -230,10 +230,10 @@ Meer gedetailleerde informatie over het gebruiken van dit eindpunt kan in de gid
 
 ## Volgende stappen
 
-Nadat het exporteren is voltooid, zijn uw gegevens beschikbaar in de map [!DNL Data Lake] in [!DNL Experience Platform]. Vervolgens kunt u de [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) gebruiken om toegang te krijgen tot de gegevens via de `batchId` koppeling voor het exporteren. Afhankelijk van de grootte van het segment, kunnen de gegevens in brokken zijn en de partij kan uit verscheidene dossiers bestaan.
+Nadat het exporteren is voltooid, zijn uw gegevens beschikbaar in de map [!DNL Data Lake] in [!DNL Experience Platform]. Vervolgens kunt u het dialoogvenster gebruiken [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) om toegang te krijgen tot de gegevens met behulp van de `batchId` koppeling voor het exporteren. Afhankelijk van de grootte van het segment, kunnen de gegevens in brokken zijn en de partij kan uit verscheidene dossiers bestaan.
 
 Voor stapsgewijze instructies over het gebruik van de [!DNL Data Access] API voor het openen en downloaden van batchbestanden volgt u de zelfstudie [Gegevenstoegang](../../data-access/tutorials/dataset-data.md).
 
 U kunt geëxporteerde segmentgegevens ook openen met [!DNL Adobe Experience Platform Query Service]succes. Met de UI of RESTful API [!DNL Query Service] kunt u query&#39;s schrijven, valideren en uitvoeren op gegevens binnen de [!DNL Data Lake]API.
 
-Raadpleeg de documentatie bij [[!DNL Query Service]](../../query-service/home.md)voor meer informatie over het uitvoeren van query&#39;s op publieksgegevens.
+Voor meer informatie over hoe te om publieksgegevens te vragen, te herzien gelieve de documentatie over [[!DNL Query Service]](../../query-service/home.md).
