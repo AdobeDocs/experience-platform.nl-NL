@@ -5,9 +5,9 @@ title: Streaming segmentering
 topic: developer guide
 description: Dit document bevat voorbeelden over het gebruik van streaming segmentatie met de API voor streaming segmentatie.
 translation-type: tm+mt
-source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
+source-git-commit: 2bd4b773f7763ca408b55e3b0e2d0bbe9e7b66ba
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1310'
 ht-degree: 0%
 
 ---
@@ -80,20 +80,17 @@ Opdat een segment wordt geëvalueerd gebruikend het stromen segmentatie, moet de
 | Binnenkomende hit die verwijst naar een profiel binnen een relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis en een of meer profielkenmerken. |
 | Meerdere gebeurtenissen die naar een profiel verwijzen | Elke segmentdefinitie die verwijst naar meerdere gebeurtenissen **in de afgelopen 24 uur** en (optioneel), heeft een of meer profielkenmerken. |
 
-In de volgende sectie worden voorbeelden van segmentdefinities weergegeven die **niet** zijn ingeschakeld voor streamingsegmentatie.
+Een segmentdefinitie zal **niet** voor het stromen segmentatie in de volgende scenario&#39;s worden toegelaten:
 
-| Type query | Details |
-| ---------- | ------- | 
-| Binnenkomende hit die verwijst naar een profiel binnen een relatief venster | Een segmentdefinitie die Adobe Audience Manager (AAM)-segmenten of -kenmerken bevat. |
-| Meerdere gebeurtenissen die naar een profiel verwijzen | Een segmentdefinitie die Adobe Audience Manager (AAM)-segmenten of -kenmerken bevat. |
-| Vragen over meerdere entiteiten | Vraagstukken met meerdere entiteiten worden over het geheel genomen **niet** ondersteund door streamingsegmentatie. |
+- De segmentdefinitie omvat Adobe Audience Manager (AAM)-segmenten of -kenmerken.
+- De segmentdefinitie omvat meerdere entiteiten (vragen van meerdere entiteiten).
 
 Daarnaast zijn enkele richtlijnen van toepassing wanneer streamingsegmentatie wordt uitgevoerd:
 
 | Type query | Richtsnoer |
 | ---------- | -------- |
 | Query voor één gebeurtenis | Er gelden geen limieten voor het terugzoekvenster. |
-| Query uitvoeren met gebeurtenisgeschiedenis | <ul><li>Het terugkijkvenster is beperkt tot **één dag**.</li><li>Tussen de gebeurtenissen **moet** een strikte voorwaarde voor de tijdvolgorde bestaan.</li><li>Slechts worden de eenvoudige tijdorden (vóór en na) tussen de gebeurtenissen toegestaan.</li><li>De afzonderlijke gebeurtenissen **kunnen niet** worden genegeerd. De gehele query **kan** echter worden genegeerd.</li></ul> |
+| Query uitvoeren met gebeurtenisgeschiedenis | <ul><li>Het terugkijkvenster is beperkt tot **één dag**.</li><li>Tussen de gebeurtenissen **moet** een strikte voorwaarde voor de tijdvolgorde bestaan.</li><li>Query&#39;s met ten minste één genegeerde gebeurtenis worden ondersteund. De hele gebeurtenis **kan echter geen negatie zijn** .</li></ul> |
 
 ## Hiermee worden alle segmenten opgehaald die zijn ingeschakeld voor streaming segmentatie
 
