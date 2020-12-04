@@ -49,7 +49,7 @@ Ga naar &quot;chrome://flags/&quot; op de adresbalk. U kunt de markering *&quot;
 
 ![markering samensite uitschakelen](./images/faq/samesite-flag.png)
 
-Na Stap 2, wordt u ertoe aangezet om uw browser opnieuw te lanceren. Nadat u het programma opnieuw hebt gestart, kunt u het beste toegang [!DNL Jupyterlab] krijgen.
+Na Stap 2, wordt u ertoe aangezet om uw browser opnieuw te lanceren. Nadat u de toepassing opnieuw hebt gestart, kunt u deze weer [!DNL Jupyterlab] gebruiken.
 
 ## Waarom heb ik geen toegang tot [!DNL JupyterLab] Safari?
 
