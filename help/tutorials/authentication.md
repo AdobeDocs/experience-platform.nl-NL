@@ -8,7 +8,7 @@ description: 'Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -45,11 +45,11 @@ Als u geen Adobe ID hebt, kunt u er een maken door de volgende stappen uit te vo
 
 ## Ontwikkelaar en gebruiker worden voor [!DNL Experience Platform] een organisatie
 
-Voordat u integratie op Adobe I/O maakt, moet uw account beschikken over ontwikkelaarsmachtigingen voor een product in een IMS-organisatie. Gedetailleerde informatie over ontwikkelaarsaccounts in de Admin Console vindt u in het [ondersteuningsdocument](https://helpx.adobe.com/enterprise/using/manage-developers.html) voor ontwikkelaars.
+Voordat u integraties op Adobe I/O kunt maken, moet uw account beschikken over ontwikkelmachtigingen voor een product in een IMS-organisatie. Gedetailleerde informatie over ontwikkelaarsaccounts in de Admin Console vindt u in het [ondersteuningsdocument](https://helpx.adobe.com/enterprise/using/manage-developers.html) voor ontwikkelaars.
 
 **Toegang voor ontwikkelaars verkrijgen**
 
-Neem contact op met een [!DNL Admin Console] beheerder in uw organisatie om u toe te voegen als ontwikkelaar voor een van de producten van uw organisatie met de [[!DNL-Admin Console]](https://adminconsole.adobe.com/).
+Neem contact op met een [!DNL Admin Console] beheerder in uw organisatie om u toe te voegen als ontwikkelaar voor een van de producten van uw organisatie die de [[!DNL Admin Console]](https://adminconsole.adobe.com/)software gebruiken.
 
 ![](images/authentication/assign-developer.png)
 
@@ -57,7 +57,7 @@ De beheerder moet u als ontwikkelaar toewijzen aan ten minste één productprofi
 
 ![](images/authentication/add-developer.png)
 
-Als u eenmaal als ontwikkelaar bent toegewezen, hebt u toegangsrechten om integraties te maken voor [Adobe I/O](https://www.adobe.com/go/devs_console_ui). Deze integratie vormt een pijplijn van externe apps en services naar de Adobe-API.
+Als u eenmaal als ontwikkelaar bent toegewezen, hebt u toegangsrechten om integraties op [Adobe I/O](https://www.adobe.com/go/devs_console_ui)te maken. Deze integratie vormt een pijplijn van externe apps en services naar de Adobe-API.
 
 **Toegang tot gebruikers verkrijgen**
 
