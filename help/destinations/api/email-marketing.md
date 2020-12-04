@@ -5,7 +5,7 @@ title: E-mailmarketingdoelen maken
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 0%
@@ -344,7 +344,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsSpeciaal identiteitskaart u in de stap verkrijgt [krijgt de lijst van beschikbare bestemmingen](#get-the-list-of-available-destinations).
-* `{S3 or SFTP}`: Vul het gewenste verbindingstype voor deze bestemming in. Blader in de [doelcatalogus](../../rtcdp/destinations/destinations-catalog.md)naar de gewenste bestemming om te zien of de S3- en/of SFTP-verbindingstypen worden ondersteund.
+* `{S3 or SFTP}`: Vul het gewenste verbindingstype voor deze bestemming in. Blader in de [doelcatalogus](../catalog/overview.md)naar de gewenste bestemming om te zien of de S3- en/of SFTP-verbindingstypen worden ondersteund.
 * `{ACCESS_ID}`: Uw toegangs-id voor uw [!DNL Amazon] S3 opslaglocatie.
 * `{SECRET_KEY}`: Uw geheime sleutel voor uw [!DNL Amazon] S3 opslagplaats.
 
