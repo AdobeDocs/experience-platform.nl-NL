@@ -17,6 +17,6 @@ ht-degree: 0%
 
 [!DNL Observability Insights] kunt u zich abonneren op gebeurtenismeldingen met betrekking tot Adobe Experience Platform-activiteiten. Ze verminderen of elimineren de noodzaak om de [[!DNL Observability Insights] API](../api/overview.md) te raadplegen om te controleren of een taak is voltooid of dat een bepaalde mijlpaal in een werkstroom is bereikt.
 
-[!DNL Observability] momenteel maken meldingen gebruik van Adobe I/O-gebeurtenissen, die naar een geconfigureerde webhaak kunnen worden verzonden om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken. Nochtans, zullen de berichtmogelijkheden ook e-mail en UI berichten uiteindelijk omvatten.
+[!DNL Observability] adobe i/o Events worden momenteel gebruikt voor meldingen die naar een geconfigureerde webhaak kunnen worden verzonden om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken. Nochtans, zullen de berichtmogelijkheden ook e-mail en UI berichten uiteindelijk omvatten.
 
 Ga naar de zelfstudie over het [!DNL Observability] abonneren op I/O-gebeurtenismeldingen [om aan de slag te gaan met](./subscribe.md)meldingen.
