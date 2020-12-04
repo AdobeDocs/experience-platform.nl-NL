@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Aan de slag met de [!DNL Observability Insights] API
+# Getting started with the [!DNL Observability Insights] API
 
 Met de [!DNL Observability Insights] API kunt u metrische gegevens ophalen voor verschillende Adobe Experience Platform-functies. Dit document biedt een inleiding tot de kernconcepten u moet kennen alvorens te proberen om vraag aan [!DNL Observability Insights] API te maken.
 
