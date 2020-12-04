@@ -5,7 +5,7 @@ topic: guide
 translation-type: tm+mt
 source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1192'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform biedt een aantal instructies om te voorkomen dat u geg
 
 Men adviseert dat u de volgende de dienstendocumentatie van de Experience Platform alvorens gegevensmodellen voor gebruik binnen leest te proberen te bouwen [!DNL Real-time Customer Profile]. Om te kunnen werken met gegevensmodellen en de in dit document geschetste instructies is het nodig dat de verschillende diensten van de Experience Platform die betrokken zijn bij het beheer van [!DNL Real-time Customer Profile] entiteiten, op de hoogte zijn van:
 
-* [[!DNL Real-time klantprofiel]](home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-time Customer Profile]](home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [Adobe Experience Platform Identity Service](../identity-service/home.md): Steunt de verwezenlijking van een &quot;enige mening van de klant&quot;door identiteiten van verschillende gegevensbronnen te overbruggen aangezien zij in worden opgenomen [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../xdm/schema/composition.md): Een inleiding tot schema&#39;s en gegevensmodellering binnen Experience Platform.
@@ -62,7 +62,7 @@ Aanbevolen wordt de volgende instructies te gebruiken bij het maken van een gege
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Aantal geadviseerde datasets om tot het [!DNL Profile] unieschema bij te dragen | 20 | Zacht | **Een maximum van 20[!DNL Profile]-Toegelaten datasets wordt geadviseerd.** Om een andere dataset voor toe te laten [!DNL Profile], zou een bestaande dataset eerst moeten worden verwijderd of worden onbruikbaar gemaakt. |
+| Aantal geadviseerde datasets om tot het [!DNL Profile] unieschema bij te dragen | 20 | Zacht | **Een maximum van 20 [!DNL Profile]-Toegelaten datasets wordt geadviseerd.** Om een andere dataset voor toe te laten [!DNL Profile], zou een bestaande dataset eerst moeten worden verwijderd of worden onbruikbaar gemaakt. |
 | Aantal aanbevolen relaties met meerdere entiteiten | 5 | Zacht | **Er worden maximaal vijf relaties tussen primaire entiteiten en dimensie-entiteiten aanbevolen.** Aanvullende relatietoewijzingen moeten pas worden gemaakt wanneer een bestaande relatie is verwijderd of uitgeschakeld. |
 | Maximale JSON-diepte voor id-veld dat wordt gebruikt in een relatie met meerdere entiteiten | 4 | Zacht | **De aanbevolen maximale JSON-diepte voor een id-veld in relaties met meerdere entiteiten is 4.** Dit betekent dat in een hoogst-genest schema, gebieden die meer dan 4 niveaus diep worden genesteld niet als gebied van identiteitskaart in een verhouding zouden moeten worden gebruikt. |
 | Arraycardinaliteit in een profielfragment | &lt;=500 | Zacht | **De optimale arraycardinaliteit in een profielfragment (tijdonafhankelijke gegevens) is &lt;=500.** |
@@ -72,8 +72,8 @@ Aanbevolen wordt de volgende instructies te gebruiken bij het maken van een gege
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Geen gegevens uit tijdreeksen toegestaan voor niet-[!DNL XDM Individual Profile] entiteiten | 0 | Hard | **Gegevens uit tijdreeksen zijn niet toegestaan voor niet-[!DNL XDM Individual Profile]entiteiten in de profielservice.** Als een tijdreeksdataset met een niet-[!DNL XDM Individual Profile] identiteitskaart wordt geassocieerd, zou de dataset niet voor [!DNL Profile]. moeten worden toegelaten. |
-| Geen geneste relaties | 0 | Zacht | **U zou geen verband tussen twee niet-[!DNL XDM Individual Profile]schema&#39;s moeten creëren.** De capaciteit om verhoudingen tot stand te brengen wordt niet geadviseerd voor om het even welke schema&#39;s die geen deel van het [!DNL Profile] unieschema uitmaken. |
+| Geen gegevens uit tijdreeksen toegestaan voor niet-[!DNL XDM Individual Profile] entiteiten | 0 | Hard | **Gegevens uit tijdreeksen zijn niet toegestaan voor niet-[!DNL XDM Individual Profile] entiteiten in de profielservice.** Als een tijdreeksdataset met een niet-[!DNL XDM Individual Profile] identiteitskaart wordt geassocieerd, zou de dataset niet voor [!DNL Profile]. moeten worden toegelaten. |
+| Geen geneste relaties | 0 | Zacht | **U zou geen verband tussen twee niet-[!DNL XDM Individual Profile] schema&#39;s moeten creëren.** De capaciteit om verhoudingen tot stand te brengen wordt niet geadviseerd voor om het even welke schema&#39;s die geen deel van het [!DNL Profile] unieschema uitmaken. |
 | Maximale JSON-diepte voor veld primaire id | 4 | Zacht | **De aanbevolen maximale JSON-diepte voor het veld primaire id is 4.** Dit betekent dat in een hoogst-genest schema, u geen gebied als primaire identiteitskaart zou moeten selecteren als het meer dan 4 niveaus diep wordt genesteld. Een veld op het vierde geneste niveau kan als primaire id worden gebruikt. |
 
 ## Gegevensgroottehulplijnen
