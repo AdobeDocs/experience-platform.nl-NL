@@ -7,7 +7,7 @@ description: Met Adobe Experience Platform kunt u aangepaste functiepijpleidinge
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -439,4 +439,4 @@ Zodra het scoren heeft voltooid, zou uw eigenschappijpleiding operationeel moete
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Door dit document te lezen, hebt u een eigenschappijplijn gebruikend ModelAuthoring SDK ontworpen, tot een beeld van het Dok geleid, en gebruikt het beeld URL van het Docker om een model van de eigenschappijplijn tot stand te brengen door API te gebruiken. [!DNL Sensei Machine Learning] U kunt nu gegevenssets transformeren en gegevensfuncties op schaal extraheren met de [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
+Door dit document te lezen, hebt u een eigenschappijplijn gebruikend ModelAuthoring SDK ontworpen, tot een beeld van het Dok geleid, en gebruikt het beeld URL van het Docker om een model van de eigenschappijplijn tot stand te brengen door API te gebruiken. [!DNL Sensei Machine Learning] U bent nu klaar om gegevenssets verder te transformeren en gegevenseigenschappen op schaal te extraheren met behulp van de [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
