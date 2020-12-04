@@ -8,7 +8,7 @@ description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens 
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1587'
+source-wordcount: '1572'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,11 @@ Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een proto
 
 Deze zelfstudie vereist dat u toegang hebt tot een protocolsysteem via een geldige basisverbinding en informatie over het bestand dat u wilt gebruiken [!DNL Platform], inclusief het pad en de structuur van de tabel. Als u deze informatie niet hebt, raadpleegt u de zelfstudie over het [verkennen van protocolsystemen met behulp van de Flow Service API](../explore/protocols.md) voordat u deze zelfstudie probeert.
 
-* [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [Handleiding](../../../../xdm/api/getting-started.md)voor ontwikkelaars van het schemaregister: Omvat belangrijke informatie die u moet weten om vraag aan de Registratie API van het Schema met succes uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
 * [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen [!DNL Experience Platform].
-* [[!DNL Batch-inname]](../../../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens invoeren in [!DNL Experience Platform] als batchbestanden.
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens invoeren in [!DNL Experience Platform] als batchbestanden.
 * [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met een protocoltoepassing te verbinden gebruikend [!DNL Flow Service] API.
