@@ -4,7 +4,7 @@ solution: Experience Platform
 title: IAB TCF 2.0-ondersteuning in Real-time Customer Data Platform
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: b24c624df188be3cbe7f71dcdf8a23d2478c287c
+source-git-commit: 75a0b4ba1342ece3e34a7ef41782b9014516d4fe
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -45,7 +45,7 @@ Deze handleiding vereist ook een goed begrip van de volgende Adobe Experience Pl
    * [Opdrachten](../../../edge/consent/supporting-consent.md)voor SDK-toestemming: Een gebruiksscenario-overzicht van de toestemmingsgerelateerde bevelen van SDK in deze gids wordt getoond die.
 * [Adobe Experience Platform Segmentation Service](../../../segmentation/home.md): Hiermee kunt u [!DNL Real-time Customer Profile] gegevens opsplitsen in groepen van personen die vergelijkbare kenmerken delen en op vergelijkbare wijze reageren op marketingstrategieën.
 
-Naast de hierboven vermelde [!DNL Platform] diensten, zou u ook met [bestemmingen](../../destinations/destinations-overview.md) en hun gebruik in moeten vertrouwd zijn [!DNL Real-time CDP].
+Naast de hierboven vermelde [!DNL Platform] diensten, zou u ook met [bestemmingen](../../destinations/overview.md) en hun gebruik in moeten vertrouwd zijn [!DNL Real-time CDP].
 
 ## Overzicht van de instemmingsstroom van de klant {#summary}
 
