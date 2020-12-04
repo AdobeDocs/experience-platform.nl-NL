@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;Synapse;synapse;Azure Synapse Analytics
 solution: Experience Platform
-title: Een Azure Synapse Analytics-connector maken met de Flow Service API
+title: Een Azure synapse Analytics-connector maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Azure Synapse Analytics (hierna "Synapse" genoemd) aan Experience Platform te verbinden.
+description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Azure synapse Analytics (hierna "Synapse" genoemd) aan Experience Platform te verbinden.
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->De Azure Synapse Analytics-connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De Azure synapse Analytics-connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
