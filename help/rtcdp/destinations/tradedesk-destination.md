@@ -65,7 +65,7 @@ Als markator, wil ik segmenten kunnen gebruiken die van of apparaat IDs worden g
       * **[!UICONTROL Latijns-Amerika]**
    * **[!UICONTROL Geval]** voor gebruik bij het in de handel brengen: Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Raadpleeg de pagina [Data Governance in Adobe Experience Platform](../privacy/data-governance-overview.md#destinations) voor meer informatie over gevallen van marketinggebruik. Voor informatie over de individuele Adobe-bepaalde het in de handel brengen gebruiksgevallen, zie het overzicht [van het het gebruiksbeleid van](../../data-governance/policies/overview.md#core-actions)Gegevens.
 
-   ![De Stap van de Authentificatie van het Handelsbureau](assets/tradedesk-destination-authentication.png)
+   ![De Stap van de Authentificatie van de Handelsdesk](assets/tradedesk-destination-authentication.png)
 
 3. Klik op **[!UICONTROL Doel]** maken. Uw doel is nu gemaakt. U kunt op [!UICONTROL Opslaan en afsluiten] klikken als u de segmenten later wilt activeren. U kunt ook [!UICONTROL Volgende] selecteren om door te gaan met de workflow en de gewenste segmenten te selecteren. In beide gevallen raadpleegt u de volgende sectie Segmenten [](#activate-segments)activeren voor de rest van de workflow.
 
