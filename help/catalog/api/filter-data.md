@@ -7,7 +7,7 @@ description: De dienst API van de Catalogus staat reactiegegevens toe om door he
 translation-type: tm+mt
 source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2077'
 ht-degree: 0%
 
 ---
@@ -207,8 +207,8 @@ Er zijn enkele beperkingen waarmee u rekening kunt houden wanneer u tags gebruik
 * Tagnamen zijn uniek voor uw IMS-organisatie.
 * Adobe-processen kunnen voor bepaalde gedragingen tags gebruiken. De namen van deze tags worden standaard voorafgegaan door &quot;adobe&quot;. Daarom moet u deze conventie vermijden bij het declareren van labelnamen.
 * De volgende tagnamen zijn gereserveerd voor gebruik in [!DNL Experience Platform]de hele organisatie en kunnen daarom niet worden gedeclareerd als een tagnaam voor uw organisatie:
-   * `unifiedProfile`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden ingevoerd door [[!DNL Real-time klantprofiel]](../../profile/home.md).
-   * `unifiedIdentity`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden ingevoerd door [[!DNL Identity Service]](../../identity-service/home.md).
+   * `unifiedProfile`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden opgenomen door [[!DNL Real-time Customer Profile]](../../profile/home.md).
+   * `unifiedIdentity`: Deze tagnaam is gereserveerd voor gegevenssets die moeten worden opgenomen door [[!DNL Identity Service]](../../identity-service/home.md).
 
 Hieronder ziet u een voorbeeld van een gegevensset die een `tags` eigenschap bevat. De tags binnen die eigenschap hebben de vorm van sleutel-waardeparen, waarbij elke tagwaarde wordt weergegeven als een array met één tekenreeks:
 
