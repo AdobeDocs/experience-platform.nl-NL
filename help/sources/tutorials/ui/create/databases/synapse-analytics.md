@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;Synapse;synapse;azure synapse analytics
 solution: Experience Platform
-title: Een Azure Synapse Analytics-bronconnector in de gebruikersinterface maken
+title: Een Azure synapse Analytics-bronconnector maken in de gebruikersinterface
 topic: overview
 type: Tutorial
-description: Deze zelfstudie biedt stappen voor het maken van een Azure Synapse Analytics-bronconnector (hierna "Synapse" genoemd) via de gebruikersinterface van het Platform.
+description: Deze zelfstudie biedt stappen voor het maken van een Azure synapse Analytics-bronconnector (hierna "Synapse" genoemd) via de gebruikersinterface van het Platform.
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
@@ -51,11 +51,11 @@ Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en select
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer onder de categorie **[!UICONTROL Databases]** de optie **[!UICONTROL Azure Synapse Analytics]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders, uitgezocht **[!UICONTROL voeg gegevens]** toe om een nieuwe [!DNL Synapse] schakelaar tot stand te brengen.
+Selecteer onder de categorie **[!UICONTROL Databases]** de optie **[!UICONTROL Azure synapse Analytics]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders, uitgezocht **[!UICONTROL voeg gegevens]** toe om een nieuwe [!DNL Synapse] schakelaar tot stand te brengen.
 
 ![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
-De pagina **[!UICONTROL Connect to Azure Synapse Analytics]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Verbinding maken met Azure synapse Analytics]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
