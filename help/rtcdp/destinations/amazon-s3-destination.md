@@ -31,7 +31,7 @@ Zie de workflow voor [Cloud-opslagdoelen ](/help/rtcdp/destinations/cloud-storag
 
 Voor [!DNL Amazon S3] bestemmingen, ga de volgende informatie in creeer bestemmingswerkschema in:
 
-* **[!DNL Amazon S3]toegangstoets en[!DNL Amazon S3]geheime sleutel**: In [!DNL Amazon S3], produceer een `access key - secret access key` paar om Adobe in real time CDP toegang tot uw [!DNL Amazon S3] rekening te verlenen. Meer informatie vindt u in de documentatie [van](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon Web Services.
+* **[!DNL Amazon S3]toegangstoets en [!DNL Amazon S3] geheime sleutel**: In [!DNL Amazon S3], produceer een `access key - secret access key` paar om Adobe in real time CDP toegang tot uw [!DNL Amazon S3] rekening te verlenen. Meer informatie vindt u in de documentatie [van](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon Web Services.
 
 >[!IMPORTANT]
 >
