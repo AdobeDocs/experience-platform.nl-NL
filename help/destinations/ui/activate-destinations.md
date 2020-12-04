@@ -6,7 +6,7 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens u in het Platform van Gegevens van de Klant in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens u in het Platform van Gegevens van de Klant in real time door segmenten aan bestemmingen in kaart te brengen hebt. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1768'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Als u een andere id, zoals &quot;Rewards ID&quot; of &quot;Loyalty ID&quot;, als
 
 ![Loyalty-id als identiteit](../assets/ui/activate-destinations/rewardsid-as-identity.gif)
 
-Selecteer deze optie `Email_LC_SHA256` als doel als u de e-mailadressen van klanten bij het invoeren van gegevens in Adobe Experience Platform hebt gewijzigd volgens de vereisten voor [!DNL Facebook] e- [mailhashing](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements).
+Selecteer deze optie `Email_LC_SHA256` als doel als u de e-mailadressen van klanten bij het invoeren van gegevens in Adobe Experience Platform hebt gewijzigd volgens de vereisten voor [!DNL Facebook] e- [mailhashing](../catalog/social/facebook.md#email-hashing-requirements).
 
 Selecteer `Email` als doel-id als de e-mailadressen die u gebruikt geen hashing zijn. CDP in realtime zal de e-mailadressen hashen om aan [!DNL Facebook] vereisten te voldoen.
 
@@ -158,7 +158,7 @@ Het exporteren van bestanden kan op de volgende manieren variëren, afhankelijk 
 
 Bovendien kunt u verschillende kenmerken als verplicht markeren. Als u een kenmerk als verplicht markeert, moet het worden gemarkeerd zodat het geëxporteerde segment dat kenmerk moet bevatten. Het resultaat is dat het kan worden gebruikt als een aanvullende manier om te filteren. Een attribuut als verplicht markeren is **niet** vereist.
 
-Men adviseert dat één van de attributen een [unieke herkenningsteken](/help/rtcdp/destinations/email-marketing-destinations.md#identity) van uw schema is. Raadpleeg de identiteitssectie in de documentatie over [e-mailmarketingdoelen](/help/rtcdp/destinations/email-marketing-destinations.md#identity) voor meer informatie over verplichte kenmerken.
+Men adviseert dat één van de attributen een [unieke herkenningsteken](../../destinations/catalog/email-marketing/overview.md#identity) van uw schema is. Raadpleeg de identiteitssectie in de documentatie over [e-mailmarketingdoelen](../../destinations/catalog/email-marketing/overview.md#identity) voor meer informatie over verplichte kenmerken.
 
 >[!NOTE]
 > 
