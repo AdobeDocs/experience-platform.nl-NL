@@ -7,7 +7,7 @@ description: In dit document worden antwoorden gegeven op veelgestelde vragen ov
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -101,4 +101,4 @@ Als een bericht wordt [!DNL Real-time Customer Profile] afgewezen, is dit waarsc
 
 Er zijn twee typen naamruimten: standaard en aangepast. Wanneer u aangepaste naamruimten gebruikt, moet u ervoor zorgen dat de naamruimte is geregistreerd binnen [!DNL Identity Service]. Zie het overzicht [van naamruimte](../../identity-service/namespaces.md) voor identiteiten voor meer informatie over het gebruik van standaard- en aangepaste naamruimten.
 
-U kunt de [[!DNL Experience Platform UI]](https://platform.adobe.com) gebruiken om meer informatie te zien over waarom een bericht mislukte opname. Klik op **[!UICONTROL Controle]** in de linkernavigatie en bekijk het tabblad **[!UICONTROL Streaming end-to-end]** om de berichtbatches te zien die tijdens een geselecteerde tijdsperiode worden gestreamd.
+U kunt het gebruiken [[!DNL Experience Platform UI]](https://platform.adobe.com) om meer informatie te zien over waarom een bericht ontbrak het opnemen. Klik op **[!UICONTROL Controle]** in de linkernavigatie en bekijk het tabblad **[!UICONTROL Streaming end-to-end]** om de berichtbatches te zien die tijdens een geselecteerde tijdsperiode worden gestreamd.
