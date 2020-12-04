@@ -6,7 +6,7 @@ seo-title: Workflow voor sociale netwerkdoelen
 description: Instructies om verbinding te maken met uw sociale netwerk en accounts
 seo-description: Instructies om verbinding te maken met uw sociale netwerk en accounts
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Als u in de stap **Verificatie** eerder een verbinding met uw sociale netwerkbes
 
 Zodra uw geloofsbrieven worden bevestigd en Adobe Experience Cloud wordt aangesloten aan uw sociaal netwerk, kunt u **[!UICONTROL Volgende]** selecteren om aan de stap van de **[!UICONTROL Opstelling]** te werk te gaan.
 
-![Credentials bevestigd](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
+![Credentials bevestigd](../../assets/catalog/social/workflow/post-connect.png)
 
 Voer in de stap **[!UICONTROL Setup]** een [!UICONTROL naam] en een [!UICONTROL beschrijving] in voor de activeringsstroom en vul de [!UICONTROL account-id] van uw sociale netwerk en account in.
 
