@@ -80,7 +80,7 @@ Klik in de gebruikersinterface van het Platform op **[!UICONTROL Schema]** in de
 
 ### Een op records gebaseerd toestemmingsschema maken {#profile-schema}
 
-Van het **[!UICONTROL Browse]** lusje in de werkruimte **[!UICONTROL van]Schema**, creeer een nieuw schema dat op de [!DNL XDM Individual Profile] klasse wordt gebaseerd. Als u het schema hebt geopend in de Schema-editor, klikt u op **[!UICONTROL Toevoegen]** onder de sectie **[!UICONTROL Mixins]** links op het canvas.
+Van het **[!UICONTROL Browse]** lusje in de werkruimte **[!UICONTROL van] Schema**, creeer een nieuw schema dat op de [!DNL XDM Individual Profile] klasse wordt gebaseerd. Als u het schema hebt geopend in de Schema-editor, klikt u op **[!UICONTROL Toevoegen]** onder de sectie **[!UICONTROL Mixins]** links op het canvas.
 
 ![](../assets/iab/add-mixin-profile.png)
 
