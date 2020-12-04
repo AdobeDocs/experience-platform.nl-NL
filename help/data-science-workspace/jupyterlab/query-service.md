@@ -8,7 +8,7 @@ description: Met Adobe Experience Platform kunt u SQL (Structured Query Language
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '807'
 ht-degree: 1%
 
 ---
@@ -29,14 +29,14 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 - Een [!DNL Adobe Analytics] gegevensset
 
 - Een goed begrip van de volgende belangrijkste concepten die in deze zelfstudie worden gebruikt:
-   - [[!DNL het Model van de Gegevens van de Ervaring (XDM) en XDM Systeem]](../../xdm/home.md)
+   - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
    - [[!DNL Query Service]](../../query-service/home.md)
-   - [[!SQL-syntaxis voor DNL Query Service](../../query-service/sql/overview.md)
+   - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - Adobe Analytics
 
 ## Toegang [!DNL JupyterLab] en [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. Navigeer in [[!DNL-Experience Platform]](https://platform.adobe.com)naar **[!UICONTROL laptops]** vanuit de linkernavigatiekolom. Laat JupyterLab even laden.
+1. Navigeer in [[!DNL Experience Platform]](https://platform.adobe.com)de linkernavigatiekolom naar **[!UICONTROL laptops]** . Laat JupyterLab even laden.
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
