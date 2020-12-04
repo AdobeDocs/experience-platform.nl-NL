@@ -142,7 +142,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `name` | **Vereist.** De naam van het schema als een tekenreeks. |
 | `type` | **Vereist.** Het type taak als tekenreeks. De twee ondersteunde typen zijn &quot;batch_segmentation&quot; en &quot;export&quot;. |
 | `properties` | **Vereist.** Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
-| `properties.segments` | **Vereist wanneer`type`gelijk is aan &quot;batch_segmentation&quot;.** Het gebruiken `["*"]` zorgt ervoor alle segmenten inbegrepen zijn. |
+| `properties.segments` | **Vereist wanneer `type` gelijk is aan &quot;batch_segmentation&quot;.** Het gebruiken `["*"]` zorgt ervoor alle segmenten inbegrepen zijn. |
 | `schedule` | *Optioneel.* Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Lees de documentatie over de indeling van de [uitsnijdexpressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor meer informatie over de uitsnijdschema&#39;s. In dit voorbeeld betekent &quot;0 0 1 *&quot; dat dit schema om middernacht op het eerste van elke maand zal lopen. <br><br>Als deze tekenreeks niet wordt opgegeven, wordt automatisch een door het systeem gegenereerd schema gegenereerd. |
 | `state` | *Optioneel.* Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn &quot;actief&quot; en &quot;inactief&quot;. De status wordt standaard ingesteld op &quot;inactief&quot;. |
 
