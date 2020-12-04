@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -16,16 +16,16 @@ ht-degree: 6%
 
 ## Standaardnaamruimten {#standard-namespaces}
 
-Alle identiteiten waarnaar wordt verzonden, [!DNL Privacy Service] moeten worden opgegeven onder een specifieke naamruimte voor identiteiten. Identiteitsnaamruimten zijn een onderdeel van [Adobe Experience Platform Identity Service](../../identity-service/home.md) dat de context aangeeft waarop een identiteit betrekking heeft.
+Alle identiteiten waarnaar wordt verzonden, [!DNL Privacy Service] moeten worden opgegeven onder een specifieke naamruimte voor identiteiten. Identiteitsnaamruimten zijn een onderdeel van de [Adobe Experience Platform Identity Service](../../identity-service/home.md) dat de context aangeeft waarop een identiteit betrekking heeft.
 
 In de volgende tabel worden diverse veelgebruikte, vooraf gedefinieerde identiteitstypen weergegeven die door [!DNL Experience Platform]en de bijbehorende `namespace` waarden beschikbaar zijn gesteld:
 
 | Identiteitstype | `namespace` | `namespaceId` |
 | --- | --- | --- |
-| E-mail | E-mail | 6 |
+| Email | Email | 6 |
 | Telefoon | Telefoon | 7 |
 | Adobe Advertising Cloud-id | AdCloud | 411 |
-| UUID Adobe Audience Manager | CORE | 0 |
+| Adobe Audience Manager UUID | CORE | 0 |
 | Adobe Experience Cloud ID | ECID | 4 |
 | Adobe Target-id | TNTID | 9 |
 | [!DNL Apple] ID voor adverteerders | IDFA | 20915 |
