@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Real-time Customer Profile] overzicht
+# [!DNL Real-time Customer Profile] - overzicht
 
 [!DNL Real-time Customer Profile] laat u toe om een holistische mening van elke individuele klant te zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens te combineren. [!DNL Profile] staat u toe om uw ongelijke klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
 
