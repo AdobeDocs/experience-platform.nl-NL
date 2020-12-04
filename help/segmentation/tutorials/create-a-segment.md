@@ -8,7 +8,7 @@ description: Dit document biedt een zelfstudie voor het ontwikkelen, testen, voo
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Een segment maken
 
-Dit document bevat een zelfstudie voor het ontwikkelen, testen, voorvertonen en opslaan van een segmentdefinitie met de [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
+Dit document biedt een zelfstudie voor het ontwikkelen, testen, voorvertonen en opslaan van een segmentdefinitie met de [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md)code.
 
 Voor informatie over hoe te om segmenten te bouwen gebruikend het gebruikersinterface, te zien gelieve de gids [van de Bouwer van het](../ui/overview.md)Segment.
 
@@ -24,7 +24,7 @@ Voor informatie over hoe te om segmenten te bouwen gebruikend het gebruikersinte
 
 Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experience Platform] services die betrokken zijn bij het maken van doelsegmenten. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Staat u toe om publiekssegmenten van de gegevens van het Profiel van de Klant in real time te bouwen.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
 
