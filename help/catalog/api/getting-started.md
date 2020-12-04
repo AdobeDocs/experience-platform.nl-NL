@@ -7,7 +7,7 @@ description: Deze handleiding voor ontwikkelaars bevat stappen waarmee u de API 
 translation-type: tm+mt
 source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
