@@ -36,6 +36,6 @@ Zodra u gebruiksetiketten voor uw gegevens hebt toegevoegd, en beleid voor marke
 
 De segmenten die voor gebruik in worden toegelaten [!DNL Real-time Customer Profile] bevatten een identiteitskaart van het fusiebeleid binnen hun segmentdefinitie. Dit samenvoegbeleid bevat informatie over welke datasets in het segment moeten worden omvat, die beurtelings om het even welke toepasselijke etiketten van het gegevensgebruik bevatten. Voor specifieke stappen die het afdwingen van de naleving van het gegevensgebruik voor een publiekssegment, gelieve te volgen de de handhavingszelfstudie van het [gegevensgebruik voor segmenten](../segmentation/tutorials/governance.md).
 
-## Get started with [!DNL Privacy Service]
+## Aan de slag met [!DNL Privacy Service]
 
 [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u de persoonlijke gegevens van uw betrokkenen (klanten) in Adobe Experience Cloud-toepassingen kunt beheren. [!DNL Privacy Service] voorziet ook een centraal controle en registrerenmechanisme dat u toestaat om tot de status en de resultaten van banen toegang te hebben die [!DNL Experience Cloud] toepassingen impliceren. Voor instructies die tonen hoe te om [!DNL Privacy Service] banen tot stand te brengen en te controleren, volg de stappen die in de de ontwikkelaarsgids [van de](../privacy-service/api/getting-started.md) Privacy Service of de [gebruikershandleiding](../privacy-service/ui/overview.md)van de Privacy Service worden verstrekt.
