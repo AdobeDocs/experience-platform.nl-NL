@@ -8,7 +8,7 @@ description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's,
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Na het registreren van een het stromen verbinding, zult u, als gegevensproducent
 Deze zelfstudie vereist ook een praktische kennis van verschillende Adobe Experience Platform-services. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader voor het [!DNL Platform] organiseren van ervaringsgegevens.
-- [[!DNL Real-time klantprofiel]](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan het stromen ingestie APIs te maken.
 
