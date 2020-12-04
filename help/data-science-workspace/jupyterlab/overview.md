@@ -206,7 +206,7 @@ Sommige laptopsjablonen zijn beperkt tot bepaalde kernels. De beschikbaarheid va
         <td >nee</td>
         <td >ja</td>
         <td >nee</td>
-        <td >nee</td>
+        <td >no</td>
         <td >nee</td>
         <td >nee</td>
         <td >ja</td>
@@ -319,7 +319,7 @@ Ga voor meer informatie over elk van de ondersteunde laptops en hoe u deze kunt 
 | pymongo | 3.8.0 |
 | pijltje | 0.14.1 |
 | boto3 | 1.9.199 |
-| brussel | 0.5.2 |
+| ipyvolume | 0.5.2 |
 | fastparket | 0.3.2 |
 | python-snappy | 0.5.4 |
 | ipywebrtc | 0.5.0 |
