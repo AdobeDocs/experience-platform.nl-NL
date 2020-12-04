@@ -5,7 +5,7 @@ seo-title: Homepage en dashboards van klantgegevens in realtime Platform
 description: Dashboards, Home Page en First-Time User Experience of Adobe Experience Platform
 seo-description: Dashboards, Home Page en First-Time User Experience of Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Voor meer informatie over segmenten, zie het overzicht [van de Dienst van de](se
 
 **[!UICONTROL De bestemmingen]** tonen het totale aantal bestemmingen die voor de organisatie worden gecreeerd. Dit aantal wordt bijgewerkt wanneer de nieuwe bestemmingen worden gecreeerd.
 
-Voor meer informatie over bestemmingen, zie het overzicht [van](destinations/destinations-overview.md)Doelen.
+Voor meer informatie over bestemmingen, zie het overzicht [van](destinations/overview.md)Doelen.
 
 <!-- ### Successful profile records
 
@@ -134,4 +134,4 @@ De **[!UICONTROL Recente bestemmingen]** metrische kaart toont de vijf meest rec
 
 Klik een bestemming om de details voor dat punt te bekijken, of allen **[!UICONTROL te]** bekijken om informatie over meer bestemmingen te zien.
 
-Voor meer informatie over bestemmingen, zie het overzicht [van](destinations/destinations-overview.md)Doelen.
+Voor meer informatie over bestemmingen, zie het overzicht [van](destinations/overview.md)Doelen.
