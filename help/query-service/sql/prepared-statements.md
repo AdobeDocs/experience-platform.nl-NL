@@ -108,10 +108,10 @@ Wanneer dit wordt aangeroepen, ziet u precies dezelfde resultaten als voorheen:
 
 | id | firstname | lastname | geboortedatum | email | stad | land |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | alexander | davis | 1993-09-15 | stexample@example.com | Vancouver | Canada |
+| 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canada |
 | 10001 | antoïne | duboe | 1967-03-14 | example2@example.com | Parijs | Frankrijk |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokyo | Japan |
-| 10003 | linus | pettersson | 1982-06-03 | first | Stockholm | Zweden |
+| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stockholm | Zweden |
 | 10004 | aasir | kwijthaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
 | 10005 | fernando | rio | 2002-07-30 | example6@example.com | Santiago | Chili |
 
