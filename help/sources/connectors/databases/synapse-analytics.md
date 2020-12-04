@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;azure synapse analytics;Synapse;synapse
 solution: Experience Platform
-title: Azure Synapse Analytics-connector
+title: azure synapse Analytics-connector
 topic: overview
-description: In de onderstaande documentatie vindt u informatie over hoe u Azure Synapse Analytics kunt verbinden met Platform via API's of de gebruikersinterface.
+description: In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen Azure synapse Analytics en Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
 source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
 workflow-type: tm+mt
@@ -27,11 +27,11 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 
 ## Verbinding maken [!DNL Azure Synapse Analytics] met API&#39; [!DNL Platform] s
 
-- [Een Azure Synapse Analytics-connector maken met de Flow Service API](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Een Azure synapse Analytics-connector maken met de Flow Service API](../../tutorials/api/create/databases/synapse-analytics.md)
 - [Een databasesysteem verkennen met de Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Gegevens verzamelen van een database met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinding maken [!DNL Azure Synapse Analytics] met [!DNL Platform] de gebruikersinterface
 
-- [Een Azure Synapse Analytics-bronconnector in de gebruikersinterface maken](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [Een Azure synapse Analytics-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/databases/synapse-analytics.md)
 - [Vorm een dataflow voor een gegevensbestandschakelaar in UI](../../tutorials/ui/dataflow/databases.md)
