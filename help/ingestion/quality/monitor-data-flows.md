@@ -7,7 +7,7 @@ description: Deze gebruikershandleiding bevat een aantal stappen voor het contro
 translation-type: tm+mt
 source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Klik in de gebruikersinterface [van het](https://platform.adobe.com)Experience P
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-De **[!UICONTROL overzichtspagina voor streaming van begin tot einde]** wordt weergegeven. Deze werkruimte biedt een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die worden ontvangen door [!DNL Platform], een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die zijn verwerkt door [[!DNL Real-time klantprofiel]](../../profile/home.md), en een gedetailleerde lijst met binnenkomende gegevens.
+De **[!UICONTROL overzichtspagina voor streaming van begin tot einde]** wordt weergegeven. Deze werkruimte biedt een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die worden ontvangen door [!DNL Platform], een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die zijn verwerkt door [[!DNL Real-time Customer Profile]](../../profile/home.md), en een gedetailleerde lijst met binnenkomende gegevens.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -61,7 +61,7 @@ Bovendien bevatten mislukte records details over de fouten die zijn opgetreden t
 
 ## Gegevens van begin tot einde bijhouden in batch
 
-Klik in [[!DNL Experience Platform UI]](https://platform.adobe.com)op **[!UICONTROL Controle]** in het linkernavigatiemenu.
+Klik in het [[!DNL Experience Platform UI]](https://platform.adobe.com)dialoogvenster op **[!UICONTROL Bewaking]** links in het navigatiemenu.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
