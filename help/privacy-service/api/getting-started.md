@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ In deze handleiding wordt uitgelegd hoe u de [!DNL Privacy Service] API kunt geb
 
 Deze handleiding vereist een goed begrip van de volgende [!DNL Experience Platform] functies:
 
-* [[!DNL-Privacy Service]](../home.md): Verstrekt een RESTful API en een gebruikersinterface die u toestaan om toegang te beheren en verzoeken van uw gegevenssubjecten (klanten) over Adobe Experience Cloud toepassingen te schrappen.
+* [[!DNL Privacy Service]](../home.md): Verstrekt een RESTful API en een gebruikersinterface die u toestaan om toegang te beheren en verzoeken van uw gegevenssubjecten (klanten) over Adobe Experience Cloud toepassingen te schrappen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Privacy Service API te maken.
 
