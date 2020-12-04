@@ -8,7 +8,7 @@ description: 'In deze zelfstudie wordt de API voor leren van Sensei-machines geb
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Een verpakt recept (API) importeren
 
-Deze zelfstudie gebruikt de [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) om een [engine](../api/engines.md)te maken, ook wel een recept genoemd in de gebruikersinterface.
+In deze zelfstudie wordt de zelfstudie gebruikt [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) om een [engine](../api/engines.md)te maken die ook wel een recept in de gebruikersinterface wordt genoemd.
 
 Voordat u aan de slag gaat, is het belangrijk om te weten dat Adobe Experience Platform verschillende termen [!DNL Data Science Workspace] gebruikt om te verwijzen naar vergelijkbare elementen in de API en de gebruikersinterface. De API-termen worden in deze zelfstudie gebruikt en in de volgende tabel worden de corresponderende termen beschreven:
 
