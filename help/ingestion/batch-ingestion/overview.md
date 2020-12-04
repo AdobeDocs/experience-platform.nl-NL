@@ -7,7 +7,7 @@ description: Met de API voor batchverwerking kunt u gegevens als batchbestanden 
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1193'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Met de [!DNL Data Ingestion] [!DNL Experience Platform] API kunt u gegevens als 
 ### [!DNL Data Ingestion] voorwaarden
 
 - De gegevens die moeten worden geüpload, moeten de indeling Parquet of JSON hebben.
-- Een gegevensset die is gemaakt in de [[!DNL-catalogusservices]](../../catalog/home.md).
+- Een dataset die in de [[!DNL Catalog services]](../../catalog/home.md)wordt gecreeerd.
 - De inhoud van het ouderdossier moet een ondergroep van het schema van de dataset aanpassen die in wordt geupload.
 - Heb uw uniek Token van de Toegang na authentificatie.
 
