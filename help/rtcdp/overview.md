@@ -5,7 +5,7 @@ seo-title: Real-time overzicht van het Platform van klantgegevens
 description: Overzicht van het Platform van de Gegevens van de Klant in real time
 seo-description: Overzicht van het Platform van de Gegevens van de Klant in real time
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 4dfef6649b3ae07593667eb5165dad6bacc8ed2f
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -38,5 +38,5 @@ De volgende documentatie wordt aanbevolen om u te helpen aan de slag te gaan met
 * [Hoe kan ik gegevens invoeren](sources/sources-overview.md)
 * [Profielen openen](profile/profile-overview.md)
 * [Hoe te om segmenten te bouwen](segmentation/segmentation-overview.md)
-* [Hoe te om segmenten aan bestemmingen te activeren](destinations/activate-destinations.md)
+* [Hoe te om segmenten aan bestemmingen te activeren](destinations/overview.md)
 * [Beleid voor gegevensbeheer definiëren en afdwingen](privacy/data-governance-overview.md)
