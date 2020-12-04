@@ -91,7 +91,7 @@ Nadat u een privacytaak hebt uitgevoerd, kunt u de status en de resultaten van d
 | --- | --- |
 | [!DNL Privacy Service] UI | De [!DNL Privacy Service] UI verstrekt een controledashboard dat u toestaat om een visuele vertegenwoordiging van de status van alle actieve verzoeken te bekijken. Raadpleeg de gebruikershandleiding [bij de](ui/overview.md) Privacy Service voor meer informatie. |
 | [!DNL Privacy Service] API | U kunt de status van de banen van de Privacy programmatically controleren door de raadplegingseindpunten te gebruiken die door [!DNL Privacy Service] API worden verstrekt. Zie de handleiding voor ontwikkelaars van [Privacys Service](./api/getting-started.md) voor gedetailleerde stappen over het gebruik van de API. |
-| [!DNL Privacy Events] | [!DNL Privacy Events] hefboomwerking I/O Gebeurtenissen van Adobe die naar een gevormde webhaak worden verzonden om efficiënte baanverzoekautomatisering te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een werkstroom is bereikt. Zie de zelfstudie over het [abonneren op Privacy Events](./privacy-events.md) voor meer informatie. |
+| [!DNL Privacy Events] | [!DNL Privacy Events] hefboomwerking Adobe I/O Gebeurtenissen die naar een gevormde webhaak worden verzonden om efficiënte baanverzoekautomatisering te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een werkstroom is bereikt. Zie de zelfstudie over het [abonneren op Privacy Events](./privacy-events.md) voor meer informatie. |
 
 ## Volgende stappen
 
