@@ -8,7 +8,7 @@ description: Dit document bevat een zelfstudie voor het verzenden van meerdere b
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1480'
 ht-degree: 1%
 
 ---
@@ -510,7 +510,7 @@ Het tweede bericht is mislukt omdat het geen berichttekst bevatte. Het inzamelin
     },
 ```
 
-Het derde bericht is mislukt omdat een ongeldige IMS-organisatie-id in de koptekst wordt gebruikt. De IMS-organisatie moet overeenkomen met de {CONNECTION_ID} die u wilt posten. Als u wilt bepalen welke IMS-organisatie-id overeenkomt met de streamingverbinding die u gebruikt, kunt u een `GET inlet` aanvraag uitvoeren met de [[!DNL-API voor gegevensverwerking]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Zie [het ophalen van een streamingverbinding](./create-streaming-connection.md#get-data-collection-url) voor een voorbeeld van hoe eerder gemaakte streamingverbindingen kunnen worden opgehaald.
+Het derde bericht is mislukt omdat een ongeldige IMS-organisatie-id in de koptekst wordt gebruikt. De IMS-organisatie moet overeenkomen met de {CONNECTION_ID} die u wilt posten. Als u wilt bepalen welke IMS-organisatie-id overeenkomt met de streamingverbinding die u gebruikt, kunt u een `GET inlet` aanvraag uitvoeren met de [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)methode. Zie [het ophalen van een streamingverbinding](./create-streaming-connection.md#get-data-collection-url) voor een voorbeeld van hoe eerder gemaakte streamingverbindingen kunnen worden opgehaald.
 
 Het vierde bericht is mislukt omdat het niet het verwachte XDM-schema heeft gevolgd. De `xdmSchema` include-bestanden in de kop- en hoofdtekst van de aanvraag komen niet overeen met het XDM-schema van de aanvraag `{DATASET_ID}`. Het verbeteren van het schema in de berichtkopbal en het lichaam staat het toe om bevestiging DCCS over te gaan en met succes verzonden naar [!DNL Platform]. De berichttekst moet ook worden bijgewerkt zodat deze overeenkomt met het XDM-schema van het formulier, `{DATASET_ID}` zodat de streamingvalidatie wordt ingeschakeld [!DNL Platform]. Voor meer informatie over wat aan berichten gebeurt die met succes aan Platform stromen, zie de [bevestig berichten die sectie van dit leerprogramma worden opgenomen](#confirm-messages-ingested) .
 
@@ -531,7 +531,7 @@ De berichten van de partij die het stromen bevestiging op overgaan [!DNL Platfor
 
 ## Volgende stappen
 
-Nu u weet hoe te om veelvoudige berichten in één enkel verzoek te verzenden en te verifiëren wanneer de berichten met succes in de doeldataset worden opgenomen, kunt u beginnen het stromen van uw eigen gegevens aan [!DNL Platform]. Zie de handleiding [!DNL Platform][!DNL-gegevenstoegang] [voor een overzicht van het opvragen en ophalen van opgenomen gegevens uit](../../data-access/tutorials/dataset-data.md) .
+Nu u weet hoe te om veelvoudige berichten in één enkel verzoek te verzenden en te verifiëren wanneer de berichten met succes in de doeldataset worden opgenomen, kunt u beginnen het stromen van uw eigen gegevens aan [!DNL Platform]. Voor een overzicht van hoe te om ingebed gegevens van te vragen en terug te winnen [!DNL Platform], zie de [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) gids.
 
 ## Aanhangsel
 
