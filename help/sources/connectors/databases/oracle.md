@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
 title: Oracle-connector
 topic: overview
-description: In de onderstaande documentatie vindt u informatie over de verbinding van Oracle met Platform via API's of de gebruikersinterface.
+description: In de onderstaande documentatie vindt u informatie over hoe u Oracle kunt verbinden met Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
 source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
 workflow-type: tm+mt
@@ -37,5 +37,5 @@ In de onderstaande documentatie vindt u informatie over het maken van een verbin
 
 ## Verbinding maken [!DNL Oracle] met [!DNL Platform] de gebruikersinterface
 
-- [Een Oracle-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/databases/oracle.md)
+- [Een Oracle-bronaansluiting maken in de gebruikersinterface](../../tutorials/ui/create/databases/oracle.md)
 - [Vorm een dataflow voor een gegevensbestandschakelaar in UI](../../tutorials/ui/dataflow/databases.md)
