@@ -63,7 +63,7 @@ Het concept van standpunten kan veel verder worden uitgebreid. Dit zijn slechts 
 
 XDM-weergaven kunnen in Adobe Target worden gebruikt om marketers in staat te stellen A/B- en XT-tests uit te voeren op SPA via Visual Experience Composer. Hiervoor moeten de volgende stappen worden uitgevoerd om een eenmalige ontwikkelaarsinstelling te voltooien:
 
-1. SDK van [Adobe Experience Platform Web installeren](../../fundamentals/installing-the-sdk.md)
+1. Install [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
 2. Bepaal alle XDM-weergaven in uw toepassing Eén pagina die u wilt aanpassen.
 3. Na het bepalen van de Meningen XDM, om de activiteiten van AB of XT VEC te leveren, voer de `sendEvent()` functie met `renderDecisions` reeks aan `true` en de overeenkomstige Mening XDM in uw Enige Toepassing van de Pagina uit. De XDM-weergave moet worden doorgegeven `xdm.web.webPageDetails.viewName`. Met deze stap kunnen marketers de Visual Experience Composer gebruiken om A/B- en XT-tests voor die XDM te starten.
 
