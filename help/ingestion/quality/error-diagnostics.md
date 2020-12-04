@@ -7,7 +7,7 @@ description: Dit document bevat informatie over het controleren van batch-inname
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '892'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,8 @@ Dit document bevat informatie over het controleren van batch-inname, het beheren
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL-ervaringsgegevensmodel (XDM)-systeem]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
-- [[!DNL Adobe Experience Platform-gegevensinname]](../home.md): De methoden waarmee gegevens kunnen worden verzonden naar [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): De methoden waarmee gegevens kunnen worden verzonden naar [!DNL Experience Platform].
 
 ### API-voorbeeldaanroepen lezen
 
