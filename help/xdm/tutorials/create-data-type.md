@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Deze zelfstudie gebruikt de interface van het Experience Platform om u door de stappen te lopen om een type van douanegegevens samen te stellen.
 translation-type: tm+mt
-source-git-commit: 9008b49e1eb5e32b0f4cda7049bf873c689f6442
+source-git-commit: bfb65743764b454754ca8ebb01bfe4407833b291
 workflow-type: tm+mt
 source-wordcount: '1243'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Deze zelfstudie behandelt de stappen voor het maken en bewerken van aangepaste g
 
 Deze zelfstudie vereist een goed begrip van XDM System. Verwijs naar het [XDM overzicht](../home.md) voor een inleiding aan de rol van XDM binnen het Experience Platform ecosysteem, en de [grondbeginselen van schemacompositie](../schema/composition.md) voor hoe de gegevenstypes tot XDM schema&#39;s bijdragen.
 
-Hoewel niet vereist voor deze zelfstudie, wordt aanbevolen dat u ook de zelfstudie over het [samenstellen van een schema in de gebruikersinterface](./-schema-ui.md) volgt om uzelf vertrouwd te maken met de verschillende mogelijkheden van de [!DNL Schema Editor].
+Hoewel niet vereist voor deze zelfstudie, wordt aanbevolen dat u ook de zelfstudie over het [samenstellen van een schema in de gebruikersinterface](./create-schema-ui.md) volgt om uzelf vertrouwd te maken met de verschillende mogelijkheden van de [!DNL Schema Editor].
 
 ## Open het dialoogvenster [!DNL Schema Editor] voor een gegevenstype
 
