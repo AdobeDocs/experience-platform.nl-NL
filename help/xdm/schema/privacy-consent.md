@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
-title: Overzicht van het mixen van privacy
+title: Gegevenstype Inhoud en Voorkeuren
 description: Het gegevenstype Privacy/Marketing Preferences (Consent) (Consent) is bedoeld ter ondersteuning van de verzameling van klantmachtigingen en -voorkeuren die worden gegenereerd door CMP's (Consent Management Platforms) en andere bronnen van uw gegevensbewerkingen.
 topic: guide
 translation-type: tm+mt
-source-git-commit: ba045a635f840c62980288a1a3ad5015f54121da
+source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2023'
 ht-degree: 0%
 
 ---
@@ -18,10 +18,6 @@ Het [!DNL Privacy/Marketing Preferences (Consent)] gegevenstype (hierna genoemd 
 
 Dit document behandelt de structuur en het beoogde gebruik van de velden die door het [!DNL Consents & Preferences] gegevenstype worden verschaft.
 
->[!IMPORTANT]
->
->Het [!DNL Consents & Preferences] gegevenstype is bedoeld voor een reeks gevallen waarin toestemming wordt gegeven en gebruik wordt gemaakt van voorkeursbeheer. Dit document beschrijft daarom in algemene termen het gebruik van de velden van het gegevenstype en geeft alleen suggesties voor de manier waarop u het gebruik van deze velden moet interpreteren. Neem contact op met het juridische team voor privacy om de structuur van het gegevenstype af te stemmen op de manier waarop uw organisatie deze toestemmings- en voorkeurskeuzen interpreteert en presenteert aan uw klanten.
-
 ## Vereisten {#prerequisites}
 
 Dit document vereist een werkend inzicht in XDM en het gebruik van de schema&#39;s in [!DNL Experience Platform]. Lees de volgende documentatie voordat u verdergaat:
@@ -30,6 +26,10 @@ Dit document vereist een werkend inzicht in XDM en het gebruik van de schema&#39
 * [Basisbeginselen van de schemacompositie](http://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## Gegevenstypestructuur {#structure}
+
+>[!IMPORTANT]
+>
+>Het [!DNL Consents & Preferences] gegevenstype is bedoeld voor een reeks gevallen waarin toestemming wordt gegeven en gebruik wordt gemaakt van voorkeursbeheer. Dit document beschrijft daarom in algemene termen het gebruik van de velden van het gegevenstype en geeft alleen suggesties voor de manier waarop u het gebruik van deze velden moet interpreteren. Neem contact op met het juridische team voor privacy om de structuur van het gegevenstype af te stemmen op de manier waarop uw organisatie deze toestemmings- en voorkeurskeuzen interpreteert en presenteert aan uw klanten.
 
 Het [!DNL Consents & Preferences] gegevenstype bevat verschillende velden die worden gebruikt voor het vastleggen van **toestemmings** - en **voorkeursgegevens** .
 
