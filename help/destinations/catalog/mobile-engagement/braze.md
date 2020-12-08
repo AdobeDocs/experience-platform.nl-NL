@@ -5,9 +5,9 @@ seo-title: Braze bestemming
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 seo-description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 translation-type: tm+mt
-source-git-commit: 9380c9c24267f815b788eb51949da13b8c47558f
+source-git-commit: 6b19cfa3c4a5327b6b7543123f631d0355995f09
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '953'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,10 @@ Let op de volgende details die specifiek zijn voor het [!DNL Braze] doel:
 
 * U kunt elke gewenste [identiteit](../../../identity-service/namespaces.md) naar de [!DNL Braze] bestemming verzenden, zolang u de identiteit aan de bestemming toewijst [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation).
 * [!DNL Adobe Experience Platform] segmenten worden geëxporteerd naar [!DNL Braze] onder het `AdobeExperiencePlatformSegments` kenmerk.
+
+>[!NOTE]
+>
+>Houd er rekening mee dat het verzenden van extra aangepaste kenmerken [!DNL Braze] kan leiden tot een toename van het verbruik van [!DNL Braze] gegevenspunten. Neem contact op met uw [!DNL Braze] accountmanager voordat u aanvullende aangepaste kenmerken verzendt.
 
 ## Gebruiksscenario’s {#use-cases}
 
