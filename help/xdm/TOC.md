@@ -5,9 +5,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding gegevensmodel (XDM)
 user-guide-description: Gebruik XDM-klassen (Experience Data Model) en -mixen om ervaringsgegevens te standaardiseren.
 translation-type: tm+mt
-source-git-commit: 321dc16a1296aeb28ba78825f191a0368df16547
+source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '184'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
    * [Beperkingen voor XDM-veldtypen](schema/field-constraints.md)
    * [XDM-veldwoordenboek](schema/field-dictionary.md)
    * Gebruiksgevallen voor schema {#use-cases}
-      * [Toevoeging privacy, mix](schema/privacy-consent.md)
+      * [Gegevenstype Inhoud en Voorkeuren](schema/privacy-consent.md)
 * Klassen {#classes}
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -40,6 +40,7 @@ ht-degree: 4%
 * Datatypen {#data-types}
    * [Beacon](./data-types/beacon.md)
    * [Browserdetails](./data-types/browser-details.md)
+   * [Inhoud en voorkeuren](./data-types/consents.md)
    * [Apparaat](./data-types/device.md)
    * [E-mailadres](./data-types/email-address.md)
    * [Omgeving](./data-types/environment.md)
