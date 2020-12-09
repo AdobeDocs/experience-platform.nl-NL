@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Verbindingsgegevens bijwerken met de Flow Service API
 topic: overview
 type: Tutorial
-description: In deze zelfstudie worden de stappen beschreven voor het bijwerken van uw verbindingsgegevens, inclusief de naam, beschrijving en referenties met behulp van de Flow Service API.
+description: In sommige omstandigheden is het mogelijk dat de details van een bestaande bronverbinding moeten worden bijgewerkt. De Flow Service API biedt u de mogelijkheid om details van een bestaande batch- of streamingverbinding toe te voegen, te bewerken en te verwijderen, inclusief de naam, beschrijving en referenties.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d1a9f7d0c83b8bb34e26b6e5a9825488e62b43de
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '696'
 ht-degree: 1%
 
 ---
@@ -16,11 +16,9 @@ ht-degree: 1%
 
 # Verbindingsgegevens bijwerken met de Flow Service API
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+In sommige omstandigheden is het mogelijk dat de details van een bestaande bronverbinding moeten worden bijgewerkt. [!DNL Flow Service] biedt u de mogelijkheid om details van een bestaande batch- of streamingverbinding toe te voegen, te bewerken en te verwijderen, inclusief de naam, beschrijving en gegevens.
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
-
-In deze zelfstudie worden de stappen beschreven voor het bijwerken van verbindingsgegevens, zoals naam, beschrijving en referenties met de [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)instructies.
+In deze zelfstudie worden de stappen beschreven voor het bijwerken van de gegevens en referenties van een bestaande verbinding met behulp van de [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
