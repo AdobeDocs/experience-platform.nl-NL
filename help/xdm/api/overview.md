@@ -5,9 +5,9 @@ title: Handleiding voor ontwikkelaars van de API voor schemaregister
 description: 'Met de API voor het schemaregister kunt u programmatisch alle schema''s en gerelateerde XDM-bronnen beheren die binnen het Experience Platform beschikbaar zijn. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d0e5865fddcf2592e9b6d8d4b2747bdceee6bda7
+source-git-commit: 33f9ee45e8dd649d23f9b3b4f03ecf00d8e18fd2
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,13 @@ De schema&#39;s XDM vertegenwoordigen en bevestigen de structuur en het formaat 
 
 Voor een geleidelijke gids op hoe te om een volledig schema in de Registratie API van het Schema tot stand te brengen, met inbegrip van het creëren van en het toevoegen van mengen en gegevenstypes, zie de [API schemaverwezenlijking zelfstudie](../tutorials/create-schema-api.md).
 
+## Gedrag
+
+Het gedrag bepaalt de aard van gegevens die een schema beschrijft. Elke klasse XDM moet naar een specifiek gedrag verwijzen, dat alle schema&#39;s die die klasse gebruiken zullen erven. Zie de gids [van het](./behaviors.md) gedragseindpunt om te leren hoe te om beschikbaar gedrag in API te bekijken.
+
 ## Klassen
 
-De klassen bepalen de gedragsaspecten van de gegevens die een schema (verslag of tijdreeks) zal bevatten. Bovendien bepaalt een klasse de basisstructuur van gemeenschappelijke eigenschappen die alle die schema&#39;s op die klasse worden gebaseerd moeten bevatten. De klasse van een schema bepaalt welke mengen voor gebruik in dat schema geschikt zijn. Zie de gids [van het](./classes.md) klassen eindpunt voor details bij het werken met klassen in API.
+Een klasse definieert de basisstructuur van gemeenschappelijke eigenschappen die alle schema&#39;s die op die klasse zijn gebaseerd, moeten bevatten en bepaalt welke mixins in aanmerking komen voor gebruik in die schema&#39;s. Elke klasse moet aan een bestaand gedrag worden geassocieerd. Zie de gids [van het](./classes.md) klassen eindpunt voor details bij het werken met klassen in API.
 
 ## Mixins
 
@@ -47,7 +51,7 @@ Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als
 
 ## Beschrijvers
 
-Descriptors zijn reeksen meta-gegevens die specifieke gebieden binnen een schema worden toegewezen, die diverse contextuele details verstrekken met inbegrip van hoe die gebieden (en het schema zelf) met andere schema&#39;s verwant zijn. Op elk schema kunnen een of meer descriptorentiteiten zijn toegepast en er zijn verschillende descriptortypen voor verschillende doeleinden. Zie de gids [voor](./descriptors.md) descriptoreindpunten voor meer informatie over het werken met descriptoren in de API en een overzicht van de verschillende descriptortypen en hun gebruiksgevallen.
+Descriptors zijn reeksen meta-gegevens die aan specifieke gebieden binnen een schema worden toegewezen, die diverse contextuele details verstrekken met inbegrip van hoe die gebieden (en het schema zelf) met andere schema&#39;s verwant zijn. Op elk schema kunnen een of meer descriptorentiteiten zijn toegepast en er zijn verschillende descriptortypen voor verschillende doeleinden. Zie de gids [voor](./descriptors.md) descriptoreindpunten voor meer informatie over het werken met descriptoren in de API en een overzicht van de verschillende descriptortypen en hun gebruiksgevallen.
 
 ## Unies
 
