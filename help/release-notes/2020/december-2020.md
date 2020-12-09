@@ -3,12 +3,12 @@ title: Opmerkingen bij de release van Adobe Experience Platform
 description: Opmerkingen bij de release van Experience Platform 9 december 2020
 doc-type: release notes
 last-update: December 9, 2020
-author: ens60013
+author: ens60013 & ens72471
 translation-type: tm+mt
-source-git-commit: 25c162f50f0a66d77eb638dbf87893af3c543ddc
+source-git-commit: 908b9e6e8b548dea8e39f9f9a5de396d4c9520f4
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 1%
+source-wordcount: '343'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +19,20 @@ ht-degree: 1%
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
+- [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Sources]](#sources)
+
+## [!DNL Data Science Workspace] {#dsw}
+
+De Werkruimte van de Wetenschap van Gegevens gebruikt machine het leren en kunstmatige intelligentie om inzichten van uw gegevens tot stand te brengen. De Data Science Workspace is geïntegreerd in Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen.
+
+### Belangrijkste kenmerken
+
+| Functie | Beschrijving |
+|--- | ---|
+| Toevoeging Adobe Experience Platform Intelligence-pakket | Het Adobe Experience Platform Intelligence-pakket addon is een Data Science Workspace-upgrade die extra belangrijke functies zoals: <li> Door de gebruikersinterface gestuurde modelexperimenten en -evaluaties.</li><li> Mogelijkheid om modellen te implementeren en te exploiteren met geplande training en het afleiden van taken.</li><li> Ondersteuning voor diep leren in Tensorflow-modellen (GPU Compute).</li><li> Op park-gebaseerde verdeelde computer om te trainen en tegen grote datasets (10MM + rijen) te scoren.</li><li>En meer</li> |
+
+Raadpleeg de documentatie over de toegang tot en de functies [](../../data-science-workspace/access-features-dsw.md)van de Data Science Workspace voor meer informatie over het Adobe Experience Platform Intelligence-pakket.
 
 ## [!DNL Sources] {#sources}
 
@@ -35,3 +48,5 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 | Gegevensstromen verwijderen | Streaming-gegevensstromen die fouten bevatten of onnodig zijn geworden, kunnen nu worden verwijderd met de API en de interface [!DNL Flow Service] . Zie de zelfstudie over het [verwijderen van gegevensstromen met de API](../../sources/tutorials/api/delete-dataflows.md) en het [verwijderen van gegevensstromen met de UI](../../sources/tutorials/ui/delete.md)voor meer informatie. |
 
 Zie het [bronoverzicht](../../sources/home.md)voor meer informatie over bronnen.
+
+
