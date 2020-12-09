@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Een gegevensstroom verwijderen met de Flow Service API
 topic: overview
 type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het verwijderen van een gegevensstroom met behulp van de Flow Service API.
+description: In deze zelfstudie worden de stappen beschreven voor het verwijderen van batch- en streaming-gegevensstromen met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: ae3e64a5f9a82c0efe3cffeb6d4d425ae2e72bda
+source-git-commit: b63b17f2a7271fc673abc8245a4917c0daca4ef3
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '467'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 # Een gegevensstroom verwijderen met de Flow Service API
 
-In deze zelfstudie worden de stappen beschreven voor het verwijderen van gegevensstromen die zijn gemaakt met zowel batch- als streaming bronnen met behulp van de [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)map.
+U kunt batch- en streaming-gegevensstromen verwijderen die fouten bevatten of die verouderd zijn met de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+
+In deze zelfstudie worden de stappen beschreven voor het verwijderen van gegevensstromen die zijn gemaakt met zowel batchbronnen als streamingbronnen [!DNL Flow Service].
 
 ## Aan de slag
 
