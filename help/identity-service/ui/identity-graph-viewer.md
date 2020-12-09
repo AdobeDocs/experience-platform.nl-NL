@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
 translation-type: tm+mt
-source-git-commit: ef1025dfacc91b13c064db99e6304f2c09abb3d9
+source-git-commit: 7c52760bdceb8d45d76cd22d69241f8c23943674
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 1%
@@ -55,7 +55,7 @@ De viewer voor identiteitsgrafieken wordt weergegeven. Links in het scherm ziet 
 
 >[!IMPORTANT]
 >
->Een identiteitsgrafiek vereist een minimum van twee verbonden identiteiten om, evenals een geldige namespace en paar van identiteitskaart te produceren. Het maximumaantal identiteiten dat de grafiekviewer kan weergeven, is 400. Zie de [bijlage](#appendix) hieronder voor meer informatie.
+>Een identiteitsgrafiek vereist een minimum van twee verbonden identiteiten om, evenals een geldige namespace en paar van identiteitskaart te produceren. Het maximumaantal identiteiten dat de grafiekviewer kan weergeven, is 150. Zie de [bijlage](#appendix) hieronder voor meer informatie.
 
 ![identiteitsgrafiek](../images/identity-graph-viewer/graph-viewer.png)
 
@@ -101,7 +101,7 @@ Er kunnen fouten optreden wanneer u de viewer voor identiteitsgrafieken opent. H
 
 - De geselecteerde naamruimte moet een identiteitswaarde bevatten.
 - Voor het genereren van de identiteitsgrafiekviewer zijn minimaal twee gekoppelde identiteiten vereist.
-- De viewer voor identiteitsgrafieken kan het maximum van 400 identiteiten niet overschrijden.
+- De viewer voor identiteitsgrafieken kan het maximumaantal van 150 identiteiten niet overschrijden.
 - De viewer voor identiteitsgrafieken is momenteel niet toegankelijk in niet-productiesandboxen.
 - De viewer voor identiteitsgrafieken ondersteunt momenteel alleen in batches opgenomen gegevens en geeft geen gegevens weer die via streaming bronnen zijn ingevoerd.
 
