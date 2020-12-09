@@ -4,7 +4,7 @@ title: Profieldetails aanpassen
 description: 'Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop gegevens van het realtime-klantprofiel worden weergegeven in de gebruikersinterface van Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9068d12e60da63a6a2a2ff18c016080ea581104f
+source-git-commit: d05884c87445ec16b0ad44f593cf782b8c80d646
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 In de gebruikersinterface van Adobe Experience Platform kunt u [!DNL Real-time Customer Profile] gegevens weergeven en gebruiken in de vorm van klantprofielen. De profielgegevens die in de gebruikersinterface worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van elke afzonderlijke klant. Dit omvat details zoals basiskenmerken, gekoppelde identiteiten en kanaalvoorkeuren. De standaardvelden in profielen kunnen ook op organisatorisch niveau worden gewijzigd, zodat de voorkeurskenmerken worden weergegeven. [!DNL Profile] Deze gids verstrekt geleidelijke instructies voor het aanpassen van de manier waarin de [!DNL Profile] gegevens binnen UI van het Platform worden getoond.
 
-Voor een volledige handleiding naar de gebruikersinterface voor profielen gaat u naar de gebruikershandleiding voor [Profielen](user-guide.md).
+Voor een volledige gids aan de UI van Profielen, te bezoeken gelieve de gids [van het](user-guide.md)Profiel UI.
 
 ## Kaarten opnieuw ordenen en het formaat ervan wijzigen {#reorder-and-resize-cards}
 
