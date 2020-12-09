@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;update accounts;
-description: null
+keywords: Experience Platform;home;popular topics;update accounts
+description: In sommige omstandigheden kan het nodig zijn de details van een bestaande bronrekening bij te werken. De werkruimte Bronnen biedt u de mogelijkheid om details van een bestaande batch- of streamingverbinding toe te voegen, te bewerken en te verwijderen, inclusief de naam, beschrijving en referenties.
 solution: Experience Platform
 title: Accountgegevens bijwerken in de gebruikersinterface
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 413687a0d9e790ea3f61a858002e9510216d7c34
+source-git-commit: 9b48bc1426e6259ea0b2cf9b420b55b92712f7c2
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Accountgegevens bijwerken in de gebruikersinterface
 
-In sommige omstandigheden kan het nodig zijn de details van een bestaande bronrekening bij te werken. De werkruimte [!UICONTROL Bronnen] biedt u de mogelijkheid om details van een account te bewerken, toe te voegen en te verwijderen, inclusief waarden voor de naam, beschrijving en verificatiereferenties.
+In sommige omstandigheden kan het nodig zijn de details van een bestaande bronrekening bij te werken. De werkruimte [!UICONTROL Bronnen] biedt u de mogelijkheid om details van een bestaande batch- of streamingverbinding toe te voegen, te bewerken en te verwijderen, inclusief de naam, beschrijving en referenties.
 
 Dit leerprogramma verstrekt stappen voor het bijwerken van de details en de geloofsbrieven van een bestaand rekening van de [!UICONTROL werkruimte van Bronnen] .
 
@@ -24,14 +24,12 @@ Dit leerprogramma verstrekt stappen voor het bijwerken van de details en de gelo
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Systeem](../../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
-   - [Basisbeginselen van de schemacompositie](../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   - [Zelfstudie](../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [Bronnen](../../home.md): Het Experience Platform van DNL staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+- [Sandboxen](../../../sandboxes/home.md): DNL-Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ## Accounts bijwerken
 
-Login aan Login aan Login aan het [Experience Platform UI](https://platform.adobe.com) en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatie om tot de [!UICONTROL Bronwerkruimte] toegang te hebben. Selecteer **[!UICONTROL Accounts]** in de bovenste koptekst om bestaande accounts weer te geven.
+Login aan het [Experience Platform UI](https://platform.adobe.com) en selecteer dan **[!UICONTROL Bronnen]** van de linkernavigatie om tot de [!UICONTROL Bronwerkruimte] toegang te hebben. Selecteer **[!UICONTROL Accounts]** in de bovenste koptekst om bestaande accounts weer te geven.
 
 ![catalogus](../../images/tutorials/update/catalog.png)
 
