@@ -4,9 +4,9 @@ title: Gebruikershandleiding voor gebruikersprofiel voor realtime klanten
 topic: guide
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-time klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
+source-git-commit: b991a767f34f0e318b9ca5092fd4cf099de11e0a
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1304'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,19 @@ Deze gids UI vereist een inzicht in de diverse [!DNL Experience Platform] dienst
 
 ## Overzicht
 
-Selecteer in de [[!DNL Experience Platform] UI](http://platform.adobe.com)de optie **[!UICONTROL Profielen]** in de linkernavigatie om het tabblad **[!UICONTROL Overzicht]** te openen. Op dit tabblad vindt u koppelingen naar documentatie en video&#39;s die u helpen bij het begrijpen van profielen en het werken met profielen.
+Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UICONTROL Profielen]** in de linkernavigatie om het tabblad **[!UICONTROL Overzicht]** te openen. Op dit tabblad vindt u koppelingen naar documentatie en video&#39;s die u helpen bij het begrijpen van profielen en het werken met profielen.
 
 ![](../images/user-guide/profiles-overview.png)
+
+### (Alfa) Profieldashboard
+
+>[!IMPORTANT]
+>
+>De dashboardfunctionaliteit bevindt zich momenteel in alfa en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+
+Voor sommige gebruikers bevat het selecteren van **[!UICONTROL Profielen]** in de linkernavigatie en het openen van het tabblad **[!UICONTROL Overzicht]** een dashboard met een overzicht van de belangrijkste meetgegevens die betrekking hebben op de profielgegevens.
+
+Ga voor meer informatie naar de handleiding voor het [profieldashboard](profile-dashboard.md).
 
 ## Bladeren
 
