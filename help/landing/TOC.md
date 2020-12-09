@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform - Overzicht
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Leer hoe Experience Platform het mogelijk maakt om persoonlijke ervaringen aan uw klanten in real time te leveren.
 translation-type: tm+mt
-source-git-commit: 5761394285e56214fd59e31d530756eed1f5ad08
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '402'
 ht-degree: 14%
 
 ---
@@ -64,6 +64,7 @@ ht-degree: 14%
    * [Toepassingsservices](application-services.md)
    * [Application and Intelligent Services (video)](video/application-intelligent-services.md)
    * [Integraties van Platforms met Experience Cloud (video)](video/experience-cloud-integrations.md)
+* [Het gebruiksdashboard voor licenties](license-usage-dashboard.md)
 * [Handleiding voor probleemoplossing](troubleshooting.md)
 * [ADLS Gen2-migratie](adls2-gen2-migration.md)
 * [Verklarende woordenlijst](glossary.md)
