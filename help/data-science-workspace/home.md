@@ -5,9 +5,9 @@ title: Overzicht van de Data Science Workspace
 topic: overview
 description: Deze gids verstrekt een overzicht van de belangrijkste concepten met betrekking tot de Werkruimte van de Wetenschap van Gegevens.
 translation-type: tm+mt
-source-git-commit: 581d11bdb934f46c53a6703829b4dc470076e195
+source-git-commit: 8b1be4e94c147124fd26f4b877ca807177c9f5ff
 workflow-type: tm+mt
-source-wordcount: '2578'
+source-wordcount: '2371'
 ht-degree: 0%
 
 ---
@@ -120,35 +120,12 @@ Als je tevreden bent met je recept, is het slechts een paar klikken om een intel
 
 Gegevenswetenschappers kunnen profiteren van nieuwe technologieën en datasets zodra deze beschikbaar zijn via Adobe-services. Door regelmatige updates, doen wij het werk om datasets en technologieën in het platform te integreren, zodat moet u niet.
 
-### Toegangsbeheer in [!DNL Data Science Workspace]
-
-Toegangscontrole voor [!DNL Experience Platform] wordt beheerd via de [Adobe Admin Console](https://adminconsole.adobe.com). Deze functionaliteit gebruikt productprofielen in Admin Console, die gebruikers met toestemmingen en zandbakken verbinden. Zie het [toegangsbeheeroverzicht](../access-control/home.md) voor meer informatie.
-
->[!IMPORTANT]
->
->U kunt alleen [!DNL Data Science Workspace]de machtiging [!UICONTROL &quot;Data Science Workspace beheren&quot;] gebruiken als deze is ingeschakeld.
-
-In de volgende tabel worden de effecten weergegeven van het inschakelen of uitschakelen van deze machtiging:
-
-| Machtiging | Ingeschakeld | Uitgeschakeld |
-|---|---|---|
-| [!DNL Manage Data Science Workspace] | Verleent toegang tot alle diensten binnen [!DNL Data Science Workspace]. | API- en UI-toegang tot alle services binnen [!DNL Data Science Workspace] is uitgeschakeld. Terwijl gehandicapt, wordt het verpletteren aan de pagina&#39;s van [!DNL Data Science Workspace] Modellen **[!UICONTROL en van de]** Diensten **** verhinderd. |
-
 ### Veiligheid en gemoedsrust
 
 Het beveiligen van uw gegevens is een topprioriteit voor Adobe. Adobe beschermt uw gegevens met beveiligingsprocessen en -besturingselementen die zijn ontwikkeld om te helpen voldoen aan door de branche aanvaarde standaarden, regels en certificeringen.
 
 De veiligheid wordt ingebouwd in software en de diensten als deel van de Levenscyclus van het Product van de Adobe Veilige.
 Ga naar de beveiligingspagina op https://www.adobe.com/security.html voor meer informatie over de beveiliging van Adobe-gegevens en -software, compatibiliteit en meer.
-
-### Sandbox-ondersteuning
-
-Sandboxen zijn virtuele partities binnen één exemplaar van [!DNL Experience Platform]. Elke [!DNL Platform] instantie ondersteunt één productiesandbox en meerdere niet-productiesandboxen, elk met behoud van zijn eigen bibliotheek met [!DNL Platform] bronnen. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op de productiesandbox. Zie het [sandboxoverzicht](../sandboxes/home.md)voor meer informatie over sandboxen.
-
-Er [!DNL Data Science Workspace] gelden momenteel enkele beperkingen voor sandboxen:
-
-- Compute resources worden gedeeld door de productiesandbox en niet-productiesandboxen. De isolatie voor productiesandboxen is in de toekomst gepland.
-- De werklasten voor Scala/[!DNL Spark] en PySpark voor zowel laptops als recepten worden momenteel alleen ondersteund in de productiesandbox. In de toekomst zal steun worden verleend voor niet-productiesandboxen.
 
 ## [!DNL Data Science Workspace] in actie
 
