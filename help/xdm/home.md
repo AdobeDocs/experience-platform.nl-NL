@@ -5,9 +5,9 @@ title: XDM System, overzicht
 topic: overview
 description: 'Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema''s voor het beheer van de klantenervaring te bepalen. '
 translation-type: tm+mt
-source-git-commit: d96890fd79acaa09628dbba49ee6930ed4f9d0e6
+source-git-commit: b0b2f0c5aa91a5aeb5836d9795a580ccc69e3e17
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1581'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Voor meer informatie over het model van de schemacompositie, met inbegrip van on
 
 ### [!DNL Schema Registry] en [!DNL Schema Library]
 
-Het **[!DNL Schema Registry]** biedt een gebruikersinterface en RESTful-API waarmee u alle schemagerelateerde bronnen in de Adobe Experience Platform kunt weergeven en beheren **[!DNL Schema Library]**. Het [!DNL Schema Library] bevat industriestandaard middelen die door Adobe aan u ter beschikking worden gesteld, evenals middelen van [!DNL Experience Platform] partners en verkopers de waarvan toepassingen u gebruikt. De gebruikersinterface en API van het schemaregister kunnen ook worden gebruikt om nieuwe schema&#39;s en middelen tot stand te brengen en te beheren die aan uw organisatie uniek zijn.
+Het **[!DNL Schema Registry]** biedt een gebruikersinterface en RESTful-API waarmee u alle schemagerelateerde bronnen in de Adobe Experience Platform kunt weergeven en beheren **[!DNL Schema Library]**. Het [!DNL Schema Library] bevat industrie-standaardmiddelen die aan u door Adobe worden ter beschikking gesteld, evenals middelen van [!DNL Experience Platform] partners en verkopers de waarvan toepassingen u gebruikt. De gebruikersinterface en API van het schemaregister kunnen ook worden gebruikt om nieuwe schema&#39;s en middelen tot stand te brengen en te beheren die aan uw organisatie uniek zijn.
 
 Voor een uitvoerige gids voor de belangrijkste verrichtingen beschikbaar in [!DNL Schema Registry], zie de de ontwikkelaarsgids [van de Registratie van het](api/getting-started.md)Schema.
 
@@ -46,7 +46,7 @@ Gegevens die bestemd zijn voor gebruik in [!DNL Experience Platform] worden gegr
 
 Alle XDM schema&#39;s beschrijven gegevens die als verslag of tijdreeks kunnen worden gecategoriseerd. Het gegevensgedrag van een schema wordt bepaald door de klasse van het schema, die aan een schema wordt toegewezen wanneer het eerst wordt gecreeerd. De klassen XDM beschrijven het kleinste aantal eigenschappen een schema moet bevatten om een bepaald gegevensgedrag te vertegenwoordigen.
 
-Hoewel u uw eigen klassen in de map kunt definiëren, wordt u aangeraden de voorkeursklassen [!DNL Schema Registry]en **[!DNL XDM Individual Profile]** **[!DNL XDM ExperienceEvent]** voor record- en tijdreeksgegevens te gebruiken. Deze klassen worden hieronder gedetailleerder beschreven.
+Hoewel u uw eigen klassen binnen de klasse kunt bepalen, [!DNL Schema Registry]adviseert men dat u de aangewezen klassen **[!DNL XDM Individual Profile]** en **[!DNL XDM ExperienceEvent]** voor verslag en tijdreeksgegevens, respectievelijk gebruikt. Deze klassen worden hieronder gedetailleerder beschreven.
 
 ### [!DNL XDM Individual Profile] {#xdm-individual-profile}
 
@@ -68,7 +68,7 @@ Hoewel niet alle gebeurtenissen gemakkelijk over alle gegevensbronnen worden gec
 
 ## XDM-schema&#39;s en - [!DNL Experience Platform] services
 
-[!DNL Experience Platform] is schema agnostic, betekenend dat om het even welk schema dat aan de norm XDM voldoet voor gebruik door de [!DNL Platform] diensten beschikbaar is. De manieren waarop de verschillende [!DNL Platform] diensten schema&#39;s gebruiken worden hieronder meer in detail beschreven.
+[!DNL Experience Platform] is schema-agnostisch, betekenend dat om het even welk schema dat aan de norm voldoet XDM voor gebruik door de [!DNL Platform] diensten beschikbaar is. De manieren waarop de verschillende [!DNL Platform] diensten schema&#39;s gebruiken worden hieronder meer in detail beschreven.
 
 ### [!DNL Catalog Service], [!DNL Data Ingestion] &amp; [!DNL Data Lake]
 
