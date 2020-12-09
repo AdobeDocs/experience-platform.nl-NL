@@ -4,9 +4,9 @@ title: Overzicht van het realtime klantprofiel
 topic: guide
 description: Klantprofiel in real-time is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: b8d6bd5caf6c6f4d1da218b6ca12cec154d64412
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1844'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,9 @@ De verhouding tussen het Profiel van de Klant in real time en andere diensten bi
 
 ### Profielgegevensopslag
 
-Hoewel [!DNL Real-time Customer Profile] ingesloten gegevens verwerkt en Adobe Experience Platform gebruikt [!DNL Identity Service] om verwante gegevens samen te voegen via identiteitstoewijzing, blijven de gegevens in de [!DNL Profile] opslag behouden. Met andere woorden, de [!DNL Profile] opslag staat los van [!DNL Catalog] gegevens ([!DNL Data Lake]) en [!DNL Identity Service] gegevens (identiteitsgrafiek).
+Hoewel [!DNL Real-time Customer Profile] ingesloten gegevens verwerkt en Adobe Experience Platform gebruikt [!DNL Identity Service] om verwante gegevens samen te voegen via identiteitstoewijzing, blijven de gegevens in de [!DNL Profile] opslag behouden. De [!DNL Profile] opslagruimte is gescheiden van de [!DNL Catalog] gegevens in de identiteitsgrafiek [!DNL Data Lake] en de [!DNL Identity Service] gegevens in de identiteitsgrafiek.
+
+De profielopslag gebruikt een Microsoft Azure Cosmos DB-infrastructuur en het Platform Data Lake gebruikt de opslag van Microsoft Azure Data Lake.
 
 ### Profielhulplijnen
 
@@ -34,7 +36,7 @@ Experience Platform biedt een reeks instructies om u te helpen het maken van XDM
 
 [!DNL Real-time Customer Profile] voegt gegevens van verschillende bedrijfssystemen samen en verleent dan toegang tot die gegevens in de vorm van klantenprofielen met verwante gebeurtenissen van de tijdreeksen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden. In de volgende secties worden enkele kernconcepten beschreven die u moet begrijpen om profielen op effectieve wijze te kunnen maken en onderhouden binnen het Platform.
 
-### Profielfragmenten versus samengevoegde profielen
+### Profielfragmenten versus samengevoegde profielen {#profile-fragments-vs-merged-profiles}
 
 Elk individueel klantprofiel bestaat uit meerdere profielfragmenten die zijn samengevoegd tot één weergave van die klant. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken.
 
