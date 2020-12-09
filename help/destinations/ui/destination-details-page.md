@@ -5,9 +5,9 @@ seo-title: Pagina Gegevens bestemming
 description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 seo-description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 8ac368081c37ca5bfc2cc3382774a912e8ad68eb
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '735'
 ht-degree: 1%
 
 ---
@@ -29,6 +29,10 @@ De detailspagina voor de bestemming verschijnt, tonend zijn beschikbare controle
 
 ![](../assets/ui/details-page/details.png)
 
+Daarnaast kunt u op het tabblad Bladeren de geselecteerde gegevensstroom verwijderen door het pictogram van de ![prullenbak](../assets/ui/details-page/trash-icon.png) te selecteren. Om het even welke segmenten die aan een bestemmingen worden geactiveerd zullen unmapped alvorens dataflow wordt geschrapt.
+
+![](../assets/ui/details-page/delete-flow.png)
+
 ## Rechterspoor
 
 De juiste spoorstaaf toont de basisinformatie over de bestemming.
@@ -40,6 +44,7 @@ In de volgende tabel worden de door het rechterspoor verstrekte controles en geg
 | Rechterspoor | Beschrijving |
 | --- | --- |
 | [!UICONTROL Activeren] | Selecteer deze controle om uit te geven welke segmenten aan de bestemming in kaart worden gebracht. Zie de gids bij het [activeren van segmenten aan een bestemming](./activate-destinations.md) voor meer informatie. |
+| [!UICONTROL Verwijderen] | Hiermee kunt u deze gegevensstroom verwijderen en de eerder geactiveerde segmenten, indien aanwezig, deactiveren. |
 | [!UICONTROL Doelnaam] | Dit veld kan worden bewerkt om de naam van het doel bij te werken. |
 | [!UICONTROL Beschrijving] | Dit veld kan worden bewerkt om een optionele beschrijving aan het doel toe te voegen. |
 | [!UICONTROL Bestemming] | Vertegenwoordigt het bestemmingsplatform dat het publiek wordt verzonden naar. Zie de [bestemmingscatalogus](../catalog/overview.md) voor meer informatie. |
@@ -75,11 +80,11 @@ Om de details van een bepaalde dataflow looppas te bekijken, selecteer de begint
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL Segmenten]
+## [!UICONTROL Activeringsgegevens]
 
-Op het tabblad [!UICONTROL Segmenten] wordt een lijst weergegeven met segmenten die aan de bestemming zijn toegewezen, inclusief de begindatum en einddatum (indien van toepassing). Als u de details over een bepaald segment wilt weergeven, selecteert u de naam in de lijst.
+Op het tabblad [!UICONTROL Activeringsgegevens] wordt een lijst weergegeven met segmenten die aan de bestemming zijn toegewezen, inclusief de begindatum en einddatum (indien van toepassing). Als u de details over een bepaald segment wilt weergeven, selecteert u de naam in de lijst.
 
-![](../assets/ui/details-page/segments.png)
+![](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
