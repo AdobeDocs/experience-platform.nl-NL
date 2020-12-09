@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins;mixin;Mixin;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema library;Schema Library;schema;record data;time series;time-series
 solution: Experience Platform
-title: XDM-systeem (Experience Data Model)
+title: XDM System, overzicht
 topic: overview
 description: 'Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), die door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema''s voor het beheer van de klantenervaring te bepalen. '
 translation-type: tm+mt
-source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
+source-git-commit: d96890fd79acaa09628dbba49ee6930ed4f9d0e6
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1584'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Dit document biedt een overzicht van de rol van XDM System in [!DNL Experience P
 
 ## XDM-schema&#39;s
 
-[!DNL Experience Platform] gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het gemakkelijker om betekenis te behouden en zo waarde te verkrijgen van gegevens.
+[!DNL Experience Platform] gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens.
 
 Voordat gegevens kunnen worden opgenomen in [!DNL Platform], moet een schema zijn samengesteld om de gegevensstructuur te beschrijven en om beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. Schema&#39;s bestaan uit een basisklasse en nul of meer mixen.
 
