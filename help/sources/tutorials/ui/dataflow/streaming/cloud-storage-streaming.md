@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met behulp van de basisaansluiting voor cloudopslag.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Voltooien]*
 
 ## Uw gegevensstroom controleren en verwijderen
 
-Nadat u de gegevens voor de cloudopslag hebt gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Voor meer informatie bij het controleren van en het schrappen van gegevensstromen, zie de zelfstudie over het [controleren van gegevensstromen](../../../../../ingestion/quality/monitor-data-flows.md).
+Nadat u de gegevens voor de cloudopslag hebt gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Voor meer informatie bij het controleren van en het schrappen van gegevensstromen, zie de zelfstudie over het [controleren van gegevensstromen](../../../../../ingestion/quality/monitor-data-ingestion.md).
 
 ## Volgende stappen
 
