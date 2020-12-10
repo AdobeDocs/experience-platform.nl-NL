@@ -5,7 +5,7 @@ title: Problemen met streaming opname oplossen
 topic: troubleshooting
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over het streamen van opname op Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -59,7 +59,7 @@ U kunt veelvoudige berichten binnen één enkele verzoeklading groeperen en hen 
 
 Alle gegevens die naar [!DNL Platform] (met succes of anders) worden verzonden worden opgeslagen als partijdossiers alvorens in datasets worden voortgeduurd. De verwerkingsstatus van batches wordt weergegeven in de gegevensset waarnaar ze zijn verzonden.
 
-U kunt verifiëren of de gegevens met succes zijn opgenomen door datasetactiviteit te controleren gebruikend het [gebruikersinterface](https://platform.adobe.com)van het Experience Platform. Klik **[!UICONTROL Datasets]** in de linkernavigatie om een lijst van datasets te tonen. Selecteer de dataset u aan van de getoonde lijst stroomt om zijn de activiteitenpagina **[!UICONTROL van de]** Dataset te openen, tonend alle partijen die tijdens een geselecteerde tijdspanne worden verzonden. Zie de handleiding voor het [!DNL Experience Platform] controleren van streaming gegevensstromen voor meer informatie over het gebruik [voor het controleren van gegevensstromen](../quality/monitor-data-flows.md).
+U kunt verifiëren of de gegevens met succes zijn opgenomen door datasetactiviteit te controleren gebruikend het [gebruikersinterface](https://platform.adobe.com)van het Experience Platform. Klik **[!UICONTROL Datasets]** in de linkernavigatie om een lijst van datasets te tonen. Selecteer de dataset u aan van de getoonde lijst stroomt om zijn de activiteitenpagina **[!UICONTROL van de]** Dataset te openen, tonend alle partijen die tijdens een geselecteerde tijdspanne worden verzonden. Zie de handleiding voor het [!DNL Experience Platform] controleren van streaming gegevensstromen voor meer informatie over het gebruik [voor het controleren van gegevensstromen](../quality/monitor-data-ingestion.md).
 
 Als uw gegevens niet kunnen worden ingevoerd en u wilt het van terugkrijgen [!DNL Platform], kunt u de ontbroken partijen terugwinnen door hun IDs naar [!DNL Data Access API]te verzenden. Zie de handleiding over het [ophalen van mislukte batches](../quality/retrieve-failed-batches.md) voor meer informatie.
 
