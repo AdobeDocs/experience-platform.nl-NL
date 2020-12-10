@@ -5,7 +5,7 @@ title: Handleiding Adobe Experience Platform UI
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
+source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 0%
@@ -149,7 +149,7 @@ Met de sectie **[!UICONTROL Datasets]** kunt u gegevenssets maken en beheren. Me
 
 Met de sectie **[!UICONTROL Query]** kunt u query&#39;s maken en beheren, SQL-query&#39;s van de Adobe Experience Platform Query Service registreren en uw PostSQL-referenties bekijken. Meer informatie over vragen kan in de de gebruikersgids [van de Dienst van de](../query-service/ui/overview.md)Vraag worden gevonden.
 
-Met de sectie **[!UICONTROL Controle]** kunt u de opname van batches en streaming controleren. Meer informatie over controle kan in de de gebruikershandleiding [van de](../ingestion/quality/monitor-data-flows.md)controlegegevens worden gevonden.
+Met de sectie **[!UICONTROL Controle]** kunt u de opname van batches en streaming controleren. Meer informatie over controle kan in de de gebruikershandleiding [van de](../ingestion/quality/monitor-data-ingestion.md)controlegegevens worden gevonden.
 
 ### [!UICONTROL Beslissing]
 
