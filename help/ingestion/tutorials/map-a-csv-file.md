@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand via de Adobe Experience Platform-gebruikersinterface toewijst aan een XDM-schema.
 translation-type: tm+mt
-source-git-commit: d69d0dd8c5a3d3a5e92cc88e390c079ed46aba32
+source-git-commit: c19360450d7b1f11063683b796774a04f3dbe16c
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 0%
+source-wordcount: '861'
+ht-degree: 1%
 
 ---
 
@@ -113,9 +113,9 @@ Het kaartscherm verschijnt weer met het nieuwe bronveld. Pas het desbetreffende 
 
 ![](../images/tutorials/map-a-csv-file/new-calculated-field.png)
 
-## Uw gegevensstroom controleren
+## Gegevens bijhouden
 
-Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Raadpleeg de zelfstudie over het [controleren van streaming dataflows voor meer informatie over het controleren van gegevensstromen](../../ingestion/quality/monitor-data-flows.md).
+Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Zie de zelfstudie over het [controleren van gegevensinvoer](../../ingestion/quality/monitor-data-ingestion.md)voor meer informatie over het controleren van gegevensinvoer.
 
 ## Volgende stappen
 
