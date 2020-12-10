@@ -5,9 +5,9 @@ title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 translation-type: tm+mt
-source-git-commit: d26eaf699a67a1bc7111f5f97da277368fcc4629
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
@@ -54,8 +54,9 @@ Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen [!DNL Platform
 - [[!DNL Apache HDFS] connector](connectors/cloud-storage/hdfs.md)
 - [[!DNL Azure Event Hubs] connector](connectors/cloud-storage/eventhub.md)
 - [[!DNL Azure File Storage] connector](connectors/cloud-storage/azure-file-storage.md)
-- [[!DNL FTP and SFTP] connector](connectors/cloud-storage/ftp-sftp.md)
+- [[!DNL FTP] connector](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] connector](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
 
 ### Customer Relationship Management (CRM)
 
