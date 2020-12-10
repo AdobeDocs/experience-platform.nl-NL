@@ -7,9 +7,9 @@ landing-page-description: Find answers to frequently asked questions and a guide
 topic: getting started
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 4a65d5e31eda3973d3e8e0d8e066692c667934e1
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1954'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over Adobe Exper
 
 ## Wat zijn API&#39; [!DNL Experience Platform] s? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] biedt veelvoudige RESTful APIs aan die HTTP- verzoeken om tot [!DNL Platform] middelen gebruiken. Deze dienst APIs elk stelt veelvoudige eindpunten bloot, en staat u toe om verrichtingen aan lijst (GET), raadpleging (GET) uit te voeren, (PUT en/of PATCH), en (DELETE) middelen uit te geven. Raadpleeg de [API-naslagdocumentatie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) op Adobe I/O voor meer informatie over specifieke eindpunten en bewerkingen die voor elke service beschikbaar zijn.
+[!DNL Experience Platform] biedt veelvoudige RESTful APIs aan die HTTP- verzoeken om tot [!DNL Platform] middelen gebruiken. Deze dienst APIs elk stelt veelvoudige eindpunten bloot, en staat u toe om verrichtingen aan lijst (GET), raadpleging (GET) uit te voeren, (PUT en/of PATCH), en (DELETE) middelen uit te geven. Raadpleeg de [API-naslagdocumentatie](http://www.adobe.com/go/platform-api-reference-en) op Adobe I/O voor meer informatie over specifieke eindpunten en bewerkingen die voor elke service beschikbaar zijn.
 
 ## Hoe kan ik een API-aanvraag opmaken? {#how-do-i-format-an-api-request}
 
@@ -87,19 +87,19 @@ De reactie illustreert wat u zou verwachten te ontvangen na een succesvolle vraa
 }
 ```
 
-Raadpleeg de [API-naslagdocumentatie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)voor meer informatie over specifieke eindpunten in Platform-API&#39;s, inclusief vereiste headers en aanvraaginstanties.
+Raadpleeg de [API-naslagdocumentatie](http://www.adobe.com/go/platform-api-reference-en)voor meer informatie over specifieke eindpunten in Platform-API&#39;s, inclusief vereiste headers en aanvraaginstanties.
 
 ## Wat is mijn IMS-organisatie? {#what-is-my-ims-organization}
 
-Een IMS-organisatie is een Adobe-representatie van een klant. Om het even welke vergunning gegeven Adobe oplossingen zijn geïntegreerd met deze klantenorganisatie. Wanneer een IMS-organisatie gerechtigd is om toegang te verlenen [!DNL Experience Platform], kan zij toegang toewijzen aan ontwikkelaars. De IMS-organisatie-id (`x-gw-ims-org-id`) vertegenwoordigt de organisatie waarvoor een API-aanroep moet worden uitgevoerd en is daarom vereist als een header in alle API-aanvragen. Deze id kunt u vinden via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in het lusje van **Integraties** , navigeer aan de sectie van het **Overzicht** voor om het even welke bepaalde integratie om identiteitskaart onder de Geloofsbrieven **van de** Cliënt te vinden. Voor een geleidelijke analyse van hoe te voor authentiek te verklaren in [!DNL Platform], zie het [authentificatieleerprogramma](../tutorials/authentication.md).
+Een IMS-organisatie is een Adobe-representatie van een klant. Om het even welke vergunning gegeven Adobe oplossingen zijn geïntegreerd met deze klantenorganisatie. Wanneer een IMS-organisatie gerechtigd is om toegang te verlenen [!DNL Experience Platform], kan zij toegang toewijzen aan ontwikkelaars. De IMS-organisatie-id (`x-gw-ims-org-id`) vertegenwoordigt de organisatie waarvoor een API-aanroep moet worden uitgevoerd en is daarom vereist als een header in alle API-aanvragen. Deze id kunt u vinden via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in het lusje van **Integraties** , navigeer aan de sectie van het **Overzicht** voor om het even welke bepaalde integratie om identiteitskaart onder de Geloofsbrieven **van de** Cliënt te vinden. Voor een geleidelijke analyse van hoe te voor authentiek te verklaren in [!DNL Platform], zie het [authentificatieleerprogramma](http://www.adobe.com/go/platform-api-authentication-en).
 
 ## Waar kan ik mijn API-sleutel vinden? {#where-can-i-find-my-api-key}
 
-Een API-sleutel is vereist als een header in alle API-aanvragen. U vindt deze via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Binnen de console, op het lusje van **Integraties** , navigeer aan de sectie van het **Overzicht** voor een specifieke integratie en u zult de sleutel onder de Verantwoordelijkheden **van de** Cliënt vinden. Voor een geleidelijke analyse van hoe te voor authentiek te verklaren aan [!DNL Platform], zie het [authentificatieleerprogramma](../tutorials/authentication.md).
+Een API-sleutel is vereist als een header in alle API-aanvragen. U vindt deze via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Binnen de console, op het lusje van **Integraties** , navigeer aan de sectie van het **Overzicht** voor een specifieke integratie en u zult de sleutel onder de Verantwoordelijkheden **van de** Cliënt vinden. Voor een geleidelijke analyse van hoe te voor authentiek te verklaren aan [!DNL Platform], zie het [authentificatieleerprogramma](http://www.adobe.com/go/platform-api-authentication-en).
 
 ## Hoe krijg ik een toegangstoken? {#how-do-i-get-an-access-token}
 
-Toegangstempens zijn vereist in de machtigingheader van alle API-aanroepen. Ze kunnen worden gegenereerd met een `curl` opdracht, op voorwaarde dat u toegang hebt tot een integratie voor een IMS-organisatie. Toegangstokens zijn slechts geldig gedurende 24 uur, waarna een nieuw teken moet worden geproduceerd om verder te gebruiken API. Voor details bij het produceren van toegangstokens, zie de [authentificatielutorial](../tutorials/authentication.md).
+Toegangstempens zijn vereist in de machtigingheader van alle API-aanroepen. Ze kunnen worden gegenereerd met een `curl` opdracht, op voorwaarde dat u toegang hebt tot een integratie voor een IMS-organisatie. Toegangstokens zijn slechts geldig gedurende 24 uur, waarna een nieuw teken moet worden geproduceerd om verder te gebruiken API. Voor details bij het produceren van toegangstokens, zie de [authentificatielutorial](http://www.adobe.com/go/platform-api-authentication-en).
 
 ## Hoe gebruik ik queryparameters? {#how-do-i-user-query-parameters}
 
@@ -153,7 +153,7 @@ De volgende statuscodes kunnen worden gevonden op elke [!DNL Experience Platform
 
 ## Koptekstfouten aanvragen {#request-header-errors}
 
-Voor alle API-aanroepen zijn specifieke aanvraagheaders [!DNL Platform] vereist. Raadpleeg de documentatie bij de [API-naslaggids](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)voor informatie over de vereiste headers voor afzonderlijke services. Zie de zelfstudie [Verificatie voor](../tutorials/authentication.md)informatie over de waarden voor de vereiste verificatieheaders. Als een van deze headers ontbreekt of ongeldig is bij het aanroepen van een API, kunnen de volgende fouten optreden.
+Voor alle API-aanroepen zijn specifieke aanvraagheaders [!DNL Platform] vereist. Raadpleeg de documentatie bij de [API-naslaggids](http://www.adobe.com/go/platform-api-reference-en)voor informatie over de vereiste headers voor afzonderlijke services. Zie de zelfstudie [Verificatie voor](http://www.adobe.com/go/platform-api-authentication-en)informatie over de waarden voor de vereiste verificatieheaders. Als een van deze headers ontbreekt of ongeldig is bij het aanroepen van een API, kunnen de volgende fouten optreden.
 
 ### OAuth-token ontbreekt {#oauth-token-is-missing}
 
@@ -175,7 +175,7 @@ Dit foutbericht wordt weergegeven wanneer een `Authorization` koptekst ontbreekt
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer het toegangstoken in de `Authorization` koptekst niet geldig is. Controleer of het token correct is ingevoerd of [genereer een nieuw token](../tutorials/authentication.md) in de Adobe I/O-console.
+Dit foutbericht wordt weergegeven wanneer het toegangstoken in de `Authorization` koptekst niet geldig is. Controleer of het token correct is ingevoerd of [genereer een nieuw token](http://www.adobe.com/go/platform-api-authentication-en) in de Adobe I/O-console.
 
 ### API-sleutel is vereist
 
