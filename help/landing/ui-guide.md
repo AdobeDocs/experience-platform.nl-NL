@@ -5,9 +5,9 @@ title: Handleiding Adobe Experience Platform UI
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
+source-git-commit: 852792c1288cf7b4815fb0afb742046d7a595da2
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1737'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,15 @@ ht-degree: 0%
 
 Deze gids dient als inleiding aan het gebruiken van het gebruikersinterface van Adobe Experience Platform (UI), die verklaart wat de diverse componenten worden gebruikt voor en verbindingen verstrekt aan verdere documentatie voor meer informatie.
 
-Lees het overzicht [van het](./home.md)Experience Platform voor meer informatie over Adobe Experience Platform.
+Lees het overzicht [van het](home.md)Experience Platform voor meer informatie over Adobe Experience Platform.
 
 ## Startscherm
 
-Nadat u zich hebt aangemeld bij Adobe Experience Platform, gaat u naar de pagina [!UICONTROL Home] , die bestaat uit het dashboard Metrics, de recente gegevens en de aanbevolen leersecties.
+Nadat u zich hebt aangemeld bij Adobe Experience Platform, bevindt u zich op de pagina [!UICONTROL Home] , die bestaat uit het dashboard [](#metrics)Metrics, [recente gegevens](#recent-data)en de [aanbevolen leersecties](#recommended-learning) .
 
 ![](images/user-guide/homepage.png)
 
-### Metrisch dashboard
+### Metrics
 
 Het dashboard van metriek verstrekt kaarten die u informatie over datasets, profielen, segmenten, en bestemmingen binnen uw organisatie geven.
 
@@ -63,13 +63,13 @@ In de sectie **[!UICONTROL Aanbevolen leren]** vindt u koppelingen naar handige 
 
 Op de bovenste navigatiebalk in de gebruikersinterface van het Platform wordt de IMS-organisatie weergegeven waarvoor u zich momenteel hebt aangemeld en zijn diverse belangrijke besturingselementen beschikbaar.
 
-Links op de navigatiebalk bevindt zich het Adobe Experience Platform-logo. Als u deze optie selecteert, keert u terug naar het hoofdscherm van de gebruikersinterface van het Platform.
+Links op de navigatiebalk bevindt zich het Adobe Experience Platform-logo. Als u dit op elk gewenst moment selecteert, wordt de gebruikersinterface van het Platform weer weergegeven.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
 ### IMS-organisatieschakelaar
 
-Het eerste item aan de rechterkant van de navigatiebalk is de schakeloptie **IMS-organisatie**.
+Het eerste item rechts van de bovenste navigatiebalk is de schakeloptie **IMS-organisatie**.
 
 ![](./images/user-guide/homepage-ims-org.png)
 
@@ -79,7 +79,7 @@ Als u de schakeloptie selecteert, wordt een vervolgkeuzemenu geopend met IMS-org
 
 ### Overschakelen op toepassingen
 
-Het volgende punt aan de rechterkant is de **toepassingsschakelaar**, die door het pictogram van de ![toepassingsschakelaar](./images/user-guide/app-switcher-icon.png) wordt vertegenwoordigd. Wanneer u dit pictogram selecteert, kunt u schakelen tussen Experience Platform, Middelen, Uitwisseling en Lancering.
+Het volgende punt op de rechterkant van de hoogste navigatie is de **toepassingsschakelaar**, die door het pictogram van de ![toepassingsschakelaar](./images/user-guide/app-switcher-icon.png) wordt vertegenwoordigd. Wanneer u dit pictogram selecteert, kunt u schakelen tussen Adobe-toepassingen waartoe uw IMS-organisatie toegang heeft, zoals Experience Platform, Analytics, Assets en Launch.
 
 ### Help
 
@@ -89,7 +89,7 @@ Rechts van de toepassingsschakelaar bevindt zich het **Help- en ondersteuningsme
 
 ### Meldingen en aankondigingen
 
-Nadat het menu Help en ondersteuning is ingesteld op de sectie **** Meldingen, die wordt weergegeven door het pictogram ![Kbel/Meldingen en Aankondigingen](images/user-guide/notification-icon.png) . Het tabblad **[!UICONTROL Meldingen]** bevat belangrijke informatie over het product en andere relevante updates, terwijl op het tabblad **[!UICONTROL Aankondigingen]** meldingen over onderhoud van de service worden weergegeven.
+In de sectie **** Meldingen, die door het ![bel/Notifications and Announcements](images/user-guide/notification-icon.png) pictogram wordt vertegenwoordigd. Op het tabblad **[!UICONTROL Meldingen]** vindt u belangrijke informatie over het product en andere relevante updates, terwijl op het tabblad **[!UICONTROL Aankondigingen]** informatie wordt weergegeven over onderhoud aan de service.
 
 ### Gebruikersprofiel
 
