@@ -5,9 +5,9 @@ title: Handleiding gebruikersinterface voor Adobe Experience Platform-workflows
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 068e8270f389ed84cae6ef4b7185259cb5f6dadc
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '280'
 ht-degree: 2%
 
 ---
@@ -21,9 +21,9 @@ In de sectie **[!UICONTROL Workflows]** in de Adobe Experience Platform-gebruike
 
 ## [!UICONTROL Gegevensinvoer]
 
-Met de workflow CSV **[!UICONTROL toewijzen aan XDM-schema]** kunt u een CSV-bestand uploaden en converteren naar een XDM-schemaindeling (Experience Data Model). Meer informatie over deze workflow vindt u in de zelfstudie over het [toewijzen van een CSV-bestand aan een XDM-schema](../ingestion/tutorials/map-a-csv-file.md).
+Met de workflow CSV **[!UICONTROL toewijzen aan XDM-schema]** kunt u een CSV-bestand uploaden en converteren naar een XDM-schema (Experience Data Model). Meer informatie over deze workflow vindt u in de zelfstudie over het [toewijzen van een CSV-bestand aan een XDM-schema](../ingestion/tutorials/map-a-csv-file.md).
 
-Met de **[!UICONTROL gegevensset maken van het schema]** kunt u een nieuwe gegevensset maken op basis van een geregistreerd XDM-schema. Meer informatie over dit werkschema kan in de [datasets gebruikersgids](../catalog/datasets/user-guide.md#schema)worden gevonden.
+Met de **[!UICONTROL gegevensset maken van het schema]** kunt u een nieuwe gegevensset maken op basis van een bestaand XDM-schema. Meer informatie over dit werkschema kan in de [datasets gebruikersgids](../catalog/datasets/user-guide.md#schema)worden gevonden.
 
 Met de **[!UICONTROL gegevensset maken van de CSV]** -workflow kunt u een nieuwe gegevensset maken door een CSV-bestand te uploaden. Meer informatie over dit werkschema kan in de [datasets gebruikersgids](../catalog/datasets/user-guide.md#csv)worden gevonden.
 
@@ -37,4 +37,4 @@ Met de workflow Een model **[!UICONTROL publiceren als service]** kunt u een gem
 
 ## Volgende stappen
 
-Door deze gids te lezen, bent u geïntroduceerd aan de pagina van [!UICONTROL Workflows] op het gebruikersinterface van het Experience Platform. Lees voor meer informatie over de gebruikersinterface van het Platform in het algemeen de gebruikersgids [van](./ui-guide.md)Adobe Experience Platform.
+Door deze gids te lezen, bent u geïntroduceerd aan de [!UICONTROL Workflows] beschikbaar binnen de gebruikersinterface van het Experience Platform. Lees voor meer informatie over de functies en functionaliteit van de gebruikersinterface van het Platform de [Adobe Experience Platform-handleiding](ui-guide.md).
