@@ -5,9 +5,9 @@ seo-title: Bestemming voor Google-advertenties
 description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 seo-description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 7129a375b1bf4623f78989ed75fcd2bb5dad4a02
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,9 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ads] bestemminge
 
 ### Bestaande [!DNL Google Ads] account
 
-[!DNL Google] heeft alle nieuwe [!DNL Google Ads] integraties met externe leveranciers gepauzeerd. U moet bestaande integratie met hebben [!DNL Google Ads] om de stappen van de lijst van gewenste personen in de volgende sectie kunnen uitvoeren en een [!DNL Google Ads] bestemming in Echt - tijd CDP tot stand brengen.
+>[!IMPORTANT]
+>
+> [!DNL Google] heeft nieuwe [!DNL Google Ads] cookieintegratie met derde verkopers vervangen. Voor het uitvoeren van de stappen van de lijst van gewenste personen in de volgende sectie, moet u bestaande integratie met hebben [!DNL Google Ads]. De aanbevolen aanpak voor het gebruik [!DNL Google Ads] is daarom het opzetten van een [!DNL Google Customer Match] integratie. Lees voor meer informatie over het maken van een [!DNL Google Customer Match] integratie de zelfstudie over het maken van een [[!DNL Google Customer Match]](./google-customer-match.md) verbinding.
 
 ### Lijst van gewenste personen
 
