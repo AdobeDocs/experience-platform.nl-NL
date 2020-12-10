@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 translation-type: tm+mt
-source-git-commit: e31e09449b79b8a1600cfb2b162f51c26d482847
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '665'
 ht-degree: 0%
 
 ---
@@ -36,8 +36,9 @@ ht-degree: 0%
       - [Azure Blob-connector](connectors/cloud-storage/blob.md)
       - [Azure Event Hubs-connector](connectors/cloud-storage/eventhub.md)
       - [Azure File Storage-aansluiting](connectors/cloud-storage/azure-file-storage.md)
-      - [FTP- en SFTP-aansluiting](connectors/cloud-storage/ftp-sftp.md)
+      - [FTP-aansluiting](connectors/cloud-storage/ftp.md)
       - [Google Cloud Storage-connector](connectors/cloud-storage/google-cloud-storage.md)
+      - [SFTP-aansluiting](connectors/cloud-storage/sftp.md)
       - [Amazon S3- en Azure Blob-connector](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Microsoft Dynamics-connector](connectors/crm/ms-dynamics.md)
@@ -82,6 +83,7 @@ ht-degree: 0%
          - [Azure Data Lake Storage Gen2-connector](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azure Event Hubs-connector](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure File Storage-aansluiting](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [FTP-aansluiting](tutorials/api/create/cloud-storage/ftp.md)
          - [Google Cloud Storage-connector](tutorials/api/create/cloud-storage/google.md)
          - [SFTP-aansluiting](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -160,8 +162,9 @@ ht-degree: 0%
          - [Azure Blob-connector](tutorials/ui/create/cloud-storage/blob.md)
          - [Azure Event Hubs-connector](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure File Storage-aansluiting](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [FTP- en SFTP-aansluiting](tutorials/ui/create/cloud-storage/ftp-sftp.md)
+         - [FTP-aansluiting](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google Cloud Storage-connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [SFTP-aansluiting](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3- en Blob-connector](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Microsoft Dynamics-connector](tutorials/ui/create/crm/dynamics.md)
