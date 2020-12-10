@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 7f24413a99b57e28ca2106214b7eedb5b068b045
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1808'
 ht-degree: 0%
 
 ---
@@ -143,11 +143,11 @@ Geef waarden op voor het schema en selecteer **[!UICONTROL Volgende]**.
 
 ### Eenmalige gegevensstroom voor inname instellen
 
-Als u eenmalige invoer wilt instellen, selecteert u de vervolgkeuzepijl voor de frequentie en selecteert u **[!UICONTROL Eenmaal]**. U kunt bewerkingen blijven uitvoeren op een gegevensstroom die is ingesteld voor eenmalig opnemen van de frequentie, zolang de begintijd in de toekomst behouden blijft. Zodra de begintijd is verstreken, kan de eenmalig frequentiewaarde niet meer worden bewerkt.
+Als u eenmalige invoer wilt instellen, selecteert u de vervolgkeuzepijl voor de frequentie en selecteert u **[!UICONTROL Eenmaal]**. U kunt bewerkingen blijven uitvoeren op een gegevensstroom die is ingesteld voor eenmalig opnemen van de frequentie, zolang de begintijd in de toekomst behouden blijft. Zodra de begintijd is verstreken, kan de eenmalig frequentiewaarde niet meer worden bewerkt. **[!UICONTROL Interval]** en **[!UICONTROL backfill]** zijn niet zichtbaar wanneer u een eenmalige gegevensstroom voor inname instelt.
 
->[!TIP]
+>[!IMPORTANT]
 >
->**[!UICONTROL Interval]** en **[!UICONTROL backfill]** zijn niet zichtbaar tijdens eenmalig gebruik.
+>Het wordt sterk geadviseerd om uw gegevensstroom voor eenmalig ingang te plannen wanneer het gebruiken van de [schakelaar](../../../../connectors/cloud-storage/ftp.md)van FTP.
 
 Als u de juiste waarden voor het schema hebt opgegeven, selecteert u **[!UICONTROL Volgende]**.
 
