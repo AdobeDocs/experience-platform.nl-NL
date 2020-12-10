@@ -5,7 +5,7 @@ user-guide-title: Help bij Adobe Experience Platform-gegevensverwerking
 breadcrumb-title: Handleiding voor gegevensinname
 user-guide-description: Breng uw gegevens in Platform door partij of het stromen ingestie.
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 4%
@@ -36,7 +36,7 @@ ht-degree: 4%
    - [Meerdere berichten streamen](tutorials/streaming-multiple-messages.md)
 - Kwaliteit van gegevensinvoer en controle{#quality}
    - [Overzicht](quality/overview.md)
-   - [Gegevensstromen bewaken](quality/monitor-data-flows.md)
+   - [Gegevens bijhouden](quality/monitor-data-ingestion.md)
    - [Foutendiagnostiek ophalen](quality/error-diagnostics.md)
    - [Ontbroken batches ophalen](quality/retrieve-failed-batches.md)
    - [Validatie van gestreamde invoer](quality/streaming-validation.md)
