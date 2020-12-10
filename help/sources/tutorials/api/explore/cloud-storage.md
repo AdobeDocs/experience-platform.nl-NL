@@ -5,9 +5,9 @@ title: Een systeem voor cloudopslag verkennen met de Flow Service API
 topic: overview
 description: Deze zelfstudie gebruikt de Flow Service API om een cloudopslagsysteem van derden te verkennen.
 translation-type: tm+mt
-source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
+source-git-commit: 3d104cdf7c97022fe60feafd3587056d378b56bd
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '746'
 ht-degree: 1%
 
 ---
@@ -34,6 +34,7 @@ Als u een externe cloudopslag wilt verkennen met gebruik van [!DNL Platform] API
 * [Azure Blob](../create/cloud-storage/blob.md)
 * [Azure Data Lake Storage Gen2](../create/cloud-storage/adls-gen2.md)
 * [Azure-bestandsopslag](../create/cloud-storage/azure-file-storage.md)
+* [FTP](../create/cloud-storage/ftp.md)
 * [Google Cloud Store](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
 * [SFTP](../create/cloud-storage/sftp.md)
