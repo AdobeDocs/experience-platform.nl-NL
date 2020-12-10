@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: December 9, 2020
 author: ens60013 & ens72471
 translation-type: tm+mt
-source-git-commit: a411ac92d946080abd7b22b9d57c7154d263a30a
+source-git-commit: ae353e6dda3f92647c32ee8e731be5785d24e5cb
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '426'
 ht-degree: 2%
 
 ---
@@ -17,19 +17,35 @@ ht-degree: 2%
 
 **Releasedatum: 9 december 2020**
 
+Nieuwe functies in Adobe Experience Platform:
+
+- [[!DNL Dataflows]](#dataflows)
+
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Sources]](#sources)
 
+## [!DNL Dataflows] {#dataflows}
+
+Dataflows zijn een voorstelling van gegevenstaken die gegevens over het Platform verplaatsen. Deze dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets, aan de Dienst van de Identiteit en van het Profiel, en aan bestemmingen helpen verplaatsen.
+
+**Sleutelfunctie**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Transparantie voor gegevensstromen | U kunt gegevensstromen voor bronnen en bestemmingen controleren. Lees voor meer informatie de [zelfstudie over monitoringbronnen](../../dataflows/ui/monitor-sources.md) of de [zelfstudie over het controleren van bestemmingen](../../dataflows/ui/monitor-destinations.md). |
+
+Lees het [dataflows-overzicht](../../dataflows/home.md)voor meer informatie over gegevensstromen.
+
 ## [!DNL Data Science Workspace] {#dsw}
 
 De Werkruimte van de Wetenschap van Gegevens gebruikt machine het leren en kunstmatige intelligentie om inzichten van uw gegevens tot stand te brengen. De Data Science Workspace is geïntegreerd in Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen.
 
-### Belangrijkste kenmerken
+**Belangrijkste kenmerken**
 
 | Functie | Beschrijving |
-|--- | ---|
+| --- | ---|
 | Toevoeging Adobe Experience Platform Intelligence-pakket | Het Adobe Experience Platform Intelligence-pakket addon is een Data Science Workspace-upgrade die extra belangrijke functies zoals: <li> Door de gebruikersinterface gestuurde modelexperimenten en -evaluaties.</li><li> Mogelijkheid om modellen te implementeren en te exploiteren met geplande training en het afleiden van taken.</li><li> Ondersteuning voor diep leren in Tensorflow-modellen (GPU Compute).</li><li> Op park-gebaseerde verdeelde computer om te trainen en tegen grote datasets (10MM + rijen) te scoren.</li><li>En meer</li> |
 
 Raadpleeg de documentatie over de toegang tot en de functies [](../../data-science-workspace/access-features-dsw.md)van de Data Science Workspace voor meer informatie over het Adobe Experience Platform Intelligence-pakket.
