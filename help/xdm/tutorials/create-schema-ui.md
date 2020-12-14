@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in het Experience Platform.
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 26c3aa3b21c2d9850f29816d57ddf2da953d6b10
 workflow-type: tm+mt
-source-wordcount: '3819'
+source-wordcount: '3779'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,13 @@ Deze zelfstudie vereist een goed begrip van de verschillende aspecten van Adobe 
    * [Basisbeginselen van de schemacompositie](../schema/composition.md): Een overzicht van schema&#39;s XDM en hun bouwstenen, met inbegrip van klassen, mengen, gegevenstypes, en gebieden.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-## Door bestaande schema&#39;s in de [!UICONTROL werkruimte Schema] &#39;s bladeren {#browse}
+## De werkruimte [!UICONTROL Schema] openen {#browse}
 
 De [!UICONTROL werkruimte van Schema] in [!DNL Platform] UI verstrekt een visualisatie van [!DNL Schema Library], toestaand u om de schema&#39;s te bekijken beschikbaar voor uw organisatie. De werkruimte bevat ook het [!DNL Schema Editor]canvas waarop u in deze zelfstudie een schema kunt samenstellen.
 
 Nadat u zich hebt aangemeld [!DNL Experience Platform], selecteert u **[!UICONTROL Schema]** in de linkernavigatie om de werkruimte **[!UICONTROL Schema]** te openen. Op het tabblad **[!UICONTROL Bladeren]** wordt een lijst weergegeven met schema&#39;s (een weergave van de schema&#39;s [!DNL Schema Library]) die u kunt weergeven en aanpassen. De lijst bevat de naam, het type, de klasse en het gedrag (record of tijdreeks) waarop het schema is gebaseerd, evenals de datum en tijd waarop het schema voor het laatst is gewijzigd.
 
-Selecteer het filterpictogram naast de onderzoeksbar om het filtreren mogelijkheden voor alle middelen in de registratie, met inbegrip van klassen, mengen, en gegevenstypes te gebruiken. U kunt ook filteren op basis van het feit of bronnen het eigendom zijn van Adobe of uw organisatie en of ze zijn ingeschakeld voor gebruik in [!DNL Real-time Customer Profile].
-
-![](../images/tutorials/create-schema/schemas_filter.png)
+Zie de handleiding over het [verkennen van bestaande XDM-bronnen in de gebruikersinterface](./explore.md) voor meer informatie.
 
 ## Een schema maken en een naam geven {#create}
 
@@ -90,11 +88,11 @@ Als u een voorbeeld van een mix bekijkt, wordt een gedetailleerde beschrijving v
 
 ![](../images/tutorials/create-schema/preview-mixin.png)
 
-Voor deze zelfstudie selecteert u de mix met details **[!UICONTROL van de persoon]** Profiel en selecteert u vervolgens **[!UICONTROL Mengsel]** toevoegen.
+Voor deze zelfstudie selecteert u de **[!UICONTROL mix Demografische details]** en selecteert u vervolgens **[!UICONTROL Mengsel]** toevoegen.
 
 ![](../images/tutorials/create-schema/add_mixin_person_details.png)
 
-Het schemacanvas verschijnt opnieuw. In de sectie **[!UICONTROL Mixins]** wordt nu &quot;Details[!UICONTROL van]profielpersonen&quot; weergegeven en in de sectie **[!UICONTROL Structuur]** zijn de velden opgenomen die door de mix worden toegevoegd. U kunt de naam van de mix selecteren onder de sectie **[!UICONTROL Mixins]** om de specifieke velden te markeren die worden weergegeven op het canvas.
+Het schemacanvas verschijnt opnieuw. De sectie **[!UICONTROL Mixins]** bevat nu de sectie[!UICONTROL Demografische details]en de sectie **[!UICONTROL Structuur]** bevat de velden die door de mix worden toegevoegd. U kunt de naam van de mix selecteren onder de sectie **[!UICONTROL Mixins]** om de specifieke velden te markeren die worden weergegeven op het canvas.
 
 ![](../images/tutorials/create-schema/person_details_structure.png)
 
@@ -104,19 +102,19 @@ Deze mix levert verschillende velden onder de naam op hoofdniveau bij `person` h
 >
 >Onthoud dat in velden scalaire typen kunnen worden gebruikt (zoals een tekenreeks, geheel getal, array of datum) en ook elk gegevenstype (een groep velden die een algemeen concept vertegenwoordigen) dat in de [!DNL Schema Registry]code is gedefinieerd.
 
-Het `name` veld heeft een gegevenstype &quot;[!UICONTROL Volledige naam]&quot;, wat betekent dat het ook een algemeen concept beschrijft en naamgerelateerde subvelden bevat, zoals voornaam, achternaam, hoffelijkheidstitel en achtervoegsel.
+Het `name` veld heeft een gegevenstype &quot;[!UICONTROL Persoon name]&quot;, wat betekent dat het ook een algemeen concept beschrijft en naamgerelateerde subvelden bevat, zoals voornaam, achternaam, hoffelijkheidstitel en achtervoegsel.
 
 Selecteer de verschillende velden op het canvas om extra velden weer te geven die worden toegevoegd aan de schemastructuur.
 
 ## Een andere mix toevoegen {#mixin-2}
 
-U kunt nu dezelfde stappen herhalen om een andere mix toe te voegen. Wanneer u dit keer het dialoogvenster **[!UICONTROL Toevoegen]** bekijkt, ziet u dat de mix ‘Details[!UICONTROL van persoon]Profiel’ grijs is weergegeven en dat het selectievakje naast het dialoogvenster niet kan worden geselecteerd. Zo voorkomt u dat u per ongeluk combinaties dupliceert die u al in het huidige schema hebt opgenomen.
+U kunt nu dezelfde stappen herhalen om een andere mix toe te voegen. Wanneer u dit keer het dialoogvenster **[!UICONTROL Toevoegen]** bekijkt, ziet u dat de mix &quot;[!UICONTROL Demografische details]&quot; grijs is weergegeven en dat het selectievakje ernaast niet kan worden ingeschakeld. Zo voorkomt u dat u per ongeluk combinaties dupliceert die u al in het huidige schema hebt opgenomen.
 
-Voor deze zelfstudie selecteert u de &#39;[!DNL Profile personal details]&#39; mix in het dialoogvenster en selecteert u vervolgens **[!UICONTROL Toevoegen, mixen]** om deze aan het schema toe te voegen.
+Voor deze zelfstudie selecteert u de &#39;[!DNL Personal Contact Details]&#39; mix in het dialoogvenster en selecteert u vervolgens **[!UICONTROL Toevoegen, mixen]** om deze aan het schema toe te voegen.
 
 ![](../images/tutorials/create-schema/add_mixin_personal_details.png)
 
-Nadat u het canvas hebt toegevoegd, verschijnt het weer. De &quot;persoonlijke details[!UICONTROL van het]profiel&quot;is nu vermeld onder **[!UICONTROL Mixins]** in de sectie van de **[!UICONTROL Samenstelling]** , en gebieden voor huisadres, mobiele telefoon, en meer zijn toegevoegd onder **[!UICONTROL Structuur]**.
+Nadat u het canvas hebt toegevoegd, verschijnt het weer. De &quot;[!UICONTROL Persoonlijke Details]van het Contact&quot;is nu vermeld onder **[!UICONTROL Mixins]** in de sectie van de **[!UICONTROL Samenstelling]** , en gebieden voor huisadres, mobiele telefoon, en meer zijn toegevoegd onder **[!UICONTROL Structuur]**.
 
 Net als in het `name` veld vertegenwoordigen de velden die u zojuist hebt toegevoegd concepten met meerdere velden. Bijvoorbeeld, heeft `homeAddress` een gegevenstype van &quot;[!UICONTROL Postadres]&quot;en `mobilePhone` heeft een gegevenstype van &quot;[!UICONTROL telefoonaantal]&quot;. U kunt elk van deze velden selecteren om deze uit te vouwen en de extra velden in het gegevenstype bekijken.
 
@@ -132,19 +130,19 @@ Wanneer u dit keer het dialoogvenster **[!UICONTROL Mixin]** toevoegen opent, se
 
 Net als bij klassennamen moet de mixinnaam kort en eenvoudig zijn en beschrijven wat de mix aan het schema zal bijdragen. Ook deze zijn uniek, dus u kunt de naam niet opnieuw gebruiken en moet er dus voor zorgen dat deze voldoende specifiek is.
 
-Geef voor deze zelfstudie de naam van de nieuwe mix &quot;[!UICONTROL Loyalty Details]&quot;.
+Geef voor deze zelfstudie de nieuwe mix de naam &quot;Loyalty Details&quot;.
 
 Selecteer Mengsel **[!UICONTROL toevoegen]** om terug te keren naar de [!DNL Schema Editor]. &quot;[!UICONTROL Loyalty Details]&quot; moeten nu worden weergegeven onder **[!UICONTROL Mixins]** aan de linkerkant van het canvas, maar er zijn nog geen velden aan gekoppeld en daarom verschijnen er geen nieuwe velden onder **[!UICONTROL Structuur]**.
 
 ## Velden toevoegen aan de mix {#mixin-fields}
 
-Nu u de mix &quot;[!UICONTROL Loyalty Details]&quot;hebt gecreeerd, is het tijd om de gebieden te bepalen die de mixin aan het schema zal bijdragen.
+Nu u de mix &quot;Loyalty Details&quot;hebt gecreeerd, is het tijd om de gebieden te bepalen die de mixin aan het schema zal bijdragen.
 
-Selecteer eerst de naam van de mix in de sectie **[!UICONTROL Mixins]** . Zodra u dit doet, verschijnen de eigenschappen van de mixin op de rechterkant van de redacteur en een **[!UICONTROL Add gebiedsknoop]** verschijnt naast de naam van het schema onder **[!UICONTROL Structuur]**.
+Selecteer eerst de naam van de mix in de sectie **[!UICONTROL Mixins]** . Zodra u dit doet, verschijnen de eigenschappen van de mixin op de rechterkant van de redacteur en een **plusteken (+)** verschijnt naast de naam van het schema onder **[!UICONTROL Structuur]**.
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-Selecteer het veld **** Toevoegen naast &quot;[!DNL Loyalty Members]&quot; om een nieuw knooppunt in de structuur te maken. Dit knooppunt (in dit voorbeeld aangeroepen) vertegenwoordigt de huurder-id van uw IMS-organisatie, voorafgegaan door een onderstrepingsteken. `_tenantId` De aanwezigheid van huurder identiteitskaart wijst erop dat de gebieden u toevoegt in namespace van uw organisatie bevat zijn.
+Selecteer de **plusknop (+)** naast &quot;[!DNL Loyalty Members]&quot; om een nieuw knooppunt in de structuur te maken. Dit knooppunt (in dit voorbeeld aangeroepen) vertegenwoordigt de huurder-id van uw IMS-organisatie, voorafgegaan door een onderstrepingsteken. `_tenantId` De aanwezigheid van huurder identiteitskaart wijst erop dat de gebieden u toevoegt in namespace van uw organisatie bevat zijn.
 
 Met andere woorden, de velden die u toevoegt, zijn uniek voor uw organisatie en worden opgeslagen in een specifiek gebied dat alleen voor uw organisatie toegankelijk is. [!DNL Schema Registry] De gebieden u bepaalt moeten altijd aan uw huurdersnamespace worden toegevoegd om botsingen met namen van andere standaardklassen, mixins, gegevenstypes, en gebieden te verhinderen.
 
@@ -156,7 +154,7 @@ Gebruikend de controles op de rechterkant van de redacteur, begin door een `loya
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
-De wijzigingen worden toegepast en het nieuwe `loyalty` object wordt weergegeven. Selecteer het veld **** Toevoegen naast het object om aanvullende velden toe te voegen die betrekking hebben op loyaliteit. Er wordt een &#39;&#39;[!UICONTROL Nieuw veld]&#39;&#39; weergegeven en de sectie met **[!UICONTROL veldeigenschappen]** is zichtbaar aan de rechterkant van het canvas.
+De wijzigingen worden toegepast en het nieuwe `loyalty` object wordt weergegeven. Selecteer de **plusknop (+)** naast het object om extra velden toe te voegen die betrekking hebben op loyaliteit. Er wordt een &#39;&#39;[!UICONTROL Nieuw veld]&#39;&#39; weergegeven en de sectie met **[!UICONTROL veldeigenschappen]** is zichtbaar aan de rechterkant van het canvas.
 
 ![](../images/tutorials/create-schema/new_field_in_loyalty_object.png)
 
@@ -182,7 +180,7 @@ Nu u het `loyaltyId` veld hebt toegevoegd, kunt u aanvullende velden toevoegen o
 * Punten (geheel getal)
 * Sinds lid (datum)
 
-Elk veld wordt toegevoegd door het veld **** Toevoegen voor het `loyalty` object te selecteren en de vereiste gegevens in te vullen.
+Als u elk veld aan het schema wilt toevoegen, selecteert u de **plusknop (+)** naast het `loyalty` object en vult u de vereiste gegevens in.
 
 Wanneer voltooid, zal het voorwerp van de Loyalty gebieden voor loyauiteits identiteitskaart, punten, en lid-sinds bevatten.
 
@@ -200,7 +198,7 @@ Wanneer u velden in het veld definieert, [!DNL Schema Editor]zijn er enkele aanv
 | [!UICONTROL Identiteit] | Geeft aan dat dit veld een identiteitsveld is. Meer informatie over identiteitsvelden vindt u [later in deze zelfstudie](#identity-field). |
 | [!UICONTROL Relatie] | Terwijl de schemaverhoudingen door het gebruik van het unieschema kunnen worden afgeleid en [!DNL Real-time Customer Profile], is dit slechts op schema&#39;s van toepassing die de zelfde klasse delen. De beperking [!UICONTROL Relatie] geeft aan dat dit veld verwijst naar de primaire identiteit van een schema op basis van een andere klasse, wat een relatie tussen de twee schema&#39;s impliceert. Zie de zelfstudie over het [definiëren van een relatie](./relationship-ui.md) voor meer informatie. |
 
-Voor dit leerprogramma, vereist het [!DNL "loyalty"] voorwerp in het schema een nieuw enum gebied dat het &quot;loyaliteitsniveau&quot;van een klant beschrijft, waar de waarde slechts één van vier mogelijke opties kan zijn. Als u dit veld aan het schema wilt toevoegen, selecteert u Veld **[!UICONTROL toevoegen naast het]** object en vult u de vereiste velden in voor `loyalty` veldnaam **[!UICONTROL en]** weergavenaam ****. Selecteer bij **[!UICONTROL Type]**&quot;[!UICONTROL String]&quot;.
+Voor dit leerprogramma, vereist het [!DNL "loyalty"] voorwerp in het schema een nieuw enum gebied dat het &quot;loyaliteitsniveau&quot;van een klant beschrijft, waar de waarde slechts één van vier mogelijke opties kan zijn. Als u dit veld aan het schema wilt toevoegen, selecteert u de **plusknop (+)** naast het `loyalty` object en vult u de vereiste velden in voor **[!UICONTROL veldnaam]** en **[!UICONTROL weergavenaam]**. Selecteer bij **[!UICONTROL Type]**&quot;[!UICONTROL String]&quot;.
 
 ![](../images/tutorials/create-schema/loyalty-level-type.png)
 
@@ -227,6 +225,10 @@ Als u nu onder **[!UICONTROL Structuur]** kijkt, ziet u dat het `loyalty` veld e
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
 In een toekomstig schema, kon u een gebied nu toewijzen als &quot;[!DNL Loyalty]&quot;type en het zou automatisch gebieden voor identiteitskaart, loyaliteitsniveau, lid sinds, en punten omvatten.
+
+>[!NOTE]
+>
+>U kunt ook aangepaste gegevenstypen maken en bewerken, onafhankelijk van het bewerken van schema&#39;s. Zie de zelfstudie over het [maken en bewerken van gegevenstypen](./create-data-type.md) voor meer informatie.
 
 ## Schema-velden zoeken en filteren
 
@@ -270,7 +272,7 @@ Vervolgens moet u een naamruimte **** Identiteit opgeven in de lijst met vooraf 
 >
 >Raadpleeg de [[!DNL Identity Service] documentatie](../../identity-service/troubleshooting-guide.md#standard-namespaces)voor een lijst met standaardnaamruimten en de bijbehorende definities.
 
-Nadat u de wijziging hebt toegepast, wordt op het pictogram voor `loyaltyId` een vingerafdruksymbool een identiteitsveld weergegeven. Bovendien maakt de [!DNL Loyalty Details] mix in de linkerspoorlijn een lijst van het identiteitsgebied onder het, die u toestaat om gemakkelijk te bepalen welke mengeling in een schema verstrekt het de identiteitsgebied(en) van dat schema.
+Nadat u de wijziging hebt toegepast, wordt op het pictogram voor `loyaltyId` een vingerafdruksymbool een identiteitsveld weergegeven.
 
 ![](../images/tutorials/create-schema/identity-applied.png)
 
