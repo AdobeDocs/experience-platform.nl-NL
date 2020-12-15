@@ -1,23 +1,17 @@
 ---
 keywords: Experience Cloud;getting started;content and commerce ai;popular topics;Intelligent Services;ccai
-solution: Experience Cloud
+solution: Experience Cloud, Intelligent Services, Experience Platform
 title: Overzicht van AI-bestanden voor inhoud en handel
 topic: Content and Commerce AI
 description: AI van de Inhoud en van de Handel is een reeks diensten van AI die u toestaat om intelligente eigenschappen uit uw inhoud te halen, inhoudsstroom te organiseren, te stroomlijnen, en nuttigere, gepersonaliseerde ervaringen aan uw klanten te leveren.
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
 
 ---
 
-
-<!--
-
-NOTE to writer: "Intelligent Services" is not a valid solution value. Log a UGP bug if you think it should be added.
-
--->
 
 # Overzicht van AI-bestanden voor inhoud en handel
 
