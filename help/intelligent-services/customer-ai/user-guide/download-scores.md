@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;download scores;customer ai;popular topics;Export;export
-solution: Experience Platform
+keywords: Experience Platform;download scores;customer ai;popular topics;Export;export;customer ai download;customer ai scores
+solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Muziek downloaden in AI van klant
 topic: Downloading scores
 description: Met AI van de klant kunt u scores downloaden in de bestandsindeling van het pakket.
 translation-type: tm+mt
-source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 0%
