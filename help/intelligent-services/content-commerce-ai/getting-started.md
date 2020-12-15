@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Aan de slag met Content and Commerce AI
 topic: Getting started
 description: In de AI voor Inhoud en Handel worden Adobe I/O API's gebruikt. Als u aanroepen wilt uitvoeren naar Adobe I/O API's en de I/O Console-integratie, moet u eerst de zelfstudie voor verificatie voltooien.
 translation-type: tm+mt
-source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 0%
