@@ -1,11 +1,11 @@
 ---
 keywords: text classification;Text classification
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: API-eindpunt tekstclassificatie
 topic: Developer guide
 description: Als de tekstclassificatiedienst een tekstfragment opgeeft, kan deze classificeren in een of meer labels. De classificatie kan single-label, multi-label, of hiërarchisch zijn.
 translation-type: tm+mt
-source-git-commit: 09200be6eb078ecbefc91c6449373f811b602797
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 2%
