@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;Intelligent Services;popular topics;intelligent service;Intelligent service
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Gegevens voorbereiden voor gebruik in intelligente services
 topic: Intelligent Services
 description: 'Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services hefboomwerkervaringsgegevensmodel (XDM) om dit te bereiken. Specifiek, moeten alle datasets die in de Intelligente Diensten worden gebruikt] met het schema van XDM van Consumer ExperienceEvent (CEE) in overeenstemming zijn. '
 translation-type: tm+mt
-source-git-commit: 630f3bd0249dc3d0e73ace52c534d5f20ec0f87a
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '1851'
 ht-degree: 0%
