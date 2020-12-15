@@ -4,7 +4,7 @@ title: Gegevenstype Inhoud en Voorkeuren
 description: Het gegevenstype Privacy/Marketing Preferences (Consent) (Consent) is bedoeld ter ondersteuning van de verzameling van klantmachtigingen en -voorkeuren die worden gegenereerd door CMP's (Consent Management Platforms) en andere bronnen van uw gegevensbewerkingen.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
+source-git-commit: 640f0be8a297fada0eee10ff80fec3b3142c09b9
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 0%
@@ -333,4 +333,4 @@ In de volgende tabel worden de toegestane waarden voor `xdm:preferred`:
 
 ### Volledig [!DNL Consents & Preferences] schema {#full-schema}
 
-Als u het volledige schema voor het [!DNL Consents & Preferences] gegevenstype wilt weergeven, raadpleegt u de [officiële XDM-opslagruimte](https://github.com/adobe/xdm/blob/master/components/datatypes/consentpreferences.schema.json).
+Als u het volledige schema voor het [!DNL Consents & Preferences] gegevenstype wilt weergeven, raadpleegt u de [officiële XDM-opslagruimte](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
