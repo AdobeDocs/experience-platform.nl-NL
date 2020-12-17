@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Query Service
 breadcrumb-title: Handleiding Query Service
 user-guide-description: Gebruik standaard SQL om gegevens in het meer van Gegevens van het Platform te vragen.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: e38190aabfa5d36de85e03eb5fb4e76283fb7934
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '144'
 ht-degree: 5%
 
 ---
@@ -24,11 +24,10 @@ ht-degree: 5%
    - [Geplande query&#39;s](api/scheduled-queries.md)
    - [Runs voor geplande vragen](api/runs-scheduled-queries.md)
    - [Zoeksjablonen](api/query-templates.md)
-- Gebruikersinterface Query Service {#ui}
+- UI voor query-service {#ui}
    - [Overzicht van gebruikersinterface](ui/overview.md)
    - [Gebruikershandleiding voor de Query Editor](ui/user-guide.md)
 - Query’s maken {#creating-queries}
-   - [Door Adobe gedefinieerde functies](creating-queries/using-adobe-defined-functions.md)
    - [Query-overzicht maken](creating-queries/creating-queries.md)
    - [Datasets vs tabellen en schema&#39;s](creating-queries/datasets-and-tables.md)
    - [Algemene richtlijnen voor het uitvoeren van query&#39;s](creating-queries/writing-queries.md)
@@ -47,7 +46,7 @@ ht-degree: 5%
    - [Overzicht van voorbeeldquery&#39;s](sample-queries/overview.md)
    - [Adobe Analytics](sample-queries/adobe-analytics.md)
    - [Adobe Target](sample-queries/adobe-target.md)
-- Client verbinden met Query-service {#clients}
+- Verbind cliënten met de Dienst van de Vraag {#clients}
    - [Overzicht van clientverbindingen](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [Looker](clients/looker.md)
