@@ -5,59 +5,62 @@ title: Adobe-gedefinieerde functies
 topic: functions
 description: Dit document verstrekt informatie voor Adobe-bepaalde functies beschikbaar in de Dienst van de Vraag.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: c95f976efd4a281640d2f47888b34bdd12a6c7a8
 workflow-type: tm+mt
-source-wordcount: '2167'
-ht-degree: 3%
+source-wordcount: '2889'
+ht-degree: 1%
 
 ---
 
 
 # Adobe-gedefinieerde functies
 
-Adobe-bepaalde functies (ADFs) zijn prebuilt functies in [!DNL Query Service] die helpen gemeenschappelijke bedrijfs verwante taken op [!DNL ExperienceEvent] gegevens uitvoeren. Deze omvatten functies voor Sessionisatie en Attributie zoals die in Adobe Analytics worden gevonden. Zie de documentatie [van](https://docs.adobe.com/content/help/nl-NL/analytics/landing/home.html) Adobe Analytics voor meer informatie over Adobe Analytics en de concepten achter ADFs die op deze pagina worden bepaald. Dit document bevat informatie over door Adobe gedefinieerde functies die beschikbaar zijn in [!DNL Query Service].
+Adobe-bepaalde functies, hier genoemd ADFs, zijn prebuilt functies in de Dienst van de Vraag van Adobe Experience Platform die helpen gemeenschappelijke zaken-gerelateerde taken op [!DNL Experience Event] gegevens uitvoeren. Dit zijn onder andere functies voor [Sessionisatie](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) en [Attributie](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html), zoals die in Adobe Analytics.
 
-## Vensterfuncties
+Dit document bevat informatie over door Adobe gedefinieerde functies die beschikbaar zijn in [!DNL Query Service].
 
-De meerderheid van de bedrijfslogica vereist het verzamelen van de aanraakpunten voor een klant en het opdracht geven tot hen tegen tijd. Deze ondersteuning wordt geleverd door [!DNL Spark] SQL in de vorm van vensterfuncties. Vensterfuncties maken deel uit van standaard-SQL en worden ondersteund door vele andere SQL-engines.
+## Vensterfuncties {#window-functions}
 
-Een vensterfunctie werkt een samenvoeging bij en retourneert één item voor elke rij in de geordende subset. De eenvoudigste aggregatiefunctie is `SUM()`. `SUM()` neemt uw rijen en geeft u één totaal. Als u in plaats daarvan `SUM()` op een venster toepast en het verandert in een vensterfunctie, ontvangt u bij elke rij een cumulatief bedrag.
+De meerderheid van de bedrijfslogica vereist het verzamelen van de aanraakpunten voor een klant en het opdracht geven tot hen tegen tijd. Deze ondersteuning wordt geleverd door SQL in de vorm van vensterfuncties. [!DNL Spark] Vensterfuncties maken deel uit van standaard-SQL en worden ondersteund door vele andere SQL-engines.
+
+Een vensterfunctie werkt een samenvoeging bij en retourneert één item voor elke rij in de geordende subset. De eenvoudigste aggregatiefunctie is `SUM()`. `SUM()` neemt uw rijen en geeft u één totaal. Als u in plaats daarvan `SUM()` op een venster toepast en het in een vensterfunctie omzet, ontvangt u een cumulatief bedrag met elke rij.
 
 De meeste [!DNL Spark] SQL helpers zijn vensterfuncties die elke rij in uw venster bijwerken, met de staat van die toegevoegde rij.
 
-### Specificatie
+**Zoeksyntaxis**
 
-Syntaxis: `OVER ([partition] [order] [frame])`
+```sql
+OVER ({PARTITION} {ORDER} {FRAME})
+```
 
-| Parameter | Beschrijving |
-| --- | --- |
-| [partitie] | Een subgroep van de rijen op basis van een kolom of een beschikbaar veld. Voorbeeld, `PARTITION BY endUserIds._experience.mcid.id` |
-| [bestellen] | Een kolom of beschikbaar veld dat wordt gebruikt om de subset of rijen te bestellen. Voorbeeld, `ORDER BY timestamp` |
-| [frame] | Een subgroep van de rijen in een verdeling. Voorbeeld, `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
+| Parameter | Beschrijving | Voorbeeld |
+| --------- | ----------- | ------- |
+| `{PARTITION}` | Een subgroep van rijen op basis van een kolom of een beschikbaar veld. | `PARTITION BY endUserIds._experience.mcid.id` |
+| `{ORDER}` | Een kolom of beschikbaar veld dat wordt gebruikt om de subset of rijen te bestellen. | `ORDER BY timestamp` |
+| `{FRAME}` | Een subgroep van de rijen in een verdeling. | `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
 
 ## Sessionering
 
-Wanneer u werkt met [!DNL ExperienceEvent] gegevens die afkomstig zijn van een website, mobiele toepassing, interactief spraakreactiesysteem of een ander kanaal voor klantinteractie, is het handig als gebeurtenissen kunnen worden gegroepeerd rond een verwante periode. Doorgaans hebt u een specifieke intentie om uw activiteiten te sturen, zoals het zoeken naar een product, het betalen van een rekening, het controleren van de balans, het invullen van een toepassing, enzovoort. Deze groepering helpt de gebeurtenissen associëren om meer context over de klantenervaring te ontdekken.
+Wanneer u werkt met [!DNL Experience Event]-gegevens die afkomstig zijn van een website, mobiele toepassing, interactief spraakantwoordsysteem of een ander kanaal voor klantinteractie, is het nuttig als gebeurtenissen kunnen worden gegroepeerd rond een verwante periode. Doorgaans hebt u een specifieke intentie om uw activiteiten te sturen, zoals het zoeken naar een product, het betalen van een rekening, het controleren van de balans, het invullen van een toepassing, enzovoort.
 
-Raadpleeg de documentatie over [contextbewuste sessies](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)voor meer informatie over sessies in Adobe Analytics.
+Deze groepering, of zitting van gegevens, helpt de gebeurtenissen associëren om meer context over de klantenervaring te ontdekken.
 
-### Specificatie
+Raadpleeg de documentatie over [contextbewuste sessies](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) voor meer informatie over sessionisatie in Adobe Analytics.
 
-Syntaxis: `SESS_TIMEOUT(timestamp, expirationInSeconds) OVER ([partition] [order] [frame])`
+**Zoeksyntaxis**
+
+```sql
+SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parameter | Beschrijving |
-| --- | --- |
-| `timestamp` | Tijdstempelveld gevonden in gegevensset |
-| `expirationInSeconds` | Aantal seconden nodig tussen gebeurtenissen om het einde van de huidige sessie te kwalificeren en het begin van een nieuwe sessie |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
+| `{EXPIRATION_IN_SECONDS}` | Het aantal seconden dat nodig is tussen gebeurtenissen om het einde van de huidige sessie en het begin van een nieuwe sessie te kwalificeren. |
 
-| Parameters van geretourneerd object | Beschrijving |
-| ---------------------- | ------------- |
-| `timestamp_diff` | Tijd in seconden tussen huidige record en vorige record |
-| `num` | Een uniek sessienummer, te beginnen bij 1, voor de sleutel die is gedefinieerd in de functie `PARTITION BY` van het venster. |
-| `is_new` | Een Booleaanse waarde die wordt gebruikt om te bepalen of een record de eerste van een sessie is |
-| `depth` | Diepte van de huidige record binnen de sessie |
+Een uitleg van de parameters binnen de functie `OVER()` vindt u in de sectie [vensterfuncties](#window-functions).
 
-#### Voorbeeldquery
+**Voorbeeldquery**
 
 ```sql
 SELECT 
@@ -73,7 +76,7 @@ ORDER BY id, timestamp ASC
 LIMIT 10
 ```
 
-#### Resultaten
+**Resultaten**
 
 ```console
                 id                |       timestamp       |      session       
@@ -91,37 +94,176 @@ LIMIT 10
 (10 rows)
 ```
 
-## Attributie
+Voor de gegeven steekproefvraag, worden de resultaten gegeven in `session` kolom. De kolom `session` bestaat uit de volgende componenten:
 
-Het koppelen van klantenacties aan succes is een belangrijk deel van het begrip van de factoren die klantenervaring beïnvloeden. De volgende ADFs steunt Eerste en laatste attributie met verschillende vervalmontages.
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
 
-Zie het overzicht [van de](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html) Attribution IQ in de handleiding voor [!DNL Analytics] analyse voor meer informatie over attributie in Adobe Analytics.
+| Parameters | Beschrijving |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | Het verschil in tijd, in seconden, tussen de huidige record en de vorige record. |
+| `{NUM}` | Een uniek sessienummer, te beginnen bij 1, voor de sleutel die is gedefinieerd in de `PARTITION BY` van de vensterfunctie. |
+| `{IS_NEW}` | Een Booleaanse waarde die wordt gebruikt om te bepalen of een record de eerste van een sessie is. |
+| `{DEPTH}` | De diepte van de huidige record in de sessie. |
 
-### Eerste aanraakkenmerk
+### SESS_START_IF
 
-Retourneert de eerste aanraakattributiewaarde en details voor één kanaal in de [!DNL ExperienceEvent] doelgegevensset. De query retourneert een `struct` object met de eerste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
+Deze query retourneert de status van de sessie voor de huidige rij, gebaseerd op de huidige tijdstempel en de opgegeven expressie, en start een nieuwe sessie met de huidige rij.
 
-Deze vraag is nuttig als u wilt zien welke interactie tot een reeks klantenacties leidde. In het onderstaande voorbeeld wordt de initiële volgcode (`em:946426`) in de [!DNL ExperienceEvent] gegevens toegewezen aan 100% (`1.0`) verantwoordelijkheid voor de acties van de klant, aangezien dit de eerste interactie was.
+**Zoeksyntaxis**
 
-### Specificatie
-
-Syntaxis: `ATTRIBUTION_FIRST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [order] [frame])`
+```sql
+SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parameter | Beschrijving |
-| --- | --- |
-| `timestamp` | Tijdstempelveld gevonden in gegevensset |
-| `channelName` | Een vriendelijke naam die als label in het geretourneerde object moet worden gebruikt |
-| `channelValue` | De kolom of het gebied dat het doelkanaal voor de vraag is |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
+| `{TEST_EXPRESSION}` | Een expressie waarmee u de velden van de gegevens wilt controleren. Bijvoorbeeld, `application.launches > 0`. |
 
+Een uitleg van de parameters binnen de functie `OVER()` vindt u in de sectie [vensterfuncties](#window-functions).
 
-| Parameters van geretourneerd object | Beschrijving |
-| ---------------------- | ------------- |
-| `name` | De `channelName` ingevoerde gegevens als een label in de ADF |
-| `value` | De waarde van `channelValue` dat is de eerste aanraking in de [!DNL ExperienceEvent] |
-| `timestamp` | De tijdstempel van de [!DNL ExperienceEvent] locatie waar de eerste aanraking heeft plaatsgevonden |
-| `fraction` | De toerekening van de eerste aanraking uitgedrukt als fractioneel krediet |
+**Voorbeeldquery**
 
-#### Voorbeeldquery
+```sql
+SELECT
+    endUserIds._experience.mcid.id AS id,
+    timestamp,
+    IF(application.launches.value > 0, true, false) AS isLaunch,
+    SESS_START_IF(timestamp, application.launches.value > 0)
+        OVER (PARTITION BY endUserIds._experience.mcid.id
+            ORDER BY timestamp
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+        AS session
+    FROM experience_events
+    ORDER BY id, timestamp ASC
+    LIMIT 10
+```
+
+**Resultaten**
+
+```console
+                id                |       timestamp       | isLaunch |      session       
+----------------------------------+-----------------------+----------+--------------------
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | true     | (0,1,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | false    | (56,1,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | true     | (40,2,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | false    | (55,2,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | false    | (1361821,2,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | false    | (54,2,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | false    | (49,2,false,5)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | false    | (33,2,false,6)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | false    | (31,2,false,7)
+(10 rows)
+```
+
+Voor de gegeven steekproefvraag, worden de resultaten gegeven in `session` kolom. De kolom `session` bestaat uit de volgende componenten:
+
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
+
+| Parameters | Beschrijving |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | Het verschil in tijd, in seconden, tussen de huidige record en de vorige record. |
+| `{NUM}` | Een uniek sessienummer, te beginnen bij 1, voor de sleutel die is gedefinieerd in de `PARTITION BY` van de vensterfunctie. |
+| `{IS_NEW}` | Een Booleaanse waarde die wordt gebruikt om te bepalen of een record de eerste van een sessie is. |
+| `{DEPTH}` | De diepte van de huidige record in de sessie. |
+
+### SESS_END_IF
+
+Deze query retourneert de status van de sessie voor de huidige rij, gebaseerd op de huidige tijdstempel en de opgegeven expressie, beëindigt de huidige sessie en start een nieuwe sessie op de volgende rij.
+
+**Zoeksyntaxis**
+
+```sql
+SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
+| `{TEST_EXPRESSION}` | Een expressie waarmee u de velden van de gegevens wilt controleren. Bijvoorbeeld, `application.launches > 0`. |
+
+Een uitleg van de parameters binnen de functie `OVER()` vindt u in de sectie [vensterfuncties](#window-functions).
+
+**Voorbeeldquery**
+
+```sql
+SELECT
+    endUserIds._experience.mcid.id AS id,
+    timestamp,
+    IF(application.applicationCloses.value > 0 OR application.crashes.value > 0, true, false) AS isExit,
+    SESS_END_IF(timestamp, application.applicationCloses.value > 0 OR application.crashes.value > 0)
+        OVER (PARTITION BY endUserIds._experience.mcid.id
+            ORDER BY timestamp
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+        AS session
+    FROM experience_events
+    ORDER BY id, timestamp ASC
+    LIMIT 10
+```
+
+**Resultaten**
+
+```console
+                id                |       timestamp       | isExit   |      session       
+----------------------------------+-----------------------+----------+--------------------
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | false    | (0,1,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | true     | (56,1,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | false    | (40,2,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | false    | (55,2,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | false    | (1361821,2,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | false    | (54,2,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | false    | (49,2,false,5)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | false    | (33,2,false,6)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | false    | (31,2,false,7)
+(10 rows)
+```
+
+Voor de gegeven steekproefvraag, worden de resultaten gegeven in `session` kolom. De kolom `session` bestaat uit de volgende componenten:
+
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
+
+| Parameters | Beschrijving |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | Het verschil in tijd, in seconden, tussen de huidige record en de vorige record. |
+| `{NUM}` | Een uniek sessienummer, te beginnen bij 1, voor de sleutel die is gedefinieerd in de `PARTITION BY` van de vensterfunctie. |
+| `{IS_NEW}` | Een Booleaanse waarde die wordt gebruikt om te bepalen of een record de eerste van een sessie is. |
+| `{DEPTH}` | De diepte van de huidige record in de sessie. |
+
+## Attributie
+
+Het koppelen van klantenacties aan succes is een belangrijk deel van het begrip van de factoren die klantenervaringen beïnvloeden. De volgende ADF&#39;s ondersteunen first-touch-kenmerk en last-touch-kenmerk met verschillende vervalinstellingen.
+
+Zie [Attribution IQ overview](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html) in de handleiding van het [!DNL Analytics] deelvenster Kenmerken voor meer informatie over attributie in Adobe Analytics.
+
+### Kenmerk eerste aanraking
+
+Deze vraag keert de eerste-aanraak attributiewaarde en details voor één enkel kanaal in de doel [!DNL Experience Event] dataset terug. De query retourneert een `struct`-object met de eerste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
+
+Deze vraag is nuttig als u wilt zien welke interactie tot een reeks klantenacties leidde. In het onderstaande voorbeeld wordt de initiële volgcode (`em:946426`) in de [!DNL Experience Event] gegevens toegewezen aan 100% (`1.0`) verantwoordelijkheid voor de acties van de klant, aangezien dit de eerste interactie was.
+
+**Zoeksyntaxis**
+
+```sql
+ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
+| `{CHANNEL_NAME}` | Het label voor het geretourneerde object. |
+| `{CHANNEL_VALUE}` | De kolom of het gebied dat het doelkanaal voor de vraag is. |
+
+Een verklaring van de parameters binnen `OVER()` kan in [vensterfuncties sectie](#window-functions) worden gevonden.
+
+**Voorbeeldquery**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -135,7 +277,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 LIMIT 10
 ```
 
-#### Resultaten
+**Resultaten**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -153,31 +295,40 @@ LIMIT 10
 (10 rows)
 ```
 
-### Laatste aanraakkenmerk
+Voor de gegeven steekproefvraag, worden de resultaten gegeven in `first_touch` kolom. De kolom `first_touch` bestaat uit de volgende componenten:
 
-Retourneert de laatste aanraakattributiewaarde en details voor één kanaal in de [!DNL ExperienceEvent] doelgegevensset. De query retourneert een `struct` object met de laatste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
-
-Deze vraag is nuttig als u de definitieve interactie in een reeks klantenacties wilt zien. In het onderstaande voorbeeld is de trackingcode in het geretourneerde object de laatste interactie in elke [!DNL ExperienceEvent] record. Aan elke code wordt 100% (`1.0`) verantwoordelijkheid voor de acties van de klant toegewezen, aangezien dit de laatste interactie was.
-
-### Specificatie
-
-Syntaxis: `ATTRIBUTION_LAST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | Parameter | Beschrijving |
-| --- | --- |
-| `timestamp` | Tijdstempelveld gevonden in gegevensset |
-| `channelName` | Een vriendelijke naam die als label in het geretourneerde object moet worden gebruikt |
-| `channelValue` | De kolom of het gebied dat het doelkanaal voor de vraag is |
+| --------- | ----------- |
+| `{NAME}` | De `{CHANNEL_NAME}`, die als label in ADF is ingevoerd. |
+| `{VALUE}` | De waarde van `{CHANNEL_VALUE}` die de eerste aanraking in [!DNL Experience Event] is |
+| `{TIMESTAMP}` | Het tijdstempel van de [!DNL Experience Event] waar de eerste aanraking plaatsvond. |
+| `{FRACTION}` | De attributie van de eerste aanraking, uitgedrukt als decimale breuk. |
 
+### Last-touch-kenmerk
 
-| Parameters van geretourneerd object | Beschrijving |
-| ---------------------- | ------------- |
-| `name` | De `channelName` ingevoerde gegevens als een label in de ADF |
-| `value` | De waarde van `channelValue` dat is de laatste aanraking in de [!DNL ExperienceEvent] |
-| `timestamp` | De tijdstempel van de [!DNL ExperienceEvent] locatie waar het `channelValue` is gebruikt |
-| `fraction` | Toekenning van de laatste aanraking uitgedrukt als fractioneel krediet |
+Deze query retourneert de laatste aanraakwaarde en details voor één kanaal in de gegevensset [!DNL Experience Event] van het doel. De query retourneert een `struct`-object met de laatste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
 
-#### Voorbeeldquery
+Deze vraag is nuttig als u de definitieve interactie in een reeks klantenacties wilt zien. In het onderstaande voorbeeld is de trackingcode in het geretourneerde object de laatste interactie in elke [!DNL Experience Event]-record. Elke code krijgt 100% (`1.0`) verantwoordelijkheid voor de acties van de klant, aangezien dit de laatste interactie was.
+
+**Zoeksyntaxis**
+
+```sql
+ATTRIBUTION_LAST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
+| `{CHANNEL_NAME}` | Het label van het geretourneerde object. |
+| `{CHANNEL_VALUE}` | De kolom of het gebied dat het doelkanaal voor de vraag is. |
+
+Een verklaring van de parameters binnen `OVER()` kan in [vensterfuncties sectie](#window-functions) worden gevonden.
+
+**Voorbeeldquery**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -190,7 +341,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Resultaten
+**Resultaten**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -208,32 +359,44 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### Eerste aanraakkenmerk met vervalvoorwaarde
+Voor de gegeven steekproefvraag, worden de resultaten gegeven in `last_touch` kolom. De kolom `last_touch` bestaat uit de volgende componenten:
 
-Retourneert de eerste aanraakattributiewaarde en de details voor één kanaal in de [!DNL ExperienceEvent] doelgegevensset, die na of vóór een voorwaarde verlopen. De query retourneert een `struct` object met de eerste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
-Deze vraag is nuttig als u wilt zien welke interactie tot een reeks klantenacties binnen een gedeelte van de [!DNL ExperienceEvent] dataset leidde die door een voorwaarde van uw keuze wordt bepaald. In het onderstaande voorbeeld wordt een aankoop geregistreerd (`commerce.purchases.value IS NOT NULL`) op elk van de vier dagen die in de resultaten worden weergegeven (15 juli, 21 juli, 23 en 29 juli) en wordt de initiële volgcode op elke dag toegewezen aan 100% (`1.0`) verantwoordelijkheid voor de acties van de klant.
+| Parameters | Beschrijving |
+| ---------- | ----------- |
+| `{NAME}` | De `{CHANNEL_NAME}`, die als label in ADF is ingevoerd. |
+| `{VALUE}` | De waarde van `{CHANNEL_VALUE}` die de laatste aanraking in [!DNL Experience Event] is |
+| `{TIMESTAMP}` | Het tijdstempel van de [!DNL Experience Event] waar `channelValue` werd gebruikt. |
+| `{FRACTION}` | De attributie van de laatste aanraking, uitgedrukt als decimale breuk. |
 
-#### Specificatie
+### First-touch-kenmerk met vervalvoorwaarde
 
-Syntaxis: `ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, channelName, channelValue, expCondition, expBefore) OVER ([partition] [order] [frame])`
+Deze vraag keert de eerste-aanraak attributiewaarde en details voor één enkel kanaal in de doel [!DNL Experience Event] dataset terug, die na of vóór een voorwaarde vervalt. De query retourneert een `struct`-object met de eerste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
+
+Deze vraag is nuttig als u wilt zien welke interactie tot een reeks klantenacties binnen een gedeelte van [!DNL Experience Event] dataset leidde die door een voorwaarde van uw keuze wordt bepaald. In het onderstaande voorbeeld wordt een aankoop geregistreerd (`commerce.purchases.value IS NOT NULL`) op elk van de vier dagen die in de resultaten worden weergegeven (15 juli, 21 juli, 23 en 29) en wordt de initiële volgcode op elke dag toegewezen aan 100% (`1.0`) verantwoordelijkheid voor de acties van de klant.
+
+**Zoeksyntaxis**
+
+```sql
+ATTRIBUTION_FIRST_TOUCH_EXP_IF(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parameter | Beschrijving |
-| --- | --- |
-| `timestamp` | Tijdstempelveld gevonden in gegevensset |
-| `channelName` | Een vriendelijke naam die als label in het geretourneerde object moet worden gebruikt |
-| `channelValue` | De kolom of het gebied dat het doelkanaal voor de vraag is |
-| `expCondition` | De voorwaarde die het verlooppunt van het kanaal bepaalt |
-| `expBefore` | Defaults to `false`. Booleaanse waarde die aangeeft of het kanaal vervalt voordat of nadat aan de opgegeven voorwaarde is voldaan. Primair ingeschakeld voor de vervalvoorwaarden van een sessie (bijvoorbeeld `sess.depth = 1, true`) om ervoor te zorgen dat de eerste aanraking niet wordt geselecteerd uit een vorige sessie. |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
+| `{CHANNEL_NAME}` | Het label voor het geretourneerde object. |
+| `{CHANNEL_VALUE}` | De kolom of het gebied dat het doelkanaal voor de vraag is. |
+| `{EXP_CONDITION}` | De voorwaarde die het verlooppunt van het kanaal bepaalt. |
+| `{EXP_BEFORE}` | Een Booleaanse waarde die aangeeft of het kanaal vervalt vóór of na de opgegeven voorwaarde `{EXP_CONDITION}`. Deze optie is vooral ingeschakeld voor de vervalvoorwaarden van een sessie, zodat de eerste aanraking niet wordt geselecteerd uit een vorige sessie. Deze waarde wordt standaard ingesteld op `false`. |
 
-| Parameters van geretourneerd object | Beschrijving |
-| ---------------------- | ------------- |
-| `name` | De `channelName` ingevoerde gegevens als een label in de ADF |
-| `value` | De waarde van `channelValue` dat is de eerste aanraking in de [!DNL ExperienceEvent] voorafgaande `expCondition` |
-| `timestamp` | De tijdstempel van de [!DNL ExperienceEvent] locatie waar de eerste aanraking heeft plaatsgevonden |
-| `fraction` | De toerekening van de eerste aanraking uitgedrukt als fractioneel krediet |
+Een uitleg van de parameters binnen de functie `OVER()` vindt u in de sectie [vensterfuncties](#window-functions).
 
-#### Voorbeeldquery
+**Voorbeeldquery**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -246,7 +409,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Resultaten
+**Resultaten**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -264,29 +427,43 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### Eerste aanraakkenmerk met verlooptime-out
+Voor de gegeven steekproefvraag, worden de resultaten gegeven in `first_touch` kolom. De kolom `first_touch` bestaat uit de volgende componenten:
 
-Retourneert de eerste aanraakattributiewaarde en details voor één kanaal in de doelgegevensset voor een opgegeven tijdsperiode. [!DNL ExperienceEvent] De query retourneert een `struct` object met de eerste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd. Deze vraag is nuttig als u wilt zien welke interactie, binnen een geselecteerd tijdinterval, tot een klantenactie leidde. In het onderstaande voorbeeld is de eerste aanraking die voor elke actie van de klant wordt geretourneerd, de vroegste interactie binnen de voorafgaande zeven dagen (`expTimeout = 86400 * 7`).
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
-#### Specificatie
+| Parameters | Beschrijving |
+| ---------- | ----------- |
+| `{NAME}` | De `{CHANNEL_NAME}`, die als label in ADF is ingevoerd. |
+| `{VALUE}` | De waarde van `CHANNEL_VALUE}` die de eerste aanraking in [!DNL Experience Event], voorafgaand aan `{EXP_CONDITION}` is. |
+| `{TIMESTAMP}` | Het tijdstempel van de [!DNL Experience Event] waar de eerste aanraking plaatsvond. |
+| `{FRACTION}` | De attributie van de eerste aanraking, uitgedrukt als decimale breuk. |
 
-Syntaxis: `ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelValue, expTimeout) OVER ([partition] [order] [frame])`
+### First-touch-kenmerk met time-out bij verlopen
+
+Deze vraag keert de eerste-aanraak attributiewaarde en details voor één enkel kanaal in de doel [!DNL Experience Event] dataset voor een gespecificeerde tijdspanne terug. De query retourneert een `struct`-object met de eerste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
+
+Deze vraag is nuttig als u wilt zien welke interactie, binnen een geselecteerd tijdinterval, tot een klantenactie leidde. In het onderstaande voorbeeld is de eerste aanraking die voor elke actie van de klant wordt geretourneerd, de vroegste interactie binnen de voorafgaande zeven dagen (`expTimeout = 86400 * 7`).
+
+**Specificatie**
+
+```sql
+ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parameter | Beschrijving |
-| --- | --- |
-| `timestamp` | Tijdstempelveld gevonden in gegevensset |
-| `channelName` | Een vriendelijke naam die als label in het geretourneerde object moet worden gebruikt |
-| `channelValue` | De kolom of het gebied dat het doelkanaal voor de vraag is |
-| `expTimeout` | Het tijdsvenster (in seconden) voorafgaand aan de kanaalgebeurtenis dat de query zoekt naar een eerste aanraakgebeurtenis |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
+| `{CHANNEL_NAME}` | Het label voor het geretourneerde object. |
+| `{CHANNEL_VALUE}` | De kolom of het gebied dat het doelkanaal voor de vraag is. |
+| `{EXP_TIMEOUT}` | Het tijdvenster voorafgaand aan de kanaalgebeurtenis, in seconden, waarin de query zoekt naar een eerste aanraakgebeurtenis. |
 
-| Parameters van geretourneerd object | Beschrijving |
-| ---------------------- | ------------- |
-| `name` | De `channelName` ingevoerde gegevens als een label in de ADF |
-| `value` | De waarde van `channelValue` dat is de eerste aanraking binnen het opgegeven `expTimeout` interval |
-| `timestamp` | De tijdstempel van de [!DNL ExperienceEvent] locatie waar de eerste aanraking heeft plaatsgevonden |
-| `fraction` | De toerekening van de eerste aanraking uitgedrukt als fractioneel krediet |
+Een uitleg van de parameters binnen de functie `OVER()` vindt u in de sectie [vensterfuncties](#window-functions).
 
-#### Voorbeeldquery
+**Voorbeeldquery**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -299,7 +476,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Resultaten
+**Resultaten**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -317,30 +494,42 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### Laatste aanraakkenmerk met vervalvoorwaarde
+Voor de gegeven steekproefvraag, worden de resultaten gegeven in `first_touch` kolom. De kolom `first_touch` bestaat uit de volgende componenten:
 
-Retourneert de laatste aanraakattributiewaarde en de details voor één kanaal in de [!DNL ExperienceEvent] doelgegevensset, die na of vóór een voorwaarde verlopen. De query retourneert een `struct` object met de laatste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd. Deze vraag is nuttig als u de laatste interactie in een reeks klantenacties binnen een gedeelte van de [!DNL ExperienceEvent] dataset wilt zien die door een voorwaarde van uw het kiezen wordt bepaald. In het onderstaande voorbeeld wordt een aankoop geregistreerd (`commerce.purchases.value IS NOT NULL`) op elk van de vier dagen die in de resultaten worden weergegeven (15 juli, 21 juli, 23 en 29 juli) en wordt de laatste trackingcode op elke dag toegewezen aan 100% (`1.0`) verantwoordelijkheid voor de acties van de klant.
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
-#### Specificatie
+| Parameters | Beschrijving |
+| ---------- | ----------- |
+| `{NAME}` | De `{CHANNEL_NAME}`, die als label in ADF is ingevoerd. |
+| `{VALUE}` | De waarde van `CHANNEL_VALUE}` die de eerste aanraking binnen het gespecificeerde `{EXP_TIMEOUT}` interval is. |
+| `{TIMESTAMP}` | Het tijdstempel van de [!DNL Experience Event] waar de eerste aanraking plaatsvond. |
+| `{FRACTION}` | De attributie van de eerste aanraking, uitgedrukt als decimale breuk. |
 
-Syntaxis: `ATTRIBUTION_LAST_TOUCH_EXP_IF(timestamp, channelName, channelValue, expCondition, expBefore) OVER ([partition] [order] [frame])`
+### Last-touch kenmerk met vervaldatum
+
+Deze query retourneert de laatste aanraakwaarde en details voor één kanaal in de gegevensset [!DNL Experience Event] van het doel, die na of vóór een voorwaarde vervalt. De query retourneert een `struct`-object met de laatste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
+
+Deze vraag is nuttig als u de laatste interactie in een reeks klantenacties binnen een gedeelte van [!DNL Experience Event] dataset wilt zien die door een voorwaarde van uw kiezen wordt bepaald. In het onderstaande voorbeeld wordt een aankoop geregistreerd (`commerce.purchases.value IS NOT NULL`) op elk van de vier dagen die in de resultaten worden weergegeven (15 juli, 21 juli, 23 en 29) en wordt de laatste trackingcode op elke dag toegewezen aan 100% (`1.0`) verantwoordelijkheid voor de acties van de klant.
+
+**Zoeksyntaxis**
+
+```sql
+ATTRIBUTION_LAST_TOUCH_EXP_IF(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parameter | Beschrijving |
-| --- | --- |
-| `timestamp` | Tijdstempelveld gevonden in gegevensset |
-| `channelName` | Een vriendelijke naam die als label in het geretourneerde object moet worden gebruikt |
-| `channelValue` | De kolom of het gebied dat het doelkanaal voor de vraag is |
-| `expCondition` | De voorwaarde die het verlooppunt van het kanaal bepaalt |
-| `expBefore` | Defaults to `false`. Booleaanse waarde die aangeeft of het kanaal vervalt voordat of nadat aan de opgegeven voorwaarde is voldaan. Primair ingeschakeld voor de voorwaarden bij het verlopen van de sessie (bijvoorbeeld `sess.depth = 1, true`) om ervoor te zorgen dat de laatste aanraking niet wordt geselecteerd uit een vorige sessie. |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
+| `{CHANNEL_NAME}` | Het label voor het geretourneerde object. |
+| `{CHANNEL_VALUE}` | De kolom of het gebied dat het doelkanaal voor de vraag is. |
+| `{EXP_CONDITION}` | De voorwaarde die het verlooppunt van het kanaal bepaalt. |
+| `{EXP_BEFORE}` | Een Booleaanse waarde die aangeeft of het kanaal vervalt vóór of na de opgegeven voorwaarde `{EXP_CONDITION}`. Deze optie is vooral ingeschakeld voor de vervalvoorwaarden van een sessie, zodat de eerste aanraking niet wordt geselecteerd uit een vorige sessie. Deze waarde wordt standaard ingesteld op `false`. |
 
-| Parameters van geretourneerd object | Beschrijving |
-| ---------------------- | ------------- |
-| `name` | De `channelName` ingevoerde gegevens als een label in de ADF |
-| `value` | De waarde van `channelValue` die de laatste aanraking in is [!DNL ExperienceEvent] vóór `expCondition` |
-| `timestamp` | De tijdstempel van de [!DNL ExperienceEvent] locatie waar de laatste aanraking is opgetreden |
-| `percentage` | Toekenning van de laatste aanraking uitgedrukt als fractioneel krediet |
-
-#### Voorbeeldquery
+**Voorbeeldquery**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -353,7 +542,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Resultaten
+**Voorbeelden van resultaten**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -371,29 +560,43 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### Laatste aanraakkenmerk met verlooptime-out
+Voor de gegeven steekproefvraag, worden de resultaten gegeven in `last_touch` kolom. De kolom `last_touch` bestaat uit de volgende componenten:
 
-Retourneert de laatste aanraakattributiewaarde en details voor één kanaal in de doelgegevensset voor een opgegeven tijdsperiode. [!DNL ExperienceEvent] De query retourneert een `struct` object met de laatste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd. Deze query is nuttig als u de laatste interactie binnen een geselecteerd tijdinterval wilt zien. In het onderstaande voorbeeld is de laatste aanraking die voor elke actie van de klant wordt geretourneerd, de laatste interactie binnen de volgende zeven dagen (`expTimeout = 86400 * 7`).
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
-#### Specificatie
+| Parameters | Beschrijving |
+| ---------- | ----------- |
+| `{NAME}` | De `{CHANNEL_NAME}`, die als label in ADF is ingevoerd. |
+| `{VALUE}` | De waarde van `{CHANNEL_VALUE}` die de laatste aanraking in [!DNL Experience Event], voorafgaand aan `{EXP_CONDITION}` is. |
+| `{TIMESTAMP}` | Het tijdstempel van de [!DNL Experience Event] waar de laatste aanraking plaatsvond. |
+| `{FRACTION}` | De attributie van de laatste aanraking, uitgedrukt als decimale breuk. |
 
-Syntaxis: `ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelValue, expTimeout) OVER ([partition] [order] [frame])`
+### Last-touch-kenmerk met time-out bij verlopen
+
+Deze query retourneert de laatste aanraakwaarde en details voor één kanaal in de doelgegevensset [!DNL Experience Event] voor een opgegeven tijdsperiode. De query retourneert een `struct`-object met de laatste aanraakwaarde, tijdstempel en attributie voor elke rij die voor het geselecteerde kanaal wordt geretourneerd.
+
+Deze query is nuttig als u de laatste interactie binnen een geselecteerd tijdinterval wilt zien. In het onderstaande voorbeeld is de laatste aanraking die voor elke actie van de klant wordt geretourneerd, de laatste interactie binnen de volgende zeven dagen (`expTimeout = 86400 * 7`).
+
+**Zoeksyntaxis**
+
+```sql
+ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parameter | Beschrijving |
-| --- | --- |
-| `timestamp` | Tijdstempelveld gevonden in gegevensset |
-| `channelName` | Een vriendelijke naam die als label in het geretourneerde object moet worden gebruikt |
-| `channelValue` | De kolom of het gebied dat het doelkanaal voor de vraag is |
-| `expTimeout` | Het tijdsvenster (in seconden) na de kanaalgebeurtenis waarin de query zoekt naar een laatste aanraakgebeurtenis |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
+| `{CHANNEL_NAME}` | Het label voor het geretourneerde object |
+| `{CHANNEL_VALUE}` | De kolom of het gebied dat het doelkanaal voor de vraag is |
+| `{EXP_TIMEOUT}` | Het tijdsvenster na de kanaalgebeurtenis, in seconden, waarin de query zoekt naar een laatste aanraakgebeurtenis. |
 
-| Parameters van geretourneerd object | Beschrijving |
-| ---------------------- | ------------- |
-| `name` | De `channelName` ingevoerde gegevens als een label in de ADF |
-| `value` | De waarde van `channelValue` dat de laatste aanraking binnen het opgegeven `expTimeout` interval is |
-| `timestamp` | De tijdstempel van de [!DNL ExperienceEvent] locatie waar de laatste aanraking is opgetreden |
-| `percentage` | Toekenning van de laatste aanraking uitgedrukt als fractioneel krediet |
+Een uitleg van de parameters binnen de functie `OVER()` vindt u in de sectie [vensterfuncties](#window-functions).
 
-#### Voorbeeldquery
+**Voorbeeldquery**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -406,7 +609,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Resultaten
+**Resultaten**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -424,30 +627,44 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-## Vorige/volgende aanraking
+Voor de gegeven steekproefvraag, worden de resultaten gegeven in `last_touch` kolom. De kolom `last_touch` bestaat uit de volgende componenten:
 
-Het is belangrijk te begrijpen hoe klanten binnen een ervaring navigeren. Het kan worden gebruikt om inzicht te krijgen in de diepte van de service van de klant, om te bevestigen dat de beoogde stappen van een ervaring werken zoals deze zijn ontworpen, en om mogelijke pijnpunten te identificeren die gevolgen hebben voor de klant. De volgende ADFs steunt het vestigen van het kleven meningen van hun Vorige en Volgende verhoudingen. U kunt Vorige pagina en Volgende pagina maken of meerdere gebeurtenissen doorlopen om Pathing te maken.
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
-### Vorige aanraking
+| Parameters | Beschrijving |
+| ---------- | ----------- |
+| `{NAME}` | De `{CHANNEL_NAME}`, ingegaan als etiket in ADF. |
+| `{VALUE}` | De waarde van `{CHANNEL_VALUE}` die de laatste aanraking binnen het gespecificeerde `{EXP_TIMEOUT}` interval is |
+| `{TIMESTAMP}` | De tijdstempel van de [!DNL Experience Event] waar de laatste aanraking heeft plaatsgevonden |
+| `{FRACTION}` | De attributie van de laatste aanraking, uitgedrukt als decimale breuk. |
 
-Hiermee bepaalt u de vorige waarde van een bepaald veld met een opgegeven aantal stappen buiten het venster. Bericht in het voorbeeld dat de `WINDOW` Functie met een kader wordt gevormd om ADF te `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` plaatsen om de huidige rij en allen vóór het te bekijken.
+## Padcontrole
 
-#### Specificatie
+Pathing kan worden gebruikt om inzicht te krijgen in de diepte van de service van de klant, om te bevestigen dat de bedoelde stappen van een ervaring werken zoals deze zijn ontworpen, en om mogelijke pijnpunten te identificeren die gevolgen hebben voor de klant.
 
-Syntaxis: `PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])`
+De volgende ADFs steunt het vestigen van het kleven meningen van hun vorige en volgende verhoudingen. U kunt vorige en volgende pagina&#39;s maken of meerdere gebeurtenissen doorlopen om te tekenen.
+
+### Vorige pagina
+
+Hiermee bepaalt u de vorige waarde van een bepaald veld met een opgegeven aantal stappen buiten het venster. In het voorbeeld wordt de functie `WINDOW` geconfigureerd met een frame van `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` dat ADF instelt om naar de huidige rij en alle volgende rijen te kijken.
+
+**Zoeksyntaxis**
+
+```sql
+PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parameter | Beschrijving |
-| --- | --- |
-| `key` | De kolom of het veld van de gebeurtenis. |
-| `shift` | (optioneel) Het aantal gebeurtenissen dat zich niet bij de huidige gebeurtenis bevindt. De standaardwaarde is 1. |
-| `ingnoreNulls` | Booleaanse waarde die wordt aangegeven als null- `key` waarden moeten worden genegeerd. Default is `false`. |
+| --------- | ----------- |
+| `{KEY}` | De kolom of het veld van de gebeurtenis. |
+| `{SHIFT}` | (Optioneel) Het aantal gebeurtenissen dat zich niet bij de huidige gebeurtenis bevindt. De standaardwaarde is 1. |
+| `{IGNORE_NULLS}` | (Optioneel) Een Booleaanse waarde die aangeeft of waarden `{KEY}` met de waarde null moeten worden genegeerd. De standaardwaarde is `false`. |
 
+Een uitleg van de parameters binnen de functie `OVER()` vindt u in de sectie [vensterfuncties](#window-functions).
 
-| Parameters van geretourneerd object | Beschrijving |
-| ---------------------- | ------------- |
-| `value` | De waarde die wordt gebaseerd op de `key` gebruikte ADF |
-
-#### Voorbeeldquery
+**Voorbeeldquery**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp, web.webPageDetails.name
@@ -460,7 +677,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp ASC
 ```
 
-#### Resultaten
+**Resultaten**
 
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
@@ -478,26 +695,27 @@ ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, time
 (10 rows)
 ```
 
-### Volgende aanraking
+Voor de gegeven steekproefvraag, worden de resultaten gegeven in `previous_page` kolom. De waarde binnen de `previous_page` kolom is gebaseerd op `{KEY}` die in ADF wordt gebruikt.
 
-Hiermee bepaalt u de volgende waarde van een bepaald veld met een opgegeven aantal stappen buiten het venster. Bericht in het voorbeeld dat de `WINDOW` `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` Functie met een kader van het plaatsen ADF wordt gevormd om de huidige rij en allen na het te bekijken.
+### Volgende pagina
 
-#### Specificatie
+Hiermee bepaalt u de volgende waarde van een bepaald veld met een opgegeven aantal stappen buiten het venster. In het voorbeeld wordt de functie `WINDOW` geconfigureerd met een frame van `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` dat ADF instelt om naar de huidige rij en alle volgende rijen te kijken.
 
-Syntaxis: `NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])`
+**Zoeksyntaxis**
+
+```sql
+NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parameter | Beschrijving |
-| --- | --- |
-| `key` | De kolom of het veld van de gebeurtenis |
-| `shift` | (optioneel) Het aantal gebeurtenissen dat zich niet bij de huidige gebeurtenis bevindt. De standaardwaarde is 1. |
-| `ingnoreNulls` | Booleaanse waarde die wordt aangegeven als null- `key` waarden moeten worden genegeerd. Default is `false`. |
+| --------- | ----------- |
+| `{KEY}` | De kolom of het veld van de gebeurtenis. |
+| `{SHIFT}` | (Optioneel) Het aantal gebeurtenissen dat zich niet bij de huidige gebeurtenis bevindt. De standaardwaarde is 1. |
+| `{IGNORE_NULLS}` | (Optioneel) Een Booleaanse waarde die aangeeft of waarden `{KEY}` met de waarde null moeten worden genegeerd. De standaardwaarde is `false`. |
 
+Een uitleg van de parameters binnen de functie `OVER()` vindt u in de sectie [vensterfuncties](#window-functions).
 
-| Parameters van geretourneerd object | Beschrijving |
-| ---------------------- | ------------- |
-| `value` | De waarde die wordt gebaseerd op de `key` gebruikte ADF |
-
-#### Voorbeeldquery
+**Voorbeeldquery**
 
 ```sql
 SELECT endUserIds._experience.aaid.id, timestamp, web.webPageDetails.name,
@@ -511,7 +729,7 @@ ORDER BY endUserIds._experience.aaid.id, timestamp ASC
 LIMIT 10
 ```
 
-#### Resultaten
+**Resultaten**
 
 ```console
                 id                 |       timestamp       |                name                 |             previous_page             
@@ -529,27 +747,33 @@ LIMIT 10
 (10 rows)
 ```
 
+Voor de gegeven steekproefvraag, worden de resultaten gegeven in `previous_page` kolom. De waarde binnen de `previous_page` kolom is gebaseerd op `{KEY}` die in ADF wordt gebruikt.
+
 ## Tijd-tussen
 
-De tijd-tussen staat u toe om latent klantengedrag binnen een periode vóór of na een gebeurtenis te onderzoeken voorkomt. Bekijk de gebeurtenissen binnen 7 dagen na een campagne of een ander type gebeurtenis voor al uw klanten.
+De tijd-tussen staat u toe om latent klantengedrag binnen een bepaalde tijdspanne vóór of na een gebeurtenis te onderzoeken voorkomt.
 
 ### Tijd tussen vorige overeenkomst
 
-Verstrekt een nieuwe dimensie, die de tijd meet die sinds een bepaald incident is verstreken.
+Deze vraag keert een aantal terug dat de eenheid van tijd vertegenwoordigt aangezien de vorige passende gebeurtenis werd gezien. Als er geen overeenkomende gebeurtenis is gevonden, wordt null geretourneerd.
 
-#### Specificatie
+**Zoeksyntaxis**
 
-Syntaxis: `TIME_BETWEEN_PREVIOUS_MATCH(timestamp, eventDefintion, [timeUnit]) OVER ([partition] [order] [frame])`
+```sql
+TIME_BETWEEN_PREVIOUS_MATCH(
+    {TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT})
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parameter | Beschrijving |
-| --- | --- |
-| `timestamp` | Tijdstempelveld gevonden in de gegevensset die is ingevuld bij alle gebeurtenissen. |
-| `eventDefintion` | Uitdrukking om de vorige gebeurtenis te kwalificeren. |
-| `timeUnit` | Uitvoereenheid: dagen, uren, minuten en seconden. De standaardwaarde is seconden. |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Een tijdstempelveld dat wordt gevonden in de gegevensset die wordt gevuld op alle gebeurtenissen. |
+| `{EVENT_DEFINITION}` | De expressie die de vorige gebeurtenis moet kwalificeren. |
+| `{TIME_UNIT}` | De eenheid van output. Mogelijke waarden zijn dagen, uren, minuten en seconden. De standaardwaarde is seconden. |
 
-Uitvoer: Retourneert een getal dat de tijdseenheid vertegenwoordigt sinds de vorige overeenkomende gebeurtenis werd weergegeven of blijft null als er geen overeenkomende gebeurtenis is gevonden.
+Een uitleg van de parameters binnen de functie `OVER()` vindt u in de sectie [vensterfuncties](#window-functions).
 
-#### Voorbeeldquery
+**Voorbeeldquery**
 
 ```sql
 SELECT 
@@ -573,7 +797,7 @@ ORDER BY average_minutes_since_registration
 LIMIT 10
 ```
 
-#### Resultaten
+**Resultaten**
 
 ```console
              page_name             | average_minutes_since_registration 
@@ -591,23 +815,27 @@ LIMIT 10
 (10 rows)
 ```
 
+Voor de gegeven steekproefvraag, worden de resultaten gegeven in `average_minutes_since_registration` kolom. De waarde in de kolom `average_minutes_since_registration` is het tijdsverschil tussen de huidige en vorige gebeurtenissen. De tijdseenheid is eerder gedefinieerd in `{TIME_UNIT}`.
+
 ### Tijd tussen volgende overeenkomst
 
-Verstrekt een nieuwe dimensie, die de tijd meet alvorens een bepaalde gebeurtenis voorkomt.
+Deze query retourneert een negatief getal dat de tijdseenheid achter de volgende overeenkomende gebeurtenis vertegenwoordigt. Als er geen overeenkomende gebeurtenis wordt gevonden, wordt null geretourneerd.
 
-#### Specificatie
+**Zoeksyntaxis**
 
-Syntaxis: `TIME_BETWEEN_NEXT_MATCH(timestamp, eventDefintion, [timeUnit]) OVER ([partition] [order] [frame])`
+```sql
+TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parameter | Beschrijving |
-| --- | --- |
-| `timestamp` | Tijdstempelveld gevonden in de gegevensset die is ingevuld bij alle gebeurtenissen. |
-| `eventDefintion` | Uitdrukking om de volgende gebeurtenis te kwalificeren. |
-| `timeUnit` | Uitvoereenheid: dagen, uren, minuten en seconden. De standaardwaarde is seconden. |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Een tijdstempelveld dat wordt gevonden in de gegevensset die wordt gevuld op alle gebeurtenissen. |
+| `{EVENT_DEFINITION}` | De expressie waarmee de volgende gebeurtenis wordt gekwalificeerd. |
+| `{TIME_UNIT}` | (Optioneel) De uitvoereenheid. Mogelijke waarden zijn dagen, uren, minuten en seconden. De standaardwaarde is seconden. |
 
-Uitvoer: Retourneert een negatief getal dat de tijdseenheid achter de volgende overeenkomende gebeurtenis vertegenwoordigt of blijft null als er geen overeenkomende gebeurtenis wordt gevonden.
+Een uitleg van de parameters binnen de functie `OVER()` vindt u in de sectie [vensterfuncties](#window-functions).
 
-#### Voorbeeldquery
+**Voorbeeldquery**
 
 ```sql
 SELECT 
@@ -631,7 +859,7 @@ ORDER BY average_minutes_until_order_confirmation DESC
 LIMIT 10
 ```
 
-#### Resultaten
+**Resultaten**
 
 ```console
              page_name             | average_minutes_until_order_confirmation 
@@ -649,6 +877,14 @@ LIMIT 10
 (10 rows)
 ```
 
+Voor de gegeven steekproefvraag, worden de resultaten gegeven in `average_minutes_until_order_confirmation` kolom. De waarde in de kolom `average_minutes_until_order_confirmation` is het tijdsverschil tussen de huidige en volgende gebeurtenissen. De tijdseenheid is eerder gedefinieerd in `{TIME_UNIT}`.
+
 ## Volgende stappen
 
-Gebruikend de hier beschreven functies, kunt u vragen schrijven om tot uw eigen [!DNL ExperienceEvent] datasets toegang te hebben gebruikend [!DNL Query Service]. Voor meer informatie over auteursvragen in [!DNL Query Service], zie de documentatie bij het [creëren van vragen](../creating-queries/creating-queries.md).
+Gebruikend de hier beschreven functies, kunt u vragen schrijven om tot uw eigen [!DNL Experience Event] datasets toegang te hebben gebruikend [!DNL Query Service]. Voor meer informatie over auteursvragen in [!DNL Query Service], zie de documentatie over [het creëren van vragen](../creating-queries/creating-queries.md).
+
+## Aanvullende bronnen
+
+In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Platform-interface en in een PSQL-client. Bovendien gebruikt de video ook voorbeelden met afzonderlijke eigenschappen in een XDM-object, met gebruik van door Adobe gedefinieerde functies en met gebruik van CREATE TABLE AS SELECT (CTAS).
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
