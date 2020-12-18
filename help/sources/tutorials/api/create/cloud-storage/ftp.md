@@ -6,34 +6,34 @@ topic: overview
 type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om een Experience Platform te verbinden met een FTP-server (File Transfer Protocol).
 translation-type: tm+mt
-source-git-commit: 807b3110606daa6b8d42d2f9048668f7c121c8f4
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '565'
 ht-degree: 1%
 
 ---
 
 
-# Een FTP-connector maken met de [!DNL Flow Service] API
+# Een FTP-aansluiting maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->De FTP-connector bevindt zich in bèta. De functies en documentatie kunnen worden gewijzigd. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De FTP-connector bevindt zich in bèta. De functies en documentatie kunnen worden gewijzigd. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om verbinding te maken [!DNL Experience Platform] met een FTP-server (File Transfer Protocol).
+In deze zelfstudie wordt de [!DNL Flow Service]-API gebruikt om u door de stappen te laten lopen om [!DNL Experience Platform] te verbinden met een FTP-server (File Transfer Protocol).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
+* [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-In de volgende secties vindt u aanvullende informatie die u moet weten om verbinding te kunnen maken met een FTP-server via de [!DNL Flow Service] API.
+De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met een FTP-server tot stand te brengen met de [!DNL Flow Service]-API.
 
 ### Vereiste referenties verzamelen
 
-Als u verbinding wilt maken [!DNL Flow Service] met FTP, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+[!DNL Flow Service] kan alleen verbinding maken met FTP als u waarden opgeeft voor de volgende eigenschappen van de verbinding:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -43,17 +43,17 @@ Als u verbinding wilt maken [!DNL Flow Service] met FTP, moet u waarden opgeven 
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DNL Flow Service]sandboxen behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -67,7 +67,7 @@ Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. E
 
 ### Een FTP-verbinding maken met basisverificatie
 
-Als u een FTP-verbinding wilt maken met basisverificatie, vraagt u een POST naar de [!DNL Flow Service] API en geeft u waarden op voor de verbinding `host`, `userName`en `password`.
+Als u een FTP-verbinding wilt maken met behulp van basisverificatie, vraagt u een POST naar de [!DNL Flow Service]-API en geeft u waarden op voor `host`, `userName` en `password` van uw verbinding.
 
 **API-indeling**
 
@@ -76,6 +76,8 @@ POST /connections
 ```
 
 **Verzoek**
+
+Als u een FTP-verbinding wilt maken, moet de unieke specificatie-id van de verbinding worden opgegeven als onderdeel van de aanvraag voor de POST. De verbindingsspecificatie-id voor FTP is `fb2e94c9-c031-467d-8103-6bd6e0a432f2`.
 
 ```shell
 curl -X POST \
@@ -112,7 +114,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe verbinding. Deze id is vereist om uw FTP-server te verkennen in de volgende zelfstudie.
+Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde verbinding terug. Deze id is vereist om uw FTP-server te verkennen in de volgende zelfstudie.
 
 ```json
 {
@@ -123,4 +125,4 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe verbinding. 
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een FTP-verbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze verbindings-id gebruiken om cloudopslag te [verkennen met de Flow Service API](../../explore/cloud-storage.md) of [ingest parketgegevens met de Flow Service API](../../cloud-storage-parquet.md).
+Aan de hand van deze zelfstudie hebt u een FTP-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. Met deze verbindings-id kunt u [cloudopslag verkennen met de Flow Service API](../../explore/cloud-storage.md) of [ingest parketgegevens met behulp van de Flow Service API](../../cloud-storage-parquet.md).
