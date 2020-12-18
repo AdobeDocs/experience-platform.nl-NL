@@ -10,9 +10,10 @@ tutorials-title: Tutorials
 tutorials-url: https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.nl-NL
 solution: Experience Platform
+type: Documentation
 index: true
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: ffa637c7a0c30bb1b41746b2278f00e40aa2e11e
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 75%
@@ -22,7 +23,7 @@ ht-degree: 75%
 
 # Metagegevens voor intern gebruik
 
-Het bestand metadata.md bevat metagegevens op niveau van de opslagplaats die worden doorgegeven aan TOC.md-bestanden van de gebruikershandleiding in de opslagplaats. Als u de content van metadata.md voor om het even welke gebruikershandleiding wilt veranderen, doet u dit in om het even welk TOC.md-bestand.
+Het bestand metadata.md bevat metagegevens op niveau van de repository die worden doorgegeven aan TOC.md-bestanden van de gebruikershandleiding in de repository. Als u de content van metadata.md voor om het even welke gebruikershandleiding wilt veranderen, doet u dit in om het even welk TOC.md-bestand.
 
 | metadata | wat het doet |
 |--- |--- |
@@ -32,4 +33,4 @@ Het bestand metadata.md bevat metagegevens op niveau van de opslagplaats die wor
 | getting-started-url | Koppeling naar pagina om aan de slag te gaan met helpx |
 | tutorials-url | Koppeling naar videotutorials: helpx-tutorials of KT-tutorials |
 | mini-toc-levels | Hiermee bepaalt u het aantal kopniveaus dat wordt weergegeven in de rechterrail. standaard is dit 2 |
-| git-repo | Hiermee wordt de locatie van de primaire opslagplaats voor intern gebruik opgegeven |
+| git-repo | Hiermee wordt de locatie van de primaire repository voor intern gebruik opgegeven |
