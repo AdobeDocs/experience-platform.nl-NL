@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 translation-type: tm+mt
-source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
+source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,13 @@ ht-degree: 0%
       - [Gegevensconnector Analytics](connectors/adobe-applications/analytics.md)
       - [Audience Manager-aansluiting](connectors/adobe-applications/audience-manager.md)
       - [Klantenkenmerkaansluiting](connectors/adobe-applications/customer-attributes.md)
-      - Toepassingsvelden Adobe toewijzen {#mapping}
+      - Toepassingsvelden van Adobe toewijzen {#mapping}
          - [Toewijzingsvelden voor analysemogelijkheden](connectors/adobe-applications/mapping/analytics.md)
          - [Toewijzingsvelden voor Audience Managers](connectors/adobe-applications/mapping/audience-manager.md)
          - [Doeltoewijzingsvelden](connectors/adobe-applications/mapping/target.md)
-   - Advertising {#advertising}
+   - Reclame {#advertising}
       - [Google AdWords-connector](connectors/advertising/ads.md)
-   - Cloud-opslag {#cloud-storage}
+   - Cloudopslag {#cloud-storage}
       - [Amazon Kinesis-connector](connectors/cloud-storage/kinesis.md)
       - [Amazon S3-connector](connectors/cloud-storage/s3.md)
       - [Apache HDFS-aansluiting](connectors/cloud-storage/hdfs.md)
@@ -65,7 +65,7 @@ ht-degree: 0%
       - [PostgreSQL-connector](connectors/databases/postgres.md)
    - eCommerce {#ecommerce}
       - [Shopify-connector](connectors/ecommerce/shopify.md)
-   - Marketing automatiseren {#marketing-automation}
+   - Marketingautomatisering {#marketing-automation}
       - [HubSpot-connector](connectors/marketing-automation/hubspot.md)
    - Betalingen {#payments}
       - [PayPal-connector](connectors/payments/paypal.md)
@@ -73,9 +73,9 @@ ht-degree: 0%
       - [Generic OData-connector](connectors/protocols/odata.md)
 - API-zelfstudies {#api-tutorials}
    - Een bronaansluiting maken {#create}
-      - Advertising {#advertising}
+      - Reclame {#advertising}
          - [Google AdWords-connector](tutorials/api/create/advertising/ads.md)
-      - Cloud-opslag {#cloud-storage}
+      - Cloudopslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3-connector](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS-aansluiting](tutorials/api/create/cloud-storage/hdfs.md)
@@ -87,7 +87,6 @@ ht-degree: 0%
          - [Google Cloud Storage-connector](tutorials/api/create/cloud-storage/google.md)
          - [SFTP-aansluiting](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [HubSpot-connector](tutorials/api/create/crm/hubspot.md)
          - [Microsoft Dynamics-connector](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce-aansluiting](tutorials/api/create/crm/salesforce.md)
       - Klantsucces {#customer-success}
@@ -112,13 +111,13 @@ ht-degree: 0%
          - [SQL Server-aansluiting](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Shopify-connector](tutorials/api/create/ecommerce/shopify.md)
-      - Marketing automatiseren {#marketing-automation}
+      - Marketingautomatisering {#marketing-automation}
          - [HubSpot-connector](tutorials/api/create/marketing-automation/hubspot.md)
       - Betalingen {#payments}
          - [PayPal-connector](tutorials/api/create/payments/paypal.md)
       - Protocollen {#protocols}
          - [Generic OData-connector](tutorials/api/create/protocols/odata.md)
-   - Gegevens verkennen {#explore}
+   - Gegevens {#explore} verkennen
       - [Reclamegegevens verkennen](tutorials/api/explore/advertising.md)
       - [Gegevens over cloudopslag verkennen](tutorials/api/explore/cloud-storage.md)
       - [CRM-gegevens verkennen](tutorials/api/explore/crm.md)
@@ -152,9 +151,9 @@ ht-degree: 0%
          - [Adobe Analytics-connector](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Audience Manager-connector](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Klantenkenmerkaansluiting](tutorials/ui/create/adobe-applications/customer-attributes.md)
-      - Advertising {#create}
+      - Reclame {#create}
          - [Google AdWords-connector](tutorials/ui/create/advertising/ads.md)
-      - Cloud-opslag {#cloud-storage}
+      - Cloudopslag {#cloud-storage}
          - [Amazon Kinesis-connector](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3-connector](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS-aansluiting](tutorials/ui/create/cloud-storage/hdfs.md)
@@ -169,7 +168,7 @@ ht-degree: 0%
       - CRM {#crm}
          - [Microsoft Dynamics-connector](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce-aansluiting](tutorials/ui/create/crm/salesforce.md)
-      - Klant geslaagd {#customer-success}
+      - Klantsucces {#customer-success}
          - [Salesforce Service Cloud-aansluiting](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow-connector](tutorials/ui/create/customer-success/servicenow.md)
       - Databases {#databases}
@@ -191,7 +190,7 @@ ht-degree: 0%
          - [PostgreSQL-connector](tutorials/ui/create/databases/postgres.md)
       - eCommerce {#ecommerce}
          - [Shopify-connector](tutorials/ui/create/ecommerce/shopify.md)
-      - Marketing automatiseren {#marketing-automation}
+      - Marketingautomatisering {#marketing-automation}
          - [HubSpot-connector](tutorials/ui/create/marketing-automation/hubspot.md)
       - Betalingen {#payments}
          - [PayPal-connector](tutorials/ui/create/payments/paypal.md)
