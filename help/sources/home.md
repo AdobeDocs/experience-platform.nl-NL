@@ -5,9 +5,9 @@ title: Overzicht van Adobe Experience Platform Source Connectors
 topic: overview
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 translation-type: tm+mt
-source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
+source-git-commit: 466cb072537cbf462d2c4d8f3ee4b6eccc0199a0
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '926'
 ht-degree: 0%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 0%
 
 # Overzicht van bronconnectors
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens uit diverse bronnen invoeren, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
-[!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
+[!DNL Flow Service] wordt gebruikt om klantgegevens van diverse verschillende bronnen binnen Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
 
-Met [!DNL Experience Platform], kunt u gegevens centraliseren u uit verschillende bronnen verzamelt en de inzichten gebruiken die uit het worden verkregen om meer te doen.
+Met Experience Platform, kunt u gegevens centraliseren u uit verschillende bronnen verzamelt en de inzichten gebruiken die uit het worden verkregen om meer te doen.
 
 ## Typen bronnen
 
-De bronnen in [!DNL Experience Platform] worden gegroepeerd in de volgende categorieën:
+Bronnen in Experience Platform worden ingedeeld in de volgende categorieën:
 
 ### Adobe-toepassingen
 
-[!DNL Experience Platform] staat toe dat gegevens van andere toepassingen van Adobe, met inbegrip van Adobe Analytics, Adobe Audience Manager, en [!DNL Experience Platform Launch]worden opgenomen. Zie de volgende verwante documenten voor meer informatie:
+Met Experience Platform kunnen gegevens van andere Adobe-toepassingen worden ingesloten, zoals Adobe Analytics, Adobe Audience Manager en [!DNL Experience Platform Launch]. Zie de volgende verwante documenten voor meer informatie:
 
 - [Overzicht Adobe Audience Manager-connector](connectors/adobe-applications/audience-manager.md)
 - [Een Adobe Audience Manager-bronaansluiting maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -39,13 +39,13 @@ De bronnen in [!DNL Experience Platform] worden gegroepeerd in de volgende categ
 
 ### Reclame
 
-[!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) connector
 
 ### Cloud Storage
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen [!DNL Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
+Met bronnen voor cloudopslag kunt u uw eigen gegevens in het Platform plaatsen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
 
 - [[!DNL Azure Data Lake Storage Gen2] connector](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob] connector](connectors/cloud-storage/blob.md)
@@ -60,21 +60,21 @@ Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen [!DNL Platform
 
 ### Customer Relationship Management (CRM)
 
-De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen bouwen, die beurtelings, loyaliteit creëren en klantenbehoud drijven. [!DNL Experience Platform] verleent steun voor het opnemen van de gegevens van CRM van [!DNL Microsoft Dynamics 365] en [!DNL Salesforce]. Zie de volgende verwante documenten voor meer informatie:
+De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen bouwen, die beurtelings, loyaliteit creëren en klantenbehoud drijven. Experience Platform biedt ondersteuning voor het opnemen van CRM-gegevens van [!DNL Microsoft Dynamics 365] en [!DNL Salesforce]. Zie de volgende verwante documenten voor meer informatie:
 
 - [[!DNL Microsoft Dynamics] connector](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] connector](connectors/crm/salesforce.md)
 
 ### Klant geslaagd
 
-[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een toepassing van het de succes van de derdeklant. Zie de volgende verwante documenten voor meer informatie:
+Experience Platform biedt ondersteuning voor het opnemen van gegevens van een toepassing voor klantsucces van derden. Zie de volgende verwante documenten voor meer informatie:
 
 - [[!DNL Salesforce Service Cloud] connector](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] connector](connectors/customer-success/servicenow.md)
 
 ### Database
 
-[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [[!DNL Amazon Redshift] connector](connectors/databases/redshift.md)
 - [[!DNL Apache Hive on Azure HDInsights] connector](connectors/databases/hive.md)
@@ -95,45 +95,45 @@ De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen b
 
 ### eCommerce
 
-[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een derdeeCommerce systeem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+Experience Platform biedt ondersteuning voor het opnemen van gegevens van een eCommerce-systeem van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
 ### Marketing Automation
 
-[!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens van een derde marketingautomatiseringssysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+Experience Platform biedt ondersteuning voor het opnemen van gegevens van een derde marketingautomatiseringssysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [[!DNL HubSpot] connector](connectors/marketing-automation/hubspot.md)
 
 ### Betalingen
 
-[!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens uit een betalingssysteem van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een betalingssysteem van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [[!DNL PayPal] connector](connectors/payments/paypal.md)
 
 ### Protocollen
 
-[!DNL Experience Platform] verleent steun voor het opnemen van gegevens van een systeem van derdeprotocollen. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+Experience Platform verleent steun voor het opnemen van gegevens van een systeem van derdeprotocollen. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [[!DNL Generic OData] connector](connectors/protocols/odata.md)
 
 ## Toegangsbeheer voor bronnen bij gegevensinvoer
 
-Machtigingen voor bronnen in gegevensinvoer kunnen binnen de Adobe Admin Console worden beheerd. U hebt toegang tot machtigingen via het tabblad **[!UICONTROL Machtigingen]** in een bepaald productprofiel. Via het deelvenster **[!UICONTROL Machtigingen]** bewerken hebt u toegang tot de machtigingen voor bronnen via de menuvermelding voor **[!UICONTROL gegevensinvoer]** . De toestemming van de Bronnen **[!UICONTROL van de]** Mening verleent read-only toegang tot beschikbare bronnen in het lusje van de **[!UICONTROL Catalogus]** en voor authentiek verklaarde bronnen op het **[!UICONTROL Browse]** lusje, terwijl de machtiging **[!UICONTROL Manage Bronnen]** volledige toegang verleent om te lezen, tot stand te brengen, uit te geven, en bronnen onbruikbaar te maken.
+Machtigingen voor bronnen in gegevensinvoer kunnen binnen de Adobe Admin Console worden beheerd. U hebt toegang tot machtigingen via het tabblad **[!UICONTROL Machtigingen]** in een bepaald productprofiel. Vanuit het **[!UICONTROL deelvenster Machtigingen bewerken]** hebt u toegang tot de machtigingen voor bronnen via de menuvermelding **[!UICONTROL data-invoer]**. De **[!UICONTROL machtiging Bronnen weergeven]** verleent alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalogus]** en geverifieerde bronnen op het tabblad **[!UICONTROL Bladeren]**, terwijl met de machtiging **[!UICONTROL Bronnen beheren]** volledige toegang wordt verleend tot het lezen, maken, bewerken en uitschakelen van bronnen.
 
 De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combinaties van deze toestemmingen:
 
 | Machtigingsniveau | Beschrijving |
 | ---- | ----|
-| **[!UICONTROL Bronnen]** weergeven op | De read-only toegang van de subsidie tot bronnen in elk bron-type op het lusje van de Catalogus, evenals doorbladeren, Rekeningen, en lusjes Dataflow. |
-| **[!UICONTROL Bronnen]** beheren op | Naast de functies die zijn opgenomen in **[!UICONTROL Bronnen]** weergeven, verleent u toegang tot de optie **[!UICONTROL Bron]** verbinden in de **[!UICONTROL catalogus]** en **[!UICONTROL Gegevens]** selecteren in **[!UICONTROL Bladeren]**. **[!UICONTROL Beheer Bronnen]** staat u ook toe om **[!UICONTROL DataFlows]** toe te laten of onbruikbaar te maken en hun programma&#39;s uit te geven. |
-| **[!UICONTROL Bronnen]** weergeven en bronnen **** beheren uitgeschakeld | Alle toegang tot bronnen intrekken. |
+| **[!UICONTROL Bronnen]** weergeven | De read-only toegang van de subsidie tot bronnen in elk bron-type op het lusje van de Catalogus, evenals doorbladeren, Rekeningen, en lusjes Dataflow. |
+| **[!UICONTROL Bronnen]** beherenAan | Naast de functies die zijn opgenomen in **[!UICONTROL Bronnen weergeven]**, verleent u toegang tot de optie **[!UICONTROL Bron verbinden]** in **[!UICONTROL Catalogus]** en tot **[!UICONTROL Gegevens selecteren]** in **[!UICONTROL Bladeren]**. **[!UICONTROL Met]** Bronnen beheren kunt u ook  **** DataFlow in- of uitschakelen en hun schema&#39;s bewerken. |
+| **[!UICONTROL Bronnen]** weergevenUit en  **** Bronnen beherenUit | Alle toegang tot bronnen intrekken. |
 
-Voor meer informatie over de beschikbare toestemmingen die door de Admin Console, met inbegrip van die vier bronnen worden verleend, zie het overzicht [van de](../access-control/home.md)toegangscontrole.
+Voor meer informatie over de beschikbare toestemmingen die door de Admin Console, met inbegrip van die vier bronnen worden verleend, zie [toegangsbeheeroverzicht](../access-control/home.md).
 
-## Voorwaarden en bepalingen {#terms-and-conditions}
+## Voorwaarden {#terms-and-conditions}
 
-Door een van de bronnen te gebruiken die als bèta (&quot;Beta&quot;) worden gelabeld, erkent u hierbij dat de bètaversie ***&quot;as is&quot; wordt geleverd zonder enige*** garantie.
+Door om het even welke bronnen te gebruiken die als bèta (&quot;Beta&quot;) worden geëtiketteerd, bevestigt u hierbij dat Beta ***&quot;zoals is&quot;zonder garantie van om het even welke soort*** wordt verstrekt.
 
 Adobe is niet verplicht het bètaprogramma te onderhouden, te corrigeren, bij te werken, te wijzigen, te wijzigen of anderszins te ondersteunen. U wordt aangeraden voorzichtig te zijn en op geen enkele wijze te vertrouwen op de juiste werking of prestaties van dergelijke bèta en/of begeleidende materialen. De bètaversie wordt beschouwd als vertrouwelijke informatie van Adobe.
 
