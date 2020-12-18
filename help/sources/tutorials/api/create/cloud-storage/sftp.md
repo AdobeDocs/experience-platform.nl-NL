@@ -6,21 +6,21 @@ topic: overview
 type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform te verbinden met een SFTP-server (Secure File Transfer Protocol).
 translation-type: tm+mt
-source-git-commit: 7b638f0516804e6a2dbae3982d6284a958230f42
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
 
 
-# Een SFTP-connector maken met de [!DNL Flow Service] API
+# Een SFTP-aansluiting maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->De SFTP-connector bevindt zich in bèta. De functies en documentatie kunnen worden gewijzigd. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De SFTP-connector bevindt zich in bèta. De functies en documentatie kunnen worden gewijzigd. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om een Experience Platform te verbinden met een SFTP-server (Secure File Transfer Protocol).
+Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om Experience Platform met een SFTP-server (Secure File Transfer Protocol) te verbinden.
 
 ## Aan de slag
 
@@ -29,11 +29,11 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 * [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
 * [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met een SFTP-server met behulp van de [!DNL Flow Service] API.
+In de volgende secties vindt u aanvullende informatie die u moet weten om verbinding te kunnen maken met een SFTP-server met de [!DNL Flow Service]-API.
 
 ### Vereiste referenties verzamelen
 
-Als u verbinding wilt maken [!DNL Flow Service] met SFTP, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+[!DNL Flow Service] kan alleen verbinding maken met SFTP als u waarden opgeeft voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -45,23 +45,23 @@ Als u verbinding wilt maken [!DNL Flow Service] met SFTP, moet u waarden opgeven
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
-* Autorisatie: Drager `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DNL Flow Service]sandboxen behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
-* Inhoudstype: `application/json`
+* `Content-Type: application/json`
 
 ## Verbinding maken
 
@@ -69,7 +69,7 @@ Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. P
 
 ### Een SFTP-verbinding maken met behulp van basisverificatie
 
-Om een verbinding tot stand te brengen SFTP gebruikend basisauthentificatie, doe een verzoek van de POST aan [!DNL Flow Service] API terwijl het verstrekken van waarden voor uw verbinding `host`, `userName`, en `password`.
+Als u een SFTP-verbinding wilt maken met behulp van basisverificatie, vraagt u een POST naar de [!DNL Flow Service]-API en geeft u waarden op voor `host`, `userName` en `password` van uw verbinding.
 
 **API-indeling**
 
@@ -78,6 +78,8 @@ POST /connections
 ```
 
 **Verzoek**
+
+Om een verbinding tot stand te brengen SFTP, moet zijn unieke identiteitskaart van de verbindingsspecificatie als deel van het verzoek van de POST worden verstrekt. De identiteitskaart van de verbindingsspecificatie voor SFTP is `b7bf2577-4520-42c9-bae9-cad01560f7bc`.
 
 ```shell
 curl -X POST \
@@ -114,7 +116,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe verbinding. Deze id is vereist om uw SFTP-server te verkennen in de volgende zelfstudie.
+Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde verbinding terug. Deze id is vereist om uw SFTP-server te verkennen in de volgende zelfstudie.
 
 ```json
 {
@@ -125,7 +127,7 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe verbinding. 
 
 ### Een SFTP-verbinding maken met SSH-verificatie met openbare sleutel
 
-Om een verbinding tot stand te brengen SFTP gebruikend de openbare zeer belangrijke authentificatie van SSH, doe een verzoek van de POST aan [!DNL Flow Service] API terwijl het verstrekken van waarden voor uw verbinding `host`, `userName`, `privateKeyContent`, en `passPhrase`.
+Als u een SFTP-verbinding wilt maken met behulp van SSH-verificatie met openbare sleutel, vraagt u een POST naar de [!DNL Flow Service]-API en geeft u waarden op voor `host`, `userName`, `privateKeyContent` en `passPhrase` van uw verbinding.
 
 **API-indeling**
 
@@ -172,7 +174,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe verbinding. Deze id is vereist om uw SFTP-server te verkennen in de volgende zelfstudie.
+Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde verbinding terug. Deze id is vereist om uw SFTP-server te verkennen in de volgende zelfstudie.
 
 ```json
 {
@@ -183,4 +185,4 @@ Een geslaagde reactie retourneert de unieke id (`id`) van de nieuwe verbinding. 
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een SFTP-verbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze verbindings-id gebruiken om cloudopslag te [verkennen met de Flow Service API](../../explore/cloud-storage.md) of [ingest parketgegevens met de Flow Service API](../../cloud-storage-parquet.md).
+Door deze zelfstudie te volgen hebt u een SFTP-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. Met deze verbindings-id kunt u [cloudopslag verkennen met de Flow Service API](../../explore/cloud-storage.md) of [ingest parketgegevens met behulp van de Flow Service API](../../cloud-storage-parquet.md).
