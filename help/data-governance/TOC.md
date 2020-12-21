@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Data Governance
 breadcrumb-title: Handleiding voor gegevensbeheer
 user-guide-description: Beperkingen voor gegevensgebruik afdwingen door labels, marketingacties en beleid te gebruiken.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: d139eed4768384412a17b62037ed41c06c2941bd
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '118'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,8 @@ ht-degree: 3%
    * [Creeer een beleid van het gegevensgebruik gebruikend de Dienst API van het Beleid](policies/create.md)
 * Beleidshandhaving {#enforcement}
    * [Overzicht van beleidshandhaving](enforcement/overview.md)
-   * [Beleid voor gegevensgebruik afdwingen met de API voor beleidsservice](enforcement/api-enforcement.md)
+   * [Automatische handhaving](enforcement/auto-enforcement.md)
+   * [Op API gebaseerde handhaving](enforcement/api-enforcement.md)
 * Handleiding voor ontwikkelaars van API voor beleidsservice {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
