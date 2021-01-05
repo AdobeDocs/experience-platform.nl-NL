@@ -18,4 +18,4 @@ ht-degree: 0%
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren.
 
-Meer over het controleren van gegevensstromen voor bronschakelaars, te lezen gelieve de [controledataflows in bronleerprogramma](../../../dataflows/ui/monitor-sources.md) .
+Lees voor meer informatie over het controleren van gegevensstromen voor bronconnectors de [controle van gegevensstromen in bronnen](../../../dataflows/ui/monitor-sources.md) zelfstudie.
