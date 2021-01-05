@@ -5,15 +5,15 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik XDM-klassen (Experience Data Model) en -mixen om ervaringsgegevens te standaardiseren.
 translation-type: tm+mt
-source-git-commit: df763e246cd6930a31402f0a2c94d657159f4fe8
+source-git-commit: 099e88373d945660e7529bbd508e616869fd01da
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 4%
+source-wordcount: '216'
+ht-degree: 6%
 
 ---
 
 
-# XDM-systeem (Experience Data Model) {#xdm}
+# Systeem {#xdm} van de Gegevens van de ervaring Model (XDM)
 
 * [XDM System, overzicht](home.md)
 * Schemas {#schema}
@@ -56,7 +56,23 @@ ht-degree: 4%
    * [Details van POI](./data-types/poi-details.md)
    * [POI-interactie](./data-types/poi-interaction.md)
    * [Postadres](./data-types/postal-address.md)
-* Schema-register-API {#api}
+*  SchemasUI  {#ui}
+   * [Overzicht](./ui/overview.md)
+   * [XDM-bronnen verkennen](./ui/explore.md)
+   * Bronnen maken en bewerken {#resources}
+      * [Schemas](./ui/resources/schemas.md)
+      * [Klassen](./ui/resources/classes.md)
+      * [Mixins](./ui/resources/mixins.md)
+      * [Datatypen](./ui/resources/data-types.md)
+   * Veld {#fields} definiëren
+      * [Overzicht](./ui/fields/overview.md)
+      * [Vereiste velden](./ui/fields/required.md)
+      * [Objectvelden](./ui/fields/object.md)
+      * [Arrayvelden](./ui/fields/array.md)
+      * [Enumvelden](./ui/fields/enum.md)
+      * [Identiteitsvelden](./ui/fields/identity.md)
+      * [Relatievelden](./ui/fields/relationship.md)
+* Schema Registry API {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
    * [Schemas](api/schemas.md)
@@ -69,10 +85,8 @@ ht-degree: 4%
    * [Ad-hocregelingen](api/ad-hoc.md)
    * [Aanhangsel](api/appendix.md)
 * Tutorials {#tutorials}
-   * [Bronnen verkennen in de gebruikersinterface](./tutorials/explore.md)
    * [Een schema maken (API)](tutorials/create-schema-api.md)
    * [Een schema maken (UI)](tutorials/create-schema-ui.md)
-   * [Gegevenstypen maken en bewerken (UI)](./tutorials/create-data-type.md)
    * [Een relatie definiëren tussen twee schema&#39;s (API)](tutorials/relationship-api.md)
    * [Bepaal een verband tussen twee schema&#39;s (UI)](tutorials/relationship-ui.md)
    * [Een ad-hocschema (API) maken](tutorials/ad-hoc.md)
