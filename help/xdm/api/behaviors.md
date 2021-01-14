@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;behavior;behaviour;behaviors;behaviours;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;behavior;behaviour;behaviors;behaviours;
 solution: Experience Platform
 title: Hulplijn eindpunt Gedrag
 description: Het /behavior eindpunt in de Registratie API van het Schema staat u toe om al beschikbaar gedrag in de globale container terug te winnen.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 72c9147cefd00c9fe734ac64f8062c899b0588bc
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 1%
@@ -22,17 +22,17 @@ In het Model van Gegevens van de Ervaring (XDM), bepalen het gedrag de aard van 
 
 >[!NOTE]
 >
->Er zijn sommige gebruiksgevallen in Platform die het gebruik van schema vereisen dat geen van de bovenstaande gedragingen gebruikt. In deze gevallen is een derde &quot;ad-hocgedrag&quot; beschikbaar. Zie de zelfstudie over het [maken van een ad-hocschema](../tutorials/ad-hoc.md) voor meer informatie.
+>Er zijn sommige gebruiksgevallen in Platform die het gebruik van schema vereisen dat geen van de bovenstaande gedragingen gebruikt. In deze gevallen is een derde &quot;ad-hocgedrag&quot; beschikbaar. Zie de zelfstudie over [het maken van een ad-hocschema](../tutorials/ad-hoc.md) voor meer informatie.
 >
->Voor meer algemene informatie over gegevensgedrag in termen van hoe zij schemacompositie beïnvloeden, verwijs naar de gids over de [grondbeginselen van schemacompositie](../schema/composition.md).
+>Voor meer algemene informatie over gegevensgedrag in termen van hoe zij schemacompositie beïnvloeden, verwijs naar de gids op de [grondbeginselen van schemacompositie](../schema/composition.md).
 
 Het `/behaviors` eindpunt in [!DNL Schema Registry] API staat u toe om beschikbaar gedrag in de `global` container te bekijken.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Lees voordat u verdergaat de gids [Aan de](./getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar elke Experience Platform-API te kunnen uitvoeren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
-## Een lijst met gedragingen ophalen {#list}
+## Een lijst met gedragingen {#list} ophalen
 
 U kunt een lijst van al beschikbaar gedrag terugwinnen door een verzoek van de GET aan het `/behaviors` eindpunt te doen.
 
@@ -91,7 +91,7 @@ curl -X GET \
 
 ## Gedrag opzoeken {#lookup}
 
-U kunt een specifiek gedrag omhoog kijken door zijn identiteitskaart in de weg van een verzoek van de GET aan het `/behaviors` eindpunt te verstrekken.
+U kunt omhoog een specifiek gedrag kijken door zijn identiteitskaart in de weg van een verzoek van de GET aan het `/behaviors` eindpunt te verstrekken.
 
 **API-indeling**
 
@@ -101,7 +101,7 @@ GET /global/behaviors/{BEHAVIOR_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{BEHAVIOR_ID}` | De `meta:altId` URL- of URL-gecodeerde `$id` van het gedrag dat u wilt opzoeken. |
+| `{BEHAVIOR_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het gedrag dat u wilt opzoeken. |
 
 **Verzoek**
 
@@ -172,4 +172,4 @@ Een geslaagde reactie retourneert de details van het gedrag, inclusief de versie
 
 ## Volgende stappen
 
-Deze gids behandelde het gebruik van het `/behaviors` [!DNL Schema Registry] eindpunt in API. Zie de handleiding voor het eindpunt van [](./classes.md)klassen als u wilt leren hoe u een gedrag aan een klasse kunt toewijzen met behulp van de API.
+Deze gids behandelde het gebruik van het `/behaviors` eindpunt in [!DNL Schema Registry] API. Zie de [gids voor klassen](./classes.md) voor meer informatie over het toewijzen van een gedrag aan een klasse met behulp van de API.
