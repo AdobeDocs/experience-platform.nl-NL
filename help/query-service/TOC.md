@@ -5,10 +5,10 @@ user-guide-title: Help bij Adobe Experience Platform Query Service
 breadcrumb-title: Handleiding Query Service
 user-guide-description: Gebruik standaard SQL om gegevens in het meer van Gegevens van het Platform te vragen.
 translation-type: tm+mt
-source-git-commit: e38190aabfa5d36de85e03eb5fb4e76283fb7934
+source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 5%
+source-wordcount: '135'
+ht-degree: 2%
 
 ---
 
@@ -27,14 +27,13 @@ ht-degree: 5%
 - UI voor query-service {#ui}
    - [Overzicht van gebruikersinterface](ui/overview.md)
    - [Gebruikershandleiding voor de Query Editor](ui/user-guide.md)
-- Query’s maken {#creating-queries}
-   - [Query-overzicht maken](creating-queries/creating-queries.md)
-   - [Datasets vs tabellen en schema&#39;s](creating-queries/datasets-and-tables.md)
-   - [Algemene richtlijnen voor het uitvoeren van query&#39;s](creating-queries/writing-queries.md)
-   - [Query&#39;s van ExperienceEvent](creating-queries/experience-event-queries.md)
-   - [Gegevenssets samenvoegen](creating-queries/joining-datasets.md)
-   - [Gegevensdeduplicatie](creating-queries/deduplication.md)
-- [Gegevenssets genereren op basis van queryresultaten](creating-queries/create-datasets.md)
+   - [Gegevenssets genereren op basis van queryresultaten](ui/create-datasets.md)
+- Best practices {#best-practices}
+   - [Algemene richtlijnen voor het uitvoeren van query&#39;s](best-practices/writing-queries.md)
+   - [Gegevensdeduplicatie](best-practices/deduplication.md)
+   - [Voorbeeld van query&#39;s voor ervaringsgebeurtenissen](best-practices/experience-event-queries.md)
+   - [Voorbeeld van Adobe Analytics-query&#39;s](best-practices/adobe-analytics.md)
+   - [Voorbeeld van Adobe Target-query&#39;s](best-practices/adobe-target.md)
 - SQL-referentie {#sql}
    - [SQL-overzicht](sql/overview.md)
    - [SQL-syntaxis](sql/syntax.md)
@@ -42,10 +41,6 @@ ht-degree: 5%
    - [SQL-functies in Spark](sql/spark-sql-functions.md)
    - [Opdrachten Metagegevens](sql/metadata.md)
    - [Vooraf voorbereide instructies](sql/prepared-statements.md)
-- Voorbeeldquery&#39;s {#samples}
-   - [Overzicht van voorbeeldquery&#39;s](sample-queries/overview.md)
-   - [Adobe Analytics](sample-queries/adobe-analytics.md)
-   - [Adobe Target](sample-queries/adobe-target.md)
 - Verbind cliënten met de Dienst van de Vraag {#clients}
    - [Overzicht van clientverbindingen](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
