@@ -5,9 +5,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik XDM-klassen (Experience Data Model) en -mixen om ervaringsgegevens te standaardiseren.
 translation-type: tm+mt
-source-git-commit: 099e88373d945660e7529bbd508e616869fd01da
+source-git-commit: baf39df0e03170d6b2b5a151e753d4ad269a43fa
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '215'
 ht-degree: 6%
 
 ---
@@ -21,8 +21,6 @@ ht-degree: 6%
    * [Aanbevolen procedures voor gegevensmodellering](schema/best-practices.md)
    * [Beperkingen voor XDM-veldtypen](schema/field-constraints.md)
    * [XDM-veldwoordenboek](schema/field-dictionary.md)
-   * Gebruiksgevallen voor schema {#use-cases}
-      * [Gegevenstype Inhoud en Voorkeuren](schema/privacy-consent.md)
 * Klassen {#classes}
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -82,6 +80,9 @@ ht-degree: 6%
    * [Datatypen](api/data-types.md)
    * [Beschrijvers](api/descriptors.md)
    * [Unies](api/unions.md)
+   * [Exporteren/importeren](api/export-import.md)
+   * [Voorbeeldgegevens](api/sample-data.md)
+   * [Controlelogboek](api/audit-log.md)
    * [Ad-hocregelingen](api/ad-hoc.md)
    * [Aanhangsel](api/appendix.md)
 * Tutorials {#tutorials}
