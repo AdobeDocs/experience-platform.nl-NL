@@ -5,7 +5,7 @@ title: Verbinding maken met RStudio
 topic: connect
 description: Dit document loopt door de stappen voor het verbinden van R Studio met de Dienst van de Vraag van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 2%
@@ -15,9 +15,9 @@ ht-degree: 2%
 
 # Verbinden met [!DNL RStudio]
 
-Dit document loopt door de stappen voor het verbinden van R Studio met Adobe Experience Platform [!DNL Query Service].
+Dit document doorloopt de stappen voor het verbinden van de Studio van R met Adobe Experience Platform [!DNL Query Service].
 
-Na installatie [!DNL RStudio], op het scherm van de *Console* dat verschijnt, zult u eerst uw manuscript van R aan gebruik moeten voorbereiden [!DNL PostgreSQL].
+Na het installeren [!DNL RStudio], op het *Console* scherm dat verschijnt, zult u eerst uw manuscript van R voor gebruik [!DNL PostgreSQL] moeten voorbereiden.
 
 ```r
 install.packages("RPostgreSQL")
@@ -26,7 +26,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-Nadat u het R-script hebt voorbereid voor gebruik, kunt u nu verbinding maken [!DNL PostgreSQL]met [!DNL RStudio] het [!DNL Query Service] [!DNL PostgreSQL] stuurprogramma.
+Nadat u uw R-script hebt voorbereid voor gebruik van [!DNL PostgreSQL], kunt u [!DNL RStudio] nu verbinden met [!DNL Query Service] door het [!DNL PostgreSQL]-stuurprogramma te laden.
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -46,13 +46,13 @@ con <- dbConnect(drv,
 
 >[!NOTE]
 >
->Ga naar de pagina met [referenties op het Platform](https://platform.adobe.com/query/configuration)voor meer informatie over het zoeken naar uw databasenaam, host, poort en aanmeldingsgegevens. Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform], klikt u op **[!UICONTROL Vragen]** en vervolgens op **[!UICONTROL Referenties]**.
+>Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, bezoek de [geloofsbrieven pagina op Platform](https://platform.adobe.com/query/configuration). Om uw geloofsbrieven te vinden, login aan [!DNL Platform], klik **[!UICONTROL Vragen]**, dan klik **[!UICONTROL Referenties]**.
 
 ## Volgende stappen
 
-Nu u met hebt verbonden, kunt u vragen schrijven om SQL verklaringen uit te voeren en uit te geven. [!DNL Query Service] U kunt bijvoorbeeld query&#39;s uitvoeren `dbGetQuery(con, sql)` om query&#39;s uit te voeren, waarbij `sql` de SQL-query is die u wilt uitvoeren.
+Nu u met [!DNL Query Service] hebt verbonden, kunt u vragen schrijven om SQL verklaringen uit te voeren en uit te geven. U kunt bijvoorbeeld `dbGetQuery(con, sql)` gebruiken om query&#39;s uit te voeren, waarbij `sql` de SQL-query is die u wilt uitvoeren.
 
-De volgende vraag gebruikt een dataset die [ExperienceEvents](../creating-queries/experience-event-queries.md) bevat en leidt tot een histogram van paginameningen van een website, gezien de het schermhoogte van het apparaat.
+De volgende query gebruikt een dataset met [ExperienceEvents](../best-practices/experience-event-queries.md) en maakt een histogram van paginaweergaven van een website, gezien de schermhoogte van het apparaat.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -87,4 +87,4 @@ df_pageviews
 7 600-699 3097040
 ```
 
-Voor meer informatie over hoe te om vragen te schrijven en in werking te stellen, te lezen gelieve de [lopende vraaggids](../creating-queries/creating-queries.md).
+Voor meer informatie over hoe te om vragen te schrijven en in werking te stellen, te lezen [lopende vraaggids](../best-practices/writing-queries.md).
