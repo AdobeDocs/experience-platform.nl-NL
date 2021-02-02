@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor dataflows;flow service api;Flow Service
+keywords: Experience Platform;huis;populaire onderwerpen;monitordataflows;de stroomdienst api;De Dienst van de stroom
 solution: Experience Platform
 title: Monitorstromen en -uitvoering
 topic: overview
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het controleren van gegevens voor stroomuitvoering op volledigheid, fouten en metriek met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: 3fb5879ea636d4059a6b42e2f98742ff7df0397c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '719'
 ht-degree: 0%
 
 ---
@@ -16,37 +16,37 @@ ht-degree: 0%
 
 # Dataflows gebruiken met de Flow Service API
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren. Bovendien, staat het Experience Platform voor gegevens toe om aan externe partners worden geactiveerd.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van [!DNL Platform]-services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren. Bovendien, staat het Experience Platform voor gegevens toe om aan externe partners worden geactiveerd.
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De dienst verstrekt een gebruikersinterface en RESTful API waarvan alle gesteunde bronnen en bestemmingen verbindbaar zijn.
 
-In deze zelfstudie worden de stappen beschreven voor het controleren van gegevens over stroomuitvoering op volledigheid, fouten en metriek met de [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)instructies.
+In deze zelfstudie worden de stappen beschreven voor het controleren van gegevens voor stroomuitvoering op volledigheid, fouten en metriek met de [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
-Voor deze zelfstudie moet u beschikken over de id-waarde van een geldige gegevensstroom. Als u geen geldige dataflow ID hebt, selecteer uw schakelaar van keus van het [bronoverzicht](../../sources/home.md) of [bestemmingsoverzicht](../../destinations/catalog/overview.md) en volg de stappen die alvorens dit leerprogramma te proberen worden geschetst.
+Voor deze zelfstudie moet u beschikken over de id-waarde van een geldige gegevensstroom. Als u geen geldige dataflow ID hebt, selecteer uw schakelaar van keus van [bronnen overzicht](../../sources/home.md) of [bestemmingen overzicht](../../destinations/catalog/overview.md) en volg de stappen die alvorens dit leerprogramma te proberen worden geschetst.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
 - [Doelen](../../destinations/home.md): Doelen zijn voorgebouwde integraties met veelgebruikte toepassingen die het mogelijk maken om gegevens van Platform naadloos te activeren voor kanaalmarketingcampagnes, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
-- [Bronnen](../../sources/home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
-- [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [Bronnen](../../sources/home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
+- [Sandboxen](../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om stroomlooppas met succes te controleren gebruikend [!DNL Flow Service] API.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot [!DNL Flow Service]behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -66,7 +66,7 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{FLOW_ID}` | De unieke `id` waarde voor de gegevensstroom u wilt controleren. |
+| `{FLOW_ID}` | De unieke `id` waarde voor dataflow u wilt controleren. |
 
 **Verzoek**
 
@@ -197,9 +197,9 @@ Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip
 | `sizeSummary` | Het volume van de gegevens in bytes. |
 | `recordSummary` | The record count of the data. |
 | `fileSummary` | Het aantal bestanden van de gegevens. |
-| `fileSummary.extensions` | Bevat informatie die specifiek is voor de activiteit. Bijvoorbeeld, `manifest` is slechts een deel van de &quot;Activiteit van de Bevordering&quot;, en daarom is het inbegrepen met het `extensions` voorwerp. |
+| `fileSummary.extensions` | Bevat informatie die specifiek is voor de activiteit. `manifest` maakt bijvoorbeeld slechts deel uit van de &quot;promotieactiviteit&quot; en is daarom opgenomen in het object `extensions`. |
 | `statusSummary` | Toont of de stroomlooppas een succes of een mislukking is. |
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u metriek en fouteninformatie over uw gegevensstroom teruggewonnen gebruikend [!DNL Flow Service] API. U kunt nu uw gegevensstroom blijven controleren, afhankelijk van uw innameschema, om zijn status en innamesnelheden te volgen. Voor informatie over hoe te om dataflows voor bronnen te controleren, te lezen gelieve de [controledataflows voor bronnen gebruikend het gebruikersinterfaceleerprogramma](../ui/monitor-sources.md) . Voor meer informatie over hoe te om dataflows voor bestemmingen te controleren, te lezen gelieve de [controledataflows voor bestemmingen gebruikend het gebruikersinterfaceleerprogramma](../ui/monitor-destinations.md) .
+Door deze zelfstudie te volgen, hebt u metriek en fouteninformatie over uw gegevensstroom teruggewonnen gebruikend [!DNL Flow Service] API. U kunt nu uw gegevensstroom blijven controleren, afhankelijk van uw innameschema, om zijn status en innamesnelheden te volgen. Voor informatie over hoe te om dataflows voor bronnen te controleren, te lezen gelieve [dataflows voor bronnen gebruikend het gebruikersinterface](../ui/monitor-sources.md) leerprogramma. Voor meer informatie over hoe te om dataflows voor bestemmingen te controleren, te lezen gelieve [dataflows voor bestemmingen gebruikend het gebruikersinterface](../ui/monitor-destinations.md) leerprogramma.
