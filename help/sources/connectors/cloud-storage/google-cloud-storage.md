@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage
+keywords: Experience Platform;home;populaire onderwerpen;Google Cloud Storage;Google Cloud-opslag
 solution: Experience Platform
 title: Google Cloud Storage-connector
 topic: overview
 description: In de onderstaande documentatie vindt u informatie over hoe u Google Cloud Storage met Platform kunt verbinden via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -15,31 +15,31 @@ ht-degree: 0%
 
 # Google Cloud Storage-connector
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform]en [!DNL Azure], zodat u gegevens van deze systemen kunt overbrengen.
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform] en [!DNL Azure], zodat u uw gegevens van deze systemen kunt overbrengen.
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen [!DNL Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] kunt u gegevens uit batches [!DNL Google Cloud Storage] importeren.
+Opslagbronnen in de cloud kunnen uw eigen gegevens naar [!DNL Platform] brengen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] kunt u gegevens van  [!DNL Google Cloud Storage] door partijen brengen.
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [IP pagina van de lijst van gewenste personen](../../ip-address-allow-list.md) van het adres voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) pagina voor meer informatie.
 
-## Setup vereist voor verbinding met uw [!DNL Google Cloud Storage] account
+## Vereiste instellingen voor het aansluiten van uw [!DNL Google Cloud Storage]-account
 
-Als u verbinding wilt maken met [!DNL Platform], moet u eerst interoperabiliteit voor uw [!DNL Google Cloud Storage] account inschakelen. Als u toegang wilt krijgen tot de instelling voor interoperabiliteit, opent u [!DNL Google Cloud Platform] en selecteert u **[!UICONTROL Instellingen]** in de optie **[!UICONTROL Opslag]** in het navigatievenster.
+Als u verbinding wilt maken met [!DNL Platform], moet u eerst interoperabiliteit inschakelen voor uw [!DNL Google Cloud Storage]-account. Als u toegang wilt krijgen tot de interoperabiliteitsinstelling, opent u [!DNL Google Cloud Platform] en selecteert u **[!UICONTROL Instellingen]** in de optie **[!UICONTROL Opslag]** in het navigatievenster.
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-De pagina **[!UICONTROL Instellingen]** wordt weergegeven. Hier kunt u informatie over uw [!DNL Google] project-id en gegevens over uw [!DNL Google Cloud Storage] account bekijken. Om tot interoperabiliteitsmontages toegang te hebben, selecteer **[!UICONTROL Interoperabiliteit]** van de hoogste kopbal.
+De pagina **[!UICONTROL Instellingen]** wordt weergegeven. Van hier, kunt u informatie betreffende uw [!DNL Google] project identiteitskaart en details over uw [!DNL Google Cloud Storage] rekening zien. Om tot interoperabiliteitsmontages toegang te hebben, selecteer **[!UICONTROL Interoperability]** van de hoogste kopbal.
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-De pagina **[!UICONTROL Interoperability]** bevat informatie over authentificatie, toegangstoetsen, en het standaardproject verbonden aan uw gebruikersrekening. Als u nog geen standaardproject voor interoperabele toegang hebt opgezet, kunt u omhoog van binnen het **[!UICONTROL Standaardproject voor interoperabele toegangssectie]** opstelling. Als reeds een standaardproject is gevestigd, zal de sectie een bevestiging tonen dat een project als gebrek is geplaatst.
+De pagina **[!UICONTROL Interoperability]** bevat informatie over authentificatie, toegangstoetsen, en het standaardproject verbonden aan uw gebruikersrekening. Als u nog geen standaardproject voor interoperabele toegang hebt opgezet, kunt u omhoog binnen **[!UICONTROL Standaardproject voor interoperabele toegang]** sectie beginnen. Als reeds een standaardproject is gevestigd, zal de sectie een bevestiging tonen dat een project als gebrek is geplaatst.
 
-Selecteer **[!UICONTROL Een sleutel]** maken om een nieuwe toegangs-id en een geheime toegangssleutel voor uw gebruikersaccount te genereren.
+Als u een nieuwe toegangstoets-id en een geheime toegangssleutel voor uw gebruikersaccount wilt genereren, selecteert u **[!UICONTROL Een sleutel maken]**.
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
-U kunt uw onlangs gegenereerde toegangs sleutel-id en geheime toegangssleutel gebruiken om uw [!DNL Google Cloud Storage] account aan te sluiten op [!DNL Platform].
+U kunt uw onlangs geproduceerde toegangs belangrijkste identiteitskaart en geheime toegangssleutel gebruiken om uw [!DNL Google Cloud Storage] rekening aan [!DNL Platform] te verbinden.
 
 ## Naamgevingsbeperkingen voor bestanden en mappen
 
@@ -49,12 +49,12 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer
 - Directory- en bestandsnamen mogen niet eindigen met een slash (`/`). Indien beschikbaar wordt deze automatisch verwijderd.
 - De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
 - De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?`.
-- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000`, zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Zie [RFC 2616, Section 2.2 voor regels die Unicode-tekenreeksen in HTTP/1.1 bepalen: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Zie [RFC 2616, Section 2.2 voor regels die Unicode-tekenreeksen in HTTP/1.1 besturen: Basisregels](https://www.ietf.org/rfc/rfc2616.txt) en [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM4, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (..), en twee stiptekens (.).
 
-## Verbinden [!DNL Google Cloud Storage] met [!DNL Platform]
+## [!DNL Google Cloud Storage] verbinden met [!DNL Platform]
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Google Cloud Storage] [!DNL Platform] met API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over hoe u [!DNL Google Cloud Storage] kunt verbinden met [!DNL Platform] via API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 
