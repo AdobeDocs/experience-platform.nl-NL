@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create;data type;data types;
+keywords: Experience Platform;thuis;populaire onderwerpen;ui;XDM;XDM systeem;ervaringsgegevensmodel;Ervaring gegevensmodel;Gegevensmodel;Gegevensmodel;Gegevensmodel;Schemaregister;Schema;Schema;schema's;Schema's;Schema's;creëren;gegevenstype;gegevenstypen;
 solution: Experience Platform
 title: Gegevenstypen maken en bewerken met de gebruikersinterface
 topic: tutorial
@@ -8,7 +8,7 @@ description: Leer hoe u gegevenstypen maakt en bewerkt in de gebruikersinterface
 translation-type: tm+mt
 source-git-commit: eca896ca068a02da7ec7379e8ced2105bbca9f2d
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1137'
 ht-degree: 0%
 
 ---
