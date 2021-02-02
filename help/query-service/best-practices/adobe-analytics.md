@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe analytics;
+keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;steekproefvragen;steekproefvraag;adobe analytics;
 solution: Experience Platform
 title: Voorbeeldquery's
 topic: queries
@@ -7,7 +7,7 @@ description: Gegevens uit geselecteerde Adobe Analytics-rapportsuites worden get
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1017'
 ht-degree: 1%
 
 ---
@@ -215,8 +215,8 @@ Bij de rapportage worden de orders, opbrengsten, productweergaven en winkelwagen
 
 | eVar6 (productzoekmethode) | inkomsten | orders | productweergave | cartografische objecten |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| intern zoeken:zomershirt | 19,99 | 1 | 1 | 1 |
-| interne zoekopdracht:winterhoed | 12,99 | 1 | 3 | 3 |
+| intern zoeken:zomershirt | 19,99 | 1 | 3 | 1 |
+| interne zoekopdracht:winterhoed | 12,99 | 3 | 3 | 3 |
 
 Lees voor meer informatie over het gebruik van de conversiesyntaxis de Adobe Analytics-documentatie op [Vars implementeren met de conversiesyntaxis](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 
