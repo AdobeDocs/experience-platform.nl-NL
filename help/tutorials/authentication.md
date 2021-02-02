@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;Authenticate;access
+keywords: Experience Platform;thuis;populaire onderwerpen;Authenticeren;toegang
 solution: Experience Platform
 title: API's van Experience Platforms verifiëren en benaderen
 topic: tutorial
 type: Tutorial
 description: 'Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar Experience Platform-API''s. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '882'
 ht-degree: 0%
 
 ---
 
 
-# API&#39; [!DNL Experience Platform] s verifiëren en openen
+# [!DNL Experience Platform] API&#39;s verifiëren en openen
 
-Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen naar API&#39; [!DNL Experience Platform] s uit te voeren.
+Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang tot een Adobe Experience Platform-ontwikkelaarsaccount om aanroepen uit te voeren naar [!DNL Experience Platform] API&#39;s.
 
 ## Verifiëren om API-aanroepen te maken
 
@@ -27,11 +27,11 @@ Deze zelfstudie behandelt de stappen van authentificatie door het creëren van e
 
 ## Vereisten
 
-Als u aanroepen naar API&#39; [!DNL Experience Platform] s wilt uitvoeren, hebt u het volgende nodig:
+Als u met succes aanroepen naar [!DNL Experience Platform] API&#39;s wilt uitvoeren, hebt u het volgende nodig:
 
 * Een IMS-organisatie met toegang tot Adobe Experience Platform
 * Een geregistreerde Adobe ID-account
-* Een beheerder van de Admin Console om u als **ontwikkelaar** en een **gebruiker** voor een product toe te voegen.
+* Een beheerder van de Admin Console om u als **ontwikkelaar** en **gebruiker** voor een product toe te voegen.
 
 De volgende secties lopen door de stappen om een Adobe ID tot stand te brengen en een ontwikkelaar en een gebruiker voor een organisatie te worden.
 
@@ -40,16 +40,16 @@ De volgende secties lopen door de stappen om een Adobe ID tot stand te brengen e
 Als u geen Adobe ID hebt, kunt u er een maken door de volgende stappen uit te voeren:
 
 1. Ga naar [Adobe Developer Console](https://console.adobe.io)
-2. Klik op Een nieuw account **[!UICONTROL maken]**
+2. Selecteer **[!UICONTROL een nieuw account maken]**
 3. Voltooi het aanmeldingsproces
 
-## Ontwikkelaar en gebruiker worden voor [!DNL Experience Platform] een organisatie
+## Ontwikkelaar en gebruiker worden voor [!DNL Experience Platform] voor een organisatie
 
-Voordat u integraties op Adobe I/O kunt maken, moet uw account beschikken over ontwikkelmachtigingen voor een product in een IMS-organisatie. Gedetailleerde informatie over ontwikkelaarsaccounts in de Admin Console vindt u in het [ondersteuningsdocument](https://helpx.adobe.com/enterprise/using/manage-developers.html) voor ontwikkelaars.
+Voordat u integraties op Adobe I/O kunt maken, moet uw account beschikken over ontwikkelmachtigingen voor een product in een IMS-organisatie. Gedetailleerde informatie over ontwikkelaarsaccounts in de Admin Console vindt u in het [ondersteuningsdocument](https://helpx.adobe.com/enterprise/using/manage-developers.html) voor het beheer van ontwikkelaars.
 
 **Toegang voor ontwikkelaars verkrijgen**
 
-Neem contact op met een [!DNL Admin Console] beheerder in uw organisatie om u toe te voegen als ontwikkelaar voor een van de producten van uw organisatie die de [[!DNL Admin Console]](https://adminconsole.adobe.com/)software gebruiken.
+Neem contact op met een [!DNL Admin Console]-beheerder in uw organisatie om u toe te voegen als ontwikkelaar voor een van de producten van uw organisatie met de [[!DNL Admin Console]](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
@@ -57,11 +57,11 @@ De beheerder moet u als ontwikkelaar toewijzen aan ten minste één productprofi
 
 ![](images/authentication/add-developer.png)
 
-Als u eenmaal als ontwikkelaar bent toegewezen, hebt u toegangsrechten om integraties op [Adobe I/O](https://www.adobe.com/go/devs_console_ui)te maken. Deze integratie vormt een pijplijn van externe apps en services naar de Adobe-API.
+Als u eenmaal als ontwikkelaar bent toegewezen, hebt u toegangsrechten om integraties te maken op [Adobe I/O](https://www.adobe.com/go/devs_console_ui). Deze integratie vormt een pijplijn van externe apps en services naar de Adobe-API.
 
 **Toegang tot gebruikers verkrijgen**
 
-Uw [!DNL Admin Console] beheerder moet u ook als gebruiker aan het product toevoegen.
+Uw [!DNL Admin Console] beheerder moet u aan het product als gebruiker ook toevoegen.
 
 ![](images/authentication/assign-users.png)
 
@@ -73,7 +73,7 @@ Net als bij het toevoegen van een ontwikkelaar moet de beheerder u toewijzen aan
 
 >[!NOTE]
 >
->Als u dit document volgt vanuit de [Privacy Service-ontwikkelaarsgids](../privacy-service/api/getting-started.md), kunt u nu terugkeren naar die handleiding om de toegangsreferenties te genereren die uniek zijn voor [!DNL Privacy Service].
+>Als u dit document van [Privacy Service ontwikkelaarsgids](../privacy-service/api/getting-started.md) volgt, kunt u nu aan die gids terugkeren om de toegangsgeloofsbrieven te produceren uniek aan [!DNL Privacy Service].
 
 Gebruikend de Console van de Ontwikkelaar van Adobe, moet u de volgende drie toegangsgeloofsbrieven produceren:
 
@@ -81,25 +81,25 @@ Gebruikend de Console van de Ontwikkelaar van Adobe, moet u de volgende drie toe
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-Uw `{IMS_ORG}` en `{API_KEY}` hoeven slechts eenmaal te worden gegenereerd en kunnen in toekomstige [!DNL Platform] API-aanroepen opnieuw worden gebruikt. Uw `{ACCESS_TOKEN}` is echter tijdelijk en moet elke 24 uur opnieuw worden gegenereerd.
+Uw `{IMS_ORG}` en `{API_KEY}` moeten slechts eenmaal worden geproduceerd en kunnen in toekomstige [!DNL Platform] API vraag opnieuw worden gebruikt. Uw `{ACCESS_TOKEN}` is echter tijdelijk en moet elke 24 uur opnieuw worden gegenereerd.
 
 De stappen worden hieronder in detail besproken.
 
 ### Eenmalige installatie
 
-Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Voer vervolgens de stappen uit die worden beschreven in de zelfstudie over het [maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.
+Ga naar [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) en meld u aan met uw Adobe ID. Volg vervolgens de stappen die worden beschreven in de zelfstudie over het maken van een leeg project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in de documentatie van de Adobe Developer Console.[
 
-Nadat u een nieuw project hebt gemaakt, klikt u op API **** toevoegen in het scherm **Projectoverzicht** .
+Zodra u een nieuw project hebt gecreeerd, uitgezocht **[!UICONTROL voeg API]** op **Overzicht van het Project** scherm toe.
 
 ![](images/authentication/add-api-button.png)
 
-Het scherm **Een API** toevoegen wordt weergegeven. Klik op het productpictogram voor Adobe Experience Platform en selecteer vervolgens de **[!UICONTROL Experience Platform-API]** voordat u op **[!UICONTROL Volgende]** klikt.
+Het scherm **Add een API** verschijnt. Selecteer het productpictogram voor Adobe Experience Platform en kies **[!UICONTROL Experience Platform-API]** voordat u **[!UICONTROL Volgende]** selecteert.
 
 ![](images/authentication/add-platform-api.png)
 
-Nadat u hebt geselecteerd [!DNL Experience Platform] als de API die aan het project moet worden toegevoegd, volgt u de stappen in de zelfstudie over het [toevoegen van een API aan een project met een serviceaccount (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (vanaf de stap API configureren) om het proces te voltooien.
+Nadat u [!DNL Experience Platform] hebt geselecteerd als de API die aan het project moet worden toegevoegd, volgt u de stappen in de zelfstudie over [het toevoegen van een API aan een project met behulp van een serviceaccount (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (te beginnen bij de stap &quot;API configureren&quot;) om het proces te voltooien.
 
-Zodra API aan het project is toegevoegd, toont de het overzichtspagina **van het** [!DNL Experience Platform] Project de volgende geloofsbrieven die in alle vraag aan APIs worden vereist:
+Zodra API aan het project is toegevoegd, **Project overzicht** de pagina toont de volgende geloofsbrieven die in alle vraag aan [!DNL Experience Platform] APIs worden vereist:
 
 * `{API_KEY}` (Client-id)
 * `{IMS_ORG}` (Organisatie-id)
@@ -108,13 +108,13 @@ Zodra API aan het project is toegevoegd, toont de het overzichtspagina **van het
 
 ### Verificatie voor elke sessie
 
-De laatste vereiste referentie die u moet verzamelen, is uw `{ACCESS_TOKEN}`. In tegenstelling tot de waarden voor `{API_KEY}` en `{IMS_ORG}`, moet om de 24 uur een nieuw token worden gegenereerd om API&#39; [!DNL Platform] s te kunnen blijven gebruiken.
+De laatste vereiste referentie die u moet verzamelen, is uw `{ACCESS_TOKEN}`. In tegenstelling tot de waarden voor `{API_KEY}` en `{IMS_ORG}`, moet om de 24 uur een nieuw token worden gegenereerd om te kunnen doorgaan met het gebruik van [!DNL Platform] API&#39;s.
 
-Als u een nieuwe token `{ACCESS_TOKEN}`wilt genereren, volgt u de stappen om een JWT-token [te](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) genereren in de handleiding voor de aanmeldgegevens van de Developer Console.
+Als u een nieuwe `{ACCESS_TOKEN}` wilt genereren, voert u de stappen uit om een JWT-token te genereren in de handleiding voor aanmeldgegevens van de ontwikkelaarsconsole.[](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md)
 
 ## Toegangsreferenties testen
 
-Nadat u alle drie vereiste gegevens hebt verzameld, kunt u de volgende API-aanroep proberen te maken. Deze vraag zal van alle [!DNL Experience Data Model] (XDM) klassen binnen de container van de Registratie van het Schema een lijst maken `global` :
+Nadat u alle drie vereiste gegevens hebt verzameld, kunt u de volgende API-aanroep proberen te maken. Deze vraag zal van alle [!DNL Experience Data Model] (XDM) klassen binnen de container `global` van de Registratie van het Schema een lijst maken:
 
 **API-indeling**
 
@@ -157,10 +157,10 @@ Als uw reactie vergelijkbaar is met de hieronder weergegeven reactie, zijn uw ge
 
 ## Postman gebruiken voor JWT-verificatie en API-aanroepen
 
-[Postman](https://www.postman.com/) is een populair hulpmiddel om met RESTful APIs te werken. In dit [artikel](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) wordt beschreven hoe u een postman kunt instellen om automatisch JWT-verificatie uit te voeren en deze te gebruiken voor het gebruik van Adobe Experience Platform API&#39;s.
+[](https://www.postman.com/) Postmanis is een populair hulpmiddel om met RESTful APIs te werken. In deze [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) wordt beschreven hoe u een postman kunt instellen om automatisch JWT-verificatie uit te voeren en deze te gebruiken om Adobe Experience Platform API&#39;s te gebruiken.
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u uw toegangsreferenties voor API&#39; [!DNL Platform] s verzameld en getest. U kunt nu de voorbeeld-API-aanroepen volgen die in de hele [documentatie](../landing/documentation/overview.md)zijn opgegeven.
+Door dit document te lezen, hebt u uw toegangsreferenties voor [!DNL Platform] API&#39;s verzameld en getest. U kunt nu de voorbeeldAPI vraag volgen die door [documentatie](../landing/documentation/overview.md) wordt verstrekt.
 
-Naast de verificatiewaarden die u hebt verzameld in deze zelfstudie, vereisen veel [!DNL Platform] API&#39;s ook dat een geldige id als koptekst `{SANDBOX_NAME}` wordt opgegeven. Zie het [sandboxoverzicht](../sandboxes/home.md) voor meer informatie.
+Naast de verificatiewaarden die u in deze zelfstudie hebt verzameld, vereisen veel [!DNL Platform] API&#39;s ook dat een geldige `{SANDBOX_NAME}` als koptekst wordt opgegeven. Zie het [overzicht van sandboxen](../sandboxes/home.md) voor meer informatie.
