@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;export;import;rpc;
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;export;import;rpc;
 solution: Experience Platform
 title: Hulplijn voor exporteren/importeren eindpunt
 description: Met de eindpunten /export en /import in de API voor schemaregistratie kunt u XDM-bronnen delen tussen IMS-organisaties en sandboxen.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: dfa91e387b6fcd0d528a523a06d2516bc8befc20
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
