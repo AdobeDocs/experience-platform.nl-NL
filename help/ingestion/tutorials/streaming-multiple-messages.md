@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;streaming multiple messages;multiple messages;
+keywords: Experience Platform;thuis;populaire onderwerpen;het stromen ingestie;ingestie;het stromen veelvoudige berichten;veelvoudige berichten;
 solution: Experience Platform
 title: Meerdere berichten streamen in één HTTP-aanvraag
 topic: tutorial
 type: Tutorial
 description: Dit document bevat een zelfstudie voor het verzenden van meerdere berichten naar Adobe Experience Platform binnen één HTTP-aanvraag via streaming invoer.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1497'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # Meerdere berichten verzenden in één HTTP-aanvraag
 
-Wanneer het stromen van gegevens aan Adobe Experience Platform, kan het maken van talrijke vraag van HTTP duur zijn. Bijvoorbeeld, in plaats van het creëren van 200 HTTP- verzoeken met 1KB nuttige lading, is het veel efficiënter om 1 HTTP- verzoek met 200 berichten van 1KB elk, met één enkele lading van 200KB tot stand te brengen. Wanneer correct gebruikt, is het groeperen van veelvoudige berichten binnen één enkel verzoek een uitstekende manier om gegevens te optimaliseren die worden verzonden naar [!DNL Experience Platform].
+Wanneer het stromen van gegevens aan Adobe Experience Platform, kan het maken van talrijke vraag van HTTP duur zijn. Bijvoorbeeld, in plaats van het creëren van 200 HTTP- verzoeken met 1KB nuttige lading, is het veel efficiënter om 1 HTTP- verzoek met 200 berichten van 1KB elk, met één enkele lading van 200KB tot stand te brengen. Wanneer correct gebruikt, is het groeperen van veelvoudige berichten binnen één enkel verzoek een uitstekende manier om gegevens te optimaliseren die naar [!DNL Experience Platform] worden verzonden.
 
 Dit document biedt een zelfstudie voor het verzenden van meerdere berichten naar [!DNL Experience Platform] binnen één HTTP-aanvraag via streaming opname.
 
@@ -24,10 +24,10 @@ Dit document biedt een zelfstudie voor het verzenden van meerdere berichten naar
 
 Deze zelfstudie vereist een goed begrip van Adobe Experience Platform [!DNL Data Ingestion]. Lees de volgende documentatie voordat u met deze zelfstudie begint:
 
-- [Overzicht](../home.md)van gegevensinname: Omvat de kernconcepten van [!DNL Experience Platform Data Ingestion], met inbegrip van innamemethodes en gegevensschakelaars.
-- [Overzicht](../streaming-ingestion/overview.md)van streaming opname: De werkstroom en bouwstenen van het stromen opname, zoals het stromen verbindingen, datasets, [!DNL XDM Individual Profile]en [!DNL XDM ExperienceEvent].
+- [Overzicht](../home.md) van gegevensinname: Omvat de kernconcepten van  [!DNL Experience Platform Data Ingestion], met inbegrip van innamemethodes en gegevensschakelaars.
+- [Overzicht](../streaming-ingestion/overview.md) van streaming opname: De werkstroom en bouwstenen van het stromen opname, zoals het stromen verbindingen, datasets,  [!DNL XDM Individual Profile]en  [!DNL XDM ExperienceEvent].
 
-Deze zelfstudie vereist ook dat u de zelfstudie [Verificatie naar Adobe Experience Platform](../../tutorials/authentication.md) hebt voltooid om oproepen naar API&#39; [!DNL Platform] s te kunnen uitvoeren. Voltooiing van de authentificatiezelfstudie verstrekt de waarde voor de kopbal van de Vergunning die door alle API vraag in dit leerprogramma wordt vereist. De kopbal wordt getoond in steekproefvraag als volgt:
+Deze zelfstudie vereist ook dat u de zelfstudie [Verificatie naar Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) hebt voltooid om aanroepen naar [!DNL Platform] API&#39;s te kunnen uitvoeren. Voltooiing van de authentificatiezelfstudie verstrekt de waarde voor de kopbal van de Vergunning die door alle API vraag in dit leerprogramma wordt vereist. De kopbal wordt getoond in steekproefvraag als volgt:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 
@@ -37,7 +37,7 @@ Voor alle aanvragen voor POSTEN is een extra header vereist:
 
 ## Een streamingverbinding maken
 
-U moet eerst een streamingverbinding maken voordat u kunt beginnen met het streamen van gegevens naar [!DNL Experience Platform]. Lees de handleiding voor het [maken van een streamingverbinding](./create-streaming-connection.md) voor meer informatie over het maken van een streamingverbinding.
+U moet eerst een streamingverbinding maken voordat u gegevens kunt streamen naar [!DNL Experience Platform]. Lees de [handleiding om een streamingverbinding te maken](./create-streaming-connection.md) voor meer informatie over het maken van een streamingverbinding.
 
 Na het registreren van een het stromen verbinding, zult u, als gegevensproducent, een unieke URL hebben die kan worden gebruikt om gegevens aan Platform te stromen.
 
@@ -45,9 +45,9 @@ Na het registreren van een het stromen verbinding, zult u, als gegevensproducent
 
 Het volgende voorbeeld toont hoe te om veelvoudige berichten naar een specifieke dataset binnen één enkel HTTP- verzoek te verzenden. Neem identiteitskaart van de dataset in de berichtkopbal op om dat bericht direct in het te hebben worden opgenomen.
 
-U kunt de id voor een bestaande gegevensset ophalen met behulp van de [!DNL Platform] UI of met behulp van een lijstbewerking in de API. De dataset identiteitskaart kan op [Experience Platform](https://platform.adobe.com) worden gevonden door naar het lusje van **[!UICONTROL Datasets]** te gaan, op de dataset te klikken u identiteitskaart voor, en het kopiëren van het koord van het gebied van identiteitskaart van de dataset op het **[!UICONTROL lusje van Info]** wilt. Zie het overzicht [van de Dienst van de](../../catalog/home.md) Catalogus voor informatie over hoe te om datasets terug te winnen gebruikend API.
+U kunt identiteitskaart voor een bestaande dataset krijgen gebruikend [!DNL Platform] UI of gebruikend een lijstverrichting in API. De dataset-id is te vinden op [Experience Platform](https://platform.adobe.com) door naar het tabblad **[!UICONTROL Datasets]** te gaan, op de dataset te klikken waarvoor u de id wilt en de tekenreeks te kopiëren uit het veld Gegevensset-id op het tabblad **[!UICONTROL Info]**. Zie [Overzicht van de Dienst van de Catalogus](../../catalog/home.md) voor informatie over hoe te om datasets terug te winnen gebruikend API.
 
-In plaats van een bestaande dataset te gebruiken, kunt u een nieuwe dataset tot stand brengen. Lees gelieve te [creëren een dataset gebruikend APIs](../../catalog/api/create-dataset.md) zelfstudie voor meer informatie over het creëren van een dataset gebruikend APIs.
+In plaats van een bestaande dataset te gebruiken, kunt u een nieuwe dataset tot stand brengen. Lees de zelfstudie [Een gegevensset maken met behulp van API&#39;s](../../catalog/api/create-dataset.md) voor meer informatie over het maken van een gegevensset met behulp van API&#39;s.
 
 **API-indeling**
 
@@ -208,22 +208,22 @@ Een geslaagde reactie retourneert de HTTP-status 207 (Multi-status). Als u de re
 }
 ```
 
-Zie de tabel met [responscodes](#response-codes) in het aanhangsel van deze zelfstudie voor meer informatie over statuscodes.
+Zie de tabel [responscodes](#response-codes) in het aanhangsel van deze zelfstudie voor meer informatie over statuscodes.
 
 ## Ontbroken berichten identificeren
 
 Vergeleken met het verzenden van een verzoek met één enkel bericht, wanneer het verzenden van een HTTP- verzoek met veelvoudige berichten, zijn er extra te overwegen factoren, zoals: hoe te om te identificeren wanneer het gegeven heeft verzuimd om te verzenden, welke specifieke berichten niet konden verzenden en hoe zij kunnen worden teruggewonnen, en wat aan gegevens gebeurt die slagen wanneer andere berichten in het zelfde verzoek ontbreken.
 
-Voordat u verdergaat met deze zelfstudie, is het raadzaam eerst de handleiding voor het [ophalen van mislukte batches](../quality/retrieve-failed-batches.md) te raadplegen.
+Voordat u verdergaat met deze zelfstudie, is het raadzaam eerst de [gids ](../quality/retrieve-failed-batches.md) over het ophalen van mislukte batches te raadplegen.
 
 ### Aanvraaglading verzenden met geldige en ongeldige berichten
 
 In het volgende voorbeeld wordt getoond wat er gebeurt wanneer de batch geldige en ongeldige berichten bevat.
 
 De request-payload is een array van JSON-objecten die de gebeurtenis in het XDM-schema vertegenwoordigen. Voor een geslaagde validatie van het bericht moet aan de volgende voorwaarden worden voldaan:
-- Het `imsOrgId` veld in de berichtkop moet overeenkomen met de inlaatdefinitie. Als de aanvraagpayload geen `imsOrgId` veld bevat, voegt het veld [!DNL Data Collection Core Service] (DCCS) automatisch toe.
+- Het veld `imsOrgId` in de berichtkop moet overeenkomen met de inlaatdefinitie. Als de aanvraaglading geen `imsOrgId` gebied omvat, [!DNL Data Collection Core Service] (DCCS) zal automatisch toevoegen het gebied.
 - De kopbal van het bericht zou een bestaand schema moeten van XDM van verwijzingen voorzien dat in [!DNL Platform] UI wordt gecreeerd.
-- Het `datasetId` gebied moet een bestaande dataset in van verwijzingen voorzien [!DNL Platform], en zijn schema moet het schema aanpassen dat in het `header` voorwerp binnen elk bericht wordt verstrekt inbegrepen in het verzoeklichaam.
+- Het `datasetId` gebied moet een bestaande dataset in [!DNL Platform] van verwijzingen voorzien, en zijn schema moet het schema aanpassen dat in `header` voorwerp binnen elk bericht wordt verstrekt inbegrepen in het verzoeklichaam.
 
 **API-indeling**
 
@@ -489,7 +489,7 @@ De antwoordlading omvat een status voor elk bericht samen met een GUID in `xacti
 }
 ```
 
-In het bovenstaande voorbeeldantwoord worden foutberichten voor de vorige aanvraag weergegeven. Door dit antwoord op de vorige geldige reactie te vergelijken, kunt u opmerken dat het verzoek in een gedeeltelijk succes resulteerde, met één bericht dat met succes wordt opgenomen en drie berichten die in mislukking resulteerden. Beide reacties retourneren een statuscode &#39;207&#39;. Zie de tabel met [responscodes](#response-codes) in het aanhangsel van deze zelfstudie voor meer informatie over statuscodes.
+In het bovenstaande voorbeeldantwoord worden foutberichten voor de vorige aanvraag weergegeven. Door dit antwoord op de vorige geldige reactie te vergelijken, kunt u opmerken dat het verzoek in een gedeeltelijk succes resulteerde, met één bericht dat met succes wordt opgenomen en drie berichten die in mislukking resulteerden. Beide reacties retourneren een statuscode &#39;207&#39;. Zie de tabel [responscodes](#response-codes) in het aanhangsel van deze zelfstudie voor meer informatie over statuscodes.
 
 Het eerste bericht is verzonden naar [!DNL Platform] en wordt niet beïnvloed door de resultaten van de andere berichten. Als u de mislukte berichten opnieuw wilt verzenden, hoeft u dit bericht dus niet opnieuw op te nemen.
 
@@ -510,28 +510,28 @@ Het tweede bericht is mislukt omdat het geen berichttekst bevatte. Het inzamelin
     },
 ```
 
-Het derde bericht is mislukt omdat een ongeldige IMS-organisatie-id in de koptekst wordt gebruikt. De IMS-organisatie moet overeenkomen met de {CONNECTION_ID} die u wilt posten. Als u wilt bepalen welke IMS-organisatie-id overeenkomt met de streamingverbinding die u gebruikt, kunt u een `GET inlet` aanvraag uitvoeren met de [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)methode. Zie [het ophalen van een streamingverbinding](./create-streaming-connection.md#get-data-collection-url) voor een voorbeeld van hoe eerder gemaakte streamingverbindingen kunnen worden opgehaald.
+Het derde bericht is mislukt omdat een ongeldige IMS-organisatie-id in de koptekst wordt gebruikt. De IMS-organisatie moet overeenkomen met de {CONNECTION_ID} die u wilt posten. Als u wilt bepalen welke IMS-organisatie-id overeenkomt met de streamingverbinding die u gebruikt, kunt u een `GET inlet`-verzoek uitvoeren met de [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Zie [streamingverbindingen ophalen](./create-streaming-connection.md#get-data-collection-url) voor een voorbeeld van het ophalen van eerder gemaakte streamingverbindingen.
 
-Het vierde bericht is mislukt omdat het niet het verwachte XDM-schema heeft gevolgd. De `xdmSchema` include-bestanden in de kop- en hoofdtekst van de aanvraag komen niet overeen met het XDM-schema van de aanvraag `{DATASET_ID}`. Het verbeteren van het schema in de berichtkopbal en het lichaam staat het toe om bevestiging DCCS over te gaan en met succes verzonden naar [!DNL Platform]. De berichttekst moet ook worden bijgewerkt zodat deze overeenkomt met het XDM-schema van het formulier, `{DATASET_ID}` zodat de streamingvalidatie wordt ingeschakeld [!DNL Platform]. Voor meer informatie over wat aan berichten gebeurt die met succes aan Platform stromen, zie de [bevestig berichten die sectie van dit leerprogramma worden opgenomen](#confirm-messages-ingested) .
+Het vierde bericht is mislukt omdat het niet het verwachte XDM-schema heeft gevolgd. `xdmSchema` inbegrepen in de kopbal en de tekst van het verzoek past niet het XDM schema van `{DATASET_ID}` aan. Het verbeteren van het schema in de berichtkopbal en het lichaam staat het toe om bevestiging DCCS over te gaan en met succes naar [!DNL Platform] worden verzonden. De berichttekst moet ook worden bijgewerkt zodat deze overeenkomt met het XDM-schema van `{DATASET_ID}`, zodat de streamingvalidatie wordt doorgegeven op [!DNL Platform]. Voor meer informatie over wat aan berichten gebeurt die met succes aan Platform stromen, zie [berichten bevestigen die](#confirm-messages-ingested) sectie van dit leerprogramma worden opgenomen.
 
 ### Ontbroken berichten ophalen van [!DNL Platform]
 
 Mislukte berichten worden geïdentificeerd door een code van de foutenstatus in de reactiesserie.
-De ongeldige berichten worden verzameld en opgeslagen in een &quot;fout&quot;partij binnen de dataset die door wordt gespecificeerd `{DATASET_ID}`.
+De ongeldige berichten worden verzameld en opgeslagen in een &quot;fout&quot;partij binnen de dataset die door `{DATASET_ID}` wordt gespecificeerd.
 
-Lees de handleiding [Ophalen mislukte batches](../quality/retrieve-failed-batches.md) voor meer informatie over het herstellen van mislukte batchberichten.
+Lees de [handleiding ](../quality/retrieve-failed-batches.md) voor het ophalen van mislukte batches voor meer informatie over het herstellen van mislukte batchberichten.
 
 ## Ontvangen berichten bevestigen
 
-Berichten die DCCS- bevestiging overgaan worden gestroomd aan [!DNL Platform]. Op [!DNL Platform], worden de partijberichten getest door het stromen bevestiging alvorens in het [!DNL Data Lake]wordt opgenomen. De status van batches, of deze nu succesvol zijn of niet, wordt weergegeven in de gegevensset die is opgegeven door `{DATASET_ID}`.
+Berichten die DCCS bevestiging overgaan worden gestroomd aan [!DNL Platform]. Op [!DNL Platform] worden de batchberichten getest door streamingvalidatie voordat ze worden opgenomen in [!DNL Data Lake]. De status van batches, of deze nu succesvol zijn of niet, wordt weergegeven in de gegevensset die is opgegeven door `{DATASET_ID}`.
 
-U kunt het statuut van partijberichten bekijken die met succes stromen om het [!DNL Platform] Experience Platform UI [te](https://platform.adobe.com) gebruiken door naar het lusje van **[!UICONTROL Datasets]** te gaan, op de dataset te klikken u aan, en het lusje van de Activiteit **[!UICONTROL van de]** Dataset te controleren.
+U kunt de status weergeven van batchberichten die succesvol zijn gestreamd naar [!DNL Platform] met de [Experience Platform-interface](https://platform.adobe.com) door naar het tabblad **[!UICONTROL Datasets]** te gaan, op de gegevensset te klikken waarnaar u streamt en het tabblad **[!UICONTROL Dataset Activity]** te controleren.
 
-De berichten van de partij die het stromen bevestiging op overgaan [!DNL Platform] worden opgenomen in [!DNL Data Lake]. De berichten zijn dan beschikbaar voor analyse of uitvoer.
+De berichten van de partij die het stromen bevestiging op [!DNL Platform] overgaan worden opgenomen in [!DNL Data Lake]. De berichten zijn dan beschikbaar voor analyse of uitvoer.
 
 ## Volgende stappen
 
-Nu u weet hoe te om veelvoudige berichten in één enkel verzoek te verzenden en te verifiëren wanneer de berichten met succes in de doeldataset worden opgenomen, kunt u beginnen het stromen van uw eigen gegevens aan [!DNL Platform]. Voor een overzicht van hoe te om ingebed gegevens van te vragen en terug te winnen [!DNL Platform], zie de [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) gids.
+Nu u weet hoe te om veelvoudige berichten in één enkel verzoek te verzenden en te verifiëren wanneer de berichten met succes in de doeldataset worden opgenomen, kunt u beginnen het stromen van uw eigen gegevens aan [!DNL Platform]. Voor een overzicht van hoe te om opgenomen gegevens van [!DNL Platform] te vragen en terug te winnen, zie [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) gids.
 
 ## Aanhangsel
 
