@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;advertising;google adwords;advertising
+keywords: Experience Platform;home;populaire onderwerpen;flowservice;reclame;Google-trefwoorden;reclame
 solution: Experience Platform
 title: Reclamegegevens verzamelen via bronconnectors en API's
 topic: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een externe advertentietoepassing en het opnemen ervan in het Platform via bronconnectors en de Flow Service API.
 translation-type: tm+mt
-source-git-commit: 90a7e49033afe3bc348225df0688e17dbf842a15
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u [authentificatieleerprogramma](../../../../tutorials/authentication.md) eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u [authentificatieleerprogramma](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
