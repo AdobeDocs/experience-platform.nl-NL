@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;crm;CRM
+keywords: Experience Platform;thuis;populaire onderwerpen;crm;CRM
 solution: Experience Platform
 title: CRM-gegevens verzamelen via bronconnectors en API's
 topic: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een extern CRM-systeem en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: 90a7e49033afe3bc348225df0688e17dbf842a15
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1541'
+source-wordcount: '1552'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens va
 
 ## Aan de slag
 
-Deze zelfstudie vereist dat u toegang hebt tot een CRM-systeem van derden via een geldige verbinding en informatie over de tabel die u in het Platform wilt plaatsen, inclusief het pad en de structuur van de tabel. Als u deze informatie niet hebt, raadpleegt u de zelfstudie over CRM-systemen die de Flow Service API[ gebruiken voordat u deze zelfstudie probeert.](../explore/crm.md)
+Deze zelfstudie vereist dat u toegang hebt tot een CRM-systeem van derden via een geldige verbinding en informatie over de tabel die u in het Platform wilt plaatsen, inclusief het pad en de structuur van de tabel. Als u deze informatie niet hebt, raadpleegt u de zelfstudie over CRM-systemen die de Flow Service API](../explore/crm.md) gebruiken voordat u deze zelfstudie probeert.[
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
@@ -39,7 +39,7 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Platform APIs te maken, moet u [authentificatieleerprogramma](../../../../tutorials/authentication.md) eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u [authentificatieleerprogramma](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
