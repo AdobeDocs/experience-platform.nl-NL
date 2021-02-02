@@ -1,45 +1,51 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;Aqua Data Studio;Aqua data studio;connect to query service;
+keywords: Experience Platform;huis;populaire onderwerpen;vraagdienst;de dienst van de Vraag;de Studio van Gegevens Aqua;de gegevensstudio van Aqua;verbind met de vraagdienst;
 solution: Experience Platform
 title: Verbinding maken met Aqua Data Studio
 topic: connect
 description: Dit document doorloopt de stappen voor het verbinden van de Studio van Gegevens Aqua met de Dienst van de Vraag van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
+source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 0%
+source-wordcount: '297'
+ht-degree: 1%
 
 ---
 
 
-# Verbinden met [!DNL Aqua Data Studio]
+# [!DNL Aqua Data Studio]
 
-Dit document doorloopt de stappen voor het verbinden van [!DNL Aqua Data Studio] met Adobe Experience Platform [!DNL Query Service].
-
-Nadat u [!DNL Aqua Data Studio] hebt geïnstalleerd, moet u de server eerst registreren. Klik in het hoofdmenu op **[!UICONTROL Server]** en klik vervolgens op **[!UICONTROL Server registreren]**.
-
-![](../images/clients/aqua-data-studio/register-server.png)
-
-Het dialoogvenster **[!UICONTROL Server registreren]** wordt weergegeven. Selecteer **[!UICONTROL PostgreSQL]** in de lijst aan de linkerkant onder het tabblad **[!UICONTROL Algemeen]**. Geef in het dialoogvenster dat wordt weergegeven de volgende gegevens op voor de serverinstellingen.
-
-- **[!UICONTROL Naam]**: De naam van de verbinding.
-- **[!UICONTROL Aanmeldnaam en wachtwoord]**: De aanmeldingsgegevens die worden gebruikt. De gebruikersnaam heeft de vorm van `ORG_ID@AdobeOrg`.
-- **[!UICONTROL Host en poort]**: Het gastheereindpunt en zijn haven voor  [!DNL Query Service]. U moet poort 80 gebruiken om verbinding te maken met [!DNL Query Service].
-- **[!UICONTROL Database]:** de database die wordt gebruikt.
+In dit document worden de stappen beschreven voor het verbinden van [!DNL Aqua Data Studio] met Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
->Voor meer informatie bij het vinden van uw login geloofsbrieven, gastheer, haven, en gegevensbestandnaam, bezoek de [geloofsbrieven pagina op Platform](https://platform.adobe.com/query/configuration). Om uw geloofsbrieven te vinden, login aan [!DNL Platform], klik **[!UICONTROL Vragen]**, dan klik **[!UICONTROL Referenties]**.
+> Deze gids veronderstelt u reeds toegang tot [!DNL Aqua Data Studio] hebt en vertrouwd met hoe te om zijn interface te navigeren. Meer informatie over [!DNL Aqua Data Studio] vindt u in de [officiële [!DNL Aqua Data Studio] documentatie](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation21.1/page/0/Aqua-Data-Studio-21-1).
+
+## [!DNL Aqua Data Studio] verbinden met Platform
+
+Nadat u [!DNL Aqua Data Studio] hebt geïnstalleerd, moet u de server eerst registreren. Selecteer **[!DNL Server]** in het hoofdmenu, gevolgd door **[!DNL Register Server]**.
+
+![](../images/clients/aqua-data-studio/register-server.png)
+
+Het dialoogvenster **[!DNL Register Server]** wordt weergegeven. Selecteer **[!DNL PostgreSQL]** in de lijst aan de linkerkant onder het tabblad **[!DNL General]**. Geef in het dialoogvenster dat wordt weergegeven de volgende gegevens op voor de serverinstellingen.
+
+- **[!DNL Name]**: De naam van de verbinding.
+- **[!DNL Login Name and Password]**: De aanmeldingsgegevens die worden gebruikt. De gebruikersnaam heeft de vorm van `ORG_ID@AdobeOrg`.
+- **[!DNL Host and Port]**: Het gastheereindpunt en zijn haven voor  [!DNL Query Service]. U moet poort 80 gebruiken om verbinding te maken met [!DNL Query Service].
+- **[!DNL Database]:** De database die wordt gebruikt.
+
+>[!NOTE]
+>
+>Voor meer informatie bij het vinden van uw login geloofsbrieven, gastheer, haven, en gegevensbestandnaam, bezoek de [geloofsbrieven pagina op Platform](https://platform.adobe.com/query/configuration). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Vragen]**, gevolgd door **[!UICONTROL Referenties]**.
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
-Selecteer het tabblad **[!UICONTROL Stuurprogramma]**. Stel onder **[!UICONTROL Parameters]** de waarde in als `?sslmode=require`
+Selecteer het tabblad **[!DNL Driver]**. Stel de waarde onder **[!DNL Parameters]** in als `?sslmode=require`
 
 ![](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
-Na het invoeren van uw verbindingsdetails, klik **[!UICONTROL Verbinding van de Test]** om uw geloofsbrieven te verzekeren behoorlijk werkt. Als uw verbinding succesvol is, klik **[!UICONTROL sparen]** om uw server te registreren. De verbinding verschijnt op **Dashboard** na succesvolle registratie, bevestigend dat u nu met de server kunt verbinden en zijn schemavoorwerpen bekijken.
+Nadat u de verbindingsgegevens hebt ingevoerd, selecteert u **[!DNL Test Connection]** om ervoor te zorgen dat uw referenties correct werken. Als uw verbinding succesvol is, uitgezocht **[!DNL Save]** om uw server te registreren. De verbinding wordt na een geslaagde registratie op het dashboard weergegeven. Hierbij wordt bevestigd dat u nu verbinding kunt maken met de server en de schemaobjecten kunt bekijken.
 
 ## Volgende stappen
 
-Nu u met [!DNL Query Service] hebt verbonden, kunt u **[!UICONTROL de Analysator van de Vraag]** binnen [!DNL Aqua Data Studio] gebruiken om SQL verklaringen uit te voeren en uit te geven. Voor meer informatie over hoe te om vragen te schrijven en in werking te stellen, te lezen [lopende vraaggids](../best-practices/writing-queries.md).
+Nu u met [!DNL Query Service] hebt verbonden, kunt u **[!DNL Query Analyzer]** binnen [!DNL Aqua Data Studio] gebruiken om SQL verklaringen uit te voeren en uit te geven. Voor meer informatie over hoe te om vragen te schrijven en in werking te stellen, te lezen [lopende vraaggids](../best-practices/writing-queries.md).
