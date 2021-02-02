@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;record data;stream record data;
+keywords: Experience Platform;home;populaire onderwerpen;streaming opname;inname;record gegevens;stream recordgegevens;
 solution: Experience Platform
 title: Opnamegegevens streamen
 topic: tutorial
 type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -16,27 +16,27 @@ ht-degree: 0%
 
 # Recordgegevens streamen naar Adobe Experience Platform
 
-Deze zelfstudie helpt u bij het gebruik van streaming opname-API&#39;s, onderdeel van de Adobe Experience Platform API&#39; [!DNL Data Ingestion Service] s.
+Deze zelfstudie helpt u bij het gebruik van streaming opname-API&#39;s, onderdeel van de Adobe Experience Platform [!DNL Data Ingestion Service] API&#39;s.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een praktische kennis van verschillende Adobe Experience Platform-services. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader voor het [!DNL Platform] organiseren van ervaringsgegevens.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader voor het  [!DNL Platform] organiseren van ervaringsgegevens.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [Handleiding](../../xdm/api/getting-started.md)voor ontwikkelaars van het schemaregister: Een uitvoerige gids die elk van de beschikbare eindpunten van API behandelt en hoe te om vraag aan hen te maken. [!DNL Schema Registry] Dit omvat het kennen van uw `{TENANT_ID}`, die in vraag door dit leerprogramma verschijnt, evenals het weten hoe te schema&#39;s tot stand te brengen, die in het creëren van een dataset voor opname wordt gebruikt.
+- [Handleiding](../../xdm/api/getting-started.md) voor ontwikkelaars van het schemaregister: Een uitvoerige gids die elk van de beschikbare eindpunten van  [!DNL Schema Registry] API behandelt en hoe te om vraag aan hen te maken. Dit omvat het kennen van uw `{TENANT_ID}`, die in vraag door dit leerprogramma verschijnt, evenals het weten hoe te schema&#39;s tot stand te brengen, die in het creëren van een dataset voor opname wordt gebruikt.
 
-Bovendien is voor deze zelfstudie vereist dat u al een streamingverbinding hebt gemaakt. Lees voor meer informatie over het maken van een streamingverbinding de zelfstudie voor het [maken van een streamingverbinding](./create-streaming-connection.md).
+Bovendien is voor deze zelfstudie vereist dat u al een streamingverbinding hebt gemaakt. Lees voor meer informatie over het maken van een streamingverbinding de zelfstudie [Een streamingverbinding maken](./create-streaming-connection.md).
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan het stromen ingestie APIs te maken.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -48,7 +48,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
+>Raadpleeg de documentatie [sandbox-overzicht](../../sandboxes/home.md) voor meer informatie over sandboxen in [!DNL Platform].
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -56,7 +56,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Stel een schema samen dat van de [!DNL XDM Individual Profile] klasse wordt gebaseerd
 
-Om een dataset tot stand te brengen, zult u eerst een nieuw schema moeten creëren dat de [!DNL XDM Individual Profile] klasse uitvoert. Voor meer informatie over hoe te om schema&#39;s tot stand te brengen, te lezen gelieve de ontwikkelaarsgids [van de Registratie van het](../../xdm/api/getting-started.md)Schema API.
+Om een dataset tot stand te brengen, zult u eerst een nieuw schema moeten creëren dat de [!DNL XDM Individual Profile] klasse uitvoert. Voor meer informatie over hoe te om schema&#39;s tot stand te brengen, te lezen gelieve [de ontwikkelaarsgids ](../../xdm/api/getting-started.md) van de Registratie van het Schema API.
 
 **API-indeling**
 
@@ -98,7 +98,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | De naam die u voor het schema wilt gebruiken. Deze naam moet uniek zijn. |
 | `description` | Een betekenisvolle beschrijving van het schema dat u maakt. |
-| `meta:immutableTags` | In dit voorbeeld wordt de `union` tag gebruikt om uw gegevens door te zetten in [[!DNL Real-time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | In dit voorbeeld wordt de tag `union` gebruikt om uw gegevens te behouden in [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **Antwoord**
 
@@ -153,13 +153,13 @@ Een succesvolle reactie keert status 201 van HTTP met details van uw onlangs gec
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{TENANT_ID}` | Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich in uw IMS-organisatie bevinden. Voor meer informatie over identiteitskaart van de Aannemer, te lezen gelieve de gids [van de](../../xdm/api/getting-started.md#know-your-tenant-id)schemaregistratie. |
+| `{TENANT_ID}` | Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich in uw IMS-organisatie bevinden. Voor meer informatie over identiteitskaart van de Aannemer, te lezen gelieve [schemaregistratiegids](../../xdm/api/getting-started.md#know-your-tenant-id). |
 
-Neem nota van `$id` evenals de `version` attributen, aangezien allebei van deze zullen worden gebruikt wanneer het creëren van uw dataset.
+Let op de `$id` en de `version` attributen, aangezien allebei van deze zullen worden gebruikt wanneer het creëren van uw dataset.
 
 ## Een primaire identiteitsdescriptor instellen voor het schema
 
-Vervolgens voegt u een [identiteitsbeschrijving](../../xdm/api/descriptors.md) toe aan het hierboven gemaakte schema en gebruikt u het werkadreskenmerk als primaire id. Dit leidt tot twee wijzigingen:
+Vervolgens voegt u een [identiteitsdescriptor](../../xdm/api/descriptors.md) toe aan het hierboven gemaakte schema en gebruikt u het werkadreskenmerk als primaire id. Dit leidt tot twee wijzigingen:
 
 1. Het werk-e-mailadres wordt een verplicht veld. Dit betekent dat berichten die zonder dit veld worden verzonden, niet worden gevalideerd en niet worden ingevoerd.
 
@@ -187,15 +187,15 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{SCHEMA_REF_ID}` | Het schema `$id` dat u eerder hebt ontvangen toen u het schema samenstelde. Het moet er ongeveer als volgt uitzien: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
+| `{SCHEMA_REF_ID}` | De `$id` die u eerder ontving toen u het schema samenstelde. Het moet er ongeveer als volgt uitzien: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
 >[!NOTE]
 >
->&#x200B;**naamruimtecodes &#x200B;**
+>&#x200B;**Identiteitsnaamruimtecodes**
 >
-> Controleer of de codes geldig zijn. In het bovenstaande voorbeeld wordt &quot;email&quot; gebruikt, een naamruimte met een standaardidentiteit. Andere veelgebruikte standaardnaamruimten vindt u in de veelgestelde vragen over [identiteitsgegevens](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)van Identiteitsservice.
+> Controleer of de codes geldig zijn. In het bovenstaande voorbeeld wordt &quot;email&quot; gebruikt, een naamruimte met een standaardidentiteit. Andere veelgebruikte standaardnaamruimten vindt u in [Veelgestelde vragen over identiteitsservice](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
-> Als u een aangepaste naamruimte wilt maken, volgt u de stappen die worden beschreven in het overzicht [van de naamruimte van de](../../identity-service/home.md)identiteit.
+> Als u een aangepaste naamruimte wilt maken, volgt u de stappen die worden beschreven in het naamruimteoverzicht [identity](../../identity-service/home.md).
 
 **Antwoord**
 
@@ -223,7 +223,7 @@ Zodra u uw schema hebt gecreeerd, zult u een dataset moeten tot stand brengen om
 
 >[!NOTE]
 >
->Deze dataset zal voor **[!DNL Real-time Customer Profile]** en **[!DNL Identity Service]**. worden toegelaten.
+>Deze gegevensset wordt ingeschakeld voor **[!DNL Real-time Customer Profile]** en **[!DNL Identity Service]**.
 
 **API-indeling**
 
@@ -256,7 +256,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 201 en een array met de id van de nieuwe dataset in de indeling `@/dataSets/{DATASET_ID}`.
+Een geslaagde reactie retourneert HTTP-status 201 en een array met de id van de nieuwe dataset in de notatie `@/dataSets/{DATASET_ID}`.
 
 ```json
 [
@@ -266,7 +266,7 @@ Een geslaagde reactie retourneert HTTP-status 201 en een array met de id van de 
 
 ## Recordgegevens opnemen in de streamingverbinding
 
-Met de dataset en het stromen verbinding op zijn plaats, kunt u XDM-Geformatteerde JSON- verslagen opnemen om verslaggegevens in op te nemen [!DNL Platform].
+Met de gegevensset en streamingverbinding op zijn plaats kunt u JSON-records met XDM-indeling invoeren om recordgegevens in te voeren in [!DNL Platform].
 
 **API-indeling**
 
@@ -276,8 +276,8 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | De `id` waarde van de eerder gemaakte streamingverbinding. |
-| `synchronousValidation` | Een optionele query-parameter voor ontwikkelingsdoeleinden. Indien ingesteld op `true`, kan dit worden gebruikt voor directe feedback om te bepalen of de aanvraag is verzonden. Deze waarde is standaard ingesteld op `false`. |
+| `{CONNECTION_ID}` | De `id`-waarde van de eerder gemaakte streamingverbinding. |
+| `synchronousValidation` | Een optionele query-parameter voor ontwikkelingsdoeleinden. Als ingesteld op `true`, kan deze worden gebruikt voor directe feedback om te bepalen of het verzoek is verzonden. Deze waarde wordt standaard ingesteld op `false`. |
 
 **Verzoek**
 
@@ -287,7 +287,7 @@ In de onderstaande voorbeeldaanvraag wordt een record met een ontbrekende bronna
 
 >[!NOTE]
 >
->Voor de volgende API-aanroep zijn **geen** verificatiekoppen vereist.
+>Voor de volgende API-aanroep zijn **geen** verificatieheaders vereist.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -348,7 +348,7 @@ Als u een bronnaam wilt omvatten, toont het volgende voorbeeld hoe u het zou omv
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP status 200 met details van het net gestreamde bestand [!DNL Profile].
+Een succesvolle reactie keert status 200 van HTTP met details van onlangs gestreamd [!DNL Profile] terug.
 
 ```json
 {
@@ -366,15 +366,15 @@ Een geslaagde reactie retourneert HTTP status 200 met details van het net gestre
 | `{CONNECTION_ID}` | De id van de eerder gemaakte streamingverbinding. |
 | `xactionId` | Een unieke id die op de server is gegenereerd voor de record die u zojuist hebt verzonden. Met deze id kan Adobe de levenscyclus van deze record traceren via verschillende systemen en met foutopsporing. |
 | `receivedTimeMs` | Een tijdstempel (tijdperk in milliseconden) dat aangeeft op welk tijdstip de aanvraag is ontvangen. |
-| `synchronousValidation.status` | Aangezien de queryparameter `synchronousValidation=true` is toegevoegd, wordt deze waarde weergegeven. Als de validatie is gelukt, wordt de status `pass`ingesteld. |
+| `synchronousValidation.status` | Aangezien de vraagparameter `synchronousValidation=true` werd toegevoegd, zal deze waarde verschijnen. Als de validatie is voltooid, is de status `pass`. |
 
 ## De nieuw opgenomen recordgegevens ophalen
 
-Om de eerder opgenomen verslagen te bevestigen, kunt u gebruiken [[!DNL Profile Access API]](../../profile/api/entities.md) om de verslaggegevens terug te winnen.
+Om de eerder opgenomen verslagen te bevestigen, kunt u [[!DNL Profile Access API]](../../profile/api/entities.md) gebruiken om de verslaggegevens terug te winnen.
 
 >[!NOTE]
 >
->Als de samenvoegings beleids-id niet is gedefinieerd en `schema.name` of `relatedSchema.name` is `_xdm.context.profile`, [!DNL Profile Access] worden **alle** verwante identiteiten opgehaald.
+>Als de id van het samenvoegbeleid niet is gedefinieerd en `schema.name` of `relatedSchema.name` `_xdm.context.profile` is, [!DNL Profile Access] haalt **alle** gerelateerde identiteiten op.
 
 **API-indeling**
 
@@ -453,8 +453,8 @@ Een geslaagde reactie retourneert HTTP status 200 met details over de aangevraag
 
 ## Volgende stappen
 
-Door dit document te lezen, begrijpt u nu hoe u recordgegevens kunt invoeren [!DNL Platform] met streaming verbindingen. U kunt proberen meer vraag met verschillende waarden te maken en de bijgewerkte waarden terug te winnen. Daarnaast kunt u uw ingesloten gegevens controleren via [!DNL Platform] UI. Lees voor meer informatie de [handleiding voor het invoeren van](../quality/monitor-data-ingestion.md) monitoringgegevens.
+Door dit document te lezen, begrijpt u nu hoe u recordgegevens via streamingverbindingen in [!DNL Platform] kunt opnemen. U kunt proberen meer vraag met verschillende waarden te maken en de bijgewerkte waarden terug te winnen. Daarnaast kunt u uw ingesloten gegevens controleren via [!DNL Platform] UI. Lees voor meer informatie de [handleiding voor het controleren van gegevensinvoer](../quality/monitor-data-ingestion.md).
 
-Lees voor meer informatie over streamingopname in het algemeen het overzicht [van](../streaming-ingestion/overview.md)streamingopname.
+Lees voor meer informatie over streaming opname in het algemeen het [overzicht van streaming opname](../streaming-ingestion/overview.md).
 
 
