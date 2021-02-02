@@ -1,13 +1,13 @@
 ---
-keywords: analytics destinations;analytics destination
+keywords: analytische bestemmingen;analytische bestemming
 title: Analytische doelen
 seo-title: Analytische doelen
 description: De analytische bestemmingen volgen hoe de bezoekers met inhoud op uw plaats en verzamelen gegevens om het gedrag van uw publiek te begrijpen. Deze platforms bieden unieke inzichten in de betrokkenheid en conversie van uw meest waardevolle bezoekers.
 seo-description: De analytische bestemmingen volgen hoe de bezoekers met inhoud op uw plaats en verzamelen gegevens om het gedrag van uw publiek te begrijpen. Deze platforms bieden unieke inzichten in de betrokkenheid en conversie van uw meest waardevolle bezoekers.
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '204'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 De analytische bestemmingen volgen hoe de bezoekers met inhoud op uw plaats en verzamelen gegevens om het gedrag van uw publiek te begrijpen. Deze platforms bieden unieke inzichten in de betrokkenheid en conversie van uw meest waardevolle bezoekers.
 
-Momenteel ondersteunt het Real-Time Customer Data Platform de hieronder vermelde analytische doelen. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
+Momenteel ondersteunt Adobe Experience Platform de hieronder vermelde analytische doelen. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
 
 - [Adform Website Tracking extension](./adform.md)
 - [Adobe Analytics-extensie](./adobe-analytics.md)
