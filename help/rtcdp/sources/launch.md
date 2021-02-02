@@ -1,13 +1,13 @@
 ---
-keywords: launch web tags;web tags launch;website tags;web tags;launch;Launch
+keywords: webtags starten;webtags starten;website-tags;webtags;starten;Starten
 title: Zelfstudie Websitetags implementeren met Adobe Launch
 seo-title: Websitetags implementeren met Adobe Launch
 description: Adobe starten gebruiken om websitetags te implementeren in Adobe Experience Platform
 seo-description: Adobe starten gebruiken om websitetags te implementeren in Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '493'
 ht-degree: 3%
 
 ---
@@ -27,38 +27,39 @@ In deze zelfstudie wordt uitgelegd hoe u uw websitetags kunt implementeren om ge
 
 Deze zelfstudie bevat de volgende stappen:
 
-1. Installeer de Adobe Experience Platform- [!DNL Web SDK] extensie.
-1. Maak een regel om te bepalen [!DNL Launch] welke gegevens moeten worden verzonden.
+1. Installeer de extensie Adobe Experience Platform [!DNL Web SDK].
+1. Maak een regel om [!DNL Launch] te vertellen welke gegevens moeten worden verzonden.
 1. Bundel de extensie en regel in een bibliotheek.
 
-## De Adobe Experience Platform- [!DNL Web SDK] extensie installeren
+## De extensie Adobe Experience Platform [!DNL Web SDK] installeren
 
-Installeer eerst de Adobe Experience Platform- [!DNL Web SDK] extensie.
+Installeer eerst de extensie Adobe Experience Platform [!DNL Web SDK].
 
-1. Open [!DNL Launch]het tabblad **[!UICONTROL Extensies]** in.
+1. Open in [!DNL Launch] het tabblad **[!UICONTROL Extensies]**.
 
    ![afbeelding](assets/launch-overview.png)
 
-1. Selecteer de extensie Adobe Experience Platform Web SDK in de catalogus Extensie starten. Het configuratiescherm wordt geopend.
+1. Selecteer de extensie Adobe Experience Platform Web SDK in de catalogus Extensie starten
+Het configuratiescherm wordt geopend.
 
    ![afbeelding](assets/launch-extension-install.png)
 
-   Zie [Extensies](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html) in de [!DNL Launch] documentatie voor meer informatie.
+   Zie [Extensies](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html) in de [!DNL Launch]-documentatie voor meer informatie.
 
 1. Configureer de extensie.
 
    U hebt nu alleen de volgende instellingen nodig:
 
-   * **Configuratie-id:** Geef de configuratie-id op die u van uw Adobe-vertegenwoordiger hebt gekregen.
-   * **Randdomein:** Geef het randdomein op dat u van uw Adobe-vertegenwoordiger hebt gekregen.
+   * **Configuratie-id:** geef de configuratie-id op die u van uw Adobe-vertegenwoordiger hebt gekregen.
+   * **Edge-domein:** geef het randdomein op dat u van uw Adobe-vertegenwoordiger hebt gekregen.
 
-1. Klik op **[!UICONTROL Opslaan]** en ga verder met de volgende stap.
+1. Selecteer **[!UICONTROL Opslaan]** en ga verder met de volgende stap.
 
-## Een regel maken om te bepalen [!DNL Launch] welke gegevens moeten worden verzonden
+## Maak een regel om [!DNL Launch] te vertellen welke gegevens moeten worden verzonden
 
-Maak vervolgens een regel om te laten [!DNL Launch] weten welke gegevens u naar Adobe Experience Platform wilt verzenden en wanneer u deze wilt verzenden.
+Maak vervolgens een regel om [!DNL Launch] te laten weten welke gegevens u naar Adobe Experience Platform wilt verzenden en wanneer u deze wilt verzenden.
 
-1. Configureer op het tabblad **[!UICONTROL Regels]** een gebeurtenis die op elke nieuwe pagina van de website wordt geactiveerd wanneer de [!DNL Launch] bibliotheek wordt geladen.
+1. Configureer onder het tabblad **[!UICONTROL Regels]** een gebeurtenis die op elke nieuwe pagina van de website wordt geactiveerd wanneer de bibliotheek [!DNL Launch] wordt geladen.
 
    ![afbeelding](assets/launch-make-a-rule.png)
 
@@ -70,9 +71,9 @@ Maak vervolgens een regel om te laten [!DNL Launch] weten welke gegevens u naar 
 
    Het gegevensvoorwerp u verzendt moet geldige XDM zijn die bevestiging tegen het schema zal overgaan dat door de dataset wordt gebruikt die met uw identiteitskaart van de Configuratie wordt verbonden.
 
-1. Klik op Wijzigingen **[!UICONTROL behouden]**.
+1. Selecteer **[!UICONTROL Wijzigingen behouden]**.
 
-Zie [Regels](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html) in de [!DNL Launch] documentatie voor meer informatie.
+Zie [Rules](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html) in de [!DNL Launch]-documentatie voor meer informatie.
 
 ## De extensie en regel bundelen in een bibliotheek
 
@@ -84,4 +85,4 @@ Nadat u uw tests hebt voltooid, promoot u de bibliotheek via de workflow zodat d
 
 ![afbeelding](assets/launch-promote-library.png)
 
-Zie [Bibliotheken](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html) in de [!DNL Launch] documentatie voor meer informatie.
+Zie [Bibliotheken](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html) in de documentatie [!DNL Launch] voor meer informatie.
