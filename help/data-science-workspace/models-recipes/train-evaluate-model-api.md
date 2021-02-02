@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
+keywords: Experience Platform;trainen en evalueren;Data Science Workspace;populaire onderwerpen;Sensei Machine Learning API
 solution: Experience Platform
 title: Een model (API) trainen en evalueren
 topic: tutorial
 type: Tutorial
 description: Deze zelfstudie laat u zien hoe u een model kunt maken, trainen en evalueren met API-aanroepen van Sensei Machine Learning.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1230'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalue
 
 ## Vereisten
 
-Volg de [import van een gecomprimeerde ontvanger met behulp van de API](./import-packaged-recipe-api.md) voor het maken van een engine, die nodig is om een model te trainen en te evalueren met behulp van de API.
+Volg [Importeer een verpakte ontvanger met behulp van de API](./import-packaged-recipe-api.md) voor het maken van een engine, die nodig is om een model op te leiden en te evalueren met behulp van de API.
 
-Volg deze [zelfstudie](../../tutorials/authentication.md) voor toestemming om API-aanroepen te starten.
+Volg het [Experience Platform API authentificatieleerprogramma](https://www.adobe.com/go/platform-api-authentication-en) beginnen API vraag te maken.
 
 In de zelfstudie hebt u nu de volgende waarden:
 
@@ -54,7 +54,7 @@ We gebruiken de API&#39;s om een Experiment Run voor training te maken. Voor dez
 
 ### Een MLInstance maken
 
-Het creëren van een MLInstance kan worden gedaan gebruikend het volgende verzoek. U gebruikt de inhoud `{ENGINE_ID}` die is geretourneerd bij het maken van een engine van de [importmodule voor een pakketrecept met de API](./import-packaged-recipe-ui.md) -zelfstudie.
+Het creëren van een MLInstance kan worden gedaan gebruikend het volgende verzoek. U zult `{ENGINE_ID}` gebruiken die wanneer het creëren van een Motor van [een verpakte Ontvanger invoeren gebruikend de API](./import-packaged-recipe-ui.md) leerprogramma is teruggekeerd.
 
 **Verzoek**
 
@@ -126,9 +126,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->In de `{JSON_PAYLOAD}`code definiëren we parameters die worden gebruikt voor training en scoring in de `tasks` array. Dit `{ENGINE_ID}` is de id van de engine die u wilt gebruiken en het `tag` veld is een optionele parameter die wordt gebruikt om de instantie te identificeren.
+>In `{JSON_PAYLOAD}`, bepalen wij parameters die voor opleiding en het scoren in `tasks` serie worden gebruikt. De `{ENGINE_ID}` is identiteitskaart van de Motor u wilt gebruiken en het `tag` gebied is een facultatieve parameter die wordt gebruikt om de Instantie te identificeren.
 
-Het antwoord zal bevatten `{INSTANCE_ID}` die MLInstance vertegenwoordigt die wordt gecreeerd. Er kunnen meerdere model-MLInstances met verschillende configuraties worden gemaakt.
+De reactie zal `{INSTANCE_ID}` bevatten die MLInstance vertegenwoordigt die wordt gecreeerd. Er kunnen meerdere model-MLInstances met verschillende configuraties worden gemaakt.
 
 **Antwoord**
 
@@ -222,7 +222,7 @@ De reactie van het project Experiment ziet er zo uit.
 
 Gepland Experimenten worden gebruikt zodat wij niet te hoeven om elke enkele Runs van de Experiment via een API vraag tot stand te brengen. In plaats daarvan, verstrekken wij alle noodzakelijke parameters tijdens de verwezenlijking van de Experiment en elke looppas zal periodiek worden gecreeerd.
 
-Om aan te geven dat er een geprogrammeerd experiment moet worden opgezet, moeten we een `template` gedeelte van het verzoek toevoegen. In `template`, zijn alle noodzakelijke parameters voor het plannen van looppas inbegrepen zoals `tasks`, die wijzen op welke actie, en `schedule`, die op de timing van de geplande looppas wijst.
+Om op de verwezenlijking van een gepland Experiment te wijzen, moeten wij een `template` sectie in het lichaam van het verzoek toevoegen. In `template`, zijn alle noodzakelijke parameters voor het plannen van looppas inbegrepen zoals `tasks`, die op welke actie wijzen, en `schedule`, die op de timing van de geplande looppas wijst.
 
 **Verzoek**
 
@@ -269,7 +269,7 @@ curl -X POST \
 }
 ```
 
-Wanneer wij een Experiment creëren, zou het lichaam, `{JSON_PAYLOAD}`, of de `mlInstanceId` of `mlInstanceQuery` parameter moeten bevatten. In dit voorbeeld wordt elke 20 minuten door een geplande Experiment een uitvoering aangeroepen, die in de `cron` parameter wordt ingesteld, te beginnen vanaf de `startTime` tot aan de `endTime`.
+Wanneer wij een Experiment creëren, zou het lichaam, `{JSON_PAYLOAD}`, of `mlInstanceId` of de `mlInstanceQuery` parameter moeten bevatten. In dit voorbeeld wordt elke 20 minuten een uitvoering aangeroepen die in de parameter `cron` is ingesteld, te beginnen bij `startTime` tot `endTime`.
 
 **Antwoord**
 
@@ -309,7 +309,7 @@ Wanneer wij een Experiment creëren, zou het lichaam, `{JSON_PAYLOAD}`, of de `m
 
 ### Een experimentele training maken
 
-Als er een entiteit Experiment is gemaakt, kan een trainingrun worden gemaakt en uitgevoerd met de onderstaande oproep. U hebt de code `{EXPERIMENT_ID}` en de status nodig die `mode` u wilt activeren in de aanvraaginstantie.
+Als er een entiteit Experiment is gemaakt, kan een trainingrun worden gemaakt en uitgevoerd met de onderstaande oproep. U zult `{EXPERIMENT_ID}` nodig hebben en verklaart wat `mode` u in het verzoeklichaam wilt teweegbrengen.
 
 **Verzoek**
 
@@ -335,7 +335,7 @@ curl -X POST \
 }
 ```
 
-U kunt de configuratieparameters ook overschrijven door een `tasks` array op te nemen:
+U kunt de configuratieparameters ook overschrijven door een `tasks`-array op te nemen:
 
 ```JSON
 {
@@ -354,7 +354,7 @@ U kunt de configuratieparameters ook overschrijven door een `tasks` array op te 
 }
 ```
 
-U zult de volgende reactie krijgen die u de `{EXPERIMENT_RUN_ID}` en configuratie onder zal laten kennen `tasks`.
+U zult de volgende reactie krijgen die u `{EXPERIMENT_RUN_ID}` en de configuratie onder `tasks` zal vertellen.
 
 **Antwoord**
 
@@ -375,12 +375,12 @@ U zult de volgende reactie krijgen die u de `{EXPERIMENT_RUN_ID}` en configurati
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`:  De id die staat voor de proefrun.\
+`{EXPERIMENT_RUN_ID}`: De id die staat voor de proefrun.\
 `{EXPERIMENT_ID}`: De id die staat voor het experiment dat onder de Experimentenrun valt.
 
 ### De status Experimentair uitvoeren ophalen
 
-De status van de uitvoering van het experiment kan worden opgevraagd bij de `{EXPERIMENT_RUN_ID}`.
+De status van de uitvoering van het experiment kan worden opgevraagd met `{EXPERIMENT_RUN_ID}`.
 
 **Verzoek**
 
@@ -400,7 +400,7 @@ curl -X GET \
 
 **Antwoord**
 
-De aanroep van de GET geeft de status in de `state` parameter op, zoals hieronder wordt getoond:
+De vraag van de GET zal de status in de `state` parameter zoals hieronder getoond verstrekken:
 
 ```JSON
 {
@@ -433,15 +433,15 @@ De aanroep van de GET geeft de status in de `state` parameter op, zoals hieronde
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`:  De id die staat voor de proefrun.\
+`{EXPERIMENT_RUN_ID}`: De id die staat voor de proefrun.\
 `{EXPERIMENT_ID}`: De id die staat voor het experiment dat onder de Experimentenrun valt.
 
-Naast de `DONE` staat zijn onder andere de volgende staten:
+Naast de staat `DONE`, omvatten andere staten:
 - `PENDING`
 - `RUNNING`
 - `FAILED`
 
-Voor meer informatie kunt u gedetailleerde logboekbestanden vinden onder de `tasklogs` parameter.
+Om meer informatie te krijgen, kunnen de gedetailleerde logboeken onder de `tasklogs` parameter worden gevonden.
 
 ### Het getrainde model ophalen
 
@@ -487,12 +487,12 @@ De reactie vertegenwoordigt het opgeleide Model dat werd gecreeerd.
 ```
 
 `{MODEL_ID}`: De id die overeenkomt met het model.\
-`{EXPERIMENT_ID}`:  De id die correspondeert met de Experiment Run is lager.\
+`{EXPERIMENT_ID}`: De id die correspondeert met de Experiment Run is lager.\
 `{EXPERIMENT_RUN_ID}`: De id die overeenkomt met de uitvoering van het experiment.
 
 ### Een geplande expert stoppen en verwijderen
 
-Als u de uitvoering van een gepland experiment vóór de uitvoering wilt stoppen `endTime`, kunt u dit doen door een verzoek van DELETE naar de `{EXPERIMENT_ID}`
+Als u de uitvoering van een gepland Experiment vóór zijn `endTime` wilt ophouden, kan dit worden gedaan door een verzoek van DELETE aan `{EXPERIMENT_ID}` te vragen
 
 **Verzoek**
 
@@ -503,7 +503,7 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  De id die overeenkomt met het experiment.\
+`{EXPERIMENT_ID}`: De id die overeenkomt met het experiment.\
 `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.\
 `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
 
@@ -525,4 +525,4 @@ Hier volgt de reactie waarbij wordt gemeld dat het experiment is verwijderd.
 
 ## Volgende stappen
 
-In deze zelfstudie wordt uitgelegd hoe u de API&#39;s kunt gebruiken voor het maken van een engine, een Experiment, geplande experimentele runtime en getrainde modellen. In de [volgende oefening](./score-model-api.md), zult u voorspellingen maken door een nieuwe dataset te scoren gebruikend het best presterende getrainde model.
+In deze zelfstudie wordt uitgelegd hoe u de API&#39;s kunt gebruiken voor het maken van een engine, een Experiment, geplande experimentele runtime en getrainde modellen. In [volgende oefening](./score-model-api.md), zult u voorspellingen maken door een nieuwe dataset te scoren gebruikend het best presterende opgeleide model.
