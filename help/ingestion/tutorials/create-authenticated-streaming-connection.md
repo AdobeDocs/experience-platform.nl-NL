@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;authenticated streaming connection;streaming connection;create streaming connection;create authenticated streaming connection;streaming ingestion;ingestion;
+keywords: Experience Platform;home;populaire onderwerpen;geverifieerde streamingverbinding;streamingverbinding;maak streamingverbinding;maak geverifieerde streamingverbinding;streaming opname;inname;insluiten;
 solution: Experience Platform
 title: Een geverifieerde streamingverbinding maken
 topic: tutorial
 type: Tutorial
 description: De voor authentiek verklaarde Inzameling van Gegevens staat de diensten van Adobe Experience Platform, zoals het Profiel van de Klant In real time en Identiteit, toe om tussen verslagen te onderscheiden die uit vertrouwde op bronnen en onbetrouwbare bronnen komen.
 translation-type: tm+mt
-source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '674'
 ht-degree: 0%
 
 ---
@@ -16,28 +16,28 @@ ht-degree: 0%
 
 # Een geverifieerde streamingverbinding maken
 
-De voor authentiek verklaarde Inzameling van Gegevens staat de diensten van Adobe Experience Platform, zoals [!DNL Real-time Customer Profile] en [!DNL Identity], toe om tussen verslagen te onderscheiden die uit vertrouwde op bronnen en onbetrouwbare bronnen komen. De cliënten die Persoonlijk Identificeerbare Informatie (PII) willen verzenden kunnen dit doen door toegangstokens als deel van het verzoek van de POST te verzenden.
+Met geverifieerde gegevensverzameling kunnen Adobe Experience Platform-services, zoals [!DNL Real-time Customer Profile] en [!DNL Identity], onderscheid maken tussen records die afkomstig zijn van vertrouwde bronnen en niet-vertrouwde bronnen. De cliënten die Persoonlijk Identificeerbare Informatie (PII) willen verzenden kunnen dit doen door toegangstokens als deel van het verzoek van de POST te verzenden.
 
 ## Aan de slag
 
 Registratie voor streamingverbindingen is vereist om te beginnen met het streamen van gegevens naar Adobe Experience Platform. Wanneer u een streamingverbinding registreert, moet u enkele belangrijke details opgeven, zoals de bron van streaminggegevens.
 
-Na het registreren van een het stromen verbinding, zult u, als gegevensproducent, een unieke URL hebben die kan worden gebruikt om gegevens te stromen aan [!DNL Platform].
+Nadat u een streamingverbinding hebt geregistreerd, beschikt u als producent van gegevens over een unieke URL waarmee u gegevens kunt streamen naar [!DNL Platform].
 
 Deze zelfstudie vereist ook een praktische kennis van verschillende Adobe Experience Platform-services. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader voor het [!DNL Platform] organiseren van ervaringsgegevens.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader voor het  [!DNL Platform] organiseren van ervaringsgegevens.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd, consumentenprofiel in real time die op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan het stromen ingestie APIs te maken.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -49,7 +49,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
+>Raadpleeg de documentatie [sandbox-overzicht](../../sandboxes/home.md) voor meer informatie over sandboxen in [!DNL Platform].
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -69,7 +69,7 @@ POST /flowservice/connections
 
 >[!NOTE]
 >
->De waarden voor de lijst `providerId` en de lijst `connectionSpec` moeten **** worden gebruikt zoals in het voorbeeld wordt getoond, aangezien zij aan API zijn die u een het stromen verbinding voor het stromen opname creeert.
+>De waarden voor de vermelde `providerId` en `connectionSpec` **must** worden gebruikt zoals aangetoond in het voorbeeld, aangezien zij zijn wat aan API specificeert dat u een het stromen verbinding voor het stromen ingestie creeert.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -111,7 +111,7 @@ Een geslaagde reactie retourneert HTTP status 201 met details van de nieuwe verb
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `id` | De `id` van de nieuwe verbinding. Dit wordt hierna `{CONNECTION_ID}`genoemd. |
+| `id` | De `id` van de nieuwe verbinding. Dit wordt hierna `{CONNECTION_ID}` genoemd. |
 | `etag` | Een id die is toegewezen aan de verbinding en die de revisie van de verbinding opgeeft. |
 
 ## URL gegevensverzameling ophalen
@@ -140,7 +140,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 **Antwoord**
 
-Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over de gevraagde verbinding terug. De URL van de gegevensverzameling wordt automatisch gemaakt met de verbinding en kan worden opgehaald met de `inletUrl` waarde.
+Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over de gevraagde verbinding terug. De URL van de gegevensverzameling wordt automatisch gemaakt met de verbinding en kan worden opgehaald met de waarde `inletUrl`.
 
 ```json
 {
@@ -179,7 +179,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 ## Volgende stappen
 
-Nu u een geverifieerde streamingverbinding hebt gemaakt, kunt u tijdreeksen of recordgegevens streamen, zodat u gegevens kunt invoeren binnen [!DNL Platform]. Als u wilt leren hoe u tijdreeksgegevens kunt streamen, gaat u naar de zelfstudie over [!DNL Platform]streaming tijdreeksgegevens [](./streaming-time-series-data.md). Als u wilt leren hoe u recordgegevens kunt streamen, gaat u naar de zelfstudie voor [!DNL Platform]streaming recordgegevens [](./streaming-record-data.md).
+Nu u een geverifieerde streamingverbinding hebt gemaakt, kunt u tijdreeksen of recordgegevens streamen, zodat u gegevens kunt invoeren binnen [!DNL Platform]. Als u wilt leren hoe u tijdreeksgegevens kunt streamen naar [!DNL Platform], gaat u naar de [zelfstudie voor het streamen van tijdreeksgegevens](./streaming-time-series-data.md). Als u wilt leren hoe u recordgegevens kunt streamen naar [!DNL Platform], gaat u naar de zelfstudie [streamingrecordgegevens](./streaming-record-data.md).
 
 ## Aanhangsel
 
@@ -187,9 +187,9 @@ Deze sectie bevat aanvullende informatie over geverifieerde streamingverbindinge
 
 ### Berichten verzenden naar een geverifieerde streamingverbinding
 
-Als verificatie is ingeschakeld voor een streamingverbinding, moet de client de `Authorization` header aan hun aanvraag toevoegen.
+Als verificatie is ingeschakeld voor een streamingverbinding, moet de client de `Authorization`-header aan hun aanvraag toevoegen.
 
-Als de `Authorization` header niet aanwezig is of als een ongeldig/verlopen toegangstoken wordt verzonden, wordt een HTTP 401 Unauthorised-reactie geretourneerd, met een vergelijkbare reactie als hieronder:
+Als de `Authorization` kopbal niet aanwezig is, of een ongeldig/verlopen toegangstoken wordt verzonden, zal een HTTP 401 Onbevoegde reactie worden teruggekeerd, met een gelijkaardige reactie zoals hieronder:
 
 **Antwoord**
 
