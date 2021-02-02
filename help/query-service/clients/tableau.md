@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;tableau;Tableau;query service;Query service;connect to query service;
+keywords: Experience Platform;thuis;populaire onderwerpen;tableau;Tableau;queryservice;Query-service;Verbinden met queryservice;
 solution: Experience Platform
 title: Verbinding maken met Tableau
 topic: connect
@@ -7,8 +7,8 @@ description: Dit document doorloopt de stappen voor het verbinden van Tableau me
 translation-type: tm+mt
 source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 1%
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
