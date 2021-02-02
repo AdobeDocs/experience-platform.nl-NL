@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
+keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;sql syntaxis;sql;ctas;CTAS;Tabel maken als selectie
 solution: Experience Platform
 title: SQL-syntaxis
 topic: syntax
 description: Dit document toont SQL syntaxis die door de Dienst van de Vraag wordt gesteund.
 translation-type: tm+mt
-source-git-commit: e02028e9808eab3373143aba7bbc4a115c52746b
+source-git-commit: 14cb1d304fd8aad2ca287f8d66ac6865425db4c5
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2212'
 ht-degree: 0%
 
 ---
@@ -15,17 +15,18 @@ ht-degree: 0%
 
 # SQL-syntaxis
 
-[!DNL Query Service] verstrekt de capaciteit om standaardANSI SQL voor `SELECT` verklaringen en andere beperkte bevelen te gebruiken. In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door [!DNL Query Service].
+[!DNL Query Service] verstrekt de capaciteit om standaardANSI SQL voor  `SELECT` verklaringen en andere beperkte bevelen te gebruiken. In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door [!DNL Query Service].
 
 ## Een SELECT-query definiëren
 
-De volgende syntaxis definieert een `SELECT` query die wordt ondersteund door [!DNL Query Service]:
+De volgende syntaxis bepaalt een `SELECT` vraag die door [!DNL Query Service] wordt gesteund:
 
 ```sql
 [ WITH with_query [, ...] ]
 SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ * | expression [ [ AS ] output_name ] [, ...] ]
     [ FROM from_item [, ...] ]
+    [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
     [ WHERE condition ]
     [ GROUP BY grouping_element [, ...] ]
     [ HAVING condition [, ...] ]
@@ -36,7 +37,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-waarbij `from_item` een van de volgende kan worden gebruikt:
+waarbij `from_item` een van de volgende kan zijn:
 
 ```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -45,7 +46,7 @@ table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
     from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
 ```
 
-en `grouping_element` kan een van de volgende zijn:
+en `grouping_element` kan één van zijn:
 
 ```sql
 ( )
@@ -64,6 +65,30 @@ en `with_query` is:
 TABLE [ ONLY ] table_name [ * ]
 ```
 
+### component SNAPSHOT
+
+Deze clausule kan worden gebruikt om gegevens over een lijst te lezen die incrementeel op momentopname ids wordt gebaseerd. Een momentopname identiteitskaart is een controlepuntteller die door een aantal, van type Lang, op een datalababel wordt geïdentificeerd telkens als het gegeven aan het wordt geschreven. De component SNAPSHOT koppelt zich aan de lijstverhouding het naast wordt gebruikt.
+
+```sql
+    [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
+```
+
+#### Voorbeeld
+
+```sql
+SELECT * FROM Customers SNAPSHOT SINCE 123;
+
+SELECT * FROM Customers SNAPSHOT AS OF 345;
+
+SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+
+SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+
+SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+```
+
+Houd er rekening mee dat een component SNAPSHOT werkt met een tabel- of tabelalias, maar niet boven op een subquery of weergave. Een component SNAPHOST werkt overal waar een SELECT-query op een tabel kan worden toegepast.
+
 ### WHERE ILIKE, component
 
 Het sleutelwoord ILIKE kan in plaats van LIKE worden gebruikt om gelijken op WAAR clausule van de UITGEZOCHTE vraag ongevoelig te maken.
@@ -73,10 +98,10 @@ Het sleutelwoord ILIKE kan in plaats van LIKE worden gebruikt om gelijken op WAA
 ```
 
 De logica van de clausules LIKE en ILIKE is als volgt:
-- ```WHERE condition LIKE pattern```, ```~~``` is gelijk aan patroon
-- ```WHERE condition NOT LIKE pattern```, ```!~~``` is gelijk aan patroon
-- ```WHERE condition ILIKE pattern```, gelijk aan ```~~*``` patroon
-- ```WHERE condition NOT ILIKE pattern```, gelijk aan ```!~~*``` patroon
+- ```WHERE condition LIKE pattern```,  ```~~``` is gelijk aan patroon
+- ```WHERE condition NOT LIKE pattern```,  ```!~~``` is gelijk aan patroon
+- ```WHERE condition ILIKE pattern```,  ```~~*``` gelijk aan patroon
+- ```WHERE condition NOT ILIKE pattern```,  ```!~~*``` gelijk aan patroon
 
 
 #### Voorbeeld
@@ -90,7 +115,7 @@ Keert klanten met namen terug die in &quot;A&quot;of &quot;a&quot;beginnen.
 
 ## JOINS
 
-Een `SELECT` query die gebruikmaakt van verbindingen heeft de volgende syntaxis:
+Een `SELECT` vraag die verbindingen gebruikt heeft de volgende syntaxis:
 
 ```sql
 SELECT statement
@@ -102,7 +127,7 @@ ON join condition
 
 ## UNIE, INTERSECT EN BEHALVE
 
-De `UNION`, `INTERSECT`, en de `EXCEPT` clausules worden gesteund om als rijen van twee of meer lijsten te combineren of uit te sluiten:
+De `UNION`, `INTERSECT`, en `EXCEPT` clausules worden gesteund om als rijen van twee of meer lijsten te combineren of uit te sluiten:
 
 ```sql
 SELECT statement 1
@@ -118,9 +143,11 @@ De volgende syntaxis definieert een `CREATE TABLE AS SELECT` (CTAS)-query die wo
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-waarbij`target_schema_title` de titel van het XDM-schema is. Gebruik deze clausule slechts als u wenst om een bestaand schema XDM voor de nieuwe dataset te gebruiken die door vraag`rowvalidation` CTAS wordt gecreeerd specificeert als de gebruiker rijniveaubevestiging van elke nieuwe partijen wil die voor de nieuwe gemaakte dataset worden opgenomen. Standaardwaarde is &#39;true&#39;
+waarbij
+`target_schema_title` is de titel van het XDM-schema. Gebruik deze clausule slechts als u een bestaand schema XDM voor de nieuwe dataset wilt gebruiken die door vraag CTAS wordt gecreeerd
+`rowvalidation` specificeert als de gebruiker rijniveaubevestiging van elke nieuwe partijen wil die voor de nieuwe gemaakte dataset worden opgenomen. Standaardwaarde is &#39;true&#39;
 
-en `select_query` is een `SELECT` instructie waarvan de syntaxis hierboven in dit document wordt gedefinieerd.
+en `select_query` is een `SELECT`-instructie, waarvan de syntaxis hierboven in dit document is gedefinieerd.
 
 
 ### Voorbeeld
@@ -132,18 +159,23 @@ CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(
 
 Houd er rekening mee dat voor een bepaalde CTAS-query:
 
-1. De `SELECT` instructie moet een alias hebben voor de statistische functies, zoals `COUNT`, `SUM`, `MIN`enzovoort.
-2. De `SELECT` instructie kan met of zonder haakjes () worden geleverd.
+1. De instructie `SELECT` moet een alias hebben voor de statistische functies zoals `COUNT`, `SUM`, `MIN` enzovoort.
+2. De instructie `SELECT` kan met of zonder haakjes () worden geleverd.
+3. De `SELECT` verklaring kan met een clausule worden verstrekt SNAPSHOT om stijgende delta&#39;s in doellijst te lezen.
+
+```sql
+CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
+```
 
 ## INVOEGEN IN
 
-De volgende syntaxis definieert een `INSERT INTO` query die wordt ondersteund door [!DNL Query Service]:
+De volgende syntaxis bepaalt een `INSERT INTO` vraag die door [!DNL Query Service] wordt gesteund:
 
 ```sql
 INSERT INTO table_name select_query
 ```
 
-waarbij `select_query` een `SELECT` instructie is waarvan de syntaxis hierboven in dit document is gedefinieerd.
+waarbij `select_query` een `SELECT`-instructie is, waarvan de syntaxis hierboven in dit document is gedefinieerd.
 
 ### Voorbeeld
 
@@ -153,8 +185,13 @@ INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 
 Houd er rekening mee dat voor een bepaalde INSERT INTO-query:
 
-1. De `SELECT` instructie MAG NIET tussen haakjes () staan.
-2. Het schema van het resultaat van de `SELECT` instructie moet overeenkomen met dat van de tabel die in de `INSERT INTO` instructie is gedefinieerd.
+1. De instructie `SELECT` MOET NIET tussen haakjes () staan.
+2. Het schema van het resultaat van de instructie `SELECT` moet overeenkomen met dat van de tabel die is gedefinieerd in de instructie `INSERT INTO`.
+3. De `SELECT` verklaring kan met een clausule worden verstrekt SNAPSHOT om stijgende delta&#39;s in doellijst te lezen.
+
+```sql
+INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
+```
 
 ### DROP TABLE
 
@@ -171,13 +208,14 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 ## WEERGAVE MAKEN
 
-De volgende syntaxis definieert een `CREATE VIEW` query die wordt ondersteund door [!DNL Query Service]:
+De volgende syntaxis bepaalt een `CREATE VIEW` vraag die door [!DNL Query Service] wordt gesteund:
 
 ```sql
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
 ```
 
-Waar `view_name` is de naam van de weergave die moet worden gemaakt en `select_query` is een `SELECT` instructie waarvan de syntaxis hierboven in dit document is gedefinieerd.
+Waarbij `view_name` de naam is van de weergave die moet worden gemaakt
+en `select_query` is een `SELECT`-instructie, waarvan de syntaxis hierboven in dit document is gedefinieerd.
 
 Voorbeeld:
 
@@ -188,13 +226,13 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ### DROP VIEW
 
-De volgende syntaxis definieert een `DROP VIEW` query die wordt ondersteund door [!DNL Query Service]:
+De volgende syntaxis bepaalt een `DROP VIEW` vraag die door [!DNL Query Service] wordt gesteund:
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
 ```
 
-Waar `view_name` is de naam van de weergave die moet worden verwijderd
+Waarbij `view_name` de naam is van de weergave die moet worden verwijderd
 
 Voorbeeld:
 
@@ -219,7 +257,7 @@ Als u de waarde voor een instelling wilt retourneren, gebruikt u `SHOW [setting 
 
 ### BEGINNEN
 
-Dit bevel wordt ontleed en het voltooide bevel wordt teruggestuurd naar de cliënt. Dit is het zelfde als het `START TRANSACTION` bevel.
+Dit bevel wordt ontleed en het voltooide bevel wordt teruggestuurd naar de cliënt. Dit is het zelfde als `START TRANSACTION` bevel.
 
 ```sql
 BEGIN [ TRANSACTION ]
@@ -243,7 +281,7 @@ CLOSE { name }
 
 ### DOEN
 
-Er wordt geen actie ondernomen [!DNL Query Service] als reactie op de instructie commit transaction.
+Er wordt geen actie ondernomen in [!DNL Query Service] als antwoord op de commit transactieverklaring.
 
 ```sql
 COMMIT [ WORK | TRANSACTION ]
@@ -256,7 +294,7 @@ COMMIT [ WORK | TRANSACTION ]
 
 ### VERWIJDEREN
 
-Gebruik deze optie `DEALLOCATE` om een eerder voorbereide SQL-instructie te zoeken. Als u een voorbereide instructie niet expliciet zoekt, wordt de toewijzing ongedaan gemaakt wanneer de sessie wordt beëindigd.
+Gebruik `DEALLOCATE` om een eerder voorbereide SQL-instructie opnieuw te vinden. Als u een voorbereide instructie niet expliciet zoekt, wordt de toewijzing ongedaan gemaakt wanneer de sessie wordt beëindigd.
 
 ```sql
 DEALLOCATE [ PREPARE ] { name | ALL }
@@ -270,7 +308,7 @@ DEALLOCATE [ PREPARE ] { name | ALL }
 
 ### VERKLAREN
 
-`DECLARE` Hiermee kan een gebruiker cursors maken die kunnen worden gebruikt om een klein aantal rijen tegelijk op te halen uit een grotere query. Nadat de cursor is gemaakt, worden er rijen van opgehaald met `FETCH`.
+`DECLARE` Hiermee kan een gebruiker cursors maken die kunnen worden gebruikt om een klein aantal rijen tegelijk op te halen uit een grotere query. Nadat de curseur wordt gecreeerd, worden de rijen opgehaald van het gebruikend `FETCH`.
 
 ```sql
 DECLARE name CURSOR [ WITH  HOLD ] FOR query
@@ -280,13 +318,13 @@ DECLARE name CURSOR [ WITH  HOLD ] FOR query
 
 - `name`: De naam van de cursor die moet worden gemaakt.
 - `WITH HOLD`: Geeft aan dat de cursor kan blijven worden gebruikt nadat de transactie die deze heeft gemaakt, correct is toegewezen.
-- `query`: Een `SELECT` of `VALUES` opdracht die de rijen bevat die door de cursor moeten worden geretourneerd.
+- `query`: Een  `SELECT` of  `VALUES` opdracht die de rijen bevat die door de cursor moeten worden geretourneerd.
 
 ### UITVOEREN
 
-`EXECUTE` wordt gebruikt om een eerder voorbereide instructie uit te voeren. Omdat voorbereide instructies alleen bestaan voor de duur van een sessie, moet de voorbereide instructie zijn gemaakt door een `PREPARE` instructie die eerder in de huidige sessie is uitgevoerd.
+`EXECUTE` wordt gebruikt om een eerder voorbereide instructie uit te voeren. Omdat voorbereide instructies alleen bestaan voor de duur van een sessie, moet de voorbereide instructie zijn gemaakt door een instructie `PREPARE` die eerder in de huidige sessie is uitgevoerd.
 
-Als de `PREPARE` verklaring die tot de verklaring leidde sommige parameters specificeerde, moet een compatibele reeks parameters tot de `EXECUTE` verklaring worden overgegaan, anders wordt een fout opgeheven. Let op: instructies die zijn voorbereid (anders dan functies) worden niet overbelast op basis van het type of het aantal parameters. De naam van een voorbereide instructie moet uniek zijn binnen een databasesessie.
+Als de instructie `PREPARE` die de instructie heeft gemaakt enkele parameters heeft opgegeven, moet een compatibele set parameters worden doorgegeven aan de instructie `EXECUTE`, anders wordt een fout gegenereerd. Let op: instructies die zijn voorbereid (anders dan functies) worden niet overbelast op basis van het type of het aantal parameters. De naam van een voorbereide instructie moet uniek zijn binnen een databasesessie.
 
 ```sql
 EXECUTE name [ ( parameter [, ...] ) ]
@@ -301,9 +339,9 @@ EXECUTE name [ ( parameter [, ...] ) ]
 
 Dit bevel toont het uitvoeringsplan dat de planner PostgreSQL voor de geleverde verklaring produceert. Het uitvoeringsplan toont hoe de tabellen waarnaar door de instructie wordt verwezen, worden gescand — door gewone sequentiële scan, indexscan enzovoort — en als er naar meerdere tabellen wordt verwezen, welke samenvoegalgoritmen worden gebruikt om de vereiste rijen van elke invoertabel samen te voegen.
 
-Het meest kritieke deel van de vertoning is de geschatte kosten van de verklaringsuitvoering, die de gok van de planner bij hoe lang het zal duren om de verklaring in werking te stellen (die in kosteneenheden wordt gemeten die willekeurig zijn, maar gewoonlijk schijfpaginafhalen betekent). Eigenlijk worden twee getallen weergegeven: de opstartkosten vóór de eerste rij kunnen worden geretourneerd en de totale kosten voor het retourneren van alle rijen. Voor de meeste vragen, is de totale kosten wat belangrijk is, maar in contexten zoals subquery in EXISTS, kiest de planner de kleinste startkosten in plaats van de kleinste totale kosten (omdat de uitvoerder na het krijgen van één rij, hoe dan ook stopt). Ook, als u het aantal rijen beperkt om met een `LIMIT` clausule terug te keren, maakt de planner een aangewezen interpolatie tussen de eindpuntkosten om te schatten welk plan werkelijk het goedkoopst is.
+Het meest kritieke deel van de vertoning is de geschatte kosten van de verklaringsuitvoering, die de gok van de planner bij hoe lang het zal duren om de verklaring in werking te stellen (die in kosteneenheden wordt gemeten die willekeurig zijn, maar gewoonlijk schijfpaginafhalen betekent). Eigenlijk worden twee getallen weergegeven: de opstartkosten vóór de eerste rij kunnen worden geretourneerd en de totale kosten voor het retourneren van alle rijen. Voor de meeste vragen, is de totale kosten wat belangrijk is, maar in contexten zoals subquery in EXISTS, kiest de planner de kleinste startkosten in plaats van de kleinste totale kosten (omdat de uitvoerder na het krijgen van één rij, hoe dan ook stopt). Ook, als u het aantal rijen om met een `LIMIT` clausule beperkt terug te keren, maakt de planner een aangewezen interpolatie tussen de eindpuntkosten om te schatten welk plan werkelijk het goedkoopst is.
 
-De `ANALYZE` optie zorgt ervoor dat de instructie wordt uitgevoerd, niet alleen gepland. Dan, worden de daadwerkelijke runtime statistieken toegevoegd aan de vertoning, met inbegrip van de totale verstreken tijd die binnen elke planknoop (in milliseconden) wordt uitgegeven en het totale aantal rijen het teruggekeerde. Dit is nuttig om te zien of de ramingen van de planner dicht bij de realiteit staan.
+Met de optie `ANALYZE` wordt de instructie uitgevoerd, niet alleen gepland. Dan, worden de daadwerkelijke runtime statistieken toegevoegd aan de vertoning, met inbegrip van de totale verstreken tijd die binnen elke planknoop (in milliseconden) wordt uitgegeven en het totale aantal rijen het teruggekeerde. Dit is nuttig om te zien of de ramingen van de planner dicht bij de realiteit staan.
 
 ```sql
 EXPLAIN [ ( option [, ...] ) ] statement
@@ -317,13 +355,13 @@ where option can be one of:
 
 #### Parameters
 
-- `ANALYZE`: Voer het bevel uit en toon daadwerkelijke runtime en andere statistieken. Deze parameter is standaard ingesteld op `FALSE`.
-- `FORMAT`: Geef de uitvoerindeling op, die TEXT, XML, JSON of YAML kan zijn. Niet-tekstuele uitvoer bevat dezelfde informatie als de indeling voor tekstuitvoer, maar kan gemakkelijker door programma&#39;s worden geparseerd. Deze parameter is standaard ingesteld op `TEXT`.
-- `statement`: Om het even welk `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, of `CREATE MATERIALIZED VIEW AS` verklaring, waarvan uitvoeringsplan u wilt zien.
+- `ANALYZE`: Voer het bevel uit en toon daadwerkelijke runtime en andere statistieken. Deze parameter is standaard `FALSE`.
+- `FORMAT`: Geef de uitvoerindeling op, die TEXT, XML, JSON of YAML kan zijn. Niet-tekstuele uitvoer bevat dezelfde informatie als de indeling voor tekstuitvoer, maar kan gemakkelijker door programma&#39;s worden geparseerd. Deze parameter is standaard `TEXT`.
+- `statement`: Om het even welk  `SELECT`,  `INSERT`,  `UPDATE`,  `DELETE`,  `VALUES`,  `EXECUTE`,  `DECLARE`,  `CREATE TABLE AS`, of  `CREATE MATERIALIZED VIEW AS` verklaring, waarvan uitvoeringsplan u wilt zien.
 
 >[!IMPORTANT]
 >
->Onthoud dat de instructie daadwerkelijk wordt uitgevoerd wanneer de `ANALYZE` optie wordt gebruikt. Hoewel `EXPLAIN` `SELECT` alle uitvoer die een instructie retourneert, wordt genegeerd, treden andere bijwerkingen van de instructie op de gebruikelijke manier op.
+>Onthoud dat de instructie daadwerkelijk wordt uitgevoerd wanneer de optie `ANALYZE` wordt gebruikt. Hoewel `EXPLAIN` om het even welke output verwerpt die `SELECT` terugkeert, gebeuren andere bijwerkingen van de verklaring zoals gewoonlijk.
 
 #### Voorbeeld
 
@@ -342,7 +380,7 @@ EXPLAIN SELECT * FROM foo;
 
 `FETCH` Hiermee worden rijen opgehaald met een eerder gemaakte cursor.
 
-Een cursor heeft een bijbehorende positie, die wordt gebruikt door `FETCH`. De cursorpositie kan vóór de eerste rij van het vraagresultaat, op om het even welke bepaalde rij van het resultaat, of na de laatste rij van het resultaat zijn. Wanneer u een cursor maakt, wordt deze vóór de eerste rij geplaatst. Na het halen van sommige rijen, wordt de curseur geplaatst op de rij onlangs teruggewonnen. Als de cursor aan het einde van de beschikbare rijen `FETCH` loopt, wordt deze na de laatste rij geplaatst. Als er geen dergelijke rij is, wordt een leeg resultaat geretourneerd en worden de cursors vóór de eerste rij of na de laatste rij geplaatst, al naargelang wat van toepassing is.
+Een curseur heeft een bijbehorende positie, die door `FETCH` wordt gebruikt. De cursorpositie kan vóór de eerste rij van het vraagresultaat, op om het even welke bepaalde rij van het resultaat, of na de laatste rij van het resultaat zijn. Wanneer u een cursor maakt, wordt deze vóór de eerste rij geplaatst. Na het halen van sommige rijen, wordt de curseur geplaatst op de rij onlangs teruggewonnen. Als `FETCH` van het eind van de beschikbare rijen loopt dan wordt de curseur verlaten die na de laatste rij wordt geplaatst. Als er geen dergelijke rij is, wordt een leeg resultaat geretourneerd en worden de cursors vóór de eerste rij of na de laatste rij geplaatst, al naargelang wat van toepassing is.
 
 ```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
@@ -355,11 +393,11 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 ### PREPARE
 
-`PREPARE` maakt een voorbereide instructie. Een voorbereide instructie is een serverobject dat kan worden gebruikt om de prestaties te optimaliseren. Wanneer de `PREPARE` instructie wordt uitgevoerd, wordt de opgegeven instructie geparseerd, geanalyseerd en herschreven. Wanneer een `EXECUTE` bevel daarna wordt uitgegeven, wordt de voorbereide verklaring gepland en uitgevoerd. Deze arbeidsverdeling vermijdt herhalende parsanalyses, terwijl het uitvoeringsplan afhangt van de opgegeven specifieke parameterwaarden.
+`PREPARE` maakt een voorbereide instructie. Een voorbereide instructie is een serverobject dat kan worden gebruikt om de prestaties te optimaliseren. Wanneer de instructie `PREPARE` wordt uitgevoerd, wordt de opgegeven instructie geparseerd, geanalyseerd en herschreven. Wanneer een `EXECUTE` bevel daarna wordt uitgegeven, wordt de voorbereide verklaring gepland en uitgevoerd. Deze arbeidsverdeling vermijdt herhalende parsanalyses, terwijl het uitvoeringsplan afhangt van de opgegeven specifieke parameterwaarden.
 
-Bereide instructies kunnen parameters hebben, waarden die in de instructie worden vervangen wanneer deze wordt uitgevoerd. Wanneer het creëren van de voorbereide verklaring, verwijs naar parameters door positie, gebruikend $1, $2, etc. U kunt desgewenst een corresponderende lijst met parametergegevenstypen opgeven. Wanneer het gegevenstype van een parameter niet is opgegeven of als onbekend is gedeclareerd, wordt het type afgeleid van de context waarin voor het eerst naar de parameter wordt verwezen, indien mogelijk. Geef bij het uitvoeren van de instructie de werkelijke waarden voor deze parameters op in de `EXECUTE` instructie.
+Bereide instructies kunnen parameters hebben, waarden die in de instructie worden vervangen wanneer deze wordt uitgevoerd. Wanneer het creëren van de voorbereide verklaring, verwijs naar parameters door positie, gebruikend $1, $2, etc. U kunt desgewenst een corresponderende lijst met parametergegevenstypen opgeven. Wanneer het gegevenstype van een parameter niet is opgegeven of als onbekend is gedeclareerd, wordt het type afgeleid van de context waarin voor het eerst naar de parameter wordt verwezen, indien mogelijk. Wanneer het uitvoeren van de verklaring, specificeer de daadwerkelijke waarden voor deze parameters in de `EXECUTE` verklaring.
 
-Bereide instructies gelden alleen voor de duur van de huidige databasesessie. Wanneer de sessie wordt beëindigd, wordt de voorbereide instructie vergeten. U moet deze dus opnieuw maken voordat u de instructie opnieuw kunt gebruiken. Dit betekent ook dat één enkele voorbereide verklaring niet door veelvoudige gelijktijdige gegevensbestandcliënten kan worden gebruikt. Elke client kan echter een eigen voorbereide instructie maken die u wilt gebruiken. Vooraf voorbereide instructies kunnen handmatig worden opgeschoond met de `DEALLOCATE` opdracht.
+Bereide instructies gelden alleen voor de duur van de huidige databasesessie. Wanneer de sessie wordt beëindigd, wordt de voorbereide instructie vergeten. U moet deze dus opnieuw maken voordat u de instructie opnieuw kunt gebruiken. Dit betekent ook dat één enkele voorbereide verklaring niet door veelvoudige gelijktijdige gegevensbestandcliënten kan worden gebruikt. Elke client kan echter een eigen voorbereide instructie maken die u wilt gebruiken. Bereide instructies kunnen handmatig worden opgeschoond met de opdracht `DEALLOCATE`.
 
 Bereide instructies hebben mogelijk het grootste prestatievoordeel wanneer één sessie wordt gebruikt om een groot aantal vergelijkbare instructies uit te voeren. Het prestatiesverschil is met name significant als de verklaringen complex zijn om te plannen of te herschrijven, bijvoorbeeld als de vraag zich bij vele lijsten impliceert of de toepassing van verscheidene regels vereist. Als de verklaring vrij eenvoudig is om te plannen en te herschrijven maar vrij duur om uit te voeren, is het prestatievoordeel van voorbereide verklaringen minder merkbaar.
 
@@ -387,7 +425,7 @@ ROLLBACK [ WORK ]
 
 ### SELECTEREN IN
 
-`SELECT INTO` Hiermee maakt u een nieuwe tabel en vult u deze met gegevens die door een query zijn berekend. De gegevens worden niet aan de client geretourneerd, zoals bij een normale waarde `SELECT`. De kolommen van de nieuwe lijst hebben de namen en de gegevenstypes verbonden aan de outputkolommen van `SELECT`.
+`SELECT INTO` Hiermee maakt u een nieuwe tabel en vult u deze met gegevens die door een query zijn berekend. De gegevens worden niet aan de client geretourneerd, zoals bij een normale `SELECT`. De kolommen van de nieuwe lijst hebben de namen en de gegevenstypes verbonden aan de outputkolommen van `SELECT`.
 
 ```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
@@ -409,13 +447,13 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 #### Parameters
 
-- `TEMPORARAY` of `TEMP`: Indien opgegeven, wordt de tabel gemaakt als een tijdelijke tabel.
+- `TEMPORARAY` of  `TEMP`: Indien opgegeven, wordt de tabel gemaakt als een tijdelijke tabel.
 - `UNLOGGED:` indien opgegeven, wordt de tabel gemaakt als een niet-geregistreerde tabel.
 - `new_table` De naam (optioneel gekwalificeerd voor schema) van de tabel die moet worden gemaakt.
 
 #### Voorbeeld
 
-Een nieuwe tabel maken die alleen recente items uit de tabel `films_recent` bevat `films`:
+Een nieuwe tabel maken `films_recent` die alleen bestaat uit recente items in de tabel `films`:
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
@@ -423,7 +461,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### TONEN
 
-`SHOW` geeft de huidige instelling van runtimeparameters weer. Deze variabelen kunnen worden geplaatst gebruikend de `SET` verklaring, door het postgresql.conf configuratiedossier, door de `PGOPTIONS` milieuvariabele (wanneer het gebruiken van libpq of een libpq-Gebaseerde toepassing), of door bevel-lijn vlaggen te bewerken wanneer het beginnen van de postgres server.
+`SHOW` geeft de huidige instelling van runtimeparameters weer. Deze variabelen kunnen worden geplaatst gebruikend de `SET` verklaring, door het postgresql.conf configuratiedossier, door `PGOPTIONS` milieuvariabele (wanneer het gebruiken van libpq of een libpq-Gebaseerde toepassing), of door bevel-lijn vlaggen te bewerken wanneer het beginnen van de postgres server.
 
 ```sql
 SHOW name
@@ -441,7 +479,7 @@ SHOW name
 
 #### Voorbeeld
 
-Huidige instelling van parameter weergeven `DateStyle`
+Huidige instelling van parameter `DateStyle` weergeven
 
 ```sql
 SHOW DateStyle;
@@ -453,7 +491,7 @@ SHOW DateStyle;
 
 ### TRANSACTIE STARTEN
 
-Dit bevel wordt ontleed en verzendt het voltooide bevel terug naar cliënt. Dit is het zelfde als het `BEGIN` bevel.
+Dit bevel wordt ontleed en verzendt het voltooide bevel terug naar cliënt. Dit is het zelfde als `BEGIN` bevel.
 
 ```sql
 START TRANSACTION [ transaction_mode [, ...] ]
@@ -481,7 +519,7 @@ where 'format_name' is be one of:
 
 >[!NOTE]
 >
->Het volledige uitvoerpad wordt `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+>Het volledige uitvoerpad is `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
 
 ### ALTER
