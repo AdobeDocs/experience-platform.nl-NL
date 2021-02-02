@@ -5,7 +5,7 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 translation-type: tm+mt
-source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -138,7 +138,7 @@ ht-degree: 0%
       - [Betalingsgegevens verzamelen](tutorials/api/collect/payments.md)
       - [protocolgegevens verzamelen](tutorials/api/collect/protocols.md)
       - [Streaming gegevens verzamelen](tutorials/api/collect/streaming.md)
-   - [Parketgegevens uit een cloudopslagsysteem van een andere fabrikant verzamelen](tutorials/api/cloud-storage-parquet.md)
+   - [Bovenliggende gegevens uit een extern cloudopslagsysteem verzamelen](tutorials/api/cloud-storage-parquet.md)
    - [Een gegevenssetverbinding maken](tutorials/api/create-dataset-base-connection.md)
    - [Dataflows bewaken](tutorials/api/monitor.md)
    - [Verbindingen bijwerken](tutorials/api/update.md)
