@@ -5,15 +5,15 @@ user-guide-title: Adobe Experience Platform - Overzicht
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Leer hoe Experience Platform het mogelijk maakt om persoonlijke ervaringen aan uw klanten in real time te leveren.
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 3%
+source-wordcount: '161'
+ht-degree: 5%
 
 ---
 
 
-# Adobe Experience Platform overview {#landing}
+# Adobe Experience Platform-overzicht {#landing}
 
 * [Overzicht van Platform](home.md)
 * [Overzicht van Platforms (video)](video/platform-overview.md)
@@ -32,13 +32,20 @@ ht-degree: 3%
 * Experience Platform-API&#39;s {#platform-apis}
    * [API-basisbeginselen](api-fundamentals.md)
    * [API-naslagdocumenten](http://www.adobe.com/go/platform-api-reference-en)
-   * [Verifiëren voor Experience Platform-API&#39;s](http://www.adobe.com/go/platform-api-authentication-en)
-* Documentatie Platform {#documentation}
+   * [Zelfstudie voor het verifiëren en benaderen van Platform-API&#39;s](api-authentication.md)
+* Documentatie van Platform {#documentation}
    * [Documentatieoverzicht](documentation/overview.md)
+   * [Ondersteunde documentatietaal](documentation/language-support.md)
 * Platform in het ecosysteem van de Adobe {#ecosystem}
    * [Toepassingsservices](application-services.md)
    * [Application and Intelligent Services (video)](video/application-intelligent-services.md)
    * [Integraties van Platforms met Experience Cloud (video)](video/experience-cloud-integrations.md)
+* Beheer, privacy en beveiliging {#governance-privacy-security}
+   * [Overzicht](./governance-privacy-security/overview.md)
+   * Toestemmingsbeheer {#consent}
+      * IAB TCF 2.0 {#iab}
+         * [Overzicht](./governance-privacy-security/consent/iab/overview.md)
+         * [Een gegevensset configureren om toestemmings- en voorkeursgegevens vast te leggen](./governance-privacy-security/consent/iab/dataset.md)
 * [Het gebruiksdashboard voor licenties](license-usage-dashboard.md)
 * [Handleiding voor probleemoplossing](troubleshooting.md)
 * [ADLS Gen2-migratie](adls2-gen2-migration.md)
