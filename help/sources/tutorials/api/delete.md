@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;delete connections;delete;api
+keywords: Experience Platform;home;populaire onderwerpen;flowservice;delete verbindingen;delete;api
 solution: Experience Platform
 title: Een verbinding verwijderen met de Flow Service API
 topic: overview
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het verwijderen van een verbinding met de Flow Service API.
 translation-type: tm+mt
-source-git-commit: 9e28591ef9f07217363cddf72356b8e5cd8a15a3
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '595'
 ht-degree: 1%
 
 ---
@@ -16,36 +16,36 @@ ht-degree: 1%
 
 # Een verbinding verwijderen met de Flow Service API
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van [!DNL Platform] services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van [!DNL Platform]-services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-In deze zelfstudie worden de stappen beschreven voor het verwijderen van het gebruik van de [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Deze zelfstudie behandelt de stappen voor het verwijderen van het gebruik van [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
-Voor deze zelfstudie moet u een geldige verbinding-id hebben. Als u geen geldige verbinding-id hebt, selecteert u de gewenste connector in het overzicht [van](../../home.md) bronnen en volgt u de stappen die worden beschreven voordat u deze zelfstudie probeert.
+Voor deze zelfstudie moet u een geldige verbinding-id hebben. Als u geen geldige verbindingsID hebt, selecteer uw schakelaar van keus van [bronnen overzicht](../../home.md) en volg de stappen geschetst alvorens dit leerprogramma te proberen.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
-* [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
+* [Sandboxen](../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met de [!DNL Flow Service] API te kunnen verwijderen.
+De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met de API [!DNL Flow Service] te kunnen verwijderen.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot [!DNL Flow Service]behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -56,7 +56,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 ## Verbindingsdetails opzoeken
 
 >[!NOTE]
->Deze zelfstudie gebruikt de bronconnector [van](../../connectors/cloud-storage/blob.md) Azure Blob als voorbeeld, maar de stappen die worden beschreven, zijn van toepassing op alle [beschikbare bronconnectors](../../home.md).
+>Deze zelfstudie gebruikt als voorbeeld de [Azure Blob-bronconnector](../../connectors/cloud-storage/blob.md), maar de stappen die worden beschreven, zijn van toepassing op elk van de [beschikbare bronconnectors](../../home.md).
 
 De eerste stap bij het bijwerken van uw verbindingsgegevens is het ophalen van verbindingsgegevens met behulp van uw verbindings-id.
 
@@ -68,7 +68,7 @@ GET /connections/{CONNECTION_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | De unieke `id` waarde voor de verbinding die u wilt ophalen. |
+| `{CONNECTION_ID}` | De unieke `id`-waarde voor de verbinding die u wilt ophalen. |
 
 **Verzoek**
 
@@ -85,7 +85,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvol antwoord retourneert de huidige details van de verbinding, inclusief de referenties, unieke id (`id`) en versie.
+Een succesvolle reactie keert de huidige details van uw verbinding met inbegrip van zijn geloofsbrieven, uniek herkenningsteken (`id`), en versie terug.
 
 ```json
 {
@@ -122,7 +122,7 @@ Een succesvol antwoord retourneert de huidige details van de verbinding, inclusi
 
 ## Verbinding verwijderen
 
-Zodra u een bestaande verbindingsidentiteitskaart hebt, voer een verzoek van de DELETE aan [!DNL Flow Service] API uit.
+Zodra u een bestaande verbindingsidentiteitskaart hebt, voer een verzoek van DELETE aan [!DNL Flow Service] API uit.
 
 **API-indeling**
 
@@ -132,7 +132,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | De unieke `id` waarde voor de verbinding die u wilt verwijderen. |
+| `{CONNECTION_ID}` | De unieke `id`-waarde voor de verbinding die u wilt verwijderen. |
 
 **Verzoek**
 
@@ -153,6 +153,6 @@ U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan de verbin
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u de [!DNL Flow Service] API gebruikt om bestaande accounts te verwijderen.
+Door deze zelfstudie te volgen, hebt u met succes de [!DNL Flow Service] API gebruikt om bestaande rekeningen te schrappen.
 
-Raadpleeg de zelfstudie over het [verwijderen van accounts in de gebruikersinterface voor informatie over het uitvoeren van deze bewerkingen in de gebruikersinterface](../../tutorials/ui/delete-accounts.md)
+Raadpleeg de zelfstudie over het verwijderen van accounts in de gebruikersinterface voor informatie over het uitvoeren van deze bewerkingen in de gebruikersinterface.[](../../tutorials/ui/delete-accounts.md)
