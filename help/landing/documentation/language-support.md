@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
+keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de analyse van de klantenreis;campagneorchestratie;orchestratie;klantenreis;reis;reis orchestratie;vermogen;regio
 solution: Experience Platform
-title: Taalondersteuning voor documentatie over Platforms
+title: Taalondersteuning voor documentatie over Experience Platforms
 topic: getting started
-description: Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. Experience Platform stelt organisaties in staat om klantgegevens en -inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
+description: Adobe Experience Platform stelt organisaties in staat klantgegevens te centraliseren en te standaardiseren voordat ze dataletterdheid en computerleren toepassen, zodat ze het ontwerp en de levering van rijke, persoonlijke ervaringen aanzienlijk kunnen verbeteren.
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 1%
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
 
-# Taalondersteuning voor documentatie over Platforms
+# Taalondersteuning voor documentatie over Experience Platforms
 
-De documentatie van Adobe Experience Platform is beschikbaar in verscheidene talen. Als u de taal wilt wijzigen, klikt u op de vervolgkeuzelijst Taal en selecteert u de gewenste taal.
+De documentatie van Adobe Experience Platform is beschikbaar in veelvoudige talen.
 
-![afbeelding](../images/overview/lang.jpg)
+Als u de taal wilt wijzigen waarin de documentatie wordt weergegeven, selecteert u het taalpictogram in de bovenste navigatie.
 
-## [!DNL Experience Platform] documentatie
+![](../images/overview/documentation-language.png)
 
-Voor meer informatie over de typen documentatie die beschikbaar zijn, gaat u naar het overzicht [van de documentatietypen van het](overview.md)Platform.
+Wanneer het taaldrop-down opent, kies de taal waarin u de documentatie wilt bekijken.
 
-Als u meer wilt weten over een bepaalde [!DNL Platform] functie of service, selecteert u een hulplijn op de openingspagina [van de documentatie bij het](https://experienceleague.adobe.com/docs/experience-platform.html)Experience Platform.
+![](../images/overview/documentation-language-select.png)
