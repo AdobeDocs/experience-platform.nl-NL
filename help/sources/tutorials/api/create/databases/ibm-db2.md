@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;IBM DB2;IBM;ibm db2;db2;DB2
+keywords: Experience Platform;home;populaire onderwerpen;IBM DB2;IBM;ibm db2;db2;DB2
 solution: Experience Platform
 title: Een IBM DB2-connector maken met de Flow Service API
 topic: overview
 type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om IBM DB2 (hierna "DB2" genoemd) aan Experience Platform te verbinden.
 translation-type: tm+mt
-source-git-commit: 36620a229fc8e6e3fa4545bfc775a49bc89935bb
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 1%
+source-wordcount: '606'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +49,7 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
