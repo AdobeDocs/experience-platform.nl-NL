@@ -1,13 +1,13 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;destinations;destination;rtcdp
+keywords: doelen;adobe Experience platform;platform;bestemmingen, overzicht;activate gegevens;activate;
 title: Overzicht van bestemmingen
 seo-title: Overzicht van bestemmingen
 description: Activeer de gegevens van het Platform aan bestemmingen voor kanaalmarketing campagnes, e-mail, gerichte reclame, en meer.
-seo-description: Doelen zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt Doelen in het Platform van de Gegevens van de Klant in real time gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+seo-description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 32eae2ed782e46941bb21e3aca62c6bce68cde1e
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '488'
 ht-degree: 1%
 
 ---
@@ -17,54 +17,54 @@ ht-degree: 1%
 
 ![Overzicht van doelen banner](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van het Platform van de Gegevens van de Klant in real time toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+**[!DNL Destinations]** zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 
 ## Doelen en bronnen {#destinations-and-sources}
 
-Één van de kernfuncties van CDP in real time neemt uw eerste-partijgegevens op en activeert het voor uw bedrijfsbehoeften. De bronnen van het gebruik om gegevens in CDP in real time en bestemmingen in te voeren om gegevens van CDP in real time uit te voeren.
+Een van de kernfuncties van Platform is het opnemen van uw gegevens van de eerste partij en het activeren ervan voor uw bedrijfsbehoeften. Gebruik bronnen om gegevens in te voeren in Platform en doelen om gegevens uit Platform te exporteren.
 
 ## Doelstappen {#steps}
 
-* Kies uit een [zelfbedieningencatalogus](./catalog/overview.md) van alle bestemmingen beschikbaar in Echt - tijd CDP.
-* Gebruik **[!UICONTROL Doelen]** om profielen of segmenten te [activeren](./ui/activate-destinations.md) en te verzenden naar marketingautomatiseringsplatforms, digitale advertentieplatforms en meer.
+* Kies uit een [zelfbedieningencatalogus](./catalog/overview.md) van alle bestemmingen beschikbaar in Platform.
+* Gebruik **[!UICONTROL Doelen]** tot [activeren](./ui/activate-destinations.md) en verzend profielen of segmenten naar marketingautomatiseringsplatforms, digitale advertentieplatforms, en meer.
 * De gegevens van het programma voeren regelmatig naar uw aangewezen bestemmingen uit.
 
 ## Besturingselementen {#controls}
 
-Met de besturingselementen in de werkruimte [](./ui/destinations-workspace.md) Doelen kunt u:
+Met de besturingselementen in de [werkruimte Doelen](./ui/destinations-workspace.md) kunt u:
 
 * Blader door de catalogus met doelplatforms waar u uw gegevens kunt activeren;
 * Gegevensstromen naar de doelen in de catalogus maken, bewerken, activeren en uitschakelen;
-* Maak een account in een opslaglocatie of koppel Real-time CDP aan de account in het doelplatform.
+* Maak een account op een opslaglocatie of koppel een Platform naar de account op het doelplatform;
 * Selecteer welke segmenten moeten worden geactiveerd voor bestemmingen;
-* Selecteer welke XDM-velden ( [](../xdm/home.md) Experience Data Model) u wilt exporteren wanneer u segmenten activeert naar e-mailmarketingdoelen.
+* Selecteer welke [XDM-velden (Experience Data Model)](../xdm/home.md) moeten worden geëxporteerd wanneer u segmenten activeert naar marketingdoelen via e-mail.
 
-## Destination types and categories {#types-and-categories}
+## Doeltypen en -categorieën {#types-and-categories}
 
-Voor gedetailleerde informatie, zie de [bestemmingstypes en categoriesoverzicht](./destination-types.md).
+Voor gedetailleerde informatie, zie [bestemmingstypes en categorieën overzicht](./destination-types.md).
 
-## Doelen en toegangscontroles {#access-controls}
+## Bestemmingen en Toegangsbesturingselementen {#access-controls}
 
-De bestemmingsfunctionaliteit in CDP in real time werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Zie [Toegangsbeheer in Adobe Experience Platform](../access-control/home.md) en schuif omlaag naar de onderkant van de pagina voor informatie over de individuele machtigingen.
+De bestemmingsfunctionaliteit in Platform werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Voor informatie over de individuele toestemmingen, zie [Toegangsbeheer in Adobe Experience Platform](../access-control/home.md) en rol neer aan de bodem van de pagina.
 
-Voor meer informatie over toegangscontroles, zie de handleiding [van de controlegebruiker van de](../access-control/ui/overview.md)Toegang.
+Voor meer informatie over toegangscontroles, zie [de gebruikershandleiding van het Toegangsbeheer](../access-control/ui/overview.md).
 
-## [!DNL Data Governance] beperkingen op het activeren van gegevens naar bestemmingen {#data-governance}
+## [!DNL Data Governance] beperkingen op het activeren van gegevens naar bestemmingen  {#data-governance}
 
-Het beheer van gegevens wordt afgedwongen voor CDP-bestemmingen in real time via:
+Het gegevensbeheer wordt afgedwongen voor bestemmingen in de Platform via:
 
-* *Gebruiksgevallen* voor marketing die u kunt selecteren in de workflow voor het maken van doelen.
-* *Beleid* voor gegevensgebruik dat gegevens met bepaalde gebruikslabels beperkt van activering tot bestemmingen met bepaalde gevallen van marketinggebruik.
+* *Gebruikssituaties voor marketingdoeleinden* die u kunt selecteren in de workflow voor het maken van doelen.
+* *Beleid* voor gegevensgebruik dat bepaalt dat gegevens met bepaalde gebruikslabels niet mogen worden geactiveerd voor bestemmingen met bepaalde gevallen van marketinggebruik.
 
-Zie de [!DNL Data Governance] in CDP in real time documentatie voor meer informatie over de [marketing gebruiksgevallen](../rtcdp/privacy/data-governance-overview.md#destinations) en het [oplossen van de schendingen](../rtcdp/privacy/data-governance-overview.md#enforcement)van het gegevensbeleid.
+Zie [!DNL Data Governance] in de documentatie van het Platform voor meer informatie over [marketing gebruiksgevallen](../data-governance/policies/overview.md) en [het oplossen van gegevensbeleidsschendingen](../data-governance/enforcement/auto-enforcement.md).
 
-Voor meer informatie over het selecteren van marketing gebruiksgevallen in creeer bestemmingswerkschema, zie de volgende pagina&#39;s voor de verschillende bestemmingstypes in Echt - tijd CDP:
+Raadpleeg de volgende pagina&#39;s voor de verschillende doeltypen in het Platform voor meer informatie over het selecteren van gevallen van marketinggebruik in de workflow voor het maken van een bestemming:
 
-* [Reclamebestemmingen - Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
+* [Reclamebestemmingen - Google Ad Manager  ](./catalog/advertising/google-ad-manager.md)
 * [Reclamebestemmingen - Google Ads](./catalog/advertising/google-ads-destination.md)
-* [Advertentiebestemmingen - Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
+* [Advertentiebestemmingen - Google Display &amp; Video 360  ](./catalog/advertising/google-dv360.md)
 * [Opslagdoelen voor cloud](./catalog/cloud-storage/workflow.md)
 * [E-mailmarketingdoelen](./catalog/email-marketing/overview.md)
 * [Sociale netwerkbestemmingen](./catalog/social/workflow.md)
 
-Voor meer informatie over de schendingen van het gegevensbeleid in het werkschema van de segmentactivering, zie de stap van het Overzicht in [activeert profielen en segmenten aan een bestemming](./ui/activate-destinations.md#review).
+Voor meer informatie over de schendingen van gegevensbeleid in het werkschema van de segmentactivering, zie de stap van het Overzicht in [Activate profielen en segmenten aan een bestemming](./ui/activate-destinations.md#review).
