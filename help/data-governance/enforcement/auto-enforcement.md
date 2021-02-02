@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform;home;populaire onderwerpen;Beleidshandhaving;Automatische handhaving;API-gebaseerde handhaving;gegevensbeheer
 solution: Experience Platform
-title: Overzicht van beleidshandhaving
-topic: enforcement
+title: Automatische beleidshandhaving
+topic: guide
 description: Dit document behandelt hoe het beleid van het gegevensgebruik automatisch wordt afgedwongen wanneer het activeren van segmenten aan bestemmingen in Experience Platform.
 translation-type: tm+mt
-source-git-commit: 385084f3de2ebfcbee94d6b0c116dae82f5df764
+source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1128'
 ht-degree: 0%
 
 ---
