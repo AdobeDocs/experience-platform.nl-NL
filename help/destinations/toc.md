@@ -3,10 +3,11 @@ product: experience-platform
 audience: user
 user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
+description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 translation-type: tm+mt
-source-git-commit: 395a8c2aa7fc89cde04263dbbfb3315318245ef6
+source-git-commit: b348a5493b13112291dd8e9234d457ff8c694147
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
@@ -27,9 +28,9 @@ ht-degree: 0%
 * Doelcatalogus {#catalog}
    * [Overzicht van de doelcatalogus](./catalog/overview.md)
    * [ (Alpha) HTTP-bestemming](./catalog/http-destination.md)
-   * Adobe-bestemmingen{#adobe}
+   * Adobe bestemmingen{#adobe}
       * [Overzicht van Adobe-doelen](./catalog/adobe/overview.md)
-      * [Delen van Experience Platform](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Delen van Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Reclamebestemmingen{#advertising}
       * [Overzicht van advertentiebestemmingen](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-bestemming](./catalog/advertising/adobe-advertising-cloud.md)
@@ -72,14 +73,15 @@ ht-degree: 0%
       * [SessionCam-doel](./catalog/analytics/sessioncam.md)
       * [TMMData-bestemming](./catalog/analytics/tmmdata.md)
       * [Doel voor tekstconversie bijhouden](./catalog/analytics/yext.md)
-   * Opslagdoelen voor cloud{#cloud-storage}
+   * Cloudopslagbestemmingen{#cloud-storage}
       * [Overzicht van opslagdoelen voor cloud](./catalog/cloud-storage/overview.md)
       * [Workflow voor het maken van cloudopslagdoelen](./catalog/cloud-storage/workflow.md)
       * [Amazon Kinesis-bestemming](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3-bestemming](./catalog/cloud-storage/amazon-s3.md)
+      * [Azure Blob-bestemming](./catalog/cloud-storage/azure-blob.md)
       * [Azure Event Hubs-bestemming](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP-bestemming](./catalog/cloud-storage/sftp.md)
-   * Platforms voor gegevensbeheer {#data-management}
+   * Gebieden van het Platform van het Gegevensbeheer {#data-management}
       * [Overzicht van gegevensbeheerdoelen voor Platforms](./catalog/data-management/overview.md)
       * [DIL Audience Manager bestemming](./catalog/data-management/aam-dil-extension.md)
    * E-maildoelen {#email}
@@ -93,7 +95,7 @@ ht-degree: 0%
       * [Oracle Eloqua-bestemming](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle Responsys-bestemming](./catalog/email-marketing/oracle-responsys.md)
       * [Salesforce-Marketing Cloud bestemming](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * Experience Platform Launch-extensies{#launch-extensions}
+   * Experience Platforms Launch extensies{#launch-extensions}
       * [Overzicht van extensies voor Experience Platforms Launch](./catalog/launch-extensions/overview.md)
    * Mobiele betrokkenheidsdoelen {#mobile-engagement}
       * [Overzicht van mobiele betrokkenheidsdoelen](./catalog/mobile-engagement/overview.md)
@@ -110,18 +112,18 @@ ht-degree: 0%
       * [Doel verzamelen](./catalog/personalization/gainsight.md)
       * [Kickfire-bestemming](./catalog/personalization/kickfire.md)
       * [Marketo Web Persoonlijke bestemming](./catalog/personalization/marketo-web-personalization.md)
-   * Sociale netwerkbestemmingen{#social}
+   * Lokale netwerkdoelen{#social}
       * [Overzicht van sociale netwerkbestemmingen](./catalog/social/overview.md)
       * [Verificatiestroom naar sociale netwerkdoelen](./catalog/social/workflow.md)
       * [Adobe Livefyre-bestemming](./catalog/social/adobe-livefyre.md)
       * [Facebook-bestemming](./catalog/social/facebook.md)
-   * Onderzoeksbestemmingen {#survey}
+   * Beoordelingsdoelen {#survey}
       * [Overzicht van de enquêtedoelen](./catalog/survey/overview.md)
       * [Voorziene bestemming](./catalog/survey/foresee.md)
       * [InMoment-bestemming](./catalog/survey/inmoment.md)
       * [Feedbackdoel website van Qualtrics](./catalog/survey/qualtrics.md)
       * [Web Intercept-enquêtes - VraagPro-bestemming](./catalog/survey/web-intercept-surveys.md)
-   * Stem van de klantenbestemmingen {#voice}
+   * Spraak van de klantbestemmingen {#voice}
       * [Stem van het overzicht van klantenbestemmingen](./catalog/voice/overview.md)
       * [Digitale feedbackbestemming bevestigen](./catalog/voice/confirmit-digital-feedback.md)
       * [Doel van aanroeplabels](./catalog/voice/invoca.md)
