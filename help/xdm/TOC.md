@@ -5,10 +5,10 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik XDM-klassen (Experience Data Model) en -mixen om ervaringsgegevens te standaardiseren.
 translation-type: tm+mt
-source-git-commit: baf39df0e03170d6b2b5a151e753d4ad269a43fa
+source-git-commit: 2c0dc4d54dcd1dcd17ffec70dbe3b16bb45ee141
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 6%
+source-wordcount: '217'
+ht-degree: 5%
 
 ---
 
@@ -48,12 +48,14 @@ ht-degree: 6%
    * [Gegevens over geointeractie](./data-types/geo-interaction-details.md)
    * [Geo-vorm](./data-types/geo-shape.md)
    * [Identiteit](./data-types/identity.md)
+   * [Persoon](./data-types/person.md)
    * [Naam persoon](./data-types/person-name.md)
    * [Telefoonnummer](./data-types/phone-number.md)
    * [Context plaatsen](./data-types/place-context.md)
    * [Details van POI](./data-types/poi-details.md)
    * [POI-interactie](./data-types/poi-interaction.md)
    * [Postadres](./data-types/postal-address.md)
+   * [Abonnement](./data-types/subscription.md)
 *  SchemasUI  {#ui}
    * [Overzicht](./ui/overview.md)
    * [XDM-bronnen verkennen](./ui/explore.md)
