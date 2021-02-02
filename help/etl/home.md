@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;ETL;etl;etl integrations;ETL integrations
+keywords: Experience Platform;thuis;populaire onderwerpen;ETL;etl;etl integraties;ETL-integratie
 solution: Experience Platform
 title: ETL-integratie maken
 topic: overview
 description: De ETL-integratiehandleiding beschrijft algemene stappen voor het maken van krachtige, veilige connectors voor Experience Platform en het opnemen van gegevens in het Platform.
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '4117'
+source-wordcount: '4139'
 ht-degree: 0%
 
 ---
@@ -15,18 +15,18 @@ ht-degree: 0%
 
 # Ontwikkeling van ETL-integratie voor Adobe Experience Platform
 
-De ETL-integratiehandleiding beschrijft algemene stappen voor het maken van krachtige, veilige connectors voor [!DNL Experience Platform] en het opnemen van gegevens in [!DNL Platform].
+In de ETL-integratiehandleiding worden algemene stappen beschreven voor het maken van krachtige, veilige connectors voor [!DNL Experience Platform] en het opnemen van gegevens in [!DNL Platform].
 
 
 - [[!DNL Catalog]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
 - [[!DNL Data Access]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)
 - [[!DNL Data Ingestion]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
-- [API&#39;s voor verificatie en autorisatie](../tutorials/authentication.md)
+- [Verificatie en autorisatie voor Experience Platform-API&#39;s](https://www.adobe.com/go/platform-api-authentication-en)
 - [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
 
-Deze handleiding bevat ook voorbeeld-API-aanroepen die moeten worden gebruikt bij het ontwerpen van een ETL-connector, met koppelingen naar documentatie waarin elke [!DNL Experience Platform] service wordt beschreven, en het gebruik van de API, meer in detail.
+Deze handleiding bevat ook voorbeeld-API-aanroepen die moeten worden gebruikt bij het ontwerpen van een ETL-connector, met koppelingen naar documentatie waarin elke [!DNL Experience Platform]-service wordt beschreven en waarin meer in detail wordt ingegaan op het gebruik van de bijbehorende API.
 
-Er is een voorbeeldintegratie beschikbaar op [!DNL GitHub] via de [ETL Ecosystem Integration Reference Code](https://github.com/adobe/acp-data-services-etl-reference) onder de [!DNL Apache] Licentie Versie 2.0.
+Een voorbeeldintegratie is beschikbaar op [!DNL GitHub] via [ETL Ecosystem Integration Reference Code](https://github.com/adobe/acp-data-services-etl-reference) onder [!DNL Apache] License Version 2.0.
 
 ## Workflow
 
@@ -38,26 +38,26 @@ Het volgende workflowdiagram biedt een overzicht op hoog niveau voor de integrat
 
 Er zijn veelvoudige Experience Platform componenten betrokken bij ETL schakelaarintegratie. In de volgende lijst worden verschillende belangrijke componenten en functies beschreven:
 
-- **Adobe Identity Management System (IMS)** - Biedt een kader voor verificatie van Adobe-services.
-- **IMS-organisatie** - een organisatie die producten en diensten kan bezitten of in licentie kan geven en toegang kan verlenen tot haar leden.
-- **IMS-gebruiker** - leden van een IMS-organisatie. De relatie Organisatie met gebruiker is veel te veel.
-- **[!DNL Sandbox]** - Een virtuele partitie die één [!DNL Platform] instantie vormt, om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
-- **Gegevensdetectie** - Registreert de metagegevens van opgenomen en getransformeerde gegevens in [!DNL Experience Platform].
-- **[!DNL Data Access]** - Biedt gebruikers een interface om toegang te krijgen tot hun gegevens in [!DNL Experience Platform].
-- **[!DNL Data Ingestion]** - Past gegevens aan [!DNL Experience Platform] [!DNL Data Ingestion] met APIs.
-- **[!DNL Schema Registry]** - Definieert en slaat schema op dat de structuur van gegevens beschrijft waarin gegevens moeten worden gebruikt [!DNL Experience Platform].
+- **Adobe Identity Management System (IMS)** : biedt een framework voor verificatie van Adobe-services.
+- **IMS-organisatie** : een organisatie die producten en diensten kan bezitten of in licentie kan geven en toegang kan verlenen tot haar leden.
+- **IMS-gebruiker** : leden van een IMS-organisatie. De relatie Organisatie met gebruiker is veel te veel.
+- **[!DNL Sandbox]** - Een virtuele partitie die één  [!DNL Platform] instantie vormt, om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- **Gegevensdetectie** : neemt de metagegevens van opgenomen en getransformeerde gegevens op in  [!DNL Experience Platform].
+- **[!DNL Data Access]** - Biedt gebruikers een interface om toegang te krijgen tot hun gegevens in  [!DNL Experience Platform].
+- **[!DNL Data Ingestion]** - Past gegevens aan  [!DNL Experience Platform] met  [!DNL Data Ingestion] APIs.
+- **[!DNL Schema Registry]** - Definieert en slaat schema op dat de structuur van gegevens beschrijft waarin gegevens moeten worden gebruikt  [!DNL Experience Platform].
 
-## Getting started with [!DNL Experience Platform] APIs
+## Aan de slag met [!DNL Experience Platform] API&#39;s
 
-De volgende secties verstrekken extra informatie die u zult moeten kennen of hebben om met succes vraag aan APIs te maken. [!DNL Experience Platform]
+De volgende secties verstrekken extra informatie die u zult moeten kennen of hebben aan hand om met succes vraag aan [!DNL Experience Platform] APIs te maken.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -69,7 +69,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../sandboxes/home.md)sandbox.
+>Raadpleeg de documentatie [sandbox-overzicht](../sandboxes/home.md) voor meer informatie over sandboxen in [!DNL Platform].
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -79,11 +79,11 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 Om te beginnen, registreert een gebruiker ETL in het [!DNL Experience Platform] gebruikersinterface (UI) en leidt datasets voor opname gebruikend een standaardschakelaar of een duw-dienst schakelaar.
 
-In UI, leidt de gebruiker tot de outputdataset door een datasetschema te selecteren. De keuze van het schema hangt af van het type gegevens (record- of tijdreeks) waarin de gegevens worden opgenomen [!DNL Platform]. Door op het lusje van Schema binnen UI te klikken, zal de gebruiker alle beschikbare schema&#39;s, met inbegrip van het gedragstype kunnen bekijken dat het schema steunt.
+In UI, leidt de gebruiker tot de outputdataset door een datasetschema te selecteren. De keuze van het schema hangt af van het type gegevens (record- of tijdreeks) dat in [!DNL Platform] wordt ingevoerd. Door op het lusje van Schema binnen UI te klikken, zal de gebruiker alle beschikbare schema&#39;s, met inbegrip van het gedragstype kunnen bekijken dat het schema steunt.
 
-In ETL zal de gebruiker beginnen hun toewijzingstransformaties te ontwerpen nadat de aangewezen verbinding (gebruikend hun geloofsbrieven) wordt gevormd. Het ETL-hulpprogramma wordt verondersteld dat al [!DNL Experience Platform] connectors zijn geïnstalleerd (proces niet gedefinieerd in deze integratiegids).
+In ETL zal de gebruiker beginnen hun toewijzingstransformaties te ontwerpen nadat de aangewezen verbinding (gebruikend hun geloofsbrieven) wordt gevormd. Er wordt aangenomen dat [!DNL Experience Platform]-connectors al zijn geïnstalleerd (proces niet gedefinieerd in deze integratiegids).
 
-In de [ETL-workflow](./workflow.md)zijn modellen voor een voorbeeld-ETL-tool en -workflow opgenomen. Hoewel de ETL-gereedschappen verschillende indelingen kunnen hebben, zijn de meeste toepassingen beschikbaar voor vergelijkbare functies.
+In de [ETL-workflow](./workflow.md) zijn modellen voor een voorbeeld-ETL-tool en -workflow opgenomen. Hoewel de ETL-gereedschappen verschillende indelingen kunnen hebben, zijn de meeste toepassingen beschikbaar voor vergelijkbare functies.
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ In de [ETL-workflow](./workflow.md)zijn modellen voor een voorbeeld-ETL-tool en 
 
 Gebruikend de bron van gegevens voor afbeelding, kan een lijst van alle beschikbare datasets worden gehaald gebruikend [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
-U kunt één API-verzoek indienen om alle beschikbare gegevenssets te bekijken (bijvoorbeeld `GET /dataSets`), met best practices om queryparameters op te nemen die de grootte van de reactie beperken.
+U kunt één API-verzoek indienen om alle beschikbare gegevenssets te bekijken (bijvoorbeeld `GET /dataSets`), met beste praktijken die zijn om vraagparameters te omvatten die de grootte van de reactie beperken.
 
 In gevallen waarin volledige gegevenssetinformatie wordt gevraagd, kan de antwoordlading voorbij 3 GB in grootte bereiken, die algemene prestaties kan vertragen. Daarom zal het gebruiken van vraagparameters om slechts de benodigde informatie te filtreren [!DNL Catalog] vragen efficiënter maken.
 
@@ -104,12 +104,12 @@ Wanneer het filtreren van reacties, kunt u veelvoudige filters in één enkele v
 [!DNL Catalog] de reacties worden automatisch gemeten volgens gevormde grenzen, nochtans kan de &quot;grens&quot;vraagparameter worden gebruikt om de beperkingen aan te passen en het aantal teruggekeerde voorwerpen te beperken. De vooraf geconfigureerde [!DNL Catalog] responslimieten zijn:
 
 - Als er geen limietparameter is opgegeven, is het maximumaantal objecten per antwoordlading 20.
-- De algemene limiet voor alle andere [!DNL Catalog] query&#39;s is 100 objecten.
+- De globale grens voor alle andere [!DNL Catalog] vragen is 100 voorwerpen.
 - Voor datasetvragen, als observableSchema wordt gevraagd gebruikend de parameter van de eigenschappenvraag, is het maximumaantal teruggekeerde datasets 20.
-- Ongeldige limietparameters (inclusief `limit=0`) worden gevonden met een HTTP 400-fout die juiste bereiken omlijnt.
+- Ongeldige limietparameters (met inbegrip van `limit=0`) worden voldaan aan een fout van HTTP 400 die juiste waaiers schetst.
 - Als limieten of verschuivingen als queryparameters worden doorgegeven, hebben ze voorrang op de parameters die als kopteksten worden doorgegeven.
 
-De parameters van de vraag worden behandeld meer in detail in het overzicht [van de Dienst van de](../catalog/home.md)Catalogus.
+De parameters van de vraag worden behandeld meer in detail in [Overzicht van de Dienst van de Catalogus](../catalog/home.md).
 
 **API-indeling**
 
@@ -128,11 +128,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-Gelieve te verwijzen naar het overzicht [van de Dienst van de](../catalog/home.md) Catalogus voor gedetailleerde voorbeelden van hoe te om vraag aan [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml). te maken
+Raadpleeg het [Overzicht van de catalogusservice](../catalog/home.md) voor gedetailleerde voorbeelden van het maken van aanroepen naar [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
 **Antwoord**
 
-De reactie omvat drie (`limit=3`) datasets die de &quot;naam&quot;, &quot;beschrijving&quot;, en &quot;schemaRef&quot;zoals die door de `properties` vraagparameter wordt vermeld tonen.
+De reactie omvat drie (`limit=3`) datasets die de &quot;naam&quot;, &quot;beschrijving&quot;, en &quot;schemaRef&quot;zoals die door `properties` vraagparameter wordt vermeld tonen.
 
 ```json
 {
@@ -169,11 +169,11 @@ Het &quot;schemaRef&quot;bezit van een dataset bevat URI die het XDM schema van 
 
 Het XDM-schema is het schema dat u gebruikt wanneer u de gebruiker een lijst moet geven met alle beschikbare velden waarnaar kan worden geschreven.
 
-De eerste waarde &quot;schemaRef.id&quot; in het vorige reactieobject (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) is een URI die naar een specifiek XDM-schema in het [!DNL Schema Registry]bestand wijst. Het schema kan worden opgehaald door een opzoekaanvraag (GET) in te dienen bij de [!DNL Schema Registry] API.
+De eerste &quot;schemaRef.id&quot;waarde in het vorige reactievoorwerp (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) is URI die aan een specifiek schema XDM in [!DNL Schema Registry] richt. Het schema kan worden teruggewonnen door een raadpleging (GET) verzoek aan [!DNL Schema Registry] API te maken.
 
 >[!NOTE]
 >
->De eigenschap &quot;schemaRef&quot; vervangt de nu afgekeurde eigenschap &quot;schema&quot;. Als &quot;schemaRef&quot;van de dataset afwezig is of geen waarde bevat, zult u de aanwezigheid van een &quot;schema&quot;bezit moeten controleren. Dit zou kunnen worden gedaan door &quot;schemaRef&quot;met &quot;schema&quot;in de `properties` vraagparameter in de vorige vraag te vervangen. Meer details over het &quot;schema&quot;bezit zijn beschikbaar in de sectie van het Bezit [van de](#dataset-schema-property-deprecated---eol-2019-05-30) Dataset &quot;schema&quot;die volgt.
+>De eigenschap &quot;schemaRef&quot; vervangt de nu afgekeurde eigenschap &quot;schema&quot;. Als &quot;schemaRef&quot;van de dataset afwezig is of geen waarde bevat, zult u de aanwezigheid van een &quot;schema&quot;bezit moeten controleren. Dit zou kunnen worden gedaan door &quot;schemaRef&quot;met &quot;schema&quot;in de `properties` vraagparameter in de vorige vraag te vervangen. Meer details over het &quot;schema&quot;bezit zijn beschikbaar in [Dataset &quot;schema&quot;bezit](#dataset-schema-property-deprecated---eol-2019-05-30) sectie die volgt.
 
 **API-indeling**
 
@@ -183,7 +183,7 @@ GET /schemaregistry/tenant/schemas/{url encoded schemaRef.id}
 
 **Verzoek**
 
-In de aanvraag wordt de URL-gecodeerde `id` URI van het schema (de waarde van het kenmerk &quot;schemaRef.id&quot;) gebruikt en wordt de header Accept vereist.
+Het verzoek gebruikt URL gecodeerd `id` URI van het schema (de waarde van het &quot;schemaRef.id&quot;attribuut) en vereist een Accept kopbal.
 
 ```shell
 curl -X GET \
@@ -195,7 +195,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-full+json; version=1' \
 ```
 
-De responsindeling is afhankelijk van het type Accept-header dat in de aanvraag wordt verzonden. Voor opzoekverzoeken moet u ook een bestand in de koptekst Accepteren `version` opnemen. In de volgende tabel worden de beschikbare kopteksten voor zoekopdrachten geaccepteerd:
+De responsindeling is afhankelijk van het type Accept-header dat in de aanvraag wordt verzonden. Voor opzoekverzoeken moet ook een `version` worden opgenomen in de koptekst Accepteren. In de volgende tabel worden de beschikbare kopteksten voor zoekopdrachten geaccepteerd:
 
 | Accepteren | Beschrijving |
 | ------ | ----------- |
@@ -208,13 +208,13 @@ De responsindeling is afhankelijk van het type Accept-header dat in de aanvraag 
 
 >[!NOTE]
 >
->`application/vnd.adobe.xed-id+json` en `application/vnd.adobe.xed-full+json; version={major version}` zijn de meest gebruikte Accepteer koppen. `application/vnd.adobe.xed-id+json` heeft de voorkeur voor het aanbieden van bronnen in de [!DNL Schema Registry] code, omdat alleen de titel, id en versie worden geretourneerd. `application/vnd.adobe.xed-full+json; version={major version}` heeft de voorkeur voor het weergeven van een specifieke bron (aan de hand van de id), aangezien deze alle velden (genest onder &quot;eigenschappen&quot;) retourneert, evenals titels en beschrijvingen.
+>`application/vnd.adobe.xed-id+json` en  `application/vnd.adobe.xed-full+json; version={major version}` zijn de meest gebruikte Accepteer kopteksten. `application/vnd.adobe.xed-id+json` heeft de voorkeur voor het aanbieden van resources in de  [!DNL Schema Registry] code, aangezien alleen de titel, id en versie worden geretourneerd. `application/vnd.adobe.xed-full+json; version={major version}` heeft de voorkeur voor het weergeven van een specifieke bron (aan de hand van de id), aangezien deze alle velden (genest onder &quot;eigenschappen&quot;) retourneert, evenals titels en beschrijvingen.
 
 **Antwoord**
 
-Het JSON-schema dat wordt geretourneerd, beschrijft de structuur en veldniveaugegevens (&quot;type&quot;, &quot;format&quot;, &quot;minimum&quot;, &quot;maximum&quot;, enz.) van de gegevens, met serienummering gecodeerd als JSON. Als het gebruiken van een rangschikkingsformaat buiten JSON voor opname (zoals Parquet of Scala), bevat de Gids [van de Registratie van het](../xdm/tutorials/create-schema-api.md) Schema een lijst die het gewenste type JSON (&quot;meta:xdmType&quot;) en zijn overeenkomstige vertegenwoordiging in andere formaten toont.
+Het JSON-schema dat wordt geretourneerd, beschrijft de structuur en veldniveaugegevens (&quot;type&quot;, &quot;format&quot;, &quot;minimum&quot;, &quot;maximum&quot;, enz.) van de gegevens, met serienummering gecodeerd als JSON. Als het gebruiken van een rangschikkingsformaat buiten JSON voor opname (zoals Parquet of Scala), [de Gids van de Registratie van het Schema](../xdm/tutorials/create-schema-api.md) bevat een lijst die het gewenste type JSON (&quot;meta:xdmType&quot;) en zijn overeenkomstige vertegenwoordiging in andere formaten toont.
 
-Samen met deze lijst, bevat de Gids van de [!DNL Schema Registry] Ontwikkelaar diepgaande voorbeelden van alle mogelijke vraag die kan worden gemaakt gebruikend [!DNL Schema Registry] API.
+Samen met deze lijst, bevat de [!DNL Schema Registry] Gids van de Ontwikkelaar diepgaande voorbeelden van alle mogelijke vraag die kan worden gemaakt gebruikend [!DNL Schema Registry] API.
 
 ### De eigenschap &quot;schema&quot; van de gegevensset (GEDEPRECEERD - EOL 2019-05-30)
 
@@ -230,7 +230,7 @@ Datasets kunnen een &quot;schema&quot;bezit bevatten dat nu verouderd is en tijd
 }
 ```
 
-Als het &quot;schema&quot;bezit van een dataset bevolkt is, geeft dit aan dat het schema een afgekeurd `/xdms` schema is en, waar gesteund, zou de schakelaar ETL de waarde in het &quot;schema&quot;bezit met het `/xdms` eindpunt (een afgekeurd eindpunt in [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)) moeten gebruiken om het erfenisschema terug te winnen.
+Als het &quot;schema&quot;bezit van een dataset wordt bevolkt, wijst dit erop dat het schema een afgekeurd `/xdms` schema is en, waar gesteund, zou de schakelaar ETL de waarde in het &quot;schema&quot;bezit met het `/xdms` eindpunt (een afgekeurd eindpunt in [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)) moeten gebruiken om het erfenisschema terug te winnen.
 
 **API-indeling**
 
@@ -254,11 +254,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
 
 **Antwoord**
 
-Gelijkaardig aan de stappen voor het [bekijken van datasetschema](#view-dataset-schema), bevat de reactie een schema JSON dat de structuur en gebied-vlakke informatie van de gegevens beschrijft, die als JSON in series worden vervaardigd.
+Gelijkaardig aan de stappen voor [het bekijken van datasetschema](#view-dataset-schema), bevat de reactie een schema JSON dat de structuur en gebied-vlakke informatie van de gegevens beschrijft, die als JSON in series worden vervaardigd.
 
 >[!NOTE]
 >
->Wanneer het &quot;schema&quot;gebied leeg is of volledig ontbreekt, zou de schakelaar het &quot;schemaRef&quot;gebied moeten lezen en de [Registratie API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) van het Schema zoals aangetoond in de vorige stappen gebruiken om een datasetschema [te](#view-dataset-schema)bekijken.
+>Wanneer het &quot;schema&quot;gebied leeg is of volledig ontbreekt, zou de schakelaar het &quot;schemaRef&quot;gebied moeten lezen en [de Registratie API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) van het Schema zoals aangetoond in de vorige stappen gebruiken om [een datasetschema](#view-dataset-schema) te bekijken.
 
 ### De eigenschap &quot;observableSchema&quot;
 
@@ -287,15 +287,15 @@ Het waarneembare schema is het schema dat u zou gebruiken als u de gegevens lees
 
 ### Gegevens voorvertonen
 
-De ETL-toepassing kan een mogelijkheid bieden om gegevens voor te vertonen ([&quot;Afbeelding 8&quot; in de ETL-workflow](./workflow.md)). De API voor gegevenstoegang biedt verschillende opties voor het weergeven van voorvertoningen van gegevens.
+De ETL-toepassing kan een mogelijkheid bieden om gegevens voor te vertonen ([&quot;Figuur 8&quot; in de ETL-workflow](./workflow.md)). De API voor gegevenstoegang biedt verschillende opties voor het weergeven van voorvertoningen van gegevens.
 
-Aanvullende informatie, waaronder stapsgewijze instructies voor het voorvertonen van gegevens met behulp van de API voor gegevenstoegang, vindt u in de zelfstudie over [gegevenstoegang](../data-access/tutorials/dataset-data.md).
+Aanvullende informatie, waaronder stapsgewijze instructies voor het voorvertonen van gegevens met behulp van de API voor gegevenstoegang, vindt u in de [zelfstudie voor gegevenstoegang](../data-access/tutorials/dataset-data.md).
 
 ### Krijg datasetdetails gebruikend de &quot;eigenschappen&quot;vraagparameter
 
-Zoals aangetoond in de stappen hierboven om een lijst van datasets [te](#view-list-of-datasets)bekijken, kunt u &quot;dossiers&quot;verzoeken gebruikend de &quot;eigenschappen&quot;vraagparameter.
+Zoals aangetoond in de stappen hierboven aan [bekijk een lijst van datasets](#view-list-of-datasets), kunt u &quot;dossiers&quot;verzoeken gebruikend de &quot;eigenschappen&quot;vraagparameter.
 
-U kunt naar het overzicht [van de Dienst van de](../catalog/home.md) Catalogus voor gedetailleerde informatie over het vragen van datasets en beschikbare reactiefilters verwijzen.
+U kunt naar [Overzicht van de Dienst van de Catalogus ](../catalog/home.md) voor gedetailleerde informatie over het vragen van datasets en beschikbare reactiefilters verwijzen.
 
 **API-indeling**
 
@@ -393,9 +393,9 @@ De reactie omvat identiteitskaart van het Dossier van de Dataset als top-level b
 
 ### Bestandsgegevens ophalen
 
-De id&#39;s van het gegevenssetbestand die in de vorige reactie zijn geretourneerd, kunnen worden gebruikt in een GET-verzoek om meer bestandsgegevens op te halen via de [!DNL Data Access] API.
+De id&#39;s van het gegevenssetbestand die in de vorige reactie zijn geretourneerd, kunnen worden gebruikt in een GET-verzoek om meer bestandsgegevens op te halen via de API [!DNL Data Access].
 
-Het overzicht [van](../data-access/home.md) gegevenstoegang bevat informatie over het gebruik van de [!DNL Data Access] API.
+Het [overzicht van de gegevenstoegang](../data-access/home.md) bevat details over hoe te om [!DNL Data Access] API te gebruiken.
 
 **API-indeling**
 
@@ -431,7 +431,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac031
 
 ### Bestandsgegevens voorvertonen
 
-De eigenschap &quot;href&quot; kan worden gebruikt om voorvertoningsgegevens op te halen via de [[!DNL Data Access API]](../data-access/home.md).
+De eigenschap &quot;href&quot; kan worden gebruikt om voorvertoningsgegevens op te halen via [[!DNL Data Access API]](../data-access/home.md).
 
 **API-indeling**
 
@@ -451,11 +451,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac031
 
 Het antwoord op het bovenstaande verzoek bevat een voorvertoning van de inhoud van het bestand.
 
-Meer informatie over de [!DNL Data Access] API, inclusief gedetailleerde verzoeken en reacties, is beschikbaar in het overzicht [van de](../data-access/home.md)gegevenstoegang.
+Meer informatie over de [!DNL Data Access] API, inclusief gedetailleerde verzoeken en reacties, is beschikbaar in [overzicht van gegevenstoegang](../data-access/home.md).
 
 ### &quot;fileDescription&quot; ophalen uit gegevensset
 
-De bestemmingscomponent als output van getransformeerde gegevens, zal de Ingenieur van Gegevens een Dataset van de Output ([&quot;Figuur 12&quot;in het ETL- Werkschema](workflow.md)) kiezen. Het XDM-schema is gekoppeld aan de uitvoergegevensset. De te schrijven gegevens worden geïdentificeerd door het kenmerk &quot;fileDescription&quot; van de gegevenssetentiteit van de API&#39;s voor gegevensdetectie. Deze informatie kan worden opgehaald gebruikend een dataset identiteitskaart (`{DATASET_ID}`). De eigenschap &quot;fileDescription&quot; in het JSON-antwoord geeft de gevraagde informatie.
+De bestemmingscomponent als output van getransformeerde gegevens, zal de Ingenieur van Gegevens een Dataset van de Output ([&quot;Figuur 12&quot;in het ETL Werkschema](workflow.md)) kiezen. Het XDM-schema is gekoppeld aan de uitvoergegevensset. De te schrijven gegevens worden geïdentificeerd door het kenmerk &quot;fileDescription&quot; van de gegevenssetentiteit van de API&#39;s voor gegevensdetectie. Deze informatie kan worden opgehaald gebruikend een dataset identiteitskaart (`{DATASET_ID}`). De eigenschap &quot;fileDescription&quot; in het JSON-antwoord geeft de gevraagde informatie.
 
 **API-indeling**
 
@@ -492,21 +492,21 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-Gegevens worden geschreven naar [!DNL Experience Platform] de API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)gegevensinname.  Het schrijven van gegevens is een asynchroon proces. Wanneer gegevens naar Adobe Experience Platform worden geschreven, wordt alleen een batch gemaakt en gemarkeerd als een succes nadat de gegevens volledig zijn geschreven.
+De gegevens worden naar [!DNL Experience Platform] geschreven met behulp van [Data Ingestie API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).  Het schrijven van gegevens is een asynchroon proces. Wanneer gegevens naar Adobe Experience Platform worden geschreven, wordt alleen een batch gemaakt en gemarkeerd als een succes nadat de gegevens volledig zijn geschreven.
 
-Gegevens in [!DNL Experience Platform] de vorm van parketbestanden moeten worden geschreven.
+Gegevens in [!DNL Experience Platform] moeten worden geschreven in de vorm van Parquet-bestanden.
 
 ## Uitvoeringsfase
 
-Terwijl de uitvoering start, zal de connector (zoals gedefinieerd in de broncomponent) de gegevens lezen van [!DNL Experience Platform] het gebruik van de [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml). Het transformatieproces leest de gegevens voor een bepaald tijdbereik. Intern, zal het partijen brondatasets vragen. Tijdens het vragen, zal het een geparameterized (het rollen voor tijdreeksgegevens, of stijgende gegevens) begindatum en lijstdatasetdossiers voor die partijen gebruiken, en begint verzoeken om gegevens voor die datasetdossiers te doen.
+Wanneer de uitvoering start, leest de connector (zoals gedefinieerd in de broncomponent) de gegevens van [!DNL Experience Platform] met de [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml). Het transformatieproces leest de gegevens voor een bepaald tijdbereik. Intern, zal het partijen brondatasets vragen. Tijdens het vragen, zal het een geparameterized (het rollen voor tijdreeksgegevens, of stijgende gegevens) begindatum en lijstdatasetdossiers voor die partijen gebruiken, en begint verzoeken om gegevens voor die datasetdossiers te doen.
 
 ### Voorbeeldtransformaties
 
-Het [voorbeelddocument voor ETL-transformaties](./transformations.md) bevat een aantal voorbeeldtransformaties, waaronder identiteitsbeheer en gegevenstypetoewijzingen. Gebruik deze transformaties ter referentie.
+Het [voorbeeld ETL-transformaties](./transformations.md)-document bevat een aantal voorbeeldtransformaties, waaronder identiteitsbeheer en gegevenstypetoewijzingen. Gebruik deze transformaties ter referentie.
 
 ### Gegevens lezen van [!DNL Experience Platform]
 
-Met behulp van de instructies [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), kunt u alle batches ophalen tussen een opgegeven begintijd en eindtijd en ze sorteren op de volgorde waarin ze zijn gemaakt.
+Met de [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) kunt u alle batches tussen een opgegeven begintijd en eindtijd ophalen en sorteren op de volgorde waarin ze zijn gemaakt.
 
 **Verzoek**
 
@@ -519,11 +519,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?dataSet=D
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-Details over het filteren van batches vindt u in de zelfstudie [Gegevenstoegang](../data-access/tutorials/dataset-data.md).
+Details over het filteren van batches vindt u in de [zelfstudie over gegevenstoegang](../data-access/tutorials/dataset-data.md).
 
 ### Bestanden ophalen uit een batch
 
-Als u de id hebt voor de batch die u zoekt (`{BATCH_ID}`), kunt u een lijst met bestanden die tot een bepaalde batch behoren, ophalen via de [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)koppeling.  Details hiervoor vindt u in de [[!DNL Data Access] zelfstudie](../data-access/tutorials/dataset-data.md).
+Zodra u identiteitskaart voor de partij hebt u (`{BATCH_ID}`) zoekt, is het mogelijk om een lijst van dossiers terug te winnen die tot een specifieke partij via [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) behoren.  Details hiervoor zijn beschikbaar in de [[!DNL Data Access] zelfstudie](../data-access/tutorials/dataset-data.md).
 
 **Verzoek**
 
@@ -537,7 +537,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### Bestanden openen met bestands-id
 
-Met de unieke id van een bestand (`{FILE_ID`) [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) kunt u de URL gebruiken om toegang te krijgen tot de specifieke details van het bestand, zoals de naam, grootte in bytes en een koppeling om het bestand te downloaden.
+Met de unieke id van een bestand (`{FILE_ID`) kunt u [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) gebruiken om toegang te krijgen tot de specifieke details van het bestand, zoals de naam, grootte in bytes en een koppeling om het bestand te downloaden.
 
 **Verzoek**
 
@@ -549,11 +549,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key : {API_KEY}"
 ```
 
-De reactie kan naar één bestand of naar een map verwijzen. De details over elk kunnen in het [[!DNL Data Access] leerprogramma](../data-access/tutorials/dataset-data.md)worden gevonden.
+De reactie kan naar één bestand of naar een map verwijzen. Details over elk kunnen in [[!DNL Data Access] tutorial](../data-access/tutorials/dataset-data.md) worden gevonden.
 
 ### Bestandsinhoud openen
 
-U [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) kunt de inhoud van een bepaald bestand openen met deze functie. Als u de inhoud wilt ophalen, wordt een GET-aanvraag gedaan met de waarde die wordt geretourneerd `_links.self.href` wanneer u een bestand opent met de bestands-id.
+De [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) kan worden gebruikt om tot de inhoud van een specifiek dossier toegang te hebben. Om de inhoud te halen, wordt een verzoek van de GET gemaakt gebruikend de waarde die voor `_links.self.href` wanneer het toegang tot van een dossier gebruikend dossier - identiteitskaart is teruggekeerd.
 
 **Verzoek**
 
@@ -565,23 +565,23 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
   -H "x-api-key: {API_KEY}"
 ```
 
-Het antwoord op deze aanvraag bevat de inhoud van het bestand. Voor meer informatie, met inbegrip van details over reactiepaginering, zie [hoe te de Gegevens van de Vraag via gegeven toegang API](../data-access/tutorials/dataset-data.md) leerprogramma.
+Het antwoord op deze aanvraag bevat de inhoud van het bestand. Voor meer informatie, met inbegrip van details over reactiepaginering, zie [hoe te Gegevens van de Vraag via gegevenstoegang API](../data-access/tutorials/dataset-data.md) leerprogramma.
 
 ### Records voor schemaconformiteit valideren
 
-Wanneer gegevens worden geschreven, kunnen gebruikers ervoor kiezen om gegevens te valideren volgens de validatieregels die in het XDM-schema zijn gedefinieerd. Meer informatie over schemabevestiging kan in de Code van de Verwijzing van de Integratie van het Ecosysteem van [ETL worden gevonden op [!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation).
+Wanneer gegevens worden geschreven, kunnen gebruikers ervoor kiezen om gegevens te valideren volgens de validatieregels die in het XDM-schema zijn gedefinieerd. Meer informatie over schemabevestiging kan in [ETL de Code van de Verwijzing van de Integratie van het Ecosysteem op  [!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation) worden gevonden.
 
-Als u de verwijzingsimplementatie gebruikt die wordt gevonden [[!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md), kunt u schemabevestiging in deze implementatie aanzetten gebruikend het systeembezit `-DenableSchemaValidation=true`.
+Als u de verwijzingsimplementatie gebruikt die op [[!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md) wordt gevonden, kunt u schemabevestiging in deze implementatie aanzetten gebruikend het systeembezit `-DenableSchemaValidation=true`.
 
-Validatie kan voor logische types worden uitgevoerd XDM, gebruikend attributen zoals `minLength` en `maxlength` voor koorden, `minimum` en `maximum` voor gehelen, en meer. De ontwikkelaarsgids voor [de](../xdm/api/getting-started.md) schemaregistratie-API bevat een tabel met XDM-typen en de eigenschappen die voor validatie kunnen worden gebruikt.
+Validatie kan worden uitgevoerd voor logische types XDM, gebruikend attributen zoals `minLength` en `maxlength` voor koorden, `minimum` en `maximum` voor gehelen, en meer. De [Handleiding voor ontwikkelaars van de API voor schemaregistratie](../xdm/api/getting-started.md) bevat een tabel met XDM-typen en de eigenschappen die voor validatie kunnen worden gebruikt.
 
 >[!NOTE]
 >
->De minimum- en maximumwaarden die voor verschillende `integer` typen worden opgegeven, zijn de MIN- en MAX-waarden die door het type worden ondersteund, maar deze waarden kunnen verder worden beperkt tot de minimum- en maximumwaarden van uw keuze.
+>De minimum en maximumwaarden die voor verschillende `integer` types worden verstrekt zijn de MIN en MAX waarden die het type kan steunen, maar deze waarden kunnen verder tot minimum en maximum van uw kiezen worden beperkt.
 
 ### Een batch maken
 
-Nadat de gegevens zijn verwerkt, schrijft het ETL-hulpprogramma de gegevens weer naar [!DNL Experience Platform] met de [Batch Ingestie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Voordat gegevens kunnen worden toegevoegd aan een gegevensset, moet deze worden gekoppeld aan een batch die later wordt geüpload naar een specifieke gegevensset.
+Nadat de gegevens zijn verwerkt, schrijft het hulpprogramma ETL de gegevens terug naar [!DNL Experience Platform] met de [Batch-inname-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Voordat gegevens kunnen worden toegevoegd aan een gegevensset, moet deze worden gekoppeld aan een batch die later wordt geüpload naar een specifieke gegevensset.
 
 **Verzoek**
 
@@ -597,15 +597,15 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
       }'
 ```
 
-Details voor het maken van een batch, inclusief voorbeeldaanvragen en reacties, vindt u in het overzicht [](../ingestion/batch-ingestion/overview.md)Batch-inname.
+Details voor het maken van een batch, inclusief voorbeeldaanvragen en reacties, vindt u in het [Overzicht van de batchverwerking](../ingestion/batch-ingestion/overview.md).
 
 ### Schrijven naar gegevensset
 
-Nadat een nieuwe partij met succes tot stand is gebracht, kunnen de dossiers dan aan een specifieke dataset worden geupload. U kunt meerdere bestanden in een batch plaatsen totdat deze worden gepromoot. Bestanden kunnen worden geüpload met de API voor het uploaden van kleine bestanden. als uw bestanden echter te groot zijn en de gatewaylimiet wordt overschreden, kunt u de API voor het uploaden van grote bestanden gebruiken. Meer informatie over het gebruik van zowel grote als kleine bestanden kunt u vinden in het overzicht [van de](../ingestion/batch-ingestion/overview.md)batchverwerking.
+Nadat een nieuwe partij met succes tot stand is gebracht, kunnen de dossiers dan aan een specifieke dataset worden geupload. U kunt meerdere bestanden in een batch plaatsen totdat deze worden gepromoot. Bestanden kunnen worden geüpload met de API voor het uploaden van kleine bestanden. als uw bestanden echter te groot zijn en de gatewaylimiet wordt overschreden, kunt u de API voor het uploaden van grote bestanden gebruiken. De details voor het gebruiken van zowel Groot als Klein Dossier uploaden kunnen in [Overzicht van de Ingestie van de Partij ](../ingestion/batch-ingestion/overview.md) worden gevonden.
 
 **Verzoek**
 
-Gegevens in [!DNL Experience Platform] de vorm van parketbestanden moeten worden geschreven.
+Gegevens in [!DNL Experience Platform] moeten worden geschreven in de vorm van Parquet-bestanden.
 
 ```shell
 curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/dataSets/{DATASET_ID}/files/{FILE_NAME}.parquet" \
@@ -619,7 +619,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Batchupload voltooien
 
-Nadat alle bestanden naar de batch zijn geüpload, kan de batch worden gemarkeerd als voltooid. Op deze manier worden de [!DNL Catalog] &#39;DataSetFile&#39;-items gemaakt voor de voltooide bestanden en gekoppeld aan de gegenereerde batch. De [!DNL Catalog] batch wordt vervolgens gemarkeerd als succesvol, waardoor stroomafwaartse stromen worden geactiveerd om de beschikbare gegevens in te voeren.
+Nadat alle bestanden naar de batch zijn geüpload, kan de batch worden gemarkeerd als voltooid. Door dit te doen, worden de [!DNL Catalog] &quot;DataSetFile&quot;ingangen gecreeerd voor de voltooide dossiers en met te verbinden genereert partij. De [!DNL Catalog] partij wordt dan duidelijk als succesvol, die stroomafwaartse stromen om de beschikbare gegevens in te voeren teweegbrengt.
 
 De gegevens worden eerst op de halteplaats op Adobe Experience Platform geland en vervolgens na catalogisering en validatie naar de uiteindelijke locatie verplaatst. Batches worden gemarkeerd als succesvol zodra alle gegevens naar een vaste locatie worden verplaatst.
 
@@ -641,7 +641,7 @@ Bij de volgende transformatie-uitvoering, waarschijnlijk door planning of aanroe
 
 ### Laatste batchstatus ophalen
 
-Voordat u nieuwe taken uitvoert met het gereedschap ETL, moet u controleren of de laatste batch is voltooid. Deze optie [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) biedt een batchspecifieke optie die de details van de desbetreffende partijen bevat.
+Voordat u nieuwe taken uitvoert met het gereedschap ETL, moet u controleren of de laatste batch is voltooid. [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) verstrekt een batch-specifieke optie die de details van de relevante partijen verstrekt.
 
 **Verzoek**
 
@@ -675,7 +675,7 @@ Nieuwe taken kunnen worden gepland als de vorige batch-&quot;status&quot;-waarde
 
 ### Laatste batchstatus ophalen op id
 
-Een individuele partijstatus kan door het worden teruggewonnen [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) door een verzoek van de GET uit te geven gebruikend `{BATCH_ID}`. De `{BATCH_ID}` gebruikte id is hetzelfde als de id die wordt geretourneerd toen de batch werd gemaakt.
+Een individuele partijstatus kan door [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) worden teruggewonnen door een verzoek van de GET uit te geven gebruikend `{BATCH_ID}`. De gebruikte `{BATCH_ID}` zou het zelfde zijn als identiteitskaart terugkwam toen de partij werd gecreeerd.
 
 **Verzoek**
 
@@ -760,9 +760,9 @@ Wanneer momentopnameprofielen worden gebruikt, zal het hulpmiddel ETL de laatste
 
 Het opnieuw afspelen van batches en het opwerken van gegevens kunnen vereist zijn in gevallen waarin een klant ontdekt dat de laatste &#39;n&#39; dagen, de gegevens die worden verwerkt niet zoals verwacht hebben plaatsgevonden of de brongegevens zelf wellicht niet correct zijn geweest.
 
-Hiertoe gebruiken de gegevensbeheerders van de client de [!DNL Platform] UI om de batches met beschadigde gegevens te verwijderen. Vervolgens zal de ETL waarschijnlijk opnieuw moeten worden uitgevoerd, zodat de ETL met correcte gegevens kan worden gerepareerd. Als de bron zelf corrupte gegevens had, zal de gegevensingenieur/beheerder de bronpartijen moeten verbeteren en de gegevens (of in Adobe Experience Platform of via schakelaars ETL) opnieuw opnemen.
+Hiertoe gebruiken de gegevensbeheerders van de client de interface [!DNL Platform] om de batches met beschadigde gegevens te verwijderen. Vervolgens zal de ETL waarschijnlijk opnieuw moeten worden uitgevoerd, zodat de ETL met correcte gegevens kan worden gerepareerd. Als de bron zelf corrupte gegevens had, zal de gegevensingenieur/beheerder de bronpartijen moeten verbeteren en de gegevens (of in Adobe Experience Platform of via schakelaars ETL) opnieuw opnemen.
 
-Gebaseerd op het type van gegevens die worden geproduceerd, zal het de keus van de gegevensingenieur zijn om één enkele partij of alle partijen uit bepaalde datasets te verwijderen. Gegevens worden verwijderd/gearchiveerd volgens de [!DNL Experience Platform] richtlijnen.
+Gebaseerd op het type van gegevens die worden geproduceerd, zal het de keus van de gegevensingenieur zijn om één enkele partij of alle partijen uit bepaalde datasets te verwijderen. Gegevens worden verwijderd/gearchiveerd volgens de richtlijnen [!DNL Experience Platform].
 
 Het is waarschijnlijk een scenario dat de functionaliteit ETL om gegevens te zuiveren belangrijk zal zijn.
 
@@ -782,13 +782,13 @@ Voor bronbatches is dit weer afhankelijk van de voorkeur van de klant en de bepe
 
 Uitstel is een proces waarbij de inputgegevens nog niet volledig genoeg zijn om naar downstreamprocessen te worden verzonden, maar in de toekomst bruikbaar kunnen zijn. Clients zullen hun individuele tolerantie voor gegevensramen voor toekomstige matching tegenover de kosten van verwerking bepalen om hun beslissing om gegevens te reserveren en opnieuw te verwerken in de volgende transformatieuitvoering te informeren, in de hoop dat het op een bepaald tijdstip in het bewaarvenster kan worden verrijkt en in overeenstemming gebracht/vastgemaakt. Deze cyclus loopt tot de rij voldoende is verwerkt of te groot wordt geacht om te blijven investeren in. Elke herhaling genereert uitgestelde gegevens die een superset zijn van alle uitgestelde gegevens in vorige herhalingen.
 
-Adobe Experience Platform identificeert momenteel geen uitgestelde gegevens, zodat moeten de cliëntimplementaties zich op de ETL en de handconfiguraties van Dataset baseren om een andere dataset in het weerspiegelen van de brondataset tot stand te brengen die kan worden gebruikt om uitgestelde gegevens te houden. [!DNL Platform] In dit geval zijn uitgestelde gegevens vergelijkbaar met momentopnamegegevens. Bij elke uitvoering van de ETL-transformatie worden de brongegevens verenigd met uitgestelde gegevens en verzonden voor verwerking.
+Adobe Experience Platform identificeert momenteel geen uitgestelde gegevens, zodat moeten de cliëntimplementaties zich op de ETL en de handconfiguraties van Dataset baseren om een andere dataset in [!DNL Platform] te creëren die de brondataset weerspiegelt die kan worden gebruikt om uitgestelde gegevens te houden. In dit geval zijn uitgestelde gegevens vergelijkbaar met momentopnamegegevens. Bij elke uitvoering van de ETL-transformatie worden de brongegevens verenigd met uitgestelde gegevens en verzonden voor verwerking.
 
 ## Changelog
 
-| Datum | Handeling | Beschrijving |
+| Datum | Actie | Beschrijving |
 | ---- | ------ | ----------- |
 | 2019-01-19 | Eigenschap &quot;fields&quot; uit gegevenssets verwijderd | Datasets bevatten eerder een eigenschap &quot;fields&quot; die een kopie van het schema bevatte. Deze mogelijkheid mag niet meer worden gebruikt. Als de eigenschap &quot;fields&quot; wordt gevonden, moet deze worden genegeerd en wordt in plaats daarvan &quot;ObservedSchema&quot; of &quot;schemaRef&quot; gebruikt. |
 | 2019-03-15 | &quot;schemaRef&quot;-eigenschap toegevoegd aan gegevenssets | Het &quot;schemaRef&quot;bezit van een dataset bevat URI die naar het XDM schema verwijst waarop de dataset gebaseerd is en vertegenwoordigt alle potentiële gebieden die door de dataset zouden kunnen worden gebruikt. |
 | 2019-03-15 | Alle eindgebruikersidentificatoren wijzen de eigenschap &quot;identityMap&quot; toe | De &quot;identityMap&quot;is een inkapseling van alle unieke herkenningstekens van een onderwerp, zoals identiteitskaart van CRM, ECID, of identiteitskaart van het loyaliteitsprogramma Deze kaart wordt gebruikt door [[!DNL Identity Service]](../identity-service/home.md) om alle bekende en anonieme identiteiten van een onderwerp op te lossen, die één enkele identiteitsgrafiek voor elke eindgebruiker vormen. |
-| 2019-05-30 | EOL en verwijder &quot;schema&quot;bezit uit datasets | De dataset &quot;schema&quot;bezit verstrekte een verwijzingsverbinding aan het schema gebruikend het afgekeurde `/xdms` eindpunt in [!DNL Catalog] API. Deze is vervangen door een &quot;schemaRef&quot; die de &quot;id&quot;, &quot;version&quot; en &quot;contentType&quot; van het schema biedt, zoals vermeld in de nieuwe [!DNL Schema Registry] API. |
+| 2019-05-30 | EOL en verwijder &quot;schema&quot;bezit uit datasets | De dataset &quot;schema&quot;bezit verstrekte een verwijzingsverbinding aan het schema gebruikend het afgekeurde `/xdms` eindpunt in [!DNL Catalog] API. Dit is vervangen door een &quot;schemaRef&quot;die &quot;id&quot;, &quot;versie&quot;, en &quot;contentType&quot;van het schema zoals die in nieuwe [!DNL Schema Registry] API van verwijzingen voorzien. |
