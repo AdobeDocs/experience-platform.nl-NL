@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
-title: Profieldashboard
+keywords: Experience Platform;profiel;real-time klantprofiel;gebruikersinterface;UI;aanpassing;profiel dashboard;dashboard
+title: UI-gids voor profieldashboard
 description: 'Deze handleiding geeft een overzicht van het gegevensdashboard voor het realtime klantprofiel dat beschikbaar is in de gebruikersinterface van Adobe Experience Platform. '
 topic: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 983b357f2f17aad273f0465dc9250240a062dcd2
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '697'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 0%
 >
 >De dashboardfunctionaliteit die in dit document wordt beschreven, bevindt zich momenteel in alfa en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
-De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over uw [!DNL Real-time Customer Profile] gegevens kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Deze gids schetst hoe te om tot en met het [!DNL Profile] dashboard in UI toegang te hebben en te werken en verstrekt meer informatie betreffende de metriek die in het dashboard wordt getoond.
+De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over uw [!DNL Real-time Customer Profile] gegevens kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Deze gids schetst hoe te om tot [!DNL Profile] dashboard in UI toegang te hebben en te werken en verstrekt meer informatie betreffende de metriek die in het dashboard wordt getoond.
 
-Voor een overzicht van alle profielfuncties in de gebruikersinterface van het Experience Platform, gelieve de gids [van het Profiel van de Klant in](user-guide.md)real time te bezoeken.
+Voor een overzicht van alle profielfuncties binnen de gebruikersinterface van het Experience Platform, gelieve [de gids UI van het Profiel van de Klant in real time](user-guide.md) te bezoeken.
 
 ## Profieldashboardgegevens
 
@@ -33,11 +33,11 @@ De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op h
 >
 >Wijzigingen of updates die zijn aangebracht in de gegevens nadat de momentopname is gemaakt, worden pas in het dashboard weergegeven als de volgende momentopname is gemaakt.
 
-De metriek die in het dashboard van het Profiel wordt getoond zijn gebaseerd op het standaardsamenvoegbeleid voor uw organisatie. Voor meer informatie over fusiebeleid, en hoe te om uw standaard fusiebeleid te selecteren of te veranderen, gelieve de gids [van het](merge-policies.md)fusiebeleid te bezoeken.
+De metriek die in het dashboard van het Profiel wordt getoond zijn gebaseerd op het standaardsamenvoegbeleid voor uw organisatie. Voor meer informatie over samenvoegbeleid, en hoe te om uw standaard samenvoegbeleid te selecteren of te veranderen, gelieve [te bezoeken de gids UI van het Samenvoegingsbeleid](merge-policies.md).
 
 ## Het dashboard Profiel verkennen
 
-Om aan het dashboard van het Profiel binnen Platform UI te navigeren, selecteer **[!UICONTROL Profielen]** in de linkerspoorstaaf, dan selecteer het lusje van het **[!UICONTROL Overzicht]** om het dashboard te tonen.
+Om aan het dashboard van het Profiel binnen Platform UI te navigeren, selecteer **[!UICONTROL Profielen]** in de linkerspoorstaaf, dan selecteer **[!UICONTROL Overzicht]** tabel om het dashboard te tonen.
 
 ![](../images/profile-dashboard/dashboard-overview.png)
 
@@ -56,17 +56,21 @@ Experience Platform biedt meerdere widgets die u kunt gebruiken voor het visuali
 
 ### [!UICONTROL Grootte publiek] {#audience-size}
 
-De widget **[!UICONTROL Poortgrootte]** geeft het totale aantal samengevoegde profielen weer in de profielgegevensopslag op het moment dat de momentopname werd gemaakt. Dit aantal is het resultaat van het standaardsamenvoegbeleid van uw organisatie dat op uw gegevens van het Profiel wordt toegepast om profielfragmenten samen te voegen om één enkel profiel voor elk individu te vormen.
+De **[!UICONTROL Audience size]** widget toont het totale aantal samengevoegde profielen binnen de de gegevensopslag van het Profiel op het tijdstip dat de momentopname werd genomen. Dit aantal is het resultaat van het standaardsamenvoegbeleid van uw organisatie dat op uw gegevens van het Profiel wordt toegepast om profielfragmenten samen te voegen om één enkel profiel voor elk individu te vormen.
 
-Voor meer informatie over fragmenten en samengevoegde profielen leest u eerst de sectie [Profielfragmenten versus samengevoegde profielen](../home.md#profile-fragments-vs-merged-profiles) van het [Profieloverzicht](../home.md).
+Voor meer informatie over fragmenten en samengevoegde profielen, gelieve te beginnen door *de fragmenten van het Profiel vs samengevoegde profielen* sectie van [Profieloverzicht](../home.md) te lezen.
+
+>[!NOTE]
+>
+>Het samenvoegbeleid dat wordt gebruikt om deze metrische waarde te berekenen is niet het zelfde als het systeem-geproduceerde fusiebeleid dat wordt gebruikt om [!UICONTROL Adresseerbare publiek] in [!UICONTROL het gebruik van de Vergunning ] dashboard te berekenen, daarom is het publiek aantal in [!DNL Profile] en [!UICONTROL Vergunningsgebruik] dashboards waarschijnlijk niet precies het zelfde.
 
 ![](../images/profile-dashboard/audience-size.png)
 
 ### [!UICONTROL Profielen op naamruimte] {#profiles-by-namespace}
 
-In de **[!UICONTROL widget Profielen op naamruimte]** wordt de uitsplitsing van naamruimten in alle samengevoegde profielen in het archief Profiel weergegeven. Het totale aantal profielen per [!UICONTROL id-naamruimte] (d.w.z. het optellen van de waarden voor elke naamruimte) is altijd hoger dan het totale aantal samenvoegprofielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
+Met de widget **[!UICONTROL Profielen op naamruimte]** wordt de uitsplitsing van naamruimten in alle samengevoegde profielen in het archief Profiel weergegeven. Het totale aantal profielen bij [!UICONTROL ID-naamruimte] (met andere woorden, het optellen van de waarden die voor elke naamruimte worden weergegeven) zal altijd hoger zijn dan het totale aantal samenvoegprofielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
 
-Meer informatie over naamruimten vindt u in de documentatie [van de](../../identity-service/home.md)Adobe Experience Platform Identity Service.
+Voor meer informatie over naamruimten gaat u naar de [documentatie van de Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ![](../images/profile-dashboard/profiles-by-namespace.png)
 
@@ -79,4 +83,4 @@ De interface van het Platform biedt extra dashboards voor het bekijken van momen
 
 ## Volgende stappen
 
-Als u dit document volgt, kunt u nu het dashboard Profiel vinden en begrijpen welke maatstaven worden weergegeven in de beschikbare widgets. Raadpleeg de handleiding voor de [!DNL Profile] gebruikersinterface voor meer informatie over het werken met [[!DNL Profile] gegevens in de gebruikersinterface van het Experience Platform](user-guide.md).
+Als u dit document volgt, kunt u nu het dashboard Profiel vinden en begrijpen welke maatstaven worden weergegeven in de beschikbare widgets. Raadpleeg de [[!DNL Profile] UI-handleiding](user-guide.md) voor meer informatie over het werken met [!DNL Profile]-gegevens in de interface van het Experience Platform.
