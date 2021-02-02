@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;connection parameters;Query service;
+keywords: Experience Platform;thuis;populaire onderwerpen;de vraagdienst;api gids;verbindingsparameters;de dienst van de vraag;
 solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Query Service
 topic: connection parameters
@@ -7,7 +7,7 @@ description: U kunt uw verbindingsparameters voor het gebruiken van de interacti
 translation-type: tm+mt
 source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '147'
 ht-degree: 0%
 
 ---
