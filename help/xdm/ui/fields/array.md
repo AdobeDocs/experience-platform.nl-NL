@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;array;field;
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;array;field;
 solution: Experience Platform
 title: Een arrayveld definiëren in de gebruikersinterface
 description: Leer hoe u een arrayveld definieert in de gebruikersinterface van het Experience Platform.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Wanneer u een XDM-veld (Experience Data Model) in de Adobe Experience Platform-g
 
 De inhoud van de array is afhankelijk van het type [!UICONTROL Type] dat voor dat veld is geselecteerd. Als bijvoorbeeld [!UICONTROL Type] van een veld is ingesteld op &quot;[!UICONTROL String]&quot;, geeft het instellen van dat veld als een array het veld aan als een array van tekenreeksen. Als het [!UICONTROL Type] van het gebied aan een multi-gebiedsgegevenstype zoals &quot;[!UICONTROL Postadres]&quot;wordt geplaatst, dan zou het een serie van post-adresvoorwerpen worden die met het gegevenstype in overeenstemming zijn.
 
-Nadat u een nieuw gebied in UI[ hebt bepaald, kunt u het als seriegebied plaatsen door ](./overview.md#define)Serie **[!UICONTROL checkbox in het juiste spoor te selecteren.]**
+Nadat u een nieuw gebied in UI](./overview.md#define) hebt bepaald, kunt u het als seriegebied plaatsen door **[!UICONTROL Serie]** checkbox in het juiste spoor te selecteren.[
 
 ![](../../images/ui/fields/special/array.png)
 
