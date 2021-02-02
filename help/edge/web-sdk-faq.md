@@ -4,9 +4,9 @@ seo-title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: Veelgestelde vragen over Adobe Experience Platform Web SDK
 seo-description: Veelgestelde vragen over Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: a493fad1bbd6114ba06074ebb3064268ba25b445
+source-git-commit: f4f0b00dfd324f69aa2b4348740f6e767e86a6de
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1808'
 ht-degree: 1%
 
 ---
@@ -124,7 +124,7 @@ Met andere woorden, als u besluit om het Web SDK van Adobe Experience Platform v
 
 ## Kan ik de ECID&#39;s migreren wanneer ik Alloy ga gebruiken, zodat mijn websitebezoekers niet beginnen op te dagen als nieuwe bezoekers?
 
-Ja, Adobe Experience Platform Web SDK beschikt over de functie Identiteitsmigratie. Volg de instructies in [dit document](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/identity.html#id-migration) voor meer details.
+Ja, Adobe Experience Platform Web SDK beschikt over de functie Identiteitsmigratie. Volg de instructies voor de migratie van identiteitskaart in [de identiteitsdocumentatie van SDK van het Web van het Platform ](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) voor meer details.
 
 ## Hoe is de SDK van het Web anders dan Adobe Experience Platform Launch?
 
@@ -153,6 +153,18 @@ Later in 2020, zal Experience Platform Launch server-kant het door:sturen eigens
 ## Wat is een CNAME of een Domein van de Eerste Partij en waarom maakt het van belang?
 
 Meer informatie over een CNAME is beschikbaar in de [Adobe documentatie](https://docs.adobe.com/content/help/en/id-service/using/reference/analytics-reference/cname.html)
+
+## Gebruikt de Adobe Experience Platform Web SDK cookies? Zo ja, welke cookies gebruikt zij?
+
+Ja, gebruikt momenteel SDK van het Web overal tussen 1-4 koekjes afhankelijk van uw implementatie. Hieronder volgt een lijst van de 4 koekjes die u met het Web SDK en de manier zou kunnen zien dat zij worden gebruikt:
+
+**kndct_orgid_identity:** Het identiteitscookie wordt gebruikt om de ECID op te slaan, evenals enkele andere informatie met betrekking tot de ECID.
+
+**kCtr_orgid_permission:** In dit cookie wordt de voorkeur van de gebruiker voor toestemming voor de website opgeslagen.
+
+**kCtr_orgid_personalization:** Dit cookie bevat sessiegegevens die Adobe Target gebruikt om webpagina&#39;s aan te passen.
+
+**kndctr_orgid_consentcheck:** Deze op sessie gebaseerde cookie geeft de server de opdracht om de server met voorkeuren voor toestemming op te zoeken.
 
 ## Waar kan ik meer informatie krijgen over Adobe Experience Platform Web SDK?
 
