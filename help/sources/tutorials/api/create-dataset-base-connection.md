@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset connection flow service;flow service;Flow service connection
+keywords: Experience Platform;huis;populaire onderwerpen;de dienst van de de verbindingsstroom van de dataset;de stroomdienst;De dienstverbinding van de stroom
 solution: Experience Platform
 title: Creeer een verbinding van de de gegevenssetbasis van het Experience Platform gebruikend de Dienst API van de Stroom
 topic: overview
 type: Tutorial
 description: De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
 
 
-# Een basisverbinding voor een [!DNL Experience Platform] gegevensset maken met de [!DNL Flow Service] API
+# Creeer een [!DNL Experience Platform] verbinding van de datasetbasis gebruikend [!DNL Flow Service] API
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Om gegevens van een derdebron aan te sluiten [!DNL Platform], moet een datasetbasisverbinding eerst worden gevestigd.
+Om gegevens van een derdebron aan [!DNL Platform] te verbinden, moet een datasetbasisverbinding eerst worden gevestigd.
 
 Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te lopen om een gegevenssetbasisverbinding tot stand te brengen.
 
@@ -26,28 +26,28 @@ Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te lope
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [XDM-systeem](../../../xdm/home.md)(Experience Data Model): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+* [XDM-systeem](../../../xdm/home.md) (Experience Data Model): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Experience Platform] klantenervaring worden georganiseerd.
    * [Basisbeginselen van de schemacompositie](../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Handleiding](../../../xdm/api/getting-started.md)voor ontwikkelaars van het schemaregister: Omvat belangrijke informatie die u moet weten om vraag aan de Registratie API van het Schema met succes uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
-* [Catalogusservice](../../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen [!DNL Experience Platform].
-* [Inname](../../../ingestion/batch-ingestion/overview.md)in batch: Met de API voor batchinvoer kunt u gegevens als batchbestanden in het Experience Platform invoeren.
-* [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+   * [Handleiding](../../../xdm/api/getting-started.md) voor ontwikkelaars van het schemaregister: Omvat belangrijke informatie die u moet weten om vraag aan de Registratie API van het Schema met succes uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
+* [Catalogusservice](../../../catalog/home.md): Catalog is het systeem van verslagen voor gegevensplaats en lijn binnen  [!DNL Experience Platform].
+* [Inname](../../../ingestion/batch-ingestion/overview.md) in batch: Met de API voor batchinvoer kunt u gegevens als batchbestanden in het Experience Platform invoeren.
+* [Sandboxen](../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met het meer van Gegevens te verbinden gebruikend [!DNL Flow Service] API.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot [!DNL Flow Service]behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -57,13 +57,13 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Verbindingsspecificaties opzoeken
 
-De eerste stap in het creëren van een verbinding van de datasetbasis is een reeks verbindingsspecificaties van binnen terug te winnen [!DNL Flow Service].
+De eerste stap in het creëren van een gegevenssetbasisverbinding moet een reeks verbindingsspecificaties van binnen [!DNL Flow Service] terugwinnen.
 
 **API-indeling**
 
 Elke beschikbare bron heeft zijn eigen unieke reeks verbindingsspecificaties voor het beschrijven van schakelaareigenschappen zoals authentificatievereisten. U kunt verbindingsspecificaties voor een gegevenssetbasisverbinding opzoeken door een verzoek van de GET uit te voeren en vraagparameters te gebruiken.
 
-Het verzenden van een verzoek van de GET zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag omvatten `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` om informatie voor uw gegevenssetbasisverbinding te verkrijgen.
+Het verzenden van een verzoek van de GET zonder vraagparameters zal verbindingsspecificaties voor alle beschikbare bronnen terugkeren. U kunt de vraag `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` omvatten om informatie voor uw gegevenssetbasisverbinding te verkrijgen.
 
 ```http
 GET /connectionSpecs
@@ -85,7 +85,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de verbindingsspecificaties en de unieke id (`id`) die vereist zijn om een basisverbinding te maken.
+Een succesvolle reactie keert de verbindingsspecificaties en unieke herkenningsteken (`id`) terug die worden vereist om een basisverbinding tot stand te brengen.
 
 ```json
 {
@@ -169,11 +169,11 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | ------------- | --------------- |
-| `connectionSpec.id` | De verbindingsspecificatie die in de vorige stap is `id` opgehaald. |
+| `connectionSpec.id` | De verbindingsspecificatie `id` die in de vorige stap wordt teruggewonnen. |
 
 **Antwoord**
 
-Een succesvolle reactie retourneert details van de zojuist gemaakte basisverbinding, inclusief de unieke id (`id`). Deze id is vereist om een doelverbinding te maken en gegevens van een externe bronconnector in te voeren.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om een doelverbinding te maken en gegevens van een externe bronconnector in te voeren.
 
 ```json
 {
