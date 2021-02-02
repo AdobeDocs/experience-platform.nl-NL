@@ -1,13 +1,13 @@
 ---
-keywords: advertising destinations;destinations;rtcdp destinations
+keywords: reclamebestemmingen;bestemmingen;platformbestemmingen
 title: Reclamebestemmingen
 seo-title: Reclamebestemmingen
-description: Verbind uw Platform van Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
-seo-description: Verbind uw Platform van Gegevens van de Klant in real time met een derde reclameplatform (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
+description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
+seo-description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 # Reclamebestemmingen {#advertising-destinations}
 
-Verbind uw [!DNL Real-time Customer Data Platform] met een derdereclameplatform (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
+Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 
 Wanneer het verbinden met een reclamebestemming, worden uw publiek verzonden als IDs naar het bestemmingsplatform, waar zij aan een identiteitskaart in kaart worden gebracht die door het bestemmingsplatform wordt gekend.
 
-Momenteel, in real time CDP steunt de reclame hieronder vermelde bestemmingen. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
+Momenteel ondersteunt Platform de onderstaande reclamebestemmingen. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
 
 ## Verbindingen
 
@@ -34,7 +34,7 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [Verbindi
 
 ## Extensies
 
-Als u het verschil tussen verbindingen en extensies wilt begrijpen, raadpleegt u [Extensies](../../destination-types.md#extensions) op de pagina Doeltypen en -categorieën.
+Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [Uitbreidingen](../../destination-types.md#extensions) in de Types van Bestemming en de pagina van Categorieën.
 
 - [Adobe Advertising Cloud-extensie](./adobe-advertising-cloud.md)
 - [Advertising Conversion Tag-extensie](./awin-conversiontag.md)
