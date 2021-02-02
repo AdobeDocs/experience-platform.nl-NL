@@ -1,48 +1,64 @@
 ---
-keywords: Experience Platform;home;popular topics;Audience manager source connector;Audience Manager;audience manager connector
+keywords: Experience Platform;huis;populaire onderwerpen;de bronschakelaar van de manager van het publiek;Audience Manager;de schakelaar van de publieksmanager
 solution: Experience Platform
 title: Een Adobe Audience Manager-bronaansluiting maken in de gebruikersinterface
 topic: overview
 type: Tutorial
 description: Deze zelfstudie begeleidt u door de stappen om een bronschakelaars voor Adobe Audience Manager tot stand te brengen om de gegevens van de Gebeurtenis van de Consumentenervaring in Platform te brengen gebruikend het gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: bdf95d75bf8db9f3438011f298d17c4259d2c63c
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 2%
+source-wordcount: '466'
+ht-degree: 0%
 
 ---
 
 
 # Een Adobe Audience Manager-bronaansluiting maken in de gebruikersinterface
 
-Deze zelfstudie begeleidt u door de stappen om een bronschakelaars voor Adobe Audience Manager tot stand te brengen om de gegevens van de Gebeurtenis van de Consumentenervaring in Platform te brengen gebruikend het gebruikersinterface.
+Deze zelfstudie begeleidt u door de stappen om een bronschakelaar voor Adobe Audience Manager tot stand te brengen om de gegevens van de Gebeurtenis van de Consumentenervaring in Platform te brengen gebruikend het gebruikersinterface.
 
 ## Een bronverbinding maken met Adobe Audience Manager
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **Bronnen** in de linkernavigatiebalk voor toegang tot de werkruimte Bronnen. In het scherm **Catalogus** worden diverse bronnen weergegeven waarmee u bronverbindingen kunt maken. Elke bron toont het aantal bestaande verbindingen dat aan deze bronnen is gekoppeld.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte [!UICONTROL Bronnen] te openen. Het scherm [!UICONTROL Catalog] toont een verscheidenheid van bronnen waarvoor u een rekening kunt tot stand brengen met.
 
-Selecteer onder de categorie **Adobe-toepassingen** de optie **Adobe Audience Manager** om een informatiebalk aan de rechterkant van het scherm weer te geven. De informatiebalk bevat een korte beschrijving van de geselecteerde bron en opties voor het weergeven van de documentatie of het maken van een verbinding met de bron.
+Selecteer **[!UICONTROL Adobe Audience Manager]** onder de categorie [!UICONTROL Adobe toepassingen] en selecteer **[!UICONTROL Configure]**.
 
-Als u een nieuwe bronaansluiting voor Adobe Audience Manager wilt maken, klikt u op Gegevens **** toevoegen.
+![catalogus](../../../../images/tutorials/create/aam/catalog.png)
 
-![](../../../../images/tutorials/create/aam/catalog.png)
+De stap [!UICONTROL Selecteer kenmerken en segmenten] verschijnt, die u van een interactieve interface voorzien om uw eigenschappen, segmenten, en gegevens te onderzoeken en te selecteren.
 
-Er wordt een dialoogvenster weergegeven. Klik op **Verbinden** om de verbinding te maken.
+* Het linkerpaneel van de interface bevat [!UICONTROL Uitgezochte eigenschappen en segmenten] opties, evenals een hiërarchische folder van alle segmenten beschikbaar aan u.
+* De juiste helft van de interface staat u toe om met geselecteerde segmenten in wisselwerking te staan en door specifieke gegevens te kiezen u wilt gebruiken.
 
-![](../../../../images/tutorials/create/aam/connect_full.png)
+![add-data](../../../../images/tutorials/create/aam/add-data.png)
 
-Als een bronverbinding met Adobe Audience Manager wordt gevestigd, wordt de pagina van de **Bron activiteit** voor de schakelaar van de Audience Manager getoond.
+Als u door beschikbare segmenten wilt navigeren, selecteert u de map die u wilt openen in het deelvenster [!UICONTROL Alle segmenten]. Als u een map selecteert, kunt u de hiërarchie van een map doorlopen en krijgt u een lijst met segmenten om door te filteren.
 
-![](../../../../images/tutorials/create/aam/flow.png)
+![segmentmap](../../../../images/tutorials/create/aam/segment-folder.png)
 
-Als u binnenkomende gegevens van de Audience Manager wilt pauzeren, kunt u dit doen door de dataflow lijst te klikken en zijn *Status* van de juiste kolom van *Eigenschappen* van een knevel te voorzien.
+Nadat u de gewenste segmenten hebt geïdentificeerd en geselecteerd, wordt rechts een nieuw deelvenster weergegeven met de lijst met geselecteerde items. U kunt tot verschillende omslagen blijven toegang hebben en verschillende segmenten voor uw verbinding selecteren. Als u meer segmenten selecteert, wordt het deelvenster aan de rechterkant bijgewerkt.
 
-![](../../../../images/tutorials/create/aam/flow_disable.png)
+![select-data](../../../../images/tutorials/create/aam/select-data.png)
+
+U kunt ook de vakken **[!UICONTROL Alle segmenten]** en **[!UICONTROL Alle kenmerken selecteren]** selecteren. Het selecteren van alle segmenten zal de segmenten van de Audience Manager aan Platform brengen, terwijl het selecteren van alle eigenschappen alle eerste partijsporen van Audience Manager toelaat.
+
+Als u klaar bent, selecteert u **[!UICONTROL Volgende]**
+
+![alle segmenten](../../../../images/tutorials/create/aam/all-segments.png)
+
+De stap [!UICONTROL Revisie] wordt weergegeven, zodat u de geselecteerde kenmerken en segmenten kunt bekijken voordat ze met het Platform worden verbonden. De details worden gegroepeerd in de volgende categorieën:
+
+* **[!UICONTROL Verbinding]**: Toont het bronplatform en de status van de verbinding.
+* **[!UICONTROL Geselecteerde gegevens]**: Hiermee geeft u het aantal geselecteerde segmenten en de ingeschakelde kenmerken weer.
+
+![revisie](../../../../images/tutorials/create/aam/review.png)
+
+Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Voltooien]** en laat u enige tijd over tot de gegevensstroom.
 
 ## Volgende stappen
 
 Terwijl een gegevensstroom van de Audience Manager actief is, worden de inkomende gegevens automatisch opgenomen in de Profielen van de Klant in real time. U kunt deze inkomende gegevens nu gebruiken en publiekssegmenten maken met de Dienst van de Segmentatie van het Platform. Raadpleeg de volgende documenten voor meer informatie:
 
-- [Overzicht van het realtime klantprofiel](../../../../../profile/home.md)
-- [Overzicht van segmentatieservice](../../../../../segmentation/home.md)
+* [Overzicht van het realtime klantprofiel](../../../../../profile/home.md)
+* [Overzicht van segmentatieservice](../../../../../segmentation/home.md)
