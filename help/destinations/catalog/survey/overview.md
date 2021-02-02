@@ -1,23 +1,23 @@
 ---
-keywords: Survey destinations;survey;foresee;inmoment;web intercept surveys;qualtrics
+keywords: Onderzoeksbestemmingen;enquête;voorspelling;inmoment;web-onderscheppingsenquêtes;qualtriciteiten
 title: Beoordelingsbestemmingen
 seo-title: Beoordelingsbestemmingen
-description: De platforms van onderzoeken ontdekken onderzoeksgebeurtenissen, vangen klant terugkoppelt in real time door gegevenselementen, en delen gegevens met CDP in real time.
-seo-description: De platforms van onderzoeken ontdekken onderzoeksgebeurtenissen, vangen klant terugkoppelt in real time door gegevenselementen, en delen gegevens met CDP in real time.
+description: De platforms van enquêtes ontdekken onderzoeksgebeurtenissen, vangen klant terugkoppelt in real time door gegevenselementen, en delen gegevens met Platform.
+seo-description: De platforms van enquêtes ontdekken onderzoeksgebeurtenissen, vangen klant terugkoppelt in real time door gegevenselementen, en delen gegevens met Platform.
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
 
 
-# Onderzoeksbestemmingen {#survey-destinations}
+# Beoordelingsdoelen {#survey-destinations}
 
-De platforms van onderzoeken ontdekken onderzoeksgebeurtenissen, vangen klant terugkoppelt in real time door gegevenselementen, en delen gegevens met CDP in real time.
+De platforms van enquêtes ontdekken onderzoeksgebeurtenissen, vangen klant terugkoppelt in real time door gegevenselementen, en delen gegevens met Adobe Experience Platform.
 
-Momenteel, steunt het Platform van Gegevens van de Klant in real time de hieronder vermelde onderzoeksbestemmingen. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
+Momenteel, steunt Platform de hieronder vermelde onderzoeksbestemmingen. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
 
 - [Verwachte extensie](./foresee.md)
 - [InMoment-extensie](./inmoment.md)
