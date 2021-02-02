@@ -1,13 +1,13 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp
+keywords: RTCDP;CDP;Real-time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;cdp;Customer AI
 title: Real-time overzicht van het Platform van klantgegevens
 seo-title: Real-time overzicht van het Platform van klantgegevens
 description: Overzicht van het Platform van de Gegevens van de Klant in real time
 seo-description: Overzicht van het Platform van de Gegevens van de Klant in real time
 translation-type: tm+mt
-source-git-commit: 4dfef6649b3ae07593667eb5165dad6bacc8ed2f
+source-git-commit: 9f20f8bfeefb5bc427a72a11ac1f01816cdbc4b2
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Met het Platform van de Gegevens van de Klant in real time, kunt u:
 
 ## Extra informatie
 
-Als u meer wilt weten over Adobe Experience Platform, leest u eerst het overzicht [van het](../landing/home.md)Experience Platform.
+Om meer over Adobe Experience Platform te leren, begin door [Experience Platform overzicht](../landing/home.md) te lezen.
 
 De volgende documentatie wordt aanbevolen om u te helpen aan de slag te gaan met Real-time Customer Data Platform:
 
