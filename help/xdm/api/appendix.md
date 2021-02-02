@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;compatibility;Compatibility;compatibility mode;Compatibility mode;field type;field types;
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Gegevensmodel;Gegevensmodel;Schema register;Schema Register;Compatibiliteit;Compatibiliteitsmodus;Compatibiliteitsmodus;veldtype;veldtypen;
 solution: Experience Platform
 title: Aanhangsel voor ontwikkelaar van het schemaregister
 description: Dit document bevat aanvullende informatie over het werken met de API voor het registreren van het schema.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
