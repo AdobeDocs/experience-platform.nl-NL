@@ -1,13 +1,13 @@
 ---
 keywords: streaming;
-title: De bestemming van HTTP is een bestemming van het Platform van Gegevens van de Klant In real time die u helpt profielgegevens naar derdeeindpunten van HTTP verzenden.
-seo-title: De bestemming van HTTP is een bestemming van het Platform van Gegevens van de Klant In real time die u helpt profielgegevens naar derdeeindpunten van HTTP verzenden.
-description: De bestemming van HTTP is een bestemming van het Platform van Gegevens van de Klant In real time die u helpt profielgegevens naar derdeeindpunten van HTTP verzenden.
-seo-description: De bestemming van HTTP is een bestemming van het Platform van Gegevens van de Klant In real time die u helpt profielgegevens naar derdeeindpunten van HTTP verzenden.
+title: De HTTP-bestemming is een Adobe Experience Platform-bestemming waarmee u profielgegevens naar externe HTTP-eindpunten kunt verzenden.
+seo-title: De HTTP-bestemming is een Adobe Experience Platform-bestemming waarmee u profielgegevens naar externe HTTP-eindpunten kunt verzenden.
+description: De HTTP-bestemming is een Adobe Experience Platform-bestemming waarmee u profielgegevens naar externe HTTP-eindpunten kunt verzenden.
+seo-description: De HTTP-bestemming is een Adobe Experience Platform-bestemming waarmee u profielgegevens naar externe HTTP-eindpunten kunt verzenden.
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -17,38 +17,38 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De [!DNL HTTP] bestemming in real time CDP is momenteel in alpha. De documentatie en de functionaliteit kunnen worden gewijzigd.
+>De [!DNL HTTP] bestemming in Platform is momenteel in alpha. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 ## Overzicht {#overview}
 
-Het [!DNL HTTP] doel is een [!DNL Real-time Customer Data Platform] streamingdoel waarmee u profielgegevens naar eindpunten van derden kunt verzenden [!DNL HTTP] .
+De [!DNL HTTP] bestemming is een [!DNL Adobe Experience Platform] het stromen bestemming die u profielgegevens naar derde [!DNL HTTP] eindpunten helpt verzenden.
 
-Als u profielgegevens naar [!DNL HTTP] eindpunten wilt verzenden, moet u eerst verbinding maken met het doel in de [[!DNL Real-time Customer Data Platform]](#connect-destination)map.
+Als u profielgegevens naar [!DNL HTTP] eindpunten wilt verzenden, moet u eerst verbinding maken met het doel in [[!DNL Adobe Experience Platform]](#connect-destination).
 
-## Use Cases {#use-cases}
+## Gevallen {#use-cases} gebruiken
 
-De [!DNL HTTP] bestemming wordt gericht op klanten die XDM profielgegevens en publiekssegmenten naar generische [!DNL HTTP] eindpunten moeten uitvoeren.
+Het doel [!DNL HTTP] is gericht op klanten die XDM profielgegevens en publiekssegmenten naar generische [!DNL HTTP] eindpunten moeten uitvoeren.
 
 [!DNL HTTP] de eindpunten kunnen of de systemen van klanten of derdeoplossingen zijn.
 
-## Verbinden met doel {#connect-destination}
+## Verbinden met Doel {#connect-destination}
 
-Selecteer in **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** de optie [!DNL HTTP API]en selecteer **[!UICONTROL Configureren]**.
+Selecteer **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** en selecteer [!DNL HTTP API] en **[!UICONTROL Configureren]**.
 
 ![HTTP-bestemming activeren](../assets/catalog/http/activate.png)
 
 >[!NOTE]
 >
->Als er al een verbinding met dit doel bestaat, ziet u een knop **[!UICONTROL Activeren]** op de doelkaart. Voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]**, verwijs naar de sectie van de [Catalogus](../ui/destinations-workspace.md#catalog) van de documentatie van de bestemmingswerkruimte.
+>Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL knop Activeer]** op de doelkaart zien. Voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]**, verwijs naar [Catalog](../ui/destinations-workspace.md#catalog) sectie van de documentatie van de bestemmingswerkruimte.
 >
 >![HTTP-bestemming activeren](../assets/catalog/http/connect.png)
 
-In de stap van de [!UICONTROL Rekening] , moet u de details van de HTTP- eindpuntverbinding bepalen. Selecteer **[!UICONTROL Nieuwe account]** en voer de verbindingsgegevens in voor het HTTP-eindpunt waarmee u verbinding wilt maken.
-- **[!UICONTROL httpEndpoint]**: de volledige voltooiing [!DNL URL] van het eindpunt van HTTP dat u de profielgegevens wilt verzenden naar.
-   - Naar keuze kunt u vraagparameters aan [!UICONTROL httpEndpoint] toevoegen [!DNL URL].
-- **[!UICONTROL authEndpoint]**: het volledige eindpunt [!DNL URL] van HTTP dat voor [!DNL OAuth2] authentificatie wordt gebruikt.
-- **[!UICONTROL Client-id]**: de [!DNL clientID] parameter die in de [!DNL OAuth2] cliëntgeloofsbrieven wordt gebruikt.
-- **[!UICONTROL Clientgeheim]**: de [!DNL clientSecret] parameter die in de [!DNL OAuth2] cliëntgeloofsbrieven wordt gebruikt.
+In de stap [!UICONTROL Account], moet u de details van de de eindpuntverbinding van HTTP bepalen. Selecteer **[!UICONTROL Nieuwe account]** en voer de verbindingsdetails in voor het HTTP-eindpunt waarmee u verbinding wilt maken.
+- **[!UICONTROL httpEndpoint]**: de volledige voltooiing  [!DNL URL] van het eindpunt van HTTP dat u de profielgegevens wilt verzenden naar.
+   - Naar keuze kunt u vraagparameters aan [!UICONTROL httpEndpoint] [!DNL URL] toevoegen.
+- **[!UICONTROL authEndpoint]**: het volledige eindpunt  [!DNL URL] van HTTP dat voor  [!DNL OAuth2] authentificatie wordt gebruikt.
+- **[!UICONTROL Client-id]**: de  [!DNL clientID] parameter die in de  [!DNL OAuth2] cliëntgeloofsbrieven wordt gebruikt.
+- **[!UICONTROL Clientgeheim]**: de  [!DNL clientSecret] parameter die in de  [!DNL OAuth2] cliëntgeloofsbrieven wordt gebruikt.
 
 >[!NOTE]
 >
@@ -56,12 +56,12 @@ In de stap van de [!UICONTROL Rekening] , moet u de details van de HTTP- eindpun
 
 ![HTTP-eindpuntverbinding](../assets/catalog/http/connect.png)
 
-Klik op **[!UICONTROL Verbinden met doel]**. Klik op **[!UICONTROL Volgende]** nadat de verbinding tot stand is gebracht.
+Klik **[!UICONTROL Verbinding maken met doel]**. Nadat de verbinding succesvol is, klik **[!UICONTROL Volgende]**.
 
-Voer in de stap [!UICONTROL Verificatie] de verificatiereferenties van de account in:
+Voer in de stap [!UICONTROL Verificatie] de verificatiegegevens van de account in:
 - **[!UICONTROL Naam]**: Voer een naam in waarmee u deze bestemming in de toekomst wilt herkennen.
 - **[!UICONTROL Omschrijving]**: Voer een beschrijving in die u helpt deze bestemming in de toekomst te identificeren.
-- **[!UICONTROL Aangepaste kopteksten]**: Ga om het even welke douanekopballen in die u in de bestemmingsvraag, volgend dit formaat wilt worden omvat: `header1:value1,header2:value2,...headerN:valueN`.
+- **[!UICONTROL Aangepaste kopteksten]**: Ga om het even welke douanekopballen in die u in de bestemmingsvraag, volgend dit formaat wilt worden omvat:  `header1:value1,header2:value2,...headerN:valueN`.
 
 >[!IMPORTANT]
 >
@@ -69,21 +69,21 @@ Voer in de stap [!UICONTROL Verificatie] de verificatiereferenties van de accoun
 
 ![HTTP-verificatie](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL Geval]** voor gebruik bij het in de handel brengen: Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het op de markt brengen van gebruiksgevallen, zie de [Governance van Gegevens in Echte tijd CDP](../../rtcdp/privacy/data-governance-overview.md#destinations) pagina. Voor informatie over de individuele Adobe-bepaalde het in de handel brengen gebruiksgevallen, zie het overzicht [van het het gebruiksbeleid van](../../data-governance/policies/overview.md#core-actions)Gegevens.
+**[!UICONTROL Geval]** voor gebruik bij het in de handel brengen: Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../data-governance/policies/overview.md) voor meer informatie over gevallen van marketinggebruik.
 
-Klik op **[!UICONTROL Doel]** maken.
+Klik **[!UICONTROL Doel maken]**.
 
 ## Segmenten activeren
 
-Zie Profielen en segmenten [activeren naar een doel](../ui/activate-destinations.md#select-attributes) voor informatie over de workflow voor segmentactivering.
+Zie [Profielen en segmenten activeren naar een doel](../ui/activate-destinations.md#select-attributes) voor informatie over de workflow voor segmentactivering.
 
 ## Doelkenmerken
 
-Tijdens de [[!UICONTROL Uitgezochte attributenstap]](../ui/activate-destinations.md#select-attributes) , wanneer het [activeren van segmenten](../ui/activate-destinations.md) aan een [!DNL HTTP] bestemming, adviseren wij dat u een uniek herkenningsteken van uw [verenigingsschema](../../profile/home.md#profile-fragments-and-union-schemas)selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
+Tijdens de [[!UICONTROL Uitgezochte attributen]](../ui/activate-destinations.md#select-attributes) stap, wanneer [het activeren van segmenten](../ui/activate-destinations.md) aan een [!DNL HTTP] bestemming, adviseren wij dat u een uniek herkenningsteken van uw [samenvoegingsschema](../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Uw geëxporteerde [!DNL Experience Platform] gegevens worden in JSON-indeling op uw [!DNL HTTP] bestemming geplaatst. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn [!DNL ECID] en e-mail.
+Uw geëxporteerde [!DNL Experience Platform]-gegevens worden in JSON-indeling in uw [!DNL HTTP]-doel geplaatst. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn [!DNL ECID] en e-mail.
 
 ```json
 {
