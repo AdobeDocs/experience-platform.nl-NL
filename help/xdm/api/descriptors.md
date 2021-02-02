@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;descriptor;Descriptor;descriptors;Descriptors;identity;Identity;friendly name;Friendly name;alternatedisplayinfo;reference;Reference;relationship;Relationship
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;Schema Register;Schema Register;Descriptor;Descriptors;Identiteit;Identiteit;Vriendelijke naam;Alternatieve naam;AlternateInfo;Referentie;Referentie;Relatie;Relatie
 solution: Experience Platform
 title: Beschrijvers
 description: Het /descriptors eindpunt in de Registratie API van het Schema staat u toe om XDM beschrijvers binnen uw ervaringstoepassing programmatically te beheren.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1611'
 ht-degree: 0%
 
 ---
