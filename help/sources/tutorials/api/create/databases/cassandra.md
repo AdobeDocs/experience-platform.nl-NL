@@ -1,61 +1,61 @@
 ---
-keywords: Experience Platform;home;popular topics;Apache Cassandra;apache cassandra;Cassandra;cassandra
+keywords: Experience Platform;thuis;populaire onderwerpen;Apache Cassandra;apache cassandra;Cassandra;cassandra
 solution: Experience Platform
 title: Een Apache Cassandra-connector maken met behulp van de Flow Service API
 topic: overview
 type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Apache Cassandra (hierna "Cassandra" genoemd) aan Experience Platform te verbinden.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '628'
 ht-degree: 0%
 
 ---
 
 
-# Een [!DNL Apache Cassandra] aansluiting maken met de [!DNL Flow Service] API
+# Een [!DNL Apache Cassandra]-connector maken met de [!DNL Flow Service]-API
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-In deze zelfstudie wordt de [!DNL Flow Service] API gebruikt om u door de stappen te laten lopen waarmee u verbinding kunt maken [!DNL Apache Cassandra] (hierna &quot;Cassandra&quot; genoemd) [!DNL Experience Platform].
+Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om [!DNL Apache Cassandra] (hierna &quot;Cassandra&quot; genoemd) aan [!DNL Experience Platform] te verbinden.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Bronnen](../../../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
+* [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met Cassandra te verbinden gebruikend [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Als u verbinding wilt [!DNL Flow Service] maken met [!DNL Cassandra], moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Als u [!DNL Flow Service] wilt laten verbinden met [!DNL Cassandra], moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `host` | Het IP-adres of de hostnaam van de [!DNL Cassandra] server. |
-| `port` | De TCP-poort die de [!DNL Cassandra] server gebruikt om te luisteren naar clientverbindingen. De standaardpoort is `9042`. |
-| `username` | De gebruikersnaam die wordt gebruikt om verbinding te maken met de [!DNL Cassandra] server voor verificatie. |
-| `password` | Het wachtwoord om verbinding te maken met de [!DNL Cassandra] server voor verificatie. |
+| `host` | Het IP-adres of de hostnaam van de [!DNL Cassandra]-server. |
+| `port` | De TCP-poort die de [!DNL Cassandra]-server gebruikt om te luisteren naar clientverbindingen. De standaardpoort is `9042`. |
+| `username` | De gebruikersnaam die wordt gebruikt om verbinding te maken met de [!DNL Cassandra]-server voor verificatie. |
+| `password` | Het wachtwoord om verbinding te maken met de [!DNL Cassandra]-server voor verificatie. |
 | `connectionSpec.id` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL Cassandra] is `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
 
-Raadpleeg [dit Cassandra-document](https://cassandra.apache.org/doc/latest/operating/security.html#authentication)voor meer informatie over aan de slag gaan.
+Raadpleeg [dit Cassandra-document](https://cassandra.apache.org/doc/latest/operating/security.html#authentication) voor meer informatie over aan de slag gaan.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DNL Flow Service]sandboxen behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -65,7 +65,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Verbinding maken
 
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Er is slechts één connector per [!DNL Cassandra] account vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL Cassandra]-account is slechts één connector vereist omdat deze kan worden gebruikt om meerdere bronconnectors te maken die verschillende gegevens kunnen inbrengen.
 
 **API-indeling**
 
@@ -106,15 +106,15 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `auth.params.host` | Het IP-adres of de hostnaam van de [!DNL Cassandra] server. |
-| `auth.params.port` | De TCP-poort die de [!DNL Cassandra] server gebruikt om te luisteren naar clientverbindingen. De standaardpoort is `9042`. |
-| `auth.params.username` | De gebruikersnaam die wordt gebruikt om verbinding te maken met de [!DNL Cassandra] server voor verificatie. |
-| `auth.params.password` | Het wachtwoord om verbinding te maken met de [!DNL Cassandra] server voor verificatie. |
-| `connectionSpec.id` | De [!DNL Cassandra] verbindingsspecificatie-id: `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
+| `auth.params.host` | Het IP-adres of de hostnaam van de [!DNL Cassandra]-server. |
+| `auth.params.port` | De TCP-poort die de [!DNL Cassandra]-server gebruikt om te luisteren naar clientverbindingen. De standaardpoort is `9042`. |
+| `auth.params.username` | De gebruikersnaam die wordt gebruikt om verbinding te maken met de [!DNL Cassandra]-server voor verificatie. |
+| `auth.params.password` | Het wachtwoord om verbinding te maken met de [!DNL Cassandra]-server voor verificatie. |
+| `connectionSpec.id` | De [!DNL Cassandra]-verbindings-ID: `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
 ```json
 {
@@ -125,4 +125,4 @@ Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, in
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL Cassandra] verbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u databases kunt [verkennen met behulp van de Flow Service API](../../explore/database-nosql.md).
+Door deze zelfstudie te volgen hebt u een [!DNL Cassandra]-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken terwijl u leert hoe u databases kunt [verkennen met behulp van de Flow Service API](../../explore/database-nosql.md).
