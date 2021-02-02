@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Azure;Azure File Storage;Azure file storage
+keywords: Experience Platform;home;populaire onderwerpen;Azure;Azure File Storage;Azure-bestandsopslag
 solution: Experience Platform
 title: Een Azure File Storage-connector maken met de Flow Service API
 topic: overview
 type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Azure File Storage te verbinden met Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '590'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -126,4 +126,4 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen hebt u een [!DNL Azure File Storage]-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken wanneer u leert hoe u een externe cloudopslag kunt verkennen met de Flow Service API[.](../../explore/cloud-storage.md)
+Door deze zelfstudie te volgen hebt u een [!DNL Azure File Storage]-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken wanneer u leert hoe u een externe cloudopslag kunt verkennen met de Flow Service API](../../explore/cloud-storage.md).[
