@@ -1,75 +1,74 @@
 ---
-keywords: Azure event hub destination;azure event hub;azure eventhub
+keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
 title: (Beta) Azure Event Hubs-bestemming
 seo-title: (Beta) Azure Event Hubs-bestemming
 description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van Experience Platform.
 seo-description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7484e64d0d359f40ef242dfc9d2d1704018a8ed6
+source-git-commit: 97c0a9f4726ec85b7a72dc682fbd201a6152c1ba
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '509'
 ht-degree: 0%
 
 ---
 
 
-# (Beta) [!DNL Azure Event Hubs] bestemming
+# (Bèta) [!DNL Azure Event Hubs] bestemming
 
 >[!IMPORTANT]
 >
->De [!DNL Azure Event Hubs] bestemming in real time CDP is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
+>De [!DNL Azure Event Hubs] bestemming in Platform is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 ## Overzicht {#overview}
 
 [!DNL Azure Event Hubs] is een groot platform voor gegevensstreaming en service voor het opnemen van gebeurtenissen. Het kan miljoenen gebeurtenissen per seconde ontvangen en verwerken. Gegevens die naar een gebeurtenishub worden verzonden, kunnen worden getransformeerd en opgeslagen met behulp van een realtime analyseprovider of batchadapters.
 
-U kunt een uitgaande verbinding in real time met uw [!DNL Azure Event Hubs] opslag maken om gegevens vanuit Adobe Experience Platform te streamen.
+U kunt een uitgaande verbinding in real time met uw [!DNL Azure Event Hubs]-opslag maken om gegevens vanuit Adobe Experience Platform te streamen.
 
-* Voor meer informatie over [!DNL Azure Event Hubs], zie de documentatie [van](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)Microsoft.
-* Zie de zelfstudie over de API- [!DNL Azure Event Hubs] streamingdoelen als u verbinding wilt maken met het [gebruik van API-aanroepen](../../api/streaming-destinations.md).
-* Zie de onderstaande secties om verbinding te maken met de CDP-gebruikersinterface in real time [!DNL Azure Event Hubs] .
+* Voor meer informatie over [!DNL Azure Event Hubs], zie [de documentatie van Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
+* Als u verbinding wilt maken met [!DNL Azure Event Hubs] via API-aanroepen, raadpleegt u de [API-zelfstudie voor streaming doelen](../../api/streaming-destinations.md).
+* Zie de onderstaande secties als u verbinding wilt maken met [!DNL Azure Event Hubs] via de gebruikersinterface van het Platform.
 
 ![AWS Kinesis in de gebruikersinterface](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
-## Use Cases {#use-cases}
+## Gevallen {#use-cases} gebruiken
 
-Door het stromen bestemmingen zoals te gebruiken [!DNL Azure Event Hubs], kunt u high-value segmenteringsgebeurtenissen en bijbehorende profielattributen in uw systemen van keus gemakkelijk invoeren.
+Door het stromen bestemmingen zoals [!DNL Azure Event Hubs] te gebruiken, kunt u high-value segmenteringsgebeurtenissen en bijbehorende profielattributen in uw systemen van keus gemakkelijk invoeren.
 
-Met een vooruitzicht downloadde u bijvoorbeeld een witboek dat hen kwalificeert tot een segment met een &quot;hoge neiging om te converteren&quot;. Door het segment in kaart te brengen dat het vooruitzicht binnen aan de [!DNL Azure Event Hubs] bestemming valt, zou u deze gebeurtenis binnen ontvangen [!DNL Azure Event Hubs]. Daar, kunt u een doe-het-zelf benadering gebruiken en bedrijfslogica bovenop de gebeurtenis beschrijven, aangezien u denkt het beste met uw systemen van bedrijfsIT zou werken.
+Met een vooruitzicht downloadde u bijvoorbeeld een witboek dat hen kwalificeert tot een segment met een &quot;hoge neiging om te converteren&quot;. Door het segment in kaart te brengen dat het vooruitzicht binnen aan [!DNL Azure Event Hubs] bestemming valt, zou u deze gebeurtenis in [!DNL Azure Event Hubs] ontvangen. Daar, kunt u een doe-het-zelf benadering gebruiken en bedrijfslogica bovenop de gebeurtenis beschrijven, aangezien u denkt het beste met uw systemen van bedrijfsIT zou werken.
 
 ## Exporttype {#export-type}
 
-**Op profiel gebaseerd** - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met kenmerken selecteren van de workflow voor [doelactivering](../../ui/activate-destinations.md#select-attributes).
+**Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met kenmerken selecteren van de workflow voor  [doelactivering](../../ui/activate-destinations.md#select-attributes).
 
-## Connect-doel {#connect-destination}
+## Doel {#connect-destination} verbinden
 
-Zie de workflow voor [Cloud-opslagdoelen ](./workflow.md)voor instructies over het maken van een verbinding met uw cloudopslagdoelen, inclusief [!DNL Azure Event Hubs].
+Zie [Workflow ](./workflow.md)voor cloudopslagdoelen voor instructies voor het maken van een verbinding met uw cloudopslagdoelen, inclusief [!DNL Azure Event Hubs].
 
-Voor [!DNL Azure Event Hubs] bestemmingen, ga de volgende informatie in creeer bestemmingswerkschema in:
+Voor [!DNL Azure Event Hubs] bestemmingen, ga de volgende informatie in tot bestemmingswerkschema:
 
-### In de stap Verificatie {#authentication-step}
+### In de stap van de Authentificatie {#authentication-step}
 
-* **[!UICONTROL SAS-sleutelnaam]** en **[!UICONTROL SAS-sleutel]**: Vul uw SAS-sleutelnaam en -sleutel in. Meer informatie over verificatie [!DNL Azure Event Hubs] met SAS-toetsen vindt u in de documentatie [van](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
-* **[!UICONTROL Naamruimte]**: Vul de [!DNL Azure Event Hubs] naamruimte in. Meer informatie over [!DNL Azure Event Hubs] naamruimten vindt u in de documentatie [van](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)Microsoft.
+* **[!UICONTROL SAS-sleutelnaam]** en  **[!UICONTROL SAS-sleutel]**: Vul uw SAS-sleutelnaam en -sleutel in. Meer informatie over het verifiëren van [!DNL Azure Event Hubs] met SAS sleutels in [de documentatie van Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Naamruimte]**: Vul de  [!DNL Azure Event Hubs] naamruimte in. Meer informatie over [!DNL Azure Event Hubs] naamruimten in de [Microsoft-documentatie](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 ![Invoer vereist in de verificatiestap](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
 
-### In de stap Setup {#setup-step}
+### In de stap {#setup-step}
 
-* **[!UICONTROL Naam]**: Geef een naam op voor de verbinding met [!DNL Azure Event Hubs].
+* **[!UICONTROL Naam]**: Geef een naam op voor de verbinding met  [!DNL Azure Event Hubs].
 * **[!UICONTROL Omschrijving]**: Geef een beschrijving van de verbinding op.  Voorbeelden: &quot;Klanten met de hoogste rang&quot;, &quot;Males die geïnteresseerd zijn in keukenvorming&quot;.
-* **[!UICONTROL eventHubName]**: Geef een naam voor de stream op naar het [!DNL Azure Event Hubs] doel.
+* **[!UICONTROL eventHubName]**: Geef een naam voor de stream op naar uw  [!DNL Azure Event Hubs] bestemming.
 
 ![Gegevens vereist in de installatiestap](../../assets/catalog/cloud-storage/event-hubs/setup.png)
 
-## Segmenten activeren {#activate-segments}
+## Segmenten {#activate-segments} activeren
 
-Zie Profielen en segmenten [activeren naar een doel](../../ui/activate-destinations.md) voor informatie over de workflow voor segmentactivering.
-
+Zie [Profielen en segmenten activeren naar een doel](../../ui/activate-destinations.md) voor informatie over de workflow voor segmentactivering.
 
 ## Geëxporteerde gegevens {#exported-data}
 
-De geëxporteerde [!DNL Experience Platform] gegevens worden in JSON- [!DNL Azure Event Hubs] indeling opgeslagen. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn ECID en e-mail.
+Uw geëxporteerde [!DNL Experience Platform]-gegevens worden in de JSON-indeling [!DNL Azure Event Hubs] geplaatst. De gebeurtenis hieronder bevat bijvoorbeeld het kenmerk E-mailadresprofiel van een publiek dat voor een bepaald segment is gekwalificeerd en een ander segment heeft verlaten. De identiteiten voor dit vooruitzicht zijn ECID en e-mail.
 
 ```json
 {
