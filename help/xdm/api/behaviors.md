@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;behavior;behaviour;behaviors;behaviours;
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;Data Model;Schema Register;Schema Register;gedrag;gedrag;gedrag;gedrag; gedrag; gedrag
 solution: Experience Platform
 title: Hulplijn eindpunt Gedrag
 description: Het /behavior eindpunt in de Registratie API van het Schema staat u toe om al beschikbaar gedrag in de globale container terug te winnen.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '425'
 ht-degree: 1%
 
 ---
