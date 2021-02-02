@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identity graph viewer;Identity graph viewer;graph viewer;Graph viewer;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
+keywords: Experience Platform;home;populaire onderwerpen;identiteitsgrafiekviewer;Identiteitsgrafiekviewer;grafiekviewer;Grafiekviewer;Naamruimte;Identiteitsnaamruimte;Identiteitsservice;Identiteitsservice
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
 translation-type: tm+mt
-source-git-commit: 7c52760bdceb8d45d76cd22d69241f8c23943674
+source-git-commit: 7c9c81492df9333945ac62602f10b6097296d62b
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '905'
 ht-degree: 1%
 
 ---
@@ -31,19 +31,19 @@ Als u met de viewer voor identiteitsgrafieken werkt, moet u de verschillende bet
 
 ### Terminologie
 
-- **Identiteit (knooppunt):** Een identiteit of een knoop is gegevens uniek aan een entiteit, typisch een persoon. Een identiteit bestaat uit een naamruimte en identiteitswaarde.
+- **Identiteit (knooppunt):** Een identiteit of knooppunt is gegevens die uniek zijn voor een entiteit, doorgaans een persoon. Een identiteit bestaat uit een naamruimte en identiteitswaarde.
 - **Koppeling (rand):** Een koppeling of rand vertegenwoordigt de verbinding tussen identiteiten.
-- **Grafiek (cluster):** Een grafiek of een cluster is een groep identiteiten en koppelingen die een persoon vertegenwoordigen.
+- **Grafiek (cluster):** Een grafiek of een cluster is een groep identiteiten en verbindingen die een persoon vertegenwoordigen.
 
 ## De viewer voor identiteitsgrafieken openen
 
-Als u de viewer voor identiteitsgrafieken in de gebruikersinterface wilt gebruiken, selecteert u **[!UICONTROL Identiteiten]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Identiteitsgrafiek]** . Klik in het scherm **[!UICONTROL Identiteitsnaamruimte]** op het pictogram Identiteitsnaamruimte **** selecteren om te zoeken naar de naamruimte die u wilt gebruiken.
+Als u de viewer voor identiteitsgrafieken in de UI wilt gebruiken, selecteert u **[!UICONTROL Identiteiten]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Identiteitsgrafiek]**. Klik in het scherm **[!UICONTROL Identiteitsnaamruimte]** op het pictogram **[!UICONTROL Identiteitsnaamruimte selecteren]** om te zoeken naar de naamruimte die u wilt gebruiken.
 
 ![namespace-screen](../images/identity-graph-viewer/identity-namespace.png)
 
-Het deelvenster Naamruimte **** selecteren wordt weergegeven. Dit scherm bevat een lijst met naamruimten die beschikbaar zijn voor uw organisatie, waaronder informatie over de **[!UICONTROL weergavenaam]** van een naamruimte, het **[!UICONTROL identiteitssymbool]**, de **[!UICONTROL eigenaar]**, de **[!UICONTROL laatst bijgewerkte]** datum en de **[!UICONTROL beschrijving]**. U kunt alle opgegeven naamruimten gebruiken zolang er een geldige identiteitswaarde aan is gekoppeld.
+Het deelvenster **[!UICONTROL Naamruimte selecteren]** wordt weergegeven. Dit scherm bevat een lijst met naamruimten die beschikbaar zijn voor uw organisatie, inclusief informatie over de **[!UICONTROL Weergavenaam]**, **[!UICONTROL Identiteitssymbool]**, **[!UICONTROL Eigenaar]**, **[!UICONTROL Laatst bijgewerkt]** datum, en **[!UICONTROL Beschrijving]**. U kunt alle opgegeven naamruimten gebruiken zolang er een geldige identiteitswaarde aan is gekoppeld.
 
-Selecteer de naamruimte die u wilt gebruiken en klik op **[!UICONTROL Selecteren]** om door te gaan.
+Selecteer de naamruimte die u wilt gebruiken en klik op **[!UICONTROL Select]** om door te gaan.
 
 ![select-identity-namespace](../images/identity-graph-viewer/select-identity-namespace.png)
 
@@ -55,27 +55,27 @@ De viewer voor identiteitsgrafieken wordt weergegeven. Links in het scherm ziet 
 
 >[!IMPORTANT]
 >
->Een identiteitsgrafiek vereist een minimum van twee verbonden identiteiten om, evenals een geldige namespace en paar van identiteitskaart te produceren. Het maximumaantal identiteiten dat de grafiekviewer kan weergeven, is 150. Zie de [bijlage](#appendix) hieronder voor meer informatie.
+>Een identiteitsgrafiek vereist een minimum van twee verbonden identiteiten om, evenals een geldige namespace en paar van identiteitskaart te produceren. Het maximumaantal identiteiten dat de grafiekviewer kan weergeven, is 150. Zie de sectie [appendix](#appendix) hieronder voor meer informatie.
 
 ![identiteitsgrafiek](../images/identity-graph-viewer/graph-viewer.png)
 
-Selecteer een identiteit om de gemarkeerde rij in de tabel **[!UICONTROL Identiteiten]** bij te werken en de gegevens op de rechtertrack bij te werken, waaronder de **[!UICONTROL waarde]** van een identiteit, de **[!UICONTROL Batch-id]** en de **[!UICONTROL laatst bijgewerkte]** datum.
+Selecteer een identiteit om de gemarkeerde rij in de tabel **[!UICONTROL Identiteiten]** bij te werken en de informatie in de rechtertrack bij te werken, waaronder de **[!UICONTROL Waarde]**, **[!UICONTROL Batch ID]** en de datum **[!UICONTROL Laatst bijgewerkt]**.
 
 ![select-identity](../images/identity-graph-viewer/select-identity.png)
 
-U kunt door een grafiek filtreren en een specifieke namespace isoleren gebruikend de soortoptie bovenop de lijst van **[!UICONTROL Identiteiten]** . Selecteer in het vervolgkeuzemenu de naamruimte die u wilt markeren.
+U kunt door een grafiek filtreren en een specifieke namespace isoleren gebruikend de soortoptie bovenop de **[!UICONTROL Lijst van Identiteiten]**. Selecteer in het vervolgkeuzemenu de naamruimte die u wilt markeren.
 
 ![filter-voor-naamruimte](../images/identity-graph-viewer/filter-namespace.png)
 
-De grafiekviewer retourneert een markering voor de door u geselecteerde naamruimte. De filteroptie werkt ook de tabel **[!UICONTROL Identiteiten]** bij om alleen informatie te retourneren voor de naamruimte die u hebt geselecteerd.
+De grafiekviewer retourneert een markering voor de door u geselecteerde naamruimte. De filteroptie werkt ook de **[!UICONTROL Identiteiten]** lijst bij om informatie slechts voor namespace terug te keren u selecteerde.
 
 ![gefilterd](../images/identity-graph-viewer/filtered.png)
 
-De rechterbovenhoek van het vak van de grafiekviewer bevat opties voor vergroting. Selecteer het pictogram **(+)** om in te zoomen op de grafiek of het pictogram **(-)** om uit te zoomen.
+De rechterbovenhoek van het vak van de grafiekviewer bevat opties voor vergroting. Selecteer het **(+)** pictogram om in de grafiek te zoemen of **(-)** pictogram om uit te zoemen.
 
 ![zoomen](../images/identity-graph-viewer/zoom.png)
 
-U kunt meer informatie over batches weergeven door de **[!UICONTROL gegevensbron]** in de koptekst te selecteren. De **[!UICONTROL gegevensbronlijst]** toont een lijst van **[!UICONTROL Partij IDs]** verbonden aan grafiek, evenals zijn **[!UICONTROL Gekoppelde IDs]**, bronschema, en datum van opname.
+U kunt meer informatie over partijen bekijken door **[!UICONTROL Gegevensbron]** van de kopbal te selecteren. De **[!UICONTROL Gegevensbron]** lijst toont een lijst van **[!UICONTROL Partij IDs]** verbonden aan grafiek, evenals zijn **[!UICONTROL Gekoppelde IDs]**, bronschema, en datum van opname.
 
 ![gegevensbron](../images/identity-graph-viewer/data-source-table.png)
 
@@ -102,11 +102,9 @@ Er kunnen fouten optreden wanneer u de viewer voor identiteitsgrafieken opent. H
 - De geselecteerde naamruimte moet een identiteitswaarde bevatten.
 - Voor het genereren van de identiteitsgrafiekviewer zijn minimaal twee gekoppelde identiteiten vereist.
 - De viewer voor identiteitsgrafieken kan het maximumaantal van 150 identiteiten niet overschrijden.
-- De viewer voor identiteitsgrafieken is momenteel niet toegankelijk in niet-productiesandboxen.
-- De viewer voor identiteitsgrafieken ondersteunt momenteel alleen in batches opgenomen gegevens en geeft geen gegevens weer die via streaming bronnen zijn ingevoerd.
 
 ![foutscherm](../images/identity-graph-viewer/error-screen.png)
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u geleerd hoe u de identiteitsgrafieken van uw klanten kunt verkennen in de gebruikersinterface van het Platform. Voor meer informatie over identiteiten in Platform, gelieve te verwijzen naar het overzicht van de Dienst van de [Identiteit](../home.md)
+Door dit document te lezen, hebt u geleerd hoe u de identiteitsgrafieken van uw klanten kunt verkennen in de gebruikersinterface van het Platform. Raadpleeg [Overzicht van identiteitsservice](../home.md) voor meer informatie over identiteiten in Platform
