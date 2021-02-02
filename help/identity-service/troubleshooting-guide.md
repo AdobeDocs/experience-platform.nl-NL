@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
+keywords: Experience Platform;home;populaire onderwerpen;naamruimte voor identiteit;Naamruimte
 solution: Experience Platform
 title: Handleiding voor het oplossen van problemen met de identiteitsservice van Adobe Experience Platform
 topic: troubleshooting
 description: Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform Identity Service en een gids voor probleemoplossing voor algemene fouten.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '2248'
+source-wordcount: '2191'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 # Handleiding voor het oplossen van problemen met identiteitsservice
 
-Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Identity Service]en een gids voor probleemoplossing voor algemene fouten. Raadpleeg de handleiding voor het oplossen van problemen met [!DNL Platform] Adobe Experience Platform API&#39;s in het algemeen voor vragen en het oplossen van problemen met betrekking tot API&#39;s [](../landing/troubleshooting.md).
+Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Identity Service] en een gids voor probleemoplossing voor algemene fouten. Raadpleeg de [Adobe Experience Platform API-handleiding voor het oplossen van problemen](../landing/troubleshooting.md) voor vragen en het oplossen van problemen met betrekking tot [!DNL Platform] API&#39;s in het algemeen.
 
-Gegevens die één enkele klant identificeren, worden vaak gefragmenteerd over de verschillende apparaten en systemen die zij gebruiken om met uw merk in contact te komen. [!DNL Identity Service] verzamelt deze gefragmenteerde identiteiten, waardoor u een volledig inzicht krijgt in het gedrag van de klant, zodat u in real-time een ongekende digitale ervaring kunt opdoen. Zie het overzicht [van](./home.md)Identiteitsservice voor meer informatie.
+Gegevens die één enkele klant identificeren, worden vaak gefragmenteerd over de verschillende apparaten en systemen die zij gebruiken om met uw merk in contact te komen. [!DNL Identity Service] verzamelt deze gefragmenteerde identiteiten, waardoor u een volledig inzicht krijgt in het gedrag van de klant, zodat u in real-time een ongekende digitale ervaring kunt opdoen. Zie [Overzicht van identiteitsservice](./home.md) voor meer informatie.
 
 ## Veelgestelde vragen
 
@@ -29,7 +29,7 @@ Identiteitsgegevens zijn alle gegevens die kunnen worden gebruikt om een individ
 
 ## Wat is het nut van het etiketteren van gegevensvelden als identiteiten?
 
-Door bepaalde gegevensvelden als identiteiten te labelen in uw record- en tijdreeksgegevens kunt u identiteitsrelaties toewijzen binnen de natuurlijke structuur van uw gegevens en dubbele gegevenskanalen met elkaar in overeenstemming brengen. Zie het overzicht [van](./home.md) Identiteitsservice voor meer informatie.
+Door bepaalde gegevensvelden als identiteiten te labelen in uw record- en tijdreeksgegevens kunt u identiteitsrelaties toewijzen binnen de natuurlijke structuur van uw gegevens en dubbele gegevenskanalen met elkaar in overeenstemming brengen. Zie [Overzicht van de Identiteitsservice](./home.md) voor meer informatie.
 
 ## Wat zijn bekende en anonieme identiteiten?
 
@@ -41,13 +41,13 @@ Een anonieme identiteit verwijst naar een identiteitswaarde die niet zelfstandig
 
 Een persoonlijke identiteitsgrafiek is een persoonlijke kaart van relaties tussen verbonden en verbonden identiteiten, die alleen zichtbaar is voor uw organisatie.
 
-Wanneer meer dan één identiteit inbegrepen in om het even welke gegevens die van een het stromen eindpunt worden opgenomen of naar een dataset worden verzonden die voor wordt toegelaten [!DNL Identity Service], worden die identiteiten verbonden in de Privé Grafiek van de Identiteit. [!DNL Identity Service] gebruikt deze grafiek om een bepaalde consument of entiteit aan de genre identiteiten te helpen, waardoor identiteitsstitching en het samenvoegen van profielen mogelijk worden.
+Wanneer meer dan één identiteit inbegrepen in om het even welke gegevens die van een het stromen eindpunt worden opgenomen of naar een dataset worden verzonden die voor [!DNL Identity Service] wordt toegelaten, zijn die identiteiten verbonden in de Privé Grafiek van de Identiteit. [!DNL Identity Service] gebruikt deze grafiek om een bepaalde consument of entiteit aan de genre identiteiten te helpen, waardoor identiteitsstitching en het samenvoegen van profielen mogelijk worden.
 
 ## Hoe maak ik veelvoudige identiteitsgebieden binnen een XDM schema?
 
-[De schema&#39;s van het Model van de Gegevens van de ervaring (XDM)](../xdm/home.md) steunen veelvoudige identiteitsgebieden. Elk gegevensveld van het type `string` binnen een schema dat de klasse XDM Individual Profile of XDM ExperienceEvent implementeert, kan worden gelabeld als een identiteitsveld. Als deze velden zijn gelabeld, worden alle gegevens in deze velden toegevoegd aan het identiteitsoverzicht van het profiel.
+[XDM-](../xdm/home.md) schema&#39;s (Experience Data Model) ondersteunen meerdere identiteitsvelden. Elk gegevensveld van het type `string` binnen een schema dat de klasse XDM Individual Profile of XDM ExperienceEvent implementeert, kan worden gelabeld als een identiteitsveld. Als deze velden zijn gelabeld, worden alle gegevens in deze velden toegevoegd aan het identiteitsoverzicht van het profiel.
 
-Voor stappen op hoe te om een gebied XDM als identiteitsgebied te etiketteren gebruikend het gebruikersinterface, zie de sectie [van de](../xdm/tutorials/create-schema-ui.md) Identiteit in het leerprogramma van de Redacteur van het Schema. Als u de API gebruikt, raadpleegt u de sectie [](../xdm/tutorials/create-schema-api.md) Identiteitsbeschrijving in de zelfstudie voor de API voor schemaregistratie.
+Voor stappen op hoe te om een gebied XDM als identiteitsgebied te etiketteren gebruikend het gebruikersinterface, zie [de sectie van de Identiteit](../xdm/tutorials/create-schema-ui.md) in het leerprogramma van de Redacteur van het Schema. Als u API gebruikt, zie [de sectie van de Beschrijver van de Identiteit](../xdm/tutorials/create-schema-api.md) in de RegisterAPI van het Schema leerprogramma.
 
 ## Zijn er contexten waarin sommige gebieden niet als identiteiten zouden moeten worden geëtiketteerd?
 
@@ -57,50 +57,37 @@ Velden zoals ZIP-codes en IP-adressen mogen niet worden gelabeld als identiteite
 
 ## Waarom zijn mijn identiteitsvelden niet aan elkaar gekoppeld zoals ik verwacht?
 
-Gebruikend het [`/cluster/members` eindpunt](./api/list-cluster-identites.md) in de Dienst API van de Identiteit, kunt u de bijbehorende identiteiten voor één of meerdere identiteitsgebieden bekijken. Als de reactie niet de verbonden identiteiten terugkeert u verwacht, zorg ervoor dat u de aangewezen identiteitsinformatie in uw XDM gegevens verstrekt. Zie de sectie over het [verstrekken van XDM- gegevens aan de Dienst](./home.md) van de Identiteit in het overzicht van de Dienst van de Identiteit voor meer informatie.
+Met het [`/cluster/members` eindpunt](./api/list-cluster-identites.md) in de Identiteitsdienst API, kunt u de bijbehorende identiteiten voor één of meerdere identiteitsgebieden bekijken. Als de reactie niet de verbonden identiteiten terugkeert u verwacht, zorg ervoor dat u de aangewezen identiteitsinformatie in uw XDM gegevens verstrekt. Zie de sectie over [het verstrekken van XDM gegevens aan de Dienst van de Identiteit](./home.md) in het overzicht van de Dienst van de Identiteit voor meer informatie.
 
 ## Wat is naamruimte voor identiteit?
 
-Een identiteitsnaamruimte geeft context voor hoe identiteitsvelden betrekking hebben op de identiteit van een klant. Identiteitsvelden onder de naamruimte E-mail moeten bijvoorbeeld een standaard e-mailindeling hebben (naam<span>@emailprovider.com), terwijl velden die de naamruimte Telefoon gebruiken, moeten voldoen aan een standaardtelefoonnummer (zoals 987-555-1234 in Noord-Amerika).
+Een identiteitsnaamruimte geeft context voor hoe identiteitsvelden betrekking hebben op de identiteit van een klant. Identiteitsvelden onder de naamruimte &quot;E-mail&quot; moeten bijvoorbeeld een standaard e-mailindeling hebben (naam<span>@emailprovider.com), terwijl velden die de naamruimte &quot;Telefoon&quot; gebruiken, moeten voldoen aan een standaardtelefoonnummer (zoals 987-555-1234 in Noord-Amerika).
 
 Naamruimten maken onderscheid tussen vergelijkbare identiteitswaarden tussen verschillende CRM-systemen. Neem bijvoorbeeld een profiel dat een numerieke identificatie bevat die is gekoppeld aan het beloningsprogramma van uw bedrijf. Een naamruimte van &quot;Loyalty&quot; zou deze waarde scheiden van een vergelijkbare numerieke id voor uw eCommerce-systeem dat ook in hetzelfde profiel wordt weergegeven.
 
-Zie het overzicht [van de naamruimte van de](./home.md) identiteit voor meer informatie.
+Zie [Naamruimte overzicht](./home.md) voor meer informatie.
 
 ## Hoe associeer ik een identiteit met een identiteitsnamespace?
 
-Identiteitsvelden moeten worden gekoppeld aan een bestaande naamruimte voor identiteiten wanneer deze worden gemaakt. Nieuwe naamruimten moeten met de API [worden](#how-do-i-create-a-custom-namespace-for-my-organization) gemaakt voordat ze aan identiteitsvelden kunnen worden gekoppeld.
+Identiteitsvelden moeten worden gekoppeld aan een bestaande naamruimte voor identiteiten wanneer deze worden gemaakt. Nieuwe naamruimten moeten [gemaakt zijn met de API](#how-do-i-create-a-custom-namespace-for-my-organization) voordat ze aan identiteitsvelden kunnen worden gekoppeld.
 
-Voor geleidelijke instructies voor het bepalen van namespace wanneer het creëren van een identiteitsbeschrijver gebruikend API, gelieve de sectie over het [creëren van een beschrijver](../xdm/tutorials/create-schema-ui.md) in de de ontwikkelaarsgids van het Registratie van het Schema te raadplegen. Voor het merken van een schemagebied als identiteit in UI, volg de stappen in het [Zelfstudie](../xdm/tutorials/create-schema-api.md)van de Redacteur van het Schema.
+Voor geleidelijke instructies voor het bepalen van namespace wanneer het creëren van een identiteitsbeschrijver gebruikend API, te zien gelieve de sectie op [creërend een beschrijver](../xdm/tutorials/create-schema-ui.md) in de de ontwikkelaarsgids van het Registratie van het Schema. Voor het merken van een schemagebied als identiteit in UI, volg de stappen in [de zelfstudie van de Redacteur van het Schema](../xdm/tutorials/create-schema-api.md).
 
 ## Wat zijn de standaardnaamruimten van Experience Platform? {#standard-namespaces}
 
-De volgende standaardnaamruimten kunnen door alle organisaties in Experience Platform worden gebruikt:
-
-| Weergavenaam | Id | Code | Beschrijving |
-| ------------ | --- | --- | ----------- |
-| CORE | 0 | CORE | oudere naam: &quot;Adobe AudienceManager&quot; |
-| ECID | 4 | ECID | alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; |
-| Email | 6 | Email |  |
-| E-mail (SHA256, verlaagd) | 11 | E-mails | Standaardnaamruimte voor vooraf gehashte e-mail. Waarden die in deze naamruimte worden opgegeven, worden omgezet in kleine letters voordat er een hash plaatsvindt met SHA-256. |
-| Telefoon | 7 | Telefoon |  |
-| Windows-ID | 8 | WAID |  |
-| AdCloud | 411 | AdCloud | alias: Ad Cloud |
-| Adobe Target | 9 | TNTID | Doel-id |
-| Google-advertentie-id | 20914 | GAID | GAID |
-| Apple IDFA | 20915 | IDFA | ID voor adverteerders |
+Standaardnaamruimten zijn naamruimten die beschikbaar zijn voor alle organisaties. Zie [Overzicht van naamruimten voor identiteiten](./namespaces.md) voor een volledige lijst van beschikbare standaardnaamruimten.
 
 ## Waar kan ik de lijst van identiteitsnamespaces beschikbaar voor mijn organisatie vinden?
 
-Gebruikend de Dienst API [van de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Identiteit, kunt u van alle beschikbare identiteitsnamespaces voor uw organisatie een lijst maken door een verzoek van de GET tot het `/idnamespace/identities` eindpunt te richten. Zie de sectie over het [vermelden van beschikbare naamruimten](./api/list-namespaces.md) in het overzicht van de Identiteitsservice-API voor meer informatie.
+Met de [Identiteitsservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) kunt u alle beschikbare naamruimten voor uw organisatie weergeven door een GET-aanvraag in te dienen bij het `/idnamespace/identities`-eindpunt. Zie de sectie over [het vermelden van beschikbare naamruimten](./api/list-namespaces.md) in het overzicht van de Identiteitsservice API voor meer informatie.
 
 ## Hoe maak ik een aangepaste naamruimte voor mijn organisatie?
 
-Gebruikend de Dienst API [van de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Identiteit, kunt u een douaneidentiteit tot stand brengen namespace voor uw organisatie door een verzoek van de POST aan het `/idnamespace/identities` eindpunt te doen. Zie de sectie over het [maken van een aangepaste naamruimte](./api/create-custom-namespace.md) in het API-overzicht Identiteitsservice voor meer informatie.
+Met de [Identiteitsservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) kunt u een aangepaste naamruimte voor uw organisatie maken door een POST-aanvraag in te dienen bij het `/idnamespace/identities`-eindpunt. Zie de sectie over [het creëren van een douanenamespace](./api/create-custom-namespace.md) in het overzicht van de Dienst API van de Identiteit voor meer informatie.
 
 ## Wat zijn samengestelde identiteiten en XIDs?
 
-In API-aanroepen wordt naar identiteiten verwezen door hun samengestelde identiteit of XID. Een samengestelde identiteit is een representatie van een identiteit die een id-waarde en een naamruimte bevat. Een XID is een single-value herkenningsteken die het zelfde concept zoals een samengestelde identiteit (identiteitskaart en een namespace) vertegenwoordigt, en automatisch toegewezen aan nieuwe identiteiten wanneer voortgeduurd door de Dienst van de Identiteit. Zie het API-overzicht [van de](./home.md) identiteitsservice voor meer informatie.
+In API-aanroepen wordt naar identiteiten verwezen door hun samengestelde identiteit of XID. Een samengestelde identiteit is een representatie van een identiteit die een id-waarde en een naamruimte bevat. Een XID is een single-value herkenningsteken die het zelfde concept zoals een samengestelde identiteit (identiteitskaart en een namespace) vertegenwoordigt, en automatisch toegewezen aan nieuwe identiteiten wanneer voortgeduurd door de Dienst van de Identiteit. Zie [Overzicht van de Identiteitsdienst API](./home.md) voor meer informatie.
 
 ## Hoe verwerkt de Identiteitsdienst persoonlijk identificeerbare informatie (PII)?
 
@@ -108,9 +95,9 @@ De Dienst van de identiteit leidt tot een sterke, unidirectionele cryptografisch
 
 ## Moet ik alle PII versleutelen voordat ik naar Platform verstuur?
 
-U hoeft de PII-gegevens niet handmatig te coderen voordat u deze in het Platform opneemt. Door het label voor `I1` gegevensgebruik toe te passen op alle toepasselijke gegevensvelden, worden deze velden door het Platform bij invoer automatisch omgezet in hashed-id-waarden.
+U hoeft de PII-gegevens niet handmatig te coderen voordat u deze in het Platform opneemt. Door het `I1` etiket van het gegevensgebruik op alle toepasselijke gegevensgebieden toe te passen, zet het Platform deze gebieden automatisch in gehakte waarden van identiteitskaart na opname om.
 
-Raadpleeg de zelfstudie over [gegevensgebruikslabels voor informatie over het toepassen en beheren van labels voor gegevensgebruik](../data-governance/labels/user-guide.md).
+Zie de [zelfstudie over gegevensgebruikslabels voor informatie over het toepassen en beheren van labels voor gegevensgebruik](../data-governance/labels/user-guide.md).
 
 ## Zijn er overwegingen bij het hakken van op PII-Gebaseerde identiteiten?
 
@@ -136,11 +123,11 @@ Internal solutions|Preferred|Common
 
 ## Problemen oplossen
 
-In de volgende sectie vindt u suggesties voor het oplossen van problemen voor specifieke foutcodes en voor onverwacht gedrag dat u kunt tegenkomen tijdens het werken met de [!DNL Identity Service] API.
+In de volgende sectie vindt u suggesties voor het oplossen van problemen voor specifieke foutcodes en voor onverwacht gedrag dat u kunt tegenkomen tijdens het werken met de API [!DNL Identity Service].
 
 ## [!DNL Identity Service] foutberichten
 
-Hieronder volgt een lijst met foutberichten die kunnen optreden bij het gebruik van de [!DNL Identity Service] API.
+Hieronder volgt een lijst met foutberichten die kunnen optreden wanneer u de API [!DNL Identity Service] gebruikt.
 
 ### Vereiste queryparameter ontbreekt
 
@@ -152,7 +139,7 @@ Hieronder volgt een lijst met foutberichten die kunnen optreden bij het gebruik 
 }
 ```
 
-Deze fout wordt weergegeven wanneer een vereiste queryparameter niet is opgenomen in het aanvraagpad. Het foutbericht geeft de naam `detail` van de ontbrekende parameter. Variaties in dit foutbericht zijn:
+Deze fout wordt weergegeven wanneer een vereiste queryparameter niet is opgenomen in het aanvraagpad. `detail` van het foutbericht geeft de naam van de ontbrekende parameter. Variaties in dit foutbericht zijn:
 
 - Ontbrekende vereiste queryparameter - nsId
 - Vereiste queryparameter ontbreekt - id
@@ -184,7 +171,7 @@ Controleer of u de opgegeven parameter correct in het aanvraagpad opneemt voorda
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer u probeert identiteitsgegevens op te halen voor meer dan het maximum aantal [XID&#39;s](#what-are-composite-identities-and-xids) dat in één API-aanroep is toegestaan. Verlaag het aantal XID&#39;s in uw verzoek tot onder de weergegeven limiet om dit probleem op te lossen.
+Dit foutenbericht toont wanneer u probeert om identiteitsinformatie voor meer dan het maximumaantal [XIDs](#what-are-composite-identities-and-xids) terug te winnen toegelaten in één enkele API vraag. Verlaag het aantal XID&#39;s in uw verzoek tot onder de weergegeven limiet om dit probleem op te lossen.
 
 
 ### Er is een grens voor 1000 compoundXids in één enkele vraag
@@ -197,7 +184,7 @@ Dit foutbericht wordt weergegeven wanneer u probeert identiteitsgegevens op te h
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer u probeert identiteitsgegevens op te halen voor meer dan het maximum aantal [samengestelde identiteiten](#what-are-composite-identities-and-xids) dat is toegestaan in één API-aanroep. Verlaag het aantal samengestelde identiteiten in uw verzoek tot onder de weergegeven limiet om dit probleem op te lossen.
+Dit foutenbericht toont wanneer u probeert om identiteitsinformatie voor meer dan het maximumaantal [samengestelde identiteiten ](#what-are-composite-identities-and-xids) terug te winnen toegelaten in één enkele API vraag. Verlaag het aantal samengestelde identiteiten in uw verzoek tot onder de weergegeven limiet om dit probleem op te lossen.
 
 ### Het opgegeven grafiektype is ongeldig
 
@@ -209,7 +196,7 @@ Dit foutbericht wordt weergegeven wanneer u probeert identiteitsgegevens op te h
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer een `graph-type` queryparameter een ongeldige waarde heeft in het aanvraagpad. Zie de sectie over [identiteitsgrafieken](./home.md) in het [!DNL Identity Service] overzicht om te leren welke grafiektypes worden gesteund.
+Dit foutenbericht toont wanneer een `graph-type` vraagparameter een ongeldige waarde in de verzoekweg wordt gegeven. Zie de sectie over [identiteitsgrafieken](./home.md) in [!DNL Identity Service] overzicht om te leren welke grafiek-types worden gesteund.
 
 ### Servicetoken heeft geen geldig bereik
 
@@ -233,7 +220,7 @@ Dit foutbericht wordt weergegeven wanneer uw IMS-organisatie niet beschikt over 
 }
 ```
 
-In het geval van deze fout, is uw toegangstoken ongeldig. Toegangstokens verlopen elke 24 uur en moeten opnieuw worden gegenereerd om te kunnen blijven werken met [!DNL Platform] API&#39;s. Zie de [authentificatiezelfstudie](../tutorials/authentication.md) voor instructies bij het produceren van nieuwe toegangstokens.
+In het geval van deze fout, is uw toegangstoken ongeldig. Toegangstokens verlopen elke 24 uur en moeten opnieuw worden gegenereerd om te kunnen doorgaan met het gebruik van [!DNL Platform] API&#39;s. Zie [authentificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voor instructies bij het produceren van nieuwe toegangstokens.
 
 ### Token voor machtigingsservice is niet geldig
 
@@ -245,7 +232,7 @@ In het geval van deze fout, is uw toegangstoken ongeldig. Toegangstokens verlope
 }
 ```
 
-In het geval van deze fout, is uw toegangstoken ongeldig. Toegangstokens verlopen elke 24 uur en moeten opnieuw worden gegenereerd om te kunnen blijven werken met [!DNL Platform] API&#39;s. Zie de [authentificatiezelfstudie](../tutorials/authentication.md) voor instructies bij het produceren van nieuwe toegangstokens.
+In het geval van deze fout, is uw toegangstoken ongeldig. Toegangstokens verlopen elke 24 uur en moeten opnieuw worden gegenereerd om te kunnen doorgaan met het gebruik van [!DNL Platform] API&#39;s. Zie [authentificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voor instructies bij het produceren van nieuwe toegangstokens.
 
 ### Gebruikerstoken heeft geen geldige productcontext
 
@@ -257,7 +244,7 @@ In het geval van deze fout, is uw toegangstoken ongeldig. Toegangstokens verlope
 }
 ```
 
-Dit foutenbericht toont wanneer uw toegangstoken niet uit een [!DNL Experience Platform] integratie is geproduceerd. Zie de [authentificatiezelfstudie](../tutorials/authentication.md) voor instructies bij het produceren van nieuwe toegangstokens voor een [!DNL Experience Platform] integratie.
+Dit foutenbericht toont wanneer uw toegangstoken niet uit een [!DNL Experience Platform] integratie is geproduceerd. Zie [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voor instructies over het genereren van nieuwe toegangstokens voor een [!DNL Experience Platform]-integratie.
 
 ### Interne fout bij ophalen van native XID uit identiteit- en naamruimtecode
 
@@ -269,9 +256,9 @@ Dit foutenbericht toont wanneer uw toegangstoken niet uit een [!DNL Experience P
 }
 ```
 
-Wanneer [!DNL Identity Service] een identiteit voortduurt, worden identiteitskaart van de identiteit en bijbehorende namespace identiteitskaart toegewezen een uniek herkenningsteken genoemd XID. Dit bericht wordt weergegeven wanneer een fout optreedt tijdens het zoeken naar de XID voor een bepaalde ID-waarde en -naamruimte.
+Wanneer [!DNL Identity Service] een identiteit voortduurt, wordt identiteitskaart van de identiteit en bijbehorende namespace identiteitskaart toegewezen een uniek herkenningsteken genoemd XID. Dit bericht wordt weergegeven wanneer een fout optreedt tijdens het zoeken naar de XID voor een bepaalde ID-waarde en -naamruimte.
 
-### De IMS-organisatie is niet ingericht voor [!DNL Identity Service] gebruik
+### De IMS-organisatie is niet ingericht voor [!DNL Identity Service]-gebruik
 
 ```json
 {
@@ -293,13 +280,13 @@ Dit foutbericht wordt weergegeven wanneer uw IMS-organisatie niet beschikt over 
 }
 ```
 
-Deze fout toont wanneer een onverwachte uitzondering in de uitvoering van een de [!DNL Platform] dienstvraag voorkomt. De beste praktijken moeten uw geautomatiseerde vraag programmeren om hun verzoeken een paar keer bij een bepaald interval opnieuw te proberen wanneer het ontvangen van deze fout. Neem contact op met de systeembeheerder als het probleem zich blijft voordoen.
+Deze fout toont wanneer een onverwachte uitzondering in de uitvoering van een [!DNL Platform] de dienstvraag voorkomt. De beste praktijken moeten uw geautomatiseerde vraag programmeren om hun verzoeken een paar keer bij een bepaald interval opnieuw te proberen wanneer het ontvangen van deze fout. Neem contact op met de systeembeheerder als het probleem zich blijft voordoen.
 
 ## Code voor de fout met de inname in de batch
 
-[!DNL Identity Service] Neemt identiteitsgegevens uit verslag en tijdreeksgegevens op die aan het [!DNL Platform] gebruiken van de Ingestie van de Partij worden geupload. Aangezien batch-opname een asynchroon proces is, moet u de details van een batch bekijken om fouten weer te geven. Fouten zullen zich ophopen aangezien de partij vordert tot de partij volledig is.
+[!DNL Identity Service] Neemt identiteitsgegevens uit verslag en tijdreeksgegevens op die aan het  [!DNL Platform] gebruiken van de Ingestie van de Partij worden geupload. Aangezien batch-opname een asynchroon proces is, moet u de details van een batch bekijken om fouten weer te geven. Fouten zullen zich ophopen aangezien de partij vordert tot de partij volledig is.
 
-Hieronder volgt een lijst met foutberichten die betrekking hebben op [!DNL Identity Service] het gebruik van de API voor [gegevensinname](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+Hieronder volgt een lijst met foutberichten die betrekking hebben op [!DNL Identity Service] die u kunt tegenkomen bij het gebruik van de [API voor gegevensinname](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
 ### Onbekend XDM-schema
 
@@ -311,7 +298,7 @@ Hieronder volgt een lijst met foutberichten die betrekking hebben op [!DNL Ident
 }
 ```
 
-[!DNL Identity Service] gebruikt alleen identiteiten voor record- of tijdreeksgegevens die overeenkomen met respectievelijk de [!DNL Profile] of [!DNL ExperienceEvent] klassen. Deze fout treedt op wanneer wordt geprobeerd gegevens in te voeren [!DNL Identity Service] die niet aan een van beide klassen voldoen.
+[!DNL Identity Service] gebruikt alleen identiteiten voor record- of tijdreeksgegevens die overeenkomen met respectievelijk de  [!DNL Profile] of  [!DNL ExperienceEvent] klassen. Deze fout wordt veroorzaakt wanneer wordt geprobeerd gegevens in te voeren voor [!DNL Identity Service] die zich niet aan een van beide klassen houdt.
 
 ### Er waren 0 geldige identiteiten in de eerste 100 rijen van de verwerkte partij
 
@@ -359,7 +346,7 @@ Deze fout wordt weergegeven wanneer een opgenomen record een identiteit voorstel
 }
 ```
 
-Bij het invoeren van batchgegevens wordt dit foutbericht weergegeven wanneer uw IMS-organisatie niet beschikt over de juiste machtigingen voor [!DNL Identity Service]. Neem contact op met de systeembeheerder om dit probleem op te lossen.
+Bij het opnemen van batchgegevens wordt dit foutbericht weergegeven wanneer uw IMS-organisatie niet beschikt over de juiste machtigingen voor [!DNL Identity Service]. Neem contact op met de systeembeheerder om dit probleem op te lossen.
 
 ### Interne fout
 
