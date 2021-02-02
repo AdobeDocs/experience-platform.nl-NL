@@ -1,13 +1,13 @@
 ---
-keywords: personalization;Personalization
+keywords: personalisatie;Personalisatie
 title: Aanpassingsdoelen
 seo-title: Aanpassingsdoelen
 description: Personalisatieplatforms verzamelen gegevens en inzichten uit individueel gedrag. Deze platforms kunnen marketers helpen anonieme gegevens te navigeren, aanbiedingen of advertenties te verzorgen op basis van eerdere activiteiten of als onderdeel van publiekssegmenten met vergelijkbare gewoonten.
 seo-description: Personalisatieplatforms verzamelen gegevens en inzichten uit individueel gedrag. Deze platforms kunnen marketers helpen anonieme gegevens te navigeren, aanbiedingen of advertenties te verzorgen op basis van eerdere activiteiten of als onderdeel van publiekssegmenten met vergelijkbare gewoonten.
 translation-type: tm+mt
-source-git-commit: 3486aa053be903a3844bbc79a957699b18b30a74
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Personalisatieplatforms verzamelen gegevens en inzichten uit individueel gedrag. Deze platforms kunnen marketers helpen anonieme gegevens te navigeren, aanbiedingen of advertenties te verzorgen op basis van eerdere activiteiten of als onderdeel van publiekssegmenten met vergelijkbare gewoonten.
 
-Momenteel, in real time CDP steunt de verpersoonlijkingsbestemmingen die hieronder worden vermeld. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
+Momenteel, steunt Platform de verpersoonlijkingsbestemmingen die hieronder worden vermeld. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
 
 * [Adobe Target-extensie](./adobe-target.md)
 * [Adobe Target v2-extensie](./adobe-target-v2.md)
