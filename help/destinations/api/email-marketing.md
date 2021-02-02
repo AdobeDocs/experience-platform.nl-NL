@@ -1,37 +1,38 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: E-mailmarketingdoelen maken
+description: Dit document behandelt het maken van e-mailmarketingdoelen met de Adobe Experience Platform API
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
+source-git-commit: d1f357659313aba0811b267598deda9770d946a1
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1645'
 ht-degree: 0%
 
 ---
 
 
-# Maak e-mail marketing marketing en activeer gegevens gebruikend API vraag in Adobe [!DNL Real-time Customer Data Platform]
+# E-mailmarketingdoelen maken en gegevens activeren met behulp van API-aanroepen in Adobe Experience Platform
 
-Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw Adobe Experience Platform-gegevens, een [e-mailmarketingbestemming](../catalog/email-marketing/overview.md)te maken, een gegevensstroom te maken naar uw nieuwe bestemming en gegevens te activeren voor uw nieuwe bestemming.
+Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw Adobe Experience Platform-gegevens, een [e-mailmarketingbestemming](../catalog/email-marketing/overview.md) te maken, een gegevensstroom naar uw nieuwe gemaakte bestemming te maken en gegevens te activeren voor uw nieuwe gemaakte bestemming.
 
 In deze zelfstudie wordt de Adobe Campaign-bestemming in alle voorbeelden gebruikt, maar de stappen zijn identiek voor alle marketingdoelen per e-mail.
 
 ![Overzicht - de stappen om een bestemming tot stand te brengen en segmenten te activeren](../assets/api/email-marketing/overview.png)
 
-Als u verkiest gebruik het gebruikersinterface in Adobe aan Echt - tijd CDP om een bestemming aan te sluiten en gegevens te activeren, [verbind een bestemming](../ui/connect-destination.md) en [activeer profielen en segmenten aan een bestemmingsleerprogramma](../ui/activate-destinations.md) .
+Zie de [Zelfstudies Een doel verbinden](../ui/connect-destination.md) en [Profielen en segmenten activeren aan een doel](../ui/activate-destinations.md) als u liever de gebruikersinterface in Platform gebruikt.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
-* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] is het registratiesysteem voor gegevenslocatie en -lijn binnen [!DNL Experience Platform].
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Experience Platform] klantenervaring worden georganiseerd.
+* [[!DNL Catalog Service]](../../catalog/home.md):  [!DNL Catalog] is het registratiesysteem voor gegevenslocatie en -lijn binnen  [!DNL Experience Platform].
+* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om gegevens aan e-mail marketing bestemmingen in Echt - tijd CDP te activeren.
+De volgende secties verstrekken extra informatie die u zult moeten weten om gegevens aan e-mail marketing bestemmingen in Platform te activeren.
 
 ### Vereiste referenties verzamelen
 
@@ -42,23 +43,23 @@ Om de stappen in dit leerprogramma te voltooien, zou u de volgende geloofsbrieve
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste en optionele koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-De middelen in [!DNL Experience Platform] kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor [!DNL Platform] API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
+Bronnen in [!DNL Experience Platform] kunnen worden geïsoleerd naar specifieke virtuele sandboxen. In aanvragen voor [!DNL Platform] API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Zie de documentatie over het [!DNL Experience Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
+>Raadpleeg de documentatie [sandbox-overzicht](../../sandboxes/home.md) voor meer informatie over sandboxen in [!DNL Experience Platform].
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
 
@@ -66,9 +67,9 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ### Documentatie voor de wagenbak
 
-In deze zelfstudie in Swagger vindt u begeleidende referentiedocumentatie voor alle API-aanroepen. Zie de documentatie van de [Flow Service API op Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We raden u aan deze zelfstudie en de documentatiepagina van Swagger parallel te gebruiken.
+In deze zelfstudie in Swagger vindt u begeleidende referentiedocumentatie voor alle API-aanroepen. Zie de [documentatie van de Dienst API van de Stroom op Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We raden u aan deze zelfstudie en de documentatiepagina van Swagger parallel te gebruiken.
 
-## Krijg de lijst van beschikbare bestemmingen {#get-the-list-of-available-destinations}
+## Hiermee wordt de lijst met beschikbare doelen opgehaald {#get-the-list-of-available-destinations}
 
 ![Overzicht doelstappen 1](../assets/api/email-marketing/step1.png)
 
@@ -109,7 +110,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Antwoord**
 
-Een succesvolle reactie bevat een lijst met beschikbare bestemmingen en hun unieke herkenningstekens (`id`). Sla de waarde op van het doel dat u wilt gebruiken, zoals in verdere stappen wordt vereist. Als u bijvoorbeeld segmenten wilt verbinden en leveren aan Adobe Campaign, zoekt u het volgende fragment in het antwoord:
+Een succesvolle reactie bevat een lijst van beschikbare bestemmingen en hun unieke herkenningstekens (`id`). Sla de waarde op van het doel dat u wilt gebruiken, zoals in verdere stappen wordt vereist. Als u bijvoorbeeld segmenten wilt verbinden en leveren aan Adobe Campaign, zoekt u het volgende fragment in het antwoord:
 
 ```json
 {
@@ -120,13 +121,13 @@ Een succesvolle reactie bevat een lijst met beschikbare bestemmingen en hun unie
 }
 ```
 
-## Verbinding maken met uw [!DNL Experience Platform] gegevens {#connect-to-your-experience-platform-data}
+## Verbind met uw [!DNL Experience Platform] gegevens {#connect-to-your-experience-platform-data}
 
 ![Overzicht doelstappen 2](../assets/api/email-marketing/step2.png)
 
-Vervolgens moet u verbinding maken met uw [!DNL Experience Platform] gegevens, zodat u profielgegevens kunt exporteren en activeren op de gewenste bestemming. Deze bestaat uit twee substappen die hieronder worden beschreven.
+Vervolgens moet u verbinding maken met uw [!DNL Experience Platform]-gegevens, zodat u profielgegevens kunt exporteren en activeren op de gewenste bestemming. Deze bestaat uit twee substappen die hieronder worden beschreven.
 
-1. Eerst, moet u een vraag uitvoeren om toegang tot uw gegevens binnen toe te staan [!DNL Experience Platform], door opstelling een basisverbinding.
+1. Eerst, moet u een vraag uitvoeren om toegang tot uw gegevens in [!DNL Experience Platform] toe te staan, door opstelling een basisverbinding.
 2. Dan, gebruikend identiteitskaart van de basisverbinding, zult u een andere vraag maken waarin u een bronverbinding creeert, die de verbinding aan uw [!DNL Experience Platform] gegevens vestigt.
 
 
@@ -182,11 +183,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsSpatiespecificatieidentiteitskaart voor de Verenigde Dienst van het Profiel - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsSpatiespecificatieidentiteitskaart voor de Verenigde Dienst van het Profiel -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Antwoord**
 
-Een geslaagde reactie bevat de unieke id (`id`) van de basisverbinding. Sla deze waarde op zoals vereist in de volgende stap om de bronverbinding te maken.
+Een succesvolle reactie bevat het unieke herkenningsteken van de basisverbinding (`id`). Sla deze waarde op zoals vereist in de volgende stap om de bronverbinding te maken.
 
 ```json
 {
@@ -194,7 +195,7 @@ Een geslaagde reactie bevat de unieke id (`id`) van de basisverbinding. Sla deze
 }
 ```
 
-### Verbinding maken met uw [!DNL Experience Platform] gegevens {#connect-to-platform-data}
+### Verbind met uw [!DNL Experience Platform] gegevens {#connect-to-platform-data}
 
 **API-indeling**
 
@@ -256,11 +257,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Gebruik de id die u in de vorige stap hebt gekregen.
-* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie-id voor [!DNL Unified Profile Service] - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie-id voor  [!DNL Unified Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de unieke id (`id`) voor de nieuwe bronverbinding [!DNL Unified Profile Service]. Dit bevestigt dat u verbinding hebt gemaakt met uw [!DNL Experience Platform] gegevens. Sla deze waarde op zoals deze in een latere stap wordt vereist.
+Een geslaagde reactie retourneert de unieke id (`id`) voor de nieuwe bronverbinding naar [!DNL Unified Profile Service]. Dit bevestigt dat u verbinding hebt gemaakt met uw [!DNL Experience Platform] gegevens. Sla deze waarde op zoals deze in een latere stap wordt vereist.
 
 ```json
 {
@@ -343,14 +344,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsSpeciaal identiteitskaart u in de stap verkrijgt [krijgt de lijst van beschikbare bestemmingen](#get-the-list-of-available-destinations).
-* `{S3 or SFTP}`: Vul het gewenste verbindingstype voor deze bestemming in. Blader in de [doelcatalogus](../catalog/overview.md)naar de gewenste bestemming om te zien of de S3- en/of SFTP-verbindingstypen worden ondersteund.
-* `{ACCESS_ID}`: Uw toegangs-id voor uw [!DNL Amazon] S3 opslaglocatie.
-* `{SECRET_KEY}`: Uw geheime sleutel voor uw [!DNL Amazon] S3 opslagplaats.
+* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsSpeciaal identiteitskaart u in de stap verkrijgt  [krijgt de lijst van beschikbare bestemmingen](#get-the-list-of-available-destinations).
+* `{S3 or SFTP}`: Vul het gewenste verbindingstype voor deze bestemming in. Blader in de doelcatalogus [a1/> naar de gewenste bestemming om te zien of de S3- en/of SFTP-verbindingstypen worden ondersteund.](../catalog/overview.md)
+* `{ACCESS_ID}`: Uw toegangs-id voor uw  [!DNL Amazon] S3-opslaglocatie.
+* `{SECRET_KEY}`: Uw geheime sleutel voor uw  [!DNL Amazon] S3 opslagplaats.
 
 **Antwoord**
 
-Een geslaagde reactie bevat de unieke id (`id`) van de basisverbinding. Sla deze waarde op zoals vereist in de volgende stap om een doelverbinding te maken.
+Een succesvolle reactie bevat het unieke herkenningsteken van de basisverbinding (`id`). Sla deze waarde op zoals vereist in de volgende stap om een doelverbinding te maken.
 
 ```json
 {
@@ -433,13 +434,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Gebruik de basisverbindings-id die u in de bovenstaande stap hebt verkregen.
-* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie u in de stap verkrijgt [krijgt de lijst van beschikbare bestemmingen](#get-the-list-of-available-destinations).
-* `{BUCKETNAME}`: Uw [!DNL Amazon] S3 emmertje, waar CDP in real time de gegevensuitvoer zal deponeren.
-* `{FILEPATH}`: Het pad in uw [!DNL Amazon] S3 emmerfolder waar CDP in real time de gegevensuitvoer zal deponeren.
+* `{CONNECTION_SPEC_ID}`: Gebruik de verbindingsspecificatie u in de stap verkrijgt  [krijgt de lijst van beschikbare bestemmingen](#get-the-list-of-available-destinations).
+* `{BUCKETNAME}`: Uw  [!DNL Amazon] S3 emmertje, waar het Platform de gegevensuitvoer zal deponeren.
+* `{FILEPATH}`: Het pad in uw  [!DNL Amazon] S3 emmerdirectory waar Platform de gegevensexport zal neerzetten.
 
 **Antwoord**
 
-Een succesvol antwoord retourneert de unieke id (`id`) voor de nieuwe doelverbinding naar uw e-mailmarketingbestemming. Sla deze waarde op zoals deze in latere stappen wordt vereist.
+Een succesvol antwoord keert het unieke herkenningsteken (`id`) voor de pas gecreëerde doelverbinding aan uw e-mailmarketing bestemming terug. Sla deze waarde op zoals deze in latere stappen wordt vereist.
 
 ```json
 {
@@ -451,7 +452,7 @@ Een succesvol antwoord retourneert de unieke id (`id`) voor de nieuwe doelverbin
 
 ![Overzicht doelstappen 4](../assets/api/email-marketing/step4.png)
 
-Met de id&#39;s die u in de vorige stappen hebt opgehaald, kunt u nu een gegevensstroom maken tussen uw [!DNL Experience Platform] gegevens en de bestemming waarnaar u de gegevens wilt activeren. Beschouw deze stap als het construeren van de pijpleiding, waardoor de gegevens later, tussen [!DNL Experience Platform] en uw gewenste bestemming zullen stromen.
+Met de id&#39;s die u in de vorige stappen hebt opgehaald, kunt u nu een gegevensstroom maken tussen uw [!DNL Experience Platform]-gegevens en de bestemming waar u de gegevens naartoe wilt activeren. Beschouw deze stap als het construeren van de pijpleiding, waardoor de gegevens later, tussen [!DNL Experience Platform] en uw gewenste bestemming zullen stromen.
 
 Om een gegevensstroom tot stand te brengen, voer een verzoek van de POST uit, zoals hieronder getoond, terwijl het verstrekken van de hieronder vermelde waarden binnen de lading.
 
@@ -503,13 +504,13 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: Gebruik de stroom voor de e-mailmarketingbestemming waarmee u verbinding wilt maken. Om de stroomspecificatie te krijgen, voer een verrichting van de GET op het `flowspecs` eindpunt uit. Zie hier de documentatie van Swagger: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. In de reactie, zoek `upsTo` en kopieer overeenkomstige identiteitskaart van de e-mailmarketing bestemming die u met wilt verbinden. Voor Adobe Campaign zoekt `upsToCampaign` en kopieert u bijvoorbeeld de `id` parameter.
-* `{SOURCE_CONNECTION_ID}`: Gebruik de bronverbindings-id die u hebt verkregen in de stap [Verbinding maken met uw Experience Platform](#connect-to-your-experience-platform-data).
-* `{TARGET_CONNECTION_ID}`: Gebruik de doel-verbindings-id die u hebt verkregen in de stap [Verbinding maken met e-mailmarketingdoel](#connect-to-email-marketing-destination).
+* `{FLOW_SPEC_ID}`: Gebruik de stroom voor de e-mailmarketingbestemming waarmee u verbinding wilt maken. Om de stroomspecificatie te krijgen, voer een verrichting van de GET op het `flowspecs` eindpunt uit. Zie hier de documentatie van Swagger: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. In de reactie, zoek `upsTo` en kopieer overeenkomstige identiteitskaart van de e-mailmarketing bestemming die u wilt verbinden met. Zoek in Adobe Campaign bijvoorbeeld naar `upsToCampaign` en kopieer de parameter `id`.
+* `{SOURCE_CONNECTION_ID}`: Gebruik de bronverbindings-id die u hebt verkregen in de stap  [Verbinding maken met uw Experience Platform](#connect-to-your-experience-platform-data).
+* `{TARGET_CONNECTION_ID}`: Gebruik de doel-verbindings-id die u hebt verkregen in de stap  [Verbinding maken met e-mailmarketingdoel](#connect-to-email-marketing-destination).
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom en een `etag`. Noteer beide waarden. om segmenten te activeren, zoals u dat in de volgende stap doet.
+Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd dataflow en `etag` terug. Noteer beide waarden. om segmenten te activeren, zoals u dat in de volgende stap doet.
 
 ```json
 {
@@ -525,7 +526,7 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe gegevensstroom en e
 
 Nadat u alle verbindingen en de gegevensstroom hebt gemaakt, kunt u nu uw profielgegevens activeren naar het e-mailmarketingplatform. In deze stap selecteert u welke segmenten en welke profielkenmerken u naar de bestemming verzendt en kunt u gegevens plannen en naar de bestemming verzenden.
 
-Als u segmenten naar uw nieuwe bestemming wilt activeren, moet u een JSON PATCH-bewerking uitvoeren, vergelijkbaar met het onderstaande voorbeeld. U kunt veelvoudige segmenten en profielattributen in één vraag activeren. Meer over JSON PATCH leren, zie de [specificatie](https://tools.ietf.org/html/rfc6902)RFC.
+Als u segmenten naar uw nieuwe bestemming wilt activeren, moet u een JSON PATCH-bewerking uitvoeren, vergelijkbaar met het onderstaande voorbeeld. U kunt veelvoudige segmenten en profielattributen in één vraag activeren. Voor meer informatie over JSON PATCH, zie [RFC specificatie](https://tools.ietf.org/html/rfc6902).
 
 **API-indeling**
 
@@ -584,7 +585,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: Gebruik de gegevensstroom die u in de vorige stap hebt verkregen.
 * `{ETAG}`: Gebruik het label dat u in de vorige stap hebt verkregen.
-* `{SEGMENT_ID}`: Geef de segment-id op die u naar dit doel wilt exporteren. Om segment IDs voor de segmenten terug te winnen die u wilt activeren, ga naar **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, de uitgezochte **[!UICONTROL Dienst API]** van de Segmentatie in het linkernavigatiemenu, en zoek de `GET /segment/definitions` verrichting in de Definities **[!UICONTROL van het]** Segment.
+* `{SEGMENT_ID}`: Geef de segment-id op die u naar dit doel wilt exporteren. Als u segment-id&#39;s wilt ophalen voor de segmenten die u wilt activeren, gaat u naar **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, selecteert u **[!UICONTROL Segmenteringsservice-API]** in het linkernavigatiemenu en zoekt u de `GET /segment/definitions`-bewerking in **[!UICONTROL Segmentdefinities]**.
 * `{PROFILE_ATTRIBUTE}`: Bijvoorbeeld, `"person.lastName"`
 
 **Antwoord**
@@ -622,7 +623,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Antwoord**
 
-De geretourneerde reactie moet in de `transformations` parameter de segmenten en profielkenmerken bevatten die u in de vorige stap hebt verzonden. Een voorbeeldparameter in de reactie kan er als volgt uitzien: `transformations`
+De geretourneerde reactie moet in de parameter `transformations` de segmenten en profielkenmerken opnemen die u in de vorige stap hebt verzonden. Een voorbeeld `transformations` parameter in de reactie zou als hieronder kunnen kijken:
 
 ```json
 "transformations": [
@@ -651,7 +652,7 @@ De geretourneerde reactie moet in de `transformations` parameter de segmenten en
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes CDP in real time met één van uw aangewezen e-mail marketing bestemmingen verbonden en opstelling een dataflow aan de respectieve bestemming. De uitgaande gegevens kunnen nu in de bestemming voor e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen worden gebruikt. Raadpleeg de volgende pagina&#39;s voor meer informatie:
+Door deze zelfstudie te volgen, hebt u met succes Platform met één van uw aangewezen e-mailmarketing bestemmingen verbonden en opstelling een gegevensstroom aan de respectieve bestemming. De uitgaande gegevens kunnen nu in de bestemming voor e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen worden gebruikt. Raadpleeg de volgende pagina&#39;s voor meer informatie:
 
 * [Overzicht van doelen](../home.md)
 * [Overzicht van de doelcatalogus](../catalog/overview.md)
