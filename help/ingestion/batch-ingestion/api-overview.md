@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
+keywords: Experience Platform;home;populaire onderwerpen;batch-opname;Batch-opname;inname;ontwikkelaarshandleiding;api-handleiding;upload;ingest Parquet;ingest json;
 solution: Experience Platform
 title: Handleiding voor ontwikkelaars van batchverwerking
 topic: developer guide
 description: Dit document biedt een uitgebreid overzicht van het gebruik van batch-opname-API's.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '2675'
+source-wordcount: '2698'
 ht-degree: 3%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 3%
 
 # Handleiding voor het ontwikkelen van batterijen
 
-Dit document biedt een uitgebreid overzicht van het gebruik van API&#39;s voor [batchinvoer](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+Dit document biedt een uitgebreid overzicht van het gebruik van [batch ingestion API&#39;s](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
-De bijlage bij dit document bevat informatie voor het [opmaken van gegevens die moeten worden gebruikt voor inname](#data-transformation-for-batch-ingestion), waaronder voorbeeld-CSV- en JSON-gegevensbestanden.
+De bijlage bij dit document bevat informatie over [het opmaken van gegevens die moeten worden gebruikt voor inname](#data-transformation-for-batch-ingestion), inclusief voorbeeld-CSV- en JSON-gegevensbestanden.
 
 ## Aan de slag
 
@@ -27,17 +27,17 @@ De volgende secties verstrekken extra informatie die u zult moeten kennen of heb
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [Inname](./overview.md)in batch: Hiermee kunt u gegevens als batchbestanden in Adobe Experience Platform invoeren.
-- [[!DNL Experience Data Model (XDM)] Systeem](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
-- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [Inname](./overview.md) in batch: Hiermee kunt u gegevens als batchbestanden in Adobe Experience Platform invoeren.
+- [[!DNL Experience Data Model (XDM)] Systeem](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Experience Platform] klantenervaring worden georganiseerd.
+- [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -49,17 +49,17 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
+>Raadpleeg de documentatie [sandbox-overzicht](../../sandboxes/home.md) voor meer informatie over sandboxen in [!DNL Platform].
 
 Verzoeken die een payload (POST, PUT, PATCH) bevatten, vereisen mogelijk een extra `Content-Type` header. De toegelaten waarden specifiek voor elke vraag worden verstrekt in de vraagparameters.
 
 ## Typen
 
-Bij het opnemen van gegevens is het belangrijk om te begrijpen hoe [!DNL Experience Data Model] (XDM) schema&#39;s werken. Voor meer informatie over hoe de de gebiedstypes van XDM aan verschillende formaten in kaart brengen, te lezen gelieve de de ontwikkelaarsgids [van de Registratie van het](../../xdm/api/getting-started.md)Schema.
+Bij het opnemen van gegevens is het belangrijk om te begrijpen hoe [!DNL Experience Data Model] (XDM) schema&#39;s werken. Voor meer informatie over hoe de de gebiedstypes van XDM aan verschillende formaten in kaart brengen, te lezen gelieve [de ontwikkelaarsgids van de Registratie van het Schema](../../xdm/api/getting-started.md).
 
-Er is enige flexibiliteit bij het opnemen van gegevens - als een type niet aanpast wat in het doelschema is, zullen de gegevens in het uitgedrukt doeltype worden omgezet. Als dit niet het geval is, zal het de partij met een `TypeCompatibilityException`.
+Er is enige flexibiliteit bij het opnemen van gegevens - als een type niet aanpast wat in het doelschema is, zullen de gegevens in het uitgedrukt doeltype worden omgezet. Als dit niet het geval is, zal de batch mislukken met een `TypeCompatibilityException`.
 
-JSON en CSV hebben bijvoorbeeld geen datum- of datum-tijdtype. Dientengevolge, worden deze waarden uitgedrukt gebruikend [ISO 8061 geformatteerde koorden](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) of Unix Tijd geformatteerd in milliseconden (153126395999 000) en worden bij inname omgezet in het doel-XDM-type.
+JSON en CSV hebben bijvoorbeeld geen datum- of datum-tijdtype. Dientengevolge, worden deze waarden uitgedrukt gebruikend [ISO 8061 geformatteerde koorden](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) of Unix Tijd geformatteerd in milliseconden (1531263 959000) en worden bij inname omgezet in het doel-XDM-type.
 
 In de onderstaande tabel worden de conversies weergegeven die worden ondersteund bij het invoeren van gegevens.
 
@@ -100,7 +100,7 @@ Ten eerste moet u een batch maken, met JSON als invoerindeling. Wanneer het cre�
 
 >[!NOTE]
 >
->De voorbeelden hieronder zijn voor single-line JSON. Om JSON met meerdere regels in te voeren, moet de `isMultiLineJson` markering worden ingesteld. Lees voor meer informatie de handleiding voor het oplossen van problemen met [batchinvoer](./troubleshooting.md).
+>De voorbeelden hieronder zijn voor single-line JSON. Om JSON met meerdere regels in te voeren, moet de markering `isMultiLineJson` worden ingesteld. Lees voor meer informatie de [handleiding voor het oplossen van problemen bij het in batch opnemen](./troubleshooting.md).
 
 **API-indeling**
 
@@ -158,11 +158,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Bestanden uploaden
 
-Nu u een batch hebt gemaakt, kunt u de methode `batchId` from before gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
+Nu u een batch hebt gemaakt, kunt u `batchId` van tevoren gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
 
 >[!NOTE]
 >
->Zie de bijlage voor een [voorbeeld van een JSON-gegevensbestand](#data-transformation-for-batch-ingestion)met de juiste indeling.
+>Zie de appendix sectie voor een [voorbeeld van een behoorlijk-geformatteerd JSON- gegevensdossier](#data-transformation-for-batch-ingestion).
 
 **API-indeling**
 
@@ -297,7 +297,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Bestanden uploaden
 
-Nu u een batch hebt gemaakt, kunt u de methode `batchId` from before gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
+Nu u een batch hebt gemaakt, kunt u `batchId` van tevoren gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
 
 **API-indeling**
 
@@ -515,7 +515,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Volledig groot bestand
 
-Nu u een batch hebt gemaakt, kunt u de methode `batchId` from before gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
+Nu u een batch hebt gemaakt, kunt u `batchId` van tevoren gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
 
 **API-indeling**
 
@@ -578,7 +578,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## CSV-bestanden samenvoegen
 
-om CSV- dossiers in te voeren, zult u een klasse, een schema, en een dataset moeten tot stand brengen die CSV steunt. Voor gedetailleerde informatie over hoe te om de noodzakelijke klasse en het schema tot stand te brengen, volg de instructies die in de [ad hoc zelfstudie](../../xdm/api/ad-hoc.md)van de schemaverwezenlijking worden verstrekt.
+om CSV- dossiers in te voeren, zult u een klasse, een schema, en een dataset moeten tot stand brengen die CSV steunt. Voor gedetailleerde informatie over hoe te om de noodzakelijke klasse en het schema tot stand te brengen, volg de instructies in [ad-hoc schemaverwezenlijking leerprogramma](../../xdm/api/ad-hoc.md) worden verstrekt.
 
 >[!NOTE]
 >
@@ -646,10 +646,10 @@ Een uitleg van wat het verschillende gedeelte van de sectie &quot;fileDescriptio
 | `delimiters` | Het teken dat als scheidingsteken moet worden gebruikt. |
 | `quotes` | Het teken dat voor aanhalingstekens moet worden gebruikt. |
 | `escapes` | Het teken dat als escape-teken moet worden gebruikt. |
-| `header` | Het geüploade bestand **moet** kopteksten bevatten. Aangezien de schemabevestiging wordt gedaan, moet dit aan waar worden geplaatst. Daarnaast mogen kopteksten **geen** spaties bevatten. Als u spaties in de koptekst hebt, vervangt u deze door onderstrepingstekens. |
+| `header` | Het geüploade bestand **must** bevat kopteksten. Aangezien de schemabevestiging wordt gedaan, moet dit aan waar worden geplaatst. Daarnaast kunnen kopteksten **geen** spaties bevatten. Als u spaties in de koptekst hebt, vervangt u deze door onderstrepingstekens. |
 | `charset` | Een optioneel veld. Andere ondersteunde tekensets zijn US-ASCII en ISO-8869-1. Als deze parameter leeg blijft, wordt standaard UTF-8 gebruikt. |
 
-De dataset waarnaar wordt verwezen moet het hierboven vermelde blok van de dossierbeschrijving hebben en moet aan een geldig schema in de registratie richten. Anders wordt het bestand niet in parket gebracht.
+De dataset waarnaar wordt verwezen moet het hierboven vermelde blok van de dossierbeschrijving hebben en moet aan een geldig schema in de registratie richten. Anders wordt het bestand niet in Parquet verwerkt.
 
 ### Batch maken
 
@@ -716,7 +716,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Bestanden uploaden
 
-Nu u een batch hebt gemaakt, kunt u de methode `batchId` from before gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
+Nu u een batch hebt gemaakt, kunt u `batchId` van tevoren gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
 
 >[!NOTE]
 >
@@ -817,9 +817,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Een batch verwijderen {#delete-a-batch}
+## Een batch {#delete-a-batch} verwijderen
 
-Een partij kan worden geschrapt door het volgende verzoek van de POST met de `action=REVERT` vraagparameter aan identiteitskaart van de partij uit te voeren u wenst om te schrappen. De partij is gemerkt als &quot;inactief&quot;, die het voor huisvuilinzameling in aanmerking laten komen. De partij wordt asynchroon verzameld, waarna de partij als &quot;geschrapt&quot;zal worden gemerkt.
+Een partij kan worden geschrapt door het volgende POST verzoek met `action=REVERT` vraagparameter aan identiteitskaart van de partij uit te voeren u wenst om te schrappen. De partij is gemerkt als &quot;inactief&quot;, die het voor huisvuilinzameling in aanmerking laten komen. De partij wordt asynchroon verzameld, waarna de partij als &quot;geschrapt&quot;zal worden gemerkt.
 
 **API-indeling**
 
@@ -853,7 +853,7 @@ Als u een reeds opgenomen partij wilt vervangen, kunt u dit met &quot;partij rep
 
 ### Batch maken
 
-Ten eerste moet u een batch maken, met JSON als invoerindeling. Wanneer het creëren van de partij, zult u een datasetidentiteitskaart moeten verstrekken. U zult ook moeten ervoor zorgen dat alle dossiers die als deel van de partij worden geupload met het schema XDM verbonden aan de verstrekte dataset in overeenstemming zijn. Bovendien moet u de oude batch(s) als referentie opgeven in de sectie Opnieuw afspelen. In het onderstaande voorbeeld speelt u batches opnieuw met id&#39;s `batchIdA` en `batchIdB`.
+Ten eerste moet u een batch maken, met JSON als invoerindeling. Wanneer het creëren van de partij, zult u een datasetidentiteitskaart moeten verstrekken. U zult ook moeten ervoor zorgen dat alle dossiers die als deel van de partij worden geupload met het schema XDM verbonden aan de verstrekte dataset in overeenstemming zijn. Bovendien moet u de oude batch(s) als referentie opgeven in de sectie Opnieuw afspelen. In het onderstaande voorbeeld worden batches opnieuw afgespeeld met de id&#39;s `batchIdA` en `batchIdB`.
 
 **API-indeling**
 
@@ -927,7 +927,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Bestanden uploaden
 
-Nu u een batch hebt gemaakt, kunt u de methode `batchId` from before gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
+Nu u een batch hebt gemaakt, kunt u `batchId` van tevoren gebruiken om bestanden naar de batch te uploaden. U kunt meerdere bestanden uploaden naar de batch.
 
 **API-indeling**
 
@@ -1001,9 +1001,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Gegevenstransformatie voor batch-opname
 
-Als u een gegevensbestand in wilt nemen, moet de hiërarchische structuur van het bestand voldoen aan het schema [!DNL Experience Platform]Experience Data Model (XDM) [](../../xdm/home.md) dat is gekoppeld aan de gegevensset waarnaar wordt geüpload.
+Als u een gegevensbestand in [!DNL Experience Platform] wilt opnemen, moet de hiërarchische structuur van het bestand voldoen aan het schema [Experience Data Model (XDM)](../../xdm/home.md) dat is gekoppeld aan de gegevensset waarnaar wordt geüpload.
 
-Informatie over hoe u een CSV-bestand kunt toewijzen om te voldoen aan een XDM-schema vindt u in het document met [voorbeeldtransformaties](../../etl/transformations.md) , samen met een voorbeeld van een JSON-gegevensbestand met de juiste indeling. Hier vindt u voorbeeldbestanden in het document:
+Informatie over hoe u een CSV-bestand kunt toewijzen om te voldoen aan een XDM-schema vindt u in het [voorbeeldtransformaties](../../etl/transformations.md)-document, samen met een voorbeeld van een JSON-gegevensbestand met de juiste indeling. Hier vindt u voorbeeldbestanden in het document:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
