@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;generate datasets;generate dataset;create dataset;
+keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;produceert datasets;produceert dataset;creeer dataset;
 solution: Experience Platform
 title: Gegevenssets genereren op basis van queryresultaten
 topic: queries
@@ -8,7 +8,7 @@ description: 'De Dienst van de vraag staat de verwezenlijking van datasets van U
 translation-type: tm+mt
 source-git-commit: 0ba4e26927cdc96855f35d72a8a6de55f4a34bfa
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
