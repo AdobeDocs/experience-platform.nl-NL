@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;data type registry;Schema Registry;data type;Data type;data types;Data types;create
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;Data Type Register;Schema Register;Gegevenstype;Gegevenstype;Gegevenstypen;Gegevenstypen;Maken
 solution: Experience Platform
 title: Een gegevenstype maken
 description: Het /datatypes eindpunt in de Registratie API van het Schema staat u toe om gegevenstypes programmatically te beheren XDM binnen uw ervaringstoepassing.
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
