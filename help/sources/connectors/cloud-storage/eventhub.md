@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Azure Event Hubs;azure event hubs;Event Hubs;event hubs
+keywords: Experience Platform;home;populaire onderwerpen;Azure Event Hubs;azure event hubs;Event Hubs;event hubs
 solution: Experience Platform
 title: Azure Event Hubs-connector
 topic: overview
 description: De documentatie hieronder verstrekt informatie over hoe te om Azure Event Hubs aan Platform te verbinden gebruikend APIs of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: c0c609e3f385665cf88129def0c69e7d153ce201
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -17,19 +17,19 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De Azure Event Hubs-connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De Azure Event Hubs-connector is in bèta. Zie [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform]en [!DNL Azure]. U kunt uw gegevens van deze systemen in brengen [!DNL Platform].
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform] en [!DNL Azure]. U kunt uw gegevens van deze systemen naar [!DNL Platform] brengen.
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen [!DNL Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] kunt u gegevens in real-time [!DNL Azure Event Hubs] inbrengen.
+Opslagbronnen in de cloud kunnen uw eigen gegevens naar [!DNL Platform] brengen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] kunt u gegevens  [!DNL Azure Event Hubs] in real time invoeren.
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [IP pagina van de lijst van gewenste personen](../../ip-address-allow-list.md) van het adres voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) pagina voor meer informatie.
 
-## Verbinden [!DNL Azure Event Hubs] met [!DNL Platform]
+## [!DNL Azure Event Hubs] verbinden met [!DNL Platform]
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Azure Event Hubs] [!DNL Platform] met API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over hoe u [!DNL Azure Event Hubs] kunt verbinden met [!DNL Platform] via API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 
