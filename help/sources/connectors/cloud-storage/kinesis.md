@@ -1,35 +1,35 @@
 ---
-keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
+keywords: Experience Platform;home;populaire onderwerpen;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: Amazon Kinesis-connector
 topic: overview
 description: In de onderstaande documentatie vindt u informatie over hoe u Amazon Kinesis kunt verbinden met Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: c0c609e3f385665cf88129def0c69e7d153ce201
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
 
 
-# (Beta) [!DNL Amazon Kinesis] -connector
+# (Bèta) [!DNL Amazon Kinesis]-connector
 
 >[!NOTE]
 >
->De [!DNL Amazon Kinesis] connector is in bèta. Zie het [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De [!DNL Amazon Kinesis] schakelaar is in bèta. Zie [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform]en [!DNL Azure]. U kunt uw gegevens van deze systemen in brengen [!DNL Platform].
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform] en [!DNL Azure]. U kunt uw gegevens van deze systemen naar [!DNL Platform] brengen.
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen [!DNL Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] kunt u gegevens in real-time [!DNL Amazon Kinesis] inbrengen.
+Opslagbronnen in de cloud kunnen uw eigen gegevens naar [!DNL Platform] brengen zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. [!DNL Platform] kunt u gegevens  [!DNL Amazon Kinesis] in real time invoeren.
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [IP pagina van de lijst van gewenste personen](../../ip-address-allow-list.md) van het adres voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) pagina voor meer informatie.
 
-## Verbinden [!DNL Amazon Kinesis] met [!DNL Platform]
+## [!DNL Amazon Kinesis] verbinden met [!DNL Platform]
 
-In de onderstaande documentatie vindt u informatie over het maken van een verbinding [!DNL Amazon Kinesis] [!DNL Platform] met API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over hoe u [!DNL Amazon Kinesis] kunt verbinden met [!DNL Platform] via API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 
