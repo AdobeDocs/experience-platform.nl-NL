@@ -1,68 +1,86 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;Power BI;power bi;connect to query service;
+keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de vraag;Power BI;macht bi;verbindt met de vraagdienst;
 solution: Experience Platform
 title: Verbinding maken met Power BI
 topic: connect
 description: Dit document doorloopt de stappen voor het verbinden van Power BI met de Dienst van de Vraag van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
 
 
-# Verbinding maken met [!DNL Power BI] (pc)
+# [!DNL Power BI]
 
-Pc-gebruikers kunnen installeren [!DNL Power BI] via [https://powerbi.microsoft.com/en-us/desktop/](https://powerbi.microsoft.com/en-us/desktop/).
-
-## Set up [!DNL Power BI]
-
-Nadat u hebt [!DNL Power BI] geïnstalleerd, moet u opstelling de noodzakelijke componenten om de schakelaar te steunen PostgreSQL. Voer de volgende stappen uit:
-
-- Zoek en installeer `npgsql`, een .NET stuurprogrammapakket voor PostgreSQL dat de officiële manier voor PowerBI is om verbinding te maken.
-
-- Selecteer v4.0.10 (nieuwere versies resulteren momenteel in een fout).
-
-- Onder &quot;Installatie van Npgsql GAC&quot;op het scherm van de Opstelling van de Douane, wordt de uitgezochte **[!UICONTROL Zal geïnstalleerd op lokale harde aandrijving]**. Als u de GAC niet installeert, mislukt de Power BI later.
-
-- Start Windows opnieuw.
-
-- Zoek de evaluatieversie van [!DNL PowerBI] Desktop.
-
-## Verbinden [!DNL Power BI] met [!DNL Query Service]
-
-Nadat u deze voorbereidende stappen hebt uitgevoerd, kunt u verbinding maken [!DNL Power BI] met [!DNL Query Service]:
-
-- Open [!DNL Power BI].
-
-- Klik op Gegevens **** ophalen in het bovenste menullint.
-
-- Kies **[!UICONTROL PostgreSQL-database]** en klik op **[!UICONTROL Connect]**.
-
-- Voer waarden in voor de server en database. **[!UICONTROL Server]** is de host die onder de verbindingsgegevens wordt gevonden. Voor productie, voeg haven `:80` aan het eind van het koord van de Gastheer toe. **[!UICONTROL Het gegevensbestand]** kan of &quot;allen&quot;of een naam van de datasetlijst zijn. (Probeer een van de gegevenssets die zijn afgeleid van CTAS.)
-
-- Klik op **[!UICONTROL Geavanceerde opties]** en schakel de optie **[!UICONTROL Relatiekolommen]** opnemen uit. Schakel **[!UICONTROL Navigeren met volledige hiërarchie]** niet in.
-
-- *(Optioneel, maar aanbevolen wanneer &quot;all&quot; is gedeclareerd voor de database)* Voer een SQL-instructie in.
+In dit document worden de stappen beschreven voor het maken van verbinding met Adobe Experience Platform Query Service.
 
 >[!NOTE]
 >
->Als er geen SQL-instructie wordt geleverd, [!DNL Power BI] worden alle tabellen in de database voorvertoond. Voor hiërarchische gegevens moet een aangepaste SQL-instructie worden gebruikt. Als het tabelschema vlak is, werkt het met of zonder een aangepaste SQL-instructie. Samengestelde typen worden nog niet ondersteund door [!DNL Power BI] - als u primitieve typen wilt ophalen uit samengestelde typen, moet u SQL-instructies schrijven om deze af te leiden.
+> Deze gids veronderstelt u reeds toegang tot [!DNL Power BI] hebt en vertrouwd met hoe te om zijn interface te navigeren. Meer informatie over [!DNL Power BI] vindt u in de [officiële [!DNL Power BI] documentatie](https://docs.looker.com/).
+>
+> Bovendien is Power BI **alleen** beschikbaar op Windows-apparaten.
 
-```sql
-SELECT web.webPageDetails.name AS Page_Name, 
-SUM(web.webPageDetails.pageviews.value) AS Page_Views 
-FROM _TABLE_ 
-WHERE TIMESTAMP >= to_timestamp('2018-11-20')
-GROUP BY web.webPageDetails.name 
-ORDER BY SUM(web.webPageDetails.pageviews.value) DESC 
-LIMIT 10
-```
+## [!DNL Power BI] instellen
 
-- Selecteer de modus &quot;[!UICONTROL DirectQuery]&quot; of &quot;[!UICONTROL Importeren]&quot;. In de [!UICONTROL modus DirectQuery] worden alle query&#39;s ter uitvoering verzonden [!DNL Query Service] . In de modus [!UICONTROL Importeren] worden gegevens geïmporteerd in [!DNL Power BI].
+Na het installeren van Power BI, zult u `Npgsql`, een .NET bestuurderspakket voor PostSQL moeten installeren. Meer informatie over Npgsql vindt u in de [Npgsql-documentatie](https://www.npgsql.org/doc/index.html).
 
-- Klik op **[!UICONTROL OK]**. Maakt nu [!DNL Power BI] verbinding met de toepassing [!DNL Query Service] en produceert een voorvertoning als er geen fouten zijn. Er is een bekend probleem met de weergave Voorvertoning van numerieke kolommen. Ga verder met de volgende stap.
+>[!IMPORTANT]
+>
+>U moet versie 4.0.10 of lager downloaden omdat nieuwere versies fouten opleveren.
 
-- Klik **[!UICONTROL Lading]** om de dataset in te brengen [!DNL Power BI].
+Selecteer **[!DNL Will be installed on local hard drive]** onder &quot;[!DNL Npgsql GAC Installation]&quot; in het aangepaste instellingsscherm.
+
+Start de computer opnieuw op voordat u verdergaat met de volgende stappen om ervoor te zorgen dat npgsql correct is geïnstalleerd.
+
+## [!DNL Power BI] verbinden met [!DNL Query Service]
+
+Als u [!DNL Power BI] wilt verbinden met [!DNL Query Service], opent u [!DNL Power BI] en selecteert u **[!DNL Get Data]** in het bovenste menullint.
+
+![](../images/clients/power-bi/open-power-bi.png)
+
+Selecteer **[!DNL PostgreSQL database]**, gevolgd door **[!DNL Connect]**.
+
+![](../images/clients/power-bi/get-data.png)
+
+U kunt nu waarden voor de server en database invoeren. Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, bezoek de [geloofsbrieven pagina op Platform](https://platform.adobe.com/query/configuration). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Vragen]**, gevolgd door **[!UICONTROL Referenties]**.
+
+**[!DNL Server]** is de host die onder de verbindingsgegevens is gevonden. Voor productie, voeg haven `:80` aan het eind van het gastheerkoord toe. **[!DNL Database]** kan &quot;all&quot;of een naam van de datasetlijst zijn.
+
+Bovendien kunt u uw **[!DNL Data Connectivity mode]** selecteren. Selecteer **[!DNL Import]** om een lijst van alle beschikbare lijsten te tonen, of **[!DNL DirectQuery]** te selecteren om een vraag direct tot stand te brengen.
+
+Voor meer informatie over de modus **[!DNL Import]** leest u de sectie over [het voorvertonen en importeren van een tabel](#preview). Lees voor meer informatie over de modus **[!DNL DirectQuery]** de sectie over het maken van SQL-instructies](#create). [ Selecteer **[!DNL OK]** nadat u de databasedetails hebt bevestigd.
+
+![](../images/clients/power-bi/connectivity-mode.png)
+
+Er wordt een vraag om uw gebruikersnaam, wachtwoord en toepassingsinstellingen weergegeven. Vul deze details in en selecteer **[!DNL Connect]** om door te gaan naar de volgende stap.
+
+![](../images/clients/power-bi/import-mode.png)
+
+## Een tabel voorvertonen en importeren {#preview}
+
+Als u de modus **[!DNL Import]** hebt geselecteerd, wordt een dialoogvenster weergegeven met een lijst van alle beschikbare tabellen. Selecteer de lijst u wilt voorproef, die door **[!DNL Load]** wordt gevolgd om de dataset in [!DNL Power BI] te brengen.
+
+![](../images/clients/power-bi/preview-table.png)
+
+De tabel wordt nu geïmporteerd in Power BI.
+
+![](../images/clients/power-bi/import-table.png)
+
+## SQL-instructies {#create} maken
+
+Als u de modus **[!DNL DirectQuery]** hebt geselecteerd, moet u de sectie Geavanceerde opties invullen met de SQL-query die u wilt maken.
+
+Voeg onder **[!DNL SQL statement]** de SQL-query in die u wilt maken. Zorg ervoor dat het selectievakje **[!DNL Include relationship columns]** is ingeschakeld. Nadat u de query hebt geschreven, selecteert u **[!DNL OK]** om door te gaan.
+
+![](../images/clients/power-bi/direct-query-mode.png)
+
+Er wordt een voorbeeld van de query weergegeven. Selecteer **[!DNL Load]** om de resultaten van de vraag te zien.
+
+![](../images/clients/power-bi/preview-direct-query.png)
+
+## Volgende stappen
+
+Nu u met [!DNL Query Service] hebt verbonden, kunt u [!DNL Power BI] gebruiken om vragen te schrijven. Voor meer informatie over hoe te om vragen te schrijven en in werking te stellen, te lezen gelieve de gids op [lopende vragen](../best-practices/writing-queries.md).
