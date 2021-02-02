@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Ervaring gegevensmodel;Beleidsgegevensmodel;Gegevensmodel;Gegevensmodel;Schema register;Schemaregister
 solution: Experience Platform
 title: Handleiding voor ontwikkelaars van de API voor schemaregister
 description: 'Met de API voor het schemaregister kunt u programmatisch alle schema''s en gerelateerde XDM-bronnen beheren die binnen het Experience Platform beschikbaar zijn. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 0%
@@ -63,19 +63,19 @@ Leren hoe te om vakbonden in de Registratie API van het Schema te bekijken, zie 
 
 Met de API voor schemaregistratie kunt u XDM-bronnen overbrengen en delen tussen sandboxen en IMS-organisaties. Voor om het even welk schema, mengsel, of gegevenstype, kunt u een de uitvoerlading produceren die de structuur van het middel en om het even welke afhankelijke middelen bevat. Deze nuttige lading kan dan worden gebruikt om het middel in een bestemmingszandbak en IMS Org in te voeren.
 
-Zie [Referentie van de Registratie API van het Schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) voor meer informatie over het gebruik van dit eindpunt.
+Zie [export/import eindpunten guide](./export-import.md) voor meer informatie over hoe te om deze eindpunten te gebruiken.
 
 ## Voorbeeldgegevens
 
 U kunt steekproefgegevens voor om het even welk gespecificeerd schema binnen de Bibliotheek van het Schema produceren. Het geretourneerde reactieobject kan vervolgens worden gebruikt als bron voor gegevensinvoer.
 
-Zie [Referentie van de Registratie API van het Schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) voor meer informatie over het gebruik van dit eindpunt.
+Zie [de gids van het eindpunt van steekproefgegevens](./sample-data.md) voor meer informatie over het gebruik van dit eindpunt.
 
 ## Controlelogboek
 
 De Registratie van het Schema handhaaft een logboek van alle veranderingen die aan een middel (klasse, mixin, gegevenstype, of schema) tussen verschillende updates zijn voorgekomen. U kunt het logboek voor een bepaalde middel terugwinnen door zijn `$id` of `meta:altId` in de weg van een verzoek van de GET aan dit eindpunt te verstrekken.
 
-Zie [Referentie van de Registratie API van het Schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) voor meer informatie over het gebruik van dit eindpunt.
+Zie [de eindpuntgids van het controlelogboek](./audit-log.md) voor meer informatie over het gebruik van dit eindpunt.
 
 ## Volgende stappen
 
