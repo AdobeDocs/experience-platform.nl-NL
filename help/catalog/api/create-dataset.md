@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset;enable dataset
+keywords: Experience Platform;huis;populaire onderwerpen;dataset;Dataset;creeer een dataset;creeer dataset;laat dataset toe
 solution: Experience Platform
 title: Een gegevensset maken
 topic: developer guide
 description: In dit document wordt beschreven hoe u een gegevenssetobject maakt in Catalog.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 # Een gegevensset maken
 
-Om een dataset tot stand te brengen gebruikend [!DNL Catalog] API, moet u de `$id` waarde van het schema [!DNL Experience Data Model] (XDM) kennen waarop de dataset zal worden gebaseerd. Zodra u schema identiteitskaart hebt, kunt u een dataset tot stand brengen door een verzoek van de POST aan het `/datasets` eindpunt in [!DNL Catalog] API te doen.
+Als u een gegevensset wilt maken met de [!DNL Catalog]-API, moet u de `$id`-waarde weten van het [!DNL Experience Data Model]-schema (XDM) waarop de gegevensset wordt gebaseerd. Zodra u schema identiteitskaart hebt, kunt u een dataset tot stand brengen door een verzoek van de POST aan het `/datasets` eindpunt in [!DNL Catalog] API te doen.
 
 >[!NOTE]
 >
->In dit document wordt alleen beschreven hoe u een gegevenssetobject maakt in [!DNL Catalog]. Voor volledige stappen op om, te creëren bevolken en te controleren een dataset, gelieve te verwijzen naar het volgende [leerprogramma](../datasets/create.md).
+>In dit document wordt alleen beschreven hoe u een gegevenssetobject maakt in [!DNL Catalog]. Raadpleeg de volgende [zelfstudie](../datasets/create.md) voor de volledige stappen voor het maken, vullen en controleren van een gegevensset.
 
 **API-indeling**
 
@@ -56,15 +56,15 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | De naam van de gegevensset die moet worden gemaakt. |
-| `schemaRef.id` | De URI- `$id` waarde voor het XDM-schema waarop de gegevensset wordt gebaseerd. |
+| `schemaRef.id` | De URI `$id`-waarde voor het XDM-schema waarop de gegevensset wordt gebaseerd. |
 
 >[!NOTE]
 >
->In dit voorbeeld wordt de bestandsindeling [parket](https://parquet.apache.org/documentation/latest/) voor de `containerFormat` eigenschap gebruikt. Een voorbeeld dat de JSON-bestandsindeling gebruikt, vindt u in de ontwikkelaarshandleiding voor [batchinvoer](../../ingestion/batch-ingestion/api-overview.md).
+>In dit voorbeeld wordt de bestandsindeling [Apache Parquet](https://parquet.apache.org/documentation/latest/) gebruikt voor de eigenschap `containerFormat`. Een voorbeeld dat de JSON-bestandsindeling gebruikt, vindt u in de handleiding [voor het ontwikkelen van batch-indelingen](../../ingestion/batch-ingestion/api-overview.md).
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject dat bestaat uit een array met de id van de nieuwe dataset in de indeling `"@/datasets/{DATASET_ID}"`. De dataset ID is een read-only, systeem-geproduceerde koord dat wordt gebruikt om de dataset in API vraag van verwijzingen te voorzien.
+Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject dat bestaat uit een array met de id van de nieuwe dataset in de notatie `"@/datasets/{DATASET_ID}"`. De dataset ID is een read-only, systeem-geproduceerde koord dat wordt gebruikt om de dataset in API vraag van verwijzingen te voorzien.
 
 ```JSON
 [
