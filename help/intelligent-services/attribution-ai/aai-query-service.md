@@ -1,5 +1,5 @@
 ---
-keywords: insights;attribution ai;attribution ai insights;AAI query service;attribution queries;attribution scores
+keywords: inzichten;attributie ai;attributie ai inzichten;AAI vraagdienst;attributie vragen;attributie scores
 solution: Intelligent Services, Experience Platform
 title: Snelle handleiding voor AAI Query Service
 topic: Attribution AI queries
@@ -7,7 +7,7 @@ description: Dit document bevat een handleiding en sjablonen voor het gebruik va
 translation-type: tm+mt
 source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
