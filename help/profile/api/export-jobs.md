@@ -1,11 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Exporttaken - Real-time API voor klantprofiel
+keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
+title: API-eindpunt voor taken exporteren
 topic: guide
+type: Documentation
+description: In realtime klantprofiel kunt u één weergave van individuele klanten in Adobe Experience Platform samenstellen door gegevens uit meerdere bronnen samen te voegen, inclusief kenmerkgegevens en gedragsgegevens. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1542'
 ht-degree: 0%
 
 ---
@@ -13,33 +15,33 @@ ht-degree: 0%
 
 # Eindpunt van taken exporteren
 
-[!DNL Real-time Customer Profile] laat u toe om één enkele mening van individuele klanten te bouwen door gegevens uit veelvoudige bronnen, met inbegrip van zowel attributengegevens als gedragsgegevens te verenigen. De gegevens beschikbaar binnen [!DNL Profile] kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd. De publiekssegmenten van [!DNL Profile] gegevens kunnen bijvoorbeeld worden geëxporteerd voor activering en profielkenmerken kunnen worden geëxporteerd voor rapportage.
+[!DNL Real-time Customer Profile] laat u toe om één enkele mening van individuele klanten te bouwen door gegevens uit veelvoudige bronnen, met inbegrip van zowel attributengegevens als gedragsgegevens te verenigen. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd. De publiekssegmenten van [!DNL Profile]-gegevens kunnen bijvoorbeeld worden geëxporteerd voor activering en profielkenmerken kunnen worden geëxporteerd voor rapportage.
 
 Dit document bevat stapsgewijze instructies voor het maken en beheren van exporttaken met de [profiel-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
 
 >[!NOTE]
 >
->Deze handleiding heeft betrekking op het gebruik van exportbanen in de [!DNL Profile API]Unie. Zie de handleiding over [exporttaken in de segmentatie-API](../../profile/api/export-jobs.md)voor informatie over het beheren van exporttaken voor de Adobe Experience Platform Segmentation Service.
+>Deze handleiding behandelt het gebruik van exporttaken in [!DNL Profile API]. Voor informatie over hoe te om uitvoerbanen voor de Dienst van de Segmentatie van Adobe Experience Platform te beheren, zie de gids over [uitvoerbanen in de Segmentatie API](../../profile/api/export-jobs.md).
 
-Naast het creëren van een de uitvoerbaan, kunt u tot [!DNL Profile] gegevens ook toegang hebben gebruikend het `/entities` eindpunt, dat ook als &quot;[!DNL Profile Access]&quot;wordt bekend. Zie de gids [van het](./entities.md) entiteitseindpunt voor meer informatie. Raadpleeg de gebruikershandleiding voor informatie over de manier waarop u toegang kunt krijgen tot [!DNL Profile] gegevens via de gebruikersinterface [](../ui/user-guide.md).
+Naast het creëren van een uitvoerbaan, kunt u tot [!DNL Profile] gegevens ook toegang hebben gebruikend het `/entities` eindpunt, ook gekend als &quot;[!DNL Profile Access]&quot;. Zie [eindpuntgids voor entiteiten](./entities.md) voor meer informatie. Raadpleeg de [gebruikershandleiding](../ui/user-guide.md) voor informatie over hoe u toegang krijgt tot [!DNL Profile]-gegevens via de gebruikersinterface.
 
 ## Aan de slag
 
-De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Real-time Customer Profile] API. Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een willekeurige [!DNL Experience Platform] API mogelijk te maken.
+De API eindpunten die in deze gids worden gebruikt maken deel uit van [!DNL Real-time Customer Profile] API. Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
 
 ## Een exporttaak maken
 
-Voor het exporteren van [!DNL Profile] gegevens moet u eerst een gegevensset maken waarin de gegevens worden geëxporteerd en vervolgens een nieuwe exporttaak starten. Beide stappen kunnen worden verwezenlijkt gebruikend Experience Platform APIs, met het eerste gebruikend de Dienst API van de Catalogus en het laatste gebruikend Real-time het Profiel van de Klant. Gedetailleerde instructies voor het voltooien van elke stap worden beschreven in de volgende secties.
+Voor het exporteren van [!DNL Profile]-gegevens moet eerst een gegevensset worden gemaakt waarin de gegevens worden geëxporteerd en vervolgens een nieuwe exporttaak worden gestart. Beide stappen kunnen worden verwezenlijkt gebruikend Experience Platform APIs, met het eerste gebruikend de Dienst API van de Catalogus en het laatste gebruikend Real-time het Profiel van de Klant. Gedetailleerde instructies voor het voltooien van elke stap worden beschreven in de volgende secties.
 
 ### Een doelgegevensset maken
 
-Bij het exporteren van [!DNL Profile] gegevens moet eerst een doeldataset worden gemaakt. Het is belangrijk dat de dataset correct wordt gevormd om de uitvoer succesvol te verzekeren.
+Bij het exporteren van [!DNL Profile]-gegevens moet eerst een doelgegevensset worden gemaakt. Het is belangrijk dat de dataset correct wordt gevormd om de uitvoer succesvol te verzekeren.
 
-Één van de belangrijkste overwegingen is het schema waarop de dataset (`schemaRef.id` in de API steekproefaanvraag hieronder) wordt gebaseerd. Voor de uitvoer van profielgegevens moet de gegevensset gebaseerd zijn op het [!DNL XDM Individual Profile] Unieschema (`https://ns.adobe.com/xdm/context/profile__union`). Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen. In dit geval is dat de [!DNL XDM Individual Profile] klasse. Voor meer informatie over de schema&#39;s van de verenigingsmening, te zien gelieve de [verenigingssectie in de grondbeginselen van de gids](../../xdm/schema/composition.md#union)van de schemacompositie.
+Één van de belangrijkste overwegingen is het schema waarop de dataset (`schemaRef.id` in het API steekproefverzoek hieronder) wordt gebaseerd. Voor het exporteren van profielgegevens moet de gegevensset zijn gebaseerd op het [!DNL XDM Individual Profile] Unieschema (`https://ns.adobe.com/xdm/context/profile__union`). Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen. In dit geval is dat de klasse [!DNL XDM Individual Profile]. Voor meer informatie over de schema&#39;s van de verenigingsmening, te zien gelieve de [vaksectie in de grondbeginselen van schema samenstellings gids](../../xdm/schema/composition.md#union).
 
-De stappen die in deze zelfstudie volgen, schetsen hoe te om een dataset tot stand te brengen die verwijzingen het Schema van de [!DNL XDM Individual Profile] Unie gebruikend [!DNL Catalog] API. U kunt het [!DNL Platform] gebruikersinterface ook gebruiken om een dataset tot stand te brengen die verwijzingen het unieschema. De stappen voor het gebruiken van UI worden geschetst in [deze zelfstudie UI voor het uitvoeren van segmenten](../../segmentation/tutorials/create-dataset-export-segment.md) maar zijn ook hier van toepassing. Nadat u de bewerking hebt voltooid, kunt u terugkeren naar deze zelfstudie om door te gaan met de stappen voor het [starten van een nieuwe exporttaak](#initiate).
+De stappen die in deze zelfstudie volgen schetsen hoe te om een dataset tot stand te brengen die [!DNL XDM Individual Profile] het Schema van de Unie gebruikend [!DNL Catalog] API van verwijzingen voorziet. U kunt de [!DNL Platform] gebruikersinterface ook gebruiken om een dataset tot stand te brengen die verwijzingen het unieschema. De stappen voor het gebruiken van UI worden geschetst in [deze zelfstudie UI voor het uitvoeren van segmenten](../../segmentation/tutorials/create-dataset-export-segment.md) maar zijn hier eveneens van toepassing. Nadat u de instructie hebt voltooid, kunt u terugkeren naar deze zelfstudie om door te gaan met de stappen voor het starten van een nieuwe exporttaak](#initiate).[
 
-Als u al een compatibele dataset hebt en zijn identiteitskaart kent, kunt u rechtstreeks aan de stap voor het [in werking stellen van een nieuwe uitvoerbaan](#initiate)te werk gaan.
+Als u reeds een compatibele dataset hebt en zijn identiteitskaart kent, kunt u aan de stap voor [het in werking stellen van een nieuwe de uitvoerbaan](#initiate) direct te werk gaan.
 
 **API-indeling**
 
@@ -77,7 +79,7 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Een beschrijvende naam voor de gegevensset. |
 | `schemaRef.id` | Identiteitskaart van de verenigingsmening (schema) dat de dataset zal worden geassocieerd met. |
-| `fileDescription.persisted` | Een waarde Van Boole die wanneer reeks aan `true`, toelaat de dataset om in de verenigingsmening voort te bestaan. |
+| `fileDescription.persisted` | Een Booleaanse waarde; als de waarde is ingesteld op `true`, kan de gegevensset blijven staan in de samenvoegweergave. |
 
 **Antwoord**
 
@@ -89,9 +91,9 @@ Een succesvolle reactie keert een serie terug die read-only, systeem-geproduceer
 ] 
 ```
 
-### Exporttaak starten {#initiate}
+### Exporttaak {#initiate} starten
 
-Zodra u een unie-persisterende dataset hebt, kunt u een uitvoerbaan tot stand brengen om de gegevens van het Profiel aan de dataset voort te zetten door een verzoek van de POST aan het `/export/jobs` eindpunt in Real-time het Profiel API van de Klant te richten en de details van de gegevens te verstrekken u in het lichaam van het verzoek wenst om uit te voeren.
+Zodra u een unie-persisterende dataset hebt, kunt u een uitvoerbaan tot stand brengen om de gegevens van het Profiel aan de dataset voort te zetten door een verzoek van de POST aan het `/export/jobs` eindpunt in Real-time het Profiel van de Klant te richten API en de details van de gegevens te verstrekken u in het lichaam van het verzoek wenst om uit te voeren.
 
 **API-indeling**
 
@@ -138,12 +140,12 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `fields` | *(Optioneel)* Beperkt de gegevensvelden die in de exportbewerking moeten worden opgenomen tot de gegevensvelden die in deze parameter zijn opgegeven. Als u deze waarde weglaat, worden alle velden opgenomen in de geëxporteerde gegevens. |
-| `mergePolicy` | *(Optioneel)* Hiermee geeft u het samenvoegbeleid op dat van toepassing is op de geëxporteerde gegevens. Neem deze parameter op wanneer er meerdere segmenten worden geëxporteerd. |
+| `mergePolicy` | *(Optioneel)* Hiermee geeft u het samenvoegbeleid op dat de geëxporteerde gegevens moet regelen. Neem deze parameter op wanneer er meerdere segmenten worden geëxporteerd. |
 | `mergePolicy.id` | De id van het samenvoegbeleid. |
 | `mergePolicy.version` | De specifieke versie van het samenvoegbeleid dat moet worden gebruikt. Als u deze waarde weglaat, wordt standaard de meest recente versie gebruikt. |
-| `additionalFields.eventList` | *(Optioneel)* beheert de tijdreeksgebeurtenisvelden die worden geëxporteerd voor onderliggende of gekoppelde objecten door een of meer van de volgende instellingen op te geven:<ul><li>`eventList.fields`: Besturing van de velden die u wilt exporteren.</li><li>`eventList.filter`: Hiermee worden criteria opgegeven waarmee de resultaten van gekoppelde objecten worden beperkt. Hiermee wordt een minimumwaarde verwacht die vereist is voor het exporteren, meestal een datum.</li><li>`eventList.filter.fromIngestTimestamp`: Hiermee filtert u tijdreeksgebeurtenissen naar gebeurtenissen die na de opgegeven tijdstempel zijn ingevoegd. Dit is niet de tijd van de gebeurtenis zelf, maar de tijd van inname voor de gebeurtenissen.</li></ul> |
-| `destination` | **(Vereist)** Doelgegevens voor de geëxporteerde gegevens:<ul><li>`destination.datasetId`: **(Vereist)** De id van de gegevensset waarin gegevens moeten worden geëxporteerd.</li><li>`destination.segmentPerBatch`: *(Optioneel)* Een Booleaanse waarde die, indien niet opgegeven, standaard op `false`. Een waarde van `false` exporteert alle segment-id&#39;s naar één batch-id. Een waarde van `true` exporteert één segment-id naar één batch-id. Merk op dat het plaatsen van de te zijn waarde `true` de prestaties van de partijuitvoer kan beïnvloeden.</li></ul> |
-| `schema.name` | **(Vereist)** De naam van het schema dat is gekoppeld aan de gegevensset waarin gegevens moeten worden geëxporteerd. |
+| `additionalFields.eventList` | *(Optioneel)* beheert de tijdlijngebeurtenisvelden die worden geëxporteerd voor onderliggende of gekoppelde objecten door een of meer van de volgende instellingen op te geven:<ul><li>`eventList.fields`: Besturing van de velden die u wilt exporteren.</li><li>`eventList.filter`: Hiermee worden criteria opgegeven waarmee de resultaten van gekoppelde objecten worden beperkt. Hiermee wordt een minimumwaarde verwacht die vereist is voor het exporteren, meestal een datum.</li><li>`eventList.filter.fromIngestTimestamp`: Hiermee filtert u tijdreeksgebeurtenissen naar gebeurtenissen die na de opgegeven tijdstempel zijn ingevoegd. Dit is niet de tijd van de gebeurtenis zelf, maar de tijd van inname voor de gebeurtenissen.</li></ul> |
+| `destination` | **(Vereist)** Doelgegevens voor de geëxporteerde gegevens:<ul><li>`destination.datasetId`:  **(Vereist)** De id van de gegevensset waarin gegevens moeten worden geëxporteerd.</li><li>`destination.segmentPerBatch`:  *(Optioneel)* Een Booleaanse waarde die, indien niet opgegeven, standaard op  `false`. De waarde `false` exporteert alle segment-id&#39;s naar één batch-id. Met de waarde `true` wordt één segment-id naar één batch-id geëxporteerd. Het instellen van de waarde op `true` kan van invloed zijn op de exportprestaties van batches.</li></ul> |
+| `schema.name` | **(Vereist)** De naam van het schema verbonden aan de dataset waar de gegevens moeten worden uitgevoerd. |
 
 >[!NOTE]
 >
@@ -200,7 +202,7 @@ GET /export/jobs?{QUERY_PARAMETERS}
 | `start` | Verschuif de pagina met geretourneerde resultaten volgens de aanmaaktijd van de aanvraag. Voorbeeld: `start=4` |
 | `limit` | Beperk het aantal geretourneerde resultaten. Voorbeeld: `limit=10` |
 | `page` | Retourneer een specifieke pagina met resultaten volgens de aanmaaktijd van de aanvraag. Voorbeeld: `page=2` |
-| `sort` | Sorteer de resultaten op een bepaald veld in oplopende ( **`asc`** ) of aflopende ( **`desc`** ) volgorde. De sorteerparameter werkt niet bij het retourneren van meerdere pagina&#39;s met resultaten. Voorbeeld: `sort=updateTime:asc` |
+| `sort` | Sorteer de resultaten op een specifiek veld in oplopende ( **`asc`**) of aflopende ( **`desc`**) volgorde. De sorteerparameter werkt niet bij het retourneren van meerdere pagina&#39;s met resultaten. Voorbeeld: `sort=updateTime:asc` |
 
 **Verzoek**
 
@@ -215,7 +217,7 @@ curl -X GET \
 
 **Antwoord**
 
-De reactie bevat een `records` object dat de exporttaken bevat die door uw IMS-organisatie zijn gemaakt.
+De reactie bevat een `records`-object dat de exporttaken bevat die door uw IMS-organisatie zijn gemaakt.
 
 ```json
 {
@@ -332,7 +334,7 @@ De reactie bevat een `records` object dat de exporttaken bevat die door uw IMS-o
 
 ## Exportvoortgang volgen
 
-Als u de details van een specifieke exporttaak wilt bekijken of de status wilt controleren terwijl deze wordt verwerkt, kunt u een verzoek van de GET indienen bij het `/export/jobs` eindpunt en de status `id` van de exporttaak in het pad opnemen. De exporttaak is voltooid wanneer het `status` veld de waarde &quot;SUCCEEDED&quot; retourneert.
+Als u de details van een specifieke exporttaak wilt bekijken of de status van de taak wilt controleren terwijl deze wordt verwerkt, kunt u een GET-verzoek indienen bij het `/export/jobs`-eindpunt en `id` van de exporttaak opnemen in het pad. De exporttaak is voltooid wanneer het veld `status` de waarde &quot;SUCCEEDED&quot; retourneert.
 
 **API-indeling**
 
@@ -342,7 +344,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 | Parameter | Beschrijving |
 | -------- | ----------- |
-| `{EXPORT_JOB_ID}` | De `id` waarde van de exporttaak die u wilt openen. |
+| `{EXPORT_JOB_ID}` | De `id` van de exporttaak die u wilt openen. |
 
 **Verzoek**
 
@@ -409,7 +411,7 @@ curl -X GET \
 
 ## Een exporttaak annuleren
 
-Met Experience Platform kunt u een bestaande exporttaak annuleren. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de exporttaak niet is voltooid of vastgelopen in het verwerkingsstadium. Als u een exporttaak wilt annuleren, kunt u een DELETE-aanvraag naar het `/export/jobs` eindpunt uitvoeren en de exporttaak opnemen die u wilt annuleren `id` naar het aanvraagpad.
+Met Experience Platform kunt u een bestaande exporttaak annuleren. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de exporttaak niet is voltooid of vastgelopen in het verwerkingsstadium. Als u een exporttaak wilt annuleren, kunt u een DELETE-verzoek uitvoeren naar het `/export/jobs`-eindpunt en de `id` van de exporttaak opnemen die u wilt annuleren naar het aanvraagpad.
 
 **API-indeling**
 
@@ -419,7 +421,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 | Parameter | Beschrijving |
 | -------- | ----------- |
-| `{EXPORT_JOB_ID}` | De `id` waarde van de exporttaak die u wilt openen. |
+| `{EXPORT_JOB_ID}` | De `id` van de exporttaak die u wilt openen. |
 
 **Verzoek**
 
@@ -438,13 +440,13 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 204 (Geen inhoud) en 
 
 ## Volgende stappen
 
-Nadat het exporteren is voltooid, zijn uw gegevens beschikbaar in het Data Lake in Experience Platform. Vervolgens kunt u de API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) gegevenstoegang gebruiken om toegang te krijgen tot de gegevens via de `batchId` koppeling die aan de export is gekoppeld. Afhankelijk van de grootte van de exportbewerking kunnen de gegevens in blokken staan en kan de batch uit meerdere bestanden bestaan.
+Nadat het exporteren is voltooid, zijn uw gegevens beschikbaar in het Data Lake in Experience Platform. U kunt de [API van de Toegang van Gegevens ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) dan gebruiken om tot de gegevens toegang te hebben gebruikend `batchId` verbonden aan de uitvoer. Afhankelijk van de grootte van de exportbewerking kunnen de gegevens in blokken staan en kan de batch uit meerdere bestanden bestaan.
 
-Voor stapsgewijze instructies over het gebruik van de API voor gegevenstoegang voor het openen en downloaden van batchbestanden volgt u de zelfstudie [Gegevenstoegang](../../data-access/tutorials/dataset-data.md).
+Voor geleidelijke instructies op hoe te om de Toegang API van Gegevens te gebruiken om tot partijdossiers toegang te hebben en te downloaden, volg [de zelfstudie van de Toegang van Gegevens](../../data-access/tutorials/dataset-data.md).
 
 U kunt ook toegang krijgen tot geëxporteerde realtime klantprofielgegevens met Adobe Experience Platform Query Service. Gebruikend UI of RESTful API, staat de Dienst van de Vraag u toe om, vragen op gegevens binnen het meer van Gegevens te schrijven te bevestigen en in werking te stellen.
 
-Voor meer informatie over hoe te om publieksgegevens te vragen, te herzien gelieve de documentatie [van de Dienst van de](../../query-service/home.md)Vraag.
+Voor meer informatie over hoe te om publieksgegevens te vragen, te herzien [de documentatie van de Dienst van de Vraag](../../query-service/home.md).
 
 ## Aanhangsel
 
@@ -452,7 +454,7 @@ De volgende sectie bevat aanvullende informatie over exporttaken in de profiel-A
 
 ### Aanvullende voorbeelden voor het laden van exporten
 
-Met de voorbeeld-API-aanroep in de sectie over het [starten van een exporttaak](#initiate) wordt een taak gemaakt die zowel profiel- (record) als gebeurtenisgegevens (tijdreeks) bevat. Deze sectie verstrekt extra voorbeelden van de verzoeklading om uw uitvoer te beperken tot één gegevenstype of andere.
+Met de voorbeeld-API-aanroep in de sectie over het starten van een exporttaak](#initiate) wordt een taak gemaakt die zowel profiel- (record) als gebeurtenis- (tijdreeks) gegevens bevat. [ Deze sectie verstrekt extra voorbeelden van de verzoeklading om uw uitvoer te beperken tot één gegevenstype of andere.
 
 Met de volgende payload wordt een exporttaak gemaakt die alleen profielgegevens bevat (geen gebeurtenissen):
 
@@ -502,4 +504,4 @@ Als u een exporttaak wilt maken die alleen gebeurtenisgegevens bevat (geen profi
 
 ### Segmenten exporteren
 
-U kunt ook het eindpunt van exporttaken gebruiken om doelsegmenten in plaats van [!DNL Profile] gegevens te exporteren. Zie de handleiding over [exporttaken in de segmentatie-API](../../segmentation/api/export-jobs.md) voor meer informatie.
+U kunt ook het eindpunt van exporttaken gebruiken om doelsegmenten te exporteren in plaats van [!DNL Profile]-gegevens. Zie de handleiding over [exporttaken in de segmentatie-API](../../segmentation/api/export-jobs.md) voor meer informatie.
