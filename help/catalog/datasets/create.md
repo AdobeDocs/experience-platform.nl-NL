@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset
+keywords: Experience Platform;huis;populaire onderwerpen;dataset;Dataset;creeer een dataset;creeer dataset
 solution: Experience Platform
 title: Een gegevensset maken met behulp van API's
 topic: datasets
 description: Dit document bevat algemene stappen voor het maken van een gegevensset met Adobe Experience Platform API's en het vullen van de gegevensset met behulp van een bestand.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1268'
 ht-degree: 0%
 
 ---
@@ -21,19 +21,19 @@ Dit document bevat algemene stappen voor het maken van een gegevensset met Adobe
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [Inname](../../ingestion/batch-ingestion/overview.md)in batch: [!DNL Experience Platform] kunt u gegevens invoeren als batchbestanden.
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Inname](../../ingestion/batch-ingestion/overview.md) in batch:  [!DNL Experience Platform] kunt u gegevens invoeren als batchbestanden.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Experience Platform] klantenervaring worden georganiseerd.
+* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan APIs te maken. [!DNL Platform]
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan [!DNL Platform] APIs te maken.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -45,7 +45,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
+>Raadpleeg de documentatie [sandbox-overzicht](../../sandboxes/home.md) voor meer informatie over sandboxen in [!DNL Platform].
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -55,15 +55,15 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 Om een dataset tot stand te brengen, moet een schema eerst worden bepaald. Een schema is een reeks regels helpen gegevens vertegenwoordigen. Naast het beschrijven van de structuur van gegevens, verstrekken de schema&#39;s beperkingen en verwachtingen die kunnen worden toegepast en worden gebruikt om gegevens te bevestigen aangezien het tussen systemen wordt bewogen.
 
-Deze standaarddefinities maken het mogelijk dat gegevens consistent worden geïnterpreteerd, ongeacht de oorsprong, en verwijderen de noodzaak van vertaling in verschillende toepassingen. Voor meer informatie over het samenstellen van schema&#39;s, zie de gids over de [grondbeginselen van schemacompositie](../../xdm/schema/composition.md)
+Deze standaarddefinities maken het mogelijk dat gegevens consistent worden geïnterpreteerd, ongeacht de oorsprong, en verwijderen de noodzaak van vertaling in verschillende toepassingen. Voor meer informatie over het samenstellen van schema&#39;s, zie de gids op de [grondbeginselen van schemacompositie](../../xdm/schema/composition.md)
 
 ## Een gegevenssetschema opzoeken
 
-Deze zelfstudie begint waar de zelfstudie over de API voor [schemaregistratie](../../xdm/tutorials/create-schema-api.md) eindigt, waarbij gebruik wordt gemaakt van het schema Loyalty-leden dat tijdens die zelfstudie is gemaakt.
+Deze zelfstudie begint waar de [API-zelfstudie voor schemaregistratie](../../xdm/tutorials/create-schema-api.md) eindigt, waarbij gebruik wordt gemaakt van het schema Loyalty-leden dat tijdens die zelfstudie is gemaakt.
 
-Als u de [!DNL Schema Registry] zelfstudie niet hebt voltooid, begint u daar en gaat u verder met deze zelfstudie voor de gegevensset, maar pas nadat u het vereiste schema hebt samengesteld.
+Als u de [!DNL Schema Registry] zelfstudie niet hebt voltooid, gelieve daar te beginnen en met deze datasetzelfstudie voort te zetten slechts zodra u het noodzakelijke schema hebt samengesteld.
 
-De volgende vraag kan worden gebruikt om het schema van de Leden van de Loyalty te bekijken u tijdens het [!DNL Schema Registry] API leerprogramma creeerde:
+De volgende vraag kan worden gebruikt om het schema van Leden van de Loyalty te bekijken u tijdens de [!DNL Schema Registry] API leerprogramma creeerde:
 
 **API-indeling**
 
@@ -215,11 +215,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->In deze zelfstudie wordt voor alle voorbeelden de bestandsindeling [parket](https://parquet.apache.org/documentation/latest/) gebruikt. Een voorbeeld dat de JSON-bestandsindeling gebruikt, vindt u in de handleiding voor ontwikkelaars van [batchinvoer](../../ingestion/batch-ingestion/api-overview.md)
+>Deze zelfstudie gebruikt de bestandsindeling [Apache Parquet](https://parquet.apache.org/documentation/latest/) voor alle voorbeelden. Een voorbeeld dat de JSON-bestandsindeling gebruikt, vindt u in de handleiding [voor het ontwikkelen van batch-indelingen](../../ingestion/batch-ingestion/api-overview.md)
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject dat bestaat uit een array met de id van de nieuwe dataset in de indeling `"@/datasets/{DATASET_ID}"`. De dataset ID is een read-only, systeem-geproduceerde koord dat wordt gebruikt om de dataset in API vraag van verwijzingen te voorzien.
+Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject dat bestaat uit een array met de id van de nieuwe dataset in de notatie `"@/datasets/{DATASET_ID}"`. De dataset ID is een read-only, systeem-geproduceerde koord dat wordt gebruikt om de dataset in API vraag van verwijzingen te voorzien.
 
 ```JSON
 [
@@ -239,7 +239,7 @@ POST /batches
 
 **Verzoek**
 
-Het aanvraaglichaam omvat een &quot;datasetId&quot;gebied, waarvan de waarde in de vorige stap wordt `{DATASET_ID}` geproduceerd.
+Het aanvraaglichaam omvat een &quot;datasetId&quot;gebied, de waarde waarvan `{DATASET_ID}` in de vorige stap wordt geproduceerd is.
 
 ```SHELL
 curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
@@ -256,7 +256,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject dat details bevat van de nieuwe batch, inclusief een tekenreeks die door het systeem wordt gegenereerd `id`en die alleen-lezen is.
+Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject dat details bevat van de nieuwe batch, inclusief de `id`, een door het systeem gegenereerde tekenreeks die alleen-lezen is.
 
 ```JSON
 {
@@ -295,7 +295,7 @@ Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject
 
 ## Bestanden uploaden naar een batch
 
-Nadat u een nieuwe batch hebt gemaakt om te uploaden, kunt u nu bestanden uploaden naar de specifieke dataset. Het is belangrijk om te herinneren dat wanneer u de dataset bepaalde, u het dossierformaat als parquet specificeerde. De bestanden die u uploadt, moeten daarom een dergelijke indeling hebben.
+Nadat u een nieuwe batch hebt gemaakt om te uploaden, kunt u nu bestanden uploaden naar de specifieke dataset. Het is belangrijk om te herinneren dat wanneer u de dataset bepaalde, u het dossierformaat als Parquet specificeerde. De bestanden die u uploadt, moeten daarom een dergelijke indeling hebben.
 
 >[!NOTE]
 >
@@ -309,8 +309,8 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{BATCH_ID}` | De `id` batch waarnaar u uploadt. |
-| `{DATASET_ID}` | De `id` gegevensset waarin de batch wordt gecontinueerd. |
+| `{BATCH_ID}` | De `id` van de batch waarnaar u uploadt. |
+| `{DATASET_ID}` | De `id` van de dataset de partij zal worden voortgeduurd in. |
 | `{FILE_NAME}` | De naam van het bestand dat u uploadt. |
 
 **Verzoek**
@@ -330,7 +330,7 @@ Een bestand dat is geüpload, retourneert een lege responstekst en HTTP Status 2
 
 ## Signaalbatchverwerking
 
-Nadat u al uw gegevensbestanden naar de batch hebt geüpload, kunt u de batch voor voltooiing signaleren. Door het afgeven van de handtekening maakt de service [!DNL Catalog] `DataSetFile` items voor de geüploade bestanden en koppelt u deze aan de eerder gegenereerde batch. De [!DNL Catalog] batch is gemarkeerd als succesvol, waardoor stroomafwaartse stromen worden geactiveerd die vervolgens aan de nu beschikbare gegevens kunnen werken.
+Nadat u al uw gegevensbestanden naar de batch hebt geüpload, kunt u de batch voor voltooiing signaleren. Door het afgeven van signalen maakt de service [!DNL Catalog] `DataSetFile`-items voor de geüploade bestanden en koppelt deze aan de eerder gegenereerde batch. De [!DNL Catalog] partij is duidelijk succesvol, die om het even welke stroomafwaartse stromen teweegbrengt die dan aan de nu beschikbare gegevens kunnen werken.
 
 **API-indeling**
 
@@ -340,7 +340,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{BATCH_ID}` | De `id` batch die u markeert is voltooid. |
+| `{BATCH_ID}` | De `id` van de batch die u markeert als voltooid. |
 
 **Verzoek**
 
@@ -357,7 +357,7 @@ Een met succes voltooide partij keert een lege reactiekarakter en de Status 200 
 
 ## Inname van monitor
 
-Afhankelijk van de grootte van de gegevens, nemen de partijen variërende tijdsduur om in te nemen. U kunt de status van een batch controleren door een `batch` aanvraagparameter met de id van de batch aan een `GET /batches` aanvraag toe te voegen. De API pollt de dataset voor de status van de partij van opname tot `status` in de reactie op voltooiing (&quot;succes&quot; of &quot;mislukking&quot;) wijst.
+Afhankelijk van de grootte van de gegevens, nemen de partijen variërende tijdsduur om in te nemen. U kunt de status van een partij controleren door een `batch` verzoekparameter toe te voegen die identiteitskaart van de partij aan een `GET /batches` verzoek bevat. De API opiniepeilt de dataset voor de status van de partij van opname tot `status` in de reactie wijst op voltooiing (&quot;succes&quot; of &quot;mislukking&quot;).
 
 **API-indeling**
 
@@ -367,7 +367,7 @@ GET /batches?batch={BATCH_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{BATCH_ID}` | De hoeveelheid `id` van de batch die u wilt controleren. |
+| `{BATCH_ID}` | De `id` van de batch die u wilt controleren. |
 
 **Verzoek**
 
@@ -382,7 +382,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een positieve reactie retourneert een object waarvan het `status` kenmerk de waarde bevat van `success`:
+Een positieve reactie retourneert een object waarvan het `status`-kenmerk de waarde van `success` bevat:
 
 ```JSON
 {
@@ -414,7 +414,7 @@ Een positieve reactie retourneert een object waarvan het `status` kenmerk de waa
 }
 ```
 
-Een negatieve reactie retourneert een object met de waarde van `"failed"` in het `"status"` kenmerk en bevat eventuele relevante foutberichten:
+Een negatieve reactie retourneert een object met de waarde `"failed"` in het `"status"`-kenmerk en bevat eventuele relevante foutberichten:
 
 ```JSON
 {
@@ -466,14 +466,14 @@ Met de batch-id kunt u de API voor gegevenstoegang gebruiken om terug te lezen e
 
 U kunt de API voor gegevenstoegang ook gebruiken om de naam, grootte in bytes en een koppeling te retourneren om het bestand of de map te downloaden.
 
-Gedetailleerde stappen voor het werken met de API voor gegevenstoegang vindt u in de [handleiding](../../data-access/home.md)voor ontwikkelaars van gegevenstoegang.
+Gedetailleerde stappen voor het werken met de API voor gegevenstoegang vindt u in de [Handleiding voor ontwikkelaars van gegevenstoegang](../../data-access/home.md).
 
 ## Het schema van de gegevensset bijwerken
 
 U kunt velden toevoegen en aanvullende gegevens invoeren in gegevenssets die u hebt gemaakt. Hiervoor moet u eerst het schema bijwerken door extra eigenschappen toe te voegen die de nieuwe gegevens definiëren. Dit kan worden gedaan gebruikend PATCH en/of PUT verrichtingen om het bestaande schema bij te werken.
 
-Voor meer informatie over het bijwerken van schema&#39;s, zie de [Gids](../../xdm/api/getting-started.md)van de Ontwikkelaar van de Registratie van het Schema API.
+Voor meer informatie over het bijwerken van schema&#39;s, zie [de Gids van de Ontwikkelaar van de Registratie API van het Schema ](../../xdm/api/getting-started.md).
 
 Nadat u het schema hebt bijgewerkt, kunt u de stappen in deze zelfstudie opnieuw volgen om nieuwe gegevens in te voeren die voldoen aan het herziene schema.
 
-Het is belangrijk om te herinneren dat de schemaevolutie zuiver additief is, betekenend kunt u geen het breken verandering in een schema introduceren zodra het aan de registratie is bewaard en voor gegevensopname gebruikt. Meer over beste praktijken voor het samenstellen van schema voor gebruik met Adobe Experience Platform leren, zie de gids over de [grondbeginselen van schemacompositie](../../xdm/schema/composition.md).
+Het is belangrijk om te herinneren dat de schemaevolutie zuiver additief is, betekenend kunt u geen het breken verandering in een schema introduceren zodra het aan de registratie is bewaard en voor gegevensopname gebruikt. Meer over beste praktijken voor het samenstellen van schema voor gebruik met Adobe Experience Platform leren, zie de gids op de [grondbeginselen van schemacompositie](../../xdm/schema/composition.md).
