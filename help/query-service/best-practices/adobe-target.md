@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe target;
+keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;steekproefvragen;steekproefvraag;adobe doel;
 solution: Experience Platform
 title: Voorbeeldquery's
 topic: queries
@@ -7,7 +7,7 @@ description: Gegevens uit Adobe Target worden omgezet in XDM-schema voor Experie
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
