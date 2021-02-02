@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Overzicht van de gebruikersinterface voor Privacys Service
 topic: UI guide
+description: Ga aan de slag met de gebruikersinterface van de Privacy Service om privacyverzoeken in verschillende Experience Cloud-toepassingen te coördineren en te controleren.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '180'
 ht-degree: 1%
 
 ---
@@ -14,24 +15,24 @@ ht-degree: 1%
 
 # [!DNL Privacy Service] Overzicht van gebruikersinterface
 
-Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u privacy- en compatibiliteitsverzoeken op verschillende oplossingen kunt coördineren. In dit document wordt de [!DNL Privacy Service] gebruikersinterface besproken. Zie de handleiding voor ontwikkelaars van [Privacys Service voor informatie over het gebruik van de API](../api/getting-started.md).
+Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u privacy- en compatibiliteitsverzoeken op verschillende oplossingen kunt coördineren. In dit document wordt de gebruikersinterface van [!DNL Privacy Service] besproken. Raadpleeg de [handleiding voor ontwikkelaars van Privacys Service](../api/getting-started.md) voor informatie over het gebruik van de API.
 
-## Aanmelden bij de [!DNL Privacy Service] gebruikersinterface
+## Aanmelden bij de interface [!DNL Privacy Service]
 
-U moet over een Adobe ID beschikken om te kunnen verifiëren bij de [!DNL Privacy Service] UI. Daarnaast moet u over systeembeheerdersrechten beschikken binnen de organisatie waaraan uw Adobe ID is gekoppeld.
+U moet een Adobe ID hebben om aan [!DNL Privacy Service] UI voor authentiek te verklaren. Daarnaast moet u over systeembeheerdersrechten beschikken binnen de organisatie waaraan uw Adobe ID is gekoppeld.
 
-Navigeer naar de Adobe Experience Cloud-aanmeldpagina op https://experience.adobe.com. Klik op **[!UICONTROL Aanmelden met een Adobe ID]** en voer uw Adobe ID-gegevens in wanneer hierom wordt gevraagd.
+Selecteer **[!UICONTROL Aanmelden met een Adobe ID]** en voer uw Adobe ID-referenties in wanneer hierom wordt gevraagd.
 
-Als u bent aangemeld, klikt u op **[!UICONTROL Privacy UI]**.
+Wanneer u bent aangemeld, selecteert u **[!UICONTROL Privacy UI]**.
 
 ![](../images/ui-overview/quick-access.png)
 
-### Aanmelden bij [!DNL Experience Platform]
+### Aanmelden vanaf [!DNL Experience Platform]
 
-Als u toegang hebt tot de gebruikersinterface van Adobe Experience Platform, kunt u de [!DNL Privacy Service] gebruikersinterface ook openen via het tabblad **[!UICONTROL Verzoeken]** in de linkernavigatie.
+Als u toegang tot de UI van Adobe Experience Platform hebt, kunt u tot [!DNL Privacy Service] UI door **[!UICONTROL Verzoeken]** lusje in de linkernavigatie ook toegang hebben.
 
 ![](../images/ui-overview/platform.png)
 
 ## Volgende stappen
 
-Nu u zich met succes hebt aangemeld, raadpleegt u de [gebruikershandleiding](user-guide.md) voor stappen over het uitvoeren van verschillende bewerkingen met behulp van de [!DNL Privacy Service] gebruikersinterface.
+Nu u met succes het programma hebt geopend, te verwijzen gelieve [gebruikersgids](user-guide.md) voor stappen op hoe te om diverse handelingen uit te voeren gebruikend [!DNL Privacy Service] UI.
