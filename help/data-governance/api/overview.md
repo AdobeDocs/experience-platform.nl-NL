@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Handleiding voor ontwikkelaars van API voor beleidsservice
 topic: developer guide
+description: Leer hoe u de API voor beleidsservice gebruikt om labels en beleidsregels voor gegevensgebruik in Experience Platform te beheren.
 translation-type: tm+mt
-source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
@@ -14,35 +15,35 @@ ht-degree: 0%
 
 # [!DNL Policy Service] Handleiding voor API-ontwikkelaars
 
-Met Adobe Experience Platform [!DNL Data Governance] kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een sleutelrol binnen [!DNL Experience Platform] op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, en het controleren van het gebruik van gegevens voor marketing acties.
+Met Adobe Experience Platform [!DNL Data Governance] kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een belangrijke rol binnen [!DNL Experience Platform] op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, en het controleren van het gebruik van gegevens voor marketing acties.
 
-De [!DNL Policy Service] API biedt verschillende eindpunten waarmee u labels en beleidsregels voor gegevensgebruik programmatisch kunt beheren en marketingacties voor beleidsovertredingen kunt evalueren. Deze eindpunten worden hieronder beschreven. Gelieve te bezoeken de individuele eindpuntgidsen voor details en te verwijzen naar de [begonnen gids](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
+De [!DNL Policy Service] API verstrekt verscheidene eindpunten die u toestaan om de etiketten en het beleid van het gegevensgebruik programmatically te beheren, evenals marketing acties voor beleidsschendingen te evalueren. Deze eindpunten worden hieronder beschreven. Gelieve te bezoeken de individuele eindpuntgidsen voor details en te verwijzen naar [begonnen gids](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
 
-Ga naar de [[!DNL Policy Service] API-wagen om alle beschikbare eindpunten en CRUD-bewerkingen weer te geven](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
+Als u alle beschikbare eindpunten en CRUD-bewerkingen wilt weergeven, gaat u naar de API-wagen](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).[[!DNL Policy Service] 
 
 ## Labels
 
-Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. De beste praktijken bevorderen etiketteringsgegevens zodra het in wordt opgenomen [!DNL Experience Platform], of zodra de gegevens voor gebruik in [!DNL Platform]. U kunt etiketten creëren, bekijken, uitgeven en schrappen gebruikend het `/labels` eindpunt. Om te leren hoe te om dit eindpunt te gebruiken, bezoek de gids [van het](./labels.md)etiketeindpunt.
+Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. De beste praktijken moedigen etiketteringsgegevens aan zodra het in [!DNL Experience Platform] wordt opgenomen, of zodra de gegevens voor gebruik in [!DNL Platform] beschikbaar worden. U kunt etiketten tot stand brengen, bekijken, uitgeven en schrappen gebruikend het `/labels` eindpunt. Om te leren hoe te om dit eindpunt te gebruiken, bezoek [etiketeindpuntgids](./labels.md).
 
 ## Marketingacties
 
-Marketing-acties (ook wel marketinggebruiksgevallen genoemd) zijn in de context van het [!DNL Data Governance] kader acties die een [!DNL Experience Platform] gegevensconsument kan ondernemen en waarvoor uw organisatie het gebruik van gegevens wil beperken. Voor gedetailleerde informatie bij het werken met marketing acties, zie de gids [van het](./marketing-actions.md)marketing actiepunten.
+Marketing-acties (ook wel marketinggebruiksgevallen genoemd) zijn in de context van het [!DNL Data Governance]-framework acties die een [!DNL Experience Platform]-gegevensconsument kan uitvoeren en waarvoor uw organisatie het gegevensgebruik wil beperken. Voor gedetailleerde informatie bij het werken met marketing acties, zie [marketing acties eindgids](./marketing-actions.md).
 
 ## Beleid
 
-Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, het uitvoeren op gegevens binnen wordt toegestaan [!DNL Experience Platform]. Een beleid wordt gedefinieerd door het volgende:
+Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens binnen [!DNL Experience Platform]. Een beleid wordt gedefinieerd door het volgende:
 
 1. Een specifieke marketingactie
 1. De labels voor gegevensgebruik waarvoor de handeling niet kan worden uitgevoerd
 
-Leren hoe te om beleid in API te beheren, zie de gids van het [beleidseindpunt](./policies.md)
+Om te leren hoe te om beleid in API te beheren, zie [beleidseindpuntgids](./policies.md)
 
 ## Evaluatie
 
-Zodra de etiketten van het gegevensgebruik op [!DNL Platform] datasets zijn toegepast, en het beleid van het gegevensgebruik voor marketing acties tegen die etiketten is bepaald, staat de mogelijkheden van het Beleid van Gegevens u toe om dat beleid te handhaven en gegevensverrichtingen te verhinderen die beleidsschendingen vormen.
+Zodra de etiketten van het gegevensgebruik op [!DNL Platform] datasets zijn toegepast, en het beleid van het gegevensgebruik is bepaald voor marketing acties tegen die etiketten, staan de mogelijkheden van de Governance van Gegevens u toe om dat beleid te handhaven en gegevensverrichtingen te verhinderen die beleidsschendingen vormen.
 
-De [!DNL Policy Service] API verstrekt eindpunten die u toestaan om marketing acties tegen datasets of willekeurige combinaties etiketten van het gegevensgebruik te testen om te controleren of om het even welke beleidsschendingen voorkomen. Op basis van de API-reactie kunt u vervolgens protocollen in uw ervaringstoepassing instellen om op de juiste wijze de naleving van het gegevensgebruiksbeleid af te dwingen. Zie de gids [van de](./evaluation.md) evaluatieeindpunten voor meer informatie.
+De [!DNL Policy Service] API verstrekt eindpunten die u toestaan om marketing acties tegen datasets of willekeurige combinaties etiketten van het gegevensgebruik te testen om te controleren als om het even welke beleidsschendingen voorkomen. Op basis van de API-reactie kunt u vervolgens protocollen in uw ervaringstoepassing instellen om op de juiste wijze de naleving van het gegevensgebruiksbeleid af te dwingen. Zie [de gids van de evaluatie eindpunten](./evaluation.md) voor meer informatie.
 
 ## Volgende stappen
 
-Beginnen het maken vraag gebruikend [!DNL Policy Service] API, lees de [begonnen gids](./getting-started.md) dan één van de eindpuntgidsen om te leren hoe te om specifieke eindpunten te gebruiken. Als u met labels en beleidsregels wilt werken met de [!DNL Experience Platform] gebruikersinterface, raadpleegt u respectievelijk de gebruikershandleiding [voor](../labels/user-guide.md) labels en de gebruikershandleiding voor [beleidsregels](../policies/user-guide.md).
+Wanneer u begint met het maken van aanroepen met de [!DNL Policy Service]-API, leest u de [gids Aan de slag](./getting-started.md) en selecteert u vervolgens een van de eindpunthulplijnen om te leren hoe u specifieke eindpunten kunt gebruiken. Als u met labels en beleidsregels wilt werken met de interface [!DNL Experience Platform], raadpleegt u de [handleiding voor labelgebruikers](../labels/user-guide.md) en [Gebruiksgids voor beleidsregels](../policies/user-guide.md).
