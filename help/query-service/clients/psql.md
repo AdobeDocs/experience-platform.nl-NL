@@ -1,79 +1,37 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query service;Query service;query service;
+keywords: Experience Platform;huis;populaire onderwerpen;PSQL;psqlconnect met de vraagdienst;de dienst van de vraag;de vraagdienst;
 solution: Experience Platform
 title: Verbinding maken met PSQL
 topic: connect
-description: 'PSQL is een opdrachtregelinterface die wordt weergegeven wanneer u Postgres op uw computer installeert. U kunt het installeren door deze instructies te volgen. '
+description: 'PSQL is een opdrachtregelinterface die wordt weergegeven wanneer u PostgreSQL op uw computer installeert. U kunt het installeren door deze instructies te volgen. '
 translation-type: tm+mt
-source-git-commit: 8ffe7c68c87cacb6b54d9634a5204fa24a9986ac
+source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 0%
+source-wordcount: '244'
+ht-degree: 1%
 
 ---
 
 
-# Verbinding maken met PSQL
+# PSQL
 
-PSQL is een opdrachtregelinterface die wordt geleverd wanneer u [!DNL Postgres] op uw computer installeert. U kunt het installeren door deze instructies te volgen.
+PSQL is een opdrachtregelinterface die wordt geïnstalleerd wanneer u [!DNL PostgreSQL] op uw computer installeert. In dit document worden de stappen beschreven voor het verbinden van PSQL met Adobe Experience Platform [!DNL Query Service].
 
-## Postcodes installeren op een Mac
-
-Open een eindvenster en geef deze drie bevelen uit:
-
-```shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-```shell
-brew install postgres
-```
-
-```shell
-which psql
-```
-
-Na het uitgeven van deze bevelen, zou u het volgende moeten zien:
-
-```shell
-/usr/local/bin/psql
-```
-
-## Installeren [!DNL Postgres] op een pc
-
-Download en installeer [!DNL Postgres] vanaf deze [locatie](https://www.postgresql.org/download/windows/).
-
-De padvariabele bewerken:
-
-![Image](../images/clients/psql/path.png)
-
-Voeg de twee getoonde lijnen toe die &quot;[!DNL Postgres].&quot;omvatten
-
-Sla de updates op en open vervolgens een opdrachtprompt en typ:
-
-```shell
-psql -V
-```
-
-Je zou iets als dit moeten zien:
-
-```shell
-psql (PostgreSQL) 9.5.14
-```
+>[!NOTE]
+>
+> Deze gids veronderstelt u reeds toegang tot [!DNL PSQL] hebt en vertrouwd met hoe te om het te gebruiken. Meer informatie over [!DNL PSQL] vindt u in de [officiële [!DNL PSQL] documentatie] (https://www.postgresql.org/docs/current/app-psql.html.
 
 ## Connect PSQL en [!DNL Query Service]
 
-Ga terug naar de [!DNL Platform] gebruikersinterface op de pagina Tools **[!UICONTROL voor]** Connect BI.
-
-Klik **[!UICONTROL exemplaar]** voor **[!UICONTROL Bevel]** PSQL.
+Na het installeren van PSQL op uw computer, bent u klaar om PSQL met de Dienst van de Vraag te verbinden. Keer aan [!DNL Platform] UI terug, dan uitgezocht **[!UICONTROL Vragen]**, die door **[!UICONTROL Referenties]** wordt gevolgd.
 
 ![Image](../images/clients/psql/connect-bi.png)
 
+Selecteer het pictogram om de sectie geëtiketteerd **[!UICONTROL PSQL Bevel]** te kopiëren, dan kleef het bevelkoord in een terminal of bevel-lijn venster alvorens binnen te drukken.
+
 >[!IMPORTANT]
 >
->Als u op PC bent, gebruik een tekstredacteur om de lijnonderbrekingen in het bevelkoord te verwijderen, dan kopieer het koord. Als u versie 12.0 of hoger gebruikt, moet u bovendien een verbindingstekenreeks toevoegen `PGGSSENCMODE=disable` aan de verbindingstekenreeks.
-
-Plak de opdrachttekenreeks in een terminal- of opdrachtvenster en druk op Enter.
+>Als u op PC bent, gebruik een tekstredacteur om de lijnonderbrekingen in het bevelkoord te verwijderen, dan kopieer het koord. Bovendien, als u versie 12.0 of groter gebruikt, zult u `PGGSSENCMODE=disable` aan uw verbindingskoord moeten toevoegen.
 
 U zou een resultaat als dit moeten zien:
 
@@ -85,3 +43,7 @@ all=>
 ```
 
 Als u versie 10.5 of hoger niet ziet, moet u die versie of nieuwer downloaden.
+
+## Volgende stappen
+
+Nu u met [!DNL Query Service] hebt verbonden, kunt u PSQL gebruiken om vragen te schrijven. Voor meer informatie over hoe te om vragen te schrijven en in werking te stellen, te lezen gelieve de gids op [lopende vragen](../best-practices/writing-queries.md).
