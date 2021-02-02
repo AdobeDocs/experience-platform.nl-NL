@@ -1,13 +1,13 @@
 ---
-keywords: destinations;destination;destination types
+keywords: doelen;doel;doeltypen
 title: Typen bestemmingen en categorieën
 seo-title: Typen bestemmingen en categorieën
-description: 'In het Platform van Gegevens van de Klant in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie toe, en voeren segmenten en gekwalificeerde profielen op bestemmingen uit. Experience Platform Launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. '
-seo-description: In het Platform van Gegevens van de Klant in real time, vangen de de bestemmingen van de Uitvoer van het Profiel/van het Segment gebeurtenisgegevens, combineren het met andere gegevensbronnen, passen segmentatie toe, en voeren segmenten en gekwalificeerde profielen op bestemmingen uit. Experience Platform Launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen.
+description: 'In Adobe Experience Platform leggen de uitvoerdoelen Profiel/Segment gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen, passen segmentatie toe en exporteren segmenten en gekwalificeerde profielen naar bestemmingen. Experience Platform Launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. '
+seo-description: In Adobe Experience Platform leggen de uitvoerdoelen Profiel/Segment gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen, passen segmentatie toe en exporteren segmenten en gekwalificeerde profielen naar bestemmingen. Experience Platform Launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen.
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -15,25 +15,25 @@ ht-degree: 0%
 
 # Doeltypen en -categorieën
 
-Lees deze pagina om de verschillende types en de categorieën bestemmingen van het Platform van de Gegevens van de Klant in real time te begrijpen.
+Lees deze pagina om de verschillende typen en categorieën Adobe Experience Platform-bestemmingen te begrijpen.
 
 ## Doeltypen
 
-In het Platform van Gegevens van de Klant in real time, maken wij onderscheid tussen twee bestemmingstypes - verbindingen en uitbreidingen. Er zijn twee soorten verbindingsbestemmingen, de bestemmingen van de Uitvoer van het Profiel en de bestemmingen van de Uitvoer van het Segment.
+In Adobe Experience Platform maken we onderscheid tussen twee doeltypen: verbindingen en extensies. Er zijn twee soorten verbindingsbestemmingen, de bestemmingen van de Uitvoer van het Profiel en de bestemmingen van de Uitvoer van het Segment.
 
 ![Soorten bestemmingen](./assets/destination-types/types-of-destinations.png)
 
 ### Verbindingen {#connections}
 
-**[!UICONTROL De bestemmingen van de Uitvoer]** en van het **[!UICONTROL Segment van het profiel van de Uitvoer]** in het Platform van de Gegevens van de Klant in real time vangen gebeurtenisgegevens, combineren het met andere gegevensbronnen om het [Real-time Profiel](../profile/home.md)van de Klant te vormen, segmentatie toe te passen, en segmenten en gekwalificeerde profielen naar bestemmingen uit te voeren.
+**[!UICONTROL De]** Uitvoer van het profiel en  **[!UICONTROL Segment]** Exportbestemmingen van het segment in Adobe Experience Platform vangen gebeurtenisgegevens, combineren het met andere gegevensbronnen om het  [Real-time Profiel](../profile/home.md) van de Klant te vormen, segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe te passen.
 
 #### Profielexportdoelen
 
-Profielexportdoelen genereren een bestand met profielen en/of kenmerken. Deze bestemmingen gebruiken ruwe gegevens, vaak met e-mailadres als primaire sleutel. De [Amazon S3-bestemming voor cloudopslag](./catalog/cloud-storage/amazon-s3.md) is een voorbeeld van een bestemming waar u bestanden met profielexport kunt neerzetten.
+Profielexportdoelen genereren een bestand met profielen en/of kenmerken. Deze bestemmingen gebruiken ruwe gegevens, vaak met e-mailadres als primaire sleutel. De [Amazon S3 wolkenopslagbestemming](./catalog/cloud-storage/amazon-s3.md) is een voorbeeld van bestemming waar u dossiers kunt neerzetten die profieluitvoer bevatten.
 
 #### Exportbestemmingen segment
 
-De de uitvoerbestemmingen van het segment verzenden de profielen en de segmenten die zij voor aan bestemmingsplatforms kwalificeerden. Deze bestemmingen gebruiken segment ID of gebruiker IDs. Reclamebestemmingen zoals [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) of [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) zijn voorbeelden van dit soort bestemmingen.
+De de uitvoerbestemmingen van het segment verzenden de profielen en de segmenten die zij voor aan bestemmingsplatforms kwalificeerden. Deze bestemmingen gebruiken segment ID of gebruiker IDs. Reclamebestemmingen zoals [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) of [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) zijn voorbeelden van deze soorten doelen.
 
 #### Exportdoelen profiel en segment - video-overzicht
 
@@ -43,13 +43,13 @@ In de onderstaande video worden de bijzonderheden van de twee soorten doelen uit
 
 ### Extensies {#extensions}
 
-In real time gebruikt CDP de macht en de flexibiliteit van Adobe Experience Platform Launch om de uitbreidingen van de Lancering van het Platform in de interface in real time CDP te omvatten.
+Platform maakt gebruik van de kracht en flexibiliteit van Adobe Experience Platform Launch om Platform Launch-extensies op te nemen in de interface van het Platform.
 
 >[!TIP]
 >
->Zie het overzicht [](./catalog/launch-extensions/overview.md)van Adobe Experience Platform Launch-extensies voor meer informatie over Adobe Experience Platform Launch-extensies, zoals use cases en hoe u deze kunt vinden in de interface.
+>Zie [Overzicht van Adobe Experience Platform Launch-extensies](./catalog/launch-extensions/overview.md) voor gedetailleerde informatie over Adobe Experience Platform Launch-extensies, zoals use cases en hoe u deze kunt vinden in de interface.
 
-Platform Start extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. Beschouw extensies als een **type bestemming voor doorsturen** van gebeurtenissen. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Gegineerde personalisatieuitbreiding](./catalog/personalization/gainsight.md) of de [Bevestiging Stem van de uitbreiding](./catalog/voice/confirmit-digital-feedback.md)van de Klant.
+Platform Start extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. Beschouw extensies als een **Event Forwarding**-type van bestemming. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Grondige personalisatie-extensie](./catalog/personalization/gainsight.md) of de [Spraak van de klant-extensie bevestigen](./catalog/voice/confirmit-digital-feedback.md).
 
 ![Extensies van Experience Platforms Launch vergeleken met andere bestemmingen](./assets/common/launch-and-other-destinations.png)
 
@@ -63,7 +63,7 @@ Extensies zijn handig wanneer gebeurtenisgegevens worden gebruikt om een handeli
 
 ## Doelcategorieën
 
-De verbindingen en extensies in de [doelcatalogus](https://platform.adobe.com/destination/catalog) worden gegroepeerd op doelcategorie (**Advertising**, **Cloud storage**, **Survey-platforms**, **Email marketing**, enz.), afhankelijk van het marketinggeval dat deze u helpen te maken. Raadpleeg de documentatie bij de [catalogus](./catalog/overview.md)Doelen voor meer informatie over elk van de categorieën en over de bestemmingen die in elke categorie zijn opgenomen.
+De verbindingen en extensies in de [doelcatalogus](https://platform.adobe.com/destination/catalog) worden gegroepeerd op doelcategorie (**Advertising**, **Cloud storage**, **Beoordelingsplatforms**, **E-mailmarketing**, enz.), afhankelijk van het marketinggeval dat ze u helpen bereiken. Zie de [documentatie bij de catalogus Doelen](./catalog/overview.md) voor meer informatie over elk van de categorieën en de bestemmingen die in elke categorie zijn opgenomen.
 
 ![Doelcategorieën](./assets/destination-types/destination-categories-menu.png)
 
