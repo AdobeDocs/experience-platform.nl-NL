@@ -1,13 +1,13 @@
 ---
-keywords: RTCDP;rtcdp
+keywords: platform;bestemmingen;bestemmingswerkruimte;werkruimte;ui;bestemmingen ui;catalogus;doelcatalogus;
 title: Werkruimte Doelen
 seo-title: Werkruimte Doelen
 description: De werkruimte Doelen bestaat uit vier secties, Catalogus, Bladeren, Rekeningen, en de Mening van het Systeem, die in de hieronder secties worden beschreven.
-seo-description: In het Platform van Gegevens van de Klant in real time, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
+seo-description: In Adobe Experience Platform, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -15,26 +15,26 @@ ht-degree: 1%
 
 # Werkruimte Doelen {#destinations-workspace}
 
-In het Platform van Gegevens van de Klant in real time, uitgezochte **[!UICONTROL Doelen]** van de linkernavigatiebar om tot de werkruimte van [!UICONTROL Doelen] toegang te hebben.
+Selecteer in Adobe Experience Platform **[!UICONTROL Doelen]** in de linkernavigatiebalk om de werkruimte [!UICONTROL Doelen] te openen.
 
-De [!UICONTROL werkruimte van Doelen] bestaat uit vier secties, [!UICONTROL Catalogus], [!UICONTROL doorbladeren], [!UICONTROL Rekeningen], en de Mening [!UICONTROL van]het Systeem, die in de hieronder secties worden beschreven.
+De werkruimte [!UICONTROL Doelen] bestaat uit vier secties, [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], en [!UICONTROL System View], die in de volgende secties worden beschreven.
 
 ![Overzicht van bestemmingen](../assets/ui/workspace/destinations-overview.png)
 
 ## [!UICONTROL Catalogus] {#catalog}
 
-Op het tabblad **[!UICONTROL Catalogus]** wordt een lijst weergegeven met alle bestemmingen die beschikbaar zijn in CDP in real-time, waarnaar u gegevens kunt verzenden.
+Het **[!UICONTROL lusje van de Catalogus]** toont een lijst van alle bestemmingen beschikbaar in Platform, dat u gegevens kunt verzenden naar.
 
-De gebruikersinterface in real time CDP verstrekt een aantal onderzoek en filteropties op de pagina van de bestemmingscatalogus:
+De gebruikersinterface van het Platform verstrekt een aantal onderzoek en filteropties op de pagina van de bestemmingscatalogus:
 
 * Gebruik de zoekfunctionaliteit op de pagina om een specifiek doel te zoeken.
-* Doelen filteren met het besturingselement [!UICONTROL Categorieën] .
-* Wissel tussen [!UICONTROL Alle bestemmingen] en [!UICONTROL Mijn bestemmingen]. Wanneer **[!UICONTROL Alle bestemmingen]** wordt geselecteerd, worden alle beschikbare bestemmingen in real time CDP getoond. Wanneer **[!UICONTROL Mijn bestemmingen]** wordt geselecteerd, kunt u slechts de bestemmingen zien waarmee u een verbinding hebt gevestigd.
-* Selecteer deze optie om **[!UICONTROL verbindingen]** en/of **[!UICONTROL extensies]** weer te geven. Om het verschil tussen de twee categorieën te begrijpen, zie de Types en de Categorieën van [Bestemming](../destination-types.md).
+* Doelen filteren met het besturingselement [!UICONTROL Categorieën].
+* Wissel tussen [!UICONTROL Alle bestemmingen] en [!UICONTROL Mijn bestemmingen]. Wanneer **[!UICONTROL Alle bestemmingen]** wordt geselecteerd, worden alle beschikbare Platforms bestemmingen getoond. Wanneer **[!UICONTROL Mijn bestemmingen]** wordt geselecteerd, kunt u slechts de bestemmingen zien waarmee u een verbinding hebt gevestigd.
+* Selecteer deze optie om **[!UICONTROL Verbindingen]** en/of **[!UICONTROL Extensies]** weer te geven. Om het verschil tussen de twee categorieën te begrijpen, zie [De Types van Bestemming en Categorieën](../destination-types.md).
 
 ![doelen filteren en zoeken, demo](../assets/ui/workspace/destinations-search-and-filter.gif)
 
-De bestemmingskaarten bevatten of **[!UICONTROL vormen]** of een **[!UICONTROL Activate]** controle, en een secundaire controle die meer opties omhoog brengt. Deze worden allemaal hieronder beschreven:
+De bestemmingskaarten bevatten of een **[!UICONTROL Configure]** of een **[!UICONTROL Activate]** controle, en een secundaire controle die meer opties omhoog brengt. Deze worden allemaal hieronder beschreven:
 
 | Control | Beschrijving |
 ---------|----------
@@ -50,15 +50,15 @@ Selecteer een doelkaart in de catalogus om de rechterrail te openen.  Hier, kunt
 
 ![Opties voor doelcatalogus](../assets/ui/workspace/destination-right-rail.png)
 
-Voor meer informatie over bestemmingscategorieën en informatie over elke bestemming, zie de Catalogus [van de](../catalog/overview.md) Bestemming en de Types en de Categorieën [van](../destination-types.md)Bestemming.
+Zie [Doelcatalogus](../catalog/overview.md) en [Doeltypen en -categorieën](../destination-types.md) voor meer informatie over doelcategorieën en informatie over elke bestemming.
 
 ## [!UICONTROL Accounts] {#accounts}
 
-Op het tabblad **[!UICONTROL Accounts]** kunt u meer informatie krijgen over de verbindingen die u met verschillende doelen hebt gemaakt. Zie de tabel hieronder voor alle informatie die u op elke bestemming kunt krijgen:
+Op **[!UICONTROL Accounts]** lusje, kunt u meer over de verbindingen leren die u met diverse bestemmingen hebt gevestigd. Zie de tabel hieronder voor alle informatie die u op elke bestemming kunt krijgen:
 
 >[!TIP]
 >
->Gebruik de knop ![Gegevens](../assets/ui/workspace/add-data-symbol.png) toevoegen in de kolom **[!UICONTROL Platform]** om een nieuwe doelverbinding voor die account te maken.
+>Gebruik de ![knop Gegevens toevoegen](../assets/ui/workspace/add-data-symbol.png) in de kolom **[!UICONTROL Platform]** om een nieuwe doelverbinding voor die account te maken.
 
 ![Het tabblad Accounts](../assets/ui/workspace/edit-account-destinations.png)
 
@@ -66,17 +66,17 @@ Op het tabblad **[!UICONTROL Accounts]** kunt u meer informatie krijgen over de 
 ---------|----------
 | [!UICONTROL Platform] | Het doel waarvoor u de verbinding hebt ingesteld. |
 | [!UICONTROL Verbindingstype] | Vertegenwoordigt het verbindingstype aan uw opslagemmer of bestemming. <ul><li>Voor e-mailmarketingdoelen: Kan S3 of FTP zijn.</li><li>Voor realtime advertentiebestemmingen: Server-naar-server</li><li>Voor Amazon S3-cloudopslagdoelen: Toegangstoets </li><li>Voor SFTP-cloudopslagdoelen: Basisverificatie voor SFTP</li></ul> |
-| [!UICONTROL Gebruikersnaam] | De gebruikersnaam die u in de [Connect-doelwizard](../catalog/email-marketing/overview.md#connect-destination)hebt geselecteerd. |
+| [!UICONTROL Gebruikersnaam] | De gebruikersnaam die u hebt geselecteerd in [verbind bestemmingstovenaar](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Doelen] | Vertegenwoordigt het aantal unieke succesvolle bestemmingsstromen die met basisinformatie worden verbonden die voor een bestemming wordt gecreeerd. |
 | [!UICONTROL Geautoriseerd] | De datum waarop de verbinding met deze bestemming werd geautoriseerd. |
 
-Bovendien kunt u uw accountgegevens bewerken of bijwerken. Selecteer de knop ![Account](../assets/ui/workspace/pencil-icon.png) bewerken in de kolom **[!UICONTROL Platform]** om de accountgegevens te bewerken.
+Bovendien kunt u uw accountgegevens bewerken of bijwerken. Selecteer de ![knop Account bewerken](../assets/ui/workspace/pencil-icon.png) in de kolom **[!UICONTROL Platform]** om de accountgegevens te bewerken.
 
-Voor accounts die een `OAuth2` verbindingstype gebruiken, kunt u OAuth **[!UICONTROL opnieuw verbinden selecteren]** om uw accountgegevens te vernieuwen.
+Voor accounts die een verbindingstype `OAuth2` gebruiken, kunt u **[!UICONTROL OAuth]** opnieuw verbinden selecteren om uw accountgegevens te vernieuwen.
 
 ![Oautische afbeelding](../assets/ui/workspace/reconnect-oauth.png)
 
-Voor accounts die een `Access Key` of `ConnectionString` verbindingstype gebruiken, kunt u de verificatiegegevens van uw account bewerken, zoals toegang-id, geheime sleutels of verbindingstekenreeksen.
+Voor accounts die een verbindingstype `Access Key` of `ConnectionString` gebruiken, kunt u de verificatiegegevens van uw account bewerken, zoals toegang-id, geheime sleutels of verbindingstekenreeksen.
 
 ![Afbeelding met accountgegevens](../assets/ui/workspace/edit-account-details.png)
 
@@ -84,11 +84,11 @@ Als u klaar bent met het bewerken van uw accountgegevens, selecteert u **[!UICON
 
 ## [!UICONTROL Bladeren] {#browse}
 
-Op het tabblad **[!UICONTROL Bladeren]** worden de doelen weergegeven waarmee u een verbinding hebt gemaakt. Doelen met de **[!UICONTROL Toegelaten]** schakeloptie ingeschakeld plaatsen de bestemming aan actief en vice versa. U kunt de bestemmingen ook bekijken waar u gegevens hebt die door **[!UICONTROL Segmenten]** te selecteren > **[!UICONTROL doorbladeren]** en een te inspecteren segment te selecteren stromen. Zie de lijst hieronder voor alle informatie die voor elke bestemming in het Browse lusje wordt verstrekt:
+Het **[!UICONTROL Browse]** lusje toont de bestemmingen waarmee u een verbinding hebt gevestigd. Doelen met de **[!UICONTROL Ingeschakelde]** schakeloptie ingeschakeld zetten de bestemming in op actief en vice versa. U kunt de bestemmingen ook bekijken waar u gegevens door **[!UICONTROL Segmenten]** > **[!UICONTROL Bladeren]** te selecteren en een segment te inspecteren selecteert. Zie de lijst hieronder voor alle informatie die voor elke bestemming in het Browse lusje wordt verstrekt:
 
 >[!TIP]
 >
->Gebruik de ![Add knoop](../assets/ui/workspace/add-data-symbol.png) van Gegevens in de kolom van de **[!UICONTROL Naam]** om extra segmenten aan die bestemming te activeren.
+>Gebruik ![Gegevensknop toevoegen](../assets/ui/workspace/add-data-symbol.png) in de **[!UICONTROL Naam]** kolom om extra segmenten aan die bestemming te activeren.
 
 ![Tabblad Bladeren](../assets/ui/workspace/browse-tab.png)
 
@@ -100,20 +100,20 @@ Op het tabblad **[!UICONTROL Bladeren]** worden de doelen weergegeven waarmee u 
 | [!UICONTROL Gebruikersnaam] | De accountgegevens die u hebt geselecteerd voor de doelstroom. |
 | [!UICONTROL Segmenten] | Het aantal segmenten dat aan deze bestemming wordt geactiveerd. |
 | [!UICONTROL Gemaakt] | De datum en UTC-tijd waarop de activeringsstroom naar het doel is gemaakt. |
-| [!UICONTROL Status] | `Active` of `Inactive`. Geeft aan of er momenteel gegevens op dit doel worden geactiveerd. Zie [Activering](./activate-destinations.md#disable-activation)uitschakelen om de status te bewerken. |
+| [!UICONTROL Status] | `Active` of `Inactive`. Geeft aan of er momenteel gegevens op dit doel worden geactiveerd. Zie [Activering uitschakelen](./activate-destinations.md#disable-activation) om de status te bewerken. |
 
 Klik op een doelrij om meer informatie over de bestemming in de juiste spoorstaaf te tonen.
 
 ![Doelrij klikken](../assets/ui/workspace/click-destination-row.png)
 
-Selecteer de doelnaam om informatie over de segmenten te zien die aan deze bestemming worden geactiveerd. Klik op Activering **** bewerken om de segmenten die naar dit doel worden verzonden, te wijzigen of aan te vullen.
+Selecteer de doelnaam om informatie over de segmenten te zien die aan deze bestemming worden geactiveerd. Klik **[!UICONTROL Activering bewerken]** om de segmenten die naar deze bestemming worden verzonden, te wijzigen of aan de segmenten toe te voegen.
 
 ## [!UICONTROL Systeemweergave] {#system-view}
 
-Op het tabblad **[!UICONTROL Systeemweergave]** wordt een grafische weergave weergegeven van de activeringsstromen die u hebt ingesteld in het Platform Klantgegevens in realtime.
+Op het tabblad **[!UICONTROL Systeemweergave]** wordt een grafische weergave weergegeven van de activeringsstromen die u hebt ingesteld in de Adobe Experience Platform.
 
-![Data-flows1](../assets/ui/workspace/data-flows1.png)
+![Gegevensstromen1](../assets/ui/workspace/data-flows1.png)
 
-Selecteer om het even welke bestemmingen die op de pagina worden getoond en druk de stromen **[!UICONTROL van de]** Mening om informatie over alle verbindingen te zien u opstelling voor elke bestemming hebt.
+Selecteer om het even welke bestemmingen die op de pagina worden getoond en druk **[!UICONTROL de stromen van de Mening]** om informatie over alle verbindingen te zien u opstelling voor elke bestemming hebt.
 
-![Data-flows2](../assets/ui/workspace/data-flows2.png)
+![Gegevensstromen2](../assets/ui/workspace/data-flows2.png)
