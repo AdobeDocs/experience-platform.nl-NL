@@ -1,64 +1,64 @@
 ---
-keywords: Experience Platform;home;popular topics;event hub;Azure event hub;Event hub
+keywords: Experience Platform;home;populaire onderwerpen;gebeurtenishub;Azure-gebeurtenishub;Event-hub
 solution: Experience Platform
 title: Een Azure Event Hubs-connector maken met de Flow Service API
 topic: overview
 type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform te verbinden met een Azure Event Hubs-account.
 translation-type: tm+mt
-source-git-commit: 967585ba078edd13f90c820f6b1a0490140ca0cf
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '569'
 ht-degree: 1%
 
 ---
 
 
-# Een [!DNL Azure Event Hubs] aansluiting maken met de [!DNL Flow Service] API
+# Een [!DNL Azure Event Hubs]-connector maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
-> De [!DNL Azure Event Hubs] connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+> De [!DNL Azure Event Hubs] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om verbinding [!DNL Experience Platform] te maken met een [!DNL Azure Event Hubs] account.
+In deze zelfstudie wordt de [!DNL Flow Service]-API gebruikt om u door de stappen te laten lopen om [!DNL Experience Platform] te verbinden met een [!DNL Azure Event Hubs]-account.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [Bronnen](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
-- [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [Bronnen](../../../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
+- [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met een [!DNL Azure Event Hubs] account met de [!DNL Flow Service] API.
+De volgende secties bevatten aanvullende informatie die u nodig hebt om een verbinding met een [!DNL Azure Event Hubs]-account met de [!DNL Flow Service]-API tot stand te brengen.
 
 ### Vereiste referenties verzamelen
 
-Als u verbinding wilt maken [!DNL Flow Service] met uw [!DNL Azure Event Hubs] account, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Als u [!DNL Flow Service] wilt laten verbinden met uw [!DNL Azure Event Hubs]-account, moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `sasKeyName` | De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd. |
 | `sasKey` | De gegenereerde handtekening voor gedeelde toegang. |
 | `namespace` | De naamruimte van de gebeurtenishubs waartoe u toegang hebt. |
-| `connectionSpec.id` | De id van de [!DNL Azure Event Hubs] verbindingsspecificatie: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `connectionSpec.id` | De [!DNL Azure Event Hubs] ID van de verbindingsspecificatie: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-Raadpleeg [dit Event Hubs-document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)voor meer informatie over deze waarden.
+Voor meer informatie over deze waarden, verwijs naar [dit document van de Hubs van Gebeurtenis](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DNL Flow Service]sandboxen behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -68,7 +68,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Verbinding maken
 
-Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Er is slechts één verbinding per [!DNL Azure Event Hubs] account vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
+Een verbinding specificeert een bron en bevat uw geloofsbrieven voor die bron. Per [!DNL Azure Event Hubs]-account is slechts één verbinding vereist, omdat deze kan worden gebruikt om meerdere bronconnectors te maken voor het inbrengen van verschillende gegevens.
 
 **API-indeling**
 
@@ -108,12 +108,12 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd. |
 | `auth.params.sasKey` | De gegenereerde handtekening voor gedeelde toegang. |
-| `namespace` | De naamruimte van het object [!DNL Event Hubs] dat u opent. |
-| `connectionSpec.id` | De id van de [!DNL Azure Event Hubs] verbindingsspecificatie: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `namespace` | De naamruimte van de [!DNL Event Hubs] die u opent. |
+| `connectionSpec.id` | De [!DNL Azure Event Hubs] ID van de verbindingsspecificatie: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, inclusief de unieke id (`id`). Deze id is vereist voor het verkennen van uw gegevens voor cloudopslag in de volgende zelfstudie.
+Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist voor het verkennen van uw gegevens voor cloudopslag in de volgende zelfstudie.
 
 ```json
 {
@@ -124,4 +124,4 @@ Een geslaagde reactie retourneert details van de zojuist gemaakte verbinding, in
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een [!DNL Azure Event Hubs] verbinding gemaakt met behulp van API&#39;s en is een unieke id verkregen als onderdeel van de hoofdtekst van de reactie. U kunt deze verbinding-id gebruiken om streaminggegevens te [verzamelen met behulp van de Flow Service API](../../collect/streaming.md).
+Door deze zelfstudie te volgen, hebt u een [!DNL Azure Event Hubs] verbinding gebruikend APIs gecreeerd en unieke identiteitskaart werd verkregen als deel van het reactievermogen. U kunt deze verbindings-id gebruiken om streaminggegevens te verzamelen met behulp van de Flow Service API](../../collect/streaming.md).[
