@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;explore;class;mixin;data type;schema;
+keywords: Experience Platform;home;populaire onderwerpen;ui;UI;XDM;XDM systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;exploreren;klasse;mixin;gegevenstype;schema;
 solution: Experience Platform
 title: XDM-bronnen verkennen in de gebruikersinterface
 description: Leer hoe u bestaande schema's, klassen, mixins en gegevenstypen kunt verkennen in de gebruikersinterface van het Experience Platform.
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: e5c5fea783aa4088d225f771905fa8b2098613cf
+source-git-commit: 912d02477febdafa4a53aebc83bc3a93b0f84f09
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Met de schakeloptie **[!UICONTROL Opgenomen in profiel]** kunt u resultaten filt
 
 ![](../images/ui/explore/filter.png)
 
-U kunt de zoekbalk ook gebruiken om resultaten te beperken tot bronnen waarvan de namen overeenkomen met de zoekquery.
+U kunt de zoekbalk ook gebruiken om de resultaten verder omlaag te brengen. Wanneer u naar een termijn zoekt, vertegenwoordigen de hoogste punten middelen de waarvan namen de onderzoeksvraag aanpassen. Onder deze punten, onder **[!UICONTROL Standaard Gebieden]**, zullen om het even welke middelen die gebieden bevatten die de vraag aanpassen worden vermeld. Dit staat u toe om naar middelen te zoeken XDM die op het type van gegevens worden gebaseerd zij bevatten, zonder het moeten de naam van het middel vooraf kennen.
 
 ![](../images/ui/explore/search.png)
 
