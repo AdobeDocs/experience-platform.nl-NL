@@ -5,15 +5,15 @@ audience: user
 user-guide-title: Handleiding Platform voor realtime klantgegevens
 user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
 translation-type: tm+mt
-source-git-commit: 6043ecb8e32dec70b7eaf7695a266d797f97b9f4
+source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '126'
 ht-degree: 11%
 
 ---
 
 
-# Hulp bij realtime Platform klantgegevens {#rtcdp}
+# Hulp {#rtcdp} bij realtime Platform klantgegevens
 
 * [CDP-overzicht in realtime](overview.md)
 * Aan de slag {#intro}
@@ -21,7 +21,7 @@ ht-degree: 11%
    * [Overzicht van cijfers](home-page-dashboards.md)
 * Beheer {#admin}
    * [Overzicht van beheer](administration/admin-overview.md)
-* Gegevenssets {#datasets}
+* Datasets {#datasets}
    * [Gegevenssets](datasets/dataset.md)
    * [Gegevenskwaliteit op Platform](datasets/data-quality.md)
 * Doelen {#destinations}
@@ -40,6 +40,7 @@ ht-degree: 11%
 * Segmenten {#segmentation}
    * [Overzicht van segmentatie](segmentation/segmentation-overview.md)
    * [Handleiding voor het maken van segmenten](segmentation/segment-builder-guide.md)
+   * [Customer AI](segmentation/customer-ai.md)
 * Bronnen {#sources}
    * [Overzicht van bronnen](sources/sources-overview.md)
    * [Websitetags implementeren met Adobe Launch](sources/launch.md)
