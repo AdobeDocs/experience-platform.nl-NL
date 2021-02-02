@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;date;date functions;dates;
+keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui-gids;mapper;mapping;date;datumfuncties;datums;
 solution: Experience Platform
 title: Datumfuncties
 topic: overview
 description: In dit document worden de datumfuncties geïntroduceerd die worden gebruikt met Data Prep.
 translation-type: tm+mt
-source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
+source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 13%
+source-wordcount: '411'
+ht-degree: 12%
 
 ---
 
@@ -80,4 +80,4 @@ In de volgende tabel wordt aangegeven welke patroonletters zijn gedefinieerd voo
 
 **Voorbeeld**
 
-De expressie `date(orderDate, 'yyyy-MM-dd')` converteert een `orderDate` waarde van &quot;31 december 2020&quot; naar een datumtijdwaarde van &quot;2020-12-31&quot;.
+De expressie `date(orderDate, "yyyy-MM-dd")` zet de waarde `orderDate` van &quot;31 december 2020&quot; om in een datetime-waarde van &quot;2020-12-31&quot;.
