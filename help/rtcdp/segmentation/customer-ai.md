@@ -1,11 +1,11 @@
 ---
-keywords: rtcdp segments;segment builder rtcdp;rtcdp segment;customer ai rtcdp
+keywords: rtcdp segmenten;segment builder rtcdp;rtcdp segment;klant ai rtcdp
 title: AI van de klant in het Platform van de Gegevens van de Klant in real time
 description: Een overzicht van de AI van de Klant en hoe deze kan helpen bij het genereren van scores voor specifieke resultaten zoals conversies of churn.
 translation-type: tm+mt
 source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
