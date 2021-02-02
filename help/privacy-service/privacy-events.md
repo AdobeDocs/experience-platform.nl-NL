@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Abonneren op Privacy Service Events
 topic: privacy events
+description: Leer hoe te om aan de gebeurtenissen van de Privacy Service in te schrijven gebruikend een vooraf gevormde webhaak.
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: 2b919a3b6cbbd59521874cfd2d11e20de3077740
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '437'
 ht-degree: 1%
 
 ---
@@ -14,18 +15,18 @@ ht-degree: 1%
 
 # Abonneren op [!DNL Privacy Service Events]
 
-[!DNL Privacy Service Events] Dit zijn berichten van Adobe Experience Platform [!DNL Privacy Service], die Adobe I/O Events gebruiken die naar een geconfigureerde webhaak worden verzonden om efficiënte automatisering van taakaanvragen te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een werkstroom is bereikt.
+[!DNL Privacy Service Events] Dit zijn berichten van Adobe Experience Platform  [!DNL Privacy Service], die Adobe I/O Events gebruiken die naar een geconfigureerde webhaak worden verzonden om efficiënte automatisering van taakaanvragen te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de [!DNL Privacy Service] API te raadplegen om te controleren of een taak voltooid is of of een bepaalde mijlpaal binnen een workflow is bereikt.
 
 Er zijn momenteel vier typen meldingen die betrekking hebben op de levenscyclus van de privacytaakaanvraag:
 
 | Type | Beschrijving |
 | --- | --- |
-| Taak voltooid | Alle [!DNL Experience Cloud] toepassingen zijn gemeld en de algemene of algemene status van de taak is als voltooid gemarkeerd. |
+| Taak voltooid | Alle [!DNL Experience Cloud] toepassingen hebben gemeld en de algemene of globale status van de baan is duidelijk volledig. |
 | Taakfout | Een of meer toepassingen hebben een fout gemeld tijdens het verwerken van de aanvraag. |
 | Product voltooid | Een van de toepassingen voor deze taak heeft zijn werk voltooid. |
 | Productfout | Een van de toepassingen heeft een fout gemeld tijdens het verwerken van de aanvraag. |
 
-Dit document bevat stappen voor het instellen van een gebeurtenisregistratie voor [!DNL Privacy Service] meldingen en voor het interpreteren van berichtladingen.
+Dit document bevat stappen voor het instellen van een gebeurtenisregistratie voor [!DNL Privacy Service]-berichten en voor het interpreteren van berichtladingen.
 
 ## Aan de slag
 
@@ -36,13 +37,13 @@ Raadpleeg de volgende documentatie bij de Privacy Service voordat u deze zelfstu
 
 ## Webhaak registreren voor [!DNL Privacy Service Events]
 
-Om te worden ontvangen [!DNL Privacy Service Events], moet u de Console van de Ontwikkelaar van Adobe gebruiken om een webhaak aan uw [!DNL Privacy Service] integratie te registreren.
+Als u [!DNL Privacy Service Events] wilt ontvangen, moet u de Adobe Developer Console gebruiken om een webhaak te registreren voor uw [!DNL Privacy Service]-integratie.
 
-Volg de zelfstudie over het [abonneren van [!DNL I/O Event] toonmeldingen](../observability/notifications/subscribe.md) voor gedetailleerde stappen over hoe u dit kunt doen. Zorg ervoor dat u Gebeurtenissen **[!UICONTROL van de]** Privacy Service als uw gebeurtenisleverancier kiest om tot de hierboven vermelde gebeurtenissen toegang te hebben.
+Volg de zelfstudie op [Abonneren op [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken. Zorg ervoor dat u **[!UICONTROL Gebeurtenissen van de Privacy Service]** als uw gebeurtenisleverancier kiest om tot de hierboven vermelde gebeurtenissen toegang te hebben.
 
-## Meldingen ontvangen [!DNL Privacy Service Event]
+## [!DNL Privacy Service Event] meldingen ontvangen
 
-Nadat u de webhaak en privacytaken hebt geregistreerd, kunt u gebeurtenismeldingen ontvangen. Deze gebeurtenissen kunnen worden bekeken gebruikend webhaak zelf, of door het **** Debug vinden lusje in het overzicht van de gebeurtenisregistratie van uw project in de Console van de Ontwikkelaar van de Adobe te selecteren.
+Nadat u de webhaak en privacytaken hebt geregistreerd, kunt u gebeurtenismeldingen ontvangen. Deze gebeurtenissen kunnen worden bekeken gebruikend de webhaak zelf, of door **[!UICONTROL Debug het Vinden]** lusje in het de gebeurtenisregistratieoverzicht van uw project in de Console van de Ontwikkelaar van Adobe te selecteren.
 
 ![](images/privacy-events/debug-tracing.png)
 
@@ -69,10 +70,10 @@ De volgende JSON is een voorbeeld van een [!DNL Privacy Service Event] berichtla
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `id` | Een unieke, door het systeem gegenereerde id voor het bericht. |
-| `type` | Het soort kennisgeving dat wordt verzonden, met vermelding van de context van de krachtens `data`deze verordening verstrekte informatie. Mogelijke waarden zijn: <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
+| `type` | Het type kennisgeving dat wordt verzonden, met context voor de informatie die wordt verstrekt onder `data`. Mogelijke waarden zijn: <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
 | `time` | Een tijdstempel van wanneer de gebeurtenis heeft plaatsgevonden. |
-| `data.value` | Bevat aanvullende informatie over de aanleiding voor de kennisgeving: <ul><li>`jobId`: De id van de privacytaak die de melding heeft geactiveerd.</li><li>`message`: Een bericht over de specifieke status van de baan. Voor `productcomplete` of `producterror` meldingen geeft dit veld de desbetreffende Experience Cloud-toepassing aan.</li></ul> |
+| `data.value` | Bevat aanvullende informatie over de aanleiding voor de kennisgeving: <ul><li>`jobId`: De id van de privacytaak die de melding heeft geactiveerd.</li><li>`message`: Een bericht over de specifieke status van de baan. Voor `productcomplete`- of `producterror`-berichten geeft dit veld de Experience Cloud-toepassing in kwestie aan.</li></ul> |
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u Privacy Service-gebeurtenissen kunt registreren voor een geconfigureerde webhaak en hoe u berichtladingen kunt interpreteren. Raadpleeg de gebruikershandleiding bij de [Privacy Service voor informatie over het bijhouden van privacytaken via de gebruikersinterface](./ui/user-guide.md).
+In dit document wordt beschreven hoe u Privacy Service-gebeurtenissen kunt registreren voor een geconfigureerde webhaak en hoe u berichtladingen kunt interpreteren. Zie [Gebruikershandleiding voor Privacys Service](./ui/user-guide.md) voor meer informatie over het bijhouden van privacytaken via de gebruikersinterface.
