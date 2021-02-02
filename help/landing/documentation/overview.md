@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;workflow
+keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de analyse van de klantenreis;campagneorchestratie;orchestratie;klantenreis;reis;reis orchestratie;vermogen;werkschema
 solution: Experience Platform
 title: Overzicht Adobe Experience Platform-documentatie
 topic: overview
@@ -7,7 +7,7 @@ description: De documentatie van Adobe Experience Platform wordt verstrekt in ve
 translation-type: tm+mt
 source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >Adobe Experience Platform-documentatie is onlangs verplaatst. Neem even de tijd om de nieuwe navigatie te bekijken en bestaande bladwijzers bij te werken.
 
-De documentatie van Adobe Experience Platform is beschikbaar voor een aantal eigenschappen en de diensten van het Platform. Als u toegang wilt krijgen tot documentatie over het Experience Platform, gaat u terug naar de openingspagina [ van de documentatie en selecteert u de hulplijn die u wilt weergeven.](https://experienceleague.adobe.com/docs/experience-platform.html)
+De documentatie van Adobe Experience Platform is beschikbaar voor een aantal eigenschappen en de diensten van het Platform. Als u toegang wilt krijgen tot documentatie over het Experience Platform, gaat u terug naar de openingspagina ](https://experienceleague.adobe.com/docs/experience-platform.html) van de documentatie en selecteert u de hulplijn die u wilt weergeven.[
 
 ## Typen documentatie van Experience Platforms
 
