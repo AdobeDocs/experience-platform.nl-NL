@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming;streaming ingestion;streaming ingestion validation;validation;Streaming ingestion validation;validate;Synchronous validation;synchronous validation;Asynchronous validation;asynchronous validation;
+keywords: Experience Platform;home;populaire onderwerpen;streaming;streaming opname;streaming opname validatie;validatie;streaming opname validatie;validate;synchrone validatie;synchrone validatie;asynchrone validatie;asynchrone validatie;asynchrone validatie;
 solution: Experience Platform
 title: Validatie van gestreamde invoer
 topic: tutorial
 type: Tutorial
 description: 'Met streaming opname kunt u uw gegevens naar Adobe Experience Platform uploaden met streaming eindpunten in real-time. API''s voor streaming opname ondersteunen twee validatiemodi: synchroon en asynchroon.'
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '875'
 ht-degree: 2%
 
 ---
@@ -22,28 +22,28 @@ Met streaming opname kunt u uw gegevens naar Adobe Experience Platform uploaden 
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
-- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Een van de methoden waarmee gegevens kunnen worden verzonden naar [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Experience Platform] klantenervaring worden georganiseerd.
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Een van de methoden waarmee gegevens kunnen worden verzonden naar  [!DNL Experience Platform].
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeldAPI vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van [!DNL Experience Platform] problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproefAPI vraag worden gebruikt, zie de sectie over [hoe te om voorbeeld API vraag](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u aanroepen wilt uitvoeren naar [!DNL Platform] API&#39;s, moet u eerst de [verificatiezelfstudie](../../tutorials/authentication.md)voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DNL Schema Registry]sandboxen behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Schema Registry] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen voor [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
+>Raadpleeg de documentatie [sandbox-overzicht](../../sandboxes/home.md) voor meer informatie over sandboxen in [!DNL Platform].
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -63,7 +63,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 Synchrone validatie is een validatiemethode die directe feedback geeft over de oorzaak van een mislukte opname. Nochtans, op mislukking, worden de verslagen die bevestiging ontbreken gelaten vallen en verhinderd om stroomafwaarts worden verzonden. Dit betekent dat synchrone validatie alleen tijdens het ontwikkelingsproces moet worden gebruikt. Wanneer het doen van synchrone bevestiging, worden de bezoekers geïnformeerd over zowel het resultaat van de bevestiging XDM, als, als het ontbrak, de reden voor mislukking.
 
-Synchrone validatie is standaard niet ingeschakeld. Om het toe te laten, moet u in de facultatieve vraagparameter overgaan `synchronousValidation=true` wanneer het maken van API vraag. Bovendien is de synchrone bevestiging momenteel slechts beschikbaar als uw stroomeindpunt op het VA7 gegevenscentrum is.
+Synchrone validatie is standaard niet ingeschakeld. Om het toe te laten, moet u in de facultatieve vraagparameter `synchronousValidation=true` overgaan wanneer het maken van API vraag. Bovendien is de synchrone bevestiging momenteel slechts beschikbaar als uw stroomeindpunt op het VA7 gegevenscentrum is.
 
 Als een bericht tijdens synchrone bevestiging ontbreekt, zal het bericht niet aan de outputrij worden geschreven, die directe terugkoppelt voor gebruikers verstrekt.
 
@@ -75,7 +75,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | De `id` waarde van de eerder gemaakte streamingverbinding. |
+| `{CONNECTION_ID}` | De `id`-waarde van de eerder gemaakte streamingverbinding. |
 
 **Verzoek**
 
@@ -138,11 +138,11 @@ Als synchrone validatie is ingeschakeld, bevat een geslaagde reactie eventuele v
 }
 ```
 
-De bovenstaande reactie geeft aan hoeveel schemaovertredingen zijn gevonden en wat de overtredingen zijn. In deze reactie staat bijvoorbeeld dat de toetsen `workEmail` en `person` niet in het schema zijn gedefinieerd en daarom niet zijn toegestaan. De waarde voor wordt ook gemarkeerd als `_id` onjuist, omdat het schema een `string`verwacht, maar in plaats daarvan `long` is een ingevoegd. Wanneer vijf fouten zijn aangetroffen, wordt de verwerking van dat bericht door de validatieservice **gestopt** . Andere berichten blijven echter geparseerd.
+De bovenstaande reactie geeft aan hoeveel schemaovertredingen zijn gevonden en wat de overtredingen zijn. In deze reactie wordt bijvoorbeeld aangegeven dat de toetsen `workEmail` en `person` niet in het schema zijn gedefinieerd en daarom niet zijn toegestaan. De waarde voor `_id` wordt ook als onjuist gemarkeerd, aangezien het schema een `string` verwachtte, maar in plaats daarvan is een `long` ingevoegd. Wanneer vijf fouten zijn aangetroffen, verwerkt de validatieservice **stop** dat bericht. Andere berichten blijven echter geparseerd.
 
 ## Asynchrone validatie
 
-Asynchrone validatie is een validatiemethode die geen directe feedback biedt. In plaats daarvan worden de gegevens naar een mislukte batch verzonden [!DNL Data Lake] om gegevensverlies te voorkomen. Deze mislukte gegevens kunnen later worden opgehaald voor verdere analyse en replay. Deze methode moet bij de productie worden gebruikt. Tenzij anders gevraagd, werkt streaming opname in asynchrone validatiemodus.
+Asynchrone validatie is een validatiemethode die geen directe feedback biedt. In plaats daarvan worden de gegevens naar een mislukte batch in [!DNL Data Lake] verzonden om gegevensverlies te voorkomen. Deze mislukte gegevens kunnen later worden opgehaald voor verdere analyse en replay. Deze methode moet bij de productie worden gebruikt. Tenzij anders gevraagd, werkt streaming opname in asynchrone validatiemodus.
 
 **API-indeling**
 
@@ -152,7 +152,7 @@ POST /collection/{CONNECTION_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | De `id` waarde van de eerder gemaakte streamingverbinding. |
+| `{CONNECTION_ID}` | De `id`-waarde van de eerder gemaakte streamingverbinding. |
 
 **Verzoek**
 
@@ -199,7 +199,7 @@ Deze sectie bevat informatie over wat de verschillende statuscodes voor reacties
 | ----------- | ------------- |
 | 200 | Geslaagd. Voor synchrone validatie betekent dit dat de validatiecontroles zijn geslaagd. Voor asynchrone validatie betekent dit dat alleen het bericht is ontvangen. De gebruikers kunnen de uiteindelijke berichtstatus door de dataset te observeren te weten komen. |
 | 400 | Fout. Er is iets mis met uw verzoek. Er wordt een foutbericht met meer details ontvangen van de streamingvalidatieservices. |
-| 401 | Fout. Uw verzoek is niet geautoriseerd. U moet een aanvraag indienen met een token voor toonder. Voor meer informatie over het aanvragen van toegang raadpleegt u deze [zelfstudie](../../tutorials/authentication.md) of dit [blogbericht](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
+| 401 | Fout. Uw verzoek is niet geautoriseerd. U moet een aanvraag indienen met een token voor toonder. Voor meer informatie over hoe u toegang kunt aanvragen, raadpleegt u deze [zelfstudie](https://www.adobe.com/go/platform-api-authentication-en) of dit [blogbericht](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | Fout. Er is een interne systeemfout opgetreden. |
-| 501 | Fout. Dit betekent dat synchrone validatie **niet** wordt ondersteund voor deze locatie. |
+| 501 | Fout. Dit betekent dat synchrone validatie **niet** voor deze locatie wordt ondersteund. |
 | 503 | Fout. De service is momenteel niet beschikbaar. Clients moeten ten minste drie keer een exponentiële back-offstrategie gebruiken. |
