@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;user interface;UI;customization;license usage dashboard;dashboard;license usage;entitlement;consumption
+keywords: Experience Platform;gebruikersinterface;UI;aanpassing;licentiegebruiksdashboard;dashboard;licentiegebruik;machtiging;consumptie
 title: Het gebruiksdashboard voor licenties
 description: 'In deze handleiding wordt het dashboard voor het gebruiksrecht van licenties weergegeven dat beschikbaar is in de gebruikersinterface van Adobe Experience Platform. '
 topic: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 63758450276d47e7e0eddeb047779222cb80a3e2
+source-git-commit: 8e4d8d29ca13017d7f6de5ca790efe91b01c129d
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '629'
 ht-degree: 0%
 
 ---
 
 
-# (Alfa) [!UICONTROL Licentiegebruikdashboard] {#license-usage-dashboard}
+# (Alpha) [!UICONTROL Licentiegebruik] dashboard {#license-usage-dashboard}
 
 >[!IMPORTANT]
 >
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over het vergunningsgebruik van uw organisatie kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Deze gids schetst hoe te om tot en met het dashboard van het vergunningsgebruik in UI toegang te hebben en te werken en verstrekt meer informatie betreffende de visualisaties die in het dashboard worden getoond.
 
-Voor een algemeen overzicht van de gebruikersinterface van het Platform raadpleegt u de gebruikersgids [van het](ui-guide.md)Experience Platform.
+Voor een algemeen overzicht van het Platform UI, gelieve [Experience Platform UI gids](ui-guide.md) te bezoeken.
 
 ## Gegevens op het gebruiksdashboard voor licenties
 
@@ -33,23 +33,23 @@ Op het dashboard voor licentiegebruik wordt een momentopname weergegeven van de 
 
 ## Het dashboard voor licentiegebruik verkennen
 
-Als u naar het gebruiksdashboard voor licenties in de gebruikersinterface van het Platform wilt navigeren, selecteert u **[!UICONTROL Licentiegebruik]** in de linkerrail. Dit wordt geopend met het tabblad **[!UICONTROL Overzicht]** waarin het dashboard wordt weergegeven.
+Als u naar het dashboard voor licentiegebruik in de interface van het Platform wilt navigeren, selecteert u **[!UICONTROL Licentiegebruik]** in de linkertrack. Dit wordt geopend met het tabblad **[!UICONTROL Overzicht]** waarin het dashboard wordt weergegeven.
 
 ![](images/license-usage-dashboard/dashboard-overview.png)
 
 ### Een sandbox selecteren
 
-Selecteer [!UICONTROL Productie] of [!UICONTROL Ontwikkeling]om een sandbox te kiezen die u wilt weergeven in het dashboard. De geselecteerde sandbox wordt aangegeven met het keuzerondje naast de naam van de sandbox.
+Selecteer [!UICONTROL Productie] of [!UICONTROL Ontwikkeling] om een sandbox te kiezen die u wilt weergeven in het dashboard. De geselecteerde sandbox wordt aangegeven met het keuzerondje naast de naam van de sandbox.
 
 >[!NOTE]
 >
->Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetzelfde type. Met andere woorden, als u [!UICONTROL Productie] of [!UICONTROL Ontwikkeling] selecteert, wordt een rapport opgesteld over alle productie- of ontwikkelingssandboxen.
+>Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetzelfde type. Met andere woorden, als u [!UICONTROL Production] of [!UICONTROL Development] selecteert, wordt respectievelijk een rapport over alle productie- of ontwikkelingssandboxen weergegeven.
 
 ![](images/license-usage-dashboard/select-sandbox.png)
 
 ### Een datumbereik selecteren
 
-Nadat u een sandbox hebt geselecteerd, kunt u de vervolgkeuzelijst voor het datumbereik gebruiken om de periode te selecteren die moet worden weergegeven in het dashboard. Er zijn drie opties beschikbaar: [!UICONTROL Afgelopen 30 dagen], [!UICONTROL Afgelopen 90 dagen]en [!UICONTROL Laatste 12 maanden]. De laatste 30 dagen zijn standaard geselecteerd.
+Nadat u een sandbox hebt geselecteerd, kunt u de vervolgkeuzelijst voor het datumbereik gebruiken om de periode te selecteren die moet worden weergegeven in het dashboard. Er zijn drie opties beschikbaar: [!UICONTROL Laatste 30 dagen], [!UICONTROL Laatste 90 dagen], en [!UICONTROL Laatste 12 maanden]. De laatste 30 dagen zijn standaard geselecteerd.
 
 ![](images/license-usage-dashboard/select-date-range.png)
 
@@ -63,7 +63,13 @@ Experience Platform bevat momenteel één widget waarmee u het licentiegebruik k
 
 ### [!UICONTROL Adresseerbaar publiek] {#addressable-audiences}
 
-De **[!UICONTROL Adressable publiek]** widget meet het totale aantal publiek dat in de opslag van het Profiel bestaat, na het toepassen van een systeem-geproduceerd fusiebeleid om alle huidige datasets te combineren gebruikend een deterministisch (privé) grafiekalgoritme. Het samenvoegbeleid dat wordt gebruikt om deze metrisch te berekenen wordt geproduceerd door Platform en kan niet worden uitgegeven, noch kan een verschillend fusiebeleid worden geselecteerd.
+Met de widget **[!UICONTROL Adresseerbare doelgroepen]** wordt het totale aantal samengevoegde profielen weergegeven in de profielgegevensopslagruimte, nadat een door het systeem gegenereerd samenvoegbeleid is toegepast om profielfragmenten van alle huidige gegevenssets te combineren met een deterministisch (privé) grafiekalgoritme.
+
+Voor meer informatie over fragmenten en samengevoegde profielen, gelieve te beginnen door *de fragmenten van het Profiel vs samengevoegde profielen* sectie van [Profieloverzicht](../profile/home.md) te lezen.
+
+>[!NOTE]
+>
+>Het samenvoegbeleid dat wordt gebruikt om deze metrisch te berekenen wordt geproduceerd door Experience Platform en kan niet worden uitgegeven, noch kan een verschillend fusiebeleid worden geselecteerd. Dit door het systeem gegenereerde samenvoegingsbeleid is niet hetzelfde als het standaardsamenvoegbeleid dat wordt gebruikt om [!UICONTROL Audience size] in het [!DNL Profile] dashboard te berekenen. Daarom is het onwaarschijnlijk dat het aantal gebruikers in het [!UICONTROL Licentiegebruik] en [!DNL Profile] dashboards precies hetzelfde zullen zijn.
 
 ![](images/license-usage-dashboard/addressable-audiences.png)
 
@@ -76,4 +82,4 @@ De interface van het Platform biedt extra dashboards voor het bekijken van momen
 
 ## Volgende stappen
 
-Als u dit document volgt, kunt u nu het dashboard voor licentiegebruik vinden en een sandbox selecteren die u wilt weergeven. U moet ook weten welke maatstaven worden weergegeven in de beschikbare widgets. Voor meer informatie over de gebruikersinterface van het Experience Platform raadpleegt u de gebruikersgids [voor het](ui-guide.md)Platform.
+Als u dit document volgt, kunt u nu het dashboard voor licentiegebruik vinden en een sandbox selecteren die u wilt weergeven. U moet ook weten welke maatstaven worden weergegeven in de beschikbare widgets. Voor meer informatie over het Experience Platform UI, gelieve te verwijzen naar [Platform UI guide](ui-guide.md).
