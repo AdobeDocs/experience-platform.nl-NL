@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 translation-type: tm+mt
-source-git-commit: cf70b21f3a8c02b25e5acd3be8c8feaa3f52a5e3
+source-git-commit: 74325dcfe9d7b117e3f812d88e0c4a980d44ef53
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '478'
 ht-degree: 2%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 2%
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -33,6 +34,18 @@ Updates voor bestaande functies in Adobe Experience Platform:
 | Gewone expressiefuncties | [!DNL Data Prep] Mapper ondersteunt nu het zoeken naar overeenkomsten en het extraheren van een deel van het invoerveld op basis van reguliere expressies. |
 
 Zie [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie.
+
+## Doelen {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Geavanceerde id-overeenkomsten | De verhogingen aan de mogelijkheden van de publieksverhouding in [!DNL Facebook Custom Audiences] en [!DNL Google Customer Match], door steun voor extra identiteitsaanpassing, zoals externe IDs, telefoonaantallen, en mobiele apparaat IDs toe te voegen. Raadpleeg de volgende documentatie voor meer informatie: <ul><li>[Facebook-bestemming](../../destinations/catalog/social/facebook.md)</li><li>[Google Customer Match-bestemming](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Profielen en segmenten naar een doel activeren](../../destinations/ui/activate-destinations.md)</li></ul> |
+
+Voor meer informatie gaat u naar [bestemmingen overview](../../destinations/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -48,5 +61,6 @@ Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvo
 | [!DNL Google BigQuery] verbetering bronaansluiting | U kunt nu bestanden die groter zijn dan 10 GB in één flowuitvoering opnemen met de bronconnector [!DNL BigQuery]. Zie [[!DNL BigQuery] overzicht van de bronconnector](../../sources/connectors/databases/bigquery.md) voor meer informatie. |
 | Ondersteuning voor complexe gegevenstypen voor cloudopslag | U kunt nu complexe gegevenstypen, zoals arrays in JSON-bestanden, opnemen bij gebruik van een bronaansluiting voor cloudopslag. Zie de zelfstudies over het maken van een gegevensstroom voor cloudopslag [in de interface](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) of [met de API [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) voor meer informatie. |
 | Ondersteuning voor service principal key-based authentication for [!DNL Microsoft Dynamics] source | U kunt nu verifiëren aan uw [!DNL Dynamics] rekening gebruikend een de dienstbelangrijkste sleutel als alternatief aan op wachtwoord-gebaseerde authentificatie. Zie [[!DNL Dynamics] overzicht van de bronconnector](../../sources/connectors/crm/ms-dynamics.md) voor meer informatie. |
+| UI-ondersteuning voor aangepaste scheidingstekens in bronnen voor cloudopslag | U kunt een scheidingsteken van de douanekolom zoals een komma (`,`), lusje (`\t`), of een pijp (`|`) nu plaatsen, om afgebakende dossiers in UI te verzamelen. Zie de zelfstudie over [het maken van een gegevensstroom met een bronaansluiting voor cloudopslag](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) voor meer informatie |
 
 Meer over bronnen leren, zie [bronnen overzicht](../../sources/home.md).
