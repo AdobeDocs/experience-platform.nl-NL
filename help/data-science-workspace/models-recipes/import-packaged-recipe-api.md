@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;api;sensei machine learning;create engine
+keywords: Experience Platform;in een pakket opgenomen recept importeren;Data Science Workspace;populaire onderwerpen;recepten;api;sensei machine leren;engine maken
 solution: Experience Platform
 title: Een verpakt recept (API) importeren
 topic: tutorial
 type: Tutorial
 description: 'In deze zelfstudie wordt de API voor leren van Sensei-machines gebruikt om een engine te maken die ook wel een recept in de gebruikersinterface wordt genoemd. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 # Een verpakt recept (API) importeren
 
-In deze zelfstudie wordt de zelfstudie gebruikt [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) om een [engine](../api/engines.md)te maken die ook wel een recept in de gebruikersinterface wordt genoemd.
+In deze zelfstudie wordt [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) gebruikt om een [Engine](../api/engines.md) te maken, ook wel een Recipe genoemd in de gebruikersinterface.
 
-Voordat u aan de slag gaat, is het belangrijk om te weten dat Adobe Experience Platform verschillende termen [!DNL Data Science Workspace] gebruikt om te verwijzen naar vergelijkbare elementen in de API en de gebruikersinterface. De API-termen worden in deze zelfstudie gebruikt en in de volgende tabel worden de corresponderende termen beschreven:
+Voordat u aan de slag gaat, is het belangrijk om te weten dat Adobe Experience Platform [!DNL Data Science Workspace] verschillende termen gebruikt om te verwijzen naar vergelijkbare elementen in de API en de UI. De API-termen worden in deze zelfstudie gebruikt en in de volgende tabel worden de corresponderende termen beschreven:
 
 | UI-term | API-term |
 | ---- | ---- |
@@ -27,17 +27,17 @@ Voordat u aan de slag gaat, is het belangrijk om te weten dat Adobe Experience P
 | Opleiding en evaluatie | [Experimenteer](../api/experiments.md) |
 | Service | [MLService](../api/mlservices.md) |
 
-Een motor bevat machine het leren algoritmen en logica om specifieke problemen op te lossen. In het onderstaande diagram ziet u een visualisatie van de API-workflow in [!DNL Data Science Workspace]. Deze zelfstudie richt zich op het maken van een engine, het brein van een model voor machinaal leren.
+Een motor bevat machine het leren algoritmen en logica om specifieke problemen op te lossen. Het diagram hieronder verstrekt een visualisatie die het API werkschema in [!DNL Data Science Workspace] toont. Deze zelfstudie richt zich op het maken van een engine, het brein van een model voor machinaal leren.
 
 ![](../images/models-recipes/import-package-api/engine_hierarchy_api.png)
 
 ## Aan de slag
 
-Voor deze zelfstudie is een Recipe-bestand in het pakket vereist in de vorm van een docker-URL. Volg de bronbestanden van het [Pakket in een Recipe](./package-source-files-recipe.md) -zelfstudie om een pakket Recipe-bestand te maken of uw eigen bestand te leveren.
+Voor deze zelfstudie is een Recipe-bestand in het pakket vereist in de vorm van een docker-URL. Volg de [Brondossiers van het Pakket in een Recipe](./package-source-files-recipe.md) leerprogramma om een verpakt Recipe dossier tot stand te brengen of uw te verstrekken.
 
 - `{DOCKER_URL}`: Een adres URL aan een beeld van de Dokker van de intelligente dienst.
 
-Deze zelfstudie vereist dat u de zelfstudie [](../../tutorials/authentication.md) Verificatie bij Adobe Experience Platform hebt voltooid om oproepen naar API&#39; [!DNL Platform] s te kunnen uitvoeren. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen, zoals hieronder wordt getoond: [!DNL Experience Platform]
+Deze zelfstudie vereist dat u de [Verificatie naar Adobe Experience Platform-zelfstudie](https://www.adobe.com/go/platform-api-authentication-en) hebt voltooid om aanroepen naar [!DNL Platform] API&#39;s te kunnen uitvoeren. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 - `{ACCESS_TOKEN}`: Uw specifieke tokokenwaarde van de drager die na authentificatie wordt verstrekt.
 - `{IMS_ORG}`: Uw IMS org-referenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
@@ -53,7 +53,7 @@ Als u een engine wilt maken met een pakketbestand Recipe dat is opgeslagen in ee
 
 >[!CAUTION]
 >
-> Gebruik de onderstaande aanvraag als u [!DNL Python] of R gebruikt. Als u PySpark of Scala gebruikt, gebruik het PySpark/Scala- verzoekvoorbeeld dat onder het Python/R voorbeeld wordt gevestigd.
+> Als u [!DNL Python] of R gebruikt gebruik hieronder het verzoek. Als u PySpark of Scala gebruikt, gebruik het PySpark/Scala- verzoekvoorbeeld dat onder het Python/R voorbeeld wordt gevestigd.
 
 **API-indeling**
 
@@ -91,10 +91,10 @@ curl -X POST \
 | -------  | ----------- |
 | `engine.name` | De gewenste naam voor de engine. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in [!DNL Data Science Workspace] gebruikersinterface als naam van de Ontvanger moet worden getoond. |
 | `engine.description` | Een facultatieve beschrijving voor de motor. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in [!DNL Data Science Workspace] gebruikersinterface als beschrijving van de Ontvanger moet worden getoond. Verwijder deze eigenschap niet. Laat deze waarde een lege tekenreeks zijn als u geen beschrijving opgeeft. |
-| `engine.type` | Het uitvoeringstype van de motor. Deze waarde komt overeen met de taal waarin de Docker-afbeelding is ontwikkeld. Wanneer een Docker URL wordt verstrekt om een Motor tot stand te brengen, `type` is of `Python`, `R`, `PySpark`, `Spark` (Schaal), of `Tensorflow`. |
-| `artifacts.default.image.location` | Je `{DOCKER_URL}` gaat hier. Een volledige docker-URL heeft de volgende structuur: `your_docker_host.azurecr.io/docker_image_file:version` |
+| `engine.type` | Het uitvoeringstype van de motor. Deze waarde komt overeen met de taal waarin de Docker-afbeelding is ontwikkeld. Wanneer een docker-URL wordt opgegeven om een engine te maken, `type` `Python`, `R`, `PySpark`, `Spark` (Scala) of `Tensorflow` is. |
+| `artifacts.default.image.location` | Uw `{DOCKER_URL}` gaat hier. Een volledige docker-URL heeft de volgende structuur: `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Een extra naam voor het Docker-afbeeldingsbestand. Verwijder deze eigenschap niet. Laat deze waarde een lege tekenreeks zijn als u ervoor kiest geen extra bestandsnaam voor een Docker-afbeelding op te geven. |
-| `artifacts.default.image.executionType` | Het uitvoeringstype van deze engine. Deze waarde komt overeen met de taal waarin de Docker-afbeelding is ontwikkeld. Wanneer een Docker URL wordt verstrekt om een Motor tot stand te brengen, `executionType` is of `Python`, `R`, `PySpark`, `Spark` (Schaal), of `Tensorflow`. |
+| `artifacts.default.image.executionType` | Het uitvoeringstype van deze engine. Deze waarde komt overeen met de taal waarin de Docker-afbeelding is ontwikkeld. Wanneer een docker-URL wordt opgegeven om een engine te maken, `executionType` `Python`, `R`, `PySpark`, `Spark` (Scala) of `Tensorflow` is. |
 
 **Request PySpark**
 
@@ -172,7 +172,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe engine, inclusief de unieke id (`id`) ervan. De volgende voorbeeldreactie is voor een [!DNL Python] Motor. De `executionType` toetsen en de `type` toetsen veranderen op basis van de opgegeven POST.
+Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde Motor met inbegrip van zijn uniek herkenningsteken (`id`) bevat. De volgende voorbeeldreactie is voor een [!DNL Python] Motor. De `executionType` en `type` sleutels veranderen gebaseerd op de geleverde POST.
 
 ```json
 {
@@ -203,4 +203,4 @@ Een succesvolle reactie toont een JSON nuttige lading met informatie betreffende
 
 ## Volgende stappen {#next-steps}
 
-U hebt een engine gemaakt met de API en er is een unieke engine-id verkregen als onderdeel van de responsstructuur. U kunt deze engine-id gebruiken in de volgende zelfstudie terwijl u leert hoe u een model kunt [maken, trainen en evalueren met behulp van de API](./train-evaluate-model-api.md).
+U hebt een engine gemaakt met de API en er is een unieke engine-id verkregen als onderdeel van de responsstructuur. U kunt deze engine-id gebruiken in de volgende zelfstudie terwijl u leert hoe u een model kunt maken, trainen en evalueren met behulp van de API](./train-evaluate-model-api.md).[
