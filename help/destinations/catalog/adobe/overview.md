@@ -1,21 +1,21 @@
 ---
-keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
+keywords: doelen;ervaring met cloudoplossingen; doel;doelbestemming; en cloud; reclame-cloud; publieksmanager; doelbestemming adobe; doel; bestemming van de publieksbeheerder;
 title: Adobe Doelen
 seo-title: Adobe Doelen
-description: Beheer uw klantenervaring door uw gegevens in CDP in real time met andere oplossingen van Adobe Experience Cloud voor het richten van en het richten, personalisatie, marketing automatisering en meer te verbinden
-seo-description: Beheer uw klantenervaring door uw gegevens in CDP in real time met andere oplossingen van Adobe Experience Cloud voor het richten van en het richten, personalisatie, marketing automatisering en meer te verbinden
+description: Beheer uw klantenervaring door uw gegevens in Platform te verbinden met andere oplossingen van Adobe Experience Cloud voor het richten van advertenties, personalisatie, marketing automatisering en meer
+seo-description: Beheer uw klantenervaring door uw gegevens in Platform te verbinden met andere oplossingen van Adobe Experience Cloud voor het richten van advertenties, personalisatie, marketing automatisering en meer
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Doelen {#adobe-destinations}
+# Adobe-doelen {#adobe-destinations}
 
-Beheer uw klantervaring door uw gegevens in CDP in real time aan andere oplossingen van Adobe Experience Cloud voor het richten van advertenties, personalisatie, marketing automatisering en meer aan te sluiten.
+Beheer uw klantervaring door uw gegevens in Adobe Experience Platform aan te sluiten op andere Adobe Experience Cloud-oplossingen voor het maken van advertenties, personalisatie, marketingautomatisering en nog veel meer.
 
 ## Verbindingen
 
@@ -25,7 +25,7 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [Verbindi
 
 ## Extensies
 
-Als u het verschil tussen verbindingen en extensies wilt begrijpen, raadpleegt u [Extensies](../../destination-types.md#extensions) op de pagina Doeltypen en -categorieën.
+Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [Uitbreidingen](../../destination-types.md#extensions) in de Types van Bestemming en de pagina van Categorieën.
 
 - [Adobe Advertising Cloud-extensie](../advertising/adobe-advertising-cloud.md)
 - [Adobe Analytics-extensie](../analytics/adobe-analytics.md)
