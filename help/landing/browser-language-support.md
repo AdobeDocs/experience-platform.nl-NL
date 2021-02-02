@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
+keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de analyse van de klantenreis;campagneorchestratie;orchestratie;klantenreis;reis;reis orchestratie;vermogen;regio
 solution: Experience Platform
 title: Adobe Experience Platform-browser en taalondersteuning
 topic: getting started
 description: Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. Experience Platform stelt organisaties in staat om klantgegevens en -inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
 translation-type: tm+mt
-source-git-commit: 56116abcb4273b27ffcb3aefed0acf2ac35152fe
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ De gebruikersinterface van Adobe Experience Platform (UI) is ontworpen om veelvo
 
 ## Browserondersteuning
 
-De gebruikersinterface van het Platform is ontworpen om optimaal te werken in de **nieuwste versies** van Google Chrome, Safari, Firefox en Microsoft Edge. Mogelijk kunt u problemen ondervinden bij het gebruik van bepaalde functies in oudere versies van browsers.
+De interface van het Platform is ontworpen om optimaal te werken in de **nieuwste versies** van Google Chrome, Safari, Firefox en Microsoft Edge. Mogelijk kunt u problemen ondervinden bij het gebruik van bepaalde functies in oudere versies van browsers.
 
 | Besturingssysteem | Ondersteunde browsers |
 |---|---|
@@ -49,7 +49,7 @@ De standaardtaal van de gebruikersinterface wordt bepaald door het gebied dat in
 De taal wijzigen:
 
 1. Selecteer de huidige taal in de voettekst van de [!DNL Experience Platform] gebruikersinterface.
-2. Klik in de profielinstellingen op Gebied **** wijzigen.
+2. Selecteer **[!UICONTROL Gebied wijzigen]** in uw profielinstellingen.
 3. Selecteer uw gebied.
 
 >[!NOTE]
