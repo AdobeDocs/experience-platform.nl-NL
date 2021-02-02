@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Handleiding Platform voor realtime klantgegevens
 user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
 translation-type: tm+mt
-source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
+source-git-commit: 4a282f8890ace3be7808ffbf018377d792e30cb7
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 11%
+source-wordcount: '109'
+ht-degree: 12%
 
 ---
 
@@ -29,9 +29,6 @@ ht-degree: 11%
 * Privacy en gegevensbeheer {#privacy}
    * [Privacyoverzicht](privacy/privacy-overview.md)
    * [Overzicht van gegevensbeheer](privacy/data-governance-overview.md)
-   * IAB TCF 2.0-ondersteuning {#iab}
-      * [IAB TCF 2.0 steun in Echt - tijd CDP](privacy/iab/overview.md)
-      * [Gegevenssets maken voor het vastleggen van gegevens met IAB TCF 2.0-toestemming](privacy/iab/dataset-preparation.md)
 * Profielen {#profile}
    * [Profieloverzicht](profile/profile-overview.md)
    * [Identiteiten en naamruimten](profile/identities-overview.md)
