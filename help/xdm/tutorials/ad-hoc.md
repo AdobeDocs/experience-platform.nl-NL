@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;ad-hoc;ad hoc;adhoc;Ad-hoc;Ad hoc;Adhoc;tutorial;Tutorial;create;Create;schema;Schema
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem;ervaringsgegevensmodel;Experience Data Model;Experience Data Model;Data Model;Schema Register;Ad-hoc;Ad-hoc;Ad-hoc;Ad-hoc;Ad-hoc;Zelfstudie;Lesbestand;Lesbestand;Maken;Schema;Schema
 solution: Experience Platform
 title: Een ad-hocschema maken
 description: In specifieke omstandigheden, kan het noodzakelijk zijn om een schema van de Gegevens van de Ervaring van het Model (XDM) met gebieden tot stand te brengen die voor gebruik slechts door één enkele dataset worden genoemd. Dit wordt bedoeld als "ad-hoc"schema. Ad-hocschema's worden gebruikt in diverse werkstromen voor gegevensinvoer voor Experience Platform, met inbegrip van het opnemen van CSV-bestanden en het creëren van bepaalde soorten bronverbindingen.
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '823'
 ht-degree: 1%
 
 ---
@@ -16,22 +16,22 @@ ht-degree: 1%
 
 # Een ad-hocschema maken
 
-In specifieke omstandigheden, kan het noodzakelijk zijn om een [!DNL Experience Data Model] (XDM) schema met gebieden tot stand te brengen die namespaced voor gebruik slechts door één enkele dataset zijn. Dit wordt bedoeld als &quot;ad-hoc&quot;schema. Ad-hocschema&#39;s worden gebruikt in diverse werkstromen voor het opnemen van gegevens, [!DNL Experience Platform]zoals het opnemen van CSV-bestanden en het maken van bepaalde soorten bronverbindingen.
+In specifieke omstandigheden, kan het noodzakelijk zijn om een [!DNL Experience Data Model] (XDM) schema met gebieden tot stand te brengen die namespaced voor gebruik slechts door één enkele dataset zijn. Dit wordt bedoeld als &quot;ad-hoc&quot;schema. Ad-hocschema&#39;s worden gebruikt in diverse werkstromen voor gegevensinvoer voor [!DNL Experience Platform], met inbegrip van het opnemen van CSV-bestanden en het creëren van bepaalde soorten bronverbindingen.
 
-Dit document bevat algemene stappen voor het maken van een ad-hocschema met behulp van de [Schemaregistratie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Het is bedoeld voor gebruik in combinatie met andere [!DNL Experience Platform] zelfstudies waarvoor een ad-hocschema moet worden gemaakt als onderdeel van de workflow. Elk van die documenten verstrekt gedetailleerde informatie over hoe te om een ad-hocschema voor zijn specifiek gebruiksgeval behoorlijk te vormen.
+Dit document bevat algemene stappen voor het maken van een ad-hocschema met de [Schemaregistratie-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Het is bedoeld om samen met andere [!DNL Experience Platform] zelfstudies te worden gebruikt die het creëren van een ad hoc schema als deel van hun werkschema vereisen. Elk van die documenten verstrekt gedetailleerde informatie over hoe te om een ad-hocschema voor zijn specifiek gebruiksgeval behoorlijk te vormen.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van [!DNL Experience Data Model] (XDM) System. Lees de volgende XDM-documentatie voordat u deze zelfstudie start:
+Deze zelfstudie vereist een goed begrip van [!DNL Experience Data Model] (XDM) Systeem. Lees de volgende XDM-documentatie voordat u deze zelfstudie start:
 
-- [XDM-systeemoverzicht](../home.md): Een overzicht op hoog niveau van XDM en zijn implementatie in [!DNL Experience Platform].
+- [XDM-systeemoverzicht](../home.md): Een overzicht op hoog niveau van XDM en zijn implementatie in  [!DNL Experience Platform].
 - [Basisbeginselen van de schemacompositie](../schema/composition.md): Een overzicht van de basiscomponenten van schema&#39;s XDM.
 
-Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de [!DNL Schema Registry] API te kunnen uitvoeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
+Voordat u deze zelfstudie start, raadpleegt u de [ontwikkelaarshandleiding](../api/getting-started.md) voor belangrijke informatie die u moet weten om de [!DNL Schema Registry]-API te kunnen aanroepen. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
 
 ## Een ad-hocklasse maken
 
-Het gegevensgedrag van een schema XDM wordt bepaald door zijn onderliggende klasse. De eerste stap bij het maken van een ad-hocschema is het maken van een klasse op basis van het `adhoc` gedrag. Dit wordt gedaan door een verzoek van de POST aan het `/tenant/classes` eindpunt te doen.
+Het gegevensgedrag van een schema XDM wordt bepaald door zijn onderliggende klasse. De eerste stap bij het maken van een ad-hocschema is het maken van een klasse op basis van het gedrag `adhoc`. Dit wordt gedaan door een verzoek van de POST aan het `/tenant/classes` eindpunt te doen.
 
 **API-indeling**
 
@@ -41,11 +41,11 @@ POST /tenant/classes
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een nieuwe XDM-klasse gemaakt, geconfigureerd door de kenmerken die in de payload worden opgegeven. Door een `$ref` eigenschap op te geven die is ingesteld op `https://ns.adobe.com/xdm/data/adhoc` in de `allOf` array, overerft deze klasse het `adhoc` gedrag. De aanvraag definieert ook een `_adhoc` object dat de aangepaste velden voor de klasse bevat.
+Met de volgende aanvraag wordt een nieuwe XDM-klasse gemaakt, geconfigureerd door de kenmerken die in de payload worden opgegeven. Door een `$ref` bezit te leveren die aan `https://ns.adobe.com/xdm/data/adhoc` in `allOf` serie wordt geplaatst, erft deze klasse het `adhoc` gedrag. Het verzoek definieert ook een `_adhoc`-object, dat de aangepaste velden voor de klasse bevat.
 
 >[!NOTE]
 >
->De aangepaste velden die onder `_adhoc` deze sectie worden gedefinieerd, variëren afhankelijk van het gebruikte hoofdlettergebruik van het ad-hocschema. Raadpleeg de specifieke workflow in de juiste zelfstudie voor vereiste aangepaste velden op basis van het gebruiksgeval.
+>De aangepaste velden die worden gedefinieerd onder `_adhoc`, variëren afhankelijk van het gebruikte hoofdlettergebruik van het ad-hocschema. Raadpleeg de specifieke workflow in de juiste zelfstudie voor vereiste aangepaste velden op basis van het gebruiksgeval.
 
 ```shell
 curl -X POST \
@@ -89,7 +89,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert de details van de nieuwe klasse terug, die de naam van het `properties._adhoc` voorwerp met een GUID vervangt die een systeem-geproduceerde, read-only uniek herkenningsteken voor de klasse is. Het `meta:datasetNamespace` kenmerk wordt ook automatisch gegenereerd en opgenomen in de reactie.
+Een succesvolle reactie keert de details van de nieuwe klasse terug, die de naam van `properties._adhoc` met een GUID vervangt die een systeem-geproduceerde, read-only uniek herkenningsteken voor de klasse is. Het `meta:datasetNamespace` attribuut wordt ook automatisch geproduceerd en inbegrepen in de reactie.
 
 ```json
 {
@@ -150,7 +150,7 @@ Een succesvolle reactie keert de details van de nieuwe klasse terug, die de naam
 
 ## Een ad-hocschema maken
 
-Zodra u een ad-hocklasse hebt gecreeerd, kunt u een nieuw schema tot stand brengen dat die klasse uitvoert door een POST tot een verzoek aan het `/tenant/schemas` eindpunt te richten.
+Zodra u een ad-hoc klasse hebt gecreeerd, kunt u een nieuw schema tot stand brengen dat die klasse door een POST verzoek aan het `/tenant/schemas` eindpunt uit te voeren uitvoert.
 
 **API-indeling**
 
@@ -160,7 +160,7 @@ POST /tenant/schemas
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een nieuw schema gemaakt dat een verwijzing (`$ref`) bevat naar de eerder gemaakte ad-hocklasse in de payload `$id` van die klasse.
+Het volgende verzoek leidt tot een nieuw schema, dat een verwijzing (`$ref`) aan `$id` van de eerder gecreeerde ad hoc klasse in zijn lading verstrekt.
 
 ```shell
 curl -X POST \
@@ -225,7 +225,7 @@ Een geslaagde reactie retourneert de details van het nieuwe schema, inclusief de
 
 >[!NOTE]
 >
->Deze stap is optioneel. Als u de veldstructuur van uw ad-hocschema niet wilt inspecteren, kunt u de sectie [Volgende stappen](#next-steps) aan het einde van deze zelfstudie overslaan.
+>Deze stap is optioneel. Als u niet wenst om de gebiedsstructuur van uw ad hoc schema te inspecteren, kunt u aan [volgende stappen](#next-steps) sectie aan het eind van dit leerprogramma overslaan.
 
 Nadat u het ad-hocschema hebt gemaakt, kunt u een opzoekverzoek (GET) indienen om het schema in het uitgebreide formulier weer te geven. Dit wordt gedaan door de aangewezen Accept- kopbal in het verzoek van de GET te gebruiken, zoals hieronder aangetoond.
 
@@ -237,11 +237,11 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SCHEMA_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` het ad-hocschema waartoe u toegang wilt hebben. |
+| `{SCHEMA_ID}` | De URL-gecodeerde `$id` URI of `meta:altId` van het ad-hocschema dat u wilt openen. |
 
 **Verzoek**
 
-In het volgende verzoek wordt de header Accept gebruikt `application/vnd.adobe.xed-full+json; version=1`, die de uitgebreide vorm van het schema retourneert. Merk op dat wanneer het terugwinnen van een specifiek middel van het [!DNL Schema Registry], de Accept kopbal van het verzoek belangrijke versie van de betrokken bron moet omvatten.
+In het volgende verzoek wordt de header Accept `application/vnd.adobe.xed-full+json; version=1` gebruikt, die de uitgebreide vorm van het schema retourneert. Merk op dat wanneer het terugwinnen van een specifiek middel van [!DNL Schema Registry], de Accept van het verzoek kopbal belangrijke versie van de middel in kwestie moet omvatten.
 
 ```shell
 curl -X GET \
@@ -255,7 +255,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de details van het schema, inclusief alle geneste velden onder `properties`.
+Een succesvol antwoord retourneert de details van het schema, inclusief alle geneste velden onder `properties`.
 
 ```json
 {
@@ -305,6 +305,6 @@ Een geslaagde reactie retourneert de details van het schema, inclusief alle gene
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen, hebt u een nieuw ad-hocschema gemaakt. Als u naar dit document bent overgebracht als onderdeel van een andere zelfstudie, kunt u nu de instructies van uw ad-hocschema gebruiken om de workflow te voltooien. `$id`
+Door deze zelfstudie te volgen, hebt u een nieuw ad-hocschema gemaakt. Als u naar dit document bent gebracht als onderdeel van een andere zelfstudie, kunt u nu `$id` van uw ad-hocschema gebruiken om de workflow volgens de instructies te voltooien.
 
-Raadpleeg voor meer informatie over het werken met de [!DNL Schema Registry] API de handleiding voor [ontwikkelaars](../api/getting-started.md).
+Raadpleeg de [handleiding voor ontwikkelaars](../api/getting-started.md) voor meer informatie over het werken met de [!DNL Schema Registry]-API.
