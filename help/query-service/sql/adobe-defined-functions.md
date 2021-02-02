@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;adobe defined functions;sql;
+keywords: Experience Platform;home;populaire onderwerpen;query-service;Query-service;adobe defined functies;sql;
 solution: Experience Platform
 title: Adobe-gedefinieerde functies
 topic: functions
@@ -7,7 +7,7 @@ description: Dit document verstrekt informatie voor Adobe-bepaalde functies besc
 translation-type: tm+mt
 source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
 workflow-type: tm+mt
-source-wordcount: '2889'
+source-wordcount: '2902'
 ht-degree: 1%
 
 ---
