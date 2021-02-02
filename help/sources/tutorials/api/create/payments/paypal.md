@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;PayPal connector;paypal;Paypal
+keywords: Experience Platform;home;populaire onderwerpen;PayPal-aansluiting;paypal;Paypal
 solution: Experience Platform
 title: Een PayPal-connector maken met de Flow Service API
 topic: overview
 type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om PayPal aan Experience Platform te verbinden.
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '579'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste koppen
 
-Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](../../../../../tutorials/authentication.md) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
+Als u [!DNL Platform] API&#39;s wilt aanroepen, moet u eerst de [verificatiezelfstudie](https://www.adobe.com/go/platform-api-authentication-en) voltooien. Het voltooien van de zelfstudie over verificatie biedt de waarden voor elk van de vereiste headers in alle API-aanroepen [!DNL Experience Platform], zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -126,4 +126,4 @@ Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zi
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen hebt u een [!DNL PayPal]-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken wanneer u leert hoe u met de Flow Service API[ de toepassing voor betalingen kunt verkennen.](../../explore/payments.md)
+Door deze zelfstudie te volgen hebt u een [!DNL PayPal]-verbinding gemaakt met de API [!DNL Flow Service] en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze id in de volgende zelfstudie gebruiken wanneer u leert hoe u met de Flow Service API](../../explore/payments.md) de toepassing voor betalingen kunt verkennen.[
