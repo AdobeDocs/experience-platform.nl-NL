@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
+keywords: Experience Platform;huis;populaire onderwerpen;vraagdienst;de dienst van de vraag;het schrijven van vragen;het schrijven vraag;
 solution: Experience Platform
 title: Bezig met schrijven van query's
 topic: queries
@@ -8,7 +8,7 @@ description: Dit document bevat belangrijke details die u moet weten wanneer u q
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '970'
 ht-degree: 2%
 
 ---
