@@ -1,45 +1,51 @@
 ---
-keywords: Experience Platform;home;popular topics;Query service;query service;Looker;looker;connect to query service;
+keywords: Experience Platform;huis;populaire onderwerpen;de dienst van de Vraag;de vraagdienst;Leider;Leider;verbindt met de vraagdienst;
 solution: Experience Platform
 title: Verbinding maken met Looker
 topic: connect
 description: Dit document doorloopt de stappen voor het verbinden van de Teller met de Dienst van de Vraag van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
+source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
 
 
-# Verbinden met [!DNL Looker]
+# [!DNL Looker]
 
-Als u [!DNL Looker] wilt verbinden met [!DNL Query Service] op Adobe Experience Platform, volgt u de onderstaande stappen:
-
-Nadat u zich hebt aangemeld bij [!DNL Looker], klikt u op **[!UICONTROL Admin]**, gevolgd door **[!UICONTROL Verbindingen]**.
-
-![](../images/clients/looker/click-admin-connections.png)
-
-Voor deze pagina, klik op **Nieuwe Verbinding**.
-
-![](../images/clients/looker/click-new-connection.png)
-
-Van hier, kunt u de details voor de Montages van de Verbinding invullen.
-
-![](../images/clients/looker/new-connection.png)
-
-- **Naam:** de naam van de verbinding.
-- **Dialect:** Het dialect dat voor het SQL gegevensbestand wordt gebruikt. [!DNL Query Service] gebruik  **[!DNL PostgreSQL]**.
-- **Gastheer en Haven:** het gastheereindpunt en zijn haven voor  [!DNL Query Service].
-- **Database:** de database die wordt gebruikt.
-- **Gebruikersnaam en wachtwoord:** de aanmeldingsgegevens die worden gebruikt. De gebruikersnaam heeft de notatie `ORG_ID@AdobeOrg`.
+In dit document worden de stappen beschreven voor het verbinden van [!DNL Looker] met Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
->Voor meer informatie bij het vinden van uw gastheer en haven, gegevensbestandnaam, en login geloofsbrieven, bezoek de [geloofsbrieven pagina op Platform](https://platform.adobe.com/query/configuration). Om uw geloofsbrieven te vinden, login aan [!DNL Platform], klik **[!UICONTROL Vragen]**, dan klik **[!UICONTROL Referenties]**.
+> Deze gids veronderstelt u reeds toegang tot [!DNL Looker] hebt en vertrouwd met hoe te om zijn interface te navigeren. Meer informatie over [!DNL Looker] vindt u in de [officiële [!DNL Looker] documentatie](https://docs.looker.com/).
 
-Nadat u de verbindingsgegevens hebt ingevoerd, klikt u op **[!UICONTROL Deze instellingen testen]** om te controleren of uw gegevens correct werken. Als dat het geval is, wordt hieronder een bericht weergegeven dat u verbinding kunt maken. Als uw verbinding inderdaad succesvol is, klik op **[!UICONTROL Add Verbinding]** om uw verbinding tot stand te brengen.
+## [!DNL Looker] verbinden met Platform
+
+Nadat u zich hebt aangemeld bij [!DNL Looker], selecteert u **[!DNL Admin]**, gevolgd door **[!DNL Connections]**.
+
+![](../images/clients/looker/click-admin-connections.png)
+
+Selecteer **[!DNL New Connection]** op deze pagina.
+
+![](../images/clients/looker/click-new-connection.png)
+
+Vanaf hier kunt u de gegevens voor de verbindingsinstellingen invullen.
+
+![](../images/clients/looker/new-connection.png)
+
+- **[!DNL Name]:** De naam van de verbinding.
+- **[!DNL Dialect]:** Het dialect dat voor het SQL gegevensbestand wordt gebruikt. [!DNL Query Service] gebruik  **[!DNL PostgreSQL]**.
+- **[!DNL Host and Port]:** Het gastheereindpunt en zijn haven voor  [!DNL Query Service].
+- **[!DNL Database]:** De database die wordt gebruikt.
+- **[!DNL Username and Password]:** De aanmeldingsgegevens die worden gebruikt. De gebruikersnaam heeft de notatie `ORG_ID@AdobeOrg`.
+
+>[!NOTE]
+>
+>Voor meer informatie bij het vinden van uw gastheer en haven, gegevensbestandnaam, en login geloofsbrieven, bezoek de [geloofsbrieven pagina op Platform](https://platform.adobe.com/query/configuration). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Vragen]**, gevolgd door **[!UICONTROL Referenties]**.
+
+Nadat u de verbindingsgegevens hebt ingevoerd, selecteert u **[!DNL Test These Settings]** om ervoor te zorgen dat uw referenties correct werken. Als dat het geval is, wordt hieronder een bericht weergegeven dat u verbinding kunt maken. Als uw verbinding inderdaad succesvol is, uitgezocht **[!DNL Add Connection]** om uw verbinding tot stand te brengen.
 
 ![](../images/clients/looker/click-test-connection.png)
 
