@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;data science workspace;data science
+keywords: Experience Platform;ontwikkelaarsgids;eindpunt;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;de werkruimte van de wetenschap van gegevens;gegevenswetenschap
 solution: Experience Platform
 title: Handleiding voor ontwikkelaars van Sensei Machine Learning API
 topic: Developer guide
 description: Deze ontwikkelaarsgids verstrekt stappen om u te helpen beginnen het Leren API van de Machine Sensei te gebruiken, en toont API vraag voor het uitvoeren van verrichtingen CRUD op diverse middelen van de Werkruimte van de Wetenschap van Gegevens aan.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '244'
 ht-degree: 2%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 2%
 
 # [!DNL Sensei Machine Learning] Handleiding voor API-ontwikkelaars
 
-De [!DNL Sensei Machine Learning] API biedt gegevenswetenschappers een mechanisme voor het organiseren en beheren van services voor het leren van machines, van algoritme aan boord via experimenten en implementatie van services.
+De [!DNL Sensei Machine Learning] API biedt een mechanisme voor gegevenswetenschappers om services voor machinaal leren te organiseren en te beheren, van algoritme aan boord tot experimenteren en implementatie van services.
 
-Deze ontwikkelaarsgids verstrekt stappen om u te helpen beginnen de het Leren API [van de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)Sensei Machine te gebruiken, en toont API vraag voor het uitvoeren van verrichtingen CRUD op diverse middelen van de Werkruimte van de Wetenschap van Gegevens aan.
+Deze ontwikkelaarsgids verstrekt stappen om u te helpen beginnen [Sensei Machine het Leren API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) te gebruiken, en toont API vraag voor het uitvoeren van verrichtingen CRUD op diverse middelen van de Werkruimte van de Wetenschap van Gegevens aan.
 
 ## Aan de slag
 
-U moet de [autorisatiezelfstudie](../../tutorials/authentication.md) hebben voltooid om toegang te hebben tot de volgende aanvraagheaders om aanroepen van API&#39; [!DNL Adobe Experience Platform] s uit te voeren:
+U moet de [verificatie](https://www.adobe.com/go/platform-api-authentication-en) zelfstudie hebben voltooid om toegang tot de volgende verzoekkopballen te hebben om vraag aan [!DNL Adobe Experience Platform] APIs te maken:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -31,7 +31,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Zie de documentatie over het [!DNL Platform]sandboxoverzicht voor meer informatie over sandboxen in [de](../../sandboxes/home.md)sandbox.
+Raadpleeg de documentatie [sandbox-overzicht](../../sandboxes/home.md) voor meer informatie over sandboxen in [!DNL Platform].
 
 Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
