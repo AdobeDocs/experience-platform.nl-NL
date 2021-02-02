@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;schema;schemas;
+keywords: Experience Platform;thuis;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;schema;schema's;
 solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: efa1d8efb26f4196f6724702784ccd13a9337a8a
+source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -65,13 +65,21 @@ Nadat u een schema hebt geopend in het [!DNL Schema Editor], kunt u velden aan h
 
 ![](../../images/ui/resources/schemas/add-mixin-button.png)
 
-In het dialoogvenster dat wordt weergegeven, kunt u de gewenste combinaties in de lijst selecteren. U kunt meerdere mixen selecteren in de lijst, waarbij elke geselecteerde mix wordt weergegeven in de rechtertrack.
+Er wordt een dialoogvenster weergegeven met een lijst met combinaties die u voor het schema kunt selecteren. Aangezien mixins slechts met één klasse compatibel zijn, slechts zullen die mengen die met de geselecteerde klasse van het schema worden geassocieerd worden vermeld. Standaard worden vermelde mixen gesorteerd op basis van hun populariteit in uw organisatie.
+
+![](../../images/ui/resources/schemas/mixin-popularity.png)
+
+U kunt de zoekbalk gebruiken om de gewenste mix te vinden. De mengsels de waarvan naam de vraag aanpast verschijnen bij de bovenkant van de lijst. Onder **[!UICONTROL Standaardvelden]** worden combinaties weergegeven die velden bevatten die gewenste gegevenskenmerken beschrijven.
+
+![](../../images/ui/resources/schemas/mixin-search.png)
+
+Schakel het selectievakje in naast de naam van de mix die u aan het schema wilt toevoegen. U kunt meerdere mixen selecteren in de lijst, waarbij elke geselecteerde mix wordt weergegeven in de rechtertrack.
 
 ![](../../images/ui/resources/schemas/add-mixin.png)
 
 >[!TIP]
 >
->Voor om het even welke vermelde mixin, kunt u het voorproefpictogram (![](../../images/ui/resources/schemas/preview-icon.png)) selecteren om de structuur van de gebieden te bekijken die de mengeling verstrekt alvorens u besluit om het aan het schema toe te voegen.
+>Voor elke vermelde mix kunt u de muis boven het informatiepictogram (![](../../images/ui/resources/schemas/info-icon.png)) houden of erop focussen om een korte beschrijving weer te geven van het type gegevens dat door de mix wordt vastgelegd. U kunt het voorproefpictogram (![](../../images/ui/resources/schemas/preview-icon.png)) ook selecteren om de structuur van de gebieden te bekijken die de mengeling verstrekt alvorens u besluit om het aan het schema toe te voegen.
 
 Nadat u de mixfunctie hebt gekozen, selecteert u **[!UICONTROL Mengsel toevoegen]** om deze aan het schema toe te voegen.
 
