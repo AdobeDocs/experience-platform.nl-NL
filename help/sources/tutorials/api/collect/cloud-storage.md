@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: 64627592b873a48b9cb58ef911e049869a2c21fb
+source-git-commit: c168a1b597a1ac2d85a8b896f3b6a8d213fcb1ae
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1639'
 ht-degree: 0%
 
 ---
@@ -341,6 +341,10 @@ Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverb
 ## Een toewijzing {#mapping} maken
 
 Opdat de brongegevens in een doeldataset worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht de doeldataset volgt aan. Dit wordt bereikt door een verzoek van de POST aan de Dienst van de Omzetting met gegevenstoewijzingen uit te voeren die binnen de verzoeklading worden bepaald.
+
+>[!TIP]
+>
+>U kunt complexe gegevenstypen, zoals arrays, toewijzen in JSON-bestanden met behulp van een bronconnector voor cloudopslag.
 
 **API-indeling**
 
