@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een extern CRM-systeem en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 0%
@@ -87,13 +87,36 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Salesforce source connection",
-        "connectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
+        "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
         "description": "Salesforce source connection",
         "data": {
             "format": "tabular",
         },
         "params": {
-            "path": "Accounts"
+            "tableName": "Accounts",
+            "columns": [
+                {
+                    "name": "first_name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "String"
+                    }
+                },
+                {
+                    "name": "last_name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "String"
+                    }
+                },
+                {
+                    "name": "email",
+                    "type": "string",
+                    "xdm": {
+                        "type": "String"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "ccfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -104,7 +127,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `connectionId` | De unieke verbinding-id van het CRM-systeem van derden dat u benadert. |
+| `baseConnectionId` | De unieke verbinding-id van het CRM-systeem van derden dat u benadert. |
 | `params.path` | Het pad van het bronbestand. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan uw specifieke CRM-systeem van derden. Zie [appendix](#appendix) voor een lijst van verbindingsspecificaties IDs. |
 
