@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
 translation-type: tm+mt
-source-git-commit: 4e85dc702cda5c6c495a6f7fb70453b7897baa36
+source-git-commit: 2d1b49d774d04e7befbcc1c9e5417ee82323634a
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wij
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
-Voor JSON-bestanden kunt u, naast velden rechtstreeks toewijzen aan andere velden, objecten rechtstreeks toewijzen aan andere objecten en arrays aan andere arrays.
+Voor JSON-bestanden kunt u, naast het rechtstreeks toewijzen van velden aan andere velden, objecten rechtstreeks toewijzen aan andere objecten en arrays aan andere arrays. U kunt ook complexe gegevenstypen voorvertonen en toewijzen, zoals arrays in JSON-bestanden, met behulp van een bronconnector voor cloudopslag.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
 
