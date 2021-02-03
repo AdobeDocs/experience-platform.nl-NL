@@ -5,7 +5,7 @@ title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
+source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -81,7 +81,7 @@ Schakel het selectievakje in naast de naam van de mix die u aan het schema wilt 
 >
 >Voor elke vermelde mix kunt u de muis boven het informatiepictogram (![](../../images/ui/resources/schemas/info-icon.png)) houden of erop focussen om een korte beschrijving weer te geven van het type gegevens dat door de mix wordt vastgelegd. U kunt het voorproefpictogram (![](../../images/ui/resources/schemas/preview-icon.png)) ook selecteren om de structuur van de gebieden te bekijken die de mengeling verstrekt alvorens u besluit om het aan het schema toe te voegen.
 
-Nadat u de mixfunctie hebt gekozen, selecteert u **[!UICONTROL Mengsel toevoegen]** om deze aan het schema toe te voegen.
+Zodra u uw mengen hebt gekozen, uitgezocht **[!UICONTROL voeg mixin]** toe om hen aan het schema toe te voegen.
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 
