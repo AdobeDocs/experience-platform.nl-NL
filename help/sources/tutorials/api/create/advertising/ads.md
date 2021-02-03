@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform te verbinden met Google AdWords.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
@@ -39,12 +39,12 @@ Als u [!DNL Flow Service] wilt verbinden met AdWords, moet u waarden voor de vol
 
 | **Credentials** | **Beschrijving** |
 | -------------- | --------------- |
-| Klant-id klant | De klant-id van de client van het account AdWords. |
-| Developer Token | Het ontwikkelaarstoken verbonden aan de managerrekening. |
-| Token vernieuwen | Het vernieuwingstoken dat van [!DNL Google] wordt verkregen om toegang tot AdWords toe te staan. |
-| Client-id | De client-id van de [!DNL Google]-toepassing die wordt gebruikt om het vernieuwingstoken te verkrijgen. |
-| Clientgeheim | Het clientgeheim van de toepassing [!DNL Google] die wordt gebruikt om het vernieuwingstoken te verkrijgen. |
-| Verbindingsspecificatie-id | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL Google AdWords] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| `clientCustomerId` | De klant-id van de client van het account AdWords. |
+| `developerToken` | Het ontwikkelaarstoken verbonden aan de managerrekening. |
+| `refreshToken` | Het vernieuwingstoken dat van [!DNL Google] wordt verkregen om toegang tot AdWords toe te staan. |
+| `clientId` | De client-id van de [!DNL Google]-toepassing die wordt gebruikt om het vernieuwingstoken te verkrijgen. |
+| `clientSecret` | Het clientgeheim van de toepassing [!DNL Google] die wordt gebruikt om het vernieuwingstoken te verkrijgen. |
+| `connectionSpec` | De unieke id die nodig is om een verbinding te maken. De verbindingsspecificatie-id voor [!DNL Google AdWords] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
 Raadpleeg dit [Google AdWords-document](https://developers.google.com/adwords/api/docs/guides/authentication) voor meer informatie over deze waarden.
 
@@ -114,7 +114,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --------- | ----------- |
 | `auth.params.clientCustomerID` | De client-id van uw [!DNL AdWords]-account. |
-| `auth.params.developerToken` | Het ontwikkelaarstoken van uw [!DNL AdWords]- rekening. |
+| `auth.params.developerToken` | De ontwikkelaarstoken van uw [!DNL AdWords]- rekening. |
 | `auth.params.refreshToken` | Het vernieuwingstoken van uw [!DNL AdWords]-account. |
 | `auth.params.clientID` | De client-id van uw [!DNL AdWords]-account. |
 | `auth.params.clientSecret` | Het clientgeheim van uw [!DNL AdWords]-account. |
