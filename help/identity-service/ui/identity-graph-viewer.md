@@ -5,10 +5,10 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
 translation-type: tm+mt
-source-git-commit: 7c9c81492df9333945ac62602f10b6097296d62b
+source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
 workflow-type: tm+mt
-source-wordcount: '905'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -100,7 +100,7 @@ In de volgende sectie vindt u aanvullende informatie over het werken met de view
 Er kunnen fouten optreden wanneer u de viewer voor identiteitsgrafieken opent. Hieronder volgt een lijst met voorwaarden en beperkingen waarmee u rekening kunt houden wanneer u werkt met de viewer voor identiteitsgrafieken.
 
 - De geselecteerde naamruimte moet een identiteitswaarde bevatten.
-- Voor het genereren van de identiteitsgrafiekviewer zijn minimaal twee gekoppelde identiteiten vereist.
+- Voor het genereren van de identiteitsgrafiekviewer zijn minimaal twee gekoppelde identiteiten vereist. Het is mogelijk dat er slechts één identiteitswaarde en geen verbonden identiteiten zijn, en in dit geval, zou de waarde slechts in [!DNL Profile] kijker bestaan.
 - De viewer voor identiteitsgrafieken kan het maximumaantal van 150 identiteiten niet overschrijden.
 
 ![foutscherm](../images/identity-graph-viewer/error-screen.png)
