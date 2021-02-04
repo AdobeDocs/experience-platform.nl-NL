@@ -5,9 +5,9 @@ title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
+source-git-commit: babe47cc864d9f79eee28989ca8b658350b9d790
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Als u een bestaand schema wilt bewerken, selecteert u het tabblad **[!UICONTROL 
 >
 >Met de zoek- en filtermogelijkheden van de werkruimte kunt u het schema gemakkelijker vinden. Zie de handleiding bij [het verkennen van XDM-bronnen](../explore.md) voor meer informatie.
 
-Nadat u een schema hebt geselecteerd, wordt [!DNL Schema Editor] weergegeven met de structuur van het schema die op het canvas wordt weergegeven. U kunt nu [mixins](#add-mixins) aan het schema toevoegen, of [bestaande douanemixins](./mixins.md#edit) uitgeven als het schema om het even welk gebruikt.
+Nadat u een schema hebt geselecteerd, wordt [!DNL Schema Editor] weergegeven met de structuur van het schema die op het canvas wordt weergegeven. U kunt nu [mixins](#add-mixins) aan het schema toevoegen, [namen van veldvertoningen bewerken](#display-names), of [bestaande aangepaste mixins](./mixins.md#edit) bewerken als het schema een van deze mixins gebruikt.
 
 ## Mixingen toevoegen aan een schema {#add-mixins}
 
@@ -116,6 +116,22 @@ Om het proces te beëindigen, uitgezocht **[!UICONTROL sparen]** om het schema t
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
 Het schema is nu ingeschakeld voor gebruik in het Real-time profiel van de Klant. Wanneer het Platform gegevens in datasets opneemt die op dit schema worden gebaseerd, zullen die gegevens in uw samengevoegde gegevens van het Profiel worden opgenomen.
+
+## Geef vertoningsnamen voor schemagebieden {#display-names} uit
+
+Zodra u een klasse hebt toegewezen en mengsels aan een schema toegevoegd, kunt u de vertoningsnamen van om het even welk van de gebieden van het schema uitgeven, ongeacht of die gebieden door standaard of douaneXDM middelen zijn verstrekt.
+
+>[!NOTE]
+>
+>Onthoud dat de weergavenamen van velden die tot standaardklassen of -mixen behoren, alleen kunnen worden bewerkt in de context van een specifiek schema. Met andere woorden, het veranderen van de vertoningsnaam van een standaardgebied in één schema beïnvloedt andere schema&#39;s niet die de zelfde bijbehorende klasse of de combinatie gebruiken.
+
+Als u de weergavenaam van een schemaveld wilt bewerken, selecteert u het veld op het canvas. Geef in de rechtertrack de nieuwe naam op onder **[!UICONTROL Weergavenaam]**.
+
+![](../../images/ui/resources/schemas/display-name.png)
+
+Selecteer **[!UICONTROL Apply]** in het juiste spoor, en het canvas werkt bij om de nieuwe vertoningsnaam van het gebied te tonen. Selecteer **[!UICONTROL Opslaan]** om de wijzigingen toe te passen op het schema.
+
+![](../../images/ui/resources/schemas/display-name-changed.png)
 
 ## Klasse {#change-class} van een schema wijzigen
 
