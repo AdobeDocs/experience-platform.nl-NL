@@ -5,9 +5,9 @@ title: Mengsels maken en bewerken in de gebruikersinterface
 description: Leer hoe u combinaties maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: cf74c7922271035474c7f10534692983add48616
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ De [!DNL Schema Editor] verschijnt weer, met de nieuwe mix die in de linkerspoor
 
 >[!NOTE]
 >
->Alleen aangepaste mixen die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt.
+>Alleen aangepaste mixen die door uw organisatie zijn gedefinieerd, kunnen volledig worden bewerkt en aangepast. Voor kernmixen die door Adobe worden bepaald, slechts kunnen de vertoningsnamen voor hun gebieden binnen de context van individuele schema&#39;s worden uitgegeven. Zie de sectie op [het uitgeven vertoningsnamen voor schemagebieden](./schemas.md#display-names) voor details.
 >
->Als een mixin eenmaal is opgeslagen en in een schema voor gegevensinvoer is gebruikt, kunnen daarna alleen additieve wijzigingen in de mix worden aangebracht. Zie [regels van schemaevolutie](../../schema/composition.md#evolution) voor meer informatie.
+>Nadat een aangepaste mix is opgeslagen en in een schema voor gegevensinvoer is gebruikt, kunnen daarna alleen additieve wijzigingen in de mix worden aangebracht. Zie [regels van schemaevolutie](../../schema/composition.md#evolution) voor meer informatie.
 
 Als u een bestaande mix wilt bewerken, moet u eerst een schema openen waarin de mix wordt gebruikt binnen [!DNL Schema Editor]. U kunt [een bestaand schema selecteren om](./schemas.md#edit) uit te geven, of u kunt [een nieuw schema ](./schemas.md#create) tot stand brengen en de mengeling in kwestie toevoegen.
 
