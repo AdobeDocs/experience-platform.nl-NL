@@ -5,9 +5,9 @@ seo-title: Facebook-bestemming
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 seo-description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
+source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '970'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->De migratie van de klant naar de nieuwe ervaring met de doelconfiguratie wordt momenteel uitgevoerd. U zou moeilijkheden kunnen ervaren die tot de pagina van de bestemmingsconfiguratie toegang hebben momenteel.
+>De migratie van de klant naar de nieuwe doelversies wordt momenteel uitgevoerd. Totdat de migratie is voltooid, ziet u alleen de [!UICONTROL EMAIL] en [!UICONTROL EMAIL_LC_SHA_256] beschikbare identiteiten voor deze bestemming.
 
 Activeer profielen voor uw [!DNL Facebook] campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 
