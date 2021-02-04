@@ -5,9 +5,9 @@ title: Klassen maken en bewerken in de gebruikersinterface
 description: Leer hoe u klassen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 5bf729197de53e9d24675c8a1d0455e807fb90c5
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -53,9 +53,9 @@ U kunt nu [velden toevoegen aan de klasse](#add-fields), die wordt gedeeld door 
 
 >[!NOTE]
 >
->Alleen aangepaste klassen die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt.
+>Alleen aangepaste klassen die door uw organisatie zijn gedefinieerd, kunnen volledig worden bewerkt en aangepast. Voor kernklassen die door Adobe worden gedefinieerd, kunnen alleen de weergavenamen voor hun velden worden bewerkt binnen de context van afzonderlijke schema&#39;s. Zie de sectie op [het uitgeven vertoningsnamen voor schemagebieden](./schemas.md#display-names) voor details.
 >
->Als een klasse eenmaal is opgeslagen en gebruikt in gegevensinvoer, kunnen er daarna alleen additieve wijzigingen in worden aangebracht. Zie [regels van schemaevolutie](../../schema/composition.md#evolution) voor meer informatie.
+>Als een aangepaste klasse eenmaal is opgeslagen en in gegevensinvoer is gebruikt, kunnen er daarna alleen aanvullende wijzigingen in worden aangebracht. Zie [regels van schemaevolutie](../../schema/composition.md#evolution) voor meer informatie.
 
 Als u een bestaande klasse wilt bewerken, selecteert u het tabblad **[!UICONTROL Bladeren]** en selecteert u vervolgens de naam van een schema met de klasse die u wilt bewerken.
 
