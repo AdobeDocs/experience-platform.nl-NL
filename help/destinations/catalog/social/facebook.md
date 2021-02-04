@@ -5,9 +5,9 @@ seo-title: Facebook-bestemming
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 seo-description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: d0b6225a726c13e2b77ea0f61446ea489df81e69
+source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '963'
 ht-degree: 3%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 3%
 # [!DNL Facebook] Bestemming
 
 ## Overzicht {#overview}
+
+>[!IMPORTANT]
+>
+>De migratie van de klant naar de nieuwe ervaring met de doelconfiguratie wordt momenteel uitgevoerd. U zou moeilijkheden kunnen ervaren die tot de pagina van de bestemmingsconfiguratie toegang hebben momenteel.
 
 Activeer profielen voor uw [!DNL Facebook] campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 
