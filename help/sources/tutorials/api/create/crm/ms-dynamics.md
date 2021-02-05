@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
-title: Een Microsoft Dynamics-connector maken met de Flow Service API
+title: Creeer een Verbinding van de Bron van de Dynamica van Microsoft Gebruikend de Dienst van de Stroom API
 topic: overview
 type: Tutorial
-description: Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om Platform met een rekening van de Dynamiek van Microsoft (verder als "Dynamica") te verbinden voor het verzamelen van de gegevens van CRM.
+description: Leer hoe te om Platform met een rekening van de Dynamica van Microsoft te verbinden gebruikend de Dienst API van de Stroom.
 translation-type: tm+mt
-source-git-commit: 75566ef0dc45f59b47af0b85f4692c2496e53f29
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
 
 
-# Een [!DNL Microsoft Dynamics]-connector maken met de [!DNL Flow Service]-API
+# Een [!DNL Microsoft Dynamics]-bronverbinding maken met de [!DNL Flow Service]-API
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te lopen om Platform met een [!DNL Microsoft Dynamics] (verder genoemd als &quot;Dynamica&quot;) rekening te verbinden voor het verzamelen van de gegevens van CRM.
+Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om Platform met een [!DNL Microsoft Dynamics] (verder genoemd als &quot;Dynamica&quot;) rekening te verbinden gebruikend de Dienst API van de Stroom.
 
 ## Aan de slag
 
