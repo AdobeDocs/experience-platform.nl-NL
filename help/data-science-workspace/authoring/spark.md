@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;spark sdk;data access api;spark recipe;read spark;write spark
+keywords: Experience Platform;thuis;populaire onderwerpen;gegevenstoegang;spark sdk;gegevenstoegang api;spark recept;read spark;write spark
 solution: Experience Platform
-title: Toegang verkrijgen tot gegevens met Spark
+title: Toegang tot gegevens die Vonk in de Werkruimte van de Wetenschap van Gegevens gebruiken
 topic: tutorial
 type: Tutorial
 description: Het volgende document bevat voorbeelden op hoe te om tot gegevens toegang te hebben gebruikend Vonk voor gebruik in de Werkruimte van de Wetenschap van Gegevens.
 translation-type: tm+mt
-source-git-commit: e1035f3d1ad225a0892c5f97ca51618cd6b47412
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '450'
 ht-degree: 0%
 
 ---
 
 
-# Toegang verkrijgen tot gegevens met Spark
+# Toegang tot gegevens die Vonk in de Werkruimte van de Wetenschap van Gegevens gebruiken
 
-Het volgende document bevat voorbeelden op hoe te om tot gegevens toegang te hebben gebruikend Vonk voor gebruik in de Werkruimte van de Wetenschap van Gegevens. Voor informatie over toegang tot gegevens met JupyterLab-laptops raadpleegt u de [documentatie over gegevenstoegang](../jupyterlab/access-notebook-data.md) van JupyterLab-laptops.
+Het volgende document bevat voorbeelden op hoe te om tot gegevens toegang te hebben gebruikend Vonk voor gebruik in de Werkruimte van de Wetenschap van Gegevens. Raadpleeg de [JupyterLab-laptops voor toegang tot gegevens](../jupyterlab/access-notebook-data.md) documentatie voor informatie over toegang tot gegevens met JupyterLab-laptops.
 
 ## Aan de slag
 
-Voor het gebruik [!DNL Spark] zijn prestatieoptimalisaties vereist die aan de `SparkSession`code moeten worden toegevoegd. Bovendien, kunt u opstelling ook `configProperties` voor recenter om aan datasets te lezen en te schrijven.
+Het gebruik van [!DNL Spark] vereist prestatieoptimalisaties die aan `SparkSession` moeten worden toegevoegd. Bovendien, kunt u `configProperties` voor recenter ook opstelling om aan datasets te lezen en te schrijven.
 
 ```scala
 import com.adobe.platform.ml.config.ConfigProperties
@@ -51,9 +51,9 @@ Class Helper {
 
 Terwijl het gebruiken van Vonk hebt u toegang tot twee wijzen van lezing: interactief en batchgewijs.
 
-De interactieve wijze leidt tot een verbinding van de Connectiviteit van het Gegevensbestand van Java (JDBC) aan [!DNL Query Service] en krijgt resultaten door een regelmatige JDBC `ResultSet` die automatisch aan een `DataFrame`. wordt vertaald. Deze modus werkt ongeveer op dezelfde manier als de ingebouwde [!DNL Spark] methode `spark.read.jdbc()`. Deze wijze wordt bedoeld slechts voor kleine datasets. Als uw dataset 5 miljoen rijen overschrijdt, wordt het geadviseerd u aan partijwijze ruilt.
+De interactieve wijze leidt tot een verbinding van de Connectiviteit van het Gegevensbestand van Java (JDBC) aan [!DNL Query Service] en krijgt resultaten door een regelmatige JDBC `ResultSet` die automatisch aan `DataFrame` wordt vertaald. Deze modus werkt net als de ingebouwde [!DNL Spark]-methode `spark.read.jdbc()`. Deze wijze wordt bedoeld slechts voor kleine datasets. Als uw dataset 5 miljoen rijen overschrijdt, wordt het geadviseerd u aan partijwijze ruilt.
 
-In de modus Batch wordt [!DNL Query Service]de opdracht COPY gebruikt om de set met het resultaat van het Parket te genereren op een gedeelde locatie. Deze Parquet-bestanden kunnen vervolgens verder worden verwerkt.
+In de modus Batch wordt de opdracht COPY van [!DNL Query Service] gebruikt om de set met het resultaat van het Parket te genereren op een gedeelde locatie. Deze Parquet-bestanden kunnen vervolgens verder worden verwerkt.
 
 Een voorbeeld van het lezen van een dataset in interactieve wijze kan hieronder worden gezien:
 
@@ -105,7 +105,7 @@ df = df.select("column-a", "column-b").show()
 
 Met de component DISTINCT kunt u alle afzonderlijke waarden op rij-/kolomniveau ophalen, waarbij alle dubbele waarden uit de reactie worden verwijderd.
 
-Hieronder ziet u een voorbeeld van het gebruik van de `distinct()` functie:
+Hieronder ziet u een voorbeeld van het gebruik van de functie `distinct()`:
 
 ```scala
 df = df.select("column-a", "column-b").distinct().show()
@@ -113,7 +113,7 @@ df = df.select("column-a", "column-b").distinct().show()
 
 ### WHERE-component
 
-De [!DNL Spark] SDK biedt twee filtermethoden: Een SQL-expressie gebruiken of filteren door voorwaarden.
+Met de SDK [!DNL Spark] zijn twee filtermethoden mogelijk: Een SQL-expressie gebruiken of filteren door voorwaarden.
 
 Hieronder ziet u een voorbeeld van het gebruik van deze filterfuncties:
 
@@ -131,9 +131,9 @@ df.where("age" > 15 || "name" = "Steve")
 
 ### ORDER BY-component
 
-Met de ORDER BY-component kunnen ontvangen resultaten worden gesorteerd met een opgegeven kolom in een bepaalde volgorde (oplopend of aflopend). In de [!DNL Spark] SDK doet u dit door de `sort()` functie te gebruiken.
+Met de ORDER BY-component kunnen ontvangen resultaten worden gesorteerd met een opgegeven kolom in een bepaalde volgorde (oplopend of aflopend). In de [!DNL Spark] SDK, wordt dit gedaan door de `sort()` functie te gebruiken.
 
-Hieronder ziet u een voorbeeld van het gebruik van de `sort()` functie:
+Hieronder ziet u een voorbeeld van het gebruik van de functie `sort()`:
 
 ```scala
 df = df.sort($"column1", $"column2".desc)
@@ -143,7 +143,7 @@ df = df.sort($"column1", $"column2".desc)
 
 De clausule LIMIT staat u toe om het aantal verslagen te beperken die van de dataset worden ontvangen.
 
-Hieronder ziet u een voorbeeld van het gebruik van de `limit()` functie:
+Hieronder ziet u een voorbeeld van het gebruik van de functie `limit()`:
 
 ```scala
 df = df.limit(100)
@@ -171,4 +171,4 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
 
 ## Volgende stappen
 
-De Werkruimte van de Wetenschap van Gegevens van Adobe Experience Platform verstrekt een Scala (Vonk) receptensteekproef die de bovengenoemde codesteekproeven gebruikt om gegevens te lezen en te schrijven. Als u meer over wilt leren hoe te om Vonk voor de toegang tot van uw gegevens te gebruiken, te herzien gelieve de Opslagplaats van GitHub van de Werkruimte van de Wetenschap van [Gegevens ScalaHub](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala).
+De Werkruimte van de Wetenschap van Gegevens van Adobe Experience Platform verstrekt een Scala (Vonk) receptensteekproef die de bovengenoemde codesteekproeven gebruikt om gegevens te lezen en te schrijven. Als u meer over wilt leren hoe te om Vonk voor de toegang tot van uw gegevens te gebruiken, te herzien gelieve [de Werkruimte van de Wetenschap van Gegevens Scala GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala).
