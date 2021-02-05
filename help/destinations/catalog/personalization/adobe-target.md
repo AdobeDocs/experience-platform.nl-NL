@@ -1,21 +1,17 @@
 ---
 keywords: doelextensie;target
-title: Adobe Target-extensie
-seo-title: Adobe Target-extensie
+title: Adobe Target-extensiebestemming
 description: De Adobe Target-extensie is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Adobe Target-extensie is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
 
 
 # Adobe Target-extensie {#adobe-target-extension}
-
-## Overzicht {#overview}
 
 Adobe Target is de Adobe Experience Cloud-oplossing die alles biedt wat u nodig hebt om de ervaring van uw klanten op maat te maken en aan te passen en zo uw omzet op uw website en mobiele sites, apps, sociale media en andere digitale kanalen te maximaliseren.
 
