@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage policy
+keywords: Experience Platform;thuis;populaire onderwerpen;gegevensbeheer;gegevensgebruiksbeleid
 solution: Experience Platform
-title: Een beleid voor gegevensgebruik maken
+title: Een beleid voor gegevensgebruik maken in de API
 topic: policies
 type: Tutorial
 description: De dienst API van het Beleid staat u toe om het beleid van het gegevensgebruik tot stand te brengen en te beheren om te bepalen welke marketing acties tegen gegevens kunnen worden genomen die bepaalde etiketten van het gegevensgebruik bevatten. Dit document verstrekt een geleidelijke zelfstudie voor het creëren van een beleid gebruikend de Dienst API van het Beleid.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 55a54463e918fc62378c660ef17f36e2ede471e0
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1219'
 ht-degree: 0%
 
 ---
@@ -16,37 +16,37 @@ ht-degree: 0%
 
 # Een beleid voor gegevensgebruik maken in de API
 
-Met de API [voor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) Beleidsservice kunt u beleid voor gegevensgebruik maken en beheren om te bepalen welke marketingacties kunnen worden uitgevoerd tegen gegevens die bepaalde labels voor gegevensgebruik bevatten.
+Met de [Beleidsservice-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) kunt u beleid voor gegevensgebruik maken en beheren om te bepalen welke marketingacties kunnen worden uitgevoerd tegen gegevens die bepaalde labels voor gegevensgebruik bevatten.
 
-Dit document bevat een stapsgewijze zelfstudie voor het maken van beleid met de [!DNL Policy Service] API. Voor een uitvoerigere gids voor de verschillende verrichtingen beschikbaar in API, zie de de ontwikkelaarsgids [van de Dienst van het](../api/getting-started.md)Beleid.
+Dit document bevat een stapsgewijze zelfstudie voor het maken van een beleid met de API [!DNL Policy Service]. Voor een uitvoerigere gids voor de verschillende verrichtingen beschikbaar in API, zie [de de ontwikkelaarsgids van de Dienst van het Beleid](../api/getting-started.md).
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende belangrijke concepten betrokken bij het creëren en evalueren van beleid:
 
-* [[!DNL Data Governance]](../home.md): Het kader waarmee de naleving van het gegevensgebruik wordt [!DNL Platform] afgedwongen.
-* [Labels](../labels/overview.md)voor gegevensgebruik: Labels voor gegevensgebruik worden toegepast op XDM-gegevensvelden en geven beperkingen op voor de manier waarop die gegevens kunnen worden benaderd.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Platform] georganiseerd.
-* [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [Adobe Experience Platform Data Governance](../home.md): Het kader waardoor de naleving van het gegevensgebruik wordt  [!DNL Platform] afgedwongen.
+   * [Labels](../labels/overview.md) voor gegevensgebruik: Labels voor gegevensgebruik worden toegepast op XDM-gegevensvelden en geven beperkingen op voor de manier waarop die gegevens kunnen worden benaderd.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Platform] klantenervaring worden georganiseerd.
+* [Sandboxen](../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-Voordat u deze zelfstudie start, moet u eerst de [ontwikkelaarsgids](../api/getting-started.md) raadplegen voor belangrijke informatie die u moet weten om oproepen naar de [!DNL Policy Service] API te kunnen uitvoeren, inclusief vereiste headers en hoe u API-voorbeeldaanroepen kunt lezen.
+Voordat u deze zelfstudie start, raadpleegt u de [ontwikkelaarshandleiding](../api/getting-started.md) voor belangrijke informatie die u moet weten om oproepen naar de [!DNL Policy Service] API te kunnen uitvoeren, inclusief vereiste headers en hoe u voorbeeld-API-aanroepen kunt lezen.
 
 ## Een marketingactie definiëren {#define-action}
 
-In het [!DNL Data Governance] kader is een marketingactie een actie die een [!DNL Experience Platform] gegevensconsument onderneemt en waarvoor moet worden gecontroleerd op schendingen van het beleid inzake gegevensgebruik.
+In het [!DNL Data Governance] kader, is een marketing actie een actie die een [!DNL Experience Platform] gegevensconsument neemt, waarvoor er een behoefte is om op schendingen van het beleid van het gegevensgebruik te controleren.
 
 De eerste stap bij het creëren van een beleid van het gegevensgebruik is te bepalen welke marketing actie het beleid zal evalueren. U kunt dit op een van de volgende manieren doen:
 
 * [Een bestaande marketingactie opzoeken](#look-up)
 * [Nieuwe marketingactie maken](#create-new)
 
-### Een bestaande marketingactie opzoeken {#look-up}
+### Bestaande marketingactie opzoeken {#look-up}
 
-U kunt bestaande marketingacties opzoeken die door uw beleid moeten worden geëvalueerd door een GET-aanvraag in te dienen bij een van de `/marketingActions` eindpunten.
+U kunt bestaande marketing acties opzoeken die door uw beleid moeten worden geëvalueerd door een verzoek van de GET aan één van `/marketingActions` eindpunten te richten.
 
 **API-indeling**
 
-Afhankelijk van of u een marketing actie zoekt die door [!DNL Experience Platform] of een douanemarketing actie wordt verstrekt die door uw organisatie wordt gecreeerd, gebruik de `marketingActions/core` of `marketingActions/custom` eindpunten, respectievelijk.
+Afhankelijk van of u een marketingactie opzoekt die wordt geleverd door [!DNL Experience Platform] of een aangepaste marketingactie die door uw organisatie is gemaakt, gebruikt u respectievelijk de `marketingActions/core`- of `marketingActions/custom`-eindpunten.
 
 ```http
 GET /marketingActions/core
@@ -68,7 +68,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie retourneert het totale aantal gevonden marketingacties (`count`) en geeft de details van de marketingacties zelf weer binnen de `children` array.
+Een succesvolle reactie retourneert het totale aantal gevonden marketingacties (`count`) en geeft de details van de marketingacties zelf weer binnen de `children`-array.
 
 ```json
 {
@@ -121,11 +121,11 @@ Een succesvolle reactie retourneert het totale aantal gevonden marketingacties (
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `_links.self.href` | Elk item in de `children` array bevat een URI-id voor de vermelde marketingactie. |
+| `_links.self.href` | Elk item in de array `children` bevat een URI-id voor de vermelde marketingactie. |
 
-Wanneer u de marketing actie vindt die u wilt gebruiken, registreer de waarde van zijn `href` bezit. Deze waarde wordt gebruikt tijdens de volgende stap van het [creëren van een beleid](#create-policy).
+Wanneer u de marketing actie vindt die u wilt gebruiken, registreer de waarde van zijn `href` bezit. Deze waarde wordt gebruikt tijdens de volgende stap van [het creëren van een beleid](#create-policy).
 
-### Create a new marketing action {#create-new}
+### Nieuwe marketingactie maken {#create-new}
 
 U kunt een nieuwe marketing actie tot stand brengen door een verzoek van de PUT aan het `/marketingActions/custom/` eindpunt te doen en een naam voor de marketing actie aan het eind van de verzoekweg te verstrekken.
 
@@ -141,7 +141,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een nieuwe douanemarketing actie genoemd &quot;exportToThirdParty&quot;. U ziet dat de naam `name` in de aanvraag dezelfde is als de naam in het aanvraagpad.
+Het volgende verzoek leidt tot een nieuwe douanemarketing actie genoemd &quot;exportToThirdParty&quot;. Merk op dat `name` in de verzoeklading het zelfde is als de naam die in de verzoekweg wordt verstrekt.
 
 ```shell
 curl -X PUT \  
@@ -195,7 +195,7 @@ Registreer de URI-id van de zojuist gemaakte marketingactie, zoals deze wordt ge
 
 Als u een nieuw beleid wilt maken, moet u de URI-id van een marketingactie opgeven met een expressie van de gebruikslabels die die marketingactie verbiedt.
 
-Deze expressie wordt een beleidsexpressie genoemd en is een object dat (A) een label of (B) een operator en operanden bevat, maar niet beide. Elke operand is op zijn beurt ook een beleidsexpressieobject. Een beleid voor het exporteren van gegevens naar derden kan bijvoorbeeld worden verboden als er `C1 OR (C3 AND C7)` labels aanwezig zijn. Deze expressie wordt opgegeven als:
+Deze expressie wordt een beleidsexpressie genoemd en is een object dat (A) een label of (B) een operator en operanden bevat, maar niet beide. Elke operand is op zijn beurt ook een beleidsexpressieobject. Een beleid voor het exporteren van gegevens naar een derde kan bijvoorbeeld worden verboden als er `C1 OR (C3 AND C7)`-labels aanwezig zijn. Deze expressie wordt opgegeven als:
 
 ```json
 "deny": {
@@ -268,8 +268,8 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `marketingActionRefs` | Een array met de `href` waarde van een marketingactie, verkregen in de [vorige stap](#define-action). In het bovenstaande voorbeeld wordt slechts één marketingactie vermeld, maar er kunnen ook meerdere acties worden uitgevoerd. |
-| `deny` | Het beleidsexpressieobject. Definieert de gebruikslabels en -voorwaarden die ertoe zouden leiden dat het beleid de marketingactie waarnaar wordt verwezen in `marketingActionRefs`. |
+| `marketingActionRefs` | Een array met de `href`-waarde van een marketingactie, verkregen in de [vorige stap](#define-action). In het bovenstaande voorbeeld wordt slechts één marketingactie vermeld, maar er kunnen ook meerdere acties worden uitgevoerd. |
+| `deny` | Het beleidsexpressieobject. Bepaalt de gebruiksetiketten en de voorwaarden die het beleid zouden veroorzaken om de marketing actie te verwerpen die in `marketingActionRefs` van verwijzingen wordt voorzien. |
 
 **Antwoord**
 
@@ -328,9 +328,9 @@ Registreer URI identiteitskaart van het onlangs gecreëerde beleid, aangezien he
 
 >[!NOTE]
 >
->Hoewel deze stap optioneel is als u uw beleid in de `DRAFT` `ENABLED` status wilt laten, moet een beleid standaard zijn status hebben ingesteld om aan de evaluatie te kunnen deelnemen. Zie de handleiding over [beleidshandhaving](../enforcement/api-enforcement.md) voor informatie over hoe u uitzonderingen voor beleid in `DRAFT` status kunt maken.
+>Hoewel deze stap optioneel is als u uw beleid in `DRAFT` status wilt verlaten, gelieve te merken dat door gebrek een beleid zijn status moet hebben aan `ENABLED` om aan evaluatie deel te nemen. Zie de gids op [beleidshandhaving](../enforcement/api-enforcement.md) voor informatie over hoe te om uitzonderingen voor beleid in `DRAFT` status te maken.
 
-Door gebrek, nemen het beleid dat hun `status` bezit heeft aan `DRAFT` niet aan evaluatie deel. U kunt uw beleid voor evaluatie toelaten door een verzoek van PATCH aan het `/policies/custom/` eindpunt te doen en het unieke herkenningsteken voor het beleid aan het eind van de verzoekweg te verstrekken.
+Door gebrek, nemen het beleid dat hun `status` bezit heeft die aan `DRAFT` wordt geplaatst niet aan evaluatie deel. U kunt uw beleid voor evaluatie toelaten door een verzoek van PATCH aan het `/policies/custom/` eindpunt te doen en het unieke herkenningsteken voor het beleid aan het eind van de verzoekweg te verstrekken.
 
 **API-indeling**
 
@@ -340,11 +340,11 @@ PATCH /policies/custom/{POLICY_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{POLICY_ID}` | De `id` waarde van het beleid u wilt toelaten. |
+| `{POLICY_ID}` | De waarde `id` van het beleid u wilt toelaten. |
 
 **Verzoek**
 
-Het volgende verzoek voert een verrichting van de PATCH op het `status` bezit van het beleid uit, veranderend zijn waarde van `DRAFT` in `ENABLED`.
+Het volgende verzoek voert een PATCH verrichting op het `status` bezit van het beleid uit, veranderend zijn waarde van `DRAFT` in `ENABLED`.
 
 ```shell
 curl -X PATCH \
@@ -371,7 +371,7 @@ curl -X PATCH \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 200 (OK) en de details van het bijgewerkte beleid, met de `status` instelling `ENABLED`.
+Een geslaagde reactie retourneert HTTP-status 200 (OK) en de details van het bijgewerkte beleid, waarbij `status` nu is ingesteld op `ENABLED`.
 
 ```json
 {
@@ -418,8 +418,8 @@ Een geslaagde reactie retourneert HTTP-status 200 (OK) en de details van het bij
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een beleid voor gegevensgebruik voor een marketingactie gemaakt. U kunt nu doorgaan met de zelfstudie over het [afdwingen van beleid](../enforcement/api-enforcement.md) voor gegevensgebruik om te leren hoe u kunt controleren op beleidsovertredingen en deze kunt afhandelen in uw ervaringstoepassing.
+Aan de hand van deze zelfstudie hebt u een beleid voor gegevensgebruik voor een marketingactie gemaakt. U kunt nu doorgaan met de zelfstudie over [beleidsregels voor gegevensgebruik afdwingen](../enforcement/api-enforcement.md) om te leren hoe u kunt controleren op beleidsovertredingen en deze kunt afhandelen in uw ervaringstoepassing.
 
-Voor meer informatie over de verschillende beschikbare verrichtingen in [!DNL Policy Service] API, zie de de ontwikkelaarsgids [van de Dienst van het](../api/getting-started.md)Beleid. Voor informatie over hoe te om beleid voor [!DNL Real-time Customer Profile] gegevens af te dwingen, zie de zelfstudie over het [afdwingen van de naleving van het gegevensgebruik voor publiekssegmenten](../../segmentation/tutorials/governance.md).
+Zie [Handleiding voor ontwikkelaars van beleidsservices](../api/getting-started.md) voor meer informatie over de verschillende beschikbare bewerkingen in de [!DNL Policy Service]-API. Voor informatie over hoe te om beleid voor [!DNL Real-time Customer Profile] gegevens af te dwingen, zie de zelfstudie over [het afdwingen van de naleving van het gegevensgebruik voor publiekssegmenten](../../segmentation/tutorials/governance.md).
 
-Leer hoe te om gebruiksbeleid in het [!DNL Experience Platform] gebruikersinterface te beheren, zie de gids van de [beleidsgebruiker](user-guide.md).
+Meer informatie over het beheren van gebruiksbeleid in de [!DNL Experience Platform] gebruikersinterface vindt u in de [beleidsgebruikershandleiding](user-guide.md).
