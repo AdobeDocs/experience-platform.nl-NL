@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;Sandbox;sandbox
+keywords: Experience Platform;home;populaire onderwerpen;Sandbox;sandbox
 solution: Experience Platform
-title: Een sandbox maken
+title: Een sandbox maken in de API
 topic: developer guide
 description: U kunt een nieuwe zandbak tot stand brengen door een verzoek van de POST aan het `/zandbakeneindpunt te richten.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
 
 
-# Een sandbox maken
+# Een sandbox maken in de API
 
-U kunt een nieuwe zandbak tot stand brengen door een verzoek van de POST aan het `/sandboxes` eindpunt te doen.
+U kunt een nieuwe zandbak tot stand brengen door een verzoek van de POST aan het `/sandboxes` eindpunt te richten.
 
 **API-indeling**
 
@@ -50,7 +50,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvol antwoord retourneert de details van de nieuwe sandbox, waarbij wordt getoond dat deze `state` is &#39;gemaakt&#39;.
+Een succesvol antwoord retourneert de details van de nieuwe sandbox, waarbij wordt getoond dat de `state` &#39;maakt&#39;.
 
 ```json
 {
@@ -64,4 +64,4 @@ Een succesvol antwoord retourneert de details van de nieuwe sandbox, waarbij wor
 
 >[!NOTE]
 >
->Sandboxen nemen ruwweg 15 minuten in beslag om door het systeem te worden ingericht, waarna de sandboxen &quot;actief&quot; of &quot;mislukt&quot; `state` worden.
+>Sandboxen nemen ongeveer 15 minuten in beslag om door het systeem te worden ingericht, waarna hun `state` &quot;actief&quot; of &quot;mislukt&quot; worden.
