@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;Identiteitskaart;Identiteitskaart;Het ontwerp van het schema;Kaart;Verenigingsschema;Vereniging
 solution: Experience Platform
-title: XDM ExperienceEvent, klasse
+title: XDM ExperienceEvent-klasse
 topic: overview
 description: Dit document biedt een overzicht van de klasse XDM ExperienceEvent.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 0%
@@ -25,7 +25,7 @@ De klasse [!DNL XDM ExperienceEvent] zelf verstrekt verscheidene op tijd-reeksen
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `_id` | Een unieke, door het systeem gegenereerde tekenreeks-id voor de gebeurtenis. Dit veld wordt gebruikt om het unieke karakter van een individuele gebeurtenis te volgen, om dubbele gegevens te voorkomen en om die gebeurtenis in downstreamdiensten op te zoeken. Aangezien dit veld door het systeem wordt gegenereerd, mag er tijdens het invoeren van gegevens geen expliciete waarde worden opgegeven.<br><br>Het is belangrijk te onderscheiden dat dit veld  **geen identiteit** bevat die verband houdt met een individuele persoon, maar eerder met de gegevens zelf. Identiteitsgegevens die betrekking hebben op een persoon moeten in plaats daarvan worden beperkt tot [identiteitsvelden](../schema/composition.md#identity). |
+| `_id` | Een unieke, door het systeem gegenereerde tekenreeks-id voor de gebeurtenis. Dit veld wordt gebruikt om het unieke karakter van een individuele gebeurtenis te volgen, om dubbel werk van gegevens te voorkomen en om die gebeurtenis in downstreamdiensten op te zoeken. Aangezien dit veld door het systeem wordt gegenereerd, mag er tijdens het invoeren van gegevens geen expliciete waarde worden opgegeven.<br><br>Het is belangrijk te onderscheiden dat dit veld  **geen identiteit** bevat die verband houdt met een individuele persoon, maar eerder met de gegevens zelf. Identiteitsgegevens die betrekking hebben op een persoon moeten in plaats daarvan worden beperkt tot [identiteitsvelden](../schema/composition.md#identity). |
 | `eventMergeId` | De id van de opgenomen batch die ervoor heeft gezorgd dat de record is gemaakt. Dit veld wordt automatisch ingevuld door het systeem bij het invoeren van gegevens. |
 | `eventType` | Een tekenreeks die het primaire gebeurtenistype voor de record aangeeft. Accepteerde waarden en de bijbehorende definities zijn opgenomen in de [bijlage sectie](#eventType). |
 | `identityMap` | Een toewijzingsveld dat een set naamloze identiteiten bevat voor de persoon op wie de gebeurtenis van toepassing is. Dit veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. Als u dit veld correct wilt gebruiken voor [Real-time klantprofiel](../../profile/home.md), moet u niet handmatig de inhoud van het veld bijwerken in uw gegevensbewerkingen.<br /><br />Zie de sectie over identiteitskaarten in de  [grondbeginselen van schemacompositie voor meer informatie ](../schema/composition.md#identityMap) over hun gebruiksgeval. |
