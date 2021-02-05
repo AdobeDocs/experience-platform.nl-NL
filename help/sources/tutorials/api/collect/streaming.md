@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;cloudopslaggegevens;streaming gegevens;streaming
 solution: Experience Platform
-title: Verzamel streaminggegevens via bronconnectors en API's
+title: Streaming gegevens verzamelen met bronconnectors en API's
 topic: overview
 type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het ophalen van streaminggegevens en het naar Platform brengen van deze gegevens via bronconnectors en API's.
+description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Verzamel streaminggegevens via bronconnectors en API&#39;s
+# Streaming gegevens verzamelen met bronconnectors en API&#39;s
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
