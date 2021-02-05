@@ -1,19 +1,17 @@
 ---
 keywords: sociaal netwerk;sociale netwerkbestemmingen;Livefyre;facebook;Facebook
-title: Sociale netwerkdoelen
-seo-title: Sociale netwerkdoelen
+title: Overzicht sociale netwerkdoelen
 description: Met sociale netwerkdoelen kunt u profielen voor uw campagnes activeren voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
-seo-description: Met sociale netwerkdoelen kunt u profielen voor uw campagnes activeren voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '71'
 ht-degree: 0%
 
 ---
 
 
-# Sociale netwerkdoelen {#social-network-destinations}
+# Overzicht van sociale netwerkdoelen{#social-network-destinations}
 
 Met sociale netwerkdoelen kunt u profielen voor uw campagnes activeren voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 
