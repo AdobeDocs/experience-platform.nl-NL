@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;vraagdienst;de dienst van de vraag;het schrijven van vragen;het schrijven vraag;
 solution: Experience Platform
-title: Bezig met schrijven van query's
+title: Algemene begeleiding voor de Uitvoering van de Vraag in de Dienst van de Vraag
 topic: queries
 type: Tutorial
 description: Dit document bevat belangrijke details die u moet weten wanneer u query's schrijft in Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
