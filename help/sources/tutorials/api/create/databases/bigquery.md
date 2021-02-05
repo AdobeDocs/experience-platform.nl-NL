@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;bigquery;Google;google;Google BigQuery
 solution: Experience Platform
-title: Een Google BigQuery-connector maken met de Flow Service API
+title: Een Google BigQuery Source Connection maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform aan Google BigQuery (hierna "BigQuery" genoemd) te verbinden.
+description: Leer hoe u Adobe Experience Platform met Google BigQuery kunt verbinden met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
 
 
-# Een [!DNL Google BigQuery]-connector maken met de [!DNL Flow Service]-API
+# Een [!DNL Google BigQuery]-bronverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
