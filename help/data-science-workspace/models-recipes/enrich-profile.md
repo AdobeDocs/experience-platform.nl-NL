@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;machine het leren model;De Werkruimte van de Wetenschap van Gegevens;In real time het Profiel van de Klant;populaire onderwerpen;machine het leren inzicht
 solution: Experience Platform
-title: Klantprofiel in realtime verrijken met kennis van machinaal leren
+title: Verrijk het Profiel van de Klant in real time met het Leren van de Machine Inzichten
 topic: tutorial
 type: Tutorial
-description: Dit document biedt een handleiding voor het verrijken van realtime klantprofiel met door de computer geleerd inzichten.
+description: Dit document biedt een handleiding voor het verrijken van realtime klantprofiel met kennis van machinaal leren.
 translation-type: tm+mt
-source-git-commit: 62e6bb7e72637b06808ff87dc21f40af2c4e2d45
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
 
 
-# Verrijk [!DNL Real-time Customer Profile] met kennis van machine-leren
+# [!DNL Real-time Customer Profile] verrijken met kennis van machinaal leren
 
-Adobe Experience Platform [!DNL Data Science Workspace] biedt de gereedschappen en bronnen voor het maken, evalueren en gebruiken van modellen voor het leren van machines om gegevensvoorspellingen en inzichten te genereren. Wanneer machinaal-leert inzichten in een [!DNL Profile]-Toegelaten dataset worden opgenomen, worden die zelfde gegevens ook opgenomen zoals [!DNL Profile] verslagen die dan kunnen worden gesegmenteerd gebruikend [!DNL Adobe Experience Platform Segmentation Service]. Aangezien profiel en tijdreeksgegevens worden opgenomen, beslist het Profiel van de Klant in real time automatisch om die gegevens van segmenten door een aan de gang zijnde proces te omvatten of uit te sluiten die het stromen segmentatie wordt genoemd, alvorens het met bestaande gegevens samen te voegen en de verenigingsmening bij te werken. Dientengevolge, kunt u onmiddellijk berekeningen uitvoeren en besluiten nemen om verbeterde, geïndividualiseerde ervaringen aan klanten te leveren aangezien zij met uw merk in wisselwerking staan.
+Adobe Experience Platform [!DNL Data Science Workspace] biedt de tools en bronnen om modellen voor machinaal leren te maken, te evalueren en te gebruiken om gegevensvoorspellingen en inzichten te genereren. Wanneer inzichten van machinaal leren in een [!DNL Profile]-Toegelaten dataset worden opgenomen, worden die zelfde gegevens ook opgenomen zoals [!DNL Profile] verslagen die dan kunnen worden gesegmenteerd gebruikend [!DNL Adobe Experience Platform Segmentation Service]. Aangezien profiel en tijdreeksgegevens worden opgenomen, beslist het Profiel van de Klant in real time automatisch om die gegevens van segmenten door een aan de gang zijnde proces te omvatten of uit te sluiten die het stromen segmentatie wordt genoemd, alvorens het met bestaande gegevens samen te voegen en de verenigingsmening bij te werken. Dientengevolge, kunt u onmiddellijk berekeningen uitvoeren en besluiten nemen om verbeterde, geïndividualiseerde ervaringen aan klanten te leveren aangezien zij met uw merk in wisselwerking staan.
 
-Dit document bevat koppelingen naar zelfstudies waarmee u [!DNL Real-time Customer Profile] kunt verrijken met uw door de computer geleerd inzichten.
+Dit document bevat koppelingen naar zelfstudies waarmee u [!DNL Real-time Customer Profile] kunt verrijken met de leerinzichten van uw computer.
 
 ## Aan de slag
 
