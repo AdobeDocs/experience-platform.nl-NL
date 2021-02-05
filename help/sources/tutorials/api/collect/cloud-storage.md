@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;gegevens over cloudopslag
 solution: Experience Platform
-title: Gegevens voor cloudopslag verzamelen via bronconnectors en API's
+title: Opslaggegevens voor de cloud verzamelen met behulp van bronconnectors en API's
 topic: overview
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: c168a1b597a1ac2d85a8b896f3b6a8d213fcb1ae
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1639'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Gegevens voor cloudopslag verzamelen via bronconnectors en API&#39;s
+# Gegevens voor cloudopslag verzamelen met bronconnectors en API&#39;s
 
 Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een externe cloudopslag en het naar Platform brengen van deze gegevens via bronconnectors en de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
