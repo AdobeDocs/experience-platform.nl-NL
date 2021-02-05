@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;query templates;api guide;templates;Query service;
+keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;vraagmalplaatjes;api gids;malplaatjes;de dienst van de Vraag;
 solution: Experience Platform
-title: Handleiding voor ontwikkelaars van Query Service
+title: API-eindpunt voor querysjablonen
 topic: query templates
 description: De volgende documentatie loopt door de diverse API vraag u het gebruiken van vraagmalplaatjes voor de Dienst API van de Vraag kunt maken.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '674'
 ht-degree: 1%
 
 ---
 
 
-# Zoeksjablonen
+# Zoeksjablonen, eindpunt
 
 ## Voorbeeld-API-aanroepen
 
-Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het voeren van vraag aan [!DNL Query Service] API. De volgende secties lopen door diverse API vraag u kunt maken gebruikend [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het richten vraag aan [!DNL Query Service] API. De volgende secties lopen door de diverse API vraag u kan maken gebruikend [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
 ### Een lijst met querysjablonen ophalen
 
-U kunt een lijst van alle vraagmalplaatjes voor uw IMS Organisatie terugwinnen door een verzoek van de GET tot het `/query-templates` eindpunt te richten.
+U kunt een lijst van alle vraagmalplaatjes voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan het `/query-templates` eindpunt te doen.
 
 **API-indeling**
 
@@ -32,7 +32,7 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Facultatief*) Parameters die aan de verzoekweg worden toegevoegd die de resultaten vormen in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven. |
+| `{QUERY_PARAMETERS}` | (*Facultatieve*) Parameters die aan de verzoekweg worden toegevoegd die de resultaten vormen in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven. |
 
 **Parameters query**
 
@@ -40,10 +40,10 @@ Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. De resultaten worden bijvoorbeeld in oplopende volgorde `orderby=created` gesorteerd. Als u een `-` voorinstelling toevoegt (`orderby=-created`), worden de items in aflopende volgorde gesorteerd. |
-| `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Default value: 20*) |
-| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. Bijvoorbeeld, `start=2` zal een lijst terugkeren die van de derde vermelde vraag begint. (*Default value: 0*) |
-| `property` | Filterresultaten op basis van velden. De filters **moeten** zijn beschermd tegen HTML. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `name` en `userId`. De enige ondersteunde operator is `==` (gelijk aan). Retourneert bijvoorbeeld `name==my_template` alle querysjablonen met de naam `my_template`. |
+| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. `orderby=created` sorteert de resultaten bijvoorbeeld in oplopende volgorde. Als u een `-` toevoegt voordat u een item (`orderby=-created`) hebt gemaakt, worden de items in aflopende volgorde gesorteerd. |
+| `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Standaardwaarde: 20*) |
+| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. `start=2` retourneert bijvoorbeeld een lijst die begint bij de derde query. (*Standaardwaarde: 0*) |
+| `property` | Filterresultaten op basis van velden. De filters **must** moeten uit HTML zijn ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `name` en `userId`. De enige ondersteunde operator is `==` (gelijk aan). `name==my_template` retourneert bijvoorbeeld alle querysjablonen met de naam `my_template`. |
 
 **Verzoek**
 
@@ -108,7 +108,7 @@ Een succesvolle reactie keert HTTP status 200 met een lijst van vraagmalplaatjes
 
 >[!NOTE]
 >
->U kunt de waarde van gebruiken `_links.delete` om uw vraagmalplaatje [te](#delete-a-specified-query-template)schrappen.
+>U kunt de waarde van `_links.delete` aan [schrapt uw vraagmalplaatje](#delete-a-specified-query-template) gebruiken.
 
 ### Een querysjabloon maken
 
@@ -171,7 +171,7 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 
 >[!NOTE]
 >
->U kunt de waarde van gebruiken `_links.delete` om uw vraagmalplaatje [te](#delete-a-specified-query-template)schrappen.
+>U kunt de waarde van `_links.delete` aan [schrapt uw vraagmalplaatje](#delete-a-specified-query-template) gebruiken.
 
 ### Een opgegeven querysjabloon ophalen
 
@@ -185,7 +185,7 @@ GET /query-templates/{TEMPLATE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- | 
-| `{TEMPLATE_ID}` | De `id` waarde van het vraagmalplaatje u wilt terugwinnen. |
+| `{TEMPLATE_ID}` | De waarde `id` van het vraagmalplaatje u wilt terugwinnen. |
 
 **Verzoek**
 
@@ -229,7 +229,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw gespecifice
 
 >[!NOTE]
 >
->U kunt de waarde van gebruiken `_links.delete` om uw vraagmalplaatje [te](#delete-a-specified-query-template)schrappen.
+>U kunt de waarde van `_links.delete` aan [schrapt uw vraagmalplaatje](#delete-a-specified-query-template) gebruiken.
 
 ### Een opgegeven querysjabloon bijwerken
 
@@ -243,13 +243,13 @@ PUT /query-templates/{TEMPLATE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | De `id` waarde van het vraagmalplaatje u wilt terugwinnen. |
+| `{TEMPLATE_ID}` | De waarde `id` van het vraagmalplaatje u wilt terugwinnen. |
 
 **Verzoek**
 
 >[!NOTE]
 >
->Het verzoek van de PUT vereist zowel het sql als naamgebied om worden gevuld, en zal de huidige inhoud van dat vraagmalplaatje **beschrijven** .
+>Het verzoek van de PUT vereist zowel het sql als naamgebied om worden gevuld, en zal **de huidige inhoud van dat vraagmalplaatje beschrijven.**
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -301,11 +301,11 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met de bijgewer
 
 >[!NOTE]
 >
->U kunt de waarde van gebruiken `_links.delete` om uw vraagmalplaatje [te](#delete-a-specified-query-template)schrappen.
+>U kunt de waarde van `_links.delete` aan [schrapt uw vraagmalplaatje](#delete-a-specified-query-template) gebruiken.
 
 ### Een opgegeven querysjabloon verwijderen
 
-U kunt een specifiek vraagmalplaatje schrappen door een verzoek van de DELETE aan te brengen `/query-templates/{TEMPLATE_ID}` en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
+U kunt een specifiek vraagmalplaatje schrappen door een verzoek van de DELETE aan `/query-templates/{TEMPLATE_ID}` te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
 
 **API-indeling**
 
@@ -315,7 +315,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | De `id` waarde van het vraagmalplaatje u wilt terugwinnen. |
+| `{TEMPLATE_ID}` | De waarde `id` van het vraagmalplaatje u wilt terugwinnen. |
 
 **Verzoek**
 
