@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;overview;Overview;regulation;Regulation;regulations;Regulations;privacy;Privacy;
+keywords: Experience Platform;home;populaire onderwerpen;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;overview;Overview;Regulation;Regulation;Regulations;Regulations;Privacy;Privacy; Privacy;
 solution: Experience Platform
-title: Terminologie van de privacyverordening
+title: Terminologie van privacyregels
 topic: troubleshooting
 description: Dit document bevat definities voor belangrijke termen met betrekking tot privacyregels die worden ondersteund door Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 714b071bfa68ad0796afad25525b62b42bd56b3f
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1512'
 ht-degree: 9%
 
 ---
 
 
-# Terminologie van de privacyverordening
+# De terminologie van de privacyverordeningen
 
 Dit document bevat definities voor belangrijke termen met betrekking tot privacyregels die worden ondersteund door Adobe Experience Cloud.
 
@@ -23,11 +23,11 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 
 **Bindende bedrijfsvoorschriften (BCR&#39;s)**: Een reeks bindende regels die zijn ingevoerd om multinationale ondernemingen en organisaties toe te staan persoonsgegevens die zij van de EU controleren, over te dragen aan hun filialen buiten de EU (maar binnen de organisatie).
 
-**Biometrische gegevens** Alle persoonsgegevens die verband houden met de fysieke, fysiologische of gedragskenmerken van een individu en die hun unieke identificatie mogelijk maken.
+**Biometrische** gegevensPersoonsgegevens met betrekking tot de fysieke, fysiologische of gedragskenmerken van een individu die unieke identificatie mogelijk maken.
 
 ## C
 
-**CCPA**: De [!DNL California Consumer Privacy Act] (CCPA) geeft de inwoners van Californië meer controle over de persoonlijke informatie die de ondernemingen van toen verzamelen. De wet voorziet in verscheidene nieuwe rechten voor consumenten, waaronder het recht op toegang en de bij hen verzamelde persoonsgegevens, en het recht om zich te onthouden van de verkoop van hun persoonlijke gegevens aan derden.
+**CCPA**: De  [!DNL California Consumer Privacy Act] (CCPA) geeft de inwoners van Californië meer controle over de persoonlijke informatie die de ondernemingen van toen verzamelen. De wet voorziet in verscheidene nieuwe rechten voor consumenten, waaronder het recht op toegang en de bij hen verzamelde persoonsgegevens, en het recht om zich te onthouden van de verkoop van hun persoonlijke gegevens aan derden.
 
 **Toestemming**: Vrijwillig gegeven, specifieke, geïnformeerde en uitdrukkelijke toestemming door middel van een verklaring of handeling, hetgeen inhoudt dat de verwerking van hun persoonsgegevens wordt goedgekeurd.
 
@@ -69,7 +69,7 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 
 ## G
 
-**GDPR**: De [!DNL General Data Protection Regulation] (GDPR) is een juridisch kader dat richtsnoeren vaststelt voor het verzamelen en verwerken van persoonlijke gegevens van personen binnen de Europese Unie (EU). In de GDPR worden de principes van databeheer en de rechten van het individu uiteengezet en worden tevens boetes opgelegd die op inkomsten kunnen worden gebaseerd. De GDPR geldt voor alle bedrijven die te maken hebben met data van EU-burgers. Het is dus een essentiële wetgeving voor bedrijfsnalevingsfunctionarissen bij banken, verzekeraars en andere financiële ondernemingen.
+**GDPR**: De  [!DNL General Data Protection Regulation] (GDPR) is een juridisch kader dat richtsnoeren vaststelt voor het verzamelen en verwerken van persoonsgegevens van personen binnen de Europese Unie (EU). In de GDPR worden de principes van databeheer en de rechten van het individu uiteengezet en worden tevens boetes opgelegd die op inkomsten kunnen worden gebaseerd. De GDPR geldt voor alle bedrijven die te maken hebben met data van EU-burgers. Het is dus een essentiële wetgeving voor bedrijfsnalevingsfunctionarissen bij banken, verzekeraars en andere financiële ondernemingen.
 
 **Genetische gegevens**: Gegevens over de kenmerken van een persoon die geërfd of verworven is en unieke informatie over de gezondheid of fysiologie van het individu opleveren.
 
@@ -79,7 +79,7 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 
 ## I
 
-**Identity Management Services (IMS)**: De Adobe implementatie van Federated ID en OAuth 2.0 voor authentificatie van de gebruikers van Adobe ID en vergunning voor de middelen van Adobe. U moet IMS integreren met uw Adobe-applicatie of -service om uw gebruikers zich te laten aanmelden en toegang te geven tot Adobe-services. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
+**Identity Management Services (IMS)**: De Adobe implementatie van Federated ID en OAuth 2.0 voor authentificatie van de gebruikers van Adobe ID en vergunning voor de middelen van Adobe. U moet IMS integreren met uw Adobe-applicatie of -service om uw gebruikers zich te laten aanmelden en toegang te geven tot Adobe-services. Gebruikers kunnen zich rechtstreeks aanmelden bij Renga (de Adobe-identiteitsserviceprovider) of zich aanmelden via een vertrouwd verificatiedomein van derden (zoals [!DNL Google], [!DNL Facebook] of een bedrijf/organisatie LDAP).
 
 **Impliciete toestemming**: Ook wel ondubbelzinnige toestemming genoemd, heeft dit betrekking op toestemming die niet expliciet door de betrokkene is gegeven, maar niettemin ondubbelzinnig van aard is. Tijdens het aanmeldingsproces voor een bedrijfswebsite wordt bijvoorbeeld gemeld dat de betrokkene, door een e-mailadres op te geven, instemt met het ontvangen van e-mails over speciale aanbiedingen. Indien de betrokkene de kennisgeving leest, is de positieve handeling van het invoeren van zijn e-mail voldoende om als impliciete toestemming te worden beschouwd.
 
@@ -91,7 +91,7 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 
 ## L
 
-**LGPD**: De [!DNL Lei Geral de Proteção de Dados] (GPD) heeft tot doel de behandeling van persoonsgegevens van alle natuurlijke personen of natuurlijke personen in Brazilië te reguleren. De LGPD geeft de burgers van Brazilië het recht om hun persoonsgegevens te raadplegen en te wissen, te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie), en het recht om te weigeren hun gegevens aan derden te laten verkopen.
+**LGPD**: De  [!DNL Lei Geral de Proteção de Dados] (LGPD) heeft tot doel de behandeling van persoonsgegevens van alle natuurlijke of rechtspersonen in Brazilië te regelen. De LGPD geeft de burgers van Brazilië het recht om hun persoonsgegevens te raadplegen en te wissen, te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie), en het recht om te weigeren hun gegevens aan derden te laten verkopen.
 
 ## M
 
@@ -103,7 +103,7 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 
 ## P
 
-**PDPA**: De [!DNL Personal Data Protection Act] Thaise gegevensbezitters werden beschermd tegen het illegaal verzamelen, gebruiken of openbaar maken van hun persoonsgegevens. De verordening is geïnspireerd door de GDPR van de Europese Unie en verleent Thaise burgers het recht om toegang te vragen tot of te verwijderen van hun opgeslagen persoonsgegevens.
+**PDPA**: Het  [!DNL Personal Data Protection Act] Thaise bestand (PDPA) is ingevoerd om Thaise gegevensbezitters te beschermen tegen het illegaal verzamelen, gebruiken of openbaar maken van hun persoonsgegevens. De verordening is geïnspireerd door de GDPR van de Europese Unie en verleent Thaise burgers het recht om toegang te vragen tot of te verwijderen van hun opgeslagen persoonsgegevens.
 
 **Persoonlijke gegevens**: Alle informatie met betrekking tot een natuurlijke persoon of &quot;betrokkene&quot; die kan worden gebruikt om de persoon direct of indirect te identificeren.
 
@@ -135,7 +135,7 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 
 ## S
 
-**Gevoelige gegevens**:  Persoonsgegevens met betrekking tot raciale of etnische afkomst, politieke opvattingen, godsdienstige of levensbeschouwelijke overtuigingen, seksueel gedrag, strafregisters, gezondheidsgegevens, handicap, vakbondsinformatie, genetische gegevens, biometrische gegevens of gegevens die de betrokkene kunnen raken.
+**Gevoelige gegevens**: Persoonsgegevens met betrekking tot raciale of etnische afkomst, politieke opvattingen, godsdienstige of levensbeschouwelijke overtuigingen, seksueel gedrag, strafregisters, gezondheidsgegevens, handicap, vakbondsinformatie, genetische gegevens, biometrische gegevens of gegevens die de betrokkene kunnen raken.
 
 **Toegangsrecht** onderwerp: Het recht op toegang, ook wel het recht op toegang genoemd, geeft de betrokkene recht op toegang tot en informatie over de persoonsgegevens die een voor de verwerking verantwoordelijke voor hen heeft.
 
