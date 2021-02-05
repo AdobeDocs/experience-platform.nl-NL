@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api
+keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;label api voor gegevensgebruik;beleidservice api
 solution: Experience Platform
-title: 'Gegevensgebruikslabels beheren met API''s '
+title: 'Labels voor gegevensgebruik beheren met API''s '
 topic: developer guide
 description: Met de Dataset Service API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Deze klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API voor catalogusservice die metagegevens van gegevenssets beheert.
 translation-type: tm+mt
-source-git-commit: 4b5e116d221e6689f95c8da0c54ef3af6827adc1
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1017'
 ht-degree: 1%
 
 ---
@@ -15,21 +15,21 @@ ht-degree: 1%
 
 # Gegevensgebruikslabels beheren met API&#39;s
 
-In dit document worden stappen beschreven voor het beheren van labels voor gegevensgebruik met de [!DNL Policy Service] API en de [!DNL Dataset Service] API.
+Dit document bevat stappen voor het beheren van labels voor gegevensgebruik met de API [!DNL Policy Service] en [!DNL Dataset Service].
 
-Het [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) biedt verschillende eindpunten waarmee u labels voor gegevensgebruik voor uw organisatie kunt maken en beheren.
+[[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) verstrekt verscheidene eindpunten die u toestaan om de etiketten van het gegevensgebruik voor uw organisatie tot stand te brengen en te beheren.
 
-Met de [!DNL Dataset Service] API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Het maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de [!DNL Catalog Service] API die metagegevens van gegevenssets beheert.
+Met de [!DNL Dataset Service]-API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Het maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API [!DNL Catalog Service] die metagegevens van gegevenssets beheert.
 
 ## Aan de slag
 
-Voordat u deze handleiding leest, volgt u de stappen in de sectie [Aan de](../../catalog/api/getting-started.md) slag in de handleiding voor ontwikkelaars van catalogi om de vereiste gegevens te verzamelen voor het oproepen van [!DNL Platform] API&#39;s.
+Alvorens u deze gids leest, volg de stappen in [begonnen sectie](../../catalog/api/getting-started.md) in de de ontwikkelaarsgids van de Catalogus worden geschetst om de vereiste geloofsbrieven te verzamelen om vraag aan [!DNL Platform] APIs te maken die.
 
-Om vraag aan de [!DNL Dataset Service] eindpunten te maken die in dit document worden geschetst, moet u de unieke `id` waarde voor een specifieke dataset hebben. Als u deze waarde niet hebt, raadpleegt u de handleiding bij het [weergeven van catalogusobjecten](../../catalog/api/list-objects.md) om de id&#39;s van uw bestaande gegevenssets te vinden.
+Als u aanroepen wilt uitvoeren naar de [!DNL Dataset Service]-eindpunten die in dit document worden beschreven, moet u de unieke `id`-waarde voor een specifieke gegevensset hebben. Als u deze waarde niet hebt, zie de gids op [het vermelden van de voorwerpen van de Catalogus](../../catalog/api/list-objects.md) om identiteitskaarts van uw bestaande datasets te vinden.
 
-## Alle labels weergeven {#list-labels}
+## Alle labels {#list-labels} weergeven
 
-Met de [!DNL Policy Service] API kunt u alle `core` of `custom` labels weergeven door een aanvraag voor een GET in te dienen bij `/labels/core` of `/labels/custom`.
+Met de [!DNL Policy Service] API kunt u alle `core`- of `custom`-labels weergeven door een GET-aanvraag in te dienen bij `/labels/core` of `/labels/custom`.
 
 **API-indeling**
 
@@ -53,7 +53,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert een lijst van douanelabels terug die van het systeem worden teruggewonnen. Aangezien de voorbeeldaanvraag hierboven is ingediend, worden in de onderstaande reactie alleen aangepaste labels weergegeven. `/labels/custom`
+Een succesvolle reactie keert een lijst van douanelabels terug die van het systeem worden teruggewonnen. Aangezien het voorbeeldverzoek hierboven aan `/labels/custom` werd gemaakt, toont de reactie hieronder slechts douanelabels.
 
 ```json
 {
@@ -109,9 +109,9 @@ Een succesvolle reactie keert een lijst van douanelabels terug die van het syste
 }
 ```
 
-## Een label opzoeken {#look-up-label}
+## Label {#look-up-label} opzoeken
 
-U kunt een specifiek label opzoeken door de `name` eigenschap van dat label op te nemen in het pad van een aanvraag van een GET naar de [!DNL Policy Service] API.
+U kunt een specifiek etiket opzoeken door het `name` bezit van dat etiket in de weg van een verzoek van de GET aan [!DNL Policy Service] API te omvatten.
 
 **API-indeling**
 
@@ -122,11 +122,11 @@ GET /labels/custom/{LABEL_NAME}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{LABEL_NAME}` | De `name` eigenschap van het aangepaste label dat u wilt opzoeken. |
+| `{LABEL_NAME}` | De eigenschap `name` van het aangepaste label dat u wilt opzoeken. |
 
 **Verzoek**
 
-Met het volgende verzoek wordt het aangepaste label opgehaald, `L2`zoals aangegeven in het pad.
+Het volgende verzoek wint het douanelabel `L2`, zoals die in de weg wordt vermeld terug.
 
 ```shell
 curl -X GET \
@@ -165,7 +165,7 @@ Als de reactie is gelukt, worden de details van het aangepaste label geretournee
 
 ## Een aangepast label maken of bijwerken {#create-update-label}
 
-Als u een aangepast label wilt maken of bijwerken, moet u een aanvraag voor een PUT indienen bij de [!DNL Policy Service] API.
+Als u een aangepast label wilt maken of bijwerken, moet u een PUT aanvragen bij de [!DNL Policy Service]-API.
 
 **API-indeling**
 
@@ -175,11 +175,11 @@ PUT /labels/custom/{LABEL_NAME}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{LABEL_NAME}` | De `name` eigenschap van een aangepast label. Als er geen aangepast label met deze naam bestaat, wordt een nieuw label gemaakt. Als er een label bestaat, wordt dat label bijgewerkt. |
+| `{LABEL_NAME}` | De eigenschap `name` van een aangepast label. Als er geen aangepast label met deze naam bestaat, wordt een nieuw label gemaakt. Als er een label bestaat, wordt dat label bijgewerkt. |
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een nieuw etiket, `L3`dat gegevens beschrijft die informatie met betrekking tot de geselecteerde betalingsplannen van klanten bevatten.
+Met het volgende verzoek wordt een nieuw label gemaakt, `L3`, waarmee gegevens worden beschreven die informatie bevatten over de geselecteerde betaalplannen van klanten.
 
 ```shell
 curl -X PUT \
@@ -199,7 +199,7 @@ curl -X PUT \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | Een unieke tekenreeks-id voor het label. Deze waarde wordt gebruikt voor raadplegingsdoeleinden en het toepassen van het etiket op datasets en gebieden, en daarom wordt geadviseerd dat het kort en beknopt is. |
-| `category` | De categorie van het etiket. Hoewel u uw eigen categorieën voor douanelabels kunt tot stand brengen, wordt het sterk geadviseerd dat u gebruikt `Custom` als u het etiket in UI wilt verschijnen. |
+| `category` | De categorie van het etiket. Terwijl u uw eigen categorieën voor douanelabels kunt tot stand brengen, wordt het sterk geadviseerd dat u `Custom` gebruikt als u het etiket in UI wilt verschijnen. |
 | `friendlyName` | Een vriendelijke naam voor het label, dat wordt gebruikt voor weergavedoeleinden. |
 | `description` | (Optioneel) Een beschrijving van het label voor verdere context. |
 
@@ -229,7 +229,7 @@ Een geslaagde reactie retourneert de details van het aangepaste label, met HTTP-
 }
 ```
 
-## De etiketten van de raadpleging voor een dataset {#look-up-dataset-labels}
+## Labels opzoeken voor een gegevensset {#look-up-dataset-labels}
 
 U kunt de etiketten van het gegevensgebruik opzoeken die op een bestaande dataset zijn toegepast door een verzoek van de GET aan [!DNL Dataset Service] API te richten.
 
@@ -241,7 +241,7 @@ GET /datasets/{DATASET_ID}/labels
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{DATASET_ID}` | De unieke `id` waarde van de dataset waarvan etiketten u omhoog wilt kijken. |
+| `{DATASET_ID}` | De unieke `id` waarde van de dataset de waarvan etiketten u omhoog wilt kijken. |
 
 **Verzoek**
 
@@ -295,7 +295,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{DATASET_ID}` | De unieke `id` waarde van de dataset waarvoor u etiketten creeert. |
+| `{DATASET_ID}` | De unieke `id`-waarde van de gegevensset waarvoor u labels maakt. |
 
 **Verzoek**
 
@@ -327,7 +327,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `labels` | Een lijst van de etiketten van het gegevensgebruik die u aan de dataset wilt toevoegen. |
-| `optionalLabels` | Een lijst van om het even welke individuele gebieden binnen de dataset die u etiketten aan wilt toevoegen. Elk item in deze array moet de volgende eigenschappen hebben: <br/><br/>`option`: Een object dat de kenmerken [!DNL Experience Data Model] (XDM) van het veld bevat. De volgende drie eigenschappen zijn vereist:<ul><li>id</code>: De URI $id</code> -waarde van het schema dat aan het veld is gekoppeld.</li><li>contentType</code>: Het inhoudstype en het versienummer van het schema. Dit zou de vorm van één van de geldige kopballen <a href="../../xdm/api/getting-started.md#accept">van de</a> Acceptie voor een XDM raadplegingsverzoek moeten hebben.</li><li>schemaPath</code>: De weg aan het gebied binnen het schema van de dataset.</li></ul>`labels`: Een lijst met gegevensgebruikslabels die u aan het veld wilt toevoegen. |
+| `optionalLabels` | Een lijst van om het even welke individuele gebieden binnen de dataset die u etiketten aan wilt toevoegen. Elk item in deze array moet de volgende eigenschappen hebben: <br/><br/>`option`: Een object dat de [!DNL Experience Data Model] (XDM) kenmerken van het veld bevat. De volgende drie eigenschappen zijn vereist:<ul><li>id</code>: De URI $id</code>-waarde van het schema dat aan het veld is gekoppeld.</li><li>contentType</code>: Het inhoudstype en het versienummer van het schema. Dit zou de vorm van één van geldige <a href="../../xdm/api/getting-started.md#accept">moeten aannemen kopballen</a> voor een XDM raadplegingsverzoek.</li><li>schemaPath</code>: De weg aan het gebied binnen het schema van de dataset.</li></ul>`labels`: Een lijst met gegevensgebruikslabels die u aan het veld wilt toevoegen. |
 
 **Antwoord**
 
@@ -351,7 +351,7 @@ Een succesvolle reactie keert de etiketten terug die aan de dataset zijn toegevo
 
 ## Labels uit een gegevensset verwijderen {#remove-dataset-labels}
 
-U kunt de labels verwijderen die op een gegevensset zijn toegepast door een DELETE-aanvraag in te dienen bij de [!DNL Dataset Service] API.
+U kunt de etiketten verwijderen die op een dataset worden toegepast door een verzoek van DELETE aan [!DNL Dataset Service] API te doen.
 
 **API-indeling**
 
@@ -376,14 +376,14 @@ curl -X DELETE \
 
 **Antwoord**
 
-Een geslaagde HTTP-respons status 200 (OK) die aangeeft dat de labels zijn verwijderd. U kunt de bestaande etiketten [voor de dataset in een afzonderlijke vraag](#look-up-dataset-labels) omhoog kijken om dit te bevestigen.
+Een geslaagde HTTP-respons status 200 (OK) die aangeeft dat de labels zijn verwijderd. U kunt [opzoeken bestaande labels](#look-up-dataset-labels) voor de dataset in een afzonderlijke vraag om dit te bevestigen.
 
 ## Volgende stappen
 
 Door dit document te lezen hebt u geleerd hoe u labels voor gegevensgebruik met API&#39;s kunt beheren.
 
-Zodra u de etiketten van het gegevensgebruik op dataset en gebied-niveau hebt toegevoegd, kunt u beginnen gegevens in te nemen [!DNL Experience Platform]. Voor meer informatie begint u met het lezen van de [gegevensinvoerdocumentatie](../../ingestion/home.md).
+Zodra u de etiketten van het gegevensgebruik op dataset en gebied-niveau hebt toegevoegd, kunt u beginnen om gegevens in [!DNL Experience Platform] in te nemen. Als u meer wilt weten, begint u met het lezen van de [documentatie voor gegevensinvoer](../../ingestion/home.md).
 
-U kunt nu ook beleid voor gegevensgebruik definiëren op basis van de labels die u hebt toegepast. Zie het overzicht [van beleidsregels voor](../policies/overview.md)gegevensgebruik voor meer informatie.
+U kunt nu ook beleid voor gegevensgebruik definiëren op basis van de labels die u hebt toegepast. Voor meer informatie, zie [beleidsoverzicht van het gegevensgebruik](../policies/overview.md).
 
-Voor meer informatie bij het beheren van datasets in [!DNL Experience Platform], zie het [datasetoverzicht](../../catalog/datasets/overview.md).
+Voor meer informatie over het beheren van datasets in [!DNL Experience Platform], zie [datasetoverzicht](../../catalog/datasets/overview.md).
