@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;date and time functions;datetime functions;datetime;date;time;
+keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsdienst;pql;PQL;De Taal van de Vraag van het profiel;datum en tijdfuncties;datetime functies;datetime;date;time;
 solution: Experience Platform
-title: Datum- en tijdfuncties
+title: PQL Datum- en tijdfuncties
 topic: developer guide
 description: Datum- en tijdfuncties worden gebruikt om datum- en tijdbewerkingen uit te voeren op waarden in de taal van de profielquery (PQL).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '508'
 ht-degree: 2%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 2%
 
 # Datum- en tijdfuncties
 
-Datum- en tijdfuncties worden gebruikt voor het uitvoeren van datum- en tijdbewerkingen op waarden binnen [!DNL Profile Query Language] (PQL). Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
+Datum- en tijdfuncties worden gebruikt om datum- en tijdbewerkingen uit te voeren op waarden binnen [!DNL Profile Query Language] (PQL). Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
 
 ## Huidige maand
 
-De `currentMonth` functie retourneert de huidige maand als een geheel getal.
+De functie `currentMonth` retourneert de huidige maand als een geheel getal.
 
 **Indeling**
 
@@ -37,7 +37,7 @@ person.birthMonth = currentMonth()
 
 ## Maand ophalen
 
-De `getMonth` functie retourneert de maand als een geheel getal op basis van een opgegeven tijdstempel.
+De functie `getMonth` retourneert de maand als een geheel getal op basis van een opgegeven tijdstempel.
 
 **Indeling**
 
@@ -55,7 +55,7 @@ person.birthdate.getMonth() = 6
 
 ## Huidig jaar
 
-De `currentYear` functie retourneert het huidige jaar als een geheel getal.
+De functie `currentYear` retourneert het huidige jaar als een geheel getal.
 
 **Indeling**
 
@@ -73,7 +73,7 @@ product.saleYear = currentYear()
 
 ## Jaar ophalen
 
-De `getYear` functie retourneert het jaar als een geheel getal op basis van een opgegeven tijdstempel.
+De functie `getYear` retourneert het jaar als een geheel getal op basis van een opgegeven tijdstempel.
 
 **Indeling**
 
@@ -91,7 +91,7 @@ person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
 
 ## Huidige dag van de maand
 
-De `currentDayOfMonth` functie retourneert de huidige dag van de maand als een geheel getal.
+De functie `currentDayOfMonth` retourneert de huidige dag van de maand als een geheel getal.
 
 **Indeling**
 
@@ -109,7 +109,7 @@ person.birthDay = currentDayOfMonth()
 
 ## Dag van de maand ophalen
 
-De `getDayOfMonth` functie retourneert de dag als een geheel getal op basis van een opgegeven tijdstempel.
+De functie `getDayOfMonth` retourneert de dag als een geheel getal op basis van een opgegeven tijdstempel.
 
 **Indeling**
 
@@ -127,11 +127,11 @@ product.sale.getDayOfMonth() <= 15
 
 ## Occurs
 
-De `occurs` functie vergelijkt de opgegeven tijdstempelfunctie met een vaste tijdsperiode.
+De functie `occurs` vergelijkt de opgegeven tijdstempelfunctie met een vaste tijdsperiode.
 
 **Indeling**
 
-De `occurs` functie kan worden geschreven met een van de volgende indelingen:
+De functie `occurs` kan worden geschreven met een van de volgende indelingen:
 
 ```sql
 {TIMESTAMP} occurs {COMPARISON} {INTEGER} {TIME_UNIT} {DIRECTION} {TIME}
@@ -142,15 +142,15 @@ De `occurs` functie kan worden geschreven met een van de volgende indelingen:
 
 | Argument | Beschrijving |
 | --------- | ----------- |
-| `{COMPARISON}` | Een vergelijkingsoperator. Kan een van de volgende operatoren zijn: `>`, `>=`, `<`, `<=`, `=`, `!=`. Meer informatie over de vergelijkingsfuncties vindt u in het document [met](./comparison-functions.md)vergelijkingsfuncties. |
+| `{COMPARISON}` | Een vergelijkingsoperator. Kan een van de volgende operatoren zijn: `>`, `>=`, `<`, `<=`, `=`, `!=`. Meer informatie over de vergelijkingsfuncties vindt u in het document [vergelijkingsfuncties](./comparison-functions.md). |
 | `{INTEGER}` | Een positief geheel getal. |
-| `{TIME_UNIT}` | Een tijdseenheid. Kan een van de volgende woorden zijn: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries``millennium``millennia`, . |
+| `{TIME_UNIT}` | Een tijdseenheid. Kan een van de volgende woorden zijn: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries`, `millennium`, `millennia`. |
 | `{DIRECTION}` | Een voorstelling waarin wordt beschreven wanneer de datum moet worden vergeleken met. Kan een van de volgende woorden zijn: `before`, `after`, `from`. |
-| `{TIME}` | Dit kan een letterlijke tijdstempel (`today`, `now`, `yesterday`, `tomorrow`), een relatieve tijdeenheid (een van `this`, `last`of `next` gevolgd door een tijdeenheid) of een tijdstempelkenmerk zijn. |
+| `{TIME}` | Kan een letterlijke tijdstempel zijn (`today`, `now`, `yesterday`, `tomorrow`), een relatieve tijdstempeleenheid (één van `this`, `last`, of `next` gevolgd door een tijdeenheid), of een tijdstempelattribuut. |
 
 >[!NOTE]
 >
->Het gebruik van het woord `on` is optioneel. Het is nodig om de leesbaarheid van bepaalde combinaties, zoals `timestamp occurs on date(2019,12,31)`bijvoorbeeld, te verbeteren.
+>Het gebruik van het woord `on` is optioneel. Het is er om leesbaarheid voor sommige combinaties, zoals `timestamp occurs on date(2019,12,31)` te verbeteren.
 
 **Voorbeeld**
 
@@ -192,4 +192,4 @@ person.birthday occurs = 3 days before today
 
 ## Volgende stappen
 
-Nu u over datum en tijdfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Lees voor meer informatie over andere PQL-functies het overzicht [van de](./overview.md)profielquery.
+Nu u over datum en tijdfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
