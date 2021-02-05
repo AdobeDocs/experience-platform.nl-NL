@@ -1,21 +1,17 @@
 ---
 keywords: QuestionPro Intercept Surveys;questionPro onderscheppingsenquêtes;QuestionPro;questionPro
-title: QuestionPro Intercept Surveys-extensie
-seo-title: QuestionPro Intercept Surveys-extensie
+title: Doel extensie VraagPro-onderscheppingsenquêtes
 description: De extensie QuestionPro Intercept Surveys is een doel voor enquêtes in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie QuestionPro Intercept Surveys is een doel voor enquêtes in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL QuestionPro Intercept Surveys] Extensie  {#questionpro-extension}
-
-## Overzicht {#overview}
+# [!DNL QuestionPro Intercept Surveys] extension  {#questionpro-extension}
 
 [!DNL QuestionPro Intercept Surveys] is een platform voor het opstellen van enquêtes en het verzamelen van attitudegegevens op het punt van transactie of wanneer de gebruikers uw website betreden/verlaten.
 
