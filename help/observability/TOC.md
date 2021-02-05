@@ -4,18 +4,18 @@ audience: user
 user-guide-title: Handleiding met informatie over waarneming
 user-guide-description: De activiteiten van het Platform volgen door gebruik te maken van statistische gegevens en meldingen van gebeurtenissen.
 translation-type: tm+mt
-source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
+source-git-commit: 92e3edaba5793d18e826d3e3f3151ba8a51fce53
 workflow-type: tm+mt
-source-wordcount: '55'
+source-wordcount: '53'
 ht-degree: 9%
 
 ---
 
 
-# Waarnembaarheidsinzichten {#observability}
+# Inzichten van waarneming {#observability}
 
 * [Overzicht van waarnemingsinformatie](home.md)
-* Handleiding voor ontwikkelaars van de API voor observatiedoeleinden {#api}
+* Observability Insights-API {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
    * [Cijfers](api/metrics.md)
