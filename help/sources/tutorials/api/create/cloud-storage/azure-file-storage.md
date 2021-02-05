@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Azure;Azure File Storage;Azure-bestandsopslag
 solution: Experience Platform
-title: Een Azure File Storage-connector maken met de Flow Service API
+title: Een Azure File Storage Source Connection maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Azure File Storage te verbinden met Experience Platform.
+description: Leer hoe u Azure File Storage met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '587'
 ht-degree: 1%
 
 ---
 
 
-# Een [!DNL Azure File Storage]-connector maken met de [!DNL Flow Service]-API
+# Een [!DNL Azure File Storage]-bronverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
