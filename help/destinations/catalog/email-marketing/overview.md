@@ -1,20 +1,18 @@
 ---
 keywords: e-mail;E-mail;e-mail;e-mailbestemmingen
-title: E-mailmarketingdoelen
-seo-title: E-mailmarketingdoelen
+title: Overzicht e-mailmarketingdoelen
 type: Tutorial
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
-seo-description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '791'
 ht-degree: 0%
 
 ---
 
 
-# E-mailmarketingdoelen {#email-marketing-destinations}
+# Overzicht van e-mailmarketingdoelen {#email-marketing-destinations}
 
 Met e-mailserviceproviders (ESP&#39;s) kunt u uw marketingactiviteiten voor e-mail beheren, zoals het verzenden van promotionele e-mailcampagnes. Adobe Experience Platform integreert met ESPs door u toe te staan om segmenten aan e-mail marketing bestemmingen te activeren.
 
