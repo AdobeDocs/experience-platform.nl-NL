@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
-title: E-mailmarketingdoelen maken
+title: E-mailmarketingdoelen maken met API-aanroepen
 description: Dit document behandelt het maken van e-mailmarketingdoelen met de Adobe Experience Platform API
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: d1f357659313aba0811b267598deda9770d946a1
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1644'
 ht-degree: 0%
 
 ---
 
 
-# E-mailmarketingdoelen maken en gegevens activeren met behulp van API-aanroepen in Adobe Experience Platform
+# E-mailmarketingdoelen maken en gegevens activeren met behulp van API-aanroepen
 
 Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw Adobe Experience Platform-gegevens, een [e-mailmarketingbestemming](../catalog/email-marketing/overview.md) te maken, een gegevensstroom naar uw nieuwe gemaakte bestemming te maken en gegevens te activeren voor uw nieuwe gemaakte bestemming.
 
