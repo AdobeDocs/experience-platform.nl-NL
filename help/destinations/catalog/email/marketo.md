@@ -1,21 +1,17 @@
 ---
 keywords: Marketo;Marketo;Marketo-extensie;Marketo-extensie
-title: Marketo-extensie
-seo-title: Marketo-extensie
+title: Extensiedoel markeren
 description: De extensie Marketo is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Marketo is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Marketo] Extensie  {#marketo-extension}
-
-## Overzicht {#overview}
+# [!DNL Marketo] extension  {#marketo-extension}
 
 [!DNL Marketo]De krachtige software voor marketingautomatisering helpt marketers de kunst en wetenschap van digitale marketing te master om klanten en vooruitzichten te betrekken.
 
