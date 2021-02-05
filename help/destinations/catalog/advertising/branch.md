@@ -1,21 +1,17 @@
 ---
 keywords: vertakking;vertakkingsuitbreiding;takbestemming
-title: Vertakkingsextensie
-seo-title: Vertakkingsextensie
+title: Doel extensie vertakking
 description: De extensie Branch is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Branch is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Branch] extension  {#branch-extension}
-
-## Overzicht {#overview}
 
 De tak verstrekt krachtige verbindingen en oplossingen die u, over alle apparaten, kanalen, en platforms helpen verwerven in dienst nemen en meten.
 
