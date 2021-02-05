@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;exporteren;Exporteren
 solution: Experience Platform
-title: Gebruikershandleiding voor Privacy Service
+title: Privacy-taken beheren in de gebruikersinterface van de Privacy Service
 topic: UI guide
 description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experience Cloud-toepassingen te coördineren en te controleren.
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1100'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Privacy Service] gebruikershandleiding
+# Privacy-taken beheren in de gebruikersinterface van de Privacy Service
 
 Dit document bevat stappen voor het maken en beheren van privacyverzoeken met behulp van de [!DNL Privacy Service]-gebruikersinterface.
 
