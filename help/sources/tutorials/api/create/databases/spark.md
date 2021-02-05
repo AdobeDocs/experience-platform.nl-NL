@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Apache Spark;apache spark;Azure HDInsights
 solution: Experience Platform
-title: Maak een Apache Spark op Azure HDInsights-connector met de Flow Service API
+title: Een Apache Spark maken op Azure HDInsights Source Connection met de Flow Service API
 topic: overview
 type: Tutorial
-description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Apache Spark op Azure HDInsights (hierna "Spark" genoemd) aan Experience Platform te koppelen.
+description: Leer hoe u Apache Spark op Azure HDInsights kunt aansluiten op Adobe Experience Platform met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '591'
 ht-degree: 1%
 
 ---
 
 
-# Een [!DNL Apache Spark] maken op [!DNL Azure] HDInsights-connector met de [!DNL Flow Service]-API
+# Een [!DNL Apache Spark] maken op [!DNL Azure] HDInsights-bronverbinding met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
