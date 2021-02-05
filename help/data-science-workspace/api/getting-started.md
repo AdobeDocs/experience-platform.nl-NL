@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;ontwikkelaarsgids;eindpunt;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;de werkruimte van de wetenschap van gegevens;gegevenswetenschap
 solution: Experience Platform
-title: Handleiding voor ontwikkelaars van Sensei Machine Learning API
+title: API-handleiding Sensei Machine Learning
 topic: Developer guide
-description: Deze ontwikkelaarsgids verstrekt stappen om u te helpen beginnen het Leren API van de Machine Sensei te gebruiken, en toont API vraag voor het uitvoeren van verrichtingen CRUD op diverse middelen van de Werkruimte van de Wetenschap van Gegevens aan.
+description: Met de API voor leren van Sensei-machines kunnen ontwikkelaars CRUD-bewerkingen uitvoeren op verschillende bronnen van de Data Science Workspace. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Sensei Machine Learning] Handleiding voor API-ontwikkelaars
+# [!DNL Sensei Machine Learning] API-handleiding
 
 De [!DNL Sensei Machine Learning] API biedt een mechanisme voor gegevenswetenschappers om services voor machinaal leren te organiseren en te beheren, van algoritme aan boord tot experimenteren en implementatie van services.
 
