@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Microsoft Dynamics;microsoft dynamics;Dynamics;dynamics;dynamics
 solution: Experience Platform
-title: Creeer een de bronschakelaar van de Dynamica van Microsoft in UI
+title: Creeer een Verbinding van de Bron van de Dynamica van Microsoft in UI
 topic: overview
 type: Tutorial
-description: Dit leerprogramma verstrekt stappen voor het creëren van een de bronschakelaar van de Dynamiek van Microsoft (hierna genoemd "Dynamica") gebruikend het gebruikersinterface van het Platform.
+description: Leer hoe u een Microsoft Dynamics-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4241e00fd444969e5a40c8b34dd7786b1a3c6dcb
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 0%
+source-wordcount: '596'
+ht-degree: 1%
 
 ---
 
 
-# Een [!DNL Microsoft Dynamics]-bronconnector maken in de gebruikersinterface
+# Een [!DNL Microsoft Dynamics]-bronverbinding maken in de gebruikersinterface
 
-Deze zelfstudie biedt stappen voor het maken van een [!DNL Microsoft Dynamics] (hierna &quot;[!DNL Dynamics]&quot; genoemd) bronconnector met behulp van de gebruikersinterface van het Platform.
+Deze zelfstudie bevat stappen voor het maken van een [!DNL Microsoft Dynamics]-bronverbinding (hierna &quot;[!DNL Dynamics]&quot; genoemd) met behulp van de Adobe Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
