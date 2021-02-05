@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;SFTP;sftp
 solution: Experience Platform
-title: SFTP-aansluiting
+title: Overzicht van SFTP-bronconnector
 topic: overview
-description: De documentatie hieronder verstrekt informatie over hoe te om een server van SFTP aan Platform te verbinden gebruikend APIs of het gebruikersinterface.
+description: Leer hoe u een SFTP-server verbindt met Adobe Experience Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%
@@ -48,11 +48,11 @@ De documentatie hieronder verstrekt informatie over hoe te om een server van SFT
 
 ### API&#39;s gebruiken
 
-- [Een SFTP-connector maken met de Flow Service API](../../tutorials/api/create/cloud-storage/sftp.md)
+- [Een SFTP-bronverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/sftp.md)
 - [Een systeem voor cloudopslag verkennen met de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Gegevens voor cloudopslag verzamelen met de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### De gebruikersinterface gebruiken
 
-- [Een SFTP-bronconnector maken in de UI](../../tutorials/ui/create/cloud-storage/sftp.md)
-- [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Een SFTP-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/sftp.md)
+- [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
