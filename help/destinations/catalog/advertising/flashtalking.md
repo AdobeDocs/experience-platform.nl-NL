@@ -1,21 +1,17 @@
 ---
 keywords: FlashTalk OneTag-extensies;FlashTalk OneTag-extensie;FlashTalk OneTag-doelen;FlashTalk OneTag;flashtalkOnTag
-title: OneTag-extensie knipperen
-seo-title: OneTag-extensie knipperen
+title: OneTag-extensiebestemming knipperen
 description: De Flashtalk OneTag-extensie is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Flashtalk OneTag-extensie is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Flashtalking OneTag] extension  {#flashtalking-extension}
-
-## Overzicht {#overview}
 
 Met de extensie [!DNL Flashtalking OneTag] voor Experience Platform Launch kunt u gemakkelijk handelingen van sites toewijzen aan weergave, video en mobiele advertentie-activiteit. Implementeer [!DNL Flashtalking OneTag] in uw wegeigenschappen met behulp van Launch.
 
