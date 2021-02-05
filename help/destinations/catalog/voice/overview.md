@@ -1,19 +1,17 @@
 ---
 keywords: stembestemmingen;stembestemmingen
-title: Stem van de Doelen van de Klant
-seo-title: Stem van de Doelen van de Klant
+title: Stem van het Overzicht van de Doelen van de Klant
 description: De platforms van de stem verzamelen en verzamelen gegevens uit diverse bronnen met inbegrip van stemberichten, vraaggegevens en praatjegesprekken. De verzamelde informatie kan worden gefilterd en geanalyseerd om bedrijven in staat te stellen hun website te optimaliseren om aan hun vereisten te voldoen.
-seo-description: De platforms van de stem verzamelen en verzamelen gegevens uit diverse bronnen met inbegrip van stemberichten, vraaggegevens en praatjegesprekken. De verzamelde informatie kan worden gefilterd en geanalyseerd om bedrijven in staat te stellen hun website te optimaliseren om aan hun vereisten te voldoen.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
 
 
-# Spraak van de bestemmingen van de Klant {#voice-of-customer-destinations}
+# Stem van het overzicht van de bestemmingen van de Klant {#voice-of-customer-destinations}
 
 De platforms van de stem verzamelen en verzamelen gegevens uit diverse bronnen met inbegrip van stemberichten, vraaggegevens en praatjegesprekken. De verzamelde informatie kan worden gefilterd en geanalyseerd om bedrijven in staat te stellen hun website te optimaliseren om aan hun vereisten te voldoen.
 
