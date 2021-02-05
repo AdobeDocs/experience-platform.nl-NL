@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;de bronschakelaar van de manager van het publiek;Audience Manager;de schakelaar van de publieksmanager
 solution: Experience Platform
-title: Een Adobe Audience Manager-bronaansluiting maken in de gebruikersinterface
+title: Een Adobe Audience Manager-bronverbinding maken in de gebruikersinterface
 topic: overview
 type: Tutorial
 description: Deze zelfstudie begeleidt u door de stappen om een bronschakelaars voor Adobe Audience Manager tot stand te brengen om de gegevens van de Gebeurtenis van de Consumentenervaring in Platform te brengen gebruikend het gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: bdf95d75bf8db9f3438011f298d17c4259d2c63c
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Een Adobe Audience Manager-bronaansluiting maken in de gebruikersinterface
+# Een Adobe Audience Manager-bronverbinding maken in de gebruikersinterface
 
 Deze zelfstudie begeleidt u door de stappen om een bronschakelaar voor Adobe Audience Manager tot stand te brengen om de gegevens van de Gebeurtenis van de Consumentenervaring in Platform te brengen gebruikend het gebruikersinterface.
 
@@ -37,7 +37,7 @@ Als u door beschikbare segmenten wilt navigeren, selecteert u de map die u wilt 
 
 ![segmentmap](../../../../images/tutorials/create/aam/segment-folder.png)
 
-Nadat u de gewenste segmenten hebt geïdentificeerd en geselecteerd, wordt rechts een nieuw deelvenster weergegeven met de lijst met geselecteerde items. U kunt tot verschillende omslagen blijven toegang hebben en verschillende segmenten voor uw verbinding selecteren. Als u meer segmenten selecteert, wordt het deelvenster aan de rechterkant bijgewerkt.
+Nadat u de gewenste segmenten hebt geïdentificeerd en geselecteerd, wordt aan de rechterkant een nieuw deelvenster weergegeven met de lijst met geselecteerde items. U kunt tot verschillende omslagen blijven toegang hebben en verschillende segmenten voor uw verbinding selecteren. Als u meer segmenten selecteert, wordt het deelvenster aan de rechterkant bijgewerkt.
 
 ![select-data](../../../../images/tutorials/create/aam/select-data.png)
 
