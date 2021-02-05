@@ -5,10 +5,10 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 0%
+source-wordcount: '551'
+ht-degree: 4%
 
 ---
 
@@ -22,10 +22,10 @@ ht-degree: 0%
       - [Gegevensconnector Analytics](connectors/adobe-applications/analytics.md)
       - [Audience Manager-aansluiting](connectors/adobe-applications/audience-manager.md)
       - [Klantenkenmerkaansluiting](connectors/adobe-applications/customer-attributes.md)
-      - Toepassingsvelden van Adobe toewijzen {#mapping}
-         - [Toewijzingsvelden voor analysemogelijkheden](connectors/adobe-applications/mapping/analytics.md)
-         - [Toewijzingsvelden voor Audience Managers](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Doeltoewijzingsvelden](connectors/adobe-applications/mapping/target.md)
+      - Toewijzingen van toepassingsveld Adobe {#mapping}
+         - [Toewijzingen van analytische velden](connectors/adobe-applications/mapping/analytics.md)
+         - [Veldtoewijzingen Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Toewijzingen doelveld](connectors/adobe-applications/mapping/target.md)
    - Reclame {#advertising}
       - [Google AdWords-connector](connectors/advertising/ads.md)
    - Cloudopslag {#cloud-storage}
@@ -72,51 +72,51 @@ ht-degree: 0%
    - Protocollen {#protocols}
       - [Generic OData-connector](connectors/protocols/odata.md)
 - API-zelfstudies {#api-tutorials}
-   - Een bronaansluiting maken {#create}
+   - Een bronverbinding maken {#create}
       - Reclame {#advertising}
-         - [Google AdWords-connector](tutorials/api/create/advertising/ads.md)
+         - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - Cloudopslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
-         - [Amazon S3-connector](tutorials/api/create/cloud-storage/s3.md)
-         - [Apache HDFS-aansluiting](tutorials/api/create/cloud-storage/hdfs.md)
-         - [Azure Blob-connector](tutorials/api/create/cloud-storage/blob.md)
-         - [Azure Data Lake Storage Gen2-connector](tutorials/api/create/cloud-storage/adls-gen2.md)
-         - [Azure Event Hubs-connector](tutorials/api/create/cloud-storage/eventhub.md)
-         - [Azure File Storage-aansluiting](tutorials/api/create/cloud-storage/azure-file-storage.md)
-         - [FTP-aansluiting](tutorials/api/create/cloud-storage/ftp.md)
-         - [Google Cloud Storage-connector](tutorials/api/create/cloud-storage/google.md)
-         - [SFTP-aansluiting](tutorials/api/create/cloud-storage/sftp.md)
+         - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
+         - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
+         - [Azure Blob](tutorials/api/create/cloud-storage/blob.md)
+         - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Azure Event Hubs](tutorials/api/create/cloud-storage/eventhub.md)
+         - [Azure-bestandsopslag](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [FTP](tutorials/api/create/cloud-storage/ftp.md)
+         - [Google Cloud-opslag](tutorials/api/create/cloud-storage/google.md)
+         - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [Microsoft Dynamics-connector](tutorials/api/create/crm/ms-dynamics.md)
-         - [Salesforce-aansluiting](tutorials/api/create/crm/salesforce.md)
+         - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
+         - [Salesforce](tutorials/api/create/crm/salesforce.md)
       - Klantsucces {#customer-success}
-         - [Salesforce Service Cloud-aansluiting](tutorials/api/create/customer-success/salesforce-service-cloud.md)
-         - [ServiceNow-connector](tutorials/api/create/customer-success/servicenow.md)
+         - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+         - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - Databases {#databases}
-         - [Amazon Redshift-connector](tutorials/api/create/databases/redshift.md)
-         - [Apache Hive op Azure HDInsights-connector](tutorials/api/create/databases/hive.md)
-         - [Apache Spark op Azure HDInsights-connector](tutorials/api/create/databases/spark.md)
-         - [Azure Data Explorer-connector](tutorials/api/create/databases/data-explorer.md)
-         - [azure synapse Analytics-connector](tutorials/api/create/databases/synapse-analytics.md)
-         - [Azure Table Storage-connector](tutorials/api/create/databases/ats.md)
-         - [Koppelaansluiting](tutorials/api/create/databases/couchbase.md)
-         - [Google BigQuery-connector](tutorials/api/create/databases/bigquery.md)
-         - [GreenPlum-connector](tutorials/api/create/databases/greenplum.md)
-         - [HP Vertica-connector](tutorials/api/create/databases/hp-vertica.md)
-         - [IBM DB2-connector](tutorials/api/create/databases/ibm-db2.md)
-         - [MySQL-connector](tutorials/api/create/databases/mysql.md)
-         - [Oracle-connector](tutorials/api/create/databases/oracle.md)
-         - [Phoenix-aansluiting](tutorials/api/create/databases/phoenix.md)
-         - [PostgreSQL-connector](tutorials/api/create/databases/postgres.md)
-         - [SQL Server-aansluiting](tutorials/api/create/databases/sql-server.md)
+         - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
+         - [Apache Hive op Azure HDInsights](tutorials/api/create/databases/hive.md)
+         - [Apache Spark op Azure HDInsights](tutorials/api/create/databases/spark.md)
+         - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
+         - [azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azure Table Storage](tutorials/api/create/databases/ats.md)
+         - [Couchbase](tutorials/api/create/databases/couchbase.md)
+         - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
+         - [GreenPlum](tutorials/api/create/databases/greenplum.md)
+         - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
+         - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
+         - [MySQL](tutorials/api/create/databases/mysql.md)
+         - [Oracle](tutorials/api/create/databases/oracle.md)
+         - [Phoenix](tutorials/api/create/databases/phoenix.md)
+         - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
-         - [Shopify-connector](tutorials/api/create/ecommerce/shopify.md)
+         - [Schopify](tutorials/api/create/ecommerce/shopify.md)
       - Marketingautomatisering {#marketing-automation}
-         - [HubSpot-connector](tutorials/api/create/marketing-automation/hubspot.md)
+         - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
       - Betalingen {#payments}
-         - [PayPal-connector](tutorials/api/create/payments/paypal.md)
+         - [PayPal](tutorials/api/create/payments/paypal.md)
       - Protocollen {#protocols}
-         - [Generic OData-connector](tutorials/api/create/protocols/odata.md)
+         - [Generic OData](tutorials/api/create/protocols/odata.md)
    - Gegevens {#explore} verkennen
       - [Reclamegegevens verkennen](tutorials/api/explore/advertising.md)
       - [Gegevens over cloudopslag verkennen](tutorials/api/explore/cloud-storage.md)
@@ -145,68 +145,68 @@ ht-degree: 0%
    - [Verbindingen verwijderen](tutorials/api/delete.md)
    - [Gegevensstromen verwijderen](tutorials/api/delete-dataflows.md)
 - UI-zelfstudies {#ui-tutorials}
-   - Een bronaansluiting maken {#create}
+   - Een bronverbinding maken {#create}
       - Adobe-toepassingen {#adobe-applications}
-         - [Adobe Analytics Classifications Data-connector](tutorials/ui/create/adobe-applications/classifications.md)
-         - [Adobe Analytics-connector](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Adobe Audience Manager-connector](tutorials/ui/create/adobe-applications/audience-manager.md)
-         - [Klantenkenmerkaansluiting](tutorials/ui/create/adobe-applications/customer-attributes.md)
+         - [Adobe Analytics (rapportsuite-gegevens)](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Adobe Analytics (classificatiegegevens)](tutorials/ui/create/adobe-applications/classifications.md)
+         - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Klantkenmerken](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Reclame {#create}
-         - [Google AdWords-connector](tutorials/ui/create/advertising/ads.md)
+         - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - Cloudopslag {#cloud-storage}
-         - [Amazon Kinesis-connector](tutorials/ui/create/cloud-storage/kinesis.md)
-         - [Amazon S3-connector](tutorials/ui/create/cloud-storage/s3.md)
-         - [Apache HDFS-aansluiting](tutorials/ui/create/cloud-storage/hdfs.md)
-         - [Azure Data Lake Storage Gen2-connector](tutorials/ui/create/cloud-storage/adls-gen2.md)
-         - [Azure Blob-connector](tutorials/ui/create/cloud-storage/blob.md)
-         - [Azure Event Hubs-connector](tutorials/ui/create/cloud-storage/eventhub.md)
-         - [Azure File Storage-aansluiting](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [FTP-aansluiting](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Google Cloud Storage-connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
-         - [SFTP-aansluiting](tutorials/ui/create/cloud-storage/sftp.md)
-         - [Amazon S3- en Blob-connector](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
+         - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
+         - [Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
+         - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
+         - [Azure Event Hubs](tutorials/ui/create/cloud-storage/eventhub.md)
+         - [Azure-bestandsopslag](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+         - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
+         - [Google Cloud-opslag](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
+         - [Amazon S3 en Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
-         - [Microsoft Dynamics-connector](tutorials/ui/create/crm/dynamics.md)
-         - [Salesforce-aansluiting](tutorials/ui/create/crm/salesforce.md)
+         - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
+         - [Salesforce](tutorials/ui/create/crm/salesforce.md)
       - Klantsucces {#customer-success}
-         - [Salesforce Service Cloud-aansluiting](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
-         - [ServiceNow-connector](tutorials/ui/create/customer-success/servicenow.md)
+         - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - Databases {#databases}
-         - [Amazon Redshift-connector](tutorials/ui/create/databases/redshift.md)
-         - [Apache Hive op Azure HDInsights-connector](tutorials/ui/create/databases/hive.md)
-         - [Apache Spark op Azure HDInsights-connector](tutorials/ui/create/databases/spark.md)
-         - [Azure Data Explorer-connector](tutorials/ui/create/databases/data-explorer.md)
-         - [azure synapse Analytics-connector](tutorials/ui/create/databases/synapse-analytics.md)
-         - [Azure Table Storage-connector](tutorials/ui/create/databases/ats.md)
-         - [Koppelaansluiting](tutorials/ui/create/databases/couchbase.md)
-         - [Google Big Query-connector](tutorials/ui/create/databases/bigquery.md)
-         - [GreenPlum-connector](tutorials/ui/create/databases/greenplum.md)
-         - [HP Vertica-connector](tutorials/ui/create/databases/hp-vertica.md)
-         - [IBM DB2-connector](tutorials/ui/create/databases/ibm-db2.md)
-         - [Microsoft SQL Server-aansluiting](tutorials/ui/create/databases/sql-server.md)
-         - [MySQL-connector](tutorials/ui/create/databases/mysql.md)
-         - [Oracle-connector](tutorials/ui/create/databases/oracle.md)
-         - [Phoenix-aansluiting](tutorials/ui/create/databases/phoenix.md)
-         - [PostgreSQL-connector](tutorials/ui/create/databases/postgres.md)
+         - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
+         - [Apache Hive op Azure HDInsights](tutorials/ui/create/databases/hive.md)
+         - [Apache Spark op Azure HDInsights](tutorials/ui/create/databases/spark.md)
+         - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
+         - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
+         - [Couchbase](tutorials/ui/create/databases/couchbase.md)
+         - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
+         - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
+         - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
+         - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
+         - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
+         - [MySQL](tutorials/ui/create/databases/mysql.md)
+         - [Oracle](tutorials/ui/create/databases/oracle.md)
+         - [Phoenix](tutorials/ui/create/databases/phoenix.md)
+         - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - eCommerce {#ecommerce}
-         - [Shopify-connector](tutorials/ui/create/ecommerce/shopify.md)
+         - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
       - Marketingautomatisering {#marketing-automation}
-         - [HubSpot-connector](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - Betalingen {#payments}
-         - [PayPal-connector](tutorials/ui/create/payments/paypal.md)
+         - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocollen {#protocols}
-         - [Generic OData-connector](tutorials/ui/create/protocols/odata.md)
+         - [Generic OData](tutorials/ui/create/protocols/odata.md)
    - Een gegevensstroom configureren {#dataflow}
-      - [Een dataflow configureren voor een advertentieverbinding](tutorials/ui/dataflow/advertising.md)
-      - [Een dataflow configureren voor een batch-cloudopslagconnector](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [Een dataflow configureren voor een streamingaansluiting voor cloudopslag](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-      - [Een gegevensstroom configureren voor een CRM-aansluiting](tutorials/ui/dataflow/crm.md)
-      - [Een dataflow configureren voor een klantsuccesconnector](tutorials/ui/dataflow/customer-success.md)
-      - [Een gegevensstroom configureren voor een databaseverbinding](tutorials/ui/dataflow/databases.md)
-      - [Een gegevensstroom configureren voor een eCommerce-connector](tutorials/ui/dataflow/ecommerce.md)
-      - [Een gegevensstroom configureren voor een marketingautomatiseringsaansluiting](tutorials/ui/dataflow/marketing-automation.md)
-      - [Een gegevensstroom configureren voor een betalingsaansluiting](tutorials/ui/dataflow/payments.md)
-      - [Vorm een dataflow voor een protocolschakelaar](tutorials/ui/dataflow/protocols.md)
+      - [Gegevensstroom advertentieverbinding](tutorials/ui/dataflow/advertising.md)
+      - [Batch-gegevens voor cloudopslagverbinding](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [Gegevens over streaming cloudopslagverbinding](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+      - [Gegevens CRM-verbinding](tutorials/ui/dataflow/crm.md)
+      - [Gegevensstroom voor succesverbinding van klant](tutorials/ui/dataflow/customer-success.md)
+      - [Gegevensstroom databaseverbinding](tutorials/ui/dataflow/databases.md)
+      - [Gegevensstroom ecommerce-verbinding](tutorials/ui/dataflow/ecommerce.md)
+      - [Verbinding voor marketingautomatisering](tutorials/ui/dataflow/marketing-automation.md)
+      - [Gegevensstroom betalingsverbinding](tutorials/ui/dataflow/payments.md)
+      - [Dataflow van protocolverbinding](tutorials/ui/dataflow/protocols.md)
    - [Inkomende gegevens activeren om klantprofielen te vullen](tutorials/ui/profile.md)
    - [Dataflows bewaken](tutorials/ui/monitor.md)
    - [Accounts bijwerken](tutorials/ui/update.md)
