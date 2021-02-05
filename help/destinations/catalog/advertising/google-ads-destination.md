@@ -1,21 +1,17 @@
 ---
 keywords: Google-advertenties;Google-advertenties;Google AdWords;Google Adwords
-title: Google AdsDestination
-seo-title: Bestemming voor Google-advertenties
+title: Bestemming Google Ads-verbinding
 description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
-seo-description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 translation-type: tm+mt
-source-git-commit: bb2fc2658d32c59b476dd9d526eb8bc2f055a1af
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Google Ads] Bestemming
-
-## Overzicht
+# [!DNL Google Ads] verbinding
 
 [!DNL Google Ads], voorheen bekend als  [!DNL Google AdWords], is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische weergaven,  [!DNL YouTube] video&#39;s en mobiele weergaven in de app.
 
@@ -54,7 +50,7 @@ Voordat u de [!DNL Google Ads]-bestemming in Platform maakt, moet u contact opne
 
 * **Account-id** : Dit is Adobe account-ID met  [!DNL Google]. Neem contact op met de klantenservice van Adobe of uw Adobe om deze id te verkrijgen.
 * **Klant-id** : Dit is Adobe-klant-id met  [!DNL Google]. Neem contact op met de klantenservice van Adobe of uw Adobe om deze id te verkrijgen.
-* Je accounttype: **Advertentiewoorden**
+* Je accounttype: **AdWords**
 * **Google AdWords-id** : Dit is je ID met  [!DNL Google]. De id-indeling heeft doorgaans de notatie 123-456-7890.
 
 ## Doel configureren
