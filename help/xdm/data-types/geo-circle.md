@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;circle;datatype;data-type;data type;
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;geo;circle;datatype;data-type;data-type;
 solution: Experience Platform
-title: Gegevenstype Geo Circle
+title: Gegevenstype Geo-cirkel
 topic: overview
 description: Dit document biedt een overzicht van het gegevenstype Geo Circle XDM.
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '133'
 ht-degree: 2%
 
 ---
 
 
-# [!UICONTROL Gegevenstype Geo Circle]
+# [!UICONTROL Het type Geo ] CircleData
 
-[!UICONTROL Geo Circle] is een standaard XDM-gegevenstype dat cirkelvormige geografische regio beschrijft, op basis van een bepaalde straal die op een bepaalde set coördinaten is gecentreerd. Dit gegevenstype is gebaseerd op de openbare die specificatie op [schema.org](http://schema.org/GeoCircle)wordt gedocumenteerd.
+[!UICONTROL Geo ] Circle is een standaard XDM gegevenstype dat cirkelvormig geografisch gebied beschrijft, gegeven een bepaalde straal die op een specifieke reeks coördinaten wordt gecentreerd. Dit gegevenstype is gebaseerd op de openbare specificatie die op [schema.org](http://schema.org/GeoCircle) wordt gedocumenteerd.
 
 <img src="../images/data-types/geo-circle.png" width="400" /><br />
 
@@ -23,5 +23,5 @@ ht-degree: 2%
 | --- | --- | --- |
 | `_schema.coordinates` | [[!UICONTROL Geo-coördinaten]](./geo-coordinates.md) | Beschrijft de geografische coördinaten van het centrum van de cirkel. |
 | `_schema.description` | Tekenreeks | Een beschrijving van wat de cirkel bevat. |
-| `_schema.radius` | Dubbel | De lengte van de straal van de cirkel. Deze waarde komt overeen met het [WGS84](http://gisgeography.com/wgs84-world-geodetic-system/) -gegeven en wordt gemeten in meters. |
+| `_schema.radius` | Dubbel | De lengte van de straal van de cirkel. Deze waarde komt overeen met het [WGS84](http://gisgeography.com/wgs84-world-geodetic-system/)-gegeven en wordt gemeten in meters. |
 | `_id` | Tekenreeks | Een unieke, door het systeem gegenereerde id voor de cirkel. |
