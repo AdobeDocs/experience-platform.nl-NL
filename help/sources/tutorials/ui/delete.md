@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics; delete dataflows
+keywords: Experience Platform;thuis;populaire onderwerpen; gegevensstroom verwijderen
 description: De werkruimte Bronnen biedt u de mogelijkheid om bestaande batch- en streaming gegevensstromen te verwijderen die fouten bevatten of verouderd zijn.
 solution: Experience Platform
-title: Gegevensstromen verwijderen
+title: Gegevensstromen verwijderen in de gebruikersinterface
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 7cb5862112c80e386e697aa2bd503abe49f11a3f
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '368'
 ht-degree: 1%
 
 ---
@@ -16,26 +16,26 @@ ht-degree: 1%
 
 # Gegevensstromen verwijderen in de gebruikersinterface
 
-Met de werkruimte [!UICONTROL Bronnen] kunt u bestaande batch- en streaming-gegevensstromen verwijderen die fouten bevatten of verouderd zijn.
+Met de werkruimte [!UICONTROL Bronnen] kunt u bestaande batch- en streaming gegevensstromen verwijderen die fouten bevatten of verouderd zijn geworden.
 
-Dit leerprogramma verstrekt stappen voor het schrappen van gegevensstromen gebruikend de [!UICONTROL werkruimte van Bronnen] .
+Deze zelfstudie bevat stappen voor het verwijderen van gegevensstromen met behulp van de werkruimte [!UICONTROL Bronnen].
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [Bronnen](../../home.md): [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de [!DNL Platform] diensten.
-- [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één enkele [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [Bronnen](../../home.md):  [!DNL Experience Platform] staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de  [!DNL Platform] diensten.
+- [Sandboxen](../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ## Gegevensstromen verwijderen
 
-In het [Experience Platform UI](https://platform.adobe.com), uitgezochte **[!UICONTROL Bronnen]** van de linkernavigatie om tot de [!UICONTROL Bronwerkruimte] toegang te hebben, en dan **[!UICONTROL Dataflows]** van de hoogste kopbal te selecteren.
+In [Experience Platform UI](https://platform.adobe.com), selecteer **[!UICONTROL Bronnen]** van de linkernavigatie om tot [!UICONTROL Bronnen] werkruimte toegang te hebben, en selecteer dan **[!UICONTROL Dataflows]** van de hoogste kopbal.
 
 ![catalogus](../../images/tutorials/delete/catalog.png)
 
-De pagina **[!UICONTROL Gegevensstroom]** wordt weergegeven. Op deze pagina is een lijst van viewable gegevensstromen, met inbegrip van informatie over hun doeldataset, bron, rekeningsnaam, en datum van verwezenlijking.
+De pagina **[!UICONTROL Dataflows]** wordt weergegeven. Op deze pagina is een lijst van viewable gegevensstromen, met inbegrip van informatie over hun doeldataset, bron, rekeningsnaam, en datum van verwezenlijking.
 
-Selecteer het filterpictogram (![filter-pictogram](../../images/tutorials/delete/filter.png)) linksboven om het deelvenster Sorteren te starten.
+Selecteer het filterpictogram (![filter-pictogram](../../images/tutorials/delete/filter.png)) op de bovenkant verlaten om het soortpaneel te lanceren.
 
 ![dataflows](../../images/tutorials/delete/dataflows.png)
 
@@ -61,6 +61,6 @@ Na enkele ogenblikken wordt onder aan het scherm een bevestigingsvak weergegeven
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes de werkruimte [!UICONTROL Bronnen] gebruikt om een bestaande gegevensstroom te schrappen.
+Door deze zelfstudie te volgen, hebt u met succes [!UICONTROL Bronnen] werkruimte gebruikt om een bestaande gegevensstroom te schrappen.
 
-Zie de zelfstudie over het [verwijderen van gegevensstromen met behulp van de Flow Service API](../../tutorials/api/delete-dataflows.md) voor stappen over hoe u deze bewerkingen programmatisch kunt uitvoeren met behulp van API-aanroepen.
+Zie de zelfstudie over [het schrappen van gegevensstromen gebruikend de Dienst API van de Stroom](../../tutorials/api/delete-dataflows.md) voor stappen op hoe te om deze verrichtingen programmatically uit te voeren gebruikend API vraag.
