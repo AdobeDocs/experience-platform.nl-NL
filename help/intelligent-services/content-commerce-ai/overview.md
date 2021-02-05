@@ -1,13 +1,13 @@
 ---
-keywords: Experience Cloud;getting started;content and commerce ai;popular topics;Intelligent Services;ccai
+keywords: Experience Cloud;aan de slag;inhoud en handel ai;populaire onderwerpen;Intelligente services;ccai
 solution: Experience Cloud, Intelligent Services, Experience Platform
-title: Overzicht van AI-bestanden voor inhoud en handel
+title: Overzicht van Content and Commerce AI
 topic: Content and Commerce AI
 description: AI van de Inhoud en van de Handel is een reeks diensten van AI die u toestaat om intelligente eigenschappen uit uw inhoud te halen, inhoudsstroom te organiseren, te stroomlijnen, en nuttigere, gepersonaliseerde ervaringen aan uw klanten te leveren.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Inhoud is een essentieel onderdeel van deze ervaringen. Om marketingvragen beter
 
 | Inhoudstype | Functies | Overzicht van functionaliteit |
 | --- | --- | --- |
-| Tekst | - Trefwoord- en entiteitextractie <br>- Aangepaste classificaties | - Trefwoorden en tags automatisch ophalen uit bedrijfsdocumenten en webpagina&#39;s met een AI-service buiten de box. <br> - Automatisch de documenten of webpagina&#39;s van een onderneming labelen per bedrijfstaxonomie met behulp van een service die is gebaseerd op aangepaste AI-modellen. |
+| Tekst | - extractie van trefwoorden en entiteiten <br> - Aangepaste classificaties | - Trefwoorden en tags automatisch ophalen uit bedrijfsdocumenten en webpagina&#39;s met een AI-service buiten de box. <br> - Automatisch de documenten of webpagina&#39;s van een onderneming labelen per bedrijfstaxonomie met behulp van een service die is gebaseerd op aangepaste AI-modellen. |
 | Afbeeldingen | - Visuele aanbevelingen <br> - Kleurextractie | - visueel vergelijkbare productaanbevelingen aan de consument doen, met behulp van een AI-model dat is ontwikkeld op basis van intuïtieve productkenmerken (ontwerp, kleur, vorm). <br> - Haal de dominante kleuren (labels en hexadecimale waarden) en hun gewicht nauwkeurig uit een afbeelding van het product. |
 
 ## Inzicht in AI voor inhoud en handel
