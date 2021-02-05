@@ -5,10 +5,10 @@ user-guide-title: Help bij Adobe Experience Platform Data Science Workspace
 breadcrumb-title: Werkruimtegids voor gegevenswetenschappen
 user-guide-description: Gebruik computerleren om modellen en recepten te ontwikkelen, te trainen en te scoren met Adobe Sensei- en JupyterLab-laptops.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 2%
+source-wordcount: '233'
+ht-degree: 3%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 2%
 * [Toegang tot en functies van Data Science Workspace](access-features-dsw.md)
 * [Analyse van de Data Science Workspace](walkthrough.md)
 * JupyterLab-laptops {#jupyterlab}
-   * [Gebruikershandleiding voor JupyterLab](jupyterlab/overview.md)
+   * [Overzicht](jupyterlab/overview.md)
    * [Toegang tot gegevens](jupyterlab/access-notebook-data.md)
    * [Uw gegevens analyseren](jupyterlab/analyze-your-data.md)
    * [Query-service](jupyterlab/query-service.md)
    * [Een recept maken](jupyterlab/create-a-recipe.md)
    * [Samenwerken in JupyterLab met behulp van Git](jupyterlab/using-git-for-collaboration.md)
-* API Sensei Machine Learning {#api}
+* API voor leren door Sensei-machine {#api}
    * [Aan de slag](api/getting-started.md)
    * [Motoren](api/engines.md)
    * [MLInstances (recepten)](api/mlinstances.md)
@@ -34,10 +34,10 @@ ht-degree: 2%
    * [MLServices](api/mlservices.md)
    * [Inzichten](api/insights.md)
    * [Aanhangsel](api/appendix.md)
-* Real-time Machine Learning (alfa) {#real-time-machine-learning}
+* Real-time Machine Learning (Alpha) {#real-time-machine-learning}
    * [Overzicht](real-time-machine-learning/home.md)
    * [Aan de slag](real-time-machine-learning/getting-started.md)
-   * [Gebruikershandleiding voor RTML Authoring notebook](real-time-machine-learning/rtml-authoring-notebook.md)
+   * [Laptops beheren](real-time-machine-learning/rtml-authoring-notebook.md)
    * [Referentiehandleiding knooppunt](real-time-machine-learning/node-reference.md)
 * Vooraf gebouwde recepten {#pre-built-recipes}
    * [Recept voor productaanbevelingen](pre-built-recipes/product-recommendations.md)
@@ -46,11 +46,11 @@ ht-degree: 2%
 * Model Authoring {#authoring}
    * [Model Authoring SDK](authoring/sdk.md)
    * [Een functiepijpleiding maken](authoring/feature-pipeline.md)
-   * [Handleiding SDK Platform (Python)](authoring/platform-sdk.md)
+   * [Model authoring met de SDK van het Platform (Python)](authoring/platform-sdk.md)
    * [Toegang tot Python-gegevens](authoring/python.md)
    * [Toegang tot Vonk-gegevens](authoring/spark.md)
 * Zelfstudies over modellen en recept {#models-recipes}
-   * [Een analyse van een model voor machinaal leren maken en publiceren](models-recipes/create-publish-model.md)
+   * [Een model voor machinaal leren maken en publiceren](models-recipes/create-publish-model.md)
    * [Het schema en de gegevensset voor de detailhandel maken](models-recipes/create-retails-sales-dataset.md)
    * [Voorvertoningsschema&#39;s en gegevenssets](models-recipes/preview-schema-data.md)
    * [Bronbestanden in een recept plaatsen](models-recipes/package-source-files-recipe.md)
