@@ -4,7 +4,7 @@ title: Voorbeeldgegevens genereren voor een XDM-schema in de gebruikersinterface
 description: Leer hoe u voorbeeld-JSON-gegevens kunt genereren op basis van een bestaand schema in de Adobe Experience Platform-gebruikersinterface.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 87497ef8a0ebf8de8b6c2dff1650c0b982299e8a
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Om gegevens in Adobe Experience Platform in te voeren, moeten de indeling en de 
 
 Voor elk schema dat u in de interface van het Experience Platform definieert, kunt u een voorbeeld-JSON-object genereren dat voldoet aan de structuur van het schema. Dit voorwerp kan als malplaatje voor om het even welke gegevens dienen die in datasets worden opgenomen die het betrokken schema in dienst nemen.
 
-Selecteer **[!UICONTROL Schema&#39;s]** in de linkernavigatie in de interface van het Platform. Zoek onder het tabblad **[!UICONTROL Bladeren]** het schema waarvoor u voorbeeldgegevens wilt genereren. Selecteer het uit de lijst, en de juiste spoorupdates om details over het schema te tonen. Selecteer **[!UICONTROL Voorbeeldbestand downloaden].**
+Selecteer **[!UICONTROL Schema&#39;s]** in de linkernavigatie in de interface van het Platform. Zoek onder het tabblad **[!UICONTROL Bladeren]** het schema waarvoor u voorbeeldgegevens wilt genereren. Selecteer het uit de lijst, en de juiste spoorupdates om details over het schema te tonen. Selecteer **[!UICONTROL Voorbeeldbestand downloaden]**.
 
 ![](../images/ui/sample/sample-data.png)
 
