@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;XDM;XDM-systeem;XDM individueel profiel;XDM ExperienceEvent;XDM ExperienceEvent;ExperienceEvent;XDM ExperienceEvent;XDM ExperienceEvent;ExperienceData model;Experience gegevensmodel;Experience Data Model;Data Model;Data Model;Data Model;Schema;Problemen;FAQ;Unieschema;UNION PROFILE;union profile
 solution: Experience Platform
-title: De gids van de het oplossen van problemen van het Systeem van de Gegevens van de Ervaring Model (XDM)
-description: Dit document biedt antwoorden op veelgestelde vragen over het Systeem van de Gegevens van de Ervaring (XDM), evenals een het oplossen van problemengids voor gemeenschappelijke fouten.
+title: XDM System Troubleshooting Guide
+description: Dit document biedt antwoorden op veelgestelde vragen over het model van de Gegevens van de Ervaring (XDM) en het Systeem XDM in Adobe Experience Platform, evenals een het oplossen van problemengids voor gemeenschappelijke fouten.
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1873'
+source-wordcount: '1879'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Experience Data Model] (XDM) Handleiding voor systeemprobleemoplossing
+# Handleiding voor probleemoplossing voor XDM-systemen
 
-Dit document biedt antwoorden op veelgestelde vragen over [!DNL Experience Data Model] (XDM)-systeem en een gids voor probleemoplossing voor algemene fouten. Raadpleeg de [handleiding voor het oplossen van Experience Platforms](../landing/troubleshooting.md) voor vragen en het oplossen van problemen met betrekking tot andere services in Adobe Experience Platform.
+Dit document biedt antwoorden op veelgestelde vragen over [!DNL Experience Data Model] (XDM) en XDM System in Adobe Experience Platform en een gids voor probleemoplossing voor algemene fouten. Raadpleeg de [handleiding voor het oplossen van Experience Platforms](../landing/troubleshooting.md) voor vragen en het oplossen van problemen met betrekking tot andere services van Platforms.
 
 **[!DNL Experience Data Model](XDM)** is een open-bronspecificatie die gestandaardiseerde schema&#39;s voor het beheer van de klantenervaring bepaalt. De methode waarop [!DNL Experience Platform] wordt gebouwd, **XDM System**, exploiteert [!DNL Experience Data Model] schema&#39;s voor gebruik door [!DNL Platform] diensten. **[!DNL Schema Registry]** verstrekt een gebruikersinterface en een RESTful API om tot **[!DNL Schema Library]** binnen [!DNL Experience Platform] toegang te hebben. Zie [XDM documentatie](home.md) voor meer informatie.
 
