@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schemaontwerp;mixin;mixin;enduserids;eindgebruiker;eindgebruiker;ids;
 solution: Experience Platform
-title: Mengsel Eindgebruikersgegevens
+title: Mengsel met details over eindgebruiker
 topic: overview
 description: Dit document bevat een overzicht van de mix Details van de eindgebruiker.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '196'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL Mengsel Details] eindgebruiker-id
+# [!UICONTROL Eindgebruiker - ID ] Detailsmix
 
 >[!NOTE]
 >
->De namen van verschillende mengsels zijn gewijzigd. Zie het document over de updates [van de](../name-updates.md) mixnaam voor meer informatie.
+>De namen van verschillende mengsels zijn gewijzigd. Zie het document op [mixin naamupdates](../name-updates.md) voor meer informatie.
 
-[!UICONTROL Details] van de eindgebruiker - identiteitskaart is een standaardmengeling voor de [[!DNL XDM ExperienceEvent] klasse](../../classes/individual-profile.md), die wordt gebruikt om de identiteitsinformatie van een individu over verscheidene toepassingen van Adobe te beschrijven. De mix biedt een `endUserIDs` `_experience` object op hoofdniveau dat zelf een alleen-lezen veld bevat waarvan de waarden automatisch worden bijgewerkt terwijl er gegevens worden ingevoerd.
+[!UICONTROL De Eind - identiteitskaart ] detailleert een standaardmengeling voor de  [[!DNL XDM ExperienceEvent] klasse](../../classes/individual-profile.md), die wordt gebruikt om de identiteitsinformatie van een individu over verscheidene toepassingen van Adobe te beschrijven. De mix biedt een `endUserIDs`-object op hoofdniveau, dat zelf een alleen-lezen veld `_experience` bevat waarvan de waarden automatisch worden bijgewerkt terwijl er gegevens worden ingevoerd.
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
