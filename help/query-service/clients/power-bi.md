@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de vraag;Power BI;macht bi;verbindt met de vraagdienst;
 solution: Experience Platform
-title: Verbinding maken met Power BI
+title: Verbinding maken met Power BI-zoekservice
 topic: connect
 description: Dit document doorloopt de stappen voor het verbinden van Power BI met de Dienst van de Vraag van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Power BI]
+# [!DNL Power BI] verbinden met de Dienst van de Vraag (PC)
 
 In dit document worden de stappen beschreven voor het maken van verbinding met Adobe Experience Platform Query Service.
 
@@ -22,8 +22,6 @@ In dit document worden de stappen beschreven voor het maken van verbinding met A
 > Deze gids veronderstelt u reeds toegang tot [!DNL Power BI] hebt en vertrouwd met hoe te om zijn interface te navigeren. Meer informatie over [!DNL Power BI] vindt u in de [officiële [!DNL Power BI] documentatie](https://docs.looker.com/).
 >
 > Bovendien is Power BI **alleen** beschikbaar op Windows-apparaten.
-
-## [!DNL Power BI] instellen
 
 Na het installeren van Power BI, zult u `Npgsql`, een .NET bestuurderspakket voor PostSQL moeten installeren. Meer informatie over Npgsql vindt u in de [Npgsql-documentatie](https://www.npgsql.org/doc/index.html).
 
