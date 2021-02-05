@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;namespaces;Namespaces;identity namespace;Identity namespace;identity;Identity
+keywords: Experience Platform;home;populaire onderwerpen;naamruimte;Naamruimte;naamruimten;Naamruimten;Naamruimte;Naamruimte;Identiteitsnaamruimte;Identiteit;Identiteit
 solution: Experience Platform
-title: Een aangepaste naamruimte maken
+title: Een aangepaste naamruimte maken in de API voor de identiteitsservice
 topic: API guide
 description: Met de API Naamruimte-id kunt u een naamruimte voor een aangepaste identiteit maken die alleen voor uw organisatie beschikbaar is.
 translation-type: tm+mt
-source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 2%
+source-wordcount: '120'
+ht-degree: 1%
 
 ---
 
 
-# Een aangepaste naamruimte maken
+# Een aangepaste naamruimte maken in de Identity Service API
 
-Met behulp van de [!DNL Identity Namespace] API kunt u een naamruimte voor een aangepaste identiteit maken die alleen voor uw organisatie beschikbaar is.
+Met de API [!DNL Identity Namespace] kunt u een naamruimte voor een aangepaste identiteit maken die alleen voor uw organisatie beschikbaar is.
 
-Raadpleeg [de documentatie](../troubleshooting-guide.md)bij Identiteitsservice voor aanbevelingen over het maken van aangepaste naamruimten.
+Raadpleeg [de documentatie bij Veelgestelde vragen over identiteitsservice](../troubleshooting-guide.md) voor aanbevelingen over het maken van aangepaste naamruimten.
 
 >[!NOTE]
 >
@@ -65,4 +65,4 @@ curl -X POST \
 
 ## Volgende stappen
 
-Ga naar de volgende zelfstudie om de native id van een identiteit [weer te geven](./list-native-id.md)
+Ga naar de volgende zelfstudie om de native id van een identiteit ](./list-native-id.md) weer te geven[
