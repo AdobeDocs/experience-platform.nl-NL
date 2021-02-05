@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;mixin;Mixin;
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;persoonlijke details;Schema ontwerp;mixin;Mixin;
 solution: Experience Platform
 title: Persoonlijke contactpersoon
 topic: overview
 description: Dit document geeft een overzicht van de mix Persoonlijke contactgegevens.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL Persoonlijke contactgegevens] , mix
+# [!UICONTROL Personal Contact ] DetailsMixin
 
 >[!NOTE]
 >
->De namen van verschillende mengsels zijn gewijzigd. Zie het document over de updates [van de](../name-updates.md) mixnaam voor meer informatie.
+>De namen van verschillende mengsels zijn gewijzigd. Zie het document op [mixin naamupdates](../name-updates.md) voor meer informatie.
 
-[!UICONTROL De persoonlijke Details] van het Contact is een standaardmengeling voor de [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md) die de contactinformatie voor een individuele persoon beschrijft.
+[!UICONTROL Persoonlijke contactpersoon ] detailleert een standaardmix voor de  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) klasse die de contactinformatie voor een individuele persoon beschrijft.
 
 <img src="../../images/mixins/profile-personal-details.png" width="700" /><br />
 
