@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;SFTP;sftp;Secure File Transfer Protocol;Secure File Transfer Protocol
 solution: Experience Platform
-title: Een SFTP-connector maken met de Flow Service API
+title: Een SFTP-bronverbinding maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform te verbinden met een SFTP-server (Secure File Transfer Protocol).
+description: Leer hoe u Adobe Experience Platform verbindt met een SFTP-server (Secure File Transfer Protocol) met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
 
 
-# Een SFTP-aansluiting maken met de [!DNL Flow Service]-API
+# Een SFTP-bronverbinding maken met de API [!DNL Flow Service]
 
 >[!NOTE]
 >
