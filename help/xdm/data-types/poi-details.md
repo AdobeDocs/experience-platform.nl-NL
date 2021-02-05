@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;poi;poi details;point of interest;point of interest details;datatype;data-type;data type;
+keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;poi;poi details;punt van belang;punt details;datatype;data-type;gegevenstype;
 solution: Experience Platform
-title: Gegevenstype van aandachtspunt
+title: Gegevenstype interessdetails
 topic: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype Point of Interest Details.
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '200'
 ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL Gegevenstype van interessdetails]
+# [!UICONTROL Interessepunten ] met details over het gegevenstype
 
-[!UICONTROL Details] over punten van belang zijn een standaard XDM-gegevenstype dat de geografische gegevens beschrijft waar een gebeurtenis werd waargenomen.
+[!UICONTROL Een referentiepunt ] geeft een standaard XDM-gegevenstype aan dat de geografische gegevens beschrijft waar een gebeurtenis werd waargenomen.
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 
