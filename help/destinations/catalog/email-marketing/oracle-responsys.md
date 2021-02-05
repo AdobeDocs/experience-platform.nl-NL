@@ -1,21 +1,17 @@
 ---
 keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;oracle responsys bestemming
-title: Oracle Responsys-bestemming
-seo-title: Oracle Responsys-bestemming
+title: Oracle responsys-verbindingsbestemming
 description: Responsys is een marketingtool voor e-mailberichten voor marketingcampagnes over meerdere kanalen die door Oracle worden aangeboden om interacties via e-mail, mobiele apparaten, displays en sociale media aan te passen.
-seo-description: Responsys is een marketingtool voor e-mailberichten voor marketingcampagnes over meerdere kanalen die door Oracle worden aangeboden om interacties via e-mail, mobiele apparaten, displays en sociale media aan te passen.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Oracle Responsys]
-
-## Overzicht
+# [!DNL Oracle Responsys] verbinding
 
 [](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) Reageren op een marketingtool voor e-mailberichten van bedrijven voor marketingcampagnes over meerdere kanalen die worden aangeboden door interacties  [!DNL Oracle] te personaliseren voor e-mail, mobiele apparaten, displays en sociale media.
 
