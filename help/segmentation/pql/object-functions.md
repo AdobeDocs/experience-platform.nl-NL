@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;object functions;object;
+keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;Profile Query Language;object-functies;object;
 solution: Experience Platform
-title: Objectfuncties
+title: PQL-objectfuncties
 topic: developer guide
 description: PQL (Profile Query Language) biedt functies om interactie met objecten eenvoudiger te maken.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 3%
+source-wordcount: '138'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 ## Is null
 
-De `isNull` functie bepaalt of een objectverwijzing niet bestaat.
+De functie `isNull` bepaalt of een objectverwijzing niet bestaat.
 
 **Indeling**
 
@@ -37,7 +37,7 @@ person.homeAddress.isNull()
 
 ## Is niet null
 
-De `isNotNull` functie bepaalt of een objectverwijzing bestaat.
+De functie `isNotNull` bepaalt of een objecten verwijzing bestaat.
 
 **Indeling**
 
@@ -55,4 +55,4 @@ person.homeAddress.isNotNull()
 
 ## Volgende stappen
 
-Nu u over objecten functies hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Lees voor meer informatie over andere PQL-functies het overzicht [van de](./overview.md)profielquery.
+Nu u over objecten functies hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
