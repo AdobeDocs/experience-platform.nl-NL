@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Handleiding Platform voor realtime klantgegevens
 user-guide-description: Breng bekende en anonieme gegevens van veelvoudige ondernemingsbronnen samen om klantenprofielen tot stand te brengen, publiekssegmenten van die profielen tot stand te brengen, en die segmenten aan derdebestemmingen te activeren.
 translation-type: tm+mt
-source-git-commit: 4a282f8890ace3be7808ffbf018377d792e30cb7
+source-git-commit: 1305d789c68ac8f84d5a5f82d8f17035e56ef712
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 12%
+source-wordcount: '103'
+ht-degree: 13%
 
 ---
 
@@ -40,6 +40,5 @@ ht-degree: 12%
    * [Customer AI](segmentation/customer-ai.md)
 * Bronnen {#sources}
    * [Overzicht van bronnen](sources/sources-overview.md)
-   * [Websitetags implementeren met Adobe Launch](sources/launch.md)
 * [Opmerkingen bij de release Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
 * [Woordenlijst Experience Platform](https://www.adobe.com/go/platform-glossary-en)
