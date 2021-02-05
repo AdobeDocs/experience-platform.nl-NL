@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;string functions;string;
+keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;Profile Query Language;string functies;string;
 solution: Experience Platform
-title: Reeksfuncties
+title: PQL-tekenreeksfuncties
 topic: developer guide
 description: PQL (Profile Query Language) biedt functies om interactie met tekenreeksen eenvoudiger te maken.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '784'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 ## leuk
 
-De `like` functie wordt gebruikt om te bepalen of een tekenreeks overeenkomt met een opgegeven patroon.
+De functie `like` wordt gebruikt om te bepalen als een koord een gespecificeerd patroon aanpast.
 
 **Indeling**
 
@@ -42,7 +42,7 @@ city like "%es%"
 
 ## Starts with (Begint met)
 
-De `startsWith` functie wordt gebruikt om te bepalen of een tekenreeks begint met een opgegeven subtekenreeks.
+De functie `startsWith` wordt gebruikt om te bepalen als een koord met gespecificeerde substring begint.
 
 **Indeling**
 
@@ -66,7 +66,7 @@ person.name.startsWith("Joe")
 
 ## Begint niet met
 
-De `doesNotStartWith` functie wordt gebruikt om te bepalen of een tekenreeks niet begint met een opgegeven subtekenreeks.
+De functie `doesNotStartWith` wordt gebruikt om te bepalen als een koord niet met een gespecificeerde substring begint.
 
 **Indeling**
 
@@ -90,7 +90,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Ends with (Eindigt met)
 
-De `endsWith` functie wordt gebruikt om te bepalen of een tekenreeks eindigt met een opgegeven subtekenreeks.
+De functie `endsWith` wordt gebruikt om te bepalen of een tekenreeks eindigt met een opgegeven subtekenreeks.
 
 **Indeling**
 
@@ -114,7 +114,7 @@ person.emailAddress.endsWith(".com")
 
 ## Eindigt niet met
 
-De `doesNotEndWith` functie wordt gebruikt om te bepalen of een tekenreeks niet eindigt met een opgegeven subtekenreeks.
+De functie `doesNotEndWith` wordt gebruikt om te bepalen als een koord niet met een gespecificeerde substring beëindigt.
 
 **Indeling**
 
@@ -138,7 +138,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Bevat
 
-De `contains` functie wordt gebruikt om te bepalen of een tekenreeks een opgegeven subtekenreeks bevat.
+De functie `contains` wordt gebruikt om te bepalen als een koord een gespecificeerde substring bevat.
 
 **Indeling**
 
@@ -162,7 +162,7 @@ person.emailAddress.contains("2010@gm")
 
 ## Bevat niet
 
-De `doesNotContain` functie wordt gebruikt om te bepalen of een tekenreeks geen opgegeven subtekenreeks bevat.
+De functie `doesNotContain` wordt gebruikt om te bepalen als een koord geen gespecificeerde substring bevat.
 
 **Indeling**
 
@@ -186,7 +186,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Equals (Is gelijk aan)
 
-De `equals` functie wordt gebruikt om te bepalen of een tekenreeks gelijk is aan de opgegeven tekenreeks.
+De functie `equals` wordt gebruikt om te bepalen of een tekenreeks gelijk is aan de opgegeven tekenreeks.
 
 **Indeling**
 
@@ -209,7 +209,7 @@ person.name.equals("John")
 
 ## Niet gelijk aan
 
-De `notEqualTo` functie wordt gebruikt om te bepalen of een tekenreeks niet gelijk is aan de opgegeven tekenreeks.
+De functie `notEqualTo` wordt gebruikt om te bepalen of een tekenreeks niet gelijk is aan de opgegeven tekenreeks.
 
 **Indeling**
 
@@ -232,7 +232,7 @@ person.name.notEqualTo("John")
 
 ## Overeenkomsten
 
-De `matches` functie wordt gebruikt om te bepalen of een tekenreeks overeenkomt met een specifieke reguliere expressie. Raadpleeg [dit document](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) voor meer informatie over overeenkomende patronen in reguliere expressies.
+De functie `matches` wordt gebruikt om te bepalen als een koord een specifieke regelmatige uitdrukking aanpast. Raadpleeg [dit document](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) voor meer informatie over overeenkomende patronen in reguliere expressies.
 
 **Indeling**
 
@@ -250,7 +250,7 @@ person.name.matches("(?i)^John")
 
 ## Groep met reguliere expressies
 
-De `regexGroup` functie wordt gebruikt om specifieke informatie te extraheren, gebaseerd op de regelmatige verstrekte uitdrukking.
+De functie `regexGroup` wordt gebruikt om specifieke informatie te halen, die op de regelmatige verstrekte uitdrukking wordt gebaseerd.
 
 **Indeling**
 
@@ -268,5 +268,5 @@ emailAddress.regexGroup("@(\w+)", 1)
 
 ## Volgende stappen
 
-Nu u over koordfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Lees voor meer informatie over andere PQL-functies het overzicht [van de](./overview.md)profielquery.
+Nu u over koordfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
 
