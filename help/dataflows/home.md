@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;data flows;dataflows;data;monitoring;monitor dataflows;monitor data flows;monitor;monitoring dataflows;monitoring data flows;flow;flow service;
+keywords: Experience Platform;huis;populaire onderwerpen;gegevensstromen;dataflows;gegevens;controle;controle;monitorgegevens stromen;monitor gegevensstromen;monitor;controle dataflows;controle gegevensstromen;stroom;stroom de dienst van de stroom;
 solution: Experience Platform
-title: Adobe Experience Platform-gegevensoverzicht
+title: Overzicht van gegevensstromen
 topic: overview
 description: In dit document worden gegevensstromen geïntroduceerd, waarmee wordt aangegeven hoe deze in Adobe Experience Platform worden gebruikt.
 translation-type: tm+mt
-source-git-commit: 791ad61f2f28da03ef3e5cb5efdd89154e9b1a0b
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '178'
 ht-degree: 0%
 
 ---
@@ -21,4 +21,4 @@ Dataflows zijn een voorstelling van gegevenstaken die gegevens over het Platform
 
 ## Gegevensstromen controleren
 
-De gegevens van de controle kunnen worden gedaan door of Platform APIs of Platform UI te gebruiken. Lees de zelfstudie over de [controlegegevens voor de API voor gegevensstroom voor meer informatie over het controleren van gegevensstromen met de API](./api/monitor.md). Leer hoe te om dataflows binnen het Platform UI te controleren, gelieve of de [controledataflows voor bronleerprogramma](./ui/monitor-sources.md) of de [controledataflows voor bestemmingsleerprogramma](./ui/monitor-destinations.md)te lezen.
+De gegevens van de controle kunnen worden gedaan door of Platform APIs of Platform UI te gebruiken. Lees de [API-zelfstudie voor het controleren van gegevensstromen](./api/monitor.md) voor meer informatie over het controleren van gegevensstromen met behulp van de API. Leer hoe te om gegevensstromen binnen de Platform UI te controleren, te lezen of [controledataflows voor bronnen leerprogramma](./ui/monitor-sources.md) of [controledataflows voor bestemmingen leerprogramma](./ui/monitor-destinations.md).
