@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
+keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;segment;segmentLidmaatschap;segmentlidmaatschap;Schemaontwerp;kaart;Kaart;
 solution: Experience Platform
-title: Mengsel Details segmentlidmaatschap
+title: Mengsel met gegevens over segmentlidmaatschap
 topic: overview
 description: Dit document biedt een overzicht van de mix Details segmentlidmaatschap.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL Mengsel Details] segmentlidmaatschap
+# [!UICONTROL Segmentlidmaatschap ] detailsmix
 
 >[!NOTE]
 >
->De namen van verschillende mengsels zijn gewijzigd. Zie het document over de updates [van de](../name-updates.md) mixnaam voor meer informatie.
+>De namen van verschillende mengsels zijn gewijzigd. Zie het document op [mixin naamupdates](../name-updates.md) voor meer informatie.
 
-[!UICONTROL De Details] van het Lidmaatschap van het segment is een standaardmengeling voor de [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md). De mix verstrekt één enkel kaartgebied dat informatie betreffende segmentlidmaatschap, met inbegrip van welke segmenten het individu tot, de laatste kwalificatietijd behoort, en wanneer het lidmaatschap geldig tot is.
+[!UICONTROL Segmentlidmaatschap ] geeft een standaardmix voor de  [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md) weer. De mix verstrekt één enkel kaartgebied dat informatie betreffende segmentlidmaatschap, met inbegrip van welke segmenten het individu tot, de laatste kwalificatietijd behoort, en wanneer het lidmaatschap geldig tot is.
 
 >[!WARNING]
 >
->Hoewel het `segmentMembership` veld handmatig aan het profielschema moet worden toegevoegd met deze mix, moet u niet handmatig proberen dit veld te vullen of bij te werken. Het systeem werkt automatisch de `segmentMembership` kaart voor elk profiel bij aangezien de segmentatietaken worden uitgevoerd.
+>Hoewel het veld `segmentMembership` handmatig aan uw profielschema moet worden toegevoegd met deze combinatie, moet u niet handmatig proberen dit veld te vullen of bij te werken. Het systeem werkt automatisch de `segmentMembership` kaart voor elk profiel bij aangezien de segmentatietaken worden uitgevoerd.
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 | --- | --- | --- |
 | `segmentMembership` | Kaart | A map object that describes the individu&#39;s segment membership. De structuur van dit object wordt hieronder in detail beschreven. |
 
-Hieronder ziet u een voorbeeld van een `segmentMembership` kaart die door het systeem is gevuld voor een bepaald profiel. Segmentlidmaatschappen worden gesorteerd op naamruimte, zoals aangegeven door de sleutels op hoofdniveau van het object. De afzonderlijke sleutels onder elke naamruimte vertegenwoordigen vervolgens de id&#39;s van de segmenten waarvan het profiel lid is. Elk segmentobject bevat verschillende subvelden met meer informatie over het lidmaatschap:
+Hier volgt een voorbeeld van een `segmentMembership`-kaart die door het systeem is gevuld voor een bepaald profiel. Segmentlidmaatschappen worden gesorteerd op naamruimte, zoals aangegeven door de sleutels op hoofdniveau van het object. De afzonderlijke sleutels onder elke naamruimte vertegenwoordigen vervolgens de id&#39;s van de segmenten waarvan het profiel lid is. Elk segmentobject bevat verschillende subvelden met meer informatie over het lidmaatschap:
 
 ```json
 {
@@ -76,7 +76,7 @@ Hieronder ziet u een voorbeeld van een `segmentMembership` kaart die door het sy
 | `xdm:lastQualificationTime` | Een tijdstempel van de laatste keer dat dit profiel voor het segment kwalificeerde. |
 | `xdm:validUntil` | Een tijdstempel waarin wordt aangegeven wanneer het segmentlidmaatschap niet langer geldig is. |
 | `xdm:status` | Geeft aan of het segmentlidmaatschap is gerealiseerd als onderdeel van de huidige aanvraag. De volgende waarden worden geaccepteerd: <ul><li>`existing`: Het profiel maakte al deel uit van het segment voorafgaand aan de aanvraag en blijft bij het lidmaatschap.</li><li>`realized`: Het profiel voert het segment in als onderdeel van de huidige aanvraag.</li><li>`exited`: Het profiel verlaat het segment als deel van het huidige verzoek.</li></ul> |
-| `xdm:payload` | Sommige segmentlidmaatschappen omvatten een lading die extra waarden beschrijft die direct met het lidmaatschap verband houden. Voor elk lidmaatschap kan slechts één lading van een bepaald type worden verstrekt. `xdm:payloadType` Hiermee wordt het type van de lading (`boolean`, `number`, `propensity`of `string`) aangegeven, terwijl de eigenschap sibling de waarde voor het ladingstype bevat. |
+| `xdm:payload` | Sommige segmentlidmaatschappen omvatten een lading die extra waarden beschrijft die direct met het lidmaatschap verband houden. Voor elk lidmaatschap kan slechts één lading van een bepaald type worden verstrekt. `xdm:payloadType` Hiermee wordt het type van de lading (`boolean`,  `number`,  `propensity`of  `string`) aangegeven, terwijl de eigenschap sibling de waarde voor het ladingstype bevat. |
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de mix:
 
