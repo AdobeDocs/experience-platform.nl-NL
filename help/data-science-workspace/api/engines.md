@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;engines;sensei machine learning api
+keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;engines;sensei machine learning api
 solution: Experience Platform
-title: Motoren
+title: Engine API-eindpunt
 topic: Developer guide
 description: Motoren vormen de basis voor het leren van machines Modellen in de werkruimte van de wetenschap van gegevens. Zij bevatten machinaal leeralgoritmen die specifieke problemen oplossen, eigenschappijpleidingen om eigenschapengineering uit te voeren, of allebei.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
 
 
-# Motoren
+# Het eindpunt Motoren
 
 Motoren vormen de basis voor het leren van machines Modellen in de werkruimte van de wetenschap van gegevens. Zij bevatten machinaal leeralgoritmen die specifieke problemen oplossen, eigenschappijpleidingen om eigenschapengineering uit te voeren, of allebei.
 
@@ -21,7 +21,7 @@ Motoren vormen de basis voor het leren van machines Modellen in de werkruimte va
 
 >[!TIP]
 >
->Als u geen Docker URL hebt, bezoek de brondossiers van het [Pakket in een recept](../models-recipes/package-source-files-recipe.md) leerprogramma voor een geleidelijke analyse bij het creëren van een de gastheer URL van het Docker.
+>Als u geen Docker URL hebt, bezoek [de brondossiers van het Pakket in een recept](../models-recipes/package-source-files-recipe.md) leerprogramma voor een geleidelijke analyse bij het creëren van een gastheer URL van het Docker.
 
 Uw Docker-registergegevens zijn vereist voor het uploaden van een pakket Recipe-bestand, inclusief de URL van de Docker-host, gebruikersnaam en wachtwoord. U kunt deze informatie opzoeken door de volgende GET-aanvraag uit te voeren:
 
@@ -47,7 +47,7 @@ Een succesvolle reactie keert een nuttige lading terug die de details van uw reg
 
 >[!NOTE]
 >
->Het wachtwoord van de Docker verandert telkens wanneer uw `{ACCESS_TOKEN}` wordt bijgewerkt.
+>Uw Docker wachtwoord verandert wanneer uw `{ACCESS_TOKEN}` wordt bijgewerkt.
 
 ```json
 {
@@ -138,13 +138,13 @@ curl -X POST \
 | `name` | De gewenste naam voor de engine. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als naam van de Ontvanger moet worden getoond. |
 | `description` | Een facultatieve beschrijving voor de motor. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als beschrijving van de Ontvanger moet worden getoond. Deze eigenschap is vereist. Als u geen beschrijving wilt opgeven, stelt u de waarde in op een lege tekenreeks. |
 | `type` | Het uitvoeringstype van de motor. Deze waarde komt overeen met de taal waarop de Docker-afbeelding is gebaseerd. De waarde kan aan Vonk of PySpark worden geplaatst. |
-| `mlLibrary` | Een gebied dat wordt vereist wanneer het creëren van motoren voor PySpark en Scala recepten. Dit veld moet zijn ingesteld op `databricks-spark`. |
+| `mlLibrary` | Een gebied dat wordt vereist wanneer het creëren van motoren voor PySpark en Scala recepten. Dit veld moet worden ingesteld op `databricks-spark`. |
 | `artifacts.default.image.location` | De locatie van de Docker-afbeelding. Alleen Azure ACR of Public (niet-geverifieerd) Dockerhub wordt ondersteund. |
 | `artifacts.default.image.executionType` | Het uitvoeringstype van de motor. Deze waarde komt overeen met de taal waarop de Docker-afbeelding is gebaseerd. Dit kan &quot;Vonk&quot;of &quot;PySpark&quot;zijn. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe engine, inclusief de unieke id (`id`) ervan. De volgende voorbeeldreactie is voor een Python Engine. Alle antwoorden van de Motor volgen dit formaat:
+Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde Motor met inbegrip van zijn uniek herkenningsteken (`id`) bevat. De volgende voorbeeldreactie is voor een Python Engine. Alle antwoorden van de Motor volgen dit formaat:
 
 ```json
 {
@@ -171,7 +171,7 @@ Een geslaagde reactie retourneert een lading die de details bevat van de nieuwe 
 }
 ```
 
-## Creeer een motor van de eigenschappijpleiding gebruikend de Url van de Doker {#feature-pipeline-docker}
+## Creeer een motor van de eigenschappijpleiding gebruikend de Url {#feature-pipeline-docker} van de Dokker
 
 U kunt een Motor van de eigenschappijpleiding tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van zijn meta-gegevens en een Dok URL die verwijzingen een beeld van het Dokker.
 
@@ -218,11 +218,11 @@ curl -X POST \
 | `algorithm` | Het algoritme dat wordt gebruikt, plaats deze waarde aan `fp` (eigenschappijpleiding). |
 | `name` | De gewenste naam voor de motor van de eigenschappijpleiding. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als naam van de Ontvanger moet worden getoond. |
 | `description` | Een facultatieve beschrijving voor de motor. Recipe die aan deze Motor beantwoordt zal deze waarde erven die in UI als beschrijving van de Ontvanger moet worden getoond. Deze eigenschap is vereist. Als u geen beschrijving wilt opgeven, stelt u de waarde in op een lege tekenreeks. |
-| `mlLibrary` | Een gebied dat wordt vereist wanneer het creëren van motoren voor PySpark en Scala recepten. Dit veld moet zijn ingesteld op `databricks-spark`. |
+| `mlLibrary` | Een gebied dat wordt vereist wanneer het creëren van motoren voor PySpark en Scala recepten. Dit veld moet worden ingesteld op `databricks-spark`. |
 | `artifacts.default.image.location` | De locatie van de Docker-afbeelding. Alleen Azure ACR of Public (niet-geverifieerd) Dockerhub wordt ondersteund. |
 | `artifacts.default.image.executionType` | Het uitvoeringstype van de motor. Deze waarde komt overeen met de taal waarop de Docker-afbeelding is gebaseerd. Dit kan &quot;Vonk&quot;of &quot;PySpark&quot;zijn. |
 | `artifacts.default.image.packagingType` | Het verpakkingstype van de motor. Deze waarde moet worden ingesteld op `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | Parameters van uw `pipeline.json` configuratiebestand. |
+| `artifacts.default.defaultMLInstanceConfigs` | Uw `pipeline.json` parameters van het configuratiedossier. |
 
 **Antwoord**
 
@@ -255,7 +255,7 @@ Een succesvolle reactie keert een lading terug die de details van de pas gecreë
 
 ## Een lijst met motoren ophalen
 
-U kunt een lijst van Motoren terugwinnen door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+U kunt een lijst van Motoren terugwinnen door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activa herwinning](./appendix.md#query).
 
 **API-indeling**
 
@@ -328,7 +328,7 @@ Een succesvol antwoord retourneert een lijst met engines en hun details.
 }
 ```
 
-### Een specifieke engine ophalen {#retrieve-specific}
+### Een specifieke engine {#retrieve-specific} ophalen
 
 U kunt de details van een specifieke Motor terugwinnen door een verzoek van de GET uit te voeren dat identiteitskaart van de gewenste Motor in de verzoekweg omvat.
 
@@ -388,7 +388,7 @@ U kunt een bestaande Motor wijzigen en bijwerken door zijn eigenschappen door ee
 
 >[!NOTE]
 >
->Om ervoor te zorgen dat deze PUT-aanvraag succesvol is, wordt u aangeraden eerst een GET-verzoek uit te voeren om de Engine op id [op te](#retrieve-specific)halen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>Om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET aan [terugwinning de Motor door ID](#retrieve-specific) uitvoert. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 De volgende voorbeeld-API-aanroep werkt de naam en beschrijving van een engine bij terwijl deze in eerste instantie deze eigenschappen heeft:
 
