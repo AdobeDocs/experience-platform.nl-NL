@@ -1,21 +1,17 @@
 ---
 keywords: InMoment;inmoment;Inmoment;Integratie starten
-title: InMoment-extensie
-seo-title: InMoment-extensie
+title: InMoment-extensiebestemming
 description: De InMoment-extensie is een enquêtebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De InMoment-extensie is een enquêtebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL InMoment] extension  {#inmoment-extension}
-
-## Overzicht {#overview}
 
 Met de [!DNL InMoment] Launch Integration kunt u snel en eenvoudig online feedback inschakelen via het Digital Intercept-product. In de app kunnen intercepten worden geconfigureerd en beheerd via de CXI Cloud Admin, zodat CX-beheerders meer controle over hun programma hebben.
 
