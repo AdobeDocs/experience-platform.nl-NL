@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Verzamel protocolgegevens;protocolgegevens
 solution: Experience Platform
-title: Verzamel protocolgegevens door bronschakelaars en APIs
+title: Gegevens van protocollen verzamelen met bronconnectors en API's
 topic: overview
 type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een protocoltoepassing en het opnemen van gegevens in het Platform via bronconnectors en API's.
+description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een protocoltoepassing en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: 478c73935d674ef4eb40511cc562b27df77f58c8
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Verzamel protocolgegevens door bronschakelaars en APIs
+# Verzamel protocolgegevens gebruikend bronschakelaars en APIs
 
 Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een toepassing van een extern protocol en het opnemen ervan in Adobe Experience Platform via bronconnectors en de [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
