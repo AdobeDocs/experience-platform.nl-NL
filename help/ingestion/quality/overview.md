@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;Supported validation;Validation;supported validation;
+keywords: Experience Platform;home;populaire onderwerpen;Gegevenskwaliteit;Kwaliteit;Ondersteunde validatie;Validatie;ondersteunde validatie;
 solution: Experience Platform
-title: Kwaliteit van gegevensinvoer
+title: Gegevenskwaliteit
 topic: overview
 description: Het volgende document bevat een overzicht van de ondersteunde controles en validatiegedragingen voor batch- en streaming-opname in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '317'
 ht-degree: 4%
 
 ---
@@ -56,4 +56,4 @@ De volgende validaties worden uitgevoerd voor streaming invoer:
 | Gegevensset | Zorgt ervoor dat de dataset wordt gespecificeerd, toegelaten en niet is verwijderd. |
 | Koptekst | Zorgt ervoor dat de kopbal wordt gespecificeerd en geldig is. |
 
-Meer informatie over het controleren en valideren van gegevens vindt u in de documentatie [!DNL Platform] over de [](./monitor-data-ingestion.md)gegevensstromen van de bewaking.
+Meer informatie over de manier waarop [!DNL Platform] gegevens controleert en valideert vindt u in de [documentatie voor gegevensstromen controleren](./monitor-data-ingestion.md).
