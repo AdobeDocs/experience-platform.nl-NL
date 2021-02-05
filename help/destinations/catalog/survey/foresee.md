@@ -1,21 +1,17 @@
 ---
 keywords: voorzien;voorzien uitbreiding;voorzien bestemming
-title: Verwachte extensie
-seo-title: Verwachte extensie
+title: Extensiebestemming voorzien
 description: De extensie Foresee is een bestemming voor enquêtes in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Foresee is een bestemming voor enquêtes in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Foresee] extension  {#foresee-extension}
-
-## Overzicht {#overview}
 
 Configureer [!DNL ForeSee] productimplementaties met behulp van Experience Platform Launch.
 
