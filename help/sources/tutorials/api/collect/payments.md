@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Betalingsgegevens verzamelen;Betalingsgegevens
 solution: Experience Platform
-title: Betalingsgegevens verzamelen via bronconnectors en API's
+title: Betalingsgegevens verzamelen met behulp van bronconnectors en API's
 topic: overview
 type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een betalingstoepassing en het opnemen ervan in het Platform via bronconnectors en API's.
+description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een betalingstoepassing en het opnemen ervan in het Platform met behulp van bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: 9b4965e4256967961a92c544bbe355eae768e3dd
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Betalingsgegevens verzamelen via bronconnectors en API&#39;s
+# Betalingsgegevens verzamelen met behulp van bronconnectors en API&#39;s
 
 In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens van een externe toepassing voor betalingen en het opnemen ervan in het Platform via bronconnectors en de [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
