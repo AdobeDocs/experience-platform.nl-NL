@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;ETL;etl;etl integraties;ETL-integratie
 solution: Experience Platform
-title: ETL-integratie maken
+title: Ontwikkeling van ETL-integratie voor Adobe Experience Platform
 topic: overview
 description: De ETL-integratiehandleiding beschrijft algemene stappen voor het maken van krachtige, veilige connectors voor Experience Platform en het opnemen van gegevens in het Platform.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '4139'
+source-wordcount: '4143'
 ht-degree: 0%
 
 ---
@@ -621,7 +621,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 Nadat alle bestanden naar de batch zijn geüpload, kan de batch worden gemarkeerd als voltooid. Door dit te doen, worden de [!DNL Catalog] &quot;DataSetFile&quot;ingangen gecreeerd voor de voltooide dossiers en met te verbinden genereert partij. De [!DNL Catalog] partij wordt dan duidelijk als succesvol, die stroomafwaartse stromen om de beschikbare gegevens in te voeren teweegbrengt.
 
-De gegevens worden eerst op de halteplaats op Adobe Experience Platform geland en vervolgens na catalogisering en validatie naar de uiteindelijke locatie verplaatst. Batches worden gemarkeerd als succesvol zodra alle gegevens naar een vaste locatie worden verplaatst.
+De gegevens worden eerst op de halteplaats op Adobe Experience Platform geland en vervolgens na catalogisering en validatie naar de uiteindelijke locatie verplaatst. De partijen zullen als succesvol worden gemerkt zodra alle gegevens naar een permanente plaats worden verplaatst.
 
 **Verzoek**
 
