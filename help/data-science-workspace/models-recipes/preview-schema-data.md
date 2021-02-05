@@ -1,41 +1,41 @@
 ---
-keywords: Experience Platform;preview schema data;Data Science Workspace;popular topics
+keywords: Experience Platform;voorbeeldschemagegevens;Data Science Workspace;populaire onderwerpen
 solution: Experience Platform
-title: Voorvertoningsschema's en gegevenssets
+title: Een voorvertoning weergeven van het detailhandelsschema en de gegevensset
 topic: tutorial
 type: Tutorial
 description: Het volgende document schetst het voorvertonen van schema's en datasets op Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
 
 
-# Voorvertoningsschema&#39;s en gegevenssets
+# Een voorvertoning weergeven van het detailhandelsschema en de dataset
 
-Na succesvolle voltooiing van het laarzentrekkerscript van [Create het detailhandelschema en de datasetzelfstudie](./create-retails-sales-dataset.md) . Uitvoerschema&#39;s en gegevenssets kunnen worden weergegeven [!DNL Experience Platform]. Volg onderstaande stappen om de schema&#39;s en datasets weer te geven:
+Na succesvolle voltooiing van het laarzentrekkerscript van [creeer het detailhandelschema en dataset](./create-retails-sales-dataset.md) leerprogramma. Uitvoerschema&#39;s en datasets kunnen op [!DNL Experience Platform] worden bekeken. Volg onderstaande stappen om de schema&#39;s en datasets weer te geven:
 
-1. Klik op de koppeling **[!UICONTROL Schema]** in de linkernavigatiekolom en zoek het invoerschema dat door het bootstrap-script is gemaakt. De naam van het schema komt overeen met de naam die in `config.yaml` de vorige stap is gedefinieerd. Bekijk de schemadetails en het is samenstelling door in het te klikken.
+1. Klik op de koppeling **[!UICONTROL Schemas]** in de linkernavigatiekolom en zoek het invoerschema dat door het laarzentrekkerscript is gemaakt. De naam van het schema komt overeen met wat in de vorige stap is gedefinieerd in `config.yaml`. Bekijk de schemadetails en het is samenstelling door in het te klikken.
 
    ![](../images/models-recipes/access-data/schema_overview.png)
 
-2. Klik op de koppeling **[!UICONTROL Datasets]** in de linkernavigatiekolom en open de gegevensset die is gemaakt door op de naam van de lijst te klikken. De naam van de dataset zal beantwoorden aan wat binnen `config.yaml` van de vorige stap werd bepaald.
+2. Klik op de koppeling **[!UICONTROL Datasets]** in de linkernavigatiekolom en open de gegevensset die is gemaakt door op de naam van de lijst te klikken. De naam van de gegevensset komt overeen met wat in de vorige stap is gedefinieerd in `config.yaml`.
 
    ![](../images/models-recipes/access-data/dataset_overview.png)
 
-3. Klik de Dataset **** van de Voorproef die bij de hoogste juiste voorproef wordt gevestigd een ondergroep van de dataset.
+3. Klik **[!UICONTROL Voorvertoning van gegevensset]** in de rechterbovenvoorvertoning van een subset van de gegevensset.
 
    ![](../images/models-recipes/access-data/preview_dataset.png)
 
 ## Volgende stappen
 
-U hebt met succes de met succes gegevens van de steekproef van de Verkoop van de Handel in [!DNL Experience Platform] het gebruiken van het verstrekte laarzentrekkerscript opgenomen.
+U hebt met succes met de gegevens van de steekproef van de Verkoop van de Handel in [!DNL Experience Platform] gebruikend het verstrekte laarzentrekwescript opgenomen.
 
 U kunt als volgt met de opgenomen gegevens blijven werken:
 - [Uw gegevens analyseren met Jupyter-laptops](../jupyterlab/analyze-your-data.md)
-   - Gebruik Jupyter-laptops voor toegang [!DNL Data Science Workspace] tot uw gegevens, verkenning, visualisatie en begrip.
+   - Gebruik Jupyter-laptops in [!DNL Data Science Workspace] voor toegang tot, verkenning, visualisatie en begrip van uw gegevens.
 - [Bronbestanden in een pakket plaatsen in een ontvanger](./package-source-files-recipe.md)
-   - Volg deze zelfstudie om te leren hoe u uw eigen model in kunt brengen [!DNL Data Science Workspace] door bronbestanden in een importeerbaar Recipe-bestand te verpakken.
+   - Volg deze zelfstudie om te leren hoe u uw eigen model in [!DNL Data Science Workspace] kunt brengen door bronbestanden in een importeerbaar Recipe-bestand te verpakken.
