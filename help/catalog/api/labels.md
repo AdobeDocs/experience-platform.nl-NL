@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics;data usage labels;catalog service
+keywords: Experience Platform;home;populaire onderwerpen;labels voor gegevensgebruik;catalogusservice
 solution: Experience Platform
-title: Labels voor gegevensgebruik
+title: De Etiketten van het Gebruik van gegevens in de Dienst API van de Dataset
 topic: developer guide
-description: De API van de Dienst van de Catalogus verstrekt eindpunten om de etiketten van het gegevensgebruik voor datasets te beheren.
+description: De Dataset Service API verstrekt eindpunten om de etiketten van het gegevensgebruik voor datasets te beheren.
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '59'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---
 
 
-# Labels voor gegevensgebruik
+# De etiketten van het gegevensgebruik in de Dienst van de Dataset API
 
-De [!DNL Catalog Service] API verstrekt eindpunten om de etiketten van het gegevensgebruik voor datasets te beheren. Raadpleeg de handleiding over het [beheren van labels voor gegevensgebruik met behulp van de API](../../data-governance/labels/overview.md) in de Adobe Experience Platform- [!DNL Data Governance] documentatie voor informatie over hoe u deze eindpunten kunt aanroepen.
+De [!DNL Dataset Service]-API biedt eindpunten voor het beheer van gegevensgebruikslabels voor gegevenssets, gescheiden van de API voor catalogusservice. Raadpleeg de handleiding over [het beheren van labels voor gegevensgebruik met behulp van de API](../../data-governance/labels/dataset-api.md) in de documentatie van Adobe Experience Platform [!DNL Data Governance] voor informatie over het aanroepen van deze eindpunten.
