@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Apache Hadoop Distributed File System;Apache hadoop;hdfs;HDFS
 solution: Experience Platform
-title: Een Apache HDFS-aansluiting maken met de Flow Service API
+title: Een Apache HDFS-bronverbinding maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om een Apache Hadoop Distributed File System (hierna "HDFS" genoemd) aan te sluiten op Experience Platform.
+description: Leer hoe u een Apache Hadoop Distributed File System met de Flow Service API kunt verbinden.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '565'
 ht-degree: 1%
 
 ---
 
 
-# Een [!DNL Apache] HDFS-connector maken met de [!DNL Flow Service]-API
+# Een [!DNL Apache] HDFS-bronverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
