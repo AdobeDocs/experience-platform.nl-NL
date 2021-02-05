@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;de redacteur van de vraag;de vraagredacteur;de dienst van de vraag;de vraagdienst;
 solution: Experience Platform
-title: Gebruikershandleiding voor de Query Editor
+title: UI-gids voor zoekprogramma
 topic: query editor
-description: De Redacteur van de vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens te schrijven te bevestigen en in werking te stellen binnen het gebruikersinterface van het Experience Platform. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
+description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 translation-type: tm+mt
-source-git-commit: f35443046a3d2bc5101d0fa2a58d07f4b6a31151
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1082'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Query Editor] gebruikershandleiding
+# [!DNL Query Editor] UI-hulplijn
 
 [!DNL Query Editor] is een interactief hulpmiddel dat door Adobe Experience Platform wordt verstrekt  [!DNL Query Service], dat u toestaat om, vragen voor klantenervaringsgegevens binnen het  [!DNL Experience Platform] gebruikersinterface te schrijven te bevestigen en in werking te stellen. [!DNL Query Editor] ondersteunt het ontwikkelen van query&#39;s voor analyse en gegevensexploratie, en staat u toe om interactieve query&#39;s voor ontwikkelingsdoeleinden en niet-interactieve query&#39;s uit te voeren om datasets in te vullen  [!DNL Experience Platform].
 
