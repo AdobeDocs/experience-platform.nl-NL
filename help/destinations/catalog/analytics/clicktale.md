@@ -1,21 +1,17 @@
 ---
 keywords: kliktale;kliktale uitbreiding;kliktale bestemming
-title: Clicktale extensie
-seo-title: Clicktale extensie
+title: Doel van Clicktale-extensie
 description: De extensie Clicktale is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Clicktale is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Clicktale] extension  {#clicktale-extension}
-
-## Overzicht {#overview}
 
 [!DNL Clicktale's] de integratie met Experience Platform Launch staat voor plaatsing van  [!DNL Clicktale] code en de capaciteit toe om gegevenselementen binnen Lancering in kaart te brengen, gebruikend  [!DNL Clicktale's] Visuele Redacteur.
 
