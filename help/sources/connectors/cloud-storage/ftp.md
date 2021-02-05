@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;FTP;ftp;
 solution: Experience Platform
-title: FTP-aansluiting
+title: Overzicht van FTP-bronverbinding
 topic: overview
-description: In de onderstaande documentatie vindt u informatie over het maken van een verbinding tussen een FTP-server en een Platform met behulp van API's of de gebruikersinterface.
+description: Leer hoe u een FTP-server verbindt met Adobe Experience Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 0%
@@ -48,11 +48,11 @@ In de onderstaande documentatie vindt u informatie over het tot stand brengen va
 
 ### API&#39;s gebruiken
 
-- [Een FTP-connector maken met de Flow Service API](../../tutorials/api/create/cloud-storage/ftp.md)
+- [Een FTP-bronverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/ftp.md)
 - [Een systeem voor cloudopslag verkennen met de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Gegevens voor cloudopslag verzamelen met de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### De gebruikersinterface gebruiken
 
-- [Een FTP-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/ftp.md)
-- [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Een FTP-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/ftp.md)
+- [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
