@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API;gegevensset inschakelen
-title: Een dataset voor profiel en identiteitsservice configureren met behulp van API's
+title: Een gegevensset voor profiel- en identiteitsservice configureren met behulp van API's
 topic: tutorial
 type: Tutorial
 description: Deze zelfstudie laat u zien hoe u een gegevensset inschakelt voor gebruik met Real-time Customer Profile and Identity Service met Adobe Experience Platform API's.
 translation-type: tm+mt
-source-git-commit: f34983dc13a900e7c8fe2e2cef454400c1b6a726
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
 source-wordcount: '1057'
 ht-degree: 0%
