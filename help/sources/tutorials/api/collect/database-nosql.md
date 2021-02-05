@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;database;database van derden
 solution: Experience Platform
-title: Gegevens verzamelen van een database via bronconnectors en API's
+title: Gegevens verzamelen van een database met behulp van bronconnectors en API's
 topic: overview
 type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens uit een database en het opnemen ervan in het Platform via bronconnectors en API's.
+description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens uit een database en het opnemen ervan in het Platform met behulp van bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1611'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Gegevens verzamelen van een database via bronconnectors en API&#39;s
+# Gegevens verzamelen van een database met bronconnectors en API&#39;s
 
 Deze zelfstudie behandelt de stappen voor het ophalen van gegevens uit een database van derden en het opnemen ervan in het Platform via bronconnectors en de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
