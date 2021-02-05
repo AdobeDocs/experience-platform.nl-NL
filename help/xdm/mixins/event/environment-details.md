@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;environment;environment details;
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schema-ontwerp;mixin;mixin;omgeving;omgevingsdetails;
 solution: Experience Platform
-title: Mengsel van omgevingsdetails
+title: Mengsel met omgevingsdetails
 topic: overview
 description: Dit document biedt een overzicht van de mix ExperienceEvent Environment Details.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '198'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL Mengsel van omgevingsdetails]
+# [!UICONTROL Omgeving ] detailsmix
 
 >[!NOTE]
 >
->De namen van verschillende mengsels zijn gewijzigd. Zie het document over de updates [van de](../name-updates.md) mixnaam voor meer informatie.
+>De namen van verschillende mengsels zijn gewijzigd. Zie het document op [mixin naamupdates](../name-updates.md) voor meer informatie.
 
-[!UICONTROL De Details] van het milieu is een standaardmengeling voor de [[!DNL XDM ExperienceEvent] klasse](../../classes/individual-profile.md) die wordt gebruikt om informatie betreffende omgevingsdetails met betrekking tot een Gebeurtenis van de Ervaring zoals apparatendetails, browser informatie, lokale tijd, en andere geografische informatie te vangen.
+[!UICONTROL Omgeving ] detailleert een standaardmix voor de  [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) klasse die wordt gebruikt om informatie over omgevingsdetails met betrekking tot een Experience Event vast te leggen, zoals apparaatdetails, browserinformatie, lokale tijd en andere geografische informatie.
 
 <img src="../../images/mixins/environment-details.png" width="500" /><br />
 
