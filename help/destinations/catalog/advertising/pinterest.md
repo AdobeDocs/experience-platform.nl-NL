@@ -1,21 +1,17 @@
 ---
 keywords: Pinterest;pinterest;Pinterest Conversion Tracking;Pinterest conversie tracking
-title: Pinterest Conversion Tracking extension
-seo-title: Pinterest Conversion Tracking extension
+title: Bestemming voor extensie Pinterest-conversie bijhouden
 description: De extensie Pinterest Conversion Tracking is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Pinterest Conversion Tracking is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Pinterest Conversion Tracking] Extensie  {#pinterest-extension}
-
-## Overzicht {#overview}
+# [!DNL Pinterest Conversion Tracking] extension  {#pinterest-extension}
 
 Handelingen voor bezoekers bijhouden op uw website na weergaven van uw promotiepunt. De opbrengst van de maatregel op advertentie besteedt en creeert gericht publiek. Meer [hier](https://ads.pinterest.com/).
 
