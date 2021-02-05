@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;identity;field;
 solution: Experience Platform
-title: Een identiteitsveld definiëren in de gebruikersinterface
+title: Identiteitsvelden definiëren in de gebruikersinterface
 description: Leer hoe u een identiteitsveld definieert in de gebruikersinterface van het Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: f5f507c2e962e2ff9f81376bfe363a6f438056cd
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
 
 
-# Een identiteitsveld definiëren in de gebruikersinterface
+# Identiteitsvelden definiëren in de gebruikersinterface
 
 In het Model van Gegevens van de Ervaring (XDM), vertegenwoordigt een identiteitsgebied een gebied dat kan worden gebruikt om een individuele persoon te identificeren met betrekking tot een verslag of een tijd-reeksgebeurtenis. In dit document wordt beschreven hoe u een identiteitsveld definieert in de gebruikersinterface van Adobe Experience Platform.
 
