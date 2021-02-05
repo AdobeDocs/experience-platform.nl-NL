@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;greenplum;Greenplum
 solution: Experience Platform
-title: Een GreenPlum-aansluiting maken met de Flow Service API
+title: Een GreenPlum Source Connection maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om GreenPlum aan Experience Platform aan te sluiten.
+description: Leer hoe u GreenPlum met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '549'
 ht-degree: 1%
 
 ---
 
 
-# Een [!DNL GreenPlum]-connector maken met de [!DNL Flow Service]-API
+# Een [!DNL GreenPlum]-bronverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
