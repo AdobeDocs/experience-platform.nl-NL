@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
+keywords: Experience Platform;inzichten;klanten ai;populaire onderwerpen;klantenai inzichten
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Informatie over inzichten met Customer AI
+title: Inzichten met Customer AI ontdekken
 topic: Discovering insights
 description: Dit document fungeert als hulpmiddel bij de interactie met de inzichten van serviceversies in de Intelligent Services Customer AI-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1399'
 ht-degree: 0%
 
 ---
 
 
-# Informatie over inzichten met Customer AI
+# Inzichten met Customer AI ontdekken
 
 Klantenservice AI biedt marketers de mogelijkheid om Adobe Sensei te gebruiken om te anticiperen op wat uw klanten de volgende actie zullen gaan ondernemen. AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, het kiezen van een algoritme, een opleiding, of plaatsing.
 
@@ -21,11 +21,11 @@ Dit document fungeert als hulpmiddel bij de interactie met de inzichten van serv
 
 ## Aan de slag
 
-Om inzichten voor Klant AI te gebruiken, moet u een de dienstinstantie hebben met een succesvolle looppasstatus beschikbaar. Ga naar [Een Customer AI-instantie](./configure.md)configureren om een nieuwe service-instantie te maken. Als u onlangs een de dienstinstantie creeerde en het nog opleidt en het scoring, gelieve 24 uren voor het te beëindigen loopt.
+Om inzichten voor Klant AI te gebruiken, moet u een de dienstinstantie hebben met een succesvolle looppasstatus beschikbaar. Als u een nieuwe service-instantie wilt maken, gaat u naar [Een Customer AI-instantie configureren](./configure.md). Als u onlangs een de dienstinstantie creeerde en het nog opleidt en het scoring, gelieve 24 uren voor het te beëindigen loopt.
 
 ## Overzicht van serviceexemplaar
 
-Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **[!UICONTROL Services]** in de linkernavigatie. De browser van de *Diensten* verschijnt en toont beschikbare Intelligente Diensten. Klik in de container voor Customer AI op **[!UICONTROL Openen]**.
+Klik in de gebruikersinterface [!DNL Adobe Experience Platform] op **[!UICONTROL Services]** in de linkernavigatie. De browser *Services* wordt weergegeven en geeft de beschikbare Intelligente services weer. Klik in de container voor Customer AI op **[!UICONTROL Open]**.
 
 ![Toegang tot uw exemplaar](../images/insights/navigate-to-service.png)
 
@@ -52,8 +52,8 @@ Er zijn twee manieren om de details van de de dienstinstantie te bekijken: van h
 
 Om een overzicht van de details van de de dienstinstantie binnen het dashboard te bekijken, selecteer een container van de de dienstinstantie, vermijdend de hyperlink die aan de naam in bijlage is. Dit opent een rechterspoor dat extra details verstrekt. De besturingselementen bevatten het volgende:
 
-- **[!UICONTROL Bewerken]**: Als u **[!UICONTROL Bewerken]** selecteert, kunt u een bestaande service-instantie wijzigen. U kunt de naam, de beschrijving en de scorefrequentie van de instantie bewerken.
-- **[!UICONTROL Klonen]**: Als u **[!UICONTROL Klonen]** selecteert, wordt de momenteel geselecteerde service-instantie gekopieerd. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
+- **[!UICONTROL Bewerken]**: Als u  **** Bewerken selecteert, kunt u een bestaande service-instantie wijzigen. U kunt de naam, de beschrijving en de scorefrequentie van de instantie bewerken.
+- **[!UICONTROL Klonen]**: Als u  **** Clonecopies selecteert, wordt de momenteel geselecteerde service-instantie ingesteld. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
 - **[!UICONTROL Verwijderen]**: U kunt een de dienstinstantie, met inbegrip van om het even welke historische looppas schrappen.
 - **[!UICONTROL Gegevensbron]**: Een koppeling naar de gegevensset die door dit exemplaar wordt gebruikt.
 - **[!UICONTROL Uitvoerfrequentie]**: Hoe vaak en wanneer een scoring wordt uitgevoerd.
@@ -63,11 +63,11 @@ Om een overzicht van de details van de de dienstinstantie binnen het dashboard t
 
 >[!NOTE]
 >
->Als een scoring mislukt, wordt een foutbericht weergegeven. Het foutbericht wordt weergegeven onder **Laatste run details** in de rechterrail die alleen zichtbaar is voor mislukte run.
+>Als een scoring mislukt, wordt een foutbericht weergegeven. Het foutbericht wordt weergegeven onder **Laatste run details** in de rechterrail die alleen zichtbaar is voor mislukte uitvoering.
 
 ![bericht voor mislukte uitvoering](../images/insights/failed-run.png)
 
-De tweede manier om extra details voor een de dienstinstantie te bekijken wordt gevestigd binnen de inzichten pagina. U kunt op Meer **** tonen rechtsboven klikken om een vervolgkeuzelijst te vullen. De details worden vermeld zoals de score, toen het werd gecreeerd, en het type van dichtheid. Voor meer informatie over de vermelde eigenschappen gaat u naar [Configuring a Customer AI instance](./configure.md).
+De tweede manier om extra details voor een de dienstinstantie te bekijken wordt gevestigd binnen de inzichten pagina. U kunt **[!UICONTROL Meer weergeven]** in de rechterbovenhoek klikken om een vervolgkeuzelijst te vullen. De details worden vermeld zoals de score, toen het werd gecreeerd, en het type van dichtheid. Voor meer informatie over om het even welke vermelde eigenschappen, te bezoeken [Vormend een instantie van AI van de Klant](./configure.md).
 
 ![meer weergeven](../images/insights/landing-show-more.png)
 
@@ -85,16 +85,16 @@ Het dialoogvenster Bewerken wordt weergegeven. In dit dialoogvenster kunt u de n
 
 ### Meer handelingen
 
-De knop **[!UICONTROL Meer handelingen]** bevindt zich in de navigatie rechtsboven naast **[!UICONTROL Bewerken]**. Klik op **[!UICONTROL Meer handelingen]** om een vervolgkeuzelijst te openen waarin u een van de volgende bewerkingen kunt selecteren:
+De **[!UICONTROL Meer acties]** knoop wordt gevestigd in de top-juiste navigatie naast **[!UICONTROL Edit]**. Als u op **[!UICONTROL Meer handelingen]** klikt, wordt een vervolgkeuzelijst geopend waarmee u een van de volgende bewerkingen kunt selecteren:
 
-- **[!UICONTROL Klonen]**: Als u **[!UICONTROL Klonen]** selecteert, wordt de instelling van de service-instantie gekopieerd. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
+- **[!UICONTROL Klonen]**: Als u Clonecopies selecteert, wordt de service-instantie ingesteld.  **** Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
 - **[!UICONTROL Verwijderen]**: Hiermee wordt de instantie verwijderd.
-- **[!UICONTROL Toegangscores]**: Als u **[!UICONTROL Toegangsscores]** selecteert, wordt een dialoogvenster geopend met een koppeling naar de [downloadscores voor de zelfstudie van Klant AI](./download-scores.md) . Het dialoogvenster bevat ook de id van de gegevensset die is vereist voor het uitvoeren van API-aanroepen.
+- **[!UICONTROL Toegangscores]**: Als u  **[!UICONTROL Access-]** scoresopent een dialoogvenster met een koppeling naar de  [downloadscores voor de ](./download-scores.md) zelfstudie van de Klant, wordt in het dialoogvenster ook de id van de dataset weergegeven die is vereist voor het uitvoeren van API-aanroepen.
 - **[!UICONTROL Runtimegeschiedenis]** weergeven: Er wordt een dialoogvenster weergegeven met een lijst van alle scores die zijn gekoppeld aan de service-instantie.
 
 ![meer acties](../images/insights/more-actions.png)
 
-## Overzicht van scores {#scoring-summary}
+## Scoresamenvatting {#scoring-summary}
 
 In het overzicht met de scores wordt het totale aantal profielen weergegeven met een score en worden de profielen ingedeeld in emmers met een hoge, gemiddelde en lage dichtheid. De dichtheidsemmers worden bepaald op basis van het score-bereik, laag is minder dan 24, gemiddeld 25 tot 74 en hoog is boven 74. Elk emmertje heeft een kleur die overeenkomt met de legenda.
 
@@ -110,7 +110,7 @@ U kunt over om het even welke kleur op de ring houden om extra informatie, zoals
 
 ## Verdeling van scores
 
-De **[!UICONTROL Verspreiding van Scores]** kaart geeft u een visuele samenvatting van de bevolking die op de score wordt gebaseerd. De kleuren die u in de [!UICONTROL Verdeling van Scores] kaart ziet vertegenwoordigen het type van geproduceerde aandrijvingsscore. Als u de muis boven een van de scoringdistributies houdt, wordt het exacte aantal dat bij die distributie hoort, weergegeven.
+De **[!UICONTROL Verdeling van Scores]** kaart geeft u een visuele samenvatting van de populatie die op de score wordt gebaseerd. De kleuren die u in [!UICONTROL Distributie van Scores] kaart ziet vertegenwoordigen het type van geproduceerde aandrijvingsscore. Als u de muis boven een van de scoringdistributies houdt, wordt het exacte aantal dat bij die distributie hoort, weergegeven.
 
 ![verdeling van scores](../images/insights/distribution-of-scores.png)
 
@@ -134,17 +134,17 @@ U ziet dat profielen met een lage conversiemogelijkheid waarschijnlijk geen rece
 
 ### Een segment maken
 
-Als u de knop Segment **** maken in een van de emmers voor lage, gemiddelde en hoge dichtheid selecteert, wordt u omgeleid naar de segmentbuilder.
+Als u de knop **[!UICONTROL Segment maken]** in een van de emmers selecteert voor lage, gemiddelde en hoge dichtheid, wordt u omgeleid naar de segmentbuilder.
 
 >[!NOTE]
 >
->De **[!UICONTROL Create knoop van het Segment]** is slechts beschikbaar als het Profiel van de Klant in real time voor de dataset wordt toegelaten. Voor meer informatie over hoe te om het Profiel van de Klant in real time toe te laten, bezoek het overzicht [van het Profiel van de Klant in](../../../rtcdp/overview.md)real time.
+>De **[!UICONTROL Create Segment]** knoop is slechts beschikbaar als het Profiel van de Klant in real time voor de dataset wordt toegelaten. Voor meer informatie over hoe te om het Profiel van de Klant in real time toe te laten, bezoek [Overzicht van het Profiel van de Klant in real time](../../../rtcdp/overview.md).
 
 ![Klikken om segment te maken](../images/insights/influential-factors-create-segment.png)
 
 ![Een segment maken](../images/insights/create-segment.png)
 
-De segmentbouwer wordt gebruikt om een segment te bepalen. Als u Segment **** maken selecteert op de pagina Insights, wordt automatisch de geselecteerde buckets-informatie toegevoegd aan het segment. Als u klaar bent met het maken van uw segment, vult u gewoon de containers *Name* en *Description* in die zich in de rechterrail van de gebruikersinterface van de segmentbuilder bevinden. Nadat u een naam en een beschrijving voor het segment hebt gegeven, klikt u rechtsboven op **[!UICONTROL Opslaan]** .
+De segmentbouwer wordt gebruikt om een segment te bepalen. Als u **[!UICONTROL Segment maken]** op de pagina Inzichten selecteert, wordt de geselecteerde informatie over emmers automatisch door de Klant-AI aan het segment toegevoegd. Als u het maken van het segment wilt voltooien, vult u gewoon de *Naam*- en *Beschrijving*-containers in die zich in de rechterrail van de gebruikersinterface van de segmentbuilder bevinden. Nadat u het segment een naam en een beschrijving hebt gegeven, klik **[!UICONTROL sparen]** in het hoogste recht.
 
 >[!NOTE]
 >
@@ -152,13 +152,13 @@ De segmentbouwer wordt gebruikt om een segment te bepalen. Als u Segment **** ma
 
 ![Segmentvulling in](../images/insights/segment-saving.png)
 
-Als u het nieuwe segment wilt weergeven in de gebruikersinterface van het Platform, klikt u op **[!UICONTROL Segmenten]** in de linkernavigatie. De pagina **[!UICONTROL Bladeren]** wordt weergegeven met alle beschikbare segmenten.
+Om uw nieuw segment in Platform UI te bekijken, klik **[!UICONTROL Segmenten]** in de linkernavigatie. De **[!UICONTROL Browse]** pagina verschijnt en toont alle beschikbare segmenten.
 
 ![Alle segmenten](../images/insights/Segments-dashboard.png)
 
 ## Volgende stappen
 
-In dit document worden de inzichten geschetst die door een AI-serviceexemplaar van een klant worden verschaft. U kunt nu doorgaan met de zelfstudie over het [downloaden van scores in Customer AI](./download-scores.md) of door de andere gidsen van de [Adobe Intelligente Diensten](../../home.md) bladeren die worden aangeboden.
+In dit document worden de inzichten geschetst die door een AI-serviceexemplaar van een klant worden verschaft. U kunt nu doorgaan met de zelfstudie over het downloaden van scores in AI](./download-scores.md) van de klant of door de andere [Adobe Intelligente services](../../home.md)-hulplijnen bladeren die worden aangeboden.[
 
 ## Aanvullende bronnen
 
