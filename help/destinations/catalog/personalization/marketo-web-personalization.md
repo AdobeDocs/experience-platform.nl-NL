@@ -1,21 +1,17 @@
 ---
 keywords: Marketo Web Personalization;Marketo web personalization;Marketo Web Personalization extension;marketo web personalization extension;marketo;Marketo;Marketo
-title: Marketo Web Personalization extension
-seo-title: Marketo Web Personalization extension
+title: Marketo Web Persoonalization Extension Destination
 description: De uitbreiding van de Personalisatie van het Web van Marketo is een verpersoonlijkingsbestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De uitbreiding van de Personalisatie van het Web van Marketo is een verpersoonlijkingsbestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Marketo Web Personalization] Extensie  {#marketo-web-personalization-extension}
-
-## Overzicht {#overview}
+# [!DNL Marketo Web Personalization] extension  {#marketo-web-personalization-extension}
 
 Deze uitbreiding stelt het manuscript voor [!DNL Marketo’s] de Toepassingen van het Web Personalization en ContentAI op. [!DNL Marketo] Webpersonalisatie identificeert en personaliseert inhoud op unieke wijze aan de kenmerken van webbezoekers, zoals zelfafbeeldingen voor anonieme bezoekers en een breed scala aan gedragskenmerken binnen het Platform  [!DNL Marketo] Betrokkenheid voor bekende bezoekers. [!DNL Marketo] ContentAI bevat mogelijkheden voor door AI aangedreven aanbevelingen en personalisatie voor web- en e-mailcampagnes die uniek zijn voor B2B-klanten.
 
