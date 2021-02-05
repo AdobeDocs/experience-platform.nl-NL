@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;segment;Segment;creeer segment;segmentatie;creeer een segment;Segmenteringsdienst;
 solution: Experience Platform
-title: Een segment maken
+title: Een segment maken met de segmentatieservice-API
 topic: tutorial
 type: Tutorial
-description: Dit document biedt een zelfstudie voor het ontwikkelen, testen, voorvertonen en opslaan van een segmentdefinitie met de Adobe Experience Platform Segmentation Service API.
+description: Volg deze zelfstudie om te leren hoe u een segmentdefinitie kunt ontwikkelen, testen, voorvertonen en opslaan met de Adobe Experience Platform Segmentation Service API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
 
 
-# Een segment maken
+# Creeer een segment gebruikend de Dienst API van de Segmentatie
 
 Dit document biedt een zelfstudie voor het ontwikkelen, testen, voorvertonen en opslaan van een segmentdefinitie met de [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
