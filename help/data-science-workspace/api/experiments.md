@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;experiments;sensei machine learning api
+keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;experimenten;sensei machine learningapi
 solution: Experience Platform
-title: Experimenten
+title: API-eindpunt voor experimenten
 topic: Developer guide
 description: Modelontwikkeling en -training vinden plaats op het niveau van de experimenten, waarbij een experiment bestaat uit een MLInstance, trainingsrun en scoring run.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '783'
 ht-degree: 1%
 
 ---
 
 
-# Experimenten
+# Eind van het experiment
 
 Modelontwikkeling en -training vinden plaats op het niveau van de experimenten, waarbij een experiment bestaat uit een MLInstance, trainingsrun en scoring run.
 
@@ -101,11 +101,11 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `{TASK}` | Geeft de taak van de uitvoering aan. Plaats deze waarde als of `train` voor opleiding, `score` voor het scoren, of `featurePipeline` voor eigenschappijpleiding. |
+| `{TASK}` | Geeft de taak van de uitvoering aan. Stel deze waarde in als `train` voor training, `score` voor scoring of `featurePipeline` voor functiepijplijn. |
 
 **Antwoord**
 
-Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde looppas met inbegrip van de geërfte standaardopleiding of het scoren parameters, en unieke identiteitskaart van de looppas (`{RUN_ID}`) bevat.
+Een succesvolle reactie keert een nuttige lading terug die de details van de pas gecreëerde looppas met inbegrip van de geërfte standaardopleiding of het scoren parameters, en unieke identiteitskaart van de looppas (`{RUN_ID}`) bevat.
 
 ```json
 {
@@ -134,7 +134,7 @@ Een succesvolle reactie keert een lading terug die de details van de pas gecreë
 
 ## Een lijst met experimenten ophalen
 
-U kunt een lijst van Experimenten terugwinnen die tot een bepaalde instantie behoren door één enkel verzoek van de GET uit te voeren en geldige identiteitskaart MLInstance als vraagparameter te verstrekken. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+U kunt een lijst van Experimenten terugwinnen die tot een bepaalde instantie behoren door één enkel verzoek van de GET uit te voeren en geldige identiteitskaart MLInstance als vraagparameter te verstrekken. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activa herwinning](./appendix.md#query).
 
 
 **API-indeling**
@@ -161,7 +161,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert een lijst van Experimenten terug die zelfde MLInstance ID (`{MLINSTANCE_ID}`) delen.
+Een succesvolle reactie keert een lijst van Experimenten terug die zelfde ID MLInstance (`{MLINSTANCE_ID}`) delen.
 
 ```json
 {
@@ -198,7 +198,7 @@ Een succesvolle reactie keert een lijst van Experimenten terug die zelfde MLInst
 }
 ```
 
-## Een specifiek experiment ophalen {#retrieve-specific}
+## Een specifieke experimenteerfunctie {#retrieve-specific} ophalen
 
 U kunt de details van een specifieke Experiment terugwinnen door een verzoek van de GET uit te voeren dat gewenste identiteitskaart van de Experiment in de verzoekweg omvat.
 
@@ -243,7 +243,7 @@ Een geslaagde reactie retourneert een payload die de details van het gewenste ex
 
 ## Een lijst met experimentele tests ophalen
 
-U kunt een lijst ophalen met trainings- of scores die bij een bepaalde expert horen, door één aanvraag voor een GET uit te voeren en een geldige experimentele id op te geven. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een volledige lijst van beschikbare vraagparameters, zie de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+U kunt een lijst ophalen met trainings- of scores die bij een bepaalde expert horen, door één aanvraag voor een GET uit te voeren en een geldige experimentele id op te geven. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een volledige lijst van beschikbare vraagparameters, zie de bijlage sectie over [vraagparameters voor activa herwinning](./appendix.md#query).
 
 >[!NOTE]
 >
@@ -260,7 +260,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parameter | Beschrijving |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Een geldige experimentele id. |
-| `{QUERY_PARAMETER}` | Een van de [beschikbare queryparameters](./appendix.md#query) die wordt gebruikt om resultaten te filteren. |
+| `{QUERY_PARAMETER}` | Één van [beschikbare vraagparameters](./appendix.md#query) die aan filterresultaten wordt gebruikt. |
 | `{VALUE}` | De waarde voor de voorafgaande vraagparameter. |
 
 **Verzoek**
@@ -278,7 +278,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een payload die een lijst met uitvoeringen en alle details, inclusief de id van de experimentele uitvoering (`{RUN_ID}`), bevat.
+Een succesvolle reactie keert een lading terug die een lijst van looppas en elk van hun details met inbegrip van hun Experiment looppas identiteitskaart (`{RUN_ID}`) bevat.
 
 ```json
 {
@@ -308,7 +308,7 @@ U kunt een bestaande Experiment bijwerken door zijn eigenschappen door een verzo
 
 >[!TIP]
 >
->Om ervoor te zorgen dat dit verzoek van de PUT met succes wordt uitgevoerd, wordt u aangeraden eerst een verzoek van de GET uit te voeren om het Experiment op identiteitskaart [](#retrieve-specific)terug te winnen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>Om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET aan [terugwinning het Experiment door ID](#retrieve-specific) uitvoert. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 De volgende voorbeeld-API-aanroep werkt de naam van een expert bij terwijl deze in eerste instantie deze eigenschappen heeft:
 
