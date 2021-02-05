@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;relatie;field;
 solution: Experience Platform
-title: Een relatieveld definiëren in de gebruikersinterface
+title: Relatievelden definiëren in de gebruikersinterface
 description: Leer hoe u een relatieveld in de gebruikersinterface van het Experience Platform definieert.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
 
-# Een relatieveld definiëren in de gebruikersinterface
+# Relatievatievelden definiëren in de gebruikersinterface
 
 In het Model van Gegevens van de Ervaring (XDM), is een [verenigingsschema](../../schema/composition.md#union) een verenigde mening van alle schema&#39;s die tot de zelfde klasse behoren die ook voor [Real-time Profiel van de Klant ](../../../profile/home.md) zijn toegelaten. Het samenvoegingsschema wordt gebruikt door Profiel om een volledige vertegenwoordiging van een klant van ongelijke ervaringsgegevens te construeren.
 
