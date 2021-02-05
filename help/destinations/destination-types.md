@@ -2,12 +2,11 @@
 keywords: doelen;doel;doeltypen
 title: Typen bestemmingen en categorieën
 seo-title: Typen bestemmingen en categorieën
-description: 'In Adobe Experience Platform leggen de uitvoerdoelen Profiel/Segment gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen, passen segmentatie toe en exporteren segmenten en gekwalificeerde profielen naar bestemmingen. Experience Platform Launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. '
-seo-description: In Adobe Experience Platform leggen de uitvoerdoelen Profiel/Segment gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen, passen segmentatie toe en exporteren segmenten en gekwalificeerde profielen naar bestemmingen. Experience Platform Launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen.
+description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
