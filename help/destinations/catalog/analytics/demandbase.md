@@ -1,21 +1,17 @@
 ---
 keywords: demandbase-extensie;demandbase;demandbase-bestemming
-title: Demandbase-extensie
-seo-title: Demandbase-extensie
+title: Doel extensie demandbase
 description: De extensie Demandbase is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Demandbase is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Demandbase] extension  {#demandbase-extension}
-
-## Overzicht {#overview}
 
 Bekijk [!DNL Demandbase] B2B-accountinzichten direct in Adobe Analytics waar u verkeer en gedrag kunt segmenteren op basis van Industry, Revenue en uw doelaccounts. Deze op account gebaseerde weergave biedt unieke inzichten in betrokkenheid, conversie en de bron voor uw meest waardevolle bezoekers.
 
