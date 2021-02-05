@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;reset sandbox
+keywords: Experience Platform;home;populaire onderwerpen;sandbox opnieuw instellen
 solution: Experience Platform
-title: Een sandbox opnieuw instellen
+title: Een sandbox in de API opnieuw instellen
 topic: developer guide
 description: Ontwikkelingssandboxen beschikken over een functie voor fabrieksinstellingen waarmee alle niet-standaardbronnen uit een sandbox worden verwijderd. U kunt een sandbox opnieuw instellen door een PUT-aanvraag in te dienen die de naam van de sandbox in het aanvraagpad bevat.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '169'
 ht-degree: 1%
 
 ---
 
 
-# Een sandbox opnieuw instellen
+# Een sandbox in de API opnieuw instellen
 
-Ontwikkelingssandboxen beschikken over een functie voor fabrieksinstellingen waarmee alle niet-standaardbronnen uit een sandbox worden verwijderd. U kunt een sandbox opnieuw instellen door een PUT-aanvraag in te dienen die de sandbox&#39;s bevat `name` in het aanvraagpad.
+Ontwikkelingssandboxen beschikken over een functie voor fabrieksinstellingen waarmee alle niet-standaardbronnen uit een sandbox worden verwijderd. U kunt een sandbox opnieuw instellen door een verzoek voor een PUT in te dienen dat de sandbox `name` bevat in het aanvraagpad.
 
 **API-indeling**
 
@@ -25,7 +25,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SANDBOX_NAME}` | De `name` eigenschap van de sandbox die u wilt herstellen. |
+| `{SANDBOX_NAME}` | De eigenschap `name` van de sandbox die u wilt herstellen. |
 
 **Verzoek**
 
@@ -50,7 +50,7 @@ curl -X PUT \
 
 **Antwoord**
 
-Wanneer de reactie met succes is uitgevoerd, worden de details van de bijgewerkte sandbox geretourneerd, waarbij wordt getoond dat de sandbox opnieuw `state` wordt ingesteld.
+Een succesvol antwoord retourneert de details van de bijgewerkte sandbox, waarbij wordt getoond dat `state` opnieuw wordt ingesteld.
 
 ```json
 {
@@ -65,4 +65,4 @@ Wanneer de reactie met succes is uitgevoerd, worden de details van de bijgewerkt
 
 >[!NOTE]
 >
->Wanneer een sandbox opnieuw is ingesteld, duurt het ongeveer 15 minuten voordat het systeem de sandbox heeft ingericht. Nadat de sandbox is ingericht, `state` wordt deze actief of mislukt.
+>Wanneer een sandbox opnieuw is ingesteld, duurt het ongeveer 15 minuten voordat het systeem de sandbox heeft ingericht. Nadat de sandbox is ingericht, wordt `state` &quot;actief&quot; of &quot;mislukt&quot;.
