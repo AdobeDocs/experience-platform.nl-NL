@@ -1,21 +1,17 @@
 ---
 keywords: Yext-omzettingstracking;Yext;yext;text-conversie bijhouden
-title: De extensie Tekstomzetting bijhouden
-seo-title: De extensie Tekstomzetting bijhouden
+title: Doel van extensie voor tekstconversie bijhouden
 description: De extensie Tekstconversie bijhouden is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Tekstconversie bijhouden is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Yext Conversion Tracking] Extensie  {#yext-extension}
-
-## Overzicht {#overview}
+# [!DNL Yext Conversion Tracking] extension  {#yext-extension}
 
 Met de extensie [!DNL Yext Conversion Tracking] kunt u conversies meten die aan uw gebruik van Text-producten kunnen worden toegeschreven.
 
