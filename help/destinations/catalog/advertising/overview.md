@@ -1,19 +1,19 @@
 ---
 keywords: reclamebestemmingen;bestemmingen;platformbestemmingen
 title: Reclamebestemmingen
-seo-title: Reclamebestemmingen
+seo-title: Overzicht advertentiedoelen
 description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 seo-description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
 
 
-# Reclamebestemmingen {#advertising-destinations}
+# Overzicht van advertentiedoelen {#advertising-destinations}
 
 Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 
