@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;gebeurtenishub;Azure-gebeurtenishub;Event-hub
 solution: Experience Platform
-title: Een Azure Event Hubs-connector maken met de Flow Service API
+title: Een Azure Event Hubs Source Connection maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform te verbinden met een Azure Event Hubs-account.
+description: Leer hoe u Adobe Experience Platform verbindt met een Azure Event Hubs-account met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '566'
 ht-degree: 1%
 
 ---
 
 
-# Een [!DNL Azure Event Hubs]-connector maken met de [!DNL Flow Service]-API
+# Een [!DNL Azure Event Hubs]-bronverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
