@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;sandbox troubleshooting
+keywords: Experience Platform;home;populaire onderwerpen;problemen met sandbox
 solution: Experience Platform
-title: Richtlijnen voor het oplossen van problemen met sandboxen
+title: Handleiding voor probleemoplossing voor sandboxen
 topic: troubleshooting guide
 description: Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 # Richtlijnen voor het oplossen van problemen met sandboxen
 
-Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere diensten van de Platform, gelieve te verwijzen naar de het oplossen van problemengids [van het](../landing/troubleshooting.md)Experience Platform.
+Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform. Raadpleeg de [handleiding voor het oplossen van Experience Platforms](../landing/troubleshooting.md) voor vragen en het oplossen van problemen met betrekking tot andere services van Platforms.
 
-Sandboxen verdelen één enkele instantie van het Platform in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen. Zie het [sandboxoverzicht](home.md) voor meer informatie.
+Sandboxen verdelen één enkele instantie van het Platform in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen. Zie het [overzicht van sandboxen](home.md) voor meer informatie.
 
 ## Wat is een sandbox?
 
-Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke zandbak handhaaft zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.). Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Zie het [sandboxoverzicht](home.md) voor meer informatie.
+Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke zandbak handhaaft zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.). Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Zie het [overzicht van sandboxen](home.md) voor meer informatie.
 
 ## Welke typen sandboxen zijn beschikbaar en wat zijn de verschillen tussen deze typen?
 
@@ -34,7 +34,7 @@ Experience Platform biedt één productiesandbox die niet kan worden verwijderd 
 
 Daarentegen kunnen sandboxbeheerders voor één Platform-instantie meerdere niet-productiesandboxen maken. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op de productiesandbox. Daarnaast beschikken niet-productiesandboxen over een functie voor het opnieuw instellen die alle door de klant gemaakte bronnen uit de sandbox verwijdert. Niet-productiesandboxen kunnen niet worden omgezet in productiesandboxen. Een standaardlicentie voor Experience Platforms geeft u vijf sandboxen (één productie en vier niet-productie). U kunt maximaal 75 sandboxen toevoegen voor maximaal tien niet-productiesandboxen. Neem voor meer informatie contact op met uw IMS Org Administrator of uw Adobe-vertegenwoordiger.
 
-Zie het [sandboxoverzicht](./home.md) voor meer informatie.
+Zie het [overzicht van sandboxen](./home.md) voor meer informatie.
 
 ## Kan ik toegang krijgen tot een bron van meerdere sandboxen?
 
@@ -54,4 +54,4 @@ De Adobe Admin Console koppelt gebruikers aan sandboxen en machtigingen via het 
 
 Als u unieke machtigingen wilt toevoegen aan gebruikers van een bepaalde sandbox, moet u mogelijk een nieuw productprofiel maken met de desbetreffende sandboxen en machtigingen die zijn toegepast, en die gebruikers toewijzen aan dat profiel.
 
-Zie de gebruikershandleiding voor [toegangsbeheer](../access-control/ui/overview.md) voor meer informatie over het beheer van sandboxen en machtigingen in de Admin Console.
+Zie de [gebruikershandleiding voor toegangsbeheer](../access-control/ui/overview.md) voor meer informatie over het beheren van sandboxen en machtigingen in de Admin Console.
