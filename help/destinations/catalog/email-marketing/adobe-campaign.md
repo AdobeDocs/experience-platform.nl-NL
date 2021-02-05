@@ -1,21 +1,17 @@
 ---
 keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;adobe campagne;campagne
-title: Adobe Campaign
-seo-title: Adobe Campaign
+title: Adobe Campaign-verbindingsdoel
 description: Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren.
-seo-description: Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren.
 translation-type: tm+mt
-source-git-commit: cf2d76799c03a2ea0414aedd83b35f3ce2ca3cb5
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 1%
+source-wordcount: '654'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Campaign
-
-## Overzicht
+# Adobe Campaign-verbinding
 
 Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren. Zie [Informatie over Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) voor meer informatie.
 
