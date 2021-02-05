@@ -1,19 +1,17 @@
 ---
 keywords: Azure Blob;Blob-bestemming;s3;azure blob-bestemming
-title: Azure Blob-bestemming
-seo-title: Azure Blob-bestemming
+title: Azure Blob Connection Destination
 description: Maak een live uitgaande verbinding met uw Azure Blob-opslag om periodiek door tabs gescheiden of CSV-gegevensbestanden vanuit Adobe Experience Platform te exporteren.
-seo-description: Maak een live uitgaande verbinding met uw Azure Blob-opslag om periodiek door tabs gescheiden of CSV-gegevensbestanden vanuit Adobe Experience Platform te exporteren.
 translation-type: tm+mt
-source-git-commit: 739c7cb55f943675d5ee63d81bba58a2b250c814
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '477'
 ht-degree: 1%
 
 ---
 
 
-# Een [!DNL Azure Blob]-doel maken in de gebruikersinterface
+# [!DNL Azure Blob] verbinding
 
 [!DNL Azure Blob] (hierna &quot;[!DNL Blob]&quot; genoemd) is de oplossing van de objecten van Microsoft voor de wolk. Deze zelfstudie bevat stappen voor het maken van een [!DNL Blob]-doel met behulp van de [!DNL Platform]-gebruikersinterface.
 
