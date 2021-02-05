@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identities;cluster history
+keywords: Experience Platform;thuis;populaire onderwerpen;identiteiten;clustergeschiedenis
 solution: Experience Platform
-title: Clustergeschiedenis van een identiteit ophalen
+title: Cluster-geschiedenis van een identiteit ophalen
 topic: API guide
 description: Identiteiten kunnen clusters bewegen tijdens de uitvoering van verschillende apparaatgrafieken. De Dienst van de identiteit verstrekt zicht in de clusterverenigingen van een bepaalde identiteit in tijd.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 0%
 
 Identiteiten kunnen clusters bewegen tijdens de uitvoering van verschillende apparaatgrafieken. [!DNL Identity Service] geeft in de loop der tijd zichtbaarheid aan de clusterverenigingen van een bepaalde identiteit.
 
-Gebruik optionele `graph-type` parameter om het uitvoertype aan te geven waaruit de cluster moet worden opgehaald. De opties zijn:
+Gebruik de optionele parameter `graph-type` om het uitvoertype aan te geven waaruit de cluster moet worden opgehaald. De opties zijn:
 
 - `None` - Geen identiteitsstitching uitvoeren.
-- `Private Graph` - Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek. Als er geen `graph-type` is opgegeven, is dit de standaardinstelling.
+- `Private Graph` - Identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek. Als geen `graph-type` wordt verstrekt, is dit het gebrek.
 
 ## De clustergeschiedenis van één identiteit ophalen
 
@@ -32,7 +32,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 
 **Verzoek**
 
-Optie 1: Geef de identiteit op als naamruimte (`nsId`, op ID) en als waarde voor ID (`id`).
+Optie 1: Geef de identiteit op als naamruimte (`nsId`, op id) en als id-waarde (`id`).
 
 ```shell
 curl -X GET \
@@ -54,7 +54,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 3: Geef de identiteit op als XID (`xid`). Zie de sectie van dit document over het ophalen van de XID voor een identiteit voor meer informatie over het ophalen van de XID [voor een identiteit](./list-native-id.md)van een identiteit.
+Optie 3: Geef de identiteit op als XID (`xid`). Zie de sectie van dit document over [het ophalen van de XID voor een identiteit](./list-native-id.md) voor meer informatie over het verkrijgen van de XID van een identiteit.
 
 ```shell
 curl -X GET \
@@ -67,7 +67,7 @@ curl -X GET \
 
 ## De clustergeschiedenis van meerdere identiteiten ophalen
 
-Gebruik de `POST` methode als een batchequivalent van de hierboven beschreven `GET` methode om de clusterhistorie van meerdere identiteiten te retourneren.
+Gebruik de methode `POST` als een batchequivalent van de hierboven beschreven methode `GET` om de clusterhistorie van meerdere identiteiten te retourneren.
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ Optie 2: Geef een lijst met identiteiten op als samengestelde id&#39;s, waarbij 
 
 **Studieverzoek**
 
-Het gebruik van `x-uis-cst-ctx: stub` koptekst retourneert een onderbroken reactie. Dit is een tijdelijke oplossing om de snelle vooruitgang van de integratieontwikkeling te vergemakkelijken, terwijl de diensten worden voltooid. Dit wordt vervangen wanneer het niet meer nodig is.
+Het gebruik van `x-uis-cst-ctx: stub` header retourneert een stopbed response. Dit is een tijdelijke oplossing om de snelle vooruitgang van de integratieontwikkeling te vergemakkelijken, terwijl de diensten worden voltooid. Dit wordt vervangen wanneer het niet meer nodig is.
 
 ```shell
 curl -X POST \
@@ -219,4 +219,4 @@ curl -X POST \
 
 ## Volgende stappen
 
-Ga naar de volgende zelfstudie om [een lijst met identiteitstoewijzingen weer te geven](./list-identity-mappings.md)
+Ga aan het volgende leerprogramma aan [lijstidentiteitstoewijzingen](./list-identity-mappings.md) te werk
