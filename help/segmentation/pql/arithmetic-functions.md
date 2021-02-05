@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;arithmetic functions;arithmetic;
+keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;De Taal van de Vraag van het profiel;rekenkundige functies;rekenkunde;
 solution: Experience Platform
-title: Rekenkundige functies
+title: Rekenkundige functies van PAL
 topic: developer guide
 description: De rekenkundige functies worden gebruikt om basisberekeningen op waarden in de Taal van de Vraag van het Profiel (PQL) uit te voeren.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '260'
 ht-degree: 2%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 2%
 
 # Rekenkundige functies
 
-Rekenkundige functies worden gebruikt voor het uitvoeren van basisberekeningen voor waarden in [!DNL Profile Query Language] (PQL). Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
+Rekenkundige functies worden gebruikt voor het uitvoeren van basisberekeningen op waarden in [!DNL Profile Query Language] (PQL). Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
 
 ## Toevoegen
 
-De functie `+` (optellen) wordt gebruikt om de som van twee argumentuitdrukkingen te vinden.
+De functie `+` (optellen) wordt gebruikt om de som twee argumentuitdrukkingen te vinden.
 
 **Indeling**
 
@@ -37,7 +37,7 @@ product1.price + product2.price
 
 ## Vermenigvuldigen
 
-De functie `*` (vermenigvuldigen) wordt gebruikt om het product van twee argumentexpressies te zoeken.
+De functie `*` (vermenigvuldiging) wordt gebruikt om het product van twee argumentuitdrukkingen te vinden.
 
 **Indeling**
 
@@ -55,7 +55,7 @@ product.inventory * product.price
 
 ## Aftrekken
 
-De functie `-` (aftrekken) wordt gebruikt om het verschil tussen twee argumentexpressies te vinden.
+De functie `-` (aftrekken) wordt gebruikt om het verschil van twee argumentuitdrukkingen te vinden.
 
 **Indeling**
 
@@ -73,7 +73,7 @@ product1.price - product2.price
 
 ## Verdelen
 
-De functie `/` (delen) wordt gebruikt om het quotiënt van twee argumentexpressies te vinden.
+De functie `/` (delen) wordt gebruikt om het quotiënt van twee argumentuitdrukkingen te vinden.
 
 **Indeling**
 
@@ -109,4 +109,4 @@ person.age % 5 = 0
 
 ## Volgende stappen
 
-Nu u over rekenkundige functies hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Lees voor meer informatie over andere PQL-functies het overzicht [van de](./overview.md)profielquery.
+Nu u over rekenkundige functies hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
