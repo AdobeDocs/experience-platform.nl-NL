@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;
 solution: Experience Platform
-title: Overzicht van de werkruimte Schemas
+title: Overzicht van de interface Schemas
 description: In dit overzicht worden de belangrijkste mogelijkheden van de werkruimte Schemas in Experience Platform besproken.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# [!UICONTROL Overzicht ] van Schemasworkspace
+# [!UICONTROL Overzicht ] van SchemasUI
 
 Met de werkruimte [!UICONTROL Schemas] in de Adobe Experience Platform-gebruikersinterface kunt u bronnen van het Experience Data Model (XDM) beheren, zoals schema&#39;s, klassen, mixins en gegevenstypen. U kunt kernmiddelen bekijken en onderzoeken die door Adobe worden verstrekt, en douanemiddelen en schema&#39;s voor uw organisatie tot stand brengen.
 
