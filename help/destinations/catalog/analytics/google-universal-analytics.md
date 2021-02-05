@@ -1,21 +1,17 @@
 ---
 keywords: Google Universal Analytics;Google Universal Analytics;Google Universal Analytics
-title: Google Universal Analytics-extensie
-seo-title: Google Universal Analytics-extensie
+title: Google Universal Analytics-extensiebestemming
 description: De Google Universal Analytics-extensie is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Google Universal Analytics-extensie is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Google Universal Analytics] extension  {#google-universal-analytics-extension}
-
-## Overzicht {#overview}
 
 [!DNL Google Universal Analytics] kunt u uw advertentie-ROI meten, evenals uw Flash, video, en sociale voorzien van een netwerkplaatsen en toepassingen volgen.
 
