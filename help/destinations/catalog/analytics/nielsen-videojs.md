@@ -1,21 +1,17 @@
 ---
 keywords: Nielsen VideoJS Player Handler;nielsen video js player;nielsen video js player;Nielsen;nielsen;Nielsen videojs player;Nielsen Digital SDK;nielsen digital sdk
-title: Nielsen VideoJS Player Handler extension
-seo-title: Nielsen VideoJS Player Handler extension
+title: Extensiebestemming Nielsen VideoJS Player Handler
 description: De Nielsen VideoJS Player Handler-extensie is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Nielsen VideoJS Player Handler-extensie is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '614'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Nielsen VideoJS Player Handler] Extensie  {#nielsen-vjs-extension}
-
-## Overzicht {#overview}
+# [!DNL Nielsen VideoJS Player Handler] extension  {#nielsen-vjs-extension}
 
 [!DNL Nielsen Digital SDK] De extensie launch biedt publieksmeting via de volgende digitale meetproducten:
 
