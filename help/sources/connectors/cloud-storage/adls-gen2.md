@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
-title: Azure Data Lake Storage Gen2-connector
+title: Azure Data Lake Storage Gen2 Source Connector - Overzicht
 topic: overview
-description: In de onderstaande documentatie vindt u informatie over de verbinding van Azure Data Lake Storage Gen2 met Platform via API's of de gebruikersinterface.
+description: Leer hoe u Azure Data Lake Storage Gen2 kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -40,11 +40,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Azure Data L
 
 ### API&#39;s gebruiken
 
-- [Een ADLS-Gen2-connector maken met de Flow Service API](../../tutorials/api/create/cloud-storage/adls-gen2.md)
+- [Een ADLS-Gen2-bronverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/adls-gen2.md)
 - [Een systeem voor cloudopslag verkennen met de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Gegevens voor cloudopslag verzamelen met de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ## De gebruikersinterface gebruiken
 
-- [Creeer een ADLS-Gen2 bronschakelaar in UI](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
-- [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Een ADLS-Gen2-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
+- [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
