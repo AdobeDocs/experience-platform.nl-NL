@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;attributie ai;access scores;populaire onderwerpen;download scores;attributie ai scores;export;Export
 solution: Experience Platform, Intelligent Services
-title: Muziek openen in Attribution AI
-topic: Accessing scores
+title: Scores downloaden in Attribution AI
+topic: Downloading scores
 description: Dit document dient als richtlijn voor het downloaden van scores voor Attribution AI.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
