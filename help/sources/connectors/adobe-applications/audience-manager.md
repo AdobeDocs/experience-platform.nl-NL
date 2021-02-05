@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Audience Manager-aansluiting;Audience Manager;publieksmanager
 solution: Experience Platform
-title: Audience Manager-aansluiting
+title: Overzicht van Audience Manager Source Connector
 topic: overview
-description: De Adobe Audience Manager-gegevensconnector streamt gegevens van de eerste partij die in Adobe Audience Manager naar Adobe Experience Platform zijn verzameld. De schakelaar van de Audience Manager neemt twee categorieën gegevens aan Platform in.
+description: De de bronschakelaarstromen van Adobe Audience Manager eerste-partijgegevens die in Audience Manager aan Adobe Experience Platform worden verzameld.
 translation-type: tm+mt
-source-git-commit: b88c358d128ba2016c9449fefc8862bd503c4aa5
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
