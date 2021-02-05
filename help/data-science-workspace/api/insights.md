@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;insights;sensei machine learning api
+keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;inzichten;sensei machine learning api
 solution: Experience Platform
-title: Inzichten
+title: Insights API Endpoint
 topic: Developer guide
 description: Inzichten bevatten meetgegevens die worden gebruikt om een gegevenswetenschapper in staat te stellen optimale XML-modellen te evalueren en te kiezen door relevante evaluatiemetriek weer te geven.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 1%
+source-wordcount: '515'
+ht-degree: 0%
 
 ---
 
 
-# Inzichten
+# Beginpunt
 
 Inzichten bevatten meetgegevens die worden gebruikt om een gegevenswetenschapper in staat te stellen optimale XML-modellen te evalueren en te kiezen door relevante evaluatiemetriek weer te geven.
 
 ## Een lijst met inzichten ophalen
 
-U kunt een lijst van Inzichten terugwinnen door één enkel verzoek van GET tot het inzichten eindpunt uit te voeren.  Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+U kunt een lijst van Inzichten terugwinnen door één enkel verzoek van GET tot het inzichten eindpunt uit te voeren.  Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activa herwinning](./appendix.md#query).
 
 **API-indeling**
 
@@ -40,7 +40,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een payload die een lijst met inzichten bevat en elk inzicht een unieke id ( `id` ) heeft. Bovendien, zult u ontvangen `context` die de unieke herkenningstekens bevat die met dat bepaalde inzicht na de gebeurtenissen van Inzichten en metrieke gegevens worden geassocieerd.
+Een geslaagde reactie retourneert een payload die een lijst met inzichten bevat en elk inzicht heeft een unieke id ( `id` ). Bovendien zult u `context` ontvangen die de unieke herkenningstekens bevat die met dat bepaalde inzicht volgend op de gebeurtenissen van Inzichten en metrieke gegevens worden geassocieerd.
 
 ```json
 {
@@ -109,7 +109,7 @@ Een geslaagde reactie retourneert een payload die een lijst met inzichten bevat 
 
 ## Een specifiek inzicht ophalen
 
-Als u een bepaald inzicht wilt opzoeken, vraagt u een GET en geeft u een geldige waarde op `{INSIGHT_ID}` in het aanvraagpad. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+Om omhoog een bepaald inzicht te kijken doe een verzoek van de GET en verstrek geldig `{INSIGHT_ID}` in de verzoekweg. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activa herwinning](./appendix.md#query).
 
 **API-indeling**
 
@@ -134,7 +134,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een payload die de inzichten als unieke id (`id`) bevat. Bovendien zult u ontvangen `context` die de unieke herkenningstekens bevat die met het bepaalde inzicht na de gebeurtenissen van Inzichten en metrieke gegevens worden geassocieerd.
+Een succesvolle reactie keert een lading terug die de inzichten unieke herkenningsteken (`id`) omvat. Bovendien zult u `context` ontvangen die de unieke herkenningstekens bevat die met het bepaalde inzicht volgend op de gebeurtenissen van Inzichten en metrieke gegevens worden geassocieerd.
 
 ```json
 {
@@ -230,7 +230,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie zal een lading terugkeren die een `{INSIGHT_ID}` en om het even welke parameters heeft die u in het aanvankelijke verzoek verstrekte.
+Een succesvolle reactie zal een lading terugkeren die `{INSIGHT_ID}` en om het even welke parameters heeft die u in het aanvankelijke verzoek verstrekte.
 
 ```json
 {
@@ -265,7 +265,7 @@ Een succesvolle reactie zal een lading terugkeren die een `{INSIGHT_ID}` en om h
 
 ## Hiermee wordt een lijst met standaardmetriek voor algoritmen opgehaald
 
-U kunt een lijst van al uw algoritme en standaardmetriek terugwinnen door één enkel verzoek van de GET aan het metrieke eindpunt uit te voeren. Om metrisch te vragen doe een verzoek van de GET en verstrek een geldig `{ALGORITHM}` in de verzoekweg.
+U kunt een lijst van al uw algoritme en standaardmetriek terugwinnen door één enkel verzoek van de GET aan het metrieke eindpunt uit te voeren. Om metrisch bepaald te vragen doe een verzoek van de GET en verstrek geldig `{ALGORITHM}` in de verzoekweg.
 
 **API-indeling**
 
@@ -280,7 +280,7 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 **Verzoek**
 
-Het volgende verzoek bevat een vraag en wint specifieke metrisch door het algoritmeherkenningsteken te gebruiken terug `{ALGORITHM}`
+Het volgende verzoek bevat een vraag en wint specifieke metrisch door algoritmeherkenningsteken `{ALGORITHM}` terug te gebruiken
 
 ```shell
 curl -X GET \
@@ -293,7 +293,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een payload die de `algorithm` unieke id en een array van standaardmeetgegevens bevat.
+Een geslaagde reactie retourneert een payload die de unieke id `algorithm` en een array met standaardmeetwaarden bevat.
 
 ```json
 {
