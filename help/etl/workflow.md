@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;ETL;etl;etl workflow;ETL workflow
+keywords: Experience Platform;home;populaire onderwerpen;ETL;etl;etl workflow;ETL-workflow
 solution: Experience Platform
 title: ETL-workflow
 topic: overview
 description: Verschillende extractie-, transformatie- en laadprogramma's (ETL) verschillen mogelijk in indeling, maar de meeste van deze gereedschappen bieden vergelijkbare functionaliteit als hulpmiddel bij het combineren van meerdere gegevensbronnen.
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ De hieronder weergegeven acties worden beschreven in de stappen die worden besch
 
 ![](images/image2.png)
 
-### Afbeelding 2 - Activering van [!DNL Experience Platform] connector:
+### Afbeelding 2 - [!DNL Experience Platform] Aansluiting geactiveerd:
 
 ![](images/image3.png)
 
@@ -39,7 +39,7 @@ De hieronder weergegeven acties worden beschreven in de stappen die worden besch
 
 ![](images/image5.png)
 
-### Figuur 5 - het doorbladeren voor bronDatasets [!DNL Experience Platform] :
+### Figuur 5 - het doorbladeren voor bron [!DNL Experience Platform] Datasets:
 
 ![](images/image6.png)
 
@@ -59,7 +59,7 @@ De hieronder weergegeven acties worden beschreven in de stappen die worden besch
 
 ![](images/image10.png)
 
-### Figuur 10 - die de (XDM) [!DNL Experience Data Model] (doelDataset bepaalt:
+### Figuur 10 - die [!DNL Experience Data Model] (XDM) doel Dataset bepaalt:
 
 ![](images/image11.png)
 
