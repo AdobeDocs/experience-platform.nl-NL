@@ -1,21 +1,17 @@
 ---
 keywords: Google-advertenties;Google-advertenties;Google Ads-extensie
-title: Google Ads-extensie
-seo-title: Google Ads-extensie
+title: Bestemming voor Google Ads-extensie
 description: De Google Ads-extensie is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Google Ads-extensie is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Google Ads] extension
-
-## Overzicht {#overview}
 
 Deze extensie volgt conversies van gebruikers die op uw [!DNL Google Ads] klikken. U moet ook de extensie gtag.js installeren en deze toevoegen aan uw bibliotheek, omdat [!DNL Google Ads] van deze extensie afhankelijk is.
 
