@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;naamruimte;Naamruimte;Naamruimten;naamruimten;Naamruimte;Naamruimte;Identiteitsnaamruimte;Identiteit;Identiteitsservice;Identiteitsservice
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service
+title: Overzicht van id-naamruimte
 topic: overview
 description: 'Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name@email.com" als e-mailadres of "443522" als een numerieke CRM-id. '
 translation-type: tm+mt
-source-git-commit: 0547c33e831fe1ac684f55a0e79978cd7f191e65
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '1475'
-ht-degree: 1%
+source-wordcount: '1473'
+ht-degree: 0%
 
 ---
 
