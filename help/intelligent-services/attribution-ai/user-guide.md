@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;user guide;attribution ai;popular topics;region
+keywords: Experience Platform;gebruikershandleiding;attributie ai;populaire onderwerpen;regio
 solution: Experience Platform, Intelligent Services
-title: Gebruikershandleiding voor Attribution AI
+title: Handleiding voor Attribution AI-gebruikersinterface
 topic: User guide
 description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1755'
 ht-degree: 0%
 
 ---
 
 
-# Gebruikershandleiding voor Attribution AI
+# Handleiding Attribution AI UI
 
 Attribution AI, als onderdeel van Intelligente Diensten is een multi-channel, algoritmische attributiedienst die de invloed en de stijgende invloed van klanteninteractie tegen gespecificeerde resultaten berekent. Met Attribution AI kunnen marketeers marketing- en advertentieuitgaven meten en optimaliseren door inzicht te krijgen in de impact van elke individuele interactie van de klant in elke fase van de reis van de klant.
 
@@ -21,20 +21,20 @@ Dit document fungeert als richtlijn voor interactie met Attribution AI in de geb
 
 ## Een instantie maken
 
-Klik in de [!DNL Adobe Experience Platform] gebruikersinterface op **[!UICONTROL Services]** in de linkernavigatie. De browser van de **[!UICONTROL Diensten]** verschijnt en toont beschikbare Adobe intelligente diensten. Klik in de container voor Attribution AI op **[!UICONTROL Openen]**.
+Klik in de gebruikersinterface [!DNL Adobe Experience Platform] op **[!UICONTROL Services]** in de linkernavigatie. De browser **[!UICONTROL Services]** wordt weergegeven en geeft beschikbare intelligente Adobe-services weer. Klik in de container voor Attribution AI op **[!UICONTROL Openen]**.
 
 ![Toegang tot uw exemplaar](./images/user-guide/open_Attribution_ai.png)
 
 De de dienstpagina van de Attribution AI verschijnt. Deze pagina bevat een overzicht van de service-instanties van Attribution AI en informatie over deze instanties, zoals de naam van de instantie, conversiegebeurtenissen, hoe vaak de instantie wordt uitgevoerd en de status van de laatste update.
 
-U kunt de **[!UICONTROL Totale die omzettingsgebeurtenissen vinden metrisch in de bodem-juiste kant van de]** Create instantiecontainer **** wordt gevestigd. Deze metrisch spoor het totale aantal omzettingsgebeurtenissen door Attribution AI voor het huidige kalenderjaar met inbegrip van alle zandbakmilieu&#39;s en om het even welke geschrapte de dienstinstanties worden gemeten die.
+U kunt de **[!UICONTROL Totale omzettingsgebeurtenissen vinden die]** metrisch in de bodem-juiste kant van **[!UICONTROL Create instantie]** container worden gevestigd. Deze metrisch spoor het totale aantal omzettingsgebeurtenissen door Attribution AI voor het huidige kalenderjaar met inbegrip van alle zandbakmilieu&#39;s en om het even welke geschrapte de dienstinstanties worden gemeten die.
 
 ![](./images/user-guide/total_conversions.png)
 
-De instanties van de dienst kunnen worden uitgegeven, worden gekloond, en worden geschrapt door de controles op de rechterkant van UI te gebruiken. Om deze controles te tonen, selecteer een geval van uw bestaande instanties **[!UICONTROL van de]** Dienst. De besturingselementen bevatten de volgende informatie:
+De instanties van de dienst kunnen worden uitgegeven, worden gekloond, en worden geschrapt door de controles op de rechterkant van UI te gebruiken. Om deze controles te tonen, selecteer een geval van uw bestaande **[!UICONTROL Instanties van de Dienst]**. De besturingselementen bevatten de volgende informatie:
 
-- **[!UICONTROL Bewerken]**: Als u **[!UICONTROL Bewerken]** selecteert, kunt u een bestaande service-instantie wijzigen. U kunt de naam, beschrijving, status en scores van de instantie bewerken.
-- **[!UICONTROL Klonen]**: Als u **[!UICONTROL Klonen]** selecteert, wordt de geselecteerde service-instantie gekopieerd. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
+- **[!UICONTROL Bewerken]**: Als u  **** Bewerken selecteert, kunt u een bestaande service-instantie wijzigen. U kunt de naam, beschrijving, status en scores van de instantie bewerken.
+- **[!UICONTROL Klonen]**: Als u Clonecopies selecteert, wordt de geselecteerde service-instantie  **** gekopieerd. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
 - **[!UICONTROL Verwijderen]**: U kunt een de dienstinstantie met inbegrip van om het even welke historische looppas schrappen.
 - **[!UICONTROL Gegevensbron]**: Een verbinding aan de dataset die door dit geval wordt gebruikt.
 - **[!UICONTROL Details]** laatste uitvoering: Dit wordt alleen weergegeven wanneer een run mislukt. Hier wordt informatie weergegeven over waarom de uitvoering is mislukt, zoals foutcodes.
@@ -47,7 +47,7 @@ De instanties van de dienst kunnen worden uitgegeven, worden gekloond, en worden
 
 ![](./images/user-guide/side_panel_2.png)
 
-Selecteer **[!UICONTROL instantie]** maken om te beginnen.
+Selecteer **[!UICONTROL Instantie maken]** om te beginnen.
 
 ![Instantie maken](./images/user-guide/landing_page.png)
 
@@ -63,7 +63,7 @@ Geef onder **[!UICONTROL Basisinformatie]** een naam en een optionele beschrijvi
 
 ### Een gegevensset selecteren
 
-Nadat u de basisgegevens hebt ingevuld, klikt u op de vervolgkeuzelijst Gegevensset **selecteren** om de gegevensset te selecteren. De dataset wordt gebruikt om het model te trainen en de verdere gegevens te scoren het produceert. Wanneer het selecteren van een dataset van de dropdown selecteur, slechts degenen die met Attribution AI compatibel zijn en met het schema van de Gegevens van de Ervaring in overeenstemming zijn (XDM) zijn vermeld. Nadat u een gegevensset hebt gekozen, klikt u op **Volgende** in de rechterbovenhoek om door te gaan naar de pagina met gedefinieerde gebeurtenissen.
+Nadat u de basisgegevens hebt ingevuld, klikt u op de vervolgkeuzelijst met het label **Gegevensset selecteren** om de gegevensset te selecteren. De dataset wordt gebruikt om het model te trainen en de verdere gegevens te scoren het produceert. Wanneer het selecteren van een dataset van de dropdown selecteur, slechts degenen die met Attribution AI compatibel zijn en met het schema van de Gegevens van de Ervaring in overeenstemming zijn (XDM) zijn vermeld. Zodra een dataset wordt gekozen, klik **Volgende** in de hoger-juiste hoek om aan de bepaalde gebeurtenispagina te werk te gaan.
 
 ![instellingspagina](./images/user-guide/initial_creation_attribution.png)
 
@@ -71,41 +71,41 @@ Nadat u de basisgegevens hebt ingevuld, klikt u op de vervolgkeuzelijst Gegevens
 
 Er zijn drie verschillende typen invoergegevens die worden gebruikt voor het definiëren van gebeurtenissen:
 
-- **Conversiegebeurtenissen:** Zakelijke doelstellingen die het effect van marketingactiviteiten identificeren, zoals e-commerceorders, aankopen in winkel en websitebezoeken.
-- **Venster Opzoeken:** Verstrekt een tijdkader erop wijst die hoeveel dagen vóór de conversiegebeurtenis aanraakpunten zouden moeten worden omvat.
-- **Aanraakpunten:** marketinggebeurtenissen op het niveau van de ontvanger, individu of cookie die worden gebruikt om de numerieke of op inkomsten gebaseerde impact van conversies te evalueren.
+- **Conversiegebeurtenissen:** bedrijfsdoelstellingen die het effect van marketing activiteiten, zoals, e-commerceorders, aankopen in-store, en websitebezoeken identificeren.
+- **Lookback-venster:** biedt een tijdframe dat aangeeft hoeveel dagen voor de conversiegebeurtenis de aanraakpunten moeten worden opgenomen.
+- **Aanraakpunten:marketinggebeurtenissen op** ontvangerniveau, op individuele basis of op cookieniveau die worden gebruikt om de numerieke of op inkomsten gebaseerde impact van conversies te evalueren.
 
-### Conversiegebeurtenissen definiëren {#define-conversion-events}
+### Conversiegebeurtenissen {#define-conversion-events} definiëren
 
-Als u een conversiegebeurtenis wilt definiëren, moet u de gebeurtenis een naam geven en het gebeurtenistype selecteren door op het vervolgkeuzemenu Veldnaam **** invoeren te klikken.
+Als u een conversiegebeurtenis wilt definiëren, moet u de gebeurtenis een naam geven en het gebeurtenistype selecteren door te klikken op het vervolgkeuzemenu **Veldnaam invoeren**.
 
 ![ja-dropdown](./images/user-guide/conversion_event_2.png)
 
-Zodra een gebeurtenis wordt geselecteerd, verschijnt een nieuw drop-down aan zijn recht. Het tweede vervolgkeuzemenu wordt gebruikt om verdere context aan uw gebeurtenis door het gebruik van verrichtingen te verstrekken. Voor deze conversiegebeurtenis *bestaat* de standaardbewerking.
+Zodra een gebeurtenis wordt geselecteerd, verschijnt een nieuw drop-down aan zijn recht. Het tweede vervolgkeuzemenu wordt gebruikt om verdere context aan uw gebeurtenis door het gebruik van verrichtingen te verstrekken. Voor deze conversiegebeurtenis wordt de standaardbewerking *exists* gebruikt.
 
 >[!NOTE]
 >
->Een tekenreeks onder de naam *van de* conversie wordt bijgewerkt terwijl u de gebeurtenis definieert.
+>Een tekenreeks onder uw *conversienaam* wordt bijgewerkt terwijl u de gebeurtenis definieert.
 
 ![geen vervolgkeuzelijst](./images/user-guide/conversion_event_1.png)
 
-De knoppen **[!UICONTROL Gebeurtenis]** toevoegen en Groep **** toevoegen worden gebruikt om de conversie verder te definiëren. Afhankelijk van de conversie die u definieert, moet u mogelijk de knoppen Gebeurtenis **** toevoegen en Groep **** toevoegen gebruiken om verdere context te bieden.
+De **[!UICONTROL Add gebeurtenis]** en **[!UICONTROL Add Groep]** knopen worden gebruikt om uw omzetting verder te bepalen. Afhankelijk van de omzetting die u definieert, moet u mogelijk de knoppen **[!UICONTROL Gebeurtenis toevoegen]** en **[!UICONTROL Groep toevoegen]** gebruiken om verdere context te bieden.
 
 ![add, gebeurtenis](./images/user-guide/add_event.png)
 
-Als u op Gebeurtenis **** toevoegen klikt, worden aanvullende velden gemaakt die met dezelfde methode kunnen worden ingevuld als hierboven is beschreven. Hiermee voegt u een AND-instructie toe aan de tekenreeksdefinitie onder de conversienaam. Klik op de **x** om een toegevoegde gebeurtenis te verwijderen.
+Als u op **[!UICONTROL Gebeurtenis toevoegen]** klikt, worden aanvullende velden gemaakt die met dezelfde methode kunnen worden gevuld als hierboven beschreven. Hiermee voegt u een AND-instructie toe aan de tekenreeksdefinitie onder de conversienaam. Klik **x** om een gebeurtenis te verwijderen die is toegevoegd.
 
 ![Gebeurtenismenu toevoegen](./images/user-guide/add_event_result.png)
 
-Als u op Groep **** toevoegen klikt, kunt u extra velden maken die los staan van het origineel. Met de toevoeging van groepen wordt een blauwe *en-* knop weergegeven. Klik op **en** om de parameter te wijzigen in &#39;&#39;Of&#39;&#39;. &quot;Of&quot; wordt gebruikt om meerdere succesvolle conversiepaden te definiëren. &quot;En&quot; breidt het conversiepad uit om aanvullende voorwaarden op te nemen.
+Als u op **[!UICONTROL Groep toevoegen]** klikt, kunt u extra velden maken die los staan van het origineel. Met de toevoeging van groepen wordt een blauwe *en* knop weergegeven. Als u op **And** klikt, kunt u de parameter zo wijzigen dat deze &quot;Of&quot; bevat. &quot;Of&quot; wordt gebruikt om meerdere succesvolle conversiepaden te definiëren. &quot;En&quot; breidt het conversiepad uit om aanvullende voorwaarden op te nemen.
 
 ![gebruik en](./images/user-guide/and_or.png)
 
-Als u meerdere conversies nodig hebt, klikt u op Conversie **** toevoegen om een nieuwe conversiekaart te maken. U kunt het bovenstaande proces herhalen om meerdere conversies te definiëren.
+Als u meerdere conversies nodig hebt, klikt u op **Conversie toevoegen** om een nieuwe conversiekaart te maken. U kunt het bovenstaande proces herhalen om meerdere conversies te definiëren.
 
 ![conversie toevoegen](./images/user-guide/add_conversion.png)
 
-### Opzoekvenster definiëren {#lookback-window}
+### Opzoekvenster {#lookback-window} definiëren
 
 Nadat u de conversie hebt gedefinieerd, moet u het terugzoekvenster bevestigen. Geef met de pijltoetsen of door op de standaardwaarde (56) te klikken op hoeveel dagen vóór de conversiegebeurtenis u aanraakpunten wilt opnemen. Aanraakpunten worden gedefinieerd in de volgende stap.
 
@@ -113,15 +113,15 @@ Nadat u de conversie hebt gedefinieerd, moet u het terugzoekvenster bevestigen. 
 
 ### Aanraakpunten definiëren
 
-Het definiëren van aanraakpunten volgt een vergelijkbare workflow als het [definiëren van conversies](#define-conversion-events). Aanvankelijk moet u uw aanraakpunt een naam geven en een aanraakpuntwaarde selecteren in het vervolgkeuzemenu *Veldnaam* invoeren. Als deze optie is geselecteerd, wordt het vervolgkeuzemenu met de standaardwaarde &quot;exists&quot; weergegeven. Klik op het vervolgkeuzemenu om een lijst met operatoren weer te geven.
+Het bepalen van aanraakpunten volgt een gelijkaardige werkschema aan [het bepalen van omzettingen](#define-conversion-events). Aanvankelijk moet u uw aanraakpunt een naam geven en een aanraakpuntwaarde selecteren in het vervolgkeuzemenu *Veldnaam invoeren*. Als deze optie is geselecteerd, wordt het vervolgkeuzemenu met de standaardwaarde &quot;exists&quot; weergegeven. Klik op het vervolgkeuzemenu om een lijst met operatoren weer te geven.
 
 ![operatoren](./images/user-guide/operators.png)
 
-Voor dit aanraakpunt selecteert u **gelijk aan**.
+Voor dit aanraakpunt selecteert u **equals**.
 
 ![stap 1](./images/user-guide/touchpoint_step1.png)
 
-Nadat een operator voor een aanraakpunt is geselecteerd, wordt *Veldwaarde* invoeren beschikbaar gesteld. De vervolgkeuzemenu&#39;s voor *Veldwaarde* invoeren vullen op basis van de operator en de aanraakpuntwaarde die u eerder hebt geselecteerd. Als een waarde niet in de vervolgkeuzelijst wordt gevuld, kunt u die waarde handmatig invoeren. Klik op het vervolgkeuzemenu en selecteer **KLIKKEN**.
+Nadat een operator voor een aanraakpunt is geselecteerd, wordt *Veldwaarde invoeren* beschikbaar gemaakt. De vervolgkeuzemenu&#39;s voor *Veldwaarde invoeren* vullen op basis van de operator en de aanraakpuntwaarde die u eerder hebt geselecteerd. Als een waarde niet in de vervolgkeuzelijst wordt gevuld, kunt u die waarde handmatig invoeren. Klik op het vervolgkeuzemenu en selecteer **KLIK**.
 
 >[!NOTE]
 >
@@ -129,23 +129,23 @@ Nadat een operator voor een aanraakpunt is geselecteerd, wordt *Veldwaarde* invo
 
 ![vervolgkeuzelijst met aanraakpunten](./images/user-guide/touchpoint_dropdown.png)
 
-De *Add gebeurtenis* en de *Add knopen van de Groep* worden gebruikt om uw touchpoint verder te bepalen. Vanwege de complexe aard van de omringende aanraakpunten is het niet ongebruikelijk om voor één aanraakpunt meerdere gebeurtenissen en groepen te hebben.
+De *Add gebeurtenis* en *Add Groep* knopen worden gebruikt om uw aanraakpunt verder te bepalen. Vanwege de complexe aard van de omringende aanraakpunten is het niet ongebruikelijk om voor één aanraakpunt meerdere gebeurtenissen en groepen te hebben.
 
-Als u op Gebeurtenis **** toevoegen klikt, kunnen extra velden worden toegevoegd. Klik op de **x** om een toegevoegde gebeurtenis te verwijderen.
+Als u op **Gebeurtenis toevoegen** klikt, kunnen extra velden worden toegevoegd. Klik **x** om een gebeurtenis te verwijderen die is toegevoegd.
 
 ![add, gebeurtenis](./images/user-guide/touchpoint_add_event.png)
 
-Als u op Groep **** toevoegen klikt, kunt u extra velden maken die los staan van het origineel. Met de toevoeging van groepen wordt een blauwe *en-* knop weergegeven. Klik **en** om de parameter te veranderen, wordt de nieuwe parameter &quot;of&quot;gebruikt om veelvoudige succesvolle wegen te bepalen. Dit specifieke aanraakpunt heeft slechts één succesvol pad, dus &quot;Of&quot; is niet nodig.
+Als u op **Groep toevoegen** klikt, kunt u extra velden maken die los staan van het origineel. Met de toevoeging van groepen wordt een blauwe *en* knop weergegeven. Klik **En** om de parameter te veranderen, wordt de nieuwe parameter &quot;of&quot;gebruikt om veelvoudige succesvolle wegen te bepalen. Dit specifieke aanraakpunt heeft slechts één succesvol pad, dus &quot;Of&quot; is niet nodig.
 
 ![overzicht van aanraakpunten](./images/user-guide/add_group_touchpoint.png)
 
 >[!NOTE]
 >
->Gebruik de tekenreeks onder de naam *van het* aanraakpunt voor een snel overzicht van uw aanraakpunt. De tekenreeks komt overeen met de naam van het aanraakpunt.
+>Gebruik de tekenreeks onder *Naam aanraakpunt* voor een snel overzicht van uw aanraakpunt. De tekenreeks komt overeen met de naam van het aanraakpunt.
 
 ![](./images/user-guide/touchpoint_string.png)
 
-U kunt aanvullende aanraakpunten toevoegen door op **Aanraakpunt** toevoegen te klikken en het bovenstaande proces te herhalen.
+U kunt aanvullende aanraakpunten toevoegen door te klikken op **Aanraakpunt toevoegen** en het bovenstaande proces te herhalen.
 
 ![aanraakpunt toevoegen](./images/user-guide/add_touchpoint.png)
 
@@ -155,15 +155,15 @@ Als u alle benodigde aanraakpunten hebt gedefinieerd, schuift u omhoog en klikt 
 
 ## Geavanceerde instellingen voor training en scores
 
-De laatste pagina in Attribution AI is de pagina **[!UICONTROL Geavanceerd]** die wordt gebruikt voor het instellen van training en scoring.
+De laatste pagina in Attribution AI is de pagina **[!UICONTROL Advanced]** die wordt gebruikt voor het instellen van training en scoring.
 
 ![nieuwe pagina, geavanceerd](./images/user-guide/advanced_settings.png)
 
 ### Training plannen
 
-Met het *schema* kunt u een dag en tijd van de week selecteren die u wilt scoren.
+Met *Schedule* kunt u een dag en tijd van de week selecteren die u wilt scoren.
 
-Klik op het vervolgkeuzemenu onder *Muziekfrequentie* om een score tussen dag, week en maand te kiezen. Selecteer vervolgens de dagen van de week waarop u de scoring wilt toepassen. U kunt meerdere dagen selecteren. Klik nogmaals op een dag om deze te deselecteren.
+Klik op het vervolgkeuzemenu onder *Muziekfrequentie* om een keuze te maken tussen dagelijkse, wekelijkse en maandelijkse scoring. Selecteer vervolgens de dagen van de week waarop u de scoring wilt toepassen. U kunt meerdere dagen selecteren. Klik nogmaals op een dag om deze te deselecteren.
 
 ![Training plannen](./images/user-guide/schedule_training.png)
 
@@ -181,11 +181,11 @@ Door gebrek, wordt een score dataset gecreeerd voor elke de dienstinstantie in e
 
 ![optellen van kolom met scoregegevens](./images/user-guide/Add-score-dataset.png)
 
-### Regionaal modelleren (optioneel) {#region-based-modeling-optional}
+### Regionaal modelleren (facultatief) {#region-based-modeling-optional}
 
 Het gedrag van uw klanten kan per land en geografische regio aanzienlijk verschillen. Voor globale ondernemingen, die op land-gebaseerde of op regio-gebaseerde modellen gebruiken kan attributienauwkeurigheid verhogen. Elk toegevoegd gebied leidt tot een nieuw model met de gegevens van dat gebied.
 
-Als u een nieuw gebied wilt definiëren, klikt u eerst op Gebied **** toevoegen. Geef in de container die wordt weergegeven een naam voor het gebied op. Slechts één waarde (&quot;placeContext.geo.countryCode&quot;) wordt gevuld vanuit het vervolgkeuzemenu Veldnaam **** invoeren. Selecteer deze waarde.
+Als u een nieuw gebied wilt definiëren, klikt u op **[!UICONTROL Gebied toevoegen]**. Geef in de container die wordt weergegeven een naam voor het gebied op. Slechts één waarde (&quot;placeContext.geo.countryCode&quot;) wordt gevuld vanaf het vervolgkeuzemenu **[!UICONTROL Veldnaam invoeren]**. Selecteer deze waarde.
 
 ![Gebied selecteren bij](./images/user-guide/select_region_att.png)
 
@@ -193,11 +193,11 @@ Selecteer vervolgens een operator.
 
 ![regionale operator](./images/user-guide/region_operators.png)
 
-Typ ten slotte de landcode in het vervolgkeuzemenu **[!UICONTROL Veldwaarde]** invoeren.
+Typ ten slotte de landcode in het vervolgkeuzemenu **[!UICONTROL Veldwaarde invoeren]**.
 
 >[!NOTE]
 >
->Landcodes zijn twee tekens lang. Een volledige lijst vindt u hier in [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>Landcodes zijn twee tekens lang. Een volledige lijst vindt u hier [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ![regio](./images/user-guide/region-based.png)
 
@@ -211,13 +211,13 @@ Om ervoor te zorgen dat u het meest nauwkeurige model mogelijk krijgt, is het be
 
 ![trainingsvenster](./images/user-guide/training_window.png)
 
-Als u uw trainingsvenster hebt geselecteerd, klikt u op **[!UICONTROL Voltooien]** in de rechterbovenhoek. Laat de gegevens enige tijd verwerken. Na voltooiing, lijkt een popover dialoog bevestigend dat de instantie opstelling volledig is. Klik op **[!UICONTROL OK]** om te worden omgeleid naar de pagina met **[!UICONTROL Service-instanties]** waar u uw serviceexemplaar kunt zien.
+Als u uw trainingsvenster hebt geselecteerd, klikt u op **[!UICONTROL Voltooien]** in de rechterbovenhoek. Laat de gegevens enige tijd verwerken. Na voltooiing, lijkt een popover dialoog bevestigend dat de instantie opstelling volledig is. Klik op **[!UICONTROL Ok]** om te worden omgeleid naar de pagina **[!UICONTROL Service-instanties]** waar u uw service-exemplaar kunt zien.
 
 ![installatie voltooid](./images/user-guide/instance_setup_complete.png)
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een de dienstinstantie in Attribution AI gecreeerd. Zodra de instantie het scoren heeft gebeëindigd (sta tot 24 uren toe), bent u bereid om Attribution AI inzichten [te](./discover-insights.md)ontdekken. Als u de resultaten van uw scores wilt downloaden, gaat u ook naar de documentatie voor [downloadscores](./download-scores.md) .
+Door deze zelfstudie te volgen, hebt u met succes een de dienstinstantie in Attribution AI gecreeerd. Zodra de instantie het scoren heeft gebeëindigd (sta tot 24 uren toe), bent u klaar om Attribution AI inzichten [te ontdekken](./discover-insights.md). Als u de resultaten van uw scores wilt downloaden, gaat u bovendien naar de [documentatie voor het downloaden van scores](./download-scores.md).
 
 ## Aanvullende bronnen
 
