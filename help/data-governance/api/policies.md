@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;API-based enforcement;data governance
+keywords: Experience Platform;home;populaire onderwerpen;Beleidshandhaving;API-gebaseerde handhaving;gegevensbeheer
 solution: Experience Platform
-title: Beleid
+title: API-eindpunt voor beleidsregels
 topic: developer guide
 description: Het beleid van het gebruik van gegevens is regels uw organisatie goedkeurt die de soorten marketing acties beschrijven die u aan, of beperkt van, op gegevens binnen Experience Platform mag uitvoeren. Het /policies eindpunt wordt gebruikt voor alle API vraag met betrekking tot het bekijken van, het creëren van, het bijwerken van, of het schrappen van het beleid van het gegevensgebruik.
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1817'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 # Eind beleid
 
-Het beleid van het gebruik van gegevens is regels die de soorten marketing acties beschrijven die u aan, of beperkt van, het uitvoeren op gegevens binnen wordt toegestaan [!DNL Experience Platform]. Het `/policies` eindpunt in [!DNL Policy Service API] staat u toe om het beleid van het gegevensgebruik voor uw organisatie programmatically te beheren.
+Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens binnen [!DNL Experience Platform]. Het `/policies` eindpunt in [!DNL Policy Service API] staat u toe om het beleid van het gegevensgebruik voor uw organisatie programmatically te beheren.
 
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Lees voordat u verdergaat de gids [Aan de](getting-started.md) slag voor koppelingen naar gerelateerde documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een willekeurige [!DNL Experience Platform] API mogelijk te maken.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
 
-## Een lijst met beleidsregels ophalen {#list}
+## Hiermee wordt een lijst met beleidsregels {#list} opgehaald
 
-U kunt alle `core` of `custom` beleidsregels weergeven door een aanvraag voor een GET in te dienen bij `/policies/core` of `/policies/custom`.
+U kunt alle `core` of `custom` beleid door een verzoek van de GET aan `/policies/core` of `/policies/custom`, respectievelijk te richten.
 
 **API-indeling**
 
@@ -47,7 +47,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie omvat een `children` serie die van de details van elk teruggewonnen beleid, met inbegrip van hun `id` waarden een lijst maakt. U kunt het `id` gebied van een bepaald beleid gebruiken om [raadpleging](#lookup)uit te voeren, [bijwerk](#update), en [schrapt](#delete) verzoeken voor dat beleid.
+Een succesvolle reactie omvat een `children` serie die van de details van elk teruggewonnen beleid, met inbegrip van hun `id` waarden een lijst maakt. Met het veld `id` van een bepaald beleid kunt u [lookup](#lookup), [update](#update) en [delete](#delete) verzoeken voor dat beleid uitvoeren.
 
 ```JSON
 {
@@ -142,10 +142,10 @@ Een succesvolle reactie omvat een `children` serie die van de details van elk te
 | --- | --- |
 | `_page.count` | Het totale aantal opgehaalde beleidsregels. |
 | `name` | De weergavenaam voor een beleid. |
-| `status` | De huidige status van een beleid. Er zijn drie mogelijke statussen: `DRAFT`, `ENABLED`of `DISABLED`. Standaard nemen alleen `ENABLED` beleidsregels deel aan de evaluatie. Zie het overzicht over [beleidsevaluatie](../enforcement/overview.md) voor meer informatie. |
+| `status` | De huidige status van een beleid. Er zijn drie mogelijke statussen: `DRAFT`, `ENABLED` of `DISABLED`. Standaard nemen alleen `ENABLED`-beleidsregels deel aan de evaluatie. Zie het overzicht op [beleidsevaluatie](../enforcement/overview.md) voor meer informatie. |
 | `marketingActionRefs` | Een array die de URI&#39;s van alle toepasselijke marketingacties voor een beleid opsomt. |
 | `description` | Een optionele beschrijving die een verdere context biedt voor het gebruiksgeval van het beleid. |
-| `deny` | Een voorwerp dat de specifieke etiketten van het gegevensgebruik beschrijft dat de bijbehorende het op de markt brengen actie van een beleid wordt beperkt van wordt uitgevoerd op. Zie de sectie over het [creëren van een beleid](#create-policy) voor meer informatie over dit bezit. |
+| `deny` | Een voorwerp dat de specifieke etiketten van het gegevensgebruik beschrijft dat de bijbehorende het op de markt brengen actie van een beleid wordt beperkt van wordt uitgevoerd op. Zie de sectie over [het creëren van een beleid](#create-policy) voor meer informatie over dit bezit. |
 
 ## Een beleid opzoeken {#look-up}
 
@@ -160,7 +160,7 @@ GET /policies/custom/{POLICY_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{POLICY_ID}` | Het `id` beleid dat u wilt opzoeken. |
+| `{POLICY_ID}` | De `id` van het beleid u omhoog wilt kijken. |
 
 **Verzoek**
 
@@ -223,21 +223,21 @@ Een succesvol antwoord geeft de details van het beleid terug.
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | De weergavenaam voor het beleid. |
-| `status` | De huidige status van het beleid. Er zijn drie mogelijke statussen: `DRAFT`, `ENABLED`of `DISABLED`. Standaard nemen alleen `ENABLED` beleidsregels deel aan de evaluatie. Zie het overzicht over [beleidsevaluatie](../enforcement/overview.md) voor meer informatie. |
+| `status` | De huidige status van het beleid. Er zijn drie mogelijke statussen: `DRAFT`, `ENABLED` of `DISABLED`. Standaard nemen alleen `ENABLED`-beleidsregels deel aan de evaluatie. Zie het overzicht op [beleidsevaluatie](../enforcement/overview.md) voor meer informatie. |
 | `marketingActionRefs` | Een array die de URI&#39;s van alle toepasselijke marketingacties voor het beleid opsomt. |
 | `description` | Een optionele beschrijving die een verdere context biedt voor het gebruiksgeval van het beleid. |
-| `deny` | Een voorwerp dat de specifieke etiketten van het gegevensgebruik beschrijft dat de bijbehorende het op de markt brengen actie van het beleid wordt beperkt van wordt uitgevoerd op. Zie de sectie over het [creëren van een beleid](#create-policy) voor meer informatie over dit bezit. |
+| `deny` | Een voorwerp dat de specifieke etiketten van het gegevensgebruik beschrijft dat de bijbehorende het op de markt brengen actie van het beleid wordt beperkt van wordt uitgevoerd op. Zie de sectie over [het creëren van een beleid](#create-policy) voor meer informatie over dit bezit. |
 
 ## Een aangepast beleid maken {#create-policy}
 
-In de [!DNL Policy Service] API wordt een beleid gedefinieerd door het volgende:
+In de [!DNL Policy Service] API, wordt een beleid bepaald door het volgende:
 
 * Een verwijzing naar een specifieke marketingactie
 * Een uitdrukking die de etiketten van het gegevensgebruik beschrijft dat de marketing actie tegen wordt beperkt wordt uitgevoerd
 
 Om aan dit laatste vereiste te voldoen, moeten beleidsdefinities een booleaanse uitdrukking betreffende de aanwezigheid van gegevensgebruikslabels omvatten. Deze uitdrukking wordt genoemd een beleidsuitdrukking.
 
-Beleidsuitdrukkingen worden gegeven in de vorm van een `deny` eigenschap binnen elke beleidsdefinitie. Een voorbeeld van een eenvoudig `deny` object dat alleen de aanwezigheid van één label controleert, ziet er als volgt uit:
+Beleidsexpressies worden gegeven in de vorm van een eigenschap `deny` binnen elke beleidsdefinitie. Een voorbeeld van een eenvoudig object `deny` dat alleen de aanwezigheid van één label controleert, ziet er als volgt uit:
 
 ```json
 "deny": {
@@ -247,7 +247,7 @@ Beleidsuitdrukkingen worden gegeven in de vorm van een `deny` eigenschap binnen 
 
 In veel beleidsregels worden echter complexere voorwaarden met betrekking tot de aanwezigheid van labels voor gegevensgebruik vastgelegd. Om deze gebruiksgevallen te steunen, kunt u booleaanse verrichtingen ook omvatten om uw beleidsuitdrukkingen te beschrijven. Het beleidsexpressieobject moet een label of een operator en operanden bevatten, maar niet beide. Elke operand is op zijn beurt ook een beleidsexpressieobject.
 
-Als u bijvoorbeeld een beleid wilt definiëren dat een marketingactie verbiedt te worden uitgevoerd op gegevens waarin `C1 OR (C3 AND C7)` labels aanwezig zijn, wordt de `deny` eigenschap van het beleid als volgt opgegeven:
+Bijvoorbeeld, om een beleid te bepalen dat een marketing actie verbiedt wordt uitgevoerd op gegevens waar `C1 OR (C3 AND C7)` etiketten aanwezig zijn, zou het `deny` bezit van het beleid als worden gespecificeerd:
 
 ```JSON
 "deny": {
@@ -267,8 +267,8 @@ Als u bijvoorbeeld een beleid wilt definiëren dat een marketingactie verbiedt t
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `operator` | Geeft de voorwaardelijke relatie aan tussen de labels die in de verwant- `operands` array worden opgegeven. Accepteerde waarden zijn: <ul><li>`OR`: De expressie wordt omgezet in true als een van de labels in de `operands` array aanwezig is.</li><li>`AND`: De expressie wordt alleen omgezet in true als alle labels in de `operands` array aanwezig zijn.</li></ul> |
-| `operands` | Een array van objecten, waarbij elk object één label of een extra paar `operator` en `operands` eigenschappen vertegenwoordigt. De aanwezigheid van de labels en/of bewerkingen in een `operands` `operator` array wordt omgezet in true of false op basis van de waarde van de eigenschap op hetzelfde niveau. |
+| `operator` | Geeft de voorwaardelijke relatie aan tussen de labels in de verwant `operands`-array. Accepteerde waarden zijn: <ul><li>`OR`: De expressie wordt omgezet in true als een van de labels in de  `operands` array aanwezig is.</li><li>`AND`: De expressie wordt alleen omgezet in true als alle labels in de  `operands` array aanwezig zijn.</li></ul> |
+| `operands` | Een array van objecten, waarbij elk object één label of een extra paar `operator`- en `operands`-eigenschappen vertegenwoordigt. De aanwezigheid van de labels en/of bewerkingen in een `operands`-array wordt omgezet in true of false op basis van de waarde van de eigenschap `operator` op hetzelfde niveau. |
 | `label` | De naam van één gegevensgebruikslabel dat op het beleid van toepassing is. |
 
 U kunt een nieuw douanebeleid tot stand brengen door een verzoek van de POST aan het `/policies/custom` eindpunt te doen.
@@ -281,7 +281,7 @@ POST /policies/custom
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een nieuw beleid dat de marketing actie `exportToThirdParty` van wordt uitgevoerd op gegevens die etiketten bevatten beperkt `C1 OR (C3 AND C7)`.
+Het volgende verzoek leidt tot een nieuw beleid dat de marketing actie `exportToThirdParty` van wordt uitgevoerd op gegevens die etiketten `C1 OR (C3 AND C7)` bevatten beperkt.
 
 ```shell
 curl -X POST \
@@ -317,14 +317,14 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | De weergavenaam voor het beleid. |
-| `status` | De huidige status van het beleid. Er zijn drie mogelijke statussen: `DRAFT`, `ENABLED`of `DISABLED`. Standaard nemen alleen `ENABLED` beleidsregels deel aan de evaluatie. Zie het overzicht over [beleidsevaluatie](../enforcement/overview.md) voor meer informatie. |
-| `marketingActionRefs` | Een array die de URI&#39;s van alle toepasselijke marketingacties voor het beleid opsomt. De URI voor een marketingactie vindt u onder `_links.self.href` de reactie voor het [opzoeken van een marketingactie](./marketing-actions.md#look-up). |
+| `status` | De huidige status van het beleid. Er zijn drie mogelijke statussen: `DRAFT`, `ENABLED` of `DISABLED`. Standaard nemen alleen `ENABLED`-beleidsregels deel aan de evaluatie. Zie het overzicht op [beleidsevaluatie](../enforcement/overview.md) voor meer informatie. |
+| `marketingActionRefs` | Een array die de URI&#39;s van alle toepasselijke marketingacties voor het beleid opsomt. De URI voor een marketingactie wordt gegeven onder `_links.self.href` in de reactie voor [het opzoeken van een marketingactie](./marketing-actions.md#look-up). |
 | `description` | Een optionele beschrijving die een verdere context biedt voor het gebruiksgeval van het beleid. |
 | `deny` | De beleidsuitdrukking die de specifieke etiketten van het gegevensgebruik beschrijft de bijbehorende het op de markt brengen actie van het beleid wordt beperkt van wordt uitgevoerd op. |
 
 **Antwoord**
 
-Een succesvol antwoord keert de details van het nieuwe beleid, met inbegrip van zijn `id`. Deze waarde is alleen-lezen en wordt automatisch toegewezen wanneer het beleid wordt gemaakt.
+Een geslaagde reactie retourneert de details van het nieuwe beleid, inclusief `id`. Deze waarde is alleen-lezen en wordt automatisch toegewezen wanneer het beleid wordt gemaakt.
 
 ```JSON
 {
@@ -369,17 +369,17 @@ Een succesvol antwoord keert de details van het nieuwe beleid, met inbegrip van 
 }
 ```
 
-## Een aangepast beleid bijwerken {#update}
+## Een aangepast beleid {#update} bijwerken
 
 >[!IMPORTANT]
 >
->U kunt alleen aangepast beleid bijwerken. Als u kernbeleid wilt toelaten of onbruikbaar maken, zie de sectie bij het [bijwerken van de lijst van toegelaten kernbeleid](#update-enabled-core).
+>U kunt alleen aangepast beleid bijwerken. Als u kernbeleid wilt toelaten of onbruikbaar maken, zie de sectie op [het bijwerken van de lijst van toegelaten kernbeleid](#update-enabled-core).
 
 U kunt een bestaand douanebeleid bijwerken door zijn identiteitskaart in de weg van een verzoek van de PUT met een nuttige lading te verstrekken die de bijgewerkte vorm van het beleid in zijn geheel omvat. Met andere woorden, het verzoek van de PUT herschrijft in wezen het beleid.
 
 >[!NOTE]
 >
->Zie de sectie over het [bijwerken van een gedeelte van een douanebeleid](#patch) als u slechts één of meerdere gebieden voor een beleid wilt bijwerken, eerder dan het te beschrijven.
+>Zie de sectie over [het bijwerken van een gedeelte van een douanebeleid](#patch) als u slechts één of meerdere gebieden voor een beleid wilt bijwerken, eerder dan het te beschrijven.
 
 **API-indeling**
 
@@ -389,11 +389,11 @@ PUT /policies/custom/{POLICY_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{POLICY_ID}` | Het `id` beleid dat u wilt bijwerken. |
+| `{POLICY_ID}` | De `id` van het beleid u wilt bijwerken. |
 
 **Verzoek**
 
-In dit voorbeeld zijn de voorwaarden voor het exporteren van gegevens naar een derde gewijzigd. U hebt nu het beleid dat u hebt gemaakt nodig om deze marketingactie te weigeren als er `C1 AND C5` gegevenslabels aanwezig zijn.
+In dit voorbeeld zijn de voorwaarden voor het exporteren van gegevens naar een derde gewijzigd en nu hebt u het beleid nodig dat u hebt gemaakt om deze marketingactie te weigeren als er `C1 AND C5` gegevenslabels aanwezig zijn.
 
 Het volgende verzoek werkt het bestaande beleid bij om de nieuwe beleidsuitdrukking te omvatten. Merk op dat aangezien dit verzoek hoofdzakelijk het beleid herschrijft, alle gebieden in de lading moeten worden omvat, zelfs als sommige van hun waarden niet worden bijgewerkt.
 
@@ -425,10 +425,10 @@ curl -X PUT \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | De weergavenaam voor het beleid. |
-| `status` | De huidige status van het beleid. Er zijn drie mogelijke statussen: `DRAFT`, `ENABLED`of `DISABLED`. Standaard nemen alleen `ENABLED` beleidsregels deel aan de evaluatie. Zie het overzicht over [beleidsevaluatie](../enforcement/overview.md) voor meer informatie. |
-| `marketingActionRefs` | Een array die de URI&#39;s van alle toepasselijke marketingacties voor het beleid opsomt. De URI voor een marketingactie vindt u onder `_links.self.href` de reactie voor het [opzoeken van een marketingactie](./marketing-actions.md#look-up). |
+| `status` | De huidige status van het beleid. Er zijn drie mogelijke statussen: `DRAFT`, `ENABLED` of `DISABLED`. Standaard nemen alleen `ENABLED`-beleidsregels deel aan de evaluatie. Zie het overzicht op [beleidsevaluatie](../enforcement/overview.md) voor meer informatie. |
+| `marketingActionRefs` | Een array die de URI&#39;s van alle toepasselijke marketingacties voor het beleid opsomt. De URI voor een marketingactie wordt gegeven onder `_links.self.href` in de reactie voor [het opzoeken van een marketingactie](./marketing-actions.md#look-up). |
 | `description` | Een optionele beschrijving die een verdere context biedt voor het gebruiksgeval van het beleid. |
-| `deny` | De beleidsuitdrukking die de specifieke etiketten van het gegevensgebruik beschrijft de bijbehorende het op de markt brengen actie van het beleid wordt beperkt van wordt uitgevoerd op. Zie de sectie over het [creëren van een beleid](#create-policy) voor meer informatie over dit bezit. |
+| `deny` | De beleidsuitdrukking die de specifieke etiketten van het gegevensgebruik beschrijft de bijbehorende het op de markt brengen actie van het beleid wordt beperkt van wordt uitgevoerd op. Zie de sectie over [het creëren van een beleid](#create-policy) voor meer informatie over dit bezit. |
 
 **Antwoord**
 
@@ -469,19 +469,19 @@ Een succesvolle reactie keert de details van het bijgewerkte beleid terug.
 }
 ```
 
-## Een gedeelte van een aangepast beleid bijwerken {#patch}
+## Een gedeelte van een aangepast beleid {#patch} bijwerken
 
 >[!IMPORTANT]
 >
->U kunt alleen aangepast beleid bijwerken. Als u kernbeleid wilt toelaten of onbruikbaar maken, zie de sectie bij het [bijwerken van de lijst van toegelaten kernbeleid](#update-enabled-core).
+>U kunt alleen aangepast beleid bijwerken. Als u kernbeleid wilt toelaten of onbruikbaar maken, zie de sectie op [het bijwerken van de lijst van toegelaten kernbeleid](#update-enabled-core).
 
 Een specifiek gedeelte van een beleid kan worden bijgewerkt gebruikend een verzoek van de PATCH. In tegenstelling tot de verzoeken van de PUT die het beleid herschrijven, werken de verzoeken van PATCH slechts de eigenschappen bij die in het verzoeklichaam worden gespecificeerd. Dit is vooral nuttig wanneer u een beleid wilt toelaten of onbruikbaar maken, aangezien u slechts de weg aan het aangewezen bezit (`/status`) en zijn waarde (`ENABLED` of `DISABLED`) moet verstrekken.
 
 >[!NOTE]
 >
->Voor PATCH-aanvragen worden de JSON Patch-opmaak gebruikt. Zie de handleiding [voor](../../landing/api-fundamentals.md) API-basisbeginselen voor meer informatie over de geaccepteerde syntaxis.
+>Voor PATCH-aanvragen worden de JSON Patch-opmaak gebruikt. Zie de [handleiding voor API-basisbeginselen](../../landing/api-fundamentals.md) voor meer informatie over de geaccepteerde syntaxis.
 
-De [!DNL Policy Service] API steunt de verrichtingen van de Reparatie JSON `add`, `remove`, en `replace`, en staat u toe om verscheidene updates samen in één enkele vraag te combineren, zoals aangetoond in het hieronder voorbeeld.
+De [!DNL Policy Service] API steunt de verrichtingen `add`, `remove`, en `replace`, en staat u toe om verscheidene updates samen in één enkele vraag te combineren, zoals aangetoond in het hieronder voorbeeld.
 
 **API-indeling**
 
@@ -491,11 +491,11 @@ PATCH /policies/custom/{POLICY_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{POLICY_ID}` | De waarde `id` van het beleid waarvan u de eigenschappen wilt bijwerken. |
+| `{POLICY_ID}` | De `id` van het beleid waarvan eigenschappen u wilt bijwerken. |
 
 **Verzoek**
 
-In het volgende verzoek worden twee `replace` bewerkingen gebruikt om de beleidsstatus te wijzigen van `DRAFT` naar `ENABLED`, en om het `description` veld bij te werken met een nieuwe beschrijving.
+In het volgende verzoek worden twee `replace`-bewerkingen gebruikt om de beleidsstatus te wijzigen van `DRAFT` in `ENABLED` en om het veld `description` bij te werken met een nieuwe beschrijving.
 
 >[!IMPORTANT]
 >
@@ -577,7 +577,7 @@ U kunt een douanebeleid schrappen door zijn `id` in de weg van een verzoek van d
 
 >[!WARNING]
 >
->Nadat beleidsregels zijn verwijderd, kunnen ze niet meer worden hersteld. Het is beste praktijken om een raadpleging (GET) verzoek [eerst](#lookup) uit te voeren om het beleid te bekijken en het te bevestigen het correcte beleid is u wenst om te verwijderen.
+>Nadat beleidsregels zijn verwijderd, kunnen ze niet meer worden hersteld. Het is beste praktijken om een raadpleging (GET) verzoek ](#lookup) eerst uit te voeren om het beleid te bekijken en het te bevestigen het correcte beleid is u wenst om te verwijderen.[
 
 **API-indeling**
 
@@ -606,9 +606,9 @@ Een geslaagde reactie retourneert HTTP-status 200 (OK) met een lege hoofdtekst.
 
 U kunt de verwijdering bevestigen door te proberen het beleid opnieuw op te zoeken (GET). Er wordt een HTTP 404-fout (Niet gevonden) weergegeven als het beleid is verwijderd.
 
-## Een lijst met ingeschakelde kernbeleidsregels ophalen {#list-enabled-core}
+## Hiermee wordt een lijst met ingeschakelde kernbeleidsregels opgehaald {#list-enabled-core}
 
-Door gebrek, slechts neemt het toegelaten beleid van het gegevensgebruik aan evaluatie deel. U kunt een lijst van kernbeleid terugwinnen dat momenteel door uw organisatie door een verzoek van de GET aan het `/enabledCorePolicies` eindpunt wordt toegelaten te doen.
+Door gebrek, slechts neemt het toegelaten beleid van het gegevensgebruik aan evaluatie deel. U kunt een lijst van kernbeleid terugwinnen dat momenteel door uw organisatie door een verzoek van de GET aan het `/enabledCorePolicies` eindpunt wordt toegelaten.
 
 **API-indeling**
 
@@ -629,7 +629,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de lijst met ingeschakelde kernbeleidsregels onder een `policyIds` array.
+Een succesvolle reactie keert de lijst van toegelaten kernbeleid onder een `policyIds` serie terug.
 
 ```json
 {
@@ -658,13 +658,13 @@ Een geslaagde reactie retourneert de lijst met ingeschakelde kernbeleidsregels o
 }
 ```
 
-## De lijst met ingeschakelde kernbeleidsregels bijwerken {#update-enabled-core}
+## Werk de lijst van toegelaten kernbeleid {#update-enabled-core} bij
 
 Door gebrek, slechts neemt het toegelaten beleid van het gegevensgebruik aan evaluatie deel. Door een verzoek van de PUT aan het `/enabledCorePolicies` eindpunt te doen, kunt u de lijst van toegelaten kernbeleid voor uw organisatie bijwerken gebruikend één enkele vraag.
 
 >[!NOTE]
 >
->Alleen kernbeleid kan door dit eindpunt worden in- of uitgeschakeld. Om douanebeleid toe te laten of onbruikbaar te maken, zie de sectie bij het [bijwerken van een gedeelte van een beleid](#patch).
+>Alleen kernbeleid kan door dit eindpunt worden in- of uitgeschakeld. Om douanebeleid toe te laten of onbruikbaar te maken, zie de sectie op [het bijwerken van een gedeelte van een beleid](#patch).
 
 **API-indeling**
 
@@ -695,11 +695,11 @@ curl -X GET \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `policyIds` | Een lijst van kern beleids IDs die moeten worden toegelaten. Elk kernbeleid dat niet is opgenomen, wordt op de `DISABLED` status ingesteld en zal niet aan de evaluatie deelnemen. |
+| `policyIds` | Een lijst van kern beleids IDs die moeten worden toegelaten. Om het even welk kernbeleid dat niet inbegrepen is wordt geplaatst aan `DISABLED` status en zal niet aan evaluatie deelnemen. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de bijgewerkte lijst van ingeschakelde kernbeleidsregels onder een `policyIds` array.
+Een succesvolle reactie keert de bijgewerkte lijst van toegelaten kernbeleid onder een `policyIds` serie terug.
 
 ```json
 {
@@ -726,4 +726,4 @@ Een geslaagde reactie retourneert de bijgewerkte lijst van ingeschakelde kernbel
 
 ## Volgende stappen
 
-Zodra u nieuw beleid of bijgewerkte bestaande degenen hebt bepaald, kunt u API gebruiken om marketing acties tegen specifieke etiketten of datasets te testen en te zien of uw beleid schendingen zoals verwacht teweegbrengt. [!DNL Policy Service] Zie de gids over de eindpunten [van de](./evaluation.md) beleidsevaluatie voor meer informatie.
+Zodra u nieuw beleid of bijgewerkte bestaande degenen hebt bepaald, kunt u [!DNL Policy Service] API gebruiken om marketing acties tegen specifieke etiketten of datasets te testen en te zien of uw beleid schendingen zoals verwacht teweegbrengt. Zie de gids op [beleidsevaluatie eindpunten](./evaluation.md) voor meer informatie.
