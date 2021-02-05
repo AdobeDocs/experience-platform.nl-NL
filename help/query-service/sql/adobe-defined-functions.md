@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;query-service;Query-service;adobe defined functies;sql;
 solution: Experience Platform
-title: Adobe-gedefinieerde functies
+title: Adobe-Gedefinieerde SQL Functies in de Dienst van de Vraag
 topic: functions
-description: Dit document verstrekt informatie voor Adobe-bepaalde functies beschikbaar in de Dienst van de Vraag.
+description: Dit document bevat informatie over door Adobe gedefinieerde functies die beschikbaar zijn in Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2902'
+source-wordcount: '2913'
 ht-degree: 1%
 
 ---
 
 
-# Adobe-gedefinieerde functies
+# Adobe bepaalde SQL functies in de Dienst van de Vraag
 
 Adobe-bepaalde functies, hier genoemd ADFs, zijn prebuilt functies in de Dienst van de Vraag van Adobe Experience Platform die helpen gemeenschappelijke zaken-gerelateerde taken op [!DNL Experience Event] gegevens uitvoeren. Dit zijn onder andere functies voor [Sessionisatie](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) en [Attributie](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html), zoals die in Adobe Analytics.
 
