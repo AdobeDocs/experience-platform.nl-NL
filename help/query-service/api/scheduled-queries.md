@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;scheduled queries;scheduled query;
+keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de vraag;geplande vragen;geplande vraag;
 solution: Experience Platform
-title: Handleiding voor ontwikkelaars van Query Service
+title: Het geplande Eindpunt van Vragen API
 topic: scheduled queries
 description: De volgende secties lopen door de diverse API vraag u voor geplande vragen met de Dienst API van de Vraag kunt maken.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
 
 
-# Geplande query&#39;s
+# Gepland vragen eindpunt
 
 ## Voorbeeld-API-aanroepen
 
-Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het voeren van vraag aan [!DNL Query Service] API. De volgende secties lopen door diverse API vraag u kunt maken gebruikend [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het richten vraag aan [!DNL Query Service] API. De volgende secties lopen door de diverse API vraag u kan maken gebruikend [!DNL Query Service] API. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
 ### Hiermee wordt een lijst met geplande query&#39;s opgehaald
 
-U kunt een lijst van alle geplande vragen voor uw IMS Organisatie terugwinnen door een verzoek van de GET tot het `/schedules` eindpunt te richten.
+U kunt een lijst van alle geplande vragen voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan het `/schedules` eindpunt te doen.
 
 **API-indeling**
 
@@ -32,7 +32,7 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Facultatief*) Parameters die aan de verzoekweg worden toegevoegd die de resultaten vormen in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven. |
+| `{QUERY_PARAMETERS}` | (*Facultatieve*) Parameters die aan de verzoekweg worden toegevoegd die de resultaten vormen in de reactie zijn teruggekeerd. U kunt meerdere parameters opnemen, gescheiden door ampersands (`&`). De beschikbare parameters worden hieronder weergegeven. |
 
 **Parameters query**
 
@@ -40,10 +40,10 @@ Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. De resultaten worden bijvoorbeeld in oplopende volgorde `orderby=created` gesorteerd. Als u een `-` voorinstelling toevoegt (`orderby=-created`), worden de items in aflopende volgorde gesorteerd. |
-| `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Default value: 20*) |
-| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. Bijvoorbeeld, `start=2` zal een lijst terugkeren die van de derde vermelde vraag begint. (*Default value: 0*) |
-| `property` | Filterresultaten op basis van velden. De filters **moeten** zijn beschermd tegen HTML. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created`, `templateId`en `userId`. De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan) en `==` (gelijk aan). Bijvoorbeeld, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` zal alle geplande vragen terugkeren waar de gebruiker - identiteitskaart zoals gespecificeerd is. |
+| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. `orderby=created` sorteert de resultaten bijvoorbeeld in oplopende volgorde. Als u een `-` toevoegt voordat u een item (`orderby=-created`) hebt gemaakt, worden de items in aflopende volgorde gesorteerd. |
+| `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Standaardwaarde: 20*) |
+| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. `start=2` retourneert bijvoorbeeld een lijst die begint bij de derde query. (*Standaardwaarde: 0*) |
+| `property` | Filterresultaten op basis van velden. De filters **must** moeten uit HTML zijn ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created`, `templateId` en `userId`. De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan) en `==` (gelijk aan). `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` retourneert bijvoorbeeld alle geplande query&#39;s waarbij de gebruiker-id overeenkomt met de opgegeven waarde. |
 
 **Verzoek**
 
@@ -162,12 +162,12 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | De naam van de database waarvoor u een geplande query maakt. |
 | `query.sql` | De SQL-query die u wilt maken. |
 | `query.name` | De naam van de geplande query. |
-| `schedule.schedule` | Het uitsnijdschema voor de query. Lees de documentatie over de indeling van de [uitsnijdexpressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor meer informatie over de uitsnijdschema&#39;s. In dit voorbeeld betekent &quot;30 * * *&quot;dat de vraag elk uur bij het minteken van 30 minuten zal lopen. |
+| `schedule.schedule` | Het uitsnijdschema voor de query. Lees de [indeling van de expressie voor uitsnijden](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie voor meer informatie over uitsnijdschema&#39;s. In dit voorbeeld betekent &quot;30 * * *&quot;dat de vraag elk uur bij het minteken van 30 minuten zal lopen. |
 | `schedule.startDate` | De begindatum voor uw geplande query, geschreven als een UTC-tijdstempel. |
 
 **Antwoord**
 
-Een succesvolle reactie keert status 202 (Toegelaten) van HTTP met details van uw onlangs gecreeerde geplande vraag terug. Zodra de geplande vraag wordt gebeëindigd die, `state` zal veranderen van `REGISTERING` aan `ENABLED`.
+Een succesvolle reactie keert status 202 (Toegelaten) van HTTP met details van uw onlangs gecreeerde geplande vraag terug. Wanneer de geplande query is geactiveerd, verandert `state` van `REGISTERING` in `ENABLED`.
 
 ```json
 {
@@ -220,7 +220,7 @@ Een succesvolle reactie keert status 202 (Toegelaten) van HTTP met details van u
 
 >[!NOTE]
 >
->U kunt de waarde van gebruiken `_links.delete` om uw gecreeerde geplande vraag [te](#delete-a-specified-scheduled-query)schrappen.
+>U kunt de waarde van `_links.delete` aan [schrappen uw gecreeerde geplande vraag](#delete-a-specified-scheduled-query) gebruiken.
 
 ### Gegevens van een opgegeven geplande query aanvragen
 
@@ -234,7 +234,7 @@ GET /schedules/{SCHEDULE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` waarde van de geplande query die u wilt ophalen. |
+| `{SCHEDULE_ID}` | De `id` waarde van de geplande vraag u wilt terugwinnen. |
 
 **Verzoek**
 
@@ -303,17 +303,17 @@ Een succesvolle reactie keert status 200 van HTTP met details van de gespecifice
 
 >[!NOTE]
 >
->U kunt de waarde van gebruiken `_links.delete` om uw gecreeerde geplande vraag [te](#delete-a-specified-scheduled-query)schrappen.
+>U kunt de waarde van `_links.delete` aan [schrappen uw gecreeerde geplande vraag](#delete-a-specified-scheduled-query) gebruiken.
 
 ### Details van een opgegeven geplande query bijwerken
 
-U kunt de details voor een gespecificeerde geplande vraag bijwerken door een verzoek van de PATCH aan het `/schedules` eindpunt en door zijn identiteitskaart in de verzoekweg te verstrekken.
+U kunt de details voor een gespecificeerde geplande vraag bijwerken door een verzoek van PATCH aan het `/schedules` eindpunt en door zijn identiteitskaart in de verzoekweg te verstrekken.
 
 De PATCH-aanvraag ondersteunt twee verschillende paden: `/state` en `/schedule/schedule`.
 
 ### Geplande querystatus bijwerken
 
-U kunt gebruiken `/state` om de staat van de geselecteerde geplande vraag bij te werken - INGESCHAKELD of UITGESCHAKELD. Als u de status wilt bijwerken, moet u de waarde instellen op `enable` of `disable`.
+U kunt `/state` gebruiken om de staat van de geselecteerde geplande vraag bij te werken - INGESCHAKELD of UITGESCHAKELD. Als u de status wilt bijwerken, moet u de waarde instellen als `enable` of `disable`.
 
 **API-indeling**
 
@@ -323,7 +323,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` waarde van de geplande query die u wilt ophalen. |
+| `{SCHEDULE_ID}` | De `id` waarde van de geplande vraag u wilt terugwinnen. |
 
 
 **Verzoek**
@@ -349,8 +349,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `path` | Het pad van de waarde die u wilt repareren. In dit geval, aangezien u de geplande staat van de vraag bijwerkt, moet u de waarde van plaatsen `path` aan `/state`. |
-| `value` | De bijgewerkte waarde van de `/state`. Deze waarde kan worden ingesteld als `enable` of `disable` om de geplande query in of uit te schakelen. |
+| `path` | Het pad van de waarde die u wilt repareren. In dit geval, aangezien u de geplande staat van de vraag bijwerkt, moet u de waarde van `path` aan `/state` plaatsen. |
+| `value` | De bijgewerkte waarde van `/state`. Deze waarde kan als `enable` of `disable` worden geplaatst om de geplande vraag toe te laten of onbruikbaar te maken. |
 
 **Antwoord**
 
@@ -365,7 +365,7 @@ Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volge
 
 ### Geplande queryplanning bijwerken
 
-U kunt gebruiken `/schedule/schedule` om het cron programma van de geplande vraag bij te werken. Lees de documentatie over de indeling van de [uitsnijdexpressie](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) voor meer informatie over de uitsnijdschema&#39;s.
+U kunt `/schedule/schedule` gebruiken om het cron programma van de geplande vraag bij te werken. Lees de [indeling van de expressie voor uitsnijden](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie voor meer informatie over uitsnijdschema&#39;s.
 
 **API-indeling**
 
@@ -375,7 +375,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` waarde van de geplande query die u wilt ophalen. |
+| `{SCHEDULE_ID}` | De `id` waarde van de geplande vraag u wilt terugwinnen. |
 
 **Verzoek**
 
@@ -400,8 +400,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `path` | Het pad van de waarde die u wilt repareren. In dit geval, aangezien u het geplande programma van de vraag bijwerkt, moet u de waarde van plaatsen `path` aan `/schedule/schedule`. |
-| `value` | De bijgewerkte waarde van de `/schedule`. Deze waarde moet de vorm hebben van een uitsnijdschema. Dus, in dit voorbeeld, zal de geplande vraag elk uur bij het 45 minieme teken in werking stellen. |
+| `path` | Het pad van de waarde die u wilt repareren. In dit geval, aangezien u het geplande programma van de vraag bijwerkt, moet u de waarde van `path` aan `/schedule/schedule` plaatsen. |
+| `value` | De bijgewerkte waarde van `/schedule`. Deze waarde moet de vorm hebben van een uitsnijdschema. Dus, in dit voorbeeld, zal de geplande vraag elk uur bij het 45 minieme teken in werking stellen. |
 
 **Antwoord**
 
@@ -420,7 +420,7 @@ U kunt een gespecificeerde geplande vraag schrappen door een verzoek van DELETE 
 
 >[!NOTE]
 >
->Het schema **moet** worden uitgeschakeld voordat u het verwijdert.
+>Het schema **must** moet worden onbruikbaar gemaakt alvorens wordt geschrapt.
 
 **API-indeling**
 
@@ -430,7 +430,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | De `id` waarde van de geplande query die u wilt ophalen. |
+| `{SCHEDULE_ID}` | De `id` waarde van de geplande vraag u wilt terugwinnen. |
 
 **Verzoek**
 
