@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows;monitor ingestion;data ingestion;Data ingestion;view records;view batches;
+keywords: Experience Platform;thuis;populaire onderwerpen;controle;monitor;gegevensstromen;monitoringestie;gegevensopname;gegevensopname;meningsverslagen;meningspartijen;
 solution: Experience Platform
-title: Inname van gegevens controleren
+title: Gegevensinname controleren
 topic: overview
 description: Deze gebruikershandleiding bevat een aantal stappen voor het controleren van uw gegevens in de gebruikersinterface van Adobe Experience Platform. Voor deze handleiding hebt u een Adobe ID nodig en hebt u toegang tot Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '571'
 ht-degree: 0%
 
 ---
@@ -15,17 +15,17 @@ ht-degree: 0%
 
 # Inname van gegevens controleren
 
-Met gegevensinvoer kunt u uw gegevens opnemen in Adobe Experience Platform. U kunt batch-opname gebruiken, waarmee u gegevens kunt invoegen met behulp van verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u uw gegevens kunt invoeren om streaming eindpunten in real-time te [!DNL Platform] gebruiken.
+Met gegevensinvoer kunt u uw gegevens opnemen in Adobe Experience Platform. U kunt batch-opname gebruiken, waarmee u gegevens kunt invoegen met verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u uw gegevens kunt opnemen in [!DNL Platform] met streaming eindpunten in real-time.
 
 Deze gebruikershandleiding bevat een aantal stappen voor het controleren van uw gegevens in de gebruikersinterface van Adobe Experience Platform. Voor deze handleiding hebt u een Adobe ID nodig en hebt u toegang tot Adobe Experience Platform.
 
 ## Doorlopende gegevensinvoer controleren
 
-Klik in de gebruikersinterface [van het](https://platform.adobe.com)Experience Platform op **[!UICONTROL Controle]** in het linkernavigatiemenu en klik vervolgens op **[!UICONTROL Streaming van begin tot eind]**.
+In [Experience Platform UI](https://platform.adobe.com), klik **[!UICONTROL Controle]** op het linkernavigatiemenu, dan klik **[!UICONTROL het stromen van begin tot eind]**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-De **[!UICONTROL overzichtspagina voor streaming van begin tot einde]** wordt weergegeven. Deze werkruimte biedt een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die worden ontvangen door [!DNL Platform], een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die zijn verwerkt door [[!DNL Real-time Customer Profile]](../../profile/home.md), en een gedetailleerde lijst met binnenkomende gegevens.
+De **[!UICONTROL Streaming end-to-end]** controlepagina verschijnt. Deze werkruimte biedt een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die worden ontvangen door [!DNL Platform], een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die zijn verwerkt door [[!DNL Real-time Customer Profile]](../../profile/home.md), en een gedetailleerde lijst met binnenkomende gegevens.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -33,11 +33,11 @@ Standaard toont de bovenste grafiek de mate van inname in de afgelopen zeven dag
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-In de onderste grafiek wordt de snelheid van gestreamde gebeurtenissen in de [!DNL Profile] afgelopen zeven dagen weergegeven. U kunt dit datumbereik aanpassen om verschillende tijdsperioden weer te geven door op de gemarkeerde knop te klikken.
+In de onderste grafiek wordt de snelheid van gestreamde gebeurtenissen van [!DNL Profile] in de afgelopen zeven dagen weergegeven. U kunt dit datumbereik aanpassen om verschillende tijdsperioden weer te geven door op de gemarkeerde knop te klikken.
 
 >[!NOTE]
 >
->Gegevens die in deze grafiek worden weergegeven, moeten **expliciet** zijn ingeschakeld voor [!DNL Profile]. Leer hoe te om het stromen gegevens voor toe te laten [!DNL Profile], lees de [datasets gebruikersgids](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>Gegevens worden alleen in deze grafiek weergegeven als **expliciet** is ingeschakeld voor [!DNL Profile]. Lees de [gebruikershandleiding voor datasets](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile) voor meer informatie over het inschakelen van streaminggegevens voor [!DNL Profile].
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
@@ -61,11 +61,11 @@ Bovendien bevatten mislukte records details over de fouten die zijn opgetreden t
 
 ## Gegevens van begin tot einde bijhouden in batch
 
-Klik in het [[!DNL Experience Platform UI]](https://platform.adobe.com)dialoogvenster op **[!UICONTROL Bewaking]** links in het navigatiemenu.
+In [[!DNL Experience Platform UI]](https://platform.adobe.com), klik **[!UICONTROL Controle]** op het linkernavigatiemenu.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
-De controlepagina Van begin tot eind **[!UICONTROL van de]** Partij van de Partij verschijnt, die een lijst van de eerder opgenomen partijen toont. U kunt op een van de batches klikken voor meer informatie over de record.
+De **[!UICONTROL Batch van begin tot eind]** controlepagina verschijnt, die een lijst van de eerder opgenomen partijen toont. U kunt op een van de batches klikken voor meer informatie over de record.
 
 ![](../images/quality/monitor-data-flows/list-batches.png)
 
@@ -79,6 +79,6 @@ De details van een mislukte partij tonen de zelfde informatie zoals een succesvo
 
 ![](../images/quality/monitor-data-flows/failed-streaming-record.png)
 
-Bovendien bevatten mislukte batches details over de fouten die zijn opgetreden tijdens de verwerking van de batch. In het onderstaande voorbeeld is er een fout opgetreden met de ingevoerde batch omdat deze een onbekend veld van `_experience`gebruikt.
+Bovendien bevatten mislukte batches details over de fouten die zijn opgetreden tijdens de verwerking van de batch. In het onderstaande voorbeeld is er een fout opgetreden met de opgenomen batch omdat deze een onbekend veld van `_experience` heeft gebruikt.
 
 ![](../images/quality/monitor-data-flows/failed-streaming-record-details.png)
