@@ -1,25 +1,21 @@
 ---
 keywords: streaming;
-title: De HTTP-bestemming is een Adobe Experience Platform-bestemming waarmee u profielgegevens naar externe HTTP-eindpunten kunt verzenden.
-seo-title: De HTTP-bestemming is een Adobe Experience Platform-bestemming waarmee u profielgegevens naar externe HTTP-eindpunten kunt verzenden.
-description: De HTTP-bestemming is een Adobe Experience Platform-bestemming waarmee u profielgegevens naar externe HTTP-eindpunten kunt verzenden.
-seo-description: De HTTP-bestemming is een Adobe Experience Platform-bestemming waarmee u profielgegevens naar externe HTTP-eindpunten kunt verzenden.
+title: HTTP-verbindingsbestemming
+description: Met de HTTP-bestemming in Adobe Experience Platform kunt u profielgegevens naar HTTP-eindpunten van derden verzenden.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
 
 
-# (Alfa) [!DNL HTTP] Doel
+# (Alpha) [!DNL HTTP] verbinding
 
 >[!IMPORTANT]
 >
 >De [!DNL HTTP] bestemming in Platform is momenteel in alpha. De documentatie en de functionaliteit kunnen worden gewijzigd.
-
-## Overzicht {#overview}
 
 De [!DNL HTTP] bestemming is een [!DNL Adobe Experience Platform] het stromen bestemming die u profielgegevens naar derde [!DNL HTTP] eindpunten helpt verzenden.
 
