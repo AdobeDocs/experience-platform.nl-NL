@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;Identiteitskaart;Identiteitskaart;Het ontwerp van het schema;Kaart;Verenigingsschema;Vereniging
 solution: Experience Platform
-title: IdentityMap-mix
+title: IdentityMap-mixin
 topic: overview
 description: Dit document biedt een overzicht van de klasse Individueel profiel XDM.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL IdentityMap] , mix
+#  IdentityMapmixin
 
 >[!NOTE]
 >
->De namen van verschillende mengsels zijn gewijzigd. Zie het document over de updates [van de](../name-updates.md) mixnaam voor meer informatie.
+>De namen van verschillende mengsels zijn gewijzigd. Zie het document op [mixin naamupdates](../name-updates.md) voor meer informatie.
 
-[!UICONTROL IdentityMap] is een standaardmix voor de [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md). De mix biedt één kaartveld dat een set gebruikersidentiteiten bevat die door naamruimte worden vastgehouden.
+ IdentityMapis een standaardmix voor de  [[!DNL XDM Individual Profile] klasse](../../classes/individual-profile.md). De mix biedt één kaartveld dat een set gebruikersidentiteiten bevat die door naamruimte worden vastgehouden.
 
 >[!WARNING]
 >
->Het `IdentityMap` veld wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. Probeer niet handmatig de inhoud van het veld bij te werken in uw gegevensbewerkingen om dit veld correct te kunnen gebruiken voor [realtime klantprofiel](../../../profile/home.md).
+>Het veld `IdentityMap` wordt automatisch door het systeem bijgewerkt wanneer er identiteitsgegevens worden ingevoerd. Als u dit veld correct wilt gebruiken voor [Real-time klantprofiel](../../../profile/home.md), moet u niet handmatig de inhoud van het veld bijwerken in uw gegevensbewerkingen.
 
 <img src="../../images/mixins/identitymap.png" width="600" /><br />
 
