@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;gebruikershandleiding voor gegevensgebruiksbeleid
 solution: Experience Platform
-title: Gebruikershandleiding voor gegevensgebruiksbeleid
+title: Beleid voor gegevensgebruik beheren in de gebruikersinterface
 topic: policies
 description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleid voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
 
 
-# Gebruikershandleiding voor gegevensgebruiksbeleid
+# Beleid voor gegevensgebruik beheren in de gebruikersinterface
 
 Adobe Experience Platform [!DNL Data Governance] biedt een gebruikersinterface waarmee u beleidsregels voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de **Werkruimte Beleid** in de [!DNL Experience Platform] gebruikersinterface.
 
@@ -28,7 +28,7 @@ Deze gids vereist een werkend inzicht in de volgende [!DNL Experience Platform] 
 - [[!DNL Data Governance]](../home.md)
 - [Beleid voor gegevensgebruik](./overview.md)
 
-## Beleid voor gegevensgebruik weergeven {#view-policies}
+## Bestaand beleid {#view-policies} weergeven
 
 In [!DNL Experience Platform] UI, selecteer **[!UICONTROL Beleid]** om **[!UICONTROL Beleid]** werkruimte te openen. Op **[!UICONTROL Browse]** lusje, kunt u een lijst van beschikbaar beleid, met inbegrip van hun bijbehorende etiketten, marketing acties, en status zien.
 
@@ -38,7 +38,7 @@ Selecteer een vermeld beleid om zijn beschrijving en type te bekijken. Als een d
 
 ![](../images/policies/policy-details.png)
 
-## Een aangepast beleid voor gegevensgebruik maken {#create-policy}
+## Een aangepast beleid maken {#create-policy}
 
 Als u een nieuw beleid voor het gebruik van aangepaste gegevens wilt maken, selecteert u **[!UICONTROL Beleid maken]** in de rechterbovenhoek van het tabblad **[!UICONTROL Bladeren]** in de werkruimte **[!UICONTROL Beleid]**.
 
@@ -68,7 +68,7 @@ Het **[!UICONTROL Browse]** lusje verschijnt opnieuw, dat nu van het nieuw gecre
 
 ![](../images/policies/created-policy.png)
 
-## Beleid voor gegevensgebruik in- of uitschakelen {#enable}
+## Een beleid {#enable} in- of uitschakelen
 
 Alle beleidsregels voor gegevensgebruik (inclusief kernbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten door API of UI.
 
