@@ -5,9 +5,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik XDM-klassen (Experience Data Model) en -mixen om ervaringsgegevens te standaardiseren.
 translation-type: tm+mt
-source-git-commit: cbdeb7529d27cb8b1cacc4a64b90637bb80f514d
+source-git-commit: c82ad393ecaa46d01596dbba06f5fc756711bc31
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '232'
 ht-degree: 6%
 
 ---
@@ -77,6 +77,8 @@ ht-degree: 6%
       * [Enumvelden](./ui/fields/enum.md)
       * [Identiteitsvelden](./ui/fields/identity.md)
       * [Relatievelden](./ui/fields/relationship.md)
+   * [Voorbeeld-XDM-gegevens genereren](./ui/sample.md)
+   * [XDM-schema&#39;s exporteren](./ui/export.md)
 * Schema Registry API {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
