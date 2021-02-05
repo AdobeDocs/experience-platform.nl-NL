@@ -1,21 +1,17 @@
 ---
 keywords: bizible;bizible extension;bizible destination
-title: Bizible-extensie
-seo-title: Bizible-extensie
+title: Bizible Extension Destination
 description: De Bizible-extensie is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Bizible-extensie is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Bizible] Extensie  {#bizible-extension}
-
-## Overzicht {#overview}
+# [!DNL Bizible] extension  {#bizible-extension}
 
 [!DNL Bizible] is de toonaangevende B2B-attributieoplossing die u een ongekende zichtbaarheid in uw gegevens geeft, zodat u slimme beslissingen kunt nemen die de groei stimuleren.
 
