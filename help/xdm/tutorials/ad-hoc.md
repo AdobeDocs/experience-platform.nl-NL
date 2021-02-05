@@ -6,7 +6,7 @@ description: In specifieke omstandigheden, kan het noodzakelijk zijn om een sche
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 1%
@@ -184,7 +184,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de details van het nieuwe schema, inclusief de door het systeem gegenereerde, alleen-lezen `$id`.
+Een succesvolle reactie keert de details van het onlangs gecreeerd schema, met inbegrip van zijn systeem-geproduceerde, read-only `$id` terug.
 
 ```json
 {
