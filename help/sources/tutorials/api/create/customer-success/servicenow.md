@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;servicenow;ServiceNow
 solution: Experience Platform
-title: Creeer een schakelaar ServiceNow gebruikend de Dienst API van de Stroom
+title: Maak een ServiceNow-bronverbinding met behulp van de Flow Service API
 topic: overview
 type: Tutorial
-description: Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om Experience Platform met een server te verbinden ServiceNow.
+description: Leer hoe u Adobe Experience Platform verbindt met een ServiceNow-server met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
 
 
-# Een [!DNL ServiceNow]-connector maken met de [!DNL Flow Service]-API
+# Een [!DNL ServiceNow]-bronverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
