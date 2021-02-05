@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sql;sql reference;
+keywords: Experience Platform;thuis;populaire onderwerpen;vraagdienst;de dienst van de Vraag;sql;sql verwijzing;
 solution: Experience Platform
-title: SQL-referentie
+title: SQL-naslaggids voor Query Service
 topic: reference
-description: De Dienst van de vraag verstrekt de capaciteit om standaardANSI SQL voor UITGEZOCHTE verklaringen en andere beperkte bevelen te gebruiken.
+description: Adobe Experience Platform Query Service biedt de mogelijkheid om standaard ANSI SQL te gebruiken voor SELECT-instructies en andere beperkte opdrachten.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '59'
+source-wordcount: '78'
 ht-degree: 0%
 
 ---
 
 
-# SQL-referentie
+# SQL-naslagservice
 
-[!DNL Query Service] verstrekt de capaciteit om standaardANSI SQL voor `SELECT` verklaringen en andere beperkte bevelen te gebruiken. [!DNL Query Service] omvat geen functionaliteit van de Taal van de Definitie van Gegevens of van de Manipulatie van Gegevens. De gegevens die via de dienst worden gevraagd komen van [!DNL Experience Data Lake], die grotendeels onveranderlijke datasets bevat.
+[!DNL Query Service] verstrekt de capaciteit om standaardANSI SQL voor  `SELECT` verklaringen en andere beperkte bevelen te gebruiken. [!DNL Query Service] omvat geen functionaliteit van de Taal van de Definitie van Gegevens of van de Manipulatie van Gegevens. De gegevens die via de service worden gevraagd, zijn afkomstig van [!DNL Experience Data Lake], die grotendeels onveranderlijke gegevenssets bevat.
