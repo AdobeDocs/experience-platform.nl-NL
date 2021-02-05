@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsdienst;streamingsegmentatie;Streaming segmentatie;Continue evaluatie;
 solution: Experience Platform
-title: Streaming segmentering
+title: 'Evalueer Gebeurtenissen in Bijna Echt - tijd met het stromen Segmentatie '
 topic: developer guide
-description: Dit document bevat voorbeelden over het gebruik van streaming segmentatie met de API voor streaming segmentatie.
+description: Dit document bevat voorbeelden over het gebruik van streamingsegmentatie met de Adobe Experience Platform Segmentation Service-API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
