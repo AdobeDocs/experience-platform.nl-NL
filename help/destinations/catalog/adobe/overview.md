@@ -1,19 +1,17 @@
 ---
 keywords: doelen;ervaring met cloudoplossingen; doel;doelbestemming; en cloud; reclame-cloud; publieksmanager; doelbestemming adobe; doel; bestemming van de publieksbeheerder;
-title: Adobe Doelen
-seo-title: Adobe Doelen
+title: Overzicht van Adobe-doelen
 description: Beheer uw klantenervaring door uw gegevens in Platform te verbinden met andere oplossingen van Adobe Experience Cloud voor het richten van advertenties, personalisatie, marketing automatisering en meer
-seo-description: Beheer uw klantenervaring door uw gegevens in Platform te verbinden met andere oplossingen van Adobe Experience Cloud voor het richten van advertenties, personalisatie, marketing automatisering en meer
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
 
 
-# Adobe-doelen {#adobe-destinations}
+# Overzicht van Adobe-doelen {#adobe-destinations}
 
 Beheer uw klantervaring door uw gegevens in Adobe Experience Platform aan te sluiten op andere Adobe Experience Cloud-oplossingen voor het maken van advertenties, personalisatie, marketingautomatisering en nog veel meer.
 
