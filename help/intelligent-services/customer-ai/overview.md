@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
+keywords: Experience Platform;overzicht;klantenhulp;populaire onderwerpen;het overzicht van de klantenhulp
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: AI-overzicht van klant
-topic: Customer AI overview
+topic: Customer AI Overview
 description: AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren. Dit wordt verwezenlijkt zonder het moeten de bedrijfsbehoeften aan een machine het leren probleem omzetten, een algoritme kiezen, opleiden, of opstellen.
-landing-page-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
+landing-page-description: AI van de Klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en omzetting voor individuele profielen op schaal te produceren.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -51,4 +51,4 @@ De AI van de klant werkt door bestaande gegevens van de Gebeurtenis van de Consu
 
 ## Volgende stappen
 
-U kunt beginnen met het volgen van de gids Aan de [slag](./getting-started.md) . Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor AI van de Klant. Als u al uw referenties en gegevens hebt, gaat u naar het [configureren van een Customer AI-exemplaar](./user-guide/configure.md). Het biedt stappen voor het gebruik van AI van de Klant.
+U kunt beginnen door [te volgen begonnen ](./getting-started.md) gids. Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor AI van de Klant. Als u al uw aanmeldingsgegevens en gegevens hebt, gaat u naar [een AI-exemplaar van de klant configureren](./user-guide/configure.md). Het biedt stappen voor het gebruik van AI van de Klant.
