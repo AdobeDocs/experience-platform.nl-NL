@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;create batch;catalog service;api
+keywords: Experience Platform;home;populaire onderwerpen;batch maken;catalogusservice;api
 solution: Experience Platform
-title: Een gegevensset maken
+title: Een batch maken in de API
 topic: developer guide
-description: Opdat een dataset gegevens inneemt, moet het een partij hebben verbonden aan het. Gebruikend de id waarde van een bestaande dataset, kunt u een partij tot stand brengen door een verzoek van de POST aan het /batches eindpunt in de Catalogus API te doen.
+description: U kunt een partij tot stand brengen door een verzoek van de POST aan het /batches eindpunt in de Catalogus API te doen.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 8a213ac0ef1ac0f9c42e4b880b24157d28878bf1
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Een batch maken
 
-Opdat een dataset gegevens inneemt, moet het een partij hebben verbonden aan het. Gebruikend de `id` waarde van een bestaande dataset, kunt u een partij tot stand brengen door een verzoek van de POST aan het `/batches` eindpunt in [!DNL Catalog] API te doen.
+Opdat een dataset gegevens inneemt, moet het een partij hebben verbonden aan het. Met de waarde `id` van een bestaande dataset, kunt u een partij tot stand brengen door een verzoek van de POST aan het `/batches` eindpunt in [!DNL Catalog] API te doen.
 
 **API-indeling**
 
@@ -40,11 +40,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `datasetId` | The `id` of the dataset the batch will be associated with. |
+| `datasetId` | De `id` van de dataset de partij zal met worden geassocieerd. |
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject dat details bevat van de nieuwe batch, inclusief een tekenreeks die door het systeem wordt gegenereerd `id`en die alleen-lezen is.
+Een geslaagde reactie retourneert HTTP Status 201 (Gemaakt) en een reactieobject dat details bevat van de nieuwe batch, inclusief de `id`, een door het systeem gegenereerde tekenreeks die alleen-lezen is.
 
 ```JSON
 {
