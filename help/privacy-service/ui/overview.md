@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
-title: Overzicht van de gebruikersinterface voor Privacys Service
+title: Overzicht gebruikersinterface Privacy Service
 topic: UI guide
 description: Ga aan de slag met de gebruikersinterface van de Privacy Service om privacyverzoeken in verschillende Experience Cloud-toepassingen te coördineren en te controleren.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 1%
