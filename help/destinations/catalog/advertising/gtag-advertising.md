@@ -1,21 +1,17 @@
 ---
 keywords: gtag;google gtag;google extension;google gtag extension;GTAG
-title: Google-tag-extensie
-seo-title: Google-tag-extensie
+title: Google Gtag-extensiebestemming
 description: De Google-tag-extensie is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Google-tag-extensie is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
 
 
 # Google-tag-extensie {#gtag-advertising-extension}
-
-## Overzicht {#overview}
 
 Laad Google `gtag.js` in uw site om gebeurtenisgegevens naar [!DNL Google Analytics], Google Ads en [!DNL Google Marketing Platform] te verzenden. Met deze extensie voegt u alleen de tagcode toe aan uw site. U moet andere Google-extensies gebruiken om gebeurtenissen en handelingen toe te voegen die gtag gebruiken.
 
