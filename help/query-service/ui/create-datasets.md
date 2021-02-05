@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;produceert datasets;produceert dataset;creeer dataset;
 solution: Experience Platform
-title: Gegevenssets genereren op basis van queryresultaten
+title: Gegevensbestanden genereren op basis van resultaten in Query-service
 topic: queries
 type: Tutorial
-description: 'De Dienst van de vraag staat de verwezenlijking van datasets van UI toe. Nadat een dataset wordt gecreeerd, kan het als een andere dataset in het meer van Gegevens worden betreden en voor een verscheidenheid van gebruiksgevallen worden gebruikt. '
+description: 'Met Adobe Experience Platform Query Service kunt u gegevenssets maken vanuit de gebruikersinterface. Nadat een dataset wordt gecreeerd, kan het als een andere dataset in het meer van Gegevens worden betreden en voor een verscheidenheid van gebruiksgevallen worden gebruikt. '
 translation-type: tm+mt
-source-git-commit: 0ba4e26927cdc96855f35d72a8a6de55f4a34bfa
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
 
-# Gegevenssets genereren op basis van queryresultaten
+# Gegevenssets genereren op basis van resultaten in Query Service
 
 De ware macht van [!DNL Query Service] wordt onthuld wanneer de vragen worden gebruikt om datasets in [!DNL Data Lake] te produceren die als input in meer vragen of in andere diensten zoals [!DNL Data Science Workspace], [!DNL Real-time Customer Profile], of [!DNL Analysis Workspace] worden gebruikt.
 
