@@ -1,21 +1,17 @@
 ---
 keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin extension;marketo munchkin extension;marketo;Marketo
-title: Marketo Munchkin-extensie
-seo-title: Marketo Munchkin-extensie
+title: Marketo Munchkin-extensiebestemming
 description: De extensie Marketo Munchkin is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Marketo Munchkin is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Marketo Munchkin] Extensie  {#marketo-munchkin-extension}
-
-## Overzicht {#overview}
+# [!DNL Marketo Munchkin] extension  {#marketo-munchkin-extension}
 
 [!DNL Marketo Engagement Platform] vereenvoudigt het plannen, ordenen en meten van de betrokkenheid bij klanten en vooruitzichten in elke fase van hun ervaring, van hoofdbeheer tot marketing op basis van account.
 
