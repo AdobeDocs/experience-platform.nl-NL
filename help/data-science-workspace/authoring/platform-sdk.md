@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
+keywords: Experience Platform;ontwikkelaarshandleiding;SDK;Data Access SDK;Data Science Workspace;populaire onderwerpen
 solution: Experience Platform
-title: Handleiding SDK Platform
+title: Modellen ontwerpen met de SDK van het Adobe Experience Platform-Platform
 topic: SDK authoring
 description: Deze zelfstudie biedt u informatie over het omzetten van data_access_sdk_python in het nieuwe Python platform_sdk in zowel Python als R.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 5%
+source-wordcount: '495'
+ht-degree: 4%
 
 ---
 
 
-# [!DNL Platform] Handleiding SDK
+# Model authoring met de Adobe Experience Platform [!DNL Platform] SDK
 
-Deze zelfstudie biedt u informatie over de omzetting `data_access_sdk_python` in de nieuwe Python `platform_sdk` in zowel Python als R. Deze zelfstudie biedt informatie over de volgende bewerkingen:
+Deze zelfstudie biedt u informatie over het omzetten van `data_access_sdk_python` in de nieuwe Python `platform_sdk` in zowel Python als R. Deze zelfstudie biedt informatie over de volgende bewerkingen:
 
 - [Verificatie opbouwen](#build-authentication)
 - [Basislezen van gegevens](#basic-reading-of-data)
 - [Basisschrijven van gegevens](#basic-writing-of-data)
 
-## Verificatie opbouwen {#build-authentication}
+## Verificatie {#build-authentication} samenstellen
 
-De authentificatie wordt vereist om vraag aan te maken [!DNL Adobe Experience Platform], en bestaat uit API Sleutel, IMS Org identiteitskaart, een gebruikerstoken, en een de dienstteken.
+De authentificatie wordt vereist om vraag aan [!DNL Adobe Experience Platform] te maken, en bestaat uit API Sleutel, IMS Org identiteitskaart, een gebruikerstoken, en een de dienstteken.
 
 ### Python
 
-Als u Jupyter-laptop gebruikt, gebruikt u de onderstaande code om het `client_context`volgende te maken:
+Als u Jupyter-laptop gebruikt, gebruikt u de onderstaande code om de `client_context` te maken:
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
@@ -45,7 +45,7 @@ client_context = ClientContext(api_key={API_KEY},
 
 ### R
 
-Als u Jupyter-laptop gebruikt, gebruikt u de onderstaande code om het `client_context`volgende te maken:
+Als u Jupyter-laptop gebruikt, gebruikt u de onderstaande code om de `client_context` te maken:
 
 ```r
 library(reticulate)
@@ -81,7 +81,7 @@ Als de leestijd te lang duurt, kunt u een van de volgende filteropties gebruiken
 
 >[!NOTE]
 >
->De IMS-organisatie wordt ingesteld in de `client_context`map.
+>De IMS-tekenreeks wordt ingesteld binnen `client_context`.
 
 ### Python
 
@@ -105,9 +105,9 @@ df <- dataset_reader$read()
 df
 ```
 
-## Filteren op verschuiving en limiet {#filter-by-offset-and-limit}
+## Filteren op offset en beperken {#filter-by-offset-and-limit}
 
-Omdat het filtreren door partij ID niet meer wordt gesteund, om werkingsgebiedlezing van gegevens te bereiken, moet u gebruiken `offset` en `limit`.
+Omdat filteren op batch-id niet meer wordt ondersteund, moet u `offset` en `limit` gebruiken om het lezen van gegevens in bereik te houden.
 
 ### Python
 
@@ -151,13 +151,13 @@ De nieuwe [!DNL Platform] SDK ondersteunt de volgende bewerkingen:
 
 | Bewerking | -functie |
 | --------- | -------- |
-| Equals (`=`) | `eq()` |
+| Gelijk aan (`=`) | `eq()` |
 | Greater than (`>`) | `gt()` |
 | Greater than or equal to (`>=`) | `ge()` |
 | Less than (`<`) | `lt()` |
 | Less than or equal to (`<=`) | `le()` |
-| And (`&`) | `And()` |
-| Or (`|`) | `Or()` |
+| En (`&`) | `And()` |
+| Of (`|`) | `Or()` |
 
 ## Filteren op geselecteerde kolommen {#filter-by-selected-columns}
 
@@ -193,11 +193,11 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## Basisschrijven van gegevens {#basic-writing-of-data}
+## Standaard schrijven van gegevens {#basic-writing-of-data}
 
 >[!NOTE]
 >
->De IMS-organisatie wordt ingesteld in de `client_context`map.
+>De IMS-tekenreeks wordt ingesteld binnen `client_context`.
 
 Gebruik een van de volgende voorbeelden om gegevens in Python en R te schrijven:
 
@@ -222,4 +222,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Volgende stappen
 
-Nadat u de `platform_sdk` gegevenslader hebt geconfigureerd, worden de gegevens voorbereid en vervolgens gesplitst naar de `train` en `val` gegevenssets. Als u meer wilt weten over het voorbereiden van gegevens en het ontwerpen van functies, raadpleegt u de sectie over het maken van [gegevens en het ontwerpen](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) van functies in de zelfstudie voor het maken van een recept met behulp van [!DNL JupyterLab] laptops.
+Nadat u de `platform_sdk` gegevenslader hebt geconfigureerd, worden de gegevens voorbereid en vervolgens gesplitst naar de `train`- en `val`-gegevensset. Als u meer wilt weten over de voorbereiding van gegevens en de engineering van functies, raadpleegt u de sectie over [gegevensvoorbereiding en functietechniek](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) in de zelfstudie voor het maken van een recept met behulp van [!DNL JupyterLab] laptops.
