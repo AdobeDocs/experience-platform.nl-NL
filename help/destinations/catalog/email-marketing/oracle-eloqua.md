@@ -1,21 +1,17 @@
 ---
 keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;oracle eloqua;oracle
-title: Oracle Eloqua-bestemming
-seo-title: Oracle Eloqua-bestemming
+title: Oracle Eloqua-verbindingsbestemming
 description: Oracle Eloqua is een SaaS-platform (software as a service) voor marketingautomatisering dat door Oracle wordt aangeboden en bedoeld is om B2B-marketers en -organisaties te helpen marketingcampagnes en het genereren van verkoopleads te beheren.
-seo-description: Oracle Eloqua is een SaaS-platform (software as a service) voor marketingautomatisering dat door Oracle wordt aangeboden en bedoeld is om B2B-marketers en -organisaties te helpen marketingcampagnes en het genereren van verkoopleads te beheren.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Oracle Eloqua]
-
-## Overzicht
+# [!DNL Oracle Eloqua] verbinding
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/marketingcloud/products/marketing-automation/) is een softwareplatform als service (SaaS) voor marketingautomatisering dat wordt aangeboden door  [!DNL Oracle] die bedoeld is om B2B-marketers en -organisaties te helpen marketingcampagnes en productie van verkooplood te beheren.
 
