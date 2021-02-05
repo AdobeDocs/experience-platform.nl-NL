@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Phoenix;phoenix
 solution: Experience Platform
-title: Een Phoenix-connector maken met de Flow Service API
+title: Een Phoenix Source Connection maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om een Phoenix-database aan te sluiten op een Experience Platform.
+description: Leer hoe u een Phoenix-database met de Flow Service API met Adobe Experience Platform kunt verbinden.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
 
 
-# Een [!DNL Phoenix]-connector maken met de [!DNL Flow Service]-API
+# Een [!DNL Phoenix]-bronverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
