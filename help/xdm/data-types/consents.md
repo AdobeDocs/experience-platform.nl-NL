@@ -4,7 +4,7 @@ title: Gegevenstype Inhoud en Voorkeuren
 description: Het gegevenstype Privacy/Marketing Preferences (Consent) (Consent) is bedoeld ter ondersteuning van de verzameling van klantmachtigingen en -voorkeuren die worden gegenereerd door CMP's (Consent Management Platforms) en andere bronnen van uw gegevensbewerkingen.
 topic: guide
 translation-type: tm+mt
-source-git-commit: caebdcd48e03bd8b91da624532569b55d8696fb4
+source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
 workflow-type: tm+mt
 source-wordcount: '2040'
 ht-degree: 0%
