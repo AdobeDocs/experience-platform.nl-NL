@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;profile;segment;segments;segmentation;user interface;UI;customization;segment dashboard;dashboard
-title: Segmentdashboard
+keywords: Experience Platform;profiel;segment;segmenten;segmentatie;gebruikersinterface;UI;aanpassing;segmentdashboard;dashboard
+title: UI-gids voor segmentdashboard
 description: 'In deze handleiding wordt het segmentdashboard beschreven dat beschikbaar is in de gebruikersinterface van Adobe Experience Platform. '
 topic: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 63758450276d47e7e0eddeb047779222cb80a3e2
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
 
 
-# (Alpha) Segment-dashboard {#segment-dashboard}
+# (Alpha) Segmentdashboard {#segment-dashboard}
 
 >[!IMPORTANT]
 >
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over uw segmenten kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Deze gids schetst hoe te om tot en met het segmentdashboard in UI toegang te hebben en te werken en verstrekt meer informatie betreffende de visualisaties die in het dashboard worden getoond.
 
-Voor een overzicht van alle functies van de Adobe Experience Platform Segmentation Service binnen de gebruikersinterface van het Platform, gelieve de gids [van de Dienst van de](overview.md)Segmentatie te bezoeken UI.
+Voor een overzicht van alle functies van de Adobe Experience Platform Segmentation Service binnen de gebruikersinterface van het Platform, gelieve [de gids van de Dienst van de Segmentatie ](overview.md) te bezoeken.
 
 ## Segmentdashboardgegevens
 
@@ -35,23 +35,23 @@ De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op h
 
 ## Het segmentdashboard verkennen
 
-Om aan het segmentdashboard binnen UI van het Platform te navigeren, selecteer **[!UICONTROL Segmenten]** in de linkerspoorstaaf, dan selecteer het lusje van het **[!UICONTROL Overzicht]** om het dashboard te tonen.
+Als u naar het segmentdashboard in de interface van het Platform wilt navigeren, selecteert u **[!UICONTROL Segmenten]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overzicht]** om het dashboard weer te geven.
 
 ![](../images/ui/segment-dashboard/dashboard-overview.png)
 
 ### Een segment selecteren
 
-Als u een segment wilt selecteren dat in het dashboard moet worden weergegeven, kiest u de dialoogkiezer voor het tekstvak Segment **** selecteren.
+Als u een segment wilt selecteren dat in het dashboard moet worden weergegeven, kiest u de dialoogkiezer voor het tekstvak **[!UICONTROL Segment selecteren]**.
 
 ![](../images/ui/segment-dashboard/select-segment.png)
 
 >[!NOTE]
 >
->Als er al een segment is geselecteerd, verwijdert u eerst het segment `X` en verschijnt de dialoogkiezer.
+>Als er al een segment is geselecteerd, gebruikt u `X` om eerst het segment te verwijderen en verschijnt dan de dialoogkiezer.
 >
 >![](../images/ui/segment-dashboard/remove-segment.png)
 
-Het dialoogvenster Segment **** selecteren wordt geopend, zodat u het gewenste segment kunt kiezen. Nadat u het gewenste segment hebt gekozen, kiest u **[!UICONTROL Selecteren]** om terug te keren naar het dashboard.
+Het **[!UICONTROL Uitgezochte segment]** dialoog opent, toestaand u om het segment te kiezen u wenst om te bekijken. Nadat u het gewenste segment hebt gekozen, gebruikt u **[!UICONTROL Select]** om terug te keren naar het dashboard.
 
 ![](../images/ui/segment-dashboard/select-segment-dialog.png)
 
@@ -59,7 +59,7 @@ Het dialoogvenster Segment **** selecteren wordt geopend, zodat u het gewenste s
 
 Nadat het selecteren van een segment, zal het de tekstvakje van het fusiebeleid automatisch met het fusiebeleid met betrekking tot dat segment bevolken.
 
-Meer over het bouwen van segmenten in Experience Platform leren, bezoek de gids [UI van de Bouwer van het](segment-builder.md)Segment. Voor meer informatie over samenvoegingsbeleid, gelieve te beginnen door het overzicht [van het Profiel van de Klant in](../../profile/home.md)real time te lezen.
+Meer over het bouwen van segmenten in Experience Platform leren, bezoek [de gids UI van de Bouwer van het Segment](segment-builder.md). Voor meer informatie over samenvoegbeleid, gelieve te beginnen door [overzicht van het Profiel van de Klant in real time](../../profile/home.md) te lezen.
 
 ![](../images/ui/segment-dashboard/merge-policy.png)
 
@@ -78,27 +78,27 @@ Experience Platform biedt meerdere widgets die u kunt gebruiken voor het visuali
 
 ### [!UICONTROL Segmentgrootte] {#segment-size}
 
-De widget **[!UICONTROL Segmentgrootte]** geeft het totale aantal samengevoegde profielen in het geselecteerde segment weer op het moment dat de momentopname werd gemaakt. Dit getal is het resultaat van het toepassen van het samenvoegbeleid voor segmenten op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon in het segment.
+Met de widget **[!UICONTROL Segmentgrootte]** wordt het totale aantal samengevoegde profielen weergegeven binnen het geselecteerde segment op het moment dat de momentopname werd gemaakt. Dit getal is het resultaat van het toepassen van het samenvoegbeleid voor segmenten op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon in het segment.
 
-Voor meer informatie over fragmenten en samengevoegde profielen, gelieve te beginnen door het overzicht [van het Profiel van de Klant in](../home.md)real time te lezen.
+Voor meer informatie over fragmenten en samengevoegde profielen, gelieve te beginnen door [overzicht van het Profiel van de Klant in real time](../home.md) te lezen.
 
 ![](../images/ui/segment-dashboard/segment-size.png)
 
 ### [!UICONTROL Profielen op naamruimte] {#profiles-by-namespace}
 
-De **[!UICONTROL profielen op naamruimte]** -widget geeft de uitsplitsing van naamruimten over alle samengevoegde profielen in het geselecteerde segment weer. Het totale aantal profielen per [!UICONTROL id-naamruimte] (d.w.z. het optellen van de waarden voor elke naamruimte) is gewoonlijk hoger dan het totale aantal profielen in het segment, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, kunnen de veelvoudige namespaces met die individuele klant worden geassocieerd.
+Met de widget **[!UICONTROL Profielen op naamruimte]** wordt de uitsplitsing van naamruimten in alle samengevoegde profielen in het geselecteerde segment weergegeven. Het totale aantal profielen bij [!UICONTROL ID namespace] (met andere woorden, het samenvoegen van de waarden die voor elke namespace worden getoond) zal gewoonlijk hoger zijn dan het totale aantal profielen in het segment omdat één profiel veelvoudige namespaces verbonden aan het kon hebben. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, kunnen de veelvoudige namespaces met die individuele klant worden geassocieerd.
 
-Meer informatie over naamruimten vindt u in de documentatie [van de](../../identity-service/home.md)Adobe Experience Platform Identity Service.
+Voor meer informatie over naamruimten gaat u naar de [documentatie van de Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ![](../images/ui/segment-dashboard/profiles-by-namespace.png)
 
 ## Aanvullende dashboards
 
-De interface van het Platform biedt extra dashboards voor het bekijken van momentopnamen van uw gegevens binnen Experience Platform. Deze dashboards omvatten het Profiel van de Klant in real time en het gebruik van de [!UICONTROL Vergunning]. Voor meer informatie over deze extra dashboards, selecteer van de volgende verbindingen:
+De interface van het Platform biedt extra dashboards voor het bekijken van momentopnamen van uw gegevens binnen Experience Platform. Deze dashboards omvatten het Profiel van de Klant in real time en [!UICONTROL Gebruik van de vergunning]. Voor meer informatie over deze extra dashboards, selecteer van de volgende verbindingen:
 
 * [[!DNL Profile] dashboard](../../profile/ui/profile-dashboard.md)
-* [[!UICONTROL Licentiegebruikdashboard]](../../landing/license-usage-dashboard.md)
+* [[!UICONTROL Licentie ] voor gebruik van het dashboard](../../landing/license-usage-dashboard.md)
 
 ## Volgende stappen
 
-Als u dit document volgt, kunt u nu het segmentdashboard vinden en een segment selecteren dat u wilt bekijken. U moet ook weten welke maatstaven worden weergegeven in de beschikbare widgets. Meer over het werken met segmenten in de UI van het Experience Platform leren, gelieve te verwijzen naar de gids [van de Dienst van de](overview.md)Segmentatie.
+Als u dit document volgt, kunt u nu het segmentdashboard vinden en een segment selecteren dat u wilt bekijken. U moet ook weten welke maatstaven worden weergegeven in de beschikbare widgets. Meer over het werken met segmenten in de UI van het Experience Platform leren, gelieve te verwijzen naar [de gids UI van de Dienst van de Segmentatie](overview.md).
