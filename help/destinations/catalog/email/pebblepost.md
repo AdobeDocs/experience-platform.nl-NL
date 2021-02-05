@@ -1,21 +1,17 @@
 ---
 keywords: PebblePost;pebblepost;PebblePost Programmatic Direct Mail;pebblepost programmatic direct mail
-title: PebblePost-extensie
-seo-title: PebblePost-extensie
+title: PebblePost Extension Destination
 description: De extensie PebblePost is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie PebblePost is een e-maildoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL PebblePost] Extensie  {#pebblepost-extension}
-
-## Overzicht {#overview}
+# [!DNL PebblePost] extension  {#pebblepost-extension}
 
 [!DNL PebblePost's Programmatic Direct Mail®] Met deze oplossing kunnen digitale marketers online interesse en intentie verbinden met offline, tastbare media die worden geconverteerd. Marktdeelnemers kunnen de aangepaste gegevenssegmenten die ze in Adobe hebben gemaakt, benutten om zich nu te richten op consumenten met een relevante, langere indruk van de interne media. De prestaties in real-time analyseren op basis van de activiteit van het responspad en de conversies ter plaatse.
 
