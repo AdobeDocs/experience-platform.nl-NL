@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;Access control;Adobe admin console
+keywords: Experience Platform;thuis;populaire onderwerpen;Toegangsbeheer;Adobe-beheerconsole
 solution: Experience Platform
-title: Gebruikershandleiding voor toegangsbeheer
+title: Overzicht van de interface voor toegangsbeheer
 topic: user guide
 description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. Dit document dient als richtlijn voor hoe te om de Admin Console te navigeren om toegangsbeheer voor Platform te beheren.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '194'
 ht-degree: 1%
 
 ---
 
 
-# Gebruikershandleiding voor toegangsbeheer
+# Overzicht van de interface voor toegangsbeheer
 
-Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende [!DNL Platform] mogelijkheden beheren met de [Adobe Admin Console](https://adminconsole.adobe.com). Dit document dient als richtlijn voor hoe te om toegangsbeheer [!DNL Admin Console] te beheren voor [!DNL Platform]. Voor een overzicht op hoog niveau van toegangsbeheer in [!DNL Experience Platform], zie het [toegangsbeheeroverzicht](./../home.md).
+Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende [!DNL Platform]-mogelijkheden beheren met de [Adobe Admin Console](https://adminconsole.adobe.com). Dit document dient als richtlijn voor hoe te om [!DNL Admin Console] te navigeren om toegangsbeheer voor [!DNL Platform] te beheren. Voor een overzicht op hoog niveau van toegangsbeheer in [!DNL Experience Platform], zie [toegangsbeheeroverzicht](./../home.md).
 
 De volgende taken worden behandeld:
 
@@ -25,4 +25,4 @@ De volgende taken worden behandeld:
 - [Details en aanvullende services voor een productprofiel beheren](./details-and-services.md)
 - [Gebruikers beheren voor een productprofiel](./users.md)
 
-Herhaal bovenstaande stappen om desgewenst gebruikers toe te voegen. Nu u hebt geleerd hoe te om toegang tot [!DNL Platform] eigenschappen door te controleren [!DNL Admin Console], zie de bijlage sectie in het overzicht [van de](../home.md) toegangscontrole om meer over elke individuele toestemming en de [!DNL Platform] functionaliteit te leren zij toegang verlenen tot.
+Herhaal bovenstaande stappen om desgewenst gebruikers toe te voegen. Nu u hebt geleerd hoe te om toegang tot [!DNL Platform] eigenschappen door [!DNL Admin Console] te controleren, zie de bijlage sectie in [toegangsbeheeroverzicht](../home.md) om meer over elke individuele toestemming en [!DNL Platform] functionaliteit te leren zij toegang verlenen tot.
