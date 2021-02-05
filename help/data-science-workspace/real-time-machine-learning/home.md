@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;
+keywords: Experience Platform;ontwikkelaarsgids;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;In real time machine het leren;
 solution: Experience Platform
 title: Real-time Machine Learning-overzicht
 topic: Overview
 description: Het leren van machines in real time kan de relevantie van uw digitale ervaringsinhoud voor uw eindgebruikers drastisch verbeteren. Dit wordt mogelijk gemaakt door real-time conferenties en voortdurend leren op de Experience Edge te gebruiken.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '548'
 ht-degree: 1%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 1%
 >
 >Het leren van de machine in real time is niet beschikbaar aan alle gebruikers nog. Deze functie bevindt zich in alfa en wordt nog steeds getest. Dit document kan worden gewijzigd.
 
-Het leren van machines in real time kan de relevantie van uw digitale ervaringsinhoud voor uw eindgebruikers drastisch verbeteren. Dit wordt mogelijk gemaakt door real-time conferenties en voortdurend leren op de [!DNL Experience Edge]website te benutten.
+Het leren van machines in real time kan de relevantie van uw digitale ervaringsinhoud voor uw eindgebruikers drastisch verbeteren. Dit wordt mogelijk gemaakt door real-time conferenties en voortdurend leren op de [!DNL Experience Edge] te benutten.
 
-Een combinatie naadloze berekening op zowel de Hub als de [!DNL Edge] dramatisch vermindert de latentie die traditioneel betrokken bij het aandrijven van hyper-gepersonaliseerde ervaringen is die zowel relevant als ontvankelijk zijn. Vandaar, het Leren van de machine in real time verstrekt conclusies met ongelooflijk lage latentie voor synchrone besluitvorming. Voorbeelden zijn het renderen van gepersonaliseerde webpagina-inhoud of het surfen op een aanbieding of korting om de kans op fouten te verkleinen en conversies in een webwinkel te verhogen.
+Een combinatie naadloze berekening op zowel de Hub als [!DNL Edge] vermindert dramatisch de latentie die traditioneel betrokken bij het aandrijven van hyper-gepersonaliseerde ervaringen is die zowel relevant als ontvankelijk zijn. Vandaar, het Leren van de machine in real time verstrekt conclusies met ongelooflijk lage latentie voor synchrone besluitvorming. Voorbeelden zijn het renderen van gepersonaliseerde webpagina-inhoud of het surfen op een aanbieding of korting om de kans op fouten te verkleinen en conversies in een webwinkel te verhogen.
 
 ## Real-time Machine Learning-architectuur {#architecture}
 
@@ -37,7 +37,7 @@ In de volgende workflow worden de typische stappen en resultaten beschreven die 
 
 ### Inname van gegevens en preparaten
 
-Gegevens worden opgenomen en getransformeerd met de [!DNL Experience Data Model] (XDM) op Adobe Experience Platform. Deze gegevens worden gebruikt voor modeltraining. Meer informatie over XDM vindt u in het [XDM-overzicht](../../xdm/home.md).
+Gegevens worden opgenomen en getransformeerd met de [!DNL Experience Data Model] (XDM) op Adobe Experience Platform. Deze gegevens worden gebruikt voor modeltraining. Voor meer informatie over XDM gaat u naar [XDM overview](../../xdm/home.md).
 
 ### Authoring
 
@@ -45,7 +45,7 @@ Maak een real-time model voor het leren van machines door deze volledig te ontwe
 
 ### Implementatie
 
-Stel uw model op om een Echte - tijd machine te creëren die de dienst in de Galerie [!DNL Experience Edge] van de  Dienst leert gebruikend het Punt van de Voorspelling API.
+Implementeer uw model op [!DNL Experience Edge] om een Real-time Machine Learning-service te maken in de [!UICONTROL Service Gallery] met behulp van het voorspellings-API-eindpunt.
 
 ### Opkomst
 
@@ -64,8 +64,8 @@ Het leren van machines in real time is momenteel in alpha. De hieronder beschrev
 > Alfa-beperkingen:
 > - Momenteel worden alleen ONNX-modellen ondersteund.
 > - De functies die in knopen worden gebruikt kunnen niet in series worden vervaardigd. Bijvoorbeeld, een lambdafunctie die in een knoop van Pandas wordt gebruikt.
-> - Er is 20 seconden slaap nadat de [!DNL Edge] plaatsing manueel wordt gedaan.
-> - Voor diep leren, moeten uw gegevens op een zodanige manier worden verzonden dat wanneer `df.values` wordt geroepen het een serie terugkeert die door uw model DL aanvaardbaar is. Dit komt doordat de ONNX model scoring node gebruikt `df.values` en de uitvoer naar de score verzendt tegen het model.
+> - Er is 20 seconden slaap nadat [!DNL Edge] plaatsing manueel wordt gedaan.
+> - Voor diep leren, moeten uw gegevens op een zodanige manier worden verzonden dat wanneer `df.values` wordt genoemd het een serie terugkeert die door uw model DL aanvaardbaar is. Dit komt doordat de ONNX model scoring node `df.values` gebruikt en de uitvoer naar de score verzendt tegen het model.
 
 
 
@@ -80,5 +80,5 @@ Het leren van machines in real time is momenteel in alpha. De hieronder beschrev
 
 ## Volgende stappen
 
-U kunt beginnen met het volgen van de gids Aan de [slag](./getting-started.md) . Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor het creëren van een In real time het Leren van de Machine model.
+U kunt beginnen door [te volgen begonnen ](./getting-started.md) gids. Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor het creëren van een In real time het Leren van de Machine model.
 
