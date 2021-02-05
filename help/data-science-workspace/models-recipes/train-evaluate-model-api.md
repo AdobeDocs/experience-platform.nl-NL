@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;trainen en evalueren;Data Science Workspace;populaire onderwerpen;Sensei Machine Learning API
 solution: Experience Platform
-title: Een model (API) trainen en evalueren
+title: Een model trainen en evalueren met de API voor leren van Sensei-machines
 topic: tutorial
 type: Tutorial
 description: Deze zelfstudie laat u zien hoe u een model kunt maken, trainen en evalueren met API-aanroepen van Sensei Machine Learning.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1237'
 ht-degree: 0%
 
 ---
 
 
-# Een model (API) trainen en evalueren
+# Een model trainen en evalueren met de [!DNL Sensei Machine Learning]-API
 
 
 In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalueren met behulp van API-aanroepen. Raadpleeg [dit document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) voor een gedetailleerde lijst met API-documentatie.
