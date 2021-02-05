@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;crm;CRM
 solution: Experience Platform
-title: CRM-gegevens verzamelen via bronconnectors en API's
+title: CRM-gegevens verzamelen via Source Connectors en API's
 topic: overview
 type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een extern CRM-systeem en het naar Platform brengen van deze gegevens via bronconnectors en API's.
+description: Dit leerprogramma behandelt de stappen voor het terugwinnen van gegevens van een systeem van derdeCRM en het brengen van hen in Platform gebruikend bronschakelaars en APIs.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# CRM-gegevens verzamelen via bronconnectors en API&#39;s
+# CRM-gegevens verzamelen met bronconnectors en API&#39;s
 
 In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens van een externe CRM en het opnemen ervan in Adobe Experience Platform via bronconnectors en de [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
