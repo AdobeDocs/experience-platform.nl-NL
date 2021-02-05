@@ -1,21 +1,17 @@
 ---
 keywords: adform extension;adform
-title: Adform-extensie
-seo-title: Adform-extensie
+title: Extensiedoel aanpassen
 description: De extensie Adform is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Adform is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
 
 
 # Adform extension {#adform-extension}
-
-## Overzicht {#overview}
 
 Met de extensie Adform Website Tracking kunnen adverteerders Adform Tracking Points moeiteloos op hun sites implementeren via het [!DNL Experience Platform Launch]-platform.
 
