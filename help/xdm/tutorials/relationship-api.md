@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem;ervaringsgegevensmodel;Experience Data Model;Experience Data Model;Data Model;Data Model;Schema Register;Schema;Schema;Schema;Schema's;Relationship;RelationshipDescriptor;RelationshipDescriptor;ReferentieIdentiteit;ReferentieIdentiteit;
 solution: Experience Platform
-title: Bepaal een verband tussen twee schema's gebruikend de Registratie API van het Schema
+title: Definieer een relatie tussen twee schema's met behulp van de API voor het schemaregister
 description: Dit document verstrekt een zelfstudie voor het bepalen van een één-op-één verhouding tussen twee schema's die door uw organisatie worden bepaald gebruikend de Registratie API van het Schema.
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1337'
 ht-degree: 0%
