@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
-title: Bestuur, privacy en beveiliging in Adobe Experience Platform
+title: Overzicht van beheer, privacy en beveiliging
 topic: overview
-description: Experience Platform biedt verschillende services en tools waarmee u uw verzamelde ervaringsgegevens op een betrouwbare manier kunt beheren en waarmee u zich aan uw bedrijfspraktijken, wettelijke verplichtingen en ontwikkelingsproces kunt houden.
+description: Adobe Experience Platform biedt verschillende services en tools waarmee u uw verzamelde ervaringsgegevens op een betrouwbare manier kunt beheren, zodat u aan uw bedrijfspraktijken, wettelijke verplichtingen en ontwikkelingsproces kunt voldoen.
 translation-type: tm+mt
-source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
