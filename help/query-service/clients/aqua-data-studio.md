@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;vraagdienst;de dienst van de Vraag;de Studio van Gegevens Aqua;de gegevensstudio van Aqua;verbind met de vraagdienst;
 solution: Experience Platform
-title: Verbinding maken met Aqua Data Studio
+title: Connect Aqua Data Studio aan de Dienst van de Vraag
 topic: connect
 description: Dit document doorloopt de stappen voor het verbinden van de Studio van Gegevens Aqua met de Dienst van de Vraag van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '300'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Aqua Data Studio]
+# [!DNL Aqua Data Studio] verbinden met de Dienst van de Vraag
 
 In dit document worden de stappen beschreven voor het verbinden van [!DNL Aqua Data Studio] met Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > Deze gids veronderstelt u reeds toegang tot [!DNL Aqua Data Studio] hebt en vertrouwd met hoe te om zijn interface te navigeren. Meer informatie over [!DNL Aqua Data Studio] vindt u in de [officiële [!DNL Aqua Data Studio] documentatie](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation21.1/page/0/Aqua-Data-Studio-21-1).
-
-## [!DNL Aqua Data Studio] verbinden met Platform
 
 Nadat u [!DNL Aqua Data Studio] hebt geïnstalleerd, moet u de server eerst registreren. Selecteer **[!DNL Server]** in het hoofdmenu, gevolgd door **[!DNL Register Server]**.
 
