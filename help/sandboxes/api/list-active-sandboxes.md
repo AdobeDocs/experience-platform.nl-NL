@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;list active sandboxes;list sandboxes
+keywords: Experience Platform;home;populaire onderwerpen;actieve sandboxen weergeven;lijstsandboxen
 solution: Experience Platform
-title: Actieve sandboxen weergeven voor de huidige gebruiker
+title: Actieve sandboxen weergeven voor de huidige gebruiker in de API
 topic: developer guide
 description: U kunt een lijst maken van de sandboxen die actief zijn voor de huidige gebruiker door een GET-aanvraag in te dienen bij het hoofdeindpunt.
 translation-type: tm+mt
-source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '361'
 ht-degree: 0%
 
 ---
 
 
-# Actieve sandboxen weergeven voor de huidige gebruiker
+# Actieve sandboxen weergeven voor de huidige gebruiker in de API
 
 >[!NOTE]
 >
 >In tegenstelling tot andere eindpunten die in Sandbox API worden verstrekt, is dit eindpunt beschikbaar voor alle gebruikers, met inbegrip van die zonder de toegangstoestemmingen van het Beleid Sandbox.
 
-U kunt een lijst maken van de sandboxen die actief zijn voor de huidige gebruiker door een GET-aanvraag in te dienen bij het basis(`/`) eindpunt.
+U kunt een lijst maken van de zandbakken die voor de huidige gebruiker actief zijn door een verzoek van de GET aan het wortel (`/`) eindpunt te doen.
 
 **API-indeling**
 
@@ -29,7 +29,7 @@ GET /{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [vraagparameters](#query) voor meer informatie. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [queryparameters](#query) voor meer informatie. |
 
 **Verzoek**
 
@@ -44,7 +44,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een lijst met sandboxen die actief zijn voor de huidige gebruiker, inclusief details zoals `name`, `title`, `state`en `type`.
+Een succesvol antwoord retourneert een lijst met sandboxen die actief zijn voor de huidige gebruiker, inclusief details zoals `name`, `title`, `state` en `type`.
 
 ```json
 {
@@ -111,13 +111,13 @@ Een geslaagde reactie retourneert een lijst met sandboxen die actief zijn voor d
 | `isDefault` | Een Booleaanse eigenschap die aangeeft of deze sandbox de standaardsandbox voor de organisatie is. Dit is doorgaans de productiesandbox. |
 | `eTag` | Een id voor een specifieke versie van de sandbox. Deze waarde wordt gebruikt voor versiebeheer en caching-efficiëntie en wordt telkens bijgewerkt wanneer een wijziging in de sandbox wordt aangebracht. |
 
-## Query-parameters gebruiken {#query}
+## Query-parameters {#query} gebruiken
 
-De [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API ondersteunt het gebruik van queryparameters voor pagina- en filterresultaten bij het weergeven van sandboxen.
+De API [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) steunt het gebruik van vraagparameters aan pagina en filterresultaten wanneer het van een lijst maken van zandbakken.
 
 >[!NOTE]
 >
->De parameters `limit` en `offset` query moeten samen worden opgegeven. Als u slechts één specificeert, zal API een fout terugkeren. Als u geen opgeeft, is de standaardlimiet 50 en is de verschuiving 0.
+>De `limit` en `offset` vraagparameters moeten samen worden gespecificeerd. Als u slechts één specificeert, zal API een fout terugkeren. Als u geen opgeeft, is de standaardlimiet 50 en is de verschuiving 0.
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
