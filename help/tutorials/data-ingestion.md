@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: De Ingestie van gegevens omvat partijingestie, het stromen ingestie, en ingestie gebruikend bronschakelaars.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Experience Platform brengt gegevens uit meerdere bronnen samen om marketers te helpen het gedrag van hun klanten beter te begrijpen. Adobe [!DNL Experience Platform Data Ingestion] vertegenwoordigt de veelvoudige methodes waardoor [!DNL Platform] gegevens uit deze bronnen inneemt, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door stroomafwaarts [!DNL Platform services] worden voortgeduurd. [!DNL Data Ingestion] omvat batch-opname, streaming opname en inname via bronconnectors. Lees voor meer informatie het [Data Ingestie overview](../ingestion/home.md) of ga direct naar de [Brondocumentatie](../sources/home.md).
 
-## Een bronaansluiting maken in de gebruikersinterface en de API
+## Een bronverbinding maken in de gebruikersinterface en de API
 
 De bronschakelaars staan u toe om gegevens van veelvoudige bronnen in te voeren, waar het dan kan worden geëtiketteerd, gestructureerd, en worden verbeterd gebruikend [!DNL Platform services]. Als u een bronaansluiting wilt maken, raadpleegt u het [overzicht van bronnen](../sources/home.md).
 
