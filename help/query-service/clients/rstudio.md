@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;de dienst van de vraag;de vraagdienst;RStudio;rstudio;verbind met de vraagdienst;
 solution: Experience Platform
-title: Verbinding maken met RStudio
+title: RStudio verbinden met Query Service
 topic: connect
 description: Dit document loopt door de stappen voor het verbinden van R Studio met de Dienst van de Vraag van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '282'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL RStudio]
+# [!DNL RStudio] verbinden met de Dienst van de Vraag
 
 Dit document doorloopt de stappen voor het verbinden van [!DNL RStudio] met Adobe Experience Platform [!DNL Query Service].
 
@@ -21,7 +21,7 @@ Dit document doorloopt de stappen voor het verbinden van [!DNL RStudio] met Adob
 >
 > Deze gids veronderstelt u reeds toegang tot [!DNL RStudio] hebt en vertrouwd met hoe te om het te gebruiken. Meer informatie over [!DNL RStudio] vindt u in de [officiële [!DNL RStudio] documentatie](https://rstudio.com/products/rstudio/).
 
-## [!DNL RStudio] verbinden met [!DNL Query Service]
+## Een [!DNL Query Service]-verbinding maken in de [!DNL RStudio]-interface
 
 Nadat u [!DNL RStudio] op het **[!DNL Console]**-scherm hebt geïnstalleerd dat wordt weergegeven, moet u eerst uw R-script voorbereiden om [!DNL PostgreSQL] te gebruiken.
 
