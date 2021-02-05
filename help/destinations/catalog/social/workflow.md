@@ -1,22 +1,18 @@
 ---
 keywords: Facebook;Facebook;Sociaal netwerk;Sociaal netwerk;Sociale netwerkverificatie;Sociale netwerkverificatie;Sociale netwerkverificatie
-title: Workflow voor sociale netwerkdoelen
+title: Een sociale netwerkbestemming maken
 type: Tutorial
-seo-title: Workflow voor sociale netwerkdoelen
-description: Instructies om verbinding te maken met uw sociale netwerk en accounts
-seo-description: Instructies om verbinding te maken met uw sociale netwerk en accounts
+description: Leer hoe u verbinding maakt met uw sociale netwerk en accounts in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: d1aa2c825cd679d593cf97d84506058482a7fe8f
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
 
 
-# Verificatieworkflow voor doelen van sociale netwerken {#social-network-destinations-workflow}
-
-## Workflow om sociale netwerkdoelen te maken
+# Een sociale netwerkbestemming maken {#social-network-destinations-workflow}
 
 In deze zelfstudie wordt [!DNL Facebook] als voorbeeld gebruikt, maar de workflow in Adobe Experience Platform is hetzelfde voor alle sociale netwerkbestemmingen, en deze wordt opnieuw aan het product toegevoegd.
 
