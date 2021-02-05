@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;HDFS;hdfs;Apache HDFS;apache hdfs
 solution: Experience Platform
-title: HDFS-aansluiting
+title: Overzicht van Apache HDFS Source Connector
 topic: overview
-description: In de onderstaande documentatie vindt u informatie over het aansluiten van Apache HDFS op een Platform met behulp van API's of de gebruikersinterface.
+description: Leer hoe u Apache HDFS via API's of de gebruikersinterface kunt aansluiten op Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -42,11 +42,11 @@ In de onderstaande documentatie vindt u informatie over het aansluiten van [!DNL
 
 ### API&#39;s gebruiken
 
-- [Een HDFS-aansluiting maken met de Flow Service API](../../tutorials/api/create/cloud-storage/hdfs.md)
+- [Een HDFS-bronverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/hdfs.md)
 - [Een systeem voor cloudopslag verkennen met de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Gegevens voor cloudopslag verzamelen met de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### De gebruikersinterface gebruiken
 
-- [Een Apache HDFS-bronaansluiting maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/hdfs.md)
-- [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Een Apache HDFS-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/hdfs.md)
+- [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
