@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
+keywords: Experience Platform;aan de slag;klantenhulp;populaire onderwerpen;input van klantenhulp;klantenoutput
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Invoer en uitvoer van AI van de klant
+title: Invoer en uitvoer in AI van de Klant
 topic: Getting started
 description: In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in de AI van de Klant worden gebruikt.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '840'
 ht-degree: 0%
 
 ---
 
 
-# Invoer en uitvoer van AI van de klant
+# Invoer en uitvoer in AI van de Klant
 
 In het volgende document worden de verschillende invoer- en uitvoerbestanden beschreven die in de AI van de Klant worden gebruikt.
 
 ## Invoergegevens van AI van de klant
 
-AI van de Klant gebruikt de gegevens van de Gebeurtenis van de Ervaring van de Consumenten om volheidsscores te berekenen. Voor meer informatie over de gebeurtenis Consumer Experience raadpleegt u de [Voorbereidende gegevens voor gebruik in de documentatie](../data-preparation.md)Intelligent Services.
+AI van de Klant gebruikt de gegevens van de Gebeurtenis van de Ervaring van de Consumenten om volheidsscores te berekenen. Raadpleeg [Gegevens voorbereiden voor gebruik in de documentatie bij Intelligente services](../data-preparation.md) voor meer informatie over de gebeurtenis Consumer Experience.
 
 ### Historische gegevens
 
@@ -57,7 +57,7 @@ De AI van de Klant produceert verscheidene attributen voor individuele profielen
 
 In de onderstaande tabel worden de verschillende kenmerken beschreven die in de uitvoer van AI van de Klant zijn aangetroffen:
 
-| Kenmerk | Beschrijving |
+| Attribute | Beschrijving |
 | ----- | ----------- |
 | Score | De relatieve waarschijnlijkheid voor een klant om het voorspelde doel binnen het bepaalde tijdkader te bereiken. Deze waarde moet niet worden beschouwd als een waarschijnlijkheidspercentage, maar veeleer als de waarschijnlijkheid dat een individu vergeleken wordt met de totale populatie. Deze score varieert van 0 tot 100. |
 | Waarschijnlijkheid | Deze eigenschap is de ware waarschijnlijkheid van een profiel voor het bereiken van het voorspelde doel binnen het bepaalde tijdkader. Bij het vergelijken van outputs over verschillende doelstellingen, wordt geadviseerd dat u waarschijnlijkheid over percentiel of score overweegt. Bij het bepalen van de gemiddelde waarschijnlijkheid in de in aanmerking komende populatie moet altijd rekening worden gehouden met de waarschijnlijkheid, aangezien de waarschijnlijkheid aan de onderkant ligt voor gebeurtenissen die niet vaak voorkomen. Waarden voor de waarschijnlijkheid liggen tussen 0 en 1. |
@@ -68,4 +68,4 @@ In de onderstaande tabel worden de verschillende kenmerken beschreven die in de 
 
 ## Volgende stappen {#next-steps}
 
-Zodra u uw gegevens hebt voorbereid en al uw geloofsbrieven en schema&#39;s op zijn plaats hebt, begin door de [Configure een gids van de Instantie](./user-guide/configure.md) van de Klant te volgen. Deze gids begeleidt u door het creëren van een geval voor Klant AI.
+Zodra u uw gegevens hebt voorbereid en al uw geloofsbrieven en schema&#39;s op zijn plaats hebt, begin door [een Instantie van de Klant te volgen AI](./user-guide/configure.md) gids te vormen. Deze gids begeleidt u door het creëren van een geval voor Klant AI.
