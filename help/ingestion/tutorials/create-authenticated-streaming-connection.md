@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: De voor authentiek verklaarde Inzameling van Gegevens staat de diensten van Adobe Experience Platform, zoals het Profiel van de Klant In real time en Identiteit, toe om tussen verslagen te onderscheiden die uit vertrouwde op bronnen en onbetrouwbare bronnen komen.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 0%
