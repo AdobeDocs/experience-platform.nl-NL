@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql;Query service;query service;metadata;commands;metadata commands;
+keywords: Experience Platform;thuis;populaire onderwerpen;PSQL;psql;de dienst van de Vraag;de vraagdienst;meta-gegevens;bevelen;meta-gegevensbevelen;
 solution: Experience Platform
-title: Opdrachten Metagegevens
+title: Metadata PostgreSQL-opdrachten in Query Service
 topic: metadata
-description: Een lijst met PSQL-opdrachten die momenteel worden ondersteund voor het opvragen van metagegevens.
+description: Een lijst met PostgreSQL-opdrachten die momenteel worden ondersteund voor het opvragen van metagegevens in Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
 
 
-# Opdrachten Metagegevens
+# Metadata PostgreSQL commands in de Dienst van de Vraag
 
-Voor meta-gegevens op uw dataset, worden de volgende bevelen PSQL momenteel gesteund voor het vragen:
+Voor meta-gegevens op uw dataset, worden de volgende bevelen PostgreSQL momenteel gesteund voor het vragen:
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ Voor meta-gegevens op uw dataset, worden de volgende bevelen PSQL momenteel gest
 | `\showtables` | Hier worden de volgende gegevens weergegeven: <br>naam: De naam waarmee naar de tabel wordt verwezen.<br>datasetId: De id van de gegevensset die wordt opgeslagen.<br>gegevensset: De naam van de gegevensset die wordt opgeslagen.<br>beschrijving: Een beschrijving van de gegevensset.<br>opgelost: Een booleaanse waarde die aangeeft of de dataset in de huidige sessie wordt opgelost. |
 | `\timing` | Hiermee schakelt u de weergave in of uit. De weergave is in milliseconden. Intervallen langer dan één seconde worden weergegeven in minuten:seconden-indeling, waarbij uren- en dagvelden worden toegevoegd wanneer dat nodig is. |
 
-Alle opdrachten die beginnen met, `\d` kunnen worden gecombineerd. U kunt bijvoorbeeld een lijst weergeven met alle tabellen, reeksen en schema&#39;s. `\dtsn` `\d` op zichzelf toont alle zichtbare tabellen, weergaven, gematerialiseerde weergaven en reeksen.
+Alle bevelen die met `\d` beginnen kunnen worden gecombineerd. U kunt bijvoorbeeld `\dtsn` uitgeven om een lijst van alle lijsten, opeenvolgingen, en schema&#39;s te tonen. `\d` op zichzelf toont alle zichtbare tabellen, weergaven, gematerialiseerde weergaven en reeksen.
 
-Raadpleeg de documentatie op [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html)voor meer informatie over de bovenstaande opdrachten. Houd er echter rekening mee dat niet alle opties in de documentatie van PostgreSQL door worden ondersteund [!DNL Experience Platform].
+Raadpleeg de documentatie op [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html) voor meer informatie over de bovenstaande opdrachten. Houd er echter rekening mee dat niet alle opties in de documentatie van PostgreSQL worden ondersteund door [!DNL Experience Platform].
 
