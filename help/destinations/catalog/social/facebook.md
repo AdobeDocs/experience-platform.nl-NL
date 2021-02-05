@@ -1,21 +1,17 @@
 ---
 keywords: facebook extensies;facebook extension;facebook bestemmingen;facebook;instagram;messenger;facebook messenger
-title: Facebook-bestemming
-seo-title: Facebook-bestemming
+title: Doel van Facebook-extensie
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
-seo-description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '952'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL Facebook] Bestemming
-
-## Overzicht {#overview}
+# [!DNL Facebook] extension
 
 >[!IMPORTANT]
 >
