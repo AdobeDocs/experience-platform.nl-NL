@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Google Cloud Storage;Google Cloud-opslag
 solution: Experience Platform
-title: Google Cloud Storage-connector
+title: Overzicht van Google Cloud Storage Source Connector
 topic: overview
-description: In de onderstaande documentatie vindt u informatie over hoe u Google Cloud Storage met Platform kunt verbinden via API's of de gebruikersinterface.
+description: Leer hoe u Google Cloud Storage kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 0%
@@ -58,11 +58,11 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Google Cloud
 
 ### API&#39;s gebruiken
 
-- [Een Google Cloud Storage-connector maken met de Flow Service API](../../tutorials/api/create/cloud-storage/google.md)
+- [Een Google Cloud Storage-bronverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/google.md)
 - [Een systeem voor cloudopslag verkennen met de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Gegevens voor cloudopslag verzamelen met de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### De gebruikersinterface gebruiken
 
-- [Een Google Cloud Storage-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
-- [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Een Google Cloud Storage-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+- [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
