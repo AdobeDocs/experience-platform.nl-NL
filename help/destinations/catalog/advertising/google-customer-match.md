@@ -1,21 +1,17 @@
 ---
 keywords: Google-klantovereenkomst;Google-klantovereenkomst;Google-klantovereenkomst
-title: Google Customer Match Destination
-seo-title: Google Customer Match Destination
+title: Google-klant afstemmen op verbindingsdoel
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
-seo-description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 translation-type: tm+mt
-source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1474'
 ht-degree: 0%
 
 ---
 
 
-# Google Customer Match Destination
-
-## Overzicht {#overview}
+# Google Customer Match-verbinding
 
 >[!IMPORTANT]
 >
