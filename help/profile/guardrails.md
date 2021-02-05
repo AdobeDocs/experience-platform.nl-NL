@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;profiel;real-time klantprofiel;het oplossen van problemen;gidsen;richtlijnen;grens;entiteit;primaire entiteit;dimensie entiteit;
-title: Experience Platform-instructies voor realtime klantprofielgegevens
+title: Gardrails voor gegevens in realtime klantprofiel
 solution: Experience Platform
 product: experience platform
 topic: guide
 type: Documentation
 description: 'Adobe Experience Platform biedt een reeks instructies om u te helpen te voorkomen dat u gegevensmodellen maakt die niet kunnen worden ondersteund door het Real-Time Klantprofiel. In dit document worden aanbevolen procedures en beperkingen beschreven waarmee u rekening kunt houden bij het modelleren van profielgegevens. '
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1456'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Platform] guardrails voor  [!DNL Real-time Customer Profile]
+# Guardrails voor [!DNL Real-time Customer Profile]-gegevens
 
 [!DNL Real-time Customer Profile] verstrekt individuele profielen die u toelaten om gepersonaliseerde dwars-kanaalervaringen te leveren die op gedragsinzichten en klantenattributen worden gebaseerd. Om dit doel te bereiken, gebruiken [!DNL Profile] en de segmenteringsmotor binnen Adobe Experience Platform een hoogst gedenormaliseerd hybride gegevensmodel dat een nieuwe benadering van het ontwikkelen van klantenprofielen aanbiedt. Het gebruik van dit hybride gegevensmodel maakt het uiterst belangrijk dat de gegevens die worden verzameld correct worden gemodelleerd. Hoewel de [!DNL Profile] gegevensopslag het handhaven van profielgegevens geen relationele opslag is, [!DNL Profile] staat integratie met kleine afmetingsentiteiten toe om segmenten op een vereenvoudigde en intuïtieve manier tot stand te brengen. Deze integratie staat bekend als segmentatie van meerdere entiteiten.
 
