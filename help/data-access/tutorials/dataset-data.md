@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;toegang tot gegevens;API voor gegevenstoegang;toegang tot querygegevens
 solution: Experience Platform
-title: Overzicht van gegevenstoegang
+title: Gegevens gegevensset weergeven met de API voor gegevenstoegang
 topic: tutorial
 type: Tutorial
-description: Dit document biedt een stapsgewijze zelfstudie over het zoeken naar, openen van en downloaden van gegevens die zijn opgeslagen in een gegevensset met de API voor gegevenstoegang in Adobe Experience Platform. U zult ook aan enkele unieke eigenschappen van de Toegang API van Gegevens, zoals het pagineren en gedeeltelijke downloads worden geïntroduceerd.
+description: Leer hoe u gegevens kunt zoeken, openen en downloaden die zijn opgeslagen in een gegevensset met de API voor gegevenstoegang in Adobe Experience Platform. U zult ook aan enkele unieke eigenschappen van de Toegang API van Gegevens, zoals het pagineren en gedeeltelijke downloads worden geïntroduceerd.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
 
 
-# De gegevens van de dataset van de vraag gebruikend [!DNL Data Access] API
+# Gegevenssetgegevens weergeven met behulp van [!DNL Data Access] API
 
 Dit document biedt een stapsgewijze zelfstudie over het zoeken naar en openen en downloaden van gegevens die zijn opgeslagen in een gegevensset met de API [!DNL Data Access] in Adobe Experience Platform. U zult ook aan enkele unieke eigenschappen van [!DNL Data Access] API, zoals het pagineren en gedeeltelijke downloads worden geïntroduceerd.
 
