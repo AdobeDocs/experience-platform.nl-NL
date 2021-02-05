@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui-gids;mapper;mapping;toewijzingsvelden;toewijzingsfuncties;
 solution: Experience Platform
-title: Functies Data Prep
+title: Toewijzingsfuncties voor gegevenspremies
 topic: overview
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 translation-type: tm+mt
-source-git-commit: bfcb1924e40b67c0af41dc789b5ff0bf8e8366e1
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '3597'
+source-wordcount: '3599'
 ht-degree: 2%
 
 ---
 
 
-# Functies Data Prep
+# Toewijzingsfuncties van Data Prep
 
 De functies van de Prep van gegevens kunnen worden gebruikt om waarden te berekenen en te berekenen die op wat in brongebieden zijn ingegaan.
 
