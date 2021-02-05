@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;laat dataset toe;Dataset;dataset
 solution: Experience Platform
-title: Gebruikershandleiding voor gegevensbestanden
+title: UI-gids voor gegevensbestanden
 topic: datasets
-description: Deze gebruikershandleiding voor gegevenssets bevat instructies voor het uitvoeren van algemene handelingen bij het werken met gegevenssets in de gebruikersinterface van Adobe Experience Platform.
+description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: d2ace7cadb06f77bdf14b6a4ef83e879c4ca88fd
+source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
 
 
-# Gebruikershandleiding voor gegevensbestanden
+# UI-gids voor gegevensbestanden
 
 Deze gebruikershandleiding bevat instructies voor het uitvoeren van veelvoorkomende handelingen bij het werken met gegevenssets in de gebruikersinterface van Adobe Experience Platform.
 
