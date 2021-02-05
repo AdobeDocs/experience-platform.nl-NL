@@ -1,21 +1,17 @@
 ---
 keywords: Analyse-extensie;analytische extensie;doelanalyse
-title: Adobe Analytics-extensie
-seo-title: Adobe Analytics-extensie
+title: Adobe Analytics-extensiebestemming
 description: De extensie Adobe Analytics is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Adobe Analytics is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
 
 
 # Adobe Analytics-extensie {#adobe-analytics-extension}
-
-## Overzicht {#overview}
 
 Adobe Analytics is een toonaangevende oplossing die u in staat stelt uw klanten als mensen te begrijpen en uw bedrijf te sturen met intelligentie van de klant.
 
