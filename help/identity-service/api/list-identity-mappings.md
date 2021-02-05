@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identity;Identity
+keywords: Experience Platform;thuis;populaire onderwerpen;identiteit;Identiteit
 solution: Experience Platform
-title: Identiteitskaarten weergeven
+title: Identiteitskoppelingen weergeven
 topic: API guide
 description: Een toewijzing is een verzameling van alle identiteiten in een cluster, voor een opgegeven naamruimte.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **Verzoek**
 
-Optie 1: Geef de identiteit op als naamruimte (`nsId`, op ID) en als waarde voor ID (`id`).
+Optie 1: Geef de identiteit op als naamruimte (`nsId`, op id) en als id-waarde (`id`).
 
 ```shell
 curl -X GET \
@@ -51,7 +51,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 3: Geef de identiteit op als XID (`xid`). Zie de sectie van dit document over het ophalen van de XID voor een identiteit voor meer informatie over het ophalen van de XID [voor een identiteit](./list-native-id.md)van een identiteit.
+Optie 3: Geef de identiteit op als XID (`xid`). Zie de sectie van dit document over [het ophalen van de XID voor een identiteit](./list-native-id.md) voor meer informatie over het verkrijgen van de XID van een identiteit.
 
 ```shell
 curl -X GET \
@@ -64,7 +64,7 @@ curl -X GET \
 
 ### Identiteitskaarten ophalen voor meerdere identiteiten
 
-Gebruik de `POST` methode als een batchequivalent van de hierboven beschreven `GET` methode om toewijzingen voor meerdere identiteiten op te halen.
+Gebruik de methode `POST` als een batchequivalent van de methode `GET` hierboven wordt beschreven om afbeeldingen voor meerdere identiteiten op te halen.
 
 >[!NOTE]
 >
@@ -87,7 +87,7 @@ Optie 1: Geef een lijst op met XID&#39;s waarvoor toewijzingen moeten worden opg
 }
 ```
 
-Optie 2: Geef een lijst met identiteiten op als samengestelde id&#39;s, waarbij elke naam de id-waarde en naamruimte bevat via naamruimte-id. In dit voorbeeld wordt het gebruik van deze methode getoond terwijl de standaardinstelling `graph-type` &quot;Privégrafiek&quot; wordt overschreven.
+Optie 2: Geef een lijst met identiteiten op als samengestelde id&#39;s, waarbij elke naam de id-waarde en naamruimte bevat via naamruimte-id. In dit voorbeeld wordt het gebruik van deze methode getoond terwijl de standaardinstelling `graph-type` van &quot;Privégrafiek&quot; wordt overschreven.
 
 ```shell
 {
@@ -146,7 +146,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-Als er geen verwante identiteiten zijn gevonden met de opgegeven invoer, wordt een `HTTP 204` antwoordcode geretourneerd zonder inhoud.
+Als er geen verwante identiteiten zijn gevonden met de opgegeven invoer, wordt een `HTTP 204`-antwoordcode geretourneerd zonder inhoud.
 
 **Antwoord**
 
@@ -185,8 +185,8 @@ Als er geen verwante identiteiten zijn gevonden met de opgegeven invoer, wordt e
 ```
 
 - `lastAssociationTime`: De tijdstempel wanneer de invoeridentiteit voor het laatst aan deze identiteit is gekoppeld.
-- `regions`: Verstrekt `regionId` en `lastAssociationTime` voor waar de identiteit werd gezien.
+- `regions`: Verstrekt de  `regionId` en  `lastAssociationTime` voor waar de identiteit werd gezien.
 
 ## Volgende stappen
 
-Ga naar de volgende zelfstudie om beschikbare naamruimten [weer te geven](./list-namespaces.md).
+Ga naar de volgende zelfstudie naar [lijst beschikbare naamruimten](./list-namespaces.md).
