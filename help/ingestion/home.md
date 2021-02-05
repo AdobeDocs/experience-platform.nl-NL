@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
+keywords: Experience Platform;home;populaire onderwerpen;gegevensinvoer;gegevenslocatie;Gegevenslocatie;Gegevensbeheer;gegevensbeheer;Lineaire;line;batch;Geëxtraheerde gegevens
 solution: Experience Platform
-title: Overzicht van Adobe Experience Platform-gegevensinname
+title: Overzicht van gegevensinname
 topic: overview
 description: Dit document introduceert de drie belangrijkste manieren waarop gegevens in Platform worden opgenomen, met koppelingen naar hun respectieve overzichtsdocumentatie voor meer gedetailleerde informatie.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
@@ -15,23 +15,23 @@ ht-degree: 0%
 
 # Overzicht van gegevensinname
 
-Adobe Experience Platform brengt gegevens uit meerdere bronnen samen om marketers te helpen het gedrag van hun klanten beter te begrijpen. De Ingestie van Gegevens van Adobe Experience Platform vertegenwoordigt de veelvoudige methodes waardoor gegevens uit deze bronnen [!DNL Platform] opnemen, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door stroomafwaartse [!DNL Platform] diensten worden voortgeduurd.
+Adobe Experience Platform brengt gegevens uit meerdere bronnen samen om marketers te helpen het gedrag van hun klanten beter te begrijpen. De Ingestie van Gegevens van Adobe Experience Platform vertegenwoordigt de veelvoudige methodes waardoor [!DNL Platform] gegevens uit deze bronnen inneemt, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door stroomafwaartse [!DNL Platform] diensten worden voortgeduurd.
 
-In dit document worden de drie belangrijkste manieren geïntroduceerd waarop gegevens worden ingevoerd [!DNL Platform], met koppelingen naar hun respectieve overzichtsdocumentatie voor meer gedetailleerde informatie.
+In dit document worden de drie belangrijkste manieren geïntroduceerd waarop gegevens worden opgenomen in [!DNL Platform], met koppelingen naar hun respectieve overzichtsdocumentatie voor meer gedetailleerde informatie.
 
 ## Inname in batch
 
-Met batch-opname kunt u gegevens invoeren in [!DNL Experience Platform] als batchbestanden. Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. Als de batches eenmaal zijn opgenomen, bieden ze metagegevens die het aantal records beschrijven dat is opgenomen, evenals eventuele mislukte records en bijbehorende foutberichten.
+Door de batch in te voeren kunt u gegevens als batchbestanden in [!DNL Experience Platform] invoeren. Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. Als de batches eenmaal zijn opgenomen, bieden ze metagegevens die het aantal records beschrijven dat is opgenomen, evenals eventuele mislukte records en bijbehorende foutberichten.
 
 Met deze methode moeten handmatig geüploade gegevensbestanden, zoals platte CSV-bestanden (toegewezen aan XDM-schema&#39;s) en Parquet-dataframes, worden opgenomen.
 
-Zie het [batchoverzicht](./batch-ingestion/overview.md) voor meer informatie.
+Zie [batchverwerking overzicht](./batch-ingestion/overview.md) voor meer informatie.
 
 ## Streaming opname
 
-Met streaming opname kunt u gegevens van client- en serverapparaten [!DNL Experience Platform] in real-time verzenden. [!DNL Platform] steunt het gebruik van gegevensinlaten om inkomende ervaringsgegevens te stromen, die in streaming-toegelaten datasets binnen het meer van Gegevens wordt voortgeduurd. De inlaten van gegevens kunnen worden gevormd om de gegevens automatisch voor authentiek te verklaren die zij verzamelen, ervoor zorgen dat de gegevens uit een vertrouwde op bron komen.
+Met streaming opname kunt u gegevens van client- en server-side apparaten in real-time naar [!DNL Experience Platform] verzenden. [!DNL Platform] steunt het gebruik van gegevensinlaten om inkomende ervaringsgegevens te stromen, die in streaming-toegelaten datasets binnen het meer van Gegevens wordt voortgeduurd. De inlaten van gegevens kunnen worden gevormd om de gegevens automatisch voor authentiek te verklaren die zij verzamelen, ervoor zorgen dat de gegevens uit een vertrouwde op bron komen.
 
-Zie het [streamingoverzicht](./streaming-ingestion/overview.md) voor meer informatie.
+Zie [streamingopname overview](./streaming-ingestion/overview.md) voor meer informatie.
 
 ## Bronnen
 
@@ -39,14 +39,14 @@ Zie het [streamingoverzicht](./streaming-ingestion/overview.md) voor meer inform
 
 Bronverbindingen kunnen worden geconfigureerd om gegevens te verzamelen van andere Adobe-toepassingen (zoals Adobe Analytics en Adobe Audience Manager), bronnen voor cloudopslag van derden (zoals [!DNL Azure Blob], [!DNL Amazon] S3, FTP-servers en SFTP-servers) en CRM-systemen van derden (zoals [!DNL Microsoft Dynamics] en [!DNL Salesforce]).
 
-Zie het [Bronoverzicht](../sources/home.md) voor meer informatie.
+Zie [Bronoverzicht](../sources/home.md) voor meer informatie.
 
 ## Volgende stappen en extra bronnen
 
-Dit document bevatte een korte inleiding over de verschillende aspecten van [!DNL Data Ingestion] het programma [!DNL Experience Platform]. Lees verder de overzichtsdocumentatie voor elke innamemethode om vertrouwd te raken met hun verschillende mogelijkheden, gebruiksgevallen en beste praktijken. U kunt het leren ook aanvullen door de onderstaande video met het ingesloten overzicht te bekijken. Voor informatie over hoe [!DNL Experience Platform] spoor de meta-gegevens voor ingebedde verslagen, zie het overzicht [van de Dienst van de](../catalog/home.md)Catalogus.
+In dit document wordt een korte inleiding gegeven op de verschillende aspecten van [!DNL Data Ingestion] in [!DNL Experience Platform]. Lees verder de overzichtsdocumentatie voor elke innamemethode om vertrouwd te raken met hun verschillende mogelijkheden, gebruiksgevallen en beste praktijken. U kunt het leren ook aanvullen door de onderstaande video met het ingesloten overzicht te bekijken. Voor informatie over hoe [!DNL Experience Platform] de meta-gegevens voor ingebedde verslagen volgt, zie [Overzicht van de Dienst van de Catalogus](../catalog/home.md).
 
 >[!WARNING]
 >
->De term &quot;Verenigd Profiel&quot;die in de volgende video wordt gebruikt is verouderd. De termen [!DNL "Profile"] of termen [!DNL "Real-time Customer Profile"] zijn de juiste termen die in de [!DNL Experience Platform] documentatie worden gebruikt. Raadpleeg de documentatie voor de meest recente functionaliteit.
+>De term &quot;Verenigd Profiel&quot;die in de volgende video wordt gebruikt is verouderd. De termen [!DNL "Profile"] of [!DNL "Real-time Customer Profile"] zijn de juiste termen die worden gebruikt in de documentatie [!DNL Experience Platform]. Raadpleeg de documentatie voor de meest recente functionaliteit.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
