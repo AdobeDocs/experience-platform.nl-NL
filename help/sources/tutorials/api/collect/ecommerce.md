@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Gegevens van eCommerce verzamelen;Gegevens van eCommerce
 solution: Experience Platform
-title: Verzamel eCommerce-gegevens via bronconnectors en API's
+title: Verzamel eCommerce-gegevens met behulp van Source Connectors en API's
 topic: overview
 type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een eCommerce-systeem van derden en het opnemen van gegevens in het Platform via bronconnectors en API's.
+description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een eCommerce-systeem van derden en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Verzamel eCommerce-gegevens via bronconnectors en API&#39;s
+# Gegevens over eCommerce verzamelen met bronconnectors en API&#39;s
 
 Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een systeem **[!UICONTROL eCommerce]** van een derde partij en het opnemen van gegevens in [!DNL Platform] via bronconnectors en de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
