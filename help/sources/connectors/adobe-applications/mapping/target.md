@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;target mapping;Target mapping
+keywords: Experience Platform;home;populaire onderwerpen;doeltoewijzing;doeltoewijzing
 solution: Experience Platform
-title: Doeltoewijzingsveld
+title: Adobe Target-gebeurtenisgegevens toewijzen aan XDM
 topic: overview
-description: In de volgende tabel worden de velden van een Experience Event-schema (*XDM ExperienceEvent-veld*) en de corresponderende doelvelden waarnaar ze moeten worden toegewezen (veld Verzoek van doel) weergegeven. Er worden ook aanvullende opmerkingen voor bepaalde toewijzingen gegeven.
+description: Leer hoe u Adobe Target-gebeurtenisvelden kunt toewijzen aan een XDM-schema (Experience Data Model) voor gebruik in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Doeltoewijzingsvelden
+# Toewijzingen doelveld
 
-Met Adobe Experience Platform kunt u Adobe Target-gegevens invoeren via de doelbronconnector. Wanneer u de aansluiting gebruikt, moeten alle gegevens uit doelvelden worden toegewezen aan de XDM-velden ( [Experience Data Model)](../../../../xdm/home.md) die aan de klasse XDM ExperienceEvent zijn gekoppeld.
+Met Adobe Experience Platform kunt u Adobe Target-gegevens invoeren via de doelbronconnector. Wanneer u de aansluiting gebruikt, moeten alle gegevens uit doelvelden worden toegewezen aan de velden [Experience Data Model (XDM)](../../../../xdm/home.md) die zijn gekoppeld aan de klasse XDM ExperienceEvent.
 
-In de volgende tabel worden de velden van een Experience Event-schema (*XDM ExperienceEvent-veld*) en de bijbehorende doelvelden weergegeven waaraan ze moeten worden toegewezen (veld ** Doelverzoek). Er worden ook aanvullende opmerkingen voor bepaalde toewijzingen gegeven.
+De volgende lijst schetst de gebieden van een schema van de Gebeurtenis van de Ervaring (*XDM het gebied ExperienceEvent*) en de overeenkomstige gebieden van het Doel zij aan (*het gebied van het Verzoek van het Doel*) zouden moeten worden in kaart gebracht. Er worden ook aanvullende opmerkingen voor bepaalde toewijzingen gegeven.
 
 >[!NOTE]
 >
