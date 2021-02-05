@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;filter functions;filter;
+keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;Profile Query Language;filter;filter;
 solution: Experience Platform
-title: Filterfuncties
+title: PQL-filterfuncties
 topic: developer guide
 description: Filterfuncties worden gebruikt voor het filteren van gegevens binnen arrays in Profile Query Language (PQL).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '220'
 ht-degree: 2%
 
 ---
@@ -50,11 +50,11 @@ Met de operator `^` (up) kunt u naar eigenschappen in de bovenste niveaus van fi
 | `{ARRAY}` | De array die wordt gefilterd. |
 | `{FILTER_1}` | De buitenste laag van het filtreren. |
 | `{FILTER_2}` | De binnenlaag van het filtreren |
-| `^{PROPERTY}` | De eigenschap waarop ook wordt gefilterd. Vanwege de fout `^`controleert het een eigenschap op basis van filter1. |
+| `^{PROPERTY}` | De eigenschap waarop ook wordt gefilterd. Vanwege de `^` controleert het een eigenschap op basis van filter1. |
 
 **Voorbeeld**
 
-De volgende PQL-query krijgt alle gebeurtenissen die ten minste één product-item hebben met een SKU gelijk aan &quot;PS&quot; **of** een persoon hebben met een vrouwelijk geslacht.
+De volgende PQL-query krijgt alle gebeurtenissen die ten minste één product-item hebben met een SKU gelijk aan &quot;PS&quot; **of** hebben een persoon met een vrouwelijk geslacht.
 
 ```sql
 xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
@@ -62,4 +62,4 @@ xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
 
 ## Volgende stappen
 
-Nu u over filterfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Lees voor meer informatie over andere PQL-functies het overzicht [van de](./overview.md)profielquery.
+Nu u over filterfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
