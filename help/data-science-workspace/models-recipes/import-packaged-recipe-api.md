@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;in een pakket opgenomen recept importeren;Data Science Workspace;populaire onderwerpen;recepten;api;sensei machine leren;engine maken
 solution: Experience Platform
-title: Een verpakt recept (API) importeren
+title: Een gecomprimeerde ontvanger importeren met de API voor leren van de Sensei-machine
 topic: tutorial
 type: Tutorial
 description: 'In deze zelfstudie wordt de API voor leren van Sensei-machines gebruikt om een engine te maken die ook wel een recept in de gebruikersinterface wordt genoemd. '
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
 
 
-# Een verpakt recept (API) importeren
+# Een verpakt recept importeren met de API voor leren van Sensei-machines
 
 In deze zelfstudie wordt [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) gebruikt om een [Engine](../api/engines.md) te maken, ook wel een Recipe genoemd in de gebruikersinterface.
 
