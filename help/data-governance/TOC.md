@@ -5,10 +5,10 @@ user-guide-title: Help bij Adobe Experience Platform Data Governance
 breadcrumb-title: Handleiding voor gegevensbeheer
 user-guide-description: Beperkingen voor gegevensgebruik afdwingen door labels, marketingacties en beleid te gebruiken.
 translation-type: tm+mt
-source-git-commit: d139eed4768384412a17b62037ed41c06c2941bd
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 3%
+source-wordcount: '98'
+ht-degree: 7%
 
 ---
 
@@ -17,19 +17,19 @@ ht-degree: 3%
 
 * [Overzicht van gegevensbeheer](home.md)
 * Labels voor gegevensgebruik {#labels}
-   * [Overzicht van labels voor gegevensgebruik](labels/overview.md)
-   * [Kernlabels voor gegevensgebruik](labels/reference.md)
-   * [Labels voor gegevensgebruik beheren in de gebruikersinterface](labels/user-guide.md)
-   * [Labels voor gegevenssets en velden beheren met behulp van API&#39;s](labels/dataset-api.md)
+   * [Overzicht](labels/overview.md)
+   * [Verklarende woordenlijst met labels](labels/reference.md)
+   * [Labels beheren in de gebruikersinterface](labels/user-guide.md)
+   * [Labels voor gegevenssets beheren met behulp van API&#39;s](labels/dataset-api.md)
 * Beleid voor gegevensgebruik {#policies}
-   * [Overzicht van beleidsregels voor gegevensgebruik](policies/overview.md)
-   * [Gebruikershandleiding voor gegevensgebruiksbeleid](policies/user-guide.md)
-   * [Creeer een beleid van het gegevensgebruik gebruikend de Dienst API van het Beleid](policies/create.md)
+   * [Overzicht](policies/overview.md)
+   * [Beleid beheren in de gebruikersinterface](policies/user-guide.md)
+   * [Een beleid maken in de API](policies/create.md)
 * Beleidshandhaving {#enforcement}
-   * [Overzicht van beleidshandhaving](enforcement/overview.md)
+   * [Overzicht](enforcement/overview.md)
    * [Automatische handhaving](enforcement/auto-enforcement.md)
    * [Op API gebaseerde handhaving](enforcement/api-enforcement.md)
-* Handleiding voor ontwikkelaars van API voor beleidsservice {#api}
+* Beleidsservice-API {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
    * [Labels](api/labels.md)
