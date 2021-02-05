@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;de naleving van het gegevensgebruik;afdwingen;afdwingen de naleving van het gegevensgebruik;de Dienst van de segmentatie;segmentatie;Segmentatie;
 solution: Experience Platform
-title: Compatibiliteit van gegevensgebruik voor publiekssegmenten afdwingen
+title: Naleving van gegevensgebruik afdwingen voor een publiekssegment met behulp van API's
 topic: tutorial
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het afdwingen van naleving van gegevensgebruik voor de publiekssegmenten van het Profiel van de Klant in real time die APIs gebruiken.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1362'
 ht-degree: 0%
 
 ---
