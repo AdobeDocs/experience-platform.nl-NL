@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;gebruikersinterface;UI;aanpassing;profieldetails;details
-title: Aanpassen hoe u profielen weergeeft in de gebruikersinterface
+title: Aanpassing profieldetails in de gebruikersinterface
 description: 'Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop gegevens van het realtime-klantprofiel worden weergegeven in de gebruikersinterface van Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1183'
 ht-degree: 0%
 
 ---
