@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;Intelligent Services;popular topics;intelligent service;Intelligent service
+keywords: Experience Platform;thuis;Intelligente services;populaire onderwerpen;intelligente service;Intelligente service
 solution: Experience Platform, Intelligent Services
 title: Gegevens voorbereiden voor gebruik in intelligente services
 topic: Intelligent Services
 description: 'Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. Intelligente services hefboomwerkervaringsgegevensmodel (XDM) om dit te bereiken. Specifiek, moeten alle datasets die in de Intelligente Diensten worden gebruikt] met het schema van XDM van Consumer ExperienceEvent (CEE) in overeenstemming zijn. '
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '1851'
+source-wordcount: '1862'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Gegevens voorbereiden voor gebruik in [!DNL Intelligent Services]
 
-Om inzichten van uw gegevens van marketinggebeurtenissen [!DNL Intelligent Services] te kunnen ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. [!DNL Intelligent Services] hefboomwerking [!DNL Experience Data Model] (XDM) regelingen om dit te bereiken. Specifiek, [!DNL Intelligent Services] moeten alle datasets die binnen worden gebruikt met het schema van XDM van Consumer ExperienceEvent (CEE) in overeenstemming zijn.
+Als u [!DNL Intelligent Services] inzichten wilt laten detecteren uit de gegevens van uw marketinggebeurtenissen, moeten de gegevens semantisch worden verrijkt en onderhouden in een standaardstructuur. [!DNL Intelligent Services] hefboomwerking  [!DNL Experience Data Model] (XDM) regelingen om dit te bereiken. Specifiek, moeten alle datasets die in [!DNL Intelligent Services] worden gebruikt met het schema van XDM van Consumer ExperienceEvent (CEE) in overeenstemming zijn.
 
 Dit document verstrekt algemene begeleiding bij het in kaart brengen van uw marketing gebeurtenisgegevens van veelvoudige kanalen aan dit schema, schetsend informatie over belangrijke gebieden binnen het schema om u te helpen bepalen hoe te om uw gegevens aan zijn structuur effectief in kaart te brengen.
 
@@ -25,22 +25,22 @@ Het voorbereidingsproces is afhankelijk van het feit of uw gegevens in Adobe Exp
 
 ### Externe gegevensvoorbereiding
 
-Als uw gegevens buiten [!DNL Experience Platform]zijn opgeslagen, voert u de volgende stappen uit:
+Voer de onderstaande stappen uit als uw gegevens buiten [!DNL Experience Platform] zijn opgeslagen:
 
 1. Neem contact op met de Adobe Consulting Services om toegangsreferenties aan te vragen voor een specifieke Azure Blob Storage-container.
 1. Upload uw gegevens naar de Blob-container met uw toegangsgegevens.
-1. Het werk met de Raadgevende Diensten van Adobe krijgt uw gegevens in kaart gebracht aan het schema [](#cee-schema) Consumer ExperienceEvent en ingebed in [!DNL Intelligent Services].
+1. Als u werkt met Adobe Consulting Services, worden uw gegevens toegewezen aan het [Consumer ExperienceEvent-schema](#cee-schema) en opgenomen in [!DNL Intelligent Services].
 
 ### [!DNL Experience Platform] gegevensvoorbereiding
 
 Voer de onderstaande stappen uit als uw gegevens al zijn opgeslagen in [!DNL Platform]:
 
-1. Controleer de structuur van het schema [](#cee-schema) Consumer ExperienceEvent en bepaal of uw gegevens kunnen worden toegewezen aan de velden.
-1. Vraag de Consulting Services van Adobe om u te helpen bij het toewijzen van uw gegevens aan het schema en geef deze op in [!DNL Intelligent Services], of [volg de stappen in deze handleiding](#mapping) als u de gegevens zelf wilt toewijzen.
+1. Controleer de structuur van het [Consumer ExperienceEvent-schema](#cee-schema) en bepaal of uw gegevens kunnen worden toegewezen aan de bijbehorende velden.
+1. Neem contact op met de Consulting Services voor Adobe om uw gegevens toe te wijzen aan het schema en deze in te voeren in [!DNL Intelligent Services], of [volg de stappen in deze handleiding](#mapping) als u de gegevens zelf wilt toewijzen.
 
-## Het CEE-schema {#cee-schema}
+## Het CEE schema {#cee-schema} begrijpen
 
-Het schema Consumer ExperienceEvent beschrijft het gedrag van een individu aangezien het betrekking heeft op digitale marketing gebeurtenissen (web of mobiel) evenals online of off-line handelsactiviteit. Het gebruik van dit schema is vereist voor [!DNL Intelligent Services] vanwege de semantisch duidelijk gedefinieerde velden (kolommen), waarbij onbekende namen worden vermeden die de gegevens anders minder duidelijk zouden maken.
+Het schema Consumer ExperienceEvent beschrijft het gedrag van een individu aangezien het betrekking heeft op digitale marketing gebeurtenissen (web of mobiel) evenals online of off-line handelsactiviteit. Het gebruik van dit schema wordt vereist voor [!DNL Intelligent Services] wegens zijn semantisch duidelijk-bepaalde gebieden (kolommen), vermijdend om het even welke onbekende namen die anders de gegevens minder duidelijk zouden maken.
 
 Het CEE-schema legt, net als alle XDM ExperienceEvent-schema&#39;s, de op tijdreeksen gebaseerde status van het systeem vast wanneer een gebeurtenis (of set gebeurtenissen) plaatsvond, inclusief het tijdstip en de identiteit van het betreffende onderwerp. De gebeurtenissen van de ervaring zijn feitenverslagen van wat voorkwam, en zo zijn zij onveranderlijk en vertegenwoordigen wat gebeurde zonder samenvoeging of interpretatie.
 
@@ -50,25 +50,25 @@ Het CEE-schema legt, net als alle XDM ExperienceEvent-schema&#39;s, de op tijdre
 
 Net als alle XDM-schema&#39;s is de CEE-mix uitbreidbaar. Met andere woorden, extra velden kunnen worden toegevoegd aan de CEE-mix en verschillende variaties kunnen indien nodig worden opgenomen in meerdere schema&#39;s.
 
-Een volledig voorbeeld van de mix vindt u in de [openbare XDM-opslagplaats](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Daarnaast kunt u het volgende [JSON-bestand](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) weergeven en kopiëren voor een voorbeeld van hoe gegevens kunnen worden gestructureerd om te voldoen aan het CEE-schema. Verwijs naar beide voorbeelden aangezien u over de belangrijkste gebieden leert die in de sectie worden geschetst hieronder, om te bepalen hoe u uw eigen gegevens aan het schema kunt in kaart brengen.
+Een volledig voorbeeld van de mix vindt u in de [openbare XDM-opslagruimte](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Bovendien kunt u het volgende [JSON dossier](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) voor een voorbeeld bekijken en kopiëren van hoe de gegevens kunnen worden gestructureerd om aan het CEE schema te voldoen. Verwijs naar beide voorbeelden aangezien u over de belangrijkste gebieden leert die in de sectie worden geschetst hieronder, om te bepalen hoe u uw eigen gegevens aan het schema kunt in kaart brengen.
 
 ## Hoofdvelden
 
-Er zijn verscheidene zeer belangrijke gebieden binnen de CEE mengeling die zouden moeten worden gebruikt om nuttige inzichten [!DNL Intelligent Services] te produceren. In deze sectie worden het gebruiksgeval en de verwachte gegevens voor deze velden beschreven en vindt u koppelingen naar de documentatie bij naslagwerken voor meer voorbeelden.
+Er zijn verscheidene zeer belangrijke gebieden binnen de CEE mengeling die zou moeten worden gebruikt om [!DNL Intelligent Services] nuttige inzichten te produceren. In deze sectie worden het gebruiksgeval en de verwachte gegevens voor deze velden beschreven en vindt u koppelingen naar de documentatie bij naslagwerken voor meer voorbeelden.
 
 ### Verplichte velden
 
-Hoewel het gebruik van alle sleutelvelden sterk wordt aanbevolen, zijn er twee velden die **vereist** zijn om [!DNL Intelligent Services] te kunnen werken:
+Hoewel het gebruik van alle belangrijke gebieden sterk wordt geadviseerd, zijn er twee gebieden die **vereist** zijn om [!DNL Intelligent Services] te werken:
 
 * [Een primair identiteitsveld](#identity)
 * [xdm:tijdstempel](#timestamp)
-* [xdm:channel](#channel) (alleen verplicht voor Attribution AI)
+* [xdm:channel](#channel)  (alleen verplicht voor Attribution AI)
 
 #### Primaire identiteit {#identity}
 
-Een van de velden in uw schema moet zijn ingesteld als primair identiteitsveld, waarmee elk exemplaar van tijdreeksgegevens [!DNL Intelligent Services] aan een individuele persoon kan worden gekoppeld.
+Een van de velden in uw schema moet zijn ingesteld als primair identiteitsveld. Hiermee kan [!DNL Intelligent Services] elke instantie van tijdreeksgegevens koppelen aan een individuele persoon.
 
-U moet bepalen welk veld het beste kan worden gebruikt als primaire identiteit op basis van de bron en de aard van uw gegevens. Een identiteitsveld moet een naamruimte **voor de** identiteit bevatten die het type identiteitsgegevens aangeeft dat het veld als waarde verwacht. Voorbeelden van geldige naamruimtewaarden zijn:
+U moet bepalen welk veld het beste kan worden gebruikt als primaire identiteit op basis van de bron en de aard van uw gegevens. Een identiteitsveld moet een naamruimte **identity** bevatten die het type identiteitsgegevens aangeeft dat het veld als waarde verwacht. Voorbeelden van geldige naamruimtewaarden zijn:
 
 * &quot;email&quot;
 * &quot;phone&quot;
@@ -81,7 +81,7 @@ Als u onzeker bent welk gebied u als primaire identiteit zou moeten gebruiken, c
 
 Dit veld vertegenwoordigt de datum waarop de gebeurtenis heeft plaatsgevonden. Deze waarde moet worden opgegeven als een tekenreeks, volgens de ISO 8601-standaard.
 
-#### xdm:kanaal {#channel}
+#### xdm:channel {#channel}
 
 >[!NOTE]
 >
@@ -102,11 +102,11 @@ Dit gebied vertegenwoordigt het marketing kanaal met betrekking tot ExperienceEv
 }
 ```
 
-Voor volledige informatie over elk van de vereiste subvelden voor `xdm:channel`, gelieve te verwijzen naar het schema [van het](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) ervaringskanaal. Zie de [tabel hieronder](#example-channels)voor een aantal voorbeeldtoewijzingen.
+Voor volledige informatie betreffende elk van de vereiste subvelden voor `xdm:channel`, gelieve te verwijzen naar [het schema van het ervaringskanaal](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) specificatie. Voor sommige voorbeeldafbeeldingen, zie [lijst hieronder](#example-channels).
 
 ##### Voorbeeldkanaaltoewijzingen {#example-channels}
 
-In de volgende tabel staan enkele voorbeelden van marketingkanalen die zijn toegewezen aan het `xdm:channel` schema:
+In de volgende tabel staan enkele voorbeelden van marketingkanalen die zijn toegewezen aan het schema `xdm:channel`:
 
 | Kanaal | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
@@ -121,7 +121,7 @@ In de volgende tabel staan enkele voorbeelden van marketingkanalen die zijn toeg
 
 ### Aanbevolen velden
 
-De overige belangrijke velden worden in deze sectie beschreven. Hoewel deze gebieden niet noodzakelijk voor [!DNL Intelligent Services] het werk worden vereist, wordt het sterk geadviseerd dat u zoveel mogelijk van hen gebruikt om rijkere inzichten te bereiken.
+De overige belangrijke velden worden in deze sectie beschreven. Hoewel deze gebieden niet noodzakelijk voor [!DNL Intelligent Services] aan het werk worden vereist, wordt het sterk geadviseerd dat u zo veel van hen zo veel mogelijk gebruikt om rijkere inzichten te bereiken.
 
 #### xdm:productListItems
 
@@ -150,7 +150,7 @@ Dit veld is een array van items die producten vertegenwoordigen die door een kla
 ]
 ```
 
-Voor volledige informatie over elk van de vereiste subvelden voor `xdm:productListItems`, gelieve te verwijzen naar het schema [van](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) handelsdetails.
+Voor volledige informatie betreffende elk van de vereiste subvelden voor `xdm:productListItems`, gelieve te verwijzen naar [commercedetails schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) specificatie.
 
 #### xdm:handel
 
@@ -188,7 +188,7 @@ Dit veld bevat handelspecifieke informatie over de ExperienceEvent, waaronder he
   }
 ```
 
-Voor volledige informatie over elk van de vereiste subvelden voor `xdm:commerce`, gelieve te verwijzen naar het schema [van](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) handelsdetails.
+Voor volledige informatie betreffende elk van de vereiste subvelden voor `xdm:commerce`, gelieve te verwijzen naar [commercedetails schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) specificatie.
 
 #### xdm:web
 
@@ -218,7 +218,7 @@ In dit veld worden de webdetails weergegeven die betrekking hebben op de Experie
 }
 ```
 
-Voor volledige informatie over elk van de vereiste subvelden voor `xdm:productListItems`, raadpleegt u de specificatie van het schema [voor](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) ExperienceEvent-webdetails.
+Voor volledige informatie over elk van de vereiste subvelden voor `xdm:productListItems`, gelieve te verwijzen naar [ExperienceEvent Webdetailschema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) specificatie.
 
 #### xdm:marketing
 
@@ -236,11 +236,11 @@ Dit veld bevat informatie over marketingactiviteiten die actief zijn met het aan
 }
 ```
 
-Voor volledige informatie over elk van de vereiste subvelden voor `xdm:productListItems`, gelieve te verwijzen naar de specificatie van het [marketingdossier](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) .
+Voor volledige informatie over elk van de vereiste subvelden voor `xdm:productListItems` raadpleegt u de [marketingspecificatie](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md).
 
-## Gegevens toewijzen en opnemen {#mapping}
+## Gegevens toewijzen en invoeren {#mapping}
 
-Zodra u hebt bepaald of uw gegevens van marketinggebeurtenissen aan het CEE schema kunnen worden in kaart gebracht, is de volgende stap te bepalen welke gegevens u in moet brengen [!DNL Intelligent Services]. Alle historische gegevens die in worden gebruikt, [!DNL Intelligent Services] moeten binnen de minimumperiode van vier maanden gegevens vallen, plus het aantal dagen dat als terugzoekperiode wordt bedoeld.
+Zodra u hebt bepaald of uw gegevens van marketinggebeurtenissen aan het CEE schema kunnen worden in kaart gebracht, is de volgende stap te bepalen welke gegevens u in [!DNL Intelligent Services] moet brengen. Alle historische gegevens die in [!DNL Intelligent Services] worden gebruikt moeten binnen het minimumtijdvenster van vier maanden van gegevens vallen, plus het aantal dagen voorgenomen als raadplegingsperiode.
 
 Nadat het beslissen van de waaier van gegevens u wilt verzenden, contacteer de Raadplegende Diensten van de Adobe om uw gegevens aan het schema in kaart te brengen en het in de dienst in te voeren.
 
@@ -250,7 +250,7 @@ Als u een [!DNL Adobe Experience Platform] abonnement hebt en de gegevens zelf w
 
 >[!NOTE]
 >
->Voor de onderstaande stappen is een abonnement op Experience Platform vereist. Als u geen toegang tot Platform hebt, gaat u verder met de sectie [Volgende stappen](#next-steps) .
+>Voor de onderstaande stappen is een abonnement op Experience Platform vereist. Als u geen toegang tot Platform hebt, sla vooruit aan [volgende stappen](#next-steps) sectie over.
 
 In deze sectie wordt de workflow beschreven voor het toewijzen en invoeren van gegevens in Experience Platform voor gebruik in [!DNL Intelligent Services], inclusief koppelingen naar zelfstudies voor gedetailleerde stappen.
 
@@ -263,38 +263,38 @@ Wanneer u klaar bent om uw gegevens voor opname voor te bereiden, is de eerste s
 
 >[!IMPORTANT]
 >
->De bovenstaande zelfstudies volgen een algemene workflow voor het maken van een schema. Wanneer u een klasse voor het schema kiest, moet u de **klasse** XDM ExperienceEvent gebruiken. Nadat u deze klasse hebt gekozen, kunt u de CEE-mix aan het schema toevoegen.
+>De bovenstaande zelfstudies volgen een algemene workflow voor het maken van een schema. Wanneer u een klasse voor het schema kiest, moet u de **XDM ExperienceEvent-klasse** gebruiken. Nadat u deze klasse hebt gekozen, kunt u de CEE-mix aan het schema toevoegen.
 
 Nadat u de CEE-mix aan het schema hebt toegevoegd, kunt u desgewenst andere combinaties toevoegen voor extra velden in uw gegevens.
 
 Zodra u het schema hebt gecreeerd en bewaard, kunt u een nieuwe dataset tot stand brengen die op dat schema wordt gebaseerd. De volgende zelfstudies lopen door het proces om een nieuwe dataset in UI of API tot stand te brengen:
 
-* [Creeer een dataset in UI](../catalog/datasets/user-guide.md#create) (volg het werkschema voor het gebruiken van een bestaand schema)
+* [Creeer een dataset in UI](../catalog/datasets/user-guide.md#create)  (volg het werkschema voor het gebruiken van een bestaand schema)
 * [Een gegevensset maken in de API](../catalog/datasets/create.md)
 
-Nadat de dataset wordt gecreeerd, kunt u het in het Platform UI binnen de **[!UICONTROL werkruimte van Datasets]** vinden.
+Nadat de dataset wordt gecreeerd, kunt u het in het Platform UI binnen **[!UICONTROL Datasets]** werkruimte vinden.
 
 ![](images/data-preparation/dataset-location.png)
 
 #### Identiteitsvelden toevoegen aan de gegevensset
 
-Als u gegevens van [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]of een andere externe bron inbrengt, dan hebt u de optie om een schemagebied als identiteitsgebied te plaatsen. Als u een schemaveld als een identiteitsveld wilt instellen, bekijkt u de sectie over het instellen van identiteitsvelden in de zelfstudie [over de](../xdm/tutorials/create-schema-ui.md#identity-field) gebruikersinterface of de zelfstudie over de [API](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) voor het maken van een schema.
+Als u gegevens van [!DNL Adobe Audience Manager], [!DNL Adobe Analytics], of een andere externe bron inbrengt, dan hebt u de optie om een schemagebied als identiteitsgebied te plaatsen. Als u een schemaveld als een identiteitsveld wilt instellen, bekijkt u de sectie over het instellen van identiteitsvelden in de [UI-zelfstudie](../xdm/tutorials/create-schema-ui.md#identity-field) of [API-zelfstudie](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) voor het maken van een schema.
 
-Als u gegevens uit een lokaal CSV-bestand opneemt, kunt u verdergaan met de volgende sectie over het [toewijzen en invoeren van gegevens](#ingest).
+Als u gegevens uit een lokaal CSV-bestand opneemt, kunt u verdergaan met de volgende sectie op [mapping en het opnemen van gegevens](#ingest).
 
-#### Gegevens toewijzen en opnemen {#ingest}
+#### Gegevens toewijzen en invoeren {#ingest}
 
-Na het creëren van een CEE schema en dataset, kunt u beginnen uw gegevenslijsten aan het schema in kaart te brengen en die gegevens in Platform in te voeren. Zie de zelfstudie over het [toewijzen van een CSV-bestand aan een XDM-schema](../ingestion/tutorials/map-a-csv-file.md) voor stappen over het uitvoeren van dit bestand in de gebruikersinterface. U kunt het volgende JSON- [voorbeeldbestand](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) gebruiken om het innameproces te testen voordat u uw eigen gegevens gebruikt.
+Na het creëren van een CEE schema en dataset, kunt u beginnen uw gegevenslijsten aan het schema in kaart te brengen en die gegevens in Platform in te voeren. Zie de zelfstudie over [het toewijzen van een CSV-bestand aan een XDM-schema](../ingestion/tutorials/map-a-csv-file.md) voor stappen over hoe u dit kunt uitvoeren in de gebruikersinterface. U kunt het volgende [voorbeeld JSON dossier](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) gebruiken om het innameproces te testen alvorens uw eigen gegevens te gebruiken.
 
 Zodra een dataset is bevolkt, kan de zelfde dataset worden gebruikt om extra gegevensdossiers in te voeren.
 
-Als uw gegevens in een gesteunde derdetoepassing worden opgeslagen, kunt u ook verkiezen om een [bronschakelaar](../sources/home.md) tot stand te brengen om uw gegevens van de marketing gebeurtenissen in [!DNL Platform] real time in te voeren.
+Als uw gegevens worden opgeslagen in een ondersteunde toepassing van derden, kunt u er ook voor kiezen om een [bronconnector](../sources/home.md) te maken om uw gegevens van marketinggebeurtenissen in real-time in [!DNL Platform] in te voeren.
 
 ## Volgende stappen {#next-steps}
 
-Dit document bevat algemene richtlijnen voor het voorbereiden van uw gegevens voor gebruik in [!DNL Intelligent Services]. Neem contact op met de Adobe Consulting Support als u extra advies nodig hebt op basis van uw gebruikscase.
+Dit document bevat algemene richtlijnen voor het voorbereiden van gegevens voor gebruik in [!DNL Intelligent Services]. Neem contact op met de Adobe Consulting Support als u extra advies nodig hebt op basis van uw gebruikscase.
 
-Zodra u met succes een dataset met uw gegevens van de klantenervaring hebt bevolkt, kunt u gebruiken [!DNL Intelligent Services] om inzichten te produceren. Raadpleeg de volgende documenten om aan de slag te gaan:
+Als u eenmaal een gegevensset met uw klantervaringsgegevens hebt gevuld, kunt u [!DNL Intelligent Services] gebruiken om inzichten te genereren. Raadpleeg de volgende documenten om aan de slag te gaan:
 
 * [Overzicht van Attribution AI](./attribution-ai/overview.md)
 * [AI-overzicht van klant](./customer-ai/overview.md)
