@@ -6,7 +6,7 @@ topic: guide
 type: Tutorial
 description: Zodra u de etiketten van het gegevensgebruik voor uw gegevens hebt gecreeerd, en gebruiksbeleid voor marketing acties tegen die etiketten hebt gecreeerd, kunt u de Dienst API van het Beleid gebruiken om te evalueren of een marketing actie die op een dataset of een willekeurige groep etiketten wordt uitgevoerd een beleidsschending vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie.
 translation-type: tm+mt
-source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
