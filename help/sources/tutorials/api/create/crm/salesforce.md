@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;Salesforce;salesforce
 solution: Experience Platform
-title: Een Salesforce-connector maken met de Flow Service API
+title: Een Salesforce Source Connection maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om Platform met een rekening te verbinden Salesforce voor het verzamelen van de gegevens van CRM.
+description: Leer hoe u Adobe Experience Platform verbindt met een Salesforce-account met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '565'
 ht-degree: 1%
 
 ---
 
 
-# Een [!DNL Salesforce]-connector maken met de [!DNL Flow Service]-API
+# Een [!DNL Salesforce]-bronverbinding maken met de [!DNL Flow Service]-API
 
 De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-In deze zelfstudie wordt de [!DNL Flow Service]-API gebruikt om u door de stappen te laten lopen om [!DNL Platform] te verbinden met een [!DNL Salesforce]-account voor het verzamelen van CRM-gegevens.
+Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te laten lopen om [!DNL Platform] met behulp van de Flow Service API te verbinden met een [!DNL Salesforce]-account.
 
 ## Aan de slag
 
