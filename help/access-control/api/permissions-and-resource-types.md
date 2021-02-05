@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;access control permissions;access control resource types;access control api
+keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheertoestemmingen;de types van toegangsbeheermiddel;toegangsbeheer api
 solution: Experience Platform
-title: De namen van de lijst van toestemmingen en middeltypes
+title: Referentie-API-eindpunt
 topic: developer guide
-description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. U kunt van de namen van alle toestemmingen en middeltypes een lijst maken door een verzoek van de GET aan het /acl/verwijzingspunten te richten. Deze namen kunnen vervolgens worden gebruikt in API-aanroepen om effectief beleid voor de huidige gebruiker weer te geven.
+description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende mogelijkheden van Platforms beheren met de Adobe Admin Console. U kunt van de namen van alle toestemmingen en middeltypes een lijst maken door een verzoek van de GET aan het /acl/verwijzingspunten in de Controle API van de Toegang te richten. Deze namen kunnen vervolgens worden gebruikt in API-aanroepen om effectief beleid voor de huidige gebruiker weer te geven.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
 
-# De namen van de lijst van toestemmingen en middeltypes
+# Referentie-eindpunt
 
-U kunt van de namen van alle toestemmingen en middeltypes een lijst maken door een verzoek van de GET tot het `/acl/reference` eindpunt te richten. Deze namen kunnen vervolgens worden gebruikt in API-aanroepen om effectief beleid [voor de huidige gebruiker](./effective-policies.md) weer te geven.
+U kunt van de namen van alle toestemmingen en middeltypes een lijst maken door een verzoek van de GET aan het `/acl/reference` eindpunt te richten. Deze namen kunnen dan in API vraag aan [bekijk efficiënt beleid ](./effective-policies.md) voor de huidige gebruiker worden gebruikt.
 
 Een toestemming is een beleid dat door Adobe Admin Console wordt beheerd, en kaarten aan nul of meer middel-type beleid. Een middeltype is een beleid dat lees toelaat, schrijft, en/of schrapt mogelijkheden voor een specifiek type van [!DNL Platform] middel (zoals datasets of schema&#39;s).
 
@@ -37,7 +37,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een `permissions` object en een `resource-types` object, elk met een volledige lijst met namen voor respectievelijk toegangsmachtigingen of typen bronnen.
+Een geslaagde reactie retourneert een `permissions`-object en een `resource-types`-object, elk met een volledige lijst met namen voor respectievelijk toegangsmachtigingen of typen bronnen.
 
 ```json
 {
