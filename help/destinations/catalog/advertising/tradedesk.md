@@ -1,21 +1,17 @@
 ---
 keywords: reclame; de handelsdienst;
-title: De bestemming van het handelsbureau
-seo-title: De bestemming van het handelsbureau
+title: De bestemming van de Verbinding van het Handelsbureau
 description: 'De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en de mobiele voorraad. '
-seo-description: De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en de mobiele voorraad.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL The Trade Desk] doel
-
-## Overzicht {#overview}
+# [!DNL The Trade Desk] verbinding
 
 [!DNL The Trade Desk] doel helpt u profielgegevens te verzenden naar  [!DNL The Trade Desk].
 
@@ -66,7 +62,7 @@ In de stap [!UICONTROL Authentication] moet u [!DNL The Trade Desk] verbindingsd
 
 * **[!UICONTROL Geval]** voor gebruik bij het in de handel brengen: Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over gevallen van marketinggebruik. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde gevallen van marketinggebruik.
 
-![De Stap van de Authentificatie van de Handelsdesk](../../assets/catalog/advertising/tradedesk/authenticate.png)
+![De Stap van de Authentificatie van het Handelsbureau](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
 Klik **[!UICONTROL Doel maken]**. Uw doel is nu gemaakt. U kunt [!UICONTROL Opslaan &amp; afsluiten] klikken als u segmenten later wilt activeren, of u kunt [!UICONTROL Volgende] selecteren om de workflow voort te zetten en segmenten te selecteren om te activeren. In beide gevallen raadpleegt u de volgende sectie [Segmenten activeren](#activate-segments) voor de rest van de workflow.
 
