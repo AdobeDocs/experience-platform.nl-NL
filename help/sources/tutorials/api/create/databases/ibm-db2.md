@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;IBM DB2;IBM;ibm db2;db2;DB2
 solution: Experience Platform
-title: Een IBM DB2-connector maken met de Flow Service API
+title: Een IBM DB2-bronverbinding maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om IBM DB2 (hierna "DB2" genoemd) aan Experience Platform te verbinden.
+description: Leer hoe u IBM DB2 met de Flow Service API kunt verbinden.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 0%
+source-wordcount: '598'
+ht-degree: 1%
 
 ---
 
 
-# Een IBM DB2-connector maken met de API [!DNL Flow Service]
+# Een IBM DB2-bronverbinding maken met de API [!DNL Flow Service]
 
 >[!NOTE]
 >
