@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;list sandboxes
+keywords: Experience Platform;home;populaire onderwerpen;lijstsandboxen
 solution: Experience Platform
-title: Alle sandboxen weergeven
+title: Sandboxen weergeven in de API
 topic: developer guide
 description: Als u alle sandboxen wilt weergeven die tot uw IMS-organisatie behoren (actief of anderszins), vraagt u een GET aan bij het eindpunt /sandboxen.
 translation-type: tm+mt
-source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
 
 
-# Alle sandboxen weergeven
+# Sandboxen weergeven in de API
 
-Als u alle sandboxen wilt weergeven die tot uw IMS-organisatie behoren (actief of anderszins), vraagt u een GET aan bij het `/sandboxes` eindpunt.
+Als u alle sandboxen wilt weergeven die tot uw IMS-organisatie behoren (actief of anderszins), vraagt u een GET aan bij het `/sandboxes`-eindpunt.
 
 **API-indeling**
 
@@ -25,7 +25,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [vraagparameters](#query) voor meer informatie. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [queryparameters](#query) voor meer informatie. |
 
 **Verzoek**
 
@@ -40,7 +40,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert een lijst met sandboxen die tot uw organisatie behoren, inclusief details zoals `name`, `title`, `state`en `type`.
+Een geslaagde reactie retourneert een lijst met sandboxen die tot uw organisatie behoren, inclusief details zoals `name`, `title`, `state` en `type`.
 
 ```json
 {
@@ -128,13 +128,13 @@ Een geslaagde reactie retourneert een lijst met sandboxen die tot uw organisatie
 | `isDefault` | Een Booleaanse eigenschap die aangeeft of deze sandbox de standaardsandbox voor de organisatie is. Dit is doorgaans de productiesandbox. |
 | `eTag` | Een id voor een specifieke versie van de sandbox. Deze waarde wordt gebruikt voor versiebeheer en caching-efficiëntie en wordt telkens bijgewerkt wanneer een wijziging in de sandbox wordt aangebracht. |
 
-## Query-parameters gebruiken {#query}
+## Query-parameters {#query} gebruiken
 
-De [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API ondersteunt het gebruik van queryparameters voor pagina- en filterresultaten bij het weergeven van sandboxen.
+De API [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) steunt het gebruik van vraagparameters aan pagina en filterresultaten wanneer het van een lijst maken van zandbakken.
 
 >[!NOTE]
 >
->De parameters `limit` en `offset` query moeten samen worden opgegeven. Als u slechts één specificeert, zal API een fout terugkeren. Als u geen opgeeft, is de standaardlimiet 50 en is de verschuiving 0.
+>De `limit` en `offset` vraagparameters moeten samen worden gespecificeerd. Als u slechts één specificeert, zal API een fout terugkeren. Als u geen opgeeft, is de standaardlimiet 50 en is de verschuiving 0.
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
