@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;logical quantifiers;logical quantifier;
+keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;De Taal van de Vraag van het profiel;logische kwantoren;logische kwantor;
 solution: Experience Platform
-title: Logische kwantoren
+title: Logische kwantoren van PQL
 topic: developer guide
 description: Logische kwantoren kunnen worden gebruikt om voorwaarden met arrays in Profile Query Language (PQL) te bepalen.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 3%
+source-wordcount: '219'
+ht-degree: 2%
 
 ---
 
 
 # Logische kwantor-functies
 
-Logische kwantoren kunnen worden gebruikt om omstandigheden met arrays in [!DNL Profile Query Language] (PQL) te bevestigen. Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
+Logische kwantoren kunnen worden gebruikt om voorwaarden met arrays in [!DNL Profile Query Language] (PQL) te bevestigen. Meer informatie over andere PQL-functies vindt u in het [[!DNL Profile Query Language] overzicht](./overview.md).
 
 ## Exists
 
-De `exists` functie bepaalt het bestaan van een item in een array, op voorwaarde dat het aan de opgegeven voorwaarde voldoet.
+De functie `exists` bepaalt het bestaan van een punt in een serie, op voorwaarde dat het aan de verstrekte voorwaarde voldoet.
 
 **Indeling**
 
@@ -44,7 +44,7 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Voor alles
 
-De `forall` functie bepaalt alle items in een array die aan alle opgegeven voorwaarden voldoen.
+De functie `forall` bepaalt alle items in een array die aan alle opgegeven voorwaarden voldoen.
 
 **Indeling**
 
@@ -69,4 +69,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Volgende stappen
 
-Nu u over logische kwantoren hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Lees voor meer informatie over andere PQL-functies het overzicht [van de](./overview.md)profielquery.
+Nu u over logische kwantoren hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
