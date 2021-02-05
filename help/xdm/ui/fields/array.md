@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;array;field;
 solution: Experience Platform
-title: Een arrayveld definiëren in de gebruikersinterface
+title: Arrayvelden definiëren in de gebruikersinterface
 description: Leer hoe u een arrayveld definieert in de gebruikersinterface van het Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
 
 
-# Een arrayveld definiëren in de gebruikersinterface
+# Arrayvelden definiëren in de gebruikersinterface
 
 Wanneer u een XDM-veld (Experience Data Model) in de Adobe Experience Platform-gebruikersinterface definieert, kunt u dat veld toewijzen als een array.
 
