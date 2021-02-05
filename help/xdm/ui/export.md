@@ -5,7 +5,7 @@ description: Leer hoe u een bestaand schema exporteert naar een andere sandbox o
 topic: user guide
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2d6e833db7cd79135e6da4c68c9dca8cbed09ce4
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
@@ -205,11 +205,11 @@ Hiermee wordt een JSON-lading naar het klembord gekopieerd, die op basis van de 
 
 De payload heeft de vorm van een array, waarbij elk arrayitem een object is dat een aangepaste XDM-bron vertegenwoordigt die geëxporteerd moet worden. In het bovenstaande voorbeeld zijn de aangepaste mix &quot;[!DNL Loyalty details]&quot; en het schema &quot;[!DNL Loyalty Members]&quot; opgenomen. Alle kernbronnen die door het schema worden gebruikt, worden niet in de exportbewerking opgenomen, aangezien deze bronnen beschikbaar zijn in alle sandboxen en IMS-organisaties.
 
-Merk op dat elk geval van huurder identiteitskaart van uw organisatie als `<XDM_TENANTID_PLACEHOLDER>` in de lading verschijnt. Deze placeholders zullen automatisch met de aangewezen waarde van huurdersidentiteitskaart afhankelijk van worden vervangen waar u het schema in de volgende stap uitvoert.
+Merk op dat elk geval van huurder identiteitskaart van uw organisatie als `<XDM_TENANTID_PLACEHOLDER>` in de lading verschijnt. Deze placeholders zullen automatisch met de aangewezen waarde van huurdersidentiteitskaart afhankelijk van worden vervangen waar u het schema in de volgende stap invoert.
 
 ## De bron importeren met de API
 
-Zodra u de uitvoer JSON voor het schema hebt gekopieerd, kunt u het als nuttige lading voor een verzoek van de POST aan het `/import` eindpunt in de Registratie API van het Schema gebruiken. Zie de sectie over [het invoeren van een middel XDM in API](../api/export-import.md#import) voor details op hoe te om de vraag te vormen om het schema naar correcte Ms te verzenden Org en zandbak.
+Zodra u de uitvoer JSON voor het schema hebt gekopieerd, kunt u het als nuttige lading voor een verzoek van de POST aan het `/import` eindpunt in de Registratie API van het Schema gebruiken. Zie de sectie over [het invoeren van een middel XDM in API](../api/export-import.md#import) voor details op hoe te om de vraag te vormen om het schema naar gewenste IMS te verzenden Org en zandbak.
 
 ## Volgende stappen
 
