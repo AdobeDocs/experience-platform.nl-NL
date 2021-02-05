@@ -1,40 +1,40 @@
 ---
-keywords: Experience Platform;home;popular topics;Adobe Experience Platform;user guide;ui guide;workflows ui guide;workflows;workflows user guide;
+keywords: Experience Platform;home;populaire onderwerpen;Adobe Experience Platform;gebruikershandleiding;ui-handleiding;workflows ui-handleiding;workflows;workflows-gebruikershandleiding;
 solution: Experience Platform
-title: Handleiding gebruikersinterface voor Adobe Experience Platform-workflows
+title: Handleiding Workflows-gebruikersinterface
 topic: ui guide
-description: 'Adobe Experience Platform '
+description: Leer hoe u workflows met meerdere stappen kunt volgen voor het uitvoeren van veelvoorkomende bewerkingen in de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 2%
+source-wordcount: '307'
+ht-degree: 0%
 
 ---
 
 
-# Handleiding gebruikersinterface voor Adobe Experience Platform-workflows
+# [!UICONTROL Handleiding ] WorkflowsUI
 
-In de sectie **[!UICONTROL Workflows]** in de Adobe Experience Platform-gebruikersinterface wordt een lijst weergegeven met uit meerdere stappen bestaande workflows voor het uitvoeren van bewerkingen binnen het Platform. Deze workflows hebben betrekking op gebieden zoals gegevensinvoer en gegevenswetenschap.
+Het gedeelte **[!UICONTROL Workflows]** in de Adobe Experience Platform-gebruikersinterface bevat een lijst met workflows met meerdere stappen voor het uitvoeren van bewerkingen binnen het Platform. Deze workflows hebben betrekking op gebieden zoals gegevensinvoer en gegevenswetenschap.
 
 ![workflows](./images/workflows/workflows.png)
 
 ## [!UICONTROL Gegevensinvoer]
 
-Met de workflow CSV **[!UICONTROL toewijzen aan XDM-schema]** kunt u een CSV-bestand uploaden en converteren naar een XDM-schema (Experience Data Model). Meer informatie over deze workflow vindt u in de zelfstudie over het [toewijzen van een CSV-bestand aan een XDM-schema](../ingestion/tutorials/map-a-csv-file.md).
+Met de **[!UICONTROL CSV toewijzen aan XDM-schema]**-workflow kunt u een CSV-bestand uploaden en converteren naar een XDM-schema (Experience Data Model). Meer informatie over deze workflow vindt u in de zelfstudie over het toewijzen van een CSV-bestand aan een XDM-schema](../ingestion/tutorials/map-a-csv-file.md).[
 
-Met de **[!UICONTROL gegevensset maken van het schema]** kunt u een nieuwe gegevensset maken op basis van een bestaand XDM-schema. Meer informatie over dit werkschema kan in de [datasets gebruikersgids](../catalog/datasets/user-guide.md#schema)worden gevonden.
+Met de **[!UICONTROL Gegevensset maken van schema]**-workflow kunt u een nieuwe gegevensset maken van een bestaand XDM-schema. Meer informatie over deze workflow vindt u in de [gebruikershandleiding voor datasets](../catalog/datasets/user-guide.md#schema).
 
-Met de **[!UICONTROL gegevensset maken van de CSV]** -workflow kunt u een nieuwe gegevensset maken door een CSV-bestand te uploaden. Meer informatie over dit werkschema kan in de [datasets gebruikersgids](../catalog/datasets/user-guide.md#csv)worden gevonden.
+Met de **[!UICONTROL Gegevensset maken van CSV]**-workflow kunt u een nieuwe gegevensset maken door een CSV-bestand te uploaden. Meer informatie over deze workflow vindt u in de [gebruikershandleiding voor datasets](../catalog/datasets/user-guide.md#csv).
 
 ## [!UICONTROL Modellen]
 
-Met de workflow voor het **[!UICONTROL importrecept]** kunt u recepten importeren en configureren. Meer informatie over deze workflow vindt u in de zelfstudie over het [importeren van een verpakt recept](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md).
+Met de **[!UICONTROL workflow voor het importeren van recepten]** kunt u recepten importeren en configureren. Meer informatie over deze workflow vindt u in de zelfstudie over [het importeren van een verpakt recept](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md).
 
-Met de workflow **[!UICONTROL Model]** maken kunt u een model voor machinaal leren maken. Meer informatie over deze workflow vindt u in de [modeltraining en evaluatiezelfstudie](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
+Met de **[!UICONTROL workflow Model maken]** kunt u een model voor machinaal leren maken. Meer informatie over deze workflow vindt u in de modeltraining en -evaluatiezelfstudie](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).[
 
-Met de workflow Een model **[!UICONTROL publiceren als service]** kunt u een gemaakt model publiceren als een service die u kunt coderen. Meer informatie over deze workflow vindt u in de zelfstudie over het [publiceren van een model als service](../data-science-workspace/models-recipes/publish-model-service-ui.md).
+Met de **[!UICONTROL Publish a model as a service]** workflow kunt u een gemaakt model publiceren als een service die u kunt scores geven. Meer informatie over deze workflow vindt u in de zelfstudie over [het publiceren van een model als service](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ## Volgende stappen
 
-Door deze gids te lezen, bent u geïntroduceerd aan de [!UICONTROL Workflows] beschikbaar binnen de gebruikersinterface van het Experience Platform. Lees voor meer informatie over de functies en functionaliteit van de gebruikersinterface van het Platform de [Adobe Experience Platform-handleiding](ui-guide.md).
+Door deze gids te lezen, bent u geïntroduceerd aan [!UICONTROL Workflows] beschikbaar binnen de gebruikersinterface van het Experience Platform. Lees de [Adobe Experience Platform UI-handleiding](ui-guide.md) voor meer informatie over de functies en functionaliteit van de gebruikersinterface van het Platform.
