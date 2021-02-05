@@ -1,21 +1,17 @@
 ---
 keywords: Digitale feedback bevestigen;extensie bevestigen;bevestigen
-title: De extensie Digitale feedback bevestigen
-seo-title: De extensie Digitale feedback bevestigen
+title: Doel van extensie voor digitale feedback bevestigen
 description: De extensie Digitale feedback bevestigen is een stem van de bestemming Klant in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Digitale feedback bevestigen is een stem van de bestemming Klant in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Confirmit Digital Feedback] Extensie
-
-## Overzicht {#overview}
+# [!DNL Confirmit Digital Feedback] extension
 
 [!DNL Confirmit Digital Feedback] helpt u uw websiteverkeer om te zetten in real-time inzichten. Met [!DNL Confirmit] kunnen onopvallende en zeer gerichte enquêtes naar wens worden weergegeven, waarbij bezoekers worden aangemoedigd feedback te geven, zoals:
 
