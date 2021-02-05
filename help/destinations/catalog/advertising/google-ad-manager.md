@@ -1,21 +1,17 @@
 ---
 keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google Admanager
-title: Doel van Google Ad Manager
-seo-title: Doel van Google Ad Manager
-description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
-seo-description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren. '
+title: Verbindingsdoel Google Ad Manager
+description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.  '
 translation-type: tm+mt
-source-git-commit: bb2fc2658d32c59b476dd9d526eb8bc2f055a1af
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Google Ad Manager Destination]
-
-## Overzicht
+# [!DNL Google Ad Manager] verbinding
 
 [!DNL Google Ad Manager], voorheen bekend  [!DNL DoubleClick] bij Publishers of  [!DNL DoubleClick AdX], is een advertentieplatform van  [!DNL Google] waaruit uitgevers de middelen krijgen om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 
