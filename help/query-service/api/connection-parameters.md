@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;de vraagdienst;api gids;verbindingsparameters;de dienst van de vraag;
 solution: Experience Platform
-title: Handleiding voor ontwikkelaars van Query Service
+title: API-eindpunt voor verbindingsparameters
 topic: connection parameters
 description: U kunt uw verbindingsparameters voor het gebruiken van de interactieve dienst terugwinnen door een verzoek van de GET aan het /connection_parameters eindpunt te doen.
 translation-type: tm+mt
-source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
 
 
-# Verbindingsparameters
+# Het eindpunt van de verbindingsparameters
 
 ## Voorbeeld-API-aanroepen
 
