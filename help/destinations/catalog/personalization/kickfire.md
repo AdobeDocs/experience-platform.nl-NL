@@ -1,21 +1,17 @@
 ---
 keywords: kickfire;Kickfire;kickfire, extensie;Kickfire, extensie
-title: KickFire-extensie
-seo-title: KickFire-extensie
+title: Doel KickFire-extensie
 description: De extensie KickFire is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie KickFire is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '507'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL KickFire] extension  {#kickfire-extension}
-
-## Overzicht {#overview}
 
 [!DNL KickFire's] IP adresintelligentie &amp; B2B firmographic gegevens staat u toe om IP adressen aan bedrijven te vertalen, anonieme Webbezoekers te identificeren, en rekeningsgegevens in uw technologiestapel te integreren - allen die op het IP van een bedrijf adres worden gebaseerd.
 
