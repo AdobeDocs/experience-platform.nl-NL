@@ -1,19 +1,19 @@
 ---
 keywords: gegevensbeheer rtcdp;rtcdp gegevensbeheer;realtime gegevensprofielbeheer van klanten;privacy rtcdp;rtcdp privacy
-title: Privacy in realtime gegevensprofiel van klanten
-seo-title: Privacy in realtime gegevensprofiel van klanten
-description: Met het realtime gegevensprofiel voor klanten kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen in overeenstemming worden gehouden met privacyregels.
-seo-description: Met het realtime gegevensprofiel voor klanten kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen in overeenstemming worden gehouden met privacyregels.
+title: Privacy in Real-time Platform van de Gegevens van de Klant
+seo-title: Privacy in Real-time Platform van de Gegevens van de Klant
+description: Het Platform van Gegevens van de Klant in real time staat u toe om het proces te stroomlijnen om uw gegevensverrichtingen in overeenstemming met privacyverordeningen te houden.
+seo-description: Het Platform van Gegevens van de Klant in real time staat u toe om het proces te stroomlijnen om uw gegevensverrichtingen in overeenstemming met privacyverordeningen te houden.
 translation-type: tm+mt
-source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
 
 
-# Privacy in [!DNL Real-time CDP]
+# Privacy in Real-time Platform van de Gegevens van de Klant
 
 [!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) helpt marketers gegevens van meerdere bedrijfssystemen samen te brengen, zodat ze hun klanten beter kunnen identificeren, begrijpen en betrekken. Adobe beschouwt de privacy van consumentengegevens als een fundamenteel ontwerpbeginsel en biedt verschillende controles om marketers te helpen de gegevensprivacy van hun klanten te beheren.
 
