@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
+keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;api gids;vragen;vraag;de dienst van de Vraag;
 solution: Experience Platform
-title: Handleiding voor ontwikkelaars van Query Service
+title: API-eindpunt voor query's
 topic: queries
 description: De volgende secties lopen door vraag u het gebruiken van het /query eindpunt in de Dienst API van de Vraag kunt maken.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
 
 
-# Zoekopdrachten
+# Zoekopdrachten, eindpunt
 
 ## Voorbeeld-API-aanroepen
 
@@ -38,12 +38,12 @@ Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. De resultaten worden bijvoorbeeld in oplopende volgorde `orderby=created` gesorteerd. Als u een `-` voorinstelling toevoegt (`orderby=-created`), worden de items in aflopende volgorde gesorteerd. |
-| `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Default value: 20*) |
-| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. Bijvoorbeeld, `start=2` zal een lijst terugkeren die van de derde vermelde vraag begint. (*Default value: 0*) |
-| `property` | Filterresultaten op basis van velden. De filters **moeten** zijn beschermd tegen HTML. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created`, `updated`, `state`en `id`. De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan), `>=` (groter dan of gelijk aan), `<=` (kleiner dan of gelijk aan), `==` (gelijk aan), `!=` (niet gelijk aan) en `~` (bevat). Retourneert bijvoorbeeld `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` alle query&#39;s met de opgegeven id. |
-| `excludeSoftDeleted` | Geeft aan of een query die is verwijderd, moet worden opgenomen. Bijvoorbeeld, zal `excludeSoftDeleted=false` zachte geschrapte vragen **omvatten** . (*Boolean, standaardwaarde: true*) |
-| `excludeHidden` | Geeft aan of niet-door de gebruiker gestuurde query&#39;s moeten worden weergegeven. Als deze waarde is ingesteld op false, **worden query&#39;s die niet door de gebruiker worden gestart, zoals CURSOR-definities, FETCH of metagegevensquery&#39;s, opgenomen** . (*Boolean, standaardwaarde: true*) |
+| `orderby` | Hiermee geeft u het veld op waarmee de resultaten moeten worden geordend. De ondersteunde velden zijn `created` en `updated`. `orderby=created` sorteert de resultaten bijvoorbeeld in oplopende volgorde. Als u een `-` toevoegt voordat u een item (`orderby=-created`) hebt gemaakt, worden de items in aflopende volgorde gesorteerd. |
+| `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Standaardwaarde: 20*) |
+| `start` | Hiermee verschuift u de lijst met reacties met op nul gebaseerde nummering. `start=2` retourneert bijvoorbeeld een lijst die begint bij de derde query. (*Standaardwaarde: 0*) |
+| `property` | Filterresultaten op basis van velden. De filters **must** moeten uit HTML zijn ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created`, `updated`, `state` en `id`. De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan), `>=` (groter dan of gelijk aan), `<=` (kleiner dan of gelijk aan), `==` (gelijk aan), `!=` (niet gelijk aan) en `~` (bevat). `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retourneert bijvoorbeeld alle query&#39;s met de opgegeven id. |
+| `excludeSoftDeleted` | Geeft aan of een query die is verwijderd, moet worden opgenomen. `excludeSoftDeleted=false` zal bijvoorbeeld **include** zachte geschrapte vragen. (*Boolean, standaardwaarde: true*) |
+| `excludeHidden` | Geeft aan of niet-door de gebruiker gestuurde query&#39;s moeten worden weergegeven. Als deze waarde is ingesteld op false, worden **include** niet-door de gebruiker gestuurde query&#39;s, zoals CURSOR-definities, FETCH of metagegevensquery&#39;s weergegeven. (*Boolean, standaardwaarde: true*) |
 
 **Verzoek**
 
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van de nieuwe query. Nadat de query is geactiveerd en correct is uitgevoerd, verandert de query van `state` naar `SUBMITTED` `SUCCESS`.
+Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van de nieuwe query. Nadat de query is geactiveerd en correct is uitgevoerd, verandert `state` van `SUBMITTED` in `SUCCESS`.
 
 ```json
 {
@@ -199,11 +199,11 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 
 >[!NOTE]
 >
->U kunt de waarde van gebruiken `_links.cancel` om uw gemaakte query [te](#cancel-a-query)annuleren.
+>U kunt de waarde van `_links.cancel` gebruiken om [uw gecreeerde vraag ](#cancel-a-query) te annuleren.
 
 ### Een query ophalen op ID
 
-U kunt gedetailleerde informatie over een specifieke vraag terugwinnen door een verzoek van de GET tot het `/queries` eindpunt te richten en de `id` waarde van de vraag in de verzoekweg te verstrekken.
+U kunt gedetailleerde informatie over een specifieke vraag terugwinnen door een verzoek van de GET aan het `/queries` eindpunt te doen en de waarde `id` van de vraag in de verzoekweg te verstrekken.
 
 **API-indeling**
 
@@ -270,11 +270,11 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 >[!NOTE]
 >
->U kunt de waarde van gebruiken `_links.cancel` om uw gemaakte query [te](#cancel-a-query)annuleren.
+>U kunt de waarde van `_links.cancel` gebruiken om [uw gecreeerde vraag ](#cancel-a-query) te annuleren.
 
 ### Een query annuleren
 
-U kunt verzoeken om een gespecificeerde vraag te schrappen door een verzoek van PATCH aan het `/queries` eindpunt te doen en de `id` waarde van de vraag in de verzoekweg te verstrekken.
+U kunt verzoeken om een gespecificeerde vraag te schrappen door een verzoek van PATCH aan het `/queries` eindpunt te doen en de waarde `id` van de vraag in de verzoekweg te verstrekken.
 
 **API-indeling**
 
@@ -284,7 +284,7 @@ PATCH /queries/{QUERY_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{QUERY_ID}` | De `id` waarde van de query die u wilt annuleren. |
+| `{QUERY_ID}` | De waarde `id` van de vraag u wilt annuleren. |
 
 
 **Verzoek**
@@ -305,7 +305,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `op` | Als u de query wilt annuleren, moet u de parameter op met de waarde instellen `cancel `. |
+| `op` | Als u de query wilt annuleren, moet u de parameter op met de waarde `cancel ` instellen. |
 
 **Antwoord**
 
