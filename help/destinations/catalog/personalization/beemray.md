@@ -1,21 +1,17 @@
 ---
 keywords: beemray,beemray-extensie
-title: Beemray-extensie
-seo-title: Beemray-extensie
+title: Doel van Beemray-extensie
 description: De extensie Beemray is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Beemray is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Beemray] extension  {#beemray-extension}
-
-## Overzicht {#overview}
 
 [!DNL Beemray] helpt u uw product te versnellen in een situatie. U kunt inzichten opdoen, nieuwe ervaringen opdoen, interacties stimuleren en zich bezighouden met momenten die echt van belang zijn. Beemray automatiseert contextafhankelijke intelligentie met behulp van machinaal leren. Beemray maakt verbinding met de Adobe Experience Cloud en de rest van uw technologiepartners. Alles gebeurt in real-time. Deze extensie installeert de [!DNL Beemray] SDK op uw site.
 
