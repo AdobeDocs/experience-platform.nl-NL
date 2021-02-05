@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;find sandbox;look up a sandbox
+keywords: Experience Platform;home;populaire onderwerpen;zoek sandbox;zoek een sandbox
 solution: Experience Platform
-title: Sandbox opzoeken
+title: Sandbox opzoeken in de API
 topic: developer guide
 description: U kunt een afzonderlijke sandbox opzoeken door een aanvraag voor een GET in te dienen waarin de eigenschap name van de sandbox is opgenomen in het aanvraagpad.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
 
 
-# Sandbox opzoeken
+# Sandbox opzoeken in de API
 
-U kunt een afzonderlijke sandbox opzoeken door een verzoek in te dienen om de `name` eigenschap van de sandbox op te nemen in het aanvraagpad.
+U kunt een afzonderlijke sandbox opzoeken door een verzoek in te dienen om de eigenschap `name` van de sandbox op te nemen in het aanvraagpad.
 
 **API-indeling**
 
@@ -25,7 +25,7 @@ GET /sandboxes/{SANDBOX_NAME}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SANDBOX_NAME}` | De `name` eigenschap van de sandbox die u wilt opzoeken. |
+| `{SANDBOX_NAME}` | De eigenschap `name` van de sandbox die u wilt opzoeken. |
 
 **Verzoek**
 
@@ -42,7 +42,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een geslaagde reactie retourneert de details van de sandbox, inclusief de sandbox `name`, `title`, `state`en `type`.
+Een geslaagde reactie retourneert de details van de sandbox, inclusief `name`, `title`, `state` en `type`.
 
 ```json
 {
