@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;PayPal-aansluiting;paypal;Paypal
 solution: Experience Platform
-title: Een PayPal-connector maken met de Flow Service API
+title: Een PayPal-bronverbinding maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om PayPal aan Experience Platform te verbinden.
+description: Leer hoe u PayPal met Adobe Experience Platform verbindt via de Flow Service API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '576'
 ht-degree: 1%
 
 ---
 
 
-# Een [!DNL PayPal]-connector maken met de [!DNL Flow Service]-API
+# Een [!DNL PayPal]-bronverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
