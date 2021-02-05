@@ -1,19 +1,17 @@
 ---
-keywords: mobile messaging;mobile messaging destinations;Braze; Airship
-title: Mobiele betrokkenheidsdoelen
-seo-title: Mobiele betrokkenheidsdoelen
-description: Adobe Experience Platform biedt ondersteuning voor de onderstaande mobiele servicedoelen
-seo-description: Adobe Experience Platform biedt ondersteuning voor de onderstaande mobiele servicedoelen
+keywords: mobiel overseinen;mobiele overseinenbestemmingen;Braze; Luchtvaart
+title: Overzicht van mobiele servicedoelen
+description: Meer informatie over de verschillende mobiele servicedoelen die door Adobe Experience Platform worden ondersteund.
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '41'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---
 
 
-# Mobiele betrokkenheidsdoelen {#mobile-destinations}
+# Overzicht van mobiele betrokkenheidsdoelen {#mobile-destinations}
 
 [!DNL Adobe Experience Platform] ondersteunt momenteel de volgende mobiele betrokkenheidsdoelen:
 
