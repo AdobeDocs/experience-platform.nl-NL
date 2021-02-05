@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;verzamelen klantensucces;klantensucces
 solution: Experience Platform
-title: Gegevens verzamelen van een systeem met succesmeldingen van klanten via bronconnectors en API's
+title: Gegevens verzamelen van een succesvol systeem van de Klant met behulp van bronconnectors en API's
 topic: overview
 type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een systeem van klantensucces en het opnemen van gegevens in het Platform via bronconnectors en API's.
+description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een systeem van klantensucces en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: 85a715a6a56c0a885cb6f5b63c1a90ba81479862
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Gegevens verzamelen van een systeem met succesmeldingen van klanten via bronconnectors en API&#39;s
+# Gegevens verzamelen van een systeem met succesmeldingen van klanten met behulp van bronconnectors en API&#39;s
 
 In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens van een systeem voor succes van een externe klant en het opnemen ervan in [!DNL Platform] via bronconnectors en de [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
