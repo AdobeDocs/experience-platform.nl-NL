@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;de dienst van de Vraag;de vraagdienst;Leider;Leider;verbindt met de vraagdienst;
 solution: Experience Platform
-title: Verbinding maken met Looker
+title: Verbinding maken met Zoekservice
 topic: connect
 description: Dit document doorloopt de stappen voor het verbinden van de Teller met de Dienst van de Vraag van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Looker]
+# [!DNL Looker] verbinden met de Dienst van de Vraag
 
 In dit document worden de stappen beschreven voor het verbinden van [!DNL Looker] met Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > Deze gids veronderstelt u reeds toegang tot [!DNL Looker] hebt en vertrouwd met hoe te om zijn interface te navigeren. Meer informatie over [!DNL Looker] vindt u in de [officiële [!DNL Looker] documentatie](https://docs.looker.com/).
-
-## [!DNL Looker] verbinden met Platform
 
 Nadat u zich hebt aangemeld bij [!DNL Looker], selecteert u **[!DNL Admin]**, gevolgd door **[!DNL Connections]**.
 
