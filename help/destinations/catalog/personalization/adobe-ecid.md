@@ -1,21 +1,17 @@
 ---
 Keywords: ECID;ecid
-title: Experience Cloud ID Service-extensie
-seo-title: Experience Cloud ID Service-extensie
+title: Bestemming van extensie Experience Cloud ID-service
 description: De uitbreiding van de Dienst van identiteitskaart van de Experience Cloud is een verpersoonlijkingsbestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De uitbreiding van de Dienst van identiteitskaart van de Experience Cloud is een verpersoonlijkingsbestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Experience Cloud] ID Service-extensie  {#adobe-ecid-extension}
-
-## Overzicht {#overview}
 
 Deze extensie implementeert de [!DNL Experience Cloud] ID-service, die bezoekers identificeert voor alle [!DNL Experience Cloud]-oplossingen.
 
