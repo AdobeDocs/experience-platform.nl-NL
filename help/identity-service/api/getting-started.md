@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;identiteitsservice-api;handleiding voor ontwikkelaars van identiteitsservices;regio
 solution: Experience Platform
-title: Aan de slag
+title: Identiteitsservice-API-handleiding
 topic: API guide
-description: 'De identiteitsservice van Adobe Experience Platform beheert de identificatie van uw klanten op verschillende apparaten, in verschillende kanalen en bijna realtime in een identiteitsgrafiek in Adobe Experience Platform. '
+description: Met de Identiteitsservice-API kunnen ontwikkelaars de identificatie van uw klanten op verschillende apparaten, meerdere kanalen en bijna realtime beheren met behulp van identiteitsgrafieken Adobe Experience Platform. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '759'
-ht-degree: 1%
+source-wordcount: '769'
+ht-degree: 0%
 
 ---
 
 
-# [!DNL Identity Service] Handleiding voor API-ontwikkelaars
+# [!DNL Identity Service] API-handleiding
 
 Adobe Experience Platform [!DNL Identity Service] beheert de cross-device, cross-channel en bijna real-time identificatie van uw klanten in wat bekend staat als een identiteitsgrafiek binnen Adobe Experience Platform.
 
