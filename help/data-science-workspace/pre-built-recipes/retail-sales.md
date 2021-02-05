@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: Experience Platform;winkelrecept;Data Science Workspace;populaire onderwerpen;recepten;prebuild recept
 solution: Experience Platform
-title: Detailhandelrecept
+title: Recipe detailhandel
 topic: overview
 description: Met het recept voor detailhandel kunt u de verkoopprognose voor alle winkels die gedurende een bepaalde periode worden ingezaaid, voorspellen. Met een accuraat voorspellingsmodel zou de detailhandelaar de relatie tussen vraag en prijsbeleid kunnen vinden en geoptimaliseerde prijsbeslissingen kunnen nemen om verkoop en inkomsten te maximaliseren.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ In het recept Verkoopprognose voor detailhandel wordt machinaal leren gebruikt o
 
 ## Hoe begin ik?
 
-U kunt aan de slag door deze [zelfstudie](../jupyterlab/create-a-recipe.md)te volgen.
+U kunt beginnen door dit [leerprogramma](../jupyterlab/create-a-recipe.md) te volgen.
 
 Deze zelfstudie gaat over het maken van het recept voor detailhandel in een Jupyter-laptop en het gebruik van de laptop voor het recept-workflow om het recept in Adobe Experience Platform te maken.
 
 ## Gegevensschema
 
-In dit recept worden [XDM-schema&#39;s](../../xdm/schema/field-dictionary.md) gebruikt om de gegevens te modelleren. Het schema dat voor dit recept wordt gebruikt wordt hieronder getoond:
+Dit recept gebruikt [XDM schema&#39;s](../../xdm/schema/field-dictionary.md) om de gegevens te modelleren. Het schema dat voor dit recept wordt gebruikt wordt hieronder getoond:
 
 | Veldnaam | Type |
 --- | ---
@@ -57,7 +57,7 @@ In dit recept worden [XDM-schema&#39;s](../../xdm/schema/field-dictionary.md) ge
 
 ## Algorithm
 
-Eerst, wordt de opleidingsdataset in het schema *DSWRetailSales* geladen. Vanaf hier wordt het model getraind met behulp van een [verloopversterkeralgoritme](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Bij het verhogen van het verloop wordt ervan uitgegaan dat zwakke studenten (een die minstens iets beter is dan een willekeurige kans) een opvolging van studenten kunnen vormen die zich richten op het verbeteren van de zwakheden van de vorige leerling. Samen kunnen ze worden gebruikt om een krachtig voorspellend model te maken.
+Eerst, wordt de trainingsdataset in het *DSWRetailSales* schema geladen. Vanaf hier wordt het model getraind met behulp van een [algoritme voor het verhogen van het verloop](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Bij het verhogen van het verloop wordt ervan uitgegaan dat zwakke studenten (een die minstens iets beter is dan een willekeurige kans) een opvolging van studenten kunnen vormen die zich richten op het verbeteren van de zwakheden van de vorige leerling. Samen kunnen ze worden gebruikt om een krachtig voorspellend model te maken.
 
 Het proces omvat drie elementen: een verliesfunctie, een zwakke leerling en een additief model.
 
