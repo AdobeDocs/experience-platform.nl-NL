@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Azure Event Hubs;azure event hubs;Event Hubs;event hubs
 solution: Experience Platform
-title: Azure Event Hubs-connector
+title: Azure Event Hubs Source Connector - Overzicht
 topic: overview
-description: De documentatie hieronder verstrekt informatie over hoe te om Azure Event Hubs aan Platform te verbinden gebruikend APIs of de gebruikersinterface.
+description: Leer hoe u Azure Event Hubs met Adobe Experience Platform kunt verbinden met behulp van API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
@@ -33,10 +33,10 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Azure Event 
 
 ### API&#39;s gebruiken
 
-- [Een Azure Event Hubs-connector maken met de Flow Service API](../../tutorials/api/create/cloud-storage/eventhub.md)
+- [Een Azure Event Hubs-bronverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Streaming gegevens verzamelen met de Flow Service API](../../tutorials/api/collect/streaming.md)
 
 ### De gebruikersinterface gebruiken
 
-- [Creeer een Azure de bronschakelaar van de Hubs van de Gebeurtenis in UI](../../tutorials/ui/create/cloud-storage/eventhub.md)
-- [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [Creeer een Azure Event Hubs bronverbinding in UI](../../tutorials/ui/create/cloud-storage/eventhub.md)
+- [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
