@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;MySQL;mysql
 solution: Experience Platform
-title: Een MySQL-connector maken met de Flow Service API
+title: Creeer een MySQL BronVerbinding Gebruikend de Dienst API van de Stroom
 topic: overview
 type: Tutorial
-description: Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om Experience Platform met MySQL te verbinden.
+description: Leer hoe u Adobe Experience Platform met MySQL kunt verbinden met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
 
 
-# Creeer een schakelaar MySQL gebruikend [!DNL Flow Service] API
+# Een MySQL-bronverbinding maken met de API [!DNL Flow Service]
 
 >[!NOTE]
 >
