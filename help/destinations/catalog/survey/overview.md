@@ -1,19 +1,17 @@
 ---
 keywords: Onderzoeksbestemmingen;enquête;voorspelling;inmoment;web-onderscheppingsenquêtes;qualtriciteiten
-title: Beoordelingsbestemmingen
-seo-title: Beoordelingsbestemmingen
-description: De platforms van enquêtes ontdekken onderzoeksgebeurtenissen, vangen klant terugkoppelt in real time door gegevenselementen, en delen gegevens met Platform.
-seo-description: De platforms van enquêtes ontdekken onderzoeksgebeurtenissen, vangen klant terugkoppelt in real time door gegevenselementen, en delen gegevens met Platform.
+title: Overzicht van enquêtedoelen
+description: De platforms van enquêtes ontdekken onderzoeksgebeurtenissen, vangen klant terugkoppelt in real time door gegevenselementen, en delen gegevens met Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
 
-# Beoordelingsdoelen {#survey-destinations}
+# Overzicht van enquêtedoelen {#survey-destinations}
 
 De platforms van enquêtes ontdekken onderzoeksgebeurtenissen, vangen klant terugkoppelt in real time door gegevenselementen, en delen gegevens met Adobe Experience Platform.
 
