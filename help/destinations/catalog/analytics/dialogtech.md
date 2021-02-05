@@ -1,21 +1,17 @@
 ---
 keywords: dialogtech-extensie;dialogtech;dialogtech-bestemming;DialogTech;DialogTech SourceTrak
-title: DialogTech-extensie
-seo-title: DialogTech-extensie
+title: DialogTech-extensiebestemming
 description: De extensie DialogTech is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie DialogTech is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL DialogTech] extension  {#dialogtech-extension}
-
-## Overzicht {#overview}
 
 Het JavaScript-fragment [!DNL DialogTech SourceTrak] opnemen in Adobe Launch
 
