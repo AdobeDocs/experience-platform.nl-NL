@@ -1,25 +1,21 @@
 ---
 keywords: Amazon Kinesis;kinesis-bestemming;kinesis
-title: Amazon Kinesis-bestemming
-seo-title: Amazon Kinesis-bestemming
+title: Amazon Kinesis Connection Destination
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
-seo-description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
 translation-type: tm+mt
-source-git-commit: a78dd4b95896387aa1daa022c9e1d5a6cf978448
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
 
 
-# (Bèta) [!DNL Amazon Kinesis] bestemming
+# (Bèta) [!DNL Amazon Kinesis] verbinding
 
 >[!IMPORTANT]
 >
 >De [!DNL Amazon Kinesis] bestemming in Platform is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
-
-## Overzicht {#overview}
 
 Met de [!DNL Kinesis Data Streams]-service van [!DNL Amazon Web Services] kunt u grote stromen gegevensrecords in real-time verzamelen en verwerken.
 
