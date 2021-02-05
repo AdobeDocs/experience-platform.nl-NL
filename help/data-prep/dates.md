@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui-gids;mapper;mapping;date;datumfuncties;datums;
 solution: Experience Platform
-title: Datumfuncties
+title: Datumfuncties van Data Prep
 topic: overview
 description: In dit document worden de datumfuncties geïntroduceerd die worden gebruikt met Data Prep.
 translation-type: tm+mt
-source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '415'
 ht-degree: 12%
 
 ---
 
 
-# Datumfuncties
+# Datumvoorloopdatumfuncties
 
 Data Prep ondersteunt datumfuncties, zowel als tekenreeksen als als datetime-objecten.
 
