@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;sql syntaxis;sql;ctas;CTAS;Tabel maken als selectie
 solution: Experience Platform
-title: SQL-syntaxis
+title: SQL-syntaxis in Query-service
 topic: syntax
-description: Dit document toont SQL syntaxis die door de Dienst van de Vraag wordt gesteund.
+description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: 14cb1d304fd8aad2ca287f8d66ac6865425db4c5
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2221'
 ht-degree: 0%
 
 ---
 
 
-# SQL-syntaxis
+# SQL-syntaxis in Query Service
 
 [!DNL Query Service] verstrekt de capaciteit om standaardANSI SQL voor  `SELECT` verklaringen en andere beperkte bevelen te gebruiken. In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door [!DNL Query Service].
 
