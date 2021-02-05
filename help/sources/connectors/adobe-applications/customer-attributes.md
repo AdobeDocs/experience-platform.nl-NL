@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Customer Attributes connector
+keywords: Experience Platform;thuis;populaire onderwerpen;Klantenkenmerk-aansluiting
 solution: Experience Platform
-title: Customer Attributes-connector
+title: Overzicht van de Source Connector voor klantkenmerken
 topic: overview
-description: In de onderstaande documentatie vindt u informatie over hoe u klantkenmerken kunt verbinden met Platform via API's of de gebruikersinterface
+description: Leer hoe u klantkenmerken met behulp van API's of de gebruikersinterface kunt verbinden met Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
@@ -19,8 +19,8 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 
 Experience Platform biedt ondersteuning voor het opnemen van klantkenmerkprofielgegevens in Adobe Experience Platform.
 
-In de onderstaande documentatie vindt u informatie over hoe u klantkenmerken kunt verbinden met Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over hoe u klantkenmerken kunt verbinden met Adobe Experience Platform via API&#39;s of de gebruikersinterface:
 
 ## Klantkenmerken verbinden met Platform via de gebruikersinterface
 
-- [Een bronconnector voor klantkenmerken in de gebruikersinterface maken](../../tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [Een bronverbinding voor klantkenmerken maken in de gebruikersinterface](../../tutorials/ui/create/adobe-applications/customer-attributes.md)
