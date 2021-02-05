@@ -2,12 +2,12 @@
 keywords: doelen;adobe Experience platform;platform;bestemmingen, overzicht;activate gegevens;activate;
 title: Overzicht van bestemmingen
 seo-title: Overzicht van bestemmingen
-description: Activeer de gegevens van het Platform aan bestemmingen voor kanaalmarketing campagnes, e-mail, gerichte reclame, en meer.
+description: Leer hoe u Adobe Experience Platform-gegevens activeert naar bestemmingen voor marketingcampagnes over verschillende kanalen, e-mails, gerichte advertenties en meer.
 seo-description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 translation-type: tm+mt
-source-git-commit: 32eae2ed782e46941bb21e3aca62c6bce68cde1e
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '493'
 ht-degree: 1%
 
 ---
