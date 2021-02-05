@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Vertica;vertica
 solution: Experience Platform
-title: Creeer een schakelaar van HP Vertica gebruikend de Dienst API van de Stroom
+title: Een HP Vertica Source Connection maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om HP Vertica aan Experience Platform te verbinden.
+description: Leer hoe te om HP Vertica met Adobe Experience Platform te verbinden gebruikend de Dienst API van de Stroom.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
 
 
-# Creeer een schakelaar van HP [!DNL Vertica] gebruikend [!DNL Flow Service] API
+# Een HP [!DNL Vertica]-bronverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
