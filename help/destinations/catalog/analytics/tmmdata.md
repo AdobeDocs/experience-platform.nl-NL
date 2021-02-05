@@ -1,21 +1,17 @@
 ---
 keywords: TMMData;tmm-gegevens;tmmdata;TMM-gegevens
-title: TMMData-extensie
-seo-title: TMMData-extensie
+title: Doel van TMMData-extensie
 description: De extensie TMMData is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie TMMData is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL TMMData] Extensie  {#tmmdata-extension}
-
-## Overzicht {#overview}
+# [!DNL TMMData] extension  {#tmmdata-extension}
 
 [!DNL TMMData's] Het stichtingsplatform voor Adobe Marketing Cloud biedt marketingteams de middelen om al hun kritieke gegevensbronnen - inclusief interne/externe en online/offline gegevens - te openen en te combineren voor een betrouwbare, uitgebreide kanaalanalyse, met geautomatiseerde campagneopstelling en rechtstreekse invoer naar Adobe en andere analytische en BI-instrumenten.
 
