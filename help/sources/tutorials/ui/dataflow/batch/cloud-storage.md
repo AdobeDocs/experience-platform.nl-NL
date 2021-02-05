@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;dataflow;DataFlow
 solution: Experience Platform
-title: Een gegevensstroom configureren voor een batchaansluiting voor cloudopslag in de gebruikersinterface
+title: Een DataFlow configureren voor een Cloud Storage Batch-connector in de gebruikersinterface
 topic: overview
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
 translation-type: tm+mt
-source-git-commit: 2d1b49d774d04e7befbcc1c9e5417ee82323634a
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Een gegevensstroom configureren voor een batchaansluiting voor cloudopslag in de gebruikersinterface
+# Een gegevensstroom configureren voor een batch-verbinding voor cloudopslag in de gebruikersinterface
 
 Een dataflow is een geplande taak die gegevens van een bron aan een [!DNL Platform] dataset terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
 
