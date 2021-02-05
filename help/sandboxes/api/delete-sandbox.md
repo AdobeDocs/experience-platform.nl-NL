@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;delete sandbox
+keywords: Experience Platform;home;populaire onderwerpen;verwijderen, sandbox
 solution: Experience Platform
-title: Een sandbox verwijderen
+title: Een sandbox in de API verwijderen
 topic: developer guide
 description: U kunt een sandbox verwijderen door een DELETE-aanvraag in te dienen die de naam van de sandbox in het aanvraagpad bevat.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '103'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
 
-# Een sandbox verwijderen
+# Een sandbox in de API verwijderen
 
-U kunt een sandbox verwijderen door een DELETE-aanvraag in te dienen die de sandbox&#39;s bevat `name` in het aanvraagpad.
+U kunt een sandbox verwijderen door een DELETE-verzoek in te dienen dat de sandbox `name` bevat in het aanvraagpad.
 
 >[!NOTE]
 >
->Als u deze API-aanroep maakt, wordt de `status` eigenschap van de sandbox bijgewerkt naar &quot;verwijderd&quot; en gedeactiveerd. Met GET-aanvragen kunnen de gegevens van de sandbox nog steeds worden opgehaald nadat deze zijn verwijderd.
+>Als u deze API-aanroep maakt, wordt de eigenschap `status` van de sandbox bijgewerkt naar &quot;verwijderd&quot; en wordt deze gedeactiveerd. Met GET-aanvragen kunnen de gegevens van de sandbox nog steeds worden opgehaald nadat deze zijn verwijderd.
 
 **API-indeling**
 
@@ -29,7 +29,7 @@ DELETE /sandboxes/{SANDBOX_NAME}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SANDBOX_NAME}` | De `name` sandbox die u wilt verwijderen. |
+| `{SANDBOX_NAME}` | De `name` van de sandbox die u wilt verwijderen. |
 
 **Verzoek**
 
@@ -46,7 +46,7 @@ curl -X DELETE \
 
 **Antwoord**
 
-Een succesvol antwoord retourneert de bijgewerkte details van de sandbox, waarbij wordt getoond dat het `state` is &quot;verwijderd&quot;.
+Een succesvol antwoord retourneert de bijgewerkte details van de sandbox, waarbij wordt getoond dat `state` wordt &quot;verwijderd&quot;.
 
 ```json
 {
