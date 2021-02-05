@@ -1,9 +1,9 @@
 ---
 keywords: RTCDP;CDP;Real-time Platform van klantgegevens;real-time platform voor klantgegevens;real-time cdp;cdp;rtcdp
-title: Aan de slag met Real-time Platform voor klantgegevens
+title: Aan de slag met Real-time Platform van klantgegevens
 description: Gebruik dit voorbeeldscenario als voorbeeld wanneer vestiging uw implementatie van het Platform van Gegevens van de Klant in real time.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 0%
