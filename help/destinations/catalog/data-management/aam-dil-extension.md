@@ -1,21 +1,17 @@
 ---
 keywords: Audience Manager DIL extensie;doelpublieksbeheer;dil-extensie
-title: Audience Manager DIL-extensie
-seo-title: Audience Manager DIL-extensie
+title: Audience Manager DIL-extensiebestemming
 description: De extensie Audience Manager van de DIL is een DMP-bestemming (Data Management Platform) in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Audience Manager van de DIL is een DMP-bestemming (Data Management Platform) in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
 
 
 # Audience Manager DIL-extensie {#aam-dil-extension}
-
-## Overzicht {#overview}
 
 Dit is de extensie Adobe Audience Manager Data Integration Library (client-side implementatie). Opmerking: Deze extensie is niet bedoeld voor het doorsturen van Adobe Analytics-gegevens via de server (SSF). Gebruik voor SSF de extensie Adobe Analytics. Belangrijk: Vanaf versie 8.0 is DIL sterk afhankelijk van [!DNL Experience Cloud] ID Service, versie 3.3 of hoger. Implementeer zowel [!DNL Experience Cloud] ID-service als DIL voor volledige [!DNL Audience Manager] mogelijkheden voor gegevensintegratie.
 
