@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;advertentiesysteem;Reclamesysteem
 solution: Experience Platform
-title: Een advertentiesysteem verkennen met behulp van de Flow Service API
+title: Een advertentiesysteem verkennen met de Flow Service API
 topic: overview
 description: De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten. Deze zelfstudie gebruikt de Flow Service API om advertentiesystemen te verkennen.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 0%
