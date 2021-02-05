@@ -1,19 +1,17 @@
 ---
 keywords: luchtschepen, codes;bestemming van het luchtschip
-title: Doel van airship-tags
-seo-title: Doel van airship-tags
+title: Verbindingsbestemming van airship-tags
 description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als Publiek-tags voor doelwit binnen het luchtschip.
-seo-description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als Publiek-tags voor doelwit binnen het luchtschip.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1197'
 ht-degree: 0%
 
 ---
 
 
-# (Bèta) [!DNL Airship Tags] bestemming {#airship-tags-destination}
+# (Bèta) [!DNL Airship Tags] verbinding {#airship-tags-destination}
 
 >[!IMPORTANT]
 >
