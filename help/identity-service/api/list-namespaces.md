@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace list;list namespace
+keywords: Experience Platform;home;populaire onderwerpen;naamruimtelijst;naamruimte voor lijst
 solution: Experience Platform
 title: Beschikbare naamruimten weergeven
 topic: API guide
 description: Alle beschikbare naamruimten weergeven.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '72'
+source-wordcount: '83'
 ht-degree: 2%
 
 ---
@@ -80,4 +80,4 @@ De reactie bevat een array met objecten, waarbij elk object een beschikbare naam
 
 ## Volgende stappen
 
-Ga naar de volgende zelfstudie om een aangepaste naamruimte te [maken](./create-custom-namespace.md)
+Ga aan het volgende leerprogramma te werk om [een douanespatie te creëren](./create-custom-namespace.md)
