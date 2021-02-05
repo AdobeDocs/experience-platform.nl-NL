@@ -1,21 +1,17 @@
 ---
 keywords: Dubbelklik op Vullingslicht;dubbelklik op de extensie Dumlight;dubbelklik;dopLicht
-title: DoubleClick Floodlight (bèta)-extensie
-seo-title: DoubleClick Floodlight (bèta)-extensie
+title: Dubbelklikken op doel van FlashLight-extensie (bèta)
 description: De extensie DoubleClick Floodlight (Beta) is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie DoubleClick Floodlight (Beta) is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL DoubleClick Floodlight] (bèta) extensie
-
-## Overzicht {#overview}
 
 Met deze extensie kunt u [!DNL DoubleClick Floodlight]-tags snel en eenvoudig implementeren in de traditionele sluimerindeling (niet de Global Site Tag). Opmerking: Deze extensie is in bèta.
 
