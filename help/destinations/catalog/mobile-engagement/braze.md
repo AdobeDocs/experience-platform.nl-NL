@@ -1,25 +1,21 @@
 ---
 keywords: mobiel; schil; berichten;
-title: Braze bestemming
-seo-title: Braze bestemming
+title: Doel van Braze-verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
-seo-description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
 
 
-# (Bèta) [!DNL Braze] bestemming
+# (Bèta) [!DNL Braze] verbinding
 
 >[!IMPORTANT]
 >
 >Het doel Braze in Adobe Experience Platform is momenteel in Bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
-
-## Overzicht {#overview}
 
 Met de bestemming [!DNL Braze] kunt u profielgegevens naar [!DNL Braze] verzenden.
 
