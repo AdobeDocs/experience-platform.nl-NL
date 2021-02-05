@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Een verbinding verwijderen met de Flow Service API
 topic: overview
 type: Tutorial
-description: In deze zelfstudie worden de stappen beschreven voor het verwijderen van een verbinding met de Flow Service API.
+description: Leer hoe u een verbinding verwijdert met de Flow Service API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '592'
 ht-degree: 1%
 
 ---
