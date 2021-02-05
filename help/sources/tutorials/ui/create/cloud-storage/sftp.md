@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;SFTP;sftp
+keywords: Experience Platform;home;populaire onderwerpen;SFTP;sftp
 solution: Experience Platform
-title: Een SFTP-bronconnector maken in de UI
+title: Een SFTP-bronverbinding maken in de gebruikersinterface
 topic: overview
 type: Tutorial
-description: Deze zelfstudie biedt stappen voor het maken van een SFTP-bronconnector met behulp van de gebruikersinterface van het Platform.
+description: Leer hoe u een SFTP-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 0d0d3aa4213f3a8252de82c47eef6e9caa4d3e9e
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
 
 
-# Een SFTP-bronconnector maken in de UI
+# Een SFTP-bronverbinding maken in de gebruikersinterface
 
 >[!NOTE]
 >
 >De SFTP-connector bevindt zich in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Deze zelfstudie biedt stappen voor het maken van een SFTP-bronconnector met behulp van de gebruikersinterface van het Platform.
+Deze zelfstudie bevat stappen voor het maken van een SFTP-bronverbinding met de Adobe Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
