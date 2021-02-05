@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;batch-opname;Batch-opname;inname;ontwikkelaarshandleiding;api-handleiding;upload;ingest Parquet;ingest json;
 solution: Experience Platform
-title: Handleiding voor ontwikkelaars van batchverwerking
+title: Handleiding voor de API voor batchverwerking
 topic: developer guide
 description: Dit document biedt een uitgebreid overzicht van het gebruik van batch-opname-API's.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '2698'
 ht-degree: 3%
@@ -13,7 +13,7 @@ ht-degree: 3%
 ---
 
 
-# Handleiding voor het ontwikkelen van batterijen
+# Handleiding voor inname van batch-API
 
 Dit document biedt een uitgebreid overzicht van het gebruik van [batch ingestion API&#39;s](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
