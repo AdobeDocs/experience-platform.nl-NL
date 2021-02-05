@@ -1,22 +1,19 @@
 ---
 keywords: cloudopslag;cloudopslag
-title: Workflow voor opslagdoelen voor cloud
-seo-title: Workflow voor opslagdoelen voor cloud
+title: Een cloudopslagbestemming maken
 type: Tutorial
 description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 seo-description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
 
 
-# Workflow voor het maken van cloudopslagdoelen
-
-## Overzicht
+# Een bestemming voor cloudopslag maken
 
 Op deze pagina wordt uitgelegd hoe u verbinding kunt maken met cloudopslaglocaties in Adobe Experience Platform.
 
