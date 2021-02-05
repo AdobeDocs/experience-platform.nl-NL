@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;popular topics
-title: Een functiepijplijn maken
+keywords: Experience Platform;Zelfstudie;functiepijplijn;Data Science Workspace;populaire onderwerpen
+title: Creeer een Pijpleiding van de Eigenschap Gebruikend de ModelAuthoring SDK
 topic: tutorial
 type: Tutorial
 description: Met Adobe Experience Platform kunt u aangepaste functiepijpleidingen maken en maken die op schaal functionaliteit kunnen bieden via de Sensei Machine Learning Framework-runtime. Dit document beschrijft de diverse klassen die in een eigenschappijpleiding worden gevonden, en verstrekt een geleidelijke zelfstudie voor het creëren van een pijpleiding van de douaneeigenschap gebruikend ModelAuthoring SDK in PySpark.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1441'
 ht-degree: 0%
 
 ---
 
 
-# Een functiepijplijn maken
+# Creeer een eigenschappijpleiding gebruikend ModelAuthoring SDK
 
 >[!IMPORTANT]
 >
@@ -31,7 +31,7 @@ De volgende workflow vindt plaats wanneer een functiepijplijn wordt uitgevoerd:
 4. De eigenschappijpleiding bepaalt de stadia met de Regressor van de Verloop van de Verhoging als gekozen model.
 5. De pijpleiding wordt gebruikt om de opleidingsgegevens te passen en het opgeleide model wordt gecreeerd.
 6. Het model wordt getransformeerd met de het scoren dataset.
-7. De interessante kolommen van de output worden dan geselecteerd en terug bewaard aan [!DNL Experience Platform] de bijbehorende gegevens.
+7. De interessante kolommen van de output worden dan geselecteerd en terug naar [!DNL Experience Platform] met de bijbehorende gegevens bewaard.
 
 ## Aan de slag
 
@@ -41,7 +41,7 @@ Om een recept in om het even welke organisatie in werking te stellen, wordt het 
 - Een getransformeerd schema en een lege dataset die op dat schema wordt gebaseerd.
 - Een outputschema en een lege dataset die op dat schema wordt gebaseerd.
 
-Alle bovengenoemde datasets moeten aan [!DNL Platform] UI worden geupload. Gebruik het door Adobe verschafte [opstartscript](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)om dit in te stellen.
+Alle bovengenoemde datasets moeten aan [!DNL Platform] UI worden geupload. Om dit omhoog te plaatsen, gebruik Adobe-Geleverd [bootstrap manuscript](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
 
 ## Klassen van de eigenschappijplijn
 
@@ -61,7 +61,7 @@ Het volgende stroomschema toont de orde van uitvoering van Runtime:
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## Voer uw klassen van de Pijpleiding van de Eigenschap uit {#implement-your-feature-pipeline-classes}
+## Voer uw klassen van de Pijpleiding van de Eigenschap {#implement-your-feature-pipeline-classes} uit
 
 De volgende secties verstrekken details en voorbeelden bij het uitvoeren van de vereiste klassen voor een Pijpleiding van de Eigenschap.
 
@@ -103,11 +103,11 @@ U kunt tot de configuratie JSON door om het even welke klassenmethode toegang he
 dataset_id = str(config_properties.get(dataset_id))
 ```
 
-Zie het [pijpleiding.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) dossier door de Werkruimte van de Wetenschap van Gegevens voor een meer diepgaande configuratievoorbeeld wordt verstrekt die.
+Zie [pipe.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) dossier dat door de Werkruimte van de Wetenschap van Gegevens voor een meer diepgaande configuratievoorbeeld wordt verstrekt.
 
 ### De invoergegevens voorbereiden met DataLoader {#prepare-the-input-data-with-dataloader}
 
-DataLoader is verantwoordelijk voor het ophalen en filteren van invoergegevens. Uw implementatie van DataLoader moet de abstracte klasse uitbreiden `DataLoader` en de abstracte methode met voeten treden `load`.
+DataLoader is verantwoordelijk voor het ophalen en filteren van invoergegevens. Uw implementatie van DataLoader moet de abstracte klasse `DataLoader` uitbreiden en de abstracte methode `load` met voeten treden.
 
 Het volgende voorbeeld wint een [!DNL Platform] dataset door identiteitskaart terug en keert het als DataFrame terug, waar dataset identiteitskaart (`dataset_id`) een bepaald bezit in het configuratiedossier is.
 
@@ -158,7 +158,7 @@ class MyDataLoader(DataLoader):
     return pd
 ```
 
-### Transformeer een dataset met DatasetTransformer {#transform-a-dataset-with-datasettransformer}
+### Een gegevensset transformeren met DatasetTransformer {#transform-a-dataset-with-datasettransformer}
 
 Een DatasetTransformer verstrekt de logica voor het omzetten van een input DataFrame en keert een nieuwe afgeleide DataFrame terug. Deze klasse kan worden uitgevoerd om of samen met een FeaturePipelineFactory te werken, als enige component van de eigenschapengineering te werken, of u kunt verkiezen om deze klasse niet uit te voeren.
 
@@ -284,11 +284,11 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
         return None
 ```
 
-### Sla uw eigenschapdataset met DataSaver op {#store-your-feature-dataset-with-datasaver}
+### Sla uw eigenschapdataset met DataSaver {#store-your-feature-dataset-with-datasaver} op
 
-DataSaver is de oorzaak van het opslaan van uw resulterende eigenschapdatasets in een opslagplaats. Uw implementatie van DataSaver moet de abstracte klasse uitbreiden `DataSaver` en de abstracte methode met voeten treden `save`.
+DataSaver is de oorzaak van het opslaan van uw resulterende eigenschapdatasets in een opslagplaats. Uw implementatie van DataSaver moet de abstracte klasse `DataSaver` uitbreiden en de abstracte methode `save` met voeten treden.
 
-Het volgende voorbeeld breidt de klasse DataSaver uit die gegevens aan een [!DNL Platform] dataset door identiteitskaart opslaat, waar dataset ID (`featureDatasetId`) en huurder identiteitskaart (`tenantId`) bepaalde eigenschappen in de configuratie zijn.
+Het volgende voorbeeld breidt de klasse DataSaver uit die gegevens aan een [!DNL Platform] dataset door identiteitskaart opslaat, waar dataset identiteitskaart (`featureDatasetId`) en huurder identiteitskaart (`tenantId`) bepaalde eigenschappen in de configuratie zijn.
 
 **Voorbeeld van PySpark**
 
@@ -387,51 +387,51 @@ scoring.dataLoader: ScoringDataLoader
 scoring.dataSaver: MyDatasetSaver
 ```
 
-## De pijplijnengine voor functies maken met behulp van de API {#create-feature-pipeline-engine-api}
+## Creeer uw motor van de eigenschappijpleiding gebruikend API {#create-feature-pipeline-engine-api}
 
 Nu u uw eigenschappijpleiding hebt ontworpen, moet u een beeld van het Dok tot stand brengen om een vraag aan de eindpunten van de eigenschappijpleiding in [!DNL Sensei Machine Learning] API te maken. U hebt een beeld URL van het Docker nodig om een vraag aan de eindpunten van de eigenschappijpleiding te maken.
 
 >[!TIP]
 >
->Als u geen Docker URL hebt, bezoek de brondossiers van het [Pakket in een recept](../models-recipes/package-source-files-recipe.md) leerprogramma voor een geleidelijke analyse bij het creëren van een de gastheer URL van het Docker.
+>Als u geen Docker URL hebt, bezoek [de brondossiers van het Pakket in een recept](../models-recipes/package-source-files-recipe.md) leerprogramma voor een geleidelijke analyse bij het creëren van een gastheer URL van het Docker.
 
 Naar keuze, kunt u de volgende inzameling van Postman ook gebruiken om in de voltooiing van het werkschema van de eigenschappijpleiding te helpen API:
 
 https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
-### Een pijplijnengine maken {#create-engine-api}
+### Creeer een motor van de eigenschappijpleiding {#create-engine-api}
 
-Zodra u uw het beeldplaats van de Docker hebt, kunt u een motor [van de eigenschappijpleiding](../api/engines.md#feature-pipeline-docker) tot stand brengen gebruikend [!DNL Sensei Machine Learning] API door een POST aan uit te voeren `/engines`. Het creëren van een motor van de eigenschappijpleiding voorziet u van een unieke identiteitskaart van de Motor (`id`). Sla deze waarde op voordat u doorgaat.
+Zodra u uw de beeldplaats van de Dokker hebt, kunt u [een eigenschappijplijnmotor ](../api/engines.md#feature-pipeline-docker) tot stand brengen gebruikend [!DNL Sensei Machine Learning] API door een POST aan `/engines` uit te voeren. Het creëren van een motor van de eigenschappijpleiding voorziet u van een uniek herkenningsteken van de Motor (`id`). Sla deze waarde op voordat u doorgaat.
 
-### Een MLInstance maken {#create-mlinstance}
+### Een MLInstance {#create-mlinstance} maken
 
-Gebruikend uw onlangs gecreeerd `engineID`, moet u een MLIstance [](../api/mlinstances.md#create-an-mlinstance) creëren door een verzoek van de POST aan het `/mlInstance` eindpunt te maken. Een succesvolle reactie keert een lading terug die de details van pas gecreëerde MLInstance met inbegrip van zijn uniek herkenningsteken (`id`) bevat die in de volgende API vraag wordt gebruikt.
+Gebruikend uw onlangs gecreeerd `engineID`, moet u [een MLIstance](../api/mlinstances.md#create-an-mlinstance) tot stand brengen door een verzoek van de POST aan het `/mlInstance` eindpunt te richten. Een succesvolle reactie keert een lading terug die de details van pas gecreëerde MLInstance met inbegrip van zijn uniek herkenningsteken (`id`) bevat die in de volgende API vraag wordt gebruikt.
 
 ### Een experiment maken {#create-experiment}
 
-Vervolgens moet u een [expert](../api/experiments.md#create-an-experiment)maken. Om een Experiment tot stand te brengen moet u uw uniek herkenningsteken MLIstance (`id`) hebben en een verzoek van de POST tot het `/experiment` eindpunt richten. Een geslaagde reactie retourneert een payload die de details bevat van de nieuwe Experiment, inclusief de unieke id (`id`) die wordt gebruikt in de volgende API-aanroep.
+Vervolgens moet u [een experiment](../api/experiments.md#create-an-experiment) maken. Om een Experiment tot stand te brengen moet u uw uniek herkenningsteken MLIstance (`id`) hebben en een verzoek van de POST aan het `/experiment` eindpunt indienen. Een succesvolle reactie keert een lading terug die de details van de pas gecreëerde Experiment met inbegrip van zijn uniek herkenningsteken (`id`) bevat die in de volgende API vraag wordt gebruikt.
 
-### Specificeer de de eigenschappijpleidingstaak van de in werking stellen Experimenteer {#specify-feature-pipeline-task}
+### Specificeer de Experimentele taak van de de eigenschappijpleiding van de looppas {#specify-feature-pipeline-task}
 
 Nadat u een experiment hebt gemaakt, moet u de modus Experimenteren wijzigen in `featurePipeline`. Om de wijze te veranderen, maak een extra POST aan [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) met uw `EXPERIMENT_ID` en in het lichaam verzendt `{ "mode":"featurePipeline"}` om een looppas van de eigenschappijpleiding van de Experiment te specificeren.
 
-Als de bewerking is voltooid, vraagt u de GET om de status `/experiments/{EXPERIMENT_ID}` van het experiment op te [](../api/experiments.md#retrieve-specific) halen en wacht u tot de status van het experiment is bijgewerkt.
+Als de bewerking is voltooid, dient u een verzoek van GET in bij `/experiments/{EXPERIMENT_ID}` om [de status van het experiment op te halen](../api/experiments.md#retrieve-specific) en te wachten tot de status van het experiment is bijgewerkt.
 
-### De trainingstaak voor het uitvoeren van de Experimentele taak opgeven {#training}
+### Geef de trainingstaak voor het uitvoeren van de Experimentele training {#training} op
 
-Vervolgens moet u de [taak](../api/experiments.md#experiment-training-scoring)van de trainingsruntime opgeven. Maak een POST aan `experiments/{EXPERIMENT_ID}/runs` en in het lichaam plaats de wijze aan `train` en verzendt een serie van taken die uw trainingsparameters bevatten. Een geslaagde reactie retourneert een payload die de details van het gewenste experiment bevat.
+Daarna, moet u [specificeren de trainingslooptaak](../api/experiments.md#experiment-training-scoring). Maak een POST aan `experiments/{EXPERIMENT_ID}/runs` en in het lichaam plaats de wijze aan `train` en verzend een serie van taken die uw trainingsparameters bevatten. Een geslaagde reactie retourneert een payload die de details van het gewenste experiment bevat.
 
-Als de bewerking is voltooid, vraagt u de GET om de status `/experiments/{EXPERIMENT_ID}` van het experiment op te [](../api/experiments.md#retrieve-specific) halen en wacht u tot de status van het experiment is bijgewerkt.
+Als de bewerking is voltooid, dient u een verzoek van GET in bij `/experiments/{EXPERIMENT_ID}` om [de status van het experiment op te halen](../api/experiments.md#retrieve-specific) en te wachten tot de status van het experiment is bijgewerkt.
 
-### De taak voor het uitvoeren van scoring op experimentele wijze opgeven {#scoring}
+### De scoringtaak Experimenteel uitvoeren {#scoring} opgeven
 
 >[!NOTE]
 >
 > Als u deze stap wilt voltooien, moet u ten minste één voltooide training hebben die aan uw expert is gekoppeld.
 
-Nadat de training met succes is uitgevoerd, moet u de taak [van de](../api/experiments.md#experiment-training-scoring)scoringbewerking opgeven. Stel een POST in op `experiments/{EXPERIMENT_ID}/runs` en in de hoofdtekst en stel het `mode` kenmerk in op &quot;score&quot;. Hierdoor start u de uitvoering van uw studieprogramma Experiment.
+Nadat een succesvolle trainingslooppas, u [de het scoren looppas taak ](../api/experiments.md#experiment-training-scoring) moet specificeren. Stel een POST in op `experiments/{EXPERIMENT_ID}/runs` en stel in de hoofdtekst het kenmerk `mode` in op &quot;score&quot;. Hierdoor start u de uitvoering van uw studieprogramma Experiment.
 
-Als de bewerking is voltooid, vraagt u de GET om de status `/experiments/{EXPERIMENT_ID}` van het experiment op te [](../api/experiments.md#retrieve-specific) halen en wacht u tot de status van het experiment is bijgewerkt.
+Als de bewerking is voltooid, dient u een verzoek van GET in bij `/experiments/{EXPERIMENT_ID}` om [de status van het experiment op te halen](../api/experiments.md#retrieve-specific) en te wachten tot de status van het experiment is bijgewerkt.
 
 Zodra het scoren heeft voltooid, zou uw eigenschappijpleiding operationeel moeten zijn.
 
@@ -439,4 +439,4 @@ Zodra het scoren heeft voltooid, zou uw eigenschappijpleiding operationeel moete
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Door dit document te lezen, hebt u een eigenschappijplijn gebruikend ModelAuthoring SDK ontworpen, tot een beeld van het Dok geleid, en gebruikt het beeld URL van het Docker om een model van de eigenschappijplijn tot stand te brengen door API te gebruiken. [!DNL Sensei Machine Learning] U bent nu klaar om gegevenssets verder te transformeren en gegevenseigenschappen op schaal te extraheren met behulp van de [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
+Door dit document te lezen, hebt u een eigenschappijplijn gebruikend ModelAuthoring SDK ontworpen, een beeld van het Dok gecreeerd, en het beeld URL van het Docker gebruikt om een model van de eigenschappijpleiding tot stand te brengen door [!DNL Sensei Machine Learning] API te gebruiken. U kunt nu gegevenssets transformeren en gegevensfuncties op schaal extraheren met de [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
