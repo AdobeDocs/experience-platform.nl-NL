@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;FTP;ftp
+keywords: Experience Platform;home;populaire onderwerpen;FTP;ftp
 solution: Experience Platform
-title: Een FTP-bronconnector maken in de gebruikersinterface
+title: Een FTP-bronverbinding maken in de gebruikersinterface
 topic: overview
 type: Tutorial
-description: Deze zelfstudie bevat stappen voor het maken van een FTP-bronconnector via de gebruikersinterface van het Platform.
+description: Leer hoe u een FTP-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e28a3ec2d4330f0e9f3895e0236c9ebea2ef2776
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
 
 
-# Een FTP-bronconnector maken in de gebruikersinterface
+# Een FTP-bronverbinding maken in de gebruikersinterface
 
 >[!NOTE]
 >
->De FTP-connector bevindt zich in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De FTP-connector bevindt zich in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Deze zelfstudie bevat stappen voor het maken van een FTP-bronconnector via de gebruikersinterface van het Platform.
+Deze zelfstudie bevat stappen voor het maken van een FTP-bronverbinding met de gebruikersinterface van Adobe Experience Platform.
 
 ## Aan de slag
 
@@ -28,10 +28,10 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 * [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+   * [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md) Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Als u al een geldige FTP-verbinding hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie over het [configureren van een gegevensstroom](../../dataflow/batch/cloud-storage.md).
+Als u al een geldige FTP-verbinding hebt, kunt u de rest van dit document overslaan en doorgaan naar de zelfstudie over [het configureren van een gegevensstroom](../../dataflow/batch/cloud-storage.md).
 
 ### Vereiste referenties verzamelen
 
@@ -47,11 +47,11 @@ Als u verbinding wilt maken met FTP, moet u waarden opgeven voor de volgende ver
 
 Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om een nieuwe FTP-account te maken waarmee u verbinding kunt maken met het Platform.
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte [!UICONTROL Bronnen] . In het scherm [!UICONTROL Catalogus] worden diverse bronnen weergegeven waarmee u een binnenkomende account kunt maken.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte [!UICONTROL Bronnen] te openen. Het scherm [!UICONTROL Catalog] toont een verscheidenheid van bronnen waarvoor u een binnenkomende rekening kunt tot stand brengen met.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer in de categorie [!UICONTROL Cloud-opslag] de optie **[!UICONTROL FTP]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders selecteert u Gegevens **** toevoegen om een nieuwe FTP-verbinding te maken.
+Selecteer **[!UICONTROL FTP]** onder de categorie [!UICONTROL Cloudopslag]. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders selecteert u **[!UICONTROL Gegevens toevoegen]** om een nieuwe FTP-verbinding te maken.
 
 ![catalogus](../../../../images/tutorials/create/ftp/catalog.png)
 
@@ -59,7 +59,7 @@ De pagina **[!UICONTROL Verbinding maken met FTP]** wordt weergegeven. Op deze p
 
 ### Nieuwe account
 
-Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Voer in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw referenties in. Wanneer u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
+Als u nieuwe geloofsbrieven gebruikt, selecteer **[!UICONTROL Nieuwe rekening]**. Voer in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw referenties in. Selecteer **[!UICONTROL Connect]** als u klaar bent en wacht dan enige tijd tot de nieuwe verbinding tot stand is gebracht.
 
 ![new](../../../../images/tutorials/create/ftp/new.png)
 
@@ -71,4 +71,4 @@ Als u een bestaande account wilt verbinden, selecteert u de FTP-account waarmee 
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding met uw FTP-account tot stand gebracht. U kunt nu verdergaan met de volgende zelfstudie en een gegevensstroom [configureren om gegevens van uw cloudopslag naar het Platform](../../dataflow/batch/cloud-storage.md)te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding met uw FTP-account tot stand gebracht. U kunt nu verdergaan naar de volgende zelfstudie en [een gegevensstroom configureren om gegevens van uw cloudopslag naar Platform te brengen](../../dataflow/batch/cloud-storage.md).
