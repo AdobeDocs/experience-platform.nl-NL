@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;het stromen ingestie;ingestie;tijdreeksgegevens;stroom tijdreeksgegevens;
 solution: Experience Platform
-title: Streaming tijdreeksgegevens
+title: Gegevens uit tijdreeks streamen met API's voor streaming insluiting
 topic: tutorial
 type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1236'
 ht-degree: 0%
 
 ---
 
 
-# Gegevens uit tijdreeksen streamen naar Adobe Experience Platform
+# Gegevens uit de tijdreeks streamen met behulp van Streaming Ingestie-API&#39;s
 
 Deze zelfstudie helpt u bij het gebruik van streaming opname-API&#39;s, onderdeel van de Adobe Experience Platform [!DNL Data Ingestion Service] API&#39;s.
 
