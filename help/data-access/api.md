@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api;export;Export
+keywords: Experience Platform;home;populaire onderwerpen;gegevenstoegang;python sdk;spark sdk;gegevenstoegang api;export;Export
 solution: Experience Platform
-title: Handleiding voor ontwikkelaars van gegevenstoegang
+title: API-handleiding voor gegevenstoegang
 topic: developer guide
-description: De API van de Toegang van Gegevens steunt Adobe Experience Platform door gebruikers van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van opgenomen datasets binnen Experience Platform wordt geconcentreerd.
+description: De API van de Toegang van Gegevens steunt Adobe Experience Platform door ontwikkelaars van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen Experience Platform wordt geconcentreerd.
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '528'
 ht-degree: 1%
 
 ---
 
 
-# Handleiding voor ontwikkelaars van gegevenstoegang
+# API-handleiding voor gegevenstoegang
 
-De API van de Toegang van Gegevens steunt Adobe Experience Platform door gebruikers van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen wordt geconcentreerd [!DNL Experience Platform].
+De API van de Toegang van Gegevens steunt Adobe Experience Platform door gebruikers van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van opgenomen datasets binnen [!DNL Experience Platform] wordt geconcentreerd.
 
 ![Toegang tot gegevens op Experience Platform](images/Data_Access_Experience_Platform.png)
 
@@ -95,7 +95,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-De `"data"` array bevat een lijst met alle bestanden in de opgegeven batch. Elk geretourneerd bestand heeft een eigen unieke id (`{FILE_ID}`) in het `"dataSetFileId"` veld. Deze unieke id kan vervolgens worden gebruikt om het bestand te openen of te downloaden.
+De array `"data"` bevat een lijst met alle bestanden in de opgegeven batch. Elk geretourneerd bestand heeft een eigen unieke id (`{FILE_ID}`) in het veld `"dataSetFileId"`. Deze unieke id kan vervolgens worden gebruikt om het bestand te openen of te downloaden.
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
@@ -104,7 +104,7 @@ De `"data"` array bevat een lijst met alle bestanden in de opgegeven batch. Elk 
 
 ## Bestanden in een batch openen en downloaden
 
-Door een bestand-id (`{FILE_ID}`) te gebruiken, kunt u de API voor gegevenstoegang gebruiken om toegang te krijgen tot specifieke gegevens van een bestand, zoals de naam, grootte in bytes en een koppeling die u wilt downloaden.
+Door een dossier herkenningsteken (`{FILE_ID}`) te gebruiken, kan API van de Toegang van Gegevens worden gebruikt om tot specifieke details van een dossier, met inbegrip van zijn naam, grootte in bytes, en een verbinding toegang te hebben om te downloaden.
 
 De reactie bevat een gegevensarray. Afhankelijk van het feit of het bestand waarnaar de id verwijst een afzonderlijk bestand of een map is, kan de geretourneerde gegevensarray één item of een lijst met bestanden bevatten die tot die map behoren. Elk bestandselement bevat de details van het bestand.
 
@@ -116,7 +116,7 @@ GET /files/{FILE_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{FILE_ID}` | De id van het bestand dat moet worden geopend, komt overeen met `"dataSetFileId"`de id. |
+| `{FILE_ID}` | Gelijk aan `"dataSetFileId"`, identiteitskaart van het te betreden dossier. |
 
 **Verzoek**
 
@@ -237,8 +237,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## Aanvullende codevoorbeelden
 
-Raadpleeg de zelfstudie over [gegevenstoegang](tutorials/dataset-data.md)voor meer voorbeelden.
+Voor extra steekproeven, gelieve te verwijzen naar [gegevens tot leerprogramma](tutorials/dataset-data.md).
 
 ## Abonneren op gebeurtenissen voor gegevensinvoer
 
-[!DNL Platform] maakt specifieke hoogwaardige gebeurtenissen beschikbaar voor abonnement via de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie de zelfstudie over het [abonneren op meldingen](../ingestion/quality/subscribe-events.md) over gegevensinvoer voor meer informatie.
+[!DNL Platform] maakt specifieke hoogwaardige gebeurtenissen beschikbaar voor abonnement via de  [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie de zelfstudie over [abonneren op gegevensinvoer-meldingen](../ingestion/quality/subscribe-events.md) voor meer informatie.
