@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
-title: Labels-eindpunt
+title: API-eindpunt voor labels
 topic: developer guide
 description: Leer hoe u labels voor gegevensgebruik in Experience Platform beheert met de API voor beleidsservice.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '510'
 ht-degree: 1%
 
 ---
