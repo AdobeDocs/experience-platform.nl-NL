@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows
+keywords: Experience Platform;thuis;populaire onderwerpen;monitorrekeningen;monitordataflows;dataflows
 description: De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Dit leerprogramma verstrekt stappen voor het bekijken van bestaande gegevensstromen van de werkruimte van Bronnen.
 solution: Experience Platform
-title: Dataflows bewaken
+title: Gegevensstromen van de monitor in UI
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: cd658a5de08ae16babb016fa158b1f16e94f2009
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '72'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---
