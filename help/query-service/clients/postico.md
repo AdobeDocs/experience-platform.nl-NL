@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;de dienst van de vraag;de vraagdienst;postico;Postico;verbind met de vraagdienst;
 solution: Experience Platform
-title: Verbinding maken met Postico
+title: Connect Postico aan de Dienst van de Vraag
 topic: connect
 description: Dit document bevat de koppeling voor de installatie van de back-upclient Postico for Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Postico]
+# [!DNL Postico] verbinden met de Dienst van de Vraag (MAC)
 
 In dit document worden de stappen beschreven voor het verbinden van [!DNL Postico] met Adobe Experience Platform [!DNL Query Service].
 
@@ -22,8 +22,6 @@ In dit document worden de stappen beschreven voor het verbinden van [!DNL Postic
 > Deze gids veronderstelt u reeds toegang tot [!DNL Postico] hebt en vertrouwd met hoe te om zijn interface te navigeren. Meer informatie over [!DNL Postico] vindt u in de [officiële [!DNL Postico] documentatie](https://eggerapps.at/postico/docs).
 > 
 > Daarnaast is [!DNL Postico] **alleen** beschikbaar op MacOS-apparaten.
-
-## [!DNL Postico] verbinden met de Dienst van de Vraag
 
 Als u [!DNL Postico] wilt verbinden met Query Service, opent u [!DNL Postico] en selecteert u **[!DNL New Favorite]**.
 
