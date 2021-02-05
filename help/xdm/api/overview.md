@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Ervaring gegevensmodel;Beleidsgegevensmodel;Gegevensmodel;Gegevensmodel;Schema register;Schemaregister
 solution: Experience Platform
-title: Handleiding voor ontwikkelaars van de API voor schemaregister
-description: 'Met de API voor het schemaregister kunt u programmatisch alle schema''s en gerelateerde XDM-bronnen beheren die binnen het Experience Platform beschikbaar zijn. '
+title: Handleiding voor schema-registratie-API
+description: Met de API voor het schemaregister kunnen ontwikkelaars programmatisch alle schema's en gerelateerde XDM-bronnen (Experience Data Model) in Adobe Experience Platform beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '973'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Schema Registry] Handleiding voor API-ontwikkelaars
+# [!DNL Schema Registry] API-handleiding
 
 De [!DNL Schema Registry] wordt gebruikt om tot de Bibliotheek van het Schema binnen Adobe Experience Platform toegang te hebben, die een gebruikersinterface en RESTful API verstrekken waarvan alle beschikbare bibliotheekmiddelen toegankelijk zijn.
 
