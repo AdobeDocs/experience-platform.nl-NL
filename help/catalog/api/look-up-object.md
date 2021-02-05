@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;object lookup;api
+keywords: Experience Platform;home;populaire onderwerpen;catalogus;objectzoekopdracht;api
 solution: Experience Platform
-title: Een object opzoeken
+title: Een catalogusobject opzoeken
 topic: developer guide
 description: 'Als u de unieke id voor een specifiek catalogusobject kent, kunt u een verzoek uitvoeren om de details van dat object weer te geven. '
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
 
 
-# Een object opzoeken
+# Een catalogusobject opzoeken
 
-Als u de unieke id voor een specifiek [!DNL Catalog] object kent, kunt u een verzoek van de GET uitvoeren om de details van dat object weer te geven.
+Als u de unieke id voor een specifiek [!DNL Catalog]-object kent, kunt u een verzoek tot GET uitvoeren om de details van dat object weer te geven.
 
 >[!NOTE]
 >
->Wanneer u specifieke objecten weergeeft, kunt u het beste alleen [filteren op eigenschappen](filter-data.md) en alleen de gewenste eigenschappen retourneren.
+>Wanneer het bekijken van specifieke voorwerpen, is het nog beste praktijken om [filter door eigenschappen ](filter-data.md) te filteren en slechts de eigenschappen terug te keren u in geinteresseerd bent.
 
 **API-indeling**
 
@@ -30,12 +30,12 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{OBJECT_TYPE}` | Het type [!DNL Catalog] object dat moet worden opgehaald. Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Het type object dat moet worden opgehaald. [!DNL Catalog] Geldige objecten zijn: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | De id van het specifieke object dat u wilt ophalen. |
 
 **Verzoek**
 
-Het volgende verzoek wint een dataset door zijn identiteitskaart terug, terugkerend zijn `name`, `description`, `state`, `tags`, en `files` eigenschappen.
+Met het volgende verzoek wordt een gegevensset opgehaald op basis van de id en worden de eigenschappen `name`, `description`, `state`, `tags` en `files` geretourneerd.
 
 ```shell
 curl -X GET \
@@ -48,7 +48,7 @@ curl -X GET \
 
 **Antwoord**
 
-Een succesvolle reactie keert de gespecificeerde dataset met slechts het gevraagde `properties` lichaam terug.
+Een succesvolle reactie keert de gespecificeerde dataset met slechts gevraagde `properties` in het lichaam terug.
 
 ```json
 {
@@ -68,4 +68,4 @@ Een succesvolle reactie keert de gespecificeerde dataset met slechts het gevraag
 
 >[!NOTE]
 >
->Eigenschappen waarvan de waarden worden voorafgegaan door `@` vertegenwoordigen onderling verwante objecten. Zie de sectie in de bijlage over het [weergeven van onderling verwante objecten](appendix.md#view-interrelated-objects) voor stappen over het weergeven van de details van deze objecten.
+>Eigenschappen waarvan de waarden worden voorgefixeerd met `@` vertegenwoordigen onderling verwante objecten. Zie de sectie in de bijlage over [het weergeven van onderling verwante objecten](appendix.md#view-interrelated-objects) voor stappen over het weergeven van de details van deze objecten.
