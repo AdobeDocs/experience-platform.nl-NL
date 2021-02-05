@@ -1,21 +1,17 @@
 ---
 keywords: voorzien;voorzien uitbreiding;voorzien bestemming
-title: Verkenningsextensie
-seo-title: Verkenningsextensie
+title: Doel extensie verkrijgen
 description: De extensie Gainsight is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Gainsight is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Gainsight] extension  {#gainsight-extension}
-
-## Overzicht {#overview}
 
 [!DNL Gainsight] biedt producteigenaars de mogelijkheid om het gedrag van gebruikers diepgaand te begrijpen, productacceptatie te stimuleren en feedback van gebruikers te verzamelen.
 
