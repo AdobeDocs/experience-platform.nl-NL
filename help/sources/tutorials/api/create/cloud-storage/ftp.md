@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen; Protocol inzake bestandsoverdracht; bestandsoverdrachtprotocol
 solution: Experience Platform
-title: Een FTP-connector maken met de Flow Service API
+title: Een FTP-bronverbinding maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om een Experience Platform te verbinden met een FTP-server (File Transfer Protocol).
+description: Leer hoe u Adobe Experience Platform verbindt met een FTP-server (File Transfer Protocol) met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
 
 
-# Een FTP-aansluiting maken met de [!DNL Flow Service]-API
+# Een FTP-bronverbinding maken met de API [!DNL Flow Service]
 
 >[!NOTE]
 >
