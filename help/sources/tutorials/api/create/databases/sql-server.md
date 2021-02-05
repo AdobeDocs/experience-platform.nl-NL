@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Microsoft SQL;microsoft sql;sql server;SQL server
 solution: Experience Platform
-title: Maak een SQL Server-aansluiting met behulp van de Flow Service API
+title: Maak een SQL Server Source Connection met de Flow Service API
 topic: overview
 type: Tutorial
-description: Dit leerprogramma gebruikt de Dienst API van de Stroom om u door de stappen te lopen om Experience Platform met een Server van Microsoft te verbinden SQL (verder die als "SQL Server"wordt bedoeld).
+description: Leer hoe u Adobe Experience Platform verbindt met een Microsoft SQL Server met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '609'
 ht-degree: 0%
 
 ---
 
 
-# Een [!DNL Microsoft] SQL Server-connector maken met de [!DNL Flow Service]-API
+# Een [!DNL Microsoft] SQL Server-bronverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
