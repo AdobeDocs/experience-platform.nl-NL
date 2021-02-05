@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment definition;segment definitions;api;API;
+keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsdienst;segmentdefinitie;segmentdefinities;api;API;
 solution: Experience Platform
-title: Segmentdefinities
+title: Segment Definition API Endpoint
 topic: developer guide
-description: Deze gids verstrekt informatie om u te helpen segmentdefinities beter begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisacties gebruikend API.
+description: Het eindpunt van segmentdefinities in de Dienst API van de Segmentatie van Adobe Experience Platform staat u toe om segmentdefinities voor uw organisatie programmatically te beheren.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1080'
 ht-degree: 1%
 
 ---
@@ -15,17 +15,17 @@ ht-degree: 1%
 
 # Definitieeindpunt van segment
 
-Met Adobe Experience Platform kunt u segmenten maken die een groep specifieke kenmerken of gedragingen definiëren op basis van een groep profielen. Een segmentdefinitie is een object waarin een query wordt ingekapseld die is geschreven in [!DNL Profile Query Language] (PQL). Dit object wordt ook wel een PQL-voorspelling genoemd. In PQL worden de regels voor het segment gedefinieerd op basis van voorwaarden die betrekking hebben op record- of tijdreeksgegevens die u opgeeft aan [!DNL Real-time Customer Profile]. Raadpleeg de [PQL-handleiding](../pql/overview.md) voor meer informatie over het schrijven van PQL-query&#39;s.
+Met Adobe Experience Platform kunt u segmenten maken die een groep specifieke kenmerken of gedragingen definiëren op basis van een groep profielen. Een segmentdefinitie is een voorwerp dat een vraag inkapselt die in [!DNL Profile Query Language] (PQL) wordt geschreven. Dit object wordt ook wel een PQL-voorspelling genoemd. In PQL worden de regels voor het segment gedefinieerd op basis van voorwaarden die gerelateerd zijn aan record- of tijdreeksgegevens die u verschaft aan [!DNL Real-time Customer Profile]. Zie [PQL gids](../pql/overview.md) voor meer informatie bij het schrijven van vragen PQL.
 
 Deze gids verstrekt informatie om u te helpen segmentdefinities beter begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisacties gebruikend API.
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Voordat u verdergaat, bekijkt u eerst de gids [](./getting-started.md) Aan de slag voor belangrijke informatie die u moet weten om oproepen naar de API met succes te kunnen uitvoeren, inclusief vereiste headers en hoe u API-voorbeeldaanroepen kunt lezen.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Voordat u verdergaat, bekijkt u eerst de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om oproepen aan API, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen met succes te maken.
 
-## Een lijst met segmentdefinities ophalen {#list}
+## Hiermee wordt een lijst met segmentdefinities {#list} opgehaald
 
-U kunt een lijst van alle segmentdefinities voor uw IMS Organisatie terugwinnen door een verzoek van de GET tot het `/segment/definitions` eindpunt te richten.
+U kunt een lijst van alle segmentdefinities voor uw IMS Organisatie terugwinnen door een verzoek van de GET aan het `/segment/definitions` eindpunt te doen.
 
 **API-indeling**
 
@@ -191,7 +191,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `name` | **Vereist.** Een unieke naam waarmee naar het segment moet worden verwezen. |
-| `schema` | **Vereist.** Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een `id` of een `name` veld. |
+| `schema` | **Vereist.** Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een veld `id` of `name`. |
 | `expression` | **Vereist.** Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
 | `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
@@ -249,7 +249,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 | `id` | Een door het systeem gegenereerde id van de zojuist gemaakte segmentdefinitie. |
 | `evaluationInfo` | Een systeem-geproduceerd voorwerp dat vertelt welk type van evaluatie de segmentdefinitie zal ondergaan. Het kan batch, ononderbroken (ook wel streaming genoemd) of synchrone segmentatie zijn. |
 
-## Een specifieke segmentdefinitie ophalen {#get}
+## Hiermee wordt een specifieke segmentdefinitie {#get} opgehaald
 
 U kunt gedetailleerde informatie over een specifieke segmentdefinitie terugwinnen door een verzoek van de GET aan het `/segment/definitions` eindpunt te doen en identiteitskaart van de segmentdefinitie te verstrekken u wenst om in de verzoekweg terug te winnen.
 
@@ -261,7 +261,7 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | De `id` waarde van de segmentdefinitie u wilt terugwinnen. |
+| `{SEGMENT_ID}` | De waarde `id` van de segmentdefinitie u wilt terugwinnen. |
 
 **Verzoek**
 
@@ -323,7 +323,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde alleen-lezen-id van de segmentdefinitie. |
 | `name` | Een unieke naam waarmee naar het segment moet worden verwezen. |
-| `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een `id` of een `name` veld. |
+| `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een veld `id` of `name`. |
 | `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
 | `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
@@ -456,7 +456,7 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentdefini
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde alleen-lezen-id van de segmentdefinitie. |
 | `name` | Een unieke naam waarmee naar het segment moet worden verwezen. |
-| `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een `id` of een `name` veld. |
+| `schema` | Het schema dat is gekoppeld aan de entiteiten in het segment. Bestaat uit een veld `id` of `name`. |
 | `expression` | Een entiteit die veldinformatie over de segmentdefinitie bevat. |
 | `expression.type` | Geeft het expressietype aan. Momenteel wordt alleen &quot;PQL&quot; ondersteund. |
 | `expression.format` | Geeft de structuur van de expressie in waarde aan. Momenteel wordt de volgende indeling ondersteund: <ul><li>`pql/text`: Een tekstuele representatie van een segmentdefinitie, volgens de gepubliceerde PQL-grammatica.  Bijvoorbeeld, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
@@ -476,7 +476,7 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | De `id` waarde van de segmentdefinitie die u wilt verwijderen. |
+| `{SEGMENT_ID}` | De waarde `id` van de segmentdefinitie u wilt schrappen. |
 
 **Verzoek**
 
@@ -504,7 +504,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | De `id` waarde van de segmentdefinitie die u wilt bijwerken. |
+| `{SEGMENT_ID}` | De waarde `id` van de segmentdefinitie u wilt bijwerken. |
 
 **Verzoek**
 
@@ -587,4 +587,4 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs bij
 
 ## Volgende stappen
 
-Na het lezen van deze gids hebt u nu een beter inzicht in hoe de segmentdefinities werken. Lees voor meer informatie over het maken van een segment de zelfstudie [over het maken van een segment](../tutorials/create-a-segment.md) .
+Na het lezen van deze gids hebt u nu een beter inzicht in hoe de segmentdefinities werken. Lees voor meer informatie over het maken van een segment de zelfstudie [voor het maken van een segment](../tutorials/create-a-segment.md).
