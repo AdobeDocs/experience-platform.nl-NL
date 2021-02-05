@@ -1,19 +1,19 @@
 ---
 keywords: inzichten;attributie ai;attributie ai inzichten;AAI vraagdienst;attributie vragen;attributie scores
 solution: Intelligent Services, Experience Platform
-title: Snelle handleiding voor AAI Query Service
+title: Kenmerkscores analyseren met Query-service
 topic: Attribution AI queries
-description: Dit document bevat een handleiding en sjablonen voor het gebruik van Query Service voor het analyseren van de toewijzingsscores.
+description: Leer hoe u Adobe Experience Platform Query Service kunt gebruiken om de Attribution AI-scores te analyseren.
 translation-type: tm+mt
-source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
 
 
-# Snelstartgids voor Adobe Experience Platform Query Service voor het analyseren van toewijzingsscores
+# Kenmerkscores analyseren met gebruik van Query-service
 
 Elke rij in de gegevens vertegenwoordigt een conversie, waarbij informatie voor verwante aanraakpunten wordt opgeslagen als een array van structs onder de kolom `touchpointsDetail`.
 
@@ -21,7 +21,7 @@ Elke rij in de gegevens vertegenwoordigt een conversie, waarbij informatie voor 
 | ---------------------- | ------ |
 | Naam aanraakpunt | `touchpointsDetail. touchpointName` |
 | Aanraakpuntkanaal | `touchpointsDetail.touchPoint.mediaChannel` |
-| AAI-algoritmische aanraakpunten | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| Attribution AI aanraakpunt, algoritmische scores | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## Gegevenspaden zoeken
 
