@@ -1,25 +1,21 @@
 ---
 keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
-title: (Beta) Azure Event Hubs-bestemming
-seo-title: (Beta) Azure Event Hubs-bestemming
+title: (bèta) Azure Event Hubs Connection Destination
 description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van Experience Platform.
-seo-description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97c0a9f4726ec85b7a72dc682fbd201a6152c1ba
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
 
 
-# (Bèta) [!DNL Azure Event Hubs] bestemming
+# (Bèta) [!DNL Azure Event Hubs] verbinding
 
 >[!IMPORTANT]
 >
 >De [!DNL Azure Event Hubs] bestemming in Platform is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
-
-## Overzicht {#overview}
 
 [!DNL Azure Event Hubs] is een groot platform voor gegevensstreaming en service voor het opnemen van gebeurtenissen. Het kan miljoenen gebeurtenissen per seconde ontvangen en verwerken. Gegevens die naar een gebeurtenishub worden verzonden, kunnen worden getransformeerd en opgeslagen met behulp van een realtime analyseprovider of batchadapters.
 
