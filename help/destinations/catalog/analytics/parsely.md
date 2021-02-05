@@ -1,21 +1,17 @@
 ---
 keywords: Parseren. ly;parverse;Parse;parse.ly;Parse.ly
-title: Parse.ly Analytics-extensie
-seo-title: Parse.ly Analytics-extensie
+title: Parse.ly Analytics-extensiebestemming
 description: De extensie Parse.ly Analytics is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Parse.ly Analytics is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Parse.ly Analytics] Extensie  {#parsely-analytics-extension}
-
-## Overzicht {#overview}
+# [!DNL Parse.ly Analytics] extension  {#parsely-analytics-extension}
 
 [!DNL Parse.ly Analytics] helpt meer dan 2500 bedrijven gegevens te gebruiken om hun online publiek te begrijpen . Met deze extensie installeert u een JavaScript-fragment dat bijhoudt hoe bezoekers de inhoud van uw site beïnvloeden.
 
