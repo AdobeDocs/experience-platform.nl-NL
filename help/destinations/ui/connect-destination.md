@@ -1,19 +1,18 @@
 ---
 keywords: doel verbinden;doel verbindt;hoe te bestemming verbinden
 title: Verbinding maken met een doel in Adobe Experience Platform
-seo-title: Verbinding maken met een doel in Adobe Experience Platform
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven waarmee u een bestemming in Adobe Experience Platform kunt verbinden
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
 
 
-# Hoe te om een bestemming aan te sluiten
+# Verbinding maken met een doel
 
 Voer de onderstaande stappen uit om verbinding te maken met een doel in Adobe Experience Platform:
 
