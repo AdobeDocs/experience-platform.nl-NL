@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;poi;interaction;point of interest;point-of-interest;datatype;data-type;data type;
+keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;velden;schema's;Schemas;poi;interactie;point-of-interest;datatype;data-type;gegevenstype;
 solution: Experience Platform
-title: Gegevenstype van interactie van het punt van belang
+title: Gegevenstype Interactie punt
 topic: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype Point of Interest Interaction.
 translation-type: tm+mt
-source-git-commit: 032adc72db7f094b268f14e8f7d48810830a84e4
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL Gegevenstype voor interactie] van het aandachtspunt
+# [!UICONTROL Gegevenstype van ] interactiepunt
 
-[!UICONTROL Interactie] van het punt van belang is een standaard XDM gegevenstype dat het draadloze apparaat beschrijft dat identiteitsinformatie aan mobiele toepassingen meedeelt aangezien de mobiele apparaten binnen waaier vallen.
+[!UICONTROL Interactie van het punt van belang is een standaardXDM gegevenstype dat het draadloze apparaat beschrijft dat identiteitsinformatie aan mobiele toepassingen meedeelt aangezien de mobiele apparaten binnen waaier vallen. ] 
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
