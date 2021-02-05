@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
+keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;het oplossen van problemengids;faq;het oplossen van problemen;
 solution: Experience Platform
-title: Handleiding voor probleemoplossing bij Adobe Experience Platform Query Service
+title: Handleiding voor het oplossen van problemen bij Query Service
 topic: troubleshooting
 description: Dit document bevat informatie over algemene foutcodes die u tegenkomt en de mogelijke oorzaken.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '177'
 ht-degree: 2%
 
 ---
 
 
-# Fouten en problemen oplossen
+# [!DNL Query Service] Handleiding voor probleemoplossing
 
 ## REST API-fouten
 
@@ -27,13 +27,13 @@ ht-degree: 2%
 
 | Foutcode en verbindingsstatus | Beschrijving | Mogelijke oorzaak |
 | ------------------------------- | ----------- | -------------- |
-| **28P01** opstarten - verificatie | Ongeldig wachtwoord | Ongeldig verificatietoken |
-| **28000** Opstarten - verificatie | Ongeldig autorisatietype | Ongeldig autorisatietype. Moet zijn `AuthenticationCleartextPassword`. |
+| **28P01** Opstarten - verificatie | Ongeldig wachtwoord | Ongeldig verificatietoken |
+| **28000** Opstarten - verificatie | Ongeldig autorisatietype | Ongeldig autorisatietype. Moet `AuthenticationCleartextPassword` zijn. |
 | **42P12** Opstarten - verificatie | Geen tabellen gevonden | Geen tabellen gevonden voor gebruik |
 | **42601** Query | Syntaxisfout | Ongeldige opdracht- of syntaxisfout |
 | **58000** Query | Systeemfout | Interne systeemfout |
-| **42P01** -query | Tabel niet gevonden | Tabel die is opgegeven in de query, is niet gevonden |
-| **42P07** -query | Tabel bestaat | Tabel bestaat al met dezelfde naam (CREATE TABLE) |
+| **42P01** Query | Tabel niet gevonden | Tabel die is opgegeven in de query, is niet gevonden |
+| **42P07** Query | Tabel bestaat | Tabel bestaat al met dezelfde naam (CREATE TABLE) |
 | **53400** Query | LIMIT overschrijdt max. waarde | Gebruiker heeft een LIMIT-component opgegeven die hoger is dan 100.000 |
 | **53400** Query | Time-out instructie | De ingediende liveverklaring nam meer dan maximaal 10 minuten in beslag |
 | **08P01** N.v.t. | Niet-ondersteund berichttype | Niet-ondersteund berichttype |
