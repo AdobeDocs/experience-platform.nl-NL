@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;PSQL;psqlconnect met de vraagdienst;de dienst van de vraag;de vraagdienst;
 solution: Experience Platform
-title: Verbinding maken met PSQL
+title: PSQL verbinden met Query Service
 topic: connect
 description: 'PSQL is een opdrachtregelinterface die wordt weergegeven wanneer u PostgreSQL op uw computer installeert. U kunt het installeren door deze instructies te volgen. '
 translation-type: tm+mt
-source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '247'
 ht-degree: 1%
 
 ---
 
 
-# PSQL
+# PSQL verbinden met Query Service
 
 PSQL is een opdrachtregelinterface die wordt geïnstalleerd wanneer u [!DNL PostgreSQL] op uw computer installeert. In dit document worden de stappen beschreven voor het verbinden van PSQL met Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > Deze gids veronderstelt u reeds toegang tot [!DNL PSQL] hebt en vertrouwd met hoe te om het te gebruiken. Meer informatie over [!DNL PSQL] vindt u in de [officiële [!DNL PSQL] documentatie] (https://www.postgresql.org/docs/current/app-psql.html.
-
-## Connect PSQL en [!DNL Query Service]
 
 Na het installeren van PSQL op uw computer, bent u klaar om PSQL met de Dienst van de Vraag te verbinden. Keer aan [!DNL Platform] UI terug, dan uitgezocht **[!UICONTROL Vragen]**, die door **[!UICONTROL Referenties]** wordt gevolgd.
 
