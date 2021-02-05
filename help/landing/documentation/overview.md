@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de analyse van de klantenreis;campagneorchestratie;orchestratie;klantenreis;reis;reis orchestratie;vermogen;werkschema
 solution: Experience Platform
-title: Overzicht Adobe Experience Platform-documentatie
+title: Documentatieoverzicht Experience Platform
 topic: overview
 description: De documentatie van Adobe Experience Platform wordt verstrekt in veelvoudige formaten, met inbegrip van overzichten, leerprogramma's, en gidsen voor zowel de gebruikersinterface als API. Hier is een korte beschrijving van de gemeenschappelijkste documentatietypen die voor de diensten van het Experience Platform beschikbaar zijn.
 translation-type: tm+mt
-source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
