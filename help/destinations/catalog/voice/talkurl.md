@@ -1,21 +1,17 @@
 ---
 keywords: Talk URL Inbox;talk url inbox;talk URL inbox;talk URL inbox;talk URL inbox;talk url;talk URL;talk url
-title: URL-inbox-extensie Talk
-seo-title: URL spreken, Postvak IN
+title: Doel van URL-inbox-extensie spreken
 description: De Inbox van de Bespreking uitbreiding URL is een stem van de klantenbestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Inbox van de Bespreking uitbreiding URL is een stem van de klantenbestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Talk URL Inbox] Extensie  {#talk-url-extension}
-
-## Overzicht {#overview}
+# [!DNL Talk URL Inbox] extension  {#talk-url-extension}
 
 Ontvang stemberichten van uw bezoekers van de Web-pagina. Omvat ontvangen UI en op wolk-gebaseerde machine het leren om uw stemberichten in tekstinzichten onmiddellijk om te zetten.
 
