@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;downloadscores;klantenservice;populaire onderwerpen;Exporteren;exporteren;klantenservice downloaden;klantenservice scores
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Muziek downloaden in AI van klant
+title: Scores downloaden in AI van klant
 topic: Downloading scores
 description: Met AI van de klant kunt u scores downloaden in de Parquet-bestandsindeling.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 0%
