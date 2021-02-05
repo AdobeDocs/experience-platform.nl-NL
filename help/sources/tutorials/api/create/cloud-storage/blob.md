@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Azure;azure blob;blob;Blob
 solution: Experience Platform
-title: Een Azure Blob-connector maken met de Flow Service API
+title: Een Azure Blob Source Connection maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Experience Platform aan een Azure Blob-opslag (hierna "Blob" genoemd) te verbinden.
+description: Leer hoe u Adobe Experience Platform verbindt met Azure Blob met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
 
 
-# Een [!DNL Azure Blob]-connector maken met de [!DNL Flow Service]-API
+# Een [!DNL Azure Blob]-bronverbinding maken met de [!DNL Flow Service]-API
 
-In deze zelfstudie wordt de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) gebruikt om u door de stappen te laten lopen om [!DNL Azure Blob] (hierna &quot;Blob&quot; genoemd) met Experience Platform te verbinden.
+In deze zelfstudie wordt de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) gebruikt om u door de stappen te laten lopen om [!DNL Azure Blob] (hierna &quot;Blob&quot; genoemd) te verbinden met Adobe Experience Platform.
 
 ## Aan de slag
 
@@ -25,7 +25,7 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 * [Bronnen](../../../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
 * [Sandboxen](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om een [!DNL Blob] bronconnector met de [!DNL Flow Service]-API te kunnen maken.
+De volgende secties bevatten aanvullende informatie die u moet weten om een [!DNL Blob]-bronverbinding met de [!DNL Flow Service]-API te kunnen maken.
 
 ### Vereiste referenties verzamelen
 
