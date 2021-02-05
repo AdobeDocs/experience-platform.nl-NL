@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Blob;blob;Azure Blob;azure blob
 solution: Experience Platform
-title: Azure Blob-connector
+title: Azure Blob Source Connector - Overzicht
 topic: overview
-description: In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen Azure Blob en Platform via API's of de gebruikersinterface.
+description: Leer hoe u Azure Blob met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
@@ -36,15 +36,15 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer
 
 ## [!DNL Azure Blob] verbinden met [!DNL Platform]
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen Azure Blob en Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen Azure Blob en Adobe Experience Platform via API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 
-- [Een Azure Blob-connector maken met de Flow Service API](../../tutorials/api/create/cloud-storage/blob.md)
+- [Een Azure Blob-bronverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/blob.md)
 - [Een systeem voor cloudopslag verkennen met de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Gegevens voor cloudopslag verzamelen met de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### De gebruikersinterface gebruiken
 
-- [Een Azure Blob-bronconnector maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/blob.md)
-- [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Een Azure Blob-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/blob.md)
+- [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
