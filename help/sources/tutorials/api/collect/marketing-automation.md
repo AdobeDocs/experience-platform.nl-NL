@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;marketingautomatiseringssysteem;Gegevens over marketingautomatisering verzamelen
 solution: Experience Platform
-title: Gegevens over marketingautomatisering verzamelen via bronconnectors en API's
+title: Gegevens voor marketingautomatisering verzamelen met behulp van bronconnectors en API's
 topic: overview
 type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een marketingautomatiseringssysteem en het naar Platform brengen van deze gegevens via bronconnectors en API's.
+description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een marketingautomatiseringssysteem en het overbrengen van gegevens naar Adobe Experience Platform met behulp van bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: a9a4bbbd7128043596ebab45d12bdd6954554537
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1538'
 ht-degree: 0%
 
 ---
 
 
-# Gegevens over marketingautomatisering verzamelen via bronconnectors en API&#39;s
+# Gegevens over marketingautomatisering verzamelen met bronconnectors en API&#39;s
 
 In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens van een extern systeem voor marketingautomatisering en het opnemen ervan in het Platform via bronconnectors en de [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
