@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;enum;field;
 solution: Experience Platform
-title: Een opsommingsveld definiëren in de gebruikersinterface
+title: Enum Fields definiëren in de UI
 description: Leer hoe u een opsommingsveld definieert in de gebruikersinterface van het Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
 
 
-# Een opsommingsveld definiëren in de gebruikersinterface
+# Enumvelden definiëren in de gebruikersinterface
 
 In het Model van Gegevens van de Ervaring (XDM), vertegenwoordigt een enumgebied een gebied dat tot een vooraf bepaalde lijst van aanvaardbare waarden wordt beperkt.
 
