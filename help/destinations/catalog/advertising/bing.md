@@ -1,21 +1,17 @@
 ---
 keywords: 'reclame; borden; '
-title: Microsoft Bing-doel
-seo-title: Met de Microsoft Bing-bestemming kunt u profielgegevens naar Microsoft Display Advertising verzenden.
-description: Met de bestemming van de Bing van Microsoft, kunt u het opnieuw richten en publiek gerichte digitale campagnes over de Reclame van de Vertoning van Microsoft uitvoeren.
-seo-description: Met de bestemming van de Bing van Microsoft, kunt u het opnieuw richten en publiek gerichte digitale campagnes over de Reclame van de Vertoning van Microsoft uitvoeren.
+title: Bestemming Microsoft Bing Connection
+description: Met de de verbindingsbestemming van de Bing van Microsoft, kunt u het opnieuw richten en publiek gerichte digitale campagnes over de Reclame van de Vertoning van Microsoft uitvoeren.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Microsoft Bing] doel
-
-## Overzicht {#overview}
+# [!DNL Microsoft Bing] verbinding
 
 Met de bestemming [!DNL Microsoft Bing] kunt u profielgegevens naar [!DNL Microsoft Display Advertising] verzenden.
 
