@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlinstances;sensei machine learning api
+keywords: Experience Platform;ontwikkelaarshandleiding;eindpunt;Data Science Workspace;populaire onderwerpen;mlinstances;sensei machine learning api
 solution: Experience Platform
-title: MLInstances
+title: XMLInstances API Endpoint
 topic: Developer guide
 description: Een MLInstance is een huur van een bestaande Motor met een aangewezen reeks configuraties die om het even welke trainingsparameters, het scoren parameters, of configuraties van hardwaremiddelen bepalen.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
 
 
-# MLInstances
+# MLInstances, eindpunt
 
-Een instantie MLInstance is een huur van een bestaande [Motor](./engines.md) met een aangewezen reeks configuraties die om het even welke trainingsparameters, scoringsparameters, of configuraties van hardwaremiddelen bepaalt.
+Een MLInstance is een huur van een bestaande [Motor](./engines.md) met een aangewezen reeks configuraties die om het even welke opleidingsparameters, scoringsparameters, of configuraties van hardwaremiddelen bepaalt.
 
-## Een MLInstance maken {#create-an-mlinstance}
+## Een MLInstance {#create-an-mlinstance} maken
 
-U kunt een instantie tot stand brengen MLI door een verzoek van de POST uit te voeren terwijl het verstrekken van een verzoeklading die uit een geldige identiteitskaart van de Motor (`{ENGINE_ID}`) en een aangewezen reeks standaardconfiguraties bestaat.
+U kunt een instantie tot stand brengen MLInstance door een verzoek van de POST uit te voeren terwijl het verstrekken van een verzoeklading die uit een geldige identiteitskaart van de Motor (`{ENGINE_ID}`) en een aangewezen reeks standaardconfiguraties bestaat.
 
-Als identiteitskaart van de Motor verwijzingen een PySpark of de Motor van de Vonk dan hebt u de capaciteit om de hoeveelheid berekeningsmiddelen zoals het aantal kernen of de hoeveelheid geheugen te vormen. Als er naar een Python-engine wordt verwezen, kunt u kiezen tussen het gebruik van een CPU of GPU voor trainings- en scoringdoeleinden. Raadpleeg de appendix-secties over [PySpark- en Spark-bronconfiguraties](./appendix.md#resource-config) en [Python-CPU- en GPU-configuraties](./appendix.md#cpu-gpu-config) voor meer informatie.
+Als identiteitskaart van de Motor verwijzingen een PySpark of de Motor van de Vonk dan hebt u de capaciteit om de hoeveelheid berekeningsmiddelen zoals het aantal kernen of de hoeveelheid geheugen te vormen. Als er naar een Python-engine wordt verwezen, kunt u kiezen tussen het gebruik van een CPU of GPU voor trainings- en scoringdoeleinden. Raadpleeg de appendix-secties over [PySpark- en Spark-bronconfiguraties](./appendix.md#resource-config) en [Python CPU- en GPU-configuraties](./appendix.md#cpu-gpu-config) voor meer informatie.
 
 **API-indeling**
 
@@ -84,7 +84,7 @@ curl -X POST \
 
 **Antwoord**
 
-Een succesvolle reactie keert een lading terug die de details van pas gecreëerde MLInstance met inbegrip van zijn uniek herkenningsteken (`id`) bevat.
+Een succesvolle reactie keert een lading terug die de details van nieuw gecreeerd MLInstance met zijn uniek herkenningsteken (`id`) bevat.
 
 ```json
 {
@@ -131,7 +131,7 @@ Een succesvolle reactie keert een lading terug die de details van pas gecreëerd
 
 ## Een lijst met MLInstances ophalen
 
-U kunt een lijst van instanties terugwinnen MLInstances door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activaherwinning](./appendix.md#query).
+U kunt een lijst van instanties terugwinnen MLInstances door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de bijlage sectie over [vraagparameters voor activa herwinning](./appendix.md#query).
 
 **API-indeling**
 
@@ -143,7 +143,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Een van de [beschikbare queryparameters](./appendix.md#query) die wordt gebruikt om resultaten te filteren. |
+| `{QUERY_PARAMETER}` | Één van [beschikbare vraagparameters](./appendix.md#query) die aan filterresultaten wordt gebruikt. |
 | `{VALUE}` | De waarde voor de voorafgaande vraagparameter. |
 
 **Verzoek**
@@ -197,7 +197,7 @@ Een succesvolle reactie keert een lijst van instanties MLInstances en hun detail
 }
 ```
 
-## Een specifieke MLInstance ophalen {#retrieve-specific}
+## Hiermee wordt een specifieke MLInstance {#retrieve-specific} opgehaald
 
 U kunt de details van een specifieke instantie terugwinnen MLI door een verzoek uit te voeren van de GET dat identiteitskaart van gewenste MLInstance in de verzoekweg omvat.
 
@@ -276,7 +276,7 @@ U kunt een bestaande instantie bijwerken door zijn eigenschappen door een verzoe
 
 >[!TIP]
 >
->Om het succes van dit verzoek van de PUT te verzekeren, wordt geadviseerd eerst u een verzoek van de GET uitvoert om MLInstance door identiteitskaart [](#retrieve-specific)terug te winnen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>Om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET aan [terugwinning MLInstance door ID](#retrieve-specific) uitvoert. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 De volgende voorbeeld-API-aanroep werkt de opleidings- en scoringsparameters van een MLInstance bij terwijl deze in eerste instantie beschikken over de volgende eigenschappen:
 
