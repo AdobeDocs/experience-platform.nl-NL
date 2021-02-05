@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
-title: Amazon Kinesis-connector
+title: Amazon Kinesis Source Connector - overzicht
 topic: overview
-description: In de onderstaande documentatie vindt u informatie over hoe u Amazon Kinesis kunt verbinden met Platform via API's of de gebruikersinterface.
+description: Leer hoe u Amazon Kinesis met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
@@ -33,10 +33,10 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Amazon Kines
 
 ### API&#39;s gebruiken
 
-- [Een Amazon Kinesis-connector maken met de Flow Service API](../../tutorials/api/create/cloud-storage/kinesis.md)
+- [Een Amazon Kinesis-bronverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Streaming gegevens verzamelen met de Flow Service API](../../tutorials/api/collect/streaming.md)
 
 ### De gebruikersinterface gebruiken
 
-- [Een Amazon Kinesis-bronaansluiting maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [Een gegevensstroom configureren voor een aansluiting voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [Een Amazon Kinesis-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
