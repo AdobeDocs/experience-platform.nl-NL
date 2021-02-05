@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;Audience Manager mapping;audience manager mapping
+keywords: Experience Platform;thuis;populaire onderwerpen;Audience Manager toewijzen;publieksbeheertoewijzing
 solution: Experience Platform
-title: Veld voor Audience Manager toewijzen
+title: Toewijzingsvelden voor de Adobe Audience Manager Source Connector
 topic: overview
-description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in Adobe Audience Manager-gegevens (Realtime, Onboard en Profielgegevens) en de bijbehorende XDM-velden.
+description: Leer hoe u Adobe Audience Manager-gegevens (Realtime, Onboded en Profielgegevens) toewijst aan corresponderende XDM-velden (Experience Data Model) voor de Audience Manager-bronaansluiting.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
 
-# Toewijzingsvelden voor Audience Managers
+# Veldtoewijzingen Audience Manager
 
 De onderstaande tabellen bevatten de toewijzingen tussen de velden in Adobe Audience Manager-gegevens (Realtime, Onboard en Profielgegevens) en de bijbehorende XDM-velden.
 
-Zie het [XDM-veldwoordenboek](../../../../xdm/schema/field-dictionary.md) voor meer informatie over elk XDM-veld.
+Zie [XDM-veldwoordenboek](../../../../xdm/schema/field-dictionary.md) voor meer informatie over elk XDM-veld.
 
 ## Realtime gegevens
 
@@ -26,9 +26,9 @@ Type: Realtime gegevens
 | Realtime-gegevensveld | XDM-veld |
 | --- | --- |
 | `requestIds[]` | `ExperienceEvent.identityMap["ECID"]` |
-| `requestIds[]` | `ExperienceEvent.endUserIds` - *Alleen voor naamruimten in endUserIds en alleen voor de eerste waarde.* |
+| `requestIds[]` | `ExperienceEvent.endUserIds` -  *Alleen voor naamruimten in endUserIds en alleen voor de eerste waarde.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
-| `primaryDeviceId` | ExperienceEvent.endUserIds - *Alleen voor naamruimten aanwezig in endUserIds en alleen voor de eerste waarde.* |
+| `primaryDeviceId` | ExperienceEvent.endUserIds - *Alleen voor naamruimten aanwezig in endUserIds en alleen de eerste waarde.* |
 | `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` | `ExperienceEvent.profileStitch[]` |
