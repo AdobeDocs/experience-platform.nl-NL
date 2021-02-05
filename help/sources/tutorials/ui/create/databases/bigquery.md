@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;home;popular topics;Google Big Query;google big query;GBQ;gbq
+keywords: Experience Platform;home;populaire onderwerpen;Google Big Query;google big query;GBQ;gbq
 solution: Experience Platform
-title: Een Google Big Query-bronconnector maken in de gebruikersinterface
+title: Een Google Big Query Source Connection maken in de gebruikersinterface
 topic: overview
 type: Tutorial
-description: Deze zelfstudie bevat stappen voor het maken van een Google Big Query-bronconnector (hierna "GBQ" genoemd) via de gebruikersinterface van het Platform.
+description: Leer hoe u een Google Big Query-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 74fbf388cf645c89f9f6d00a5ae2e59ba94041b9
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
 
-# Een [!DNL Google Big Query]-bronconnector maken in de gebruikersinterface
+# Een [!DNL Google Big Query]-bronverbinding maken in de gebruikersinterface
 
 >[!NOTE]
 >
@@ -41,37 +41,37 @@ Als u toegang wilt krijgen tot uw BigQuery-account op [!DNL Platform], moet u de
 | ---------- | ----------- |
 | `project` | Projectidentiteitskaart van het gebrek [!DNL BigQuery] project om tegen te vragen. |
 | `clientID` | De waarde van identiteitskaart die wordt gebruikt om het vernieuwingstoken te produceren. |
-| `clientSecret` | De geheime waarde die wordt gebruikt om het vernieuwingstoken te genereren. |
-| `refreshToken` | Het vernieuwingstoken dat wordt verkregen van [!DNL Google] en dat wordt gebruikt om toegang tot [!DNL BigQuery] toe te staan. |
+| `clientSecret` | De geheime waarde die wordt gebruikt om het te produceren vernieuwt teken. |
+| `refreshToken` | Het vernieuwingstoken dat wordt verkregen van [!DNL Google] wordt gebruikt om toegang tot [!DNL BigQuery] toe te staan. |
 
-Raadpleeg [dit BigQuery-document](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing) voor meer informatie over deze waarden.
+Voor meer informatie over deze waarden, verwijs naar [dit document BigQuery](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
 
-## Verbind uw Google BigQuery-account
+## Maak verbinding met uw Google BigQuery-account
 
-Nadat u uw vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw BigQuery-account te koppelen aan [!DNL Platform].
+Zodra u uw vereiste geloofsbrieven hebt verzameld, kunt u de stappen volgen hieronder om uw rekening BigQuery aan [!DNL Platform] te verbinden.
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Bronnen]** te openen. In het scherm **[!UICONTROL Catalogus]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Bronnen]** te openen. Het scherm **[!UICONTROL Catalog]** toont een verscheidenheid van bronnen waarvoor u een rekening kunt tot stand brengen met.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer **[!UICONTROL Google Big Query]** onder de categorie **[!UICONTROL Databases]**. Als u deze connector voor het eerst gebruikt, selecteert u **[!UICONTROL Configureren]**. Selecteer anders **[!UICONTROL Gegevens toevoegen]** om een nieuwe BigQuery-connector te maken.
+Selecteer **[!UICONTROL Google Big Query]** onder de categorie **[!UICONTROL Databases]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders, uitgezocht **[!UICONTROL voeg gegevens]** toe om een nieuwe schakelaar te creëren BigQuery.
 
 ![](../../../../images/tutorials/create/google-big-query/catalog.png)
 
 De pagina **[!UICONTROL Verbinding maken met Google Big Query]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
-### Nieuw account
+### Nieuwe account
 
-Als u nieuwe referenties gebruikt, selecteert u **[!UICONTROL Nieuw account]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw BigQuery-referenties op. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
+Als u nieuwe geloofsbrieven gebruikt, selecteer **[!UICONTROL Nieuwe rekening]**. Geef op het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw BigQuery-referenties op. Selecteer **[!UICONTROL Connect]** als u klaar bent en wacht dan enige tijd tot de nieuwe verbinding tot stand is gebracht.
 
 ![](../../../../images/tutorials/create/google-big-query/new.png)
 
 ### Bestaande account
 
-Als u een bestaande account wilt koppelen, selecteert u het BigQuery-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
+Als u een bestaande account wilt verbinden, selecteert u de BigQuery-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
 
 ![](../../../../images/tutorials/create/google-big-query/existing.png)
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een verbinding met uw GBQ-account tot stand gebracht. U kunt nu doorgaan naar de volgende zelfstudie en [een dataflow configureren om gegevens over te brengen naar [!DNL Platform]](../../dataflow/databases.md).
+Door deze zelfstudie te volgen, hebt u een verbinding met uw account GBQ tot stand gebracht. U kunt nu doorgaan naar de volgende zelfstudie en [een gegevensstroom configureren om gegevens over te brengen naar [!DNL Platform]](../../dataflow/databases.md).
