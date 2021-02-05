@@ -1,19 +1,17 @@
 ---
 keywords: analytische bestemmingen;analytische bestemming
-title: Analytische doelen
-seo-title: Analytische doelen
+title: Overzicht van analytische doelen
 description: De analytische bestemmingen volgen hoe de bezoekers met inhoud op uw plaats en verzamelen gegevens om het gedrag van uw publiek te begrijpen. Deze platforms bieden unieke inzichten in de betrokkenheid en conversie van uw meest waardevolle bezoekers.
-seo-description: De analytische bestemmingen volgen hoe de bezoekers met inhoud op uw plaats en verzamelen gegevens om het gedrag van uw publiek te begrijpen. Deze platforms bieden unieke inzichten in de betrokkenheid en conversie van uw meest waardevolle bezoekers.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
 
-# Analysedoelen {#analytics-destinations}
+# Overzicht van analysedoelen {#analytics-destinations}
 
 De analytische bestemmingen volgen hoe de bezoekers met inhoud op uw plaats en verzamelen gegevens om het gedrag van uw publiek te begrijpen. Deze platforms bieden unieke inzichten in de betrokkenheid en conversie van uw meest waardevolle bezoekers.
 
