@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Adobe Experience Platform;user guide;ui guide;platform ui guide;introduction to platform;dashboard;
+keywords: Experience Platform;home;populaire onderwerpen;Adobe Experience Platform;gebruikershandleiding;ui-handleiding;platform ui-handleiding;introductie op platform;dashboard;
 solution: Experience Platform
-title: Handleiding Adobe Experience Platform UI
+title: Overzicht gebruikersinterface Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 852792c1288cf7b4815fb0afb742046d7a595da2
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '1737'
+source-wordcount: '1755'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 Deze gids dient als inleiding aan het gebruiken van het gebruikersinterface van Adobe Experience Platform (UI), die verklaart wat de diverse componenten worden gebruikt voor en verbindingen verstrekt aan verdere documentatie voor meer informatie.
 
-Lees het overzicht [van het](home.md)Experience Platform voor meer informatie over Adobe Experience Platform.
+Lees voor meer informatie over Adobe Experience Platform het [overzicht van het Experience Platform](home.md).
 
 ## Startscherm
 
-Nadat u zich hebt aangemeld bij Adobe Experience Platform, bevindt u zich op de pagina [!UICONTROL Home] , die bestaat uit het dashboard [](#metrics)Metrics, [recente gegevens](#recent-data)en de [aanbevolen leersecties](#recommended-learning) .
+Nadat u zich hebt aangemeld bij Adobe Experience Platform, bevindt u zich op de pagina [!UICONTROL Home], die bestaat uit het [dashboard voor meetgegevens](#metrics), [recente gegevens](#recent-data) en [aanbevolen leersecties](#recommended-learning).
 
 ![](images/user-guide/homepage.png)
 
@@ -31,13 +31,13 @@ Het dashboard van metriek verstrekt kaarten die u informatie over datasets, prof
 
 ![](images/user-guide/homepage-dashboard.png)
 
-De sectie **[!UICONTROL Datasets]** toont het aantal datasets binnen uw organisatie IMS. Dit aantal wordt bijgewerkt wanneer een nieuwe dataset wordt gecreeerd. Meer informatie over datasets kan in het overzicht [van](../catalog/datasets/overview.md)datasets worden gevonden.
+De **[!UICONTROL sectie Datasets]** toont het aantal datasets binnen uw organisatie IMS. Dit aantal wordt bijgewerkt wanneer een nieuwe dataset wordt gecreeerd. Meer informatie over datasets vindt u in het [overzicht van datasets](../catalog/datasets/overview.md).
 
-In de sectie **[!UICONTROL Profielen]** wordt het totale aantal personen met profielen binnen uw IMS-organisatie weergegeven, exclusief profielfragmenten. Dit totale aantal personen vertegenwoordigt het totale adresseerbare publiek en wordt elke 24 uur bijgewerkt. Meer informatie over profielen vindt u in het overzicht [van het](../profile/home.md)realtime-klantprofiel.
+In de sectie **[!UICONTROL Profielen]** wordt het totale aantal personen met profielen binnen uw IMS-organisatie weergegeven, exclusief profielfragmenten. Dit totale aantal personen vertegenwoordigt het totale adresseerbare publiek en wordt elke 24 uur bijgewerkt. Meer informatie over profielen vindt u in het [Real-time overzicht van het Klantprofiel](../profile/home.md).
 
-In de sectie **[!UICONTROL Segmenten]** ziet u het totale aantal segmenten dat binnen uw IMS-organisatie is gemaakt. Dit aantal wordt bijgewerkt wanneer een nieuw segment wordt gecreeerd. Meer informatie over segmenten vindt u in het overzicht [van de](../segmentation/home.md)Segmenteringsservice.
+In de sectie **[!UICONTROL Segmenten]** wordt het totale aantal segmenten weergegeven dat binnen uw IMS-organisatie is gemaakt. Dit aantal wordt bijgewerkt wanneer een nieuw segment wordt gecreeerd. Meer informatie over segmenten vindt u in het [Overzicht van de segmentatieservice](../segmentation/home.md).
 
-De sectie **[!UICONTROL Doelen]** toont het totale aantal bestemmingen die voor de Organisatie IMS worden gecreeerd. Dit aantal wordt bijgewerkt wanneer een nieuwe bestemming wordt gecreeerd. Meer informatie over bestemmingen kan in het [bestemmingsoverzicht](../destinations/home.md)worden gevonden.
+De **[!UICONTROL sectie Doelen]** toont het totale aantal bestemmingen die voor de Organisatie IMS worden gecreeerd. Dit aantal wordt bijgewerkt wanneer een nieuwe bestemming wordt gecreeerd. Meer informatie over bestemmingen kan in [bestemmingen overzicht](../destinations/home.md) worden gevonden.
 
 ### Recente gegevens
 
@@ -45,17 +45,17 @@ Het recente gegevensdashboard verstrekt informatie over onlangs gecreeerde datas
 
 ![](images/user-guide/homepage-recent.png)
 
-De **[!UICONTROL Recente datasetsectie]** maakt een lijst van de vijf onlangs gecreeerde datasets binnen uw organisatie IMS. Deze lijst wordt bijgewerkt telkens als een nieuwe dataset wordt gecreeerd. U kunt een dataset van de lijst selecteren om meer informatie over de gespecificeerde dataset te bekijken of **[!UICONTROL Mening allen]** te selecteren om een lijst van alle gecreeerde datasets te zien. Meer informatie over datasets kan in het overzicht [van](../catalog/datasets/overview.md)datasets worden gevonden.
+De **[!UICONTROL Recente datasets]** sectie maakt een lijst van de vijf onlangs gecreeerde datasets binnen uw IMS Organisatie. Deze lijst wordt bijgewerkt telkens als een nieuwe dataset wordt gecreeerd. U kunt een dataset van de lijst selecteren om meer informatie over de gespecificeerde dataset te bekijken of **[!UICONTROL allen te selecteren]** om een lijst van alle gecreeerde datasets te zien. Meer informatie over datasets vindt u in het [overzicht van datasets](../catalog/datasets/overview.md).
 
-De **[!UICONTROL Recente bronsectie]** maakt een lijst van de vijf onlangs gecreeerde bronschakelaars binnen uw organisatie IMS. Deze lijst wordt bijgewerkt telkens als een nieuwe bronschakelaar wordt gecreeerd. U kunt een bronverbinding van de lijst selecteren om meer informatie over de gespecificeerde schakelaar te bekijken of allen **[!UICONTROL van de]** Mening selecteren om een lijst van alle gecreeerde bronverbindingen te zien. Meer informatie over bronnen vindt u in het overzicht [van](../sources/home.md)bronnen.
+De **[!UICONTROL Recente bronnen]** sectie maakt een lijst van de vijf onlangs gecreeerde bronschakelaars binnen uw IMS Organisatie. Deze lijst wordt bijgewerkt telkens als een nieuwe bronschakelaar wordt gecreeerd. U kunt een bronverbinding van de lijst selecteren om meer informatie over de gespecificeerde schakelaar te bekijken of **[!UICONTROL allen bekijken]** om een lijst van alle gecreeerde bronverbindingen te zien. Meer informatie over bronnen vindt u in het [overzicht van bronnen](../sources/home.md).
 
-De **[!UICONTROL Recente segmentsectie]** maakt een lijst van de vijf onlangs gecreeerde segmentdefinities binnen uw IMS Organisatie. Deze lijst wordt bijgewerkt telkens als een nieuwe segmentdefinitie wordt gecreeerd. U kunt een segmentdefinitie van de lijst selecteren om meer informatie over de gespecificeerde segmentdefinitie te bekijken of **[!UICONTROL Mening allen]** selecteren om een lijst van alle gecreeerde segmentdefinities te zien. Meer informatie over segmenten vindt u in het overzicht [van de](../segmentation/home.md)Segmenteringsservice.
+De **[!UICONTROL Recente segmenten]** sectie maakt een lijst van de vijf onlangs gecreeerd segmentdefinities binnen uw IMS Organisatie. Deze lijst wordt bijgewerkt telkens als een nieuwe segmentdefinitie wordt gecreeerd. U kunt een segmentdefinitie van de lijst selecteren om meer informatie over de gespecificeerde segmentdefinitie te bekijken of **[!UICONTROL allen]** te selecteren om een lijst van alle gecreeerde segmentdefinities te zien. Meer informatie over segmenten vindt u in het [Overzicht van de segmentatieservice](../segmentation/home.md).
 
-De **[!UICONTROL Recente bestemmingssectie]** maakt een lijst van de vijf onlangs gecreeerde bestemmingen binnen uw organisatie IMS. Deze lijst wordt bijgewerkt telkens wanneer een nieuwe bestemming wordt gecreeerd. U kunt een bestemming van de lijst selecteren om meer informatie over de gespecificeerde bestemming te bekijken of **[!UICONTROL Mening allen]** selecteren om een lijst van alle gecreeerde bestemmingen te zien. Meer informatie over bestemmingen kan in het [bestemmingsoverzicht](../destinations/home.md)worden gevonden.
+De **[!UICONTROL Recente bestemmingen]** sectie maakt een lijst van de vijf onlangs gecreeerde bestemmingen binnen uw organisatie IMS. Deze lijst wordt bijgewerkt telkens wanneer een nieuwe bestemming wordt gecreeerd. U kunt een bestemming van de lijst selecteren om meer informatie over de gespecificeerde bestemming te bekijken of **[!UICONTROL allen]** te selecteren om een lijst van alle gecreeerde bestemmingen te zien. Meer informatie over bestemmingen kan in [bestemmingen overzicht](../destinations/home.md) worden gevonden.
 
 ### Aanbevolen training
 
-In de sectie **[!UICONTROL Aanbevolen leren]** vindt u koppelingen naar handige documentatie om aan de slag te gaan met Adobe Experience Platform.
+In de sectie **[!UICONTROL Aanbevolen training]** vindt u koppelingen naar handige documentatie die u kunt gebruiken om aan de slag te gaan met Adobe Experience Platform.
 
 ![](images/user-guide/homepage-recommended.png)
 
@@ -69,7 +69,7 @@ Links op de navigatiebalk bevindt zich het Adobe Experience Platform-logo. Als u
 
 ### IMS-organisatieschakelaar
 
-Het eerste item rechts van de bovenste navigatiebalk is de schakeloptie **IMS-organisatie**.
+Het eerste item aan de rechterkant van de bovenste navigatiebalk is de **IMS Organization switch**.
 
 ![](./images/user-guide/homepage-ims-org.png)
 
@@ -79,25 +79,25 @@ Als u de schakeloptie selecteert, wordt een vervolgkeuzemenu geopend met IMS-org
 
 ### Overschakelen op toepassingen
 
-Het volgende punt op de rechterkant van de hoogste navigatie is de **toepassingsschakelaar**, die door het pictogram van de ![toepassingsschakelaar](./images/user-guide/app-switcher-icon.png) wordt vertegenwoordigd. Wanneer u dit pictogram selecteert, kunt u schakelen tussen Adobe-toepassingen waartoe uw IMS-organisatie toegang heeft, zoals Experience Platform, Analytics, Assets en Launch.
+Het volgende punt op de rechterkant van de hoogste navigatie is **toepassingsschakelaar**, die door ![toepassingsschakelaar](./images/user-guide/app-switcher-icon.png) pictogram wordt vertegenwoordigd. Wanneer u dit pictogram selecteert, kunt u schakelen tussen Adobe-toepassingen waartoe uw IMS-organisatie toegang heeft, zoals Experience Platform, Analytics, Assets en Launch.
 
 ### Help
 
-Rechts van de toepassingsschakelaar bevindt zich het **Help- en ondersteuningsmenu**, dat wordt weergegeven door het ![vraagteken/Help](./images/user-guide/help-icon.png) -pictogram. Wanneer u dit pictogram selecteert, wordt een pop-upmenu weergegeven dat verschillende Help- en ondersteuningsbronnen bevat. Het tabblad **[!UICONTROL Help]** bevat een lijst met relevante documentatie voor de pagina die u momenteel hebt ingeschakeld. Op het tabblad **[!UICONTROL Ondersteuning]** kunt u een ondersteuningsticket maken met het ondersteuningsteam Adobe. Op het tabblad **[!UICONTROL Feedback]** kunt u feedback over Platform verzenden naar Adobe.
+Rechts van de toepassingsschakeloptie bevindt zich het **help- en ondersteuningsmenu**, dat wordt weergegeven door het ![vraagteken/help](./images/user-guide/help-icon.png)-pictogram. Wanneer u dit pictogram selecteert, wordt een pop-upmenu weergegeven dat verschillende Help- en ondersteuningsbronnen bevat. Het **[!UICONTROL Help]** lusje toont een lijst van relevante documentatie voor de pagina u momenteel op bent. Met het tabblad **[!UICONTROL Ondersteuning]** kunt u een ondersteuningsticket maken met het ondersteuningsteam Adobe. Met het tabblad **[!UICONTROL Feedback]** kunt u feedback over Platform verzenden naar Adobe.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
 ### Meldingen en aankondigingen
 
-In de sectie **** Meldingen, die door het ![bel/Notifications and Announcements](images/user-guide/notification-icon.png) pictogram wordt vertegenwoordigd. Op het tabblad **[!UICONTROL Meldingen]** vindt u belangrijke informatie over het product en andere relevante updates, terwijl op het tabblad **[!UICONTROL Aankondigingen]** informatie wordt weergegeven over onderhoud aan de service.
+In **berichtensectie**, die door ![bel/Meldingen en Aankondigingen](images/user-guide/notification-icon.png) pictogram wordt vertegenwoordigd. Het tabblad **[!UICONTROL Meldingen]** bevat belangrijke informatie over het product en andere relevante updates, terwijl op het tabblad **[!UICONTROL Aankondigingen]** informatie over onderhoud van de service wordt weergegeven.
 
 ### Gebruikersprofiel
 
-Het laatste item op de bovenste navigatiebalk is de **gebruikersinstellingen**, die wordt weergegeven door het pictogram ![Gebruikersinstellingen/Gebruikersprofiel](images/user-guide/profile-icon.png) . Selecteer dit pictogram om uw voorkeuren te bewerken of u af te melden.
+Het laatste item op de bovenste navigatiebalk is de **gebruikersinstellingen**, die wordt weergegeven door het pictogram ![gebruikersinstellingen/Gebruikersprofiel](images/user-guide/profile-icon.png). Selecteer dit pictogram om uw voorkeuren te bewerken of u af te melden.
 
 ### Sandboxen
 
-Direct onder de bovenste navigatiebalk bevindt zich de sandboxbalk. Deze balk geeft aan welke sandbox u momenteel gebruikt voor Platform. Meer informatie over sandboxen vindt u in het overzicht [van de](../sandboxes/home.md)sandboxen.
+Direct onder de bovenste navigatiebalk bevindt zich de sandboxbalk. Deze balk geeft aan welke sandbox u momenteel gebruikt voor Platform. Meer informatie over sandboxen vindt u in het [overzicht van sandboxen](../sandboxes/home.md).
 
 ## Linkernavigatie {#left-nav}
 
@@ -109,55 +109,55 @@ De navigatie op de linkerkant van het scherm maakt een lijst van alle verschille
 
 ![](images/user-guide/homepage-left.png)
 
-In de sectie **[!UICONTROL Home]** kunt u terugkeren naar de startpagina van de gebruikersinterface van het Platform.
+Met de sectie **[!UICONTROL Home]** kunt u terugkeren naar de startpagina van de gebruikersinterface van het Platform.
 
-In de sectie **[!UICONTROL Workflows]** wordt een lijst weergegeven met uit meerdere stappen bestaande workflows voor het uitvoeren van bewerkingen binnen het Platform. Meer informatie over workflows vindt u in het overzicht [van](./workflows.md)workflows.
+In de sectie **[!UICONTROL Workflows]** wordt een lijst weergegeven met uit meerdere stappen bestaande workflows voor het uitvoeren van bewerkingen binnen het Platform. Meer informatie over workflows vindt u in het [overzicht van workflows](./workflows.md).
 
 ### [!UICONTROL Verbindingen]
 
-Met de sectie **[!UICONTROL Bronnen]** kunt u bronverbindingen maken, bijwerken en verwijderen, zodat u gegevens van externe bronnen in Platform kunt invoeren. Meer informatie over bronnen vindt u in het overzicht [van](../sources/home.md)bronnen.
+Met de sectie **[!UICONTROL Bronnen]** kunt u bronverbindingen maken, bijwerken en verwijderen, zodat u gegevens van externe bronnen in Platform kunt invoeren. Meer informatie over bronnen vindt u in het [overzicht van bronnen](../sources/home.md).
 
-Met de sectie **[!UICONTROL Doelen]** kunt u doelen maken, bijwerken en verwijderen, zodat u gegevens van Platform kunt exporteren naar vele externe doelen. Meer informatie over bestemmingen kan in het [bestemmingsoverzicht](../destinations/home.md)worden gevonden.
+Met de sectie **[!UICONTROL Doelen]** kunt u doelen maken, bijwerken en verwijderen, zodat u gegevens van Platform kunt exporteren naar vele externe doelen. Meer informatie over bestemmingen kan in [bestemmingen overzicht](../destinations/home.md) worden gevonden.
 
 ### [!UICONTROL Klant]
 
-In de sectie **[!UICONTROL Profielen]** kunt u door klantprofielen bladeren, profielmetriek bekijken, samenvoegbeleid maken en beheren en vakbondsschema&#39;s weergeven. Lees de [!UICONTROL gebruikershandleiding] voor meer informatie over het gebruik van de sectie [[!DNL Profile] Profielen](../profile/ui/user-guide.md). Meer informatie over het profiel van de Klant in real time kan in het overzicht [van het Profiel van de Klant in](../profile/home.md)real time worden gevonden.
+Met de sectie **[!UICONTROL Profielen]** kunt u door klantprofielen bladeren, profielmetriek bekijken, samenvoegbeleid maken en beheren en vakbondsschema&#39;s weergeven. Lees de [[!DNL Profile] gebruikershandleiding](../profile/ui/user-guide.md) voor meer informatie over het gebruik van de sectie [!UICONTROL Profielen]. Meer informatie over het profiel van de Klant in real time kan in [overzicht van het Profiel van de Klant in real time worden gevonden](../profile/home.md).
 
-Met de sectie **[!UICONTROL Segmenten]** kunt u segmentdefinities maken en beheren. Lees voor meer informatie over het gebruik van de sectie [!UICONTROL Segmenten] de gebruikershandleiding voor [segmentatie](../segmentation/ui/overview.md). Meer informatie over de Dienst van de Segmentatie kan in het overzicht [van de Dienst van de](../segmentation/home.md)Segmentatie worden gevonden.
+Met de sectie **[!UICONTROL Segmenten]** kunt u segmentdefinities maken en beheren. Lees de [gebruikershandleiding voor segmentatie](../segmentation/ui/overview.md) voor meer informatie over het gebruik van de sectie [!UICONTROL Segments]. Meer informatie over de Dienst van de Segmentatie vindt u in [Overzicht van de Dienst van de Segmentatie](../segmentation/home.md).
 
-In het gedeelte **[!UICONTROL Identiteiten]** kunt u naamruimten maken en beheren. Voor meer informatie over de sectie [!UICONTROL Identiteiten] , met inbegrip van informatie over identiteitsnaamruimten en hoe te om identiteiten in de UI van het Platform te gebruiken, gelieve te verwijzen naar het overzicht [van](../identity-service/namespaces.md)identiteitsnaamruimte.
+Met de sectie **[!UICONTROL Identiteiten]** kunt u naamruimten maken en beheren. Voor meer informatie over de [!UICONTROL sectie van Identiteiten], met inbegrip van informatie over identiteitsnamespaces en hoe te om identiteiten in de UI van het Platform te gebruiken, gelieve te verwijzen naar [identity namespace overzicht](../identity-service/namespaces.md).
 
 ### [!UICONTROL Privacy]
 
-In de sectie **[!UICONTROL Beleid]** kunt u beleid voor gegevensgebruik maken en beheren. Lees voor meer informatie over het gebruik van de sectie Beleid de gebruikershandleiding voor het [gegevensgebruiksbeleid](../data-governance/policies/user-guide.md). Meer informatie over het beleid voor gegevensgebruik vindt u in het overzicht [van het beleid voor](../data-governance/policies/overview.md)gegevensgebruik.
+Met de sectie **[!UICONTROL Beleid]** kunt u beleid voor gegevensgebruik maken en beheren. Lees de [Gebruikershandleiding voor gegevensgebruiksbeleid](../data-governance/policies/user-guide.md) voor meer informatie over het gebruik van de sectie Beleid. Meer informatie over het beleid voor gegevensgebruik vindt u in het [overzicht van het beleid voor gegevensgebruik](../data-governance/policies/overview.md).
 
-In het gedeelte **[!UICONTROL Verzoeken]** kunt u privacyverzoeken maken en beheren. U moet zijn toegevoegd op lijst van gewenste personen om toegang te hebben tot de gebruikersinterface van de Privacy Service. Lees de gebruikershandleiding bij de [Privacy Service voor meer informatie over het gebruik van de sectie](../privacy-service/ui/user-guide.md)Verzoeken. Meer informatie over Privacy Service vindt u in het overzicht [van de](../privacy-service/home.md)Privacy Service.
+Met de sectie **[!UICONTROL Verzoeken]** kunt u privacyverzoeken maken en beheren. U moet zijn toegevoegd op lijst van gewenste personen om toegang te hebben tot de gebruikersinterface van de Privacy Service. Lees voor meer informatie over het gebruik van de sectie Verzoeken de [gebruikershandleiding voor de Privacy Service](../privacy-service/ui/user-guide.md). Meer informatie over Privacy Service vindt u in het [overzicht van de Privacy Service](../privacy-service/home.md).
 
 ### [!UICONTROL Gegevenswetenschap]
 
-De sectie **[!UICONTROL Laptops]** biedt toegang tot JupyterLab, een interactieve ontwikkelomgeving waarmee u uw gegevens kunt verkennen, analyseren en modelleren. Lees voor meer informatie over het gebruik van de sectie Laptops de [JupyterLab-gebruikershandleiding](../data-science-workspace/jupyterlab/overview.md). Meer informatie over de Werkruimte van de Wetenschap van Gegevens kan in het Overzicht van de Werkruimte van de Wetenschap van [Gegevens worden gevonden](../data-science-workspace/home.md)
+De sectie **[!UICONTROL Laptops]** biedt toegang tot JupyterLab, een interactieve ontwikkelomgeving waarmee u uw gegevens kunt verkennen, analyseren en modelleren. Lees de [JupyterLab-gebruikershandleiding](../data-science-workspace/jupyterlab/overview.md) voor meer informatie over het gebruik van de sectie Laptops. Meer informatie over de Werkruimte van de Wetenschap van Gegevens vindt u in [Overzicht van de Werkruimte van de Wetenschap van Gegevens](../data-science-workspace/home.md)
 
-Met de sectie **[!UICONTROL Modellen]** kunt u computerleren en kunstmatige intelligentie gebruiken om modellen te maken, te ontwikkelen, te trainen en af te stemmen om voorspellingen te maken. Meer informatie over de sectie Modellen vindt u in de zelfstudie over [training en het evalueren van een model](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
+Met de sectie **[!UICONTROL Modellen]** kunt u leren van machines en kunstmatige intelligentie gebruiken om modellen te maken, te ontwikkelen, te trainen en af te stemmen om voorspellingen te maken. Meer informatie over de sectie Modellen vindt u in de zelfstudie over [training en het evalueren van een model](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
-De sectie van de **[!UICONTROL Diensten]** laat u uw gepubliceerde modellen voor geplande opleiding, of hefboomwerking Adobe Intelligente Diensten beheren AI, een reeks die real time, gepersonaliseerde klantenervaringen leveren. Meer informatie over de sectie van de Diensten kan in het [Publiceren van een Model als zelfstudie](../data-science-workspace/models-recipes/publish-model-service-ui.md)van de Dienst worden gevonden.
+Met de sectie **[!UICONTROL Services]** kunt u uw gepubliceerde modellen voor geplande Adobe beheren, of de Intelligente services van de klant benutten, een reeks AI-services die realtime, persoonlijke ervaringen bieden. Meer informatie over de sectie Services vindt u in de [Publishing a Model as a Service tutorial](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ### [!UICONTROL Data management]
 
-Met de sectie **[!UICONTROL Schema]** kunt u XDM-schema&#39;s (Experience Data Model) maken en beheren. Lees de zelfstudie over het [maken van een schema](../xdm/tutorials/create-schema-ui.md)voor meer informatie over schema&#39;s. Meer informatie over XDM vindt u in het [XDM-systeemoverzicht](../xdm/home.md).
+Met de sectie **[!UICONTROL Schemas]** kunt u XDM-schema&#39;s (Experience Data Model) maken en beheren. Lees de zelfstudie over het maken van een schema](../xdm/tutorials/create-schema-ui.md) voor meer informatie over schema&#39;s. [ Meer informatie over XDM vindt u in het [XDM System overview](../xdm/home.md).
 
-Met de sectie **[!UICONTROL Datasets]** kunt u gegevenssets maken en beheren. Meer informatie over datasets kan in de de gebruikersgids [van](../catalog/datasets/user-guide.md)datasets worden gevonden.
+Met de sectie **[!UICONTROL Datasets]** kunt u gegevenssets maken en beheren. Meer informatie over datasets kan in [datasets worden gevonden gebruikersgids](../catalog/datasets/user-guide.md).
 
-Met de sectie **[!UICONTROL Query]** kunt u query&#39;s maken en beheren, SQL-query&#39;s van de Adobe Experience Platform Query Service registreren en uw PostSQL-referenties bekijken. Meer informatie over vragen kan in de de gebruikersgids [van de Dienst van de](../query-service/ui/overview.md)Vraag worden gevonden.
+Met de sectie **[!UICONTROL Query&#39;s]** kunt u query&#39;s maken en beheren, SQL-query&#39;s van de Adobe Experience Platform Query Service registreren en uw PostSQL-referenties bekijken. Meer informatie over vragen kan in [de gebruikersgids van de Dienst van de Vraag](../query-service/ui/overview.md) worden gevonden.
 
-Met de sectie **[!UICONTROL Controle]** kunt u de opname van batches en streaming controleren. Meer informatie over controle kan in de de gebruikershandleiding [van de](../ingestion/quality/monitor-data-ingestion.md)controlegegevens worden gevonden.
+Met de sectie **[!UICONTROL Monitoring]** kunt u batch- en streaming-opname controleren. Meer informatie over controle vindt u in de [gebruikershandleiding voor het controleren van gegevensinvoer](../ingestion/quality/monitor-data-ingestion.md).
 
 ### [!UICONTROL Beslissing]
 
-Offer Decisioning is een toepassingsservice die is geïntegreerd met Adobe Experience Platform. Zo kunt u Experience Platform gebruiken om uw klanten de beste aanbieding en ervaring te bieden op alle aanraakpunten op het juiste moment. Meer informatie over Offer Decisioning, zoals het werken met [!UICONTROL aanbiedingen] en [!UICONTROL Activiteiten] , vindt u in de documentatie [van](https://experienceleague.adobe.com/docs/offer-decisioning.html)Offer Decisioning.
+Offer Decisioning is een toepassingsservice die is geïntegreerd met Adobe Experience Platform. Zo kunt u Experience Platform gebruiken om uw klanten de beste aanbieding en ervaring te bieden op alle aanraakpunten op het juiste moment. Voor meer informatie over Offer Decisioning, zoals het werken met [!UICONTROL Aanbiedingen] en [!UICONTROL Activiteiten], bezoek de [documentatie van Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html).
 
 ### [!UICONTROL Beheer]
 
-De gebruikersinterface van het Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over het vergunningsgebruik van uw organisatie kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. U kunt dit doen door **[!UICONTROL Licentiegebruik]** te selecteren in de navigatie. Ga voor meer informatie over het dashboard voor licentiegebruik naar de handleiding voor het [gebruiksdashboard](license-usage-dashboard.md)voor licenties.
+De gebruikersinterface van het Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over het vergunningsgebruik van uw organisatie kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Dit kan worden betreden door **[!UICONTROL Vergunningsgebruik]** in de navigatie te selecteren. Ga voor meer informatie over het dashboard voor licentiegebruik naar [Handleiding voor licentiegebruik](license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >
@@ -165,4 +165,4 @@ De gebruikersinterface van het Platform (UI) verstrekt een dashboard waardoor u 
 
 ## Volgende stappen
 
-Door deze gids te lezen, bent u nu geïntroduceerd aan de homepage en belangrijkste navigatie elementen van de Platform UI. Voor meer informatie over het werken in het gebruikersinterface, gelieve te verwijzen naar de documentatie voor elke individuele dienst van het Platform. Koppelingen naar deze documentatie vindt u in de [linkernavigatiesectie](#left-nav) die eerder in dit document is gevonden.
+Door deze gids te lezen, bent u nu geïntroduceerd aan de homepage en belangrijkste navigatie elementen van de Platform UI. Voor meer informatie over het werken in het gebruikersinterface, gelieve te verwijzen naar de documentatie voor elke individuele dienst van het Platform. Koppelingen naar deze documentatie vindt u in de sectie [linkernavigatie](#left-nav) die eerder in dit document is gevonden.
