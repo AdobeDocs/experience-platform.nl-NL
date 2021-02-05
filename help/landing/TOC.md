@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform - Overzicht
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Leer hoe Experience Platform het mogelijk maakt om persoonlijke ervaringen aan uw klanten in real time te leveren.
 translation-type: tm+mt
-source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 5%
+source-wordcount: '159'
+ht-degree: 6%
 
 ---
 
@@ -30,12 +30,12 @@ ht-degree: 5%
    * [Handleiding Workflows-gebruikersinterface](workflows.md)
    * [Browserondersteuning en taalondersteuning](browser-language-support.md)
 * Experience Platform-API&#39;s {#platform-apis}
+   * [API&#39;s van Platforms verifiëren en benaderen](api-authentication.md)
    * [API-basisbeginselen](api-fundamentals.md)
    * [API-naslagdocumenten](http://www.adobe.com/go/platform-api-reference-en)
-   * [Zelfstudie voor het verifiëren en benaderen van Platform-API&#39;s](api-authentication.md)
 * Documentatie van Platform {#documentation}
-   * [Documentatieoverzicht](documentation/overview.md)
-   * [Ondersteunde documentatietaal](documentation/language-support.md)
+   * [Overzicht](documentation/overview.md)
+   * [Taalondersteuning](documentation/language-support.md)
 * Platform in het ecosysteem van de Adobe {#ecosystem}
    * [Toepassingsservices](application-services.md)
    * [Application and Intelligent Services (video)](video/application-intelligent-services.md)
@@ -48,6 +48,6 @@ ht-degree: 5%
          * [Een gegevensset configureren om toestemmings- en voorkeursgegevens vast te leggen](./governance-privacy-security/consent/iab/dataset.md)
 * [Het gebruiksdashboard voor licenties](license-usage-dashboard.md)
 * [Handleiding voor probleemoplossing](troubleshooting.md)
-* [ADLS Gen2-migratie](adls2-gen2-migration.md)
+* [Gen2 gegevensmeermigratie](adls2-gen2-migration.md)
 * [Verklarende woordenlijst](glossary.md)
 * [Releaseopmerkingen](https://www.adobe.com/go/platform-release-notes-en)
