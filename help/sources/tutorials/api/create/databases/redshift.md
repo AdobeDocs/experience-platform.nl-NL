@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;redshift;Opnieuw verschuiven;Amazon Opnieuw verschuiven;amazon opnieuw verschuiven
 solution: Experience Platform
-title: Een Amazon Redshift-connector maken met de Flow Service API
+title: Een Amazon Redshift Source Connection maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: In deze zelfstudie wordt de Flow Service API gebruikt om u door de stappen te laten lopen om Experience Platform te verbinden met Amazon Redshift (hierna "Redshift" genoemd).
+description: Leer hoe u Adobe Experience Platform verbindt met Amazon Redshift met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '549'
 ht-degree: 1%
 
 ---
 
 
-# Een [!DNL Amazon Redshift]-connector maken met de [!DNL Flow Service]-API
+# Een [!DNL Amazon Redshift]-bronverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
