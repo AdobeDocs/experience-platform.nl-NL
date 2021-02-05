@@ -5,7 +5,7 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik XDM-klassen (Experience Data Model) en -mixen om ervaringsgegevens te standaardiseren.
 translation-type: tm+mt
-source-git-commit: c82ad393ecaa46d01596dbba06f5fc756711bc31
+source-git-commit: 288f47306853fcc39234ad098bc0e73f24f8540a
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 6%
@@ -95,10 +95,10 @@ ht-degree: 6%
    * [Ad-hocregelingen](api/ad-hoc.md)
    * [Aanhangsel](api/appendix.md)
 * Tutorials {#tutorials}
-   * [Een schema maken (API)](tutorials/create-schema-api.md)
    * [Een schema maken (UI)](tutorials/create-schema-ui.md)
-   * [Een relatie definiëren tussen twee schema&#39;s (API)](tutorials/relationship-api.md)
+   * [Een schema maken (API)](tutorials/create-schema-api.md)
    * [Bepaal een verband tussen twee schema&#39;s (UI)](tutorials/relationship-ui.md)
+   * [Een relatie definiëren tussen twee schema&#39;s (API)](tutorials/relationship-api.md)
    * [Een ad-hocschema (API) maken](tutorials/ad-hoc.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
