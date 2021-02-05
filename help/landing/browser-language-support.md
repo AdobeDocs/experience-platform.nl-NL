@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de analyse van de klantenreis;campagneorchestratie;orchestratie;klantenreis;reis;reis orchestratie;vermogen;regio
 solution: Experience Platform
-title: Adobe Experience Platform-browser en taalondersteuning
+title: Ondersteuning voor browser en taal voor de gebruikersinterface van het Experience Platform
 topic: getting started
 description: Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. Experience Platform stelt organisaties in staat om klantgegevens en -inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
 
-# Experience Platforms browser en taalondersteuning
+# Browserondersteuning en taalondersteuning voor de gebruikersinterface van het Experience Platform
 
 De gebruikersinterface van Adobe Experience Platform (UI) is ontworpen om veelvoudige browsers en talen te steunen.
 
