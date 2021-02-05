@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;verenigd profiel;verenigd profiel;verenigd profiel;profiel;rtcp;inschakelen profiel;profiel inschakelen
-title: API-ontwikkelaarshandleiding voor realtime klantprofiel
+title: Real-time handleiding voor de API voor klantprofiel
 topic: guide
-description: De realtime-API voor klantprofiel bevat meerdere eindpunten voor het verkennen en werken met profielgegevens, waaronder het weergeven van profielen, het maken en bijwerken van samenvoegingsbeleidsregels, het exporteren of samplen van profielgegevens en het verwijderen van profielgegevens die u niet meer nodig hebt of die bij een fout zijn toegevoegd.
+description: Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, waaronder weergaveprofielen, beleid voor samenvoegen maken en bijwerken, profielgegevens exporteren of samplen en profielgegevens verwijderen die niet langer vereist zijn of die door een fout zijn toegevoegd. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 translation-type: tm+mt
-source-git-commit: 823d89ab37156e775a2879e3a2c91bfd911b83bb
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] Handleiding voor API-ontwikkelaars
+# [!DNL Real-time Customer Profile] API-handleiding
 
 [!DNL Real-time Customer Profile] kunt u een holistische weergave van elk van uw individuele klanten in Adobe Experience Platform bekijken. [!DNL Profile] staat u toe om verschillende klantengegevens van veelvoudige kanalen, zoals online, off-line, CRM, en derdegegevens, in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
 
