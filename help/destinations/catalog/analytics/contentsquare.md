@@ -1,21 +1,17 @@
 ---
 keywords: contentsquare, extensie;contentSquare, bestemming;contentSquant
-title: Contentsquare-extensie
-seo-title: Contentsquare-extensie
+title: Doel van extensie contentsquare
 description: De extensie Contentsquare is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Contentsquare is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Contentsquare] extension  {#contentsquare-extension}
-
-## Overzicht {#overview}
 
 Visualiseer in-page gedrag, zie WAAROM klanten verlaten en hoe u kunt verbeteren. De opbrengst van attributen aan UX en inhoudselementen voor elk segment van Analytics en test van het Doel. Installeer de tag [!DNL Contentsquare], stel aangepaste variabelen en gebeurtenissen in. Begin gegevens voor uw analyse van UX in een paar klikken te verzamelen.
 
