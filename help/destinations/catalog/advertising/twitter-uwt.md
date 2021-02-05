@@ -1,21 +1,17 @@
 ---
 keywords: twitter;Twitter;twitter universele website-tag;Twitter universele website-tag;Twitter UWT-tag;Twitter uwt;twitter uwt
-title: Twitter Universal Website Tag-extensie
-seo-title: Twitter Universal Website Tag-extensie
+title: Doel van Twitter Universal Website-tag
 description: De Twitter Universal Website Tag-extensie is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Twitter Universal Website Tag-extensie is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Twitter Universal Website Tag] Extensie  {#twitter-uwt-extension}
-
-## Overzicht {#overview}
+# [!DNL Twitter Universal Website Tag] extension  {#twitter-uwt-extension}
 
 [!DNL Twitter Universal Website Tag] biedt acties om bakens naar de UWT-tag Twitter te verzenden.
 
