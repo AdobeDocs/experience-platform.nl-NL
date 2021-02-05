@@ -1,37 +1,37 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql;PostgreSQL
+keywords: Experience Platform;home;populaire onderwerpen;PSQL;psql;PostgreSQL
 solution: Experience Platform
-title: Een PostgreSQL-bronconnector maken in de UI
+title: Een PostSQL-bronverbinding maken in de gebruikersinterface
 topic: overview
 type: Tutorial
-description: Deze zelfstudie biedt stappen voor het maken van een PSQL-bronconnector (PostgreSQL) via de gebruikersinterface van het Platform.
+description: Leer hoe u een PostSQL-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '471'
 ht-degree: 1%
 
 ---
 
 
-# Creeer een [!DNL PostgreSQL] bronschakelaar in UI
+# Een [!DNL PostgreSQL]-bronverbinding maken in de gebruikersinterface
 
 >[!NOTE]
 >
-> De [!DNL PostgreSQL] connector is in bèta. Zie het [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+> De [!DNL PostgreSQL] schakelaar is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een [!DNL PostgreSQL] (hierna &quot;PSQL&quot; genoemd) bronconnector met behulp van de [!DNL Platform] gebruikersinterface.
+De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. Deze zelfstudie biedt stappen voor het maken van een [!DNL PostgreSQL] (hierna &quot;PSQL&quot; genoemd) bronconnector met behulp van de [!DNL Platform]-gebruikersinterface.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de klantenervaring worden [!DNL Experience Platform] georganiseerd.
+* [[!DNL Experience Data Model (XDM)] Systeem](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Experience Platform] klantenervaring worden georganiseerd.
    * [Basisbeginselen van de schemacompositie](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md)Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+   * [Zelfstudie](../../../../../xdm/tutorials/create-schema-ui.md) Schema-editor: Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
-Als u reeds een geldige verbinding PSQL hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan bij het [vormen van een gegevensstroom](../../dataflow/databases.md).
+Als u reeds een geldige verbinding PSQL hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [vormend een dataflow](../../dataflow/databases.md).
 
 ### Vereiste referenties verzamelen
 
@@ -41,17 +41,17 @@ Als u toegang wilt krijgen tot uw PSQL-account op [!DNL Platform], moet u de vol
 | ---------- | ----------- |
 | `connectionString` | De verbindingstekenreeks die aan uw PSQL-account is gekoppeld. Het patroon van de PSQL-verbindingstekenreeks is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 
-Raadpleeg dit [PSQL-document](https://www.postgresql.org/docs/9.2/app-psql.html)voor meer informatie over aan de slag gaan.
+Raadpleeg dit [PSQL-document](https://www.postgresql.org/docs/9.2/app-psql.html) voor meer informatie over aan de slag gaan.
 
 ## Sluit uw PSQL-account aan
 
 Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw PSQL-account te koppelen aan [!DNL Platform].
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Bronnen]** in de linkernavigatiebalk voor toegang tot de werkruimte **[!UICONTROL Bronnen]** . In het scherm **[!UICONTROL Catalogus]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Bronnen]** te openen. Het scherm **[!UICONTROL Catalog]** toont een verscheidenheid van bronnen waarvoor u een rekening kunt tot stand brengen met.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer onder de categorie **[!UICONTROL Databases]** de optie **[!UICONTROL PostSQL DB]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders, uitgezocht **[!UICONTROL voeg gegevens]** toe om een nieuwe schakelaar tot stand te brengen PSQL.
+Selecteer **[!UICONTROL PostgreSQL DB]** onder de categorie **[!UICONTROL Databases]**. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders selecteert u **[!UICONTROL Gegevens toevoegen]** om een nieuwe PSQL-connector te maken.
 
 ![](../../../../images/tutorials/create/psql/catalog.png)
 
@@ -59,7 +59,7 @@ De pagina **[!UICONTROL Verbinding maken met PSQL]** wordt weergegeven. Op deze 
 
 ### Nieuwe account
 
-Selecteer **[!UICONTROL Nieuw account]** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw PSQL-gegevens op. Wanneer u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
+Als u nieuwe geloofsbrieven gebruikt, selecteer **[!UICONTROL Nieuwe rekening]**. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw PSQL-gegevens op. Selecteer **[!UICONTROL Connect]** als u klaar bent en wacht dan enige tijd tot de nieuwe verbinding tot stand is gebracht.
 
 ![](../../../../images/tutorials/create/psql/connect.png)
 
@@ -71,4 +71,4 @@ Als u een bestaande account wilt verbinden, selecteert u de PSQL-account waarmee
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een verbinding met uw PSQL-account tot stand gebracht. U kunt nu verdergaan naar de volgende zelfstudie en een gegevensstroom [configureren om gegevens in te voeren [!DNL Platform]](../../dataflow/databases.md).
+Door deze zelfstudie te volgen, hebt u een verbinding met uw PSQL-account tot stand gebracht. U kunt nu doorgaan naar de volgende zelfstudie en [een gegevensstroom configureren om gegevens over te brengen naar [!DNL Platform]](../../dataflow/databases.md).
