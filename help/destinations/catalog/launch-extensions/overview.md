@@ -1,19 +1,17 @@
 ---
 keywords: extensies starten;extensie starten;doelen starten; platformlanceerextensies;platformlanceerextensie;platformlanceerdoelen
-title: Experience Platform Launch-extensies
-seo-title: Experience Platform Launch-extensies
-description: Starten is de volgende generatie mogelijkheden voor tagbeheer van Adobe. De lancering geeft klanten een eenvoudige manier om alle analytische, marketing, en reclame markeringen noodzakelijk om relevante klantenervaringen op te stellen en te beheren.
-seo-description: Starten is de volgende generatie mogelijkheden voor tagbeheer van Adobe. De lancering geeft klanten een eenvoudige manier om alle analytische, marketing, en reclame markeringen noodzakelijk om relevante klantenervaringen op te stellen en te beheren.
+title: Adobe Experience Platform Launch-extensiedoelen
+description: Adobe Experience Platform Launch is de volgende generatie mogelijkheden voor tagbeheer van Adobe. Met Platform Launch kunnen klanten op eenvoudige wijze alle benodigde analyses-, marketing- en advertentietags implementeren en beheren, zodat ze deze voor hun klanten kunnen gebruiken.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '617'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platform Launch-extensies {#overview.md}
+# Adobe Experience Platform Launch-extensies
 
 Adobe Experience Platform Launch is de volgende generatie mogelijkheden voor tagbeheer van Adobe. Met Platform Launch kunnen klanten op eenvoudige wijze alle benodigde analyses-, marketing- en advertentietags implementeren en beheren, zodat ze deze voor hun klanten kunnen gebruiken. Platform starten wordt aangeboden aan Adobe Experience Cloud-klanten als een inbegrepen, waardetoevoegend onderdeel.
 
