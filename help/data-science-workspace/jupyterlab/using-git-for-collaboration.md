@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;Git;Github
+keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;Git;Github
 solution: Experience Platform
-title: Samenwerken in JupyterLab met behulp van Git
+title: Samenwerken in JupyterLab met behulp van kit
 topic: tutorial
 type: Tutorial
 description: Git is een gedistribueerd versiecontrolesysteem voor het bijhouden van wijzigingen in broncode tijdens softwareontwikkeling. Git is vooraf geïnstalleerd in de JupyterLab-omgeving van de Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '284'
 ht-degree: 1%
 
 ---
 
 
-# Samenwerken in [!DNL JupyterLab] gebruik [!DNL Git]
+# Samenwerken in [!DNL JupyterLab] met [!DNL Git]
 
-[!DNL Git] is een gedistribueerd versiecontrolesysteem voor het bijhouden van wijzigingen in broncode tijdens softwareontwikkeling. Git is vooraf geïnstalleerd in de [!DNL Data Science Workspace JupyterLab] omgeving.
+[!DNL Git] is een gedistribueerd versiecontrolesysteem voor het bijhouden van wijzigingen in broncode tijdens softwareontwikkeling. Git wordt vooraf geïnstalleerd in de [!DNL Data Science Workspace JupyterLab]-omgeving.
 
 ## Vereisten
 
@@ -24,13 +24,13 @@ ht-degree: 1%
 >
 > De Git-server die u wilt gebruiken, moet via internet toegankelijk zijn.
 
-De [!DNL Data Science Workspace JupyterLab] omgeving is een gehoste omgeving en wordt niet geïmplementeerd binnen uw bedrijfsfirewall. Daarom moet de Git-server waarmee u verbinding maakt, toegankelijk zijn via het openbare internet. Dit zou een openbare of privé bewaarplaats op [GitHub](https://github.com/) of een ander geval van een [!DNL Git] server kunnen zijn die u hebt besloten om te ontvangen.
+De [!DNL Data Science Workspace JupyterLab]-omgeving is een gehoste omgeving en wordt niet geïmplementeerd binnen uw bedrijfsfirewall. Daarom moet de Git-server waarmee u verbinding maakt, toegankelijk zijn via het openbare internet. Dit zou een openbare of privé bewaarplaats op [GitHub](https://github.com/) of een ander geval van een [!DNL Git] server kunnen zijn die u hebt besloten om zich te ontvangen.
 
-## Verbinding maken [!DNL Git] met de [!DNL Data Science Workspace JupyterLab Notebooks] omgeving
+## [!DNL Git] verbinden met de [!DNL Data Science Workspace JupyterLab Notebooks]-omgeving
 
-Begin door te lanceren [!DNL Adobe Experience Platform] en naar het [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) milieu te navigeren.
+Start door [!DNL Adobe Experience Platform] te starten en naar de [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab)-omgeving te navigeren.
 
-Selecteer [!DNL JupyterLab]Bestand **[!UICONTROL en houd de muisaanwijzer boven]** Nieuw ****. Van dropdown die verschijnt, uitgezochte **[!UICONTROL Terminal]**.
+Selecteer **[!UICONTROL Bestand]** in [!DNL JupyterLab] en houd de muisaanwijzer boven **[!UICONTROL Nieuw]**. Van dropdown die verschijnt, selecteer **[!UICONTROL Terminal]**.
 
 ![JupyterLab Nav](../images/jupyterlab/tutorials/open-terminal.png)
 
@@ -40,9 +40,9 @@ Daarna, binnen *Terminal* navigeer aan uw werkruimte door het volgende bevel te 
 
 >[!TIP]
 >
-> Als u een lijst met beschikbare it-opdrachten wilt weergeven, geeft u de opdracht: `git -help` in uw terminal.
+> Als u een lijst met beschikbare it-opdrachten wilt weergeven, geeft u de opdracht: `git -help` binnen uw Terminal.
 
-Vervolgens kloont u de opslagplaats die u wilt gebruiken met de `git clone` opdracht. Klonen van uw project met een `https://` URL in plaats van `ssh://`.
+Vervolgens kloont u de opslagplaats die u wilt gebruiken met de opdracht `git clone`. U kunt uw project klonen met een `https://`-URL in plaats van `ssh://`.
 
 **Voorbeeld**:
 
@@ -60,4 +60,4 @@ Vervolgens kloont u de opslagplaats die u wilt gebruiken met de `git clone` opdr
 
 ## Volgende stappen
 
-Nadat u klaar bent met het klonen van uw opslagplaats, kunt u Git gebruiken zoals u gewoonlijk op uw lokale computer zou doen om met anderen samen te werken aan laptops. Raadpleeg de [!DNL JupyterLab]pagina voor meer informatie over wat u binnen kunt doen [[!DNL JupyterLab user guide]](./overview.md).
+Nadat u klaar bent met het klonen van uw opslagplaats, kunt u Git gebruiken zoals u gewoonlijk op uw lokale computer zou doen om met anderen samen te werken aan laptops. Voor meer informatie over wat u binnen [!DNL JupyterLab] kunt doen, zie [[!DNL JupyterLab user guide]](./overview.md).
