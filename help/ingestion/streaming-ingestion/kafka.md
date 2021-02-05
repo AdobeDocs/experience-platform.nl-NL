@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;kafka;kafka connector;Kafka;
+keywords: Experience Platform;thuis;populaire onderwerpen;kafka;kafka-connector;Kafka;
 solution: Experience Platform
-title: Kafka-connector
+title: Kafka Connector
 topic: overview
 description: De streamaansluiting voor Adobe Experience Platform is gebaseerd op Apache Kafka Connect. Deze bibliotheek kan worden gebruikt om JSON-gebeurtenissen van Kafka-onderwerpen in uw datacenter rechtstreeks naar Experience Platform in real-time te streamen.
 translation-type: tm+mt
-source-git-commit: 7fc7f0e525d994904dc71b1eb7136f11c05d5672
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 # [!DNL Kafka] connector voor Adobe Experience Platform
 
-De streamconnector voor Adobe Experience Platform is gebaseerd op [!DNL Apache Kafka Connect]. Deze bibliotheek kan worden gebruikt om JSON-gebeurtenissen van [!DNL Kafka] onderwerpen in uw datacenter rechtstreeks naar [!DNL Experience Platform] in real-time te streamen.
+De stroomconnector voor Adobe Experience Platform is gebaseerd op [!DNL Apache Kafka Connect]. Deze bibliotheek kan worden gebruikt om JSON-gebeurtenissen vanuit [!DNL Kafka]-onderwerpen in uw datacenter rechtstreeks te streamen naar [!DNL Experience Platform] in real-time.
 
-De stroomschakelaar is een gootsteen (unidirectionele) schakelaar, leverend gegevens van [!DNL Kafka] onderwerpen aan een geregistreerd eindpunt op [!DNL Experience Platform]. Om deze schakelaar te gebruiken, moet u de bibliotheek downloaden, het toevoegen aan uw bestaande [!DNL Kafka] plaatsing, en [!DNL Kafka] onderwerp(en) vormen aan de Adobe die HTTP URL stromen. Aanvullende code is **niet** vereist. De schakelaar steunt de volgende eigenschappen:
+De stroomschakelaar is een gootsteen (eenrichtings) schakelaar, leverend gegevens van [!DNL Kafka] onderwerpen aan een geregistreerd eindpunt op [!DNL Experience Platform]. Als u deze connector wilt gebruiken, moet u de bibliotheek downloaden, deze toevoegen aan uw bestaande [!DNL Kafka]-implementatie en het [!DNL Kafka]-onderwerp(en) configureren naar de HTTP-URL voor streaming van de Adobe. Aanvullende code is **niet** vereist. De schakelaar steunt de volgende eigenschappen:
 
 - Geverifieerde verzameling van gegevens
 - Het in batch plaatsen van berichten om netwerkvraag te verminderen en productie te verhogen
 
-Lees voor meer informatie over de [!DNL Kafka] connector, inclusief instructies over het instellen van de connector, de [gids](https://github.com/adobe/experience-platform-streaming-connect)Aan de slag. Lees de handleiding voor [ontwikkelaars voor een gedetailleerdere workflow](https://www.adobe.com/go/kafka-connector-developer-guide).
+Voor meer informatie over de [!DNL Kafka] schakelaar, met inbegrip van instructies over hoe te opstelling de schakelaar, te lezen [begonnen gids](https://github.com/adobe/experience-platform-streaming-connect). Lees de [handleiding voor ontwikkelaars](https://www.adobe.com/go/kafka-connector-developer-guide) voor een gedetailleerdere workflow.
