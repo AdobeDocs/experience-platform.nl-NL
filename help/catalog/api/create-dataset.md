@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;huis;populaire onderwerpen;dataset;Dataset;creeer een dataset;creeer dataset;laat dataset toe
 solution: Experience Platform
-title: Een gegevensset maken
+title: Een gegevensset maken in de API
 topic: developer guide
-description: In dit document wordt beschreven hoe u een gegevenssetobject maakt in Catalog.
+description: In dit document wordt beschreven hoe u een gegevenssetobject maakt in de API voor catalogusservice.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
 
 
-# Een gegevensset maken
+# Een gegevensset maken in de API
 
 Als u een gegevensset wilt maken met de [!DNL Catalog]-API, moet u de `$id`-waarde weten van het [!DNL Experience Data Model]-schema (XDM) waarop de gegevensset wordt gebaseerd. Zodra u schema identiteitskaart hebt, kunt u een dataset tot stand brengen door een verzoek van de POST aan het `/datasets` eindpunt in [!DNL Catalog] API te doen.
 
