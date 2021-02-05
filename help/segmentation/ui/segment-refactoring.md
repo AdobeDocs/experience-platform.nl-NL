@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment builder;Segment builder
+keywords: Experience Platform;huis;populaire onderwerpen;segmentatie;Segmentering;segmentbuilder;Segment builder
 solution: Experience Platform
-title: De de veranderingengids van de Bouwer van het Segmentatiesegment van de Dienst
+title: De Gids van de Beperkingen UI van de Tijd van de Vervorming van de Refactorgesegmentatie
 topic: ui guide
 description: 'De Bouwer van het segment verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen. '
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Eerder kon aan een afzonderlijke gebeurtenis meerdere regels voor tijdbeperking 
 
 ![](../images/ui/segment-refactoring/former-time-constraint.png)
 
-Zoals u kunt zien, heeft dit segment twee beperkingen op regel-niveau: Een voor &quot;[!UICONTROL Vandaag]&quot; en een voor &quot;[!UICONTROL Gisteren]&quot;.
+Zoals u kunt zien, heeft dit segment twee beperkingen op regel-niveau: Eén voor &quot;[!UICONTROL Today]&quot; en de andere voor &quot;[!UICONTROL Gisteren]&quot;.
 
 Het vorige segment is gelijkwaardig aan het volgende segment — beide gebeurtenis-vlakke tijdbeperkingen zijn verbonden gebruikend een exploitant AND. De eerste tijdbeperking op gebeurtenisniveau verwijst naar een klikgebeurtenis waarvan de naam gelijk is aan &quot;Training&quot; en die vandaag plaatsvindt, terwijl de tweede tijdbeperking op gebeurtenisniveau verwijst naar een klikgebeurtenis waarvan de naam gelijk is aan &quot;Huisdieren&quot; en die gisteren heeft plaatsgevonden.
 
