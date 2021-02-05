@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;beacon;interaction details;datatype;data-type;data type;
+keywords: Experience Platform;thuis;populaire onderwerpen;schema;Schema;XDM;gebieden;schema's;Schemas;baken;interactiedetails;datatype;data-type;gegevenstype;
 solution: Experience Platform
-title: Gegevenstype van geointeractie
+title: Gegevenstype Geo-interactie
 topic: overview
 description: Dit document biedt een overzicht van het XDM-gegevenstype voor Geo Interaction Details.
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL Gegevenstype van geo-interactie]
+# [!UICONTROL Geo interactie ] detailsgegevenstype
 
-[!UICONTROL De interactiedetails] van geo is een standaard XDM gegevenstype dat de huidige staat van opneming in een geografisch bepaald gebied beschrijft.
+[!UICONTROL De interactie van geo ] detailleert een standaard XDM gegevenstype dat de huidige staat van opneming in een geografisch bepaald gebied beschrijft.
 
 <img src="../images/data-types/geo-interaction-details.png" width="400" /><br />
 
