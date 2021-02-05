@@ -5,7 +5,7 @@ title: Een CRM-systeem verkennen met de Flow Service API
 topic: overview
 description: Deze zelfstudie gebruikt de Flow Service API om CRM-systemen te verkennen.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 1%
