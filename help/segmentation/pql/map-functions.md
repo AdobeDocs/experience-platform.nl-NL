@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;map functions;map;
+keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;pql;PQL;De Taal van de Vraag van het profiel;kaartfuncties;kaart;
 solution: Experience Platform
-title: Toewijzingsfuncties
+title: PQL-mapfuncties
 topic: developer guide
 description: De Taal van de Vraag van het profiel (PQL) biedt functies om interactie met kaarten gemakkelijker te maken.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 3%
+source-wordcount: '173'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 ## Get
 
-De `get` functie wordt gebruikt om de waarde van een kaart voor een bepaalde sleutel terug te winnen.
+De functie `get` wordt gebruikt om de waarde van een kaart voor een bepaalde sleutel terug te winnen.
 
 **Indeling**
 
@@ -29,7 +29,7 @@ De `get` functie wordt gebruikt om de waarde van een kaart voor een bepaalde sle
 
 **Voorbeeld**
 
-Met de volgende PQL-query wordt de waarde van de identiteitskaart voor de sleutel opgehaald `example@example.com`.
+De volgende vraag PQL krijgt de waarde van de identiteitskaart voor sleutel `example@example.com`.
 
 ```sql
 identityMap.get("example@example.com")
@@ -37,7 +37,7 @@ identityMap.get("example@example.com")
 
 ## Toetsen
 
-De `keys` functie wordt gebruikt om alle sleutels voor een bepaalde kaart terug te winnen.
+De functie `keys` wordt gebruikt om alle sleutels voor een bepaalde kaart terug te winnen.
 
 **Indeling**
 
@@ -47,7 +47,7 @@ De `keys` functie wordt gebruikt om alle sleutels voor een bepaalde kaart terug 
 
 **Voorbeeld**
 
-Met de volgende PQL-query worden alle toetsen voor de kaart opgehaald `identityMap`.
+De volgende vraag PQL krijgt alle sleutels voor de kaart `identityMap`.
 
 ```sql
 identityMap.keys()
@@ -55,7 +55,7 @@ identityMap.keys()
 
 ## Waarden
 
-De `values` functie wordt gebruikt om alle waarden van een bepaalde kaart terug te winnen.
+De functie `values` wordt gebruikt om alle waarden van een bepaalde kaart terug te winnen.
 
 **Indeling**
 
@@ -65,7 +65,7 @@ De `values` functie wordt gebruikt om alle waarden van een bepaalde kaart terug 
 
 **Voorbeeld**
 
-Met de volgende PQL-query worden alle waarden voor de kaart opgehaald `identityMap`.
+De volgende vraag PQL krijgt alle waarden voor de kaart `identityMap`.
 
 ```sql
 identityMap.values()
@@ -73,4 +73,4 @@ identityMap.values()
 
 ## Volgende stappen
 
-Nu u over kaartfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Lees voor meer informatie over andere PQL-functies het overzicht [van de](./overview.md)profielquery.
+Nu u over kaartfuncties hebt geleerd, kunt u hen binnen uw vragen gebruiken PQL. Voor meer informatie over andere functies PQL, te lezen gelieve [het Taal van de Vraag van het Profiel](./overview.md).
