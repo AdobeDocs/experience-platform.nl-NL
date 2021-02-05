@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;label voor gegevensgebruik;beleidsservice;gebruikershandleiding voor labels voor gegevensgebruik
 solution: Experience Platform
-title: Gebruiksaanwijzing voor labels voor gegevensgebruik
+title: Labels voor gegevensgebruik beheren in de gebruikersinterface
 topic: labels
-description: In deze gebruikershandleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
+description: In deze handleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
 
 
-# Gebruiksaanwijzing voor labels voor gegevensgebruik
+# Labels voor gegevensgebruik beheren in de gebruikersinterface
 
 In deze gebruikershandleiding worden de stappen beschreven voor het werken met labels voor gegevensgebruik in de gebruikersinterface [!DNL Experience Platform]. Voordat u de handleiding kunt gebruiken, raadpleegt u het [[!DNL Data Governance] overzicht](../home.md) voor een robuustere introductie van het [!DNL Data Governance]-framework.
 
-## De etiketten van het gegevensgebruik op het datasetniveau beheren
+## Labels beheren op het niveau van de gegevensset
 
 Om de etiketten van het gegevensgebruik op het datasetniveau te beheren, moet u een bestaande dataset selecteren of nieuwe creëren. Nadat u zich hebt aangemeld bij Adobe Experience Platform, selecteert u **[!UICONTROL Datasets]** in de linkernavigatie om de **[!UICONTROL Datasets]**-werkruimte te openen. Deze pagina maakt een lijst van alle gecreeerde datasets die tot uw organisatie behoren, samen met nuttige details met betrekking tot elke dataset.
 
@@ -75,7 +75,7 @@ De schakeloptie **[!UICONTROL Overerfde labels tonen]** is standaard ingeschakel
 
 ![Overerfde labels verbergen](../images/labels/hide_inherited_labels.png)
 
-## De etiketten van het gegevensgebruik op het niveau van het datasetgebied beheren
+## Labels op veldniveau beheren
 
 Als u doorgaat met de workflow voor [het toevoegen en bewerken van labels voor gegevensgebruik op gegevenssetniveau](#add-labels), kunt u ook labels op veldniveau beheren in de werkruimte **[!UICONTROL Gegevensbeheer]** voor die gegevensset.
 
