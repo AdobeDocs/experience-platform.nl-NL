@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;enum;primaire identiteit;primaire identiteit;XDM individueel profiel;ExperienceEvent;XDM ExperienceEvent;ExperienceEvent;ExperienceEvent;XDM ExperienceEvent;XDM ExperienceEvent;schema ontwerp;best practices
 solution: Experience Platform
-title: Aanbevolen procedures voor gegevensmodellering in Adobe Experience Platform
+title: Aanbevolen procedures voor gegevensmodellering
 topic: overview
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '2515'
+source-wordcount: '2507'
 ht-degree: 1%
 
 ---
 
 
-# Aanbevolen procedures voor gegevensmodellering in Adobe Experience Platform
+# Aanbevolen procedures voor gegevensmodellering
 
 [!DNL Experience Data Model] (XDM) is het kernkader dat de gegevens van de klantenervaring door gemeenschappelijke structuren en definities voor gebruik in de stroomafwaartse diensten van Adobe Experience Platform te verstrekken gestandaardiseerd. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die u toestaat om waardevolle inzichten van klantenacties te bereiken, klantenpubliek door segmenten te bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden uit te drukken.
 
@@ -75,7 +75,7 @@ Als u wilt analyseren hoe bepaalde kenmerken binnen een entiteit in de loop der 
 | --- | --- | --- | --- | --- |
 | 1234567 | Toevoegen | 275098 | 2 | 1 okt. 10:32 |
 | 1234567 | Verwijderen | 275098 | 1 | 1 okt. 10:33 |
-| 1234567 | Toevoegen | 486502 | 3 | 1 okt. 10:41 |
+| 1234567 | Toevoegen | 486502 | 1 | 1 okt. 10:41 |
 | 1234567 | Toevoegen | 910482 | 5 | 3 okt. 14:15 |
 
 #### Gebruiksgevallen voor segmentatie
