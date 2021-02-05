@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 2%
@@ -33,52 +33,52 @@ Updates voor bestaande functies:
 - [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
-## Adobe Experience Platform Data Lake-migratie {#migration}
+## Adobe Experience Platform Data Lake migratie {#migration}
 
 Terwijl Adobe het Data Lake van Gen1 naar Gen2 migreert, zullen gebruikers van het Data Lake kunnen lezen, maar alle mogelijkheden die in het Data Lake schrijven, zullen worden beïnvloed. Adobe zal contact opnemen met systeembeheerders om de gevolgen van de migratie in detail te bespreken en de migratiedata en -tijden voor specifieke IMS-organisaties te bevestigen.
 
-Lees voor meer informatie de migratiehandleiding [van het](../../landing/adls2-gen2-migration.md)Data Lake.
+Lees voor meer informatie de [Migratiehandleiding voor datameer](../../landing/adls2-gen2-migration.md).
 
 ## [!DNL Access control] {#access-control}
 
-[!DNL Experience Platform] Gebruikt [Adobe Admin Console](https://adminconsole.adobe.com) -productprofielen om gebruikers te koppelen aan machtigingen en sandboxen. Machtigingen beheren de toegang tot verschillende mogelijkheden van Platforms, waaronder gegevensmodellering, profielbeheer en sandboxbeheer.
+[!DNL Experience Platform] hefboomwerkingen  [Adobe Admin ](https://adminconsole.adobe.com) Consoleproduct profielen om gebruikers met toestemmingen en zandbakken te verbinden. Machtigingen beheren de toegang tot verschillende mogelijkheden van Platforms, waaronder gegevensmodellering, profielbeheer en sandboxbeheer.
 
 **Belangrijkste kenmerken**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Toestemmingen | Op de [!DNL Admin Console]tab in een [!DNL Platform] productprofiel kunt u aanpassen welke [!DNL Platform] mogelijkheden beschikbaar zijn voor de gebruikers die aan dat profiel zijn gekoppeld. Beschikbare machtigingscategorieën zijn: **[!UICONTROL Gegevensmodellering]**, **[!UICONTROL gegevensbeheer]**, **[!UICONTROL Profielbeheer]**, **[!UICONTROL Identity Management]**, **[!UICONTROL gegevenscontrole]**, ************************ Sandbox-beheer, DestinationData Ingestie, Data Science Workspace, Query Service, en Data Governance. |
-| Toegang tot sandboxen | Met het tabblad **[!UICONTROL Machtigingen]** in een [!DNL Platform] productprofiel kunnen gebruikers toegang krijgen tot specifieke sandboxen. Zie de sectie over [sandboxen](#sandboxes) hieronder voor meer informatie. |
+| Toestemmingen | In [!DNL Admin Console] kunt u op het tabblad in een [!DNL Platform]-productprofiel aanpassen welke [!DNL Platform]-mogelijkheden beschikbaar zijn voor de gebruikers die aan dat profiel zijn gekoppeld. Beschikbare machtigingscategorieën zijn: **[!UICONTROL Gegevensmodellering]**, **[!UICONTROL Gegevensbeheer]**, **[!UICONTROL Profielbeheer]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Gegevensbewaking]**, **[!UICONTROL Sandboxbeheer]**, **[!UICONTROL Doelen&lt;a1 3/>,**[!UICONTROL  Gegevensinsluiting ]**,**[!UICONTROL  Gegevenswetenschapswerkruimte ]**,**[!UICONTROL  Query-service ]**en**[!UICONTROL  Gegevensbeheer ]**.]** |
+| Toegang tot sandboxen | Met het tabblad **[!UICONTROL Machtigingen]** in een productprofiel [!DNL Platform] kunnen gebruikers toegang krijgen tot specifieke sandboxen. Zie de sectie over [sandboxen](#sandboxes) hieronder voor meer informatie. |
 
-Zie het overzicht [van](../../access-control/home.md)toegangsbeheer voor meer informatie.
+Voor meer informatie, gelieve te zien [toegangsbeheeroverzicht](../../access-control/home.md).
 
 ## [!DNL Offer Decisioning] {#offer-decisioning}
 
-[!DNL Offer Decisioning] is een toepassingsservice geïntegreerd met [!DNL Experience Platform]. Hierdoor kunt u uw klanten de beste aanbieding en ervaring op alle aanraakpunten op het juiste moment aanbieden. [!DNL Platform]
+[!DNL Offer Decisioning] is een toepassingsservice geïntegreerd met  [!DNL Experience Platform]. Hiermee kunt u [!DNL Platform] gebruiken om uw klanten de beste aanbieding en ervaring op alle aanraakpunten op het juiste moment te bieden.
 
 **Belangrijkste kenmerken**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Centrale aanbiedingenbibliotheek | De interface waar u creeert en de verschillende elementen beheert die uw aanbiedingen vormen, en hun regels en beperkingen bepalen. |
-| Beslissingsengine voorstellen | De Offertenbeslissingsengine maakt gebruik van [!DNL Platform] gegevens en [!DNL Real-time Customer Profiles], samen met de aanbiedingsbibliotheek, om de juiste tijd, klanten en kanalen te selecteren waaraan aanbiedingen worden geleverd. |
+| Beslissingsengine voorstellen | De Offertenbeslissingsengine gebruikt [!DNL Platform] gegevens en [!DNL Real-time Customer Profiles], samen met de Offertebibliotheek, om de juiste tijd, klanten en kanalen te selecteren waaraan aanbiedingen worden geleverd. |
 
 Raadpleeg de [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=en) documentatie voor meer informatie.
 
 ## [!DNL Sandboxes] {#sandboxes}
 
-[!DNL Experience Platform] is ontworpen om toepassingen voor digitale ervaring wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen. Om aan deze behoefte tegemoet te komen, [!DNL Experience Platform] verstrekt zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+[!DNL Experience Platform] is ontworpen om toepassingen voor digitale ervaring wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen. Om aan deze behoefte tegemoet te komen, biedt [!DNL Experience Platform] sandboxen die één [!DNL Platform]-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaring te ontwikkelen en te ontwikkelen.
 
 **Belangrijkste kenmerken**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Productiesandbox | [!DNL Experience Platform] biedt één productiesandbox die niet kan worden verwijderd of opnieuw ingesteld. Het totale aantal beschikbare sandboxen, productie en niet-productie, wordt bepaald door de verkregen licentie. |
-| Niet-productie sandboxen | Er kunnen meerdere niet-productiesandboxen voor één [!DNL Platform] instantie worden gemaakt, zodat u functies kunt testen, experimenten kunt uitvoeren en aangepaste configuraties kunt maken zonder dat dit invloed heeft op de productiesandbox. |
-| Sandboxschakelaar | In de [!DNL Experience Platform] gebruikersinterface kunt u met de sandboxschakelaar in de linkerbovenhoek van het scherm schakelen tussen beschikbare sandboxen via een vervolgkeuzemenu. De sandboxswitch biedt ook een zoekfunctie waarmee u door beschikbare sandboxen kunt filteren. |
-| `x-sandbox-name` header | Alle aanroepen van [!DNL Experience Platform] API&#39;s moeten nu de nieuwe `x-sandbox-name` header bevatten, waarvan de waarde verwijst naar het `name` kenmerk van de sandbox waarin de bewerking plaatsvindt. |
+| Niet-productie sandboxen | Er kunnen meerdere niet-productiesandboxen worden gemaakt voor één [!DNL Platform]-instantie, zodat u functies kunt testen, experimenten kunt uitvoeren en aangepaste configuraties kunt maken zonder dat dit van invloed is op uw productiesandbox. |
+| Sandboxschakelaar | In de [!DNL Experience Platform] gebruikersinterface, staat de zandbakschakelaar in de bovenkant-linkerhoek van het scherm u toe om tussen beschikbare zandbakken door een dropdown menu te schakelen. De sandboxswitch biedt ook een zoekfunctie waarmee u door beschikbare sandboxen kunt filteren. |
+| `x-sandbox-name` header | Alle aanroepen van [!DNL Experience Platform] API&#39;s moeten nu de nieuwe `x-sandbox-name`-header bevatten, waarvan de waarde verwijst naar het `name`-kenmerk van de sandbox waarin de bewerking plaatsvindt. |
 
-Zie het [sandboxoverzicht](../../sandboxes/home.md)voor meer informatie.
+Zie het [sandboxoverzicht](../../sandboxes/home.md) voor meer informatie.
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -89,25 +89,25 @@ Zie het [sandboxoverzicht](../../sandboxes/home.md)voor meer informatie.
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Iteratieve handelingen | [!DNL Data Prep] Mapper ondersteunt nu het uitvoeren van iteratieve bewerkingen in een hiërarchie. |
-| Mapper, functie | [!DNL Data Prep] Mapper heeft nu de capaciteit om een attribuut van de bron aan doelXDM **niet** te kopiëren. |
+| Mapper, functie | [!DNL Data Prep] Mapper heeft nu de capaciteit om een attribuut van de bron aan doelXDM  **** niet te kopiëren. |
 
-Zie het [[!DNL Data Prep] overzicht](../../data-prep/home.md)voor meer informatie.
+Zie [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie.
 
 ## Werkruimte voor gegevenswetenschap {#dsw}
 
-De Werkruimte van de Wetenschap van Gegevens gebruikt machine het leren en kunstmatige intelligentie om inzichten van uw gegevens tot stand te brengen. De Data Science Workspace is geïntegreerd in Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen. Een van de manieren waarop de Werkruimte van de Wetenschap van Gegevens dit verwezenlijkt is door het gebruik van [!DNL JupyterLab]. [!DNL JupyterLab] is een webgebaseerde gebruikersinterface voor [[!DNL Project Jupyter]](https://jupyter.org/) en is nauw geïntegreerd in Adobe Experience Platform. Het verstrekt een interactieve ontwikkelomgeving voor gegevenswetenschappers om met [!DNL Jupyter] notitieboekjes, code, en gegevens te werken.
+De Werkruimte van de Wetenschap van Gegevens gebruikt machine het leren en kunstmatige intelligentie om inzichten van uw gegevens tot stand te brengen. De Data Science Workspace is geïntegreerd in Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen. Één van de manieren de Werkruimte van de Wetenschap van Gegevens verwezenlijkt dit is door het gebruik van [!DNL JupyterLab]. [!DNL JupyterLab] is een webgebaseerde gebruikersinterface voor  [[!DNL Project Jupyter]](https://jupyter.org/) en is nauw geïntegreerd in Adobe Experience Platform. Het verstrekt een interactieve ontwikkelomgeving voor gegevenswetenschappers om met [!DNL Jupyter] laptops, code, en gegevens te werken.
 
 **Belangrijkste kenmerken**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| [!DNL JupyterLab] Recipe Builder-sjabloon | Vereisten voor notebooks om te recept gebruiken en versies bijgewerkt. [!DNL Python] In ML Runtime is de basisafbeelding bijgewerkt om uitsluitend [!DNL Python] 3.6.7 en een [!DNL Conda] omgeving te gebruiken. |
+| [!DNL JupyterLab] Recipe Builder-sjabloon | Vereisten voor notebooks om te recept gebruiken en versies bijgewerkt. [!DNL Python] In ML Runtime is de basisafbeelding bijgewerkt om uitsluitend  [!DNL Python] 3.6.7 en een  [!DNL Conda] omgeving te gebruiken. |
 
-Lees voor meer informatie het document over het [maken van een recept met Jupyter-laptops](../../data-science-workspace/jupyterlab/create-a-recipe.md).
+Lees voor meer informatie het document over [het maken van een recept met Jupyter-laptops](../../data-science-workspace/jupyterlab/create-a-recipe.md).
 
 ## [!DNL Destinations] Service {#destinations}
 
-In het Platform [van Gegevens van de Klant in](../../rtcdp/overview.md)real time, zijn de bestemmingen prebuilt integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In [Real-time Platform van de Gegevens van de Klant](../../rtcdp/overview.md), zijn de bestemmingen prebuilt integraties met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe bestemmingen**
 
@@ -126,7 +126,7 @@ In het Platform [van Gegevens van de Klant in](../../rtcdp/overview.md)real time
 | Bestanden plannen | Voor zowel e-mailopslagdoelen als cloudopslagdoelen kunnen gebruikers een eenmalige export maken of dagelijkse momentopnamen maken. |
 | Verplichte velden | Gebruikers kunnen velden markeren als verplicht, zodat alleen velden die het verplichte veld bevatten, worden geëxporteerd. |
 
-Zie het overzicht [](../../destinations/home.md)Doelen voor meer informatie.
+Zie [Overzicht van doelen](../../destinations/home.md) voor meer informatie.
 
 ## Intelligente services {#intelligent-services}
 
@@ -138,7 +138,7 @@ Intelligente services stellen marketinganalisten en praktijkmensen in staat om g
 | ------- | ----------- |
 | Gegevensset met consumentenervaringen (CEE) | Het creëren van een CEE dataset steunt nu het toevoegen van identiteitsgebieden aan de dataset met de Redacteur van het Schema. Attribution AI en Customer AI gebruiken de primaire identiteit voor het combineren van gebeurtenissen. |
 
-Voor meer informatie, gelieve de sectie over het [toevoegen van identiteitsgebieden aan een dataset](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) in de Intelligente gids van de de gegevensvoorbereiding van de Diensten te lezen.
+Lees voor meer informatie de sectie over [het toevoegen van identiteitsgebieden aan een dataset](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) in de Intelligente gids van de de gegevensvoorbereiding van de Diensten.
 
 ### Attribution AI
 
@@ -160,7 +160,7 @@ Attribution AI, als onderdeel van Intelligente Diensten is een multi-channel, al
 | Bovenste omzetpaden | Een nieuwe die inzichten grafiek in het lusje van de Analyse van de Weg wordt gevestigd. De grafiek bevat een lijst met de bovenste vijf conversiepaden die de reeks aanraakpunten met marketingkanalen weergeven die tot de meeste conversies heeft geleid. |
 | Efficiëntie van aanraakpunten | Verstrekt diepgaande inzichten van de drie belangrijkste variabelen die uw model touchpoint doeltreffendheid door meet. De variabelen zijn de verhouding tussen positieve en negatieve paden die zijn aangeraakt, de efficiëntie van aanraakpunten en het aanraakpuntvolume. |
 
-Lees het overzicht [van de](../../intelligent-services/attribution-ai/overview.md)Attribution AI voor meer informatie.
+Lees voor meer informatie het [overzicht Attribution AI](../../intelligent-services/attribution-ai/overview.md).
 
 ### Customer AI
 
@@ -178,7 +178,7 @@ De AI van de klant, als deel van de Intelligente Diensten verstrekt marketers de
 | Voorspeldoel | De flexibiliteit bij het creëren van een vooruitgangsdoel is verhoogd met nieuwe opties om te voorspellen of &quot;zal voorkomen&quot;of &quot;niet zal voorkomen&quot;. Bovendien zijn de opties toegevoegd waarmee u kunt voorspellen of &quot;alle gebeurtenissen&quot; plaatsvinden of dat &quot;alle gebeurtenissen&quot; plaatsvinden wanneer meerdere gebeurtenissen worden gebruikt. |
 | Influentiefactor drilldown | Propensiteit bovenaan invloedrijke factoremmers bevatten nu boor downs. Boor downs is een dieper niveauoverzicht van waarden voor elk van de hoogste invloedrijke factoren binnen een aandrijvingsemmer. |
 
-Lees voor meer informatie het AI-overzicht [van de](../../intelligent-services/customer-ai/overview.md)klant.
+Lees voor meer informatie het [Overzicht van de AI van de Klant](../../intelligent-services/customer-ai/overview.md).
 
 ## Klantprofiel in realtime {#profile}
 
@@ -191,11 +191,11 @@ Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en
 | Workflow voor bijgewerkte samenvoegbeleidsregels | Platform heeft de configuratie van het fusiebeleid aan een nieuwe stapsgewijze werkschema bevorderd. Dit werkschema laat gebruikers toe om gegevensfragmenten van veelvoudige datasets van het Profiel samen te brengen en prioriteit te plaatsen voor hoe het gegeven over die datasets wordt samengevoegd om een uitvoerige mening van elk individu tot stand te brengen. De gebruikers kunnen geselecteerde datasets van het Profiel van XDM Individuele samenvoegen door de aangewezen samenvoegmethode (de Chronologie bevolen of de voorkeur van Dataset) te selecteren en datasets van ExperienceEvent aan de datasets van het Profiel toe te voegen. |
 | Weergave Unieschema | In het Experience Platform UI, kunnen de gebruikers informatie over alle schema&#39;s en datasets gemakkelijker vinden die tot het unieschema bijdragen, evenals oppervlakte zeer belangrijke attributen zoals identiteit en relatievelden. Deze updates verbeteren de capaciteit om problemen op te lossen en te bevestigen dat de profielen correct worden gevormd, worden de identiteiten correct vastgemaakt, en de gegevens zijn met succes opgenomen. |
 
-Lees voor meer informatie over het profiel van de klant in real time, waaronder zelfstudies en best practices voor het werken met [!DNL Profile] gegevens, het overzicht [van het profiel van de klant in](../../profile/home.md)realtime.
+Lees het [Real-time overzicht van het profiel van de klant](../../profile/home.md) voor meer informatie over het realtime profiel van de klant, inclusief zelfstudies en best practices voor het werken met gegevens van [!DNL Profile].
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Platform] services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met services van [!DNL Platform]. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
 
 [!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
@@ -203,18 +203,18 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| [!DNL Shopify] | U kunt nu verbinding maken [!DNL Shopify] met [!DNL Experience Platform] de [!DNL Flow Service] API of de UI. Zie het [verbindingsoverzicht](../../sources/connectors/ecommerce/shopify.md) Shopify voor meer informatie. |
+| [!DNL Shopify] | U kunt [!DNL Shopify] nu verbinden met [!DNL Experience Platform] gebruikend [!DNL Flow Service] API of UI. Zie [Verbindingsoverzicht schopify](../../sources/connectors/ecommerce/shopify.md) voor meer informatie. |
 
 **Belangrijkste kenmerken**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Verbindingsgegevens bijwerken | U kunt de namen, beschrijvingen en referenties van bestaande batchverbindingen nu bijwerken met de API en de gebruikersinterface [!DNL Flow Service] . Zie de zelfstudie over het [bijwerken van verbindingen met de Flow Service API](../../sources/tutorials/api/update.md) en het [bewerken van accountgegevens met de UI](../../sources/tutorials/ui/monitor.md)voor meer informatie. |
-| Verbindingen verwijderen | Batchverbindingen die fouten bevatten of onnodig zijn geworden, kunnen nu worden verwijderd met de API en de UI. [!DNL Flow Service] Voor meer informatie, zie de zelfstudie over het [schrappen van verbindingen gebruikend de Dienst API](../../sources/tutorials/api/delete.md) van de Stroom en het [schrappen van rekeningen gebruikend UI](../../sources/tutorials/ui/delete-accounts.md). |
-| Hiërarchische toewijzing | U kunt een hiërarchisch bronbestand, zoals JSON of Parquet, voorvertonen tijdens het invoeren van gegevens. Zie de zelfstudie over het [configureren van een gegevensstroom voor cloudopslagconnectors in de gebruikersinterface](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) voor meer informatie. |
+| Verbindingsgegevens bijwerken | U kunt de namen, beschrijvingen en referenties van bestaande batchverbindingen nu bijwerken met de API [!DNL Flow Service] en de interface. Zie de zelfstudie over [het bijwerken van verbindingen met de Flow Service API](../../sources/tutorials/api/update.md) en [het bewerken van accountgegevens met behulp van de UI](../../sources/tutorials/ui/monitor.md) voor meer informatie. |
+| Verbindingen verwijderen | Batchverbindingen die fouten bevatten of onnodig zijn geworden, kunnen nu worden verwijderd met de API [!DNL Flow Service] en de UI. Zie de zelfstudie over [het verwijderen van verbindingen met de Flow Service API](../../sources/tutorials/api/delete.md) en [het verwijderen van accounts met de UI](../../sources/tutorials/ui/delete-accounts.md) voor meer informatie. |
+| Hiërarchische toewijzing | U kunt een hiërarchisch bronbestand, zoals JSON of Parquet, voorvertonen tijdens het invoeren van gegevens. Zie de zelfstudie over [het configureren van een gegevensstroom voor cloudopslagconnectors in de UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) voor meer informatie. |
 | API-ondersteuning voor toewijzing in streamingbronnen | U kunt nu API&#39;s gebruiken om toewijzingsfuncties uit te voeren met streamingbronnen. |
 | API-ondersteuning voor aangepaste scheidingstekens voor bronnen voor cloudopslag | U kunt bestanden die niet door CSV zijn gescheiden nu verzamelen met bronnen voor cloudopslag. U kunt elk scheidingsteken voor één kolom gebruiken, zoals een tab, komma, pipe, puntkomma of hash, om platte bestanden in elke gewenste indeling te verzamelen. |
 | Sandbox-ondersteuning voor Adobe Audience Manager-connector | De Audience Manager-aansluiting is nu bekend met de sandbox. De gebruikers kunnen de schakelaar toelaten om de datasets van de Audience Manager aan de zandbak van hun kiezen (met inbegrip van niet productiesandboxen) te leiden. De configuratie is beperkt tot één sandbox per IMS Org. |
 | UX-verbeteringen | Op bestanden gebaseerde inname is nu toegankelijk via de broncatalogus. |
 
-Zie het [bronoverzicht](../../sources/home.md)voor meer informatie over bronnen.
+Meer over bronnen leren, zie [bronnen overzicht](../../sources/home.md).
