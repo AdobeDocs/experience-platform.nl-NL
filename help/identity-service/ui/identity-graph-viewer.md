@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;identiteitsgrafiekviewer;Identiteitsgrafiekviewer;grafiekviewer;Grafiekviewer;Naamruimte;Identiteitsnaamruimte;Identiteitsservice;Identiteitsservice
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service
+title: Overzicht van de Identity Graph Viewer
 topic: tutorial
 description: Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
 translation-type: tm+mt
-source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
+source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
 
 
-# (bètaversie) Identiteitsgrafiekviewer
+# (bètaversie) Overzicht van identiteitsgrafiekviewer
 
 >[!NOTE]
 >
@@ -108,3 +108,9 @@ Er kunnen fouten optreden wanneer u de viewer voor identiteitsgrafieken opent. H
 ## Volgende stappen
 
 Door dit document te lezen, hebt u geleerd hoe u de identiteitsgrafieken van uw klanten kunt verkennen in de gebruikersinterface van het Platform. Raadpleeg [Overzicht van identiteitsservice](../home.md) voor meer informatie over identiteiten in Platform
+
+## Aanvullende bronnen
+
+De volgende video is bedoeld als ondersteuning voor uw begrip van de viewer voor identiteitsgrafieken.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
