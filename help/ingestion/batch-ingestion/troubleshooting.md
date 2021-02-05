@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestion;batch ingestion;
+keywords: Experience Platform;thuis;populaire onderwerpen;ingebedde gegevens;het oplossen van problemen;faq;Ingestie;Het opnemen van de partij;partij ingestie;
 solution: Experience Platform
-title: Handleiding voor het oplossen van problemen met de inname van batterijen
+title: Handleiding voor het oplossen van problemen met inslikken
 topic: troubleshooting
 description: 'Deze documentatie helpt veelgestelde vragen over Adobe Experience Platform Batch Data Ingestie-API''s te beantwoorden. '
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 # Handleiding voor het oplossen van problemen met inslikken
 
-Deze documentatie helpt veelgestelde vragen over Adobe Experience Platform API&#39; [!DNL Batch Data Ingestion] s te beantwoorden.
+Deze documentatie helpt veelgestelde vragen over Adobe Experience Platform [!DNL Batch Data Ingestion] API&#39;s te beantwoorden.
 
 ## Blokvraag API
 
 ### Zijn de partijen onmiddellijk actief na het ontvangen van HTTP 200 O.K. van CompleteBatch API?
 
-De `200 OK` reactie van de API betekent dat de batch is geaccepteerd voor verwerking. De batch is pas actief als de eindtoestand ervan, zoals Actief of Mislukt, is bereikt.
+De `200 OK` reactie van API betekent dat de partij voor verwerking is goedgekeurd - het is niet actief tot het aan zijn definitieve staat, zoals Actief of Mislukking overgaat.
 
 ### Kan de aanroep van de CompleteBatch-API opnieuw worden uitgevoerd nadat deze is mislukt?
 
@@ -73,7 +73,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Hoe wordt JSON met meerdere regels ingenomen?
 
-Als u JSON met meerdere regels wilt gebruiken, moet de `isMultiLineJson` markering worden ingesteld op het moment dat de batch wordt gemaakt. Hieronder ziet u een voorbeeld:
+Als u JSON met meerdere regels wilt invoeren, moet de markering `isMultiLineJson` worden ingesteld op het moment dat de batch wordt gemaakt. Hieronder ziet u een voorbeeld:
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
@@ -122,7 +122,7 @@ Voor JSON met meerdere regels kan één object meerdere regels beslaan, terwijl 
 ]
 ```
 
-Standaard wordt JSON met één regel [!DNL Batch Data Ingestion] gebruikt.
+[!DNL Batch Data Ingestion] gebruikt standaard Single-line JSON.
 
 ### Wordt CSV-opname ondersteund?
 
@@ -184,17 +184,17 @@ Een batch kan in de levenscyclus de volgende statussen doorlopen:
 | Status | Gegevens die naar Master zijn geschreven | Beschrijving |
 | ------ | ---------------------- | ----------- |
 | Verlaten |  | De client heeft de batch niet binnen de verwachte tijd voltooid. |
-| Afgebroken |  | De client heeft via de API&#39; [!DNL Batch Data Ingestion] s expliciet een afbreekbewerking voor de opgegeven batch aangeroepen. Wanneer de status van een batch is geladen, kan de batch niet worden afgebroken. |
+| Afgebroken |  | De client heeft via de API&#39;s [!DNL Batch Data Ingestion] expliciet een afbreekbewerking voor de opgegeven batch aangeroepen. Wanneer de status van een batch is geladen, kan de batch niet worden afgebroken. |
 | Actief/Succes | x | De partij is met succes gepromoot van stadium aan master, en is nu beschikbaar voor downstreamconsumptie. **Opmerking:** Actief en Succes worden door elkaar gebruikt. |
 | Gearchiveerd |  | De partij is gearchiveerd in de koelkast. |
-| Mislukt/Mislukt |  | Een eindstaat die uit of slechte configuratie en/of slechte gegevens voortvloeit. Er wordt een bewerkbare fout opgenomen, samen met de batch, om clients in staat te stellen de gegevens te corrigeren en opnieuw te verzenden. **Opmerking:** Mislukt en Mislukt worden onderling verwisselbaar gebruikt. |
+| Mislukt/Mislukt |  | Een eindstaat die uit of slechte configuratie en/of slechte gegevens voortvloeit. Er wordt een bewerkbare fout opgenomen, samen met de batch, om clients in staat te stellen de gegevens te corrigeren en opnieuw te verzenden. **Opmerking:** Mislukt en Mislukt worden door elkaar gebruikt. |
 | Inactief | x | De batch is gepromoveerd, maar deze is teruggezet of verlopen. De partij zal niet meer voor downstreamconsumptie beschikbaar zijn, maar de onderliggende gegevens blijven Master totdat ze bewaard, gearchiveerd of anderszins verwijderd zijn. |
-| Laden |  | De client schrijft momenteel gegevens voor de batch. De partij is op dit moment **niet** klaar voor promotie. |
+| Laden |  | De client schrijft momenteel gegevens voor de batch. De partij is **niet** klaar voor bevordering, op dit punt in tijd. |
 | Geladen |  | De client heeft het schrijven van gegevens voor de batch voltooid. De partij is klaar voor promotie. |
 | Behouden |  | De gegevens zijn uit het Master gehaald en in een speciaal archief in het Adobe Data Lake. |
 | Staging |  | De klant heeft de batch met succes voor promotie gesignaleerd en de gegevens worden gefaseerd voor consumptie stroomafwaarts. |
 | Opnieuw proberen |  | De cliënt heeft de partij voor bevordering gesignaleerd, maar wegens een fout, wordt de partij opnieuw geprobeerd door de dienst van de Controle van de Partij. Deze staat kan worden gebruikt om cliënten te vertellen dat er een vertraging in het opnemen van de gegevens kan zijn. |
-| Gestopt |  | De cliënt heeft de partij voor bevordering gesignaleerd, maar na `n` herpogingen door de dienst van de Controle van de Partij, heeft de partijbevordering vastgelopen. |
+| Gestopt |  | De client heeft de batch voor speciale acties gesignaleerd, maar nadat `n` opnieuw heeft geprobeerd door een Batch Monitoring-service, is de batchbevordering geblokkeerd. |
 
 ### Wat betekent &#39;Staging&#39; voor batches?
 
@@ -206,7 +206,7 @@ Wanneer een partij in &quot;Opnieuw proberen&quot; staat, betekent dit dat de ge
 
 ### Wat betekent het wanneer een partij &quot;wordt afgebroken&quot;?
 
-Wanneer een partij in &quot;Stalled&quot; staat, betekent dit dat het moeilijk [!DNL Data Ingestion Services] is de partij in te nemen en dat alle pogingen zijn uitgeput.
+Wanneer een partij in &quot;Stalled&quot; is, betekent het dat [!DNL Data Ingestion Services] moeite heeft om de partij in te nemen en alle pogingen zijn uitgeput.
 
 ### Wat betekent het als een partij nog &quot;Lading&quot;is?
 
@@ -214,11 +214,11 @@ Wanneer een batch wordt geladen, betekent dit dat de API van CompleteBatch niet 
 
 ### Is er een manier om te weten of een partij met succes is opgenomen?
 
-Als de batchstatus &quot;Actief&quot; is, is de batch ingeslikt. Volg de [eerder](#how-is-batch-ingestion-monitored)beschreven stappen om de status van de batch te achterhalen.
+Als de batchstatus &quot;Actief&quot; is, is de batch ingeslikt. Als u de status van de batch wilt achterhalen, volgt u de stappen [vroeger](#how-is-batch-ingestion-monitored).
 
 ### Wat gebeurt er als een batch mislukt?
 
-Wanneer een partij ontbreekt, kan de reden het in de `errors` sectie van de lading worden geïdentificeerd. Hier volgen voorbeelden van fouten:
+Wanneer een partij ontbreekt, kan de reden het in `errors` sectie van de lading worden geïdentificeerd. Hier volgen voorbeelden van fouten:
 
 ```json
     "errors":[
@@ -241,7 +241,7 @@ Nadat de fouten zijn gecorrigeerd, kan de batch opnieuw worden geüpload.
 
 ### Hoe moeten batches worden verwijderd?
 
-In plaats van rechtstreeks uit [!DNL Catalog]te verwijderen, moeten batches worden verwijderd met behulp van een van de volgende methoden:
+In plaats van rechtstreeks uit [!DNL Catalog] te schrappen, zouden de partijen moeten worden verwijderd gebruikend één van beide hieronder verstrekte methode:
 
 1. Als de partij in uitvoering is, moet de partij worden afgebroken.
 2. Indien de batch succesvol wordt gecontroleerd, dient de batch te worden teruggedraaid.
@@ -252,11 +252,11 @@ De volgende cijfers op batchniveau zijn beschikbaar voor batches in de staat Act
 
 | Metrisch | Beschrijving |
 | ------ | ----------- |
-| inputByteSize | The total number of bytes stage for [!DNL Data Ingestion Services] to process. |
-| inputRecordSize | The total number of rows stage for [!DNL Data Ingestion Services] to process. |
-| outputByteSize | The total number of bytes output by [!DNL Data Ingestion Services] to [!DNL Data Lake]. |
-| outputRecordSize | Het totale aantal rijen dat is uitgevoerd door [!DNL Data Ingestion Services] aan [!DNL Data Lake]. |
-| partitieCount | The total number of partitions written into [!DNL Data Lake]. |
+| inputByteSize | The total number of bytes staged for [!DNL Data Ingestion Services] to process. |
+| inputRecordSize | The total number of rows staged for [!DNL Data Ingestion Services] to process. |
+| outputByteSize | Het totale aantal bytes dat is uitgevoerd door [!DNL Data Ingestion Services] naar [!DNL Data Lake]. |
+| outputRecordSize | Het totale aantal rijen dat is uitgevoerd door [!DNL Data Ingestion Services] naar [!DNL Data Lake]. |
+| partitieCount | Het totale aantal partities dat in [!DNL Data Lake] wordt geschreven. |
 
 ### Waarom zijn metriek niet beschikbaar op sommige partijen?
 
@@ -271,7 +271,7 @@ Er zijn twee redenen waarom de metriek niet beschikbaar op uw partij kan zijn:
 | ----------- | ----------- |
 | 106 | Het gegevensbestand van de dataset is leeg. |
 | 118 | Het CSV-bestand bevat een lege koptekstrij. |
-| 200 | De partij is goedgekeurd voor verwerking, en zal overgang aan een definitieve staat, zoals Actief of Mislukt. Na verzending kan de batch gecontroleerd worden aan de hand van het `GetBatch` eindpunt. |
+| 200 | De partij is goedgekeurd voor verwerking, en zal overgang aan een definitieve staat, zoals Actief of Mislukt. Na verzending kan de batch worden gecontroleerd aan de hand van het `GetBatch`-eindpunt. |
 | 400 | Onjuist verzoek. Wordt geretourneerd als een batch ontbrekende of overlappende blokken bevat. |
 
 [large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
