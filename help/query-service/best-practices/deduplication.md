@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;vraagdienst;de dienst van de vraag;gegevensdeduplicatie;deduplicatie;
 solution: Experience Platform
-title: Gegevensdeduplicatie
+title: Data Deduplication in Query Service
 topic: queries
 type: Tutorial
 description: Dit document schetst sub-select en volledige voorbeelden van steekproefvraag voor het dedupliceren van drie veelvoorkomende gebruiksgevallen Ervaring Gebeurtenissen, aankopen, en metriek.
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
