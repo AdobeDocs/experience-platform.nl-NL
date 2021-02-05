@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;updates;
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;ExperienceEvent;fields;schema's;Schema's;Schemaontwerp;mixin;mixin;enduserids;eindgebruiker;eind - gebruiker;ids;updates;
 solution: Experience Platform
-title: Updates van Mixernamen
+title: Updates van Mixernaam
 topic: overview
 description: Een lijst met recente wijzigingen in de naam van een XDM-mix.
 translation-type: tm+mt
-source-git-commit: 4f50926a9c5bc02255bd62c51cca13fc9094a9e8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
