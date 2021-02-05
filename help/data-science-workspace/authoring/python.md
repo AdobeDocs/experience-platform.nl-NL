@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;data access api;read python;write python
+keywords: Experience Platform;thuis;populaire onderwerpen;gegevenstoegang;python sdk;gegevenstoegang api;read python;write python
 solution: Experience Platform
-title: Toegang verkrijgen tot gegevens met Python
+title: Toegang verkrijgen tot gegevens met Python in de werkruimte van de wetenschap van gegevens
 topic: tutorial
 type: Tutorial
 description: Het volgende document bevat voorbeelden over hoe u toegang kunt krijgen tot gegevens in Python voor gebruik in de werkruimte voor wetenschap van gegevens.
 translation-type: tm+mt
-source-git-commit: fcb4088ecac76d10b0cb69b04ad55167f5cdac3e
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
 
 
-# Toegang verkrijgen tot gegevens met Python
+# Toegang verkrijgen tot gegevens met Python in de werkruimte voor wetenschap van gegevens
 
-Het volgende document bevat voorbeelden over hoe u toegang kunt krijgen tot gegevens met gebruik van Python voor gebruik in de werkruimte van de wetenschap van gegevens. Voor informatie over toegang tot gegevens met JupyterLab-laptops raadpleegt u de [documentatie over gegevenstoegang](../jupyterlab/access-notebook-data.md) van JupyterLab-laptops.
+Het volgende document bevat voorbeelden over hoe u toegang kunt krijgen tot gegevens met gebruik van Python voor gebruik in de werkruimte van de wetenschap van gegevens. Raadpleeg de [JupyterLab-laptops voor toegang tot gegevens](../jupyterlab/access-notebook-data.md) documentatie voor informatie over toegang tot gegevens met JupyterLab-laptops.
 
 ## Een gegevensset lezen
 
@@ -55,7 +55,7 @@ partitions = dataset.get_partitions_info()
 
 Met de component DISTINCT kunt u alle afzonderlijke waarden op rij-/kolomniveau ophalen, waarbij alle dubbele waarden uit de reactie worden verwijderd.
 
-Hieronder ziet u een voorbeeld van het gebruik van de `distinct()` functie:
+Hieronder ziet u een voorbeeld van het gebruik van de functie `distinct()`:
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
@@ -89,7 +89,7 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 Met de ORDER BY-component kunnen ontvangen resultaten worden gesorteerd met een opgegeven kolom in een bepaalde volgorde (oplopend of aflopend). Dit wordt gedaan door de `sort()` functie te gebruiken.
 
-Hieronder ziet u een voorbeeld van het gebruik van de `sort()` functie:
+Hieronder ziet u een voorbeeld van het gebruik van de functie `sort()`:
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
@@ -99,7 +99,7 @@ df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 
 De clausule LIMIT staat u toe om het aantal verslagen te beperken die van de dataset worden ontvangen.
 
-Hieronder ziet u een voorbeeld van het gebruik van de `limit()` functie:
+Hieronder ziet u een voorbeeld van het gebruik van de functie `limit()`:
 
 ```python
 df = dataset_reader.limit(100).read()
@@ -109,7 +109,7 @@ df = dataset_reader.limit(100).read()
 
 Met de component OFFSET kunt u rijen vanaf het begin overslaan en vanaf een later punt beginnen met het retourneren van rijen. In combinatie met LIMIT, kan dit worden gebruikt om rijen in blokken te herhalen.
 
-Hieronder ziet u een voorbeeld van het gebruik van de `offset()` functie:
+Hieronder ziet u een voorbeeld van het gebruik van de functie `offset()`:
 
 ```python
 df = dataset_reader.offset(100).read()
@@ -160,4 +160,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## Volgende stappen
 
-De Werkruimte van de Wetenschap van Gegevens van Adobe Experience Platform verstrekt een recept steekproef die de bovengenoemde codesteekproeven gebruikt om gegevens te lezen en te schrijven. Als u meer over wilt leren hoe te om Python voor de toegang tot van uw gegevens te gebruiken, te herzien gelieve de Bewaarplaats van de [Werkruimte van de Wetenschap van Gegevens Python GitHub](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
+De Werkruimte van de Wetenschap van Gegevens van Adobe Experience Platform verstrekt een recept steekproef die de bovengenoemde codesteekproeven gebruikt om gegevens te lezen en te schrijven. Als u meer over wilt leren hoe te om Python voor de toegang tot van uw gegevens te gebruiken, te herzien gelieve [de Werkruimte van de Wetenschap van Gegevens Python GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
