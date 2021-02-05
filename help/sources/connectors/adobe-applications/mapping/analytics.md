@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;Analytics mapping fields;analytics mapping
+keywords: Experience Platform;home;populaire onderwerpen;analytische toewijzingsvelden;analytische toewijzing
 solution: Experience Platform
-title: Toewijzingsvelden voor analysemogelijkheden
+title: Toewijzingsvelden voor de Adobe Analytics Source Connector
 topic: overview
 description: Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de Analytics Data Connector (ADC). Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes in kaart te worden gebracht.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '3378'
+source-wordcount: '3393'
 ht-degree: 0%
 
 ---
 
 
-# Toewijzingsvelden voor analysemogelijkheden
+# Toewijzingen van analytische velden
 
 Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de Analytics Data Connector (ADC). Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes in kaart te worden gebracht.
 
@@ -23,7 +23,7 @@ Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de An
 
 Bepaalde velden worden rechtstreeks toegewezen vanuit Adobe Analytics naar het XDM-model (Experience Data Model).
 
-De volgende tabel bevat kolommen met de naam van het veld Analytics (*veld* Analytics), het corresponderende veld XDM (veld *XDM) en het type ervan (type**XDM) en een beschrijving van het veld (* beschrijving **).
+De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics field*), het corresponderende veld XDM (*XDM field*) en het type ervan (*XDM type*), en een beschrijving van het veld (*Description*).
 
 >[!NOTE]
 >
@@ -110,15 +110,15 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*veld* Anal
 | videoqoedropbefore estart | media.mediaTimed.dropBeforeStarts | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videoqoebuffercount | media.mediaTimed.primaryAssetViewDetails.qoe.buffers | Object | Aantal buffer voor videokwaliteit | {id (string), value (number)} |
 | videoqoebuffertime | media.mediaTimed.primaryAssetViewDetails.qoe.bufferTime | Object | Buffertijd videokwaliteit | {id (string), value (number)} |
-| videobeelden | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | Object | Aantal wijzigingen in videokwaliteit | {id (string), value (number)} |
+| videoquebitratechangecount | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | Object | Aantal wijzigingen in videokwaliteit | {id (string), value (number)} |
 | videoquobitrateavere | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateAverage | Object | Gemiddelde bitsnelheid videokwaliteit | {id (string), value (number)} |
 | videobeelden | media.mediaTimed.primaryAssetViewDetails.qoe.errors | Object | Aantal fouten in videokwaliteit | {id (string), value (number)} |
 | videoqoedroppedframecount | media.mediaTimed.primaryAssetViewDetails.qoe.droppedFrames | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videoprogress10 | media.mediaTimed.progress10 | Object | <!-- MISSING --> | {id (string), value (number)} |
-| videoprogress25 | media.mediaTimed.progress25 | Object | <!-- MISSING --> | {id (string), value (number)} |
+| videovoortgang25 | media.mediaTimed.progress25 | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videoprogress50 | media.mediaTimed.progress50 | Object | <!-- MISSING --> | {id (string), value (number)} |
-| videoprogress75 | media.mediaTimed.progress75 | Object | <!-- MISSING --> | {id (string), value (number)} |
-| videoprogress95 | media.mediaTimed.progress95 | Object | <!-- MISSING --> | {id (string), value (number)} |
+| videovoortgang75 | media.mediaTimed.progress75 | Object | <!-- MISSING --> | {id (string), value (number)} |
+| videovoortgang95 | media.mediaTimed.progress95 | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videoresuim | media.mediaTimed.resumes | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videopausecount | media.mediaTimed.pauses | Object | <!-- MISSING --> | {id (string), value (number)} |
 | videopausetime | media.mediaTimed.pauseTime | Object | <!-- MISSING --> | {id (string), value (number)} |
@@ -126,7 +126,7 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*veld* Anal
 
 ## Toewijzingsvelden splitsen
 
-Deze velden hebben één bron, maar koppelen aan **meerdere** XDM-locaties.
+Deze gebieden hebben één enkele bron, maar kaart aan **veelvoudige** plaatsen XDM.
 
 | Veld Analyse | XDM-veld | XDM-type | Beschrijving |
 | --------------- | --------- | -------- | ---------- |
@@ -138,7 +138,7 @@ Deze velden hebben één bron, maar koppelen aan **meerdere** XDM-locaties.
 
 Selecteer velden die afkomstig zijn van ADC moeten worden getransformeerd. Voor het genereren in XDM is logica vereist die verder gaat dan een directe kopie van Adobe Analytics.
 
-De volgende tabel bevat kolommen met de naam van het veld Analytics (*veld* Analytics), het corresponderende veld XDM (veld *XDM) en het type ervan (type**XDM) en een beschrijving van het veld (* beschrijving **).
+De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics field*), het corresponderende veld XDM (*XDM field*) en het type ervan (*XDM type*), en een beschrijving van het veld (*Description*).
 
 >[!NOTE]
 >
@@ -196,9 +196,9 @@ De volgende tabel bevat kolommen met de naam van het veld Analytics (*veld* Anal
 
 Selecteer velden (ook wel &quot;postwaarden&quot; genoemd) vereisen geavanceerdere transformaties voordat ze van Adobe Analytics-velden naar XDM (Experience Data Model) kunnen worden toegewezen. Wanneer u deze geavanceerde transformaties uitvoert, gebruikt u Adobe Experience Platform Query Service en vooraf gebouwde functies (zogenaamde door Adobe gedefinieerde functies) voor sessionisatie, attributie en deduplicatie.
 
-Meer over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, gelieve de [Adobe-bepaalde functiedocumentatie](../../../../query-service/sql/adobe-defined-functions.md) te bezoeken.
+Voor meer informatie over het uitvoeren van deze transformaties met de Dienst van de Vraag, gelieve de [Adobe-bepaalde functies](../../../../query-service/sql/adobe-defined-functions.md) documentatie te bezoeken.
 
-De volgende tabel bevat kolommen met de naam van het veld Analytics (*veld* Analytics), het corresponderende veld XDM (veld *XDM) en het type ervan (type**XDM) en een beschrijving van het veld (* beschrijving **).
+De volgende tabel bevat kolommen met de naam van het veld Analytics (*Analytics field*), het corresponderende veld XDM (*XDM field*) en het type ervan (*XDM type*), en een beschrijving van het veld (*Description*).
 
 >[!NOTE]
 >
