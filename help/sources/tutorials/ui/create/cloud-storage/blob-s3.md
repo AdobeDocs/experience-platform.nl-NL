@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Amazon S3;Azure Blob
 solution: Experience Platform
-title: Een Azure Blob- of Amazon S3-bronconnector maken in de gebruikersinterface
+title: Een Azure Blob- of Amazon S3-bronverbinding maken in de gebruikersinterface
 topic: overview
 type: Tutorial
-description: 'De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren. '
+description: Leer hoe u een Azure Blob- of Amazon S3-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Een [!DNL Azure Blob]- of [!DNL Amazon] S3-bronconnector in de gebruikersinterface maken
+# Een [!DNL Azure Blob]- of [!DNL Amazon] S3-bronverbinding maken in de gebruikersinterface
 
 De bronschakelaars in Adobe Experience Platform verstrekken de capaciteit om van buitenaf afkomstige gegevens op een geplande basis in te voeren.
 
