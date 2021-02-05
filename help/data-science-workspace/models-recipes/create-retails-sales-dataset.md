@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;winkelrecept;Data Science Workspace;populaire onderwerpen;recepten
 solution: Experience Platform
-title: Het detailhandelschema en de dataset maken
+title: Het detailhandelsschema en de gegevensset maken
 topic: tutorial
 type: Tutorial
 description: Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere zelfstudies voor de Adobe Experience Platform Data Science Workspace. Na voltooiing, zullen het Retailschema en de datasets van de Verkoop voor u en leden van uw organisatie IMS op Experience Platform beschikbaar zijn.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
