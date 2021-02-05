@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;update sandbox
+keywords: Experience Platform;home;populaire onderwerpen;update-sandbox
 solution: Experience Platform
-title: Een sandbox bijwerken
+title: Een sandbox bijwerken in de API
 topic: developer guide
 description: U kunt een of meer velden in een sandbox bijwerken door een PATCH-aanvraag in te dienen die de naam van de sandbox bevat in het aanvraagpad en de eigenschap die moet worden bijgewerkt in de aanvraaglading.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '133'
 ht-degree: 0%
 
 ---
 
 
-# Een sandbox bijwerken
+# Een sandbox in de API bijwerken
 
-U kunt een of meer velden in een sandbox bijwerken door een PATCH-aanvraag in te dienen die de sandbox `name` in het aanvraagpad en de eigenschap bevat die moeten worden bijgewerkt in de aanvraaglading.
+U kunt een of meer velden in een sandbox bijwerken door een PATCH-verzoek in te dienen dat de sandbox `name` bevat in het aanvraagpad en de eigenschap die moet worden bijgewerkt in de aanvraaglading.
 
 >[!NOTE]
 >
->Momenteel kan alleen de `title` eigenschap van een sandbox worden bijgewerkt.
+>Momenteel kan alleen de eigenschap `title` van een sandbox worden bijgewerkt.
 
 **API-indeling**
 
@@ -29,11 +29,11 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{SANDBOX_NAME}` | De `name` eigenschap van de sandbox die u wilt bijwerken. |
+| `{SANDBOX_NAME}` | De eigenschap `name` van de sandbox die u wilt bijwerken. |
 
 **Verzoek**
 
-Met de volgende aanvraag wordt de `title` eigenschap van de sandbox met de naam &quot;dev-2&quot; bijgewerkt.
+Met het volgende verzoek wordt de eigenschap `title` van de sandbox met de naam &quot;dev-2&quot; bijgewerkt.
 
 ```shell
 curl -X PATCH \
