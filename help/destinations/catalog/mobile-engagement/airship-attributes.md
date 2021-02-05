@@ -1,25 +1,21 @@
 ---
 keywords: kenmerken van het luchtschip;bestemming van het luchtschip
-title: Airship Attributes destination
-seo-title: Airship Attributes destination
+title: Luchtvaartkenmerken verbindingsbestemming
 description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als publiekskenmerken voor het aansturen van vluchten binnen het luchtschip.
-seo-description: Geef naadloos Adobe-geluidsgegevens van het publiek door aan het luchtschip als publiekskenmerken voor het aansturen van vluchten binnen het luchtschip.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1205'
 ht-degree: 0%
 
 ---
 
 
-# (Bèta) [!DNL Airship Attributes] bestemming {#airship-attributes-destination}
+# (Bèta) [!DNL Airship Attributes] verbinding {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
 >De bestemming [!DNL Airship Attributes] in Adobe Experience Platform is momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
-
-## Overzicht {#overview}
 
 [!DNL Airship] is het toonaangevende Platform voor betrokkenheid van klanten, waarmee u in elke fase van de levenscyclus van de klant betekenisvolle, gepersonaliseerde omnichanale berichten aan uw gebruikers kunt leveren.
 
