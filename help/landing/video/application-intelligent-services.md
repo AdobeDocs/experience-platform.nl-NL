@@ -1,5 +1,5 @@
 ---
-title: Op Adobe Experience Platform gebaseerde toepassingen en intelligente services
+title: Toepassings- en intelligente services gebaseerd op Experience Platform
 description: In deze video wordt een overzicht gegeven van de toepassingsservices en de intelligente services die op Adobe Experience Platform zijn gebouwd. Deze services vormen een aanvulling op de Experience Cloud Applications&mdash;Real-time Customer Data Platform, Journey Orchestration, Customer Journey Analytics, Attribution AI en Customer AI.
 feature: platform
 topics: null
@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32554.jpg
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '119'
+source-wordcount: '118'
 ht-degree: 20%
 
 ---
