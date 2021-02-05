@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;object;field;
 solution: Experience Platform
-title: Een objectveld definiëren in de gebruikersinterface
+title: Objectvelden definiëren in de gebruikersinterface
 description: Leer hoe u een objecttype-veld definieert in de gebruikersinterface van het Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
 
 
-# Een objectveld definiëren in de gebruikersinterface
+# Objectvelden definiëren in de gebruikersinterface
 
 Met Adobe Experience Platform kunt u de structuur van uw aangepaste Experience Data Model-klassen, -mixen en -gegevenstypen volledig aanpassen. Als u gerelateerde velden wilt ordenen en nesten in aangepaste XDM-bronnen, kunt u objecttype-velden definiëren die aanvullende subvelden kunnen bevatten.
 
