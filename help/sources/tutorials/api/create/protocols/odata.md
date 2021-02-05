@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;Generic OData;generieke gegevens
 solution: Experience Platform
-title: Een Generic OData-connector maken met de Flow Service API
+title: Een algemene OData-bronverbinding maken met de Flow Service API
 topic: overview
 type: Tutorial
-description: Deze zelfstudie gebruikt de Flow Service API om u door de stappen te laten lopen om Generic OData aan Experience Platform te verbinden.
+description: Leer hoe u Generic OData met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '546'
 ht-degree: 1%
 
 ---
 
 
-# Een [!DNL Generic OData]-connector maken met de [!DNL Flow Service]-API
+# Een [!DNL Generic OData]-bronverbinding maken met de [!DNL Flow Service]-API
 
 >[!NOTE]
 >
