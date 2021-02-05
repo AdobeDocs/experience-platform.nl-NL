@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
-title: Handleiding voor ontwikkelaars van API voor beleidsservice
+title: API-handleiding voor beleidsservice
 topic: developer guide
-description: Leer hoe u de API voor beleidsservice gebruikt om labels en beleidsregels voor gegevensgebruik in Experience Platform te beheren.
+description: Met de Beleidsservice-API kunnen ontwikkelaars labels en beleidsregels voor gegevensgebruik in Experience Platform beheren. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Policy Service] Handleiding voor API-ontwikkelaars
+# [!DNL Policy Service] API-handleiding
 
 Met Adobe Experience Platform [!DNL Data Governance] kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een belangrijke rol binnen [!DNL Experience Platform] op diverse niveaus, met inbegrip van catalogiseren, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, en het controleren van het gebruik van gegevens voor marketing acties.
 
