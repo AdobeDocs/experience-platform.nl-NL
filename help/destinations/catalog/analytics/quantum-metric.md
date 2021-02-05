@@ -1,21 +1,17 @@
 ---
 keywords: Metrische kwantumextensie;Quantum Metric;quantum metric;Quantum metric;Quantum metric
-title: Quantum Metric extension
-seo-title: Quantum Metric extension
+title: Quantum metric Extension Destination
 description: De extensie Quantum Metric is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie Quantum Metric is een analysedoel in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Quantum Metric] Extensie  {#quantum-metric-extension}
-
-## Overzicht {#overview}
+# [!DNL Quantum Metric] extension  {#quantum-metric-extension}
 
 [!DNL Quantum Metric's] integratie met Adobe Launch vergemakkelijkt de codeloze implementatie van de tag voor  [!DNL Quantum Metric's] gegevensverzameling. Bovendien biedt deze extensie de mogelijkheid om Launch Data Elements vast te leggen die nuttige informatie bevat van de [!DNL Quantum Metric] API.
 
