@@ -1,21 +1,17 @@
 ---
 keywords: LinkedIn;linkedin;LinkedIn;LinkedIn Insight Tag;insight-tag;Insight-tag
-title: LinkedIn Insight-tagextensie
-seo-title: LinkedIn Insight-tagextensie
+title: Doel voor extensie LinkedIn-tag voor inzicht
 description: De LinkedIn-tag-extensie is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De LinkedIn-tag-extensie is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL LinkedIn Insight Tag] Extensie  {#linkedin-insights-extension}
-
-## Overzicht {#overview}
+# [!DNL LinkedIn Insight Tag] extension  {#linkedin-insights-extension}
 
 Installeer [!DNL LinkedIn Insight Tag] voor het gebruik van functies voor het bijhouden van conversies, heroriënteren van bestanden en het weergeven van websites.
 
