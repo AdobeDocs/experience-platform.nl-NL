@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;mixin;mixins;
 solution: Experience Platform
-title: Mengsels maken en bewerken in de gebruikersinterface
+title: Mixins maken en bewerken in de gebruikersinterface
 description: Leer hoe u combinaties maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: cf74c7922271035474c7f10534692983add48616
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
 source-wordcount: '704'
 ht-degree: 0%
