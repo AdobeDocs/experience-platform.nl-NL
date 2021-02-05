@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;node reference;
+keywords: Experience Platform;ontwikkelaarsgids;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;In real time machine het leren;knoopverwijzing;
 solution: Experience Platform
-title: Gebruikershandleiding voor laptop in realtime leren van machines
+title: Real-time Machine Learning-laptops beheren
 topic: Training and scoring a ML model
 description: In de volgende handleiding worden de stappen beschreven die nodig zijn om een toepassing voor het leren van machines in realtime te maken in Adobe Experience Platform JupyterLab.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1656'
+source-wordcount: '1669'
 ht-degree: 0%
 
 ---
 
 
-# Gebruikershandleiding voor laptop (Alpha) voor realtime leren van machines
+# Real-time Machine Learning-laptops beheren (Alpha)
 
 >[!IMPORTANT]
 >
 >Het leren van de machine in real time is niet beschikbaar aan alle gebruikers nog. Deze functie bevindt zich in alfa en wordt nog steeds getest. Dit document kan worden gewijzigd.
 
-In de volgende handleiding worden de stappen beschreven die nodig zijn om een toepassing voor het leren van machines in realtime te bouwen. Gebruikend de Adobe verstrekte **[!UICONTROL in real time ML]** Python notitieboekjecjabloon, behandelt deze gids opleiding een model, het creëren van een DSL, het publiceren van DSL aan Rand, en het scoren van het verzoek. Aangezien u door het uitvoeren van uw het Leren model van de machine in real time vordert, wordt verwacht dat u het malplaatje wijzigt om de behoeften van uw dataset te passen.
+In de volgende handleiding worden de stappen beschreven die nodig zijn om een toepassing voor het leren van machines in realtime te bouwen. Met behulp van de Adobe die **[!UICONTROL Real-time ML]** Python notebooksjabloon wordt aangeboden, behandelt deze handleiding het trainen van een model, het creëren van een DSL, het publiceren van DSL aan Rand, en het scoren van het verzoek. Aangezien u door het uitvoeren van uw het Leren model van de machine in real time vordert, wordt verwacht dat u het malplaatje wijzigt om de behoeften van uw dataset te passen.
 
 ## Een laptop voor real-time leren van machines maken
 
-In Adobe Experience Platform UI, uitgezochte **[!UICONTROL Notitieboeken]** van binnen **Gegevens Wetenschap**. Selecteer vervolgens **[!UICONTROL JupyterLab]** en laat de omgeving enige tijd laden.
+Selecteer **[!UICONTROL Laptops]** in de gebruikersinterface van Adobe Experience Platform vanuit **Gegevenswetenschap**. Selecteer vervolgens **[!UICONTROL JupyterLab]** en laat enige tijd over aan het laden van de omgeving.
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
-De [!DNL JupyterLab] startprogramma wordt weergegeven. Blader omlaag naar *Real-Time Machine Learning* en selecteer de **[!UICONTROL Real-Time ML]** -laptop. Er wordt een sjabloon geopend met voorbeeldlaptopcellen met een voorbeeldgegevensset.
+De [!DNL JupyterLab]-startprogramma wordt weergegeven. Blader omlaag naar *Real-Time Machine Learning* en selecteer de **[!UICONTROL Real-time ML]**-laptop. Er wordt een sjabloon geopend met voorbeeldlaptopcellen met een voorbeeldgegevensset.
 
 ![blanco python](../images/rtml/authoring-notebook.png)
 
@@ -37,7 +37,7 @@ Begin door alle vereiste pakketten voor uw model in te voeren. Zorg ervoor om he
 
 >[!NOTE]
 >
->De lijst met geïmporteerde producten kan afwijken, afhankelijk van het model dat u wilt maken. Deze lijst zal veranderen aangezien de nieuwe knopen in tijd worden toegevoegd. Raadpleeg de naslaggids [voor](./node-reference.md) knooppunten voor een volledige lijst met beschikbare knooppunten.
+>De lijst met geïmporteerde producten kan afwijken, afhankelijk van het model dat u wilt maken. Deze lijst zal veranderen aangezien de nieuwe knopen in tijd worden toegevoegd. Raadpleeg de [nodenaslaggids](./node-reference.md) voor een volledige lijst met beschikbare knooppunten.
 
 ```python
 from pprint import pprint
@@ -73,26 +73,26 @@ pprint(nf.discover_nodes())
 
 ## Een real-time leren van machines trainen
 
-Met een van de volgende opties schrijft u [!DNL Python] code voor het lezen, vooraf verwerken en analyseren van gegevens. Daarna, moet u uw eigen model van XML trainen, het in formaat rangschikken ONNX en dan uploadt het aan het Leren modelopslag van de machine in real time.
+Als u een van de volgende opties gebruikt, gaat u [!DNL Python]-code schrijven om gegevens te lezen, vooraf te verwerken en te analyseren. Daarna, moet u uw eigen model van XML trainen, het in formaat rangschikken ONNX en dan uploadt het aan het Leren modelopslag van de machine in real time.
 
 - [Uw eigen model trainen in JupyterLab-laptops](#training-your-own-model)
 - [Uw eigen vooraf getrainde ONNX-model uploaden naar JupyterLab-laptops](#pre-trained-model-upload)
 
-### Uw eigen model trainen {#training-your-own-model}
+### Uw eigen model opleiden {#training-your-own-model}
 
 Begin met het laden van uw trainingsgegevens.
 
 >[!NOTE]
 >
->In het **Real-Time ML** malplaatje, wordt de [CSV dataset](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) van de autoverzekering gegrabbed van [!DNL Github].
+>In de **Real-time ML** sjabloon wordt de [CSV dataset van autoverzekering](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) opgehaald uit [!DNL Github].
 
 ![Trainingsgegevens laden](../images/rtml/load_training.png)
 
-Als u een gegevensset wilt gebruiken vanuit Adobe Experience Platform, verwijdert u de commentaarmarkering uit de onderstaande cel. Vervolgens moet u deze vervangen door `DATASET_ID` de juiste waarde.
+Als u een gegevensset wilt gebruiken vanuit Adobe Experience Platform, verwijdert u de commentaarmarkering uit de onderstaande cel. Vervolgens moet u `DATASET_ID` vervangen door de juiste waarde.
 
 ![rtml-gegevensset](../images/rtml/rtml-dataset.png)
 
-Om tot een dataset in uw [!DNL JupyterLab] notitieboekje toegang te hebben, selecteer het lusje van **Gegevens** in de linkernavigatie van [!DNL JupyterLab]. De mappen **[!UICONTROL Datasets]** en **[!UICONTROL Schemas]** worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteren **[!UICONTROL onderzoek Gegevens in Notitie]** van het drop-down menu op de dataset u wenst te gebruiken. Onder aan de laptop wordt een uitvoerbaar code-item weergegeven. Deze cel heeft je `dataset_id`.
+Als u toegang wilt krijgen tot een gegevensset in uw [!DNL JupyterLab]-laptop, selecteert u het tabblad **Gegevens** in de linkernavigatie van [!DNL JupyterLab]. De directory **[!UICONTROL Datasets]** en **[!UICONTROL Schemas]** worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop, dan selecteer **[!UICONTROL Gegevens in Notitieboekje]** optie van het drop-down menu op de dataset u wenst te gebruiken. Onder aan de laptop wordt een uitvoerbaar code-item weergegeven. Deze cel heeft uw `dataset_id`.
 
 ![toegang tot gegevensset](../images/rtml/access-dataset.png)
 
@@ -100,7 +100,7 @@ Klik met de rechtermuisknop en verwijder de cel die u onder aan de laptop hebt g
 
 ### Trainingseigenschappen
 
-Wijzig de trainingseigenschappen in de opgegeven sjabloon `config_properties`.
+Wijzig met behulp van de meegeleverde sjabloon een van de trainingseigenschappen binnen `config_properties`.
 
 ```python
 config_properties = {
@@ -113,15 +113,15 @@ config_properties = {
 
 ### Uw model voorbereiden
 
-Met de **[!UICONTROL Real-Time ML]** -sjabloon moet u uw ML-model analyseren, vooraf verwerken, trainen en evalueren. Dit wordt gedaan door gegevenstransformaties toe te passen en een opleidingspijpleiding te bouwen.
+Gebruikend **[!UICONTROL Real-time ML]** malplaatje, moet u uw model van ML analyseren, vooraf verwerken, trainen, en evalueren. Dit wordt gedaan door gegevenstransformaties toe te passen en een opleidingspijpleiding te bouwen.
 
 **Gegevenstransformaties**
 
-De **[!UICONTROL Echte cel van de Transformaties]** van XML **malplaatjes van** Gegevens moet worden gewijzigd om met uw eigen dataset te werken. Doorgaans gaat het hier om het wijzigen van de naam van kolommen, rollup van gegevens en het voorbereiden en bewerken van gegevens.
+De **[!UICONTROL In real time ML]** malplaatjes **De cel van de Transformaties van Gegevens** moet worden gewijzigd om met uw eigen dataset te werken. Doorgaans gaat het hier om het wijzigen van de naam van kolommen, rollup van gegevens en het voorbereiden en bewerken van gegevens.
 
 >[!NOTE]
 >
->Het volgende voorbeeld is voor leesbaarheidsdoeleinden gecondenseerd met gebruik van `[ ... ]`. Gelieve te bekijken en uit te breiden de sectie van de transformaties van de malplaatjegegevens in *real time van ML* voor de volledige codelel.
+>Het volgende voorbeeld is voor leesbaarheidsdoeleinden gecondenseerd met `[ ... ]`. Gelieve te bekijken en uit te breiden *Real-time ML* de sectie van malplaatjegegevenstransformaties voor de volledige codecel.
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -196,7 +196,7 @@ cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 
 df_final = pd.get_dummies(df_final, columns = cat_cols)
 ```
 
-Voer de opgegeven cel uit om een voorbeeldresultaat te zien. De outputlijst die van de `carinsurancedataset.csv` dataset is teruggekeerd keert de wijzigingen terug u bepaalde.
+Voer de opgegeven cel uit om een voorbeeldresultaat te zien. De outputlijst die van `carinsurancedataset.csv` dataset is teruggekeerd keert de wijzigingen terug u bepaalde.
 
 ![Voorbeeld van gegevenstransformaties](../images/rtml/table-return.png)
 
@@ -204,7 +204,7 @@ Voer de opgegeven cel uit om een voorbeeldresultaat te zien. De outputlijst die 
 
 Daarna moet u de trainingspijpleiding tot stand brengen. Dit zal gelijkaardig aan een ander dossier van de trainingspijpleiding kijken behalve u moet omzetten en een ONNX dossier produceren.
 
-Wijzig de sjabloon met de gegevenstransformaties die in de vorige cel zijn gedefinieerd. De volgende hieronder benadrukte code wordt gebruikt voor het produceren van een ONNX- dossier in uw eigenschappijpleiding. Gelieve te bekijken het malplaatje van *real time van ML* voor de volledige cel van de pijpleidingscode.
+Wijzig de sjabloon met de gegevenstransformaties die in de vorige cel zijn gedefinieerd. De volgende hieronder benadrukte code wordt gebruikt voor het produceren van een ONNX- dossier in uw eigenschappijpleiding. Gelieve te bekijken *Real-time ML* malplaatje voor de volledige cel van de pijpleidingscode.
 
 ```python
 #for generating onnx
@@ -246,7 +246,7 @@ model.generate_onnx_resources()
 
 >[!NOTE]
 >
->Wijzig de `model_path` tekenreekswaarde (`model.onnx`) om de naam van het model te wijzigen.
+>Wijzig de tekenreekswaarde `model_path` (`model.onnx`) om de naam van het model te wijzigen.
 
 ```python
 model_path = "model.onnx"
@@ -268,11 +268,11 @@ print("Model ID : ", model_id)
 
 ### Uw eigen vooraf opgeleide ONNX-model uploaden {#pre-trained-model-upload}
 
-Met de uploadknop in [!DNL JupyterLab] notebooks kunt u uw vooraf opgeleide ONNX-model uploaden naar de [!DNL Data Science Workspace] notebookomgeving.
+Met de uploadknop in [!DNL JupyterLab]-laptops kunt u uw vooraf opgeleide ONNX-model uploaden naar de [!DNL Data Science Workspace]-laptopomgeving.
 
 ![uploadpictogram](../images/rtml/upload.png)
 
-Wijzig vervolgens de `model_path` tekenreekswaarde in de *real-time ML* -laptop, zodat deze overeenkomt met de naam van uw ONNX-model. Voer de *modelpadcel* instellen uit en voer vervolgens de *Upload van uw model naar de RTML Model Store* -cel uit. Uw modellocatie en model-id worden beide geretourneerd in de reactie als de bewerking succesvol was.
+Wijzig vervolgens de tekenreekswaarde `model_path` in de laptop *Real-time ML*, zodat deze overeenkomt met de naam van uw ONNX-model. Zodra voltooid, stel de *modelweg* cel in en stel dan *Upload uw model aan RTML ModelStore* cel in werking. Uw modellocatie en model-id worden beide geretourneerd in de reactie als de bewerking succesvol was.
 
 ![eigen model uploaden](../images/rtml/upload-own-model.png)
 
@@ -288,9 +288,9 @@ Deze sectie schetst het creëren van een DSL. U gaat de knopen schrijven die om 
 
 >[!NOTE]
 >
-> U hebt waarschijnlijk meerdere knooppunten op basis van het type gegevens dat wordt gebruikt. Het volgende voorbeeld schetst slechts één enkele knoop in het malplaatje van *Real-time ML* . Bekijk de *Real-time sectie van HTML* malplaatjes *van de Authoring* van de Knoop voor de volledige codecel.
+> U hebt waarschijnlijk meerdere knooppunten op basis van het type gegevens dat wordt gebruikt. Het volgende voorbeeld schetst slechts één enkele knoop in *Real-time ML* malplaatje. Bekijk de *Real-time ML* sjablonen *Node Authoring* sectie voor de volledige codecel.
 
-Het knooppunt Pandas hieronder gebruikt `"import": "map"` om de methodenaam als een tekenreeks in de parameters te importeren, gevolgd door de parameters in te voeren als een kaartfunctie. In het onderstaande voorbeeld wordt dit gedaan met behulp van `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. Nadat u de kaart hebt geplaatst, hebt u de optie om te plaatsen `inplace` als `True` of `False`. Instellen `inplace` als `True` of `False` op basis van de vraag of u transformatie wilt toepassen. Standaard wordt een nieuwe kolom `"inplace": False` gemaakt. Ondersteuning voor het opgeven van een nieuwe kolomnaam is ingesteld om in een volgende release te worden toegevoegd. De laatste regel `cols` kan één kolomnaam of een lijst met kolommen zijn. Geef de kolommen op waarop u de transformatie wilt toepassen. In dit voorbeeld `leasing` wordt opgegeven. Voor meer informatie over de beschikbare knopen en hoe te om hen te gebruiken, bezoek de gids [van de](./node-reference.md)knoopverwijzing.
+Het Pandas-knooppunt hieronder gebruikt `"import": "map"` om de methodenaam als een tekenreeks in de parameters te importeren, gevolgd door de parameters in te voeren als een toewijzingsfunctie. In het onderstaande voorbeeld wordt dit gedaan met `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. Nadat u de kaart op zijn plaats hebt, hebt u de optie om `inplace` als `True` of `False` te plaatsen. Stel `inplace` in als `True` of `False` op basis van of u transformatie wilt toepassen. Standaard wordt een nieuwe kolom gemaakt. `"inplace": False` Ondersteuning voor het opgeven van een nieuwe kolomnaam is ingesteld om in een volgende release te worden toegevoegd. De laatste regel `cols` kan een enkele kolomnaam of een lijst met kolommen zijn. Geef de kolommen op waarop u de transformatie wilt toepassen. In dit voorbeeld wordt `leasing` opgegeven. Voor meer informatie over de beschikbare knopen en hoe te om hen te gebruiken, bezoek [de gids van de knoopverwijzing](./node-reference.md).
 
 ```python
 # Renaming leasing column using Pandas Node
@@ -347,7 +347,7 @@ dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
 pprint(json.loads(dsl))
 ```
 
-Wanneer de bewerking is voltooid, wordt een `edge` object geretourneerd dat elk van de knooppunten en de parameters bevat die eraan zijn toegewezen.
+Na voltooiing, is een `edge` voorwerp teruggekeerd die elk van de knopen en de parameters bevatten die aan hen in kaart werden gebracht.
 
 ![edge return](../images/rtml/edge-return.png)
 
@@ -355,13 +355,13 @@ Wanneer de bewerking is voltooid, wordt een `edge` object geretourneerd dat elk 
 
 >[!NOTE]
 >
->Het leren van de machine in real time wordt tijdelijk opgesteld aan en beheerd door de Hub van Adobe Experience Platform. Voor meer details, bezoek de overzichtssectie over de [Echte architectuur](./home.md#architecture)van het Leren van de Machine.
+>Het leren van de machine in real time wordt tijdelijk opgesteld aan en beheerd door de Hub van Adobe Experience Platform. Voor meer details, bezoek de overzichtssectie op [Real-time het Leren van de Machine architectuur](./home.md#architecture).
 
-Nu u een grafiek van DSL hebt gecreeerd, kunt u uw grafiek aan [!DNL Edge]opstellen.
+Nu u een grafiek van DSL hebt gecreeerd, kunt u uw grafiek aan [!DNL Edge] opstellen.
 
 >[!IMPORTANT]
 >
->Publiceer niet naar [!DNL Edge] vaak, dit kan de [!DNL Edge] knopen overladen. Het wordt niet aanbevolen hetzelfde model meerdere keren te publiceren.
+>Publiceer niet vaak naar [!DNL Edge], dit kan de [!DNL Edge] knopen overladen. Het wordt niet aanbevolen hetzelfde model meerdere keren te publiceren.
 
 ```python
 edge_utils = EdgeUtils()
@@ -372,13 +372,13 @@ print(f'Service ID: {service_id}')
 
 ### De DSL bijwerken en opnieuw publiceren naar Edge (optioneel)
 
-Als u uw DSL niet hoeft bij te werken, kunt u de [score](#scoring)overslaan.
+Als u uw DSL niet hoeft bij te werken, kunt u naar [scoring](#scoring) gaan.
 
 >[!NOTE]
 >
 >De volgende cellen zijn alleen vereist als u een bestaande DSL wilt bijwerken die naar Edge is gepubliceerd.
 
-Uw modellen zullen zich waarschijnlijk blijven ontwikkelen. In plaats van een volledige nieuwe service te maken, is het mogelijk een bestaande service bij te werken met uw nieuwe model. U kunt een knooppunt definiëren dat u wilt bijwerken, er een nieuwe id aan toewijzen en het vervolgens opnieuw uploaden naar de nieuwe DSL [!DNL Edge].
+Uw modellen zullen zich waarschijnlijk blijven ontwikkelen. In plaats van een volledige nieuwe service te maken, is het mogelijk een bestaande service bij te werken met uw nieuwe model. U kunt een knooppunt definiëren dat u wilt bijwerken, er een nieuwe id aan toewijzen en vervolgens de nieuwe DSL opnieuw uploaden naar [!DNL Edge].
 
 In het onderstaande voorbeeld wordt knooppunt 0 bijgewerkt met een nieuwe id.
 
@@ -410,7 +410,7 @@ U bent teruggekeerd bijgewerkte DSL.
 
 ## Scores {#scoring}
 
-Na het publiceren aan [!DNL Edge], wordt het scoren gedaan door een verzoek van de POST van een cliënt. Dit kan doorgaans worden gedaan vanuit een clienttoepassing waarvoor XML-scores vereist zijn. Je kunt het ook van Postman doen. Het **[!UICONTROL malplaatje van HTML]** in real time gebruikt EdgeUtils om dit proces aan te tonen.
+Na publicatie naar [!DNL Edge] wordt het scoren uitgevoerd door een POST-aanvraag van een client. Dit kan doorgaans worden gedaan vanuit een clienttoepassing waarvoor XML-scores vereist zijn. Je kunt het ook van Postman doen. Het **[!UICONTROL Real-time ML]** malplaatje gebruikt EdgeUtils om dit proces aan te tonen.
 
 >[!NOTE]
 >
@@ -422,21 +422,21 @@ import time
 time.sleep(20)
 ```
 
-Met hetzelfde schema dat in de training werd gebruikt, worden voorbeeldgegevens voor het bijhouden van de score gegenereerd. Deze gegevens worden gebruikt om een dataframe voor scoring te maken en vervolgens om te zetten in een scorewoordenboek. Gelieve te bekijken het malplaatje van *real-time ML* voor de volledige codecel.
+Met hetzelfde schema dat in de training werd gebruikt, worden voorbeeldgegevens voor het bijhouden van de score gegenereerd. Deze gegevens worden gebruikt om een dataframe voor scoring te maken en vervolgens om te zetten in een scorewoordenboek. Gelieve te bekijken *Real-time ML* malplaatje voor de volledige codecel.
 
 ![Scoregegevens](../images/rtml/generate-score-data.png)
 
 ### Score tegen het eindpunt van de Rand
 
-Gebruik de volgende cel binnen het malplaatje van *real time van XML* aan score tegen uw [!DNL Edge] dienst.
+Gebruik de volgende cel binnen *Real-time ML* malplaatje aan score tegen uw [!DNL Edge] dienst.
 
 ![Score tegen rand](../images/rtml/scoring-edge.png)
 
-Wanneer het scoren is voltooid, worden de [!DNL Edge] URL, Payload en de gecodeerde uitvoer van de [!DNL Edge] URL geretourneerd.
+Wanneer de scoring is voltooid, worden de [!DNL Edge] URL, Payload en de gescorde uitvoer van [!DNL Edge] geretourneerd.
 
-## Maak een lijst met uw geïmplementeerde apps vanuit de [!DNL Edge]
+## Geef uw geïmplementeerde apps weer vanuit de [!DNL Edge]
 
-Als u een lijst wilt genereren met de apps die u op dat moment op de [!DNL Edge]computer hebt geïmplementeerd, voert u de volgende codecel uit. Deze cel kan niet worden bewerkt of verwijderd.
+Als u een lijst wilt genereren van uw momenteel geïmplementeerde apps op de [!DNL Edge], voert u de volgende codecel uit. Deze cel kan niet worden bewerkt of verwijderd.
 
 ```python
 services = edge_utils.list_deployed_services()
@@ -457,11 +457,11 @@ De teruggekeerde reactie is een serie van uw opgestelde diensten.
 ]
 ```
 
-## Een geïmplementeerde app of service-id verwijderen uit de [!DNL Edge] (optioneel)
+## Een geïmplementeerde app of service-id verwijderen uit [!DNL Edge] (optioneel)
 
 >[!CAUTION]
 >
->Deze cel wordt gebruikt om uw geïmplementeerde Edge-toepassing te verwijderen. Gebruik de volgende cel alleen als u een geïmplementeerde [!DNL Edge] toepassing moet verwijderen.
+>Deze cel wordt gebruikt om uw geïmplementeerde Edge-toepassing te verwijderen. Gebruik de volgende cel alleen als u een geïmplementeerde [!DNL Edge]-toepassing moet verwijderen.
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
@@ -472,4 +472,4 @@ else:
 
 ## Volgende stappen
 
-Door de bovenstaande zelfstudie te volgen, hebt u een ONNX-model getraind en geüpload naar de modelwinkel voor het leren van machines in realtime. Bovendien, hebt u uw in real time het Leren model van de Machine gescoord en opgesteld. Als u meer over de knopen beschikbaar voor modelontwerp wilt leren, bezoek de gids [van de](./node-reference.md)knoopverwijzing.
+Door de bovenstaande zelfstudie te volgen, hebt u een ONNX-model getraind en geüpload naar de modelwinkel voor het leren van machines in realtime. Bovendien, hebt u uw in real time het Leren model van de Machine gescoord en opgesteld. Als u meer over de knopen beschikbaar voor modelontwerp wilt leren, bezoek [de gids van de knoopverwijzing](./node-reference.md).
