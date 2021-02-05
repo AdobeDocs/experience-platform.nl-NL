@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen; analyses;classificaties
-description: Deze zelfstudie bevat stappen voor het maken van een Adobe Analytics Classifications Data-connector in de gebruikersinterface om classificatiegegevens over te brengen naar Adobe Experience Platform.
+description: Leer hoe u een Adobe Analytics-bronaansluiting voor de gebruikersinterface maakt om classificatiegegevens over te brengen naar Adobe Experience Platform.
 solution: Experience Platform
-title: Een Adobe Analytics Classifications Data-connector maken in de gebruikersinterface
+title: Een Adobe Analytics-bronverbinding maken voor classificatiegegevens in de gebruikersinterface
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
 
 
-# Een Adobe Analytics Classifications Data-connector maken in de gebruikersinterface
+# Een Adobe Analytics-bronverbinding maken voor classificatiegegevens in de gebruikersinterface
 
-Deze zelfstudie bevat stappen voor het maken van een Adobe Analytics Classifications Data-connector in de gebruikersinterface om classificatiegegevens over te brengen naar Adobe Experience Platform.
+Deze zelfstudie bevat stappen voor het maken van een gegevensbronverbinding voor classificaties van Adobe Analytics in de gebruikersinterface voor het verzenden van classificatiegegevens naar Adobe Experience Platform.
 
 ## Aan de slag
 
@@ -86,5 +86,5 @@ De **[!UICONTROL Dataset activity]** pagina toont informatie over de doeldataset
 Door deze zelfstudie te volgen, hebt u een gegevensschakelaar van de Classificaties van Analytics gecreeerd die [!DNL Classifications] gegevens in [!DNL Platform] brengt. Zie de volgende documenten voor meer informatie over [!DNL Analytics] en [!DNL Classifications] gegevens:
 
 * [Overzicht gegevensconnector Analyse](../../../../connectors/adobe-applications/analytics.md)
-* [Een gegevensconnector voor Analytics maken in de gebruikersinterface](./analytics.md)
+* [Verbinding met analysegegevens maken in de gebruikersinterface](./analytics.md)
 * [Informatie over classificaties](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
