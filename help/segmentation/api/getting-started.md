@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsdienst;api;
 solution: Experience Platform
-title: Handleiding voor ontwikkelaars van Segmentatieservice
+title: Aan de slag met de segmentatieservice-API
 topic: developer guide
 description: De volgende documentatie verstrekt extra informatie die u moet weten om met de Segmentatie API met succes te werken.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
 
 
-# Aan de slag met [!DNL Segmentation Service] {#getting-started}
+# Aan de slag met de segmentatieservice-API {#getting-started}
 
 Met Adobe Experience Platform [!DNL Segmentation Service] kunt u segmenten samenstellen en in Adobe Experience Platform een publiek genereren op basis van uw [!DNL Real-time Customer Profile]-gegevens.
 
