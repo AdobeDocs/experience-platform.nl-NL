@@ -3,9 +3,9 @@ keywords: Experience Platform;home;IAB;IAB 2.0;toestemming;toestemming
 solution: Experience Platform
 title: IAB TCF 2.0-ondersteuning in Experience Platform
 topic: privacy events
-description: Leer hoe u uw gegevensbewerkingen en -schema's configureert om de keuzes van de gebruikerstoestemming over te brengen wanneer u segmenten activeert naar bestemmingen in Adobe Experience Platform.
+description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b2d3e4608dc0640472966edccd3fb5a612d7583c
+source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
 workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 0%
