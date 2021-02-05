@@ -1,21 +1,17 @@
 ---
 keywords: D&B Bezoekersinformatie;D&B;Bezoekersinformatie uitbreiden
-title: D&B Bezoeker Intelligence-extensie
-seo-title: D&B Bezoeker Intelligence-extensie
+title: D&B Bezoeker Intelligence-extensie bestemming
 description: De extensie D&B Visitor Intelligence is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De extensie D&B Visitor Intelligence is een personalisatiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL D&B Visitor Intelligence] extension  {#dnb-extension}
-
-## Overzicht {#overview}
 
 Analyseer uw onbekende bezoekers en zet hen in lood om.
 
