@@ -1,21 +1,17 @@
 ---
 keywords: Qualtrics;qualtrics;Qualtrics Website Feedback;Qualtrics website feedback;Qualtricks website feedback
-title: Qualtrics Website Feedback-extensie
-seo-title: Qualtrics Website Feedback-extensie
+title: Qualtrics-website — Doel voor feedbackextensie
 description: De Qaltrics Website Feedback uitbreiding is een onderzoeksbestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
-seo-description: De Qaltrics Website Feedback uitbreiding is een onderzoeksbestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Qualtrics Website Feedback] Extensie  {#qualtrics-extension}
-
-## Overzicht {#overview}
+# [!DNL Qualtrics Website Feedback] extension  {#qualtrics-extension}
 
 [!DNL Qualtrics Website Feedback] kunt u uw websitebezoekers het juiste bericht laten zien, op het juiste tijdstip. Of u de ervaring van bezoekers met website wilt verbeteren terugkoppelt onderzoeken of conversie verhoogt, [!DNL Qualtrics Website Feedback] heeft u behandeld.
 
