@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;gebruikersinterface;UI;aanpassing;licentiegebruiksdashboard;dashboard;licentiegebruik;machtiging;consumptie
-title: Het gebruiksdashboard voor licenties
+title: Licentiegebruiksdashboard
 description: 'In deze handleiding wordt het dashboard voor het gebruiksrecht van licenties weergegeven dat beschikbaar is in de gebruikersinterface van Adobe Experience Platform. '
 topic: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 8e4d8d29ca13017d7f6de5ca790efe91b01c129d
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 0%
