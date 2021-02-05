@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;Regulation;Regulations;Regulations;Regulations;Privacy;Privacy; Privacy;
 solution: Experience Platform
-title: Veelgestelde vragen over privacy-regelgeving
+title: Veelgestelde vragen over privacyregels
 topic: troubleshooting
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over ondersteunde wettelijke privacyregels en de toepassing ervan in Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 00904291ab7e2f119d3886b5aae9be50d4e8bd2b
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Veelgestelde vragen over privacy-regelgeving
+# Veelgestelde vragen over privacyregels
 
 In dit document worden antwoorden gegeven op veelgestelde vragen over ondersteunde wettelijke privacyregels en de toepassing ervan in Adobe Experience Cloud.
 
