@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
+keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsservice;voorvertoningen;schattingen;voorvertoningen en ramingen;schattingen en voorvertoningen;api;API;
 solution: Experience Platform
-title: Voorvertoningen en schattingen van eindpunten
+title: Voorvertoningen en schattingen van API-eindpunten
 topic: developer guide
-description: Terwijl u de segmentdefinitie ontwikkelt, kunt u de schatting- en voorvertoningsgereedschappen in Adobe Experience Platform gebruiken om informatie op overzichtsniveau weer te geven, zodat u zeker weet dat u het verwachte publiek isoleert.
+description: Met de voorvertoningen en schattingseindpunten in de API voor segmentatie van Adobe Experience Platform kunt u informatie op overzichtsniveau weergeven, zodat u zeker weet dat u het verwachte publiek in uw segmenten isoleert.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '793'
 ht-degree: 1%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 1%
 
 # Voorvertoningen en schattingen van eindpunten
 
-Terwijl u de segmentdefinitie ontwikkelt, kunt u de schatting- en voorvertoningsgereedschappen binnen gebruiken om informatie op overzichtsniveau weer te geven, zodat u zeker weet dat u het verwachte publiek isoleert. [!DNL Adobe Experience Platform] **De voorproeven** verstrekken gepagineerde lijsten van kwalificerende profielen voor een segmentdefinitie, toelatend u om de resultaten tegen te vergelijken wat u verwacht. **Schattingen** verschaffen statistische informatie over een segmentdefinitie, zoals de geprojecteerde publieksgrootte, het betrouwbaarheidsinterval en de standaardafwijking voor fouten.
+Terwijl u de segmentdefinitie ontwikkelt, kunt u de schatting- en voorvertoningsgereedschappen in [!DNL Adobe Experience Platform] gebruiken om informatie op overzichtsniveau weer te geven, zodat u zeker weet dat u het verwachte publiek isoleert. **De** voorvertoningen verstrekken gepagineerde lijsten van kwalificerende profielen voor een segmentdefinitie, toelatend u om de resultaten tegen te vergelijken wat u verwacht. **De** ramingen verschaffen statistische informatie over een segmentdefinitie, zoals de geprojecteerde publieksgrootte, het betrouwbaarheidsinterval en de standaardafwijking voor fouten.
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Voordat u verdergaat, bekijkt u eerst de gids [](./getting-started.md) Aan de slag voor belangrijke informatie die u moet weten om oproepen naar de API met succes te kunnen uitvoeren, inclusief vereiste headers en hoe u API-voorbeeldaanroepen kunt lezen.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!DNL Adobe Experience Platform Segmentation Service] API. Voordat u verdergaat, bekijkt u eerst de [gids Aan de slag](./getting-started.md) voor belangrijke informatie die u moet weten om oproepen aan API, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen met succes te maken.
 
 ## Hoe schattingen worden gegenereerd
 
@@ -41,7 +41,7 @@ De voorbeeldgrootte van de scan is afhankelijk van het totale aantal entiteiten 
 >
 >De schattingen duren over het algemeen 10 tot 15 seconden om te werken, te beginnen met een ruwe schatting en verfijning naarmate meer records worden gelezen.
 
-## Een nieuwe voorvertoning maken {#create-preview}
+## Nieuwe voorvertoning maken {#create-preview}
 
 U kunt een nieuwe voorproef tot stand brengen door een verzoek van de POST aan het `/preview` eindpunt te doen.
 
@@ -76,7 +76,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | De uitdrukking PQL om de gegevens door te vragen. |
 | `predicateType` | Het predikaat type voor de vraaguitdrukking onder `predicateExpression`. Momenteel is de enige toegestane waarde voor deze eigenschap `pql/text`. |
-| `predicateModel` | De naam van het [!DNL Experience Data Model] (XDM)-schema waarop de profielgegevens zijn gebaseerd. |
+| `predicateModel` | De naam van het [!DNL Experience Data Model] (XDM) schema de profielgegevens is gebaseerd op. |
 
 **Antwoord**
 
@@ -97,7 +97,7 @@ Een succesvol antwoord retourneert HTTP-status 201 (Gemaakt) met details van de 
 | `state` | De huidige status van de voorvertoningstaak. Bij het maken wordt de status &quot;NEW&quot; gebruikt. Vervolgens wordt de status &quot;RUNNING&quot; gebruikt totdat de verwerking is voltooid, waarna de status &quot;RESULT_READY&quot; of &quot;FAILED&quot; wordt. |
 | `previewId` | De id van de voorvertoningstaak die voor opzoekdoeleinden moet worden gebruikt bij het weergeven van een schatting of voorvertoning, zoals in de volgende sectie wordt beschreven. |
 
-## De resultaten van een specifieke voorvertoning ophalen {#get-preview}
+## Hiermee worden de resultaten van een specifieke voorvertoning {#get-preview} opgehaald
 
 U kunt gedetailleerde informatie over een specifieke voorproef terugwinnen door een verzoek van de GET aan het `/preview` eindpunt te doen en voorproef identiteitskaart in de verzoekweg te verstrekken.
 
@@ -109,7 +109,7 @@ GET /preview/{PREVIEW_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | De `previewId` waarde van de voorvertoning die u wilt ophalen. |
+| `{PREVIEW_ID}` | De waarde `previewId` van de voorvertoning die u wilt ophalen. |
 
 **Verzoek**
 
@@ -172,9 +172,9 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. Met de opgegeven koppelingen kunt u de opgegeven entiteiten opzoeken met de [[!DNL Profile Access API]](../../profile/api/entities.md)instructies. |
+| `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. De verstrekte verbindingen kunnen worden gebruikt om de gespecificeerde entiteiten omhoog te zoeken, gebruikend [[!DNL Profile Access API]](../../profile/api/entities.md). |
 
-## De resultaten van een specifieke geschatte taak ophalen {#get-estimate}
+## De resultaten van een specifieke geschatte taak {#get-estimate} ophalen
 
 Zodra u een voorproefbaan hebt gecreeerd, kunt u zijn `previewId` in de weg van een verzoek van de GET aan het `/estimate` eindpunt gebruiken om statistische informatie over de segmentdefinitie, met inbegrip van geprojecteerde publieksgrootte, betrouwbaarheidsinterval, en foutenstandaardafwijking te bekijken.
 
@@ -186,7 +186,7 @@ GET /estimate/{PREVIEW_ID}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | Een geschatte taak wordt alleen geactiveerd wanneer een voorvertoningstaak wordt gemaakt en de twee taken dezelfde id-waarde delen voor opzoekdoeleinden. Dit is met name de `previewId` waarde die wordt geretourneerd toen de voorvertoningstaak werd gemaakt. |
+| `{PREVIEW_ID}` | Een geschatte taak wordt alleen geactiveerd wanneer een voorvertoningstaak wordt gemaakt en de twee taken dezelfde id-waarde delen voor opzoekdoeleinden. Dit is met name de waarde `previewId` die wordt geretourneerd toen de voorvertoningstaak werd gemaakt. |
 
 **Verzoek**
 
@@ -231,4 +231,4 @@ Een succesvolle reactie retourneert HTTP status 200 met details van de geschatte
 
 ## Volgende stappen
 
-Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u met voorvertoningen en schattingen kunt werken. Lees voor meer informatie over de andere [!DNL Segmentation Service] API-eindpunten het overzicht [van de ontwikkelaar van de](./overview.md)Segmentatieservice.
+Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u met voorvertoningen en schattingen kunt werken. Lees voor meer informatie over de andere [!DNL Segmentation Service] API-eindpunten de [Overzicht van de handleiding voor ontwikkelaars van segmentatieservices](./overview.md).
