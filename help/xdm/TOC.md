@@ -5,9 +5,9 @@ user-guide-title: Help-systeem voor Experience Data Model (XDM)
 breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik XDM-klassen (Experience Data Model) en -mixen om ervaringsgegevens te standaardiseren.
 translation-type: tm+mt
-source-git-commit: 288f47306853fcc39234ad098bc0e73f24f8540a
+source-git-commit: b735e5f7eb8d1f0526d8786430c844b4d36fa09d
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '236'
 ht-degree: 6%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 6%
    * [Toepassing](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Browserdetails](./data-types/browser-details.md)
+   * [Commerce](./data-types/commerce.md)
    * [Inhoud en voorkeuren](./data-types/consents.md)
    * [Apparaat](./data-types/device.md)
    * [E-mailadres](./data-types/email-address.md)
@@ -50,6 +51,8 @@ ht-degree: 6%
    * [Geo-vorm](./data-types/geo-shape.md)
    * [Identiteit](./data-types/identity.md)
    * [Meetlat](./data-types/measure.md)
+   * [Volgorde](./data-types/order.md)
+   * [Betalingsobject](./data-types/payment-item.md)
    * [Persoon](./data-types/person.md)
    * [Naam persoon](./data-types/person-name.md)
    * [Telefoonnummer](./data-types/phone-number.md)
