@@ -3,11 +3,11 @@ title: 'Adobe Target en Adobe Experience Platform Web SDK. '
 seo-title: Adobe Experience Platform Web SDK en Adobe Target gebruiken
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
 seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
-keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
+keywords: target;adobe target;xdm views; weergaven;toepassingen van één pagina;SPA;SPA levenscyclus;cliënt-kant;AB het testen;AB;De ervaring richt zich;XT;VEC
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1688'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Hier volgen enkele voordelen van het gebruik van Adobe Experience Platform Web S
 
 ## XDM-weergaven en toepassingen voor één pagina
 
-Adobe Target VEC for SPA maakt gebruik van een nieuw concept genaamd Views: een logische groep visuele elementen die samen een SPA ervaring vormen. Een toepassing van één pagina kan daarom worden beschouwd als een overgang door Weergaven in plaats van URL&#39;s, op basis van gebruikersinteracties. Een weergave kan doorgaans een hele site of gegroepeerde visuele elementen binnen een site vertegenwoordigen.
+Adobe Target VEC for SPA maakt gebruik van het concept Views: een logische groep visuele elementen die samen een SPA ervaring vormen. Een toepassing van één pagina kan daarom worden beschouwd als een overgang door Weergaven in plaats van URL&#39;s, op basis van gebruikersinteracties. Een weergave kan doorgaans een hele site of gegroepeerde visuele elementen binnen een site vertegenwoordigen.
 
 Om verder uit te leggen welke Weergaven zijn, gebruikt het volgende voorbeeld een hypothetische online e-commercesite die in React wordt uitgevoerd om voorbeeldweergaven te onderzoeken.
 
@@ -41,7 +41,7 @@ Na het navigeren naar de thuissite bevordert een hoofdafbeelding een paasverkoop
 
 ![](assets/example-views.png)
 
-Aangezien de klant meer in de producten wordt geinteresseerd die de zaken verkopen, besluiten zij om de verbinding van **Producten** te klikken. Net als op de thuissite kan de hele productsite worden gedefinieerd als een weergave. Deze weergave kan de naam &quot;products-all&quot; hebben.
+Naarmate de klant meer interesse krijgt in de producten die het bedrijf verkoopt, besluit hij of zij op de koppeling **Producten** te klikken. Net als op de thuissite kan de hele productsite worden gedefinieerd als een weergave. Deze weergave kan de naam &quot;products-all&quot; hebben.
 
 ![](assets/example-products-all.png)
 
@@ -49,7 +49,7 @@ Aangezien een Mening als volledige plaats of een groep visuele elementen op een 
 
 ![](assets/example-products.png)
 
-Wanneer de klant besluit op de knop Meer **** laden te klikken om meer producten op de site te zoeken, verandert de URL van de website in dit geval niet, maar u kunt hier een weergave maken die alleen de tweede rij producten vertegenwoordigt die wordt weergegeven. De weergavenaam kan &#39;products-page-2&#39; zijn.
+Wanneer de klant besluit op de knop **Meer laden** te klikken om meer producten op de site te verkennen, verandert de URL van de website in dit geval niet, maar u kunt hier een weergave maken die alleen de tweede rij producten vertegenwoordigt die wordt weergegeven. De weergavenaam kan &#39;products-page-2&#39; zijn.
 
 ![](assets/example-load-more.png)
 
@@ -63,9 +63,9 @@ Het concept van standpunten kan veel verder worden uitgebreid. Dit zijn slechts 
 
 XDM-weergaven kunnen in Adobe Target worden gebruikt om marketers in staat te stellen A/B- en XT-tests uit te voeren op SPA via Visual Experience Composer. Hiervoor moeten de volgende stappen worden uitgevoerd om een eenmalige ontwikkelaarsinstelling te voltooien:
 
-1. Install [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
+1. [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md) installeren
 2. Bepaal alle XDM-weergaven in uw toepassing Eén pagina die u wilt aanpassen.
-3. Na het bepalen van de Meningen XDM, om de activiteiten van AB of XT VEC te leveren, voer de `sendEvent()` functie met `renderDecisions` reeks aan `true` en de overeenkomstige Mening XDM in uw Enige Toepassing van de Pagina uit. De XDM-weergave moet worden doorgegeven `xdm.web.webPageDetails.viewName`. Met deze stap kunnen marketers de Visual Experience Composer gebruiken om A/B- en XT-tests voor die XDM te starten.
+3. Na het bepalen van de meningen XDM, om AB of XT VEC activiteiten te leveren, voer de `sendEvent()` functie met `renderDecisions` uit die aan `true` en de overeenkomstige Mening XDM in uw Enige Toepassing van de Pagina wordt geplaatst. De XDM-weergave moet worden doorgegeven in `xdm.web.webPageDetails.viewName`. Met deze stap kunnen marketers de Visual Experience Composer gebruiken om A/B- en XT-tests voor die XDM te starten.
 
    ```javascript
    alloy("sendEvent", { 
@@ -82,7 +82,7 @@ XDM-weergaven kunnen in Adobe Target worden gebruikt om marketers in staat te st
 
 >[!NOTE]
 >
->Voor de eerste `sendEvent()` vraag, zullen alle meningen XDM die aan de eindgebruiker zouden moeten worden teruggegeven worden opgehaald en in het voorgeheugen ondergebracht. De volgende `sendEvent()` vraag met overgegaane Meningen XDM zal van het geheime voorgeheugen worden gelezen en zonder een servervraag teruggegeven.
+>Voor de eerste `sendEvent()` vraag, zullen alle Meningen XDM die aan de eindgebruiker zouden moeten worden teruggegeven worden opgehaald en in het voorgeheugen ondergebracht. Volgende `sendEvent()`-aanroepen met doorgegeven XDM Views worden gelezen uit de cache en gerenderd zonder een serveraanroep.
 
 ## `sendEvent()` functievoorbeelden
 
@@ -94,7 +94,7 @@ Het marketing team wil tests A/B op de volledige homepage in werking stellen.
 
 ![](assets/use-case-1.png)
 
-Om tests A/B op de volledige huisplaats in werking te stellen, `sendEvent()` moet worden aangehaald met XDM `viewName` geplaatst aan `home`:
+Als u A/B-tests wilt uitvoeren op de hele thuissite, moet `sendEvent()` worden aangeroepen met de XDM `viewName` ingesteld op `home`:
 
 ```jsx
 function onViewChange() { 
@@ -134,7 +134,7 @@ history.listen(onViewChange);
 
 ### Voorbeeld 2: Persoonlijke producten
 
-Het marketingteam wil de tweede rij producten aanpassen door de kleur van het prijslabel in rood te wijzigen nadat de gebruiker op Meer **** laden heeft geklikt.
+Het marketingteam wil de tweede rij producten aanpassen door de kleur van het prijsetiket in rood te veranderen nadat de gebruiker **Meer laden** klikt.
 
 ![](assets/use-case-2.png)
 
@@ -172,11 +172,11 @@ class Products extends Component {
 
 ### Voorbeeld 3: Voorkeuren voor A/B-testlevering
 
-Het marketingteam wil een A/B-test uitvoeren om te zien of het wijzigen van de kleur van de knop van blauw naar rood wanneer **Express Delivery** is geselecteerd, conversies kan stimuleren (in plaats van de knopkleur blauw te houden voor beide leveringsopties).
+Het marketingteam wil een A/B-test uitvoeren om te zien of het wijzigen van de kleur van de knop van blauw in rood wanneer **Uitdrukkelijke levering** wordt geselecteerd, conversies kan stimuleren (in plaats van de knopkleur blauw te houden voor beide leveringsopties).
 
 ![](assets/use-case-3.png)
 
-Als u de inhoud op de site wilt aanpassen, afhankelijk van de geselecteerde leveringsvoorkeur, kunt u een weergave maken voor elke leveringsvoorkeur. Als **Normale levering** is geselecteerd, kan de weergave de naam &quot;uitchecken-normaal&quot; hebben. Als **Uitdrukkelijke Levering** wordt geselecteerd, kan de Mening &quot;checkout-express&quot;worden genoemd.
+Als u de inhoud op de site wilt aanpassen, afhankelijk van de geselecteerde leveringsvoorkeur, kunt u een weergave maken voor elke leveringsvoorkeur. Wanneer **Normale levering** wordt geselecteerd, kan de Mening &quot;checkout-normal&quot;worden genoemd. Als **Uitdrukkelijke Levering** wordt geselecteerd, kan de Mening &quot;checkout-express&quot;worden genoemd.
 
 ```jsx
 function onViewChange(viewName) { 
@@ -219,11 +219,11 @@ class Checkout extends Component {
 
 ## Het gebruiken van Visual Experience Composer voor een SPA
 
-Wanneer u klaar bent met het definiëren van uw XDM-weergaven en `sendEvent()` met deze doorgegeven XDM Views hebt geïmplementeerd, kan de VEC deze weergaven detecteren en gebruikers toestaan handelingen en wijzigingen voor A/B- of XT-activiteiten te maken.
+Als u klaar bent met het definiëren van uw XDM-weergaven en `sendEvent()` hebt geïmplementeerd met de XDM Views die zijn doorgegeven, kan de VEC deze weergaven detecteren en gebruikers toestaan handelingen en wijzigingen voor A/B- of XT-activiteiten te maken.
 
 >[!NOTE]
 >
->Als u de VEC voor uw SPA wilt gebruiken, moet u de extensie [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) of [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper installeren en activeren.
+>Als u de VEC voor uw SPA wilt gebruiken, moet u de [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) of [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension installeren en activeren.
 
 ### Deelvenster Wijzigingen
 
@@ -241,8 +241,8 @@ Wanneer u op een handeling klikt, wordt het element op de site gemarkeerd waarop
 |---|---|
 | Informatie | Geeft de details van de handeling weer. |
 | Bewerken | Hiermee kunt u de eigenschappen van de handeling rechtstreeks bewerken. |
-| Klonen | Kloont de actie aan één of meerdere Weergaven die op het paneel van Aanpassingen of aan één of meerdere Weergaven bestaan die u hebt doorzocht en aan in VEC genavigeerd. De handeling hoeft niet noodzakelijkerwijs in het deelvenster Wijzigingen te staan.<br/><br/>**Opmerking:** Nadat een kloonverrichting wordt gemaakt, moet u aan de Mening in VEC via Browse navigeren om te zien of de gekloonde actie een geldige verrichting was. Als de actie niet op de Mening kan worden toegepast, zult u een fout zien. |
-| Verplaatsen | Hiermee wordt de handeling verplaatst naar een gebeurtenis Pagina laden of een andere weergave die al bestaat in het deelvenster Wijzigingen.<br/><br/>**Gebeurtenis bij laden van pagina:** Alle handelingen die overeenkomen met de gebeurtenis load van de pagina worden toegepast op de eerste pagina die wordt geladen van uw webtoepassing. <br/><br/>**Nota:** nadat een bewegingsverrichting wordt gemaakt, moet u aan de Mening in VEC via Browse navigeren om te zien of de beweging een geldige verrichting was. Als de actie niet op de Mening kan worden toegepast, zult u een fout zien. |
+| Klonen | Kloont de actie aan één of meerdere Weergaven die op het paneel van Aanpassingen of aan één of meerdere Weergaven bestaan die u hebt doorzocht en aan in VEC genavigeerd. De handeling hoeft niet noodzakelijkerwijs in het deelvenster Wijzigingen te staan.<br/><br/>**Opmerking:** Nadat een kloonbewerking is uitgevoerd, moet u naar de Weergave in de VEC navigeren via Bladeren om te zien of de gekloonde actie een geldige bewerking was. Als de actie niet op de Mening kan worden toegepast, zult u een fout zien. |
+| Verplaatsen | Hiermee wordt de handeling verplaatst naar een gebeurtenis Pagina laden of een andere weergave die al bestaat in het deelvenster Wijzigingen.<br/><br/>**Gebeurtenis bij laden van pagina:** alle handelingen die overeenkomen met de gebeurtenis load van de pagina worden toegepast op het eerste laden van de pagina van de webtoepassing. <br/><br/>**Nota:** nadat een bewegingsverrichting wordt gemaakt, moet u aan de Mening in VEC via Browse navigeren om te zien of de beweging een geldige verrichting was. Als de actie niet op de Mening kan worden toegepast, zult u een fout zien. |
 | Verwijderen | Hiermee verwijdert u de handeling. |
 
 ## VEC gebruiken voor SPA voorbeelden
@@ -253,24 +253,24 @@ Deze sectie schetst drie voorbeelden om de Visuele Composer van de Ervaring te g
 
 Eerder in dit document is een weergave met de naam &quot;home&quot; gedefinieerd voor de gehele thuissite. Nu wil het marketingteam de weergave &quot;home&quot; op de volgende manieren bijwerken:
 
-* Wijzig de knoppen **Toevoegen aan winkelwagentje** en **Soortgelijk** in een lichtere blauw gedeelte. Dit moet gebeuren tijdens het laden van de pagina, omdat hierbij componenten van de koptekst worden gewijzigd.
-* Wijzig het label **Nieuwste producten voor 2019** in **Hottest-producten voor 2019** en wijzig de tekstkleur in paars.
+* Wijzig de knoppen **Toevoegen aan winkelwagentje** en **Zoals** in een lichtere deelkleur blauw. Dit moet gebeuren tijdens het laden van de pagina, omdat hierbij componenten van de koptekst worden gewijzigd.
+* Wijzig het **Nieuwste product voor 2019**-label in **Hottest-producten voor 2019** en wijzig de tekstkleur in paars.
 
-Als u deze updates wilt uitvoeren in de VEC, selecteert u **Samenstellen** en past u deze wijzigingen toe op de weergave &quot;home&quot;.
+Als u deze updates in de VEC wilt uitvoeren, selecteert u **Samenstellen** en past u deze wijzigingen toe op de weergave &quot;home&quot;.
 
 ![](assets/vec-home.png)
 
 ### Voorbeeld 2: Productlabels wijzigen
 
-Voor de weergave &quot;products-page-2&quot; wil het marketingteam het label **Prijs** wijzigen in **Verkoopprijs** en de labelkleur wijzigen in rood.
+Voor de weergave &quot;products-page-2&quot; wil het marketingteam het label **Price** wijzigen in **Verkoopprijs** en de labelkleur wijzigen in rood.
 
 Om deze updates in VEC te maken, zijn de volgende stappen vereist:
 
-1. Selecteer **doorbladeren** in VEC.
+1. Selecteer **Browse** in VEC.
 2. Selecteer **Producten** in de hoogste navigatie van de plaats.
-3. Selecteer **Meer** laden om de tweede rij met producten weer te geven.
+3. Selecteer **Meer laden** eenmaal om de tweede rij producten weer te geven.
 4. Selecteer **Samenstellen** in VEC.
-5. Pas handelingen toe om het tekstlabel te wijzigen in **Verkoopprijs** en de kleur in rood.
+5. Pas acties toe om het tekstlabel te wijzigen in **Verkoopprijs** en de kleur in rood.
 
 ![](assets/vec-products-page-2.png)
 
@@ -280,16 +280,16 @@ Weergaven kunnen worden gedefinieerd op korrelig niveau, zoals een status of een
 
 Om deze updates in VEC te maken, zijn de volgende stappen vereist:
 
-1. Selecteer **doorbladeren** in VEC.
+1. Selecteer **Browse** in VEC.
 2. Voeg op de site producten toe aan het winkelwagentje.
 3. Selecteer het winkelwagentje in de rechterbovenhoek van de site.
-4. Selecteer **Uw bestelling** uitchecken.
+4. Selecteer **Uw bestelling uitchecken**.
 5. Selecteer het keuzerondje **Expreslevering** onder **Leveringsvoorkeuren**.
 6. Selecteer **Samenstellen** in VEC.
-7. Wijzig de kleur van de knop **Betalen** in rood.
+7. Wijzig de **Pay** knopkleur in rood.
 
 >[!NOTE]
 >
->De weergave Uitchecken wordt pas weergegeven in het deelvenster Wijzigingen als het keuzerondje **Uitdrukkelijke levering** is geselecteerd. De reden hiervoor is dat de`sendEvent()` functie wordt uitgevoerd wanneer het keuzerondje **Expreslevering** is geselecteerd. De VEC is daarom niet op de hoogte van de weergave Uitchecken totdat het keuzerondje is geselecteerd.
+>De weergave Uitchecken wordt pas weergegeven in het deelvenster Wijzigingen als het keuzerondje **Uitdrukkelijke levering** is geselecteerd. De reden hiervoor is dat de functie `sendEvent()` wordt uitgevoerd wanneer het keuzerondje **Express Delivery** is geselecteerd. Daarom is de VEC niet op de hoogte van de weergave &quot;uitchecken-express&quot; totdat het keuzerondje is geselecteerd.
 
 ![](assets/vec-delivery-preference.png)
