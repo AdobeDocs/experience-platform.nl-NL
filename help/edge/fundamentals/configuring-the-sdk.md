@@ -3,23 +3,23 @@ title: De SDK configureren
 seo-title: Adobe Experience Platform Web SDK configureren
 description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
-keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
+keywords: configureren;configuratie;SDK;edge;Web SDK;configure;edgeConfigId;context;web;apparaat;omgeving;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk montages;prehideStyle;opacity;cookieDestinationEnabled;urlMigrationEnabled;idID Enabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
 workflow-type: tm+mt
-source-wordcount: '710'
-ht-degree: 4%
+source-wordcount: '740'
+ht-degree: 5%
 
 ---
 
 
 # De SDK configureren
 
-De configuratie voor SDK wordt gedaan met het `configure` bevel.
+De configuratie voor SDK wordt gedaan met `configure` bevel.
 
 >[!IMPORTANT]
 >
->`configure` zou *altijd* het eerste geroepen bevel moeten zijn.
+>`configure` zou  ** altijd het eerste geroepen bevel moeten zijn.
 
 ```javascript
 alloy("configure", {
@@ -38,7 +38,7 @@ Er zijn vele opties die tijdens configuratie kunnen worden geplaatst. Alle optie
 | -------- | ------------ | ----------------- |
 | Tekenreeks | Ja | none |
 
-Uw toegewezen configuratie-id, die de SDK koppelt aan de juiste accounts en configuratie.  Wanneer het vormen van veelvoudige instanties binnen één enkele pagina, moet u een verschillende `edgeConfigId` voor elke instantie vormen.
+Uw toegewezen configuratie-id, die de SDK koppelt aan de juiste accounts en configuratie.  Wanneer het vormen van veelvoudige instanties binnen één enkele pagina, moet u verschillende `edgeConfigId` voor elke instantie vormen.
 
 ### `context`
 
@@ -46,7 +46,7 @@ Uw toegewezen configuratie-id, die de SDK koppelt aan de juiste accounts en conf
 | ---------------- | ------------ | -------------------------------------------------- |
 | Array van tekenreeksen | Nee | `["web", "device", "environment", "placeContext"]` |
 
-Geeft aan welke contextcategorieën automatisch worden verzameld, zoals wordt beschreven in [Automatische informatie](../data-collection/automatic-information.md).  Als deze configuratie niet wordt gespecificeerd, worden alle categorieën gebruikt door gebrek.
+Geeft aan welke contextcategorieën automatisch moeten worden verzameld, zoals beschreven in [Automatische informatie](../data-collection/automatic-information.md).  Als deze configuratie niet wordt gespecificeerd, worden alle categorieën gebruikt door gebrek.
 
 ### `debugEnabled`
 
@@ -54,7 +54,7 @@ Geeft aan welke contextcategorieën automatisch worden verzameld, zoals wordt be
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | `false` |
 
-Geeft aan of foutopsporing moet worden ingeschakeld. Het plaatsen van dit config om de volgende eigenschappen toe te `true` laten:
+Geeft aan of foutopsporing moet worden ingeschakeld. Als u deze configuratie instelt op `true`, worden de volgende functies ingeschakeld:
 
 | **Functie** | **-functie** |
 | ---------------------- | ------------------ |
@@ -66,6 +66,7 @@ Geeft aan of foutopsporing moet worden ingeschakeld. Het plaatsen van dit config
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ------------------ |
 | Tekenreeks | Nee | `beta.adobedc.net` |
+| Tekenreeks | Nee | `omtrdc.net` |
 
 Het domein dat wordt gebruikt om met de diensten van Adobe in wisselwerking te staan. Dit wordt slechts gebruikt als u een eerste partijdomein (CNAME) hebt dat volmachten verzoeken aan de de randinfrastructuur van de Adobe.
 
@@ -75,7 +76,7 @@ Het domein dat wordt gebruikt om met de diensten van Adobe in wisselwerking te s
 | -------- | ------------ | ----------------- |
 | Tekenreeks | Ja | none |
 
-Uw toegewezen [!DNL Experience Cloud] organisatie-id.  Wanneer het vormen van veelvoudige instanties binnen een pagina, moet u een verschillende `orgId` voor elke instantie vormen.
+Uw toegewezen [!DNL Experience Cloud] organisatie-id.  Wanneer het vormen van veelvoudige instanties binnen een pagina, moet u verschillende `orgId` voor elke instantie vormen.
 
 ## Gegevensverzameling
 
@@ -85,7 +86,7 @@ Uw toegewezen [!DNL Experience Cloud] organisatie-id.  Wanneer het vormen van ve
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | `true` |
 
-Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch moeten worden verzameld. Zie [Automatisch koppelen bijhouden](../data-collection/track-links.md#automaticLinkTracking) voor meer informatie.
+Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch moeten worden verzameld. Zie [Automatische koppeling bijhouden](../data-collection/track-links.md#automaticLinkTracking) voor meer informatie.
 
 ### `onBeforeEventSend`
 
@@ -93,7 +94,7 @@ Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch moet
 | -------- | ------------ | ----------------- |
 | -functie | Nee | () => undefined |
 
-Plaats dit om callback te vormen die voor elke gebeurtenis vlak alvorens het wordt verzonden wordt geroepen.  Een object met het veld `xdm` wordt naar de callback verzonden.  Wijzig het `xdm` object om te wijzigen wat wordt verzonden.  Binnen callback, zal het `xdm` voorwerp reeds de gegevens hebben die in het gebeurtenisbevel worden overgegaan, en de automatisch verzamelde informatie.  Zie Gebeurtenissen globaal [wijzigen voor meer informatie over de timing van deze callback en een voorbeeld](tracking-events.md#modifying-events-globally).
+Plaats dit om callback te vormen die voor elke gebeurtenis vlak alvorens het wordt verzonden wordt geroepen.  Een object met het veld `xdm` wordt naar de callback verzonden.  Wijzig het `xdm` voorwerp om te veranderen wat wordt verzonden.  Binnen callback, zal het `xdm` voorwerp reeds de gegevens hebben die in het gebeurtenisbevel worden overgegaan, en de automatisch verzamelde informatie.  Zie [Gebeurtenissen globaal wijzigen](tracking-events.md#modifying-events-globally) voor meer informatie over de timing van deze callback en een voorbeeld.
 
 ## Privacyopties
 
@@ -115,7 +116,7 @@ Hiermee stelt u de standaardtoestemming van de gebruiker in. Dit wordt gebruikt 
 
 Wordt gebruikt om een CSS-stijldefinitie te maken die inhoudsgebieden van uw webpagina verbergt terwijl gepersonaliseerde inhoud van de server wordt geladen. Als deze optie niet wordt opgegeven, probeert de SDK geen inhoudsgebieden te verbergen terwijl gepersonaliseerde inhoud wordt geladen, wat mogelijk resulteert in &quot;flikkering&quot;.
 
-Als u bijvoorbeeld een element op uw webpagina had met een id waarvan u de standaardinhoud wilt verbergen terwijl gepersonaliseerde inhoud wordt geladen van de server, ziet een voorbeeld van een vooraf verborgen stijl er als volgt uit: `container`
+Als u bijvoorbeeld een element op uw webpagina met een id van `container` hebt waarvan u de standaardinhoud wilt verbergen terwijl gepersonaliseerde inhoud wordt geladen van de server, ziet een voorbeeld van een vooraf verborgen stijl er als volgt uit:
 
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
@@ -129,7 +130,7 @@ Als u bijvoorbeeld een element op uw webpagina had met een id waarvan u de stand
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | `true` |
 
-Laat [!DNL Audience Manager] koekjesbestemmingen toe, die het plaatsen van koekjes toestaat die op segmentkwalificatie worden gebaseerd.
+Hiermee schakelt u cookie-doelen [!DNL Audience Manager] in, zodat cookies kunnen worden ingesteld op basis van segmentkwalificatie.
 
 ### `urlDestinationsEnabled`
 
@@ -137,7 +138,7 @@ Laat [!DNL Audience Manager] koekjesbestemmingen toe, die het plaatsen van koekj
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | `true` |
 
-Hiermee schakelt u [!DNL Audience Manager] URL-doelen in, zodat URL&#39;s kunnen worden geactiveerd op basis van segmentkwalificatie.
+Laat [!DNL Audience Manager] bestemmingen URL toe, die het vuren van URLs toestaat die op segmentkwalificatie wordt gebaseerd.
 
 ## Identiteitsopties
 
