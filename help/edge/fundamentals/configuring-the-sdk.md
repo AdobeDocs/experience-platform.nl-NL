@@ -5,7 +5,7 @@ description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 keywords: configureren;configuratie;SDK;edge;Web SDK;configure;edgeConfigId;context;web;apparaat;omgeving;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk montages;prehideStyle;opacity;cookieDestinationEnabled;urlMigrationEnabled;idID Enabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 5%
@@ -94,7 +94,7 @@ Geeft aan of gegevens die aan koppelingsklikken zijn gekoppeld, automatisch moet
 | -------- | ------------ | ----------------- |
 | -functie | Nee | () => undefined |
 
-Plaats dit om callback te vormen die voor elke gebeurtenis vlak alvorens het wordt verzonden wordt geroepen.  Een object met het veld `xdm` wordt naar de callback verzonden.  Wijzig het `xdm` voorwerp om te veranderen wat wordt verzonden.  Binnen callback, zal het `xdm` voorwerp reeds de gegevens hebben die in het gebeurtenisbevel worden overgegaan, en de automatisch verzamelde informatie.  Zie [Gebeurtenissen globaal wijzigen](tracking-events.md#modifying-events-globally) voor meer informatie over de timing van deze callback en een voorbeeld.
+Plaats dit om callback te vormen die voor elke gebeurtenis vlak alvorens het wordt verzonden wordt geroepen.  Een object met het veld `xdm` wordt naar de callback verzonden.  Wijzig het `xdm` voorwerp om te veranderen wat wordt verzonden.  Binnen callback, zal het `xdm` voorwerp reeds de gegevens hebben die in het gebeurtenisbevel worden overgegaan, en de automatisch verzamelde informatie. Zie [Gebeurtenissen globaal wijzigen](tracking-events.md#modifying-events-globally) voor meer informatie over de timing van deze callback en een voorbeeld.
 
 ## Privacyopties
 
