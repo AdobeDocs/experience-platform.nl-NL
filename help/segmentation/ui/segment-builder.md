@@ -5,9 +5,9 @@ title: UI-gids voor segmentBuilder
 topic: ui guide
 description: 'De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen. '
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1928'
 ht-degree: 0%
 
 ---
@@ -100,6 +100,22 @@ Alternatief, kunt u een code-gebaseerde versie van een regel bekijken die in [!D
 De mening van de code verstrekt een knoop die u toestaat om de waarde van het segment in API vraag te kopiëren. Om de recentste versie van het segment te krijgen, zorg ervoor u uw recentste veranderingen in het segment hebt bewaard.
 
 ![](../images/ui/segment-builder/copy-code.png)
+
+### Samenvoegingsfuncties
+
+Een samenvoeging in [!DNL Segment Builder] is een berekening op een groep attributen XDM waarvan gegevenstype een aantal (of een dubbel of een geheel) is. De vier gesteunde samenvoegingsfuncties binnen de Bouwer van het Segment zijn SUM, GEMIDDELD, MIN, en MAX.
+
+Als u een aggregatiefunctie wilt maken, selecteert u een gebeurtenis in de linkertrack en voegt u deze in de container [!UICONTROL Gebeurtenissen] in.
+
+![](../images/ui/segment-builder/select-event.png)
+
+Nadat u de gebeurtenis in de container Gebeurtenissen hebt geplaatst, selecteert u het pictogram Ovalen (...), gevolgd door **[!UICONTROL Samenvoegen]**.
+
+![](../images/ui/segment-builder/add-aggregation.png)
+
+De samenvoeging wordt nu toegevoegd. U kunt nu de aggregatiefunctie selecteren, kiezen welk kenmerk wordt geaggregeerd, de gelijkheidsfunctie en de waarde. In het onderstaande voorbeeld zou dit segment elk profiel kwalificeren dat een som aangekochte waarden heeft die groter is dan $100, zelfs als elke afzonderlijke aankoop minder dan $100 is.
+
+![](../images/ui/segment-builder/filled-aggregation.png)
 
 ## Containers
 
