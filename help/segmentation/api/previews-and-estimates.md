@@ -3,19 +3,27 @@ keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentatie
 solution: Experience Platform
 title: Voorvertoningen en schattingen van API-eindpunten
 topic: developer guide
-description: Met de voorvertoningen en schattingseindpunten in de API voor segmentatie van Adobe Experience Platform kunt u informatie op overzichtsniveau weergeven, zodat u zeker weet dat u het verwachte publiek in uw segmenten isoleert.
+description: Terwijl segmentdefinitie wordt ontwikkeld, kunt u met de rastergereedschappen en voorvertoningsgereedschappen in Adobe Experience Platform informatie op overzichtsniveau weergeven, zodat u zeker weet dat u het verwachte publiek isoleert.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: eba6de210dcbc12b829b09ba6e7083d342517ba2
 workflow-type: tm+mt
-source-wordcount: '793'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Voorvertoningen en schattingen van eindpunten
 
-Terwijl u de segmentdefinitie ontwikkelt, kunt u de schatting- en voorvertoningsgereedschappen in [!DNL Adobe Experience Platform] gebruiken om informatie op overzichtsniveau weer te geven, zodat u zeker weet dat u het verwachte publiek isoleert. **De** voorvertoningen verstrekken gepagineerde lijsten van kwalificerende profielen voor een segmentdefinitie, toelatend u om de resultaten tegen te vergelijken wat u verwacht. **De** ramingen verschaffen statistische informatie over een segmentdefinitie, zoals de geprojecteerde publieksgrootte, het betrouwbaarheidsinterval en de standaardafwijking voor fouten.
+Terwijl u een segmentdefinitie ontwikkelt, kunt u de schatting- en voorvertoningsgereedschappen in Adobe Experience Platform gebruiken om informatie op overzichtsniveau weer te geven, zodat u zeker weet dat u het publiek dat u verwacht, isoleert.
+
+* **De** voorvertoningen verstrekken gepagineerde lijsten van kwalificerende profielen voor een segmentdefinitie, toelatend u om de resultaten tegen te vergelijken wat u verwacht.
+
+* **De** ramingen verschaffen statistische informatie over een segmentdefinitie, zoals de geprojecteerde publieksgrootte, het betrouwbaarheidsinterval en de standaardafwijking voor fouten.
+
+>[!NOTE]
+>
+>Voor toegang tot vergelijkbare metriek met betrekking tot gegevens in real time van het Profiel van de Klant, zoals het totale aantal profielfragmenten en samengevoegde profielen binnen specifieke namespaces of het de gegevensopslag van het Profiel als geheel, gelieve te verwijzen naar [profiel voorproef (voorbeeldstatus) eindgids](../../profile/api/preview-sample-status.md), deel van de de de ontwikkelaarsgids van het Profiel API.
 
 ## Aan de slag
 
@@ -23,11 +31,10 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de [!D
 
 ## Hoe schattingen worden gegenereerd
 
-De manier waarop gegevensbemonstering wordt geactiveerd, is afhankelijk van de innamemethode.
+Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 5% verhoogt of verlaagt, wordt een samplingtaak geactiveerd om het aantal bij te werken. De manier waarop gegevensbemonstering wordt gestart, hangt af van de wijze van inname:
 
-Voor batch-opname wordt de profielopslag automatisch elke 15 minuten gescand om te zien of een nieuwe batch is opgenomen sinds de laatste samplingtaak is uitgevoerd. Als dat het geval is, wordt de profielopslag gescand om te zien of is er minstens een 5% verandering in het aantal verslagen. Als aan deze voorwaarden wordt voldaan, wordt een nieuwe steekproefbaan teweeggebracht.
-
-Voor het stromen opname, wordt de profielopslag automatisch gescand elk uur om te zien of is er minstens een 5% verandering in het aantal verslagen geweest. Als aan deze voorwaarde wordt voldaan, wordt een nieuwe steekproefbaan teweeggebracht.
+* **Batchopname:** voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om de telling bij te werken als aan de drempel van 5% verhoging of verlaging is voldaan.
+* **Streaming opname:** voor workflows met streaming gegevens wordt een controle per uur uitgevoerd om te bepalen of de drempel van 5% voor verhoging of verlaging is bereikt. Als dit het geval is, wordt er automatisch een taak geactiveerd om de telling bij te werken.
 
 De voorbeeldgrootte van de scan is afhankelijk van het totale aantal entiteiten in de profielopslag. Deze steekproefgrootte wordt vertegenwoordigd in de volgende lijst:
 
@@ -76,7 +83,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | De uitdrukking PQL om de gegevens door te vragen. |
 | `predicateType` | Het predikaat type voor de vraaguitdrukking onder `predicateExpression`. Momenteel is de enige toegestane waarde voor deze eigenschap `pql/text`. |
-| `predicateModel` | De naam van het [!DNL Experience Data Model] (XDM) schema de profielgegevens is gebaseerd op. |
+| `predicateModel` | De naam van de schemaklasse [!DNL Experience Data Model] (XDM) de profielgegevens is gebaseerd op. |
 
 **Antwoord**
 
@@ -172,7 +179,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. De verstrekte verbindingen kunnen worden gebruikt om de gespecificeerde entiteiten omhoog te zoeken, gebruikend [[!DNL Profile Access API]](../../profile/api/entities.md). |
+| `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. De verstrekte verbindingen kunnen worden gebruikt om de gespecificeerde entiteiten omhoog te zoeken, gebruikend [profiel toegang API eindpunt](../../profile/api/entities.md). |
 
 ## De resultaten van een specifieke geschatte taak {#get-estimate} ophalen
 
@@ -206,17 +213,27 @@ Een succesvolle reactie retourneert HTTP status 200 met details van de geschatte
 
 ```json
 {
-    "estimatedSize": 0,
-    "numRowsToRead": 1,
+    "estimatedSize": 4275,
+    "numRowsToRead": 4275,
+    "estimatedNamespaceDistribution": [
+        {
+            "namespaceId": "4",
+            "profilesMatchedSoFar": 35
+        },
+        {
+            "namespaceId": "6",
+            "profilesMatchedSoFar": 4275
+        }
+    ],
     "state": "RESULT_READY",
-    "profilesReadSoFar": 1,
+    "profilesReadSoFar": 4275,
     "standardError": 0,
     "error": {
         "description": "",
         "traceback": ""
     },
-    "profilesMatchedSoFar": 0,
-    "totalRows": 1,
+    "profilesMatchedSoFar": 4275,
+    "totalRows": 4275,
     "confidenceInterval": "95%",
     "_links": {
         "preview": "https://platform.adobe.io/data/core/ups/preview/app-32be0328-3f31-4b64-8d84-acd0c4fbdad3/execution/0?previewQueryId=e890068b-f5ca-4a8f-a6b5-af87ff0caac3"
@@ -226,9 +243,10 @@ Een succesvolle reactie retourneert HTTP status 200 met details van de geschatte
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `state` | De huidige status van de voorvertoningstaak. Zal &quot;RUNNING&quot;zijn tot de verwerking volledig is, waarbij het &quot;RESULT_READY&quot;of &quot;FAILED&quot;wordt. |
-| `_links.preview` | Wanneer de huidige status van de voorvertoningstaak &quot;RESULT_READY&quot; is, geeft dit kenmerk een URL om de schatting weer te geven. |
+| `estimatedNamespaceDistribution` | Een array met objecten die het aantal profielen in het segment weergeeft, uitgesplitst naar naamruimte van identiteit. Het totale aantal profielen per naamruimte (door de waarden voor elke naamruimte bij elkaar op te tellen) kan hoger zijn dan de metrische waarde van het aantal profielen, omdat één profiel aan meerdere naamruimten kan worden gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd. |
+| `state` | De huidige status van de voorvertoningstaak. De status wordt ‘UITGEVOERD’ totdat de verwerking is voltooid, waarna de status ‘RESULT_READY’ of ‘FAILED’ wordt. |
+| `_links.preview` | Wanneer `state` &quot;RESULT_READY&quot;is, verstrekt dit gebied URL om de schatting te bekijken. |
 
 ## Volgende stappen
 
-Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u met voorvertoningen en schattingen kunt werken. Lees voor meer informatie over de andere [!DNL Segmentation Service] API-eindpunten de [Overzicht van de handleiding voor ontwikkelaars van segmentatieservices](./overview.md).
+Nadat u deze handleiding hebt gelezen, hebt u een beter inzicht in hoe u met voorvertoningen en schattingen werkt met de segmentatie-API. Als u wilt weten hoe u metriek kunt openen die betrekking hebben op uw gegevens in het realtime klantprofiel, zoals het totale aantal profielfragmenten en samengevoegde profielen binnen specifieke naamruimten of het profielgegevensbestand als geheel, gaat u naar de [profile preview (`/previewsamplestatus`) eindpunthulplijn](../../profile/api/preview-sample-status.md).
