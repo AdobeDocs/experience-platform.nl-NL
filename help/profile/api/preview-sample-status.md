@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API;voorvertoning;voorbeeld
-title: API-eindpunt voor profielvoorbeeldstatus
-description: Met de Real-time eindpunten van de API van het Profiel van de Klant, kunt u het recentste succesvolle voorbeeld van uw gegevens van het Profiel, evenals de distributie van het lijstprofiel door dataset en door identiteitsnamespace binnen Adobe Experience Platform voorproef.
+title: Voorbeeld van voorbeeldstatus (Profile Preview) API-eindpunt
+description: Met het voorbeeldstatuseindpunt van de voorvertoning, onderdeel van de Real-Time Customer Profile API, kunt u een voorvertoning weergeven van het meest recente voorbeeld van de profielgegevens, en kunt u de distributie van het lijstprofiel per dataset en per naamruimte in Adobe Experience Platform bekijken.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5266c393b034d1744134522cf1769304f39733da
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,20 @@ ht-degree: 0%
 
 Met Adobe Experience Platform kunt u klantgegevens uit meerdere bronnen invoeren om robuuste, uniforme profielen voor individuele klanten te maken. Aangezien gegevens die voor het Profiel van de Klant in real time worden toegelaten in [!DNL Platform] worden opgenomen, wordt het opgeslagen binnen de gegevensopslag van het Profiel.
 
-Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 5% verhoogt of verlaagt, wordt een taak geactiveerd om het aantal bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om de telling bij te werken. Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal bij te werken als aan de drempel van 5% voor verhogen of verlagen is voldaan. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte.
+Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 5% verhoogt of verlaagt, wordt een samplingtaak geactiveerd om het aantal bij te werken. De wijze waarop het monster wordt geactiveerd, hangt af van het type inname dat wordt gebruikt:
+
+* Voor **streaminggegevensworkflows** wordt een controle per uur uitgevoerd om te bepalen of aan de drempel van 5% verhoging of verlaging is voldaan. Als dit het geval is, wordt er automatisch een voorbeeldtaak geactiveerd om de telling bij te werken.
+* Voor **batch-opname** wordt binnen 15 minuten nadat een batch in de profielopslag is opgenomen, een taak uitgevoerd om de telling bij te werken als aan de drempel van 5% verhoging of verlaging is voldaan. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte.
 
 Deze metriek zijn ook beschikbaar binnen [!UICONTROL Profielen] sectie van de UI van het Experience Platform. Voor informatie over hoe te om tot de gegevens van het Profiel toegang te hebben gebruikend UI, gelieve [[!DNL Profile] gebruikersgids](../ui/user-guide.md) te bezoeken.
 
+>[!NOTE]
+>
+>Er zijn schatting en voorproef eindpunten beschikbaar als deel van de Dienst API van de Segmentatie van Adobe Experience Platform die u toestaan om samenvatting-vlakke informatie betreffende segmentdefinities te bekijken helpen ervoor zorgen u het verwachte publiek isoleert. Voor gedetailleerde stappen voor het werken met segmentvoorproef en schattingseindpunten, gelieve te bezoeken [voorproeven en schattingen eindpuntgids](../../segmentation/api/previews-and-estimates.md), deel van [!DNL Segmentation] API ontwikkelaarsgids.
+
 ## Aan de slag
 
-Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
+Het API-eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Lees voordat u doorgaat de [Aan de slag-handleiding](getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een [!DNL Experience Platform]-API te voltooien.
 
 ## Profielfragmenten versus samengevoegde profielen
 
@@ -89,7 +96,7 @@ De reactie bevat de details voor de laatste geslaagde voorbeeldtaak die voor de 
 | `totalFragmentCount` | Het totale aantal profielfragmenten in het profielarchief. |
 | `lastSuccessfulBatchTimestamp` | Laatste succesvolle tijdstempel voor batch-opname. |
 | `streamingDriven` | *Dit veld is afgekeurd en heeft geen betekenis voor de reactie.* |
-| `totalRows` | Het totale aantal samengevoegde profielen in het Experience-platform, ook wel &#39;profile count&#39; genoemd. |
+| `totalRows` | Het totale aantal samengevoegde profielen in Experience Platform, ook wel &#39;profieltelling&#39; genoemd. |
 | `lastBatchId` | Laatste batch-opname-id. |
 | `status` | Status van laatste sample. |
 | `samplingRatio` | Verhouding van samengevoegde profielen (`numRowsToRead`) tot het totaal van samengevoegde profielen (`totalRows`), uitgedrukt als een percentage in decimale notatie. |
@@ -189,8 +196,6 @@ De reactie omvat een `data`-array, die een lijst met gegevenssetobjecten bevat. 
 | `createdUser` | De gebruikers-id van de gebruiker die de gegevensset heeft gemaakt. |
 | `reportTimestamp` | De tijdstempel van het rapport. Als een `date` parameter tijdens het verzoek werd verstrekt, is het teruggekeerde rapport voor de verstrekte datum. Als er geen parameter `date` is opgegeven, wordt het meest recente rapport geretourneerd. |
 
-
-
 ## Profieldistributie weergeven via naamruimte
 
 U kunt een verzoek van de GET aan het `/previewsamplestatus/report/namespace` eindpunt uitvoeren om de mislukking door identiteitsnamespace over alle samengevoegde profielen in uw opslag van het Profiel te bekijken. Identiteitsnaamruimten zijn een belangrijk onderdeel van de Adobe Experience Platform Identity Service dat als indicatoren dient voor de context waarop de klantgegevens betrekking hebben. Voor meer informatie gaat u naar [Naamruimte overzicht](../../identity-service/namespaces.md).
@@ -288,5 +293,4 @@ De reactie omvat een `data` serie, met individuele voorwerpen die de details voo
 
 ## Volgende stappen
 
-U kunt gelijkaardige ramingen en voorproeven ook gebruiken om samenvatting-vlakke informatie betreffende uw segmentdefinities te bekijken om u te helpen het verwachte publiek isoleren. Als u gedetailleerde stappen wilt vinden voor het werken met segmentvoorvertoningen en -schattingen met de [!DNL Adobe Experience Platform Segmentation Service] API, raadpleegt u de [handleiding voor voorvertoningen en schattingen van eindpunten](../../segmentation/api/previews-and-estimates.md), die deel uitmaakt van de [!DNL Segmentation] API-ontwikkelaarsgids.
-
+Nu u weet hoe te om steekproefgegevens in de opslag van het Profiel voor te vertonen, kunt u de schatting en voorproefpunten van de Dienst API van de Segmentatie ook gebruiken om summiere-vlakke informatie betreffende uw segmentdefinities te bekijken. Deze informatie helpt om ervoor te zorgen u het verwachte publiek in uw segment isoleert. Als u meer wilt weten over het werken met segmentvoorvertoningen en -schattingen met de segmentatie-API, gaat u naar de [gids voor voorvertoningen en eindpunten voor ramingen](../../segmentation/api/previews-and-estimates.md).
