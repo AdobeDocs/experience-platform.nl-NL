@@ -5,9 +5,9 @@ description: Meer weten over Adobe Experience Cloud-id?
 seo-description: Meer weten over Adobe Experience Cloud-id?
 keywords: Identiteit;Identiteit eerste partij;Identiteitsdienst;Identiteit derde partij;Identiteitsmigratie;Identiteitskaart van de Bezoeker;Identiteitskaart;Identiteitskaart van derdePartijCookiesEnabled;idMigrationEnabled;getIdentiteit;syncIdentiteitskaart;Identiteitskaart;primaire;Identiteitskaart Namespace;Naamruimte ID;AuthenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: 60945f7f3a87568b82d968692cc7a6e07593fa01
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK gebruikt [Adobe Identity Service](../../identity-service/ecid.md). Dit zorgt ervoor dat elk apparaat een unieke id heeft die op het apparaat blijft bestaan, zodat de activiteit tussen pagina&#39;s aan elkaar kan worden gekoppeld.
 
-## Identiteit eerste partij
+## Identiteit van eerste partij
 
-[!DNL Identity Service] slaat de identiteit in een koekje in een eerste partijdomein op. De [!DNL Identity Service] probeert om het koekje te plaatsen gebruikend een kopbal van HTTP op het domein. Als dat mislukt, valt [!DNL Identity Service] terug naar het instellen van cookies via JavaScript. Adobe raadt u aan een CNAME in te stellen om ervoor te zorgen dat uw cookies niet worden beperkt door ITP-beperkingen aan de clientzijde.
+[!DNL Identity Service] slaat de identiteit in een koekje in een eerstepartijdomein op. De [!DNL Identity Service] probeert om het koekje te plaatsen gebruikend een kopbal van HTTP op het domein. Als dat mislukt, valt [!DNL Identity Service] terug naar het instellen van cookies via JavaScript. Adobe raadt u aan een CNAME in te stellen om ervoor te zorgen dat uw cookies niet worden beperkt door ITP-beperkingen aan de clientzijde.
 
 ## Identiteit van derden
 
-[!DNL Identity Service] heeft de capaciteit om een identiteitskaart met een derdedomein (demdex.net) te synchroniseren om het volgen over plaatsen toe te laten. Wanneer dit wordt toegelaten zal het eerste verzoek voor een bezoeker (b.v. iemand zonder ECID) aan demdex.net worden gedaan. Dit zal slechts op browsers worden gedaan die het toestaan (b.v. Chrome) en door de `thirdPartyCookiesEnabled` parameter in de configuratie wordt gecontroleerd. Als u deze eigenschap allen samen zou willen onbruikbaar maken, plaats `thirdPartyCookiesEnabled` aan vals.
+[!DNL Identity Service] heeft de capaciteit om een identiteitskaart met een derdedomein (demdex.net) te synchroniseren om het volgen over plaatsen toe te laten. Wanneer dit wordt toegelaten zal het eerste verzoek voor een bezoeker (bijvoorbeeld, iemand zonder ECID) aan demdex.net worden gemaakt. Dit zal slechts op browsers worden gedaan die het (zoals Chrome) toestaan en door de `thirdPartyCookiesEnabled` parameter in de configuratie wordt gecontroleerd. Als u deze eigenschap allen samen zou willen onbruikbaar maken, plaats `thirdPartyCookiesEnabled` aan vals.
 
 ## ID-migratie
 
