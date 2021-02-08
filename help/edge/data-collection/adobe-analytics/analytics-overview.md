@@ -5,9 +5,9 @@ description: Meer informatie over het verzenden van gegevens naar Adobe Analytic
 seo-description: Meer informatie over het verzenden van gegevens naar Adobe Analytics met Web SDK van Experience Platform
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Gegevens verzenden naar Adobe Analytics
 
-De Adobe Experience Platform [!DNL Web SDK] kan gegevens naar Adobe Analytics verzenden. Dit werkt door te vertalen `xdm` in een indeling die de Adobe Analytics kan gebruiken.
+De Adobe Experience Platform [!DNL Web SDK] kan gegevens naar Adobe Analytics verzenden. Dit werkt door `xdm` in een formaat te vertalen de Adobe Analytics kan gebruiken.
 
 ## Instellen
 
@@ -23,7 +23,7 @@ Adobe Analytics haalt de gegevens die u verzendt automatisch op als u een rappor
 
 ## Automatisch toegewezen gegevens
 
-De Adobe Experience Platform wijst veel XDM-variabelen automatisch [!DNL Edge Network] toe. De volledige lijst met automatisch toegewezen variabelen wordt [hier](automatically-mapped-vars.md)weergegeven.
+De Adobe Experience Platform [!DNL Edge Network] wijst automatisch veel XDM-variabelen toe. De volledige lijst van deze variabelen wordt [hier](automatically-mapped-vars.md) vermeld.
 
 ## Handmatig toegewezen gegevens
 
