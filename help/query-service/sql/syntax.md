@@ -5,19 +5,19 @@ title: SQL-syntaxis in Query-service
 topic: syntax
 description: In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 78707257c179101b29e68036bf9173d74f01e03a
 workflow-type: tm+mt
-source-wordcount: '2221'
-ht-degree: 0%
+source-wordcount: '1981'
+ht-degree: 1%
 
 ---
 
 
 # SQL-syntaxis in Query Service
 
-[!DNL Query Service] verstrekt de capaciteit om standaardANSI SQL voor  `SELECT` verklaringen en andere beperkte bevelen te gebruiken. In dit document wordt SQL-syntaxis weergegeven die wordt ondersteund door [!DNL Query Service].
+De Dienst van de Vraag van Adobe Experience Platform verstrekt de capaciteit om standaardANSI SQL voor `SELECT` verklaringen en andere beperkte bevelen te gebruiken. In dit document wordt de SQL-syntaxis beschreven die wordt ondersteund door [!DNL Query Service].
 
-## Een SELECT-query definiëren
+## query&#39;s SELECTEREN {#select-queries}
 
 De volgende syntaxis bepaalt een `SELECT` vraag die door [!DNL Query Service] wordt gesteund:
 
@@ -37,37 +37,61 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-waarbij `from_item` een van de volgende kan zijn:
+waarbij `from_item` een van de volgende opties kan zijn:
 
 ```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
-    [ LATERAL ] ( select ) [ AS ] alias [ ( column_alias [, ...] ) ]
-    with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
-    from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
 ```
 
-en `grouping_element` kan één van zijn:
+```sql
+[ LATERAL ] ( select ) [ AS ] alias [ ( column_alias [, ...] ) ]
+```
+
+```sql
+with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
+```
+
+```sql
+from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
+```
+
+en `grouping_element` kan één van de volgende opties zijn:
 
 ```sql
 ( )
-    expression
-    ( expression [, ...] )
-    ROLLUP ( { expression | ( expression [, ...] ) } [, ...] )
-    CUBE ( { expression | ( expression [, ...] ) } [, ...] )
-    GROUPING SETS ( grouping_element [, ...] )
+```
+
+```sql
+expression
+```
+
+```sql
+( expression [, ...] )
+```
+
+```sql
+ROLLUP ( { expression | ( expression [, ...] ) } [, ...] )
+```
+
+```sql
+CUBE ( { expression | ( expression [, ...] ) } [, ...] )
+```
+
+```sql
+GROUPING SETS ( grouping_element [, ...] )
 ```
 
 en `with_query` is:
 
 ```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
- 
-TABLE [ ONLY ] table_name [ * ]
 ```
+
+De volgende subsecties bevatten details over extra clausules die u in uw vragen kunt gebruiken, op voorwaarde dat zij het hierboven geschetste formaat volgen.
 
 ### component SNAPSHOT
 
-Deze clausule kan worden gebruikt om gegevens over een lijst te lezen die incrementeel op momentopname ids wordt gebaseerd. Een momentopname identiteitskaart is een controlepuntteller die door een aantal, van type Lang, op een datalababel wordt geïdentificeerd telkens als het gegeven aan het wordt geschreven. De component SNAPSHOT koppelt zich aan de lijstverhouding het naast wordt gebruikt.
+Deze clausule kan worden gebruikt om gegevens over een lijst incrementeel te lezen die op momentopname IDs wordt gebaseerd. Een momentopname identiteitskaart is een controlepuntteller die door een aantal wordt vertegenwoordigd van het type Long dat op een lijst van het gegevenshoeveeltal wordt toegepast telkens als het gegeven aan het wordt geschreven. De `SNAPSHOT` clausule maakt zich aan de lijstverhouding vast het naast wordt gebruikt.
 
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
@@ -82,40 +106,48 @@ SELECT * FROM Customers SNAPSHOT AS OF 345;
 
 SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
 
+SELECT * FROM Customers SNAPSHOT BETWEEN HEAD AND 123;
+
+SELECT * FROM Customers SNAPSHOT BETWEEN 345 AND TAIL;
+
 SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
 
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
-Houd er rekening mee dat een component SNAPSHOT werkt met een tabel- of tabelalias, maar niet boven op een subquery of weergave. Een component SNAPHOST werkt overal waar een SELECT-query op een tabel kan worden toegepast.
+Een `SNAPSHOT`-component werkt met een tabel- of tabelalias, maar niet boven op een subquery of weergave. Een `SNAPSHOT` clausule zal overal werken `SELECT` vraag op een lijst kan worden toegepast.
 
-### WHERE ILIKE, component
+Daarnaast kunt u `HEAD` en `TAIL` gebruiken als speciale verschuivingswaarden voor momentopnameclausules. Het gebruiken van `HEAD` verwijst naar een compensatie vóór de eerste momentopname, terwijl `TAIL` naar een compensatie na de laatste momentopname verwijst.
 
-Het sleutelwoord ILIKE kan in plaats van LIKE worden gebruikt om gelijken op WAAR clausule van de UITGEZOCHTE vraag ongevoelig te maken.
+### WHERE-component
+
+Door gebrek, zijn de gelijken die door een `WHERE` clausule op een `SELECT` vraag worden veroorzaakt case-sensitive. Als u gelijken case-insensitive wilt zijn, kunt u het sleutelwoord `ILIKE` in plaats van `LIKE` gebruiken.
 
 ```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
 ```
 
-De logica van de clausules LIKE en ILIKE is als volgt:
-- ```WHERE condition LIKE pattern```,  ```~~``` is gelijk aan patroon
-- ```WHERE condition NOT LIKE pattern```,  ```!~~``` is gelijk aan patroon
-- ```WHERE condition ILIKE pattern```,  ```~~*``` gelijk aan patroon
-- ```WHERE condition NOT ILIKE pattern```,  ```!~~*``` gelijk aan patroon
+De logica van de clausules LIKE en ILIKE wordt verklaard in de volgende lijst:
 
+| Clausule | Operator |
+| ------ | -------- |
+| `WHERE condition LIKE pattern` | `~~` |
+| `WHERE condition NOT LIKE pattern` | `!~~` |
+| `WHERE condition ILIKE pattern` | `~~*` |
+| `WHERE condition NOT ILIKE pattern` | `!~~*` |
 
-#### Voorbeeld
+**Voorbeeld**
 
 ```sql
 SELECT * FROM Customers
 WHERE CustomerName ILIKE 'a%';
 ```
 
-Keert klanten met namen terug die in &quot;A&quot;of &quot;a&quot;beginnen.
+Deze vraag keert klanten met namen terug die in &quot;A&quot;of &quot;a&quot;beginnen.
 
-## JOINS
+### VERBINDEN
 
-Een `SELECT` vraag die verbindingen gebruikt heeft de volgende syntaxis:
+Een `SELECT` vraag die gebruikt verbindt zich heeft de volgende syntaxis:
 
 ```sql
 SELECT statement
@@ -124,10 +156,9 @@ FROM statement
 ON join condition
 ```
 
+### UNIE, INTERSECT EN BEHALVE
 
-## UNIE, INTERSECT EN BEHALVE
-
-De `UNION`, `INTERSECT`, en `EXCEPT` clausules worden gesteund om als rijen van twee of meer lijsten te combineren of uit te sluiten:
+De `UNION`, `INTERSECT`, en `EXCEPT` clausules worden gebruikt om als rijen van twee of meer lijsten te combineren of uit te sluiten:
 
 ```sql
 SELECT statement 1
@@ -135,106 +166,105 @@ SELECT statement 1
 SELECT statement 2
 ```
 
-## TABEL MAKEN ALS SELECT
+### TABEL MAKEN ALS SELECT
 
-De volgende syntaxis definieert een `CREATE TABLE AS SELECT` (CTAS)-query die wordt ondersteund door [!DNL Query Service]:
+De volgende syntaxis bepaalt een `CREATE TABLE AS SELECT` (CTAS) vraag:
 
 ```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-waarbij
-`target_schema_title` is de titel van het XDM-schema. Gebruik deze clausule slechts als u een bestaand schema XDM voor de nieuwe dataset wilt gebruiken die door vraag CTAS wordt gecreeerd
-`rowvalidation` specificeert als de gebruiker rijniveaubevestiging van elke nieuwe partijen wil die voor de nieuwe gemaakte dataset worden opgenomen. Standaardwaarde is &#39;true&#39;
+**Parameters**
 
-en `select_query` is een `SELECT`-instructie, waarvan de syntaxis hierboven in dit document is gedefinieerd.
+- `schema`: De titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om een bestaand schema XDM voor de nieuwe dataset te gebruiken die door de vraag CTAS wordt gecreeerd.
+- `rowvalidation`: (Optioneel) Hiermee wordt opgegeven of de gebruiker validatie op rijniveau wil toepassen voor alle nieuwe batches die worden ingevoerd voor de nieuwe gegevensset. De standaardwaarde is `true`.
+- `select_query`: Een  `SELECT` instructie. De syntaxis van de `SELECT` vraag kan in [SELECT vragen sectie](#select-queries) worden gevonden.
 
-
-### Voorbeeld
+**Voorbeeld**
 
 ```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
+
 CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
-```
 
-Houd er rekening mee dat voor een bepaalde CTAS-query:
-
-1. De instructie `SELECT` moet een alias hebben voor de statistische functies zoals `COUNT`, `SUM`, `MIN` enzovoort.
-2. De instructie `SELECT` kan met of zonder haakjes () worden geleverd.
-3. De `SELECT` verklaring kan met een clausule worden verstrekt SNAPSHOT om stijgende delta&#39;s in doellijst te lezen.
-
-```sql
 CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 ```
 
+>[!NOTE]
+>
+>De instructie `SELECT` moet een alias hebben voor de statistische functies zoals `COUNT`, `SUM`, `MIN` enzovoort. Daarnaast kan de instructie `SELECT` met of zonder haakjes () worden geleverd. U kunt een `SNAPSHOT` clausule verstrekken om stijgende delta&#39;s in de doellijst te lezen.
+
 ## INVOEGEN IN
 
-De volgende syntaxis bepaalt een `INSERT INTO` vraag die door [!DNL Query Service] wordt gesteund:
+De opdracht `INSERT INTO` wordt als volgt gedefinieerd:
 
 ```sql
 INSERT INTO table_name select_query
 ```
 
-waarbij `select_query` een `SELECT`-instructie is, waarvan de syntaxis hierboven in dit document is gedefinieerd.
+**Parameters**
 
-### Voorbeeld
+- `table_name`: De naam van de tabel waarin u de query wilt invoegen.
+- `select_query`: Een  `SELECT` instructie. De syntaxis van de `SELECT` vraag kan in [SELECT vragen sectie](#select-queries) worden gevonden.
+
+**Voorbeeld**
 
 ```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
-```
 
-Houd er rekening mee dat voor een bepaalde INSERT INTO-query:
-
-1. De instructie `SELECT` MOET NIET tussen haakjes () staan.
-2. Het schema van het resultaat van de instructie `SELECT` moet overeenkomen met dat van de tabel die is gedefinieerd in de instructie `INSERT INTO`.
-3. De `SELECT` verklaring kan met een clausule worden verstrekt SNAPSHOT om stijgende delta&#39;s in doellijst te lezen.
-
-```sql
 INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 ```
 
-### DROP TABLE
+>[!NOTE]
+> De `SELECT`-instructie **mag niet** tussen haakjes () staan. Daarnaast moet het schema van het resultaat van de instructie `SELECT` overeenkomen met dat van de tabel die is gedefinieerd in de instructie `INSERT INTO`. U kunt een `SNAPSHOT` clausule verstrekken om stijgende delta&#39;s in de doellijst te lezen.
 
-Zet een tabel neer en verwijder de map die aan de tabel is gekoppeld uit het bestandssysteem als dit geen EXTERNE tabel is. Als de te laten vallen tabel niet bestaat, treedt een uitzondering op.
+## DROP TABLE
+
+Met de opdracht `DROP TABLE` wordt een bestaande tabel verwijderd en wordt de aan de tabel gekoppelde map uit het bestandssysteem verwijderd als dit geen externe tabel is. Als de tabel niet bestaat, treedt een uitzondering op.
 
 ```sql
-DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
+DROP TABLE [IF EXISTS] [db_name.]table_name
 ```
 
-### Parameters
+**Parameters**
 
-- `IF EXISTS`: Als de tabel niet bestaat, gebeurt er niets
-- `TEMP`: Tijdelijke tabel
+- `IF EXISTS`: Als dit is opgegeven, wordt geen uitzondering gegenereerd als de tabel  **** niet bestaat.
 
 ## WEERGAVE MAKEN
 
-De volgende syntaxis bepaalt een `CREATE VIEW` vraag die door [!DNL Query Service] wordt gesteund:
+De volgende syntaxis bepaalt een `CREATE VIEW` vraag:
 
 ```sql
-CREATE [ OR REPLACE ] VIEW view_name AS select_query
+CREATE VIEW view_name AS select_query
 ```
 
-Waarbij `view_name` de naam is van de weergave die moet worden gemaakt
-en `select_query` is een `SELECT`-instructie, waarvan de syntaxis hierboven in dit document is gedefinieerd.
+**Parameters**
 
-Voorbeeld:
+- `view_name`: De naam van de weergave die moet worden gemaakt.
+- `select_query`: Een  `SELECT` instructie. De syntaxis van de `SELECT` vraag kan in [SELECT vragen sectie](#select-queries) worden gevonden.
+
+**Voorbeeld**
 
 ```sql
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
+
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
 
-### DROP VIEW
+## DROP VIEW
 
-De volgende syntaxis bepaalt een `DROP VIEW` vraag die door [!DNL Query Service] wordt gesteund:
+De volgende syntaxis bepaalt een `DROP VIEW` vraag:
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
 ```
 
-Waarbij `view_name` de naam is van de weergave die moet worden verwijderd
+**Parameter**
 
-Voorbeeld:
+- `IF EXISTS`: Als dit wordt opgegeven, wordt geen uitzondering gegenereerd als de weergave  **** niet bestaat.
+- `view_name`: De naam van de weergave die moet worden verwijderd.
+
+**Voorbeeld**
 
 ```sql
 DROP VIEW v1
@@ -243,133 +273,121 @@ DROP VIEW IF EXISTS v1
 
 ## [!DNL Spark] SQL-opdrachten
 
+De subsectie hieronder behandelt de SQL bevelen van de Vonk die door de Dienst van de Vraag worden gesteund.
+
 ### SET
 
-Stel een eigenschap in, retourneer de waarde van een bestaande eigenschap of vermeld alle bestaande eigenschappen. Als een waarde wordt opgegeven voor een bestaande eigenschapsleutel, wordt de oude waarde overschreven.
+Met de opdracht `SET` wordt een eigenschap ingesteld en wordt de waarde van een bestaande eigenschap geretourneerd of worden alle bestaande eigenschappen weergegeven. Als een waarde wordt opgegeven voor een bestaande eigenschapsleutel, wordt de oude waarde overschreven.
 
 ```sql
-SET property_key [ To | =] property_value
+SET property_key = property_value
 ```
 
-Als u de waarde voor een instelling wilt retourneren, gebruikt u `SHOW [setting name]`.
+**Parameters**
+
+- `property_key`: De naam van de eigenschap die u wilt weergeven of wijzigen.
+- `property_value`: De waarde waarop u de eigenschap wilt instellen.
+
+Als u de waarde voor een instelling wilt retourneren, gebruikt u `SET [property key]` zonder een `property_value`.
 
 ## PostgreSQL-opdrachten
 
+De subsecties hieronder behandelen de bevelen PostgreSQL die door de Dienst van de Vraag worden gesteund.
+
 ### BEGINNEN
 
-Dit bevel wordt ontleed en het voltooide bevel wordt teruggestuurd naar de cliënt. Dit is het zelfde als `START TRANSACTION` bevel.
+Met de opdracht `BEGIN`, of met de opdracht `BEGIN WORK` of `BEGIN TRANSACTION`, wordt een transactieblok gestart. Om het even welke verklaringen die na het begin bevel worden ingevoerd zullen in één enkele transactie worden uitgevoerd tot een expliciete COMMIT of bevel ROLLBACK wordt gegeven. Deze opdracht is hetzelfde als `START TRANSACTION`.
 
 ```sql
-BEGIN [ TRANSACTION ]
+BEGIN
+BEGIN WORK
+BEGIN TRANSACTION
 ```
-
-#### Parameters
-
-- `TRANSACTION`: Optionele sleutelwoorden. Als je het luistert, wordt er geen actie ondernomen.
 
 ### SLUITEN
 
-`CLOSE` bevrijdt de middelen verbonden aan een open curseur. Nadat de cursor is gesloten, zijn er geen verdere bewerkingen meer toegestaan. Een cursor moet worden gesloten wanneer deze niet meer nodig is.
+Met de opdracht `CLOSE` worden de bronnen vrijgemaakt die aan een open cursor zijn gekoppeld. Nadat de cursor is gesloten, zijn er geen verdere bewerkingen meer toegestaan. Een cursor moet worden gesloten wanneer deze niet meer nodig is.
 
 ```sql
-CLOSE { name }
+CLOSE name
+CLOSE ALL
 ```
 
-#### Parameters
-
-- `name`: de naam van een open cursor die moet worden gesloten.
-
-### DOEN
-
-Er wordt geen actie ondernomen in [!DNL Query Service] als antwoord op de commit transactieverklaring.
-
-```sql
-COMMIT [ WORK | TRANSACTION ]
-```
-
-#### Parameters
-
-- `WORK`
-- `TRANSACTION`: Optionele sleutelwoorden. Ze hebben geen effect.
+Als `CLOSE name` wordt gebruikt, `name` vertegenwoordigt de naam van een open curseur die moet worden gesloten. Als `CLOSE ALL` wordt gebruikt, worden alle open cursors gesloten.
 
 ### VERWIJDEREN
 
-Gebruik `DEALLOCATE` om een eerder voorbereide SQL-instructie opnieuw te vinden. Als u een voorbereide instructie niet expliciet zoekt, wordt de toewijzing ongedaan gemaakt wanneer de sessie wordt beëindigd.
+Met de opdracht `DEALLOCATE` kunt u een eerder voorbereide SQL-instructie opnieuw opzoeken. Als u een voorbereide instructie niet expliciet zoekt, wordt de toewijzing ongedaan gemaakt wanneer de sessie wordt beëindigd. Meer informatie over voorbereide instructies vindt u in de sectie [PREPARE command](#prepare).
 
 ```sql
-DEALLOCATE [ PREPARE ] { name | ALL }
+DEALLOCATE name
+DEALLOCATE ALL
 ```
 
-#### Parameters
-
-- `Prepare`: Dit trefwoord wordt genegeerd.
-- `name`: De naam van de voorbereide instructie die moet worden gedistribueerd.
-- `ALL`: Wijs alle voorbereide instructies uit.
+Als `DEALLOCATE name` wordt gebruikt, `name` vertegenwoordigt de naam van de voorbereide verklaring die moet worden deassign. Als `DEALLOCATE ALL` wordt gebruikt, zullen alle voorbereide verklaringen worden gedesalloceerd.
 
 ### VERKLAREN
 
-`DECLARE` Hiermee kan een gebruiker cursors maken die kunnen worden gebruikt om een klein aantal rijen tegelijk op te halen uit een grotere query. Nadat de curseur wordt gecreeerd, worden de rijen opgehaald van het gebruikend `FETCH`.
+Met de opdracht `DECLARE` kan een gebruiker een cursor maken die kan worden gebruikt om een klein aantal rijen op te halen uit een grotere query. Nadat de curseur wordt gecreeerd, worden de rijen opgehaald van het gebruikend `FETCH`.
 
 ```sql
-DECLARE name CURSOR [ WITH  HOLD ] FOR query
+DECLARE name CURSOR FOR query
 ```
 
-#### Parameters
+**Parameters**
 
 - `name`: De naam van de cursor die moet worden gemaakt.
-- `WITH HOLD`: Geeft aan dat de cursor kan blijven worden gebruikt nadat de transactie die deze heeft gemaakt, correct is toegewezen.
 - `query`: Een  `SELECT` of  `VALUES` opdracht die de rijen bevat die door de cursor moeten worden geretourneerd.
 
 ### UITVOEREN
 
-`EXECUTE` wordt gebruikt om een eerder voorbereide instructie uit te voeren. Omdat voorbereide instructies alleen bestaan voor de duur van een sessie, moet de voorbereide instructie zijn gemaakt door een instructie `PREPARE` die eerder in de huidige sessie is uitgevoerd.
+De opdracht `EXECUTE` wordt gebruikt om een eerder voorbereide instructie uit te voeren. Aangezien voorbereide instructies alleen bestaan voor de duur van een sessie, moet de voorbereide instructie zijn gemaakt door een instructie `PREPARE` die eerder in de huidige sessie is uitgevoerd. Meer informatie over het gebruik van voorbereide instructies vindt u in de sectie [`PREPARE` command](#prepare).
 
-Als de instructie `PREPARE` die de instructie heeft gemaakt enkele parameters heeft opgegeven, moet een compatibele set parameters worden doorgegeven aan de instructie `EXECUTE`, anders wordt een fout gegenereerd. Let op: instructies die zijn voorbereid (anders dan functies) worden niet overbelast op basis van het type of het aantal parameters. De naam van een voorbereide instructie moet uniek zijn binnen een databasesessie.
+Als de instructie `PREPARE` die de instructie heeft gemaakt enkele parameters heeft opgegeven, moet een compatibele set parameters worden doorgegeven aan de instructie `EXECUTE`. Als deze parameters niet binnen worden overgegaan, zal een fout worden opgeheven.
 
 ```sql
-EXECUTE name [ ( parameter [, ...] ) ]
+EXECUTE name [ ( parameter ) ]
 ```
 
-#### Parameters
+**Parameters**
 
 - `name`: De naam van de voorbereide instructie die moet worden uitgevoerd.
-- `parameter`: De werkelijke waarde van een parameter voor de voorbereide instructie. Dit moet een expressie zijn die een waarde oplevert die compatibel is met het gegevenstype van deze parameter, zoals bepaald toen de voorbereide instructie werd gemaakt.
+- `parameter`: De werkelijke waarde van een parameter voor de voorbereide instructie. Dit moet een expressie zijn die een waarde oplevert die compatibel is met het gegevenstype van deze parameter, zoals bepaald toen de voorbereide instructie werd gemaakt.  Als er meerdere parameters zijn voor de voorbereide instructie, worden deze door komma&#39;s gescheiden.
 
 ### VERKLAREN
 
-Dit bevel toont het uitvoeringsplan dat de planner PostgreSQL voor de geleverde verklaring produceert. Het uitvoeringsplan toont hoe de tabellen waarnaar door de instructie wordt verwezen, worden gescand — door gewone sequentiële scan, indexscan enzovoort — en als er naar meerdere tabellen wordt verwezen, welke samenvoegalgoritmen worden gebruikt om de vereiste rijen van elke invoertabel samen te voegen.
-
-Het meest kritieke deel van de vertoning is de geschatte kosten van de verklaringsuitvoering, die de gok van de planner bij hoe lang het zal duren om de verklaring in werking te stellen (die in kosteneenheden wordt gemeten die willekeurig zijn, maar gewoonlijk schijfpaginafhalen betekent). Eigenlijk worden twee getallen weergegeven: de opstartkosten vóór de eerste rij kunnen worden geretourneerd en de totale kosten voor het retourneren van alle rijen. Voor de meeste vragen, is de totale kosten wat belangrijk is, maar in contexten zoals subquery in EXISTS, kiest de planner de kleinste startkosten in plaats van de kleinste totale kosten (omdat de uitvoerder na het krijgen van één rij, hoe dan ook stopt). Ook, als u het aantal rijen om met een `LIMIT` clausule beperkt terug te keren, maakt de planner een aangewezen interpolatie tussen de eindpuntkosten om te schatten welk plan werkelijk het goedkoopst is.
-
-Met de optie `ANALYZE` wordt de instructie uitgevoerd, niet alleen gepland. Dan, worden de daadwerkelijke runtime statistieken toegevoegd aan de vertoning, met inbegrip van de totale verstreken tijd die binnen elke planknoop (in milliseconden) wordt uitgegeven en het totale aantal rijen het teruggekeerde. Dit is nuttig om te zien of de ramingen van de planner dicht bij de realiteit staan.
+Met de opdracht `EXPLAIN` wordt het uitvoeringsplan voor de opgegeven instructie weergegeven. In het uitvoeringsplan ziet u hoe de tabellen waarnaar door de instructie wordt verwezen, worden gescand.  Als er naar meerdere tabellen wordt verwezen, wordt aangegeven welke samenvoegalgoritmen worden gebruikt om de vereiste rijen van elke invoertabel samen te voegen.
 
 ```sql
-EXPLAIN [ ( option [, ...] ) ] statement
-EXPLAIN [ ANALYZE ] statement
-
-where option can be one of:
-    ANALYZE [ boolean ]
-    TYPE VALIDATE
-    FORMAT { TEXT | JSON }
+EXPLAIN option statement
 ```
 
-#### Parameters
+Waarbij `option` een van de volgende kan zijn:
 
-- `ANALYZE`: Voer het bevel uit en toon daadwerkelijke runtime en andere statistieken. Deze parameter is standaard `FALSE`.
-- `FORMAT`: Geef de uitvoerindeling op, die TEXT, XML, JSON of YAML kan zijn. Niet-tekstuele uitvoer bevat dezelfde informatie als de indeling voor tekstuitvoer, maar kan gemakkelijker door programma&#39;s worden geparseerd. Deze parameter is standaard `TEXT`.
+```sql
+ANALYZE
+FORMAT { TEXT | JSON }
+```
+
+**Parameters**
+
+- `ANALYZE`: Als het  `option` bevat  `ANALYZE`, worden de runtime en andere statistieken getoond.
+- `FORMAT`: Als het  `option` bevat  `FORMAT`, geeft het de uitvoerindeling op, die kan zijn  `TEXT` of  `JSON`. Niet-tekstuele uitvoer bevat dezelfde informatie als de indeling voor tekstuitvoer, maar kan gemakkelijker door programma&#39;s worden geparseerd. Deze parameter is standaard `TEXT`.
 - `statement`: Om het even welk  `SELECT`,  `INSERT`,  `UPDATE`,  `DELETE`,  `VALUES`,  `EXECUTE`,  `DECLARE`,  `CREATE TABLE AS`, of  `CREATE MATERIALIZED VIEW AS` verklaring, waarvan uitvoeringsplan u wilt zien.
 
 >[!IMPORTANT]
 >
 >Onthoud dat de instructie daadwerkelijk wordt uitgevoerd wanneer de optie `ANALYZE` wordt gebruikt. Hoewel `EXPLAIN` om het even welke output verwerpt die `SELECT` terugkeert, gebeuren andere bijwerkingen van de verklaring zoals gewoonlijk.
 
-#### Voorbeeld
+**Voorbeeld**
 
-Om het plan voor een eenvoudige vraag op een lijst met één enkele `integer` kolom en 10000 rijen te tonen:
+Het volgende voorbeeld toont het plan voor een eenvoudige vraag op een lijst met één enkele `integer` kolom en 10000 rijen:
 
 ```sql
 EXPLAIN SELECT * FROM foo;
+```
 
+```console
                        QUERY PLAN
 ---------------------------------------------------------
  Seq Scan on foo  (cost=0.00..155.00 rows=10000 width=4)
@@ -378,54 +396,46 @@ EXPLAIN SELECT * FROM foo;
 
 ### FETCH
 
-`FETCH` Hiermee worden rijen opgehaald met een eerder gemaakte cursor.
-
-Een curseur heeft een bijbehorende positie, die door `FETCH` wordt gebruikt. De cursorpositie kan vóór de eerste rij van het vraagresultaat, op om het even welke bepaalde rij van het resultaat, of na de laatste rij van het resultaat zijn. Wanneer u een cursor maakt, wordt deze vóór de eerste rij geplaatst. Na het halen van sommige rijen, wordt de curseur geplaatst op de rij onlangs teruggewonnen. Als `FETCH` van het eind van de beschikbare rijen loopt dan wordt de curseur verlaten die na de laatste rij wordt geplaatst. Als er geen dergelijke rij is, wordt een leeg resultaat geretourneerd en worden de cursors vóór de eerste rij of na de laatste rij geplaatst, al naargelang wat van toepassing is.
+Met de opdracht `FETCH` worden rijen opgehaald met een eerder gemaakte cursor.
 
 ```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
-#### Parameters
+**Parameters**
 
-- `num_of_rows`: Een mogelijk ondertekende geheel-getalconstante die de plaats of het aantal rijen bepaalt om te halen.
-- `cursor_name`: De naam van een open cursor.
+- `num_of_rows`: Het aantal rijen dat moet worden opgehaald.
+- `cursor_name`: De naam van de curseur u informatie van terugwint.
 
-### PREPARE
+### {#prepare} VOORBEREIDEN
 
-`PREPARE` maakt een voorbereide instructie. Een voorbereide instructie is een serverobject dat kan worden gebruikt om de prestaties te optimaliseren. Wanneer de instructie `PREPARE` wordt uitgevoerd, wordt de opgegeven instructie geparseerd, geanalyseerd en herschreven. Wanneer een `EXECUTE` bevel daarna wordt uitgegeven, wordt de voorbereide verklaring gepland en uitgevoerd. Deze arbeidsverdeling vermijdt herhalende parsanalyses, terwijl het uitvoeringsplan afhangt van de opgegeven specifieke parameterwaarden.
+Met de opdracht `PREPARE` kunt u een voorbereide instructie maken. Een voorbereide instructie is een serverobject dat kan worden gebruikt om vergelijkbare SQL-instructies te sjablonen.
 
-Bereide instructies kunnen parameters hebben, waarden die in de instructie worden vervangen wanneer deze wordt uitgevoerd. Wanneer het creëren van de voorbereide verklaring, verwijs naar parameters door positie, gebruikend $1, $2, etc. U kunt desgewenst een corresponderende lijst met parametergegevenstypen opgeven. Wanneer het gegevenstype van een parameter niet is opgegeven of als onbekend is gedeclareerd, wordt het type afgeleid van de context waarin voor het eerst naar de parameter wordt verwezen, indien mogelijk. Wanneer het uitvoeren van de verklaring, specificeer de daadwerkelijke waarden voor deze parameters in de `EXECUTE` verklaring.
+Bereide instructies kunnen parameters hebben. Dit zijn waarden die in de instructie worden vervangen wanneer deze wordt uitgevoerd. Parameters worden naar positie verwezen, waarbij $1, $2, enz. wordt gebruikt bij het gebruik van voorbereide instructies.
 
-Bereide instructies gelden alleen voor de duur van de huidige databasesessie. Wanneer de sessie wordt beëindigd, wordt de voorbereide instructie vergeten. U moet deze dus opnieuw maken voordat u de instructie opnieuw kunt gebruiken. Dit betekent ook dat één enkele voorbereide verklaring niet door veelvoudige gelijktijdige gegevensbestandcliënten kan worden gebruikt. Elke client kan echter een eigen voorbereide instructie maken die u wilt gebruiken. Bereide instructies kunnen handmatig worden opgeschoond met de opdracht `DEALLOCATE`.
-
-Bereide instructies hebben mogelijk het grootste prestatievoordeel wanneer één sessie wordt gebruikt om een groot aantal vergelijkbare instructies uit te voeren. Het prestatiesverschil is met name significant als de verklaringen complex zijn om te plannen of te herschrijven, bijvoorbeeld als de vraag zich bij vele lijsten impliceert of de toepassing van verscheidene regels vereist. Als de verklaring vrij eenvoudig is om te plannen en te herschrijven maar vrij duur om uit te voeren, is het prestatievoordeel van voorbereide verklaringen minder merkbaar.
+U kunt ook een lijst met parametergegevenstypen opgeven. Als het gegevenstype van een parameter niet wordt vermeld, kan het type van de context worden afgeleid.
 
 ```sql
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
-#### Parameters
+**Parameters**
 
-- `name`: Een willekeurige naam die aan deze bepaalde voorbereide instructie wordt gegeven. Deze moet uniek zijn binnen één sessie en wordt vervolgens gebruikt om een eerder voorbereide instructie uit te voeren of te distribueren.
-- `data-type`: Het gegevenstype van een parameter voor de voorbereide instructie. Wanneer het gegevenstype van een bepaalde parameter niet is opgegeven of als onbekend is opgegeven, wordt dit afgeleid van de context waarin de parameter voor het eerst wordt genoemd. Als u naar de parameters in de voorbereide instructie zelf wilt verwijzen, gebruikt u $1, $2 enzovoort.
-
+- `name`: De naam voor de voorbereide instructie.
+- `data_type`: De gegevenstypen van de parameters van de voorbereide instructie. Als het gegevenstype van een parameter niet wordt vermeld, kan het type van de context worden afgeleid. Als u meerdere gegevenstypen wilt toevoegen, kunt u deze toevoegen in een door komma&#39;s gescheiden lijst.
 
 ### ROLLBACK
 
-`ROLLBACK` rolt terug de huidige transactie en veroorzaakt alle updates die door de transactie worden gemaakt om worden verworpen.
+Met de opdracht `ROLLBACK` wordt de huidige transactie ongedaan gemaakt en worden alle updates die door de transactie zijn gemaakt, genegeerd.
 
 ```sql
-ROLLBACK [ WORK ]
+ROLLBACK
+ROLLBACK WORK
 ```
-
-#### Parameters
-
-- `WORK`
 
 ### SELECTEREN IN
 
-`SELECT INTO` Hiermee maakt u een nieuwe tabel en vult u deze met gegevens die door een query zijn berekend. De gegevens worden niet aan de client geretourneerd, zoals bij een normale `SELECT`. De kolommen van de nieuwe lijst hebben de namen en de gegevenstypes verbonden aan de outputkolommen van `SELECT`.
+Met de opdracht `SELECT INTO` maakt u een nieuwe tabel en vult u deze met gegevens die door een query zijn berekend. De gegevens worden niet aan de client geretourneerd, omdat deze een normale opdracht `SELECT` hebben. De kolommen van de nieuwe lijst hebben de namen en de gegevenstypes verbonden aan de outputkolommen van `SELECT` bevel.
 
 ```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
@@ -445,15 +455,17 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-#### Parameters
+**Parameters**
 
-- `TEMPORARAY` of  `TEMP`: Indien opgegeven, wordt de tabel gemaakt als een tijdelijke tabel.
-- `UNLOGGED:` indien opgegeven, wordt de tabel gemaakt als een niet-geregistreerde tabel.
-- `new_table` De naam (optioneel gekwalificeerd voor schema) van de tabel die moet worden gemaakt.
+Meer informatie over de standaard UITGEZOCHTE vraagparameters kan in [UITGEZOCHTE vraagsectie](#select-queries) worden gevonden. In deze sectie worden alleen parameters vermeld die exclusief zijn voor de opdracht `SELECT INTO`.
 
-#### Voorbeeld
+- `TEMPORARY` of  `TEMP`: Een optionele parameter. Indien gespecificeerd, zal de lijst die wordt gecreeerd een tijdelijke lijst zijn.
+- `UNLOGGED`: Een optionele parameter. Indien gespecificeerd, zal de lijst die zoals wordt gecreeerd een niet geregistreerde lijst zijn. Meer informatie over niet-geregistreerde lijsten kan in de [documentatie worden gevonden PostgreSQL](https://www.postgresql.org/docs/current/sql-createtable.html).
+- `new_table`: De naam van de tabel die moet worden gemaakt.
 
-Een nieuwe tabel maken `films_recent` die alleen bestaat uit recente items in de tabel `films`:
+**Voorbeeld**
+
+Met de volgende query wordt een nieuwe tabel `films_recent` gemaakt die alleen recente items uit de tabel `films` bevat:
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
@@ -461,106 +473,129 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### TONEN
 
-`SHOW` geeft de huidige instelling van runtimeparameters weer. Deze variabelen kunnen worden geplaatst gebruikend de `SET` verklaring, door het postgresql.conf configuratiedossier, door `PGOPTIONS` milieuvariabele (wanneer het gebruiken van libpq of een libpq-Gebaseerde toepassing), of door bevel-lijn vlaggen te bewerken wanneer het beginnen van de postgres server.
+Met de opdracht `SHOW` wordt de huidige instelling van runtimeparameters weergegeven. Deze variabelen kunnen worden geplaatst gebruikend de `SET` verklaring, door het `postgresql.conf` configuratiedossier, door `PGOPTIONS` milieuvariabele (wanneer het gebruiken van libpq of een libpq-Gebaseerde toepassing), of door bevel-lijn vlaggen uit te geven wanneer het beginnen van de server van Postgres.
 
 ```sql
 SHOW name
+SHOW ALL
 ```
 
-#### Parameters
+**Parameters**
 
-- `name`:
-   - `SERVER_VERSION`: Geeft het versienummer van de server weer.
-   - `SERVER_ENCODING`: Toont de codering van de tekenset aan de serverzijde. Deze parameter kan op dit moment wel worden weergegeven, maar niet worden ingesteld, omdat de codering tijdens het maken van de database wordt bepaald.
-   - `LC_COLLATE`: Geeft de landinstelling van de database voor sortering (tekstvolgorde) weer. Deze parameter kan op dit moment wel worden weergegeven, maar niet worden ingesteld, omdat de instelling tijdens het maken van de database wordt bepaald.
-   - `LC_CTYPE`: Geeft de landinstelling van de database voor tekenclassificatie weer. Deze parameter kan op dit moment wel worden weergegeven, maar niet worden ingesteld, omdat de instelling tijdens het maken van de database wordt bepaald.
-      `IS_SUPERUSER`: True if the current role has superuser privileges.
+- `name`: De naam van de runtimeparameter waarover u informatie wilt. Mogelijke waarden voor de runtime parameter zijn de volgende waarden:
+   - `SERVER_VERSION`: Deze parameter toont het versienummer van de server.
+   - `SERVER_ENCODING`: Deze parameter toont de codering van de tekenset aan de serverzijde.
+   - `LC_COLLATE`: Deze parameter toont de landinstelling van de database voor sortering (tekstvolgorde).
+   - `LC_CTYPE`: Deze parameter toont de landinstelling van de database voor tekenclassificatie.
+      `IS_SUPERUSER`: Deze parameter toont of heeft de huidige rol supergebruikersvoorrechten.
 - `ALL`: Toon de waarden van alle configuratieparameters met beschrijvingen.
 
-#### Voorbeeld
+**Voorbeeld**
 
-Huidige instelling van parameter `DateStyle` weergeven
+De volgende vraag toont het huidige plaatsen van de parameter `DateStyle`.
 
 ```sql
 SHOW DateStyle;
+```
+
+```console
  DateStyle
 -----------
  ISO, MDY
 (1 row)
 ```
 
-### TRANSACTIE STARTEN
-
-Dit bevel wordt ontleed en verzendt het voltooide bevel terug naar cliënt. Dit is het zelfde als `BEGIN` bevel.
-
-```sql
-START TRANSACTION [ transaction_mode [, ...] ]
-
-where transaction_mode is one of:
-
-    ISOLATION LEVEL { SERIALIZABLE | REPEATABLE READ | READ COMMITTED | READ UNCOMMITTED }
-    READ WRITE | READ ONLY
-```
-
 ### KOPIËREN
 
-Deze opdracht plaatst de uitvoer van een SELECT-query naar een opgegeven locatie. Deze opdracht is alleen succesvol als de gebruiker toegang heeft tot deze locatie.
+Met de opdracht `COPY` laat u de uitvoer van een `SELECT`-query op een opgegeven locatie dumpen. Deze opdracht is alleen succesvol als de gebruiker toegang heeft tot deze locatie.
 
 ```sql
-COPY  query
+COPY query
     TO '%scratch_space%/folder_location'
     [  WITH FORMAT 'format_name']
-
-where 'format_name' is be one of:
-    'parquet', 'csv', 'json'
-
-'parquet' is the default format.
 ```
+
+**Parameters**
+
+- `query`: De query die u wilt kopiëren.
+- `format_name`: De indeling waarin u de query wilt kopiëren. `format_name` kan één van `parquet`, `csv`, of `json` zijn. De standaardwaarde is `parquet`.
 
 >[!NOTE]
 >
 >Het volledige uitvoerpad is `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
+### ALTER TABLE
 
-### ALTER
+Met de opdracht `ALTER TABLE` kunt u primaire of buitenlandse toetsbeperkingen toevoegen of neerzetten en kolommen aan de tabel toevoegen.
 
-Met deze opdracht kunt u primaire of externe toetsbeperkingen aan de tabel toevoegen of verwijderen.
+#### BEPERKING TOEVOEGEN OF VERWIJDEREN
+
+De volgende SQL-query&#39;s geven voorbeelden van het toevoegen of neerzetten van beperkingen aan een tabel.
 
 ```sql
-Alter TABLE table_name ADD CONSTRAINT Primary key ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY ( column_name )
 
-Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name ( primary_column_name )
+ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
-Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name Namespace 'namespace'
+ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY column_name NAMESPACE namespace
 
-Alter TABLE table_name DROP CONSTRAINT Primary key ( column_name )
+ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name )
 
-Alter TABLE table_name DROP CONSTRAINT  Foreign key ( column_name )
+ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
 ```
 
->[!NOTE]
->Het tabelschema moet uniek zijn en mag niet worden gedeeld door meerdere tabellen. Daarnaast is de naamruimte verplicht.
+**Parameters**
 
+- `table_name`: De naam van de tabel die u bewerkt.
+- `constraint_name`: De naam van de restrictie die u wilt toevoegen of verwijderen.
+- `column_name`: De naam van de kolom waaraan u een beperking toevoegt.
+- `referenced_table_name`: De naam van de tabel waarnaar wordt verwezen door de buitenlandse sleutel.
+- `primary_column_name`: De naam van de kolom waarnaar wordt verwezen door de buitenlandse sleutel.
+
+>[!NOTE]
+>
+>Het tabelschema moet uniek zijn en mag niet worden gedeeld door meerdere tabellen. Daarnaast is de naamruimte verplicht voor primaire-sleutelbeperkingen.
+
+#### KOLOM TOEVOEGEN
+
+De volgende SQL-query&#39;s geven voorbeelden van het toevoegen van kolommen aan een tabel.
+
+```sql
+ALTER TABLE table_name ADD COLUMN column_name data_type
+
+ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
+```
+
+**Parameters**
+
+- `table_name`: De naam van de tabel die u bewerkt.
+- `column_name`: De naam van de kolom die u wilt toevoegen.
+- `data_type`: Het gegevenstype van de kolom die u wilt toevoegen. Tot de ondersteunde gegevenstypen behoren: bigint, char, string, date, datetime, double, double precision, integer, small int, tinyint, varchar.
 
 ### PRIMAIRE TOETSEN TONEN
 
-Dit bevel maakt een lijst van alle primaire zeer belangrijke beperkingen voor het bepaalde gegevensbestand.
+Het `SHOW PRIMARY KEYS` bevel maakt een lijst van alle primaire zeer belangrijke beperkingen voor het bepaalde gegevensbestand.
 
 ```sql
 SHOW PRIMARY KEYS
+```
+
+```console
     tableName | columnName    | datatype | namespace
 ------------------+----------------------+----------+-----------
  table_name_1 | column_name1  | text     | "ECID"
  table_name_2 | column_name2  | text     | "AAID"
 ```
 
-
 ### BUITENLANDSE TOETSEN TONEN
 
-Dit bevel maakt een lijst van alle buitenlandse zeer belangrijke beperkingen voor het bepaalde gegevensbestand.
+Het `SHOW FOREIGN KEYS` bevel maakt een lijst van alle buitenlandse zeer belangrijke beperkingen voor het bepaalde gegevensbestand.
 
 ```sql
 SHOW FOREIGN KEYS
+```
+
+```console
     tableName   |     columnName      | datatype | referencedTableName | referencedColumnName | namespace 
 ------------------+---------------------+----------+---------------------+----------------------+-----------
  table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
