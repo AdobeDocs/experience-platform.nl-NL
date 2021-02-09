@@ -5,7 +5,7 @@ title: Adobe Analytics Source Connector voor rapportsuite-gegevens
 topic: overview
 description: Dit document biedt een overzicht van Analytics en beschrijft de gebruiksgevallen voor Analytics-gegevens.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: e480ce789c849db24713da312345ea3162e617a6
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 1%
@@ -49,7 +49,7 @@ Voor gedetailleerde informatie over de gebiedstoewijzing die tussen [!DNL Analyt
 | -------------- | ---------------- |
 | Nieuwe gegevens naar [!DNL Real-time Customer Profile] (A4T **not** ingeschakeld) | &lt; 2=&quot;&quot; minutes=&quot;&quot;> |
 | Nieuwe gegevens naar [!DNL Real-time Customer Profile] (A4T **is** ingeschakeld) | &lt; 15=&quot;&quot; minutes=&quot;&quot;> |
-| Nieuwe gegevens voor Data Lake | &lt; 45=&quot;&quot; minutes=&quot;&quot;> |
+| Nieuwe gegevens voor Data Lake | &lt; 90=&quot;&quot; minutes=&quot;&quot;> |
 | Backfill-gegevens (13 maanden of 10 miljard gebeurtenissen, afhankelijk van welke waarde lager is) | &lt; 4=&quot;&quot; weeks=&quot;&quot;> |
 
 >[!NOTE]
