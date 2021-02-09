@@ -5,9 +5,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f98fb81fee57151e6424355f64bccb29c5669dad
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '339'
 ht-degree: 7%
 
 ---
@@ -129,3 +129,4 @@ ht-degree: 7%
       * [Oproeplabels](./catalog/voice/invoca.md)
       * [Medallia](./catalog/voice/medallia.md)
       * [URL spreken, Postvak IN](./catalog/voice/talkurl.md)
+* [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
