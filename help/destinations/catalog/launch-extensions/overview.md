@@ -1,11 +1,11 @@
 ---
 keywords: extensies starten;extensie starten;doelen starten; platformlanceerextensies;platformlanceerextensie;platformlanceerdoelen
-title: Adobe Experience Platform Launch-extensiedoelen
+title: Adobe Experience Platform Launch-extensie
 description: Adobe Experience Platform Launch is de volgende generatie mogelijkheden voor tagbeheer van Adobe. Met Platform Launch kunnen klanten op eenvoudige wijze alle benodigde analyses-, marketing- en advertentietags implementeren en beheren, zodat ze deze voor hun klanten kunnen gebruiken.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -47,18 +47,18 @@ U kunt *regels* tot stand brengen die bepalen wanneer om gebeurtenisgegevens aan
 
 De uitbreidingen van de Lancering van het Platform laten u toe om diverse klantengebruiksgevallen tevreden te stellen. Voorbeelden hiervan zijn:
 
-- U kunt website- of native toepassingsgegevens naar Facebook verzenden via de Facebook-pixelextensie. Facebook Pixel geeft aan naar welke delen van uw site of app een bezoeker is genavigeerd, die informatie doorstuurt naar Facebook en u uw bezoeker kunt richten via Facebook.
+- U kunt website- of eigen app-gegevens naar Facebook verzenden via de Facebook-pixelextensie. Facebook Pixel geeft aan naar welke delen van uw site of app een bezoeker is genavigeerd, welke delen van uw site of app een bezoeker heeft doorgestuurd naar Facebook, en u uw bezoeker kunt targeten via Facebook.
 - U kunt gebeurtenisgegevens van uw websites en apps doorsturen naar Google Analytics om deze te analyseren en beslissingen te nemen op basis van die gegevens.
-- U kunt op het juiste moment een chatbox-app voor de client inschakelen op basis van de manier waarop uw gebruikers met uw pagina&#39;s werken, volgens de regels die u instelt bij het starten van het Platform.
+- U kunt op het juiste moment een chatbox-app voor de client inschakelen op basis van de interactie tussen uw gebruikers en uw pagina&#39;s, volgens de regels die u hebt ingesteld in Platform Launch.
 
-## Uitbreidingscategorieën {#extension-categories}
+## Extensiecategorieën {#extension-categories}
 
-Extensies voor het starten van Platforms kunnen in Platform onder de volgende categorieën vallen:
+Platform Launch-extensies kunnen onder de volgende categorieën in Platform vallen:
 
 - [Reclame](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
 - [Platform voor gegevensbeheer](../data-management/overview.md)
-- [E-mailmarketingdoelen](../email-marketing/overview.md)
+- [E-mailmarketingbestemmingen](../email-marketing/overview.md)
 - [Personalisatie](../personalization/overview.md)
 - [Enquêtes](../survey/overview.md)
-- [Stem van de klant](../voice/overview.md)
+- [Spraak van de klant](../voice/overview.md)
