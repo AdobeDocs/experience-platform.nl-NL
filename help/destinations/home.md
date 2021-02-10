@@ -5,7 +5,7 @@ seo-title: Overzicht van doelen
 description: Leer hoe u Adobe Experience Platform-gegevens activeert naar bestemmingen voor marketingcampagnes over verschillende kanalen, e-mails, gerichte advertenties en meer.
 seo-description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 translation-type: tm+mt
-source-git-commit: fc0813b457f039c0f0fa965df2d1100170424d23
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%
@@ -21,12 +21,12 @@ ht-degree: 1%
 
 ## Doelen en bronnen {#destinations-and-sources}
 
-Een van de kernfuncties van Platform is het opnemen van uw gegevens van de eerste partij en het activeren ervan voor uw bedrijfsbehoeften. Gebruik bronnen om gegevens in te voeren in Platform en doelen om gegevens uit Platform te exporteren.
+Een van de kernfuncties van Platform is het opnemen van uw gegevens van de eerste partij en het activeren ervan voor uw bedrijfsbehoeften. Gebruik [bronnen](../sources/home.md) om gegevens in te voeren in Platform en bestemmingen om gegevens uit Platform te exporteren.
 
 ## Doelstappen {#steps}
 
 * Kies uit een [zelfbedieningencatalogus](./catalog/overview.md) van alle bestemmingen beschikbaar in Platform.
-* Gebruik **[!UICONTROL Doelen]** tot [activeren](./ui/activate-destinations.md) en verzend profielen of segmenten naar marketingautomatiseringsplatforms, digitale advertentieplatforms, en meer.
+* Gebruik bestemmingen om [te activeren](./ui/activate-destinations.md) en profielen of segmenten naar marketing automatiseringsplatforms, digitale reclameplatforms, en meer te verzenden.
 * De gegevens van het programma voeren regelmatig naar uw aangewezen bestemmingen uit.
 
 ## Besturingselementen {#controls}
