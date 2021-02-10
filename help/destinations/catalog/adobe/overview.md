@@ -3,9 +3,9 @@ keywords: doelen;ervaring met cloudoplossingen; doel;doelbestemming; en cloud; r
 title: Overzicht van Adobe-doelen
 description: Beheer uw klantenervaring door uw gegevens in Platform te verbinden met andere oplossingen van Adobe Experience Cloud voor het richten van advertenties, personalisatie, marketing automatisering en meer
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Beheer uw klantervaring door uw gegevens in Adobe Experience Platform aan te slu
 
 Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [Verbindingen](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
 
-- [Adobe Campaign](../email-marketing/adobe-campaign.md)
+- [Adobe Campaign-verbinding](../email-marketing/adobe-campaign.md)
 
 ## Extensies
 
