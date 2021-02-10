@@ -1,9 +1,9 @@
 ---
 keywords: personalisatie;Personalisatie
-title: Overzicht van persoonlijke doelen
+title: Overzicht van personalisatiedoelen
 description: Personalisatieplatforms verzamelen gegevens en inzichten uit individueel gedrag. Deze platforms kunnen marketers helpen anonieme gegevens te navigeren, aanbiedingen of advertenties te verzorgen op basis van eerdere activiteiten of als onderdeel van publiekssegmenten met vergelijkbare gewoonten.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
