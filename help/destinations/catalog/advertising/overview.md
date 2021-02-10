@@ -1,13 +1,13 @@
 ---
 keywords: reclamebestemmingen;bestemmingen;platformbestemmingen
-title: Reclamebestemmingen
-seo-title: Overzicht advertentiedoelen
+title: Overzicht van advertentiebestemmingen
+seo-title: Overzicht van advertentiebestemmingen
 description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 seo-description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -25,12 +25,12 @@ Momenteel ondersteunt Platform de onderstaande reclamebestemmingen. Voor informa
 
 Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [Verbindingen](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
 
-- [Google Display en Video 360](./google-dv360.md)
-- [Google Ads](./google-ads-destination.md)
-- [Google Ad Manager](./google-ad-manager.md)
-- [Google Customer Match](./google-customer-match.md)
-- [Microsoft Bing](./bing.md)
-- [De bestemming van het handelsbureau](./tradedesk.md)
+- [Google Display en Video 360-verbinding](./google-dv360.md)
+- [Google Ads-verbinding](./google-ads-destination.md)
+- [Google Ad Manager-verbinding](./google-ad-manager.md)
+- [Google Customer Match-verbinding](./google-customer-match.md)
+- [Microsoft Bing-verbinding](./bing.md)
+- [De verbinding van de handelsbureau](./tradedesk.md)
 
 ## Extensies
 
