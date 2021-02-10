@@ -1,11 +1,11 @@
 ---
 keywords: doelen;adobe Experience platform;platform;bestemmingen, overzicht;activate gegevens;activate;
-title: Overzicht van bestemmingen
-seo-title: Overzicht van bestemmingen
+title: Overzicht van doelen
+seo-title: Overzicht van doelen
 description: Leer hoe u Adobe Experience Platform-gegevens activeert naar bestemmingen voor marketingcampagnes over verschillende kanalen, e-mails, gerichte advertenties en meer.
 seo-description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: fc0813b457f039c0f0fa965df2d1100170424d23
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%
@@ -43,7 +43,7 @@ Met de besturingselementen in de [werkruimte Doelen](./ui/destinations-workspace
 
 Voor gedetailleerde informatie, zie [bestemmingstypes en categorieën overzicht](./destination-types.md).
 
-## Bestemmingen en Toegangsbesturingselementen {#access-controls}
+## Bestemmingen en toegangscontroles {#access-controls}
 
 De bestemmingsfunctionaliteit in Platform werkt met de toegangsbeheertoestemmingen van Adobe Experience Platform. Afhankelijk van het machtigingsniveau van uw gebruiker, kunt u bestemmingen bekijken, beheren en activeren. Voor informatie over de individuele toestemmingen, zie [Toegangsbeheer in Adobe Experience Platform](../access-control/home.md) en rol neer aan de bodem van de pagina.
 
