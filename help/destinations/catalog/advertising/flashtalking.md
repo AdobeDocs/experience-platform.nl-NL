@@ -1,11 +1,11 @@
 ---
 keywords: FlashTalk OneTag-extensies;FlashTalk OneTag-extensie;FlashTalk OneTag-doelen;FlashTalk OneTag;flashtalkOnTag
-title: OneTag-extensiebestemming knipperen
+title: OneTag-extensie knipperen
 description: De Flashtalk OneTag-extensie is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
