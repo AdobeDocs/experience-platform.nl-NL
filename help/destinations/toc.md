@@ -5,7 +5,7 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 0%
@@ -116,7 +116,7 @@ ht-degree: 0%
       * [Overzicht van sociale netwerkbestemmingen](./catalog/social/overview.md)
       * [Een sociale netwerkbestemming maken](./catalog/social/workflow.md)
       * [Adobe Livefyre-extensie](./catalog/social/adobe-livefyre.md)
-      * [Facebook-extensie](./catalog/social/facebook.md)
+      * [Facebook-verbinding](./catalog/social/facebook.md)
    * Beoordelingsdoelen {#survey}
       * [Overzicht van de enquêtedoelen](./catalog/survey/overview.md)
       * [Verwachte extensiebestemming](./catalog/survey/foresee.md)
