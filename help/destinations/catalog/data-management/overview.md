@@ -3,7 +3,7 @@ keywords: dmp bestemmingen;DIL;publieksmanager dmp uitbreiding;dmp uitbreiding;g
 title: Overzicht van DMP-doelen (Data Management Platform)
 description: Met DMP's (Data Management Platforms) kunnen adverteerders, uitgevers en bureaus unieke profielen voor het publiek maken, hun meest waardevolle segmenten identificeren en ze via elk digitaal kanaal gebruiken. Zo kunt u een echte 360-weergave van een consumentenprofiel maken, een zinvol publiek maken en activeren.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
