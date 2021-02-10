@@ -5,9 +5,9 @@ seo-title: Overzicht van de doelcatalogus
 description: De catalogus van Doelen verstrekt een lijst van beschikbare bestemmingen die klaar zijn om gegevens te ontvangen. Deze bestemmingen omvatten Adobe oplossingen, reclameplatforms, onderzoeksplatforms, e-mailmarketing platforms, en meer.
 seo-description: De catalogus van Doelen verstrekt een lijst van beschikbare bestemmingen die klaar zijn om gegevens te ontvangen. Deze bestemmingen omvatten Adobe oplossingen, reclameplatforms, onderzoeksplatforms, e-mailmarketing platforms, en meer.
 translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '198'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,7 @@ Je kunt je gegevens activeren naar verschillende doelcategorieën in Adobe Exper
 - [Overzicht van opslagdoelen voor cloud](./cloud-storage/overview.md)
 - [Overzicht van DMP-doelen (Data Management Platform)](./data-management/overview.md)
 - [Overzicht van e-mailmarketingdoelen](./email-marketing/overview.md)
+- [Overzicht van mobiele betrokkenheidsdoelen](./mobile-engagement/overview.md)
 - [Overzicht van personalisatiedoelen](./personalization/overview.md)
 - [Overzicht van sociale netwerkbestemmingen](./social/overview.md)
 - [Overzicht van de enquêtedoelen](./survey/overview.md)
