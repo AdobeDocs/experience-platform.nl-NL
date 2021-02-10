@@ -5,9 +5,9 @@ seo-title: Overzicht van de doelcatalogus
 description: De catalogus van Doelen verstrekt een lijst van beschikbare bestemmingen die klaar zijn om gegevens te ontvangen. Deze bestemmingen omvatten Adobe oplossingen, reclameplatforms, onderzoeksplatforms, e-mailmarketing platforms, en meer.
 seo-description: De catalogus van Doelen verstrekt een lijst van beschikbare bestemmingen die klaar zijn om gegevens te ontvangen. Deze bestemmingen omvatten Adobe oplossingen, reclameplatforms, onderzoeksplatforms, e-mailmarketing platforms, en meer.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '194'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ Blader in de catalogus om te bepalen welke doelplatforms het beste zijn voor uw 
 
 Je kunt je gegevens activeren naar verschillende doelcategorieën in Adobe Experience Platform. De onderstaande koppelingen bevatten meer informatie over elke doelcategorie:
 
-- [Adobe-oplossingen](./adobe/overview.md)
-- [Reclamebestemmingen](./advertising/overview.md)
-- [Analysedoelen](./analytics/overview.md)
-- [Opslagdoelen voor cloud](./cloud-storage/overview.md)
-- [Platform voor gegevensbeheer](./data-management/overview.md)
-- [E-mailmarketing](./email-marketing/overview.md)
-- [Personalisatie](./personalization/overview.md)
-- [Sociale bestemmingen](./social/overview.md)
-- [Enquêtes](./survey/overview.md)
-- [Stem van de klant](./voice/overview.md)
+- [Overzicht van Adobe-doelen](./adobe/overview.md)
+- [Overzicht van advertentiebestemmingen](./advertising/overview.md)
+- [Overzicht van analysedoelen](./analytics/overview.md)
+- [Overzicht van opslagdoelen voor cloud](./cloud-storage/overview.md)
+- [Overzicht van DMP-doelen (Data Management Platform)](./data-management/overview.md)
+- [Overzicht van e-mailmarketingdoelen](./email-marketing/overview.md)
+- [Overzicht van personalisatiedoelen](./personalization/overview.md)
+- [Overzicht van sociale netwerkbestemmingen](./social/overview.md)
+- [Overzicht van de enquêtedoelen](./survey/overview.md)
+- [Stem van het overzicht van de bestemmingen van de Klant](./voice/overview.md)
