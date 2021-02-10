@@ -3,7 +3,7 @@ keywords: cloudopslag;cloudopslag
 title: Overzicht van Cloud Storage-bestemmingen
 description: Adobe Experience Platform kan uw segmenten als gegevensbestanden leveren aan uw Amazon S3-, AWS Kinesis-, Azure Event Hubs- of SFTP-cloudopslaglocaties.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
@@ -25,11 +25,11 @@ Voor informatie over hoe te om met de bestemmingen van de wolkenopslag te verbin
 
 ## Beschikbare cloudopslagbestemmingen
 
-- [Amazon S3-bestemming](./amazon-s3.md)
-- [Azure Blob-bestemming](./azure-blob.md)
-- [SFTP-bestemming](./sftp.md)
+- [Amazon S3-verbinding](./amazon-s3.md)
+- [Azure Blob-verbinding](./azure-blob.md)
+- [SFTP-verbinding](./sftp.md)
 
 ## Beschikbare streamingdoelen voor cloudopslag
 
-- [Amazon Kinesis-bestemming](./amazon-kinesis.md)
-- [Azure Event Hubs-bestemming](./azure-event-hubs.md)
+- [Amazon Kinesis-verbinding](./amazon-kinesis.md)
+- [Azure Event Hubs-verbinding](./azure-event-hubs.md)
