@@ -1,18 +1,18 @@
 ---
 keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
-title: Bekijk de Details van een Doel in UI
+title: Doelgegevens weergeven
 description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 seo-description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '740'
 ht-degree: 1%
 
 ---
 
 
-# De details van een bestemming weergeven
+# Doelgegevens weergeven
 
 In de gebruikersinterface van Adobe Experience Platform, kunt u de attributen en de activiteiten van uw bestemmingen bekijken en controleren. Deze details omvatten de naam en identiteitskaart van de bestemming, controles om de bestemmingen te activeren of onbruikbaar te maken, en meer. De details voor partijbestemmingen omvatten ook metriek voor geactiveerde profielverslagen en een geschiedenis van dataflow looppas.
 
@@ -52,42 +52,42 @@ In de volgende tabel worden de door het rechterspoor verstrekte controles en geg
 | [!UICONTROL Categorie] | Geeft het doeltype aan. Zie [doelcatalogus](../catalog/overview.md) voor meer informatie. |
 | [!UICONTROL Verbindingstype] | Hiermee geeft u de vorm aan waarmee uw publiek naar het doel wordt gestuurd. Mogelijke waarden zijn &quot;[!UICONTROL Cookie]&quot; en &quot;[!UICONTROL Op profiel gebaseerde]&quot;. |
 | [!UICONTROL Frequentie] | Geeft aan hoe vaak het publiek naar de bestemming wordt gestuurd. Mogelijke waarden zijn &quot;[!UICONTROL Streaming]&quot; en &quot;[!UICONTROL Batch]&quot;. |
-| [!UICONTROL Identiteit] | Vertegenwoordigt de identiteitsnaamruimte die door de bestemming wordt geaccepteerd, zoals `GAID`, `IDFA` of `email`. Zie [Naamruimte overzicht van naamruimte ](../../identity-service/namespaces.md) voor meer informatie over geaccepteerde naamruimten. |
-| [!UICONTROL Gemaakt door] | Geeft de gebruiker aan die deze bestemming heeft gemaakt. |
-| [!UICONTROL Gemaakt] | Hiermee wordt de UTC-datetime aangegeven waarop deze bestemming is gemaakt. |
+| [!UICONTROL Identiteit] | Vertegenwoordigt de identiteitsnaamruimte die door de bestemming wordt geaccepteerd, zoals `GAID`, `IDFA` of `email`. Zie [Overzicht van naamruimte voor identiteiten](../../identity-service/namespaces.md) voor meer informatie over geaccepteerde naamruimten. |
+| [!UICONTROL Gemaakt door] | Hiermee wordt de gebruiker aangegeven die deze bestemming heeft gemaakt. |
+| [!UICONTROL Gemaakt] | Geeft de UTC-datum aan waarop deze bestemming is gemaakt. |
 
 ## [!UICONTROL Ingeschakeld]/ Uitgeschakeld
 
-U kunt **[!UICONTROL Ingeschakeld ]/[!UICONTROL Uitgeschakeld]** gebruiken om alle gegevensexport naar de bestemming te starten en te pauzeren.
+U kunt de schakelknop **[!UICONTROL Ingeschakeld]/[!UICONTROL Uitgeschakeld]** gebruiken om alle gegevensexports naar de bestemming te starten en te pauzeren.
 
 ![](../assets/ui/details-page/enable-disable.png)
 
-## [!UICONTROL Dataflow-uitvoering]
+## [!UICONTROL Dataflow-runs]
 
-Het [!UICONTROL lusje Dataflow looppas] verstrekt metrische gegevens op uw dataflow looppas aan partijbestemmingen. Er wordt een lijst weergegeven met afzonderlijke uitvoeringen en de bijbehorende maatstaven, samen met de volgende totalen voor profielrecords:
+Het [!UICONTROL tabblad Dataflow bevat metrische gegevens over de dataflow die worden uitgevoerd naar batchbestemmingen. ] Er wordt een lijst met afzonderlijke runs en de bijbehorende metrics weergegeven, samen met de volgende totalen voor profielrecords:
 
 * **[!UICONTROL Profielrecords geactiveerd]**: Het totale aantal profielrecords dat voor activering is gemaakt of bijgewerkt.
-* **[!UICONTROL Profielrecords overgeslagen]**: Het totale aantal profielrecords dat voor activering wordt overgeslagen op basis van het profiel, wordt afgesloten of ontbrekende kenmerken.
+* **[!UICONTROL Profielrecords overgeslagen]**: Het totale aantal profielrecords dat voor activering wordt overgeslagen op basis van het profiel bestaat uit of ontbrekende kenmerken.
 
 ![](../assets/ui/details-page/dataflow-runs.png)
 
 >[!NOTE]
 >
->De looppas van Dataflow wordt geproduceerd gebaseerd op de planningsfrequentie van bestemmingsdataflow. Een afzonderlijke dataflow looppas wordt gemaakt voor elk samenvoegbeleid dat op een segment wordt toegepast.
+>Dataflow-runs worden gegenereerd op basis van de planningsfrequentie van de doeldata. Een afzonderlijke dataflow looppas wordt gemaakt voor elk samenvoegbeleid dat op een segment wordt toegepast.
 
-Om de details van een bepaalde dataflow looppas te bekijken, selecteer de begintijd van de looppas van de lijst. De detailpagina voor een dataflow-run bevat aanvullende informatie zoals de grootte van de verwerkte gegevens en een lijst met eventuele fouten die zijn opgetreden met details voor de diagnose van fouten.
+Als u de details van een bepaalde gegevensstroom wilt bekijken, selecteert u de begintijd van de runtime in de lijst. De detailpagina voor een dataflow-run bevat aanvullende informatie zoals de grootte van de verwerkte gegevens en een lijst met fouten die zijn opgetreden met details voor foutdiagnostiek.
 
 ![](../assets/ui/details-page/dataflow.png)
 
 ## [!UICONTROL Activeringsgegevens]
 
-Op het tabblad [!UICONTROL Activeringsgegevens] wordt een lijst weergegeven met segmenten die aan de bestemming zijn toegewezen, inclusief de begindatum en einddatum (indien van toepassing). Als u de details over een bepaald segment wilt weergeven, selecteert u de naam in de lijst.
+Op het tabblad [!UICONTROL Activeringsgegevens] wordt een lijst weergegeven met segmenten die aan de bestemming zijn toegewezen, inclusief de begin- en einddatum (indien van toepassing). Als u de details van een bepaald segment wilt bekijken, selecteert u de naam in de lijst.
 
 ![](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
->Voor details bij het onderzoeken van de detailspagina van een segment, verwijs naar [Overzicht van de Segmentatie UI](../../segmentation/ui/overview.md#segment-details).
+>Raadpleeg het [Overzicht van de segmentatie-UI](../../segmentation/ui/overview.md#segment-details) voor meer informatie over het verkennen van de detailpagina van een segment.
 
 ## Volgende stappen
 
