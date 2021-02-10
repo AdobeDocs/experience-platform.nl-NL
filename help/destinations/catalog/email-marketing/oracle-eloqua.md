@@ -1,11 +1,11 @@
 ---
 keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;oracle eloqua;oracle
-title: Oracle Eloqua-verbindingsbestemming
+title: Oracle Eloqua-verbinding
 description: Oracle Eloqua is een SaaS-platform (software as a service) voor marketingautomatisering dat door Oracle wordt aangeboden en bedoeld is om B2B-marketers en -organisaties te helpen marketingcampagnes en het genereren van verkoopleads te beheren.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
