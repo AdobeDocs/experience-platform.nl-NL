@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen; API-zelfstudies; streamingdoelen-API; Platform
 solution: Experience Platform
-title: Verbind met het Streamen Doelen en activeer Gegevens gebruikend API Vraag
+title: Verbinding maken met streaming doelen en gegevens activeren via API-aanroepen in Adobe Experience Platform
 description: In dit document wordt beschreven hoe u streaming doelen kunt maken met de Adobe Experience Platform API
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '2021'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Verbinding maken met streaming doelen en gegevens activeren via API-aanroepen in Adobe Experience Platform
+# Verbinding maken met streaming doelen en gegevens activeren via API-aanroepen
 
 >[!NOTE]
 >
