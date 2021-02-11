@@ -3,9 +3,9 @@ keywords: reclame; de handelsdienst;
 title: De verbinding van de handelsbureau
 description: 'De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en de mobiele voorraad. '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ad025630cbae5c220f5bbd7f55cad70620b6f335
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,6 @@ In de stap [!UICONTROL Authentication] moet u [!DNL The Trade Desk] verbindingsd
 * **[!UICONTROL Naam]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Omschrijving]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Account-id]**: Je  [!DNL Trade Desk] [!UICONTROL account-id].
-* **[!UICONTROL Clientgeheim]**: De  `clientSecret` parameter die in de  [!DNL OAuth2] clientreferenties wordt gebruikt.
 * **[!UICONTROL Serverlocatie]**: Vraag uw  [!DNL The Trade Desk] vertegenwoordiger welke regionale server u zou moeten gebruiken. Dit zijn de beschikbare regionale servers waaruit u kunt kiezen:
 
    * **[!UICONTROL Europa]**
