@@ -6,9 +6,9 @@ title: Accountgegevens van bronverbinding bijwerken in de gebruikersinterface
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: ac477ee8053b30e88a38800ebe33fc9b5a520308
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '681'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,9 @@ ht-degree: 0%
 
 In sommige omstandigheden kan het nodig zijn de details van een bestaande bronrekening bij te werken. De [!UICONTROL Bronnen] werkruimte voorziet u van de capaciteit om, details van een bestaande partij of het stromen verbinding, met inbegrip van zijn naam, beschrijving, en geloofsbrieven toe te voegen uit te geven en te schrappen.
 
-Deze zelfstudie bevat stappen voor het bijwerken van de details en referenties van een bestaand account in de werkruimte [!UICONTROL Bronnen].
+De [!UICONTROL Bronnen] werkruimte voorziet u ook van de capaciteit om het programma van partijdataflows uit te geven, toestaand u om zijn innamefrequentie en het intervaltarief bij te werken.
+
+Dit leerprogramma verstrekt stappen voor het bijwerken van de details en de geloofsbrieven van een bestaand rekening van [!UICONTROL Bronnen] werkruimte, evenals het bijwerken van het innameschema van een dataflow.
 
 ## Aan de slag
 
@@ -53,12 +55,39 @@ In het dialoogvenster **[!UICONTROL Accountgegevens bewerken]** kunt u de naam, 
 
 ![bewerken van accountgegevens](../../images/tutorials/update/edit-account-details.png)
 
-Na enkele ogenblikken verschijnt er een groen bevestigingsvak onder aan het scherm om te bevestigen dat de update is gelukt.
+Na enkele ogenblikken verschijnt onder aan het scherm een bevestigingsvak om te bevestigen dat de update is gelukt.
 
 ![bevestigd](../../images/tutorials/update/update-confirmed.png)
 
+## Tijdschema bewerken
+
+U kunt het ingangsschema van een gegevensstroom van **[!UICONTROL Accounts]** pagina uitgeven. Selecteer in de lijst met accounts de account die de gegevensstroom bevat die u opnieuw wilt plannen.
+
+![select-account](../../images/tutorials/update/select-account.png)
+
+De pagina met gegevensstromen wordt weergegeven. Deze pagina bevat een lijst met bestaande gegevensstromen die zijn gekoppeld aan het account dat u hebt geselecteerd. Selecteer de ellipsen (`...`) naast de dataflow die u wilt opnieuw plannen.
+
+![herschikken](../../images/tutorials/update/reschedule.png)
+
+Er wordt een vervolgkeuzemenu weergegeven waarin u opties kunt opgeven voor **[!UICONTROL Schema bewerken]**, **[!UICONTROL Dataflow inschakelen]**, **[!UICONTROL Weergeven in controle]** en **[!UICONTROL Verwijderen]**. Selecteer **[!UICONTROL Programma bewerken]** in het menu.
+
+![bewerken volgens schema](../../images/tutorials/update/edit-schedule.png)
+
+Het **[!UICONTROL Edit programma]** dialoogvakje voorziet u van opties om de de innamefrequentie en het intervaltarief van uw gegevensstroom bij te werken. Nadat u de bijgewerkte frequentie- en intervalwaarden hebt ingesteld, selecteert u **[!UICONTROL Opslaan]**.
+
+![planning-dialog-box](../../images/tutorials/update/schedule-dialog-box.png)
+
+| Planning | Beschrijving |
+| ---------- | ----------- |
+| Frequentie | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden voor het bewerken van het frequentieschema voor een reeds bestaand gegevensstroomschema zijn: `minute`, `hour`, `day` of `week`. |
+| Interval | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal anders dan nul zijn en moet groter dan of gelijk aan `15` zijn. |
+
+Na enkele ogenblikken verschijnt onder aan het scherm een bevestigingsvak om te bevestigen dat de update is gelukt.
+
+![planning bevestigen](../../images/tutorials/update/schedule-confirm.png)
+
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes de [!UICONTROL Bronnen] werkruimte gebruikt om accountinformatie bij te werken.
+Door deze zelfstudie te volgen, hebt u met succes de [!UICONTROL Bronnen] werkruimte gebruikt om accountinformatie bij te werken en uw schema voor gegevensstroom te bewerken.
 
 Voor stappen over hoe te om deze verrichtingen programmatically uit te voeren gebruikend [!DNL Flow Service] API, gelieve te verwijzen naar de zelfstudie over [het bijwerken van verbindingsinformatie gebruikend de Dienst API van de Stroom](../../tutorials/api/update.md).
