@@ -6,10 +6,10 @@ user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het Netwerk van de Rand.
 translation-type: tm+mt
-source-git-commit: cea3e2f32d9489f5f06be70581bd974b9374646d
+source-git-commit: b7e8a1a72ed199440748f570f13ea844f3276682
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 14%
+source-wordcount: '144'
+ht-degree: 12%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 14%
 # Adobe Experience Platform Web SDK {#edge}
 
 * [Overzicht van Web SDK](home.md)
-* Fundamentals {#fundamentals}
+* Grondbeginselen {#fundamentals}
    * [Vereiste](fundamentals/prerequisite.md)
    * [De rand configureren](fundamentals/edge-configuration.md)
    * [De SDK installeren](fundamentals/installing-the-sdk.md)
@@ -27,7 +27,7 @@ ht-degree: 14%
    * [Foutopsporing](fundamentals/debugging.md)
    * [Gebeurtenisgegevens samenvoegen](fundamentals/merging-event-data.md)
    * [Interactie met meerdere eigenschappen](fundamentals/interacting-with-multiple-properties.md)
-* Identity {#identity}
+* Identiteit {#identity}
    * [Overzicht](identity/overview.md)
 * Gegevensverzameling {#data-collection}
    * [Automatisch verzamelde gegevens](data-collection/automatic-information.md)
@@ -46,12 +46,16 @@ ht-degree: 14%
       * [Toepassing van één pagina](personalization/adobe-target/spa-implementation.md)
    * Offer Decisioning {#offer-decisioning}
       * [Offer Decisioning-overzicht](personalization/offer-decisioning/offer-decisioning-overview.md)
-* Consent {#consent}
+* Toestemming {#consent}
    * [Ondersteunende toestemming](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
       * [Overzicht](consent/iab-tcf/overview.md)
       * [Integreren met Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
       * [Integreren zonder Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
+* Web SDK-extensie voor Adobe Experience Platform Launch {#extension}
+   * [Web SDK-extensie](extension/web-sdk-extension.md)
+   * [Typen handelingen](extension/action-types.md)
+   * [Gegevenstelelementtypen](extension/data-element-types.md)
 * [Releaseopmerkingen](release-notes.md)
 * [Veelgestelde vragen](web-sdk-faq.md)
 * [Blogberichten](blog-posts.md)
