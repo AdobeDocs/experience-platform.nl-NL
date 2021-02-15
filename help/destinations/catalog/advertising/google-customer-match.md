@@ -3,9 +3,9 @@ keywords: Google-klantovereenkomst;Google-klantovereenkomst;Google-klantovereenk
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1498'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De migratie van de klant naar de nieuwe doelversies wordt momenteel uitgevoerd. Totdat de migratie is voltooid, ziet u alleen de [!UICONTROL EMAIL] en [!UICONTROL EMAIL_LC_SHA_256] beschikbare identiteiten voor deze bestemming.
+>We migreren momenteel klanten naar de nieuwe versie van deze bestemming.
+>
+> De instructies in dit artikel zijn van toepassing op beide versies, met de volgende opmerking: terwijl deze migratie bezig is, zult u slechts de huidige versie van [!DNL Google Customer Match] bestemming in het gebruikersinterface zien, waar u [!UICONTROL EMAIL] en [!UICONTROL EMAIL_LC_SHA_256] identiteiten voor activering kunt slechts gebruiken.
 
 [Met Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchlets kunt u uw online- en offline-gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere klanten over de eigendommen en gebruiksmogelijkheden van Google, zoals:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail]en  [!DNL YouTube].
 
@@ -127,7 +129,7 @@ Nadat uw referenties zijn bevestigd en Adobe Experience Cloud is verbonden met u
 
 Voer in de stap **[!UICONTROL Verificatie]** een [!UICONTROL Naam] en een [!UICONTROL Beschrijving] in voor uw activeringsstroom en vul de [!UICONTROL Account ID] in op Google.
 
-Ook in deze stap, kunt u om het even welke **[!UICONTROL Gebruiksgeval]** selecteren van de Marketing die op deze bestemming zou moeten van toepassing zijn. Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het in de handel brengen van gebruiksgevallen, zie [De Governance van Gegevens in Echt - tijd CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) pagina. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md#core-actions) voor informatie over de afzonderlijke door Adobe gedefinieerde gevallen van marketinggebruik.
+Ook in deze stap, kunt u om het even welke **[!UICONTROL Gebruiksgeval]** selecteren van de Marketing die op deze bestemming zou moeten van toepassing zijn. Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het in de handel brengen van gebruiksgevallen, zie [Het Bestuur van gegevens in Echt - tijd CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) pagina. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md#core-actions) voor informatie over de afzonderlijke door Adobe gedefinieerde gevallen van marketinggebruik.
 
 Selecteer **[!UICONTROL Doel maken]** nadat u de bovenstaande velden hebt ingevuld.
 
