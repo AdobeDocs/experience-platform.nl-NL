@@ -3,10 +3,10 @@ keywords: doel activeren;doelen activeren;gegevens activeren
 title: Profielen en segmenten naar een doel activeren
 type: Tutorial
 seo-title: Profielen en segmenten naar een doel activeren
-description: Activeer de gegevens in Adobe Experience Platform door segmenten toe te wijzen aan bestemmingen. Volg onderstaande stappen om dit te bereiken.
-seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten toe te wijzen aan bestemmingen. Volg onderstaande stappen om dit te bereiken.
+description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
+seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
 workflow-type: tm+mt
 source-wordcount: '2141'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Profielen en segmenten naar een doel activeren
 
-Activeer de gegevens in Adobe Experience Platform door segmenten toe te wijzen aan bestemmingen. Volg onderstaande stappen om dit te bereiken.
+Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 
 ## Vereisten {#prerequisites}
 
@@ -60,7 +60,7 @@ Van toepassing op: sociale bestemmingen en Google Customer Match-advertentiebest
 
 Voor sociale bestemmingen, moet u bronattributen of identiteitsnamespaces selecteren om als doelidentiteiten in de bestemming in kaart te brengen.
 
-#### Voorbeeld: publieksgegevens activeren in [!DNL Facebook] {#example-facebook}
+#### Voorbeeld: publieksgegevens activeren in [!DNL Facebook Custom Audience] {#example-facebook}
 
 Dit is een voorbeeld van correcte identiteitstoewijzing wanneer het activeren van publieksgegevens in [!DNL Facebook].
 
