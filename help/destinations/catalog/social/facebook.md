@@ -3,9 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '1001'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->De migratie van de klant naar de nieuwe doelversies wordt momenteel uitgevoerd. Totdat de migratie is voltooid, ziet u alleen de [!UICONTROL EMAIL] en [!UICONTROL EMAIL_LC_SHA_256] beschikbare identiteiten voor deze bestemming.
+>We migreren momenteel klanten naar de nieuwe versie van deze bestemming, [!DNL Facebook Custom Audience].
+>
+> De instructies in dit artikel zijn van toepassing op beide versies, met de volgende opmerking: terwijl deze migratie bezig is, zult u slechts de huidige versie van [!DNL Facebook] bestemming in het gebruikersinterface zien, waar u [!UICONTROL EMAIL] en [!UICONTROL EMAIL_LC_SHA_256] identiteiten voor activering kunt slechts gebruiken.
 
 Activeer profielen voor uw [!DNL Facebook] campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 
@@ -95,9 +97,12 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
    - Voorbeeld: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, niet `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - Zilp de tekenreeks niet.
 
-Gegevens uit naamruimten zonder hashing worden na activering automatisch gehasht door [!DNL Platform].
+>[!NOTE]
+>
+>Gegevens uit naamruimten zonder hashing worden na activering automatisch gehasht door [!DNL Platform].
+> Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld niet-gehashte kenmerken bevat, schakelt u de optie **[!UICONTROL Transformatie toepassen]** in om [!DNL Platform] automatisch te laten hashen bij de activering.
+> De optie **[!UICONTROL Transformatie toepassen]** wordt alleen weergegeven wanneer u kenmerken selecteert als bronvelden. Deze wordt niet weergegeven wanneer u naamruimten kiest.
 
-Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld niet-gehashte kenmerken bevat, schakelt u de optie **[!UICONTROL Transformatie toepassen]** in om [!DNL Platform] automatisch te laten hashen bij de activering.
 ![Transformatie identiteitstoewijzing](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 #### Aangepaste naamruimten gebruiken {#custom-namespaces}
