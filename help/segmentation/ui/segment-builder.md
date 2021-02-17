@@ -5,9 +5,9 @@ title: UI-gids voor segmentBuilder
 topic: ui guide
 description: 'De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen. '
 translation-type: tm+mt
-source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
+source-git-commit: 354b756e53b360f31c1832c2b0f946b67099a87f
 workflow-type: tm+mt
-source-wordcount: '1928'
+source-wordcount: '1896'
 ht-degree: 0%
 
 ---
@@ -163,7 +163,7 @@ Terwijl u de segmentdefinitie verder ontwikkelt, kunt u een gepagineerde voorver
 >
 >De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het produceren van segmentramingen kan in [schattingsgeneratiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van het de schepingsleerprogramma van het segment worden gevonden.
 
-## Volgende stappen en extra bronnen {#next-steps}
+## Volgende stappen {#next-steps}
 
 De Bouwer van het segment verstrekt een rijk werkschema toelatend u om verhandelbare doelgroepen van [!DNL Real-time Customer Profile] gegevens te isoleren. Na het lezen van deze handleiding moet u nu in staat zijn om:
 
@@ -173,16 +173,4 @@ De Bouwer van het segment verstrekt een rijk werkschema toelatend u om verhandel
 - Schakel alle segmentdefinities in voor geplande segmentatie.
 - Hiermee kunt u opgegeven segmentdefinities voor streaming segmentatie inschakelen.
 
-Als u meer wilt weten over [!DNL Segmentation Service], leest u de documentatie en vult u deze aan door de onderstaande video&#39;s te bekijken. Voor meer informatie over de andere onderdelen van de interface [!DNL Segmentation Service] leest u de [[!DNL Segmentation Service] gebruikershandleiding](./overview.md)
-
->[!WARNING]
->
-> De interface [!DNL Platform] die in de volgende video&#39;s wordt getoond is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
-
-**Een segment maken:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
-
-**Een dynamisch segment maken:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
+Als u meer wilt weten over [!DNL Segmentation Service], leest u de documentatie en vult u deze aan door de verwante video&#39;s te bekijken. Voor meer informatie over de andere onderdelen van de interface [!DNL Segmentation Service] leest u de [[!DNL Segmentation Service] gebruikershandleiding](./overview.md)
