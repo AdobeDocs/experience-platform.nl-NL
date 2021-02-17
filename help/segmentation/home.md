@@ -5,9 +5,9 @@ title: Overzicht van segmentatieservice
 topic: overview
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1407'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,8 @@ Voor informatie over het bouwen van segmentdefinities die API gebruiken, zie de 
 >Als een schema wordt uitgebreid, moeten alle toekomstige uploads nieuwe toegevoegde gebieden dienovereenkomstig bijwerken. Voor meer informatie bij het aanpassen van [!DNL Experience Data Model] (XDM), bezoek [de zelfstudie van de Redacteur van het Schema](../xdm/tutorials/create-schema-ui.md).
 
 ## Segmenten evalueren
+
+Platform ondersteunt momenteel twee methoden voor het evalueren van segmenten: streamingsegmentatie en batchsegmentatie.
 
 ### Streaming segmentering
 
