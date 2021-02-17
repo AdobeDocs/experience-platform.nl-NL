@@ -5,7 +5,7 @@ title: Grondbeginselen van Experience Platform API
 topic: getting started
 description: Dit document biedt een kort overzicht van enkele onderliggende technologieën en syntaxis die van toepassing zijn op Experience Platform-API's.
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 8c98632b67ddae4fb7800e80fb8c83aca9bfa291
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 1%
@@ -120,7 +120,7 @@ Er zijn vele verrichtingen van PATCH voor [!DNL Platform] APIs die voorwerpen va
 
 Afhankelijk van het type bewerking dat wordt aangegeven in `op`, heeft het JSON-object Patch mogelijk aanvullende eigenschappen nodig. Raadpleeg de [JSON Patch-documentatie](http://jsonpatch.com/) voor meer informatie over de verschillende JSON Patch-bewerkingen en de bijbehorende syntaxis.
 
-## JSON Schema
+## JSON-schema {#json-schema}
 
 JSON-schema is een indeling waarmee de structuur van JSON-gegevens wordt beschreven en gevalideerd. [Het Model van de Gegevens van de ervaring (XDM) ](../xdm/home.md) hefboomwerkingen JSON de mogelijkheden van het Schema om beperkingen op de structuur en het formaat van ingebedde gegevens van de klantenervaring af te dwingen. Raadpleeg de [officiële documentatie](https://json-schema.org/) voor meer informatie over JSON-schema.
 
