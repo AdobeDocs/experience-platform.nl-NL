@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;toestemming;Toestemming;Voorkeuren;privacyOptOuts;marketingVoorkeuren;optOutType;basisOfProcessing;toestemming;Toestemming
 title: Gegevenstype Inhoud en Voorkeuren
-description: Het gegevenstype Privacy/Marketing Preferences (Consent) (Consent) is bedoeld ter ondersteuning van de verzameling van klantmachtigingen en -voorkeuren die worden gegenereerd door CMP's (Consent Management Platforms) en andere bronnen van uw gegevensbewerkingen.
+description: Het gegevenstype Consent for Privacy, Personalization and Marketing Preferences is bedoeld ter ondersteuning van de verzameling van klantmachtigingen en voorkeuren die worden gegenereerd door Platforms voor beheer van instemming (CMP's) en andere bronnen van uw gegevensbewerkingen.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
+source-git-commit: 865379292985037b184d92e5d3fc1abc1873e962
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2067'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Consents & Preferences] gegevenstype
 
-Het gegevenstype [!DNL Privacy/Marketing Preferences (Consent)] (hierna genoemd &quot;[!DNL Consents & Preferences] gegevenstype&quot;) is een [!DNL Experience Data Model] (XDM) gegevenstype dat is bedoeld om de inzameling van klantentoestemmingen en voorkeur te steunen die door de Platforms van het Beheer van de Toestemming (CMPs) en andere bronnen van uw gegevensverrichtingen worden geproduceerd.
+Het [!UICONTROL Toestemming voor Privacy, Personalisatie en Marketing Voorkeur] gegevenstype (hierna genoemd &quot;[!DNL Consents & Preferences] gegevenstype&quot;) is een [!DNL Experience Data Model] (XDM) gegevenstype dat is bedoeld om de inzameling van klantentoestemmingen en voorkeur te steunen die door de Platforms van het Beheer van de Toestemming (CMPs) en andere bronnen van uw gegevensverrichtingen worden geproduceerd.
 
 Dit document behandelt de structuur en het beoogde gebruik van de velden die worden verschaft door het gegevenstype [!DNL Consents & Preferences].
 
@@ -40,234 +40,246 @@ Een voorkeur is een optie die de klant toestaat om te specificeren hoe de versch
 * **Voorkeuren** voor personalisatie: Voorkeuren met betrekking tot de manier waarop het merk de ervaringen die aan een klant worden geleverd, moet aanpassen.
 * **Marketingvoorkeuren**: Voorkeuren met betrekking tot de vraag of een merk via verschillende kanalen contact mag opnemen met een klant.
 
+De volgende schermafbeelding laat zien hoe de structuur van het gegevenstype wordt weergegeven in de gebruikersinterface van het Platform:
+
+![](../images/data-types/consents.png)
+
+>[!TIP]
+>
+>Zie de gids op [het onderzoeken van de middelen XDM](../ui/explore.md) aan voor stappen op hoe te om het even welk middel van XDM op te zoeken en zijn structuur in het Platform UI te inspecteren.
+
 Het volgende JSON toont een voorbeeld van het type gegevens dat het gegevenstype [!DNL Consents & Preferences] kan verwerken. In de volgende secties wordt informatie gegeven over het specifieke gebruik van elk van deze velden.
 
 ```json
 {
-  "xdm:consents": {
-    "xdm:collect": {
-      "xdm:val": "y",
+  "consents": {
+    "collect": {
+      "val": "y",
     },
-    "xdm:adID": {
-      "xdm:val": "VI"
+    "adID": {
+      "val": "VI"
     },
-    "xdm:share": {
-      "xdm:val": "y",
+    "share": {
+      "val": "y",
     },
-    "xdm:personalize": {
-      "xdm:content": {
-        "xdm:val": "y"
+    "personalize": {
+      "content": {
+        "val": "y"
       }
     },
-    "xdm:marketing": {
-      "xdm:preferred": "email",
-      "xdm:any": {
-        "xdm:val": "u"
+    "marketing": {
+      "preferred": "email",
+      "any": {
+        "val": "u"
       },
-      "xdm:push": {
-        "xdm:val": "n",
-        "xdm:reason": "Too Frequent",
-        "xdm:time": "2019-01-01T15:52:25+00:00"
+      "push": {
+        "val": "n",
+        "reason": "Too Frequent",
+        "time": "2019-01-01T15:52:25+00:00"
       }
     },
-    "xdm:idSpecific": {
+    "metadata": {
+      "time": "2019-01-01T15:52:25+00:00"
+    },
+    "idSpecific": {
       "email": {
         "jdoe@example.com": {
-          "xdm:marketing": {
-            "xdm:email": {
-              "xdm:val": "n"
+          "marketing": {
+            "email": {
+              "val": "n"
             }
           }
         }
       }
     }
-  },
-  "xdm:metadata": {
-    "xdm:time": "2019-01-01T15:52:25+00:00"
   }
 }
 ```
 
->[!NOTE]
+>[!TIP]
 >
->Het bovenstaande voorbeeld is bedoeld om de structuur van de gegevens te illustreren die via het gegevenstype [!DNL Consents & Preferences] naar [!DNL Platform] worden verzonden, om context te geven aan de rest van dit document waarin de belangrijkste velden worden uitgelegd die door het gegevenstype worden verschaft. Het volledige schema voor de structuur van het gegevenstype is te vinden in [appendix](#full-schema) ter verwijzing.
+>U kunt steekproefJSON gegevens voor om het even welk XDM schema produceren dat u in Experience Platform bepaalt helpen visualiseren hoe uw klantentoestemming en voorkeursgegevens zouden moeten in kaart worden gebracht. Raadpleeg de volgende documentatie voor meer informatie:
+>
+>* [Voorbeeldgegevens genereren in de gebruikersinterface](../ui/sample.md)
+>* [Voorbeeldgegevens genereren in de API](../api/sample-data.md)
 
-## xdm:toestemmingen {#choices}
 
-`xdm:consents` bevat verschillende velden die de toestemmingen en voorkeuren van de klant beschrijven. Deze velden worden in de onderstaande subsecties nader beschreven.
+## `consents` {#choices}
+
+`consents` bevat verschillende velden die de toestemmingen en voorkeuren van de klant beschrijven. Deze velden worden in de onderstaande subsecties nader beschreven.
 
 ```json
-"xdm:consents": {
-  "xdm:collect": {
-    "xdm:val": "y",
+"consents": {
+  "collect": {
+    "val": "y",
   },
-  "xdm:adID": {
-    "xdm:val": "VI"
+  "adID": {
+    "val": "VI"
   },
-  "xdm:share": {
-    "xdm:val": "y",
+  "share": {
+    "val": "y",
   },
-  "xdm:personalize": {
-    "xdm:content": {
-      "xdm:val": "y"
+  "personalize": {
+    "content": {
+      "val": "y"
     }
   },
-  "xdm:marketing": {
-    "xdm:preferred": "email",
-    "xdm:any": {
-      "xdm:val": "u"
+  "marketing": {
+    "preferred": "email",
+    "any": {
+      "val": "u"
     },
-    "xdm:email": {
-      "xdm:val": "n",
-      "xdm:reason": "Too Frequent",
-      "xdm:time": "2019-01-01T15:52:25+00:00"
+    "email": {
+      "val": "n",
+      "reason": "Too Frequent",
+      "time": "2019-01-01T15:52:25+00:00"
     }
   }
 }
 ```
 
-### xdm:verzamelen
+### `collect`
 
-`xdm:collect` staat voor de toestemming van de klant om zijn gegevens te laten verzamelen.
+`collect` staat voor de toestemming van de klant om zijn gegevens te laten verzamelen.
 
 ```json
-"xdm:collect" : {
-  "xdm:val": "y"
+"collect" : {
+  "val": "y"
 }
 ```
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `xdm:val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie [appendix](#choice-values) voor geaccepteerde waarden en definities. |
+| `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie [appendix](#choice-values) voor geaccepteerde waarden en definities. |
 
-### xdm:adID
+### `adID`
 
-`xdm:adID` staat voor de toestemming van de klant om te bepalen of een adverteerder-id (IDFA of GAID) kan worden gebruikt om de klant te koppelen tussen apps op dit apparaat.
+`adID` staat voor de toestemming van de klant om te bepalen of een adverteerder-id (IDFA of GAID) kan worden gebruikt om de klant te koppelen tussen apps op dit apparaat.
 
 ```json
-"xdm:adID" : {
-  "xdm:val": "y"
+"adID" : {
+  "val": "y"
 }
 ```
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `xdm:val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie [appendix](#choice-values) voor geaccepteerde waarden en definities. |
+| `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie [appendix](#choice-values) voor geaccepteerde waarden en definities. |
 
-### xdm:delen
+### `share`
 
-`xdm:share` staat voor de toestemming van de klant om te bepalen of zijn gegevens kunnen worden gedeeld met (of verkocht aan) derden of derden.
+`share` staat voor de toestemming van de klant om te bepalen of zijn gegevens kunnen worden gedeeld met (of verkocht aan) derden of derden.
 
 ```json
-"xdm:share" : {
-  "xdm:val": "y"
+"share" : {
+  "val": "y"
 }
 ```
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `xdm:val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie [appendix](#choice-values) voor geaccepteerde waarden en definities. |
+| `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie [appendix](#choice-values) voor geaccepteerde waarden en definities. |
 
-### xdm:personaliseren {#personalize}
+### `personalize` {#personalize}
 
-`xdm:personalize` vangt klantenvoorkeur met betrekking tot welke manieren hun gegevens voor verpersoonlijking kunnen worden gebruikt. Klanten kunnen afzien van specifieke gevallen van persoonlijk gebruik of volledig afzien van personalisatie.
+`personalize` vangt klantenvoorkeur met betrekking tot welke manieren hun gegevens voor verpersoonlijking kunnen worden gebruikt. Klanten kunnen afzien van specifieke gevallen van persoonlijk gebruik of volledig afzien van personalisatie.
 
 >[!IMPORTANT]
 >
->`xdm:personalize` heeft geen betrekking op gevallen van gebruik bij het in de handel brengen. Bijvoorbeeld, als een klant uit verpersoonlijking voor alle kanalen opteert, zouden zij niet moeten ophouden ontvangend mededelingen door die kanalen. De berichten die ze ontvangen, moeten eerder algemeen zijn en niet gebaseerd op hun profiel.
+>`personalize` heeft geen betrekking op gevallen van gebruik bij het in de handel brengen. Bijvoorbeeld, als een klant uit verpersoonlijking voor alle kanalen opteert, zouden zij niet moeten ophouden ontvangend mededelingen door die kanalen. De berichten die ze ontvangen, moeten eerder algemeen zijn en niet gebaseerd op hun profiel.
 >
->In hetzelfde voorbeeld geldt dat als een klant voor alle kanalen (via `xdm:marketing`, toegelicht in [volgende sectie](#marketing)) kiest voor het uit de directe marketing halen, die klant geen berichten mag ontvangen, zelfs niet als personalisatie is toegestaan.
+>In hetzelfde voorbeeld geldt dat als een klant voor alle kanalen (via `marketing`, toegelicht in [volgende sectie](#marketing)) kiest voor het uit de directe marketing halen, die klant geen berichten mag ontvangen, zelfs niet als personalisatie is toegestaan.
 
 ```json
-"xdm:personalize": {
-  "xdm:content": {
-    "xdm:val": "y",
+"personalize": {
+  "content": {
+    "val": "y",
   }
 }
 ```
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `xdm:content` | Vertegenwoordigt de voorkeuren van de klant voor gepersonaliseerde inhoud op uw website of toepassing. |
-| `xdm:val` | De door de klant opgegeven voorkeur voor personalisatie voor het opgegeven gebruiksgeval. In gevallen waarin de klant niet hoeft te worden gevraagd om toestemming te verlenen, moet in de waarde van dit veld worden aangegeven op welke basis de personalisatie moet plaatsvinden. Zie [appendix](#choice-values) voor geaccepteerde waarden en definities. |
+| `content` | Vertegenwoordigt de voorkeuren van de klant voor gepersonaliseerde inhoud op uw website of toepassing. |
+| `val` | De door de klant opgegeven voorkeur voor personalisatie voor het opgegeven gebruiksgeval. In gevallen waarin de klant niet hoeft te worden gevraagd om toestemming te verlenen, moet in de waarde van dit veld worden aangegeven op welke basis de personalisatie moet plaatsvinden. Zie [appendix](#choice-values) voor geaccepteerde waarden en definities. |
 
-### xdm:marketing {#marketing}
+### `marketing` {#marketing}
 
-`xdm:marketing` legt klantenvoorkeuren vast met betrekking tot welke marketingdoeleinden hun gegevens kunnen worden gebruikt. Klanten kunnen zich afmelden bij specifieke gevallen van marketinggebruik of de optie Afmelden bij direct marketing.
+`marketing` legt klantenvoorkeuren vast met betrekking tot welke marketingdoeleinden hun gegevens kunnen worden gebruikt. Klanten kunnen zich afmelden bij specifieke gevallen van marketinggebruik of de optie Afmelden bij direct marketing.
 
 ```json
-"xdm:marketing": {
-  "xdm:preferred": "email",
-  "xdm:any": {
-    "xdm:val": "u"
+"marketing": {
+  "preferred": "email",
+  "any": {
+    "val": "u"
   },
-  "xdm:email": {
-    "xdm:val": "n",
-    "xdm:reason": "Too Frequent"
+  "email": {
+    "val": "n",
+    "reason": "Too Frequent"
   },
-  "xdm:push": {
-    "xdm:val": "y"
+  "push": {
+    "val": "y"
   },
-  "xdm:sms": {
-    "xdm:val": "y"
+  "sms": {
+    "val": "y"
   }
 }
 ```
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `xdm:preferred` | Wijst op het aangewezen kanaal van de klant voor het ontvangen van mededelingen. Zie [appendix](#preferred-values) voor geaccepteerde waarden. |
-| `xdm:any` | Vertegenwoordigt de voorkeur van de klant voor directe marketing als geheel. De voorkeur voor toestemming die in dit veld wordt gegeven, wordt beschouwd als de &quot;standaardvoorkeur&quot; voor elk marketingkanaal, tenzij deze wordt overschreven door extra subvelden die onder `xdm:marketing` worden opgegeven. Als u meer opties voor korreligheid wilt gebruiken, wordt u aangeraden dit veld uit te sluiten.<br><br>Als de waarde wordt geplaatst aan  `n`, dan zouden alle specifiekere verpersoonlijkingsmontages moeten worden genegeerd. Als de waarde op `y` wordt geplaatst, dan zouden alle fijnkorrelige verpersoonlijkingsopties ook als `y` moeten worden behandeld, tenzij uitdrukkelijk geplaatst aan `n`. Als de waarde unset is, dan zouden de waarden voor elke verpersoonlijkingsoptie moeten worden gehonoreerd zoals gespecificeerd. |
-| `xdm:email` | Geeft aan of de klant ermee instemt e-mailberichten te ontvangen. |
-| `xdm:push` | Geeft aan of de klant het ontvangen van pushberichten toestaat. |
-| `xdm:sms` | Geeft aan of de klant ermee instemt tekstberichten te ontvangen. |
-| `xdm:val` | De voorkeur van de klant voor het gespecificeerde gebruiksgeval. In gevallen waarin de klant niet hoeft te worden gevraagd om toestemming te verlenen, moet in de waarde van dit veld worden aangegeven op welke basis het geval van het gebruik in de handel moet plaatsvinden. Zie [appendix](#choice-values) voor geaccepteerde waarden en definities. |
-| `xdm:time` | Een tijdstempel volgens ISO 8601 van het tijdstip waarop de voorkeur voor het in de handel brengen werd gewijzigd, indien van toepassing. Als de tijdstempel voor een bepaalde voorkeur gelijk is aan de tijdstempel die wordt opgegeven onder `xdm:metadata`, hoeft dit veld niet te worden ingesteld voor die voorkeur. |
-| `xdm:reason` | Wanneer een klant kiest uit een geval van het marketinggebruik, vertegenwoordigt dit koordgebied de reden waarom de klant uit opteerde. |
+| `preferred` | Wijst op het aangewezen kanaal van de klant voor het ontvangen van mededelingen. Zie [appendix](#preferred-values) voor geaccepteerde waarden. |
+| `any` | Vertegenwoordigt de voorkeur van de klant voor directe marketing als geheel. De voorkeur voor toestemming die in dit veld wordt gegeven, wordt beschouwd als de &quot;standaardvoorkeur&quot; voor elk marketingkanaal, tenzij deze wordt overschreven door extra subvelden die onder `marketing` worden opgegeven. Als u meer opties voor korreligheid wilt gebruiken, wordt u aangeraden dit veld uit te sluiten.<br><br>Als de waarde wordt geplaatst aan  `n`, dan zouden alle specifiekere verpersoonlijkingsmontages moeten worden genegeerd. Als de waarde op `y` wordt geplaatst, dan zouden alle fijnkorrelige verpersoonlijkingsopties ook als `y` moeten worden behandeld, tenzij uitdrukkelijk geplaatst aan `n`. Als de waarde unset is, dan zouden de waarden voor elke verpersoonlijkingsoptie moeten worden gehonoreerd zoals gespecificeerd. |
+| `email` | Geeft aan of de klant ermee instemt e-mailberichten te ontvangen. |
+| `push` | Geeft aan of de klant het ontvangen van pushberichten toestaat. |
+| `sms` | Geeft aan of de klant ermee instemt tekstberichten te ontvangen. |
+| `val` | De voorkeur van de klant voor het gespecificeerde gebruiksgeval. In gevallen waarin de klant niet hoeft te worden gevraagd om toestemming te verlenen, moet in de waarde van dit veld worden aangegeven op welke basis het geval van het gebruik in de handel moet plaatsvinden. Zie [appendix](#choice-values) voor geaccepteerde waarden en definities. |
+| `time` | Een tijdstempel volgens ISO 8601 van het tijdstip waarop de voorkeur voor het in de handel brengen werd gewijzigd, indien van toepassing. Als de tijdstempel voor een bepaalde voorkeur gelijk is aan de tijdstempel die wordt opgegeven onder `metadata`, hoeft dit veld niet te worden ingesteld voor die voorkeur. |
+| `reason` | Wanneer een klant kiest uit een geval van het marketinggebruik, vertegenwoordigt dit koordgebied de reden waarom de klant uit opteerde. |
 
-### xdm:idSpecific
+### `metadata`
 
-`xdm:idSpecific` kan worden gebruikt wanneer een bepaalde toestemming of voorkeur niet universeel op een klant van toepassing is, maar tot één enkel apparaat of identiteitskaart beperkt is. Zo kan een klant ervoor kiezen geen e-mails naar het ene adres te ontvangen, terwijl e-mails naar een ander adres mogelijk worden toegestaan.
+`metadata` legt algemene metagegevens vast over de toestemmingen en voorkeuren van de klant wanneer deze voor het laatst zijn bijgewerkt.
+
+```json
+"metadata": {
+  "time": "2019-01-01T15:52:25+00:00",
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `time` | Een ISO 8601-tijdstempel voor de laatste keer dat de toestemming en voorkeuren van de klant zijn bijgewerkt. Dit veld kan worden gebruikt in plaats van tijdstempels toe te passen op individuele voorkeuren om het laden en de complexiteit te verminderen. Als u een waarde `time` opgeeft onder een individuele voorkeur, wordt de tijdstempel `metadata` voor die bepaalde voorkeur genegeerd. |
+
+### `idSpecific`
+
+`idSpecific` kan worden gebruikt wanneer een bepaalde toestemming of voorkeur niet universeel op een klant van toepassing is, maar tot één enkel apparaat of identiteitskaart beperkt is. Zo kan een klant ervoor kiezen geen e-mails naar het ene adres te ontvangen, terwijl e-mails naar een ander adres mogelijk worden toegestaan.
 
 >[!IMPORTANT]
 >
->De toestemmingen en de voorkeur op kanaalniveau (d.w.z. die onder `xdm:consents` buiten `xdm:idSpecific` worden verstrekt) zijn op identiteitskaart binnen dat kanaal van toepassing. Alle toestemming en voorkeuren op kanaalniveau worden daarom rechtstreeks toegepast, ongeacht of de equivalente id- of apparaatspecifieke instellingen worden gerespecteerd:
+>De toestemmingen en de voorkeur op kanaalniveau (d.w.z. die onder `consents` buiten `idSpecific` worden verstrekt) zijn op identiteitskaart binnen dat kanaal van toepassing. Alle toestemming en voorkeuren op kanaalniveau worden daarom rechtstreeks toegepast, ongeacht of de equivalente id- of apparaatspecifieke instellingen worden gerespecteerd:
 >
->* Als de klant ervoor kiest om op kanaalniveau uit te schakelen, worden gelijkwaardige toestemmingen of voorkeuren in `xdm:idSpecific` genegeerd.
->* Als de toestemming of voorkeur op kanaalniveau niet is ingesteld, of de klant heeft ervoor gekozen, worden de equivalente toestemmingen of voorkeuren in `xdm:idSpecific` gerespecteerd.
+>* Als de klant ervoor kiest om op kanaalniveau uit te schakelen, worden gelijkwaardige toestemmingen of voorkeuren in `idSpecific` genegeerd.
+>* Als de toestemming of voorkeur op kanaalniveau niet is ingesteld, of de klant heeft ervoor gekozen, worden de equivalente toestemmingen of voorkeuren in `idSpecific` gerespecteerd.
 
 
-Elke sleutel in het `xdm:idSpecific`-object vertegenwoordigt een specifieke naamruimte die wordt herkend door de Adobe Experience Platform Identity Service. Hoewel u uw eigen aangepaste naamruimten kunt definiëren om verschillende id&#39;s te categoriseren, wordt u aangeraden een van de standaardnaamruimten van Identity Service te gebruiken om opslaggrootten voor Real-time klantprofiel te reduceren. Zie [Naamruimte overzicht van naamruimte](../../identity-service/namespaces.md) in de documentatie bij Identiteitsservice voor meer informatie over naamruimten.
+Elke sleutel in het `idSpecific`-object vertegenwoordigt een specifieke naamruimte die wordt herkend door de Adobe Experience Platform Identity Service. Hoewel u uw eigen aangepaste naamruimten kunt definiëren om verschillende id&#39;s te categoriseren, wordt u aangeraden een van de standaardnaamruimten van Identity Service te gebruiken om opslaggrootten voor Real-time klantprofiel te reduceren. Zie [Naamruimte overzicht van naamruimte](../../identity-service/namespaces.md) in de documentatie bij Identiteitsservice voor meer informatie over naamruimten.
 
-De sleutels voor elk namespacevoorwerp vertegenwoordigen de unieke identiteitswaarden waarvoor de klant voorkeur heeft geplaatst. Elke identiteitswaarde kan een volledige reeks toestemmingen en voorkeur bevatten, die op de zelfde manier zoals `xdm:consents` wordt geformatteerd.
+De sleutels voor elk namespacevoorwerp vertegenwoordigen de unieke identiteitswaarden waarvoor de klant voorkeur heeft geplaatst. Elke identiteitswaarde kan een volledige reeks toestemmingen en voorkeur bevatten, die op de zelfde manier zoals `consents` wordt geformatteerd.
 
 ```json
-"xdm:idSpecific": {
+"idSpecific": {
   "email": {
     "jdoe@example.com": {
-      "xdm:marketing": {
-        "xdm:email": {
-          "xdm:val": "n"
+      "marketing": {
+        "email": {
+          "val": "n"
         }
       }
     }
   }
 }
 ```
-
-## xdm:metagegevens
-
-`xdm:metadata` legt algemene metagegevens vast over de toestemmingen en voorkeuren van de klant wanneer deze voor het laatst zijn bijgewerkt.
-
-```json
-"xdm:metadata": {
-  "xdm:time": "2019-01-01T15:52:25+00:00",
-}
-```
-
-| Eigenschap | Beschrijving |
-| --- | --- |
-| `xdm:time` | Een tijdstempel voor de laatste keer dat een van de toestemmingen en voorkeuren van de klant is bijgewerkt. Dit veld kan worden gebruikt in plaats van tijdstempels toe te passen op individuele voorkeuren om het laden en de complexiteit te verminderen. Als u een waarde `xdm:time` opgeeft onder een individuele voorkeur, wordt de tijdstempel `xdm:metadata` voor die bepaalde voorkeur genegeerd. |
 
 ## Gegevens invoegen met behulp van het gegevenstype {#ingest}
 
@@ -289,9 +301,9 @@ Wanneer een klant zijn toestemming of voorkeuren op uw website wijzigt, moeten d
 
 De onderstaande secties bevatten aanvullende informatie over het gegevenstype [!DNL Consents & Preferences].
 
-### Geaccepteerde waarden voor xdm:val {#choice-values}
+### Geaccepteerde waarden voor `val` {#choice-values}
 
-In de volgende tabel worden de toegestane waarden voor `xdm:val` weergegeven:
+In de volgende tabel worden de toegestane waarden voor `val` weergegeven:
 
 | Value | Titel | Beschrijving |
 | --- | --- | --- |
@@ -305,9 +317,9 @@ In de volgende tabel worden de toegestane waarden voor `xdm:val` weergegeven:
 | `VI` | vitaal belang van de individuele | Het verzamelen van gegevens voor het opgegeven doel is vereist om de vitale belangen van het individu te beschermen. |
 | `PI` | Openbaar belang | Het verzamelen van gegevens voor het specifieke doel is vereist om een taak van algemeen belang of in de uitoefening van het openbaar gezag uit te voeren. |
 
-### Geaccepteerde waarden voor xdm:preferred {#preferred-values}
+### Geaccepteerde waarden voor `preferred` {#preferred-values}
 
-In de volgende tabel worden de toegestane waarden voor `xdm:preferred` weergegeven:
+In de volgende tabel worden de toegestane waarden voor `preferred` weergegeven:
 
 | Waarde | Beschrijving |
 | --- | --- |
