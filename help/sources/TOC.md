@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '557'
 ht-degree: 4%
 
 ---
@@ -117,6 +117,8 @@ ht-degree: 4%
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - Protocollen {#protocols}
          - [Generic OData](tutorials/api/create/protocols/odata.md)
+      - Streaming {#streaming}
+         - [HTTP-API](tutorials/api/create/streaming/http.md)
    - Gegevens {#explore} verkennen
       - [Reclamegegevens verkennen](tutorials/api/explore/advertising.md)
       - [Gegevens over cloudopslag verkennen](tutorials/api/explore/cloud-storage.md)
@@ -196,6 +198,8 @@ ht-degree: 4%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocollen {#protocols}
          - [Generic OData](tutorials/ui/create/protocols/odata.md)
+      - Streaming {#streaming}
+         - [HTTP-API](tutorials/ui/create/streaming/http.md)
    - Een gegevensstroom configureren {#dataflow}
       - [Gegevensstroom advertentieverbinding](tutorials/ui/dataflow/advertising.md)
       - [Batch-gegevens voor cloudopslagverbinding](tutorials/ui/dataflow/batch/cloud-storage.md)
