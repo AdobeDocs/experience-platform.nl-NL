@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentatieservicehandleiding
 user-guide-description: Bouw segmenten en produceer publiek van uw gegevens van het Profiel van de Klant in real time.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '152'
 ht-degree: 5%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 5%
    - [Segmentdashboard](ui/segment-dashboard.md)
    - [Segment Builder](ui/segment-builder.md)
    - [Streaming segmentering](ui/streaming-segmentation.md)
+   - [Streaming segmentatie (video)](video/streaming-segmentation-overview.md)
    - [Tijd beperkingen refactoring](ui/segment-refactoring.md)
 - [Optie-outs respecteren](honoring-opt-outs.md)
 - [Segmentatie van meerdere entiteiten](multi-entity-segmentation.md)
@@ -51,6 +52,9 @@ ht-degree: 5%
    - [Diverse functies](pql/misc-functions.md)
 - Tutorials {#tutorials}
    - [Een segment maken](tutorials/create-a-segment.md)
+   - [Een segment maken (video)](video/create-segment.md)
+   - [Een dynamisch segment maken (video)](video/create-a-dynamic-segment.md)
+   - [Een segment met meerdere entiteiten maken (video)](video/create-multi-entity-segments.md)
    - [Een segment evalueren](tutorials/evaluate-a-segment.md)
    - [Een gegevensset maken om gegevens te exporteren](tutorials/create-dataset-export-segment.md)
    - [Compatibiliteit met gegevensgebruik voor segmenten afdwingen](tutorials/governance.md)
