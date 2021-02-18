@@ -1,19 +1,17 @@
 ---
-title: Adobe Experience Platform Web SDK Help
-seo-title: Adobe Experience Platform Web SDK Help
-description: Leer wat Adobe Experience Platform Web SDK is en hoe deze kan worden gebruikt.
-seo-description: Leer hoe u klanten van Adobe Experience Cloud in staat stelt te communiceren met de verschillende services in de Experience Cloud.
+title: Adobe Experience Platform Web SDK - Overzicht
+description: Leer hoe u de Adobe Experience Platform Web SDK kunt gebruiken om de mogelijkheden van het Platform in uw website te integreren.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
 
 
-# Wat is Adobe Experience Platform Web SDK
+# Overzicht Adobe Experience Platform Web SDK
 
 Adobe Experience Platform Web SDK is een JavaScript-bibliotheek aan de clientzijde waarmee klanten van Adobe Experience Cloud via het Adobe Experience Platform Edge Network kunnen communiceren met de verschillende services in de [!DNL Experience Cloud]. Naast de bibliotheek JavaScript, is er [Experience Platform Launch uitbreiding](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) om met uw configuraties van SDK van het Web te helpen.
 
