@@ -1,39 +1,37 @@
 ---
-title: 'Adobe Target en Adobe Experience Platform Web SDK. '
-seo-title: Adobe Experience Platform Web SDK en Adobe Target gebruiken
-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
-seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
+title: Toepassing van één pagina voor de SDK van het Web van Adobe Experience Platform
+description: Leer hoe u een toepassing (SPA) van één pagina maakt met Adobe Target.
 keywords: target;adobe target;xdm views; weergaven;toepassingen van één pagina;SPA;SPA levenscyclus;cliënt-kant;AB het testen;AB;De ervaring richt zich;XT;VEC
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1665'
 ht-degree: 0%
 
 ---
 
 
-# Toepassing van één pagina
+# Implementatie van één pagina
 
-Adobe Experience Platform Web SDK biedt rijke functies die uw bedrijf uitrusten voor het uitvoeren van personalisatie op clienttechnologieën van de volgende generatie, zoals Single Page Applications (SPA).
+Adobe Experience Platform Web SDK verstrekt rijke eigenschappen die uw zaken uitrusten om verpersoonlijking op volgende-generatie, cliënt-zijtechnologieën zoals single-page toepassingen (SPA) uit te voeren.
 
 Traditionele websites werkten aan navigatiemodellen &quot;van pagina tot pagina&quot;, ook wel bekend als Toepassingen van meerdere pagina&#39;s, waarbij websiteontwerpen nauw gekoppeld waren aan URL&#39;s en overgangen van de ene webpagina naar de andere een pagina moesten laden.
 
-Moderne webtoepassingen, zoals toepassingen voor één pagina, hebben in plaats daarvan een model gekozen dat een snel gebruik van de rendering van de gebruikersinterface van de browser voorstelt. Dit model is vaak onafhankelijk van het opnieuw laden van pagina&#39;s. Deze ervaringen kunnen door klanteninteractie, zoals rollen, klikken, en curseurbewegingen worden teweeggebracht. Naarmate de paradigma&#39;s van het moderne web zijn geëvolueerd, werkt de relevantie van traditionele generieke gebeurtenissen, zoals het laden van een pagina, voor het implementeren van personalisatie en experimenten niet meer.
+De moderne Webtoepassingen, zoals enig-paginatoepassingen, hebben in plaats daarvan een model aangenomen dat snel gebruik van browser UI teruggeeft, die vaak van paginaatherladingen onafhankelijk is. Deze ervaringen kunnen door klanteninteractie, zoals rollen, klikken, en curseurbewegingen worden teweeggebracht. Naarmate de paradigma&#39;s van het moderne web zijn geëvolueerd, werkt de relevantie van traditionele generieke gebeurtenissen, zoals het laden van een pagina, voor het implementeren van personalisatie en experimenten niet meer.
 
 ![](assets/spa-vs-traditional-lifecycle.png)
 
 ## Voordelen van Platform Web SDK voor SPA
 
-Hier volgen enkele voordelen van het gebruik van Adobe Experience Platform Web SDK voor toepassingen voor één pagina:
+Hier volgen enkele voordelen van Adobe Experience Platform Web SDK voor uw single-page toepassingen:
 
 * De capaciteit om alle aanbiedingen op pagina-lading in het voorgeheugen onder te brengen om veelvoudige servervraag aan één enkele servervraag te verminderen.
 * Verbeter de gebruikerservaring op uw site aanzienlijk omdat aanbiedingen direct via de cache worden weergegeven zonder vertraging die door traditionele serveraanroepen is geïntroduceerd.
 * Één enkele lijn van code en éénmalige ontwikkelaarsopstelling laat marketers toe om A/B en Ervaring het richten (XT) activiteiten via Visual Experience Composer (VEC) op uw SPA tot stand te brengen en in werking te stellen.
 
-## XDM-weergaven en toepassingen voor één pagina
+## XDM-weergaven en toepassingen van één pagina
 
-Adobe Target VEC for SPA maakt gebruik van het concept Views: een logische groep visuele elementen die samen een SPA ervaring vormen. Een toepassing van één pagina kan daarom worden beschouwd als een overgang door Weergaven in plaats van URL&#39;s, op basis van gebruikersinteracties. Een weergave kan doorgaans een hele site of gegroepeerde visuele elementen binnen een site vertegenwoordigen.
+Adobe Target VEC for SPA maakt gebruik van het concept Views: een logische groep visuele elementen die samen een SPA ervaring vormen. Een toepassing van één pagina kan daarom worden beschouwd als het overgaan door Meningen, in plaats van URLs, die op gebruikersinteractie wordt gebaseerd. Een weergave kan doorgaans een hele site of gegroepeerde visuele elementen binnen een site vertegenwoordigen.
 
 Om verder uit te leggen welke Weergaven zijn, gebruikt het volgende voorbeeld een hypothetische online e-commercesite die in React wordt uitgevoerd om voorbeeldweergaven te onderzoeken.
 
@@ -64,7 +62,7 @@ Het concept van standpunten kan veel verder worden uitgebreid. Dit zijn slechts 
 XDM-weergaven kunnen in Adobe Target worden gebruikt om marketers in staat te stellen A/B- en XT-tests uit te voeren op SPA via Visual Experience Composer. Hiervoor moeten de volgende stappen worden uitgevoerd om een eenmalige ontwikkelaarsinstelling te voltooien:
 
 1. [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md) installeren
-2. Bepaal alle XDM-weergaven in uw toepassing Eén pagina die u wilt aanpassen.
+2. Bepaal alle XDM-weergaven in uw toepassing voor één pagina die u wilt aanpassen.
 3. Na het bepalen van de meningen XDM, om AB of XT VEC activiteiten te leveren, voer de `sendEvent()` functie met `renderDecisions` uit die aan `true` en de overeenkomstige Mening XDM in uw Enige Toepassing van de Pagina wordt geplaatst. De XDM-weergave moet worden doorgegeven in `xdm.web.webPageDetails.viewName`. Met deze stap kunnen marketers de Visual Experience Composer gebruiken om A/B- en XT-tests voor die XDM te starten.
 
    ```javascript
