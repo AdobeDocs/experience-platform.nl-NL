@@ -1,25 +1,23 @@
 ---
-title: Aangepaste inhoud renderen
-seo-title: Adobe Experience Platform Web SDK Persoonlijke inhoud renderen
-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven
-seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven
-keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
+title: Persoonlijke inhoud renderen met de SDK van het Adobe Experience Platform-web
+description: Leer hoe u persoonlijke inhoud kunt renderen met de SDK van Adobe Experience Platform Web.
+keywords: personalization;renderDecisions;sendEvent;decisions;resultScopes;result.decisions;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
 
-# Overzicht van opties voor personalisatie
+# Aangepaste inhoud renderen
 
-Adobe Experience Platform [!DNL Web SDK] ondersteunt het opvragen van personalisatieoplossingen bij Adobe, waaronder Adobe Target. Er zijn twee wijzen voor verpersoonlijking: ophalen, inhoud die automatisch kan worden gerenderd en inhoud die de ontwikkelaar moet renderen. De SDK biedt ook mogelijkheden om flikkering te [beheren](../personalization/manage-flicker.md).
+Adobe Experience Platform [!DNL Web SDK] biedt ondersteuning voor het opvragen van persoonlijke oplossingen bij Adobe, waaronder Adobe Target. Er zijn twee wijzen voor verpersoonlijking: ophalen, inhoud die automatisch kan worden gerenderd en inhoud die de ontwikkelaar moet renderen. De SDK biedt ook mogelijkheden om flikkering](../personalization/manage-flicker.md) te beheren.[
 
 ## Inhoud automatisch renderen
 
-De SDK rendert automatisch gepersonaliseerde inhoud wanneer u een gebeurtenis naar de server verzendt en instelt `renderDecisions` op `true` als optie voor de gebeurtenis.
+De SDK rendert automatisch gepersonaliseerde inhoud wanneer u een gebeurtenis naar de server verzendt en `renderDecisions` als optie voor de gebeurtenis instelt op `true`.
 
 ```javascript
 alloy("sendEvent", {
@@ -41,7 +39,7 @@ Het renderen van gepersonaliseerde inhoud is asynchroon, dus er mag geen enkele 
 
 ## Inhoud handmatig renderen
 
-U kunt de lijst van besluiten verzoeken om als belofte op het `sendEvent` bevel te zijn teruggekeerd door de `decisionScopes` optie te specificeren. Een werkingsgebied is een koord de laat de verpersoonlijkingsoplossing weten welk besluit u zou willen.
+U kunt verzoeken om de lijst van besluiten die als belofte op `sendEvent` bevel moeten worden teruggekeerd door `decisionScopes` optie te specificeren. Een werkingsgebied is een koord de laat de verpersoonlijkingsoplossing weten welk besluit u zou willen.
 
 ```javascript
 alloy("sendEvent",{
@@ -93,8 +91,8 @@ Dit zal een lijst van besluiten als voorwerp JSON voor elke besluiten terugkeren
 
 >[!TIP]
 >
-> Als u [!DNL Target], werkingsgebied wordt mBoxes op de server gebruikt, slechts worden zij allen gevraagd tegelijkertijd in plaats van individueel. Het globale mbox wordt altijd verzonden.
+> Als u [!DNL Target] gebruikt, worden bereiken mBox op de server, slechts worden zij allen onmiddellijk gevraagd in plaats van individueel. Het globale mbox wordt altijd verzonden.
 
 ### Automatische inhoud ophalen
 
-Als u de automatische renderbare beslissingen `result.decisions` wilt opnemen en NIET automatisch renderen wilt hebben, kunt u instellen `renderDecisions` op `false`en het speciale bereik opnemen `__view__`.
+Als u `result.decisions` zou willen om de automatische terug te geven besluiten op te nemen en NIET automatisch laat teruggeven hen hebben, kunt u `renderDecisions` aan `false` plaatsen, en het speciale werkingsgebied `__view__` omvatten.
