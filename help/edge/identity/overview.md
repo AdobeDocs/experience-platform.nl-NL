@@ -1,19 +1,18 @@
 ---
-title: Experience Cloud-id ophalen
-seo-title: Adobe Experience Platform Web SDK Experience Cloud-id ophalen
-description: Meer weten over Adobe Experience Cloud-id?
+title: Experience Cloud-id's ophalen met de SDK van Adobe Experience Platform Web
+description: Leer hoe u Adobe Experience Cloud-id's (ECID's) ophaalt met de Adobe Experience Platform Web SDK.
 seo-description: Meer weten over Adobe Experience Cloud-id?
-keywords: Identiteit;Identiteit eerste partij;Identiteitsdienst;Identiteit derde partij;Identiteitsmigratie;Identiteitskaart van de Bezoeker;Identiteitskaart;Identiteitskaart van derdePartijCookiesEnabled;idMigrationEnabled;getIdentiteit;syncIdentiteitskaart;Identiteitskaart;primaire;Identiteitskaart Namespace;Naamruimte ID;AuthenticationState;hashEnabled;
+keywords: Identiteit;Identiteit eerste partij;Identiteitsdienst;Identiteit derde partij;Identiteitsmigratie;Identiteitskaart van de Bezoeker;Identiteitskaart;Identiteitskaart van derdePartijCookiesEnabled;idMigrationEnabled;getIdentiteit;syncIdentiteitskaart;Identiteitskaart;primaire;Identiteitskaart Namespace;Naamruimte ID;AuthentificatieStaat;hashEnabled;
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
 
 
-# Identiteit - De Experience Cloud-id wordt opgehaald
+# Adobe Experience Cloud-id&#39;s ophalen
 
 Adobe Experience Platform Web SDK gebruikt [Adobe Identity Service](../../identity-service/ecid.md). Dit zorgt ervoor dat elk apparaat een unieke id heeft die op het apparaat blijft bestaan, zodat de activiteit tussen pagina&#39;s aan elkaar kan worden gekoppeld.
 
