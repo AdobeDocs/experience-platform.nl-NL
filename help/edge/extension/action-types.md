@@ -1,10 +1,10 @@
 ---
-title: Handelingstypen Platform Web SDK
-description: Adobe Experience Platform Web SDK - Extensietypen in Adobe Experience Platform Launch
+title: Handelingstypen in de Adobe Experience Platform Web SDK-extensie
+description: Leer meer over de verschillende actietypen die door de uitbreiding van SDK van het Web van Adobe Experience Platform in Adobe Experience Platform Launch worden verstrekt.
 translation-type: tm+mt
-source-git-commit: 473cc1f7617f1d65cdb70ff0e758178ea0174f00
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
