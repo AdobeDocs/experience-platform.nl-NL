@@ -1,19 +1,18 @@
 ---
-title: De SDK configureren
-seo-title: Adobe Experience Platform Web SDK configureren
-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
+title: De SDK van Adobe Experience Platform Web configureren
+description: Leer hoe u de SDK van Adobe Experience Platform Web configureert.
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 keywords: configureren;configuratie;SDK;edge;Web SDK;configure;edgeConfigId;context;web;apparaat;omgeving;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk montages;prehideStyle;opacity;cookieDestinationEnabled;urlMigrationEnabled;idID Enabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 5%
+source-wordcount: '741'
+ht-degree: 4%
 
 ---
 
 
-# De SDK configureren
+# Vorm de SDK van het Web van het Platform
 
 De configuratie voor SDK wordt gedaan met `configure` bevel.
 
@@ -156,4 +155,4 @@ Indien waar (true), leest de SDK oude AMCV-cookies en stelt deze in. Dit helpt b
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | true |
 
-Hiermee schakelt u het instellen van cookies van derden voor Adobe in. De SDK kan de bezoekersidentiteitskaart in een derdecontext handhaven om de zelfde bezoekersidentiteitskaart toe te laten om over plaatsen te worden gebruikt. Dit is nuttig als u veelvoudige plaatsen hebt of u gegevens met partners wilt delen; soms is dit echter om privacyredenen niet gewenst .
+Hiermee schakelt u het instellen van cookies van derden voor Adobe in. De SDK kan de bezoekersidentiteitskaart in een derdecontext handhaven om de zelfde bezoekersidentiteitskaart toe te laten om over plaatsen worden gebruikt. Dit is nuttig als u veelvoudige plaatsen hebt of u gegevens met partners wilt delen; soms is dit echter om privacyredenen niet gewenst .
