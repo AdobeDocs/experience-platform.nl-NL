@@ -1,12 +1,11 @@
 ---
-title: Adobe Experience Platform Web SDK-extensie
-seo-title: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
+title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
 seo-description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 56f0b3abd859a6b27f0117fb6ec4c312ca93ba5d
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '988'
 ht-degree: 1%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 1%
 
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
-[Meer informatie: Opmerkingen bij de release Adobe Experience Platform Web SDK](https://docs.adobe.com/content/help/en/experience-platform/edge/release-notes.html)
+Dit document behandelt de releaseopmerkingen voor de Adobe Experience Platform Web SDK-extensie voor Adobe Experience Platform Launch. Voor de recentste versienota&#39;s op SDK zelf, zie [de versienota&#39;s van SDK van het Web van het Platform](https://docs.adobe.com/content/help/en/experience-platform/edge/release-notes.html).
 
 ## 4 november 2020
 
