@@ -1,18 +1,16 @@
 ---
-title: Adobe Experience Platform Web SDK-extensie
-seo-title: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
-description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
-seo-description: Adobe Experience Platform Web SDK Extension Adobe Experience Platform Launch
+title: Overzicht van Adobe Experience Platform Web SDK-extensie
+description: Meer informatie over de Adobe Experience Platform Web SDK Extension voor Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 473cc1f7617f1d65cdb70ff0e758178ea0174f00
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platform Web SDK-extensie voor starten van Platform
+# Overzicht van Adobe Experience Platform Web SDK-extensie
 
 De extensie Adobe Experience Platform Web SDK verzendt gegevens naar de Adobe Experience Cloud vanuit wegeigenschappen via het Adobe Experience Platform Edge Network. Met de Adobe Experience Platform Web SDK-extensie kunt u gegevens streamen naar een platform, identiteiten synchroniseren, inbellen en automatisch contextgegevens verzamelen.
 
@@ -20,7 +18,7 @@ De extensie Adobe Experience Platform Web SDK verzendt gegevens naar de Adobe Ex
 
 Deze sectie bevat een verwijzing naar de beschikbare opties bij het configureren van de extensie Adobe Experience Platform Web SDK.
 
-Als de extensie Adobe Experience Platform Web SDK nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensies > Catalogus]**, plaatst u de extensie Adobe Experience Platform Web SDK en selecteert u **[!UICONTROL Installeren]**.
+Als de extensie Adobe Experience Platform Web SDK nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensies > Catalog]**, plaatst u de aanwijzer op de SDK-extensie Adobe Experience Platform Web en selecteert u **[!UICONTROL Installeren]**.
 
 Als u de extensie wilt configureren, opent u het tabblad **[!UICONTROL Extensies]**, plaatst u de muis boven de extensie en selecteert u **[!UICONTROL Configureren]**.
 
