@@ -1,41 +1,39 @@
 ---
-title: 'Adobe Target en Adobe Experience Platform Web SDK. '
-seo-title: Adobe Experience Platform Web SDK en Adobe Target gebruiken
+title: Adobe Target gebruiken met de SDK van het Web van het Platform
 description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
-seo-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
-keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
+keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '632'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Target] Overzicht
+# Adobe Target gebruiken met de SDK van het Web van het Platform
 
-Adobe Experience Platform [!DNL Web SDK] kan persoonlijke ervaringen die in Adobe Target worden beheerd, aanbieden en weergeven op internet. U kunt een redacteur WYSIWYG, genoemd de [Visuele Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) van de Ervaring (VEC), of een niet-visuele interface, de op [vorm-gebaseerde Composer](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)van de Ervaring gebruiken, om, uw activiteiten en verpersoonlijkingservaringen tot stand te brengen te activeren en te leveren.
+Adobe Experience Platform [!DNL Web SDK] kan persoonlijke ervaringen die in Adobe Target worden beheerd, aanbieden en weergeven op het webkanaal. U kunt een redacteur WYSIWYG, genoemd [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), of een niet-visuele interface, [Op vorm-gebaseerde Composer van de Ervaring](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html), gebruiken om, uw activiteiten en verpersoonlijkingservaringen tot stand te brengen te activeren en te leveren.
 
 ## Adobe Target inschakelen
 
-U moet het volgende doen om in te schakelen [!DNL Target]:
+Als u [!DNL Target] wilt inschakelen, moet u het volgende doen:
 
-1. Laat doel in uw [randconfiguratie](../../fundamentals/edge-configuration.md) met de aangewezen cliëntcode toe.
-1. Voeg de `renderDecisions` optie toe aan uw gebeurtenissen.
+1. Doel inschakelen in uw [randconfiguratie](../../fundamentals/edge-configuration.md) met de juiste clientcode.
+1. Voeg de optie `renderDecisions` toe aan uw gebeurtenissen.
 
 Vervolgens kunt u desgewenst ook:
 
-* Voeg toe `decisionScopes` aan uw gebeurtenissen om specifieke activiteiten (nuttig voor activiteiten terug te winnen die met op vorm-gebaseerde composer worden gecreeerd).
+* Voeg `decisionScopes` aan uw gebeurtenissen toe om specifieke activiteiten (nuttig voor activiteiten terug te winnen die met op vorm-gebaseerde composer worden gecreeerd).
 * Voeg het [voorverborgen fragment](../manage-flicker.md) toe om alleen bepaalde delen van de pagina te verbergen.
 
 ## Adobe Target VEC gebruiken
 
-Als u de VEC met een Platform Web SDK-implementatie wilt gebruiken, moet u de [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) - of [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension installeren en activeren.
+Als u de VEC wilt gebruiken met een Platform Web SDK-implementatie, moet u de [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) of [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension installeren en activeren.
 
 ## VEC-activiteiten automatisch renderen
 
-Adobe Experience Platform Web SDK heeft de mogelijkheid om uw ervaringen die via de VEC van Adobe Target op het web zijn gedefinieerd, automatisch te renderen voor uw gebruikers. Om aan het Web SDK van Adobe Experience Platform aan auto-render VEC activiteiten te wijzen, verzend een gebeurtenis met `renderDecisions = true`:
+Adobe Experience Platform Web SDK heeft de mogelijkheid om uw ervaringen die via de VEC van Adobe Target op het web zijn gedefinieerd, automatisch te renderen voor uw gebruikers. Als u aan Adobe Experience Platform Web SDK wilt aangeven dat VEC-activiteiten automatisch moeten worden gerenderd, verzendt u een gebeurtenis met `renderDecisions = true`:
 
 ```javascript
 alloy
@@ -81,11 +79,11 @@ alloy
 
 ## Beslissingsgebieden
 
-`decisionScopes` Hiermee definieert u secties, locaties of delen van uw pagina&#39;s waar u een persoonlijke ervaring wilt weergeven. Deze `decisionScopes` zijn aanpasbaar en door de gebruiker gedefinieerd. Voor huidige [!DNL Target] klanten, `decisionScopes` zijn ook gekend als &quot;dozen.&quot; In de [!DNL Target] UI, `decisionScopes` verschijnen als &quot;plaatsen.&quot;
+`decisionScopes` Hiermee definieert u secties, locaties of delen van uw pagina&#39;s waar u een persoonlijke ervaring wilt weergeven. Deze `decisionScopes` zijn aanpasbaar en user-defined. Voor huidige [!DNL Target]-klanten wordt `decisionScopes` ook wel ‘mboxes’ genoemd. In [!DNL Target] UI, `decisionScopes` verschijnen als &quot;plaatsen.&quot;
 
-## Het `__view__` toepassingsgebied
+## Het `__view__`-bereik
 
-Adobe Experience Platform Web SDK verstrekt functionaliteit waar u acties kunt terugwinnen VEC zonder zich op SDK te verlaten om de acties VEC voor u terug te geven. Verzend een gebeurtenis met `__view__` als een `decisionScopes`gedefinieerd item.
+Adobe Experience Platform Web SDK verstrekt functionaliteit waar u acties kunt terugwinnen VEC zonder zich op SDK te verlaten om de acties VEC voor u terug te geven. Verzend een gebeurtenis met `__view__` die als `decisionScopes` wordt gedefinieerd.
 
 ```javascript
 alloy("sendEvent", {
@@ -109,7 +107,7 @@ alloy("sendEvent", {
 
 ## Soorten publiek in XDM
 
-Wanneer het bepalen van Publiek voor uw activiteiten van het Doel die via het Web SDK van Adobe Experience Platform zullen worden geleverd, moet [XDM](https://docs.adobe.com/content/help/nl-NL/experience-platform/xdm/home.html) worden bepaald en worden gebruikt. Nadat u schema&#39;s XDM, klassen, en mengen bepaalt, kunt u een het publieksregel van het Doel tot stand brengen die door XDM gegevens voor het richten wordt bepaald. Binnen Doel, XDM- gegevensvertoningen in de Bouwer van de Publiek als douaneparameter. XDM wordt geserialiseerd gebruikend puntaantekening (bijvoorbeeld, `web.webPageDetails.name`).
+Wanneer het bepalen van Publiek voor uw activiteiten van het Doel die via het Web SDK van Adobe Experience Platform zullen worden geleverd, [XDM](https://docs.adobe.com/content/help/nl-NL/experience-platform/xdm/home.html) moet worden bepaald en worden gebruikt. Nadat u schema&#39;s XDM, klassen, en mengen bepaalt, kunt u een het publieksregel van het Doel tot stand brengen die door XDM gegevens voor het richten wordt bepaald. Binnen Doel, XDM- gegevensvertoningen in de Bouwer van de Publiek als douaneparameter. XDM wordt geserialiseerd gebruikend puntaantekening (bijvoorbeeld, `web.webPageDetails.name`).
 
 Als u doelactiviteiten hebt met vooraf gedefinieerde doelgroepen die aangepaste parameters of een gebruikersprofiel gebruiken, moet u er rekening mee houden dat deze niet correct worden geleverd via de SDK. In plaats van aangepaste parameters of het gebruikersprofiel te gebruiken, moet u in plaats daarvan XDM gebruiken. Er is echter een out-of-the-box publiek dat zich richt op velden die worden ondersteund via Adobe Experience Platform Web SDK en waarvoor geen XDM vereist is. Dit zijn de gebieden beschikbaar in het Doel UI die geen XDM vereisen:
 
@@ -124,10 +122,10 @@ Als u doelactiviteiten hebt met vooraf gedefinieerde doelgroepen die aangepaste 
 
 ## Terminologie
 
-__Besluiten:__ In [!DNL Target], correleert deze met de ervaring die van een Activiteit wordt geselecteerd.
+__Beslissingen:__ In  [!DNL Target]verband houden deze met de ervaring die uit een activiteit wordt geselecteerd.
 
-__Schema:__ Het schema van een besluit is het soort aanbod in [!DNL Target].
+__Schema:__ Het schema van een besluit is het soort aanbod in  [!DNL Target].
 
-__Toepassingsgebied:__ De reikwijdte van het besluit. In [!DNL Target], dit is de mBox. Het algemene mBox is het `__view__` bereik.
+__Toepassingsgebied:__ het toepassingsgebied van de beschikking. In [!DNL Target] is dit de mBox. Het globale mBox is het `__view__` werkingsgebied.
 
-__XDM:__ XDM wordt in series vervaardigd in puntaantekening en dan gezet in [!DNL Target] als parameters mBox.
+__XDM:__ XDM wordt geserialiseerd in puntnotatie en dan gezet in  [!DNL Target] als parameters mBox.
