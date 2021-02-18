@@ -1,23 +1,21 @@
 ---
-title: Automatisch verzamelde informatie
-seo-title: Informatie die automatisch wordt verzameld door Adobe Experience Platform Web SDK
-description: Beschrijving van alle informatie die Adobe Experience Cloud SDK automatisch verzamelt
-seo-description: Beschrijving van alle informatie die Adobe Experience Cloud SDK automatisch verzamelt
-keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
+title: Automatisch verzamelde informatie in de Adobe Experience Platform Web SDK
+description: Een overzicht van alle informatie die de Adobe Experience Platform SDK automatisch verzamelt.
+keywords: verzamel informatie;context;configure;device;screenHeight;screenHeight;screenOrientation;screenOrientation;screenWidth;screenWidth;milieu;viewportHeight;viewportHeight;viewportWidth;viewport Breedte;crowserDetails;browser details;implementatieDetails;naam;versionContext;localTime;localTimezoneOffset;local zone Offset;timestamp;web;url;webPageDetails;webPage Details;webReferrer;webReferrer;landscape;portrait;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 7%
+source-wordcount: '422'
+ht-degree: 6%
 
 ---
 
 
-# Automatisch verzamelde informatie
+# Automatisch verzamelde gegevens
 
-Adobe Experience Platform Web SDK verzamelt automatisch een aantal gegevens zonder een speciale configuratie. Deze informatie kan echter desgewenst worden uitgeschakeld met de `context` optie in de `configure` opdracht. [Zie De SDK](../fundamentals/configuring-the-sdk.md)configureren. Hieronder volgt een lijst van deze gegevens. De naam tussen haakjes geeft de tekenreeks aan die moet worden gebruikt bij het configureren van de context.
+De SDK van het Web van Adobe Experience Platform verzamelt automatisch een aantal stukken informatie zonder enige speciale configuratie. Deze informatie kan echter desgewenst worden uitgeschakeld met de optie `context` in de opdracht `configure`. [Zie De SDK](../fundamentals/configuring-the-sdk.md) configureren. Hieronder volgt een lijst van deze gegevens. De naam tussen haakjes geeft de tekenreeks aan die moet worden gebruikt bij het configureren van de context.
 
-## Device (`device`)
+## Apparaat (`device`)
 
 Informatie over het apparaat. Dit omvat geen gegevens die op server-kant van het koord van de gebruikersagent kunnen worden gezocht.
 
