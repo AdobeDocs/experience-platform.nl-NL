@@ -1,13 +1,11 @@
 ---
-title: Interactie met meerdere eigenschappen
-seo-title: Adobe Experience Platform Web SDK Interactie met meerdere eigenschappen
-description: Leer hoe te met de veelvoudige eigenschappen van SDK van het Web van het Experience Platform in wisselwerking te staan
-seo-description: Leer hoe te met de veelvoudige eigenschappen van SDK van het Web van het Experience Platform in wisselwerking te staan
-keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
+title: Interactie met meerdere eigenschappen in de Adobe Experience Platform Web SDK
+description: Leer hoe te met de veelvoudige eigenschappen van SDK van het Web van het Experience Platform in wisselwerking te staan.
+keywords: meerdere eigenschappen;configure;sendEvent;edgeConfigId;orgId;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -21,7 +19,7 @@ Er zijn bepaalde gevallen waarin u mogelijk wilt werken met twee verschillende e
 * Relaties tussen meerdere bedrijven voor het uitwisselen van gegevens
 * Klanten die nieuwe Adobe-oplossingen testen en hun bestaande implementatie niet willen verstoren
 
-Met de SDK kunt u een aparte instantie voor elke eigenschap maken door een andere naam toe te voegen aan de array in de basiscode. In het volgende voorbeeld hebben we twee namen opgegeven, `mycustomname1` en `mycustomname2`.
+Met de SDK kunt u een aparte instantie voor elke eigenschap maken door een andere naam toe te voegen aan de array in de basiscode. In het volgende voorbeeld, hebben wij twee namen, `mycustomname1` en `mycustomname2` verstrekt.
 
 ```markup
 <script>
@@ -33,9 +31,9 @@ Met de SDK kunt u een aparte instantie voor elke eigenschap maken door een ander
 <script src="alloy.js" async></script>
 ```
 
-Hierdoor worden in het script twee instanties van de SDK gemaakt. De algemene functie voor interactie met de eerste instantie wordt genoemd `mycustomname1` en de algemene functie voor interactie met de tweede instantie wordt genoemd `mycustomname2`.
+Hierdoor worden in het script twee instanties van de SDK gemaakt. De algemene functie voor interactie met de eerste instantie heeft de naam `mycustomname1` en de algemene functie voor interactie met de tweede instantie krijgt de naam `mycustomname2`.
 
-Door twee afzonderlijke instanties te creëren, kan elk voor een verschillend bezit worden gevormd. Elke communicatie of gegevenspersistentie die optreedt als gevolg van interactie met `mycustomname1` `mycustomname2` wordt geïsoleerd gehouden en omgekeerd.
+Door twee afzonderlijke instanties te creëren, kan elk voor een verschillend bezit worden gevormd. Elke communicatie- of gegevenspersistentie die optreedt als gevolg van interactie met `mycustomname1`, wordt geïsoleerd gehouden van `mycustomname2` en omgekeerd.
 
 In het volgende voorbeeld kunt u als volgt opdrachten uitvoeren met elk van de instanties:
 
@@ -63,8 +61,8 @@ mycustomname2("sendEvent", {
 });
 ```
 
-Zorg ervoor dat u de `configure` opdracht voor elke instantie uitvoert voordat u andere opdrachten voor dezelfde instantie uitvoert.
+Zorg ervoor dat u de opdracht `configure` voor elke instantie uitvoert voordat u andere opdrachten voor dezelfde instantie uitvoert.
 
 ## Beperkingen
 
-Om conflicten met cookies te voorkomen, kan slechts één exemplaar van Adobe Experience Platform [!DNL Web SDK] op een pagina een bepaalde cookie bevatten `edgeConfigId`.  Op dezelfde manier [!DNL Web SDK] kan slechts één instantie van Adobe Experience Platform een bepaalde instantie hebben `orgId`.
+Om conflicten met cookies te voorkomen, kan slechts één exemplaar van Adobe Experience Platform [!DNL Web SDK] binnen een pagina een bepaalde `edgeConfigId` hebben.  Op dezelfde manier kan slechts één instantie van Adobe Experience Platform [!DNL Web SDK] een bepaalde `orgId` hebben.
