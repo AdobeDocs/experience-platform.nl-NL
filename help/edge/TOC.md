@@ -6,20 +6,20 @@ user-guide-title: Help bij Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interactie met de diensten van Experience Cloud door het Netwerk van de Rand.
 translation-type: tm+mt
-source-git-commit: 090050d89c628d82ebe1da6625a2ef1f2adf3e6c
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 12%
+source-wordcount: '142'
+ht-degree: 15%
 
 ---
 
 
 # Adobe Experience Platform Web SDK {#edge}
 
-* [Overzicht van Web SDK](home.md)
+* [Overzicht van Platform Web SDK](home.md)
 * Grondbeginselen {#fundamentals}
-   * [Vereiste](fundamentals/prerequisite.md)
-   * [De rand configureren](fundamentals/edge-configuration.md)
+   * [Vereisten](fundamentals/prerequisite.md)
+   * [Een randconfiguratie maken](fundamentals/edge-configuration.md)
    * [De SDK installeren](fundamentals/installing-the-sdk.md)
    * [De SDK configureren](fundamentals/configuring-the-sdk.md)
    * [Opdrachten uitvoeren](fundamentals/executing-commands.md)
@@ -34,18 +34,18 @@ ht-degree: 12%
    * [Koppelingen bijhouden](data-collection/track-links.md)
    * [Gegevens over handel en producten verzamelen](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
-      * [Overzicht van analysemogelijkheden](data-collection/adobe-analytics/analytics-overview.md)
-      * [Variabelen handmatig toewijzen in Adobe Analytics](data-collection/adobe-analytics/manually-mapping-variables.md)
+      * [Overzicht](data-collection/adobe-analytics/analytics-overview.md)
+      * [Variabelen van Analyse toewijzen](data-collection/adobe-analytics/manually-mapping-variables.md)
       * [Automatisch toegewezen variabelen](data-collection/adobe-analytics/automatically-mapped-vars.md)
-      * [Gegevens verzenden naar Adobe Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
+      * [Gegevens verzenden naar Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * Personalisatie {#personalization}
    * [Aangepaste inhoud renderen](personalization/rendering-personalization-content.md)
    * [flikkering beheren](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
-      * [Doeloverzicht](personalization/adobe-target/target-overview.md)
-      * [Toepassing van één pagina](personalization/adobe-target/spa-implementation.md)
+      * [Overzicht](personalization/adobe-target/target-overview.md)
+      * [Implementatie van één pagina](personalization/adobe-target/spa-implementation.md)
    * Offer Decisioning {#offer-decisioning}
-      * [Offer Decisioning-overzicht](personalization/offer-decisioning/offer-decisioning-overview.md)
+      * [Overzicht](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Toestemming {#consent}
    * [Ondersteunende toestemming](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
