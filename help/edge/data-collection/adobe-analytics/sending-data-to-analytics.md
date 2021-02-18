@@ -1,13 +1,11 @@
 ---
-title: Pagina- en koppelingenbeheer met Adobe Analytics
-seo-title: Koppeling bijhouden naar Adobe Analytics met Adobe Experience Platform Web SDK
-description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met het Web SDK van het Experience Platform te verzenden
-seo-description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met het Web SDK van het Experience Platform te verzenden
-keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
+title: Gegevens verzenden naar Adobe Analytics via de Adobe Experience Platform Web SDK
+description: Leer hoe u gegevens naar Adobe Analytics verzendt met de Adobe Experience Platform Web SDK.
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;webInteraction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: c9d777f4350f0b039608c4f9b01d5206994e2572
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -19,7 +17,7 @@ Terwijl er in het verleden verschillende functies waren om tussen een paginameni
 
 ## Een paginaweergave verzenden
 
-U kunt een paginaweergave opgeven door de `web.webPageDetails.pageViews.value=1` variabele in te stellen.
+U kunt een paginaweergave opgeven door de variabele `web.webPageDetails.pageViews.value=1` in te stellen.
 
 ```javascript
 alloy("sendEvent", {
