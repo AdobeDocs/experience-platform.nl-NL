@@ -1,19 +1,17 @@
 ---
-title: Edge-configuratie
-seo-title: De configuratie van de rand voor het Web SDK van het Experience Platform
+title: Creeer een Configuratie van de Rand voor het Web SDK van het Experience Platform
 description: 'Leer hoe te om het Netwerk van de Rand van het Experience Platform te vormen. '
-seo-description: 'Leer hoe te om het Netwerk van de Rand van het Experience Platform te vormen. '
-keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
+keywords: configuratie;edge;edge-configuratie-id;Environment Settings;edgeConfigId;identity;id sync ingeschakeld;ID Sync Container-id;Sandbox;Streaming Inlet;Event-gegevensset;target;client-code;Property Token;Target;Cookie-doelen;url-doelen;Analytics Settings Blockreport-suite-id;
 translation-type: tm+mt
-source-git-commit: 94b3faf3157f4e1f4e46b6055914a04883dc44fa
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '916'
 ht-degree: 0%
 
 ---
 
 
-# De rand configureren
+# Een randconfiguratie maken
 
 De configuratie voor Adobe Experience Platform Web SDK is verdeeld over twee plaatsen. [configure bevel](configuring-the-sdk.md) in SDK controleert dingen die op de cliënt, zoals `edgeDomain` moeten worden behandeld. De randconfiguratie behandelt alle andere configuratie voor SDK. Wanneer een verzoek naar het Adobe Experience Platform Edge Network wordt verzonden, wordt `edgeConfigId` gebruikt om naar de configuratie aan de serverzijde te verwijzen. Hierdoor kunt u de configuratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
 
