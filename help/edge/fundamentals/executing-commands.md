@@ -1,13 +1,11 @@
 ---
-title: Opdrachten uitvoeren
-seo-title: Opdrachten van Adobe Experience Platform Web SDK uitvoeren
+title: Opdrachten voor Adobe Experience Platform Web SDK uitvoeren
 description: Leer hoe te om de bevelen van SDK van het Web van het Experience Platform uit te voeren
-seo-description: Leer hoe te om de bevelen van SDK van het Web van het Experience Platform uit te voeren
-keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
+keywords: Voer bevelen uit;commandName;Promises;getLibraryInfo;response voorwerpen;toestemming;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
@@ -23,15 +21,15 @@ Opdrachten worden uitgevoerd met de volgende syntaxis.
 alloy("commandName", options);
 ```
 
-Het `commandName` vertelt de SDK wat te doen, terwijl `options` zijn de parameters en de gegevens u in een bevel wilt overgaan. Omdat de beschikbare opties van het bevel afhangen, gelieve de documentatie voor meer details over elk bevel te raadplegen.
+`commandName` vertelt SDK wat te doen, terwijl `options` de parameters en de gegevens zijn u in een bevel zou willen overgaan. Omdat de beschikbare opties van het bevel afhangen, gelieve de documentatie voor meer details over elk bevel te raadplegen.
 
 ## Een nota over beloften
 
-[Beloften](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) zijn van fundamenteel belang voor de manier waarop de SDK communiceert met de code op uw webpagina. Een promise is een algemene programmeerstructuur en is niet specifiek voor deze SDK of zelfs JavaScript. Een belofte doet dienst als volmacht voor een waarde die niet gekend is wanneer de belofte wordt gecreeerd. Zodra de waarde gekend is, wordt de belofte &quot;opgelost&quot;met de waarde. De functies van de manager kunnen met een belofte worden geassocieerd, zodat u kunt worden op de hoogte gebracht wanneer de belofte is opgelost of wanneer een fout in het proces is voorgekomen om de belofte op te lossen. Lees voor meer informatie over beloften [deze zelfstudie](https://javascript.info/promise-basics) of een van de andere bronnen op het web.
+[](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) Beloften zijn van fundamenteel belang voor de manier waarop de SDK communiceert met de code op uw webpagina. Een promise is een algemene programmeerstructuur en is niet specifiek voor deze SDK of zelfs JavaScript. Een belofte doet dienst als volmacht voor een waarde die niet gekend is wanneer de belofte wordt gecreeerd. Zodra de waarde gekend is, wordt de belofte &quot;opgelost&quot;met de waarde. De functies van de manager kunnen met een belofte worden geassocieerd, zodat u kunt worden op de hoogte gebracht wanneer de belofte is opgelost of wanneer een fout in het proces is voorgekomen om de belofte op te lossen. Lees [deze zelfstudie](https://javascript.info/promise-basics) of een van de andere bronnen op het web voor meer informatie over beloften.
 
 ## Voltooien of mislukken {#handling-success-or-failure}
 
-Elke keer dat een opdracht wordt uitgevoerd, wordt een belofte geretourneerd. De belofte vertegenwoordigt de uiteindelijke voltooiing van het bevel. In het onderstaande voorbeeld kunt u methoden gebruiken `then` en `catch` gebruiken om te bepalen wanneer de opdracht is geslaagd of mislukt.
+Elke keer dat een opdracht wordt uitgevoerd, wordt een belofte geretourneerd. De belofte vertegenwoordigt de uiteindelijke voltooiing van het bevel. In het onderstaande voorbeeld kunt u de methoden `then` en `catch` gebruiken om te bepalen wanneer de opdracht is uitgevoerd of mislukt.
 
 ```javascript
 alloy("commandName", options)
@@ -45,7 +43,7 @@ alloy("commandName", options)
   });
 ```
 
-Als het weten wanneer het bevel slaagt niet belangrijk voor u is, kunt u de `then` vraag verwijderen.
+Als het weten wanneer het bevel slaagt niet belangrijk voor u is, kunt u `then` vraag verwijderen.
 
 ```javascript
 alloy("commandName", options)
@@ -55,7 +53,7 @@ alloy("commandName", options)
   });
 ```
 
-Eveneens, als het weten wanneer het bevel niet belangrijk voor u is, kunt u de `catch` vraag verwijderen.
+Eveneens, als het weten wanneer het bevel niet belangrijk voor u is, kunt u `catch` vraag verwijderen.
 
 ```javascript
 alloy("commandName", options)
@@ -67,7 +65,7 @@ alloy("commandName", options)
 
 ### Responsobjecten
 
-Alle beloftes die door opdrachten worden geretourneerd, worden opgelost met een `result` object. Het resultaatobject bevat gegevens die afhankelijk zijn van de opdracht en de toestemming van de gebruiker. Bibliotheekinfo wordt bijvoorbeeld doorgegeven als een eigenschap van het resultaatobject in de volgende opdracht.
+Alle beloftes die door opdrachten worden geretourneerd, worden opgelost met een `result`-object. Het resultaatobject bevat gegevens die afhankelijk zijn van de opdracht en de toestemming van de gebruiker. Bibliotheekinfo wordt bijvoorbeeld doorgegeven als een eigenschap van het resultaatobject in de volgende opdracht.
 
 ```js
 alloy("getLibraryInfo")
