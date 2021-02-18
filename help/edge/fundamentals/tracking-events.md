@@ -1,13 +1,11 @@
 ---
-title: Gebeurtenissen bijhouden
-seo-title: Gebeurtenissen van Adobe Experience Platform Web SDK bijhouden
-description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience Platforms te volgen
-seo-description: Leer hoe te om de gebeurtenissen van SDK van het Web van Experience Platforms te volgen
+title: Gebeurtenissen bijhouden met de SDK van Adobe Experience Platform Web
+seo-description: Leer hoe u Adobe Experience Platform Web SDK-gebeurtenissen kunt bijhouden.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 # Gebeurtenissen bijhouden
 
-Als u gebeurtenisgegevens naar Adobe Experience Cloud wilt verzenden, gebruikt u de `sendEvent` opdracht. Het `sendEvent` bevel is de primaire manier om gegevens naar [!DNL Experience Cloud]te verzenden, en gepersonaliseerde inhoud, identiteiten, en publieksbestemmingen terug te winnen.
+Als u gebeurtenisgegevens naar Adobe Experience Cloud wilt verzenden, gebruikt u de opdracht `sendEvent`. Het `sendEvent` bevel is de primaire manier om gegevens naar [!DNL Experience Cloud] te verzenden, en gepersonaliseerde inhoud, identiteiten, en publieksbestemmingen terug te winnen.
 
 Gegevens die naar Adobe Experience Cloud worden verzonden, vallen in twee categorieën:
 
@@ -44,7 +42,7 @@ alloy("sendEvent", {
 });
 ```
 
-Enige tijd kan tussen overgaan wanneer het `sendEvent` bevel wordt uitgevoerd en wanneer het gegeven wordt verzonden naar de server (bijvoorbeeld, als de bibliotheek van SDK van het Web niet volledig heeft geladen of de toestemming nog niet is ontvangen). Als u een deel van het `xdm` object wilt wijzigen nadat u de `sendEvent` opdracht hebt uitgevoerd, wordt u ten zeerste aangeraden het `xdm` object te klonen _voordat_ u de `sendEvent` opdracht uitvoert. Bijvoorbeeld:
+Er kan enige tijd verstrijken tussen het moment waarop de opdracht `sendEvent` wordt uitgevoerd en het moment waarop de gegevens naar de server worden verzonden (bijvoorbeeld als de SDK-bibliotheek van het Web nog niet volledig is geladen of de toestemming nog niet is ontvangen). Als u een deel van het `xdm`-object wilt wijzigen nadat u de opdracht `sendEvent` hebt uitgevoerd, wordt u ten zeerste aangeraden het `xdm`-object _te klonen voordat_ de opdracht `sendEvent` uitvoert. Bijvoorbeeld:
 
 ```javascript
 var clone = function(value) {
@@ -71,7 +69,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-In dit voorbeeld wordt de gegevenslaag gekloond door het in series te vervaardigen aan JSON, dan het deserializing van het. Vervolgens wordt het gekloonde resultaat doorgegeven aan de `sendEvent` opdracht. Dit zorgt ervoor dat het `sendEvent` bevel een momentopname van de gegevenslaag heeft zoals het bestond toen het `sendEvent` bevel werd uitgevoerd zodat de recentere wijzigingen in het originele voorwerp van de gegevenslaag niet in de gegevens zullen worden weerspiegeld die naar de server worden verzonden. Als u een gebeurtenisgestuurde gegevenslaag gebruikt, wordt het klonen van uw gegevens waarschijnlijk al automatisch verwerkt. Bijvoorbeeld, als u de Laag [van Gegevens van de Cliënt van](https://github.com/adobe/adobe-client-data-layer/wiki)Adobe gebruikt, verstrekt de `getState()` methode een gegevens verwerkte, gekloonde momentopname van alle vroegere veranderingen. Dit wordt ook automatisch voor u behandeld als u de uitbreiding van de Lancering van SDK van het Web AEP gebruikt.
+In dit voorbeeld wordt de gegevenslaag gekloond door het in series te vervaardigen aan JSON, dan het deserializing van het. Vervolgens wordt het gekloonde resultaat doorgegeven aan de opdracht `sendEvent`. Dit zorgt ervoor dat de opdracht `sendEvent` een momentopname van de gegevenslaag heeft zoals deze bestond toen de opdracht `sendEvent` werd uitgevoerd, zodat latere wijzigingen in het oorspronkelijke object van de gegevenslaag niet worden weerspiegeld in de gegevens die naar de server worden verzonden. Als u een gebeurtenisgestuurde gegevenslaag gebruikt, wordt het klonen van uw gegevens waarschijnlijk al automatisch verwerkt. Als u bijvoorbeeld de [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki) gebruikt, biedt de methode `getState()` een berekende, gekloonde momentopname van alle eerdere wijzigingen. Dit wordt ook automatisch voor u behandeld als u de uitbreiding van de Lancering van SDK van het Web AEP gebruikt.
 
 >[!NOTE]
 >
@@ -83,7 +81,7 @@ Het verzenden van gegevens die niet overeenkomen met een XDM-schema wordt moment
 
 ### Instelling `eventType`
 
-In een XDM-ervaringsgebeurtenis is er een optioneel `eventType` veld. Dit houdt het primaire gebeurtenistype voor het verslag. Door een gebeurtenistype in te stellen kunt u onderscheid maken tussen de verschillende gebeurtenissen die u wilt verzenden. XDM biedt verschillende vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken of u maakt altijd uw eigen aangepaste gebeurtenistypen voor uw gebruiksgevallen. Hieronder vindt u een lijst met alle vooraf gedefinieerde gebeurtenistypen die door XDM worden geleverd. [Lees meer in het openbare XDM-rapport](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
+In een XDM ervaringsgebeurtenis, is er een facultatief `eventType` gebied. Dit houdt het primaire gebeurtenistype voor het verslag. Door een gebeurtenistype in te stellen kunt u onderscheid maken tussen de verschillende gebeurtenissen die u wilt verzenden. XDM biedt verschillende vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken of u maakt altijd uw eigen aangepaste gebeurtenistypen voor uw gebruiksgevallen. Hieronder vindt u een lijst met alle vooraf gedefinieerde gebeurtenistypen die door XDM worden geleverd. [Lees meer in het openbare XDM-rapport](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
 
 
 | **Type gebeurtenis:** | **Definitie:** |
@@ -112,7 +110,7 @@ In een XDM-ervaringsgebeurtenis is er een optioneel `eventType` veld. Dit houdt 
 | delivery.feedback | Feedbackgebeurtenissen voor een levering. Voorbeeld van feedbackgebeurtenissen voor een e-maillevering |
 
 
-Deze gebeurtenistypen worden weergegeven in een vervolgkeuzelijst als u de Adobe Experience Platform Launch-extensie gebruikt of u kunt ze altijd zonder Experience Platform Launch doorgeven. U kunt ze doorgeven als onderdeel van de `xdm` optie.
+Deze gebeurtenistypen worden weergegeven in een vervolgkeuzelijst als u de Adobe Experience Platform Launch-extensie gebruikt of u kunt ze altijd zonder Experience Platform Launch doorgeven. Ze kunnen worden doorgegeven als onderdeel van de optie `xdm`.
 
 
 ```javascript
@@ -131,7 +129,7 @@ alloy("sendEvent", {
 });
 ```
 
-U kunt de opdracht ook aan de gebeurtenisopdracht `eventType` doorgeven met de `type` optie. Achter de scènes wordt dit toegevoegd aan de XDM-gegevens. Als u de optie `type` als een optie hebt, kunt u de XDM-lading eenvoudiger instellen `eventType` zonder dat u de XDM-lading hoeft te wijzigen.
+U kunt ook `eventType` in de gebeurtenisopdracht doorgeven met de optie `type`. Achter de scènes wordt dit toegevoegd aan de XDM-gegevens. Als u `type` als optie hebt, kunt u `eventType` eenvoudiger instellen zonder dat u de XDM-lading hoeft te wijzigen.
 
 
 ```javascript
@@ -145,7 +143,7 @@ alloy("sendEvent", {
 
 ### De gegevensset-id overschrijven
 
-In sommige gebruiksgevallen, zou u een gebeurtenis naar een dataset buiten kunnen willen verzenden die in de Configuratie UI wordt gevormd. Hiervoor moet u de `datasetId` optie voor de `sendEvent` opdracht instellen:
+In sommige gebruiksgevallen, zou u een gebeurtenis naar een dataset buiten kunnen willen verzenden die in de Configuratie UI wordt gevormd. Hiervoor moet u de optie `datasetId` op het `sendEvent` bevel plaatsen:
 
 
 ```javascript
@@ -160,11 +158,11 @@ alloy("sendEvent", {
 
 ### Identiteitsgegevens toevoegen
 
-U kunt ook aangepaste identiteitsgegevens toevoegen aan de gebeurtenis. Zie Experience Cloud-id [ophalen](../identity/overview.md).
+U kunt ook aangepaste identiteitsgegevens toevoegen aan de gebeurtenis. Zie [Experience Cloud-id ophalen](../identity/overview.md).
 
 ## De sendBeacon-API gebruiken
 
-Het kan lastig zijn om gebeurtenisgegevens te verzenden vlak voordat de gebruiker van de webpagina weg is genavigeerd. Als de aanvraag te lang duurt, kan de browser de aanvraag annuleren. Sommige browsers hebben een webstandaard-API geïmplementeerd, die wordt aangeroepen `sendBeacon` om gegevens tijdens deze periode gemakkelijker te kunnen verzamelen. Wanneer `sendBeacon`de browser wordt gebruikt, wordt de webaanvraag uitgevoerd in de algemene browsercontext. Dit betekent browser maakt het bakenverzoek op de achtergrond en houdt niet de paginanavigatie op. Als u Adobe Experience Platform wilt vertellen [!DNL Web SDK] dat het moet worden gebruikt, voegt u de optie toe `sendBeacon``"documentUnloading": true` aan de gebeurtenisopdracht.  Hier volgt een voorbeeld:
+Het kan lastig zijn om gebeurtenisgegevens te verzenden vlak voordat de gebruiker van de webpagina weg is genavigeerd. Als de aanvraag te lang duurt, kan de browser de aanvraag annuleren. Sommige browsers hebben een webstandaard-API met de naam `sendBeacon` geïmplementeerd, zodat gegevens tijdens deze periode eenvoudiger kunnen worden verzameld. Wanneer u `sendBeacon` gebruikt, doet de browser het webverzoek in de algemene browsercontext. Dit betekent browser maakt het bakenverzoek op de achtergrond en houdt niet de paginanavigatie op. Als u wilt dat Adobe Experience Platform [!DNL Web SDK] `sendBeacon` gebruikt, voegt u de optie `"documentUnloading": true` toe aan de gebeurtenisopdracht.  Hier volgt een voorbeeld:
 
 
 ```javascript
@@ -183,7 +181,7 @@ alloy("sendEvent", {
 });
 ```
 
-Browsers hebben limieten ingesteld voor de hoeveelheid gegevens die `sendBeacon` tegelijk kan worden verzonden. In veel browsers is de limiet 64 kB. Als de browser de gebeurtenis afwijst omdat de lading te groot is, [!DNL Web SDK] valt Adobe Experience Platform terug naar het gebruiken van zijn normale vervoermethode (bijvoorbeeld, halen).
+Browsers hebben limieten ingesteld voor de hoeveelheid gegevens die tegelijk met `sendBeacon` kan worden verzonden. In veel browsers is de limiet 64 kB. Als de browser de gebeurtenis afwijst omdat de lading te groot is, valt Adobe Experience Platform [!DNL Web SDK] terug naar het gebruiken van zijn normale vervoermethode (bijvoorbeeld, halen).
 
 ## Reacties van gebeurtenissen afhandelen
 
@@ -211,9 +209,9 @@ alloy("sendEvent", {
   });
 ```
 
-## Gebeurtenissen globaal wijzigen {#modifying-events-globally}
+## Globaal wijzigen van gebeurtenissen {#modifying-events-globally}
 
-Als u velden wilt toevoegen aan, verwijderen uit of wijzigen uit de gebeurtenis, kunt u een `onBeforeEventSend` callback configureren.  Deze callback wordt geroepen telkens als een gebeurtenis wordt verzonden.  Deze callback wordt doorgegeven in een gebeurtenisobject met een `xdm` veld.  Wijzigen `event.xdm` om de gegevens te wijzigen die in de gebeurtenis worden verzonden.
+Als u, velden van de gebeurtenis globaal wilt toevoegen verwijderen of wijzigen, kunt u een `onBeforeEventSend` callback vormen.  Deze callback wordt geroepen telkens als een gebeurtenis wordt verzonden.  Deze callback wordt doorgegeven in een gebeurtenisobject met een veld `xdm`.  Wijzig `event.xdm` om de gegevens te wijzigen die in de gebeurtenis worden verzonden.
 
 
 ```javascript
@@ -233,11 +231,11 @@ alloy("configure", {
 
 `xdm` velden worden in deze volgorde ingesteld:
 
-1. Waarden die als opties worden doorgegeven aan de gebeurtenisopdracht `alloy("sendEvent", { xdm: ... });`
+1. Als opties doorgegeven waarden aan de gebeurtenisopdracht `alloy("sendEvent", { xdm: ... });`
 2. Automatisch verzamelde waarden.  (Zie [Automatische informatie](../data-collection/automatic-information.md).)
-3. De wijzigingen die zijn aangebracht in de `onBeforeEventSend` callback.
+3. De veranderingen die in `onBeforeEventSend` callback worden aangebracht.
 
-Als callback een uitzondering werpt, wordt de gebeurtenis nog verzonden; `onBeforeEventSend` echter, worden geen van de veranderingen die binnen callback werden aangebracht toegepast op de definitieve gebeurtenis.
+Als de `onBeforeEventSend` callback een uitzondering werpt, wordt de gebeurtenis nog verzonden; echter, worden geen van de veranderingen die binnen callback werden aangebracht toegepast op de definitieve gebeurtenis.
 
 ## Mogelijke uitvoerbare fouten
 
