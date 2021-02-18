@@ -1,12 +1,10 @@
 ---
-title: Veelgestelde vragen over de SDK van Web
-seo-title: Veelgestelde vragen over Adobe Experience Platform Web SDK
-description: Veelgestelde vragen over Adobe Experience Platform Web SDK
-seo-description: Veelgestelde vragen over Adobe Experience Platform Web SDK
+title: Veelgestelde vragen over Adobe Experience Platform Web SDK
+description: Hiermee krijgt u antwoorden op veelgestelde vragen over de Adobe Experience Platform Web SDK.
 translation-type: tm+mt
-source-git-commit: f4f0b00dfd324f69aa2b4348740f6e767e86a6de
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1804'
 ht-degree: 1%
 
 ---
@@ -14,7 +12,7 @@ ht-degree: 1%
 
 # Veelgestelde vragen
 
-Deze veelgestelde vragen bevatten vragen die vaak worden gesteld over de Adobe Web SDK.
+Deze handleiding geeft antwoorden op vragen die vaak worden gesteld over de SDK van Adobe Experience Platform Web.
 
 ## Wat is Adobe Experience Platform Web SDK?
 
@@ -95,7 +93,7 @@ Adobe Experience Platform Web SDK is ontwikkeld voor de volgende personen:
 
    Als u gegevens rechtstreeks van een apparaat naar Adobe Experience Platform moet verzenden, is dit de officieel aanbevolen manier.
 
-   Adobe is zich ervan bewust dat het gebruik van de Adobe Analytics-aansluiting sneller is als de klant al over Adobe Analytics beschikt, maar het is niet de langetermijnstrategie voor gegevensverzameling.
+   Adobe is zich ervan bewust dat het gebruik van de Adobe Analytics-aansluiting sneller is als de klant al over Adobe Analytics beschikt, maar dit is niet de langetermijnstrategie voor gegevensverzameling.
 
 * Klanten met Adobe Experience Cloud-oplossingen
 
