@@ -1,16 +1,16 @@
 ---
-title: Platform Web SDK Extension Data Element Types
-description: Adobe Experience Platform Web SDK Extension Data Element Types in Adobe Experience Platform Launch
+title: Typen gegevenselementen in de Adobe Experience Platform Web SDK-extensie
+description: Leer over de verschillende types van gegevenselement die door de uitbreiding van SDK van het Web van Adobe Experience Platform in Adobe Experience Platform Launch worden verstrekt.
 translation-type: tm+mt
-source-git-commit: 473cc1f7617f1d65cdb70ff0e758178ea0174f00
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
 
 
-# Typen gegevenselementen
+# Gegevenstelelementtypen
 
 Nadat u uw [actietypes](action-types.md) in [de uitbreiding van SDK van het Web van Adobe Experience Platform ](web-sdk-extension.md) voor [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html) plaatst, vorm uw types van gegevenselement.
 
