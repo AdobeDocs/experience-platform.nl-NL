@@ -1,19 +1,17 @@
 ---
-title: Vereisten voor het gebruik van Adobe Experience Platform Web SDK
-seo-title: Vereisten voor het gebruik van Adobe Experience Platform Web SDK
-description: Vereisten voor het gebruik van Adobe Experience Platform Web SDK
-seo-description: Vereisten voor het gebruik van Adobe Experience Platform Web SDK
+title: Vereisten voor het Gebruiken van het Web SDK van Adobe Experience Platform
+description: Leer over de eerste vereisten voor het gebruiken van SDK van het Web van Adobe Experience Platform.
 keywords: 1st-partijdomein;CNAME;schema;creeer schema;lancering;aep Web sdk uitbreiding;uitbreiding;configuratie identiteitskaart;configuratiehulpmiddel;gegevenselement;creeer gegevenselement;XDM Voorwerp;sendEvent;send Gebeurtenis;
 translation-type: tm+mt
-source-git-commit: a19b4384e2ea64eb9ab5f0f5443fd329ec44a2a0
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
 
 
-# Vereisten voor het gebruik van Adobe Experience Platform Web SDK
+# Vereisten voor het gebruik van de Adobe Experience Platform Web SDK
 
 Om SDK van het Web van het Platform te gebruiken, moet u eerst:
 
