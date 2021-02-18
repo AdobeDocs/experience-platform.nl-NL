@@ -1,11 +1,9 @@
 ---
-title: Koppeling bijhouden met Adobe Analytics
-seo-title: Koppeling bijhouden naar Adobe Analytics met Adobe Experience Platform Web SDK
+title: Koppelingen bijhouden met de Adobe Experience Platform Web SDK
 description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met het Web SDK van het Experience Platform te verzenden
-seo-description: Leer hoe te om Gegevens van de Verbinding naar Adobe Analytics met het Web SDK van het Experience Platform te verzenden
-keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;webInteraction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 # Koppelingen bijhouden
 
-Koppelingen kunnen handmatig worden ingesteld of [automatisch](#automaticLinkTracking)worden bijgehouden. Handmatig bijhouden wordt uitgevoerd door de details onder het `web.webInteraction` gedeelte van het schema toe te voegen. Er zijn drie vereiste variabelen:
+Koppelingen kunnen handmatig worden ingesteld of automatisch worden bijgehouden [a1/>. ](#automaticLinkTracking) Handmatig bijhouden wordt uitgevoerd door de details onder het gedeelte `web.webInteraction` van het schema toe te voegen. Er zijn drie vereiste variabelen:
 
 * `web.webInteraction.name`
 * `web.webInteraction.type`
@@ -42,13 +40,13 @@ Het verbindingstype kan één van drie waarden zijn:
 
 * **`other`:** Een aangepaste koppeling
 * **`download`:** Een downloadkoppeling
-* **`exit`:** Een exit-koppeling
+* **`exit`:** Een afsluitkoppeling
 
 ## Automatisch koppelingen bijhouden {#automaticLinkTracking}
 
-Standaard wordt in de SDK van het web geklikt op kwalificeerde koppelingstags, worden de labels en records vastgelegd. Klikken worden vastgelegd met een [vastleggen](https://www.w3.org/TR/uievents/#capture-phase) , klik op de gebeurtenislistener die aan het document is gekoppeld.
+Standaard wordt in de SDK van het web geklikt op kwalificeerde koppelingstags, worden de labels en records vastgelegd. Klikken worden vastgelegd met een [capture](https://www.w3.org/TR/uievents/#capture-phase)-klikgebeurtenislistener die aan het document is gekoppeld.
 
-De automatische verbinding het volgen kan worden onbruikbaar gemaakt door SDK van het Web te [vormen](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) .
+De automatische verbinding het volgen kan door [het vormen ](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) SDK van het Web worden onbruikbaar gemaakt.
 
 ```javascript
 clickCollectionEnabled: false
@@ -56,16 +54,16 @@ clickCollectionEnabled: false
 
 ### Welke markeringen kwalificeren voor verbinding-volgen?{#qualifyingLinks}
 
-Het automatisch bijhouden van koppelingen wordt uitgevoerd voor ankerlabels `A` en `AREA` codes. Nochtans, worden deze markeringen niet overwogen voor verbinding het volgen als zij een verbonden `onclick` manager hebben.
+De automatische verbinding het volgen wordt gedaan voor ankermarkeringen `A` en `AREA`. Nochtans, worden deze markeringen niet overwogen voor verbinding het volgen als zij `onclick` manager in bijlage hebben.
 
 ### Hoe worden koppelingen gelabeld?{#labelingLinks}
 
-Koppelingen worden gelabeld als een downloadkoppeling als de ankertag een downloadkenmerk bevat of als de koppeling eindigt met een populaire bestandsextensie. De downloadkoppelingskwalificatie kan met een regelmatige uitdrukking worden [gevormd](../fundamentals/configuring-the-sdk.md) :
+Koppelingen worden gelabeld als een downloadkoppeling als de ankertag een downloadkenmerk bevat of als de koppeling eindigt met een populaire bestandsextensie. De downloadkoppelingskwalificatie kan [gevormd ](../fundamentals/configuring-the-sdk.md) met een regelmatige uitdrukking zijn:
 
 ```javascript
 downloadLinkQualifier: "\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"
 ```
 
-De verbindingen worden geëtiketteerd als uitgangsverbinding als het domein van het verbindingsdoel van het huidige `window.location.hostname`.
+De verbindingen worden geëtiketteerd als uitgangsverbinding als het domein van het verbindingsdoel van huidige `window.location.hostname` verschilt.
 
 Koppelingen die niet als download- of afsluitkoppeling worden gekwalificeerd, worden aangeduid als &quot;other&quot;.
