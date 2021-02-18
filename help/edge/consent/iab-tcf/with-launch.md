@@ -1,42 +1,40 @@
 ---
-title: IAB TCF 2.0 gebruiken met Experience Platform Launch
-seo-title: IAB TCF 2.0-toestemming instellen met Adobe Experience Platform Launch en Adobe Experience Platform Web SDK
-description: Leer hoe u IAB TCF 2.0-toestemming instelt voor Adobe Experience Platform Launch en Adobe Experience Platform Web SDK
-seo-description: Leer hoe u IAB TCF 2.0-toestemming instelt voor Adobe Experience Platform Launch en Adobe Experience Platform Web SDK
+title: Integreer de Steun van IAB TCF 2.0 gebruikend de Lancering van het Platform en de Uitbreiding van SDK van het Web van het Platform
+description: Leer hoe u IAB TCF 2.0 instelt voor toestemming met Adobe Experience Platform Launch en de Adobe Experience Platform Web SDK-extensie.
 translation-type: tm+mt
-source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
 
 
-# Het gebruiken van IAB TCF 2.0 met Experience Platform Launch en de uitbreiding van SDK van het Web AEP
+# Integreer IAB TCF 2.0 steun gebruikend de Lancering van het Platform en de uitbreiding van SDK van het Web van het Platform
 
 Adobe Experience Platform Web SDK ondersteunt het Interactive Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0). Deze gids toont u hoe te opstelling een bezit van Adobe Experience Platform Launch voor het verzenden van IAB TCF 2.0 toestemmingsinformatie aan Adobe gebruikend de uitbreiding van SDK van het Web AEP voor Experience Platform Launch.
 
-Als u geen Experience Platform Launch wilt gebruiken, raadpleeg dan de handleiding over het [gebruik van IAB TCF 2.0 zonder Experience Platform Launch](./without-launch.md).
+Als u Experience Platform Launch niet wenst te gebruiken, te verwijzen gelieve naar de gids op [gebruikend IAB TCF 2.0 zonder Experience Platform Launch](./without-launch.md).
 
 ## Aan de slag
 
 Om IAB TCF 2.0 met Experience Platform Launch en de uitbreiding van SDK van het Web te gebruiken AEP, moet u een beschikbaar schema XDM en dataset hebben.
 
-Bovendien vereist deze handleiding dat u een goed begrip hebt van de SDK van Adobe Experience Platform Web. Lees voor een snelle vernieuwing het overzicht [van de SDK van het](../../home.md) Adobe Experience Platform-web en de documentatie met [veelgestelde vragen](../../web-sdk-faq.md) .
+Bovendien vereist deze handleiding dat u een goed begrip hebt van de SDK van Adobe Experience Platform Web. Lees voor een snelle vernieuwing de [Adobe Experience Platform Web SDK overview](../../home.md) en de [Veelgestelde vragen](../../web-sdk-faq.md) documentatie.
 
 ## Standaardtoestemming instellen
 
-Binnen de uitbreidingsconfiguratie, is er een het plaatsen voor standaardtoestemming. Dit beheerst het gedrag van klanten die geen toestemmingskoekje hebben. Als u de Gebeurtenissen van de Ervaring voor klanten wilt een rij vormen die geen toestemmingskoekje hebben, plaats dit aan `pending`.
+Binnen de uitbreidingsconfiguratie, is er een het plaatsen voor standaardtoestemming. Dit beheerst het gedrag van klanten die geen toestemmingskoekje hebben. Als u Experience Events wilt bewaren voor klanten die geen toestemmingskoekje hebben, plaats dit aan `pending`.
 
 >[!NOTE]
 >
 >Momenteel is het niet mogelijk dit dynamisch in te stellen via de extensie Experience Platform Launch.
 
-Raadpleeg de sectie [over](../../fundamentals/configuring-the-sdk.md#default-consent) standaardtoestemming in de documentatie bij de SDK-configuratie voor meer informatie over standaardtoestemming.
+Raadpleeg voor meer informatie over de standaardtoestemming de sectie [standaardtoestemming](../../fundamentals/configuring-the-sdk.md#default-consent) in de SDK-configuratiedocumentatie.
 
 ## Profiel bijwerken met toestemmingsinformatie {#consent-code-1}
 
-Om de `setConsent` actie te roepen wanneer uw klanten toestemmingsvoorkeur zijn veranderd, moet u een nieuwe Experience Platform Launch regel tot stand brengen. Begin door een nieuwe gebeurtenis toe te voegen en kies het de gebeurtenistype van de &quot;Code van de Douane&quot;van de uitbreiding van de Kern.
+Als u de handeling `setConsent` wilt aanroepen wanneer uw klanten hun voorkeuren hebben gewijzigd, moet u een nieuwe regel voor Experience Platforms Launch maken. Begin door een nieuwe gebeurtenis toe te voegen en kies het de gebeurtenistype van de &quot;Code van de Douane&quot;van de uitbreiding van de Kern.
 
 Gebruik het volgende codevoorbeeld voor uw nieuwe gebeurtenis:
 
@@ -62,7 +60,7 @@ addEventListener();
 
 Deze aangepaste code doet twee dingen:
 
-* Stelt twee gegevenselementen in, één met de toestemmingstekenreeks en één met de `gdprApplies` markering. Dit is handig als u de handeling &quot;Instemming instellen&quot; later invult.
+* Stelt twee gegevenselementen in, één met de toestemmingstekenreeks en één met de markering `gdprApplies`. Dit is handig als u de handeling &quot;Instemming instellen&quot; later invult.
 
 * De regel wordt geactiveerd wanneer de voorkeuren voor toestemming zijn gewijzigd. De actie &quot;Goedkeuring instellen&quot; moet worden gebruikt wanneer de voorkeuren voor toestemming zijn gewijzigd. Voeg de actie &quot;Goedkeuring instellen&quot; toe aan de extensie en vul het formulier als volgt in:
 
@@ -79,16 +77,16 @@ Deze aangepaste code doet twee dingen:
 
 ## Een XDM-gegevenselement maken voor Experience Events
 
-De toestemmingskoord zou in de Gebeurtenis van de Ervaring moeten worden omvat XDM. Hiervoor gebruikt u het gegevenselement XDM Object. Begin door een nieuw gegevenselement van Objecten te creëren XDM, of anders, gebruik reeds voor het verzenden van gebeurtenissen gecreeerd. Als u de mix Experience Event Privacy aan uw schema hebt toegevoegd, moet u een `consentStrings` sleutel in het XDM-object hebben.
+De toestemmingskoord zou in de Gebeurtenis van de Ervaring moeten worden omvat XDM. Hiervoor gebruikt u het gegevenselement XDM Object. Begin door een nieuw gegevenselement van Objecten te creëren XDM, of anders, gebruik reeds voor het verzenden van gebeurtenissen gecreeerd. Als u de mix van de Privacy van de Gebeurtenis van de Ervaring aan uw schema hebt toegevoegd, zou u een `consentStrings` sleutel in het voorwerp XDM moeten hebben.
 
 1. Selecteer **[!UICONTROL permissionStrings]**.
 
-1. Kies **[!UICONTROL Afzonderlijke items]** opgeven en selecteer Item **** toevoegen.
+1. Kies **[!UICONTROL Afzonderlijke items opgeven]** en **[!UICONTROL Item toevoegen]** selecteren.
 
-1. Vouw de kop **[!UICONTROL permissionString]** uit, vouw het eerste item uit en vul vervolgens de volgende waarden in:
+1. Breid **[!UICONTROL permissionString]** rubriek uit, en breid het eerste punt uit, dan vul de volgende waarden in:
 
 * `consentStandard`: IAB TCF
-* `consentStandardVersion`: 2.0
+* `consentStandardVersion`: 2,0
 * `consentStringValue`: %IAB TCF goedkeuring String%
 * `gdprApplies`: %IAB TCF toestemming GDPR%
 
@@ -130,4 +128,4 @@ Wanneer gebeurtenissen worden geactiveerd na de initiële Experience Event, zijn
 
 ## Volgende stappen
 
-Nu u hebt geleerd hoe te om IAB TCF 2.0 met de uitbreiding van SDK van het Web van AEP te gebruiken, kunt u ook verkiezen om met andere oplossingen van Adobe zoals Adobe Analytics of platform van de Gegevens van de Klant in real time te integreren. Zie het overzicht [van](./overview.md) IAB Transparency &amp; Consent Framework 2.0 voor meer informatie.
+Nu u hebt geleerd hoe te om IAB TCF 2.0 met de uitbreiding van SDK van het Web van AEP te gebruiken, kunt u ook verkiezen om met andere oplossingen van Adobe zoals Adobe Analytics of platform van de Gegevens van de Klant in real time te integreren. Zie [IAB Transparency &amp; Consent Framework 2.0 overzicht](./overview.md) voor meer informatie.
