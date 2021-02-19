@@ -3,9 +3,9 @@ keywords: reclame; de handelsdienst;
 title: De verbinding van de handelsbureau
 description: 'De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en de mobiele voorraad. '
 translation-type: tm+mt
-source-git-commit: ad025630cbae5c220f5bbd7f55cad70620b6f335
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ In de stap [!UICONTROL Authentication] moet u [!DNL The Trade Desk] verbindingsd
    * **[!UICONTROL North America West]**
    * **[!UICONTROL Latijns-Amerika]**
 
-* **[!UICONTROL Geval]** voor gebruik bij het in de handel brengen: Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over gevallen van marketinggebruik. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde gevallen van marketinggebruik.
+* **[!UICONTROL Handeling]** voor marketing: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
 
 ![De Stap van de Authentificatie van het Handelsbureau](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
