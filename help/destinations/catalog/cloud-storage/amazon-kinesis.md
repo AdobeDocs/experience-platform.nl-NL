@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis-bestemming;kinesis
 title: Amazon Kinesis-verbinding
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Voor [!DNL Amazon Kinesis] bestemmingen, ga de volgende informatie in tot bestem
 * **Naam**: Geef een naam op voor uw verbinding met  [!DNL Amazon Kinesis]
 * **Omschrijving**: Geef een beschrijving op voor de verbinding met  [!DNL Amazon Kinesis].
 * **stream**: Geef de naam op van een bestaande gegevensstroom in uw  [!DNL Amazon Kinesis] account. Platform exporteert gegevens naar deze stream.
+* **[!UICONTROL Handelingen]** voor marketing: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
 
 ![Invoervelden in de verificatiestap](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
