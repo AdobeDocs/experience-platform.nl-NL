@@ -1,13 +1,13 @@
 ---
-keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
+keywords: gegevensbeheer rtcdp;rtcdp gegevensbeheer;beheer van realtime klantgegevensprofiel
 title: Overzicht van gegevensbeheer
 seo-title: Gegevensbeheer in Real-time Customer Data Platform
 description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 seo-description: 'Met gegevensbeheer kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. '
 translation-type: tm+mt
-source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
+source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Data Governance] in Real-time CDP
 
-[!DNL Real-time Customer Data Platform] (CDP in real time) brengt gegevens van veelvoudige ondernemingssystemen samen, toestaand marketers om, hun klanten beter te identificeren te begrijpen en in dienst te nemen. Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Daarom is het belangrijk om ervoor te zorgen dat CDP in real time met gebruiksbeleid wanneer het behandelen van uw gegevens compatibel is.
+[!DNL Real-time Customer Data Platform] (CDP in real time) brengt gegevens van veelvoudige ondernemingssystemen samen, die marketers toestaan om, hun klanten beter te identificeren te begrijpen en te betrekken. Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Daarom is het belangrijk om ervoor te zorgen dat CDP in real time met gebruiksbeleid wanneer het behandelen van uw gegevens compatibel is.
 
 Met Adobe Experience Platform [!DNL Data Governance] kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik worden nageleefd. Het speelt een zeer belangrijke rol binnen CDP In real time, toestaand u om gebruiksbeleid te bepalen, uw gegevens te categoriseren die op dat beleid worden gebaseerd, en beleidsschendingen te controleren wanneer het uitvoeren van bepaalde marketing acties.
 
@@ -31,17 +31,17 @@ CDP in real time wordt gebouwd bovenop Adobe Experience Platform, en daarom word
 
 Raadpleeg [de gebruikershandleiding ](../../data-governance/labels/overview.md) voor gegevensgebruikslabels voor meer informatie over het werken met labels voor gegevensgebruik voor Adobe Experience Platform.
 
-## Gebruiksgevallen voor marketingdoeleinden configureren voor doelen {#destinations}
+## Marketing-acties configureren voor doelen {#destinations}
 
-U kunt beperkingen voor het gegevensgebruik op een bestemming instellen door gevallen van marketinggebruik (ook wel marketingacties genoemd) voor die bestemming te definiëren. Een marketinggeval voor een bestemming geeft de intentie aan van de gegevens die naar die bestemming worden geëxporteerd.
+U kunt beperkingen voor het gegevensgebruik op een bestemming instellen door marketingacties (ook wel marketinggebruiksgevallen genoemd) voor die bestemming te definiëren. Een marketingactie voor een doel geeft de intentie aan van de gegevens die naar die bestemming worden geëxporteerd.
 
 >[!NOTE]
 >
 >Zie [Overzicht van beleidsregels voor gegevensgebruik](../../data-governance/policies/overview.md) in de [!DNL Experience Platform]-documentatie voor meer informatie over marketingacties en het gebruik ervan in beleidsregels voor gegevensgebruik.
 
-Het bepalen van marketing gebruiksgevallen op bestemmingen staat u toe om ervoor te zorgen dat om het even welke profielen of segmenten die naar die bestemmingen worden verzonden volgzaam met het beleid van het gegevensgebruik zijn. Daarom zou u aangewezen gevallen van het marketinggebruik aan uw bestemmingen moeten toevoegen die op de behoeften van uw organisatie worden gebaseerd om beleidsbeperkingen op activering af te dwingen.
+Het bepalen van marketing acties op bestemmingen staat u toe om ervoor te zorgen dat om het even welke profielen of segmenten die naar die bestemmingen worden verzonden volgzaam met het beleid van het gegevensgebruik zijn. Daarom zou u aangewezen marketing acties aan uw bestemmingen moeten toevoegen die op de behoeften van uw organisatie worden gebaseerd om beleidsbeperkingen op activering af te dwingen.
 
-Gebruiksscenario&#39;s voor marketingdoeleinden kunnen alleen worden geselecteerd wanneer u een bestemming voor het eerst instelt. Afhankelijk van het type van bestemming u met werkt, zal de kans om de gevallen van het marketinggebruik te vormen op verschillende punten in het opstellingswerkschema verschijnen. Zie [doeldocumentatie](../destinations/overview.md) voor stappen op hoe te om uw bepaalde bestemming te vormen.
+Marketingacties kunnen alleen worden geselecteerd wanneer u een bestemming voor het eerst instelt. Afhankelijk van het type van bestemming u met werkt, zal de kans om marketing acties te vormen op verschillende punten in het opstellingswerkschema verschijnen. Zie [doeldocumentatie](../destinations/overview.md) voor stappen op hoe te om uw bepaalde bestemming te vormen.
 
 ## Beleid voor gegevensgebruik beheren {#policies}
 
