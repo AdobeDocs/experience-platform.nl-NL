@@ -3,9 +3,9 @@ keywords: streaming;
 title: HTTP-verbinding
 description: Met de HTTP-bestemming in Adobe Experience Platform kunt u profielgegevens naar HTTP-eindpunten van derden verzenden.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,7 @@ Voer in de stap [!UICONTROL Verificatie] de verificatiegegevens van de account i
 - **[!UICONTROL Naam]**: Voer een naam in waarmee u deze bestemming in de toekomst wilt herkennen.
 - **[!UICONTROL Omschrijving]**: Voer een beschrijving in die u helpt deze bestemming in de toekomst te identificeren.
 - **[!UICONTROL Aangepaste kopteksten]**: Ga om het even welke douanekopballen in die u in de bestemmingsvraag, volgend dit formaat wilt worden omvat:  `header1:value1,header2:value2,...headerN:valueN`.
+- **[!UICONTROL Handelingen]** voor marketing: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](/help/data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](/help/data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
 
 >[!IMPORTANT]
 >
@@ -65,7 +66,7 @@ Voer in de stap [!UICONTROL Verificatie] de verificatiegegevens van de account i
 
 ![HTTP-verificatie](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL Geval]** voor gebruik bij het in de handel brengen: Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../data-governance/policies/overview.md) voor meer informatie over gevallen van marketinggebruik.
+**[!UICONTROL Handeling]** voor marketing: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../data-governance/policies/overview.md).
 
 Klik **[!UICONTROL Doel maken]**.
 
