@@ -3,9 +3,9 @@ keywords: Google-klantovereenkomst;Google-klantovereenkomst;Google-klantovereenk
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 translation-type: tm+mt
-source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1491'
 ht-degree: 0%
 
 ---
@@ -129,13 +129,13 @@ Nadat uw referenties zijn bevestigd en Adobe Experience Cloud is verbonden met u
 
 Voer in de stap **[!UICONTROL Verificatie]** een [!UICONTROL Naam] en een [!UICONTROL Beschrijving] in voor uw activeringsstroom en vul de [!UICONTROL Account ID] in op Google.
 
-Ook in deze stap, kunt u om het even welke **[!UICONTROL Gebruiksgeval]** selecteren van de Marketing die op deze bestemming zou moeten van toepassing zijn. Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Voor meer informatie over het in de handel brengen van gebruiksgevallen, zie [Het Bestuur van gegevens in Echt - tijd CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) pagina. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md#core-actions) voor informatie over de afzonderlijke door Adobe gedefinieerde gevallen van marketinggebruik.
+Ook in deze stap, kunt u om het even welke **[!UICONTROL Handeling van de Marketing]** selecteren die op deze bestemming zou moeten van toepassing zijn. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [De Governance van Gegevens in Echt - tijd CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) pagina. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md#core-actions) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
 
 Selecteer **[!UICONTROL Doel maken]** nadat u de bovenstaande velden hebt ingevuld.
 
 >[!IMPORTANT]
 >
-> * De **[!UICONTROL combinatie met PII]** het marketing gebruiksgeval wordt door gebrek voor [!DNL Google Customer Match] bestemming geselecteerd en kan niet worden verwijderd.
+> * De marketingactie **[!UICONTROL Combineren met PII]** is standaard geselecteerd voor het doel [!DNL Google Customer Match] en kan niet worden verwijderd.
 > * Voor [!DNL Google Customer Match] doelen. **[!UICONTROL Account-id]** is uw client-id bij Google. De indeling van de id is xxx-xxx-xxxx.
 
 
