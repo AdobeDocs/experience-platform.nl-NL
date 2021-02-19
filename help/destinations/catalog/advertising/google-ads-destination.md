@@ -3,9 +3,9 @@ keywords: Google-advertenties;Google-advertenties;Google AdWords;Google Adwords
 title: Google Ads-verbinding
 description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ In **Opstelling** stap van creeer bestemmingswerkschema, vul [!UICONTROL BasisIn
 * **[!UICONTROL Omschrijving]**: Optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
 * **[!UICONTROL Accounttype]**: De enige beschikbare optie is AdvertentieWoorden.
 * **[!UICONTROL Account-id]**: Vul je account-id in met  [!DNL Google Ads]. De id-indeling heeft doorgaans de notatie 123-456-7890.
-* **[!UICONTROL Geval]** voor gebruik bij het in de handel brengen: Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor meer informatie over gevallen van marketinggebruik.
+* **[!UICONTROL Handeling]** voor marketing: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
 
 ## Segmenten activeren naar [!DNL Google Ads]
 
