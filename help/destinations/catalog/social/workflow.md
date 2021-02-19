@@ -4,9 +4,9 @@ title: Een sociale netwerkbestemming maken
 type: Tutorial
 description: Leer hoe u verbinding maakt met uw sociale netwerk en accounts in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Nadat uw aanmeldingsgegevens zijn bevestigd en Adobe Experience Cloud is aangesl
 
 Voer in de stap **[!UICONTROL Setup]** een [!UICONTROL Naam] en een [!UICONTROL Beschrijving] in voor uw activeringsstroom en vul [!UICONTROL Account ID] van uw sociale netwerk en account in.
 
-Ook in deze stap, kunt u om het even welke **[!UICONTROL Gebruiksgeval]** selecteren van de Marketing die op deze bestemming zou moeten van toepassing zijn. Gebruiksgevallen voor marketingdoeleinden geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde gebruiksgevallen voor marketingdoeleinden of u kunt uw eigen gebruiksscenario voor marketingdoeleinden maken. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor meer informatie over gevallen van marketinggebruik.
+Ook in deze stap, kunt u om het even welke **[!UICONTROL Handeling van de Marketing]** selecteren die op deze bestemming zou moeten van toepassing zijn. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
 
 Selecteer **[!UICONTROL Doel maken]** nadat u de bovenstaande velden hebt ingevuld.
 
