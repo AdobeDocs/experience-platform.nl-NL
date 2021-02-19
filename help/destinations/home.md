@@ -5,9 +5,9 @@ seo-title: Overzicht van doelen
 description: Leer hoe u Adobe Experience Platform-gegevens activeert naar bestemmingen voor marketingcampagnes over verschillende kanalen, e-mails, gerichte advertenties en meer.
 seo-description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '489'
 ht-degree: 1%
 
 ---
@@ -53,12 +53,12 @@ Voor meer informatie over toegangscontroles, zie [de gebruikershandleiding van h
 
 Het gegevensbeheer wordt afgedwongen voor bestemmingen in de Platform via:
 
-* *Gebruikssituaties voor marketingdoeleinden* die u kunt selecteren in de workflow voor het maken van doelen.
-* *Beleid* voor gegevensgebruik dat bepaalt dat gegevens met bepaalde gebruikslabels niet mogen worden geactiveerd voor bestemmingen met bepaalde gevallen van marketinggebruik.
+* *Marketingacties* die u kunt selecteren in de workflow voor het maken van doelen.
+* *Beleid* voor gegevensgebruik dat beperkt dat gegevens met bepaalde gebruikslabels worden geactiveerd tot bestemmingen met bepaalde marketingacties.
 
-Zie [!DNL Data Governance] in de documentatie van het Platform voor meer informatie over [marketing gebruiksgevallen](../data-governance/policies/overview.md) en [het oplossen van gegevensbeleidsschendingen](../data-governance/enforcement/auto-enforcement.md).
+Zie [!DNL Data Governance] in de documentatie van het Platform voor meer informatie over [marketing acties](../data-governance/policies/overview.md) en [het oplossen van de schendingen van het gegevensbeleid](../data-governance/enforcement/auto-enforcement.md).
 
-Raadpleeg de volgende pagina&#39;s voor de verschillende doeltypen in het Platform voor meer informatie over het selecteren van gevallen van marketinggebruik in de workflow voor het maken van een bestemming:
+Raadpleeg de volgende pagina&#39;s voor de verschillende doeltypen in het Platform voor meer informatie over het selecteren van marketingacties in de workflow Doel maken:
 
 * [Reclamebestemmingen - Google Ad Manager  ](./catalog/advertising/google-ad-manager.md)
 * [Reclamebestemmingen - Google Ads](./catalog/advertising/google-ads-destination.md)
