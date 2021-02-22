@@ -4,7 +4,7 @@ description: Leer hoe u de SDK van Adobe Experience Platform Web configureert.
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 keywords: configureren;configuratie;SDK;edge;Web SDK;configure;edgeConfigId;context;web;apparaat;omgeving;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk montages;prehideStyle;opacity;cookieDestinationEnabled;urlMigrationEnabled;idID Enabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 4%
@@ -60,7 +60,7 @@ Geeft aan of foutopsporing moet worden ingeschakeld. Als u deze configuratie ins
 | Synchrone validatie | Valideert de gegevens die worden verzameld op basis van het schema en retourneert een fout in de reactie onder het volgende label: `collect:error OR success` |
 | Logboek van console | Laat het zuiveren berichten toe om in de console van JavaScript van browser worden getoond |
 
-### `edgeDomain`
+### `edgeDomain` {#edge-domain}
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ------------------ |
@@ -141,7 +141,7 @@ Laat [!DNL Audience Manager] bestemmingen URL toe, die het vuren van URLs toesta
 
 ## Identiteitsopties
 
-### `idMigrationEnabled`
+### `idMigrationEnabled` {#id-migration-enabled}
 
 | **Type** | **Vereist** | **Standaardwaarde** |
 | -------- | ------------ | ----------------- |
