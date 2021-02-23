@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;populaire onderwerpen;cloudopslaggegevens;streaming gegevens;streaming
 solution: Experience Platform
 title: Streaming gegevens verzamelen met bronconnectors en API's
-topic: overview
+topic: ' - overzicht'
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het naar Platform brengen van deze gegevens via bronconnectors en API's.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,8 @@ Deze zelfstudie vereist dat u een geldige verbinding-id hebt voor een streamingc
 
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
-- [[!DNL HTTP API]](../../../../ingestion/tutorials/create-streaming-connection.md)
+- [[!DNL HTTP API]](../create/streaming/http.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
