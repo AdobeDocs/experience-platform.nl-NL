@@ -5,10 +5,10 @@ user-guide-title: Help bij Adobe Experience Platform Data Science Workspace
 breadcrumb-title: Werkruimtegids voor gegevenswetenschappen
 user-guide-description: Gebruik computerleren om modellen en recepten te ontwikkelen, te trainen en te scoren met Adobe Sensei- en JupyterLab-laptops.
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: fe2872519cfeda8024a5ad62f6a71e854822f858
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 3%
+source-wordcount: '237'
+ht-degree: 2%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 3%
    * [Toegang tot gegevens](jupyterlab/access-notebook-data.md)
    * [Uw gegevens analyseren](jupyterlab/analyze-your-data.md)
    * [Query-service](jupyterlab/query-service.md)
+   * [Onderzoeksgegevens (EDA)](jupyterlab/eda-notebook.md)
    * [Een recept maken](jupyterlab/create-a-recipe.md)
    * [Samenwerken in JupyterLab met behulp van Git](jupyterlab/using-git-for-collaboration.md)
 * API voor leren door Sensei-machine {#api}
