@@ -5,10 +5,10 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 translation-type: tm+mt
-source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 4%
+source-wordcount: '563'
+ht-degree: 5%
 
 ---
 
@@ -38,6 +38,7 @@ ht-degree: 4%
       - [Azure File Storage-aansluiting](connectors/cloud-storage/azure-file-storage.md)
       - [FTP-aansluiting](connectors/cloud-storage/ftp.md)
       - [Google Cloud Storage-connector](connectors/cloud-storage/google-cloud-storage.md)
+      - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
       - [SFTP-aansluiting](connectors/cloud-storage/sftp.md)
       - [Amazon S3- en Azure Blob-connector](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
@@ -51,7 +52,7 @@ ht-degree: 4%
       - [Apache Hive op Azure HDInsights-connector](connectors/databases/hive.md)
       - [Apache Spark op Azure HDInsights-connector](connectors/databases/spark.md)
       - [Azure Data Explorer-connector](connectors/databases/data-explorer.md)
-      - [azure synapse Analytics-connector](connectors/databases/synapse-analytics.md)
+      - [Azure Synapse Analytics-connector](connectors/databases/synapse-analytics.md)
       - [Azure Table Storage-connector](connectors/databases/ats.md)
       - [Koppelaansluiting](connectors/databases/couchbase.md)
       - [Google BigQuery-connector](connectors/databases/bigquery.md)
@@ -60,7 +61,7 @@ ht-degree: 4%
       - [IBM DB2-connector](connectors/databases/ibm-db2.md)
       - [Microsoft SQL Server-aansluiting](connectors/databases/sql-server.md)
       - [MySQL-connector](connectors/databases/mysql.md)
-      - [Oracle-connector](connectors/databases/oracle.md)
+      - [Oracle-aansluiting](connectors/databases/oracle.md)
       - [Phoenix-aansluiting](connectors/databases/phoenix.md)
       - [PostgreSQL-connector](connectors/databases/postgres.md)
    - eCommerce {#ecommerce}
@@ -85,6 +86,7 @@ ht-degree: 4%
          - [Azure-bestandsopslag](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google Cloud-opslag](tutorials/api/create/cloud-storage/google.md)
+         - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -97,7 +99,7 @@ ht-degree: 4%
          - [Apache Hive op Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -165,6 +167,7 @@ ht-degree: 4%
          - [Azure-bestandsopslag](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google Cloud-opslag](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 en Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
@@ -178,7 +181,7 @@ ht-degree: 4%
          - [Apache Hive op Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
