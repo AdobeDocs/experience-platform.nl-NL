@@ -2,12 +2,12 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;bronschakelaars;bronschakelaar;bronnen;gegevensbronnen;gegevensbron;gegevensbronverbinding
 solution: Experience Platform
 title: Overzicht van bronconnectors
-topic: overview
+topic: ' - overzicht'
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de services van het Platform. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '942'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,7 @@ Met bronnen voor cloudopslag kunt u uw eigen gegevens in het Platform plaatsen z
 - [[!DNL Azure File Storage] connector](connectors/cloud-storage/azure-file-storage.md)
 - [[!DNL FTP] connector](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] connector](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL Google PubSub] connector](connectors/cloud-storage/google-pubsub.md)
 - [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
 
 ### Customer Relationship Management (CRM)
