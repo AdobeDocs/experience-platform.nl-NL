@@ -2,13 +2,13 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de dienst van de vraag;de vraagdienst;RStudio;rstudio;verbind met de vraagdienst;
 solution: Experience Platform
 title: RStudio verbinden met Query Service
-topic: connect
+topic: verbinden
 description: Dit document loopt door de stappen voor het verbinden van R Studio met de Dienst van de Vraag van Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f1b2fd7efd43f317a85c831cd64c09be29688f7a
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 1%
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -20,39 +20,40 @@ Dit document doorloopt de stappen voor het verbinden van [!DNL RStudio] met Adob
 >[!NOTE]
 >
 > Deze gids veronderstelt u reeds toegang tot [!DNL RStudio] hebt en vertrouwd met hoe te om het te gebruiken. Meer informatie over [!DNL RStudio] vindt u in de [officiële [!DNL RStudio] documentatie](https://rstudio.com/products/rstudio/).
+> 
+> Bovendien, om RStudio met de Dienst van de Vraag te gebruiken, moet u de Bestuurder PostSQL JDBC 4.2 installeren. U kunt het JDBC-stuurprogramma downloaden van de [officiële PostSQL-site](https://jdbc.postgresql.org/download.html).
 
 ## Een [!DNL Query Service]-verbinding maken in de [!DNL RStudio]-interface
 
-Nadat u [!DNL RStudio] op het **[!DNL Console]**-scherm hebt geïnstalleerd dat wordt weergegeven, moet u eerst uw R-script voorbereiden om [!DNL PostgreSQL] te gebruiken.
+Nadat u [!DNL RStudio] hebt geïnstalleerd, moet u het RJDBC-pakket installeren. Ga naar **[!DNL Packages]** ruit, en selecteer **[!DNL Install]**.
 
-```r
-install.packages("RPostgreSQL")
-install.packages("rstudioapi")
-require("RPostgreSQL")
-require("rstudioapi")
+![](../images/clients/rstudio/install-package.png)
+
+Er verschijnt een pop-up met het scherm **[!DNL Install Packages]**. Zorg ervoor dat **[!DNL Repository (CRAN)]** voor **[!DNL Install from]** sectie wordt geselecteerd. De waarde voor **[!DNL Packages]** moet `RJDBC` zijn. Zorg ervoor dat **[!DNL Install dependencies]** is geselecteerd. Nadat u hebt bevestigd dat alle waarden correct zijn, selecteert u **[!DNL Install]** om de pakketten te installeren.
+
+![](../images/clients/rstudio/install-jrdbc.png)
+
+Nu het RJDBC-pakket is geïnstalleerd, start u RStudio opnieuw om het installatieproces te voltooien.
+
+Nadat RStudio opnieuw is begonnen, kunt u met de Dienst van de Vraag nu verbinden. Selecteer het **[!DNL RJDBC]** pakket in **[!DNL Packages]** ruit, en ga het volgende bevel in de console in:
+
+```console
+pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Nadat u uw R-script hebt voorbereid voor gebruik van [!DNL PostgreSQL], kunt u [!DNL RStudio] nu verbinden met [!DNL Query Service] door het [!DNL PostgreSQL]-stuurprogramma te laden.
+Waar {PAD NAAR DE POSTGRESQL JDBC    het pad vertegenwoordigt naar de PostSQL JDBC JAR die op uw computer is geïnstalleerd.
 
-```r
-drv <- dbDriver("PostgreSQL")
-con <- dbConnect(drv, 
- dbname = "{DATABASE_NAME}",
- host="{HOST_NUMBER}",
- port={PORT_NUMBER},
- user="{USERNAME}",
- password="{PASSWORD}")
+Nu, kunt u uw verbinding aan de Dienst van de Vraag tot stand brengen door het volgende bevel in de console in te gaan:
+
+```console
+qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
 ```
-
-| Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `{DATABASE_NAME}` | De naam van de database die wordt gebruikt. |
-| `{HOST_NUMBER` en `{PORT_NUMBER}` | Het gastheereindpunt en zijn haven voor de Dienst van de Vraag. |
-| `{USERNAME}` en `{PASSWORD}` | De aanmeldingsgegevens die worden gebruikt. De gebruikersnaam heeft de vorm van `ORG_ID@AdobeOrg`. |
 
 >[!NOTE]
 >
 >Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, bezoek de [geloofsbrieven pagina op Platform](https://platform.adobe.com/query/configuration). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Vragen]**, gevolgd door **[!UICONTROL Referenties]**.
+
+![](../images/clients/rstudio/connection-rjdbc.png)
 
 ## Bezig met schrijven van query&#39;s
 
