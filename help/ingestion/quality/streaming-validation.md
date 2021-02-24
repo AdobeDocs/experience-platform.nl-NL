@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;populaire onderwerpen;streaming;streaming opname;streaming opname validatie;validatie;streaming opname validatie;validate;synchrone validatie;synchrone validatie;asynchrone validatie;asynchrone validatie;asynchrone validatie;
 solution: Experience Platform
 title: Validatie voor streaming-inname
-topic: tutorial
-type: Tutorial
+topic: zelfstudie
+type: Zelfstudie
 description: 'Met streaming opname kunt u uw gegevens naar Adobe Experience Platform uploaden met streaming eindpunten in real-time. API''s voor streaming opname ondersteunen twee validatiemodi: synchroon en asynchroon.'
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '898'
 ht-degree: 2%
 
 ---
@@ -66,6 +66,10 @@ Synchrone validatie is een validatiemethode die directe feedback geeft over de o
 Synchrone validatie is standaard niet ingeschakeld. Om het toe te laten, moet u in de facultatieve vraagparameter `synchronousValidation=true` overgaan wanneer het maken van API vraag. Bovendien is de synchrone bevestiging momenteel slechts beschikbaar als uw stroomeindpunt op het VA7 gegevenscentrum is.
 
 Als een bericht tijdens synchrone bevestiging ontbreekt, zal het bericht niet aan de outputrij worden geschreven, die directe terugkoppelt voor gebruikers verstrekt.
+
+>[!NOTE]
+>
+>Schemawijzigingen zijn mogelijk niet direct beschikbaar omdat wijzigingen in de cache worden opgeslagen. Vernieuw de cache tot vijftien minuten.
 
 **API-indeling**
 
