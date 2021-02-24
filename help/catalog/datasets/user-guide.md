@@ -2,12 +2,12 @@
 keywords: Experience Platform;huis;populaire onderwerpen;laat dataset toe;Dataset;dataset
 solution: Experience Platform
 title: UI-gids voor gegevensbestanden
-topic: datasets
+topic: gegevenssets
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1141'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ De stap **[!UICONTROL Gegevens toevoegen]** wordt weergegeven. Upload het CSV-be
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
-## Een gegevensset inschakelen voor realtime klantprofiel
+## Een gegevensset inschakelen voor realtime klantprofiel {#enable-profile}
 
 Elke dataset heeft de capaciteit om klantenprofielen met zijn ingebedde gegevens te verrijken. Om dit te doen, moet het schema dat de dataset hanteert voor gebruik in [!DNL Real-time Customer Profile] compatibel zijn. Een compatibel schema voldoet aan de volgende vereisten:
 
