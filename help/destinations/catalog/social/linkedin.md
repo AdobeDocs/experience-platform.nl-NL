@@ -3,7 +3,7 @@ keywords: gekoppeld in verbinding;gekoppeld in verbinding;gekoppeld in doelen;ge
 title: Koppeling in verbinding met passend publiek
 description: Activeer profielen voor uw campagnes LinkedIn voor publiek gericht, verpersoonlijking, en onderdrukking, die op gehakte e-mails worden gebaseerd.
 translation-type: tm+mt
-source-git-commit: 48cc2017e4a65321fb7ef54ea26aca0a98606516
+source-git-commit: 6d64bc362aa8c85e354f5c02cc2acbe6f1405c99
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
@@ -19,17 +19,17 @@ Activeer profielen voor uw [!DNL LinkedIn] campagnes voor doelgroepen, personali
 
 ## Gevallen gebruiken
 
-Om u beter te helpen begrijpen hoe en wanneer u [!DNL LinkedIn Matched Audience] bestemming zou moeten gebruiken, is hier een gebruiksgeval dat de klanten van Adobe Experience Platform door deze eigenschap kunnen oplossen.
+Om u beter te helpen begrijpen hoe en wanneer u [!DNL LinkedIn Matched Audiences] bestemming zou moeten gebruiken, is hier een gebruiksgeval dat de klanten van Adobe Experience Platform door deze eigenschap kunnen oplossen.
 
 Een softwarebedrijf organiseert een conferentie en wil contact houden met deelnemers, en hen gepersonaliseerde aanbiedingen tonen die op hun status van de conferentieaanwezigheid worden gebaseerd. Het bedrijf kan e-mailadressen of mobiele apparaat-id&#39;s van eigen [!DNL CRM] in Adobe Experience Platform opnemen, segmenten van eigen offline gegevens maken en deze segmenten naar het sociale platform [!DNL LinkedIn] sturen, zodat de advertentie-uitgaven worden geoptimaliseerd.
 
 ## Doelspecificaties {#destination-specs}
 
-[!DNL LinkedIn Matched Audience] ondersteunt de activering van de volgende identiteiten: e-mails met hashing  [!DNL GAID], en  [!DNL IDFA].
+[!DNL LinkedIn Matched Audiences] ondersteunt de activering van de volgende identiteiten: e-mails met hashing  [!DNL GAID], en  [!DNL IDFA].
 
 ### Exporttype {#export-type}
 
-**Segmentexport** : u exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer, enzovoort) gebruikt in de bestemming [!DNL LinkedIn Matched Audience].
+**Segmentexport** : u exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer, enzovoort) gebruikt in de bestemming [!DNL LinkedIn Matched Audiences].
 
 ### Voorwaarden voor LinkedIn-account {#LinkedIn-account-prerequisites}
 
@@ -39,7 +39,7 @@ Om te leren hoe te om uw [!DNL LinkedIn Campaign Manager] gebruikerstoestemminge
 
 ### Overeenkomende vereisten {#id-matching-requirements}
 
-[!DNL LinkedIn Matched Audience] vereist dat er geen duidelijk identificeerbare informatie (PII) wordt verstrekt. Daarom kan het publiek dat aan [!DNL LinkedIn Matched Audience] wordt geactiveerd *hashed* herkenningstekens, zoals e-mailadressen of mobiele apparaat IDs worden afgevinkt.
+[!DNL LinkedIn Matched Audiences] vereist dat er geen duidelijk identificeerbare informatie (PII) wordt verstrekt. Daarom kan het publiek dat aan [!DNL LinkedIn Matched Audiences] wordt geactiveerd *hashed* herkenningstekens, zoals e-mailadressen of mobiele apparaat IDs worden afgevinkt.
 
 Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, moet u aan de desbetreffende vereisten voldoen.
 
@@ -71,11 +71,11 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 
 ## Verbinden met doel {#connect-destination}
 
-Als u verbinding wilt maken met de [!DNL LinkedIn Matched Audience]-bestemming, raadpleegt u [Workflow voor verificatie van sociale netwerkdoelen](./workflow.md).
+Als u verbinding wilt maken met de [!DNL LinkedIn Matched Audiences]-bestemming, raadpleegt u [Workflow voor verificatie van sociale netwerkdoelen](./workflow.md).
 
-## Segmenten activeren naar [!DNL LinkedIn Matched Audience] {#activate-segments}
+## Segmenten activeren naar [!DNL LinkedIn Matched Audiences] {#activate-segments}
 
-Zie [Gegevens naar doelen activeren](../../ui/activate-destinations.md) voor instructies over het activeren van segmenten naar [!DNL LinkedIn Matched Audience].
+Zie [Gegevens naar doelen activeren](../../ui/activate-destinations.md) voor instructies over het activeren van segmenten naar [!DNL LinkedIn Matched Audiences].
 
 ## Geëxporteerde gegevens {#exported-data}
 
@@ -83,4 +83,4 @@ Een succesvolle activering betekent dat een [!DNL LinkedIn] douanepubliek progra
 
 >[!TIP]
 >
->De integratie tussen Adobe Experience Platform en [!DNL LinkedIn Matched Audience] steunt historische publieksbackfills. Alle historische segmentkwalificaties worden naar [!DNL LinkedIn] verzonden wanneer u de segmenten naar de bestemming activeert.
+>De integratie tussen Adobe Experience Platform en [!DNL LinkedIn Matched Audiences] steunt historische publieksbackfills. Alle historische segmentkwalificaties worden naar [!DNL LinkedIn] verzonden wanneer u de segmenten naar de bestemming activeert.
