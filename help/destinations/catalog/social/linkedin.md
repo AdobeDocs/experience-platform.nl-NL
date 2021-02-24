@@ -1,9 +1,9 @@
 ---
 keywords: gekoppeld in verbinding;gekoppeld in verbinding;gekoppeld in doelen;gekoppeld in;
-title: LinkedIn Matched Audience-verbinding
+title: Koppeling in verbinding met passend publiek
 description: Activeer profielen voor uw campagnes LinkedIn voor publiek gericht, verpersoonlijking, en onderdrukking, die op gehakte e-mails worden gebaseerd.
 translation-type: tm+mt
-source-git-commit: d51de1ab4b2d4e91232166657466e597093f22ef
+source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
