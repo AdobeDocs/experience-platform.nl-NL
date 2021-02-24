@@ -2,26 +2,28 @@
 keywords: Experience Platform;home;populaire onderwerpen;identiteitsgrafiekviewer;Identiteitsgrafiekviewer;grafiekviewer;Grafiekviewer;Naamruimte;Identiteitsnaamruimte;Identiteitsservice;Identiteitsservice
 solution: Experience Platform
 title: Overzicht van de Identity Graph Viewer
-topic: tutorial
+topic: zelfstudie
 description: Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
 translation-type: tm+mt
-source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
+source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '1038'
 ht-degree: 0%
 
 ---
 
 
-# (bètaversie) Overzicht van identiteitsgrafiekviewer
-
->[!NOTE]
->
->De viewer voor identiteitsgrafieken bevindt zich momenteel in bètaversie. De kenmerken van de functie kunnen worden gewijzigd.
+# Overzicht van de identiteitsgrafiekviewer
 
 Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat. Alle grafieken van de klantenidentiteit worden collectief beheerd en door de Dienst van de Identiteit van Adobe Experience Platform in bijna real time bijgewerkt, in antwoord op klantenactiviteit.
 
 Met de identiteitsgrafiekviewer in de gebruikersinterface van het Platform kunt u visualiseren en beter begrijpen welke klantidentiteiten aan elkaar zijn gekoppeld en op welke manieren. Met de viewer kunt u naar verschillende delen van de grafiek slepen en hiermee communiceren, zodat u complexe identiteitsrelaties kunt onderzoeken, efficiënter kunt werken en kunt profiteren van meer transparantie bij het gebruik van informatie.
+
+## Video over zelfstudie
+
+De volgende video is bedoeld als ondersteuning voor uw begrip van de viewer voor identiteitsgrafieken.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## Aan de slag
 
@@ -50,6 +52,20 @@ Selecteer de naamruimte die u wilt gebruiken en klik op **[!UICONTROL Select]** 
 Nadat u een naamruimte hebt geselecteerd, voert u de bijbehorende waarde voor een bepaalde klant in het tekstvak **[!UICONTROL Identiteitswaarde]** in en selecteert u **[!UICONTROL Weergave]**.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
+
+### Toegang tot de kijker van de identiteitsgrafiek van datasets
+
+U kunt tot de kijker van de identiteitsgrafiek ook toegang hebben gebruikend de datasetinterface. Van de datasets [!UICONTROL Browse] pagina, selecteer een dataset u met wilt in wisselwerking staan, en dan **[!UICONTROL dataset van de Voorproef]** selecteren
+
+![preview-dataset](../images/identity-graph-viewer/preview-dataset.png)
+
+Selecteer in het voorvertoningsvenster een vingerafdrukpictogram om de identiteiten weer te geven die door de viewer voor identiteitsgrafieken worden weergegeven.
+
+>[!TIP]
+>
+>Het vingerafdrukpictogram wordt alleen weergegeven als de gegevensset twee of meer identiteiten heeft.
+
+![vingerafdruk](../images/identity-graph-viewer/fingerprint.png)
 
 De viewer voor identiteitsgrafieken wordt weergegeven. Links in het scherm ziet u de identiteitsgrafiek waarin alle identiteiten worden weergegeven die zijn gekoppeld aan de naamruimte die u hebt geselecteerd en de identiteitswaarde die u hebt ingevoerd. Elk identiteitsknooppunt bestaat uit een naamruimte en de bijbehorende ID-waarde. U kunt elke gewenste identiteit selecteren en vasthouden om te slepen en met de grafiek te communiceren. U kunt de muisaanwijzer ook boven een identiteit plaatsen om informatie over de bijbehorende id-waarde weer te geven. De grafiekuitvoer wordt ook weergegeven als een ingediende lijst in het midden van het scherm.
 
@@ -109,8 +125,9 @@ Er kunnen fouten optreden wanneer u de viewer voor identiteitsgrafieken opent. H
 
 Door dit document te lezen, hebt u geleerd hoe u de identiteitsgrafieken van uw klanten kunt verkennen in de gebruikersinterface van het Platform. Raadpleeg [Overzicht van identiteitsservice](../home.md) voor meer informatie over identiteiten in Platform
 
-## Aanvullende bronnen
+## Changelog
 
-De volgende video is bedoeld als ondersteuning voor uw begrip van de viewer voor identiteitsgrafieken.
-
->[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
+| Datum | Actie |
+| ---- | ------ |
+| 01-2021 | <ul><li>Toegevoegde ondersteuning voor het streamen van ingesloten gegevens en niet-productiesandbox.</li><li>Kleine correcties.</li></ul> |
+| 02-2021 | <ul><li>De de grafiekkijker van de identiteit wordt toegankelijk gemaakt door datasetvoorproef.</li><li>Kleine correcties.</li><li>De viewer voor identiteitsgrafieken is algemeen beschikbaar.</li></ul> |
