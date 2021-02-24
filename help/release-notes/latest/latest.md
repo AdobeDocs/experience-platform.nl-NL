@@ -1,13 +1,13 @@
 ---
 title: Opmerkingen bij de release van Adobe Experience Platform
-description: Opmerkingen bij de release van Experience Platform 27 januari 2021
+description: Opmerkingen bij de release van Experience Platform voor 24 februari 2021.
 doc-type: release notes
-last-update: January 27, 2021
-author: ens60013
+last-update: February 24, 2021
+author: ens70167
 translation-type: tm+mt
-source-git-commit: 2e3a6acbfaa7f733a9843068c00f31f0b7f535b6
+source-git-commit: d3151d9ccaf61e6ec1a88e147f3694292e953de0
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '770'
 ht-degree: 2%
 
 ---
@@ -15,44 +15,69 @@ ht-degree: 2%
 
 # Opmerkingen bij de release van Adobe Experience Platform
 
-**Releasedatum: 27 januari 2021**
+**Releasedatum: 24 februari 2021**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Dataflows]](#dataflows)
+- [[!DNL Experience Data Model (XDM) System]](#xdm)
+- [[!DNL Identity Service]](#identity)
 - [[!DNL Sources]](#sources)
-- [[!DNL Experience Platform Launch Server Side]](#launch)
 
-## [!DNL Data Prep] {#data-prep}
+## [!DNL Data Science Workspace] {#dsw}
 
-[!DNL Data Prep] staat gegevensingenieurs toe om, gegevens aan en van het Model van Gegevens van de Ervaring in kaart te brengen om te zetten en te bevestigen (XDM).
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Gewone expressiefuncties | [!DNL Data Prep] Mapper ondersteunt nu het zoeken naar overeenkomsten en het extraheren van een deel van het invoerveld op basis van reguliere expressies. |
-
-Zie [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie.
-
-## Doelen {#destinations}
-
-[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-
-**Nieuwe bestemmingen**
-
-| Bestemming | Beschrijving |
-| ----------- | ----------- |
-| [!DNL Azure Blob] | [!DNL Azure Blob] is de objectopslagoplossing van Microsoft voor de cloud. |
+De Werkruimte van de Wetenschap van Gegevens gebruikt machine het leren en kunstmatige intelligentie om inzichten van uw gegevens tot stand te brengen. De Data Science Workspace is geïntegreerd in Adobe Experience Platform en helpt u om voorspellingen te maken met behulp van uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
-| ------- | ----------- |
-| Geavanceerde id-overeenkomsten | De verhogingen aan de mogelijkheden van de publieksverhouding in [!DNL Facebook Custom Audiences] en [!DNL Google Customer Match], door steun voor extra identiteitsaanpassing, zoals externe IDs, telefoonaantallen, en mobiele apparaat IDs toe te voegen. Raadpleeg de volgende documentatie voor meer informatie: <ul><li>[Facebook-bestemming](../../destinations/catalog/social/facebook.md)</li><li>[Google Customer Match-bestemming](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Profielen en segmenten naar een doel activeren](../../destinations/ui/activate-destinations.md)</li></ul> |
+| --- | --- |
+| JupyterLab EDA-laptop | De exploratieve gegevensanalyse (EDA) Python-laptop is nu beschikbaar in Jupyterlab. Deze laptop is ontworpen om u te helpen bij het ontdekken van patronen in gegevens, het controleren van de hygiëne van gegevens en het samenvatten van de relevante gegevens voor voorspellende modellen. Zie de zelfstudie over [het verkennen van webgebaseerde gegevens voor voorspellende modellen](../../data-science-workspace/jupyterlab/eda-notebook.md) voor meer informatie. |
 
-Voor meer informatie gaat u naar [bestemmingen overview](../../destinations/home.md).
+Voor meer algemene informatie over de Werkruimte van de Wetenschap van Gegevens, verwijs naar [Overzicht van de Werkruimte van de Wetenschap van Gegevens](../../data-science-workspace/home.md).
+
+## [!DNL Dataflows] {#dataflows}
+
+In Adobe Experience Platform worden gegevens uit een groot aantal verschillende bronnen opgenomen, binnen het Experience Platform geanalyseerd en geactiveerd voor een groot aantal verschillende bestemmingen. Platform maakt het proces om deze potentieel niet-lineaire stroom van gegevens te volgen gemakkelijker door transparantie van gegevensstromen te verstrekken.
+
+Dataflows zijn een voorstelling van gegevenstaken die gegevens over het Platform verplaatsen. Deze gegevensstromen worden gevormd over verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door [!DNL Identity Service] en [!DNL Real-time Customer Profile] wordt gebruikt alvorens uiteindelijk aan [!DNL Destinations] wordt geactiveerd.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Nieuw dashboard voor bewaking | U kunt het controledashboard nu gebruiken voor cross-service transparantie en actionable inzichten voor brongegevensopname. Het nieuwe controledashboard biedt een uitgebreide weergave van gegevens die zijn verwerkt van [!DNL Data Lake] naar [!DNL Identity Service] en naar [!DNL Profile], terwijl u ook de innamesnelheden, successen en fouten kunt controleren. Zie de zelfstudie over [brongegevens controleren in UI](../../dataflows/ui/monitor-sources.md) voor meer informatie. |
+
+Voor meer algemene informatie over gegevensstromen, verwijs naar [dataflows overzicht](../../dataflows/home.md).
+
+## [!DNL Experience Data Model (XDM) System] {#xdm}
+
+Standaardisering en interoperabiliteit zijn belangrijke concepten achter [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), gedreven door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
+
+XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor om het even welke toepassing om met de diensten op Adobe Experience Platform te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier levert. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Bijgewerkte zoekinterface | Verbeterde zoekmogelijkheden zijn nu beschikbaar op het tabblad [!UICONTROL Bladeren] in de werkruimte [!UICONTROL Schema&#39;s] en in het dialoogvenster voor gemengde selectie in [!DNL Schema Editor].<br><br>Wanneer het zoeken naar een termijn eerder, zouden de resultaten slechts XDM middelen omvatten de waarvan naam de onderzoeksvraag aanpast. Nu, naast middelen de waarvan naam de vraag aanpast, zullen de middelen die individuele attributen bevatten die de termijn aanpassen ook worden omvat. Dit staat u toe om naar middelen te zoeken XDM die op de attributen worden gebaseerd zij eerder dan door middelnaam bevatten.<br><br>Zie de documenten over het  [onderzoeken van ](../../xdm/ui/explore.md) middelen XDM en het  [beheren van ](../../xdm/ui/resources/schemas.md) schema&#39;s in UI voor meer informatie. |
+
+Voor meer algemene informatie over XDM, verwijs naar [XDM System overview](../../xdm/home.md).
+
+## [!DNL Identity Service] {#identity}
+
+Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van uw klant vereist. Dit wordt bemoeilijkt wanneer uw klantengegevens over verschillende systemen worden gefragmenteerd, die elke individuele klant ertoe brengen om veelvoudige &quot;identiteiten&quot;te hebben te schijnen.
+
+Met Adobe Experience Platform [!DNL Identity Service] kunt u een beter beeld krijgen van uw klanten en hun gedrag door identiteiten over verschillende apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Identiteitsgrafiekviewer | Met de viewer voor identiteitsgrafieken kunt u identiteiten valideren en visualiseren die in de gebruikersinterface aan elkaar zijn gekoppeld, zodat de foutopsporing en de transparantie kunnen worden verbeterd. Zie [identiteitsgrafiekviewerdocument](../../identity-service/ui/identity-graph-viewer.md) voor meer informatie. |
+
+Voor meer algemene informatie over [!DNL Identity Service], verwijs naar [Overzicht van de Dienst van de Identiteit](../../identity-service/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -60,27 +85,11 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
 
-**Nieuwe functies**
+**Nieuwe bronnen**
 
 | Functie | Beschrijving |
-| ------- | ----------- |
-| Verbeteringen voor Adobe Audience Manager-bronaansluiting | U kunt nu individuele eerste-partijsegmenten van Audience Manager aan binnengaan in Platform filteren en selecteren, evenals uit de eigenschappen van de eerste partij filteren. Zie de zelfstudie op [het creëren van een Audience Manager bronschakelaar](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) voor meer informatie. |
-| [!DNL Google BigQuery] verbetering bronaansluiting | U kunt nu bestanden die groter zijn dan 10 GB in één flowuitvoering opnemen met de bronconnector [!DNL BigQuery]. Zie [[!DNL BigQuery] overzicht van de bronconnector](../../sources/connectors/databases/bigquery.md) voor meer informatie. |
-| Ondersteuning voor complexe gegevenstypen voor cloudopslag | U kunt nu complexe gegevenstypen, zoals arrays in JSON-bestanden, opnemen bij gebruik van een bronaansluiting voor cloudopslag. Zie de zelfstudies over het maken van een gegevensstroom voor cloudopslag [in de interface](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) of [met de API [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) voor meer informatie. |
-| Ondersteuning voor service principal key-based authentication for [!DNL Microsoft Dynamics] source | U kunt nu verifiëren aan uw [!DNL Dynamics] rekening gebruikend een de dienstbelangrijkste sleutel als alternatief aan op wachtwoord-gebaseerde authentificatie. Zie [[!DNL Dynamics] overzicht van de bronconnector](../../sources/connectors/crm/ms-dynamics.md) voor meer informatie. |
-| UI-ondersteuning voor aangepaste scheidingstekens in bronnen voor cloudopslag | U kunt een scheidingsteken van de douanekolom zoals een komma (`,`), lusje (`\t`), of een pijp (`|`) nu plaatsen, om afgebakende dossiers in UI te verzamelen. Zie de zelfstudie over [het maken van een gegevensstroom met een bronaansluiting voor cloudopslag](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) voor meer informatie |
+| --- | --- |
+| [!DNL Google PubSub] | U kunt [!DNL Google PubSub] nu verbinden met [!DNL Experience Platform] gebruikend [!DNL Flow Service] API of UI. Zie [[!DNL Google PubSub] connectoroverzicht](../../sources/connectors/cloud-storage/google-pubsub.md) voor meer informatie. |
+| [!DNL Oracle Object Storage] | U kunt [!DNL Oracle Object Storage] nu verbinden met [!DNL Experience Platform] gebruikend [!DNL Flow Service] API of UI. Zie [[!DNL Oracle Object Storage] connectoroverzicht](../../sources/connectors/cloud-storage/oracle-object-storage.md) voor meer informatie. |
 
-Meer over bronnen leren, zie [bronnen overzicht](../../sources/home.md).
-
-## [!DNL Experience Platform Launch Server Side] {#launch}
-
-Met Adobe Experience Platform Launch Server Side wordt de webpagina en het gewicht van de app verminderd doordat Adobe Experience Platform Edge Network wordt gebruikt om taken uit te voeren die normaal op de client worden uitgevoerd. De Zijregels van de Server van de Lancering van het Platform kunnen gegevens transformeren en verzenden naar nieuwe bestemmingen zonder cliënt-zijimplementaties te veranderen.
-
-De Zijde van de Server van de Lancering van het Platform, in combinatie met het Web van Adobe Experience Platform en Mobiele SDKs, maakt het mogelijk om:
-
-- Maak één enkele vraag van de pagina die een nuttige lading van gegevens bevat en dan dit gegeven server-kant federeert om cliënt-zijnetwerkverkeer te verminderen en een snellere ervaring voor klanten te leveren.
-- Verlaag de tijd die het duurt voordat webpagina&#39;s worden geladen, zodat uw site voldoet aan de best practices van de branche op het gebied van prestaties.
-- Verhoog de transparantie en controleer op welke gegevenstypen waar en voor alle eigenschappen aan de clientzijde worden verzonden.
-- Maak een serverregel om eerder bijgehouden gegevens naar een nieuwe bestemming te verzenden.
-
-Raadpleeg de documentatie [Platform starten](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) voor meer informatie.
+Voor meer algemene informatie over bronnen, verwijs naar [bronnen overzicht](../../sources/home.md).
