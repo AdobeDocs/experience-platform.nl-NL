@@ -2,9 +2,9 @@
 title: Overzicht van Adobe Experience Platform Web SDK-extensie
 description: Meer informatie over de Adobe Experience Platform Web SDK Extension voor Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 De extensie Adobe Experience Platform Web SDK verzendt gegevens naar de Adobe Experience Cloud vanuit wegeigenschappen via het Adobe Experience Platform Edge Network. Met de Adobe Experience Platform Web SDK-extensie kunt u gegevens streamen naar een platform, identiteiten synchroniseren, inbellen en automatisch contextgegevens verzamelen.
 
-## De extensie AEP Web SDK configureren
+## De extensie configureren
 
 Deze sectie bevat een verwijzing naar de beschikbare opties bij het configureren van de extensie Adobe Experience Platform Web SDK.
 
@@ -43,15 +43,15 @@ Het **[!UICONTROL Edge-domein]** is het domein waarvan de Adobe Experience Platf
 
 ### **[!UICONTROL Fouten inschakelen]**
 
-Als er een fout met de extensie optreedt, wordt de fout standaard geregistreerd bij de console. Als u de fouten in een productieomgeving wilt verbergen, kunt u het selectievakje **[!UICONTROL Fouten inschakelen]** uitschakelen. Fouten worden nog steeds afgedrukt wanneer foutopsporing is ingeschakeld in Platform Launch.
+Als er een fout met de extensie optreedt, wordt de fout standaard geregistreerd bij de console. Als u de fouten in een productieomgeving wilt verbergen, kunt u het selectievakje **[!UICONTROL Fouten inschakelen]** uitschakelen. Fouten worden nog steeds afgedrukt wanneer foutopsporing is ingeschakeld in Platform launch.
 
 ### **[!UICONTROL Inschakelen inschakelen]**
 
-Als **[!UICONTROL Opt-in inschakelen]** wordt toegelaten, kan de uitbreiding van SDK van het Web AEP klusjes houden tot opt-in wordt ontvangen. De extensie stelt een handeling beschikbaar waarmee de voorkeuren voor aanmelding worden ingesteld.
+Als **[!UICONTROL Opt-in inschakelen]** is ingeschakeld, kan de extensie hits bevatten totdat de optie opt-in is ontvangen. De extensie stelt een handeling beschikbaar waarmee de voorkeuren voor aanmelding worden ingesteld.
 
 ### **[!UICONTROL ECID migreren inschakelen]**
 
-De extensie AEP Web SDK gebruikt een nieuw cookie om de ECID op te slaan. Deze instelling maakt compatibiliteit tussen de nieuwe cookie en de oude cookie voor migratiedoeleinden mogelijk. Adobe raadt u ten zeerste aan deze optie in te schakelen, tenzij u geen bestaande bezoekers met een ECID hebt.
+De uitbreiding van SDK van het Web van het Platform gebruikt een nieuw koekje om ECID op te slaan. Deze instelling maakt compatibiliteit tussen de nieuwe cookie en de oude cookie voor migratiedoeleinden mogelijk. Adobe raadt u ten zeerste aan deze optie in te schakelen, tenzij u geen bestaande bezoekers met een ECID hebt.
 
 ### **[!UICONTROL Cookies van derden gebruiken]**
 
