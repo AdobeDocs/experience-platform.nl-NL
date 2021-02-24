@@ -4,9 +4,9 @@ description: Leer hoe u de SDK van Adobe Experience Platform Web configureert.
 seo-description: Leer hoe te om het Web SDK van het Experience Platform te vormen
 keywords: configureren;configuratie;SDK;edge;Web SDK;configure;edgeConfigId;context;web;apparaat;omgeving;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk montages;prehideStyle;opacity;cookieDestinationEnabled;urlMigrationEnabled;idID Enabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '743'
 ht-degree: 4%
 
 ---
@@ -147,7 +147,7 @@ Laat [!DNL Audience Manager] bestemmingen URL toe, die het vuren van URLs toesta
 | -------- | ------------ | ----------------- |
 | Boolean | Nee | true |
 
-Indien waar (true), leest de SDK oude AMCV-cookies en stelt deze in. Dit helpt bij de overgang naar het gebruik van Adobe Experience Platform Web SDK, terwijl sommige delen van de site wellicht nog steeds Visitor.js gebruiken. Als de API voor bezoekers op de pagina is gedefinieerd, vraagt de SDK bovendien naar de API voor bezoekers voor de ECID. Op deze manier kunt u pagina&#39;s met twee tags plaatsen met de AEP Web SDK en toch dezelfde ECID hebben.
+Indien waar (true), leest de SDK oude AMCV-cookies en stelt deze in. Dit helpt bij de overgang naar het gebruik van Adobe Experience Platform Web SDK, terwijl sommige delen van de site wellicht nog steeds Visitor.js gebruiken. Als de API voor bezoekers op de pagina is gedefinieerd, vraagt de SDK bovendien naar de API voor bezoekers voor de ECID. Op deze manier kunt u pagina&#39;s met twee tags toevoegen aan de SDK van Adobe Experience Platform Web en toch dezelfde ECID hebben.
 
 ### `thirdPartyCookiesEnabled`
 
