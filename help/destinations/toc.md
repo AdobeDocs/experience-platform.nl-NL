@@ -5,9 +5,9 @@ user-guide-title: Doelgids
 user-guide-description: Activeer uw bekende en onbekende gegevens voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte reclame en vele andere gebruiksgevallen.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 2ee4014de1eb5c02ee2b554bb543d2bee5854922
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ ht-degree: 0%
       * [Overzicht van e-mailmarketingdoelen](./catalog/email-marketing/overview.md)
       * [Adobe Campaign-verbinding](./catalog/email-marketing/adobe-campaign.md)
       * [Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua.md)
-      * [Oracle Responsys-verbinding](./catalog/email-marketing/oracle-responsys.md)
+      * [Verbinding oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [Verbinding met Salesforce-Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
    * Experience Platform Launch-extensies {#launch-extensions}
       * [Overzicht Adobe Experience Platform Launch-extensie](./catalog/launch-extensions/overview.md)
@@ -117,6 +117,7 @@ ht-degree: 0%
       * [Een sociale netwerkbestemming maken](./catalog/social/workflow.md)
       * [Adobe Livefyre-extensie](./catalog/social/adobe-livefyre.md)
       * [Facebook-verbinding](./catalog/social/facebook.md)
+      * [LinkedIn Matched Audience-verbinding](./catalog/social/linkedin.md)
    * Beoordelingsdoelen {#survey}
       * [Overzicht van de enquêtedoelen](./catalog/survey/overview.md)
       * [Verwachte extensiebestemming](./catalog/survey/foresee.md)
