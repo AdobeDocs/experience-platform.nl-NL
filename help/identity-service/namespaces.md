@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;naamruimte;Naamruimte;Naamruimten;naamruimten;Naamruimte;Naamruimte;Identiteitsnaamruimte;Identiteit;Identiteitsservice;Identiteitsservice
 solution: Experience Platform
 title: Overzicht van id-naamruimte
-topic: overview
+topic: ' - overzicht'
 description: 'Identiteitsnaamruimten zijn een onderdeel van Identiteitsdienst dat fungeert als indicator van de context waarop een identiteit betrekking heeft. Ze onderscheiden bijvoorbeeld de waarde "name@email.com" als e-mailadres of "443522" als een numerieke CRM-id. '
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1474'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Selecteer een naamruimte voor meer specifieke informatie over de rechterrail.
 
 ![](./images/browse-namespaces.png)
 
-## Aangepaste naamruimten beheren
+## Aangepaste naamruimten beheren {#manage-namespaces}
 
 Afhankelijk van uw organisatorische gegevens en gebruiksgevallen hebt u mogelijk aangepaste naamruimten nodig. Aangepaste naamruimten kunnen worden gemaakt met de API [[!DNL Identity Service]](./api/create-custom-namespace.md) of via de interface.
 
