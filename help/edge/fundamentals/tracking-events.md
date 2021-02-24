@@ -3,9 +3,9 @@ title: Gebeurtenissen bijhouden met de SDK van Adobe Experience Platform Web
 seo-description: Leer hoe u Adobe Experience Platform Web SDK-gebeurtenissen kunt bijhouden.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1340'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-In dit voorbeeld wordt de gegevenslaag gekloond door het in series te vervaardigen aan JSON, dan het deserializing van het. Vervolgens wordt het gekloonde resultaat doorgegeven aan de opdracht `sendEvent`. Dit zorgt ervoor dat de opdracht `sendEvent` een momentopname van de gegevenslaag heeft zoals deze bestond toen de opdracht `sendEvent` werd uitgevoerd, zodat latere wijzigingen in het oorspronkelijke object van de gegevenslaag niet worden weerspiegeld in de gegevens die naar de server worden verzonden. Als u een gebeurtenisgestuurde gegevenslaag gebruikt, wordt het klonen van uw gegevens waarschijnlijk al automatisch verwerkt. Als u bijvoorbeeld de [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki) gebruikt, biedt de methode `getState()` een berekende, gekloonde momentopname van alle eerdere wijzigingen. Dit wordt ook automatisch voor u behandeld als u de uitbreiding van de Lancering van SDK van het Web AEP gebruikt.
+In dit voorbeeld wordt de gegevenslaag gekloond door het in series te vervaardigen aan JSON, dan het deserializing van het. Vervolgens wordt het gekloonde resultaat doorgegeven aan de opdracht `sendEvent`. Dit zorgt ervoor dat de opdracht `sendEvent` een momentopname van de gegevenslaag heeft zoals deze bestond toen de opdracht `sendEvent` werd uitgevoerd, zodat latere wijzigingen in het oorspronkelijke object van de gegevenslaag niet worden weerspiegeld in de gegevens die naar de server worden verzonden. Als u een gebeurtenisgestuurde gegevenslaag gebruikt, wordt het klonen van uw gegevens waarschijnlijk al automatisch verwerkt. Als u bijvoorbeeld de [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki) gebruikt, biedt de methode `getState()` een berekende, gekloonde momentopname van alle eerdere wijzigingen. Dit wordt ook automatisch voor u afgehandeld als u de uitbreiding van SDK van het Web van Adobe Experience Platform in Adobe Experience Platform Launch gebruikt.
 
 >[!NOTE]
 >
