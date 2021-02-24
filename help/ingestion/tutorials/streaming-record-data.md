@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;populaire onderwerpen;streaming opname;inname;record gegevens;stream recordgegevens;
 solution: Experience Platform
 title: Gegevens stroomrecord met API's voor streaming-insluiting
-topic: tutorial
-type: Tutorial
+topic: zelfstudie
+type: Zelfstudie
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 27a7855492f2f8e7a92651cd97371c904dd1561d
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -163,7 +163,7 @@ Vervolgens voegt u een [identiteitsdescriptor](../../xdm/api/descriptors.md) toe
 
 1. Het werk-e-mailadres wordt een verplicht veld. Dit betekent dat berichten die zonder dit veld worden verzonden, niet worden gevalideerd en niet worden ingevoerd.
 
-2. [!DNL Real-time Customer Profile] gebruikt het werk-e-mailadres als id om meer informatie over die persoon te koppelen.
+2. [!DNL Real-time Customer Profile] gebruikt het werk-e-mailadres als id om meer informatie over die persoon samen te voegen.
 
 ### Verzoek
 
@@ -264,7 +264,7 @@ Een geslaagde reactie retourneert HTTP-status 201 en een array met de id van de 
 ]
 ```
 
-## Recordgegevens opnemen in de streamingverbinding
+## Recordgegevens opnemen in de streamingverbinding {#ingest-data}
 
 Met de gegevensset en streamingverbinding op zijn plaats kunt u JSON-records met XDM-indeling invoeren om recordgegevens in te voeren in [!DNL Platform].
 
