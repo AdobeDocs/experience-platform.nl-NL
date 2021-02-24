@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
 seo-description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '990'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 
 #### Opgeloste problemen
 
-* Wanneer klanten probeerden om een voorwerp XDM van zandbakschema&#39;s tot stand te brengen, kwamen zij in authentificatiekwesties in werking. De API die AEP aanroept, is nu op de hoogte van omgevingen, zodat gebruikers alleen de schema&#39;s krijgen die ze kunnen bewerken.
+* Wanneer klanten probeerden om een voorwerp XDM van zandbakschema&#39;s tot stand te brengen, kwamen zij in authentificatiekwesties in werking. API die Platform roept is zich nu bewust van milieu&#39;s zodat worden de gebruikers slechts voorgesteld van die schema&#39;s die zij toegang hebben om uit te geven.
 
 #### Functies
 
@@ -62,7 +62,7 @@ Bevat versie 2.3.0 van de bibliotheek van SDK van het Web van Adobe Experience P
 * Ondersteuning voor het overschrijven van de gegevensset-id in de handeling `sendEvent`.
 * Voeg een nieuw gegevenselement van type `IdentityMap` toe dat kan worden gebruikt om de `identityMap` ingang in het Element van de Gegevens van Objecten te bevolken XDM dat nu wordt toegelaten, en in `setConsent` actie.
 * Ondersteuning voor het doorgeven van een identiteitsoverzicht in de handeling `setConsent`.
-* Ondersteuning voor het kiezen van een AEP-sandbox in het XDM Object Data Element.
+* Ondersteuning voor het kiezen van een Platform-sandbox in het XDM Object Data Element.
 
 
 ## 26 mei 2020
@@ -92,7 +92,7 @@ Die besluiten keren van `sendEvent` bevel terug slechts als `renderDecisions` aa
 * Probleem opgelost in de samenvoegings-id voor gebeurtenissen waarbij het element telkens opnieuw werd ingesteld toen naar het gegevenselement werd verwezen.
 * De naam van de handeling `setCustomerIds` is gewijzigd in `syncIdentity`.
 * Een opdracht `getIdentity` toegevoegd. Dit kan alleen voorlopig worden verbruikt via aangepaste code.
-* Als u foutopsporing inschakelt met `_satellite`, wordt foutopsporing nu ingeschakeld in de AEP Web SDK.
+* Als u foutopsporing inschakelt met `_satellite`, wordt foutopsporing nu ingeschakeld in de SDK van het Adobe Experience Platform-web.
 * Toegevoegde ondersteuning voor getypte waarden in het XDM-object: Booleaanse cijfers, getallen en decimalen.
 
 ## 16 maart 2020
@@ -123,10 +123,10 @@ Die besluiten keren van `sendEvent` bevel terug slechts als `renderDecisions` aa
 
 #### Functies
 
-* Activiteitenbeheer toevoegen vormt een Platform voor het starten van extensies
+* Activiteitenbeheer toevoegen aan Platform launch Extension
 * EventType en EventMergeId beschikbaar maken voor de opdracht event
-* OnBeforeEventSend config toevoegen aan Platform Launch Extension
-* EdgeBasePath-configuratie toevoegen aan Platform Launch Extension
+* OnBeforeEventSend config toevoegen aan Platform launch Extension
+* EdgeBasePath-configuratie toevoegen aan Platform launch Extension
 
 #### Bijwerken naar Alloy versie 0.0.10 met de volgende wijzigingen:
 
@@ -169,7 +169,7 @@ Die besluiten keren van `sendEvent` bevel terug slechts als `renderDecisions` aa
 * Extensie is in gebruik genomen
 * ECID-ondersteuning zonder extra aanroepen van bibliotheken of netwerken
 * Ondersteuning voor aanmelden
-* Ondersteuning voor het verzenden van XDM naar AEP
+* Ondersteuning voor het verzenden van XDM naar Platform
 * Ondersteuning voor eerste domein
 * Browsercontext automatisch verzamelen
 * Volledige open bron ([extension](https://github.com/adobe/reactor-extension-alloy), [SDK](https://github.com/adobe/reactor-extension-alloy))
