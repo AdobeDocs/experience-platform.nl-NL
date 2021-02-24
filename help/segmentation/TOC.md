@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentatieservicehandleiding
 user-guide-description: Bouw segmenten en produceer publiek van uw gegevens van het Profiel van de Klant in real time.
 translation-type: tm+mt
-source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '157'
 ht-degree: 5%
 
 ---
@@ -56,6 +56,7 @@ ht-degree: 5%
    - [Een dynamisch segment maken (video)](video/create-a-dynamic-segment.md)
    - [Een segment met meerdere entiteiten maken (video)](video/create-multi-entity-segments.md)
    - [Een segment evalueren](tutorials/evaluate-a-segment.md)
+   - [Extern publiek importeren en gebruiken](tutorials/using-external-audiences.md)
    - [Een gegevensset maken om gegevens te exporteren](tutorials/create-dataset-export-segment.md)
    - [Compatibiliteit met gegevensgebruik voor segmenten afdwingen](tutorials/governance.md)
 - [API-referentie](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
