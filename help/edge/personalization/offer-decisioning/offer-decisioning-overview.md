@@ -1,9 +1,9 @@
 ---
-title: Offer Decisioning gebruiken met de SDK van het Web van het Platform
-description: De Adobe Experience Platform Web SDK kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer Decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van Offer Decisioning.
-keywords: bied besluit aan;het besluit;Web SDK;Platform Web SDK;gepersonaliseerde aanbiedingen;lever aanbiedingen;bied levering aan;bied verpersoonlijking aan;
+title: Het gebruiken van Offer decisioning met het Web SDK van het Platform
+description: De SDK van het Web van Adobe Experience Platform kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van de Offer decisioning.
+keywords: offer decisioning;het besluit;Web SDK;het Web SDK van het Platform Web;gepersonaliseerde aanbiedingen;lever aanbiedingen;bied levering aan;bied verpersoonlijking aan;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 4%
@@ -11,13 +11,13 @@ ht-degree: 4%
 ---
 
 
-# Offer Decisioning gebruiken met de SDK van het Web van het Platform
+# Het gebruiken van Offer decisioning met het Web SDK van het Platform
 
 >[!NOTE]
 >
->Het gebruik van Offer Decisioning in Adobe Experience Platform Web SDK is momenteel beschikbaar in een vroeg stadium om gebruikers te selecteren. Deze functionaliteit is niet beschikbaar voor alle IMS-organisaties.
+>Het gebruik van Offer decisioning in de SDK van het Web van Adobe Experience Platform is momenteel beschikbaar in vroege toegang om gebruikers te selecteren. Deze functionaliteit is niet beschikbaar voor alle IMS-organisaties.
 
-Adobe Experience Platform [!DNL Web SDK] kan persoonlijke aanbiedingen leveren en weergeven die in Offer Decisioning worden beheerd. U kunt uw aanbiedingen en andere verwante objecten maken met de gebruikersinterface (UI) of API&#39;s van Offer Decisioning.
+Adobe Experience Platform [!DNL Web SDK] kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer decisioning worden beheerd. U kunt uw aanbiedingen en andere verwante objecten maken met de gebruikersinterface (UI) of API&#39;s van de Offer decisioning.
 
 ## Vereisten
 
@@ -27,11 +27,11 @@ Adobe Experience Platform [!DNL Web SDK] kan persoonlijke aanbiedingen leveren e
 
 ## Terminologie
 
-Het is belangrijk dat u de volgende terminologie begrijpt wanneer u met Offer Decisioning werkt. Voor meer informatie en om extra termijnen te bekijken, gelieve [Offer Decisioning verklarende woordenlijst](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+Het is belangrijk om de volgende terminologie te begrijpen wanneer het werken met Offer decisioning. Voor meer informatie en om extra termijnen te bekijken, te bezoeken gelieve [verklarende woordenlijst van de Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
 * **Container:** Een container is een isolatiemechanisme om verschillende zorgen van elkaar te onderscheiden. De container-id is het eerste padelement voor alle gegevensopslagruimte-API&#39;s. Alle beslissingsobjecten bevinden zich in een container.
 
-* **Beslissingsbereiken:** Voor Offer Decisioning, zijn dit de Base64 gecodeerde koorden van JSON die de activiteit en plaatsings IDs bevatten u de dienst van de aanbiedingsbeslissing wilt gebruiken om aanbiedingen voor te stellen.
+* **Beslissingsbereiken:** Voor Offer decisioning, zijn dit de Base64 gecodeerde koorden van JSON die de activiteit en plaatsings IDs bevatten u de dienst van de offer decisioning wilt gebruiken om aanbiedingen voor te stellen.
 
    *Reikwijdte van de beschikking JSON:*
 
@@ -58,14 +58,14 @@ Het is belangrijk dat u de volgende terminologie begrijpt wanneer u met Offer De
 
 * **Identiteit**: Lees voor meer informatie deze documentatie waarin wordt beschreven hoe de Identiteitsservice [ van ](../../identity/overview.md)Platform Web SDK wordt gebruikt.
 
-## Offer Decisioning inschakelen
+## Offer decisioning inschakelen
 
-Als u Offer Decisioning wilt inschakelen, moet u de volgende stappen uitvoeren:
+Om Offer decisioning toe te laten, moet u de volgende stappen uitvoeren:
 
-1. Adobe Experience Platform ingeschakeld in uw [Edge-configuratie](../../fundamentals/edge-configuration.md) en schakel het vakje &quot;Offer Decisioning&quot; in
+1. Adobe Experience Platform ingeschakeld in uw [randconfiguratie](../../fundamentals/edge-configuration.md) en schakel het vakje &quot;Offer decisioning&quot; in
    ![aanbieding-beslist-rand-config](./assets/offer-decisioning-edge-config.png)
-2. Volg de instructies om de SDK [te installeren ](../../fundamentals/installing-the-sdk.md) (De SDK kan standalone of door [Adobe Experience Platform Launch](http://launch.adobe.com/) worden geïnstalleerd. Hier volgt een [snelstartgids voor het starten van het Platform](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html)).
-3. [Configureer de ](../../fundamentals/configuring-the-sdk.md) SDK voor Offer Decisioning. Hieronder vindt u aanvullende specifieke Offer Decisioning-stappen.
+2. Volg de instructies om de SDK [te installeren ](../../fundamentals/installing-the-sdk.md) (De SDK kan standalone of door [Adobe Experience Platform Launch](http://launch.adobe.com/) worden geïnstalleerd. Hier volgt een [snelstartgids voor Platform launch](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html)).
+3. [Vorm ](../../fundamentals/configuring-the-sdk.md) SDK voor Offer decisioning. Hieronder vindt u aanvullende specifieke stappen voor Offer decisioning.
    * Zelfstandige geïnstalleerde SDK
       1. Vorm de &quot;sendEvent&quot;actie met uw `decisionScopes`
 
@@ -78,10 +78,10 @@ Als u Offer Decisioning wilt inschakelen, moet u de volgende stappen uitvoeren:
           ]
       })
       ```
-   * Geïnstalleerde SDK voor Platform starten
-      1. [Een Platform starten-eigenschap maken](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html)
-      2. [De Platform Insluitcode starten toevoegen](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Installeer en vorm de uitbreiding van SDK van het Web AEP met de Configuratie van de Rand u enkel door de configuratie van de drop-down &quot;Configuratie van de Rand&quot;te selecteren creeerde. Nuttige documentatie op [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+   * SDK voor platform launch geïnstalleerd
+      1. [Een Platform launch-eigenschap maken](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html)
+      2. [De Platform launch Embed Code toevoegen](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      3. Installeer en vorm de uitbreiding van SDK van het Web van het Platform met de Configuratie van de Rand u enkel door de configuratie van de drop-down &quot;Configuratie van de Rand&quot;te selecteren creeerde. Nuttige documentatie op [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
