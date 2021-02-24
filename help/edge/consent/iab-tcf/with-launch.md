@@ -1,24 +1,24 @@
 ---
-title: Integreer de Steun van IAB TCF 2.0 gebruikend de Lancering van het Platform en de Uitbreiding van SDK van het Web van het Platform
+title: Integreer de Steun van IAB TCF 2.0 gebruikend Platform launch en de Uitbreiding van SDK van het Web van het Platform
 description: Leer hoe u IAB TCF 2.0 instelt voor toestemming met Adobe Experience Platform Launch en de Adobe Experience Platform Web SDK-extensie.
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
 
 
-# Integreer IAB TCF 2.0 steun gebruikend de Lancering van het Platform en de uitbreiding van SDK van het Web van het Platform
+# Integreer IAB TCF 2.0 steun gebruikend Platform launch en de uitbreiding van SDK van het Web van het Platform
 
-Adobe Experience Platform Web SDK ondersteunt het Interactive Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0). Deze gids toont u hoe te opstelling een bezit van Adobe Experience Platform Launch voor het verzenden van IAB TCF 2.0 toestemmingsinformatie aan Adobe gebruikend de uitbreiding van SDK van het Web AEP voor Experience Platform Launch.
+Adobe Experience Platform Web SDK ondersteunt het Interactive Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0). Deze gids toont u hoe te opstelling een bezit van Adobe Experience Platform Launch voor het verzenden van IAB TCF 2.0 toestemmingsinformatie aan Adobe gebruikend de uitbreiding van SDK van het Web van Adobe Experience Platform voor Experience Platform Launch.
 
 Als u Experience Platform Launch niet wenst te gebruiken, te verwijzen gelieve naar de gids op [gebruikend IAB TCF 2.0 zonder Experience Platform Launch](./without-launch.md).
 
 ## Aan de slag
 
-Om IAB TCF 2.0 met Experience Platform Launch en de uitbreiding van SDK van het Web te gebruiken AEP, moet u een beschikbaar schema XDM en dataset hebben.
+Om IAB TCF 2.0 met Experience Platform Launch en de uitbreiding van SDK van het Web van het Platform te gebruiken, moet u een beschikbaar schema XDM en dataset hebben.
 
 Bovendien vereist deze handleiding dat u een goed begrip hebt van de SDK van Adobe Experience Platform Web. Lees voor een snelle vernieuwing de [Adobe Experience Platform Web SDK overview](../../home.md) en de [Veelgestelde vragen](../../web-sdk-faq.md) documentatie.
 
@@ -120,7 +120,7 @@ addEventListener();
 
 Deze code is identiek aan de vorige douanecode, behalve dat zowel `useractioncomplete` als `tcloaded` gebeurtenissen worden behandeld. De [vorige aangepaste code](#consent-code-1) wordt alleen geactiveerd wanneer de klant voor het eerst zijn voorkeuren kiest. Deze code wordt ook geactiveerd wanneer de klant al zijn voorkeuren heeft gekozen. Bijvoorbeeld op de tweede pagina laden.
 
-Voeg een actie &quot;Send Event&quot;van de uitbreiding van SDK van het Web AEP toe. Kies in het XDM-veld het XDM-gegevenselement dat u in de vorige sectie hebt gemaakt.
+Voeg een actie &quot;Send Event&quot;van de uitbreiding van SDK van het Web van het Platform toe. Kies in het XDM-veld het XDM-gegevenselement dat u in de vorige sectie hebt gemaakt.
 
 ## Andere gebeurtenissen verzenden met IAB TCF 2.0 toestemmingsinformatie
 
@@ -128,4 +128,4 @@ Wanneer gebeurtenissen worden geactiveerd na de initiële Experience Event, zijn
 
 ## Volgende stappen
 
-Nu u hebt geleerd hoe te om IAB TCF 2.0 met de uitbreiding van SDK van het Web van AEP te gebruiken, kunt u ook verkiezen om met andere oplossingen van Adobe zoals Adobe Analytics of platform van de Gegevens van de Klant in real time te integreren. Zie [IAB Transparency &amp; Consent Framework 2.0 overzicht](./overview.md) voor meer informatie.
+Nu u hebt geleerd hoe te om IAB TCF 2.0 met de uitbreiding van SDK van het Web van het Platform te gebruiken, kunt u ook verkiezen om met andere Adobe oplossingen zoals Adobe Analytics of het platform van de Gegevens van de Klant in real time te integreren. Zie [IAB Transparency &amp; Consent Framework 2.0 overzicht](./overview.md) voor meer informatie.
