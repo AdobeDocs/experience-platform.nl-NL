@@ -1,53 +1,44 @@
 ---
-keywords: Experience Platform;home;popular topics;Real-time Customer Profile;Identity Service;
+keywords: Experience Platform;thuis;populaire onderwerpen;Real-time profiel van de Klant;De Dienst van de Identiteit;
 solution: Experience Platform
 title: Zelfstudies voor realtime klantprofiel
-topic: tutorial
-type: Tutorial
+topic: zelfstudie
+type: Zelfstudie
 description: In dit document worden de desbetreffende stappen beschreven en worden koppelingen weergegeven naar zelfstudies voor het voltooien van elke afzonderlijke workflow.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 0aa59a5375757f81d63ac43d778ff2c7179d449b
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
 
 
-# Configureren [!DNL Real-time Customer Profile] en [!DNL Identity Service]
+# Configureren [!DNL Real-time Customer Profile]
 
-Voor de configuratie [!DNL Real-time Customer Profile] voor uw organisatie moet u meerdere afzonderlijke workflows voltooien. In dit document worden de desbetreffende stappen beschreven en worden koppelingen weergegeven naar zelfstudies voor het voltooien van elke afzonderlijke workflow.
+Als u [!DNL Real-time Customer Profile] voor uw organisatie wilt configureren, moet u meerdere afzonderlijke workflows voltooien. In dit document worden de desbetreffende stappen beschreven en worden koppelingen weergegeven naar zelfstudies voor het voltooien van elke afzonderlijke workflow.
 
-Als u meer wilt weten over [!DNL Real-time Customer Profile]het profiel, leest u eerst het [profieloverzicht](../profile/home.md).
+Als u meer wilt weten over [!DNL Real-time Customer Profile], leest u eerst het [Profieloverzicht](../profile/home.md).
 
 ## Overzicht gebruikersinterface voor realtime gebruikersprofiel
 
 Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren.
 
 **Deze handleiding helpt u:**
-- De interface [!UICONTROL Profielen] en beschikbare functies begrijpen.
+- Lees de interface [!UICONTROL Profielen] en de beschikbare functies.
 - De profielgegevens weergeven en beheren.
 
-Voor meer informatie raadpleegt u de gebruikershandleiding van het [realtime klantprofiel](../profile/ui/user-guide.md)
+Voor meer informatie raadpleegt u de [Gebruikershandleiding voor realtime klantprofiel](../profile/ui/user-guide.md)
 
 ## Real-time API voor klantprofiel
 
-De realtime-API voor klantprofiel bevat meerdere eindpunten. Het profiel staat u toe om verschillende klantengegevens van veelvoudige kanalen, zoals online, off-line, CRM, en derdegegevens, in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt. Lees het API-overzicht [van het profiel van de](../profile/api/overview.md) real-time klant voor meer informatie over elk van de beschikbare eindpunten en de bijbehorende gebruiksgevallen.
+De realtime-API voor klantprofiel bevat meerdere eindpunten. Lees het [Real-time overzicht van de API van het Profiel van de Klant](../profile/api/overview.md) voor meer informatie over elk van de beschikbare eindpunten en hun gebruiksgevallen.
 
-**De volgende API-ontwikkelaarshulplijnen zijn beschikbaar:**
-- [Berekende kenmerken (alfa) ](../profile/api/computed-attributes.md) - Leer meer over de gebruiksgevallen voor berekende kenmerken en hoe u een berekend kenmerk kunt configureren, openen, bijwerken en verwijderen.
-- [Edge-projecties](../profile/api/edge-projections.md) - Leer hoe u projectiedoelen kunt maken, weergeven, bijwerken, verwijderen en weergeven. Bovendien bevat dit document informatie over het maken van een lijst met projectieconfiguraties en voorbeelden voor het gebruik van Kiezers.
-- [Entiteiten (toegang tot profiel)](../profile/api/entities.md) - Leer hoe u toegang krijgt tot profielgegevens via identiteit of een lijst met identiteiten. Bovendien, leer hoe te om tot de gebeurtenissen van de tijdreeks voor veelvoudige profielen toegang te hebben gebruikend identiteiten, één enkel profiel door identiteit, en tot veelvoudige schemaentiteiten toegang te hebben.
-- [Exporteer taken (Profielexport)](../profile/api/export-jobs.md) - Leer hoe u exporttaken kunt maken, weergeven, controleren en annuleren.
-- [Beleid](../profile/api/merge-policies.md) voor samenvoegen - Leer meer over de componenten van het samenvoegbeleid en hoe u een samenvoegbeleid kunt openen, maken, bijwerken en verwijderen.
-- [Voorbeeldstatus voorvertonen (voorvertoning van profiel)](../profile/api/preview-sample-status.md) - Leer hoe u de laatste voorbeeldstatus, de verdeling van het lijstprofiel per dataset en de verdeling van het lijstprofiel per naamruimte kunt weergeven.
-- [Systeemtaken profiel (aanvragen verwijderen)](../profile/api/profile-system-jobs.md) - Leer hoe u een aanvraag voor een gegevensset of batch in de profielopslag kunt weergeven, maken en verwijderen.
+Als u meer wilt weten en de vereiste waarden voor het uitvoeren van CRUD-bewerkingen met de Real-time Customer Profile API wilt opvragen, gaat u naar de [gids Aan de slag](../profile/api/getting-started.md).
 
-Voor meer informatie en de vereiste waarden voor het uitvoeren van CRUD-bewerkingen met de Real-Time Customer Profile API, raadpleegt u de gids [Aan de slag](../profile/api/getting-started.md).
+## Een schema inschakelen voor [!DNL Profile]- en [!DNL Identity]-service
 
-## Een schema voor [!DNL Profile] en [!DNL Identity] service inschakelen
-
-Voordat gegevens in Adobe Experience Platform kunnen worden ingevoerd en bij het maken van [!DNL Real-time Customer Profiles]het schema kunnen worden gebruikt, moet een schema worden gemaakt dat de structuur bevat voor de gegevens die worden ingevoerd en dat schema moet zijn ingeschakeld voor gebruik in [!DNL Profile] en Adobe Experience Platform [!DNL Identity Service].
+Voordat gegevens in Adobe Experience Platform kunnen worden ingevoerd en kunnen worden gebruikt bij het maken van [!DNL Real-time Customer Profiles], moet een schema worden gemaakt dat de structuur biedt voor de gegevens die worden ingevoerd en dat schema moet zijn ingeschakeld voor gebruik in [!DNL Profile] en Adobe Experience Platform [!DNL Identity Service].
 
 **Deze handleiding helpt u:**
 - Blader door bestaande schema&#39;s.
@@ -56,11 +47,11 @@ Voordat gegevens in Adobe Experience Platform kunnen worden ingevoerd en bij het
 - Stel uw schemavelden in als identiteitsvelden.
 - Profiel inschakelen voor uw schema.
 
-Voor geleidelijke instructies bij het creëren van een schema dat voor zowel [!DNL Profile] als [!DNL Identity Service], gelieve te verwijzen naar de leerprogramma&#39;s voor het [creëren van een schema gebruikend de Registratie API](../xdm/tutorials/create-schema-api.md) van het Schema of [het creëren van een schema gebruikend de Bouwer UI](../xdm/tutorials/create-schema-ui.md)van het Schema.
+Voor geleidelijke instructies bij het creëren van een schema dat voor zowel [!DNL Profile] als [!DNL Identity Service] wordt toegelaten, gelieve te verwijzen naar de leerprogramma&#39;s voor [het creëren van een schema gebruikend de Registratie API ](../xdm/tutorials/create-schema-api.md) of [het creëren van een schema gebruikend de Bouwer van het Schema UI](../xdm/tutorials/create-schema-ui.md).
 
-## Een dataset configureren voor [!DNL Profile] en [!DNL Identity]
+## Een gegevensset configureren voor [!DNL Profile] en [!DNL Identity]
 
-Beginnen opnemend gegevens in [!DNL Profile], moet u een dataset hebben die behoorlijk voor gebruik met [!DNL Real-time Customer Profile] en [!DNL Identity Service]. is gevormd.
+Als u wilt beginnen met het opnemen van gegevens in [!DNL Profile], moet u een gegevensset hebben die correct is geconfigureerd voor gebruik met [!DNL Real-time Customer Profile] en [!DNL Identity Service].
 
 **Deze handleiding helpt u:**
 - Maak een gegevensset die is ingeschakeld voor Profiel.
@@ -68,11 +59,11 @@ Beginnen opnemend gegevens in [!DNL Profile], moet u een dataset hebben die beho
 - Voeg gegevens in de dataset in.
 - Bevestig uw dataset toegelaten Profiel is en het gebruiken van de Dienst van de Identiteit.
 
-Volg de API-zelfstudie om een gegevensset voor profiel en identiteit [te](../profile/tutorials/dataset-configuration.md)configureren om aan de slag te gaan.
+Om te beginnen, volg de API leerprogramma&#39;s voor [het vormen van een dataset voor Profiel en Identiteit](../profile/tutorials/dataset-configuration.md).
 
 ## Samenvoegingsbeleid configureren
 
-Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, zijn het fusiebeleid de regels die [!DNL Platform] gebruiken om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen.
+Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, zijn het fusiebeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen.
 
 **Deze handleiding helpt u:**
 - Nieuw samenvoegbeleid maken.
@@ -80,18 +71,18 @@ Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen samenvoegen e
 - Stel een standaardsamenvoegbeleid in voor uw organisatie.
 - Begrijp schendingen van het fusiebeleid.
 
-Om met samenvoegbeleid in [!DNL Platform] UI te werken, bezoek de de gebruikersgids [van het](../profile/ui/merge-policies.md)fusiebeleid. Om met samenvoegbeleid te werken gebruikend Real-time API van het Profiel van de Klant, zie de de ontwikkelaarsgids [van het](../profile/api/merge-policies.md)fusiebeleid.
+Om met samenvoegbeleid in [!DNL Platform] UI te werken, bezoek [de gids van de gebruiker ](../profile/ui/merge-policies.md) van het samenvoegbeleid. Om met samenvoegbeleid te werken gebruikend Real-time API van het Profiel van de Klant, zie [de gids van de ontwikkelaar van samenvoegingsbeleid](../profile/api/merge-policies.md).
 
 ## Edge-projecties configureren
 
-Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in real time te drijven, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Adobe maakt deze realtime toegang tot gegevens mogelijk door gebruik te maken van zogenaamde randen. [!DNL Experience Platform] Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt.
+Om gecoördineerde, verenigbare, en gepersonaliseerde ervaringen voor uw klanten over veelvoudige kanalen in real time te drijven, moeten de juiste gegevens gemakkelijk beschikbaar en onophoudelijk bijgewerkt zijn aangezien de veranderingen gebeuren. Met Adobe [!DNL Experience Platform] hebt u in real time toegang tot gegevens via het gebruik van zogenaamde randen. Een rand is een geografisch geplaatste server die gegevens opslaat en deze gemakkelijk toegankelijk maakt voor toepassingen. De gegevens worden verpletterd aan een rand door een projectie, met een projectiebestemming die de rand bepaalt waarnaar de gegevens zullen worden verzonden, en een projectieconfiguratie die de specifieke informatie bepaalt die op de rand beschikbaar zal worden gemaakt.
 
 **Deze handleiding helpt u:**
 - Een doel voor randprojectie weergeven, maken, weergeven, bijwerken en verwijderen.
 - Maak een lijst met randprojectieconfiguraties en maak deze.
 - Inzicht in kiezers.
 
-Raadpleeg de [!DNL Real-time Customer Profile] API- [subhandleiding voor randprojecties](../profile/api/edge-projections.md)voor meer informatie en om te gaan werken met randen.
+Raadpleeg de [!DNL Real-time Customer Profile] API [subhandleiding voor randprojecties](../profile/api/edge-projections.md) voor meer informatie en om te gaan werken met randen.
 
 ## Aanpassen hoe profielgegevens worden weergegeven in de gebruikersinterface
 
@@ -103,11 +94,11 @@ Binnen de gebruikersinterface van het Experience Platform kunt u gegevens van he
 - Voeg een nieuwe kaart toe.
 - Standaardinstellingen herstellen.
 
-Meer informatie over het aanpassen van profielgegevens, bezoek de documentatie van de aanpassing van het [Profiel](../profile/ui/profile-customization.md)
+Meer informatie over het aanpassen van profielgegevens, bezoek [de documentatie van de aanpassing van het Profiel](../profile/ui/profile-customization.md)
 
 ## Volgende stappen
 
-Zodra u [!DNL Real-time Customer Profile] voor uw organisatie hebt gevormd, kunt u beginnen gegevens aan individuele klantenprofielen toe te voegen en publiekssegmenten te creëren die op specifieke klantenattributen worden gebaseerd. Raadpleeg de volgende zelfstudies om aan de slag te gaan:
+Als u [!DNL Real-time Customer Profile] voor uw organisatie hebt geconfigureerd, kunt u beginnen met het toevoegen van gegevens aan individuele klantprofielen en het maken van publiekssegmenten op basis van specifieke klantkenmerken. Raadpleeg de volgende zelfstudies om aan de slag te gaan:
 
 - [Gegevens toevoegen aan realtime klantprofiel](../profile/tutorials/add-profile-data.md)
 - [Een segment maken](../segmentation/tutorials/create-a-segment.md)
