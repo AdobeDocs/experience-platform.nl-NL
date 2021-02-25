@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Handleiding voor realtime-klantprofiel
 user-guide-description: De klantengegevens van de fusie om een verenigde mening van klanteninteractie over kanalen tot stand te brengen.
 translation-type: tm+mt
-source-git-commit: cab7ba65cc62d8cab402bc23ea38c17d77841363
+source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '122'
 ht-degree: 5%
 
 ---
@@ -20,7 +20,6 @@ ht-degree: 5%
 * [!DNL Profile] API {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
-   * [(Alpha) Berekende kenmerken](api/computed-attributes.md)
    * [Edge-prognoses](api/edge-projections.md)
    * [Entiteiten ([!DNL Profile] toegang)](api/entities.md)
    * [Exporttaken ([!DNL Profile] exporteren)](api/export-jobs.md)
@@ -35,6 +34,11 @@ ht-degree: 5%
    * [Samenvoegbeleid maken (video)](video/create-merge-policies.md)
    * [UI-hulplijn verenigingsschema](ui/union-schema.md)
    * [Overzicht van Unieschema (video)](video/union-schemas-overview.md)
+* (Alpha) Berekende kenmerken {#computed-attributes}
+   * [Overzicht](computed-attributes/overview.md)
+   * [API voor berekende kenmerken](computed-attributes/ca-api.md)
+   * [Veld voor berekende kenmerken configureren](computed-attributes/configure-api.md)
+   * [Voorbeeldexpressies](computed-attributes/expressions.md)
 * Tutorials {#tutorials}
    * [Gegevens toevoegen aan [!DNL Profile]](tutorials/add-profile-data.md)
    * [Vorm een dataset  [!DNL Profile] & [!DNL Identity] voor de dienst](tutorials/dataset-configuration.md)
