@@ -5,9 +5,9 @@ user-guide-title: Help bij Adobe Experience Platform Source Connectors
 breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 translation-type: tm+mt
-source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
+source-git-commit: f3b27fbe75af7499f4ce43d8904d2f7e01384cb3
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '574'
 ht-degree: 5%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 5%
       - [Apache Hive op Azure HDInsights-connector](connectors/databases/hive.md)
       - [Apache Spark op Azure HDInsights-connector](connectors/databases/spark.md)
       - [Azure Data Explorer-connector](connectors/databases/data-explorer.md)
-      - [Azure Synapse Analytics-connector](connectors/databases/synapse-analytics.md)
+      - [azure synapse Analytics-connector](connectors/databases/synapse-analytics.md)
       - [Azure Table Storage-connector](connectors/databases/ats.md)
       - [Koppelaansluiting](connectors/databases/couchbase.md)
       - [Google BigQuery-connector](connectors/databases/bigquery.md)
@@ -101,7 +101,7 @@ ht-degree: 5%
          - [Apache Hive op Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -148,6 +148,7 @@ ht-degree: 5%
    - [Een gegevenssetverbinding maken](tutorials/api/create-dataset-base-connection.md)
    - [Dataflows bewaken](tutorials/api/monitor.md)
    - [Verbindingen bijwerken](tutorials/api/update.md)
+   - [Gegevensstromen bijwerken](tutorials/api/update-dataflows.md)
    - [Verbindingen verwijderen](tutorials/api/delete.md)
    - [Gegevensstromen verwijderen](tutorials/api/delete-dataflows.md)
 - UI-zelfstudies {#ui-tutorials}
@@ -184,7 +185,7 @@ ht-degree: 5%
          - [Apache Hive op Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
