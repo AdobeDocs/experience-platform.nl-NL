@@ -5,7 +5,7 @@ topic: hulplijn
 type: Documentatie
 description: In Adobe Experience Platform zijn berekende kenmerken functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. Deze handleiding laat zien hoe u berekende kenmerken kunt maken, weergeven, bijwerken en verwijderen met de realtime-API voor klantprofiel.
 translation-type: tm+mt
-source-git-commit: 6ae96ab25bd7992fe93d15bfc16b58a2fe7b4b7c
+source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210
 workflow-type: tm+mt
 source-wordcount: '2279'
 ht-degree: 0%
@@ -96,7 +96,7 @@ Een met succes gecreeerd gegevens verwerkt attribuut keert de Status 200 van HTT
     "id": "2afcf410-450e-4a39-984d-2de99ab58877",
     "imsOrgId": "{IMS_ORG}",
     "sandbox": {
-        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "prod",
         "type": "production",
         "default": true
