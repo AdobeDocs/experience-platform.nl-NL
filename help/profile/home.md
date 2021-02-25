@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;verenigd profiel;verenigd profiel;verenigd;profiel;rtcp;XDM-grafieken
 title: Overzicht van realtime-klantprofiel
-topic: guide
-description: Klantprofiel in real-time is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
+topic: hulplijn
+description: Klantprofiel in realtime is een algemene opzoekeenheid die gegevens uit verschillende bedrijfsgegevenselementen samenvoegt en vervolgens toegang tot die gegevens biedt in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1825'
 ht-degree: 0%
 
 ---
@@ -36,11 +36,11 @@ De profielopslag gebruikt een Microsoft Azure Cosmos DB-infrastructuur en het Pl
 
 Experience Platform biedt een reeks instructies om u te helpen voorkomen dat u [XDM-schema&#39;s (Experience Data Model) maakt](../xdm/home.md) die niet kunnen worden ondersteund door het realtime profiel van de klant. Dit omvat zachte grenzen die in prestatiesdegradatie zullen resulteren, evenals harde grenzen die in fouten en systeembreuken zullen resulteren. Lees de [Profielhulplijnen](guardrails.md) documentatie voor meer informatie, zoals een lijst met richtlijnen en voorbeelden van gebruiksgevallen.
 
-### (Alpha) Profieldashboard {#profile-dashboard}
+### (Beta) Profieldashboard {#profile-dashboard}
 
 >[!IMPORTANT]
 >
->De dashboardfunctionaliteit bevindt zich momenteel in alfa en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
+>De dashboardfunctionaliteit bevindt zich momenteel in bèta en is niet beschikbaar voor alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 De interface van het Experience Platform biedt een dashboard waarmee u belangrijke informatie over uw gegevens van het Profiel van de Klant in real time kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Raadpleeg de [Handleiding voor het dashboard van het profiel](ui/profile-dashboard.md) voor meer informatie over de toegang tot en het werken met het dashboard [!DNL Profile] in de gebruikersinterface en voor gedetailleerde informatie over de metriek die in het dashboard wordt weergegeven.
 
@@ -78,9 +78,9 @@ Meer over verenigingsschema&#39;s, met inbegrip van hoe te om tot verenigingssch
 
 >[!IMPORTANT]
 >
->De berekende kenmerkfunctionaliteit staat in alpha. De documentatie en de functionaliteit kunnen worden gewijzigd.
+>De berekende kenmerkfunctionaliteit staat in alpha. De documentatie en functionaliteit kunnen worden gewijzigd.
 
-Met de berekende kenmerken kunt u automatisch de waarde van velden berekenen op basis van andere waarden, berekeningen en expressies. De berekende attributen werken op het profielniveau, betekenend kunt u waarden over alle verslagen en gebeurtenissen bijeenvoegen. Elk berekend kenmerk bevat een expressie, of &#39;regel&#39;, die binnenkomende gegevens evalueert en de resulterende waarde opslaat in een profielkenmerk of in een gebeurtenis. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. Voor meer informatie over gegevens verwerkte attributen, en geleidelijke instructies voor het werken met hen die [!DNL Real-time Customer Profile] API gebruiken, te zien gelieve [gegevens verwerkte gids van het attributeneindpunt](api/computed-attributes.md). Deze handleiding geeft u een beter inzicht in de rol die berekende kenmerken spelen in Adobe Experience Platform en bevat voorbeelden van API-aanroepen voor het uitvoeren van standaard CRUD-bewerkingen.
+Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. Met deze berekeningen kunt u eenvoudig vragen beantwoorden die betrekking hebben op de waarde van levenslange aankopen, de tijd tussen aankopen of het aantal geopende toepassingen, zonder dat u telkens wanneer de informatie nodig is, handmatig complexe berekeningen hoeft uit te voeren. Voor meer informatie over berekende kenmerken, waaronder het begrip van de rol die berekende kenmerken spelen in Adobe Experience Platform, moet u eerst het [overzicht van berekende kenmerken](computed-attributes/overview.md) lezen.
 
 ## Profielen en segmenten
 
