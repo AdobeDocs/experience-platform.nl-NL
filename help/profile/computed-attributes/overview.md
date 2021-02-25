@@ -3,11 +3,11 @@ keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;A
 title: Inleiding tot berekende kenmerken
 topic: hulplijn
 type: Documentatie
-description: Berekende kenmerken zijn functies om gegevens op gebeurtenisniveau samen te voegen tot profielniveaukenmerken. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
+description: Berekende kenmerken zijn functies om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
 translation-type: tm+mt
-source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
+source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
