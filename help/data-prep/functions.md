@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui-gids;mapper;mapping;toewijzingsvelden;toewijzingsfuncties;
 solution: Experience Platform
 title: Toewijzingsfuncties voor gegevenspremies
-topic: overview
+topic: ' - overzicht'
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 translation-type: tm+mt
-source-git-commit: 49124d58fffa3670b332fab07843f2ef3db65f79
+source-git-commit: fd2dffd5b8957833b670e9cb434517bcb0f886a3
 workflow-type: tm+mt
-source-wordcount: '3609'
+source-wordcount: '3625'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Een veldnaam kan elke geldige id zijn: een reeks van Unicode-letters en -cijfers
 
 Als deze conventie niet wordt gevolgd door een veldnaam, moet de veldnaam worden teruggeplaatst met `${}`. Als de veldnaam bijvoorbeeld &quot;Voornaam&quot; of &quot;Voornaam&quot; is, moet de naam als respectievelijk `${First Name}` of `${First.Name}` worden omwikkeld.
 
-Daarnaast moeten veldnamen **om het even welke** van de volgende gereserveerde trefwoorden zijn, moeten ze met `${}` zijn verpakt:
+Als een veldnaam **any** van de volgende gereserveerde trefwoorden is, moet deze bovendien worden verpakt met `${}`:
 
 ```console
 new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
@@ -103,7 +103,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 
 >[!NOTE]
 >
->Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven.
+>Schuif naar links/rechts om de volledige inhoud van de tabel weer te geven. Meer informatie over de functie `date` vindt u in de [handleiding voor datumfuncties](./dates.md).
 
 | -functie | Beschrijving | Parameters | Syntaxis | Uitdrukking | Voorbeelduitvoer |
 -------- | ----------- | ---------- | -------| ---------- | -------------
