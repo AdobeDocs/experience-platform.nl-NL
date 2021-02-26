@@ -1,25 +1,43 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui-gids;mapper;mapping;date;datumfuncties;datums;
+keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui-gids;mapper;mapping;datum;datumfuncties;datumfunctie;datum
 solution: Experience Platform
 title: Datumfuncties van Data Prep
-topic: overview
-description: In dit document worden de datumfuncties geïntroduceerd die worden gebruikt met Data Prep.
+topic: ' - overzicht'
+description: Dit document introduceert de datumfunctie die wordt gebruikt met Data Prep.
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 12%
+source-wordcount: '483'
+ht-degree: 11%
 
 ---
 
 
-# Datumvoorloopdatumfuncties
+# Date, functie
 
 Data Prep ondersteunt datumfuncties, zowel als tekenreeksen als als datetime-objecten.
 
+## Datumfunctie-indeling
+
+De datumfunctie zet tekenreeksen en datetime-objecten om in een ISO 8601-opgemaakt ZonedDateTime-object.
+
+**Indeling**
+
+```http
+date({DATE}, {FORMAT}, {DEFAULT_DATE})
+```
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `{DATE}` | Vereist. De tekenreeks die de datum vertegenwoordigt. |
+| `{FORMAT}` | Optioneel. De tekenreeks die staat voor de notatie van de datum. Meer informatie over tekenreeksindeling vindt u in het gedeelte [datum-/tijdnotatie](#format). |
+| `{DEFAULT_DATE}` | Optioneel. De standaarddatum die moet worden geretourneerd als de opgegeven datum null is. |
+
+De expressie `date(orderDate, "yyyy-MM-dd")` converteert bijvoorbeeld de waarde `orderDate` van &quot;31 december 2020&quot; naar de waarde &quot;2020-12-31&quot; voor de datetime.
+
 ## Datumfunctie converteert
 
-Wanneer de koordgebieden van inkomende gegevens aan datumgebieden in schema&#39;s gebruikend het Model van de Gegevens van de Ervaring (XDM) in kaart worden gebracht, zou het datumformaat uitdrukkelijk moeten worden vermeld. Indien niet expliciet vermeld, probeert Data Prep de invoergegevens om te zetten door deze aan de volgende indelingen aan te passen. Als een overeenkomende indeling wordt gevonden, wordt de evaluatie van eventuele volgende indelingen stopgezet.
+Wanneer de koordgebieden van inkomende gegevens aan datumgebieden in schema&#39;s gebruikend het Model van de Gegevens van de Ervaring (XDM) in kaart worden gebracht, zou het datumformaat uitdrukkelijk moeten worden vermeld. Indien niet expliciet vermeld, probeert Data Prep de invoergegevens om te zetten door deze aan de volgende indelingen aan te passen. Als een overeenkomende indeling wordt gevonden, wordt de evaluatie van alle volgende indelingen stopgezet.
 
 ```console
 "yyyy-MM-dd HH:mm:ssZ",
@@ -46,7 +64,7 @@ Wanneer de koordgebieden van inkomende gegevens aan datumgebieden in schema&#39;
 >
 > Met Data Prep wordt geprobeerd tekenreeksen zo goed mogelijk om te zetten in datums. Deze omzettingen kunnen echter tot ongewenste resultaten leiden. De tekenreekswaarde &quot;12112020&quot; komt bijvoorbeeld overeen met het patroon &quot;MMddyy&quot;, maar de gebruiker kan de datum hebben willen lezen met het patroon &quot;ddMMyyyy&quot;. Daarom moeten gebruikers expliciet de datumnotatie voor tekenreeksen vermelden.
 
-## Tekenreeksen voor datum-/tijdnotatie
+## Tekenreeksen voor datum-/tijdnotatie {#format}
 
 In de volgende tabel wordt aangegeven welke patroonletters zijn gedefinieerd voor opmaaktekenreeksen. De letters zijn hoofdlettergevoelig.
 
@@ -77,7 +95,3 @@ In de volgende tabel wordt aangegeven welke patroonletters zijn gedefinieerd voo
 | V | Tijdzone-id | Tekst | America/Los_Angeles |
 | O | Verschuiving tijdzone | Tekst | GMT+8 |
 | Q/q | Kwartaal van het jaar | Getal/tekst | 3. 03; Q3; 3de kwartaal |
-
-**Voorbeeld**
-
-De expressie `date(orderDate, "yyyy-MM-dd")` zet de waarde `orderDate` van &quot;31 december 2020&quot; om in een datetime-waarde van &quot;2020-12-31&quot;.
