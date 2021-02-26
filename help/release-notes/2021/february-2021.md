@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
+source-git-commit: 2eea954217a8f0cca605cd0435bace59200cacda
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1126'
 ht-degree: 2%
 
 ---
@@ -25,6 +25,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Dataflows]](#dataflows)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
 - [[!DNL Real-time Customer Profile]](#profile)
@@ -65,6 +66,16 @@ Dataflows zijn een voorstelling van gegevenstaken die gegevens over het Platform
 | Nieuw dashboard voor bewaking | U kunt het controledashboard nu gebruiken voor cross-service transparantie en actionable inzichten voor brongegevensopname. Het nieuwe controledashboard biedt een uitgebreide weergave van gegevens die zijn verwerkt van [!DNL Data Lake] naar [!DNL Identity Service] en naar [!DNL Profile], terwijl u ook de innamesnelheden, successen en fouten kunt controleren. Zie de zelfstudie over [brongegevens controleren in UI](../../dataflows/ui/monitor-sources.md) voor meer informatie. |
 
 Voor meer algemene informatie over gegevensstromen, verwijs naar [dataflows overzicht](../../dataflows/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] zijn vooraf gebouwde integraties met doelplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos te activeren. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+
+**Nieuwe bestemmingen**
+
+| Bestemming | Beschrijving |
+| ----------- | ----------- |
+| [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | Met de verbinding [!DNL LinkedIn Matched Audiences] kunt u het publiek activeren op het sociale platform [!DNL LinkedIn]. |
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
