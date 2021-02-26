@@ -2,9 +2,9 @@
 title: Integreer de Steun van IAB TCF 2.0 gebruikend Platform launch en de Uitbreiding van SDK van het Web van het Platform
 description: Leer hoe u IAB TCF 2.0 instelt voor toestemming met Adobe Experience Platform Launch en de Adobe Experience Platform Web SDK-extensie.
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 1a51ce92eb5c41ff65ebcf4c652640dd0782487f
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,9 @@ Bovendien vereist deze handleiding dat u een goed begrip hebt van de SDK van Ado
 
 ## Standaardtoestemming instellen
 
-Binnen de uitbreidingsconfiguratie, is er een het plaatsen voor standaardtoestemming. Dit beheerst het gedrag van klanten die geen toestemmingskoekje hebben. Als u Experience Events wilt bewaren voor klanten die geen toestemmingskoekje hebben, plaats dit aan `pending`.
+Binnen de uitbreidingsconfiguratie, is er een het plaatsen voor standaardtoestemming. Dit beheerst het gedrag van klanten die geen toestemmingskoekje hebben. Als u Experience Events wilt bewaren voor klanten die geen toestemmingskoekje hebben, plaats dit aan `pending`. U kunt ook een gegevenselement gebruiken om de standaardwaarde voor toestemming dynamisch in te stellen.
 
->[!NOTE]
->
->Momenteel is het niet mogelijk dit dynamisch in te stellen via de extensie Experience Platform Launch.
-
-Raadpleeg voor meer informatie over de standaardtoestemming de sectie [standaardtoestemming](../../fundamentals/configuring-the-sdk.md#default-consent) in de SDK-configuratiedocumentatie.
+Voor meer informatie over hoe te om standaardtoestemming te vormen, verwijs naar [standaardtoestemmingssectie](../../fundamentals/configuring-the-sdk.md#default-consent) in de de configuratiegids van SDK.
 
 ## Profiel bijwerken met toestemmingsinformatie {#consent-code-1}
 
@@ -69,7 +65,7 @@ Deze aangepaste code doet twee dingen:
 * Waarde: &quot;%IAB TCF toestemming String%&quot;
 * GDPR is van toepassing: &quot;%IAB TCF toestemming GDPR%&quot;
 
-![IAB-actie voor toestemming instellen](../../../assets/iab_set_consent_action.png)
+![IAB-actie voor toestemming instellen](../../images/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
