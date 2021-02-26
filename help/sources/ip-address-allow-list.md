@@ -3,11 +3,11 @@ keywords: Experience Platform;huis;populaire onderwerpen;ip adres;ip adressen;ip
 description: IP de adressen moeten aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken.
 solution: Experience Platform
 title: IP de Lijst van gewenste personen van het Adres voor BronVerbindingen
-topic: overview
+topic: ' - overzicht'
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 6ee71de86d487a38ca4acc76813111994eb44bd9
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,15 @@ U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewal
 - `20.49.111.0/29`
 - `40.71.14.32/28`
 - `40.78.229.96/28`
+
+## Amerikaanse regio Oost-VS 2
+
+- `20.41.2.0/23`
+- `20.41.4.0/26`
+- `20.44.17.80/28`
+- `20.49.102.16/29`
+- `40.70.148.160/28`
+- `52.167.107.224/28`
 
 ## West-Europa
 
