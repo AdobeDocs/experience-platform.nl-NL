@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 2eea954217a8f0cca605cd0435bace59200cacda
+source-git-commit: efa06bec5af65240fdd586da4fd0439b8d1146b8
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1137'
 ht-degree: 2%
 
 ---
@@ -76,6 +76,8 @@ Voor meer algemene informatie over gegevensstromen, verwijs naar [dataflows over
 | Bestemming | Beschrijving |
 | ----------- | ----------- |
 | [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | Met de verbinding [!DNL LinkedIn Matched Audiences] kunt u het publiek activeren op het sociale platform [!DNL LinkedIn]. |
+
+Voor meer algemene informatie over bestemmingen, verwijs naar [bestemmingen overzicht](../../destinations/home.md).
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
