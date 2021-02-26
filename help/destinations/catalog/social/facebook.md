@@ -3,21 +3,15 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: 28cfac3d7fed311d9eec01ef464cf921f44a10e9
+source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '942'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Facebook] verbinding
-
->[!IMPORTANT]
->
->We migreren momenteel klanten naar de nieuwe versie van deze bestemming, [!DNL Facebook Custom Audience].
->
-> De instructies in dit artikel zijn van toepassing op beide versies, met de volgende opmerking: terwijl deze migratie bezig is, zult u slechts de huidige versie van [!DNL Facebook] bestemming in het gebruikersinterface zien, waar u [!UICONTROL EMAIL] en [!UICONTROL EMAIL_LC_SHA_256] identiteiten voor activering kunt slechts gebruiken.
 
 Activeer profielen voor uw [!DNL Facebook] campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 
