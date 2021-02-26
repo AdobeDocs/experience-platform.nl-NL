@@ -2,13 +2,13 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;het stromen ingestie;ingestie;tijdreeksgegevens;stroom tijdreeksgegevens;
 solution: Experience Platform
 title: Gegevens uit tijdreeks streamen met API's voor streaming insluiting
-topic: tutorial
-type: Tutorial
+topic: zelfstudie
+type: Zelfstudie
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1313'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Stel een schema samen dat van de klasse XDM ExperienceEvent wordt gebaseerd
 
-Om een dataset tot stand te brengen, zult u eerst een nieuw schema moeten creëren dat de [!DNL XDM ExperienceEvent] klasse uitvoert. Voor meer informatie over hoe te om schema&#39;s tot stand te brengen, te lezen gelieve [de ontwikkelaarsgids ](../../xdm/api/getting-started.md) van de Registratie van het Schema API.
+Om een dataset tot stand te brengen, zult u eerst een nieuw schema moeten creëren dat de [!DNL XDM ExperienceEvent] klasse uitvoert. Voor meer informatie over hoe te om schema&#39;s tot stand te brengen, te lezen gelieve [de ontwikkelaarsgids ](../../xdm/api/getting-started.md) van de Registratie van het schema API.
 
 **API-indeling**
 
@@ -189,7 +189,7 @@ Vervolgens voegt u een [identiteitsdescriptor](../../xdm/api/descriptors.md) toe
 
 1. Het werk-e-mailadres wordt een verplicht veld. Dit betekent dat berichten die zonder dit veld worden verzonden, niet worden gevalideerd en niet worden ingevoerd.
 
-2. [!DNL Real-time Customer Profile] gebruikt het werk-e-mailadres als id om meer informatie over die persoon te koppelen.
+2. [!DNL Real-time Customer Profile] gebruikt het werk-e-mailadres als id om meer informatie over die persoon samen te voegen.
 
 ### Verzoek
 
@@ -316,9 +316,11 @@ U kunt tijdreeksgegevens met of zonder de bronnaam in een streamingverbinding in
 
 In de onderstaande voorbeeldaanvraag worden tijdreeksgegevens met een ontbrekende bronnaam aan het Platform toegevoegd. Als de bronnaam ontbreekt in de gegevens, wordt de bron-id toegevoegd uit de definitie van de streamingverbinding.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->U zult uw eigen `xdmEntity._id` en `xdmEntity.timestamp` moeten produceren. Een goede manier om een identiteitskaart te produceren is UUID te gebruiken. Bovendien vereist de volgende API-aanroep **not** geen verificatiekoppen.
+>U zult uw eigen `xdmEntity._id` en `xdmEntity.timestamp` moeten produceren. Een goede manier om een identiteitskaart te produceren is de functie UUID in de Prep van Gegevens te gebruiken. Meer informatie over de functie UUID vindt u in de [handleiding voor functies van Data Prep](../../data-prep/functions.md). Het `xdmEntity._id` attribuut vertegenwoordigt een uniek herkenningsteken voor het verslag zelf, **not** unieke identiteitskaart van de persoon of het apparaat waarvan verslag het is. De persoon of apparaat-id is specifiek voor alle kenmerken die zijn toegewezen als een persoon of apparaat-id van het schema.
+>
+>Zowel `xdmEntity._id` als `xdmEntity.timestamp` zijn de enige vereiste gebieden voor tijdreeksgegevens. Bovendien vereist de volgende API-aanroep **not** geen verificatiekoppen.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
