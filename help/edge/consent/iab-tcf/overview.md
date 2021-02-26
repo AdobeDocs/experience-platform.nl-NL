@@ -3,7 +3,7 @@ title: IAB TCF 2.0 Steun in de SDK van het Web van Adobe Experience Platform
 description: Leer hoe u IAB TCF 2.0-voorkeuren voor toestemming ondersteunt met de Adobe Experience Platform Web SDK
 keywords: toestemming;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 1c6238a0cf72230e019fd10d9a72f30444bd9fb9
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
@@ -66,7 +66,7 @@ In de onderstaande secties worden de belangrijkste integratiepunten tussen IAB T
 
 De standaardtoestemming wordt gebruikt wanneer er geen toestemmingsvoorkeur reeds voor een klant wordt bewaard. Dit betekent dat de opties voor standaardtoestemming het gedrag van Adobe Experience Platform Web SDK kunnen bepalen en kunnen wijzigen op basis van het gebied van een klant.
 
-Als u bijvoorbeeld een klant hebt die niet onder de algemene gegevensbeschermingsverordening (GDPR) valt, kan de standaardtoestemming worden ingesteld op `in`, maar binnen de jurisdictie van GDPR, kan de standaardtoestemming worden ingesteld op `pending`. Uw cloudbeheerplatform (CMP) kan het gebied van de klant detecteren en de vlag `gdprApplies` leveren aan IAB TCF 2.0. Deze markering kan worden gebruikt om de standaardtoestemming te plaatsen.
+Als u bijvoorbeeld een klant hebt die niet onder de algemene gegevensbeschermingsverordening (GDPR) valt, kan de standaardtoestemming worden ingesteld op `in`, maar binnen de jurisdictie van GDPR, kan de standaardtoestemming worden ingesteld op `pending`. Uw Platform van het Beheer van de Toestemming (CMP) zou het gebied van de klant kunnen ontdekken en de vlag `gdprApplies` aan IAB TCF 2.0 verstrekken. Deze markering kan worden gebruikt om de standaardtoestemming te plaatsen.
 
 Raadpleeg voor meer informatie over de standaardtoestemming de sectie [standaardtoestemming](../../fundamentals/configuring-the-sdk.md#default-consent) in de SDK-configuratiedocumentatie.
 
