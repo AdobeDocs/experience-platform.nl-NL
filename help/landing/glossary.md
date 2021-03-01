@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Adobe Experience Platform Verklarende woordenlijst
-topic: getting started
+topic: aan de slag
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 translation-type: tm+mt
 source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '7137'
+source-wordcount: '7139'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 **Kenmerken**: Kenmerken zijn opgegeven kenmerken die een profiel vertegenwoordigen.
 
-**Kenmerk samenvoegen**: Wanneer u een samenvoegbeleid definieert met de realtime-klantprofiel-API, geeft het  `attributeMerge` object aan op welke manier het samenvoegbeleid profielkenmerken voorrang geeft in het geval van gegevensconflicten. Het is gelijk aan het selecteren van een [!UICONTROL methode van de Fusie] wanneer het bepalen van een fusiebeleid in het Platform UI.
+**Kenmerk samenvoegen**: Wanneer u een samenvoegbeleid definieert met de Real-Time Customer Profile API, geeft het  `attributeMerge` object aan op welke manier het samenvoegbeleid profielkenmerken voorrang geeft in het geval van gegevensconflicten. Het is gelijk aan het selecteren van een [!UICONTROL methode van de Fusie ] wanneer het bepalen van een fusiebeleid in het Platform UI.
 
 **Attribution AI**:  [!DNL Attribution AI] is een Intelligent Service aangedreven door Adobe Sensei die algoritmische multi-channel attributiemogelijkheden over de volledige klantenlevenscyclus levert.
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 **Catalogus**: In de context van bronnen en bestemmingen, is een catalogus een galerij met beschikbare verbindingen aan Adobe toepassingen en derdetechnologieën. Niet verwarren met [!DNL Catalog Service].
 
-**[!DNL Catalog Service]**:  [!DNL Catalog Service] (ook wel  [!DNL Catalog]genoemd) is het recordsysteem voor de locatie van gegevens en de verbinding in Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het gegevenspeer als dossiers en folders worden opgeslagen, [!DNL Catalog] houdt de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging, controle, en gegeven-beheer doeleinden.
+**[!DNL Catalog Service]**:  [!DNL Catalog Service] (soms genoemd  [!DNL Catalog]) is het systeem van verslag voor gegevensplaats en lijn binnen Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het gegevenspeer als dossiers en folders worden opgeslagen, [!DNL Catalog] houdt de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging, controle, en gegeven-beheer doeleinden.
 
 **Klasse**: In het Model van Gegevens van de Ervaring (XDM), bepaalt een klasse de kleinste reeks gebieden die worden gebruikt om een schema te bouwen en bepaalt het basisgedrag van het bedrijfsvoorwerp dat het schema vertegenwoordigt.
 
@@ -329,7 +329,7 @@ ht-degree: 0%
 
 ## N
 
-**Niet-productiesandbox**: Niet-productiesandboxen zijn sandboxen die doorgaans worden gebruikt voor ontwikkelingsexperimenten, tests of proeven. In tegenstelling tot productiesandboxen kunnen niet-productiesandboxen worden hersteld en verwijderd.
+**Niet-productiesandbox**: Niet-productiesandboxen zijn sandboxen die doorgaans worden gebruikt voor ontwikkelings-experimenten, -tests of -proeven. In tegenstelling tot productiesandboxen kunnen niet-productiesandboxen worden hersteld en verwijderd.
 
 **[!DNL Notebooks]**:  [!DNL Notebooks] zijn ontworpen met behulp van  [!DNL Jupyter Notebook] en kunnen worden uitgevoerd om gegevensanalyse uit te voeren.
 
@@ -355,7 +355,7 @@ ht-degree: 0%
 
 **Speciale aanbiedingen**: Een gepersonaliseerd aanbod is een aanpasbaar marketingbericht op basis van geschiktheidsregels en -beperkingen.
 
-**Plaatsen**: Een plaatsing is de plaats en of de context waarin een aanbieding voor een eindgebruiker verschijnt.
+**Plaatsingen**: een plaatsing is de locatie en/of de context waarin een aanbieding voor een eindgebruiker wordt weergegeven.
 
 **Werkruimte** voor beleidsregels: Een werkruimte in de gebruikersinterface van het Platform die gegevens toelaat om de etiketten en het beleid van het gegevensgebruik voor uw organisatie te bekijken en te beheren.
 
@@ -469,7 +469,7 @@ ht-degree: 0%
 
 **Services**: Een krachtig kader om de diensten van AI en van ML in werking te stellen door Adobe Intelligente Diensten te leveraging. De diensten leveren in real time, gepersonaliseerde klantenervaringen of operationeel douane intelligente diensten.
 
-**Single Identity personalization marketing action**: A marketing action that uses data for onsite content personalization. De verpersoonlijking op locatie is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over gebruikersbelangen te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend.
+**Single Identity personalization marketing action**: A marketing action that uses data for onsite content personalization. De verpersoonlijking onsite is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over gebruikersbelangen te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend.
 
 **Label** voor gegevensgebruik van S1: Een  `S1` gegevensgebruikslabel wordt gebruikt voor de classificatie van gegevens die breedte en lengte opgeven die kunnen worden gebruikt om de precieze locatie van een apparaat te bepalen.
 
