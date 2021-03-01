@@ -3,9 +3,9 @@ title: Voorkeuren voor toestemming van de klant ondersteunen met de Adobe Experi
 description: Leer hoe u voorkeuren voor toestemming ondersteunt met de Adobe Experience Platform Web SDK.
 keywords: toestemming;defaultConsent;defaultConsent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Om de privacy van uw gebruiker te respecteren, zou u om de toestemming van de ge
 Als de gebruiker voor alle doeleinden inbelt, mag de SDK de volgende taken uitvoeren:
 
 * Gegevens verzenden van en naar Adobe-servers.
-* Cookies of webopslagitems lezen en schrijven (behalve voor het doorlopen van de aanmeldingsvoorkeuren van de gebruiker).
+* Cookies of webopslagitems lezen en schrijven.
 
 Als de gebruiker uit alle doeleinden kiest, voert de SDK geen van deze taken uit.
 
