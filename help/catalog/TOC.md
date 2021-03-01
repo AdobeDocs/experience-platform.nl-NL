@@ -28,7 +28,7 @@ ht-degree: 1%
    * [Een batch maken](api/create-batch.md)
    * [Labels voor gegevensgebruik](api/labels.md)
    * [Aanhangsel](api/appendix.md)
-* Gegevenssets {#datasets}
+* Datasets {#datasets}
    * [Overzicht van gegevenssets](datasets/overview.md)
    * [Gebruikershandleiding voor gegevensbestanden](datasets/user-guide.md)
    * [Een gegevensset maken en vullen met API&#39;s](datasets/create.md)
