@@ -3,9 +3,9 @@ title: Opdrachten voor Adobe Experience Platform Web SDK uitvoeren
 description: Leer hoe te om de bevelen van SDK van het Web van het Experience Platform uit te voeren
 keywords: Voer bevelen uit;commandName;Promises;getLibraryInfo;response voorwerpen;toestemming;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,8 @@ ht-degree: 0%
 
 # Opdrachten uitvoeren
 
-Nadat de basiscode op uw webpagina is geïmplementeerd, kunt u beginnen met het uitvoeren van opdrachten met de SDK. U hoeft niet te wachten tot het externe bestand (alloy.js) van de server is geladen voordat u opdrachten uitvoert. Als het laden van de SDK nog niet is voltooid, worden opdrachten zo snel mogelijk in de wachtrij geplaatst en verwerkt door de SDK.
+
+Nadat de basiscode op uw webpagina is geïmplementeerd, kunt u beginnen met het uitvoeren van opdrachten met de SDK. U hoeft niet te wachten tot het externe bestand (`alloy.js`) van de server is geladen voordat u opdrachten uitvoert. Als het laden van de SDK nog niet is voltooid, worden opdrachten zo snel mogelijk in de wachtrij geplaatst en verwerkt door de SDK.
 
 Opdrachten worden uitgevoerd met de volgende syntaxis.
 
