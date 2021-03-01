@@ -4,12 +4,12 @@ solution: Experience Platform
 title: Adobe Experience Platform - Veelgestelde vragen en handleiding voor probleemoplossing
 description: Vind antwoorden op vaak gestelde vragen en een gids voor het oplossen van problemen gemeenschappelijke fouten in Experience Platform.
 landing-page-description: Vind antwoorden op vaak gestelde vragen en een gids voor het oplossen van problemen gemeenschappelijke fouten in Experience Platform.
-topic: getting started
-type: Documentation
+topic: aan de slag
+type: Documentatie
 translation-type: tm+mt
 source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1997'
 ht-degree: 1%
 
 ---
@@ -175,7 +175,7 @@ Dit foutbericht wordt weergegeven wanneer een `Authorization`-header ontbreekt i
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer het toegangstoken in de koptekst `Authorization` niet geldig is. Controleer of het token correct is ingevoerd of [genereer een nieuw token](https://www.adobe.com/go/platform-api-authentication-en) in de Adobe I/O-console.
+Dit foutbericht wordt weergegeven wanneer het toegangstoken in de koptekst `Authorization` niet geldig is. Zorg ervoor dat het teken correct is ingegaan, of [produceer een nieuw teken](https://www.adobe.com/go/platform-api-authentication-en) in de Console van Adobe I/O.
 
 ### API-sleutel is vereist
 
@@ -197,7 +197,7 @@ Dit foutbericht wordt weergegeven wanneer een API-sleutelheader (`x-api-key`) on
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer de waarde van de opgegeven API-sleutelheader (`x-api-key`) ongeldig is. Controleer of u de sleutel correct hebt ingevoerd voordat u het opnieuw probeert. Als u de API-sleutel niet kent, vindt u deze in de [Adobe I/O-console](https://console.adobe.io): Navigeer op het tabblad **Integrations** naar de sectie **Overzicht** voor een specifieke integratie om de API-sleutel onder **Client Credentials** te vinden.
+Dit foutbericht wordt weergegeven wanneer de waarde van de opgegeven API-sleutelheader (`x-api-key`) ongeldig is. Controleer of u de sleutel correct hebt ingevoerd voordat u het opnieuw probeert. Als u uw API-sleutel niet kent, kunt u deze vinden in de [Adobe I/O Console](https://console.adobe.io): Navigeer op het tabblad **Integrations** naar de sectie **Overzicht** voor een specifieke integratie om de API-sleutel onder **Client Credentials** te vinden.
 
 
 ### Ontbrekende koptekst
@@ -220,7 +220,7 @@ Dit foutbericht wordt weergegeven wanneer een IMS org-header (`x-gw-ims-org-id`)
 }
 ```
 
-Dit foutbericht wordt weergegeven wanneer de gebruiker of Adobe I/O-integratie (geïdentificeerd door de [toegangstoken](#how-do-i-get-an-access-token) in de koptekst `Authorization`) niet gerechtigd is om [!DNL Experience Platform] API&#39;s aan te roepen voor de IMS-organisatie die wordt geleverd in de koptekst `x-gw-ims-org-id`. Controleer of u de juiste id voor uw IMS-organisatie in de koptekst hebt opgegeven voordat u het opnieuw probeert. Als u uw organisatie-id niet kent, vindt u deze in de [Adobe I/O-console](https://console.adobe.io): Navigeer op het tabblad **Integraties** naar de sectie **Overzicht** voor een specifieke integratie om de id te vinden onder **Client Credentials**.
+Dit foutbericht wordt weergegeven wanneer de gebruikers- of Adobe I/O-integratie (aangeduid met de [toegangstoken](#how-do-i-get-an-access-token) in de koptekst `Authorization`) niet het recht heeft om [!DNL Experience Platform] API&#39;s aan te roepen voor de IMS-organisatie die in de koptekst `x-gw-ims-org-id` wordt opgegeven. Controleer of u de juiste id voor uw IMS-organisatie in de koptekst hebt opgegeven voordat u het opnieuw probeert. Als u uw organisatie-id niet kent, vindt u deze in de [Adobe I/O Console](https://console.adobe.io): Navigeer op het tabblad **Integraties** naar de sectie **Overzicht** voor een specifieke integratie om de id te vinden onder **Client Credentials**.
 
 ### Geldig inhoudstype niet opgegeven
 
