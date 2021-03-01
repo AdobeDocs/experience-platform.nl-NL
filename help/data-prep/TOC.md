@@ -12,7 +12,7 @@ ht-degree: 0%
 ---
 
 
-# Gegevensprep {#data-prep}
+# Data Prep {#data-prep}
 
 * [Overzicht van Data Prep](home.md)
 * [Functies Data Prep](functions.md)
