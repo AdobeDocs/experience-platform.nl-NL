@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;ui;UI;XDM;XDM systeem;ervaringsgegevensmodel;Ervaring gegevensmodel;Gegevensmodel;Gegevensmodel;Gegevensmodel;Schema redacteur;Schema;Schema;Schema;schema's;Schema's;Maken
+keywords: Experience Platform;thuis;populaire onderwerpen;ui;UI;XDM;XDM systeem;ervaringsgegevensmodel;Ervaring gegevensmodel;Gegevensmodel;Gegevensmodel;Gegevensmodel;Schema redacteur;Schema;Schema;Schema;schema's;Schema's;Schema's;creeer
 solution: Experience Platform
 title: Een schema maken met de Schema-editor
-topic: tutorial
-type: Tutorial
+topic: zelfstudie
+type: Zelfstudie
 description: Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in het Experience Platform.
 translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '3600'
+source-wordcount: '3602'
 ht-degree: 0%
 
 ---
