@@ -45,7 +45,7 @@ ht-degree: 15%
    * Adobe Target {#adobe-target}
       * [Overzicht](personalization/adobe-target/target-overview.md)
       * [Implementatie van één pagina](personalization/adobe-target/spa-implementation.md)
-   * Offer Decisioning {#offer-decisioning}
+   * offer decisioning {#offer-decisioning}
       * [Overzicht](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Toestemming {#consent}
    * [Ondersteunende toestemming](consent/supporting-consent.md)
