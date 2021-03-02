@@ -6,9 +6,9 @@ topic: ' - overzicht'
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met een Amazon Kinesis-account met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: 4f3d88e1241fd19dc9963f34dd60086ae2135557
+source-git-commit: ed14fe464a4dc82f54902c8dc92fe00bc2a5381e
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '561'
 ht-degree: 1%
 
 ---
@@ -92,8 +92,9 @@ curl -X POST \
         "auth": {
             "specName": "Aws Kinesis authentication credentials",
             "params": {
-                "accessKeyId": "accessKeyId",
-                "secretKey": "secretKey"
+                "accessKeyId": "{ACCESS_KEY_ID}",
+                "secretKey": "{SECRET_KEY}",
+                "region: "{REGION}
             }
         },
         "connectionSpec": {
@@ -107,7 +108,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | De toegangs belangrijkste identiteitskaart voor uw [!DNL Kinesis] rekening. |
 | `auth.params.secretKey` | De geheime toegangssleutel voor uw [!DNL Kinesis] rekening. |
-| `auth.params.region` | Het gebied voor uw [!DNL Kinesis] rekening. |
+| `auth.params.region` | Het gebied voor uw [!DNL Kinesis] rekening. Voor meer informatie over gebieden, zie het document op [IP adres lijst van gewenste personen](../../../../ip-address-allow-list.md) |
 | `connectionSpec.id` | De [!DNL Kinesis] ID van de verbindingsspecificatie: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Antwoord**
