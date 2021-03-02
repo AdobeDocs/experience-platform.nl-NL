@@ -3,13 +3,13 @@ keywords: Experience Platform;home;populaire onderwerpen;bijgewerkte accounts
 description: In sommige omstandigheden kan het nodig zijn de details van een bestaande bronrekening bij te werken. De werkruimte Bronnen biedt u de mogelijkheid om details van een bestaande batch- of streamingverbinding toe te voegen, te bewerken en te verwijderen, inclusief de naam, beschrijving en referenties.
 solution: Experience Platform
 title: Accountgegevens van bronverbinding bijwerken in de gebruikersinterface
-topic: overview
+topic: ' - overzicht'
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: ac477ee8053b30e88a38800ebe33fc9b5a520308
+source-git-commit: 04cf2cc1f15d9a673a0753643fc6263bcaf41464
 workflow-type: tm+mt
 source-wordcount: '681'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -26,8 +26,8 @@ Dit leerprogramma verstrekt stappen voor het bijwerken van de details en de gelo
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [Bronnen](../../home.md): Het Experience Platform van DNL staat gegevens toe om uit diverse bronnen worden opgenomen terwijl het voorzien van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-- [Sandboxen](../../../sandboxes/home.md): DNL-Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+- [Bronnen](../../home.md): Met Experience Platform kunnen gegevens uit verschillende bronnen worden ingepakt en kunt u inkomende gegevens structureren, labelen en verbeteren met behulp van de services van Platforms.
+- [Sandboxen](../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ## Accounts bijwerken
 
