@@ -3,10 +3,11 @@ product: experience-platform
 audience: user
 user-guide-title: Gegevensstroomgids
 user-guide-description: Dataflows zijn een voorstelling van gegevenstaken die gegevens over het Platform verplaatsen.
+feature: Gegevensbeheer, gegevensinname
 translation-type: tm+mt
-source-git-commit: 185c9c953a6ce923359e221d6f0f91b0f6614f05
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '43'
+source-wordcount: '47'
 ht-degree: 0%
 
 ---
