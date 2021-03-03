@@ -2,9 +2,9 @@
 title: Overzicht van Adobe Experience Platform Web SDK-extensie
 description: Meer informatie over de Adobe Experience Platform Web SDK Extension voor Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 18e511337eaa8b6eb7785b1ee5f1ce2366ddd7c7
+source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '553'
 ht-degree: 1%
 
 ---
@@ -32,17 +32,17 @@ In beide gevallen, komt u bij de configuratiepagina voor het Web SDK van het Pla
 
 ## Algemene configuratieopties
 
-De configuratieopties boven aan de pagina vertellen Adobe Experience Platform waar te om de gegevens te leiden en welke configuraties op de server zouden moeten worden gebruikt.
+De configuratieopties boven aan de pagina vertellen Adobe Experience Platform waar de gegevens moeten worden gerouteerd en welke configuraties op de server moeten worden gebruikt.
 
 ### [!UICONTROL Naam]
 
-De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. Dit wordt gebruikt om gegevens naar veelvoudige organisaties met één enkele configuratie van de Platform launch te verzenden.
+De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. De naam wordt gebruikt om gegevens naar veelvoudige organisaties met één enkele configuratie van de Platform launch te verzenden.
 
 De naam van de extensie is standaard &quot;[!DNL alloy]&quot;. U kunt de instantienaam echter wijzigen in elke geldige naam voor een JavaScript-object.
 
 ### **[!UICONTROL IMS-organisatie-id]**
 
-De [!UICONTROL IMS Organisatie-id] is de organisatie waarnaar u de gegevens op Adobe wilt verzenden. Meestal moet u de standaardwaarde gebruiken die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
+De [!UICONTROL IMS Organisatie-id] is de organisatie waarnaar u de gegevens op Adobe wilt verzenden. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
 
 ### **[!UICONTROL Edge-domein]**
 
@@ -50,7 +50,7 @@ Het [!UICONTROL Edge-domein] is het domein waarvan de Adobe Experience Platform-
 
 ## [!UICONTROL Edge-configuraties]
 
-Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, wordt een Edge-configuratie-id gebruikt om naar de serverconfiguratie te verwijzen. Hierdoor kunt u de configuratie bijwerken zonder dat u codewijzigingen hoeft aan te brengen op uw website.
+Wanneer een aanvraag naar het Adobe Experience Platform Edge-netwerk wordt verzonden, wordt een Edge-configuratie-id gebruikt om naar de serverconfiguratie te verwijzen. U kunt de configuratie bijwerken zonder dat u codewijzigingen op uw website hoeft aan te brengen.
 
 Zie de handleiding op [randconfiguraties](../fundamentals/edge-configuration.md) voor meer informatie.
 
@@ -61,5 +61,5 @@ In de sectie [!UICONTROL Privacy] kunt u configureren hoe de SDK de toestemmings
 | [!UICONTROL Standaardniveau van toestemming] | Beschrijving |
 | --- | --- |
 | [!UICONTROL In] | Inschakelen. Gebruik deze optie als u de instemming van de klant standaard aanneemt en alleen de signalen van de opt-out respecteert. |
-| [!UICONTROL In behandeling] | Klanten met &quot;hangende&quot; toestemming worden verondersteld te worden uitgesloten tot een opt-in signaal wordt verzonden. Gebruik deze optie als u expliciete klantentoestemming voor uw bedrijfsverrichtingen vereist. |
+| [!UICONTROL In behandeling] | Klanten met &quot;hangende&quot; toestemming worden uitgeschakeld totdat een aanmeldingssignaal wordt verzonden. Gebruik deze optie als u expliciete klantentoestemming voor uw bedrijfsverrichtingen vereist. |
 | [!UICONTROL Verstrekt door gegevenselement] | Het standaard toestemmingsniveau wordt bepaald door een afzonderlijk gegevenselement dat u bepaalt. Wanneer u deze optie gebruikt, moet u het gegevenselement opgeven met behulp van het opgegeven vervolgkeuzemenu. |
