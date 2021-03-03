@@ -3,10 +3,11 @@ product: experience-platform
 audience: user
 user-guide-title: Handleiding voor catalogi en gegevenssets
 user-guide-description: Onderzoek gegevenslijn, meta-gegevens, dossierbeschrijvingen, folders, en datasets binnen het meer van Gegevens.
+feature: Gegevensbeheer
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '108'
 ht-degree: 1%
 
 ---
