@@ -5,9 +5,9 @@ title: Toewijzingsfuncties voor gegevenspremies
 topic: ' - overzicht'
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 translation-type: tm+mt
-source-git-commit: fd2dffd5b8957833b670e9cb434517bcb0f886a3
+source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
 workflow-type: tm+mt
-source-wordcount: '3625'
+source-wordcount: '3719'
 ht-degree: 2%
 
 ---
@@ -149,6 +149,8 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | samenvoegen | Retourneert het eerste niet-null-object in een opgegeven array. | <ul><li>INVOER: **Required** De serie u het eerste niet-krachteloze voorwerp van wilt vinden.</li></ul> | kool(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | first | Hiermee wordt het eerste element van de opgegeven array opgehaald. | <ul><li>INVOER: **Required** De serie u het eerste element van wilt vinden.</li></ul> | first (INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | Hiermee wordt het laatste element van de opgegeven array opgehaald. | <ul><li>INVOER: **Required** De serie u het laatste element van wilt vinden.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
+| add_to_array | Voegt elementen aan het einde van de array toe. | <ul><li>ARRAY: **Required** De array waaraan u elementen toevoegt.</li><li>WAARDEN: De elementen die u aan de array wilt toevoegen.</li></ul> | add_to_array &#x200B;(ARRAY, VALUES) | add_to_array &#x200B;([&#39;a&#39;, &#39;b&#39;], &#39;c&#39;, &#39;d&#39;) | [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;] |
+| join_arrays | Combineert de arrays met elkaar. | <ul><li>ARRAY: **Required** De array waaraan u elementen toevoegt.</li><li>WAARDEN: De array(s) die u aan de bovenliggende array wilt toevoegen.</li></ul> | join_arrays &#x200B;(ARRAY, VALUES) | join_arrays &#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;] |
 | to_array | Neemt een lijst van input en zet het in een serie om. | <ul><li>INCLUDE_NULLS: **Required** Een booleaanse waarde om erop te wijzen of om nulls in de reactierearray al dan niet te omvatten.</li><li>WAARDEN: **Required** De elementen die in een serie moeten worden omgezet.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
 ### Logische operatoren
