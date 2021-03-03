@@ -2,9 +2,9 @@
 title: Typen gegevenselementen in de Adobe Experience Platform Web SDK-extensie
 description: Leer over de verschillende types van gegevenselement die door de uitbreiding van SDK van het Web van Adobe Experience Platform in Adobe Experience Platform Launch worden verstrekt.
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
@@ -22,18 +22,18 @@ Dit gegevenselement verstrekt een identiteitskaart van de gebeurtenisfusie wanne
 
 ## Identiteitskaart
 
-Met het gegevenselement voor identiteitskaarten kunt u identiteiten maken op basis van andere gegevenselementen of andere waarden die u opgeeft. Alle identiteiten die u maakt, moeten worden gekoppeld aan een bijbehorende naamruimte. Dit gegevenselement bevat een vervolgkeuzelijst met alle standaardnaamruimten en alle ruimten die u hebt gemaakt.
+Met het gegevenselement voor identiteitskaarten kunt u identiteiten maken op basis van andere gegevenselementen of andere waarden die u opgeeft. Alle identiteiten die u maakt, moeten worden gekoppeld aan een bijbehorende naamruimte. Dit gegevenselement bevat een vervolgkeuzelijst met alle standaardnaamruimten en alle gemaakte naamruimten.
 
 ![](./assets/identity-map-data-element.png)
 
 ## XDM-object
 
-Alle gegevens die u naar de Adobe Experience Platform Web SDK verzendt, moeten de XDM-indeling hebben. Het formatteren van uw gegevens is gemakkelijker met het XDM objectelement. Wanneer u dit gegevenselement voor het eerst opent, selecteert u de juiste Adobe Experience Platform-sandbox en -schema. Nadat u het schema hebt geselecteerd, ziet u de structuur van het schema, dat u gemakkelijk kunt invullen.
+Gebruik XDM-indeling om gegevens naar de Adobe Experience Platform Web SDK te verzenden. Het formatteren van uw gegevens is gemakkelijker met het XDM objectelement. Wanneer u dit gegevenselement voor het eerst opent, selecteert u de juiste Adobe Experience Platform-sandbox en -schema. Nadat u het schema hebt geselecteerd, ziet u de structuur van uw schema, dat u gemakkelijk kunt invullen.
 
 ![](./assets/XDM-object.png)
 
-Wanneer u bepaalde velden in uw schema opent, zoals `web.webPageDetails.URL`, worden sommige items automatisch verzameld. Hoewel meerdere items automatisch worden verzameld, kunt u desgewenst alle items overschrijven. Alle waarden kunnen handmatig of met andere gegevenselementen worden ingevuld.
+Wanneer u bepaalde velden in uw schema opent, zoals `web.webPageDetails.URL`, worden sommige items automatisch verzameld. Hoewel meerdere items automatisch worden verzameld, kunt u indien nodig alle items overschrijven. Alle waarden kunnen handmatig of met andere gegevenselementen worden ingevuld.
 
 >[!NOTE]
 >
->U hoeft alleen de gegevens in te vullen die u wilt verzamelen. Alles wat niet is ingevuld, wordt geactiveerd wanneer de gegevens naar de oplossingen worden verzonden.
+>Vul alleen de gegevens in die u wilt verzamelen. Alles wat niet is ingevuld, wordt weggelaten wanneer de gegevens naar de oplossingen worden verzonden.
