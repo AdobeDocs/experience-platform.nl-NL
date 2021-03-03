@@ -3,10 +3,11 @@ product: experience-platform
 audience: user
 user-guide-title: Handleiding met informatie over waarneming
 user-guide-description: De activiteiten van het Platform volgen door gebruik te maken van statistische gegevens en meldingen van gebeurtenissen.
+feature: Gegevensbeheer
 translation-type: tm+mt
-source-git-commit: 92e3edaba5793d18e826d3e3f3151ba8a51fce53
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '53'
+source-wordcount: '55'
 ht-degree: 9%
 
 ---
