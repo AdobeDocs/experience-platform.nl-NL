@@ -6,9 +6,9 @@ description: Dit document behandelt het maken van e-mailmarketingdoelen met de A
 topic: zelfstudie
 type: Zelfstudie
 translation-type: tm+mt
-source-git-commit: c8b08b2feb30bf137d802ce82df92d3f9f8bdb78
+source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1701'
 ht-degree: 0%
 
 ---
@@ -366,6 +366,8 @@ Een succesvolle reactie bevat het unieke herkenningsteken van de basisverbinding
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] Hiermee worden de exportbestanden automatisch gesplitst op 5 miljoen records (rijen) per bestand. Elke rij vertegenwoordigt één profiel.
+>
+>Namen van gesplitste bestanden worden toegevoegd met een getal dat aangeeft dat het bestand deel uitmaakt van een grotere exportbewerking, als zodanig: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 **API-indeling**
 
