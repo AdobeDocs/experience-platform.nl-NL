@@ -6,9 +6,9 @@ topic: zelfstudie
 type: Zelfstudie
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 translation-type: tm+mt
-source-git-commit: 27a7855492f2f8e7a92651cd97371c904dd1561d
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ## Stel een schema samen dat van de [!DNL XDM Individual Profile] klasse wordt gebaseerd
 
-Om een dataset tot stand te brengen, zult u eerst een nieuw schema moeten creëren dat de [!DNL XDM Individual Profile] klasse uitvoert. Voor meer informatie over hoe te om schema&#39;s tot stand te brengen, te lezen gelieve [de ontwikkelaarsgids ](../../xdm/api/getting-started.md) van de Registratie van het Schema API.
+Om een dataset tot stand te brengen, zult u eerst een nieuw schema moeten creëren dat de [!DNL XDM Individual Profile] klasse uitvoert. Voor meer informatie over hoe te om schema&#39;s tot stand te brengen, te lezen gelieve [de ontwikkelaarsgids ](../../xdm/api/getting-started.md) van de Registratie van het schema API.
 
 **API-indeling**
 
