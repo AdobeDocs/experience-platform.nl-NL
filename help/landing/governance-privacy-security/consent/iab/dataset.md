@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;IAB;IAB 2.0;toestemming;toestemming
 solution: Experience Platform
 title: Datasets maken voor het vastleggen van gegevens met IAB TCF 2.0-toestemming
-topic: privacy events
+topic: privacygebeurtenissen
 description: Dit document verstrekt stappen voor vestiging de twee vereiste datasets om IAB TCF 2.0 toestemmingsgegevens te verzamelen.
 translation-type: tm+mt
-source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
+source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1647'
 ht-degree: 0%
 
 ---
@@ -105,7 +105,7 @@ Voor beide versies van de [!UICONTROL Privacy Details]-mix is ten minste één o
 | `xdm:consentStandard` | Het kader voor de toestemming waarop de gegevens van toepassing zijn. Voor compatibiliteit met TCF moet de waarde `IAB TCF` zijn. |
 | `xdm:consentStandardVersion` | Het versienummer van het toestemmingskader dat door `xdm:consentStandard` wordt vermeld. Voor TCF 2.0 naleving, moet de waarde `2.0` zijn. |
 | `xdm:consentStringValue` | De toestemmingstekenreeks die door het platform van het toestemmingsbeheer (CMP) op de geselecteerde montages van de klant werd geproduceerd. |
-| `xdm:gdprApplies` | Een booleaanse waarde die aangeeft of de GDPR al dan niet op deze klant van toepassing is. De waarde moet aan `true` worden geplaatst opdat de handhaving TCF 2.0 voorkomt. De standaardwaarde is `false` als deze niet is opgenomen. |
+| `xdm:gdprApplies` | Een booleaanse waarde die aangeeft of de GDPR al dan niet op deze klant van toepassing is. De waarde moet aan `true` worden geplaatst opdat de handhaving TCF 2.0 voorkomt. De standaardwaarde is `true` als deze niet is opgenomen. |
 | `xdm:containsPersonalData` | Een booleaanse waarde die aangeeft of de toestemmingsupdate persoonsgegevens bevat. De standaardwaarde is `false` als deze niet is opgenomen. |
 
 ## Goedkeuringsschema&#39;s voor klanten {#create-schemas} maken
