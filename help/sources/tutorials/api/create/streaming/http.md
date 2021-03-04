@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;populaire onderwerpen;streamingverbinding;maak streamingverbinding;api-hulplijn;zelfstudie;maak een streamingverbinding;streaming opname;opname;
 solution: Experience Platform
 title: Een streamingverbinding maken met de API
-topic: tutorial
-type: Tutorial
+topic: zelfstudie
+type: Zelfstudie
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 translation-type: tm+mt
-source-git-commit: 5932d63820dd0e50acccd18573746061232e099e
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '885'
 ht-degree: 1%
 
 ---
