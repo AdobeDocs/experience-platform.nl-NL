@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;naamruimte voor identiteit;Naamruimte
 solution: Experience Platform
 title: Handleiding voor probleemoplossing voor identiteitsservice
-topic: troubleshooting
+topic: problemen oplossen
 description: Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform Identity Service en een gids voor probleemoplossing voor algemene fouten.
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2190'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Identity Service] en een gids voor probleemoplossing voor algemene fouten. Raadpleeg de [Adobe Experience Platform API-handleiding voor het oplossen van problemen](../landing/troubleshooting.md) voor vragen en het oplossen van problemen met betrekking tot [!DNL Platform] API&#39;s in het algemeen.
 
-Gegevens die één enkele klant identificeren, worden vaak gefragmenteerd over de verschillende apparaten en systemen die zij gebruiken om met uw merk in contact te komen. [!DNL Identity Service] verzamelt deze gefragmenteerde identiteiten, waardoor u een volledig inzicht krijgt in het gedrag van de klant, zodat u in real-time een ongekende digitale ervaring kunt opdoen. Zie [Overzicht van identiteitsservice](./home.md) voor meer informatie.
+Gegevens die één enkele klant identificeren, worden vaak gefragmenteerd over de verschillende apparaten en systemen die zij gebruiken om met uw merk in contact te komen. [!DNL Identity Service] verzamelt deze gefragmenteerde identiteiten, zodat u een volledig inzicht in het gedrag van de klant krijgt zodat u in real-time een ongekende digitale ervaring kunt opdoen. Zie [Overzicht van identiteitsservice](./home.md) voor meer informatie.
 
 ## Veelgestelde vragen
 
@@ -298,7 +298,7 @@ Hieronder volgt een lijst met foutberichten die betrekking hebben op [!DNL Ident
 }
 ```
 
-[!DNL Identity Service] gebruikt alleen identiteiten voor record- of tijdreeksgegevens die overeenkomen met respectievelijk de  [!DNL Profile] of  [!DNL ExperienceEvent] klassen. Deze fout wordt veroorzaakt wanneer wordt geprobeerd gegevens in te voeren voor [!DNL Identity Service] die zich niet aan een van beide klassen houdt.
+[!DNL Identity Service] gebruikt alleen identiteiten voor record- of tijdreeksgegevens die respectievelijk overeenkomen met de  [!DNL Profile] of  [!DNL ExperienceEvent] klassen. Deze fout wordt veroorzaakt wanneer wordt geprobeerd gegevens in te voeren voor [!DNL Identity Service] die zich niet aan een van beide klassen houdt.
 
 ### Er waren 0 geldige identiteiten in de eerste 100 rijen van de verwerkte partij
 
