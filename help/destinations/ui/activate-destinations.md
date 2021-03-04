@@ -6,9 +6,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
 workflow-type: tm+mt
-source-wordcount: '2140'
+source-wordcount: '2184'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Profielen en segmenten naar een doel activeren
 
-Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
+Activeer de gegevens in [!DNL Adobe Experience Platform] door segmenten aan bestemmingen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 
 ## Vereisten {#prerequisites}
 
@@ -38,7 +38,9 @@ Selecteer de naam van het doel om naar de activeringsworkflow te navigeren.
 
 ![activeren-flow](../assets/ui/activate-destinations/activate-flow.png)
 
-Merk op dat als een activeringswerkschema reeds voor een bestemming bestaat, u de segmenten kunt zien die momenteel aan de bestemming worden geactiveerd. Selecteer **[!UICONTROL Activering bewerken]** in de rechtertrack en voer de onderstaande stappen uit om de activeringsdetails te wijzigen.
+>[!NOTE]
+>
+>Als er al een activeringswerkstroom voor een doel bestaat, kunt u de segmenten zien die momenteel aan de bestemming worden geactiveerd. Selecteer **[!UICONTROL Activering bewerken]** in de rechtertrack en voer de onderstaande stappen uit om de activeringsdetails te wijzigen.
 
 Als u een doel hebt geselecteerd, selecteert u **[!UICONTROL Activeren]**.
 
@@ -62,7 +64,7 @@ Voor sociale bestemmingen, moet u bronattributen of identiteitsnamespaces select
 
 #### Voorbeeld: publieksgegevens activeren in [!DNL Facebook Custom Audience] {#example-facebook}
 
-Dit is een voorbeeld van correcte identiteitstoewijzing wanneer het activeren van publieksgegevens in [!DNL Facebook].
+Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het activeren van publieksgegevens in [!DNL Facebook].
 
 Bronvelden selecteren:
 
@@ -140,13 +142,20 @@ Van toepassing op: E-mailmarketingbestemmingen en cloudopslagbestemmingen
 
 ![Stap configureren](../assets/ui/activate-destinations/configure-icon.png)
 
-In **[!UICONTROL vorm]** stap, kunt u het programma en de dossiernamen voor elk segment vormen u uitvoert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
+[!DNL Adobe Experience Platform] Hiermee exporteert u gegevens voor e-mailmarketing en cloudopslagbestemmingen in de vorm van  [!DNL CSV] bestanden. In **[!UICONTROL vorm]** stap, kunt u het programma en de dossiernamen voor elk segment vormen u uitvoert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] Hiermee worden de exportbestanden automatisch gesplitst op 5 miljoen records (rijen) per bestand. Elke rij vertegenwoordigt één profiel.
+>
+>Namen van gesplitste bestanden worden toegevoegd met een getal dat aangeeft dat het bestand deel uitmaakt van een grotere exportbewerking, als zodanig: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
+
 
 Om een programma voor het segment toe te voegen, uitgezocht **[!UICONTROL creeer programma]**.
 
 ![](../assets/ui/activate-destinations/configure-destination-schedule.png)
 
-Er verschijnt een pop-up met opties voor het maken van het segmentschema.
+Er wordt een dialoogvenster weergegeven met opties voor het maken van het segmentschema.
 
 * **Bestand exporteren**: U kunt volledige of incrementele bestanden exporteren. Wanneer u een volledig bestand exporteert, wordt een volledige momentopname gepubliceerd van alle profielen die voor dat segment in aanmerking komen. Wanneer u een incrementeel bestand exporteert, wordt de delta gepubliceerd van profielen die voor dat segment in aanmerking komen sinds de laatste exportbewerking.
 * **Frequentie**: Als  **[!UICONTROL Volledige]** bestanden exporteren is geselecteerd, kunt u de optie  **** Eenmaal of  **[!UICONTROL Dagelijks]** exporteren kiezen. Als **[!UICONTROL Incrementele bestanden exporteren]** is geselecteerd, kunt u alleen **[!UICONTROL Dagelijks]** exporteren. Als u een bestand **[!UICONTROL Once]** exporteert, wordt het bestand één keer geëxporteerd. Als u een bestand **[!UICONTROL Dagelijks]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum om 12:00 uur UTC (7:00 uur EST) als er volledige bestanden zijn geselecteerd en 12:00 uur UTC (7:00 uur EST) als er incrementele bestanden zijn geselecteerd.
@@ -182,7 +191,7 @@ Van toepassing op: reclamebestemmingen, sociale bestemmingen
 
 ![stap voor segmentplanning](../assets/ui/activate-destinations/segment-schedule-icon.png)
 
-Op de **[!UICONTROL pagina van het Segment]**, kunt u de begindatum voor het verzenden van gegevens naar de bestemming, evenals de frequentie plaatsen om gegevens naar de bestemming te verzenden.
+Op **[!UICONTROL Segmentprogramma]** pagina, kunt u de begindatum voor het verzenden van gegevens naar de bestemming, en de frequentie plaatsen om gegevens naar de bestemming te verzenden.
 
 >[!IMPORTANT]
 >
