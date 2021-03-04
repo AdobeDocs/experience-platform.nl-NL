@@ -3,9 +3,9 @@ keywords: RTCDP;CDP;Real-time Platform van klantgegevens;real-time platform voor
 title: Aan de slag met Real-time Platform van klantgegevens
 description: Gebruik dit voorbeeldscenario als voorbeeld wanneer vestiging uw implementatie van het Platform van Gegevens van de Klant in real time.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2328'
 ht-degree: 0%
 
 ---
@@ -261,7 +261,7 @@ U kunt het segment ook plannen om op een bepaald tijdstip te beginnen of te eind
 
 Selecteer **[!UICONTROL Opslaan]** om naar de volgende pagina te gaan.
 
-Wanneer een klant in dit publiek een aankoop doet, wordt zijn lidmaatschap aan dit publiek onderdrukt in real time. Ze komen niet meer in aanmerking omdat hun status is gewijzigd.
+Wanneer een klant in dit publiek een aankoop doet, wordt zijn lidmaatschap aan dit publiek onderdrukt in echt - tijd. Ze komen niet meer in aanmerking omdat hun status is gewijzigd.
 
 Hierdoor bespaart de directeur van het medieteam van Luma honderdduizenden dollars door geen voorraad te gebruiken voor een publiek dat niet gekwalificeerd is.
 
