@@ -2,12 +2,12 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentering;segmentservice;segmenten;segmenten;meerdere entiteiten;segmentatie over meerdere entiteiten;segmenten over meerdere entiteiten;
 solution: Experience Platform
 title: Overzicht van segmentatie van meerdere entiteiten
-topic: overview
+topic: ' - overzicht'
 description: De segmentatie van meerdere entiteiten is de capaciteit om de gegevens van het Profiel met extra gegevens uit te breiden die op producten, opslag, of andere niet-profielklassen worden gebaseerd. Zodra verbonden, worden de gegevens van extra klassen beschikbaar alsof zij aan het schema van het Profiel inheems waren.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Segmentatie met meerdere entiteiten is een geavanceerde functie die beschikbaar 
 
 De segmentatie van meerdere entiteiten vereist een goed begrip van de verschillende diensten van Adobe Experience Platform die bij segmentatie betrokken zijn. Lees de volgende documentatie voordat u doorgaat met deze handleiding:
 
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Verstrekt een verenigd consumentenprofiel in real time, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [[!DNL Real-time Customer Profile]](../profile/home.md): Verstrekt een verenigd consumentenprofiel in echt - tijd, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
    * [Profielhulplijnen](../profile/guardrails.md): Aanbevolen procedures voor het maken van gegevensmodellen die worden ondersteund door  [!DNL Profile].
 * [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Hiermee kunt u segmenten samenstellen op basis van  [!DNL Real-time Customer Profile] gegevens.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
