@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;identiteit;Identiteit;XDM grafieken;Identiteitsservice;Identiteitsservice
 solution: Experience Platform
 title: Overzicht van identiteitsservice
-topic: overview
+topic: ' - overzicht'
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1733'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Identity Service] - overzicht
 
-Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van uw klant vereist. Dit wordt bemoeilijkt wanneer uw klantengegevens over verschillende systemen worden gefragmenteerd, die elke individuele klant ertoe brengen om veelvoudige &quot;identiteiten&quot;te hebben te schijnen. Met Adobe Experience Platform [!DNL Identity Service] kunt u een beter beeld krijgen van uw klanten en hun gedrag door identiteiten over verschillende apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
+Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van uw klant vereist. Dit wordt bemoeilijkt wanneer uw klantengegevens over verschillende systemen worden gefragmenteerd, die elke individuele klant ertoe brengen om veelvoudige &quot;identiteiten&quot;te hebben te schijnen. Met Adobe Experience Platform [!DNL Identity Service] kunt u een beter beeld krijgen van uw klant en zijn gedrag door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 
 ## [!DNL Identity Service] begrijpen
 
@@ -31,7 +31,7 @@ Mary hervat later haar tabletsessie en stuurt haar e-mailadres wanneer ze zich a
 
 Met de volgende klik op haar tablet zou uw doelinhoud het volledige profiel en de geschiedenis van Mary kunnen weerspiegelen, in plaats van slechts een tablet die door een onbekende winkelier wordt gebruikt.
 
-De identiteitsrelaties die [!DNL Identity Service] definieert en onderhoudt, worden gebruikt door [!DNL Real-time Customer Profile] om een volledig beeld van een klant en hun interacties met uw merk te maken. Voor meer informatie, zie [Overzicht van het Profiel van de Klant in real time](../profile/home.md).
+De identiteitsrelaties die [!DNL Identity Service] definieert en onderhoudt, worden gebruikt door [!DNL Real-time Customer Profile] om een volledig beeld van een klant en hun interactie met uw merk te bouwen. Voor meer informatie, zie [Overzicht van het Profiel van de Klant in real time](../profile/home.md).
 
 ### Identiteiten
 
