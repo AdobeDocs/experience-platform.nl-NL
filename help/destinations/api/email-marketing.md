@@ -3,12 +3,12 @@ keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Verbinding maken met marketingdoelen voor e-mail en gegevens activeren via API-aanroepen
 description: Dit document behandelt het maken van e-mailmarketingdoelen met de Adobe Experience Platform API
-topic: tutorial
-type: Tutorial
+topic: zelfstudie
+type: Zelfstudie
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: c8b08b2feb30bf137d802ce82df92d3f9f8bdb78
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1681'
 ht-degree: 0%
 
 ---
@@ -360,6 +360,12 @@ Een succesvolle reactie bevat het unieke herkenningsteken van de basisverbinding
 ```
 
 ### Opslaglocatie en gegevensindeling opgeven
+
+[!DNL Adobe Experience Platform] Hiermee exporteert u gegevens voor e-mailmarketing en cloudopslagbestemmingen in de vorm van  [!DNL CSV] bestanden.
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] Hiermee worden de exportbestanden automatisch gesplitst op 5 miljoen records (rijen) per bestand. Elke rij vertegenwoordigt één profiel.
 
 **API-indeling**
 
