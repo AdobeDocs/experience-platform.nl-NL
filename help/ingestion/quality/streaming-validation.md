@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Validatie voor streaming-inname
 topic: zelfstudie
 type: Zelfstudie
-description: 'Met streaming opname kunt u uw gegevens naar Adobe Experience Platform uploaden met streaming eindpunten in real-time. API''s voor streaming opname ondersteunen twee validatiemodi: synchroon en asynchroon.'
+description: 'Met streaming opname kunt u uw gegevens in real-time uploaden naar Adobe Experience Platform met streaming eindpunten. API''s voor streaming opname ondersteunen twee validatiemodi: synchroon en asynchroon.'
 translation-type: tm+mt
-source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '900'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 # Validatie van gestreamde invoer
 
-Met streaming opname kunt u uw gegevens naar Adobe Experience Platform uploaden met streaming eindpunten in real-time. API&#39;s voor streaming opname ondersteunen twee validatiemodi: synchroon en asynchroon.
+Met streaming opname kunt u uw gegevens in real-time uploaden naar Adobe Experience Platform met streaming eindpunten. API&#39;s voor streaming opname ondersteunen twee validatiemodi: synchroon en asynchroon.
 
 ## Aan de slag
 
