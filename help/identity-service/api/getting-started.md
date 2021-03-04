@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;identiteitsservice-api;handleiding voor ontwikkelaars van identiteitsservices;regio
 solution: Experience Platform
 title: Identiteitsservice-API-handleiding
-topic: API guide
-description: Met de Identiteitsservice-API kunnen ontwikkelaars de identificatie van uw klanten op verschillende apparaten, meerdere kanalen en bijna realtime beheren met behulp van identiteitsgrafieken Adobe Experience Platform. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
+topic: API-handleiding
+description: Met de Identiteitsservice-API kunnen ontwikkelaars de identificatie van uw klanten via verschillende apparaten, kanalen en in de buurt van realtime beheren met behulp van identiteitsgrafieken Adobe Experience Platform. Volg deze handleiding voor het uitvoeren van toetsbewerkingen met de API.
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
