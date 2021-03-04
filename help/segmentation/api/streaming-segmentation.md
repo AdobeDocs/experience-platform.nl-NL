@@ -2,12 +2,12 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;segmentatie;Segmentatie;Segmenteringsdienst;streamingsegmentatie;Streaming segmentatie;Continue evaluatie;
 solution: Experience Platform
 title: 'Evalueer Gebeurtenissen in Bijna Echt - tijd met het stromen Segmentatie '
-topic: developer guide
+topic: ontwikkelaarsgids
 description: Dit document bevat voorbeelden over het gebruik van streamingsegmentatie met de Adobe Experience Platform Segmentation Service-API.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1341'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,13 @@ Door segmentering te streamen op [!DNL Adobe Experience Platform] kunnen klanten
 
 >[!NOTE]
 >
->Streaming segmentatie kan alleen worden gebruikt om gegevens te evalueren die in het Platform worden gestreamd. Met andere woorden, gegevens die via batch-opname worden ingevoerd, worden niet geëvalueerd door streaming segmentatie en worden samen met de nachtelijke geplande gesegmenteerde taak geëvalueerd.
+>Streaming segmentatie kan alleen worden gebruikt om gegevens te evalueren die in het Platform worden gestreamd. Met andere woorden, gegevens die via batch-opname worden ingevoerd, worden niet geëvalueerd door streamingsegmentatie en worden samen met de nachtelijke geplande gesegmenteerde taak geëvalueerd.
 
 ## Aan de slag
 
 Deze ontwikkelaarsgids vereist een werkend inzicht in de diverse [!DNL Adobe Experience Platform] diensten betrokken bij het stromen segmentatie. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd consumentenprofiel in real time, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Verstrekt een verenigd consumentenprofiel in echt - tijd, dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 - [[!DNL Segmentation]](../home.md): Verstrekt de capaciteit om segmenten en publiek van uw  [!DNL Real-time Customer Profile] gegevens tot stand te brengen.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde kader waardoor de gegevens van de  [!DNL Platform] klantenervaring worden georganiseerd.
 
