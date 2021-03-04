@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;populaire onderwerpen;Analytics Data Connector;analytics;Analytics
 solution: Experience Platform
 title: Adobe Analytics Source Connector voor rapportsuite-gegevens
-topic: overview
+topic: ' - overzicht'
 description: Dit document biedt een overzicht van Analytics en beschrijft de gebruiksgevallen voor Analytics-gegevens.
 translation-type: tm+mt
-source-git-commit: e480ce789c849db24713da312345ea3162e617a6
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 1%
+source-wordcount: '504'
+ht-degree: 2%
 
 ---
 
 
 # Adobe Analytics-connector voor rapportsuite-gegevens
 
-Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de Analytics Data Connector (ADC). ADC streamt gegevens die door [!DNL Analytics] in real time worden verzameld tot [!DNL Platform], het omzetten van SCDS-Geformatteerde [!DNL Analytics] gegevens in [!DNL Experience Data Model] (XDM) gebieden voor consumptie door [!DNL Platform].
+Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de Analytics Data Connector (ADC). ADC streamt gegevens die door [!DNL Analytics] in real time worden verzameld tot [!DNL Platform], die SCDS-Geformatteerde [!DNL Analytics] gegevens in [!DNL Experience Data Model] (XDM) gebieden voor consumptie door [!DNL Platform] omzetten.
 
 Dit document biedt een overzicht van [!DNL Analytics] en beschrijft de gebruiksgevallen voor [!DNL Analytics]-gegevens.
 
