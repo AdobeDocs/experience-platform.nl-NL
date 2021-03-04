@@ -2,12 +2,12 @@
 keywords: Experience Platform;ontwikkelaarsgids;de Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;In real time machine het leren;
 solution: Experience Platform
 title: Real-time Machine Learning-overzicht
-topic: Overview
+topic: Overzicht
 description: Het leren van machines in real time kan de relevantie van uw digitale ervaringsinhoud voor uw eindgebruikers drastisch verbeteren. Dit wordt mogelijk gemaakt door real-time conferenties en voortdurend leren op de Experience Edge te gebruiken.
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '550'
 ht-degree: 1%
 
 ---
@@ -49,11 +49,11 @@ Implementeer uw model op [!DNL Experience Edge] om een Real-time Machine Learnin
 
 ### Opkomst
 
-Met het voorspellingsREST API-eindpunt kunt u inzichten van machines in real-time genereren.
+Met het voorspellingsREST API-eindpunt kunt u in real-time inzichten van machines genereren.
 
 ### Levering
 
-Marketers kunnen vervolgens segmenten en regels definiëren die de leerscores voor machines in realtime toewijzen aan ervaringen met Adobe Target. Op deze manier kunnen bezoekers van de website van uw merk in real-time dezelfde of hyperpersonaliseerde ervaring van de volgende pagina zien.
+Marketers kunnen vervolgens segmenten en regels definiëren die de leerscores voor machines in real time toewijzen aan ervaringen met Adobe Target. Op deze manier kunnen bezoekers van de website van uw merk in real-time dezelfde of hyperpersonaliseerde ervaring van de volgende pagina zien.
 
 ## Huidige functionaliteit
 
