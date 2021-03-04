@@ -2,12 +2,12 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;opt-out;Segmentatie;Segmenteringsservice;segmenteringsservice;eeroptie-outs;opt-outs;opt-out;opt-out; opt-outs;
 solution: Experience Platform
 title: Opt-out-verzoeken in segmenten respecteren
-topic: overview
+topic: ' - overzicht'
 description: 'Adobe Experience Platform staat uw klanten toe om "opt-out" verzoeken betreffende het gebruik en de opslag van hun gegevens binnen het profiel van de Klant in real time te verzenden []. Deze "opt-out"-verzoeken maken deel uit van de California Consumer Privacy Act (CCPA), die de inwoners van Californië het recht geeft toegang te krijgen tot hun persoonsgegevens en deze te verwijderen en te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie). '
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1033'
 ht-degree: 0%
 
 ---
