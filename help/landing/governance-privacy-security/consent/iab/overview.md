@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;IAB;IAB 2.0;toestemming;toestemming
 solution: Experience Platform
 title: IAB TCF 2.0-ondersteuning in Experience Platform
-topic: privacy events
+topic: privacygebeurtenissen
 description: Leer hoe te om uw gegevensverrichtingen en schema's te vormen om de keuzen van de klantentoestemming te brengen wanneer het activeren van segmenten aan bestemmingen in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
+source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2472'
 ht-degree: 0%
 
 ---
@@ -165,7 +165,7 @@ alloy("setConsent", {
 | `standard` | De gebruikte toestemmingsnorm. Deze waarde moet aan `IAB` voor TCF 2.0 toestemmingsverwerking worden geplaatst. |
 | `version` | Het versienummer van de toestemmingsnorm die onder `standard` wordt vermeld. Deze waarde moet aan `2.0` voor TCF 2.0 toestemmingsverwerking worden geplaatst. |
 | `value` | De basis-64-gecodeerde toestemmingstekenreeks die door CMP wordt geproduceerd. |
-| `gdprApplies` | Een waarde Van Boole die erop wijst of GDPR op de momenteel het programma geopende klant van toepassing is. TCF 2.0 kan alleen worden afgedwongen voor deze klant als de waarde is ingesteld op `true`. |
+| `gdprApplies` | Een waarde Van Boole die erop wijst of GDPR op de momenteel het programma geopende klant van toepassing is. TCF 2.0 kan alleen worden afgedwongen voor deze klant als de waarde is ingesteld op `true`. Wordt standaard ingesteld op `true` als dit niet is gedefinieerd. |
 
 De opdracht `setConsent` moet worden gebruikt als onderdeel van een CMP-haak die wijzigingen in toestemmingsinstellingen detecteert. In het volgende JavaScript ziet u hoe de opdracht `setConsent` kan worden gebruikt voor de `OnConsentChanged`-haak van OneTrust:
 
@@ -219,7 +219,7 @@ alloy("sendEvent", {
 | `consentStandard` | De gebruikte toestemmingsnorm. Deze waarde moet aan `IAB` voor TCF 2.0 toestemmingsverwerking worden geplaatst. |
 | `consentStandardVersion` | Het versienummer van de toestemmingsnorm die onder `standard` wordt vermeld. Deze waarde moet aan `2.0` voor TCF 2.0 toestemmingsverwerking worden geplaatst. |
 | `consentStringValue` | De basis-64-gecodeerde toestemmingstekenreeks die door CMP wordt geproduceerd. |
-| `gdprApplies` | Een waarde Van Boole die erop wijst of GDPR op de momenteel het programma geopende klant van toepassing is. TCF 2.0 kan alleen worden afgedwongen voor deze klant als de waarde is ingesteld op `true`. |
+| `gdprApplies` | Een waarde Van Boole die erop wijst of GDPR op de momenteel het programma geopende klant van toepassing is. TCF 2.0 kan alleen worden afgedwongen voor deze klant als de waarde is ingesteld op `true`. Wordt standaard ingesteld op `true` als dit niet is gedefinieerd. |
 
 ### Reacties in SDK verwerken
 
@@ -233,7 +233,7 @@ Alle [!DNL Platform SDK] bevelen keren beloftes terug die erop wijzen of de vraa
 
 Zodra u de gegevens van de klantentoestemming hebt verzameld en publiekssegmenten gecreeerd die de vereiste toestemmingsattributen bevatten, kunt u TCF 2.0 naleving dan afdwingen wanneer het uitvoeren van die segmenten naar stroomafwaartse bestemmingen.
 
-Mits de toestemmingsinstelling `gdprApplies` voor een reeks klantenprofielen aan `true` wordt geplaatst, worden om het even welke gegevens van die profielen die naar stroomafwaartse bestemmingen worden uitgevoerd gefiltreerd gebaseerd op de toestemmingsvoorkeur voor elk profiel. Elk profiel dat niet voldoet aan de vereiste voorkeuren voor toestemming wordt tijdens het exportproces overgeslagen.
+Mits de toestemmingsinstelling `gdprApplies` voor een reeks klantenprofielen aan `true` wordt geplaatst, worden om het even welke gegevens van die profielen die naar stroomafwaartse bestemmingen worden uitgevoerd gefiltreerd gebaseerd op de toestemmingsvoorkeur TCF voor elk profiel. Elk profiel dat niet voldoet aan de vereiste voorkeuren voor toestemming wordt tijdens het exportproces overgeslagen.
 
 Klanten moeten instemmen met de volgende doeleinden (zoals beschreven in [TCF 2.0 policies](https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions)) om hun profielen op te nemen in segmenten die worden uitgevoerd naar bestemmingen:
 
