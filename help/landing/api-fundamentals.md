@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Grondbeginselen van Experience Platform API
-topic: getting started
+topic: aan de slag
 description: Dit document biedt een kort overzicht van enkele onderliggende technologieën en syntaxis die van toepassing zijn op Experience Platform-API's.
 translation-type: tm+mt
-source-git-commit: 8c98632b67ddae4fb7800e80fb8c83aca9bfa291
+source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '513'
 ht-degree: 1%
 
 ---
@@ -126,4 +126,4 @@ JSON-schema is een indeling waarmee de structuur van JSON-gegevens wordt beschre
 
 ## Volgende stappen
 
-In dit document worden enkele technologieën en syntaxis geïntroduceerd die betrokken zijn bij het beheer van JSON-bronnen voor [!DNL Experience Platform]. Raadpleeg de [handleiding voor het oplossen van Platforms](troubleshooting.md) voor meer informatie over het werken met API&#39;s van [!DNL Platform], inclusief best practices en antwoorden op veelgestelde vragen.
+In dit document worden enkele technologieën en syntaxis geïntroduceerd die betrokken zijn bij het beheer van JSON-bronnen voor [!DNL Experience Platform]. Raadpleeg de [gids Aan de slag](api-guide.md) voor meer informatie over het werken met Platform-API&#39;s, inclusief tips en trucs. Raadpleeg de [handleiding voor het oplossen van Platforms](troubleshooting.md) voor antwoorden op veelgestelde vragen.
