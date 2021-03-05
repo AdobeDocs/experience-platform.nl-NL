@@ -7,9 +7,9 @@ landing-page-description: Vind antwoorden op vaak gestelde vragen en een gids vo
 topic: aan de slag
 type: Documentatie
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 83cc3ddbf067f413cb524a3a685d985d5853eafd
 workflow-type: tm+mt
-source-wordcount: '1997'
+source-wordcount: '1718'
 ht-degree: 1%
 
 ---
@@ -31,63 +31,7 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over Adobe Exper
 
 De formaten van het verzoek variëren afhankelijk van [!DNL Platform] API die wordt gebruikt. De beste manier om te leren hoe te om uw API vraag te structureren is door samen met de voorbeelden te volgen die in de documentatie voor de bepaalde [!DNL Platform] dienst worden verstrekt u gebruikt.
 
-### Voorbeeld-API-aanroepen lezen
-
-De documentatie voor [!DNL Experience Platform] toont voorbeeld API vraag op twee verschillende manieren. Eerst, wordt de vraag voorgesteld in zijn **API formaat**, een malplaatjevertegenwoordiging die slechts de verrichting (GET, POST, PUT, PATCH, DELETE) en het eindpunt toont die wordt gebruikt (bijvoorbeeld, `/global/classes`). Sommige malplaatjes tonen ook de plaats van variabelen helpen illustreren hoe een vraag, zoals `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}` zou moeten worden geformuleerd.
-
-De vraag wordt dan getoond als cURL bevelen in **Verzoek**, die de noodzakelijke kopballen en volledige &quot;basisweg&quot;nodig omvat om met API met succes in wisselwerking te staan. Het basispad moet vooraf aan alle eindpunten worden toegevoegd. Het eerder vermelde `/global/classes`-eindpunt wordt bijvoorbeeld `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. U zult het formaat van API/verzoekpatroon door de documentatie zien, en zal naar verwachting de volledige weg gebruiken die in het voorbeeldVerzoek wordt getoond wanneer het maken van uw eigen vraag aan Platform APIs.
-
-### Voorbeeld-API-aanvraag
-
-Hier volgt een voorbeeld-API-aanvraag die de indeling weergeeft die u in de documentatie zult tegenkomen.
-
-**API-indeling**
-
-De API-indeling toont de bewerking (GET) en het eindpunt dat wordt gebruikt. Variabelen worden aangegeven met accolades (in dit geval `{CONTAINER_ID}`).
-
-```http
-GET /{CONTAINER_ID}/classes
-```
-
-**Verzoek**
-
-In deze voorbeeldaanvraag krijgen de variabelen van de API-indeling de werkelijke waarden in het aanvraagpad. Alle vereiste kopballen worden eveneens getoond, als of waarden van de steekproefkopbal of variabelen waar de gevoelige informatie (zoals veiligheidstekenen en toegangsidentiteitskaart) zou moeten worden omvat.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/global/classes \
-  -H 'Accept: application/vnd.adobe.xed-id+json' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwoord**
-
-De reactie illustreert wat u zou verwachten te ontvangen na een succesvolle vraag aan API, die op het verzoek wordt gebaseerd dat werd verzonden. Soms wordt de reactie afgebroken voor de ruimte, wat betekent dat u meer informatie of aanvullende informatie ziet voor de hoeveelheid die in het voorbeeld wordt weergegeven.
-
-```json
-{
-    "results": [
-        {
-            "title": "XDM ExperienceEvent",
-            "$id": "https://ns.adobe.com/xdm/context/experienceevent",
-            "meta:altId": "_xdm.context.experienceevent",
-            "version": "1"
-        },
-        {
-            "title": "XDM Individual Profile",
-            "$id": "https://ns.adobe.com/xdm/context/profile",
-            "meta:altId": "_xdm.context.profile",
-            "version": "1"
-        }
-    ],
-    "_links": {}
-}
-```
-
-Raadpleeg de [API-naslagdocumentatie](http://www.adobe.com/go/platform-api-reference-en) voor meer informatie over specifieke eindpunten in Platform-API&#39;s, inclusief vereiste kopteksten en aanvraagorganen.
+Voor meer informatie over het formatteren van API verzoeken, te bezoeken gelieve de Platform API begonnen gids [het lezen van steekproefAPI vraag](./api-guide.md#sample-api) sectie.
 
 ## Wat is mijn IMS-organisatie? {#what-is-my-ims-organization}
 
@@ -121,7 +65,7 @@ Veel PATCH-bewerkingen in API&#39;s [!DNL Platform] gebruiken [JSON-aanwijzer](h
 
 ## Kan ik Postman gebruiken om vraag aan [!DNL Platform] APIs te maken? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[](https://www.postman.com/) Postmanis een nuttig hulpmiddel om vraag aan RESTful APIs te visualiseren. In deze [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) wordt beschreven hoe u Postman kunt instellen om automatisch verificatie uit te voeren en deze te gebruiken voor het gebruik van [!DNL Experience Platform] API&#39;s.
+[](https://www.postman.com/) Postmanis een nuttig hulpmiddel om vraag aan RESTful APIs te visualiseren. De gids [Aan de slag API van het Platform](api-guide.md) bevat een video en instructies voor het invoeren van de inzamelingen van Postman. Bovendien wordt een lijst van de inzamelingen van Postman voor elke dienst verstrekt.
 
 ## Wat zijn de systeemvereisten voor [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
