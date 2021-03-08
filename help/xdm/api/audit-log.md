@@ -3,11 +3,11 @@ keywords: Experience Platform;thuis;populaire onderwerpen;api;API;XDM;XDM systee
 solution: Experience Platform
 title: Logboek-API-eindpunt controleren
 description: Het /auditlog eindpunt in de Registratie API van het Schema staat u toe om een chronologische lijst van veranderingen terug te winnen die aan een bestaand middel XDM zijn aangebracht.
-topic: developer guide
+topic: ontwikkelaarsgids
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '398'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Voor elke bron van het Gegevensmodel van de Ervaring (XDM), [!DNL Schema Registr
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
 Het `/auditlog` eindpunt is deel van de verre procedurevraag (RPCs) die door [!DNL Schema Registry] wordt gesteund. In tegenstelling tot andere eindpunten in de [!DNL Schema Registry] API, vereisen RPC eindpunten geen extra kopballen zoals `Accept` of `Content-Type`, en gebruiken geen `CONTAINER_ID`. In plaats daarvan moeten ze de naamruimte `/rpc` gebruiken, zoals in de API-aanroep hieronder wordt getoond.
 
