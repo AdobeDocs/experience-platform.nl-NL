@@ -3,11 +3,11 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem
 solution: Experience Platform
 title: Mixins API-eindpunt
 description: Het /mixins eindpunt in de Registratie API van het Schema staat u toe om mengsels XDM binnen uw ervaringstoepassing programmatically te beheren.
-topic: developer guide
+topic: ontwikkelaarsgids
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1136'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Mixins zijn herbruikbare componenten die een of meer velden definiëren die een 
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Lees voordat u doorgaat de [Aan de slag-handleiding](./getting-started.md) voor koppelingen naar verwante documentatie, een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document en belangrijke informatie over vereiste headers die nodig zijn om aanroepen naar een Experience Platform-API te kunnen uitvoeren.
 
 ## Een lijst met mixen {#list} ophalen
 
@@ -136,7 +136,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag wordt verzonden. Alle opzoekverzoeken vereisen een `version` worden opgenomen in de `Accept` koptekst. De volgende `Accept` kopteksten zijn beschikbaar:
+De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag wordt verzonden. Alle opzoekverzoeken vereisen een `version` in `Accept` kopbal worden omvat. De volgende `Accept` kopteksten zijn beschikbaar:
 
 | `Accept` header | Beschrijving |
 | ------- | ------------ |
@@ -378,7 +378,7 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een lading die de
 }
 ```
 
-Als u een verzoek van de GET aan [list alle mixins](#list) in de huurderscontainer nu uitvoert, zou de de detailmixin van het Bezit nu omvatten, of u kunt [een raadpleging (GET) verzoek](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om de nieuwe mixin direct te bekijken.
+Als u een verzoek van de GET aan [list alle mixins](#list) in de huurderscontainer zou uitvoeren zou nu de mengsel van de Details van het Bezit omvatten, of u kunt [een raadplegingsverzoek (GET) uitvoeren ](#lookup) gebruikend URL-Gecodeerde `$id` URI om de nieuwe mixin direct te bekijken.
 
 ## Een mix {#put} bijwerken
 
