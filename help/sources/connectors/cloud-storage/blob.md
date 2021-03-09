@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;Blob;blob;Azure Blob;azure blob
 solution: Experience Platform
 title: Azure Blob Source Connector - Overzicht
-topic: overview
+topic: ' - overzicht'
 description: Leer hoe u Azure Blob met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '450'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,10 @@ Opslagbronnen in de cloud kunnen uw eigen gegevens naar [!DNL Platform] brengen 
 ## IP adres lijst van gewenste personen
 
 Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) pagina voor meer informatie.
+
+>[!IMPORTANT]
+>
+>De [!DNL Azure Blob] bronschakelaar steunt momenteel zelfde-gebiedconnectiviteit aan Platform niet. Dit betekent dat als uw Azure-instantie hetzelfde netwerkgebied gebruikt als Platform, een verbinding met bronnen van Platforms niet tot stand kan worden gebracht. Momenteel wordt alleen connectiviteit tussen regio&#39;s ondersteund. Neem contact op met uw Adobe-accountmanager voor meer informatie.
 
 ## Naamgevingsbeperkingen voor bestanden en mappen
 
