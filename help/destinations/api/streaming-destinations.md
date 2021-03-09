@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen; API-zelfstudies; streamingdoelen-API; Platform
 solution: Experience Platform
-title: Verbinding maken met streaming doelen en gegevens activeren via API-aanroepen in Adobe Experience Platform
+title: Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API in Adobe Experience Platform
 description: In dit document wordt beschreven hoe u streaming doelen kunt maken met de Adobe Experience Platform API
-topic: tutorial
-type: Tutorial
+topic: zelfstudie
+type: Zelfstudie
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '2021'
+source-wordcount: '2029'
 ht-degree: 0%
 
 ---
 
 
-# Verbinding maken met streaming doelen en gegevens activeren via API-aanroepen
+# Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ### Documentatie {#swagger-docs}
 
-In deze zelfstudie in Swagger vindt u begeleidende referentiedocumentatie voor alle API-aanroepen. Zie de [documentatie van de Dienst API van de Stroom op Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We raden u aan deze zelfstudie en de documentatiepagina van Swagger parallel te gebruiken.
+In deze zelfstudie in Swagger vindt u begeleidende referentiedocumentatie voor alle API-aanroepen. Zie de [documentatie van de Dienst API van de Stroom op Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We raden u aan deze zelfstudie en de documentatiepagina van Swagger parallel te gebruiken.
 
 ## Hiermee wordt de lijst met beschikbare streamingdoelen {#get-the-list-of-available-streaming-destinations} opgehaald
 
