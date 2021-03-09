@@ -6,9 +6,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor marketing
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Doelen
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 0%
 * [Overzicht van doelen](./home.md)
 * [Doeltypen en -categorieën](./destination-types.md)
 * API-zelfstudies {#api}
-   * [Verbinding maken met streaming doelen en gegevens activeren via API-aanroepen](./api/streaming-destinations.md)
-   * [Verbinding maken met marketingdoelen voor e-mail en gegevens activeren via API-aanroepen](./api/email-marketing.md)
+   * [Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API](./api/streaming-destinations.md)
+   * [Verbinding maken met marketingdoelen voor e-mail en gegevens activeren met de Flow Service API](./api/email-marketing.md)
 * UI-hulplijnen {#ui}
    * [Overzicht van de werkruimte Doelen](./ui/destinations-workspace.md)
    * [Doelgegevens weergeven](./ui/destination-details-page.md)
