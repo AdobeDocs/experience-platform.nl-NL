@@ -3,15 +3,29 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De recentste versienota's voor het Web SDK van Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;versie nota's;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: b0e6d1f7cf7302bb3a7403bb18dfd8b7489d583e
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
 
 
 # Releaseopmerkingen
+
+## Versie 2.4.0
+
+* De SDK kan nu [worden geïnstalleerd als een npm-pakket](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html).
+* Toegevoegde steun voor een `out` optie wanneer [vormend standaardtoestemming](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), die alle gebeurtenissen laat vallen tot de toestemming wordt ontvangen (de bestaande `pending` optie vormt gebeurtenissen in de rij en verzendt hen zodra de toestemming wordt ontvangen).
+* De [onBeforeEventSend callback](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) kan nu worden gebruikt om te voorkomen dat een gebeurtenis wordt verzonden.
+* Er wordt nu een XDM-mix gebruikt in plaats van `meta.personalization` bij het verzenden van gebeurtenissen over gepersonaliseerde inhoud die wordt gerenderd of waarop wordt geklikt.
+* De [getIdentity opdracht](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) retourneert nu de id van het randgebied naast de identiteit.
+* Waarschuwingen en fouten die van de server zijn ontvangen, zijn verbeterd en worden op een geschiktere manier afgehandeld.
+* Toegevoegde steun [Adobe verzonden 2.0 norm](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* De voorkeur van de toestemming, wanneer ontvangen, wordt gehakt en in lokale opslag voor een geoptimaliseerde integratie onder CMPs, het Web SDK van het Platform, en het Netwerk van de Rand van het Platform opgeslagen. Als u toestemmingsvoorkeur verzamelt, moedigen wij u nu aan om `setConsent` op elke paginading te roepen.
+* Er zijn twee [controlehaken](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` en `onCommandRejected` toegevoegd.
+* Opgeloste problemen: Gebeurtenissen voor persoonlijke interactiemeldingen bevatten dubbele informatie over dezelfde activiteit wanneer een gebruiker naar een nieuwe app-weergave van één pagina navigeert, teruggaat naar de oorspronkelijke weergave en op een element klikt dat in aanmerking komt voor conversie.
+* Opgeloste problemen: Als de eerste gebeurtenis die door de SDK wordt verzonden `documentUnloading` op `true` was ingesteld, zou [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) worden gebruikt om de gebeurtenis te verzenden, resulterend in een fout betreffende een identiteit die niet wordt gevestigd.
 
 ## Versie 2.3.0
 
