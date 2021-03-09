@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
 seo-description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 14cf62084c88956906cd9454176619ed08081a0e
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '1134'
 ht-degree: 1%
 
 ---
@@ -14,6 +14,19 @@ ht-degree: 1%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 Dit document behandelt de releaseopmerkingen voor de Adobe Experience Platform Web SDK-extensie voor Adobe Experience Platform Launch. Voor de recentste versienota&#39;s op SDK zelf, zie [de versienota&#39;s van SDK van het Web van het Platform](https://docs.adobe.com/content/help/en/experience-platform/edge/release-notes.html).
+
+## 9 maart 2020
+
+### Adobe Experience Platform Web SDK 2.4.0
+
+Bevat versie 2.4.0 van de bibliotheek van SDK van het Web van Adobe Experience Platform.
+
+* [&quot;document unloading&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) checkbox toegevoegd om de actie UI van de Gebeurtenis te verzenden.
+* Toegevoegde steun voor een `out` optie wanneer [vormend standaardtoestemming](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) die alle gebeurtenissen laat vallen tot de toestemming wordt ontvangen (de bestaande `pending` optie vormt gebeurtenissen en verzendt hen zodra de toestemming wordt ontvangen).
+* Knopinfo is toegevoegd aan het veld Standaardtoestemming.
+* Toegevoegde steun [Adobe verzonden 2.0 norm](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* Er wordt nu een betere fout weergegeven in de gebruikersinterface van het XDM Object-gegevenselement als het toegangstoken van de gebruiker ongeldig is of niet correct is ingericht.
+* Probleem verholpen waarbij een kruisoorsprongfout (die geen invloed heeft op de werking van de extensie) is verholpen die tijdens het weergeven van een XDM Object-gegevenselement in de browserontwikkelingsconsole werd weergegeven.
 
 ## 4 november 2020
 
