@@ -2,33 +2,33 @@
 keywords: Experience Platform;voorbeeldschemagegevens;Data Science Workspace;populaire onderwerpen
 solution: Experience Platform
 title: Een voorvertoning weergeven van het detailhandelsschema en de gegevensset
-topic: tutorial
-type: Tutorial
+topic: zelfstudie
+type: Zelfstudie
 description: Het volgende document schetst het voorvertonen van schema's en datasets op Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 0%
+source-wordcount: '238'
+ht-degree: 1%
 
 ---
 
 
 # Een voorvertoning weergeven van het detailhandelsschema en de dataset
 
-Na succesvolle voltooiing van het laarzentrekkerscript van [creeer het detailhandelschema en dataset](./create-retails-sales-dataset.md) leerprogramma. Uitvoerschema&#39;s en datasets kunnen op [!DNL Experience Platform] worden bekeken. Volg onderstaande stappen om de schema&#39;s en datasets weer te geven:
+Op succesvolle voltooiing van het laarzentrekkerscript van [kleinhandelsverkoopschema en dataset](./create-retails-sales-dataset.md) leerprogramma. Uitvoerschema&#39;s en datasets kunnen op [!DNL Experience Platform] worden bekeken. Volg onderstaande stappen om de schema&#39;s en datasets weer te geven:
 
-1. Klik op de koppeling **[!UICONTROL Schemas]** in de linkernavigatiekolom en zoek het invoerschema dat door het laarzentrekkerscript is gemaakt. De naam van het schema komt overeen met wat in de vorige stap is gedefinieerd in `config.yaml`. Bekijk de schemadetails en het is samenstelling door in het te klikken.
+Selecteer het tabblad **[!UICONTROL Schema&#39;s]** in de linkernavigatie en zoek het invoerschema dat door het bootstrap-script is gemaakt. De naam van het schema komt overeen met wat in de vorige stap is gedefinieerd in `config.yaml`. Bekijk de schemadetails en het is samenstelling door in het te klikken.
 
-   ![](../images/models-recipes/access-data/schema_overview.png)
+![](../images/models-recipes/access-data/schema.PNG)
 
-2. Klik op de koppeling **[!UICONTROL Datasets]** in de linkernavigatiekolom en open de gegevensset die is gemaakt door op de naam van de lijst te klikken. De naam van de gegevensset komt overeen met wat in de vorige stap is gedefinieerd in `config.yaml`.
+Selecteer het tabblad **[!UICONTROL Datasets]** in de linkernavigatie en open de gegevensset die is gemaakt door de naam van de gegevensset te selecteren. De naam van de gegevensset komt overeen met de naam die in de vorige stap is gedefinieerd in `config.yaml`.
 
-   ![](../images/models-recipes/access-data/dataset_overview.png)
+![](../images/models-recipes/access-data/dataset.PNG)
 
-3. Klik **[!UICONTROL Voorvertoning van gegevensset]** in de rechterbovenvoorvertoning van een subset van de gegevensset.
+Selecteer **[!UICONTROL Gegevensset voorvertoning]** rechtsboven om een subset van de gegevensset voor te vertonen.
 
-   ![](../images/models-recipes/access-data/preview_dataset.png)
+![](../images/models-recipes/access-data/preview.PNG)
 
 ## Volgende stappen
 
