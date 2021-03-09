@@ -3,7 +3,7 @@ keywords: Amazon Kinesis;kinesis-bestemming;kinesis
 title: Amazon Kinesis-verbinding
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Met de [!DNL Kinesis Data Streams]-service van [!DNL Amazon Web Services] kunt u
 U kunt een uitgaande verbinding in real time met uw [!DNL Amazon Kinesis]-opslag maken om gegevens vanuit Adobe Experience Platform te streamen.
 
 * Raadpleeg de [Amazon-documentatie](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) voor meer informatie over [!DNL Amazon Kinesis].
-* Als u verbinding wilt maken met [!DNL Amazon Kinesis] via API-aanroepen, raadpleegt u de [API-zelfstudie voor streaming doelen](../../api/streaming-destinations.md).
+* Als u programmatisch verbinding wilt maken met [!DNL Amazon Kinesis], raadpleegt u de [API-zelfstudie voor streamingdoelen](../../api/streaming-destinations.md).
 * Zie de onderstaande secties als u verbinding wilt maken met [!DNL Amazon Kinesis] via de gebruikersinterface van het Platform.
 
 ![Amazon Kinesis in de gebruikersinterface](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
@@ -117,7 +117,7 @@ Uw geëxporteerde [!DNL Experience Platform]-gegevens worden in de JSON-indeling
 
 >[!MORELIKETHIS]
 >
->* [Verbinding maken met Amazon Kinesis en gegevens activeren via API-aanroepen](../../api/streaming-destinations.md)
+>* [Verbinding maken met Amazon Kinesis en gegevens activeren met de Flow Service API](../../api/streaming-destinations.md)
 >* [Azure Event Hubs-bestemming](./azure-event-hubs.md)
 >* [Doeltypen en -categorieën](../../destination-types.md)
 
