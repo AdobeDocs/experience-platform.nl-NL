@@ -3,9 +3,9 @@ title: De TCF 2.0-ondersteuning van IAB integreren met de SDK van Adobe Experien
 description: Leer hoe u IAB TCF 2.0-ondersteuning voor uw website instelt zonder Adobe Experience Platform Launch te gebruiken.
 seo-description: Meer informatie over het instellen van IAB TCF 2.0-toestemming met Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Bovendien vereist deze handleiding dat u een goed begrip hebt van de SDK van Ado
 
 ## Standaardtoestemming inschakelen
 
-Als u alle onbekende gebruikers het zelfde wilt behandelen, kunt u de standaardtoestemming aan `pending` plaatsen. Deze wachttijden Ervaring Gebeurtenissen tot de toestemmingsvoorkeur wordt ontvangen.
+Als u alle onbekende gebruikers het zelfde wilt behandelen, kunt u de standaardtoestemming aan `pending` of `out` plaatsen. Hiermee worden Experience Events in een wachtrij geplaatst of genegeerd totdat de voorkeuren voor toestemming zijn ontvangen.
 
 Voor meer informatie over standaardtoestemming, verwijs naar [standaardtoestemmingssectie](../../fundamentals/configuring-the-sdk.md#default-consent) in de de configuratiedocumentatie van SDK van het Web van het Platform.
 
