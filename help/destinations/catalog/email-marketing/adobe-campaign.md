@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;adobe campagne;campagne
 title: Adobe Campaign-verbinding
 description: Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: b6e795d33b5590001a3270ea42995fdbad28dd88
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -13,21 +13,27 @@ ht-degree: 0%
 
 # Adobe Campaign-verbinding
 
-Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren. Zie [Informatie over Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) voor meer informatie.
+Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren. Zie [Aan de slag met Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) voor meer informatie.
 
 Als u segmentgegevens naar Adobe Campaign wilt verzenden, moet u eerst [de bestemming](#connect-destination) in Adobe Experience Platform verbinden en vervolgens [een gegevensimport](#import-data-into-campaign) instellen vanaf uw opslaglocatie naar Adobe Campaign.
 
 ## Exporttype {#export-type}
 
-**Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met kenmerken selecteren van de workflow voor  [doelactivering](../../ui/activate-destinations.md#select-attributes).
+**Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in de stap Kenmerken  **[!UICONTROL selecteren]** van de workflow [ voor ](../../ui/activate-destinations.md#select-attributes)doelactivering.
 
 ## Doel {#connect-destination} verbinden
 
-Selecteer in **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** Adobe Campaign en selecteer vervolgens **[!UICONTROL Doel verbinden]**.
+Selecteer in **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** Adobe Campaign en selecteer vervolgens **[!UICONTROL Configureren]**.
 
-![Verbinding maken met Adobe-campagne](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
+>[!NOTE]
+>
+>Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL knop Activeer]** op de doelkaart zien. Voor meer informatie over het verschil tussen [!UICONTROL Activate] en [!UICONTROL Configure], verwijs naar [Catalog](../../ui/destinations-workspace.md#catalog) sectie van de documentatie van de bestemmingswerkruimte.
 
-Selecteer in de Connect-doelworkflow het type **[!UICONTROL Verbinding]** voor uw opslaglocatie. Voor Adobe Campaign kunt u kiezen tussen **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP met wachtwoord]**, **[!UICONTROL SFTP met SSH Key]** en **[!UICONTROL Azure Blob]**. Vul de informatie hieronder in, afhankelijk van uw verbindingstype, en selecteer dan **[!UICONTROL Connect]**.
+![Verbinding maken met Adobe Campaign](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
+
+Selecteer in de stap **[!UICONTROL Account]** van de Connect-doelworkflow het **[!UICONTROL Verbindingstype]** voor uw opslaglocatie. Voor Adobe Campaign kunt u kiezen tussen **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP met wachtwoord]**, **[!UICONTROL SFTP met SSH Key]** en **[!UICONTROL Azure Blob]**. De voorkeursmethode voor het verzenden van gegevens naar Adobe Campaign is [!DNL Amazon S3] of [!DNL Azure Blob]. Vul de informatie hieronder in, afhankelijk van uw verbindingstype, en selecteer dan **[!UICONTROL Connect]**.
+
+
 
 ![Wizard Campagne instellen](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
@@ -40,18 +46,18 @@ U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteli
 
 ![Campagnegegevens invullen](../../assets/catalog/email-marketing/adobe-campaign/account-info.png)
 
-Vul in **[!UICONTROL Basisinformatie]** de relevante informatie voor uw bestemming in, zoals hieronder wordt getoond:
+Vul in **[!UICONTROL Accountverificatie]** de relevante informatie voor uw bestemming in, zoals hieronder wordt getoond:
 - **[!UICONTROL Naam]**: Kies een relevante naam voor de bestemming.
 - **[!UICONTROL Omschrijving]**: Voer een beschrijving in voor uw bestemming.
-- **[!UICONTROL Naam]** emmertje:  *Voor S3-verbindingen*. Voer de locatie van uw S3-emmertje in waar Platform uw exportgegevens als CSV- of tabgescheiden bestanden indient.
-- **[!UICONTROL Pad naar]** map: Geef het pad op in uw opslaglocatie waar Platform uw exportgegevens als CSV- of tabgescheiden bestanden indient.
+- **[!UICONTROL Naam]** emmertje:  *Voor S3-verbindingen*. Ga de plaats van uw S3 emmer in waar [!DNL Platform] uw uitvoergegevens als CSV of lusje-afgebakende dossiers zal deponeren.
+- **[!UICONTROL Pad naar]** map: Geef het pad op uw opslaglocatie op waar uw exportgegevens als CSV- of tabgescheiden bestanden  [!DNL Platform] worden opgeslagen.
 - **[!UICONTROL Container]**:  *Voor Blob-verbindingen*. De container die het blob-pad voor uw map bevat, bevindt zich in.
 - **[!UICONTROL Bestandsindeling]**:  **** CSVor  **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
-- **[!UICONTROL Handelingen]** voor marketing: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
+- **[!UICONTROL Handelingen]** voor marketing: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Beleid voor gegevensgebruik overzicht](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Raadpleeg ook [Adobe-gedefinieerde marketingacties](../../../data-governance/policies/overview.md#core-actions) in hetzelfde document.
 
 ![Basisinformatie over campagnes](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
-Klik op **[!UICONTROL Maken]** nadat u de bovenstaande velden hebt ingevuld. Uw doel is nu verbonden en u kunt segmenten [activeren](../../ui/activate-destinations.md) aan de bestemming.
+Selecteer **[!UICONTROL Doel maken]** nadat u de bovenstaande velden hebt ingevuld. Uw doel is nu verbonden en u kunt segmenten [activeren](../../ui/activate-destinations.md) aan de bestemming.
 
 ## Segmenten {#activate-segments} activeren
 
@@ -63,15 +69,18 @@ Wanneer [het activeren van segmenten](../../ui/activate-destinations.md) aan de 
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Adobe Campaign] bestemmingen, leidt het Platform tot een lusje-afgebakend `.txt` of `.csv` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [E-mail de bestemmingen van de Marketing en de opslagbestemmingen van de Wolk](../../ui/activate-destinations.md#esp-and-cloud-storage) in de zelfstudie van de segmentactivering.
+Voor [!DNL Adobe Campaign] bestemmingen, [!DNL Platform] leidt tot een lusje-afgebakend `.txt` of `.csv` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [E-mail de bestemmingen van de Marketing en de opslagbestemmingen van de Wolk](../../ui/activate-destinations.md#esp-and-cloud-storage) in de zelfstudie van de segmentactivering.
 
 ## Gegevensimport instellen in Adobe Campaign {#import-data-into-campaign}
 
 >[!IMPORTANT]
 >
 >- Houd bij het uitvoeren van deze integratie rekening met de opslaglimieten van SFTP, de opslaglimieten van de database en de limieten van het actieve profiel zoals vastgelegd in uw Adobe Campaign-contract.
->- U moet uw geëxporteerde segmenten in Adobe Campaign plannen, importeren en toewijzen met behulp van [!DNL Campaign]-workflows. Raadpleeg [Herhalende importbewerkingen instellen](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html#automating-with-workflows) in Adobe Campaign-documentatie.
+>- U moet uw geëxporteerde segmenten in Adobe Campaign plannen, importeren en toewijzen met behulp van [!DNL Campaign]-workflows. Raadpleeg [Een terugkerende import instellen](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) in Adobe Campaign Classic-documentatie en [Informatie over gegevensbeheeractiviteiten](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) in Adobe Campaign Standard-documentatie.
+>- De voorkeursmethode voor het verzenden van gegevens naar Adobe Campaign is [!DNL Amazon S3] of [!DNL Azure Blob].
 
 
 
-Nadat u het Platform hebt aangesloten op uw [!DNL Amazon S3]- of SFTP-opslagruimte, moet u de gegevensimport instellen vanaf uw opslaglocatie naar Adobe Campaign. Raadpleeg [Gegevens importeren](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) in de documentatie van Adobe Campaign voor meer informatie over het uitvoeren van dit project.
+Nadat u [!DNL Platform] hebt aangesloten op uw [!DNL Amazon S3]- of [!DNL Azure Blob]-opslagruimte, moet u de gegevensimport instellen vanaf uw opslaglocatie naar Adobe Campaign. Raadpleeg de volgende Adobe Campaign-documentatiepagina&#39;s voor meer informatie hierover:
+- [Ga aan de slag met het importeren en ](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html) exporteren van gegevens en het laden van  [gegevens (bestand)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html) in de Adobe Campaign Classic-documentatie.
+- [Ga aan de slag met processen en ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) gegevensbeheer en  [het dossier van de ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) Lading in de documentatie van Adobe Campaign Standard.
