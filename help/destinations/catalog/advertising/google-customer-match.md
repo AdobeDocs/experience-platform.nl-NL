@@ -3,9 +3,9 @@ keywords: Google-klantovereenkomst;Google-klantovereenkomst;Google-klantovereenk
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 translation-type: tm+mt
-source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
+source-git-commit: 494b41265a0eec71ec15c7896eb8c652b3164e18
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1420'
 ht-degree: 0%
 
 ---
@@ -15,45 +15,45 @@ ht-degree: 0%
 
 [Met Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchlets kunt u uw online- en offline-gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere klanten over de eigendommen en gebruiksmogelijkheden van Google, zoals:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail]en  [!DNL YouTube].
 
-![Google Customer Match-bestemming in de CDP-gebruikersinterface in realtime](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![Google Customer Match-bestemming in Adobe Experience Platform-gebruikersinterface](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## Gevallen gebruiken
 
-Om u beter te helpen begrijpen hoe en wanneer u [!DNL Google Customer Match] bestemming zou moeten gebruiken, zijn hier voorbeelden van gebruiksgevallen die de klanten van het Platform van Gegevens van de Klant in real time kunnen oplossen door deze eigenschap te gebruiken.
+Om u beter te helpen begrijpen hoe en wanneer u [!DNL Google Customer Match] bestemming zou moeten gebruiken, zijn hier voorbeelden van gebruiksgevallen die de klanten van Adobe Experience Platform door deze eigenschap kunnen oplossen.
 
 ### Hoofdletters en kleine letters gebruiken 1
 
-Een atletisch merkje wil bestaande klanten bereiken via [!DNL Google Search] en [!DNL Google Shopping] om aanbiedingen en objecten aan te passen op basis van hun eerdere aankopen en browsergeschiedenis. Het merkteken kan e-mailadressen van hun eigen CRM aan In real time CDP opnemen, segmenten van hun eigen off-line gegevens bouwen, en deze segmenten naar [!DNL Google Customer Match] verzenden om over [!DNL Search] en [!DNL Shopping] te worden gebruikt, die hun reclame-uitgaven optimaliseren.
+Een atletisch merkje wil bestaande klanten bereiken via [!DNL Google Search] en [!DNL Google Shopping] om aanbiedingen en objecten aan te passen op basis van hun eerdere aankopen en browsergeschiedenis. Het merk apparel kan e-mailadressen van hun eigen CRM aan Experience Platform opnemen, segmenten van hun eigen off-line gegevens bouwen, en deze segmenten naar [!DNL Google Customer Match] verzenden om over [!DNL Search] en [!DNL Shopping] te worden gebruikt, die hun reclame-uitgaven optimaliseren.
 
 ### Hoofdletters en kleine letters gebruiken 2
 
 Een vooraanstaand technologiebedrijf heeft zojuist een nieuwe telefoon uitgebracht. In een inspanning om dit nieuwe telefoonmodel te bevorderen, kijken zij om bewustzijn van de nieuwe eigenschappen en de functionaliteit van de telefoon aan klanten te drijven die vorige modellen van hun telefoons bezitten.
 
-Om de versie te bevorderen, uploaden zij e-mailadressen van hun gegevensbestand van CRM in CDP In real time, gebruikend de e-mailadressen als herkenningstekens. Segmenten worden gemaakt op basis van klanten die eigenaar zijn van oudere telefoonmodellen en worden verzonden naar [!DNL Google Customer Match] zodat zij zich kunnen richten op huidige klanten, klanten die eigenaar zijn van oudere telefoonmodellen, en vergelijkbare klanten op [!DNL YouTube].
+Om de versie te promoten, uploaden zij e-mailadressen van hun gegevensbestand van CRM in Experience Platform, gebruikend de e-mailadressen als herkenningstekens. Segmenten worden gemaakt op basis van klanten die eigenaar zijn van oudere telefoonmodellen en worden verzonden naar [!DNL Google Customer Match] zodat zij zich kunnen richten op huidige klanten, klanten die eigenaar zijn van oudere telefoonmodellen, en vergelijkbare klanten op [!DNL YouTube].
 
 ## Doelspecificaties {#destination-specs}
 
 ### Gegevensbeheer voor [!DNL Google Customer Match] doelen {#data-governance}
 
-De bestemmingen in real time CDP kunnen bepaalde regels en verplichtingen voor gegevens hebben die naar, of van, het bestemmingsplatform worden verzonden ontvangen. U bent verantwoordelijk voor het begrijpen van de beperkingen en verplichtingen van uw gegevens en hoe u die gegevens gebruikt in Adobe Experience Platform en het doelplatform. Adobe Experience Platform biedt tools voor gegevensbeheer om u te helpen bij het beheren van een aantal van deze gegevensgebruiksverplichtingen. [Meer informatie ](../../..//data-governance/labels/overview.md) over tools en beleid voor gegevensbeheer.
+Voor de bestemmingen in Experience Platform kunnen bepaalde regels en verplichtingen gelden voor gegevens die worden verzonden naar of ontvangen van het bestemmingsplatform. U bent verantwoordelijk voor het begrijpen van de beperkingen en verplichtingen van uw gegevens en hoe u die gegevens gebruikt in Adobe Experience Platform en het doelplatform. Adobe Experience Platform biedt tools voor gegevensbeheer om u te helpen bij het beheren van een aantal van deze gegevensgebruiksverplichtingen. [Meer informatie ](../../..//data-governance/labels/overview.md) over tools en beleid voor gegevensbeheer.
 
 ### Type en identiteit exporteren {#export-type}
 
 **Segmentexport** : u exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer, enzovoort) gebruikt in de bestemming [!DNL Google Customer Match].
 
-**Identiteiten**  - u kunt onbewerkte of gehashte e-mails gebruiken als klant-id&#39;s in Google
+**Identiteiten**  - u kunt onbewerkte of gehashte e-mails gebruiken als klant-id&#39;s in Google.
 
 ### [!DNL Google Customer Match] accountvereisten  {#google-account-prerequisites}
 
-Voordat u een [!DNL Google Customer Match]-bestemming instelt in Real-time CDP, moet u het Google-beleid voor het gebruik van [!DNL Customer Match] lezen en volgen. Dit wordt beschreven in de [documentatie voor Google-ondersteuning](https://support.google.com/google-ads/answer/6299717).
+Voordat u een [!DNL Google Customer Match]-bestemming in Experience Platform instelt, moet u het Google-beleid voor het gebruik van [!DNL Customer Match] lezen en volgen. Dit wordt beschreven in de [Google-ondersteuningsdocumentatie](https://support.google.com/google-ads/answer/6299717).
 
 ### Lijst van gewenste personen {#allowlist}
 
 >[!NOTE]
 >
->Het is verplicht om aan de lijst van gewenste personen van Google vóór vestiging uw eerste [!DNL Google Customer Match] bestemming in real time CDP toe te voegen. Controleer of Google het hieronder beschreven lijst van gewenste personen-proces heeft voltooid voordat u een bestemming maakt.
+>U moet de eerste [!DNL Google Customer Match]-bestemming in het Experience Platform eerst aan de lijst van gewenste personen van Google toevoegen. Controleer of Google het hieronder beschreven lijst van gewenste personen-proces heeft voltooid voordat u een bestemming maakt.
 
-Voordat u de [!DNL Google Customer Match]-bestemming maakt in Real-time CDP, dient u contact op te nemen met Google en de instructies van de lijst van gewenste personen in [Customer Match partners gebruiken om uw gegevens te uploaden](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) in de Google-documentatie.
+Voordat u de [!DNL Google Customer Match]-bestemming in Experience Platform maakt, moet u contact opnemen met Google en de instructies voor de lijst van gewenste personen volgen in [Customer Match partners gebruiken om uw gegevens te uploaden](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) in de Google-documentatie.
 
 Bovendien is er een tweede Google-lijst van gewenste personen waaraan u uw account moet toevoegen als u gegevens wilt uploaden met de [Gebruikersnaam](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id) van Google. Neem contact op met uw Google-accountmanager om te controleren of u aan de lijsten van gewenste personen bent toegevoegd.
 
@@ -92,7 +92,7 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u voldoen aan de ve
 
 #### Aangepaste naamruimten gebruiken {#custom-namespaces}
 
-Voordat u de naamruimte `User_ID` kunt gebruiken om gegevens naar Google te verzenden, moet u uw eigen id&#39;s eerst synchroniseren met [!DNL gTag]. Zie de [officiële documentatie](https://support.google.com/google-ads/answer/9199250) voor gedetailleerde informatie.
+Voordat u de naamruimte `User_ID` kunt gebruiken om gegevens naar Google te verzenden, moet u uw eigen id&#39;s eerst synchroniseren met [!DNL gTag]. Raadpleeg de [officiële documentatie van Google](https://support.google.com/google-ads/answer/9199250) voor meer informatie.
 
 <!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 
@@ -113,17 +113,17 @@ Als u in de stap **Account** eerder een verbinding met uw [!DNL Google Customer 
 
 >[!NOTE]
 >
->CDP in real time steunt geloofsbevestiging in het authentificatieproces en toont een foutenmelding als u onjuiste geloofsbrieven aan uw [!DNL Google Ad] rekening invoert. Dit zorgt ervoor dat u de werkstroom niet met onjuiste geloofsbrieven voltooit.
+>Experience Platform ondersteunt validatie van referenties in het verificatieproces en geeft een foutbericht weer als u onjuiste gegevens hebt ingevoerd voor uw [!DNL Google Ad]-account. Dit zorgt ervoor dat u de werkstroom niet met onjuiste geloofsbrieven voltooit.
 
 ![Verbinden met Google Customer Match-bestemming - verificatiestap](../../assets/catalog/advertising/google-customer-match/connection.png)
 
-Nadat uw referenties zijn bevestigd en Adobe Experience Cloud is verbonden met uw Google-account, kunt u **[!UICONTROL Next]** selecteren om door te gaan naar de stap **[!UICONTROL Setup]**.
+Nadat uw referenties zijn bevestigd en Adobe Experience Cloud is verbonden met uw Google-account, kunt u **[!UICONTROL Next]** selecteren om door te gaan naar de stap **[!UICONTROL Authentication]**.
 
 ![Credentials bevestigd](../../assets/catalog/advertising/google-customer-match/connection-success.png)
 
-Voer in de stap **[!UICONTROL Verificatie]** een [!UICONTROL Naam] en een [!UICONTROL Beschrijving] in voor uw activeringsstroom en vul de [!UICONTROL Account ID] in op Google.
+Voer in de stap **[!UICONTROL Verificatie]** een **[!UICONTROL Naam]** en een **[!UICONTROL Beschrijving]** in voor uw activeringsstroom en vul uw Google **[!UICONTROL Account ID]** in.
 
-Ook in deze stap, kunt u om het even welke **[!UICONTROL Handeling van de Marketing]** selecteren die op deze bestemming zou moeten van toepassing zijn. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [De Governance van Gegevens in Echt - tijd CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) pagina. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md#core-actions) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
+In deze stap, kunt u om het even welke **[!UICONTROL Handelingen van de Marketing]** selecteren die op deze bestemming zouden moeten van toepassing zijn. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
 
 Selecteer **[!UICONTROL Doel maken]** nadat u de bovenstaande velden hebt ingevuld.
 
@@ -146,7 +146,7 @@ In **[!UICONTROL Segmentprogramma]** stap, moet u [!UICONTROL App ID] verstrekke
 
 ![Google Customer Match App ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-Raadpleeg de [officiële documentatie](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) voor meer informatie over het zoeken naar de [!DNL App ID].
+Raadpleeg de [officiële documentatie van Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) voor meer informatie over het zoeken naar de [!DNL App ID].
 
 
 
