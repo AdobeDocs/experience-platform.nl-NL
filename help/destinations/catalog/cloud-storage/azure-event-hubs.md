@@ -3,7 +3,7 @@ keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
 title: (Beta) Azure Event Hubs-verbinding
 description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 U kunt een uitgaande verbinding in real time met uw [!DNL Azure Event Hubs]-opslag maken om gegevens vanuit Adobe Experience Platform te streamen.
 
 * Voor meer informatie over [!DNL Azure Event Hubs], zie [de documentatie van Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
-* Als u verbinding wilt maken met [!DNL Azure Event Hubs] via API-aanroepen, raadpleegt u de [API-zelfstudie voor streaming doelen](../../api/streaming-destinations.md).
+* Als u programmatisch verbinding wilt maken met [!DNL Azure Event Hubs], raadpleegt u de [API-zelfstudie voor streamingdoelen](../../api/streaming-destinations.md).
 * Zie de onderstaande secties als u verbinding wilt maken met [!DNL Azure Event Hubs] via de gebruikersinterface van het Platform.
 
 ![AWS Kinesis in de gebruikersinterface](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
@@ -108,6 +108,6 @@ Uw geëxporteerde [!DNL Experience Platform]-gegevens worden in de JSON-indeling
 
 >[!MORELIKETHIS]
 >
->* [Verbind met Azure Event Hubs en activeer gegevens gebruikend API vraag](../../api/streaming-destinations.md)
+>* [Verbind met Azure Event Hubs en activeer gegevens gebruikend de Dienst API van de Stroom](../../api/streaming-destinations.md)
 >* [AWS Kinesis-bestemming](./amazon-kinesis.md)
 >* [Doeltypen en -categorieën](../../destination-types.md)
