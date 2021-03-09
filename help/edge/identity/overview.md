@@ -4,9 +4,9 @@ description: Leer hoe u Adobe Experience Cloud-id's (ECID's) ophaalt met de Adob
 seo-description: Meer weten over Adobe Experience Cloud-id?
 keywords: Identiteit;Identiteit eerste partij;Identiteitsdienst;Identiteit derde partij;Identiteitsmigratie;Identiteitskaart van de Bezoeker;Identiteitskaart;Identiteitskaart van derdePartijCookiesEnabled;idMigrationEnabled;getIdentiteit;syncIdentiteitskaart;Identiteitskaart;primaire;Identiteitskaart Namespace;Naamruimte ID;AuthentificatieStaat;hashEnabled;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 882bcd2f9aa7a104270865783eed82089862dea3
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '963'
 ht-degree: 0%
 
 ---
@@ -40,19 +40,20 @@ Wanneer gegevens met XDM-indeling naar Audience Manager worden verzonden, moeten
 
 Als u momenteel server side door:sturen toegelaten hebt en `appmeasurement.js` gebruikt. en `visitor.js` kunt u de functie voor het doorsturen aan de serverzijde ingeschakeld houden, wat geen problemen veroorzaakt. In het achterste eind, haalt Adobe om het even welke AAM segmenten en voegt hen aan de vraag aan Analytics toe. Als de aanroep naar Analytics deze segmenten bevat, roept Analytics geen Audience Manager aan om gegevens door te sturen, zodat er geen dubbele gegevensverzameling is. Er is ook geen behoefte aan de Hint van de Plaats wanneer het gebruiken van SDK van het Web omdat de zelfde segmentatie eindpunten in het achtereind worden geroepen.
 
-## De bezoeker-id ophalen
+## De bezoeker-id en regio-id ophalen
 
-Als u deze unieke id wilt gebruiken, gebruikt u de opdracht `getIdentity`. `getIdentity` retourneert de bestaande ECID voor de huidige bezoeker. Voor nieuwe bezoekers die nog geen ECID hebben, genereert deze opdracht een nieuwe ECID.
+Als u de unieke bezoekersidentiteitskaart wilt gebruiken, gebruik `getIdentity` bevel. `getIdentity` retourneert de bestaande ECID voor de huidige bezoeker. Voor nieuwe bezoekers die nog geen ECID hebben, genereert deze opdracht een nieuwe ECID. `getIdentity` retourneert ook de regio-id voor de bezoeker. Zie [Adobe Audience Manager User Guide](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html) voor meer informatie.
 
 >[!NOTE]
 >
->Deze methode wordt typisch gebruikt met douaneoplossingen die het lezen van [!DNL Experience Cloud] identiteitskaart vereisen. Het wordt niet gebruikt door een standaardimplementatie.
+>Deze methode wordt doorgaans gebruikt met aangepaste oplossingen die het lezen van de [!DNL Experience Cloud]-id vereisen of die de Adobe Audience Manager-locatiehint nodig hebben. Het wordt niet gebruikt door een standaardimplementatie.
 
 ```javascript
 alloy("getIdentity")
   .then(function(result) {
     // The command succeeded.
-    console.log(result.identity.ECID);
+    console.log("ECID:", result.identity.ECID);
+    console.log("RegionId:", result.edge.regionId);
   })
   .catch(function(error) {
     // The command failed.
