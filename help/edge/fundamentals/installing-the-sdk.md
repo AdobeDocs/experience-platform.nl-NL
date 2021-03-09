@@ -3,7 +3,7 @@ title: De SDK van Adobe Experience Platform Web installeren
 description: Leer hoe te om het Web SDK van het Experience Platform te installeren.
 keywords: web sdk installatie;installeren web sdk;Internet Explorer;promise;npm pakket
 translation-type: tm+mt
-source-git-commit: 29272856d766e5adeb4b00ea62b28ea77abe338e
+source-git-commit: 63c0c5cae5ca2800b1f049b2b33e2a6f36ee7255
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 0%
@@ -31,8 +31,10 @@ URL-structuur: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OF a
 
 Bijvoorbeeld:
 
-* Gepiliseerd: [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js)
-* Niet-geminimaliseerd: [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js)
+
+* Gepiliseerd: [https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js)
+* Niet-geminificeerd: [https://cdn1.adoberesources.net/alloy/2.4.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.4.0/alloy.js)
+
 
 ### De code {#adding-the-code} toevoegen
 
@@ -45,7 +47,7 @@ Voor de vooraf samengestelde zelfstandige versie is een &quot;basiscode&quot; ve
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js" async></script>
 ```
 
 De &quot;basiscode&quot; maakt een algemene functie met de naam `alloy`. Gebruik deze functie om te communiceren met de SDK. Als u de algemene functie een andere naam wilt geven, wijzigt u de naam `alloy` als volgt:
@@ -57,7 +59,7 @@ De &quot;basiscode&quot; maakt een algemene functie met de naam `alloy`. Gebruik
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js" async></script>
 ```
 
 In dit voorbeeld wordt de naam van de algemene functie gewijzigd in `mycustomname` in plaats van `alloy`.
@@ -107,7 +109,7 @@ Als u het bestand synchroon in plaats van asynchroon wilt laden, verwijdert u he
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js"></script>
 ```
 
 ## Optie 3: Het NPM-pakket gebruiken
