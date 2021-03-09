@@ -2,9 +2,9 @@
 title: Overzicht van Adobe Experience Platform Web SDK-extensie
 description: Meer informatie over de Adobe Experience Platform Web SDK Extension voor Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '584'
 ht-degree: 1%
 
 ---
@@ -56,10 +56,13 @@ Zie de handleiding op [randconfiguraties](../fundamentals/edge-configuration.md)
 
 ## [!UICONTROL Privacy]
 
-In de sectie [!UICONTROL Privacy] kunt u configureren hoe de SDK de toestemmingssignalen van de klant van uw website afhandelt. Specifiek, staat het u toe om het standaardniveau van toestemming te selecteren dat van een klant wordt verondersteld als geen andere expliciete toestemmingsvoorkeur is verstrekt. In de volgende tabel wordt aangegeven wat elke optie inhoudt:
+In de sectie [!UICONTROL Privacy] kunt u configureren hoe de SDK de signalen van uw website voor toestemming van gebruikers afhandelt. Met name kunt u het standaardniveau van toestemming selecteren dat wordt aangenomen door een gebruiker als er geen andere voorkeur voor expliciete toestemming is opgegeven. Het standaard toestemmingsniveau wordt niet bewaard aan het profiel van de gebruiker. In de volgende tabel wordt aangegeven wat elke optie inhoudt:
 
 | [!UICONTROL Standaardniveau van toestemming] | Beschrijving |
 | --- | --- |
-| [!UICONTROL In] | Inschakelen. Gebruik deze optie als u de instemming van de klant standaard aanneemt en alleen de signalen van de opt-out respecteert. |
-| [!UICONTROL In behandeling] | Klanten met &quot;hangende&quot; toestemming worden uitgeschakeld totdat een aanmeldingssignaal wordt verzonden. Gebruik deze optie als u expliciete klantentoestemming voor uw bedrijfsverrichtingen vereist. |
+| [!UICONTROL In] | Verzamel gebeurtenissen die plaatsvinden voordat de gebruiker voorkeuren voor toestemming geeft. |
+| [!UICONTROL Uit] | Gebeurtenissen negeren die plaatsvinden voordat de gebruiker voorkeuren voor toestemming geeft. |
+| [!UICONTROL In behandeling] | Wachtrij-gebeurtenissen die plaatsvinden voordat de gebruiker voorkeuren voor toestemming geeft. Als er voorkeuren voor toestemming zijn opgegeven, worden de gebeurtenissen verzameld of genegeerd, afhankelijk van de opgegeven voorkeuren. |
 | [!UICONTROL Verstrekt door gegevenselement] | Het standaard toestemmingsniveau wordt bepaald door een afzonderlijk gegevenselement dat u bepaalt. Wanneer u deze optie gebruikt, moet u het gegevenselement opgeven met behulp van het opgegeven vervolgkeuzemenu. |
+
+Gebruik uit of in afwachting als u expliciete gebruikerstoestemming voor uw bedrijfsverrichtingen vereist.
