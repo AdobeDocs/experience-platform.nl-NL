@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;Microsoft SQL;microsoft sql;SQL;sql
 solution: Experience Platform
 title: Overzicht van SQL Server Source Connector
-topic: overview
+topic: ' - overzicht'
 description: Leer hoe u Microsoft SQL Server met Adobe Experience Platform kunt verbinden met behulp van API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,10 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 ## IP adres lijst van gewenste personen
 
 Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie [IP adres lijst van gewenste personen](../../ip-address-allow-list.md) pagina voor meer informatie.
+
+>[!IMPORTANT]
+>
+>De [!DNL Microsoft] SQL de bronschakelaar van de Server steunt momenteel zelfde-gebiedconnectiviteit aan Platform niet. Dit betekent dat als uw Azure-instantie hetzelfde netwerkgebied gebruikt als Platform, een verbinding met bronnen van Platforms niet tot stand kan worden gebracht. Momenteel wordt alleen connectiviteit tussen regio&#39;s ondersteund. Neem contact op met uw Adobe-accountmanager voor meer informatie.
 
 De documentatie hieronder verstrekt informatie over hoe te om [!DNL Microsoft] SQL Server aan [!DNL Platform] te verbinden gebruikend APIs of de gebruikersinterface:
 
