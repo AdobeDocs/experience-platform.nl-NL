@@ -1,11 +1,11 @@
 ---
 title: Gebeurtenissen bijhouden met de SDK van Adobe Experience Platform Web
-seo-description: Leer hoe u Adobe Experience Platform Web SDK-gebeurtenissen kunt bijhouden.
+description: Leer hoe u Adobe Experience Platform Web SDK-gebeurtenissen kunt bijhouden.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 25cf425df92528cec88ea027f3890abfa9cd9b41
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1397'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ In dit voorbeeld wordt de gegevenslaag gekloond door het in series te vervaardig
 
 Het verzenden van gegevens die niet overeenkomen met een XDM-schema wordt momenteel niet ondersteund. De steun is gepland voor een toekomstige datum.
 
-### Instelling `eventType`
+### Instelling `eventType` {#event-types}
 
 In een XDM ervaringsgebeurtenis, is er een facultatief `eventType` gebied. Dit houdt het primaire gebeurtenistype voor het verslag. Door een gebeurtenistype in te stellen kunt u onderscheid maken tussen de verschillende gebeurtenissen die u wilt verzenden. XDM biedt verschillende vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken of u maakt altijd uw eigen aangepaste gebeurtenistypen voor uw gebruiksgevallen. Hieronder vindt u een lijst met alle vooraf gedefinieerde gebeurtenistypen die door XDM worden geleverd. [Lees meer in het openbare XDM-rapport](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
 
@@ -211,20 +211,20 @@ alloy("sendEvent", {
 
 ## Globaal wijzigen van gebeurtenissen {#modifying-events-globally}
 
-Als u, velden van de gebeurtenis globaal wilt toevoegen verwijderen of wijzigen, kunt u een `onBeforeEventSend` callback vormen.  Deze callback wordt geroepen telkens als een gebeurtenis wordt verzonden.  Deze callback wordt doorgegeven in een gebeurtenisobject met een veld `xdm`.  Wijzig `event.xdm` om de gegevens te wijzigen die in de gebeurtenis worden verzonden.
+Als u, velden van de gebeurtenis globaal wilt toevoegen verwijderen of wijzigen, kunt u een `onBeforeEventSend` callback vormen.  Deze callback wordt geroepen telkens als een gebeurtenis wordt verzonden.  Deze callback wordt doorgegeven in een gebeurtenisobject met een veld `xdm`.  Wijzig `content.xdm` om de gegevens te wijzigen die met de gebeurtenis worden verzonden.
 
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(event) {
+  "onBeforeEventSend": function(content) {
     // Change existing values
-    event.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
+    content.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
     // Remove existing values
-    delete event.xdm.web.webReferrer.URL;
+    delete content.xdm.web.webReferrer.URL;
     // Or add new values
-    event.xdm._adb3lettersandnumbers.mycustomkey = "value";
+    content.xdm._adb3lettersandnumbers.mycustomkey = "value";
   }
 });
 ```
@@ -235,10 +235,54 @@ alloy("configure", {
 2. Automatisch verzamelde waarden.  (Zie [Automatische informatie](../data-collection/automatic-information.md).)
 3. De veranderingen die in `onBeforeEventSend` callback worden aangebracht.
 
-Als de `onBeforeEventSend` callback een uitzondering werpt, wordt de gebeurtenis nog verzonden; echter, worden geen van de veranderingen die binnen callback werden aangebracht toegepast op de definitieve gebeurtenis.
+Enkele opmerkingen over de callback `onBeforeEventSend`:
+
+* Gebeurtenis XDM kan tijdens callback worden gewijzigd. Nadat de callback is teruggekeerd, om het even welke gewijzigde gebieden en waarden van
+de content.xdm- en content.data-objecten worden samen met de gebeurtenis verzonden.
+
+   ```javascript
+   onBeforeEventSend: function(content){
+     //sets a query parameter in XDM
+     const queryString = window.location.search;
+     const urlParams = new URLSearchParams(queryString);
+     content.xdm.marketing.trackingCode = urlParams.get('cid')
+   }
+   ```
+
+* Als callback een uitzondering genereert, wordt de verwerking voor de gebeurtenis stopgezet en wordt de gebeurtenis niet verzonden.
+* Als de callback de booleaanse waarde van `false` terugkeert, de gebeurtenisverwerking beëindigt,
+zonder een fout, en de gebeurtenis wordt niet verzonden. Met dit mechanisme kunnen bepaalde gebeurtenissen eenvoudig worden genegeerd door
+het onderzoeken van de gebeurtenisgegevens en het terugkeren van `false` als de gebeurtenis niet zou moeten worden verzonden.
+
+   >[!NOTE]
+   >Let erop dat u niet de fout retourneert bij de eerste gebeurtenis op een pagina. Als u false retourneert op de eerste gebeurtenis, kan dit een negatieve invloed hebben op de personalisatie.
+
+```javascript
+   onBeforeEventSend: function(content) {
+     // ignores events from bots
+     if (MyBotDetector.isABot()) {
+       return false;
+     }
+   }
+```
+
+Met elke andere geretourneerde waarde dan de booleaanse waarde `false` kan de gebeurtenis na de callback worden verwerkt en verzonden.
+
+* Gebeurtenissen kunnen worden gefilterd door het gebeurtenistype te onderzoeken (zie [Gebeurtenistypen](#event-types).):
+
+```javascript
+    onBeforeEventSend: function(content) {  
+      // augments XDM if link click event is to a partner website
+      if (
+        content.xdm.eventType === "web.webinteraction.linkClicks" &&
+        content.xdm.web.webInteraction.URL ===
+          "http://example.com/partner-page.html"
+      ) {
+        content.xdm.partnerWebsiteClick = true;
+      }
+   }
+```
 
 ## Mogelijke uitvoerbare fouten
 
 Bij het verzenden van een gebeurtenis kan een fout optreden als de gegevens die worden verzonden te groot zijn (meer dan 32 kB voor de volledige aanvraag). In dit geval moet u de hoeveelheid gegevens die wordt verzonden, verminderen.
-
-Wanneer het zuiveren wordt toegelaten, bevestigt de server synchroon gebeurtenisgegevens die tegen het gevormde schema XDM worden verzonden. Als de gegevens niet overeenkomen met het schema, worden gegevens over de niet-overeenkomende gegevens geretourneerd van de server en wordt een fout gegenereerd. In dit geval past u de gegevens aan het schema aan. Wanneer het zuiveren niet wordt toegelaten, controleert de server asynchroon gegevens en, daarom, wordt geen overeenkomstige fout geworpen.
