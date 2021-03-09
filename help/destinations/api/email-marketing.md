@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
-title: Verbinding maken met marketingdoelen voor e-mail en gegevens activeren via API-aanroepen
+title: Verbinding maken met marketingdoelen voor e-mail en gegevens activeren met de Flow Service API
 description: Dit document behandelt het maken van e-mailmarketingdoelen met de Adobe Experience Platform API
 topic: zelfstudie
 type: Zelfstudie
 translation-type: tm+mt
-source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '1701'
+source-wordcount: '1707'
 ht-degree: 0%
 
 ---
 
 
-# Verbinding maken met marketingdoelen voor e-mail en gegevens activeren via API-aanroepen
+# Verbinding maken met marketingdoelen voor e-mail en gegevens activeren met de Flow Service API
 
 Deze zelfstudie laat zien hoe u API-aanroepen kunt gebruiken om verbinding te maken met uw Adobe Experience Platform-gegevens, een [e-mailmarketingbestemming](../catalog/email-marketing/overview.md) te maken, een gegevensstroom naar uw nieuwe gemaakte bestemming te maken en gegevens te activeren voor uw nieuwe gemaakte bestemming.
 
@@ -67,7 +67,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 ### Documentatie voor de wagenbak
 
-In deze zelfstudie in Swagger vindt u begeleidende referentiedocumentatie voor alle API-aanroepen. Zie de [documentatie van de Dienst API van de Stroom op Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We raden u aan deze zelfstudie en de documentatiepagina van Swagger parallel te gebruiken.
+In deze zelfstudie in Swagger vindt u begeleidende referentiedocumentatie voor alle API-aanroepen. Zie de [documentatie van de Dienst API van de Stroom op Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We raden u aan deze zelfstudie en de documentatiepagina van Swagger parallel te gebruiken.
 
 ## Hiermee wordt de lijst met beschikbare doelen opgehaald {#get-the-list-of-available-destinations}
 
