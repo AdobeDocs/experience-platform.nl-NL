@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;populaire onderwerpen;SFTP;sftp
 solution: Experience Platform
 title: Een SFTP-bronverbinding maken in de gebruikersinterface
-topic: overview
+topic: ' - overzicht'
 type: Tutorial
 description: Leer hoe u een SFTP-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: b39426d768a0c6fdfa742ec74e4e0bed9c432269
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 0%
+source-wordcount: '718'
+ht-degree: 1%
 
 ---
 
@@ -46,7 +46,7 @@ Als u verbinding wilt maken met SFTP, moet u waarden opgeven voor de volgende ve
 | `host` | De naam of het IP-adres dat aan uw SFTP-server is gekoppeld. |
 | `username` | De gebruikersnaam met toegang tot uw SFTP-server. |
 | `password` | Het wachtwoord voor uw SFTP-server. |
-| `privateKeyContent` | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. De OpenSSH-indeling (RSA/DSA) voor de persoonlijke sleutel van SSH. |
+| `privateKeyContent` | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
 | `passPhrase` | De wachtwoordgroep of het wachtwoord voor het decoderen van de persoonlijke sleutel als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als PrivateKeyContent met een wachtwoord beveiligd is, moet deze parameter worden gebruikt met de wachtwoordzin van PrivateKeyContent als waarde. |
 
 Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om een nieuwe SFTP-account te maken waarmee u verbinding kunt maken met het Platform.
@@ -75,13 +75,13 @@ Alternatief, kunt u **[SSH openbare sleutel]** selecteren en uw rekening verbind
 
 >[!IMPORTANT]
 >
->De schakelaar SFTP steunt een sleutel RSA/DSA OpenSSH. Zorg ervoor dat de inhoud van het sleutelbestand begint met `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`. Als het bestand met de persoonlijke sleutel een PPK-bestand is, gebruikt u het gereedschap PuTTY om de PPK-indeling om te zetten in de OpenSSH-indeling.
+>De schakelaar SFTP steunt een sleutel van RSA of van het type DSA OpenSSH. Zorg ervoor dat de inhoud van het sleutelbestand begint met `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` en eindigt met `"-----END [RSA/DSA] PRIVATE KEY-----"`. Als het bestand met de persoonlijke sleutel een PPK-bestand is, gebruikt u het gereedschap PuTTY om de PPK-indeling om te zetten in de OpenSSH-indeling.
 
 ![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| Persoonlijke toetsinhoud | A Base64 encoded SSH private key content. De persoonlijke sleutel van SSH zou OpenSSH formaat moeten zijn. |
+| Persoonlijke toetsinhoud | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
 | Passphrase | Hiermee geeft u de woordgroep of het wachtwoord op waarmee de persoonlijke sleutel wordt gedecodeerd als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als PrivateKeyContent met een wachtwoord beveiligd is, moet deze parameter worden gebruikt met de wachtwoordzin van PrivateKeyContent als waarde. |
 
 ### Bestaande account
