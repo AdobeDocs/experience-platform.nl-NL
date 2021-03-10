@@ -2,13 +2,13 @@
 keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;jupyterlab
 solution: Experience Platform
 title: Overzicht van de gebruikersinterface van JupyterLab
-topic: Overview
-description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het verstrekt een interactieve ontwikkelomgeving voor gegevenswetenschappers om met Notities Jupyter, code, en gegevens te werken. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies voor het uitvoeren van veelvoorkomende handelingen.
+topic: Overzicht
+description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het verstrekt een interactieve ontwikkelomgeving voor gegevenswetenschappers om met Notities Jupyter, code, en gegevens te werken. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies om algemene handelingen uit te voeren.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 23128fb481452b558c52f962f78ae638fc1f0418
 workflow-type: tm+mt
-source-wordcount: '1950'
-ht-degree: 6%
+source-wordcount: '1816'
+ht-degree: 0%
 
 ---
 
@@ -64,7 +64,7 @@ In de volgende secties wordt informatie gegeven over de belangrijkste kenmerken 
 
 ### Ga naar [!DNL JupyterLab] {#access-jupyterlab}
 
-Selecteer **Laptops** in [Adobe Experience Platform](https://platform.adobe.com) in de linkernavigatiekolom. Sta wat tijd voor [!DNL JupyterLab] toe om volledig te initialiseren.
+Selecteer **[!UICONTROL Laptops]** in [Adobe Experience Platform](https://platform.adobe.com) in de linkernavigatiekolom. Sta wat tijd voor [!DNL JupyterLab] toe om volledig te initialiseren.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -96,7 +96,7 @@ De linkerzijbalk bevat klikbare tabbladen die toegang bieden tot de volgende fun
 * **Celcontrole:** een celeditor die toegang biedt tot gereedschappen en metagegevens die nuttig zijn voor het instellen van een laptop voor presentatiedoeleinden
 * **tabs:** een lijst met geopende tabbladen
 
-Klik op een tab om de bijbehorende functies weer te geven of klik op een uitgevouwen tab om de linkerzijbalk samen te vouwen, zoals hieronder wordt getoond:
+Selecteer een tab om de bijbehorende functies weer te geven of selecteer een uitgevouwen tab om de linkerzijbalk samen te vouwen, zoals hieronder wordt getoond:
 
 ![](../images/jupyterlab/user-guide/left_sidebar_collapse.gif)
 
@@ -105,6 +105,24 @@ Klik op een tab om de bijbehorende functies weer te geven of klik op een uitgevo
 Met het belangrijkste werkgebied in [!DNL JupyterLab] kunt u documenten en andere activiteiten rangschikken in tabbladen waarvan u de grootte kunt wijzigen of kunt onderverdelen. Sleep een tab naar het midden van een deelvenster met tabbladen om de tab te migreren. Verdeel een deelvenster door een tab naar links, rechts, boven of onder in het deelvenster te slepen:
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
+
+### GPU- en geheugenserverconfiguratie in [!DNL Python]/R
+
+Selecteer in [!DNL JupyterLab] het tandwielpictogram in de rechterbovenhoek om *Configuratie notebookserver* te openen. Met de schuifregelaar kunt u de GPU in- en uitschakelen en de benodigde hoeveelheid geheugen toewijzen. De hoeveelheid geheugen die u kunt toewijzen, is afhankelijk van de hoeveelheid geheugen die uw organisatie heeft ingericht. Selecteer **[!UICONTROL Configuraties bijwerken]** om op te slaan.
+
+>[!NOTE]
+>
+>Per organisatie is slechts één GPU beschikbaar voor laptops. Als de GPU in gebruik is, moet u wachten op de gebruiker die momenteel de GPU heeft gereserveerd om deze vrij te geven. Dit kan worden gedaan door uit te loggen of GPU in een nutteloze staat voor vier of meer uren te verlaten.
+
+![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
+
+### [!DNL JupyterLab] beëindigen en opnieuw starten
+
+In [!DNL JupyterLab], kunt u uw zitting eindigen om verdere middelen te verhinderen worden gebruikt. Begin door **machtspictogram** te selecteren, dan uitgezocht **[!UICONTROL Sluit]** van popover die schijnt om uw zitting te eindigen. Laptopsessies worden automatisch beëindigd na twaalf uur geen activiteit.
+
+Als u [!DNL JupyterLab] opnieuw wilt starten, selecteert u het **opstartpictogram** dat zich direct links van het energiepictogram bevindt en selecteert u **[!UICONTROL Opnieuw starten]** in de pop-up die wordt weergegeven.
+
+![jupyterlab beëindigen](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
 ### Codecellen {#code-cells}
 
@@ -124,7 +142,7 @@ Vaak voorkomende celhandelingen worden hieronder beschreven:
 
 ### Kernels {#kernels}
 
-Notebookkernels zijn de taalspecifieke computerengines voor de verwerking van notebookcellen. Naast [!DNL Python] biedt [!DNL JupyterLab] extra taalondersteuning in R, PySpark en [!DNL Spark] (Scala). Wanneer u een notitieboekjectdocument opent, wordt de bijbehorende kernel gestart. Wanneer een laptopcel wordt uitgevoerd, voert de kernel de berekening uit en levert dit resultaten op die aanzienlijke CPU- en geheugenbronnen verbruiken. Let op: toegewezen geheugen wordt pas vrijgegeven wanneer de kernel wordt afgesloten.
+Notebookkernels zijn de taalspecifieke computerengines voor de verwerking van notebookcellen. Naast [!DNL Python] biedt [!DNL JupyterLab] extra taalondersteuning in R, PySpark en [!DNL Spark] (Scala). Wanneer u een notitieboekjectdocument opent, wordt de bijbehorende kernel gestart. Wanneer een laptopcel wordt uitgevoerd, voert de kernel de berekening uit en levert dit resultaten op die aanzienlijke CPU- en geheugenbronnen verbruiken. Let op: toegewezen geheugen wordt pas vrijgemaakt wanneer de kernel wordt afgesloten.
 
 Bepaalde kenmerken en functies zijn beperkt tot bepaalde kernels zoals beschreven in de onderstaande tabel:
 
@@ -231,141 +249,12 @@ Als u een nieuwe *Launcher* wilt openen, klikt u op **Bestand > Nieuwe Launcher*
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
-### GPU- en geheugenserverconfiguratie in [!DNL Python]/R
-
-Selecteer in [!DNL JupyterLab] het tandwielpictogram in de rechterbovenhoek om *Configuratie notebookserver* te openen. Met de schuifregelaar kunt u de GPU in- en uitschakelen en de benodigde hoeveelheid geheugen toewijzen. De hoeveelheid geheugen die u kunt toewijzen, is afhankelijk van de hoeveelheid geheugen die uw organisatie heeft ingericht. Selecteer **[!UICONTROL Configuraties bijwerken]** om op te slaan.
-
->[!NOTE]
->
->Per organisatie is slechts één GPU beschikbaar voor laptops. Als de GPU in gebruik is, moet u wachten op de gebruiker die momenteel de GPU heeft gereserveerd om deze vrij te geven. Dit kan worden gedaan door uit te loggen of GPU in een nutteloze staat voor vier of meer uren te verlaten.
-
-![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
-
 ## Volgende stappen
 
 Voor meer informatie over elk van de ondersteunde laptops en hoe deze te gebruiken, raadpleegt u de [Jupyterlab-handleiding voor toegang tot gegevens van laptops](./access-notebook-data.md). In deze handleiding wordt vooral uitgelegd hoe u JupyterLab-laptops kunt gebruiken om toegang te krijgen tot uw gegevens, zoals lezen, schrijven en vragen om gegevens. De gids voor gegevenstoegang bevat ook informatie over de maximale hoeveelheid gegevens die kan worden gelezen door elke ondersteunde laptop.
 
 ## Ondersteunde bibliotheken {#supported-libraries}
 
-### [!DNL Python] / R
+Voor een lijst van gesteunde pakketten in Python, R, en PySpark, kopieer en deeg `!pip list --format=columns` in een nieuwe cel, dan stel de cel in werking. Een lijst met ondersteunde pakketten wordt in alfabetische volgorde gevuld.
 
-| Bibliotheek | Versie |
-| :------ | :------ |
-| notebook | 6.0.0. |
-| verzoeken | 2.22.0. |
-| plots | 4.0.0. |
-| folium | 0,10,0 |
-| ipywidgets | 7.5.1. |
-| bokee | 1.3.1. |
-| gensim | 3.7.3. |
-| ipyparallel | 0,5,2 |
-| jq | 1,6 |
-| keras | 2.2.4. |
-| nltk | 3.2.5. |
-| pandas | 0,22,0 |
-| pandasql | 0,7,3 |
-| kussen | 6.0.0. |
-| scikit-image | 0,15,0 |
-| scikit-learn | 0,21,3 |
-| slordig | 1.3.0. |
-| slordig | 1.3.0. |
-| seaborn | 0,9,0 |
-| statsmodellen | 0,10,1 |
-| elastisch | 5.1.0.17 |
-| gumpje | 0,11,5 |
-| py-xgboost | 0,90 |
-| opencv | 3.4.1. |
-| pyspark | 2.4.3. |
-| pytorch | 1.0.1. |
-| wxpython | 4.0.6. |
-| kleurovergang | 0,3,0 |
-| geopanda | 0,5,1 |
-| peper | 2.1.0. |
-| vormig | 1.6.4. |
-| rpy2 | 2.9.4. |
-| r-essentiële | 3,6 |
-| r-arules | 1,6_3 |
-| r-fpc | 2,2_3 |
-| r-e1071 | 1,7_2 |
-| r-gam | 1.16.1. |
-| r-gbm | 2.1.5. |
-| rggthemes | 4.2.0. |
-| r-ggvis | 0,4,4 |
-| r-igraph | 1.2.4.1. |
-| r-leaps | 3,0 |
-| r-manipuleert | 1.0.1. |
-| r-rocr | 1.0_7 |
-| r-rmysql | 0,10,17 |
-| r-rodbc | 1,3_15 |
-| r-rsqlite | 2.1.2. |
-| r-rstan | 2.19.2. |
-| r-sqldf | 0,4_11 |
-| r-overleving | 2,44_1,1 |
-| r-zoo | 1,8_6 |
-| r-stringdist | 0,9.5.2 |
-| r-quadprog | 1,5_7 |
-| r-rjson | 0,2,20 |
-| r-prognose | 8,7 |
-| r-rsolnp | 1,16 |
-| herticuleren | 1,12 |
-| r-mlr | 2.14.0. |
-| r-viridis | 0,5,1 |
-| r-corplot | 0,84 |
-| r-fnn | 1.1.3. |
-| r-lubridate | 1.7.4. |
-| r-randomforest | 4,6_14 |
-| r-tidyverse | 1.2.1. |
-| r-tree | 1,0_39 |
-| pymongo | 3.8.0. |
-| pijltje | 0,14,1 |
-| boto3 | 1.9.1999 |
-| ipyvolume | 0,5,2 |
-| fastparket | 0,3,2 |
-| python-snappy | 0,5,4 |
-| ipywebrtc | 0,5,0 |
-| jupyter_client | 5.3.1. |
-| woordwolk | 1.5.0. |
-| grafiet | 2,40,1 |
-| python-graphviz | 0.11.1. |
-| azuuropslag | 0,36,0 |
-| [!DNL jupyterlab] | 1.0.4. |
-| pandas_ml | 0,6,1 |
-| tensorflow-gpu | 1.14.0. |
-| nodejs | 12.3.0. |
-| molen | 3.0.5. |
-| ipympl | 0,3,3 |
-| fonts-anacond | 1,0 |
-| psycopg2 | 2.8.3. |
-| neus | 1.3.7. |
-| autovizwidget | 0,12,9 |
-| altair | 3.1.0. |
-| vega_datasets | 0,7,0 |
-| papiermolen | 1.0.1. |
-| sql_magic | 0,0,4 |
-| iso3166 | 1,0 |
-| nbimporter | 0,3,1 |
-
-### PySpark
-
-| Bibliotheek | Versie |
-| :------ | :------ |
-| verzoeken | 2.18.4. |
-| gensim | 2.3.0. |
-| keras | 2.0.6. |
-| nltk | 3.2.4. |
-| pandas | 0,20,1 |
-| pandasql | 0,7,3 |
-| kussen | 5.3.0. |
-| scikit-image | 0,13,0 |
-| scikit-learn | 0,19,0 |
-| slordig | 0,19,1 |
-| slordig | 1.3.3. |
-| statsmodellen | 0,8,0 |
-| elastisch | 4.0.30.44 |
-| py-xgboost | 0,60 |
-| opencv | 3.1.0. |
-| pijltje | 0,8,0 |
-| boto3 | 1.5.18. |
-| azure-storage-blob | 1.4.0. |
-| [!DNL python] | 3.6.7. |
-| mkl-rt | 11,1 |
+![voorbeeld](../images/jupyterlab/user-guide/libraries.PNG)
