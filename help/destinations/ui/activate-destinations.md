@@ -6,9 +6,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: 6c8bf05285dcfc3e631ae5a41dcf40f90217320a
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2151'
 ht-degree: 0%
 
 ---
@@ -30,19 +30,11 @@ De stappen in de activeringswerkstroom variëren enigszins per doeltype. De voll
 
 Van toepassing op: Alle bestemmingen
 
-Navigeer in de Adobe Experience Platform-gebruikersinterface naar **[!UICONTROL Doelen]** > **[!UICONTROL Bladeren]** en selecteer de bestemming waar u de segmenten wilt activeren.
+Navigeer in de Adobe Experience Platform-gebruikersinterface naar **[!UICONTROL Doelen]** > **[!UICONTROL Bladeren]** en druk op de knop **[!UICONTROL Activeren]** die correspondeert met de bestemming waar u de segmenten wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
 
-![naar doel bladeren](../assets/ui/activate-destinations/connect.png)
+![activeren naar doel](../assets/ui/activate-destinations/browse-tab-activate.png)
 
-Selecteer de naam van het doel om naar de activeringsworkflow te navigeren.
-
-![activeren-flow](../assets/ui/activate-destinations/activate-flow.png)
-
->[!NOTE]
->
->Als er al een activeringswerkstroom voor een doel bestaat, kunt u de segmenten zien die momenteel aan de bestemming worden geactiveerd. Selecteer **[!UICONTROL Activering bewerken]** in de rechtertrack en voer de onderstaande stappen uit om de activeringsdetails te wijzigen.
-
-Als u een doel hebt geselecteerd, selecteert u **[!UICONTROL Activeren]**.
+Voer de stappen in de volgende sectie uit om de segmenten te selecteren die u wilt activeren.
 
 ### [!UICONTROL Segmentsstap ] selecteren  {#select-segments}
 
