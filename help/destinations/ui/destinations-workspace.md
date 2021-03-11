@@ -4,9 +4,9 @@ title: Overzicht van de werkruimte Doelen
 description: De werkruimte Doelen bestaat uit vier secties, Catalogus, Bladeren, Rekeningen, en de Mening van het Systeem, die in de hieronder secties worden beschreven.
 seo-description: In Adobe Experience Platform, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 translation-type: tm+mt
-source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '1017'
 ht-degree: 1%
 
 ---
@@ -87,15 +87,19 @@ Het **[!UICONTROL Browse]** lusje toont de bestemmingen waarmee u een verbinding
 
 >[!TIP]
 >
->Gebruik ![Gegevensknop toevoegen](../assets/ui/workspace/add-data-symbol.png) in de **[!UICONTROL Naam]** kolom om extra segmenten aan die bestemming te activeren.
+> * Gebruik ![Voeg segmenten toe knoop](../assets/ui/workspace/add-data-symbol.png) in **[!UICONTROL Naam]** kolom om extra segmenten aan die bestemming te activeren.
+> * Gebruik de ![knop Doelen verwijderen](../assets/ui/workspace/delete-destination-symbol.png) in de kolom **[!UICONTROL Naam]** om een bestaande verbinding naar een doel te verwijderen.
+
 
 ![Tabblad Bladeren](../assets/ui/workspace/browse-tab.png)
 
 | Element | Beschrijving |
 ---------|----------
-| Naam | De naam die u hebt opgegeven voor de activeringsstroom naar dit doel. |
+| Naam | De naam die u hebt opgegeven voor de activeringsstroom naar dit doel. Dezelfde kolom bevat twee besturingselementen: [!UICONTROL Activeer ] en [!UICONTROL Verwijder doel]. |
+| Status van laatste flowuitvoering | De status van de laatste gegevensstroom die wordt uitgevoerd. Zie [De bestemmingsdetails van de Mening](destination-details-page.md) voor meer informatie over dataflow looppas. |
+| Datum van laatste Flow-uitvoering | Tijd en datum waarop de laatste dataflow-run plaatsvond. Zie [De bestemmingsdetails van de Mening](destination-details-page.md) voor meer informatie over dataflow looppas. |
 | [!UICONTROL Bestemming] | Het doelplatform dat u hebt geselecteerd voor de activeringsstroom. |
-| [!UICONTROL Verbindingstype] | Vertegenwoordigt het verbindingstype aan uw opslagemmer of bestemming. <ul><li>Voor e-mailmarketingdoelen: Kan S3 of FTP zijn.</li><li>Voor realtime advertentiebestemmingen: Server-naar-server</li></ul> |
+| [!UICONTROL Verbindingstype] | Vertegenwoordigt het verbindingstype aan uw opslagemmer of bestemming. <ul><li>Voor e-mailmarketingdoelen: Kan S3, FTP of [!DNL Azure Blob] zijn.</li><li>Voor realtime advertentiebestemmingen: Server-naar-server.</li><li>Voor streamingdoelen: Kan [!DNL Azure Event Hubs] of [!DNL Amazon Kinesis] zijn.</li></ul> |
 | [!UICONTROL Gebruikersnaam] | De accountgegevens die u hebt geselecteerd voor de doelstroom. |
 | [!UICONTROL Activeringsgegevens] | Geeft het aantal segmenten aan dat op dit doel wordt geactiveerd. Selecteer dit besturingselement voor meer informatie over de geactiveerde segmenten. Raadpleeg [Activeringsgegevens](/help/destinations/ui/destination-details-page.md#activation-data) op de pagina met doeldetails voor meer informatie over de geactiveerde segmenten. |
 | [!UICONTROL Gemaakt] | De datum en UTC-tijd waarop de activeringsstroom naar het doel is gemaakt. |
