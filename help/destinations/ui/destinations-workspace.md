@@ -4,7 +4,7 @@ title: Overzicht van de werkruimte Doelen
 description: De werkruimte Doelen bestaat uit vier secties, Catalogus, Bladeren, Rekeningen, en de Mening van het Systeem, die in de hieronder secties worden beschreven.
 seo-description: In Adobe Experience Platform, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 translation-type: tm+mt
-source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
+source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 1%
@@ -117,6 +117,6 @@ Op het tabblad **[!UICONTROL Systeemweergave]** wordt een grafische weergave wee
 
 ![Gegevensstromen1](../assets/ui/workspace/data-flows1.png)
 
-Selecteer om het even welke bestemmingen die op de pagina worden getoond en druk **[!UICONTROL de stromen van de Mening]** om informatie over alle verbindingen te zien u opstelling voor elke bestemming hebt.
+Selecteer om het even welke bestemmingen die op de pagina worden getoond en klik **[!UICONTROL de stromen van de Mening]** om informatie over alle verbindingen te zien u opstelling voor elke bestemming hebt.
 
 ![Gegevensstromen2](../assets/ui/workspace/data-flows2.png)
