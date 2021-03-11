@@ -2,13 +2,13 @@
 keywords: Experience Platform;JupyterLab;recept;laptops;Data Science Workspace;populaire onderwerpen;recept maken
 solution: Experience Platform
 title: Een ontvanger maken met Jupyter-laptops
-topic: tutorial
-type: Tutorial
+topic: zelfstudie
+type: Zelfstudie
 description: Deze zelfstudie heeft betrekking op twee hoofdsecties. Eerst, zult u een machine het leren model gebruikend een malplaatje binnen Notitieboekje JupyterLab creëren. Vervolgens gebruikt u de workflow voor het maken van een notebook naar het recept in JupyterLab om een recept te maken in de Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '2362'
+source-wordcount: '2366'
 ht-degree: 0%
 
 ---
@@ -92,9 +92,9 @@ Gebruikers moeten de volgende variabelen invullen voordat ze training en scoring
 - `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA`
 - `scoringResultsDataSetId`
 
-Om dataset en schema IDs te vinden, ga naar het Lusje van Gegevens binnen notitieboeken op de linkernavigatiebar (onder het omslagpictogram).
+Als u de gegevensset en schema-id&#39;s wilt zoeken, gaat u naar het tabblad Gegevens ![Tabblad](../images/jupyterlab/create-recipe/dataset-tab.png) in laptops op de linkernavigatiebalk (onder het mappictogram).
 
-![](../images/jupyterlab/create-recipe/datasets.png)
+![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
 Dezelfde informatie vindt u op [Adobe Experience Platform](https://platform.adobe.com/) onder de tabbladen **[Schema](https://platform.adobe.com/schema)** en **[Datasets](https://platform.adobe.com/dataset/overview)**.
 
