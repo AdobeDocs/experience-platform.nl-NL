@@ -6,7 +6,7 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
+source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
 workflow-type: tm+mt
 source-wordcount: '2151'
 ht-degree: 0%
@@ -30,7 +30,7 @@ De stappen in de activeringswerkstroom variëren enigszins per doeltype. De voll
 
 Van toepassing op: Alle bestemmingen
 
-Navigeer in de Adobe Experience Platform-gebruikersinterface naar **[!UICONTROL Doelen]** > **[!UICONTROL Bladeren]** en druk op de knop **[!UICONTROL Activeren]** die correspondeert met de bestemming waar u de segmenten wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
+Navigeer in de Adobe Experience Platform-gebruikersinterface naar **[!UICONTROL Doelen]** > **[!UICONTROL Bladeren]** en klik op de knop **[!UICONTROL Activeren]** die hoort bij het doel waarvoor u de segmenten wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
 
 ![activeren naar doel](../assets/ui/activate-destinations/browse-tab-activate.png)
 
