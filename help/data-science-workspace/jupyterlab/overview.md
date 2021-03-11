@@ -5,9 +5,9 @@ title: Overzicht van de gebruikersinterface van JupyterLab
 topic: Overzicht
 description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het verstrekt een interactieve ontwikkelomgeving voor gegevenswetenschappers om met Notities Jupyter, code, en gegevens te werken. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies om algemene handelingen uit te voeren.
 translation-type: tm+mt
-source-git-commit: 23128fb481452b558c52f962f78ae638fc1f0418
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '1816'
+source-wordcount: '1820'
 ht-degree: 0%
 
 ---
@@ -118,9 +118,9 @@ Selecteer in [!DNL JupyterLab] het tandwielpictogram in de rechterbovenhoek om *
 
 ### [!DNL JupyterLab] beëindigen en opnieuw starten
 
-In [!DNL JupyterLab], kunt u uw zitting eindigen om verdere middelen te verhinderen worden gebruikt. Begin door **machtspictogram** te selecteren, dan uitgezocht **[!UICONTROL Sluit]** van popover die schijnt om uw zitting te eindigen. Laptopsessies worden automatisch beëindigd na twaalf uur geen activiteit.
+In [!DNL JupyterLab], kunt u uw zitting eindigen om verdere middelen te verhinderen worden gebruikt. Begin door **machtspictogram** ![machtspictogram](../images/jupyterlab/user-guide/power_button.png) te selecteren, dan uitgezocht **[!UICONTROL Sluit]** van popover die uw zitting lijkt te eindigen. Laptopsessies worden automatisch beëindigd na twaalf uur geen activiteit.
 
-Als u [!DNL JupyterLab] opnieuw wilt starten, selecteert u het **opstartpictogram** dat zich direct links van het energiepictogram bevindt en selecteert u **[!UICONTROL Opnieuw starten]** in de pop-up die wordt weergegeven.
+Als u [!DNL JupyterLab] opnieuw wilt starten, selecteert u het **pictogram voor opnieuw opstarten** ![pictogram voor opnieuw opstarten](../images/jupyterlab/user-guide/restart_button.png) dat zich direct links van het energiepictogram bevindt en selecteert u **[!UICONTROL Opnieuw starten]** in de pop-up die wordt weergegeven.
 
 ![jupyterlab beëindigen](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
