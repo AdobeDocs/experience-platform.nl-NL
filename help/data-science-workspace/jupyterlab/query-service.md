@@ -2,13 +2,13 @@
 keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;query-service
 solution: Experience Platform
 title: Query-service in Jupyter-laptop
-topic: tutorial
-type: Tutorial
+topic: zelfstudie
+type: Zelfstudie
 description: Met Adobe Experience Platform kunt u SQL (Structured Query Language) gebruiken in de Data Science Workspace door Query Service te integreren in JupyterLab als een standaardfunctie. In deze zelfstudie wordt een voorbeeld gegeven van SQL-query's voor veelvoorkomende gebruiksscenario's voor het verkennen, transformeren en analyseren van Adobe Analytics-gegevens.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '824'
 ht-degree: 1%
 
 ---
@@ -98,13 +98,11 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 
 ## Vraag uw gegevens {#query-your-data}
 
-Voer de volgende SQL-query&#39;s in voor afzonderlijke laptopcellen. Voer een vraag uit door op zijn cel te klikken die door **[!UICONTROL play]** knoop wordt gevolgd te klikken. De succesvolle vraagresultaten of foutenlogboeken worden getoond onder de uitgevoerde cel.
+Voer de volgende SQL-query&#39;s in voor afzonderlijke laptopcellen. Voer een vraag door op zijn cel te selecteren door **[!UICONTROL play]** knoop te selecteren wordt gevolgd. De succesvolle vraagresultaten of foutenlogboeken worden getoond onder de uitgevoerde cel.
 
-Wanneer een laptop gedurende langere tijd inactief is, kan de verbinding tussen de laptop en [!DNL Query Service] verbroken worden. Start in dergelijke gevallen [!DNL JupyterLab] opnieuw door op de knop **[!UICONTROL Macht]** in de rechterbovenhoek te klikken.
+Wanneer een laptop gedurende langere tijd inactief is, kan de verbinding tussen de laptop en [!DNL Query Service] verbroken worden. Start in dergelijke gevallen [!DNL JupyterLab] opnieuw door de **Herstart**-knop ![Opnieuw starten](../images/jupyterlab/user-guide/restart_button.png) in de rechterbovenhoek naast de aan/uit-knop te selecteren.
 
-![](../images/jupyterlab/query/restart_button.png)
-
-De notebookkernel wordt opnieuw ingesteld, maar de cellen blijven, en start **all** de cellen opnieuw om verder te gaan waar u was weggegaan.
+De notebookkernel wordt opnieuw ingesteld, maar de cellen blijven, en alle cellen worden opnieuw uitgevoerd om verder te gaan waar u was weggegaan.
 
 ### Aantal uren bezoeker {#hourly-visitor-count}
 
@@ -124,7 +122,7 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-In de bovenstaande query wordt het tijdstempel in de `WHERE`-component ingesteld als de waarde van `target_year`. Neem variabelen op in SQL-query&#39;s door deze tussen accolades (`{}`) te plaatsen.
+In de bovenstaande query wordt de tijdstempel in de `WHERE`-component ingesteld als de waarde van `target_year`. Neem variabelen op in SQL-query&#39;s door deze tussen accolades (`{}`) te plaatsen.
 
 De eerste regel van de query bevat de optionele variabele `hourly_visitor`. De resultaten van de vraag zullen in deze variabele als dataframe van Pandas worden opgeslagen. Het opslaan van resultaten in een dataframe staat u toe om de vraagresultaten later te visualiseren gebruikend gewenst [!DNL Python] pakket. Voer de volgende [!DNL Python] code in een nieuwe cel uit om een bar grafiek te produceren:
 
