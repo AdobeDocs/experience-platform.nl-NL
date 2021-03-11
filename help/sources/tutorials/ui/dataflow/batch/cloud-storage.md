@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;populaire onderwerpen;dataflow;DataFlow
 solution: Experience Platform
 title: Een DataFlow configureren voor een Cloud Storage Batch-connector in de gebruikersinterface
-topic: overview
+topic: ' - overzicht'
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 115442a90ab56a93748bf161aa2e7ed680980f6e
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1874'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Daarnaast vereist deze zelfstudie dat u beschikt over een gevestigde account voo
 
 [!DNL Experience Platform] ondersteunt de volgende bestandsindelingen die door externe opslagmedia moeten worden ingevoerd:
 
-* Door scheidingstekens gescheiden waarden (DSV): De ondersteuning voor gegevensbestanden met DSV-indeling is momenteel beperkt tot door komma&#39;s gescheiden waarden. De waarde van veldkoppen in bestanden met DSV-indeling mag alleen bestaan uit alfanumerieke tekens en onderstrepingstekens. Algemene DSV-bestanden worden in de toekomst ondersteund.
+* Door scheidingstekens gescheiden waarden (DSV): Elke waarde van één teken kan worden gebruikt als scheidingsteken voor gegevensbestanden met DSV-indeling.
 * [!DNL JavaScript Object Notation] (JSON): Gegevensbestanden met JSON-indeling moeten XDM-compatibel zijn.
 * [!DNL Apache Parquet]: Gegevensbestanden met parketindeling moeten XDM-compatibel zijn.
 
