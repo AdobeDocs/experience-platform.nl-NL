@@ -2,13 +2,13 @@
 keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;analyseren gegevenslaptops
 solution: Experience Platform
 title: Uw gegevens analyseren met laptops
-topic: tutorial
-type: Tutorial
+topic: zelfstudie
+type: Zelfstudie
 description: Deze zelfstudie richt zich op het gebruik van Jupyter-laptops, gebouwd in de Data Science Workspace, voor toegang tot, verkenning en visualisatie van uw gegevens.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 6908c582cb7e0d60b82112dbc0854411d76b4fd4
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1733'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ In onze zelfstudie gebruiken we [!DNL Python] 3 in het Jupyter-notebook om te to
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
-Het recept van de Verkoop van de Detailhandel is een standalone voorbeeld dat de zelfde detailhandel dataset van de Verkoop gebruikt om te tonen hoe de gegevens in de Notitie van Jupyter kunnen worden onderzocht en worden visualiseerd. Bovendien gaat de laptop dieper in met training en verificatie. Meer informatie over deze specifieke laptop vindt u in deze [doorhaling](../walkthrough.md).
+Het recept van de Verkoop van de Detailhandel is een standalone voorbeeld dat de zelfde Detailhandel dataset van de Verkoop gebruikt om te tonen hoe de gegevens in de Notitie van Jupyter kunnen worden onderzocht en worden visualiseerd. Bovendien gaat de laptop dieper in met training en verificatie. Meer informatie over deze specifieke laptop vindt u in deze [doorhaling](../walkthrough.md).
 
 ### Toegangsgegevens
 
@@ -80,11 +80,11 @@ We gaan nu verder met het openen van [!DNL Experience Platform]-gegevens.
 
 Voor deze sectie, gebruiken wij de Detailhandel dataset van de Verkoop die de zelfde dataset is die in de de steekproefnotitie van de Verkoop wordt gebruikt.
 
-In ons Jupyter-notebook hebben we toegang tot onze gegevens via het tabblad **Gegevens** links. Als u op het tabblad klikt, wordt een lijst met gegevenssets weergegeven.
+In het Notitieboekje van Jupyter, kunt u tot uw gegevens van **Gegevens** tabel ![gegevens tabel](../images/jupyterlab/analyze-data/dataset-tab.png) op de linkerzijde toegang hebben. Als u het tabblad selecteert, worden er twee mappen weergegeven. Selecteer de map **[!UICONTROL Datasets]**.
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
-Nu in de folder van Datasets, zullen wij alle ingebedde datasets kunnen zien. Merk op dat het een minuut kan nemen om alle ingangen te laden als uw folder met datasets zwaar bevolkt is.
+Nu in de folder van Datasets, kunt u alle ingebedde datasets zien. Merk op dat het een minuut kan nemen om alle ingangen te laden als uw folder met datasets zwaar bevolkt is.
 
 Aangezien de dataset het zelfde is, willen wij de ladingsgegevens van de vorige sectie vervangen die externe gegevens gebruikt. Selecteer het codeblok onder **Gegevens laden** en druk tweemaal op **&#39;d&#39;** op uw toetsenbord. Zorg ervoor dat de focus zich op het blok bevindt en niet in de tekst. U kunt **&#39;esc&#39;** drukken om de tekstnadruk te ontsnappen alvorens **&#39;d&#39;** tweemaal te drukken.
 
