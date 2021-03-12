@@ -3,9 +3,9 @@ keywords: 'reclame; borden; '
 title: Microsoft Bing-verbinding
 description: Met de de verbindingsbestemming van de Bing van Microsoft, kunt u het opnieuw richten en publiek gerichte digitale campagnes over de Reclame van de Vertoning van Microsoft uitvoeren.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,10 @@ Let op de volgende details die specifiek zijn voor het doel [!DNL Microsoft Bing
 
 * U kunt de volgende [identiteiten](../../../identity-service/namespaces.md) naar [!DNL Microsoft Bing] bestemmingen verzenden: [!DNL Microsoft ID].
 
+>[!IMPORTANT]
+>
+>Als u uw eerste bestemming met [!DNL Microsoft Bing] wilt maken en in het verleden (met Adobe Audience Manager of andere toepassingen) de [ID-synchronisatiefunctionaliteit](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) niet hebt ingeschakeld in de Experience Cloud ID-service, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder [!DNL Microsoft Bing] integraties in Audience Manager had opgezet, de syncs van identiteitskaart u opstelling dragen over aan Platform.
+
 ## Gebruiksscenario’s {#use-cases}
 
 Als markator, wil ik segmenten kunnen gebruiken die van [!DNL Microsoft Advertising IDs] worden gebouwd om gebruikers door vertoningsreclame over [!DNL Microsoft Advertising] kanalen te richten.
@@ -33,7 +37,7 @@ Als markator, wil ik segmenten kunnen gebruiken die van [!DNL Microsoft Advertis
 
 ## Vereisten {#prerequisites}
 
-Wanneer het vormen van de bestemming zult u worden gevraagd om de volgende informatie te verstrekken:
+Wanneer het vormen van de bestemming, moet u de volgende informatie verstrekken:
 
 * [!UICONTROL Account-id]: Dit is uw  [!DNL Bing Ads CID]geheel getal.
 
