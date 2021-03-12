@@ -1,11 +1,11 @@
 ---
 keywords: reclame; de handelsdienst;
 title: De verbinding van de handelsbureau
-description: 'De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en de mobiele voorraad. '
+description: 'De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en mobiele inventarisatiebronnen. '
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '609'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,17 @@ ht-degree: 0%
 
 [!DNL The Trade Desk] is een zelfbedieningsplatform dat kopers van advertenties in staat stelt doelgerichte digitale campagnes uit te voeren op het hele scherm, de video en mobiele inventarisatiebronnen.
 
-Als u profielgegevens naar [!DNL The Trade Desk] wilt verzenden, moet u eerst verbinding maken met het doel.
+Als u profielgegevens naar [!DNL Trade Desk] wilt verzenden, moet u eerst verbinding maken met het doel.
 
 ## Doelspecificaties {#destination-specs}
 
-Let op de volgende details die specifiek zijn voor het doel [!DNL The Trade Desk]:
+Let op de volgende details die specifiek zijn voor het doel [!DNL Trade Desk]:
 
 * U kunt de volgende [identiteiten](../../../identity-service/namespaces.md) naar [!DNL The Trade Desk] bestemmingen verzenden: [!DNL The Trade Desk ID], [!DNL IDFA], [!DNL GAID].
+
+>[!IMPORTANT]
+>
+>Als u uw eerste bestemming met [!DNL The Trade Desk] wilt maken en in het verleden (met Adobe Audience Manager of andere toepassingen) de [ID-synchronisatiefunctionaliteit](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) niet hebt ingeschakeld in de Experience Cloud ID-service, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder [!DNL The Trade Desk] integraties in Audience Manager had opgezet, de syncs van identiteitskaart u opstelling dragen over aan Platform.
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -50,7 +54,7 @@ In de stap [!UICONTROL Authentication] moet u [!DNL The Trade Desk] verbindingsd
 * **[!UICONTROL Naam]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Omschrijving]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Account-id]**: Je  [!DNL Trade Desk] [!UICONTROL account-id].
-* **[!UICONTROL Serverlocatie]**: Vraag uw  [!DNL The Trade Desk] vertegenwoordiger welke regionale server u zou moeten gebruiken. Dit zijn de beschikbare regionale servers waaruit u kunt kiezen:
+* **[!UICONTROL Serverlocatie]**: Vraag uw  [!DNL Trade Desk] vertegenwoordiger welke regionale server u zou moeten gebruiken. Dit zijn de beschikbare regionale servers waaruit u kunt kiezen:
 
    * **[!UICONTROL Europa]**
    * **[!UICONTROL Singapore]**
@@ -79,4 +83,4 @@ Als u veelvoudige apparatenafbeeldingen (koekje IDs, [!DNL IDFA], [!DNL GAID]) g
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Controleer uw [!DNL The Trade Desk]-account om te controleren of gegevens zijn geëxporteerd naar de [!DNL The Trade Desk]-bestemming. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
+Controleer uw [!DNL Trade Desk]-account om te controleren of gegevens zijn geëxporteerd naar de [!DNL The Trade Desk]-bestemming. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
