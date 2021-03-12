@@ -2,18 +2,18 @@
 keywords: Experience Platform;gebruikersinterface;UI;aanpassing;licentiegebruiksdashboard;dashboard;licentiegebruik;machtiging;consumptie
 title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
-topic: guide
-type: Documentation
+topic: hulplijn
+type: Documentatie
 translation-type: tm+mt
-source-git-commit: 084aaa315f694d696abee7f078be3a121111f6cc
+source-git-commit: 3908011b31dd24b13a58a2bc5ad5137dd3af5f63
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 0%
+source-wordcount: '656'
+ht-degree: 1%
 
 ---
 
 
-# (Beta) [!UICONTROL Licentiegebruik] dashboard {#license-usage-dashboard}
+# (bèta) Licentiegebruikdashboard {#license-usage-dashboard}
 
 >[!IMPORTANT]
 >
@@ -43,7 +43,7 @@ Selecteer [!UICONTROL Productie] of [!UICONTROL Ontwikkeling] om een sandbox te 
 
 >[!NOTE]
 >
->Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetzelfde type. Met andere woorden, als u [!UICONTROL Production] of [!UICONTROL Development] selecteert, wordt respectievelijk een rapport over alle productie- of ontwikkelingssandboxen weergegeven.
+>Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetzelfde type. Met andere woorden: als u [!UICONTROL Production] of [!UICONTROL Development] selecteert, worden verbruiksrapporten voor respectievelijk alle productie- of ontwikkelingssandboxen weergegeven.
 
 ![](../images/license-usage/select-sandbox.png)
 
@@ -53,26 +53,35 @@ Nadat u een sandbox hebt geselecteerd, kunt u de vervolgkeuzelijst voor het datu
 
 ![](../images/license-usage/select-date-range.png)
 
-### Widgets en metriek
+## Widgets
 
-Het licentiegebruikdashboard bestaat uit widgets, die alleen-lezen cijfers weergeven die belangrijke informatie geven over het gebruik van de licentie van uw organisatie. Zie de sectie over beschikbare widgets in deze handleiding voor meer informatie over deze widgets.
+Het licentiegebruikdashboard bestaat uit widgets, die alleen-lezen cijfers weergeven die belangrijke informatie geven over het gebruik van de licentie van uw organisatie. De zichtbare metriek hangen van de specifieke vergunning van uw organisatie af (zie [beschikbare metriek](#available-metrics) sectie voor details).
 
-## Beschikbare widgets {#available-widgets}
+Elke widget geeft een lijngrafiek weer waarin de werkelijke nummers voor uw organisatie worden vergeleken met het totale beschikbare aantal voor licenties van uw organisatie en een percentage van het totale gebruik.
 
-Experience Platform bevat momenteel één widget waarmee u het licentiegebruik kunt visualiseren. Binnenkort worden er meer widgets uitgebracht.
+![](../images/license-usage/widgets.png)
 
-### [!UICONTROL Adresseerbaar publiek] {#addressable-audiences}
+## Beschikbare cijfers
 
-Met de widget **[!UICONTROL Adresseerbare doelgroepen]** wordt het totale aantal samengevoegde profielen weergegeven in de profielgegevensopslagruimte, nadat een door het systeem gegenereerd samenvoegbeleid is toegepast om profielfragmenten van alle huidige gegevenssets te combineren met een deterministisch (privé) grafiekalgoritme.
+Er zijn momenteel vier metriek beschikbaar in het dashboard van het vergunningsgebruik:
 
-Voor meer informatie over fragmenten en samengevoegde profielen, gelieve te beginnen door *de fragmenten van het Profiel vs samengevoegde profielen* sectie van [Profieloverzicht](../../profile/home.md) te lezen.
+* [!UICONTROL Adresseerbare doelgroep]  (gemeten door aantal profielen)
+* [!UICONTROL Gemiddelde profielrijkheid]
+* [!UICONTROL Totaal verbruikte opslagruimte]
+* [!UICONTROL Gescande gegevens per segmentatieverhouding]
 
->[!NOTE]
->
->Het samenvoegbeleid dat wordt gebruikt om deze metrisch te berekenen wordt geproduceerd door Experience Platform en kan niet worden uitgegeven, noch kan een verschillend fusiebeleid worden geselecteerd. Dit door het systeem gegenereerde samenvoegingsbeleid is niet hetzelfde als het standaardsamenvoegbeleid dat wordt gebruikt om [!UICONTROL Audience size] in het [!DNL Profile] dashboard te berekenen. Daarom is het onwaarschijnlijk dat het aantal gebruikers in het [!UICONTROL Licentiegebruik] en [!DNL Profile] dashboards precies hetzelfde zullen zijn.
+De definitie van elk van deze cijfers is afhankelijk van de licenties die uw organisatie heeft aangeschaft. Raadpleeg de desbetreffende documentatie over de productbeschrijving voor gedetailleerde definities van elke meeteenheid:
 
-![](../images/license-usage/addressable-audiences.png)
+| Licentie | Productbeschrijving |
+|---|---|
+| <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>Adobe Experience Platform:OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>RT KLANTGEGEVENS, PLATFORM:OD</li><li>RT KLANTGEGEVENS PLATFORM:OD PRFL NAAR 10M</li><li>RT KLANTGEGEVENS PLATFORM:OD PRFL NAAR 50 M</li></ul> | [Real-time Platform voor klantgegevens](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL NAAR 10M</li><li>AEP:OD ACTIVATION PRFL TOT 50M</li></ul> | [Adobe Experience Platform-activering](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 
 ## Volgende stappen
 
-Als u dit document volgt, kunt u nu het dashboard voor licentiegebruik vinden en een sandbox selecteren die u wilt weergeven. U moet ook weten welke maatstaven worden weergegeven in de beschikbare widgets. Voor meer informatie over het Experience Platform UI, gelieve te verwijzen naar [Platform UI guide](../../landing/ui-guide.md).
+Nadat u dit document hebt gelezen, kunt u het dashboard voor licentiegebruik vinden en een sandbox selecteren die u wilt weergeven. U kunt ook meer informatie vinden over beschikbare metriek voor uw organisatie, gebaseerd op de vergunning uw organisatie heeft gekocht.
+
+Voor meer informatie over andere eigenschappen beschikbaar in de UI van het Experience Platform, gelieve te verwijzen naar [Platform UI guide](../../landing/ui-guide.md).
