@@ -6,9 +6,9 @@ topic: ' - overzicht'
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van de Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het configureren van een nieuwe gegevensstroom met uw cloud storage account.
 translation-type: tm+mt
-source-git-commit: 115442a90ab56a93748bf161aa2e7ed680980f6e
+source-git-commit: 1fb4a272a914bf4ce7653f3f4f7fff63f36f9a48
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1924'
 ht-degree: 0%
 
 ---
@@ -41,38 +41,52 @@ Daarnaast vereist deze zelfstudie dat u beschikt over een gevestigde account voo
 
 Nadat u uw account voor cloudopslag hebt gemaakt, wordt de stap **[!UICONTROL Gegevens selecteren]** weergegeven. Deze stap vormt een interface waarmee u de hiërarchie van uw cloudopslagbestanden kunt verkennen.
 
-* De linkerhelft van de interface is een directorybrowser waarin de bestanden en mappen van uw server worden weergegeven.
-* Met de rechterhelft van de interface kunt u maximaal 100 rijen gegevens uit een compatibel bestand voorvertonen.
+* Het linkergedeelte van de interface is een directorybrowser waarin uw bestanden en mappen voor cloudopslag worden weergegeven.
+* In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een compatibel bestand voorvertonen.
 
-Als u een map in de lijst selecteert, kunt u de mappenhiërarchie doorlopen in diepere mappen. Als u een compatibel bestand of een compatibele map hebt geselecteerd, wordt het vervolgkeuzemenu **[!UICONTROL Gegevensindeling selecteren]** weergegeven. Hier kunt u een indeling kiezen waarmee de gegevens worden weergegeven in het voorvertoningsvenster.
+![interface](../../../../images/tutorials/dataflow/cloud-storage/batch/interface.png)
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+Als u een map in de lijst selecteert, kunt u de mappenhiërarchie doorlopen in diepere mappen. U kunt één map selecteren om alle bestanden in de map recursief in te voeren. Wanneer u een volledige map opgeeft, moet u ervoor zorgen dat alle bestanden in de map hetzelfde schema hebben.
 
-Selecteer de juiste gegevensindeling voor het bestand dat u wilt inslikken en wacht een paar seconden tot het voorvertoningsvenster is gevuld.
+Als u een compatibel bestand of een compatibele map hebt geselecteerd, selecteert u de corresponderende gegevensindeling in het vervolgkeuzemenu [!UICONTROL Gegevensindeling selecteren].
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/data-format.png)
+In de volgende tabel wordt de juiste gegevensindeling voor de ondersteunde bestandstypen weergegeven:
 
-U kunt een aangepast scheidingsteken instellen bij het invoegen van gescheiden bestanden. Selecteer de optie **[!UICONTROL Scheidingsteken]** en selecteer vervolgens een scheidingsteken in het vervolgkeuzemenu. In het menu worden de meest gebruikte opties voor scheidingstekens weergegeven, zoals een komma (`,`), een tab (`\t`) en een pipe (`|`). U kunt ook **[!UICONTROL Aangepast]** selecteren en een aangepast scheidingsteken van uw keuze invoeren in de pop-upinvoerbalk.
+| Bestandstype | Gegevensindeling |
+| --- | --- |
+| CSV | [!UICONTROL Gescheiden] |
+| JSON | [!UICONTROL JSON] |
+| Parquet | [!UICONTROL XDM Parquet] |
+
+Selecteer **[!UICONTROL JSON]** en wacht een paar seconden tot de voorvertoningsinterface wordt gevuld.
+
+![select-data](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+
+>[!NOTE]
+>
+>In tegenstelling tot de bestandstypen Gescheiden door scheidingstekens en JSON, zijn bestanden met de indeling Parquet niet beschikbaar voor voorvertoning.
+
+Met de voorvertoningsinterface kunt u de inhoud en structuur van een bestand controleren. Standaard wordt in de voorvertoningsinterface het eerste bestand weergegeven in de map die u hebt geselecteerd.
+
+Als u een voorvertoning van een ander bestand wilt weergeven, selecteert u het voorvertoningspictogram naast de naam van het bestand dat u wilt inspecteren.
+
+![standaardvoorvertoning](../../../../images/tutorials/dataflow/cloud-storage/batch/default-preview.png)
+
+Als u de inhoud en structuur van de bestanden in uw map hebt geïnspecteerd, selecteert u **[!UICONTROL Volgende]** om alle bestanden in de map recursief in te voeren.
+
+![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
+
+Als u liever een specifiek bestand wilt selecteren, selecteert u het bestand dat u wilt invoegen en selecteert u **[!UICONTROL Volgende]**.
+
+![bestand selecteren](../../../../images/tutorials/dataflow/cloud-storage/batch/select-file.png)
+
+### Een aangepast scheidingsteken instellen voor gescheiden bestanden
+
+U kunt een aangepast scheidingsteken instellen bij het invoegen van gescheiden bestanden. Selecteer de optie **[!UICONTROL Scheidingsteken]** en selecteer vervolgens een scheidingsteken in het vervolgkeuzemenu. In het menu worden de meest gebruikte opties voor scheidingstekens weergegeven, zoals een komma (`,`), een tab (`\t`) en een pipe (`|`). Als u liever een aangepast scheidingsteken wilt gebruiken, selecteert u **[!UICONTROL Aangepast]** en voert u een scheidingsteken voor één teken van uw keuze in de pop-upinvoerbalk in.
 
 Nadat u de gegevensindeling hebt geselecteerd en het scheidingsteken hebt ingesteld, selecteert u **[!UICONTROL Volgende]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
-
-### Parket- of JSON-bestanden samenvoegen
-
-Cloudopslagaccounts ondersteunen ook JSON- en Parquet-bestanden. Parketbestanden moeten XDM-compatibel zijn, terwijl JSON-bestanden geen XDM-klacht hoeven te zijn. Als u JSON- of Parquet-bestanden wilt innemen, selecteert u de juiste bestandsindeling in de directorybrowser en past u de compatibele gegevensindeling in de rechterinterface toe.
-
-Als de gegevensindeling in JSON is, wordt een voorbeeld weergegeven met informatie over de gegevens in het bestand. Op het voorproefscherm, kunt u selecteren of JSON XDM volgzaam door **[!UICONTROL XDM volgzaam]** dropdown te gebruiken is.
-
-Selecteer **[!UICONTROL Volgende]** om door te gaan.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
-
->[!IMPORTANT]
->
->In tegenstelling tot de bestandstypen Gescheiden door scheidingstekens en JSON, zijn bestanden met de indeling Parquet niet beschikbaar voor voorvertoning.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Gegevensvelden toewijzen aan een XDM-schema
 
