@@ -6,9 +6,9 @@ breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Gegevensinname, bronnen
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '579'
 ht-degree: 5%
 
 ---
@@ -148,9 +148,9 @@ ht-degree: 5%
    - [Bovenliggende gegevens uit een extern cloudopslagsysteem verzamelen](tutorials/api/cloud-storage-parquet.md)
    - [Een gegevenssetverbinding maken](tutorials/api/create-dataset-base-connection.md)
    - [Dataflows bewaken](tutorials/api/monitor.md)
-   - [Verbindingen bijwerken](tutorials/api/update.md)
+   - [Accounts bijwerken](tutorials/api/update.md)
    - [Gegevensstromen bijwerken](tutorials/api/update-dataflows.md)
-   - [Verbindingen verwijderen](tutorials/api/delete.md)
+   - [Accounts verwijderen](tutorials/api/delete.md)
    - [Gegevensstromen verwijderen](tutorials/api/delete-dataflows.md)
 - UI-zelfstudies {#ui-tutorials}
    - Een bronverbinding maken {#create}
@@ -222,6 +222,7 @@ ht-degree: 5%
    - [Inkomende gegevens activeren om klantprofielen te vullen](tutorials/ui/profile.md)
    - [Dataflows bewaken](tutorials/ui/monitor.md)
    - [Accounts bijwerken](tutorials/ui/update.md)
+   - [Gegevensstromen bijwerken](tutorials/ui/update-dataflows.md)
    - [Accounts verwijderen](tutorials/ui/delete-accounts.md)
    - [Gegevensstromen verwijderen](tutorials/ui/delete.md)
 - [Meldingen voor stroomuitvoering](notifications.md)
