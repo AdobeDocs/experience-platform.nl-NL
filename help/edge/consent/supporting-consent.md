@@ -3,9 +3,9 @@ title: Voorkeuren voor toestemming van de klant ondersteunen met de Adobe Experi
 description: Leer hoe u voorkeuren voor toestemming ondersteunt met de Adobe Experience Platform Web SDK.
 keywords: toestemming;defaultConsent;defaultConsent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
+source-git-commit: dd9101079a1093c109f43b268a78c07770221156
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
@@ -66,13 +66,16 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     }]
 });
 ```
 
-Als de gebruiker ervoor kiest om te weigeren, voert u de opdracht `setConsent` uit met de verzamelvoorkeur ingesteld op `n` als volgt:
+In het tijdveld moet worden opgegeven wanneer de gebruiker zijn voorkeuren voor toestemming voor het laatst heeft bijgewerkt. Als de gebruiker ervoor kiest om te weigeren, voert u de opdracht `setConsent` uit met de verzamelvoorkeur ingesteld op `n` als volgt:
 
 ```javascript
 alloy("setConsent", {
@@ -82,6 +85,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "n"
+        },
+        metadata: {
+          time: "2021-03-17T15:51:30-07:00"
         }
       }
     }]
@@ -155,6 +161,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     },{
@@ -174,5 +183,5 @@ U moet de gebruikersvoorkeuren afzonderlijk opslaan om het bevestigingsvenster m
 
 ## Identiteiten synchroniseren tijdens instellen van toestemming
 
-Wanneer de standaardtoestemming hangende of uit is, `setConsent` kan het eerste verzoek zijn dat uit gaat en identiteit vestigt. Daarom kan het belangrijk zijn om identiteiten te synchroniseren op het eerste verzoek. De identiteitstoewijzing kan worden toegevoegd aan de opdracht `setConsent`, net als bij de opdracht `sendEvent`. Zie [Experience Cloud-id ophalen](../identity/overview.md)
+Wanneer de standaardtoestemming hangende of uit is, `setConsent` kan het eerste verzoek zijn dat uit gaat en identiteit vestigt. Daarom kan het belangrijk zijn om identiteiten op het eerste verzoek te synchroniseren. De identiteitskaart kan aan `setConsent` bevel enkel als op &lt;a1 worden toegevoegd/> bevel. `sendEvent` Zie [Experience Cloud-id ophalen](../identity/overview.md)
 
