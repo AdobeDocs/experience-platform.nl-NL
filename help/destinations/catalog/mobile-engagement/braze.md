@@ -3,10 +3,10 @@ keywords: mobiel; schil; berichten;
 title: Braze verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 0%
+source-wordcount: '899'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,6 @@ Als u profielgegevens naar [!DNL Braze] wilt verzenden, moet u eerst verbinding 
 
 Let op de volgende details die specifiek zijn voor het doel [!DNL Braze]:
 
-* U kunt elke [identity](../../../identity-service/namespaces.md) naar de [!DNL Braze] bestemming verzenden, zolang u het aan [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation) in kaart brengt.
 * [!DNL Adobe Experience Platform] segmenten worden geëxporteerd naar  [!DNL Braze] onder het  `AdobeExperiencePlatformSegments` kenmerk.
 
 >[!NOTE]
@@ -38,6 +37,14 @@ Let op de volgende details die specifiek zijn voor het doel [!DNL Braze]:
 
 Als markator, wil ik gebruikers in een mobiele betrokkenheidsbestemming richten, met segmenten die in [!DNL Adobe Experience Platform] worden gebouwd. Daarnaast wil ik persoonlijke ervaringen aan hen aanbieden op basis van kenmerken uit hun [!DNL Adobe Experience Platform]-profielen, zodra segmenten en profielen worden bijgewerkt in [!DNL Adobe Experience Platform].
 
+### Ondersteunde identiteiten {#supported-identities}
+
+[!DNL Google Ad Manager] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven.
+
+| Doelidentiteit | Beschrijving | Overwegingen |
+|---|---|---|
+| external_id | Aangepaste [!DNL Braze]-id die het toewijzen van elke identiteit ondersteunt. | U kunt elke [identity](../../../identity-service/namespaces.md) naar de [!DNL Braze] bestemming verzenden, zolang u het aan [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation) in kaart brengt. |
+
 ## Type exporteren {#export-type}
 
 **[!DNL Profile-based]** - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam) en/of identiteiten, afhankelijk van uw veldtoewijzing.
@@ -46,29 +53,29 @@ Als markator, wil ik gebruikers in een mobiele betrokkenheidsbestemming richten,
 
 ## Verbinden met doel {#connect-destination}
 
-Selecteer **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** en selecteer [!DNL Braze] en **[!UICONTROL Configureren]**.
+Selecteer [!DNL Braze] in **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer **[!UICONTROL Configure]**.
 
 ![Braze bestemming configureren](../../assets/catalog/mobile-engagement/braze/configure.png)
 
 >[!NOTE]
 >
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL knop Activeer]** op de doelkaart zien. Voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]**, verwijs naar [Catalog](../../ui/destinations-workspace.md#catalog) sectie van de documentatie van de bestemmingswerkruimte.
+>Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
 >
 >![Braze doel activeren](../../assets/catalog/mobile-engagement/braze/activate.png)
 
-In de stap [!UICONTROL Account] moet u uw [!DNL Braze] accounttoken opgeven. Dit is uw [!DNL Braze] [!DNL API] sleutel. Hier vindt u gedetailleerde instructies voor het verkrijgen van uw [!DNL API]-toets: [REST API Key Overview](https://www.braze.com/docs/api/api_key/). Voer het token in en klik op **[!UICONTROL Verbinden met doel]**.
+In de stap [!UICONTROL Account] moet u uw [!DNL Braze] accounttoken opgeven. Dit is uw [!DNL Braze] [!DNL API] sleutel. Hier vindt u gedetailleerde instructies voor het verkrijgen van uw [!DNL API]-toets: [REST API Key Overview](https://www.braze.com/docs/api/api_key/). Voer het token in en klik op **[!UICONTROL Connect to destination]**.
 
 ![Stap Braze-doelaccount](../../assets/catalog/mobile-engagement/braze/account.png)
 
 Klik op **[!UICONTROL Next]**. In de stap [!UICONTROL Authentication] moet u de verbindingsgegevens [!DNL Braze] invoeren:
-* **[!UICONTROL Naam]**: Voer een naam in waarmee u deze bestemming in de toekomst wilt herkennen.
-* **[!UICONTROL Omschrijving]**: Voer een beschrijving in die u helpt deze bestemming in de toekomst te identificeren.
-* **[!UICONTROL Eindpuntinstantie]**: Vraag uw  [!DNL Braze] vertegenwoordiger welke eindpuntinstantie u zou moeten gebruiken.
-* **[!UICONTROL Handeling]** voor marketing: marketingacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
+* **[!UICONTROL Name]**: Voer een naam in waarmee u deze bestemming in de toekomst wilt herkennen.
+* **[!UICONTROL Description]**: Voer een beschrijving in die u helpt deze bestemming in de toekomst te identificeren.
+* **[!UICONTROL Endpoint Instance]**: Vraag uw  [!DNL Braze] vertegenwoordiger welke eindpuntinstantie u zou moeten gebruiken.
+* **[!UICONTROL Marketing action]**: marketingacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
 
 ![Verificatiestap Braze](../../assets/catalog/mobile-engagement/braze/authentication.png)
 
-Klik **[!UICONTROL Doel maken]**. Uw doel is nu gemaakt. U kunt **[!UICONTROL Opslaan &amp; afsluiten]** klikken als u segmenten later wilt activeren, of u kunt **[!UICONTROL Volgende]** selecteren om de workflow voort te zetten en segmenten te selecteren om te activeren. In beide gevallen raadpleegt u de volgende sectie [Segmenten activeren](#activate-segments) voor de rest van de workflow.
+Klik op **[!UICONTROL Create destination]**. Uw doel is nu gemaakt. U kunt **[!UICONTROL Save & Exit]** klikken als u segmenten later wilt activeren, of u kunt **[!UICONTROL Next]** selecteren om de werkstroom voort te zetten en segmenten te selecteren om te activeren. In beide gevallen raadpleegt u de volgende sectie [Segmenten activeren](#activate-segments) voor de rest van de workflow.
 
 ## Segmenten {#activate-segments} activeren
 
@@ -82,38 +89,38 @@ Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden [!DNL 
 
 Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL Braze]-doelvelden:
 
-Klik in de stap [!UICONTROL Toewijzing] op **[!UICONTROL Nieuwe toewijzing toevoegen]**.
+Klik in de stap [!UICONTROL Mapping] op **[!UICONTROL Add new mapping]**.
 
 ![Braze bestemming Toewijzing toevoegen](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-Klik in de sectie [!UICONTROL Bronveld] op de pijlknop naast het lege veld.
+Klik in de sectie [!UICONTROL Source Field] op de pijlknop naast het lege veld.
 
 ![Bronttoewijzing op doel onderbreken](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
-In het venster [!UICONTROL Bronveld selecteren] kunt u kiezen uit twee categorieën XDM-velden:
-* [!UICONTROL Kenmerken] selecteren: gebruik deze optie om een specifiek gebied van uw schema XDM aan een  [!DNL Braze] attribuut in kaart te brengen.
+In het venster [!UICONTROL Select source field] kunt u kiezen uit twee categorieën XDM-velden:
+* [!UICONTROL Select attributes]: gebruik deze optie om een specifiek gebied van uw schema XDM aan een  [!DNL Braze] attribuut in kaart te brengen.
 
 ![Brontekeningskenmerk Braze-bestemming](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL Naamruimte] selecteren: Gebruik deze optie om een naamruimte voor  [!DNL Platform] identiteit toe te wijzen aan een  [!DNL Braze] naamruimte.
+* [!UICONTROL Select identity namespace]: Gebruik deze optie om een naamruimte voor  [!DNL Platform] identiteit toe te wijzen aan een  [!DNL Braze] naamruimte.
 
 ![Bronnaamruimte voor Braze-doeltoewijzing](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
-Kies uw brongebied, dan klik **[!UICONTROL Select]**.
+Kies het bronveld en klik op **[!UICONTROL Select]**.
 
-Klik in de sectie [!UICONTROL Doelveld] op het toewijzingspictogram rechts van het veld.
+Klik in de sectie [!UICONTROL Target Field] op het koppelingspictogram rechts van het veld.
 
 ![Doel-toewijzing op lichtsterkte](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-In het venster [!UICONTROL Doelveld selecteren] kunt u kiezen uit drie categorieën doelvelden:
-* [!UICONTROL Kenmerken] selecteren: Gebruik deze optie om uw XDM-kenmerken toe te wijzen aan standaard [!DNL Braze] kenmerken.
-* [!UICONTROL Naamruimte] selecteren: Gebruik deze optie om  [!DNL Platform] naamruimten toe te wijzen aan  [!DNL Braze] naamruimten.
-* [!UICONTROL Aangepaste kenmerken] selecteren: Met deze optie kunt u XDM-kenmerken toewijzen aan aangepaste  [!DNL Braze] kenmerken die u in uw  [!DNL Braze] account hebt gedefinieerd.
+In het venster [!UICONTROL Select target field] kunt u kiezen uit drie categorieën doelvelden:
+* [!UICONTROL Select attributes]: Gebruik deze optie om uw XDM-kenmerken toe te wijzen aan standaard [!DNL Braze] kenmerken.
+* [!UICONTROL Select identity namespace]: Gebruik deze optie om  [!DNL Platform] naamruimten toe te wijzen aan  [!DNL Braze] naamruimten.
+* [!UICONTROL Select custom attributes]: Met deze optie kunt u XDM-kenmerken toewijzen aan aangepaste  [!DNL Braze] kenmerken die u in uw  [!DNL Braze] account hebt gedefinieerd.
 * U kunt deze optie ook gebruiken om de naam van bestaande XDM-kenmerken te wijzigen in [!DNL Braze]. Als bijvoorbeeld een `lastName` XDM-kenmerk wordt toegewezen aan een aangepast `Last_Name`-kenmerk in [!DNL Braze], wordt het `Last_Name`-kenmerk in [!DNL Braze] gemaakt als dit nog niet bestaat en wordt het XDM-kenmerk `lastName` eraan toegewezen.
 
 ![Doeltoewijzingsvelden van doel dempen](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
-Kies uw doelgebied, dan klik **[!UICONTROL Select]**.
+Kies het doelveld en klik op **[!UICONTROL Select]**.
 
 Nu wordt de veldtoewijzing weergegeven in de lijst.
 
