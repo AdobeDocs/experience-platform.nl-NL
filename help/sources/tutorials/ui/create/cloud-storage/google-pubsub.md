@@ -6,9 +6,9 @@ topic: ' - overzicht'
 type: Tutorial
 description: Leer hoe u een Google PubSub-bronconnector maakt via de gebruikersinterface van het Platform.
 translation-type: tm+mt
-source-git-commit: 0af90253f04377149986aedf2e9d3012ca06d4f8
+source-git-commit: b5358ce206888c413035b46fe751520fd9aefb14
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '492'
 ht-degree: 1%
 
 ---
@@ -33,38 +33,42 @@ Als u al een geldige [!DNL PubSub] verbinding hebt, kunt u de rest van dit docum
 
 ### Vereiste referenties verzamelen
 
-Als u [!DNL PubSub] wilt verbinden met Platform, moet u een geldige waarde opgeven voor de volgende referentie:
+Als u [!DNL PubSub] wilt verbinden met Platform, moet u een geldige waarde opgeven voor de volgende referenties:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
 | `projectId` | De project-id die is vereist voor verificatie [!DNL PubSub]. |
-| `credentials` | De referentie of sleutel die is vereist voor verificatie [!DNL PubSub]. |
+| `credentials` | De referentie- of persoonlijke sleutel-id die is vereist voor verificatie [!DNL PubSub]. |
 
-Zie het volgende [PubSub-verificatie](https://cloud.google.com/pubsub/docs/authentication)-document voor meer informatie over deze waarden.
+Zie het volgende [PubSub-verificatie](https://cloud.google.com/pubsub/docs/authentication)-document voor meer informatie over deze waarden. Als u de op rekening-gebaseerde authentificatie van de dienst gebruikt, zie [PubSub gids](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen op hoe te om uw geloofsbrieven te produceren.
 
-Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Blob]-account te koppelen aan het Platform.
+>[!TIP]
+>
+>Als u de op rekening-gebaseerde authentificatie van de dienst gebruikt, zorg ervoor dat u voldoende gebruikerstoegang tot uw de dienstrekening hebt verleend en dat er geen extra witte ruimten in JSON zijn, wanneer het kopiëren en het kleven van uw geloofsbrieven.
+
+Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL PubSub]-account te koppelen aan het Platform.
 
 ## Uw [!DNL PubSub]-account aansluiten
 
-In [Platform UI](https://platform.adobe.com), selecteer **[!UICONTROL Bronnen]** van de linkernavigatiebar om tot [!UICONTROL Bronnen] werkruimte toegang te hebben. Het scherm [!UICONTROL Catalog] toont een verscheidenheid van bronnen waarvoor u een rekening kunt tot stand brengen met.
+In [Platform UI](https://platform.adobe.com), selecteer **[!UICONTROL Sources]** van de linkernavigatiebar om tot de [!UICONTROL Sources] werkruimte toegang te hebben. In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
 
-Selecteer onder de categorie [!UICONTROL Cloudopslag] **[!UICONTROL Google PubSub]** en selecteer **[!UICONTROL Gegevens toevoegen]**.
+Selecteer [!UICONTROL Cloud storage] onder de categorie **[!UICONTROL Google PubSub]** en selecteer **[!UICONTROL Add data]**.
 
 ![catalogus](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
-De pagina **[!UICONTROL Verbinding maken met Google PubSub]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to Google PubSub]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Bestaande account
 
-Als u een bestaande account wilt gebruiken, selecteert u de [!DNL PubSub]-account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
+Als u een bestaande account wilt gebruiken, selecteert u de [!DNL PubSub]-account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ![bestaand](../../../../images/tutorials/create/google-pubsub/existing.png)
 
 ### Nieuwe account
 
-Als u een nieuwe account maakt, selecteert u **[!UICONTROL Nieuwe account]** en geeft u vervolgens een naam, een optionele beschrijving en uw [!DNL PubSub] verificatiegegevens op het invoerformulier. Wanneer gebeëindigd, selecteer **[!UICONTROL verbind met bron]** en laat dan wat tijd voor de nieuwe verbinding toe om te vestigen.
+Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u vervolgens een naam, een optionele beschrijving en uw [!DNL PubSub] verificatiegegevens op het invoerformulier. Wanneer gebeëindigd, selecteer **[!UICONTROL Connect to source]** en laat dan wat tijd voor de nieuwe verbinding toe om te vestigen.
 
 ![new](../../../../images/tutorials/create/google-pubsub/new.png)
 
