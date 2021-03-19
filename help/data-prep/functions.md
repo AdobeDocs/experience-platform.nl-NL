@@ -5,7 +5,7 @@ title: Toewijzingsfuncties voor gegevenspremies
 topic: ' - overzicht'
 description: In dit document worden de toewijzingsfuncties geïntroduceerd die worden gebruikt met Data Prep.
 translation-type: tm+mt
-source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
+source-git-commit: 85a99171a6786b47bf50d4579a3ebc88af3c82f6
 workflow-type: tm+mt
 source-wordcount: '3719'
 ht-degree: 2%
@@ -35,7 +35,7 @@ Gegevens binnen subvelden zijn toegankelijk met behulp van de puntnotatie. Als e
 
 In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven, inclusief voorbeeldexpressies en de resulterende uitvoer.
 
-### Reeksfuncties
+### Tekenreeksfuncties {#string}
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | extract_regex | Haalt groepen uit de invoertekenreeks op basis van een reguliere expressie. | <ul><li>TEKENREEKS: **Required** De tekenreeks waaruit u de groepen extraheert.</li><li>REGEX: **Required** De regelmatige uitdrukking die u de groep wilt aanpassen.</li></ul> | extract_regex(STRING, REGEX) | extract_regex &#x200B;(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | match_regex | Controleert of de tekenreeks overeenkomt met de ingevoerde reguliere expressie. | <ul><li>TEKENREEKS: **Required** De tekenreeks die u controleert, komt overeen met de reguliere expressie.</li><li>REGEX: **Required** De reguliere expressie die u vergelijkt.</li></ul> | match_regex(STRING, REGEX) | match_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
-### Hashingfuncties
+### Hashingfuncties {#hashing}
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | md5 | Gebruikt invoer en produceert een knoeiboelwaarde gebruikend MD5. | <ul><li>INVOER: **Required** The plain text to be hashed.</li><li>TEKEN: *Optioneel* De naam van de tekenset. Mogelijke waarden zijn UTF-8, UTF-16, ISO-8859-1 en US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | Gebruikt een input een algoritme van de cyclische overtolligheidscontrole (CRC) om een cyclische code met 32 bits te produceren. | <ul><li>INVOER: **Required** The plain text to be hashed.</li><li>TEKEN: *Optioneel* De naam van de tekenset. Mogelijke waarden zijn UTF-8, UTF-16, ISO-8859-1 en US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-### URL-functies
+### URL-functies {#url}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | get_url_path | Retourneert het pad van de opgegeven URL. Standaard wordt het volledige pad geretourneerd. | <ul><li>URL: **Required** URL waarvan de weg moet worden gehaald.</li><li>FULL_PATH: *Optioneel* Een booleaanse waarde die bepaalt of het volledige pad wordt geretourneerd. Indien ingesteld op false, wordt alleen het einde van het pad geretourneerd.</li></ul> | get_url_path &#x200B;(URL, FULL_PATH) | get_url_path &#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/&#x200B; employee.csv&quot; |
 | get_url_query_str | Retourneert de queryreeks van een opgegeven URL. | <ul><li>URL: **Required** URL die u probeert om het vraagkoord van te krijgen.</li><li>ANKER: **Required** bepaalt wat met het anker in het vraagkoord zal worden gedaan. Kan een van de volgende drie waarden hebben: &quot;preserve&quot;, &quot;remove&quot; of &quot;append&quot;.<br><br>Als de waarde &quot;preserve&quot; is, wordt het anker aan de geretourneerde waarde gekoppeld.<br>Als de waarde &quot;remove&quot; is, wordt het anker verwijderd van de geretourneerde waarde.<br>Als de waarde &quot;append&quot; is, wordt het anker geretourneerd als een aparte waarde.</li></ul> | get_url_query_str &#x200B;(URL, ANCHOR) | get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there name= &#x200B; ferret#nose&quot;, &quot;preserve&quot;)<br>get_url_query_str &#x200B;(&quot;&#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;a1/>get_url_query str &#x200B;(&quot;foo://example.com:804/over ?name=ferret#nose&quot;, &quot;append&quot;)<br> | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
-### Datum- en tijdfuncties
+### Datum- en tijdfuncties {#date-and-time}
 
 >[!NOTE]
 >
@@ -122,7 +122,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 
 &#x200B;
 
-### Hiërarchieën - Objecten
+### Hiërarchieën - Objecten {#objects}
 
 >[!NOTE]
 >
@@ -138,7 +138,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | is_set | Controleert of het object bestaat in de brongegevens. | <ul><li>INVOER: **Required** De weg om te controleren als het binnen de brongegevens bestaat.</li></ul> | is_set(INPUT) | is_set &#x200B;(&quot;evars.evar.field1&quot;) | true |
 | opheffen | Stelt de waarde van het kenmerk in op `null`. Dit zou moeten worden gebruikt wanneer u niet het gebied aan het doelschema wilt kopiëren. |  | nullify() | nullify() | `null` |
 
-### Hiërarchieën - arrays
+### Hiërarchieën - arrays {#arrays}
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | join_arrays | Combineert de arrays met elkaar. | <ul><li>ARRAY: **Required** De array waaraan u elementen toevoegt.</li><li>WAARDEN: De array(s) die u aan de bovenliggende array wilt toevoegen.</li></ul> | join_arrays &#x200B;(ARRAY, VALUES) | join_arrays &#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;] |
 | to_array | Neemt een lijst van input en zet het in een serie om. | <ul><li>INCLUDE_NULLS: **Required** Een booleaanse waarde om erop te wijzen of om nulls in de reactierearray al dan niet te omvatten.</li><li>WAARDEN: **Required** De elementen die in een serie moeten worden omgezet.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
-### Logische operatoren
+### Logische operatoren {#logical-operators}
 
 >[!NOTE]
 >
@@ -164,7 +164,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | decoderen | Op basis van een sleutel en een lijst met sleutelwaardeparen die als een array zijn samengevoegd, retourneert de functie de waarde als een sleutel wordt gevonden of retourneert deze een standaardwaarde als deze aanwezig is in de array. | <ul><li>SLEUTEL: **Vereist** De sleutel die moet worden aangepast.</li><li>OPTIONS: **Required** Een afgevlakte array van sleutel/waardeparen. Optioneel kan een standaardwaarde aan het einde worden geplaatst.</li></ul> | decoderen (SLEUTEL, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N.v.t.&quot;) | Als stateCode gegeven &quot;ca&quot;, &quot;Californië&quot; is.<br>Als stateCode gegeven &quot;pa&quot; is, &quot;Pennsylvania&quot;.<br>Als stateCode niet het volgende aanpast, &quot;n.v.t.&quot;. |
 | iif | Evalueert een bepaalde booleaanse expressie en retourneert de opgegeven waarde op basis van het resultaat. | <ul><li>EXPRESSIE: **Required** De booleaanse uitdrukking die wordt geëvalueerd.</li><li>TRUE_VALUE: **Required** De waarde die is teruggekeerd als de uitdrukking aan waar evalueert.</li><li>FALSE_VALUE: **Required** De waarde die wordt geretourneerd als de expressie false oplevert.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;Waar&quot; |
 
-### Samenvoeging
+### Samenvoeging {#aggregation}
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | min | Geeft als resultaat het minimum van de opgegeven argumenten. Gebruikt natuurlijke volgorde. | <ul><li>OPTIONS: **Required** Één of meerdere voorwerpen die met elkaar kunnen worden vergeleken.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Geeft als resultaat het maximum van de opgegeven argumenten. Gebruikt natuurlijke volgorde. | <ul><li>OPTIONS: **Required** Één of meerdere voorwerpen die met elkaar kunnen worden vergeleken.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-### Typeomzettingen
+### Typeomzettingen {#type-conversions}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 | to_float | Zet een tekenreeks om in een zwevende waarde. | <ul><li>TEKENREEKS: **Required** De tekenreeks die in een Float moet worden omgezet.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12,34566 |
 | to_integer | Zet een tekenreeks om in een geheel getal. | <ul><li>TEKENREEKS: **Required** De tekenreeks die in een geheel getal moet worden omgezet.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-### JSON-functies
+### JSON-functies {#json}
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | Maak JSON-inhoud deserialize vanuit de opgegeven tekenreeks. | <ul><li>TEKENREEKS: **Required** The JSON string to be deserialized.</li></ul> | json_to_object &#x200B;(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}) | Een object dat de JSON vertegenwoordigt. |
 
-### Bijzondere verrichtingen
+### Speciale bewerkingen {#special-operations}
 
 >[!NOTE]
 >
@@ -208,7 +208,7 @@ In de volgende tabellen worden alle ondersteunde toewijzingsfuncties weergegeven
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | Hiermee genereert u een pseudo-willekeurige id. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c20633 |
 
-### Functies van gebruikersagent
+### Functies van gebruikersagent {#user-agent}
 
 >[!NOTE]
 >
