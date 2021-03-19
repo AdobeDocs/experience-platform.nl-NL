@@ -6,9 +6,9 @@ topic: ' - overzicht'
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google PubSub-account met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: 0af90253f04377149986aedf2e9d3012ca06d4f8
+source-git-commit: b5358ce206888c413035b46fe751520fd9aefb14
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '613'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,11 @@ Als u [!DNL Flow Service] wilt laten verbinden met [!DNL PubSub], moet u waarden
 | `projectId` | De project-id die is vereist voor verificatie [!DNL PubSub]. |
 | `credentials` | De referentie of sleutel die is vereist voor verificatie [!DNL PubSub]. |
 
-Zie het volgende [PubSub-verificatie](https://cloud.google.com/pubsub/docs/authentication)-document voor meer informatie over deze waarden.
+Zie het volgende [PubSub-verificatie](https://cloud.google.com/pubsub/docs/authentication)-document voor meer informatie over deze waarden. Als u de op rekening-gebaseerde authentificatie van de dienst gebruikt, zie [PubSub gids](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen op hoe te om uw geloofsbrieven te produceren.
+
+>[!TIP]
+>
+>Als u de op rekening-gebaseerde authentificatie van de dienst gebruikt, zorg ervoor dat u voldoende gebruikerstoegang tot uw de dienstrekening hebt verleend en dat er geen extra witte ruimten in JSON zijn, wanneer het kopiëren en het kleven van uw geloofsbrieven.
 
 ### API-voorbeeldaanroepen lezen
 
