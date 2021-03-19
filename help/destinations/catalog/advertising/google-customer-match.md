@@ -3,9 +3,9 @@ keywords: Google-klantovereenkomst;Google-klantovereenkomst;Google-klantovereenk
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 translation-type: tm+mt
-source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
+source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1545'
 ht-degree: 0%
 
 ---
@@ -19,21 +19,21 @@ ht-degree: 0%
 
 ## Gevallen gebruiken
 
-Om u beter te helpen begrijpen hoe en wanneer u [!DNL Google Customer Match] bestemming zou moeten gebruiken, zijn hier voorbeelden van gebruiksgevallen die de klanten van Adobe Experience Platform door deze eigenschap kunnen oplossen.
+Om u beter te helpen begrijpen hoe en wanneer om de [!DNL Google Customer Match] bestemming te gebruiken, zijn hier voorbeelden van gebruiksgevallen die de klanten van Adobe Experience Platform door deze eigenschap kunnen oplossen.
 
 ### Hoofdletters en kleine letters gebruiken 1
 
-Een atletisch merkje wil bestaande klanten bereiken via [!DNL Google Search] en [!DNL Google Shopping] om aanbiedingen en objecten aan te passen op basis van hun eerdere aankopen en browsergeschiedenis. Het merk apparel kan e-mailadressen van hun eigen CRM aan Experience Platform opnemen, segmenten van hun eigen off-line gegevens bouwen, en deze segmenten naar [!DNL Google Customer Match] verzenden om over [!DNL Search] en [!DNL Shopping] te worden gebruikt, die hun reclame-uitgaven optimaliseren.
+Een atletisch merkje wil bestaande klanten bereiken via [!DNL Google Search] en [!DNL Google Shopping] om aanbiedingen en objecten aan te passen op basis van hun eerdere aankopen en browsergeschiedenis. Het merk apparel kan e-mailadressen van hun eigen CRM aan Experience Platform opnemen, en segmenten van hun eigen off-line gegevens bouwen. Vervolgens kunnen ze deze segmenten naar [!DNL Google Customer Match] sturen om te worden gebruikt tussen [!DNL Search] en [!DNL Shopping], zodat hun advertentiepatroon wordt geoptimaliseerd.
 
 ### Hoofdletters en kleine letters gebruiken 2
 
-Een vooraanstaand technologiebedrijf heeft zojuist een nieuwe telefoon uitgebracht. In een inspanning om dit nieuwe telefoonmodel te bevorderen, kijken zij om bewustzijn van de nieuwe eigenschappen en de functionaliteit van de telefoon aan klanten te drijven die vorige modellen van hun telefoons bezitten.
+Een vooraanstaande technologiebedrijf lanceerde een nieuwe telefoon. Om dit nieuwe telefoonmodel te bevorderen, kijken zij om bewustzijn van de nieuwe eigenschappen en de functionaliteit van de telefoon aan klanten te drijven die vorige modellen van hun telefoons bezitten.
 
-Om de versie te promoten, uploaden zij e-mailadressen van hun gegevensbestand van CRM in Experience Platform, gebruikend de e-mailadressen als herkenningstekens. Segmenten worden gemaakt op basis van klanten die eigenaar zijn van oudere telefoonmodellen en worden verzonden naar [!DNL Google Customer Match] zodat zij zich kunnen richten op huidige klanten, klanten die eigenaar zijn van oudere telefoonmodellen, en vergelijkbare klanten op [!DNL YouTube].
+Om de versie te promoten, uploaden zij e-mailadressen van hun gegevensbestand van CRM in Experience Platform, gebruikend de e-mailadressen als herkenningstekens. De segmenten worden gecreeerd gebaseerd op klanten die oudere telefoonmodellen bezitten. Vervolgens worden segmenten verzonden naar [!DNL Google Customer Match], zodat het bedrijf zich kan richten op huidige klanten, klanten die eigenaar zijn van oudere telefoonmodellen en vergelijkbare klanten op [!DNL YouTube].
 
 ## Gegevensbeheer voor [!DNL Google Customer Match] doelen {#data-governance}
 
-Voor de bestemmingen in Experience Platform kunnen bepaalde regels en verplichtingen gelden voor gegevens die worden verzonden naar of ontvangen van het bestemmingsplatform. U bent verantwoordelijk voor het begrijpen van de beperkingen en verplichtingen van uw gegevens en hoe u die gegevens gebruikt in Adobe Experience Platform en het doelplatform. Adobe Experience Platform biedt tools voor gegevensbeheer om u te helpen bij het beheren van een aantal van deze gegevensgebruiksverplichtingen. [Meer informatie ](../../..//data-governance/labels/overview.md) over tools en beleid voor gegevensbeheer.
+Sommige bestemmingen in Experience Platform hebben bepaalde regels en verplichtingen voor gegevens die worden verzonden naar of ontvangen van het bestemmingsplatform. U bent verantwoordelijk voor het begrijpen van de beperkingen en verplichtingen van uw gegevens en hoe u die gegevens gebruikt in Adobe Experience Platform en het doelplatform. Adobe Experience Platform biedt tools voor gegevensbeheer om u te helpen bij het beheren van een aantal van deze gegevensgebruiksverplichtingen. [Meer informatie ](../../..//data-governance/labels/overview.md) over tools en beleid voor gegevensbeheer.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -49,7 +49,7 @@ Voor de bestemmingen in Experience Platform kunnen bepaalde regels en verplichti
 
 ## Exporttype {#export-type}
 
-**Segmentexport** : u exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer, enzovoort) gebruikt in de bestemming [!DNL Google Customer Match].
+**De Uitvoer**  van het segment - u exporteert alle leden van een segment (publiek) met de herkenningstekens (naam, telefoonaantal, en anderen) die in de  [!DNL Google Customer Match] bestemming worden gebruikt.
 
 ## [!DNL Google Customer Match] accountvereisten  {#google-account-prerequisites}
 
@@ -63,7 +63,7 @@ Voordat u een [!DNL Google Customer Match]-bestemming in Experience Platform ins
 
 Voordat u de [!DNL Google Customer Match]-bestemming in Experience Platform maakt, moet u contact opnemen met Google en de instructies voor de lijst van gewenste personen volgen in [Customer Match partners gebruiken om uw gegevens te uploaden](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) in de Google-documentatie.
 
-Bovendien is er een tweede Google-lijst van gewenste personen waaraan u uw account moet toevoegen als u gegevens wilt uploaden met de [Gebruikersnaam](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id) van Google. Neem contact op met uw Google-accountmanager om te controleren of u aan de lijsten van gewenste personen bent toegevoegd.
+Er is ook een tweede Google-lijst van gewenste personen waaraan u uw account moet toevoegen als u gegevens wilt uploaden met de [Gebruikersnaam](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id) van Google. Neem contact op met uw Google-accountmanager om uw account aan de lijst van gewenste personen toe te voegen.
 
 ### Overeenkomende vereisten {#id-matching-requirements}
 
@@ -75,7 +75,7 @@ Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, mo
 
 Er zijn twee methodes om telefoonaantallen in [!DNL Google Customer Match] te activeren:
 
-* **Onbewerkte telefoonnummers** worden geïnstalleerd: u kunt onbewerkte telefoonnummers in de  [!DNL E.164] notatie invoeren  [!DNL Platform], die na activering automatisch worden gehasht. Als u deze optie kiest, zorg ervoor om uw ruwe telefoonaantallen in `Phone_E.164` namespace altijd in te nemen.
+* **Onbewerkte telefoonnummers** worden geïnstalleerd: u kunt onbewerkte telefoonnummers in de  [!DNL E.164] notatie invoeren in  [!DNL Platform]en deze worden automatisch gehasht bij activering. Als u deze optie kiest, zorg ervoor om uw ruwe telefoonaantallen in `Phone_E.164` namespace altijd in te nemen.
 * **Hashed-telefoonnummers** invoegen: U kunt uw telefoonaantallen pre-hash alvorens in te gaan  [!DNL Platform]. Als u deze optie kiest, zorg ervoor om uw gehakt telefoonaantallen in `PHONE_SHA256_E.164` namespace altijd in te nemen.
 
 >[!NOTE]
@@ -84,7 +84,7 @@ Er zijn twee methodes om telefoonaantallen in [!DNL Google Customer Match] te ac
 
 #### Vereisten voor e-mailhashing {#hashing-requirements}
 
-U kunt ervoor kiezen e-mailadressen te hashen alvorens hen in Adobe Experience Platform op te nemen, of u kunt verkiezen om met e-mailadressen in duidelijk Experience Platform te werken en onze algoritme te hebben hen op activering hakt.
+U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen, of e-mailadressen gebruiken duidelijk in Experience Platform, en hebben [!DNL Platform] hen op activering hakt.
 
 Raadpleeg de volgende secties in de documentatie van Google voor meer informatie over de hashing-vereisten van Google en andere activeringsbeperkingen:
 
@@ -115,13 +115,13 @@ Blader in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** naar de categ
 
 >[!NOTE]
 >
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
+>Als een verbinding met deze bestemming bestaat, kunt u een **[!UICONTROL Activate]** knoop op de bestemmingskaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
 
-Als u in de stap **Account** eerder een verbinding met uw [!DNL Google Customer Match]-doel hebt ingesteld, selecteert u **[!UICONTROL Existing Account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL New Account]** selecteren om een nieuwe verbinding in te stellen met [!DNL Google Customer Match]. Selecteer **[!UICONTROL Connect to destination]** om u aan te melden en Adobe Experience Cloud te verbinden met uw [!DNL Google Ad]-account.
+Als u in de stap **Account** eerder een verbinding met uw [!DNL Google Customer Match]-doel hebt ingesteld, selecteert u **[!UICONTROL Existing Account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL New Account]** selecteren om een nieuwe verbinding in te stellen met [!DNL Google Customer Match]. Als u zich wilt aanmelden en Adobe Experience Cloud wilt verbinden met uw [!DNL Google Ad]-account, selecteert u **[!UICONTROL Connect to destination]**.
 
 >[!NOTE]
 >
->Experience Platform ondersteunt validatie van referenties in het verificatieproces en geeft een foutbericht weer als u onjuiste gegevens hebt ingevoerd voor uw [!DNL Google Ad]-account. Dit zorgt ervoor dat u de werkstroom niet met onjuiste geloofsbrieven voltooit.
+>Experience Platform ondersteunt validatie van referenties in het verificatieproces. Er wordt een foutbericht weergegeven als u onjuiste gegevens hebt ingevoerd voor uw [!DNL Google Ad]-account, om ervoor te zorgen dat u de workflow niet met onjuiste gegevens voltooit.
 
 ![Verbinden met Google Customer Match-bestemming - verificatiestap](../../assets/catalog/advertising/google-customer-match/connection.png)
 
@@ -131,7 +131,7 @@ Nadat uw referenties zijn bevestigd en Adobe Experience Cloud is verbonden met u
 
 Voer in de stap **[!UICONTROL Authentication]** een **[!UICONTROL Name]** en een **[!UICONTROL Description]** in voor uw activeringsstroom en vul uw Google **[!UICONTROL Account ID]** in.
 
-In deze stap kunt u ook elke **[!UICONTROL Marketing actions]** selecteren die op dit doel moet worden toegepast. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
+In deze stap, kunt u om het even welke **[!UICONTROL Marketing actions]** selecteren die op deze bestemming van toepassing zijn. Marketingsacties geven de intentie aan waarvoor de gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
 
 Selecteer **[!UICONTROL Create Destination]** nadat u de bovenstaande velden hebt ingevuld.
 
@@ -205,10 +205,10 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Controleren of segmentactivering is gelukt {#verify-activation}
 
-Nadat u de activeringsstroom hebt voltooid, schakelt u over naar uw **[!UICONTROL Google Ads]**-account. De geactiveerde segmenten worden nu in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van uw segment, alleen vullen met meer dan 100 actieve gebruikers.
+Nadat u de activeringsstroom hebt voltooid, schakelt u over naar uw **[!UICONTROL Google Ads]**-account. De geactiveerde segmenten worden in uw Google-account weergegeven als klantenlijsten. Houd er rekening mee dat sommige doelgroepen, afhankelijk van de grootte van uw segment, alleen vullen met meer dan 100 actieve gebruikers.
 
-Wanneer u een segment toewijst aan zowel [!DNL IDFA] als [!DNL GAID] mobiele id&#39;s, maakt [!DNL Google Customer Match] een afzonderlijk segment voor elke id-toewijzing. Uw [!DNL Google Ads] account zal twee verschillende segmenten tonen, één voor [!DNL IDFA], en één voor [!DNL GAID] afbeelding.
+Wanneer u een segment toewijst aan zowel [!DNL IDFA] als [!DNL GAID] mobiele id&#39;s, maakt [!DNL Google Customer Match] een afzonderlijk segment voor elke id-toewijzing. Uw [!DNL Google Ads]-account toont twee verschillende segmenten, een voor de [!DNL IDFA] en een voor de [!DNL GAID]-toewijzing.
 
-## Aanvullende bronnen {#additional-resources}
+## Extra bronnen {#additional-resources}
 
 * [Google Customer Match integreren - videozelfstudie](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
