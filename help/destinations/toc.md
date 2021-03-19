@@ -6,7 +6,7 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor marketing
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Doelen
 translation-type: tm+mt
-source-git-commit: 648be489aa77870f67564ee350c4d85885673832
+source-git-commit: 3ae5efca9744e5f5edde56038beab93be5157de3
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 0%
@@ -130,6 +130,6 @@ ht-degree: 0%
       * [Stem van het overzicht van de bestemmingen van de Klant](./catalog/voice/overview.md)
       * [De extensie Digitale feedback bevestigen](./catalog/voice/confirmit-digital-feedback.md)
       * [Invoc-tags, extensie](./catalog/voice/invoca.md)
-      * [Medallia etension](./catalog/voice/medallia.md)
+      * [extensie Medallia](./catalog/voice/medallia.md)
       * [URL-inbox-extensie Talk](./catalog/voice/talkurl.md)
 * [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
