@@ -3,9 +3,9 @@ keywords: gekoppeld in verbinding;gekoppeld in verbinding;gekoppeld in doelen;ge
 title: Koppeling in verbinding met passend publiek
 description: Activeer profielen voor uw campagnes LinkedIn voor publiek gericht, verpersoonlijking, en onderdrukking, die op gehakte e-mails worden gebaseerd.
 translation-type: tm+mt
-source-git-commit: 6d64bc362aa8c85e354f5c02cc2acbe6f1405c99
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,24 @@ Een softwarebedrijf organiseert een conferentie en wil contact houden met deelne
 
 [!DNL LinkedIn Matched Audiences] ondersteunt de activering van de volgende identiteiten: e-mails met hashing  [!DNL GAID], en  [!DNL IDFA].
 
+### Ondersteunde identiteiten {#supported-identities}
+
+[!DNL LinkedIn Matched Audiences] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+
+| Doelidentiteit | Beschrijving | Overwegingen |
+|---|---|---|
+| GAID | Google-advertentie-id | Selecteer deze doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
+| IDFA | Apple ID for Advertisers | Selecteer deze doelidentiteit wanneer uw bronidentiteit een IDFA-naamruimte is. |
+| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [ID passende vereisten](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakte e-mails, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering. |
+
+
 ### Exporttype {#export-type}
 
 **Segmentexport** : u exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer, enzovoort) gebruikt in de bestemming [!DNL LinkedIn Matched Audiences].
 
 ### Voorwaarden voor LinkedIn-account {#LinkedIn-account-prerequisites}
 
-Voordat u het doel [!UICONTROL LinkedIn Matched Audience] kunt gebruiken, moet u ervoor zorgen dat uw [!DNL LinkedIn Campaign Manager]-account het machtigingsniveau [!DNL Creative Manager] of hoger heeft.
+Voordat u de bestemming [!UICONTROL LinkedIn Matched Audience] kunt gebruiken, moet u ervoor zorgen dat uw [!DNL LinkedIn Campaign Manager]-account het machtigingsniveau [!DNL Creative Manager] of hoger heeft.
 
 Om te leren hoe te om uw [!DNL LinkedIn Campaign Manager] gebruikerstoestemmingen uit te geven, zie [Gebruikerstoestemmingen op Advertising Accounts toevoegen, uitgeven en verwijderen ](https://www.linkedin.com/help/lms/answer/5753) in de documentatie LinkedIn.
 
@@ -63,9 +74,9 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 >Gegevens uit naamruimten zonder hashing worden na activering automatisch gehasht door [!DNL Platform].
 > Kenmerkbrongegevens worden niet automatisch gehasht.
 > 
-> Tijdens de stap [Identiteitstoewijzing](../../ui/activate-destinations.md#identity-mapping), wanneer uw brongebied ongehakte attributen bevat, controleer **[!UICONTROL Transformatie]** toepassen, om [!DNL Platform] automatisch te hebben de gegevens bij activering hakt.
+> Tijdens de stap [Identiteitstoewijzing](../../ui/activate-destinations.md#identity-mapping), wanneer uw brongebied ongehakte attributen bevat, controleer **[!UICONTROL Apply transformation]** optie, om [!DNL Platform] automatisch te hebben de gegevens over activering hakt.
 > 
-> De optie **[!UICONTROL Transformatie toepassen]** wordt alleen weergegeven wanneer u kenmerken selecteert als bronvelden. Deze wordt niet weergegeven wanneer u naamruimten kiest.
+> De optie **[!UICONTROL Apply transformation]** wordt alleen weergegeven wanneer u kenmerken als bronvelden selecteert. Deze wordt niet weergegeven wanneer u naamruimten kiest.
 
 ![Transformatie identiteitstoewijzing](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
