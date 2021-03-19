@@ -6,9 +6,9 @@ breadcrumb-title: Handleiding voor bronaansluitingen
 user-guide-description: Verzamel gegevens uit diverse bronnen of structuren, label en verbeter reeds opgenomen gegevens.
 feature: Gegevensinname, bronnen
 translation-type: tm+mt
-source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
+source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '582'
 ht-degree: 5%
 
 ---
@@ -227,4 +227,5 @@ ht-degree: 5%
    - [Gegevensstromen verwijderen](tutorials/ui/delete.md)
 - [Meldingen voor stroomuitvoering](notifications.md)
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
+- [Veelgestelde vragen](./troubleshooting.md)
 - [Opmerkingen bij de release Platform](https://www.adobe.com/go/platform-release-notes-en)
