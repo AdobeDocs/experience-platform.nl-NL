@@ -5,7 +5,7 @@ title: Azure Data Lake Storage Gen2 Source Connector - Overzicht
 topic: ' - overzicht'
 description: Leer hoe u Azure Data Lake Storage Gen2 kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5c6539d45df91369c3608965fd887c013d528b98
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -48,7 +48,7 @@ In de onderstaande documentatie vindt u informatie over hoe u [!DNL Azure Data L
 - [Een systeem voor cloudopslag verkennen met de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Gegevens voor cloudopslag verzamelen met de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## De gebruikersinterface gebruiken
+### De gebruikersinterface gebruiken
 
 - [Een ADLS-Gen2-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
 - [Een gegevensstroom configureren voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
