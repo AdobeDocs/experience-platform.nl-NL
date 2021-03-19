@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;flowservice;delete verbindingen;delete;api
+keywords: Experience Platform;home;populaire onderwerpen;flowservice;delete accounts;delete;api
 solution: Experience Platform
-title: Een verbinding verwijderen met de Flow Service API
-topic: overview
+title: Een account verwijderen met de Flow Service API
+topic: ' - overzicht'
 type: Tutorial
-description: Leer hoe u een verbinding verwijdert met de Flow Service API.
+description: Leer hoe u een account verwijdert met de Flow Service API.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
 
 
-# Een verbinding verwijderen met de Flow Service API
+# Een account verwijderen met de Flow Service API
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van [!DNL Platform]-services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
