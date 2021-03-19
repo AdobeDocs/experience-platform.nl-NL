@@ -3,9 +3,9 @@ keywords: gekoppeld in verbinding;gekoppeld in verbinding;gekoppeld in doelen;ge
 title: Koppeling in verbinding met passend publiek
 description: Activeer profielen voor uw campagnes LinkedIn voor publiek gericht, verpersoonlijking, en onderdrukking, die op gehakte e-mails worden gebaseerd.
 translation-type: tm+mt
-source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
+source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ Activeer profielen voor uw [!DNL LinkedIn] campagnes voor doelgroepen, personali
 
 ## Gevallen gebruiken
 
-Om u beter te helpen begrijpen hoe en wanneer u [!DNL LinkedIn Matched Audiences] bestemming zou moeten gebruiken, is hier een gebruiksgeval dat de klanten van Adobe Experience Platform door deze eigenschap kunnen oplossen.
+Om u beter te helpen begrijpen hoe en wanneer om de [!DNL LinkedIn Matched Audiences] bestemming te gebruiken, is hier een gebruiksgeval dat de klanten van Adobe Experience Platform door deze eigenschap kunnen oplossen.
 
-Een softwarebedrijf organiseert een conferentie en wil contact houden met deelnemers, en hen gepersonaliseerde aanbiedingen tonen die op hun status van de conferentieaanwezigheid worden gebaseerd. Het bedrijf kan e-mailadressen of mobiele apparaat-id&#39;s van eigen [!DNL CRM] in Adobe Experience Platform opnemen, segmenten van eigen offline gegevens maken en deze segmenten naar het sociale platform [!DNL LinkedIn] sturen, zodat de advertentie-uitgaven worden geoptimaliseerd.
+Een softwarebedrijf organiseert een conferentie en wil contact houden met deelnemers, en hen gepersonaliseerde aanbiedingen tonen die op hun status van de conferentieaanwezigheid worden gebaseerd. Het bedrijf kan e-mailadressen of mobiele apparaat-id&#39;s van eigen [!DNL CRM] invoeren in Adobe Experience Platform. Vervolgens kunnen ze segmenten van hun eigen offlinegegevens maken en deze segmenten naar het sociale platform [!DNL LinkedIn] sturen, zodat hun advertentie-uitgaven worden geoptimaliseerd.
 
 ## Doelspecificaties {#destination-specs}
 
@@ -40,7 +40,7 @@ Een softwarebedrijf organiseert een conferentie en wil contact houden met deelne
 
 ### Exporttype {#export-type}
 
-**Segmentexport** : u exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer, enzovoort) gebruikt in de bestemming [!DNL LinkedIn Matched Audiences].
+**De Uitvoer**  van het segment - u exporteert alle leden van een segment (publiek) met de herkenningstekens (naam, telefoonaantal, en anderen) die in de  [!DNL LinkedIn Matched Audiences] bestemming worden gebruikt.
 
 ### Voorwaarden voor LinkedIn-account {#LinkedIn-account-prerequisites}
 
@@ -56,7 +56,7 @@ Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, mo
 
 #### Vereisten voor e-mailhashing {#email-hashing-requirements}
 
-U kunt ervoor kiezen e-mailadressen te hashen alvorens hen in Adobe Experience Platform op te nemen, of u kunt verkiezen om met e-mailadressen in duidelijk Experience Platform te werken en onze algoritme te hebben hen op activering hakt.
+U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen, of e-mailadressen gebruiken duidelijk in Experience Platform, en hebben [!DNL Platform] hen op activering hakt.
 
 Als u meer wilt weten over het invoeren van e-mailadressen in Experience Platform, raadpleegt u het [batchoverzicht](/help/ingestion/batch-ingestion/overview.md) en het [streamingoverzicht](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -65,7 +65,7 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 - Snijd alle spaties aan het begin en aan het einde van de e-mailtekenreeks bij. Bijvoorbeeld: `johndoe@example.com`, niet `<space>johndoe@example.com<space>`;
 - Wanneer u de e-mailtekenreeksen hasht, moet u de kleine-lettertekenreeks hashen.
    - Voorbeeld: `example@email.com`, niet `EXAMPLE@EMAIL.COM`;
-- Controleer of de hashtekenreeks in kleine letters staat
+- Zorg ervoor dat de hashtekenreeks alleen in kleine letters wordt weergegeven
    - Voorbeeld: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, niet `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - Zilp de tekenreeks niet.
 
