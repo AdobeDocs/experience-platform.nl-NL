@@ -3,9 +3,9 @@ keywords: cloudopslag;cloudopslag
 title: Overzicht van Cloud Storage-bestemmingen
 description: Adobe Experience Platform kan uw segmenten als gegevensbestanden leveren aan uw Amazon S3-, AWS Kinesis-, Azure Event Hubs- of SFTP-cloudopslaglocaties.
 translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+source-git-commit: 4f636de9f0cac647793564ce37c6589d096b61f7
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Overzicht van cloudopslagdoelen {#cloud-storage-destinations}
 
-Adobe Experience Platform kan uw segmenten als gegevensbestanden leveren aan uw locatie voor cloudopslag. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV-bestanden of bestanden met tabs als scheidingsteken voor [!DNL Amazon S3] en SFTP. Voor [!DNL AWS Kinesis]- en [!DNL Azure Event Hubs]-doelen worden gegevens uit Experience Platform gestreamd in JSON-indeling.
+Adobe Experience Platform kan uw segmenten als gegevensbestanden leveren aan uw locatie voor cloudopslag. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV of bestanden met tabs als scheidingsteken voor [!DNL Amazon S3], [!DNL Azure Blob] en SFTP. Voor [!DNL Amazon Kinesis]- en [!DNL Azure Event Hubs]-doelen worden gegevens uit Experience Platform gestreamd in JSON-indeling.
 
 ![Adobe-cloudopslagbestemmingen](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -21,7 +21,7 @@ Voor informatie over hoe te om met de bestemmingen van de wolkenopslag te verbin
 
 ## Gegevensuitvoertype
 
-**Op profiel gebaseerde export** : u exporteert details over de personen in het publiek. Deze details zijn nodig voor verpersoonlijking en kunnen attributen, gebeurtenissen, segmentlidmaatschap, enz. omvatten.
+**Op profiel gebaseerde export** : u exporteert details over de personen in het publiek. Deze details zijn nodig voor verpersoonlijking en kunnen attributen, gebeurtenissen, segmentlidmaatschap, en meer omvatten.
 
 ## Beschikbare cloudopslagbestemmingen
 
