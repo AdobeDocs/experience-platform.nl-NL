@@ -3,9 +3,9 @@ keywords: Google-klantovereenkomst;Google-klantovereenkomst;Google-klantovereenk
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere eigendommen van Google, zoals Zoeken, Winkelen, Gmail en YouTube.
 translation-type: tm+mt
-source-git-commit: 494b41265a0eec71ec15c7896eb8c652b3164e18
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1565'
 ht-degree: 0%
 
 ---
@@ -31,19 +31,27 @@ Een vooraanstaand technologiebedrijf heeft zojuist een nieuwe telefoon uitgebrac
 
 Om de versie te promoten, uploaden zij e-mailadressen van hun gegevensbestand van CRM in Experience Platform, gebruikend de e-mailadressen als herkenningstekens. Segmenten worden gemaakt op basis van klanten die eigenaar zijn van oudere telefoonmodellen en worden verzonden naar [!DNL Google Customer Match] zodat zij zich kunnen richten op huidige klanten, klanten die eigenaar zijn van oudere telefoonmodellen, en vergelijkbare klanten op [!DNL YouTube].
 
-## Doelspecificaties {#destination-specs}
-
-### Gegevensbeheer voor [!DNL Google Customer Match] doelen {#data-governance}
+## Gegevensbeheer voor [!DNL Google Customer Match] doelen {#data-governance}
 
 Voor de bestemmingen in Experience Platform kunnen bepaalde regels en verplichtingen gelden voor gegevens die worden verzonden naar of ontvangen van het bestemmingsplatform. U bent verantwoordelijk voor het begrijpen van de beperkingen en verplichtingen van uw gegevens en hoe u die gegevens gebruikt in Adobe Experience Platform en het doelplatform. Adobe Experience Platform biedt tools voor gegevensbeheer om u te helpen bij het beheren van een aantal van deze gegevensgebruiksverplichtingen. [Meer informatie ](../../..//data-governance/labels/overview.md) over tools en beleid voor gegevensbeheer.
 
-### Type en identiteit exporteren {#export-type}
+## Ondersteunde identiteiten {#supported-identities}
+
+[!DNL Google Customer Match] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+
+| Doelidentiteit | Beschrijving | Overwegingen |
+|---|---|---|
+| GAID | Google-advertentie-id | Selecteer deze doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
+| IDFA | Apple ID for Advertisers | Selecteer deze doelidentiteit wanneer uw bronidentiteit een IDFA-naamruimte is. |
+| phone_sha256_e.164 | Telefoonnummers in E164-indeling, gehasht met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Volg de instructies in de [ID passende vereisten](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en haktige telefoonaantallen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering. |
+| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [sectie Identiteitsaanpassing ](#id-matching-requirements-id-matching-requirements) en gebruik aangewezen namespaces voor gewone teksten en gehakt e-mailadressen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering. |
+| user_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
+
+## Exporttype {#export-type}
 
 **Segmentexport** : u exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer, enzovoort) gebruikt in de bestemming [!DNL Google Customer Match].
 
-**Identiteiten**  - u kunt onbewerkte of gehashte e-mails gebruiken als klant-id&#39;s in Google.
-
-### [!DNL Google Customer Match] accountvereisten  {#google-account-prerequisites}
+## [!DNL Google Customer Match] accountvereisten  {#google-account-prerequisites}
 
 Voordat u een [!DNL Google Customer Match]-bestemming in Experience Platform instelt, moet u het Google-beleid voor het gebruik van [!DNL Customer Match] lezen en volgen. Dit wordt beschreven in de [Google-ondersteuningsdocumentatie](https://support.google.com/google-ads/answer/6299717).
 
@@ -101,15 +109,15 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ## Verbinden met doel {#connect-destination}
 
-Blader in **[!UICONTROL Doelen]** > **[!UICONTROL Catalogus]** naar de categorie **[!UICONTROL Advertising]**. Selecteer [!DNL Google Customer Match], dan uitgezocht **[!UICONTROL vorm]**.
+Blader in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** naar de categorie **[!UICONTROL Advertising]**. Selecteer [!DNL Google Customer Match] en selecteer **[!UICONTROL Configure]**.
 
 ![Verbinding maken met Google Customer Match-doel](../../assets/catalog/advertising/google-customer-match/connect.png)
 
 >[!NOTE]
 >
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL knop Activeer]** op de doelkaart zien. Voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]**, verwijs naar [Catalog](../../ui/destinations-workspace.md#catalog) sectie van de documentatie van de bestemmingswerkruimte.
+>Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
 
-Als u in de stap **Account** eerder een verbinding met uw [!DNL Google Customer Match]-doel hebt ingesteld, selecteert u **[!UICONTROL Bestaande account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL Nieuwe account]** selecteren om een nieuwe verbinding in te stellen met [!DNL Google Customer Match]. Selecteer **[!UICONTROL Verbinding maken met doel]** om u aan te melden en Adobe Experience Cloud te verbinden met uw [!DNL Google Ad]-account.
+Als u in de stap **Account** eerder een verbinding met uw [!DNL Google Customer Match]-doel hebt ingesteld, selecteert u **[!UICONTROL Existing Account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL New Account]** selecteren om een nieuwe verbinding in te stellen met [!DNL Google Customer Match]. Selecteer **[!UICONTROL Connect to destination]** om u aan te melden en Adobe Experience Cloud te verbinden met uw [!DNL Google Ad]-account.
 
 >[!NOTE]
 >
@@ -121,28 +129,28 @@ Nadat uw referenties zijn bevestigd en Adobe Experience Cloud is verbonden met u
 
 ![Credentials bevestigd](../../assets/catalog/advertising/google-customer-match/connection-success.png)
 
-Voer in de stap **[!UICONTROL Verificatie]** een **[!UICONTROL Naam]** en een **[!UICONTROL Beschrijving]** in voor uw activeringsstroom en vul uw Google **[!UICONTROL Account ID]** in.
+Voer in de stap **[!UICONTROL Authentication]** een **[!UICONTROL Name]** en een **[!UICONTROL Description]** in voor uw activeringsstroom en vul uw Google **[!UICONTROL Account ID]** in.
 
-In deze stap, kunt u om het even welke **[!UICONTROL Handelingen van de Marketing]** selecteren die op deze bestemming zouden moeten van toepassing zijn. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
+In deze stap kunt u ook elke **[!UICONTROL Marketing actions]** selecteren die op dit doel moet worden toegepast. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
 
-Selecteer **[!UICONTROL Doel maken]** nadat u de bovenstaande velden hebt ingevuld.
+Selecteer **[!UICONTROL Create Destination]** nadat u de bovenstaande velden hebt ingevuld.
 
 >[!IMPORTANT]
 >
-> * De marketingactie **[!UICONTROL Combineren met PII]** is standaard geselecteerd voor het doel [!DNL Google Customer Match] en kan niet worden verwijderd.
-> * Voor [!DNL Google Customer Match] doelen. **[!UICONTROL Account-id]** is uw client-id bij Google. De indeling van de id is xxx-xxx-xxxx.
+> * De marketingactie **[!UICONTROL Combine with PII]** is standaard geselecteerd voor het doel [!DNL Google Customer Match] en kan niet worden verwijderd.
+> * Voor [!DNL Google Customer Match] doelen. **[!UICONTROL Account ID]** is uw klant-id met Google. De indeling van de id is xxx-xxx-xxxx.
 
 
 ![Google-klantovereenkomst aansluiten - verificatiestap](../../assets/catalog/advertising/google-customer-match/authentication.png)
 
-Uw doel is nu gemaakt. U kunt **[!UICONTROL Opslaan en afsluiten]** selecteren als u segmenten later wilt activeren of u kunt **[!UICONTROL Volgende]** selecteren om door te gaan met de workflow en segmenten te selecteren om te activeren. In beide gevallen, zie de volgende sectie, [Activate segmenten aan  [!DNL Google Customer Match]](#activate-segments), voor de rest van het werkschema.
+Uw doel is nu gemaakt. U kunt **[!UICONTROL Save & Exit]** selecteren als u segmenten later wilt activeren of u kunt **[!UICONTROL Next]** selecteren om de workflow voort te zetten en segmenten te selecteren om te activeren. In beide gevallen, zie de volgende sectie, [Activate segmenten aan  [!DNL Google Customer Match]](#activate-segments), voor de rest van het werkschema.
 
 ## Segmenten activeren naar [!DNL Google Customer Match] {#activate-segments}
 
 Zie [Gegevens naar doelen activeren](../../ui/activate-destinations.md) voor instructies over het activeren van segmenten naar [!DNL Google Customer Match].
 
 
-In **[!UICONTROL Segmentprogramma]** stap, moet u [!UICONTROL App ID] verstrekken wanneer het verzenden van [!DNL IDFA] of [!DNL GAID] segmenten naar [!DNL Google Customer Match].
+In de stap **[!UICONTROL Segment schedule]** moet u [!UICONTROL App ID] verstrekken wanneer het verzenden van [!DNL IDFA] of [!DNL GAID] segmenten naar [!DNL Google Customer Match].
 
 ![Google Customer Match App ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
