@@ -1,11 +1,11 @@
 ---
 keywords: Medallia;medallia
-title: Medallia etension
+title: extensie Medallia
 description: De uitbreiding Medallia is een stem van de klantenbestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 205382b68bd8dde8d40a290c4c4825f851216ce2
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
@@ -25,19 +25,19 @@ Dit doel is een Adobe Experience Platform Launch-extensie. Voor meer informatie 
 
 Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
 
-Als u deze extensie wilt gebruiken, hebt u toegang tot Adobe Experience Platform Launch nodig. platform launch wordt aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot Platform launch te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren.
+Als u deze extensie wilt gebruiken, hebt u toegang tot Adobe Experience Platform Launch nodig. platform launch wordt aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot de Platform launch te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te verlenen zodat u extensies kunt installeren.
 
 ## Extensie {#install-extension} installeren
 
 De extensie [!DNL Medallia] installeren:
 
-Ga in [Platform interface](http://platform.adobe.com/) naar **[!UICONTROL Doelen]** > **[!UICONTROL Catalogus]**.
+Ga in [Platform interface](http://platform.adobe.com/) naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
-Klik op de bestemming om het te benadrukken, dan uitgezocht **[!UICONTROL vorm]** in het juiste spoor. Als de **[!UICONTROL Configure]** controle uit grijs is, mist u **[!UICONTROL manage_properties]** toestemming. Zie [Eerste vereisten](#prerequisites).
+Klik op de bestemming om deze te markeren en selecteer **[!UICONTROL Configure]** in de rechtertrack. Als het **[!UICONTROL Configure]** besturingselement grijs is, ontbreekt u de **[!UICONTROL manage_properties]** toestemming. Zie [Eerste vereisten](#prerequisites).
 
-Selecteer in het venster **[!UICONTROL Beschikbare eigenschap Platform launch]** de eigenschap Platform launch waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken in de Platform launch. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) van de documentatie bij Platform launches.
+Selecteer in het venster **[!UICONTROL Select available Platform Launch property]** de eigenschap Platform launch waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken in de Platform launch. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) van de documentatie bij Platform launches.
 
 De werkstroom neemt u aan Platform launch om de installatie te voltooien.
 
