@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;flowservice;updateverbindingen
+keywords: Experience Platform;home;populaire onderwerpen;flowservice;updateaccounts
 solution: Experience Platform
-title: Verbindingen bijwerken met de Flow Service API
+title: Accounts bijwerken met de Flow Service API
 topic: ' - overzicht'
 type: Tutorial
-description: In deze zelfstudie worden de stappen beschreven voor het bijwerken van de gegevens en referenties van een verbinding met de Flow Service API.
+description: In deze zelfstudie worden de stappen beschreven voor het bijwerken van de gegevens en referenties van een account met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: 5187647dfcf82a476bc776bf2b606db228ca70a4
+source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Verbindingen bijwerken met de Flow Service API
+# Accounts bijwerken met de Flow Service API
 
 In sommige omstandigheden is het mogelijk dat de details van een bestaande bronverbinding moeten worden bijgewerkt. [!DNL Flow Service] biedt u de mogelijkheid om details van een bestaande batch- of streamingverbinding toe te voegen, te bewerken en te verwijderen, inclusief de naam, beschrijving en gegevens.
 
