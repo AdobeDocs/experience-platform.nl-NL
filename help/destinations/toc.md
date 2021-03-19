@@ -6,9 +6,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor marketing
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Doelen
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 648be489aa77870f67564ee350c4d85885673832
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 0%
       * [Azure Blob-verbinding](./catalog/cloud-storage/azure-blob.md)
       * [(Beta) Azure Event Hubs-verbinding](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP-verbinding](./catalog/cloud-storage/sftp.md)
+      * [IP adres lijst van gewenste personen](./catalog/cloud-storage/ip-address-allow-list.md)
    * Gebieden van het Platform van het Gegevensbeheer {#data-management}
       * [Overzicht van DMP-doelen (Data Management Platform)](./catalog/data-management/overview.md)
       * [Audience Manager DIL-extensie](./catalog/data-management/aam-dil-extension.md)
