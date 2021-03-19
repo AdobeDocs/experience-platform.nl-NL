@@ -1,11 +1,11 @@
 ---
 keywords: SFTP;sftp
 title: SFTP-verbinding
-description: Creeer een levende uitgaande verbinding aan uw server SFTP om gescheiden gegevensdossiers van Experience Platform periodiek uit te voeren.
+description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 4f0047e7ac4c83e3e17ea0a077bbeb09c86d1db6
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,11 @@ ht-degree: 0%
 
 # SFTP-verbinding
 
-Creeer een levende uitgaande verbinding aan uw server SFTP om gescheiden gegevensdossiers van Experience Platform periodiek uit te voeren.
+Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
+
+>[!IMPORTANT]
+>
+> Hoewel Adobe gegevensuitvoer naar SFTP-servers ondersteunt, zijn de aanbevolen locaties voor cloudopslag voor het exporteren van gegevens [!DNL Amazon S3] en [!DNL Azure Blob].
 
 ## Exporttype {#export-type}
 
@@ -23,7 +27,7 @@ Creeer een levende uitgaande verbinding aan uw server SFTP om gescheiden gegeven
 
 ## Doel {#connect-destination} verbinden
 
-Zie [Workflow voor cloudopslagdoelen ](./workflow.md)voor instructies over hoe u verbinding kunt maken met uw cloudopslagdoelen, inclusief SFTP.
+Raadpleeg de [workflow voor cloudopslagdoelen ](./workflow.md) voor instructies over hoe u verbinding kunt maken met uw cloudopslagdoelen, inclusief SFTP.
 
 Voor bestemmingen SFTP, ga de volgende informatie in creeer bestemmingswerkschema, in **Authentificatie** stap in:
 
@@ -34,3 +38,7 @@ Voor bestemmingen SFTP, ga de volgende informatie in creeer bestemmingswerkschem
 ## Geëxporteerde gegevens {#exported-data}
 
 Voor SFTP-doelen maakt Platform een door tabs gescheiden `.txt` of `.csv` bestand op de opslaglocatie die u hebt opgegeven. Voor meer informatie over de dossiers, zie [E-mail de bestemmingen van de Marketing en de opslagbestemmingen van de Wolk](../../ui/activate-destinations.md#esp-and-cloud-storage) in de zelfstudie van de segmentactivering.
+
+## IP adres lijst van gewenste personen
+
+Verwijs naar [IP adreslijst van gewenste personen voor wolkenopslagbestemmingen ](./ip-address-allow-list.md) als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.
