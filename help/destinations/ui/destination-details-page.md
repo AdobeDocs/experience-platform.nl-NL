@@ -4,23 +4,25 @@ title: Doelgegevens weergeven
 description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 seo-description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 translation-type: tm+mt
-source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 1%
+source-wordcount: '697'
+ht-degree: 0%
 
 ---
 
 
 # Doelgegevens weergeven
 
+## Overzicht {#overview}
+
 In de gebruikersinterface van Adobe Experience Platform, kunt u de attributen en de activiteiten van uw bestemmingen bekijken en controleren. Deze details omvatten de naam en identiteitskaart van de bestemming, controles om de bestemmingen te activeren of onbruikbaar te maken, en meer. De details voor partijbestemmingen omvatten ook metriek voor geactiveerde profielverslagen en een geschiedenis van dataflow looppas.
 
 >[!NOTE]
 >
->De pagina van bestemmingsdetails is een deel van [!UICONTROL Doelen] werkruimte in de UI van het Platform. Zie [[!UICONTROL Doelen] werkruimte overzicht](./destinations-workspace.md) voor meer informatie.
+>De pagina met doeldetails maakt deel uit van de werkruimte [!UICONTROL Destinations] in de gebruikersinterface van het Platform. Zie het [[!UICONTROL Destinations] overzicht van de werkruimte](./destinations-workspace.md) voor meer informatie.
 
-Navigeer in de **[!UICONTROL Werkruimte Doelen]** binnen de interface van het Platform naar het tabblad **[!UICONTROL Bladeren]** en selecteer de naam van een bestemming die u wilt weergeven.
+Navigeer in de **[!UICONTROL Destinations]** werkruimte in de interface van het Platform naar het tabblad **[!UICONTROL Browse]** en selecteer de naam van een doel dat u wilt weergeven.
 
 ![](../assets/ui/details-page/select-destination.png)
 
@@ -42,32 +44,32 @@ In de volgende tabel worden de door het rechterspoor verstrekte controles en geg
 
 | Rechterspoor | Beschrijving |
 | --- | --- |
-| [!UICONTROL Activeren] | Selecteer deze controle om uit te geven welke segmenten aan de bestemming in kaart worden gebracht. Zie de gids op [activerende segmenten aan een bestemming](./activate-destinations.md) voor meer informatie. |
-| [!UICONTROL Verwijderen] | Hiermee kunt u deze gegevensstroom verwijderen en de eerder geactiveerde segmenten, indien aanwezig, deactiveren. |
-| [!UICONTROL Doelnaam] | Dit veld kan worden bewerkt om de naam van het doel bij te werken. |
-| [!UICONTROL Beschrijving] | Dit veld kan worden bewerkt om een optionele beschrijving aan het doel toe te voegen. |
-| [!UICONTROL Bestemming] | Vertegenwoordigt het bestemmingsplatform dat het publiek wordt verzonden naar. Zie [doelcatalogus](../catalog/overview.md) voor meer informatie. |
+| [!UICONTROL Activate] | Selecteer deze controle om uit te geven welke segmenten aan de bestemming in kaart worden gebracht. Zie de gids op [activerende segmenten aan een bestemming](./activate-destinations.md) voor meer informatie. |
+| [!UICONTROL Delete] | Hiermee kunt u deze gegevensstroom verwijderen en de eerder geactiveerde segmenten, indien aanwezig, deactiveren. |
+| [!UICONTROL Destination name] | Dit veld kan worden bewerkt om de naam van het doel bij te werken. |
+| [!UICONTROL Description] | Dit veld kan worden bewerkt om een optionele beschrijving aan het doel toe te voegen. |
+| [!UICONTROL Destination] | Vertegenwoordigt het bestemmingsplatform dat het publiek wordt verzonden naar. Zie [doelcatalogus](../catalog/overview.md) voor meer informatie. |
 | [!UICONTROL Status] | Geeft aan of het doel is in- of uitgeschakeld. |
-| [!UICONTROL Marketingacties] | Hiermee worden de marketingacties (gebruiksgevallen) aangegeven die voor deze bestemming gelden voor doeleinden van gegevensbeheer. |
-| [!UICONTROL Categorie] | Geeft het doeltype aan. Zie [doelcatalogus](../catalog/overview.md) voor meer informatie. |
-| [!UICONTROL Verbindingstype] | Hiermee geeft u de vorm aan waarmee uw publiek naar het doel wordt gestuurd. Mogelijke waarden zijn &quot;[!UICONTROL Cookie]&quot; en &quot;[!UICONTROL Op profiel gebaseerde]&quot;. |
-| [!UICONTROL Frequentie] | Geeft aan hoe vaak het publiek naar de bestemming wordt gestuurd. Mogelijke waarden zijn &quot;[!UICONTROL Streaming]&quot; en &quot;[!UICONTROL Batch]&quot;. |
-| [!UICONTROL Identiteit] | Vertegenwoordigt de identiteitsnaamruimte die door de bestemming wordt geaccepteerd, zoals `GAID`, `IDFA` of `email`. Zie [Naamruimte overzicht van naamruimte ](../../identity-service/namespaces.md) voor meer informatie over geaccepteerde naamruimten. |
-| [!UICONTROL Gemaakt door] | Geeft de gebruiker aan die deze bestemming heeft gemaakt. |
-| [!UICONTROL Gemaakt] | Hiermee wordt de UTC-datetime aangegeven waarop deze bestemming is gemaakt. |
+| [!UICONTROL Marketing actions] | Hiermee worden de marketingacties (gebruiksgevallen) aangegeven die voor deze bestemming gelden voor doeleinden van gegevensbeheer. |
+| [!UICONTROL Category] | Geeft het doeltype aan. Zie [doelcatalogus](../catalog/overview.md) voor meer informatie. |
+| [!UICONTROL Connection type] | Hiermee geeft u de vorm aan waarmee uw publiek naar het doel wordt gestuurd. Mogelijke waarden zijn &quot;[!UICONTROL Cookie]&quot; en &quot;[!UICONTROL Profile-based]&quot;. |
+| [!UICONTROL Frequency] | Geeft aan hoe vaak het publiek naar de bestemming wordt gestuurd. Mogelijke waarden zijn &quot;[!UICONTROL Streaming]&quot; en &quot;[!UICONTROL Batch]&quot;. |
+| [!UICONTROL Identity] | Vertegenwoordigt de identiteitsnaamruimte die door de bestemming wordt geaccepteerd, zoals `GAID`, `IDFA` of `email`. Zie [Naamruimte overzicht van naamruimte ](../../identity-service/namespaces.md) voor meer informatie over geaccepteerde naamruimten. |
+| [!UICONTROL Created by] | Geeft de gebruiker aan die deze bestemming heeft gemaakt. |
+| [!UICONTROL Created] | Hiermee wordt de UTC-datetime aangegeven waarop deze bestemming is gemaakt. |
 
-## [!UICONTROL Ingeschakeld]/ Uitgeschakeld
+## [!UICONTROL Enabled]/[!UICONTROL Disabled] toggle
 
-U kunt **[!UICONTROL Ingeschakeld ]/[!UICONTROL Uitgeschakeld]** gebruiken om alle gegevensexport naar de bestemming te starten en te pauzeren.
+Met de schakeloptie **[!UICONTROL Enabled]/[!UICONTROL Disabled]** kunt u alle gegevens die u exporteert naar de bestemming starten en pauzeren.
 
 ![](../assets/ui/details-page/enable-disable.png)
 
-## [!UICONTROL Dataflow-uitvoering]
+## [!UICONTROL Dataflow runs]
 
-Het [!UICONTROL lusje Dataflow looppas] verstrekt metrische gegevens op uw dataflow looppas aan partijbestemmingen. Er wordt een lijst weergegeven met afzonderlijke uitvoeringen en de bijbehorende maatstaven, samen met de volgende totalen voor profielrecords:
+Het [!UICONTROL Dataflow runs] lusje verstrekt metrische gegevens over uw dataflow looppas aan partijbestemmingen. Er wordt een lijst weergegeven met afzonderlijke uitvoeringen en de bijbehorende maatstaven, samen met de volgende totalen voor profielrecords:
 
-* **[!UICONTROL Profielrecords geactiveerd]**: Het totale aantal profielrecords dat voor activering is gemaakt of bijgewerkt.
-* **[!UICONTROL Profielrecords overgeslagen]**: Het totale aantal profielrecords dat voor activering wordt overgeslagen op basis van het profiel, wordt afgesloten of ontbrekende kenmerken.
+* **[!UICONTROL Profile records activated]**: Het totale aantal profielrecords dat voor activering is gemaakt of bijgewerkt.
+* **[!UICONTROL Profile records skipped]**: Het totale aantal profielrecords dat voor activering wordt overgeslagen op basis van het profiel, wordt afgesloten of ontbrekende kenmerken.
 
 ![](../assets/ui/details-page/dataflow-runs.png)
 
@@ -79,9 +81,9 @@ Om de details van een bepaalde dataflow looppas te bekijken, selecteer de begint
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL Activeringsgegevens] {#activation-data}
+## [!UICONTROL Activation data] {#activation-data}
 
-Op het tabblad [!UICONTROL Activeringsgegevens] wordt een lijst weergegeven met segmenten die aan de bestemming zijn toegewezen, inclusief de begindatum en einddatum (indien van toepassing). Als u de details over een bepaald segment wilt weergeven, selecteert u de naam in de lijst.
+Het [!UICONTROL Activation data] lusje toont een lijst van segmenten die aan de bestemming, met inbegrip van hun begindatum en einddatum (indien van toepassing) in kaart zijn gebracht. Als u de details over een bepaald segment wilt weergeven, selecteert u de naam in de lijst.
 
 ![](../assets/ui/details-page/activation-data.png)
 
@@ -91,4 +93,4 @@ Op het tabblad [!UICONTROL Activeringsgegevens] wordt een lijst weergegeven met 
 
 ## Volgende stappen
 
-Dit document besprak de mogelijkheden van de pagina met doeldetails. Voor meer informatie over het beheren van bestemmingen in UI, zie het overzicht op [[!UICONTROL Doelen] werkruimte](./destinations-workspace.md).
+Dit document besprak de mogelijkheden van de pagina met doeldetails. Voor meer informatie bij het beheren van bestemmingen in UI, zie het overzicht op [[!UICONTROL Destinations] werkruimte](./destinations-workspace.md).
