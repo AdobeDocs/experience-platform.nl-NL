@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis-bestemming;kinesis
 title: Amazon Kinesis-verbinding
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
@@ -43,19 +43,19 @@ Zie [Workflow ](./workflow.md)voor cloudopslagdoelen voor instructies voor het m
 
 Voor [!DNL Amazon Kinesis] bestemmingen, ga de volgende informatie in tot bestemmingswerkschema:
 
-### In de stap van de Authentificatie {#authentication-step}
+## Verificatiestap {#authentication-step}
 
 * **[!DNL Amazon Web Services]toegangssleutel en geheime sleutel**: In  [!DNL Amazon Web Services], produceer een  `access key - secret access key` paar om Platform toegang tot uw  [!DNL Amazon Kinesis] rekening te verlenen. Meer informatie vindt u in de [Amazon Web Services-documentatie](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **regio**: Geef aan naar welk  [!DNL Amazon Web Services] gebied gegevens moeten worden gestreamd.
 
 ![Invoervelden in de stap van de account](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-### In de stap {#setup-step}
+## Stap {#setup-step} instellen
 
 * **Naam**: Geef een naam op voor uw verbinding met  [!DNL Amazon Kinesis]
 * **Omschrijving**: Geef een beschrijving op voor de verbinding met  [!DNL Amazon Kinesis].
 * **stream**: Geef de naam op van een bestaande gegevensstroom in uw  [!DNL Amazon Kinesis] account. Platform exporteert gegevens naar deze stream.
-* **[!UICONTROL Handelingen]** voor marketing: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
+* **[!UICONTROL Marketing actions]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
 
 ![Invoervelden in de verificatiestap](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
