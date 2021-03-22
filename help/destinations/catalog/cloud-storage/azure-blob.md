@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob-bestemming;s3;azure blob-bestemming
 title: Azure Blob-verbinding
 description: Maak een live uitgaande verbinding met uw Azure Blob-opslag om periodiek door tabs gescheiden of CSV-gegevensbestanden vanuit Adobe Experience Platform te exporteren.
 translation-type: tm+mt
-source-git-commit: 6d1960be886d12475603aeb79fe6283a1fd3030e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '579'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 Als u al een geldige Klodderbestemming hebt, kunt u de rest van dit document overslaan en aan het leerprogramma op [activerende segmenten aan uw bestemming ](../../ui/activate-destinations.md) te werk gaan.
 
-### Ondersteunde bestandsindelingen
+## Ondersteunde bestandsindelingen {#file-formats}
 
 [!DNL Experience Platform] ondersteunt de volgende bestandsindeling die moet worden geëxporteerd naar  [!DNL Blob]:
 
@@ -34,23 +34,23 @@ Als u al een geldige Klodderbestemming hebt, kunt u de rest van dit document ove
 
 ## Sluit uw Blob-account {#connect-destination} aan
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Doelen]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Doelen]** te openen. Het scherm **[!UICONTROL Catalog]** toont een verscheidenheid van bestemmingen waarvoor u een rekening kunt tot stand brengen met.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Destinations]** in de linkernavigatiebalk om de werkruimte **[!UICONTROL Destinations]** te openen. In het scherm **[!UICONTROL Catalog]** worden verschillende doelen weergegeven waarvoor u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bestemming vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer **[!UICONTROL Azure Blob Storage]** onder de categorie **[!UICONTROL Cloud Storage]**, gevolgd door **[!UICONTROL Configure]**.
+Selecteer **[!UICONTROL Cloud Storage]** onder de categorie **[!UICONTROL Azure Blob Storage]**, gevolgd door **[!UICONTROL Configure]**.
 
 ![Catalogus](../../assets/catalog/cloud-storage/blob/catalog.png)
 
 >[!NOTE]
 >
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL knop Activeer]** op de doelkaart zien. Voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]**, verwijs naar [Catalog](../../ui/destinations-workspace.md#catalog) sectie van de documentatie van de bestemmingswerkruimte.
+>Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
 
-De pagina **[!UICONTROL Verbinding maken met Azure Blob Storage]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to Azure Blob Storage]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
-### Nieuwe account {#new-account}
+## Nieuwe account {#new-account}
 
-Als u nieuwe geloofsbrieven gebruikt, selecteer **[!UICONTROL Nieuwe rekening]**. Geef op het invoerformulier dat wordt weergegeven de verbindingstekenreeks op. De verbindingstekenreeks is vereist voor toegang tot gegevens in de blob-opslag. Het patroon van de [!DNL Blob] verbindingstekenreeks begint met: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
+Als u nieuwe geloofsbrieven gebruikt, uitgezocht **[!UICONTROL New account]**. Geef op het invoerformulier dat wordt weergegeven de verbindingstekenreeks op. De verbindingstekenreeks is vereist voor toegang tot gegevens in de blob-opslag. Het patroon van de [!DNL Blob] verbindingstekenreeks begint met: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
 
 Zie [Een verbindingstekenreeks configureren voor een Azure-opslagaccount](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in de documentatie van Microsoft voor meer informatie over het configureren van uw [!DNL Blob]-verbindingstekenreeks.
 
@@ -58,7 +58,7 @@ U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteli
 
 ![Nieuwe account](../../assets/catalog/cloud-storage/blob/new.png)
 
-### Bestaande account
+## Bestaande account {#existing-account}
 
 Als u een bestaande account wilt verbinden, selecteert u de [!DNL Blob]-account waarmee u verbinding wilt maken en selecteert u **Volgende** om door te gaan.
 
@@ -68,9 +68,9 @@ Als u een bestaande account wilt verbinden, selecteert u de [!DNL Blob]-account 
 
 De pagina **Authentication** wordt weergegeven. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving, het mappad en de container voor uw bestanden op.
 
-In deze stap, kunt u om het even welke **[!UICONTROL Handelingen van de Marketing]** selecteren die op deze bestemming zouden moeten van toepassing zijn. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
+In deze stap kunt u ook elke **[!UICONTROL Marketing actions]** selecteren die op dit doel moet worden toegepast. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
 
-Als u klaar bent, selecteert u **[!UICONTROL Doel maken]**.
+Selecteer **[!UICONTROL Create destination]** als u klaar bent.
 
 ![Verificatie](../../assets/catalog/cloud-storage/blob/authentication.png)
 
