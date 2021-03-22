@@ -3,15 +3,17 @@ keywords: reclame; de handelsdienst;
 title: De verbinding van de handelsbureau
 description: 'De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en mobiele inventarisatiebronnen. '
 translation-type: tm+mt
-source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL The Trade Desk] verbinding
+
+## Overzicht {#overview}
 
 [!DNL The Trade Desk] doel helpt u profielgegevens te verzenden naar  [!DNL The Trade Desk].
 
@@ -39,35 +41,35 @@ Als markeerteken, wil ik segmenten kunnen gebruiken die van [!DNL Trade Desk IDs
 
 ## Verbinden met doel {#connect-destination}
 
-Selecteer **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** en selecteer [!DNL The Trade Desk] en **[!UICONTROL Configureren]**.
+Selecteer [!DNL The Trade Desk] in **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer **[!UICONTROL Configure]**.
 
 ![Vorm de bestemming van de handelsbureau](../../assets/catalog/advertising/tradedesk/configure.png)
 
 >[!NOTE]
 >
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL knop Activeer]** op de doelkaart zien. Voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]**, verwijs naar [Catalog](../../ui/destinations-workspace.md#catalog) sectie van de documentatie van de bestemmingswerkruimte.
+>Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
 >
 >![Activeer de bestemming van het handelsbureau](../../assets/catalog/advertising/tradedesk/activate.png)
 
-In de stap [!UICONTROL Authentication] moet u [!DNL The Trade Desk] verbindingsdetails invoeren:
+In de stap [!UICONTROL Authentication] moet u [!DNL The Trade Desk] verbindingsdetails ingaan:
 
-* **[!UICONTROL Naam]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
-* **[!UICONTROL Omschrijving]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Account-id]**: Je  [!DNL Trade Desk] [!UICONTROL account-id].
-* **[!UICONTROL Serverlocatie]**: Vraag uw  [!DNL Trade Desk] vertegenwoordiger welke regionale server u zou moeten gebruiken. Dit zijn de beschikbare regionale servers waaruit u kunt kiezen:
+* **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
+* **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
+* **[!UICONTROL Account ID]**: Uw [!DNL Trade Desk] [!UICONTROL Account ID].
+* **[!UICONTROL Server Location]**: Vraag uw  [!DNL Trade Desk] vertegenwoordiger welke regionale server u zou moeten gebruiken. Dit zijn de beschikbare regionale servers waaruit u kunt kiezen:
 
-   * **[!UICONTROL Europa]**
+   * **[!UICONTROL Europe]**
    * **[!UICONTROL Singapore]**
    * **[!UICONTROL Tokyo]**
-   * **[!UICONTROL Noord-Amerika Oost]**
+   * **[!UICONTROL North America East]**
    * **[!UICONTROL North America West]**
-   * **[!UICONTROL Latijns-Amerika]**
+   * **[!UICONTROL Latin America]**
 
-* **[!UICONTROL Handeling]** voor marketing: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
+* **[!UICONTROL Marketing action]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
 
-![De Stap van de Authentificatie van het Handelsbureau](../../assets/catalog/advertising/tradedesk/authenticate.png)
+![De Stap van de Authentificatie van de Handelsdesk](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
-Klik **[!UICONTROL Doel maken]**. Uw doel is nu gemaakt. U kunt [!UICONTROL Opslaan &amp; afsluiten] klikken als u segmenten later wilt activeren, of u kunt [!UICONTROL Volgende] selecteren om de workflow voort te zetten en segmenten te selecteren om te activeren. In beide gevallen raadpleegt u de volgende sectie [Segmenten activeren](#activate-segments) voor de rest van de workflow.
+Klik op **[!UICONTROL Create destination]**. Uw doel is nu gemaakt. U kunt [!UICONTROL Save & Exit] klikken als u segmenten later wilt activeren, of u kunt [!UICONTROL Next] selecteren om de werkstroom voort te zetten en segmenten te selecteren om te activeren. In beide gevallen raadpleegt u de volgende sectie [Segmenten activeren](#activate-segments) voor de rest van de workflow.
 
 ## Segmenten {#activate-segments} activeren
 
