@@ -3,9 +3,9 @@ keywords: gekoppeld in verbinding;gekoppeld in verbinding;gekoppeld in doelen;ge
 title: Koppeling in verbinding met passend publiek
 description: Activeer profielen voor uw campagnes LinkedIn voor publiek gericht, verpersoonlijking, en onderdrukking, die op gehakte e-mails worden gebaseerd.
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,7 @@ Om u beter te helpen begrijpen hoe en wanneer om de [!DNL LinkedIn Matched Audie
 
 Een softwarebedrijf organiseert een conferentie en wil contact houden met deelnemers, en hen gepersonaliseerde aanbiedingen tonen die op hun status van de conferentieaanwezigheid worden gebaseerd. Het bedrijf kan e-mailadressen of mobiele apparaat-id&#39;s van eigen [!DNL CRM] invoeren in Adobe Experience Platform. Vervolgens kunnen ze segmenten van hun eigen offlinegegevens maken en deze segmenten naar het sociale platform [!DNL LinkedIn] sturen, zodat hun advertentie-uitgaven worden geoptimaliseerd.
 
-## Doelspecificaties {#destination-specs}
-
-[!DNL LinkedIn Matched Audiences] ondersteunt de activering van de volgende identiteiten: e-mails met hashing  [!DNL GAID], en  [!DNL IDFA].
-
-### Ondersteunde identiteiten {#supported-identities}
+## Ondersteunde identiteiten {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
 
@@ -38,23 +34,23 @@ Een softwarebedrijf organiseert een conferentie en wil contact houden met deelne
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [ID passende vereisten](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakte e-mails, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering. |
 
 
-### Exporttype {#export-type}
+## Exporttype {#export-type}
 
 **De Uitvoer**  van het segment - u exporteert alle leden van een segment (publiek) met de herkenningstekens (naam, telefoonaantal, en anderen) die in de  [!DNL LinkedIn Matched Audiences] bestemming worden gebruikt.
 
-### Voorwaarden voor LinkedIn-account {#LinkedIn-account-prerequisites}
+## Voorwaarden voor LinkedIn-account {#LinkedIn-account-prerequisites}
 
 Voordat u de bestemming [!UICONTROL LinkedIn Matched Audience] kunt gebruiken, moet u ervoor zorgen dat uw [!DNL LinkedIn Campaign Manager]-account het machtigingsniveau [!DNL Creative Manager] of hoger heeft.
 
 Om te leren hoe te om uw [!DNL LinkedIn Campaign Manager] gebruikerstoestemmingen uit te geven, zie [Gebruikerstoestemmingen op Advertising Accounts toevoegen, uitgeven en verwijderen ](https://www.linkedin.com/help/lms/answer/5753) in de documentatie LinkedIn.
 
-### Overeenkomende vereisten {#id-matching-requirements}
+## Overeenkomende vereisten {#id-matching-requirements}
 
 [!DNL LinkedIn Matched Audiences] vereist dat er geen duidelijk identificeerbare informatie (PII) wordt verstrekt. Daarom kan het publiek dat aan [!DNL LinkedIn Matched Audiences] wordt geactiveerd *hashed* herkenningstekens, zoals e-mailadressen of mobiele apparaat IDs worden afgevinkt.
 
 Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, moet u aan de desbetreffende vereisten voldoen.
 
-#### Vereisten voor e-mailhashing {#email-hashing-requirements}
+## Vereisten voor e-mailhashing {#email-hashing-requirements}
 
 U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen, of e-mailadressen gebruiken duidelijk in Experience Platform, en hebben [!DNL Platform] hen op activering hakt.
 
