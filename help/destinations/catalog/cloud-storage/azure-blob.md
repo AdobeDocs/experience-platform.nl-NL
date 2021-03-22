@@ -3,15 +3,17 @@ keywords: Azure Blob;Blob-bestemming;s3;azure blob-bestemming
 title: Azure Blob-verbinding
 description: Maak een live uitgaande verbinding met uw Azure Blob-opslag om periodiek door tabs gescheiden of CSV-gegevensbestanden vanuit Adobe Experience Platform te exporteren.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
 
 
 # [!DNL Azure Blob] verbinding
+
+## Overzicht {#overview}
 
 [!DNL Azure Blob] (hierna &quot;[!DNL Blob]&quot; genoemd) is de oplossing van de objecten van Microsoft voor de wolk. Deze zelfstudie bevat stappen voor het maken van een [!DNL Blob]-doel met behulp van de [!DNL Platform]-gebruikersinterface.
 
