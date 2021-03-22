@@ -3,15 +3,17 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager-verbinding
 description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.  '
 translation-type: tm+mt
-source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Google Ad Manager] verbinding
+
+## Overzicht {#overview}
 
 [!DNL Google Ad Manager], voorheen bekend  [!DNL DoubleClick] bij Publishers of  [!DNL DoubleClick AdX], is een advertentieplatform van  [!DNL Google] waaruit uitgevers de middelen krijgen om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 
