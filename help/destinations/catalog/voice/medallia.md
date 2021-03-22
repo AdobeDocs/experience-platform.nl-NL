@@ -3,15 +3,17 @@ keywords: Medallia;medallia
 title: extensie Medallia
 description: De uitbreiding Medallia is een stem van de klantenbestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: 205382b68bd8dde8d40a290c4c4825f851216ce2
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Medallia] extension  {#medallia-extension}
+
+## Overzicht {#overview}
 
 Implementeer [!DNL Medallia] snel en naadloos op uw wegeigenschappen. De uitbreiding staat u ook toe om onderzoeksgebeurtenissen te ontdekken, klantenterugkoppelen in echt - tijd door de elementen van Gegevens te vangen, het in regels te gebruiken om de ervaring van uw klant te personaliseren en gegevens met Adobe Analytics te delen.
 
