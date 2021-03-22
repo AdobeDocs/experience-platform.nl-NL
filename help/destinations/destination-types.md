@@ -4,9 +4,9 @@ title: Doeltypen en -categorieën
 seo-title: Doeltypen en -categorieën
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '509'
 ht-degree: 0%
 
 ---
@@ -22,37 +22,37 @@ In Adobe Experience Platform maken we onderscheid tussen twee doeltypen: verbind
 
 ![Soorten bestemmingen](./assets/destination-types/types-of-destinations.png)
 
-### Verbindingen {#connections}
+## Verbindingen {#connections}
 
-**[!UICONTROL De]** Uitvoer van het profiel en  **[!UICONTROL Segment]** Exportbestemmingen van het segment in Adobe Experience Platform vangen gebeurtenisgegevens, combineren het met andere gegevensbronnen om het  [Real-time Profiel](../profile/home.md) van de Klant te vormen, segmentatie, en de de uitvoersegmenten en gekwalificeerde profielen op bestemmingen toe te passen.
+**[!UICONTROL Profile Export]** en  **[!UICONTROL Segment Export]** bestemmingen in Adobe Experience Platform leggen gebeurtenisgegevens vast, combineren deze met andere gegevensbronnen om het  [Real-Time Klantprofiel](../profile/home.md) te vormen, segmentatie toe te passen, en segmenten en gekwalificeerde profielen te exporteren naar bestemmingen.
 
-#### Profielexportdoelen
+## Profielexportdoelen
 
 Profielexportdoelen genereren een bestand met profielen en/of kenmerken. Deze bestemmingen gebruiken ruwe gegevens, vaak met e-mailadres als primaire sleutel. De [Amazon S3 wolkenopslagbestemming](./catalog/cloud-storage/amazon-s3.md) is een voorbeeld van bestemming waar u dossiers kunt neerzetten die profieluitvoer bevatten.
 
-#### Exportbestemmingen segment
+## Exportbestemmingen segment
 
 De de uitvoerbestemmingen van het segment verzenden de profielen en de segmenten die zij voor aan bestemmingsplatforms kwalificeerden. Deze bestemmingen gebruiken segment ID of gebruiker IDs. Reclamebestemmingen zoals [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) of [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) zijn voorbeelden van deze soorten doelen.
 
-#### Exportdoelen profiel en segment - video-overzicht
+## Exportdoelen profiel en segment - video-overzicht
 
 In de onderstaande video worden de bijzonderheden van de twee soorten doelen uitgelegd:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-### Extensies {#extensions}
+## Extensies {#extensions}
 
-Platform maakt gebruik van de kracht en flexibiliteit van Adobe Experience Platform Launch om Platform Launch-extensies op te nemen in de interface van het Platform.
+Platform maakt gebruik van de kracht en flexibiliteit van Adobe Experience Platform Launch om Platform launch-extensies op te nemen in de interface van het Platform.
 
 >[!TIP]
 >
 >Zie [Overzicht van Adobe Experience Platform Launch-extensies](./catalog/launch-extensions/overview.md) voor gedetailleerde informatie over Adobe Experience Platform Launch-extensies, zoals use cases en hoe u deze kunt vinden in de interface.
 
-Platform Start extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. Beschouw extensies als een **Event Forwarding**-type van bestemming. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Grondige personalisatie-extensie](./catalog/personalization/gainsight.md) of de [Spraak van de klant-extensie bevestigen](./catalog/voice/confirmit-digital-feedback.md).
+platform launch-extensies sturen onbewerkte gebeurtenisgegevens door naar verschillende typen doelen. Beschouw extensies als een **Event Forwarding**-type van bestemming. Dit is een eenvoudiger type integratie met doelplatforms, die alleen onbewerkte gebeurtenisgegevens doorsturen. Voorbeelden hiervan zijn de [Grondige personalisatie-extensie](./catalog/personalization/gainsight.md) of de [Spraak van de klant-extensie bevestigen](./catalog/voice/confirmit-digital-feedback.md).
 
 ![Extensies van Experience Platforms Launch vergeleken met andere bestemmingen](./assets/common/launch-and-other-destinations.png)
 
-### Wanneer gebruikt u verbindingen en extensies
+## Wanneer gebruikt u verbindingen en extensies
 
 Als een markeerteken kunt u een combinatie van verbindingen en extensies gebruiken om uw gebruiksproblemen aan te pakken.
 
