@@ -3,10 +3,10 @@ keywords: reclame; de handelsdienst;
 title: De verbinding van de handelsbureau
 description: 'De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en mobiele inventarisatiebronnen. '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 0%
+source-wordcount: '592'
+ht-degree: 1%
 
 ---
 
@@ -21,23 +21,27 @@ ht-degree: 0%
 
 Als u profielgegevens naar [!DNL Trade Desk] wilt verzenden, moet u eerst verbinding maken met het doel.
 
-## Doelspecificaties {#destination-specs}
-
-Let op de volgende details die specifiek zijn voor het doel [!DNL Trade Desk]:
-
-* U kunt de volgende [identiteiten](../../../identity-service/namespaces.md) naar [!DNL The Trade Desk] bestemmingen verzenden: [!DNL The Trade Desk ID], [!DNL IDFA], [!DNL GAID].
-
->[!IMPORTANT]
->
->Als u uw eerste bestemming met [!DNL The Trade Desk] wilt maken en in het verleden (met Adobe Audience Manager of andere toepassingen) de [ID-synchronisatiefunctionaliteit](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) niet hebt ingeschakeld in de Experience Cloud ID-service, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder [!DNL The Trade Desk] integraties in Audience Manager had opgezet, de syncs van identiteitskaart u opstelling dragen over aan Platform.
-
 ## Gebruiksscenario’s {#use-cases}
 
 Als markeerteken, wil ik segmenten kunnen gebruiken die van [!DNL Trade Desk IDs] of apparaat IDs worden gebouwd om het opnieuw richten of publiek gerichte digitale campagnes tot stand te brengen.
 
+## Ondersteunde identiteiten {#supported-identities}
+
+[!DNL The Trade Desk] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+
+| Doelidentiteit | Beschrijving |
+|---|---|
+| GAID | [!DNL Google Advertising ID] |
+| IDFA | [!DNL Apple ID for Advertisers] |
+| Handelsbureau-id | Advertiser-id in het Trade Desk-platform |
+
 ## Type exporteren {#export-type}
 
 **[!DNL Segment export]** - u exporteert alle leden van een segment (publiek) naar de bestemming.
+
+## Vereisten {#prerequisites}
+
+Als u uw eerste bestemming met [!DNL The Trade Desk] wilt maken en in het verleden (met Adobe Audience Manager of andere toepassingen) de [ID-synchronisatiefunctionaliteit](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) niet hebt ingeschakeld in de Experience Cloud ID-service, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder [!DNL The Trade Desk] integraties in Audience Manager had opgezet, de syncs van identiteitskaart u opstelling dragen over aan Platform.
 
 ## Verbinden met doel {#connect-destination}
 
@@ -45,13 +49,13 @@ Selecteer [!DNL The Trade Desk] in **[!UICONTROL Connections]** > **[!UICONTROL 
 
 ![Vorm de bestemming van de handelsbureau](../../assets/catalog/advertising/tradedesk/configure.png)
 
->[!NOTE]
->
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
->
->![Activeer de bestemming van het handelsbureau](../../assets/catalog/advertising/tradedesk/activate.png)
+Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
 
-In de stap [!UICONTROL Authentication] moet u [!DNL The Trade Desk] verbindingsdetails ingaan:
+![Activeer de bestemming van het handelsbureau](../../assets/catalog/advertising/tradedesk/activate.png)
+
+## Verificatiestap {#authentication}
+
+In de stap **[!UICONTROL Authentication]** moet u [!DNL The Trade Desk] verbindingsdetails ingaan:
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
