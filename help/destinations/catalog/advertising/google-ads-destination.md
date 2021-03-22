@@ -3,15 +3,17 @@ keywords: Google-advertenties;Google-advertenties;Google AdWords;Google Adwords
 title: Google Ads-verbinding
 description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Google Ads] verbinding
+
+## Overzicht {#overview}
 
 [!DNL Google Ads], voorheen bekend als  [!DNL Google AdWords], is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische weergaven,  [!DNL YouTube] video&#39;s en mobiele weergaven in de app.
 
