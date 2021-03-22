@@ -3,9 +3,9 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager-verbinding
 description: 'Google Ad Manager, voorheen bekend als DoubleClick voor uitgevers of DoubleClick AdX, is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.  '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
@@ -17,16 +17,12 @@ ht-degree: 0%
 
 [!DNL Google Ad Manager], voorheen bekend  [!DNL DoubleClick] bij Publishers of  [!DNL DoubleClick AdX], is een advertentieplatform van  [!DNL Google] waaruit uitgevers de middelen krijgen om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 
-## Doelspecificaties
+## Doelspecificaties {#specifics}
 
 Neem nota van de volgende details die voor [!DNL Google Ad Manager] bestemmingen specifiek zijn:
 
 * Geactiveerd publiek wordt gecreeerd programmatically in het [!DNL Google] platform.
-* Platform bevat momenteel geen metrische waarde om succesvolle activering te valideren. Raadpleeg de tellingen van het publiek in Google om de integratie te valideren en inzicht te krijgen in doelgroepen.
-
->[!IMPORTANT]
->
->Als u uw eerste bestemming met [!DNL Google Ad Manager] wilt maken en de [ID-synchronisatiefunctionaliteit](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in het verleden (met Audience Manager of andere toepassingen) niet hebt ingeschakeld, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder [!DNL Google] integraties in Audience Manager had opgezet, de syncs van identiteitskaart u opstelling dragen over aan Platform.
+* [!DNL Platform] bevat momenteel geen metrische waarde om een geslaagde activering te valideren. Raadpleeg de tellingen van het publiek in Google om de integratie te valideren en inzicht te krijgen in doelgroepen.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -48,7 +44,9 @@ Neem nota van de volgende details die voor [!DNL Google Ad Manager] bestemmingen
 
 ## Vereisten
 
-### Lijst van gewenste personen
+Als u uw eerste bestemming met [!DNL Google Ad Manager] wilt maken en de [ID-synchronisatiefunctionaliteit](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in het verleden (met Audience Manager of andere toepassingen) niet hebt ingeschakeld, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder [!DNL Google] integraties in Audience Manager had opgezet, de syncs van identiteitskaart u opstelling dragen over aan Platform.
+
+## Lijst van gewenste personen
 
 >[!NOTE]
 >
