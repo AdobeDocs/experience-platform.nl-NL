@@ -3,9 +3,9 @@ keywords: 'reclame; borden; '
 title: Microsoft Bing-verbinding
 description: Met de de verbindingsbestemming van de Bing van Microsoft, kunt u het opnieuw richten en publiek gerichte digitale campagnes over de Reclame van de Vertoning van Microsoft uitvoeren.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '513'
 ht-degree: 1%
 
 ---
@@ -19,25 +19,25 @@ Met de bestemming [!DNL Microsoft Bing] kunt u profielgegevens naar [!DNL Micros
 
 Als u profielgegevens naar [!DNL Microsoft Bing] wilt verzenden, moet u eerst verbinding maken met het doel.
 
-## Doelspecificaties {#destination-specs}
-
-Let op de volgende details die specifiek zijn voor het doel [!DNL Microsoft Bing]:
-
-* U kunt de volgende [identiteiten](../../../identity-service/namespaces.md) naar [!DNL Microsoft Bing] bestemmingen verzenden: [!DNL Microsoft ID].
-
->[!IMPORTANT]
->
->Als u uw eerste bestemming met [!DNL Microsoft Bing] wilt maken en in het verleden (met Adobe Audience Manager of andere toepassingen) de [ID-synchronisatiefunctionaliteit](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) niet hebt ingeschakeld in de Experience Cloud ID-service, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder [!DNL Microsoft Bing] integraties in Audience Manager had opgezet, de syncs van identiteitskaart u opstelling dragen over aan Platform.
-
 ## Gebruiksscenario’s {#use-cases}
 
 Als markator, wil ik segmenten kunnen gebruiken die van [!DNL Microsoft Advertising IDs] worden gebouwd om gebruikers door vertoningsreclame over [!DNL Microsoft Advertising] kanalen te richten.
+
+## Ondersteunde identiteiten {#supported-identities}
+
+[!DNL The Trade Desk] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Meer informatie over [identiteiten](/help/identity-service/namespaces.md).
+
+| Doelidentiteit | Beschrijving |
+|---|---|
+| GEMAAKT | Microsoft Advertising ID |
 
 ## Type exporteren {#export-type}
 
 **[!DNL Segment Export]** - u exporteert alle leden van een segment (publiek) naar de  [!DNL Microsoft Bing] bestemming.
 
 ## Vereisten {#prerequisites}
+
+Als u uw eerste bestemming met [!DNL Microsoft Bing] wilt maken en in het verleden (met Adobe Audience Manager of andere toepassingen) de [ID-synchronisatiefunctionaliteit](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) niet hebt ingeschakeld in de Experience Cloud ID-service, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder [!DNL Microsoft Bing] integraties in Audience Manager had opgezet, de syncs van identiteitskaart u opstelling dragen over aan Platform.
 
 Wanneer het vormen van de bestemming, moet u de volgende informatie verstrekken:
 
@@ -49,13 +49,13 @@ Selecteer [!DNL Microsoft Bing] in **[!UICONTROL Connections]** > **[!UICONTROL 
 
 ![Bestemming Microsoft Bing configureren](../../assets/catalog/advertising/bing/configure.png)
 
->[!NOTE]
->
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
->
->![Microsoft Bing-doel activeren](../../assets/catalog/advertising/bing/activate.png)
+Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
 
-In de stap [!UICONTROL Authentication] moet u de gegevens van de bestemmingsverbinding invoeren:
+![Microsoft Bing-doel activeren](../../assets/catalog/advertising/bing/activate.png)
+
+## Verificatiestap {#authentication}
+
+In de stap **[!UICONTROL Authentication]** moet u de gegevens van de bestemmingsverbinding invoeren:
 
 * **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
