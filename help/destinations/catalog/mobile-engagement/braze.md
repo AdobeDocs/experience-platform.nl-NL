@@ -3,7 +3,7 @@ keywords: mobiel; schil; berichten;
 title: Braze verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Met de bestemming [!DNL Braze] kunt u profielgegevens naar [!DNL Braze] verzende
 
 Als u profielgegevens naar [!DNL Braze] wilt verzenden, moet u eerst verbinding maken met het doel.
 
-## Doelspecificaties {#destination-specs}
+## Doelspecificaties {#specifics}
 
 Let op de volgende details die specifiek zijn voor het doel [!DNL Braze]:
 
