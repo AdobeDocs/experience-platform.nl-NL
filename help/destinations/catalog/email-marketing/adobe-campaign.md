@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;adobe campagne;campagne
 title: Adobe Campaign-verbinding
 description: Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren.
 translation-type: tm+mt
-source-git-commit: b6e795d33b5590001a3270ea42995fdbad28dd88
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
@@ -19,45 +19,44 @@ Als u segmentgegevens naar Adobe Campaign wilt verzenden, moet u eerst [de beste
 
 ## Exporttype {#export-type}
 
-**Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in de stap Kenmerken  **[!UICONTROL selecteren]** van de workflow [ voor ](../../ui/activate-destinations.md#select-attributes)doelactivering.
+**Op profiel gebaseerd**  - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in de  **[!UICONTROL Select attributes]** stap van de workflow voor  [doelactivering](../../ui/activate-destinations.md#select-attributes).
 
 ## Doel {#connect-destination} verbinden
 
-Selecteer in **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** Adobe Campaign en selecteer vervolgens **[!UICONTROL Configureren]**.
+Selecteer in **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** Adobe Campaign en selecteer **[!UICONTROL Configure]**.
 
 >[!NOTE]
 >
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL knop Activeer]** op de doelkaart zien. Voor meer informatie over het verschil tussen [!UICONTROL Activate] en [!UICONTROL Configure], verwijs naar [Catalog](../../ui/destinations-workspace.md#catalog) sectie van de documentatie van de bestemmingswerkruimte.
+>Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen [!UICONTROL Activate] en [!UICONTROL Configure] de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
 
 ![Verbinding maken met Adobe Campaign](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
 
-Selecteer in de stap **[!UICONTROL Account]** van de Connect-doelworkflow het **[!UICONTROL Verbindingstype]** voor uw opslaglocatie. Voor Adobe Campaign kunt u kiezen tussen **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP met wachtwoord]**, **[!UICONTROL SFTP met SSH Key]** en **[!UICONTROL Azure Blob]**. De voorkeursmethode voor het verzenden van gegevens naar Adobe Campaign is [!DNL Amazon S3] of [!DNL Azure Blob]. Vul de informatie hieronder in, afhankelijk van uw verbindingstype, en selecteer dan **[!UICONTROL Connect]**.
-
+Selecteer **[!UICONTROL Connection type]** voor uw opslaglocatie in de stap **[!UICONTROL Account]** van de Connect-doelworkflow. Voor Adobe Campaign kunt u kiezen tussen **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]**, **[!UICONTROL SFTP with SSH Key]** en **[!UICONTROL Azure Blob]**. De voorkeursmethode voor het verzenden van gegevens naar Adobe Campaign is [!DNL Amazon S3] of [!DNL Azure Blob]. Vul de informatie hieronder in, afhankelijk van uw verbindingstype, dan uitgezocht **[!UICONTROL Connect]**.
 
 
 ![Wizard Campagne instellen](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
-- Voor **[!UICONTROL Amazon S3]** verbindingen, moet u uw Zeer belangrijke identiteitskaart van de Toegang en Geheime Sleutel van de Toegang verstrekken.
-- Voor **[!UICONTROL SFTP met Wachtwoord]** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Wachtwoord verstrekken.
-- Voor **[!UICONTROL SFTP met SSH Key]** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Sleutel van SSH verstrekken.
-- Voor **[!UICONTROL Azure Blob]**-verbindingen moet u een verbindingstekenreeks opgeven.
+- Voor **[!UICONTROL Amazon S3]** verbindingen, moet u uw Sleutel identiteitskaart van de Toegang en Geheime Sleutel van de Toegang verstrekken.
+- Voor **[!UICONTROL SFTP with Password]** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Wachtwoord verstrekken.
+- Voor **[!UICONTROL SFTP with SSH Key]** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Sleutel SSH verstrekken.
+- Voor **[!UICONTROL Azure Blob]** verbindingen, moet u een verbindingskoord verstrekken.
 
 U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling met PGP/GPG toe te voegen aan uw geëxporteerde bestanden onder de sectie **[!UICONTROL Key]**. Merk op dat deze openbare sleutel **must** als Base64 wordt geschreven gecodeerd koord.
 
 ![Campagnegegevens invullen](../../assets/catalog/email-marketing/adobe-campaign/account-info.png)
 
-Vul in **[!UICONTROL Accountverificatie]** de relevante informatie voor uw bestemming in, zoals hieronder wordt getoond:
-- **[!UICONTROL Naam]**: Kies een relevante naam voor de bestemming.
-- **[!UICONTROL Omschrijving]**: Voer een beschrijving in voor uw bestemming.
-- **[!UICONTROL Naam]** emmertje:  *Voor S3-verbindingen*. Ga de plaats van uw S3 emmer in waar [!DNL Platform] uw uitvoergegevens als CSV of lusje-afgebakende dossiers zal deponeren.
-- **[!UICONTROL Pad naar]** map: Geef het pad op uw opslaglocatie op waar uw exportgegevens als CSV- of tabgescheiden bestanden  [!DNL Platform] worden opgeslagen.
+Vul in **[!UICONTROL Account authentication]** de relevante informatie voor uw bestemming in, zoals hieronder wordt getoond:
+- **[!UICONTROL Name]**: Kies een relevante naam voor de bestemming.
+- **[!UICONTROL Description]**: Voer een beschrijving in voor uw bestemming.
+- **[!UICONTROL Bucket Name]**:  *Voor S3-verbindingen*. Ga de plaats van uw S3 emmer in waar [!DNL Platform] uw uitvoergegevens als CSV of lusje-afgebakende dossiers zal deponeren.
+- **[!UICONTROL Folder Path]**: Geef het pad op uw opslaglocatie op waar uw exportgegevens als CSV- of tabgescheiden bestanden  [!DNL Platform] worden opgeslagen.
 - **[!UICONTROL Container]**:  *Voor Blob-verbindingen*. De container die het blob-pad voor uw map bevat, bevindt zich in.
-- **[!UICONTROL Bestandsindeling]**:  **** CSVor  **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
-- **[!UICONTROL Handelingen]** voor marketing: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Beleid voor gegevensgebruik overzicht](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Raadpleeg ook [Adobe-gedefinieerde marketingacties](../../../data-governance/policies/overview.md#core-actions) in hetzelfde document.
+- **[!UICONTROL File Format]**:  **** CSVor  **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
+- **[!UICONTROL Marketing actions]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Beleid voor gegevensgebruik overzicht](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Raadpleeg ook [Adobe-gedefinieerde marketingacties](../../../data-governance/policies/overview.md#core-actions) in hetzelfde document.
 
 ![Basisinformatie over campagnes](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
-Selecteer **[!UICONTROL Doel maken]** nadat u de bovenstaande velden hebt ingevuld. Uw doel is nu verbonden en u kunt segmenten [activeren](../../ui/activate-destinations.md) aan de bestemming.
+Selecteer **[!UICONTROL Create destination]** nadat u de bovenstaande velden hebt ingevuld. Uw doel is nu verbonden en u kunt segmenten [activeren](../../ui/activate-destinations.md) aan de bestemming.
 
 ## Segmenten {#activate-segments} activeren
 
