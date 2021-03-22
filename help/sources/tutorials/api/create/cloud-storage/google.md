@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;populaire onderwerpen;Google Cloud Storage;google cloud-opslag;google;Google
 solution: Experience Platform
 title: Een Google Cloud Storage Source Connection maken met de Flow Service API
-topic: overview
+topic: ' - overzicht'
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google Cloud Storage-account met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
@@ -35,10 +35,10 @@ Als u [!DNL Flow Service] wilt laten verbinden met uw [!DNL Google Cloud Storage
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `accessKeyId` | De toegangs belangrijkste identiteitskaart voor uw [!DNL Google Cloud Storage] rekening. |
-| `secretAccessKey` | De geheime toegangssleutel voor uw [!DNL Google Cloud Storage] rekening. |
+| Toegangstoets-id | Een alfanumerieke tekenreeks van 61 tekens die wordt gebruikt om uw [!DNL Google Cloud Storage]-account te verifiëren voor Platform. |
+| Geheime toegangstoets | Een 40-karakter, basis-64-gecodeerde koord dat wordt gebruikt om uw [!DNL Google Cloud Storage] rekening aan Platform voor authentiek te verklaren. |
 
-Voor meer informatie over het aan de slag gaan, gaat u naar [dit Google Cloud-document](https://cloud.google.com/docs/authentication).
+Zie de handleiding [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) voor meer informatie over deze waarden. Voor stappen op hoe te om uw eigen toegangs zeer belangrijke identiteitskaart en geheime toegangssleutel te produceren, verwijs naar [[!DNL Google Cloud Storage] overzicht](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
 ### API-voorbeeldaanroepen lezen
 
