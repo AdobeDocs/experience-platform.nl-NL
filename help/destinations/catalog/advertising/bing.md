@@ -3,15 +3,17 @@ keywords: 'reclame; borden; '
 title: Microsoft Bing-verbinding
 description: Met de de verbindingsbestemming van de Bing van Microsoft, kunt u het opnieuw richten en publiek gerichte digitale campagnes over de Reclame van de Vertoning van Microsoft uitvoeren.
 translation-type: tm+mt
-source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 0%
+source-wordcount: '508'
+ht-degree: 1%
 
 ---
 
 
 # [!DNL Microsoft Bing] verbinding  {#bing-destination}
+
+## Overzicht {#overview}
 
 Met de bestemming [!DNL Microsoft Bing] kunt u profielgegevens naar [!DNL Microsoft Display Advertising] verzenden.
 
@@ -39,30 +41,30 @@ Als markator, wil ik segmenten kunnen gebruiken die van [!DNL Microsoft Advertis
 
 Wanneer het vormen van de bestemming, moet u de volgende informatie verstrekken:
 
-* [!UICONTROL Account-id]: Dit is uw  [!DNL Bing Ads CID]geheel getal.
+* [!UICONTROL Account ID]: Dit is uw  [!DNL Bing Ads CID]geheel getal.
 
 ## Verbinden met doel {#connect-destination}
 
-Selecteer **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** en selecteer [!DNL Microsoft Bing] en **[!UICONTROL Configureren]**.
+Selecteer [!DNL Microsoft Bing] in **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer **[!UICONTROL Configure]**.
 
 ![Bestemming Microsoft Bing configureren](../../assets/catalog/advertising/bing/configure.png)
 
 >[!NOTE]
 >
->Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL knop Activeer]** op de doelkaart zien. Voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]**, verwijs naar [Catalog](../../ui/destinations-workspace.md#catalog) sectie van de documentatie van de bestemmingswerkruimte.
+>Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
 >
 >![Microsoft Bing-doel activeren](../../assets/catalog/advertising/bing/activate.png)
 
-In [!UICONTROL Authentificatie] stap, moet u de details van de bestemmingsverbinding ingaan:
+In de stap [!UICONTROL Authentication] moet u de gegevens van de bestemmingsverbinding invoeren:
 
-* **[!UICONTROL Naam]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
-* **[!UICONTROL Omschrijving]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Account-id]**: Je  [!DNL Bing Ads CID].
-* **[!UICONTROL Handeling]** voor marketing: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
+* **[!UICONTROL Name]**: Een naam waarmee u deze bestemming in de toekomst zult erkennen.
+* **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
+* **[!UICONTROL Account ID]**: Uw [!DNL Bing Ads CID].
+* **[!UICONTROL Marketing action]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Gegevensbeheer in Adobe Experience Platform](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Zie [Overzicht van beleidsregels voor gegevensgebruik](../../../data-governance/policies/overview.md) voor informatie over de afzonderlijke door Adobe gedefinieerde marketingacties.
 
 ![Verificatie van Microsoft Bing-bestemming](../../assets/catalog/advertising/bing/authentication.png)
 
-Klik **[!UICONTROL Doel maken]**. Uw doel is nu gemaakt. U kunt [!UICONTROL Opslaan &amp; afsluiten] klikken als u segmenten later wilt activeren, of u kunt [!UICONTROL Volgende] klikken om de workflow voort te zetten en segmenten te selecteren om te activeren. In beide gevallen raadpleegt u de volgende sectie [Segmenten activeren](#activate-segments) voor de rest van de workflow.
+Klik op **[!UICONTROL Create destination]**. Uw doel is nu gemaakt. U kunt [!UICONTROL Save & Exit] klikken als u segmenten later wilt activeren, of u kunt [!UICONTROL Next] klikken om de werkstroom voort te zetten en segmenten te selecteren om te activeren. In beide gevallen raadpleegt u de volgende sectie [Segmenten activeren](#activate-segments) voor de rest van de workflow.
 
 ## Segmenten {#activate-segments} activeren
 
