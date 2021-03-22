@@ -3,7 +3,7 @@ keywords: Dubbelklik op Bodmanager;Dubbelklik op Bodmanager;Dubbelklik;Weergave 
 title: Google Display en Video 360-verbinding
 description: Display & Video 360, voorheen bekend als DoubleClick Bodmanager, is een hulpmiddel dat wordt gebruikt om heroriënterende en doelgerichte digitale campagnes uit te voeren over de inventarisbronnen voor weergave, video en mobiele apparaten.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Display & Video 360], voorheen bekend onder de naam  [!DNL DoubleClick Bid Manager], is een hulpmiddel dat wordt gebruikt voor het uitvoeren van herrichtings- en doelgerichte digitale campagnes in verschillende bronnen voor weergave, video en mobiele inventaris.
 
-## Doelspecificaties
+## Doelspecificaties {#specifics}
 
 Neem nota van de volgende details die voor [!DNL Google Display & Video 360] bestemmingen specifiek zijn:
 
@@ -26,7 +26,7 @@ Neem nota van de volgende details die voor [!DNL Google Display & Video 360] bes
 >
 >Als u uw eerste bestemming met Google Display &amp; Video 360 wilt maken en in het verleden (met Adobe Audience Manager of andere toepassingen) de [ID-synchronisatiefunctie](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) niet hebt ingeschakeld in de Experience Cloud ID-service, neemt u contact op met Adobe Consulting of de klantenservice om ID-syncs in te schakelen. Als u eerder Google-integraties in Audience Manager had ingesteld, worden de id-synchronisaties die u hebt ingesteld overgedragen naar Platform.
 
-### Ondersteunde identiteiten {#supported-identities}
+## Ondersteunde identiteiten {#supported-identities}
 
 [!DNL Google Ad Manager] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven.
 
@@ -40,7 +40,7 @@ Neem nota van de volgende details die voor [!DNL Google Display & Video 360] bes
 | GEMAAKT | Microsoft Advertising ID. Deze id identificeert apparaten waarop Windows 10 wordt uitgevoerd op unieke wijze. |  |
 | Amazon Fire TV ID | Deze id is uniek voor Amazon Fire TV&#39;s. |  |
 
-### Exporttype {#export-type}
+## Exporttype {#export-type}
 
 **Segmentexport** : u exporteert alle leden van een segment (publiek) naar de Google-bestemming.
 
