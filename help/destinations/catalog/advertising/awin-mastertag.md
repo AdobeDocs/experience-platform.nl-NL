@@ -3,15 +3,17 @@ keywords: Awin Advertiser mastertag extension;mastertag tag;Awin;awin;AWIN
 title: Awin Advertiser Mastertag-extensie
 description: De extensie Awin Advertiser Mastertag is een advertentiebestemming in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op de Uitwisseling van Adobe.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Awin Advertiser Mastertag] extension  {#awin-mastertag-extension}
+
+## Overzicht {#overview}
 
 De [!DNL MasterTag] is een JavaScript-bibliotheek met alle functies die vereist zijn voor de Awin-trackingsoplossing en moet onvoorwaardelijk worden toegevoegd aan elke pagina op de site, inclusief de bevestigingspagina, maar exclusief pagina&#39;s die betalingsgegevens weergeven of verwerken.
 
@@ -25,19 +27,19 @@ Dit doel is een extensie [!DNL Experience Platform Launch]. Voor meer informatie
 
 Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
 
-Als u deze extensie wilt gebruiken, hebt u toegang nodig tot [!DNL Adobe Experience Platform Launch]. [!DNL Platform Launch] wordt aangeboden aan Adobe Experience Cloud-klanten als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang te krijgen tot [!DNL Platform Launch] en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te geven zodat u extensies kunt installeren.
+Als u deze extensie wilt gebruiken, hebt u toegang nodig tot [!DNL Adobe Experience Platform Launch]. [!DNL Platform Launch] wordt aangeboden aan Adobe Experience Cloud-klanten als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang te krijgen tot [!DNL Platform Launch] en vraag hen om u de **[!UICONTROL manage_properties]** toestemming te verlenen zodat u extensies kunt installeren.
 
 ## Extensie {#install-extension} installeren
 
 De extensie [!DNL Awin Advertiser Mastertag] installeren:
 
-Ga in [Platform interface](http://platform.adobe.com/), naar **[!UICONTROL Doelen]** > **[!UICONTROL Catalogus]**.
+Ga in [Platform interface](http://platform.adobe.com/) naar **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
-Klik op de bestemming om het te benadrukken, dan uitgezocht **[!UICONTROL vorm]** in het juiste spoor. Als de **[!UICONTROL Configure]** controle uit grijs is, mist u **[!UICONTROL manage_properties]** toestemming. Zie [Eerste vereisten](#prerequisites).
+Klik op de bestemming om deze te markeren en selecteer **[!UICONTROL Configure]** in de rechtertrack. Als het **[!UICONTROL Configure]** besturingselement grijs is, ontbreekt u de **[!UICONTROL manage_properties]** toestemming. Zie [Eerste vereisten](#prerequisites).
 
-Selecteer in het venster **[!UICONTROL Beschikbare Platform starten-eigenschap]** de eigenschap [!DNL Platform Launch] waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken in [!DNL Platform Launch]. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) van de [!DNL Launch]-documentatie.
+Selecteer in het venster **[!UICONTROL Select available Platform Launch property]** de eigenschap [!DNL Platform Launch] waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken in [!DNL Platform Launch]. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Meer informatie over eigenschappen vindt u in de sectie [Eigenschappen op de pagina](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) van de [!DNL Launch]-documentatie.
 
 Met de workflow gaat u naar [!DNL Platform Launch] om de installatie te voltooien.
 
