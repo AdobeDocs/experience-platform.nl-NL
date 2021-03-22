@@ -3,15 +3,17 @@ keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
 title: (Beta) Azure Event Hubs-verbinding
 description: Creeer een uitgaande verbinding in real time aan uw opslag van de Hubs van de Azure Gebeurtenis aan stroomgegevens van Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
 
 
 # (Bèta) [!DNL Azure Event Hubs] verbinding
+
+## Overzicht {#overview}
 
 >[!IMPORTANT]
 >
