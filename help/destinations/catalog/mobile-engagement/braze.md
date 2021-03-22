@@ -3,10 +3,10 @@ keywords: mobiel; schil; berichten;
 title: Braze verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 1%
+source-wordcount: '900'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +37,7 @@ Let op de volgende details die specifiek zijn voor het doel [!DNL Braze]:
 
 Als markator, wil ik gebruikers in een mobiele betrokkenheidsbestemming richten, met segmenten die in [!DNL Adobe Experience Platform] worden gebouwd. Daarnaast wil ik persoonlijke ervaringen aan hen aanbieden op basis van kenmerken uit hun [!DNL Adobe Experience Platform]-profielen, zodra segmenten en profielen worden bijgewerkt in [!DNL Adobe Experience Platform].
 
-### Ondersteunde identiteiten {#supported-identities}
+## Ondersteunde identiteiten {#supported-identities}
 
 [!DNL Google Ad Manager] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven.
 
@@ -49,7 +49,6 @@ Als markator, wil ik gebruikers in een mobiele betrokkenheidsbestemming richten,
 
 **[!DNL Profile-based]** - u exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam) en/of identiteiten, afhankelijk van uw veldtoewijzing.
 [!DNL Adobe Experience Platform] segmenten worden geëxporteerd naar  [!DNL Braze] onder het  `AdobeExperiencePlatformSegments` kenmerk.
-
 
 ## Verbinden met doel {#connect-destination}
 
@@ -128,7 +127,7 @@ Nu wordt de veldtoewijzing weergegeven in de lijst.
 
 Herhaal de vorige stappen om meer toewijzingen toe te voegen.
 
-### Voorbeeld {#mapping-example}
+## Voorbeeld van toewijzing {#mapping-example}
 
 Stel dat uw XDM-profielschema en uw [!DNL Braze]-instantie de volgende kenmerken en identiteiten bevatten:
 
