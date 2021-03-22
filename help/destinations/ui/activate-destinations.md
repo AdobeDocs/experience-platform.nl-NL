@@ -6,9 +6,9 @@ seo-title: Profielen en segmenten naar een doel activeren
 description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
 translation-type: tm+mt
-source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '2151'
+source-wordcount: '2070'
 ht-degree: 0%
 
 ---
@@ -26,27 +26,27 @@ Om gegevens aan bestemmingen te activeren, moet u met succes [een bestemming](./
 
 De stappen in de activeringswerkstroom variëren enigszins per doeltype. De volledige werkstroom voor alle bestemmingstypes wordt hieronder geschetst.
 
-### Selecteer welk doel om gegevens te activeren naar {#select-destination}
+## Selecteer welk doel om gegevens te activeren naar {#select-destination}
 
 Van toepassing op: Alle bestemmingen
 
-Navigeer in de Adobe Experience Platform-gebruikersinterface naar **[!UICONTROL Doelen]** > **[!UICONTROL Bladeren]** en klik op de knop **[!UICONTROL Activeren]** die hoort bij het doel waarvoor u de segmenten wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
+Navigeer in de Adobe Experience Platform-gebruikersinterface naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en klik op de **[!UICONTROL Activate]**-knop die correspondeert met het doel waar u de segmenten wilt activeren, zoals in de onderstaande afbeelding wordt getoond.
 
 ![activeren naar doel](../assets/ui/activate-destinations/browse-tab-activate.png)
 
 Voer de stappen in de volgende sectie uit om de segmenten te selecteren die u wilt activeren.
 
-### [!UICONTROL Segmentsstap ] selecteren  {#select-segments}
+## [!UICONTROL Select Segments] stap  {#select-segments}
 
 Van toepassing op: Alle bestemmingen
 
 ![Stap selecteren voor segmenten](../assets/ui/activate-destinations/select-segments-icon.png)
 
-In **[!UICONTROL activeer bestemming]** werkschema, op **[!UICONTROL Selecteer Segmenten]** pagina, selecteer één of meerdere segmenten om aan de bestemming te activeren. Selecteer **[!UICONTROL Volgende]** om naar de volgende stap te gaan.
+Selecteer in de **[!UICONTROL Activate destination]**-workflow op de **[!UICONTROL Select Segments]**-pagina een of meer segmenten die u wilt activeren op de bestemming. Selecteer **[!UICONTROL Next]** om naar de volgende stap te gaan.
 
 ![segmenten-naar-bestemming](../assets/ui/activate-destinations/email-select-segments.png)
 
-### [!UICONTROL Naamtoewijzing ] stap  {#identity-mapping}
+## [!UICONTROL Identity mapping] stap  {#identity-mapping}
 
 Van toepassing op: sociale bestemmingen en Google Customer Match-advertentiebestemming
 
@@ -54,7 +54,7 @@ Van toepassing op: sociale bestemmingen en Google Customer Match-advertentiebest
 
 Voor sociale bestemmingen, moet u bronattributen of identiteitsnamespaces selecteren om als doelidentiteiten in de bestemming in kaart te brengen.
 
-#### Voorbeeld: publieksgegevens activeren in [!DNL Facebook Custom Audience] {#example-facebook}
+## Voorbeeld: publieksgegevens activeren in [!DNL Facebook Custom Audience] {#example-facebook}
 
 Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het activeren van publieksgegevens in [!DNL Facebook].
 
@@ -79,12 +79,12 @@ Doelvelden selecteren:
 
 Gegevens uit naamruimten zonder hashing worden na activering automatisch gehasht door [!DNL Platform].
 
-Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld niet-gehashte kenmerken bevat, schakelt u de optie **[!UICONTROL Transformatie toepassen]** in om [!DNL Platform] automatisch te laten hashen bij de activering.
+Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering.
 ![Transformatie identiteitstoewijzing](../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
  
 
-#### Voorbeeld: publieksgegevens activeren in [!DNL Google Customer Match] {#example-gcm}
+## Voorbeeld: publieksgegevens activeren in [!DNL Google Customer Match] {#example-gcm}
 
 Dit is een voorbeeld van correcte identiteitstoewijzing wanneer het activeren van publieksgegevens in [!DNL Google Customer Match].
 
@@ -109,32 +109,16 @@ Doelvelden selecteren:
 
 Gegevens uit naamruimten zonder hashing worden na activering automatisch gehasht door [!DNL Platform].
 
-Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld niet-gehashte kenmerken bevat, schakelt u de optie **[!UICONTROL Transformatie toepassen]** in om [!DNL Platform] automatisch te laten hashen bij de activering.
+Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering.
 ![Transformatie identiteitstoewijzing](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
 
-<!-- 
-`IDFA` IDs will be mapped to:
-
-* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
-
-Select `GAID` as target identity if your data consists of Android device IDs. `GAID` IDs will be mapped to:
-
-* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
-
-If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to map it to the following target identities:
-
-* [EXTERN_ID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#external_identifiers) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [USER_ID](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#userid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md). -->
-
-### **** Configurestep  {#configure}
+## **[!UICONTROL Configure]** stap  {#configure}
 
 Van toepassing op: E-mailmarketingbestemmingen en cloudopslagbestemmingen
 
 ![Stap configureren](../assets/ui/activate-destinations/configure-icon.png)
 
-[!DNL Adobe Experience Platform] Hiermee exporteert u gegevens voor e-mailmarketing en cloudopslagbestemmingen in de vorm van  [!DNL CSV] bestanden. In **[!UICONTROL vorm]** stap, kunt u het programma en de dossiernamen voor elk segment vormen u uitvoert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
+[!DNL Adobe Experience Platform] Hiermee exporteert u gegevens voor e-mailmarketing en cloudopslagbestemmingen in de vorm van  [!DNL CSV] bestanden. In de stap **[!UICONTROL Configure]**, kunt u het programma en de dossiernamen voor elk segment vormen u uitvoert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
 
 >[!IMPORTANT]
 > 
@@ -143,15 +127,15 @@ Van toepassing op: E-mailmarketingbestemmingen en cloudopslagbestemmingen
 >Namen van gesplitste bestanden worden toegevoegd met een getal dat aangeeft dat het bestand deel uitmaakt van een grotere exportbewerking, als zodanig: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 
-Om een programma voor het segment toe te voegen, uitgezocht **[!UICONTROL creeer programma]**.
+Selecteer **[!UICONTROL Create schedule]** om een schema voor het segment toe te voegen.
 
 ![](../assets/ui/activate-destinations/configure-destination-schedule.png)
 
 Er wordt een dialoogvenster weergegeven met opties voor het maken van het segmentschema.
 
 * **Bestand exporteren**: U kunt volledige of incrementele bestanden exporteren. Wanneer u een volledig bestand exporteert, wordt een volledige momentopname gepubliceerd van alle profielen die voor dat segment in aanmerking komen. Wanneer u een incrementeel bestand exporteert, wordt de delta gepubliceerd van profielen die voor dat segment in aanmerking komen sinds de laatste exportbewerking.
-* **Frequentie**: Als  **[!UICONTROL Volledige]** bestanden exporteren is geselecteerd, kunt u de optie  **** Eenmaal of  **[!UICONTROL Dagelijks]** exporteren kiezen. Als **[!UICONTROL Incrementele bestanden exporteren]** is geselecteerd, kunt u alleen **[!UICONTROL Dagelijks]** exporteren. Als u een bestand **[!UICONTROL Once]** exporteert, wordt het bestand één keer geëxporteerd. Als u een bestand **[!UICONTROL Dagelijks]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum om 12:00 uur UTC (7:00 uur EST) als er volledige bestanden zijn geselecteerd en 12:00 uur UTC (7:00 uur EST) als er incrementele bestanden zijn geselecteerd.
-* **Datum**: Als  **** Zodra is geselecteerd, kunt u de datum voor de eenmalige export selecteren. Als **[!UICONTROL Dagelijks]** wordt geselecteerd, kunt u de begin en einddata voor de uitvoer selecteren.
+* **Frequentie**: Als deze optie  **[!UICONTROL Export full files]** is geselecteerd, kunt u exporteren  **[!UICONTROL Once]** of  **[!UICONTROL Daily]** gebruiken. Als **[!UICONTROL Export incremental files]** wordt geselecteerd, hebt u slechts de optie om **[!UICONTROL Daily]** uit te voeren. Wanneer u een bestand **[!UICONTROL Once]** exporteert, wordt het bestand één keer geëxporteerd. Wanneer u een bestand **[!UICONTROL Daily]** exporteert, wordt het bestand elke dag geëxporteerd van de begindatum tot de einddatum om 12:00 uur UTC (7:00 uur EST) wanneer volledige bestanden zijn geselecteerd en 12:00 uur UTC (7:00 uur EST) wanneer incrementele bestanden zijn geselecteerd.
+* **Datum**: Als deze optie  **[!UICONTROL Once]** is geselecteerd, kunt u de datum voor de eenmalige export selecteren. Als **[!UICONTROL Daily]** wordt geselecteerd, kunt u de begin en einddata voor de uitvoer selecteren.
 
 ![](../assets/ui/activate-destinations/export-full-file.png)
 
@@ -163,27 +147,27 @@ Selecteer het potloodpictogram om een modaal venster te openen en de bestandsnam
 
 In de bestandsnaameditor kunt u verschillende componenten selecteren om aan de bestandsnaam toe te voegen. De doelnaam en segment-id kunnen niet uit bestandsnamen worden verwijderd. Naast deze, kunt u het volgende toevoegen:
 
-* **[!UICONTROL Segmentnaam]**: U kunt de segmentnaam aan de bestandsnaam toevoegen.
-* **[!UICONTROL Datum en tijd]**: U kunt kiezen tussen het toevoegen van een  `MMDDYYYY_HHMMSS` indeling of een Unix 10-cijferige tijdstempel van het tijdstip waarop de bestanden worden gegenereerd. Kies een van deze opties als u voor de bestanden een dynamische bestandsnaam wilt genereren bij elke incrementele exportbewerking.
-* **[!UICONTROL Aangepaste tekst]**: Voeg aangepaste tekst toe aan de bestandsnamen.
+* **[!UICONTROL Segment name]**: U kunt de segmentnaam aan de bestandsnaam toevoegen.
+* **[!UICONTROL Date and time]**: U kunt kiezen tussen het toevoegen van een  `MMDDYYYY_HHMMSS` indeling of een Unix 10-cijferige tijdstempel van het tijdstip waarop de bestanden worden gegenereerd. Kies een van deze opties als u voor de bestanden een dynamische bestandsnaam wilt genereren bij elke incrementele exportbewerking.
+* **[!UICONTROL Custom text]**: Voeg aangepaste tekst toe aan de bestandsnamen.
 
-Selecteer **[!UICONTROL Wijzigingen toepassen]** om uw selectie te bevestigen.
+Selecteer **[!UICONTROL Apply changes]** om uw selectie te bevestigen.
 
 >[!IMPORTANT]
 > 
->Als u de **[!UICONTROL Datum en Tijd]** component niet selecteert, zullen de dossiernamen statisch zijn en het nieuwe uitgevoerde dossier zal het vorige dossier in uw opslagplaats met elke uitvoer beschrijven. Als u een terugkerende importtaak uitvoert vanaf een opslaglocatie naar een e-mailmarketingplatform, is dit de aanbevolen optie.
+>Als u de component **[!UICONTROL Date and Time]** niet selecteert, zijn de bestandsnamen statisch en overschrijft het nieuwe geëxporteerde bestand het vorige bestand op uw opslaglocatie met elke exportbewerking. Als u een terugkerende importtaak uitvoert vanaf een opslaglocatie naar een e-mailmarketingplatform, is dit de aanbevolen optie.
 
 ![Bestandsnaamopties bewerken](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
 
-Nadat u alle segmenten hebt geconfigureerd, selecteert u **[!UICONTROL Volgende]** om door te gaan.
+Nadat u alle segmenten hebt geconfigureerd, selecteert u **[!UICONTROL Next]** om door te gaan.
 
-### **[!UICONTROL Segment]** planning  {#segment-schedule}
+## **[!UICONTROL Segment schedule]** stap  {#segment-schedule}
 
 Van toepassing op: reclamebestemmingen, sociale bestemmingen
 
 ![stap voor segmentplanning](../assets/ui/activate-destinations/segment-schedule-icon.png)
 
-Op **[!UICONTROL Segmentprogramma]** pagina, kunt u de begindatum voor het verzenden van gegevens naar de bestemming, en de frequentie plaatsen om gegevens naar de bestemming te verzenden.
+Op **[!UICONTROL Segment schedule]** pagina, kunt u de begindatum voor het verzenden van gegevens naar de bestemming, en de frequentie plaatsen om gegevens naar de bestemming te verzenden.
 
 >[!IMPORTANT]
 >
@@ -197,29 +181,29 @@ Op **[!UICONTROL Segmentprogramma]** pagina, kunt u de begindatum voor het verze
 
 ![app-id invoeren](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-### **[!UICONTROL Stap]** plannen  {#scheduling}
+## **[!UICONTROL Scheduling]** stap  {#scheduling}
 
 Van toepassing op: e-mailmarketingdoelen en cloudopslagdoelen
 
 ![stap voor segmentplanning](../assets/ui/activate-destinations/scheduling-icon.png)
 
-Op **[!UICONTROL Plannend]** pagina, kunt u de begindatum voor het verzenden van gegevens naar de bestemming evenals de frequentie zien om gegevens naar de bestemming te verzenden. Deze waarden kunnen niet worden bewerkt.
+Op de **[!UICONTROL Scheduling]** pagina, kunt u de begindatum voor het verzenden van gegevens naar de bestemming evenals de frequentie zien om gegevens naar de bestemming te verzenden. Deze waarden kunnen niet worden bewerkt.
 
-### **[!UICONTROL Selecteer]** kenmerkstap  {#select-attributes}
+## **[!UICONTROL Select attributes]** stap  {#select-attributes}
 
 Van toepassing op: e-mailmarketingdoelen en cloudopslagdoelen
 
 ![stap Kenmerken selecteren](../assets/ui/activate-destinations/select-attributes-icon.png)
 
-Selecteer **[!UICONTROL Nieuw veld toevoegen]** op de pagina **[!UICONTROL Kenmerken selecteren]** en kies de kenmerken die u naar het doel wilt verzenden.
+Selecteer **[!UICONTROL Select attributes]** op de pagina en kies de kenmerken die u naar de bestemming wilt verzenden.**[!UICONTROL Add new field]**
 
 >[!NOTE]
 >
 > Adobe Experience Platform vult uw selectie voor met vier aanbevolen, veelgebruikte kenmerken uit uw schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 Het exporteren van bestanden kan op de volgende manieren variëren, afhankelijk van het feit of `segmentMembership.status` is geselecteerd:
-* Als het `segmentMembership.status` gebied wordt geselecteerd, omvatten de uitgevoerde dossiers **[!UICONTROL Actieve]** leden in de aanvankelijke volledige momentopname en **[!UICONTROL Actieve]** en **[!UICONTROL Verlopen]** leden in verdere stijgende uitvoer.
-* Als het `segmentMembership.status` gebied niet wordt geselecteerd, omvatten de uitgevoerde dossiers slechts **[!UICONTROL Actieve]** leden in de aanvankelijke volledige momentopname en in verdere stijgende uitvoer.
+* Als het veld `segmentMembership.status` is geselecteerd, bevatten geëxporteerde bestanden **[!UICONTROL Active]** leden in de eerste volledige momentopname en **[!UICONTROL Active]** en **[!UICONTROL Expired]** leden in volgende incrementele exportbewerkingen.
+* Als het veld `segmentMembership.status` niet is geselecteerd, nemen geëxporteerde bestanden alleen **[!UICONTROL Active]** leden op in de eerste volledige momentopname en in volgende incrementele exportbewerkingen.
 
 ![aanbevolen kenmerken](../assets/ui/activate-destinations/mark-mandatory.png)
 
@@ -237,13 +221,13 @@ Men adviseert dat één van de attributen een [unieke herkenningsteken](../../de
 > 
 Bijvoorbeeld, als het gebied `person.name.firstName` bepaalde etiketten van het gegevensgebruik heeft die met de marketing van de bestemming actie in conflict brengen, zou u een schending van het beleid van het gegevensgebruik in de overzichtsstap worden getoond. Zie [Gegevensbeheer in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations) voor meer informatie.
 
-### **** Revisiestap  {#review}
+## **[!UICONTROL Review]** stap  {#review}
 
 Van toepassing op: alle bestemmingen
 
 ![beoordelingsstap](../assets/ui/activate-destinations/review-icon.png)
 
-Op de **[!UICONTROL pagina van het Overzicht]**, kunt u een samenvatting van uw selectie zien. Selecteer **[!UICONTROL Annuleren]** om de stroom te verbreken, **[!UICONTROL Terug]** om uw instellingen te wijzigen of **[!UICONTROL Voltooien]** om uw selectie te bevestigen en gegevens naar de bestemming te verzenden.
+Op de **[!UICONTROL Review]** pagina, kunt u een samenvatting van uw selectie zien. Selecteer **[!UICONTROL Cancel]** om de stroom te verbreken, **[!UICONTROL Back]** om uw montages te wijzigen, of **[!UICONTROL Finish]** om uw selectie te bevestigen en te beginnen gegevens naar de bestemming te verzenden.
 
 >[!IMPORTANT]
 >
@@ -251,7 +235,7 @@ Op de **[!UICONTROL pagina van het Overzicht]**, kunt u een samenvatting van uw 
 
 ![schending van gegevensbeleid](../assets/common/data-policy-violation.png)
 
-Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Voltooien]** om uw selectie te bevestigen en gegevens naar de bestemming te verzenden.
+Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Finish]** om uw selectie te bevestigen en gegevens naar de bestemming te verzenden.
 
 ![selectie bevestigen](../assets/ui/activate-destinations/confirm-selection.png)
 
@@ -259,8 +243,8 @@ Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Vo
 
 Voer de onderstaande stappen uit om bestaande activeringsstromen in Adobe Experience Platform te bewerken:
 
-1. Selecteer **[!UICONTROL Doelen]** in de linkernavigatiebalk en klik vervolgens op het tabblad **[!UICONTROL Bladeren]** en klik op de doelnaam.
-2. Selecteer **[!UICONTROL Activering bewerken]** in de rechtertrack om te wijzigen welke segmenten naar de bestemming moeten worden verzonden.
+1. Selecteer **[!UICONTROL Destinations]** in de linkernavigatiebar, dan klik **[!UICONTROL Browse]** tabel, en klik de bestemmingsnaam.
+2. Selecteer **[!UICONTROL Edit activation]** in het juiste spoor om te veranderen welke segmenten om naar de bestemming te verzenden.
 
 ## Controleren of segmentactivering is gelukt {#verify-activation}
 
@@ -281,13 +265,13 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 De aanwezigheid van deze bestanden op de opslaglocatie bevestigt dat de activering is gelukt. Als u wilt weten hoe de geëxporteerde bestanden zijn gestructureerd, kunt u [een voorbeeld-CSV-bestand](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv) downloaden. Dit voorbeeldbestand bevat de profielkenmerken `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear` en `personalEmail.address`.
 
-### Reclamebestemmingen
+## Reclamebestemmingen
 
 Controleer je account in de advertentiebestemming waarnaar je gegevens activeert. Als de activering is gelukt, worden de doelgroepen in uw advertentieplatform ingevuld.
 
-### Sociale netwerkbestemmingen
+## Sociale netwerkbestemmingen
 
-Voor [!DNL Facebook] betekent een geslaagde activering dat een [!DNL Facebook] aangepast publiek programmatically in [[!UICONTROL Facebook Advertentiebeheer]](https://www.facebook.com/adsmanager/manage/) zou worden gecreeerd. Het lidmaatschap van een segment in het publiek zou worden toegevoegd en verwijderd aangezien de gebruikers voor de geactiveerde segmenten worden gekwalificeerd of worden uitgesloten.
+Voor [!DNL Facebook], betekent een succesvolle activering dat een [!DNL Facebook] douanepubliek programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/) zou worden gecreeerd. Het lidmaatschap van een segment in het publiek zou worden toegevoegd en verwijderd aangezien de gebruikers voor de geactiveerde segmenten worden gekwalificeerd of worden uitgesloten.
 
 >[!TIP]
 >
@@ -297,6 +281,6 @@ Voor [!DNL Facebook] betekent een geslaagde activering dat een [!DNL Facebook] a
 
 Volg onderstaande stappen om een bestaande activeringsstroom uit te schakelen:
 
-1. Selecteer **[!UICONTROL Doelen]** in de linkernavigatiebalk en klik vervolgens op het tabblad **[!UICONTROL Bladeren]** en klik op de doelnaam.
-2. Klik op het besturingselement **[!UICONTROL Ingeschakeld]** in de rechterrail om de activeringsstatus te wijzigen.
+1. Selecteer **[!UICONTROL Destinations]** in de linkernavigatiebar, dan klik **[!UICONTROL Browse]** tabel, en klik de bestemmingsnaam.
+2. Klik op het besturingselement **[!UICONTROL Enabled]** in de rechterrail om de activeringsstatus te wijzigen.
 3. Selecteer **Bevestigen** in het venster **Gegevensstroomstatus bijwerken** om de activeringsstroom uit te schakelen.
