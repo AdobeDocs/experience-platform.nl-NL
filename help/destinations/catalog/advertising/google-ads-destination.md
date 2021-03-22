@@ -3,7 +3,7 @@ keywords: Google-advertenties;Google-advertenties;Google AdWords;Google Adwords
 title: Google Ads-verbinding
 description: Google Ads, voorheen bekend als Google AdWords, is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische beeldschermen, YouTube-video's en mobiele displays in de app.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Google Ads], voorheen bekend als  [!DNL Google AdWords], is een onlinereclame die bedrijven in staat stelt om per klik reclame te betalen voor zoekopdrachten op tekstbasis, grafische weergaven,  [!DNL YouTube] video&#39;s en mobiele weergaven in de app.
 
-## Doelspecificaties
+## Doelspecificaties {#specifics}
 
 Neem nota van de volgende details die voor [!DNL Google Ads] bestemmingen specifiek zijn:
 
@@ -26,7 +26,7 @@ Neem nota van de volgende details die voor [!DNL Google Ads] bestemmingen specif
 >
 >Als u uw eerste bestemming met [!DNL Google Ads] wilt maken en de [ID-synchronisatiefunctionaliteit](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in het verleden (met Audience Manager of andere toepassingen) niet hebt ingeschakeld, neemt u contact op met Adobe Consulting of de klantenservice om id-syncs in te schakelen. Als u eerder Google-integraties in Audience Manager had ingesteld, worden de id-synchronisaties die u hebt ingesteld overgedragen naar Platform.
 
-### Ondersteunde identiteiten {#supported-identities}
+## Ondersteunde identiteiten {#supported-identities}
 
 [!DNL Google Ad Manager] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven.
 
@@ -40,7 +40,7 @@ Neem nota van de volgende details die voor [!DNL Google Ads] bestemmingen specif
 | GEMAAKT | Microsoft Advertising ID. Deze id identificeert apparaten waarop Windows 10 wordt uitgevoerd op unieke wijze. |  |
 | Amazon Fire TV ID | Deze id is uniek voor Amazon Fire TV&#39;s. |  |
 
-### Exporttype {#export-type}
+## Exporttype {#export-type}
 
 **Segmentexport** : u exporteert alle leden van een segment (publiek) naar de Google-bestemming.
 
