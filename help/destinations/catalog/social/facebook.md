@@ -3,7 +3,7 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 2%
@@ -74,7 +74,7 @@ Voordat u publiekssegmenten kunt verzenden naar [!DNL Facebook], moet u controle
 
 Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, moet u aan de desbetreffende vereisten voldoen.
 
-### Vereisten voor hashing voor telefoonnummers {#phone-number-hashing-requirements}
+## Vereisten voor hashing voor telefoonnummers {#phone-number-hashing-requirements}
 
 Er zijn twee methodes om telefoonaantallen in [!DNL Facebook] te activeren:
 
@@ -86,7 +86,7 @@ Er zijn twee methodes om telefoonaantallen in [!DNL Facebook] te activeren:
 >Telefoonnummers die worden ingevoerd in de naamruimte `Phone` kunnen niet worden geactiveerd in [!DNL Facebook].
 
 
-### Vereisten voor e-mailhashing {#email-hashing-requirements}
+## Vereisten voor e-mailhashing {#email-hashing-requirements}
 
 U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen, of e-mailadressen gebruiken duidelijk in Experience Platform, en hebben [!DNL Platform] hen op activering hakt.
 
@@ -109,7 +109,7 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 
 ![Transformatie identiteitstoewijzing](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-### Aangepaste naamruimten gebruiken {#custom-namespaces}
+## Aangepaste naamruimten gebruiken {#custom-namespaces}
 
 Voordat u de naamruimte `Extern_ID` kunt gebruiken om gegevens te verzenden naar [!DNL Facebook], moet u uw eigen id&#39;s synchroniseren met [!DNL Facebook Pixel]. Zie de [officiële documentatie](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) voor gedetailleerde informatie.
 
