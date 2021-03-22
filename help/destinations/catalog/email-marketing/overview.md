@@ -4,9 +4,9 @@ title: Overzicht van e-mailmarketingdoelen
 type: Tutorial
 description: Met e-mailserviceproviders (ESP's) kunt u uw marketingactiviteiten voor e-mail beheren, bijvoorbeeld voor het verzenden van promotionele e-mailcampagnes.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,11 @@ In de verbindingsbestemmingsstroom, die in de sectie hieronder wordt beschreven,
 
 ## Doel {#connect-destination} configureren
 
-Selecteer in **[!UICONTROL Verbindingen]** > **[!UICONTROL Doelen]** de e-mailmarketingbestemming waarmee u verbinding wilt maken en selecteer **[!UICONTROL Configureren]**.
+Selecteer in **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** de e-mailmarketingbestemming waarmee u verbinding wilt maken en selecteer **[!UICONTROL Configure]**.
 
 ![Verbinden met doel](../../assets/catalog/email-marketing/overview/connect-email-marketing.png)
 
-Als u in de stap **[!UICONTROL Verificatie]** eerder een verbinding met uw e-mailmarketingbestemming had ingesteld, selecteert u **[!UICONTROL Bestaande account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL Nieuwe account]** selecteren om een nieuwe verbinding met uw marketingbestemming voor e-mail in te stellen. In **[!UICONTROL het type van Verbinding]** selecteerde, kunt u tussen Amazon S3, SFTP met Wachtwoord, of SFTP met de Sleutel van SSH selecteren. Vul de informatie hieronder in, afhankelijk van uw verbindingstype, en selecteer dan **[!UICONTROL Connect]**.
+Als u in de stap **[!UICONTROL Authentication]** eerder een verbinding met uw e-mailmarketingbestemming had ingesteld, selecteert u **[!UICONTROL Existing Account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL New Account]** selecteren om een nieuwe verbinding met uw e-mailmarketingbestemming in te stellen. In **[!UICONTROL Connection type]** selecteur, kunt u tussen Amazon S3, SFTP met Wachtwoord, of SFTP met de Sleutel van SSH selecteren. Vul de informatie hieronder in, afhankelijk van uw verbindingstype, dan uitgezocht **[!UICONTROL Connect]**.
 
 - Voor **S3 verbindingen**, moet u uw Sleutelidentiteitskaart van de Toegang van Amazon en Geheime Sleutel van de Toegang verstrekken.
 - Voor **SFTP met Wachtwoord** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Wachtwoord voor uw server SFTP verstrekken.
@@ -46,7 +46,7 @@ Ook in deze stap kunt u elke marketingactie selecteren die op deze bestemming mo
 
 ## Selecteer welke segmentleden u wilt opnemen in uw doelexport {#select-segments}
 
-Selecteer op de pagina **[!UICONTROL Segmenten selecteren]** welke segmenten naar de bestemming moeten worden verzonden. Meer informatie over de velden in de onderstaande secties vindt u.
+Selecteer op de pagina **[!UICONTROL Select Segments]** welke segmenten naar het doel moeten worden verzonden. Meer informatie over de velden in de onderstaande secties vindt u.
 
 ![Segmenten selecteren](../../assets/common/email-select-segments.png)
 
@@ -62,7 +62,7 @@ In deze stap selecteert u welke velden u wilt exporteren naar marketingdoelen pe
 
 Raadpleeg voor meer informatie over deze stap de stap [Kenmerken selecteren](../../ui/activate-destinations.md#select-attributes) in de zelfstudie voor het activeren van doelen.
 
-### Identiteit {#identity}
+## Identiteit {#identity}
 
 Wij adviseren dat u een uniek herkenningsteken van uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Dit is het veld waarvan de identiteit van uw gebruikers wordt weggefilterd. Meestal is dit veld het e-mailadres, maar het kan ook een id voor een loyaliteitsprogramma of een telefoonnummer zijn. Zie de tabel hieronder voor de meest gebruikelijke unieke id&#39;s en hun XDM-veld in het schema.
 
@@ -72,7 +72,7 @@ Wij adviseren dat u een uniek herkenningsteken van uw [samenvoegingsschema](../.
 | Telefoon | `mobilePhone.number` |
 | ID Loyalty-programma | `Customer-defined XDM field` |
 
-### Andere doelkenmerken
+## Andere doelkenmerken
 
 Kies in de keuzelijst Schema welke andere velden u naar de e-mailbestemming wilt exporteren. Enkele aanbevolen opties zijn:
 
