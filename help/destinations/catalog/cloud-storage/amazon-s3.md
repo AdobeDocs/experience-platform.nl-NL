@@ -3,15 +3,17 @@ keywords: Amazon S3;S3 doel;s3;amazon s3
 title: Amazon S3-verbinding
 description: Creeer een levende uitgaande verbinding aan uw opslag van het Web van Amazon van de Diensten (AWS) S3 om lusje-afgebakende of CSV gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Amazon S3] verbinding  {#s3-connection}
+
+## Overzicht {#overview}
 
 Creeer een levende uitgaande verbinding aan uw [!DNL Amazon Web Services] (AWS) S3 opslag om lusje-afgebakende of CSV gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 
