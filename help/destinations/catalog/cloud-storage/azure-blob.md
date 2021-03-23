@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob-bestemming;s3;azure blob-bestemming
 title: Azure Blob-verbinding
 description: Maak een live uitgaande verbinding met uw Azure Blob-opslag om periodiek door tabs gescheiden of CSV-gegevensbestanden vanuit Adobe Experience Platform te exporteren.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Als u nieuwe geloofsbrieven gebruikt, uitgezocht **[!UICONTROL New account]**. G
 
 Zie [Een verbindingstekenreeks configureren voor een Azure-opslagaccount](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in de documentatie van Microsoft voor meer informatie over het configureren van uw [!DNL Blob]-verbindingstekenreeks.
 
-U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Merk op dat deze openbare sleutel **must** als Base64 wordt geschreven gecodeerd koord.
+U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Uw openbare sleutel moet als [!DNL Base64] gecodeerde koord worden geschreven.
 
 ![Nieuwe account](../../assets/catalog/cloud-storage/blob/new.png)
 
