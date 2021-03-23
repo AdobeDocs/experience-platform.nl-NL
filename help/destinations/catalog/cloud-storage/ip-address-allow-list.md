@@ -4,7 +4,7 @@ title: 'IP adres lijst van gewenste personen voor wolkenopslagbestemmingen '
 type: Documentatie
 description: Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform aan uw server SFTP, Amazon S3, of opslag van Azure Blob veilig uit te voeren.
 translation-type: tm+mt
-source-git-commit: 7d7568de57cf79843a833a05b9bdfa6eb048bdbc
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # IP adres lijst van gewenste personen voor wolkenopslagbestemmingen {#ip-address-allow-list}
 
-## Overzicht {#overview}
-
 >[!IMPORTANT]
 >
 > * Adobe raadt u aan een bladwijzer op deze pagina te maken en deze elke drie maanden opnieuw te bekijken om te controleren op de meest recente IP-adressen. Adobe verstrekt geen bericht van nieuwe IP waaiers.
 > * Hoewel Adobe gegevensuitvoer naar SFTP-servers ondersteunt, zijn de aanbevolen locaties voor cloudopslag voor het exporteren van gegevens [!DNL Amazon S3] en [!DNL Azure Blob].
 
+
+## Overzicht {#overview}
 
 Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform aan uw [SFTP server ](./sftp.md), [Amazon S3](./amazon-s3.md), of [Azure Blob](./azure-blob.md) opslag veilig uit te voeren.
 
