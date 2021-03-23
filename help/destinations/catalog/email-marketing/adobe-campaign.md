@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;adobe campagne;campagne
 title: Adobe Campaign-verbinding
 description: Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offlinekanalen te personaliseren en te leveren.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -38,12 +38,12 @@ Selecteer **[!UICONTROL Connection type]** voor uw opslaglocatie in de stap **[!
 
 ![Wizard Campagne instellen](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
-- Voor **[!UICONTROL Amazon S3]** verbindingen, moet u uw Sleutel identiteitskaart van de Toegang en Geheime Sleutel van de Toegang verstrekken.
-- Voor **[!UICONTROL SFTP with Password]** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Wachtwoord verstrekken.
-- Voor **[!UICONTROL SFTP with SSH Key]** verbindingen, moet u Domein, Haven, Gebruikersnaam, en Sleutel SSH verstrekken.
+- Voor **[!UICONTROL Amazon S3]** verbindingen, moet u [!UICONTROL Access Key ID] en [!UICONTROL Secret Access Key] verstrekken.
+- Voor **[!UICONTROL SFTP with Password]** verbindingen, moet u [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username], en [!UICONTROL Password] verstrekken.
+- Voor **[!UICONTROL SFTP with SSH Key]** verbindingen, moet u [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username], en [!UICONTROL SSH Key] verstrekken.
 - Voor **[!UICONTROL Azure Blob]** verbindingen, moet u een verbindingskoord verstrekken.
 
-U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling met PGP/GPG toe te voegen aan uw geëxporteerde bestanden onder de sectie **[!UICONTROL Key]**. Merk op dat deze openbare sleutel **must** als Base64 wordt geschreven gecodeerd koord.
+U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling met PGP/GPG toe te voegen aan uw geëxporteerde bestanden onder de sectie **[!UICONTROL Key]**. Uw openbare sleutel moet als [!DNL Base64] gecodeerde koord worden geschreven.
 
 ![Campagnegegevens invullen](../../assets/catalog/email-marketing/adobe-campaign/account-info.png)
 
@@ -54,7 +54,7 @@ Vul in **[!UICONTROL Account authentication]** de relevante informatie voor uw b
 - **[!UICONTROL Folder Path]**: Geef het pad op uw opslaglocatie op waar uw exportgegevens als CSV- of tabgescheiden bestanden  [!DNL Platform] worden opgeslagen.
 - **[!UICONTROL Container]**:  *Voor Blob-verbindingen*. De container die het blob-pad voor uw map bevat, bevindt zich in.
 - **[!UICONTROL File Format]**:  **** CSVor  **TAB_DELIMITED**. Selecteer de bestandsindeling die u naar de opslaglocatie wilt exporteren.
-- **[!UICONTROL Marketing actions]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Beleid voor gegevensgebruik overzicht](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties. Raadpleeg ook [Adobe-gedefinieerde marketingacties](../../../data-governance/policies/overview.md#core-actions) in hetzelfde document.
+- **[!UICONTROL Marketing actions]**: Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Zie de pagina [Beleid voor gegevensgebruik overzicht](../../../data-governance/policies/overview.md) voor meer informatie over marketingacties.
 
 ![Basisinformatie over campagnes](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
@@ -66,7 +66,7 @@ Zie [Profielen en segmenten activeren naar een doel](../../ui/activate-destinati
 
 ## Doelkenmerken {#destination-attributes}
 
-Wanneer [het activeren van segmenten](../../ui/activate-destinations.md) aan de bestemming van Adobe Campaign, adviseren wij dat u een uniek herkenningsteken van uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Voor meer informatie, zie [Selecteer welke schemagebieden als bestemmingsattributen in uw uitgevoerde dossiers ](./overview.md#destination-attributes) in e-mail marketing bestemmingsdocumentatie te gebruiken.
+Wanneer [het activeren van segmenten](../../ui/activate-destinations.md) aan de bestemming van Adobe Campaign, Adobe adviseert dat u een uniek herkenningsteken van uw [samenvoegingsschema](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Voor meer informatie, verwijs naar [Selecteer welke schemagebieden om als bestemmingsattributen in uw uitgevoerde dossiers te gebruiken](./overview.md#destination-attributes).
 
 ## Geëxporteerde gegevens {#exported-data}
 
