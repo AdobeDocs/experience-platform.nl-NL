@@ -4,7 +4,7 @@ title: Een sociale netwerkbestemming maken
 type: Tutorial
 description: Leer hoe u verbinding maakt met uw sociale netwerk en accounts in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Voer in de stap **[!UICONTROL Setup]** een [!UICONTROL Name] en een [!UICONTROL 
 >
 > Voor [!DNL LinkedIn] bestemmingen, **[!UICONTROL Account ID]** is uw [!DNL LinkedIn Campaign Manager Account ID]. U kunt deze id vinden in [!DNL LinkedIn Campaign Manager].
 
-Ook in deze stap kunt u elke **[!UICONTROL Marketing action]** selecteren die op deze bestemming moet worden toegepast. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
+Bij deze stap kunt u ook elke **[!UICONTROL Marketing action]** selecteren die op dit doel moet worden toegepast. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
 
 Selecteer **[!UICONTROL Create Destination]** nadat u de bovenstaande velden hebt ingevuld.
 
