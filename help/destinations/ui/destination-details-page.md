@@ -1,12 +1,12 @@
 ---
 keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
-description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
-seo-description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails, zoals de bestemmingsnaam, identiteitskaart, segmenten aan de bestemming in kaart worden gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
+description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
+seo-description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ De detailspagina voor de bestemming verschijnt, tonend zijn beschikbare controle
 
 ![](../assets/ui/details-page/details.png)
 
-Daarnaast kunt u op het tabblad Bladeren de geselecteerde gegevensstroom verwijderen door het pictogram ![prullenbak](../assets/ui/details-page/trash-icon.png) te selecteren. Om het even welke segmenten die aan een bestemmingen worden geactiveerd zullen unmapped alvorens dataflow wordt geschrapt.
+Daarnaast kunt u op het tabblad Bladeren de geselecteerde gegevensstroom verwijderen door het pictogram ![prullenbak](../assets/ui/details-page/trash-icon.png) te selecteren. Om het even welke segmenten die aan bestemmingen worden geactiveerd zullen worden unmapped alvorens dataflow wordt geschrapt.
 
 ![](../assets/ui/details-page/delete-flow.png)
 
@@ -45,7 +45,7 @@ In de volgende tabel worden de door het rechterspoor verstrekte controles en geg
 | Rechterspoor | Beschrijving |
 | --- | --- |
 | [!UICONTROL Activate] | Selecteer deze controle om uit te geven welke segmenten aan de bestemming in kaart worden gebracht. Zie de gids op [activerende segmenten aan een bestemming](./activate-destinations.md) voor meer informatie. |
-| [!UICONTROL Delete] | Hiermee kunt u deze gegevensstroom verwijderen en de eerder geactiveerde segmenten, indien aanwezig, deactiveren. |
+| [!UICONTROL Delete] | Hiermee kunt u deze gegevensstroom verwijderen en de toewijzingen van eerder geactiveerde segmenten ongedaan maken, indien aanwezig. |
 | [!UICONTROL Destination name] | Dit veld kan worden bewerkt om de naam van het doel bij te werken. |
 | [!UICONTROL Description] | Dit veld kan worden bewerkt om een optionele beschrijving aan het doel toe te voegen. |
 | [!UICONTROL Destination] | Vertegenwoordigt het bestemmingsplatform dat het publiek wordt verzonden naar. Zie [doelcatalogus](../catalog/overview.md) voor meer informatie. |
