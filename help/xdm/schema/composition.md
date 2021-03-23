@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;enum;mixin;Mixin;Mixins;gegevenstype;gegevenstypen;Gegevenstypen;Gegevenstype;primaire identiteit;XDM individueel profiel;XDM velden;enum datatype;Experience gebeurtenis;XDM Experience Event;XDM ExperienceEvent;ExperienceEvent;ExperienceEvent;XDM ExperienceEvent;schema;design;klasse;Class klassen;Klassen;datatype;Datatype;gegevenstype;Gegevenstype;schema's;Schema's;Identiteitskaart;Identiteitskaart;Schemaontwerp;Kaart;Verenigingsschema;Vereniging
 solution: Experience Platform
-tiTle: Basics of Schema Composition
-topic: overview
+title: Basisbeginselen van de schemacompositie
+topic: ' - overzicht'
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 8448b5dcedc42898d8a403aae1e044841bc2734c
 workflow-type: tm+mt
-source-wordcount: '3161'
+source-wordcount: '3142'
 ht-degree: 0%
 
 ---
@@ -60,13 +60,13 @@ Alle XDM schema&#39;s beschrijven gegevens die als verslag of tijdreeks kunnen w
 
 Zowel bevatten de verslag als de tijdreeksschema&#39;s een kaart van identiteiten (`xdm:identityMap`). Dit veld bevat de identiteitsrepresentatie van een onderwerp, getekend vanuit velden die zijn gemarkeerd als Identiteit zoals beschreven in de volgende sectie.
 
-### [!UICONTROL Identiteit] {#identity}
+### [!UICONTROL Identity] {#identity}
 
 Schema&#39;s worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform]. Deze gegevens kunnen over de veelvoudige diensten worden gebruikt om één enkele, verenigde mening van een individuele entiteit tot stand te brengen. Daarom is het belangrijk wanneer het denken over schema&#39;s om over klantenidentiteiten te denken en welke gebieden kunnen worden gebruikt om een onderwerp te identificeren ongeacht waar de gegevens uit kunnen komen.
 
-Om dit proces te helpen, kunnen de belangrijkste gebieden binnen uw schema&#39;s als identiteiten worden gemerkt. Bij gegevensinvoer worden de gegevens in die velden ingevoegd in de &quot;[!UICONTROL Identiteitsgrafiek]&quot; voor die persoon. De grafiekgegevens kunnen dan door [[!DNL Real-time Customer Profile]](../../profile/home.md) en andere [!DNL Experience Platform] diensten worden betreden om een genaast-samen mening van elke individuele klant te verstrekken.
+Om dit proces te helpen, kunnen de belangrijkste gebieden binnen uw schema&#39;s als identiteiten worden gemerkt. Bij gegevensinvoer worden de gegevens in die velden ingevoegd in &quot;[!UICONTROL Identity Graph]&quot; voor die persoon. De grafiekgegevens kunnen dan door [[!DNL Real-time Customer Profile]](../../profile/home.md) en andere [!DNL Experience Platform] diensten worden betreden om een genaast-samen mening van elke individuele klant te verstrekken.
 
-Velden die algemeen als &quot;[!UICONTROL Identity]&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM-id of andere unieke id-velden. U zou ook om het even welke unieke herkenningstekens moeten overwegen specifiek voor uw organisatie, aangezien zij ook goede &quot;[!UICONTROL Identiteit]&quot;gebieden kunnen zijn.
+Velden die algemeen als &quot;[!UICONTROL Identity]&quot;worden gemerkt omvatten: e-mailadres, telefoonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM-id of andere unieke id-velden. U zou ook om het even welke unieke herkenningstekens moeten overwegen specifiek voor uw organisatie, aangezien zij ook goede &quot;[!UICONTROL Identity]&quot;gebieden kunnen zijn.
 
 Het is belangrijk om over klantenidentiteiten tijdens de schema planningsfase te denken helpen ervoor zorgen de gegevens worden samengebracht om het meest robuuste profiel mogelijk te bouwen. Zie het overzicht op [Adobe Experience Platform Identity Service](../../identity-service/home.md) voor meer informatie over hoe identiteitsgegevens u kunnen helpen uw klanten digitale ervaringen te bieden.
 
@@ -153,7 +153,7 @@ Mixins definiëren met welke klasse(n) ze compatibel zijn op basis van het gedra
 
 [!DNL Experience Platform] omvat vele standaard Adobe mixins terwijl ook het toestaan van verkopers om mengsels voor hun gebruikers te bepalen, en individuele gebruikers om mengsels voor hun eigen specifieke concepten te bepalen.
 
-Bijvoorbeeld, om details zoals &quot;[!UICONTROL Voornaam]&quot;en &quot;[!UICONTROL Adres van het Huis]&quot;voor uw &quot;[!UICONTROL Levendigheid Leden]&quot;schema te vangen, zou u standaardmengingen kunnen gebruiken die die gemeenschappelijke concepten bepalen. Nochtans, hebben de concepten die voor minder vaak gebruiksgevallen specifiek zijn (zoals &quot;[!UICONTROL Niveau van het Programma van de Loyalty]&quot;) vaak geen vooraf bepaalde mengeling. In dit geval moet u uw eigen mix definiëren om deze informatie vast te leggen.
+Bijvoorbeeld, om details zoals &quot;[!UICONTROL First Name]&quot;en &quot;[!UICONTROL Home Address]&quot;voor uw &quot;[!UICONTROL Loyalty Members]&quot;schema te vangen, zou u standaardmengen kunnen gebruiken die die gemeenschappelijke concepten bepalen. Nochtans, hebben de concepten die voor minder vaak gebruiksgevallen specifiek zijn (zoals &quot;[!UICONTROL Loyalty Program Level]&quot;) vaak geen vooraf bepaalde mengeling. In dit geval moet u uw eigen mix definiëren om deze informatie vast te leggen.
 
 Herinner dat de schema&#39;s uit &quot;nul of meer&quot;mengen bestaan, zodat betekent dit dat u een geldig schema kon samenstellen zonder enige mengen bij allen te gebruiken.
 
@@ -220,11 +220,11 @@ Zie [XDM gebiedwoordenboek](field-dictionary.md) voor een volledige lijst van be
 
 De schema&#39;s vertegenwoordigen het formaat en de structuur van gegevens die in [!DNL Platform] zullen worden opgenomen, en gebruikend een samenstellingsmodel worden gebouwd. Zoals eerder vermeld, zijn deze schema&#39;s samengesteld uit een klasse en nul of meer mengsels die met die klasse compatibel zijn.
 
-Bijvoorbeeld, zou een schema beschrijvend aankopen die bij een detailhandel worden gemaakt &quot;[!UICONTROL Transacties van de opslag]&quot;kunnen worden genoemd. Het schema implementeert de [!DNL XDM ExperienceEvent]-klasse in combinatie met de standaardmix [!UICONTROL Commerce] en een door de gebruiker gedefinieerde [!UICONTROL Product Info].
+Bijvoorbeeld, zou een schema beschrijvend aankopen die bij een detailhandel worden gemaakt &quot;[!UICONTROL Store Transactions]&quot;kunnen worden genoemd. Het schema implementeert de klasse [!DNL XDM ExperienceEvent] in combinatie met de standaardmix [!UICONTROL Commerce] en een door de gebruiker gedefinieerde mix [!UICONTROL Product Info].
 
-Een ander schema dat websiteverkeer volgt zou &quot;[!UICONTROL Webbezoeken]&quot;kunnen worden genoemd. Het voert ook de [!DNL XDM ExperienceEvent] klasse uit, maar dit keer combineert de standaard [!UICONTROL Web] mixin.
+Een ander schema dat websiteverkeer volgt zou &quot;[!UICONTROL Web Visits]&quot;kunnen worden genoemd. De klasse [!DNL XDM ExperienceEvent] wordt ook geïmplementeerd, maar deze keer wordt de standaardmix [!UICONTROL Web] gecombineerd.
 
-In het onderstaande diagram ziet u deze schema&#39;s en de velden die door elke mix worden ingebracht. Het bevat ook twee schema&#39;s die op de [!DNL XDM Individual Profile] klasse worden gebaseerd, met inbegrip van &quot;[!UICONTROL Loyalty Leden]&quot;schema dat eerder in deze gids wordt vermeld.
+In het onderstaande diagram ziet u deze schema&#39;s en de velden die door elke mix worden ingebracht. Het bevat ook twee schema&#39;s die op de [!DNL XDM Individual Profile] klasse worden gebaseerd, met inbegrip van het &quot;[!UICONTROL Loyalty Members]&quot;schema dat eerder in deze gids wordt vermeld.
 
 ![](../images/schema-composition/composition.png)
 
