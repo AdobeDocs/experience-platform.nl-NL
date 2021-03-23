@@ -4,9 +4,9 @@ title: Werkruimte Doelen
 description: De werkruimte Doelen bestaat uit vier secties, Catalogus, Bladeren, Rekeningen, en de Mening van het Systeem, die in de hieronder secties worden beschreven.
 seo-description: In Adobe Experience Platform, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '934'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ De werkruimte [!UICONTROL Destinations] bestaat uit vier secties, [!UICONTROL Ca
 
 Het **[!UICONTROL Catalog]** lusje toont een lijst van alle bestemmingen beschikbaar in Platform, dat u gegevens kunt verzenden naar.
 
-De gebruikersinterface van het Platform verstrekt een aantal onderzoek en filteropties op de pagina van de bestemmingscatalogus:
+De gebruikersinterface van het Platform verstrekt verscheidene onderzoek en filteropties op de pagina van de bestemmingscatalogus:
 
 * Gebruik de zoekfunctionaliteit op de pagina om een specifiek doel te zoeken.
 * De bestemmingen van de filter gebruikend [!UICONTROL Categories] controle.
@@ -35,7 +35,7 @@ De gebruikersinterface van het Platform verstrekt een aantal onderzoek en filter
 
 ![doelen filteren en zoeken, demo](../assets/ui/workspace/destinations-search-and-filter.gif)
 
-De bestemmingskaarten bevatten of een **[!UICONTROL Configure]** of **[!UICONTROL Activate]** controle, en een secundaire controle die meer opties omhoog brengt. Deze worden allemaal hieronder beschreven:
+De bestemmingskaarten bevatten of een **[!UICONTROL Configure]** of **[!UICONTROL Activate]** controle, en een secundaire controle die meer opties omhoog brengt. Deze besturingselementen worden hieronder beschreven:
 
 | Control | Beschrijving |
 ---------|----------
@@ -47,7 +47,7 @@ De bestemmingskaarten bevatten of een **[!UICONTROL Configure]** of **[!UICONTRO
 
 ![Controles op de bestemmingskaart](../assets/ui/workspace/destination-card-options.png)
 
-Selecteer een doelkaart in de catalogus om de rechterrail te openen.  Hier, kunt u een beschrijving van de bestemming zien. De rechterspoorstaaf bevat dezelfde besturingselementen als in de bovenstaande tabel, alsmede een beschrijving van de bestemming en een aanduiding van de categorie en het type van bestemming.
+Selecteer een doelkaart in de catalogus om de rechterrail te openen. Hier, kunt u een beschrijving van de bestemming zien. De rechterspoorstaaf bevat dezelfde besturingselementen als in de bovenstaande tabel, alsmede een beschrijving van de bestemming en een aanduiding van de categorie en het type van bestemming.
 
 ![Opties voor doelcatalogus](../assets/ui/workspace/destination-right-rail.png)
 
@@ -98,14 +98,14 @@ Op het tabblad **[!UICONTROL Browse]** worden de doelen weergegeven waarmee u ee
 | Element | Beschrijving |
 ---------|----------
 | Naam | De naam die u hebt opgegeven voor de activeringsstroom naar dit doel. Dezelfde kolom bevat twee besturingselementen: [!UICONTROL Activate ] en [!UICONTROL Delete destination]. |
-| Status van laatste flowuitvoering | De status van de laatste gegevensstroom die wordt uitgevoerd. Zie [De bestemmingsdetails van de Mening](destination-details-page.md) voor meer informatie over dataflow looppas. |
-| Datum van laatste Flow-uitvoering | Tijd en datum waarop de laatste dataflow-run plaatsvond. Zie [De bestemmingsdetails van de Mening](destination-details-page.md) voor meer informatie over dataflow looppas. |
+| [!UICONTROL Last Flow Run Status] | De status van de laatste gegevensstroom die wordt uitgevoerd. Zie [De bestemmingsdetails van de Mening](destination-details-page.md) voor meer informatie over dataflow looppas. |
+| [!UICONTROL Last Flow Run Date] | Tijd en datum waarop de laatste dataflow-run heeft plaatsgevonden. Zie [De bestemmingsdetails van de Mening](destination-details-page.md) voor meer informatie over dataflow looppas. |
 | [!UICONTROL Destination] | Het doelplatform dat u hebt geselecteerd voor de activeringsstroom. |
 | [!UICONTROL Connection Type] | Vertegenwoordigt het verbindingstype aan uw opslagemmer of bestemming. <ul><li>Voor e-mailmarketingdoelen: Kan S3, FTP of [!DNL Azure Blob] zijn.</li><li>Voor realtime advertentiebestemmingen: Server-naar-server.</li><li>Voor streamingdoelen: Kan [!DNL Azure Event Hubs] of [!DNL Amazon Kinesis] zijn.</li></ul> |
 | [!UICONTROL Username] | De accountgegevens die u hebt geselecteerd voor de doelstroom. |
 | [!UICONTROL Activation Data] | Geeft het aantal segmenten aan dat op dit doel wordt geactiveerd. Selecteer dit besturingselement voor meer informatie over de geactiveerde segmenten. Raadpleeg [Activeringsgegevens](/help/destinations/ui/destination-details-page.md#activation-data) op de pagina met doeldetails voor meer informatie over de geactiveerde segmenten. |
 | [!UICONTROL Created] | De datum en UTC-tijd waarop de activeringsstroom naar het doel is gemaakt. |
-| [!UICONTROL Status] | `Active` of `Inactive`. Geeft aan of er momenteel gegevens op dit doel worden geactiveerd. Zie [Activering uitschakelen](./activate-destinations.md#disable-activation) om de status te bewerken. |
+| [!UICONTROL Status] | `Active` of `Inactive`. Geeft aan of gegevens op dit doel worden geactiveerd. Zie [Activering uitschakelen](./activate-destinations.md#disable-activation) om de status te bewerken. |
 
 Klik op een doelrij om meer informatie over de bestemming in de juiste spoorstaaf te tonen.
 
