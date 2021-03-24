@@ -2,12 +2,12 @@
 keywords: inzichten;attributie ai;attributie ai inzichten;AAI vraagdienst;attributie vragen;attributie scores
 solution: Intelligent Services, Experience Platform
 title: Kenmerkscores analyseren met Query-service
-topic: Attribution AI queries
+topic: Attribution AI
 description: Leer hoe u Adobe Experience Platform Query Service kunt gebruiken om de Attribution AI-scores te analyseren.
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Elke rij in de gegevens vertegenwoordigt een conversie, waarbij informatie voor 
 
 ## Gegevenspaden zoeken
 
-Selecteer **[!UICONTROL Datasets]** in de linkernavigatie in de gebruikersinterface van Adobe Experience Platform. De pagina **[!UICONTROL Datasets]** wordt weergegeven. Vervolgens selecteert u het tabblad **[!UICONTROL Bladeren]** en zoekt u de uitvoergegevensset voor de scores van uw Attribution AI.
+Selecteer **[!UICONTROL Datasets]** in de linkernavigatie in de gebruikersinterface van Adobe Experience Platform. De pagina **[!UICONTROL Datasets]** wordt weergegeven. Selecteer vervolgens het tabblad **[!UICONTROL Browse]** en zoek de uitvoergegevensset voor uw Attribution AI-scores.
 
 ![Toegang tot uw exemplaar](./images/aai-query/datasets_browse.png)
 
@@ -33,7 +33,7 @@ Selecteer uw uitvoerdataset. De pagina met gegevenssetactiviteiten wordt weergeg
 
 ![pagina met gegevenssetactiviteiten](./images/aai-query/select_preview.png)
 
-Selecteer **[!UICONTROL Gegevensset voorvertonen]** in de rechterbovenhoek van de activiteitenpagina van de gegevensset om een voorvertoning van uw gegevens weer te geven en ervoor te zorgen dat de gegevensset op de verwachte manier is opgenomen.
+Selecteer **[!UICONTROL Preview dataset]** in de rechterbovenhoek van de activiteitenpagina van de gegevensset om een voorvertoning van uw gegevens weer te geven en ervoor te zorgen dat de gegevens op de verwachte manier zijn opgenomen.
 
 ![voorbeeldgegevensset](./images/aai-query/preview_dataset.JPG)
 
@@ -41,17 +41,17 @@ Nadat u een voorvertoning van uw gegevens hebt weergegeven, selecteert u het sch
 
 ![selecteer het schema](./images/aai-query/select_schema.png)
 
-Met het scoreschema kunt u een waarde selecteren of zoeken. Als deze optie is geselecteerd, worden de **[!UICONTROL Veldeigenschappen]** naast elkaar geopend, zodat u het pad kunt kopiëren voor gebruik bij het maken van query&#39;s.
+Met het scoreschema kunt u een waarde selecteren of zoeken. Als deze optie is geselecteerd, wordt de **[!UICONTROL Field properties]** side-rail geopend, waarmee u het pad kunt kopiëren voor gebruik bij het maken van query&#39;s.
 
 ![het pad kopiëren](./images/aai-query/copy_path.png)
 
 ## Access Query Service
 
-Om tot de Dienst van de Vraag van binnen de Platform UI toegang te hebben, begin door **[!UICONTROL Vragen]** in de linkernavigatie te selecteren, dan selecteer **[!UICONTROL Browse]** tabel. Er wordt een lijst met eerder opgeslagen query&#39;s geladen.
+Als u de Query-service wilt openen vanuit de gebruikersinterface van het Platform, selecteert u **[!UICONTROL Queries]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Browse]**. Er wordt een lijst met eerder opgeslagen query&#39;s geladen.
 
 ![queryservice-browser](./images/aai-query/query_tab.png)
 
-Selecteer vervolgens **[!UICONTROL Query maken]** in de rechterbovenhoek. De Query-editor wordt geladen. Met behulp van de Query-editor kunt u query&#39;s maken met behulp van uw score-gegevens.
+Selecteer vervolgens **[!UICONTROL Create query]** in de rechterbovenhoek. De Query-editor wordt geladen. Met behulp van de Query-editor kunt u query&#39;s maken met behulp van uw score-gegevens.
 
 ![queryeditor](./images/aai-query/query_example.png)
 
@@ -106,7 +106,7 @@ De hieronder vragen kunnen als malplaatje voor verschillende scenario&#39;s van 
         conversionName
 ```
 
-### Voorbeelden van trendanalyses
+### Voorbeeld van trendanalyse
 
 **Aantal omzettingen per dag**
 
@@ -129,7 +129,7 @@ De hieronder vragen kunnen als malplaatje voor verschillende scenario&#39;s van 
     LIMIT 20
 ```
 
-### Voorbeelden van de distributieanalyse
+### Voorbeeld van distributie-analyse
 
 **Hoeveelheid aanraakpunten op conversiepaden op gedefinieerde tekst (in een conversievenster)**
 
@@ -299,4 +299,58 @@ Haal de distributie voor het aantal verschillende aanraakpunten op een conversie
         conversionName, num_dist_tp
     ORDER BY
         conversionName, num_dist_tp
+```
+
+### Voorbeeld van afvlakking en explosie
+
+Met deze query wordt de struct-kolom samengevoegd tot meerdere aparte kolommen en worden arrays samengevoegd tot meerdere rijen. Dit helpt bij het omzetten van attributiescore in een CSV-indeling. De uitvoer van deze query heeft één conversie en een van de aanraakpunten die overeenkomen met die conversie in elke rij.
+
+>[!TIP]
+>
+> In dit voorbeeld moet u `{COLUMN_NAME}` naast `_tenantId` en `your_score_output_dataset` vervangen. De `COLUMN_NAME` variabele kan de waarden van facultatieve overgaan door kolomnamen (het melden van kolommen) nemen die tijdens het vormen van uw instantie van de Attribution AI werden toegevoegd. Controleer het uitvoerschema voor de score om de `{COLUMN_NAME}` waarden te zoeken die nodig zijn om deze query te voltooien.
+
+```sql
+SELECT 
+  segmentation,
+  conversionName,
+  scoreCreatedTime,
+  aaid, _id, eventMergeId,
+  conversion.eventType as conversion_eventType,
+  conversion.quantity as conversion_quantity,
+  conversion.eventSource as conversion_eventSource,
+  conversion.priceTotal as conversion_priceTotal,
+  conversion.timestamp as conversion_timestamp,
+  conversion.geo as conversion_geo,
+  conversion.receivedTimestamp as conversion_receivedTimestamp,
+  conversion.dataSource as conversion_dataSource,
+  conversion.productType as conversion_productType,
+  conversion.passThrough.{COLUMN_NAME} as conversion_passThru_column,
+  conversion.skuId as conversion_skuId,
+  conversion.product as conversion_product,
+  touchpointName,
+  touchPoint.campaignGroup as tp_campaignGroup, 
+  touchPoint.mediaType as tp_mediaType,
+  touchPoint.campaignTag as tp_campaignTag,
+  touchPoint.timestamp as tp_timestamp,
+  touchPoint.geo as tp_geo,
+  touchPoint.receivedTimestamp as tp_receivedTimestamp,
+  touchPoint.passThrough.{COLUMN_NAME} as tp_passThru_column,
+  touchPoint.campaignName as tp_campaignName,
+  touchPoint.mediaAction as tp_mediaAction,
+  touchPoint.mediaChannel as tp_mediaChannel,
+  touchPoint.eventid as tp_eventid,
+  scores.*
+FROM (
+  SELECT
+        _tenantId.your_score_output_dataset.segmentation,
+        _tenantId.your_score_output_dataset.conversionName,
+        _tenantId.your_score_output_dataset.scoreCreatedTime,
+        _tenantId.your_score_output_dataset.conversion,
+        _id,
+        eventMergeId,
+        map_values(identityMap)[0][0].id as aaid,
+        inline(_tenantId.your_score_output_dataset.touchpointsDetail)
+  FROM
+        your_score_output_dataset
+)
 ```
