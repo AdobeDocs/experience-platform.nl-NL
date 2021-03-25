@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
-title: Compatibiliteit van gegevensgebruik voor publiekssegmenten afdwingen
+title: Extern publiek importeren en gebruiken
+description: Volg deze zelfstudie om te leren hoe u externe doelgroepen kunt gebruiken met Adobe Experience Platform.
 topic: zelfstudie
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 400e4d9007212ed2693d031ae912a4f1cca97c57
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,7 @@ Adobe Experience Platform ondersteunt de mogelijkheid om extern publiek te impor
 
 De eerste stap voor het gebruik van externe doelgroepen is het maken van een naamruimte voor identiteiten. Identiteitsnaamruimten maken het Platform mogelijk te koppelen van waaruit een segment afkomstig is.
 
-Als u een naamruimte voor identiteiten wilt maken, volgt u de instructies in de hulplijn [Naamnaamruimte](../../identity-service/namespaces.md#manage-namespaces). Wanneer het creëren van uw identiteitsnamespace, voeg de brondetails aan identiteitsnamespace toe, en merk zijn [!UICONTROL Type] als **[!UICONTROL Geen herkenningsteken]**.
+Als u een naamruimte voor identiteiten wilt maken, volgt u de instructies in de hulplijn [Naamnaamruimte](../../identity-service/namespaces.md#manage-namespaces). Wanneer u uw naamruimte voor identiteit maakt, voegt u de brongegevens toe aan de naamruimte identity en markeert u [!UICONTROL Type] als een **[!UICONTROL Non-people identifier]**.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
 
@@ -36,11 +37,11 @@ Als u een naamruimte voor identiteiten wilt maken, volgt u de instructies in de 
 
 Nadat u een naamruimte voor identiteiten hebt gemaakt, moet u een nieuw schema maken voor het segment dat u wilt maken.
 
-Als u wilt beginnen met het samenstellen van een schema, selecteert u eerst **[!UICONTROL Schemas]** op de linkernavigatiebalk, gevolgd door **[!UICONTROL Schema maken]** in de rechterbovenhoek van de werkruimte Schemas. Van hier, uitgezocht **[!UICONTROL doorblader]** om een volledige selectie van de beschikbare types van Schema te zien.
+Als u wilt beginnen met het samenstellen van een schema, selecteert u eerst **[!UICONTROL Schemas]** op de linkernavigatiebalk, gevolgd door **[!UICONTROL Create schema]** in de rechterbovenhoek van de werkruimte Schema. Van hier, selecteer **[!UICONTROL Browse]** om een volledige selectie van de beschikbare types van Schema te zien.
 
 ![](../images/tutorials/external-audiences/create-schema-browse.png)
 
-Aangezien u een segmentdefinitie creeert, die een vooraf bepaalde klasse is, selecteer **[!UICONTROL Bestaande klasse gebruiken]**. Selecteer nu de **[!UICONTROL Segmentdefinitie]**-klasse, gevolgd door **[!UICONTROL Klasse toewijzen]**.
+Aangezien u een segmentdefinitie creeert, die een vooraf bepaalde klasse is, uitgezocht **[!UICONTROL Use existing class]**. Selecteer nu de klasse **[!UICONTROL Segment definition]**, gevolgd door **[!UICONTROL Assign class]**.
 
 ![](../images/tutorials/external-audiences/assign-class.png)
 
@@ -48,7 +49,7 @@ Nu uw schema is gecreeerd, zult u moeten specificeren welk gebied segmentidentit
 
 ![](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Nadat u het veld `_id` hebt gemarkeerd als de primaire identiteit, selecteert u de titel van het schema, gevolgd door de schakeloptie met het label **[!UICONTROL Profile]**. Selecteer **[!UICONTROL Inschakelen]** om het schema in te schakelen voor [!DNL Real-time Customer Profile].
+Nadat u het veld `_id` hebt gemarkeerd als de primaire identiteit, selecteert u de titel van het schema, gevolgd door de schakeloptie met het label **[!UICONTROL Profile]**. Selecteer **[!UICONTROL Enable]** om het schema voor [!DNL Real-time Customer Profile] toe te laten.
 
 ![](../images/tutorials/external-audiences/schema-profile.png)
 
@@ -58,7 +59,7 @@ Dit schema is nu ingeschakeld voor Profiel, waarbij de primaire identificatie is
 
 Na het vormen van het schema, zult u een dataset voor de segmentmeta-gegevens moeten tot stand brengen.
 
-Om een dataset tot stand te brengen, volg de instructies in [dataset gebruikersgids](../../catalog/datasets/user-guide.md#create). U zult **[!UICONTROL dataset van schema]** optie willen volgen, gebruikend het schema u eerder creeerde.
+Om een dataset tot stand te brengen, volg de instructies in [dataset gebruikersgids](../../catalog/datasets/user-guide.md#create). U zult de **[!UICONTROL Create dataset from schema]** optie willen volgen, gebruikend het schema u eerder creeerde.
 
 ![](../images/tutorials/external-audiences/select-schema.png)
 
@@ -78,7 +79,7 @@ Nadat u een streamingverbinding hebt gemaakt, hebt u toegang tot het unieke stre
 
 ## Segmenten samenstellen met behulp van geïmporteerde soorten publiek
 
-Zodra het geïmporteerde publiek is ingesteld, kunnen deze worden gebruikt als onderdeel van het segmenteringsproces. Als u een extern publiek wilt zoeken, gaat u naar de Segment Builder en selecteert u **[!UICONTROL Soorten publiek]** tabblad in de sectie **[!UICONTROL Velden]**.
+Zodra het geïmporteerde publiek is ingesteld, kunnen deze worden gebruikt als onderdeel van het segmenteringsproces. Als u een extern publiek wilt zoeken, gaat u naar de Segment Builder en selecteert u het tabblad **[!UICONTROL Audiences]** in de sectie **[!UICONTROL Fields]**.
 
 ![](../images/tutorials/external-audiences/external-audiences.png)
 
