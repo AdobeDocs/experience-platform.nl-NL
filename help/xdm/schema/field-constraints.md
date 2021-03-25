@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;schema;schema;Schema;mixin;Mixin;Mixins;gegevenstype;gegevenstype;gegevenstypen;Gegevenstypen;Gegevenstype;schemaontwerp;datatype;gegevenstype;Gegevenstype;schema's;Schema's;Schema-ontwerp;kaart;Kaart;
 solution: Experience Platform
 title: Beperkingen voor XDM-veldtypen
-topic: overview
+topic: ' - overzicht'
 description: Een verwijzing voor gebiedstype beperkingen in het Model van Gegevens van de Ervaring (XDM), met inbegrip van de andere rangschikkingsformaten zij aan en kunnen worden in kaart gebracht hoe te om uw eigen gebiedstypes in API te bepalen.
 translation-type: tm+mt
-source-git-commit: c9ea7471bb18c92443a5e45c14c8505ef3ccf30d
+source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1052'
 ht-degree: 1%
 
 ---
@@ -151,7 +151,7 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 
 >[!IMPORTANT]
 >
->Onder de standaardXDM types die in de lijsten hieronder worden vermeld, is het [!UICONTROL Type van Kaart] ook inbegrepen. Kaarten worden gebruikt in standaardschema&#39;s wanneer de gegevens als sleutels worden vertegenwoordigd die aan bepaalde waarden in kaart brengen, of waar de sleutels redelijkerwijs niet in een statisch schema kunnen worden omvat en als gegevenswaarden moeten worden behandeld.
+>Onder de standaard XDM types die in de lijsten hieronder worden vermeld, is het [!UICONTROL Map] type ook inbegrepen. Kaarten worden gebruikt in standaardschema&#39;s wanneer de gegevens als sleutels worden vertegenwoordigd die aan bepaalde waarden in kaart brengen, of waar de sleutels redelijkerwijs niet in een statisch schema kunnen worden omvat en als gegevenswaarden moeten worden behandeld.
 >
 >De kaart-type gebieden zijn gereserveerd voor industrie en verkopersschemagebruik en daarom kunnen niet in douanemiddelen worden gebruikt die u bepaalt. De opname van het kaarttype in de onderstaande tabellen is alleen bedoeld om u te helpen bepalen hoe u uw bestaande gegevens kunt toewijzen aan XDM als deze momenteel zijn opgeslagen in een van de hieronder vermelde indelingen.
 
@@ -159,46 +159,46 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 
 | XDM-type | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
-| [!UICONTROL Tekenreeks] | Type: `BYTE_ARRAY`<br>Annotatie: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Dubbel] | Type: `DOUBLE` | `LongType` | `java.lang.Double` |
-| [!UICONTROL Lang] | Type: `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL Geheel] | Type: `INT32`<br>Annotatie: `INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL Kort] | Type: `INT32`<br>Annotatie: `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL String] | Type: `BYTE_ARRAY`<br>Annotatie: `UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL Double] | Type: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Long] | Type: `INT64` | `LongType` | `java.lang.Long` |
+| [!UICONTROL Integer] | Type: `INT32`<br>Annotatie: `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Short] | Type: `INT32`<br>Annotatie: `INT_16` | `ShortType` | `java.lang.Short` |
 | [!UICONTROL Byte] | Type: `INT32`<br>Annotatie: `INT_8` | `ByteType` | `java.lang.Short` |
-| [!UICONTROL Datum] | Type: `INT32`<br>Annotatie: `DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL Date] | Type: `INT32`<br>Annotatie: `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Type: `INT64`<br>Annotatie: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
 | [!UICONTROL Boolean] | Type: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Kaart] | `MAP`-annotated group<br><br>(`<key-type>` must be  `STRING`) | `MapType`<br><br>(`keyType` moet zijn  `StringType`) | `java.util.Map` |
+| [!UICONTROL Map] | `MAP`-annotated group<br><br>(`<key-type>` must be  `STRING`) | `MapType`<br><br>(`keyType` moet zijn  `StringType`) | `java.util.Map` |
 
 ### Scala, .NET en CosmosDB {#scala}
 
 | XDM-type | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
-| [!UICONTROL Tekenreeks] | `String` | `System.String` | `String` |
-| [!UICONTROL Dubbel] | `Double` | `System.Double` | `Number` |
-| [!UICONTROL Lang] | `Long` | `System.Int64` | `Number` |
-| [!UICONTROL Geheel] | `Int` | `System.Int32` | `Number` |
-| [!UICONTROL Kort] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL String] | `String` | `System.String` | `String` |
+| [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
+| [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
 | [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
-| [!UICONTROL Datum] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL Date] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
-| [!UICONTROL Kaart] | `Map` | (N.v.t.) | `object` |
+| [!UICONTROL Map] | `Map` | (N.v.t.) | `object` |
 
 ### MongoDB, Aerospike en Protobuf 2 {#mongo}
 
 | XDM-type | MongoDB | Aerospike | Protocol 2 |
 | --- | --- | --- | --- |
-| [!UICONTROL Tekenreeks] | `string` | `String` | `string` |
-| [!UICONTROL Dubbel] | `double` | `Double` | `double` |
-| [!UICONTROL Lang] | `long` | `Integer` | `int64` |
-| [!UICONTROL Geheel] | `int` | `Integer` | `int32` |
-| [!UICONTROL Kort] | `int` | `Integer` | `int32` |
+| [!UICONTROL String] | `string` | `String` | `string` |
+| [!UICONTROL Double] | `double` | `Double` | `double` |
+| [!UICONTROL Long] | `long` | `Integer` | `int64` |
+| [!UICONTROL Integer] | `int` | `Integer` | `int32` |
+| [!UICONTROL Short] | `int` | `Integer` | `int32` |
 | [!UICONTROL Byte] | `int` | `Integer` | `int32` |
-| [!UICONTROL Datum] | `date` | `Integer`<br>(Unix milliseconds) | `int64`<br>(Unix milliseconds) |
+| [!UICONTROL Date] | `date` | `Integer`<br>(Unix milliseconds) | `int64`<br>(Unix milliseconds) |
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix milliseconds) | `int64`<br>(Unix milliseconds) |
 | [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binair) | `bool` |
-| [!UICONTROL Kaart] | `object` | `map` | `map<key_type, value_type>` |
+| [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
 
 ## XDM-veldtypen definiëren in de API {#define-fields}
 
@@ -448,3 +448,5 @@ Om te beginnen, vind het gewenste gebiedstype en gebruik de steekproefcode wordt
     </td>
   </tr>
 </table>
+
+{style=&quot;table-layout:auto&quot;}
