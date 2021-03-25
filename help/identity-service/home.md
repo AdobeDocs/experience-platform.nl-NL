@@ -5,9 +5,9 @@ title: Overzicht van identiteitsservice
 topic: ' - overzicht'
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: bb218fc0cca6fe74693e99747963058bd0dc962a
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1718'
 ht-degree: 0%
 
 ---
@@ -63,10 +63,6 @@ Uw klanten kunnen met uw merk door een combinatie online en off-line kanalen in 
 [!DNL Experience Platform] Deze uitdaging wordt aangegaan door twee concepten:  [naamruimten ](#identity-namespaces) van identiteiten en  [identiteitsgrafieken](#identity-graphs).
 
 De volgende video is bedoeld als ondersteuning voor uw begrip van identiteiten en identiteitsgrafieken. De volgende video behandelt de drie mogelijkheden van de Inzameling van de Identiteit, de Grafieken van de Identiteit, en APIs. Het beschrijft ook hoe deterministische en probabilistische algoritmen worden gebruikt om privé identiteitsgrafieken te construeren, en bespreekt de rol van privé identiteitsgrafieken, de CoOp Grafiek van de Dienst van de Identiteit van Adobe Experience Platform, en derdegrafieken.
-
->[!IMPORTANT]
->
-> Probabilistische privégrafieken zijn nog in ontwikkeling en worden later gepubliceerd.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
