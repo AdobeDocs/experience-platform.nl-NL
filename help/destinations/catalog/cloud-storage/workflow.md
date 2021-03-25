@@ -5,7 +5,7 @@ type: Tutorial
 description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 seo-description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 632003773100ec8ef0389840695a1c75a1aa663d
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
@@ -27,9 +27,9 @@ Selecteer in **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** de voo
 >
 >Als er al een verbinding met dit doel bestaat, kunt u een **[!UICONTROL Activate]** knop op de doelkaart zien. Raadpleeg voor meer informatie over het verschil tussen **[!UICONTROL Activate]** en **[!UICONTROL Configure]** de sectie [Catalog](../../ui/destinations-workspace.md#catalog) van de documentatie van de doelwerkruimte.
 
-## Verificatiestap {#authentication}
+## Accountstap {#account}
 
-Als u in de stap **[!UICONTROL Authentication]** eerder een verbinding met uw bestemming voor cloudopslag had ingesteld, selecteert u **[!UICONTROL Existing Account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL New Account]** selecteren om een nieuwe verbinding met uw bestemming voor cloudopslag in te stellen. Vul de verificatiereferenties van uw account in en selecteer **[!UICONTROL Connect to destination]**. U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Uw openbare sleutel moet als [!DNL Base64] gecodeerde koord worden geschreven.
+Als u in de stap **[!UICONTROL Account]** eerder een verbinding met uw bestemming voor cloudopslag had ingesteld, selecteert u **[!UICONTROL Existing Account]** en selecteert u de bestaande verbinding. U kunt ook **[!UICONTROL New Account]** selecteren om een nieuwe verbinding met uw bestemming voor cloudopslag in te stellen. Vul de verificatiereferenties van uw account in en selecteer **[!UICONTROL Connect to destination]**. U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Uw openbare sleutel moet als [!DNL Base64] gecodeerde koord worden geschreven.
 
 Zie [Amazon S3](./amazon-s3.md) bestemming, [[!DNL Amazon Kinesis]](./amazon-kinesis.md) bestemming, [[!DNL Azure Event Hubs]](./azure-event-hubs.md) bestemming, en [SFTP](./sftp.md) bestemming voor details rond geloofsbrieven input in **Authentificatie** stap.
 
@@ -39,9 +39,9 @@ Zie [Amazon S3](./amazon-s3.md) bestemming, [[!DNL Amazon Kinesis]](./amazon-kin
 
 ![Verbinding maken met bestemming voor cloudopslag - verificatiestap](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
-## Stap {#setup} instellen
+## Verificatiestap {#authentication}
 
-Voer in de stap **[!UICONTROL Setup]** een **[!UICONTROL Name]** en een **[!UICONTROL Description]** in voor de activeringsstroom.
+Voer in de stap **[!UICONTROL Authentication]** een **[!UICONTROL Name]** en een **[!UICONTROL Description]** in voor de activeringsstroom.
 
 Bij deze stap kunt u ook elke **[!UICONTROL Marketing action]** selecteren die op dit doel moet worden toegepast. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie [Overzicht van het beleid van het gebruik van Gegevens](../../../data-governance/policies/overview.md).
 
