@@ -5,9 +5,9 @@ title: Beperkingen voor XDM-veldtypen
 topic: ' - overzicht'
 description: Een verwijzing voor gebiedstype beperkingen in het Model van Gegevens van de Ervaring (XDM), met inbegrip van de andere rangschikkingsformaten zij aan en kunnen worden in kaart gebracht hoe te om uw eigen gebiedstypes in API te bepalen.
 translation-type: tm+mt
-source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
+source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1049'
 ht-degree: 1%
 
 ---
@@ -212,7 +212,7 @@ In de volgende tabel ziet u de juiste opmaak voor het definiëren van verschille
 
 Om te beginnen, vind het gewenste gebiedstype en gebruik de steekproefcode wordt verstrekt om uw API verzoek voor [het creëren van een mixin](../api/mixins.md#create) of [het creëren van een gegevenstype](../api/data-types.md#create) te bouwen.
 
-<table>
+<table style="table-layout:auto">
   <tr>
     <th>XDM-type</th>
     <th>Optionele eigenschappen</th>
@@ -448,5 +448,3 @@ Om te beginnen, vind het gewenste gebiedstype en gebruik de steekproefcode wordt
     </td>
   </tr>
 </table>
-
-{style=&quot;table-layout:auto&quot;}
