@@ -5,9 +5,9 @@ title: Beperkingen voor XDM-veldtypen
 topic: ' - overzicht'
 description: Een verwijzing voor gebiedstype beperkingen in het Model van Gegevens van de Ervaring (XDM), met inbegrip van de andere rangschikkingsformaten zij aan en kunnen worden in kaart gebracht hoe te om uw eigen gebiedstypes in API te bepalen.
 translation-type: tm+mt
-source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
+source-git-commit: 456e595e66436c35c7d081ddf4699263e9c87234
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1055'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ XDM wordt gebouwd bovenop het Schema van JSON, en daarom erven de gebieden XDM e
 
 In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in JSON-schema, samen met een voorbeeldwaarde die overeenkomt met het type:
 
-<table>
+<table style="table-layout:auto">
   <thead>
     <tr>
       <th>XDM-type</th>
@@ -185,6 +185,8 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 | [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Map] | `Map` | (N.v.t.) | `object` |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### MongoDB, Aerospike en Protobuf 2 {#mongo}
 
 | XDM-type | MongoDB | Aerospike | Protocol 2 |
@@ -199,6 +201,8 @@ In de onderstaande secties wordt beschreven hoe elk XDM-type wordt toegewezen aa
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix milliseconds) | `int64`<br>(Unix milliseconds) |
 | [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binair) | `bool` |
 | [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## XDM-veldtypen definiëren in de API {#define-fields}
 
