@@ -4,9 +4,9 @@ title: Doelgegevens weergeven
 description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 seo-description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,8 @@ In de volgende tabel worden de door het rechterspoor verstrekte controles en geg
 | [!UICONTROL Identity] | Vertegenwoordigt de identiteitsnaamruimte die door de bestemming wordt geaccepteerd, zoals `GAID`, `IDFA` of `email`. Zie [Naamruimte overzicht van naamruimte ](../../identity-service/namespaces.md) voor meer informatie over geaccepteerde naamruimten. |
 | [!UICONTROL Created by] | Geeft de gebruiker aan die deze bestemming heeft gemaakt. |
 | [!UICONTROL Created] | Hiermee wordt de UTC-datetime aangegeven waarop deze bestemming is gemaakt. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL Enabled]/[!UICONTROL Disabled] toggle
 
