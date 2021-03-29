@@ -4,9 +4,9 @@ title: Werkruimte Doelen
 description: De werkruimte Doelen bestaat uit vier secties, Catalogus, Bladeren, Rekeningen, en de Mening van het Systeem, die in de hieronder secties worden beschreven.
 seo-description: In Adobe Experience Platform, uitgezochte Doelen van de linkernavigatiebar om tot de bestemmingswerkruimte toegang te hebben.
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '940'
 ht-degree: 1%
 
 ---
@@ -45,6 +45,8 @@ De bestemmingskaarten bevatten of een **[!UICONTROL Configure]** of **[!UICONTRO
 | [!UICONTROL View dataflows] | Bekijk de gegevensactiveringsstromen die voor een bestemming bestaan. |
 | [!UICONTROL View documentation] | Opent een verbinding aan de documentatiepagina voor die specifieke bestemming, voor meer informatie en om u te helpen opstelling het. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ![Controles op de bestemmingskaart](../assets/ui/workspace/destination-card-options.png)
 
 Selecteer een doelkaart in de catalogus om de rechterrail te openen. Hier, kunt u een beschrijving van de bestemming zien. De rechterspoorstaaf bevat dezelfde besturingselementen als in de bovenstaande tabel, alsmede een beschrijving van de bestemming en een aanduiding van de categorie en het type van bestemming.
@@ -70,6 +72,8 @@ Op het **[!UICONTROL Accounts]** lusje, kunt u meer over de verbindingen leren d
 | [!UICONTROL Username] | De gebruikersnaam die u hebt geselecteerd in [verbind bestemmingstovenaar](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Destinations] | Vertegenwoordigt het aantal unieke succesvolle bestemmingsstromen die met basisinformatie worden verbonden die voor een bestemming wordt gecreeerd. |
 | [!UICONTROL Authorized] | De datum waarop de verbinding met deze bestemming werd geautoriseerd. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Bovendien kunt u uw accountgegevens bewerken of bijwerken. Selecteer ![Accountknop bewerken](../assets/ui/workspace/pencil-icon.png) in de kolom **[!UICONTROL Platform]** om de accountgegevens te bewerken.
 
