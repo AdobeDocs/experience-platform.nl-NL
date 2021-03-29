@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen
 solution: Experience Platform
 title: Metrics API Endpoint
-topic: developer guide
+topic: ontwikkelaarsgids
 description: Leer hoe u meetgegevens voor waarneembaarheid in Experience Platform ophaalt met behulp van de API Observability Insights.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 136c75f56c2ba4d61fef7981ff8a7889a0ade3d1
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2056'
 ht-degree: 1%
 
 ---
@@ -47,7 +47,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{METRIC}` | De metrisch u wilt blootstellen. Wanneer het combineren van veelvoudige metriek in één enkele vraag, moet u ampersand (`&`) gebruiken om individuele metriek te scheiden. Bijvoorbeeld, `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | De id voor een bepaalde [!DNL Platform]-bron waarvan u de metriek toegankelijk wilt maken. Deze id kan optioneel, vereist of niet van toepassing zijn, afhankelijk van de gebruikte maatstaven. Zie [appendix](#available-metrics) voor een lijst van beschikbare metriek, met inbegrip van ondersteunde IDs (zowel vereist als facultatief) voor elke metrisch. |
+| `{ID}` | De id voor een bepaalde [!DNL Platform]-bron waarvan u de meetgegevens wilt weergeven. Deze id kan optioneel, vereist of niet van toepassing zijn, afhankelijk van de gebruikte maatstaven. Zie [appendix](#available-metrics) voor een lijst van beschikbare metriek, met inbegrip van ondersteunde IDs (zowel vereist als facultatief) voor elke metrisch. |
 | `{DATE_RANGE}` | Het datumbereik voor de metriek die u wilt weergeven, in de ISO 8601-indeling (bijvoorbeeld `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
 
 **Verzoek**
@@ -178,6 +178,8 @@ curl -X POST \
 | `aggregator` | Geeft de aggregatiefunctie aan die moet worden gebruikt om records met meerdere tijdreeksen te groeperen in één resultaat. Raadpleeg de [OpenTSDB-documentatie](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html) voor gedetailleerde informatie over beschikbare aggregators. |
 | `downsample` | Een optioneel veld waarmee u een samenvoegfunctie kunt opgeven om de bemonsteringsfrequentie van metrische gegevens te verminderen door velden in intervallen te sorteren (of &quot;emmers&quot;). Het interval voor het downsamplen wordt bepaald door de eigenschap `granularity`. Raadpleeg de [OpenTSDB-documentatie](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html) voor gedetailleerde informatie over downsampling. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Antwoord**
 
 Een succesvolle reactie keert de resulterende datapoints voor de metriek en de filters terug die in het verzoek worden gespecificeerd.
@@ -270,6 +272,8 @@ Een succesvolle reactie keert de resulterende datapoints voor de metriek en de f
 | `groupBy` | Als de veelvoudige datasets in het `filter` bezit voor metrisch werden gespecificeerd, en de `groupBy` optie werd geplaatst aan waar in het verzoek, zal dit voorwerp identiteitskaart van de dataset bevatten die het overeenkomstige `dps` bezit op van toepassing is.<br><br>Als dit object leeg lijkt in de reactie, is de corresponderende  `dps` eigenschap van toepassing op alle gegevenssets die in de  `filters` array zijn opgenomen (of op alle gegevenssets  [!DNL Platform] als er geen filters zijn opgegeven). |
 | `dps` | De teruggekeerde gegevens voor bepaalde metrisch, filter, en tijdwaaier. Elke sleutel in dit object vertegenwoordigt een tijdstempel met een overeenkomende waarde voor de opgegeven metrische waarde. De tijdspanne tussen elke datapoint hangt van `granularity` waarde af in het verzoek wordt gespecificeerd die. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Aanhangsel
 
 De volgende sectie bevat extra informatie over het werken met het `/metrics` eindpunt.
@@ -310,6 +314,8 @@ In de volgende tabel worden de metriek voor Adobe Experience Platform [!DNL Data
 | **timeseries.data.collection.inlet.success** | Het totale aantal geslaagde HTTP-aanroepen naar één gegevensinlaat of naar alle gegevensinlaten. | Inlet-id |
 | **timeseries.data.collection.inlet.failure** | Het totale aantal mislukte HTTP-aanroepen naar één gegevensinlaat of naar alle gegevensinlaten. | Inlet-id |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### [!DNL Identity Service] {#identity}
 
 In de volgende tabel worden de metriek voor Adobe Experience Platform [!DNL Identity Service] weergegeven.
@@ -326,6 +332,8 @@ In de volgende tabel worden de metriek voor Adobe Experience Platform [!DNL Iden
 | timeseries.identity.graph.imsorg.numidgraphs.count | Aantal unieke grafiekidentiteiten die in de identiteitsgrafiek voor uw IMS Organisatie worden opgeslagen. | N.v.t. |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Aantal unieke identiteiten die in de identiteitsgrafiek voor uw IMS Organisatie voor een bepaalde grafieksterkte worden opgeslagen (&quot;onbekend&quot;, &quot;zwak&quot;, of &quot;sterk&quot;). | Grafieksterkte (**Required**) |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### [!DNL Privacy Service] {#privacy}
 
 In de volgende tabel worden de metriek voor Adobe Experience Platform [!DNL Privacy Service] weergegeven.
@@ -335,6 +343,8 @@ In de volgende tabel worden de metriek voor Adobe Experience Platform [!DNL Priv
 | timeseries.gdpr.jobs.totaljobs.count | Het totale aantal banen dat door de GDPR is gecreëerd. | ENV (**Required**) |
 | timeseries.gdpr.jobs.completedjobs.count | Totaal aantal voltooide banen van GDPR. | ENV (**Required**) |
 | timeseries.gdpr.jobs.errorjobs.count | Totaal aantal fouttaken van GDPR. | ENV (**Required**) |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### [!DNL Query Service] {#query}
 
@@ -348,6 +358,8 @@ In de volgende tabel worden de metriek voor Adobe Experience Platform [!DNL Quer
 | timeseries.queryservice.query.scheduledquery.count | Het totale aantal uitgevoerde geplande query&#39;s. | N.v.t. |
 | timeseries.queryservice.query.interactivequery.count | Het totale aantal uitgevoerde interactieve query&#39;s. | N.v.t. |
 | timeseries.queryservice.query.batchfrompsqlquery.count | Het totale aantal uitgevoerde batchquery&#39;s van PSQL. | N.v.t. |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### [!DNL Real-time Customer Profile] {#profile}
 
@@ -369,6 +381,8 @@ In de volgende tabel worden de metriek voor [!DNL Real-time Customer Profile] be
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Tijdstempel voor laatste verzoek van updaterecord voor een gegevensset. | Dataset-id (**Required**) |
 | platform.ups.ingest.streaming.record.size.m1_rate | Gemiddelde recordgrootte. | IMS Org (**Required**) |
 | platform.ups.ingest.streaming.records.updated.m15_rate | Snelheid van updateverzoeken voor verslagen die voor een dataset worden opgenomen. | Dataset-id (**Required**) |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Foutberichten
 
@@ -403,6 +417,8 @@ Reacties van het `/metrics` eindpunt kunnen foutenmeldingen onder bepaalde voorw
 | `title` | Een tekenreeks met het foutbericht en de mogelijke reden waarom het is opgetreden. |
 | `report` | Bevat contextafhankelijke informatie over de fout, inclusief de sandbox en IMS Org die worden gebruikt in de bewerking die de fout heeft geactiveerd. |
 
+{style=&quot;table-layout:auto&quot;}
+
 In de volgende tabel worden de verschillende foutcodes weergegeven die door de API kunnen worden geretourneerd:
 
 | Foutcode | Titel | Beschrijving |
@@ -412,3 +428,5 @@ In de volgende tabel worden de verschillende foutcodes weergegeven die door de A
 | `INSGHT-1001-500` | Metrische query mislukt | Er is een fout opgetreden tijdens het zoeken naar de metrieke-database vanwege een serverfout. Probeer het verzoek opnieuw. Neem contact op met de Adobe-ondersteuning als het probleem zich blijft voordoen. |
 | `INSGHT-1002-500` | Servicefout | De aanvraag kan niet worden verwerkt vanwege een interne fout. Probeer het verzoek opnieuw. Neem contact op met de Adobe-ondersteuning als het probleem zich blijft voordoen. |
 | `INSGHT-1003-401` | Validatiefout van sandbox | De aanvraag kan niet worden verwerkt vanwege een sandboxvalidatiefout. Zorg ervoor dat de naam van de sandbox die u in de koptekst `x-sandbox-name` hebt opgegeven, een geldige, ingeschakelde sandbox voor uw IMS-organisatie vertegenwoordigt voordat u het verzoek opnieuw probeert. |
+
+{style=&quot;table-layout:auto&quot;}
