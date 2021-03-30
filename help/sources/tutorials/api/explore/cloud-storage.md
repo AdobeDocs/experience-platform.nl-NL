@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;populaire onderwerpen;cloudopslag;Cloudopslag
 solution: Experience Platform
 title: Een hardop opslagsysteem verkennen met de Flow Service API
-topic: ' - overzicht'
+topic: overzicht
 description: Deze zelfstudie gebruikt de Flow Service API om een extern cloudopslagsysteem te verkennen.
 translation-type: tm+mt
-source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
+source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 1%
+source-wordcount: '821'
+ht-degree: 0%
 
 ---
 
 
 # Een systeem voor cloudopslag verkennen met de [!DNL Flow Service]-API
 
-In deze zelfstudie wordt de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) gebruikt om een extern cloudopslagsysteem te verkennen.
+Deze zelfstudie gebruikt de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) om een extern cloudopslagsysteem te verkennen.
 
 ## Aan de slag
 
@@ -101,14 +101,25 @@ Een succesvol antwoord retourneert een array met bestanden en mappen die in de g
 ```json
 [
     {
-        "type": "File",
-        "name": "data.csv",
-        "path": "/some/path/data.csv"
+        "type": "file",
+        "name": "account.csv",
+        "path": "/test-connectors/testFolder-fileIngestion/account.csv",
+        "canPreview": true,
+        "canFetchSchema": true
     },
     {
-        "type": "Folder",
-        "name": "foobar",
-        "path": "/some/path/foobar"
+        "type": "file",
+        "name": "profileData.json",
+        "path": "/test-connectors/testFolder-fileIngestion/profileData.json",
+        "canPreview": true,
+        "canFetchSchema": true
+    },
+    {
+        "type": "file",
+        "name": "sampleprofile--3.parquet",
+        "path": "/test-connectors/testFolder-fileIngestion/sampleprofile--3.parquet",
+        "canPreview": true,
+        "canFetchSchema": true
     }
 ]
 ```
@@ -117,14 +128,14 @@ Een succesvol antwoord retourneert een array met bestanden en mappen die in de g
 
 Om de structuur van gegevensdossier van uw cloudopslag te inspecteren, voer een verzoek van de GET uit terwijl het verstrekken van de weg van het dossier en type als vraagparameter.
 
-U kunt de structuur van een CSV- of TSV-bestand inspecteren door een aangepast scheidingsteken op te geven als een zoekomtrek. Elke waarde van één teken is een toegestaan kolomscheidingsteken. Indien niet opgegeven, wordt een komma `(,)` gebruikt als standaardwaarde.
+U kunt de structuur van een gegevensbestand van uw bron van de wolkenopslag inspecteren door een verzoek van de GET uit te voeren terwijl het verstrekken van de weg en het type van het dossier. U kunt ook verschillende bestandstypen inspecteren, zoals CSV, TSV of gecomprimeerde JSON en gescheiden bestanden door de bestandstypen op te geven als onderdeel van de queryparameters.
 
 **API-indeling**
 
 ```http
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=;
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=\t
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
 ```
 
 | Parameter | Beschrijving |
@@ -132,13 +143,13 @@ GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&file
 | `{CONNECTION_ID}` | De verbindings-id van de bronconnector van de cloudopslag. |
 | `{FILE_PATH}` | Het pad naar het bestand dat u wilt inspecteren. |
 | `{FILE_TYPE}` | Het type bestand. Tot de ondersteunde bestandstypen behoren:<ul><li>DELIMITED</code>: Waarde gescheiden door scheidingstekens. DSV-bestanden moeten door komma&#39;s van elkaar worden gescheiden.</li><li>JSON</code>: JavaScript-objectnotatie. JSON-bestanden moeten XDM-compatibel zijn</li><li>PARQUET</code>: Apache Parquet. Parketbestanden moeten XDM-compatibel zijn.</li></ul> |
-| `columnDelimiter` | De waarde van één teken die u hebt opgegeven als kolomscheidingsteken voor het inspecteren van CSV- of TSV-bestanden. Als de parameter niet opgegeven is, wordt de waarde standaard ingesteld op een komma `(,)`. |
+| `{QUERY_PARAMS}` | Optionele queryparameters die kunnen worden gebruikt om resultaten te filteren. Zie de sectie over [queryparameters](#query) voor meer informatie. |
 
 **Verzoek**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/aep-bootcamp/Adobe%20Pets%20Customer%2020190801%20EXP.json&fileType=json&preview=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -173,6 +184,15 @@ Een succesvol antwoord geeft de structuur van het gevraagde dossier met inbegrip
     }
 ]
 ```
+
+## Query-parameters {#query} gebruiken
+
+De [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) steunt het gebruik van vraagparameters aan voorproef en inspecteer verschillende dossiertypes.
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `columnDelimiter` | De waarde van één teken die u hebt opgegeven als kolomscheidingsteken voor het inspecteren van CSV- of TSV-bestanden. Als de parameter niet opgegeven is, wordt de waarde standaard ingesteld op een komma `(,)`. |
+| `compressionType` | Een vereiste queryparameter voor het voorvertonen van een gecomprimeerd, gescheiden of JSON-bestand. De ondersteunde gecomprimeerde bestanden zijn: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
 
 ## Volgende stappen
 
