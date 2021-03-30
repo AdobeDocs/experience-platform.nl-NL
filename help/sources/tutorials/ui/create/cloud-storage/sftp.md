@@ -2,23 +2,19 @@
 keywords: Experience Platform;home;populaire onderwerpen;SFTP;sftp
 solution: Experience Platform
 title: Een SFTP-bronverbinding maken in de gebruikersinterface
-topic: ' - overzicht'
+topic: overzicht
 type: Tutorial
 description: Leer hoe u een SFTP-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: b39426d768a0c6fdfa742ec74e4e0bed9c432269
+source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '678'
 ht-degree: 1%
 
 ---
 
 
 # Een SFTP-bronverbinding maken in de gebruikersinterface
-
->[!NOTE]
->
->De SFTP-connector bevindt zich in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 Deze zelfstudie bevat stappen voor het maken van een SFTP-bronverbinding met de Adobe Experience Platform-gebruikersinterface.
 
@@ -53,25 +49,25 @@ Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit
 
 ## Verbinding maken met uw SFTP-server
 
-Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Bronnen]** in de linkernavigatiebalk om de werkruimte [!UICONTROL Bronnen] te openen. Het scherm [!UICONTROL Catalog] toont een verscheidenheid van bronnen waarvoor u een binnenkomende rekening kunt tot stand brengen met.
+Meld u aan bij [Adobe Experience Platform](https://platform.adobe.com) en selecteer **[!UICONTROL Sources]** in de linkernavigatiebalk om de werkruimte [!UICONTROL Sources] te openen. Het scherm [!UICONTROL Catalog] toont een verscheidenheid van bronnen waarvoor u een binnenkomende rekening kunt tot stand brengen met.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer **[!UICONTROL SFTP]** onder de categorie [!UICONTROL Cloudopslag]. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL vorm]**. Anders selecteert u **[!UICONTROL Gegevens toevoegen]** om een nieuwe SFTP-verbinding te maken.
+Selecteer **[!UICONTROL SFTP]** onder de categorie [!UICONTROL Cloud storage]. Als dit uw eerste keer gebruikend deze schakelaar is, uitgezocht **[!UICONTROL Configure]**. Anders selecteert u **[!UICONTROL Add data]** om een nieuwe SFTP-verbinding te maken.
 
 ![catalogus](../../../../images/tutorials/create/sftp/catalog.png)
 
-De pagina **[!UICONTROL Verbinding maken met SFTP]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+De pagina **[!UICONTROL Connect to SFTP]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
 ### Nieuwe account
 
-Als u nieuwe geloofsbrieven gebruikt, selecteer **[!UICONTROL Nieuwe rekening]**. Voer in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw referenties in. Selecteer **[!UICONTROL Connect]** als u klaar bent en wacht dan enige tijd tot de nieuwe verbinding tot stand is gebracht.
+Als u nieuwe geloofsbrieven gebruikt, uitgezocht **[!UICONTROL New account]**. Voer in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw referenties in. Wanneer gebeëindigd, selecteer **[!UICONTROL Connect]** en laat dan wat tijd voor de nieuwe verbinding toe om te vestigen.
 
-De schakelaar SFTP verstrekt u verschillende authentificatietypen voor toegang. Selecteer **[!UICONTROL Wachtwoord]** onder **[!UICONTROL Accountverificatie]** om een op een wachtwoord gebaseerde referentie te gebruiken.
+De schakelaar SFTP verstrekt u verschillende authentificatietypen voor toegang. Selecteer **[!UICONTROL Account authentication]** onder **[!UICONTROL Password]** om een op een wachtwoord gebaseerde referentie te gebruiken.
 
 ![connect-password](../../../../images/tutorials/create/sftp/password.png)
 
-Alternatief, kunt u **[SSH openbare sleutel]** selecteren en uw rekening verbinden SFTP gebruikend een combinatie van [!UICONTROL Persoonlijke zeer belangrijke inhoud] en [!UICONTROL Passphrase].
+U kunt ook **[SSH public key]** selecteren en uw SFTP-account aansluiten met een combinatie van [!UICONTROL Private key content] en [!UICONTROL Passphrase].
 
 >[!IMPORTANT]
 >
@@ -86,7 +82,7 @@ Alternatief, kunt u **[SSH openbare sleutel]** selecteren en uw rekening verbind
 
 ### Bestaande account
 
-Als u een bestaande account wilt verbinden, selecteert u de FTP- of SFTP-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Volgende]** om door te gaan.
+Als u een bestaande account wilt verbinden, selecteert u de FTP- of SFTP-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ![bestaand](../../../../images/tutorials/create/sftp/existing.png)
 
