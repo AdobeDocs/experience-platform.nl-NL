@@ -2,26 +2,22 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;uitspringen;Vergroten;
 solution: Experience Platform
 title: Overzicht van de Source Connector uitwerken
-topic: overview
+topic: overzicht
 description: Leer hoe u via API's of de gebruikersinterface verbinding kunt maken met Shopify met Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
 
 
-# (Bèta) [!DNL Shopify]-connector
-
->[!NOTE]
->
->De [!DNL Shopify] schakelaar is in bèta. Zie [Bronnen overzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+# [!DNL Shopify] connector
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van [!DNL Platform]-services. U kunt gegevens van diverse bronnen, zoals Adobe-toepassingen, cloudopslag, databases en vele andere, invoeren.
 
-[!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens van een externe  **** handelsprovider. Ondersteuning voor **[!UICONTROL eCommerce]**-providers omvat [!DNL Shopify].
+[!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens van een externe  **[!UICONTROL eCommerce]** provider. Tot de ondersteuning voor **[!UICONTROL eCommerce]**-providers behoren [!DNL Shopify].
 
 In de onderstaande documentatie vindt u informatie over hoe u [!DNL Shopify] kunt verbinden met [!DNL Platform] via API&#39;s of de gebruikersinterface:
 
