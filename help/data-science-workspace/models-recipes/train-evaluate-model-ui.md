@@ -2,13 +2,13 @@
 keywords: Experience Platform;trainen en evalueren;De Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;creeer een model;creeer een trainingslooppas
 solution: Experience Platform
 title: Een model trainen en evalueren in de gebruikersinterface van de Data Science Workspace
-topic: tutorial
-type: Tutorial
+topic: zelfstudie
+type: Zelfstudie
 description: In de Werkruimte van de Wetenschap van Gegevens van Adobe Experience Platform, wordt een machine het leren Model gecreeerd door bestaande Ontvanger op te nemen die voor de intentie van het Model aangewezen is. Het model wordt vervolgens getraind en geëvalueerd om de efficiëntie en werkzaamheid van de werking te optimaliseren door de bijbehorende hyperparameters te verfijnen. Ontvangers zijn herbruikbaar, wat betekent dat er meerdere modellen kunnen worden gemaakt en op specifieke doeleinden kunnen worden afgestemd met één ontvanger.
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 52415eb572a82f18f6daa3f45be1c670cae98b83
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1085'
 ht-degree: 1%
 
 ---
@@ -28,63 +28,76 @@ Voor deze zelfstudie is een bestaande ontvanger vereist. Als u geen Ontvanger he
 
 ## Een model maken
 
-1. Klik in Adobe Experience Platform op de koppeling **[!UICONTROL Modellen]** in de linkernavigatiekolom om alle bestaande modellen weer te geven. Klik op **[!UICONTROL Model maken]** rechtsboven op de pagina om een ontwerpproces te starten.
-   ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
+Selecteer in Experience Platform het tabblad **[!UICONTROL Models]** in de linkernavigatie en selecteer vervolgens het tabblad Bladeren om uw bestaande modellen weer te geven. Selecteer **[!UICONTROL Create Model]** in de rechterbovenhoek van de pagina om een modelontwerpproces te starten.
 
-2. Blader door de lijst met bestaande ontvangers, zoek en selecteer de ontvanger die u wilt gebruiken om het model te maken en klik op **[!UICONTROL Volgende]**.
-   ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
+![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-3. Selecteer een geschikte invoerdataset en klik **[!UICONTROL Next]**. Hiermee wordt de standaardgegevensset voor de invoertraining voor het model ingesteld.
-   ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
+Blader door de lijst met bestaande ontvangers, zoek en selecteer de ontvanger die u wilt gebruiken om het model te maken en selecteer **[!UICONTROL Next]**.
+![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-4. Geef een naam op voor het model en bekijk de standaardmodelconfiguraties. De standaardconfiguraties zijn toegepast tijdens het maken van Recipe, herzie en wijzig de configuratiewaarden door op de waarden te dubbelklikken. Als u een nieuwe set configuraties wilt opgeven, klikt u op **[!UICONTROL Nieuwe configuratie uploaden]** en sleept u een JSON-bestand met modelconfiguraties naar het browservenster. Klik **[!UICONTROL Voltooien]** om het Model tot stand te brengen.
+Selecteer een geschikte invoergegevensset en selecteer **[!UICONTROL Next]**. Hiermee wordt de standaardgegevensset voor de invoertraining voor het model ingesteld.
+![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-   >[!NOTE]
-   >
-   >Configuraties zijn uniek en specifiek voor de beoogde recept. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Product Recommendations Recipe. Zie de [referentie](#reference) sectie voor een lijst van de configuraties van Recipe van de Verkoop van de Detailhandel.
+Geef een naam op voor het model en bekijk de standaardmodelconfiguraties. De standaardconfiguraties zijn toegepast tijdens het maken van Recipe, herzie en wijzig de configuratiewaarden door op de waarden te dubbelklikken.
 
-   ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
+Als u een nieuwe set configuraties wilt opgeven, selecteert u **[!UICONTROL Upload New Config]** en sleept u een JSON-bestand met modelconfiguraties naar het browservenster. Selecteer **[!UICONTROL Finish]** om het model te maken.
+
+>[!NOTE]
+>
+>Configuraties zijn uniek en specifiek voor de beoogde recept. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Product Recommendations Recipe. Zie de [referentie](#reference) sectie voor een lijst van de configuraties van Recipe van de Verkoop van de Detailhandel.
+
+![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Een trainingsrun maken
 
-1. Klik in Adobe Experience Platform op de koppeling **[!UICONTROL Modellen]** in de linkernavigatiekolom om alle bestaande modellen weer te geven. Zoek en klik op de naam van het model dat u wilt opleiden.
-   ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
+Selecteer in Experience Platform het tabblad **[!UICONTROL Models]** in de linkernavigatie en selecteer vervolgens het tabblad Bladeren om uw bestaande modellen weer te geven. Zoek en selecteer de hyperlink die is gekoppeld aan de naam van het model dat u wilt trainen.
 
-2. Alle bestaande trainingsprogramma&#39;s met hun huidige trainingsstatus worden weergegeven. Voor Modellen die gebruikend het [!DNL Data Science Workspace] gebruikersinterface worden gecreeerd, wordt een trainingslooppas automatisch geproduceerd en uitgevoerd gebruikend de standaardconfiguraties en de dataset van de inputopleiding.
-   ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
+![](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-3. Maak een nieuwe training door te klikken op **[!UICONTROL Training]** rechtsboven in de overzichtspagina Model.
-   ![](../images/models-recipes/train-evaluate-ui/training_input.png)
+Alle bestaande trainingsprogramma&#39;s met hun huidige trainingsstatus worden weergegeven. Voor Modellen die gebruikend het [!DNL Data Science Workspace] gebruikersinterface worden gecreeerd, wordt een trainingslooppas automatisch geproduceerd en uitgevoerd gebruikend de standaardconfiguraties en de dataset van de inputopleiding.
 
-4. Selecteer de dataset van de trainingsinput voor de trainingslooppas en klik **[!UICONTROL Next]**.
-   ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
+Maak een nieuwe trainingsrun door **[!UICONTROL Train]** in de rechterbovenhoek van de overzichtspagina Model te selecteren.
 
-5. De standaardconfiguraties die tijdens de creatie van het Model worden verstrekt worden getoond, veranderen en wijzigen dienovereenkomstig door de waarden tweemaal te klikken. Klik **[!UICONTROL Voltooien]** om de trainingsrun te maken en uit te voeren.
+![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-   >[!NOTE]
-   >
-   >Configuraties zijn uniek en specifiek voor de beoogde recept. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Product Recommendations Recipe. Zie de [referentie](#reference) sectie voor een lijst van de configuraties van Recipe van de Verkoop van de Detailhandel.
+Selecteer de dataset van de trainingsinput voor de trainingslooppas, dan uitgezocht **[!UICONTROL Next]**.
 
-   ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
+![](../images/models-recipes/train-evaluate-ui/training_input.png)
+
+De standaardconfiguraties die tijdens de creatie van het Model worden verstrekt worden getoond, veranderen en wijzigen dienovereenkomstig door de waarden tweemaal te klikken. Selecteer **[!UICONTROL Finish]** om de trainingsrun te maken en uit te voeren.
+
+>[!NOTE]
+>
+>Configuraties zijn uniek en specifiek voor de beoogde recept. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Product Recommendations Recipe. Zie de [referentie](#reference) sectie voor een lijst van de configuraties van Recipe van de Verkoop van de Detailhandel.
+
+![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
+
 
 ## Het model evalueren
 
-1. Klik in Adobe Experience Platform op de koppeling **[!UICONTROL Modellen]** in de linkernavigatiekolom om alle bestaande modellen weer te geven. Zoek en klik op de naam van het te evalueren model.
-   ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
+Selecteer in Experience Platform het tabblad **[!UICONTROL Models]** in de linkernavigatie en selecteer vervolgens het tabblad Bladeren om uw bestaande modellen weer te geven. Zoek en selecteer de hyperlink die is gekoppeld aan de naam van het model dat u wilt evalueren.
 
-2. Alle bestaande trainingsprogramma&#39;s met hun huidige trainingsstatus worden weergegeven. Met veelvoudige voltooide trainingslooppas, kunnen de evaluatiemetriek over verschillende opleidingslooppas in de Model beoordelinggrafiek worden vergeleken, selecteer evaluatiemetrisch gebruikend dropdown lijst boven de grafiek.
+![model selecteren](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-   De gemiddelde absolute foutenpercentage (MAPE) metrisch drukt nauwkeurigheid als percentage van de fout uit. Dit wordt gebruikt om het best presterende Experiment te identificeren. Hoe lager de MAPE, hoe beter.
+Alle bestaande trainingsprogramma&#39;s met hun huidige trainingsstatus worden weergegeven. Met veelvoudige voltooide trainingslooppas, kunnen de evaluatiemetriek over verschillende opleidingslooppas in de Modelbeoordelinggrafiek worden vergeleken. Selecteer een evaluatiemetrisch gebruikend dropdown lijst boven de grafiek.
 
-   ![](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
+De gemiddelde absolute foutenpercentage (MAPE) metrisch drukt nauwkeurigheid als percentage van de fout uit. Dit wordt gebruikt om het best presterende Experiment te identificeren. Hoe lager de MAPE, hoe beter.
 
-   De &quot;precisiemetrie&quot; beschrijft het percentage relevante instanties in vergelijking met het totaal *opgehaalde* Instanties. Precisie kan worden gezien als de waarschijnlijkheid dat een willekeurig gekozen resultaat correct is.
-   ![](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
+![overzicht van de trainingen](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
 
-   Klik op een specifieke trainingsrun om de details van die run weer te geven. Dit kan zelfs worden gedaan alvorens de looppas is voltooid. Op de looppasdetailpagina, kunt u andere evaluatiemetriek, configuratieparameters, en visualisaties zien specifiek voor de trainingslooppas. U kunt activiteitenlogboeken ook downloaden om de details van de looppas te zien. Logs zijn vooral nuttig voor mislukte looppas om te zien wat verkeerd ging.
-   ![](../images/models-recipes/train-evaluate-ui/activity_logs.png)
+De &quot;precisiemetrie&quot; beschrijft het percentage relevante instanties in vergelijking met het totaal *opgehaalde* Instanties. Precisie kan worden gezien als de waarschijnlijkheid dat een willekeurig gekozen resultaat correct is.
 
-3. Hyperparameters kunnen niet worden getraind en een model moet worden geoptimaliseerd door verschillende combinaties van Hyperparameters te testen. Herhaal dit training- en evaluatieproces voor het model totdat u tot een geoptimaliseerd model bent gekomen.
+![uitvoeren, meerdere uitvoering](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
+
+Het selecteren van een specifieke trainingslooppas verstrekt de details van die looppas door de evaluatiepagina te openen. Dit kan zelfs worden gedaan alvorens de looppas is voltooid. Op de evaluatiepagina, kunt u andere evaluatiemetriek, configuratieparameters, en visualisaties zien specifiek voor de trainingslooppas.
+
+![voorbeeldlogboeken](../images/models-recipes/train-evaluate-ui/evaluate_training.png)
+
+U kunt activiteitenlogboeken ook downloaden om de details van de looppas te zien. Logs zijn vooral nuttig voor mislukte looppas om te zien wat verkeerd ging.
+
+![activiteitenlogboeken](../images/models-recipes/train-evaluate-ui/activity_logs.png)
+
+Hyperparameters kunnen niet worden getraind en een model moet worden geoptimaliseerd door verschillende combinaties van Hyperparameters te testen. Herhaal dit training- en evaluatieproces voor het model totdat u tot een geoptimaliseerd model bent gekomen.
 
 ## Volgende stappen
 
