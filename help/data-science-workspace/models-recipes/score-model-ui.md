@@ -2,13 +2,13 @@
 keywords: Experience Platform;score een model;De Werkruimte van de Wetenschap van Gegevens;populaire onderwerpen;ui;scoring looppas;scores resultaten
 solution: Experience Platform
 title: Score een Model in de Werkruimte van de Wetenschap van Gegevens UI
-topic: tutorial
-type: Tutorial
+topic: zelfstudie
+type: Zelfstudie
 description: 'Scores in de Adobe Experience Platform Data Science Workspace kunnen worden bereikt door invoergegevens in te voeren in een bestaand getraind model. De resultaten van het scoren worden dan opgeslagen en viewable in een gespecificeerde outputdataset als nieuwe partij. '
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 7feda18351061600b05dc7be8afbbfb9a0fa7ec1
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '621'
 ht-degree: 0%
 
 ---
@@ -30,38 +30,70 @@ Voor deze zelfstudie is een getraind model vereist. Als u geen getraind Model he
 
 Er wordt een scoring-run gemaakt met geoptimaliseerde configuraties van een eerder voltooide en geëvalueerde training. De reeks optimale configuraties voor een Model wordt typisch bepaald door de metriek van de evaluatie van de opleidingslooppas te herzien.
 
-1. Vind de meest optimale trainingslooppas om zijn configuraties voor het scoren te gebruiken. Open de gewenste trainingsrun door op de naam ervan te klikken.
+Vind de meest optimale trainingslooppas om zijn configuraties voor het scoren te gebruiken. Open vervolgens de gewenste trainingsrun door de hyperlink te selecteren die aan de naam is gekoppeld.
 
-2. Klik op het tabblad Evaluatie **[!UICONTROL Evaluatie]** op de knop **[!UICONTROL Score]** rechtsboven in het scherm. Hiermee wordt een nieuwe **Run Scoring**-workflow gestart.
-   ![](../images/models-recipes/score/training_run_overview.png)
+![Trainingsrun selecteren](../images/models-recipes/score/select-run.png)
 
-3. Selecteer de gegevensset voor het noteren van de invoer en klik op **[!UICONTROL Next]**.
-   ![](../images/models-recipes/score/scoring_input.png)
+Selecteer **[!UICONTROL Score]** in de tabel **[!UICONTROL Evaluation]** van de trainingsrun rechtsboven in het scherm. Er wordt een nieuwe workflow voor scoren gestart.
 
-4. Selecteer de output die dataset noteert, is dit de specifieke outputdataset waar de het scoren resultaten worden opgeslagen. Bevestig uw selectie en klik **[!UICONTROL Next]**.
-   ![](../images/models-recipes/score/scoring_results.png)
+![](../images/models-recipes/score/training_run_overview.png)
 
-5. In de laatste stap in de workflow wordt u gevraagd uw scoring uit te voeren. Deze configuraties worden gebruikt door het Model voor de scoring looppas.
-U kunt overgeërfde parameters die tijdens het maken van het model zijn ingesteld, niet verwijderen. U kunt niet-overgeërfde parameters bewerken of herstellen door te dubbelklikken op de waarde of te klikken op het pictogram Omkeren terwijl u de muisaanwijzer op de invoer plaatst.
-   ![](../images/models-recipes/score/configuration.png)
-Controleer en bevestig de scoreconfiguraties en klik op  ****  Voltooien om de scoring uit te voeren en te maken. U wordt omgeleid naar het tabblad **[!UICONTROL Score Runs]** en de nieuwe scoring run geeft een status.
-   ![](../images/models-recipes/score/scoring_runs_tab.png)
-In een scoring worden de volgende statussen weergegeven: In behandeling, Voltooid, Mislukt of Running en worden automatisch bijgewerkt. Ga naar de volgende stap als de status &quot;Voltooid&quot; of &quot;Mislukt&quot; is.
+Selecteer de gegevensset voor het invoeren van de score en selecteer **[!UICONTROL Next]**.
+
+![](../images/models-recipes/score/scoring_input.png)
+
+Selecteer de output die dataset noteert, is dit de specifieke outputdataset waar de het scoren resultaten worden opgeslagen. Bevestig uw selectie en selecteer **[!UICONTROL Next]**.
+
+![](../images/models-recipes/score/scoring_results.png)
+
+In de laatste stap in de workflow wordt u gevraagd uw scoring uit te voeren. Deze configuraties worden gebruikt door het model voor het scoren looppas.
+U kunt overgeërfde parameters die tijdens het maken van modellen zijn ingesteld, niet verwijderen. U kunt niet-overgeërfde parameters bewerken of herstellen door te dubbelklikken op de waarde of het pictogram Omkeren te selecteren terwijl u de muisaanwijzer op de invoer plaatst.
+
+![configuratie](../images/models-recipes/score/configuration.png)
+
+Controleer en bevestig de scoreconfiguraties en selecteer **[!UICONTROL Finish]** om de scoring-run te maken en uit te voeren. U wordt naar het tabblad **[!UICONTROL Scoring Runs]** geleid en de nieuwe scoringstijd met de status **[!UICONTROL Pending]** wordt weergegeven.
+
+![tabblad scores](../images/models-recipes/score/scoring_runs_tab.png)
+
+Een scoring kan worden weergegeven met een van de volgende statussen:
+- In behandeling
+- Voltooid
+- Mislukt
+- Wordt uitgevoerd
+
+Statussen worden automatisch bijgewerkt. Ga naar de volgende stap als de status **[!UICONTROL Complete]** of **[!UICONTROL Failed]** is.
 
 ## De resultaten van scores weergeven
 
-1. Vind de trainingslooppas die voor de het scoren looppas werd gebruikt, en klik op de naam om zijn **[!UICONTROL Evaluatie]** pagina te bekijken.
+Als u de resultaten van scores wilt weergeven, selecteert u eerst een trainingsprogramma.
 
-2. Klik boven aan de evaluatiepagina van de trainingsrun op het tabblad **[!UICONTROL Scores uitvoeren]** om een lijst met bestaande scoring-runtime weer te geven. Klik op het scoreningoverzicht om de details ervan in de rechterkolom weer te geven.
-   ![](../images/models-recipes/score/view_details.png)
+![Trainingsrun selecteren](../images/models-recipes/score/select-run.png)
 
-3. Als de geselecteerde scoring-run de status &quot;Voltooid&quot; of &quot;Mislukt&quot; heeft, is de koppeling **[!UICONTROL Activiteitenlogboeken weergeven]** in de rechterkolom actief. Klik op de koppeling om de uitvoeringslogboeken weer te geven of te downloaden. Als een scoring is mislukt, kunnen de uitvoeringslogboeken nuttige informatie bevatten over de oorzaak van de fout.
-   ![](../images/models-recipes/score/activity_logs.png)
+U wordt omgeleid aan de trainingslooppas **[!UICONTROL Evaluation]** pagina. Selecteer boven aan de evaluatiepagina van de trainingsrun het tabblad **[!UICONTROL Scoring Runs]** om een lijst met bestaande scoring-run weer te geven.
 
-4. Klik op de koppeling **[!UICONTROL Voorvertoning van het scorebordresultaat Dataset]** in de rechterkolom. U zult een voorproef van de outputdataset van de het scoren looppas kunnen zien.
-   ![](../images/models-recipes/score/preview_results.png)
+![evaluatiepagina](../images/models-recipes/score/view_scoring_runs.png)
 
-5. Voor de volledige reeks het scoren resultaten, klik op **[!UICONTROL het Scoreren Dataset van Resultaten]** in de juiste kolom wordt gevonden die.
+Selecteer vervolgens een scoring om de uitvoergegevens weer te geven.
+
+![details uitvoeren](../images/models-recipes/score/view_details.png)
+
+Als de geselecteerde scoring-run de status &quot;Voltooid&quot; of &quot;Mislukt&quot; heeft, wordt de koppeling **[!UICONTROL View Activity Logs]** beschikbaar gesteld. Als een scoring mislukt, kunnen uitvoeringslogboeken nuttige informatie bevatten om de oorzaak van de fout te bepalen. Selecteer **[!UICONTROL View Activity Logs]** om de uitvoeringslogboeken te downloaden.
+
+![Weergavelogboeken selecteren](../images/models-recipes/score/view_logs.png)
+
+De pop-up **[!UICONTROL View activity logs]** wordt weergegeven. Selecteer een URL om de bijbehorende logboeken automatisch te downloaden.
+
+![](../images/models-recipes/score/activity_logs.png)
+
+U kunt ook de resultaten van uw scoring weergeven door **[!UICONTROL Preview scoring results dataset]** te selecteren.
+
+![Voorvertoningsresultaten selecteren](../images/models-recipes/score/view_results.png)
+
+Er wordt een voorvertoning van de uitvoergegevensset weergegeven.
+
+![voorbeeldresultaten](../images/models-recipes/score/preview_results.png)
+
+Voor de volledige reeks het scoren resultaten, selecteer **[!UICONTROL Scoring Results Dataset]** verbinding die in de juiste kolom wordt gevonden.
 
 ## Volgende stappen
 
