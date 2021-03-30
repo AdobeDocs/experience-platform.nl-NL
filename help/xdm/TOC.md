@@ -6,9 +6,9 @@ breadcrumb-title: Handleiding Experience Data Model (XDM)
 user-guide-description: Gebruik XDM-klassen (Experience Data Model) en -mixen om ervaringsgegevens te standaardiseren.
 feature: Schemas
 translation-type: tm+mt
-source-git-commit: b99af98c99a75863ed8e8408841d93aa17d61ae0
+source-git-commit: 27cdb65c846293d7edce340e1cb5a360c0e40604
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '236'
 ht-degree: 6%
 
 ---
@@ -22,12 +22,6 @@ ht-degree: 6%
    * [Aanbevolen procedures voor gegevensmodellering](schema/best-practices.md)
    * [Beperkingen voor XDM-veldtypen](schema/field-constraints.md)
    * [XDM-veldwoordenboek](schema/field-dictionary.md)
-   * Industriële gegevensmodellen {#industries}
-      * [Overzicht](./schema/industries/overview.md)
-      * [Detailgegevensmodel ERD](./schema/industries/retail.md)
-      * [Gegevensmodel financiële diensten ERD](./schema/industries/financial.md)
-      * [Gegevensmodel reis- en gastvrijheid ERD](./schema/industries/travel-hospitality.md)
-      * [Telecommunicatiegegevensmodel ERD](./schema/industries/telecom.md)
 * Klassen {#classes}
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -71,7 +65,7 @@ ht-degree: 6%
    * [Abonnement](./data-types/subscription.md)
    * [Webinteractie](./data-types/web-interactions.md)
    * [Webpaginadetails](./data-types/webpage-details.md)
-* [!UICONTROL Schemas] UI  {#ui}
+* [!UICONTROL Schemas] Gebruikersinterface {#ui}
    * [Overzicht](./ui/overview.md)
    * [XDM-bronnen verkennen](./ui/explore.md)
    * Bronnen maken en bewerken {#resources}
