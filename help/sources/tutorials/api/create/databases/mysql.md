@@ -2,23 +2,19 @@
 keywords: Experience Platform;home;populaire onderwerpen;MySQL;mysql
 solution: Experience Platform
 title: Creeer een MySQL BronVerbinding Gebruikend de Dienst API van de Stroom
-topic: overview
+topic: overzicht
 type: Tutorial
 description: Leer hoe u Adobe Experience Platform met MySQL kunt verbinden met behulp van de Flow Service API.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '565'
 ht-degree: 1%
 
 ---
 
 
 # Een MySQL-bronverbinding maken met de API [!DNL Flow Service]
-
->[!NOTE]
->
->De MySQL-connector is in bèta. Zie [Bronoverzicht](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
