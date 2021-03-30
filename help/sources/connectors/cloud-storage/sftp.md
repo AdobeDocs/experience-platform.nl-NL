@@ -2,22 +2,18 @@
 keywords: Experience Platform;home;populaire onderwerpen;SFTP;sftp
 solution: Experience Platform
 title: Overzicht van SFTP-bronconnector
-topic: ' - overzicht'
+topic: overzicht
 description: Leer hoe u een SFTP-server verbindt met Adobe Experience Platform via API's of de gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
+source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
 
 
-# (Beta) SFTP-connector
-
->[!NOTE]
->
->De SFTP-connector bevindt zich in bèta. Zie [Bronoverzicht](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+# SFTP-aansluiting
 
 Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform] en [!DNL Azure], zodat u uw gegevens van deze systemen kunt overbrengen.
 
