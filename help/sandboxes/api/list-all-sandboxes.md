@@ -5,7 +5,7 @@ title: Sandboxen weergeven in de API
 topic: ontwikkelaarsgids
 description: Als u alle sandboxen wilt weergeven die tot uw IMS-organisatie behoren (actief of anderszins), vraagt u een GET aan bij het eindpunt /sandboxen.
 translation-type: tm+mt
-source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
@@ -35,6 +35,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwoord**
