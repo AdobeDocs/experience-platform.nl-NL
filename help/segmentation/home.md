@@ -2,12 +2,12 @@
 keywords: Experience Platform;huis;populaire onderwerpen;segmentatie;Segmentatie;segmentservice;segment;Segment;Segmenten;segmenten
 solution: Experience Platform
 title: Overzicht van segmentatieservice
-topic: overview
+topic: overzicht
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 translation-type: tm+mt
-source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
+source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,12 @@ Lees de [streamingsegmentatiedocumentatie](./api/streaming-segmentation.md) voor
 Als alternatief voor een lopend proces van de gegevensselectie, verplaatst de partijsegmentatie alle profielgegevens in één keer door segmentdefinities om het overeenkomstige publiek te veroorzaken. Zodra gecreeerd, wordt dit segment bewaard en opgeslagen zodat u het voor gebruik kunt uitvoeren.
 
 Leren hoe te om segmenten te evalueren zie [segment evaluatiezelfstudie](./tutorials/evaluate-a-segment.md).
+
+### Randsegmentatie
+
+De segmentatie van de rand is de capaciteit om segmenten in Platform op de rand onmiddellijk te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
+
+Voor meer informatie over randsegmentatie leest u de [API-documentatie](./api/edge-segmentation.md) of de [UI-documentatie](./ui/edge-segmentation.md).
 
 ## Toegang tot segmenteringsresultaten
 
