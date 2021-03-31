@@ -5,9 +5,9 @@ title: Overzicht van sandboxen
 topic: overzicht
 description: Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken.
 translation-type: tm+mt
-source-git-commit: ee2fb54ba59f22a1ace56a6afd78277baba5271e
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,9 @@ Dit document biedt een overzicht op hoog niveau van sandboxen in Experience Plat
 
 ## Sandboxen
 
->[!NOTE]
->
->De functie Meerdere productiesandboxen is in bèta.
+Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken. Een instantie van het Experience Platform steunt één productie zandbak en veelvoudige niet productiesandboxen, waarbij elke zandbak zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.) handhaaft.  Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen.
 
-Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken. Een instantie van het Experience Platform steunt veelvoudige productie en niet productie zandbakken, waarbij elke zandbak zijn eigen onafhankelijke bibliotheek van de middelen van het Platform (met inbegrip van schema&#39;s, datasets, profielen, etc.) handhaaft. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen.
-
-Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op de productiesandbox. Bovendien beschikken zowel productie- als niet-productie-sandboxen over een functie voor het opnieuw instellen die alle door de klant gemaakte bronnen uit de sandbox verwijdert. Niet-productiesandboxen kunnen niet worden omgezet in productiesandboxen. Een standaardlicentie voor Experience Platforms geeft u vijf sandboxen (één productie en vier niet-productie). U kunt in totaal maximaal 75 sandboxen aan pakketten van tien sandboxen toevoegen. Deze extra sandboxen kunnen worden gebruikt om zowel productie- als niet-productie-sandboxen te maken. Neem voor meer informatie contact op met uw IMS Org Administrator of uw Adobe-vertegenwoordiger.
+Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op de productiesandbox. Daarnaast beschikken niet-productiesandboxen over een functie voor het opnieuw instellen die alle door de klant gemaakte bronnen uit de sandbox verwijdert. Niet-productiesandboxen kunnen niet worden omgezet in productiesandboxen. Een standaardlicentie voor Experience Platforms geeft u vijf sandboxen (één productie en vier niet-productie). U kunt in totaal maximaal 75 sandboxen toevoegen aan pakketten van tien niet-productiesandboxen. Neem voor meer informatie contact op met uw IMS Org Administrator of uw Adobe-vertegenwoordiger.
 
 >[!NOTE]
 >
@@ -45,7 +41,7 @@ Samengevat bieden sandboxen de volgende voordelen:
 
 Standaard hebben alle gebruikers van een organisatie toegang tot een productiesandbox. Toegang tot niet-productie sandboxen moet worden verleend door een systeembeheerder, productbeheerder of productprofielbeheerder via de [Adobe Admin Console](https://adminconsole.adobe.com).
 
-Voor het weergeven, maken, bijwerken of verwijderen van productie- en niet-productiesandboxen moeten gebruikers ook de bevoegdheden van Sandbox Administration hebben.
+Voor het weergeven, maken, bijwerken of verwijderen van niet-productiesandboxen moeten gebruikers ook de bevoegdheden van Sandbox-beheer hebben.
 
 Voor meer informatie over het beheren van rollen en toestemmingen voor zandbakken, zie [toegangsbeheer overzicht](../access-control/home.md).
 
