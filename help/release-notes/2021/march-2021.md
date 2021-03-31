@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 523e09b9af19b1deb01a69be0673b9a17084b7e4
+source-git-commit: 58382528cc787e8d2005c8c322904266880ad0b9
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '550'
 ht-degree: 2%
 
 ---
@@ -43,7 +43,7 @@ Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| (Bèta) Meerdere productiesandboxen | U kunt nu meerdere productiesandboxen maken en beheren in uw IMS-organisatie en specifieke productiesandboxen toewijzen aan afzonderlijke bedrijfsonderdelen, merken, projecten of regio&#39;s. Zie de zelfstudies over het maken van een productiestandaard [in de gebruikersinterface](../../sandboxes/ui/user-guide.md) of [met behulp van de API](../../sandboxes/api/create-sandbox.md) voor meer informatie. |
+| (Bèta) Meerdere productiesandboxen | U kunt nu meerdere productiesandboxen maken en beheren in uw IMS-organisatie en specifieke productiesandboxen toewijzen aan afzonderlijke bedrijfsonderdelen, merken, projecten of regio&#39;s. Zie de zelfstudies over het maken van een productiesandbox [in de gebruikersinterface](../../sandboxes/ui/user-guide.md) of [met behulp van de API](../../sandboxes/api/create-sandbox.md) voor meer informatie. |
 
 Zie het [overzicht van sandboxen](../../sandboxes/home.md) voor meer informatie over sandboxen.
 
