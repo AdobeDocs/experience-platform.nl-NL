@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 58382528cc787e8d2005c8c322904266880ad0b9
+source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '422'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,6 @@ ht-degree: 2%
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
-- [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -34,18 +33,6 @@ Updates voor bestaande functies in Adobe Experience Platform:
 | `to_array` -functie | Bijgewerkte functionaliteit om objecten als parameter te ondersteunen. |
 
 Zie [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie.
-
-## [!DNL Sandboxes] {#sandboxes}
-
-Adobe Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen.
-
-Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| (Bèta) Meerdere productiesandboxen | U kunt nu meerdere productiesandboxen maken en beheren in uw IMS-organisatie en specifieke productiesandboxen toewijzen aan afzonderlijke bedrijfsonderdelen, merken, projecten of regio&#39;s. Zie de zelfstudies over het maken van een productiesandbox [in de gebruikersinterface](../../sandboxes/ui/user-guide.md) of [met behulp van de API](../../sandboxes/api/create-sandbox.md) voor meer informatie. |
-
-Zie het [overzicht van sandboxen](../../sandboxes/home.md) voor meer informatie over sandboxen.
 
 ## Segmenteringsservice {#segmentation}
 
