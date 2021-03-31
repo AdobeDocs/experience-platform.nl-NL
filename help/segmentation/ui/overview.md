@@ -2,12 +2,12 @@
 keywords: Experience Platform;huis;populaire onderwerpen;de Dienst van de segmentatie;segmentatie;de segmenteringsdienst;gebruikersgids;ui gids;segmentation ui gids;segmentbouwer;Segmentbouwer;gerealiseerd;bestaand;het weggaan;
 solution: Experience Platform
 title: UI-gids voor segmentatieservice
-topic: ui guide
+topic: ui-hulplijn
 description: Adobe Experience Platform Segmentation Service biedt een gebruikersinterface voor het maken en beheren van segmentdefinities.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 1634466d3a1d8eadc4c98bb93214d8772b6a47a3
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1481'
 ht-degree: 0%
 
 ---
@@ -32,19 +32,19 @@ Het is ook belangrijk om twee belangrijke termen te kennen die in dit document w
 
 ## Overzicht
 
-Selecteer **[!UICONTROL Segmenten]** in de linkernavigatie in [[!DNL Experience Platform] UI](http://platform.adobe.com/) om het tabblad **[!UICONTROL Overzicht]** te openen. Dit tabblad bevat koppelingen naar documentatie en video&#39;s waarmee u segmenten kunt begrijpen en bewerken.
+Selecteer **[!UICONTROL Segments]** in de linkernavigatie in [[!DNL Experience Platform] UI](http://platform.adobe.com/) om het tabblad **[!UICONTROL Overview]** te openen. Dit tabblad bevat koppelingen naar documentatie en video&#39;s waarmee u segmenten kunt begrijpen en bewerken.
 
 ![](../images/ui/overview/segment-overview.png)
 
 ## Bladeren
 
-Selecteer **[!UICONTROL Browse]** lusje om een lijst van alle segmentdefinities voor uw IMS Organisatie te zien.
+Selecteer het tabblad **[!UICONTROL Browse]** om een lijst weer te geven met alle segmentdefinities voor uw IMS-organisatie.
 
 ![](../images/ui/overview/segment-browse-all.png)
 
 Deze mening maakt een lijst van informatie over de segmentdefinitie met inbegrip van de uitsplitsing, de koeling, de profieltelling, de evaluatiemethode, gecreeerd datum, en laatst gewijzigde datum.
 
-De uitsplitsing toont een staafgrafiek die het percentage van profielen schetst die tot elk van de volgende statussen behoren: [!UICONTROL Ingevoerd], [!UICONTROL Realized] en [!UICONTROL Afsluiten].
+De uitsplitsing toont een staafgrafiek die het percentage van profielen schetst die tot elk van de volgende statussen behoren: [!UICONTROL Entered], [!UICONTROL Realized] en [!UICONTROL Exiting].
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
@@ -62,9 +62,9 @@ De evaluatiemethode kan streaming of batch zijn. Streaming segmenten worden voor
 
 Boven aan de pagina staan opties voor het toevoegen van alle segmenten aan een schema en het maken van een nieuw segment.
 
-Als u **[!UICONTROL Alle segmenten toevoegen aan schema]** schakelt, wordt de geplande segmentatie ingeschakeld. Meer informatie over geplande segmentatie kan in [geplande segmenteringssectie van dit gebruikershandboek](#scheduled-segmentation) worden gevonden.
+Als u **[!UICONTROL Add all segments to schedule]** in-/uitschakelt, wordt de geplande segmentatie ingeschakeld. Meer informatie over geplande segmentatie kan in [geplande segmenteringssectie van dit gebruikershandboek](#scheduled-segmentation) worden gevonden.
 
-Als u **[!UICONTROL Segment maken]** selecteert, gaat u naar de Segment Builder. Lees voor meer informatie over het maken van segmenten de sectie over [het maken van een segment in de gebruikershandleiding](#create-segment).
+Als u **[!UICONTROL Create segment]** selecteert, gaat u naar de Segment Builder. Lees voor meer informatie over het maken van segmenten de sectie over [het maken van een segment in de gebruikershandleiding](#create-segment).
 
 ![](../images/ui/overview/segment-browse-top.png)
 
@@ -86,19 +86,19 @@ De pagina met segmentdetails wordt weergegeven. Bovenaan, is er een samenvatting
 
 ### Overzicht van segment
 
-De sectie **[!UICONTROL Segmentoverzicht]** bevat informatie zoals de id, naam, beschrijving en details van de kenmerken.
+De sectie **[!UICONTROL Segment summary]** bevat informatie zoals de id, naam, beschrijving en details van de kenmerken.
 
-Bovendien kunt u het segment bewerken. Als u **[!UICONTROL Segment bewerken]** selecteert, wordt de [!DNL Segment Builder] weergegeven. Lees de [[!DNL Segment Builder] gebruikershandleiding](./segment-builder.md) voor meer informatie over het gebruik van de [!DNL Segment Builder]-werkruimte.
+Bovendien kunt u het segment bewerken. Als u **[!UICONTROL Edit segment]** selecteert, wordt de [!DNL Segment Builder] weergegeven. Lees de [[!DNL Segment Builder] gebruikershandleiding](./segment-builder.md) voor meer informatie over het gebruik van de [!DNL Segment Builder]-werkruimte.
 
 ### Totaal aantal deelnemers in segment
 
-Het **[!UICONTROL Totale publiek in segment]** sectie toont het totale aantal profielen die voor het segment kwalificeren.
+In de sectie **[!UICONTROL Total audience in segment]** wordt het totale aantal profielen weergegeven dat in aanmerking komt voor het segment.
 
 Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de samplegegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt. voor tussen 1 en 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5 % van de totale entiteiten gebruikt . Meer informatie over het produceren van segmentramingen kan in [schattingsgeneratiesectie](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van het de schepingsleerprogramma van het segment worden gevonden.
 
 ### Geactiveerde doelen
 
-De **[!UICONTROL Geactiveerde bestemmingen]** sectie toont de bestemmingen dat dit segment voor wordt geactiveerd.
+De **[!UICONTROL Activated destinations]** sectie toont de bestemmingen dat dit segment voor wordt geactiveerd.
 
 >[!NOTE]
 >
@@ -128,7 +128,7 @@ Meer gedetailleerde informatie over elke [!DNL Profile] kan worden gezien door [
 
 ## Segment maken {#create-segment}
 
-Als u **[!UICONTROL Segment maken]** in de rechterbovenhoek selecteert, wordt de werkruimte [!DNL Segment Builder] geopend en kunt u beginnen met het maken van een segmentdefinitie.
+Als u **[!UICONTROL Create segment]** in de rechterbovenhoek selecteert, wordt de werkruimte [!DNL Segment Builder] geopend, waar u kunt beginnen met het maken van een segmentdefinitie.
 
 ![](../images/ui/overview/segment-browse-create.png)
 
@@ -148,7 +148,7 @@ De evaluatie op bestelling impliceert het gebruiken van API om evaluatie uit te 
 
 ### Geplande segmentatie {#enable-scheduled-segmentation} inschakelen
 
-Het toelaten van uw segmentdefinities voor geplande evaluatie kan worden gedaan gebruikend UI of API. In UI, terugkeer aan **[!UICONTROL Browse]** lusje binnen **[!UICONTROL Segmenten]** en knevel op **[!UICONTROL voeg alle segmenten aan programma]** toe. Dit zal ertoe leiden dat alle segmenten worden geëvalueerd gebaseerd op het programma dat door uw organisatie wordt geplaatst.
+Het toelaten van uw segmentdefinities voor geplande evaluatie kan worden gedaan gebruikend UI of API. Ga in de gebruikersinterface terug naar het tabblad **[!UICONTROL Browse]** in **[!UICONTROL Segments]** en schakel **[!UICONTROL Add all segments to schedule]** in. Dit zal ertoe leiden dat alle segmenten worden geëvalueerd gebaseerd op het programma dat door uw organisatie wordt geplaatst.
 
 >[!NOTE]
 >
@@ -167,6 +167,12 @@ Meer informatie over streamingsegmentatie vindt u in de [gebruikershandleiding v
 >[!NOTE]
 >
 >Opdat het stromen segmentatie aan het werk is, zult u geplande segmentatie voor de organisatie moeten toelaten. Voor meer informatie over het inschakelen van geplande segmentatie raadpleegt u [de sectie over streamingsegmentatie in deze gebruikershandleiding](#scheduled-segmentation).
+
+## Randsegmentatie {#edge-segmentation}
+
+De segmentatie van de rand is de capaciteit om segmenten in Platform op de rand onmiddellijk te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
+
+Meer informatie over randsegmentatie vindt u in de [UI-hulplijn voor segmentatie van randen](./edge-segmentation.md)
 
 ## Beleidsovertredingen
 
