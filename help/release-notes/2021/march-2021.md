@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 0192c951a288cc1e0891a12ba9eff32aea120518
+source-git-commit: 523e09b9af19b1deb01a69be0673b9a17084b7e4
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '554'
 ht-degree: 2%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 2%
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -33,6 +34,18 @@ Updates voor bestaande functies in Adobe Experience Platform:
 | `to_array` -functie | Bijgewerkte functionaliteit om objecten als parameter te ondersteunen. |
 
 Zie [[!DNL Data Prep] overzicht](../../data-prep/home.md) voor meer informatie.
+
+## [!DNL Sandboxes] {#sandboxes}
+
+Adobe Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven voeren vaak meerdere digitale-ervaringstoepassingen parallel uit en moeten rekening houden met de ontwikkeling, het testen en de implementatie van deze toepassingen en tegelijk de operationele compatibiliteit garanderen.
+
+Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| (Bèta) Meerdere productiesandboxen | U kunt nu meerdere productiesandboxen maken en beheren in uw IMS-organisatie en specifieke productiesandboxen toewijzen aan afzonderlijke bedrijfsonderdelen, merken, projecten of regio&#39;s. Zie de zelfstudies over het maken van een productiestandaard [in de gebruikersinterface](../../sandboxes/ui/user-guide.md) of [met behulp van de API](../../sandboxes/api/create-sandbox.md) voor meer informatie. |
+
+Zie het [overzicht van sandboxen](../../sandboxes/home.md) voor meer informatie over sandboxen.
 
 ## Segmenteringsservice {#segmentation}
 
@@ -54,8 +67,6 @@ Voor meer informatie over [!DNL Segmentation Service], te zien gelieve [Segmenta
 Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van services voor Platforms. U kunt gegevens van een verscheidenheid van bronnen zoals Adobe toepassingen, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
 
 Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
-
-De volgende updates van bronnen zijn opgenomen in de release van Experience Platform van maart 2021:
 
 | Functie | Beschrijving |
 | ------- | ----------- |
