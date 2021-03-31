@@ -5,9 +5,9 @@ title: Gebruiksaanwijzing voor sandbox
 topic: gebruikershandleiding
 description: Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met betrekking tot sandboxen in de Adobe Experience Platform-gebruikersinterface.
 translation-type: tm+mt
-source-git-commit: ee2fb54ba59f22a1ace56a6afd78277baba5271e
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -45,67 +45,65 @@ U kunt door de lijst van zandbakken navigeren beschikbaar aan u door de onderzoe
 
 ## Een nieuwe sandbox maken
 
->[!NOTE]
->
->De functie Meerdere productiesandboxen is in bèta.
-
 Gebruik de volgende video voor een snel overzicht van het gebruik van sandboxen in Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-Als u een nieuwe sandbox wilt maken, selecteert u de knop **[!UICONTROL Create Sandbox]** rechtsboven in het scherm.
+Als u een nieuwe sandbox in de UI wilt maken, selecteert u de knop **[!UICONTROL Create Sandbox]** rechtsboven in het scherm.
 
 ![](../images/ui/create-sandbox.png)
 
-Het dialoogvenster **[!UICONTROL Create Sandbox]** wordt weergegeven en u wordt gevraagd een type, een titel en een naam voor de sandbox op te geven. Als u een ontwikkelingssandbox maakt, selecteert u **[!UICONTROL Development]** in het vervolgkeuzevenster dat wordt weergegeven. Selecteer **[!UICONTROL Production]** als u een productiesandbox maakt.
-
-De titel moet leesbaar zijn en moet beschrijvend genoeg zijn om gemakkelijk te kunnen worden herkend. De naam van de sandbox is een id in kleine letters voor gebruik in API-aanroepen en moet daarom uniek en beknopt zijn. De naam van de sandbox mag alleen bestaan uit alfanumerieke tekens en afbreekstreepjes (`-`), moet beginnen met een letter en mag niet langer zijn dan 256 tekens.
+Het dialoogvenster **[!UICONTROL Create Sandbox]** wordt weergegeven en u wordt gevraagd een weergavetoetitel en naam voor de sandbox op te geven. De **weergavetitel** moet leesbaar zijn en moet beschrijvend genoeg zijn om gemakkelijk te kunnen worden herkend. De sandbox **[!UICONTROL Name]** is een id in kleine letters voor gebruik in API-aanroepen en moet daarom uniek en beknopt zijn. De sandbox **[!UICONTROL Name]** mag alleen bestaan uit alfanumerieke tekens en afbreekstreepjes **(-)**, moet beginnen met een letter en mag niet langer zijn dan 256 tekens.
 
 Selecteer **[!UICONTROL Create]** als u klaar bent.
 
 ![](../images/ui/create-dialog.png)
 
+>[!NOTE]
+>
+>Aangezien u beperkt bent tot het maken van alleen niet-productie sandboxtypen, is de optie **[!UICONTROL type]** vergrendeld bij &quot;Niet-productie&quot; en kan deze niet worden gemanipuleerd.
+
 Nadat u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe sandbox in het dashboard **[!UICONTROL Sandboxes]** met de status &quot;[!UICONTROL Creating]&quot;. Nieuwe sandboxen nemen ongeveer 15 minuten in beslag om door het systeem te worden ingericht, waarna de status van deze sandboxen verandert in &quot;[!UICONTROL Active]&quot;.
+
+![](../images/ui/creating.png)
 
 ## Een sandbox opnieuw instellen
 
 >[!NOTE]
 >
->U kunt elke productie- of ontwikkelingssandbox in uw organisatie opnieuw instellen, met uitzondering van de standaardproductiesandbox.
+>Deze functionaliteit is alleen beschikbaar voor niet-productiesandboxen. Productiesandboxen kunnen niet opnieuw worden ingesteld.
 
-Als u een productie- of ontwikkelingssandbox opnieuw instelt, worden alle bronnen verwijderd die aan die sandbox zijn gekoppeld (schema&#39;s, gegevenssets, enzovoort), terwijl de naam van de sandbox en de bijbehorende machtigingen behouden blijven. Deze &#39;schone&#39; sandbox blijft onder dezelfde naam beschikbaar voor gebruikers die er toegang toe hebben.
+Als u een niet-productiesandbox opnieuw instelt, worden alle bronnen verwijderd die aan die sandbox zijn gekoppeld (schema&#39;s, gegevenssets, enzovoort), terwijl de naam van de sandbox en de bijbehorende machtigingen behouden blijven. Deze &#39;schone&#39; sandbox blijft onder dezelfde naam beschikbaar voor gebruikers die er toegang toe hebben.
 
-Selecteer de sandbox die u wilt herstellen in de lijst met sandboxen. Selecteer **[!UICONTROL Sandbox reset]** in het rechternavigatievenster dat wordt weergegeven.
+Als u een sandbox in de UI opnieuw wilt instellen, selecteert u **[!UICONTROL Sandboxes]** in de linkernav en selecteert u vervolgens de sandbox die u opnieuw wilt instellen. Selecteer **[!UICONTROL Reset Sandbox]** in het dialoogvenster dat rechts op het scherm wordt weergegeven.
 
 ![](../images/ui/reset-sandbox.png)
 
-Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen. Selecteer **[!UICONTROL Continue]** om door te gaan.
+Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen. Selecteer **[!UICONTROL Reset]** om door te gaan.
 
 ![](../images/ui/reset-confirm.png)
 
-Voer in het laatste bevestigingsvenster de naam van de sandbox in het dialoogvenster in en selecteer **[!UICONTROL Reset]**
+Er wordt een bevestigingsbericht weergegeven en de status van de sandbox verandert in &quot;**[!UICONTROL Resetting]&quot;**. Zodra het door het systeem is voorzien, zal zijn staat aan **&quot;[!UICONTROL Active]&quot;** of **&quot;[!UICONTROL Failed]&quot;** bijwerken.
 
-![](../images/ui/reset-final-confirm.png)
+![](../images/ui/resetting.png)
 
 ## Een sandbox verwijderen
 
 >[!NOTE]
 >
->U kunt elke productie- of ontwikkelingssandbox in uw organisatie verwijderen, met uitzondering van de standaardproductiesandbox.
+>Deze functionaliteit is alleen beschikbaar voor niet-productiesandboxen. Productiesandboxen kunnen niet worden verwijderd.
 
-Als u een productie- of ontwikkelingssandbox verwijdert, worden alle bronnen die aan die sandbox zijn gekoppeld, inclusief de machtigingen, permanent verwijderd.
+Als u een niet-productiesandbox verwijdert, worden alle bronnen die aan die sandbox zijn gekoppeld, inclusief de machtigingen, permanent verwijderd.
 
-Selecteer de sandbox die u wilt verwijderen uit de lijst met sandboxen. Selecteer **[!UICONTROL Delete]** in het rechternavigatievenster dat wordt weergegeven.
+Als u een sandbox in de UI wilt verwijderen, selecteert u **[!UICONTROL Sandboxes]** in de linkernav en selecteert u vervolgens de sandbox die u wilt verwijderen. Selecteer **[!UICONTROL Delete Sandbox]** in het dialoogvenster dat rechts op het scherm wordt weergegeven.
 
 ![](../images/ui/delete-sandbox.png)
 
-Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen. Selecteer **[!UICONTROL Continue]** om door te gaan.
+Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen. Selecteer **[!UICONTROL Delete]** om door te gaan.
 
 ![](../images/ui/delete-confirm.png)
 
-Voer in het laatste bevestigingsvenster de naam van de sandbox in het dialoogvenster in en selecteer **[!UICONTROL Delete]**
-
-![](../images/ui/delete-final-confirm.png)
+Er wordt een bevestigingsbericht weergegeven en de sandbox wordt verwijderd uit de werkruimte **[!UICONTROL Sandboxes]**.
 
 ## Volgende stappen
 
