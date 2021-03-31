@@ -5,9 +5,9 @@ title: Overzicht van segmentatieservice
 topic: overzicht
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 738256021fb583e7dc14fd33f5df193813a6e0bb
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1499'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Het is belangrijk dat u de volgende belangrijke termen kent die in dit document 
 
 De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw profielopslag worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan.
 
-Zodra een segment conceptueel is bepaald wordt het gebouwd in [!DNL Experience Platform]. Doorgaans worden segmenten samengesteld door de marketeter of publieksspecialist, maar sommige organisaties geven de voorkeur aan het maken ervan door hun marketingafdeling, in samenwerking met hun gegevensanalisten. Bij het bekijken van de gegevens die naar [!DNL Platform] worden verzonden, stelt de gegevensanalist de segmentdefinitie samen door te selecteren welke gebieden en waarden zullen worden gebruikt om de regels of voorwaarden van het segment te bouwen. Dit wordt gedaan gebruikend of UI of API.
+Zodra een segment conceptueel is bepaald, wordt het gebouwd in [!DNL Experience Platform]. Doorgaans worden segmenten samengesteld door de marketeter of publieksspecialist, maar sommige organisaties geven de voorkeur aan het maken ervan door hun marketingafdeling, in samenwerking met hun gegevensanalisten. Bij het bekijken van de gegevens die naar [!DNL Platform] worden verzonden, stelt de gegevensanalist de segmentdefinitie samen door te selecteren welke gebieden en waarden zullen worden gebruikt om de regels of voorwaarden van het segment te bouwen. Dit wordt gedaan gebruikend of UI of API.
 
 ## Segmenten maken
 
@@ -58,6 +58,8 @@ Lees de [streamingsegmentatiedocumentatie](./api/streaming-segmentation.md) voor
 ### Batchsegmentatie
 
 Als alternatief voor een lopend proces van de gegevensselectie, verplaatst de partijsegmentatie alle profielgegevens in één keer door segmentdefinities om het overeenkomstige publiek te veroorzaken. Zodra gecreeerd, wordt dit segment bewaard en opgeslagen zodat u het voor gebruik kunt uitvoeren.
+
+Segmenten die met batchsegmentatie zijn geëvalueerd, worden om de 24 uur geëvalueerd. Nochtans, voor bestaande segmenten, houdt de stijgende segmentatie segmenten geëvalueerd gebruikend batch segmentatie vers voor maximaal een uur. Om het even welke nieuwe of onlangs gewijzigde segmenten zullen moeten wachten tot de volgende volledige baan van de partijsegmentatie is in werking gesteld om uit stijgende segmentatie voordeel te halen.
 
 Leren hoe te om segmenten te evalueren zie [segment evaluatiezelfstudie](./tutorials/evaluate-a-segment.md).
 
@@ -111,7 +113,7 @@ Deze geavanceerde functies worden in de volgende secties nader besproken.
 
 ## Opeenvolgende segmentatie {#sequential}
 
-Een standaardreis van de gebruiker is sequentieel van aard. Met Adobe Experience Platform kunt u een geordende reeks segmenten definiëren die deze reis weerspiegelen en zo sequenties van gebeurtenissen vastleggen zoals deze zich voordoen. U kunt gebeurtenissen in de gewenste volgorde rangschikken met de tijdlijn van de visuele gebeurtenis in [!DNL Segment Builder].
+Een standaardreis van de gebruiker is sequentieel van aard. Met Adobe Experience Platform kunt u een geordende reeks segmenten definiëren die deze reis weerspiegelen. Daarom kunt u sequenties van gebeurtenissen vastleggen zoals deze zich voordoen. U kunt gebeurtenissen in de gewenste volgorde rangschikken met de tijdlijn van de visuele gebeurtenis in [!DNL Segment Builder].
 
 Een voorbeeld van een klantenreis die opeenvolgende segmentatie zou vereisen zou productmening > product toevoegen > controle > Geen aankoop zijn.
 
@@ -137,7 +139,7 @@ Door een variabele toe te wijzen aan het attribuut van de koopstaat, vereenvoudi
 
 ## Segmentatie van meerdere entiteiten {#multi-entity}
 
-Met de geavanceerde functie voor segmentatie van meerdere entiteiten kunt u [!DNL Real-time Customer Profile]-gegevens uitbreiden met aanvullende gegevens op basis van producten, winkels of andere niet-personen, ook wel &#39;dimensie&#39;-entiteiten genoemd. Als gevolg hiervan heeft [!DNL Segmentation Service] tijdens de segmentdefinitie toegang tot extra velden alsof deze native zijn in de [!DNL Profile]-gegevensopslag. De segmentatie van meerdere entiteiten verstrekt flexibiliteit wanneer het identificeren van publiek dat op gegevens wordt gebaseerd relevant voor uw unieke bedrijfsbehoeften. Raadpleeg de [segmentatiehandleiding voor meerdere entiteiten](multi-entity-segmentation.md) voor meer informatie, zoals gebruiksgevallen en workflows.
+Met de geavanceerde functie voor segmentatie van meerdere entiteiten kunt u [!DNL Real-time Customer Profile]-gegevens uitbreiden met aanvullende gegevens die zijn gebaseerd op producten, winkels of andere niet-personen, ook wel &#39;dimensie&#39;-entiteiten genoemd. Als gevolg hiervan heeft [!DNL Segmentation Service] tijdens de segmentdefinitie toegang tot extra velden alsof deze native zijn in de [!DNL Profile]-gegevensopslag. De segmentatie van meerdere entiteiten verstrekt flexibiliteit wanneer het identificeren van publiek dat op gegevens wordt gebaseerd relevant voor uw unieke bedrijfsbehoeften. Raadpleeg de [segmentatiehandleiding voor meerdere entiteiten](multi-entity-segmentation.md) voor meer informatie, zoals gebruiksgevallen en workflows.
 
 ## [!DNL Segmentation Service] gegevenstypen
 
