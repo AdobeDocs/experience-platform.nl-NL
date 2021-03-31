@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 398e55f442a2c8ecab0c3d9315fbdd5c02946e45
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1136'
 ht-degree: 2%
 
 ---
@@ -75,7 +75,7 @@ Voor meer algemene informatie over gegevensstromen, verwijs naar [dataflows over
 
 | Bestemming | Beschrijving |
 | ----------- | ----------- |
-| [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | Met de verbinding [!DNL LinkedIn Matched Audiences] kunt u het publiek activeren op het sociale platform [!DNL LinkedIn]. |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | Met de verbinding [!DNL LinkedIn Matched Audiences] kunt u het publiek activeren op het sociale platform [!DNL LinkedIn]. |
 
 Voor meer algemene informatie over bestemmingen, verwijs naar [bestemmingen overzicht](../../destinations/home.md).
 
@@ -89,7 +89,7 @@ XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht
 
 | Functie | Beschrijving |
 | --- | --- |
-| Bijgewerkte zoekinterface | Verbeterde zoekmogelijkheden zijn nu beschikbaar op het tabblad [!UICONTROL Bladeren] in de werkruimte [!UICONTROL Schema&#39;s] en in het dialoogvenster voor gemengde selectie in [!DNL Schema Editor].<br><br>Wanneer het zoeken naar een termijn eerder, zouden de resultaten slechts XDM middelen omvatten de waarvan naam de onderzoeksvraag aanpast. Nu, naast middelen de waarvan naam de vraag aanpast, zullen de middelen die individuele attributen bevatten die de termijn aanpassen ook worden omvat. Dit staat u toe om naar middelen te zoeken XDM die op de attributen worden gebaseerd zij eerder dan door middelnaam bevatten.<br><br>Zie de documenten over het  [onderzoeken van ](../../xdm/ui/explore.md) middelen XDM en het  [beheren van ](../../xdm/ui/resources/schemas.md) schema&#39;s in UI voor meer informatie. |
+| Bijgewerkte zoekinterface | Verbeterde zoekmogelijkheden zijn nu beschikbaar op het tabblad [!UICONTROL Browse] in de werkruimte [!UICONTROL Schemas] en in het dialoogvenster voor gemengde selectie in [!DNL Schema Editor].<br><br>Wanneer het zoeken naar een termijn eerder, zouden de resultaten slechts XDM middelen omvatten de waarvan naam de onderzoeksvraag aanpast. Nu, naast middelen de waarvan naam de vraag aanpast, zullen de middelen die individuele attributen bevatten die de termijn aanpassen ook worden omvat. Dit staat u toe om naar middelen te zoeken XDM die op de attributen worden gebaseerd zij eerder dan door middelnaam bevatten.<br><br>Zie de documenten over het  [onderzoeken van ](../../xdm/ui/explore.md) middelen XDM en het  [beheren van ](../../xdm/ui/resources/schemas.md) schema&#39;s in UI voor meer informatie. |
 
 Voor meer algemene informatie over XDM, verwijs naar [XDM System overview](../../xdm/home.md).
 
