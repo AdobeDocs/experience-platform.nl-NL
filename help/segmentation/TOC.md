@@ -6,9 +6,9 @@ breadcrumb-title: Segmentatieservicehandleiding
 user-guide-description: Bouw segmenten en produceer publiek van uw gegevens van het Profiel van de Klant in real time.
 feature: Segmenten
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5839ab36a7d8f992e92c7f9eff8c58459c4c3260
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '162'
 ht-degree: 5%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 5%
 - Segmentatie-API {#api}
    - [Overzicht](api/overview.md)
    - [Aan de slag](api/getting-started.md)
+   - [Randsegmentatie](api/edge-segmentation.md)
    - [Exporttaken](api/export-jobs.md)
    - [Voorvertoningen en ramingen](api/previews-and-estimates.md)
    - [Planningen](api/schedules.md)
@@ -32,6 +33,7 @@ ht-degree: 5%
    - [Overzicht](ui/overview.md)
    - [Segmentdashboard](ui/segment-dashboard.md)
    - [Segment Builder](ui/segment-builder.md)
+   - [Randsegmentatie](ui/edge-segmentation.md)
    - [Streaming segmentering](ui/streaming-segmentation.md)
    - [Streaming segmentatie (video)](video/streaming-segmentation-overview.md)
    - [Tijd beperkingen refactoring](ui/segment-refactoring.md)
