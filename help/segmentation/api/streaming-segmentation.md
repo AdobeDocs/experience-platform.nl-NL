@@ -5,9 +5,9 @@ title: 'Evalueer Gebeurtenissen in Bijna Echt - tijd met het stromen Segmentatie
 topic: ontwikkelaarsgids
 description: Dit document bevat voorbeelden over het gebruik van streamingsegmentatie met de Adobe Experience Platform Segmentation Service-API.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: bb7edcaccca87918c56d00e092e4b7154d7c5d6e
 workflow-type: tm+mt
-source-wordcount: '1341'
+source-wordcount: '1342'
 ht-degree: 0%
 
 ---
@@ -403,6 +403,6 @@ Dezelfde bewerking kan worden gebruikt om een schema uit te schakelen door de wa
 
 ## Volgende stappen
 
-Nu u zowel nieuwe als bestaande segmenten voor het stromen segmentatie hebt toegelaten, en geplande segmentatie om een basislijn te ontwikkelen en terugkomende evaluaties uit te voeren toegelaten, kunt u beginnen om segmenten voor uw organisatie tot stand te brengen.
+Nu u zowel nieuwe als bestaande segmenten voor het stromen segmentatie hebt toegelaten, en geplande segmentatie toegelaten om een basislijn te ontwikkelen en terugkomende evaluaties uit te voeren, kunt u beginnen streaming-toegelaten segmenten voor uw organisatie tot stand te brengen.
 
 Als u wilt leren hoe u vergelijkbare acties kunt uitvoeren en met segmenten kunt werken via de Adobe Experience Platform-gebruikersinterface, gaat u naar de [gebruikersgids voor segmentBuilder](../ui/segment-builder.md).
