@@ -5,7 +5,7 @@ title: Basisbeginselen van de schemacompositie
 topic: overzicht
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 translation-type: tm+mt
-source-git-commit: 9a5618674946f67528de1b40609596dbb75ced0c
+source-git-commit: ae2c5f9fa4e732fefe55a8536894844986aea1e2
 workflow-type: tm+mt
 source-wordcount: '3461'
 ht-degree: 0%
@@ -165,7 +165,7 @@ Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als
 
 [!DNL Experience Platform] bevat een aantal gangbare gegevenstypen als onderdeel van het programma  [!DNL Schema Registry] ter ondersteuning van het gebruik van standaardpatronen voor het beschrijven van gemeenschappelijke gegevensstructuren. Dit wordt meer gedetailleerd uitgelegd in de [!DNL Schema Registry] zelfstudies, waar het duidelijker wordt wanneer u door de stappen gaat om gegevenstypen te definiëren.
 
-De volgende schermafbeelding toont hoe gegevenstypen worden weergegeven in de gebruikersinterface van het Platform. Een van de velden die wordt verschaft door de mix ([!UICONTROL Demographic Details]) gebruikt het gegevenstype &quot;[!UICONTROL Person name]&quot;, zoals wordt aangegeven door de tekst na het teken voor de pipe (`|`) naast de naam van het veld. Dit specifieke gegevenstype biedt verschillende subvelden die betrekking hebben op de naam van een individuele persoon, een constructie die opnieuw kan worden gebruikt voor andere velden waarin de naam van een persoon moet worden vastgelegd.
+De volgende schermafbeelding toont hoe gegevenstypen worden weergegeven in de gebruikersinterface van het Platform. Een van de velden die wordt verschaft door de [!UICONTROL Demographic Details]-mix gebruikt het gegevenstype &quot;[!UICONTROL Person name]&quot;, zoals wordt aangegeven door de tekst na het pipe-teken (`|`) naast de naam van het veld. Dit specifieke gegevenstype biedt verschillende subvelden die betrekking hebben op de naam van een individuele persoon, een constructie die opnieuw kan worden gebruikt voor andere velden waarin de naam van een persoon moet worden vastgelegd.
 
 ![](../images/schema-composition/data-type.png)
 
