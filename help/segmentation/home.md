@@ -5,9 +5,9 @@ title: Overzicht van segmentatieservice
 topic: overzicht
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 translation-type: tm+mt
-source-git-commit: 738256021fb583e7dc14fd33f5df193813a6e0bb
+source-git-commit: eff833f20eba4e51579a43fbb98c1e2333e326ef
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1581'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Voor informatie over het bouwen van segmentdefinities die API gebruiken, zie de 
 
 ## Segmenten evalueren
 
-Platform ondersteunt momenteel twee methoden voor het evalueren van segmenten: streamingsegmentatie en batchsegmentatie.
+Platform ondersteunt momenteel drie methoden voor het evalueren van segmenten: streamingsegmentatie, batchsegmentatie en randsegmentatie.
 
 ### Streaming segmentering
 
@@ -59,7 +59,15 @@ Lees de [streamingsegmentatiedocumentatie](./api/streaming-segmentation.md) voor
 
 Als alternatief voor een lopend proces van de gegevensselectie, verplaatst de partijsegmentatie alle profielgegevens in één keer door segmentdefinities om het overeenkomstige publiek te veroorzaken. Zodra gecreeerd, wordt dit segment bewaard en opgeslagen zodat u het voor gebruik kunt uitvoeren.
 
-Segmenten die met batchsegmentatie zijn geëvalueerd, worden om de 24 uur geëvalueerd. Nochtans, voor bestaande segmenten, houdt de stijgende segmentatie segmenten geëvalueerd gebruikend batch segmentatie vers voor maximaal een uur. Om het even welke nieuwe of onlangs gewijzigde segmenten zullen moeten wachten tot de volgende volledige baan van de partijsegmentatie is in werking gesteld om uit stijgende segmentatie voordeel te halen.
+**Incrementele segmentatie (bèta)**
+
+De batchsegmenten worden om de 24 uur geëvalueerd. Voor bestaande segmenten zorgt de incrementele segmentatie er echter voor dat de segmenten een uur vers blijven.
+
+De stijgende segmentatie loopt op nieuwe gegevens die in de profielopslag komen. De volgende waarschuwingen zijn echter van toepassing op incrementele segmentatie:
+
+- Voor nieuwe of onlangs gewijzigde segmenten worden profielen met nieuwe gegevens in de volgende incrementele uitvoering gekwalificeerd. Profielen zonder wijzigingen zullen echter een inhaalslag maken in de volgende volledige batchsegmentatietaak.
+- Meerdere-entiteitssegmenten worden in incrementele segmentatie vernieuwd. Als er entiteitsupdates zijn, zullen om het even welke profielen met nieuwe gegevens beginnen hen in de volgende stijgende looppas te gebruiken. Profielen zonder wijzigingen zullen echter worden bijgesneden in de volgende volledige batchsegmentatietaak.
+- Gebeurtenissen die het tijdvenster van een segment verlaten, worden in overeenstemming gebracht met de volgende volledige batchsegmentatietaak.
 
 Leren hoe te om segmenten te evalueren zie [segment evaluatiezelfstudie](./tutorials/evaluate-a-segment.md).
 
