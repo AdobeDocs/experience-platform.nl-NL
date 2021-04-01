@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui guide;mapper;mapping;data prep;data voorbereiden;voorbereiden van gegevens;
 solution: Experience Platform
 title: Overzicht van Data Prep
-topic: overview
+topic: overzicht
 description: Dit document introduceert Data Prep in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en vali
 - XDM-hiërarchieën maken met behulp van hiërarchische functies
 - Een voorvertoning weergeven van de gegevens terwijl deze worden bewerkt in Voorvertoning gegevens
 
-De Prep van gegevens past verscheidene intrinsieke gegevensbevestigingen toe om ervoor te zorgen dat de gegevensintegriteit wordt gehandhaafd aangezien het wordt opgenomen. Waar mogelijk worden met Gegevensvoorbeeld de inkomende gegevensschema&#39;s automatisch toegewezen aan XDM. De ingenieurs van gegevens kunnen, de voorgestelde afbeeldingen veranderen verbeteren en schrappen en hen vervangen met de afbeeldingen zoals aangewezen.
+De Prep van gegevens past verscheidene intrinsieke gegevensbevestigingen ook toe om ervoor te zorgen dat de gegevensintegriteit wordt gehandhaafd aangezien het wordt opgenomen. Waar mogelijk worden met Gegevensvoorbeeld de inkomende gegevensschema&#39;s automatisch toegewezen aan XDM. De ingenieurs van gegevens kunnen, de voorgestelde afbeeldingen veranderen verbeteren en schrappen en hen vervangen met de afbeeldingen zoals aangewezen.
 
 ## Toewijzing
 
@@ -37,4 +37,4 @@ Een reeks afbeeldingen die een schema in een ander schema omzetten, wordt samen 
 
 ## Volgende stappen
 
-In dit document worden de basisbeginselen van Data Prep in Adobe Experience Platform besproken. Lees de [handleiding voor toewijzingsfuncties](./functions.md) voor meer informatie over verschillende toewijzingsfuncties. Lees voor meer informatie over de verschillende datetime-tekenreeksen de [date strings guide](./dates.md).
+In dit document worden de basisbeginselen van Data Prep in Adobe Experience Platform besproken. Lees de [handleiding voor toewijzingsfuncties](./functions.md) voor meer informatie over verschillende toewijzingsfuncties. Lees voor meer informatie over de verschillende datetime-tekenreeksen de [date strings guide](./dates.md). Lees voor meer informatie over het gebruik van de Data Prep API de [Data Prep developer guide](api/overview.md).
