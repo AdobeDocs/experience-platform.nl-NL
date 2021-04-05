@@ -4,14 +4,14 @@ title: Een bestemming voor cloudopslag maken
 type: Tutorial
 description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 seo-description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
+exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 632003773100ec8ef0389840695a1c75a1aa663d
+source-git-commit: 1e33a7b48e20d7afe9f10b206a6fd68433b205db
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
-
 
 # Een bestemming voor cloudopslag maken
 
@@ -37,7 +37,7 @@ Zie [Amazon S3](./amazon-s3.md) bestemming, [[!DNL Amazon Kinesis]](./amazon-kin
 >
 >Platform ondersteunt validatie van referenties tijdens het verificatieproces en geeft een foutbericht weer als u onjuiste gegevens hebt ingevoerd op de locatie van uw cloudopslag. Dit zorgt ervoor dat u de werkstroom niet met onjuiste geloofsbrieven voltooit.
 
-![Verbinding maken met bestemming voor cloudopslag - verificatiestap](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+![Verbinding maken met bestemming voor cloudopslag - stap voor account](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
 ## Verificatiestap {#authentication}
 
@@ -61,7 +61,35 @@ Geef voor [!DNL Azure Event Hubs]-doelen de naam van uw bestaande gegevensstroom
 
 ![Verbinden met de bestemming van de cloudopslag van de Hubs van de Gebeurtenis - authentificatiestap](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)
 
-Uw doel is nu gemaakt. U kunt **[!UICONTROL Save & Exit]** selecteren als u segmenten later wilt activeren of u kunt **[!UICONTROL Next]** selecteren om de workflow voort te zetten en segmenten te selecteren om te activeren. In beide gevallen raadpleegt u de volgende sectie [Segmenten activeren](#activate-segments) voor de rest van de workflow om gegevens te exporteren.
+Uw doel is nu gemaakt. U kunt **[!UICONTROL Save & Exit]** selecteren als u segmenten later wilt activeren of u kunt **[!UICONTROL Next]** selecteren om de workflow voort te zetten en segmenten te selecteren om te activeren. Lees de sectie [Segmenten activeren](#activate-segments) voor de rest van de workflow om gegevens te exporteren.
+
+## Macro&#39;s gebruiken om een map op uw opslaglocatie te maken{#use-macros}
+
+Als u een aangepaste map per segmentbestand op uw opslaglocatie wilt maken, kunt u macro&#39;s gebruiken in het invoerveld voor het mappad. Voeg de macro&#39;s in aan het einde van het invoerveld, zoals hieronder wordt weergegeven.
+
+![Macro&#39;s gebruiken om een map in uw opslagruimte te maken](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
+
+In de onderstaande voorbeelden wordt verwezen naar een voorbeeldsegment `Luxury Audience` met ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+
+### Macro 1 - `%SEGMENT_NAME%`
+
+Invoer: `acme/campaigns/2021/%SEGMENT_NAME%`
+
+Mappad op uw opslaglocatie: `acme/campaigns/2021/Luxury Audience`
+
+### Macro 2 - `%SEGMENT_ID%`
+
+Invoer: `acme/campaigns/2021/%SEGMENT_ID%`
+
+Mappad op uw opslaglocatie: `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+### Macro 3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+
+Invoer: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
+
+Mappad op uw opslaglocatie: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+
 
 ## Segmenten {#activate-segments} activeren
 
