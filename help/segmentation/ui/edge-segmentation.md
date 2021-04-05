@@ -3,15 +3,15 @@ keywords: Experience Platform;home;populaire onderwerpen;randsegmentatie;Segment
 solution: Experience Platform
 title: gebruikersgids voor Edge Segmentation
 topic: ui-hulplijn
-description: 'De segmentatie van de rand is de capaciteit om segmenten in Platform op de rand onmiddellijk te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte. '
+description: De segmentatie van de rand is de capaciteit om segmenten in Platform op de rand onmiddellijk te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
+exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
-
 
 # Edge segmentation UI-hulplijn
 
@@ -25,8 +25,8 @@ Een vraag kan met randsegmentatie worden geëvalueerd als het aan om het even we
 | ---------- | ------- | ------- |
 | Binnenkomende hit | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis zonder tijdbeperking. | ![](../images/ui/edge-segmentation/incoming-hit.png) |
 | Binnenkomende hit die verwijst naar een profiel | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, zonder tijdbeperking, en een of meer profielkenmerken. | ![](../images/ui/edge-segmentation/profile-hit.png) |
-| Frequentiequery | Elke segmentdefinitie die verwijst naar een gebeurtenis die een bepaald aantal keer plaatsvindt. |  |
-| Frequentiequery die naar een profiel verwijst | Elke segmentdefinitie die verwijst naar een gebeurtenis die een bepaald aantal keren plaatsvindt en die een of meer profielkenmerken heeft. |  |
+| Frequentiequery | Elke segmentdefinitie die verwijst naar een gebeurtenis die minstens een bepaald aantal keer plaatsvindt. |  |
+| Frequentiequery die naar een profiel verwijst | Elke segmentdefinitie die verwijst naar een gebeurtenis die minstens een bepaald aantal keren plaatsvindt en die een of meer profielkenmerken heeft. |  |
 
 Als de vraag om het even welke bovengenoemde vraagtypes aanpast, kunt u het voor randsegmentatie toelaten door **[!UICONTROL Evaluate as streaming segment on the edge]** knevel aan te zetten.
 
