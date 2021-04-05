@@ -6,7 +6,7 @@ description: Instructies voor het maken van verbinding met de opslaglocaties van
 seo-description: Instructies voor het maken van verbinding met de opslaglocaties van uw cloud
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 1e33a7b48e20d7afe9f10b206a6fd68433b205db
+source-git-commit: 7bb862c4c6c52c42e45d5e736fa6d239e812ac2c
 workflow-type: tm+mt
 source-wordcount: '581'
 ht-degree: 0%
@@ -71,22 +71,19 @@ Als u een aangepaste map per segmentbestand op uw opslaglocatie wilt maken, kunt
 
 In de onderstaande voorbeelden wordt verwezen naar een voorbeeldsegment `Luxury Audience` met ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
 
-### Macro 1 - `%SEGMENT_NAME%`
+**Macro 1:`%SEGMENT_NAME%`**
 
 Invoer: `acme/campaigns/2021/%SEGMENT_NAME%`
-
 Mappad op uw opslaglocatie: `acme/campaigns/2021/Luxury Audience`
 
-### Macro 2 - `%SEGMENT_ID%`
+**Macro 2:`%SEGMENT_ID%`**
 
 Invoer: `acme/campaigns/2021/%SEGMENT_ID%`
-
 Mappad op uw opslaglocatie: `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
 
-### Macro 3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+**Macro 3:`%SEGMENT_NAME%/%SEGMENT_ID%`**
 
 Invoer: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
-
 Mappad op uw opslaglocatie: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
 
 
