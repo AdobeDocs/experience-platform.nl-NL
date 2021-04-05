@@ -3,14 +3,14 @@ title: Automatisch toegewezen Adobe Analytics-variabelen in de Adobe Experience 
 description: Leer welke Variabelen automatisch in Adobe Analytics met het Web SDK van het Experience Platform worden toegewezen
 seo-description: Leer welke variabelen automatisch in Adobe Analytics worden toegewezen met de Adobe Experience Platform Web SDK
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
+exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 7a6a9f1ee764ab614fa163f90a2051bd35b76b7f
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '684'
 ht-degree: 0%
 
 ---
-
 
 # Variabelen worden automatisch toegewezen in [!DNL Analytics]
 
@@ -103,3 +103,5 @@ Hieronder volgt een lijst met variabelen die Adobe Experience Platform Edge Netw
 | `web.webPageDetails.server` | `sv` | Toepassingsmetingqueryparameter USER_SERVER-toewijzing. |
 | `web.webPageDetails.siteSection` | `ch` | CHANNEL-toewijzing voor queryparameter voor AppMeasurement. |
 | `web.webReferrer.URL` | `r` | REFERRER-toewijzing voor query-parameter voor AppMeasurement. |
+
+{style=&quot;table-layout:auto&quot;}
