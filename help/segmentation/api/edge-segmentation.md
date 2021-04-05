@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 'Edge Segmentation met de API '
 topic: ontwikkelaarsgids
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
+exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 0c4625ec0728c8c94b72e3e16e7ecf45ea2d0c0b
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
-
 
 # Randsegmentatie
 
@@ -39,8 +39,8 @@ Opdat een segment wordt geëvalueerd gebruikend randsegmentatie, moet de vraag a
 | ---------- | ------- |
 | Binnenkomende hit | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis zonder tijdbeperking. |
 | Binnenkomende hit die verwijst naar een profiel | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, zonder tijdbeperking, en een of meer profielkenmerken. |
-| Frequentiequery | Elke segmentdefinitie die verwijst naar een gebeurtenis die een bepaald aantal keer plaatsvindt. |
-| Frequentiequery die naar een profiel verwijst | Elke segmentdefinitie die verwijst naar een gebeurtenis die een bepaald aantal keren plaatsvindt en die een of meer profielkenmerken heeft. |
+| Frequentiequery | Elke segmentdefinitie die verwijst naar een gebeurtenis die minstens een bepaald aantal keer plaatsvindt. |
+| Frequentiequery die naar een profiel verwijst | Elke segmentdefinitie die verwijst naar een gebeurtenis die minstens een bepaald aantal keren plaatsvindt en die een of meer profielkenmerken heeft. |
 
 {style=&quot;table-layout:auto&quot;}
 
