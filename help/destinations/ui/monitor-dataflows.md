@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform, Huis, Populaire Onderwerpen, de Rekeningen van de Monitor, de Dataflows van de Monitor, Dataflows, Doelen
+keywords: Experience Platform;thuis;populaire onderwerpen;monitorrekeningen;monitorgegevensstroom;dataflows; bestemmingen
 description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
 solution: Experience Platform
 title: Monitorgegevensstromen
 topic: overzicht
 type: Tutorial
-exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 translation-type: tm+mt
-source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
+source-git-commit: ebe2a35e66b78acf6a9ffa20664877913cd35648
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
 
 ---
+
 
 # Dataflows bewaken
 
