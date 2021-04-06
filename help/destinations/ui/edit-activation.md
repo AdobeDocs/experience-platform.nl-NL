@@ -1,18 +1,18 @@
 ---
-keywords: activering bewerken; bestemming bewerken;
+keywords: Activering bewerken, doel bewerken
 title: Activeringsstromen bewerken
 type: Tutorial
 seo-title: Activeringsstromen bewerken
 description: Voer de stappen in dit artikel uit om een bestaande activeringsstroom in Adobe Experience Platform te bewerken.
 seo-description: Voer de stappen in dit artikel uit om een bestaande activeringsstroom in Adobe Experience Platform te bewerken.
+exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%
 
 ---
-
 
 # Activeringsstromen {#edit-activation-flows} bewerken
 
