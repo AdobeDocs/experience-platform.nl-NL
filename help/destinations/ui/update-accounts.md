@@ -3,14 +3,14 @@ keywords: bestemmingsaccount bijwerken;doelaccounts;hoe accounts bijwerken
 title: Doelaccounts bijwerken
 type: Tutorial
 description: Deze zelfstudie bevat een overzicht van de stappen voor het bijwerken van bestemmingsaccounts in de gebruikersinterface van Adobe Experience Platform
+exl-id: afb41878-4205-4c64-af4d-e2740f852785
 translation-type: tm+mt
-source-git-commit: ebe2a35e66b78acf6a9ffa20664877913cd35648
+source-git-commit: e436d7147c613dad5b2ff596a412759fd60d228c
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 1%
 
 ---
-
 
 # Doelaccounts bijwerken
 
