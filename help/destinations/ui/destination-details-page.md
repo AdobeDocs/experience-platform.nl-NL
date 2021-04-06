@@ -2,15 +2,15 @@
 keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
 description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
-seo-description: 'De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken. '
+seo-description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, segmenten die aan de bestemming worden in kaart gebracht, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
+exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
 translation-type: tm+mt
-source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
+source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '614'
 ht-degree: 0%
 
 ---
-
 
 # Doelgegevens weergeven
 
@@ -20,25 +20,33 @@ In de gebruikersinterface van Adobe Experience Platform, kunt u de attributen en
 
 >[!NOTE]
 >
->De pagina met doeldetails maakt deel uit van de werkruimte [!UICONTROL Destinations] in de gebruikersinterface van het Platform. Zie het [[!UICONTROL Destinations] overzicht van de werkruimte](./destinations-workspace.md) voor meer informatie.
+>De pagina met doeldetails maakt deel uit van de [!UICONTROL Destinations] werkruimte in [!DNL Platform] [!DNL UI]. Zie het [[!UICONTROL Destinations] overzicht van de werkruimte](./destinations-workspace.md) voor meer informatie.
 
-Navigeer in de **[!UICONTROL Destinations]** werkruimte in de interface van het Platform naar het tabblad **[!UICONTROL Browse]** en selecteer de naam van een doel dat u wilt weergeven.
+## Doeldetails {#view-details} weergeven
 
-![](../assets/ui/details-page/select-destination.png)
+Voer de onderstaande stappen uit om meer informatie over een bestaand doel weer te geven.
 
-De detailspagina voor de bestemming verschijnt, tonend zijn beschikbare controles. Als u de details van een batchbestemming bekijkt, wordt ook een dashboard voor de bewaking weergegeven.
+1. Meld u aan bij [Experience Platform UI](https://platform.adobe.com/) en selecteer **[!UICONTROL Destinations]** in de linkernavigatiebalk. Selecteer **[!UICONTROL Browse]** van de hoogste kopbal om uw bestaande bestemmingen te bekijken.
 
-![](../assets/ui/details-page/details.png)
+   ![Bladeren door doelen](../assets/ui/details-page/browse-destinations.png)
 
-Daarnaast kunt u op het tabblad Bladeren de geselecteerde gegevensstroom verwijderen door het pictogram ![prullenbak](../assets/ui/details-page/trash-icon.png) te selecteren. Om het even welke segmenten die aan bestemmingen worden geactiveerd zullen worden unmapped alvorens dataflow wordt geschrapt.
+1. Selecteer het filterpictogram ![Filter-pictogram](../assets/ui/details-page/filter.png) linksboven om het deelvenster Sorteren te starten. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
 
-![](../assets/ui/details-page/delete-flow.png)
+   ![Filterdoelen](../assets/ui/details-page/filter-destinations.png)
+
+1. Selecteer de naam van het doel dat u wilt bekijken.
+
+   ![Doel selecteren](../assets/ui/details-page/destination-select.png)
+
+1. De detailspagina voor de bestemming verschijnt, tonend zijn beschikbare controles. Als u de details van een batchbestemming bekijkt, wordt ook een dashboard voor de bewaking weergegeven.
+
+   ![Doelgegevens](../assets/ui/details-page/destination-details.png)
 
 ## Rechterspoor
 
-De juiste spoorstaaf toont de basisinformatie over de bestemming.
+De rechterrails geven de basisinformatie over de geselecteerde bestemming weer.
 
-![](../assets/ui/details-page/right-rail.png)
+![rechterspoor](../assets/ui/details-page/right-sidebar.png)
 
 In de volgende tabel worden de door het rechterspoor verstrekte controles en gegevens vermeld:
 
@@ -52,8 +60,8 @@ In de volgende tabel worden de door het rechterspoor verstrekte controles en geg
 | [!UICONTROL Status] | Geeft aan of het doel is in- of uitgeschakeld. |
 | [!UICONTROL Marketing actions] | Hiermee worden de marketingacties (gebruiksgevallen) aangegeven die voor deze bestemming gelden voor doeleinden van gegevensbeheer. |
 | [!UICONTROL Category] | Geeft het doeltype aan. Zie [doelcatalogus](../catalog/overview.md) voor meer informatie. |
-| [!UICONTROL Connection type] | Hiermee geeft u de vorm aan waarmee uw publiek naar het doel wordt gestuurd. Mogelijke waarden zijn &quot;[!UICONTROL Cookie]&quot; en &quot;[!UICONTROL Profile-based]&quot;. |
-| [!UICONTROL Frequency] | Geeft aan hoe vaak het publiek naar de bestemming wordt gestuurd. Mogelijke waarden zijn &quot;[!UICONTROL Streaming]&quot; en &quot;[!UICONTROL Batch]&quot;. |
+| [!UICONTROL Connection type] | Hiermee geeft u de vorm aan waarmee uw publiek naar het doel wordt gestuurd. Mogelijke waarden zijn [!UICONTROL Cookie] en [!UICONTROL Profile-based]. |
+| [!UICONTROL Frequency] | Geeft aan hoe vaak het publiek naar de bestemming wordt gestuurd. Mogelijke waarden zijn [!UICONTROL Streaming] en [!UICONTROL Batch]. |
 | [!UICONTROL Identity] | Vertegenwoordigt de identiteitsnaamruimte die door de bestemming wordt geaccepteerd, zoals `GAID`, `IDFA` of `email`. Zie [Naamruimte overzicht van naamruimte ](../../identity-service/namespaces.md) voor meer informatie over geaccepteerde naamruimten. |
 | [!UICONTROL Created by] | Geeft de gebruiker aan die deze bestemming heeft gemaakt. |
 | [!UICONTROL Created] | Hiermee wordt de UTC-datetime aangegeven waarop deze bestemming is gemaakt. |
@@ -64,35 +72,18 @@ In de volgende tabel worden de door het rechterspoor verstrekte controles en geg
 
 Met de schakeloptie **[!UICONTROL Enabled]/[!UICONTROL Disabled]** kunt u alle gegevens die u exporteert naar de bestemming starten en pauzeren.
 
-![](../assets/ui/details-page/enable-disable.png)
+![Schakelen tussen uitschakelen inschakelen](../assets/ui/details-page/enable-disable.png)
 
 ## [!UICONTROL Dataflow runs]
 
-Het [!UICONTROL Dataflow runs] lusje verstrekt metrische gegevens over uw dataflow looppas aan partijbestemmingen. Er wordt een lijst weergegeven met afzonderlijke uitvoeringen en de bijbehorende maatstaven, samen met de volgende totalen voor profielrecords:
-
-* **[!UICONTROL Profile records activated]**: Het totale aantal profielrecords dat voor activering is gemaakt of bijgewerkt.
-* **[!UICONTROL Profile records skipped]**: Het totale aantal profielrecords dat voor activering wordt overgeslagen op basis van het profiel, wordt afgesloten of ontbrekende kenmerken.
-
-![](../assets/ui/details-page/dataflow-runs.png)
-
->[!NOTE]
->
->De looppas van Dataflow wordt geproduceerd gebaseerd op de planningsfrequentie van bestemmingsdataflow. Een afzonderlijke dataflow looppas wordt gemaakt voor elk samenvoegbeleid dat op een segment wordt toegepast.
-
-Om de details van een bepaalde dataflow looppas te bekijken, selecteer de begintijd van de looppas van de lijst. De detailpagina voor een dataflow-run bevat aanvullende informatie zoals de grootte van de verwerkte gegevens en een lijst met eventuele fouten die zijn opgetreden met details voor de diagnose van fouten.
-
-![](../assets/ui/details-page/dataflow.png)
+Het [!UICONTROL Dataflow runs] lusje verstrekt metrische gegevens over uw dataflow looppas aan partijbestemmingen. Raadpleeg [Dataflows](monitor-dataflows.md) voor meer informatie.
 
 ## [!UICONTROL Activation data] {#activation-data}
 
 Het [!UICONTROL Activation data] lusje toont een lijst van segmenten die aan de bestemming, met inbegrip van hun begindatum en einddatum (indien van toepassing) in kaart zijn gebracht. Als u de details over een bepaald segment wilt weergeven, selecteert u de naam in de lijst.
 
-![](../assets/ui/details-page/activation-data.png)
+![Activeringsgegevens](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
 >Voor details bij het onderzoeken van de detailspagina van een segment, verwijs naar [Overzicht van de Segmentatie UI](../../segmentation/ui/overview.md#segment-details).
-
-## Volgende stappen
-
-Dit document besprak de mogelijkheden van de pagina met doeldetails. Voor meer informatie bij het beheren van bestemmingen in UI, zie het overzicht op [[!UICONTROL Destinations] werkruimte](./destinations-workspace.md).
