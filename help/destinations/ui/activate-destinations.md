@@ -3,16 +3,16 @@ keywords: doel activeren;doelen activeren;gegevens activeren
 title: Profielen en segmenten naar een doel activeren
 type: Tutorial
 seo-title: Profielen en segmenten naar een doel activeren
-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
-seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten aan doelen toe te wijzen. Volg onderstaande stappen om dit te bereiken.
+description: Activeer de gegevens in Adobe Experience Platform door segmenten toe te wijzen aan bestemmingen. Volg onderstaande stappen om dit te bereiken.
+seo-description: Activeer de gegevens in Adobe Experience Platform door segmenten toe te wijzen aan bestemmingen. Volg onderstaande stappen om dit te bereiken.
+exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 translation-type: tm+mt
-source-git-commit: 0992b223a96b77446a9f9c2823f5195541dd93fa
+source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2025'
 ht-degree: 0%
 
 ---
-
 
 # Profielen en segmenten naar een doel activeren
 
@@ -240,13 +240,6 @@ Op de **[!UICONTROL Review]** pagina, kunt u een samenvatting van uw selectie zi
 Als er geen beleidsovertredingen zijn vastgesteld, selecteert u **[!UICONTROL Finish]** om uw selectie te bevestigen en gegevens naar de bestemming te verzenden.
 
 ![selectie bevestigen](../assets/ui/activate-destinations/confirm-selection.png)
-
-## Activering {#edit-activation} bewerken
-
-Voer de onderstaande stappen uit om bestaande activeringsstromen in Adobe Experience Platform te bewerken:
-
-1. Selecteer **[!UICONTROL Destinations]** in de linkernavigatiebar, dan klik **[!UICONTROL Browse]** tabel, en klik de bestemmingsnaam.
-2. Selecteer **[!UICONTROL Edit activation]** in het juiste spoor om te veranderen welke segmenten om naar de bestemming te verzenden.
 
 ## Controleren of segmentactivering is gelukt {#verify-activation}
 
