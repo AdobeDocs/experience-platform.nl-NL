@@ -4,7 +4,7 @@ title: Doelaccounts bijwerken
 type: Tutorial
 description: Deze zelfstudie bevat een overzicht van de stappen voor het bijwerken van bestemmingsaccounts in de gebruikersinterface van Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 6fd980b486c4a330f9188065bac55c624af584a1
+source-git-commit: e4afbdd6ff8f45ea8d5506f0228f0a80b44eee51
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 1%
@@ -21,7 +21,7 @@ Het **[!UICONTROL Accounts]** lusje toont u details over de verbindingen die u m
 ![Het tabblad Accounts](../assets/ui/update-accounts/destination-accounts.png)
 
 | Element | Beschrijving |
----------|----------
+|---|---|
 | [!UICONTROL Platform] | Het doel waarvoor u de verbinding hebt ingesteld. |
 | [!UICONTROL Connection Type] | Vertegenwoordigt het verbindingstype aan uw opslagemmer of bestemming. <ul><li>Voor e-mailmarketingdoelen: Kan S3 of FTP zijn.</li><li>Voor realtime advertentiebestemmingen: Server-naar-server</li><li>Voor Amazon S3-cloudopslagdoelen: Toegangstoets </li><li>Voor SFTP-cloudopslagdoelen: Basisverificatie voor SFTP</li></ul> |
 | [!UICONTROL Username] | De gebruikersnaam die u hebt geselecteerd in [verbind bestemmingstovenaar](../catalog/email-marketing/overview.md#connect-destination). |
