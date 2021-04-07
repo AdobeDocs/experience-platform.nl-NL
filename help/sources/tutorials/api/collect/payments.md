@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;Betalingsgegevens verzamelen;Betalingsgegevens
 solution: Experience Platform
 title: Betalingsgegevens verzamelen met behulp van bronconnectors en API's
-topic: overview
+topic: overzicht
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een betalingstoepassing en het opnemen ervan in het Platform met behulp van bronconnectors en API's.
+exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1600'
 ht-degree: 0%
 
 ---
-
 
 # Betalingsgegevens verzamelen met behulp van bronconnectors en API&#39;s
 
@@ -299,6 +299,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `schemaRef.id` | De `$id` van het doel-XDM-schema. |
+| `schemaRef.contentType` | De versie van het schema. Deze waarde moet `application/vnd.adobe.xed-full-notext+json;version=1` worden geplaatst, die de recentste minder belangrijke versie van het schema terugkeert. |
 
 **Antwoord**
 
@@ -338,7 +339,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -354,6 +355,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `data.schema.id` | De `$id` van het doel-XDM-schema. |
+| `data.schema.version` | De versie van het schema. Deze waarde moet `application/vnd.adobe.xed-full+json;version=1` worden geplaatst, die de recentste minder belangrijke versie van het schema terugkeert. |
 | `params.dataSetId` | De id van de doeldataset. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die wordt gebruikt om verbinding te maken met het Data Lake. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
