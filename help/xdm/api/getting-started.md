@@ -3,15 +3,15 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem
 solution: Experience Platform
 title: Aan de slag met de API voor schemaregistratie
 description: Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan de Registratie API van het Schema te maken.
-topic: developer guide
+topic: ontwikkelaarsgids
+exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1365'
 ht-degree: 0%
 
 ---
-
 
 # Aan de slag met de [!DNL Schema Registry]-API
 
@@ -170,7 +170,7 @@ GET /global/classes
 
 ### Trekcontainer
 
-Om niet met uw uniek `TENANT_ID` te worden verward, bevat de `tenant` container alle klassen, mixins, gegevenstypes, schema&#39;s, en beschrijvers die door een IMS Organisatie worden bepaald. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle CRUD verrichtingen (GET, POST, PUT, PATCH, DELETE) tegen middelen uitvoeren die u in de `tenant` container creeert.
+Om niet met uw uniek `TENANT_ID` te worden verward, bevat de `tenant` container alle klassen, mixins, gegevenstypes, schema&#39;s, en beschrijvers die door een organisatie IMS worden bepaald. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere IMS Orgs zijn. U kunt alle CRUD verrichtingen (GET, POST, PUT, PATCH, DELETE) tegen middelen uitvoeren die u in de `tenant` container creeert.
 
 Een voorbeeld van een vraag die de `tenant` container gebruikt zou als het volgende kijken:
 
@@ -207,21 +207,38 @@ De volgende tabel bevat compatibele `Accept`-headerwaarden, inclusief waarden me
 | ------- | ------------ |
 | `application/vnd.adobe.xed-id+json` | Retourneert alleen een lijst met id&#39;s. Dit wordt meestal gebruikt voor het aanbieden van resources. |
 | `application/vnd.adobe.xed+json` | Retourneert een lijst met volledige JSON-schema met origineel `$ref` en `allOf` inbegrepen. Dit wordt gebruikt om een lijst van volledige middelen terug te keren. |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Onbewerkte XDM met `$ref` en `allOf`. Bevat titels en beschrijvingen. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` kenmerken en  `allOf` opgelost. Bevat titels en beschrijvingen. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Onbewerkte XDM met `$ref` en `allOf`. Geen titels of beschrijvingen. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` kenmerken en  `allOf` opgelost. Geen titels of beschrijvingen. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` kenmerken en  `allOf` opgelost. Beschrijvers worden opgenomen. |
+| `application/vnd.adobe.xed+json; version=1` | Onbewerkte XDM met `$ref` en `allOf`. Bevat titels en beschrijvingen. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` kenmerken en  `allOf` opgelost. Bevat titels en beschrijvingen. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Onbewerkte XDM met `$ref` en `allOf`. Geen titels of beschrijvingen. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` kenmerken en  `allOf` opgelost. Geen titels of beschrijvingen. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` kenmerken en  `allOf` opgelost. Beschrijvers worden opgenomen. |
 
 >[!NOTE]
 >
->Indien alleen de hoofdversie wordt geleverd (bv. 1, 2, 3), retourneert het register de laatste secundaire versie (bv. .1, .2, .3) automatisch.
+>Platform steunt momenteel slechts één belangrijke versie voor elk schema (`1`). Daarom moet de waarde voor `version` altijd `1` zijn wanneer het uitvoeren van raadplegingsverzoeken om de recentste minder belangrijke versie van het schema terug te keren. Zie de subsectie hieronder voor meer informatie over schemaversie.
+
+### Schemaversie {#versioning}
+
+De versies van het schema worden van verwijzingen voorzien door `Accept` kopballen in de Registratie API van het Schema en in `schemaRef.contentType` eigenschappen in stroomafwaartse de dienstlading van de Platform API.
+
+Momenteel, steunt het Platform slechts één enkele belangrijkste versie (`1`) voor elk schema. Volgens de [regels van schemaevolutie](../schema/composition.md#evolution), moet elke update aan een schema niet-destructief zijn, betekenend dat nieuwe minder belangrijke versies van een schema (`1.2`, `1.3`, enz.) zijn altijd achterwaarts compatibel met eerdere secundaire versies. Daarom wanneer het specificeren van `version=1`, keert het Registratie van het Schema altijd **recentste** belangrijkste versie `1` van een schema terug, betekenend dat vorige minder belangrijke versies niet zijn teruggekeerd.
+
+>[!NOTE]
+>
+>Het niet-destructieve vereiste voor schemaevolutie wordt slechts afgedwongen nadat het schema door een dataset van verwijzingen is voorzien en één van de volgende gevallen waar is:
+>
+>* De gegevens zijn opgenomen in de dataset.
+>* De dataset is toegelaten voor gebruik in het Profiel van de Klant in real time (zelfs als geen gegevens is opgenomen).
+
+>
+>
+Als het schema niet aan een dataset is geassocieerd die aan één van bovengenoemde criteria voldoet, dan kan om het even welke verandering worden aangebracht. In alle gevallen blijft de `version` component echter op `1` staan.
 
 ## Beperkingen en aanbevolen procedures voor XDM-velden
 
 De velden van een schema worden vermeld binnen het `properties`-object. Elk veld is zelf een object dat kenmerken bevat voor het beschrijven en beperken van de gegevens die het veld kan bevatten.
 
-Meer informatie over het definiëren van veldtypen in de API vindt u in [appendix](appendix.md) voor deze handleiding, inclusief codevoorbeelden en optionele beperkingen voor de meest gebruikte gegevenstypen.
+Meer informatie over het definiëren van veldtypen in de API vindt u in de [veldbeperkingsgids](../schema/field-constraints.md) voor deze handleiding, inclusief codevoorbeelden en optionele beperkingen voor de meest gebruikte gegevenstypen.
 
 In het volgende voorbeeldveld wordt een correct opgemaakt XDM-veld weergegeven met nadere informatie over de naamgevingsbeperkingen en de onderstaande aanbevolen procedures. Deze praktijken kunnen ook worden toegepast wanneer het bepalen van andere middelen die gelijkaardige attributen bevatten.
 
