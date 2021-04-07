@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;database;database van derden
 solution: Experience Platform
 title: Gegevens verzamelen van een database met behulp van bronconnectors en API's
-topic: overview
+topic: overzicht
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens uit een database en het opnemen ervan in het Platform met behulp van bronconnectors en API's.
+exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1651'
 ht-degree: 0%
 
 ---
-
 
 # Gegevens verzamelen van een database met bronconnectors en API&#39;s
 
@@ -286,6 +286,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `schemaRef.id` | De id van het doel-XDM-schema. |
+| `schemaRef.contentType` | De versie van het schema. Deze waarde moet `application/vnd.adobe.xed-full-notext+json;version=1` worden geplaatst, die de recentste minder belangrijke versie van het schema terugkeert. |
 
 **Antwoord**
 
@@ -325,7 +326,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -341,6 +342,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `data.schema.id` | De `$id` van het doel-XDM-schema. |
+| `data.schema.version` | De versie van het schema. Deze waarde moet `application/vnd.adobe.xed-full+json;version=1` worden geplaatst, die de recentste minder belangrijke versie van het schema terugkeert. |
 | `params.dataSetId` | Identiteitskaart van doeldataset die in de vorige stap wordt verzameld. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die wordt gebruikt om verbinding te maken met het Data Lake. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
