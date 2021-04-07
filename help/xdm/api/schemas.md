@@ -3,19 +3,19 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem
 solution: Experience Platform
 title: Schemas API Endpoint
 description: Het /schemas eindpunt in de Registratie API van het Schema staat u toe om schema's XDM binnen uw ervaringstoepassing programmatically te beheren.
-topic: developer guide
+topic: ontwikkelaarsgids
+exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1420'
 ht-degree: 0%
 
 ---
 
-
 # Schemas, eindpunt
 
-Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u in Adobe Experience Platform wilt opnemen. Elk schema bestaat uit een klasse en nul of meer mixen. Het `/schemas` eindpunt in [!DNL Schema Registry] API staat u toe om schema&#39;s binnen uw ervaringstoepassing programmatically te beheren.
+Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u in Adobe Experience Platform wilt invoeren. Elk schema bestaat uit een klasse en nul of meer mixen. Het `/schemas` eindpunt in [!DNL Schema Registry] API staat u toe om schema&#39;s binnen uw ervaringstoepassing programmatically te beheren.
 
 ## Aan de slag
 
@@ -107,7 +107,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container waarin het schema is opgeslagen dat u wilt ophalen: `global` voor een Adobe-gecreeerd schema of `tenant` voor een schema dat door uw organisatie wordt bezeten. |
+| `{CONTAINER_ID}` | De container die het schema bevat dat u wilt ophalen: `global` voor een Adobe-gecreeerd schema of `tenant` voor een schema dat door uw organisatie wordt bezeten. |
 | `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het schema u omhoog wilt kijken. |
 
 **Verzoek**
@@ -124,15 +124,15 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag wordt verzonden. Alle opzoekverzoeken vereisen een `version` worden opgenomen in de `Accept` koptekst. De volgende `Accept` kopteksten zijn beschikbaar:
+De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag wordt verzonden. Alle opzoekverzoeken vereisen een `version` in `Accept` kopbal worden omvat. De volgende `Accept` kopteksten zijn beschikbaar:
 
 | `Accept` header | Beschrijving |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Onbewerkt met `$ref` en `allOf` heeft titels en beschrijvingen. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` en  `allOf` opgelost, heeft titels en beschrijvingen. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Ruwe met `$ref` en `allOf`, geen titels of beschrijvingen. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` en  `allOf` opgelost, geen titels of beschrijvingen. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` en  `allOf` opgelost, beschrijving inbegrepen. |
+| `application/vnd.adobe.xed+json; version=1` | Onbewerkt met `$ref` en `allOf` heeft titels en beschrijvingen. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` en  `allOf` opgelost, heeft titels en beschrijvingen. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Ruwe met `$ref` en `allOf`, geen titels of beschrijvingen. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` en  `allOf` opgelost, geen titels of beschrijvingen. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en  `allOf` opgelost, beschrijving inbegrepen. |
 
 **Antwoord**
 
