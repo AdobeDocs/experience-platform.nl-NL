@@ -2,16 +2,16 @@
 keywords: Experience Platform;huis;populaire onderwerpen;dataset;Dataset;creeer een dataset;creeer dataset
 solution: Experience Platform
 title: Een gegevensset maken met API's
-topic: datasets
+topic: gegevenssets
 description: Dit document bevat algemene stappen voor het maken van een gegevensset met Adobe Experience Platform API's en het vullen van de gegevensset met behulp van een bestand.
+exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1268'
+source-wordcount: '1306'
 ht-degree: 0%
 
 ---
-
 
 # Een gegevensset maken met behulp van API&#39;s
 
@@ -212,6 +212,11 @@ curl -X POST \
     }
 }'
 ```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `schemaRef.id` | De URI `$id`-waarde voor het XDM-schema waarop de gegevensset wordt gebaseerd. |
+| `schemaRef.contentType` | Geeft de indeling en versie van het schema aan. Zie de sectie over [schemaversie](../../xdm/api/getting-started.md#versioning) in de gids XDM API voor meer informatie. |
 
 >[!NOTE]
 >
