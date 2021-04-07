@@ -3,22 +3,22 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem
 solution: Experience Platform
 title: Klassen API-eindpunt
 description: Het /classes eindpunt in de Registratie API van het Schema staat u toe om klassen programmatically te beheren XDM binnen uw ervaringstoepassing.
-topic: developer guide
+topic: ontwikkelaarsgids
+exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1497'
 ht-degree: 0%
 
 ---
-
 
 # Klassen, eindpunt
 
 Alle schema&#39;s van het Gegevensmodel van de Ervaring (XDM) moeten op een klasse worden gebaseerd. Een klasse bepaalt de basisstructuur van gemeenschappelijke eigenschappen die alle die schema&#39;s op die klasse worden gebaseerd moeten bevatten, evenals welke mengen geschikt voor gebruik in die schema&#39;s zijn. Bovendien bepaalt de klasse van een schema de gedragsaspecten van de gegevens die een schema zal bevatten, waarvan er twee types zijn:
 
-* **[!UICONTROL Opnemen]**: Verstrekt informatie over de attributen van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
-* **[!UICONTROL Tijdreeks]**: Biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
+* **[!UICONTROL Record]**: Verstrekt informatie over de attributen van een onderwerp. Een onderwerp kan een organisatie of een individu zijn.
+* **[!UICONTROL Time-series]**: Biedt een momentopname van het systeem op het moment dat een handeling direct of indirect door een recordonderwerp is uitgevoerd.
 
 >[!NOTE]
 >
@@ -139,15 +139,15 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag wordt verzonden. Alle opzoekverzoeken vereisen een `version` worden opgenomen in de `Accept` koptekst. De volgende `Accept` kopteksten zijn beschikbaar:
+De antwoordindeling is afhankelijk van de koptekst `Accept` die in de aanvraag wordt verzonden. Alle opzoekverzoeken vereisen een `version` in `Accept` kopbal worden omvat. De volgende `Accept` kopteksten zijn beschikbaar:
 
 | `Accept` header | Beschrijving |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Onbewerkt met `$ref` en `allOf` heeft titels en beschrijvingen. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` en  `allOf` opgelost, heeft titels en beschrijvingen. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Ruwe met `$ref` en `allOf`, geen titels of beschrijvingen. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` en  `allOf` opgelost, geen titels of beschrijvingen. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` en  `allOf` opgelost, beschrijving inbegrepen. |
+| `application/vnd.adobe.xed+json; version=1` | Onbewerkt met `$ref` en `allOf` heeft titels en beschrijvingen. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` en  `allOf` opgelost, heeft titels en beschrijvingen. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Ruwe met `$ref` en `allOf`, geen titels of beschrijvingen. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` en  `allOf` opgelost, geen titels of beschrijvingen. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` en  `allOf` opgelost, beschrijving inbegrepen. |
 
 **Antwoord**
 
@@ -248,7 +248,7 @@ U kunt een aangepaste klasse definiëren onder de container `tenant` door een PO
 >
 >Wanneer het samenstellen van een schema dat op een douaneklasse wordt gebaseerd die u bepaalt, zult u geen standaardmengen kunnen gebruiken. Elke mix definieert de klassen waarmee ze compatibel zijn in hun `meta:intendedToExtend`-kenmerk. Zodra u begint bepalend mengen die met uw nieuwe klasse (door `$id` van uw nieuwe klasse in het `meta:intendedToExtend` gebied van de mix te gebruiken) compatibel zijn, zult u die mixins kunnen opnieuw gebruiken telkens als u een schema bepaalt dat de klasse uitvoert u bepaalde. Zie de secties op [het creëren van mixins](./mixins.md#create) en [het creëren van schema&#39;s](./schemas.md#create) in hun respectieve eindpuntgidsen voor meer informatie.
 >
->Als u schema&#39;s wilt gebruiken die op douaneklassen in het Profiel van de Klant in real time worden gebaseerd, is het ook belangrijk om in mening te houden dat de verenigingsschema&#39;s slechts gebaseerd op schema&#39;s zijn die de zelfde klasse delen. Als u een douane-klasse schema in de unie voor een andere klasse zoals [!UICONTROL XDM Individueel Profiel] of [!UICONTROL XDM ExperienceEvent] wilt omvatten, moet u een verhouding met een ander schema vestigen dat die klasse aanwendt. Zie de zelfstudie over [het bepalen van een relatie tussen twee schema&#39;s in API](../tutorials/relationship-api.md) voor meer informatie.
+>Als u schema&#39;s wilt gebruiken die op douaneklassen in het Profiel van de Klant in real time worden gebaseerd, is het ook belangrijk om in mening te houden dat de verenigingsschema&#39;s slechts gebaseerd op schema&#39;s zijn die de zelfde klasse delen. Als u een douane-klasse schema in de unie voor een andere klasse zoals [!UICONTROL XDM Individual Profile] of [!UICONTROL XDM ExperienceEvent] wilt omvatten, moet u een verhouding met een ander schema vestigen dat die klasse aanwendt. Zie de zelfstudie over [het bepalen van een relatie tussen twee schema&#39;s in API](../tutorials/relationship-api.md) voor meer informatie.
 
 **API-indeling**
 
