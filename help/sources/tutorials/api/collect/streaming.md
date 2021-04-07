@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;populaire onderwerpen;cloudopslaggegevens;streaming gegevens;streaming
 solution: Experience Platform
 title: Streaming gegevens verzamelen met bronconnectors en API's
-topic: ' - overzicht'
+topic: overzicht
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het naar Platform brengen van deze gegevens via bronconnectors en API's.
+exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1325'
 ht-degree: 0%
 
 ---
-
 
 # Streaming gegevens verzamelen met bronconnectors en API&#39;s
 
@@ -257,7 +257,7 @@ curl -X POST \
     -d '{
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
-            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.1"
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         },
         "fileDescription": {
             "format": "parquet"
@@ -277,6 +277,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `schemaRef.id` | De id van het doel-XDM-schema. |
+| `schemaRef.contentType` | De versie van het schema. Deze waarde moet `application/vnd.adobe.xed-full-notext+json;version=1` worden geplaatst, die de recentste minder belangrijke versie van het schema terugkeert. |
 
 **Antwoord**
 
