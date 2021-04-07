@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;label api voor gegevensgebruik;beleidservice api
 solution: Experience Platform
 title: 'Labels voor gegevensgebruik beheren met API''s '
-topic: developer guide
+topic: ontwikkelaarsgids
 description: Met de Dataset Service API kunt u gebruikslabels voor gegevenssets toepassen en bewerken. Deze klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API voor catalogusservice die metagegevens van gegevenssets beheert.
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 4e75e3fbdcd480c384411c2f33bad5b2cdcc5c42
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1147'
 ht-degree: 1%
 
 ---
@@ -280,7 +280,11 @@ Een succesvolle reactie keert de etiketten van het gegevensgebruik terug die op 
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `labels` | Een lijst van de etiketten van het gegevensgebruik die op de dataset zijn toegepast. |
-| `optionalLabels` | Een lijst van individuele gebieden binnen de dataset die de etiketten van het gegevensgebruik hebben op hen worden toegepast. |
+| `optionalLabels` | Een lijst van individuele gebieden binnen de dataset die de etiketten van het gegevensgebruik hebben op hen worden toegepast. De volgende subeigenschappen zijn vereist:<br/><br/>`option`: Een object dat de [!DNL Experience Data Model] (XDM) kenmerken van het veld bevat. De volgende drie eigenschappen zijn vereist:<ul><li>`id`: De URI- `$id` waarde van het schema dat aan het veld is gekoppeld.</li><li>`contentType`: Geeft de indeling en versie van het schema aan. Zie de sectie over [schemaversie](../../xdm/api/getting-started.md#versioning) in de gids XDM API voor meer informatie.</li><li>`schemaPath`: Het pad naar de schemaeigenschap in kwestie, geschreven in  [JSON ](../../landing/api-fundamentals.md#json-pointer) Pointersyntax.</li></ul>`labels`: Een lijst met gegevensgebruikslabels die u aan het veld wilt toevoegen. |
+
+- id: De URI $id-waarde voor het XDM-schema waarop de gegevensset is gebaseerd.
+- contentType: Geeft de indeling en versie van het schema aan. Zie de sectie over [schemaversie](../../xdm/api/getting-started.md#versioning) in de gids XDM API voor meer informatie.
+- schemaPath: Het pad naar de schemaeigenschap in kwestie, geschreven in [JSON-aanwijzer](../../landing/api-fundamentals.md#json-pointer) syntaxis.
 
 ## Labels toepassen op een gegevensset {#apply-dataset-labels}
 
@@ -327,7 +331,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `labels` | Een lijst van de etiketten van het gegevensgebruik die u aan de dataset wilt toevoegen. |
-| `optionalLabels` | Een lijst van om het even welke individuele gebieden binnen de dataset die u etiketten aan wilt toevoegen. Elk item in deze array moet de volgende eigenschappen hebben: <br/><br/>`option`: Een object dat de [!DNL Experience Data Model] (XDM) kenmerken van het veld bevat. De volgende drie eigenschappen zijn vereist:<ul><li>id</code>: De URI $id</code>-waarde van het schema dat aan het veld is gekoppeld.</li><li>contentType</code>: Het inhoudstype en het versienummer van het schema. Dit zou de vorm van één van geldige <a href="../../xdm/api/getting-started.md#accept">moeten aannemen kopballen</a> voor een XDM raadplegingsverzoek.</li><li>schemaPath</code>: De weg aan het gebied binnen het schema van de dataset.</li></ul>`labels`: Een lijst met gegevensgebruikslabels die u aan het veld wilt toevoegen. |
+| `optionalLabels` | Een lijst van om het even welke individuele gebieden binnen de dataset die u etiketten aan wilt toevoegen. Elk item in deze array moet de volgende eigenschappen hebben:<br/><br/>`option`: Een object dat de [!DNL Experience Data Model] (XDM) kenmerken van het veld bevat. De volgende drie eigenschappen zijn vereist:<ul><li>`id`: De URI- `$id` waarde van het schema dat aan het veld is gekoppeld.</li><li>`contentType`: Geeft de indeling en versie van het schema aan. Zie de sectie over [schemaversie](../../xdm/api/getting-started.md#versioning) in de gids XDM API voor meer informatie.</li><li>`schemaPath`: Het pad naar de schemaeigenschap in kwestie, geschreven in  [JSON ](../../landing/api-fundamentals.md#json-pointer) Pointersyntax.</li></ul>`labels`: Een lijst met gegevensgebruikslabels die u aan het veld wilt toevoegen. |
 
 **Antwoord**
 
