@@ -2,21 +2,21 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Gegevens van eCommerce verzamelen;Gegevens van eCommerce
 solution: Experience Platform
 title: Verzamel eCommerce-gegevens met behulp van Source Connectors en API's
-topic: overview
+topic: overzicht
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een eCommerce-systeem van derden en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
+exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1521'
 ht-degree: 0%
 
 ---
 
-
 # Gegevens over eCommerce verzamelen met bronconnectors en API&#39;s
 
-Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een systeem **[!UICONTROL eCommerce]** van een derde partij en het opnemen van gegevens in [!DNL Platform] via bronconnectors en de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens van een **[!UICONTROL eCommerce]**-systeem van een derde en het opnemen ervan in [!DNL Platform] via bronconnectors en de [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Aan de slag
 
@@ -31,7 +31,7 @@ Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Met de API voor batchverwerking kunt u gegevens invoeren  [!DNL Experience Platform] als batchbestanden.
 * [[!DNL Sandboxes]](../../../../sandboxes/home.md):  [!DNL Experience Platform] biedt virtuele sandboxen die één enkele  [!DNL Platform] instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes met een **[!UICONTROL eCommerce]** systeem gebruikend [!DNL Flow Service] API te verbinden.
+De volgende secties bevatten aanvullende informatie die u moet weten om een verbinding met een **[!UICONTROL eCommerce]**-systeem met de [!DNL Flow Service]-API tot stand te kunnen brengen.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -114,9 +114,9 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `baseConnectionId` | De verbindingsID van uw **[!UICONTROL eCommerce]** bron. |
+| `baseConnectionId` | De verbindings-id van uw **[!UICONTROL eCommerce]**-bron. |
 | `params.path` | Het pad van het bronbestand. |
-| `connectionSpec.id` | De identiteitskaart van de verbindingsspecificatie van uw **[!UICONTROL eCommerce]** bron. |
+| `connectionSpec.id` | De verbindingsspecificatie-id van uw **[!UICONTROL eCommerce]**-bron. |
 
 **Antwoord**
 
@@ -271,6 +271,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `schemaRef.id` | De `$id` van het doel-XDM-schema. |
+| `schemaRef.contentType` | De versie van het schema. Deze waarde moet `application/vnd.adobe.xed-full-notext+json;version=1` worden geplaatst, die de recentste minder belangrijke versie van het schema terugkeert. |
 
 **Antwoord**
 
@@ -327,6 +328,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `data.schema.id` | De `$id` van het doel-XDM-schema. |
+| `data.schema.version` | De versie van het schema. Deze waarde moet `application/vnd.adobe.xed-full+json;version=1` worden geplaatst, die de recentste minder belangrijke versie van het schema terugkeert. |
 | `params.dataSetId` | De id van de doeldataset. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die wordt gebruikt om verbinding te maken met het Data Lake. Deze id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
@@ -716,7 +718,7 @@ curl -X POST \
 | `sourceConnectionIds` | De [bron verbindings ID](#source) die in een vroegere stap wordt teruggewonnen. |
 | `targetConnectionIds` | De [doel verbindings ID](#target-connection) die in een vroegere stap wordt teruggewonnen. |
 | `transformations.params.mappingId` | De [toewijzingsid](#mapping) is in een eerdere stap opgehaald. |
-| `transformations.params.mappingId` | De afbeelding-id die is gekoppeld aan uw **[!UICONTROL eCommerce]**-bron. |
+| `transformations.params.mappingId` | De toewijzing-id die aan uw **[!UICONTROL eCommerce]**-bron is gekoppeld. |
 | `scheduleParams.startTime` | De begintijd voor de gegevensstroom in tijdperk. |
 | `scheduleParams.frequency` | De `frequency` waarop de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day` of `week`. |
 | `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. Er is geen interval vereist wanneer `frequency` is ingesteld als `once` en groter dan of gelijk aan `15` moet zijn voor andere `frequency`-waarden. |
