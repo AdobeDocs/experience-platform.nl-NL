@@ -2,17 +2,17 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;Verzamel protocolgegevens;protocolgegevens
 solution: Experience Platform
 title: Gegevens van protocollen verzamelen met bronconnectors en API's
-topic: overview
+topic: overzicht
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het ophalen van gegevens van een protocoltoepassing en het opnemen van gegevens in het Platform met behulp van bronconnectors en API's.
+exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1549'
 ht-degree: 0%
 
 ---
-
 
 # Verzamel protocolgegevens gebruikend bronschakelaars en APIs
 
@@ -300,6 +300,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `schemaRef.id` | De `$id` van het doel-XDM-schema. |
+| `schemaRef.contentType` | De versie van het schema. Deze waarde moet `application/vnd.adobe.xed-full-notext+json;version=1` worden geplaatst, die de recentste minder belangrijke versie van het schema terugkeert. |
 
 **Antwoord**
 
