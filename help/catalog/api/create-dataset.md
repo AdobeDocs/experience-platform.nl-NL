@@ -2,16 +2,16 @@
 keywords: Experience Platform;huis;populaire onderwerpen;dataset;Dataset;creeer een dataset;creeer dataset;laat dataset toe
 solution: Experience Platform
 title: Een gegevensset maken in de API
-topic: developer guide
+topic: ontwikkelaarsgids
 description: In dit document wordt beschreven hoe u een gegevenssetobject maakt in de API voor catalogusservice.
+exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
-
 
 # Een gegevensset maken in de API
 
@@ -57,6 +57,7 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van de gegevensset die moet worden gemaakt. |
 | `schemaRef.id` | De URI `$id`-waarde voor het XDM-schema waarop de gegevensset wordt gebaseerd. |
+| `schemaRef.contentType` | Geeft de indeling en versie van het schema aan. Zie de sectie over [schemaversie](../../xdm/api/getting-started.md#versioning) in de gids XDM API voor meer informatie. |
 
 >[!NOTE]
 >
