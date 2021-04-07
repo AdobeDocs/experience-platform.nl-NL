@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;populaire onderwerpen;filter;Filter;filtergegevens;Filter gegevens;Datumbereik
 solution: Experience Platform
 title: Catalogusgegevens filteren met zoekopdrachtparameters
-topic: developer guide
+topic: ontwikkelaarsgids
 description: De dienst API van de Catalogus staat reactiegegevens toe om door het gebruik van de parameters van de verzoekvraag worden gefiltreerd. Een deel van beste praktijken voor Catalog is filters in alle API vraag te gebruiken, aangezien zij de lading op API verminderen en helpen algemene prestaties verbeteren.
+exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2123'
 ht-degree: 0%
 
 ---
-
 
 # Gegevens [!DNL Catalog] filteren met behulp van queryparameters
 
@@ -155,6 +155,10 @@ Op basis van bovenstaande reactie kan het volgende worden afgeleid:
 * Als een object geen van de gevraagde eigenschappen bevat, wordt het weergegeven als een leeg object. (`Dataset2`)
 * Een dataset kan een gevraagde bezit als leeg voorwerp terugkeren als het het bezit bevat maar er geen waarde is. (`Dataset3`)
 * Anders, zal de dataset de volledige waarde van alle gevraagde eigenschappen tonen. (`Dataset4`)
+
+>[!NOTE]
+>
+>In het `schemaRef` bezit voor elke dataset, wijst het versieaantal op de recentste minder belangrijke versie van het schema. Zie de sectie over [schemaversie](../../xdm/api/getting-started.md#versioning) in de gids XDM API voor meer informatie.
 
 ## Beginindex van verschuiving van reactielijst
 
