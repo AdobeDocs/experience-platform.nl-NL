@@ -3,15 +3,15 @@ keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem
 solution: Experience Platform
 title: Unions API-eindpunt
 description: Het /union eindpunt in de Registratie API van het Schema staat u toe om XDM vakingsschema's in uw ervaringstoepassing programmatically te beheren.
-topic: developer guide
+topic: ontwikkelaarsgids
+exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
-
 
 # Uniepunten
 
@@ -126,8 +126,8 @@ De volgende Accept- kopballen zijn beschikbaar voor de raadplegingen van het uni
 
 | Accepteren | Beschrijving |
 | -------|------------ |
-| application/vnd.adobe.xed+json; version={MAJOR_VERSION} | Onbewerkt met `$ref` en `allOf`. Hier vindt u titels en beschrijvingen. |
-| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` kenmerken en  `allOf` opgelost. Hier vindt u titels en beschrijvingen. |
+| `application/vnd.adobe.xed+json; version=1` | Onbewerkt met `$ref` en `allOf`. Hier vindt u titels en beschrijvingen. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` kenmerken en  `allOf` opgelost. Hier vindt u titels en beschrijvingen. |
 
 **Antwoord**
 
