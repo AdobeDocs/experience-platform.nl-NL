@@ -2,32 +2,37 @@
 keywords: Experience Platform;home;populaire onderwerpen;ECID;ecid
 solution: Experience Platform
 title: ECID-overzicht
-topic: overview
+topic: overzicht
 description: De Experience Cloud-id (ECID) is de clientmodule die toegang biedt tot identiteitsbeheer en drie primaire functies verzorgt.
+exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 441c9b520bf163f989ad6a8a683174957e08a6f2
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 8%
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
-
 # ECID-overzicht
 
-De [!DNL Experience Cloud Identity Service] (ECID) is de clientmodule die toegang biedt tot identiteitsbeheer en drie primaire functies biedt:
+Experience Cloud-id (ECID) is een naamruimte voor gedeelde identiteit die wordt gebruikt in Adobe Experience Platform- en Adobe Experience Cloud-toepassingen.
 
-- Elke bezoeker identificeren
-- Synchronisatie met partners bieden
-- Kies paarsgewijze koppelingen voor verbinding met offline of andere id&#39;s aan de grafiek
+ECID vormt de basis voor de identiteit van de klant. Met de context van [[!DNL Identity Service]](./home.md), wordt ECID gebruikt als primaire identiteitskaart voor apparaten en als basisknoop voor identiteitsgrafieken.
 
-Om uw onlinegebruikers te identificeren, moet u uw site of mobiele app van instrumentatie voorzien met de ECID, die een universele en permanente id biedt waarmee uw bezoekers in alle oplossingen in Adobe Experience Platform kunnen worden geïdentificeerd.
+Met ECID kunt u:
 
-Als u met een website-implementatie werkt, verkent u de [hier](https://docs.adobe.com/content/help/nl-NL/id-service/using/home.html) bronnen.
+* Voeg een op mensen gerichte context aan identiteiten toe, die u toestaan om aan echte mensen in plaats van apparaten in de handel te brengen.
+* Synchronisatie met partners bieden.
+* Kies paarsgewijze koppelingen voor verbinding met offline of andere id&#39;s aan de grafiek.
 
-Als u met een mobiele app werkt, ziet u hoe ECID wordt gebruikt om bezoekers te volgen tussen een app en een mobiel web](https://docs.adobe.com/content/help/en/mobile-services/ios/sdk-reference-ios/hybrid-app.html).[
+Om uw onlinegebruikers te identificeren, moet u uw site of mobiele app van instrumentatie voorzien met ECID, die een universele en permanente id biedt waarmee uw bezoekers in alle toepassingen in Adobe Experience Cloud kunnen worden geïdentificeerd.
 
-Het implementeren van deze gereedschappen kan eenvoudig en eenvoudig zijn als u [Adobe Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html) gebruikt.
+## Volgende stappen en extra bronnen
 
-Raadpleeg ook de [documentatie bij de Privacy Service](../privacy-service/identity-data.md) voor informatie over het gebruik van ECID voor GDPR-compatibiliteit.
+De volgende documentatie biedt meer informatie over ECID in verschillende Platform- en Experience Cloud-toepassingen:
 
+* Raadpleeg de documentatie voor [Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en) als u ECID wilt gebruiken bij de implementatie van de website.
+* Raadpleeg de documentatie voor [bijhouden van bezoekers tussen een app en mobiel web](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=en#sdk-reference-ios) voor informatie over het gebruik van ECID bij apps en mobiele webinhoud.
+* Het implementeren van deze gereedschappen kan eenvoudig en eenvoudig zijn als u [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=en) gebruikt.
+* Raadpleeg de [documentatie bij de Privacy Service](../privacy-service/identity-data.md) voor informatie over het gebruik van ECID om naleving van privacyregels zoals GDPR te vergemakkelijken.
+* Voor meer informatie over ECID met de context van Platform, zie [Overzicht van de Dienst van de Identiteit](./home.md) en [overzicht van identiteitsnaamruimten](./namespaces.md).
