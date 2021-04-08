@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 'Evalueer Gebeurtenissen in Bijna Echt - tijd met het stromen Segmentatie '
 topic: ontwikkelaarsgids
 description: Dit document bevat voorbeelden over het gebruik van streamingsegmentatie met de Adobe Experience Platform Segmentation Service-API.
+exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 translation-type: tm+mt
-source-git-commit: bb7edcaccca87918c56d00e092e4b7154d7c5d6e
+source-git-commit: e1ae20412f449c991f53fdd0f095d0c3a6de262c
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1377'
 ht-degree: 0%
 
 ---
-
 
 # Evalueer gebeurtenissen in bijna real time met het stromen segmentatie
 
@@ -75,9 +75,11 @@ Opdat een segment wordt geëvalueerd gebruikend het stromen segmentatie, moet de
 | ---------- | ------- |
 | Binnenkomende hit | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis zonder tijdbeperking. |
 | Binnenkomende hit binnen relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis. |
+| Binnenkomende hit met een tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis met een tijdvenster. |
 | Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. |
 | Binnenkomende hit die verwijst naar een profiel | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, zonder tijdbeperking, en een of meer profielkenmerken. |
 | Binnenkomende hit die verwijst naar een profiel binnen een relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis en een of meer profielkenmerken. |
+| Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmenten bevat. |
 | Meerdere gebeurtenissen die naar een profiel verwijzen | Elke segmentdefinitie die verwijst naar meerdere gebeurtenissen **in de laatste 24 uur** en (optioneel) heeft een of meer profielkenmerken. |
 
 Een segmentdefinitie zal **not** voor het stromen segmentatie in de volgende scenario&#39;s worden toegelaten:
