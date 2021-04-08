@@ -2,16 +2,16 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;het stromen segmentatie;Segmentatie;de Dienst van de segmentatie;de segmenteringsdienst;ui gids;
 solution: Experience Platform
 title: UI-gids voor streamingsegmentatie
-topic: ui guide
+topic: ui-hulplijn
 description: Dankzij streamingsegmentatie op Adobe Experience Platform kunt u segmentering uitvoeren in bijna real-time terwijl u zich richt op gegevensrijkdom. Met het stromen segmentatie, gebeurt de segmentkwalificatie nu aangezien de gegevens in Platform landen, die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Met dit vermogen, kunnen de meeste segmentregels nu worden geëvalueerd aangezien de gegevens in Platform worden overgegaan, betekenend zal het segmentlidmaatschap bijgewerkt zonder geplande segmentatietaken in werking te stellen worden gehouden.
+exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 translation-type: tm+mt
-source-git-commit: 405b7eb0c95ebef0b05d2b10ef92f28a37b7cc86
+source-git-commit: e1ae20412f449c991f53fdd0f095d0c3a6de262c
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '798'
 ht-degree: 0%
 
 ---
-
 
 # Streaming segmentering
 
@@ -39,9 +39,11 @@ Een query wordt automatisch geëvalueerd met streaming segmentatie als deze aan 
 | ---------- | ------- | ------- |
 | Binnenkomende hit | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis zonder tijdbeperking. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
 | Binnenkomende hit binnen relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Binnenkomende hit met een tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis met een tijdvenster. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. |  |
 | Binnenkomende hit die verwijst naar een profiel | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, zonder tijdbeperking, en een of meer profielkenmerken. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | Binnenkomende hit die verwijst naar een profiel binnen een relatief tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis en een of meer profielkenmerken. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmenten bevat. | ![](../images/ui/streaming-segmentation/two-batches.png) |
 | Meerdere gebeurtenissen die naar een profiel verwijzen | Elke segmentdefinitie die verwijst naar meerdere gebeurtenissen **in de laatste 24 uur** en (optioneel) heeft een of meer profielkenmerken. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 Een segmentdefinitie zal **not** voor het stromen segmentatie in de volgende scenario&#39;s worden toegelaten:
@@ -64,7 +66,7 @@ Nadat u een voor streaming geschikt segment hebt gemaakt, kunt u details van dat
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Specifiek, worden de details over **[!UICONTROL totale gekwalificeerde publieksgrootte]** getoond. De **[!UICONTROL Totale gekwalificeerde publieksgrootte]** toont het totale aantal gekwalificeerde publiek van de laatste voltooide looppas van de segmentbaan. Als een segmentbaan niet binnen de laatste 24 uren werd voltooid, zal het aantal publiek van een raming in plaats daarvan worden genomen.
+Specifiek, worden de details over **[!UICONTROL total qualified audience size]** getoond. **[!UICONTROL Total qualified audience size]** toont het totale aantal gekwalificeerde publiek van de laatste voltooide looppas van de segmentbaan. Als een segmentbaan niet binnen de laatste 24 uren werd voltooid, zal het aantal publiek van een raming in plaats daarvan worden genomen.
 
 Onderaan ziet u een lijngrafiek met het aantal segmenten dat in de afgelopen 24 uur is gekwalificeerd en gediskwalificeerd. De vervolgkeuzelijst kan worden aangepast om de laatste 24 uur, vorige week of 30 dagen weer te geven.
 
