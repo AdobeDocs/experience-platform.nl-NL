@@ -5,14 +5,14 @@ title: Overzicht van Attribution AI
 topic: Attribution AI
 description: Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren. Voorbeelden van aanraakpunten zijn weergave- en impressies, e-mail verzenden, e-mail openen en klikken met betaalde zoekopdrachten.
 landing-page-description: Attribution AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die leiden tot conversiegebeurtenissen. Dit kan door marketers worden gebruikt om het marketing effect van elk individueel marketing aanraakpunt over klantenreizen te kwantificeren.
+exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van Attribution AI
 
