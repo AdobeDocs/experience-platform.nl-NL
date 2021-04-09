@@ -6,18 +6,18 @@ topic: ontwikkelaarsgids
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
+source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
 
-# Randsegmentatie
+# Randsegmentatie (bèta)
 
 >[!NOTE]
 >
->In het volgende document wordt beschreven hoe u randsegmentatie kunt uitvoeren met behulp van de API. Voor informatie die randsegmentatie gebruikend UI uitvoert, te lezen gelieve [de gids van de segmentatie van de rand UI](../ui/edge-segmentation.md).
+>In het volgende document wordt beschreven hoe u randsegmentatie kunt uitvoeren met behulp van de API. Voor informatie die randsegmentatie gebruikend UI uitvoert, te lezen gelieve [de gids van de segmentatie van de rand UI](../ui/edge-segmentation.md). Bovendien wordt de segmentatie tussen randen momenteel in bèta uitgevoerd. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
 De segmentatie van de rand is de capaciteit om segmenten in Adobe Experience Platform onmiddellijk op de rand te evalueren, toelatend de zelfde pagina en volgende het verpersoonlijkingsgebruiksgevallen van de paginagrootte.
 
